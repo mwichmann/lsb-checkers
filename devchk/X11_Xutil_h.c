@@ -12,9 +12,27 @@
 int X11_Xutil_h()
 {
 int cnt=0;
-CheckTypeSize(XICCEncodingStyle,4,)
-CheckTypeSize(Region,4,)
-CheckTypeSize(XContext,4,)
+#ifdef __i386__
+CheckTypeSize(XICCEncodingStyle,4,6555)
+#elif __ia64__
+CheckTypeSize(XICCEncodingStyle,4,6555)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6555,0);
+#endif
+#ifdef __i386__
+CheckTypeSize(Region,4,6562)
+#elif __ia64__
+CheckTypeSize(Region,8,6562)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6562,0);
+#endif
+#ifdef __i386__
+CheckTypeSize(XContext,4,6567)
+#elif __ia64__
+CheckTypeSize(XContext,4,6567)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6567,0);
+#endif
 printf("%d tests in X11/Xutil.h\n",cnt);
 return cnt;
 }
