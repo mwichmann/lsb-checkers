@@ -302,6 +302,7 @@ struct versym libXt_so_6[] = {
 	{"XtWindow",""},
 	{"XtWindowOfObject",""},
 	{"XtWindowToWidget",""},
+	{"_XtCheckSubclassFlag",""},
 	{"_XtCopyFromArg",""},
 	{"_XtInherit",""},
 	{"_XtInheritTranslations",""},

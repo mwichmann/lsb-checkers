@@ -94,6 +94,16 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef MAP_ANONYMOUS
+	CompareConstant(MAP_ANONYMOUS,0x20,3510,architecture)
+#else
+Msg( "Error: Constant not found: MAP_ANONYMOUS\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef MS_ASYNC
 	CompareConstant(MS_ASYNC,1,3516,architecture)
 #else
@@ -154,6 +164,16 @@ cnt++;
 	CompareConstant(MCL_FUTURE,2,3520,architecture)
 #else
 Msg( "Error: Constant not found: MCL_FUTURE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef MAP_ANON
+	CompareConstant(MAP_ANON,MAP_ANONYMOUS,3526,architecture)
+#else
+Msg( "Error: Constant not found: MAP_ANON\n");
 cnt++;
 #endif
 

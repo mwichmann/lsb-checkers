@@ -24,6 +24,10 @@ Msg("Checking data structures in netdb.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+/* No test for h_errno */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef NETDB_INTERNAL
 	CompareConstant(NETDB_INTERNAL,-1,4433,architecture)
 #else

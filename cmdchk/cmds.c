@@ -1,6 +1,4 @@
 /* Generated file */
-#include "cmds.h"
-
 #include "../tetj/tetj.h"
 
 extern void check_cmd(char *cmd, char *cmdpath, struct tetj_handle *journal);
@@ -32,6 +30,7 @@ check_cmd("dd","/bin/dd",journal);
 check_cmd("df","/bin/df",journal);
 check_cmd("diff","/usr/bin/diff",journal);
 check_cmd("dirname","/usr/bin/dirname",journal);
+check_cmd("dmesg","/bin/dmesg",journal);
 check_cmd("du","/usr/bin/du",journal);
 check_cmd("echo","/bin/echo",journal);
 check_cmd("egrep","/bin/egrep",journal);
@@ -80,6 +79,7 @@ check_cmd("mknod","/bin/mknod",journal);
 check_cmd("mktemp","/bin/mktemp",journal);
 check_cmd("more","/bin/more",journal);
 check_cmd("mount","/bin/mount",journal);
+check_cmd("msgfmt","/usr/bin/msgfmt",journal);
 check_cmd("mv","/bin/mv",journal);
 check_cmd("newgrp","/usr/bin/newgrp",journal);
 check_cmd("nice","/bin/nice",journal);
@@ -102,6 +102,7 @@ check_cmd("rsync","/usr/bin/rsync",journal);
 check_cmd("sed","/bin/sed",journal);
 check_cmd("sendmail","/usr/sbin/sendmail",journal);
 check_cmd("sh","/bin/sh",journal);
+check_cmd("shutdown","/sbin/shutdown",journal);
 check_cmd("sleep","/bin/sleep",journal);
 check_cmd("sort","/usr/bin/sort",journal);
 check_cmd("split","/usr/bin/split",journal);

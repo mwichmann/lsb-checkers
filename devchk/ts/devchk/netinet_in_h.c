@@ -24,6 +24,66 @@ Msg("Checking data structures in netinet/in.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_IP
+	CompareConstant(IPPROTO_IP,0,4445,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_IP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_ICMP
+	CompareConstant(IPPROTO_ICMP,1,4447,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_ICMP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_IGMP
+	CompareConstant(IPPROTO_IGMP,2,4448,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_IGMP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_TCP
+	CompareConstant(IPPROTO_TCP,6,4450,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_TCP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_UDP
+	CompareConstant(IPPROTO_UDP,17,4453,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_UDP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_RAW
+	CompareConstant(IPPROTO_RAW,255,4470,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_RAW\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef INADDR_ANY
 	CompareConstant(INADDR_ANY,0,4489,architecture)
 #else
@@ -38,6 +98,16 @@ cnt++;
 	CompareConstant(INADDR_BROADCAST,(0xffffffff),4490,architecture)
 #else
 Msg( "Error: Constant not found: INADDR_BROADCAST\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef INADDR_NONE
+	CompareConstant(INADDR_NONE,((unsigned long int) 0xffffffff),4491,architecture)
+#else
+Msg( "Error: Constant not found: INADDR_NONE\n");
 cnt++;
 #endif
 

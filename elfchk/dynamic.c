@@ -177,6 +177,15 @@ fprintf(stderr, "checkDT_SYMTAB Dynamic Tag\n" );
 }
 
 int
+checkDT_ADDRRNGHI(ElfFile *file1, Elf32_Shdr *hdr1, Elf32_Dyn *dyn1, struct tetj_handle *journal)
+{
+#ifdef VERBOSE
+fprintf(stderr, "checkDT_ADDRRNGHI Dynamic Tag\n" );
+#endif /* VERBOSE */
+ return 1; 
+}
+
+int
 checkDT_ADDRRNGLO(ElfFile *file1, Elf32_Shdr *hdr1, Elf32_Dyn *dyn1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
