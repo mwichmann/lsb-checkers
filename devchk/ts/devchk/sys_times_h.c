@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/times.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct tms,16, 6990, 2)
 CheckOffset(struct tms,tms_stime,4,2,30169)
 CheckOffset(struct tms,tms_cutime,8,2,30170)
@@ -33,7 +33,7 @@ CheckTypeSize(struct tms,32, 6990, 3)
 CheckOffset(struct tms,tms_stime,8,3,30169)
 CheckOffset(struct tms,tms_cutime,16,3,30170)
 CheckOffset(struct tms,tms_cstime,24,3,30171)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct tms,16, 6990, 6)
 Msg("Missing member data for tms on PPC32\n");
 CheckOffset(struct tms,tms_utime,0,6,30168)

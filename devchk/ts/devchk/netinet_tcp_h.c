@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in netinet/tcp.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCP_NODELAY
 	CompareConstant(TCP_NODELAY,1,4519,architecture)
 #else

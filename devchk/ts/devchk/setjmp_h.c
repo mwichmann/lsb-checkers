@@ -24,34 +24,34 @@ int pcnt=0;
 Msg("Checking data structures in setjmp.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for sigsetjmp(a,b) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for setjmp(env) */
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckArrayTypeSize(__jmp_buf,4,6, 9089, 2)
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckArrayTypeSize(__jmp_buf,8,70, 10409, 3)
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 CheckArrayTypeSize(__jmp_buf,4,1, 10410, 6)
 #endif
 
-#ifdef __s390__
+#if __s390__
 CheckArrayTypeSize(__jmp_buf,4,14, 10411, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10411,0);
 Msg("Find size of __jmp_buf (10411)\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckArrayTypeSize(jmp_buf,1,704, 6962, 3)
 #elif __i386__
 CheckArrayTypeSize(jmp_buf,1,156, 6962, 2)
@@ -62,11 +62,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
 Msg("Find size of jmp_buf (6962)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(sigjmp_buf,156, 6963, 2)
 #elif __ia64__
 CheckTypeSize(sigjmp_buf,704, 6963, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sigjmp_buf,364, 6963, 6)
 #elif __s390__
 CheckTypeSize(sigjmp_buf,188, 6963, 10)
@@ -75,7 +75,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6963,0);
 Msg("Find size of sigjmp_buf (6963)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct __jmp_buf_tag,156, 6961, 2)
 CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,2,34039)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,24,2,34040)
@@ -84,7 +84,7 @@ CheckOffset(struct __jmp_buf_tag,__saved_mask,28,2,34041)
 CheckTypeSize(struct __jmp_buf_tag,704, 6961, 3)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,560,3,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,568,3,34041)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct __jmp_buf_tag,364, 6961, 6)
 Msg("Missing member data for __jmp_buf_tag on PPC32\n");
 CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,6,34039)

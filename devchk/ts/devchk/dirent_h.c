@@ -25,11 +25,11 @@ int pcnt=0;
 Msg("Checking data structures in dirent.h\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(DIR,0, 10175, 3)
 #elif __i386__
 CheckTypeSize(DIR,0, 10175, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(DIR,0, 10175, 6)
 #elif __s390__
 CheckTypeSize(DIR,0, 10175, 10)
@@ -38,7 +38,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10175,0);
 Msg("Find size of DIR (10175)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct dirent,268, 10178, 2)
 CheckOffset(struct dirent,d_ino,0,2,34177)
 CheckOffset(struct dirent,d_off,4,2,34178)
@@ -49,7 +49,7 @@ CheckOffset(struct dirent,d_off,8,3,34178)
 CheckOffset(struct dirent,d_reclen,16,3,34179)
 CheckOffset(struct dirent,d_type,18,3,34410)
 CheckOffset(struct dirent,d_name,19,3,34180)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct dirent,268, 10178, 6)
 Msg("Missing member data for dirent on PPC32\n");
 CheckOffset(struct dirent,d_ino,0,6,34177)
@@ -68,7 +68,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);
 Msg("Find size of dirent (10178)\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(struct dirent64,280, 10179, 3)
 CheckOffset(struct dirent64,d_ino,0,3,34181)
 CheckOffset(struct dirent64,d_off,8,3,34182)
@@ -82,7 +82,7 @@ CheckOffset(struct dirent64,d_off,8,2,34182)
 CheckOffset(struct dirent64,d_reclen,16,2,34183)
 CheckOffset(struct dirent64,d_type,18,2,34184)
 CheckOffset(struct dirent64,d_name,19,2,34185)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct dirent64,280, 10179, 6)
 CheckOffset(struct dirent64,d_ino,0,6,34181)
 CheckOffset(struct dirent64,d_off,8,6,34182)

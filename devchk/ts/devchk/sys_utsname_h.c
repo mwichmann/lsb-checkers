@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/utsname.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct utsname,390, 7013, 2)
 CheckOffset(struct utsname,nodename,65,2,30178)
 CheckOffset(struct utsname,release,130,2,30179)
@@ -37,7 +37,7 @@ CheckOffset(struct utsname,release,130,3,30179)
 CheckOffset(struct utsname,version,195,3,30180)
 CheckOffset(struct utsname,machine,260,3,30181)
 CheckOffset(struct utsname,domainname,325,3,34411)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct utsname,390, 7013, 6)
 Msg("Missing member data for utsname on PPC32\n");
 CheckOffset(struct utsname,sysname,0,6,30177)

@@ -30,7 +30,7 @@ int pcnt=0;
 Msg("Checking data structures in X11/ConstrainP.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef XtConstraintExtensionVersion
 	CompareConstant(XtConstraintExtensionVersion,1L,4935,architecture)
 #else
@@ -40,11 +40,11 @@ cnt++;
 
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(ConstraintPart,8, 10250, 3)
 #elif __i386__
 CheckTypeSize(ConstraintPart,4, 10250, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ConstraintPart,4, 10250, 6)
 #elif __s390__
 CheckTypeSize(ConstraintPart,4, 10250, 10)
@@ -53,11 +53,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
 Msg("Find size of ConstraintPart (10250)\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(ConstraintClassPart,48, 10252, 3)
 #elif __i386__
 CheckTypeSize(ConstraintClassPart,28, 10252, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ConstraintClassPart,28, 10252, 6)
 #elif __s390__
 CheckTypeSize(ConstraintClassPart,28, 10252, 10)
@@ -66,11 +66,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
 Msg("Find size of ConstraintClassPart (10252)\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(ConstraintClassRec,312, 10258, 3)
 #elif __i386__
 CheckTypeSize(ConstraintClassRec,164, 10258, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ConstraintClassRec,164, 10258, 6)
 #elif __s390__
 CheckTypeSize(ConstraintClassRec,164, 10258, 10)

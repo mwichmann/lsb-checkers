@@ -30,7 +30,7 @@ int pcnt=0;
 Msg("Checking data structures in X11/ObjectP.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef XtObjectExtensionVersion
 	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
 #else
@@ -40,7 +40,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef XtInheritAllocate
 	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
 #else
@@ -50,7 +50,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef XtInheritDeallocate
 	CompareConstant(XtInheritDeallocate,((XtDeallocateProc) _XtInherit),4946,architecture)
 #else
@@ -60,7 +60,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct _ObjectPart,28, 10261, 2)
 CheckOffset(struct _ObjectPart,self,0,2,34363)
 CheckOffset(struct _ObjectPart,widget_class,4,2,34364)
@@ -77,7 +77,7 @@ CheckOffset(struct _ObjectPart,xrm_name,24,3,34366)
 CheckOffset(struct _ObjectPart,being_destroyed,28,3,34367)
 CheckOffset(struct _ObjectPart,destroy_callbacks,32,3,34368)
 CheckOffset(struct _ObjectPart,constraints,40,3,34369)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _ObjectPart,28, 10261, 6)
 Msg("Missing member data for _ObjectPart on PPC32\n");
 CheckOffset(struct _ObjectPart,self,0,6,34363)
@@ -100,11 +100,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10261,0);
 Msg("Find size of _ObjectPart (10261)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ObjectPart,28, 10264, 2)
 #elif __ia64__
 CheckTypeSize(ObjectPart,48, 10264, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectPart,28, 10264, 6)
 #elif __s390__
 CheckTypeSize(ObjectPart,28, 10264, 10)
@@ -113,13 +113,13 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10264,0);
 Msg("Find size of ObjectPart (10264)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct _ObjectRec,28, 10262, 2)
 CheckOffset(struct _ObjectRec,object,0,2,34409)
 #elif __ia64__
 CheckTypeSize(struct _ObjectRec,48, 10262, 3)
 CheckOffset(struct _ObjectRec,object,0,3,34409)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _ObjectRec,28, 10262, 6)
 CheckOffset(struct _ObjectRec,object,0,6,34409)
 #elif __s390__
@@ -130,11 +130,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
 Msg("Find size of _ObjectRec (10262)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ObjectRec,28, 10263, 2)
 #elif __ia64__
 CheckTypeSize(ObjectRec,48, 10263, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectRec,28, 10263, 6)
 #elif __s390__
 CheckTypeSize(ObjectRec,28, 10263, 10)
@@ -143,7 +143,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10263,0);
 Msg("Find size of ObjectRec (10263)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 2)
 CheckOffset(struct _ObjectClassPart,superclass,0,2,34370)
 #elif __ia64__
@@ -179,7 +179,7 @@ CheckOffset(struct _ObjectClassPart,obj12,192,3,34398)
 CheckOffset(struct _ObjectClassPart,obj13,200,3,34399)
 CheckOffset(struct _ObjectClassPart,obj14,208,3,34400)
 CheckOffset(struct _ObjectClassPart,extension,216,3,34401)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 6)
 Msg("Missing member data for _ObjectClassPart on PPC32\n");
 CheckOffset(struct _ObjectClassPart,superclass,0,6,34370)
@@ -252,11 +252,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10265,0);
 Msg("Find size of _ObjectClassPart (10265)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ObjectClassPart,116, 10266, 2)
 #elif __ia64__
 CheckTypeSize(ObjectClassPart,224, 10266, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectClassPart,116, 10266, 6)
 #elif __s390__
 CheckTypeSize(ObjectClassPart,116, 10266, 10)
@@ -265,11 +265,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10266,0);
 Msg("Find size of ObjectClassPart (10266)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 2)
 #elif __ia64__
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 6)
 #elif __s390__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 10)
@@ -278,11 +278,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10268,0);
 Msg("Find size of ObjectClassExtensionRec (10268)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ObjectClassExtension,4, 10270, 2)
 #elif __ia64__
 CheckTypeSize(ObjectClassExtension,8, 10270, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectClassExtension,4, 10270, 6)
 #elif __s390__
 CheckTypeSize(ObjectClassExtension,4, 10270, 10)
@@ -291,13 +291,13 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10270,0);
 Msg("Find size of ObjectClassExtension (10270)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 2)
 CheckOffset(struct _ObjectClassRec,object_class,0,2,34408)
 #elif __ia64__
 CheckTypeSize(struct _ObjectClassRec,224, 10271, 3)
 CheckOffset(struct _ObjectClassRec,object_class,0,3,34408)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 6)
 CheckOffset(struct _ObjectClassRec,object_class,0,6,34408)
 #elif __s390__
@@ -308,11 +308,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
 Msg("Find size of _ObjectClassRec (10271)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ObjectClassRec,116, 10272, 2)
 #elif __ia64__
 CheckTypeSize(ObjectClassRec,224, 10272, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectClassRec,116, 10272, 6)
 #elif __s390__
 CheckTypeSize(ObjectClassRec,116, 10272, 10)
@@ -321,18 +321,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10272,0);
 Msg("Find size of ObjectClassRec (10272)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 #elif __ia64__
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 #elif __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10267,0);
 Msg("Find size of anon-_ObjectClassExtensionRec (10267)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 #elif __ia64__
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 #elif __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10269,0);

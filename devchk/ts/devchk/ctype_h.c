@@ -23,9 +23,9 @@ int pcnt=0;
 Msg("Checking data structures in ctype.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 #elif __ia64__
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 #elif __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8976,0);

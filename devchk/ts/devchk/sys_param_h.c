@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/param.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NOFILE
 	CompareConstant(NOFILE,256,4400,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef __s390__
+#if __s390__
 #ifdef MAXPATHLEN
 	CompareConstant(MAXPATHLEN,4095,4399,architecture)
 #else

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sched.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SCHED_OTHER
 	CompareConstant(SCHED_OTHER,0,1611,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SCHED_FIFO
 	CompareConstant(SCHED_FIFO,1,1612,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SCHED_RR
 	CompareConstant(SCHED_RR,2,1613,architecture)
 #else

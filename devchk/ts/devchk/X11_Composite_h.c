@@ -30,11 +30,11 @@ int pcnt=0;
 Msg("Checking data structures in X11/Composite.h\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(XtOrderProc,8, 10245, 3)
 #elif __i386__
 CheckTypeSize(XtOrderProc,4, 10245, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XtOrderProc,4, 10245, 6)
 #elif __s390__
 CheckTypeSize(XtOrderProc,4, 10245, 10)
@@ -43,11 +43,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10245,0);
 Msg("Find size of XtOrderProc (10245)\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(XtDoChangeProc,8, 10248, 3)
 #elif __i386__
 CheckTypeSize(XtDoChangeProc,4, 10248, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XtDoChangeProc,4, 10248, 6)
 #elif __s390__
 CheckTypeSize(XtDoChangeProc,4, 10248, 10)

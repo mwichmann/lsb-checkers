@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in stdio.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _IOFBF
 	CompareConstant(_IOFBF,0,1631,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _IOLBF
 	CompareConstant(_IOLBF,1,1632,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _IONBF
 	CompareConstant(_IONBF,2,1633,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef BUFSIZ
 	CompareConstant(BUFSIZ,8192,1634,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef P_tmpdir
 	CompareStringConstant(P_tmpdir,"/tmp")
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef EOF
 	CompareConstant(EOF,(-1),3183,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef L_tmpnam
 	CompareConstant(L_tmpnam,20,3187,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef __s390__
+#if __s390__
 #ifdef FILENAME_MAX
 	CompareConstant(FILENAME_MAX,4095,3188,architecture)
 #else
@@ -111,7 +111,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef FOPEN_MAX
 	CompareConstant(FOPEN_MAX,16,3189,architecture)
 #else
@@ -121,7 +121,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef L_ctermid
 	CompareConstant(L_ctermid,9,3190,architecture)
 #else
@@ -131,7 +131,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef L_cuserid
 	CompareConstant(L_cuserid,9,3191,architecture)
 #else
@@ -141,11 +141,11 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(fpos_t,12, 9108, 2)
 #elif __ia64__
 CheckTypeSize(fpos_t,16, 9108, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(fpos_t,12, 9108, 6)
 #elif __s390__
 CheckTypeSize(fpos_t,12, 9108, 10)
@@ -154,11 +154,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9108,0);
 Msg("Find size of fpos_t (9108)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(fpos64_t,16, 9109, 2)
 #elif __ia64__
 CheckTypeSize(fpos64_t,16, 9109, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(fpos64_t,16, 9109, 6)
 #elif __s390__
 CheckTypeSize(fpos64_t,16, 9109, 10)
@@ -167,20 +167,20 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9109,0);
 Msg("Find size of fpos64_t (9109)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 #endif
 
-#ifdef __s390__
+#if __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10275,0);
 Msg("Find size of anon-fpos64_t (10275)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(FILE,148, 8782, 2)
 #elif __ia64__
 CheckTypeSize(FILE,216, 8782, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(FILE,152, 8782, 6)
 #elif __s390__
 CheckTypeSize(FILE,152, 8782, 10)

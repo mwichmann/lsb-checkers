@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in glob.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_ERR
 	CompareConstant(GLOB_ERR,(1<<0),853,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_MARK
 	CompareConstant(GLOB_MARK,(1<<1),854,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_NOSORT
 	CompareConstant(GLOB_NOSORT,(1<<2),855,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_DOOFFS
 	CompareConstant(GLOB_DOOFFS,(1<<3),856,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_NOCHECK
 	CompareConstant(GLOB_NOCHECK,(1<<4),857,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_APPEND
 	CompareConstant(GLOB_APPEND,(1<<5),858,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_NOESCAPE
 	CompareConstant(GLOB_NOESCAPE,(1<<6),859,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_PERIOD
 	CompareConstant(GLOB_PERIOD,(1<<7),860,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_MAGCHAR
 	CompareConstant(GLOB_MAGCHAR,(1<<8),861,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_ALTDIRFUNC
 	CompareConstant(GLOB_ALTDIRFUNC,(1<<9),862,architecture)
 #else
@@ -123,7 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_BRACE
 	CompareConstant(GLOB_BRACE,(1<<10),863,architecture)
 #else
@@ -133,7 +133,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_NOMAGIC
 	CompareConstant(GLOB_NOMAGIC,(1<<11),864,architecture)
 #else
@@ -143,7 +143,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_TILDE
 	CompareConstant(GLOB_TILDE,(1<<12),865,architecture)
 #else
@@ -153,7 +153,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_ONLYDIR
 	CompareConstant(GLOB_ONLYDIR,(1<<13),866,architecture)
 #else
@@ -163,7 +163,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_TILDE_CHECK
 	CompareConstant(GLOB_TILDE_CHECK,(1<<14),867,architecture)
 #else
@@ -173,7 +173,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_NOSPACE
 	CompareConstant(GLOB_NOSPACE,1,869,architecture)
 #else
@@ -183,7 +183,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_ABORTED
 	CompareConstant(GLOB_ABORTED,2,870,architecture)
 #else
@@ -193,7 +193,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_NOMATCH
 	CompareConstant(GLOB_NOMATCH,3,871,architecture)
 #else
@@ -203,7 +203,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GLOB_NOSYS
 	CompareConstant(GLOB_NOSYS,4,872,architecture)
 #else
@@ -213,11 +213,11 @@ cnt++;
 
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(glob_t,72, 9005, 3)
 #elif __i386__
 CheckTypeSize(glob_t,36, 9005, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(glob_t,36, 9005, 6)
 #elif __s390__
 CheckTypeSize(glob_t,36, 9005, 10)
@@ -226,11 +226,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9005,0);
 Msg("Find size of glob_t (9005)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(glob64_t,36, 9007, 2)
 #elif __ia64__
 CheckTypeSize(glob64_t,72, 9007, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(glob64_t,36, 9007, 6)
 #elif __s390__
 CheckTypeSize(glob64_t,36, 9007, 10)

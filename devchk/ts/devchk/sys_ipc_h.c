@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/ipc.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPC_PRIVATE
 	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPC_CREAT
 	CompareConstant(IPC_CREAT,00001000,3446,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPC_EXCL
 	CompareConstant(IPC_EXCL,00002000,3447,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPC_NOWAIT
 	CompareConstant(IPC_NOWAIT,00004000,3448,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPC_RMID
 	CompareConstant(IPC_RMID,0,3449,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPC_SET
 	CompareConstant(IPC_SET,1,3450,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPC_STAT
 	CompareConstant(IPC_STAT,2,3451,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct ipc_perm,36, 10128, 2)
 CheckOffset(struct ipc_perm,__key,0,2,33724)
 CheckOffset(struct ipc_perm,uid,4,2,33725)
@@ -108,7 +108,7 @@ CheckOffset(struct ipc_perm,__unused1,28,2,34418)
 CheckOffset(struct ipc_perm,__unused2,32,2,34419)
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(struct ipc_perm,48, 10394, 3)
 CheckOffset(struct ipc_perm,__key,0,3,34644)
 CheckOffset(struct ipc_perm,uid,4,3,34645)
@@ -122,7 +122,7 @@ CheckOffset(struct ipc_perm,__unused1,32,3,34652)
 CheckOffset(struct ipc_perm,__unused2,40,3,34653)
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct ipc_perm,48, 10403, 6)
 CheckOffset(struct ipc_perm,__key,0,6,34720)
 CheckOffset(struct ipc_perm,uid,0,6,34721)
@@ -137,7 +137,7 @@ CheckOffset(struct ipc_perm,__unused1,0,6,34729)
 CheckOffset(struct ipc_perm,__unused2,0,6,34730)
 #endif
 
-#ifdef __s390__
+#if __s390__
 CheckTypeSize(struct ipc_perm,36, 10404, 10)
 CheckOffset(struct ipc_perm,__key,0,10,34731)
 CheckOffset(struct ipc_perm,uid,4,10,34732)

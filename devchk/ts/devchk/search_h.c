@@ -25,11 +25,11 @@ int pcnt=0;
 Msg("Checking data structures in search.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ENTRY,8, 6953, 2)
 #elif __ia64__
 CheckTypeSize(ENTRY,16, 6953, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ENTRY,8, 6953, 6)
 #elif __s390__
 CheckTypeSize(ENTRY,8, 6953, 10)
@@ -38,11 +38,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6953,0);
 Msg("Find size of ENTRY (6953)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ACTION,4, 9081, 2)
 #elif __ia64__
 CheckTypeSize(ACTION,4, 9081, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ACTION,4, 9081, 6)
 #elif __s390__
 CheckTypeSize(ACTION,4, 9081, 10)
@@ -51,11 +51,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9081,0);
 Msg("Find size of ACTION (9081)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(VISIT,4, 9085, 2)
 #elif __ia64__
 CheckTypeSize(VISIT,4, 9085, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(VISIT,4, 9085, 6)
 #elif __s390__
 CheckTypeSize(VISIT,4, 9085, 10)
@@ -64,11 +64,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9085,0);
 Msg("Find size of VISIT (9085)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(__action_fn_t,4, 6956, 2)
 #elif __ia64__
 CheckTypeSize(__action_fn_t,8, 6956, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__action_fn_t,4, 6956, 6)
 #elif __s390__
 CheckTypeSize(__action_fn_t,4, 6956, 10)

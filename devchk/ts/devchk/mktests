@@ -153,7 +153,7 @@ sub writetest($$)
 		}
 		if ($archCount==0)
 		{
-		    print TESTS "#ifdef $centry{Asymbol}\n";
+		    print TESTS "#if $centry{Asymbol}\n";
 		}
 		else
 		{
@@ -225,7 +225,7 @@ sub writetest($$)
 				}
 			}
 			if( $tentry{'Aid'} != 1 ) {
-				print TESTS "#ifdef $tentry{'Asymbol'}\n";
+				print TESTS "#if $tentry{'Asymbol'}\n";
 				}
 			$lastid=$tentry{'Tid'};
 			$lastaid=$tentry{'Aid'};
@@ -365,7 +365,7 @@ $select.= "WHERE Aname!='All'";
 $ath = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$ath->numrows) {
 	%entry=$ath->fetchhash;
-	print HARNESS "#ifdef ",$entry{'Asymbol'},"\n";
+	print HARNESS "#if ",$entry{'Asymbol'},"\n";
 	print HARNESS "int architecture=",$entry{'Aid'},";\n";
 	print HARNESS "#define __found_arch__\n";
 	print HARNESS "#endif\n";
@@ -470,7 +470,7 @@ for(1..$tth->numrows) {
 			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
 			print TESTS "#endif\n\n";
 		}
-		print TESTS "#ifdef $tentry{'Asymbol'}\n";
+		print TESTS "#if $tentry{'Asymbol'}\n";
 		$lastid=$tentry{'Tid'};
 	} else {
 		print TESTS "#elif $tentry{'Asymbol'}\n";

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in stddef.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NULL
 	CompareConstant(NULL,(0),906,architecture)
 #else
@@ -33,15 +33,15 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for offsetof(TYPE,MEMBER) */
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(wchar_t,4, 8848, 2)
 #elif __ia64__
 CheckTypeSize(wchar_t,4, 8848, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(wchar_t,4, 8848, 6)
 #elif __s390__
 CheckTypeSize(wchar_t,4, 8848, 10)
@@ -50,11 +50,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
 Msg("Find size of wchar_t (8848)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(size_t,4, 8969, 2)
 #elif __ia64__
 CheckTypeSize(size_t,8, 8969, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(size_t,4, 8969, 6)
 #elif __s390__
 CheckTypeSize(size_t,4, 8969, 10)
@@ -63,11 +63,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
 Msg("Find size of size_t (8969)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(ptrdiff_t,4, 9027, 2)
 #elif __ia64__
 CheckTypeSize(ptrdiff_t,8, 9027, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ptrdiff_t,4, 9027, 6)
 #elif __s390__
 CheckTypeSize(ptrdiff_t,4, 9027, 10)

@@ -23,11 +23,11 @@ int pcnt=0;
 Msg("Checking data structures in X11/Intrinsic.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(WidgetClass,4, 9583, 2)
 #elif __ia64__
 CheckTypeSize(WidgetClass,8, 9583, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(WidgetClass,4, 9583, 6)
 #elif __s390__
 CheckTypeSize(WidgetClass,4, 9583, 10)
@@ -36,11 +36,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9583,0);
 Msg("Find size of WidgetClass (9583)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(Cardinal,4, 9608, 2)
 #elif __ia64__
 CheckTypeSize(Cardinal,4, 9608, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(Cardinal,4, 9608, 6)
 #elif __s390__
 CheckTypeSize(Cardinal,4, 9608, 10)

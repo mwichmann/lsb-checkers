@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/poll.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef POLLIN
 	CompareConstant(POLLIN,0x0001,4948,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef POLLPRI
 	CompareConstant(POLLPRI,0x0002,4949,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef POLLOUT
 	CompareConstant(POLLOUT,0x0004,4950,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef POLLERR
 	CompareConstant(POLLERR,0x0008,4951,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef POLLHUP
 	CompareConstant(POLLHUP,0x0010,4952,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef POLLNVAL
 	CompareConstant(POLLNVAL,0x0020,4953,architecture)
 #else
@@ -83,11 +83,11 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct pollfd,8, 9913, 2)
 CheckOffset(struct pollfd,events,4,2,34413)
 CheckOffset(struct pollfd,revents,6,2,34414)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct pollfd,8, 9913, 6)
 Msg("Missing member data for pollfd on PPC32\n");
 CheckOffset(struct pollfd,fd,0,6,34412)

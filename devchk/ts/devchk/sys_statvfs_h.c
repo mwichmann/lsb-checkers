@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/statvfs.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct statvfs,72, 10323, 2)
 CheckOffset(struct statvfs,f_bsize,0,2,34518)
 CheckOffset(struct statvfs,f_frsize,4,2,34519)
@@ -54,7 +54,7 @@ CheckOffset(struct statvfs,f_namemax,44,10,34529)
 CheckOffset(struct statvfs,__f_spare,48,10,34530)
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct statvfs64,96, 10325, 2)
 CheckOffset(struct statvfs64,f_bsize,0,2,34532)
 CheckOffset(struct statvfs64,f_frsize,4,2,34533)
@@ -85,7 +85,7 @@ CheckOffset(struct statvfs64,f_namemax,68,10,34543)
 CheckOffset(struct statvfs64,__f_spare,72,10,34544)
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(struct statvfs,112, 10399, 3)
 CheckOffset(struct statvfs,f_bsize,0,3,34688)
 CheckOffset(struct statvfs,f_frsize,8,3,34689)
@@ -101,7 +101,7 @@ CheckOffset(struct statvfs,f_namemax,80,3,34698)
 CheckOffset(struct statvfs,__f_spare,88,3,34699)
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(struct statvfs64,112, 10400, 3)
 CheckOffset(struct statvfs64,f_bsize,0,3,34700)
 CheckOffset(struct statvfs64,f_frsize,8,3,34701)

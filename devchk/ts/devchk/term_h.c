@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in term.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 #elif __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10348,0);

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/resource.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RUSAGE_SELF
 	CompareConstant(RUSAGE_SELF,0,3529,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef PRIO_PROCESS
 	CompareConstant(PRIO_PROCESS,0,3534,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef PRIO_PGRP
 	CompareConstant(PRIO_PGRP,1,3535,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef PRIO_USER
 	CompareConstant(PRIO_USER,2,3536,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_CPU
 	CompareConstant(RLIMIT_CPU,0,3537,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_FSIZE
 	CompareConstant(RLIMIT_FSIZE,1,3538,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_DATA
 	CompareConstant(RLIMIT_DATA,2,3539,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_STACK
 	CompareConstant(RLIMIT_STACK,3,3540,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_CORE
 	CompareConstant(RLIMIT_CORE,4,3541,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_NOFILE
 	CompareConstant(RLIMIT_NOFILE,7,3544,architecture)
 #else
@@ -123,7 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_AS
 	CompareConstant(RLIMIT_AS,9,3546,architecture)
 #else
@@ -133,7 +133,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIM_INFINITY
 	CompareConstant(RLIM_INFINITY,(~0UL),3549,architecture)
 #else
@@ -143,7 +143,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIM_SAVED_CUR
 	CompareConstant(RLIM_SAVED_CUR,-1,4865,architecture)
 #else
@@ -153,7 +153,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIM_SAVED_MAX
 	CompareConstant(RLIM_SAVED_MAX,-1,4866,architecture)
 #else
@@ -163,11 +163,11 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(rlim_t,4, 10210, 2)
 #elif __ia64__
 CheckTypeSize(rlim_t,8, 10210, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rlim_t,4, 10210, 6)
 #elif __s390__
 CheckTypeSize(rlim_t,4, 10210, 10)
@@ -176,11 +176,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10210,0);
 Msg("Find size of rlim_t (10210)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(rlim64_t,8, 10273, 2)
 #elif __ia64__
 CheckTypeSize(rlim64_t,8, 10273, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rlim64_t,8, 10273, 6)
 #elif __s390__
 CheckTypeSize(rlim64_t,8, 10273, 10)
@@ -189,7 +189,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10273,0);
 Msg("Find size of rlim64_t (10273)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct rlimit,8, 9120, 2)
 CheckOffset(struct rlimit,rlim_cur,0,2,34262)
 CheckOffset(struct rlimit,rlim_max,4,2,34263)
@@ -197,7 +197,7 @@ CheckOffset(struct rlimit,rlim_max,4,2,34263)
 CheckTypeSize(struct rlimit,16, 9120, 3)
 CheckOffset(struct rlimit,rlim_cur,0,3,34262)
 CheckOffset(struct rlimit,rlim_max,8,3,34263)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct rlimit,8, 9120, 6)
 Msg("Missing member data for rlimit on PPC32\n");
 CheckOffset(struct rlimit,rlim_cur,0,6,34262)
@@ -210,14 +210,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9120,0);
 Msg("Find size of rlimit (9120)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct rlimit64,16, 9122, 2)
 CheckOffset(struct rlimit64,rlim_cur,0,2,34266)
 CheckOffset(struct rlimit64,rlim_max,8,2,34267)
 #elif __ia64__
 CheckTypeSize(struct rlimit64,16, 9122, 3)
 CheckOffset(struct rlimit64,rlim_max,8,3,34267)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct rlimit64,16, 9122, 6)
 Msg("Missing member data for rlimit64 on PPC32\n");
 CheckOffset(struct rlimit64,rlim_cur,0,6,34266)
@@ -230,7 +230,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9122,0);
 Msg("Find size of rlimit64 (9122)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct rusage,72, 9125, 2)
 CheckOffset(struct rusage,ru_utime,0,2,34246)
 CheckOffset(struct rusage,ru_stime,8,2,34247)
@@ -266,7 +266,7 @@ CheckOffset(struct rusage,ru_msgrcv,112,3,34258)
 CheckOffset(struct rusage,ru_nsignals,120,3,34259)
 CheckOffset(struct rusage,ru_nvcsw,128,3,34260)
 CheckOffset(struct rusage,ru_nivcsw,136,3,34261)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct rusage,72, 9125, 6)
 Msg("Missing member data for rusage on PPC32\n");
 CheckOffset(struct rusage,ru_utime,0,6,34246)

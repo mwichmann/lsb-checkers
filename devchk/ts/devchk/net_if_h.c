@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in net/if.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_UP
 	CompareConstant(IFF_UP,0x01,4976,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_BROADCAST
 	CompareConstant(IFF_BROADCAST,0x02,4977,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_DEBUG
 	CompareConstant(IFF_DEBUG,0x04,4978,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_LOOPBACK
 	CompareConstant(IFF_LOOPBACK,0x08,4979,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_POINTOPOINT
 	CompareConstant(IFF_POINTOPOINT,0x10,4980,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_NOTRAILERS
 	CompareConstant(IFF_NOTRAILERS,0x20,4981,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_RUNNING
 	CompareConstant(IFF_RUNNING,0x40,4982,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_NOARP
 	CompareConstant(IFF_NOARP,0x80,4983,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_PROMISC
 	CompareConstant(IFF_PROMISC,0x100,4984,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFF_MULTICAST
 	CompareConstant(IFF_MULTICAST,0x1000,4985,architecture)
 #else
@@ -123,7 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IFNAMSIZ
 	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture)
 #else
@@ -133,7 +133,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IF_NAMESIZE
 	CompareConstant(IF_NAMESIZE,16,4989,architecture)
 #else
@@ -143,12 +143,12 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct ifaddr,40, 10286, 2)
 CheckOffset(struct ifaddr,ifa_ifu,16,2,34466)
 CheckOffset(struct ifaddr,ifa_ifp,32,2,34496)
 CheckOffset(struct ifaddr,ifa_next,36,2,34497)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct ifaddr,40, 10286, 6)
 Msg("Missing member data for ifaddr on PPC32\n");
 CheckOffset(struct ifaddr,ifa_addr,0,6,34463)
@@ -170,8 +170,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10286,0);
 Msg("Find size of ifaddr (10286)\n");
 #endif
 
-#ifdef __i386__
-#elif __powerpc__
+#if __i386__
+#elif __powerpc__ && !__powerpc64__
 #elif __ia64__
 #elif __s390__
 #else
@@ -179,10 +179,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10287,0);
 Msg("Find size of anon-ifa_ifu (10287)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct ifreq,32, 10290, 2)
 CheckOffset(struct ifreq,ifr_ifru,16,2,34483)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct ifreq,32, 10290, 6)
 Msg("Missing member data for ifreq on PPC32\n");
 CheckOffset(struct ifreq,ifr_ifrn,0,6,34471)
@@ -198,8 +198,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10290,0);
 Msg("Find size of ifreq (10290)\n");
 #endif
 
-#ifdef __i386__
-#elif __powerpc__
+#if __i386__
+#elif __powerpc__ && !__powerpc64__
 #elif __ia64__
 #elif __s390__
 #else
@@ -207,8 +207,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10291,0);
 Msg("Find size of anon-ifr_ifrn (10291)\n");
 #endif
 
-#ifdef __i386__
-#elif __powerpc__
+#if __i386__
+#elif __powerpc__ && !__powerpc64__
 #elif __ia64__
 #elif __s390__
 #else
@@ -216,7 +216,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10292,0);
 Msg("Find size of anon-ifr_ifru (10292)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct ifconf,8, 10288, 2)
 CheckOffset(struct ifconf,ifc_len,0,2,34467)
 CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
@@ -225,7 +225,7 @@ CheckTypeSize(struct ifconf,16, 10288, 3)
 CheckOffset(struct ifconf,ifc_ifcu,8,3,34469)
 #endif
 
-#ifdef __no_sym__
+#if __no_sym__
 #endif
 
 #ifdef TET_TEST

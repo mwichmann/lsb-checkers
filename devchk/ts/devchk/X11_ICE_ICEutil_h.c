@@ -26,11 +26,11 @@ int pcnt=0;
 Msg("Checking data structures in X11/ICE/ICEutil.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 2)
 #elif __ia64__
 CheckTypeSize(IceAuthFileEntry,56, 8228, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 6)
 #elif __s390__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 10)
@@ -39,11 +39,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8228,0);
 Msg("Find size of IceAuthFileEntry (8228)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 2)
 #elif __ia64__
 CheckTypeSize(IceAuthDataEntry,40, 8230, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 6)
 #elif __s390__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 10)

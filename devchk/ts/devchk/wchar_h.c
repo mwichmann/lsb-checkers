@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in wchar.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef WCHAR_MIN
 	CompareConstant(WCHAR_MIN,0x80000000,1953,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef WCHAR_MAX
 	CompareConstant(WCHAR_MAX,0x7FFFFFFF,1954,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef WEOF
 	CompareConstant(WEOF,(0xffffffffu),1955,architecture)
 #else

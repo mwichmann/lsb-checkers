@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in rpc/svc.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct SVCXPRT,308, 9980, 2)
 CheckOffset(struct SVCXPRT,xp_port,4,2,32226)
 CheckOffset(struct SVCXPRT,xp_ops,8,2,32245)
@@ -58,7 +58,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9980,0);
 Msg("Find size of SVCXPRT (9980)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(SVCXPRT,308, 10390, 2)
 #elif __s390__
 CheckTypeSize(SVCXPRT,308, 10390, 10)
@@ -69,7 +69,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10390,0);
 Msg("Find size of SVCXPRT (10390)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct xp_ops,24, 9981, 2)
 CheckOffset(struct xp_ops,xp_stat,4,2,32231)
 CheckOffset(struct xp_ops,xp_getargs,8,2,32235)
@@ -92,7 +92,7 @@ CheckOffset(struct xp_ops,xp_freeargs,32,3,32242)
 CheckOffset(struct xp_ops,xp_destroy,40,3,32244)
 #endif
 
-#ifdef __s390__
+#if __s390__
 #endif
 
 #ifdef TET_TEST

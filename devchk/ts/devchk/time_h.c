@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in time.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLOCKS_PER_SEC
 	CompareConstant(CLOCKS_PER_SEC,1000000l,2473,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLOCK_REALTIME
 	CompareConstant(CLOCK_REALTIME,0,2475,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TIMER_ABSTIME
 	CompareConstant(TIMER_ABSTIME,1,2478,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct tm,44, 7019, 2)
 CheckOffset(struct tm,tm_min,4,2,33513)
 CheckOffset(struct tm,tm_hour,8,2,33514)
@@ -77,7 +77,7 @@ CheckOffset(struct tm,tm_yday,28,3,33519)
 CheckOffset(struct tm,tm_isdst,32,3,33520)
 CheckOffset(struct tm,tm_gmtoff,40,3,33521)
 CheckOffset(struct tm,tm_zone,48,3,33522)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct tm,44, 7019, 6)
 Msg("Missing member data for tm on PPC32\n");
 CheckOffset(struct tm,tm_sec,0,6,33512)
@@ -108,13 +108,13 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 Msg("Find size of tm (7019)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct itimerspec,16, 10101, 2)
 CheckOffset(struct itimerspec,it_value,8,2,33509)
 #elif __ia64__
 CheckTypeSize(struct itimerspec,32, 10101, 3)
 CheckOffset(struct itimerspec,it_value,16,3,33509)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct itimerspec,16, 10101, 6)
 Msg("Missing member data for itimerspec on PPC32\n");
 CheckOffset(struct itimerspec,it_interval,0,6,33508)

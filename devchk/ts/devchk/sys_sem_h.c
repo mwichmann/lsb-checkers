@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/sem.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GETVAL
 	CompareConstant(GETVAL,12,3200,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GETALL
 	CompareConstant(GETALL,13,3201,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GETNCNT
 	CompareConstant(GETNCNT,14,3202,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GETZCNT
 	CompareConstant(GETZCNT,15,3203,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SETVAL
 	CompareConstant(SETVAL,16,3204,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SETALL
 	CompareConstant(SETALL,17,3205,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SEM_UNDO
 	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef GETPID
 	CompareConstant(GETPID,11,3199,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct sembuf,6, 6982, 2)
 CheckOffset(struct sembuf,sem_op,2,2,30119)
 CheckOffset(struct sembuf,sem_flg,4,2,30120)
@@ -111,7 +111,7 @@ CheckOffset(struct sembuf,sem_flg,4,2,30120)
 CheckTypeSize(struct sembuf,6, 6982, 3)
 CheckOffset(struct sembuf,sem_op,2,3,30119)
 CheckOffset(struct sembuf,sem_flg,4,3,30120)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sembuf,6, 6982, 6)
 Msg("Missing member data for sembuf on PPC32\n");
 CheckOffset(struct sembuf,sem_num,0,6,30118)
@@ -123,7 +123,7 @@ CheckOffset(struct sembuf,sem_op,2,10,30119)
 CheckOffset(struct sembuf,sem_flg,4,10,30120)
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct semid_ds,64, 10211, 2)
 CheckOffset(struct semid_ds,sem_perm,0,2,34290)
 CheckOffset(struct semid_ds,sem_otime,36,2,34291)
@@ -135,7 +135,7 @@ CheckOffset(struct semid_ds,__unused3,56,2,34296)
 CheckOffset(struct semid_ds,__unused4,60,2,34297)
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(struct semid_ds,88, 10396, 3)
 CheckOffset(struct semid_ds,sem_perm,0,3,34665)
 CheckOffset(struct semid_ds,sem_otime,48,3,34666)
@@ -144,7 +144,7 @@ CheckOffset(struct semid_ds,__unused1,72,3,34668)
 CheckOffset(struct semid_ds,__unused2,80,3,34669)
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct semid_ds,64, 10407, 6)
 CheckOffset(struct semid_ds,sem_perm,0,6,34768)
 CheckOffset(struct semid_ds,sem_otime,0,6,34769)
@@ -156,7 +156,7 @@ CheckOffset(struct semid_ds,__unused3,0,6,34774)
 CheckOffset(struct semid_ds,__unused4,0,6,34776)
 #endif
 
-#ifdef __s390__
+#if __s390__
 CheckTypeSize(struct semid_ds,64, 10408, 10)
 CheckOffset(struct semid_ds,sem_perm,0,10,34775)
 CheckOffset(struct semid_ds,sem_otime,36,10,34777)

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in utmp.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef UT_LINESIZE
 	CompareConstant(UT_LINESIZE,32,4960,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef UT_NAMESIZE
 	CompareConstant(UT_NAMESIZE,32,4961,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef UT_HOSTSIZE
 	CompareConstant(UT_HOSTSIZE,256,4962,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef EMPTY
 	CompareConstant(EMPTY,0,4963,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RUN_LVL
 	CompareConstant(RUN_LVL,1,4964,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef BOOT_TIME
 	CompareConstant(BOOT_TIME,2,4965,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NEW_TIME
 	CompareConstant(NEW_TIME,3,4966,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef OLD_TIME
 	CompareConstant(OLD_TIME,4,4967,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef INIT_PROCESS
 	CompareConstant(INIT_PROCESS,5,4968,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LOGIN_PROCESS
 	CompareConstant(LOGIN_PROCESS,6,4969,architecture)
 #else
@@ -123,7 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef USER_PROCESS
 	CompareConstant(USER_PROCESS,7,4970,architecture)
 #else
@@ -133,7 +133,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef DEAD_PROCESS
 	CompareConstant(DEAD_PROCESS,8,4971,architecture)
 #else
@@ -143,7 +143,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ACCOUNTING
 	CompareConstant(ACCOUNTING,9,4972,architecture)
 #else
@@ -153,11 +153,11 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct exit_status,4, 10282, 2)
 CheckOffset(struct exit_status,e_termination,0,2,34453)
 CheckOffset(struct exit_status,e_exit,2,2,34454)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct exit_status,4, 10282, 6)
 Msg("Missing member data for exit_status on PPC32\n");
 CheckOffset(struct exit_status,e_termination,0,6,34453)
@@ -173,12 +173,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10282,0);
 Msg("Find size of exit_status (10282)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct lastlog,292, 10285, 2)
 CheckOffset(struct lastlog,ll_time,0,2,34460)
 CheckOffset(struct lastlog,ll_line,4,2,34461)
 CheckOffset(struct lastlog,ll_host,36,2,34462)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct lastlog,292, 10285, 6)
 Msg("Missing member data for lastlog on PPC32\n");
 CheckOffset(struct lastlog,ll_time,0,6,34460)
@@ -197,7 +197,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10285,0);
 Msg("Find size of lastlog (10285)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct utmp,384, 10281, 2)
 CheckOffset(struct utmp,ut_type,0,2,34447)
 CheckOffset(struct utmp,ut_pid,4,2,34448)
@@ -210,7 +210,7 @@ CheckOffset(struct utmp,ut_session,336,2,34456)
 CheckOffset(struct utmp,ut_tv,340,2,34457)
 CheckOffset(struct utmp,ut_addr_v6,348,2,34458)
 CheckOffset(struct utmp,__unused,364,2,34459)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct utmp,384, 10281, 6)
 Msg("Missing member data for utmp on PPC32\n");
 CheckOffset(struct utmp,ut_type,0,6,34447)

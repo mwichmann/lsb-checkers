@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in locale.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_CTYPE
 	CompareConstant(LC_CTYPE,0,1470,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_NUMERIC
 	CompareConstant(LC_NUMERIC,1,1471,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_TIME
 	CompareConstant(LC_TIME,2,1472,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_COLLATE
 	CompareConstant(LC_COLLATE,3,1473,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_MONETARY
 	CompareConstant(LC_MONETARY,4,1474,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_MESSAGES
 	CompareConstant(LC_MESSAGES,5,1475,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_ALL
 	CompareConstant(LC_ALL,6,1476,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_PAPER
 	CompareConstant(LC_PAPER,7,1477,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_NAME
 	CompareConstant(LC_NAME,8,1478,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_ADDRESS
 	CompareConstant(LC_ADDRESS,9,1479,architecture)
 #else
@@ -123,7 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_TELEPHONE
 	CompareConstant(LC_TELEPHONE,10,1480,architecture)
 #else
@@ -133,7 +133,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_MEASUREMENT
 	CompareConstant(LC_MEASUREMENT,11,1481,architecture)
 #else
@@ -143,7 +143,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_IDENTIFICATION
 	CompareConstant(LC_IDENTIFICATION,12,1482,architecture)
 #else
@@ -153,7 +153,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct lconv,56, 6919, 2)
 CheckOffset(struct lconv,decimal_point,0,2,29980)
 CheckOffset(struct lconv,thousands_sep,4,2,29981)
@@ -204,7 +204,7 @@ CheckOffset(struct lconv,int_n_cs_precedes,90,3,34433)
 CheckOffset(struct lconv,int_n_sep_by_space,91,3,34434)
 CheckOffset(struct lconv,int_p_sign_posn,92,3,34435)
 CheckOffset(struct lconv,int_n_sign_posn,93,3,34436)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct lconv,56, 6919, 6)
 Msg("Missing member data for lconv on PPC32\n");
 CheckOffset(struct lconv,decimal_point,0,6,29980)

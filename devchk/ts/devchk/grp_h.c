@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in grp.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct group,16, 6894, 2)
 CheckOffset(struct group,gr_name,0,2,29792)
 CheckOffset(struct group,gr_passwd,4,2,29793)
@@ -34,7 +34,7 @@ CheckTypeSize(struct group,32, 6894, 3)
 CheckOffset(struct group,gr_passwd,8,3,29793)
 CheckOffset(struct group,gr_gid,16,3,29794)
 CheckOffset(struct group,gr_mem,24,3,29795)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct group,16, 6894, 6)
 Msg("Missing member data for group on PPC32\n");
 CheckOffset(struct group,gr_name,0,6,29792)

@@ -30,7 +30,7 @@ int pcnt=0;
 Msg("Checking data structures in X11/CompositeP.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef XtCompositeExtensionVersion
 	CompareConstant(XtCompositeExtensionVersion,2L,4931,architecture)
 #else
@@ -40,15 +40,15 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for XtInheritGeometryManager */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for XtInheritInsertChild */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef XtInheritDeleteChild
 	CompareConstant(XtInheritDeleteChild,((XtWidgetProc) _XtInherit),4934,architecture)
 #else
@@ -58,11 +58,11 @@ cnt++;
 
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(CompositeClassPart,40, 10244, 3)
 #elif __i386__
 CheckTypeSize(CompositeClassPart,20, 10244, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(CompositeClassPart,20, 10244, 6)
 #elif __s390__
 CheckTypeSize(CompositeClassPart,20, 10244, 10)
@@ -71,11 +71,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
 Msg("Find size of CompositeClassPart (10244)\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(CompositeClassRec,264, 10240, 3)
 #elif __i386__
 CheckTypeSize(CompositeClassRec,136, 10240, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(CompositeClassRec,136, 10240, 6)
 #elif __s390__
 CheckTypeSize(CompositeClassRec,136, 10240, 10)

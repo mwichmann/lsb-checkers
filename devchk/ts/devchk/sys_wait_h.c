@@ -24,7 +24,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/wait.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef WNOHANG
 	CompareConstant(WNOHANG,0x00000001,3490,architecture)
 #else
@@ -34,7 +34,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef WUNTRACED
 	CompareConstant(WUNTRACED,0x00000002,3491,architecture)
 #else
@@ -44,31 +44,31 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for WEXITSTATUS(status) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for WTERMSIG(status) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for WSTOPSIG(status) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for WIFEXITED(status) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for WIFSIGNALED(status) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for WIFSTOPPED(status) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef WCOREFLAG
 	CompareConstant(WCOREFLAG,0x80,1739,architecture)
 #else
@@ -78,15 +78,15 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for WCOREDUMP(status) */
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(idtype_t,4, 9185, 2)
 #elif __ia64__
 CheckTypeSize(idtype_t,4, 9185, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(idtype_t,4, 9185, 6)
 #elif __s390__
 CheckTypeSize(idtype_t,4, 9185, 10)

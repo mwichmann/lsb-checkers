@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/timeb.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct timeb,12, 10216, 2)
 CheckOffset(struct timeb,millitm,4,2,34299)
 CheckOffset(struct timeb,timezone,6,2,34300)
@@ -33,7 +33,7 @@ CheckTypeSize(struct timeb,16, 10216, 3)
 CheckOffset(struct timeb,millitm,8,3,34299)
 CheckOffset(struct timeb,timezone,10,3,34300)
 CheckOffset(struct timeb,dstflag,12,3,34301)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct timeb,12, 10216, 6)
 Msg("Missing member data for timeb on PPC32\n");
 CheckOffset(struct timeb,time,0,6,34298)

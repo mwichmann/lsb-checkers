@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in fnmatch.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef FNM_PATHNAME
 	CompareConstant(FNM_PATHNAME,(1<<0),1221,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef FNM_NOESCAPE
 	CompareConstant(FNM_NOESCAPE,(1<<1),1222,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef FNM_PERIOD
 	CompareConstant(FNM_PERIOD,(1<<2),1223,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef FNM_NOMATCH
 	CompareConstant(FNM_NOMATCH,1,1228,architecture)
 #else
