@@ -11,3 +11,4 @@ malloc
 calloc
 realloc
 free
+dlsym
