@@ -100,10 +100,10 @@ for(1..$sth->numrows) {
 	@libname = split('/',$libname);
 	$libname = pop(@libname);
 	if( $asym != "1" ) {
-		print LIBS "#if defined($asym)\n";
+		print LIBS "#if $asym\n";
 		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname, journal);\n";
 		print LIBS "#endif\n";
-		print LIBSH "#if defined($asym)\n";
+		print LIBSH "#if $asym\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
 		print LIBSH "#endif\n";
 	} else {

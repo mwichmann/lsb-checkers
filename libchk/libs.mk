@@ -1,7 +1,7 @@
 # Generated file #
 LIBOBJS = \
-	ld_lsb_64_so_1.o \
 	ld_lsb_ia64_so_1.o \
+	ld_lsb_ppc64_so_1.o \
 	ld_lsb_s390_so_1.o \
 	ld_lsb_x86_64_so_1.o \
 	ld_lsb_so_1.o \
