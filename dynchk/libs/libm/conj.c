@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef conj
+static double(*funcptr) () = 0;
 
-double conj()
+double conj ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conj");
 	return funcptr();
 }
 
-double lsb_conj()
+double lsb_conj ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conj");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double, int) = 0;
+#undef ldexpl
+static long double(*funcptr) (long double , int ) = 0;
 
-long double ldexpl(long double arg0, int arg1)
+long double ldexpl (long double arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexpl");
@@ -13,7 +14,7 @@ long double ldexpl(long double arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_ldexpl(long double arg0, int arg1)
+long double lsb_ldexpl (long double arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexpl");

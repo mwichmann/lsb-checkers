@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef csqrt
+static double(*funcptr) () = 0;
 
-double csqrt()
+double csqrt ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csqrt");
 	return funcptr();
 }
 
-double lsb_csqrt()
+double lsb_csqrt ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csqrt");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double) = 0;
+#undef cos
+static double(*funcptr) (double ) = 0;
 
-double cos(double arg0)
+double cos (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cos");
@@ -12,7 +13,7 @@ double cos(double arg0)
 	return funcptr(arg0);
 }
 
-double lsb_cos(double arg0)
+double lsb_cos (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cos");

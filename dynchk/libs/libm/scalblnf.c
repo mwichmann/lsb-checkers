@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float, long) = 0;
+#undef scalblnf
+static float(*funcptr) (float , long ) = 0;
 
-float scalblnf(float arg0, long arg1)
+float scalblnf (float arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalblnf");
@@ -13,7 +14,7 @@ float scalblnf(float arg0, long arg1)
 	return funcptr(arg0, arg1);
 }
 
-float lsb_scalblnf(float arg0, long arg1)
+float lsb_scalblnf (float arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalblnf");

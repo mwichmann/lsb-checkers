@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double) = 0;
+#undef nearbyintl
+static long double(*funcptr) (long double ) = 0;
 
-long double nearbyintl(long double arg0)
+long double nearbyintl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nearbyintl");
@@ -12,7 +13,7 @@ long double nearbyintl(long double arg0)
 	return funcptr(arg0);
 }
 
-long double lsb_nearbyintl(long double arg0)
+long double lsb_nearbyintl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nearbyintl");

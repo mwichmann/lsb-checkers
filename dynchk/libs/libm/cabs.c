@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef cabs
+static double(*funcptr) () = 0;
 
-double cabs()
+double cabs ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cabs");
 	return funcptr();
 }
 
-double lsb_cabs()
+double lsb_cabs ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cabs");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef asinf
+static float(*funcptr) (float ) = 0;
 
-float asinf(float arg0)
+float asinf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asinf");
@@ -12,7 +13,7 @@ float asinf(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_asinf(float arg0)
+float lsb_asinf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asinf");

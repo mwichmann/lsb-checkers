@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(double) = 0;
+#undef isinf
+static int(*funcptr) (double ) = 0;
 
-int isinf(double arg0)
+int isinf (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isinf");
@@ -12,7 +13,7 @@ int isinf(double arg0)
 	return funcptr(arg0);
 }
 
-int lsb_isinf(double arg0)
+int lsb_isinf (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isinf");

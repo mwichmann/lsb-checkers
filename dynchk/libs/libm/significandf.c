@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef significandf
+static float(*funcptr) (float ) = 0;
 
-float significandf(float arg0)
+float significandf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "significandf");
@@ -12,7 +13,7 @@ float significandf(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_significandf(float arg0)
+float lsb_significandf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "significandf");

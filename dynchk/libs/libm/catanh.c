@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef catanh
+static double(*funcptr) () = 0;
 
-double catanh()
+double catanh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catanh");
 	return funcptr();
 }
 
-double lsb_catanh()
+double lsb_catanh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catanh");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef csinhf
+static float(*funcptr) (float ) = 0;
 
-float csinhf(float arg0)
+float csinhf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinhf");
@@ -12,7 +13,7 @@ float csinhf(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_csinhf(float arg0)
+float lsb_csinhf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinhf");

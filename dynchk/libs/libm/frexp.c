@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double, int *) = 0;
+#undef frexp
+static double(*funcptr) (double , int * ) = 0;
 
-double frexp(double arg0, int * arg1)
+double frexp (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexp");
@@ -13,7 +14,7 @@ double frexp(double arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_frexp(double arg0, int * arg1)
+double lsb_frexp (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexp");

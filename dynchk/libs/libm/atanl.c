@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double) = 0;
+#undef atanl
+static long double(*funcptr) (long double ) = 0;
 
-long double atanl(long double arg0)
+long double atanl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanl");
@@ -12,7 +13,7 @@ long double atanl(long double arg0)
 	return funcptr(arg0);
 }
 
-long double lsb_atanl(long double arg0)
+long double lsb_atanl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanl");

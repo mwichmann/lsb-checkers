@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef ccosh
+static double(*funcptr) () = 0;
 
-double ccosh()
+double ccosh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccosh");
 	return funcptr();
 }
 
-double lsb_ccosh()
+double lsb_ccosh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccosh");

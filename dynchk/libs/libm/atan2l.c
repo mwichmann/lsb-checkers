@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double, long double) = 0;
+#undef atan2l
+static long double(*funcptr) (long double , long double ) = 0;
 
-long double atan2l(long double arg0, long double arg1)
+long double atan2l (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atan2l");
@@ -13,7 +14,7 @@ long double atan2l(long double arg0, long double arg1)
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_atan2l(long double arg0, long double arg1)
+long double lsb_atan2l (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atan2l");

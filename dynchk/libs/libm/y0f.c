@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef y0f
+static float(*funcptr) (float ) = 0;
 
-float y0f(float arg0)
+float y0f (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "y0f");
@@ -12,7 +13,7 @@ float y0f(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_y0f(float arg0)
+float lsb_y0f (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "y0f");

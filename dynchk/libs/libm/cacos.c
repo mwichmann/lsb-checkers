@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef cacos
+static double(*funcptr) () = 0;
 
-double cacos()
+double cacos ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacos");
 	return funcptr();
 }
 
-double lsb_cacos()
+double lsb_cacos ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacos");

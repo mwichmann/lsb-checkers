@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef cpow
+static double(*funcptr) () = 0;
 
-double cpow()
+double cpow ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpow");
 	return funcptr();
 }
 
-double lsb_cpow()
+double lsb_cpow ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpow");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef cargf
+static float(*funcptr) (float ) = 0;
 
-float cargf(float arg0)
+float cargf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cargf");
@@ -12,7 +13,7 @@ float cargf(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_cargf(float arg0)
+float lsb_cargf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cargf");

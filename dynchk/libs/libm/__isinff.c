@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(float) = 0;
+#undef __isinff
+static int(*funcptr) (float ) = 0;
 
-int __isinff(float arg0)
+int __isinff (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__isinff");
@@ -12,7 +13,7 @@ int __isinff(float arg0)
 	return funcptr(arg0);
 }
 
-int lsb___isinff(float arg0)
+int lsb___isinff (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__isinff");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef ccos
+static double(*funcptr) () = 0;
 
-double ccos()
+double ccos ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccos");
 	return funcptr();
 }
 
-double lsb_ccos()
+double lsb_ccos ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccos");

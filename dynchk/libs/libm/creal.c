@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef creal
+static double(*funcptr) () = 0;
 
-double creal()
+double creal ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creal");
 	return funcptr();
 }
 
-double lsb_creal()
+double lsb_creal ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creal");

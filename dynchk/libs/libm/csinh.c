@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef csinh
+static double(*funcptr) () = 0;
 
-double csinh()
+double csinh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinh");
 	return funcptr();
 }
 
-double lsb_csinh()
+double lsb_csinh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinh");

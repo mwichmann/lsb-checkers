@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(double, double *, double *) = 0;
+#undef sincos
+static void(*funcptr) (double , double * , double * ) = 0;
 
-void sincos(double arg0, double * arg1, double * arg2)
+void sincos (double arg0 , double * arg1 , double * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sincos");
@@ -14,7 +15,7 @@ void sincos(double arg0, double * arg1, double * arg2)
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_sincos(double arg0, double * arg1, double * arg2)
+void lsb_sincos (double arg0 , double * arg1 , double * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sincos");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef clog
+static double(*funcptr) () = 0;
 
-double clog()
+double clog ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clog");
 	return funcptr();
 }
 
-double lsb_clog()
+double lsb_clog ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clog");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(int, double) = 0;
+#undef yn
+static double(*funcptr) (int , double ) = 0;
 
-double yn(int arg0, double arg1)
+double yn (int arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "yn");
@@ -13,7 +14,7 @@ double yn(int arg0, double arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_yn(int arg0, double arg1)
+double lsb_yn (int arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "yn");

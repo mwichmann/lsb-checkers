@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(long double) = 0;
+#undef isnanl
+static int(*funcptr) (long double ) = 0;
 
-int isnanl(long double arg0)
+int isnanl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isnanl");
@@ -12,7 +13,7 @@ int isnanl(long double arg0)
 	return funcptr(arg0);
 }
 
-int lsb_isnanl(long double arg0)
+int lsb_isnanl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isnanl");

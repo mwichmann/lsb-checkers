@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double) = 0;
+#undef j0l
+static long double(*funcptr) (long double ) = 0;
 
-long double j0l(long double arg0)
+long double j0l (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j0l");
@@ -12,7 +13,7 @@ long double j0l(long double arg0)
 	return funcptr(arg0);
 }
 
-long double lsb_j0l(long double arg0)
+long double lsb_j0l (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j0l");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double) = 0;
+#undef csinhl
+static long double(*funcptr) (long double ) = 0;
 
-long double csinhl(long double arg0)
+long double csinhl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinhl");
@@ -12,7 +13,7 @@ long double csinhl(long double arg0)
 	return funcptr(arg0);
 }
 
-long double lsb_csinhl(long double arg0)
+long double lsb_csinhl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinhl");

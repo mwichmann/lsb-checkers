@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float, float, float) = 0;
+#undef fmaf
+static float(*funcptr) (float , float , float ) = 0;
 
-float fmaf(float arg0, float arg1, float arg2)
+float fmaf (float arg0 , float arg1 , float arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaf");
@@ -14,7 +15,7 @@ float fmaf(float arg0, float arg1, float arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-float lsb_fmaf(float arg0, float arg1, float arg2)
+float lsb_fmaf (float arg0 , float arg1 , float arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaf");
