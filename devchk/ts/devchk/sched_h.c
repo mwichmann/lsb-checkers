@@ -24,6 +24,16 @@ Msg("Checking data structures in sched.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef SCHED_OTHER
+	CompareConstant(SCHED_OTHER,0,1611,architecture)
+#else
+Msg( "Error: Constant not found: SCHED_OTHER\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef SCHED_FIFO
 	CompareConstant(SCHED_FIFO,1,1612,architecture)
 #else
@@ -38,16 +48,6 @@ cnt++;
 	CompareConstant(SCHED_RR,2,1613,architecture)
 #else
 Msg( "Error: Constant not found: SCHED_RR\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef SCHED_OTHER
-	CompareConstant(SCHED_OTHER,0,1611,architecture)
-#else
-Msg( "Error: Constant not found: SCHED_OTHER\n");
 cnt++;
 #endif
 

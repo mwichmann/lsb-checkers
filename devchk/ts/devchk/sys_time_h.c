@@ -24,20 +24,20 @@ Msg("Checking data structures in sys/time.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef ITIMER_VIRTUAL
-	CompareConstant(ITIMER_VIRTUAL,1,3586,architecture)
+#ifdef ITIMER_REAL
+	CompareConstant(ITIMER_REAL,0,3585,architecture)
 #else
-Msg( "Error: Constant not found: ITIMER_VIRTUAL\n");
+Msg( "Error: Constant not found: ITIMER_REAL\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef ITIMER_REAL
-	CompareConstant(ITIMER_REAL,0,3585,architecture)
+#ifdef ITIMER_VIRTUAL
+	CompareConstant(ITIMER_VIRTUAL,1,3586,architecture)
 #else
-Msg( "Error: Constant not found: ITIMER_REAL\n");
+Msg( "Error: Constant not found: ITIMER_VIRTUAL\n");
 cnt++;
 #endif
 

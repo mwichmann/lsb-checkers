@@ -24,90 +24,10 @@ Msg("Checking data structures in sys/resource.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIM_SAVED_CUR
-	CompareConstant(RLIM_SAVED_CUR,-1,4865,architecture)
+#ifdef RUSAGE_SELF
+	CompareConstant(RUSAGE_SELF,0,3529,architecture)
 #else
-Msg( "Error: Constant not found: RLIM_SAVED_CUR\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIMIT_CPU
-	CompareConstant(RLIMIT_CPU,0,3537,architecture)
-#else
-Msg( "Error: Constant not found: RLIMIT_CPU\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIMIT_CORE
-	CompareConstant(RLIMIT_CORE,4,3541,architecture)
-#else
-Msg( "Error: Constant not found: RLIMIT_CORE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PRIO_USER
-	CompareConstant(PRIO_USER,2,3536,architecture)
-#else
-Msg( "Error: Constant not found: PRIO_USER\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIM_SAVED_MAX
-	CompareConstant(RLIM_SAVED_MAX,-1,4866,architecture)
-#else
-Msg( "Error: Constant not found: RLIM_SAVED_MAX\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIMIT_AS
-	CompareConstant(RLIMIT_AS,9,3546,architecture)
-#else
-Msg( "Error: Constant not found: RLIMIT_AS\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIMIT_STACK
-	CompareConstant(RLIMIT_STACK,3,3540,architecture)
-#else
-Msg( "Error: Constant not found: RLIMIT_STACK\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIMIT_FSIZE
-	CompareConstant(RLIMIT_FSIZE,1,3538,architecture)
-#else
-Msg( "Error: Constant not found: RLIMIT_FSIZE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIMIT_NOFILE
-	CompareConstant(RLIMIT_NOFILE,7,3544,architecture)
-#else
-Msg( "Error: Constant not found: RLIMIT_NOFILE\n");
+Msg( "Error: Constant not found: RUSAGE_SELF\n");
 cnt++;
 #endif
 
@@ -124,16 +44,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef RLIMIT_DATA
-	CompareConstant(RLIMIT_DATA,2,3539,architecture)
-#else
-Msg( "Error: Constant not found: RLIMIT_DATA\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef PRIO_PGRP
 	CompareConstant(PRIO_PGRP,1,3535,architecture)
 #else
@@ -144,10 +54,80 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef RUSAGE_SELF
-	CompareConstant(RUSAGE_SELF,0,3529,architecture)
+#ifdef PRIO_USER
+	CompareConstant(PRIO_USER,2,3536,architecture)
 #else
-Msg( "Error: Constant not found: RUSAGE_SELF\n");
+Msg( "Error: Constant not found: PRIO_USER\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_CPU
+	CompareConstant(RLIMIT_CPU,0,3537,architecture)
+#else
+Msg( "Error: Constant not found: RLIMIT_CPU\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_FSIZE
+	CompareConstant(RLIMIT_FSIZE,1,3538,architecture)
+#else
+Msg( "Error: Constant not found: RLIMIT_FSIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_DATA
+	CompareConstant(RLIMIT_DATA,2,3539,architecture)
+#else
+Msg( "Error: Constant not found: RLIMIT_DATA\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_STACK
+	CompareConstant(RLIMIT_STACK,3,3540,architecture)
+#else
+Msg( "Error: Constant not found: RLIMIT_STACK\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_CORE
+	CompareConstant(RLIMIT_CORE,4,3541,architecture)
+#else
+Msg( "Error: Constant not found: RLIMIT_CORE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_NOFILE
+	CompareConstant(RLIMIT_NOFILE,7,3544,architecture)
+#else
+Msg( "Error: Constant not found: RLIMIT_NOFILE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_AS
+	CompareConstant(RLIMIT_AS,9,3546,architecture)
+#else
+Msg( "Error: Constant not found: RLIMIT_AS\n");
 cnt++;
 #endif
 
@@ -158,6 +138,26 @@ cnt++;
 	CompareConstant(RLIM_INFINITY,(~0UL),3549,architecture)
 #else
 Msg( "Error: Constant not found: RLIM_INFINITY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIM_SAVED_CUR
+	CompareConstant(RLIM_SAVED_CUR,-1,4865,architecture)
+#else
+Msg( "Error: Constant not found: RLIM_SAVED_CUR\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RLIM_SAVED_MAX
+	CompareConstant(RLIM_SAVED_MAX,-1,4866,architecture)
+#else
+Msg( "Error: Constant not found: RLIM_SAVED_MAX\n");
 cnt++;
 #endif
 

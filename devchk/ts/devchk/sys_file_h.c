@@ -34,16 +34,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef LOCK_UN
-	CompareConstant(LOCK_UN,8,1206,architecture)
-#else
-Msg( "Error: Constant not found: LOCK_UN\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef LOCK_EX
 	CompareConstant(LOCK_EX,2,1204,architecture)
 #else
@@ -58,6 +48,16 @@ cnt++;
 	CompareConstant(LOCK_NB,4,1205,architecture)
 #else
 Msg( "Error: Constant not found: LOCK_NB\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef LOCK_UN
+	CompareConstant(LOCK_UN,8,1206,architecture)
+#else
+Msg( "Error: Constant not found: LOCK_UN\n");
 cnt++;
 #endif
 

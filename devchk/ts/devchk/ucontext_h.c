@@ -23,6 +23,17 @@ int pcnt=0;
 Msg("Checking data structures in ucontext.h\n");
 #endif
 
+#ifdef __ia64__
+#ifdef _SC_GR0_OFFSET
+	CompareConstant(_SC_GR0_OFFSET,(((char *) &((struct sigcontext *) 0)->sc_gr[0]) - (char *) 0),5031,architecture)
+#else
+Msg( "Error: Constant not found: _SC_GR0_OFFSET\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for _SC_GR0_OFFSET (5031) in db\n");
+#endif
 #ifdef __powerpc__
 #ifdef NGREG
 	CompareConstant(NGREG,48,4929,architecture)
@@ -41,17 +52,6 @@ cnt++;
 
 #else
 Msg( "No definition for NGREG (4929) in db\n");
-#endif
-#ifdef __ia64__
-#ifdef _SC_GR0_OFFSET
-	CompareConstant(_SC_GR0_OFFSET,(((char *) &((struct sigcontext *) 0)->sc_gr[0]) - (char *) 0),5031,architecture)
-#else
-Msg( "Error: Constant not found: _SC_GR0_OFFSET\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for _SC_GR0_OFFSET (5031) in db\n");
 #endif
 #ifdef __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
