@@ -17,6 +17,7 @@ libs.c:
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)
 	install libchk $(INSTALL_ROOT)/$(BINDIR)/lsblibchk
+	install -d $(INSTALL_ROOT)/$(MANDIR)/man1/
 	install lsblibchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsblibchk.1
 
 # Distclean means will need database to rebuild
