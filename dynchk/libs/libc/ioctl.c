@@ -5,7 +5,7 @@
 
 static int(*funcptr)(int, int, const void *) = 0;
 
-int ioctl(int fd, int flags, int request, const void *arg)
+int ioctl(int fd, int request, const void *arg)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ioctl");
