@@ -10,7 +10,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
   Elf_Sym	*syms1;
 #define TMP_STRING_LENGTH 100  
   char tmp_string[TMP_STRING_LENGTH];
-  
+  char *symbol_name;
 
 #ifdef VERBOSE
   fprintf(stderr, "DYNSYM\n" );
@@ -23,9 +23,11 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
   for(i=0;i<numsyms;i++)
   {
     tetj_tp_count++;
+    symbol_name = ElfGetStringIndex(file, syms1[i].st_name, 
+                                    file->dynsymhdr->sh_link);
+    
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-                             ElfGetStringIndex(file, syms1[i].st_name, 
-                                               file->dynsymhdr->sh_link));
+                       symbol_name);
 
     if ((ELF32_ST_BIND(syms1[i].st_info) != STB_LOCAL) /* Static Symbols */
         && (ELF32_ST_BIND(syms1[i].st_info) != STB_WEAK)     /* Weak Symbols 
@@ -33,34 +35,32 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
                                                                 the app */
         && (syms1[i].st_shndx == SHN_UNDEF) /* provided by section in app */
         && (ELF32_ST_TYPE(syms1[i].st_info) == STT_OBJECT ||
-            ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC)
+            ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC))
+    {
 #if __powerpc64__
 /* Symbols representing functions in the ppc64 ABI are function descriptors. 
    The code for the function is contained within a symbol of the same name but
-   starting with '.'. We don't need to check these symbol */
-        && (ElfGetStringIndex(file, syms1[i].st_name, 
-                              file->dynsymhdr->sh_link)[0] != '.')
+   starting with '.'. We need mangle the symbol name so it doesn't
+   contain the '.' */
+      if (symbol_name!=NULL && symbol_name[0]=='.'
+          && ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC)
+      {
+        symbol_name++;
+      }
 #endif
-            )
-    {
+
       for (j=0; j<numDynSyms; j++) 
       {
-        if (!strcmp(ElfGetStringIndex(file, syms1[i].st_name, 
-                                      file->dynsymhdr->sh_link),
-                    DynSyms[j].name))
+        if (!strcmp(symbol_name, DynSyms[j].name))
           break;
       }
       if ( j == numDynSyms ) 
       {
-        if (!symbolinlibrary(ElfGetStringIndex(file, 
-                                               syms1[i].st_name, 
-                                               file->dynsymhdr->sh_link),
-                             journal) ) 
+        if (!symbolinlibrary(symbol_name, journal))
         {
           snprintf(tmp_string, TMP_STRING_LENGTH, 
                    "Symbol %s used, but not part of LSB",
-                   ElfGetStringIndex(file, syms1[i].st_name,
-                                     file->dynsymhdr->sh_link) );
+                   symbol_name);
           printf("%s\n", tmp_string);
           tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 
                              0, 0, tmp_string);
@@ -88,16 +88,14 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
         {
 #ifdef DEBUG
           printf( "Symbol %s vers %x %s\n",
-                ElfGetStringIndex(file,file->syms[i].st_name,
-                                  file->symhdr->sh_link), file->vers[i],
+                  symbol_name, file->vers[i],
                   file->versionnames[file->vers[i]]);
 #endif
           if(strcmp(file->versionnames[file->vers[i]],DynSyms[j].vername) != 0)
           {
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Symbol %s has version %s expecting %s",
-                     ElfGetStringIndex(file,file->syms[i].st_name,
-                                       file->symhdr->sh_link),
+                     symbol_name,
                      file->versionnames[file->vers[i]], DynSyms[j].vername);
             printf("%s\n", tmp_string);
             tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
