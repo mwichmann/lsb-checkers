@@ -33,7 +33,15 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
                                                                 the app */
         && (syms1[i].st_shndx == SHN_UNDEF) /* provided by section in app */
         && (ELF32_ST_TYPE(syms1[i].st_info) == STT_OBJECT ||
-            ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC))
+            ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC)
+#if __powerpc64__
+/* Symbols representing functions in the ppc64 ABI are function descriptors. 
+   The code for the function is contained within a symbol of the same name but
+   starting with '.'. We don't need to check these symbol */
+        && (ElfGetStringIndex(file, syms1[i].st_name, 
+                              file->dynsymhdr->sh_link)[0] != '.')
+#endif
+            )
     {
       for (j=0; j<numDynSyms; j++) 
       {
