@@ -73,8 +73,10 @@ hoffset&=(~7);
 file1->header=(RpmHeader *)(file1->addr+hoffset);
 
 if( rpmchkdebug&DEBUG_TRACE_TAGS )
-	fprintf(stderr,"Signature has %d indicies with %x bytes of store at %x\n",
-			nindex, ntohl(hdr->hsize),file1->storeaddr);
+	fprintf(stderr,
+	 "Signature (%x) has %d indicies with %x bytes of store at offset %x (%x)\n",
+			(char *)hdr-file1->addr, nindex, ntohl(hdr->hsize),
+			hoffset, file1->storeaddr);
 
 checkRpmHdr(file1, journal);
 checkRpmIdx(file1, hindex, SigTags, numSigIdxTags, journal);
@@ -97,8 +99,10 @@ file1->archive=(RpmHeader *)(file1->storeaddr+htonl(hdr->hsize));
 hoffset=((char *)(file1->archive))-file1->addr;
 
 if( rpmchkdebug&DEBUG_TRACE_TAGS )
-	fprintf(stderr,"Header (%x) has %d indicies with %x bytes of store at %x\n",
-			(char *)hdr-file1->addr, nindex, ntohl(hdr->hsize),file1->storeaddr);
+	fprintf(stderr,
+	   "Header (%x) has %d indicies with %x bytes of store at offset %x (%x)\n",
+			(char *)hdr-file1->addr, nindex, ntohl(hdr->hsize),
+			hoffset,file1->storeaddr);
 
 checkRpmHdr(file1, journal);
 checkRpmIdx(file1, hindex, HdrTags, numHdrIdxTags, journal);
