@@ -1,23 +1,35 @@
-13) Header Structure must contain at least 1 index record
+ 1) Header Structure must contain at least 1 index record
     TESTS:
 
 	a) Verify that the simple package with 1 or more indicies install correctly
 	b) Verify that the simple package with 0 indicies fails to install
 
-14) Header Structure must be aligned on 8 byte boundary
+ 2) Header Structure must be aligned on 8 byte boundary
     TESTS:
 
 	a) Verify that the simple package with correctly aligned Header install correctly
 	b) Verify that the simple package with incorrectly aligned Header fails to install
 
-15) Header Record contains magic value of "\216\255\350\001"
+ 3) Header Record contains magic value of "\216\255\350\001"
     TESTS:
 
 	a) Verify that the simple package with correct magic installs correctly
 	b) Verify that the simple package with incorrect magic fails to install
 
-16) Header Record contains reserved value of "\000\000\000\000"
+ 4) Header Record contains reserved value of "\000\000\000\000"
     TESTS:
 
 	a) Verify that the simple package with correct reserved value installs correctly
 	b) Verify that the simple package with incorrect reserved value fails to install
+
+ 5) Header Record must contain correct value for nindex
+    TESTS:
+
+	a) Verify that the simple package with correct nindex value installs correctly
+	b) Verify that the simple package with incorrect nindex value fails to install
+
+ 6) Header Record must contain correct value for hsize
+    TESTS:
+
+	a) Verify that the simple package with correct hsize value installs correctly
+	b) Verify that the simple package with incorrect hsize value fails to install
