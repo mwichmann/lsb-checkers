@@ -74,12 +74,13 @@ for(i=0;entries[i].name;i++) {
 		continue;
 
 	/* One means the symbol is defined & available, but not versioned */
-	if( file->vers[j] == 1 )
+	if( file->vers[j] == 1 ) {
 		if( entries[i].vername[0] != '\000' )
 		printf("Warning!!! Found unversioned symbol %s, but expecting version %s\n",
 		ElfGetStringIndex(file,file->syms[j].st_name,file->symhdr->sh_link),
 		entries[i].vername);
 		continue;
+		}
 
 	/* This is just a sanity check, which should never be hit */
 	if( file->vers[j] > file->numverdefs ) {
