@@ -468,6 +468,14 @@ CheckOffset(struct __locale_struct,__locales,0,6,40181)
 CheckTypeSize(struct __locale_struct,232, 10531, 3)
 CheckMemberSize(struct __locale_struct,__ctype_b,8,3,40182)
 CheckOffset(struct __locale_struct,__ctype_b,104,3,40182)
+#elif __s390x__
+CheckTypeSize(struct __locale_struct,0, 10531, 12)
+Msg("Missing member data for __locale_struct on S390X\n");
+CheckOffset(struct __locale_struct,__locales,0,12,40181)
+CheckOffset(struct __locale_struct,__ctype_b,0,12,40182)
+CheckOffset(struct __locale_struct,__ctype_tolower,0,12,40183)
+CheckOffset(struct __locale_struct,__ctype_toupper,0,12,40184)
+CheckOffset(struct __locale_struct,__names,0,12,40185)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10531,0);
 Msg("Find size of __locale_struct (10531)\n");
@@ -476,6 +484,7 @@ Msg("Find size of __locale_struct (10531)\n");
 #if __i386__
 #elif __powerpc__ && !__powerpc64__
 #elif __ia64__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10532,0);
 Msg("Find size of __locale_struct * (10532)\n");
@@ -487,6 +496,8 @@ CheckTypeSize(__locale_t,4, 10533, 2)
 CheckTypeSize(__locale_t,4, 10533, 6)
 #elif __ia64__
 CheckTypeSize(__locale_t,8, 10533, 3)
+#elif __s390x__
+CheckTypeSize(__locale_t,0, 10533, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10533,0);
 Msg("Find size of __locale_t (10533)\n");
@@ -498,6 +509,8 @@ CheckTypeSize(locale_t,4, 10534, 2)
 CheckTypeSize(locale_t,4, 10534, 6)
 #elif __ia64__
 CheckTypeSize(locale_t,8, 10534, 3)
+#elif __s390x__
+CheckTypeSize(locale_t,0, 10534, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10534,0);
 Msg("Find size of locale_t (10534)\n");
