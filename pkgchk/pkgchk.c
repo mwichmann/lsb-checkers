@@ -31,12 +31,12 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.1 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.2 $";
 
 int
 main(int argc, char *argv[])
 {
-  signed char	c;
+  signed char	c,*ptr;
   struct tetj_handle *journal;
   char *command_line = NULL;
   int i;
@@ -56,6 +56,13 @@ main(int argc, char *argv[])
     fprintf(stderr, "%s: bad argument count %d\n", argv[0], argc );
     usage(argv[0]);
     }
+
+  if( (ptr=getenv("RPMCHK_DEBUG")) != NULL ) {
+    rpmchkdebug=strtod(ptr,NULL);
+    if( rpmchkdebug&DEBUG_ENV_OVERRIDES )
+      fprintf(stderr,"rpmchk debug set to 0x%x\n", rpmchkdebug );
+    }
+
 
   if( (rpmfile = OpenRpmFile(argv[1])) == NULL ) {
     fprintf(stderr, "%s: Unable to open file %s\n", argv[0], argv[1] );
