@@ -6483,7 +6483,7 @@ struct versym libc_so_6[] = {
 	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",1,1},
 #endif
 #if __powerpc64__
-	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",1,1},
+	{"if_freenameindex","GLIBC_2.3",0,"LSB-Core",1,1},
 #endif
 #if __s390__ && !__s390x__
 	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",1,1},
@@ -6504,7 +6504,7 @@ struct versym libc_so_6[] = {
 	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",8,1},
+	{"if_indextoname","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
 	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",4,1},
@@ -6525,7 +6525,7 @@ struct versym libc_so_6[] = {
 	{"if_nameindex","GLIBC_2.1",0,"LSB-Core",0,1},
 #endif
 #if __powerpc64__
-	{"if_nameindex","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"if_nameindex","GLIBC_2.3",0,"LSB-Core",0,1},
 #endif
 #if __s390__ && !__s390x__
 	{"if_nameindex","GLIBC_2.1",0,"LSB-Core",0,1},
@@ -6546,7 +6546,7 @@ struct versym libc_so_6[] = {
 	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",4,1},
+	{"if_nametoindex","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",4,1},
