@@ -1810,7 +1810,7 @@ CheckTypeSize(WINDOW,128, 8655, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(WINDOW,124, 8655, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(WINDOW,100, 8655, 10)
+CheckTypeSize(WINDOW,124, 8655, 10)
 #elif __powerpc64__
 CheckTypeSize(WINDOW,128, 8655, 9)
 #elif __s390x__
@@ -2126,7 +2126,7 @@ CheckOffset(struct _win_st,_yoffset,96,6,29732)
 CheckMemberSize(struct _win_st,_bkgrnd,24,6,34437)
 CheckOffset(struct _win_st,_bkgrnd,100,6,34437)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _win_st,100, 8654, 10)
+CheckTypeSize(struct _win_st,124, 8654, 10)
 CheckMemberSize(struct _win_st,_curx,2,10,29701)
 CheckOffset(struct _win_st,_curx,2,10,29701)
 CheckMemberSize(struct _win_st,_maxy,2,10,29702)
@@ -2143,10 +2143,10 @@ CheckMemberSize(struct _win_st,_attrs,4,10,29707)
 CheckOffset(struct _win_st,_attrs,16,10,29707)
 CheckMemberSize(struct _win_st,_bkgd,4,10,29708)
 CheckOffset(struct _win_st,_bkgd,20,10,29708)
-CheckMemberSize(struct _win_st,_notimeout,1,10,29709)
+CheckMemberSize(struct _win_st,_notimeout,4,10,29709)
 CheckOffset(struct _win_st,_notimeout,24,10,29709)
-CheckMemberSize(struct _win_st,_clear,1,10,29710)
-CheckOffset(struct _win_st,_clear,25,10,29710)
+CheckMemberSize(struct _win_st,_clear,4,10,29710)
+CheckOffset(struct _win_st,_clear,28,10,29710)
 CheckMemberSize(struct _win_st,_leaveok,1,10,29711)
 CheckOffset(struct _win_st,_leaveok,26,10,29711)
 CheckMemberSize(struct _win_st,_scroll,1,10,29712)
@@ -2354,28 +2354,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
 Msg("Find size of _win_st (8654)\n");
 #endif
 
-#if __i386__
-CheckTypeSize(bool,1, 10437, 2)
-#endif
-
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(bool,4, 10438, 6)
-#endif
-
-#if __ia64__
-CheckTypeSize(bool,1, 10439, 3)
-#endif
-
-#if __powerpc64__
-CheckTypeSize(bool,1, 10440, 9)
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(bool,1, 10441, 10)
-#endif
-
-#if __s390x__
-CheckTypeSize(bool,4, 10859, 12)
+#if 1
+CheckTypeSize(bool,1, 8651, 1)
 #endif
 
 #ifdef TET_TEST
