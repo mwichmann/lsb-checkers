@@ -24,6 +24,16 @@ Msg("Checking data structures in netdb.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_SOCKTYPE
+	CompareConstant(EAI_SOCKTYPE,-7,3362,architecture)
+#else
+Msg( "Error: Constant not found: EAI_SOCKTYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef NO_ADDRESS
 	CompareConstant(NO_ADDRESS,NO_DATA,4439,architecture)
 #else
@@ -54,6 +64,26 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_AGAIN
+	CompareConstant(EAI_AGAIN,-3,3370,architecture)
+#else
+Msg( "Error: Constant not found: EAI_AGAIN\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef AI_PASSIVE
+	CompareConstant(AI_PASSIVE,0x0001,3374,architecture)
+#else
+Msg( "Error: Constant not found: AI_PASSIVE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef NO_DATA
 	CompareConstant(NO_DATA,4,4438,architecture)
 #else
@@ -64,7 +94,27 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_NODATA
+	CompareConstant(EAI_NODATA,-5,3367,architecture)
+#else
+Msg( "Error: Constant not found: EAI_NODATA\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 /* No test for h_addr */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_BADFLAGS
+	CompareConstant(EAI_BADFLAGS,-1,3363,architecture)
+#else
+Msg( "Error: Constant not found: EAI_BADFLAGS\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -72,6 +122,36 @@ cnt++;
 	CompareConstant(NETDB_INTERNAL,-1,4433,architecture)
 #else
 Msg( "Error: Constant not found: NETDB_INTERNAL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NI_NAMEREQD
+	CompareConstant(NI_NAMEREQD,8,3358,architecture)
+#else
+Msg( "Error: Constant not found: NI_NAMEREQD\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_ADDRFAMILY
+	CompareConstant(EAI_ADDRFAMILY,-9,3366,architecture)
+#else
+Msg( "Error: Constant not found: EAI_ADDRFAMILY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NI_DGRAM
+	CompareConstant(NI_DGRAM,16,3360,architecture)
+#else
+Msg( "Error: Constant not found: NI_DGRAM\n");
 cnt++;
 #endif
 
@@ -88,7 +168,137 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef NI_MAXHOST
+	CompareConstant(NI_MAXHOST,1025,4441,architecture)
+#else
+Msg( "Error: Constant not found: NI_MAXHOST\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef AI_CANONNAME
+	CompareConstant(AI_CANONNAME,0x0002,3373,architecture)
+#else
+Msg( "Error: Constant not found: AI_CANONNAME\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_FAIL
+	CompareConstant(EAI_FAIL,-4,3369,architecture)
+#else
+Msg( "Error: Constant not found: EAI_FAIL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_NONAME
+	CompareConstant(EAI_NONAME,-2,3364,architecture)
+#else
+Msg( "Error: Constant not found: EAI_NONAME\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 /* No test for h_errno */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NI_NOFQDN
+	CompareConstant(NI_NOFQDN,4,3356,architecture)
+#else
+Msg( "Error: Constant not found: NI_NOFQDN\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_MEMORY
+	CompareConstant(EAI_MEMORY,-10,3368,architecture)
+#else
+Msg( "Error: Constant not found: EAI_MEMORY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_SYSTEM
+	CompareConstant(EAI_SYSTEM,-11,3371,architecture)
+#else
+Msg( "Error: Constant not found: EAI_SYSTEM\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_FAMILY
+	CompareConstant(EAI_FAMILY,-6,3361,architecture)
+#else
+Msg( "Error: Constant not found: EAI_FAMILY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef EAI_SERVICE
+	CompareConstant(EAI_SERVICE,-8,3365,architecture)
+#else
+Msg( "Error: Constant not found: EAI_SERVICE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef AI_NUMERICHOST
+	CompareConstant(AI_NUMERICHOST,0x0004,3372,architecture)
+#else
+Msg( "Error: Constant not found: AI_NUMERICHOST\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NI_MAXSERV
+	CompareConstant(NI_MAXSERV,32,4442,architecture)
+#else
+Msg( "Error: Constant not found: NI_MAXSERV\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NI_NUMERICHOST
+	CompareConstant(NI_NUMERICHOST,1,3357,architecture)
+#else
+Msg( "Error: Constant not found: NI_NUMERICHOST\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NI_NUMERICSERV
+	CompareConstant(NI_NUMERICSERV,2,3359,architecture)
+#else
+Msg( "Error: Constant not found: NI_NUMERICSERV\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -133,6 +343,13 @@ CheckTypeSize(struct protoent,24, 10139, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10139,0);
 Msg("Find size of protoent (10139)\n");
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct addrinfo,4, 10125, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10125,0);
+Msg("Find size of addrinfo (10125)\n");
 #endif
 
 #ifdef TET_TEST
