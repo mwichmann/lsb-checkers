@@ -1507,7 +1507,7 @@ Msg("Find size of SCREEN (8653)\n");
 #ifdef __i386__
 CheckTypeSize(WINDOW,100, 8655, 2)
 #elif __ia64__
-CheckTypeSize(WINDOW,128, 8655, 3)
+CheckTypeSize(WINDOW,152, 8655, 3)
 #elif __powerpc__
 CheckTypeSize(WINDOW,124, 8655, 6)
 #else
@@ -1530,6 +1530,8 @@ Msg("Find size of attr_t (8656)\n");
 CheckTypeSize(cchar_t,24, 8658, 2)
 #elif __powerpc__
 CheckTypeSize(cchar_t,24, 8658, 6)
+#elif __ia64__
+CheckTypeSize(cchar_t,32, 8658, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8658,0);
 Msg("Find size of cchar_t (8658)\n");
@@ -1581,7 +1583,35 @@ CheckOffset(struct _win_st,_pad,60,2,29731)
 CheckOffset(struct _win_st,_yoffset,72,2,29732)
 CheckOffset(struct _win_st,_bkgrnd,76,2,34437)
 #elif __ia64__
-CheckTypeSize(struct _win_st,128, 8654, 3)
+CheckTypeSize(struct _win_st,152, 8654, 3)
+CheckOffset(struct _win_st,_cury,0,3,29700)
+CheckOffset(struct _win_st,_curx,2,3,29701)
+CheckOffset(struct _win_st,_maxy,4,3,29702)
+CheckOffset(struct _win_st,_maxx,6,3,29703)
+CheckOffset(struct _win_st,_begy,8,3,29704)
+CheckOffset(struct _win_st,_begx,10,3,29705)
+CheckOffset(struct _win_st,_flags,12,3,29706)
+CheckOffset(struct _win_st,_attrs,16,3,29707)
+CheckOffset(struct _win_st,_bkgd,24,3,29708)
+CheckOffset(struct _win_st,_notimeout,32,3,29709)
+CheckOffset(struct _win_st,_clear,36,3,29710)
+CheckOffset(struct _win_st,_leaveok,40,3,29711)
+CheckOffset(struct _win_st,_scroll,44,3,29712)
+CheckOffset(struct _win_st,_idlok,48,3,29713)
+CheckOffset(struct _win_st,_idcok,52,3,29714)
+CheckOffset(struct _win_st,_immed,56,3,29715)
+CheckOffset(struct _win_st,_sync,60,3,29716)
+CheckOffset(struct _win_st,_use_keypad,64,3,29717)
+CheckOffset(struct _win_st,_delay,68,3,29718)
+CheckOffset(struct _win_st,_line,72,3,29719)
+CheckOffset(struct _win_st,_regtop,80,3,29720)
+CheckOffset(struct _win_st,_regbottom,82,3,29721)
+CheckOffset(struct _win_st,_parx,84,3,29722)
+CheckOffset(struct _win_st,_pary,88,3,29723)
+CheckOffset(struct _win_st,_parent,96,3,29724)
+CheckOffset(struct _win_st,_pad,104,3,29731)
+CheckOffset(struct _win_st,_yoffset,116,3,29732)
+CheckOffset(struct _win_st,_bkgrnd,120,3,34437)
 #elif __powerpc__
 CheckTypeSize(struct _win_st,124, 8654, 6)
 #else
