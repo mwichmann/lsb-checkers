@@ -10,8 +10,8 @@ struct tm * getdate (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getdate");
-	validate_Rdaddress( arg0, "getdate");
-	validate_NULL_TYPETYPE(  arg0, "getdate");
+	validate_Rdaddress( arg0, "getdate - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getdate - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ void freeaddrinfo (struct addrinfo * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freeaddrinfo");
-	validate_Rdaddress( arg0, "freeaddrinfo");
-	validate_NULL_TYPETYPE(  arg0, "freeaddrinfo");
+	validate_Rdaddress( arg0, "freeaddrinfo - arg0");
+	validate_NULL_TYPETYPE(  arg0, "freeaddrinfo - arg0");
 	funcptr(arg0);
 }
 

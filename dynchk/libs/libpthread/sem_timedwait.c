@@ -11,10 +11,10 @@ int sem_timedwait (sem_t * arg0 , const struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_timedwait");
-	validate_Rdaddress( arg0, "sem_timedwait");
-	validate_NULL_TYPETYPE(  arg0, "sem_timedwait");
-	validate_Rdaddress( arg1, "sem_timedwait");
-	validate_NULL_TYPETYPE(  arg1, "sem_timedwait");
+	validate_Rdaddress( arg0, "sem_timedwait - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sem_timedwait - arg0");
+	validate_Rdaddress( arg1, "sem_timedwait - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sem_timedwait - arg1");
 	return funcptr(arg0, arg1);
 }
 

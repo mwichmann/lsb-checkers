@@ -10,7 +10,7 @@ float complex csqrtf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csqrtf");
-	validate_NULL_TYPETYPE(  arg0, "csqrtf");
+	validate_NULL_TYPETYPE(  arg0, "csqrtf - arg0");
 	return funcptr(arg0);
 }
 

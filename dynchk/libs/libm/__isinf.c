@@ -10,7 +10,7 @@ int __isinf (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__isinf");
-	validate_NULL_TYPETYPE(  arg0, "__isinf");
+	validate_NULL_TYPETYPE(  arg0, "__isinf - arg0");
 	return funcptr(arg0);
 }
 

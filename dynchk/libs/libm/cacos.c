@@ -10,7 +10,7 @@ double complex cacos (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacos");
-	validate_NULL_TYPETYPE(  arg0, "cacos");
+	validate_NULL_TYPETYPE(  arg0, "cacos - arg0");
 	return funcptr(arg0);
 }
 

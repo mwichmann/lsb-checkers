@@ -10,8 +10,8 @@ void setkey (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setkey");
-	validate_Rdaddress( arg0, "setkey");
-	validate_NULL_TYPETYPE(  arg0, "setkey");
+	validate_Rdaddress( arg0, "setkey - arg0");
+	validate_NULL_TYPETYPE(  arg0, "setkey - arg0");
 	funcptr(arg0);
 }
 

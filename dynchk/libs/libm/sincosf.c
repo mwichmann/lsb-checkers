@@ -10,11 +10,11 @@ void sincosf (float arg0 , float * arg1 , float * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sincosf");
-	validate_NULL_TYPETYPE(  arg0, "sincosf");
-	validate_Rdaddress( arg1, "sincosf");
-	validate_NULL_TYPETYPE(  arg1, "sincosf");
-	validate_Rdaddress( arg2, "sincosf");
-	validate_NULL_TYPETYPE(  arg2, "sincosf");
+	validate_NULL_TYPETYPE(  arg0, "sincosf - arg0");
+	validate_Rdaddress( arg1, "sincosf - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sincosf - arg1");
+	validate_Rdaddress( arg2, "sincosf - arg2");
+	validate_NULL_TYPETYPE(  arg2, "sincosf - arg2");
 	funcptr(arg0, arg1, arg2);
 }
 

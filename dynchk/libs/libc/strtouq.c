@@ -10,12 +10,12 @@ unsigned long long strtouq (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtouq");
-	validate_Rdaddress( arg0, "strtouq");
-	validate_NULL_TYPETYPE(  arg0, "strtouq");
-	validate_Rdaddress( arg1, "strtouq");
-	validate_Rdaddress(* arg1, "strtouq");
-	validate_NULL_TYPETYPE(  arg1, "strtouq");
-	validate_NULL_TYPETYPE(  arg2, "strtouq");
+	validate_Rdaddress( arg0, "strtouq - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strtouq - arg0");
+	validate_Rdaddress( arg1, "strtouq - arg1");
+	validate_Rdaddress(* arg1, "strtouq - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strtouq - arg1");
+	validate_NULL_TYPETYPE(  arg2, "strtouq - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -11,11 +11,11 @@ int strncasecmp (const char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strncasecmp");
-	validate_Rdaddress( arg0, "strncasecmp");
-	validate_NULL_TYPETYPE(  arg0, "strncasecmp");
-	validate_Rdaddress( arg1, "strncasecmp");
-	validate_NULL_TYPETYPE(  arg1, "strncasecmp");
-	validate_NULL_TYPETYPE(  arg2, "strncasecmp");
+	validate_Rdaddress( arg0, "strncasecmp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strncasecmp - arg0");
+	validate_Rdaddress( arg1, "strncasecmp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strncasecmp - arg1");
+	validate_NULL_TYPETYPE(  arg2, "strncasecmp - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

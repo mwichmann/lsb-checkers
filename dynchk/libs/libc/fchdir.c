@@ -10,7 +10,7 @@ int fchdir (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchdir");
-	validate_NULL_TYPETYPE(  arg0, "fchdir");
+	validate_NULL_TYPETYPE(  arg0, "fchdir - arg0");
 	return funcptr(arg0);
 }
 

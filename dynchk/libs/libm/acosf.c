@@ -10,7 +10,7 @@ float acosf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acosf");
-	validate_NULL_TYPETYPE(  arg0, "acosf");
+	validate_NULL_TYPETYPE(  arg0, "acosf - arg0");
 	return funcptr(arg0);
 }
 

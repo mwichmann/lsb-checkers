@@ -11,7 +11,7 @@ pid_t getpgid (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpgid");
-	validate_NULL_TYPETYPE(  arg0, "getpgid");
+	validate_NULL_TYPETYPE(  arg0, "getpgid - arg0");
 	return funcptr(arg0);
 }
 

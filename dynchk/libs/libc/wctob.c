@@ -11,7 +11,7 @@ int wctob (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctob");
-	validate_NULL_TYPETYPE(  arg0, "wctob");
+	validate_NULL_TYPETYPE(  arg0, "wctob - arg0");
 	return funcptr(arg0);
 }
 

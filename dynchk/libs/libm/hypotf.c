@@ -10,8 +10,8 @@ float hypotf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hypotf");
-	validate_NULL_TYPETYPE(  arg0, "hypotf");
-	validate_NULL_TYPETYPE(  arg1, "hypotf");
+	validate_NULL_TYPETYPE(  arg0, "hypotf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "hypotf - arg1");
 	return funcptr(arg0, arg1);
 }
 

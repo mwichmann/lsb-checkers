@@ -10,7 +10,7 @@ int slk_attron (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_attron");
-	validate_NULL_TYPETYPE(  arg0, "slk_attron");
+	validate_NULL_TYPETYPE(  arg0, "slk_attron - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ int isdigit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isdigit");
-	validate_NULL_TYPETYPE(  arg0, "isdigit");
+	validate_NULL_TYPETYPE(  arg0, "isdigit - arg0");
 	return funcptr(arg0);
 }
 

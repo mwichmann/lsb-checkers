@@ -2,16 +2,18 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static _Unwind_Ptr(*funcptr)() = 0;
+#include <unwind.h>
+#undef _Unwind_GetRegionStart
+static _Unwind_Ptr(*funcptr) () = 0;
 
-_Unwind_Ptr _Unwind_GetRegionStart()
+_Unwind_Ptr _Unwind_GetRegionStart ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetRegionStart");
 	return funcptr();
 }
 
-_Unwind_Ptr __lsb__Unwind_GetRegionStart()
+_Unwind_Ptr __lsb__Unwind_GetRegionStart ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetRegionStart");

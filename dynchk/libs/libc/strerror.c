@@ -10,7 +10,7 @@ char * strerror (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strerror");
-	validate_NULL_TYPETYPE(  arg0, "strerror");
+	validate_NULL_TYPETYPE(  arg0, "strerror - arg0");
 	return funcptr(arg0);
 }
 

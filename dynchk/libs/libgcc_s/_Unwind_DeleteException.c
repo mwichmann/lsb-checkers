@@ -3,17 +3,21 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <unwind.h>
-static void(*funcptr)(struct _Unwind_Exception *) = 0;
+#undef _Unwind_DeleteException
+static void(*funcptr) (struct _Unwind_Exception * ) = 0;
 
-void _Unwind_DeleteException(struct _Unwind_Exception * arg0)
+void _Unwind_DeleteException (struct _Unwind_Exception * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_DeleteException");
-	validate_NULL_TYPETYPE(arg0, "_Unwind_DeleteException");
+	validate_Rdaddress( arg0, "_Unwind_DeleteException - arg0");
+	if(  arg0 ) {
+	}
+	validate_NULL_TYPETYPE(  arg0, "_Unwind_DeleteException");
 	funcptr(arg0);
 }
 
-void __lsb__Unwind_DeleteException(struct _Unwind_Exception * arg0)
+void __lsb__Unwind_DeleteException (struct _Unwind_Exception * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_DeleteException");

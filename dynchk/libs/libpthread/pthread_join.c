@@ -10,10 +10,10 @@ int pthread_join (pthread_t arg0 , void * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_join");
-	validate_NULL_TYPETYPE(  arg0, "pthread_join");
-	validate_Rdaddress( arg1, "pthread_join");
-	validate_Rdaddress(* arg1, "pthread_join");
-	validate_NULL_TYPETYPE(  arg1, "pthread_join");
+	validate_NULL_TYPETYPE(  arg0, "pthread_join - arg0");
+	validate_Rdaddress( arg1, "pthread_join - arg1");
+	validate_Rdaddress(* arg1, "pthread_join - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_join - arg1");
 	return funcptr(arg0, arg1);
 }
 

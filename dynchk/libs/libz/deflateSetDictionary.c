@@ -10,10 +10,10 @@ int deflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateSetDictionary");
-	validate_NULL_TYPETYPE(  arg0, "deflateSetDictionary");
-	validate_Rdaddress( arg1, "deflateSetDictionary");
-	validate_NULL_TYPETYPE(  arg1, "deflateSetDictionary");
-	validate_NULL_TYPETYPE(  arg2, "deflateSetDictionary");
+	validate_NULL_TYPETYPE(  arg0, "deflateSetDictionary - arg0");
+	validate_Rdaddress( arg1, "deflateSetDictionary - arg1");
+	validate_NULL_TYPETYPE(  arg1, "deflateSetDictionary - arg1");
+	validate_NULL_TYPETYPE(  arg2, "deflateSetDictionary - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

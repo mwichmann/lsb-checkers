@@ -10,8 +10,8 @@ long double copysignl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copysignl");
-	validate_NULL_TYPETYPE(  arg0, "copysignl");
-	validate_NULL_TYPETYPE(  arg1, "copysignl");
+	validate_NULL_TYPETYPE(  arg0, "copysignl - arg0");
+	validate_NULL_TYPETYPE(  arg1, "copysignl - arg1");
 	return funcptr(arg0, arg1);
 }
 

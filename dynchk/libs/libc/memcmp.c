@@ -11,11 +11,11 @@ int memcmp (const void * arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memcmp");
-	validate_Rdaddress( arg0, "memcmp");
-	validate_NULL_TYPETYPE(  arg0, "memcmp");
-	validate_Rdaddress( arg1, "memcmp");
-	validate_NULL_TYPETYPE(  arg1, "memcmp");
-	validate_NULL_TYPETYPE(  arg2, "memcmp");
+	validate_Rdaddress( arg0, "memcmp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "memcmp - arg0");
+	validate_Rdaddress( arg1, "memcmp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "memcmp - arg1");
+	validate_NULL_TYPETYPE(  arg2, "memcmp - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

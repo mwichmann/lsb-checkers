@@ -10,8 +10,8 @@ int acct (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acct");
-	validate_Rdaddress( arg0, "acct");
-	validate_NULL_TYPETYPE(  arg0, "acct");
+	validate_Rdaddress( arg0, "acct - arg0");
+	validate_NULL_TYPETYPE(  arg0, "acct - arg0");
 	return funcptr(arg0);
 }
 

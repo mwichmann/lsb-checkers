@@ -10,7 +10,7 @@ int insdelln (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insdelln");
-	validate_NULL_TYPETYPE(  arg0, "insdelln");
+	validate_NULL_TYPETYPE(  arg0, "insdelln - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ double nearbyint (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nearbyint");
-	validate_NULL_TYPETYPE(  arg0, "nearbyint");
+	validate_NULL_TYPETYPE(  arg0, "nearbyint - arg0");
 	return funcptr(arg0);
 }
 

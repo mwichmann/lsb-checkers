@@ -10,7 +10,7 @@ long double complex cexpl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cexpl");
-	validate_NULL_TYPETYPE(  arg0, "cexpl");
+	validate_NULL_TYPETYPE(  arg0, "cexpl - arg0");
 	return funcptr(arg0);
 }
 

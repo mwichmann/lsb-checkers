@@ -10,8 +10,8 @@ int setscrreg (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setscrreg");
-	validate_NULL_TYPETYPE(  arg0, "setscrreg");
-	validate_NULL_TYPETYPE(  arg1, "setscrreg");
+	validate_NULL_TYPETYPE(  arg0, "setscrreg - arg0");
+	validate_NULL_TYPETYPE(  arg1, "setscrreg - arg1");
 	return funcptr(arg0, arg1);
 }
 

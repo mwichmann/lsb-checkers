@@ -11,11 +11,11 @@ size_t mbstowcs (wchar_t * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbstowcs");
-	validate_Rdaddress( arg0, "mbstowcs");
-	validate_NULL_TYPETYPE(  arg0, "mbstowcs");
-	validate_Rdaddress( arg1, "mbstowcs");
-	validate_NULL_TYPETYPE(  arg1, "mbstowcs");
-	validate_NULL_TYPETYPE(  arg2, "mbstowcs");
+	validate_Rdaddress( arg0, "mbstowcs - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mbstowcs - arg0");
+	validate_Rdaddress( arg1, "mbstowcs - arg1");
+	validate_NULL_TYPETYPE(  arg1, "mbstowcs - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mbstowcs - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

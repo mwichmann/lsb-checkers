@@ -10,7 +10,7 @@ double erf (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erf");
-	validate_NULL_TYPETYPE(  arg0, "erf");
+	validate_NULL_TYPETYPE(  arg0, "erf - arg0");
 	return funcptr(arg0);
 }
 

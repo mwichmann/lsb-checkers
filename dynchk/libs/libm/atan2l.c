@@ -10,8 +10,8 @@ long double atan2l (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atan2l");
-	validate_NULL_TYPETYPE(  arg0, "atan2l");
-	validate_NULL_TYPETYPE(  arg1, "atan2l");
+	validate_NULL_TYPETYPE(  arg0, "atan2l - arg0");
+	validate_NULL_TYPETYPE(  arg1, "atan2l - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ long double sinhl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinhl");
-	validate_NULL_TYPETYPE(  arg0, "sinhl");
+	validate_NULL_TYPETYPE(  arg0, "sinhl - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ div_t div (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "div");
-	validate_NULL_TYPETYPE(  arg0, "div");
-	validate_NULL_TYPETYPE(  arg1, "div");
+	validate_NULL_TYPETYPE(  arg0, "div - arg0");
+	validate_NULL_TYPETYPE(  arg1, "div - arg1");
 	return funcptr(arg0, arg1);
 }
 

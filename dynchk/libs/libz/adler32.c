@@ -10,10 +10,10 @@ uLong adler32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adler32");
-	validate_NULL_TYPETYPE(  arg0, "adler32");
-	validate_Rdaddress( arg1, "adler32");
-	validate_NULL_TYPETYPE(  arg1, "adler32");
-	validate_NULL_TYPETYPE(  arg2, "adler32");
+	validate_NULL_TYPETYPE(  arg0, "adler32 - arg0");
+	validate_Rdaddress( arg1, "adler32 - arg1");
+	validate_NULL_TYPETYPE(  arg1, "adler32 - arg1");
+	validate_NULL_TYPETYPE(  arg2, "adler32 - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ char * clnt_sperrno (enum clnt_stat arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_sperrno");
-	validate_NULL_TYPETYPE(  arg0, "clnt_sperrno");
+	validate_NULL_TYPETYPE(  arg0, "clnt_sperrno - arg0");
 	return funcptr(arg0);
 }
 

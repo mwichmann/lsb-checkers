@@ -11,12 +11,12 @@ struct CLIENT * clnt_create (const char * arg0 , const u_long arg1 , const u_lon
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_create");
-	validate_Rdaddress( arg0, "clnt_create");
-	validate_NULL_TYPETYPE(  arg0, "clnt_create");
-	validate_NULL_TYPETYPE(  arg1, "clnt_create");
-	validate_NULL_TYPETYPE(  arg2, "clnt_create");
-	validate_Rdaddress( arg3, "clnt_create");
-	validate_NULL_TYPETYPE(  arg3, "clnt_create");
+	validate_Rdaddress( arg0, "clnt_create - arg0");
+	validate_NULL_TYPETYPE(  arg0, "clnt_create - arg0");
+	validate_NULL_TYPETYPE(  arg1, "clnt_create - arg1");
+	validate_NULL_TYPETYPE(  arg2, "clnt_create - arg2");
+	validate_Rdaddress( arg3, "clnt_create - arg3");
+	validate_NULL_TYPETYPE(  arg3, "clnt_create - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

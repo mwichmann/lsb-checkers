@@ -10,10 +10,10 @@ int sigwait (const sigset_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwait");
-	validate_Rdaddress( arg0, "sigwait");
-	validate_NULL_TYPETYPE(  arg0, "sigwait");
-	validate_Rdaddress( arg1, "sigwait");
-	validate_NULL_TYPETYPE(  arg1, "sigwait");
+	validate_Rdaddress( arg0, "sigwait - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sigwait - arg0");
+	validate_Rdaddress( arg1, "sigwait - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sigwait - arg1");
 	return funcptr(arg0, arg1);
 }
 

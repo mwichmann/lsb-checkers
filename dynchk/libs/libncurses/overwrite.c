@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <curses.h>
 #include <term.h>
+#include <curses.h>
 #undef overwrite
 static int(*funcptr) (const WINDOW * , WINDOW * ) = 0;
 
@@ -11,10 +11,10 @@ int overwrite (const WINDOW * arg0 , WINDOW * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "overwrite");
-	validate_Rdaddress( arg0, "overwrite");
-	validate_NULL_TYPETYPE(  arg0, "overwrite");
-	validate_Rdaddress( arg1, "overwrite");
-	validate_NULL_TYPETYPE(  arg1, "overwrite");
+	validate_Rdaddress( arg0, "overwrite - arg0");
+	validate_NULL_TYPETYPE(  arg0, "overwrite - arg0");
+	validate_Rdaddress( arg1, "overwrite - arg1");
+	validate_NULL_TYPETYPE(  arg1, "overwrite - arg1");
 	return funcptr(arg0, arg1);
 }
 

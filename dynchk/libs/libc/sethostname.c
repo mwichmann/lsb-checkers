@@ -11,9 +11,9 @@ int sethostname (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sethostname");
-	validate_Rdaddress( arg0, "sethostname");
-	validate_NULL_TYPETYPE(  arg0, "sethostname");
-	validate_NULL_TYPETYPE(  arg1, "sethostname");
+	validate_Rdaddress( arg0, "sethostname - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sethostname - arg0");
+	validate_NULL_TYPETYPE(  arg1, "sethostname - arg1");
 	return funcptr(arg0, arg1);
 }
 

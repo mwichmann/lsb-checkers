@@ -10,9 +10,9 @@ int execv (const char * arg0 , char *const  arg1 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execv");
-	validate_Rdaddress( arg0, "execv");
-	validate_NULL_TYPETYPE(  arg0, "execv");
-	validate_NULL_TYPETYPE(  arg1, "execv");
+	validate_Rdaddress( arg0, "execv - arg0");
+	validate_NULL_TYPETYPE(  arg0, "execv - arg0");
+	validate_NULL_TYPETYPE(  arg1, "execv - arg1");
 	return funcptr(arg0, arg1);
 }
 

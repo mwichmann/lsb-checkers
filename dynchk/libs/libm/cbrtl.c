@@ -10,7 +10,7 @@ long double cbrtl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbrtl");
-	validate_NULL_TYPETYPE(  arg0, "cbrtl");
+	validate_NULL_TYPETYPE(  arg0, "cbrtl - arg0");
 	return funcptr(arg0);
 }
 

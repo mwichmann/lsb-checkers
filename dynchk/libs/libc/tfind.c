@@ -11,11 +11,11 @@ void * tfind (const void * arg0 , void *const  * arg1 , __compar_fn_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tfind");
-	validate_Rdaddress( arg0, "tfind");
-	validate_NULL_TYPETYPE(  arg0, "tfind");
-	validate_Rdaddress( arg1, "tfind");
-	validate_NULL_TYPETYPE(  arg1, "tfind");
-	validate_NULL_TYPETYPE(  arg2, "tfind");
+	validate_Rdaddress( arg0, "tfind - arg0");
+	validate_NULL_TYPETYPE(  arg0, "tfind - arg0");
+	validate_Rdaddress( arg1, "tfind - arg1");
+	validate_NULL_TYPETYPE(  arg1, "tfind - arg1");
+	validate_NULL_TYPETYPE(  arg2, "tfind - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

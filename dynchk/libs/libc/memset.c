@@ -11,10 +11,10 @@ void * memset (void * arg0 , int arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memset");
-	validate_Rdaddress( arg0, "memset");
-	validate_NULL_TYPETYPE(  arg0, "memset");
-	validate_NULL_TYPETYPE(  arg1, "memset");
-	validate_NULL_TYPETYPE(  arg2, "memset");
+	validate_Rdaddress( arg0, "memset - arg0");
+	validate_NULL_TYPETYPE(  arg0, "memset - arg0");
+	validate_NULL_TYPETYPE(  arg1, "memset - arg1");
+	validate_NULL_TYPETYPE(  arg2, "memset - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ double floor (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "floor");
-	validate_NULL_TYPETYPE(  arg0, "floor");
+	validate_NULL_TYPETYPE(  arg0, "floor - arg0");
 	return funcptr(arg0);
 }
 

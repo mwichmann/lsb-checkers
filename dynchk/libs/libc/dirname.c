@@ -10,8 +10,8 @@ char * dirname (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dirname");
-	validate_Rdaddress( arg0, "dirname");
-	validate_NULL_TYPETYPE(  arg0, "dirname");
+	validate_Rdaddress( arg0, "dirname - arg0");
+	validate_NULL_TYPETYPE(  arg0, "dirname - arg0");
 	return funcptr(arg0);
 }
 

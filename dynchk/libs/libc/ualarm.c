@@ -11,8 +11,8 @@ unsigned int ualarm (useconds_t arg0 , useconds_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ualarm");
-	validate_NULL_TYPETYPE(  arg0, "ualarm");
-	validate_NULL_TYPETYPE(  arg1, "ualarm");
+	validate_NULL_TYPETYPE(  arg0, "ualarm - arg0");
+	validate_NULL_TYPETYPE(  arg1, "ualarm - arg1");
 	return funcptr(arg0, arg1);
 }
 

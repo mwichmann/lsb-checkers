@@ -10,9 +10,9 @@ int fstatvfs (int arg0 , struct statvfs * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fstatvfs");
-	validate_NULL_TYPETYPE(  arg0, "fstatvfs");
-	validate_Rdaddress( arg1, "fstatvfs");
-	validate_NULL_TYPETYPE(  arg1, "fstatvfs");
+	validate_NULL_TYPETYPE(  arg0, "fstatvfs - arg0");
+	validate_Rdaddress( arg1, "fstatvfs - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fstatvfs - arg1");
 	return funcptr(arg0, arg1);
 }
 

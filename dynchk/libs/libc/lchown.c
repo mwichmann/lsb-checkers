@@ -11,10 +11,10 @@ int lchown (const char * arg0 , uid_t arg1 , gid_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lchown");
-	validate_Rdaddress( arg0, "lchown");
-	validate_NULL_TYPETYPE(  arg0, "lchown");
-	validate_NULL_TYPETYPE(  arg1, "lchown");
-	validate_NULL_TYPETYPE(  arg2, "lchown");
+	validate_Rdaddress( arg0, "lchown - arg0");
+	validate_NULL_TYPETYPE(  arg0, "lchown - arg0");
+	validate_NULL_TYPETYPE(  arg1, "lchown - arg1");
+	validate_NULL_TYPETYPE(  arg2, "lchown - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

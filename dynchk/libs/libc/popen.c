@@ -10,10 +10,10 @@ FILE * popen (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "popen");
-	validate_Rdaddress( arg0, "popen");
-	validate_NULL_TYPETYPE(  arg0, "popen");
-	validate_Rdaddress( arg1, "popen");
-	validate_NULL_TYPETYPE(  arg1, "popen");
+	validate_Rdaddress( arg0, "popen - arg0");
+	validate_NULL_TYPETYPE(  arg0, "popen - arg0");
+	validate_Rdaddress( arg1, "popen - arg1");
+	validate_NULL_TYPETYPE(  arg1, "popen - arg1");
 	return funcptr(arg0, arg1);
 }
 

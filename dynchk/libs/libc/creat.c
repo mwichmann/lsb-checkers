@@ -11,9 +11,9 @@ int creat (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creat");
-	validate_Rdaddress( arg0, "creat");
-	validate_NULL_TYPETYPE(  arg0, "creat");
-	validate_NULL_TYPETYPE(  arg1, "creat");
+	validate_Rdaddress( arg0, "creat - arg0");
+	validate_NULL_TYPETYPE(  arg0, "creat - arg0");
+	validate_NULL_TYPETYPE(  arg1, "creat - arg1");
 	return funcptr(arg0, arg1);
 }
 

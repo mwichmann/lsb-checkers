@@ -10,9 +10,9 @@ void immedok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "immedok");
-	validate_Rdaddress( arg0, "immedok");
-	validate_NULL_TYPETYPE(  arg0, "immedok");
-	validate_NULL_TYPETYPE(  arg1, "immedok");
+	validate_Rdaddress( arg0, "immedok - arg0");
+	validate_NULL_TYPETYPE(  arg0, "immedok - arg0");
+	validate_NULL_TYPETYPE(  arg1, "immedok - arg1");
 	funcptr(arg0, arg1);
 }
 

@@ -11,10 +11,10 @@ ssize_t read (int arg0 , void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "read");
-	validate_filedescriptor(  arg0, "read");
-	validate_Rdaddress( arg1, "read");
-	validate_RWaddress(  arg1, "read");
-	validate_NULL_TYPETYPE(  arg2, "read");
+	validate_filedescriptor(  arg0, "read - arg0");
+	validate_Rdaddress( arg1, "read - arg1");
+	validate_RWaddress(  arg1, "read - arg1");
+	validate_NULL_TYPETYPE(  arg2, "read - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

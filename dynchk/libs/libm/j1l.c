@@ -10,7 +10,7 @@ long double j1l (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j1l");
-	validate_NULL_TYPETYPE(  arg0, "j1l");
+	validate_NULL_TYPETYPE(  arg0, "j1l - arg0");
 	return funcptr(arg0);
 }
 

@@ -11,10 +11,10 @@ wchar_t * wmemset (wchar_t * arg0 , wchar_t arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmemset");
-	validate_Rdaddress( arg0, "wmemset");
-	validate_NULL_TYPETYPE(  arg0, "wmemset");
-	validate_NULL_TYPETYPE(  arg1, "wmemset");
-	validate_NULL_TYPETYPE(  arg2, "wmemset");
+	validate_Rdaddress( arg0, "wmemset - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wmemset - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wmemset - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wmemset - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

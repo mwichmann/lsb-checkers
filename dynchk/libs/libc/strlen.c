@@ -10,8 +10,8 @@ size_t strlen (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strlen");
-	validate_Rdaddress( arg0, "strlen");
-	validate_NULL_TYPETYPE(  arg0, "strlen");
+	validate_Rdaddress( arg0, "strlen - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strlen - arg0");
 	return funcptr(arg0);
 }
 

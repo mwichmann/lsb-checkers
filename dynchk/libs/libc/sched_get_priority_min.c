@@ -10,7 +10,7 @@ int sched_get_priority_min (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_get_priority_min");
-	validate_NULL_TYPETYPE(  arg0, "sched_get_priority_min");
+	validate_NULL_TYPETYPE(  arg0, "sched_get_priority_min - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ int sigemptyset (sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigemptyset");
-	validate_Rdaddress( arg0, "sigemptyset");
-	validate_NULL_TYPETYPE(  arg0, "sigemptyset");
+	validate_Rdaddress( arg0, "sigemptyset - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sigemptyset - arg0");
 	return funcptr(arg0);
 }
 

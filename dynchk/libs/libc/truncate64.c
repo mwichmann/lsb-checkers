@@ -10,9 +10,9 @@ int truncate64 (const char * arg0 , off64_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncate64");
-	validate_Rdaddress( arg0, "truncate64");
-	validate_NULL_TYPETYPE(  arg0, "truncate64");
-	validate_NULL_TYPETYPE(  arg1, "truncate64");
+	validate_Rdaddress( arg0, "truncate64 - arg0");
+	validate_NULL_TYPETYPE(  arg0, "truncate64 - arg0");
+	validate_NULL_TYPETYPE(  arg1, "truncate64 - arg1");
 	return funcptr(arg0, arg1);
 }
 

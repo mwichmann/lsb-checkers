@@ -10,13 +10,13 @@ int readdir_r (DIR * arg0 , struct dirent * arg1 , struct dirent * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readdir_r");
-	validate_Rdaddress( arg0, "readdir_r");
-	validate_NULL_TYPETYPE(  arg0, "readdir_r");
-	validate_Rdaddress( arg1, "readdir_r");
-	validate_NULL_TYPETYPE(  arg1, "readdir_r");
-	validate_Rdaddress( arg2, "readdir_r");
-	validate_Rdaddress(* arg2, "readdir_r");
-	validate_NULL_TYPETYPE(  arg2, "readdir_r");
+	validate_Rdaddress( arg0, "readdir_r - arg0");
+	validate_NULL_TYPETYPE(  arg0, "readdir_r - arg0");
+	validate_Rdaddress( arg1, "readdir_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "readdir_r - arg1");
+	validate_Rdaddress( arg2, "readdir_r - arg2");
+	validate_Rdaddress(* arg2, "readdir_r - arg2");
+	validate_NULL_TYPETYPE(  arg2, "readdir_r - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

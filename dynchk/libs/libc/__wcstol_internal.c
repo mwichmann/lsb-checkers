@@ -11,13 +11,13 @@ long __wcstol_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstol_internal");
-	validate_Rdaddress( arg0, "__wcstol_internal");
-	validate_NULL_TYPETYPE(  arg0, "__wcstol_internal");
-	validate_Rdaddress( arg1, "__wcstol_internal");
-	validate_Rdaddress(* arg1, "__wcstol_internal");
-	validate_NULL_TYPETYPE(  arg1, "__wcstol_internal");
-	validate_NULL_TYPETYPE(  arg2, "__wcstol_internal");
-	validate_NULL_TYPETYPE(  arg3, "__wcstol_internal");
+	validate_Rdaddress( arg0, "__wcstol_internal - arg0");
+	validate_NULL_TYPETYPE(  arg0, "__wcstol_internal - arg0");
+	validate_Rdaddress( arg1, "__wcstol_internal - arg1");
+	validate_Rdaddress(* arg1, "__wcstol_internal - arg1");
+	validate_NULL_TYPETYPE(  arg1, "__wcstol_internal - arg1");
+	validate_NULL_TYPETYPE(  arg2, "__wcstol_internal - arg2");
+	validate_NULL_TYPETYPE(  arg3, "__wcstol_internal - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -10,8 +10,8 @@ int logout (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "logout");
-	validate_Rdaddress( arg0, "logout");
-	validate_NULL_TYPETYPE(  arg0, "logout");
+	validate_Rdaddress( arg0, "logout - arg0");
+	validate_NULL_TYPETYPE(  arg0, "logout - arg0");
 	return funcptr(arg0);
 }
 

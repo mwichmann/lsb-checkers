@@ -10,7 +10,7 @@ int iscntrl (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iscntrl");
-	validate_NULL_TYPETYPE(  arg0, "iscntrl");
+	validate_NULL_TYPETYPE(  arg0, "iscntrl - arg0");
 	return funcptr(arg0);
 }
 

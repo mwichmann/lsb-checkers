@@ -11,11 +11,11 @@ int vwprintw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwprintw");
-	validate_Rdaddress( arg0, "vwprintw");
-	validate_NULL_TYPETYPE(  arg0, "vwprintw");
-	validate_Rdaddress( arg1, "vwprintw");
-	validate_NULL_TYPETYPE(  arg1, "vwprintw");
-	validate_NULL_TYPETYPE(  arg2, "vwprintw");
+	validate_Rdaddress( arg0, "vwprintw - arg0");
+	validate_NULL_TYPETYPE(  arg0, "vwprintw - arg0");
+	validate_Rdaddress( arg1, "vwprintw - arg1");
+	validate_NULL_TYPETYPE(  arg1, "vwprintw - arg1");
+	validate_NULL_TYPETYPE(  arg2, "vwprintw - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

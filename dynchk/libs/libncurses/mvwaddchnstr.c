@@ -10,13 +10,13 @@ int mvwaddchnstr (WINDOW * arg0 , int arg1 , int arg2 , const chtype * arg3 , in
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwaddchnstr");
-	validate_Rdaddress( arg0, "mvwaddchnstr");
-	validate_NULL_TYPETYPE(  arg0, "mvwaddchnstr");
-	validate_NULL_TYPETYPE(  arg1, "mvwaddchnstr");
-	validate_NULL_TYPETYPE(  arg2, "mvwaddchnstr");
-	validate_Rdaddress( arg3, "mvwaddchnstr");
-	validate_NULL_TYPETYPE(  arg3, "mvwaddchnstr");
-	validate_NULL_TYPETYPE(  arg4, "mvwaddchnstr");
+	validate_Rdaddress( arg0, "mvwaddchnstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mvwaddchnstr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvwaddchnstr - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvwaddchnstr - arg2");
+	validate_Rdaddress( arg3, "mvwaddchnstr - arg3");
+	validate_NULL_TYPETYPE(  arg3, "mvwaddchnstr - arg3");
+	validate_NULL_TYPETYPE(  arg4, "mvwaddchnstr - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

@@ -10,7 +10,7 @@ float pow10f (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pow10f");
-	validate_NULL_TYPETYPE(  arg0, "pow10f");
+	validate_NULL_TYPETYPE(  arg0, "pow10f - arg0");
 	return funcptr(arg0);
 }
 

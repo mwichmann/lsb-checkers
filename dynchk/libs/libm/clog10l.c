@@ -10,7 +10,7 @@ long double complex clog10l (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clog10l");
-	validate_NULL_TYPETYPE(  arg0, "clog10l");
+	validate_NULL_TYPETYPE(  arg0, "clog10l - arg0");
 	return funcptr(arg0);
 }
 

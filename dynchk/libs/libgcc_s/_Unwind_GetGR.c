@@ -2,16 +2,18 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static _Unwind_Word(*funcptr)() = 0;
+#include <unwind.h>
+#undef _Unwind_GetGR
+static _Unwind_Word(*funcptr) () = 0;
 
-_Unwind_Word _Unwind_GetGR()
+_Unwind_Word _Unwind_GetGR ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetGR");
 	return funcptr();
 }
 
-_Unwind_Word __lsb__Unwind_GetGR()
+_Unwind_Word __lsb__Unwind_GetGR ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetGR");

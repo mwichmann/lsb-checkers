@@ -10,9 +10,9 @@ void seekdir (DIR * arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seekdir");
-	validate_Rdaddress( arg0, "seekdir");
-	validate_NULL_TYPETYPE(  arg0, "seekdir");
-	validate_NULL_TYPETYPE(  arg1, "seekdir");
+	validate_Rdaddress( arg0, "seekdir - arg0");
+	validate_NULL_TYPETYPE(  arg0, "seekdir - arg0");
+	validate_NULL_TYPETYPE(  arg1, "seekdir - arg1");
 	funcptr(arg0, arg1);
 }
 

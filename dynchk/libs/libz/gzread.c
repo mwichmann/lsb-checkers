@@ -10,9 +10,9 @@ int gzread (gzFile arg0 , voidp arg1 , unsigned int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzread");
-	validate_NULL_TYPETYPE(  arg0, "gzread");
-	validate_NULL_TYPETYPE(  arg1, "gzread");
-	validate_NULL_TYPETYPE(  arg2, "gzread");
+	validate_NULL_TYPETYPE(  arg0, "gzread - arg0");
+	validate_NULL_TYPETYPE(  arg1, "gzread - arg1");
+	validate_NULL_TYPETYPE(  arg2, "gzread - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

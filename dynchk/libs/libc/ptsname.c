@@ -10,7 +10,7 @@ char * ptsname (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ptsname");
-	validate_NULL_TYPETYPE(  arg0, "ptsname");
+	validate_NULL_TYPETYPE(  arg0, "ptsname - arg0");
 	return funcptr(arg0);
 }
 

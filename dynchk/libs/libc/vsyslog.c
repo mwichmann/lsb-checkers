@@ -11,10 +11,10 @@ void vsyslog (int arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vsyslog");
-	validate_NULL_TYPETYPE(  arg0, "vsyslog");
-	validate_Rdaddress( arg1, "vsyslog");
-	validate_NULL_TYPETYPE(  arg1, "vsyslog");
-	validate_NULL_TYPETYPE(  arg2, "vsyslog");
+	validate_NULL_TYPETYPE(  arg0, "vsyslog - arg0");
+	validate_Rdaddress( arg1, "vsyslog - arg1");
+	validate_NULL_TYPETYPE(  arg1, "vsyslog - arg1");
+	validate_NULL_TYPETYPE(  arg2, "vsyslog - arg2");
 	funcptr(arg0, arg1, arg2);
 }
 

@@ -11,8 +11,8 @@ void svc_getreqset (fd_set * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_getreqset");
-	validate_Rdaddress( arg0, "svc_getreqset");
-	validate_NULL_TYPETYPE(  arg0, "svc_getreqset");
+	validate_Rdaddress( arg0, "svc_getreqset - arg0");
+	validate_NULL_TYPETYPE(  arg0, "svc_getreqset - arg0");
 	funcptr(arg0);
 }
 

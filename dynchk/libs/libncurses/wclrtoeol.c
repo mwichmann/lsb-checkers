@@ -10,8 +10,8 @@ int wclrtoeol (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclrtoeol");
-	validate_Rdaddress( arg0, "wclrtoeol");
-	validate_NULL_TYPETYPE(  arg0, "wclrtoeol");
+	validate_Rdaddress( arg0, "wclrtoeol - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wclrtoeol - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,12 +10,12 @@ unsigned long strtoul (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoul");
-	validate_Rdaddress( arg0, "strtoul");
-	validate_NULL_TYPETYPE(  arg0, "strtoul");
-	validate_Rdaddress( arg1, "strtoul");
-	validate_Rdaddress(* arg1, "strtoul");
-	validate_NULL_TYPETYPE(  arg1, "strtoul");
-	validate_NULL_TYPETYPE(  arg2, "strtoul");
+	validate_Rdaddress( arg0, "strtoul - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strtoul - arg0");
+	validate_Rdaddress( arg1, "strtoul - arg1");
+	validate_Rdaddress(* arg1, "strtoul - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strtoul - arg1");
+	validate_NULL_TYPETYPE(  arg2, "strtoul - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

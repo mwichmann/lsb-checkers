@@ -10,7 +10,7 @@ void use_env (bool arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "use_env");
-	validate_NULL_TYPETYPE(  arg0, "use_env");
+	validate_NULL_TYPETYPE(  arg0, "use_env - arg0");
 	funcptr(arg0);
 }
 

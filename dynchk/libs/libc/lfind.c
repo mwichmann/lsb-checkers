@@ -12,14 +12,14 @@ void * lfind (const void * arg0 , const void * arg1 , size_t * arg2 , size_t arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lfind");
-	validate_Rdaddress( arg0, "lfind");
-	validate_NULL_TYPETYPE(  arg0, "lfind");
-	validate_Rdaddress( arg1, "lfind");
-	validate_NULL_TYPETYPE(  arg1, "lfind");
-	validate_Rdaddress( arg2, "lfind");
-	validate_NULL_TYPETYPE(  arg2, "lfind");
-	validate_NULL_TYPETYPE(  arg3, "lfind");
-	validate_NULL_TYPETYPE(  arg4, "lfind");
+	validate_Rdaddress( arg0, "lfind - arg0");
+	validate_NULL_TYPETYPE(  arg0, "lfind - arg0");
+	validate_Rdaddress( arg1, "lfind - arg1");
+	validate_NULL_TYPETYPE(  arg1, "lfind - arg1");
+	validate_Rdaddress( arg2, "lfind - arg2");
+	validate_NULL_TYPETYPE(  arg2, "lfind - arg2");
+	validate_NULL_TYPETYPE(  arg3, "lfind - arg3");
+	validate_NULL_TYPETYPE(  arg4, "lfind - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

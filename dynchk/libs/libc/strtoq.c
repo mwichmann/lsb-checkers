@@ -10,12 +10,12 @@ long long strtoq (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoq");
-	validate_Rdaddress( arg0, "strtoq");
-	validate_NULL_TYPETYPE(  arg0, "strtoq");
-	validate_Rdaddress( arg1, "strtoq");
-	validate_Rdaddress(* arg1, "strtoq");
-	validate_NULL_TYPETYPE(  arg1, "strtoq");
-	validate_NULL_TYPETYPE(  arg2, "strtoq");
+	validate_Rdaddress( arg0, "strtoq - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strtoq - arg0");
+	validate_Rdaddress( arg1, "strtoq - arg1");
+	validate_Rdaddress(* arg1, "strtoq - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strtoq - arg1");
+	validate_NULL_TYPETYPE(  arg2, "strtoq - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,8 +10,8 @@ int getc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getc");
-	validate_Rdaddress( arg0, "getc");
-	validate_NULL_TYPETYPE(  arg0, "getc");
+	validate_Rdaddress( arg0, "getc - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getc - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,10 +10,10 @@ int wgetstr (WINDOW * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wgetstr");
-	validate_Rdaddress( arg0, "wgetstr");
-	validate_NULL_TYPETYPE(  arg0, "wgetstr");
-	validate_Rdaddress( arg1, "wgetstr");
-	validate_NULL_TYPETYPE(  arg1, "wgetstr");
+	validate_Rdaddress( arg0, "wgetstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wgetstr - arg0");
+	validate_Rdaddress( arg1, "wgetstr - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wgetstr - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -11,8 +11,8 @@ int msgget (key_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgget");
-	validate_NULL_TYPETYPE(  arg0, "msgget");
-	validate_NULL_TYPETYPE(  arg1, "msgget");
+	validate_NULL_TYPETYPE(  arg0, "msgget - arg0");
+	validate_NULL_TYPETYPE(  arg1, "msgget - arg1");
 	return funcptr(arg0, arg1);
 }
 

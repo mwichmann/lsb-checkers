@@ -10,7 +10,7 @@ long sysconf (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sysconf");
-	validate_NULL_TYPETYPE(  arg0, "sysconf");
+	validate_NULL_TYPETYPE(  arg0, "sysconf - arg0");
 	return funcptr(arg0);
 }
 

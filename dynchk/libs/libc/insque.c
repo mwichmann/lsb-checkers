@@ -10,10 +10,10 @@ void insque (void * arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insque");
-	validate_Rdaddress( arg0, "insque");
-	validate_NULL_TYPETYPE(  arg0, "insque");
-	validate_Rdaddress( arg1, "insque");
-	validate_NULL_TYPETYPE(  arg1, "insque");
+	validate_Rdaddress( arg0, "insque - arg0");
+	validate_NULL_TYPETYPE(  arg0, "insque - arg0");
+	validate_Rdaddress( arg1, "insque - arg1");
+	validate_NULL_TYPETYPE(  arg1, "insque - arg1");
 	funcptr(arg0, arg1);
 }
 

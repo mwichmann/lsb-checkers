@@ -10,10 +10,10 @@ int wvline (WINDOW * arg0 , chtype arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wvline");
-	validate_Rdaddress( arg0, "wvline");
-	validate_NULL_TYPETYPE(  arg0, "wvline");
-	validate_NULL_TYPETYPE(  arg1, "wvline");
-	validate_NULL_TYPETYPE(  arg2, "wvline");
+	validate_Rdaddress( arg0, "wvline - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wvline - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wvline - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wvline - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

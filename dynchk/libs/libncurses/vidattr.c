@@ -10,7 +10,7 @@ int vidattr (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidattr");
-	validate_NULL_TYPETYPE(  arg0, "vidattr");
+	validate_NULL_TYPETYPE(  arg0, "vidattr - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ char * clnt_spcreateerror (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_spcreateerror");
-	validate_Rdaddress( arg0, "clnt_spcreateerror");
-	validate_NULL_TYPETYPE(  arg0, "clnt_spcreateerror");
+	validate_Rdaddress( arg0, "clnt_spcreateerror - arg0");
+	validate_NULL_TYPETYPE(  arg0, "clnt_spcreateerror - arg0");
 	return funcptr(arg0);
 }
 

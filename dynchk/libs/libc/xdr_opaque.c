@@ -11,10 +11,10 @@ bool_t xdr_opaque (XDR * arg0 , caddr_t arg1 , u_int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_opaque");
-	validate_Rdaddress( arg0, "xdr_opaque");
-	validate_NULL_TYPETYPE(  arg0, "xdr_opaque");
-	validate_NULL_TYPETYPE(  arg1, "xdr_opaque");
-	validate_NULL_TYPETYPE(  arg2, "xdr_opaque");
+	validate_Rdaddress( arg0, "xdr_opaque - arg0");
+	validate_NULL_TYPETYPE(  arg0, "xdr_opaque - arg0");
+	validate_NULL_TYPETYPE(  arg1, "xdr_opaque - arg1");
+	validate_NULL_TYPETYPE(  arg2, "xdr_opaque - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,8 +10,8 @@ int feof (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "feof");
-	validate_Rdaddress( arg0, "feof");
-	validate_NULL_TYPETYPE(  arg0, "feof");
+	validate_Rdaddress( arg0, "feof - arg0");
+	validate_NULL_TYPETYPE(  arg0, "feof - arg0");
 	return funcptr(arg0);
 }
 

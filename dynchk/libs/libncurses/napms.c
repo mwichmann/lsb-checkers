@@ -10,7 +10,7 @@ int napms (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "napms");
-	validate_NULL_TYPETYPE(  arg0, "napms");
+	validate_NULL_TYPETYPE(  arg0, "napms - arg0");
 	return funcptr(arg0);
 }
 

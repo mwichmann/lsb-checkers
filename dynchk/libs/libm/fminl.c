@@ -10,8 +10,8 @@ long double fminl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fminl");
-	validate_NULL_TYPETYPE(  arg0, "fminl");
-	validate_NULL_TYPETYPE(  arg1, "fminl");
+	validate_NULL_TYPETYPE(  arg0, "fminl - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fminl - arg1");
 	return funcptr(arg0, arg1);
 }
 

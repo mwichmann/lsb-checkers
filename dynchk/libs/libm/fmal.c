@@ -10,9 +10,9 @@ long double fmal (long double arg0 , long double arg1 , long double arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmal");
-	validate_NULL_TYPETYPE(  arg0, "fmal");
-	validate_NULL_TYPETYPE(  arg1, "fmal");
-	validate_NULL_TYPETYPE(  arg2, "fmal");
+	validate_NULL_TYPETYPE(  arg0, "fmal - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fmal - arg1");
+	validate_NULL_TYPETYPE(  arg2, "fmal - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

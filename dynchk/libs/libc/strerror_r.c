@@ -11,10 +11,10 @@ char * strerror_r (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strerror_r");
-	validate_NULL_TYPETYPE(  arg0, "strerror_r");
-	validate_Rdaddress( arg1, "strerror_r");
-	validate_NULL_TYPETYPE(  arg1, "strerror_r");
-	validate_NULL_TYPETYPE(  arg2, "strerror_r");
+	validate_NULL_TYPETYPE(  arg0, "strerror_r - arg0");
+	validate_Rdaddress( arg1, "strerror_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strerror_r - arg1");
+	validate_NULL_TYPETYPE(  arg2, "strerror_r - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

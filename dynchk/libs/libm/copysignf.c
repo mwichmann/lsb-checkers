@@ -10,8 +10,8 @@ float copysignf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copysignf");
-	validate_NULL_TYPETYPE(  arg0, "copysignf");
-	validate_NULL_TYPETYPE(  arg1, "copysignf");
+	validate_NULL_TYPETYPE(  arg0, "copysignf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "copysignf - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ int iswgraph (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswgraph");
-	validate_NULL_TYPETYPE(  arg0, "iswgraph");
+	validate_NULL_TYPETYPE(  arg0, "iswgraph - arg0");
 	return funcptr(arg0);
 }
 

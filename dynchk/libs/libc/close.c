@@ -10,7 +10,7 @@ int close (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "close");
-	validate_filedescriptor(  arg0, "close");
+	validate_filedescriptor(  arg0, "close - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ long double atanhl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanhl");
-	validate_NULL_TYPETYPE(  arg0, "atanhl");
+	validate_NULL_TYPETYPE(  arg0, "atanhl - arg0");
 	return funcptr(arg0);
 }
 

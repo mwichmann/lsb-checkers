@@ -10,7 +10,7 @@ int catclose (nl_catd arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catclose");
-	validate_NULL_TYPETYPE(  arg0, "catclose");
+	validate_NULL_TYPETYPE(  arg0, "catclose - arg0");
 	return funcptr(arg0);
 }
 

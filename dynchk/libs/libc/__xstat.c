@@ -10,11 +10,11 @@ int __xstat (int arg0 , const char * arg1 , struct stat * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__xstat");
-	validate_NULL_TYPETYPE(  arg0, "__xstat");
-	validate_Rdaddress( arg1, "__xstat");
-	validate_NULL_TYPETYPE(  arg1, "__xstat");
-	validate_Rdaddress( arg2, "__xstat");
-	validate_NULL_TYPETYPE(  arg2, "__xstat");
+	validate_NULL_TYPETYPE(  arg0, "__xstat - arg0");
+	validate_Rdaddress( arg1, "__xstat - arg1");
+	validate_NULL_TYPETYPE(  arg1, "__xstat - arg1");
+	validate_Rdaddress( arg2, "__xstat - arg2");
+	validate_NULL_TYPETYPE(  arg2, "__xstat - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

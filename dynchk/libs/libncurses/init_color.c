@@ -10,10 +10,10 @@ int init_color (short arg0 , short arg1 , short arg2 , short arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "init_color");
-	validate_NULL_TYPETYPE(  arg0, "init_color");
-	validate_NULL_TYPETYPE(  arg1, "init_color");
-	validate_NULL_TYPETYPE(  arg2, "init_color");
-	validate_NULL_TYPETYPE(  arg3, "init_color");
+	validate_NULL_TYPETYPE(  arg0, "init_color - arg0");
+	validate_NULL_TYPETYPE(  arg1, "init_color - arg1");
+	validate_NULL_TYPETYPE(  arg2, "init_color - arg2");
+	validate_NULL_TYPETYPE(  arg3, "init_color - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -11,7 +11,7 @@ wint_t putwchar (wchar_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwchar");
-	validate_NULL_TYPETYPE(  arg0, "putwchar");
+	validate_NULL_TYPETYPE(  arg0, "putwchar - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,14 +10,14 @@ int compress2 (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 , 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "compress2");
-	validate_Rdaddress( arg0, "compress2");
-	validate_NULL_TYPETYPE(  arg0, "compress2");
-	validate_Rdaddress( arg1, "compress2");
-	validate_NULL_TYPETYPE(  arg1, "compress2");
-	validate_Rdaddress( arg2, "compress2");
-	validate_NULL_TYPETYPE(  arg2, "compress2");
-	validate_NULL_TYPETYPE(  arg3, "compress2");
-	validate_NULL_TYPETYPE(  arg4, "compress2");
+	validate_Rdaddress( arg0, "compress2 - arg0");
+	validate_NULL_TYPETYPE(  arg0, "compress2 - arg0");
+	validate_Rdaddress( arg1, "compress2 - arg1");
+	validate_NULL_TYPETYPE(  arg1, "compress2 - arg1");
+	validate_Rdaddress( arg2, "compress2 - arg2");
+	validate_NULL_TYPETYPE(  arg2, "compress2 - arg2");
+	validate_NULL_TYPETYPE(  arg3, "compress2 - arg3");
+	validate_NULL_TYPETYPE(  arg4, "compress2 - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

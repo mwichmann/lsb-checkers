@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <stddef.h>
 #include <time.h>
+#include <stddef.h>
 #undef strftime
 static size_t(*funcptr) (char * , size_t , const char * , const struct tm * ) = 0;
 
@@ -11,13 +11,13 @@ size_t strftime (char * arg0 , size_t arg1 , const char * arg2 , const struct tm
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strftime");
-	validate_Rdaddress( arg0, "strftime");
-	validate_NULL_TYPETYPE(  arg0, "strftime");
-	validate_NULL_TYPETYPE(  arg1, "strftime");
-	validate_Rdaddress( arg2, "strftime");
-	validate_NULL_TYPETYPE(  arg2, "strftime");
-	validate_Rdaddress( arg3, "strftime");
-	validate_NULL_TYPETYPE(  arg3, "strftime");
+	validate_Rdaddress( arg0, "strftime - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strftime - arg0");
+	validate_NULL_TYPETYPE(  arg1, "strftime - arg1");
+	validate_Rdaddress( arg2, "strftime - arg2");
+	validate_NULL_TYPETYPE(  arg2, "strftime - arg2");
+	validate_Rdaddress( arg3, "strftime - arg3");
+	validate_NULL_TYPETYPE(  arg3, "strftime - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

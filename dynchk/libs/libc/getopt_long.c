@@ -10,14 +10,16 @@ int getopt_long (int arg0 , char *const  arg1 [], const char * arg2 , const stru
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getopt_long");
-	validate_NULL_TYPETYPE(  arg0, "getopt_long");
-	validate_NULL_TYPETYPE(  arg1, "getopt_long");
-	validate_Rdaddress( arg2, "getopt_long");
-	validate_NULL_TYPETYPE(  arg2, "getopt_long");
-	validate_Rdaddress( arg3, "getopt_long");
-	validate_NULL_TYPETYPE(  arg3, "getopt_long");
-	validate_Rdaddress( arg4, "getopt_long");
-	validate_NULL_TYPETYPE(  arg4, "getopt_long");
+	validate_NULL_TYPETYPE(  arg0, "getopt_long - arg0");
+	validate_NULL_TYPETYPE(  arg1, "getopt_long - arg1");
+	validate_Rdaddress( arg2, "getopt_long - arg2");
+	validate_NULL_TYPETYPE(  arg2, "getopt_long - arg2");
+	validate_Rdaddress( arg3, "getopt_long - arg3");
+	validate_NULL_TYPETYPE(  arg3, "getopt_long - arg3");
+	if( arg4 ) {
+	validate_Rdaddress( arg4, "getopt_long - arg4");
+	}
+	validate_NULL_TYPETYPE(  arg4, "getopt_long - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

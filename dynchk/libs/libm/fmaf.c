@@ -10,9 +10,9 @@ float fmaf (float arg0 , float arg1 , float arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaf");
-	validate_NULL_TYPETYPE(  arg0, "fmaf");
-	validate_NULL_TYPETYPE(  arg1, "fmaf");
-	validate_NULL_TYPETYPE(  arg2, "fmaf");
+	validate_NULL_TYPETYPE(  arg0, "fmaf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fmaf - arg1");
+	validate_NULL_TYPETYPE(  arg2, "fmaf - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

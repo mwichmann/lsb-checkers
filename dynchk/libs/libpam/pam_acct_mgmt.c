@@ -10,9 +10,9 @@ int pam_acct_mgmt (pam_handle_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_acct_mgmt");
-	validate_Rdaddress( arg0, "pam_acct_mgmt");
-	validate_NULL_TYPETYPE(  arg0, "pam_acct_mgmt");
-	validate_NULL_TYPETYPE(  arg1, "pam_acct_mgmt");
+	validate_Rdaddress( arg0, "pam_acct_mgmt - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pam_acct_mgmt - arg0");
+	validate_NULL_TYPETYPE(  arg1, "pam_acct_mgmt - arg1");
 	return funcptr(arg0, arg1);
 }
 

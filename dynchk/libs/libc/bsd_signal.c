@@ -10,8 +10,8 @@ sighandler_t bsd_signal (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bsd_signal");
-	validate_NULL_TYPETYPE(  arg0, "bsd_signal");
-	validate_NULL_TYPETYPE(  arg1, "bsd_signal");
+	validate_NULL_TYPETYPE(  arg0, "bsd_signal - arg0");
+	validate_NULL_TYPETYPE(  arg1, "bsd_signal - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ int bkgd (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bkgd");
-	validate_NULL_TYPETYPE(  arg0, "bkgd");
+	validate_NULL_TYPETYPE(  arg0, "bkgd - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ double complex casinh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinh");
-	validate_NULL_TYPETYPE(  arg0, "casinh");
+	validate_NULL_TYPETYPE(  arg0, "casinh - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ long atol (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atol");
-	validate_Rdaddress( arg0, "atol");
-	validate_NULL_TYPETYPE(  arg0, "atol");
+	validate_Rdaddress( arg0, "atol - arg0");
+	validate_NULL_TYPETYPE(  arg0, "atol - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,10 +10,10 @@ int mvhline (int arg0 , int arg1 , chtype arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvhline");
-	validate_NULL_TYPETYPE(  arg0, "mvhline");
-	validate_NULL_TYPETYPE(  arg1, "mvhline");
-	validate_NULL_TYPETYPE(  arg2, "mvhline");
-	validate_NULL_TYPETYPE(  arg3, "mvhline");
+	validate_NULL_TYPETYPE(  arg0, "mvhline - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvhline - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvhline - arg2");
+	validate_NULL_TYPETYPE(  arg3, "mvhline - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

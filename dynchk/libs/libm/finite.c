@@ -10,7 +10,7 @@ int finite (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finite");
-	validate_NULL_TYPETYPE(  arg0, "finite");
+	validate_NULL_TYPETYPE(  arg0, "finite - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ int curs_set (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "curs_set");
-	validate_NULL_TYPETYPE(  arg0, "curs_set");
+	validate_NULL_TYPETYPE(  arg0, "curs_set - arg0");
 	return funcptr(arg0);
 }
 

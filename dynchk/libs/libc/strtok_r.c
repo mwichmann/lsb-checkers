@@ -10,13 +10,13 @@ char * strtok_r (char * arg0 , const char * arg1 , char * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtok_r");
-	validate_Rdaddress( arg0, "strtok_r");
-	validate_NULL_TYPETYPE(  arg0, "strtok_r");
-	validate_Rdaddress( arg1, "strtok_r");
-	validate_NULL_TYPETYPE(  arg1, "strtok_r");
-	validate_Rdaddress( arg2, "strtok_r");
-	validate_Rdaddress(* arg2, "strtok_r");
-	validate_NULL_TYPETYPE(  arg2, "strtok_r");
+	validate_Rdaddress( arg0, "strtok_r - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strtok_r - arg0");
+	validate_Rdaddress( arg1, "strtok_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strtok_r - arg1");
+	validate_Rdaddress( arg2, "strtok_r - arg2");
+	validate_Rdaddress(* arg2, "strtok_r - arg2");
+	validate_NULL_TYPETYPE(  arg2, "strtok_r - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ float y1f (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "y1f");
-	validate_NULL_TYPETYPE(  arg0, "y1f");
+	validate_NULL_TYPETYPE(  arg0, "y1f - arg0");
 	return funcptr(arg0);
 }
 

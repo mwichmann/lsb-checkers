@@ -10,8 +10,8 @@ double hypot (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hypot");
-	validate_NULL_TYPETYPE(  arg0, "hypot");
-	validate_NULL_TYPETYPE(  arg1, "hypot");
+	validate_NULL_TYPETYPE(  arg0, "hypot - arg0");
+	validate_NULL_TYPETYPE(  arg1, "hypot - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ double complex csinh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinh");
-	validate_NULL_TYPETYPE(  arg0, "csinh");
+	validate_NULL_TYPETYPE(  arg0, "csinh - arg0");
 	return funcptr(arg0);
 }
 

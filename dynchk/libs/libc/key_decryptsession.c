@@ -10,10 +10,10 @@ int key_decryptsession (char * arg0 , union des_block * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "key_decryptsession");
-	validate_Rdaddress( arg0, "key_decryptsession");
-	validate_NULL_TYPETYPE(  arg0, "key_decryptsession");
-	validate_Rdaddress( arg1, "key_decryptsession");
-	validate_NULL_TYPETYPE(  arg1, "key_decryptsession");
+	validate_Rdaddress( arg0, "key_decryptsession - arg0");
+	validate_NULL_TYPETYPE(  arg0, "key_decryptsession - arg0");
+	validate_Rdaddress( arg1, "key_decryptsession - arg1");
+	validate_NULL_TYPETYPE(  arg1, "key_decryptsession - arg1");
 	return funcptr(arg0, arg1);
 }
 

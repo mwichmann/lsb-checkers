@@ -10,10 +10,10 @@ uLong crc32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "crc32");
-	validate_NULL_TYPETYPE(  arg0, "crc32");
-	validate_Rdaddress( arg1, "crc32");
-	validate_NULL_TYPETYPE(  arg1, "crc32");
-	validate_NULL_TYPETYPE(  arg2, "crc32");
+	validate_NULL_TYPETYPE(  arg0, "crc32 - arg0");
+	validate_Rdaddress( arg1, "crc32 - arg1");
+	validate_NULL_TYPETYPE(  arg1, "crc32 - arg1");
+	validate_NULL_TYPETYPE(  arg2, "crc32 - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ int typeahead (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "typeahead");
-	validate_NULL_TYPETYPE(  arg0, "typeahead");
+	validate_NULL_TYPETYPE(  arg0, "typeahead - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ int sem_trywait (sem_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_trywait");
-	validate_Rdaddress( arg0, "sem_trywait");
-	validate_NULL_TYPETYPE(  arg0, "sem_trywait");
+	validate_Rdaddress( arg0, "sem_trywait - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sem_trywait - arg0");
 	return funcptr(arg0);
 }
 

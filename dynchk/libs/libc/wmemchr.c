@@ -11,10 +11,10 @@ wchar_t * wmemchr (const wchar_t * arg0 , wchar_t arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmemchr");
-	validate_Rdaddress( arg0, "wmemchr");
-	validate_NULL_TYPETYPE(  arg0, "wmemchr");
-	validate_NULL_TYPETYPE(  arg1, "wmemchr");
-	validate_NULL_TYPETYPE(  arg2, "wmemchr");
+	validate_Rdaddress( arg0, "wmemchr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wmemchr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wmemchr - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wmemchr - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

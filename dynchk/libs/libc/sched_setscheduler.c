@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <sched.h>
 #include <sys/types.h>
+#include <sched.h>
 #undef sched_setscheduler
 static int(*funcptr) (pid_t , int , const struct sched_param * ) = 0;
 
@@ -11,10 +11,10 @@ int sched_setscheduler (pid_t arg0 , int arg1 , const struct sched_param * arg2 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setscheduler");
-	validate_NULL_TYPETYPE(  arg0, "sched_setscheduler");
-	validate_NULL_TYPETYPE(  arg1, "sched_setscheduler");
-	validate_Rdaddress( arg2, "sched_setscheduler");
-	validate_NULL_TYPETYPE(  arg2, "sched_setscheduler");
+	validate_NULL_TYPETYPE(  arg0, "sched_setscheduler - arg0");
+	validate_NULL_TYPETYPE(  arg1, "sched_setscheduler - arg1");
+	validate_Rdaddress( arg2, "sched_setscheduler - arg2");
+	validate_NULL_TYPETYPE(  arg2, "sched_setscheduler - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

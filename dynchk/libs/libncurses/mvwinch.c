@@ -10,10 +10,10 @@ chtype mvwinch (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinch");
-	validate_Rdaddress( arg0, "mvwinch");
-	validate_NULL_TYPETYPE(  arg0, "mvwinch");
-	validate_NULL_TYPETYPE(  arg1, "mvwinch");
-	validate_NULL_TYPETYPE(  arg2, "mvwinch");
+	validate_Rdaddress( arg0, "mvwinch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mvwinch - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvwinch - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvwinch - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

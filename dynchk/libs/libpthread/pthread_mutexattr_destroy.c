@@ -10,8 +10,8 @@ int pthread_mutexattr_destroy (pthread_mutexattr_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_mutexattr_destroy");
-	validate_Rdaddress( arg0, "pthread_mutexattr_destroy");
-	validate_NULL_TYPETYPE(  arg0, "pthread_mutexattr_destroy");
+	validate_Rdaddress( arg0, "pthread_mutexattr_destroy - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_mutexattr_destroy - arg0");
 	return funcptr(arg0);
 }
 

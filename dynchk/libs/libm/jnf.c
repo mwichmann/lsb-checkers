@@ -10,8 +10,8 @@ float jnf (int arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jnf");
-	validate_NULL_TYPETYPE(  arg0, "jnf");
-	validate_NULL_TYPETYPE(  arg1, "jnf");
+	validate_NULL_TYPETYPE(  arg0, "jnf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "jnf - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <curses.h>
 #include <term.h>
+#include <curses.h>
 #undef copywin
 static int(*funcptr) (const WINDOW * , WINDOW * , int , int , int , int , int , int , int ) = 0;
 
@@ -11,17 +11,17 @@ int copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copywin");
-	validate_Rdaddress( arg0, "copywin");
-	validate_NULL_TYPETYPE(  arg0, "copywin");
-	validate_Rdaddress( arg1, "copywin");
-	validate_NULL_TYPETYPE(  arg1, "copywin");
-	validate_NULL_TYPETYPE(  arg2, "copywin");
-	validate_NULL_TYPETYPE(  arg3, "copywin");
-	validate_NULL_TYPETYPE(  arg4, "copywin");
-	validate_NULL_TYPETYPE(  arg5, "copywin");
-	validate_NULL_TYPETYPE(  arg6, "copywin");
-	validate_NULL_TYPETYPE(  arg7, "copywin");
-	validate_NULL_TYPETYPE(  arg8, "copywin");
+	validate_Rdaddress( arg0, "copywin - arg0");
+	validate_NULL_TYPETYPE(  arg0, "copywin - arg0");
+	validate_Rdaddress( arg1, "copywin - arg1");
+	validate_NULL_TYPETYPE(  arg1, "copywin - arg1");
+	validate_NULL_TYPETYPE(  arg2, "copywin - arg2");
+	validate_NULL_TYPETYPE(  arg3, "copywin - arg3");
+	validate_NULL_TYPETYPE(  arg4, "copywin - arg4");
+	validate_NULL_TYPETYPE(  arg5, "copywin - arg5");
+	validate_NULL_TYPETYPE(  arg6, "copywin - arg6");
+	validate_NULL_TYPETYPE(  arg7, "copywin - arg7");
+	validate_NULL_TYPETYPE(  arg8, "copywin - arg8");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 

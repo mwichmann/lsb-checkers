@@ -11,9 +11,9 @@ int getrlimit64 (id_t arg0 , struct rlimit64 * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrlimit64");
-	validate_NULL_TYPETYPE(  arg0, "getrlimit64");
-	validate_Rdaddress( arg1, "getrlimit64");
-	validate_NULL_TYPETYPE(  arg1, "getrlimit64");
+	validate_NULL_TYPETYPE(  arg0, "getrlimit64 - arg0");
+	validate_Rdaddress( arg1, "getrlimit64 - arg1");
+	validate_NULL_TYPETYPE(  arg1, "getrlimit64 - arg1");
 	return funcptr(arg0, arg1);
 }
 

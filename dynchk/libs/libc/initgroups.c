@@ -11,9 +11,9 @@ int initgroups (const char * arg0 , gid_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initgroups");
-	validate_Rdaddress( arg0, "initgroups");
-	validate_NULL_TYPETYPE(  arg0, "initgroups");
-	validate_NULL_TYPETYPE(  arg1, "initgroups");
+	validate_Rdaddress( arg0, "initgroups - arg0");
+	validate_NULL_TYPETYPE(  arg0, "initgroups - arg0");
+	validate_NULL_TYPETYPE(  arg1, "initgroups - arg1");
 	return funcptr(arg0, arg1);
 }
 

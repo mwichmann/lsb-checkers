@@ -10,8 +10,8 @@ int getstr (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getstr");
-	validate_Rdaddress( arg0, "getstr");
-	validate_NULL_TYPETYPE(  arg0, "getstr");
+	validate_Rdaddress( arg0, "getstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getstr - arg0");
 	return funcptr(arg0);
 }
 

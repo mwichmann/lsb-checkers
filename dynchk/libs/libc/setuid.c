@@ -11,7 +11,7 @@ int setuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setuid");
-	validate_NULL_TYPETYPE(  arg0, "setuid");
+	validate_NULL_TYPETYPE(  arg0, "setuid - arg0");
 	return funcptr(arg0);
 }
 

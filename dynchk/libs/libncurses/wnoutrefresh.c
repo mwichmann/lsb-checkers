@@ -10,8 +10,8 @@ int wnoutrefresh (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wnoutrefresh");
-	validate_Rdaddress( arg0, "wnoutrefresh");
-	validate_NULL_TYPETYPE(  arg0, "wnoutrefresh");
+	validate_Rdaddress( arg0, "wnoutrefresh - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wnoutrefresh - arg0");
 	return funcptr(arg0);
 }
 

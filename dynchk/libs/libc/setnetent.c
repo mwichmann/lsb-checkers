@@ -10,7 +10,7 @@ void setnetent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setnetent");
-	validate_NULL_TYPETYPE(  arg0, "setnetent");
+	validate_NULL_TYPETYPE(  arg0, "setnetent - arg0");
 	funcptr(arg0);
 }
 

@@ -12,11 +12,11 @@ size_t wcrtomb (char * arg0 , wchar_t arg1 , mbstate_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcrtomb");
-	validate_Rdaddress( arg0, "wcrtomb");
-	validate_NULL_TYPETYPE(  arg0, "wcrtomb");
-	validate_NULL_TYPETYPE(  arg1, "wcrtomb");
-	validate_Rdaddress( arg2, "wcrtomb");
-	validate_NULL_TYPETYPE(  arg2, "wcrtomb");
+	validate_Rdaddress( arg0, "wcrtomb - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcrtomb - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wcrtomb - arg1");
+	validate_Rdaddress( arg2, "wcrtomb - arg2");
+	validate_NULL_TYPETYPE(  arg2, "wcrtomb - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

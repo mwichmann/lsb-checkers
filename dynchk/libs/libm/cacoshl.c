@@ -10,7 +10,7 @@ long double complex cacoshl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacoshl");
-	validate_NULL_TYPETYPE(  arg0, "cacoshl");
+	validate_NULL_TYPETYPE(  arg0, "cacoshl - arg0");
 	return funcptr(arg0);
 }
 

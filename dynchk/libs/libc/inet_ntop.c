@@ -11,12 +11,12 @@ const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , size_t arg3
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntop");
-	validate_NULL_TYPETYPE(  arg0, "inet_ntop");
-	validate_Rdaddress( arg1, "inet_ntop");
-	validate_NULL_TYPETYPE(  arg1, "inet_ntop");
-	validate_Rdaddress( arg2, "inet_ntop");
-	validate_NULL_TYPETYPE(  arg2, "inet_ntop");
-	validate_NULL_TYPETYPE(  arg3, "inet_ntop");
+	validate_NULL_TYPETYPE(  arg0, "inet_ntop - arg0");
+	validate_Rdaddress( arg1, "inet_ntop - arg1");
+	validate_NULL_TYPETYPE(  arg1, "inet_ntop - arg1");
+	validate_Rdaddress( arg2, "inet_ntop - arg2");
+	validate_NULL_TYPETYPE(  arg2, "inet_ntop - arg2");
+	validate_NULL_TYPETYPE(  arg3, "inet_ntop - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <sys/types.h>
 #include <stddef.h>
+#include <sys/types.h>
 #include <unistd.h>
 #undef pread
 static ssize_t(*funcptr) (int , void * , size_t , off_t ) = 0;
@@ -12,11 +12,11 @@ ssize_t pread (int arg0 , void * arg1 , size_t arg2 , off_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pread");
-	validate_NULL_TYPETYPE(  arg0, "pread");
-	validate_Rdaddress( arg1, "pread");
-	validate_NULL_TYPETYPE(  arg1, "pread");
-	validate_NULL_TYPETYPE(  arg2, "pread");
-	validate_NULL_TYPETYPE(  arg3, "pread");
+	validate_NULL_TYPETYPE(  arg0, "pread - arg0");
+	validate_Rdaddress( arg1, "pread - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pread - arg1");
+	validate_NULL_TYPETYPE(  arg2, "pread - arg2");
+	validate_NULL_TYPETYPE(  arg3, "pread - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

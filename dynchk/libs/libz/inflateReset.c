@@ -10,7 +10,7 @@ int inflateReset (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateReset");
-	validate_NULL_TYPETYPE(  arg0, "inflateReset");
+	validate_NULL_TYPETYPE(  arg0, "inflateReset - arg0");
 	return funcptr(arg0);
 }
 

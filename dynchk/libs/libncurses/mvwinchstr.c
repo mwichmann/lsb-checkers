@@ -10,12 +10,12 @@ int mvwinchstr (WINDOW * arg0 , int arg1 , int arg2 , chtype * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinchstr");
-	validate_Rdaddress( arg0, "mvwinchstr");
-	validate_NULL_TYPETYPE(  arg0, "mvwinchstr");
-	validate_NULL_TYPETYPE(  arg1, "mvwinchstr");
-	validate_NULL_TYPETYPE(  arg2, "mvwinchstr");
-	validate_Rdaddress( arg3, "mvwinchstr");
-	validate_NULL_TYPETYPE(  arg3, "mvwinchstr");
+	validate_Rdaddress( arg0, "mvwinchstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mvwinchstr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvwinchstr - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvwinchstr - arg2");
+	validate_Rdaddress( arg3, "mvwinchstr - arg3");
+	validate_NULL_TYPETYPE(  arg3, "mvwinchstr - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -10,8 +10,8 @@ int wstandout (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wstandout");
-	validate_Rdaddress( arg0, "wstandout");
-	validate_NULL_TYPETYPE(  arg0, "wstandout");
+	validate_Rdaddress( arg0, "wstandout - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wstandout - arg0");
 	return funcptr(arg0);
 }
 

@@ -2,20 +2,23 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <dlfcn.h>
 #undef dladdr
 static int(*funcptr) (const void * , Dl_info * ) = 0;
 
-#if 0
 int dladdr (const void * arg0 , Dl_info * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dladdr");
-	validate_NULL_TYPETYPE(arg0, "dladdr");
-	validate_NULL_TYPETYPE(arg1, "dladdr");
+	validate_Rdaddress( arg0, "dladdr - arg0");
+	if(  arg0 ) {
+	}
+	validate_NULL_TYPETYPE(  arg0, "dladdr");
+	validate_Rdaddress( arg1, "dladdr - arg1");
+	if(  arg1 ) {
+	}
+	validate_NULL_TYPETYPE(  arg1, "dladdr");
 	return funcptr(arg0, arg1);
 }
-#endif
 
 int __lsb_dladdr (const void * arg0 , Dl_info * arg1 )
 {

@@ -10,8 +10,8 @@ double jn (int arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jn");
-	validate_NULL_TYPETYPE(  arg0, "jn");
-	validate_NULL_TYPETYPE(  arg1, "jn");
+	validate_NULL_TYPETYPE(  arg0, "jn - arg0");
+	validate_NULL_TYPETYPE(  arg1, "jn - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,10 +10,10 @@ double remquo (double arg0 , double arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquo");
-	validate_NULL_TYPETYPE(  arg0, "remquo");
-	validate_NULL_TYPETYPE(  arg1, "remquo");
-	validate_Rdaddress( arg2, "remquo");
-	validate_NULL_TYPETYPE(  arg2, "remquo");
+	validate_NULL_TYPETYPE(  arg0, "remquo - arg0");
+	validate_NULL_TYPETYPE(  arg1, "remquo - arg1");
+	validate_Rdaddress( arg2, "remquo - arg2");
+	validate_NULL_TYPETYPE(  arg2, "remquo - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

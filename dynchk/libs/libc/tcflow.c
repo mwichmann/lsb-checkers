@@ -10,8 +10,8 @@ int tcflow (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcflow");
-	validate_NULL_TYPETYPE(  arg0, "tcflow");
-	validate_NULL_TYPETYPE(  arg1, "tcflow");
+	validate_NULL_TYPETYPE(  arg0, "tcflow - arg0");
+	validate_NULL_TYPETYPE(  arg1, "tcflow - arg1");
 	return funcptr(arg0, arg1);
 }
 

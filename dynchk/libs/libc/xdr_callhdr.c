@@ -11,10 +11,10 @@ bool_t xdr_callhdr (XDR * arg0 , struct rpc_msg * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_callhdr");
-	validate_Rdaddress( arg0, "xdr_callhdr");
-	validate_NULL_TYPETYPE(  arg0, "xdr_callhdr");
-	validate_Rdaddress( arg1, "xdr_callhdr");
-	validate_NULL_TYPETYPE(  arg1, "xdr_callhdr");
+	validate_Rdaddress( arg0, "xdr_callhdr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "xdr_callhdr - arg0");
+	validate_Rdaddress( arg1, "xdr_callhdr - arg1");
+	validate_NULL_TYPETYPE(  arg1, "xdr_callhdr - arg1");
 	return funcptr(arg0, arg1);
 }
 

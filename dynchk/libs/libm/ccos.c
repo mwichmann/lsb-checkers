@@ -10,7 +10,7 @@ double complex ccos (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccos");
-	validate_NULL_TYPETYPE(  arg0, "ccos");
+	validate_NULL_TYPETYPE(  arg0, "ccos - arg0");
 	return funcptr(arg0);
 }
 

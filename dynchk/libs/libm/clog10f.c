@@ -10,7 +10,7 @@ float complex clog10f (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clog10f");
-	validate_NULL_TYPETYPE(  arg0, "clog10f");
+	validate_NULL_TYPETYPE(  arg0, "clog10f - arg0");
 	return funcptr(arg0);
 }
 

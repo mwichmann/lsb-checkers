@@ -10,10 +10,10 @@ int pthread_mutex_init (pthread_mutex_t * arg0 , const pthread_mutexattr_t * arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_mutex_init");
-	validate_Rdaddress( arg0, "pthread_mutex_init");
-	validate_NULL_TYPETYPE(  arg0, "pthread_mutex_init");
-	validate_Rdaddress( arg1, "pthread_mutex_init");
-	validate_NULL_TYPETYPE(  arg1, "pthread_mutex_init");
+	validate_Rdaddress( arg0, "pthread_mutex_init - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_mutex_init - arg0");
+	validate_Rdaddress( arg1, "pthread_mutex_init - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_mutex_init - arg1");
 	return funcptr(arg0, arg1);
 }
 

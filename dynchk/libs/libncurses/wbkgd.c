@@ -10,9 +10,9 @@ int wbkgd (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wbkgd");
-	validate_Rdaddress( arg0, "wbkgd");
-	validate_NULL_TYPETYPE(  arg0, "wbkgd");
-	validate_NULL_TYPETYPE(  arg1, "wbkgd");
+	validate_Rdaddress( arg0, "wbkgd - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wbkgd - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wbkgd - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -2,16 +2,18 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static _Unwind_Reason_Code(*funcptr)() = 0;
+#include <unwind.h>
+#undef _Unwind_RaiseException
+static _Unwind_Reason_Code(*funcptr) () = 0;
 
-_Unwind_Reason_Code _Unwind_RaiseException()
+_Unwind_Reason_Code _Unwind_RaiseException ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_RaiseException");
 	return funcptr();
 }
 
-_Unwind_Reason_Code __lsb__Unwind_RaiseException()
+_Unwind_Reason_Code __lsb__Unwind_RaiseException ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_RaiseException");

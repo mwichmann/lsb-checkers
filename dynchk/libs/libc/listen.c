@@ -10,8 +10,8 @@ int listen (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "listen");
-	validate_NULL_TYPETYPE(  arg0, "listen");
-	validate_NULL_TYPETYPE(  arg1, "listen");
+	validate_NULL_TYPETYPE(  arg0, "listen - arg0");
+	validate_NULL_TYPETYPE(  arg1, "listen - arg1");
 	return funcptr(arg0, arg1);
 }
 

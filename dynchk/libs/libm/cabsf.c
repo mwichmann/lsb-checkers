@@ -10,7 +10,7 @@ float cabsf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cabsf");
-	validate_NULL_TYPETYPE(  arg0, "cabsf");
+	validate_NULL_TYPETYPE(  arg0, "cabsf - arg0");
 	return funcptr(arg0);
 }
 

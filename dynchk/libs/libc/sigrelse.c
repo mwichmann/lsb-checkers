@@ -10,7 +10,7 @@ int sigrelse (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigrelse");
-	validate_NULL_TYPETYPE(  arg0, "sigrelse");
+	validate_NULL_TYPETYPE(  arg0, "sigrelse - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,10 +10,10 @@ int swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swapcontext");
-	validate_Rdaddress( arg0, "swapcontext");
-	validate_NULL_TYPETYPE(  arg0, "swapcontext");
-	validate_Rdaddress( arg1, "swapcontext");
-	validate_NULL_TYPETYPE(  arg1, "swapcontext");
+	validate_Rdaddress( arg0, "swapcontext - arg0");
+	validate_NULL_TYPETYPE(  arg0, "swapcontext - arg0");
+	validate_Rdaddress( arg1, "swapcontext - arg1");
+	validate_NULL_TYPETYPE(  arg1, "swapcontext - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -2,16 +2,18 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static fde *(*funcptr)() = 0;
+#include <unwind.h>
+#undef _Unwind_Find_FDE
+static fde *(*funcptr) () = 0;
 
-fde * _Unwind_Find_FDE()
+fde * _Unwind_Find_FDE ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_Find_FDE");
 	return funcptr();
 }
 
-fde * __lsb__Unwind_Find_FDE()
+fde * __lsb__Unwind_Find_FDE ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_Find_FDE");

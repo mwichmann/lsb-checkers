@@ -10,8 +10,8 @@ int redrawwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "redrawwin");
-	validate_Rdaddress( arg0, "redrawwin");
-	validate_NULL_TYPETYPE(  arg0, "redrawwin");
+	validate_Rdaddress( arg0, "redrawwin - arg0");
+	validate_NULL_TYPETYPE(  arg0, "redrawwin - arg0");
 	return funcptr(arg0);
 }
 

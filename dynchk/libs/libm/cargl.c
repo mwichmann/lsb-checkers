@@ -10,7 +10,7 @@ long double cargl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cargl");
-	validate_NULL_TYPETYPE(  arg0, "cargl");
+	validate_NULL_TYPETYPE(  arg0, "cargl - arg0");
 	return funcptr(arg0);
 }
 

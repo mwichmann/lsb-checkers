@@ -11,10 +11,10 @@ bool_t xdr_bool (XDR * arg0 , bool_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_bool");
-	validate_Rdaddress( arg0, "xdr_bool");
-	validate_NULL_TYPETYPE(  arg0, "xdr_bool");
-	validate_Rdaddress( arg1, "xdr_bool");
-	validate_NULL_TYPETYPE(  arg1, "xdr_bool");
+	validate_Rdaddress( arg0, "xdr_bool - arg0");
+	validate_NULL_TYPETYPE(  arg0, "xdr_bool - arg0");
+	validate_Rdaddress( arg1, "xdr_bool - arg1");
+	validate_NULL_TYPETYPE(  arg1, "xdr_bool - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ int isblank (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isblank");
-	validate_NULL_TYPETYPE(  arg0, "isblank");
+	validate_NULL_TYPETYPE(  arg0, "isblank - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ sighandler_t sigset (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigset");
-	validate_NULL_TYPETYPE(  arg0, "sigset");
-	validate_NULL_TYPETYPE(  arg1, "sigset");
+	validate_NULL_TYPETYPE(  arg0, "sigset - arg0");
+	validate_NULL_TYPETYPE(  arg1, "sigset - arg1");
 	return funcptr(arg0, arg1);
 }
 

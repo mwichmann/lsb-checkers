@@ -10,8 +10,8 @@ char * strdup (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strdup");
-	validate_Rdaddress( arg0, "strdup");
-	validate_NULL_TYPETYPE(  arg0, "strdup");
+	validate_Rdaddress( arg0, "strdup - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strdup - arg0");
 	return funcptr(arg0);
 }
 

@@ -11,12 +11,12 @@ void * memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memmem");
-	validate_Rdaddress( arg0, "memmem");
-	validate_NULL_TYPETYPE(  arg0, "memmem");
-	validate_NULL_TYPETYPE(  arg1, "memmem");
-	validate_Rdaddress( arg2, "memmem");
-	validate_NULL_TYPETYPE(  arg2, "memmem");
-	validate_NULL_TYPETYPE(  arg3, "memmem");
+	validate_Rdaddress( arg0, "memmem - arg0");
+	validate_NULL_TYPETYPE(  arg0, "memmem - arg0");
+	validate_NULL_TYPETYPE(  arg1, "memmem - arg1");
+	validate_Rdaddress( arg2, "memmem - arg2");
+	validate_NULL_TYPETYPE(  arg2, "memmem - arg2");
+	validate_NULL_TYPETYPE(  arg3, "memmem - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

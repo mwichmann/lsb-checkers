@@ -10,8 +10,8 @@ void delscreen (SCREEN * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delscreen");
-	validate_Rdaddress( arg0, "delscreen");
-	validate_NULL_TYPETYPE(  arg0, "delscreen");
+	validate_Rdaddress( arg0, "delscreen - arg0");
+	validate_NULL_TYPETYPE(  arg0, "delscreen - arg0");
 	funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ int isnanl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isnanl");
-	validate_NULL_TYPETYPE(  arg0, "isnanl");
+	validate_NULL_TYPETYPE(  arg0, "isnanl - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,9 +10,9 @@ int mvinsch (int arg0 , int arg1 , chtype arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinsch");
-	validate_NULL_TYPETYPE(  arg0, "mvinsch");
-	validate_NULL_TYPETYPE(  arg1, "mvinsch");
-	validate_NULL_TYPETYPE(  arg2, "mvinsch");
+	validate_NULL_TYPETYPE(  arg0, "mvinsch - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvinsch - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvinsch - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

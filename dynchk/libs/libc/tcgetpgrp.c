@@ -10,7 +10,7 @@ pid_t tcgetpgrp (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcgetpgrp");
-	validate_NULL_TYPETYPE(  arg0, "tcgetpgrp");
+	validate_NULL_TYPETYPE(  arg0, "tcgetpgrp - arg0");
 	return funcptr(arg0);
 }
 

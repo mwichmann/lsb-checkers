@@ -11,8 +11,8 @@ wint_t getwc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwc");
-	validate_Rdaddress( arg0, "getwc");
-	validate_NULL_TYPETYPE(  arg0, "getwc");
+	validate_Rdaddress( arg0, "getwc - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getwc - arg0");
 	return funcptr(arg0);
 }
 

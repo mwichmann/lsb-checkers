@@ -10,7 +10,7 @@ long double gammal (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gammal");
-	validate_NULL_TYPETYPE(  arg0, "gammal");
+	validate_NULL_TYPETYPE(  arg0, "gammal - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ long double cabsl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cabsl");
-	validate_NULL_TYPETYPE(  arg0, "cabsl");
+	validate_NULL_TYPETYPE(  arg0, "cabsl - arg0");
 	return funcptr(arg0);
 }
 

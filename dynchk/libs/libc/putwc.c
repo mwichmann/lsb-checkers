@@ -12,9 +12,9 @@ wint_t putwc (wchar_t arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwc");
-	validate_NULL_TYPETYPE(  arg0, "putwc");
-	validate_Rdaddress( arg1, "putwc");
-	validate_NULL_TYPETYPE(  arg1, "putwc");
+	validate_NULL_TYPETYPE(  arg0, "putwc - arg0");
+	validate_Rdaddress( arg1, "putwc - arg1");
+	validate_NULL_TYPETYPE(  arg1, "putwc - arg1");
 	return funcptr(arg0, arg1);
 }
 

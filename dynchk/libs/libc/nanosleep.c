@@ -11,10 +11,10 @@ int nanosleep (const struct timespec * arg0 , struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanosleep");
-	validate_Rdaddress( arg0, "nanosleep");
-	validate_NULL_TYPETYPE(  arg0, "nanosleep");
-	validate_Rdaddress( arg1, "nanosleep");
-	validate_NULL_TYPETYPE(  arg1, "nanosleep");
+	validate_Rdaddress( arg0, "nanosleep - arg0");
+	validate_NULL_TYPETYPE(  arg0, "nanosleep - arg0");
+	validate_Rdaddress( arg1, "nanosleep - arg1");
+	validate_NULL_TYPETYPE(  arg1, "nanosleep - arg1");
 	return funcptr(arg0, arg1);
 }
 

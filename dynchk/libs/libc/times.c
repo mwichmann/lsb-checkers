@@ -10,8 +10,8 @@ clock_t times (struct tms * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "times");
-	validate_Rdaddress( arg0, "times");
-	validate_NULL_TYPETYPE(  arg0, "times");
+	validate_Rdaddress( arg0, "times - arg0");
+	validate_NULL_TYPETYPE(  arg0, "times - arg0");
 	return funcptr(arg0);
 }
 

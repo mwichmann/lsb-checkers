@@ -10,12 +10,12 @@ void _pthread_cleanup_push (struct _pthread_cleanup_buffer * arg0 , void(* arg1 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_pthread_cleanup_push");
-	validate_Rdaddress( arg0, "_pthread_cleanup_push");
-	validate_NULL_TYPETYPE(  arg0, "_pthread_cleanup_push");
-validate_Rdaddress( arg1, "_pthread_cleanup_push");
-	validate_NULL_TYPETYPE(  arg1, "_pthread_cleanup_push");
-	validate_Rdaddress( arg2, "_pthread_cleanup_push");
-	validate_NULL_TYPETYPE(  arg2, "_pthread_cleanup_push");
+	validate_Rdaddress( arg0, "_pthread_cleanup_push - arg0");
+	validate_NULL_TYPETYPE(  arg0, "_pthread_cleanup_push - arg0");
+validate_Rdaddress( arg1, "_pthread_cleanup_push - arg1");
+	validate_NULL_TYPETYPE(  arg1, "_pthread_cleanup_push - arg1");
+	validate_Rdaddress( arg2, "_pthread_cleanup_push - arg2");
+	validate_NULL_TYPETYPE(  arg2, "_pthread_cleanup_push - arg2");
 	funcptr(arg0, arg1, arg2);
 }
 

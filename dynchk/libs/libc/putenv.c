@@ -10,8 +10,8 @@ int putenv (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putenv");
-	validate_Rdaddress( arg0, "putenv");
-	validate_NULL_TYPETYPE(  arg0, "putenv");
+	validate_Rdaddress( arg0, "putenv - arg0");
+	validate_NULL_TYPETYPE(  arg0, "putenv - arg0");
 	return funcptr(arg0);
 }
 

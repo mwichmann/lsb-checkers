@@ -10,7 +10,7 @@ double complex ctanh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanh");
-	validate_NULL_TYPETYPE(  arg0, "ctanh");
+	validate_NULL_TYPETYPE(  arg0, "ctanh - arg0");
 	return funcptr(arg0);
 }
 

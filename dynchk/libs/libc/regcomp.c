@@ -10,11 +10,11 @@ int regcomp (regex_t * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regcomp");
-	validate_Rdaddress( arg0, "regcomp");
-	validate_NULL_TYPETYPE(  arg0, "regcomp");
-	validate_Rdaddress( arg1, "regcomp");
-	validate_NULL_TYPETYPE(  arg1, "regcomp");
-	validate_NULL_TYPETYPE(  arg2, "regcomp");
+	validate_Rdaddress( arg0, "regcomp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "regcomp - arg0");
+	validate_Rdaddress( arg1, "regcomp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "regcomp - arg1");
+	validate_NULL_TYPETYPE(  arg2, "regcomp - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

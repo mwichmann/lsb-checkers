@@ -11,9 +11,9 @@ int truncate (const char * arg0 , off_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncate");
-	validate_Rdaddress( arg0, "truncate");
-	validate_NULL_TYPETYPE(  arg0, "truncate");
-	validate_NULL_TYPETYPE(  arg1, "truncate");
+	validate_Rdaddress( arg0, "truncate - arg0");
+	validate_NULL_TYPETYPE(  arg0, "truncate - arg0");
+	validate_NULL_TYPETYPE(  arg1, "truncate - arg1");
 	return funcptr(arg0, arg1);
 }
 

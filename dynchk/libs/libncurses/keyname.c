@@ -10,7 +10,7 @@ char * keyname (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keyname");
-	validate_NULL_TYPETYPE(  arg0, "keyname");
+	validate_NULL_TYPETYPE(  arg0, "keyname - arg0");
 	return funcptr(arg0);
 }
 

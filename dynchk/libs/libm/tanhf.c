@@ -10,7 +10,7 @@ float tanhf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tanhf");
-	validate_NULL_TYPETYPE(  arg0, "tanhf");
+	validate_NULL_TYPETYPE(  arg0, "tanhf - arg0");
 	return funcptr(arg0);
 }
 

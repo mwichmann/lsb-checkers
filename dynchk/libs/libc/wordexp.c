@@ -10,11 +10,11 @@ int wordexp (const char * arg0 , wordexp_t * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wordexp");
-	validate_Rdaddress( arg0, "wordexp");
-	validate_NULL_TYPETYPE(  arg0, "wordexp");
-	validate_Rdaddress( arg1, "wordexp");
-	validate_NULL_TYPETYPE(  arg1, "wordexp");
-	validate_NULL_TYPETYPE(  arg2, "wordexp");
+	validate_Rdaddress( arg0, "wordexp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wordexp - arg0");
+	validate_Rdaddress( arg1, "wordexp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wordexp - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wordexp - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

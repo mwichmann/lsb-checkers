@@ -12,9 +12,9 @@ int shmget (key_t arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmget");
-	validate_NULL_TYPETYPE(  arg0, "shmget");
-	validate_NULL_TYPETYPE(  arg1, "shmget");
-	validate_NULL_TYPETYPE(  arg2, "shmget");
+	validate_NULL_TYPETYPE(  arg0, "shmget - arg0");
+	validate_NULL_TYPETYPE(  arg1, "shmget - arg1");
+	validate_NULL_TYPETYPE(  arg2, "shmget - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ void bkgdset (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bkgdset");
-	validate_NULL_TYPETYPE(  arg0, "bkgdset");
+	validate_NULL_TYPETYPE(  arg0, "bkgdset - arg0");
 	funcptr(arg0);
 }
 

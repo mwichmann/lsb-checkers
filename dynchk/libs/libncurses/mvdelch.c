@@ -10,8 +10,8 @@ int mvdelch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvdelch");
-	validate_NULL_TYPETYPE(  arg0, "mvdelch");
-	validate_NULL_TYPETYPE(  arg1, "mvdelch");
+	validate_NULL_TYPETYPE(  arg0, "mvdelch - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvdelch - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,8 +10,8 @@ int pthread_cond_broadcast (pthread_cond_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cond_broadcast");
-	validate_Rdaddress( arg0, "pthread_cond_broadcast");
-	validate_NULL_TYPETYPE(  arg0, "pthread_cond_broadcast");
+	validate_Rdaddress( arg0, "pthread_cond_broadcast - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_cond_broadcast - arg0");
 	return funcptr(arg0);
 }
 

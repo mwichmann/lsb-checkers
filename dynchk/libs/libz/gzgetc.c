@@ -10,7 +10,7 @@ int gzgetc (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzgetc");
-	validate_NULL_TYPETYPE(  arg0, "gzgetc");
+	validate_NULL_TYPETYPE(  arg0, "gzgetc - arg0");
 	return funcptr(arg0);
 }
 

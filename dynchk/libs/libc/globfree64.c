@@ -10,8 +10,8 @@ void globfree64 (glob64_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "globfree64");
-	validate_Rdaddress( arg0, "globfree64");
-	validate_NULL_TYPETYPE(  arg0, "globfree64");
+	validate_Rdaddress( arg0, "globfree64 - arg0");
+	validate_NULL_TYPETYPE(  arg0, "globfree64 - arg0");
 	funcptr(arg0);
 }
 

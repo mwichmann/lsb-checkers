@@ -10,11 +10,11 @@ int nftw (const char * arg0 , __nftw_func_t arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nftw");
-	validate_Rdaddress( arg0, "nftw");
-	validate_NULL_TYPETYPE(  arg0, "nftw");
-	validate_NULL_TYPETYPE(  arg1, "nftw");
-	validate_NULL_TYPETYPE(  arg2, "nftw");
-	validate_NULL_TYPETYPE(  arg3, "nftw");
+	validate_Rdaddress( arg0, "nftw - arg0");
+	validate_NULL_TYPETYPE(  arg0, "nftw - arg0");
+	validate_NULL_TYPETYPE(  arg1, "nftw - arg1");
+	validate_NULL_TYPETYPE(  arg2, "nftw - arg2");
+	validate_NULL_TYPETYPE(  arg3, "nftw - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

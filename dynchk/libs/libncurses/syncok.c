@@ -10,9 +10,9 @@ int syncok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "syncok");
-	validate_Rdaddress( arg0, "syncok");
-	validate_NULL_TYPETYPE(  arg0, "syncok");
-	validate_NULL_TYPETYPE(  arg1, "syncok");
+	validate_Rdaddress( arg0, "syncok - arg0");
+	validate_NULL_TYPETYPE(  arg0, "syncok - arg0");
+	validate_NULL_TYPETYPE(  arg1, "syncok - arg1");
 	return funcptr(arg0, arg1);
 }
 

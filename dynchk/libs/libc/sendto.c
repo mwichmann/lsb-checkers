@@ -11,14 +11,14 @@ ssize_t sendto (int arg0 , const void * arg1 , size_t arg2 , int arg3 , const st
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sendto");
-	validate_NULL_TYPETYPE(  arg0, "sendto");
-	validate_Rdaddress( arg1, "sendto");
-	validate_NULL_TYPETYPE(  arg1, "sendto");
-	validate_NULL_TYPETYPE(  arg2, "sendto");
-	validate_NULL_TYPETYPE(  arg3, "sendto");
-	validate_Rdaddress( arg4, "sendto");
-	validate_NULL_TYPETYPE(  arg4, "sendto");
-	validate_NULL_TYPETYPE(  arg5, "sendto");
+	validate_NULL_TYPETYPE(  arg0, "sendto - arg0");
+	validate_Rdaddress( arg1, "sendto - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sendto - arg1");
+	validate_NULL_TYPETYPE(  arg2, "sendto - arg2");
+	validate_NULL_TYPETYPE(  arg3, "sendto - arg3");
+	validate_Rdaddress( arg4, "sendto - arg4");
+	validate_NULL_TYPETYPE(  arg4, "sendto - arg4");
+	validate_NULL_TYPETYPE(  arg5, "sendto - arg5");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 

@@ -10,7 +10,7 @@ int pthread_cancel (pthread_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cancel");
-	validate_NULL_TYPETYPE(  arg0, "pthread_cancel");
+	validate_NULL_TYPETYPE(  arg0, "pthread_cancel - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ void perror (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "perror");
-	validate_Rdaddress( arg0, "perror");
-	validate_NULL_TYPETYPE(  arg0, "perror");
+	validate_Rdaddress( arg0, "perror - arg0");
+	validate_NULL_TYPETYPE(  arg0, "perror - arg0");
 	funcptr(arg0);
 }
 

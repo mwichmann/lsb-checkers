@@ -10,16 +10,16 @@ int wborder (WINDOW * arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype ar
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wborder");
-	validate_Rdaddress( arg0, "wborder");
-	validate_NULL_TYPETYPE(  arg0, "wborder");
-	validate_NULL_TYPETYPE(  arg1, "wborder");
-	validate_NULL_TYPETYPE(  arg2, "wborder");
-	validate_NULL_TYPETYPE(  arg3, "wborder");
-	validate_NULL_TYPETYPE(  arg4, "wborder");
-	validate_NULL_TYPETYPE(  arg5, "wborder");
-	validate_NULL_TYPETYPE(  arg6, "wborder");
-	validate_NULL_TYPETYPE(  arg7, "wborder");
-	validate_NULL_TYPETYPE(  arg8, "wborder");
+	validate_Rdaddress( arg0, "wborder - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wborder - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wborder - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wborder - arg2");
+	validate_NULL_TYPETYPE(  arg3, "wborder - arg3");
+	validate_NULL_TYPETYPE(  arg4, "wborder - arg4");
+	validate_NULL_TYPETYPE(  arg5, "wborder - arg5");
+	validate_NULL_TYPETYPE(  arg6, "wborder - arg6");
+	validate_NULL_TYPETYPE(  arg7, "wborder - arg7");
+	validate_NULL_TYPETYPE(  arg8, "wborder - arg8");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 

@@ -10,12 +10,12 @@ pid_t pthread_atfork (void(* arg0 )(), void(* arg1 )(), void(* arg2 )())
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_atfork");
-validate_Rdaddress( arg0, "pthread_atfork");
-	validate_NULL_TYPETYPE(  arg0, "pthread_atfork");
-validate_Rdaddress( arg1, "pthread_atfork");
-	validate_NULL_TYPETYPE(  arg1, "pthread_atfork");
-validate_Rdaddress( arg2, "pthread_atfork");
-	validate_NULL_TYPETYPE(  arg2, "pthread_atfork");
+validate_Rdaddress( arg0, "pthread_atfork - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_atfork - arg0");
+validate_Rdaddress( arg1, "pthread_atfork - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_atfork - arg1");
+validate_Rdaddress( arg2, "pthread_atfork - arg2");
+	validate_NULL_TYPETYPE(  arg2, "pthread_atfork - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

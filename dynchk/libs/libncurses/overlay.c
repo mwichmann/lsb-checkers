@@ -11,10 +11,10 @@ int overlay (const WINDOW * arg0 , WINDOW * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "overlay");
-	validate_Rdaddress( arg0, "overlay");
-	validate_NULL_TYPETYPE(  arg0, "overlay");
-	validate_Rdaddress( arg1, "overlay");
-	validate_NULL_TYPETYPE(  arg1, "overlay");
+	validate_Rdaddress( arg0, "overlay - arg0");
+	validate_NULL_TYPETYPE(  arg0, "overlay - arg0");
+	validate_Rdaddress( arg1, "overlay - arg1");
+	validate_NULL_TYPETYPE(  arg1, "overlay - arg1");
 	return funcptr(arg0, arg1);
 }
 

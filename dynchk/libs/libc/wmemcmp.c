@@ -11,11 +11,11 @@ int wmemcmp (const wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmemcmp");
-	validate_Rdaddress( arg0, "wmemcmp");
-	validate_NULL_TYPETYPE(  arg0, "wmemcmp");
-	validate_Rdaddress( arg1, "wmemcmp");
-	validate_NULL_TYPETYPE(  arg1, "wmemcmp");
-	validate_NULL_TYPETYPE(  arg2, "wmemcmp");
+	validate_Rdaddress( arg0, "wmemcmp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wmemcmp - arg0");
+	validate_Rdaddress( arg1, "wmemcmp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wmemcmp - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wmemcmp - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

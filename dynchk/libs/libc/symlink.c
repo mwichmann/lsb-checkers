@@ -10,10 +10,10 @@ int symlink (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "symlink");
-	validate_Rdaddress( arg0, "symlink");
-	validate_NULL_TYPETYPE(  arg0, "symlink");
-	validate_Rdaddress( arg1, "symlink");
-	validate_NULL_TYPETYPE(  arg1, "symlink");
+	validate_Rdaddress( arg0, "symlink - arg0");
+	validate_NULL_TYPETYPE(  arg0, "symlink - arg0");
+	validate_Rdaddress( arg1, "symlink - arg1");
+	validate_NULL_TYPETYPE(  arg1, "symlink - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -11,8 +11,8 @@ time_t time (time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "time");
-	validate_Rdaddress( arg0, "time");
-	validate_NULL_TYPETYPE(  arg0, "time");
+	validate_Rdaddress( arg0, "time - arg0");
+	validate_NULL_TYPETYPE(  arg0, "time - arg0");
 	return funcptr(arg0);
 }
 

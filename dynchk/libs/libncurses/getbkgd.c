@@ -10,8 +10,8 @@ chtype getbkgd (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getbkgd");
-	validate_Rdaddress( arg0, "getbkgd");
-	validate_NULL_TYPETYPE(  arg0, "getbkgd");
+	validate_Rdaddress( arg0, "getbkgd - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getbkgd - arg0");
 	return funcptr(arg0);
 }
 

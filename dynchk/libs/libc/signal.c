@@ -10,8 +10,8 @@ sighandler_t signal (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "signal");
-	validate_NULL_TYPETYPE(  arg0, "signal");
-	validate_NULL_TYPETYPE(  arg1, "signal");
+	validate_NULL_TYPETYPE(  arg0, "signal - arg0");
+	validate_NULL_TYPETYPE(  arg1, "signal - arg1");
 	return funcptr(arg0, arg1);
 }
 

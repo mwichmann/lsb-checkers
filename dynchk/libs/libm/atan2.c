@@ -10,8 +10,8 @@ double atan2 (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atan2");
-	validate_NULL_TYPETYPE(  arg0, "atan2");
-	validate_NULL_TYPETYPE(  arg1, "atan2");
+	validate_NULL_TYPETYPE(  arg0, "atan2 - arg0");
+	validate_NULL_TYPETYPE(  arg1, "atan2 - arg1");
 	return funcptr(arg0, arg1);
 }
 

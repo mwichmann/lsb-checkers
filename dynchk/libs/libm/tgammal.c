@@ -10,7 +10,7 @@ long double tgammal (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgammal");
-	validate_NULL_TYPETYPE(  arg0, "tgammal");
+	validate_NULL_TYPETYPE(  arg0, "tgammal - arg0");
 	return funcptr(arg0);
 }
 

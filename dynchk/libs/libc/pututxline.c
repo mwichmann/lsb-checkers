@@ -10,8 +10,8 @@ struct utmpx * pututxline (const struct utmpx * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pututxline");
-	validate_Rdaddress( arg0, "pututxline");
-	validate_NULL_TYPETYPE(  arg0, "pututxline");
+	validate_Rdaddress( arg0, "pututxline - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pututxline - arg0");
 	return funcptr(arg0);
 }
 

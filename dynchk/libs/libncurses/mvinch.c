@@ -10,8 +10,8 @@ chtype mvinch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinch");
-	validate_NULL_TYPETYPE(  arg0, "mvinch");
-	validate_NULL_TYPETYPE(  arg1, "mvinch");
+	validate_NULL_TYPETYPE(  arg0, "mvinch - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvinch - arg1");
 	return funcptr(arg0, arg1);
 }
 

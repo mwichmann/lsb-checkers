@@ -10,11 +10,11 @@ int mvgetnstr (int arg0 , int arg1 , char * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetnstr");
-	validate_NULL_TYPETYPE(  arg0, "mvgetnstr");
-	validate_NULL_TYPETYPE(  arg1, "mvgetnstr");
-	validate_Rdaddress( arg2, "mvgetnstr");
-	validate_NULL_TYPETYPE(  arg2, "mvgetnstr");
-	validate_NULL_TYPETYPE(  arg3, "mvgetnstr");
+	validate_NULL_TYPETYPE(  arg0, "mvgetnstr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvgetnstr - arg1");
+	validate_Rdaddress( arg2, "mvgetnstr - arg2");
+	validate_NULL_TYPETYPE(  arg2, "mvgetnstr - arg2");
+	validate_NULL_TYPETYPE(  arg3, "mvgetnstr - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

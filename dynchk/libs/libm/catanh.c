@@ -10,7 +10,7 @@ double complex catanh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catanh");
-	validate_NULL_TYPETYPE(  arg0, "catanh");
+	validate_NULL_TYPETYPE(  arg0, "catanh - arg0");
 	return funcptr(arg0);
 }
 

@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <sys/resource.h>
 #include <sys/types.h>
+#include <sys/resource.h>
 #undef setpriority
 static int(*funcptr) (__priority_which_t , id_t , int ) = 0;
 
@@ -11,9 +11,9 @@ int setpriority (__priority_which_t arg0 , id_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpriority");
-	validate_NULL_TYPETYPE(  arg0, "setpriority");
-	validate_NULL_TYPETYPE(  arg1, "setpriority");
-	validate_NULL_TYPETYPE(  arg2, "setpriority");
+	validate_NULL_TYPETYPE(  arg0, "setpriority - arg0");
+	validate_NULL_TYPETYPE(  arg1, "setpriority - arg1");
+	validate_NULL_TYPETYPE(  arg2, "setpriority - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,16 +10,16 @@ int fmtmsg (long arg0 , const char * arg1 , int arg2 , const char * arg3 , const
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmtmsg");
-	validate_NULL_TYPETYPE(  arg0, "fmtmsg");
-	validate_Rdaddress( arg1, "fmtmsg");
-	validate_NULL_TYPETYPE(  arg1, "fmtmsg");
-	validate_NULL_TYPETYPE(  arg2, "fmtmsg");
-	validate_Rdaddress( arg3, "fmtmsg");
-	validate_NULL_TYPETYPE(  arg3, "fmtmsg");
-	validate_Rdaddress( arg4, "fmtmsg");
-	validate_NULL_TYPETYPE(  arg4, "fmtmsg");
-	validate_Rdaddress( arg5, "fmtmsg");
-	validate_NULL_TYPETYPE(  arg5, "fmtmsg");
+	validate_NULL_TYPETYPE(  arg0, "fmtmsg - arg0");
+	validate_Rdaddress( arg1, "fmtmsg - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fmtmsg - arg1");
+	validate_NULL_TYPETYPE(  arg2, "fmtmsg - arg2");
+	validate_Rdaddress( arg3, "fmtmsg - arg3");
+	validate_NULL_TYPETYPE(  arg3, "fmtmsg - arg3");
+	validate_Rdaddress( arg4, "fmtmsg - arg4");
+	validate_NULL_TYPETYPE(  arg4, "fmtmsg - arg4");
+	validate_Rdaddress( arg5, "fmtmsg - arg5");
+	validate_NULL_TYPETYPE(  arg5, "fmtmsg - arg5");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 

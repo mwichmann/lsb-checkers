@@ -2,16 +2,18 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static _Unwind_Ptr(*funcptr)() = 0;
+#include <unwind.h>
+#undef _Unwind_GetTextRelBase
+static _Unwind_Ptr(*funcptr) () = 0;
 
-_Unwind_Ptr _Unwind_GetTextRelBase()
+_Unwind_Ptr _Unwind_GetTextRelBase ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetTextRelBase");
 	return funcptr();
 }
 
-_Unwind_Ptr __lsb__Unwind_GetTextRelBase()
+_Unwind_Ptr __lsb__Unwind_GetTextRelBase ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetTextRelBase");

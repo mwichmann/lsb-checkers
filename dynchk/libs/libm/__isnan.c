@@ -10,7 +10,7 @@ int __isnan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__isnan");
-	validate_NULL_TYPETYPE(  arg0, "__isnan");
+	validate_NULL_TYPETYPE(  arg0, "__isnan - arg0");
 	return funcptr(arg0);
 }
 

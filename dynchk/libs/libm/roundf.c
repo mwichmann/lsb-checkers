@@ -10,7 +10,7 @@ float roundf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "roundf");
-	validate_NULL_TYPETYPE(  arg0, "roundf");
+	validate_NULL_TYPETYPE(  arg0, "roundf - arg0");
 	return funcptr(arg0);
 }
 

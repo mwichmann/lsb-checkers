@@ -10,10 +10,10 @@ int attr_set (attr_t arg0 , short arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_set");
-	validate_NULL_TYPETYPE(  arg0, "attr_set");
-	validate_NULL_TYPETYPE(  arg1, "attr_set");
-	validate_Rdaddress( arg2, "attr_set");
-	validate_NULL_TYPETYPE(  arg2, "attr_set");
+	validate_NULL_TYPETYPE(  arg0, "attr_set - arg0");
+	validate_NULL_TYPETYPE(  arg1, "attr_set - arg1");
+	validate_Rdaddress( arg2, "attr_set - arg2");
+	validate_NULL_TYPETYPE(  arg2, "attr_set - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

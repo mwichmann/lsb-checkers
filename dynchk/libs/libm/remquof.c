@@ -10,10 +10,10 @@ float remquof (float arg0 , float arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquof");
-	validate_NULL_TYPETYPE(  arg0, "remquof");
-	validate_NULL_TYPETYPE(  arg1, "remquof");
-	validate_Rdaddress( arg2, "remquof");
-	validate_NULL_TYPETYPE(  arg2, "remquof");
+	validate_NULL_TYPETYPE(  arg0, "remquof - arg0");
+	validate_NULL_TYPETYPE(  arg1, "remquof - arg1");
+	validate_Rdaddress( arg2, "remquof - arg2");
+	validate_NULL_TYPETYPE(  arg2, "remquof - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

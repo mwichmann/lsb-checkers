@@ -10,7 +10,7 @@ int attrset (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attrset");
-	validate_NULL_TYPETYPE(  arg0, "attrset");
+	validate_NULL_TYPETYPE(  arg0, "attrset - arg0");
 	return funcptr(arg0);
 }
 

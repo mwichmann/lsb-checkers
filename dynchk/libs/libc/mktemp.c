@@ -10,8 +10,8 @@ char * mktemp (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mktemp");
-	validate_Rdaddress( arg0, "mktemp");
-	validate_NULL_TYPETYPE(  arg0, "mktemp");
+	validate_Rdaddress( arg0, "mktemp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mktemp - arg0");
 	return funcptr(arg0);
 }
 

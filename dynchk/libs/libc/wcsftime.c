@@ -12,13 +12,13 @@ size_t wcsftime (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , const str
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsftime");
-	validate_Rdaddress( arg0, "wcsftime");
-	validate_NULL_TYPETYPE(  arg0, "wcsftime");
-	validate_NULL_TYPETYPE(  arg1, "wcsftime");
-	validate_Rdaddress( arg2, "wcsftime");
-	validate_NULL_TYPETYPE(  arg2, "wcsftime");
-	validate_Rdaddress( arg3, "wcsftime");
-	validate_NULL_TYPETYPE(  arg3, "wcsftime");
+	validate_Rdaddress( arg0, "wcsftime - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcsftime - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wcsftime - arg1");
+	validate_Rdaddress( arg2, "wcsftime - arg2");
+	validate_NULL_TYPETYPE(  arg2, "wcsftime - arg2");
+	validate_Rdaddress( arg3, "wcsftime - arg3");
+	validate_NULL_TYPETYPE(  arg3, "wcsftime - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -10,7 +10,7 @@ double fabs (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fabs");
-	validate_NULL_TYPETYPE(  arg0, "fabs");
+	validate_NULL_TYPETYPE(  arg0, "fabs - arg0");
 	return funcptr(arg0);
 }
 

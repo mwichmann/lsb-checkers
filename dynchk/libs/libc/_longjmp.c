@@ -10,8 +10,8 @@ void _longjmp (jmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_longjmp");
-	validate_NULL_TYPETYPE(  arg0, "_longjmp");
-	validate_NULL_TYPETYPE(  arg1, "_longjmp");
+	validate_NULL_TYPETYPE(  arg0, "_longjmp - arg0");
+	validate_NULL_TYPETYPE(  arg1, "_longjmp - arg1");
 	funcptr(arg0, arg1);
 }
 

@@ -10,11 +10,11 @@ void sincos (double arg0 , double * arg1 , double * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sincos");
-	validate_NULL_TYPETYPE(  arg0, "sincos");
-	validate_Rdaddress( arg1, "sincos");
-	validate_NULL_TYPETYPE(  arg1, "sincos");
-	validate_Rdaddress( arg2, "sincos");
-	validate_NULL_TYPETYPE(  arg2, "sincos");
+	validate_NULL_TYPETYPE(  arg0, "sincos - arg0");
+	validate_Rdaddress( arg1, "sincos - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sincos - arg1");
+	validate_Rdaddress( arg2, "sincos - arg2");
+	validate_NULL_TYPETYPE(  arg2, "sincos - arg2");
 	funcptr(arg0, arg1, arg2);
 }
 

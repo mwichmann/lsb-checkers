@@ -10,10 +10,10 @@ int bind (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bind");
-	validate_filedescriptor(  arg0, "bind");
-	validate_Rdaddress( arg1, "bind");
-	validate_RWaddress(  arg1, "bind");
-	validate_NULL_TYPETYPE(  arg2, "bind");
+	validate_filedescriptor(  arg0, "bind - arg0");
+	validate_Rdaddress( arg1, "bind - arg1");
+	validate_RWaddress(  arg1, "bind - arg1");
+	validate_NULL_TYPETYPE(  arg2, "bind - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

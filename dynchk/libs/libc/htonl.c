@@ -11,7 +11,7 @@ uint32_t htonl (uint32_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htonl");
-	validate_NULL_TYPETYPE(  arg0, "htonl");
+	validate_NULL_TYPETYPE(  arg0, "htonl - arg0");
 	return funcptr(arg0);
 }
 

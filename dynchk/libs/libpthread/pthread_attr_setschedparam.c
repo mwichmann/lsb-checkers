@@ -11,10 +11,10 @@ int pthread_attr_setschedparam (pthread_attr_t * arg0 , const struct sched_param
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_setschedparam");
-	validate_Rdaddress( arg0, "pthread_attr_setschedparam");
-	validate_NULL_TYPETYPE(  arg0, "pthread_attr_setschedparam");
-	validate_Rdaddress( arg1, "pthread_attr_setschedparam");
-	validate_NULL_TYPETYPE(  arg1, "pthread_attr_setschedparam");
+	validate_Rdaddress( arg0, "pthread_attr_setschedparam - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_attr_setschedparam - arg0");
+	validate_Rdaddress( arg1, "pthread_attr_setschedparam - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_attr_setschedparam - arg1");
 	return funcptr(arg0, arg1);
 }
 

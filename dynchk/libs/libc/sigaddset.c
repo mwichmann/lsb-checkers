@@ -10,9 +10,9 @@ int sigaddset (sigset_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigaddset");
-	validate_Rdaddress( arg0, "sigaddset");
-	validate_NULL_TYPETYPE(  arg0, "sigaddset");
-	validate_NULL_TYPETYPE(  arg1, "sigaddset");
+	validate_Rdaddress( arg0, "sigaddset - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sigaddset - arg0");
+	validate_NULL_TYPETYPE(  arg1, "sigaddset - arg1");
 	return funcptr(arg0, arg1);
 }
 

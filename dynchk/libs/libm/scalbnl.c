@@ -10,8 +10,8 @@ long double scalbnl (long double arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalbnl");
-	validate_NULL_TYPETYPE(  arg0, "scalbnl");
-	validate_NULL_TYPETYPE(  arg1, "scalbnl");
+	validate_NULL_TYPETYPE(  arg0, "scalbnl - arg0");
+	validate_NULL_TYPETYPE(  arg1, "scalbnl - arg1");
 	return funcptr(arg0, arg1);
 }
 

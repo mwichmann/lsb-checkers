@@ -10,7 +10,7 @@ unsigned int sleep (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sleep");
-	validate_NULL_TYPETYPE(  arg0, "sleep");
+	validate_NULL_TYPETYPE(  arg0, "sleep - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,9 +10,9 @@ int winsdelln (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsdelln");
-	validate_Rdaddress( arg0, "winsdelln");
-	validate_NULL_TYPETYPE(  arg0, "winsdelln");
-	validate_NULL_TYPETYPE(  arg1, "winsdelln");
+	validate_Rdaddress( arg0, "winsdelln - arg0");
+	validate_NULL_TYPETYPE(  arg0, "winsdelln - arg0");
+	validate_NULL_TYPETYPE(  arg1, "winsdelln - arg1");
 	return funcptr(arg0, arg1);
 }
 

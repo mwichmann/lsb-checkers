@@ -10,10 +10,10 @@ char * strtok (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtok");
-	validate_Rdaddress( arg0, "strtok");
-	validate_NULL_TYPETYPE(  arg0, "strtok");
-	validate_Rdaddress( arg1, "strtok");
-	validate_NULL_TYPETYPE(  arg1, "strtok");
+	validate_Rdaddress( arg0, "strtok - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strtok - arg0");
+	validate_Rdaddress( arg1, "strtok - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strtok - arg1");
 	return funcptr(arg0, arg1);
 }
 

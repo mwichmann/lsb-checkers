@@ -10,15 +10,15 @@ int pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * a
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_start");
-	validate_Rdaddress( arg0, "pam_start");
-	validate_NULL_TYPETYPE(  arg0, "pam_start");
-	validate_Rdaddress( arg1, "pam_start");
-	validate_NULL_TYPETYPE(  arg1, "pam_start");
-	validate_Rdaddress( arg2, "pam_start");
-	validate_NULL_TYPETYPE(  arg2, "pam_start");
-	validate_Rdaddress( arg3, "pam_start");
-	validate_Rdaddress(* arg3, "pam_start");
-	validate_NULL_TYPETYPE(  arg3, "pam_start");
+	validate_Rdaddress( arg0, "pam_start - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pam_start - arg0");
+	validate_Rdaddress( arg1, "pam_start - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pam_start - arg1");
+	validate_Rdaddress( arg2, "pam_start - arg2");
+	validate_NULL_TYPETYPE(  arg2, "pam_start - arg2");
+	validate_Rdaddress( arg3, "pam_start - arg3");
+	validate_Rdaddress(* arg3, "pam_start - arg3");
+	validate_NULL_TYPETYPE(  arg3, "pam_start - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -10,7 +10,7 @@ long double ceill (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ceill");
-	validate_NULL_TYPETYPE(  arg0, "ceill");
+	validate_NULL_TYPETYPE(  arg0, "ceill - arg0");
 	return funcptr(arg0);
 }
 

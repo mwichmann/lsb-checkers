@@ -11,10 +11,10 @@ int fseeko (FILE * arg0 , off_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseeko");
-	validate_Rdaddress( arg0, "fseeko");
-	validate_NULL_TYPETYPE(  arg0, "fseeko");
-	validate_NULL_TYPETYPE(  arg1, "fseeko");
-	validate_NULL_TYPETYPE(  arg2, "fseeko");
+	validate_Rdaddress( arg0, "fseeko - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fseeko - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fseeko - arg1");
+	validate_NULL_TYPETYPE(  arg2, "fseeko - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ int scrl (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrl");
-	validate_NULL_TYPETYPE(  arg0, "scrl");
+	validate_NULL_TYPETYPE(  arg0, "scrl - arg0");
 	return funcptr(arg0);
 }
 

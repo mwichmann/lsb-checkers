@@ -10,8 +10,8 @@ void remque (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remque");
-	validate_Rdaddress( arg0, "remque");
-	validate_NULL_TYPETYPE(  arg0, "remque");
+	validate_Rdaddress( arg0, "remque - arg0");
+	validate_NULL_TYPETYPE(  arg0, "remque - arg0");
 	funcptr(arg0);
 }
 

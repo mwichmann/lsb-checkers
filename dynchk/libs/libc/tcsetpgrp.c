@@ -11,8 +11,8 @@ int tcsetpgrp (int arg0 , pid_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcsetpgrp");
-	validate_NULL_TYPETYPE(  arg0, "tcsetpgrp");
-	validate_NULL_TYPETYPE(  arg1, "tcsetpgrp");
+	validate_NULL_TYPETYPE(  arg0, "tcsetpgrp - arg0");
+	validate_NULL_TYPETYPE(  arg1, "tcsetpgrp - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,8 +10,8 @@ void flockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flockfile");
-	validate_Rdaddress( arg0, "flockfile");
-	validate_NULL_TYPETYPE(  arg0, "flockfile");
+	validate_Rdaddress( arg0, "flockfile - arg0");
+	validate_NULL_TYPETYPE(  arg0, "flockfile - arg0");
 	funcptr(arg0);
 }
 

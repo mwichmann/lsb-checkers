@@ -10,7 +10,7 @@ float nearbyintf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nearbyintf");
-	validate_NULL_TYPETYPE(  arg0, "nearbyintf");
+	validate_NULL_TYPETYPE(  arg0, "nearbyintf - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,10 +10,10 @@ int connect (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "connect");
-	validate_filedescriptor(  arg0, "connect");
-	validate_Rdaddress( arg1, "connect");
-	validate_RWaddress(  arg1, "connect");
-	validate_NULL_TYPETYPE(  arg2, "connect");
+	validate_filedescriptor(  arg0, "connect - arg0");
+	validate_Rdaddress( arg1, "connect - arg1");
+	validate_RWaddress(  arg1, "connect - arg1");
+	validate_NULL_TYPETYPE(  arg2, "connect - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

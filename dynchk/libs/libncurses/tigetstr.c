@@ -10,8 +10,8 @@ char * tigetstr (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tigetstr");
-	validate_Rdaddress( arg0, "tigetstr");
-	validate_NULL_TYPETYPE(  arg0, "tigetstr");
+	validate_Rdaddress( arg0, "tigetstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "tigetstr - arg0");
 	return funcptr(arg0);
 }
 

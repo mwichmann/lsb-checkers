@@ -10,7 +10,7 @@ int grantpt (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "grantpt");
-	validate_NULL_TYPETYPE(  arg0, "grantpt");
+	validate_NULL_TYPETYPE(  arg0, "grantpt - arg0");
 	return funcptr(arg0);
 }
 

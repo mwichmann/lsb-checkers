@@ -10,7 +10,7 @@ long double significandl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "significandl");
-	validate_NULL_TYPETYPE(  arg0, "significandl");
+	validate_NULL_TYPETYPE(  arg0, "significandl - arg0");
 	return funcptr(arg0);
 }
 

@@ -11,11 +11,11 @@ wchar_t * wcsncat (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsncat");
-	validate_Rdaddress( arg0, "wcsncat");
-	validate_NULL_TYPETYPE(  arg0, "wcsncat");
-	validate_Rdaddress( arg1, "wcsncat");
-	validate_NULL_TYPETYPE(  arg1, "wcsncat");
-	validate_NULL_TYPETYPE(  arg2, "wcsncat");
+	validate_Rdaddress( arg0, "wcsncat - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcsncat - arg0");
+	validate_Rdaddress( arg1, "wcsncat - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcsncat - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wcsncat - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

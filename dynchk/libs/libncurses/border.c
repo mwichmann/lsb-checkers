@@ -10,14 +10,14 @@ int border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "border");
-	validate_NULL_TYPETYPE(  arg0, "border");
-	validate_NULL_TYPETYPE(  arg1, "border");
-	validate_NULL_TYPETYPE(  arg2, "border");
-	validate_NULL_TYPETYPE(  arg3, "border");
-	validate_NULL_TYPETYPE(  arg4, "border");
-	validate_NULL_TYPETYPE(  arg5, "border");
-	validate_NULL_TYPETYPE(  arg6, "border");
-	validate_NULL_TYPETYPE(  arg7, "border");
+	validate_NULL_TYPETYPE(  arg0, "border - arg0");
+	validate_NULL_TYPETYPE(  arg1, "border - arg1");
+	validate_NULL_TYPETYPE(  arg2, "border - arg2");
+	validate_NULL_TYPETYPE(  arg3, "border - arg3");
+	validate_NULL_TYPETYPE(  arg4, "border - arg4");
+	validate_NULL_TYPETYPE(  arg5, "border - arg5");
+	validate_NULL_TYPETYPE(  arg6, "border - arg6");
+	validate_NULL_TYPETYPE(  arg7, "border - arg7");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 

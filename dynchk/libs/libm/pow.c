@@ -10,8 +10,8 @@ double pow (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pow");
-	validate_NULL_TYPETYPE(  arg0, "pow");
-	validate_NULL_TYPETYPE(  arg1, "pow");
+	validate_NULL_TYPETYPE(  arg0, "pow - arg0");
+	validate_NULL_TYPETYPE(  arg1, "pow - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,8 +10,8 @@ char * basename (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "basename");
-	validate_Rdaddress( arg0, "basename");
-	validate_NULL_TYPETYPE(  arg0, "basename");
+	validate_Rdaddress( arg0, "basename - arg0");
+	validate_NULL_TYPETYPE(  arg0, "basename - arg0");
 	return funcptr(arg0);
 }
 

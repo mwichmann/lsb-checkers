@@ -10,8 +10,8 @@ int adjtimex (struct timex * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adjtimex");
-	validate_Rdaddress( arg0, "adjtimex");
-	validate_NULL_TYPETYPE(  arg0, "adjtimex");
+	validate_Rdaddress( arg0, "adjtimex - arg0");
+	validate_NULL_TYPETYPE(  arg0, "adjtimex - arg0");
 	return funcptr(arg0);
 }
 

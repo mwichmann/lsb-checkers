@@ -10,13 +10,13 @@ char * dngettext (const char * arg0 , const char * arg1 , const char * arg2 , un
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dngettext");
-	validate_Rdaddress( arg0, "dngettext");
-	validate_NULL_TYPETYPE(  arg0, "dngettext");
-	validate_Rdaddress( arg1, "dngettext");
-	validate_NULL_TYPETYPE(  arg1, "dngettext");
-	validate_Rdaddress( arg2, "dngettext");
-	validate_NULL_TYPETYPE(  arg2, "dngettext");
-	validate_NULL_TYPETYPE(  arg3, "dngettext");
+	validate_Rdaddress( arg0, "dngettext - arg0");
+	validate_NULL_TYPETYPE(  arg0, "dngettext - arg0");
+	validate_Rdaddress( arg1, "dngettext - arg1");
+	validate_NULL_TYPETYPE(  arg1, "dngettext - arg1");
+	validate_Rdaddress( arg2, "dngettext - arg2");
+	validate_NULL_TYPETYPE(  arg2, "dngettext - arg2");
+	validate_NULL_TYPETYPE(  arg3, "dngettext - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

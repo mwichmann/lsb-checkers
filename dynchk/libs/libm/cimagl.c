@@ -10,7 +10,7 @@ long double cimagl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cimagl");
-	validate_NULL_TYPETYPE(  arg0, "cimagl");
+	validate_NULL_TYPETYPE(  arg0, "cimagl - arg0");
 	return funcptr(arg0);
 }
 

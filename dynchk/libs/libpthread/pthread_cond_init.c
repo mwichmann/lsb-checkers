@@ -10,10 +10,10 @@ int pthread_cond_init (pthread_cond_t * arg0 , const pthread_condattr_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cond_init");
-	validate_Rdaddress( arg0, "pthread_cond_init");
-	validate_NULL_TYPETYPE(  arg0, "pthread_cond_init");
-	validate_Rdaddress( arg1, "pthread_cond_init");
-	validate_NULL_TYPETYPE(  arg1, "pthread_cond_init");
+	validate_Rdaddress( arg0, "pthread_cond_init - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_cond_init - arg0");
+	validate_Rdaddress( arg1, "pthread_cond_init - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_cond_init - arg1");
 	return funcptr(arg0, arg1);
 }
 

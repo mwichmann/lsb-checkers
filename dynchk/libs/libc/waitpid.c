@@ -11,10 +11,10 @@ pid_t waitpid (pid_t arg0 , int * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waitpid");
-	validate_NULL_TYPETYPE(  arg0, "waitpid");
-	validate_Rdaddress( arg1, "waitpid");
-	validate_NULL_TYPETYPE(  arg1, "waitpid");
-	validate_NULL_TYPETYPE(  arg2, "waitpid");
+	validate_NULL_TYPETYPE(  arg0, "waitpid - arg0");
+	validate_Rdaddress( arg1, "waitpid - arg1");
+	validate_NULL_TYPETYPE(  arg1, "waitpid - arg1");
+	validate_NULL_TYPETYPE(  arg2, "waitpid - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

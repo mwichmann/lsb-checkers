@@ -11,16 +11,16 @@ int getpwnam_r (const char * arg0 , struct passwd * arg1 , char * arg2 , size_t 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwnam_r");
-	validate_Rdaddress( arg0, "getpwnam_r");
-	validate_NULL_TYPETYPE(  arg0, "getpwnam_r");
-	validate_Rdaddress( arg1, "getpwnam_r");
-	validate_NULL_TYPETYPE(  arg1, "getpwnam_r");
-	validate_Rdaddress( arg2, "getpwnam_r");
-	validate_NULL_TYPETYPE(  arg2, "getpwnam_r");
-	validate_NULL_TYPETYPE(  arg3, "getpwnam_r");
-	validate_Rdaddress( arg4, "getpwnam_r");
-	validate_Rdaddress(* arg4, "getpwnam_r");
-	validate_NULL_TYPETYPE(  arg4, "getpwnam_r");
+	validate_Rdaddress( arg0, "getpwnam_r - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getpwnam_r - arg0");
+	validate_Rdaddress( arg1, "getpwnam_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "getpwnam_r - arg1");
+	validate_Rdaddress( arg2, "getpwnam_r - arg2");
+	validate_NULL_TYPETYPE(  arg2, "getpwnam_r - arg2");
+	validate_NULL_TYPETYPE(  arg3, "getpwnam_r - arg3");
+	validate_Rdaddress( arg4, "getpwnam_r - arg4");
+	validate_Rdaddress(* arg4, "getpwnam_r - arg4");
+	validate_NULL_TYPETYPE(  arg4, "getpwnam_r - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

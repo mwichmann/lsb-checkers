@@ -10,7 +10,7 @@ float complex csinhf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinhf");
-	validate_NULL_TYPETYPE(  arg0, "csinhf");
+	validate_NULL_TYPETYPE(  arg0, "csinhf - arg0");
 	return funcptr(arg0);
 }
 

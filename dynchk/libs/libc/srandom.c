@@ -10,7 +10,7 @@ void srandom (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srandom");
-	validate_NULL_TYPETYPE(  arg0, "srandom");
+	validate_NULL_TYPETYPE(  arg0, "srandom - arg0");
 	funcptr(arg0);
 }
 

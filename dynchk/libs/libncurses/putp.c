@@ -10,8 +10,8 @@ int putp (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putp");
-	validate_Rdaddress( arg0, "putp");
-	validate_NULL_TYPETYPE(  arg0, "putp");
+	validate_Rdaddress( arg0, "putp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "putp - arg0");
 	return funcptr(arg0);
 }
 

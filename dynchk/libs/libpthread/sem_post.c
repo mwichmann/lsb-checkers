@@ -10,8 +10,8 @@ int sem_post (sem_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_post");
-	validate_Rdaddress( arg0, "sem_post");
-	validate_NULL_TYPETYPE(  arg0, "sem_post");
+	validate_Rdaddress( arg0, "sem_post - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sem_post - arg0");
 	return funcptr(arg0);
 }
 

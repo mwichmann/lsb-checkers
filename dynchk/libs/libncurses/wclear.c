@@ -10,8 +10,8 @@ int wclear (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclear");
-	validate_Rdaddress( arg0, "wclear");
-	validate_NULL_TYPETYPE(  arg0, "wclear");
+	validate_Rdaddress( arg0, "wclear - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wclear - arg0");
 	return funcptr(arg0);
 }
 

@@ -12,9 +12,9 @@ int vwprintf (const wchar_t * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwprintf");
-	validate_Rdaddress( arg0, "vwprintf");
-	validate_NULL_TYPETYPE(  arg0, "vwprintf");
-	validate_NULL_TYPETYPE(  arg1, "vwprintf");
+	validate_Rdaddress( arg0, "vwprintf - arg0");
+	validate_NULL_TYPETYPE(  arg0, "vwprintf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "vwprintf - arg1");
 	return funcptr(arg0, arg1);
 }
 

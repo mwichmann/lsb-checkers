@@ -10,10 +10,10 @@ struct servent * getservbyname (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getservbyname");
-	validate_Rdaddress( arg0, "getservbyname");
-	validate_NULL_TYPETYPE(  arg0, "getservbyname");
-	validate_Rdaddress( arg1, "getservbyname");
-	validate_NULL_TYPETYPE(  arg1, "getservbyname");
+	validate_Rdaddress( arg0, "getservbyname - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getservbyname - arg0");
+	validate_Rdaddress( arg1, "getservbyname - arg1");
+	validate_NULL_TYPETYPE(  arg1, "getservbyname - arg1");
 	return funcptr(arg0, arg1);
 }
 

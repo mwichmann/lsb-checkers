@@ -10,7 +10,7 @@ float complex cacosf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacosf");
-	validate_NULL_TYPETYPE(  arg0, "cacosf");
+	validate_NULL_TYPETYPE(  arg0, "cacosf - arg0");
 	return funcptr(arg0);
 }
 

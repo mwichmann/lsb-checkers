@@ -10,8 +10,8 @@ float complex cpowf (float complex arg0 , float complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpowf");
-	validate_NULL_TYPETYPE(  arg0, "cpowf");
-	validate_NULL_TYPETYPE(  arg1, "cpowf");
+	validate_NULL_TYPETYPE(  arg0, "cpowf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "cpowf - arg1");
 	return funcptr(arg0, arg1);
 }
 

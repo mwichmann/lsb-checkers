@@ -10,7 +10,7 @@ float erfcf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erfcf");
-	validate_NULL_TYPETYPE(  arg0, "erfcf");
+	validate_NULL_TYPETYPE(  arg0, "erfcf - arg0");
 	return funcptr(arg0);
 }
 

@@ -11,7 +11,7 @@ char * inet_ntoa (struct in_addr arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntoa");
-	validate_struct_in_addr( & arg0, "inet_ntoa");
+	validate_struct_in_addr( & arg0, "inet_ntoa - arg0");
 	return funcptr(arg0);
 }
 

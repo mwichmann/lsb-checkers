@@ -10,8 +10,8 @@ void funlockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "funlockfile");
-	validate_Rdaddress( arg0, "funlockfile");
-	validate_NULL_TYPETYPE(  arg0, "funlockfile");
+	validate_Rdaddress( arg0, "funlockfile - arg0");
+	validate_NULL_TYPETYPE(  arg0, "funlockfile - arg0");
 	funcptr(arg0);
 }
 

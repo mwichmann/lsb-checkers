@@ -10,15 +10,15 @@ int deflateInit2_ (z_streamp arg0 , int arg1 , int arg2 , int arg3 , int arg4 , 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg0, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg1, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg2, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg3, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg4, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg5, "deflateInit2_");
-	validate_Rdaddress( arg6, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg6, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg7, "deflateInit2_");
+	validate_NULL_TYPETYPE(  arg0, "deflateInit2_ - arg0");
+	validate_NULL_TYPETYPE(  arg1, "deflateInit2_ - arg1");
+	validate_NULL_TYPETYPE(  arg2, "deflateInit2_ - arg2");
+	validate_NULL_TYPETYPE(  arg3, "deflateInit2_ - arg3");
+	validate_NULL_TYPETYPE(  arg4, "deflateInit2_ - arg4");
+	validate_NULL_TYPETYPE(  arg5, "deflateInit2_ - arg5");
+	validate_Rdaddress( arg6, "deflateInit2_ - arg6");
+	validate_NULL_TYPETYPE(  arg6, "deflateInit2_ - arg6");
+	validate_NULL_TYPETYPE(  arg7, "deflateInit2_ - arg7");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 

@@ -10,9 +10,9 @@ int idlok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "idlok");
-	validate_Rdaddress( arg0, "idlok");
-	validate_NULL_TYPETYPE(  arg0, "idlok");
-	validate_NULL_TYPETYPE(  arg1, "idlok");
+	validate_Rdaddress( arg0, "idlok - arg0");
+	validate_NULL_TYPETYPE(  arg0, "idlok - arg0");
+	validate_NULL_TYPETYPE(  arg1, "idlok - arg1");
 	return funcptr(arg0, arg1);
 }
 

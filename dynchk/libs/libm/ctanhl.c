@@ -10,7 +10,7 @@ long double complex ctanhl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanhl");
-	validate_NULL_TYPETYPE(  arg0, "ctanhl");
+	validate_NULL_TYPETYPE(  arg0, "ctanhl - arg0");
 	return funcptr(arg0);
 }
 

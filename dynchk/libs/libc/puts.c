@@ -10,8 +10,8 @@ int puts (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "puts");
-	validate_Rdaddress( arg0, "puts");
-	validate_NULL_TYPETYPE(  arg0, "puts");
+	validate_Rdaddress( arg0, "puts - arg0");
+	validate_NULL_TYPETYPE(  arg0, "puts - arg0");
 	return funcptr(arg0);
 }
 

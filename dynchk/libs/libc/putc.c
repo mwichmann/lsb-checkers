@@ -10,9 +10,9 @@ int putc (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putc");
-	validate_NULL_TYPETYPE(  arg0, "putc");
-	validate_Rdaddress( arg1, "putc");
-	validate_NULL_TYPETYPE(  arg1, "putc");
+	validate_NULL_TYPETYPE(  arg0, "putc - arg0");
+	validate_Rdaddress( arg1, "putc - arg1");
+	validate_NULL_TYPETYPE(  arg1, "putc - arg1");
 	return funcptr(arg0, arg1);
 }
 

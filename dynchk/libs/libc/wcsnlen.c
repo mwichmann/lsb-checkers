@@ -11,9 +11,9 @@ size_t wcsnlen (const wchar_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsnlen");
-	validate_Rdaddress( arg0, "wcsnlen");
-	validate_NULL_TYPETYPE(  arg0, "wcsnlen");
-	validate_NULL_TYPETYPE(  arg1, "wcsnlen");
+	validate_Rdaddress( arg0, "wcsnlen - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcsnlen - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wcsnlen - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,12 +10,12 @@ WINDOW * subpad (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "subpad");
-	validate_Rdaddress( arg0, "subpad");
-	validate_NULL_TYPETYPE(  arg0, "subpad");
-	validate_NULL_TYPETYPE(  arg1, "subpad");
-	validate_NULL_TYPETYPE(  arg2, "subpad");
-	validate_NULL_TYPETYPE(  arg3, "subpad");
-	validate_NULL_TYPETYPE(  arg4, "subpad");
+	validate_Rdaddress( arg0, "subpad - arg0");
+	validate_NULL_TYPETYPE(  arg0, "subpad - arg0");
+	validate_NULL_TYPETYPE(  arg1, "subpad - arg1");
+	validate_NULL_TYPETYPE(  arg2, "subpad - arg2");
+	validate_NULL_TYPETYPE(  arg3, "subpad - arg3");
+	validate_NULL_TYPETYPE(  arg4, "subpad - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

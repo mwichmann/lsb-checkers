@@ -10,8 +10,8 @@ int fflush_unlocked (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fflush_unlocked");
-	validate_Rdaddress( arg0, "fflush_unlocked");
-	validate_NULL_TYPETYPE(  arg0, "fflush_unlocked");
+	validate_Rdaddress( arg0, "fflush_unlocked - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fflush_unlocked - arg0");
 	return funcptr(arg0);
 }
 

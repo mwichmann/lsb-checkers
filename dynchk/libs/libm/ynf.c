@@ -10,8 +10,8 @@ float ynf (int arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ynf");
-	validate_NULL_TYPETYPE(  arg0, "ynf");
-	validate_NULL_TYPETYPE(  arg1, "ynf");
+	validate_NULL_TYPETYPE(  arg0, "ynf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "ynf - arg1");
 	return funcptr(arg0, arg1);
 }
 

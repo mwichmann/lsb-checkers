@@ -10,7 +10,7 @@ int abs (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "abs");
-	validate_NULL_TYPETYPE(  arg0, "abs");
+	validate_NULL_TYPETYPE(  arg0, "abs - arg0");
 	return funcptr(arg0);
 }
 

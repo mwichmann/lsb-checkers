@@ -11,9 +11,9 @@ int mlock (const void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlock");
-	validate_Rdaddress( arg0, "mlock");
-	validate_NULL_TYPETYPE(  arg0, "mlock");
-	validate_NULL_TYPETYPE(  arg1, "mlock");
+	validate_Rdaddress( arg0, "mlock - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mlock - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mlock - arg1");
 	return funcptr(arg0, arg1);
 }
 

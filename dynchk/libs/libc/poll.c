@@ -11,10 +11,10 @@ int poll (struct pollfd * arg0 , nfds_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "poll");
-	validate_Rdaddress( arg0, "poll");
-	validate_NULL_TYPETYPE(  arg0, "poll");
-	validate_NULL_TYPETYPE(  arg1, "poll");
-	validate_NULL_TYPETYPE(  arg2, "poll");
+	validate_Rdaddress( arg0, "poll - arg0");
+	validate_NULL_TYPETYPE(  arg0, "poll - arg0");
+	validate_NULL_TYPETYPE(  arg1, "poll - arg1");
+	validate_NULL_TYPETYPE(  arg2, "poll - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

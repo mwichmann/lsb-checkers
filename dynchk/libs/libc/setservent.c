@@ -10,7 +10,7 @@ void setservent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setservent");
-	validate_NULL_TYPETYPE(  arg0, "setservent");
+	validate_NULL_TYPETYPE(  arg0, "setservent - arg0");
 	funcptr(arg0);
 }
 

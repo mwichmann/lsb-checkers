@@ -11,10 +11,10 @@ void * memchr (const void * arg0 , int arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memchr");
-	validate_Rdaddress( arg0, "memchr");
-	validate_NULL_TYPETYPE(  arg0, "memchr");
-	validate_NULL_TYPETYPE(  arg1, "memchr");
-	validate_NULL_TYPETYPE(  arg2, "memchr");
+	validate_Rdaddress( arg0, "memchr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "memchr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "memchr - arg1");
+	validate_NULL_TYPETYPE(  arg2, "memchr - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

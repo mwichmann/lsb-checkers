@@ -10,7 +10,7 @@ int fsync (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsync");
-	validate_NULL_TYPETYPE(  arg0, "fsync");
+	validate_NULL_TYPETYPE(  arg0, "fsync - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,12 +10,12 @@ WINDOW * derwin (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "derwin");
-	validate_Rdaddress( arg0, "derwin");
-	validate_NULL_TYPETYPE(  arg0, "derwin");
-	validate_NULL_TYPETYPE(  arg1, "derwin");
-	validate_NULL_TYPETYPE(  arg2, "derwin");
-	validate_NULL_TYPETYPE(  arg3, "derwin");
-	validate_NULL_TYPETYPE(  arg4, "derwin");
+	validate_Rdaddress( arg0, "derwin - arg0");
+	validate_NULL_TYPETYPE(  arg0, "derwin - arg0");
+	validate_NULL_TYPETYPE(  arg1, "derwin - arg1");
+	validate_NULL_TYPETYPE(  arg2, "derwin - arg2");
+	validate_NULL_TYPETYPE(  arg3, "derwin - arg3");
+	validate_NULL_TYPETYPE(  arg4, "derwin - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

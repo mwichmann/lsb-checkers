@@ -10,7 +10,7 @@ long double complex csinhl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinhl");
-	validate_NULL_TYPETYPE(  arg0, "csinhl");
+	validate_NULL_TYPETYPE(  arg0, "csinhl - arg0");
 	return funcptr(arg0);
 }
 

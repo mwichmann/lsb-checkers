@@ -10,8 +10,8 @@ long double powl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "powl");
-	validate_NULL_TYPETYPE(  arg0, "powl");
-	validate_NULL_TYPETYPE(  arg1, "powl");
+	validate_NULL_TYPETYPE(  arg0, "powl - arg0");
+	validate_NULL_TYPETYPE(  arg1, "powl - arg1");
 	return funcptr(arg0, arg1);
 }
 

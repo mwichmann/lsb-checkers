@@ -11,14 +11,14 @@ int forkpty (int * arg0 , char * arg1 , struct termios * arg2 , struct winsize *
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "forkpty");
-	validate_Rdaddress( arg0, "forkpty");
-	validate_NULL_TYPETYPE(  arg0, "forkpty");
-	validate_Rdaddress( arg1, "forkpty");
-	validate_NULL_TYPETYPE(  arg1, "forkpty");
-	validate_Rdaddress( arg2, "forkpty");
-	validate_NULL_TYPETYPE(  arg2, "forkpty");
-	validate_Rdaddress( arg3, "forkpty");
-	validate_NULL_TYPETYPE(  arg3, "forkpty");
+	validate_Rdaddress( arg0, "forkpty - arg0");
+	validate_NULL_TYPETYPE(  arg0, "forkpty - arg0");
+	validate_Rdaddress( arg1, "forkpty - arg1");
+	validate_NULL_TYPETYPE(  arg1, "forkpty - arg1");
+	validate_Rdaddress( arg2, "forkpty - arg2");
+	validate_NULL_TYPETYPE(  arg2, "forkpty - arg2");
+	validate_Rdaddress( arg3, "forkpty - arg3");
+	validate_NULL_TYPETYPE(  arg3, "forkpty - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

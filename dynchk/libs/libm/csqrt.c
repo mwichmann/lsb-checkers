@@ -10,7 +10,7 @@ double complex csqrt (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csqrt");
-	validate_NULL_TYPETYPE(  arg0, "csqrt");
+	validate_NULL_TYPETYPE(  arg0, "csqrt - arg0");
 	return funcptr(arg0);
 }
 

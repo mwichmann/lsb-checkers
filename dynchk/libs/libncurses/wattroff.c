@@ -10,9 +10,9 @@ int wattroff (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattroff");
-	validate_Rdaddress( arg0, "wattroff");
-	validate_NULL_TYPETYPE(  arg0, "wattroff");
-	validate_NULL_TYPETYPE(  arg1, "wattroff");
+	validate_Rdaddress( arg0, "wattroff - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wattroff - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wattroff - arg1");
 	return funcptr(arg0, arg1);
 }
 

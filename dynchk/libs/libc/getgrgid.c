@@ -11,7 +11,7 @@ struct group * getgrgid (gid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrgid");
-	validate_NULL_TYPETYPE(  arg0, "getgrgid");
+	validate_NULL_TYPETYPE(  arg0, "getgrgid - arg0");
 	return funcptr(arg0);
 }
 

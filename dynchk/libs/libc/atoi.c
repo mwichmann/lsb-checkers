@@ -10,8 +10,8 @@ int atoi (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atoi");
-	validate_Rdaddress( arg0, "atoi");
-	validate_NULL_TYPETYPE(  arg0, "atoi");
+	validate_Rdaddress( arg0, "atoi - arg0");
+	validate_NULL_TYPETYPE(  arg0, "atoi - arg0");
 	return funcptr(arg0);
 }
 

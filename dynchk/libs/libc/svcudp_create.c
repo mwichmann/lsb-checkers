@@ -10,7 +10,7 @@ SVCXPRT * svcudp_create (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcudp_create");
-	validate_NULL_TYPETYPE(  arg0, "svcudp_create");
+	validate_NULL_TYPETYPE(  arg0, "svcudp_create - arg0");
 	return funcptr(arg0);
 }
 

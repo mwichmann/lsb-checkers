@@ -10,11 +10,11 @@ int inet_pton (int arg0 , const char * arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_pton");
-	validate_NULL_TYPETYPE(  arg0, "inet_pton");
-	validate_Rdaddress( arg1, "inet_pton");
-	validate_NULL_TYPETYPE(  arg1, "inet_pton");
-	validate_Rdaddress( arg2, "inet_pton");
-	validate_NULL_TYPETYPE(  arg2, "inet_pton");
+	validate_NULL_TYPETYPE(  arg0, "inet_pton - arg0");
+	validate_Rdaddress( arg1, "inet_pton - arg1");
+	validate_NULL_TYPETYPE(  arg1, "inet_pton - arg1");
+	validate_Rdaddress( arg2, "inet_pton - arg2");
+	validate_NULL_TYPETYPE(  arg2, "inet_pton - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

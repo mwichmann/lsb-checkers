@@ -10,8 +10,8 @@ int daemon (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "daemon");
-	validate_NULL_TYPETYPE(  arg0, "daemon");
-	validate_NULL_TYPETYPE(  arg1, "daemon");
+	validate_NULL_TYPETYPE(  arg0, "daemon - arg0");
+	validate_NULL_TYPETYPE(  arg1, "daemon - arg1");
 	return funcptr(arg0, arg1);
 }
 

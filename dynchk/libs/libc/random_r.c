@@ -11,10 +11,10 @@ int random_r (struct random_data * arg0 , int32_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "random_r");
-	validate_Rdaddress( arg0, "random_r");
-	validate_NULL_TYPETYPE(  arg0, "random_r");
-	validate_Rdaddress( arg1, "random_r");
-	validate_NULL_TYPETYPE(  arg1, "random_r");
+	validate_Rdaddress( arg0, "random_r - arg0");
+	validate_NULL_TYPETYPE(  arg0, "random_r - arg0");
+	validate_Rdaddress( arg1, "random_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "random_r - arg1");
 	return funcptr(arg0, arg1);
 }
 

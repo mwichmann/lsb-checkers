@@ -10,8 +10,8 @@ int uname (struct utsname * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "uname");
-	validate_Rdaddress( arg0, "uname");
-	validate_NULL_TYPETYPE(  arg0, "uname");
+	validate_Rdaddress( arg0, "uname - arg0");
+	validate_NULL_TYPETYPE(  arg0, "uname - arg0");
 	return funcptr(arg0);
 }
 

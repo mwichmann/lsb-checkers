@@ -11,9 +11,9 @@ int creat64 (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creat64");
-	validate_Rdaddress( arg0, "creat64");
-	validate_NULL_TYPETYPE(  arg0, "creat64");
-	validate_NULL_TYPETYPE(  arg1, "creat64");
+	validate_Rdaddress( arg0, "creat64 - arg0");
+	validate_NULL_TYPETYPE(  arg0, "creat64 - arg0");
+	validate_NULL_TYPETYPE(  arg1, "creat64 - arg1");
 	return funcptr(arg0, arg1);
 }
 

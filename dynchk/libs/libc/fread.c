@@ -11,12 +11,12 @@ size_t fread (void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fread");
-	validate_Rdaddress( arg0, "fread");
-	validate_NULL_TYPETYPE(  arg0, "fread");
-	validate_NULL_TYPETYPE(  arg1, "fread");
-	validate_NULL_TYPETYPE(  arg2, "fread");
-	validate_Rdaddress( arg3, "fread");
-	validate_NULL_TYPETYPE(  arg3, "fread");
+	validate_Rdaddress( arg0, "fread - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fread - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fread - arg1");
+	validate_NULL_TYPETYPE(  arg2, "fread - arg2");
+	validate_Rdaddress( arg3, "fread - arg3");
+	validate_NULL_TYPETYPE(  arg3, "fread - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -10,7 +10,7 @@ long long llround (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llround");
-	validate_NULL_TYPETYPE(  arg0, "llround");
+	validate_NULL_TYPETYPE(  arg0, "llround - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ float complex cexpf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cexpf");
-	validate_NULL_TYPETYPE(  arg0, "cexpf");
+	validate_NULL_TYPETYPE(  arg0, "cexpf - arg0");
 	return funcptr(arg0);
 }
 

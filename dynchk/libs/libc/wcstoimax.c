@@ -11,12 +11,12 @@ intmax_t wcstoimax (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoimax");
-	validate_Rdaddress( arg0, "wcstoimax");
-	validate_NULL_TYPETYPE(  arg0, "wcstoimax");
-	validate_Rdaddress( arg1, "wcstoimax");
-	validate_Rdaddress(* arg1, "wcstoimax");
-	validate_NULL_TYPETYPE(  arg1, "wcstoimax");
-	validate_NULL_TYPETYPE(  arg2, "wcstoimax");
+	validate_Rdaddress( arg0, "wcstoimax - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcstoimax - arg0");
+	validate_Rdaddress( arg1, "wcstoimax - arg1");
+	validate_Rdaddress(* arg1, "wcstoimax - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcstoimax - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wcstoimax - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

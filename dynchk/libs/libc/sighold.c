@@ -10,7 +10,7 @@ int sighold (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sighold");
-	validate_NULL_TYPETYPE(  arg0, "sighold");
+	validate_NULL_TYPETYPE(  arg0, "sighold - arg0");
 	return funcptr(arg0);
 }
 

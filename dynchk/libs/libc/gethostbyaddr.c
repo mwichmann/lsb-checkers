@@ -11,10 +11,10 @@ struct hostent * gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyaddr");
-	validate_Rdaddress( arg0, "gethostbyaddr");
-	validate_NULL_TYPETYPE(  arg0, "gethostbyaddr");
-	validate_NULL_TYPETYPE(  arg1, "gethostbyaddr");
-	validate_NULL_TYPETYPE(  arg2, "gethostbyaddr");
+	validate_Rdaddress( arg0, "gethostbyaddr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "gethostbyaddr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "gethostbyaddr - arg1");
+	validate_NULL_TYPETYPE(  arg2, "gethostbyaddr - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

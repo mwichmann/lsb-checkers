@@ -10,7 +10,7 @@ double carg (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "carg");
-	validate_NULL_TYPETYPE(  arg0, "carg");
+	validate_NULL_TYPETYPE(  arg0, "carg - arg0");
 	return funcptr(arg0);
 }
 

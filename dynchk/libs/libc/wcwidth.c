@@ -11,7 +11,7 @@ int wcwidth (wchar_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcwidth");
-	validate_NULL_TYPETYPE(  arg0, "wcwidth");
+	validate_NULL_TYPETYPE(  arg0, "wcwidth - arg0");
 	return funcptr(arg0);
 }
 

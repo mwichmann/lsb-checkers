@@ -10,8 +10,8 @@ float dremf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dremf");
-	validate_NULL_TYPETYPE(  arg0, "dremf");
-	validate_NULL_TYPETYPE(  arg1, "dremf");
+	validate_NULL_TYPETYPE(  arg0, "dremf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "dremf - arg1");
 	return funcptr(arg0, arg1);
 }
 

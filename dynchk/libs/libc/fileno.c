@@ -10,8 +10,8 @@ int fileno (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fileno");
-	validate_Rdaddress( arg0, "fileno");
-	validate_NULL_TYPETYPE(  arg0, "fileno");
+	validate_Rdaddress( arg0, "fileno - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fileno - arg0");
 	return funcptr(arg0);
 }
 

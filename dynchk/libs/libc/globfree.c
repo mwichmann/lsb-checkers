@@ -10,8 +10,8 @@ void globfree (glob_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "globfree");
-	validate_Rdaddress( arg0, "globfree");
-	validate_NULL_TYPETYPE(  arg0, "globfree");
+	validate_Rdaddress( arg0, "globfree - arg0");
+	validate_NULL_TYPETYPE(  arg0, "globfree - arg0");
 	funcptr(arg0);
 }
 

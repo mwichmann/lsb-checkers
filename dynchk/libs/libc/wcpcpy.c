@@ -11,10 +11,10 @@ wchar_t * wcpcpy (wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcpcpy");
-	validate_Rdaddress( arg0, "wcpcpy");
-	validate_NULL_TYPETYPE(  arg0, "wcpcpy");
-	validate_Rdaddress( arg1, "wcpcpy");
-	validate_NULL_TYPETYPE(  arg1, "wcpcpy");
+	validate_Rdaddress( arg0, "wcpcpy - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcpcpy - arg0");
+	validate_Rdaddress( arg1, "wcpcpy - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcpcpy - arg1");
 	return funcptr(arg0, arg1);
 }
 

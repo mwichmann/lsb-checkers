@@ -11,7 +11,7 @@ int setgid (gid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgid");
-	validate_NULL_TYPETYPE(  arg0, "setgid");
+	validate_NULL_TYPETYPE(  arg0, "setgid - arg0");
 	return funcptr(arg0);
 }
 

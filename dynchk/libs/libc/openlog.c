@@ -10,10 +10,10 @@ void openlog (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openlog");
-	validate_Rdaddress( arg0, "openlog");
-	validate_NULL_TYPETYPE(  arg0, "openlog");
-	validate_NULL_TYPETYPE(  arg1, "openlog");
-	validate_NULL_TYPETYPE(  arg2, "openlog");
+	validate_Rdaddress( arg0, "openlog - arg0");
+	validate_NULL_TYPETYPE(  arg0, "openlog - arg0");
+	validate_NULL_TYPETYPE(  arg1, "openlog - arg1");
+	validate_NULL_TYPETYPE(  arg2, "openlog - arg2");
 	funcptr(arg0, arg1, arg2);
 }
 

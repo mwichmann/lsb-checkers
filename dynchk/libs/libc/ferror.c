@@ -10,8 +10,8 @@ int ferror (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ferror");
-	validate_Rdaddress( arg0, "ferror");
-	validate_NULL_TYPETYPE(  arg0, "ferror");
+	validate_Rdaddress( arg0, "ferror - arg0");
+	validate_NULL_TYPETYPE(  arg0, "ferror - arg0");
 	return funcptr(arg0);
 }
 

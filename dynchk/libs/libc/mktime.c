@@ -10,8 +10,8 @@ time_t mktime (struct tm * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mktime");
-	validate_Rdaddress( arg0, "mktime");
-	validate_NULL_TYPETYPE(  arg0, "mktime");
+	validate_Rdaddress( arg0, "mktime - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mktime - arg0");
 	return funcptr(arg0);
 }
 

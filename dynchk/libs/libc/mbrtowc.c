@@ -12,13 +12,13 @@ size_t mbrtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 , mbstate_t * a
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbrtowc");
-	validate_Rdaddress( arg0, "mbrtowc");
-	validate_NULL_TYPETYPE(  arg0, "mbrtowc");
-	validate_Rdaddress( arg1, "mbrtowc");
-	validate_NULL_TYPETYPE(  arg1, "mbrtowc");
-	validate_NULL_TYPETYPE(  arg2, "mbrtowc");
-	validate_Rdaddress( arg3, "mbrtowc");
-	validate_NULL_TYPETYPE(  arg3, "mbrtowc");
+	validate_Rdaddress( arg0, "mbrtowc - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mbrtowc - arg0");
+	validate_Rdaddress( arg1, "mbrtowc - arg1");
+	validate_NULL_TYPETYPE(  arg1, "mbrtowc - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mbrtowc - arg2");
+	validate_Rdaddress( arg3, "mbrtowc - arg3");
+	validate_NULL_TYPETYPE(  arg3, "mbrtowc - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

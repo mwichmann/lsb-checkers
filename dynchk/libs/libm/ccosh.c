@@ -10,7 +10,7 @@ double complex ccosh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccosh");
-	validate_NULL_TYPETYPE(  arg0, "ccosh");
+	validate_NULL_TYPETYPE(  arg0, "ccosh - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,10 +10,10 @@ int rename (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rename");
-	validate_Rdaddress( arg0, "rename");
-	validate_NULL_TYPETYPE(  arg0, "rename");
-	validate_Rdaddress( arg1, "rename");
-	validate_NULL_TYPETYPE(  arg1, "rename");
+	validate_Rdaddress( arg0, "rename - arg0");
+	validate_NULL_TYPETYPE(  arg0, "rename - arg0");
+	validate_Rdaddress( arg1, "rename - arg1");
+	validate_NULL_TYPETYPE(  arg1, "rename - arg1");
 	return funcptr(arg0, arg1);
 }
 

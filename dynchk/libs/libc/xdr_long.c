@@ -10,10 +10,10 @@ bool_t xdr_long (XDR * arg0 , long * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_long");
-	validate_Rdaddress( arg0, "xdr_long");
-	validate_NULL_TYPETYPE(  arg0, "xdr_long");
-	validate_Rdaddress( arg1, "xdr_long");
-	validate_NULL_TYPETYPE(  arg1, "xdr_long");
+	validate_Rdaddress( arg0, "xdr_long - arg0");
+	validate_NULL_TYPETYPE(  arg0, "xdr_long - arg0");
+	validate_Rdaddress( arg1, "xdr_long - arg1");
+	validate_NULL_TYPETYPE(  arg1, "xdr_long - arg1");
 	return funcptr(arg0, arg1);
 }
 
