@@ -31,7 +31,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) archk_revision = "$Revision: 1.2 $";
+static const char * __attribute((unused)) archk_revision = "$Revision: 1.3 $";
 
 int
 main(int argc, char *argv[])
@@ -114,7 +114,7 @@ main(int argc, char *argv[])
   }
 
   /* Log version number in the journal */
-  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbarchk " LSBAPPCHK_VERSION);
+  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbarchk " LSBARCHK_VERSION);
   tetj_add_config(journal, tmp_string);
 
   /* Log extra libraries to look for symbols in */
