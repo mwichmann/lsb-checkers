@@ -92,6 +92,7 @@ print $LIB "\t};\n\n";
 # Output classvtable here.
 #
 print $LIB "struct classvtable $vtablename = {\n";
+print $LIB "\t".$$class{'CIvcalloffset'}.",\n";
 print $LIB "\t".$$class{'CIbaseoffset'}.",\n";
 print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\n";
 print $LIB "\t".$vtablename."_name,\n";
@@ -126,6 +127,7 @@ print $LIB "\t$numvtablefuns,\n";
 print $LIB "\t$numtypeinfofuns,\n";
 print $LIB "\t".$$class{'CInumvmitypes'}.",\n";
 print $LIB "\t".$$class{'CIflags'}.",\n";
+print $LIB "\t".$$class{'CIvtclass'}.",\n";
 print $LIB "\t&$typeinfoname,\n";
 print $LIB "\t&$vtablename,\n";
 print $LIB "\t$baseinfoname,\n";
