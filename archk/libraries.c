@@ -37,6 +37,7 @@ add_archive_symbols(char *libname, struct tetj_handle *journal)
   {
      while(next_member(file, journal) ) {
         syms=NULL;
+	numsyms=0;
 	/* First, find the symbol table */
         for(i=0;i<file->numsh;i++) {
 		if( file->saddr[i].sh_type == SHT_SYMTAB ) {
@@ -48,7 +49,7 @@ add_archive_symbols(char *libname, struct tetj_handle *journal)
 		}
 	}
 #if 0
-	printf("Found symbols in section %d\n", i );
+	printf("Found %d symbols in section %d\n", numsyms, i );
 #endif
         for(i=0;i<numsyms;i++) 
         {
