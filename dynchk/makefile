@@ -4,11 +4,12 @@ WRAPPER_LIBS = \
 	libs/libpam/libpam.o \
 	libs/libncurses/libncurses.o
 
+
 TEST_LIB = tests/tests.o
 
 all: liblsbdynchk.so
 
-$(WRAPPER_LIBS):
+$(WRAPPER_LIBS)::
 	cd libs && make all
 
 $(TEST_LIB):
