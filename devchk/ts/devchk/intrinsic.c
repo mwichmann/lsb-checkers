@@ -29,7 +29,7 @@ CheckTypeSize(void,1,1,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(void,1,1,10)
 #elif __s390x__
-CheckTypeSize(void,0,1,12)
+CheckTypeSize(void,1,1,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,1,0);
 #endif
@@ -45,7 +45,7 @@ CheckTypeSize(char,1,2,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(char,1,2,10)
 #elif __s390x__
-CheckTypeSize(char,0,2,12)
+CheckTypeSize(char,1,2,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,2,0);
 #endif
@@ -61,7 +61,7 @@ CheckTypeSize(unsigned char,1,3,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned char,1,3,10)
 #elif __s390x__
-CheckTypeSize(unsigned char,0,3,12)
+CheckTypeSize(unsigned char,1,3,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,3,0);
 #endif
@@ -77,7 +77,7 @@ CheckTypeSize(short,2,4,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(short,2,4,10)
 #elif __s390x__
-CheckTypeSize(short,0,4,12)
+CheckTypeSize(short,2,4,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,4,0);
 #endif
@@ -93,7 +93,7 @@ CheckTypeSize(unsigned short,2,5,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned short,2,5,10)
 #elif __s390x__
-CheckTypeSize(unsigned short,0,5,12)
+CheckTypeSize(unsigned short,2,5,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,5,0);
 #endif
@@ -109,7 +109,7 @@ CheckTypeSize(int,4,6,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(int,4,6,10)
 #elif __s390x__
-CheckTypeSize(int,0,6,12)
+CheckTypeSize(int,4,6,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6,0);
 #endif
@@ -125,7 +125,7 @@ CheckTypeSize(unsigned int,4,7,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned int,4,7,10)
 #elif __s390x__
-CheckTypeSize(unsigned int,0,7,12)
+CheckTypeSize(unsigned int,4,7,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7,0);
 #endif
@@ -141,7 +141,7 @@ CheckTypeSize(long,8,8,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(long,4,8,10)
 #elif __s390x__
-CheckTypeSize(long,0,8,12)
+CheckTypeSize(long,8,8,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8,0);
 #endif
@@ -157,7 +157,7 @@ CheckTypeSize(unsigned long,8,9,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned long,4,9,10)
 #elif __s390x__
-CheckTypeSize(unsigned long,0,9,12)
+CheckTypeSize(unsigned long,8,9,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9,0);
 #endif
@@ -173,7 +173,7 @@ CheckTypeSize(long long,8,10,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(long long,8,10,10)
 #elif __s390x__
-CheckTypeSize(long long,0,10,12)
+CheckTypeSize(long long,8,10,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10,0);
 #endif
@@ -189,7 +189,7 @@ CheckTypeSize(unsigned long long,8,11,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned long long,8,11,10)
 #elif __s390x__
-CheckTypeSize(unsigned long long,0,11,12)
+CheckTypeSize(unsigned long long,8,11,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11,0);
 #endif
@@ -205,7 +205,7 @@ CheckTypeSize(float,4,12,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(float,4,12,10)
 #elif __s390x__
-CheckTypeSize(float,0,12,12)
+CheckTypeSize(float,4,12,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12,0);
 #endif
@@ -221,7 +221,7 @@ CheckTypeSize(double,8,13,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(double,8,13,10)
 #elif __s390x__
-CheckTypeSize(double,0,13,12)
+CheckTypeSize(double,8,13,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13,0);
 #endif
@@ -237,7 +237,7 @@ CheckTypeSize(long double,8,14,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(long double,8,14,10)
 #elif __s390x__
-CheckTypeSize(long double,0,14,12)
+CheckTypeSize(long double,8,14,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14,0);
 #endif

@@ -4066,12 +4066,13 @@ CheckOffset(struct winsize,ws_xpixel,4,9,34489)
 CheckMemberSize(struct winsize,ws_ypixel,2,9,34490)
 CheckOffset(struct winsize,ws_ypixel,6,9,34490)
 #elif __s390x__
-CheckTypeSize(struct winsize,0, 10301, 12)
-Msg("Missing member data for winsize on S390X\n");
-CheckOffset(struct winsize,ws_row,0,12,34487)
-CheckOffset(struct winsize,ws_col,0,12,34488)
-CheckOffset(struct winsize,ws_xpixel,0,12,34489)
-CheckOffset(struct winsize,ws_ypixel,0,12,34490)
+CheckTypeSize(struct winsize,8, 10301, 12)
+CheckMemberSize(struct winsize,ws_col,2,12,34488)
+CheckOffset(struct winsize,ws_col,2,12,34488)
+CheckMemberSize(struct winsize,ws_xpixel,2,12,34489)
+CheckOffset(struct winsize,ws_xpixel,4,12,34489)
+CheckMemberSize(struct winsize,ws_ypixel,2,12,34490)
+CheckOffset(struct winsize,ws_ypixel,6,12,34490)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10301,0);
 Msg("Find size of winsize (10301)\n");
@@ -4088,7 +4089,7 @@ CheckTypeSize(speed_t,4, 9186, 10)
 #elif __powerpc64__
 CheckTypeSize(speed_t,4, 9186, 9)
 #elif __s390x__
-CheckTypeSize(speed_t,0, 9186, 12)
+CheckTypeSize(speed_t,4, 9186, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 Msg("Find size of speed_t (9186)\n");
@@ -4105,7 +4106,7 @@ CheckTypeSize(cc_t,1, 10206, 10)
 #elif __powerpc64__
 CheckTypeSize(cc_t,1, 10206, 9)
 #elif __s390x__
-CheckTypeSize(cc_t,0, 10206, 12)
+CheckTypeSize(cc_t,1, 10206, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
 Msg("Find size of cc_t (10206)\n");
@@ -4122,7 +4123,7 @@ CheckTypeSize(tcflag_t,4, 10207, 10)
 #elif __powerpc64__
 CheckTypeSize(tcflag_t,4, 10207, 9)
 #elif __s390x__
-CheckTypeSize(tcflag_t,0, 10207, 12)
+CheckTypeSize(tcflag_t,4, 10207, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10207,0);
 Msg("Find size of tcflag_t (10207)\n");
@@ -4211,16 +4212,21 @@ CheckOffset(struct termios,c_ispeed,52,9,34274)
 CheckMemberSize(struct termios,c_ospeed,4,9,34275)
 CheckOffset(struct termios,c_ospeed,56,9,34275)
 #elif __s390x__
-CheckTypeSize(struct termios,0, 9187, 12)
-Msg("Missing member data for termios on S390X\n");
-CheckOffset(struct termios,c_iflag,0,12,34268)
-CheckOffset(struct termios,c_oflag,0,12,34269)
-CheckOffset(struct termios,c_cflag,0,12,34270)
-CheckOffset(struct termios,c_lflag,0,12,34271)
-CheckOffset(struct termios,c_line,0,12,34272)
-CheckOffset(struct termios,c_cc,0,12,34273)
-CheckOffset(struct termios,c_ispeed,0,12,34274)
-CheckOffset(struct termios,c_ospeed,0,12,34275)
+CheckTypeSize(struct termios,60, 9187, 12)
+CheckMemberSize(struct termios,c_oflag,4,12,34269)
+CheckOffset(struct termios,c_oflag,4,12,34269)
+CheckMemberSize(struct termios,c_cflag,4,12,34270)
+CheckOffset(struct termios,c_cflag,8,12,34270)
+CheckMemberSize(struct termios,c_lflag,4,12,34271)
+CheckOffset(struct termios,c_lflag,12,12,34271)
+CheckMemberSize(struct termios,c_line,1,12,34272)
+CheckOffset(struct termios,c_line,16,12,34272)
+CheckMemberSize(struct termios,c_cc,32,12,34273)
+CheckOffset(struct termios,c_cc,17,12,34273)
+CheckMemberSize(struct termios,c_ispeed,4,12,34274)
+CheckOffset(struct termios,c_ispeed,52,12,34274)
+CheckMemberSize(struct termios,c_ospeed,4,12,34275)
+CheckOffset(struct termios,c_ospeed,56,12,34275)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9187,0);
 Msg("Find size of termios (9187)\n");
