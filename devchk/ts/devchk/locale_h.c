@@ -163,6 +163,136 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_CTYPE_MASK
+	CompareConstant(LC_CTYPE_MASK,(1<<LC_CTYPE),5285,architecture)
+#else
+Msg( "Error: Constant not found: LC_CTYPE_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_NUMERIC_MASK
+	CompareConstant(LC_NUMERIC_MASK,(1 << LC_NUMERIC),5286,architecture)
+#else
+Msg( "Error: Constant not found: LC_NUMERIC_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_TIME_MASK
+	CompareConstant(LC_TIME_MASK,(1 << LC_TIME),5287,architecture)
+#else
+Msg( "Error: Constant not found: LC_TIME_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_COLLATE_MASK
+	CompareConstant(LC_COLLATE_MASK,(1 << LC_COLLATE),5288,architecture)
+#else
+Msg( "Error: Constant not found: LC_COLLATE_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_MONETARY_MASK
+	CompareConstant(LC_MONETARY_MASK,(1 << LC_MONETARY),5289,architecture)
+#else
+Msg( "Error: Constant not found: LC_MONETARY_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_MESSAGES_MASK
+	CompareConstant(LC_MESSAGES_MASK,(1 << LC_MESSAGES),5290,architecture)
+#else
+Msg( "Error: Constant not found: LC_MESSAGES_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_PAPER_MASK
+	CompareConstant(LC_PAPER_MASK,(1 << LC_PAPER),5291,architecture)
+#else
+Msg( "Error: Constant not found: LC_PAPER_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_NAME_MASK
+	CompareConstant(LC_NAME_MASK,(1 << LC_NAME),5292,architecture)
+#else
+Msg( "Error: Constant not found: LC_NAME_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_ADDRESS_MASK
+	CompareConstant(LC_ADDRESS_MASK,(1 << LC_ADDRESS),5293,architecture)
+#else
+Msg( "Error: Constant not found: LC_ADDRESS_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_TELEPHONE_MASK
+	CompareConstant(LC_TELEPHONE_MASK,(1 << LC_TELEPHONE),5294,architecture)
+#else
+Msg( "Error: Constant not found: LC_TELEPHONE_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_MEASUREMENT_MASK
+	CompareConstant(LC_MEASUREMENT_MASK,(1 << LC_MEASUREMENT),5295,architecture)
+#else
+Msg( "Error: Constant not found: LC_MEASUREMENT_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_IDENTIFICATION_MASK
+	CompareConstant(LC_IDENTIFICATION_MASK,(1 << LC_IDENTIFICATION),5296,architecture)
+#else
+Msg( "Error: Constant not found: LC_IDENTIFICATION_MASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_ALL_MASK
+	CompareConstant(LC_ALL_MASK,(LC_CTYPE_MASK| LC_NUMERIC_MASK| LC_TIME_MASK| LC_COLLATE_MASK| LC_MONETARY_MASK| LC_MESSAGES_MASK| LC_PAPER_MASK| LC_NAME_MASK| LC_ADDRESS_MASK| LC_TELEPHONE_MASK| LC_MEASUREMENT_MASK| LC_IDENTIFICATION_MASK),5297,architecture)
+#else
+Msg( "Error: Constant not found: LC_ALL_MASK\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(struct lconv,56, 6919, 2)
 CheckMemberSize(struct lconv,decimal_point,4,2,29980)
