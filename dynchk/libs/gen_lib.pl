@@ -95,7 +95,7 @@ my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSE
 	or die "Couldn't connect to database: " . DBI->errstr;
 
 my $interface_q = $dbh->prepare(
-'SELECT Iid, Iname, Lname
+'SELECT Iid, Iname, Lname, Ireturn
 FROM Interface, Header, Library' . $interface_FROM_add .
 'WHERE Itype = "Function"
    AND Istatus = "Included"
@@ -122,25 +122,19 @@ WHERE Ppos = ?
 ) or die "Couldn't prepare write_param_typetype query 1: " . DBI->errstr;
 
 my $get_param_typetype_q2 = $dbh->prepare(
-'SELECT TTname
-FROM TypeType
-WHERE TTid = ?'
-) or die "Couldn't prepare write_param_typetype query 2: " . DBI->errstr;
+'SELECT TTname FROM TypeType WHERE TTid = ?')
+	or die "Couldn't prepare write_param_typetype query 2: " . DBI->errstr;
  
 my $get_param_type_q = $dbh->prepare(
-'SELECT Tname, Ttype, Pconst
-FROM Parameter, Type
+'SELECT Tname, Tid, Pconst FROM Parameter, Type
 WHERE Ppos = ?
   AND Pint = ?
   AND Ptype = Tid'
 ) or die "Couldn't prepare write_param_type query: " . DBI->errstr;
 	
 my $write_int_wrapper_q = $dbh->prepare(
-'SELECT Ppos, Pint
-FROM Parameter
-WHERE Pint = ?
-ORDER BY Ppos'
-) or die "Couldn't prepare write_int_wrapper query: " . DBI->errstr;
+'SELECT Ppos, Pint FROM Parameter WHERE Pint = ? ORDER BY Ppos')
+	or die "Couldn't prepare write_int_wrapper query: " . DBI->errstr;
 
 my $write_int_header_q = $dbh->prepare(
 'SELECT Hname
@@ -153,18 +147,23 @@ ORDER BY Ppos'
 ) or die "Couldn't prepare write_int_header query: " . DBI->errstr;
 
 my $write_int_declaration_q = $dbh->prepare(
-'SELECT Tname
-FROM Interface, Type
-WHERE Iid = ?
-  AND Ireturn = Tid'
-) or die "Couldn't prepare write_int_declaration query: " . DBI->errstr;
+'SELECT Tname FROM Interface, Type WHERE Iid = ? AND Ireturn = Tid')
+	or die "Couldn't prepare write_int_declaration query: " . DBI->errstr;
 
 my $write_argument_list_q = $dbh->prepare(
-'SELECT Ppos, Pint
-FROM Parameter
-WHERE Pint = ?
-ORDER BY Ppos'
-) or die "Couldn't prepare write_argument list query: " . DBI->errstr;
+'SELECT Ppos, Pint FROM Parameter WHERE Pint = ? ORDER BY Ppos')
+	or die "Couldn't prepare write_argument list query: " . DBI->errstr;
+
+my $get_type_info_q =
+	$dbh->prepare('SELECT Tname, Ttype, Tbasetype, Tarray FROM Type WHERE Tid = ?' )
+	or die "Couldn't prepare type_info query: " . DBI->errstr;
+
+my $get_type_form_q = $dbh->prepare('SELECT Ttype FROM Type WHERE Tid = ?')
+	or die "Couldn't prepare type_from query: " . DBI->errstr;
+
+my $get_funcptr_declaration_q = $dbh->prepare(
+'SELECT TMtypeid FROM TypeMember WHERE TMmemberof = ?' )
+	or die "Couldn't prepare gen_funcptr_declaration query: " . DBI->errstr;
 
 ##############################
 # Subroutines 
@@ -201,6 +200,79 @@ sub has_ellipsis # ($func_id)
 	return 0;
 }
 
+sub get_type_string($);
+
+sub get_type_string($) 
+{
+	my ($type_id)=@_;
+	my $out_str = "";
+	my $next_form;
+
+	$get_type_info_q->execute($type_id) 
+		or die "Couldn't execute type_info query: " . DBI->errstr;
+	my ($name, $form, $basetype, $array_index) = $get_type_info_q->fetchrow_array();
+	$get_type_info_q->finish();
+
+	$name =~ s/fptr-//;
+
+	if($form eq "Intrinsic" or $form eq "Literal" or $form eq "Typedef")
+	{
+		return $name;
+	}
+	elsif($form eq "Struct")
+	{
+		return "struct " . $name;
+	}
+	elsif($form eq "Union")
+	{
+		return "union " . $name;
+	}
+	elsif($form eq "Enum")
+	{
+		return "enum ". $name;
+	}
+	elsif($form eq "Pointer")
+	{
+		return get_type_string($basetype)." *";
+	}
+	elsif($form eq "Const")
+	{
+		$get_type_form_q->execute($basetype)
+			or die "Couldn't execute type_form query: " . DBI->errstr;
+		($next_form) = $get_type_form_q->fetchrow_array();
+		$get_type_form_q->finish;
+		return get_type_string($basetype)."const " if($next_form eq "Pointer");
+		return "const ".get_type_string($basetype); # (else)
+	}
+	elsif($form eq "Array")
+	{
+		return get_type_string($basetype);
+	}
+	elsif($form eq "FuncPtr")
+	{
+		return get_type_string($basetype)."(*".$name.")".get_funcptr_declaration($type_id);
+	}
+}
+	
+sub get_funcptr_declaration($)
+{
+	# This might fail if nested function pointers occur. (nowhere in current LSB)
+	# In that case, we can just use the dynamic-preparation strategy, a la write_body()
+	my ($TMid) = @_;
+	my $i = 0;
+	my $output = "(";
+	$get_funcptr_declaration_q->execute($TMid)
+		or die "Couldn't execute funcptr declaration query: " . DBI->errstr;
+	while( my($type_id) = $get_funcptr_declaration_q->fetchrow_array())
+	{
+		$output.=", " if ($i>0);
+		$output.=get_type_string($type_id);
+	}
+	$get_funcptr_declaration_q->finish;
+	$output.=")";
+	return $output;
+}
+
 # returns typetype string that matches the right validate_* function.
 sub get_param_typetype # ($param_pos, $param_int)
 {
@@ -227,17 +299,19 @@ sub get_param_type # ($param_pos, $param_int)
 {
 	my($param_pos, $param_int) = @_;
 	$get_param_type_q->execute($param_pos, $param_int);
-	my($type, $typeform, $is_const) = $get_param_type_q->fetchrow_array();
+	my($type, $type_id, $is_const) = $get_param_type_q->fetchrow_array();
 	my($return_string) = "";
 	$return_string .= "const " if ($is_const eq 'Y');
-	$return_string .= $type;
+	$return_string .= get_type_string($type_id);
+	return $return_string;
 }
+
 
 # write code block for interface wrapper to 'fh'
 # if 'is_lsb', write code block for lsb_* interface wrapper to 'fh'
-sub write_int_wrapper # ($fh, $func_id, $func_name, $is_lsb)
+sub write_int_wrapper # ($fh, $func_id, $func_name, $func_type, $is_lsb)
 {
-	my($fh, $func_id, $func_name, $is_lsb) = @_;
+	my($fh, $func_id, $func_name, $func_type, $is_lsb) = @_;
 	my $i = 0; my $j = 0;
 
 	print $fh "{\n\tif(!funcptr)\n";
@@ -255,7 +329,9 @@ sub write_int_wrapper # ($fh, $func_id, $func_name, $is_lsb)
 		}
 			$i++;
 	}
-	print $fh "\treturn funcptr(";
+	print $fh "\t";
+	print $fh "return " unless($func_type eq "void");
+	print $fh "funcptr(";
 	
 	while($j < $i)
 	{
@@ -271,7 +347,7 @@ sub write_int_header # ($fh, $func_id)
 {
 	my($fh, $func_id)=@_;
 	print $fh "// Generated by gen_lib.pl\n\n";
-	print $fh "#include \"../tests/type_tests.h\"\n";
+	print $fh "#include \"../../tests/type_tests.h\"\n";
 	print $fh "#include <dlfcn.h>\n";
 	$write_int_header_q->execute($func_id)
 		or die "Couldn't execute write_int_header query: " . DBI->errstr;
@@ -286,7 +362,7 @@ sub write_int_header # ($fh, $func_id)
 
 # write argument list for a function declaration.
 # (This is the bit in the parentheses.)
-sub write_argument_list # ($fh, $func_id, $add_arg*)
+sub write_argument_list # ($fh, $func_id, $add_arg)
 {
 	my($fh, $func_id, $add_arg) = @_;
 	my $i = 0;
@@ -360,7 +436,15 @@ $interface_q->execute or die "Couldn't execute interface query: " . DBI->errstr;
 
 $| = 1;
 
-FUNC: while(my ($func_id, $func_name, $func_lib) = $interface_q->fetchrow_array())
+# Read "hand_coded" and store the do-not-generate list.
+open(DNG_FILE, "hand_coded")
+	or die "Can't open input file hand_coded: $!";
+my @do_not_generate = <DNG_FILE>;
+close DNG_FILE;
+
+debug("dng_file parsed.");
+
+FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fetchrow_array())
 {
 	# Skip interface if it has an ellipsis type - it must be hand-coded.
 	if(has_ellipsis($func_id))
@@ -368,6 +452,11 @@ FUNC: while(my ($func_id, $func_name, $func_lib) = $interface_q->fetchrow_array(
 		print $ell_file $func_name . "\n";
 		next FUNC;
 	}
+	if(contains($func_name, @do_not_generate))
+	{
+		next FUNC;
+	}
+		
 	# Add interface to correct gen.mk file
 	add_to_gen_mk($func_name, $func_lib);
 
@@ -381,14 +470,14 @@ FUNC: while(my ($func_id, $func_name, $func_lib) = $interface_q->fetchrow_array(
 	# Write interface's .c file
 	write_int_header($interface_file, $func_id);
 	write_int_declaration($interface_file, $func_id, $func_name, 0);
-	write_int_wrapper($interface_file, $func_id, $func_name, 0);
+	write_int_wrapper($interface_file, $func_id, $func_name, $func_type, 0);
 	write_int_declaration($interface_file, $func_id, $func_name, 1);
-	write_int_wrapper($interface_file, $func_id, $func_name, 1);
+	write_int_wrapper($interface_file, $func_id, $func_name, $func_type, 1);
 	
 	close($interface_file);
 
 	$progress ++;
-	print "." if ($progress % 100 == 0);
+	print "." if ($progress % 10 == 0);
 }
 	
 close($ell_file);
