@@ -75,8 +75,8 @@ print $LIB "struct classinfo ".$$class{'CIname'}."_classinfo = {\n";
 print $LIB "\t\"".$$class{'CIname'}."\",\n";
 print $LIB "\t\"_ZTV".$$class{'CIname'}."\",\n";
 print $LIB "\t\"_ZTI".$$class{'CIname'}."\",\n";
-print $LIB "\t$numtypeinfofuns,\n";
 print $LIB "\t$numvtablefuns,\n";
+print $LIB "\t$numtypeinfofuns,\n";
 print $LIB "\t&$typeinfoname,\n";
 print $LIB "\t&$vtablename,\n";
 print $LIB "\t};\n\n";
@@ -135,7 +135,7 @@ for(1..$lsth->numrows) {
 	$classinfos.=$classinfo."\t&".$entry{'CIname'}."_classinfo,\n";
 }
 
-print LIB "struct classinfo *libstdcxx_so_5_classinfo[] = {\n";
+print LIB "struct classinfo *".$libname."_classinfo[] = {\n";
 print LIB $classinfos."\n\tNULL\t};\n";
 
 close(LIB);
@@ -173,7 +173,7 @@ $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE Lstd='Yes' ";
 $select.= "AND Aname!='None' ";
-$select.= "AND Lname='libstdcxx' ";
+#$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid ";
 
 #print $select;
