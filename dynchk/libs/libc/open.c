@@ -18,6 +18,7 @@ int open(const char *pathname, int flags, ...)
 	mode_t mode;
 
 	va_start(args, flags);
+	mode = va_arg(args,mode_t);
 
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "open");
@@ -26,11 +27,10 @@ int open(const char *pathname, int flags, ...)
 		__lsb_check_params=0;
         	__lsb_output(5-__lsb_check_params, "open()");
 
-		validate_pathname(pathname, flags, "open");
+		validate_pathname_flags(pathname, flags, "open");
 		//validate_flags
 		if( flags & O_CREAT )
 		{
-			mode = va_arg(args,mode_t);
 			validate_filemode(mode, "open");
 		}
 	}
