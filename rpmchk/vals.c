@@ -10,14 +10,20 @@
  * stick things which are discovered in one place, but used in another.
  */
 char *architecture =
-#if defined(__i386__)
+#if __i386__
 	"i486";
-#elif defined(__ia64__)
+#elif __ia64__
 	"ia64";
-#elif defined(__x86_64__)
+#elif __x86_64__
 	"x86_64";
-#elif defined(__powerpc__)
-	"powerpc";
+#elif __powerpc__ && !__powerpc64__
+	"ppc";
+#elif __powerpc64__
+	"ppc64";
+#elif __s390__ && !__s390x__
+	"s390";
+#elif __s390x__
+	"s390x";
 #else
 	"unknown architecture";
 #endif
@@ -33,18 +39,27 @@ RpmRequireRec validdeps[] = {
 	{"/bin/sh","", 0, 0 },
 	{"lsb-core-noarch",LSBVERSION, 0, 0 },
 	{"lsb-graphics-noarch",LSBVERSION, 0, 0 },
-#if defined(__i386__)
+#if __i386__
 	{"lsb-core-ia32",LSBVERSION, 0, 1 },
 	{"lsb-graphics-ia32",LSBVERSION, 0, 0 },
-#elif defined(__ia64__)
+#elif __ia64__
 	{"lsb-core-ia64",LSBVERSION, 0, 1 },
 	{"lsb-graphics-ia64",LSBVERSION, 0, 1 },
-#elif defined(__x86_64__)
+#elif __x86_64__
 	{"lsb-core-amd64",LSBVERSION, 0, 1 },
 	{"lsb-graphics-amd64",LSBVERSION, 0, 0 },
-#elif defined(__powerpc__)
+#elif __powerpc__ && !__powerpc64__
 	{"lsb-core-ppc",LSBVERSION, 0, 1 },
 	{"lsb-graphics-ppc",LSBVERSION, 0, 0 },
+#elif __powerpc64__
+	{"lsb-core-ppc64",LSBVERSION, 0, 1 },
+	{"lsb-graphics-ppc64",LSBVERSION, 0, 0 },
+#elif __s390__ && !__s390x__
+	{"lsb-core-s390",LSBVERSION, 0, 1 },
+	{"lsb-graphics-s390",LSBVERSION, 0, 0 },
+#elif __s390x__
+	{"lsb-core-s390x",LSBVERSION, 0, 1 },
+	{"lsb-graphics-s390x",LSBVERSION, 0, 0 },
 #endif
 	};
 
