@@ -230,6 +230,7 @@ typedef	struct	{
 extern char *ElfGetStringIndex(ElfFile *file, int offset, int index);
 extern char *ElfGetString(ElfFile *file, int offset);
 extern ElfFile *OpenElfFile(char *name);
+extern ElfFile *OpenFile(char *name);
 extern void checkElf(ElfFile *file1, int isProgram, 
                      struct tetj_handle *journal);
 
