@@ -10,6 +10,8 @@ OBJS = hdrchk.o \
 	X11_extensions_security_h.o \
 	X11_extensions_sync_h.o \
 	curses_h.o \
+	dlfcn_h.o \
+	errno_h.o \
 	ftw_h.o \
 	iconv_h.o \
 	inttypes_h.o \

@@ -9,6 +9,8 @@ extern void X11_Xutil_h();
 extern void X11_extensions_security_h();
 extern void X11_extensions_sync_h();
 extern void curses_h();
+extern void dlfcn_h();
+extern void errno_h();
 extern void ftw_h();
 extern void iconv_h();
 extern void inttypes_h();
