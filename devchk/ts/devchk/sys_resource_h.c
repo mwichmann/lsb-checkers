@@ -530,7 +530,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9125,0);
 Msg("Find size of rusage (9125)\n");
 #endif
 
-#if __no_sym__
+#if 1
+#endif
+
+#if 1
+CheckTypeSize(__priority_which_t,4, 10994, 1)
 #endif
 
 #ifdef TET_TEST
