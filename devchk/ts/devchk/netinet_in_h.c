@@ -135,7 +135,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef INADDR_NONE
-	CompareConstant(INADDR_NONE,((unsigned long int) 0xffffffff),4491,architecture)
+	CompareConstant(INADDR_NONE,((in_addr_t) 0xffffffff),4491,architecture)
 #else
 Msg( "Error: Constant not found: INADDR_NONE\n");
 cnt++;
