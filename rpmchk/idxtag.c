@@ -937,8 +937,11 @@ for(i=0;i<hcount;i++) {
 	name+=strlen(name)+1;
 	}
 
-if( lsbdepidx < 0 ) 
-		fprintf(stderr,"RPMTAG_REQUIRENAME did not contain \"lsb\"\n");
+if( lsbdepidx < 0 ) {
+	fprintf(stderr, "RPMTAG_REQUIRENAME did not contain some or all of " );
+	for(d=0;d<numdeps;d++) {
+		fprintf(stderr, "\"%s\" \n", validdeps[d]);
+	}
 }
 
 void
