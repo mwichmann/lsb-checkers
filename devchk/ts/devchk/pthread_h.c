@@ -270,18 +270,6 @@ Msg("Find size of _pthread_cleanup_buffer (6931)\n");
 #endif
 
 #if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9056,0);
-Msg("Find size of pthread_rwlock_t * (9056)\n");
-#endif
-
-#if __i386__
 CheckTypeSize(pthread_key_t,4, 9059, 2)
 #elif __ia64__
 CheckTypeSize(pthread_key_t,4, 9059, 3)
@@ -468,9 +456,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9053,0);
 Msg("Find size of pthread_condattr_t (9053)\n");
 #endif
 
-#if 1
-#endif
-
 #if __i386__
 CheckTypeSize(_pthread_descr,4, 9087, 2)
 #elif __ia64__
@@ -629,29 +614,6 @@ CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,9,34444)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10279,0);
 Msg("Find size of _pthread_rwlock_t (10279)\n");
-#endif
-
-#if __i386__
-#elif __s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __powerpc64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10280,0);
-Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
-#endif
-
-#if __s390__ && !__s390x__
-#elif __i386__
-#elif __powerpc64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
-Msg("Find size of const pthread_rwlockattr_t * (10811)\n");
 #endif
 
 #ifdef TET_TEST

@@ -222,18 +222,6 @@ CheckTypeSize(fpregset_t,8, 10802, 11)
 #endif
 
 #if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __powerpc64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
-Msg("Find size of anon-mcontext (10229)\n");
-#endif
-
-#if __i386__
 CheckTypeSize(mcontext_t,88, 10230, 2)
 #endif
 

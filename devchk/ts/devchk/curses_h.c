@@ -792,6 +792,14 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for COLOR_PAIR(n) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for PAIR_NUMBER(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for getyx(win,y,x) */
 #endif
 
@@ -1742,6 +1750,16 @@ cnt++;
 	CompareConstant(KEY_MAX,0777,2898,architecture)
 #else
 Msg( "Error: Constant not found: KEY_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef NCURSES_ATTR_SHIFT
+	CompareConstant(NCURSES_ATTR_SHIFT,8,5126,architecture)
+#else
+Msg( "Error: Constant not found: NCURSES_ATTR_SHIFT\n");
 cnt++;
 #endif
 

@@ -24,18 +24,6 @@ int pcnt=0;
 Msg("Checking data structures in utmpx.h\n");
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __powerpc64__
-#elif __ia64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10558,0);
-Msg("Find size of utmpx * (10558)\n");
-#endif
-
 #if 1
 CheckTypeSize(char[UT_LINESIZE],32, 10559, 1)
 #endif
