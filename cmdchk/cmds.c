@@ -4,6 +4,7 @@
 extern void check_cmd(char *cmd, char *cmdpath, struct tetj_handle *journal);
 void check_cmds(struct tetj_handle *journal)
 {
+check_cmd("[","/bin/[",journal);
 check_cmd("ar","/usr/bin/ar",journal);
 check_cmd("at","/usr/bin/at",journal);
 check_cmd("awk","/bin/awk",journal);
@@ -57,7 +58,7 @@ check_cmd("hostname","/bin/hostname",journal);
 check_cmd("iconv","/usr/bin/iconv",journal);
 check_cmd("id","/usr/bin/id",journal);
 check_cmd("install","/usr/bin/install",journal);
-check_cmd("install_initd","",journal);
+check_cmd("install_initd","/sbin/install_initd",journal);
 check_cmd("ipcrm","/usr/bin/ipcrm",journal);
 check_cmd("ipcs","/usr/bin/ipcs",journal);
 check_cmd("join","/usr/bin/join",journal);
