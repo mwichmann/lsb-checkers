@@ -1,4 +1,4 @@
-OBJS = mkabs.o fhspaths.o
+OBJS = fhspaths.o mkabs.o
 LIB = libfhschk.a
 
 all: $(LIB)

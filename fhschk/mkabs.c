@@ -13,7 +13,6 @@
 #define moveelemsdown(dst,src) \
 {int d,s;for(s=src,d=(dst>=0?dst:0);s<numelems;s++,d++) pathelems[d]=pathelems[s];}
 
-static
 char *_mkabsolutepath(char *cwd, char *path)
 {
 char	localpath[PATH_MAX+1];
