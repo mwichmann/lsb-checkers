@@ -9,7 +9,7 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 
 $select = "SELECT DISTINCT Iname,Vname FROM Interface ";
 $select.= "LEFT JOIN Version ON Vid=Iversion WHERE Istatus='Included' ";
-$select.= "ORDER BY Iname ";
+$select.= "ORDER BY Iname,Aid ";
 
 #print $select;
 

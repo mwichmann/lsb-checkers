@@ -12,7 +12,7 @@ $select.= "LEFT JOIN ArchLib ON Lid=ALlid ";
 $select.= "LEFT JOIN Architecture ON Aid=ALaid ";
 $select.= "WHERE Library.Lstd='Yes' ";
 $select.= "AND Architecture.Aname!='None' ";
-$select.= "ORDER BY ALrunname ";
+$select.= "ORDER BY ALrunname,Aid ";
 
 #print $select;
 
