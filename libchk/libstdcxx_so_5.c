@@ -1,6 +1,12 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libstdcxx_so_5[] = {
+#if __i386__
+	{"_ZGVNSt10moneypunctIcLb0EE2idE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZGVNSt10moneypunctIcLb1EE2idE","GLIBCPP_3.2"},
+#endif
 	{"_ZNKSs12find_last_ofEPKcj","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNKSs12find_last_ofEPKcj","GLIBCPP_3.2"},
@@ -157,9 +163,11 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNKSs8max_sizeEv","GLIBCPP_3.2"},
 #endif
-	{"_ZNKSt11logic_error4whatEv","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNKSt11logic_error4whatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt13runtime_error4whatEv","GLIBCPP_3.2"},
 #endif
 	{"_ZNKSt5ctypeIcE10do_scan_isEtPKcS2_","GLIBCPP_3.2"},
 #if __i386__
@@ -746,7 +754,6 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE8get_yearES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm","GLIBCPP_3.2"},
 #endif
-	{"_ZNKSt9exception4whatEv","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNKSt9exception4whatEv","GLIBCPP_3.2"},
 #endif
@@ -881,6 +888,12 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEaSEw","GLIBCPP_3.2"},
 #endif
+#if __i386__
+	{"_ZNSdD0Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSdD1Ev","GLIBCPP_3.2"},
+#endif
 	{"_ZNSs4swapERSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSs4swapERSs","GLIBCPP_3.2"},
@@ -1049,51 +1062,78 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSsixEj","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt10bad_typeidD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt10bad_typeidD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt10bad_typeidD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt10bad_typeidD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt10bad_typeidD2Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt10bad_typeidD2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11logic_errorC1ERKSs","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt10ctype_base5alnumE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5alphaE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5cntrlE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5digitE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5graphE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5lowerE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5printE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5punctE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5spaceE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base5upperE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ctype_base6xdigitE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIcLb0EE4intlE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIcLb1EE4intlE","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZNSt11logic_errorC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11logic_errorC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt11logic_errorC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11logic_errorD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt11logic_errorD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11logic_errorD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt11logic_errorD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11logic_errorD2Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt11logic_errorD2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11range_errorC1ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt11range_errorC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11range_errorC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt11range_errorC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11range_errorD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt11range_errorD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt11range_errorD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt11range_errorD1Ev","GLIBCPP_3.2"},
 #endif
@@ -1117,103 +1157,81 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt12ctype_bynameIcED2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12ctype_bynameIwEC1EPKcj","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12ctype_bynameIwEC1EPKcj","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12ctype_bynameIwEC2EPKcj","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12ctype_bynameIwEC2EPKcj","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12ctype_bynameIwED0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12ctype_bynameIwED0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12ctype_bynameIwED1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12ctype_bynameIwED1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12ctype_bynameIwED2Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12ctype_bynameIwED2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12domain_errorC1ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12domain_errorC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12domain_errorC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12domain_errorC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12domain_errorD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12domain_errorD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12domain_errorD1Ev","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt12domain_errorD0Ev","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZNSt12domain_errorD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12length_errorC1ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12length_errorC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12length_errorC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12length_errorC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12length_errorD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12length_errorD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12length_errorD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12length_errorD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12out_of_rangeC1ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12out_of_rangeC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12out_of_rangeC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12out_of_rangeC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12out_of_rangeD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12out_of_rangeD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt12out_of_rangeD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt12out_of_rangeD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt13bad_exceptionD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt13bad_exceptionD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt13bad_exceptionD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt13bad_exceptionD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt13bad_exceptionD2Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt13bad_exceptionD2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt13runtime_errorC1ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt13runtime_errorC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt13runtime_errorC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt13runtime_errorC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt13runtime_errorD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt13runtime_errorD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt13runtime_errorD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt13runtime_errorD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt13runtime_errorD2Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt13runtime_errorD2Ev","GLIBCPP_3.2"},
 #endif
@@ -1247,19 +1265,15 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt14collate_bynameIwED2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt14overflow_errorC1ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt14overflow_errorC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt14overflow_errorC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt14overflow_errorC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt14overflow_errorD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt14overflow_errorD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt14overflow_errorD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt14overflow_errorD1Ev","GLIBCPP_3.2"},
 #endif
@@ -1293,35 +1307,27 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt15numpunct_bynameIwED2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt15underflow_errorC1ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt15underflow_errorC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt15underflow_errorC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt15underflow_errorC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt15underflow_errorD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt15underflow_errorD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt15underflow_errorD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt15underflow_errorD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt16invalid_argumentC1ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt16invalid_argumentC1ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt16invalid_argumentC2ERKSs","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt16invalid_argumentC2ERKSs","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt16invalid_argumentD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt16invalid_argumentD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt16invalid_argumentD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt16invalid_argumentD1Ev","GLIBCPP_3.2"},
 #endif
@@ -1329,7 +1335,6 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt5ctypeIcE13classic_tableEv","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt5ctypeIcE2idE","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt5ctypeIcE2idE","GLIBCPP_3.2"},
 #endif
@@ -1361,7 +1366,6 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt5ctypeIcED2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt5ctypeIwE2idE","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt5ctypeIwE2idE","GLIBCPP_3.2"},
 #endif
@@ -1465,7 +1469,6 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt6localeD2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt7codecvtIcc11__mbstate_tE2idE","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt7codecvtIcc11__mbstate_tE2idE","GLIBCPP_3.2"},
 #endif
@@ -1489,7 +1492,6 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt7codecvtIcc11__mbstate_tED2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt7codecvtIwc11__mbstate_tE2idE","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt7codecvtIwc11__mbstate_tE2idE","GLIBCPP_3.2"},
 #endif
@@ -1513,15 +1515,12 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt7codecvtIwc11__mbstate_tED2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt8bad_castD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt8bad_castD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt8bad_castD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt8bad_castD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt8bad_castD2Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt8bad_castD2Ev","GLIBCPP_3.2"},
 #endif
@@ -1567,15 +1566,12 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt8numpunctIwED2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt9exceptionD0Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt9exceptionD0Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt9exceptionD1Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt9exceptionD1Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZNSt9exceptionD2Ev","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNSt9exceptionD2Ev","GLIBCPP_3.2"},
 #endif
@@ -1614,22 +1610,138 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZTIN10__cxxabiv116__enum_type_infoE","GLIBCPP_3.2"},
 #endif
-	{"_ZTIN10__cxxabiv117__class_type_infoE","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZTIN10__cxxabiv116__enum_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv117__array_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv117__array_type_infoE","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZTIN10__cxxabiv117__class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv117__class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv117__pbase_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv117__pbase_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv119__pointer_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv119__pointer_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv120__function_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv120__function_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv120__si_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv120__si_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv121__vmi_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv121__vmi_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv123__fundamental_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN10__cxxabiv129__pointer_to_member_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTIN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTINSt6locale5facetE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTINSt8ios_base7failureE","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTIPKa","GLIBCPP_3.2"},
 #endif
-	{"_ZTISt12ctype_bynameIcE","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZTISd","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISo","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt10bad_typeid","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt10ctype_base","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt10istrstream","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt10moneypunctIcLb0EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt10moneypunctIcLb1EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt11logic_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt11range_error","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZTISt12ctype_bynameIcE","GLIBCPP_3.2"},
 #endif
-	{"_ZTISt12ctype_bynameIwE","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZTISt12ctype_bynameIwE","GLIBCPP_3.2"},
 #endif
-	{"_ZTISt9type_info","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZTISt12domain_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt12length_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt12out_of_range","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt13bad_exception","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt13runtime_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt14overflow_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt15underflow_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt16invalid_argument","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt8bad_cast","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt9bad_alloc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt9exception","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZTISt9type_info","GLIBCPP_3.2"},
 #endif
@@ -1637,22 +1749,277 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTSN10__cxxabiv116__enum_type_infoE","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZTSN10__cxxabiv116__enum_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv117__array_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv117__array_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv117__class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv117__class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv117__pbase_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv117__pbase_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv119__pointer_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv119__pointer_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv120__function_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv120__function_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv120__si_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv120__si_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv121__vmi_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv121__vmi_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv123__fundamental_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN10__cxxabiv129__pointer_to_member_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSNSt6locale5facetE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSNSt8ios_base7failureE","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZTSPKa","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSd","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSo","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt10bad_typeid","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt10ctype_base","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt10istrstream","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt10moneypunctIcLb0EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt10moneypunctIcLb1EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt11logic_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt11range_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt12ctype_bynameIwE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt12domain_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt12length_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt12out_of_range","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt13bad_exception","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt13runtime_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt14overflow_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt15underflow_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt16invalid_argument","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt8bad_cast","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt9bad_alloc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt9exception","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSd","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSi","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTTSd","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTTSo","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTTSt10istrstream","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTVN10__cxxabiv116__enum_type_infoE","GLIBCPP_3.2"},
 #endif
-	{"_ZTVN10__cxxabiv117__class_type_infoE","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZTVN10__cxxabiv116__enum_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv117__array_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv117__array_type_infoE","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZTVN10__cxxabiv117__class_type_infoE","GLIBCPP_3.2"},
 #endif
-	{"_ZTVSt12ctype_bynameIcE","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZTVN10__cxxabiv117__class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv117__pbase_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv117__pbase_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv119__pointer_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv119__pointer_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv120__function_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv120__function_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv120__si_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv120__si_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv121__vmi_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv121__vmi_class_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv123__fundamental_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN10__cxxabiv129__pointer_to_member_type_infoE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVNSt6locale5facetE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVNSt8ios_base7failureE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSd","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSo","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt10bad_typeid","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt10istrstream","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt10moneypunctIcLb0EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt10moneypunctIcLb1EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt11logic_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt11range_error","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZTVSt12ctype_bynameIcE","GLIBCPP_3.2"},
 #endif
-	{"_ZTVSt12ctype_bynameIwE","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZTVSt12ctype_bynameIwE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt12domain_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt12length_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt12out_of_range","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt13bad_exception","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt13runtime_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt14overflow_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt15underflow_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt16invalid_argument","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt8bad_cast","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt9bad_alloc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt9exception","GLIBCPP_3.2"},
 #endif
 	{"_ZdaPv","GLIBCPP_3.2"},
 #if __i386__
@@ -2607,7 +2974,7 @@ struct classinfo _ZSt12domain_error_classinfo = {
 	"_ZSt12domain_error",
 	"_ZTVSt12domain_error",
 	"_ZTISt12domain_error",
-	"_ZTISt11logic_error",
+	"",
 	2,
 	0,
 	0,
@@ -2644,7 +3011,7 @@ struct classinfo _ZSt12length_error_classinfo = {
 	"_ZSt12length_error",
 	"_ZTVSt12length_error",
 	"_ZTISt12length_error",
-	"_ZTISt11logic_error",
+	"",
 	2,
 	0,
 	0,
@@ -2681,7 +3048,7 @@ struct classinfo _ZSt12out_of_range_classinfo = {
 	"_ZSt12out_of_range",
 	"_ZTVSt12out_of_range",
 	"_ZTISt12out_of_range",
-	"_ZTISt11logic_error",
+	"",
 	2,
 	0,
 	0,
@@ -2761,7 +3128,7 @@ struct classinfo _ZSt13bad_exception_classinfo = {
 	"_ZSt13bad_exception",
 	"_ZTVSt13bad_exception",
 	"_ZTISt13bad_exception",
-	"_ZTISt9exception",
+	"",
 	2,
 	0,
 	0,
@@ -2970,7 +3337,7 @@ struct classinfo _ZSt13runtime_error_classinfo = {
 	"_ZSt13runtime_error",
 	"_ZTVSt13runtime_error",
 	"_ZTISt13runtime_error",
-	"_ZTISt9exception",
+	"",
 	2,
 	0,
 	0,
@@ -3339,7 +3706,7 @@ struct classinfo _ZSt14overflow_error_classinfo = {
 	"_ZSt14overflow_error",
 	"_ZTVSt14overflow_error",
 	"_ZTISt14overflow_error",
-	"_ZTISt13runtime_error",
+	"",
 	2,
 	0,
 	0,
@@ -3778,7 +4145,7 @@ struct classinfo _ZSt15underflow_error_classinfo = {
 	"_ZSt15underflow_error",
 	"_ZTVSt15underflow_error",
 	"_ZTISt15underflow_error",
-	"_ZTISt13runtime_error",
+	"",
 	2,
 	0,
 	0,
@@ -3815,7 +4182,7 @@ struct classinfo _ZSt16invalid_argument_classinfo = {
 	"_ZSt16invalid_argument",
 	"_ZTVSt16invalid_argument",
 	"_ZTISt16invalid_argument",
-	"_ZTISt11logic_error",
+	"",
 	2,
 	0,
 	0,
@@ -4528,7 +4895,7 @@ struct classinfo _ZSt8bad_cast_classinfo = {
 	"_ZSt8bad_cast",
 	"_ZTVSt8bad_cast",
 	"_ZTISt8bad_cast",
-	"_ZTISt9exception",
+	"",
 	2,
 	0,
 	0,
@@ -4647,7 +5014,7 @@ struct classinfo _ZSt9bad_alloc_classinfo = {
 	"_ZSt9bad_alloc",
 	"_ZTVSt9bad_alloc",
 	"_ZTISt9bad_alloc",
-	"_ZTISt9exception",
+	"",
 	2,
 	0,
 	0,
