@@ -13,13 +13,13 @@ extern struct versym libc_so_6[];
 #if defined(__ia64__)
 extern struct versym libc_so_6_1[];
 #endif
+extern struct versym libcrypt_so_1[];
 #if defined(__ia64__)
 extern struct versym libcrypt_so_1[];
 #endif
 #if defined(__i386__)
 extern struct versym libcrypt_so_1[];
 #endif
-extern struct versym libcrypt_so_1[];
 extern struct versym libdl_so_2[];
 #if defined(__ia64__)
 extern struct versym libdl_so_2[];
