@@ -5,10 +5,12 @@
 #undef free
 static void(*funcptr) (void * ) = 0;
 
+extern void __libc_free(void * );
+
 void free (void * arg0 )
 {
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "free");
+		funcptr = __libc_free;
 	validate_NULL_TYPETYPE(arg0, "free");
 	funcptr(arg0);
 }
@@ -16,7 +18,7 @@ void free (void * arg0 )
 void lsb_free (void * arg0 )
 {
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "free");
+		funcptr = __libc_free;
 	funcptr(arg0);
 }
 

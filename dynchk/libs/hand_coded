@@ -10,3 +10,4 @@ mmap
 malloc
 calloc
 realloc
+free
