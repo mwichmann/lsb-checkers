@@ -20,14 +20,14 @@ int XcmsAllocNamedColor (Display * arg0 , Colormap arg1 , const char * arg2 , Xc
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsAllocNamedColor()");
-	validate_Rdaddress( arg0, "XcmsAllocNamedColor - arg0");
+	validate_RWaddress( arg0, "XcmsAllocNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XcmsAllocNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsAllocNamedColor - arg1");
 	validate_Rdaddress( arg2, "XcmsAllocNamedColor - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsAllocNamedColor - arg2");
-	validate_Rdaddress( arg3, "XcmsAllocNamedColor - arg3");
+	validate_RWaddress( arg3, "XcmsAllocNamedColor - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XcmsAllocNamedColor - arg3");
-	validate_Rdaddress( arg4, "XcmsAllocNamedColor - arg4");
+	validate_RWaddress( arg4, "XcmsAllocNamedColor - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XcmsAllocNamedColor - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XcmsAllocNamedColor - arg5");
 	}

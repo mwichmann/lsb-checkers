@@ -19,11 +19,11 @@ int XcmsCIELuvClipLuv (XcmsCCC arg0 , XcmsColor * arg1 , unsigned int arg2 , uns
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsCIELuvClipLuv()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELuvClipLuv - arg0");
-	validate_Rdaddress( arg1, "XcmsCIELuvClipLuv - arg1");
+	validate_RWaddress( arg1, "XcmsCIELuvClipLuv - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELuvClipLuv - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIELuvClipLuv - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XcmsCIELuvClipLuv - arg3");
-	validate_Rdaddress( arg4, "XcmsCIELuvClipLuv - arg4");
+	validate_RWaddress( arg4, "XcmsCIELuvClipLuv - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XcmsCIELuvClipLuv - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

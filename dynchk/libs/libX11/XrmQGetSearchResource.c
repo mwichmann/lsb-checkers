@@ -21,9 +21,9 @@ int XrmQGetSearchResource (XrmSearchList arg0 , XrmName arg1 , XrmClass arg2 , X
 		validate_NULL_TYPETYPE(  arg0, "XrmQGetSearchResource - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XrmQGetSearchResource - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XrmQGetSearchResource - arg2");
-	validate_Rdaddress( arg3, "XrmQGetSearchResource - arg3");
+	validate_RWaddress( arg3, "XrmQGetSearchResource - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XrmQGetSearchResource - arg3");
-	validate_Rdaddress( arg4, "XrmQGetSearchResource - arg4");
+	validate_RWaddress( arg4, "XrmQGetSearchResource - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XrmQGetSearchResource - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

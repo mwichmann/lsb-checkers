@@ -21,14 +21,14 @@ int XwcLookupString (XIC arg0 , XKeyPressedEvent * arg1 , wchar_t * arg2 , int a
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XwcLookupString()");
 		validate_NULL_TYPETYPE(  arg0, "XwcLookupString - arg0");
-	validate_Rdaddress( arg1, "XwcLookupString - arg1");
+	validate_RWaddress( arg1, "XwcLookupString - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XwcLookupString - arg1");
-	validate_Rdaddress( arg2, "XwcLookupString - arg2");
+	validate_RWaddress( arg2, "XwcLookupString - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XwcLookupString - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XwcLookupString - arg3");
-	validate_Rdaddress( arg4, "XwcLookupString - arg4");
+	validate_RWaddress( arg4, "XwcLookupString - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XwcLookupString - arg4");
-	validate_Rdaddress( arg5, "XwcLookupString - arg5");
+	validate_RWaddress( arg5, "XwcLookupString - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XwcLookupString - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

@@ -19,7 +19,7 @@ int XReparentWindow (Display * arg0 , Window arg1 , Window arg2 , int arg3 , int
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XReparentWindow()");
-	validate_Rdaddress( arg0, "XReparentWindow - arg0");
+	validate_RWaddress( arg0, "XReparentWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XReparentWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XReparentWindow - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XReparentWindow - arg2");

@@ -21,12 +21,12 @@ int XkbKeyTypesForCoreSymbols ( arg0, int arg1 , KeySym * arg2 , unsigned int ar
 	__lsb_output(5-__lsb_check_params, "XkbKeyTypesForCoreSymbols()");
 		validate_NULL_TYPETYPE(  arg0, "XkbKeyTypesForCoreSymbols - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbKeyTypesForCoreSymbols - arg1");
-	validate_Rdaddress( arg2, "XkbKeyTypesForCoreSymbols - arg2");
+	validate_RWaddress( arg2, "XkbKeyTypesForCoreSymbols - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XkbKeyTypesForCoreSymbols - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XkbKeyTypesForCoreSymbols - arg3");
-	validate_Rdaddress( arg4, "XkbKeyTypesForCoreSymbols - arg4");
+	validate_RWaddress( arg4, "XkbKeyTypesForCoreSymbols - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XkbKeyTypesForCoreSymbols - arg4");
-	validate_Rdaddress( arg5, "XkbKeyTypesForCoreSymbols - arg5");
+	validate_RWaddress( arg5, "XkbKeyTypesForCoreSymbols - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XkbKeyTypesForCoreSymbols - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

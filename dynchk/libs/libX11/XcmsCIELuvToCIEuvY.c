@@ -19,9 +19,9 @@ int XcmsCIELuvToCIEuvY (XcmsCCC arg0 , XcmsColor * arg1 , XcmsColor * arg2 , uns
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsCIELuvToCIEuvY()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELuvToCIEuvY - arg0");
-	validate_Rdaddress( arg1, "XcmsCIELuvToCIEuvY - arg1");
+	validate_RWaddress( arg1, "XcmsCIELuvToCIEuvY - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELuvToCIEuvY - arg1");
-	validate_Rdaddress( arg2, "XcmsCIELuvToCIEuvY - arg2");
+	validate_RWaddress( arg2, "XcmsCIELuvToCIEuvY - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIELuvToCIEuvY - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XcmsCIELuvToCIEuvY - arg3");
 	}

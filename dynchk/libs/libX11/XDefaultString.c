@@ -4,14 +4,14 @@
 #include <dlfcn.h>
 #include <X11/Xutil.h>
 #undef XDefaultString
-static const char *(*funcptr) (void) = 0;
+static const char *(*funcptr) () = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-const char * XDefaultString (void)
+const char * XDefaultString ()
 {
 	int reset_flag = __lsb_check_params;
-	char * ret_value  ;
+	const char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultString");
 	if(__lsb_check_params)

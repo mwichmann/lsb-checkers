@@ -19,12 +19,12 @@ int XRecolorCursor (Display * arg0 , Cursor arg1 , XColor * arg2 , XColor * arg3
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XRecolorCursor()");
-	validate_Rdaddress( arg0, "XRecolorCursor - arg0");
+	validate_RWaddress( arg0, "XRecolorCursor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XRecolorCursor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XRecolorCursor - arg1");
-	validate_Rdaddress( arg2, "XRecolorCursor - arg2");
+	validate_RWaddress( arg2, "XRecolorCursor - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XRecolorCursor - arg2");
-	validate_Rdaddress( arg3, "XRecolorCursor - arg3");
+	validate_RWaddress( arg3, "XRecolorCursor - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XRecolorCursor - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

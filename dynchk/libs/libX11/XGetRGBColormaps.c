@@ -20,13 +20,12 @@ int XGetRGBColormaps (Display * arg0 , Window arg1 , XStandardColormap * * arg2 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetRGBColormaps()");
-	validate_Rdaddress( arg0, "XGetRGBColormaps - arg0");
+	validate_RWaddress( arg0, "XGetRGBColormaps - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetRGBColormaps - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetRGBColormaps - arg1");
-	validate_Rdaddress( arg2, "XGetRGBColormaps - arg2");
-	validate_Rdaddress(* arg2, "XGetRGBColormaps - arg2");
+	validate_RWaddress( arg2, "XGetRGBColormaps - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetRGBColormaps - arg2");
-	validate_Rdaddress( arg3, "XGetRGBColormaps - arg3");
+	validate_RWaddress( arg3, "XGetRGBColormaps - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XGetRGBColormaps - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XGetRGBColormaps - arg4");
 	}

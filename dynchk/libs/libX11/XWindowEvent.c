@@ -19,11 +19,11 @@ int XWindowEvent (Display * arg0 , Window arg1 , long arg2 , XEvent * arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XWindowEvent()");
-	validate_Rdaddress( arg0, "XWindowEvent - arg0");
+	validate_RWaddress( arg0, "XWindowEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XWindowEvent - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XWindowEvent - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XWindowEvent - arg2");
-	validate_Rdaddress( arg3, "XWindowEvent - arg3");
+	validate_RWaddress( arg3, "XWindowEvent - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XWindowEvent - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

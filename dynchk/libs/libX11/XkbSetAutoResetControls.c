@@ -19,12 +19,12 @@ int XkbSetAutoResetControls (Display * arg0 , unsigned int arg1 , unsigned int *
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbSetAutoResetControls()");
-	validate_Rdaddress( arg0, "XkbSetAutoResetControls - arg0");
+	validate_RWaddress( arg0, "XkbSetAutoResetControls - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbSetAutoResetControls - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbSetAutoResetControls - arg1");
-	validate_Rdaddress( arg2, "XkbSetAutoResetControls - arg2");
+	validate_RWaddress( arg2, "XkbSetAutoResetControls - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XkbSetAutoResetControls - arg2");
-	validate_Rdaddress( arg3, "XkbSetAutoResetControls - arg3");
+	validate_RWaddress( arg3, "XkbSetAutoResetControls - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XkbSetAutoResetControls - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

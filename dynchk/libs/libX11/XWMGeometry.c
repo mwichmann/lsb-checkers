@@ -19,7 +19,7 @@ int XWMGeometry (Display * arg0 , int arg1 , const char * arg2 , const char * ar
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XWMGeometry()");
-	validate_Rdaddress( arg0, "XWMGeometry - arg0");
+	validate_RWaddress( arg0, "XWMGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XWMGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XWMGeometry - arg1");
 	validate_Rdaddress( arg2, "XWMGeometry - arg2");
@@ -27,17 +27,17 @@ int XWMGeometry (Display * arg0 , int arg1 , const char * arg2 , const char * ar
 	validate_Rdaddress( arg3, "XWMGeometry - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XWMGeometry - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XWMGeometry - arg4");
-	validate_Rdaddress( arg5, "XWMGeometry - arg5");
+	validate_RWaddress( arg5, "XWMGeometry - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XWMGeometry - arg5");
-	validate_Rdaddress( arg6, "XWMGeometry - arg6");
+	validate_RWaddress( arg6, "XWMGeometry - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XWMGeometry - arg6");
-	validate_Rdaddress( arg7, "XWMGeometry - arg7");
+	validate_RWaddress( arg7, "XWMGeometry - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XWMGeometry - arg7");
-	validate_Rdaddress( arg8, "XWMGeometry - arg8");
+	validate_RWaddress( arg8, "XWMGeometry - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XWMGeometry - arg8");
-	validate_Rdaddress( arg9, "XWMGeometry - arg9");
+	validate_RWaddress( arg9, "XWMGeometry - arg9");
 		validate_NULL_TYPETYPE(  arg9, "XWMGeometry - arg9");
-	validate_Rdaddress( arg10, "XWMGeometry - arg10");
+	validate_RWaddress( arg10, "XWMGeometry - arg10");
 		validate_NULL_TYPETYPE(  arg10, "XWMGeometry - arg10");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);

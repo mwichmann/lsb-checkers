@@ -20,10 +20,10 @@ int XGetWMIconName (Display * arg0 , Window arg1 , XTextProperty * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetWMIconName()");
-	validate_Rdaddress( arg0, "XGetWMIconName - arg0");
+	validate_RWaddress( arg0, "XGetWMIconName - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWMIconName - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWMIconName - arg1");
-	validate_Rdaddress( arg2, "XGetWMIconName - arg2");
+	validate_RWaddress( arg2, "XGetWMIconName - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetWMIconName - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -19,10 +19,10 @@ void XSetStandardColormap (Display * arg0 , Window arg1 , XStandardColormap * ar
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetStandardColormap()");
-	validate_Rdaddress( arg0, "XSetStandardColormap - arg0");
+	validate_RWaddress( arg0, "XSetStandardColormap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetStandardColormap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetStandardColormap - arg1");
-	validate_Rdaddress( arg2, "XSetStandardColormap - arg2");
+	validate_RWaddress( arg2, "XSetStandardColormap - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XSetStandardColormap - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XSetStandardColormap - arg3");
 	}

@@ -18,7 +18,7 @@ int XFreeGC (Display * arg0 , GC arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XFreeGC()");
-	validate_Rdaddress( arg0, "XFreeGC - arg0");
+	validate_RWaddress( arg0, "XFreeGC - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreeGC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFreeGC - arg1");
 	}

@@ -18,17 +18,17 @@ Display * XkbOpenDisplay (char * arg0 , int * arg1 , int * arg2 , int * arg3 , i
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbOpenDisplay()");
-	validate_Rdaddress( arg0, "XkbOpenDisplay - arg0");
+	validate_RWaddress( arg0, "XkbOpenDisplay - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbOpenDisplay - arg0");
-	validate_Rdaddress( arg1, "XkbOpenDisplay - arg1");
+	validate_RWaddress( arg1, "XkbOpenDisplay - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XkbOpenDisplay - arg1");
-	validate_Rdaddress( arg2, "XkbOpenDisplay - arg2");
+	validate_RWaddress( arg2, "XkbOpenDisplay - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XkbOpenDisplay - arg2");
-	validate_Rdaddress( arg3, "XkbOpenDisplay - arg3");
+	validate_RWaddress( arg3, "XkbOpenDisplay - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XkbOpenDisplay - arg3");
-	validate_Rdaddress( arg4, "XkbOpenDisplay - arg4");
+	validate_RWaddress( arg4, "XkbOpenDisplay - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XkbOpenDisplay - arg4");
-	validate_Rdaddress( arg5, "XkbOpenDisplay - arg5");
+	validate_RWaddress( arg5, "XkbOpenDisplay - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XkbOpenDisplay - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

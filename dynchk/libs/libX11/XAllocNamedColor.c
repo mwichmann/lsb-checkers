@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XAllocNamedColor
 static int(*funcptr) (Display * , Colormap , const char * , XColor * , XColor * ) = 0;
 
@@ -19,14 +19,14 @@ int XAllocNamedColor (Display * arg0 , Colormap arg1 , const char * arg2 , XColo
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XAllocNamedColor()");
-	validate_Rdaddress( arg0, "XAllocNamedColor - arg0");
+	validate_RWaddress( arg0, "XAllocNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAllocNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XAllocNamedColor - arg1");
 	validate_Rdaddress( arg2, "XAllocNamedColor - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XAllocNamedColor - arg2");
-	validate_Rdaddress( arg3, "XAllocNamedColor - arg3");
+	validate_RWaddress( arg3, "XAllocNamedColor - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XAllocNamedColor - arg3");
-	validate_Rdaddress( arg4, "XAllocNamedColor - arg4");
+	validate_RWaddress( arg4, "XAllocNamedColor - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XAllocNamedColor - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

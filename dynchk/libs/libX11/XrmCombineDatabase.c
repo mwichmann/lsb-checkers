@@ -18,7 +18,7 @@ void XrmCombineDatabase (XrmDatabase arg0 , XrmDatabase * arg1 , int arg2 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XrmCombineDatabase()");
 		validate_NULL_TYPETYPE(  arg0, "XrmCombineDatabase - arg0");
-	validate_Rdaddress( arg1, "XrmCombineDatabase - arg1");
+	validate_RWaddress( arg1, "XrmCombineDatabase - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XrmCombineDatabase - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XrmCombineDatabase - arg2");
 	}

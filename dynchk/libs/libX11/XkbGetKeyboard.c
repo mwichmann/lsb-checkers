@@ -19,7 +19,7 @@ extern int __lsb_output(int, char*, ...);
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbGetKeyboard()");
-	validate_Rdaddress( arg0, "XkbGetKeyboard - arg0");
+	validate_RWaddress( arg0, "XkbGetKeyboard - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetKeyboard - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbGetKeyboard - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbGetKeyboard - arg2");

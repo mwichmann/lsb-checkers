@@ -22,7 +22,7 @@ extern int __lsb_output(int, char*, ...);
 		validate_NULL_TYPETYPE(  arg1, "XkbChangeTypesOfKey - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbChangeTypesOfKey - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XkbChangeTypesOfKey - arg3");
-	validate_Rdaddress( arg4, "XkbChangeTypesOfKey - arg4");
+	validate_RWaddress( arg4, "XkbChangeTypesOfKey - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XkbChangeTypesOfKey - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XkbChangeTypesOfKey - arg5");
 	}

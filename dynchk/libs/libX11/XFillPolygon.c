@@ -19,11 +19,11 @@ int XFillPolygon (Display * arg0 , Drawable arg1 , GC arg2 , XPoint * arg3 , int
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XFillPolygon()");
-	validate_Rdaddress( arg0, "XFillPolygon - arg0");
+	validate_RWaddress( arg0, "XFillPolygon - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFillPolygon - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFillPolygon - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XFillPolygon - arg2");
-	validate_Rdaddress( arg3, "XFillPolygon - arg3");
+	validate_RWaddress( arg3, "XFillPolygon - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XFillPolygon - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XFillPolygon - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XFillPolygon - arg5");

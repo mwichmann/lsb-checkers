@@ -19,7 +19,7 @@ int XkbLatchModifiers (Display * arg0 , unsigned int arg1 , unsigned int arg2 , 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbLatchModifiers()");
-	validate_Rdaddress( arg0, "XkbLatchModifiers - arg0");
+	validate_RWaddress( arg0, "XkbLatchModifiers - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbLatchModifiers - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbLatchModifiers - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbLatchModifiers - arg2");

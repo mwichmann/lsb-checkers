@@ -23,10 +23,9 @@ int XrmGetResource (XrmDatabase arg0 , const char * arg1 , const char * arg2 , c
 		validate_NULL_TYPETYPE(  arg1, "XrmGetResource - arg1");
 	validate_Rdaddress( arg2, "XrmGetResource - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XrmGetResource - arg2");
-	validate_Rdaddress( arg3, "XrmGetResource - arg3");
-	validate_Rdaddress(* arg3, "XrmGetResource - arg3");
+	validate_RWaddress( arg3, "XrmGetResource - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XrmGetResource - arg3");
-	validate_Rdaddress( arg4, "XrmGetResource - arg4");
+	validate_RWaddress( arg4, "XrmGetResource - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XrmGetResource - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -19,11 +19,11 @@ int XkbUseExtension (Display * arg0 , int * arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbUseExtension()");
-	validate_Rdaddress( arg0, "XkbUseExtension - arg0");
+	validate_RWaddress( arg0, "XkbUseExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbUseExtension - arg0");
-	validate_Rdaddress( arg1, "XkbUseExtension - arg1");
+	validate_RWaddress( arg1, "XkbUseExtension - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XkbUseExtension - arg1");
-	validate_Rdaddress( arg2, "XkbUseExtension - arg2");
+	validate_RWaddress( arg2, "XkbUseExtension - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XkbUseExtension - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

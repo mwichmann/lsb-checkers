@@ -19,11 +19,11 @@ int XFillArcs (Display * arg0 , Drawable arg1 , GC arg2 , XArc * arg3 , int arg4
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XFillArcs()");
-	validate_Rdaddress( arg0, "XFillArcs - arg0");
+	validate_RWaddress( arg0, "XFillArcs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFillArcs - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFillArcs - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XFillArcs - arg2");
-	validate_Rdaddress( arg3, "XFillArcs - arg3");
+	validate_RWaddress( arg3, "XFillArcs - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XFillArcs - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XFillArcs - arg4");
 	}

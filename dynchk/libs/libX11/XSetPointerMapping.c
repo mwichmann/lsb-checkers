@@ -18,7 +18,7 @@ int XSetPointerMapping (Display * arg0 , const unsigned char * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetPointerMapping()");
-	validate_Rdaddress( arg0, "XSetPointerMapping - arg0");
+	validate_RWaddress( arg0, "XSetPointerMapping - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetPointerMapping - arg0");
 	validate_Rdaddress( arg1, "XSetPointerMapping - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XSetPointerMapping - arg1");

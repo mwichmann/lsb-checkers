@@ -20,7 +20,7 @@ XWMHints * XGetWMHints (Display * arg0 , Window arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetWMHints()");
-	validate_Rdaddress( arg0, "XGetWMHints - arg0");
+	validate_RWaddress( arg0, "XGetWMHints - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWMHints - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWMHints - arg1");
 	}

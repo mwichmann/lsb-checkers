@@ -22,9 +22,9 @@ int XmbTextExtents (XFontSet arg0 , const char * arg1 , int arg2 , XRectangle * 
 	validate_Rdaddress( arg1, "XmbTextExtents - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XmbTextExtents - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XmbTextExtents - arg2");
-	validate_Rdaddress( arg3, "XmbTextExtents - arg3");
+	validate_RWaddress( arg3, "XmbTextExtents - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XmbTextExtents - arg3");
-	validate_Rdaddress( arg4, "XmbTextExtents - arg4");
+	validate_RWaddress( arg4, "XmbTextExtents - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XmbTextExtents - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -18,7 +18,7 @@ int XSetLineAttributes (Display * arg0 , GC arg1 , unsigned int arg2 , int arg3 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetLineAttributes()");
-	validate_Rdaddress( arg0, "XSetLineAttributes - arg0");
+	validate_RWaddress( arg0, "XSetLineAttributes - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetLineAttributes - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetLineAttributes - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSetLineAttributes - arg2");

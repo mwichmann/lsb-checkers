@@ -19,13 +19,12 @@ int XGetWMProtocols (Display * arg0 , Window arg1 , Atom * * arg2 , int * arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetWMProtocols()");
-	validate_Rdaddress( arg0, "XGetWMProtocols - arg0");
+	validate_RWaddress( arg0, "XGetWMProtocols - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWMProtocols - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWMProtocols - arg1");
-	validate_Rdaddress( arg2, "XGetWMProtocols - arg2");
-	validate_Rdaddress(* arg2, "XGetWMProtocols - arg2");
+	validate_RWaddress( arg2, "XGetWMProtocols - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetWMProtocols - arg2");
-	validate_Rdaddress( arg3, "XGetWMProtocols - arg3");
+	validate_RWaddress( arg3, "XGetWMProtocols - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XGetWMProtocols - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

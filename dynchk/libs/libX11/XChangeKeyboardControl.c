@@ -18,10 +18,10 @@ int XChangeKeyboardControl (Display * arg0 , unsigned long arg1 , XKeyboardContr
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XChangeKeyboardControl()");
-	validate_Rdaddress( arg0, "XChangeKeyboardControl - arg0");
+	validate_RWaddress( arg0, "XChangeKeyboardControl - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XChangeKeyboardControl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XChangeKeyboardControl - arg1");
-	validate_Rdaddress( arg2, "XChangeKeyboardControl - arg2");
+	validate_RWaddress( arg2, "XChangeKeyboardControl - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XChangeKeyboardControl - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

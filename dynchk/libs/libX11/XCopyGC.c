@@ -18,7 +18,7 @@ int XCopyGC (Display * arg0 , GC arg1 , unsigned long arg2 , GC arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCopyGC()");
-	validate_Rdaddress( arg0, "XCopyGC - arg0");
+	validate_RWaddress( arg0, "XCopyGC - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCopyGC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCopyGC - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XCopyGC - arg2");

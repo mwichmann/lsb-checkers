@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XListInstalledColormaps
 static Colormap *(*funcptr) (Display * , Window , int * ) = 0;
 
@@ -19,10 +19,10 @@ Colormap * XListInstalledColormaps (Display * arg0 , Window arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XListInstalledColormaps()");
-	validate_Rdaddress( arg0, "XListInstalledColormaps - arg0");
+	validate_RWaddress( arg0, "XListInstalledColormaps - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XListInstalledColormaps - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XListInstalledColormaps - arg1");
-	validate_Rdaddress( arg2, "XListInstalledColormaps - arg2");
+	validate_RWaddress( arg2, "XListInstalledColormaps - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XListInstalledColormaps - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -19,12 +19,12 @@ XVisualInfo * XGetVisualInfo (Display * arg0 , long arg1 , XVisualInfo * arg2 , 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetVisualInfo()");
-	validate_Rdaddress( arg0, "XGetVisualInfo - arg0");
+	validate_RWaddress( arg0, "XGetVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetVisualInfo - arg1");
-	validate_Rdaddress( arg2, "XGetVisualInfo - arg2");
+	validate_RWaddress( arg2, "XGetVisualInfo - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetVisualInfo - arg2");
-	validate_Rdaddress( arg3, "XGetVisualInfo - arg3");
+	validate_RWaddress( arg3, "XGetVisualInfo - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XGetVisualInfo - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

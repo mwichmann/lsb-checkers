@@ -18,7 +18,7 @@ void XkbNoteNameChanges ( arg0, XkbNamesNotifyEvent * arg1 , unsigned int arg2 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbNoteNameChanges()");
 		validate_NULL_TYPETYPE(  arg0, "XkbNoteNameChanges - arg0");
-	validate_Rdaddress( arg1, "XkbNoteNameChanges - arg1");
+	validate_RWaddress( arg1, "XkbNoteNameChanges - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XkbNoteNameChanges - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbNoteNameChanges - arg2");
 	}

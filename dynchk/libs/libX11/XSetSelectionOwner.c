@@ -19,7 +19,7 @@ int XSetSelectionOwner (Display * arg0 , Atom arg1 , Window arg2 , Time arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetSelectionOwner()");
-	validate_Rdaddress( arg0, "XSetSelectionOwner - arg0");
+	validate_RWaddress( arg0, "XSetSelectionOwner - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetSelectionOwner - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetSelectionOwner - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSetSelectionOwner - arg2");

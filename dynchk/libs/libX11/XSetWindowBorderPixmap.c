@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XSetWindowBorderPixmap
 static int(*funcptr) (Display * , Window , Pixmap ) = 0;
 
@@ -19,7 +19,7 @@ int XSetWindowBorderPixmap (Display * arg0 , Window arg1 , Pixmap arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetWindowBorderPixmap()");
-	validate_Rdaddress( arg0, "XSetWindowBorderPixmap - arg0");
+	validate_RWaddress( arg0, "XSetWindowBorderPixmap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetWindowBorderPixmap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetWindowBorderPixmap - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSetWindowBorderPixmap - arg2");

@@ -19,22 +19,21 @@ void XmbSetWMProperties (Display * arg0 , Window arg1 , const char * arg2 , cons
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XmbSetWMProperties()");
-	validate_Rdaddress( arg0, "XmbSetWMProperties - arg0");
+	validate_RWaddress( arg0, "XmbSetWMProperties - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XmbSetWMProperties - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XmbSetWMProperties - arg1");
 	validate_Rdaddress( arg2, "XmbSetWMProperties - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XmbSetWMProperties - arg2");
 	validate_Rdaddress( arg3, "XmbSetWMProperties - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XmbSetWMProperties - arg3");
-	validate_Rdaddress( arg4, "XmbSetWMProperties - arg4");
-	validate_Rdaddress(* arg4, "XmbSetWMProperties - arg4");
+	validate_RWaddress( arg4, "XmbSetWMProperties - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XmbSetWMProperties - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XmbSetWMProperties - arg5");
-	validate_Rdaddress( arg6, "XmbSetWMProperties - arg6");
+	validate_RWaddress( arg6, "XmbSetWMProperties - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XmbSetWMProperties - arg6");
-	validate_Rdaddress( arg7, "XmbSetWMProperties - arg7");
+	validate_RWaddress( arg7, "XmbSetWMProperties - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XmbSetWMProperties - arg7");
-	validate_Rdaddress( arg8, "XmbSetWMProperties - arg8");
+	validate_RWaddress( arg8, "XmbSetWMProperties - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XmbSetWMProperties - arg8");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);

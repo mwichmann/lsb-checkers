@@ -19,10 +19,10 @@ Colormap XCreateColormap (Display * arg0 , Window arg1 , Visual * arg2 , int arg
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCreateColormap()");
-	validate_Rdaddress( arg0, "XCreateColormap - arg0");
+	validate_RWaddress( arg0, "XCreateColormap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateColormap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreateColormap - arg1");
-	validate_Rdaddress( arg2, "XCreateColormap - arg2");
+	validate_RWaddress( arg2, "XCreateColormap - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XCreateColormap - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XCreateColormap - arg3");
 	}

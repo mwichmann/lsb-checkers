@@ -19,11 +19,11 @@ int XcmsConvertColors (XcmsCCC arg0 , XcmsColor * arg1 , unsigned int arg2 , Xcm
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsConvertColors()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsConvertColors - arg0");
-	validate_Rdaddress( arg1, "XcmsConvertColors - arg1");
+	validate_RWaddress( arg1, "XcmsConvertColors - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XcmsConvertColors - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XcmsConvertColors - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XcmsConvertColors - arg3");
-	validate_Rdaddress( arg4, "XcmsConvertColors - arg4");
+	validate_RWaddress( arg4, "XcmsConvertColors - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XcmsConvertColors - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -18,13 +18,13 @@ int XUnregisterIMInstantiateCallback (Display * arg0 , struct _XrmHashBucketRec 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XUnregisterIMInstantiateCallback()");
-	validate_Rdaddress( arg0, "XUnregisterIMInstantiateCallback - arg0");
+	validate_RWaddress( arg0, "XUnregisterIMInstantiateCallback - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XUnregisterIMInstantiateCallback - arg0");
-	validate_Rdaddress( arg1, "XUnregisterIMInstantiateCallback - arg1");
+	validate_RWaddress( arg1, "XUnregisterIMInstantiateCallback - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XUnregisterIMInstantiateCallback - arg1");
-	validate_Rdaddress( arg2, "XUnregisterIMInstantiateCallback - arg2");
+	validate_RWaddress( arg2, "XUnregisterIMInstantiateCallback - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XUnregisterIMInstantiateCallback - arg2");
-	validate_Rdaddress( arg3, "XUnregisterIMInstantiateCallback - arg3");
+	validate_RWaddress( arg3, "XUnregisterIMInstantiateCallback - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XUnregisterIMInstantiateCallback - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XUnregisterIMInstantiateCallback - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XUnregisterIMInstantiateCallback - arg5");

@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/Xlib.h>
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XCreateBitmapFromData
 static Pixmap(*funcptr) (Display * , Drawable , const char * , unsigned int , unsigned int ) = 0;
 
@@ -19,7 +19,7 @@ Pixmap XCreateBitmapFromData (Display * arg0 , Drawable arg1 , const char * arg2
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCreateBitmapFromData()");
-	validate_Rdaddress( arg0, "XCreateBitmapFromData - arg0");
+	validate_RWaddress( arg0, "XCreateBitmapFromData - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateBitmapFromData - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreateBitmapFromData - arg1");
 	validate_Rdaddress( arg2, "XCreateBitmapFromData - arg2");

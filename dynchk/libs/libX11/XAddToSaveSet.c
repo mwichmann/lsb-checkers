@@ -19,7 +19,7 @@ int XAddToSaveSet (Display * arg0 , Window arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XAddToSaveSet()");
-	validate_Rdaddress( arg0, "XAddToSaveSet - arg0");
+	validate_RWaddress( arg0, "XAddToSaveSet - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAddToSaveSet - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XAddToSaveSet - arg1");
 	}

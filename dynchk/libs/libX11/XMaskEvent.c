@@ -18,10 +18,10 @@ int XMaskEvent (Display * arg0 , long arg1 , XEvent * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XMaskEvent()");
-	validate_Rdaddress( arg0, "XMaskEvent - arg0");
+	validate_RWaddress( arg0, "XMaskEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XMaskEvent - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XMaskEvent - arg1");
-	validate_Rdaddress( arg2, "XMaskEvent - arg2");
+	validate_RWaddress( arg2, "XMaskEvent - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XMaskEvent - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

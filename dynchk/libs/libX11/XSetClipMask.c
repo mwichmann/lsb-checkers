@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XSetClipMask
 static int(*funcptr) (Display * , GC , Pixmap ) = 0;
 
@@ -19,7 +19,7 @@ int XSetClipMask (Display * arg0 , GC arg1 , Pixmap arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetClipMask()");
-	validate_Rdaddress( arg0, "XSetClipMask - arg0");
+	validate_RWaddress( arg0, "XSetClipMask - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetClipMask - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetClipMask - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSetClipMask - arg2");

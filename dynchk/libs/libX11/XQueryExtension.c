@@ -18,15 +18,15 @@ int XQueryExtension (Display * arg0 , const char * arg1 , int * arg2 , int * arg
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XQueryExtension()");
-	validate_Rdaddress( arg0, "XQueryExtension - arg0");
+	validate_RWaddress( arg0, "XQueryExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XQueryExtension - arg0");
 	validate_Rdaddress( arg1, "XQueryExtension - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XQueryExtension - arg1");
-	validate_Rdaddress( arg2, "XQueryExtension - arg2");
+	validate_RWaddress( arg2, "XQueryExtension - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XQueryExtension - arg2");
-	validate_Rdaddress( arg3, "XQueryExtension - arg3");
+	validate_RWaddress( arg3, "XQueryExtension - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XQueryExtension - arg3");
-	validate_Rdaddress( arg4, "XQueryExtension - arg4");
+	validate_RWaddress( arg4, "XQueryExtension - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XQueryExtension - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

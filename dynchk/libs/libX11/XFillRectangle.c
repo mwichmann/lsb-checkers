@@ -19,7 +19,7 @@ int XFillRectangle (Display * arg0 , Drawable arg1 , GC arg2 , int arg3 , int ar
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XFillRectangle()");
-	validate_Rdaddress( arg0, "XFillRectangle - arg0");
+	validate_RWaddress( arg0, "XFillRectangle - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFillRectangle - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFillRectangle - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XFillRectangle - arg2");

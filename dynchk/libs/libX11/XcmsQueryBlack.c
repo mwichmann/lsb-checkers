@@ -20,7 +20,7 @@ int XcmsQueryBlack (XcmsCCC arg0 , XcmsColorFormat arg1 , XcmsColor * arg2 )
 	__lsb_output(5-__lsb_check_params, "XcmsQueryBlack()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsQueryBlack - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsQueryBlack - arg1");
-	validate_Rdaddress( arg2, "XcmsQueryBlack - arg2");
+	validate_RWaddress( arg2, "XcmsQueryBlack - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsQueryBlack - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/Xlib.h>
 #include <X11/Xcms.h>
+#include <X11/Xlib.h>
 #undef XcmsSetWhiteAdjustProc
 static XcmsWhiteAdjustProc(*funcptr) (XcmsCCC , XcmsWhiteAdjustProc , XPointer ) = 0;
 

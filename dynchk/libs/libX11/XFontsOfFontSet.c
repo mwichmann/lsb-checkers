@@ -19,13 +19,9 @@ int XFontsOfFontSet (XFontSet arg0 , XFontStruct * * * arg1 , char * * * arg2 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XFontsOfFontSet()");
 		validate_NULL_TYPETYPE(  arg0, "XFontsOfFontSet - arg0");
-	validate_Rdaddress( arg1, "XFontsOfFontSet - arg1");
-	validate_Rdaddress(* arg1, "XFontsOfFontSet - arg1");
-	validate_Rdaddress(** arg1, "XFontsOfFontSet - arg1");
+	validate_RWaddress( arg1, "XFontsOfFontSet - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XFontsOfFontSet - arg1");
-	validate_Rdaddress( arg2, "XFontsOfFontSet - arg2");
-	validate_Rdaddress(* arg2, "XFontsOfFontSet - arg2");
-	validate_Rdaddress(** arg2, "XFontsOfFontSet - arg2");
+	validate_RWaddress( arg2, "XFontsOfFontSet - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XFontsOfFontSet - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

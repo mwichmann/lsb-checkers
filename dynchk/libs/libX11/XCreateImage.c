@@ -18,14 +18,14 @@ XImage * XCreateImage (Display * arg0 , Visual * arg1 , unsigned int arg2 , int 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCreateImage()");
-	validate_Rdaddress( arg0, "XCreateImage - arg0");
+	validate_RWaddress( arg0, "XCreateImage - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateImage - arg0");
-	validate_Rdaddress( arg1, "XCreateImage - arg1");
+	validate_RWaddress( arg1, "XCreateImage - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XCreateImage - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XCreateImage - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XCreateImage - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XCreateImage - arg4");
-	validate_Rdaddress( arg5, "XCreateImage - arg5");
+	validate_RWaddress( arg5, "XCreateImage - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XCreateImage - arg5");
 		validate_NULL_TYPETYPE(  arg6, "XCreateImage - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XCreateImage - arg7");

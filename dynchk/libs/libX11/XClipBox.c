@@ -20,7 +20,7 @@ int XClipBox (Region arg0 , XRectangle * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XClipBox()");
 		validate_NULL_TYPETYPE(  arg0, "XClipBox - arg0");
-	validate_Rdaddress( arg1, "XClipBox - arg1");
+	validate_RWaddress( arg1, "XClipBox - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XClipBox - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

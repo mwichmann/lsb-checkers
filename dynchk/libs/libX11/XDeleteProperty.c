@@ -19,7 +19,7 @@ int XDeleteProperty (Display * arg0 , Window arg1 , Atom arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XDeleteProperty()");
-	validate_Rdaddress( arg0, "XDeleteProperty - arg0");
+	validate_RWaddress( arg0, "XDeleteProperty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDeleteProperty - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDeleteProperty - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XDeleteProperty - arg2");

@@ -19,7 +19,7 @@ int XSetWindowColormap (Display * arg0 , Window arg1 , Colormap arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetWindowColormap()");
-	validate_Rdaddress( arg0, "XSetWindowColormap - arg0");
+	validate_RWaddress( arg0, "XSetWindowColormap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetWindowColormap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetWindowColormap - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSetWindowColormap - arg2");

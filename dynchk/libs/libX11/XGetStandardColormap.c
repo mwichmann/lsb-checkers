@@ -20,10 +20,10 @@ int XGetStandardColormap (Display * arg0 , Window arg1 , XStandardColormap * arg
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetStandardColormap()");
-	validate_Rdaddress( arg0, "XGetStandardColormap - arg0");
+	validate_RWaddress( arg0, "XGetStandardColormap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetStandardColormap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetStandardColormap - arg1");
-	validate_Rdaddress( arg2, "XGetStandardColormap - arg2");
+	validate_RWaddress( arg2, "XGetStandardColormap - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetStandardColormap - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XGetStandardColormap - arg3");
 	}

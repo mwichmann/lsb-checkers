@@ -19,7 +19,7 @@ Window XCreateWindow (Display * arg0 , Window arg1 , int arg2 , int arg3 , unsig
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCreateWindow()");
-	validate_Rdaddress( arg0, "XCreateWindow - arg0");
+	validate_RWaddress( arg0, "XCreateWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreateWindow - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XCreateWindow - arg2");
@@ -30,11 +30,11 @@ Window XCreateWindow (Display * arg0 , Window arg1 , int arg2 , int arg3 , unsig
 		validate_NULL_TYPETYPE(  arg7, "XCreateWindow - arg7");
 		validate_NULL_TYPETYPE(  arg8, "XCreateWindow - arg8");
 		if( arg9 ) {
-	validate_Rdaddress( arg9, "XCreateWindow - arg9");
+	validate_RWaddress( arg9, "XCreateWindow - arg9");
 		}
 		validate_NULL_TYPETYPE(  arg9, "XCreateWindow - arg9");
 		validate_NULL_TYPETYPE(  arg10, "XCreateWindow - arg10");
-	validate_Rdaddress( arg11, "XCreateWindow - arg11");
+	validate_RWaddress( arg11, "XCreateWindow - arg11");
 		validate_NULL_TYPETYPE(  arg11, "XCreateWindow - arg11");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);

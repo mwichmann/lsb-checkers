@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/Xlib.h>
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #include <X11/Xcms.h>
 #undef XcmsCCCOfColormap
 static XcmsCCC(*funcptr) (Display * , Colormap ) = 0;
@@ -20,7 +20,7 @@ XcmsCCC XcmsCCCOfColormap (Display * arg0 , Colormap arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsCCCOfColormap()");
-	validate_Rdaddress( arg0, "XcmsCCCOfColormap - arg0");
+	validate_RWaddress( arg0, "XcmsCCCOfColormap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCCCOfColormap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCCCOfColormap - arg1");
 	}

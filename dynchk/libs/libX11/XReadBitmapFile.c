@@ -19,20 +19,20 @@ int XReadBitmapFile (Display * arg0 , Drawable arg1 , const char * arg2 , unsign
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XReadBitmapFile()");
-	validate_Rdaddress( arg0, "XReadBitmapFile - arg0");
+	validate_RWaddress( arg0, "XReadBitmapFile - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XReadBitmapFile - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XReadBitmapFile - arg1");
 	validate_Rdaddress( arg2, "XReadBitmapFile - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XReadBitmapFile - arg2");
-	validate_Rdaddress( arg3, "XReadBitmapFile - arg3");
+	validate_RWaddress( arg3, "XReadBitmapFile - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XReadBitmapFile - arg3");
-	validate_Rdaddress( arg4, "XReadBitmapFile - arg4");
+	validate_RWaddress( arg4, "XReadBitmapFile - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XReadBitmapFile - arg4");
-	validate_Rdaddress( arg5, "XReadBitmapFile - arg5");
+	validate_RWaddress( arg5, "XReadBitmapFile - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XReadBitmapFile - arg5");
-	validate_Rdaddress( arg6, "XReadBitmapFile - arg6");
+	validate_RWaddress( arg6, "XReadBitmapFile - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XReadBitmapFile - arg6");
-	validate_Rdaddress( arg7, "XReadBitmapFile - arg7");
+	validate_RWaddress( arg7, "XReadBitmapFile - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XReadBitmapFile - arg7");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);

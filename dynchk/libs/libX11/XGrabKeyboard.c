@@ -19,7 +19,7 @@ int XGrabKeyboard (Display * arg0 , Window arg1 , int arg2 , int arg3 , int arg4
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGrabKeyboard()");
-	validate_Rdaddress( arg0, "XGrabKeyboard - arg0");
+	validate_RWaddress( arg0, "XGrabKeyboard - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGrabKeyboard - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGrabKeyboard - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XGrabKeyboard - arg2");

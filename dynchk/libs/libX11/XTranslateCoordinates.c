@@ -19,17 +19,17 @@ int XTranslateCoordinates (Display * arg0 , Window arg1 , Window arg2 , int arg3
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XTranslateCoordinates()");
-	validate_Rdaddress( arg0, "XTranslateCoordinates - arg0");
+	validate_RWaddress( arg0, "XTranslateCoordinates - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XTranslateCoordinates - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XTranslateCoordinates - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XTranslateCoordinates - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XTranslateCoordinates - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XTranslateCoordinates - arg4");
-	validate_Rdaddress( arg5, "XTranslateCoordinates - arg5");
+	validate_RWaddress( arg5, "XTranslateCoordinates - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XTranslateCoordinates - arg5");
-	validate_Rdaddress( arg6, "XTranslateCoordinates - arg6");
+	validate_RWaddress( arg6, "XTranslateCoordinates - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XTranslateCoordinates - arg6");
-	validate_Rdaddress( arg7, "XTranslateCoordinates - arg7");
+	validate_RWaddress( arg7, "XTranslateCoordinates - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XTranslateCoordinates - arg7");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);

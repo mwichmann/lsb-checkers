@@ -19,10 +19,10 @@ int XkbGetIndicatorState (Display * arg0 , unsigned int arg1 , unsigned int * ar
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbGetIndicatorState()");
-	validate_Rdaddress( arg0, "XkbGetIndicatorState - arg0");
+	validate_RWaddress( arg0, "XkbGetIndicatorState - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetIndicatorState - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbGetIndicatorState - arg1");
-	validate_Rdaddress( arg2, "XkbGetIndicatorState - arg2");
+	validate_RWaddress( arg2, "XkbGetIndicatorState - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XkbGetIndicatorState - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

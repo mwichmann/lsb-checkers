@@ -20,7 +20,7 @@ int XkbVirtualModsToReal ( arg0, unsigned int arg1 , unsigned int * arg2 )
 	__lsb_output(5-__lsb_check_params, "XkbVirtualModsToReal()");
 		validate_NULL_TYPETYPE(  arg0, "XkbVirtualModsToReal - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbVirtualModsToReal - arg1");
-	validate_Rdaddress( arg2, "XkbVirtualModsToReal - arg2");
+	validate_RWaddress( arg2, "XkbVirtualModsToReal - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XkbVirtualModsToReal - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

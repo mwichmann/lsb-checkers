@@ -20,13 +20,13 @@ int XParseGeometry (const char * arg0 , int * arg1 , int * arg2 , unsigned int *
 	__lsb_output(5-__lsb_check_params, "XParseGeometry()");
 	validate_Rdaddress( arg0, "XParseGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XParseGeometry - arg0");
-	validate_Rdaddress( arg1, "XParseGeometry - arg1");
+	validate_RWaddress( arg1, "XParseGeometry - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XParseGeometry - arg1");
-	validate_Rdaddress( arg2, "XParseGeometry - arg2");
+	validate_RWaddress( arg2, "XParseGeometry - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XParseGeometry - arg2");
-	validate_Rdaddress( arg3, "XParseGeometry - arg3");
+	validate_RWaddress( arg3, "XParseGeometry - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XParseGeometry - arg3");
-	validate_Rdaddress( arg4, "XParseGeometry - arg4");
+	validate_RWaddress( arg4, "XParseGeometry - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XParseGeometry - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

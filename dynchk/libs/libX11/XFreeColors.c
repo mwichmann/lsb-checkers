@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XFreeColors
 static int(*funcptr) (Display * , Colormap , unsigned long * , int , unsigned long ) = 0;
 
@@ -19,10 +19,10 @@ int XFreeColors (Display * arg0 , Colormap arg1 , unsigned long * arg2 , int arg
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XFreeColors()");
-	validate_Rdaddress( arg0, "XFreeColors - arg0");
+	validate_RWaddress( arg0, "XFreeColors - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreeColors - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFreeColors - arg1");
-	validate_Rdaddress( arg2, "XFreeColors - arg2");
+	validate_RWaddress( arg2, "XFreeColors - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XFreeColors - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XFreeColors - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XFreeColors - arg4");

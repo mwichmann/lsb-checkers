@@ -19,7 +19,7 @@ int XcmsSetWhitePoint (XcmsCCC arg0 , XcmsColor * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsSetWhitePoint()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsSetWhitePoint - arg0");
-	validate_Rdaddress( arg1, "XcmsSetWhitePoint - arg1");
+	validate_RWaddress( arg1, "XcmsSetWhitePoint - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XcmsSetWhitePoint - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -18,7 +18,7 @@ int XSetClipOrigin (Display * arg0 , GC arg1 , int arg2 , int arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetClipOrigin()");
-	validate_Rdaddress( arg0, "XSetClipOrigin - arg0");
+	validate_RWaddress( arg0, "XSetClipOrigin - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetClipOrigin - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetClipOrigin - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSetClipOrigin - arg2");

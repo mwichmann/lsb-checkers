@@ -19,7 +19,7 @@ int XDefineCursor (Display * arg0 , Window arg1 , Cursor arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XDefineCursor()");
-	validate_Rdaddress( arg0, "XDefineCursor - arg0");
+	validate_RWaddress( arg0, "XDefineCursor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDefineCursor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDefineCursor - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XDefineCursor - arg2");

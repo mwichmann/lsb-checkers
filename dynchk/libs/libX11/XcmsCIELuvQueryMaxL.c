@@ -21,7 +21,7 @@ int XcmsCIELuvQueryMaxL (XcmsCCC arg0 , XcmsFloat arg1 , XcmsFloat arg2 , XcmsCo
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELuvQueryMaxL - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELuvQueryMaxL - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIELuvQueryMaxL - arg2");
-	validate_Rdaddress( arg3, "XcmsCIELuvQueryMaxL - arg3");
+	validate_RWaddress( arg3, "XcmsCIELuvQueryMaxL - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XcmsCIELuvQueryMaxL - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

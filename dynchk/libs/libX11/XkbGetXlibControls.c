@@ -19,7 +19,7 @@ unsigned int XkbGetXlibControls (Display * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbGetXlibControls()");
-	validate_Rdaddress( arg0, "XkbGetXlibControls - arg0");
+	validate_RWaddress( arg0, "XkbGetXlibControls - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetXlibControls - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -20,10 +20,10 @@ int XGetZoomHints (Display * arg0 , Window arg1 , XSizeHints * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetZoomHints()");
-	validate_Rdaddress( arg0, "XGetZoomHints - arg0");
+	validate_RWaddress( arg0, "XGetZoomHints - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetZoomHints - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetZoomHints - arg1");
-	validate_Rdaddress( arg2, "XGetZoomHints - arg2");
+	validate_RWaddress( arg2, "XGetZoomHints - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetZoomHints - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

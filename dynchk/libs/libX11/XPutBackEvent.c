@@ -18,9 +18,9 @@ int XPutBackEvent (Display * arg0 , XEvent * arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XPutBackEvent()");
-	validate_Rdaddress( arg0, "XPutBackEvent - arg0");
+	validate_RWaddress( arg0, "XPutBackEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XPutBackEvent - arg0");
-	validate_Rdaddress( arg1, "XPutBackEvent - arg1");
+	validate_RWaddress( arg1, "XPutBackEvent - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XPutBackEvent - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

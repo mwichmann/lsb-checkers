@@ -19,12 +19,12 @@ XTimeCoord * XGetMotionEvents (Display * arg0 , Window arg1 , Time arg2 , Time a
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetMotionEvents()");
-	validate_Rdaddress( arg0, "XGetMotionEvents - arg0");
+	validate_RWaddress( arg0, "XGetMotionEvents - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetMotionEvents - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetMotionEvents - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XGetMotionEvents - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XGetMotionEvents - arg3");
-	validate_Rdaddress( arg4, "XGetMotionEvents - arg4");
+	validate_RWaddress( arg4, "XGetMotionEvents - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XGetMotionEvents - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

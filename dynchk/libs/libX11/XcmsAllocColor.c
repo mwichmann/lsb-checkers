@@ -20,10 +20,10 @@ int XcmsAllocColor (Display * arg0 , Colormap arg1 , XcmsColor * arg2 , XcmsColo
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsAllocColor()");
-	validate_Rdaddress( arg0, "XcmsAllocColor - arg0");
+	validate_RWaddress( arg0, "XcmsAllocColor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XcmsAllocColor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsAllocColor - arg1");
-	validate_Rdaddress( arg2, "XcmsAllocColor - arg2");
+	validate_RWaddress( arg2, "XcmsAllocColor - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsAllocColor - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XcmsAllocColor - arg3");
 	}
