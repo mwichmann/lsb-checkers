@@ -80,6 +80,16 @@ typedef struct rpmhdrindex {
     } RpmHdrIndex;
 
 /*
+ * Require Flags.
+ */
+typedef enum {
+	RPMSENSE_LESS   = (1 << 1),
+	RPMSENSE_GREATER= (1 << 2),
+	RPMSENSE_EQUAL  = (1 << 3),
+	RPMSENSE_PREREQ = (1 << 6),
+	RPMSENSE_RPMLIB = (1 << 24), /* rpmlib(feature) dependency. */
+	} rpmRequireFlags;
+/*
  * An in memory representation of the RPM file.
  */
 typedef	struct	{
