@@ -1297,7 +1297,7 @@ struct versym libc_so_6[] = {
 	{"atoll","GLIBC_2.0"},
 #endif
 #if __ia64__
-	{"atoll","GLIBC_2.0"},
+	{"atoll","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"atoll","GLIBC_2.0"},
@@ -10774,7 +10774,7 @@ struct versym libc_so_6[] = {
 	{"vfscanf","GLIBC_2.0"},
 #endif
 #if __ia64__
-	{"vfscanf","GLIBC_2.0"},
+	{"vfscanf","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"vfscanf","GLIBC_2.0"},
@@ -10837,7 +10837,7 @@ struct versym libc_so_6[] = {
 	{"vscanf","GLIBC_2.0"},
 #endif
 #if __ia64__
-	{"vscanf","GLIBC_2.0"},
+	{"vscanf","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"vscanf","GLIBC_2.0"},
@@ -10885,7 +10885,7 @@ struct versym libc_so_6[] = {
 	{"vsscanf","GLIBC_2.0"},
 #endif
 #if __ia64__
-	{"vsscanf","GLIBC_2.0"},
+	{"vsscanf","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"vsscanf","GLIBC_2.0"},

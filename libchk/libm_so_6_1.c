@@ -1711,6 +1711,42 @@ struct versym libm_so_6_1[] = {
 	{"exp","GLIBC_2.0"},
 #endif
 #if __i386__
+	{"expf","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"expf","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"expf","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"expf","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"expf","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"expf","GLIBC_2.0"},
+#endif
+#if __i386__
+	{"expl","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"expl","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"expl","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"expl","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"expl","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"expl","GLIBC_2.0"},
+#endif
+#if __i386__
 	{"expm1","GLIBC_2.0"},
 #endif
 #if __ia64__
@@ -2821,6 +2857,42 @@ struct versym libm_so_6_1[] = {
 	{"log10","GLIBC_2.0"},
 #endif
 #if __i386__
+	{"log10f","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"log10f","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"log10f","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"log10f","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"log10f","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"log10f","GLIBC_2.0"},
+#endif
+#if __i386__
+	{"log10l","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"log10l","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"log10l","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"log10l","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"log10l","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"log10l","GLIBC_2.0"},
+#endif
+#if __i386__
 	{"log1p","GLIBC_2.0"},
 #endif
 #if __ia64__
@@ -2849,6 +2921,42 @@ struct versym libm_so_6_1[] = {
 #endif
 #if __s390__
 	{"logb","GLIBC_2.0"},
+#endif
+#if __i386__
+	{"logf","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"logf","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"logf","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"logf","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"logf","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"logf","GLIBC_2.0"},
+#endif
+#if __i386__
+	{"logl","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"logl","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"logl","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"logl","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"logl","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"logl","GLIBC_2.0"},
 #endif
 #if __i386__
 	{"lrint","GLIBC_2.1"},
