@@ -72,3 +72,7 @@ extern void checkRpmIdxOBSOLETEFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct t
 extern void checkRpmIdxCONFLICTFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxOBSOLETEVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxCONFLICTVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxPREIN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxPOSTIN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxPREUN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxPOSTUN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);

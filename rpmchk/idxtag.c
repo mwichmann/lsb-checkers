@@ -1000,57 +1000,77 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxPREINPROG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	hoffset;
-unsigned char	*name;
+int	htag, htype, hoffset, hcount;
+char	*name;
 
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-name=(char *)(file1->storeaddr+hoffset);
-
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+if( strcmp(name,"/bin/sh") != 0 ) {
+		fprintf(stderr,"Invalid RPMTAG_PREINPROG: expecting \"/bin/sh\"");
+		fprintf(stderr," but found %s\n", name );
+		}
 if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
-	fprintf(stderr,"Pre-install program: %s\n",name);
-fprintf(stderr,"Pre-install program not checked: %s\n",name);
+	fprintf(stderr,"Payload format: %s\n",name);
 }
 
 void
 checkRpmIdxPOSTINPROG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	hoffset;
-unsigned char	*name;
+int	htag, htype, hoffset, hcount;
+char	*name;
 
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-name=(char *)(file1->storeaddr+hoffset);
-
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+if( strcmp(name,"/bin/sh") != 0 ) {
+		fprintf(stderr,"Invalid RPMTAG_POSTINPROG: expecting \"/bin/sh\"");
+		fprintf(stderr," but found %s\n", name );
+		}
 if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
-	fprintf(stderr,"Post-install program: %s\n",name);
-fprintf(stderr,"Post-install program not checked: %s\n",name);
+	fprintf(stderr,"Payload format: %s\n",name);
 }
 
 void
 checkRpmIdxPREUNPROG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	hoffset;
-unsigned char	*name;
+int	htag, htype, hoffset, hcount;
+char	*name;
 
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-name=(char *)(file1->storeaddr+hoffset);
-
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+if( strcmp(name,"/bin/sh") != 0 ) {
+		fprintf(stderr,"Invalid RPMTAG_PREUNPROG: expecting \"/bin/sh\"");
+		fprintf(stderr," but found %s\n", name );
+		}
 if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
-	fprintf(stderr,"Pre-uninstall program: %s\n",name);
-fprintf(stderr,"Pre-uninstall program not checked: %s\n",name);
+	fprintf(stderr,"Payload format: %s\n",name);
 }
 
 void
 checkRpmIdxPOSTUNPROG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	hoffset;
-unsigned char	*name;
+int	htag, htype, hoffset, hcount;
+char	*name;
 
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-name=(char *)(file1->storeaddr+hoffset);
-
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+if( strcmp(name,"/bin/sh") != 0 ) {
+		fprintf(stderr,"Invalid RPMTAG_POSTUNPROG: expecting \"/bin/sh\"");
+		fprintf(stderr," but found %s\n", name );
+		}
 if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
-	fprintf(stderr,"Post-uninstall program: %s\n",name);
-fprintf(stderr,"Post-uninstall program not checked: %s\n",name);
+	fprintf(stderr,"Payload format: %s\n",name);
 }
 
 void
@@ -1426,3 +1446,59 @@ for(i=0;i<hcount;i++) {
 	}
 }
 
+void
+checkRpmIdxPREIN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+unsigned char	*prog;
+
+hoffset=ntohl(hidx->offset);
+prog=(char *)(file1->storeaddr+hoffset);
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Pre-install program: %s\n",prog);
+fprintf(stderr,"Pre-install program not checked: %s\n",prog);
+
+}
+
+void
+checkRpmIdxPOSTIN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+unsigned char	*prog;
+
+hoffset=ntohl(hidx->offset);
+prog=(char *)(file1->storeaddr+hoffset);
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Post-install program: %s\n",prog);
+fprintf(stderr,"Post-install program not checked: %s\n",prog);
+}
+
+void
+checkRpmIdxPREUN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+unsigned char	*prog;
+
+hoffset=ntohl(hidx->offset);
+prog=(char *)(file1->storeaddr+hoffset);
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Pre-uninstall program: %s\n",prog);
+fprintf(stderr,"Pre-uninstall program not checked: %s\n",prog);
+}
+
+void
+checkRpmIdxPOSTUN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+unsigned char	*prog;
+
+hoffset=ntohl(hidx->offset);
+prog=(char *)(file1->storeaddr+hoffset);
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Post-uninstall program: %s\n",prog);
+fprintf(stderr,"Post-uninstall program not checked: %s\n",prog);
+}
