@@ -693,16 +693,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SIOCGIFCONF
-	CompareConstant(SIOCGIFCONF,0x8912,3382,architecture)
-#else
-Msg( "Error: Constant not found: SIOCGIFCONF\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef SIOCGIFFLAGS
 	CompareConstant(SIOCGIFFLAGS,0x8913,3383,architecture)
 #else
