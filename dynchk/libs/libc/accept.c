@@ -19,9 +19,9 @@ int accept (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "accept()");
 		validate_filedescriptor(  arg0, "accept - arg0");
-	validate_Rdaddress( arg1, "accept - arg1");
+	validate_RWaddress( arg1, "accept - arg1");
 		validate_RWaddress(  arg1, "accept - arg1");
-	validate_Rdaddress( arg2, "accept - arg2");
+	validate_RWaddress( arg2, "accept - arg2");
 		validate_RWaddress(  arg2, "accept - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

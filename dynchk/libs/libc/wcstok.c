@@ -19,11 +19,11 @@ wchar_t * wcstok (wchar_t * arg0 , const wchar_t * arg1 , wchar_t * * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wcstok()");
-	validate_Rdaddress( arg0, "wcstok - arg0");
+	validate_RWaddress( arg0, "wcstok - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstok - arg0");
 	validate_Rdaddress( arg1, "wcstok - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcstok - arg1");
-	validate_Rdaddress( arg2, "wcstok - arg2");
+	validate_RWaddress( arg2, "wcstok - arg2");
 		validate_NULL_TYPETYPE(  arg2, "wcstok - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

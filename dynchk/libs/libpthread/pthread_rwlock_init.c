@@ -18,9 +18,9 @@ int pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "pthread_rwlock_init()");
-	validate_Rdaddress( arg0, "pthread_rwlock_init - arg0");
+	validate_RWaddress( arg0, "pthread_rwlock_init - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_init - arg0");
-	validate_Rdaddress( arg1, "pthread_rwlock_init - arg1");
+	validate_RWaddress( arg1, "pthread_rwlock_init - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_init - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

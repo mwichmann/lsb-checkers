@@ -20,9 +20,9 @@ char * ecvt (double arg0 , int arg1 , int * arg2 , int * arg3 )
 	__lsb_output(5-__lsb_check_params, "ecvt()");
 		validate_NULL_TYPETYPE(  arg0, "ecvt - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ecvt - arg1");
-	validate_Rdaddress( arg2, "ecvt - arg2");
+	validate_RWaddress( arg2, "ecvt - arg2");
 		validate_NULL_TYPETYPE(  arg2, "ecvt - arg2");
-	validate_Rdaddress( arg3, "ecvt - arg3");
+	validate_RWaddress( arg3, "ecvt - arg3");
 		validate_NULL_TYPETYPE(  arg3, "ecvt - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

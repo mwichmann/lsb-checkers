@@ -18,7 +18,7 @@ int pthread_condattr_setpshared (pthread_condattr_t * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "pthread_condattr_setpshared()");
-	validate_Rdaddress( arg0, "pthread_condattr_setpshared - arg0");
+	validate_RWaddress( arg0, "pthread_condattr_setpshared - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_condattr_setpshared - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pthread_condattr_setpshared - arg1");
 	}

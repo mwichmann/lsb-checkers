@@ -18,7 +18,7 @@ int cfsetospeed (struct termios * arg0 , speed_t arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "cfsetospeed()");
-	validate_Rdaddress( arg0, "cfsetospeed - arg0");
+	validate_RWaddress( arg0, "cfsetospeed - arg0");
 		validate_NULL_TYPETYPE(  arg0, "cfsetospeed - arg0");
 		validate_NULL_TYPETYPE(  arg1, "cfsetospeed - arg1");
 	}

@@ -21,9 +21,9 @@ int getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 
 		validate_NULL_TYPETYPE(  arg0, "getsockopt - arg0");
 		validate_NULL_TYPETYPE(  arg1, "getsockopt - arg1");
 		validate_NULL_TYPETYPE(  arg2, "getsockopt - arg2");
-	validate_Rdaddress( arg3, "getsockopt - arg3");
+	validate_RWaddress( arg3, "getsockopt - arg3");
 		validate_NULL_TYPETYPE(  arg3, "getsockopt - arg3");
-	validate_Rdaddress( arg4, "getsockopt - arg4");
+	validate_RWaddress( arg4, "getsockopt - arg4");
 		validate_NULL_TYPETYPE(  arg4, "getsockopt - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

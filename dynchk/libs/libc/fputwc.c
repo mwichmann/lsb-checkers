@@ -21,7 +21,7 @@ wint_t fputwc (wchar_t arg0 , FILE * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "fputwc()");
 		validate_NULL_TYPETYPE(  arg0, "fputwc - arg0");
-	validate_Rdaddress( arg1, "fputwc - arg1");
+	validate_RWaddress( arg1, "fputwc - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fputwc - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

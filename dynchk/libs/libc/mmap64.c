@@ -20,7 +20,7 @@ void * mmap64 (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off6
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "mmap64()");
-	validate_Rdaddress( arg0, "mmap64 - arg0");
+	validate_RWaddress( arg0, "mmap64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mmap64 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mmap64 - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mmap64 - arg2");

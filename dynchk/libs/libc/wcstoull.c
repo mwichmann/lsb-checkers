@@ -21,7 +21,7 @@ unsigned long long wcstoull (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 
 	__lsb_output(5-__lsb_check_params, "wcstoull()");
 	validate_Rdaddress( arg0, "wcstoull - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstoull - arg0");
-	validate_Rdaddress( arg1, "wcstoull - arg1");
+	validate_RWaddress( arg1, "wcstoull - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcstoull - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wcstoull - arg2");
 	}

@@ -20,7 +20,7 @@ int sigaltstack (const struct sigaltstack * arg0 , struct sigaltstack * arg1 )
 	__lsb_output(5-__lsb_check_params, "sigaltstack()");
 	validate_Rdaddress( arg0, "sigaltstack - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigaltstack - arg0");
-	validate_Rdaddress( arg1, "sigaltstack - arg1");
+	validate_RWaddress( arg1, "sigaltstack - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sigaltstack - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

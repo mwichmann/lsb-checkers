@@ -18,7 +18,7 @@ int pthread_cond_broadcast (pthread_cond_t * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "pthread_cond_broadcast()");
-	validate_Rdaddress( arg0, "pthread_cond_broadcast - arg0");
+	validate_RWaddress( arg0, "pthread_cond_broadcast - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_cond_broadcast - arg0");
 	}
 	ret_value = funcptr(arg0);

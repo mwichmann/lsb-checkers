@@ -18,10 +18,10 @@ int wattr_off (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wattr_off()");
-	validate_Rdaddress( arg0, "wattr_off - arg0");
+	validate_RWaddress( arg0, "wattr_off - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wattr_off - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wattr_off - arg1");
-	validate_Rdaddress( arg2, "wattr_off - arg2");
+	validate_RWaddress( arg2, "wattr_off - arg2");
 		validate_NULL_TYPETYPE(  arg2, "wattr_off - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -19,7 +19,7 @@ char * strtok (char * arg0 , const char * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "strtok()");
 		if( arg0 ) {
-	validate_Rdaddress( arg0, "strtok - arg0");
+	validate_RWaddress( arg0, "strtok - arg0");
 		}
 		validate_NULL_TYPETYPE(  arg0, "strtok - arg0");
 	validate_Rdaddress( arg1, "strtok - arg1");

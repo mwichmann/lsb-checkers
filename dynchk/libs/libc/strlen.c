@@ -18,7 +18,7 @@ size_t strlen (const char * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "strlen()");
-	validate_Rdaddress( arg0, "strlen - arg0");
+	validate_RWaddress( arg0, "strlen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strlen - arg0");
 	}
 	ret_value = funcptr(arg0);

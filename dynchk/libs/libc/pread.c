@@ -21,7 +21,7 @@ ssize_t pread (int arg0 , void * arg1 , size_t arg2 , off_t arg3 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "pread()");
 		validate_NULL_TYPETYPE(  arg0, "pread - arg0");
-	validate_Rdaddress( arg1, "pread - arg1");
+	validate_RWaddress( arg1, "pread - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pread - arg1");
 		validate_NULL_TYPETYPE(  arg2, "pread - arg2");
 		validate_NULL_TYPETYPE(  arg3, "pread - arg3");

@@ -20,7 +20,7 @@ uintmax_t strtoumax (const char * arg0 , char * * arg1 , int arg2 )
 	__lsb_output(5-__lsb_check_params, "strtoumax()");
 	validate_Rdaddress( arg0, "strtoumax - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtoumax - arg0");
-	validate_Rdaddress( arg1, "strtoumax - arg1");
+	validate_RWaddress( arg1, "strtoumax - arg1");
 		validate_NULL_TYPETYPE(  arg1, "strtoumax - arg1");
 		validate_NULL_TYPETYPE(  arg2, "strtoumax - arg2");
 	}

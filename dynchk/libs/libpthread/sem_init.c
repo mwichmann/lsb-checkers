@@ -18,7 +18,7 @@ int sem_init (sem_t * arg0 , int arg1 , unsigned int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "sem_init()");
-	validate_Rdaddress( arg0, "sem_init - arg0");
+	validate_RWaddress( arg0, "sem_init - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sem_init - arg0");
 		validate_NULL_TYPETYPE(  arg1, "sem_init - arg1");
 		validate_NULL_TYPETYPE(  arg2, "sem_init - arg2");

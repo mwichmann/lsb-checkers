@@ -18,7 +18,7 @@ int scrollok (WINDOW * arg0 , bool arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "scrollok()");
-	validate_Rdaddress( arg0, "scrollok - arg0");
+	validate_RWaddress( arg0, "scrollok - arg0");
 		validate_NULL_TYPETYPE(  arg0, "scrollok - arg0");
 		validate_NULL_TYPETYPE(  arg1, "scrollok - arg1");
 	}

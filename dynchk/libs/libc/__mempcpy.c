@@ -19,7 +19,7 @@ void * __mempcpy (void * arg0 , const void * arg1 , size_t arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "__mempcpy()");
-	validate_Rdaddress( arg0, "__mempcpy - arg0");
+	validate_RWaddress( arg0, "__mempcpy - arg0");
 		validate_RWaddress(  arg0, "__mempcpy - arg0");
 	validate_Rdaddress( arg1, "__mempcpy - arg1");
 		validate_NULL_TYPETYPE(  arg1, "__mempcpy - arg1");

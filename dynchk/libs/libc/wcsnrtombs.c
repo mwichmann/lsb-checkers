@@ -20,13 +20,13 @@ size_t wcsnrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , size_t a
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wcsnrtombs()");
-	validate_Rdaddress( arg0, "wcsnrtombs - arg0");
+	validate_RWaddress( arg0, "wcsnrtombs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsnrtombs - arg0");
-	validate_Rdaddress( arg1, "wcsnrtombs - arg1");
+	validate_RWaddress( arg1, "wcsnrtombs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcsnrtombs - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wcsnrtombs - arg2");
 		validate_NULL_TYPETYPE(  arg3, "wcsnrtombs - arg3");
-	validate_Rdaddress( arg4, "wcsnrtombs - arg4");
+	validate_RWaddress( arg4, "wcsnrtombs - arg4");
 		validate_NULL_TYPETYPE(  arg4, "wcsnrtombs - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -17,7 +17,7 @@ void _pthread_cleanup_pop (struct _pthread_cleanup_buffer * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "_pthread_cleanup_pop()");
-	validate_Rdaddress( arg0, "_pthread_cleanup_pop - arg0");
+	validate_RWaddress( arg0, "_pthread_cleanup_pop - arg0");
 		validate_RWaddress(  arg0, "_pthread_cleanup_pop - arg0");
 		validate_NULL_TYPETYPE(  arg1, "_pthread_cleanup_pop - arg1");
 	}

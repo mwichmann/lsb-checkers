@@ -19,9 +19,9 @@ bool_t xdr_opaque_auth (XDR * arg0 , struct opaque_auth * arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "xdr_opaque_auth()");
-	validate_Rdaddress( arg0, "xdr_opaque_auth - arg0");
+	validate_RWaddress( arg0, "xdr_opaque_auth - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_opaque_auth - arg0");
-	validate_Rdaddress( arg1, "xdr_opaque_auth - arg1");
+	validate_RWaddress( arg1, "xdr_opaque_auth - arg1");
 		validate_NULL_TYPETYPE(  arg1, "xdr_opaque_auth - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -20,7 +20,7 @@ int vsnprintf (char * arg0 , size_t arg1 , const char * arg2 , va_list arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "vsnprintf()");
-	validate_Rdaddress( arg0, "vsnprintf - arg0");
+	validate_RWaddress( arg0, "vsnprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vsnprintf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "vsnprintf - arg1");
 	validate_Rdaddress( arg2, "vsnprintf - arg2");

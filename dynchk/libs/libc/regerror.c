@@ -22,7 +22,7 @@ size_t regerror (int arg0 , const regex_t * arg1 , char * arg2 , size_t arg3 )
 		validate_NULL_TYPETYPE(  arg0, "regerror - arg0");
 	validate_Rdaddress( arg1, "regerror - arg1");
 		validate_NULL_TYPETYPE(  arg1, "regerror - arg1");
-	validate_Rdaddress( arg2, "regerror - arg2");
+	validate_RWaddress( arg2, "regerror - arg2");
 		validate_NULL_TYPETYPE(  arg2, "regerror - arg2");
 		validate_NULL_TYPETYPE(  arg3, "regerror - arg3");
 	}

@@ -21,7 +21,7 @@ int pthread_attr_getschedparam (const pthread_attr_t * arg0 , struct sched_param
 	__lsb_output(5-__lsb_check_params, "pthread_attr_getschedparam()");
 	validate_Rdaddress( arg0, "pthread_attr_getschedparam - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_attr_getschedparam - arg0");
-	validate_Rdaddress( arg1, "pthread_attr_getschedparam - arg1");
+	validate_RWaddress( arg1, "pthread_attr_getschedparam - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_attr_getschedparam - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

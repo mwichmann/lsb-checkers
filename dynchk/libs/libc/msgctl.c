@@ -20,7 +20,7 @@ int msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 	__lsb_output(5-__lsb_check_params, "msgctl()");
 		validate_NULL_TYPETYPE(  arg0, "msgctl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "msgctl - arg1");
-	validate_Rdaddress( arg2, "msgctl - arg2");
+	validate_RWaddress( arg2, "msgctl - arg2");
 		validate_NULL_TYPETYPE(  arg2, "msgctl - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

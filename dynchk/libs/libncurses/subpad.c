@@ -18,7 +18,7 @@ WINDOW * subpad (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "subpad()");
-	validate_Rdaddress( arg0, "subpad - arg0");
+	validate_RWaddress( arg0, "subpad - arg0");
 		validate_NULL_TYPETYPE(  arg0, "subpad - arg0");
 		validate_NULL_TYPETYPE(  arg1, "subpad - arg1");
 		validate_NULL_TYPETYPE(  arg2, "subpad - arg2");

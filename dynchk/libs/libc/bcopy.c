@@ -18,9 +18,9 @@ void bcopy (const void * arg0 , void * arg1 , size_t arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "bcopy()");
-	validate_Rdaddress( arg0, "bcopy - arg0");
+	validate_RWaddress( arg0, "bcopy - arg0");
 		validate_NULL_TYPETYPE(  arg0, "bcopy - arg0");
-	validate_Rdaddress( arg1, "bcopy - arg1");
+	validate_RWaddress( arg1, "bcopy - arg1");
 		validate_NULL_TYPETYPE(  arg1, "bcopy - arg1");
 		validate_NULL_TYPETYPE(  arg2, "bcopy - arg2");
 	}

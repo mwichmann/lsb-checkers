@@ -19,11 +19,11 @@ bool_t xdr_union (XDR * arg0 , enum_t * arg1 , char * arg2 , const struct xdr_di
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "xdr_union()");
-	validate_Rdaddress( arg0, "xdr_union - arg0");
+	validate_RWaddress( arg0, "xdr_union - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_union - arg0");
-	validate_Rdaddress( arg1, "xdr_union - arg1");
+	validate_RWaddress( arg1, "xdr_union - arg1");
 		validate_NULL_TYPETYPE(  arg1, "xdr_union - arg1");
-	validate_Rdaddress( arg2, "xdr_union - arg2");
+	validate_RWaddress( arg2, "xdr_union - arg2");
 		validate_NULL_TYPETYPE(  arg2, "xdr_union - arg2");
 	validate_Rdaddress( arg3, "xdr_union - arg3");
 		validate_NULL_TYPETYPE(  arg3, "xdr_union - arg3");

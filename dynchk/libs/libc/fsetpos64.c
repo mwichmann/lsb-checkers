@@ -18,7 +18,7 @@ int fsetpos64 (FILE * arg0 , const fpos64_t * arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "fsetpos64()");
-	validate_Rdaddress( arg0, "fsetpos64 - arg0");
+	validate_RWaddress( arg0, "fsetpos64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fsetpos64 - arg0");
 	validate_Rdaddress( arg1, "fsetpos64 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fsetpos64 - arg1");

@@ -18,7 +18,7 @@ int regcomp (regex_t * arg0 , const char * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "regcomp()");
-	validate_Rdaddress( arg0, "regcomp - arg0");
+	validate_RWaddress( arg0, "regcomp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "regcomp - arg0");
 	validate_Rdaddress( arg1, "regcomp - arg1");
 		validate_NULL_TYPETYPE(  arg1, "regcomp - arg1");

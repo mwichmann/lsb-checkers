@@ -18,7 +18,7 @@ int wattron (WINDOW * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wattron()");
-	validate_Rdaddress( arg0, "wattron - arg0");
+	validate_RWaddress( arg0, "wattron - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wattron - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wattron - arg1");
 	}

@@ -21,7 +21,7 @@ uintmax_t wcstoumax (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 	__lsb_output(5-__lsb_check_params, "wcstoumax()");
 	validate_Rdaddress( arg0, "wcstoumax - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstoumax - arg0");
-	validate_Rdaddress( arg1, "wcstoumax - arg1");
+	validate_RWaddress( arg1, "wcstoumax - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcstoumax - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wcstoumax - arg2");
 	}

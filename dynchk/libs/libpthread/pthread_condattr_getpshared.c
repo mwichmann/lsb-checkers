@@ -20,7 +20,7 @@ int pthread_condattr_getpshared (const pthread_condattr_t * arg0 , int * arg1 )
 	__lsb_output(5-__lsb_check_params, "pthread_condattr_getpshared()");
 	validate_Rdaddress( arg0, "pthread_condattr_getpshared - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_condattr_getpshared - arg0");
-	validate_Rdaddress( arg1, "pthread_condattr_getpshared - arg1");
+	validate_RWaddress( arg1, "pthread_condattr_getpshared - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_condattr_getpshared - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

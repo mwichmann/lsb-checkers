@@ -19,7 +19,7 @@ int fstatvfs64 (int arg0 , struct statvfs64 * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "fstatvfs64()");
 		validate_NULL_TYPETYPE(  arg0, "fstatvfs64 - arg0");
-	validate_Rdaddress( arg1, "fstatvfs64 - arg1");
+	validate_RWaddress( arg1, "fstatvfs64 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fstatvfs64 - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -19,7 +19,7 @@ float lgammaf_r (float arg0 , int * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "lgammaf_r()");
 		validate_NULL_TYPETYPE(  arg0, "lgammaf_r - arg0");
-	validate_Rdaddress( arg1, "lgammaf_r - arg1");
+	validate_RWaddress( arg1, "lgammaf_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "lgammaf_r - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

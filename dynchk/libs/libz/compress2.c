@@ -18,9 +18,9 @@ int compress2 (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 , 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "compress2()");
-	validate_Rdaddress( arg0, "compress2 - arg0");
+	validate_RWaddress( arg0, "compress2 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "compress2 - arg0");
-	validate_Rdaddress( arg1, "compress2 - arg1");
+	validate_RWaddress( arg1, "compress2 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "compress2 - arg1");
 	validate_Rdaddress( arg2, "compress2 - arg2");
 		validate_NULL_TYPETYPE(  arg2, "compress2 - arg2");

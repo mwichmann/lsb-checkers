@@ -18,7 +18,7 @@ int wtouchln (WINDOW * arg0 , int arg1 , int arg2 , int arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wtouchln()");
-	validate_Rdaddress( arg0, "wtouchln - arg0");
+	validate_RWaddress( arg0, "wtouchln - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wtouchln - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wtouchln - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wtouchln - arg2");

@@ -20,7 +20,7 @@ int sched_getparam (pid_t arg0 , struct sched_param * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "sched_getparam()");
 		validate_NULL_TYPETYPE(  arg0, "sched_getparam - arg0");
-	validate_Rdaddress( arg1, "sched_getparam - arg1");
+	validate_RWaddress( arg1, "sched_getparam - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sched_getparam - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

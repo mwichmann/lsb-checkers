@@ -17,7 +17,7 @@ void seekdir (DIR * arg0 , long arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "seekdir()");
-	validate_Rdaddress( arg0, "seekdir - arg0");
+	validate_RWaddress( arg0, "seekdir - arg0");
 		validate_NULL_TYPETYPE(  arg0, "seekdir - arg0");
 		validate_NULL_TYPETYPE(  arg1, "seekdir - arg1");
 	}

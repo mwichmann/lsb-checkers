@@ -22,7 +22,7 @@ int sigprocmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 	validate_Rdaddress( arg1, "sigprocmask - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sigprocmask - arg1");
 		if( arg2 ) {
-	validate_Rdaddress( arg2, "sigprocmask - arg2");
+	validate_RWaddress( arg2, "sigprocmask - arg2");
 		}
 		validate_NULL_TYPETYPE(  arg2, "sigprocmask - arg2");
 	}

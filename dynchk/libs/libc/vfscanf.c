@@ -19,7 +19,7 @@ int vfscanf (FILE * arg0 , const char * arg1 , va_list arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "vfscanf()");
-	validate_Rdaddress( arg0, "vfscanf - arg0");
+	validate_RWaddress( arg0, "vfscanf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vfscanf - arg0");
 	validate_Rdaddress( arg1, "vfscanf - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vfscanf - arg1");

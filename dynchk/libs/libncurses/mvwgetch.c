@@ -18,7 +18,7 @@ int mvwgetch (WINDOW * arg0 , int arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "mvwgetch()");
-	validate_Rdaddress( arg0, "mvwgetch - arg0");
+	validate_RWaddress( arg0, "mvwgetch - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mvwgetch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwgetch - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvwgetch - arg2");

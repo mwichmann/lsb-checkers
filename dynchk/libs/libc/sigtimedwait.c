@@ -21,7 +21,7 @@ int sigtimedwait (const sigset_t * arg0 , siginfo_t * arg1 , const struct timesp
 	__lsb_output(5-__lsb_check_params, "sigtimedwait()");
 	validate_Rdaddress( arg0, "sigtimedwait - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigtimedwait - arg0");
-	validate_Rdaddress( arg1, "sigtimedwait - arg1");
+	validate_RWaddress( arg1, "sigtimedwait - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sigtimedwait - arg1");
 	validate_Rdaddress( arg2, "sigtimedwait - arg2");
 		validate_NULL_TYPETYPE(  arg2, "sigtimedwait - arg2");

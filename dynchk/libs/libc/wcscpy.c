@@ -19,7 +19,7 @@ wchar_t * wcscpy (wchar_t * arg0 , const wchar_t * arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wcscpy()");
-	validate_Rdaddress( arg0, "wcscpy - arg0");
+	validate_RWaddress( arg0, "wcscpy - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcscpy - arg0");
 	validate_Rdaddress( arg1, "wcscpy - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcscpy - arg1");

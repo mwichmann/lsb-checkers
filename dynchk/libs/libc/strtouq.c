@@ -20,7 +20,7 @@ unsigned long long strtouq (const char * arg0 , char * * arg1 , int arg2 )
 	__lsb_output(5-__lsb_check_params, "strtouq()");
 	validate_Rdaddress( arg0, "strtouq - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtouq - arg0");
-	validate_Rdaddress( arg1, "strtouq - arg1");
+	validate_RWaddress( arg1, "strtouq - arg1");
 		validate_NULL_TYPETYPE(  arg1, "strtouq - arg1");
 		validate_NULL_TYPETYPE(  arg2, "strtouq - arg2");
 	}

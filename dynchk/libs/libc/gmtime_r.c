@@ -21,7 +21,7 @@ struct tm * gmtime_r (const time_t * arg0 , struct tm * arg1 )
 	__lsb_output(5-__lsb_check_params, "gmtime_r()");
 	validate_Rdaddress( arg0, "gmtime_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "gmtime_r - arg0");
-	validate_Rdaddress( arg1, "gmtime_r - arg1");
+	validate_RWaddress( arg1, "gmtime_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "gmtime_r - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

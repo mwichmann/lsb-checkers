@@ -18,7 +18,7 @@ int pthread_once (pthread_once_t * arg0 , void(* arg1 )(void))
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "pthread_once()");
-	validate_Rdaddress( arg0, "pthread_once - arg0");
+	validate_RWaddress( arg0, "pthread_once - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_once - arg0");
 validate_Rdaddress( arg1, "pthread_once - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_once - arg1");

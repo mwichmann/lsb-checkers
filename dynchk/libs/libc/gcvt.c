@@ -20,7 +20,7 @@ char * gcvt (double arg0 , int arg1 , char * arg2 )
 	__lsb_output(5-__lsb_check_params, "gcvt()");
 		validate_NULL_TYPETYPE(  arg0, "gcvt - arg0");
 		validate_NULL_TYPETYPE(  arg1, "gcvt - arg1");
-	validate_Rdaddress( arg2, "gcvt - arg2");
+	validate_RWaddress( arg2, "gcvt - arg2");
 		validate_NULL_TYPETYPE(  arg2, "gcvt - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -18,10 +18,10 @@ int restartterm (char * arg0 , int arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "restartterm()");
-	validate_Rdaddress( arg0, "restartterm - arg0");
+	validate_RWaddress( arg0, "restartterm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "restartterm - arg0");
 		validate_NULL_TYPETYPE(  arg1, "restartterm - arg1");
-	validate_Rdaddress( arg2, "restartterm - arg2");
+	validate_RWaddress( arg2, "restartterm - arg2");
 		validate_NULL_TYPETYPE(  arg2, "restartterm - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
