@@ -44,6 +44,9 @@ struct SectionInfo SectionInfo[] = {
 #if __s390x__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __s390x__ */
+#if __x86_64__
+	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __x86_64__ */
 #if __powerpc__ && !__powerpc64__
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -91,25 +94,43 @@ struct SectionInfo SectionInfo[] = {
 #if __s390x__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __s390x__ */
+#if __x86_64__
+	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
+#endif /* __x86_64__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
 #if __i386__
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* __i386__ */
+#if __x86_64__
+	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __x86_64__ */
 #if __i386__
 	{".rel.data",SHT_REL,0,checkREL},
 #endif /* __i386__ */
+#if __x86_64__
+	{".rel.data",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __x86_64__ */
 #if __i386__
 	{".rel.dyn",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* __i386__ */
 #if __i386__
 	{".rel.got",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* __i386__ */
+#if __x86_64__
+	{".rel.got",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __x86_64__ */
 #if __i386__
 	{".rel.plt",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* __i386__ */
+#if __x86_64__
+	{".rel.plt",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __x86_64__ */
 #if __i386__
 	{".rel.text",SHT_REL,0,checkREL},
 #endif /* __i386__ */
+#if __x86_64__
+	{".rel.text",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __x86_64__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.bss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -128,6 +149,9 @@ struct SectionInfo SectionInfo[] = {
 #if __s390x__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __s390x__ */
+#if __x86_64__
+	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __x86_64__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.got",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -149,6 +173,9 @@ struct SectionInfo SectionInfo[] = {
 #if __s390x__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __s390x__ */
+#if __x86_64__
+	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __x86_64__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */

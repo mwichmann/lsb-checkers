@@ -142,10 +142,6 @@ check_lib("libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,journal);
 check_lib("libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,journal);
 #endif
 check_lib("libSM.so.6",libSM_so_6,libSM_so_6_classinfo,journal);
-check_lib("libstdc++.so.5",libstdcxx_so_5,libstdcxx_so_5_classinfo,journal);
-#if __i386__
-check_lib("libstdc++.so.5",libstdcxx_so_5,libstdcxx_so_5_classinfo,journal);
-#endif
 check_lib("libutil.so.1",libutil_so_1,libutil_so_1_classinfo,journal);
 check_lib("libX11.so.6",libX11_so_6,libX11_so_6_classinfo,journal);
 check_lib("libXext.so.6",libXext_so_6,libXext_so_6_classinfo,journal);

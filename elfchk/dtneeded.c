@@ -9,9 +9,6 @@ char *DtNeeded[] = {
 #if __s390__ && !__s390x__
 	"/lib/ld-lsb-s390.so.1",
 #endif /* __s390__ && !__s390x__ */
-#if __x86_64__
-	"/lib/ld-lsb-x86_64.so.1",
-#endif /* __x86_64__ */
 #if __i386__
 	"/lib/ld-lsb.so.1",
 #endif /* __i386__ */
@@ -21,6 +18,9 @@ char *DtNeeded[] = {
 #if __s390x__
 	"/lib64/ld-lsb-s390x.so.1",
 #endif /* __s390x__ */
+#if __x86_64__
+	"/lib64/ld-lsb-x86-64.so.1",
+#endif /* __x86_64__ */
 #if __i386__
 	"libc.so.6",
 #endif /* __i386__ */
@@ -135,6 +135,10 @@ char *DtNeeded[] = {
 	"libpthread.so.0",
 #endif /* __s390x__ */
 	"libSM.so.6",
+	"libstdc++.so.5",
+#if __i386__
+	"libstdc++.so.5",
+#endif /* __i386__ */
 	"libutil.so.1",
 	"libX11.so.6",
 	"libXext.so.6",
