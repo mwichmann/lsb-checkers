@@ -890,6 +890,8 @@ CheckOffset(struct sigaction,sa_mask,4,10,34719)
 CheckTypeSize(stack_t,12, 9314, 2)
 #elif __ia64__
 CheckTypeSize(stack_t,24, 9314, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(stack_t,12, 9314, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
 Msg("Find size of stack_t (9314)\n");

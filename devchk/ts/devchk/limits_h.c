@@ -139,7 +139,7 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc__ && !__powerpc64__
 #ifdef ULONG_MAX
 	CompareConstant(ULONG_MAX,0xFFFFFFFFUL,18,architecture)
 #else
@@ -147,8 +147,28 @@ Msg( "Error: Constant not found: ULONG_MAX\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef ULONG_MAX
+	CompareConstant(ULONG_MAX,0xFFFFFFFFFFFFFFFFUL,18,architecture)
+#else
+Msg( "Error: Constant not found: ULONG_MAX\n");
+cnt++;
 #endif
 
+#elif __i386__
+#ifdef ULONG_MAX
+	CompareConstant(ULONG_MAX,0xFFFFFFFFUL,18,architecture)
+#else
+Msg( "Error: Constant not found: ULONG_MAX\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for ULONG_MAX (18, int) in db\n");
+#ifdef ULONG_MAX
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%d);\n", architecture, ULONG_MAX);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef MB_LEN_MAX
 	CompareConstant(MB_LEN_MAX,16,2,architecture)

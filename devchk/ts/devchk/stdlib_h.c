@@ -80,6 +80,55 @@ Msg("Find size of __compar_fn_t (9231)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(struct random_data,28, 10483, 2)
+CheckMemberSize(struct random_data,fptr,4,2,40027)
+CheckOffset(struct random_data,fptr,0,2,40027)
+CheckMemberSize(struct random_data,rptr,4,2,40028)
+CheckOffset(struct random_data,rptr,4,2,40028)
+CheckMemberSize(struct random_data,state,4,2,40029)
+CheckOffset(struct random_data,state,8,2,40029)
+CheckMemberSize(struct random_data,rand_type,4,2,40030)
+CheckOffset(struct random_data,rand_type,12,2,40030)
+CheckMemberSize(struct random_data,rand_deg,4,2,40031)
+CheckOffset(struct random_data,rand_deg,16,2,40031)
+CheckMemberSize(struct random_data,rand_sep,4,2,40032)
+CheckOffset(struct random_data,rand_sep,20,2,40032)
+CheckMemberSize(struct random_data,end_ptr,4,2,40033)
+CheckOffset(struct random_data,end_ptr,24,2,40033)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct random_data,28, 10483, 6)
+CheckMemberSize(struct random_data,rptr,4,6,40028)
+CheckOffset(struct random_data,rptr,4,6,40028)
+CheckMemberSize(struct random_data,state,4,6,40029)
+CheckOffset(struct random_data,state,8,6,40029)
+CheckMemberSize(struct random_data,rand_type,4,6,40030)
+CheckOffset(struct random_data,rand_type,12,6,40030)
+CheckMemberSize(struct random_data,rand_deg,4,6,40031)
+CheckOffset(struct random_data,rand_deg,16,6,40031)
+CheckMemberSize(struct random_data,rand_sep,4,6,40032)
+CheckOffset(struct random_data,rand_sep,20,6,40032)
+CheckMemberSize(struct random_data,end_ptr,4,6,40033)
+CheckOffset(struct random_data,end_ptr,24,6,40033)
+#elif __ia64__
+CheckTypeSize(struct random_data,48, 10483, 3)
+CheckMemberSize(struct random_data,rptr,8,3,40028)
+CheckOffset(struct random_data,rptr,8,3,40028)
+CheckMemberSize(struct random_data,state,8,3,40029)
+CheckOffset(struct random_data,state,16,3,40029)
+CheckMemberSize(struct random_data,rand_type,4,3,40030)
+CheckOffset(struct random_data,rand_type,24,3,40030)
+CheckMemberSize(struct random_data,rand_deg,4,3,40031)
+CheckOffset(struct random_data,rand_deg,28,3,40031)
+CheckMemberSize(struct random_data,rand_sep,4,3,40032)
+CheckOffset(struct random_data,rand_sep,32,3,40032)
+CheckMemberSize(struct random_data,end_ptr,8,3,40033)
+CheckOffset(struct random_data,end_ptr,40,3,40033)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10483,0);
+Msg("Find size of random_data (10483)\n");
+#endif
+
+#if __i386__
 CheckTypeSize(div_t,8, 6973, 2)
 #elif __ia64__
 CheckTypeSize(div_t,8, 6973, 3)

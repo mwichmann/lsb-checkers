@@ -253,6 +253,10 @@ CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
 CheckTypeSize(struct ifconf,16, 10288, 3)
 CheckMemberSize(struct ifconf,ifc_ifcu,8,3,34469)
 CheckOffset(struct ifconf,ifc_ifcu,8,3,34469)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct ifconf,8, 10288, 6)
+CheckMemberSize(struct ifconf,ifc_ifcu,4,6,34469)
+CheckOffset(struct ifconf,ifc_ifcu,4,6,34469)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10288,0);
 Msg("Find size of ifconf (10288)\n");

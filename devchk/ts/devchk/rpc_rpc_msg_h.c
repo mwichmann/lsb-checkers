@@ -277,6 +277,12 @@ CheckMemberSize(struct rpc_msg,rm_direction,0,10,34827)
 CheckOffset(struct rpc_msg,rm_direction,4,10,34827)
 CheckMemberSize(struct rpc_msg,ru,0,10,34828)
 CheckOffset(struct rpc_msg,ru,8,10,34828)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct rpc_msg,48, 9984, 6)
+CheckMemberSize(struct rpc_msg,rm_direction,4,6,34827)
+CheckOffset(struct rpc_msg,rm_direction,4,6,34827)
+CheckMemberSize(struct rpc_msg,ru,40,6,34828)
+CheckOffset(struct rpc_msg,ru,8,6,34828)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");
