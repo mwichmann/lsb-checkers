@@ -4,7 +4,7 @@ include libs.mk
 
 OBJS = libchk.o libs.o classchk.o $(LIBOBJS)
 
-CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
+CFLAGS=-g -I../elfchk -I../tetj -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
 all:: libchk dummy_link
 
