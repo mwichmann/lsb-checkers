@@ -62,6 +62,8 @@ $cth = $Dbh->query($select) || die $Dbh->errmsg();
 
 #Get Types
 $select = "SELECT DISTINCT * FROM Type,HeaderGroup ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+$select.= "LEFT JOIN Architecture ON Aid=ATaid ";
 $select.= "WHERE HGheader=$Hid ";
 $select.= "AND Theadergroup=HGid ";
 $select.= "AND Tid IN ($typelist)";
@@ -116,7 +118,7 @@ for(1..$tth->numrows) {
 		} else {
 			$type="union";
 		}
-		print TESTS "CheckTypeSize($type $tentry{'Tname'},$tentry{'Tsize'})\n";
+		print TESTS "CheckTypeSize($type $tentry{'Tname'},$tentry{'ATsize'},$tentry{'Tid'})\n";
 		#Get the members
 		$select = "SELECT DISTINCT * FROM TypeMember ";
 		$select.= "WHERE TMmemberof=$Tid ";
@@ -128,7 +130,7 @@ for(1..$tth->numrows) {
 			print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMoffset'})\n";
 		}
 	} else {
-		print TESTS "CheckTypeSize($tentry{'Tname'},$tentry{'Tsize'})\n";
+		print TESTS "CheckTypeSize($tentry{'Tname'},$tentry{'ATsize'},$entry{'Tid'})\n";
 	}
 }
 
@@ -143,6 +145,29 @@ close(TESTS);
 open(HARNESS,">hdrchk.c") || die "Can't open hdrchk.c for writing";
 print HARNESS "#include <stdio.h>\n";
 print HARNESS "#include <stdarg.h>\n\n";
+open(MAKEFILE,">makefile") || die "Can't open makefile for writing";
+#print MAKEFILE "CFLAGS = -g -I../../headers\n";
+print MAKEFILE "OBJS = hdrchk.o ";
+
+$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER,$LSBDBPASSWD) || die $Mysql::db_errstr;
+
+$Dbh->selectdb("lsb") || die $Dbh->errmsg();
+
+$select = "SELECT DISTINCT * FROM Architecture ";
+$select.= "WHERE Aname!='All'";
+
+$ath = $Dbh->query($select) || die $Dbh->errmsg();
+for(1..$ath->numrows) {
+	%entry=$ath->fetchhash;
+	print HARNESS "#ifdef ",$entry{'Asymbol'},"\n";
+	print HARNESS "int architecture=",$entry{'Aid'},";\n";
+	print HARNESS "#define __found_arch__\n";
+	print HARNESS "#endif\n";
+}
+
+print HARNESS "#ifndef __found_arch__\n";
+print HARNESS "#error \"Unable to identify architecture\"\n";
+print HARNESS "#endif\n\n";
 print HARNESS "Msg( char *f, ...)\n";
 print HARNESS "{\n";
 print HARNESS "va_list args;\n";
@@ -152,23 +177,62 @@ print HARNESS "va_end(args);\n";
 print HARNESS "}\n\n";
 print HARNESS "int tcnt=0;\n\n";
 print HARNESS "main()\n{\n";
-open(MAKEFILE,">makefile") || die "Can't open makefile for writing";
-#print MAKEFILE "CFLAGS = -g -I../../headers\n";
-print MAKEFILE "OBJS = hdrchk.o ";
-
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER,$LSBDBPASSWD) || die $Mysql::db_errstr;
-
-$Dbh->selectdb("lsb") || die $Dbh->errmsg();
 
 $select = "SELECT DISTINCT * FROM Header ";
 $select.= "WHERE Hstd='Yes' ";
 $select.= "ORDER BY Hname ";
 
+#
+# Dump out each header
+#
 $hth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$hth->numrows) {
 	%entry=$hth->fetchhash;
 	writetest($entry{'Hid'},$entry{'Hname'});
 }
+
+#
+# Dump out the fundamental types (Intrinsic types)
+#
+open(TESTS,">intrinsic.c") || die "Can't open intrinsic.c for writing";
+
+#Get Types
+$select = "SELECT DISTINCT * FROM Type ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+$select.= "LEFT JOIN Architecture ON Aid=ATaid ";
+$select.= "WHERE Ttype='Intrinsic' ";
+$tth = $Dbh->query($select) || die $Dbh->errmsg();
+if( $tth->numrows == 0 ) {
+	print TESTS "/*\n * No values in $Hname\n */\n";
+	close(TESTS);
+	return;
+	}
+
+print MAKEFILE "\\\n\tintrinsic.o ";
+print HARNESS "tcnt+=intrinsic();\n";
+
+
+print TESTS "/*\n * Test of intrinsic types\n */\n";
+print TESTS "#include \"hdrchk.h\"\n";
+print TESTS "#include \"sys/types.h\"\n";
+print TESTS "\n\n\n";
+print TESTS "int intrinsic()\n{\n";
+print TESTS "int cnt=0;\n";
+
+for(1..$tth->numrows) {
+	%tentry=$tth->fetchhash;
+	$Tname=$tentry{'Tname'};
+	print TESTS "CheckTypeSize($tentry{'Tname'},$tentry{'ATsize'},$tentry{'Tid'})\n";
+}
+
+print TESTS "printf(\"%d intrinsic types\\n\",cnt);\n";
+print TESTS "return cnt;\n";
+print TESTS "}\n";
+close(TEST);
+
+#
+# Finish up and close the files
+#
 print MAKEFILE "\n\n";
 print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE\n\n";
 print MAKEFILE "all: hdrchk\n\n";

@@ -22,7 +22,8 @@ OBJS = hdrchk.o \
 	sys_wait_h.o \
 	time_h.o \
 	unistd_h.o \
-	wctype_h.o 
+	wctype_h.o \
+	intrinsic.o 
 
 CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 

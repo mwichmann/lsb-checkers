@@ -12,7 +12,7 @@
 int X11_extensions_security_h()
 {
 int cnt=0;
-CheckTypeSize(XSecurityAuthorization,4)
+CheckTypeSize(XSecurityAuthorization,4,)
 printf("%d tests in X11/extensions/security.h\n",cnt);
 return cnt;
 }

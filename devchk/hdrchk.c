@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+#ifdef __i386__
+int architecture=2;
+#define __found_arch__
+#endif
+#ifdef __ia64__
+int architecture=3;
+#define __found_arch__
+#endif
+#ifndef __found_arch__
+#error "Unable to identify architecture"
+#endif
+
 Msg( char *f, ...)
 {
 va_list args;
@@ -37,5 +49,6 @@ tcnt+=sys_wait_h();
 tcnt+=time_h();
 tcnt+=unistd_h();
 tcnt+=wctype_h();
+tcnt+=intrinsic();
 printf("Total Tests: %d\n", tcnt );
 }
