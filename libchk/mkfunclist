@@ -196,6 +196,8 @@ $select.= "LEFT JOIN ArchInt ON AIint=Iid ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
+$select.= "LEFT JOIN ModLib ON MLlid=LGlib ";
+$select.= "LEFT JOIN Module ON MLmid=Mid ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=$lid ";
@@ -225,7 +227,7 @@ for(1..$lsth->numrows) {
 	if( $entry{'Aid'} && $entry{'Aname'} ne 'All' ) {
 		print LIB "#if $entry{'Asymbol'}\n";
 		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-		printf LIB "0,\"%s\",%s,",$entry{'Vname'},$entry{'ATsize'};
+		printf LIB "0,\"%s\",%s,",$entry{'Mname'},$entry{'ATsize'};
 		if( $entry{'Itype'} eq "Data" ) {
 			print LIB "0";
 		} else {
@@ -235,7 +237,7 @@ for(1..$lsth->numrows) {
 		print LIB "#endif\n";
 	} else {
 		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-		printf LIB "0,\"%s\",%s,",$entry{'Vname'},$entry{'ATsize'};
+		printf LIB "0,\"%s\",%s,",$entry{'Mname'},$entry{'ATsize'};
 		if( $entry{'Itype'} eq "Data" ) {
 			print LIB "0";
 		} else {
