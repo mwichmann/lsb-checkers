@@ -1,4 +1,4 @@
-#include "type_tests.h"
+#include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
 #include <unistd.h>
