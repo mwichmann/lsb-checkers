@@ -21,6 +21,10 @@ void checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1 );
 void checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
 void checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
 void checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
+#if defined(__ia64__)
+void checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1 );
+void checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1 );
+#endif
 
 extern void checkElfsection(int index, ElfFile *file1);
 
