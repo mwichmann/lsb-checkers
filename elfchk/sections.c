@@ -106,7 +106,8 @@ checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
   		return ProgbitsInfo[i].func( file1, hdr1, journal );
 	}
   }
-  fprintf(stderr, "Contents of section %s not checked.\n",
+  if( elfchk_debug&DEBUG_SECTION_CONTENTS )
+	fprintf(stderr, "Contents of section %s not checked.\n",
 				ElfGetString(file1, hdr1->sh_name));
   return 0;
 }
@@ -389,9 +390,10 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
   } else {
   	snprintf(tmp_string, TMP_STRING_SIZE, "ignoring %s: Not in the LSB but not loaded",
            ElfGetString(file1, hdr1->sh_name));
-  	fprintf(stderr, "%s\n", tmp_string);
+	if( elfchk_debug&DEBUG_SECTION_HEADERS )
+  		fprintf(stderr, "%s\n", tmp_string);
   	tetj_result(journal, tetj_activity_count, tetj_tp_count,
-              	TETJ_WARNING);
+              	TETJ_UNRESOLVED);
   	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   }
   return;
