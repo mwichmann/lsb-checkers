@@ -35,31 +35,53 @@ sub mkclassinfo($$)
 local($LIB,$class)=@_;
 my($select,%entry);
 
+$classbase=$$class{'CIname'};
+$classbase=~s/_Z//;
+#
+# Output array of BaseTypes entries
+#
+$typeinfoname=$classbase."_typeinfo";
+
+$select = "SELECT * FROM BaseTypes ";
+$select.= "WHERE BTcid=".$$class{'CIid'}." ";
+$select.= "ORDER BY BTpos";
+
+#print $select;
+
+print $LIB "char *".$typeinfoname."_name[] = {\n";
+$vsth = $Dbh->query($select) || die $Dbh->errmsg();
+$numtypeinfofuns=0;
+for(1..$$class{'CInumbasetype'}) {
+	%entry=$vsth->fetchhash;
+	print $LIB "\t\"".getinterfacename($entry{'BTrttiid'})."\",\n";
+	$numtypeinfofuns++;
+}
+print $LIB "\t};\n\n";
+
 #
 # Output typeinfo here.
 #
-$typeinfoname=$$class{'CIname'}."_typeinfo";
-$numtypeinfofuns=0;
 print $LIB "struct classtypeinfo $typeinfoname = {\n";
 print $LIB "\t\"".getinterfacename($$class{'CIbasevtable'})."\",\n";
-print $LIB "\t\"_ZTS".$$class{'CIname'}."\",\n";
-print $LIB "\tNULL,\n";
+print $LIB "\t\"_ZTS".$classbase."\",\n";
+print $LIB "\t".$typeinfoname."_name,\n";
 print $LIB "\t};\n\n";
 
 #
 # Output array of Vtable entries
 #
-$vtablename=$$class{'CIname'}."_vtable";
+$vtablename=$classbase."_vtable";
 
 $select = "SELECT * FROM Vtable ";
-$select.= "WHERE VTtid=".$$class{'CIvtable'}." ";
+$select.= "WHERE VTcid=".$$class{'CIid'}." ";
 $select.= "ORDER BY VTpos";
 
 #print $select;
 
 print $LIB "char *".$vtablename."_name[] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
-for(1..$vsth->numrows) {
+$numvtablefuns=0;
+for(1..$$class{'CInumvfunc'}) {
 	%entry=$vsth->fetchhash;
 	print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
 	$numvtablefuns++;
@@ -69,17 +91,16 @@ print $LIB "\t};\n\n";
 #
 # Output classvtable here.
 #
-$numvtablefuns=0;
 print $LIB "struct classvtable $vtablename = {\n";
 print $LIB "\t".$$class{'CIbaseoffset'}.",\n";
-print $LIB "\t\"_ZTI".$$class{'CIname'}."\",\n";
-print $LIB $vtablename."_name,\n";
-print $LIB "\t};\n";
+print $LIB "\t\"_ZTI".$classbase."\",\n";
+print $LIB "\t".$vtablename."_name,\n";
+print $LIB "\t};\n\n";
 
 print $LIB "struct classinfo ".$$class{'CIname'}."_classinfo = {\n";
 print $LIB "\t\"".$$class{'CIname'}."\",\n";
-print $LIB "\t\"_ZTV".$$class{'CIname'}."\",\n";
-print $LIB "\t\"_ZTI".$$class{'CIname'}."\",\n";
+print $LIB "\t\"_ZTV".$classbase."\",\n";
+print $LIB "\t\"_ZTI".$classbase."\",\n";
 print $LIB "\t$numvtablefuns,\n";
 print $LIB "\t$numtypeinfofuns,\n";
 print $LIB "\t&$typeinfoname,\n";
@@ -128,6 +149,7 @@ $select = "SELECT DISTINCT * FROM ClassInfo ";
 $select.= "LEFT JOIN LibGroup ON LibGroup.LGid=CIlibg ";
 $select.= "LEFT JOIN Library ON LibGroup.LGLIB=Library.Lid ";
 $select.= "WHERE Library.Lid=$lid ";
+#$select.= "AND CIname LIKE '_ZSd'";
 
 #print $select;
 
