@@ -14145,7 +14145,7 @@ struct classvtable St10ostrstream_vtable [2] = {
 	0,
 #endif
 #if __ia64__
-	184,
+	96,
 	0,
 #endif
 #if __arm__
@@ -14161,7 +14161,7 @@ struct classvtable St10ostrstream_vtable [2] = {
 	0,
 #endif
 #if __powerpc64__
-	148,
+	96,
 	0,
 #endif
 #if __s390__ && !__s390x__
@@ -14169,11 +14169,11 @@ struct classvtable St10ostrstream_vtable [2] = {
 	0,
 #endif
 #if __x86_64__
-	184,
+	96,
 	0,
 #endif
 #if __s390x__
-	184,
+	96,
 	0,
 #endif
 	2,	/* Vtable category */
@@ -14187,8 +14187,8 @@ struct classvtable St10ostrstream_vtable [2] = {
 	-48,
 #endif
 #if __ia64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __arm__
 	-48,
@@ -14203,20 +14203,20 @@ struct classvtable St10ostrstream_vtable [2] = {
 	-48,
 #endif
 #if __powerpc64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __s390__ && !__s390x__
 	-48,
 	-48,
 #endif
 #if __x86_64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __s390x__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -15189,8 +15189,8 @@ struct classvtable St13basic_fstreamIcSt11char_traitsIcEE_vtable [3] = {
 	-8,
 #endif
 #if __ia64__
-	264,
-	-8,
+	248,
+	-16,
 #endif
 #if __arm__
 	140,
@@ -15205,20 +15205,20 @@ struct classvtable St13basic_fstreamIcSt11char_traitsIcEE_vtable [3] = {
 	-8,
 #endif
 #if __powerpc64__
-	264,
-	-8,
+	248,
+	-16,
 #endif
 #if __s390__ && !__s390x__
 	140,
 	-8,
 #endif
 #if __x86_64__
-	264,
-	-8,
+	248,
+	-16,
 #endif
 #if __s390x__
-	264,
-	-8,
+	248,
+	-16,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -15231,8 +15231,8 @@ struct classvtable St13basic_fstreamIcSt11char_traitsIcEE_vtable [3] = {
 	-148,
 #endif
 #if __ia64__
-	-148,
-	-148,
+	-264,
+	-264,
 #endif
 #if __arm__
 	-148,
@@ -15247,20 +15247,20 @@ struct classvtable St13basic_fstreamIcSt11char_traitsIcEE_vtable [3] = {
 	-148,
 #endif
 #if __powerpc64__
-	-148,
-	-148,
+	-264,
+	-264,
 #endif
 #if __s390__ && !__s390x__
 	-148,
 	-148,
 #endif
 #if __x86_64__
-	-148,
-	-148,
+	-264,
+	-264,
 #endif
 #if __s390x__
-	-148,
-	-148,
+	-264,
+	-264,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -15380,7 +15380,7 @@ const char *St13basic_fstreamIwSt11char_traitsIwEE_vtable_name_2 [] = {
 	"_ZTv0_n24_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev",
 #endif
 #if __ia64__
-	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+	"_ZTv0_n24_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev",
 #endif
 #if __powerpc64__
 	"_ZTv0_n24_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev",
@@ -15439,8 +15439,8 @@ struct classvtable St13basic_fstreamIwSt11char_traitsIwEE_vtable [3] = {
 	-8,
 #endif
 #if __ia64__
-	264,
-	-8,
+	248,
+	-16,
 #endif
 #if __arm__
 	144,
@@ -15455,20 +15455,20 @@ struct classvtable St13basic_fstreamIwSt11char_traitsIwEE_vtable [3] = {
 	-8,
 #endif
 #if __powerpc64__
-	264,
-	-8,
+	248,
+	-16,
 #endif
 #if __s390__ && !__s390x__
 	144,
 	-8,
 #endif
 #if __x86_64__
-	264,
-	-8,
+	248,
+	-16,
 #endif
 #if __s390x__
-	264,
-	-8,
+	248,
+	-16,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -15481,8 +15481,8 @@ struct classvtable St13basic_fstreamIwSt11char_traitsIwEE_vtable [3] = {
 	-152,
 #endif
 #if __ia64__
-	-152,
-	-152,
+	-264,
+	-264,
 #endif
 #if __arm__
 	-152,
@@ -15497,20 +15497,20 @@ struct classvtable St13basic_fstreamIwSt11char_traitsIwEE_vtable [3] = {
 	-152,
 #endif
 #if __powerpc64__
-	-152,
-	-152,
+	-264,
+	-264,
 #endif
 #if __s390__ && !__s390x__
 	-152,
 	-152,
 #endif
 #if __x86_64__
-	-152,
-	-152,
+	-264,
+	-264,
 #endif
 #if __s390x__
-	-152,
-	-152,
+	-264,
+	-264,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -15687,8 +15687,8 @@ struct classvtable St14basic_ifstreamIcSt11char_traitsIcEE_vtable [2] = {
 	-144,
 #endif
 #if __ia64__
-	-144,
-	-144,
+	-256,
+	-256,
 #endif
 #if __arm__
 	-144,
@@ -15703,20 +15703,20 @@ struct classvtable St14basic_ifstreamIcSt11char_traitsIcEE_vtable [2] = {
 	-144,
 #endif
 #if __powerpc64__
-	-144,
-	-144,
+	-256,
+	-256,
 #endif
 #if __s390__ && !__s390x__
 	-144,
 	-144,
 #endif
 #if __x86_64__
-	-144,
-	-144,
+	-256,
+	-256,
 #endif
 #if __s390x__
-	-144,
-	-144,
+	-256,
+	-256,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -15850,8 +15850,8 @@ struct classvtable St14basic_ifstreamIwSt11char_traitsIwEE_vtable [2] = {
 	-148,
 #endif
 #if __ia64__
-	-148,
-	-148,
+	-256,
+	-256,
 #endif
 #if __arm__
 	-148,
@@ -15866,20 +15866,20 @@ struct classvtable St14basic_ifstreamIwSt11char_traitsIwEE_vtable [2] = {
 	-148,
 #endif
 #if __powerpc64__
-	-148,
-	-148,
+	-256,
+	-256,
 #endif
 #if __s390__ && !__s390x__
 	-148,
 	-148,
 #endif
 #if __x86_64__
-	-148,
-	-148,
+	-256,
+	-256,
 #endif
 #if __s390x__
-	-148,
-	-148,
+	-256,
+	-256,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -16013,8 +16013,8 @@ struct classvtable St14basic_ofstreamIcSt11char_traitsIcEE_vtable [2] = {
 	-140,
 #endif
 #if __ia64__
-	-140,
-	-140,
+	-248,
+	-248,
 #endif
 #if __arm__
 	-140,
@@ -16029,20 +16029,20 @@ struct classvtable St14basic_ofstreamIcSt11char_traitsIcEE_vtable [2] = {
 	-140,
 #endif
 #if __powerpc64__
-	-140,
-	-140,
+	-248,
+	-248,
 #endif
 #if __s390__ && !__s390x__
 	-140,
 	-140,
 #endif
 #if __x86_64__
-	-140,
-	-140,
+	-248,
+	-248,
 #endif
 #if __s390x__
-	-140,
-	-140,
+	-248,
+	-248,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -16176,8 +16176,8 @@ struct classvtable St14basic_ofstreamIwSt11char_traitsIwEE_vtable [2] = {
 	-144,
 #endif
 #if __ia64__
-	-144,
-	-144,
+	-248,
+	-248,
 #endif
 #if __arm__
 	-144,
@@ -16192,20 +16192,20 @@ struct classvtable St14basic_ofstreamIwSt11char_traitsIwEE_vtable [2] = {
 	-144,
 #endif
 #if __powerpc64__
-	-144,
-	-144,
+	-248,
+	-248,
 #endif
 #if __s390__ && !__s390x__
 	-144,
 	-144,
 #endif
 #if __x86_64__
-	-144,
-	-144,
+	-248,
+	-248,
 #endif
 #if __s390x__
-	-144,
-	-144,
+	-248,
+	-248,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -17537,7 +17537,7 @@ struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] =
 	0,
 #endif
 #if __ia64__
-	184,
+	104,
 	0,
 #endif
 #if __arm__
@@ -17553,7 +17553,7 @@ struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] =
 	0,
 #endif
 #if __powerpc64__
-	184,
+	104,
 	0,
 #endif
 #if __s390__ && !__s390x__
@@ -17561,11 +17561,11 @@ struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] =
 	0,
 #endif
 #if __x86_64__
-	184,
+	104,
 	0,
 #endif
 #if __s390x__
-	184,
+	104,
 	0,
 #endif
 	2,	/* Vtable category */
@@ -17579,8 +17579,8 @@ struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] =
 	-8,
 #endif
 #if __ia64__
-	44,
-	-8,
+	88,
+	-16,
 #endif
 #if __arm__
 	44,
@@ -17595,20 +17595,20 @@ struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] =
 	-8,
 #endif
 #if __powerpc64__
-	44,
-	-8,
+	88,
+	-16,
 #endif
 #if __s390__ && !__s390x__
 	44,
 	-8,
 #endif
 #if __x86_64__
-	44,
-	-8,
+	88,
+	-16,
 #endif
 #if __s390x__
-	44,
-	-8,
+	88,
+	-16,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -17621,8 +17621,8 @@ struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] =
 	-52,
 #endif
 #if __ia64__
-	-52,
-	-52,
+	-104,
+	-104,
 #endif
 #if __arm__
 	-52,
@@ -17637,20 +17637,20 @@ struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] =
 	-52,
 #endif
 #if __powerpc64__
-	-52,
-	-52,
+	-104,
+	-104,
 #endif
 #if __s390__ && !__s390x__
 	-52,
 	-52,
 #endif
 #if __x86_64__
-	-52,
-	-52,
+	-104,
+	-104,
 #endif
 #if __s390x__
-	-52,
-	-52,
+	-104,
+	-104,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -17787,7 +17787,7 @@ struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] =
 	0,
 #endif
 #if __ia64__
-	184,
+	104,
 	0,
 #endif
 #if __arm__
@@ -17803,7 +17803,7 @@ struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] =
 	0,
 #endif
 #if __powerpc64__
-	184,
+	104,
 	0,
 #endif
 #if __s390__ && !__s390x__
@@ -17811,11 +17811,11 @@ struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] =
 	0,
 #endif
 #if __x86_64__
-	184,
+	104,
 	0,
 #endif
 #if __s390x__
-	184,
+	104,
 	0,
 #endif
 	2,	/* Vtable category */
@@ -17829,8 +17829,8 @@ struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] =
 	-8,
 #endif
 #if __ia64__
-	184,
-	-8,
+	88,
+	-16,
 #endif
 #if __arm__
 	44,
@@ -17845,20 +17845,20 @@ struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] =
 	-8,
 #endif
 #if __powerpc64__
-	184,
-	-8,
+	88,
+	-16,
 #endif
 #if __s390__ && !__s390x__
 	44,
 	-8,
 #endif
 #if __x86_64__
-	184,
-	-8,
+	88,
+	-16,
 #endif
 #if __s390x__
-	184,
-	-8,
+	88,
+	-16,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -17871,8 +17871,8 @@ struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] =
 	-52,
 #endif
 #if __ia64__
-	-52,
-	-52,
+	-104,
+	-104,
 #endif
 #if __arm__
 	-52,
@@ -17887,20 +17887,20 @@ struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] =
 	-52,
 #endif
 #if __powerpc64__
-	-52,
-	-52,
+	-104,
+	-104,
 #endif
 #if __s390__ && !__s390x__
 	-52,
 	-52,
 #endif
 #if __x86_64__
-	-52,
-	-52,
+	-104,
+	-104,
 #endif
 #if __s390x__
-	-52,
-	-52,
+	-104,
+	-104,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -17992,7 +17992,7 @@ struct classvtable St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	0,
 #endif
 #if __ia64__
-	176,
+	96,
 	0,
 #endif
 #if __arm__
@@ -18008,7 +18008,7 @@ struct classvtable St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	0,
 #endif
 #if __powerpc64__
-	176,
+	96,
 	0,
 #endif
 #if __s390__ && !__s390x__
@@ -18016,11 +18016,11 @@ struct classvtable St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	0,
 #endif
 #if __x86_64__
-	176,
+	96,
 	0,
 #endif
 #if __s390x__
-	176,
+	96,
 	0,
 #endif
 	2,	/* Vtable category */
@@ -18034,8 +18034,8 @@ struct classvtable St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	-48,
 #endif
 #if __ia64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __arm__
 	-48,
@@ -18050,20 +18050,20 @@ struct classvtable St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	-48,
 #endif
 #if __powerpc64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __s390__ && !__s390x__
 	-48,
 	-48,
 #endif
 #if __x86_64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __s390x__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -18155,7 +18155,7 @@ struct classvtable St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	0,
 #endif
 #if __ia64__
-	176,
+	96,
 	0,
 #endif
 #if __arm__
@@ -18171,7 +18171,7 @@ struct classvtable St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	0,
 #endif
 #if __powerpc64__
-	176,
+	96,
 	0,
 #endif
 #if __s390__ && !__s390x__
@@ -18179,11 +18179,11 @@ struct classvtable St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	0,
 #endif
 #if __x86_64__
-	176,
+	96,
 	0,
 #endif
 #if __s390x__
-	176,
+	96,
 	0,
 #endif
 	2,	/* Vtable category */
@@ -18197,8 +18197,8 @@ struct classvtable St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	-48,
 #endif
 #if __ia64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __arm__
 	-48,
@@ -18213,20 +18213,20 @@ struct classvtable St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	-48,
 #endif
 #if __powerpc64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __s390__ && !__s390x__
 	-48,
 	-48,
 #endif
 #if __x86_64__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 #if __s390x__
-	-48,
-	-48,
+	-96,
+	-96,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -18318,7 +18318,7 @@ struct classvtable St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	0,
 #endif
 #if __ia64__
-	168,
+	88,
 	0,
 #endif
 #if __arm__
@@ -18334,7 +18334,7 @@ struct classvtable St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	0,
 #endif
 #if __powerpc64__
-	168,
+	88,
 	0,
 #endif
 #if __s390__ && !__s390x__
@@ -18342,11 +18342,11 @@ struct classvtable St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	0,
 #endif
 #if __x86_64__
-	168,
+	88,
 	0,
 #endif
 #if __s390x__
-	168,
+	88,
 	0,
 #endif
 	2,	/* Vtable category */
@@ -18360,8 +18360,8 @@ struct classvtable St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	-44,
 #endif
 #if __ia64__
-	-44,
-	-44,
+	-88,
+	-88,
 #endif
 #if __arm__
 	-44,
@@ -18376,20 +18376,20 @@ struct classvtable St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable [2] 
 	-44,
 #endif
 #if __powerpc64__
-	-44,
-	-44,
+	-88,
+	-88,
 #endif
 #if __s390__ && !__s390x__
 	-44,
 	-44,
 #endif
 #if __x86_64__
-	-44,
-	-44,
+	-88,
+	-88,
 #endif
 #if __s390x__
-	-44,
-	-44,
+	-88,
+	-88,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -18481,7 +18481,7 @@ struct classvtable St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	0,
 #endif
 #if __ia64__
-	168,
+	88,
 	0,
 #endif
 #if __arm__
@@ -18497,7 +18497,7 @@ struct classvtable St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	0,
 #endif
 #if __powerpc64__
-	168,
+	88,
 	0,
 #endif
 #if __s390__ && !__s390x__
@@ -18505,11 +18505,11 @@ struct classvtable St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	0,
 #endif
 #if __x86_64__
-	168,
+	88,
 	0,
 #endif
 #if __s390x__
-	168,
+	88,
 	0,
 #endif
 	2,	/* Vtable category */
@@ -18523,8 +18523,8 @@ struct classvtable St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	-44,
 #endif
 #if __ia64__
-	-44,
-	-44,
+	-88,
+	-88,
 #endif
 #if __arm__
 	-44,
@@ -18539,20 +18539,20 @@ struct classvtable St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable [2] 
 	-44,
 #endif
 #if __powerpc64__
-	-44,
-	-44,
+	-88,
+	-88,
 #endif
 #if __s390__ && !__s390x__
 	-44,
 	-44,
 #endif
 #if __x86_64__
-	-44,
-	-44,
+	-88,
+	-88,
 #endif
 #if __s390x__
-	-44,
-	-44,
+	-88,
+	-88,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -19306,22 +19306,22 @@ const char *St9strstream_vtable_name_1 [] = {
 	"_ZThn8_NSt9strstreamD0Ev",
 #endif
 #if __ia64__
-	"_ZThn16_NSt9strstreamD1Ev",
+	"_ZThn16_NSt9strstreamD0Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NSt9strstreamD0Ev",
 #endif
 #if __powerpc64__
-	"_ZThn16_NSt9strstreamD1Ev",
+	"_ZThn16_NSt9strstreamD0Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NSt9strstreamD0Ev",
 #endif
 #if __x86_64__
-	"_ZThn16_NSt9strstreamD1Ev",
+	"_ZThn16_NSt9strstreamD0Ev",
 #endif
 #if __s390x__
-	"_ZThn16_NSt9strstreamD1Ev",
+	"_ZThn16_NSt9strstreamD0Ev",
 #endif
 	};
 
@@ -19377,7 +19377,7 @@ struct classvtable St9strstream_vtable [3] = {
 	0,
 #endif
 #if __ia64__
-	200,
+	112,
 	0,
 #endif
 #if __arm__
@@ -19393,7 +19393,7 @@ struct classvtable St9strstream_vtable [3] = {
 	0,
 #endif
 #if __powerpc64__
-	200,
+	112,
 	0,
 #endif
 #if __s390__ && !__s390x__
@@ -19401,11 +19401,11 @@ struct classvtable St9strstream_vtable [3] = {
 	0,
 #endif
 #if __x86_64__
-	200,
+	112,
 	0,
 #endif
 #if __s390x__
-	200,
+	112,
 	0,
 #endif
 	2,	/* Vtable category */
@@ -19419,8 +19419,8 @@ struct classvtable St9strstream_vtable [3] = {
 	-8,
 #endif
 #if __ia64__
-	48,
-	-8,
+	96,
+	-16,
 #endif
 #if __arm__
 	48,
@@ -19435,20 +19435,20 @@ struct classvtable St9strstream_vtable [3] = {
 	-8,
 #endif
 #if __powerpc64__
-	200,
-	-8,
+	96,
+	-16,
 #endif
 #if __s390__ && !__s390x__
 	48,
 	-8,
 #endif
 #if __x86_64__
-	200,
-	-8,
+	96,
+	-16,
 #endif
 #if __s390x__
-	200,
-	-8,
+	96,
+	-16,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -19461,8 +19461,8 @@ struct classvtable St9strstream_vtable [3] = {
 	-56,
 #endif
 #if __ia64__
-	-56,
-	-56,
+	-112,
+	-112,
 #endif
 #if __arm__
 	-56,
@@ -19477,20 +19477,20 @@ struct classvtable St9strstream_vtable [3] = {
 	-56,
 #endif
 #if __powerpc64__
-	-56,
-	-56,
+	-112,
+	-112,
 #endif
 #if __s390__ && !__s390x__
 	-56,
 	-56,
 #endif
 #if __x86_64__
-	-56,
-	-56,
+	-112,
+	-112,
 #endif
 #if __s390x__
-	-56,
-	-56,
+	-112,
+	-112,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -19621,8 +19621,8 @@ struct classvtable Si_vtable [2] = {
 	-8,
 #endif
 #if __ia64__
-	-8,
-	-8,
+	-16,
+	-16,
 #endif
 #if __arm__
 	-8,
@@ -19637,20 +19637,20 @@ struct classvtable Si_vtable [2] = {
 	-8,
 #endif
 #if __powerpc64__
-	-8,
-	-8,
+	-16,
+	-16,
 #endif
 #if __s390__ && !__s390x__
 	-8,
 	-8,
 #endif
 #if __x86_64__
-	-8,
-	-8,
+	-16,
+	-16,
 #endif
 #if __s390x__
-	-8,
-	-8,
+	-16,
+	-16,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
@@ -20983,7 +20983,7 @@ struct classvtable St14basic_iostreamIwSt11char_traitsIwEE_vtable [3] = {
 #endif
 #if __ia64__
 	8,
-	-8,
+	-16,
 #endif
 #if __arm__
 	4,
@@ -20999,7 +20999,7 @@ struct classvtable St14basic_iostreamIwSt11char_traitsIwEE_vtable [3] = {
 #endif
 #if __powerpc64__
 	8,
-	-8,
+	-16,
 #endif
 #if __s390__ && !__s390x__
 	4,
@@ -21007,11 +21007,11 @@ struct classvtable St14basic_iostreamIwSt11char_traitsIwEE_vtable [3] = {
 #endif
 #if __x86_64__
 	8,
-	-8,
+	-16,
 #endif
 #if __s390x__
 	8,
-	-8,
+	-16,
 #endif
 	2,	/* Vtable category */
 	2,	/* Number of Vfuncs */
