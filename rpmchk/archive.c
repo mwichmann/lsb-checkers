@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/stat.h>
 #include <zlib.h>
 #include <cpio.h>
 #include "rpmchk.h"
@@ -134,12 +135,18 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	size=strtol(num,NULL,16);
 
+	/* Get the mode so we can idendify directories */
+	memcpy(num,ahdr.c_mode,8);
+	num[8]=0;
+	mode=strtol(num,NULL,16);
+
+
 	/*
 	 * Check the file size against the RPMTAG_FILESIZES value
 	 */
 
 	/* Directories have no size, but RPMTAG_FILESIZES sez 1024 */
-	if( size && (size != filesizes[fileindex]) ) {
+	if( S_ISREG(mode) && (size != filesizes[fileindex]) ) {
 		fprintf(stderr,"Filesize (%d) for %s not that same a specified in RPMTAG_FILESIZES (%d)\n", size, filename, filesizes[fileindex] );
 	}
 	filesizesum+=size;
@@ -147,10 +154,6 @@ while( !gzeof(zfile) ) {
 	/*
 	 * Check the file modes against the RPMTAG_FILEMODES value
 	 */
-
-	memcpy(num,ahdr.c_mode,8);
-	num[8]=0;
-	mode=strtol(num,NULL,16);
 
 	if( (mode != filemodes[fileindex]) ) {
 		fprintf(stderr,"Filemode  (%o) for %s not that same a specified in RPMTAG_FILEMODES (%o)\n", mode, filename, filemodes[fileindex] );
@@ -188,7 +191,7 @@ while( !gzeof(zfile) ) {
 	 * Check the file modes against the RPMTAG_FILEMD5S value
 	 */
 
-	if( size ) {
+	if( S_ISREG(mode) ) {
 		MD5Init(&md5ctx);
 		while ( size>0 ) {
 			gzread(zfile,fbuf,size>1024?1024:size);
@@ -216,10 +219,10 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	flink=strtol(num,NULL,16);
 
-	if( flink>1 && !*flinktos ) {
+	if( S_ISREG(mode) && flink>1 && !*flinktos ) {
 		fprintf(stderr,"File link expected, but no FILELINKTOS entry\n");
 	}
-	if( flink==1 && *flinktos ) {
+	if( S_ISREG(mode) && flink==1 && *flinktos ) {
 		fprintf(stderr,"File link not expected, but FILELINKTOS present\n");
 	}
 	filelinktos+=strlen(filelinktos)+1;
