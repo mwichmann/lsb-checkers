@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.55 $
+ * This is $Revision: 1.56 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.56  2005/02/22 22:29:03  anderson
+ * Update for v6 libstdc++ when building as cxxabichk
+ *
  * Revision 1.55  2005/02/01 05:38:46  anderson
  * Upgrade libstdc++ to the v6 abi
  *
@@ -195,8 +198,8 @@
 #include "tetj.h"
 
 #ifdef _CXXABICHK_
-extern struct versym libstdcxx_so_5[];
-extern struct classinfo libstdcxx_so_5_classinfo[];
+extern struct versym libstdcxx_so_6[];
+extern struct classinfo libstdcxx_so_6_classinfo[];
 #endif
 
 #define MAX_LENGTH_STRING 80
@@ -210,7 +213,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.55 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.56 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -793,8 +796,8 @@ int main(int argc, char *argv[])
 
   tetj_add_config(journal, tmp_string);
 
-  check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.5",
-		  libstdcxx_so_5,libstdcxx_so_5_classinfo,journal);
+  check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.6",
+		  libstdcxx_so_6,libstdcxx_so_6_classinfo,journal);
 #else
   snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
   tetj_add_config(journal, tmp_string);
