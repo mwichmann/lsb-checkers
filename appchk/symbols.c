@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "../elfchk/elfchk.h"
+#include "symbols.h"
+#include "libraries.h"
 
 int
 checksymbols(ElfFile *file)
@@ -79,4 +80,5 @@ fprintf(stderr,"%s %x %x %x\n",
 				file->versionnames[file->vers[i]], DynSyms[j].vername);
 		}
 	} /* i */
+ return 0; 
 }

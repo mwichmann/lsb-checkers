@@ -1,4 +1,4 @@
-CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\"
+CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -Wall
 
 OBJS=appchk.o libraries.o symbols.o
 LIB=../elfchk/libelfchk.a

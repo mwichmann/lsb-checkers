@@ -1,3 +1,7 @@
+#ifndef _ELF_SECTIONS_H
+#define _ELF_SECTIONS_H
+
+#include "elfchk.h"
 
 typedef void (*SectionFcn)(ElfFile *, Elf32_Shdr *);
 
@@ -18,6 +22,8 @@ void checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
 void checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
 void checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
 
+extern void checkElfsection(int index, ElfFile *file1);
+
 struct SectionInfo {
 	char		*name;
 	int		type;
@@ -27,3 +33,5 @@ struct SectionInfo {
 
 extern	struct SectionInfo SectionInfo[];
 extern	int numSectionInfo;
+
+#endif /* _ELF_SECTIONS_H */

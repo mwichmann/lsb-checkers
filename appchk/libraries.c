@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include "../elfchk/elfchk.h"
+#include <stdlib.h>
+
+#include "symbols.h"
 
 static int tablesize=100;
 static int tableents=0;
@@ -32,7 +34,7 @@ if( (file=OpenElfFile(libname)) == NULL ) {
 	return -1;
 	}
 
-checkElf(file);
+checkElf(file, 0);
 checksymbols(file);
 
 numsyms=file->dynsymhdr->sh_size/file->dynsymhdr->sh_entsize;

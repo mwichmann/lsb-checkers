@@ -1,10 +1,14 @@
 #include "elfchk.h"
+#include "hdr.h"
+#include "proghdr.h"
+#include "sections.h"
 
-checkElf(ElfFile *file1)
+void
+checkElf(ElfFile *file1, int isProgram)
 {
 int	i;
 
-checkElfhdr(file1);
+checkElfhdr(file1, isProgram);
 for(i=0;i<file1->numph;i++)
 	{
 	checkElfproghdr(i, file1);

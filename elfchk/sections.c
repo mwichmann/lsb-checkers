@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include "elfchk.h"
 #include "sections.h"
 
 void
@@ -46,7 +45,6 @@ fprintf(stderr, "NULL SECTION\n" );
 void
 checkBITS(char *secname, ElfFile *file1, Elf32_Shdr *hdr1)
 {
-int	i, size;
 caddr_t	bits1;
 
 #ifdef VERBOSE
@@ -138,9 +136,6 @@ checkSYMBOLS( "SYMTAB", file1, hdr1 );
 void
 checkDYNSYM(ElfFile *file, Elf32_Shdr *hdr1 )
 {
-int	i, j, numsyms;
-Elf32_Sym	*syms1;
-
 #ifdef VERBOSE
 fprintf(stderr, "DYNSYM\n" );
 #endif /* VERBOSE */

@@ -5,6 +5,7 @@
 extern int add_library_symbols(char *);
 extern int checksymbols(ElfFile *);
 
+int
 main(int argc, char *argv[])
 {
 char	c;
@@ -36,7 +37,7 @@ if( (elffile = OpenElfFile(argv[optind])) == NULL ) {
 	exit(2);
 	}
 
-checkElf(elffile);
+checkElf(elffile, 1);
  if (elffile->symhdr==NULL)
  {
    printf("Not a dynamically linked executable.\n"

@@ -1,4 +1,4 @@
-#include "elfchk.h"
+#include "symvers.h"
 
 void
 getSymbolVersionInfo(ElfFile *file)

@@ -6,9 +6,14 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.7 $
+ * This is $Revision: 1.8 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.8  2001/12/06 04:21:00  cyeoh
+ * Fixes elfchk to handle checking elf header for programs & libraries
+ * (instead of assuming its a program)
+ * General code cleanup
+ *
  * Revision 1.7  2001/10/31 01:35:15  cyeoh
  * search LSB paths first for libraries
  *
@@ -23,6 +28,7 @@
 #include <stdio.h>
 #include <libgen.h>
 #include "elfchk.h"
+#include "hdr.h"
 
 char *libpaths[] = {
 	"/lib/lsb/%s",
@@ -34,7 +40,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char *libchk_revision = "$Revision: 1.7 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.8 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -168,7 +174,7 @@ check_lib(char *libname, struct versym entries[])
     return;
   }
 
-  checkElfhdr(file);
+  checkElfhdr(file, 0);
 
   printf("Checking symbols in %s\n", filename );
 
@@ -187,6 +193,7 @@ check_lib(char *libname, struct versym entries[])
 }
 
 
+extern void check_libs(); /* Generated function by mkfunclist */
 
 int main(int argc, char *argv[])
 {

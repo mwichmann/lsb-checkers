@@ -37,7 +37,9 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 open(LIBS,">libs.c");
 print LIBS "/* Generated file */\n";
 print LIBS "#include \"libs.h\"\n\n";
-print LIBS "check_libs()\n{\n";
+print LIBS "extern void check_lib(const char *libname, struct versym entries[]);\n";
+
+print LIBS "void check_libs()\n{\n";
 
 open(LIBSH,">libs.h");
 print LIBSH "/* Generated file */\n";
