@@ -1,3 +1,6 @@
+DEVCHK
+======
+
 This is the devchk TET test suite, also known as LSB-HDR.  It
 is used for development environment certification.  This test
 suite verifies binary values in specific header files. *NOTE* It
@@ -12,7 +15,6 @@ If you prefer to create the test suite source files yourself, the
 system you are going to use for testing will require some setup.  
 Start with the "CREATE THE TEST SUITE SOURCE FILES" section, then 
 build and execute the test suite.
-
 
 
 CREATE THE TEST SUITE SOURCE FILES
@@ -82,3 +84,16 @@ NOT USING TET
 
 3. Run the tests
    ./hdrchk 
+
+
+BUG REPORTS & FEEDBACK
+======================
+
+Please send feedback and bug reports to lsb-test@linuxbase.org
+
+
+License Information
+===================
+
+See License.devchk
+
