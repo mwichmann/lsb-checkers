@@ -199,7 +199,8 @@ sub get_member_typetype
    
 	return "ANONYMOUS" if($type =~ /\Aanon-/);
 	return "struct_".$type if($typeform eq "Struct");
-	return "union_".$type if($typeform eq "Union");
+	return "NULL_TYPETYPE" if($typeform eq "Union"); ####################
+	#      ^ This should be "union ".$type
 	if($typeform eq "Pointer")
 	{
 		$get_type_info_q->execute($base_type);
@@ -355,7 +356,7 @@ $header_q->execute() or die "Couldn't execute header query: ".DBI->errstr;
 HEADERLIST: while(my ($header_name) = $header_q->fetchrow_array())
 { 
 	# write header requirement to struct_tests_h.h
-	write_header_to_struct_tests_h($header_header_file, $header_name);
+	write_header_to_struct_tests_h($header_header_file, $header_name) unless($header_name =~ /\AX11|\Aunwind\.h/);
 }
 $header_q->finish;
 close $header_header_file

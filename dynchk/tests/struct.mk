@@ -19,6 +19,7 @@ struct/validate_struct_timespec.o	\
 struct/validate_struct_tm.o	\
 struct/validate_struct_utimbuf.o	\
 struct/validate_struct__win_st.o	\
+struct/validate_struct_ldat.o	\
 struct/validate_struct_pdat.o	\
 struct/validate_struct_FTW.o	\
 struct/validate_struct_stat.o	\
