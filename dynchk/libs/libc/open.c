@@ -18,7 +18,8 @@ int open(const char *pathname, int flags, ...)
 
 	validate_pathname(pathname, "open");
 	//validate_flags
-	validate_filemode(mode, "open");
+	if( flags & O_CREAT )
+		validate_filemode(mode, "open");
 
 	va_end(args);
 	
