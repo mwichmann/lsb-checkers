@@ -46,6 +46,7 @@ int checkDT_PLTREL(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_POSFLAG_1(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_RELCOUNT(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_REL(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
+int checkDT_RELACOUNT(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_RELENT(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_RELSZ(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_RPATH(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
