@@ -26,7 +26,7 @@ int open(const char *pathname, int flags, ...)
 		__lsb_check_params=0;
         	__lsb_output(5-__lsb_check_params, "open()");
 
-		validate_pathname(pathname, "open");
+		validate_pathname(pathname, flags, "open");
 		//validate_flags
 		if( flags & O_CREAT )
 		{
