@@ -7,12 +7,14 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Vname FROM Interface,Library,LibGroup,LGInt ";
-$select.= "LEFT JOIN Version ON Vid=Iversion ";
+$select = "SELECT DISTINCT Iname,Vname,Asymbol,Aname FROM Interface,Library,LibGroup,LGInt,ArchInt,Architecture ";
+$select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=Library.Lid ";
 $select.= "AND Library.Lstd='Yes' ";
+$select.= "AND Interface.Iid=ArchInt.AIint ";
+$select.= "AND Aid=AIarch ";
 $select.= "ORDER BY Iname ";
 
 #print $select;
@@ -24,7 +26,16 @@ print "#include \"elfchk.h\"\n";
 print "struct versym DynSyms[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
+        if ($entry{'Aname'} ne "All")
+        {
+          print "#if defined($entry{'Asymbol'})\n";
+        }
 	printf "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+        if ($entry{'Aname'} ne "All")
+        {
+          print "#endif\n";
+        }
+
 }
 print "\t};\n";
 print "int numDynSyms = sizeof(DynSyms)/sizeof(struct versym);\n";
