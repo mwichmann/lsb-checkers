@@ -6,9 +6,13 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.9 $
+ * This is $Revision: 1.10 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.10  2002/03/20 04:37:38  cyeoh
+ * Adds tet journal reporting
+ * General cleanup
+ *
  * Revision 1.9  2002/01/07 03:17:58  cyeoh
  * Fix for check_lib when given absolute path to library (don't do
  * search)
@@ -34,6 +38,7 @@
 #include <string.h>
 #include "elfchk.h"
 #include "hdr.h"
+#include "../tetj/tetj.h"
 
 char *libpaths[] = {
 	"/lib/lsb/%s",
@@ -45,7 +50,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.9 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.10 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -156,10 +161,12 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
 
 
 void
-check_lib(char *libname, struct versym entries[])
+check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
 {
   ElfFile *file = NULL;
   char filename[PATH_MAX+1];
+#define TMP_STRING_SIZE (PATH_MAX+20)
+  char tmp_string[TMP_STRING_SIZE+1];
   int i;
 
   if (libname[0]!='/')
@@ -187,9 +194,16 @@ check_lib(char *libname, struct versym entries[])
 
   if(file==NULL) 
   {
-    printf("Unable to find library %s\n", libname );
+    snprintf(tmp_string, TMP_STRING_SIZE, "Unable to find library %s",
+             libname);
+    printf("%s\n", tmp_string);
+    tetj_add_controller_error(journal, tmp_string);
     return;
   }
+
+  tetj_activity_count++;
+  tetj_testcase_start(journal, tetj_activity_count, libname, "");
+  tetj_tp_count = 0;
 
   checkElfhdr(file, 0);
 
@@ -197,9 +211,20 @@ check_lib(char *libname, struct versym entries[])
 
   for (i=0; entries[i].name; i++) 
   {
-    if(!check_symbol(file, entries+i, 0))
+    tetj_tp_count++;
+    snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)",
+            entries[i].name, entries[i].vername>0 ? entries[i].vername :
+            "unversioned");
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                       tmp_string);
+    if(check_symbol(file, entries+i, 0))
+    {
+      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+    }
+    else
     {
       /* Failed to match */
+      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
       printf("  Didn't find %s ", entries[i].name);
       if (strlen(entries[i].vername)>0) printf("(%s)", entries[i].vername);
       else printf("(unversioned)");
@@ -209,15 +234,21 @@ check_lib(char *libname, struct versym entries[])
   }
 }
 
-
-extern void check_libs(); /* Generated function by mkfunclist */
+/* Generated function by mkfunclist */
+extern void check_libs(struct tetj_handle *journal); 
 
 int main(int argc, char *argv[])
 {
-  printf("%s built for Specification Version " LSBVERSION "\n", 
-         basename(argv[0]));
-  printf("Program Revision: 1.1\n\n");
-  check_libs();
+  struct tetj_handle *journal;
+  
+
+  if (tetj_start_journal("journal.libchk", &journal, "libchk")!=0)
+  {
+    perror("Could not open journal file");
+    exit(1);
+  }
+
+  check_libs(journal);
   exit(0);
 }
 
