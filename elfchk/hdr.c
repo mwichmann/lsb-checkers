@@ -85,7 +85,8 @@ checkhdrfield( e_version, EV_CURRENT )
 #if defined(i386)
 checkhdrfield( e_flags, 0 )
 #elif defined( __ia64__ )
-checkhdrfield( e_flags, 0 ) /* Need to figure this out for Linux */
+/* today this is correct... but some bits are RFE, may change later? */
+checkhdrfield( e_flags, 0x10 )
 #else
 fprintf(stderr, "e_flags not checked!!\n");
 #endif
