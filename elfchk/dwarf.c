@@ -433,7 +433,7 @@ dumpbytes(ptr,length);
                 fprintf(stderr,"CIE_pointer: %x\n", fdeimage.CIE_pointer);
                 fprintf(stderr,"initial_location: %p\n", 
                         fdeimage.initial_location);
-                fprintf(stderr,"address_range: %x (%p)\n", 
+                fprintf(stderr,"address_range: %lx (%p)\n", 
                         fdeimage.address_range,
                         ((char *)fdeimage.initial_location) 
                         + fdeimage.address_range);
@@ -559,7 +559,7 @@ int check_CIE(unsigned char *ptr, int *error)
         /* Get the CFIs */
         if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
                 fprintf(stderr,"%x bytes of CFI\n", 
-                        ptr - (unsigned char *)frameimg);
+                        (int)(ptr - (unsigned char *)frameimg));
 	}
 
         while ( (ptr - (unsigned char *)frameimg) < 
@@ -590,7 +590,7 @@ read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused)
 		*numused = 2;
 		return tmp;
 	case DW_EH_PE_udata4:
-		tmp = (void *)(*(unsigned int *)ptr);
+		tmp = (void *)(long)(*(unsigned int *)ptr);
 		*numused = 4;
 		return tmp;
 	case DW_EH_PE_udata8:
@@ -605,7 +605,7 @@ read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused)
 		*numused = 2;
 		return tmp;
 	case DW_EH_PE_sdata4:
-		tmp = (void *)(*(int *)ptr);
+		tmp = (void *)(long)(*(int *)ptr);
 		*numused = 4;
 		return tmp;
 	case DW_EH_PE_sdata8:
