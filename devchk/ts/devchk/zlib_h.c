@@ -330,6 +330,7 @@ Msg("Find size of intf (10168)\n");
 #elif __i386__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390x__
+#elif __s390__ && !__s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10512,0);
 Msg("Find size of const Bytef * (10512)\n");
@@ -343,6 +344,8 @@ CheckTypeSize(const uLongf,4, 10517, 2)
 CheckTypeSize(const uLongf,4, 10517, 6)
 #elif __s390x__
 CheckTypeSize(const uLongf,8, 10517, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const uLongf,0, 10517, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10517,0);
 Msg("Find size of const uLongf (10517)\n");
@@ -352,6 +355,7 @@ Msg("Find size of const uLongf (10517)\n");
 #elif __i386__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390x__
+#elif __s390__ && !__s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10518,0);
 Msg("Find size of const uLongf * (10518)\n");
@@ -467,6 +471,8 @@ CheckTypeSize(z_off_t,4, 10519, 2)
 CheckTypeSize(z_off_t,4, 10519, 6)
 #elif __s390x__
 CheckTypeSize(z_off_t,8, 10519, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(z_off_t,0, 10519, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10519,0);
 Msg("Find size of z_off_t (10519)\n");
@@ -560,31 +566,31 @@ CheckMemberSize(struct z_stream_s,reserved,8,3,34080)
 CheckOffset(struct z_stream_s,reserved,104,3,34080)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct z_stream_s,56, 9875, 10)
-CheckMemberSize(struct z_stream_s,avail_in,0,10,34068)
+CheckMemberSize(struct z_stream_s,avail_in,4,10,34068)
 CheckOffset(struct z_stream_s,avail_in,4,10,34068)
-CheckMemberSize(struct z_stream_s,total_in,0,10,34069)
+CheckMemberSize(struct z_stream_s,total_in,4,10,34069)
 CheckOffset(struct z_stream_s,total_in,8,10,34069)
-CheckMemberSize(struct z_stream_s,next_out,0,10,34070)
+CheckMemberSize(struct z_stream_s,next_out,4,10,34070)
 CheckOffset(struct z_stream_s,next_out,12,10,34070)
-CheckMemberSize(struct z_stream_s,avail_out,0,10,34071)
+CheckMemberSize(struct z_stream_s,avail_out,4,10,34071)
 CheckOffset(struct z_stream_s,avail_out,16,10,34071)
-CheckMemberSize(struct z_stream_s,total_out,0,10,34072)
+CheckMemberSize(struct z_stream_s,total_out,4,10,34072)
 CheckOffset(struct z_stream_s,total_out,20,10,34072)
-CheckMemberSize(struct z_stream_s,msg,0,10,34073)
+CheckMemberSize(struct z_stream_s,msg,4,10,34073)
 CheckOffset(struct z_stream_s,msg,24,10,34073)
-CheckMemberSize(struct z_stream_s,state,0,10,34074)
+CheckMemberSize(struct z_stream_s,state,4,10,34074)
 CheckOffset(struct z_stream_s,state,28,10,34074)
-CheckMemberSize(struct z_stream_s,zalloc,0,10,34075)
+CheckMemberSize(struct z_stream_s,zalloc,4,10,34075)
 CheckOffset(struct z_stream_s,zalloc,32,10,34075)
-CheckMemberSize(struct z_stream_s,zfree,0,10,34076)
+CheckMemberSize(struct z_stream_s,zfree,4,10,34076)
 CheckOffset(struct z_stream_s,zfree,36,10,34076)
-CheckMemberSize(struct z_stream_s,opaque,0,10,34077)
+CheckMemberSize(struct z_stream_s,opaque,4,10,34077)
 CheckOffset(struct z_stream_s,opaque,40,10,34077)
-CheckMemberSize(struct z_stream_s,data_type,0,10,34078)
+CheckMemberSize(struct z_stream_s,data_type,4,10,34078)
 CheckOffset(struct z_stream_s,data_type,44,10,34078)
-CheckMemberSize(struct z_stream_s,adler,0,10,34079)
+CheckMemberSize(struct z_stream_s,adler,4,10,34079)
 CheckOffset(struct z_stream_s,adler,48,10,34079)
-CheckMemberSize(struct z_stream_s,reserved,0,10,34080)
+CheckMemberSize(struct z_stream_s,reserved,4,10,34080)
 CheckOffset(struct z_stream_s,reserved,52,10,34080)
 #elif __powerpc64__
 CheckTypeSize(struct z_stream_s,112, 9875, 9)
@@ -803,6 +809,8 @@ CheckTypeSize(const Bytef,1, 10511, 2)
 CheckTypeSize(const Bytef,1, 10511, 6)
 #elif __s390x__
 CheckTypeSize(const Bytef,1, 10511, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const Bytef,0, 10511, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10511,0);
 Msg("Find size of const Bytef (10511)\n");

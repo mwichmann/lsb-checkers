@@ -139,6 +139,16 @@ CheckMemberSize(struct random_data,rand_sep,4,12,40032)
 CheckOffset(struct random_data,rand_sep,32,12,40032)
 CheckMemberSize(struct random_data,end_ptr,8,12,40033)
 CheckOffset(struct random_data,end_ptr,40,12,40033)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct random_data,0, 10483, 10)
+Msg("Missing member data for random_data on S390\n");
+CheckOffset(struct random_data,fptr,0,10,40027)
+CheckOffset(struct random_data,rptr,0,10,40028)
+CheckOffset(struct random_data,state,0,10,40029)
+CheckOffset(struct random_data,rand_type,0,10,40030)
+CheckOffset(struct random_data,rand_deg,0,10,40031)
+CheckOffset(struct random_data,rand_sep,0,10,40032)
+CheckOffset(struct random_data,end_ptr,0,10,40033)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10483,0);
 Msg("Find size of random_data (10483)\n");

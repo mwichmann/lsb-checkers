@@ -161,6 +161,7 @@ CheckTypeSize(fpregset_t,136, 10569, 12)
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390x__
+#elif __s390__ && !__s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
 Msg("Find size of anon-mcontext (10229)\n");

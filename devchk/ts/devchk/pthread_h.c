@@ -317,7 +317,7 @@ CheckMemberSize(struct _pthread_fastlock,__spinlock,4,6,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,6,34427)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 10)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,0,10,34427)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,10,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427)
 #elif __powerpc64__
 CheckTypeSize(struct _pthread_fastlock,16, 10105, 9)
@@ -527,6 +527,16 @@ CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,12,34443)
 CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,12,34443)
 CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,12,34444)
 CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,12,34444)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _pthread_rwlock_t,0, 10279, 10)
+Msg("Missing member data for _pthread_rwlock_t on S390\n");
+CheckOffset(struct _pthread_rwlock_t,__rw_lock,0,10,34438)
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,0,10,34439)
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,0,10,34440)
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,0,10,34441)
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,0,10,34442)
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,0,10,34443)
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,0,10,34444)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10279,0);
 Msg("Find size of _pthread_rwlock_t (10279)\n");
@@ -536,6 +546,7 @@ Msg("Find size of _pthread_rwlock_t (10279)\n");
 #elif __s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __ia64__
+#elif __s390__ && !__s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10280,0);
 Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
