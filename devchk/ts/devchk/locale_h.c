@@ -153,6 +153,16 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_GLOBAL_LOCALE
+	CompareConstant(LC_GLOBAL_LOCALE,((locale_t) -1L),5284,architecture)
+#else
+Msg( "Error: Constant not found: LC_GLOBAL_LOCALE\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(struct lconv,56, 6919, 2)
 CheckMemberSize(struct lconv,decimal_point,4,2,29980)
@@ -590,22 +600,22 @@ Msg("Find size of __locale_struct * (10532)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(__locale_t,4, 10533, 2)
+CheckTypeSize(locale_t,4, 10534, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__locale_t,4, 10533, 6)
+CheckTypeSize(locale_t,4, 10534, 6)
 #elif __ia64__
-CheckTypeSize(__locale_t,8, 10533, 3)
+CheckTypeSize(locale_t,8, 10534, 3)
 #elif __s390x__
-CheckTypeSize(__locale_t,8, 10533, 12)
-#elif __s390__ && !__s390x__
-CheckTypeSize(__locale_t,4, 10533, 10)
-#elif __x86_64__
-CheckTypeSize(__locale_t,8, 10533, 11)
+CheckTypeSize(locale_t,8, 10534, 12)
 #elif __powerpc64__
-CheckTypeSize(__locale_t,8, 10533, 9)
+CheckTypeSize(locale_t,8, 10534, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(locale_t,4, 10534, 10)
+#elif __x86_64__
+CheckTypeSize(locale_t,8, 10534, 11)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10533,0);
-Msg("Find size of __locale_t (10533)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10534,0);
+Msg("Find size of locale_t (10534)\n");
 #endif
 
 #ifdef TET_TEST
