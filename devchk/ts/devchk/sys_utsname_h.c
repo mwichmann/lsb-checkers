@@ -39,13 +39,11 @@ CheckOffset(struct utsname,machine,260,3,30181)
 CheckOffset(struct utsname,domainname,325,3,34411)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct utsname,390, 7013, 6)
-Msg("Missing member data for utsname on PPC32\n");
-CheckOffset(struct utsname,sysname,0,6,30177)
-CheckOffset(struct utsname,nodename,0,6,30178)
-CheckOffset(struct utsname,release,0,6,30179)
-CheckOffset(struct utsname,version,0,6,30180)
-CheckOffset(struct utsname,machine,0,6,30181)
-CheckOffset(struct utsname,domainname,0,6,34411)
+CheckOffset(struct utsname,nodename,65,6,30178)
+CheckOffset(struct utsname,release,130,6,30179)
+CheckOffset(struct utsname,version,195,6,30180)
+CheckOffset(struct utsname,machine,260,6,30181)
+CheckOffset(struct utsname,domainname,325,6,34411)
 #elif __s390__
 CheckTypeSize(struct utsname,390, 7013, 10)
 CheckOffset(struct utsname,nodename,65,10,30178)

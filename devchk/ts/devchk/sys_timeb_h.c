@@ -35,11 +35,9 @@ CheckOffset(struct timeb,timezone,10,3,34300)
 CheckOffset(struct timeb,dstflag,12,3,34301)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct timeb,12, 10216, 6)
-Msg("Missing member data for timeb on PPC32\n");
-CheckOffset(struct timeb,time,0,6,34298)
-CheckOffset(struct timeb,millitm,0,6,34299)
-CheckOffset(struct timeb,timezone,0,6,34300)
-CheckOffset(struct timeb,dstflag,0,6,34301)
+CheckOffset(struct timeb,millitm,4,6,34299)
+CheckOffset(struct timeb,timezone,6,6,34300)
+CheckOffset(struct timeb,dstflag,8,6,34301)
 #elif __s390__
 CheckTypeSize(struct timeb,12, 10216, 10)
 CheckOffset(struct timeb,millitm,4,10,34299)

@@ -186,6 +186,7 @@ cnt++;
 #if __i386__
 #elif __s390__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9916,0);
 Msg("Find size of clnt_stat (9916)\n");
@@ -200,6 +201,11 @@ CheckOffset(struct rpc_err,ru,8,3,32102)
 #elif __s390__
 CheckTypeSize(struct rpc_err,12, 9917, 10)
 CheckOffset(struct rpc_err,ru,4,10,32102)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct rpc_err,0, 9917, 6)
+Msg("Missing member data for rpc_err on PPC32\n");
+CheckOffset(struct rpc_err,re_status,0,6,32093)
+CheckOffset(struct rpc_err,ru,0,6,32102)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9917,0);
 Msg("Find size of rpc_err (9917)\n");
@@ -226,6 +232,15 @@ CheckOffset(struct clnt_ops,cl_geterr,16,3,32106)
 CheckOffset(struct clnt_ops,cl_freeres,24,3,32107)
 CheckOffset(struct clnt_ops,cl_destroy,32,3,32108)
 CheckOffset(struct clnt_ops,cl_control,40,3,32109)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct clnt_ops,0, 9922, 6)
+Msg("Missing member data for clnt_ops on PPC32\n");
+CheckOffset(struct clnt_ops,cl_call,0,6,32104)
+CheckOffset(struct clnt_ops,cl_abort,0,6,32105)
+CheckOffset(struct clnt_ops,cl_geterr,0,6,32106)
+CheckOffset(struct clnt_ops,cl_freeres,0,6,32107)
+CheckOffset(struct clnt_ops,cl_destroy,0,6,32108)
+CheckOffset(struct clnt_ops,cl_control,0,6,32109)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9922,0);
 Msg("Find size of clnt_ops (9922)\n");
@@ -243,6 +258,12 @@ CheckOffset(struct CLIENT,cl_private,8,10,32111)
 CheckTypeSize(struct CLIENT,24, 9921, 3)
 CheckOffset(struct CLIENT,cl_ops,8,3,32110)
 CheckOffset(struct CLIENT,cl_private,16,3,32111)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct CLIENT,0, 9921, 6)
+Msg("Missing member data for CLIENT on PPC32\n");
+CheckOffset(struct CLIENT,cl_auth,0,6,32103)
+CheckOffset(struct CLIENT,cl_ops,0,6,32110)
+CheckOffset(struct CLIENT,cl_private,0,6,32111)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9921,0);
 Msg("Find size of CLIENT (9921)\n");

@@ -89,10 +89,8 @@ CheckOffset(struct pollfd,events,4,2,34413)
 CheckOffset(struct pollfd,revents,6,2,34414)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct pollfd,8, 9913, 6)
-Msg("Missing member data for pollfd on PPC32\n");
-CheckOffset(struct pollfd,fd,0,6,34412)
-CheckOffset(struct pollfd,events,0,6,34413)
-CheckOffset(struct pollfd,revents,0,6,34414)
+CheckOffset(struct pollfd,events,4,6,34413)
+CheckOffset(struct pollfd,revents,6,6,34414)
 #elif __ia64__
 CheckTypeSize(struct pollfd,8, 9913, 3)
 CheckOffset(struct pollfd,events,4,3,34413)

@@ -35,6 +35,12 @@ CheckOffset(struct accepted_reply,ar_stat,24,3,34801)
 CheckTypeSize(struct accepted_reply,24, 10417, 10)
 CheckOffset(struct accepted_reply,ar_stat,12,10,34801)
 CheckOffset(struct accepted_reply,ru,16,10,34830)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct accepted_reply,0, 10417, 6)
+Msg("Missing member data for accepted_reply on PPC32\n");
+CheckOffset(struct accepted_reply,ar_verf,0,6,34800)
+CheckOffset(struct accepted_reply,ar_stat,0,6,34801)
+CheckOffset(struct accepted_reply,ru,0,6,34830)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10417,0);
 Msg("Find size of accepted_reply (10417)\n");
@@ -43,6 +49,7 @@ Msg("Find size of accepted_reply (10417)\n");
 #if __i386__
 #elif __ia64__
 #elif __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10418,0);
 Msg("Find size of anon-accepted_reply-ru (10418)\n");
@@ -51,6 +58,7 @@ Msg("Find size of anon-accepted_reply-ru (10418)\n");
 #if __i386__
 #elif __ia64__
 #elif __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10419,0);
 Msg("Find size of anon-accepted_reply-ar_vers (10419)\n");
@@ -59,6 +67,7 @@ Msg("Find size of anon-accepted_reply-ar_vers (10419)\n");
 #if __i386__
 #elif __ia64__
 #elif __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10420,0);
 Msg("Find size of anon-accepted_reply-ar_results (10420)\n");
@@ -67,6 +76,7 @@ Msg("Find size of anon-accepted_reply-ar_results (10420)\n");
 #if __i386__
 #elif __ia64__
 #elif __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10421,0);
 Msg("Find size of anon-rejected_reply-rj_vers (10421)\n");
@@ -75,6 +85,7 @@ Msg("Find size of anon-rejected_reply-rj_vers (10421)\n");
 #if __i386__
 #elif __ia64__
 #elif __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10422,0);
 Msg("Find size of anon-rejected_reply-ru (10422)\n");
@@ -91,6 +102,11 @@ CheckOffset(struct rejected_reply,ru,8,3,34813)
 #elif __s390__
 CheckTypeSize(struct rejected_reply,12, 10423, 10)
 CheckOffset(struct rejected_reply,ru,4,10,34813)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct rejected_reply,0, 10423, 6)
+Msg("Missing member data for rejected_reply on PPC32\n");
+CheckOffset(struct rejected_reply,rj_stat,0,6,34812)
+CheckOffset(struct rejected_reply,ru,0,6,34813)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
@@ -99,6 +115,7 @@ Msg("Find size of rejected_reply (10423)\n");
 #if __i386__
 #elif __ia64__
 #elif __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10424,0);
 Msg("Find size of anon-reply_bodu-ru (10424)\n");
@@ -115,6 +132,11 @@ CheckOffset(struct reply_body,ru,8,3,34817)
 #elif __s390__
 CheckTypeSize(struct reply_body,28, 10425, 10)
 CheckOffset(struct reply_body,ru,4,10,34817)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct reply_body,0, 10425, 6)
+Msg("Missing member data for reply_body on PPC32\n");
+CheckOffset(struct reply_body,rp_stat,0,6,34816)
+CheckOffset(struct reply_body,ru,0,6,34817)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10425,0);
 Msg("Find size of reply_body (10425)\n");
@@ -142,6 +164,15 @@ CheckOffset(struct call_body,cb_vers,8,10,34820)
 CheckOffset(struct call_body,cb_proc,12,10,34821)
 CheckOffset(struct call_body,cb_cred,16,10,34822)
 CheckOffset(struct call_body,cb_verf,28,10,34823)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct call_body,0, 10426, 6)
+Msg("Missing member data for call_body on PPC32\n");
+CheckOffset(struct call_body,cb_rpcvers,0,6,34818)
+CheckOffset(struct call_body,cb_prog,0,6,34819)
+CheckOffset(struct call_body,cb_vers,0,6,34820)
+CheckOffset(struct call_body,cb_proc,0,6,34821)
+CheckOffset(struct call_body,cb_cred,0,6,34822)
+CheckOffset(struct call_body,cb_verf,0,6,34823)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10426,0);
 Msg("Find size of call_body (10426)\n");
@@ -164,6 +195,7 @@ CheckOffset(struct rpc_msg,ru,8,10,34828)
 #endif
 
 #if __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9985,0);
 Msg("Find size of rpc_msg * (9985)\n");
@@ -172,6 +204,7 @@ Msg("Find size of rpc_msg * (9985)\n");
 #if __i386__
 #elif __ia64__
 #elif __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10427,0);
 Msg("Find size of anon-rpc_msg-ru (10427)\n");

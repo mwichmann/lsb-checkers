@@ -25,6 +25,7 @@ Msg("Checking data structures in term.h\n");
 
 #if __i386__
 #elif __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10348,0);
 Msg("Find size of fptr-putcproc (10348)\n");

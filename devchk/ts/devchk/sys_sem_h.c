@@ -113,10 +113,8 @@ CheckOffset(struct sembuf,sem_op,2,3,30119)
 CheckOffset(struct sembuf,sem_flg,4,3,30120)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sembuf,6, 6982, 6)
-Msg("Missing member data for sembuf on PPC32\n");
-CheckOffset(struct sembuf,sem_num,0,6,30118)
-CheckOffset(struct sembuf,sem_op,0,6,30119)
-CheckOffset(struct sembuf,sem_flg,0,6,30120)
+CheckOffset(struct sembuf,sem_op,2,6,30119)
+CheckOffset(struct sembuf,sem_flg,4,6,30120)
 #elif __s390__
 CheckTypeSize(struct sembuf,6, 6982, 10)
 CheckOffset(struct sembuf,sem_op,2,10,30119)
@@ -145,15 +143,15 @@ CheckOffset(struct semid_ds,__unused2,80,3,34669)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(struct semid_ds,64, 10407, 6)
+CheckTypeSize(struct semid_ds,80, 10407, 6)
 CheckOffset(struct semid_ds,sem_perm,0,6,34768)
-CheckOffset(struct semid_ds,sem_otime,0,6,34769)
-CheckOffset(struct semid_ds,__unused1,0,6,34770)
-CheckOffset(struct semid_ds,sem_ctime,0,6,34771)
-CheckOffset(struct semid_ds,__unused2,0,6,34772)
-CheckOffset(struct semid_ds,sem_nsems,0,6,34773)
-CheckOffset(struct semid_ds,__unused3,0,6,34774)
-CheckOffset(struct semid_ds,__unused4,0,6,34776)
+CheckOffset(struct semid_ds,sem_otime,52,6,34769)
+CheckOffset(struct semid_ds,__unused1,48,6,34770)
+CheckOffset(struct semid_ds,sem_ctime,60,6,34771)
+CheckOffset(struct semid_ds,__unused2,56,6,34772)
+CheckOffset(struct semid_ds,sem_nsems,64,6,34773)
+CheckOffset(struct semid_ds,__unused3,68,6,34774)
+CheckOffset(struct semid_ds,__unused4,72,6,34776)
 #endif
 
 #if __s390__

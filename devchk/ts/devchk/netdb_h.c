@@ -323,11 +323,9 @@ CheckOffset(struct servent,s_port,16,3,33735)
 CheckOffset(struct servent,s_proto,24,3,33736)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct servent,16, 10134, 6)
-Msg("Missing member data for servent on PPC32\n");
-CheckOffset(struct servent,s_name,0,6,33733)
-CheckOffset(struct servent,s_aliases,0,6,33734)
-CheckOffset(struct servent,s_port,0,6,33735)
-CheckOffset(struct servent,s_proto,0,6,33736)
+CheckOffset(struct servent,s_aliases,4,6,33734)
+CheckOffset(struct servent,s_port,8,6,33735)
+CheckOffset(struct servent,s_proto,12,6,33736)
 #elif __s390__
 CheckTypeSize(struct servent,16, 10134, 10)
 CheckOffset(struct servent,s_aliases,4,10,33734)
@@ -352,12 +350,10 @@ CheckOffset(struct hostent,h_length,20,3,33740)
 CheckOffset(struct hostent,h_addr_list,24,3,33741)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct hostent,20, 10136, 6)
-Msg("Missing member data for hostent on PPC32\n");
-CheckOffset(struct hostent,h_name,0,6,33737)
-CheckOffset(struct hostent,h_aliases,0,6,33738)
-CheckOffset(struct hostent,h_addrtype,0,6,33739)
-CheckOffset(struct hostent,h_length,0,6,33740)
-CheckOffset(struct hostent,h_addr_list,0,6,33741)
+CheckOffset(struct hostent,h_aliases,4,6,33738)
+CheckOffset(struct hostent,h_addrtype,8,6,33739)
+CheckOffset(struct hostent,h_length,12,6,33740)
+CheckOffset(struct hostent,h_addr_list,16,6,33741)
 #elif __s390__
 CheckTypeSize(struct hostent,20, 10136, 10)
 CheckOffset(struct hostent,h_aliases,4,10,33738)
@@ -382,6 +378,12 @@ CheckOffset(struct protoent,p_proto,16,3,33744)
 CheckTypeSize(struct protoent,12, 10139, 10)
 CheckOffset(struct protoent,p_aliases,4,10,33743)
 CheckOffset(struct protoent,p_proto,8,10,33744)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct protoent,0, 10139, 6)
+Msg("Missing member data for protoent on PPC32\n");
+CheckOffset(struct protoent,p_name,0,6,33742)
+CheckOffset(struct protoent,p_aliases,0,6,33743)
+CheckOffset(struct protoent,p_proto,0,6,33744)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10139,0);
 Msg("Find size of protoent (10139)\n");
@@ -402,6 +404,13 @@ CheckTypeSize(struct netent,16, 10141, 10)
 CheckOffset(struct netent,n_aliases,4,10,33746)
 CheckOffset(struct netent,n_addrtype,8,10,33747)
 CheckOffset(struct netent,n_net,12,10,33748)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct netent,0, 10141, 6)
+Msg("Missing member data for netent on PPC32\n");
+CheckOffset(struct netent,n_name,0,6,33745)
+CheckOffset(struct netent,n_aliases,0,6,33746)
+CheckOffset(struct netent,n_addrtype,0,6,33747)
+CheckOffset(struct netent,n_net,0,6,33748)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10141,0);
 Msg("Find size of netent (10141)\n");
@@ -434,6 +443,17 @@ CheckOffset(struct addrinfo,ai_addrlen,16,10,33698)
 CheckOffset(struct addrinfo,ai_addr,20,10,33699)
 CheckOffset(struct addrinfo,ai_canonname,24,10,33700)
 CheckOffset(struct addrinfo,ai_next,28,10,33701)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct addrinfo,0, 10125, 6)
+Msg("Missing member data for addrinfo on PPC32\n");
+CheckOffset(struct addrinfo,ai_flags,0,6,33694)
+CheckOffset(struct addrinfo,ai_family,0,6,33695)
+CheckOffset(struct addrinfo,ai_socktype,0,6,33696)
+CheckOffset(struct addrinfo,ai_protocol,0,6,33697)
+CheckOffset(struct addrinfo,ai_addrlen,0,6,33698)
+CheckOffset(struct addrinfo,ai_addr,0,6,33699)
+CheckOffset(struct addrinfo,ai_canonname,0,6,33700)
+CheckOffset(struct addrinfo,ai_next,0,6,33701)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10125,0);
 Msg("Find size of addrinfo (10125)\n");

@@ -41,11 +41,13 @@ CheckArrayTypeSize(__jmp_buf,8,70, 10409, 3)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckArrayTypeSize(__jmp_buf,4,1, 10410, 6)
+CheckArrayTypeSize(__jmp_buf,4,58, 10410, 6)
 #endif
 
 #if __s390__
 CheckArrayTypeSize(__jmp_buf,4,14, 10411, 10)
+#elif __powerpc__ && !__powerpc64__
+CheckArrayTypeSize(__jmp_buf,4,0, 10411, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10411,0);
 Msg("Find size of __jmp_buf (10411)\n");
@@ -86,10 +88,8 @@ CheckOffset(struct __jmp_buf_tag,__mask_was_saved,560,3,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,568,3,34041)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct __jmp_buf_tag,364, 6961, 6)
-Msg("Missing member data for __jmp_buf_tag on PPC32\n");
-CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,6,34039)
-CheckOffset(struct __jmp_buf_tag,__mask_was_saved,0,6,34040)
-CheckOffset(struct __jmp_buf_tag,__saved_mask,0,6,34041)
+CheckOffset(struct __jmp_buf_tag,__mask_was_saved,232,6,34040)
+CheckOffset(struct __jmp_buf_tag,__saved_mask,236,6,34041)
 #elif __s390__
 CheckTypeSize(struct __jmp_buf_tag,188, 6961, 10)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,56,10,34040)

@@ -125,7 +125,15 @@ cnt++;
 
 #endif
 
-#if __ia64__
+#if __powerpc__ && !__powerpc64__
+#ifdef __INT_MAX__
+	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
+#else
+Msg( "Error: Constant not found: __INT_MAX__\n");
+cnt++;
+#endif
+
+#elif __ia64__
 #ifdef __INT_MAX__
 	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
 #else
@@ -152,7 +160,7 @@ cnt++;
 #else
 Msg( "No definition for __INT_MAX__ (3600, int) in db\n");
 #ifdef __INT_MAX__
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3600,%d)\n", architecture, __INT_MAX__);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3600,%d);\n", architecture, __INT_MAX__);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -250,7 +258,7 @@ cnt++;
 #else
 Msg( "No definition for LONG_MAX (16, int) in db\n");
 #ifdef LONG_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,16,%d)\n", architecture, LONG_MAX);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,16,%d);\n", architecture, LONG_MAX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -298,7 +306,7 @@ cnt++;
 #else
 Msg( "No definition for ULONG_MAX (18, int) in db\n");
 #ifdef ULONG_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%d)\n", architecture, ULONG_MAX);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%d);\n", architecture, ULONG_MAX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH

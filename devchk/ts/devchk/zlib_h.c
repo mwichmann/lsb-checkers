@@ -315,6 +315,8 @@ CheckTypeSize(intf,4, 10168, 2)
 CheckTypeSize(intf,4, 10168, 3)
 #elif __s390__
 CheckTypeSize(intf,4, 10168, 10)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(intf,0, 10168, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10168,0);
 Msg("Find size of intf (10168)\n");
@@ -415,21 +417,19 @@ CheckOffset(struct z_stream_s,adler,48,2,34079)
 CheckOffset(struct z_stream_s,reserved,52,2,34080)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct z_stream_s,56, 9875, 6)
-Msg("Missing member data for z_stream_s on PPC32\n");
-CheckOffset(struct z_stream_s,next_in,0,6,34067)
-CheckOffset(struct z_stream_s,avail_in,0,6,34068)
-CheckOffset(struct z_stream_s,total_in,0,6,34069)
-CheckOffset(struct z_stream_s,next_out,0,6,34070)
-CheckOffset(struct z_stream_s,avail_out,0,6,34071)
-CheckOffset(struct z_stream_s,total_out,0,6,34072)
-CheckOffset(struct z_stream_s,msg,0,6,34073)
-CheckOffset(struct z_stream_s,state,0,6,34074)
-CheckOffset(struct z_stream_s,zalloc,0,6,34075)
-CheckOffset(struct z_stream_s,zfree,0,6,34076)
-CheckOffset(struct z_stream_s,opaque,0,6,34077)
-CheckOffset(struct z_stream_s,data_type,0,6,34078)
-CheckOffset(struct z_stream_s,adler,0,6,34079)
-CheckOffset(struct z_stream_s,reserved,0,6,34080)
+CheckOffset(struct z_stream_s,avail_in,4,6,34068)
+CheckOffset(struct z_stream_s,total_in,8,6,34069)
+CheckOffset(struct z_stream_s,next_out,12,6,34070)
+CheckOffset(struct z_stream_s,avail_out,16,6,34071)
+CheckOffset(struct z_stream_s,total_out,20,6,34072)
+CheckOffset(struct z_stream_s,msg,24,6,34073)
+CheckOffset(struct z_stream_s,state,28,6,34074)
+CheckOffset(struct z_stream_s,zalloc,32,6,34075)
+CheckOffset(struct z_stream_s,zfree,36,6,34076)
+CheckOffset(struct z_stream_s,opaque,40,6,34077)
+CheckOffset(struct z_stream_s,data_type,44,6,34078)
+CheckOffset(struct z_stream_s,adler,48,6,34079)
+CheckOffset(struct z_stream_s,reserved,52,6,34080)
 #elif __ia64__
 CheckTypeSize(struct z_stream_s,112, 9875, 3)
 CheckOffset(struct z_stream_s,avail_in,8,3,34068)
@@ -566,6 +566,8 @@ CheckTypeSize(uIntf,4, 10169, 2)
 CheckTypeSize(uIntf,4, 10169, 3)
 #elif __s390__
 CheckTypeSize(uIntf,4, 10169, 10)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(uIntf,0, 10169, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10169,0);
 Msg("Find size of uIntf (10169)\n");

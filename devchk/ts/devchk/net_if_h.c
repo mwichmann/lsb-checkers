@@ -150,11 +150,9 @@ CheckOffset(struct ifaddr,ifa_ifp,32,2,34496)
 CheckOffset(struct ifaddr,ifa_next,36,2,34497)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct ifaddr,40, 10286, 6)
-Msg("Missing member data for ifaddr on PPC32\n");
-CheckOffset(struct ifaddr,ifa_addr,0,6,34463)
-CheckOffset(struct ifaddr,ifa_ifu,0,6,34466)
-CheckOffset(struct ifaddr,ifa_ifp,0,6,34496)
-CheckOffset(struct ifaddr,ifa_next,0,6,34497)
+CheckOffset(struct ifaddr,ifa_ifu,16,6,34466)
+CheckOffset(struct ifaddr,ifa_ifp,32,6,34496)
+CheckOffset(struct ifaddr,ifa_next,36,6,34497)
 #elif __ia64__
 CheckTypeSize(struct ifaddr,48, 10286, 3)
 CheckOffset(struct ifaddr,ifa_ifu,16,3,34466)
@@ -184,9 +182,7 @@ CheckTypeSize(struct ifreq,32, 10290, 2)
 CheckOffset(struct ifreq,ifr_ifru,16,2,34483)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct ifreq,32, 10290, 6)
-Msg("Missing member data for ifreq on PPC32\n");
-CheckOffset(struct ifreq,ifr_ifrn,0,6,34471)
-CheckOffset(struct ifreq,ifr_ifru,0,6,34483)
+CheckOffset(struct ifreq,ifr_ifru,16,6,34483)
 #elif __ia64__
 CheckTypeSize(struct ifreq,40, 10290, 3)
 CheckOffset(struct ifreq,ifr_ifru,16,3,34483)

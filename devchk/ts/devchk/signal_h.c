@@ -128,7 +128,7 @@ cnt++;
 #else
 Msg( "No definition for SIGBUS (3109, int) in db\n");
 #ifdef SIGBUS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3109,%d)\n", architecture, SIGBUS);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3109,%d);\n", architecture, SIGBUS);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -186,7 +186,7 @@ cnt++;
 #else
 Msg( "No definition for SIGUSR1 (3112, int) in db\n");
 #ifdef SIGUSR1
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3112,%d)\n", architecture, SIGUSR1);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3112,%d);\n", architecture, SIGUSR1);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -234,7 +234,7 @@ cnt++;
 #else
 Msg( "No definition for SIGUSR2 (3114, int) in db\n");
 #ifdef SIGUSR2
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3114,%d)\n", architecture, SIGUSR2);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3114,%d);\n", architecture, SIGUSR2);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -302,7 +302,7 @@ cnt++;
 #else
 Msg( "No definition for SIGSTKFLT (3118, int) in db\n");
 #ifdef SIGSTKFLT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3118,%d)\n", architecture, SIGSTKFLT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3118,%d);\n", architecture, SIGSTKFLT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -340,7 +340,7 @@ cnt++;
 #else
 Msg( "No definition for SIGCHLD (3119, int) in db\n");
 #ifdef SIGCHLD
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3119,%d)\n", architecture, SIGCHLD);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3119,%d);\n", architecture, SIGCHLD);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -388,7 +388,7 @@ cnt++;
 #else
 Msg( "No definition for SIGCONT (3121, int) in db\n");
 #ifdef SIGCONT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3121,%d)\n", architecture, SIGCONT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3121,%d);\n", architecture, SIGCONT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -426,7 +426,7 @@ cnt++;
 #else
 Msg( "No definition for SIGSTOP (3122, int) in db\n");
 #ifdef SIGSTOP
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3122,%d)\n", architecture, SIGSTOP);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3122,%d);\n", architecture, SIGSTOP);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -464,7 +464,7 @@ cnt++;
 #else
 Msg( "No definition for SIGTSTP (3123, int) in db\n");
 #ifdef SIGTSTP
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3123,%d)\n", architecture, SIGTSTP);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3123,%d);\n", architecture, SIGTSTP);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -502,7 +502,7 @@ cnt++;
 #else
 Msg( "No definition for SIGTTIN (3124, int) in db\n");
 #ifdef SIGTTIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3124,%d)\n", architecture, SIGTTIN);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3124,%d);\n", architecture, SIGTTIN);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -540,7 +540,7 @@ cnt++;
 #else
 Msg( "No definition for SIGTTOU (3125, int) in db\n");
 #ifdef SIGTTOU
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3125,%d)\n", architecture, SIGTTOU);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3125,%d);\n", architecture, SIGTTOU);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -578,7 +578,7 @@ cnt++;
 #else
 Msg( "No definition for SIGURG (3126, int) in db\n");
 #ifdef SIGURG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3126,%d)\n", architecture, SIGURG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3126,%d);\n", architecture, SIGURG);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -616,7 +616,7 @@ cnt++;
 #else
 Msg( "No definition for SIGXCPU (3127, int) in db\n");
 #ifdef SIGXCPU
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3127,%d)\n", architecture, SIGXCPU);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3127,%d);\n", architecture, SIGXCPU);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -654,7 +654,7 @@ cnt++;
 #else
 Msg( "No definition for SIGXFSZ (3128, int) in db\n");
 #ifdef SIGXFSZ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3128,%d)\n", architecture, SIGXFSZ);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3128,%d);\n", architecture, SIGXFSZ);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -702,7 +702,7 @@ cnt++;
 #else
 Msg( "No definition for SIGVTALRM (3129, int) in db\n");
 #ifdef SIGVTALRM
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3129,%d)\n", architecture, SIGVTALRM);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3129,%d);\n", architecture, SIGVTALRM);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -794,7 +794,7 @@ cnt++;
 #else
 Msg( "No definition for SIGWINCH (3131, int) in db\n");
 #ifdef SIGWINCH
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3131,%d)\n", architecture, SIGWINCH);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3131,%d);\n", architecture, SIGWINCH);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -842,7 +842,7 @@ cnt++;
 #else
 Msg( "No definition for SIGIO (3132, int) in db\n");
 #ifdef SIGIO
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3132,%d)\n", architecture, SIGIO);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3132,%d);\n", architecture, SIGIO);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -910,7 +910,7 @@ cnt++;
 #else
 Msg( "No definition for SIGPWR (3134, int) in db\n");
 #ifdef SIGPWR
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3134,%d)\n", architecture, SIGPWR);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3134,%d);\n", architecture, SIGPWR);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -958,7 +958,7 @@ cnt++;
 #else
 Msg( "No definition for SIGSYS (3135, int) in db\n");
 #ifdef SIGSYS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3135,%d)\n", architecture, SIGSYS);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3135,%d);\n", architecture, SIGSYS);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1006,7 +1006,7 @@ cnt++;
 #else
 Msg( "No definition for SIGUNUSED (3136, int) in db\n");
 #ifdef SIGUNUSED
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3136,%d)\n", architecture, SIGUNUSED);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3136,%d);\n", architecture, SIGUNUSED);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1293,9 +1293,7 @@ CheckTypeSize(struct sigstack,16, 9315, 3)
 CheckOffset(struct sigstack,ss_onstack,8,3,34195)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sigstack,8, 9315, 6)
-Msg("Missing member data for sigstack on PPC32\n");
-CheckOffset(struct sigstack,ss_sp,0,6,34194)
-CheckOffset(struct sigstack,ss_onstack,0,6,34195)
+CheckOffset(struct sigstack,ss_onstack,4,6,34195)
 #elif __s390__
 CheckTypeSize(struct sigstack,8, 9315, 10)
 CheckOffset(struct sigstack,ss_onstack,4,10,34195)
@@ -1393,9 +1391,9 @@ CheckOffset(struct sigaction,sa_mask,16,3,34643)
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sigaction,140, 10401, 6)
 CheckOffset(struct sigaction,__sigaction_handler,0,6,34712)
-CheckOffset(struct sigaction,sa_flags,0,6,34713)
-CheckOffset(struct sigaction,sa_restorer,0,6,34714)
-CheckOffset(struct sigaction,sa_mask,0,6,34715)
+CheckOffset(struct sigaction,sa_flags,132,6,34713)
+CheckOffset(struct sigaction,sa_restorer,136,6,34714)
+CheckOffset(struct sigaction,sa_mask,4,6,34715)
 #endif
 
 #if __s390__
@@ -1404,6 +1402,13 @@ CheckOffset(struct sigaction,__sigaction_handler,0,10,34716)
 CheckOffset(struct sigaction,sa_flags,132,10,34717)
 CheckOffset(struct sigaction,sa_restorer,136,10,34718)
 CheckOffset(struct sigaction,sa_mask,4,10,34719)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct sigaction,0, 10402, 6)
+Msg("Missing member data for sigaction on PPC32\n");
+CheckOffset(struct sigaction,__sigaction_handler,0,6,34716)
+CheckOffset(struct sigaction,sa_flags,0,6,34717)
+CheckOffset(struct sigaction,sa_restorer,0,6,34718)
+CheckOffset(struct sigaction,sa_mask,0,6,34719)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10402,0);
 Msg("Find size of sigaction (10402)\n");
