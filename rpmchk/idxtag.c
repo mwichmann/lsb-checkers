@@ -41,7 +41,8 @@ for(i=0;i<nindex;i++) {
 				fprintf(stderr, "Count for Index %s does not match. ", Tags[j].name );
 				fprintf(stderr, "Found %d but expecting %d.\n", count, Tags[j].count );
 			}
-			fprintf(stderr,"Found index %s\n",Tags[j].name);
+			if( rpmchkdebug&DEBUG_TRACE_TAGS )
+				fprintf(stderr,"Found index %s\n",Tags[j].name);
 			Tags[j].func(file1, &hidx[i], journal);
 			break;
 			}
@@ -60,27 +61,13 @@ for(i=0;i<nindex;i++) {
  * These functions correspond to the header private tag values
  */
 
-#if 0
-void
-checkRpmIdxHDRIMAGE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
-{
-int		htag, htype, hoffset, hcount;
-
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
-
-fprintf(stderr,"checkRpmIdxHDRIMAGE() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
-}
-#endif
-
 void
 checkRpmIdxHEADERSIGNATURES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		hoffset;
 RpmHdrIndex	*sigidx;
+
+/* This Index contains a copy of the Header. Just check out the first entry */
 
 hoffset=ntohl(hidx->offset);
 sigidx=(RpmHdrIndex *)(file1->storeaddr+hoffset);
@@ -98,30 +85,6 @@ if( ntohl(sigidx->count) != sizeof(RpmHdrIndex) ) {
 	}
 sigdata=(char *)(((char *)sigidx)+ntohl(sigidx->offset));
 
-
-/*
-RpmHeader	*hdr;
-int		htag, htype, hcount;
-hdr=(RpmHeader *)file1->nexthdr;
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-
-fprintf(stderr,"checkRpmIdxHDRSIGNATURES() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
-*/
-
-/*
-fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
-				data[0], data[1], data[2], data[3]);
-fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
-				data[4], data[5], data[6], data[7]);
-fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
-				data[8], data[9], data[10], data[11]);
-fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
-				data[12], data[13], data[14], data[15]);
-*/
-
 }
 
 void
@@ -130,48 +93,27 @@ checkRpmIdxHEADERIMMUTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle
 int		hoffset;
 RpmHdrIndex	*imuidx;
 RpmHeader	*hdrdata;
-/*
-unsigned char	*data;
-int		htag, htype, hoffset, hcount;
-int		nindex;
-RpmHeader	*hdr;
 
-hdr=(RpmHeader *)file1->nexthdr;
-nindex=ntohl(hdr->nindex);
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-
-fprintf(stderr,"checkRpmIdxHEADERIMMUTABLE() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
-*/
 hoffset=ntohl(hidx->offset);
 imuidx=(RpmHdrIndex *)(file1->storeaddr+hoffset);
 hdrdata=(RpmHeader *)(((char *)imuidx)+ntohl(imuidx->offset));
+
 if( ntohl(imuidx->tag) != RPMTAG_HEADERIMMUTABLE ) {
 	fprintf(stderr,
 	"Tag value in RPMTAG_HEADERIMMUTABLE data is not RPMTAG_HEADERIMMUTABLE\n");
 	}
+
 if( ntohl(imuidx->type) != BIN ) {
 	fprintf(stderr, "Type value in RPMTAG_HEADERIMMUTABLE data is not BIN\n");
 	}
+
 if( ntohl(imuidx->count) != sizeof(RpmHdrIndex) ) {
 	fprintf(stderr,
      "Count value in RPMTAG_HEADERIMMUTABLE data is not sizeof(RpmHdrIndex)\n");
 	}
+
 fprintf(stderr,"checkRpmIdxHEADERIMMUTABLE() Not yet checking contents\n");
 
-/*
-data=hdrdata;
-fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
-				data[0], data[1], data[2], data[3]);
-fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
-				data[4], data[5], data[6], data[7]);
-fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
-				data[8], data[9], data[10], data[11]);
-fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
-				data[12], data[13], data[14], data[15]);
-*/
 }
 
 void
@@ -197,34 +139,19 @@ checkRpmIdxHEADERI18NTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle
 {
 int		hoffset,i;
 char		*string;
-/*
-int		htag, htype, hcount;
-int		nindex;
-RpmHeader	*hdr;
-
-hdr=(RpmHeader *)file1->nexthdr;
-nindex=ntohl(hdr->nindex);
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
 string=file1->storeaddr+hoffset;
 
-/*
-fprintf(stderr,
-	"checkRpmIdxHEADERI18NTABLE() type=%d offset=%x count=%x string=%s\n",
-						htype,hoffset,hcount,string);
-*/
 for(i=0;i<ntohl(hidx->count);i++) {
-	fprintf(stderr,"Locales found: %s\n",string);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Locales found: %s\n",string);
 	string+=strlen(string);
 	string++; /*skip over the NULL to get to the next string */
 	}
 }
 
 /*
- * These calues don't really show up as Indicies.
+ * These values don't really show up as Indicies.
  */
 void
 checkRpmIdxHEADERSIGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
@@ -244,26 +171,6 @@ fprintf(stderr,"checkRpmIdxHEADERSIGBASE() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
-#if 0
-void
-checkRpmIdxHDRTAGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
-{
-int		htag, htype, hoffset, hcount;
-int		nindex;
-RpmHeader	*hdr;
-
-hdr=(RpmHeader *)file1->nexthdr;
-nindex=ntohl(hdr->nindex);
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
-
-fprintf(stderr,"checkRpmIdxHDRTAGBASE() type=%d offset=%x count=%x value: %s\n",
-						htype,hoffset,hcount, value);
-}
-#endif
-
 /*
  * These functions correspond to the tag values for a Signature
  */
@@ -274,24 +181,11 @@ checkRpmIdxSIGSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journa
 int		hoffset;
 unsigned int	*value,size;
 
-/*
-RpmHeader	*hdr;
-int		htag, htype, nindex, hcount;
-hdr=(RpmHeader *)file1->nexthdr;
-nindex=ntohl(hdr->nindex);
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
 value=(int *)(file1->storeaddr+hoffset);
 sigsize=htonl(*value);
 size=file1->size-((char *)file1->header-file1->addr);
 
-/*
-fprintf(stderr,"checkRpmIdxSIGSIZE() type=%d offset=%x count=%x size=%x\n",
-						htype,hoffset,hcount,htonl(*value));
-*/
 if( sigsize != size ) {
 	fprintf(stderr,"SIGTAG_SIZE value %d doesn't match expected value %d\n",
 				sigsize,	size );
@@ -304,39 +198,13 @@ checkRpmIdxMD5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		hoffset;
 unsigned char	*md5hdr,md5sum[16];
-/*
-*/
-int		htag, htype, hcount;
-int		nindex;
-RpmHeader	*hdr;
 
-hdr=(RpmHeader *)file1->nexthdr;
-nindex=ntohl(hdr->nindex);
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
 hoffset=ntohl(hidx->offset);
 md5hdr=(char *)(file1->storeaddr+hoffset);
-
-/*
-fprintf(stderr,"%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x\n",
-                        md5hdr[0], md5hdr[1], md5hdr[2], md5hdr[3],
-                        md5hdr[4], md5hdr[5], md5hdr[6], md5hdr[7],
-                        md5hdr[8], md5hdr[9], md5hdr[10], md5hdr[11],
-                        md5hdr[12], md5hdr[13], md5hdr[14], md5hdr[15] );
-*/
 
 MD5Init(&md5ctx);
 MD5Update(&md5ctx,file1->header,sigsize);
 MD5Final(md5sum,&md5ctx);
-
-/*
-fprintf(stderr,"%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x\n",
-                        md5sum[0], md5sum[1], md5sum[2], md5sum[3],
-                        md5sum[4], md5sum[5], md5sum[6], md5sum[7],
-                        md5sum[8], md5sum[9], md5sum[10], md5sum[11],
-                        md5sum[12], md5sum[13], md5sum[14], md5sum[15] );
-*/
 
 if( memcmp(md5hdr,md5sum,16) != 0 ) {
 	fprintf(stderr,
@@ -344,6 +212,8 @@ if( memcmp(md5hdr,md5sum,16) != 0 ) {
 	}
 }
 
+#if 0
+/* We hope to never see these */
 void
 checkRpmIdxGPG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
@@ -381,36 +251,6 @@ fprintf(stderr,"checkRpmIdxPGP5() type=%d offset=%x count=%x\n",
 }
 
 void
-checkRpmIdxSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
-{
-int		htag, htype, hoffset, hcount;
-int		nindex;
-RpmHeader	*hdr;
-unsigned char	*shadata;
-
-hdr=(RpmHeader *)file1->nexthdr;
-nindex=ntohl(hdr->nindex);
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
-shadata=file1->storeaddr+hoffset;
-
-/*
-fprintf(stderr,"checkRpmIdxSHA1HEADER() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
-*/
-
-if( shadata != sigdata ) {
-	fprintf(stderr,"Location of SHA1 signature (%x) ",
-						(unsigned int)shadata );
-	fprintf(stderr,"doesn't match location set in HDRSIGNATURES(%x)\n",
-						(unsigned int)sigdata);
-	}
-fprintf(stderr,"checkRpmIdxSHA1HEADER() Not yet checking SHA1 contents\n");
-}
-
-void
 checkRpmIdxPGP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
@@ -428,9 +268,32 @@ fprintf(stderr,"checkRpmIdxPGP() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
+#endif
+
+void
+checkRpmIdxSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		hoffset;
+unsigned char	*shadata;
+
+hoffset=ntohl(hidx->offset);
+shadata=file1->storeaddr+hoffset;
+
+if( shadata != sigdata ) {
+	fprintf(stderr,"Location of SHA1 signature (%x) ",
+						(unsigned int)shadata );
+	fprintf(stderr,"doesn't match location set in HDRSIGNATURES(%x)\n",
+						(unsigned int)sigdata);
+	}
+fprintf(stderr,"checkRpmIdxSHA1HEADER() Not yet checking SHA1 contents\n");
+}
+
 /*
  * These functions are for the normal RPM tags.
  */
+
+#if 0
+/* Don't seem to need these either */
 void
 checkRpmIdxSIGNATURES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
@@ -493,71 +356,6 @@ fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
 }
 
 void
-checkRpmIdxNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
-{
-int	hoffset;
-/*
-int	htag, htype, hcount;
-
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
-*/
-hoffset=ntohl(hidx->offset);
-pkgname=file1->storeaddr+hoffset;
-
-/*
-fprintf(stderr,"checkRpmIdxNAME() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,pkgname);
-*/
-fprintf(stderr,"Package name: %s\n",pkgname);
-}
-
-void
-checkRpmIdxVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
-{
-int	hoffset;
-char	*name;
-/*
-int	htag, htype, hcount;
-
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
-hoffset=ntohl(hidx->offset);
-name=file1->storeaddr+hoffset;
-/*
-fprintf(stderr,"checkRpmIdxVERSION() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-*/
-fprintf(stderr,"Package Version: %s\n",name);
-}
-
-void
-checkRpmIdxRELEASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
-{
-int	hoffset;
-char	*name;
-/*
-int	htag, htype, hcount;
-
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
-hoffset=ntohl(hidx->offset);
-name=file1->storeaddr+hoffset;
-/*
-fprintf(stderr,"checkRpmIdxRELEASE() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-*/
-/* Check that the string is a number */
-fprintf(stderr,"Package Release: %s\n",name);
-}
-
-void
 checkRpmIdxSERIAL(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
@@ -570,27 +368,58 @@ fprintf(stderr,"checkRpmIdxSERIAL() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
+#endif
+
+void
+checkRpmIdxNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+
+hoffset=ntohl(hidx->offset);
+pkgname=file1->storeaddr+hoffset;
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package name: %s\n",pkgname);
+}
+
+void
+checkRpmIdxVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+name=file1->storeaddr+hoffset;
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package Version: %s\n",name);
+}
+
+void
+checkRpmIdxRELEASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+name=file1->storeaddr+hoffset;
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package Release: %s\n",name);
+}
+
 void
 checkRpmIdxSUMMARY(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	hoffset,i;
 char	*name;
-/*
-int	htag, htype, hcount;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-/*
-fprintf(stderr,"checkRpmIdxSUMMARY() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-*/
 
 for(i=0;i<ntohl(hidx->count);i++) {
-	fprintf(stderr,"Package Summary: %s\n",name);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Package Summary: %s\n",name);
 	name+=strlen(name);
 	name++; /*skip over the NULL to get to the next string */
 	}
@@ -601,22 +430,13 @@ checkRpmIdxDESCRIPTION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *jo
 {
 int	hoffset,i;
 char	*name;
-/*
-int	htag, htype, hcount;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-/*
-fprintf(stderr,"checkRpmIdxSUMMARY() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-*/
 
 for(i=0;i<ntohl(hidx->count);i++) {
-	fprintf(stderr,"Package Description: %s\n",name);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Package Description: %s\n",name);
 	name+=strlen(name);
 	name++; /*skip over the NULL to get to the next string */
 	}
@@ -628,22 +448,13 @@ checkRpmIdxBUILDTIME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *jour
 int	hoffset;
 unsigned int	*name;
 time_t	btime;
-/*
-int	htag, htype, hcount;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
 name=(unsigned int *)(file1->storeaddr+hoffset);
 btime=htonl(*name);
-/*
-fprintf(stderr,"checkRpmIdxBUILDTIME() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-*/
-/* Check that the string is a number */
-fprintf(stderr,"Package Buildtime: %s",ctime(&btime));
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package Buildtime: %s",ctime(&btime));
 }
 
 void
@@ -651,45 +462,26 @@ checkRpmIdxBUILDHOST(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *jour
 {
 int	hoffset;
 char	*name;
-/*
-int	htag, htype, hcount;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-/*
-fprintf(stderr,"checkRpmIdxBUILDHOST() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-*/
 
-fprintf(stderr,"Package Buildhost: %s\n",name);
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package Buildhost: %s\n",name);
 }
 
 void
 checkRpmIdxSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	hoffset;
-int	*sizep,size;
-/*
-*/
-int	htag, htype, hcount;
+int	*sizep;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
 hoffset=ntohl(hidx->offset);
 sizep=(int *)(file1->storeaddr+hoffset);
-size=htonl(*sizep);
-/*
-fprintf(stderr,"checkRpmIdxSIZE() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
-*/
+rpmtagsize=htonl(*sizep);
 
-fprintf(stderr,"Package Size: %d.\n",size);
-rpmtagsize=size;
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package Size: %d.\n",rpmtagsize);
 }
 
 void
@@ -697,21 +489,12 @@ checkRpmIdxLICENSE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journa
 {
 int	hoffset;
 char	*name;
-/*
-int	htag, htype, hcount;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-/*
-fprintf(stderr,"checkRpmIdxLICENSE() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-*/
 
-fprintf(stderr,"Package License: %s\n",name);
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package License: %s\n",name);
 }
 
 void
@@ -719,33 +502,21 @@ checkRpmIdxGROUP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	hoffset;
 char	*name;
-/*
-int	htag, htype, hcount;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-/*
-fprintf(stderr,"checkRpmIdxGROUP() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-*/
-/* Check that the string is a number */
-fprintf(stderr,"Package Group: %s\n",name);
+
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package Group: %s\n",name);
 }
 
 void
 checkRpmIdxOS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount;
+int	hoffset;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
 if( strcmp(name,validos) != 0 ) {
 	fprintf(stderr,"Incorrect RPMTAG_OS: expecting %s but found %s\n",
@@ -756,13 +527,10 @@ if( strcmp(name,validos) != 0 ) {
 void
 checkRpmIdxARCH(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount;
+int	hoffset;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
 if( strcmp(name,architecture) != 0 ) {
 	fprintf(stderr,"Incorrect RPMTAG_ARCH: expecting %s but found %s\n",
@@ -773,81 +541,76 @@ if( strcmp(name,architecture) != 0 ) {
 void
 checkRpmIdxFILESIZES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount,i;
+int	hcount,hoffset, i;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
+hoffset=ntohl(hidx->offset);
 filesizes=(int *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	filesizes[i]=htonl(filesizes[i]);
-	fprintf(stderr,"Filesize: %d\n",filesizes[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Filesize: %d\n",filesizes[i]);
 	}
 }
 
 void
 checkRpmIdxFILEMODES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount,i;
+int	hoffset, hcount,i;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 filemodes=(short *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	filemodes[i]=htons(filemodes[i]);
-	fprintf(stderr,"Filemodes: %x\n",filemodes[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Filemodes: %x\n",filemodes[i]);
 	}
 }
 
 void
 checkRpmIdxFILERDEVS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount,i;
+int	hoffset, hcount,i;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 filerdevs=(short *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	filerdevs[i]=htons(filerdevs[i]);
-	fprintf(stderr,"Filerdevs: %x\n",filerdevs[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Filerdevs: %x\n",filerdevs[i]);
 	}
 }
 
 void
 checkRpmIdxFILEMTIMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount,i;
+int	hoffset, hcount,i;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 filetimes=(int *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	filetimes[i]=htonl(filetimes[i]);
-	fprintf(stderr,"Filetime: %d\n",filetimes[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Filetime: %d\n",filetimes[i]);
 	}
 }
 
 void
 checkRpmIdxFILEMD5S(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
+int	hoffset, hcount, i;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 filemd5s=(char *)(file1->storeaddr+hoffset);
 name=filemd5s;
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"File MD5: %s\n",name);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"File MD5: %s\n",name);
 	name+=strlen(name)+1;
 	}
 }
@@ -855,17 +618,16 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxFILELINKTOS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
+int	hoffset, hcount, i;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 filelinktos=(char *)(file1->storeaddr+hoffset);
 name=filelinktos;
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"File linkto: %s\n",name);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"File linkto: %s\n",name);
 	name+=strlen(name)+1;
 	}
 }
@@ -873,34 +635,33 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxFILEFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount,i;
+int	hoffset, hcount,i;
 unsigned int	*fflags;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 fflags=(int *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	fflags[i]=htonl(fflags[i]);
-	fprintf(stderr,"File flags: %x\n",fflags[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"File flags: %x\n",fflags[i]);
+	fprintf(stderr,"File flags not checked: %x\n",fflags[i]);
 	}
 }
 
 void
 checkRpmIdxFILEUSERNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
+int	hoffset, hcount, i;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 fileusernames=(char *)(file1->storeaddr+hoffset);
 name=fileusernames;
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"File username: %s\n",name);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"File username: %s\n",name);
 	name+=strlen(name)+1;
 	}
 }
@@ -908,17 +669,16 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxFILEGROUPNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
+int	hoffset, hcount, i;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 filegroupnames=(char *)(file1->storeaddr+hoffset);
 name=filegroupnames;
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"File groupname: %s\n",name);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"File groupname: %s\n",name);
 	name+=strlen(name)+1;
 	}
 }
@@ -926,31 +686,29 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxSOURCERPM(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount;
+int	hoffset;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
-fprintf(stderr,"RPMTAG_SOURCERPM: %s\n", name);
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"RPMTAG_SOURCERPM: %s\n", name);
 }
 
 void
 checkRpmIdxFILEVERIFYFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
+int	hoffset, hcount, i;
 unsigned int	*flagp;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 flagp=(int *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	flagp[i]=htonl(flagp[i]);
-	fprintf(stderr,"File Verify Flag: %x\n",flagp[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"File Verify Flag: %x\n",flagp[i]);
+	fprintf(stderr,"File Verify Flag not checked: %x\n",flagp[i]);
 	}
 }
 
@@ -958,24 +716,14 @@ void
 checkRpmIdxARCHIVESIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	hoffset;
-int	*sizep,size;
-/*
-int	htag, htype, hcount;
+uint32_t *sizep;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hcount=ntohl(hidx->count);
-*/
 hoffset=ntohl(hidx->offset);
-sizep=(int *)(file1->storeaddr+hoffset);
-size=htonl(*sizep);
-/*
-fprintf(stderr,"checkRpmIdxSIZE() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
-*/
+sizep=(uint32_t *)(file1->storeaddr+hoffset);
+archivesize=htonl(*sizep);
 
-fprintf(stderr,"Package Size: %d. Not yet validated.\n",size);
-archivesize=size;
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Package Size: %d.\n",archivesize);
 }
 
 void
@@ -996,18 +744,18 @@ fprintf(stderr,"checkRpmIdxPROVIDENAME() type=%d offset=%x count=%x %s\n",
 void
 checkRpmIdxREQUIREFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
-int	*flagp, flag;
+int	hoffset, hcount, i;
+uint32_t *flagp, flag;
 char	buf[128];
 
 #define mapbit(bit) \
 	if( flag & bit ) { flag&=~bit;strcat(buf,#bit);strcat(buf," "); }
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
-flagp=(int *)(file1->storeaddr+hoffset);
+flagp=(uint32_t *)(file1->storeaddr+hoffset);
+
+/* This should move to a seperate function for use by multiple tags */
 for(i=0;i<hcount;i++) {
 	buf[0]='\000';
 	flag=htonl(flagp[i]);
@@ -1027,11 +775,9 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxREQUIRENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	i, htag, htype, hoffset, hcount;
+int	i, hoffset, hcount;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
@@ -1043,6 +789,7 @@ for(i=0;i<hcount;i++) {
 	fprintf(stderr,"Required Name: %s\n", name );
 	name+=strlen(name)+1;
 	}
+
 if( lsbdepidx < 0 ) 
 		fprintf(stderr,"RPMTAG_REQUIRENAME did not contain \"lsb\"\n");
 }
@@ -1050,44 +797,45 @@ if( lsbdepidx < 0 )
 void
 checkRpmIdxRPMVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount;
+int	hoffset;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
-fprintf(stderr,"RPM version: %s\n",name);
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"RPM version: %s\n",name);
 }
 
 void
 checkRpmIdxCHANGELOGTIME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	hoffset;
-unsigned int	*name;
-time_t	btime;
+int	hcount, hoffset, i;
+uint32_t *timep;
+time_t	chtime;
+
 hoffset=ntohl(hidx->offset);
-name=(unsigned int *)(file1->storeaddr+hoffset);
-btime=htonl(*name);
-/* Check that the string is a number */
-fprintf(stderr,"Changelog time: %s",ctime(&btime));
+hcount=ntohl(hidx->count);
+timep=(uint32_t *)(file1->storeaddr+hoffset);
+
+for(i=0;i<hcount;i++) {
+	chtime=htonl(timep[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Changelog time: %s",ctime(&chtime));
+	}
 }
 
 void
 checkRpmIdxCHANGELOGNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
+int	hoffset, hcount, i;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
-filegroupnames=(char *)(file1->storeaddr+hoffset);
-name=filegroupnames;
+name=(char *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"Changelog name: %s\n",name);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Changelog name: %s\n",name);
 	name+=strlen(name)+1;
 	}
 }
@@ -1095,18 +843,16 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxCHANGELOGTEXT(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
-char	*name;
+int	hoffset, hcount, i;
+char	*text;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
-filegroupnames=(char *)(file1->storeaddr+hoffset);
-name=filegroupnames;
+text=(char *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"Changelog text: %s\n",name);
-	name+=strlen(name)+1;
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Changelog text: %s\n",text);
+	text+=strlen(text)+1;
 	}
 }
 
@@ -1119,55 +865,53 @@ unsigned char	*name;
 hoffset=ntohl(hidx->offset);
 name=(char *)(file1->storeaddr+hoffset);
 /* Check that the string is a number */
-fprintf(stderr,"Cookie: %s\n",name);
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Cookie: %s\n",name);
 }
 
 void
 checkRpmIdxFILEDEVICES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount,i;
+int	hoffset, hcount,i;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
-filedevs=(int *)(file1->storeaddr+hoffset);
+filedevs=(uint32_t *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	filedevs[i]=htonl(filedevs[i]);
-	fprintf(stderr,"Filedevs: %x\n",filedevs[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Filedevs: %x\n",filedevs[i]);
 	}
 }
 
 void
 checkRpmIdxFILEINODES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount,i;
+int	hoffset, hcount,i;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
-fileinodes=(int *)(file1->storeaddr+hoffset);
+fileinodes=(uint32_t *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	fileinodes[i]=htonl(fileinodes[i]);
-	fprintf(stderr,"File inode: %d\n",fileinodes[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"File inode: %d\n",fileinodes[i]);
 	}
 }
 
 void
 checkRpmIdxFILELANGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
+int	hoffset, hcount, i;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 filelangs=(char *)(file1->storeaddr+hoffset);
 name=filelangs;
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"File langs: %s\n",name);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"File langs: %s\n",name);
 	name+=strlen(name)+1;
 	}
 }
@@ -1175,34 +919,32 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxPROVIDEFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount, i;
-unsigned int	*flagp;
+int	hoffset;
+uint32_t	*flagp,flag;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
-flagp=(int *)(file1->storeaddr+hoffset);
-flagp[i]=htonl(flagp[i]);
-fprintf(stderr,"Provide Flag: %x\n",flagp[i]);
+flagp=(uint32_t *)(file1->storeaddr+hoffset);
+flag=htonl(*flagp);
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Provide Flag: %x\n",flag);
+fprintf(stderr,"Provide Flag not checked: %x\n",flag);
 }
 
 void
 checkRpmIdxPROVIDEVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	i,htag, htype, hoffset, hcount;
+int	i, hoffset, hcount;
 char	*name;
 
 /*
  * A STRING_ARRAY because it could be providing multiple things.
  */
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"Provide Version: %s\n", name );
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Provide Version: %s\n", name );
 	name+=strlen(name)+1;
 	}
 }
@@ -1217,7 +959,8 @@ hcount=ntohl(hidx->count);
 dirindicies=(int *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	dirindicies[i]=htonl(dirindicies[i]);
-	fprintf(stderr,"Directory Index: %x\n",dirindicies[i]);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Directory Index: %x\n",dirindicies[i]);
 	}
 }
 
@@ -1233,7 +976,8 @@ basenames=(char **)malloc(hcount*sizeof(char *));
 name=file1->storeaddr+hoffset;
 for(i=0;i<hcount;i++) {
 	basenames[i]=name;
-	fprintf(stderr,"Basename: %s\n", name );
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Basename: %s\n", name );
 	name+=strlen(name)+1;
 	}
 }
@@ -1251,7 +995,8 @@ dirnames=(char **)malloc(hcount*sizeof(char *));
 name=file1->storeaddr+hoffset;
 for(i=0;i<hcount;i++) {
 	dirnames[i]=name;
-	fprintf(stderr,"Dirname: %s\n", name );
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Dirname: %s\n", name );
 	name+=strlen(name)+1;
 	}
 }
@@ -1264,7 +1009,9 @@ char	*name;
 
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-fprintf(stderr,"Optflags: %s\n", name );
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Optflags: %s\n", name );
+fprintf(stderr,"Optflags not checked: %s\n", name );
 }
 
 void
@@ -1282,7 +1029,8 @@ if( strcmp(name,"cpio") != 0 ) {
 		fprintf(stderr,"Invalid RPMTAG_PAYLOADFORMAT: expecting \"cpio\"");
 		fprintf(stderr," but found %s\n", name );
 		}
-fprintf(stderr,"Payload format: %s\n",name);
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Payload format: %s\n",name);
 }
 
 void
@@ -1300,17 +1048,16 @@ if( strcmp(name,"gzip") != 0 ) {
 		fprintf(stderr,"Invalid RPMTAG_PAYLOADCOMPRESSOR: expecting \"gzip\"");
 		fprintf(stderr," but found %s\n", name );
 		}
-fprintf(stderr,"Payload compressor: %s\n",name);
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Payload compressor: %s\n",name);
 }
 
 void
 checkRpmIdxREQUIREVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	i,htag, htype, hoffset, hcount;
+int	i, hoffset, hcount;
 char	*name;
 
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
@@ -1319,7 +1066,9 @@ for(i=0;i<hcount;i++) {
 		fprintf(stderr,"Incorrect version on \"lsb\" dependency: ");
 		fprintf(stderr,"expecting %s but found %s\n",validdepver, name);
 		}
-	fprintf(stderr,"Required Version: %s\n", name );
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Required Version: %s\n", name );
+	fprintf(stderr,"Required Version not checked: %s\n", name );
 	name+=strlen(name)+1;
 	}
 }
@@ -1332,7 +1081,9 @@ char	*name;
 
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-fprintf(stderr,"Payload flags: %s\n", name );
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Payload flags: %s\n", name );
+fprintf(stderr,"Payload flags not checked: %s\n", name );
 }
 
 void
@@ -1343,7 +1094,9 @@ char	*name;
 
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-fprintf(stderr,"RHN platform: %s\n", name );
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"RHN platform: %s\n", name );
+fprintf(stderr,"RHN platform not checked: %s\n", name );
 }
 
 void
@@ -1354,5 +1107,7 @@ char	*name;
 
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-fprintf(stderr,"Platform: %s\n", name );
+if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+	fprintf(stderr,"Platform: %s\n", name );
+fprintf(stderr,"Platform not checked: %s\n", name );
 }

@@ -1,6 +1,7 @@
 #ifndef _RPMCHK_H
 #define _RPMCHK_H
 
+#include <inttypes.h>
 #include <sys/types.h>
 #include <netinet/in.h>
 
@@ -149,6 +150,16 @@ typedef struct {
 	char	c_checksum[8];
 	} RpmArchiveHeader;
 
+/*
+ * Debugging interface: Set the environment variable RPMCHK_DEBUG to a value
+ * that corresponds to the bits defined below.
+ */
+#define DEBUG_ENV_OVERRIDES	0x0001
+#define DEBUG_TRACE_TAGS	0x0002
+#define DEBUG_TRACE_CONTENTS	0x0004
+
+extern int rpmchkdebug;
+
 /* vals.c */
 extern char *architecture;
 extern char *validos;
@@ -156,21 +167,21 @@ extern char *validdepver;
 extern char *pkgname;
 extern unsigned char *sigdata;
 extern int lsbdepidx;
-extern int sigsize;
-extern int archivesize;
-extern int rpmtagsize;
-extern unsigned int *filesizes;
-extern unsigned short *filemodes;
-extern unsigned int *filedevs;
-extern unsigned short *filerdevs;
-extern unsigned int *fileinodes;
-extern unsigned int *filetimes;
+extern uint32_t sigsize;
+extern uint32_t archivesize;
+extern uint32_t rpmtagsize;
+extern uint32_t *filesizes;
+extern uint16_t *filemodes;
+extern uint32_t *filedevs;
+extern uint16_t *filerdevs;
+extern uint32_t *fileinodes;
+extern uint32_t *filetimes;
 extern char *filemd5s;
 extern char *filelinktos;
 extern char *fileusernames;
 extern char *filegroupnames;
 extern char *filelangs;
-extern int  *dirindicies;
+extern uint32_t  *dirindicies;
 extern char **basenames;
 extern char **dirnames;
 extern int  numdirnames;
