@@ -24,62 +24,50 @@ Msg("Checking data structures in sys/stat.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for S_ISFIFO(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISREG(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFLNK
-	CompareConstant(S_IFLNK,0xa000,1689,architecture)
+#ifdef S_IFMT
+	CompareConstant(S_IFMT,0xf000,1683,architecture)
 #else
-Msg( "Error: Constant not found: S_IFLNK\n");
+Msg( "Error: Constant not found: S_IFMT\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for S_ISSOCK(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IXOTH
-	CompareConstant(S_IXOTH,(S_IXGRP>>3),1718,architecture)
+#ifdef S_IFDIR
+	CompareConstant(S_IFDIR,0x4000,1684,architecture)
 #else
-Msg( "Error: Constant not found: S_IXOTH\n");
+Msg( "Error: Constant not found: S_IFDIR\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_ISGID
-	CompareConstant(S_ISGID,0x0400,1703,architecture)
+#ifdef S_IFCHR
+	CompareConstant(S_IFCHR,0x2000,1685,architecture)
 #else
-Msg( "Error: Constant not found: S_ISGID\n");
+Msg( "Error: Constant not found: S_IFCHR\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWOTH
-	CompareConstant(S_IWOTH,(S_IWGRP>>3),1717,architecture)
+#ifdef S_IFBLK
+	CompareConstant(S_IFBLK,0x6000,1686,architecture)
 #else
-Msg( "Error: Constant not found: S_IWOTH\n");
+Msg( "Error: Constant not found: S_IFBLK\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWUSR
-	CompareConstant(S_IWUSR,0x0080,1706,architecture)
+#ifdef S_IFREG
+	CompareConstant(S_IFREG,0x8000,1687,architecture)
 #else
-Msg( "Error: Constant not found: S_IWUSR\n");
+Msg( "Error: Constant not found: S_IFREG\n");
 cnt++;
 #endif
 
@@ -96,116 +84,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_ISVTX
-	CompareConstant(S_ISVTX,01000,1704,architecture)
+#ifdef S_IFLNK
+	CompareConstant(S_IFLNK,0xa000,1689,architecture)
 #else
-Msg( "Error: Constant not found: S_ISVTX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IRGRP
-	CompareConstant(S_IRGRP,(S_IRUSR>>3),1712,architecture)
-#else
-Msg( "Error: Constant not found: S_IRGRP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IXGRP
-	CompareConstant(S_IXGRP,(S_IXUSR>>3),1714,architecture)
-#else
-Msg( "Error: Constant not found: S_IXGRP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_TYPEISMQ(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFCHR
-	CompareConstant(S_IFCHR,0x2000,1685,architecture)
-#else
-Msg( "Error: Constant not found: S_IFCHR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IEXEC
-	CompareConstant(S_IEXEC,S_IXUSR,1711,architecture)
-#else
-Msg( "Error: Constant not found: S_IEXEC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IRWXU
-	CompareConstant(S_IRWXU,(S_IREAD|S_IWRITE|S_IEXEC),1708,architecture)
-#else
-Msg( "Error: Constant not found: S_IRWXU\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_TYPEISSEM(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFREG
-	CompareConstant(S_IFREG,0x8000,1687,architecture)
-#else
-Msg( "Error: Constant not found: S_IFREG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IREAD
-	CompareConstant(S_IREAD,S_IRUSR,1709,architecture)
-#else
-Msg( "Error: Constant not found: S_IREAD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISDIR(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IRUSR
-	CompareConstant(S_IRUSR,0x0100,1705,architecture)
-#else
-Msg( "Error: Constant not found: S_IRUSR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISBLK(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFDIR
-	CompareConstant(S_IFDIR,0x4000,1684,architecture)
-#else
-Msg( "Error: Constant not found: S_IFDIR\n");
+Msg( "Error: Constant not found: S_IFLNK\n");
 cnt++;
 #endif
 
@@ -222,23 +104,35 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IRWXG
-	CompareConstant(S_IRWXG,(S_IRWXU>>3),1715,architecture)
-#else
-Msg( "Error: Constant not found: S_IRWXG\n");
-cnt++;
-#endif
-
+/* No test for S_TYPEISMQ(buf) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWRITE
-	CompareConstant(S_IWRITE,S_IWUSR,1710,architecture)
-#else
-Msg( "Error: Constant not found: S_IWRITE\n");
-cnt++;
+/* No test for S_ISLNK(m) */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISREG(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISDIR(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISCHR(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISBLK(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISFIFO(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISSOCK(m) */
 #endif
 
 #if __powerpc64__
@@ -296,31 +190,11 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4955,%d);\n", arch
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-/* No test for S_ISLNK(m) */
+/* No test for S_TYPEISSEM(buf) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
 /* No test for S_TYPEISSHM(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IROTH
-	CompareConstant(S_IROTH,(S_IRGRP>>3),1716,architecture)
-#else
-Msg( "Error: Constant not found: S_IROTH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFMT
-	CompareConstant(S_IFMT,0xf000,1683,architecture)
-#else
-Msg( "Error: Constant not found: S_IFMT\n");
-cnt++;
-#endif
-
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -334,10 +208,40 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWGRP
-	CompareConstant(S_IWGRP,(S_IWUSR>>3),1713,architecture)
+#ifdef S_ISGID
+	CompareConstant(S_ISGID,0x0400,1703,architecture)
 #else
-Msg( "Error: Constant not found: S_IWGRP\n");
+Msg( "Error: Constant not found: S_ISGID\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_ISVTX
+	CompareConstant(S_ISVTX,01000,1704,architecture)
+#else
+Msg( "Error: Constant not found: S_ISVTX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IRUSR
+	CompareConstant(S_IRUSR,0x0100,1705,architecture)
+#else
+Msg( "Error: Constant not found: S_IRUSR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWUSR
+	CompareConstant(S_IWUSR,0x0080,1706,architecture)
+#else
+Msg( "Error: Constant not found: S_IWUSR\n");
 cnt++;
 #endif
 
@@ -354,10 +258,110 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IFBLK
-	CompareConstant(S_IFBLK,0x6000,1686,architecture)
+#ifdef S_IRWXU
+	CompareConstant(S_IRWXU,(S_IREAD|S_IWRITE|S_IEXEC),1708,architecture)
 #else
-Msg( "Error: Constant not found: S_IFBLK\n");
+Msg( "Error: Constant not found: S_IRWXU\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IREAD
+	CompareConstant(S_IREAD,S_IRUSR,1709,architecture)
+#else
+Msg( "Error: Constant not found: S_IREAD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWRITE
+	CompareConstant(S_IWRITE,S_IWUSR,1710,architecture)
+#else
+Msg( "Error: Constant not found: S_IWRITE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IEXEC
+	CompareConstant(S_IEXEC,S_IXUSR,1711,architecture)
+#else
+Msg( "Error: Constant not found: S_IEXEC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IRGRP
+	CompareConstant(S_IRGRP,(S_IRUSR>>3),1712,architecture)
+#else
+Msg( "Error: Constant not found: S_IRGRP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWGRP
+	CompareConstant(S_IWGRP,(S_IWUSR>>3),1713,architecture)
+#else
+Msg( "Error: Constant not found: S_IWGRP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IXGRP
+	CompareConstant(S_IXGRP,(S_IXUSR>>3),1714,architecture)
+#else
+Msg( "Error: Constant not found: S_IXGRP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IRWXG
+	CompareConstant(S_IRWXG,(S_IRWXU>>3),1715,architecture)
+#else
+Msg( "Error: Constant not found: S_IRWXG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IROTH
+	CompareConstant(S_IROTH,(S_IRGRP>>3),1716,architecture)
+#else
+Msg( "Error: Constant not found: S_IROTH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWOTH
+	CompareConstant(S_IWOTH,(S_IWGRP>>3),1717,architecture)
+#else
+Msg( "Error: Constant not found: S_IWOTH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IXOTH
+	CompareConstant(S_IXOTH,(S_IXGRP>>3),1718,architecture)
+#else
+Msg( "Error: Constant not found: S_IXOTH\n");
 cnt++;
 #endif
 
@@ -371,10 +375,6 @@ Msg( "Error: Constant not found: S_IRWXO\n");
 cnt++;
 #endif
 
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISCHR(m) */
 #endif
 
 #if __i386__

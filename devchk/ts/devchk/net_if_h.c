@@ -24,86 +24,6 @@ Msg("Checking data structures in net/if.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IFF_MULTICAST
-	CompareConstant(IFF_MULTICAST,0x1000,4985,architecture)
-#else
-Msg( "Error: Constant not found: IFF_MULTICAST\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_POINTOPOINT
-	CompareConstant(IFF_POINTOPOINT,0x10,4980,architecture)
-#else
-Msg( "Error: Constant not found: IFF_POINTOPOINT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_RUNNING
-	CompareConstant(IFF_RUNNING,0x40,4982,architecture)
-#else
-Msg( "Error: Constant not found: IFF_RUNNING\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_PROMISC
-	CompareConstant(IFF_PROMISC,0x100,4984,architecture)
-#else
-Msg( "Error: Constant not found: IFF_PROMISC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_NOARP
-	CompareConstant(IFF_NOARP,0x80,4983,architecture)
-#else
-Msg( "Error: Constant not found: IFF_NOARP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_BROADCAST
-	CompareConstant(IFF_BROADCAST,0x02,4977,architecture)
-#else
-Msg( "Error: Constant not found: IFF_BROADCAST\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFNAMSIZ
-	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture)
-#else
-Msg( "Error: Constant not found: IFNAMSIZ\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_NOTRAILERS
-	CompareConstant(IFF_NOTRAILERS,0x20,4981,architecture)
-#else
-Msg( "Error: Constant not found: IFF_NOTRAILERS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef IFF_UP
 	CompareConstant(IFF_UP,0x01,4976,architecture)
 #else
@@ -114,10 +34,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IF_NAMESIZE
-	CompareConstant(IF_NAMESIZE,16,4989,architecture)
+#ifdef IFF_BROADCAST
+	CompareConstant(IFF_BROADCAST,0x02,4977,architecture)
 #else
-Msg( "Error: Constant not found: IF_NAMESIZE\n");
+Msg( "Error: Constant not found: IFF_BROADCAST\n");
 cnt++;
 #endif
 
@@ -138,6 +58,86 @@ cnt++;
 	CompareConstant(IFF_LOOPBACK,0x08,4979,architecture)
 #else
 Msg( "Error: Constant not found: IFF_LOOPBACK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_POINTOPOINT
+	CompareConstant(IFF_POINTOPOINT,0x10,4980,architecture)
+#else
+Msg( "Error: Constant not found: IFF_POINTOPOINT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_NOTRAILERS
+	CompareConstant(IFF_NOTRAILERS,0x20,4981,architecture)
+#else
+Msg( "Error: Constant not found: IFF_NOTRAILERS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_RUNNING
+	CompareConstant(IFF_RUNNING,0x40,4982,architecture)
+#else
+Msg( "Error: Constant not found: IFF_RUNNING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_NOARP
+	CompareConstant(IFF_NOARP,0x80,4983,architecture)
+#else
+Msg( "Error: Constant not found: IFF_NOARP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_PROMISC
+	CompareConstant(IFF_PROMISC,0x100,4984,architecture)
+#else
+Msg( "Error: Constant not found: IFF_PROMISC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_MULTICAST
+	CompareConstant(IFF_MULTICAST,0x1000,4985,architecture)
+#else
+Msg( "Error: Constant not found: IFF_MULTICAST\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFNAMSIZ
+	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture)
+#else
+Msg( "Error: Constant not found: IFNAMSIZ\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IF_NAMESIZE
+	CompareConstant(IF_NAMESIZE,16,4989,architecture)
+#else
+Msg( "Error: Constant not found: IF_NAMESIZE\n");
 cnt++;
 #endif
 

@@ -24,20 +24,20 @@ Msg("Checking data structures in netinet/tcp.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SOL_TCP
-	CompareConstant(SOL_TCP,6,3331,architecture)
+#ifdef TCP_NODELAY
+	CompareConstant(TCP_NODELAY,1,4519,architecture)
 #else
-Msg( "Error: Constant not found: SOL_TCP\n");
+Msg( "Error: Constant not found: TCP_NODELAY\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef TCP_NODELAY
-	CompareConstant(TCP_NODELAY,1,4519,architecture)
+#ifdef SOL_TCP
+	CompareConstant(SOL_TCP,6,3331,architecture)
 #else
-Msg( "Error: Constant not found: TCP_NODELAY\n");
+Msg( "Error: Constant not found: SOL_TCP\n");
 cnt++;
 #endif
 
