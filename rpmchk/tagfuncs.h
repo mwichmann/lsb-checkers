@@ -40,8 +40,8 @@ extern void checkRpmIdxFILEVERIFYFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct
 extern void checkRpmIdxARCHIVESIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxPAYLOADSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxPROVIDENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
-extern void checkRpmIdxPREREQ(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxOBSOLETENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxCONFLICTNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxREQUIREFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxREQUIRENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxRPMVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
@@ -68,3 +68,7 @@ extern void checkRpmIdxREQUIREVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct 
 extern void checkRpmIdxPAYLOADFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxRHNPLATFORM(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxPLATFORM(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxOBSOLETEFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxCONFLICTFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxOBSOLETEVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxCONFLICTVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
