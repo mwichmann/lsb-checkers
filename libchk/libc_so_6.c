@@ -5035,7 +5035,7 @@ struct versym libc_so_6[] = {
 	{"shmat","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
-	{"shmctl","GLIBC_2.0"},
+	{"shmctl","GLIBC_2.2"},
 #endif
 #if defined(__ia64__)
 	{"shmctl","GLIBC_2.2"},
