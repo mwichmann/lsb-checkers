@@ -26,9 +26,13 @@ int
 findfileindex(char *filename)
 {
 char	*fmt,tagfilename[PATH_MAX+1],tmpfilename[PATH_MAX+1];
-char	*fname,*foldnames=oldfilenames;
-int	i,j,fileindex=-1;
+char	*fname;
+static char	*foldnames=NULL;
+int	i,j;
+static	int	fileindex=-1;
 
+if( !foldnames )
+	foldnames=oldfilenames;
 /*
  * Check the file name against the RPMTAG_DIRNAME, RPMTAG_DIRINDEXES,
  * RPMTAG_BASENAME values.
@@ -80,6 +84,7 @@ if( hasCompressedFileNames ) {
 			filename, foldnames+1);
 	}
 	foldnames+=strlen(foldnames)+1;
+	fileindex++;
     }
  }
 return fileindex;
@@ -202,7 +207,7 @@ while( !gzeof(zfile) ) {
 	size%=4;
 	size=4-size;
 	size%=4;
-	//printf("padding %d\n", size);
+	/* printf("padding %d\n", size); */
 	gzseek(zfile,size,SEEK_CUR);
 
 	/*
@@ -373,11 +378,11 @@ while( !gzeof(zfile) ) {
 	 * may need to be skipped.
 	 */
 	size=gztell(zfile);
-	//printf("offset %x\n", size);
+	/* printf("offset %x\n", size); */
 	size%=4;
 	size=4-size;
 	size%=4;
-	//printf("padding %d\n", size);
+	/* printf("padding %d\n", size); */
 	gzseek(zfile,size,SEEK_CUR);
 
 
