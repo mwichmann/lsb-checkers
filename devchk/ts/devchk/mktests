@@ -211,6 +211,8 @@ sub writetest($$)
 			if( $lastid != 0 ) {
 				# We have output at least one type, and now we need to
 				# put a catchall else clause
+				# XXXSTU - This should probably only happen if previous cases
+				#   have dissimilar Tarch and ATaid values
 
 				if( $tentry{'Tarch'} == 1 && $lastaid != 1 ) {
 					print TESTS "#else\n";
@@ -260,6 +262,9 @@ sub writetest($$)
 			if( $mth->numrows ) {
 			    for(1..$mth->numrows) {
 				%mentry=$mth->fetchhash;
+				#
+				# XXXSTU - We really should fetch the info for the member type so we can validate the size in the DB
+				#
 				print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMoffset'},$Aid,$mentry{'TMid'})\n";
 			    }
 			} else {
@@ -284,6 +289,23 @@ sub writetest($$)
 			}
 		#case Enum:
 		if( $tentry{'Ttype'} eq 'Enum' ) {
+			next;
+			}
+		#case Typedef:
+		if( $tentry{'Ttype'} eq 'Typedef' ) {
+			# Need to check for Array, and adjust the size value accordingly
+			$tselect = "SELECT * FROM Type ";
+			$tselect.= "LEFT JOIN ArchType ON ATtid=Tid ";
+			$tselect.= "LEFT JOIN Architecture ON Aid=ATaid ";
+			$tselect.= "WHERE Tid=".$tentry{'Tbasetype'};
+			$ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
+			%ttentry=$ttth->fetchhash;
+			if( $ttentry{'Ttype'} eq 'Array' ) {
+				print TESTS "CheckArrayTypeSize($Tname,".$ttentry{'ATsize'}.",$ATsize, $Tid, $Aid)\n";
+				print "CheckArrayTypeSize($Tname,".$ttentry{'ATsize'}.",$ATsize, $Tid, $Aid)\n";
+			} else {
+				print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+			}
 			next;
 			}
 		# Default case
