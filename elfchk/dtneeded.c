@@ -33,6 +33,9 @@ char *DtNeeded[] = {
 #if __s390__ && !__s390x__
 	"libc.so.6",
 #endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libc.so.6",
+#endif /* __x86_64__ */
 #if __s390x__
 	"libc.so.6",
 #endif /* __s390x__ */
@@ -55,6 +58,9 @@ char *DtNeeded[] = {
 #if __s390__ && !__s390x__
 	"libcrypt.so.1",
 #endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libcrypt.so.1",
+#endif /* __x86_64__ */
 #if __s390x__
 	"libcrypt.so.1",
 #endif /* __s390x__ */
@@ -74,6 +80,9 @@ char *DtNeeded[] = {
 #if __s390__ && !__s390x__
 	"libdl.so.2",
 #endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libdl.so.2",
+#endif /* __x86_64__ */
 #if __s390x__
 	"libdl.so.2",
 #endif /* __s390x__ */
@@ -92,6 +101,9 @@ char *DtNeeded[] = {
 #if __s390__ && !__s390x__
 	"libm.so.6",
 #endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libm.so.6",
+#endif /* __x86_64__ */
 #if __s390x__
 	"libm.so.6",
 #endif /* __s390x__ */
@@ -116,6 +128,9 @@ char *DtNeeded[] = {
 #if __s390__ && !__s390x__
 	"libpthread.so.0",
 #endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libpthread.so.0",
+#endif /* __x86_64__ */
 #if __s390x__
 	"libpthread.so.0",
 #endif /* __s390x__ */
