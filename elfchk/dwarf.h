@@ -59,9 +59,9 @@ typedef struct EHFRMHDR {
 
 /* Primary Opcodes */
 
-#define DW_CFA_advance_loc	0x01
-#define DW_CFA_offset		0x02
-#define DW_CFA_restore		0x03
+#define DW_CFA_advance_loc	(0x01<<6)
+#define DW_CFA_offset		(0x02<<6)
+#define DW_CFA_restore		(0x03<<6)
 
 /* Extended Opcodes (Primary == 0) */
 
@@ -80,6 +80,16 @@ typedef struct EHFRMHDR {
 #define DW_CFA_def_cfa		0x0C
 #define DW_CFA_def_cfa_register	0x0D
 #define DW_CFA_def_cfa_offset	0x0E
+
+/* Extra v3 instructions */
+
+#define DW_CFA_expression          0x10
+#define DW_CFA_offset_extended_sf  0x11
+#define DW_CFA_def_cfa_sf          0x12
+#define DW_CFA_def_cfa_offset_sf   0x13
+
+/* GNU Stuff */
+#define DW_CFA_GNU_args_size  0x2e
 
 /* DWARF Exception Header Encoding - Taken from LSB v1.3 */
 
@@ -105,8 +115,9 @@ typedef struct EHFRMHDR {
 
 /* dwarf.c */
 extern unsigned long int read_leb128(unsigned char *data, int *length_return, int sign);
-extern int check_CFI(unsigned char *ptr, int length);
-extern int check_FDE(unsigned char *ptr, int length);
-extern int check_CIE(unsigned char *ptr, int length);
+extern int check_CFI(unsigned char *ptr);
+extern int check_FDE(unsigned char *ptr);
+extern int check_CIE(unsigned char *ptr);
+extern int check_CFInformation(unsigned char *ptr);
 extern void *read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused);
 #endif /* _DWARF_H */

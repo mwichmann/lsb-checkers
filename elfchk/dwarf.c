@@ -44,11 +44,12 @@ decode_uleb128 (data, length_return)
   return result;
 }
 
-unsigned long int
+signed long int
 decode_sleb128 (data, length_return)
      unsigned char * data;
      int *           length_return;
 {
+
   unsigned long int result = 0;
   int               shift = 0;
   unsigned char     *data_start = data;
@@ -57,13 +58,13 @@ decode_sleb128 (data, length_return)
   while(1) {
       byte = *data++;
       result |= (byte & 0x7f) << shift;
+      shift += 7;
       if( (byte & 0x80) == 0 )
 	break;
 
-      shift += 7;
   }
 
-  if ((shift < sizeof(int)) && (byte & 0x40))
+  if ((shift < sizeof(int)*8) && (byte & 0x40))
     result |= - (1 << shift);
 
   if (length_return != NULL)
@@ -74,11 +75,13 @@ decode_sleb128 (data, length_return)
 }
 
 
-int check_CFI(unsigned char *ptr,int length)
+
+int check_CFI(unsigned char *ptr)
 {
         int	numused,used=0;
         int	tmp;
-
+        int     opcode;
+        unsigned char     rawop;
 /* XXXSTU - Need to check the values read in each record */
 
 
@@ -88,35 +91,46 @@ dumpbytes(ptr,8);
 */
 
         used++; /* The op code */
-
-        switch( (*ptr)>>6 ) { /* Primary opcodes */
-	case 0:
-		/* Use extended opcord */
-		break;
-	case DW_CFA_advance_loc:
-		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_advance_loc|" );
-		}
-		break;
-	case DW_CFA_offset:
-		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_offset|" );
-		}
-		break;
-	case DW_CFA_restore:
-		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_restore|" );
-		}
-		break;
-	default:
-		fprintf(stderr, "********** Unexpected CFI opcode %x **\n",
-                        (*ptr)>>6);
+        rawop = *ptr;
+        ptr++;
+        if (rawop & 0xc0)
+        {
+                /* have primary opcode */
+                opcode = rawop & 0xc0;
+        }
+        else
+        {
+                /* have extended opcode */
+                opcode = rawop & 0x3F;
         }
 
-        switch( (*ptr)&0x3f ) { /* Extended opcodes */
+
+        switch( opcode ) { 
 	/*
-	 * These are dewcribed in Dward 2.0.0 - Section 6.4.2
+	 * These are described in Dward 2.0.0 - Section 6.4.2
 	 */
+	case DW_CFA_advance_loc:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_advance_loc\n" );
+		}
+		break;
+
+	case DW_CFA_offset:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_offset\n" );
+		}
+		/* Operand 1 - ULEB128 register */
+		tmp = decode_uleb128(ptr,&numused);
+                ptr+=numused;
+                used+=numused;
+		break;
+
+	case DW_CFA_restore:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_restore\n" );
+		}
+		break;
+
 	case DW_CFA_nop:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 			fprintf(stderr,"DW_CFA_nop\n" );
@@ -282,21 +296,85 @@ dumpbytes(ptr,8);
                 used += numused;
 		break;
 
+	case DW_CFA_GNU_args_size:
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_GNU_args_size\n" );
+                }
+
+		/* Operand 1 - ULEB128 register */
+		tmp = decode_uleb128(ptr,&numused);
+                ptr += numused;
+                used += numused;
+		break;
+
+/* 	case DW_CFA_expression: */
+/* 		if (elfchk_debug&DEBUG_DWARF_CONTENTS) { */
+/* 			fprintf(stderr,"DW_CFA_expression\n" ); */
+/*                 } */
+
+/* 		/\* Operand 1 - ULEB128 register *\/ */
+/* 		tmp = decode_uleb128(ptr,&numused); */
+/*                 ptr += numused; */
+/*                 used += numused; */
+/* 		break; */
+
+	case DW_CFA_offset_extended_sf:
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_offset_extended_sf\n" );
+                }
+
+		/* Operand 1 - ULEB128 register */
+		tmp = decode_uleb128(ptr,&numused);
+                ptr += numused;
+                used += numused;
+
+		/* Operand 2 - SLEB128 offset */
+		tmp = decode_sleb128(ptr,&numused);
+                ptr += numused;
+                used += numused;
+		break;
+
+/* 	case DW_CFA_def_cfa_sf: */
+/* 		if (elfchk_debug&DEBUG_DWARF_CONTENTS) { */
+/* 			fprintf(stderr,"DW_CFA_def_cfa_sf\n" ); */
+/*                 } */
+
+/* 		/\* Operand 1 - ULEB128 register *\/ */
+/* 		tmp = decode_uleb128(ptr,&numused); */
+/*                 ptr += numused; */
+/*                 used += numused; */
+
+/* 		/\* Operand 2 - SLEB128 offset *\/ */
+/* 		tmp = decode_sleb128(ptr,&numused); */
+/*                 ptr += numused; */
+/*                 used += numused; */
+/* 		break; */
+
+/* 	case DW_CFA_def_cfa_offset_sf: */
+/* 		if (elfchk_debug&DEBUG_DWARF_CONTENTS) { */
+/* 			fprintf(stderr,"DW_CFA_def_cfa_offset_sf\n" ); */
+/*                 } */
+
+/* 		/\* Operand 1 - ULEB128 register *\/ */
+/* 		tmp = decode_uleb128(ptr,&numused); */
+/*                 ptr += numused; */
+/*                 used += numused; */
+/* 		break; */
+
 	default:
 		fprintf(stderr, "********** Unexpected CFI opcode %x **\n",
-                        *ptr);
+                        rawop);
         }
 
         return used;
 
 }
 
-int check_FDE(unsigned char *ptr,int length)
+int check_FDE(unsigned char *ptr)
 {
-        int	numused;
         int	used=0;
         FDEFrameHeader	fdeimage;
-        unsigned char *endptr=ptr;
+        unsigned char *endptr;
 
 /*
 fprintf(stderr,"FDE found at %x\n", ptr );
@@ -305,62 +383,88 @@ dumpbytes(ptr,length);
 
         fdeimage.length = *(int *)ptr;
         ptr += 4;
-        length -= 4;
         used += 4;
+        endptr = ptr + fdeimage.length;
+
+        if (fdeimage.length==0)
+        {
+                /* Have zero terminator */
+                return 0;
+        }
 
         fdeimage.CIE_pointer = *(int *)ptr;
         ptr += 4;
-        length -= 4;
         used += 4;
 
         fdeimage.initial_location = *(int **)ptr;
         ptr+=4;
-        length-=4;
         used+=4;
         
-	/* What is this doing??? */
-        fdeimage.address_range = *(int *)ptr;
+        fdeimage.address_range = *(long *)ptr;
         ptr += 4;
-        length -= 4;
         used += 4;
         
-        fdeimage.address_range = decode_sleb128(ptr,&numused);
-        ptr += numused;
-        length -= numused;
-        used += 4;
+/*         fdeimage.address_range = decode_sleb128(ptr,&numused); */
+/*         ptr += numused; */
+/*         used += 4; */
 
         if(elfchk_debug & DEBUG_DWARF_CONTENTS) {
                 fprintf(stderr,"length: %x\n", fdeimage.length);
                 fprintf(stderr,"CIE_pointer: %x\n", fdeimage.CIE_pointer);
                 fprintf(stderr,"initial_location: %p\n", 
                         fdeimage.initial_location);
-                fprintf(stderr,"address_range: %x\n", fdeimage.address_range);
+                fprintf(stderr,"address_range: %x (%p)\n", 
+                        fdeimage.address_range,
+                        ((char *)fdeimage.initial_location) 
+                        + fdeimage.address_range);
 	}
 
-        endptr += fdeimage.length;
         while(ptr<endptr)
-                ptr += check_CFI(ptr,length);
+                ptr += check_CFI(ptr);
 
         return fdeimage.length + 4; /* length+sizeof(length) */
 }
 
-int check_CIE(unsigned char *ptr,int length)
+int check_CFInformation(unsigned char *ptr)
 {
-        int     used,numused;
+        int     used, numused = 0;
         CIEFrameImage *frameimg;
-        CIEFrame frame;
 
         frameimg = (CIEFrameImage *)ptr;
 
-/*
-fprintf(stderr,"CIE found at %x\n", ptr );
-dumpbytes(frameimg,frameimg->length);
-*/
-        /* If the length of the frame is a zero terminating
-           frame and we shouldn't attempt to parse it */
-        if (frameimg->length==0)
-                return 0;
-        
+        while (frameimg->length!=0)
+        {
+                /* If the length of the frame is a zero terminating
+                   frame and we shouldn't attempt to parse it */
+                if (frameimg->cie==0)
+                {
+                        /* Have CIE */
+                        if (elfchk_debug & DEBUG_DWARF_CONTENTS)
+                                fprintf(stderr, "CIE record\n");
+                        used = check_CIE(ptr);
+                }
+                else
+                {
+                        if (elfchk_debug & DEBUG_DWARF_CONTENTS)
+                                fprintf(stderr, "FDE record\n");
+                        used = check_FDE(ptr);
+                }
+                numused+=used;
+                ptr += used;
+                frameimg = (CIEFrameImage *)ptr;
+        }
+        return numused;
+}
+
+int check_CIE(unsigned char *ptr)
+{
+        CIEFrameImage *frameimg;
+        CIEFrame frame;
+        unsigned char *start = ptr;
+        unsigned char *cfi_start;
+        int numused;
+
+        frameimg = (CIEFrameImage *)ptr;
         frame.length = frameimg->length;
         frame.cie = frameimg->cie;
         frame.version = frameimg->version;
@@ -379,8 +483,8 @@ dumpbytes(frameimg,frameimg->length);
         frame.code_alignment_factor = decode_uleb128(ptr, &numused);
         ptr += numused;
 
-        frame.data_alignment_factor = decode_sleb128(ptr,&numused);
-        ptr+=numused;
+        frame.data_alignment_factor = decode_sleb128(ptr, &numused);
+        ptr += numused;
 
         frame.return_address_register = *ptr++;
 
@@ -398,9 +502,10 @@ dumpbytes(frameimg,frameimg->length);
                 fprintf(stderr,"augmentation_len: %x\n", 
                         frame.augmentation_len);
 	}
+        cfi_start = ptr + frame.augmentation_len;
 
         /* Get the info related with 'P' */
-        frame.encoding =* ptr++;
+        frame.encoding = *ptr++;
         frame.personality_routine = *(unsigned char **)ptr;
         ptr += sizeof(unsigned char *);
 
@@ -410,6 +515,7 @@ dumpbytes(frameimg,frameimg->length);
 	}
 
         /* Get the CFIs */
+        ptr = cfi_start;
         if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
                 fprintf(stderr,"%x bytes of CFI\n", 
                         ptr - (unsigned char *)frameimg);
@@ -417,23 +523,10 @@ dumpbytes(frameimg,frameimg->length);
 
         while ( (ptr - (unsigned char *)frameimg) < 
                 frameimg->length + sizeof(int) ) {
-                ptr += check_CFI(ptr, (frameimg->length+sizeof(int))-
-                                 (ptr-(unsigned char *)frameimg) );
+                ptr += check_CFI(ptr);
 	}
 
-        length -= frame.length;
-        numused = frame.length;
-
-        /* Align to 4 byte boundary */
-        ptr = (unsigned char *)((long)(ptr+3)&~3);
-
-        while (length>0) {
-                used = check_FDE(ptr,length);
-                length -= used;
-                numused += used;
-	}
-
-        return numused;
+        return ptr - start;
 }
 
 void *
