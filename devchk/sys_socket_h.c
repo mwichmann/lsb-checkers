@@ -10,8 +10,8 @@
 int sys_socket_h()
 {
 int cnt=0;
-CheckTypeSize(__SOCKADDR_ARG,4)
-CheckTypeSize(__CONST_SOCKADDR_ARG,4)
+CheckTypeSize(__SOCKADDR_ARG,0)
+CheckTypeSize(__CONST_SOCKADDR_ARG,0)
 printf("%d tests in sys/socket.h\n",cnt);
 return cnt;
 }

@@ -10,7 +10,9 @@
 int sys_types_h()
 {
 int cnt=0;
-CheckTypeSize(size_t,4)
+CheckTypeSize(int32_t,0)
+CheckTypeSize(ssize_t,0)
+CheckTypeSize(key_t,0)
 printf("%d tests in sys/types.h\n",cnt);
 return cnt;
 }

@@ -10,8 +10,8 @@
 int sys_wait_h()
 {
 int cnt=0;
-CheckTypeSize(__WAIT_STATUS,4)
-CheckTypeSize(idtype_t,4)
+CheckTypeSize(__WAIT_STATUS,0)
+CheckTypeSize(idtype_t,0)
 printf("%d tests in sys/wait.h\n",cnt);
 return cnt;
 }

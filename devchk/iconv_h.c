@@ -10,7 +10,7 @@
 int iconv_h()
 {
 int cnt=0;
-CheckTypeSize(iconv_t,4)
+CheckTypeSize(iconv_t,0)
 printf("%d tests in iconv.h\n",cnt);
 return cnt;
 }

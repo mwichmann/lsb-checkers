@@ -10,8 +10,9 @@
 int search_h()
 {
 int cnt=0;
-CheckTypeSize(ENTRY,8)
-CheckTypeSize(ACTION,4)
+CheckTypeSize(ACTION,0)
+CheckTypeSize(ENTRY,0)
+CheckTypeSize(__action_fn_t,0)
 printf("%d tests in search.h\n",cnt);
 return cnt;
 }

@@ -10,7 +10,7 @@
 int ftw_h()
 {
 int cnt=0;
-CheckTypeSize(__ftw_func_t,4)
+CheckTypeSize(__ftw_func_t,0)
 printf("%d tests in ftw.h\n",cnt);
 return cnt;
 }
