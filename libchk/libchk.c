@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.15 $
+ * This is $Revision: 1.16 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.16  2002/06/28 02:07:27  cyeoh
+ * Ensure end of journal tag is added to end of journal
+ *
  * Revision 1.15  2002/06/20 05:27:20  cyeoh
  * Adds package version tag to journal file
  *
@@ -69,7 +72,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.15 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.16 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -322,6 +325,9 @@ int main(int argc, char *argv[])
   tetj_add_config(journal, tmp_string);
 
   check_libs(journal);
+
+  tetj_close_journal(journal);
+
   exit(0);
 }
 
