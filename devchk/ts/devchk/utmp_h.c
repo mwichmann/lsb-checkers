@@ -196,45 +196,66 @@ CheckMemberSize(struct lastlog,ll_line,32,2,34461)
 CheckOffset(struct lastlog,ll_line,4,2,34461)
 CheckMemberSize(struct lastlog,ll_host,256,2,34462)
 CheckOffset(struct lastlog,ll_host,36,2,34462)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct lastlog,292, 10285, 6)
-CheckMemberSize(struct lastlog,ll_line,32,6,34461)
-CheckOffset(struct lastlog,ll_line,4,6,34461)
-CheckMemberSize(struct lastlog,ll_host,256,6,34462)
-CheckOffset(struct lastlog,ll_host,36,6,34462)
-#elif __ia64__
-CheckTypeSize(struct lastlog,296, 10285, 3)
-CheckMemberSize(struct lastlog,ll_line,32,3,34461)
-CheckOffset(struct lastlog,ll_line,8,3,34461)
-CheckMemberSize(struct lastlog,ll_host,256,3,34462)
-CheckOffset(struct lastlog,ll_host,40,3,34462)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct lastlog,292, 10285, 10)
-CheckMemberSize(struct lastlog,ll_line,32,10,34461)
-CheckOffset(struct lastlog,ll_line,4,10,34461)
-CheckMemberSize(struct lastlog,ll_host,256,10,34462)
-CheckOffset(struct lastlog,ll_host,36,10,34462)
-#elif __powerpc64__
-CheckTypeSize(struct lastlog,292, 10285, 9)
-CheckMemberSize(struct lastlog,ll_line,32,9,34461)
-CheckOffset(struct lastlog,ll_line,4,9,34461)
-CheckMemberSize(struct lastlog,ll_host,256,9,34462)
-CheckOffset(struct lastlog,ll_host,36,9,34462)
-#elif __s390x__
-CheckTypeSize(struct lastlog,296, 10285, 12)
-CheckMemberSize(struct lastlog,ll_line,32,12,34461)
-CheckOffset(struct lastlog,ll_line,8,12,34461)
-CheckMemberSize(struct lastlog,ll_host,256,12,34462)
-CheckOffset(struct lastlog,ll_host,40,12,34462)
-#elif __x86_64__
-CheckTypeSize(struct lastlog,292, 10285, 11)
-CheckMemberSize(struct lastlog,ll_line,32,11,34461)
-CheckOffset(struct lastlog,ll_line,4,11,34461)
-CheckMemberSize(struct lastlog,ll_host,256,11,34462)
-CheckOffset(struct lastlog,ll_host,36,11,34462)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10285,0);
-Msg("Find size of lastlog (10285)\n");
+#endif
+
+#if __ia64__
+CheckTypeSize(struct lastlog,296, 10950, 3)
+CheckMemberSize(struct lastlog,ll_time,4,3,40749)
+CheckOffset(struct lastlog,ll_time,0,3,40749)
+CheckMemberSize(struct lastlog,ll_line,32,3,40755)
+CheckOffset(struct lastlog,ll_line,8,3,40755)
+CheckMemberSize(struct lastlog,ll_host,256,3,40761)
+CheckOffset(struct lastlog,ll_host,40,3,40761)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(struct lastlog,292, 10951, 6)
+CheckMemberSize(struct lastlog,ll_time,4,6,40750)
+CheckOffset(struct lastlog,ll_time,0,6,40750)
+CheckMemberSize(struct lastlog,ll_line,32,6,40756)
+CheckOffset(struct lastlog,ll_line,4,6,40756)
+CheckMemberSize(struct lastlog,ll_host,256,6,40762)
+CheckOffset(struct lastlog,ll_host,36,6,40762)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(struct lastlog,292, 10952, 9)
+CheckMemberSize(struct lastlog,ll_time,4,9,40751)
+CheckOffset(struct lastlog,ll_time,0,9,40751)
+CheckMemberSize(struct lastlog,ll_line,32,9,40757)
+CheckOffset(struct lastlog,ll_line,4,9,40757)
+CheckMemberSize(struct lastlog,ll_host,256,9,40763)
+CheckOffset(struct lastlog,ll_host,36,9,40763)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(struct lastlog,292, 10953, 10)
+CheckMemberSize(struct lastlog,ll_time,4,10,40752)
+CheckOffset(struct lastlog,ll_time,0,10,40752)
+CheckMemberSize(struct lastlog,ll_line,32,10,40758)
+CheckOffset(struct lastlog,ll_line,4,10,40758)
+CheckMemberSize(struct lastlog,ll_host,256,10,40764)
+CheckOffset(struct lastlog,ll_host,36,10,40764)
+#endif
+
+#if __x86_64__
+CheckTypeSize(struct lastlog,292, 10954, 11)
+CheckMemberSize(struct lastlog,ll_time,4,11,40753)
+CheckOffset(struct lastlog,ll_time,0,11,40753)
+CheckMemberSize(struct lastlog,ll_line,32,11,40759)
+CheckOffset(struct lastlog,ll_line,4,11,40759)
+CheckMemberSize(struct lastlog,ll_host,256,11,40765)
+CheckOffset(struct lastlog,ll_host,36,11,40765)
+#endif
+
+#if __s390x__
+CheckTypeSize(struct lastlog,296, 10955, 12)
+CheckMemberSize(struct lastlog,ll_time,4,12,40754)
+CheckOffset(struct lastlog,ll_time,0,12,40754)
+CheckMemberSize(struct lastlog,ll_line,32,12,40760)
+CheckOffset(struct lastlog,ll_line,8,12,40760)
+CheckMemberSize(struct lastlog,ll_host,256,12,40766)
+CheckOffset(struct lastlog,ll_host,40,12,40766)
 #endif
 
 #if __i386__
