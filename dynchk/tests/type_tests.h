@@ -11,7 +11,7 @@
 #include <dlfcn.h>  //for dlsym() in wrapper functions
 #include <sys/types.h>
 
-#include "struct_tests_h.h"
+#include "header_list.h"
 
 extern void validate_pathname(const char *arg, const char *name);
 extern void validate_filemode(const mode_t arg, const char *name);

@@ -99,6 +99,10 @@ my $get_funcptr_declaration_q = $dbh->prepare(
 'SELECT TMtypeid FROM TypeMember WHERE TMmemberof = ?' )
 	or die "Couldn't prepare gen_funcptr_declaration query: " . DBI->errstr;
 
+
+my $header_q = $dbh->prepare('SELECT Hname FROM Header WHERE Hstd="Yes"')
+	or die "Couldn't prepare header query: ".DBI->errstr;
+
 ################################################################################
 #
 # subroutines
@@ -302,11 +306,9 @@ print STRUCT_MK "STRUCTTESTS = ";
 
 my $validate_file = IO::Handle->new();
 my $header_file = IO::Handle->new();
-my $header_header_file = IO::Handle->new();
 open($header_file, '>struct_tests.h')
 	or die "Couldn't create file struct_tests.h: ".DBI->errstr;
-open($header_header_file, '>struct_tests_h.h')
-	or die "Couldn't create file struct_tests_h.h: ".DBI->errstr;
+
  
 STRUCT: while(my ($struct_name, $struct_id, $struct_header) = $struct_q->fetchrow_array())
 {
@@ -336,11 +338,22 @@ STRUCT: while(my ($struct_name, $struct_id, $struct_header) = $struct_q->fetchro
 	
 	close $validate_file;
 
-	# write header requirement to struct_tests_h.h
-	write_header_to_struct_tests_h($header_header_file, $struct_header);
-
 	# write declaration to struct_tests.h
 	write_validate_declaration($header_file, $struct_name, $struct_id, 1);
 }
+$struct_q->finish;
 print STRUCT_MK "\n";
 close STRUCT_MK;
+
+my $header_header_file = IO::Handle->new();
+open($header_header_file, '>header_list.h')
+	or die "Couldn't create file struct_tests_h.h: ".DBI->errstr;
+
+$header_q->execute() or die "Couldn't execute header query: ".DBI->errstr;
+HEADERLIST: while(my ($header_name) = $header_q->fetchrow_array())
+{
+	# write header requirement to struct_tests_h.h
+	write_header_to_struct_tests_h($header_header_file, $header_name);
+}
+$header_q->finish;
+close $header_header_file
