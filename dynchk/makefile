@@ -15,6 +15,8 @@ $(TEST_LIB):
 liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) makefile
 	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB)
 
+test:
+
 install:
 	cp -f liblsbdynchk.so.1 /usr/lib/liblsbdynchk.so.1
 
