@@ -129,21 +129,6 @@ Msg("Find size of int32_t (6997)\n");
 
 #if __i386__
 CheckTypeSize(int64_t,8, 6998, 2)
-#elif __ia64__
-CheckTypeSize(int64_t,8, 6998, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int64_t,8, 6998, 6)
-#elif __s390__ && !__s390x__
-CheckTypeSize(int64_t,8, 6998, 10)
-#elif __powerpc64__
-CheckTypeSize(int64_t,8, 6998, 9)
-#elif __s390x__
-CheckTypeSize(int64_t,8, 6998, 12)
-#elif __x86_64__
-CheckTypeSize(int64_t,8, 6998, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6998,0);
-Msg("Find size of int64_t (6998)\n");
 #endif
 
 #if __i386__
@@ -201,10 +186,6 @@ CheckTypeSize(u_int32_t,4, 7001, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7001,0);
 Msg("Find size of u_int32_t (7001)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(ssize_t,4, 9029, 2)
 #endif
 
 #if __i386__
@@ -366,7 +347,7 @@ CheckTypeSize(useconds_t,4, 9369, 9)
 #elif __ia64__
 CheckTypeSize(useconds_t,4, 9369, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(useconds_t,0, 9369, 6)
+CheckTypeSize(useconds_t,4, 9369, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(useconds_t,0, 9369, 10)
 #else
@@ -448,6 +429,53 @@ CheckTypeSize(clockid_t,4, 10209, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10209,0);
 Msg("Find size of clockid_t (10209)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(const int32_t,4, 10458, 2)
+#elif __ia64__
+CheckTypeSize(const int32_t,4, 10458, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const int32_t,4, 10458, 6)
+#elif __x86_64__
+CheckTypeSize(const int32_t,4, 10458, 11)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const int32_t,4, 10458, 10)
+#elif __s390x__
+CheckTypeSize(const int32_t,4, 10458, 12)
+#elif __powerpc64__
+CheckTypeSize(const int32_t,4, 10458, 9)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10458,0);
+Msg("Find size of const int32_t (10458)\n");
+#endif
+
+#if __ia64__
+CheckTypeSize(int64_t,8, 10867, 3)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(int64_t,8, 10868, 9)
+#endif
+
+#if __x86_64__
+CheckTypeSize(int64_t,8, 10869, 11)
+#endif
+
+#if __s390x__
+CheckTypeSize(int64_t,8, 10870, 12)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(int64_t,8, 10871, 6)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(int64_t,8, 10872, 10)
+#endif
+
+#if __i386__
+CheckTypeSize(ssize_t,4, 9029, 2)
 #endif
 
 #if __powerpc__ && !__powerpc64__

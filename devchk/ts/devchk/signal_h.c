@@ -788,6 +788,9 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
 Msg("Find size of sigstack (9315)\n");
 #endif
 
+#if __powerpc64__
+#endif
+
 #if __s390x__
 CheckTypeSize(_psw_t,16, 10571, 12)
 #endif
@@ -839,7 +842,7 @@ CheckTypeSize(sighandler_t,8, 9374, 9)
 #elif __ia64__
 CheckTypeSize(sighandler_t,8, 9374, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sighandler_t,0, 9374, 6)
+CheckTypeSize(sighandler_t,4, 9374, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(sighandler_t,0, 9374, 10)
 #elif __s390x__
@@ -866,6 +869,18 @@ CheckTypeSize(sigval_t,8, 9320, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
 Msg("Find size of sigval_t (9320)\n");
+#endif
+
+#if __i386__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __s390__ && !__s390x__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10189,0);
+Msg("Find size of anon-_sigev_un (10189)\n");
 #endif
 
 #if __i386__

@@ -280,6 +280,9 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");
 #endif
 
+#if __s390__ && !__s390x__
+#endif
+
 #if __i386__
 CheckTypeSize(__dispatch_fn_t,4, 9997, 2)
 #elif __powerpc64__
@@ -287,7 +290,7 @@ CheckTypeSize(__dispatch_fn_t,8, 9997, 9)
 #elif __ia64__
 CheckTypeSize(__dispatch_fn_t,8, 9997, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__dispatch_fn_t,0, 9997, 6)
+CheckTypeSize(__dispatch_fn_t,4, 9997, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(__dispatch_fn_t,0, 9997, 10)
 #elif __s390x__
@@ -334,14 +337,17 @@ CheckOffset(struct svc_req,rq_clntcred,48,3,32256)
 CheckMemberSize(struct svc_req,rq_xprt,8,3,32257)
 CheckOffset(struct svc_req,rq_xprt,56,3,32257)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct svc_req,0, 9991, 6)
-Msg("Missing member data for svc_req on PPC32\n");
-CheckOffset(struct svc_req,rq_prog,0,6,32252)
-CheckOffset(struct svc_req,rq_vers,0,6,32253)
-CheckOffset(struct svc_req,rq_proc,0,6,32254)
-CheckOffset(struct svc_req,rq_cred,0,6,32255)
-CheckOffset(struct svc_req,rq_clntcred,0,6,32256)
-CheckOffset(struct svc_req,rq_xprt,0,6,32257)
+CheckTypeSize(struct svc_req,32, 9991, 6)
+CheckMemberSize(struct svc_req,rq_vers,4,6,32253)
+CheckOffset(struct svc_req,rq_vers,4,6,32253)
+CheckMemberSize(struct svc_req,rq_proc,4,6,32254)
+CheckOffset(struct svc_req,rq_proc,8,6,32254)
+CheckMemberSize(struct svc_req,rq_cred,12,6,32255)
+CheckOffset(struct svc_req,rq_cred,12,6,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,4,6,32256)
+CheckOffset(struct svc_req,rq_clntcred,24,6,32256)
+CheckMemberSize(struct svc_req,rq_xprt,4,6,32257)
+CheckOffset(struct svc_req,rq_xprt,28,6,32257)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct svc_req,0, 9991, 10)
 Msg("Missing member data for svc_req on S390\n");

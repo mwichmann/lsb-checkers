@@ -171,6 +171,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9109,0);
 Msg("Find size of fpos64_t (9109)\n");
 #endif
 
+#if __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#endif
+
 #if __i386__
 CheckTypeSize(FILE,148, 8782, 2)
 #elif __ia64__

@@ -82,6 +82,7 @@ extern void sys_utsname_h();
 extern void sys_wait_h();
 extern void syslog_h();
 extern void tar_h();
+extern void term_h();
 extern void termios_h();
 extern void time_h();
 extern void ucontext_h();

@@ -132,23 +132,8 @@ Msg("Find size of uint32_t (9272)\n");
 CheckTypeSize(uintptr_t,4, 9308, 2)
 #endif
 
-#if __i386__
-CheckTypeSize(uint64_t,8, 10176, 2)
-#elif __ia64__
-CheckTypeSize(uint64_t,8, 10176, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint64_t,8, 10176, 6)
-#elif __s390__ && !__s390x__
+#if __s390__ && !__s390x__
 CheckTypeSize(uint64_t,8, 10176, 10)
-#elif __powerpc64__
-CheckTypeSize(uint64_t,8, 10176, 9)
-#elif __s390x__
-CheckTypeSize(uint64_t,8, 10176, 12)
-#elif __x86_64__
-CheckTypeSize(uint64_t,8, 10176, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10176,0);
-Msg("Find size of uint64_t (10176)\n");
 #endif
 
 #if __ia64__
@@ -221,6 +206,30 @@ CheckTypeSize(uintmax_t,8, 10861, 12)
 
 #if __s390x__
 CheckTypeSize(uintptr_t,8, 10862, 12)
+#endif
+
+#if __ia64__
+CheckTypeSize(uint64_t,8, 10874, 3)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(uint64_t,8, 10875, 6)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(uint64_t,8, 10876, 9)
+#endif
+
+#if __x86_64__
+CheckTypeSize(uint64_t,8, 10878, 11)
+#endif
+
+#if __s390x__
+CheckTypeSize(uint64_t,8, 10879, 12)
+#endif
+
+#if __i386__
+CheckTypeSize(uint64_t,8, 10880, 2)
 #endif
 
 #ifdef TET_TEST

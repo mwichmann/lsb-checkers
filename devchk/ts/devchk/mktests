@@ -89,7 +89,7 @@ sub writetest($$)
 	$select.= "WHERE HGheader=$Hid ";
 	$select.= "AND Theadergroup=HGid ";
 	#$select.= "AND Tid IN ($typelist) ";
-	$select.= "AND (Tstatus = 'Referenced' OR Tstatus='Conly')";
+	$select.= "AND (Tstatus = 'Referenced' OR Tstatus = 'Indirect' OR Tstatus='Conly')";
 	$select.= "ORDER BY Theadergroup,Tid ";
 	$tth = $Dbh->query($select) || die $Dbh->errmsg();
 

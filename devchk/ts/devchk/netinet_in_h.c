@@ -254,7 +254,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 Msg("Find size of sockaddr_in (9141)\n");
 #endif
 
-#if __i386__
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(struct ip_mreq,0, 10146, 6)
+Msg("Missing member data for ip_mreq on PPC32\n");
+CheckOffset(struct ip_mreq,imr_multiaddr,0,6,33768)
+CheckOffset(struct ip_mreq,imr_interface,0,6,33769)
+#elif __i386__
 CheckTypeSize(struct ip_mreq,8, 10146, 2)
 CheckMemberSize(struct ip_mreq,imr_multiaddr,4,2,33768)
 CheckOffset(struct ip_mreq,imr_multiaddr,0,2,33768)

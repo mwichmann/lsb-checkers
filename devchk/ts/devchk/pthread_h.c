@@ -264,9 +264,28 @@ CheckOffset(struct _pthread_cleanup_buffer,__routine,0,12,40619)
 CheckOffset(struct _pthread_cleanup_buffer,__arg,0,12,40620)
 CheckOffset(struct _pthread_cleanup_buffer,__canceltype,0,12,40621)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,0,12,40622)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _pthread_cleanup_buffer,0, 6931, 6)
+Msg("Missing member data for _pthread_cleanup_buffer on PPC32\n");
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,6,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,0,6,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,0,6,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,0,6,40622)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6931,0);
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
+#endif
+
+#if __i386__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9056,0);
+Msg("Find size of pthread_rwlock_t * (9056)\n");
 #endif
 
 #if __i386__
@@ -456,6 +475,9 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9053,0);
 Msg("Find size of pthread_condattr_t (9053)\n");
 #endif
 
+#if 1
+#endif
+
 #if __i386__
 CheckTypeSize(_pthread_descr,4, 9087, 2)
 #elif __ia64__
@@ -614,6 +636,29 @@ CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,9,34444)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10279,0);
 Msg("Find size of _pthread_rwlock_t (10279)\n");
+#endif
+
+#if __i386__
+#elif __s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __x86_64__
+#elif __powerpc64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10280,0);
+Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
+#endif
+
+#if __s390__ && !__s390x__
+#elif __i386__
+#elif __powerpc64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __s390x__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
+Msg("Find size of const pthread_rwlockattr_t * (10811)\n");
 #endif
 
 #ifdef TET_TEST
