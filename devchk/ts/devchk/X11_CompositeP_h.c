@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -29,20 +30,32 @@ int pcnt=0;
 Msg("Checking data structures in X11/CompositeP.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef XtCompositeExtensionVersion
-	CompareConstant(XtCompositeExtensionVersion,2L)
+	CompareConstant(XtCompositeExtensionVersion,2L,4931,architecture)
 #else
 Msg( "Error: Constant not found: XtCompositeExtensionVersion\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 /* No test for XtInheritGeometryManager */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 /* No test for XtInheritInsertChild */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef XtInheritDeleteChild
-	CompareConstant(XtInheritDeleteChild,((XtWidgetProc) _XtInherit))
+	CompareConstant(XtInheritDeleteChild,((XtWidgetProc) _XtInherit),4934,architecture)
 #else
 Msg( "Error: Constant not found: XtInheritDeleteChild\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __ia64__
@@ -53,6 +66,7 @@ CheckTypeSize(CompositeClassPart,20, 10244, 2)
 CheckTypeSize(CompositeClassPart,20, 10244, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
+Msg("Find size of CompositeClassRec (10244)\n");
 #endif
 
 #ifdef __ia64__
@@ -63,6 +77,7 @@ CheckTypeSize(CompositeClassRec,136, 10240, 2)
 CheckTypeSize(CompositeClassRec,136, 10240, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10240,0);
+Msg("Find size of CompositeClassRec (10240)\n");
 #endif
 
 #ifdef TET_TEST

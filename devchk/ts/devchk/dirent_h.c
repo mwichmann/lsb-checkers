@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 struct __dirstream {
 	};
 #include "dirent.h"
@@ -28,8 +29,11 @@ Msg("Checking data structures in dirent.h\n");
 CheckTypeSize(DIR,0, 10175, 3)
 #elif __i386__
 CheckTypeSize(DIR,0, 10175, 2)
+#elif __powerpc__
+CheckTypeSize(DIR,0, 10175, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10175,0);
+Msg("Find size of dirent (10175)\n");
 #endif
 
 #ifdef __i386__
@@ -43,14 +47,18 @@ CheckTypeSize(struct dirent,280, 10178, 3)
 CheckTypeSize(struct dirent,268, 10178, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);
+Msg("Find size of dirent64 (10178)\n");
 #endif
 
 #ifdef __ia64__
 CheckTypeSize(struct dirent64,280, 10179, 3)
 #elif __i386__
 CheckTypeSize(struct dirent64,276, 10179, 2)
+#elif __powerpc__
+CheckTypeSize(struct dirent64,280, 10179, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10179,0);
+Msg("Find size of dirent64 (10179)\n");
 #endif
 
 #ifdef TET_TEST

@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -37,6 +38,7 @@ CheckTypeSize(XtOrderProc,4, 10245, 2)
 CheckTypeSize(XtOrderProc,4, 10245, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10245,0);
+Msg("Find size of XtDoChangeProc (10245)\n");
 #endif
 
 #ifdef __ia64__
@@ -47,6 +49,7 @@ CheckTypeSize(XtDoChangeProc,4, 10248, 2)
 CheckTypeSize(XtDoChangeProc,4, 10248, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10248,0);
+Msg("Find size of XtDoChangeProc (10248)\n");
 #endif
 
 #ifdef TET_TEST

@@ -115,6 +115,7 @@ tcnt+=signal_h();
 tcnt+=stddef_h();
 tcnt+=stdio_h();
 tcnt+=stdlib_h();
+tcnt+=sys_file_h();
 tcnt+=sys_ioctl_h();
 tcnt+=sys_ipc_h();
 tcnt+=sys_mman_h();

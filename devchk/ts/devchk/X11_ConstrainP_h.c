@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -29,11 +30,14 @@ int pcnt=0;
 Msg("Checking data structures in X11/ConstrainP.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef XtConstraintExtensionVersion
-	CompareConstant(XtConstraintExtensionVersion,1L)
+	CompareConstant(XtConstraintExtensionVersion,1L,4935,architecture)
 #else
 Msg( "Error: Constant not found: XtConstraintExtensionVersion\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __ia64__
@@ -44,6 +48,7 @@ CheckTypeSize(ConstraintPart,4, 10250, 2)
 CheckTypeSize(ConstraintPart,4, 10250, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
+Msg("Find size of ConstraintClassPart (10250)\n");
 #endif
 
 #ifdef __ia64__
@@ -54,6 +59,7 @@ CheckTypeSize(ConstraintClassPart,28, 10252, 2)
 CheckTypeSize(ConstraintClassPart,28, 10252, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
+Msg("Find size of ConstraintClassRec (10252)\n");
 #endif
 
 #ifdef __ia64__
@@ -64,6 +70,7 @@ CheckTypeSize(ConstraintClassRec,164, 10258, 2)
 CheckTypeSize(ConstraintClassRec,164, 10258, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10258,0);
+Msg("Find size of ConstraintClassRec (10258)\n");
 #endif
 
 #ifdef TET_TEST

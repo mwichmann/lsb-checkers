@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "sys/ipc.h"
 
 
@@ -22,53 +23,74 @@ int pcnt=0;
 Msg("Checking data structures in sys/ipc.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_PRIVATE
-	CompareConstant(IPC_PRIVATE,((key_t)0))
+	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
 #else
 Msg( "Error: Constant not found: IPC_PRIVATE\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_CREAT
-	CompareConstant(IPC_CREAT,00001000)
+	CompareConstant(IPC_CREAT,00001000,3446,architecture)
 #else
 Msg( "Error: Constant not found: IPC_CREAT\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_EXCL
-	CompareConstant(IPC_EXCL,00002000)
+	CompareConstant(IPC_EXCL,00002000,3447,architecture)
 #else
 Msg( "Error: Constant not found: IPC_EXCL\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_NOWAIT
-	CompareConstant(IPC_NOWAIT,00004000)
+	CompareConstant(IPC_NOWAIT,00004000,3448,architecture)
 #else
 Msg( "Error: Constant not found: IPC_NOWAIT\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_RMID
-	CompareConstant(IPC_RMID,0)
+	CompareConstant(IPC_RMID,0,3449,architecture)
 #else
 Msg( "Error: Constant not found: IPC_RMID\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_SET
-	CompareConstant(IPC_SET,1)
+	CompareConstant(IPC_SET,1,3450,architecture)
 #else
 Msg( "Error: Constant not found: IPC_SET\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_STAT
-	CompareConstant(IPC_STAT,2)
+	CompareConstant(IPC_STAT,2,3451,architecture)
 #else
 Msg( "Error: Constant not found: IPC_STAT\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
@@ -90,6 +112,7 @@ CheckTypeSize(struct ipc_perm,48, 10128, 3)
 CheckTypeSize(struct ipc_perm,48, 10128, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10128,0);
+Msg("Find size of ipc_perm (10128)\n");
 #endif
 
 #ifdef TET_TEST

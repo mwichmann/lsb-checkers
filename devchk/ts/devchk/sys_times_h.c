@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "sys/times.h"
 
 
@@ -26,8 +27,11 @@ Msg("Checking data structures in sys/times.h\n");
 CheckTypeSize(struct tms,16, 6990, 2)
 #elif __ia64__
 CheckTypeSize(struct tms,32, 6990, 3)
+#elif __powerpc__
+CheckTypeSize(struct tms,16, 6990, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6990,0);
+Msg("Find size of tms (6990)\n");
 #endif
 
 #ifdef TET_TEST

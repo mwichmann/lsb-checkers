@@ -22,6 +22,8 @@ int pcnt=0;
 CheckTypeSize(void,1,1,2)
 #elif __ia64__
 CheckTypeSize(void,1,1,3)
+#elif __powerpc__
+CheckTypeSize(void,1,1,6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,1,0);
 #endif

@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -34,6 +35,7 @@ CheckTypeSize(XSizeHints,80, 8301, 3)
 CheckTypeSize(XSizeHints,72, 8301, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8301,0);
+Msg("Find size of XWMHints (8301)\n");
 #endif
 
 #ifdef __i386__
@@ -44,6 +46,7 @@ CheckTypeSize(XWMHints,56, 8303, 3)
 CheckTypeSize(XWMHints,36, 8303, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8303,0);
+Msg("Find size of XTextProperty (8303)\n");
 #endif
 
 #ifdef __i386__
@@ -54,6 +57,7 @@ CheckTypeSize(XTextProperty,32, 8305, 3)
 CheckTypeSize(XTextProperty,16, 8305, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8305,0);
+Msg("Find size of XIconSize (8305)\n");
 #endif
 
 #ifdef __i386__
@@ -64,6 +68,7 @@ CheckTypeSize(XIconSize,24, 8309, 3)
 CheckTypeSize(XIconSize,24, 8309, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8309,0);
+Msg("Find size of XClassHint (8309)\n");
 #endif
 
 #ifdef __i386__
@@ -74,6 +79,7 @@ CheckTypeSize(XClassHint,16, 8311, 3)
 CheckTypeSize(XClassHint,8, 8311, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8311,0);
+Msg("Find size of XComposeStatus (8311)\n");
 #endif
 
 #ifdef __i386__
@@ -84,6 +90,7 @@ CheckTypeSize(XComposeStatus,16, 8313, 3)
 CheckTypeSize(XComposeStatus,8, 8313, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8313,0);
+Msg("Find size of Region (8313)\n");
 #endif
 
 #ifdef __i386__
@@ -94,6 +101,7 @@ CheckTypeSize(Region,8, 8314, 3)
 CheckTypeSize(Region,4, 8314, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8314,0);
+Msg("Find size of XVisualInfo (8314)\n");
 #endif
 
 #ifdef __i386__
@@ -104,6 +112,7 @@ CheckTypeSize(XVisualInfo,64, 8316, 3)
 CheckTypeSize(XVisualInfo,40, 8316, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8316,0);
+Msg("Find size of XStandardColormap (8316)\n");
 #endif
 
 #ifdef __i386__
@@ -114,6 +123,7 @@ CheckTypeSize(XStandardColormap,80, 8318, 3)
 CheckTypeSize(XStandardColormap,40, 8318, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8318,0);
+Msg("Find size of XContext (8318)\n");
 #endif
 
 #ifdef __i386__
@@ -124,6 +134,7 @@ CheckTypeSize(XContext,4, 8319, 3)
 CheckTypeSize(XContext,4, 8319, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8319,0);
+Msg("Find size of XICCEncodingStyle (8319)\n");
 #endif
 
 #ifdef __i386__
@@ -134,6 +145,7 @@ CheckTypeSize(XICCEncodingStyle,4, 8832, 3)
 CheckTypeSize(XICCEncodingStyle,4, 8832, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8832,0);
+Msg("Find size of XICCEncodingStyle (8832)\n");
 #endif
 
 #ifdef TET_TEST

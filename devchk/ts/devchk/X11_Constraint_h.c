@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -37,6 +38,7 @@ CheckTypeSize(ConstraintWidgetClass,4, 10260, 2)
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10260,0);
+Msg("Find size of ConstraintWidgetClass (10260)\n");
 #endif
 
 #ifdef TET_TEST

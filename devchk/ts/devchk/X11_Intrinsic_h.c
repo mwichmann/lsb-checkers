@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "X11/Intrinsic.h"
 
 
@@ -30,6 +31,7 @@ CheckTypeSize(WidgetClass,8, 9583, 3)
 CheckTypeSize(WidgetClass,4, 9583, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9583,0);
+Msg("Find size of Cardinal (9583)\n");
 #endif
 
 #ifdef __i386__
@@ -40,6 +42,7 @@ CheckTypeSize(Cardinal,4, 9608, 3)
 CheckTypeSize(Cardinal,4, 9608, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9608,0);
+Msg("Find size of Cardinal (9608)\n");
 #endif
 
 #ifdef TET_TEST

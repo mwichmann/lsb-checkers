@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "sys/shm.h"
 
 
@@ -22,19 +23,28 @@ int pcnt=0;
 Msg("Checking data structures in sys/shm.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 /* No test for SHMLBA */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef SHM_RDONLY
-	CompareConstant(SHM_RDONLY,4096)
+	CompareConstant(SHM_RDONLY,4096,3469,architecture)
 #else
 Msg( "Error: Constant not found: SHM_RDONLY\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef SHM_RND
-	CompareConstant(SHM_RND,020000)
+	CompareConstant(SHM_RND,020000,3470,architecture)
 #else
 Msg( "Error: Constant not found: SHM_RND\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
@@ -43,6 +53,7 @@ CheckTypeSize(shmatt_t,4, 10212, 2)
 CheckTypeSize(shmatt_t,4, 10212, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10212,0);
+Msg("Find size of shmid_ds (10212)\n");
 #endif
 
 #ifdef __i386__
@@ -66,6 +77,7 @@ CheckTypeSize(struct shmid_ds,112, 9129, 3)
 CheckTypeSize(struct shmid_ds,104, 9129, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9129,0);
+Msg("Find size of shmid_ds (9129)\n");
 #endif
 
 #ifdef TET_TEST

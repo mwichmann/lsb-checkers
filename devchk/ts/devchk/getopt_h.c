@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "getopt.h"
 
 
@@ -30,8 +31,11 @@ CheckOffset(struct option,flag,8,2,32260)
 CheckOffset(struct option,val,12,2,32261)
 #elif __ia64__
 CheckTypeSize(struct option,32, 10000, 3)
+#elif __powerpc__
+CheckTypeSize(struct option,16, 10000, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);
+Msg("Find size of option (10000)\n");
 #endif
 
 #ifdef TET_TEST
