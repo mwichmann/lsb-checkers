@@ -9,6 +9,7 @@
 static int(*funcptr) (pid_t , struct timespec * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int sched_rr_get_interval (pid_t arg0 , struct timespec * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ int sched_rr_get_interval (pid_t arg0 , struct timespec * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sched_rr_get_interval()");
 		validate_NULL_TYPETYPE(  arg0, "sched_rr_get_interval - arg0");
 	validate_Rdaddress( arg1, "sched_rr_get_interval - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sched_rr_get_interval - arg1");

@@ -8,6 +8,7 @@
 static struct tm *(*funcptr) (const time_t * , struct tm * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 struct tm * gmtime_r (const time_t * arg0 , struct tm * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ struct tm * gmtime_r (const time_t * arg0 , struct tm * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "gmtime_r()");
 	validate_Rdaddress( arg0, "gmtime_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "gmtime_r - arg0");
 	validate_Rdaddress( arg1, "gmtime_r - arg1");

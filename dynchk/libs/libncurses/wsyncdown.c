@@ -7,6 +7,7 @@
 static void(*funcptr) (WINDOW * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void wsyncdown (WINDOW * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -15,6 +16,7 @@ void wsyncdown (WINDOW * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "wsyncdown()");
 	validate_Rdaddress( arg0, "wsyncdown - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wsyncdown - arg0");
 	}

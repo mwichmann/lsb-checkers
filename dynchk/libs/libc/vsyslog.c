@@ -8,6 +8,7 @@
 static void(*funcptr) (int , const char * , va_list ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void vsyslog (int arg0 , const char * arg1 , va_list arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ void vsyslog (int arg0 , const char * arg1 , va_list arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "vsyslog()");
 		validate_NULL_TYPETYPE(  arg0, "vsyslog - arg0");
 	validate_Rdaddress( arg1, "vsyslog - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vsyslog - arg1");

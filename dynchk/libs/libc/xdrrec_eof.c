@@ -7,6 +7,7 @@
 static bool_t(*funcptr) (XDR * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 bool_t xdrrec_eof (XDR * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ bool_t xdrrec_eof (XDR * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "xdrrec_eof()");
 	validate_Rdaddress( arg0, "xdrrec_eof - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdrrec_eof - arg0");
 	}

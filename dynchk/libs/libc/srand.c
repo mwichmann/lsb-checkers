@@ -7,6 +7,7 @@
 static void(*funcptr) (unsigned int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void srand (unsigned int arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -15,6 +16,7 @@ void srand (unsigned int arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "srand()");
 		validate_NULL_TYPETYPE(  arg0, "srand - arg0");
 	}
 	funcptr(arg0);

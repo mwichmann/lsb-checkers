@@ -8,6 +8,7 @@
 static int(*funcptr) (int , int , off_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int lockf (int arg0 , int arg1 , off_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int lockf (int arg0 , int arg1 , off_t arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "lockf()");
 		validate_NULL_TYPETYPE(  arg0, "lockf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "lockf - arg1");
 		validate_NULL_TYPETYPE(  arg2, "lockf - arg2");

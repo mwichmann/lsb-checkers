@@ -7,6 +7,7 @@
 static int(*funcptr) (__itimer_which_t , struct itimerval * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int getitimer (__itimer_which_t arg0 , struct itimerval * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int getitimer (__itimer_which_t arg0 , struct itimerval * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getitimer()");
 		validate_NULL_TYPETYPE(  arg0, "getitimer - arg0");
 	validate_Rdaddress( arg1, "getitimer - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getitimer - arg1");

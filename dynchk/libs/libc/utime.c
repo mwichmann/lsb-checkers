@@ -7,6 +7,7 @@
 static int(*funcptr) (const char * , const struct utimbuf * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int utime (const char * arg0 , const struct utimbuf * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int utime (const char * arg0 , const struct utimbuf * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "utime()");
 	validate_Rdaddress( arg0, "utime - arg0");
 		validate_NULL_TYPETYPE(  arg0, "utime - arg0");
 	validate_Rdaddress( arg1, "utime - arg1");

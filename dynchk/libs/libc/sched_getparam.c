@@ -8,6 +8,7 @@
 static int(*funcptr) (pid_t , struct sched_param * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int sched_getparam (pid_t arg0 , struct sched_param * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int sched_getparam (pid_t arg0 , struct sched_param * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sched_getparam()");
 		validate_NULL_TYPETYPE(  arg0, "sched_getparam - arg0");
 	validate_Rdaddress( arg1, "sched_getparam - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sched_getparam - arg1");

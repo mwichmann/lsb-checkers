@@ -7,6 +7,7 @@
 static void(*funcptr) (struct addrinfo * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void freeaddrinfo (struct addrinfo * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -15,6 +16,7 @@ void freeaddrinfo (struct addrinfo * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "freeaddrinfo()");
 	validate_Rdaddress( arg0, "freeaddrinfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "freeaddrinfo - arg0");
 	}

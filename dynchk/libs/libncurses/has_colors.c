@@ -7,6 +7,7 @@
 static bool(*funcptr) () = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 bool has_colors ()
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ bool has_colors ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "has_colors()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

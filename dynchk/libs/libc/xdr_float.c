@@ -7,6 +7,7 @@
 static bool_t(*funcptr) (XDR * , float * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 bool_t xdr_float (XDR * arg0 , float * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ bool_t xdr_float (XDR * arg0 , float * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "xdr_float()");
 	validate_Rdaddress( arg0, "xdr_float - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_float - arg0");
 	validate_Rdaddress( arg1, "xdr_float - arg1");

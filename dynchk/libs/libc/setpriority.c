@@ -8,6 +8,7 @@
 static int(*funcptr) (__priority_which_t , id_t , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int setpriority (__priority_which_t arg0 , id_t arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int setpriority (__priority_which_t arg0 , id_t arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "setpriority()");
 		validate_NULL_TYPETYPE(  arg0, "setpriority - arg0");
 		validate_NULL_TYPETYPE(  arg1, "setpriority - arg1");
 		validate_NULL_TYPETYPE(  arg2, "setpriority - arg2");

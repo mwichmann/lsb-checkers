@@ -8,6 +8,7 @@
 static int(*funcptr) (uid_t , uid_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int setreuid (uid_t arg0 , uid_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int setreuid (uid_t arg0 , uid_t arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "setreuid()");
 		validate_NULL_TYPETYPE(  arg0, "setreuid - arg0");
 		validate_NULL_TYPETYPE(  arg1, "setreuid - arg1");
 	}

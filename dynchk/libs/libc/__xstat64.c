@@ -7,6 +7,7 @@
 static int(*funcptr) (int , const char * , struct stat64 * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int __xstat64 (int arg0 , const char * arg1 , struct stat64 * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int __xstat64 (int arg0 , const char * arg1 , struct stat64 * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "__xstat64()");
 		validate_NULL_TYPETYPE(  arg0, "__xstat64 - arg0");
 	validate_Rdaddress( arg1, "__xstat64 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "__xstat64 - arg1");

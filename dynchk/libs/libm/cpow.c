@@ -7,6 +7,7 @@
 static double complex(*funcptr) (double complex , double complex ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 double complex cpow (double complex arg0 , double complex arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ double complex cpow (double complex arg0 , double complex arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "cpow()");
 		validate_NULL_TYPETYPE(  arg0, "cpow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "cpow - arg1");
 	}

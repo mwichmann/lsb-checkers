@@ -7,6 +7,7 @@
 static int(*funcptr) (DIR * , struct dirent * , struct dirent * * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int readdir_r (DIR * arg0 , struct dirent * arg1 , struct dirent * * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int readdir_r (DIR * arg0 , struct dirent * arg1 , struct dirent * * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "readdir_r()");
 	validate_Rdaddress( arg0, "readdir_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "readdir_r - arg0");
 	validate_Rdaddress( arg1, "readdir_r - arg1");

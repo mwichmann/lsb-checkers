@@ -7,6 +7,7 @@
 static struct passwd *(*funcptr) (const char * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 struct passwd * getpwnam (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ struct passwd * getpwnam (const char * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getpwnam()");
 	validate_Rdaddress( arg0, "getpwnam - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getpwnam - arg0");
 	}

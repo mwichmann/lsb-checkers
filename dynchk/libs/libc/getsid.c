@@ -8,6 +8,7 @@
 static pid_t(*funcptr) (pid_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 pid_t getsid (pid_t arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ pid_t getsid (pid_t arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getsid()");
 		validate_NULL_TYPETYPE(  arg0, "getsid - arg0");
 	}
 	ret_value = funcptr(arg0);

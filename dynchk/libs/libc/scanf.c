@@ -9,6 +9,7 @@
 static int (*funcptr)(const char *, ...) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int scanf(const char *format, ...)
 {	
 	va_list args;
@@ -19,6 +20,7 @@ int scanf(const char *format, ...)
 		funcptr = dlsym(RTLD_NEXT, "vscanf");
 	if(__lsb_check_params)
 	{
+        	__lsb_output(5-__lsb_check_params, "setkey()");
 		__lsb_check_params=0;	
 		validate_RWaddress(format, "scanf");
 	}

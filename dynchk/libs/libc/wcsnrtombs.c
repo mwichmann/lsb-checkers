@@ -9,6 +9,7 @@
 static size_t(*funcptr) (char * , const wchar_t * * , size_t , size_t , mbstate_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 size_t wcsnrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , size_t arg3 , mbstate_t * arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ size_t wcsnrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , size_t a
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "wcsnrtombs()");
 	validate_Rdaddress( arg0, "wcsnrtombs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsnrtombs - arg0");
 	validate_Rdaddress( arg1, "wcsnrtombs - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (void * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int brk (void * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int brk (void * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "brk()");
 	validate_Rdaddress( arg0, "brk - arg0");
 		validate_NULL_TYPETYPE(  arg0, "brk - arg0");
 	}

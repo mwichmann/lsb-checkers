@@ -7,6 +7,7 @@
 static int(*funcptr) (WINDOW * , int , int , int , attr_t , short , const void * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , short arg5 , const void * arg6 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , sho
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "mvwchgat()");
 	validate_Rdaddress( arg0, "mvwchgat - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mvwchgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwchgat - arg1");

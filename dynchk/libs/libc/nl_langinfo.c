@@ -8,6 +8,7 @@
 static char *(*funcptr) (nl_item ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 char * nl_langinfo (nl_item arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ char * nl_langinfo (nl_item arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "nl_langinfo()");
 		validate_NULL_TYPETYPE(  arg0, "nl_langinfo - arg0");
 	}
 	ret_value = funcptr(arg0);

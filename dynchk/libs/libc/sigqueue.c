@@ -8,6 +8,7 @@
 static int(*funcptr) (pid_t , int , const union sigval ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int sigqueue (pid_t arg0 , int arg1 , const union sigval arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int sigqueue (pid_t arg0 , int arg1 , const union sigval arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sigqueue()");
 		validate_NULL_TYPETYPE(  arg0, "sigqueue - arg0");
 		validate_NULL_TYPETYPE(  arg1, "sigqueue - arg1");
 		validate_NULL_TYPETYPE(  arg2, "sigqueue - arg2");

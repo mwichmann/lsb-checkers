@@ -7,6 +7,7 @@
 static clock_t(*funcptr) () = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 clock_t clock ()
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ clock_t clock ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "clock()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

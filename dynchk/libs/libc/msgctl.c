@@ -7,6 +7,7 @@
 static int(*funcptr) (int , int , struct msqid_ds * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "msgctl()");
 		validate_NULL_TYPETYPE(  arg0, "msgctl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "msgctl - arg1");
 	validate_Rdaddress( arg2, "msgctl - arg2");

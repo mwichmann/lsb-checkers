@@ -7,6 +7,7 @@
 static long(*funcptr) () = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 long random ()
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ long random ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "random()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

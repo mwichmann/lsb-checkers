@@ -8,6 +8,7 @@
 static int(*funcptr) (const sigset_t * , siginfo_t * , const struct timespec * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int sigtimedwait (const sigset_t * arg0 , siginfo_t * arg1 , const struct timespec * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int sigtimedwait (const sigset_t * arg0 , siginfo_t * arg1 , const struct timesp
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sigtimedwait()");
 	validate_Rdaddress( arg0, "sigtimedwait - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigtimedwait - arg0");
 	validate_Rdaddress( arg1, "sigtimedwait - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (int , const sigset_t * , sigset_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int pthread_sigmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int pthread_sigmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "pthread_sigmask()");
 		validate_NULL_TYPETYPE(  arg0, "pthread_sigmask - arg0");
 	validate_Rdaddress( arg1, "pthread_sigmask - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_sigmask - arg1");

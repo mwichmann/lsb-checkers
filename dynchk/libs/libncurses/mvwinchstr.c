@@ -7,6 +7,7 @@
 static int(*funcptr) (WINDOW * , int , int , chtype * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int mvwinchstr (WINDOW * arg0 , int arg1 , int arg2 , chtype * arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int mvwinchstr (WINDOW * arg0 , int arg1 , int arg2 , chtype * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "mvwinchstr()");
 	validate_Rdaddress( arg0, "mvwinchstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mvwinchstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwinchstr - arg1");

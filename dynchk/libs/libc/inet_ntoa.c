@@ -8,6 +8,7 @@
 static char *(*funcptr) (struct in_addr ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 char * inet_ntoa (struct in_addr arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ char * inet_ntoa (struct in_addr arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "inet_ntoa()");
 		validate_struct_in_addr( & arg0, "inet_ntoa - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -8,6 +8,7 @@
 static size_t(*funcptr) (void * , size_t , size_t , FILE * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 size_t fread (void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ size_t fread (void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "fread()");
 	validate_Rdaddress( arg0, "fread - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fread - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fread - arg1");

@@ -8,6 +8,7 @@
 static int(*funcptr) (FILE * , char * , int , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "setvbuf()");
 	validate_Rdaddress( arg0, "setvbuf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "setvbuf - arg0");
 		if( arg1 ) {

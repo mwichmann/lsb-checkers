@@ -8,6 +8,7 @@
 static void *(*funcptr) (const void * , size_t , const void * , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void * memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ void * memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "memmem()");
 	validate_Rdaddress( arg0, "memmem - arg0");
 		validate_NULL_TYPETYPE(  arg0, "memmem - arg0");
 		validate_NULL_TYPETYPE(  arg1, "memmem - arg1");

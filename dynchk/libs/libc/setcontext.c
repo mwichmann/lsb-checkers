@@ -7,6 +7,7 @@
 static int(*funcptr) (const struct ucontext * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int setcontext (const struct ucontext * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int setcontext (const struct ucontext * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "setcontext()");
 	validate_Rdaddress( arg0, "setcontext - arg0");
 		validate_NULL_TYPETYPE(  arg0, "setcontext - arg0");
 	}

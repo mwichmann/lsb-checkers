@@ -9,6 +9,7 @@
 static int(*funcptr) (char * , size_t , const char * , va_list ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int vsnprintf (char * arg0 , size_t arg1 , const char * arg2 , va_list arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ int vsnprintf (char * arg0 , size_t arg1 , const char * arg2 , va_list arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "vsnprintf()");
 	validate_Rdaddress( arg0, "vsnprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vsnprintf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "vsnprintf - arg1");

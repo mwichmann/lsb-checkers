@@ -9,6 +9,7 @@
 static int(*funcptr) (const wchar_t * , va_list ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int vwscanf (const wchar_t * arg0 , va_list arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ int vwscanf (const wchar_t * arg0 , va_list arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "vwscanf()");
 	validate_Rdaddress( arg0, "vwscanf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vwscanf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "vwscanf - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (short , short * , short * , short * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int color_content (short arg0 , short * arg1 , short * arg2 , short * arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int color_content (short arg0 , short * arg1 , short * arg2 , short * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "color_content()");
 		validate_NULL_TYPETYPE(  arg0, "color_content - arg0");
 	validate_Rdaddress( arg1, "color_content - arg1");
 		validate_NULL_TYPETYPE(  arg1, "color_content - arg1");

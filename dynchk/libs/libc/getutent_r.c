@@ -7,6 +7,7 @@
 static int(*funcptr) (struct utmp * , struct utmp * * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getutent_r()");
 	validate_Rdaddress( arg0, "getutent_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getutent_r - arg0");
 	validate_Rdaddress( arg1, "getutent_r - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (const char * , int , int(* )(int)) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int tputs (const char * arg0 , int arg1 , int(* arg2 )(int))
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int tputs (const char * arg0 , int arg1 , int(* arg2 )(int))
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "tputs()");
 	validate_Rdaddress( arg0, "tputs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tputs - arg0");
 		validate_NULL_TYPETYPE(  arg1, "tputs - arg1");

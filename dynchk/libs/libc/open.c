@@ -8,6 +8,7 @@
 static int(*funcptr)(const char *, int, mode_t) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int open(const char *pathname, int flags, ...)
 {
 	int reset_flag = __lsb_check_params;
@@ -17,18 +18,21 @@ int open(const char *pathname, int flags, ...)
 	mode_t mode;
 
 	va_start(args, flags);
-	va_copy(args,mode);
 
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "open");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+        	__lsb_output(5-__lsb_check_params, "setkey()");
 
 		validate_pathname(pathname, "open");
 		//validate_flags
 		if( flags & O_CREAT )
+		{
+			mode = va_arg(args,mode_t);
 			validate_filemode(mode, "open");
+		}
 	}
 
 	va_end(args);

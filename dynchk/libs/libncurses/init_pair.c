@@ -7,6 +7,7 @@
 static int(*funcptr) (short , short , short ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int init_pair (short arg0 , short arg1 , short arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int init_pair (short arg0 , short arg1 , short arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "init_pair()");
 		validate_NULL_TYPETYPE(  arg0, "init_pair - arg0");
 		validate_NULL_TYPETYPE(  arg1, "init_pair - arg1");
 		validate_NULL_TYPETYPE(  arg2, "init_pair - arg2");

@@ -8,6 +8,7 @@
 static int(*funcptr) (wchar_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int wcwidth (wchar_t arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int wcwidth (wchar_t arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "wcwidth()");
 		validate_NULL_TYPETYPE(  arg0, "wcwidth - arg0");
 	}
 	ret_value = funcptr(arg0);

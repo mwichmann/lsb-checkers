@@ -7,6 +7,7 @@
 static void(*funcptr) (enum clnt_stat ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void clnt_perrno (enum clnt_stat arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -15,6 +16,7 @@ void clnt_perrno (enum clnt_stat arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "clnt_perrno()");
 		validate_NULL_TYPETYPE(  arg0, "clnt_perrno - arg0");
 	}
 	funcptr(arg0);

@@ -8,6 +8,7 @@
 static void(*funcptr) (const void * , void * , ssize_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void swab (const void * arg0 , void * arg1 , ssize_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ void swab (const void * arg0 , void * arg1 , ssize_t arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "swab()");
 	validate_Rdaddress( arg0, "swab - arg0");
 		validate_NULL_TYPETYPE(  arg0, "swab - arg0");
 	validate_Rdaddress( arg1, "swab - arg1");

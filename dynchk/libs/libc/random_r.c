@@ -8,6 +8,7 @@
 static int(*funcptr) (struct random_data * , int32_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int random_r (struct random_data * arg0 , int32_t * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int random_r (struct random_data * arg0 , int32_t * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "random_r()");
 	validate_Rdaddress( arg0, "random_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "random_r - arg0");
 	validate_Rdaddress( arg1, "random_r - arg1");

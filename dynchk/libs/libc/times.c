@@ -7,6 +7,7 @@
 static clock_t(*funcptr) (struct tms * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 clock_t times (struct tms * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ clock_t times (struct tms * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "times()");
 	validate_Rdaddress( arg0, "times - arg0");
 		validate_NULL_TYPETYPE(  arg0, "times - arg0");
 	}

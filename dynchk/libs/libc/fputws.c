@@ -9,6 +9,7 @@
 static int(*funcptr) (const wchar_t * , FILE * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int fputws (const wchar_t * arg0 , FILE * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ int fputws (const wchar_t * arg0 , FILE * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "fputws()");
 	validate_Rdaddress( arg0, "fputws - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fputws - arg0");
 	validate_Rdaddress( arg1, "fputws - arg1");

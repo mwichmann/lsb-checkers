@@ -7,6 +7,7 @@
 static int(*funcptr) (sigset_t * , const sigset_t * , const sigset_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sigorset()");
 	validate_Rdaddress( arg0, "sigorset - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigorset - arg0");
 	validate_Rdaddress( arg1, "sigorset - arg1");

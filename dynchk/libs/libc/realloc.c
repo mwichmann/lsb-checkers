@@ -8,6 +8,7 @@ static void *(*funcptr)(void *, size_t) = 0;
 
 void * __libc_realloc(void *, size_t);
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 
 void * realloc(void * arg0, size_t arg1)
 {
@@ -19,6 +20,7 @@ void * realloc(void * arg0, size_t arg1)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;	
+        	__lsb_output(5-__lsb_check_params, "setkey()");
 		validate_NULL_TYPETYPE(arg0, "realloc");
 		validate_NULL_TYPETYPE(arg1, "realloc");
 	}

@@ -7,6 +7,7 @@
 static long double(*funcptr) (long double ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 long double significandl (long double arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ long double significandl (long double arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "significandl()");
 		validate_NULL_TYPETYPE(  arg0, "significandl - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -7,6 +7,7 @@
 static int(*funcptr) (Bytef * , uLongf * , const Bytef * , uLong ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int uncompress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int uncompress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "uncompress()");
 	validate_Rdaddress( arg0, "uncompress - arg0");
 		validate_NULL_TYPETYPE(  arg0, "uncompress - arg0");
 	validate_Rdaddress( arg1, "uncompress - arg1");

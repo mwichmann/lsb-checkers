@@ -7,6 +7,7 @@
 static int(*funcptr) (int , FILE * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int putc_unlocked (int arg0 , FILE * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int putc_unlocked (int arg0 , FILE * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "putc_unlocked()");
 		validate_NULL_TYPETYPE(  arg0, "putc_unlocked - arg0");
 	validate_Rdaddress( arg1, "putc_unlocked - arg1");
 		validate_NULL_TYPETYPE(  arg1, "putc_unlocked - arg1");

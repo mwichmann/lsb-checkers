@@ -8,6 +8,7 @@
 static void(*funcptr) (void * , size_t , size_t , const __compar_fn_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void qsort (void * arg0 , size_t arg1 , size_t arg2 , const __compar_fn_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ void qsort (void * arg0 , size_t arg1 , size_t arg2 , const __compar_fn_t arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "qsort()");
 	validate_Rdaddress( arg0, "qsort - arg0");
 		validate_NULL_TYPETYPE(  arg0, "qsort - arg0");
 		validate_NULL_TYPETYPE(  arg1, "qsort - arg1");

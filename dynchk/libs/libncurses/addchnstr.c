@@ -7,6 +7,7 @@
 static int(*funcptr) (const chtype * , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int addchnstr (const chtype * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int addchnstr (const chtype * arg0 , int arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "addchnstr()");
 	validate_Rdaddress( arg0, "addchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "addchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "addchnstr - arg1");

@@ -8,6 +8,7 @@
 static int(*funcptr) (int * , char * , struct termios * , struct winsize * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int forkpty (int * arg0 , char * arg1 , struct termios * arg2 , struct winsize * arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int forkpty (int * arg0 , char * arg1 , struct termios * arg2 , struct winsize *
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "forkpty()");
 	validate_Rdaddress( arg0, "forkpty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "forkpty - arg0");
 	validate_Rdaddress( arg1, "forkpty - arg1");

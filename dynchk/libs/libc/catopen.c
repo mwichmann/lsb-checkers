@@ -7,6 +7,7 @@
 static nl_catd(*funcptr) (const char * , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 nl_catd catopen (const char * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ nl_catd catopen (const char * arg0 , int arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "catopen()");
 	validate_Rdaddress( arg0, "catopen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "catopen - arg0");
 		validate_NULL_TYPETYPE(  arg1, "catopen - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (ucontext_t * , const struct ucontext * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "swapcontext()");
 	validate_Rdaddress( arg0, "swapcontext - arg0");
 		validate_NULL_TYPETYPE(  arg0, "swapcontext - arg0");
 	validate_Rdaddress( arg1, "swapcontext - arg1");

@@ -8,6 +8,7 @@
 static void(*funcptr) (SVCXPRT * , rpcvers_t , rpcvers_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void svcerr_progvers (SVCXPRT * arg0 , rpcvers_t arg1 , rpcvers_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ void svcerr_progvers (SVCXPRT * arg0 , rpcvers_t arg1 , rpcvers_t arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "svcerr_progvers()");
 	validate_Rdaddress( arg0, "svcerr_progvers - arg0");
 		validate_NULL_TYPETYPE(  arg0, "svcerr_progvers - arg0");
 		validate_NULL_TYPETYPE(  arg1, "svcerr_progvers - arg1");

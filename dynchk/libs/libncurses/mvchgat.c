@@ -7,6 +7,7 @@
 static int(*funcptr) (int , int , int , attr_t , short , const void * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const void * arg5 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const v
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "mvchgat()");
 		validate_NULL_TYPETYPE(  arg0, "mvchgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvchgat - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvchgat - arg2");

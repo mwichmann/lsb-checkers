@@ -7,6 +7,7 @@
 static void(*funcptr) (FILE * , char * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void setbuf (FILE * arg0 , char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -15,6 +16,7 @@ void setbuf (FILE * arg0 , char * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "setbuf()");
 	validate_Rdaddress( arg0, "setbuf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "setbuf - arg0");
 	validate_Rdaddress( arg1, "setbuf - arg1");

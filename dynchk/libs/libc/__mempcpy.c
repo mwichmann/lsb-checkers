@@ -8,6 +8,7 @@
 static void *(*funcptr) (void * , const void * , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void * __mempcpy (void * arg0 , const void * arg1 , size_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ void * __mempcpy (void * arg0 , const void * arg1 , size_t arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "__mempcpy()");
 	validate_Rdaddress( arg0, "__mempcpy - arg0");
 		validate_RWaddress(  arg0, "__mempcpy - arg0");
 	validate_Rdaddress( arg1, "__mempcpy - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (z_streamp , const char * , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int inflateInit_ (z_streamp arg0 , const char * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int inflateInit_ (z_streamp arg0 , const char * arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "inflateInit_()");
 		validate_NULL_TYPETYPE(  arg0, "inflateInit_ - arg0");
 	validate_Rdaddress( arg1, "inflateInit_ - arg1");
 		validate_NULL_TYPETYPE(  arg1, "inflateInit_ - arg1");

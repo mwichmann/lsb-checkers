@@ -7,6 +7,7 @@
 static int(*funcptr) (const char * , const char * , const struct addrinfo * , struct addrinfo * * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo * arg2 , struct addrinfo * * arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo *
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getaddrinfo()");
 	validate_Rdaddress( arg0, "getaddrinfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getaddrinfo - arg0");
 	validate_Rdaddress( arg1, "getaddrinfo - arg1");

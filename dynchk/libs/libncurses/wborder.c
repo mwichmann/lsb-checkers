@@ -7,6 +7,7 @@
 static int(*funcptr) (WINDOW * , chtype , chtype , chtype , chtype , chtype , chtype , chtype , chtype ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int wborder (WINDOW * arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 , chtype arg8 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int wborder (WINDOW * arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype ar
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "wborder()");
 	validate_Rdaddress( arg0, "wborder - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wborder - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wborder - arg1");

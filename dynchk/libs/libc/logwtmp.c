@@ -7,6 +7,7 @@
 static void(*funcptr) (const char * , const char * , const char * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -15,6 +16,7 @@ void logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "logwtmp()");
 	validate_Rdaddress( arg0, "logwtmp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "logwtmp - arg0");
 	validate_Rdaddress( arg1, "logwtmp - arg1");

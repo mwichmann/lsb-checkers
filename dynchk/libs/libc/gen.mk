@@ -526,7 +526,6 @@ mlockall.o \
 mprotect.o \
 munlock.o \
 munlockall.o \
-munmap.o \
 opendir.o \
 pathconf.o \
 pipe.o \

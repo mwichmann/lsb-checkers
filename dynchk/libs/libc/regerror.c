@@ -8,6 +8,7 @@
 static size_t(*funcptr) (int , const regex_t * , char * , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 size_t regerror (int arg0 , const regex_t * arg1 , char * arg2 , size_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ size_t regerror (int arg0 , const regex_t * arg1 , char * arg2 , size_t arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "regerror()");
 		validate_NULL_TYPETYPE(  arg0, "regerror - arg0");
 	validate_Rdaddress( arg1, "regerror - arg1");
 		validate_NULL_TYPETYPE(  arg1, "regerror - arg1");

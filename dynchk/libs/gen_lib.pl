@@ -431,13 +431,14 @@ sub write_int_wrapper
 
 	print $fh "\tif(!funcptr)\n";
 	print $fh "\t\tfuncptr = dlsym(RTLD_NEXT, \"" . $func_name . "\");\n";
-	
 	$write_int_wrapper_q->execute($func_id)
 		or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
 
 	print $fh "\tif(__lsb_check_params)\n\t{\n";
 	print $fh "\t\t__lsb_check_params=0;\n";
 
+	print $fh "\t__lsb_output(5-__lsb_check_params, \"$func_name()\");\n";	
+	
 	VALCALL: while( my($param_pos, $param_int, $param_null) = $write_int_wrapper_q->fetchrow_array() )
 	{
 		$get_param_typeid_q->execute($param_pos, $param_int)
@@ -489,7 +490,6 @@ sub write_int_header
 {
 	my($fh, $left_type, $right_type, $func_name, $func_id)=@_;
 
-#    This is not needed if the later main_header section is commented out.
 	$simple_header_q->execute($func_id)
 		or die "Couldn't execute simple_header query: ".DBI->errstr;
 	my($main_header) = $simple_header_q->fetchrow_array();
@@ -534,6 +534,7 @@ sub write_int_header
 	write_argument_list($fh, $func_id, 0);
 	print $fh ") = 0;\n\n";
 	print $fh "extern int __lsb_check_params;\n";
+	print $fh "extern int __lsb_output(int, char*, ...);\n";
 }
 
 # write argument list for a function declaration.

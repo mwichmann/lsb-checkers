@@ -7,6 +7,7 @@
 static int(*funcptr) (const char * , __nftw64_func_t , int , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int nftw64 (const char * arg0 , __nftw64_func_t arg1 , int arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int nftw64 (const char * arg0 , __nftw64_func_t arg1 , int arg2 , int arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "nftw64()");
 	validate_Rdaddress( arg0, "nftw64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "nftw64 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "nftw64 - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (const char * , char *const  [], char *const  []) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "execve()");
 	validate_Rdaddress( arg0, "execve - arg0");
 		validate_NULL_TYPETYPE(  arg0, "execve - arg0");
 		validate_NULL_TYPETYPE(  arg1, "execve - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (int , int , int , void * , socklen_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getsockopt()");
 		validate_NULL_TYPETYPE(  arg0, "getsockopt - arg0");
 		validate_NULL_TYPETYPE(  arg1, "getsockopt - arg1");
 		validate_NULL_TYPETYPE(  arg2, "getsockopt - arg2");

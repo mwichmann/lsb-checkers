@@ -8,6 +8,7 @@
 static int(*funcptr) (const char * , struct group * , char * , size_t , struct group * * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t a
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getgrnam_r()");
 	validate_Rdaddress( arg0, "getgrnam_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getgrnam_r - arg0");
 	validate_Rdaddress( arg1, "getgrnam_r - arg1");

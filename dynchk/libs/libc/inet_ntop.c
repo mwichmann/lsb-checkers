@@ -8,6 +8,7 @@
 static const char *(*funcptr) (int , const void * , char * , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , size_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , size_t arg3
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "inet_ntop()");
 		validate_NULL_TYPETYPE(  arg0, "inet_ntop - arg0");
 	validate_Rdaddress( arg1, "inet_ntop - arg1");
 		validate_NULL_TYPETYPE(  arg1, "inet_ntop - arg1");
