@@ -214,7 +214,7 @@ sub writetest($$)
 				print TESTS "#else\n";
 				print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 				print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
-				print TESTS "Msg(\"Find size of $tentry{'Tname'} ($Tid)\\n\");\n";
+				print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 				}
 				print TESTS "#endif\n\n";
 			}
@@ -266,7 +266,7 @@ sub writetest($$)
 			print TESTS "#else\n";
 			print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
-			print TESTS "Msg(\"Find size of $tentry{'Tname'} ($Tid)\\n\");\n";
+			print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 			}
 		print TESTS "#endif\n\n";
 		}
