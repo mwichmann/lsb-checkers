@@ -54,6 +54,9 @@ typedef struct rpmlead {
 #if __s390x__
 #define RPMARCH 0x000F
 #endif
+#if __x86_64__
+#define RPMARCH 0x0001
+#endif
 
 #define RPMOS	0x0001 /* Linux */
 

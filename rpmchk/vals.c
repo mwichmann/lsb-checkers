@@ -14,6 +14,8 @@ char *architecture =
 	"i486";
 #elif defined(__ia64__)
 	"ia64";
+#elif defined(__x86_64__)
+	"x86_64";
 #elif defined(__powerpc__)
 	"powerpc";
 #else
