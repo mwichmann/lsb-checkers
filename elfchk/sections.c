@@ -136,7 +136,7 @@ checkSYMBOLS( "SYMTAB", file1, hdr1 );
 }
 
 void
-checkDYNSYM(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkDYNSYM(ElfFile *file, Elf32_Shdr *hdr1 )
 {
 int	i, j, numsyms;
 Elf32_Sym	*syms1;
@@ -147,7 +147,7 @@ fprintf(stderr, "DYNSYM\n" );
 
 numsyms=hdr1->sh_size/hdr1->sh_entsize;
 
-syms1=(Elf32_Sym *)((caddr_t)file1->addr+hdr1->sh_offset);
+syms1=(Elf32_Sym *)((caddr_t)file->addr+hdr1->sh_offset);
 
 for(i=0;i<numsyms;i++) {
 	/* Static Symbols */
@@ -160,7 +160,7 @@ for(i=0;i<numsyms;i++) {
 	      ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC) ) continue;
 /*
 fprintf(stderr,"%s %x %x %x\n",
-	ElfGetStringIndex(file1,syms1[i].st_name,hdr1->sh_link),
+	ElfGetStringIndex(file,syms1[i].st_name,hdr1->sh_link),
 	ELF32_ST_BIND(syms1[i].st_info),
 	ELF32_ST_TYPE(syms1[i].st_info),
 	syms1[i].st_shndx
@@ -168,13 +168,36 @@ fprintf(stderr,"%s %x %x %x\n",
 */
 	for( j=0; j<numDynSyms; j++ ) 
 	if( !strcmp(
-		    ElfGetStringIndex(file1, syms1[i].st_name, hdr1->sh_link),
+		    ElfGetStringIndex(file, syms1[i].st_name, hdr1->sh_link),
 		    DynSyms[j].name ) )
 		break;
 	if( j == numDynSyms )
 		fprintf( stderr, "Symbol %s used, but not part of LSB\n",
-		    ElfGetStringIndex(file1, syms1[i].st_name, hdr1->sh_link) );
+		    ElfGetStringIndex(file, syms1[i].st_name, hdr1->sh_link) );
+
 	/* If the symbol is versioned, make sure the correct version is used */
+
+	/* This bit means it's internal */
+	if( !file->vers ) continue;
+
+	if( file->vers[i] & 0x8000 )
+		continue;
+
+	/* Zero means the symbol is local */
+	if( file->vers[i] == 0 )
+		continue;
+
+#ifdef DEBUG
+	printf( "Symbol %s vers %s\n",
+		ElfGetStringIndex(file,file->syms[i].st_name,
+		file->symhdr->sh_link),
+		file->versionnames[file->vers[i]]);
+#endif
+	if(strcmp(file->versionnames[file->vers[i]],DynSyms[j].vername) != 0) {
+		printf( "Symbol %s has versions  %sm expecting %s\n",
+			ElfGetStringIndex(file,file->syms[i].st_name,file->symhdr->sh_link),
+				file->versionnames[file->vers[i]], DynSyms[j].vername);
+		}
 	} /* i */
 }
 
