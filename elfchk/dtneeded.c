@@ -8,7 +8,6 @@ char *DtNeeded[] = {
 	"libXt.so.6",
 	"libc.so.6",
 	"libcrypt.so.1",
-	"libdb.so.3",
 	"libdl.so.2",
 	"libm.so.6",
 	"libncurses.so.5",

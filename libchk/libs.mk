@@ -9,7 +9,6 @@ LIBOBJS = \
 	libXt_so_6.o \
 	libc_so_6.o \
 	libcrypt_so_1.o \
-	libdb_so_3.o \
 	libdl_so_2.o \
 	libm_so_6.o \
 	libncurses_so_5.o \

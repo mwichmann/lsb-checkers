@@ -8,7 +8,6 @@ extern char *libXext_so_6[];
 extern char *libXt_so_6[];
 extern char *libc_so_6[];
 extern char *libcrypt_so_1[];
-extern char *libdb_so_3[];
 extern char *libdl_so_2[];
 extern char *libm_so_6[];
 extern char *libncurses_so_5[];
