@@ -361,6 +361,10 @@ CheckMemberSize(struct shmid_ds,shm_lpid,4,11,40462)
 CheckOffset(struct shmid_ds,shm_lpid,84,11,40462)
 CheckMemberSize(struct shmid_ds,shm_nattch,8,11,40463)
 CheckOffset(struct shmid_ds,shm_nattch,88,11,40463)
+CheckMemberSize(struct shmid_ds,__unused4,8,11,40747)
+CheckOffset(struct shmid_ds,__unused4,96,11,40747)
+CheckMemberSize(struct shmid_ds,__unused5,8,11,40748)
+CheckOffset(struct shmid_ds,__unused5,104,11,40748)
 #endif
 
 #ifdef TET_TEST
