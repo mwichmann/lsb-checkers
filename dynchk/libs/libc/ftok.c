@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/ipc.h>
 #undef ftok
 static key_t(*funcptr) (const char * , int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef execv
 static int(*funcptr) (const char * , char *const  []) = 0;
 

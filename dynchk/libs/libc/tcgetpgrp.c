@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef tcgetpgrp
 static pid_t(*funcptr) (int ) = 0;
 

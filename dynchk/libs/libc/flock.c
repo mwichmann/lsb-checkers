@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/file.h>
 #undef flock
 static int(*funcptr) (int , int ) = 0;
 

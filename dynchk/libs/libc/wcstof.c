@@ -3,23 +3,23 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef wcstof
-static float(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
+static float(*funcptr) (const wchar_t * , wchar_t * * ) = 0;
 
-float wcstof (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+float wcstof (const wchar_t * arg0 , wchar_t * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstof");
 	validate_NULL_TYPETYPE(arg0, "wcstof");
 	validate_NULL_TYPETYPE(arg1, "wcstof");
-	validate_NULL_TYPETYPE(arg2, "wcstof");
-	return funcptr(arg0, arg1, arg2);
+	return funcptr(arg0, arg1);
 }
 
-float lsb_wcstof (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+float lsb_wcstof (const wchar_t * arg0 , wchar_t * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstof");
-	return funcptr(arg0, arg1, arg2);
+	return funcptr(arg0, arg1);
 }
 

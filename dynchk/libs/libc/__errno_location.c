@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <errno.h>
 #undef __errno_location
 static int *(*funcptr) () = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdio.h>
 #undef tmpfile64
 static FILE *(*funcptr) () = 0;
 

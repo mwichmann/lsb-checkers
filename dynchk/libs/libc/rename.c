@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef rename
 static int(*funcptr) (const char * , const char * ) = 0;
 

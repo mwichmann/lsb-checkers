@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <sys/types.h>
 #include <stddef.h>
+#include <unistd.h>
 #undef pread
 static ssize_t(*funcptr) (int , void * , size_t , off_t ) = 0;
 

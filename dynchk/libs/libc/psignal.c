@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <signal.h>
 #undef psignal
 static void(*funcptr) (int , const char * ) = 0;
 

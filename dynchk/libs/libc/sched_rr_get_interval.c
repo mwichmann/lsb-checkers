@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <sys/types.h>
 #include <sys/time.h>
+#include <sched.h>
 #undef sched_rr_get_interval
 static int(*funcptr) (pid_t , struct timespec * ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <sys/mman.h>
 #undef mprotect
 static int(*funcptr) (void * , size_t , int ) = 0;
 

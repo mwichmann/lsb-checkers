@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <grp.h>
 #undef getgrgid
 static struct group *(*funcptr) (gid_t ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <ctype.h>
 #undef isprint
 static int(*funcptr) (int ) = 0;
 

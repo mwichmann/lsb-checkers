@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <stdlib.h>
 #undef mblen
 static int(*funcptr) (const char * , size_t ) = 0;
 

@@ -3,10 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <arpa/inet.h>
 #undef inet_ntop
-static char *(*funcptr) (int , void * , char * , size_t ) = 0;
+static const char *(*funcptr) (int , const void * , char * , size_t ) = 0;
 
-char * inet_ntop (int arg0 , void * arg1 , char * arg2 , size_t arg3 )
+const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntop");
@@ -17,7 +18,7 @@ char * inet_ntop (int arg0 , void * arg1 , char * arg2 , size_t arg3 )
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-char * lsb_inet_ntop (int arg0 , void * arg1 , char * arg2 , size_t arg3 )
+const char * lsb_inet_ntop (int arg0 , const void * arg1 , char * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntop");

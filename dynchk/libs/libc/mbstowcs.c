@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <stdlib.h>
 #undef mbstowcs
 static size_t(*funcptr) (wchar_t * , const char * , size_t ) = 0;
 

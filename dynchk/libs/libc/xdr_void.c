@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/xdr.h>
 #undef xdr_void
 static bool_t(*funcptr) () = 0;
 

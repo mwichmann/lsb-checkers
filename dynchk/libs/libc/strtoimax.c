@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <inttypes.h>
 #undef strtoimax
 static intmax_t(*funcptr) (const char * , char * * , int ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <sched.h>
 #undef sched_getscheduler
 static int(*funcptr) (pid_t ) = 0;
 

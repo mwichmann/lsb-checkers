@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/socket.h>
 #undef shutdown
 static int(*funcptr) (int , int ) = 0;
 

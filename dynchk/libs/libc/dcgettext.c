@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <libintl.h>
 #undef dcgettext
 static char *(*funcptr) (const char * , const char * , int ) = 0;
 

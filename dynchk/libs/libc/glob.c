@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <glob.h>
 #undef glob
-static int(*funcptr) (const char * , int (*)(const char *, int) , int , glob_t * ) = 0;
+static int(*funcptr) (const char * , int , int(* )(const char *, int), glob_t * ) = 0;
 
-int glob (const char * arg0 , int arg1 , int (*arg2)(const char *, int), glob_t * arg3 )
+int glob (const char * arg0 , int arg1 , int(* arg2 )(const char *, int), glob_t * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glob");
@@ -16,7 +17,7 @@ int glob (const char * arg0 , int arg1 , int (*arg2)(const char *, int), glob_t 
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_glob (const char * arg0 , int (*arg1)(const char *, int) , int arg2 , glob_t * arg3 )
+int lsb_glob (const char * arg0 , int arg1 , int(* arg2 )(const char *, int), glob_t * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glob");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/clnt.h>
 #undef clnt_pcreateerror
 static void(*funcptr) (const char * ) = 0;
 

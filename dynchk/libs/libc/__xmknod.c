@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <sys/stat.h>
 #undef __xmknod
 static int(*funcptr) (int , const char * , mode_t , dev_t * ) = 0;
 

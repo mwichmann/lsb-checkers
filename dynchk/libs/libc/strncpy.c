@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <string.h>
 #undef strncpy
 static char *(*funcptr) (char * , const char * , size_t ) = 0;
 

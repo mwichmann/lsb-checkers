@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <rpc/clnt.h>
 #undef clnt_create
 static struct CLIENT *(*funcptr) (const char * , const u_long , const u_long , const char * ) = 0;
 

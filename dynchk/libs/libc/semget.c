@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <sys/sem.h>
 #undef semget
 static int(*funcptr) (key_t , int , int ) = 0;
 

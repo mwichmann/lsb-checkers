@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <netdb.h>
 #undef gethostbyname
 static struct hostent *(*funcptr) (const char * ) = 0;
 

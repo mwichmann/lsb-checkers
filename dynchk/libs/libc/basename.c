@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <libgen.h>
 #undef basename
 static char *(*funcptr) (const char * ) = 0;
 

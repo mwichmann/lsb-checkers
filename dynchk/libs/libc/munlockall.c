@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/mman.h>
 #undef munlockall
 static int(*funcptr) () = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <search.h>
 #undef insque
 static void(*funcptr) (void * , void * ) = 0;
 

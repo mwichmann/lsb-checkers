@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <netinet/in.h>
+#include <arpa/inet.h>
 #undef inet_ntoa
 static char *(*funcptr) (struct in_addr ) = 0;
 

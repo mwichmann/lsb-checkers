@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
+#include <wchar.h>
 #undef fwide
 static int(*funcptr) (FILE * , int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <wchar.h>
 #undef getwchar
 static wint_t(*funcptr) () = 0;
 

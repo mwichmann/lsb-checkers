@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <unistd.h>
+#include <sys/mman.h>
 #undef mmap64
 static void *(*funcptr) (void * , size_t , int , int , int , off64_t ) = 0;
 

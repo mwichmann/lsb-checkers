@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <unistd.h>
 #undef lseek
 static off_t(*funcptr) (int , off_t , int ) = 0;
 

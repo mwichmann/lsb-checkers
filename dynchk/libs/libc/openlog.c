@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <syslog.h>
 #undef openlog
 static void(*funcptr) (const char * , int , int ) = 0;
 

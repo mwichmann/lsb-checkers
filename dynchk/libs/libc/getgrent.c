@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <grp.h>
 #undef getgrent
 static struct group *(*funcptr) () = 0;
 

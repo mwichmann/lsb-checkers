@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef wcsspn
 static size_t(*funcptr) (const wchar_t * , const wchar_t * ) = 0;
 

@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <libgen.h>
 #undef dirname
-static char *(*funcptr) (const char * ) = 0;
+static char *(*funcptr) (char * ) = 0;
 
-char * dirname (const char * arg0 )
+char * dirname (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dirname");
@@ -13,7 +14,7 @@ char * dirname (const char * arg0 )
 	return funcptr(arg0);
 }
 
-char * lsb_dirname (const char * arg0 )
+char * lsb_dirname (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dirname");

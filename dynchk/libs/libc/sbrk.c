@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <unistd.h>
 #undef sbrk
 static void *(*funcptr) (ptrdiff_t ) = 0;
 

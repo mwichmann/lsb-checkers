@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/poll.h>
+#include <poll.h>
 #undef poll
 static int(*funcptr) (struct pollfd * , nfds_t , int ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <unistd.h>
 #undef fchown
 static int(*funcptr) (int , uid_t , gid_t ) = 0;
 

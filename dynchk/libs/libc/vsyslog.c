@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdarg.h>
+#include <syslog.h>
 #undef vsyslog
 static void(*funcptr) (int , const char * , va_list ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <netdb.h>
 #undef getprotobynumber
 static struct protoent *(*funcptr) (int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <string.h>
 #undef strtok_r
 static char *(*funcptr) (char * , const char * , char * * ) = 0;
 

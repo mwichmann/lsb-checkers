@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <assert.h>
 #undef __assert_fail
-static void(*funcptr) (char * , char * , unsigned int , char * ) = 0;
+static void(*funcptr) (const char * , const char * , unsigned int , const char * ) = 0;
 
-void __assert_fail (char * arg0 , char * arg1 , unsigned int arg2 , char * arg3 )
+void __assert_fail (const char * arg0 , const char * arg1 , unsigned int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__assert_fail");
@@ -16,7 +17,7 @@ void __assert_fail (char * arg0 , char * arg1 , unsigned int arg2 , char * arg3 
 	funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb___assert_fail (char * arg0 , char * arg1 , unsigned int arg2 , char * arg3 )
+void lsb___assert_fail (const char * arg0 , const char * arg1 , unsigned int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__assert_fail");

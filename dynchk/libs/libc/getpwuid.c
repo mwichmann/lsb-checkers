@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <pwd.h>
 #undef getpwuid
 static struct passwd *(*funcptr) (uid_t ) = 0;
 

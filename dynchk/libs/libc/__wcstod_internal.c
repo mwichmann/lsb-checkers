@@ -3,10 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef __wcstod_internal
-static double(*funcptr) (wchar_t * , wchar_t * * , int ) = 0;
+static double(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
-double __wcstod_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+double __wcstod_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstod_internal");
@@ -16,7 +17,7 @@ double __wcstod_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-double lsb___wcstod_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+double lsb___wcstod_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstod_internal");

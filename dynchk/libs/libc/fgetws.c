@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <wchar.h>
 #undef fgetws
 static wchar_t *(*funcptr) (wchar_t * , int , FILE * ) = 0;
 

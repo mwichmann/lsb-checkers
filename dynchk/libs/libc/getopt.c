@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef getopt
 static int(*funcptr) (int , char *const  [], const char * ) = 0;
 

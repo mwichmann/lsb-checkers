@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <ctype.h>
 #undef __ctype_tolower_loc
 static const int32_t * *(*funcptr) () = 0;
 

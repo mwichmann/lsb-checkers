@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <grp.h>
 #undef setgrent
 static void(*funcptr) () = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <sys/msg.h>
 #undef msgsnd
 static int(*funcptr) (int , const void * , size_t , int ) = 0;
 

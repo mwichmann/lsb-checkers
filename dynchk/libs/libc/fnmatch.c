@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <fnmatch.h>
 #undef fnmatch
 static int(*funcptr) (const char * , const char * , int ) = 0;
 

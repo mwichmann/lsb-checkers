@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef strtoull
 static unsigned long long(*funcptr) (const char * , char * * , int ) = 0;
 

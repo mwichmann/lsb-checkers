@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <regexp.h>
 #undef step
 static int(*funcptr) (char * , char * ) = 0;
 

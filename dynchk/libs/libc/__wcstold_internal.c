@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef __wcstold_internal
 static long double(*funcptr) (wchar_t * , wchar_t * * , int ) = 0;
 

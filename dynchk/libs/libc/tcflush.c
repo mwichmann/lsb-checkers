@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <termios.h>
 #undef tcflush
 static int(*funcptr) (int , int ) = 0;
 

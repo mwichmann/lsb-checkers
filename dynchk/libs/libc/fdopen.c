@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdio.h>
 #undef fdopen
 static FILE *(*funcptr) (int , const char * ) = 0;
 

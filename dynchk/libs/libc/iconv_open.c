@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <iconv.h>
 #undef iconv_open
 static iconv_t(*funcptr) (const char * , const char * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/auth.h>
 #undef authnone_create
 static struct AUTH *(*funcptr) () = 0;
 

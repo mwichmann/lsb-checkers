@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <inttypes.h>
+#include <netdb.h>
 #undef getnetbyaddr
 static struct netent *(*funcptr) (uint32_t , int ) = 0;
 

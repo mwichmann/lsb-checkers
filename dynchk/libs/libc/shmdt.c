@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/shm.h>
 #undef shmdt
 static int(*funcptr) (const void * ) = 0;
 
