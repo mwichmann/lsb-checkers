@@ -123,7 +123,7 @@ fprintf(stderr,"checkRpmIdxHEADERSIGNATURES() offset %x\n",ntohl(sigidx->offset)
 
 sigdata=(char *)(((char *)sigidx)+ntohl(sigidx->offset));
 
-fprintf(stderr,"checkRpmIdxHEADERSIGNATURES() data at %x\n",sigdata);
+fprintf(stderr,"checkRpmIdxHEADERSIGNATURES() data at %lx\n",(long)sigdata);
 
 }
 
