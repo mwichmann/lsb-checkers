@@ -280,15 +280,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10505,0);
 #if __i386__
 CheckTypeSize(double complex,16,10999,2)
 #elif __ia64__
-CheckTypeSize(double complex,0,10999,3)
+CheckTypeSize(double complex,16,10999,3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(double complex,0,10999,6)
 #elif __powerpc64__
-CheckTypeSize(double complex,0,10999,9)
+CheckTypeSize(double complex,16,10999,9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(double complex,0,10999,10)
+CheckTypeSize(double complex,16,10999,10)
 #elif __x86_64__
-CheckTypeSize(double complex,0,10999,11)
+CheckTypeSize(double complex,16,10999,11)
 #elif __s390x__
-CheckTypeSize(double complex,0,10999,12)
+CheckTypeSize(double complex,16,10999,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10999,0);
 #endif
@@ -296,15 +298,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10999,0);
 #if __i386__
 CheckTypeSize(long double complex,24,11000,2)
 #elif __ia64__
-CheckTypeSize(long double complex,0,11000,3)
+CheckTypeSize(long double complex,32,11000,3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(long double complex,0,11000,6)
 #elif __powerpc64__
-CheckTypeSize(long double complex,0,11000,9)
+CheckTypeSize(long double complex,16,11000,9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(long double complex,0,11000,10)
+CheckTypeSize(long double complex,16,11000,10)
 #elif __x86_64__
-CheckTypeSize(long double complex,0,11000,11)
+CheckTypeSize(long double complex,32,11000,11)
 #elif __s390x__
-CheckTypeSize(long double complex,0,11000,12)
+CheckTypeSize(long double complex,16,11000,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11000,0);
 #endif
@@ -312,15 +316,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11000,0);
 #if __i386__
 CheckTypeSize(float complex,8,11001,2)
 #elif __ia64__
-CheckTypeSize(float complex,0,11001,3)
+CheckTypeSize(float complex,8,11001,3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(float complex,0,11001,6)
 #elif __powerpc64__
-CheckTypeSize(float complex,0,11001,9)
+CheckTypeSize(float complex,8,11001,9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(float complex,0,11001,10)
+CheckTypeSize(float complex,8,11001,10)
 #elif __x86_64__
-CheckTypeSize(float complex,0,11001,11)
+CheckTypeSize(float complex,8,11001,11)
 #elif __s390x__
-CheckTypeSize(float complex,0,11001,12)
+CheckTypeSize(float complex,8,11001,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11001,0);
 #endif
