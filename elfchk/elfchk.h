@@ -1,5 +1,5 @@
 #include <sys/types.h>
-#include "../../headers/elf.h"
+#include "../../include/elf.h"
 
 /*
  * External tables that are generated from the DB.
