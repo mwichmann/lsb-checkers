@@ -460,7 +460,8 @@ sub write_int_wrapper
 		$i++;
 	}
 
-	print $fh "\t\t";
+	print $fh "\t}\n";
+	print $fh "\t";
 	print $fh "ret_value = " unless($func_left_type eq "void");
 	print $fh "funcptr(";
 	
