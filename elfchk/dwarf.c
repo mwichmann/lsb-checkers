@@ -444,7 +444,11 @@ int check_FDE(CIEFrame *cie_list, unsigned char *ptr,  int *error)
 		CIEFrame *cie = 0;
         unsigned char *offsetptr;
         unsigned char *endptr;
+        void *fdeimage_ptr;
 
+        fdeimage_ptr = &fdeimage;
+
+        memset(fdeimage_ptr,0,sizeof(FDEFrameHeader));
         fdeimage.length = *(int *)ptr;
         ptr += 4;
         used += 4;
