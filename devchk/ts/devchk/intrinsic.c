@@ -282,7 +282,7 @@ CheckTypeSize(double complex,16,10999,2)
 #elif __ia64__
 CheckTypeSize(double complex,16,10999,3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(double complex,0,10999,6)
+CheckTypeSize(double complex,16,10999,6)
 #elif __powerpc64__
 CheckTypeSize(double complex,16,10999,9)
 #elif __s390__ && !__s390x__
@@ -300,7 +300,7 @@ CheckTypeSize(long double complex,24,11000,2)
 #elif __ia64__
 CheckTypeSize(long double complex,32,11000,3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(long double complex,0,11000,6)
+CheckTypeSize(long double complex,16,11000,6)
 #elif __powerpc64__
 CheckTypeSize(long double complex,16,11000,9)
 #elif __s390__ && !__s390x__
@@ -318,7 +318,7 @@ CheckTypeSize(float complex,8,11001,2)
 #elif __ia64__
 CheckTypeSize(float complex,8,11001,3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(float complex,0,11001,6)
+CheckTypeSize(float complex,8,11001,6)
 #elif __powerpc64__
 CheckTypeSize(float complex,8,11001,9)
 #elif __s390__ && !__s390x__
