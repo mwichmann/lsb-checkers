@@ -16,6 +16,7 @@ char tmp_string[TMP_STRING_SIZE+1];
 gzFile	*zfile;
 RpmArchiveHeader ahdr;
 int	badcpiomagic=0;
+int	startoffset,endoffset;
 
 file1->archive=(caddr_t)file1->nexthdr;
 
@@ -62,6 +63,7 @@ if( (zfile=gzdopen(file1->fd,"r")) == NULL ) {
 	return;
 	}
 
+startoffset=gztell(zfile);
 /*
  * The archive is really a cpio format file, so start reading records
  * and examining them.
@@ -128,7 +130,7 @@ while( !gzeof(zfile) ) {
 
 	if( strcmp(filename,"TRAILER!!!") == 0 ) {
 		/* End of archive */
-		return;
+		break;
 		}
 
 	/* Now, check the filename */
@@ -138,4 +140,8 @@ while( !gzeof(zfile) ) {
 		fptr=&filename[0];
 	checkRpmArchiveFilename(fptr, journal);
 	}
+
+endoffset=gztell(zfile);
+
+fprintf(stderr,"%d bytes in uncompressed archive\n", endoffset-startoffset);
 }

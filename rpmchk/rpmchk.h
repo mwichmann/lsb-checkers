@@ -88,6 +88,7 @@ typedef	struct	{
 	int	size;
 	RpmLead	*laddr;
 	RpmHeader	*signature;
+	RpmHeader	*header;
 	RpmHeader	*nexthdr;
 	caddr_t     storeaddr;  /* Start store for the current header */
 	caddr_t     archive;
@@ -105,6 +106,7 @@ typedef struct	{
 	RpmIndexTag	tag;
 	char		*name;
 	RpmIndexType	type;
+	int		count;
 	IdxTagFunc	func;
 	RpmIdxReqd	reqd;
 	RpmIdxStatus	status;
@@ -142,8 +144,9 @@ extern char *architecture;
 extern char *validos;
 extern char *validdepver;
 extern char *pkgname;
-extern char *sigdata;
+extern unsigned char *sigdata;
 extern int lsbdepidx;
+extern int archivesize;
 
 /* util.c */
 extern RpmFile *OpenRpmFile(char *name);
