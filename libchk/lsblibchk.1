@@ -3,6 +3,8 @@
 lsblibchk \- check LSB libraries
 .SH SYNOPSIS
 .B lsblibchk
+.RB [ \-M
+.IR modulename ]
 .SH DESCRIPTION
 .PP
 Check whether the run\-time system libraries for the current system
@@ -11,6 +13,9 @@ the object format, whether all of the required libraries are present,
 whether the libraries contain all interfaces required by the LSB, and
 whether the interfaces have the symbol versions required by the LSB.
 Lsblibchk prints warnings for any problems.
+.TP
+\fB\-M \fImodulename\fR
+Check only the libraries found in module \fImodulename\fR.
 .PP
 Lsblibchk writes a journal file named journal.libchk. It contains a
 record of the test results. You must have write access to the current
