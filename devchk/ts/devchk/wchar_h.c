@@ -22,12 +22,22 @@ int pcnt=0;
 Msg("Checking data structures in wchar.h\n");
 #endif
 
-#ifdef __i386__
-CheckTypeSize(wchar_t,4, 8848, 2)
-#elif __ia64__
-CheckTypeSize(wchar_t,0, 8848, 3)
+#ifdef WCHAR_MIN
+	CompareConstant(WCHAR_MIN,__WCHAR_MIN)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
+Msg( "Warning: Constant not found: WCHAR_MIN\n");
+#endif
+
+#ifdef WCHAR_MAX
+	CompareConstant(WCHAR_MAX,__WCHAR_MAX)
+#else
+Msg( "Warning: Constant not found: WCHAR_MAX\n");
+#endif
+
+#ifdef WEOF
+	CompareConstant(WEOF,(0xffffffffu))
+#else
+Msg( "Warning: Constant not found: WEOF\n");
 #endif
 
 #ifdef __i386__

@@ -22,6 +22,18 @@ int pcnt=0;
 Msg("Checking data structures in stdio.h\n");
 #endif
 
+#ifdef BUFSIZ
+	CompareConstant(BUFSIZ,8192)
+#else
+Msg( "Warning: Constant not found: BUFSIZ\n");
+#endif
+
+#ifdef EOF
+	CompareConstant(EOF,(-1))
+#else
+Msg( "Warning: Constant not found: EOF\n");
+#endif
+
 #ifdef _IOFBF
 	CompareConstant(_IOFBF,0)
 #else
@@ -38,6 +50,12 @@ Msg( "Warning: Constant not found: _IOLBF\n");
 	CompareConstant(_IONBF,2)
 #else
 Msg( "Warning: Constant not found: _IONBF\n");
+#endif
+
+#ifdef __i386__
+CheckTypeSize(FILE,148, 8782, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
 #endif
 
 #ifdef TET_TEST

@@ -30,14 +30,6 @@ CheckTypeSize(clock_t,8, 9164, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9164,0);
 #endif
 
-#ifdef __i386__
-CheckTypeSize(time_t,4, 9191, 2)
-#elif __ia64__
-CheckTypeSize(time_t,8, 9191, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9191,0);
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

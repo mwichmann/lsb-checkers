@@ -22,6 +22,7 @@ int pcnt=0;
 Msg("Checking data structures in errno.h\n");
 #endif
 
+/* No test for errno */
 #ifdef EPERM
 	CompareConstant(EPERM,1)
 #else

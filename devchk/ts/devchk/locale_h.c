@@ -23,7 +23,7 @@ Msg("Checking data structures in locale.h\n");
 #endif
 
 #ifdef LC_CTYPE
-	CompareConstant(LC_CTYPE,__LC_CTYPE)
+	CompareConstant(LC_CTYPE,0)
 #else
 Msg( "Warning: Constant not found: LC_CTYPE\n");
 #endif

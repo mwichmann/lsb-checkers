@@ -22,6 +22,7 @@ int pcnt=0;
 Msg("Checking data structures in assert.h\n");
 #endif
 
+/* No test for assert(expr) */
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -329,14 +329,6 @@ Msg( "Warning: Constant not found: SA_ONESHOT\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(union sigval,4, 9319, 2)
-#elif __ia64__
-CheckTypeSize(union sigval,0, 9319, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9319,0);
-#endif
-
-#ifdef __i386__
 CheckTypeSize(__sighandler_t,4, 6966, 2)
 #elif __ia64__
 CheckTypeSize(__sighandler_t,8, 6966, 3)

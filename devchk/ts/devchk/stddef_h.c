@@ -1,17 +1,17 @@
 /*
- * Test of sys/shm.h
+ * Test of stddef.h
  */
 #include "hdrchk.h"
 #include "sys/types.h"
-#include "sys/shm.h"
+#include "stddef.h"
 
 
 
 #ifdef TET_TEST
-void sys_shm_h()
+void stddef_h()
 {
 #else
-int sys_shm_h()
+int stddef_h()
 {
 #endif
 
@@ -19,13 +19,13 @@ int cnt=0;
 
 #ifdef TET_TEST
 int pcnt=0;
-Msg("Checking data structures in sys/shm.h\n");
+Msg("Checking data structures in stddef.h\n");
 #endif
 
-#ifdef SHM_RDONLY
-	CompareConstant(SHM_RDONLY,4096)
+#ifdef NULL
+	CompareConstant(NULL,((void*)0))
 #else
-Msg( "Warning: Constant not found: SHM_RDONLY\n");
+Msg( "Warning: Constant not found: NULL\n");
 #endif
 
 #ifdef TET_TEST
@@ -35,7 +35,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/shm.h\n",cnt);
+printf("%d tests in stddef.h\n",cnt);
 return cnt;
 #endif
 
