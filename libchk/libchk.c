@@ -6,9 +6,15 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.39 $
+ * This is $Revision: 1.40 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.40  2004/05/12 19:40:19  anderson
+ * Change the logic to make the program more helpful.
+ * remove print_warnings, instead, rely on the debug flags from the env to control
+ * what gets output.
+ * Add a new flag for warnings about older versions of symbols.
+ *
  * Revision 1.39  2004/05/12 19:35:07  anderson
  * Fix warnings caused by bad pointer decls
  *
@@ -165,7 +171,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.39 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.40 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -181,10 +187,11 @@ char *module = NULL;
 
 /* Returns 1 on match, 0 otherwise */
 int
-check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
+check_symbol(ElfFile *file, struct versym *entry)
 {
   int i, j;
   char *symbol_name;
+  int foundit=0;
   /* See if this symbol is in the dynsyn section of the library */
 
   /* printf("Looking for %s\n", entry->name); */
@@ -235,14 +242,11 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
       {
         if (entry->vername[0] != '\000')
         {
-          if (print_warnings)
-          {
             printf("    Warning!!! Found unversioned symbol %s,"
                    "but expecting version %s\n",
                    ElfGetStringIndex(file,file->syms[j].st_name,
                                      file->symhdr->sh_link),
                    entry->vername);
-          }
           continue;
         }
         else
@@ -255,13 +259,10 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
       /* This is just a sanity check, which should never be hit */
       if (vers > file->numverdefs) 
       {
-        if (print_warnings)
-        {
           printf("    Warning!!! Found version %x, for %s which is too big\n",
                  vers,
                  ElfGetStringIndex(file,file->syms[j].st_name,
                                    file->symhdr->sh_link));
-        }
         continue;
       }
 
@@ -280,8 +281,8 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
 		break;
 
       /* If the version matches, stop, we are done */
-      if (vers == i )
-	return 1;
+      if (vers == i)
+	foundit=1;
 
       /* If the version in the libary is greater, then warn, if in
          maintainer mode */
@@ -299,10 +300,10 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
       }
 
       /* If the version in the library is less than (older), only warn if
-         print_warning is true. */
+         in maintainer mode. */
       if (vers < i )
       {
-        if (print_warnings)
+        if ((libchk_debug&LIBCHK_DEBUG_OLDVERS) )
         {
           printf("    %s has version %s, expecting ",
                  ElfGetStringIndex(file,file->syms[j].st_name,
@@ -319,7 +320,7 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
   }
 
   /* Did not find exact match for symbol */
-  return 0;
+  return foundit;
 }
 
 
@@ -434,7 +435,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
             "unversioned");
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                        tmp_string);
-    if(check_symbol(file, entries+i, 0))
+    if(check_symbol(file, entries+i))
     {
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
     }
@@ -452,7 +453,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 
-      check_symbol(file, entries+i, 1);
+      check_symbol(file, entries+i);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   }
