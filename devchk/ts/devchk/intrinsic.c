@@ -270,12 +270,6 @@ CheckTypeSize(long double,8,14,12)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14,0);
 #endif
 
-#if 
-CheckTypeSize(__suseconds_t,,9370,)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9370,0);
-#endif
-
 #if 1
 CheckTypeSize(signed char,1,10505,1)
 #else
