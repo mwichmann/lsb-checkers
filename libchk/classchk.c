@@ -50,6 +50,9 @@ return (void *)fptr;
   snprintf(tmp_string, TMP_STRING_SIZE, MSG, ##__VA_ARGS__); \
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
   fprintf(stderr, "%s\n", tmp_string)
+#define TETJ_LOG_INFO(MSG, ...) \
+  snprintf(tmp_string, TMP_STRING_SIZE, MSG, ##__VA_ARGS__); \
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); 
 
   
 int
@@ -62,11 +65,13 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 	void	**basetypes;
 	struct classtypeinfo_mem *rttip;
 	union classvtable_mem	*vtablep;
+	void	*vttp;
 	struct classinfo	*classp;
 	unsigned long vtvcalloffset, vtbaseoffset;
 	const char *vttypeinfo;
 	fptr *vtvirtfuncs;
 	int vtableinc,vtablesize,fndvtabsize;
+	int fndvttsize;
 	char tmp_string[TMP_STRING_SIZE+1];
 	int test_failed;
 
@@ -221,7 +226,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					if( !dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo) ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Did not find symbol for Virtual table entry "
-														 "[%d][%d](%ld) expecting %s\n",
+														 "[%d][%d](%p) expecting %s\n",
 														 v, j, fptr2ptr(vtvirtfuncs[j]),
 														 classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
@@ -638,6 +643,54 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 				 */
 			}
+		}
+
+		/*
+		 * 3) Third, check the VTT info
+		 */
+		tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+											 "Checking for vtt existance");
+		vttp = dlsym(dlhndl, classp->vttname);
+
+		if (vttp) 
+		{
+			/* VTT info exists */
+			if( classp->numvtt ) {
+				/* and we were expecting it */
+				TETJ_LOG_INFO("Found VTT for %s\n", classp->name);
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+			} else {
+				/* and we were NOT expecting it */
+				TETJ_REPORT_INFO("Found unexpected VTT for %s\n", classp->name);
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+			}
+			tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
+
+			/* 3.1 Check the VTT size */
+			tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+											 "Checking vtt size");
+			fndvttsize = get_size(file, classp->vttname);
+			if( fndvttsize == (classp->numvtt*sizeof( void *)) ) {
+				TETJ_LOG_INFO( "VTT Size matched for %s.\n", classp->vttname );
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+			} else {
+				TETJ_REPORT_INFO( "VTT Size mismatch for %s. Expecting %d, found %d\n",
+								classp->vttname, (classp->numvtt*sizeof( void *)), fndvttsize);
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+			}
+			tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
+		} else {
+			/* VTT info does NOT exists */
+			if( classp->numvtt ) {
+				/* and we were expecting it */
+				TETJ_REPORT_INFO("Did not find expected VTT for %s\n", classp->name);
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+			} else {
+				/* and we were NOT expecting it */
+				TETJ_LOG_INFO("Did not find unexpected VTT for %s\n", classp->name);
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+			}
+			tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 		}
 	}
 
