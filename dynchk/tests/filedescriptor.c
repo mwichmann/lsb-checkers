@@ -5,7 +5,6 @@
 
 int validate_filedescriptor(const int fd, const char *name)
 {
-	int failure = 0;
 	if(fd >= __lsb_sysconf(_SC_OPEN_MAX))
 	{
 		__lsb_fprintf(stderr, "lsbdynchk: %s: File descriptor %x is too high.\n",
@@ -19,5 +18,5 @@ int validate_filedescriptor(const int fd, const char *name)
 	__lsb_fprintf(stderr, "lsbdynchk: %s: File descriptor %x is negative, and thus invalid.\n", name, fd);
 	return 1;
 	}
-
+	return 0;
 }
