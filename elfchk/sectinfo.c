@@ -31,6 +31,7 @@ struct SectionInfo SectionInfo[] = {
 	{".rel.text",SHT_REL,0,checkREL},
 	{".rodata",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 	{".rodata1",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
+	{".sbss",SHT_PROGBITS,SHF_WRITE,checkPROGBITS},
 	{".shstrtab",SHT_STRTAB,0,checkSTRTAB},
 	{".stab",SHT_PROGBITS,0,checkPROGBITS},
 	{".stabstr",SHT_STRTAB,0,checkSTRTAB},
