@@ -81,7 +81,7 @@ print $LIB "\t};\n\n";
 #
 $vtablename=$classbase."_vtable";
 
-$select = "SELECT Vtable.*,Architecture.*,Interface.Iarch,Interface.Iname FROM Vtable ";
+$select = "SELECT Vtable.*,Architecture.*,Interface.Iid,Interface.Iarch,Interface.Iname FROM Vtable ";
 $select.= "LEFT JOIN Architecture ON Aid=VTarch ";
 $select.= "LEFT JOIN Interface ON Iid=VTviid ";
 $select.= "WHERE VTcid=".$$class{'CIid'}." ";
@@ -96,7 +96,7 @@ for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
 	if( $entry{'VTarch'} != $entry{'Iarch'} ) {
 		print STDERR "Arch mismatch for class ".$entry{'VTcid'}.":".$entry{'VTarch'}."!=".$entry{'Iarch'};
-		print STDERR ":".$entry{'Iname'}."\n";
+		print STDERR ":".$entry{'Iname'}."(".$entry{'Iid'}.")\n";
 	}
 	if( $entry{'Aname'} eq "All" ) {
 		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
