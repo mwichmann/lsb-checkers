@@ -27,6 +27,7 @@ struct versym {
 #define Elf32_Dyn  Elf64_Dyn
 #define Elf32_Sym  Elf64_Sym
 #define Elf32_Rel  Elf64_Rel
+#define Elf32_Nhdr  Elf64_Nhdr
 #define Elf32_Verdef  Elf64_Verdef
 #define Elf32_Verdaux  Elf64_Verdaux
 #endif
@@ -89,6 +90,9 @@ extern char *ElfGetString(ElfFile *file, int offset);
 extern ElfFile *OpenElfFile(char *name);
 extern void checkElf(ElfFile *file1, int isProgram, 
                      struct tetj_handle *journal);
+
+/* note.c */
+extern int check_NOTE(ElfFile *file, unsigned char *notes, int length, struct tetj_handle *journal);
 
 /* Add non LSB libraries to list which are ok to be in the DT_NEEDED section */
 extern void addDTNeeded (char *filename);

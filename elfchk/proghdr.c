@@ -73,7 +73,7 @@ checkPT_INTERP(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 int
 checkPT_NOTE(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-return 1;
+return check_NOTE(file, file->addr+hdr->p_offset, hdr->p_filesz, journal);
 }
 
 int
