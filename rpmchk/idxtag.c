@@ -20,7 +20,7 @@ checkRpmIdx(RpmFile *file1, RpmHdrIndex *hidx, RpmIdxTagFuncRec Tags[],
 				int numtags, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
-int		i,j,nindex,tag,type,count;
+int		i,j,nindex,tag,type,count,offset;
 RpmHeader	*hdr;
 
 hdr=(RpmHeader *)file1->nexthdr;
@@ -34,6 +34,7 @@ for(i=0;i<nindex;i++) {
 	tag=ntohl(hidx[i].tag);
 	type=ntohl(hidx[i].type);
 	count=ntohl(hidx[i].count);
+	offset=ntohl(hidx[i].offset);
 	for(j=0;j<numtags;j++)
 		if( Tags[j].tag == tag ) {
 			Tags[j].status=Seen;
@@ -48,7 +49,8 @@ for(i=0;i<nindex;i++) {
 				fprintf(stderr, "Found %d but expecting %d.\n", count, Tags[j].count );
 			}
 			if( rpmchkdebug&DEBUG_TRACE_TAGS )
-				fprintf(stderr,"Found index %s\n",Tags[j].name);
+				fprintf(stderr,"Found index %s offset=%d count=%d\n",
+						Tags[j].name, offset, count);
 			Tags[j].func(file1, &hidx[i], journal);
 			break;
 			}
@@ -115,7 +117,13 @@ if( ntohl(sigidx->count) != sizeof(RpmHdrIndex) ) {
 	fprintf(stderr,
      "Count value in RPMTAG_HEADERSIGNATURES data is not sizeof(RpmHdrIndex)\n");
 	}
+
+fprintf(stderr,"checkRpmIdxHEADERSIGNATURES() Not yet checking contents\n");
+fprintf(stderr,"checkRpmIdxHEADERSIGNATURES() offset %x\n",ntohl(sigidx->offset));
+
 sigdata=(char *)(((char *)sigidx)+ntohl(sigidx->offset));
+
+fprintf(stderr,"checkRpmIdxHEADERSIGNATURES() data at %x\n",sigdata);
 
 }
 
@@ -229,7 +237,7 @@ if( sigsize != size ) {
 void
 checkRpmIdxMD5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int		hoffset;
+int		i,hoffset;
 unsigned char	*md5hdr,md5sum[16];
 
 hoffset=ntohl(hidx->offset);
@@ -242,6 +250,18 @@ MD5Final(md5sum,&md5ctx);
 if( memcmp(md5hdr,md5sum,16) != 0 ) {
 	fprintf(stderr,
 		"SIGTAG_MD5 calculated value doesn't match expected value\n");
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS ) {
+		fprintf(stderr, "Calculated value: ");
+		for(i=0;i<16;i++) {
+			fprintf(stderr, "%2.2x",md5sum[i]);
+			}
+		fprintf(stderr, "\n");
+		fprintf(stderr, "Found value: ");
+		for(i=0;i<16;i++) {
+			fprintf(stderr, "%2.2x",md5hdr[i]);
+			}
+		fprintf(stderr, "\n");
+		}
 	}
 }
 
@@ -308,12 +328,6 @@ unsigned char	*shadata;
 hoffset=ntohl(hidx->offset);
 shadata=file1->storeaddr+hoffset;
 
-if( shadata != sigdata ) {
-	fprintf(stderr,"Location of SHA1 signature (%x) ",
-						(unsigned int)shadata );
-	fprintf(stderr,"doesn't match location set in HDRSIGNATURES(%x)\n",
-						(unsigned int)sigdata);
-	}
 fprintf(stderr,"checkRpmIdxSHA1HEADER() Not yet checking SHA1 contents\n");
 }
 
