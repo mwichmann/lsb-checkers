@@ -610,6 +610,7 @@ struct versym libpthread_so_0[] = {
 #if __s390x__
 	{"pthread_condattr_destroy","GLIBC_2.2"},
 #endif
+	{"pthread_condattr_getpshared","GLIBC_2.2"},
 #if __i386__
 	{"pthread_condattr_init","GLIBC_2.0"},
 #endif
@@ -631,6 +632,7 @@ struct versym libpthread_so_0[] = {
 #if __s390x__
 	{"pthread_condattr_init","GLIBC_2.2"},
 #endif
+	{"pthread_condattr_setpshared","GLIBC_2.2"},
 #if __i386__
 	{"pthread_create","GLIBC_2.0"},
 #endif
