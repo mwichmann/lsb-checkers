@@ -22,6 +22,34 @@ int pcnt=0;
 Msg("Checking data structures in limits.h\n");
 #endif
 
+#ifdef LONG_MAX
+	CompareConstant(LONG_MAX,0x7FFFFFFFL)
+#else
+Msg( "Error: Constant not found: LONG_MAX\n");
+cnt++;
+#endif
+
+#ifdef LONG_MAX
+	CompareConstant(LONG_MAX,0x7FFFFFFFFFFFFFFFL)
+#else
+Msg( "Error: Constant not found: LONG_MAX\n");
+cnt++;
+#endif
+
+#ifdef ULONG_MAX
+	CompareConstant(ULONG_MAX,0xFFFFFFFFUL)
+#else
+Msg( "Error: Constant not found: ULONG_MAX\n");
+cnt++;
+#endif
+
+#ifdef ULONG_MAX
+	CompareConstant(ULONG_MAX,0xFFFFFFFFFFFFFFFFUL)
+#else
+Msg( "Error: Constant not found: ULONG_MAX\n");
+cnt++;
+#endif
+
 #ifdef OPEN_MAX
 	CompareConstant(OPEN_MAX,256)
 #else
@@ -134,31 +162,10 @@ Msg( "Error: Constant not found: __INT_MAX__\n");
 cnt++;
 #endif
 
-#ifdef LONG_MAX
-	CompareConstant(LONG_MAX,2147483647L)
-#else
-Msg( "Error: Constant not found: LONG_MAX\n");
-cnt++;
-#endif
-
 #ifdef LONG_MIN
 	CompareConstant(LONG_MIN,(-LONG_MAX-1L))
 #else
 Msg( "Error: Constant not found: LONG_MIN\n");
-cnt++;
-#endif
-
-#ifdef ULONG_MAX
-	CompareConstant(ULONG_MAX,4294967295UL)
-#else
-Msg( "Error: Constant not found: ULONG_MAX\n");
-cnt++;
-#endif
-
-#ifdef __LONG_MAX__
-	CompareConstant(__LONG_MAX__,2147483647L)
-#else
-Msg( "Error: Constant not found: __LONG_MAX__\n");
 cnt++;
 #endif
 

@@ -81,6 +81,10 @@ hdrchk.o: hdrchk.c
 	cc $(CFLAGS) -g -c hdrchk.c
 
 
+hdrchk.c:
+	./mktests
+
+
 install:
 
 
@@ -90,4 +94,5 @@ clean:
 clobber:	clean
 	rm -f *.c hdrchk_tet.h testdefs.h hdrchk
 
-distclean: clobber
+
+distclean:	clobber

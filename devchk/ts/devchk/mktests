@@ -387,11 +387,16 @@ print MAKEFILE "\n";
 print MAKEFILE "hdrchk.o: hdrchk.c\n";
 print MAKEFILE "\tcc \$\(CFLAGS) -g -c hdrchk.c\n";
 print MAKEFILE "\n\n";
+print MAKEFILE "hdrchk.c:\n";
+print MAKEFILE "\t./mktests\n";
+print MAKEFILE "\n\n";
 print MAKEFILE "install:\n";
 print MAKEFILE "\n\n";
 print MAKEFILE "clean:\n\trm -f \$\(OBJS)\n\n";
 print MAKEFILE "clobber:\tclean\n";
 print MAKEFILE "\trm -f *.c hdrchk_tet.h testdefs.h hdrchk\n";
+print MAKEFILE "\n\n";
+print MAKEFILE "distclean:\tclobber\n";
 close(MAKEFILE);
 
 print HARNESS "printf(\"Total Tests: %d\\n\", tcnt );\n";

@@ -809,7 +809,7 @@ cnt++;
 #ifdef __i386__
 CheckTypeSize(speed_t,4, 9186, 2)
 #elif __ia64__
-CheckTypeSize(speed_t,0, 9186, 3)
+CheckTypeSize(speed_t,4, 9186, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 #endif
