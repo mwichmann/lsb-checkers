@@ -11,9 +11,12 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.3 $
+# This is $Revision: 1.4 $
 #
 # $Log: tetj.py,v $
+# Revision 1.4  2003/11/12 17:19:48  mats
+# Fix the format of the test case start line
+#
 # Revision 1.3  2003/11/12 17:17:12  mats
 # Add in missing field for 400/410 lines (for now, just hardcode it as '1')
 #
@@ -97,12 +100,12 @@ class Journal:
 	if self.journal:
 	    self.journal.write("50||%s\n" % message)
 
-    def testcase_start(self, message=None):
+    def testcase_start(self, testpath, message=None):
 	self.activity += 1
 	self.testcase = 0
 	if self.journal:
 	    self.journal.write("10|%u %s %s|TC Start" %
-		(self.activity, self.testcase, get_current_time_string()))
+		(self.activity, testpath, get_current_time_string()))
 	    if message: 
 		self.journal.write(", %s\n" % message)
 	    else:
