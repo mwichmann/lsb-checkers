@@ -81,8 +81,9 @@ print $LIB "\t};\n\n";
 #
 $vtablename=$classbase."_vtable";
 
-$select = "SELECT * FROM Vtable ";
+$select = "SELECT Vtable.*,Architecture.*,Interface.Iarch,Interface.Iname FROM Vtable ";
 $select.= "LEFT JOIN Architecture ON Aid=VTarch ";
+$select.= "LEFT JOIN Interface ON Iid=VTviid ";
 $select.= "WHERE VTcid=".$$class{'CIid'}." ";
 $select.= "ORDER BY VTpos";
 
@@ -93,6 +94,10 @@ $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 $numvtablefuns=0;
 for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
+	if( $entry{'VTarch'} != $entry{'Iarch'} ) {
+		print STDERR "Arch mismatch for class ".$entry{'VTcid'}.":".$entry{'VTarch'}."!=".$entry{'Iarch'};
+		print STDERR ":".$entry{'Iname'}."\n";
+	}
 	if( $entry{'Aname'} eq "All" ) {
 		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
 	} else {
@@ -175,6 +180,7 @@ $select.= "ORDER BY Iname,Aid ";
 $lsth = $Dbh->query($select) || die $Dbh->errmsg();
 
 open(LIB,">$libname.c");
+open(TXT,">$libname.txt");
 print LIB "#include <stdlib.h>\n";
 print LIB "#include \"elfchk.h\"\n";
 print LIB "struct versym ".$libname."[] = {\n";
@@ -186,6 +192,7 @@ for(1..$lsth->numrows) {
 		print LIB "#endif\n";
 	} else {
 		printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+		printf TXT $entry{'Iname'}."\n";
 		}
 }
 print LIB "\t{0,0}};\n\n";
@@ -213,6 +220,7 @@ for(1..$lsth->numrows) {
 print LIB "struct classinfo *".$libname."_classinfo[] = {\n";
 print LIB $classinfos."\n\tNULL\t};\n";
 
+close(TXT);
 close(LIB);
 }
 
