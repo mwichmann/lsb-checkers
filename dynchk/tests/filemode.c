@@ -1,19 +1,17 @@
 #include <stdio.h>
 #include <sys/types.h>
+#include "../misc/lsb_output.h"
 
 int validate_filemode(const mode_t arg, const char *name)
 {
 	if( (arg&0x0200) )
 	{
-		fprintf(stderr,
-		"lsbdynchk: %s: Filemode %o contains meaningless bitmask 0x0200.\n", name, (int)arg);
+		__lsb_fail(name, "Filemode %o contains meaningless bitmask 0x0200.\n", (int)arg);
 		return 1;
 	}
 	if( (arg&0xe000 && !(arg&0x1000)) )
 	{
-		fprintf(stderr,
-	"lsbdynchk: %s: Filemode %o contains bitmask 0xe000 without 0x1000, so it is ambiguously typed.\n",
-		name, (int)arg);
+		__lsb_fail(name, "Filemode %o contains bitmask 0xe000 without 0x1000, so it is ambiguously typed.\n", (int)arg);
 		return 1;
 	}
 	return 0;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "memmap.h"
-
+#include "../misc/lsb_output.h"
 /*
  * This file contains the code that knows about the address space of the 
  * process. The file /proc/self/maps is parsed, and stored for later reference.
