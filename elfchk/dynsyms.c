@@ -1730,6 +1730,8 @@ struct versym DynSyms[] = {
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD2Ev","CXXABI_1.3",0,LSB_Cpp},
+	{"_ZN9__gnu_cxx12__atomic_addEPVii","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZN9__gnu_cxx18__exchange_and_addEPVii","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZN9__gnu_cxx27__verbose_terminate_handlerEv","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE","CXXABI_1.3",0,LSB_Cpp},
@@ -11975,19 +11977,28 @@ struct versym DynSyms[] = {
 	{"_ZSt15set_new_handlerPFvvE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt16__throw_bad_castv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt17__throw_bad_allocv","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt18_Rb_tree_decrementPKSt18_Rb_tree_node_base","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt18__throw_bad_typeidv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt18uncaught_exceptionv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt19__throw_ios_failurePKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt19__throw_logic_errorPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt19__throw_range_errorPKc","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt20_Rb_tree_black_countPKSt18_Rb_tree_node_baseS1_","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt20_Rb_tree_rotate_leftPSt18_Rb_tree_node_baseRS0_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt20__throw_domain_errorPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt20__throw_length_errorPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt20__throw_out_of_rangePKc","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt21_Rb_tree_rotate_rightPSt18_Rb_tree_node_baseRS0_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt21__throw_bad_exceptionv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt21__throw_runtime_errorPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt22__throw_overflow_errorPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt23__throw_underflow_errorPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt24__throw_invalid_argumentPKc","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt2wsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt2wsIwSt11char_traitsIwEERSt13basic_istreamIT_T0_ES6_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZSt3cin","GLIBCXX_3.4",0,LSB_Cpp},
@@ -22816,6 +22827,27 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"getlogin","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
+	{"getlogin_r","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __ia64__
+	{"getlogin_r","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"getlogin_r","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __not_def__
+	{"getlogin_r","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"getlogin_r","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"getlogin_r","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"getlogin_r","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
 	{"getnameinfo","GLIBC_2.1",0,LSB_Core},
