@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef srand48
-static void(*funcptr) (long ) = 0;
+static void(*funcptr) (long int ) = 0;
 
 extern int __lsb_check_params;
-void srand48 (long arg0 )
+void srand48 (long int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)

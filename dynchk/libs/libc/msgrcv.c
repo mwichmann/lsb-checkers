@@ -5,10 +5,10 @@
 #include <stddef.h>
 #include <sys/msg.h>
 #undef msgrcv
-static int(*funcptr) (int , void * , size_t , long , int ) = 0;
+static int(*funcptr) (int , void * , size_t , long int , int ) = 0;
 
 extern int __lsb_check_params;
-int msgrcv (int arg0 , void * arg1 , size_t arg2 , long arg3 , int arg4 )
+int msgrcv (int arg0 , void * arg1 , size_t arg2 , long int arg3 , int arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;

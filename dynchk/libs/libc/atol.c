@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef atol
-static long(*funcptr) (const char * ) = 0;
+static long int(*funcptr) (const char * ) = 0;
 
 extern int __lsb_check_params;
-long atol (const char * arg0 )
+long int atol (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "atol", "GLIBC_2.0");
 	if(__lsb_check_params)

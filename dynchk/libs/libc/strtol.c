@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef strtol
-static long(*funcptr) (const char * , char * * , int ) = 0;
+static long int(*funcptr) (const char * , char * * , int ) = 0;
 
 extern int __lsb_check_params;
-long strtol (const char * arg0 , char * * arg1 , int arg2 )
+long int strtol (const char * arg0 , char * * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "strtol", "GLIBC_2.0");
 	if(__lsb_check_params)

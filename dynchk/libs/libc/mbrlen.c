@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <stddef.h>
 #include <wctype.h>
+#include <stddef.h>
 #include <wchar.h>
 #undef mbrlen
 static size_t(*funcptr) (const char * , size_t , mbstate_t * ) = 0;

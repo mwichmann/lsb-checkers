@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <sys/resource.h>
 #include <sys/types.h>
+#include <sys/resource.h>
 #undef setpriority
 static int(*funcptr) (__priority_which_t , id_t , int ) = 0;
 

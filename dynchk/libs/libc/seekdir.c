@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <dirent.h>
 #undef seekdir
-static void(*funcptr) (DIR * , long ) = 0;
+static void(*funcptr) (DIR * , long int ) = 0;
 
 extern int __lsb_check_params;
-void seekdir (DIR * arg0 , long arg1 )
+void seekdir (DIR * arg0 , long int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)

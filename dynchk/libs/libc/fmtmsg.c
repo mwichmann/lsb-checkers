@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <fmtmsg.h>
 #undef fmtmsg
-static int(*funcptr) (long , const char * , int , const char * , const char * , const char * ) = 0;
+static int(*funcptr) (long int , const char * , int , const char * , const char * , const char * ) = 0;
 
 extern int __lsb_check_params;
-int fmtmsg (long arg0 , const char * arg1 , int arg2 , const char * arg3 , const char * arg4 , const char * arg5 )
+int fmtmsg (long int arg0 , const char * arg1 , int arg2 , const char * arg3 , const char * arg4 , const char * arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;

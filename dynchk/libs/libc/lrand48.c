@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef lrand48
-static long(*funcptr) () = 0;
+static long int(*funcptr) () = 0;
 
 extern int __lsb_check_params;
-long lrand48 ()
+long int lrand48 ()
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "lrand48", "GLIBC_2.0");
 	if(__lsb_check_params)

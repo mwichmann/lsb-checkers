@@ -5,13 +5,13 @@
 #include <stddef.h>
 #include <wchar.h>
 #undef wcstol
-static long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
+static long int(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
 extern int __lsb_check_params;
-long wcstol (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+long int wcstol (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "wcstol", "GLIBC_2.0");
 	if(__lsb_check_params)

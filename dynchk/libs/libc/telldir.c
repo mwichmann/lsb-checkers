@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <dirent.h>
 #undef telldir
-static long(*funcptr) (DIR * ) = 0;
+static long int(*funcptr) (DIR * ) = 0;
 
 extern int __lsb_check_params;
-long telldir (DIR * arg0 )
+long int telldir (DIR * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "telldir", "GLIBC_2.0");
 	if(__lsb_check_params)

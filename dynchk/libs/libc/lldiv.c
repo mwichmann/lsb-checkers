@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef lldiv
-static lldiv_t(*funcptr) (long long , long long ) = 0;
+static lldiv_t(*funcptr) (long long int , long long int ) = 0;
 
 extern int __lsb_check_params;
-lldiv_t lldiv (long long arg0 , long long arg1 )
+lldiv_t lldiv (long long int arg0 , long long int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	lldiv_t ret_value  ;

@@ -5,13 +5,13 @@
 #include <stddef.h>
 #include <wchar.h>
 #undef wcstouq
-static unsigned long long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
+static unsigned long long int(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
 extern int __lsb_check_params;
-unsigned long long wcstouq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+unsigned long long int wcstouq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	unsigned long long ret_value  ;
+	unsigned long long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "wcstouq", "GLIBC_2.0");
 	if(__lsb_check_params)

@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef atoll
-static long long(*funcptr) (const char * ) = 0;
+static long long int(*funcptr) (const char * ) = 0;
 
 extern int __lsb_check_params;
-long long atoll (const char * arg0 )
+long long int atoll (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	long long ret_value  ;
+	long long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atoll");
 	if(__lsb_check_params)

@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <unistd.h>
 #undef sysconf
-static long(*funcptr) (int ) = 0;
+static long int(*funcptr) (int ) = 0;
 
 extern int __lsb_check_params;
-long sysconf (int arg0 )
+long int sysconf (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "sysconf", "GLIBC_2.0");
 	if(__lsb_check_params)

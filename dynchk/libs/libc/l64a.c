@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef l64a
-static char *(*funcptr) (long ) = 0;
+static char *(*funcptr) (long int ) = 0;
 
 extern int __lsb_check_params;
-char * l64a (long arg0 )
+char * l64a (long int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
