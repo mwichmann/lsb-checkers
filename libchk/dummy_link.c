@@ -43,7 +43,7 @@ int main()
 	pam_acct_mgmt();
 
 	/* libpthread */
-	pthread_atfork();
+	pthread_kill();
 
 	/* libutil */
 	login();
