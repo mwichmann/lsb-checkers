@@ -20,16 +20,40 @@ struct versym {
 	};
 
 #if defined(__alpha) || defined(__alpha__) || \
-    defined(__ia64__)
-#define Elf32_Ehdr Elf64_Ehdr
-#define Elf32_Shdr Elf64_Shdr
-#define Elf32_Phdr Elf64_Phdr
-#define Elf32_Dyn  Elf64_Dyn
-#define Elf32_Sym  Elf64_Sym
-#define Elf32_Rel  Elf64_Rel
-#define Elf32_Nhdr  Elf64_Nhdr
-#define Elf32_Verdef  Elf64_Verdef
-#define Elf32_Verdaux  Elf64_Verdaux
+    defined(__ia64__) || defined(__powerpc64__)
+
+#define Elf_Ehdr Elf64_Ehdr
+#define Elf_Shdr Elf64_Shdr
+#define Elf_Phdr Elf64_Phdr
+#define Elf_Dyn  Elf64_Dyn
+#define Elf_Sym  Elf64_Sym
+#define Elf_Rel  Elf64_Rel
+#define Elf_Nhdr  Elf64_Nhdr
+#define Elf_Verdef  Elf64_Verdef
+#define Elf_Verdaux  Elf64_Verdaux
+#define Elf_Off  Elf64_Off
+#define Elf_Rela  Elf64_Rela
+#define Elf_Vernaux Elf64_Vernaux 
+#define Elf_Half Elf64_Half 
+#define Elf_Verneed Elf64_Verneed
+
+#else
+
+#define Elf_Ehdr Elf32_Ehdr
+#define Elf_Shdr Elf32_Shdr
+#define Elf_Phdr Elf32_Phdr
+#define Elf_Dyn  Elf32_Dyn
+#define Elf_Sym  Elf32_Sym
+#define Elf_Rel  Elf32_Rel
+#define Elf_Nhdr  Elf32_Nhdr
+#define Elf_Verdef  Elf32_Verdef
+#define Elf_Verdaux  Elf32_Verdaux
+#define Elf_Off  Elf32_Off
+#define Elf_Rela  Elf32_Rela
+#define Elf_Vernaux Elf32_Vernaux 
+#define Elf_Verneed Elf32_Verneed
+#define Elf_Half Elf32_Half 
+
 #endif
 
 /*
@@ -64,34 +88,34 @@ extern char *ProgInterp;
 typedef	struct	{
 	int	fd;
 	caddr_t     addr;  /* Start address of the file */
-	Elf32_Shdr *saddr; /* Start address of the next section of the file */
-	Elf32_Phdr *paddr; /* address of the program header of the file */
+	Elf_Shdr *saddr; /* Start address of the next section of the file */
+	Elf_Phdr *paddr; /* address of the program header of the file */
 	caddr_t     straddr;  /* Start address of the string table */
 	int	strndx;	   /* index of the string table */
 	int	size;
 	int	numph;
 	int	numsh;
-	Elf32_Shdr *dynsymhdr;	/* Dynamic Symbol table header */
+	Elf_Shdr *dynsymhdr;	/* Dynamic Symbol table header */
 
 	int	numsyms;
-	Elf32_Shdr *symhdr;	/* Symbol table header */
-	Elf32_Sym	*syms; /* Array of symbol entries */
+	Elf_Shdr *symhdr;	/* Symbol table header */
+	Elf_Sym	*syms; /* Array of symbol entries */
 
-	Elf32_Shdr *dynhdr;	/* Dynamic entries header */
-	Elf32_Dyn	*dyns; /* Array of dynamic entries */
+	Elf_Shdr *dynhdr;	/* Dynamic entries header */
+	Elf_Dyn	*dyns; /* Array of dynamic entries */
 	int	numdynents;
 
-	Elf32_Shdr *dynshdr;	/* Dynamic string table header */
+	Elf_Shdr *dynshdr;	/* Dynamic string table header */
 
-	Elf32_Shdr *verhdr;	/* Version entries header */
-	Elf32_Half	*vers; /* Array of version entries */
+	Elf_Shdr *verhdr;	/* Version entries header */
+	Elf_Half	*vers; /* Array of version entries */
 
-	Elf32_Shdr *verdhdr;	/* Version definition header */
-	Elf32_Verdef	*verd; /* Array of verdef entries */
+	Elf_Shdr *verdhdr;	/* Version definition header */
+	Elf_Verdef	*verd; /* Array of verdef entries */
 	int	numverdefs;
 
-	Elf32_Shdr *vernhdr;	/* Version dependency header */
-	Elf32_Verneed	*vern; /* Array of verneed entries */
+	Elf_Shdr *vernhdr;	/* Version dependency header */
+	Elf_Verneed	*vern; /* Array of verneed entries */
 	int	numverneed;
 
 	char	*versionnames[32]; /* arbitrary size, but big enough for now */

@@ -28,7 +28,7 @@ int
 add_library_symbols(char *libname, struct tetj_handle *journal)
 {
   ElfFile	*file;
-  Elf32_Sym	*syms;
+  Elf_Sym	*syms;
   int	i,numsyms;
 
   file = check_file(libname, journal, 0);
@@ -36,7 +36,7 @@ add_library_symbols(char *libname, struct tetj_handle *journal)
   if (file)
   {
     numsyms=file->dynsymhdr->sh_size/file->dynsymhdr->sh_entsize;
-    syms=(Elf32_Sym *)((caddr_t)file->addr+file->dynsymhdr->sh_offset);
+    syms=(Elf_Sym *)((caddr_t)file->addr+file->dynsymhdr->sh_offset);
     for(i=0;i<numsyms;i++) 
     {
       /* Static Symbols */
