@@ -6737,12 +6737,6 @@ struct versym libc_so_6_1[] = {
 	{"ioctl","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"ioperm","GLIBC_2.0"},
-#endif
-#if __i386__
-	{"iopl","GLIBC_2.0"},
-#endif
-#if __i386__
 	{"isalnum","GLIBC_2.0"},
 #endif
 #if __ia64__
@@ -13475,7 +13469,7 @@ struct versym libc_so_6_1[] = {
 	{"svc_register","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"svc_register","GLIBC_2.2"},
+	{"svc_register","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"svc_register","GLIBC_2.2"},
@@ -13502,7 +13496,7 @@ struct versym libc_so_6_1[] = {
 	{"svc_sendreply","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"svc_sendreply","GLIBC_2.2"},
+	{"svc_sendreply","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"svc_sendreply","GLIBC_2.2"},
@@ -13670,7 +13664,7 @@ struct versym libc_so_6_1[] = {
 	{"svctcp_create","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"svctcp_create","GLIBC_2.2"},
+	{"svctcp_create","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"svctcp_create","GLIBC_2.2"},
@@ -13691,7 +13685,7 @@ struct versym libc_so_6_1[] = {
 	{"svcudp_create","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"svcudp_create","GLIBC_2.2"},
+	{"svcudp_create","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"svcudp_create","GLIBC_2.2"},
