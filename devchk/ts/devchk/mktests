@@ -123,6 +123,13 @@ sub writetest($$)
 			print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                         print TESTS "cnt++;\n";
 			print TESTS "#endif\n\n";
+		} elsif( $centry{'Ctype'} eq 'string' ) {
+			print TESTS "#ifdef $centry{'Cname'}\n";
+			print TESTS "\tCompareStringConstant($centry{'Cname'},\"".$centry{'ACvalue'}."\")\n";
+			print TESTS "#else\n";
+			print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
+                        print TESTS "cnt++;\n";
+			print TESTS "#endif\n\n";
 		} else {
 			print TESTS "/* No test for $centry{'Cname'} */\n";
 		}
