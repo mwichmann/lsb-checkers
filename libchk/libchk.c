@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.20 $
+ * This is $Revision: 1.21 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.21  2003/04/28 11:51:40  anderson
+ * Turn off the class checking code for everyone else
+ *
  * Revision 1.20  2003/04/15 20:30:45  anderson
  * Add the class data structures
  *
@@ -92,7 +95,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.20 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.21 $";
 
 extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
 
@@ -328,9 +331,11 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   }
 
+#if 0
   printf("Checking Class Information in %s\n", filename );
 
   check_class_info(filename,classes,journal);
+#endif
 }
 
 /* Generated function by mkfunclist */
