@@ -507,15 +507,15 @@ CheckOffset(struct __locale_struct,__ctype_tolower,56,2,40183)
 CheckMemberSize(struct __locale_struct,__ctype_toupper,4,2,40184)
 CheckOffset(struct __locale_struct,__ctype_toupper,60,2,40184)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct __locale_struct,64, 10531, 6)
+CheckTypeSize(struct __locale_struct,116, 10531, 6)
 CheckMemberSize(struct __locale_struct,__locales,52,6,40181)
 CheckOffset(struct __locale_struct,__locales,0,6,40181)
 #elif __ia64__
-CheckTypeSize(struct __locale_struct,128, 10531, 3)
+CheckTypeSize(struct __locale_struct,232, 10531, 3)
 CheckMemberSize(struct __locale_struct,__ctype_b,8,3,40182)
 CheckOffset(struct __locale_struct,__ctype_b,104,3,40182)
 #elif __s390x__
-CheckTypeSize(struct __locale_struct,128, 10531, 12)
+CheckTypeSize(struct __locale_struct,232, 10531, 12)
 CheckMemberSize(struct __locale_struct,__ctype_b,8,12,40182)
 CheckOffset(struct __locale_struct,__ctype_b,104,12,40182)
 CheckMemberSize(struct __locale_struct,__ctype_tolower,8,12,40183)
