@@ -7,10 +7,12 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Istatus,Vname,Asymbol,Aname FROM Interface ";
+$select = "SELECT DISTINCT Iname,Istatus,Vname,Asymbol,Aname,Mname FROM Interface ";
 $select.= "LEFT JOIN LGInt ON Iid=LGIint ";
 $select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
 $select.= "LEFT JOIN Library ON Lid=LGlib ";
+$select.= "LEFT JOIN ModLib ON MLlid=Lid ";
+$select.= "LEFT JOIN Module ON Mid=MLmid ";
 $select.= "LEFT OUTER JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT OUTER JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT OUTER JOIN Version ON Vid=AIversion ";
@@ -37,6 +39,7 @@ for(1..$sth->numrows) {
 	} else {
 		printf "0";
 	}
+	printf ",\"%s\"",$entry{'Mname'};
 	printf "},\n";
         if ($entry{'Aname'} && $entry{'Aname'} ne "All")
         {
