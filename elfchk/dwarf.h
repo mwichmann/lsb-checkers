@@ -9,6 +9,7 @@
 
 #include <sys/types.h>
 #include <elf.h>
+#include "dwarf2.h"
 
 typedef struct CIEFrameImage {
 	Elf32_Word	length;
@@ -39,9 +40,26 @@ typedef struct FDEFrameHeader {
 	int		address_range;
 	} FDEFrameHeader;
 
+typedef struct EHFRMHDRImage {
+	unsigned char	version;
+	unsigned char	eh_frame_ptr_enc;
+	unsigned char	fde_count_enc;
+	unsigned char	table_enc;
+	} EHFRMHDRImage;
+
+typedef struct EHFRMHDR {
+	unsigned char	version;
+	unsigned char	eh_frame_ptr_enc;
+	unsigned char	fde_count_enc;
+	unsigned char	table_enc;
+	void		*eh_frame_ptr;
+	int		fde_count;
+	} EHFRMHDR;
+
 /* dwarf.c */
 extern unsigned long int read_leb128(unsigned char *data, int *length_return, int sign);
 extern int check_CFI(unsigned char *ptr, int length);
 extern int check_FDE(unsigned char *ptr, int length);
 extern int check_CIE(unsigned char *ptr, int length);
+extern void *read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused);
 #endif /* _DWARF_H */

@@ -232,3 +232,49 @@ while(length>0) {
 
 return numused;
 }
+
+void *
+read_FDE_encoded(unsigned char *ptr, unsigned char encoding,int *numused)
+{
+void *tmp;
+
+if( encoding == DW_EH_PE_omit ) {
+	*numused=0;
+	return 0;
+	}
+
+switch( encoding&0x0f ) {
+	case DW_EH_PE_uleb128:
+		tmp=(void *)read_leb128(ptr,numused,0);
+		return tmp;
+	case DW_EH_PE_udata2:
+		tmp=(void *)(*(unsigned short *)ptr);
+		*numused=2;
+		return tmp;
+	case DW_EH_PE_udata4:
+		tmp=(void *)(*(unsigned int *)ptr);
+		*numused=4;
+		return tmp;
+	case DW_EH_PE_udata8:
+		tmp=(void *)(*(unsigned long long *)ptr);
+		*numused=8;
+		return tmp;
+	case DW_EH_PE_sleb128:
+		tmp=(void *)read_leb128(ptr,numused,1);
+		return tmp;
+	case DW_EH_PE_sdata2:
+		tmp=(void *)(*(short *)ptr);
+		*numused=2;
+		return tmp;
+	case DW_EH_PE_sdata4:
+		tmp=(void *)(*(int *)ptr);
+		*numused=4;
+		return tmp;
+	case DW_EH_PE_sdata8:
+		tmp=(void *)(*(long long *)ptr);
+		*numused=8;
+		return tmp;
+	default:
+		fprintf(stderr,"read_FDE_encoded() unexpected encoding %x\n",encoding);
+	}
+}

@@ -16,6 +16,7 @@ ProgBitsFuncRec ProgbitsInfo[] = {
 	{ ".data",checkPROGBITS_data },
 	{ ".data1",checkPROGBITS_data1 },
 	{ ".eh_frame",checkPROGBITS_eh_frame },
+	{ ".eh_frame_hdr",checkPROGBITS_eh_frame_hdr },
 	{ ".interp",checkPROGBITS_interp },
 	{ ".rodata",checkPROGBITS_rodata },
 	{ ".rodata1",checkPROGBITS_rodata1 },
@@ -55,6 +56,58 @@ if( elfchk_debug&DEBUG_SECTION_CONTENTS )
  * the GNU tools seem to reduce things to a single CIE record.
  */
 check_CIE((caddr_t)(file1->addr)+hdr1->sh_offset,hdr1->sh_size);
+
+return 0;
+}
+
+int
+checkPROGBITS_eh_frame_hdr(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+{
+EHFRMHDRImage	*frmhdrimg;
+EHFRMHDR	frmhdr;
+unsigned char	*ptr;
+unsigned int	i,numused,tmp;
+
+if( elfchk_debug&DEBUG_SECTION_CONTENTS )
+	fprintf(stderr,"checking .eh_frame_hdr %x bytes at %x\n",
+				hdr1->sh_size, hdr1->sh_offset);
+
+frmhdrimg=(EHFRMHDRImage *)((caddr_t)(file1->addr)+hdr1->sh_offset);
+dumpbytes((unsigned char *)frmhdrimg,hdr1->sh_size);
+
+frmhdr.version=frmhdrimg->version;
+frmhdr.eh_frame_ptr_enc=frmhdrimg->eh_frame_ptr_enc;
+frmhdr.fde_count_enc=frmhdrimg->fde_count_enc;
+frmhdr.table_enc=frmhdrimg->table_enc;
+ptr=(unsigned char *)frmhdrimg+sizeof(EHFRMHDRImage);
+frmhdr.eh_frame_ptr=read_FDE_encoded(ptr,frmhdr.eh_frame_ptr_enc,&numused);
+ptr+=numused;
+frmhdr.fde_count=(int)read_FDE_encoded(ptr,frmhdr.fde_count_enc,&numused);
+ptr+=numused;
+
+if( 1 || elfchk_debug&DEBUG_SECTION_CONTENTS ) {
+	fprintf(stderr,"version: 0x%2.2x\n", frmhdr.version);
+	fprintf(stderr,"eh_frame_ptr_enc: 0x%2.2x\n", frmhdr.eh_frame_ptr_enc);
+	fprintf(stderr,"fde_count_enc: 0x%2.2x\n", frmhdr.fde_count_enc);
+	fprintf(stderr,"table_enc: 0x%2.2x\n", frmhdr.table_enc);
+	fprintf(stderr,"eh_frame_ptr: %x\n",(int)frmhdr.eh_frame_ptr);
+	if( frmhdr.fde_count_enc != DW_EH_PE_omit ) {
+		fprintf(stderr,"fde_count: %x\n",frmhdr.fde_count);
+		}
+	}
+
+/* Now, decode the table, if present */
+
+dumpbytes(ptr,hdr1->sh_size-(ptr-(unsigned char *)frmhdrimg));
+
+for(i=0;i<frmhdr.fde_count;i++) {
+	tmp=(int)read_FDE_encoded(ptr,frmhdr.table_enc,&numused);
+	ptr+=numused;
+	fprintf(stderr,"[%2.2x] Initial_location: %x\t", i, tmp);
+	tmp=(int)read_FDE_encoded(ptr,frmhdr.table_enc,&numused);
+	ptr+=numused;
+	fprintf(stderr,"address: %x\n", tmp);
+	}
 
 return 0;
 }
