@@ -25,6 +25,7 @@ $select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=$lid ";
+$select.= "AND ( Istatus='Included' OR Istatus='Deprecated' ) ";
 $select.= "ORDER BY Iname,Aid ";
 
 #print $select;
@@ -55,7 +56,7 @@ close(LIB);
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
 #
-# 3) Get the list of libs, and process tem
+# 3) Get the list of libs, and process them
 #
 
 open(LIBS,">libs.c");
@@ -77,7 +78,7 @@ print MAKE "LIBOBJS = \\\n";
 $select = "SELECT DISTINCT Lid,ALrunname,Asymbol,Aname FROM Library ";
 $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
-$select.= "WHERE Lstd='Yes' ";
+$select.= "WHERE Lstd!='No' ";
 $select.= "AND Aname!='None' ";
 $select.= "ORDER BY ALrunname,Aid ";
 
@@ -94,6 +95,7 @@ for(1..$sth->numrows) {
 	$asym=$entry{'Asymbol'};
 	$libname =~ s/\./_/g;
 	$libname =~ s/-/_/g;
+	$libname =~ s/\+/x/g;
 	#$libname =~ s/\//_/g;
 	@libname = split('/',$libname);
 	$libname = pop(@libname);
