@@ -3,6 +3,7 @@
 use strict;
 use DBI;
 use Getopt::Std;
+use IO::Handle;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
@@ -135,6 +136,8 @@ $interface_q->execute or die "Couldn't execute interface query: " . DBI->errstr;
 
 my @arg_typetype;
 my @arg_type;
+my @libs_seen;
+my $fh;
 
 ### Open output files
 
@@ -211,6 +214,25 @@ FUNC: while(my ($func_name, $func_return, $func_id, $func_lib) = $interface_q->f
 	{
 		print NOTTFILE $func_name . "\n";
 		next FUNC;
+	}
+
+	# If we are going to wrap this function, we have to list it in the proper
+	# gen.mk file.
+	
+	if(!contains($func_lib, @libs_seen))
+	{
+		$libs_seen[@libs_seen] = $func_lib;
+		$fh = IO::Handle->new();
+		open($fh, "> " . $func_lib . "/gen.mk" );
+		print $fh "GENFUNCS = \\\n";
+		print $fh $func_name . ".o ";
+		close $fh;
+	}
+	else
+	{
+		open($fh, ">> " . $func_lib . "/gen.mk");
+		print $fh "\\\n".$func_name.".o ";
+		close $fh;
 	}
 	
 	# Create .c file for interface $func_name.
