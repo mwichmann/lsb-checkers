@@ -472,6 +472,7 @@ FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fet
 
 	# Write interface's .c file
 	write_int_header($interface_file, $type_string, $func_id);
+	print $interface_file "#undef " . $func_name . "\n";
 	write_int_declaration($interface_file, $func_id, $func_name, $type_string, 0);
 	write_int_wrapper($interface_file, $func_id, $func_name, $type_string, 0);
 	write_int_declaration($interface_file, $func_id, $func_name, $type_string, 1);
