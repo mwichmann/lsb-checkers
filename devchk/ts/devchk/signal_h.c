@@ -735,6 +735,25 @@ Msg("Find size of sig_atomic_t (9092)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(stack_t,12, 9314, 2)
+#elif __ia64__
+CheckTypeSize(stack_t,24, 9314, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(stack_t,12, 9314, 6)
+#elif __s390x__
+CheckTypeSize(stack_t,24, 9314, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(stack_t,12, 9314, 10)
+#elif __x86_64__
+CheckTypeSize(stack_t,24, 9314, 11)
+#elif __powerpc64__
+CheckTypeSize(stack_t,24, 9314, 9)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
+Msg("Find size of stack_t (9314)\n");
+#endif
+
+#if __i386__
 CheckTypeSize(struct sigstack,8, 9315, 2)
 CheckMemberSize(struct sigstack,ss_sp,4,2,34194)
 CheckOffset(struct sigstack,ss_sp,0,2,34194)
@@ -772,8 +791,52 @@ Msg("Find size of sigstack (9315)\n");
 #if __powerpc64__
 #endif
 
+#if __s390x__
+CheckTypeSize(_psw_t,16, 10571, 12)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(_psw_t,8, 10581, 10)
+#endif
+
 #if __s390__ && !__s390x__
 CheckTypeSize(_s390_regs_common,136, 10821, 10)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(struct pt_regs,352, 10823, 9)
+CheckMemberSize(struct pt_regs,gpr,256,9,40589)
+CheckOffset(struct pt_regs,gpr,0,9,40589)
+CheckMemberSize(struct pt_regs,nip,8,9,40590)
+CheckOffset(struct pt_regs,nip,256,9,40590)
+CheckMemberSize(struct pt_regs,msr,8,9,40591)
+CheckOffset(struct pt_regs,msr,264,9,40591)
+CheckMemberSize(struct pt_regs,orig_gpr3,8,9,40592)
+CheckOffset(struct pt_regs,orig_gpr3,272,9,40592)
+CheckMemberSize(struct pt_regs,link,8,9,40594)
+CheckOffset(struct pt_regs,link,288,9,40594)
+CheckMemberSize(struct pt_regs,xer,8,9,40595)
+CheckOffset(struct pt_regs,xer,296,9,40595)
+CheckMemberSize(struct pt_regs,ccr,8,9,40596)
+CheckOffset(struct pt_regs,ccr,304,9,40596)
+CheckMemberSize(struct pt_regs,softe,8,9,40597)
+CheckOffset(struct pt_regs,softe,312,9,40597)
+CheckMemberSize(struct pt_regs,trap,8,9,40598)
+CheckOffset(struct pt_regs,trap,320,9,40598)
+CheckMemberSize(struct pt_regs,dar,8,9,40599)
+CheckOffset(struct pt_regs,dar,328,9,40599)
+CheckMemberSize(struct pt_regs,dsisr,8,9,40600)
+CheckOffset(struct pt_regs,dsisr,336,9,40600)
+CheckMemberSize(struct pt_regs,result,8,9,40601)
+CheckOffset(struct pt_regs,result,344,9,40601)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(elf_gregset_t,384, 10827, 9)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(elf_fpregset_t,264, 10830, 9)
 #endif
 
 #if __s390x__
