@@ -63,7 +63,7 @@ checkPROGBITS_eh_frame(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journ
                 printf("WARNING: The program has detected an error in parsing the\n"
                        "eh_frame section. This is not a problem for certification but please\n"
                        "rerun the program with the environment variable ELFCHK_DEBUG\n"
-                       "set to 17 and email the output to lsb-test@lists.linuxbase.org.\n");
+                       "set to 17 and email the output to <lsb-test@freestandards.org>\n");
         }
 
         return 1;
