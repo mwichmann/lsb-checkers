@@ -47,17 +47,26 @@ return 1;
 int
 checkPROGBITS_eh_frame(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
-if( elfchk_debug&DEBUG_SECTION_CONTENTS )
-	fprintf(stderr,"checking .eh_frame %x bytes at %x\n",
-				hdr1->sh_size, hdr1->sh_offset);
+        int error;
+        if( elfchk_debug&DEBUG_SECTION_CONTENTS )
+                fprintf(stderr,"checking .eh_frame %x bytes at %x\n",
+                        hdr1->sh_size, hdr1->sh_offset);
 
-/*
- * We should loop over this until the entire section has been used up, but
- * the GNU tools seem to reduce things to a single CIE record.
- */
-check_CFInformation((caddr_t)(file1->addr)+hdr1->sh_offset);
+        /*
+         * We should loop over this until the entire section has been used up,
+         * but the GNU tools seem to reduce things to a single CIE record.
+         */
+        check_CFInformation((caddr_t)(file1->addr)+hdr1->sh_offset, &error);
 
-return 1;
+        if (error)
+        {
+                printf("WARNING: The program has detected an error in parsing the\n"
+                       "eh_frame section. This is not a problem for certification but please\n"
+                       "rerun the program with the environment variable ELFCHK_DEBUG\n"
+                       "set to 17 and email the output to lsb-test@lists.linuxbase.org.\n");
+        }
+
+        return 1;
 }
 
 int
