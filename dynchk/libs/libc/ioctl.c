@@ -31,9 +31,11 @@ int ioctl(int fd, unsigned long request, ...)
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value;
+	void *argp;
 	
 	va_list arg;
 	va_start(arg, request);
+	argp=va_arg(arg,void *);
 
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ioctl");
@@ -46,10 +48,10 @@ int ioctl(int fd, unsigned long request, ...)
 			__lsb_check_params=0;
 			validate_filedescriptor(fd, "ioctl");
 			validate_ioctlreq(request, "ioctl");
-			validate_RWaddress(arg, "ioctl");
+			validate_RWaddress(argp, "ioctl");
 		}
 	}
-	ret_value = funcptr(fd, request, arg);
+	ret_value = funcptr(fd, request, argp);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }
