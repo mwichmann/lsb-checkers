@@ -23,6 +23,8 @@ int pcnt=0;
 Msg("Checking data structures in setjmp.h\n");
 #endif
 
+/* No test for setjmp(env) */
+/* No test for sigsetjmp(a,b) */
 #ifdef __i386__
 CheckTypeSize(jmp_buf,156, 6962, 2)
 #elif __ia64__

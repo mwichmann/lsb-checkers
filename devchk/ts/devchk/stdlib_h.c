@@ -23,6 +23,13 @@ int pcnt=0;
 Msg("Checking data structures in stdlib.h\n");
 #endif
 
+#ifdef MB_CUR_MAX
+	CompareConstant(MB_CUR_MAX,(__ctype_get_mb_cur_max()))
+#else
+Msg( "Error: Constant not found: MB_CUR_MAX\n");
+cnt++;
+#endif
+
 #ifdef __i386__
 CheckTypeSize(__compar_fn_t,4, 9231, 2)
 #elif __ia64__

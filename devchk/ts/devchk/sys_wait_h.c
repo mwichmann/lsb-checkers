@@ -23,6 +23,27 @@ int pcnt=0;
 Msg("Checking data structures in sys/wait.h\n");
 #endif
 
+/* No test for WEXITSTATUS(status) */
+/* No test for WTERMSIG(status) */
+/* No test for WSTOPSIG(status) */
+/* No test for WIFEXITED(status) */
+/* No test for WIFSIGNALED(status) */
+/* No test for WIFSTOPPED(status) */
+#ifdef WCOREFLAG
+	CompareConstant(WCOREFLAG,0x80)
+#else
+Msg( "Error: Constant not found: WCOREFLAG\n");
+cnt++;
+#endif
+
+/* No test for WCOREDUMP(status) */
+#ifdef WNOHANG
+	CompareConstant(WNOHANG,0x00000001)
+#else
+Msg( "Error: Constant not found: WNOHANG\n");
+cnt++;
+#endif
+
 #ifdef __i386__
 CheckTypeSize(idtype_t,4, 9185, 2)
 #elif __ia64__

@@ -13,7 +13,6 @@ OBJS = hdrchk.o \
 	assert_h.o \
 	cpio_h.o \
 	curses_h.o \
-	dirent_h.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
@@ -25,6 +24,8 @@ OBJS = hdrchk.o \
 	limits_h.o \
 	locale_h.o \
 	math_h.o \
+	netdb_h.o \
+	netinet_in_h.o \
 	nl_types_h.o \
 	pthread_h.o \
 	regex_h.o \
@@ -35,10 +36,15 @@ OBJS = hdrchk.o \
 	stddef_h.o \
 	stdio_h.o \
 	stdlib_h.o \
+	sys_ioctl_h.o \
 	sys_ipc_h.o \
+	sys_mman_h.o \
+	sys_param_h.o \
+	sys_select_h.o \
 	sys_shm_h.o \
 	sys_socket_h.o \
 	sys_stat_h.o \
+	sys_time_h.o \
 	sys_types_h.o \
 	sys_wait_h.o \
 	termios_h.o \
@@ -46,6 +52,7 @@ OBJS = hdrchk.o \
 	unistd_h.o \
 	wchar_h.o \
 	wctype_h.o \
+	zlib_h.o \
 	intrinsic.o 
 
 ifdef TET_ROOT

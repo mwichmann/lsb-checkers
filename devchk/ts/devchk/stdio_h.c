@@ -25,31 +25,36 @@ Msg("Checking data structures in stdio.h\n");
 #ifdef BUFSIZ
 	CompareConstant(BUFSIZ,8192)
 #else
-Msg( "Warning: Constant not found: BUFSIZ\n");
+Msg( "Error: Constant not found: BUFSIZ\n");
+cnt++;
 #endif
 
 #ifdef EOF
 	CompareConstant(EOF,(-1))
 #else
-Msg( "Warning: Constant not found: EOF\n");
+Msg( "Error: Constant not found: EOF\n");
+cnt++;
 #endif
 
 #ifdef _IOFBF
 	CompareConstant(_IOFBF,0)
 #else
-Msg( "Warning: Constant not found: _IOFBF\n");
+Msg( "Error: Constant not found: _IOFBF\n");
+cnt++;
 #endif
 
 #ifdef _IOLBF
 	CompareConstant(_IOLBF,1)
 #else
-Msg( "Warning: Constant not found: _IOLBF\n");
+Msg( "Error: Constant not found: _IOLBF\n");
+cnt++;
 #endif
 
 #ifdef _IONBF
 	CompareConstant(_IONBF,2)
 #else
-Msg( "Warning: Constant not found: _IONBF\n");
+Msg( "Error: Constant not found: _IONBF\n");
+cnt++;
 #endif
 
 #ifdef __i386__

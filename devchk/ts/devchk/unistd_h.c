@@ -22,28 +22,53 @@ int pcnt=0;
 Msg("Checking data structures in unistd.h\n");
 #endif
 
+#ifdef SEEK_SET
+	CompareConstant(SEEK_SET,0)
+#else
+Msg( "Error: Constant not found: SEEK_SET\n");
+cnt++;
+#endif
+
+#ifdef SEEK_CUR
+	CompareConstant(SEEK_CUR,1)
+#else
+Msg( "Error: Constant not found: SEEK_CUR\n");
+cnt++;
+#endif
+
+#ifdef SEEK_END
+	CompareConstant(SEEK_END,2)
+#else
+Msg( "Error: Constant not found: SEEK_END\n");
+cnt++;
+#endif
+
 #ifdef R_OK
 	CompareConstant(R_OK,4)
 #else
-Msg( "Warning: Constant not found: R_OK\n");
+Msg( "Error: Constant not found: R_OK\n");
+cnt++;
 #endif
 
 #ifdef W_OK
 	CompareConstant(W_OK,2)
 #else
-Msg( "Warning: Constant not found: W_OK\n");
+Msg( "Error: Constant not found: W_OK\n");
+cnt++;
 #endif
 
 #ifdef X_OK
 	CompareConstant(X_OK,1)
 #else
-Msg( "Warning: Constant not found: X_OK\n");
+Msg( "Error: Constant not found: X_OK\n");
+cnt++;
 #endif
 
 #ifdef F_OK
 	CompareConstant(F_OK,0)
 #else
-Msg( "Warning: Constant not found: F_OK\n");
+Msg( "Error: Constant not found: F_OK\n");
+cnt++;
 #endif
 
 #ifdef __i386__

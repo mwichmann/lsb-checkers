@@ -25,7 +25,8 @@ Msg("Checking data structures in sys/shm.h\n");
 #ifdef SHM_RDONLY
 	CompareConstant(SHM_RDONLY,4096)
 #else
-Msg( "Warning: Constant not found: SHM_RDONLY\n");
+Msg( "Error: Constant not found: SHM_RDONLY\n");
+cnt++;
 #endif
 
 #ifdef TET_TEST

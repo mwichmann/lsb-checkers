@@ -25,115 +25,134 @@ Msg("Checking data structures in glob.h\n");
 #ifdef GLOB_ERR
 	CompareConstant(GLOB_ERR,(1<<0))
 #else
-Msg( "Warning: Constant not found: GLOB_ERR\n");
+Msg( "Error: Constant not found: GLOB_ERR\n");
+cnt++;
 #endif
 
 #ifdef GLOB_MARK
 	CompareConstant(GLOB_MARK,(1<<1))
 #else
-Msg( "Warning: Constant not found: GLOB_MARK\n");
+Msg( "Error: Constant not found: GLOB_MARK\n");
+cnt++;
 #endif
 
 #ifdef GLOB_NOSORT
 	CompareConstant(GLOB_NOSORT,(1<<2))
 #else
-Msg( "Warning: Constant not found: GLOB_NOSORT\n");
+Msg( "Error: Constant not found: GLOB_NOSORT\n");
+cnt++;
 #endif
 
 #ifdef GLOB_DOOFFS
 	CompareConstant(GLOB_DOOFFS,(1<<3))
 #else
-Msg( "Warning: Constant not found: GLOB_DOOFFS\n");
+Msg( "Error: Constant not found: GLOB_DOOFFS\n");
+cnt++;
 #endif
 
 #ifdef GLOB_NOCHECK
 	CompareConstant(GLOB_NOCHECK,(1<<4))
 #else
-Msg( "Warning: Constant not found: GLOB_NOCHECK\n");
+Msg( "Error: Constant not found: GLOB_NOCHECK\n");
+cnt++;
 #endif
 
 #ifdef GLOB_APPEND
 	CompareConstant(GLOB_APPEND,(1<<5))
 #else
-Msg( "Warning: Constant not found: GLOB_APPEND\n");
+Msg( "Error: Constant not found: GLOB_APPEND\n");
+cnt++;
 #endif
 
 #ifdef GLOB_NOESCAPE
 	CompareConstant(GLOB_NOESCAPE,(1<<6))
 #else
-Msg( "Warning: Constant not found: GLOB_NOESCAPE\n");
+Msg( "Error: Constant not found: GLOB_NOESCAPE\n");
+cnt++;
 #endif
 
 #ifdef GLOB_PERIOD
 	CompareConstant(GLOB_PERIOD,(1<<7))
 #else
-Msg( "Warning: Constant not found: GLOB_PERIOD\n");
+Msg( "Error: Constant not found: GLOB_PERIOD\n");
+cnt++;
 #endif
 
 #ifdef GLOB_MAGCHAR
 	CompareConstant(GLOB_MAGCHAR,(1<<8))
 #else
-Msg( "Warning: Constant not found: GLOB_MAGCHAR\n");
+Msg( "Error: Constant not found: GLOB_MAGCHAR\n");
+cnt++;
 #endif
 
 #ifdef GLOB_ALTDIRFUNC
 	CompareConstant(GLOB_ALTDIRFUNC,(1<<9))
 #else
-Msg( "Warning: Constant not found: GLOB_ALTDIRFUNC\n");
+Msg( "Error: Constant not found: GLOB_ALTDIRFUNC\n");
+cnt++;
 #endif
 
 #ifdef GLOB_BRACE
 	CompareConstant(GLOB_BRACE,(1<<10))
 #else
-Msg( "Warning: Constant not found: GLOB_BRACE\n");
+Msg( "Error: Constant not found: GLOB_BRACE\n");
+cnt++;
 #endif
 
 #ifdef GLOB_NOMAGIC
 	CompareConstant(GLOB_NOMAGIC,(1<<11))
 #else
-Msg( "Warning: Constant not found: GLOB_NOMAGIC\n");
+Msg( "Error: Constant not found: GLOB_NOMAGIC\n");
+cnt++;
 #endif
 
 #ifdef GLOB_TILDE
 	CompareConstant(GLOB_TILDE,(1<<12))
 #else
-Msg( "Warning: Constant not found: GLOB_TILDE\n");
+Msg( "Error: Constant not found: GLOB_TILDE\n");
+cnt++;
 #endif
 
 #ifdef GLOB_ONLYDIR
 	CompareConstant(GLOB_ONLYDIR,(1<<13))
 #else
-Msg( "Warning: Constant not found: GLOB_ONLYDIR\n");
+Msg( "Error: Constant not found: GLOB_ONLYDIR\n");
+cnt++;
 #endif
 
 #ifdef GLOB_TILDE_CHECK
 	CompareConstant(GLOB_TILDE_CHECK,(1<<14))
 #else
-Msg( "Warning: Constant not found: GLOB_TILDE_CHECK\n");
+Msg( "Error: Constant not found: GLOB_TILDE_CHECK\n");
+cnt++;
 #endif
 
 #ifdef GLOB_NOSPACE
 	CompareConstant(GLOB_NOSPACE,1)
 #else
-Msg( "Warning: Constant not found: GLOB_NOSPACE\n");
+Msg( "Error: Constant not found: GLOB_NOSPACE\n");
+cnt++;
 #endif
 
 #ifdef GLOB_ABORTED
 	CompareConstant(GLOB_ABORTED,2)
 #else
-Msg( "Warning: Constant not found: GLOB_ABORTED\n");
+Msg( "Error: Constant not found: GLOB_ABORTED\n");
+cnt++;
 #endif
 
 #ifdef GLOB_NOMATCH
 	CompareConstant(GLOB_NOMATCH,3)
 #else
-Msg( "Warning: Constant not found: GLOB_NOMATCH\n");
+Msg( "Error: Constant not found: GLOB_NOMATCH\n");
+cnt++;
 #endif
 
 #ifdef GLOB_NOSYS
 	CompareConstant(GLOB_NOSYS,4)
 #else
-Msg( "Warning: Constant not found: GLOB_NOSYS\n");
+Msg( "Error: Constant not found: GLOB_NOSYS\n");
+cnt++;
 #endif
 
 #ifdef TET_TEST
