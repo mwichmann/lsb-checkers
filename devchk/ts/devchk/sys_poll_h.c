@@ -130,6 +130,25 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
 Msg("Find size of pollfd (9913)\n");
 #endif
 
+#if __i386__
+CheckTypeSize(nfds_t,4, 10978, 2)
+#elif __ia64__
+CheckTypeSize(nfds_t,8, 10978, 3)
+#elif __powerpc64__
+CheckTypeSize(nfds_t,8, 10978, 9)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(nfds_t,4, 10978, 6)
+#elif __s390x__
+CheckTypeSize(nfds_t,8, 10978, 12)
+#elif __x86_64__
+CheckTypeSize(nfds_t,8, 10978, 11)
+#elif __s390__ && !__s390x__
+CheckTypeSize(nfds_t,4, 10978, 10)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10978,0);
+Msg("Find size of nfds_t (10978)\n");
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
