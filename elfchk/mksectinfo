@@ -11,7 +11,7 @@ $select = "SELECT DISTINCT * FROM ElfSections,SectionTypes ";
 $select.= "WHERE EStype=STid ";
 $select.= "ORDER BY ESname ";
 
-#print $select;
+#print "$select\n";
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 

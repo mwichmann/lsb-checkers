@@ -2,7 +2,7 @@ CFLAGS=-g
 
 OBJS=dynsyms.o dynamic.o dyntags.o dtneeded.o elfchk.o hdr.o proghdr.o \
 	sectinfo.o sections.o util.o
-GENSRCS=dynsyms.c dtneeded.c sectinfo.c dyntags.c
+GENSRCS=dynsyms.c dtneeded.c sectinfo.c dyntags.c dynsyms.c.chk
 LIB=libelfchk.a
 
 all: $(LIB) test
@@ -15,8 +15,14 @@ $(LIB): $(OBJS)
 test: test.c $(LIB)
 	cc -o test $(CFLAGS) test.c $(LIB)
 
+check: dynsyms.c dynsyms.c.chk
+	diff dynsyms.c dynsyms.c.chk
+
 dynsyms.c: ./mkfunclist
 	./mkfunclist >dynsyms.c
+
+dynsyms.c.chk: ./mkfunclist
+	./mkfunclist2 >dynsyms.c.chk
 
 dyntags.c: ./mkdyntags
 	./mkdyntags >dyntags.c
