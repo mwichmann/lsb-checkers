@@ -13675,11 +13675,25 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"svc_getreqset","GLIBC_2.2"},
 #endif
-	{"svc_register","GLIBC_2.0"},
 #if __i386__
 	{"svc_register","GLIBC_2.0"},
 #endif
 #if __ia64__
+	{"svc_register","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"svc_register","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"svc_register","GLIBC_2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"svc_register","GLIBC_2.2"},
+#endif
+#if __x86_64__
+	{"svc_register","GLIBC_2.2"},
+#endif
+#if __s390x__
 	{"svc_register","GLIBC_2.2"},
 #endif
 #if __i386__
@@ -13688,11 +13702,25 @@ struct versym libc_so_6[] = {
 #if __ia64__
 	{"svc_run","GLIBC_2.2"},
 #endif
-	{"svc_sendreply","GLIBC_2.0"},
 #if __i386__
 	{"svc_sendreply","GLIBC_2.0"},
 #endif
 #if __ia64__
+	{"svc_sendreply","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"svc_sendreply","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"svc_sendreply","GLIBC_2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"svc_sendreply","GLIBC_2.2"},
+#endif
+#if __x86_64__
+	{"svc_sendreply","GLIBC_2.2"},
+#endif
+#if __s390x__
 	{"svc_sendreply","GLIBC_2.2"},
 #endif
 #if __i386__
@@ -13842,18 +13870,46 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"svcerr_weakauth","GLIBC_2.2"},
 #endif
-	{"svctcp_create","GLIBC_2.0"},
 #if __i386__
 	{"svctcp_create","GLIBC_2.0"},
 #endif
 #if __ia64__
 	{"svctcp_create","GLIBC_2.2"},
 #endif
-	{"svcudp_create","GLIBC_2.0"},
+#if __powerpc__ && !__powerpc64__
+	{"svctcp_create","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"svctcp_create","GLIBC_2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"svctcp_create","GLIBC_2.2"},
+#endif
+#if __x86_64__
+	{"svctcp_create","GLIBC_2.2"},
+#endif
+#if __s390x__
+	{"svctcp_create","GLIBC_2.2"},
+#endif
 #if __i386__
 	{"svcudp_create","GLIBC_2.0"},
 #endif
 #if __ia64__
+	{"svcudp_create","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"svcudp_create","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"svcudp_create","GLIBC_2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"svcudp_create","GLIBC_2.2"},
+#endif
+#if __x86_64__
+	{"svcudp_create","GLIBC_2.2"},
+#endif
+#if __s390x__
 	{"svcudp_create","GLIBC_2.2"},
 #endif
 #if __i386__
