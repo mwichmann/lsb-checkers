@@ -25,6 +25,7 @@ OBJS = hdrchk.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
+	fenv_h.o \
 	fmtmsg_h.o \
 	fnmatch_h.o \
 	ftw_h.o \

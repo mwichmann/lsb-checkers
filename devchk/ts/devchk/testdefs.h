@@ -24,6 +24,7 @@ extern void dirent_h();
 extern void dlfcn_h();
 extern void errno_h();
 extern void fcntl_h();
+extern void fenv_h();
 extern void fmtmsg_h();
 extern void fnmatch_h();
 extern void ftw_h();
