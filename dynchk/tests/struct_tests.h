@@ -234,7 +234,6 @@ extern int validate_struct_sigcontext(struct sigcontext  * input, char *name);
 #if defined(__s390x__)
 extern int validate_struct_sigcontext(struct sigcontext  * input, char *name);
 #endif /*defined(__s390x__)*/
-extern int validate_struct_sigstack(struct sigstack  * input, char *name);
 extern int validate_struct_sockaddr(struct sockaddr  * input, char *name);
 extern int validate_struct_sockaddr_in(struct sockaddr_in  * input, char *name);
 extern int validate_struct_sockaddr_in6(struct sockaddr_in6  * input, char *name);

@@ -71,7 +71,6 @@ struct/validate_struct_servent.o	\
 struct/validate_struct_shmid_ds.o	\
 struct/validate_struct_sigaction.o	\
 struct/validate_struct_sigcontext.o	\
-struct/validate_struct_sigstack.o	\
 struct/validate_struct_sockaddr.o	\
 struct/validate_struct_sockaddr_in.o	\
 struct/validate_struct_sockaddr_in6.o	\
