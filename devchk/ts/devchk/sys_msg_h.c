@@ -37,26 +37,26 @@ cnt++;
 CheckTypeSize(msgqnum_t,4, 10213, 2)
 #elif __powerpc64__
 CheckTypeSize(msgqnum_t,8, 10213, 9)
-#elif __s390__
-CheckTypeSize(msgqnum_t,4, 10213, 10)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(msgqnum_t,4, 10213, 6)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10213,0);
-Msg("Find size of msgqnum_t (10213)\n");
 #endif
 
-#if __powerpc64__
-CheckTypeSize(msglen_t,8, 10214, 9)
-#elif __i386__
+#if __i386__
 CheckTypeSize(msglen_t,4, 10214, 2)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(msglen_t,4, 10214, 6)
-#elif __s390__
-CheckTypeSize(msglen_t,4, 10214, 10)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10214,0);
-Msg("Find size of msglen_t (10214)\n");
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(msglen_t,4, 10489, 6)
+#endif
+
+#if __s390__
+CheckTypeSize(msglen_t,4, 10490, 10)
+#endif
+
+#if __s390__
+CheckTypeSize(msgqnum_t,4, 10491, 10)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(msgqnum_t,4, 10492, 6)
 #endif
 
 #if __i386__
@@ -147,16 +147,18 @@ CheckOffset(struct msqid_ds,msg_lrpid,88,6,34753)
 
 #if __s390__
 CheckTypeSize(struct msqid_ds,88, 10406, 10)
+CheckMemberSize(struct msqid_ds,msg_perm,48,10,34754)
+CheckOffset(struct msqid_ds,msg_perm,0,10,34754)
 CheckMemberSize(struct msqid_ds,msg_stime,0,10,34755)
 CheckOffset(struct msqid_ds,msg_stime,36,10,34755)
 CheckMemberSize(struct msqid_ds,msg_rtime,0,10,34756)
 CheckOffset(struct msqid_ds,msg_rtime,44,10,34756)
 CheckMemberSize(struct msqid_ds,__unused1,0,10,34758)
 CheckOffset(struct msqid_ds,__unused1,40,10,34758)
-CheckMemberSize(struct msqid_ds,msg_ctime,0,10,34757)
-CheckOffset(struct msqid_ds,msg_ctime,52,10,34757)
 CheckMemberSize(struct msqid_ds,__unused2,0,10,34759)
 CheckOffset(struct msqid_ds,__unused2,48,10,34759)
+CheckMemberSize(struct msqid_ds,msg_ctime,0,10,34757)
+CheckOffset(struct msqid_ds,msg_ctime,52,10,34757)
 CheckMemberSize(struct msqid_ds,__unused3,0,10,34760)
 CheckOffset(struct msqid_ds,__unused3,56,10,34760)
 CheckMemberSize(struct msqid_ds,__msg_cbytes,0,10,34761)
