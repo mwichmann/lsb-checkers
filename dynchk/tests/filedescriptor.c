@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include "../libs/lsb_funcs.h"
 
 void validate_filedescriptor(const int fd, const char *name)
 {

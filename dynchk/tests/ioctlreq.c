@@ -3,6 +3,7 @@
 #include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <net/if.h>
+#include "../libs/lsb_funcs.h"
 
 void validate_ioctlreq(const int req, const char *name)
 {
