@@ -12,6 +12,7 @@ struct DynamicInfo DynamicInfo[] = {
 	{"DT_FINI",DT_FINI,checkDT_FINI},
 	{"DT_FINI_ARRAY",DT_FINI_ARRAY,checkDT_FINI_ARRAY},
 	{"DT_FINI_ARRAYSZ",DT_FINI_ARRAYSZ,checkDT_FINI_ARRAYSZ},
+	{"DT_FLAGS_1",DT_FLAGS_1,checkDT_FLAGS_1},
 	{"DT_HASH",DT_HASH,checkDT_HASH},
 	{"DT_HIOS",DT_HIOS,checkDT_HIOS},
 	{"DT_HIPROC",DT_HIPROC,checkDT_HIPROC},
@@ -19,6 +20,9 @@ struct DynamicInfo DynamicInfo[] = {
 	{"DT_INIT_ARRAY",DT_INIT_ARRAY,checkDT_INIT_ARRAY},
 	{"DT_INIT_ARRAYSZ",DT_INIT_ARRAYSZ,checkDT_INIT_ARRAYSZ},
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
+#if __powerpc64__
+	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
+#endif /* __powerpc64__ */
 	{"DT_LOOS",DT_LOOS,checkDT_LOOS},
 	{"DT_LOPROC",DT_LOPROC,checkDT_LOPROC},
 	{"DT_NEEDED",DT_NEEDED,checkDT_NEEDED},
@@ -27,10 +31,20 @@ struct DynamicInfo DynamicInfo[] = {
 #if __i386__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* __i386__ */
+#if __ia64__
+	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
+#endif /* __ia64__ */
+#if __powerpc64__
+	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
+#endif /* __powerpc64__ */
 	{"DT_PLTREL",DT_PLTREL,checkDT_PLTREL},
 	{"DT_PLTRELSZ",DT_PLTRELSZ,checkDT_PLTRELSZ},
+	{"DT_POSFLAG_1",DT_POSFLAG_1,checkDT_POSFLAG_1},
 	{"DT_REL",DT_REL,checkDT_REL},
 	{"DT_RELA",DT_RELA,checkDT_RELA},
+#if __ia64__
+	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
+#endif /* __ia64__ */
 	{"DT_RELAENT",DT_RELAENT,checkDT_RELAENT},
 	{"DT_RELASZ",DT_RELASZ,checkDT_RELASZ},
 	{"DT_RELCOUNT",DT_RELCOUNT,checkDT_RELCOUNT},
