@@ -10,7 +10,7 @@
 #include "check_file.h"
 #include "symbols.h"
 
-ElfFile * check_file(char *filename, struct tetj_handle *journal,
+void check_file(char *filename, struct tetj_handle *journal,
                 Elf_type isLib)
 {
 #define TMP_STRING_SIZE (PATH_MAX+20)
@@ -50,6 +50,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
              filename);
     perror(tmp_string);
     tetj_add_controller_error(journal, tmp_string);
+	free(elffile);
     exit(1);
   }
   snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
@@ -94,7 +95,8 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
       }
   
   }
-  return elffile;
+  free (elffile);
+  return ;
 }
 
 void check_lib(char *filename, struct tetj_handle *journal, Elf_type isLib)
