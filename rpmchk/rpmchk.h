@@ -48,7 +48,7 @@ typedef struct rpmlead {
 #if __powerpc64__
 #define RPMARCH 0x0010
 #endif
-#if __s390__
+#if __s390__ && !__s390x__
 #define RPMARCH 0x000E
 #endif
 #if __s390x__
