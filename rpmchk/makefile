@@ -1,6 +1,6 @@
 CFLAGS=-g -Wall
 
-OBJS=archive.o hdr.o idxtag.o lead.o rpmchk.o util.o
+OBJS=archive.o hdr.o idxtag.o lead.o rpmchk.o util.o vals.o
 GENSRCS=
 LIBS= ../tetj/libtetj.a
 LIB=librpmchk.a
