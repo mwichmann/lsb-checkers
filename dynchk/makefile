@@ -45,6 +45,11 @@ lsbdynchk: lsbdynchk.sed
 	   sed -e "s#@LIBDIR@#`pwd`#" <lsbdynchk.sed >lsbdynchk; \
 	fi
 
+gensrc:
+	cd libs && make gensrc
+	cd tests && make gensrc
+
+
 test:
 
 install:
