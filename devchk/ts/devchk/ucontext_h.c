@@ -32,9 +32,9 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for _SC_GR0_OFFSET (5031) in db\n");
+Msg( "No definition for _SC_GR0_OFFSET (5031, int) in db\n");
 #ifdef _SC_GR0_OFFSET
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5031,%s)\n", architecture, _SC_GR0_OFFSET);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5031,%d)\n", architecture, _SC_GR0_OFFSET);
 #endif
 #endif
 #ifdef __powerpc__
@@ -54,9 +54,9 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for NGREG (4929) in db\n");
+Msg( "No definition for NGREG (4929, int) in db\n");
 #ifdef NGREG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4929,%s)\n", architecture, NGREG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4929,%d)\n", architecture, NGREG);
 #endif
 #endif
 #ifdef __i386__

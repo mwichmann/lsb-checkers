@@ -186,9 +186,9 @@ sub writetest($$)
 	    else
 	    {
 		print TESTS "#else\n";
-		print TESTS "Msg( \"No definition for $cname_save ($cid_save) in db\\n\");\n";
+		print TESTS "Msg( \"No definition for $cname_save ($cid_save, $type_save) in db\\n\");\n";
                 print TESTS "#ifdef $cname_save\n";
-  		if ($ctype_save eq 'int')
+  		if ($type_save eq 'int')
   		{
   		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%d)\\n\", architecture, $cname_save);\n";
   		}
