@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <curses.h>
-#include <stdarg.h>
 #undef vw_printw
 static int(*funcptr) (WINDOW * , const char * , va_list ) = 0;
 

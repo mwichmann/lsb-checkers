@@ -3,8 +3,8 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
-#include <sys/types.h>
 #include <stdio.h>
+#include <sys/types.h>
 #undef fseeko64
 static int(*funcptr) (FILE * , loff_t , int ) = 0;
 

@@ -3,8 +3,8 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
-#include <sched.h>
 #include <sys/types.h>
+#include <sched.h>
 #undef sched_setparam
 static int(*funcptr) (pid_t , const struct sched_param * ) = 0;
 

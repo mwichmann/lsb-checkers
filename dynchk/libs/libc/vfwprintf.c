@@ -5,7 +5,6 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <stddef.h>
-#include <stdarg.h>
 #include <wchar.h>
 #undef vfwprintf
 static int(*funcptr) (FILE * , const wchar_t * , va_list ) = 0;

@@ -3,8 +3,8 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
-#include <regex.h>
 #include <stddef.h>
+#include <regex.h>
 #undef regexec
 static int(*funcptr) (const regex_t * , const char * , size_t , regmatch_t [], int ) = 0;
 

@@ -1,5 +1,3 @@
-# __sigsetjmp.o \
-
 GEN_FUNCS = \
 _Exit.o \
 __assert_fail.o \
@@ -8,6 +6,7 @@ __ctype_get_mb_cur_max.o \
 __ctype_tolower_loc.o \
 __ctype_toupper_loc.o \
 __errno_location.o \
+__fpending.o \
 __fxstat.o \
 __fxstat64.o \
 __getpagesize.o \
@@ -195,7 +194,6 @@ getchar_unlocked.o \
 getcontext.o \
 getcwd.o \
 getdate.o \
-getdomainname.o \
 getegid.o \
 getenv.o \
 geteuid.o \
@@ -270,6 +268,10 @@ htons.o \
 iconv.o \
 iconv_close.o \
 iconv_open.o \
+if_freenameindex.o \
+if_indextoname.o \
+if_nameindex.o \
+if_nametoindex.o \
 imaxabs.o \
 imaxdiv.o \
 index.o \
@@ -412,7 +414,6 @@ raise.o \
 rand.o \
 rand_r.o \
 random.o \
-random_r.o \
 read.o \
 readdir.o \
 readdir64.o \
@@ -454,14 +455,12 @@ sendto.o \
 setbuf.o \
 setbuffer.o \
 setcontext.o \
-setdomainname.o \
 setegid.o \
 setenv.o \
 seteuid.o \
 setgid.o \
 setgrent.o \
 setgroups.o \
-sethostid.o \
 sethostname.o \
 setitimer.o \
 setkey.o \
@@ -494,11 +493,9 @@ sigaction.o \
 sigaddset.o \
 sigaltstack.o \
 sigandset.o \
-sigblock.o \
 sigdelset.o \
 sigemptyset.o \
 sigfillset.o \
-siggetmask.o \
 sighold.o \
 sigignore.o \
 siginterrupt.o \
@@ -520,6 +517,7 @@ sigtimedwait.o \
 sigwait.o \
 sigwaitinfo.o \
 sleep.o \
+sockatmark.o \
 socket.o \
 socketpair.o \
 srand.o \
@@ -541,7 +539,6 @@ strcspn.o \
 strdup.o \
 strerror.o \
 strerror_r.o \
-strfry.o \
 strftime.o \
 strlen.o \
 strncasecmp.o \
@@ -570,7 +567,6 @@ strtoul.o \
 strtoull.o \
 strtoumax.o \
 strtouq.o \
-strverscmp.o \
 strxfrm.o \
 svc_getreqset.o \
 svc_register.o \
@@ -653,7 +649,7 @@ vsyslog.o \
 vwprintf.o \
 vwscanf.o \
 wait.o \
-wait3.o \
+wait4.o \
 waitpid.o \
 wcpcpy.o \
 wcpncpy.o \

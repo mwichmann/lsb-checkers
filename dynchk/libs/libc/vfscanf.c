@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <stdio.h>
-#include <stdarg.h>
 #undef vfscanf
 static int(*funcptr) (FILE * , const char * , va_list ) = 0;
 

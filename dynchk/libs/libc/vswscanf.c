@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <stddef.h>
-#include <stdarg.h>
 #include <wchar.h>
 #undef vswscanf
 static int(*funcptr) (const wchar_t * , const wchar_t * , va_list ) = 0;

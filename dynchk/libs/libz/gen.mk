@@ -2,8 +2,10 @@ GEN_FUNCS = \
 adler32.o \
 compress.o \
 compress2.o \
+compressBound.o \
 crc32.o \
 deflate.o \
+deflateBound.o \
 deflateCopy.o \
 deflateEnd.o \
 deflateInit2_.o \
@@ -37,4 +39,5 @@ inflateSetDictionary.o \
 inflateSync.o \
 inflateSyncPoint.o \
 uncompress.o \
-zError.o 
+zError.o \
+zlibVersion.o 

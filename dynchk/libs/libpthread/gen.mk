@@ -6,12 +6,14 @@ pthread_attr_destroy.o \
 pthread_attr_getdetachstate.o \
 pthread_attr_getguardsize.o \
 pthread_attr_getschedparam.o \
+pthread_attr_getstack.o \
 pthread_attr_getstackaddr.o \
 pthread_attr_getstacksize.o \
 pthread_attr_init.o \
 pthread_attr_setdetachstate.o \
 pthread_attr_setguardsize.o \
 pthread_attr_setschedparam.o \
+pthread_attr_setstack.o \
 pthread_attr_setstackaddr.o \
 pthread_attr_setstacksize.o \
 pthread_cancel.o \
@@ -29,6 +31,7 @@ pthread_create.o \
 pthread_detach.o \
 pthread_equal.o \
 pthread_exit.o \
+pthread_getconcurrency.o \
 pthread_getspecific.o \
 pthread_join.o \
 pthread_key_create.o \

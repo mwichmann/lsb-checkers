@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <stddef.h>
-#include <stdarg.h>
 #include <stdio.h>
 #undef vsnprintf
 static int(*funcptr) (char * , size_t , const char * , va_list ) = 0;
