@@ -2861,6 +2861,7 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"dup2","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
+	{"duplocale","GLIBC_2.3",0,"LSB-Core",0,1},
 #if __i386__
 	{"ecvt","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
@@ -4037,6 +4038,7 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"freeaddrinfo","GLIBC_2.2",0,"LSB-Core",1,1},
 #endif
+	{"freelocale","GLIBC_2.3",0,"LSB-Core",0,1},
 #if __i386__
 	{"freopen","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
@@ -5003,6 +5005,7 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"getgrnam_r","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
+	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",0,1},
 #if __i386__
 	{"getgroups","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
@@ -8552,6 +8555,7 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"nanosleep","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
+	{"newlocale","GLIBC_2.3",0,"LSB-Core",0,1},
 #if __i386__
 	{"nftw","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
@@ -14244,6 +14248,7 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"unsetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
+	{"uselocale","GLIBC_2.3",0,"LSB-Core",0,1},
 #if __i386__
 	{"usleep","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif

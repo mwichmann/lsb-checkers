@@ -589,9 +589,6 @@ struct versym libm_so_6_1[] = {
 #if __s390x__
 	{"atanl","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
-#if __i386__
-	{"cabs","GLIBC_2.1",0,"LSB-Core",8,1},
-#endif
 #if __ia64__
 	{"cabs","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
@@ -2825,130 +2822,130 @@ struct versym libm_so_6_1[] = {
 	{"fdiml","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
-	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"feclearexcept","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"feclearexcept","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"feclearexcept","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"feclearexcept","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"feclearexcept","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"feclearexcept","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"fegetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"fegetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"fegetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"fegetenv","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"fegetenv","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fegetenv","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fegetenv","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"fegetenv","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"fegetenv","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"fegetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"fegetexceptflag","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"fegetexceptflag","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fegetexceptflag","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fegetexceptflag","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"fegetexceptflag","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"fegetexceptflag","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"fegetround","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fegetround","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"fegetround","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetround","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"fegetround","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fegetround","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"fegetround","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"fegetround","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fegetround","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fegetround","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"fegetround","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"fegetround","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"fegetround","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fegetround","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"feholdexcept","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"feholdexcept","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"feholdexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feholdexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"feholdexcept","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"feholdexcept","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"feholdexcept","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"feholdexcept","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"feholdexcept","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"feholdexcept","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"feholdexcept","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"feholdexcept","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"feholdexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feholdexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"feraiseexcept","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"feraiseexcept","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"feraiseexcept","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"feraiseexcept","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"feraiseexcept","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"feraiseexcept","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"fesetenv","GLIBC_2.2",0,"LSB-Core",0,1},
@@ -3014,46 +3011,46 @@ struct versym libm_so_6_1[] = {
 	{"fesetround","GLIBC_2.2",0,"LSB-Core",0,1},
 #endif
 #if __i386__
-	{"fetestexcept","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fetestexcept","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"fetestexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fetestexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"fetestexcept","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fetestexcept","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"fetestexcept","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"fetestexcept","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fetestexcept","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fetestexcept","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"fetestexcept","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"fetestexcept","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"fetestexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fetestexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"feupdateenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feupdateenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"feupdateenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feupdateenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"feupdateenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feupdateenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"feupdateenv","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"feupdateenv","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"feupdateenv","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"feupdateenv","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"feupdateenv","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"feupdateenv","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"feupdateenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feupdateenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"finite","GLIBC_2.0",0,"LSB-Core",4,1},
