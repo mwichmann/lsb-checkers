@@ -1,7 +1,8 @@
+LSBCMDCHK_VERSION=unofficial
 
 OBJS = cmdchk.o cmds.o
 
-CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -Wall
+CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBCMDCHK_VERSION)\" -Wall
 
 all:: cmdchk
 
@@ -12,7 +13,8 @@ cmds.c:
 	./mkcmdlist
 
 install:
-	install cmdchk $$LSBHOME/src/build/usr/bin/lsbcmdchk
+	install -d $(INSTALL_ROOT)/$(BINDIR)
+	install cmdchk $(INSTALL_ROOT)$(BINDIR)/lsbcmdchk
 
 # Distclean means will need database to rebuild
 distclean: clean
