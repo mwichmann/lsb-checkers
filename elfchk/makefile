@@ -1,4 +1,4 @@
-CFLAGS=-g -Wall
+CFLAGS=-g -Wall -I../tetj
 
 OBJS=dynsyms.o dynamic.o dyntags.o dtneeded.o elfchk.o hdr.o proghdr.o \
 	sectinfo.o sections.o symvers.o util.o proginterp.o progbits.o \
