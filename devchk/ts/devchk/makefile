@@ -104,6 +104,17 @@ else
 EXTRALIBS =
 endif
 
+ARCH=`uname -m`
+ifeq ($(ARCH), "s390x")
+XLIBDIR=/usr/X11R6/lib64
+else 
+ifeq ($(ARCH), "ppc64")
+XLIBDIR=/usr/X11R6/lib64
+else
+XLIBDIR=/usr/X11R6/lib
+endif
+endif
+
 CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include 
 
 ifdef TET_ROOT
@@ -113,7 +124,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 
+	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L$(XLIBDIR) -lXt -lX11 
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c
