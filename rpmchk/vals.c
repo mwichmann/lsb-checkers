@@ -26,6 +26,8 @@ char *validos = "linux";
 char *validdepver = "2.0";
 
 char *validdeps[] = {
+	"lsb-core-noarch",
+	"lsb-graphics-noarch",
 #if defined(__i386__)
 	"lsb-core-ia32",
 	"lsb-graphics-ia32",
