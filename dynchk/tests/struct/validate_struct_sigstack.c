@@ -5,7 +5,7 @@
 
 void validate_struct_sigstack(struct sigstack * input)
 {
-	validate_NULL_TYPETYPE(input->ss_sp);
-	validate_NULL_TYPETYPE(input->ss_onstack);
+	validate_NULL_TYPETYPE(input->void *);
+	validate_NULL_TYPETYPE(input->int);
 }
 

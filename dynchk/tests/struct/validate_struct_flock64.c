@@ -5,10 +5,10 @@
 
 void validate_struct_flock64(struct flock64 * input)
 {
-	validate_NULL_TYPETYPE(input->l_type);
-	validate_NULL_TYPETYPE(input->l_whence);
-	validate_NULL_TYPETYPE(input->l_start);
-	validate_NULL_TYPETYPE(input->l_len);
-	validate_NULL_TYPETYPE(input->l_pid);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->loff_t);
+	validate_NULL_TYPETYPE(input->loff_t);
+	validate_NULL_TYPETYPE(input->pid_t);
 }
 

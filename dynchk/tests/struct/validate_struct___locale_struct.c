@@ -5,10 +5,10 @@
 
 void validate_struct___locale_struct(struct __locale_struct * input)
 {
-	validate_NULL_TYPETYPE(input->__locales);
-	validate_NULL_TYPETYPE(input->__ctype_b);
-	validate_NULL_TYPETYPE(input->__ctype_tolower);
-	validate_NULL_TYPETYPE(input->__ctype_toupper);
-	validate_NULL_TYPETYPE(input->__names);
+	validate_NULL_TYPETYPE(input->struct locale_data *);
+	validate_NULL_TYPETYPE(input->const unsigned short *);
+	validate_NULL_TYPETYPE(input->const int *);
+	validate_NULL_TYPETYPE(input->const int *);
+	validate_NULL_TYPETYPE(input->const char *);
 }
 

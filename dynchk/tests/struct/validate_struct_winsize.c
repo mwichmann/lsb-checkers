@@ -5,9 +5,9 @@
 
 void validate_struct_winsize(struct winsize * input)
 {
-	validate_NULL_TYPETYPE(input->ws_row);
-	validate_NULL_TYPETYPE(input->ws_col);
-	validate_NULL_TYPETYPE(input->ws_xpixel);
-	validate_NULL_TYPETYPE(input->ws_ypixel);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
 }
 

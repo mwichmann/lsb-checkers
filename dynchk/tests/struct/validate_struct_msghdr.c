@@ -5,12 +5,12 @@
 
 void validate_struct_msghdr(struct msghdr * input)
 {
-	validate_NULL_TYPETYPE(input->msg_name);
-	validate_NULL_TYPETYPE(input->msg_namelen);
-	validate_NULL_TYPETYPE(input->msg_iov);
-	validate_NULL_TYPETYPE(input->msg_iovlen);
-	validate_NULL_TYPETYPE(input->msg_control);
-	validate_NULL_TYPETYPE(input->msg_controllen);
-	validate_NULL_TYPETYPE(input->msg_flags);
+	validate_NULL_TYPETYPE(input->void *);
+	validate_NULL_TYPETYPE(input->int);
+	validate_struct_iovec(input->struct iovec *);
+	validate_NULL_TYPETYPE(input->size_t);
+	validate_NULL_TYPETYPE(input->void *);
+	validate_NULL_TYPETYPE(input->size_t);
+	validate_NULL_TYPETYPE(input->unsigned int);
 }
 

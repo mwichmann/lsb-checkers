@@ -5,10 +5,10 @@
 
 void validate_struct_dirent(struct dirent * input)
 {
-	validate_NULL_TYPETYPE(input->d_ino);
-	validate_NULL_TYPETYPE(input->d_off);
-	validate_NULL_TYPETYPE(input->d_reclen);
-	validate_NULL_TYPETYPE(input->d_type);
-	validate_NULL_TYPETYPE(input->d_name);
+	validate_NULL_TYPETYPE(input->long);
+	validate_NULL_TYPETYPE(input->off_t);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned char);
+	validate_NULL_TYPETYPE(input->char);
 }
 

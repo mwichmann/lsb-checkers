@@ -5,8 +5,8 @@
 
 void validate_struct_sembuf(struct sembuf * input)
 {
-	validate_NULL_TYPETYPE(input->sem_num);
-	validate_NULL_TYPETYPE(input->sem_op);
-	validate_NULL_TYPETYPE(input->sem_flg);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
 }
 

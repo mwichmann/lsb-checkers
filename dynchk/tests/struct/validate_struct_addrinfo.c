@@ -5,13 +5,13 @@
 
 void validate_struct_addrinfo(struct addrinfo * input)
 {
-	validate_NULL_TYPETYPE(input->ai_flags);
-	validate_NULL_TYPETYPE(input->ai_family);
-	validate_NULL_TYPETYPE(input->ai_socktype);
-	validate_NULL_TYPETYPE(input->ai_protocol);
-	validate_NULL_TYPETYPE(input->ai_addrlen);
-	validate_NULL_TYPETYPE(input->ai_addr);
-	validate_NULL_TYPETYPE(input->ai_canonname);
-	validate_NULL_TYPETYPE(input->ai_next);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->socklen_t);
+	validate_struct_sockaddr(input->struct sockaddr *);
+	validate_NULL_TYPETYPE(input->char *);
+	validate_struct_addrinfo(input->struct addrinfo *);
 }
 

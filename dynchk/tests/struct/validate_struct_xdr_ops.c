@@ -5,15 +5,15 @@
 
 void validate_struct_xdr_ops(struct xdr_ops * input)
 {
-	validate_NULL_TYPETYPE(input->x_getlong);
-	validate_NULL_TYPETYPE(input->x_putlong);
-	validate_NULL_TYPETYPE(input->x_getbytes);
-	validate_NULL_TYPETYPE(input->x_putbytes);
-	validate_NULL_TYPETYPE(input->x_getpostn);
-	validate_NULL_TYPETYPE(input->x_setpostn);
-	validate_NULL_TYPETYPE(input->x_inline);
-	validate_NULL_TYPETYPE(input->x_destroy);
-	validate_NULL_TYPETYPE(input->x_getint32);
-	validate_NULL_TYPETYPE(input->x_putint32);
+	validate_NULL_TYPETYPE(input->bool_t(*x_getlong)(long *struct XDR *));
+	validate_NULL_TYPETYPE(input->bool_t(*x_putlong)(long *struct XDR *));
+	validate_NULL_TYPETYPE(input->bool_t(*x_getbytes)(u_intcaddr_tstruct XDR *));
+	validate_NULL_TYPETYPE(input->bool_t(*x_putbytes)(u_intchar *struct XDR *));
+	validate_NULL_TYPETYPE(input->u_int(*x_getpostn)(struct XDR *));
+	validate_NULL_TYPETYPE(input->bool_t(*x_setpostn)(u_intstruct XDR *));
+	validate_NULL_TYPETYPE(input->int32_t *(*x_inline)(intstruct XDR *));
+	validate_NULL_TYPETYPE(input->void(*x_destroy)(struct XDR *));
+	validate_NULL_TYPETYPE(input->bool_t(*x_getint32)(struct XDR *int32_t *));
+	validate_NULL_TYPETYPE(input->bool_t(*x_putint32)(struct XDR *int32_t *));
 }
 

@@ -5,7 +5,7 @@
 
 void validate_struct_itimerval(struct itimerval * input)
 {
-	validate_struct_timeval(input->it_interval);
-	validate_struct_timeval(input->it_value);
+	validate_struct_timeval(input->struct timeval);
+	validate_struct_timeval(input->struct timeval);
 }
 

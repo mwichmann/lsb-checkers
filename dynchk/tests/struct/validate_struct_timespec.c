@@ -5,7 +5,7 @@
 
 void validate_struct_timespec(struct timespec * input)
 {
-	validate_NULL_TYPETYPE(input->tv_sec);
-	validate_NULL_TYPETYPE(input->tv_nsec);
+	validate_NULL_TYPETYPE(input->time_t);
+	validate_NULL_TYPETYPE(input->long);
 }
 

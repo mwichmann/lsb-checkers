@@ -5,6 +5,6 @@
 
 void validate_struct_internal_state(struct internal_state * input)
 {
-	validate_NULL_TYPETYPE(input->dummy);
+	validate_NULL_TYPETYPE(input->int);
 }
 

@@ -5,10 +5,10 @@
 
 void validate_struct_sockaddr_in6(struct sockaddr_in6 * input)
 {
-	validate_NULL_TYPETYPE(input->sin6_family);
-	validate_NULL_TYPETYPE(input->sin6_port);
-	validate_NULL_TYPETYPE(input->sin6_flowinfo);
-	validate_struct_in6_addr(input->sin6_addr);
-	validate_NULL_TYPETYPE(input->sin6_scope_id);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->uint16_t);
+	validate_NULL_TYPETYPE(input->uint32_t);
+	validate_struct_in6_addr(input->struct in6_addr);
+	validate_NULL_TYPETYPE(input->uint32_t);
 }
 

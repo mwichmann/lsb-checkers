@@ -5,9 +5,9 @@
 
 void validate_struct_option(struct option * input)
 {
-	validate_NULL_TYPETYPE(input->name);
-	validate_NULL_TYPETYPE(input->has_arg);
-	validate_NULL_TYPETYPE(input->flag);
-	validate_NULL_TYPETYPE(input->val);
+	validate_NULL_TYPETYPE(input->char *);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int *);
+	validate_NULL_TYPETYPE(input->int);
 }
 

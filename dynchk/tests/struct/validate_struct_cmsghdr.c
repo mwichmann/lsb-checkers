@@ -5,8 +5,8 @@
 
 void validate_struct_cmsghdr(struct cmsghdr * input)
 {
-	validate_NULL_TYPETYPE(input->cmsg_len);
-	validate_NULL_TYPETYPE(input->cmsg_level);
-	validate_NULL_TYPETYPE(input->cmsg_type);
+	validate_NULL_TYPETYPE(input->size_t);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
 }
 

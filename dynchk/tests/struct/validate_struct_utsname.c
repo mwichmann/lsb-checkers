@@ -5,11 +5,11 @@
 
 void validate_struct_utsname(struct utsname * input)
 {
-	validate_NULL_TYPETYPE(input->sysname);
-	validate_NULL_TYPETYPE(input->nodename);
-	validate_NULL_TYPETYPE(input->release);
-	validate_NULL_TYPETYPE(input->version);
-	validate_NULL_TYPETYPE(input->machine);
-	validate_NULL_TYPETYPE(input->domainname);
+	validate_NULL_TYPETYPE(input->char);
+	validate_NULL_TYPETYPE(input->char);
+	validate_NULL_TYPETYPE(input->char);
+	validate_NULL_TYPETYPE(input->char);
+	validate_NULL_TYPETYPE(input->char);
+	validate_NULL_TYPETYPE(input->char);
 }
 

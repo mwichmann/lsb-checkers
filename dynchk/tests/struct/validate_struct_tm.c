@@ -5,16 +5,16 @@
 
 void validate_struct_tm(struct tm * input)
 {
-	validate_NULL_TYPETYPE(input->tm_sec);
-	validate_NULL_TYPETYPE(input->tm_min);
-	validate_NULL_TYPETYPE(input->tm_hour);
-	validate_NULL_TYPETYPE(input->tm_mday);
-	validate_NULL_TYPETYPE(input->tm_mon);
-	validate_NULL_TYPETYPE(input->tm_year);
-	validate_NULL_TYPETYPE(input->tm_wday);
-	validate_NULL_TYPETYPE(input->tm_yday);
-	validate_NULL_TYPETYPE(input->tm_isdst);
-	validate_NULL_TYPETYPE(input->tm_gmtoff);
-	validate_NULL_TYPETYPE(input->tm_zone);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->long);
+	validate_NULL_TYPETYPE(input->char *);
 }
 

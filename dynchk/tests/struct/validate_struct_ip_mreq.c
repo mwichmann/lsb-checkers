@@ -5,7 +5,7 @@
 
 void validate_struct_ip_mreq(struct ip_mreq * input)
 {
-	validate_struct_in_addr(input->imr_multiaddr);
-	validate_struct_in_addr(input->imr_interface);
+	validate_struct_in_addr(input->struct in_addr);
+	validate_struct_in_addr(input->struct in_addr);
 }
 

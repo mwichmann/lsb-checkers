@@ -5,8 +5,8 @@
 
 void validate_struct_ifconf(struct ifconf * input)
 {
-	validate_NULL_TYPETYPE(input->ifc_len);
-	validate_NULL_TYPETYPE(input->ifc_ifcu.ifcu_buf);
-	validate_NULL_TYPETYPE(input->ifc_ifcu.ifcu_req);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->ifc_ifcu.caddr_t);
+	validate_struct_ifreq(input->ifc_ifcu.struct ifreq *);
 }
 

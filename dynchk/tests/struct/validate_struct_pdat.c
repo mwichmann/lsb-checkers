@@ -5,11 +5,11 @@
 
 void validate_struct_pdat(struct pdat * input)
 {
-	validate_NULL_TYPETYPE(input->_pad_y);
-	validate_NULL_TYPETYPE(input->_pad_x);
-	validate_NULL_TYPETYPE(input->_pad_top);
-	validate_NULL_TYPETYPE(input->_pad_left);
-	validate_NULL_TYPETYPE(input->_pad_bottom);
-	validate_NULL_TYPETYPE(input->_pad_right);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
 }
 

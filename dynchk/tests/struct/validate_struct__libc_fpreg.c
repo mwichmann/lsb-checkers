@@ -5,7 +5,7 @@
 
 void validate_struct__libc_fpreg(struct _libc_fpreg * input)
 {
-	validate_NULL_TYPETYPE(input->significand);
-	validate_NULL_TYPETYPE(input->exponent);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
 }
 

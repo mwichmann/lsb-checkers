@@ -5,8 +5,8 @@
 
 void validate_struct_in6_addr(struct in6_addr * input)
 {
-	validate_NULL_TYPETYPE(input->in6_u.u6_addr8);
-	validate_NULL_TYPETYPE(input->in6_u.u6_addr16);
-	validate_NULL_TYPETYPE(input->in6_u.u6_addr32);
+	validate_NULL_TYPETYPE(input->in6_u.uint8_t);
+	validate_NULL_TYPETYPE(input->in6_u.uint16_t);
+	validate_NULL_TYPETYPE(input->in6_u.uint32_t);
 }
 

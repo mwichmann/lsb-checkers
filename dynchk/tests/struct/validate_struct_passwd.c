@@ -5,12 +5,12 @@
 
 void validate_struct_passwd(struct passwd * input)
 {
-	validate_NULL_TYPETYPE(input->pw_name);
-	validate_NULL_TYPETYPE(input->pw_passwd);
-	validate_NULL_TYPETYPE(input->pw_uid);
-	validate_NULL_TYPETYPE(input->pw_gid);
-	validate_NULL_TYPETYPE(input->pw_gecos);
-	validate_NULL_TYPETYPE(input->pw_dir);
-	validate_NULL_TYPETYPE(input->pw_shell);
+	validate_NULL_TYPETYPE(input->char *);
+	validate_NULL_TYPETYPE(input->char *);
+	validate_NULL_TYPETYPE(input->uid_t);
+	validate_NULL_TYPETYPE(input->gid_t);
+	validate_NULL_TYPETYPE(input->char *);
+	validate_NULL_TYPETYPE(input->char *);
+	validate_NULL_TYPETYPE(input->char *);
 }
 

@@ -5,6 +5,6 @@
 
 void validate_struct_in_addr(struct in_addr * input)
 {
-	validate_NULL_TYPETYPE(input->s_addr);
+	validate_NULL_TYPETYPE(input->uint32_t);
 }
 

@@ -5,9 +5,9 @@
 
 void validate_struct_servent(struct servent * input)
 {
-	validate_NULL_TYPETYPE(input->s_name);
-	validate_NULL_TYPETYPE(input->s_aliases);
-	validate_NULL_TYPETYPE(input->s_port);
-	validate_NULL_TYPETYPE(input->s_proto);
+	validate_NULL_TYPETYPE(input->char *);
+	validate_NULL_TYPETYPE(input->char * *);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->char *);
 }
 
