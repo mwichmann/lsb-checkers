@@ -50,7 +50,6 @@ struct SectionInfo SectionInfo[] = {
 	{".line",SHT_PROGBITS,0,checkPROGBITS},
 	{".note",SHT_NOTE,0,checkNOTE},
 	{".note.ABI-tag",SHT_NOTE,SHF_ALLOC,checkNOTE},
-	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #if defined(__i386__)
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __i386__ */
@@ -115,7 +114,7 @@ struct SectionInfo SectionInfo[] = {
 	{".sdata",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
 #if defined(__powerpc__)
-	{".sdata",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+	{".sdata",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc__ */
 #if defined(__ia64__)
 	{".sdata1",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
