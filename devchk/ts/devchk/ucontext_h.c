@@ -288,7 +288,7 @@ CheckTypeSize(mcontext_t,2656, 10328, 3)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(mcontext_t,712, 10329, 9)
+CheckTypeSize(mcontext_t,1272, 10329, 9)
 #endif
 
 #if __s390x__
@@ -416,7 +416,7 @@ CheckTypeSize(ucontext_t,936, 10804, 11)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(struct ucontext,880, 10921, 9)
+CheckTypeSize(struct ucontext,1440, 10921, 9)
 CheckMemberSize(struct ucontext,uc_flags,8,9,40666)
 CheckOffset(struct ucontext,uc_flags,0,9,40666)
 CheckMemberSize(struct ucontext,uc_link,8,9,40667)
@@ -425,12 +425,12 @@ CheckMemberSize(struct ucontext,uc_stack,24,9,40668)
 CheckOffset(struct ucontext,uc_stack,16,9,40668)
 CheckMemberSize(struct ucontext,uc_sigmask,128,9,40669)
 CheckOffset(struct ucontext,uc_sigmask,40,9,40669)
-CheckMemberSize(struct ucontext,uc_mcontext,712,9,40670)
+CheckMemberSize(struct ucontext,uc_mcontext,1272,9,40670)
 CheckOffset(struct ucontext,uc_mcontext,168,9,40670)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(ucontext_t,880, 10922, 9)
+CheckTypeSize(ucontext_t,1440, 10922, 9)
 #endif
 
 #if __powerpc__ && !__powerpc64__
