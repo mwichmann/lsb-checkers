@@ -45,3 +45,4 @@ clean:
 	rm -f *~ liblsbdynchk.so.1
 
 .PHONY: all install
+
