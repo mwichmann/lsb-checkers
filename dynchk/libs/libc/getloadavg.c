@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <math.h>
 #undef getloadavg
-static int(*funcptr) (double , int ) = 0;
+static int(*funcptr) (double[] , int ) = 0;
 
-int getloadavg (double arg0 , int arg1 )
+int getloadavg (double arg0[] , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getloadavg");
@@ -15,7 +15,7 @@ int getloadavg (double arg0 , int arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_getloadavg (double arg0 , int arg1 )
+int lsb_getloadavg (double arg0[] , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getloadavg");

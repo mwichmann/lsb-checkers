@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef getutent_r
-static struct utmp *(*funcptr) (struct utmp * , struct utmp * * ) = 0;
+static int(*funcptr) (struct utmp * , struct utmp * * ) = 0;
 
-struct utmp * getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
+int getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutent_r");
@@ -14,7 +14,7 @@ struct utmp * getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 	return funcptr(arg0, arg1);
 }
 
-struct utmp * lsb_getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
+int lsb_getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutent_r");

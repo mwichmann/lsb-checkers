@@ -4,22 +4,21 @@
 #include <dlfcn.h>
 #include <signal.h>
 #undef sigwaitinfo
-static int(*funcptr) (const sigset_t * , siginfo_t * , const struct timespec * ) = 0;
+static int(*funcptr) (const sigset_t * , siginfo_t * ) = 0;
 
-int sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 , const struct timespec * arg2 )
+int sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwaitinfo");
 	validate_NULL_TYPETYPE(arg0, "sigwaitinfo");
 	validate_NULL_TYPETYPE(arg1, "sigwaitinfo");
-	validate_NULL_TYPETYPE(arg2, "sigwaitinfo");
-	return funcptr(arg0, arg1, arg2);
+	return funcptr(arg0, arg1);
 }
 
-int lsb_sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 , const struct timespec * arg2 )
+int lsb_sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwaitinfo");
-	return funcptr(arg0, arg1, arg2);
+	return funcptr(arg0, arg1);
 }
 

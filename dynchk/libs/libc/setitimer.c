@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef setitimer
-static int(*funcptr) (int , struct itimerval * , struct itimerval * ) = 0;
+static int(*funcptr) (__itimer_which_t , const struct itimerval * , struct itimerval * ) = 0;
 
-int setitimer (int arg0 , struct itimerval * arg1 , struct itimerval * arg2 )
+int setitimer (__itimer_which_t arg0 , const struct itimerval * arg1 , struct itimerval * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setitimer");
@@ -15,7 +15,7 @@ int setitimer (int arg0 , struct itimerval * arg1 , struct itimerval * arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_setitimer (int arg0 , struct itimerval * arg1 , struct itimerval * arg2 )
+int lsb_setitimer (__itimer_which_t arg0 , const struct itimerval * arg1 , struct itimerval * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setitimer");

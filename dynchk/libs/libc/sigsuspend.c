@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef sigsuspend
-static int(*funcptr) (sigset_t * ) = 0;
+static int(*funcptr) (const sigset_t * ) = 0;
 
-int sigsuspend (sigset_t * arg0 )
+int sigsuspend (const sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigsuspend");
@@ -13,7 +13,7 @@ int sigsuspend (sigset_t * arg0 )
 	return funcptr(arg0);
 }
 
-int lsb_sigsuspend (sigset_t * arg0 )
+int lsb_sigsuspend (const sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigsuspend");

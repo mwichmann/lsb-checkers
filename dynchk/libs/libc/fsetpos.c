@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #undef fsetpos
-static int(*funcptr) (FILE * , fpos_t * ) = 0;
+static int(*funcptr) (FILE * , const fpos_t * ) = 0;
 
-int fsetpos (FILE * arg0 , fpos_t * arg1 )
+int fsetpos (FILE * arg0 , const fpos_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos");
@@ -15,7 +15,7 @@ int fsetpos (FILE * arg0 , fpos_t * arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fsetpos (FILE * arg0 , fpos_t * arg1 )
+int lsb_fsetpos (FILE * arg0 , const fpos_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos");

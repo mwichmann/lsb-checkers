@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef unsetenv
-static void(*funcptr) (const char * ) = 0;
+static int(*funcptr) (const char * ) = 0;
 
-void unsetenv (const char * arg0 )
+int unsetenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unsetenv");
@@ -13,7 +13,7 @@ void unsetenv (const char * arg0 )
 	funcptr(arg0);
 }
 
-void lsb_unsetenv (const char * arg0 )
+int lsb_unsetenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unsetenv");

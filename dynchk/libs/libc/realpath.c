@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef realpath
-static char *(*funcptr) (const char * , const char * ) = 0;
+static char *(*funcptr) (const char * , char * ) = 0;
 
-char * realpath (const char * arg0 , const char * arg1 )
+char * realpath (const char * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "realpath");
@@ -14,7 +14,7 @@ char * realpath (const char * arg0 , const char * arg1 )
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_realpath (const char * arg0 , const char * arg1 )
+char * lsb_realpath (const char * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "realpath");
