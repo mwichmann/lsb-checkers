@@ -20,9 +20,11 @@ long long __strtoll_internal (const char * arg0 , char * * arg1 , int arg2 , int
 	__lsb_output(5-__lsb_check_params, "__strtoll_internal()");
 	validate_Rdaddress( arg0, "__strtoll_internal - arg0");
 		validate_NULL_TYPETYPE(  arg0, "__strtoll_internal - arg0");
+		if( arg1 ) {
 	validate_Rdaddress( arg1, "__strtoll_internal - arg1");
-	validate_Rdaddress(* arg1, "__strtoll_internal - arg1");
-		validate_RWaddress(  arg1, "__strtoll_internal - arg1");
+	validate_Rdaddress(* arg1, "__strtoll_internal - *arg1");
+		}
+		validate_NULL_TYPETYPE(  arg1, "__strtoll_internal - arg1");
 		validate_NULL_TYPETYPE(  arg2, "__strtoll_internal - arg2");
 		validate_NULL_TYPETYPE(  arg3, "__strtoll_internal - arg3");
 	}
