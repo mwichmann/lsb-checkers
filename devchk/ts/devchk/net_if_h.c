@@ -320,6 +320,53 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10289,0);
 Msg("Find size of anon-ifc_ifcu (10289)\n");
 #endif
 
+#if __i386__
+CheckTypeSize(struct if_nameindex,8, 11015, 2)
+CheckMemberSize(struct if_nameindex,if_index,4,2,40846)
+CheckOffset(struct if_nameindex,if_index,0,2,40846)
+CheckMemberSize(struct if_nameindex,if_name,4,2,40847)
+CheckOffset(struct if_nameindex,if_name,4,2,40847)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct if_nameindex,8, 11015, 6)
+CheckMemberSize(struct if_nameindex,if_index,4,6,40846)
+CheckOffset(struct if_nameindex,if_index,0,6,40846)
+CheckMemberSize(struct if_nameindex,if_name,4,6,40847)
+CheckOffset(struct if_nameindex,if_name,4,6,40847)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct if_nameindex,8, 11015, 10)
+CheckMemberSize(struct if_nameindex,if_index,4,10,40846)
+CheckOffset(struct if_nameindex,if_index,0,10,40846)
+CheckMemberSize(struct if_nameindex,if_name,4,10,40847)
+CheckOffset(struct if_nameindex,if_name,4,10,40847)
+#elif __ia64__
+CheckTypeSize(struct if_nameindex,16, 11015, 3)
+CheckMemberSize(struct if_nameindex,if_index,4,3,40846)
+CheckOffset(struct if_nameindex,if_index,0,3,40846)
+CheckMemberSize(struct if_nameindex,if_name,8,3,40847)
+CheckOffset(struct if_nameindex,if_name,8,3,40847)
+#elif __powerpc64__
+CheckTypeSize(struct if_nameindex,16, 11015, 9)
+CheckMemberSize(struct if_nameindex,if_index,4,9,40846)
+CheckOffset(struct if_nameindex,if_index,0,9,40846)
+CheckMemberSize(struct if_nameindex,if_name,8,9,40847)
+CheckOffset(struct if_nameindex,if_name,8,9,40847)
+#elif __s390x__
+CheckTypeSize(struct if_nameindex,16, 11015, 12)
+CheckMemberSize(struct if_nameindex,if_index,4,12,40846)
+CheckOffset(struct if_nameindex,if_index,0,12,40846)
+CheckMemberSize(struct if_nameindex,if_name,8,12,40847)
+CheckOffset(struct if_nameindex,if_name,8,12,40847)
+#elif __x86_64__
+CheckTypeSize(struct if_nameindex,16, 11015, 11)
+CheckMemberSize(struct if_nameindex,if_index,4,11,40846)
+CheckOffset(struct if_nameindex,if_index,0,11,40846)
+CheckMemberSize(struct if_nameindex,if_name,8,11,40847)
+CheckOffset(struct if_nameindex,if_name,8,11,40847)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11015,0);
+Msg("Find size of if_nameindex (11015)\n");
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

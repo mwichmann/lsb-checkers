@@ -133,6 +133,68 @@ cnt++;
 
 #endif
 
+#if __powerpc64__
+#ifdef __IO_FILE_SIZE
+	CompareConstant(__IO_FILE_SIZE,216,5085,architecture)
+#else
+Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef __IO_FILE_SIZE
+	CompareConstant(__IO_FILE_SIZE,152,5085,architecture)
+#else
+Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef __IO_FILE_SIZE
+	CompareConstant(__IO_FILE_SIZE,216,5085,architecture)
+#else
+Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef __IO_FILE_SIZE
+	CompareConstant(__IO_FILE_SIZE,148,5085,architecture)
+#else
+Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef __IO_FILE_SIZE
+	CompareConstant(__IO_FILE_SIZE,216,5085,architecture)
+#else
+Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef __IO_FILE_SIZE
+	CompareConstant(__IO_FILE_SIZE,216,5085,architecture)
+#else
+Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef __IO_FILE_SIZE
+	CompareConstant(__IO_FILE_SIZE,152,5085,architecture)
+#else
+Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __IO_FILE_SIZE (5085, int) in db\n");
+#ifdef __IO_FILE_SIZE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5085,%d);\n", architecture, __IO_FILE_SIZE);
+#endif
+#endif
 #if __i386__
 CheckTypeSize(fpos_t,12, 9108, 2)
 #elif __ia64__

@@ -1203,48 +1203,6 @@ struct versym libc_so_6_1[] = {
 	{"_nl_msg_cat_cntr","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"_obstack_begin","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __ia64__
-	{"_obstack_begin","GLIBC_2.2",0,"LSB-Core",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_obstack_begin","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __powerpc64__
-	{"_obstack_begin","GLIBC_2.3",0,"LSB-Core",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_obstack_begin","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __x86_64__
-	{"_obstack_begin","GLIBC_2.2.5",0,"LSB-Core",0,1},
-#endif
-#if __s390x__
-	{"_obstack_begin","GLIBC_2.2",0,"LSB-Core",0,1},
-#endif
-#if __i386__
-	{"_obstack_newchunk","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __ia64__
-	{"_obstack_newchunk","GLIBC_2.2",0,"LSB-Core",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_obstack_newchunk","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __powerpc64__
-	{"_obstack_newchunk","GLIBC_2.3",0,"LSB-Core",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_obstack_newchunk","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __x86_64__
-	{"_obstack_newchunk","GLIBC_2.2.5",0,"LSB-Core",0,1},
-#endif
-#if __s390x__
-	{"_obstack_newchunk","GLIBC_2.2",0,"LSB-Core",0,1},
-#endif
-#if __i386__
 	{"_setjmp","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
@@ -6515,6 +6473,10 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"iconv_open","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
+	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"if_nameindex","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",0,1},
 #if __i386__
 	{"imaxabs","GLIBC_2.1.1",0,"LSB-Core",8,1},
 #endif
@@ -8866,27 +8828,6 @@ struct versym libc_so_6_1[] = {
 #endif
 #if __s390x__
 	{"ntohs","GLIBC_2.2",0,"LSB-Core",2,1},
-#endif
-#if __i386__
-	{"obstack_free","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __ia64__
-	{"obstack_free","GLIBC_2.2",0,"LSB-Core",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"obstack_free","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __powerpc64__
-	{"obstack_free","GLIBC_2.3",0,"LSB-Core",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"obstack_free","GLIBC_2.0",0,"LSB-Core",0,1},
-#endif
-#if __x86_64__
-	{"obstack_free","GLIBC_2.2.5",0,"LSB-Core",0,1},
-#endif
-#if __s390x__
-	{"obstack_free","GLIBC_2.2",0,"LSB-Core",0,1},
 #endif
 #if __i386__
 	{"open","GLIBC_2.0",0,"LSB-Core",4,1},
@@ -12038,6 +11979,7 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"snprintf","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
+	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",0,1},
 #if __i386__
 	{"socket","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
@@ -14706,6 +14648,27 @@ struct versym libc_so_6_1[] = {
 	{"utimes","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
+	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+#endif
+#if __ia64__
+	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+#endif
+#if __powerpc64__
+	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+#endif
+#if __x86_64__
+	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+#endif
+#if __s390x__
+	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+#endif
+#if __i386__
 	{"vasprintf","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
@@ -15126,25 +15089,25 @@ struct versym libc_so_6_1[] = {
 	{"wait3","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"wait4","GLIBC_2.0",0,"LSB-Core",0,1},
+	{"wait4","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"wait4","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"wait4","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"wait4","GLIBC_2.0",0,"LSB-Core",0,1},
+	{"wait4","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"wait4","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"wait4","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"wait4","GLIBC_2.0",0,"LSB-Core",0,1},
+	{"wait4","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"wait4","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"wait4","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"wait4","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"wait4","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"waitpid","GLIBC_2.0",0,"LSB-Core",4,1},
