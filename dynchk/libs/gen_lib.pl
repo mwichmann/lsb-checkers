@@ -13,7 +13,7 @@ my($DBName) = $LSBDB;
 my($DBUser) = $LSBUSER;
 my($DBPass) = $LSBDBPASSWD;
 my($DBHost) = $LSBDBHOST;
-
+my($arch_number) = 2;
 ##############################
 # Option handlers
 ##############################
@@ -21,7 +21,7 @@ my($DBHost) = $LSBDBHOST;
 my (%options);
 my($interface_WHERE_add); my($interface_FROM_add);
 
-getopts('d:u:p:o:hl:o:', \%options);
+getopts('d:u:p:o:hl:o:a:', \%options);
 
 if (exists($options{'h'}))
 {
@@ -34,6 +34,7 @@ Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
     -u username  Name of user for db access
     -p password  Password for db access
     -o hostname  Hostname for DB
+	-a arch      Target Architecture
     -l l1,l2,... Comma-delimited list of libraries
     -g g1,g2,... Comma-delimited list of libgroups
          
@@ -45,6 +46,14 @@ Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
     $0 -g "System Calls","X Windows System Interface"
     $0 -l libc,libX11
     $0 -l libm -g Curses,"String Functions"
+
+    When using the -a option, arch should be one of the following values:
+	2   IA32	3   IA64
+	4   ARM 	5   M68K
+	6   PPC32	7   Alpha
+	9   PPC64	10  S390
+	11  x86-64	12  S390X
+
 EOM
     ;
 	exit(1);
@@ -54,6 +63,10 @@ $DBUser = $options{'u'} if exists($options{'u'});
 $DBPass = $options{'p'} if exists($options{'p'});
 $DBHost = $options{'o'} if exists($options{'o'});
 $DBName = $options{'d'} if exists($options{'d'});
+$arch_number = $options{'a'} if exists($options{'a'});
+
+if($arch_number == 8 or $arch_number < 2 or $arch_number > 12)
+{  die "Invalid architecture number.  Read $0 -h\n"; }
 
 ### Parse Lib and LibGroup options - turn comma-list into query conditions.
 if (exists($options{'l'}) && exists($options{'g'}))
@@ -101,7 +114,7 @@ FROM Interface, Header, Library' . $interface_FROM_add .
    AND Istatus = "Included"
    AND Iheader = Hid
    AND Hlib = Lid
-   AND Iarch <= 2 ' . $interface_WHERE_add .
+   AND (Iarch = 1 OR IArch = '.$arch_number.') ' . $interface_WHERE_add .
 "GROUP BY Iid" ## This removes duplicate entries.
 ) or die "Couldn't prepare interface query: " . DBI ->errstr;
 
@@ -126,7 +139,7 @@ my $get_param_typetype_q2 = $dbh->prepare(
 	or die "Couldn't prepare write_param_typetype query 2: " . DBI->errstr;
  
 my $get_param_type_q = $dbh->prepare(
-'SELECT Tname, Tid, Parsize, Pconst FROM Parameter, Type
+'SELECT Tname, Tid, Pconst FROM Parameter, Type
 WHERE Ppos = ?
   AND Pint = ?
   AND Ptype = Tid'
@@ -161,8 +174,12 @@ my $write_argument_list_q = $dbh->prepare(
 	or die "Couldn't prepare write_argument list query: " . DBI->errstr;
 
 my $get_type_info_q =
-	$dbh->prepare('SELECT Tname, Ttype, Tbasetype, Tarray FROM Type WHERE Tid = ?' )
+	$dbh->prepare('SELECT Tname, Ttype, Tbasetype FROM Type WHERE Tid = ?' )
 	or die "Couldn't prepare type_info query: " . DBI->errstr;
+
+my $get_array_info_q =
+	$dbh->prepare('SELECT ATsize from Type, ArchType where Tid = ? and ATtid = Tid and ATaid = Tarch')
+	or die "Couldn't prepare array_info query: ".DBI->errstr;
 
 my $get_type_form_q = $dbh->prepare('SELECT Ttype FROM Type WHERE Tid = ?')
 	or die "Couldn't prepare type_from query: " . DBI->errstr;
@@ -216,30 +233,39 @@ sub get_type_string($)
 
 	$get_type_info_q->execute($type_id) 
 		or die "Couldn't execute type_info query: " . DBI->errstr;
-	my ($name, $form, $basetype, $array_index) = $get_type_info_q->fetchrow_array();
+	my ($name, $form, $basetype) = $get_type_info_q->fetchrow_array();
 	$get_type_info_q->finish();
 
 	$name =~ s/fptr-//;
 
+	if($basetype and $basetype!=$type_id and $form ne "Typedef")
+	{
+		($pre_type, $post_type) = get_type_string($basetype);
+	}
+	else
+	{
+		$pre_type = $name;
+		$post_type = " ";
+	}
+
 	if($form eq "Intrinsic" or $form eq "Literal" or $form eq "Typedef")
 	{
-		return ($name," ");
+		return ($pre_type,$post_type);
 	}
 	elsif($form eq "Struct")
 	{
-		return ("struct " . $name," ");
+		return ("struct " . $pre_type,$post_type);
 	}
 	elsif($form eq "Union")
 	{
-		return ("union " . $name," ");
+		return ("union " . $pre_type,$post_type);
 	}
 	elsif($form eq "Enum")
 	{
-		return ("enum ". $name," ");
+		return ("enum ". $pre_type,$post_type);
 	}
 	elsif($form eq "Pointer")
 	{
-		($pre_type,$post_type) = get_type_string($basetype);
 		return ($pre_type." *",$post_type);
 	}
 	elsif($form eq "Const")
@@ -248,20 +274,24 @@ sub get_type_string($)
 			or die "Couldn't execute type_form query: " . DBI->errstr;
 		($next_form) = $get_type_form_q->fetchrow_array();
 		$get_type_form_q->finish;
-		($pre_type,$post_type) = get_type_string($basetype);
+
 		return ($pre_type."const ",$post_type) if($next_form eq "Pointer");
 		return ("const ".$pre_type,$post_type); # (else)
 	}
 	elsif($form eq "Array")
 	{
-		($pre_type,$post_type) = get_type_string($basetype);
-		$post_type .= "[". $array_index ."]";
+		$get_array_info_q->execute($type_id)
+			or die "Couldn't execute array info query: ".DBI->errstr;
+		my $array_size;
+		unless(($array_size) = $get_array_info_q->fetchrow_array())
+		{  $array_size = ''; }
+		$post_type .= "[". $array_size ."]";
 		return ($pre_type, $post_type); 
 	}
 	elsif($form eq "FuncPtr")
 	{
-		($pre_type, $post_type) = get_type_string($basetype);
-		$pre_type.="(*".$name.")".get_funcptr_declaration($type_id);
+		$pre_type.="(*";
+		$post_type.=")".get_funcptr_declaration($type_id);
 		return ($pre_type,$post_type);
 	}
 }
@@ -281,7 +311,7 @@ sub get_funcptr_declaration($)
 		$output.=", " if ($i>0);
 		($left,$right)=get_type_string($type_id);
 		$output.=$left;
-		print "Unexpected post-name type in get_funcptr_declaration: ".$left if($right ne "");
+		print "Unexpected post-name ".$right." for type ".$type_id."\n" if($right ne "");
 	}
 	$get_funcptr_declaration_q->finish;
 	$output.=")";
@@ -314,12 +344,11 @@ sub get_param_type # ($param_pos, $param_int)
 {
 	my($param_pos, $param_int) = @_;
 	$get_param_type_q->execute($param_pos, $param_int);
-	my($type, $type_id, $parsize, $is_const) = $get_param_type_q->fetchrow_array();
+	my($type, $type_id, $is_const) = $get_param_type_q->fetchrow_array();
 
 	my($left_string, $right_string) = get_type_string($type_id);
 	$left_string = "const ". $left_string if ($is_const eq 'Y');
 
-	$right_string .= "[".$parsize."]" if($parsize and $parsize ne "NULL" and $parsize ne "0");
 	return ($left_string,$right_string);
 }
 
@@ -363,17 +392,30 @@ sub write_int_wrapper
 	print $fh ");\n}\n\n";
 }
 
+#my $simple_header_q = $dbh->prepare(
+#'select Hname from Interface, Header where Iid = ? and Hid = Iheader')
+#	or die "Couldn't prepare simple_header query: ".DBI->errstr;
 
 # write generation comments and needed headers for 'interface' to 'fh'
 sub write_int_header 
 {
 	my($fh, $left_type, $right_type, $func_name, $func_id)=@_;
+#	$simple_header_q->execute($func_id)
+#		or die "Couldn't execute simple_header query: ".DBI->errstr;
+#	my($main_header) = $simple_header_q->fetchrow_array();
 	print $fh "// Generated by gen_lib.pl\n\n";
 	print $fh "#include \"../../tests/type_tests.h\"\n";
 	print $fh "#include <dlfcn.h>\n";
+	my(@headers_found);
+	$headers_found[0] = "dlfcn.h";
 	$write_int_header_q->execute($func_id)
 		or die "Couldn't execute write_int_header query: " . DBI->errstr;
-	my(@headers_found);
+
+#	if(!contains($main_header, @headers_found))
+#	{
+#		print $fh "#include <".$main_header.">\n";
+#		$headers_found[@headers_found]=$main_header;
+#	}
 	while(my($header_group_id, $base_type) = $write_int_header_q->fetchrow_array() )
 	{
 		while($header_group_id == 0 and $base_type != 0)
