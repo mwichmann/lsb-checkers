@@ -7,8 +7,11 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Vname FROM Interface ";
-$select.= "LEFT JOIN Version ON Vid=Iversion WHERE Istatus='Included' ";
+$select = "SELECT DISTINCT Iname,Vname,Asymbol,Aname FROM Interface ";
+$select.= "LEFT JOIN ArchInt ON Iid=AIint ";
+$select.= "LEFT JOIN Architecture ON Aid=AIarch ";
+$select.= "LEFT JOIN Version ON Vid=AIversion ";
+$select.= "WHERE Istatus='Included' ";
 $select.= "ORDER BY Iname,Aid ";
 
 #print $select;
@@ -20,7 +23,15 @@ print "#include \"elfchk.h\"\n";
 print "struct versym DynSyms[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
+        if ($entry{'Aname'} && $entry{'Aname'} ne "All")
+        {
+          print "#if defined($entry{'Asymbol'})\n";
+        }
 	printf "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+        if ($entry{'Aname'} && $entry{'Aname'} ne "All")
+        {
+          print "#endif\n";
+        }
 }
 print "\t};\n";
 print "int numDynSyms = sizeof(DynSyms)/sizeof(struct versym);\n";
