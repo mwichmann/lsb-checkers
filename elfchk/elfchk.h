@@ -24,3 +24,7 @@ typedef	struct	{
 	int	numsh;
 	}	ElfFile;
 
+/* util.c */
+extern char *ElfGetStringIndex(ElfFile *file, int offset, int index);
+extern char *ElfGetString(ElfFile *file, int offset);
+extern ElfFile *OpenElfFile(char *name);
