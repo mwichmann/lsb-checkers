@@ -53,12 +53,14 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 open(LIBS,">libs.c");
 print LIBS "/* Generated file */\n";
 print LIBS "#include \"libs.h\"\n\n";
-print LIBS "extern void check_lib(char *libname, struct versym entries[]);\n";
+print LIBS "#include \"../tetj/tetj.h\"\n\n";
+print LIBS "extern void check_lib(char *libname, struct versym entries[], struct tetj_handle *journal);\n";
 
-print LIBS "void check_libs()\n{\n";
+print LIBS "void check_libs(struct tetj_handle *journal)\n{\n";
 
 open(LIBSH,">libs.h");
 print LIBSH "/* Generated file */\n";
+print LIBSH "#include \"../elfchk/elfchk.h\"\n\n";
 
 open(MAKE,">libs.mk");
 print MAKE "# Generated file #\n";
@@ -85,14 +87,14 @@ for(1..$sth->numrows) {
 	$libname = pop(@libname);
 	if( $asym != "1" ) {
 		print LIBS "#if defined($asym)\n";
-		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname);\n";
+		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname, journal);\n";
 		print LIBS "#endif\n";
 		print LIBSH "#if defined($asym)\n";
-		print LIBSH "extern char *".$libname."[];\n";
+		print LIBSH "extern struct versym ".$libname."[];\n";
 		print LIBSH "#endif\n";
 	} else {
-		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname);\n";
-		print LIBSH "extern char *".$libname."[];\n";
+		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname,journal);\n";
+		print LIBSH "extern struct versym ".$libname."[];\n";
 	}
 	print MAKE "\t$libname.o \\\n";
 	mklibsyms($libname,$entry{'Lid'});
