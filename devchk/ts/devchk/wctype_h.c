@@ -95,7 +95,7 @@ CheckTypeSize(__mbstate_t,8, 10488, 3)
 #elif __s390x__
 CheckTypeSize(__mbstate_t,8, 10488, 12)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__mbstate_t,0, 10488, 10)
+CheckTypeSize(__mbstate_t,8, 10488, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10488,0);
 Msg("Find size of __mbstate_t (10488)\n");

@@ -935,7 +935,7 @@ CheckTypeSize(stack_t,12, 9314, 6)
 #elif __s390x__
 CheckTypeSize(stack_t,24, 9314, 12)
 #elif __s390__ && !__s390x__
-CheckTypeSize(stack_t,0, 9314, 10)
+CheckTypeSize(stack_t,12, 9314, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
 Msg("Find size of stack_t (9314)\n");
