@@ -8,8 +8,5 @@ Usage:
 	./lsbdynchk `command'
 
 Problems:
+segfault.
 
-In tests/type_tests.c, the validate* functions are almost all stubs.
-Those that aren't explicitly marked (stub) are probably wrong anyway.
-I don't know exactly what each validate function should check.  So,
-we're just going to make _lots_ and _lots_ of output.
