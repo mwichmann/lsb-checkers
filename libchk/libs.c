@@ -39,6 +39,9 @@ check_lib("libc.so.6",libc_so_6, journal);
 #if __s390__ && !__s390x__
 check_lib("libc.so.6",libc_so_6, journal);
 #endif
+#if __x86_64__
+check_lib("libc.so.6",libc_so_6, journal);
+#endif
 #if __s390x__
 check_lib("libc.so.6",libc_so_6, journal);
 #endif
@@ -61,6 +64,9 @@ check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #if __s390__ && !__s390x__
 check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #endif
+#if __x86_64__
+check_lib("libcrypt.so.1",libcrypt_so_1, journal);
+#endif
 #if __s390x__
 check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #endif
@@ -80,6 +86,9 @@ check_lib("libdl.so.2",libdl_so_2, journal);
 #if __s390__ && !__s390x__
 check_lib("libdl.so.2",libdl_so_2, journal);
 #endif
+#if __x86_64__
+check_lib("libdl.so.2",libdl_so_2, journal);
+#endif
 #if __s390x__
 check_lib("libdl.so.2",libdl_so_2, journal);
 #endif
@@ -96,6 +105,9 @@ check_lib("libm.so.6",libm_so_6, journal);
 check_lib("libm.so.6",libm_so_6, journal);
 #endif
 #if __s390__ && !__s390x__
+check_lib("libm.so.6",libm_so_6, journal);
+#endif
+#if __x86_64__
 check_lib("libm.so.6",libm_so_6, journal);
 #endif
 #if __s390x__
@@ -120,6 +132,9 @@ check_lib("libpthread.so.0",libpthread_so_0, journal);
 check_lib("libpthread.so.0",libpthread_so_0, journal);
 #endif
 #if __s390__ && !__s390x__
+check_lib("libpthread.so.0",libpthread_so_0, journal);
+#endif
+#if __x86_64__
 check_lib("libpthread.so.0",libpthread_so_0, journal);
 #endif
 #if __s390x__
