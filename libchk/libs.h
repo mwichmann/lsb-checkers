@@ -189,6 +189,10 @@ extern struct versym libSM_so_6[];
 extern struct classinfo libSM_so_6_classinfo[];
 extern struct versym libstdcxx_so_5[];
 extern struct classinfo libstdcxx_so_5_classinfo[];
+#if __i386__
+extern struct versym libstdcxx_so_5[];
+extern struct classinfo libstdcxx_so_5_classinfo[];
+#endif
 extern struct versym libutil_so_1[];
 extern struct classinfo libutil_so_1_classinfo[];
 extern struct versym libX11_so_6[];
