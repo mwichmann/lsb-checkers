@@ -275,90 +275,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef AF_LOCAL
-	CompareConstant(AF_LOCAL,1,3257,architecture)
-#else
-Msg( "Error: Constant not found: AF_LOCAL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef AF_INET
 	CompareConstant(AF_INET,2,3258,architecture)
 #else
 Msg( "Error: Constant not found: AF_INET\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef AF_AX25
-	CompareConstant(AF_AX25,3,3259,architecture)
-#else
-Msg( "Error: Constant not found: AF_AX25\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef AF_IPX
-	CompareConstant(AF_IPX,4,3260,architecture)
-#else
-Msg( "Error: Constant not found: AF_IPX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef AF_APPLETALK
-	CompareConstant(AF_APPLETALK,5,3261,architecture)
-#else
-Msg( "Error: Constant not found: AF_APPLETALK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef AF_NETROM
-	CompareConstant(AF_NETROM,6,3262,architecture)
-#else
-Msg( "Error: Constant not found: AF_NETROM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef AF_BRIDGE
-	CompareConstant(AF_BRIDGE,7,3263,architecture)
-#else
-Msg( "Error: Constant not found: AF_BRIDGE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef AF_ATMPVC
-	CompareConstant(AF_ATMPVC,8,3264,architecture)
-#else
-Msg( "Error: Constant not found: AF_ATMPVC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef AF_X25
-	CompareConstant(AF_X25,9,3265,architecture)
-#else
-Msg( "Error: Constant not found: AF_X25\n");
 cnt++;
 #endif
 
