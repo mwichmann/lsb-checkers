@@ -22,7 +22,7 @@ my($generate_gen_file) = 1;
 my (%options);
 my($interface_WHERE_add); my($interface_FROM_add);
 
-getopts('hwd:u:p:o:l:o:a:i:', \%options);
+getopts('hwd:u:p:o:l:g:a:i:', \%options);
 
 if (exists($options{'h'}))
 {
