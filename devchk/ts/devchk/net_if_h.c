@@ -277,10 +277,9 @@ CheckTypeSize(struct ifconf,16, 10288, 12)
 CheckMemberSize(struct ifconf,ifc_ifcu,8,12,34469)
 CheckOffset(struct ifconf,ifc_ifcu,8,12,34469)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct ifconf,0, 10288, 10)
-Msg("Missing member data for ifconf on S390\n");
-CheckOffset(struct ifconf,ifc_len,0,10,34467)
-CheckOffset(struct ifconf,ifc_ifcu,0,10,34469)
+CheckTypeSize(struct ifconf,8, 10288, 10)
+CheckMemberSize(struct ifconf,ifc_ifcu,4,10,34469)
+CheckOffset(struct ifconf,ifc_ifcu,4,10,34469)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10288,0);
 Msg("Find size of ifconf (10288)\n");

@@ -65,7 +65,7 @@ CheckTypeSize(jmp_buf,1, 6962, 8)
 #elif __s390x__
 CheckTypeSize(jmp_buf,280, 6962, 12)
 #elif __s390__ && !__s390x__
-CheckTypeSize(jmp_buf,0, 6962, 10)
+CheckTypeSize(jmp_buf,188, 6962, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
 Msg("Find size of jmp_buf (6962)\n");

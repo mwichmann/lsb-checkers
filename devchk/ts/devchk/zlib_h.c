@@ -345,7 +345,7 @@ CheckTypeSize(const uLongf,4, 10517, 6)
 #elif __s390x__
 CheckTypeSize(const uLongf,8, 10517, 12)
 #elif __s390__ && !__s390x__
-CheckTypeSize(const uLongf,0, 10517, 10)
+CheckTypeSize(const uLongf,4, 10517, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10517,0);
 Msg("Find size of const uLongf (10517)\n");
@@ -472,7 +472,7 @@ CheckTypeSize(z_off_t,4, 10519, 6)
 #elif __s390x__
 CheckTypeSize(z_off_t,8, 10519, 12)
 #elif __s390__ && !__s390x__
-CheckTypeSize(z_off_t,0, 10519, 10)
+CheckTypeSize(z_off_t,4, 10519, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10519,0);
 Msg("Find size of z_off_t (10519)\n");
@@ -810,7 +810,7 @@ CheckTypeSize(const Bytef,1, 10511, 6)
 #elif __s390x__
 CheckTypeSize(const Bytef,1, 10511, 12)
 #elif __s390__ && !__s390x__
-CheckTypeSize(const Bytef,0, 10511, 10)
+CheckTypeSize(const Bytef,1, 10511, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10511,0);
 Msg("Find size of const Bytef (10511)\n");
