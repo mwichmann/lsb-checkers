@@ -3,6 +3,8 @@
 use DBI;
 use strict;
 
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
 # Return true if the first argument is duplicated in the rest of the argument.
 sub contains
 {
@@ -15,7 +17,7 @@ sub contains
 }
 
 
-my $dbh = DBI->connect('DBI:mysql:lsb', 'happymutant', '3eyessmile')
+my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
 	or die "Couldn't connect to database: " . DBI->errstr;
 my $interface_q = $dbh->prepare(
 'SELECT Iname, Tname, Iid, Lname
