@@ -20,6 +20,14 @@ fprintf(stderr, "checkGNU_versym SECTION\n" );
 }
 
 void
+checkGNU_verdef(ElfFile *file1, Elf32_Shdr *hdr1 )
+{
+#ifdef VERBOSE
+fprintf(stderr, "checkGNU_verdef SECTION\n" );
+#endif /* VERBOSE */
+}
+
+void
 checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1 )
 {
 #ifdef VERBOSE
