@@ -83,7 +83,7 @@ struct versym libm_so_6[] = {
 	{"__fpclassify","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"__fpclassify","GLIBC_2.1",0,"LSB-Core",4,1},
+	{"__fpclassify","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"__fpclassifyf","GLIBC_2.1",0,"LSB-Core",4,1},
@@ -147,9 +147,6 @@ struct versym libm_so_6[] = {
 #endif
 #if __x86_64__
 	{"__signbitl","GLIBC_2.2.5",0,"LSB-Core",4,1},
-#endif
-#if __s390x__
-	{"__signbitl","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"acos","GLIBC_2.0",0,"LSB-Core",8,1},
