@@ -278,6 +278,256 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef ACS_ULCORNER
+	CompareConstant(ACS_ULCORNER,(acs_map['l']),2534,architecture)
+#else
+Msg( "Error: Constant not found: ACS_ULCORNER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_LLCORNER
+	CompareConstant(ACS_LLCORNER,(acs_map['m']),2535,architecture)
+#else
+Msg( "Error: Constant not found: ACS_LLCORNER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_URCORNER
+	CompareConstant(ACS_URCORNER,(acs_map['k']),2536,architecture)
+#else
+Msg( "Error: Constant not found: ACS_URCORNER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_LRCORNER
+	CompareConstant(ACS_LRCORNER,(acs_map['j']),2537,architecture)
+#else
+Msg( "Error: Constant not found: ACS_LRCORNER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_LTEE
+	CompareConstant(ACS_LTEE,(acs_map['t']),2538,architecture)
+#else
+Msg( "Error: Constant not found: ACS_LTEE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_RTEE
+	CompareConstant(ACS_RTEE,(acs_map['u']),2539,architecture)
+#else
+Msg( "Error: Constant not found: ACS_RTEE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_BTEE
+	CompareConstant(ACS_BTEE,(acs_map['v']),2540,architecture)
+#else
+Msg( "Error: Constant not found: ACS_BTEE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_TTEE
+	CompareConstant(ACS_TTEE,(acs_map['w']),2541,architecture)
+#else
+Msg( "Error: Constant not found: ACS_TTEE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_HLINE
+	CompareConstant(ACS_HLINE,(acs_map['q']),2542,architecture)
+#else
+Msg( "Error: Constant not found: ACS_HLINE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_VLINE
+	CompareConstant(ACS_VLINE,(acs_map['x']),2543,architecture)
+#else
+Msg( "Error: Constant not found: ACS_VLINE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_PLUS
+	CompareConstant(ACS_PLUS,(acs_map['n']),2544,architecture)
+#else
+Msg( "Error: Constant not found: ACS_PLUS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_S1
+	CompareConstant(ACS_S1,(acs_map['o']),2545,architecture)
+#else
+Msg( "Error: Constant not found: ACS_S1\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_S9
+	CompareConstant(ACS_S9,(acs_map['s']),2546,architecture)
+#else
+Msg( "Error: Constant not found: ACS_S9\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_DIAMOND
+	CompareConstant(ACS_DIAMOND,(acs_map['`']),2547,architecture)
+#else
+Msg( "Error: Constant not found: ACS_DIAMOND\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_CKBOARD
+	CompareConstant(ACS_CKBOARD,(acs_map['a']),2548,architecture)
+#else
+Msg( "Error: Constant not found: ACS_CKBOARD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_DEGREE
+	CompareConstant(ACS_DEGREE,(acs_map['f']),2549,architecture)
+#else
+Msg( "Error: Constant not found: ACS_DEGREE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_PLMINUS
+	CompareConstant(ACS_PLMINUS,(acs_map['g']),2550,architecture)
+#else
+Msg( "Error: Constant not found: ACS_PLMINUS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_BULLET
+	CompareConstant(ACS_BULLET,(acs_map['~']),2551,architecture)
+#else
+Msg( "Error: Constant not found: ACS_BULLET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_LARROW
+	CompareConstant(ACS_LARROW,(acs_map[',']),2552,architecture)
+#else
+Msg( "Error: Constant not found: ACS_LARROW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_RARROW
+	CompareConstant(ACS_RARROW,(acs_map['+']),2553,architecture)
+#else
+Msg( "Error: Constant not found: ACS_RARROW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_DARROW
+	CompareConstant(ACS_DARROW,(acs_map['.']),2554,architecture)
+#else
+Msg( "Error: Constant not found: ACS_DARROW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_UARROW
+	CompareConstant(ACS_UARROW,(acs_map['-']),2555,architecture)
+#else
+Msg( "Error: Constant not found: ACS_UARROW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_BOARD
+	CompareConstant(ACS_BOARD,(acs_map['h']),2556,architecture)
+#else
+Msg( "Error: Constant not found: ACS_BOARD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_LANTERN
+	CompareConstant(ACS_LANTERN,(acs_map['i']),2557,architecture)
+#else
+Msg( "Error: Constant not found: ACS_LANTERN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACS_BLOCK
+	CompareConstant(ACS_BLOCK,(acs_map['0']),2558,architecture)
+#else
+Msg( "Error: Constant not found: ACS_BLOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef ERR
 	CompareConstant(ERR,(-1),2577,architecture)
 #else
