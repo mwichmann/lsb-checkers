@@ -45,7 +45,7 @@ tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
 checkhdrfield( major, RPMFILEVERMAJ )
 checkhdrfield( minor, RPMFILEVERMIN )
 
-checkhdrfield( type, RPMBINPKG )
+checkhdrfield( type, htons(RPMBINPKG) )
 
 checkhdrfield( archnum, htons(RPMARCH) )
 
