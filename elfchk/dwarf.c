@@ -12,37 +12,67 @@
 #include "elfchk.h"
 #include "dwarf.h"
 
+/*
+ * Decode unsigned LEB128 number
+ *
+ * Taken from DWARF 2.0.0, Appendix 4
+ */
+
 unsigned long int
-read_leb128 (data, length_return, sign)
+decode_uleb128 (data, length_return)
      unsigned char * data;
      int *           length_return;
-     int             sign;
 {
   unsigned long int result = 0;
-  unsigned int      num_read = 0;
   int               shift = 0;
+  unsigned char     *data_start = data;
   unsigned char     byte;
 
-  do
-    {
-      byte = * data ++;
-      num_read ++;
-
+  while(1) {
+      byte = *data++;
       result |= (byte & 0x7f) << shift;
+      if( (byte & 0x80) == 0 )
+	break;
 
       shift += 7;
-
-    }
-  while (byte & 0x80);
+  }
 
   if (length_return != NULL)
-    * length_return = num_read;
+    *length_return = data-data_start;
 
-  if (sign && (shift < 32) && (byte & 0x40))
-    result |= -1 << shift;
 
   return result;
 }
+
+unsigned long int
+decode_sleb128 (data, length_return)
+     unsigned char * data;
+     int *           length_return;
+{
+  unsigned long int result = 0;
+  int               shift = 0;
+  unsigned char     *data_start = data;
+  unsigned char     byte;
+
+  while(1) {
+      byte = *data++;
+      result |= (byte & 0x7f) << shift;
+      if( (byte & 0x80) == 0 )
+	break;
+
+      shift += 7;
+  }
+
+  if ((shift < sizeof(int)) && (byte & 0x40))
+    result |= - (1 << shift);
+
+  if (length_return != NULL)
+    *length_return = data-data_start;
+
+
+  return result;
+}
+
 
 int check_CFI(unsigned char *ptr,int length)
 {
@@ -60,6 +90,9 @@ dumpbytes(ptr,8);
         used++; /* The op code */
 
         switch( (*ptr)>>6 ) { /* Primary opcodes */
+	case 0:
+		/* Use extended opcord */
+		break;
 	case DW_CFA_advance_loc:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 			fprintf(stderr,"DW_CFA_advance_loc|" );
@@ -140,12 +173,12 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
 
 		/* Operand 2 - ULEB128 offset */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
 		break;
@@ -156,7 +189,7 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
 		break;
@@ -167,7 +200,7 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
 		break;
@@ -178,7 +211,7 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
 		break;
@@ -189,12 +222,12 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
 
 		/* Operand 2 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
 		break;
@@ -217,12 +250,12 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,0);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
 
 		/* Operand 2 - ULEB128 offset */
-		tmp = read_leb128(ptr,&numused,0);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
 		break;
@@ -233,7 +266,7 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
 		break;
@@ -244,7 +277,7 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - ULEB128 register */
-		tmp = read_leb128(ptr,&numused,1);
+		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
 		break;
@@ -285,12 +318,13 @@ dumpbytes(ptr,length);
         length-=4;
         used+=4;
         
+	/* What is this doing??? */
         fdeimage.address_range = *(int *)ptr;
         ptr += 4;
         length -= 4;
         used += 4;
         
-        fdeimage.address_range = read_leb128(ptr,&numused,1);
+        fdeimage.address_range = decode_sleb128(ptr,&numused);
         ptr += numused;
         length -= numused;
         used += 4;
@@ -342,10 +376,10 @@ dumpbytes(frameimg,frameimg->length);
         ptr = (unsigned char *)(frameimg->augmentation)
                 + strlen(frameimg->augmentation) + 1;
 
-        frame.code_alignment_factor = read_leb128(ptr, &numused, 0);
+        frame.code_alignment_factor = decode_uleb128(ptr, &numused);
         ptr += numused;
 
-        frame.data_alignment_factor = read_leb128(ptr,&numused,1);
+        frame.data_alignment_factor = decode_sleb128(ptr,&numused);
         ptr+=numused;
 
         frame.return_address_register = *ptr++;
@@ -358,7 +392,7 @@ dumpbytes(frameimg,frameimg->length);
 	}
 
         /* Get the info related with 'z' */
-        frame.augmentation_len = read_leb128(ptr,&numused,0);
+        frame.augmentation_len = decode_uleb128(ptr,&numused);
         ptr += numused;
         if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
                 fprintf(stderr,"augmentation_len: %x\n", 
@@ -415,7 +449,7 @@ read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused)
 
         switch (encoding & 0x0f) {
 	case DW_EH_PE_uleb128:
-		tmp = (void *) read_leb128(ptr,numused,0);
+		tmp = (void *) decode_uleb128(ptr,numused);
 		return tmp;
 	case DW_EH_PE_udata2:
 		tmp = (void *)(long)(*(unsigned short *)ptr);
@@ -430,7 +464,7 @@ read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused)
 		*numused = 8;
 		return tmp;
 	case DW_EH_PE_sleb128:
-		tmp = (void *)read_leb128(ptr,numused,1);
+		tmp = (void *)decode_sleb128(ptr,numused);
 		return tmp;
 	case DW_EH_PE_sdata2:
 		tmp = (void *)(long)(*(short *)ptr);
