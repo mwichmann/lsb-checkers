@@ -135,7 +135,15 @@ cnt++;
 /* No test for S_ISSOCK(m) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#ifdef __ia64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,1,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,3,4955,architecture)
 #else

@@ -1507,7 +1507,7 @@ Msg("Find size of SCREEN (8653)\n");
 #ifdef __i386__
 CheckTypeSize(WINDOW,100, 8655, 2)
 #elif __ia64__
-CheckTypeSize(WINDOW,152, 8655, 3)
+CheckTypeSize(WINDOW,128, 8655, 3)
 #elif __powerpc__
 CheckTypeSize(WINDOW,124, 8655, 6)
 #else
@@ -1526,9 +1526,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8656,0);
 Msg("Find size of attr_t (8656)\n");
 #endif
 
-#ifdef 1
-CheckTypeSize(cchar_t,0, 8658, 1)
-#elif __i386__
+#ifdef __i386__
 CheckTypeSize(cchar_t,24, 8658, 2)
 #elif __powerpc__
 CheckTypeSize(cchar_t,24, 8658, 6)
@@ -1583,7 +1581,7 @@ CheckOffset(struct _win_st,_pad,60,2,29731)
 CheckOffset(struct _win_st,_yoffset,72,2,29732)
 CheckOffset(struct _win_st,_bkgrnd,76,2,34437)
 #elif __ia64__
-CheckTypeSize(struct _win_st,152, 8654, 3)
+CheckTypeSize(struct _win_st,128, 8654, 3)
 #elif __powerpc__
 CheckTypeSize(struct _win_st,124, 8654, 6)
 #else
