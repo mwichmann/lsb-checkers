@@ -6,7 +6,7 @@
 #ifndef _GNU_SOURCE
 #define _GNU_SOURCE //for RTLD_NEXT in dlfcn
 #endif
-#define validate_NULL_TYPETYPE(x) //validate_NULL_TYPETYPE is a placeholder.
+#define validate_NULL_TYPETYPE(x, ...) //validate_NULL_TYPETYPE is a placeholder.
 
 #include <dlfcn.h>  //for dlsym() in wrapper functions
 #include <sys/types.h>
