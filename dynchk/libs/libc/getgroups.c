@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef getgroups
-static int(*funcptr) (int , gid_t ) = 0;
+static int(*funcptr) (int , gid_t[] ) = 0;
 
-int getgroups (int arg0 , gid_t arg1 )
+int getgroups (int arg0 , gid_t arg1[] )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgroups");
@@ -14,7 +14,7 @@ int getgroups (int arg0 , gid_t arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_getgroups (int arg0 , gid_t arg1 )
+int lsb_getgroups (int arg0 , gid_t arg1[] )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgroups");

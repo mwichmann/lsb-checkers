@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef sigaltstack
-static int(*funcptr) (struct sigaltstack * , struct sigaltstack * ) = 0;
+static int(*funcptr) (const struct sigaltstack * , struct sigaltstack * ) = 0;
 
-int sigaltstack (struct sigaltstack * arg0 , struct sigaltstack * arg1 )
+int sigaltstack (const struct sigaltstack * arg0 , struct sigaltstack * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigaltstack");
@@ -14,7 +14,7 @@ int sigaltstack (struct sigaltstack * arg0 , struct sigaltstack * arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sigaltstack (struct sigaltstack * arg0 , struct sigaltstack * arg1 )
+int lsb_sigaltstack (const struct sigaltstack * arg0 , struct sigaltstack * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigaltstack");

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #undef getgrnam_r
-static int(*funcptr) (char * , struct group * , char * , size_t , struct group * * ) = 0;
+static int(*funcptr) (const char * , struct group * , char * , size_t , struct group * * ) = 0;
 
-int getgrnam_r (char * arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
+int getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrnam_r");
@@ -18,7 +18,7 @@ int getgrnam_r (char * arg0 , struct group * arg1 , char * arg2 , size_t arg3 , 
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_getgrnam_r (char * arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
+int lsb_getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrnam_r");

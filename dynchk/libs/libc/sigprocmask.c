@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef sigprocmask
-static int(*funcptr) (int , sigset_t * , sigset_t * ) = 0;
+static int(*funcptr) (int , const sigset_t * , sigset_t * ) = 0;
 
-int sigprocmask (int arg0 , sigset_t * arg1 , sigset_t * arg2 )
+int sigprocmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigprocmask");
@@ -15,7 +15,7 @@ int sigprocmask (int arg0 , sigset_t * arg1 , sigset_t * arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sigprocmask (int arg0 , sigset_t * arg1 , sigset_t * arg2 )
+int lsb_sigprocmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigprocmask");

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <search.h>
 #undef twalk
-static void(*funcptr) (void * , __action_fn_t ) = 0;
+static void(*funcptr) (const void * , __action_fn_t ) = 0;
 
-void twalk (void * arg0 , __action_fn_t arg1 )
+void twalk (const void * arg0 , __action_fn_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "twalk");
@@ -15,7 +15,7 @@ void twalk (void * arg0 , __action_fn_t arg1 )
 	funcptr(arg0, arg1);
 }
 
-void lsb_twalk (void * arg0 , __action_fn_t arg1 )
+void lsb_twalk (const void * arg0 , __action_fn_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "twalk");

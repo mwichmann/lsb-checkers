@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #undef initstate
-static void *(*funcptr) (unsigned int , void * , size_t ) = 0;
+static char *(*funcptr) (unsigned int , char * , size_t ) = 0;
 
-void * initstate (unsigned int arg0 , void * arg1 , size_t arg2 )
+char * initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initstate");
@@ -16,7 +16,7 @@ void * initstate (unsigned int arg0 , void * arg1 , size_t arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_initstate (unsigned int arg0 , void * arg1 , size_t arg2 )
+char * lsb_initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initstate");

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <sys/types.h>
 #undef sched_setparam
-static int(*funcptr) (pid_t , struct sched_param * ) = 0;
+static int(*funcptr) (pid_t , const struct sched_param * ) = 0;
 
-int sched_setparam (pid_t arg0 , struct sched_param * arg1 )
+int sched_setparam (pid_t arg0 , const struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setparam");
@@ -15,7 +15,7 @@ int sched_setparam (pid_t arg0 , struct sched_param * arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sched_setparam (pid_t arg0 , struct sched_param * arg1 )
+int lsb_sched_setparam (pid_t arg0 , const struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setparam");
