@@ -23,17 +23,17 @@ Msg("Checking data structures in wchar.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(wchar_t,4)
+CheckTypeSize(wchar_t,4, 8848, 2)
 #elif __ia64__
-CheckTypeSize(wchar_t,0)
+CheckTypeSize(wchar_t,0, 8848, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(wint_t,4)
+CheckTypeSize(wint_t,4, 8980, 2)
 #elif __ia64__
-CheckTypeSize(wint_t,0)
+CheckTypeSize(wint_t,0, 8980, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8980,0);
 #endif

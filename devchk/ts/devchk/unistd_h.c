@@ -22,10 +22,34 @@ int pcnt=0;
 Msg("Checking data structures in unistd.h\n");
 #endif
 
+#ifdef R_OK
+	CompareConstant(R_OK,4)
+#else
+Msg( "Warning: Constant not found: R_OK\n");
+#endif
+
+#ifdef W_OK
+	CompareConstant(W_OK,2)
+#else
+Msg( "Warning: Constant not found: W_OK\n");
+#endif
+
+#ifdef X_OK
+	CompareConstant(X_OK,1)
+#else
+Msg( "Warning: Constant not found: X_OK\n");
+#endif
+
+#ifdef F_OK
+	CompareConstant(F_OK,0)
+#else
+Msg( "Warning: Constant not found: F_OK\n");
+#endif
+
 #ifdef __i386__
-CheckTypeSize(ssize_t,4)
+CheckTypeSize(ssize_t,4, 9029, 2)
 #elif __ia64__
-CheckTypeSize(ssize_t,8)
+CheckTypeSize(ssize_t,8, 9029, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9029,0);
 #endif

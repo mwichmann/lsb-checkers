@@ -27,25 +27,25 @@ Msg("Checking data structures in X11/Xutil.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(Region,4)
+CheckTypeSize(Region,4, 8314, 2)
 #elif __ia64__
-CheckTypeSize(Region,8)
+CheckTypeSize(Region,8, 8314, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8314,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(XContext,4)
+CheckTypeSize(XContext,4, 8319, 2)
 #elif __ia64__
-CheckTypeSize(XContext,4)
+CheckTypeSize(XContext,4, 8319, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8319,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(XICCEncodingStyle,4)
+CheckTypeSize(XICCEncodingStyle,4, 8832, 2)
 #elif __ia64__
-CheckTypeSize(XICCEncodingStyle,4)
+CheckTypeSize(XICCEncodingStyle,4, 8832, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8832,0);
 #endif

@@ -24,9 +24,9 @@ Msg("Checking data structures in sys/wait.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(idtype_t,4)
+CheckTypeSize(idtype_t,4, 9185, 2)
 #elif __ia64__
-CheckTypeSize(idtype_t,4)
+CheckTypeSize(idtype_t,4, 9185, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9185,0);
 #endif

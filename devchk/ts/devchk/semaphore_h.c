@@ -1,3 +1,48 @@
 /*
- * No values in semaphore.h
+ * Test of semaphore.h
  */
+#include "hdrchk.h"
+#include "sys/types.h"
+#include "semaphore.h"
+
+
+
+#ifdef TET_TEST
+void semaphore_h()
+{
+#else
+int semaphore_h()
+{
+#endif
+
+int cnt=0;
+
+#ifdef TET_TEST
+int pcnt=0;
+Msg("Checking data structures in semaphore.h\n");
+#endif
+
+#ifdef SEM_FAILED
+	CompareConstant(SEM_FAILED,((sem_t*)0))
+#else
+Msg( "Warning: Constant not found: SEM_FAILED\n");
+#endif
+
+#ifdef SEM_VALUE_MAX
+	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)))
+#else
+Msg( "Warning: Constant not found: SEM_VALUE_MAX\n");
+#endif
+
+#ifdef TET_TEST
+if (pcnt == cnt )
+	tet_result(TET_PASS);
+else
+	tet_result(TET_FAIL);
+return;
+#else
+printf("%d tests in semaphore.h\n",cnt);
+return cnt;
+#endif
+
+}

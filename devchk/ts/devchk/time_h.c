@@ -23,17 +23,17 @@ Msg("Checking data structures in time.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(clock_t,4)
+CheckTypeSize(clock_t,4, 9164, 2)
 #elif __ia64__
-CheckTypeSize(clock_t,8)
+CheckTypeSize(clock_t,8, 9164, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9164,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(time_t,4)
+CheckTypeSize(time_t,4, 9191, 2)
 #elif __ia64__
-CheckTypeSize(time_t,8)
+CheckTypeSize(time_t,8, 9191, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9191,0);
 #endif

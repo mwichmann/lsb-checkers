@@ -23,34 +23,76 @@ int pcnt=0;
 Msg("Checking data structures in ftw.h\n");
 #endif
 
+#ifdef FTW_F
+	CompareConstant(FTW_F,FTW_F)
+#else
+Msg( "Warning: Constant not found: FTW_F\n");
+#endif
+
+#ifdef FTW_D
+	CompareConstant(FTW_D,FTW_D)
+#else
+Msg( "Warning: Constant not found: FTW_D\n");
+#endif
+
+#ifdef FTW_DNR
+	CompareConstant(FTW_DNR,FTW_DNR)
+#else
+Msg( "Warning: Constant not found: FTW_DNR\n");
+#endif
+
+#ifdef FTW_NS
+	CompareConstant(FTW_NS,FTW_NS)
+#else
+Msg( "Warning: Constant not found: FTW_NS\n");
+#endif
+
+#ifdef FTW_SL
+	CompareConstant(FTW_SL,FTW_SL)
+#else
+Msg( "Warning: Constant not found: FTW_SL\n");
+#endif
+
+#ifdef FTW_DP
+	CompareConstant(FTW_DP,FTW_DP)
+#else
+Msg( "Warning: Constant not found: FTW_DP\n");
+#endif
+
+#ifdef FTW_SLN
+	CompareConstant(FTW_SLN,FTW_SLN)
+#else
+Msg( "Warning: Constant not found: FTW_SLN\n");
+#endif
+
 #ifdef __i386__
-CheckTypeSize(__ftw_func_t,4)
+CheckTypeSize(__ftw_func_t,4, 8992, 2)
 #elif __ia64__
-CheckTypeSize(__ftw_func_t,8)
+CheckTypeSize(__ftw_func_t,8, 8992, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8992,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(__ftw64_func_t,4)
+CheckTypeSize(__ftw64_func_t,4, 8994, 2)
 #elif __ia64__
-CheckTypeSize(__ftw64_func_t,8)
+CheckTypeSize(__ftw64_func_t,8, 8994, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8994,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(__nftw_func_t,4)
+CheckTypeSize(__nftw_func_t,4, 8996, 2)
 #elif __ia64__
-CheckTypeSize(__nftw_func_t,8)
+CheckTypeSize(__nftw_func_t,8, 8996, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8996,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(__nftw64_func_t,4)
+CheckTypeSize(__nftw64_func_t,4, 8998, 2)
 #elif __ia64__
-CheckTypeSize(__nftw64_func_t,8)
+CheckTypeSize(__nftw64_func_t,8, 8998, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8998,0);
 #endif

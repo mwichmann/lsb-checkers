@@ -43,6 +43,11 @@ vfprintf(stderr, f, args);
 va_end(args);
 }
 
+Log( char *f, ...)
+{
+/* Quietly drop extraneous messages when running in non TET mode */
+}
+
 int tcnt=0;
 
 #ifndef TET_TEST
@@ -52,32 +57,46 @@ main()
 tcnt+=GL_gl_h();
 tcnt+=GL_glx_h();
 tcnt+=X11_ICE_ICElib_h();
+tcnt+=X11_Intrinsic_h();
 tcnt+=X11_SM_SMlib_h();
 tcnt+=X11_X_h();
+tcnt+=X11_XKBlib_h();
 tcnt+=X11_Xcms_h();
 tcnt+=X11_Xlib_h();
+tcnt+=X11_Xresource_h();
 tcnt+=X11_Xutil_h();
+tcnt+=X11_extensions_XKBgeom_h();
+tcnt+=X11_extensions_Xdbe_h();
 tcnt+=X11_extensions_security_h();
 tcnt+=X11_extensions_sync_h();
+tcnt+=aio_h();
 tcnt+=curses_h();
+tcnt+=dirent_h();
 tcnt+=dlfcn_h();
 tcnt+=errno_h();
+tcnt+=fcntl_h();
 tcnt+=ftw_h();
+tcnt+=glob_h();
 tcnt+=iconv_h();
 tcnt+=inttypes_h();
 tcnt+=nl_types_h();
 tcnt+=regex_h();
+tcnt+=rpc_xdr_h();
 tcnt+=search_h();
+tcnt+=semaphore_h();
 tcnt+=setjmp_h();
 tcnt+=signal_h();
+tcnt+=stdio_h();
 tcnt+=stdlib_h();
 tcnt+=sys_socket_h();
+tcnt+=sys_time_h();
 tcnt+=sys_types_h();
 tcnt+=sys_wait_h();
 tcnt+=time_h();
 tcnt+=unistd_h();
 tcnt+=wchar_h();
 tcnt+=wctype_h();
+tcnt+=zlib_h();
 tcnt+=intrinsic();
 printf("Total Tests: %d\n", tcnt );
 }

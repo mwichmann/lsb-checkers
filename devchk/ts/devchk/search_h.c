@@ -25,25 +25,25 @@ Msg("Checking data structures in search.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(ENTRY,8)
+CheckTypeSize(ENTRY,8, 6953, 2)
 #elif __ia64__
-CheckTypeSize(ENTRY,16)
+CheckTypeSize(ENTRY,16, 6953, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6953,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(__action_fn_t,4)
+CheckTypeSize(__action_fn_t,4, 6956, 2)
 #elif __ia64__
-CheckTypeSize(__action_fn_t,8)
+CheckTypeSize(__action_fn_t,8, 6956, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6956,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(ACTION,4)
+CheckTypeSize(ACTION,4, 9081, 2)
 #elif __ia64__
-CheckTypeSize(ACTION,4)
+CheckTypeSize(ACTION,4, 9081, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9081,0);
 #endif

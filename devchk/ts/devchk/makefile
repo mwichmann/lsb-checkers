@@ -2,32 +2,46 @@ OBJS = hdrchk.o \
 	GL_gl_h.o \
 	GL_glx_h.o \
 	X11_ICE_ICElib_h.o \
+	X11_Intrinsic_h.o \
 	X11_SM_SMlib_h.o \
 	X11_X_h.o \
+	X11_XKBlib_h.o \
 	X11_Xcms_h.o \
 	X11_Xlib_h.o \
+	X11_Xresource_h.o \
 	X11_Xutil_h.o \
+	X11_extensions_XKBgeom_h.o \
+	X11_extensions_Xdbe_h.o \
 	X11_extensions_security_h.o \
 	X11_extensions_sync_h.o \
+	aio_h.o \
 	curses_h.o \
+	dirent_h.o \
 	dlfcn_h.o \
 	errno_h.o \
+	fcntl_h.o \
 	ftw_h.o \
+	glob_h.o \
 	iconv_h.o \
 	inttypes_h.o \
 	nl_types_h.o \
 	regex_h.o \
+	rpc_xdr_h.o \
 	search_h.o \
+	semaphore_h.o \
 	setjmp_h.o \
 	signal_h.o \
+	stdio_h.o \
 	stdlib_h.o \
 	sys_socket_h.o \
+	sys_time_h.o \
 	sys_types_h.o \
 	sys_wait_h.o \
 	time_h.o \
 	unistd_h.o \
 	wchar_h.o \
 	wctype_h.o \
+	zlib_h.o \
 	intrinsic.o 
 
 ifdef TET_ROOT
@@ -38,7 +52,7 @@ else
 EXTRALIBS =
 endif
 
-CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I/usr/X11R6/include 
+CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -I/usr/X11R6/include 
 
 ifdef TET_ROOT
 CFLAGS += -DTET_TEST -I$(INCDIR)

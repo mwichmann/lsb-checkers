@@ -24,17 +24,17 @@ Msg("Checking data structures in setjmp.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(jmp_buf,156)
+CheckTypeSize(jmp_buf,156, 6962, 2)
 #elif __ia64__
-CheckTypeSize(jmp_buf,704)
+CheckTypeSize(jmp_buf,704, 6962, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(sigjmp_buf,156)
+CheckTypeSize(sigjmp_buf,156, 6963, 2)
 #elif __ia64__
-CheckTypeSize(sigjmp_buf,704)
+CheckTypeSize(sigjmp_buf,704, 6963, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6963,0);
 #endif

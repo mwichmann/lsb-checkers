@@ -23,9 +23,9 @@ Msg("Checking data structures in sys/socket.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(socklen_t,4)
+CheckTypeSize(socklen_t,4, 9155, 2)
 #elif __ia64__
-CheckTypeSize(socklen_t,0)
+CheckTypeSize(socklen_t,0, 9155, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9155,0);
 #endif
