@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/svc.h>
 #include <rpc/xdr.h>
 #include <sys/types.h>
 #undef svc_sendreply

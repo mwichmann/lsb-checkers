@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-#include <sys/types.h>
 #undef difftime
 static double(*funcptr) (time_t , time_t ) = 0;
 

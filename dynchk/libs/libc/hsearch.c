@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <search.h>
-#include <search.h>
 #undef hsearch
 static ENTRY *(*funcptr) (ENTRY , ACTION ) = 0;
 

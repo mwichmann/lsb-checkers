@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <sys/socket.h>
 #undef recvfrom
 static int(*funcptr) (int , void * , size_t , int , struct sockaddr * , socklen_t * ) = 0;
 

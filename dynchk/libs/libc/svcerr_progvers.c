@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <rpc/types.h>
+#include <rpc/svc.h>
 #include <rpc/types.h>
 #undef svcerr_progvers
 static void(*funcptr) (SVCXPRT * , rpcvers_t , rpcvers_t ) = 0;

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <time.h>
 #undef mktime
 static time_t(*funcptr) (struct tm * ) = 0;
 

@@ -2,12 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <sys/types.h>
 #include <rpc/xdr.h>
+#include <sys/types.h>
 #undef xdr_pointer
-static bool_t(*funcptr) (struct XDR * , char * * , u_int , xdrproc_t ) = 0;
+static bool_t(*funcptr) (XDR * , char * * , u_int , xdrproc_t ) = 0;
 
-bool_t xdr_pointer (struct XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t arg3 )
+bool_t xdr_pointer (XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_pointer");
@@ -18,7 +18,7 @@ bool_t xdr_pointer (struct XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t a
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-bool_t lsb_xdr_pointer (struct XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t arg3 )
+bool_t lsb_xdr_pointer (XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_pointer");

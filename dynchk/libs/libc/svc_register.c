@@ -2,8 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <rpc/types.h>
-#include <rpc/types.h>
 #include <rpc/svc.h>
 #include <rpc/types.h>
 #undef svc_register

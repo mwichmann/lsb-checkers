@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stddef.h>
 #include <stdio.h>
 #undef fgetws
 static wchar_t *(*funcptr) (wchar_t * , int , FILE * ) = 0;

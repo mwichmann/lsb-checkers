@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef execvp
-static int(*funcptr) (const char * , char *const[]  ) = 0;
+static int(*funcptr) (const char * , char *const  []) = 0;
 
-int execvp (const char * arg0 , char *const  arg1[] )
+int execvp (const char * arg0 , char *const  arg1 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execvp");
@@ -14,7 +14,7 @@ int execvp (const char * arg0 , char *const  arg1[] )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_execvp (const char * arg0 , char *const  arg1[] )
+int lsb_execvp (const char * arg0 , char *const  arg1 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execvp");

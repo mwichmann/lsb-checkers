@@ -2,13 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <sys/types.h>
-#include <sys/types.h>
 #include <rpc/xdr.h>
+#include <sys/types.h>
 #undef xdr_vector
-static bool_t(*funcptr) (struct XDR * , char * , u_int , u_int , xdrproc_t ) = 0;
+static bool_t(*funcptr) (XDR * , char * , u_int , u_int , xdrproc_t ) = 0;
 
-bool_t xdr_vector (struct XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_t arg4 )
+bool_t xdr_vector (XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_vector");
@@ -20,7 +19,7 @@ bool_t xdr_vector (struct XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , x
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-bool_t lsb_xdr_vector (struct XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_t arg4 )
+bool_t lsb_xdr_vector (XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_vector");

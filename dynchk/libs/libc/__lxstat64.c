@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/stat.h>
 #undef __lxstat64
 static int(*funcptr) (int , const char * , struct stat64 * ) = 0;
 

@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-#include <stddef.h>
 #include <stdlib.h>
 #undef bsearch
 static void *(*funcptr) (const void * , const void * , size_t , size_t , __compar_fn_t ) = 0;

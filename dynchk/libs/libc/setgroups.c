@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <sys/types.h>
 #undef setgroups
 static int(*funcptr) (size_t , const gid_t * ) = 0;
 

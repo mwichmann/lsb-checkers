@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef execve
-static int(*funcptr) (const char * , char *const[]  , char *const[]  ) = 0;
+static int(*funcptr) (const char * , char *const  [], char *const  []) = 0;
 
-int execve (const char * arg0 , char *const  arg1[] , char *const  arg2[] )
+int execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execve");
@@ -15,7 +15,7 @@ int execve (const char * arg0 , char *const  arg1[] , char *const  arg2[] )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_execve (const char * arg0 , char *const  arg1[] , char *const  arg2[] )
+int lsb_execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execve");

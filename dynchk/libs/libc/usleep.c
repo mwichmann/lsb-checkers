@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/types.h>
 #undef usleep
 static int(*funcptr) (useconds_t ) = 0;
 
@@ -10,13 +11,13 @@ int usleep (useconds_t arg0 )
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "usleep");
 	validate_NULL_TYPETYPE(arg0, "usleep");
-	funcptr(arg0);
+	return funcptr(arg0);
 }
 
 int lsb_usleep (useconds_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "usleep");
-	funcptr(arg0);
+	return funcptr(arg0);
 }
 

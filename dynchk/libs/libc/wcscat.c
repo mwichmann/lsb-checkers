@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stddef.h>
 #undef wcscat
 static wchar_t *(*funcptr) (wchar_t * , const wchar_t * ) = 0;
 

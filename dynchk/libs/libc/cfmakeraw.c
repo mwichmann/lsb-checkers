@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <termios.h>
 #undef cfmakeraw
 static void(*funcptr) (struct termios * ) = 0;
 

@@ -2,6 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/types.h>
+#include <sys/resource.h>
 #undef getrlimit64
 static int(*funcptr) (id_t , struct rlimit64 * ) = 0;
 

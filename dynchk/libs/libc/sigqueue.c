@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <signal.h>
 #undef sigqueue
 static int(*funcptr) (pid_t , int , const union sigval ) = 0;
 

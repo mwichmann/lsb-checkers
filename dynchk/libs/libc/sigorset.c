@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <signal.h>
-#include <signal.h>
 #undef sigorset
 static int(*funcptr) (sigset_t * , const sigset_t * , const sigset_t * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <dirent.h>
 #undef readdir64
 static struct dirent64 *(*funcptr) (DIR * ) = 0;
 

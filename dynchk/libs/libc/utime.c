@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <utime.h>
 #undef utime
 static int(*funcptr) (const char * , const struct utimbuf * ) = 0;
 

@@ -2,6 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <signal.h>
+#include <sys/time.h>
 #undef sigtimedwait
 static int(*funcptr) (const sigset_t * , siginfo_t * , const struct timespec * ) = 0;
 

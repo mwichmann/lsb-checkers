@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-#include <sys/types.h>
 #undef setregid
 static int(*funcptr) (gid_t , gid_t ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <utmp.h>
 #undef getutent_r
 static int(*funcptr) (struct utmp * , struct utmp * * ) = 0;
 

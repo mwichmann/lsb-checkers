@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/socket.h>
 #undef accept
 static int(*funcptr) (int , struct sockaddr * , socklen_t * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sched.h>
 #include <sys/types.h>
 #undef sched_setscheduler
 static int(*funcptr) (pid_t , int , const struct sched_param * ) = 0;

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stddef.h>
 #include <wchar.h>
 #undef wcsrtombs
 static size_t(*funcptr) (char * , const wchar_t * * , size_t , mbstate_t * ) = 0;

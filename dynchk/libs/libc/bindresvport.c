@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <netinet/in.h>
 #undef bindresvport
 static int(*funcptr) (int , struct sockaddr_in * ) = 0;
 

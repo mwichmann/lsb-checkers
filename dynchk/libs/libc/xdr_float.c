@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/xdr.h>
 #undef xdr_float
-static bool_t(*funcptr) (struct XDR * , float * ) = 0;
+static bool_t(*funcptr) (XDR * , float * ) = 0;
 
-bool_t xdr_float (struct XDR * arg0 , float * arg1 )
+bool_t xdr_float (XDR * arg0 , float * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_float");
@@ -14,7 +15,7 @@ bool_t xdr_float (struct XDR * arg0 , float * arg1 )
 	return funcptr(arg0, arg1);
 }
 
-bool_t lsb_xdr_float (struct XDR * arg0 , float * arg1 )
+bool_t lsb_xdr_float (XDR * arg0 , float * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_float");

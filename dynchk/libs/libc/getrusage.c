@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/resource.h>
 #undef getrusage
 static int(*funcptr) (int , struct rusage * ) = 0;
 

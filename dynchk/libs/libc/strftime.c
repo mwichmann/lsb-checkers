@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <time.h>
 #undef strftime
 static size_t(*funcptr) (char * , size_t , const char * , const struct tm * ) = 0;
 

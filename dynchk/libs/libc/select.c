@@ -2,6 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/types.h>
+#include <sys/time.h>
 #undef select
 static int(*funcptr) (int , fd_set * , fd_set * , fd_set * , struct timeval * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/types.h>
 #undef gmtime
 static struct tm *(*funcptr) (const time_t * ) = 0;
 

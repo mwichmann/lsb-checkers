@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-#include <sys/types.h>
 #undef setreuid
 static int(*funcptr) (uid_t , uid_t ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <signal.h>
 #undef sigemptyset
 static int(*funcptr) (sigset_t * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/statvfs.h>
 #undef fstatvfs
 static int(*funcptr) (int , struct statvfs * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/time.h>
 #undef adjtime
 static int(*funcptr) (const struct timeval * , struct timeval * ) = 0;
 

@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-#include <stddef.h>
 #include <stdio.h>
 #undef fread
 static size_t(*funcptr) (void * , size_t , size_t , FILE * ) = 0;

@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <inttypes.h>
-#include <inttypes.h>
 #undef imaxdiv
 static imaxdiv_t(*funcptr) (intmax_t , intmax_t ) = 0;
 

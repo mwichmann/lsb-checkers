@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/time.h>
 #undef getitimer
 static int(*funcptr) (__itimer_which_t , struct itimerval * ) = 0;
 

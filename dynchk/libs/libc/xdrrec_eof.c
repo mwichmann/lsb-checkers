@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/xdr.h>
 #undef xdrrec_eof
-static bool_t(*funcptr) (struct XDR * ) = 0;
+static bool_t(*funcptr) (XDR * ) = 0;
 
-bool_t xdrrec_eof (struct XDR * arg0 )
+bool_t xdrrec_eof (XDR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrrec_eof");
@@ -13,7 +14,7 @@ bool_t xdrrec_eof (struct XDR * arg0 )
 	return funcptr(arg0);
 }
 
-bool_t lsb_xdrrec_eof (struct XDR * arg0 )
+bool_t lsb_xdrrec_eof (XDR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrrec_eof");

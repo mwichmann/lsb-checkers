@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/resource.h>
 #undef wait3
 static pid_t(*funcptr) (int * , int , struct rusage * ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <iconv.h>
+#include <stddef.h>
 #undef iconv
 static size_t(*funcptr) (iconv_t , char * * , size_t * , char * * , size_t * ) = 0;
 

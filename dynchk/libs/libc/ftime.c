@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/timeb.h>
 #undef ftime
 static int(*funcptr) (struct timeb * ) = 0;
 

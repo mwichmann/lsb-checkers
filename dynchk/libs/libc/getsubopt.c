@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef getsubopt
-static int(*funcptr) (char * * , char * const * , char * * ) = 0;
+static int(*funcptr) (char * * , char *const  * , char * * ) = 0;
 
-int getsubopt (char * * arg0 , char * const * arg1 , char * * arg2 )
+int getsubopt (char * * arg0 , char *const  * arg1 , char * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsubopt");
@@ -15,7 +15,7 @@ int getsubopt (char * * arg0 , char * const * arg1 , char * * arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_getsubopt (char * * arg0 , char * const * arg1 , char * * arg2 )
+int lsb_getsubopt (char * * arg0 , char *const  * arg1 , char * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsubopt");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/sem.h>
 #undef semop
 static int(*funcptr) (int , struct sembuf * , unsigned int ) = 0;
 
