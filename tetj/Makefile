@@ -12,3 +12,5 @@ $(LIB): $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(LIB)
+
+distclean: clean
