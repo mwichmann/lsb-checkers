@@ -1497,27 +1497,6 @@ struct versym libc_so_6_1[] = {
 	{"adjtime","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"adjtimex","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"adjtimex","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"adjtimex","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"adjtimex","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"adjtimex","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"adjtimex","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"adjtimex","GLIBC_2.2"},
-#endif
-#if __i386__
 	{"advance","GLIBC_2.0"},
 #endif
 #if __ia64__
