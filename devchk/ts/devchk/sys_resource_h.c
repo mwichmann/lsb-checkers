@@ -78,6 +78,20 @@ Msg( "Error: Constant not found: RLIM_INFINITY\n");
 cnt++;
 #endif
 
+#ifdef RLIM_SAVED_CUR
+	CompareConstant(RLIM_SAVED_CUR,-1)
+#else
+Msg( "Error: Constant not found: RLIM_SAVED_CUR\n");
+cnt++;
+#endif
+
+#ifdef RLIM_SAVED_MAX
+	CompareConstant(RLIM_SAVED_MAX,-1)
+#else
+Msg( "Error: Constant not found: RLIM_SAVED_MAX\n");
+cnt++;
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -22,7 +22,13 @@ int pcnt=0;
 Msg("Checking data structures in cpio.h\n");
 #endif
 
-/* No test for MAGIC */
+#ifdef MAGIC
+	CompareStringConstant(MAGIC,"070707")
+#else
+Msg( "Error: Constant not found: MAGIC\n");
+cnt++;
+#endif
+
 #ifdef C_IRUSR
 	CompareConstant(C_IRUSR,000400)
 #else

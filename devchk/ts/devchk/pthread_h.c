@@ -22,6 +22,7 @@ int pcnt=0;
 Msg("Checking data structures in pthread.h\n");
 #endif
 
+/* No test for PTHREAD_MUTEX_INITIALIZER */
 #ifdef PTHREAD_CREATE_JOINABLE
 	CompareConstant(PTHREAD_CREATE_JOINABLE,PTHREAD_CREATE_JOINABLE)
 #else
