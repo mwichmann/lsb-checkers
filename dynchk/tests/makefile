@@ -1,5 +1,6 @@
 TEST_OBJS= \
-RWaddress.o filedescriptor.o filemode.o ioctlreq.o pathname.o
+Rdaddress.o RWaddress.o filedescriptor.o filemode.o ioctlreq.o pathname.o \
+memmap.o
 
 include struct.mk
 
