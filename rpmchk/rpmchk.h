@@ -114,7 +114,7 @@ typedef	struct	{
 
 typedef void (*IdxTagFunc)(RpmFile *, RpmHdrIndex *, struct tetj_handle *);
 
-typedef enum { Required, Optional } RpmIdxReqd ;
+typedef enum { Required, Optional, Deprecated, Obsoleted, Reserved,  } RpmIdxReqd ;
 
 typedef enum { NotSeen, Seen } RpmIdxStatus ;
 
@@ -181,6 +181,7 @@ extern uint32_t *filedevs;
 extern uint16_t *filerdevs;
 extern uint32_t *fileinodes;
 extern uint32_t *filetimes;
+extern char *oldfilenames;
 extern char *filemd5s;
 extern char *filelinktos;
 extern char *fileusernames;
@@ -191,6 +192,7 @@ extern char **basenames;
 extern char **dirnames;
 extern int  numdirnames;
 extern int  hasPayloadFilesHavePrefix;
+extern int  hasCompressedFileNames;
 
 /* util.c */
 extern RpmFile *OpenRpmFile(char *name);

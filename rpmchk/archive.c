@@ -19,7 +19,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal)
 #define TMP_STRING_SIZE (400)
 char tmp_string[TMP_STRING_SIZE+1];
 unsigned char	md5sum[17],md5str[33];
-unsigned char	*fmd5=filemd5s,*flinktos=filelinktos;
+unsigned char	*fmd5=filemd5s,*flinktos=filelinktos,*foldnames=oldfilenames;
 gzFile	*zfile;
 RpmArchiveHeader ahdr;
 int	startoffset,endoffset;
@@ -98,21 +98,27 @@ while( !gzeof(zfile) ) {
 	printf("namesize: %8.8s\n", ahdr.c_namesize );
 	printf("UID: %8.8s\n", ahdr.c_uid );
 	printf("GID: %8.8s\n", ahdr.c_gid );
+	fprintf(stderr,"filesize: %8.8s\n", ahdr.c_filesize );
+	fprintf(stderr,"dev: %8.8s,%8.8s\n", ahdr.c_devmajor,ahdr.c_devminor );
 */
+	fprintf(stderr,"filesize: %8.8s\n", ahdr.c_filesize );
+
 	if( !(strncmp(ahdr.c_magic,"070701",6) == 0) ) {
         	snprintf( tmp_string, TMP_STRING_SIZE,
-    		"checkRpmArchive: Archive record has wrong magic %6.6s instead of 070701",
+    		"checkRpmArchive: Archive record has wrong magic \"%6.6s\" instead of \"070701\"",
 		ahdr.c_magic);
         	fprintf(stderr, "%s\n", tmp_string);
         	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 							0, 0, 0, tmp_string);
         	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+		return;
 	}
 	/* Read in the filename */
 	memcpy(num,ahdr.c_namesize,8);
 	num[8]=0; /* NULL terminate the namesize */
 	size=strtol(num,NULL,16);
 	gzread(zfile, filename, size );
+	fprintf(stderr,"filename: %s\n", filename );
 	/*
 	 * Check/fix padding here - the amount of space used for the header
 	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
@@ -138,7 +144,7 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	size=strtol(num,NULL,16);
 
-	/* Get the mode so we can idendify directories */
+	/* Get the mode so we can identify directories */
 	memcpy(num,ahdr.c_mode,8);
 	num[8]=0;
 	mode=strtol(num,NULL,16);
@@ -153,7 +159,8 @@ while( !gzeof(zfile) ) {
 	} else {
 		fmt="%s%s";
 	}
-	if( dirindicies[fileindex] <= numdirnames ) {
+	if( hasCompressedFileNames ) {
+	    if( dirindicies[fileindex] <= numdirnames ) {
 		/*
 		fprintf(stderr,"dirindex: %x\n", dirindicies[fileindex]);
 		fprintf(stderr,"dirname: %s\n",
@@ -168,8 +175,20 @@ while( !gzeof(zfile) ) {
 		    "Payload filename %s doesn't match RPMTAG based name %s\n",
 			filename, tagfilename);
 		}
-	} else {
+	    } else {
 		fprintf(stderr,"dirindex out of range!!!\n");
+	    }
+	} else {
+		/*
+		 * The RPMTAG starts with a '/', but the cpio
+		 * filename doesn't, so skip the first char.
+		 */
+		if( strcmp(filename,foldnames+1) != 0 ) {
+			fprintf(stderr,
+		    "Payload filename %s doesn't match RPMTAG based name %s\n",
+			filename, foldnames+1);
+		}
+		foldnames+=strlen(foldnames)+1;
 	}
 
 	/*
@@ -179,15 +198,20 @@ while( !gzeof(zfile) ) {
 	/* Directories have no size, but RPMTAG_FILESIZES sez 1024 */
 	if( S_ISREG(mode) && (size != filesizes[fileindex]) ) {
 		fprintf(stderr,"Filesize (%d) for %s not that same a specified in RPMTAG_FILESIZES (%d)\n", size, filename, filesizes[fileindex] );
-	}
-	filesizesum+=size;
+		}
+
+	/* Accumulate the size for later comparison */
+	if( S_ISREG(mode) ) {
+		/* NB: RPM 3.0.6 also included the filesize from directories */
+		filesizesum+=size;
+		}
 
 	/*
 	 * Check the file modes against the RPMTAG_FILEMODES value
 	 */
 
 	if( (mode != filemodes[fileindex]) ) {
-		fprintf(stderr,"Filemode  (%o) for %s not that same a specified in RPMTAG_FILEMODES (%o)\n", mode, filename, filemodes[fileindex] );
+		fprintf(stderr,"Filemode  (%o) for %s not the same as specified in RPMTAG_FILEMODES (%o)\n", mode, filename, filemodes[fileindex] );
 	}
 
 	/*
@@ -203,7 +227,7 @@ while( !gzeof(zfile) ) {
 	devmin=strtol(num,NULL,16);
 
 	if( (makedev(devmaj,devmin) != filedevs[fileindex]) ) {
-		fprintf(stderr,"File dev (%x) for %s not that same a specified in RPMTAG_FILEDEVICES (%x)\n", makedev(devmaj,devmin), filename, filedevs[fileindex] );
+		fprintf(stderr,"File dev (%x) for %s not the same as specified in RPMTAG_FILEDEVICES (%x)\n", makedev(devmaj,devmin), filename, filedevs[fileindex] );
 	}
 
 	/*
@@ -219,7 +243,7 @@ while( !gzeof(zfile) ) {
 	devmin=strtol(num,NULL,16);
 
 	if( (makedev(devmaj,devmin) != filerdevs[fileindex]) ) {
-		fprintf(stderr,"File rdev (%x) for %s not that same a specified in RPMTAG_FILERDEVS (%x)\n", makedev(devmaj,devmin), filename, filerdevs[fileindex] );
+		fprintf(stderr,"File rdev (%x) for %s not the same as specified in RPMTAG_FILERDEVS (%x)\n", makedev(devmaj,devmin), filename, filerdevs[fileindex] );
 	}
 
 	/*
@@ -231,7 +255,7 @@ while( !gzeof(zfile) ) {
 	ftime=strtol(num,NULL,16);
 
 	if( (ftime != filetimes[fileindex]) ) {
-		fprintf(stderr,"File time  (%x) for %s not that same a specified in RPMTAG_FILEMTIMES (%x)\n", (unsigned int)ftime, filename, filetimes[fileindex] );
+		fprintf(stderr,"File time  (%x) for %s not the same as specified in RPMTAG_FILEMTIMES (%x)\n", (unsigned int)ftime, filename, filetimes[fileindex] );
 	}
 
 	/*
@@ -243,7 +267,7 @@ while( !gzeof(zfile) ) {
 	fino=strtol(num,NULL,16);
 
 	if( (fino != fileinodes[fileindex]) ) {
-		fprintf(stderr,"File inode  (%x) for %s not that same a specified in RPMTAG_FILEINODES (%x)\n", (unsigned int)fino, filename, fileinodes[fileindex] );
+		fprintf(stderr,"File inode  (%x) for %s not the same as specified in RPMTAG_FILEINODES (%x)\n", (unsigned int)fino, filename, fileinodes[fileindex] );
 	}
 
 	/*
@@ -266,6 +290,12 @@ while( !gzeof(zfile) ) {
 
 		if( strncmp(fmd5,md5str,16) != 0 ) {
 			fprintf(stderr,"File MD5 (%s) for %s does not match value in RPMTAG_FILEMD5S (%s)\n", md5str, filename, fmd5 );
+			}
+	} else {
+		/* If it actually has a size, we need to eat those bytes */
+		while ( size>0 ) {
+			gzread(zfile,fbuf,size>1024?1024:size);
+			size-=1024;
 			}
 	}
 	fmd5+=strlen(fmd5)+1;
@@ -303,7 +333,7 @@ while( !gzeof(zfile) ) {
 
 	/* Now, check the filename */
 	if( filename[0] == '.' && filename[1] == '/' )
-		fptr=&filename[1];
+		fptr=&filename[2];
 	else
 		fptr=&filename[0];
 	checkRpmArchiveFilename(fptr, journal);
@@ -316,7 +346,7 @@ endoffset=gztell(zfile);
 /*
 fprintf(stderr,"%d bytes in uncompressed archive\n", endoffset-startoffset);
 */
-if( endoffset-startoffset != archivesize ) {
+if( archivesize && endoffset-startoffset != archivesize ) {
 		fprintf(stderr,"Archive size (%d) does ",endoffset-startoffset);
 		fprintf(stderr,"not match the value in RPMTAG_ARCHIVESIZE (%d)\n",
 							archivesize );
