@@ -21,6 +21,12 @@ static struct memregion *mem = NULL;
 static int maxmaps = 0;
 static int nummaps = 0;
 
+/* We can get into nasty recursion problems if we try to check function
+ * that are used to implemente load_memmap(), so we'll set a flag to
+ * skip over checks in this situation.
+ */
+static int inmemmap = 0;
+
 void
 load_memmap()
 {
@@ -30,6 +36,7 @@ load_memmap()
 	int ret;
 	char buf[256];
 
+	inmemmap=1;
 	/*
 	setvbuf(stdout,NULL, _IOLBF, 0);
 	__lsb_printf("Entering load_memmap()\n");
@@ -65,6 +72,7 @@ load_memmap()
 			curmap->perms|=MEMMAP_EXEC;
 	}
 	__lsb_fclose(map);
+	inmemmap=0;
 }
 
 int
@@ -72,6 +80,7 @@ mem_is_Rd(const void *ptr)
 {
 	int i;
 
+	if( inmemmap ) return 1;
 
 	for(i=0;i<nummaps;i++) {
 		/*
@@ -109,6 +118,8 @@ int
 mem_is_RW(const void *ptr)
 {
 	int i;
+
+	if( inmemmap ) return 1;
 
 	for(i=0;i<nummaps;i++)
 		if( (unsigned long)ptr >= mem[i].start &&
