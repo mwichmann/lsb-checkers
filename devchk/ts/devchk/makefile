@@ -69,6 +69,7 @@ OBJS = hdrchk.o \
 	sys_timeb_h.o \
 	sys_times_h.o \
 	sys_types_h.o \
+	sys_un_h.o \
 	sys_utsname_h.o \
 	sys_wait_h.o \
 	syslog_h.o \

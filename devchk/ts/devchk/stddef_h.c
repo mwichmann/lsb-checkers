@@ -25,7 +25,7 @@ Msg("Checking data structures in stddef.h\n");
 
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef NULL
-	CompareConstant(NULL,((void*)0),906,architecture)
+	CompareConstant(NULL,(0),906,architecture)
 #else
 Msg( "Error: Constant not found: NULL\n");
 cnt++;

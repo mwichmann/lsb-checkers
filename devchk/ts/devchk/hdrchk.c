@@ -132,6 +132,7 @@ tcnt+=sys_time_h();
 tcnt+=sys_timeb_h();
 tcnt+=sys_times_h();
 tcnt+=sys_types_h();
+tcnt+=sys_un_h();
 tcnt+=sys_utsname_h();
 tcnt+=sys_wait_h();
 tcnt+=syslog_h();

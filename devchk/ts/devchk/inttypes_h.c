@@ -64,7 +64,14 @@ CheckTypeSize(u_int,4, 9261, 2)
 CheckTypeSize(u_int,4, 9261, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9261,0);
-Msg("Find size of uint8_t (9261)\n");
+Msg("Find size of uint (9261)\n");
+#endif
+
+#ifdef __i386__
+CheckTypeSize(uint,4, 9265, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9265,0);
+Msg("Find size of uint8_t (9265)\n");
 #endif
 
 #ifdef __i386__
