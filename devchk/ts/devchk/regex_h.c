@@ -83,16 +83,6 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
-#ifdef REG_NOMATCH
-	CompareConstant(REG_NOMATCH,-1,3092,architecture)
-#else
-Msg( "Error: Constant not found: REG_NOMATCH\n");
-cnt++;
-#endif
-
-#endif
-
 #if __i386__
 CheckTypeSize(reg_syntax_t,4, 6941, 2)
 #elif __ia64__
