@@ -13,8 +13,8 @@ long double wcstold (const wchar_t * arg0 , wchar_t * * arg1 )
 		funcptr = dlsym(RTLD_NEXT, "wcstold");
 	validate_Rdaddress( arg0, "wcstold");
 	validate_NULL_TYPETYPE(  arg0, "wcstold");
-	validate_Rdaddress( arg1, "wcstold");
 	validate_Rdaddress(* arg1, "wcstold");
+	validate_Rdaddress( arg1, "wcstold");
 	validate_NULL_TYPETYPE(  arg1, "wcstold");
 	return funcptr(arg0, arg1);
 }

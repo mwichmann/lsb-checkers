@@ -18,8 +18,8 @@ int getgrgid_r (gid_t arg0 , struct group * arg1 , char * arg2 , size_t arg3 , s
 	validate_Rdaddress( arg2, "getgrgid_r");
 	validate_NULL_TYPETYPE(  arg2, "getgrgid_r");
 	validate_NULL_TYPETYPE(  arg3, "getgrgid_r");
-	validate_Rdaddress( arg4, "getgrgid_r");
 	validate_Rdaddress(* arg4, "getgrgid_r");
+	validate_Rdaddress( arg4, "getgrgid_r");
 	validate_NULL_TYPETYPE(  arg4, "getgrgid_r");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }

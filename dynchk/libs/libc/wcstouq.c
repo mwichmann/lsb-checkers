@@ -13,8 +13,8 @@ unsigned long long wcstouq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 		funcptr = dlsym(RTLD_NEXT, "wcstouq");
 	validate_Rdaddress( arg0, "wcstouq");
 	validate_NULL_TYPETYPE(  arg0, "wcstouq");
-	validate_Rdaddress( arg1, "wcstouq");
 	validate_Rdaddress(* arg1, "wcstouq");
+	validate_Rdaddress( arg1, "wcstouq");
 	validate_NULL_TYPETYPE(  arg1, "wcstouq");
 	validate_NULL_TYPETYPE(  arg2, "wcstouq");
 	return funcptr(arg0, arg1, arg2);

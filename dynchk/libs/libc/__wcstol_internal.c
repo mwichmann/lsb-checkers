@@ -13,8 +13,8 @@ long __wcstol_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int
 		funcptr = dlsym(RTLD_NEXT, "__wcstol_internal");
 	validate_Rdaddress( arg0, "__wcstol_internal");
 	validate_NULL_TYPETYPE(  arg0, "__wcstol_internal");
-	validate_Rdaddress( arg1, "__wcstol_internal");
 	validate_Rdaddress(* arg1, "__wcstol_internal");
+	validate_Rdaddress( arg1, "__wcstol_internal");
 	validate_NULL_TYPETYPE(  arg1, "__wcstol_internal");
 	validate_NULL_TYPETYPE(  arg2, "__wcstol_internal");
 	validate_NULL_TYPETYPE(  arg3, "__wcstol_internal");

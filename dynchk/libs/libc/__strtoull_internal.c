@@ -12,8 +12,8 @@ unsigned long long __strtoull_internal (const char * arg0 , char * * arg1 , int 
 		funcptr = dlsym(RTLD_NEXT, "__strtoull_internal");
 	validate_Rdaddress( arg0, "__strtoull_internal");
 	validate_NULL_TYPETYPE(  arg0, "__strtoull_internal");
-	validate_Rdaddress( arg1, "__strtoull_internal");
 	validate_Rdaddress(* arg1, "__strtoull_internal");
+	validate_Rdaddress( arg1, "__strtoull_internal");
 	validate_RWaddress(  arg1, "__strtoull_internal");
 	validate_NULL_TYPETYPE(  arg2, "__strtoull_internal");
 	validate_NULL_TYPETYPE(  arg3, "__strtoull_internal");

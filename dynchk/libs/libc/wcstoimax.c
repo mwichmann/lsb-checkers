@@ -13,8 +13,8 @@ intmax_t wcstoimax (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 		funcptr = dlsym(RTLD_NEXT, "wcstoimax");
 	validate_Rdaddress( arg0, "wcstoimax");
 	validate_NULL_TYPETYPE(  arg0, "wcstoimax");
-	validate_Rdaddress( arg1, "wcstoimax");
 	validate_Rdaddress(* arg1, "wcstoimax");
+	validate_Rdaddress( arg1, "wcstoimax");
 	validate_NULL_TYPETYPE(  arg1, "wcstoimax");
 	validate_NULL_TYPETYPE(  arg2, "wcstoimax");
 	return funcptr(arg0, arg1, arg2);

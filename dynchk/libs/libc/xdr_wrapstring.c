@@ -12,8 +12,8 @@ bool_t xdr_wrapstring (XDR * arg0 , char * * arg1 )
 		funcptr = dlsym(RTLD_NEXT, "xdr_wrapstring");
 	validate_Rdaddress( arg0, "xdr_wrapstring");
 	validate_NULL_TYPETYPE(  arg0, "xdr_wrapstring");
-	validate_Rdaddress( arg1, "xdr_wrapstring");
 	validate_Rdaddress(* arg1, "xdr_wrapstring");
+	validate_Rdaddress( arg1, "xdr_wrapstring");
 	validate_NULL_TYPETYPE(  arg1, "xdr_wrapstring");
 	return funcptr(arg0, arg1);
 }

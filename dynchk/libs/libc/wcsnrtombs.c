@@ -14,8 +14,8 @@ size_t wcsnrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , size_t a
 		funcptr = dlsym(RTLD_NEXT, "wcsnrtombs");
 	validate_Rdaddress( arg0, "wcsnrtombs");
 	validate_NULL_TYPETYPE(  arg0, "wcsnrtombs");
-	validate_Rdaddress( arg1, "wcsnrtombs");
 	validate_Rdaddress(* arg1, "wcsnrtombs");
+	validate_Rdaddress( arg1, "wcsnrtombs");
 	validate_NULL_TYPETYPE(  arg1, "wcsnrtombs");
 	validate_NULL_TYPETYPE(  arg2, "wcsnrtombs");
 	validate_NULL_TYPETYPE(  arg3, "wcsnrtombs");

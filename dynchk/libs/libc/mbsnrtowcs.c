@@ -14,8 +14,8 @@ size_t mbsnrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , size_t a
 		funcptr = dlsym(RTLD_NEXT, "mbsnrtowcs");
 	validate_Rdaddress( arg0, "mbsnrtowcs");
 	validate_NULL_TYPETYPE(  arg0, "mbsnrtowcs");
-	validate_Rdaddress( arg1, "mbsnrtowcs");
 	validate_Rdaddress(* arg1, "mbsnrtowcs");
+	validate_Rdaddress( arg1, "mbsnrtowcs");
 	validate_NULL_TYPETYPE(  arg1, "mbsnrtowcs");
 	validate_NULL_TYPETYPE(  arg2, "mbsnrtowcs");
 	validate_NULL_TYPETYPE(  arg3, "mbsnrtowcs");
