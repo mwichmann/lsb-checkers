@@ -2,9 +2,6 @@
 #include "elfchk.h"
 struct versym DynSyms[] = {
 	{"COLS","",0},
-#if defined(__i386__)
-	{"COLS","",0},
-#endif
 	{"DPMSCapable","",0},
 	{"DPMSDisable","",0},
 	{"DPMSEnable","",0},
@@ -64,9 +61,6 @@ struct versym DynSyms[] = {
 	{"IceVendor","",0},
 	{"IceWriteAuthFileEntry","",0},
 	{"LINES","",0},
-#if defined(__i386__)
-	{"LINES","",0},
-#endif
 	{"SmFreeProperty","",0},
 	{"SmFreeReasons","",0},
 	{"SmcClientID","",0},
@@ -1234,6 +1228,19 @@ struct versym DynSyms[] = {
 #if defined(__powerpc__)
 	{"_IO_puts","GLIBC_2.0",0},
 #endif
+	{"_Unwind_DeleteException","",0},
+	{"_Unwind_Find_FDE","",0},
+	{"_Unwind_ForcedUnwind","",0},
+	{"_Unwind_GetDataRelBase","",0},
+	{"_Unwind_GetGR","",0},
+	{"_Unwind_GetIP","",0},
+	{"_Unwind_GetLanguageSpecificData","",0},
+	{"_Unwind_GetRegionStart","",0},
+	{"_Unwind_GetTextRelBase","",0},
+	{"_Unwind_RaiseException","",0},
+	{"_Unwind_Resume","",0},
+	{"_Unwind_SetGR","",0},
+	{"_Unwind_SetIP","",0},
 	{"_XtCheckSubclassFlag","",0},
 	{"_XtCopyFromArg","",0},
 	{"_XtInherit","",0},
@@ -1927,25 +1934,10 @@ struct versym DynSyms[] = {
 	{"acosl","GLIBC_2.0",0},
 #endif
 	{"addch","",0},
-#if defined(__i386__)
-	{"addch","",0},
-#endif
 	{"addchnstr","",0},
-#if defined(__i386__)
-	{"addchnstr","",0},
-#endif
 	{"addchstr","",0},
-#if defined(__i386__)
-	{"addchstr","",0},
-#endif
 	{"addnstr","",0},
-#if defined(__i386__)
-	{"addnstr","",0},
-#endif
 	{"addstr","",0},
-#if defined(__i386__)
-	{"addstr","",0},
-#endif
 #if defined(__i386__)
 	{"adjtime","GLIBC_2.0",0},
 #endif
@@ -2201,33 +2193,12 @@ struct versym DynSyms[] = {
 	{"atol","GLIBC_2.0",0},
 #endif
 	{"attr_get","",0},
-#if defined(__i386__)
-	{"attr_get","",0},
-#endif
 	{"attr_off","",0},
-#if defined(__i386__)
-	{"attr_off","",0},
-#endif
 	{"attr_on","",0},
-#if defined(__i386__)
-	{"attr_on","",0},
-#endif
 	{"attr_set","",0},
-#if defined(__i386__)
-	{"attr_set","",0},
-#endif
 	{"attroff","",0},
-#if defined(__i386__)
-	{"attroff","",0},
-#endif
 	{"attron","",0},
-#if defined(__i386__)
-	{"attron","",0},
-#endif
 	{"attrset","",0},
-#if defined(__i386__)
-	{"attrset","",0},
-#endif
 #if defined(__i386__)
 	{"authnone_create","GLIBC_2.0",0},
 #endif
@@ -2248,9 +2219,6 @@ struct versym DynSyms[] = {
 #endif
 	{"baudrate","",0},
 #if defined(__i386__)
-	{"baudrate","",0},
-#endif
-#if defined(__i386__)
 	{"bcmp","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -2269,9 +2237,6 @@ struct versym DynSyms[] = {
 	{"bcopy","GLIBC_2.0",0},
 #endif
 	{"beep","",0},
-#if defined(__i386__)
-	{"beep","",0},
-#endif
 #if defined(__i386__)
 	{"bind","GLIBC_2.0",0},
 #endif
@@ -2309,21 +2274,9 @@ struct versym DynSyms[] = {
 	{"bindtextdomain","GLIBC_2.0",0},
 #endif
 	{"bkgd","",0},
-#if defined(__i386__)
-	{"bkgd","",0},
-#endif
 	{"bkgdset","",0},
-#if defined(__i386__)
-	{"bkgdset","",0},
-#endif
 	{"border","",0},
-#if defined(__i386__)
-	{"border","",0},
-#endif
 	{"box","",0},
-#if defined(__i386__)
-	{"box","",0},
-#endif
 #if defined(__i386__)
 	{"brk","GLIBC_2.0",0},
 #endif
@@ -2460,9 +2413,6 @@ struct versym DynSyms[] = {
 	{"calloc","GLIBC_2.0",0},
 #endif
 	{"can_change_color","",0},
-#if defined(__i386__)
-	{"can_change_color","",0},
-#endif
 #if defined(__i386__)
 	{"carg","GLIBC_2.1",0},
 #endif
@@ -2626,9 +2576,6 @@ struct versym DynSyms[] = {
 	{"catopen","GLIBC_2.0",0},
 #endif
 	{"cbreak","",0},
-#if defined(__i386__)
-	{"cbreak","",0},
-#endif
 #if defined(__i386__)
 	{"cbrt","GLIBC_2.0",0},
 #endif
@@ -2829,9 +2776,6 @@ struct versym DynSyms[] = {
 #endif
 	{"chgat","",0},
 #if defined(__i386__)
-	{"chgat","",0},
-#endif
-#if defined(__i386__)
 	{"chmod","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -2887,9 +2831,6 @@ struct versym DynSyms[] = {
 #endif
 	{"clear","",0},
 #if defined(__i386__)
-	{"clear","",0},
-#endif
-#if defined(__i386__)
 	{"clearerr","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -2899,9 +2840,6 @@ struct versym DynSyms[] = {
 	{"clearerr","GLIBC_2.0",0},
 #endif
 	{"clearok","",0},
-#if defined(__i386__)
-	{"clearok","",0},
-#endif
 #if defined(__i386__)
 	{"clnt_create","GLIBC_2.0",0},
 #endif
@@ -3056,21 +2994,9 @@ struct versym DynSyms[] = {
 	{"closelog","GLIBC_2.0",0},
 #endif
 	{"clrtobot","",0},
-#if defined(__i386__)
-	{"clrtobot","",0},
-#endif
 	{"clrtoeol","",0},
-#if defined(__i386__)
-	{"clrtoeol","",0},
-#endif
 	{"color_content","",0},
-#if defined(__i386__)
-	{"color_content","",0},
-#endif
 	{"color_set","",0},
-#if defined(__i386__)
-	{"color_set","",0},
-#endif
 	{"compositeClassRec","",0},
 	{"compositeWidgetClass","",0},
 	{"compress","",0},
@@ -3150,9 +3076,6 @@ struct versym DynSyms[] = {
 	{"copysignl","GLIBC_2.0",0},
 #endif
 	{"copywin","",0},
-#if defined(__i386__)
-	{"copywin","",0},
-#endif
 	{"coreWidgetClass","",0},
 #if defined(__i386__)
 	{"cos","GLIBC_2.0",0},
@@ -3472,13 +3395,7 @@ struct versym DynSyms[] = {
 	{"ctime_r","GLIBC_2.0",0},
 #endif
 	{"curs_set","",0},
-#if defined(__i386__)
-	{"curs_set","",0},
-#endif
 	{"curscr","",0},
-#if defined(__i386__)
-	{"curscr","",0},
-#endif
 #if defined(__i386__)
 	{"cuserid","GLIBC_2.0",0},
 #endif
@@ -3525,13 +3442,7 @@ struct versym DynSyms[] = {
 	{"dcngettext","GLIBC_2.2",0},
 #endif
 	{"def_prog_mode","",0},
-#if defined(__i386__)
-	{"def_prog_mode","",0},
-#endif
 	{"def_shell_mode","",0},
-#if defined(__i386__)
-	{"def_shell_mode","",0},
-#endif
 	{"deflate","",0},
 	{"deflateCopy","",0},
 	{"deflateEnd","",0},
@@ -3541,29 +3452,11 @@ struct versym DynSyms[] = {
 	{"deflateReset","",0},
 	{"deflateSetDictionary","",0},
 	{"delay_output","",0},
-#if defined(__i386__)
-	{"delay_output","",0},
-#endif
 	{"delch","",0},
-#if defined(__i386__)
-	{"delch","",0},
-#endif
 	{"deleteln","",0},
-#if defined(__i386__)
-	{"deleteln","",0},
-#endif
 	{"delscreen","",0},
-#if defined(__i386__)
-	{"delscreen","",0},
-#endif
 	{"delwin","",0},
-#if defined(__i386__)
-	{"delwin","",0},
-#endif
 	{"derwin","",0},
-#if defined(__i386__)
-	{"derwin","",0},
-#endif
 #if defined(__i386__)
 	{"dgettext","GLIBC_2.0",0},
 #endif
@@ -3616,9 +3509,6 @@ struct versym DynSyms[] = {
 #endif
 	{"doupdate","",0},
 #if defined(__i386__)
-	{"doupdate","",0},
-#endif
-#if defined(__i386__)
 	{"drand48","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -3664,17 +3554,8 @@ struct versym DynSyms[] = {
 	{"dup2","GLIBC_2.0",0},
 #endif
 	{"dupwin","",0},
-#if defined(__i386__)
-	{"dupwin","",0},
-#endif
 	{"echo","",0},
-#if defined(__i386__)
-	{"echo","",0},
-#endif
 	{"echochar","",0},
-#if defined(__i386__)
-	{"echochar","",0},
-#endif
 #if defined(__i386__)
 	{"ecvt","GLIBC_2.0",0},
 #endif
@@ -3695,13 +3576,13 @@ struct versym DynSyms[] = {
 	{"endgrent","GLIBC_2.0",0},
 #endif
 #if defined(__i386__)
-	{"endhostent","GLIBC_2.0",0},
+	{"endhostent","GLIBC_2.0",1},
 #endif
 #if defined(__ia64__)
-	{"endhostent","GLIBC_2.2",0},
+	{"endhostent","GLIBC_2.2",1},
 #endif
 #if defined(__powerpc__)
-	{"endhostent","GLIBC_2.0",0},
+	{"endhostent","GLIBC_2.0",1},
 #endif
 #if defined(__i386__)
 	{"endnetent","GLIBC_2.0",0},
@@ -3759,9 +3640,6 @@ struct versym DynSyms[] = {
 #endif
 	{"endwin","",0},
 #if defined(__i386__)
-	{"endwin","",0},
-#endif
-#if defined(__i386__)
 	{"environ","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -3780,13 +3658,7 @@ struct versym DynSyms[] = {
 	{"erand48","GLIBC_2.0",0},
 #endif
 	{"erase","",0},
-#if defined(__i386__)
-	{"erase","",0},
-#endif
 	{"erasechar","",0},
-#if defined(__i386__)
-	{"erasechar","",0},
-#endif
 #if defined(__i386__)
 	{"erf","GLIBC_2.0",0},
 #endif
@@ -4293,9 +4165,6 @@ struct versym DynSyms[] = {
 #endif
 	{"filter","",0},
 #if defined(__i386__)
-	{"filter","",0},
-#endif
-#if defined(__i386__)
 	{"finite","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -4323,9 +4192,6 @@ struct versym DynSyms[] = {
 	{"finitel","GLIBC_2.0",0},
 #endif
 	{"flash","",0},
-#if defined(__i386__)
-	{"flash","",0},
-#endif
 #if defined(__i386__)
 	{"flock","GLIBC_2.0",0},
 #endif
@@ -4372,9 +4238,6 @@ struct versym DynSyms[] = {
 	{"floorl","GLIBC_2.0",0},
 #endif
 	{"flushinp","",0},
-#if defined(__i386__)
-	{"flushinp","",0},
-#endif
 #if defined(__i386__)
 	{"fma","GLIBC_2.1",0},
 #endif
@@ -4946,9 +4809,6 @@ struct versym DynSyms[] = {
 #endif
 	{"getbkgd","",0},
 #if defined(__i386__)
-	{"getbkgd","",0},
-#endif
-#if defined(__i386__)
 	{"getc","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -4967,9 +4827,6 @@ struct versym DynSyms[] = {
 	{"getc_unlocked","GLIBC_2.0",0},
 #endif
 	{"getch","",0},
-#if defined(__i386__)
-	{"getch","",0},
-#endif
 #if defined(__i386__)
 	{"getchar","GLIBC_2.0",0},
 #endif
@@ -5224,9 +5081,6 @@ struct versym DynSyms[] = {
 #endif
 	{"getnstr","",0},
 #if defined(__i386__)
-	{"getnstr","",0},
-#endif
-#if defined(__i386__)
 	{"getopt","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -5477,9 +5331,6 @@ struct versym DynSyms[] = {
 #endif
 	{"getstr","",0},
 #if defined(__i386__)
-	{"getstr","",0},
-#endif
-#if defined(__i386__)
 	{"getsubopt","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -5597,9 +5448,6 @@ struct versym DynSyms[] = {
 	{"getwd","GLIBC_2.0",0},
 #endif
 	{"getwin","",0},
-#if defined(__i386__)
-	{"getwin","",0},
-#endif
 	{"glAccum","",0},
 	{"glActiveTextureARB","",0},
 	{"glAlphaFunc","",0},
@@ -6133,21 +5981,9 @@ struct versym DynSyms[] = {
 	{"gztell","",0},
 	{"gzwrite","",0},
 	{"halfdelay","",0},
-#if defined(__i386__)
-	{"halfdelay","",0},
-#endif
 	{"has_colors","",0},
-#if defined(__i386__)
-	{"has_colors","",0},
-#endif
 	{"has_ic","",0},
-#if defined(__i386__)
-	{"has_ic","",0},
-#endif
 	{"has_il","",0},
-#if defined(__i386__)
-	{"has_il","",0},
-#endif
 #if defined(__i386__)
 	{"hcreate","GLIBC_2.0",0},
 #endif
@@ -6167,9 +6003,6 @@ struct versym DynSyms[] = {
 	{"hdestroy","GLIBC_2.0",0},
 #endif
 	{"hline","",0},
-#if defined(__i386__)
-	{"hline","",0},
-#endif
 #if defined(__i386__)
 	{"hsearch","GLIBC_2.0",0},
 #endif
@@ -6252,13 +6085,7 @@ struct versym DynSyms[] = {
 	{"iconv_open","GLIBC_2.1",0},
 #endif
 	{"idcok","",0},
-#if defined(__i386__)
-	{"idcok","",0},
-#endif
 	{"idlok","",0},
-#if defined(__i386__)
-	{"idlok","",0},
-#endif
 #if defined(__i386__)
 	{"ilogb","GLIBC_2.0",0},
 #endif
@@ -6305,21 +6132,9 @@ struct versym DynSyms[] = {
 	{"imaxdiv","GLIBC_2.1.1",0},
 #endif
 	{"immedok","",0},
-#if defined(__i386__)
-	{"immedok","",0},
-#endif
 	{"inch","",0},
-#if defined(__i386__)
-	{"inch","",0},
-#endif
 	{"inchnstr","",0},
-#if defined(__i386__)
-	{"inchnstr","",0},
-#endif
 	{"inchstr","",0},
-#if defined(__i386__)
-	{"inchstr","",0},
-#endif
 #if defined(__i386__)
 	{"index","GLIBC_2.0",0},
 #endif
@@ -6383,13 +6198,7 @@ struct versym DynSyms[] = {
 	{"inflateSync","",0},
 	{"inflateSyncPoint","",0},
 	{"init_color","",0},
-#if defined(__i386__)
-	{"init_color","",0},
-#endif
 	{"init_pair","",0},
-#if defined(__i386__)
-	{"init_pair","",0},
-#endif
 #if defined(__i386__)
 	{"initgroups","GLIBC_2.0",0},
 #endif
@@ -6401,9 +6210,6 @@ struct versym DynSyms[] = {
 #endif
 	{"initscr","",0},
 #if defined(__i386__)
-	{"initscr","",0},
-#endif
-#if defined(__i386__)
 	{"initstate","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -6413,25 +6219,10 @@ struct versym DynSyms[] = {
 	{"initstate","GLIBC_2.0",0},
 #endif
 	{"innstr","",0},
-#if defined(__i386__)
-	{"innstr","",0},
-#endif
 	{"insch","",0},
-#if defined(__i386__)
-	{"insch","",0},
-#endif
 	{"insdelln","",0},
-#if defined(__i386__)
-	{"insdelln","",0},
-#endif
 	{"insertln","",0},
-#if defined(__i386__)
-	{"insertln","",0},
-#endif
 	{"insnstr","",0},
-#if defined(__i386__)
-	{"insnstr","",0},
-#endif
 #if defined(__i386__)
 	{"insque","GLIBC_2.0",0},
 #endif
@@ -6442,17 +6233,8 @@ struct versym DynSyms[] = {
 	{"insque","GLIBC_2.0",0},
 #endif
 	{"insstr","",0},
-#if defined(__i386__)
-	{"insstr","",0},
-#endif
 	{"instr","",0},
-#if defined(__i386__)
-	{"instr","",0},
-#endif
 	{"intrflush","",0},
-#if defined(__i386__)
-	{"intrflush","",0},
-#endif
 #if defined(__i386__)
 	{"ioctl","GLIBC_2.0",0},
 #endif
@@ -6469,13 +6251,7 @@ struct versym DynSyms[] = {
 	{"iopl","GLIBC_2.0",0},
 #endif
 	{"is_linetouched","",0},
-#if defined(__i386__)
-	{"is_linetouched","",0},
-#endif
 	{"is_wintouched","",0},
-#if defined(__i386__)
-	{"is_wintouched","",0},
-#endif
 #if defined(__i386__)
 	{"isalnum","GLIBC_2.0",0},
 #endif
@@ -6540,9 +6316,6 @@ struct versym DynSyms[] = {
 	{"isdigit","GLIBC_2.0",0},
 #endif
 	{"isendwin","",0},
-#if defined(__i386__)
-	{"isendwin","",0},
-#endif
 #if defined(__i386__)
 	{"isgraph","GLIBC_2.0",0},
 #endif
@@ -6877,13 +6650,7 @@ struct versym DynSyms[] = {
 	{"key_decryptsession","GLIBC_2.1",0},
 #endif
 	{"keyname","",0},
-#if defined(__i386__)
-	{"keyname","",0},
-#endif
 	{"keypad","",0},
-#if defined(__i386__)
-	{"keypad","",0},
-#endif
 #if defined(__i386__)
 	{"kill","GLIBC_2.0",0},
 #endif
@@ -6894,9 +6661,6 @@ struct versym DynSyms[] = {
 	{"kill","GLIBC_2.0",0},
 #endif
 	{"killchar","",0},
-#if defined(__i386__)
-	{"killchar","",0},
-#endif
 #if defined(__i386__)
 	{"killpg","GLIBC_2.0",0},
 #endif
@@ -6979,9 +6743,6 @@ struct versym DynSyms[] = {
 	{"ldiv","GLIBC_2.0",0},
 #endif
 	{"leaveok","",0},
-#if defined(__i386__)
-	{"leaveok","",0},
-#endif
 #if defined(__i386__)
 	{"lfind","GLIBC_2.0",0},
 #endif
@@ -7258,9 +7019,6 @@ struct versym DynSyms[] = {
 #endif
 	{"longname","",0},
 #if defined(__i386__)
-	{"longname","",0},
-#endif
-#if defined(__i386__)
 	{"lrand48","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -7523,9 +7281,6 @@ struct versym DynSyms[] = {
 #endif
 	{"meta","",0},
 #if defined(__i386__)
-	{"meta","",0},
-#endif
-#if defined(__i386__)
 	{"mkdir","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -7644,9 +7399,6 @@ struct versym DynSyms[] = {
 #endif
 	{"move","",0},
 #if defined(__i386__)
-	{"move","",0},
-#endif
-#if defined(__i386__)
 	{"mprotect","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -7737,193 +7489,52 @@ struct versym DynSyms[] = {
 	{"munmap","GLIBC_2.0",0},
 #endif
 	{"mvaddch","",0},
-#if defined(__i386__)
-	{"mvaddch","",0},
-#endif
 	{"mvaddchnstr","",0},
-#if defined(__i386__)
-	{"mvaddchnstr","",0},
-#endif
 	{"mvaddchstr","",0},
-#if defined(__i386__)
-	{"mvaddchstr","",0},
-#endif
 	{"mvaddnstr","",0},
-#if defined(__i386__)
-	{"mvaddnstr","",0},
-#endif
 	{"mvaddstr","",0},
-#if defined(__i386__)
-	{"mvaddstr","",0},
-#endif
 	{"mvchgat","",0},
-#if defined(__i386__)
-	{"mvchgat","",0},
-#endif
 	{"mvcur","",0},
-#if defined(__i386__)
-	{"mvcur","",0},
-#endif
 	{"mvdelch","",0},
-#if defined(__i386__)
-	{"mvdelch","",0},
-#endif
 	{"mvderwin","",0},
-#if defined(__i386__)
-	{"mvderwin","",0},
-#endif
 	{"mvgetch","",0},
-#if defined(__i386__)
-	{"mvgetch","",0},
-#endif
 	{"mvgetnstr","",0},
-#if defined(__i386__)
-	{"mvgetnstr","",0},
-#endif
 	{"mvgetstr","",0},
-#if defined(__i386__)
-	{"mvgetstr","",0},
-#endif
 	{"mvhline","",0},
-#if defined(__i386__)
-	{"mvhline","",0},
-#endif
 	{"mvinch","",0},
-#if defined(__i386__)
-	{"mvinch","",0},
-#endif
 	{"mvinchnstr","",0},
-#if defined(__i386__)
-	{"mvinchnstr","",0},
-#endif
 	{"mvinchstr","",0},
-#if defined(__i386__)
-	{"mvinchstr","",0},
-#endif
 	{"mvinnstr","",0},
-#if defined(__i386__)
-	{"mvinnstr","",0},
-#endif
 	{"mvinsch","",0},
-#if defined(__i386__)
-	{"mvinsch","",0},
-#endif
 	{"mvinsnstr","",0},
-#if defined(__i386__)
-	{"mvinsnstr","",0},
-#endif
 	{"mvinsstr","",0},
-#if defined(__i386__)
-	{"mvinsstr","",0},
-#endif
 	{"mvinstr","",0},
-#if defined(__i386__)
-	{"mvinstr","",0},
-#endif
 	{"mvprintw","",0},
-#if defined(__i386__)
-	{"mvprintw","",0},
-#endif
 	{"mvscanw","",0},
-#if defined(__i386__)
-	{"mvscanw","",0},
-#endif
 	{"mvvline","",0},
-#if defined(__i386__)
-	{"mvvline","",0},
-#endif
 	{"mvwaddch","",0},
-#if defined(__i386__)
-	{"mvwaddch","",0},
-#endif
 	{"mvwaddchnstr","",0},
-#if defined(__i386__)
-	{"mvwaddchnstr","",0},
-#endif
 	{"mvwaddchstr","",0},
-#if defined(__i386__)
-	{"mvwaddchstr","",0},
-#endif
 	{"mvwaddnstr","",0},
-#if defined(__i386__)
-	{"mvwaddnstr","",0},
-#endif
 	{"mvwaddstr","",0},
-#if defined(__i386__)
-	{"mvwaddstr","",0},
-#endif
 	{"mvwchgat","",0},
-#if defined(__i386__)
-	{"mvwchgat","",0},
-#endif
 	{"mvwdelch","",0},
-#if defined(__i386__)
-	{"mvwdelch","",0},
-#endif
 	{"mvwgetch","",0},
-#if defined(__i386__)
-	{"mvwgetch","",0},
-#endif
 	{"mvwgetnstr","",0},
-#if defined(__i386__)
-	{"mvwgetnstr","",0},
-#endif
 	{"mvwgetstr","",0},
-#if defined(__i386__)
-	{"mvwgetstr","",0},
-#endif
 	{"mvwhline","",0},
-#if defined(__i386__)
-	{"mvwhline","",0},
-#endif
 	{"mvwin","",0},
-#if defined(__i386__)
-	{"mvwin","",0},
-#endif
 	{"mvwinch","",0},
-#if defined(__i386__)
-	{"mvwinch","",0},
-#endif
 	{"mvwinchnstr","",0},
-#if defined(__i386__)
-	{"mvwinchnstr","",0},
-#endif
 	{"mvwinchstr","",0},
-#if defined(__i386__)
-	{"mvwinchstr","",0},
-#endif
 	{"mvwinnstr","",0},
-#if defined(__i386__)
-	{"mvwinnstr","",0},
-#endif
 	{"mvwinsch","",0},
-#if defined(__i386__)
-	{"mvwinsch","",0},
-#endif
 	{"mvwinsnstr","",0},
-#if defined(__i386__)
-	{"mvwinsnstr","",0},
-#endif
 	{"mvwinsstr","",0},
-#if defined(__i386__)
-	{"mvwinsstr","",0},
-#endif
 	{"mvwinstr","",0},
-#if defined(__i386__)
-	{"mvwinstr","",0},
-#endif
 	{"mvwprintw","",0},
-#if defined(__i386__)
-	{"mvwprintw","",0},
-#endif
 	{"mvwscanw","",0},
-#if defined(__i386__)
-	{"mvwscanw","",0},
-#endif
 	{"mvwvline","",0},
-#if defined(__i386__)
-	{"mvwvline","",0},
-#endif
 #if defined(__i386__)
 	{"nan","GLIBC_2.1",0},
 #endif
@@ -7962,9 +7573,6 @@ struct versym DynSyms[] = {
 #endif
 	{"napms","",0},
 #if defined(__i386__)
-	{"napms","",0},
-#endif
-#if defined(__i386__)
 	{"nearbyint","GLIBC_2.1",0},
 #endif
 #if defined(__ia64__)
@@ -7992,17 +7600,8 @@ struct versym DynSyms[] = {
 	{"nearbyintl","GLIBC_2.1",0},
 #endif
 	{"newpad","",0},
-#if defined(__i386__)
-	{"newpad","",0},
-#endif
 	{"newterm","",0},
-#if defined(__i386__)
-	{"newterm","",0},
-#endif
 	{"newwin","",0},
-#if defined(__i386__)
-	{"newwin","",0},
-#endif
 #if defined(__i386__)
 	{"nextafter","GLIBC_2.0",0},
 #endif
@@ -8095,9 +7694,6 @@ struct versym DynSyms[] = {
 #endif
 	{"nl","",0},
 #if defined(__i386__)
-	{"nl","",0},
-#endif
-#if defined(__i386__)
 	{"nl_langinfo","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -8107,33 +7703,12 @@ struct versym DynSyms[] = {
 	{"nl_langinfo","GLIBC_2.0",0},
 #endif
 	{"nocbreak","",0},
-#if defined(__i386__)
-	{"nocbreak","",0},
-#endif
 	{"nodelay","",0},
-#if defined(__i386__)
-	{"nodelay","",0},
-#endif
 	{"noecho","",0},
-#if defined(__i386__)
-	{"noecho","",0},
-#endif
 	{"nonl","",0},
-#if defined(__i386__)
-	{"nonl","",0},
-#endif
 	{"noqiflush","",0},
-#if defined(__i386__)
-	{"noqiflush","",0},
-#endif
 	{"noraw","",0},
-#if defined(__i386__)
-	{"noraw","",0},
-#endif
 	{"notimeout","",0},
-#if defined(__i386__)
-	{"notimeout","",0},
-#endif
 #if defined(__i386__)
 	{"nrand48","GLIBC_2.0",0},
 #endif
@@ -8246,19 +7821,10 @@ struct versym DynSyms[] = {
 	{"optopt","GLIBC_2.0",0},
 #endif
 	{"overlay","",0},
-#if defined(__i386__)
-	{"overlay","",0},
-#endif
 	{"overrideShellClassRec","",0},
 	{"overrideShellWidgetClass","",0},
 	{"overwrite","",0},
-#if defined(__i386__)
-	{"overwrite","",0},
-#endif
 	{"pair_content","",0},
-#if defined(__i386__)
-	{"pair_content","",0},
-#endif
 #if defined(__i386__)
 	{"pathconf","GLIBC_2.0",0},
 #endif
@@ -8288,9 +7854,6 @@ struct versym DynSyms[] = {
 #endif
 	{"pechochar","",0},
 #if defined(__i386__)
-	{"pechochar","",0},
-#endif
-#if defined(__i386__)
 	{"perror","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -8309,9 +7872,6 @@ struct versym DynSyms[] = {
 	{"pipe","GLIBC_2.0",0},
 #endif
 	{"pnoutrefresh","",0},
-#if defined(__i386__)
-	{"pnoutrefresh","",0},
-#endif
 #if defined(__i386__)
 	{"poll","GLIBC_2.0",0},
 #endif
@@ -8413,9 +7973,6 @@ struct versym DynSyms[] = {
 #endif
 	{"prefresh","",0},
 #if defined(__i386__)
-	{"prefresh","",0},
-#endif
-#if defined(__i386__)
 	{"printf","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -8425,9 +7982,6 @@ struct versym DynSyms[] = {
 	{"printf","GLIBC_2.0",0},
 #endif
 	{"printw","",0},
-#if defined(__i386__)
-	{"printw","",0},
-#endif
 #if defined(__i386__)
 	{"psignal","GLIBC_2.0",0},
 #endif
@@ -9123,9 +8677,6 @@ struct versym DynSyms[] = {
 #endif
 	{"putp","",0},
 #if defined(__i386__)
-	{"putp","",0},
-#endif
-#if defined(__i386__)
 	{"puts","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -9172,9 +8723,6 @@ struct versym DynSyms[] = {
 #endif
 	{"putwin","",0},
 #if defined(__i386__)
-	{"putwin","",0},
-#endif
-#if defined(__i386__)
 	{"pwrite","GLIBC_2.1",0},
 #endif
 #if defined(__ia64__)
@@ -9193,9 +8741,6 @@ struct versym DynSyms[] = {
 	{"pwrite64","GLIBC_2.1",0},
 #endif
 	{"qiflush","",0},
-#if defined(__i386__)
-	{"qiflush","",0},
-#endif
 #if defined(__i386__)
 	{"qsort","GLIBC_2.0",0},
 #endif
@@ -9251,9 +8796,6 @@ struct versym DynSyms[] = {
 	{"random_r","GLIBC_2.0",0},
 #endif
 	{"raw","",0},
-#if defined(__i386__)
-	{"raw","",0},
-#endif
 #if defined(__i386__)
 	{"re_comp","GLIBC_2.0",0},
 #endif
@@ -9374,13 +8916,7 @@ struct versym DynSyms[] = {
 	{"recvmsg","GLIBC_2.0",0},
 #endif
 	{"redrawwin","",0},
-#if defined(__i386__)
-	{"redrawwin","",0},
-#endif
 	{"refresh","",0},
-#if defined(__i386__)
-	{"refresh","",0},
-#endif
 #if defined(__i386__)
 	{"regcomp","GLIBC_2.0",0},
 #endif
@@ -9499,17 +9035,8 @@ struct versym DynSyms[] = {
 	{"rename","GLIBC_2.0",0},
 #endif
 	{"reset_prog_mode","",0},
-#if defined(__i386__)
-	{"reset_prog_mode","",0},
-#endif
 	{"reset_shell_mode","",0},
-#if defined(__i386__)
-	{"reset_shell_mode","",0},
-#endif
 	{"resetty","",0},
-#if defined(__i386__)
-	{"resetty","",0},
-#endif
 #if defined(__i386__)
 	{"rewind","GLIBC_2.0",0},
 #endif
@@ -9566,9 +9093,6 @@ struct versym DynSyms[] = {
 #endif
 	{"ripoffline","",0},
 #if defined(__i386__)
-	{"ripoffline","",0},
-#endif
-#if defined(__i386__)
 	{"rmdir","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -9605,9 +9129,6 @@ struct versym DynSyms[] = {
 	{"roundl","GLIBC_2.1",0},
 #endif
 	{"savetty","",0},
-#if defined(__i386__)
-	{"savetty","",0},
-#endif
 #if defined(__i386__)
 	{"sbrk","GLIBC_2.0",0},
 #endif
@@ -9709,9 +9230,6 @@ struct versym DynSyms[] = {
 #endif
 	{"scanw","",0},
 #if defined(__i386__)
-	{"scanw","",0},
-#endif
-#if defined(__i386__)
 	{"sched_get_priority_max","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -9784,33 +9302,12 @@ struct versym DynSyms[] = {
 	{"sched_yield","GLIBC_2.0",0},
 #endif
 	{"scr_dump","",0},
-#if defined(__i386__)
-	{"scr_dump","",0},
-#endif
 	{"scr_init","",0},
-#if defined(__i386__)
-	{"scr_init","",0},
-#endif
 	{"scr_restore","",0},
-#if defined(__i386__)
-	{"scr_restore","",0},
-#endif
 	{"scr_set","",0},
-#if defined(__i386__)
-	{"scr_set","",0},
-#endif
 	{"scrl","",0},
-#if defined(__i386__)
-	{"scrl","",0},
-#endif
 	{"scroll","",0},
-#if defined(__i386__)
-	{"scroll","",0},
-#endif
 	{"scrollok","",0},
-#if defined(__i386__)
-	{"scrollok","",0},
-#endif
 #if defined(__i386__)
 	{"seed48","GLIBC_2.0",0},
 #endif
@@ -9986,9 +9483,6 @@ struct versym DynSyms[] = {
 	{"sessionShellWidgetClass","",0},
 	{"set_term","",0},
 #if defined(__i386__)
-	{"set_term","",0},
-#endif
-#if defined(__i386__)
 	{"setbuf","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -10079,13 +9573,13 @@ struct versym DynSyms[] = {
 	{"setgroups","GLIBC_2.0",0},
 #endif
 #if defined(__i386__)
-	{"sethostent","GLIBC_2.0",0},
+	{"sethostent","GLIBC_2.0",1},
 #endif
 #if defined(__ia64__)
-	{"sethostent","GLIBC_2.2",0},
+	{"sethostent","GLIBC_2.2",1},
 #endif
 #if defined(__powerpc__)
-	{"sethostent","GLIBC_2.0",0},
+	{"sethostent","GLIBC_2.0",1},
 #endif
 #if defined(__i386__)
 	{"sethostid","GLIBC_2.0",0},
@@ -10234,9 +9728,6 @@ struct versym DynSyms[] = {
 #endif
 	{"setscrreg","",0},
 #if defined(__i386__)
-	{"setscrreg","",0},
-#endif
-#if defined(__i386__)
 	{"setservent","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -10281,9 +9772,7 @@ struct versym DynSyms[] = {
 #if defined(__powerpc__)
 	{"setuid","GLIBC_2.0",0},
 #endif
-#if defined(__i386__)
 	{"setupterm","",0},
-#endif
 #if defined(__i386__)
 	{"setutent","GLIBC_2.0",0},
 #endif
@@ -10746,57 +10235,18 @@ struct versym DynSyms[] = {
 	{"sleep","GLIBC_2.0",0},
 #endif
 	{"slk_attr_set","",0},
-#if defined(__i386__)
-	{"slk_attr_set","",0},
-#endif
 	{"slk_attroff","",0},
-#if defined(__i386__)
-	{"slk_attroff","",0},
-#endif
 	{"slk_attron","",0},
-#if defined(__i386__)
-	{"slk_attron","",0},
-#endif
 	{"slk_attrset","",0},
-#if defined(__i386__)
-	{"slk_attrset","",0},
-#endif
 	{"slk_clear","",0},
-#if defined(__i386__)
-	{"slk_clear","",0},
-#endif
 	{"slk_color","",0},
-#if defined(__i386__)
-	{"slk_color","",0},
-#endif
 	{"slk_init","",0},
-#if defined(__i386__)
-	{"slk_init","",0},
-#endif
 	{"slk_label","",0},
-#if defined(__i386__)
-	{"slk_label","",0},
-#endif
 	{"slk_noutrefresh","",0},
-#if defined(__i386__)
-	{"slk_noutrefresh","",0},
-#endif
 	{"slk_refresh","",0},
-#if defined(__i386__)
-	{"slk_refresh","",0},
-#endif
 	{"slk_restore","",0},
-#if defined(__i386__)
-	{"slk_restore","",0},
-#endif
 	{"slk_set","",0},
-#if defined(__i386__)
-	{"slk_set","",0},
-#endif
 	{"slk_touch","",0},
-#if defined(__i386__)
-	{"slk_touch","",0},
-#endif
 #if defined(__i386__)
 	{"snprintf","GLIBC_2.0",0},
 #endif
@@ -10894,17 +10344,8 @@ struct versym DynSyms[] = {
 	{"sscanf","GLIBC_2.0",0},
 #endif
 	{"standend","",0},
-#if defined(__i386__)
-	{"standend","",0},
-#endif
 	{"standout","",0},
-#if defined(__i386__)
-	{"standout","",0},
-#endif
 	{"start_color","",0},
-#if defined(__i386__)
-	{"start_color","",0},
-#endif
 #if defined(__i386__)
 	{"statfs","GLIBC_2.0",1},
 #endif
@@ -10963,9 +10404,6 @@ struct versym DynSyms[] = {
 	{"stdout","GLIBC_2.0",0},
 #endif
 	{"stdscr","",0},
-#if defined(__i386__)
-	{"stdscr","",0},
-#endif
 #if defined(__i386__)
 	{"step","GLIBC_2.0",0},
 #endif
@@ -11390,13 +10828,7 @@ struct versym DynSyms[] = {
 	{"strxfrm","GLIBC_2.0",0},
 #endif
 	{"subpad","",0},
-#if defined(__i386__)
-	{"subpad","",0},
-#endif
 	{"subwin","",0},
-#if defined(__i386__)
-	{"subwin","",0},
-#endif
 #if defined(__i386__)
 	{"svc_getreqset","GLIBC_2.0",0},
 #endif
@@ -11524,9 +10956,6 @@ struct versym DynSyms[] = {
 	{"sync","GLIBC_2.0",0},
 #endif
 	{"syncok","",0},
-#if defined(__i386__)
-	{"syncok","",0},
-#endif
 #if defined(__i386__)
 	{"sysconf","GLIBC_2.0",0},
 #endif
@@ -11708,13 +11137,7 @@ struct versym DynSyms[] = {
 	{"tempnam","GLIBC_2.0",0},
 #endif
 	{"termattrs","",0},
-#if defined(__i386__)
-	{"termattrs","",0},
-#endif
 	{"termname","",0},
-#if defined(__i386__)
-	{"termname","",0},
-#endif
 #if defined(__i386__)
 	{"textdomain","GLIBC_2.0",0},
 #endif
@@ -11761,37 +11184,13 @@ struct versym DynSyms[] = {
 	{"tgammal","GLIBC_2.1",0},
 #endif
 	{"tgetent","",0},
-#if defined(__i386__)
-	{"tgetent","",0},
-#endif
 	{"tgetflag","",0},
-#if defined(__i386__)
-	{"tgetflag","",0},
-#endif
 	{"tgetnum","",0},
-#if defined(__i386__)
-	{"tgetnum","",0},
-#endif
 	{"tgetstr","",0},
-#if defined(__i386__)
-	{"tgetstr","",0},
-#endif
 	{"tgoto","",0},
-#if defined(__i386__)
-	{"tgoto","",0},
-#endif
 	{"tigetflag","",0},
-#if defined(__i386__)
-	{"tigetflag","",0},
-#endif
 	{"tigetnum","",0},
-#if defined(__i386__)
-	{"tigetnum","",0},
-#endif
 	{"tigetstr","",0},
-#if defined(__i386__)
-	{"tigetstr","",0},
-#endif
 #if defined(__i386__)
 	{"time","GLIBC_2.0",0},
 #endif
@@ -11802,9 +11201,6 @@ struct versym DynSyms[] = {
 	{"time","GLIBC_2.0",0},
 #endif
 	{"timeout","",0},
-#if defined(__i386__)
-	{"timeout","",0},
-#endif
 #if defined(__i386__)
 	{"times","GLIBC_2.0",0},
 #endif
@@ -11870,12 +11266,8 @@ struct versym DynSyms[] = {
 #endif
 	{"topLevelShellClassRec","",0},
 	{"topLevelShellWidgetClass","",0},
-#if defined(__i386__)
 	{"touchline","",0},
-#endif
-#if defined(__i386__)
 	{"touchwin","",0},
-#endif
 #if defined(__i386__)
 	{"toupper","GLIBC_2.0",0},
 #endif
@@ -11913,13 +11305,7 @@ struct versym DynSyms[] = {
 	{"towupper","GLIBC_2.0",0},
 #endif
 	{"tparm","",0},
-#if defined(__i386__)
-	{"tparm","",0},
-#endif
 	{"tputs","",0},
-#if defined(__i386__)
-	{"tputs","",0},
-#endif
 	{"transientShellClassRec","",0},
 	{"transientShellWidgetClass","",0},
 #if defined(__i386__)
@@ -12005,9 +11391,6 @@ struct versym DynSyms[] = {
 #endif
 	{"typeahead","",0},
 #if defined(__i386__)
-	{"typeahead","",0},
-#endif
-#if defined(__i386__)
 	{"tzname","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -12073,9 +11456,6 @@ struct versym DynSyms[] = {
 #endif
 	{"ungetch","",0},
 #if defined(__i386__)
-	{"ungetch","",0},
-#endif
-#if defined(__i386__)
 	{"ungetwc","GLIBC_2.2",0},
 #endif
 #if defined(__ia64__)
@@ -12112,13 +11492,7 @@ struct versym DynSyms[] = {
 	{"unsetenv","GLIBC_2.0",0},
 #endif
 	{"untouchwin","",0},
-#if defined(__i386__)
-	{"untouchwin","",0},
-#endif
 	{"use_env","",0},
-#if defined(__i386__)
-	{"use_env","",0},
-#endif
 #if defined(__i386__)
 	{"usleep","GLIBC_2.0",0},
 #endif
@@ -12210,17 +11584,8 @@ struct versym DynSyms[] = {
 	{"vfwscanf","GLIBC_2.2",0},
 #endif
 	{"vidattr","",0},
-#if defined(__i386__)
-	{"vidattr","",0},
-#endif
 	{"vidputs","",0},
-#if defined(__i386__)
-	{"vidputs","",0},
-#endif
 	{"vline","",0},
-#if defined(__i386__)
-	{"vline","",0},
-#endif
 #if defined(__i386__)
 	{"vprintf","GLIBC_2.0",0},
 #endif
@@ -12276,13 +11641,7 @@ struct versym DynSyms[] = {
 	{"vsyslog","GLIBC_2.0",0},
 #endif
 	{"vw_printw","",0},
-#if defined(__i386__)
-	{"vw_printw","",0},
-#endif
 	{"vw_scanw","",0},
-#if defined(__i386__)
-	{"vw_scanw","",0},
-#endif
 #if defined(__i386__)
 	{"vwprintf","GLIBC_2.2",0},
 #endif
@@ -12294,9 +11653,6 @@ struct versym DynSyms[] = {
 #endif
 	{"vwprintw","",0},
 #if defined(__i386__)
-	{"vwprintw","",0},
-#endif
-#if defined(__i386__)
 	{"vwscanf","GLIBC_2.2",0},
 #endif
 #if defined(__ia64__)
@@ -12306,29 +11662,11 @@ struct versym DynSyms[] = {
 	{"vwscanf","GLIBC_2.2",0},
 #endif
 	{"vwscanw","",0},
-#if defined(__i386__)
-	{"vwscanw","",0},
-#endif
 	{"waddch","",0},
-#if defined(__i386__)
-	{"waddch","",0},
-#endif
 	{"waddchnstr","",0},
-#if defined(__i386__)
-	{"waddchnstr","",0},
-#endif
 	{"waddchstr","",0},
-#if defined(__i386__)
-	{"waddchstr","",0},
-#endif
 	{"waddnstr","",0},
-#if defined(__i386__)
-	{"waddnstr","",0},
-#endif
 	{"waddstr","",0},
-#if defined(__i386__)
-	{"waddstr","",0},
-#endif
 #if defined(__i386__)
 	{"wait","GLIBC_2.0",0},
 #endif
@@ -12393,65 +11731,20 @@ struct versym DynSyms[] = {
 	{"warnx","GLIBC_2.0",0},
 #endif
 	{"wattr_get","",0},
-#if defined(__i386__)
-	{"wattr_get","",0},
-#endif
 	{"wattr_off","",0},
-#if defined(__i386__)
-	{"wattr_off","",0},
-#endif
 	{"wattr_on","",0},
-#if defined(__i386__)
-	{"wattr_on","",0},
-#endif
 	{"wattr_set","",0},
-#if defined(__i386__)
-	{"wattr_set","",0},
-#endif
 	{"wattroff","",0},
-#if defined(__i386__)
-	{"wattroff","",0},
-#endif
 	{"wattron","",0},
-#if defined(__i386__)
-	{"wattron","",0},
-#endif
 	{"wattrset","",0},
-#if defined(__i386__)
-	{"wattrset","",0},
-#endif
 	{"wbkgd","",0},
-#if defined(__i386__)
-	{"wbkgd","",0},
-#endif
 	{"wbkgdset","",0},
-#if defined(__i386__)
-	{"wbkgdset","",0},
-#endif
 	{"wborder","",0},
-#if defined(__i386__)
-	{"wborder","",0},
-#endif
 	{"wchgat","",0},
-#if defined(__i386__)
-	{"wchgat","",0},
-#endif
 	{"wclear","",0},
-#if defined(__i386__)
-	{"wclear","",0},
-#endif
 	{"wclrtobot","",0},
-#if defined(__i386__)
-	{"wclrtobot","",0},
-#endif
 	{"wclrtoeol","",0},
-#if defined(__i386__)
-	{"wclrtoeol","",0},
-#endif
 	{"wcolor_set","",0},
-#if defined(__i386__)
-	{"wcolor_set","",0},
-#endif
 #if defined(__i386__)
 	{"wcpcpy","GLIBC_2.0",0},
 #endif
@@ -12850,9 +12143,6 @@ struct versym DynSyms[] = {
 #endif
 	{"wcursyncup","",0},
 #if defined(__i386__)
-	{"wcursyncup","",0},
-#endif
-#if defined(__i386__)
 	{"wcwidth","GLIBC_2.0",0},
 #endif
 #if defined(__ia64__)
@@ -12862,79 +12152,25 @@ struct versym DynSyms[] = {
 	{"wcwidth","GLIBC_2.0",0},
 #endif
 	{"wdelch","",0},
-#if defined(__i386__)
-	{"wdelch","",0},
-#endif
 	{"wdeleteln","",0},
-#if defined(__i386__)
-	{"wdeleteln","",0},
-#endif
 	{"wechochar","",0},
-#if defined(__i386__)
-	{"wechochar","",0},
-#endif
 	{"werase","",0},
-#if defined(__i386__)
-	{"werase","",0},
-#endif
 	{"wgetch","",0},
-#if defined(__i386__)
-	{"wgetch","",0},
-#endif
 	{"wgetnstr","",0},
-#if defined(__i386__)
-	{"wgetnstr","",0},
-#endif
 	{"wgetstr","",0},
-#if defined(__i386__)
-	{"wgetstr","",0},
-#endif
 	{"whline","",0},
-#if defined(__i386__)
-	{"whline","",0},
-#endif
 	{"widgetClass","",0},
 	{"widgetClassRec","",0},
 	{"winch","",0},
-#if defined(__i386__)
-	{"winch","",0},
-#endif
 	{"winchnstr","",0},
-#if defined(__i386__)
-	{"winchnstr","",0},
-#endif
 	{"winchstr","",0},
-#if defined(__i386__)
-	{"winchstr","",0},
-#endif
 	{"winnstr","",0},
-#if defined(__i386__)
-	{"winnstr","",0},
-#endif
 	{"winsch","",0},
-#if defined(__i386__)
-	{"winsch","",0},
-#endif
 	{"winsdelln","",0},
-#if defined(__i386__)
-	{"winsdelln","",0},
-#endif
 	{"winsertln","",0},
-#if defined(__i386__)
-	{"winsertln","",0},
-#endif
 	{"winsnstr","",0},
-#if defined(__i386__)
-	{"winsnstr","",0},
-#endif
 	{"winsstr","",0},
-#if defined(__i386__)
-	{"winsstr","",0},
-#endif
 	{"winstr","",0},
-#if defined(__i386__)
-	{"winstr","",0},
-#endif
 	{"wmShellClassRec","",0},
 	{"wmShellWidgetClass","",0},
 #if defined(__i386__)
@@ -12983,13 +12219,7 @@ struct versym DynSyms[] = {
 	{"wmemset","GLIBC_2.0",0},
 #endif
 	{"wmove","",0},
-#if defined(__i386__)
-	{"wmove","",0},
-#endif
 	{"wnoutrefresh","",0},
-#if defined(__i386__)
-	{"wnoutrefresh","",0},
-#endif
 #if defined(__i386__)
 	{"wordexp","GLIBC_2.1",0},
 #endif
@@ -13018,17 +12248,8 @@ struct versym DynSyms[] = {
 	{"wprintf","GLIBC_2.2",0},
 #endif
 	{"wprintw","",0},
-#if defined(__i386__)
-	{"wprintw","",0},
-#endif
 	{"wredrawln","",0},
-#if defined(__i386__)
-	{"wredrawln","",0},
-#endif
 	{"wrefresh","",0},
-#if defined(__i386__)
-	{"wrefresh","",0},
-#endif
 #if defined(__i386__)
 	{"write","GLIBC_2.0",0},
 #endif
@@ -13057,45 +12278,15 @@ struct versym DynSyms[] = {
 	{"wscanf","GLIBC_2.2",0},
 #endif
 	{"wscanw","",0},
-#if defined(__i386__)
-	{"wscanw","",0},
-#endif
 	{"wscrl","",0},
-#if defined(__i386__)
-	{"wscrl","",0},
-#endif
 	{"wsetscrreg","",0},
-#if defined(__i386__)
-	{"wsetscrreg","",0},
-#endif
 	{"wstandend","",0},
-#if defined(__i386__)
-	{"wstandend","",0},
-#endif
 	{"wstandout","",0},
-#if defined(__i386__)
-	{"wstandout","",0},
-#endif
 	{"wsyncdown","",0},
-#if defined(__i386__)
-	{"wsyncdown","",0},
-#endif
 	{"wsyncup","",0},
-#if defined(__i386__)
-	{"wsyncup","",0},
-#endif
 	{"wtimeout","",0},
-#if defined(__i386__)
-	{"wtimeout","",0},
-#endif
 	{"wtouchln","",0},
-#if defined(__i386__)
-	{"wtouchln","",0},
-#endif
 	{"wvline","",0},
-#if defined(__i386__)
-	{"wvline","",0},
-#endif
 #if defined(__i386__)
 	{"xdr_accepted_reply","GLIBC_2.0",0},
 #endif

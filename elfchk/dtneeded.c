@@ -50,6 +50,7 @@ char *DtNeeded[] = {
 #if defined(__powerpc64__)
 	"libdl.so.2",
 #endif /* __powerpc64__ */
+	"libgcc_s.so.1",
 	"libGL.so.1",
 	"libICE.so.6",
 #if defined(__i386__)
