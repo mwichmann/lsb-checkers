@@ -13,10 +13,6 @@ extern struct classinfo ld_lsb_ppc32_so_1_classinfo[];
 extern struct versym ld_lsb_s390_so_1[];
 extern struct classinfo ld_lsb_s390_so_1_classinfo[];
 #endif
-#if __x86_64__
-extern struct versym ld_lsb_x86_64_so_1[];
-extern struct classinfo ld_lsb_x86_64_so_1_classinfo[];
-#endif
 #if __i386__
 extern struct versym ld_lsb_so_1[];
 extern struct classinfo ld_lsb_so_1_classinfo[];
@@ -28,6 +24,10 @@ extern struct classinfo ld_lsb_ppc64_so_1_classinfo[];
 #if __s390x__
 extern struct versym ld_lsb_s390x_so_1[];
 extern struct classinfo ld_lsb_s390x_so_1_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym ld_lsb_x86_64_so_1[];
+extern struct classinfo ld_lsb_x86_64_so_1_classinfo[];
 #endif
 #if __i386__
 extern struct versym libc_so_6[];
