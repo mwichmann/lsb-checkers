@@ -12,7 +12,7 @@ WRAPPER_LIBS = \
 #	libs/libGL/libGL.o 
 #	libs/libX11/libX11.o 
 
-
+CFLAGS += -fPIC
 TEST_LIB = tests/tests.o
 FHS_LIB = fhs/fhs.o
 LIB64=$(shell case `arch` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
