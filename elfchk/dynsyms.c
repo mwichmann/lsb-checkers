@@ -1,5 +1,6 @@
 #include "elfchk.h"
 struct versym DynSyms[] = {
+	{"COLS",""},
 	{"DPMSCapable",""},
 	{"DPMSDisable",""},
 	{"DPMSEnable",""},
@@ -58,6 +59,7 @@ struct versym DynSyms[] = {
 	{"IceUnlockAuthFile",""},
 	{"IceVendor",""},
 	{"IceWriteAuthFileEntry",""},
+	{"LINES",""},
 	{"SmFreeProperty",""},
 	{"SmFreeReasons",""},
 	{"SmcClientID",""},
