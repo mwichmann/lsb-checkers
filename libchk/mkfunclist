@@ -211,8 +211,15 @@ open(TXT,">$libname.txt");
 print LIB "#include <stdlib.h>\n";
 print LIB "#include \"elfchk.h\"\n";
 print LIB "struct versym ".$libname."[] = {\n";
+
+$numsyms=0;
+$lastname="";
 for(1..$lsth->numrows) {
 	%entry=$lsth->fetchhash;
+	if( $entry{'Iname'} ne $lastname ) {
+		$numsyms++;
+		$lastname=$entry{'Iname'};
+		}
 	if( $entry{'Aid'} && $entry{'Aname'} ne 'All' ) {
 		print LIB "#if $entry{'Asymbol'}\n";
 		printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
@@ -223,6 +230,8 @@ for(1..$lsth->numrows) {
 		}
 }
 print LIB "\t{0,0}};\n\n";
+
+print "$numsyms symbols\n";
 
 #
 # Now, look for class data that me be present
