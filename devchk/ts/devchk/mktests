@@ -302,7 +302,6 @@ sub writetest($$)
 			%ttentry=$ttth->fetchhash;
 			if( $ttentry{'Ttype'} eq 'Array' ) {
 				print TESTS "CheckArrayTypeSize($Tname,".$ttentry{'ATsize'}.",$ATsize, $Tid, $Aid)\n";
-				print "CheckArrayTypeSize($Tname,".$ttentry{'ATsize'}.",$ATsize, $Tid, $Aid)\n";
 			} else {
 				print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
 			}
