@@ -10,7 +10,7 @@
 int inttypes_h()
 {
 int cnt=0;
-CheckTypeSize(imaxdiv_t,0)
+CheckTypeSize(imaxdiv_t,16)
 printf("%d tests in inttypes.h\n",cnt);
 return cnt;
 }

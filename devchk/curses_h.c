@@ -12,10 +12,10 @@ struct screen {
 int curses_h()
 {
 int cnt=0;
-CheckTypeSize(mmask_t,0)
-CheckTypeSize(attr_t,0)
-CheckTypeSize(bool,0)
-CheckTypeSize(chtype,0)
+CheckTypeSize(attr_t,4)
+CheckTypeSize(bool,1)
+CheckTypeSize(chtype,4)
+CheckTypeSize(mmask_t,4)
 printf("%d tests in curses.h\n",cnt);
 return cnt;
 }
