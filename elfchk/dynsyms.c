@@ -5200,7 +5200,7 @@ struct versym DynSyms[] = {
 	{"crypt","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"crypt","GLIBC_2.0",0},
+	{"crypt","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"crypt","GLIBC_2.0",0},
