@@ -1,5 +1,5 @@
 HAND_FUNCS= \
-fprintf.o ioctl.o open.o open64.o fscanf.o sscanf.o scanf.o mmap.o \
+printf.o fprintf.o ioctl.o open.o open64.o fscanf.o sscanf.o scanf.o mmap.o \
 calloc.o malloc.o realloc.o free.o tcgetattr.o tcsetattr.o
 #printf.o
 
