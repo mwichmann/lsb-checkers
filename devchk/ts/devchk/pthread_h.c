@@ -475,7 +475,7 @@ CheckTypeSize(pthread_cond_t,48, 9051, 2)
 #elif __ia64__
 CheckTypeSize(pthread_cond_t,48, 9051, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_cond_t,12, 9051, 6)
+CheckTypeSize(pthread_cond_t,48, 9051, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(pthread_cond_t,12, 9051, 10)
 #elif __powerpc64__
