@@ -35,6 +35,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8615,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(XSyncTrigger,20, 8617, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8617,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(XSyncWaitCondition,28, 8619, 2)
 #elif __ia64__
 CheckTypeSize(XSyncWaitCondition,32, 8619, 3)
@@ -72,6 +78,24 @@ CheckTypeSize(XSyncValue,8, 8612, 2)
 CheckTypeSize(XSyncValue,8, 8612, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8612,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XSyncValueType,4, 8964, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8964,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XSyncTestType,4, 8966, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8966,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XSyncAlarmState,4, 8968, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8968,0);
 #endif
 
 #ifdef TET_TEST

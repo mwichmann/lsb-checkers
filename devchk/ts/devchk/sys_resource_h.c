@@ -100,6 +100,14 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(rlim_t,4, 10210, 2)
+#elif __ia64__
+CheckTypeSize(rlim_t,8, 10210, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10210,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(struct rlimit,8, 9120, 2)
 #elif __ia64__
 CheckTypeSize(struct rlimit,16, 9120, 3)

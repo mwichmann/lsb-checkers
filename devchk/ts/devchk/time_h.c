@@ -51,6 +51,12 @@ CheckTypeSize(struct tm,56, 7019, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct itimerspec,16, 10101, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -50,6 +50,76 @@ Msg( "Error: Constant not found: XtInheritDeallocate\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct _ObjectPart,28, 10261, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10261,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(ObjectPart,28, 10264, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10264,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct _ObjectRec,28, 10262, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(ObjectRec,28, 10263, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10263,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct _ObjectClassPart,116, 10265, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10265,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(ObjectClassPart,116, 10266, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10266,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(ObjectClassExtensionRec,24, 10268, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10268,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(ObjectClassExtension,4, 10270, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10270,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct _ObjectClassRec,116, 10271, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(ObjectClassRec,116, 10272, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10272,0);
+#endif
+
+#ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10267,0);
+#endif
+
+#ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10269,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

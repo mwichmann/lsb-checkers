@@ -78,6 +78,18 @@ Msg( "Error: Constant not found: SETALL\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct sembuf,6, 6982, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct semid_ds,64, 10211, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10211,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -79,6 +79,21 @@ cnt++;
 #endif
 
 #ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8973,0);
+#endif
+
+#ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8974,0);
+#endif
+
+#ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8975,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(struct aiocb,144, 8633, 2)
 CheckOffset(struct aiocb,__pad,108,2,29659)
 #elif __ia64__

@@ -2410,11 +2410,23 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(XID,4, 8171, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8171,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(Atom,4, 8173, 2)
 #elif __ia64__
 CheckTypeSize(Atom,8, 8173, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8173,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(VisualID,4, 8174, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8174,0);
 #endif
 
 #ifdef __i386__
@@ -2471,6 +2483,18 @@ CheckTypeSize(Cursor,4, 8728, 2)
 CheckTypeSize(Cursor,8, 8728, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8728,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(Colormap,4, 8729, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8729,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(GContext,4, 8730, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8730,0);
 #endif
 
 #ifdef __i386__

@@ -38,6 +38,12 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(shmatt_t,4, 10212, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10212,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(struct shmid_ds,84, 9129, 2)
 CheckOffset(struct shmid_ds,shm_perm,0,2,33702)
 CheckOffset(struct shmid_ds,shm_segsz,36,2,33703)

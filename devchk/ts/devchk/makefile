@@ -4,6 +4,7 @@ OBJS = hdrchk.o \
 	X11_Composite_h.o \
 	X11_CompositeP_h.o \
 	X11_ConstrainP_h.o \
+	X11_Constraint_h.o \
 	X11_ICE_ICElib_h.o \
 	X11_ICE_ICEutil_h.o \
 	X11_Intrinsic_h.o \
@@ -19,6 +20,7 @@ OBJS = hdrchk.o \
 	aio_h.o \
 	assert_h.o \
 	cpio_h.o \
+	ctype_h.o \
 	curses_h.o \
 	dirent_h.o \
 	dlfcn_h.o \
@@ -62,6 +64,7 @@ OBJS = hdrchk.o \
 	sys_socket_h.o \
 	sys_stat_h.o \
 	sys_time_h.o \
+	sys_timeb_h.o \
 	sys_times_h.o \
 	sys_types_h.o \
 	sys_utsname_h.o \

@@ -46,6 +46,12 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(CompositeClassPart,20, 10244, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(CompositeClassRec,136, 10240, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10240,0);

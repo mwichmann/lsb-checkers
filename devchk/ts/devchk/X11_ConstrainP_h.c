@@ -37,6 +37,18 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(ConstraintPart,4, 10250, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(ConstraintClassPart,28, 10252, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(ConstraintClassRec,164, 10258, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10258,0);

@@ -67,11 +67,35 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8792,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(SmcDieProc,4, 8794, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8794,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(SmcShutdownCancelledProc,4, 8796, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8796,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(SmcSaveCompleteProc,4, 8798, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8798,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(SmcPropReplyProc,4, 8802, 2)
 #elif __ia64__
 CheckTypeSize(SmcPropReplyProc,8, 8802, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8802,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(SmPropValue,8, 8235, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8235,0);
 #endif
 
 #ifdef __i386__
@@ -88,6 +112,30 @@ CheckTypeSize(SmcCallbacks,32, 8259, 2)
 CheckTypeSize(SmcCallbacks,64, 8259, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8259,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(SmsSetPropertiesProc,4, 8818, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8818,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(SmsDeletePropertiesProc,4, 8820, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8820,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(SmsGetPropertiesProc,4, 8822, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8822,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(SmsCallbacks,80, 8291, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8291,0);
 #endif
 
 #ifdef __i386__

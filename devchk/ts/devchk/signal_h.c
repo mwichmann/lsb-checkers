@@ -478,11 +478,40 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(sig_atomic_t,4, 9092, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct sigstack,8, 9315, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(__sighandler_t,4, 6966, 2)
 #elif __ia64__
 CheckTypeSize(__sighandler_t,8, 6966, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(sigval_t,4, 9320, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
+#endif
+
+#ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10189,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(sigevent_t,64, 10190, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
 #endif
 
 #ifdef __i386__
@@ -507,6 +536,42 @@ CheckTypeSize(struct sigaction,140, 9097, 2)
 CheckTypeSize(struct sigaction,144, 9097, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9097,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(stack_t,12, 9314, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct _fpstate,624, 10198, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10198,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct _fpreg,10, 10199, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10199,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct _fpxreg,16, 10202, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10202,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct _xmmreg,16, 10203, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10203,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct sigcontext,88, 10005, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10005,0);
 #endif
 
 #ifdef TET_TEST

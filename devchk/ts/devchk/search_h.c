@@ -48,6 +48,12 @@ CheckTypeSize(ACTION,4, 9081, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9081,0);
 #endif
 
+#ifdef __i386__
+CheckTypeSize(VISIT,4, 9085, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9085,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
