@@ -509,127 +509,127 @@ struct versym libm_so_6[] = {
 	{"cacos","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"cacos","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacos","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cacos","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacos","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cacos","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cacos","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cacos","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacos","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cacos","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cacos","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"cacos","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacos","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cacosf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"cacosf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacosf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cacosf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacosf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"cacosf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cacosf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cacosf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacosf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"cacosf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cacosf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"cacosf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacosf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"cacosh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"cacosh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacosh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cacosh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacosh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cacosh","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cacosh","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cacosh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacosh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cacosh","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cacosh","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"cacosh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacosh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cacoshf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"cacoshf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacoshf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cacoshf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacoshf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"cacoshf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cacoshf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cacoshf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacoshf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"cacoshf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cacoshf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"cacoshf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacoshf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"cacoshl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"cacoshl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacoshl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cacoshl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacoshl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cacoshl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cacoshl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cacoshl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacoshl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cacoshl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cacoshl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"cacoshl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacoshl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cacosl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"cacosl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacosl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cacosl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacosl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cacosl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cacosl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cacosl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cacosl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cacosl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cacosl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"cacosl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cacosl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"carg","GLIBC_2.1",0,"LSB-Core",8,1},
@@ -698,253 +698,253 @@ struct versym libm_so_6[] = {
 	{"casin","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"casin","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casin","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"casin","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casin","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"casin","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"casin","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"casin","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casin","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"casin","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"casin","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"casin","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casin","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"casinf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"casinf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"casinf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"casinf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"casinf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"casinf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"casinf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"casinf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"casinf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"casinh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"casinh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"casinh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"casinh","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"casinh","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"casinh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"casinh","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"casinh","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"casinh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"casinhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"casinhf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinhf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"casinhf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"casinhf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"casinhf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"casinhf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"casinhf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"casinhf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"casinhf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinhf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"casinhl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"casinhl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinhl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"casinhl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinhl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"casinhl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"casinhl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"casinhl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinhl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"casinhl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"casinhl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"casinhl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinhl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"casinl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"casinl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"casinl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"casinl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"casinl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"casinl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"casinl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"casinl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"casinl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"casinl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"casinl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"catan","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"catan","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catan","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"catan","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catan","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"catan","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"catan","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"catan","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catan","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"catan","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"catan","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"catan","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catan","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"catanf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"catanf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"catanf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"catanf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"catanf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"catanf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"catanf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"catanf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"catanf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"catanh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"catanh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"catanh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"catanh","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"catanh","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"catanh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"catanh","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"catanh","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"catanh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"catanhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"catanhf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanhf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"catanhf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"catanhf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"catanhf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"catanhf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"catanhf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"catanhf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"catanhf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanhf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"catanhl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"catanhl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanhl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"catanhl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanhl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"catanhl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"catanhl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"catanhl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanhl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"catanhl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"catanhl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"catanhl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanhl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"catanl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"catanl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"catanl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"catanl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"catanl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"catanl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"catanl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"catanl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"catanl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"catanl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"catanl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cbrt","GLIBC_2.0",0,"LSB-Core",8,1},
@@ -1013,127 +1013,127 @@ struct versym libm_so_6[] = {
 	{"ccos","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"ccos","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccos","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ccos","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccos","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"ccos","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ccos","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ccos","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccos","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"ccos","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ccos","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"ccos","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccos","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"ccosf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"ccosf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccosf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ccosf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccosf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"ccosf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ccosf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ccosf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccosf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"ccosf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ccosf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"ccosf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccosf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"ccosh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"ccosh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccosh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ccosh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccosh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"ccosh","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ccosh","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ccosh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccosh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"ccosh","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ccosh","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"ccosh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccosh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"ccoshf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"ccoshf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccoshf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ccoshf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccoshf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"ccoshf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ccoshf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ccoshf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccoshf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"ccoshf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ccoshf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"ccoshf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccoshf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"ccoshl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"ccoshl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccoshl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ccoshl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccoshl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"ccoshl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ccoshl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ccoshl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccoshl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"ccoshl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ccoshl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"ccoshl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccoshl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"ccosl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"ccosl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccosl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ccosl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccosl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"ccosl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ccosl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ccosl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ccosl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"ccosl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ccosl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"ccosl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ccosl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"ceil","GLIBC_2.0",0,"LSB-Core",8,1},
@@ -1202,64 +1202,64 @@ struct versym libm_so_6[] = {
 	{"cexp","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"cexp","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cexp","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cexp","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cexp","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cexp","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cexp","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cexp","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cexp","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cexp","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cexp","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"cexp","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cexp","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cexpf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"cexpf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cexpf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cexpf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cexpf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"cexpf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cexpf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cexpf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cexpf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"cexpf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cexpf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"cexpf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cexpf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"cexpl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"cexpl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cexpl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cexpl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cexpl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cexpl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cexpl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cexpl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cexpl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cexpl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cexpl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"cexpl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cexpl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cimag","GLIBC_2.1",0,"LSB-Core",8,1},
@@ -1328,22 +1328,22 @@ struct versym libm_so_6[] = {
 	{"clog","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"clog","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clog","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"clog","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"clog","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"clog","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"clog","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"clog","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"clog","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"clog","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clog","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"clog10","GLIBC_2.1",0,"LSB-Core",0,1},
@@ -1370,148 +1370,148 @@ struct versym libm_so_6[] = {
 	{"clog10f","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"clog10f","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clog10f","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"clog10f","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog10f","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"clog10f","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"clog10f","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"clog10f","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog10f","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"clog10f","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"clog10f","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"clog10f","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clog10f","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"clog10l","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"clog10l","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clog10l","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"clog10l","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog10l","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"clog10l","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"clog10l","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"clog10l","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog10l","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"clog10l","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"clog10l","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"clog10l","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clog10l","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"clogf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"clogf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clogf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"clogf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clogf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"clogf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"clogf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"clogf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clogf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"clogf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"clogf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"clogf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clogf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"clogl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"clogl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clogl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"clogl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clogl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"clogl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"clogl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"clogl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clogl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"clogl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"clogl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"clogl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clogl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"conj","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"conj","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"conj","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"conj","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"conj","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"conj","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"conj","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"conj","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"conj","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"conj","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"conj","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"conj","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"conj","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"conjf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"conjf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"conjf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"conjf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"conjf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"conjf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"conjf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"conjf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"conjf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"conjf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"conjf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"conjf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"conjf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"conjl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"conjl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"conjl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"conjl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"conjl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"conjl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"conjl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"conjl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"conjl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"conjl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"conjl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"conjl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"conjl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"copysign","GLIBC_2.0",0,"LSB-Core",8,1},
@@ -1706,127 +1706,127 @@ struct versym libm_so_6[] = {
 	{"cpow","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"cpow","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cpow","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cpow","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cpow","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cpow","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cpow","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cpow","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cpow","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cpow","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cpow","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"cpow","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cpow","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cpowf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"cpowf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cpowf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cpowf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cpowf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"cpowf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cpowf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cpowf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cpowf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"cpowf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cpowf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"cpowf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cpowf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"cpowl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"cpowl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cpowl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cpowl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cpowl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cpowl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cpowl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cpowl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cpowl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cpowl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cpowl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"cpowl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cpowl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cproj","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"cproj","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cproj","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cproj","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cproj","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cproj","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cproj","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cproj","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cproj","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cproj","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cproj","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"cproj","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cproj","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"cprojf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"cprojf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cprojf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cprojf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cprojf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"cprojf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cprojf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cprojf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cprojf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"cprojf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cprojf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"cprojf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cprojf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"cprojl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"cprojl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cprojl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"cprojl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cprojl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"cprojl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"cprojl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"cprojl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"cprojl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"cprojl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"cprojl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"cprojl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"cprojl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"creal","GLIBC_2.1",0,"LSB-Core",8,1},
@@ -1895,316 +1895,316 @@ struct versym libm_so_6[] = {
 	{"csin","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"csin","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csin","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csin","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csin","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"csin","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csin","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csin","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csin","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"csin","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csin","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"csin","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csin","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"csinf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"csinf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csinf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"csinf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csinf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csinf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"csinf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csinf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"csinf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"csinh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"csinh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csinh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"csinh","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csinh","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csinh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"csinh","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csinh","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"csinh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"csinhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"csinhf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinhf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csinhf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"csinhf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csinhf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csinhf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"csinhf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csinhf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"csinhf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinhf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"csinhl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"csinhl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinhl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csinhl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinhl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"csinhl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csinhl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csinhl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinhl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"csinhl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csinhl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"csinhl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinhl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"csinl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"csinl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csinl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"csinl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csinl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csinl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csinl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"csinl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csinl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"csinl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csinl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"csqrt","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"csqrt","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csqrt","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csqrt","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csqrt","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"csqrt","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csqrt","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csqrt","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csqrt","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"csqrt","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csqrt","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"csqrt","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csqrt","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"csqrtf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"csqrtf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csqrtf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csqrtf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csqrtf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"csqrtf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csqrtf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csqrtf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csqrtf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"csqrtf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csqrtf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"csqrtf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csqrtf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"csqrtl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"csqrtl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csqrtl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"csqrtl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csqrtl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"csqrtl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"csqrtl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"csqrtl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"csqrtl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"csqrtl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"csqrtl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"csqrtl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"csqrtl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"ctan","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"ctan","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctan","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ctan","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctan","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"ctan","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ctan","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ctan","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctan","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"ctan","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ctan","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"ctan","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctan","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"ctanf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"ctanf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ctanf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"ctanf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ctanf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ctanf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"ctanf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ctanf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"ctanf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"ctanh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"ctanh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ctanh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"ctanh","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ctanh","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ctanh","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanh","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"ctanh","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ctanh","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"ctanh","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanh","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"ctanhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
-	{"ctanhf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanhf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ctanhf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"ctanhf","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ctanhf","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ctanhf","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanhf","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
-	{"ctanhf","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ctanhf","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"ctanhf","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanhf","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"ctanhl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"ctanhl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanhl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ctanhl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanhl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"ctanhl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ctanhl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ctanhl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanhl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"ctanhl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ctanhl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"ctanhl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanhl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"ctanl","GLIBC_2.1",0,"LSB-Core",24,1},
 #endif
 #if __ia64__
-	{"ctanl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanl","GLIBC_2.2",0,"LSB-Core",32,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"ctanl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"ctanl","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"ctanl","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"ctanl","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"ctanl","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"ctanl","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"ctanl","GLIBC_2.2.5",0,"LSB-Core",32,1},
 #endif
 #if __s390x__
-	{"ctanl","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"ctanl","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"dremf","GLIBC_2.0",0,"LSB-Core",4,1},
