@@ -108,7 +108,10 @@ for(1..$sth->numrows) {
 		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,journal);\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
 	}
-	print MAKE "\t$libname.o \\\n";
+	if( !$seenit{$libname} ) {
+		print MAKE "\t$libname.o \\\n";
+		$seenit{$libname}=1;
+		}
 	mklibsyms($libname,$entry{'Lid'});
 }
 
