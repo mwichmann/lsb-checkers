@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.14 $
+ * This is $Revision: 1.15 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.15  2002/06/20 05:27:20  cyeoh
+ * Adds package version tag to journal file
+ *
  * Revision 1.14  2002/05/08 21:57:04  kingdon
  * Include stdlib.h (for exit()).
  *
@@ -66,7 +69,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.14 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.15 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -306,6 +309,7 @@ extern void check_libs(struct tetj_handle *journal);
 int main(int argc, char *argv[])
 {
   struct tetj_handle *journal;
+  char tmp_string[TMP_STRING_SIZE+1];
   
 
   if (tetj_start_journal("journal.libchk", &journal, "libchk")!=0)
@@ -313,6 +317,9 @@ int main(int argc, char *argv[])
     perror("Could not open journal file");
     exit(1);
   }
+
+  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
+  tetj_add_config(journal, tmp_string);
 
   check_libs(journal);
   exit(0);
