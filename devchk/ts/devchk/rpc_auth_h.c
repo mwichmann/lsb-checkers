@@ -295,8 +295,9 @@ CheckMemberSize(union des_block,c,8,9,32025)
 CheckOffset(union des_block,c,0,9,32025)
 #elif __s390x__
 CheckTypeSize(union des_block,8, 9888, 12)
-Msg("Missing member data for des_block on S390X\n");
+CheckMemberSize(union des_block,key,8,12,32024)
 CheckOffset(union des_block,key,0,12,32024)
+CheckMemberSize(union des_block,c,8,12,32025)
 CheckOffset(union des_block,c,0,12,32025)
 #elif __x86_64__
 CheckTypeSize(union des_block,8, 9888, 11)
