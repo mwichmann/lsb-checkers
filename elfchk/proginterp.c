@@ -18,7 +18,7 @@ char *ProgInterp =
 	"/lib/ld-lsb-ppc32.so.1";
 #endif
 #if __powerpc64__
-	"/lib/ld-lsb-ppc64.so.1";
+	"/lib64/ld-lsb-ppc64.so.1";
 #endif
 #if defined(__ia64__)
 	"/lib/ld-lsb-ia64.so.1";
@@ -27,8 +27,8 @@ char *ProgInterp =
 	"/lib/ld-lsb-s390.so.1";
 #endif
 #if __s390x__
-	"/lib/ld-lsb-s390x.so.1";
+	"/lib64/ld-lsb-s390x.so.1";
 #endif
 #if __x86_64__
-	"/lib/ld-lsb-x86_64.so.1";
+	"/lib64/ld-lsb-x86_64.so.1";
 #endif
