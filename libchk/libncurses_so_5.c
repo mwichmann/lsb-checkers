@@ -1,5 +1,7 @@
 #include "elfchk.h"
 struct versym libncurses_so_5[] = {
+	{"COLS",""},
+	{"LINES",""},
 	{"addch",""},
 	{"addchnstr",""},
 	{"addchstr",""},
