@@ -1,0 +1,9 @@
+#!/bin/sh
+echo "void"
+echo "$1(ElfFile *file1, Elf32_Dyn *dyn1 )"
+echo "{"
+echo "#ifdef VERBOSE"
+echo "fprintf(stderr, \"$1 Dynamic Tag\\n\" );"
+echo "#endif /* VERBOSE */"
+echo "}"
+echo

@@ -1,0 +1,24 @@
+#!/usr/local/bin/perl
+
+use CGI;
+use Mysql;
+
+$Dbh = Mysql->connect(localhost) || die $Mysql::db_errstr;
+$Dbh->selectdb("Linux") || die $Dbh->errmsg();
+
+$select = "SELECT DISTINCT Lrunname FROM Library ";
+$select.= "WHERE Library.Lstd='Y' ";
+$select.= "ORDER BY Lrunname ";
+
+#print $select;
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+print "char *DtNeeded[] = {\n";
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	printf "\t\"%s\",\n",$entry{'Lrunname'};
+}
+print "\t};\n";
+print "int numDtNeeded = sizeof(DtNeeded)/sizeof(char *);";
+
