@@ -553,7 +553,7 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if __powerpc64__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
 #else
@@ -561,7 +561,7 @@ Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
+#elif __powerpc__ && !__powerpc64__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
 #else
@@ -569,9 +569,53 @@ Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef MINSIGSTKSZ
+	CompareConstant(MINSIGSTKSZ,131027,3152,architecture)
+#else
+Msg( "Error: Constant not found: MINSIGSTKSZ\n");
+cnt++;
 #endif
 
-#if __i386__
+#elif __i386__
+#ifdef MINSIGSTKSZ
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+#else
+Msg( "Error: Constant not found: MINSIGSTKSZ\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef MINSIGSTKSZ
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+#else
+Msg( "Error: Constant not found: MINSIGSTKSZ\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef MINSIGSTKSZ
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+#else
+Msg( "Error: Constant not found: MINSIGSTKSZ\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef MINSIGSTKSZ
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+#else
+Msg( "Error: Constant not found: MINSIGSTKSZ\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for MINSIGSTKSZ (3152, int) in db\n");
+#ifdef MINSIGSTKSZ
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3152,%d);\n", architecture, MINSIGSTKSZ);
+#endif
+#endif
+#if __powerpc64__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,8192,3153,architecture)
 #else
@@ -579,7 +623,7 @@ Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,8192,3153,architecture)
 #else
@@ -587,8 +631,52 @@ Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef SIGSTKSZ
+	CompareConstant(SIGSTKSZ,262144,3153,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKSZ\n");
+cnt++;
 #endif
 
+#elif __i386__
+#ifdef SIGSTKSZ
+	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKSZ\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef SIGSTKSZ
+	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKSZ\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef SIGSTKSZ
+	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKSZ\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef SIGSTKSZ
+	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKSZ\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for SIGSTKSZ (3153, int) in db\n");
+#ifdef SIGSTKSZ
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3153,%d);\n", architecture, SIGSTKSZ);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_BLOCK
 	CompareConstant(SIG_BLOCK,0,3154,architecture)
@@ -882,6 +970,360 @@ cnt++;
 	CompareConstant(SI_KERNEL,0x80,5147,architecture)
 #else
 Msg( "Error: Constant not found: SI_KERNEL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for SIG_HOLD */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ILL_ILLOPC
+	CompareConstant(ILL_ILLOPC,1,5150,architecture)
+#else
+Msg( "Error: Constant not found: ILL_ILLOPC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ILL_ILLOPN
+	CompareConstant(ILL_ILLOPN,2,5151,architecture)
+#else
+Msg( "Error: Constant not found: ILL_ILLOPN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ILL_ILLADR
+	CompareConstant(ILL_ILLADR,3,5152,architecture)
+#else
+Msg( "Error: Constant not found: ILL_ILLADR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ILL_ILLTRP
+	CompareConstant(ILL_ILLTRP,4,5153,architecture)
+#else
+Msg( "Error: Constant not found: ILL_ILLTRP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ILL_PRVOPC
+	CompareConstant(ILL_PRVOPC,5,5154,architecture)
+#else
+Msg( "Error: Constant not found: ILL_PRVOPC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ILL_PRVREG
+	CompareConstant(ILL_PRVREG,6,5155,architecture)
+#else
+Msg( "Error: Constant not found: ILL_PRVREG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ILL_COPROC
+	CompareConstant(ILL_COPROC,7,5156,architecture)
+#else
+Msg( "Error: Constant not found: ILL_COPROC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ILL_BADSTK
+	CompareConstant(ILL_BADSTK,8,5157,architecture)
+#else
+Msg( "Error: Constant not found: ILL_BADSTK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FPE_INTDIV
+	CompareConstant(FPE_INTDIV,1,5158,architecture)
+#else
+Msg( "Error: Constant not found: FPE_INTDIV\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FPE_INTOVF
+	CompareConstant(FPE_INTOVF,2,5159,architecture)
+#else
+Msg( "Error: Constant not found: FPE_INTOVF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FPE_FLTDIV
+	CompareConstant(FPE_FLTDIV,3,5160,architecture)
+#else
+Msg( "Error: Constant not found: FPE_FLTDIV\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FPE_FLTOVF
+	CompareConstant(FPE_FLTOVF,4,5161,architecture)
+#else
+Msg( "Error: Constant not found: FPE_FLTOVF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FPE_FLTUND
+	CompareConstant(FPE_FLTUND,5,5162,architecture)
+#else
+Msg( "Error: Constant not found: FPE_FLTUND\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FPE_FLTRES
+	CompareConstant(FPE_FLTRES,6,5163,architecture)
+#else
+Msg( "Error: Constant not found: FPE_FLTRES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FPE_FLTINV
+	CompareConstant(FPE_FLTINV,7,5164,architecture)
+#else
+Msg( "Error: Constant not found: FPE_FLTINV\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FPE_FLTSUB
+	CompareConstant(FPE_FLTSUB,8,5165,architecture)
+#else
+Msg( "Error: Constant not found: FPE_FLTSUB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SEGV_MAPERR
+	CompareConstant(SEGV_MAPERR,1,5166,architecture)
+#else
+Msg( "Error: Constant not found: SEGV_MAPERR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SEGV_ACCERR
+	CompareConstant(SEGV_ACCERR,2,5167,architecture)
+#else
+Msg( "Error: Constant not found: SEGV_ACCERR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BUS_ADRALN
+	CompareConstant(BUS_ADRALN,1,5168,architecture)
+#else
+Msg( "Error: Constant not found: BUS_ADRALN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BUS_ADRERR
+	CompareConstant(BUS_ADRERR,2,5169,architecture)
+#else
+Msg( "Error: Constant not found: BUS_ADRERR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BUS_OBJERR
+	CompareConstant(BUS_OBJERR,3,5170,architecture)
+#else
+Msg( "Error: Constant not found: BUS_OBJERR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef TRAP_BRKPT
+	CompareConstant(TRAP_BRKPT,1,5171,architecture)
+#else
+Msg( "Error: Constant not found: TRAP_BRKPT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef TRAP_TRACE
+	CompareConstant(TRAP_TRACE,2,5172,architecture)
+#else
+Msg( "Error: Constant not found: TRAP_TRACE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLD_EXITED
+	CompareConstant(CLD_EXITED,1,5173,architecture)
+#else
+Msg( "Error: Constant not found: CLD_EXITED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLD_KILLED
+	CompareConstant(CLD_KILLED,2,5174,architecture)
+#else
+Msg( "Error: Constant not found: CLD_KILLED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLD_DUMPED
+	CompareConstant(CLD_DUMPED,3,5175,architecture)
+#else
+Msg( "Error: Constant not found: CLD_DUMPED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLD_TRAPPED
+	CompareConstant(CLD_TRAPPED,4,5176,architecture)
+#else
+Msg( "Error: Constant not found: CLD_TRAPPED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLD_STOPPED
+	CompareConstant(CLD_STOPPED,5,5177,architecture)
+#else
+Msg( "Error: Constant not found: CLD_STOPPED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLD_CONTINUED
+	CompareConstant(CLD_CONTINUED,6,5178,architecture)
+#else
+Msg( "Error: Constant not found: CLD_CONTINUED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLL_IN
+	CompareConstant(POLL_IN,1,5179,architecture)
+#else
+Msg( "Error: Constant not found: POLL_IN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLL_OUT
+	CompareConstant(POLL_OUT,2,5180,architecture)
+#else
+Msg( "Error: Constant not found: POLL_OUT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLL_MSG
+	CompareConstant(POLL_MSG,3,5181,architecture)
+#else
+Msg( "Error: Constant not found: POLL_MSG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLL_ERR
+	CompareConstant(POLL_ERR,4,5182,architecture)
+#else
+Msg( "Error: Constant not found: POLL_ERR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLL_PRI
+	CompareConstant(POLL_PRI,5,5183,architecture)
+#else
+Msg( "Error: Constant not found: POLL_PRI\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLL_HUP
+	CompareConstant(POLL_HUP,6,5184,architecture)
+#else
+Msg( "Error: Constant not found: POLL_HUP\n");
 cnt++;
 #endif
 
