@@ -1432,7 +1432,7 @@ CheckTypeSize(sig_atomic_t,4, 9092, 6)
 #elif __s390__
 CheckTypeSize(sig_atomic_t,4, 9092, 10)
 #elif __powerpc64__
-CheckTypeSize(sig_atomic_t,0, 9092, 9)
+CheckTypeSize(sig_atomic_t,4, 9092, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
@@ -1452,10 +1452,8 @@ CheckOffset(struct sigstack,ss_onstack,4,6,34195)
 CheckTypeSize(struct sigstack,8, 9315, 10)
 CheckOffset(struct sigstack,ss_onstack,4,10,34195)
 #elif __powerpc64__
-CheckTypeSize(struct sigstack,0, 9315, 9)
-Msg("Missing member data for sigstack on PPC64\n");
-CheckOffset(struct sigstack,ss_sp,0,9,34194)
-CheckOffset(struct sigstack,ss_onstack,0,9,34195)
+CheckTypeSize(struct sigstack,16, 9315, 9)
+CheckOffset(struct sigstack,ss_onstack,8,9,34195)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
 Msg("Find size of sigstack (9315)\n");
@@ -1470,7 +1468,7 @@ CheckTypeSize(__sighandler_t,4, 6966, 6)
 #elif __s390__
 CheckTypeSize(__sighandler_t,4, 6966, 10)
 #elif __powerpc64__
-CheckTypeSize(__sighandler_t,0, 6966, 9)
+CheckTypeSize(__sighandler_t,8, 6966, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
 Msg("Find size of __sighandler_t (6966)\n");
@@ -1485,7 +1483,7 @@ CheckTypeSize(sigval_t,4, 9320, 6)
 #elif __s390__
 CheckTypeSize(sigval_t,4, 9320, 10)
 #elif __powerpc64__
-CheckTypeSize(sigval_t,0, 9320, 9)
+CheckTypeSize(sigval_t,8, 9320, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
 Msg("Find size of sigval_t (9320)\n");
@@ -1510,7 +1508,7 @@ CheckTypeSize(sigevent_t,64, 10190, 6)
 #elif __s390__
 CheckTypeSize(sigevent_t,64, 10190, 10)
 #elif __powerpc64__
-CheckTypeSize(sigevent_t,0, 10190, 9)
+CheckTypeSize(sigevent_t,64, 10190, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
 Msg("Find size of sigevent_t (10190)\n");
@@ -1525,7 +1523,7 @@ CheckTypeSize(siginfo_t,128, 9099, 6)
 #elif __s390__
 CheckTypeSize(siginfo_t,128, 9099, 10)
 #elif __powerpc64__
-CheckTypeSize(siginfo_t,0, 9099, 9)
+CheckTypeSize(siginfo_t,128, 9099, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
 Msg("Find size of siginfo_t (9099)\n");
@@ -1576,12 +1574,10 @@ CheckOffset(struct sigaction,sa_flags,132,6,34717)
 CheckOffset(struct sigaction,sa_restorer,136,6,34718)
 CheckOffset(struct sigaction,sa_mask,4,6,34719)
 #elif __powerpc64__
-CheckTypeSize(struct sigaction,0, 10402, 9)
-Msg("Missing member data for sigaction on PPC64\n");
-CheckOffset(struct sigaction,__sigaction_handler,0,9,34716)
-CheckOffset(struct sigaction,sa_flags,0,9,34717)
-CheckOffset(struct sigaction,sa_restorer,0,9,34718)
-CheckOffset(struct sigaction,sa_mask,0,9,34719)
+CheckTypeSize(struct sigaction,152, 10402, 9)
+CheckOffset(struct sigaction,sa_flags,136,9,34717)
+CheckOffset(struct sigaction,sa_restorer,144,9,34718)
+CheckOffset(struct sigaction,sa_mask,8,9,34719)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10402,0);
 Msg("Find size of sigaction (10402)\n");

@@ -47,7 +47,7 @@ CheckTypeSize(enum_t,4, 9895, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(enum_t,4, 9895, 6)
 #elif __powerpc64__
-CheckTypeSize(enum_t,0, 9895, 9)
+CheckTypeSize(enum_t,4, 9895, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9895,0);
 Msg("Find size of enum_t (9895)\n");
@@ -62,7 +62,7 @@ CheckTypeSize(rpcvers_t,4, 9993, 10)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rpcvers_t,4, 9993, 6)
 #elif __powerpc64__
-CheckTypeSize(rpcvers_t,0, 9993, 9)
+CheckTypeSize(rpcvers_t,8, 9993, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9993,0);
 Msg("Find size of rpcvers_t (9993)\n");

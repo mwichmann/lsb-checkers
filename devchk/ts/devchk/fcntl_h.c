@@ -319,13 +319,11 @@ CheckOffset(struct flock,l_start,4,10,34304)
 CheckOffset(struct flock,l_len,8,10,34305)
 CheckOffset(struct flock,l_pid,12,10,34306)
 #elif __powerpc64__
-CheckTypeSize(struct flock,0, 10217, 9)
-Msg("Missing member data for flock on PPC64\n");
-CheckOffset(struct flock,l_type,0,9,34302)
-CheckOffset(struct flock,l_whence,0,9,34303)
-CheckOffset(struct flock,l_start,0,9,34304)
-CheckOffset(struct flock,l_len,0,9,34305)
-CheckOffset(struct flock,l_pid,0,9,34306)
+CheckTypeSize(struct flock,32, 10217, 9)
+CheckOffset(struct flock,l_whence,2,9,34303)
+CheckOffset(struct flock,l_start,8,9,34304)
+CheckOffset(struct flock,l_len,16,9,34305)
+CheckOffset(struct flock,l_pid,24,9,34306)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
 Msg("Find size of flock (10217)\n");
@@ -357,13 +355,11 @@ CheckOffset(struct flock64,l_start,8,10,34309)
 CheckOffset(struct flock64,l_len,16,10,34310)
 CheckOffset(struct flock64,l_pid,24,10,34311)
 #elif __powerpc64__
-CheckTypeSize(struct flock64,0, 10218, 9)
-Msg("Missing member data for flock64 on PPC64\n");
-CheckOffset(struct flock64,l_type,0,9,34307)
-CheckOffset(struct flock64,l_whence,0,9,34308)
-CheckOffset(struct flock64,l_start,0,9,34309)
-CheckOffset(struct flock64,l_len,0,9,34310)
-CheckOffset(struct flock64,l_pid,0,9,34311)
+CheckTypeSize(struct flock64,32, 10218, 9)
+CheckOffset(struct flock64,l_whence,2,9,34308)
+CheckOffset(struct flock64,l_start,8,9,34309)
+CheckOffset(struct flock64,l_len,16,9,34310)
+CheckOffset(struct flock64,l_pid,24,9,34311)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
 Msg("Find size of flock64 (10218)\n");

@@ -248,7 +248,7 @@ CheckTypeSize(pthread_key_t,4, 9059, 6)
 #elif __s390__
 CheckTypeSize(pthread_key_t,4, 9059, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_key_t,0, 9059, 9)
+CheckTypeSize(pthread_key_t,4, 9059, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9059,0);
 Msg("Find size of pthread_key_t (9059)\n");
@@ -263,7 +263,7 @@ CheckTypeSize(pthread_once_t,4, 9062, 6)
 #elif __s390__
 CheckTypeSize(pthread_once_t,4, 9062, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_once_t,0, 9062, 9)
+CheckTypeSize(pthread_once_t,4, 9062, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9062,0);
 Msg("Find size of pthread_once_t (9062)\n");
@@ -278,7 +278,7 @@ CheckTypeSize(pthread_t,4, 9040, 6)
 #elif __s390__
 CheckTypeSize(pthread_t,4, 9040, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_t,0, 9040, 9)
+CheckTypeSize(pthread_t,8, 9040, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9040,0);
 Msg("Find size of pthread_t (9040)\n");
@@ -298,10 +298,8 @@ CheckOffset(struct _pthread_fastlock,__spinlock,4,6,34427)
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 10)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427)
 #elif __powerpc64__
-CheckTypeSize(struct _pthread_fastlock,0, 10105, 9)
-Msg("Missing member data for _pthread_fastlock on PPC64\n");
-CheckOffset(struct _pthread_fastlock,__status,0,9,33602)
-CheckOffset(struct _pthread_fastlock,__spinlock,0,9,34427)
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 9)
+CheckOffset(struct _pthread_fastlock,__spinlock,8,9,34427)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10105,0);
 Msg("Find size of _pthread_fastlock (10105)\n");
@@ -316,7 +314,7 @@ CheckTypeSize(pthread_mutex_t,24, 9047, 6)
 #elif __s390__
 CheckTypeSize(pthread_mutex_t,24, 9047, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_mutex_t,0, 9047, 9)
+CheckTypeSize(pthread_mutex_t,40, 9047, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9047,0);
 Msg("Find size of pthread_mutex_t (9047)\n");
@@ -331,7 +329,7 @@ CheckTypeSize(pthread_mutexattr_t,4, 9049, 6)
 #elif __s390__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_mutexattr_t,0, 9049, 9)
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9049,0);
 Msg("Find size of pthread_mutexattr_t (9049)\n");
@@ -346,7 +344,7 @@ CheckTypeSize(pthread_attr_t,36, 9042, 6)
 #elif __s390__
 CheckTypeSize(pthread_attr_t,36, 9042, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_attr_t,0, 9042, 9)
+CheckTypeSize(pthread_attr_t,56, 9042, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9042,0);
 Msg("Find size of pthread_attr_t (9042)\n");
@@ -361,7 +359,7 @@ CheckTypeSize(pthread_cond_t,12, 9051, 6)
 #elif __s390__
 CheckTypeSize(pthread_cond_t,12, 9051, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_cond_t,0, 9051, 9)
+CheckTypeSize(pthread_cond_t,24, 9051, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9051,0);
 Msg("Find size of pthread_cond_t (9051)\n");
@@ -376,7 +374,7 @@ CheckTypeSize(pthread_condattr_t,4, 9053, 6)
 #elif __s390__
 CheckTypeSize(pthread_condattr_t,4, 9053, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_condattr_t,0, 9053, 9)
+CheckTypeSize(pthread_condattr_t,4, 9053, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9053,0);
 Msg("Find size of pthread_condattr_t (9053)\n");
@@ -391,7 +389,7 @@ CheckTypeSize(_pthread_descr,4, 9087, 6)
 #elif __s390__
 CheckTypeSize(_pthread_descr,4, 9087, 10)
 #elif __powerpc64__
-CheckTypeSize(_pthread_descr,0, 9087, 9)
+CheckTypeSize(_pthread_descr,8, 9087, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9087,0);
 Msg("Find size of _pthread_descr (9087)\n");
@@ -406,7 +404,7 @@ CheckTypeSize(pthread_rwlock_t,56, 9055, 3)
 #elif __s390__
 CheckTypeSize(pthread_rwlock_t,32, 9055, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_rwlock_t,0, 9055, 9)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9055,0);
 Msg("Find size of pthread_rwlock_t (9055)\n");
@@ -421,7 +419,7 @@ CheckTypeSize(pthread_rwlockattr_t,8, 9057, 3)
 #elif __s390__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_rwlockattr_t,0, 9057, 9)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9057,0);
 Msg("Find size of pthread_rwlockattr_t (9057)\n");

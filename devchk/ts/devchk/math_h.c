@@ -206,12 +206,12 @@ CheckOffset(struct exception,arg1,8,10,32296)
 CheckOffset(struct exception,arg2,16,10,32297)
 CheckOffset(struct exception,retval,24,10,32298)
 #elif __powerpc64__
-CheckTypeSize(struct exception,0, 10010, 9)
+CheckTypeSize(struct exception,40, 10010, 9)
 CheckOffset(struct exception,type,0,9,32294)
-CheckOffset(struct exception,name,4,9,32295)
-CheckOffset(struct exception,arg1,12,9,32296)
-CheckOffset(struct exception,arg2,12,9,32297)
-CheckOffset(struct exception,retval,16,9,32298)
+CheckOffset(struct exception,name,8,9,32295)
+CheckOffset(struct exception,arg1,16,9,32296)
+CheckOffset(struct exception,arg2,24,9,32297)
+CheckOffset(struct exception,retval,32,9,32298)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10010,0);
 Msg("Find size of exception (10010)\n");
