@@ -11,6 +11,18 @@
 #include "hdr.h"
 #include "../tetj/tetj.h"
 
+/*
+ * check_class_info() examines the data objects associated with a class. Each
+ * class has several data objects associated with it, so each type of object
+ * needs to be checked. A set of data structures representing each of these
+ * data types of preduced from the information stored int eh database. This
+ * function walks through the table of classs produced from the DB, and checks
+ * the shared object to ensure the data objects match with the description
+ * from the DB. Note that the data structures that represent the in memory
+ * format and the data in the DB are not identifcle, but generally contain
+ * the same information, just expressed differently.
+ */
+
 int
 check_class_info(char *libname,struct classinfo *classes[], struct tetj_handle *journal)
 {
@@ -37,81 +49,78 @@ for(i=0;classes[i]!=NULL;i++) {
 	printf("Checking class %s\n", classp->name );
 
 	/*
-	 * First, check the Vtable info
+	 * 1) First, check the Vtable info
 	 */
-	if( *classp->vtablename ) {
+	if( !(*classp->vtablename) ) {
+		fprintf(stderr,"Panic: No vtable name!!");
+		continue;
+	}
 	vtablep=dlsym(dlhndl,classp->vtablename);
 
 	/*
-	 * Check the baseoffset
+	 * 1.1) Check the baseoffset
 	 */
 	if( vtablep->baseoffset != classp->vtable->baseoffset ) {
-		printf("Vtable baseoffset %d (expected) doesn't match %d (found)\n", classp->vtable->baseoffset,vtablep->baseoffset );
+		printf("Vtable baseoffset %d (expected) doesn't match %d (found)\n",
+						classp->vtable->baseoffset,vtablep->baseoffset );
 fprintf(stderr,"BASEO:%s:0:%d\n", classp->name,vtablep->baseoffset);
 		}
 
 	if( vtablep->baseoffset != 0 ) {
-		printf("Non-zero baseoffset. Skipping checks 'cause this isn't fully understood yet,\n" );
+		printf("Non-zero baseoffset. ");
+		printf("Skipping checks 'cause this isn't fully understood yet,\n" );
 		continue;
 		}
 
 	/*
-	 * Check the pointer to the RTTI
+	 * 1.2) Check the pointer to the RTTI, both by value and by name
 	 */
 	dladdr(vtablep->typeinfo,&dlinfo);
 	if( dlinfo.dli_saddr!=vtablep->typeinfo ) {
 		printf("Uhoh1. Not an exact match\n");
 		}
-	/*
-	printf("\tRTTI ptr: %p\n", vtablep->typeinfo);
-	printf("\tRTTI name: %s\n", dlinfo.dli_sname);
-	*/
+	
 	if( strcmp(classp->vtable->typeinfo,dlinfo.dli_sname) ) {
-		printf("RTTI Name %s (expected) doesn't match %s (found)\n", classp->vtable->typeinfo,dlinfo.dli_sname );
+		printf("RTTI Name %s (expected) doesn't match %s (found)\n",
+					classp->vtable->typeinfo,dlinfo.dli_sname );
 fprintf(stderr,"RTTI:%s:0:%s\n", classp->name,dlinfo.dli_sname);
 			}
 
 	/*
-	 * Check the virtual function pointers
+	 * 1.3) Check the virtual function pointers
 	 */
 	for(j=0;j<classp->numvirtfuncs;j++) {
 		symp=dlsym(dlhndl,classp->vtable->virtfuncs[j]);
 		dladdr(vtablep->virtfuncs[j],&dlinfo);
 		if( dlinfo.dli_saddr!=vtablep->virtfuncs[j] ) {
-			printf("Uhoh2. Not an exact match %p %p\n", dlinfo.dli_saddr, vtablep->virtfuncs[j]);
+			printf("Uhoh2. Not an exact match %p %p\n",
+						dlinfo.dli_saddr, vtablep->virtfuncs[j]);
 			}
-		/*
-		printf("\tVfunc: %s\n", classp->vtable->virtfuncs[j]);
-		printf("\tVfunc addr: %p\n", symp );
-		printf("\tVfunc addr: %p\n", vtablep->virtfuncs[j] );
-		printf("\tVfunc name: %s\n", dlinfo.dli_sname);
-		*/
+
 		if( ((classp->vtable->virtfuncs[j] && dlinfo.dli_sname) &&
 		   strcmp(classp->vtable->virtfuncs[j],dlinfo.dli_sname)) ||
 		   (dlinfo.dli_sname && !classp->vtable->virtfuncs[j]) ) {
-			printf("Virtual Function[%d] %s (expected) doesn't match %s (found)\n", j, classp->vtable->virtfuncs[j],dlinfo.dli_sname );
+			printf("Virtual Function[%d] %s (expected) ",
+							j, classp->vtable->virtfuncs[j]);
+			printf("doesn't match %s (found)\n", dlinfo.dli_sname );
 fprintf(stderr,"VFUNC:%s:%d:%s\n", classp->name,j,dlinfo.dli_sname);
 			}
 		}
-}
-#if 0
-else {
-	char	str[256];
-	
-	sprintf(str,"_ZTV%s",&(classp->name[2]));
-fprintf(stderr,"vtabl:%s:0:%s\n", classp->name,str);
-	printf("Vtable name %s not found\n",classp->vtablename);
-}
-#endif
 
 	/*
-	 * Second, check the RTTI info
+	 * 2) Second, check the RTTI info
 	 */
 	rttip=dlsym(dlhndl,classp->rttiname);
 
-if( rttip ) {
+	if( !rttip ) {
+	char	str[256];
+	
+	sprintf(str,"_ZTI%s",&(classp->name[2]));
+fprintf(stderr,"RTTI:%s:0:%s\n", classp->name,str);
+	printf("RTTI name %s not found\n",classp->rttiname);
+	}
 	/*
-	 * Check the Vtable of the base class
+	 * 2.1) Check the Vtable of the base class
 	 */
 	symp=dlsym(dlhndl,classp->typeinfo->basevtable);
 	if( symp+8 != rttip->basevtable ) {
@@ -125,10 +134,10 @@ fprintf(stderr,"BASEV:%s:0:%s\n", classp->name,dlinfo.dli_sname);
 		}
 
 	/*
-	 * Check the Name string for the type
+	 * 2.2) Check the Name string for the type
 	 */
 		/*
-		 * We store the class name ass _Zfoo, so we need to
+		 * We store the class name as _Zfoo, so we need to
 		 * skip the _Z when comparing against the name is the object.
 		 */
 	if( strcmp(&(classp->name[2]),rttip->name) ) {
@@ -136,12 +145,10 @@ fprintf(stderr,"BASEV:%s:0:%s\n", classp->name,dlinfo.dli_sname);
 			    rttip->name,		classp->name );
 		}
 
-/*
- * The actual layout of the RTTI seems to vary based on it's type, so this
- * will have to get a LOT smarter to handle it.
- */
 	/*
-	 * There are 5 different possibel base types, each one implies a
+	 * 2.3) Check the Rest of the RTTI fields
+	 *
+	 * There are 5 different possible base types, each one implies a
 	 * different RTTI layout. Here we have to identify each one, and
 	 * check the fileds that are unique to each one.
 	 */
@@ -271,20 +278,7 @@ fprintf(stderr,"BASEN:%s:0:%s\n", classp->name,dlinfo.dli_sname);
 fprintf(stderr,"BASET:%s:%d:%s\n", classp->name,j,dlinfo.dli_sname);
 			}
 		}
-/*
-	printf("%s found at %p\n",classp->rttiname,rttip);
-	printf("\tbasevtable: %p\n", rttip->basevtable);
-	dladdr(rttip->basevtable,&dlinfo);
-	printf("\tbasevtable name: %s\n", dlinfo.dli_sname);
-	printf("\tname: %s\n", rttip->name);
-*/
-	} else {
-	char	str[256];
-	
-	sprintf(str,"_ZTI%s",&(classp->name[2]));
-fprintf(stderr,"RTTI:%s:0:%s\n", classp->name,str);
-	printf("RTTI name %s not found\n",classp->rttiname);
-}
+
 	}
 
 dlclose(dlhndl);
