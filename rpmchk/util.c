@@ -47,8 +47,10 @@ if( (efile->addr=mmap(0, efile->size, PROT_READ|PROT_WRITE, MAP_PRIVATE, efile->
 	return NULL;
 	}
 
+/*
 fprintf(stderr,"%d bytes at %x", efile->size, efile->addr );
 fprintf(stderr,"to %x\n", efile->addr+efile->size );
+*/
 
 if( memcmp(efile->addr, RPMMAG, SRPMMAG) ) {
 	fprintf( stderr, "file not RPM\n" );

@@ -15,7 +15,9 @@ RpmHdrIndex	*hindex;
 hdr=(RpmHeader *)file1->nexthdr;
 hindex=(RpmHdrIndex *)(hdr+1);
 
+/*
 fprintf(stderr,"checkRpmHdr() hdr=%x\n", hdr );
+*/
 
 /* Check the RpmHeader magic value */
 tetj_tp_count++;
@@ -59,8 +61,10 @@ file1->storeaddr=(((char *)hdr)+sizeof(RpmHeader)+(nindex*sizeof(RpmHdrIndex)));
 file1->header=(RpmHeader *)((char *)file1->storeaddr+
 		ntohl(hindex->offset)+ntohl(hindex->count));
 
+/*
 fprintf(stderr,"Signature has %d indicies with %x bytes of store at %x\n",
 			nindex, ntohl(hdr->hsize),file1->storeaddr);
+*/
 
 checkRpmHdr(file1, journal);
 checkRpmIdx(file1, hindex, SigTags, numSigIdxTags, journal);
@@ -81,8 +85,10 @@ hindex=(RpmHdrIndex *)(hdr+1);
 nindex=ntohl(hdr->nindex);
 file1->storeaddr=(((char *)hdr)+sizeof(RpmHeader)+(nindex*sizeof(RpmHdrIndex)));
 
+/*
 fprintf(stderr,"Header has %d indicies with %x bytes of store at %x\n",
 			nindex, ntohl(hdr->hsize),file1->storeaddr);
+*/
 
 checkRpmHdr(file1, journal);
 checkRpmIdx(file1, hindex, HdrTags, numHdrIdxTags, journal);

@@ -28,7 +28,9 @@ int	filesizesum=0;
 
 file1->archive=(caddr_t)file1->nexthdr;
 
+/*
 fprintf(stderr,"checkRpmArchive() archive=%x\n", (int)file1->archive );
+*/
 
 /* Check the RpmHeader magic value */
 tetj_tp_count++;
@@ -311,14 +313,18 @@ while( !gzeof(zfile) ) {
 
 endoffset=gztell(zfile);
 
+/*
 fprintf(stderr,"%d bytes in uncompressed archive\n", endoffset-startoffset);
+*/
 if( endoffset-startoffset != archivesize ) {
 		fprintf(stderr,"Archive size (%d) does ",endoffset-startoffset);
 		fprintf(stderr,"not match the value in RPMTAG_ARCHIVESIZE (%d)\n",
 							archivesize );
 	}
-fprintf(stderr,"%d bytes in archive files\n", filesizesum);
 
+/*
+fprintf(stderr,"%d bytes in archive files\n", filesizesum);
+*/
 if( filesizesum != rpmtagsize ) {
 		fprintf(stderr,"Sum of file sizes (%d) does ",filesizesum);
 		fprintf(stderr,"not match the value in RPMTAG_SIZE (%d)\n",

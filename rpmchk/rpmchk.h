@@ -13,11 +13,11 @@ struct tetj_handle;
 typedef struct rpmlead {
     unsigned char magic[4];
     unsigned char major, minor;
-    short type;
-    short archnum;
+    uint16_t type;
+    uint16_t archnum;
     char name[66];
-    short osnum;
-    short signature_type;
+    uint16_t osnum;
+    uint16_t signature_type;
     char reserved[16];
     } RpmLead;
 
@@ -45,8 +45,8 @@ typedef struct rpmheader {
     unsigned char magic[3];
     unsigned char version;
     char reserved[4];
-    int	nindex;
-    int	hsize;
+    uint32_t	nindex;
+    uint32_t	hsize;
     } RpmHeader;
 
 #define RPMHDRMAG "\216\255\350"
@@ -74,10 +74,10 @@ typedef enum {
 #include "rpmtag.h"
 
 typedef struct rpmhdrindex {
-    int	tag;
-    int	type;
-    int	offset;
-    int	count;
+    uint32_t	tag;
+    uint32_t	type;
+    uint32_t	offset;
+    uint32_t	count;
     } RpmHdrIndex;
 
 /*
@@ -88,6 +88,11 @@ typedef enum {
 	RPMSENSE_GREATER= (1 << 2),
 	RPMSENSE_EQUAL  = (1 << 3),
 	RPMSENSE_PREREQ = (1 << 6),
+	RPMSENSE_INTERP = (1 << 8),
+	RPMSENSE_SCRIPT_PRE = (1 << 9),
+	RPMSENSE_SCRIPT_POST = (1 << 10),
+	RPMSENSE_SCRIPT_PREUN = (1 << 11),
+	RPMSENSE_SCRIPT_POSTUN = (1 << 12),
 	RPMSENSE_RPMLIB = (1 << 24), /* rpmlib(feature) dependency. */
 	} rpmRequireFlags;
 /*
