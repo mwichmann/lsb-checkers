@@ -24,17 +24,17 @@ Msg("Checking data structures in wctype.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(wctype_t,4)
+CheckTypeSize(wctype_t,4, 7024, 2)
 #elif __ia64__
-CheckTypeSize(wctype_t,8)
+CheckTypeSize(wctype_t,8, 7024, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7024,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(wctrans_t,4)
+CheckTypeSize(wctrans_t,4, 9199, 2)
 #elif __ia64__
-CheckTypeSize(wctrans_t,8)
+CheckTypeSize(wctrans_t,8, 9199, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9199,0);
 #endif

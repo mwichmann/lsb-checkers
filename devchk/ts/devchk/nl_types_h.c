@@ -23,17 +23,17 @@ Msg("Checking data structures in nl_types.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(nl_catd,4)
+CheckTypeSize(nl_catd,4, 6923, 2)
 #elif __ia64__
-CheckTypeSize(nl_catd,8)
+CheckTypeSize(nl_catd,8, 6923, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6923,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(nl_item,4)
+CheckTypeSize(nl_item,4, 6924, 2)
 #elif __ia64__
-CheckTypeSize(nl_item,4)
+CheckTypeSize(nl_item,4, 6924, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6924,0);
 #endif

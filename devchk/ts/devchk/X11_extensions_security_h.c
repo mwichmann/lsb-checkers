@@ -29,9 +29,9 @@ Msg("Checking data structures in X11/extensions/security.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(XSecurityAuthorization,4)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 2)
 #elif __ia64__
-CheckTypeSize(XSecurityAuthorization,8)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
 #endif

@@ -24,35 +24,35 @@ Msg("Checking data structures in stdlib.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(lldiv_t,16)
+CheckTypeSize(__compar_fn_t,4, 9231, 2)
 #elif __ia64__
-CheckTypeSize(lldiv_t,16)
+CheckTypeSize(__compar_fn_t,0, 9231, 3)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6897,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(div_t,8)
+CheckTypeSize(div_t,8, 6973, 2)
 #elif __ia64__
-CheckTypeSize(div_t,8)
+CheckTypeSize(div_t,8, 6973, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6973,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(ldiv_t,8)
+CheckTypeSize(ldiv_t,8, 6975, 2)
 #elif __ia64__
-CheckTypeSize(ldiv_t,16)
+CheckTypeSize(ldiv_t,16, 6975, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(__compar_fn_t,4)
+CheckTypeSize(lldiv_t,16, 6897, 2)
 #elif __ia64__
-CheckTypeSize(__compar_fn_t,0)
+CheckTypeSize(lldiv_t,16, 6897, 3)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6897,0);
 #endif
 
 #ifdef TET_TEST

@@ -27,25 +27,25 @@ Msg("Checking data structures in X11/extensions/sync.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(XSyncCounter,4)
+CheckTypeSize(XSyncCounter,4, 8609, 2)
 #elif __ia64__
-CheckTypeSize(XSyncCounter,8)
+CheckTypeSize(XSyncCounter,8, 8609, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8609,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(XSyncAlarm,4)
+CheckTypeSize(XSyncAlarm,4, 8610, 2)
 #elif __ia64__
-CheckTypeSize(XSyncAlarm,8)
+CheckTypeSize(XSyncAlarm,8, 8610, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8610,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(XSyncValue,8)
+CheckTypeSize(XSyncValue,8, 8612, 2)
 #elif __ia64__
-CheckTypeSize(XSyncValue,8)
+CheckTypeSize(XSyncValue,8, 8612, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8612,0);
 #endif

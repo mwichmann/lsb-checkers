@@ -23,9 +23,9 @@ Msg("Checking data structures in iconv.h\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(iconv_t,4)
+CheckTypeSize(iconv_t,4, 6895, 2)
 #elif __ia64__
-CheckTypeSize(iconv_t,8)
+CheckTypeSize(iconv_t,8, 6895, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6895,0);
 #endif
