@@ -24,7 +24,7 @@ fptr2ptr(fptr fptr)
 #if defined(__ia64__)
 return fptr.func;
 #else
-return fptr;
+return (void *)fptr;
 #endif
 }
 
@@ -91,12 +91,14 @@ check_class_info(char *libname, struct classinfo *classes[],
 			fprintf(stderr,"BASEO:%s:0:%ld\n", classp->name,vtablep->baseoffset);
 		}
 
+		/*
 		if (vtablep->baseoffset != 0) 
 		{
 			printf("Non-zero baseoffset. ");
 			printf("Skipping checks 'cause this isn't fully understood yet,\n");
 			continue;
 		}
+		*/
 
 		/*
 		 * 1.2) Check the pointer to the RTTI, both by value and by name
@@ -104,7 +106,8 @@ check_class_info(char *libname, struct classinfo *classes[],
 		dladdr(vtablep->typeinfo,&dlinfo);
 		if (dlinfo.dli_saddr != vtablep->typeinfo) 
 		{
-			printf("Uhoh1. Not an exact match\n");
+			printf("Uhoh1. Not an exact match %p %p\n",
+					dlinfo.dli_saddr, vtablep->typeinfo);
 		}
 	
 		if (strcmp(classp->vtable->typeinfo,dlinfo.dli_sname)) 
