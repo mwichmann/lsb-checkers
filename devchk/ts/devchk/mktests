@@ -79,7 +79,7 @@ sub writetest($$)
 	$select.= "WHERE HGheader=$Hid ";
 	$select.= "AND Cstd='Yes' ";
 	$select.= "AND Cheadgroup=HGid ";
-	$select.= "ORDER BY Cheadgroup ";
+	$select.= "ORDER BY Cheadgroup,Cname,ACvalue ";
 	$cth = $Dbh->query($select) || die $Dbh->errmsg();
 
 	#Get Types
