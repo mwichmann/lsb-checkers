@@ -19,10 +19,5 @@ if( (elffile = OpenElfFile("./test")) == NULL ) {
 	}
 
 checkElf(elffile, 1, NULL);
-/*
-check_intepreter(elffile);
-check_DT_NEEDED(elffile);
-check_symbols(elffile);
-*/
 exit(0);
 }
