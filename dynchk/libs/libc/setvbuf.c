@@ -13,8 +13,10 @@ int setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 		funcptr = dlsym(RTLD_NEXT, "setvbuf");
 	validate_Rdaddress( arg0, "setvbuf - arg0");
 	validate_NULL_TYPETYPE(  arg0, "setvbuf - arg0");
+	if( arg1 ) {
 	validate_Rdaddress( arg1, "setvbuf - arg1");
 	validate_NULL_TYPETYPE(  arg1, "setvbuf - arg1");
+	}
 	validate_NULL_TYPETYPE(  arg2, "setvbuf - arg2");
 	validate_NULL_TYPETYPE(  arg3, "setvbuf - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
