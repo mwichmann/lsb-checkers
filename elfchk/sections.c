@@ -194,7 +194,7 @@ fprintf(stderr,"%s %x %x %x\n",
 		file->versionnames[file->vers[i]]);
 #endif
 	if(strcmp(file->versionnames[file->vers[i]],DynSyms[j].vername) != 0) {
-		printf( "Symbol %s has versions  %sm expecting %s\n",
+		printf( "Symbol %s has version %s expecting %s\n",
 			ElfGetStringIndex(file,file->syms[i].st_name,file->symhdr->sh_link),
 				file->versionnames[file->vers[i]], DynSyms[j].vername);
 		}
