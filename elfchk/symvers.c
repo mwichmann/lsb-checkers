@@ -6,6 +6,7 @@
  *
  */
 #include "symvers.h"
+#include <string.h>
 
 void
 getSymbolVersionInfo(ElfFile *file)
