@@ -6,14 +6,11 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.49 $
+ * This is $Revision: 1.50 $
  *
  * $Log: libchk.c,v $
- * Revision 1.49  2004/10/28 17:21:34  anderson
- * Remove redundant call to check_symbol on an error path
- *
- * Revision 1.48  2004/10/22 16:55:21  mats
- * More temporary fixes for bug #602
+ * Revision 1.50  2004/10/28 17:47:00  anderson
+ * bug 602: Now handles missing symbols better and checks for having only a default library wide version
  *
  * Revision 1.47  2004/10/22 16:20:22  anderson
  * Check to make sure we didn't fail to find a symbol at all
@@ -198,7 +195,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.49 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.50 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -303,26 +300,45 @@ check_symbol(ElfFile *file, struct versym *entry)
       /* Convert the Version from the DB into a numerical value so we can do
          more interesting comparisons */
 
-      i = 2;
-      do {
-	if (strcmp(file->versionnames[i], entry->vername) == 0) {
-	  foundit = i;
-	  break;
-	}
-        i++;
-      } while (i < file->numverdefs);
 
-      /* Check to make sure we found the version at all */
-      if (! foundit) {
-        if ((libchk_debug) ) {
-          printf("    Did not find version %s anywhere!\n", entry->vername);
-        }
-	return foundit;
+      if( file->numverdefs == 2 ) {
+	  /* The library only has a single version, which is the default */
+	  if( strcmp(file->versionnames[2], entry->vername) != 0 ) {
+              printf("    Version %s did not match only available version %s!\n",
+			      entry->vername, file->versionnames[2]);
+	      return 0;
+            }
+	  i=2; 
+      } else {
+	  /* The library has multiple versions, check each one */
+
+	  /*
+	   * Note that the Versions are stored with a bias of 2. There are
+	   * 2 entries a the bottom of the array that are not included in
+	   * the count for how many version are available. The symbols use
+	   * the bias also, we we'll just adjust the loop start & end conditions
+	   * to match this bias.
+	   */
+          for(i=2;i<=file->numverdefs;i++)
+          {
+	    if( strcmp(file->versionnames[i], entry->vername) == 0 )
+		break;
+          }
+
+          /* Check to make sure we found the version at all */
+          if( i > file->numverdefs )
+          {
+            if ((libchk_debug) )
+            {
+              printf("    Did not find version %s in library!\n", entry->vername);
+            }
+	    return 0;
+          }
       }
 
-      /* If the version matches, return, we are done */
+      /* If the version matches, stop, we are done */
       if (vers == i)
-	return foundit;
+	foundit=1;
 
       /* If the version in the libary is greater, then warn, if in
          maintainer mode */
@@ -360,7 +376,7 @@ check_symbol(ElfFile *file, struct versym *entry)
   }
 
   /* Did not find exact match for symbol */
-  return 0;
+  return foundit;
 }
 
 /* Returns 1 on match, 0 otherwise */
@@ -526,6 +542,11 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   /* Check elf header contents */
   checkElfhdr(file, 0, journal);
 
+#ifdef dEBUG
+  for(i=1;file->versionnames[i];i++)
+    printf("Lib ver: %s\n", file->versionnames[i]);
+#endif
+
   printf("Checking symbols in %s\n", filename );
 
   for (i=0; entries[i].name; i++) 
@@ -537,6 +558,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
             "unversioned");
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                        tmp_string);
+
     if(check_symbol(file, entries+i))
     {
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
