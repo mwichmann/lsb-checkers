@@ -114,7 +114,7 @@ $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$$class{'CInumvmitypes'}) {
 	%entry=$vsth->fetchhash;
 	print $LIB "\t{\"".getinterfacename($entry{'VBTbasetype'})."\",";
-	print $LIB "\t".$entry{'VBTflags'}."},\n";
+	print $LIB "\t".$entry{'VBTflags'}."U},\n";
 }
 print $LIB "\t};\n\n";
 
@@ -126,7 +126,7 @@ print $LIB "\t\"".getinterfacename($$class{'CIbase'})."\",\n";
 print $LIB "\t$numvtablefuns,\n";
 print $LIB "\t$numtypeinfofuns,\n";
 print $LIB "\t".$$class{'CInumvmitypes'}.",\n";
-print $LIB "\t".$$class{'CIflags'}.",\n";
+print $LIB "\t".$$class{'CIflags'}."U,\n";
 print $LIB "\t".$$class{'CIvtclass'}.",\n";
 print $LIB "\t&$typeinfoname,\n";
 print $LIB "\t&$vtablename,\n";
