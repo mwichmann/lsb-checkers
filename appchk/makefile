@@ -1,7 +1,7 @@
 CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -Wall
 
-OBJS=appchk.o libraries.o symbols.o
-LIB=../elfchk/libelfchk.a
+OBJS=appchk.o libraries.o symbols.o check_file.o
+LIB=../elfchk/libelfchk.a ../tetj/libtetj.a
 
 all: appchk
 
@@ -16,3 +16,6 @@ clean:
 	rm -f $(OBJS) appchk
 
 distclean: clean
+
+test_journal: test_journal.o tetj.o
+	$(CC) $(CFLAGS) -o test_journal test_journal.o tetj.o

@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 #include "symbols.h"
+#include "check_file.h"
 
 static int tablesize=100;
 static int tableents=0;
@@ -11,67 +12,73 @@ static char **symtable=NULL;
 void
 add_symbol(char *symname)
 {
-if(symtable==NULL)
-	symtable=malloc(tablesize*sizeof(char *));
+  if(symtable==NULL)
+    symtable=malloc(tablesize*sizeof(char *));
 
-symtable[tableents++]=symname;
+  symtable[tableents++]=symname;
 
-if(tableents >= tablesize ) {
-	tablesize+=100;
-	symtable=realloc(symtable,tablesize*sizeof(char *));
-	}
+  if(tableents >= tablesize ) 
+  {
+    tablesize+=100;
+    symtable=realloc(symtable,tablesize*sizeof(char *));
+  }
 }
 
 int
-add_library_symbols(char *libname)
+add_library_symbols(char *libname, struct tetj_handle *journal)
 {
-ElfFile	*file;
-Elf32_Sym	*syms;
-int	i,numsyms;
+  ElfFile	*file;
+  Elf32_Sym	*syms;
+  int	i,numsyms;
 
-if( (file=OpenElfFile(libname)) == NULL ) {
-	fprintf(stderr,"Can't open %s\n", libname );
-	return -1;
-	}
+/*   if( (file=OpenElfFile(libname)) == NULL )  */
+/*   { */
+/*     fprintf(stderr,"Can't open %s\n", libname ); */
+/*     return -1; */
+/*   } */
 
-checkElf(file, 0);
-checksymbols(file);
+  file = check_file(libname, journal, 0);
 
-numsyms=file->dynsymhdr->sh_size/file->dynsymhdr->sh_entsize;
-syms=(Elf32_Sym *)((caddr_t)file->addr+file->dynsymhdr->sh_offset);
-for(i=0;i<numsyms;i++) {
-	/* Static Symbols */
-        if( ELF32_ST_BIND(syms[i].st_info) == STB_LOCAL ) continue;
-
-	/* Skip over symbol references (ie unresolved) */
-	if( syms[i].st_shndx == SHN_UNDEF || 
-		(syms[i].st_shndx >= SHN_LORESERVE &&
-		 syms[i].st_shndx <= SHN_HIRESERVE) ) continue;
-
+  if (file)
+  {
+    numsyms=file->dynsymhdr->sh_size/file->dynsymhdr->sh_entsize;
+    syms=(Elf32_Sym *)((caddr_t)file->addr+file->dynsymhdr->sh_offset);
+    for(i=0;i<numsyms;i++) 
+    {
+      /* Static Symbols */
+      if( ELF32_ST_BIND(syms[i].st_info) == STB_LOCAL ) continue;
+      
+      /* Skip over symbol references (ie unresolved) */
+      if( syms[i].st_shndx == SHN_UNDEF || 
+          (syms[i].st_shndx >= SHN_LORESERVE &&
+           syms[i].st_shndx <= SHN_HIRESERVE) ) continue;
+      
 /*
-fprintf(stderr,"%s %x %x %x\n",
-        ElfGetStringIndex(file,syms[i].st_name,file->dynsymhdr->sh_link),
-        ELF32_ST_BIND(syms[i].st_info),
-        ELF32_ST_TYPE(syms[i].st_info),
-        syms[i].st_shndx
-        );
+  fprintf(stderr,"%s %x %x %x\n",
+  ElfGetStringIndex(file,syms[i].st_name,file->dynsymhdr->sh_link),
+  ELF32_ST_BIND(syms[i].st_info),
+  ELF32_ST_TYPE(syms[i].st_info),
+  syms[i].st_shndx
+  );
 */
+      
+      add_symbol( ElfGetStringIndex(file,syms[i].st_name,
+                                  file->dynsymhdr->sh_link));
+    }
+  }
 
-	add_symbol( ElfGetStringIndex(file,syms[i].st_name,
-					file->dynsymhdr->sh_link));
-	}
-
-return 0;
+  return 0;
 }
 
 int
 symbolinlibrary(char *symname)
 {
-int i;
+  int i;
 
-for(i=0;i<tableents;i++) {
-	if( strcmp(symname, symtable[i] ) == 0 )
-		return 1;
-	}
-return 0;
+  for(i=0;i<tableents;i++) 
+  {
+    if( strcmp(symname, symtable[i] ) == 0 )
+      return 1;
+  }
+  return 0;
 }
