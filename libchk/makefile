@@ -7,7 +7,7 @@ CFLAGS=-I../elfchk
 
 all:: libchk
 
-libchk: $(OBJS)
+libchk: $(OBJS) ../elfchk/libelfchk.a
 	cc -o libchk $(OBJS) -L../elfchk -lelfchk
 
 libs.c: mkfunclist
