@@ -38,4 +38,4 @@ hdrchk.o: hdrchk.c
 
 
 clean:
-	rm $(OBJS)
+	rm $(OBJS) hdrchk
