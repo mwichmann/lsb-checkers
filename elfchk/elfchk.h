@@ -19,6 +19,7 @@ struct versym {
 	int   deprecated;
 	char *modname;
 	int   size;
+	int   type; /* 0 = Data; 1 = Function */
 	};
 
 #if defined(__ia64__)
