@@ -35,7 +35,7 @@ CheckTypeSize(wctype_t,4, 7024, 10)
 #elif __powerpc64__
 CheckTypeSize(wctype_t,8, 7024, 9)
 #elif __s390x__
-CheckTypeSize(wctype_t,0, 7024, 12)
+CheckTypeSize(wctype_t,8, 7024, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7024,0);
 Msg("Find size of wctype_t (7024)\n");
@@ -52,7 +52,7 @@ CheckTypeSize(wint_t,4, 8980, 10)
 #elif __powerpc64__
 CheckTypeSize(wint_t,4, 8980, 9)
 #elif __s390x__
-CheckTypeSize(wint_t,0, 8980, 12)
+CheckTypeSize(wint_t,4, 8980, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8980,0);
 Msg("Find size of wint_t (8980)\n");
@@ -69,7 +69,7 @@ CheckTypeSize(wctrans_t,4, 9199, 10)
 #elif __powerpc64__
 CheckTypeSize(wctrans_t,8, 9199, 9)
 #elif __s390x__
-CheckTypeSize(wctrans_t,0, 9199, 12)
+CheckTypeSize(wctrans_t,8, 9199, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9199,0);
 Msg("Find size of wctrans_t (9199)\n");
@@ -93,7 +93,7 @@ CheckTypeSize(__mbstate_t,8, 10488, 2)
 #elif __ia64__
 CheckTypeSize(__mbstate_t,8, 10488, 3)
 #elif __s390x__
-CheckTypeSize(__mbstate_t,0, 10488, 12)
+CheckTypeSize(__mbstate_t,8, 10488, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10488,0);
 Msg("Find size of __mbstate_t (10488)\n");
@@ -110,7 +110,7 @@ CheckTypeSize(mbstate_t,8, 9235, 10)
 #elif __powerpc64__
 CheckTypeSize(mbstate_t,8, 9235, 9)
 #elif __s390x__
-CheckTypeSize(mbstate_t,0, 9235, 12)
+CheckTypeSize(mbstate_t,8, 9235, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9235,0);
 Msg("Find size of mbstate_t (9235)\n");

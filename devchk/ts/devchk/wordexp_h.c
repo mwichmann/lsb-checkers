@@ -45,7 +45,7 @@ CheckTypeSize(wordexp_t,12, 7029, 10)
 #elif __powerpc64__
 CheckTypeSize(wordexp_t,24, 7029, 9)
 #elif __s390x__
-CheckTypeSize(wordexp_t,0, 7029, 12)
+CheckTypeSize(wordexp_t,24, 7029, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7029,0);
 Msg("Find size of wordexp_t (7029)\n");

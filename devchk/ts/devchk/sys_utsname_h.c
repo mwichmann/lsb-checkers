@@ -84,14 +84,17 @@ CheckOffset(struct utsname,machine,260,9,30181)
 CheckMemberSize(struct utsname,domainname,65,9,34411)
 CheckOffset(struct utsname,domainname,325,9,34411)
 #elif __s390x__
-CheckTypeSize(struct utsname,0, 7013, 12)
-Msg("Missing member data for utsname on S390X\n");
-CheckOffset(struct utsname,sysname,0,12,30177)
-CheckOffset(struct utsname,nodename,0,12,30178)
-CheckOffset(struct utsname,release,0,12,30179)
-CheckOffset(struct utsname,version,0,12,30180)
-CheckOffset(struct utsname,machine,0,12,30181)
-CheckOffset(struct utsname,domainname,0,12,34411)
+CheckTypeSize(struct utsname,390, 7013, 12)
+CheckMemberSize(struct utsname,nodename,65,12,30178)
+CheckOffset(struct utsname,nodename,65,12,30178)
+CheckMemberSize(struct utsname,release,65,12,30179)
+CheckOffset(struct utsname,release,130,12,30179)
+CheckMemberSize(struct utsname,version,65,12,30180)
+CheckOffset(struct utsname,version,195,12,30180)
+CheckMemberSize(struct utsname,machine,65,12,30181)
+CheckOffset(struct utsname,machine,260,12,30181)
+CheckMemberSize(struct utsname,domainname,65,12,34411)
+CheckOffset(struct utsname,domainname,325,12,34411)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7013,0);
 Msg("Find size of utsname (7013)\n");
