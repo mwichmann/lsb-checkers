@@ -25,6 +25,7 @@ struct/validate_struct_flock.o	\
 struct/validate_struct_flock64.o	\
 struct/validate_struct_group.o	\
 struct/validate_struct_hostent.o	\
+struct/validate_struct_if_nameindex.o	\
 struct/validate_struct_ifaddr.o	\
 struct/validate_struct_ifconf.o	\
 struct/validate_struct_ifmap.o	\
