@@ -25,8 +25,6 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZGVNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE","GLIBCPP_3.2",0,"LSB-Core",0,0},
 	{"_ZGVNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE2idE","GLIBCPP_3.2",0,"LSB-Core",0,0},
 	{"_ZGVNSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE2idE","GLIBCPP_3.2",0,"LSB-Core",0,0},
-	{"_ZN10__cxxabiv111__terminateEPFvvE","CXXABI_1.2.2",0,"LSB-Core",0,1},
-	{"_ZN10__cxxabiv112__unexpectedEPFvvE","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN10__cxxabiv116__enum_type_infoD0Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN10__cxxabiv116__enum_type_infoD1Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN10__cxxabiv116__enum_type_infoD2Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
@@ -57,14 +55,10 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD2Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
-	{"_ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEE2fdEv","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEED0Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEED1Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
-	{"_ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEED2Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
-	{"_ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEE2fdEv","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEED0Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEED1Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
-	{"_ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEED2Ev","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZN9__gnu_cxx27__verbose_terminate_handlerEv","CXXABI_1.2",0,"LSB-Core",0,1},
 	{"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj","CXXABI_1.2.2",0,"LSB-Core",0,1},
 	{"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE","CXXABI_1.2.2",0,"LSB-Core",0,1},
@@ -13267,14 +13261,90 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZdaPvRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZdlPv","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZdlPvRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#if __i386__
 	{"_Znaj","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Znaj","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_Znaj","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __i386__
 	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __ia64__
 	{"_Znam","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc64__
+	{"_Znam","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __x86_64__
+	{"_Znam","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __s390x__
+	{"_Znam","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __ia64__
 	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc64__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __x86_64__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __s390x__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __i386__
 	{"_Znwj","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Znwj","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_Znwj","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __i386__
 	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __ia64__
 	{"_Znwm","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc64__
+	{"_Znwm","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __x86_64__
+	{"_Znwm","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __s390x__
+	{"_Znwm","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __ia64__
 	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc64__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __x86_64__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
+#if __s390x__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#endif
 	{"__cxa_allocate_exception","CXXABI_1.2",0,"LSB-Core",0,1},
 	{"__cxa_bad_cast","CXXABI_1.2",0,"LSB-Core",0,1},
 	{"__cxa_bad_typeid","CXXABI_1.2",0,"LSB-Core",0,1},
@@ -17681,7 +17751,7 @@ struct base_type_info Si_baseinfo[] = {
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __ia64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __arm__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
@@ -17693,16 +17763,16 @@ struct base_type_info Si_baseinfo[] = {
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __powerpc64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __x86_64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __s390x__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 	};
 
@@ -17773,7 +17843,7 @@ struct base_type_info So_baseinfo[] = {
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __ia64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __arm__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
@@ -17785,16 +17855,16 @@ struct base_type_info So_baseinfo[] = {
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __powerpc64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __x86_64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __s390x__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 	};
 
@@ -17865,7 +17935,7 @@ struct base_type_info St13basic_istreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __ia64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __arm__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
@@ -17877,16 +17947,16 @@ struct base_type_info St13basic_istreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __powerpc64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __x86_64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __s390x__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 	};
 
@@ -17957,7 +18027,7 @@ struct base_type_info St13basic_ostreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __ia64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __arm__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
@@ -17969,16 +18039,16 @@ struct base_type_info St13basic_ostreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __powerpc64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __x86_64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __s390x__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 	};
 
