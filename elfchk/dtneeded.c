@@ -1,3 +1,4 @@
+/* Generated file - Do Not Edit */
 char *DtNeeded[] = {
 #if defined(__ia64__)
 	"/lib/ld-lsb-ia64.so.1",
