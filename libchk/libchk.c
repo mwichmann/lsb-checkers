@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.34 $
+ * This is $Revision: 1.35 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.35  2004/04/21 14:36:02  anderson
+ * No need to mangle the module name
+ *
  * Revision 1.34  2004/04/21 12:48:26  anderson
  * Add -M modulename
  *
@@ -150,7 +153,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.34 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.35 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -529,8 +532,6 @@ int main(int argc, char *argv[])
       case 'M':
 	module=optarg;
 	printf("Only checking libraries in module %s\n", module);
-	for(ptr=module;*ptr;ptr++)
-		if(*ptr == '-') *ptr='_'; 
         break;
       default:
         printf ("?? getopt returned character code 0%o ??\n", c);

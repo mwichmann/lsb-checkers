@@ -309,7 +309,6 @@ for(1..$sth->numrows) {
 	$modname=$entry{'Mname'};
 	$libname=$entry{'ALrunname'};
 	$asym=$entry{'Asymbol'};
-	$modname =~ s/-/_/g;
 	$libname =~ s/\./_/g;
 	$libname =~ s/-/_/g;
 	$libname =~ s/\+/x/g;
@@ -317,7 +316,6 @@ for(1..$sth->numrows) {
 	@libname = split('/',$libname);
 	$libname = pop(@libname);
 	if( $asym != "1" ) {
-		print LIBS "/* $modname */\n";
 		print LIBS "#if $asym\n";
 		print LIBS "\t{\"$modname\",\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 		print LIBS "#endif\n";
