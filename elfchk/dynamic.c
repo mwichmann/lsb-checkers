@@ -566,7 +566,7 @@ checkDYNAMIC(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal )
     if( j == numDynamicInfo )
     {
       snprintf(tmp_string, TMP_STRING_SIZE ,
-               "Dynamic Tag 0x%x unknown", dyn1[i].d_tag);
+               "Dynamic Tag 0x%lx unknown", (u_long)dyn1[i].d_tag);
       fprintf(stderr, "%s\n", tmp_string);
       tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                          0, 0, 0, tmp_string);
