@@ -11,13 +11,14 @@ extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
 int open64(const char *pathname, int flags, ...)
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
+
 	va_list args;
 	mode_t mode;
 
 	va_start(args, flags);
-
-	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	mode = va_arg(args, mode_t);
 
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "open64");
@@ -26,11 +27,10 @@ int open64(const char *pathname, int flags, ...)
 	{
 		__lsb_check_params=0;
         	__lsb_output(5-__lsb_check_params, "open64()");
-		validate_pathname(pathname, flags, "open64" );
+		validate_pathname_flags(pathname, flags, "open64" );
 		//validate_flags(flags, "open64");
 		if( flags & O_CREAT )
 		{
-			mode = va_arg(args, mode_t);
 			validate_filemode(mode, "open64");
 		}
 	}
