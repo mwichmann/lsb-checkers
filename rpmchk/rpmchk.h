@@ -40,7 +40,7 @@ typedef struct rpmlead {
 #define RPMARCH 0x0005
 #endif
 #if __powerpc64__
-#error need to find arch_canon in rpmrc.in for ppc64
+#define RPMARCH 0x0010
 #endif
 #if __s390__
 #define RPMARCH 0x000E
