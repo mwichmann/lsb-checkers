@@ -24,20 +24,20 @@ Msg("Checking data structures in semaphore.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SEM_FAILED
-	CompareConstant(SEM_FAILED,((sem_t*)0),1624,architecture)
+#ifdef SEM_VALUE_MAX
+	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)),1625,architecture)
 #else
-Msg( "Error: Constant not found: SEM_FAILED\n");
+Msg( "Error: Constant not found: SEM_VALUE_MAX\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SEM_VALUE_MAX
-	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)),1625,architecture)
+#ifdef SEM_FAILED
+	CompareConstant(SEM_FAILED,((sem_t*)0),1624,architecture)
 #else
-Msg( "Error: Constant not found: SEM_VALUE_MAX\n");
+Msg( "Error: Constant not found: SEM_FAILED\n");
 cnt++;
 #endif
 
