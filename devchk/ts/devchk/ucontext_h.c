@@ -147,6 +147,34 @@ CheckOffset(struct _libc_vrstate,vscr,524,6,40643)
 CheckTypeSize(vrregset_t,528, 10909, 6)
 #endif
 
+#if __powerpc64__
+CheckTypeSize(struct _libc_vrstate,4, 11032, 9)
+CheckMemberSize(struct _libc_vrstate,vrregs,512,9,40856)
+CheckOffset(struct _libc_vrstate,vrregs,0,9,40856)
+CheckMemberSize(struct _libc_vrstate,vscr,4,9,40859)
+CheckOffset(struct _libc_vrstate,vscr,0,9,40859)
+CheckMemberSize(struct _libc_vrstate,vrsave,4,9,40860)
+CheckOffset(struct _libc_vrstate,vrsave,0,9,40860)
+CheckMemberSize(struct _libc_vrstate,__pad,4,9,40861)
+CheckOffset(struct _libc_vrstate,__pad,0,9,40861)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(struct _libc_vscr,4, 11034, 9)
+CheckMemberSize(struct _libc_vscr,_pad,12,9,40857)
+CheckOffset(struct _libc_vscr,_pad,0,9,40857)
+CheckMemberSize(struct _libc_vscr,vscr_word,4,9,40858)
+CheckOffset(struct _libc_vscr,vscr_word,12,9,40858)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(vscr_t,4, 11035, 9)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(vrregset_t,4, 11036, 9)
+#endif
+
 #if __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
 #endif
@@ -165,6 +193,10 @@ CheckTypeSize(gregset_t,184, 10796, 11)
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(gregset_t,192, 10905, 6)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(gregset_t,384, 11029, 9)
 #endif
 
 #if __i386__
@@ -267,6 +299,10 @@ CheckOffset(struct _libc_fpstate,_pad,264,6,40641)
 CheckTypeSize(fpregset_t,272, 10907, 6)
 #endif
 
+#if __powerpc64__
+CheckTypeSize(fpregset_t,4, 11031, 9)
+#endif
+
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
@@ -305,6 +341,9 @@ CheckTypeSize(mcontext_t,256, 10798, 11)
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(mcontext_t,992, 10911, 6)
+#endif
+
+#if __powerpc64__
 #endif
 
 #if __i386__
