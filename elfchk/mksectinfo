@@ -24,7 +24,7 @@ print "struct SectionInfo SectionInfo[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
 	if( $entry{'Aname'} ne "All" ) {
-		print "#if defined(".$entry{'Asymbol'}.")\n";
+		print "#if ".$entry{'Asymbol'}."\n";
 	}
 	printf "\t{\"%s\",",$entry{'ESname'};
 	printf "%s,",$entry{'STname'};

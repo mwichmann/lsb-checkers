@@ -29,7 +29,7 @@ for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
         if ($entry{'Aname'} && $entry{'Aname'} ne "All")
         {
-          print "#if defined($entry{'Asymbol'})\n";
+          print "#if $entry{'Asymbol'}\n";
         }
 	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
 	if( $entry{'Istatus'} eq 'Deprecated' ) {
