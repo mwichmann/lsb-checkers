@@ -135,7 +135,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				 * Move vtablep to the next record in the vtable
 				 */
 				vtablesize += vtableinc;
-				((char *)vtablep) += vtableinc;
+				vtablep = (void *)(((char *)vtablep) + vtableinc);
 
 				/*
 				 * 1.1) Check the baseoffset
@@ -221,11 +221,35 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					if( !dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo) ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Did not find symbol for Virtual table entry "
-														 "[%d][%d](%x) expecting %s\n",
+														 "[%d][%d](%ld) expecting %s\n",
 														 v, j, vtvirtfuncs[j],
 														 classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
+
+#ifdef DEBUG
+					if( classp->vtable[v].virtfuncs[j][0] ) {
+						symp = dlsym(dlhndl, classp->vtable[v].virtfuncs[j]);
+						if ( symp != fptr2ptr(vtvirtfuncs[j]) ) {
+							Dl_info	dlinfo2;
+							int s;
+							for(s=0;s<12;s++) {
+								memset(&dlinfo2,0,sizeof(dlinfo2));
+								dladdr(vtvirtfuncs[s], &dlinfo2);
+								fprintf(stderr,"vtable[%d] %p %s\n", s, vtvirtfuncs[s], dlinfo2.dli_sname );
+							}
+							memset(&dlinfo2,0,sizeof(dlinfo2));
+							dladdr(symp, &dlinfo2);
+							fprintf(stderr,"Class %s\n", classp->name );
+							TETJ_REPORT_INFO("Symbol address for Virtual table entry "
+														 "[%d][%d] %s is not expected\n", v, j, 
+														 classp->vtable[v].virtfuncs[j]);
+							fprintf(stderr,"%p doesn't match %p which appears to be %s %p\n", 
+											symp, fptr2ptr(vtvirtfuncs[j]), dlinfo2.dli_sname, dlinfo2.dli_saddr);
+						test_failed = 1;
+						}
+					}
+#endif
 
 					/*
 					 * 1.4.1) Make sure we found a named symbol at all.
@@ -460,15 +484,15 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				 * Three additional fields to check
 				 */
 				if( vmi_rttip->flags&(~_vmi_all_mask) ) {
-					TETJ_REPORT_INFO("VMI flags %lu (found) for class %s "
+					TETJ_REPORT_INFO("VMI flags %u (found) for class %s "
 													 "are not a legal value",
 													 vmi_rttip->flags, classp->name );
 					test_failed = 1;
 				}
 				if (vmi_rttip->flags != classp->flags) 
 				{
-					TETJ_REPORT_INFO("VMI flags %lu (found) for class %s "
-													 "doesn't match %lu (expected)",
+					TETJ_REPORT_INFO("VMI flags %u (found) for class %s "
+													 "doesn't match %u (expected)",
 													 vmi_rttip->flags, classp->name, classp->flags);
 					test_failed = 1;
 				}
