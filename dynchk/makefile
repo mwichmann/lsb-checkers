@@ -4,11 +4,17 @@ WRAPPER_LIBS = \
 	libs/libncurses/libncurses.o \
 	libs/libz/libz.o \
 	libs/libm/libm.o \
+	libs/libXt/libXt.o \
+	libs/libICE/libICE.o \
+	libs/libSM/libSM.o \
+	libs/libGL/libGL.o 
 #	libs/libX11/libX11.o 
 #	libs/libpthread/libpthread.o
 
 TEST_LIB = tests/tests.o
 FHS_LIB = fhs/fhs.o
+
+REAL_LIBS = -L/opt/lsb/lib -lXt -lICE -l SM -lX11 -lGL -lncurses -lpam -lz -lm -ldl -lc 
 
 all: liblsbdynchk.so lsbdynchk
 
@@ -24,7 +30,7 @@ $(FHS_LIB)::
 	cd fhs && make all
 
 liblsbdynchk.so: $(WRAPPER_LIBS) $(FHS_LIB) $(TEST_LIB) misc/global_flag.o  misc/lsb_output.o makefile
-	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/global_flag.o misc/lsb_output.o
+	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 $(REAL_LIBS) $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/global_flag.o misc/lsb_output.o
 
 lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \
