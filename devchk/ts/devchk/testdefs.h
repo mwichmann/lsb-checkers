@@ -46,6 +46,7 @@ extern void pwd_h();
 extern void regex_h();
 extern void rpc_auth_h();
 extern void rpc_clnt_h();
+extern void rpc_rpc_msg_h();
 extern void rpc_svc_h();
 extern void rpc_types_h();
 extern void rpc_xdr_h();

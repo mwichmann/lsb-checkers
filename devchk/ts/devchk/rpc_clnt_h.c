@@ -121,14 +121,6 @@ Msg( "Error: Constant not found: NULLPROC\n");
 cnt++;
 #endif
 
-#elif 
-#ifdef NULLPROC
-	CompareConstant(NULLPROC,,4310,architecture)
-#else
-Msg( "Error: Constant not found: NULLPROC\n");
-cnt++;
-#endif
-
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -200,6 +192,17 @@ Msg("Find size of clnt_stat (9916)\n");
 #endif
 
 #ifdef __i386__
+CheckTypeSize(struct rpc_err,12, 9917, 2)
+CheckOffset(struct rpc_err,ru,4,2,32102)
+#elif __ia64__
+CheckTypeSize(struct rpc_err,24, 9917, 3)
+CheckOffset(struct rpc_err,ru,8,3,32102)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9917,0);
+Msg("Find size of rpc_err (9917)\n");
+#endif
+
+#ifdef __i386__
 CheckTypeSize(struct clnt_ops,24, 9922, 2)
 CheckOffset(struct clnt_ops,cl_abort,4,2,32105)
 CheckOffset(struct clnt_ops,cl_geterr,8,2,32106)
@@ -252,9 +255,9 @@ CheckTypeSize(CLIENT,12, 10389, 2)
 CheckTypeSize(CLIENT,12, 10389, 10)
 #elif __ia64__
 CheckTypeSize(CLIENT,24, 10389, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10389,0);
-Msg("Find size of CLIENT (10389)\n");
+#endif
+
+#ifdef __no_sym__
 #endif
 
 #ifdef TET_TEST

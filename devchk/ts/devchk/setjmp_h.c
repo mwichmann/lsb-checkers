@@ -38,9 +38,17 @@ CheckArrayTypeSize(__jmp_buf,4,6, 9089, 2)
 
 #ifdef __ia64__
 CheckArrayTypeSize(__jmp_buf,8,70, 10409, 3)
+#endif
+
+#ifdef __powerpc__
+CheckArrayTypeSize(__jmp_buf,4,1, 10410, 6)
+#endif
+
+#ifdef __s390__
+CheckArrayTypeSize(__jmp_buf,4,1, 10411, 10)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10409,0);
-Msg("Find size of __jmp_buf (10409)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10411,0);
+Msg("Find size of __jmp_buf (10411)\n");
 #endif
 
 #ifdef __ia64__
