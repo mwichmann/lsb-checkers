@@ -33,7 +33,7 @@ cnt++;
 CheckTypeSize(struct in_addr,4, 10143, 2)
 CheckOffset(struct in_addr,s_addr,0)
 #elif __ia64__
-CheckTypeSize(struct in_addr,0, 10143, 3)
+CheckTypeSize(struct in_addr,4, 10143, 3)
 CheckOffset(struct in_addr,s_addr,0)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);

@@ -2412,7 +2412,7 @@ cnt++;
 #ifdef __i386__
 CheckTypeSize(Atom,4, 8173, 2)
 #elif __ia64__
-CheckTypeSize(Atom,0, 8173, 3)
+CheckTypeSize(Atom,8, 8173, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8173,0);
 #endif
@@ -2420,7 +2420,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8173,0);
 #ifdef __i386__
 CheckTypeSize(Time,4, 8175, 2)
 #elif __ia64__
-CheckTypeSize(Time,0, 8175, 3)
+CheckTypeSize(Time,8, 8175, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8175,0);
 #endif
@@ -2452,7 +2452,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8178,0);
 #ifdef __i386__
 CheckTypeSize(Drawable,4, 8727, 2)
 #elif __ia64__
-CheckTypeSize(Drawable,0, 8727, 3)
+CheckTypeSize(Drawable,8, 8727, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8727,0);
 #endif
@@ -2460,7 +2460,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8727,0);
 #ifdef __i386__
 CheckTypeSize(Cursor,4, 8728, 2)
 #elif __ia64__
-CheckTypeSize(Cursor,0, 8728, 3)
+CheckTypeSize(Cursor,8, 8728, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8728,0);
 #endif
@@ -2468,7 +2468,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8728,0);
 #ifdef __i386__
 CheckTypeSize(KeySym,4, 8731, 2)
 #elif __ia64__
-CheckTypeSize(KeySym,0, 8731, 3)
+CheckTypeSize(KeySym,8, 8731, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8731,0);
 #endif
