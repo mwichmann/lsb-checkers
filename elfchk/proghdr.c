@@ -105,7 +105,6 @@ return 0;
 int
 checkPT_GNU_EH_FRAME(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-fprintf( stderr, "Program Header PT_GNU_EH_FRAME not defined in the LSB\n");
 return 0;
 }
 
