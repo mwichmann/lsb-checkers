@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *, const char *, const struct pam_conv *, pam_handle_t * *) = 0;
+#include <security/pam_appl.h>
+#undef pam_start
+static int(*funcptr) (const char * , const char * , const struct pam_conv * , pam_handle_t * * ) = 0;
 
-int pam_start(const char * arg0, const char * arg1, const struct pam_conv * arg2, pam_handle_t * * arg3)
+int pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * arg2 , pam_handle_t * * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_start");
@@ -15,7 +17,7 @@ int pam_start(const char * arg0, const char * arg1, const struct pam_conv * arg2
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_pam_start(const char * arg0, const char * arg1, const struct pam_conv * arg2, pam_handle_t * * arg3)
+int lsb_pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * arg2 , pam_handle_t * * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_start");

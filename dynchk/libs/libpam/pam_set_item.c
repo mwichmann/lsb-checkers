@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(pam_handle_t *, int, const void *) = 0;
+#include <security/pam_appl.h>
+#undef pam_set_item
+static int(*funcptr) (pam_handle_t * , int , const void * ) = 0;
 
-int pam_set_item(pam_handle_t * arg0, int arg1, const void * arg2)
+int pam_set_item (pam_handle_t * arg0 , int arg1 , const void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_set_item");
@@ -14,7 +16,7 @@ int pam_set_item(pam_handle_t * arg0, int arg1, const void * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_pam_set_item(pam_handle_t * arg0, int arg1, const void * arg2)
+int lsb_pam_set_item (pam_handle_t * arg0 , int arg1 , const void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_set_item");

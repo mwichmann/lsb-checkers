@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/socket.h>
-#include <stddef.h>
 #undef getnameinfo
 static int(*funcptr) (const struct sockaddr * , socklen_t , char * , socklen_t , char * , socklen_t , unsigned int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <signal.h>
 #undef sigaltstack
 static int(*funcptr) (const struct sigaltstack * , struct sigaltstack * ) = 0;
 
