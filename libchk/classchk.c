@@ -147,7 +147,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		}
 		} /* (*classp->vtablename) */
 		else {
-			fprintf(stderr,"No vtable name for %s\n",classp->name);
+			printf("No vtable name for %s\n",classp->name);
 		}
 
 		/*
@@ -338,7 +338,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 			char	str[256];
 			sprintf(str, "_ZTI%s", &(classp->name[2]));
 			fprintf(stderr, "RTTI:%s:0:%s\n", classp->name,str);
-			printf("RTTI name %s not found\n", classp->rttiname);
+			printf("No RTTI name for %s\n", str);
 		}
 	}
 
