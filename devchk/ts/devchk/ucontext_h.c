@@ -135,12 +135,12 @@ CheckOffset(struct _libc_fpxreg,padding,10,11,40469)
 CheckTypeSize(struct _libc_vrstate,528, 10908, 6)
 CheckMemberSize(struct _libc_vrstate,vrregs,512,6,40642)
 CheckOffset(struct _libc_vrstate,vrregs,0,6,40642)
-CheckMemberSize(struct _libc_vrstate,vscr,4,6,40643)
-CheckOffset(struct _libc_vrstate,vscr,512,6,40643)
 CheckMemberSize(struct _libc_vrstate,vrsave,4,6,40644)
-CheckOffset(struct _libc_vrstate,vrsave,516,6,40644)
+CheckOffset(struct _libc_vrstate,vrsave,512,6,40644)
 CheckMemberSize(struct _libc_vrstate,_pad,8,6,40645)
-CheckOffset(struct _libc_vrstate,_pad,520,6,40645)
+CheckOffset(struct _libc_vrstate,_pad,516,6,40645)
+CheckMemberSize(struct _libc_vrstate,vscr,4,6,40643)
+CheckOffset(struct _libc_vrstate,vscr,524,6,40643)
 #endif
 
 #if __powerpc__ && !__powerpc64__
