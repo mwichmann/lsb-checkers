@@ -1,8 +1,9 @@
 #include <unistd.h>
 #include "elfchk.h"
 
-main()
+main(int argc, char *argv[])
 {
+printf("%s " LSBVERSION "\n", argv[0]);
 check_libs();
 }
 

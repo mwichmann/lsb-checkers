@@ -29,6 +29,8 @@ if( optind >= argc ) {
 	exit(1);
 	}
 
+printf("%s " LSBVERSION "\n", argv[0]);
+
 if( (elffile = OpenElfFile(argv[optind])) == NULL ) {
 	fprintf(stderr, "%s: Unable to open file %s\n", argv[0], argv[optind] );
 	exit(2);
