@@ -111,16 +111,16 @@ mem_is_RW(const void *ptr)
 	int i;
 
 	for(i=0;i<nummaps;i++)
-		if( ptr >= mem[i].start &&
-		    ptr <= mem[i].end &&
+		if( (unsigned long)ptr >= mem[i].start &&
+		    (unsigned long)ptr <= mem[i].end &&
 		    mem[i].perms&(MEMMAP_READ|MEMMAP_WRITE) )
 			return 1;
 
 	load_memmap();
 
 	for(i=0;i<nummaps;i++)
-		if( ptr >= mem[i].start &&
-		    ptr <= mem[i].end &&
+		if( (unsigned long)ptr >= mem[i].start &&
+		    (unsigned long)ptr <= mem[i].end &&
 		    mem[i].perms&(MEMMAP_READ|MEMMAP_WRITE) )
 			return 1;
 	return 0;
