@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static int(*funcptr)(gzFile) = 0;
+#undef gzclose
+static int(*funcptr) (gzFile ) = 0;
 
-int gzclose(gzFile arg0)
+int gzclose (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzclose");
@@ -13,7 +14,7 @@ int gzclose(gzFile arg0)
 	return funcptr(arg0);
 }
 
-int lsb_gzclose(gzFile arg0)
+int lsb_gzclose (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzclose");

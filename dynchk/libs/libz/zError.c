@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static const char *(*funcptr)(int) = 0;
+#undef zError
+static const char *(*funcptr) (int ) = 0;
 
-const char * zError(int arg0)
+const char * zError (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "zError");
@@ -12,7 +13,7 @@ const char * zError(int arg0)
 	return funcptr(arg0);
 }
 
-const char * lsb_zError(int arg0)
+const char * lsb_zError (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "zError");

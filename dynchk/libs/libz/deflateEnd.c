@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static int(*funcptr)(z_streamp) = 0;
+#undef deflateEnd
+static int(*funcptr) (z_streamp ) = 0;
 
-int deflateEnd(z_streamp arg0)
+int deflateEnd (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateEnd");
@@ -13,7 +14,7 @@ int deflateEnd(z_streamp arg0)
 	return funcptr(arg0);
 }
 
-int lsb_deflateEnd(z_streamp arg0)
+int lsb_deflateEnd (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateEnd");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static gzFile(*funcptr)(int, const char *) = 0;
+#undef gzdopen
+static gzFile(*funcptr) (int , const char * ) = 0;
 
-gzFile gzdopen(int arg0, const char * arg1)
+gzFile gzdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzdopen");
@@ -13,7 +14,7 @@ gzFile gzdopen(int arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-gzFile lsb_gzdopen(int arg0, const char * arg1)
+gzFile lsb_gzdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzdopen");

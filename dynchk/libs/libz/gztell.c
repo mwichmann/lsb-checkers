@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static z_off_t(*funcptr)(gzFile) = 0;
+#undef gztell
+static z_off_t(*funcptr) (gzFile ) = 0;
 
-z_off_t gztell(gzFile arg0)
+z_off_t gztell (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gztell");
@@ -13,7 +14,7 @@ z_off_t gztell(gzFile arg0)
 	return funcptr(arg0);
 }
 
-z_off_t lsb_gztell(gzFile arg0)
+z_off_t lsb_gztell (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gztell");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static int(*funcptr)(z_streamp, int) = 0;
+#undef inflate
+static int(*funcptr) (z_streamp , int ) = 0;
 
-int inflate(z_streamp arg0, int arg1)
+int inflate (z_streamp arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflate");
@@ -14,7 +15,7 @@ int inflate(z_streamp arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_inflate(z_streamp arg0, int arg1)
+int lsb_inflate (z_streamp arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflate");

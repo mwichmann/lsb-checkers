@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static char *(*funcptr)(gzFile, char *, int) = 0;
+#undef gzgets
+static char *(*funcptr) (gzFile , char * , int ) = 0;
 
-char * gzgets(gzFile arg0, char * arg1, int arg2)
+char * gzgets (gzFile arg0 , char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzgets");
@@ -15,7 +16,7 @@ char * gzgets(gzFile arg0, char * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_gzgets(gzFile arg0, char * arg1, int arg2)
+char * lsb_gzgets (gzFile arg0 , char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzgets");

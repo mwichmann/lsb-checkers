@@ -3,10 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-#include <zlib.h>
-static z_off_t(*funcptr)(gzFile, z_off_t, int) = 0;
+#undef gzseek
+static z_off_t(*funcptr) (gzFile , z_off_t , int ) = 0;
 
-z_off_t gzseek(gzFile arg0, z_off_t arg1, int arg2)
+z_off_t gzseek (gzFile arg0 , z_off_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzseek");
@@ -16,7 +16,7 @@ z_off_t gzseek(gzFile arg0, z_off_t arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-z_off_t lsb_gzseek(gzFile arg0, z_off_t arg1, int arg2)
+z_off_t lsb_gzseek (gzFile arg0 , z_off_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzseek");
