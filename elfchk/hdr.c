@@ -59,9 +59,9 @@ checkhdrident( EI_CLASS, ELFCLASS64 )
 checkhdrident( EI_CLASS, ELFCLASS32 )
 #elif __powerpc64__
 checkhdrident( EI_CLASS, ELFCLASS64 )
-#elif __s390__
+#elif __s390x__
 checkhdrident( EI_CLASS, ELFCLASS64 )
-#elif __s390x__ && !__s390x__
+#elif __s390__ && !__s390x__
 checkhdrident( EI_CLASS, ELFCLASS32 )
 #else
 fprintf(stderr, "EI_CLASS not checked!!\n");
