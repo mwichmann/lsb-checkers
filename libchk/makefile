@@ -29,6 +29,8 @@ install:
 test: libchk dummy_link
 	./test_libchk
 
+dumpints: dumpints.o libstdcxx_so_5.o
+
 # Distclean means will need database to rebuild
 distclean: clean
 	rm -f libs.h libs.c
