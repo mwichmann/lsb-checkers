@@ -454,15 +454,15 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				case __diamond_shaped_mask:
 					break;
 				default:
-					TETJ_REPORT_INFO("VMI flags %ul (found) for class %s "
+					TETJ_REPORT_INFO("VMI flags %lu (found) for class %s "
 													 "are not a legal value",
 													 vmi_rttip->flags, classp->name );
 					test_failed = 1;
 				}
 				if (vmi_rttip->flags != classp->flags) 
 				{
-					TETJ_REPORT_INFO("VMI flags %ul (found) for class %s "
-													 "doesn't match %ul (expected)",
+					TETJ_REPORT_INFO("VMI flags %lu (found) for class %s "
+													 "doesn't match %lu (expected)",
 													 vmi_rttip->flags, classp->name, classp->flags);
 					test_failed = 1;
 				}
