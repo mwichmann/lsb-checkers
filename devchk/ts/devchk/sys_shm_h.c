@@ -22,10 +22,18 @@ int pcnt=0;
 Msg("Checking data structures in sys/shm.h\n");
 #endif
 
+/* No test for SHMLBA */
 #ifdef SHM_RDONLY
 	CompareConstant(SHM_RDONLY,4096)
 #else
 Msg( "Error: Constant not found: SHM_RDONLY\n");
+cnt++;
+#endif
+
+#ifdef SHM_RND
+	CompareConstant(SHM_RND,020000)
+#else
+Msg( "Error: Constant not found: SHM_RND\n");
 cnt++;
 #endif
 

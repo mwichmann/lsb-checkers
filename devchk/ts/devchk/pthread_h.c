@@ -122,6 +122,8 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(pthread_key_t,4, 9059, 2)
+#elif __ia64__
+CheckTypeSize(pthread_key_t,0, 9059, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9059,0);
 #endif

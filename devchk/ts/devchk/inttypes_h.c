@@ -35,7 +35,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6898,0);
 #ifdef __i386__
 CheckTypeSize(intmax_t,8, 9016, 2)
 #elif __ia64__
-CheckTypeSize(intmax_t,0, 9016, 3)
+CheckTypeSize(intmax_t,8, 9016, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9016,0);
 #endif
@@ -43,7 +43,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9016,0);
 #ifdef __i386__
 CheckTypeSize(uintmax_t,8, 9017, 2)
 #elif __ia64__
-CheckTypeSize(uintmax_t,0, 9017, 3)
+CheckTypeSize(uintmax_t,8, 9017, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9017,0);
 #endif

@@ -222,13 +222,6 @@ Msg( "Error: Constant not found: _FULLWIN\n");
 cnt++;
 #endif
 
-#ifdef _SCROLLWIN
-	CompareConstant(_SCROLLWIN,0x08)
-#else
-Msg( "Error: Constant not found: _SCROLLWIN\n");
-cnt++;
-#endif
-
 #ifdef _ISPAD
 	CompareConstant(_ISPAD,0x10)
 #else

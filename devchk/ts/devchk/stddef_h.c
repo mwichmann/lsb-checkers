@@ -25,7 +25,7 @@ Msg("Checking data structures in stddef.h\n");
 #ifdef __i386__
 CheckTypeSize(size_t,4, 8969, 2)
 #elif __ia64__
-CheckTypeSize(size_t,0, 8969, 3)
+CheckTypeSize(size_t,8, 8969, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
 #endif

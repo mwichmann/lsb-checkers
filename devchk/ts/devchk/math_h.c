@@ -22,13 +22,7 @@ int pcnt=0;
 Msg("Checking data structures in math.h\n");
 #endif
 
-#ifdef HUGE_VAL
-	CompareConstant(HUGE_VAL,0x7FF00000UL)
-#else
-Msg( "Error: Constant not found: HUGE_VAL\n");
-cnt++;
-#endif
-
+/* No test for HUGE_VAL */
 #ifdef M_E
 	CompareConstant(M_E,2.7182818284590452354)
 #else

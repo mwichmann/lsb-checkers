@@ -46,7 +46,7 @@ cnt++;
 #ifdef __i386__
 CheckTypeSize(wint_t,4, 8980, 2)
 #elif __ia64__
-CheckTypeSize(wint_t,0, 8980, 3)
+CheckTypeSize(wint_t,4, 8980, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8980,0);
 #endif

@@ -44,6 +44,13 @@ Msg( "Error: Constant not found: WNOHANG\n");
 cnt++;
 #endif
 
+#ifdef WUNTRACED
+	CompareConstant(WUNTRACED,0x00000002)
+#else
+Msg( "Error: Constant not found: WUNTRACED\n");
+cnt++;
+#endif
+
 #ifdef __i386__
 CheckTypeSize(idtype_t,4, 9185, 2)
 #elif __ia64__
