@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <wchar.h>
 #undef mbsinit
 static int(*funcptr) (const mbstate_t * ) = 0;
 
