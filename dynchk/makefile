@@ -6,6 +6,9 @@ all: liblsbdynchk.so
 $(WRAPPER_LIBS):
 	cd libs && make all
 
+$(TEST_LIB):
+	cd tests && make all
+
 liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) makefile
 	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB)
 
