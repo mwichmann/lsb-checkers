@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.38 $
+ * This is $Revision: 1.39 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.39  2004/05/12 19:35:07  anderson
+ * Fix warnings caused by bad pointer decls
+ *
  * Revision 1.38  2004/05/12 16:04:52  anderson
  * We want to be able to query for newer version at any time
  *
@@ -162,7 +165,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.38 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.39 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -321,7 +324,7 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
 
 
 void
-check_lib(char *libname, struct versym entries[], struct classinfo classes[], struct tetj_handle *journal)
+check_lib(char *libname, struct versym *entries, struct classinfo *classes, struct tetj_handle *journal)
 {
   ElfFile *file = NULL;
   char filename[PATH_MAX+1];
