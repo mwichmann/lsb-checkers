@@ -190,8 +190,8 @@ CheckMemberSize(struct _ObjectRec,object,48,9,34409)
 CheckOffset(struct _ObjectRec,object,0,9,34409)
 #elif __s390x__
 CheckTypeSize(struct _ObjectRec,48, 10262, 12)
-CheckMemberSize(struct _ObjectRec,object,48,12,40186)
-CheckOffset(struct _ObjectRec,object,0,12,40186)
+Msg("Missing member data for _ObjectRec on S390X\n");
+CheckOffset(struct _ObjectRec,object,0,12,34409)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
 Msg("Find size of _ObjectRec (10262)\n");
@@ -616,8 +616,8 @@ CheckMemberSize(struct _ObjectClassRec,object_class,224,9,34408)
 CheckOffset(struct _ObjectClassRec,object_class,0,9,34408)
 #elif __s390x__
 CheckTypeSize(struct _ObjectClassRec,224, 10271, 12)
-CheckMemberSize(struct _ObjectClassRec,object_class,224,12,40187)
-CheckOffset(struct _ObjectClassRec,object_class,0,12,40187)
+Msg("Missing member data for _ObjectClassRec on S390X\n");
+CheckOffset(struct _ObjectClassRec,object_class,0,12,34408)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
 Msg("Find size of _ObjectClassRec (10271)\n");

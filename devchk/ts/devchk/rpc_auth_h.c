@@ -266,10 +266,9 @@ CheckMemberSize(union des_block,c,8,9,32025)
 CheckOffset(union des_block,c,0,9,32025)
 #elif __s390x__
 CheckTypeSize(union des_block,8, 9888, 12)
-CheckMemberSize(union des_block,key,8,12,40189)
-CheckOffset(union des_block,key,0,12,40189)
-CheckMemberSize(union des_block,c,8,12,40188)
-CheckOffset(union des_block,c,0,12,40188)
+Msg("Missing member data for des_block on S390X\n");
+CheckOffset(union des_block,key,0,12,32024)
+CheckOffset(union des_block,c,0,12,32025)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9888,0);
 Msg("Find size of des_block (9888)\n");

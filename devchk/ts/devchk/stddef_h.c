@@ -25,7 +25,7 @@ Msg("Checking data structures in stddef.h\n");
 
 #if _LSB_DEFAULT_ARCH
 #ifdef NULL
-	CompareConstant(NULL,(0),906,architecture)
+	CompareConstant(NULL,(0L),906,architecture)
 #else
 Msg( "Error: Constant not found: NULL\n");
 cnt++;
@@ -92,6 +92,10 @@ CheckTypeSize(ptrdiff_t,4, 10475, 10)
 
 #if __powerpc64__
 CheckTypeSize(ptrdiff_t,8, 10476, 9)
+#endif
+
+#if __s390x__
+CheckTypeSize(size_t,8, 10554, 12)
 #endif
 
 #ifdef TET_TEST
