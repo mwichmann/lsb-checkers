@@ -70,4 +70,5 @@ pthread_mutexattr_getpshared.o \
 pthread_mutexattr_setpshared.o \
 pthread_rwlock_timedrdlock.o \
 pthread_rwlock_timedwrlock.o \
-sem_timedwait.o 
+sem_timedwait.o \
+__register_atfork.o 
