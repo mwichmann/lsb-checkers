@@ -35,8 +35,8 @@ typedef struct CIEFrame {
 typedef struct FDEFrameHeader {
 	Elf32_Word	length;
 	Elf32_Word	CIE_pointer;
-	int		*initial_location;
-	int		address_range;
+	long		*initial_location;
+	long		address_range;
 	} FDEFrameHeader;
 
 typedef struct EHFRMHDRImage {
