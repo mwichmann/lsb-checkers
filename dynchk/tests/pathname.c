@@ -3,5 +3,5 @@
 
 void validate_pathname(const char *arg, const char *name)
 {
-	fprintf(stderr, "lsbdynchk: %s: %s is a parameter.(stub)\n", name, arg);
+	lsb_fprintf(stderr, "lsbdynchk: %s: %s is a parameter.(stub)\n", name, arg);
 }
