@@ -162,7 +162,7 @@ CheckTypeSize(struct exit_status,4, 10282, 6)
 #elif __ia64__
 CheckTypeSize(struct exit_status,4, 10282, 3)
 #elif __s390__
-CheckTypeSize(struct exit_status,0, 10282, 10)
+CheckTypeSize(struct exit_status,4, 10282, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10282,0);
 Msg("Find size of exit_status (10282)\n");
@@ -178,7 +178,7 @@ CheckTypeSize(struct lastlog,292, 10285, 6)
 #elif __ia64__
 CheckTypeSize(struct lastlog,296, 10285, 3)
 #elif __s390__
-CheckTypeSize(struct lastlog,0, 10285, 10)
+CheckTypeSize(struct lastlog,292, 10285, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10285,0);
 Msg("Find size of lastlog (10285)\n");
@@ -202,7 +202,7 @@ CheckTypeSize(struct utmp,384, 10281, 6)
 #elif __ia64__
 CheckTypeSize(struct utmp,400, 10281, 3)
 #elif __s390__
-CheckTypeSize(struct utmp,0, 10281, 10)
+CheckTypeSize(struct utmp,384, 10281, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10281,0);
 Msg("Find size of utmp (10281)\n");

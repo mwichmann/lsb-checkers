@@ -130,7 +130,7 @@ CheckTypeSize(struct in_addr,4, 10143, 3)
 #elif __powerpc__
 CheckTypeSize(struct in_addr,4, 10143, 6)
 #elif __s390__
-CheckTypeSize(struct in_addr,0, 10143, 10)
+CheckTypeSize(struct in_addr,4, 10143, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);
 Msg("Find size of in_addr (10143)\n");
@@ -143,7 +143,7 @@ CheckTypeSize(in_addr_t,4, 10302, 6)
 #elif __ia64__
 CheckTypeSize(in_addr_t,4, 10302, 3)
 #elif __s390__
-CheckTypeSize(in_addr_t,0, 10302, 10)
+CheckTypeSize(in_addr_t,4, 10302, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10302,0);
 Msg("Find size of in_addr_t (10302)\n");
@@ -156,7 +156,7 @@ CheckTypeSize(struct sockaddr_in,16, 9141, 3)
 #elif __powerpc__
 CheckTypeSize(struct sockaddr_in,16, 9141, 6)
 #elif __s390__
-CheckTypeSize(struct sockaddr_in,0, 9141, 10)
+CheckTypeSize(struct sockaddr_in,16, 9141, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 Msg("Find size of sockaddr_in (9141)\n");

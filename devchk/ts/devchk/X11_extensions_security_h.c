@@ -36,7 +36,7 @@ CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
 #elif __powerpc__
 CheckTypeSize(XSecurityAuthorization,4, 8596, 6)
 #elif __s390__
-CheckTypeSize(XSecurityAuthorization,0, 8596, 10)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
 Msg("Find size of XSecurityAuthorization (8596)\n");
@@ -49,7 +49,7 @@ CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3)
 #elif __powerpc__
 CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6)
 #elif __s390__
-CheckTypeSize(XSecurityAuthorizationAttributes,0, 8598, 10)
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8598,0);
 Msg("Find size of XSecurityAuthorizationAttributes (8598)\n");

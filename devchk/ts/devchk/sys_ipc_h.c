@@ -111,7 +111,7 @@ CheckTypeSize(struct ipc_perm,48, 10128, 3)
 #elif __powerpc__
 CheckTypeSize(struct ipc_perm,48, 10128, 6)
 #elif __s390__
-CheckTypeSize(struct ipc_perm,0, 10128, 10)
+CheckTypeSize(struct ipc_perm,36, 10128, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10128,0);
 Msg("Find size of ipc_perm (10128)\n");

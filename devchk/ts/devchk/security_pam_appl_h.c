@@ -493,7 +493,7 @@ cnt++;
 #ifdef __i386__
 CheckTypeSize(struct pam_conv,8, 10352, 2)
 #elif __s390__
-CheckTypeSize(struct pam_conv,0, 10352, 10)
+CheckTypeSize(struct pam_conv,8, 10352, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10352,0);
 Msg("Find size of pam_conv (10352)\n");
@@ -502,7 +502,7 @@ Msg("Find size of pam_conv (10352)\n");
 #ifdef __i386__
 CheckTypeSize(pam_handle_t,4, 10354, 2)
 #elif __s390__
-CheckTypeSize(pam_handle_t,0, 10354, 10)
+CheckTypeSize(pam_handle_t,4, 10354, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10354,0);
 Msg("Find size of pam_handle_t (10354)\n");
@@ -513,7 +513,7 @@ CheckTypeSize(struct pam_message,8, 10356, 2)
 CheckOffset(struct pam_message,msg_style,0,2,34584)
 CheckOffset(struct pam_message,msg,4,2,34585)
 #elif __s390__
-CheckTypeSize(struct pam_message,0, 10356, 10)
+CheckTypeSize(struct pam_message,8, 10356, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10356,0);
 Msg("Find size of pam_message (10356)\n");
@@ -524,7 +524,7 @@ CheckTypeSize(struct pam_response,8, 10358, 2)
 CheckOffset(struct pam_response,resp,0,2,34586)
 CheckOffset(struct pam_response,resp_retcode,4,2,34587)
 #elif __s390__
-CheckTypeSize(struct pam_response,0, 10358, 10)
+CheckTypeSize(struct pam_response,8, 10358, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10358,0);
 Msg("Find size of pam_response (10358)\n");

@@ -30,7 +30,7 @@ CheckTypeSize(struct utsname,390, 7013, 3)
 #elif __powerpc__
 CheckTypeSize(struct utsname,390, 7013, 6)
 #elif __s390__
-CheckTypeSize(struct utsname,0, 7013, 10)
+CheckTypeSize(struct utsname,390, 7013, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7013,0);
 Msg("Find size of utsname (7013)\n");

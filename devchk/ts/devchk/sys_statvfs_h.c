@@ -41,7 +41,7 @@ CheckOffset(struct statvfs,__f_spare,48,2,34530)
 #elif __ia64__
 CheckTypeSize(struct statvfs,112, 10323, 3)
 #elif __s390__
-CheckTypeSize(struct statvfs,0, 10323, 10)
+CheckTypeSize(struct statvfs,72, 10323, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10323,0);
 Msg("Find size of statvfs (10323)\n");
@@ -65,7 +65,7 @@ CheckOffset(struct statvfs64,__f_spare,72,2,34544)
 #elif __ia64__
 CheckTypeSize(struct statvfs64,112, 10325, 3)
 #elif __s390__
-CheckTypeSize(struct statvfs64,0, 10325, 10)
+CheckTypeSize(struct statvfs64,96, 10325, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10325,0);
 Msg("Find size of statvfs64 (10325)\n");

@@ -74,7 +74,7 @@ CheckTypeSize(struct _ObjectPart,48, 10261, 3)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectPart,28, 10261, 6)
 #elif __s390__
-CheckTypeSize(struct _ObjectPart,0, 10261, 10)
+CheckTypeSize(struct _ObjectPart,28, 10261, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10261,0);
 Msg("Find size of _ObjectPart (10261)\n");
@@ -87,7 +87,7 @@ CheckTypeSize(ObjectPart,48, 10264, 3)
 #elif __powerpc__
 CheckTypeSize(ObjectPart,28, 10264, 6)
 #elif __s390__
-CheckTypeSize(ObjectPart,0, 10264, 10)
+CheckTypeSize(ObjectPart,28, 10264, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10264,0);
 Msg("Find size of ObjectPart (10264)\n");
@@ -100,7 +100,7 @@ CheckTypeSize(struct _ObjectRec,48, 10262, 3)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectRec,28, 10262, 6)
 #elif __s390__
-CheckTypeSize(struct _ObjectRec,0, 10262, 10)
+CheckTypeSize(struct _ObjectRec,28, 10262, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
 Msg("Find size of _ObjectRec (10262)\n");
@@ -113,7 +113,7 @@ CheckTypeSize(ObjectRec,48, 10263, 3)
 #elif __powerpc__
 CheckTypeSize(ObjectRec,28, 10263, 6)
 #elif __s390__
-CheckTypeSize(ObjectRec,0, 10263, 10)
+CheckTypeSize(ObjectRec,28, 10263, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10263,0);
 Msg("Find size of ObjectRec (10263)\n");
@@ -127,7 +127,7 @@ CheckTypeSize(struct _ObjectClassPart,224, 10265, 3)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 6)
 #elif __s390__
-CheckTypeSize(struct _ObjectClassPart,0, 10265, 10)
+CheckTypeSize(struct _ObjectClassPart,116, 10265, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10265,0);
 Msg("Find size of _ObjectClassPart (10265)\n");
@@ -140,7 +140,7 @@ CheckTypeSize(ObjectClassPart,224, 10266, 3)
 #elif __powerpc__
 CheckTypeSize(ObjectClassPart,116, 10266, 6)
 #elif __s390__
-CheckTypeSize(ObjectClassPart,0, 10266, 10)
+CheckTypeSize(ObjectClassPart,116, 10266, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10266,0);
 Msg("Find size of ObjectClassPart (10266)\n");
@@ -153,7 +153,7 @@ CheckTypeSize(ObjectClassExtensionRec,48, 10268, 3)
 #elif __powerpc__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 6)
 #elif __s390__
-CheckTypeSize(ObjectClassExtensionRec,0, 10268, 10)
+CheckTypeSize(ObjectClassExtensionRec,24, 10268, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10268,0);
 Msg("Find size of ObjectClassExtensionRec (10268)\n");
@@ -166,7 +166,7 @@ CheckTypeSize(ObjectClassExtension,8, 10270, 3)
 #elif __powerpc__
 CheckTypeSize(ObjectClassExtension,4, 10270, 6)
 #elif __s390__
-CheckTypeSize(ObjectClassExtension,0, 10270, 10)
+CheckTypeSize(ObjectClassExtension,4, 10270, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10270,0);
 Msg("Find size of ObjectClassExtension (10270)\n");
@@ -179,7 +179,7 @@ CheckTypeSize(struct _ObjectClassRec,224, 10271, 3)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 6)
 #elif __s390__
-CheckTypeSize(struct _ObjectClassRec,0, 10271, 10)
+CheckTypeSize(struct _ObjectClassRec,116, 10271, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
 Msg("Find size of _ObjectClassRec (10271)\n");
@@ -192,7 +192,7 @@ CheckTypeSize(ObjectClassRec,224, 10272, 3)
 #elif __powerpc__
 CheckTypeSize(ObjectClassRec,116, 10272, 6)
 #elif __s390__
-CheckTypeSize(ObjectClassRec,0, 10272, 10)
+CheckTypeSize(ObjectClassRec,116, 10272, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10272,0);
 Msg("Find size of ObjectClassRec (10272)\n");

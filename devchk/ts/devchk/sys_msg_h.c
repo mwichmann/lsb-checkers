@@ -42,7 +42,7 @@ CheckTypeSize(msglen_t,4, 10214, 2)
 #elif __powerpc__
 CheckTypeSize(msglen_t,4, 10214, 6)
 #elif __s390__
-CheckTypeSize(msglen_t,0, 10214, 10)
+CheckTypeSize(msglen_t,4, 10214, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10214,0);
 Msg("Find size of msglen_t (10214)\n");
@@ -55,7 +55,7 @@ CheckTypeSize(struct msqid_ds,120, 9117, 3)
 #elif __powerpc__
 CheckTypeSize(struct msqid_ds,104, 9117, 6)
 #elif __s390__
-CheckTypeSize(struct msqid_ds,0, 9117, 10)
+CheckTypeSize(struct msqid_ds,88, 9117, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9117,0);
 Msg("Find size of msqid_ds (9117)\n");

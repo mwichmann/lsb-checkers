@@ -201,7 +201,7 @@ Msg("Find size of clnt_stat (9916)\n");
 #ifdef __i386__
 CheckTypeSize(struct clnt_ops,24, 9922, 2)
 #elif __s390__
-CheckTypeSize(struct clnt_ops,0, 9922, 10)
+CheckTypeSize(struct clnt_ops,24, 9922, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9922,0);
 Msg("Find size of clnt_ops (9922)\n");
@@ -210,7 +210,7 @@ Msg("Find size of clnt_ops (9922)\n");
 #ifdef __i386__
 CheckTypeSize(struct CLIENT,12, 9921, 2)
 #elif __s390__
-CheckTypeSize(struct CLIENT,0, 9921, 10)
+CheckTypeSize(struct CLIENT,12, 9921, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9921,0);
 Msg("Find size of CLIENT (9921)\n");
@@ -219,7 +219,7 @@ Msg("Find size of CLIENT (9921)\n");
 #ifdef __i386__
 CheckTypeSize(CLIENT,12, 10389, 2)
 #elif __s390__
-CheckTypeSize(CLIENT,0, 10389, 10)
+CheckTypeSize(CLIENT,12, 10389, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10389,0);
 Msg("Find size of CLIENT (10389)\n");

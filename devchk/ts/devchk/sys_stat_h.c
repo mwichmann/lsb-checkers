@@ -348,7 +348,7 @@ CheckTypeSize(struct stat,144, 8693, 3)
 #elif __powerpc__
 CheckTypeSize(struct stat,88, 8693, 6)
 #elif __s390__
-CheckTypeSize(struct stat,0, 8693, 10)
+CheckTypeSize(struct stat,88, 8693, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8693,0);
 Msg("Find size of stat (8693)\n");
@@ -361,7 +361,7 @@ CheckTypeSize(struct stat64,144, 8697, 3)
 #elif __powerpc__
 CheckTypeSize(struct stat64,104, 8697, 6)
 #elif __s390__
-CheckTypeSize(struct stat64,0, 8697, 10)
+CheckTypeSize(struct stat64,104, 8697, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8697,0);
 Msg("Find size of stat64 (8697)\n");
