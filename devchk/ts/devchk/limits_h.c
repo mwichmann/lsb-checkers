@@ -249,7 +249,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef LONG_MAX
-	CompareConstant(LONG_MAX,-1,16,architecture)
+	CompareConstant(LONG_MAX,9223372036854775807L,16,architecture)
 #else
 Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
