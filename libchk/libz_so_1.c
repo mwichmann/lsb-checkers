@@ -41,6 +41,7 @@ struct versym libz_so_1[] = {
 	{"inflateSyncPoint","",0,"LSB-Core",0,1},
 	{"uncompress","",0,"LSB-Core",0,1},
 	{"zError","",0,"LSB-Core",0,1},
+	{"zlibVersion","",0,"LSB-Core",0,1},
 	{0,0}};
 
 struct classinfo *libz_so_1_classinfo[] = {

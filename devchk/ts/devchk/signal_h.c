@@ -64,6 +64,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef _SIGSET_NWORDS
+	CompareConstant(_SIGSET_NWORDS,(1024/(8*sizeof(unsigned long))),3098,architecture)
+#else
+Msg( "Error: Constant not found: _SIGSET_NWORDS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SIGHUP
 	CompareConstant(SIGHUP,1,3102,architecture)
 #else
@@ -738,6 +748,78 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SI_MAX_SIZE
+	CompareConstant(SI_MAX_SIZE,128,3160,architecture)
+#else
+Msg( "Error: Constant not found: SI_MAX_SIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef SI_PAD_SIZE
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture)
+#else
+Msg( "Error: Constant not found: SI_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef SI_PAD_SIZE
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture)
+#else
+Msg( "Error: Constant not found: SI_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef SI_PAD_SIZE
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture)
+#else
+Msg( "Error: Constant not found: SI_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef SI_PAD_SIZE
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture)
+#else
+Msg( "Error: Constant not found: SI_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef SI_PAD_SIZE
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture)
+#else
+Msg( "Error: Constant not found: SI_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef SI_PAD_SIZE
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture)
+#else
+Msg( "Error: Constant not found: SI_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef SI_PAD_SIZE
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture)
+#else
+Msg( "Error: Constant not found: SI_PAD_SIZE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for SI_PAD_SIZE (3161, int) in db\n");
+#ifdef SI_PAD_SIZE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3161,%d);\n", architecture, SI_PAD_SIZE);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
 /* No test for si_pid */
 #endif
 
@@ -869,6 +951,78 @@ cnt++;
 /* No test for si_timer2 */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef SIGEV_MAX_SIZE
+	CompareConstant(SIGEV_MAX_SIZE,64,5019,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_MAX_SIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef SIGEV_PAD_SIZE
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef SIGEV_PAD_SIZE
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef SIGEV_PAD_SIZE
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef SIGEV_PAD_SIZE
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef SIGEV_PAD_SIZE
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef SIGEV_PAD_SIZE
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef SIGEV_PAD_SIZE
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for SIGEV_PAD_SIZE (5020, int) in db\n");
+#ifdef SIGEV_PAD_SIZE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5020,%d);\n", architecture, SIGEV_PAD_SIZE);
+#endif
+#endif
 #if __s390x__
 #ifdef __NUM_GPRS
 	CompareConstant(__NUM_GPRS,16,5141,architecture)

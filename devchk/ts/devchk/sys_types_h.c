@@ -58,6 +58,68 @@ cnt++;
 /* No test for FD_ZERO(fdsetp) */
 #endif
 
+#if __powerpc64__
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,16,4558,architecture)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,32,4558,architecture)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,16,4558,architecture)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,32,4558,architecture)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,16,4558,architecture)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,16,4558,architecture)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,32,4558,architecture)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __FDSET_LONGS (4558, int) in db\n");
+#ifdef __FDSET_LONGS
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4558,%d);\n", architecture, __FDSET_LONGS);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for FD_SET(d,set) */
 #endif
