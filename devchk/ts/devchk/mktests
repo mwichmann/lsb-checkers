@@ -211,7 +211,11 @@ sub writetest($$)
 	$lastid=0;
 	for(1..$tth->numrows) {
 		%tentry=$tth->fetchhash;
-		if( !$tentry{'Asymbol'} ) { $tentry{'Asymbol'}='__no_sym__'; }
+		if( $tentry{'Tarch'} == 8 ) { next; } # Arch None
+		if( !$tentry{'Asymbol'} ) {
+			print STDERR "Type ".$tentry{'Tname'}." is missing Arch\n";
+			$tentry{'Asymbol'}='__no_sym__';
+		}
 		# Do this before we reset the value, so we can re-use the values
 		# from the last time through the loop if we need them
 		if( $tentry{'Tid'} != $lastid ) {
