@@ -122,6 +122,8 @@ if( !( file1->archive[0]==(char)0x1f
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 							0, 0, 0, tmp_string);
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
+	return;
 } else {
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); 
 }
