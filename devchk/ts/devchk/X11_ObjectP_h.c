@@ -31,20 +31,20 @@ Msg("Checking data structures in X11/ObjectP.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef XtObjectExtensionVersion
-	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
+#ifdef XtInheritAllocate
+	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
 #else
-Msg( "Error: Constant not found: XtObjectExtensionVersion\n");
+Msg( "Error: Constant not found: XtInheritAllocate\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef XtInheritAllocate
-	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
+#ifdef XtObjectExtensionVersion
+	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
 #else
-Msg( "Error: Constant not found: XtInheritAllocate\n");
+Msg( "Error: Constant not found: XtObjectExtensionVersion\n");
 cnt++;
 #endif
 
@@ -71,10 +71,34 @@ CheckOffset(struct _ObjectPart,destroy_callbacks,20,2,34368)
 CheckOffset(struct _ObjectPart,constraints,24,2,34369)
 #elif __ia64__
 CheckTypeSize(struct _ObjectPart,48, 10261, 3)
+Msg("Missing member data for _ObjectPart on IA64\n");
+CheckOffset(struct _ObjectPart,self,0,3,34363)
+CheckOffset(struct _ObjectPart,widget_class,0,3,34364)
+CheckOffset(struct _ObjectPart,parent,0,3,34365)
+CheckOffset(struct _ObjectPart,xrm_name,0,3,34366)
+CheckOffset(struct _ObjectPart,being_destroyed,0,3,34367)
+CheckOffset(struct _ObjectPart,destroy_callbacks,0,3,34368)
+CheckOffset(struct _ObjectPart,constraints,0,3,34369)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectPart,28, 10261, 6)
+Msg("Missing member data for _ObjectPart on PPC32\n");
+CheckOffset(struct _ObjectPart,self,0,6,34363)
+CheckOffset(struct _ObjectPart,widget_class,0,6,34364)
+CheckOffset(struct _ObjectPart,parent,0,6,34365)
+CheckOffset(struct _ObjectPart,xrm_name,0,6,34366)
+CheckOffset(struct _ObjectPart,being_destroyed,0,6,34367)
+CheckOffset(struct _ObjectPart,destroy_callbacks,0,6,34368)
+CheckOffset(struct _ObjectPart,constraints,0,6,34369)
 #elif __s390__
 CheckTypeSize(struct _ObjectPart,28, 10261, 10)
+Msg("Missing member data for _ObjectPart on S390\n");
+CheckOffset(struct _ObjectPart,self,0,10,34363)
+CheckOffset(struct _ObjectPart,widget_class,0,10,34364)
+CheckOffset(struct _ObjectPart,parent,0,10,34365)
+CheckOffset(struct _ObjectPart,xrm_name,0,10,34366)
+CheckOffset(struct _ObjectPart,being_destroyed,0,10,34367)
+CheckOffset(struct _ObjectPart,destroy_callbacks,0,10,34368)
+CheckOffset(struct _ObjectPart,constraints,0,10,34369)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10261,0);
 Msg("Find size of _ObjectPart (10261)\n");
@@ -95,12 +119,19 @@ Msg("Find size of ObjectPart (10264)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct _ObjectRec,28, 10262, 2)
+CheckOffset(struct _ObjectRec,object,0,2,34409)
 #elif __ia64__
 CheckTypeSize(struct _ObjectRec,48, 10262, 3)
+Msg("Missing member data for _ObjectRec on IA64\n");
+CheckOffset(struct _ObjectRec,object,0,3,34409)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectRec,28, 10262, 6)
+Msg("Missing member data for _ObjectRec on PPC32\n");
+CheckOffset(struct _ObjectRec,object,0,6,34409)
 #elif __s390__
 CheckTypeSize(struct _ObjectRec,28, 10262, 10)
+Msg("Missing member data for _ObjectRec on S390\n");
+CheckOffset(struct _ObjectRec,object,0,10,34409)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
 Msg("Find size of _ObjectRec (10262)\n");
@@ -124,10 +155,109 @@ CheckTypeSize(struct _ObjectClassPart,116, 10265, 2)
 CheckOffset(struct _ObjectClassPart,superclass,0,2,34370)
 #elif __ia64__
 CheckTypeSize(struct _ObjectClassPart,224, 10265, 3)
+Msg("Missing member data for _ObjectClassPart on IA64\n");
+CheckOffset(struct _ObjectClassPart,superclass,0,3,34370)
+CheckOffset(struct _ObjectClassPart,class_name,0,3,34371)
+CheckOffset(struct _ObjectClassPart,widget_size,0,3,34372)
+CheckOffset(struct _ObjectClassPart,class_initialize,0,3,34373)
+CheckOffset(struct _ObjectClassPart,class_part_initialize,0,3,34374)
+CheckOffset(struct _ObjectClassPart,class_inited,0,3,34375)
+CheckOffset(struct _ObjectClassPart,initialize,0,3,34376)
+CheckOffset(struct _ObjectClassPart,initialize_hook,0,3,34377)
+CheckOffset(struct _ObjectClassPart,obj1,0,3,34378)
+CheckOffset(struct _ObjectClassPart,obj2,0,3,34379)
+CheckOffset(struct _ObjectClassPart,obj3,0,3,34380)
+CheckOffset(struct _ObjectClassPart,resources,0,3,34381)
+CheckOffset(struct _ObjectClassPart,num_resources,0,3,34382)
+CheckOffset(struct _ObjectClassPart,xrm_class,0,3,34383)
+CheckOffset(struct _ObjectClassPart,obj4,0,3,34384)
+CheckOffset(struct _ObjectClassPart,obj5,0,3,34385)
+CheckOffset(struct _ObjectClassPart,obj6,0,3,34386)
+CheckOffset(struct _ObjectClassPart,obj7,0,3,34387)
+CheckOffset(struct _ObjectClassPart,destroy,0,3,34388)
+CheckOffset(struct _ObjectClassPart,obj8,0,3,34389)
+CheckOffset(struct _ObjectClassPart,obj9,0,3,34390)
+CheckOffset(struct _ObjectClassPart,set_values,0,3,34391)
+CheckOffset(struct _ObjectClassPart,set_values_hook,0,3,34392)
+CheckOffset(struct _ObjectClassPart,obj10,0,3,34393)
+CheckOffset(struct _ObjectClassPart,get_values_hook,0,3,34394)
+CheckOffset(struct _ObjectClassPart,obj11,0,3,34395)
+CheckOffset(struct _ObjectClassPart,version,0,3,34396)
+CheckOffset(struct _ObjectClassPart,callback_private,0,3,34397)
+CheckOffset(struct _ObjectClassPart,obj12,0,3,34398)
+CheckOffset(struct _ObjectClassPart,obj13,0,3,34399)
+CheckOffset(struct _ObjectClassPart,obj14,0,3,34400)
+CheckOffset(struct _ObjectClassPart,extension,0,3,34401)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 6)
+Msg("Missing member data for _ObjectClassPart on PPC32\n");
+CheckOffset(struct _ObjectClassPart,superclass,0,6,34370)
+CheckOffset(struct _ObjectClassPart,class_name,0,6,34371)
+CheckOffset(struct _ObjectClassPart,widget_size,0,6,34372)
+CheckOffset(struct _ObjectClassPart,class_initialize,0,6,34373)
+CheckOffset(struct _ObjectClassPart,class_part_initialize,0,6,34374)
+CheckOffset(struct _ObjectClassPart,class_inited,0,6,34375)
+CheckOffset(struct _ObjectClassPart,initialize,0,6,34376)
+CheckOffset(struct _ObjectClassPart,initialize_hook,0,6,34377)
+CheckOffset(struct _ObjectClassPart,obj1,0,6,34378)
+CheckOffset(struct _ObjectClassPart,obj2,0,6,34379)
+CheckOffset(struct _ObjectClassPart,obj3,0,6,34380)
+CheckOffset(struct _ObjectClassPart,resources,0,6,34381)
+CheckOffset(struct _ObjectClassPart,num_resources,0,6,34382)
+CheckOffset(struct _ObjectClassPart,xrm_class,0,6,34383)
+CheckOffset(struct _ObjectClassPart,obj4,0,6,34384)
+CheckOffset(struct _ObjectClassPart,obj5,0,6,34385)
+CheckOffset(struct _ObjectClassPart,obj6,0,6,34386)
+CheckOffset(struct _ObjectClassPart,obj7,0,6,34387)
+CheckOffset(struct _ObjectClassPart,destroy,0,6,34388)
+CheckOffset(struct _ObjectClassPart,obj8,0,6,34389)
+CheckOffset(struct _ObjectClassPart,obj9,0,6,34390)
+CheckOffset(struct _ObjectClassPart,set_values,0,6,34391)
+CheckOffset(struct _ObjectClassPart,set_values_hook,0,6,34392)
+CheckOffset(struct _ObjectClassPart,obj10,0,6,34393)
+CheckOffset(struct _ObjectClassPart,get_values_hook,0,6,34394)
+CheckOffset(struct _ObjectClassPart,obj11,0,6,34395)
+CheckOffset(struct _ObjectClassPart,version,0,6,34396)
+CheckOffset(struct _ObjectClassPart,callback_private,0,6,34397)
+CheckOffset(struct _ObjectClassPart,obj12,0,6,34398)
+CheckOffset(struct _ObjectClassPart,obj13,0,6,34399)
+CheckOffset(struct _ObjectClassPart,obj14,0,6,34400)
+CheckOffset(struct _ObjectClassPart,extension,0,6,34401)
 #elif __s390__
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 10)
+Msg("Missing member data for _ObjectClassPart on S390\n");
+CheckOffset(struct _ObjectClassPart,superclass,0,10,34370)
+CheckOffset(struct _ObjectClassPart,class_name,0,10,34371)
+CheckOffset(struct _ObjectClassPart,widget_size,0,10,34372)
+CheckOffset(struct _ObjectClassPart,class_initialize,0,10,34373)
+CheckOffset(struct _ObjectClassPart,class_part_initialize,0,10,34374)
+CheckOffset(struct _ObjectClassPart,class_inited,0,10,34375)
+CheckOffset(struct _ObjectClassPart,initialize,0,10,34376)
+CheckOffset(struct _ObjectClassPart,initialize_hook,0,10,34377)
+CheckOffset(struct _ObjectClassPart,obj1,0,10,34378)
+CheckOffset(struct _ObjectClassPart,obj2,0,10,34379)
+CheckOffset(struct _ObjectClassPart,obj3,0,10,34380)
+CheckOffset(struct _ObjectClassPart,resources,0,10,34381)
+CheckOffset(struct _ObjectClassPart,num_resources,0,10,34382)
+CheckOffset(struct _ObjectClassPart,xrm_class,0,10,34383)
+CheckOffset(struct _ObjectClassPart,obj4,0,10,34384)
+CheckOffset(struct _ObjectClassPart,obj5,0,10,34385)
+CheckOffset(struct _ObjectClassPart,obj6,0,10,34386)
+CheckOffset(struct _ObjectClassPart,obj7,0,10,34387)
+CheckOffset(struct _ObjectClassPart,destroy,0,10,34388)
+CheckOffset(struct _ObjectClassPart,obj8,0,10,34389)
+CheckOffset(struct _ObjectClassPart,obj9,0,10,34390)
+CheckOffset(struct _ObjectClassPart,set_values,0,10,34391)
+CheckOffset(struct _ObjectClassPart,set_values_hook,0,10,34392)
+CheckOffset(struct _ObjectClassPart,obj10,0,10,34393)
+CheckOffset(struct _ObjectClassPart,get_values_hook,0,10,34394)
+CheckOffset(struct _ObjectClassPart,obj11,0,10,34395)
+CheckOffset(struct _ObjectClassPart,version,0,10,34396)
+CheckOffset(struct _ObjectClassPart,callback_private,0,10,34397)
+CheckOffset(struct _ObjectClassPart,obj12,0,10,34398)
+CheckOffset(struct _ObjectClassPart,obj13,0,10,34399)
+CheckOffset(struct _ObjectClassPart,obj14,0,10,34400)
+CheckOffset(struct _ObjectClassPart,extension,0,10,34401)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10265,0);
 Msg("Find size of _ObjectClassPart (10265)\n");
@@ -174,12 +304,19 @@ Msg("Find size of ObjectClassExtension (10270)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 2)
+CheckOffset(struct _ObjectClassRec,object_class,0,2,34408)
 #elif __ia64__
 CheckTypeSize(struct _ObjectClassRec,224, 10271, 3)
+Msg("Missing member data for _ObjectClassRec on IA64\n");
+CheckOffset(struct _ObjectClassRec,object_class,0,3,34408)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 6)
+Msg("Missing member data for _ObjectClassRec on PPC32\n");
+CheckOffset(struct _ObjectClassRec,object_class,0,6,34408)
 #elif __s390__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 10)
+Msg("Missing member data for _ObjectClassRec on S390\n");
+CheckOffset(struct _ObjectClassRec,object_class,0,10,34408)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
 Msg("Find size of _ObjectClassRec (10271)\n");

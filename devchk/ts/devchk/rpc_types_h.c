@@ -23,10 +23,14 @@ int pcnt=0;
 Msg("Checking data structures in rpc/types.h\n");
 #endif
 
-#ifdef 1
-CheckTypeSize(bool_t,4, 9890, 1)
+#ifdef __powerpc64__
+CheckTypeSize(bool_t,4, 9890, 9)
+#elif __ia64__
+CheckTypeSize(bool_t,4, 9890, 3)
 #elif __i386__
 CheckTypeSize(bool_t,4, 9890, 2)
+#elif __powerpc__
+CheckTypeSize(bool_t,4, 9890, 6)
 #elif __s390__
 CheckTypeSize(bool_t,4, 9890, 10)
 #else

@@ -24,16 +24,6 @@ Msg("Checking data structures in sched.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef SCHED_OTHER
-	CompareConstant(SCHED_OTHER,0,1611,architecture)
-#else
-Msg( "Error: Constant not found: SCHED_OTHER\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef SCHED_FIFO
 	CompareConstant(SCHED_FIFO,1,1612,architecture)
 #else
@@ -53,19 +43,18 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
-CheckTypeSize(struct sched_param,4, 9045, 2)
-#elif __ia64__
-CheckTypeSize(struct sched_param,4, 9045, 3)
-#elif __powerpc__
-CheckTypeSize(struct sched_param,4, 9045, 6)
-#elif __s390__
-CheckTypeSize(struct sched_param,4, 9045, 10)
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef SCHED_OTHER
+	CompareConstant(SCHED_OTHER,0,1611,architecture)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9045,0);
-Msg("Find size of sched_param (9045)\n");
+Msg( "Error: Constant not found: SCHED_OTHER\n");
+cnt++;
 #endif
 
+#endif
+
+CheckTypeSize(struct sched_param,4, 9045, 1)
+CheckOffset(struct sched_param,sched_priority,0,1,33571)
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -25,12 +25,30 @@ Msg("Checking data structures in sys/times.h\n");
 
 #ifdef __i386__
 CheckTypeSize(struct tms,16, 6990, 2)
+CheckOffset(struct tms,tms_stime,4,2,30169)
+CheckOffset(struct tms,tms_cutime,8,2,30170)
+CheckOffset(struct tms,tms_cstime,12,2,30171)
 #elif __ia64__
 CheckTypeSize(struct tms,32, 6990, 3)
+Msg("Missing member data for tms on IA64\n");
+CheckOffset(struct tms,tms_utime,0,3,30168)
+CheckOffset(struct tms,tms_stime,0,3,30169)
+CheckOffset(struct tms,tms_cutime,0,3,30170)
+CheckOffset(struct tms,tms_cstime,0,3,30171)
 #elif __powerpc__
 CheckTypeSize(struct tms,16, 6990, 6)
+Msg("Missing member data for tms on PPC32\n");
+CheckOffset(struct tms,tms_utime,0,6,30168)
+CheckOffset(struct tms,tms_stime,0,6,30169)
+CheckOffset(struct tms,tms_cutime,0,6,30170)
+CheckOffset(struct tms,tms_cstime,0,6,30171)
 #elif __s390__
 CheckTypeSize(struct tms,16, 6990, 10)
+Msg("Missing member data for tms on S390\n");
+CheckOffset(struct tms,tms_utime,0,10,30168)
+CheckOffset(struct tms,tms_stime,0,10,30169)
+CheckOffset(struct tms,tms_cutime,0,10,30170)
+CheckOffset(struct tms,tms_cstime,0,10,30171)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6990,0);
 Msg("Find size of tms (6990)\n");

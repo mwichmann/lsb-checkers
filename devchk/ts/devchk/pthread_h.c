@@ -24,78 +24,14 @@ Msg("Checking data structures in pthread.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for PTHREAD_MUTEX_INITIALIZER */
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for PTHREAD_COND_INITIALIZER */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CREATE_JOINABLE
-	CompareConstant(PTHREAD_CREATE_JOINABLE,0,1537,architecture)
+#ifdef PTHREAD_CANCEL_DISABLE
+	CompareConstant(PTHREAD_CANCEL_DISABLE,1,1547,architecture)
 #else
-Msg( "Error: Constant not found: PTHREAD_CREATE_JOINABLE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CREATE_DETACHED
-	CompareConstant(PTHREAD_CREATE_DETACHED,1,1538,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CREATE_DETACHED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_INHERIT_SCHED
-	CompareConstant(PTHREAD_INHERIT_SCHED,0,1539,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_INHERIT_SCHED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_EXPLICIT_SCHED
-	CompareConstant(PTHREAD_EXPLICIT_SCHED,1,1540,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_EXPLICIT_SCHED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_SCOPE_SYSTEM
-	CompareConstant(PTHREAD_SCOPE_SYSTEM,0,1541,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_SCOPE_SYSTEM\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_SCOPE_PROCESS
-	CompareConstant(PTHREAD_SCOPE_PROCESS,1,1542,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_SCOPE_PROCESS\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_MUTEX_TIMED_NP
-	CompareConstant(PTHREAD_MUTEX_TIMED_NP,1,4958,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_MUTEX_TIMED_NP\n");
+Msg( "Error: Constant not found: PTHREAD_CANCEL_DISABLE\n");
 cnt++;
 #endif
 
@@ -112,64 +48,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for __LOCK_INITIALIZER */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_PROCESS_SHARED
-	CompareConstant(PTHREAD_PROCESS_SHARED,1,1544,architecture)
+#ifdef PTHREAD_MUTEX_DEFAULT
+	CompareConstant(PTHREAD_MUTEX_DEFAULT,1,5002,architecture)
 #else
-Msg( "Error: Constant not found: PTHREAD_PROCESS_SHARED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_ONCE_INIT
-	CompareConstant(PTHREAD_ONCE_INIT,0,1545,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_ONCE_INIT\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCEL_ENABLE
-	CompareConstant(PTHREAD_CANCEL_ENABLE,0,1546,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCEL_ENABLE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCEL_DISABLE
-	CompareConstant(PTHREAD_CANCEL_DISABLE,1,1547,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCEL_DISABLE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCEL_DEFERRED
-	CompareConstant(PTHREAD_CANCEL_DEFERRED,0,1548,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCEL_DEFERRED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCEL_ASYNCHRONOUS
-	CompareConstant(PTHREAD_CANCEL_ASYNCHRONOUS,1,1549,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCEL_ASYNCHRONOUS\n");
+Msg( "Error: Constant not found: PTHREAD_MUTEX_DEFAULT\n");
 cnt++;
 #endif
 
@@ -186,13 +68,27 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_MUTEX_DEFAULT
-	CompareConstant(PTHREAD_MUTEX_DEFAULT,1,5002,architecture)
+#ifdef PTHREAD_CANCEL_ENABLE
+	CompareConstant(PTHREAD_CANCEL_ENABLE,0,1546,architecture)
 #else
-Msg( "Error: Constant not found: PTHREAD_MUTEX_DEFAULT\n");
+Msg( "Error: Constant not found: PTHREAD_CANCEL_ENABLE\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CREATE_JOINABLE
+	CompareConstant(PTHREAD_CREATE_JOINABLE,0,1537,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CREATE_JOINABLE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for PTHREAD_COND_INITIALIZER */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -200,6 +96,26 @@ cnt++;
 	CompareConstant(PTHREAD_MUTEX_ERRORCHECK,3,5003,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_MUTEX_ERRORCHECK\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_SCOPE_PROCESS
+	CompareConstant(PTHREAD_SCOPE_PROCESS,1,1542,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_SCOPE_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_INHERIT_SCHED
+	CompareConstant(PTHREAD_INHERIT_SCHED,0,1539,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_INHERIT_SCHED\n");
 cnt++;
 #endif
 
@@ -216,6 +132,64 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_SCOPE_SYSTEM
+	CompareConstant(PTHREAD_SCOPE_SYSTEM,0,1541,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_SCOPE_SYSTEM\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_ONCE_INIT
+	CompareConstant(PTHREAD_ONCE_INIT,0,1545,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_ONCE_INIT\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CANCEL_ASYNCHRONOUS
+	CompareConstant(PTHREAD_CANCEL_ASYNCHRONOUS,1,1549,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CANCEL_ASYNCHRONOUS\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for PTHREAD_MUTEX_INITIALIZER */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CANCEL_DEFERRED
+	CompareConstant(PTHREAD_CANCEL_DEFERRED,0,1548,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CANCEL_DEFERRED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_EXPLICIT_SCHED
+	CompareConstant(PTHREAD_EXPLICIT_SCHED,1,1540,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_EXPLICIT_SCHED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for __LOCK_INITIALIZER */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_MUTEX_RECURSIVE
 	CompareConstant(PTHREAD_MUTEX_RECURSIVE,2,5005,architecture)
 #else
@@ -226,7 +200,33 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for PTHREAD_RWLOCK_INITIALIZER */
+#ifdef PTHREAD_PROCESS_SHARED
+	CompareConstant(PTHREAD_PROCESS_SHARED,1,1544,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_PROCESS_SHARED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CREATE_DETACHED
+	CompareConstant(PTHREAD_CREATE_DETACHED,1,1538,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CREATE_DETACHED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_TIMED_NP
+	CompareConstant(PTHREAD_MUTEX_TIMED_NP,1,4958,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_TIMED_NP\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
@@ -283,10 +283,19 @@ CheckOffset(struct _pthread_fastlock,__status,0,2,33602)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,2,34427)
 #elif __ia64__
 CheckTypeSize(struct _pthread_fastlock,16, 10105, 3)
+Msg("Missing member data for _pthread_fastlock on IA64\n");
+CheckOffset(struct _pthread_fastlock,__status,0,3,33602)
+CheckOffset(struct _pthread_fastlock,__spinlock,0,3,34427)
 #elif __powerpc__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 6)
+Msg("Missing member data for _pthread_fastlock on PPC32\n");
+CheckOffset(struct _pthread_fastlock,__status,0,6,33602)
+CheckOffset(struct _pthread_fastlock,__spinlock,0,6,34427)
 #elif __s390__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 10)
+Msg("Missing member data for _pthread_fastlock on S390\n");
+CheckOffset(struct _pthread_fastlock,__status,0,10,33602)
+CheckOffset(struct _pthread_fastlock,__spinlock,0,10,34427)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10105,0);
 Msg("Find size of _pthread_fastlock (10105)\n");
@@ -398,6 +407,12 @@ Msg("Find size of pthread_rwlockattr_t (9057)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 2)
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,8,2,34439)
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,12,2,34440)
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,16,2,34441)
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,20,2,34442)
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,2,34443)
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,2,34444)
 #endif
 
 #ifdef __no_sym__

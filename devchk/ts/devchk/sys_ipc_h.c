@@ -24,20 +24,10 @@ Msg("Checking data structures in sys/ipc.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef IPC_PRIVATE
-	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
+#ifdef IPC_SET
+	CompareConstant(IPC_SET,1,3450,architecture)
 #else
-Msg( "Error: Constant not found: IPC_PRIVATE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef IPC_CREAT
-	CompareConstant(IPC_CREAT,00001000,3446,architecture)
-#else
-Msg( "Error: Constant not found: IPC_CREAT\n");
+Msg( "Error: Constant not found: IPC_SET\n");
 cnt++;
 #endif
 
@@ -54,6 +44,16 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef IPC_CREAT
+	CompareConstant(IPC_CREAT,00001000,3446,architecture)
+#else
+Msg( "Error: Constant not found: IPC_CREAT\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_NOWAIT
 	CompareConstant(IPC_NOWAIT,00004000,3448,architecture)
 #else
@@ -64,20 +64,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef IPC_RMID
-	CompareConstant(IPC_RMID,0,3449,architecture)
+#ifdef IPC_PRIVATE
+	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
 #else
-Msg( "Error: Constant not found: IPC_RMID\n");
+Msg( "Error: Constant not found: IPC_PRIVATE\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef IPC_SET
-	CompareConstant(IPC_SET,1,3450,architecture)
+#ifdef IPC_RMID
+	CompareConstant(IPC_RMID,0,3449,architecture)
 #else
-Msg( "Error: Constant not found: IPC_SET\n");
+Msg( "Error: Constant not found: IPC_RMID\n");
 cnt++;
 #endif
 
@@ -108,10 +108,46 @@ CheckOffset(struct ipc_perm,__unused1,28,2,34418)
 CheckOffset(struct ipc_perm,__unused2,32,2,34419)
 #elif __ia64__
 CheckTypeSize(struct ipc_perm,48, 10128, 3)
+Msg("Missing member data for ipc_perm on IA64\n");
+CheckOffset(struct ipc_perm,__key,0,3,33724)
+CheckOffset(struct ipc_perm,uid,0,3,33725)
+CheckOffset(struct ipc_perm,gid,0,3,33726)
+CheckOffset(struct ipc_perm,cuid,0,3,33727)
+CheckOffset(struct ipc_perm,cgid,0,3,33728)
+CheckOffset(struct ipc_perm,mode,0,3,33729)
+CheckOffset(struct ipc_perm,__pad1,0,3,33730)
+CheckOffset(struct ipc_perm,__seq,0,3,34416)
+CheckOffset(struct ipc_perm,__pad2,0,3,34417)
+CheckOffset(struct ipc_perm,__unused1,0,3,34418)
+CheckOffset(struct ipc_perm,__unused2,0,3,34419)
 #elif __powerpc__
 CheckTypeSize(struct ipc_perm,48, 10128, 6)
+Msg("Missing member data for ipc_perm on PPC32\n");
+CheckOffset(struct ipc_perm,__key,0,6,33724)
+CheckOffset(struct ipc_perm,uid,0,6,33725)
+CheckOffset(struct ipc_perm,gid,0,6,33726)
+CheckOffset(struct ipc_perm,cuid,0,6,33727)
+CheckOffset(struct ipc_perm,cgid,0,6,33728)
+CheckOffset(struct ipc_perm,mode,0,6,33729)
+CheckOffset(struct ipc_perm,__pad1,0,6,33730)
+CheckOffset(struct ipc_perm,__seq,0,6,34416)
+CheckOffset(struct ipc_perm,__pad2,0,6,34417)
+CheckOffset(struct ipc_perm,__unused1,0,6,34418)
+CheckOffset(struct ipc_perm,__unused2,0,6,34419)
 #elif __s390__
 CheckTypeSize(struct ipc_perm,36, 10128, 10)
+Msg("Missing member data for ipc_perm on S390\n");
+CheckOffset(struct ipc_perm,__key,0,10,33724)
+CheckOffset(struct ipc_perm,uid,0,10,33725)
+CheckOffset(struct ipc_perm,gid,0,10,33726)
+CheckOffset(struct ipc_perm,cuid,0,10,33727)
+CheckOffset(struct ipc_perm,cgid,0,10,33728)
+CheckOffset(struct ipc_perm,mode,0,10,33729)
+CheckOffset(struct ipc_perm,__pad1,0,10,33730)
+CheckOffset(struct ipc_perm,__seq,0,10,34416)
+CheckOffset(struct ipc_perm,__pad2,0,10,34417)
+CheckOffset(struct ipc_perm,__unused1,0,10,34418)
+CheckOffset(struct ipc_perm,__unused2,0,10,34419)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10128,0);
 Msg("Find size of ipc_perm (10128)\n");

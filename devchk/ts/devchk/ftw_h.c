@@ -25,10 +25,10 @@ Msg("Checking data structures in ftw.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef FTW_DP
-	CompareConstant(FTW_DP,FTW_DP,3060,architecture)
+#ifdef FTW_NS
+	CompareConstant(FTW_NS,FTW_NS,1233,architecture)
 #else
-Msg( "Error: Constant not found: FTW_DP\n");
+Msg( "Error: Constant not found: FTW_NS\n");
 cnt++;
 #endif
 
@@ -45,10 +45,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef FTW_F
-	CompareConstant(FTW_F,FTW_F,1230,architecture)
+#ifdef FTW_DNR
+	CompareConstant(FTW_DNR,FTW_DNR,1232,architecture)
 #else
-Msg( "Error: Constant not found: FTW_F\n");
+Msg( "Error: Constant not found: FTW_DNR\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef FTW_SL
+	CompareConstant(FTW_SL,FTW_SL,1234,architecture)
+#else
+Msg( "Error: Constant not found: FTW_SL\n");
 cnt++;
 #endif
 
@@ -65,30 +75,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef FTW_DNR
-	CompareConstant(FTW_DNR,FTW_DNR,1232,architecture)
+#ifdef FTW_DP
+	CompareConstant(FTW_DP,FTW_DP,3060,architecture)
 #else
-Msg( "Error: Constant not found: FTW_DNR\n");
+Msg( "Error: Constant not found: FTW_DP\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef FTW_NS
-	CompareConstant(FTW_NS,FTW_NS,1233,architecture)
+#ifdef FTW_F
+	CompareConstant(FTW_F,FTW_F,1230,architecture)
 #else
-Msg( "Error: Constant not found: FTW_NS\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef FTW_SL
-	CompareConstant(FTW_SL,FTW_SL,1234,architecture)
-#else
-Msg( "Error: Constant not found: FTW_SL\n");
+Msg( "Error: Constant not found: FTW_F\n");
 cnt++;
 #endif
 
@@ -114,12 +114,20 @@ Msg("Find size of anon-ftw.h-34 (8990)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct FTW,8, 8691, 2)
+CheckOffset(struct FTW,base,0,2,29758)
+CheckOffset(struct FTW,level,4,2,29759)
 #elif __ia64__
 CheckTypeSize(struct FTW,8, 8691, 3)
+CheckOffset(struct FTW,base,0,3,29758)
+CheckOffset(struct FTW,level,4,3,29759)
 #elif __powerpc__
 CheckTypeSize(struct FTW,8, 8691, 6)
+CheckOffset(struct FTW,base,0,6,29758)
+CheckOffset(struct FTW,level,4,6,29759)
 #elif __s390__
 CheckTypeSize(struct FTW,8, 8691, 10)
+CheckOffset(struct FTW,base,0,10,29758)
+CheckOffset(struct FTW,level,4,10,29759)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8691,0);
 Msg("Find size of FTW (8691)\n");

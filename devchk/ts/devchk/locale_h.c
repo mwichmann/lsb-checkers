@@ -24,60 +24,10 @@ Msg("Checking data structures in locale.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_CTYPE
-	CompareConstant(LC_CTYPE,0,1470,architecture)
+#ifdef LC_MEASUREMENT
+	CompareConstant(LC_MEASUREMENT,11,1481,architecture)
 #else
-Msg( "Error: Constant not found: LC_CTYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_NUMERIC
-	CompareConstant(LC_NUMERIC,1,1471,architecture)
-#else
-Msg( "Error: Constant not found: LC_NUMERIC\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_TIME
-	CompareConstant(LC_TIME,2,1472,architecture)
-#else
-Msg( "Error: Constant not found: LC_TIME\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_COLLATE
-	CompareConstant(LC_COLLATE,3,1473,architecture)
-#else
-Msg( "Error: Constant not found: LC_COLLATE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_MONETARY
-	CompareConstant(LC_MONETARY,4,1474,architecture)
-#else
-Msg( "Error: Constant not found: LC_MONETARY\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_MESSAGES
-	CompareConstant(LC_MESSAGES,5,1475,architecture)
-#else
-Msg( "Error: Constant not found: LC_MESSAGES\n");
+Msg( "Error: Constant not found: LC_MEASUREMENT\n");
 cnt++;
 #endif
 
@@ -94,20 +44,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_PAPER
-	CompareConstant(LC_PAPER,7,1477,architecture)
+#ifdef LC_TIME
+	CompareConstant(LC_TIME,2,1472,architecture)
 #else
-Msg( "Error: Constant not found: LC_PAPER\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_NAME
-	CompareConstant(LC_NAME,8,1478,architecture)
-#else
-Msg( "Error: Constant not found: LC_NAME\n");
+Msg( "Error: Constant not found: LC_TIME\n");
 cnt++;
 #endif
 
@@ -124,20 +64,40 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_TELEPHONE
-	CompareConstant(LC_TELEPHONE,10,1480,architecture)
+#ifdef LC_COLLATE
+	CompareConstant(LC_COLLATE,3,1473,architecture)
 #else
-Msg( "Error: Constant not found: LC_TELEPHONE\n");
+Msg( "Error: Constant not found: LC_COLLATE\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef LC_MEASUREMENT
-	CompareConstant(LC_MEASUREMENT,11,1481,architecture)
+#ifdef LC_NUMERIC
+	CompareConstant(LC_NUMERIC,1,1471,architecture)
 #else
-Msg( "Error: Constant not found: LC_MEASUREMENT\n");
+Msg( "Error: Constant not found: LC_NUMERIC\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef LC_NAME
+	CompareConstant(LC_NAME,8,1478,architecture)
+#else
+Msg( "Error: Constant not found: LC_NAME\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef LC_MONETARY
+	CompareConstant(LC_MONETARY,4,1474,architecture)
+#else
+Msg( "Error: Constant not found: LC_MONETARY\n");
 cnt++;
 #endif
 
@@ -148,6 +108,46 @@ cnt++;
 	CompareConstant(LC_IDENTIFICATION,12,1482,architecture)
 #else
 Msg( "Error: Constant not found: LC_IDENTIFICATION\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef LC_CTYPE
+	CompareConstant(LC_CTYPE,0,1470,architecture)
+#else
+Msg( "Error: Constant not found: LC_CTYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef LC_MESSAGES
+	CompareConstant(LC_MESSAGES,5,1475,architecture)
+#else
+Msg( "Error: Constant not found: LC_MESSAGES\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef LC_PAPER
+	CompareConstant(LC_PAPER,7,1477,architecture)
+#else
+Msg( "Error: Constant not found: LC_PAPER\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef LC_TELEPHONE
+	CompareConstant(LC_TELEPHONE,10,1480,architecture)
+#else
+Msg( "Error: Constant not found: LC_TELEPHONE\n");
 cnt++;
 #endif
 
@@ -181,10 +181,85 @@ CheckOffset(struct lconv,int_p_sign_posn,52,2,34435)
 CheckOffset(struct lconv,int_n_sign_posn,53,2,34436)
 #elif __ia64__
 CheckTypeSize(struct lconv,96, 6919, 3)
+Msg("Missing member data for lconv on IA64\n");
+CheckOffset(struct lconv,decimal_point,0,3,29980)
+CheckOffset(struct lconv,thousands_sep,0,3,29981)
+CheckOffset(struct lconv,grouping,0,3,29982)
+CheckOffset(struct lconv,int_curr_symbol,0,3,29983)
+CheckOffset(struct lconv,currency_symbol,0,3,29984)
+CheckOffset(struct lconv,mon_decimal_point,0,3,29985)
+CheckOffset(struct lconv,mon_thousands_sep,0,3,29986)
+CheckOffset(struct lconv,mon_grouping,0,3,29987)
+CheckOffset(struct lconv,positive_sign,0,3,29988)
+CheckOffset(struct lconv,negative_sign,0,3,29989)
+CheckOffset(struct lconv,int_frac_digits,0,3,29990)
+CheckOffset(struct lconv,frac_digits,0,3,29991)
+CheckOffset(struct lconv,p_cs_precedes,0,3,29992)
+CheckOffset(struct lconv,p_sep_by_space,0,3,29993)
+CheckOffset(struct lconv,n_cs_precedes,0,3,29994)
+CheckOffset(struct lconv,n_sep_by_space,0,3,29995)
+CheckOffset(struct lconv,p_sign_posn,0,3,29996)
+CheckOffset(struct lconv,n_sign_posn,0,3,29997)
+CheckOffset(struct lconv,int_p_cs_precedes,0,3,34431)
+CheckOffset(struct lconv,int_p_sep_by_space,0,3,34432)
+CheckOffset(struct lconv,int_n_cs_precedes,0,3,34433)
+CheckOffset(struct lconv,int_n_sep_by_space,0,3,34434)
+CheckOffset(struct lconv,int_p_sign_posn,0,3,34435)
+CheckOffset(struct lconv,int_n_sign_posn,0,3,34436)
 #elif __powerpc__
 CheckTypeSize(struct lconv,56, 6919, 6)
+Msg("Missing member data for lconv on PPC32\n");
+CheckOffset(struct lconv,decimal_point,0,6,29980)
+CheckOffset(struct lconv,thousands_sep,0,6,29981)
+CheckOffset(struct lconv,grouping,0,6,29982)
+CheckOffset(struct lconv,int_curr_symbol,0,6,29983)
+CheckOffset(struct lconv,currency_symbol,0,6,29984)
+CheckOffset(struct lconv,mon_decimal_point,0,6,29985)
+CheckOffset(struct lconv,mon_thousands_sep,0,6,29986)
+CheckOffset(struct lconv,mon_grouping,0,6,29987)
+CheckOffset(struct lconv,positive_sign,0,6,29988)
+CheckOffset(struct lconv,negative_sign,0,6,29989)
+CheckOffset(struct lconv,int_frac_digits,0,6,29990)
+CheckOffset(struct lconv,frac_digits,0,6,29991)
+CheckOffset(struct lconv,p_cs_precedes,0,6,29992)
+CheckOffset(struct lconv,p_sep_by_space,0,6,29993)
+CheckOffset(struct lconv,n_cs_precedes,0,6,29994)
+CheckOffset(struct lconv,n_sep_by_space,0,6,29995)
+CheckOffset(struct lconv,p_sign_posn,0,6,29996)
+CheckOffset(struct lconv,n_sign_posn,0,6,29997)
+CheckOffset(struct lconv,int_p_cs_precedes,0,6,34431)
+CheckOffset(struct lconv,int_p_sep_by_space,0,6,34432)
+CheckOffset(struct lconv,int_n_cs_precedes,0,6,34433)
+CheckOffset(struct lconv,int_n_sep_by_space,0,6,34434)
+CheckOffset(struct lconv,int_p_sign_posn,0,6,34435)
+CheckOffset(struct lconv,int_n_sign_posn,0,6,34436)
 #elif __s390__
 CheckTypeSize(struct lconv,56, 6919, 10)
+Msg("Missing member data for lconv on S390\n");
+CheckOffset(struct lconv,decimal_point,0,10,29980)
+CheckOffset(struct lconv,thousands_sep,0,10,29981)
+CheckOffset(struct lconv,grouping,0,10,29982)
+CheckOffset(struct lconv,int_curr_symbol,0,10,29983)
+CheckOffset(struct lconv,currency_symbol,0,10,29984)
+CheckOffset(struct lconv,mon_decimal_point,0,10,29985)
+CheckOffset(struct lconv,mon_thousands_sep,0,10,29986)
+CheckOffset(struct lconv,mon_grouping,0,10,29987)
+CheckOffset(struct lconv,positive_sign,0,10,29988)
+CheckOffset(struct lconv,negative_sign,0,10,29989)
+CheckOffset(struct lconv,int_frac_digits,0,10,29990)
+CheckOffset(struct lconv,frac_digits,0,10,29991)
+CheckOffset(struct lconv,p_cs_precedes,0,10,29992)
+CheckOffset(struct lconv,p_sep_by_space,0,10,29993)
+CheckOffset(struct lconv,n_cs_precedes,0,10,29994)
+CheckOffset(struct lconv,n_sep_by_space,0,10,29995)
+CheckOffset(struct lconv,p_sign_posn,0,10,29996)
+CheckOffset(struct lconv,n_sign_posn,0,10,29997)
+CheckOffset(struct lconv,int_p_cs_precedes,0,10,34431)
+CheckOffset(struct lconv,int_p_sep_by_space,0,10,34432)
+CheckOffset(struct lconv,int_n_cs_precedes,0,10,34433)
+CheckOffset(struct lconv,int_n_sep_by_space,0,10,34434)
+CheckOffset(struct lconv,int_p_sign_posn,0,10,34435)
+CheckOffset(struct lconv,int_n_sign_posn,0,10,34436)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6919,0);
 Msg("Find size of lconv (6919)\n");

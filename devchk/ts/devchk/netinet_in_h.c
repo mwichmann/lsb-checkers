@@ -24,10 +24,30 @@ Msg("Checking data structures in netinet/in.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_UDP
+	CompareConstant(IPPROTO_UDP,17,4453,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_UDP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IP_TOS
 	CompareConstant(IP_TOS,1,4662,architecture)
 #else
 Msg( "Error: Constant not found: IP_TOS\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_RAW
+	CompareConstant(IPPROTO_RAW,255,4470,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_RAW\n");
 cnt++;
 #endif
 
@@ -54,46 +74,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef IPPROTO_IGMP
-	CompareConstant(IPPROTO_IGMP,2,4448,architecture)
-#else
-Msg( "Error: Constant not found: IPPROTO_IGMP\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef IPPROTO_TCP
-	CompareConstant(IPPROTO_TCP,6,4450,architecture)
-#else
-Msg( "Error: Constant not found: IPPROTO_TCP\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef IPPROTO_UDP
-	CompareConstant(IPPROTO_UDP,17,4453,architecture)
-#else
-Msg( "Error: Constant not found: IPPROTO_UDP\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef IPPROTO_RAW
-	CompareConstant(IPPROTO_RAW,255,4470,architecture)
-#else
-Msg( "Error: Constant not found: IPPROTO_RAW\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef INADDR_ANY
 	CompareConstant(INADDR_ANY,0,4489,architecture)
 #else
@@ -114,6 +94,16 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_IGMP
+	CompareConstant(IPPROTO_IGMP,2,4448,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_IGMP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef INADDR_NONE
 	CompareConstant(INADDR_NONE,((unsigned long int) 0xffffffff),4491,architecture)
 #else
@@ -123,40 +113,45 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
-CheckTypeSize(struct in_addr,4, 10143, 2)
-#elif __ia64__
-CheckTypeSize(struct in_addr,4, 10143, 3)
-#elif __powerpc__
-CheckTypeSize(struct in_addr,4, 10143, 6)
-#elif __s390__
-CheckTypeSize(struct in_addr,4, 10143, 10)
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_TCP
+	CompareConstant(IPPROTO_TCP,6,4450,architecture)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);
-Msg("Find size of in_addr (10143)\n");
+Msg( "Error: Constant not found: IPPROTO_TCP\n");
+cnt++;
 #endif
 
-#ifdef __i386__
-CheckTypeSize(in_addr_t,4, 10302, 2)
-#elif __powerpc__
-CheckTypeSize(in_addr_t,4, 10302, 6)
-#elif __ia64__
-CheckTypeSize(in_addr_t,4, 10302, 3)
-#elif __s390__
-CheckTypeSize(in_addr_t,4, 10302, 10)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10302,0);
-Msg("Find size of in_addr_t (10302)\n");
 #endif
 
+CheckTypeSize(struct in_addr,4, 10143, 1)
+CheckOffset(struct in_addr,s_addr,0,1,33767)
+CheckTypeSize(in_addr_t,4, 10302, 1)
 #ifdef __i386__
 CheckTypeSize(struct sockaddr_in,16, 9141, 2)
+CheckOffset(struct sockaddr_in,sin_port,2,2,33777)
+CheckOffset(struct sockaddr_in,sin_addr,4,2,33778)
+CheckOffset(struct sockaddr_in,sin_zero,8,2,33779)
 #elif __ia64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 3)
+Msg("Missing member data for sockaddr_in on IA64\n");
+CheckOffset(struct sockaddr_in,sin_family,0,3,33776)
+CheckOffset(struct sockaddr_in,sin_port,0,3,33777)
+CheckOffset(struct sockaddr_in,sin_addr,0,3,33778)
+CheckOffset(struct sockaddr_in,sin_zero,0,3,33779)
 #elif __powerpc__
 CheckTypeSize(struct sockaddr_in,16, 9141, 6)
+Msg("Missing member data for sockaddr_in on PPC32\n");
+CheckOffset(struct sockaddr_in,sin_family,0,6,33776)
+CheckOffset(struct sockaddr_in,sin_port,0,6,33777)
+CheckOffset(struct sockaddr_in,sin_addr,0,6,33778)
+CheckOffset(struct sockaddr_in,sin_zero,0,6,33779)
 #elif __s390__
 CheckTypeSize(struct sockaddr_in,16, 9141, 10)
+Msg("Missing member data for sockaddr_in on S390\n");
+CheckOffset(struct sockaddr_in,sin_family,0,10,33776)
+CheckOffset(struct sockaddr_in,sin_port,0,10,33777)
+CheckOffset(struct sockaddr_in,sin_addr,0,10,33778)
+CheckOffset(struct sockaddr_in,sin_zero,0,10,33779)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 Msg("Find size of sockaddr_in (9141)\n");

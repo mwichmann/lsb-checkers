@@ -24,6 +24,16 @@ Msg("Checking data structures in sys/poll.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef POLLOUT
+	CompareConstant(POLLOUT,0x0004,4950,architecture)
+#else
+Msg( "Error: Constant not found: POLLOUT\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef POLLIN
 	CompareConstant(POLLIN,0x0001,4948,architecture)
 #else
@@ -44,20 +54,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef POLLOUT
-	CompareConstant(POLLOUT,0x0004,4950,architecture)
+#ifdef POLLNVAL
+	CompareConstant(POLLNVAL,0x0020,4953,architecture)
 #else
-Msg( "Error: Constant not found: POLLOUT\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef POLLERR
-	CompareConstant(POLLERR,0x0008,4951,architecture)
-#else
-Msg( "Error: Constant not found: POLLERR\n");
+Msg( "Error: Constant not found: POLLNVAL\n");
 cnt++;
 #endif
 
@@ -74,10 +74,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef POLLNVAL
-	CompareConstant(POLLNVAL,0x0020,4953,architecture)
+#ifdef POLLERR
+	CompareConstant(POLLERR,0x0008,4951,architecture)
 #else
-Msg( "Error: Constant not found: POLLNVAL\n");
+Msg( "Error: Constant not found: POLLERR\n");
 cnt++;
 #endif
 
@@ -85,12 +85,26 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(struct pollfd,8, 9913, 2)
+CheckOffset(struct pollfd,events,4,2,34413)
+CheckOffset(struct pollfd,revents,6,2,34414)
 #elif __powerpc__
 CheckTypeSize(struct pollfd,8, 9913, 6)
+Msg("Missing member data for pollfd on PPC32\n");
+CheckOffset(struct pollfd,fd,0,6,34412)
+CheckOffset(struct pollfd,events,0,6,34413)
+CheckOffset(struct pollfd,revents,0,6,34414)
 #elif __ia64__
 CheckTypeSize(struct pollfd,8, 9913, 3)
+Msg("Missing member data for pollfd on IA64\n");
+CheckOffset(struct pollfd,fd,0,3,34412)
+CheckOffset(struct pollfd,events,0,3,34413)
+CheckOffset(struct pollfd,revents,0,3,34414)
 #elif __s390__
 CheckTypeSize(struct pollfd,8, 9913, 10)
+Msg("Missing member data for pollfd on S390\n");
+CheckOffset(struct pollfd,fd,0,10,34412)
+CheckOffset(struct pollfd,events,0,10,34413)
+CheckOffset(struct pollfd,revents,0,10,34414)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
 Msg("Find size of pollfd (9913)\n");

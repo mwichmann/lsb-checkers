@@ -27,12 +27,16 @@ Msg("Checking data structures in X11/Xlib.h\n");
 
 #ifdef __i386__
 CheckTypeSize(struct _XDisplay,176, 7053, 2)
+Msg("Missing member data for _XDisplay on IA32\n");
 #elif __ia64__
 CheckTypeSize(struct _XDisplay,296, 7053, 3)
+Msg("Missing member data for _XDisplay on IA64\n");
 #elif __powerpc__
 CheckTypeSize(struct _XDisplay,176, 7053, 6)
+Msg("Missing member data for _XDisplay on PPC32\n");
 #elif __s390__
 CheckTypeSize(struct _XDisplay,176, 7053, 10)
+Msg("Missing member data for _XDisplay on S390\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7053,0);
 Msg("Find size of _XDisplay (7053)\n");
@@ -274,12 +278,38 @@ Msg("Find size of XImage (8398)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct funcs,24, 9291, 2)
+CheckOffset(struct funcs,destroy_image,4,2,32867)
+CheckOffset(struct funcs,get_pixel,8,2,32868)
+CheckOffset(struct funcs,put_pixel,12,2,32869)
+CheckOffset(struct funcs,sub_image,16,2,32870)
+CheckOffset(struct funcs,add_pixel,20,2,32871)
 #elif __ia64__
 CheckTypeSize(struct funcs,48, 9291, 3)
+Msg("Missing member data for funcs on IA64\n");
+CheckOffset(struct funcs,create_image,0,3,32866)
+CheckOffset(struct funcs,destroy_image,0,3,32867)
+CheckOffset(struct funcs,get_pixel,0,3,32868)
+CheckOffset(struct funcs,put_pixel,0,3,32869)
+CheckOffset(struct funcs,sub_image,0,3,32870)
+CheckOffset(struct funcs,add_pixel,0,3,32871)
 #elif __powerpc__
 CheckTypeSize(struct funcs,24, 9291, 6)
+Msg("Missing member data for funcs on PPC32\n");
+CheckOffset(struct funcs,create_image,0,6,32866)
+CheckOffset(struct funcs,destroy_image,0,6,32867)
+CheckOffset(struct funcs,get_pixel,0,6,32868)
+CheckOffset(struct funcs,put_pixel,0,6,32869)
+CheckOffset(struct funcs,sub_image,0,6,32870)
+CheckOffset(struct funcs,add_pixel,0,6,32871)
 #elif __s390__
 CheckTypeSize(struct funcs,24, 9291, 10)
+Msg("Missing member data for funcs on S390\n");
+CheckOffset(struct funcs,create_image,0,10,32866)
+CheckOffset(struct funcs,destroy_image,0,10,32867)
+CheckOffset(struct funcs,get_pixel,0,10,32868)
+CheckOffset(struct funcs,put_pixel,0,10,32869)
+CheckOffset(struct funcs,sub_image,0,10,32870)
+CheckOffset(struct funcs,add_pixel,0,10,32871)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9291,0);
 Msg("Find size of funcs (9291)\n");
