@@ -1,5 +1,6 @@
 char *DtNeeded[] = {
-	"ld-lsb.so.1",
+	"/lib/ld-lsb-ia64.so.1",
+	"/lib/ld-lsb.so.1",
 	"libGL.so.1",
 	"libICE.so.6",
 	"libSM.so.6",
@@ -7,6 +8,7 @@ char *DtNeeded[] = {
 	"libXext.so.6",
 	"libXt.so.6",
 	"libc.so.6",
+	"libc.so.6.1",
 	"libcrypt.so.1",
 	"libdl.so.2",
 	"libm.so.6",
