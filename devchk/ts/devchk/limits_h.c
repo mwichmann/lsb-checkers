@@ -289,7 +289,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_KEYS_MAX
-	CompareConstant(PTHREAD_KEYS_MAX,7,3088,architecture)
+	CompareConstant(PTHREAD_KEYS_MAX,1024,3088,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_KEYS_MAX\n");
 cnt++;
@@ -299,7 +299,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_DESTRUCTOR_ITERATIONS
-	CompareConstant(PTHREAD_DESTRUCTOR_ITERATIONS,10,3089,architecture)
+	CompareConstant(PTHREAD_DESTRUCTOR_ITERATIONS,4,3089,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_DESTRUCTOR_ITERATIONS\n");
 cnt++;
@@ -347,7 +347,63 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
+#ifdef PTHREAD_STACK_MIN
+	CompareConstant(PTHREAD_STACK_MIN,196608,5310,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef PTHREAD_STACK_MIN
+	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef PTHREAD_STACK_MIN
+	CompareConstant(PTHREAD_STACK_MIN,196608,5310,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef PTHREAD_STACK_MIN
+	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef PTHREAD_STACK_MIN
+	CompareConstant(PTHREAD_STACK_MIN,196608,5310,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef PTHREAD_STACK_MIN
+	CompareConstant(PTHREAD_STACK_MIN,196608,5310,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef PTHREAD_STACK_MIN
+	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_STACK_MIN
 	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
 #else
