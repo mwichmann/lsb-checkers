@@ -8879,7 +8879,6 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt21__numeric_limits_base9is_iec559E","GLIBCPP_3.2",0,"LSB-Core",0,0},
 	{"_ZNSt21__numeric_limits_base9is_moduloE","GLIBCPP_3.2",0,"LSB-Core",0,0},
 	{"_ZNSt21__numeric_limits_base9is_signedE","GLIBCPP_3.2",0,"LSB-Core",0,0},
-	{"_ZNSt23__codecvt_abstract_baseIcc11__mbstate_tED1Ev","GLIBCPP_3.2.4",0,"LSB-Core",0,1},
 #if __i386__
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE10deallocateEPvj","GLIBCPP_3.2",0,"LSB-Core",0,1},
 #endif
