@@ -1,4 +1,4 @@
-SUBDIRS=tetj elfchk appchk rpmchk devchk/ts/devchk libchk cmdchk pkgchk
+SUBDIRS=tetj elfchk appchk rpmchk devchk/ts/devchk libchk cmdchk pkgchk dynchk
 
 
 all:
