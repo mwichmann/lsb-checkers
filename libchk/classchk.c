@@ -15,12 +15,15 @@
  * check_class_info() examines the data objects associated with a class. Each
  * class has several data objects associated with it, so each type of object
  * needs to be checked. A set of data structures representing each of these
- * data types of preduced from the information stored int eh database. This
+ * data types is produced from the information stored in the database. This
  * function walks through the table of classs produced from the DB, and checks
  * the shared object to ensure the data objects match with the description
  * from the DB. Note that the data structures that represent the in memory
- * format and the data in the DB are not identifcle, but generally contain
+ * format and the data in the DB are not identicle, but generally contain
  * the same information, just expressed differently.
+ * 
+ * Note that stuff which is output to stderr is mostly used by the maintainer
+ * to facilitate DB updates when mismatches are detected.
  */
 
 int
@@ -55,13 +58,11 @@ check_class_info(char *libname, struct classinfo *classes[],
 		/*
 		 * 1) First, check the Vtable info
 		 */
-		if (!(*classp->vtablename)) 
+		if (*classp->vtablename)
 		{
-			fprintf(stderr,"Panic: No vtable name for %s!!\n",
-							classp->name);
-			continue;
-		}
 		vtablep=dlsym(dlhndl,classp->vtablename);
+		if (vtablep)
+		{
 
 		/*
 		 * 1.1) Check the baseoffset
@@ -119,21 +120,22 @@ check_class_info(char *libname, struct classinfo *classes[],
 				fprintf(stderr,"VFUNC:%s:%d:%s\n", classp->name,j, dlinfo.dli_sname);
 			}
 		}
+		} /* (vtablep) */
+		else {
+			fprintf(stderr,"No vtable found in library for %s\n",classp->name);
+		}
+		} /* (*classp->vtablename) */
+		else {
+			fprintf(stderr,"No vtable name for %s\n",classp->name);
+		}
 
 		/*
 		 * 2) Second, check the RTTI info
 		 */
 		rttip = dlsym(dlhndl, classp->rttiname);
 
-		if (!rttip) 
+		if (rttip) 
 		{
-			char	str[256];
-	
-			sprintf(str, "_ZTI%s", &(classp->name[2]));
-			fprintf(stderr, "RTTI:%s:0:%s\n", classp->name,str);
-			printf("RTTI name %s not found\n", classp->rttiname);
-		}
-
 		/*
 		 * 2.1) Check the Vtable of the base class
 		 */
@@ -141,7 +143,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		if (symp+8 != rttip->basevtable) 
 		{
 			dladdr(rttip->basevtable-8, &dlinfo);
-			if (dlinfo.dli_saddr != vtablep->typeinfo) 
+			if (vtablep && dlinfo.dli_saddr != vtablep->typeinfo) 
 			{
 				printf("Uhoh3. Not an exact match\n");
 			}
@@ -311,6 +313,12 @@ check_class_info(char *libname, struct classinfo *classes[],
 			}
 		}
 
+		} else { /* (rttip) */
+			char	str[256];
+			sprintf(str, "_ZTI%s", &(classp->name[2]));
+			fprintf(stderr, "RTTI:%s:0:%s\n", classp->name,str);
+			printf("RTTI name %s not found\n", classp->rttiname);
+		}
 	}
 
 	dlclose(dlhndl);
