@@ -185,6 +185,7 @@ char *DtNeeded[] = {
 #if __s390x__
 	"libpthread.so.0",
 #endif /* __s390x__ */
+	"librt.so.1",
 	"libSM.so.6",
 	"libstdc++.so.6",
 #if __i386__
