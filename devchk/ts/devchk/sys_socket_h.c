@@ -475,33 +475,15 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CMSG_NXTHDR(mhdr,
-	CompareConstant(CMSG_NXTHDR(mhdr,,cmsg)cmsg_nxthdr((mhdr),(cmsg)),3350,architecture)
-#else
-Msg( "Error: Constant not found: CMSG_NXTHDR(mhdr,\n");
-cnt++;
-#endif
-
+/* No test for CMSG_NXTHDR(mhdr, */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CMSG_DATA(cmsg)
-	CompareConstant(CMSG_DATA(cmsg),((void*)((char*)(cmsg)+CMSG_ALIGN(sizeof(structcmsghdr)))),3351,architecture)
-#else
-Msg( "Error: Constant not found: CMSG_DATA(cmsg)\n");
-cnt++;
-#endif
-
+/* No test for CMSG_DATA(cmsg) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CMSG_FIRSTHDR(msg)
-	CompareConstant(CMSG_FIRSTHDR(msg),__CMSG_FIRSTHDR((msg)->msg_control,(msg)->msg_controllen),3355,architecture)
-#else
-Msg( "Error: Constant not found: CMSG_FIRSTHDR(msg)\n");
-cnt++;
-#endif
-
+/* No test for CMSG_FIRSTHDR(msg) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
