@@ -93,14 +93,16 @@ print $LIB "\t};\n\n";
 #
 print $LIB "struct classvtable $vtablename = {\n";
 print $LIB "\t".$$class{'CIbaseoffset'}.",\n";
-print $LIB "\t\"_ZTI".$classbase."\",\n";
+print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\n";
 print $LIB "\t".$vtablename."_name,\n";
 print $LIB "\t};\n\n";
 
 print $LIB "struct classinfo ".$$class{'CIname'}."_classinfo = {\n";
 print $LIB "\t\"".$$class{'CIname'}."\",\n";
-print $LIB "\t\"_ZTV".$classbase."\",\n";
-print $LIB "\t\"_ZTI".$classbase."\",\n";
+#print $LIB "\t\"_ZTV".$classbase."\",\n";
+print $LIB "\t\"".getinterfacename($$class{'CIvtable'})."\",\n";
+print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\n";
+#print $LIB "\t\"_ZTI".$classbase."\",\n";
 print $LIB "\t$numvtablefuns,\n";
 print $LIB "\t$numtypeinfofuns,\n";
 print $LIB "\t&$typeinfoname,\n";
@@ -157,7 +159,7 @@ $lsth = $Dbh->query($select) || die $Dbh->errmsg();
 $classinfos="";
 for(1..$lsth->numrows) {
 	%entry=$lsth->fetchhash;
-	print $entry{'CIname'}."\n";
+	#print $entry{'CIname'}."\n";
 	mkclassinfo(LIB,\%entry);
 	$classinfos.=$classinfo."\t&".$entry{'CIname'}."_classinfo,\n";
 }
