@@ -19,7 +19,7 @@ int execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "execve()");
 	validate_Rdaddress( arg0, "execve - arg0");
-		validate_NULL_TYPETYPE(  arg0, "execve - arg0");
+		validate_pathname(  arg0, "execve - arg0");
 		validate_NULL_TYPETYPE(  arg1, "execve - arg1");
 		validate_NULL_TYPETYPE(  arg2, "execve - arg2");
 	}
