@@ -68,16 +68,16 @@ struct classtypeinfo {
 
 //In memory format
 struct classvtable_mem {
-	int	baseoffset;
-	char	*typeinfo;
-	void	*virtfuncs[0];
+	unsigned long	baseoffset;
+	const char	*typeinfo;
+	const void	*virtfuncs[0];
 	};
 
 //DB format
 struct classvtable {
-	int	baseoffset;
-	char	*typeinfo;
-	char	**virtfuncs;
+	unsigned long	baseoffset;
+	const char	*typeinfo;
+	const char	**virtfuncs;
 	};
 
 // No in memory format for this one
