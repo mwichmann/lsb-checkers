@@ -12,6 +12,8 @@
 #include "proghdr.h"
 #include "../tetj/tetj.h"
 
+#define TMP_STRING_SIZE (PATH_MAX+60)
+
 typedef int (*ProgHeadFcn)(ElfFile *, Elf_Phdr *, struct tetj_handle *);
 
 typedef struct	{
@@ -63,7 +65,6 @@ return 0;
 int
 checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
-#define TMP_STRING_SIZE (PATH_MAX+60)
   char tmp_string[TMP_STRING_SIZE+1];
 	
   tetj_tp_count++;
@@ -80,9 +81,9 @@ checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   snprintf(tmp_string, TMP_STRING_SIZE, "Incorrect program interpreter: %s", 
           file->addr+hdr->p_offset);
-	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-										 0, 0, 0, tmp_string);
-	fprintf(stderr, "%s\n", tmp_string);
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+					 0, 0, 0, tmp_string);
+  fprintf(stderr, "%s\n", tmp_string);
   tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   return -1;
@@ -97,31 +98,96 @@ return check_NOTE(file, file->addr+hdr->p_offset, hdr->p_filesz, journal);
 int
 checkPT_SHLIB(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
-return 0;
+  char tmp_string[TMP_STRING_SIZE+1];
+	
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                     "Check SHLIB program header");
+  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+					 0, 0, 0, tmp_string);
+  fprintf(stderr, "%s\n", tmp_string);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
+  return 0;
 }
 
 int
 checkPT_PHDR(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
-/* HEader should point to the header table */
+/* Header should point to the header table */
+  char tmp_string[TMP_STRING_SIZE+1];
+	
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                     "Check PHDR program header");
+  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+					 0, 0, 0, tmp_string);
+  fprintf(stderr, "%s\n", tmp_string);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
 return 0;
 }
 
 int
 checkPT_TLS(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
+  char tmp_string[TMP_STRING_SIZE+1];
+	
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                     "Check TLS program header");
+  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+					 0, 0, 0, tmp_string);
+  fprintf(stderr, "%s\n", tmp_string);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
 return 0;
 }
 
 int
 checkPT_GNU_EH_FRAME(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
+  char tmp_string[TMP_STRING_SIZE+1];
+	
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                     "Check GNU_EH_FRAME program header");
+  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+					 0, 0, 0, tmp_string);
+  fprintf(stderr, "%s\n", tmp_string);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
 return 0;
 }
 
 int
 checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
+  char tmp_string[TMP_STRING_SIZE+1];
+	
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                     "Check GNU_STACK program header");
+  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+					 0, 0, 0, tmp_string);
+  fprintf(stderr, "%s\n", tmp_string);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
 return 0;
 }
 
@@ -129,6 +195,19 @@ return 0;
 int
 checkPT_IA_64_UNWIND(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
+  char tmp_string[TMP_STRING_SIZE+1];
+	
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                     "Check IA_64_UNWIND program header");
+  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+					 0, 0, 0, tmp_string);
+  fprintf(stderr, "%s\n", tmp_string);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
 return 0;
 }
 #endif
