@@ -16,6 +16,7 @@ struct tetj_handle;
 struct versym {
 	char *name;
 	char *vername;
+	int   deprecated;
 	};
 
 #if defined(__alpha) || defined(__alpha__) || \
