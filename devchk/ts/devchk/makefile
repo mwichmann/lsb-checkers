@@ -96,7 +96,8 @@ OBJS = hdrchk.o \
 	wctype_h.o \
 	wordexp_h.o \
 	zlib_h.o \
-	intrinsic.o 
+	intrinsic.o \
+	cxx.o 
 
 ifdef TET_ROOT
 LIBDIR = $(TET_ROOT)/lib/tet3
@@ -108,6 +109,8 @@ endif
 
 CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include 
 
+CXXFLAGS = $(CFLAGS)
+
 ifdef TET_ROOT
 CFLAGS += -DTET_TEST -I$(INCDIR)
 endif
@@ -115,7 +118,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses
+	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c
