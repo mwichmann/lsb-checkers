@@ -91,7 +91,9 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 	for (i=0; classes[i]!=NULL; i++) 
 	{
 		classp = classes[i];
-/* 		printf("Checking class %s\n", classp->name); */
+		if( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) ) {
+ 			printf("Checking class %s\n", classp->name);
+		}
 
 		/*
 		 * 1) First, check the Vtable info
