@@ -1622,27 +1622,6 @@ struct versym libc_so_6[] = {
 	{"asprintf","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"atexit","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"atexit","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"atexit","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"atexit","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"atexit","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"atexit","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"atexit","GLIBC_2.2"},
-#endif
-#if __i386__
 	{"atof","GLIBC_2.0"},
 #endif
 #if __ia64__
