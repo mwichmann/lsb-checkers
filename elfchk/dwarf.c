@@ -392,7 +392,7 @@ dumpbytes(ptr,8);
 
 int check_FDE(unsigned char *ptr, int *error)
 {
-        int	used=0;
+        int	numused,used=0;
         FDEFrameHeader	fdeimage;
         unsigned char *endptr;
 
@@ -420,13 +420,9 @@ dumpbytes(ptr,length);
         ptr += sizeof(long);
         used += sizeof(long);
         
-        fdeimage.address_range = *(long *)ptr;
-        ptr += sizeof(long);
-        used += sizeof(long);
-        
-/*         fdeimage.address_range = decode_sleb128(ptr,&numused); */
-/*         ptr += numused; */
-/*         used += 4; */
+	fdeimage.address_range = decode_sleb128(ptr,&numused);
+	ptr += numused;
+	used += 4;
 
         if(elfchk_debug & DEBUG_DWARF_CONTENTS) {
                 fprintf(stderr,"length: %x\n", fdeimage.length);
