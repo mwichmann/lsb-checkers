@@ -108,12 +108,12 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 				fail = 1;
 			}
 		}
-
-		tetj_result(journal, tetj_activity_count,	tetj_tp_count, 
-								fail=1 ? TETJ_FAIL : TETJ_PASS);
-
-		tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 	}
+
+	tetj_result(journal, tetj_activity_count,	tetj_tp_count, 
+							fail==1 ? TETJ_FAIL : TETJ_PASS);
+	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
 	return 0;
 }
 
@@ -160,7 +160,7 @@ checkPT_DYNAMIC(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   }
 
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-							fail=1 ? TETJ_FAIL : TETJ_PASS);
+							fail==1 ? TETJ_FAIL : TETJ_PASS);
 
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
@@ -354,7 +354,7 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   }
 
   tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-							fail=1 ? TETJ_FAIL : TETJ_PASS);
+							fail==1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
