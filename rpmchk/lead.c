@@ -47,9 +47,9 @@ checkhdrfield( minor, RPMFILEVERMIN )
 
 checkhdrfield( type, RPMBINPKG )
 
-checkhdrfield( archnum, RPMARCH )
+checkhdrfield( archnum, htons(RPMARCH) )
 
-checkhdrfield( osnum, RPMOS )
+checkhdrfield( osnum, htons(RPMOS) )
 
-checkhdrfield( signature_type, RPMSIGTYPE )
+checkhdrfield( signature_type, htons(RPMSIGTYPE) )
 }
