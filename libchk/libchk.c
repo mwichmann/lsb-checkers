@@ -6,9 +6,14 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.29 $
+ * This is $Revision: 1.30 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.30  2003/10/28 19:32:12  anderson
+ * 1) Add use of env variable LIBCHK_DEBUG
+ * 2) cleanup warnings in class checking code and hide some of them behind
+ *    maintained debug flags
+ *
  * Revision 1.29  2003/10/27 15:07:26  anderson
  * libchk should now check the class data also
  *
@@ -129,10 +134,13 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.29 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.30 $";
 
-extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
+/* Some debugging bits which are useful to maintainers,
+ * but probably not others
+ */
 
+int libchk_debug=0;
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -242,7 +250,7 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
          maintainer mode */
       if (vers > i )
       {
-        if (print_warnings)
+        if (print_warnings || (libchk_debug&LIBCHK_DEBUG_NEWVERS) )
         {
           printf("    %s has newer version %s, expecting ",
                  ElfGetStringIndex(file,file->syms[j].st_name,
@@ -469,8 +477,12 @@ void init_library_table(char *filename)
 int main(int argc, char *argv[])
 {
   struct tetj_handle *journal;
-  char tmp_string[TMP_STRING_SIZE+1];
+  char *ptr,tmp_string[TMP_STRING_SIZE+1];
   
+  if( (ptr=getenv("LIBCHK_DEBUG")) != NULL ) {
+	  libchk_debug=strtod(ptr,NULL);
+  }
+
 #ifndef _CXXABICHK_
 	if (argc!=2)
 	{
