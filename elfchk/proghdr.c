@@ -77,7 +77,7 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
 	for(i=0;i<file->numsh;i++) {
 		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
-				(file->saddr[i].sh_addr <= hdr->p_vaddr+hdr->p_memsz) &&
+				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
 				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
 			/* Section appears to belong to this segment */
 
@@ -117,7 +117,7 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 							fail==1 ? TETJ_FAIL : TETJ_PASS);
 	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-	return 0;
+	return fail==1 ? -1 : 1;
 }
 
 int
@@ -133,32 +133,45 @@ checkPT_DYNAMIC(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
                      "Check DYNAMIC program header");
 
   for(i=0;i<file->numsh;i++) {
-	if(file->saddr[i].sh_type == SHT_DYNAMIC) {
-		/* See if section extends past this end of this segment */
-		if( file->saddr[i].sh_addr != hdr->p_vaddr ) {
+	if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+			(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
+			(file->saddr[i].sh_flags&SHF_ALLOC) ) {
+		if(file->saddr[i].sh_type == SHT_DYNAMIC) {
+			/* See if section extends past this end of this segment */
+			if( file->saddr[i].sh_addr != hdr->p_vaddr ) {
+				snprintf(tmp_string, TMP_STRING_SIZE,
+			  	"Dynamic section address does not match Segment start address" );
+				tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+				fprintf(stderr, "%s\n", tmp_string);
+				fail = 1;
+		  	}
+			if( file->saddr[i].sh_offset != hdr->p_offset ) {
+				snprintf(tmp_string, TMP_STRING_SIZE,
+			  	"Dynamic section offset does not match Segment start address" );
+				tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+				fprintf(stderr, "%s\n", tmp_string);
+				fail = 1;
+		  	}
+			if( file->saddr[i].sh_size != hdr->p_filesz ) {
+				snprintf(tmp_string, TMP_STRING_SIZE,
+			  	"Dynamic section size does not match Segment size" );
+				tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+				fprintf(stderr, "%s\n", tmp_string);
+				fail = 1;
+		  }
+		/* Contents get checked by the section processing code */
+	} else {
 			snprintf(tmp_string, TMP_STRING_SIZE,
-			  "Dynamic section address does not match Segment start address" );
+			  "Non-dynamic section %s found in PT_DYNAMIC segment",
+			  ElfGetString(file,file->saddr[i].sh_name) );
 			tetj_testcase_info(journal, tetj_activity_count,
 					tetj_tp_count, 0, 0, 0, tmp_string);
 			fprintf(stderr, "%s\n", tmp_string);
 			fail = 1;
-		  }
-		if( file->saddr[i].sh_offset != hdr->p_offset ) {
-			snprintf(tmp_string, TMP_STRING_SIZE,
-			  "Dynamic section offset does not match Segment start address" );
-			tetj_testcase_info(journal, tetj_activity_count,
-					tetj_tp_count, 0, 0, 0, tmp_string);
-			fprintf(stderr, "%s\n", tmp_string);
-			fail = 1;
-		  }
-		if( file->saddr[i].sh_size != hdr->p_filesz ) {
-			snprintf(tmp_string, TMP_STRING_SIZE,
-			  "Dynamic section size does not match Segment start address" );
-			tetj_testcase_info(journal, tetj_activity_count,
-					tetj_tp_count, 0, 0, 0, tmp_string);
-			fprintf(stderr, "%s\n", tmp_string);
-			fail = 1;
-		  }
+		} 
 	}
   }
 
@@ -167,7 +180,7 @@ checkPT_DYNAMIC(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-  return 0;
+  return fail==1 ? -1 : 1;
 }
 
 int
@@ -200,7 +213,63 @@ checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 int
 checkPT_NOTE(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
-return check_NOTE(file, file->addr+hdr->p_offset, hdr->p_filesz, journal);
+  int i,fail=0;
+  char tmp_string[TMP_STRING_SIZE+1];
+	
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                     "Check NOTE program header");
+
+  for(i=0;i<file->numsh;i++) {
+		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
+				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
+			/* Section appears to belong to this segment */
+			if(file->saddr[i].sh_type == SHT_NOTE) {
+				/* See if section extends past this end of this segment */
+				if( file->saddr[i].sh_addr != hdr->p_vaddr ) {
+					snprintf(tmp_string, TMP_STRING_SIZE,
+			  		"NOTE section address does not match Segment start address" );
+					tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+					fprintf(stderr, "%s\n", tmp_string);
+					fail = 1;
+		  		}
+				if( file->saddr[i].sh_offset != hdr->p_offset ) {
+					snprintf(tmp_string, TMP_STRING_SIZE,
+			  		"NOTE section offset does not match Segment start address" );
+					tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+					fprintf(stderr, "%s\n", tmp_string);
+					fail = 1;
+		  		}
+				if( file->saddr[i].sh_size != hdr->p_filesz ) {
+					snprintf(tmp_string, TMP_STRING_SIZE,
+			  		"NOTE section size does not match Segment size" );
+					tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+					fprintf(stderr, "%s\n", tmp_string);
+					fail = 1;
+		  	}
+			/* Contents get checked by the section processing code */
+		} else {
+				snprintf(tmp_string, TMP_STRING_SIZE,
+				  "Section %s in PT_NOTE segment is not type SHT_NOTE",
+			  		ElfGetString(file,file->saddr[i].sh_name) );
+				tetj_testcase_info(journal, tetj_activity_count,
+					tetj_tp_count, 0, 0, 0, tmp_string);
+				fprintf(stderr, "%s\n", tmp_string);
+				fail = 1;
+			} 
+  	}
+  }
+
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, 
+							fail==1 ? TETJ_FAIL : TETJ_PASS);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
+  return fail==1 ? -1 : 1;
 }
 
 int
@@ -248,45 +317,104 @@ checkPT_PHDR(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-return 0;
+return -1;
 }
 
 int
 checkPT_TLS(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
+  int i,fail=0;
   char tmp_string[TMP_STRING_SIZE+1];
 	
   tetj_tp_count++;
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check TLS program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "TLS not checked!");
-  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
-  fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
+
+  for(i=0;i<file->numsh;i++) {
+		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
+				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
+			/* Section appears to belong to this segment */
+			if( !(file->saddr[i].sh_flags&SHF_TLS) ) {
+				/* See if section extends past this end of this segment */
+				if( file->saddr[i].sh_addr != hdr->p_vaddr ) {
+					snprintf(tmp_string, TMP_STRING_SIZE,
+			  		"TLS section address does not match Segment start address" );
+					tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+					fprintf(stderr, "%s\n", tmp_string);
+					fail = 1;
+		  		}
+				if( file->saddr[i].sh_offset != hdr->p_offset ) {
+					snprintf(tmp_string, TMP_STRING_SIZE,
+			  		"TLS section offset does not match Segment start address" );
+					tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+					fprintf(stderr, "%s\n", tmp_string);
+					fail = 1;
+		  		}
+				if( file->saddr[i].sh_size != hdr->p_filesz ) {
+					snprintf(tmp_string, TMP_STRING_SIZE,
+			  		"TLS section size does not match Segment size" );
+					tetj_testcase_info(journal, tetj_activity_count,
+						tetj_tp_count, 0, 0, 0, tmp_string);
+					fprintf(stderr, "%s\n", tmp_string);
+					fail = 1;
+		  	}
+			/* Contents get checked by the section processing code */
+		} else {
+				snprintf(tmp_string, TMP_STRING_SIZE,
+				  "Section %s in PT_TLS segment is not SHF_TLS",
+			  		ElfGetString(file,file->saddr[i].sh_name) );
+				tetj_testcase_info(journal, tetj_activity_count,
+					tetj_tp_count, 0, 0, 0, tmp_string);
+				fprintf(stderr, "%s\n", tmp_string);
+				fail = 1;
+			} 
+  	}
+  }
+
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, 
+							fail==1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-return 0;
+return fail==1 ? -1 : 1;
 }
 
 int
 checkPT_GNU_EH_FRAME(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
+  int i,fail=0;
   char tmp_string[TMP_STRING_SIZE+1];
 	
   tetj_tp_count++;
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check GNU_EH_FRAME program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "GNU_EH_FRAME not checked!");
-  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
-  fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
+
+  for(i=0;i<file->numsh;i++) {
+		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
+				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
+			/* Section appears to belong to this segment */
+			if( strcmp(ElfGetString(file,file->saddr[i].sh_name), ".eh_frame_hdr") != 0 ) {
+				snprintf(tmp_string, TMP_STRING_SIZE,
+				  "Section in PT_GNU_EH_FRAME segment is not \".eh_frame_hdr\"" );
+				tetj_testcase_info(journal, tetj_activity_count,
+					tetj_tp_count, 0, 0, 0, tmp_string);
+				fprintf(stderr, "%s\n", tmp_string);
+				fail = 1;
+			}
+			/* Contents checked by the section checking code */
+  	}
+  }
+
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, 
+							fail==1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-return 0;
+return fail==1 ? -1 : 1;
 }
 
 int
@@ -360,7 +488,7 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 							fail==1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-return 0;
+return fail==1 ? -1 : 1;
 }
 
 #if __ia64__
