@@ -480,7 +480,6 @@ flock.o \
 fork.o \
 fputs.o \
 fread.o \
-free.o \
 fsetpos.o \
 ftell.o \
 fwrite.o \
@@ -590,6 +589,7 @@ sysconf.o \
 tcgetattr.o \
 times.o \
 tzset.o \
+ulimit.o \
 umask.o \
 ungetc.o \
 unlink.o \
