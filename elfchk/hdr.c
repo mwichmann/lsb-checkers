@@ -58,4 +58,6 @@ if( hdr1->e_shstrndx != SHN_UNDEF ) {
 	file1->straddr = file1->addr+file1->saddr[hdr1->e_shstrndx].sh_offset;
 	}
 file1->strndx = hdr1->e_shstrndx;
+
+getSymbolVersionInfo(file1);
 }

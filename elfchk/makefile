@@ -1,7 +1,7 @@
 CFLAGS=-g
 
 OBJS=dynsyms.o dynamic.o dyntags.o dtneeded.o elfchk.o hdr.o proghdr.o \
-	sectinfo.o sections.o util.o
+	sectinfo.o sections.o symvers.o util.o
 GENSRCS=dynsyms.c dtneeded.c sectinfo.c dyntags.c dynsyms.c.chk
 LIB=libelfchk.a
 
