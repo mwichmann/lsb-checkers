@@ -187,7 +187,7 @@ CheckTypeSize(FILE,216, 8782, 10)
 #elif __powerpc64__
 CheckTypeSize(FILE,216, 8782, 9)
 #elif __s390x__
-CheckTypeSize(FILE,216, 8782, 12)
+CheckTypeSize(FILE,148, 8782, 12)
 #elif __x86_64__
 CheckTypeSize(FILE,216, 8782, 11)
 #else
