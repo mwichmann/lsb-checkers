@@ -224,7 +224,7 @@ FUNC: while(my ($func_name, $func_return, $func_id, $func_lib) = $interface_q->f
 		$libs_seen[@libs_seen] = $func_lib;
 		$fh = IO::Handle->new();
 		open($fh, "> " . $func_lib . "/gen.mk" );
-		print $fh "GENFUNCS = \\\n";
+		print $fh "GEN_FUNCS = \\\n";
 		print $fh $func_name . ".o ";
 		close $fh;
 	}
