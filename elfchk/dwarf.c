@@ -1,3 +1,10 @@
+/*
+ *
+ * Copyright (c) 2002 The Free Standards Group Inc
+ * Copyright (c) 2002-2003 Stuart Anderson (anderson@freestandards.org)
+ * Copyright (c) 2003 Chris Yeoh (yeohc@au.ibm.com)
+ *
+ */
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -51,99 +58,193 @@ dumpbytes(ptr,8);
 */
 
         used++; /* The op code */
-        switch( *ptr ) {
-	case 0x00: /* DW_CFA_nop */
+
+        switch( (*ptr)>>6 ) { /* Primary opcodes */
+	case DW_CFA_advance_loc:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_advance_loc|" );
+		}
+		break;
+	case DW_CFA_offset:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_offset|" );
+		}
+		break;
+	case DW_CFA_restore:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_restore|" );
+		}
+		break;
+	default:
+		fprintf(stderr, "********** Unexpected CFI opcode %x **\n",
+                        (*ptr)>>6);
+        }
+
+        switch( (*ptr)&0x3f ) { /* Extended opcodes */
+	/*
+	 * These are dewcribed in Dward 2.0.0 - Section 6.4.2
+	 */
+	case DW_CFA_nop:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 			fprintf(stderr,"DW_CFA_nop\n" );
 		}
 		break;
 
-	case 0x02: /* DW_CFA_advance_loc1 */
+	case DW_CFA_set_loc:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_advance_loc1\n" );
+			fprintf(stderr,"DW_CFA_set_loc\n" );
                 }
+
+		/* Operand 1 - address */
 		tmp = *(int *)(ptr);
                 ptr += sizeof(int);
                 used += sizeof(int);
 		break;
 
-	case 0x03: /* DW_CFA_advance_loc2 */
+	case DW_CFA_advance_loc1:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_advance_loc1\n" );
+                }
+
+		/* Operand 1 - 1-byte delta */
+		tmp = *(char *)(ptr);
+                ptr += sizeof(char);
+                used += sizeof(char);
+		break;
+
+	case DW_CFA_advance_loc2:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 			fprintf(stderr,"DW_CFA_advance_loc2\n" );
                 }
-		tmp =* (int *)(ptr);
-                ptr += sizeof(int);
-                used += sizeof(int);
+
+		/* Operand 1 - 2-byte delta */
+		tmp =* (short *)(ptr);
+                ptr += sizeof(short);
+                used += sizeof(short);
 		break;
 
-	case 0x04: /* DW_CFA_advance_loc4 */
+	case DW_CFA_advance_loc4:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 			fprintf(stderr,"DW_CFA_advance_loc4\n" );
                 }
+
+		/* Operand 1 - 4-byte delta */
 		tmp =* (int *)(ptr);
                 ptr += sizeof(int);
                 used += sizeof(int);
 		break;
 
-	case 0x05: /* DW_CFA_offset_extended */
+	case DW_CFA_offset_extended:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 			fprintf(stderr,"DW_CFA_offset_extended\n" );
                 }
+
+		/* Operand 1 - ULEB128 register */
 		tmp = read_leb128(ptr,&numused,1);
                 ptr+=numused;
                 used+=numused;
 
+		/* Operand 2 - ULEB128 offset */
 		tmp = read_leb128(ptr,&numused,1);
                 ptr += numused;
                 used += numused;
 		break;
 
-	case 0x0D: /* DW_CFA_def_cfa_register */
+	case DW_CFA_restore_extended:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_def_cfa_register\n" );
+			fprintf(stderr,"DW_CFA_restore_extended\n" );
                 }
+
+		/* Operand 1 - ULEB128 register */
+		tmp = read_leb128(ptr,&numused,1);
+                ptr+=numused;
+                used+=numused;
+		break;
+
+	case DW_CFA_undefined:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_undefined\n" );
+                }
+
+		/* Operand 1 - ULEB128 register */
+		tmp = read_leb128(ptr,&numused,1);
+                ptr+=numused;
+                used+=numused;
+		break;
+
+	case DW_CFA_same_value:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_same_value\n" );
+                }
+
+		/* Operand 1 - ULEB128 register */
+		tmp = read_leb128(ptr,&numused,1);
+                ptr+=numused;
+                used+=numused;
+		break;
+
+	case DW_CFA_register:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_register\n" );
+                }
+
+		/* Operand 1 - ULEB128 register */
+		tmp = read_leb128(ptr,&numused,1);
+                ptr+=numused;
+                used+=numused;
+
+		/* Operand 2 - ULEB128 register */
 		tmp = read_leb128(ptr,&numused,1);
                 ptr += numused;
                 used += numused;
 		break;
 
-	case 0x0E: /* DW_CFA_def_cfa_offset */
-		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_def_cfa_offset\n" );
-                }
-		tmp = read_leb128(ptr,&numused,1);
-                ptr += numused;
-                used += numused;
+	case DW_CFA_remember_state:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_remember_state\n" );
+		}
 		break;
 
-	case 0x0C: /* DW_CFA_def_cfa */
+	case DW_CFA_restore_state:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_restore_state\n" );
+		}
+		break;
+
+	case DW_CFA_def_cfa:
 		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
 			fprintf(stderr,"DW_CFA_def_cfa\n" );
                 }
+
+		/* Operand 1 - ULEB128 register */
 		tmp = read_leb128(ptr,&numused,0);
                 ptr += numused;
                 used += numused;
 
+		/* Operand 2 - ULEB128 offset */
 		tmp = read_leb128(ptr,&numused,0);
                 ptr += numused;
                 used += numused;
 		break;
 
-	case 0x85: /* DW_CFA_offset|DW_CFA_offset_extended */
+	case DW_CFA_def_cfa_register:
+		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_def_cfa_register\n" );
+                }
+
+		/* Operand 1 - ULEB128 register */
+		tmp = read_leb128(ptr,&numused,1);
+                ptr += numused;
+                used += numused;
+		break;
+
+	case DW_CFA_def_cfa_offset:
 		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,
-				"DW_CFA_offset|DW_CFA_offset_extended\n" );
+			fprintf(stderr,"DW_CFA_def_cfa_offset\n" );
                 }
-		tmp = read_leb128(ptr,&numused,0);
-                ptr += numused;
-                used += numused;
-		break;
 
-	case 0x88: /* DW_CFA_offset|DW_CFA_same_value */
-		if(elfchk_debug&DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_offset|DW_CFA_same_value\n" );
-                }
-		tmp = read_leb128(ptr,&numused,0);
+		/* Operand 1 - ULEB128 register */
+		tmp = read_leb128(ptr,&numused,1);
                 ptr += numused;
                 used += numused;
 		break;
