@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <libintl.h>
 #undef dcgettext
 static char *(*funcptr) (const char * , const char * , int ) = 0;
@@ -13,7 +12,7 @@ char * dcgettext (const char * arg0 , const char * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "dcgettext", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "dcgettext", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #include <stdarg.h>
 #undef vwscanw
@@ -14,7 +13,7 @@ int vwscanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "vwscanw");
+		funcptr = dlsym(RTLD_NEXT, "vwscanw");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

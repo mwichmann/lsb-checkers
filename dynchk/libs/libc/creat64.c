@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <sys/types.h>
 #include <unistd.h>
 #undef creat64
@@ -14,7 +13,7 @@ int creat64 (const char * arg0 , mode_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "creat64", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "creat64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

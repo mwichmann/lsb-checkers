@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdarg.h>
 #include <syslog.h>
 #undef vsyslog
@@ -13,7 +12,7 @@ void vsyslog (int arg0 , const char * arg1 , va_list arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "vsyslog");
+		funcptr = dlsym(RTLD_NEXT, "vsyslog");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

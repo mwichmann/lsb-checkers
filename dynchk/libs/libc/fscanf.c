@@ -1,6 +1,5 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <dlfcn.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -16,7 +15,7 @@ int fscanf(FILE *f, const char *format, ...)
 	int ret_value;
 	va_start(args, format);
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "vfscanf");
+		funcptr = dlsym(RTLD_NEXT, "vfscanf");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params = 0;

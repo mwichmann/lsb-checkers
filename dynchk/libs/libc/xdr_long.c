@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <rpc/xdr.h>
 #undef xdr_long
 static bool_t(*funcptr) (XDR * , long * ) = 0;
@@ -13,7 +12,7 @@ bool_t xdr_long (XDR * arg0 , long * arg1 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "xdr_long", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_long", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

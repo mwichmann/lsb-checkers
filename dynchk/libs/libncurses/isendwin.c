@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef isendwin
 static bool(*funcptr) () = 0;
@@ -13,7 +12,7 @@ bool isendwin ()
 	int reset_flag = __lsb_check_params;
 	bool ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "isendwin");
+		funcptr = dlsym(RTLD_NEXT, "isendwin");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdlib.h>
 #undef lrand48
 static long(*funcptr) () = 0;
@@ -13,7 +12,7 @@ long lrand48 ()
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "lrand48", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "lrand48", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <dirent.h>
 #undef readdir64
 static struct dirent64 *(*funcptr) (DIR * ) = 0;
@@ -13,7 +12,7 @@ struct dirent64 * readdir64 (DIR * arg0 )
 	int reset_flag = __lsb_check_params;
 	struct dirent64 * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "readdir64", "GLIBC_2.2");
+		funcptr = dlvsym(RTLD_NEXT, "readdir64", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

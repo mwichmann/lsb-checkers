@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdio.h>
 #include <curses.h>
 #undef getwin
@@ -14,7 +13,7 @@ WINDOW * getwin (FILE * arg0 )
 	int reset_flag = __lsb_check_params;
 	WINDOW * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "getwin");
+		funcptr = dlsym(RTLD_NEXT, "getwin");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

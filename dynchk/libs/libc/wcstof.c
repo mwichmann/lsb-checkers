@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stddef.h>
 #include <wchar.h>
 #undef wcstof
@@ -14,7 +13,7 @@ float wcstof (const wchar_t * arg0 , wchar_t * * arg1 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "wcstof", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "wcstof", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

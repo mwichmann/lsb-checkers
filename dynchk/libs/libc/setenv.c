@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdlib.h>
 #undef setenv
 static int(*funcptr) (const char * , const char * , int ) = 0;
@@ -13,7 +12,7 @@ int setenv (const char * arg0 , const char * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "setenv");
+		funcptr = dlsym(RTLD_NEXT, "setenv");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <zlib.h>
 #undef crc32
 static uLong(*funcptr) (uLong , const Bytef * , uInt ) = 0;
@@ -13,7 +12,7 @@ uLong crc32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
 	int reset_flag = __lsb_check_params;
 	uLong ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "crc32");
+		funcptr = dlsym(RTLD_NEXT, "crc32");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

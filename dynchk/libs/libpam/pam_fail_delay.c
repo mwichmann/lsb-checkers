@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <security/pam_appl.h>
 #undef pam_fail_delay
 static int(*funcptr) (pam_handle_t * , unsigned int ) = 0;
@@ -13,7 +12,7 @@ int pam_fail_delay (pam_handle_t * arg0 , unsigned int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "pam_fail_delay");
+		funcptr = dlsym(RTLD_NEXT, "pam_fail_delay");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #undef inet_ntop
@@ -14,7 +13,7 @@ const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , socklen_t a
 	int reset_flag = __lsb_check_params;
 	const char * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "inet_ntop");
+		funcptr = dlsym(RTLD_NEXT, "inet_ntop");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

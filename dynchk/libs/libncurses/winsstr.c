@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef winsstr
 static int(*funcptr) (WINDOW * , const char * ) = 0;
@@ -13,7 +12,7 @@ int winsstr (WINDOW * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "winsstr");
+		funcptr = dlsym(RTLD_NEXT, "winsstr");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

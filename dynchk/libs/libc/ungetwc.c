@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <wctype.h>
 #include <stdio.h>
 #include <wchar.h>
@@ -15,7 +14,7 @@ wint_t ungetwc (wint_t arg0 , FILE * arg1 )
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "ungetwc", "GLIBC_2.2");
+		funcptr = dlvsym(RTLD_NEXT, "ungetwc", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

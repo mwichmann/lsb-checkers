@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <grp.h>
 #undef getgrent
 static struct group *(*funcptr) () = 0;
@@ -13,7 +12,7 @@ struct group * getgrent ()
 	int reset_flag = __lsb_check_params;
 	struct group * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "getgrent", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "getgrent", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

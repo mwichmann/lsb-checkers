@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef fmal
 static long double(*funcptr) (long double , long double , long double ) = 0;
@@ -13,7 +12,7 @@ long double fmal (long double arg0 , long double arg1 , long double arg2 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "fmal", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "fmal", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

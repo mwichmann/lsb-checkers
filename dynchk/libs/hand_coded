@@ -11,5 +11,7 @@ malloc
 calloc
 realloc
 free
+dlsym
+dlvsym
 pthread_mutex_lock
 __sigsetjmp

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <zlib.h>
 #undef gzsetparams
 static int(*funcptr) (gzFile , int , int ) = 0;
@@ -13,7 +12,7 @@ int gzsetparams (gzFile arg0 , int arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "gzsetparams");
+		funcptr = dlsym(RTLD_NEXT, "gzsetparams");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

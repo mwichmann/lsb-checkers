@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef addchnstr
 static int(*funcptr) (const chtype * , int ) = 0;
@@ -13,7 +12,7 @@ int addchnstr (const chtype * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "addchnstr");
+		funcptr = dlsym(RTLD_NEXT, "addchnstr");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <search.h>
 #undef hsearch
 static ENTRY *(*funcptr) (ENTRY , ACTION ) = 0;
@@ -13,7 +12,7 @@ ENTRY * hsearch (ENTRY arg0 , ACTION arg1 )
 	int reset_flag = __lsb_check_params;
 	ENTRY * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "hsearch", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "hsearch", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

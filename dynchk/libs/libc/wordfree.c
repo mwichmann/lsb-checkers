@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <wordexp.h>
 #undef wordfree
 static void(*funcptr) (wordexp_t * ) = 0;
@@ -12,7 +11,7 @@ void wordfree (wordexp_t * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "wordfree", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "wordfree", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <dlfcn.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -22,7 +21,7 @@ int open64(const char *pathname, int flags, ...)
 	mode = va_arg(args, mode_t);
 
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "open64", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "open64", "GLIBC_2.1");
 
 	if(__lsb_check_params)
 	{

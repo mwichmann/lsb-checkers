@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <glob.h>
 #undef glob
 static int(*funcptr) (const char * , int , int(* )(const char *, int), glob_t * ) = 0;
@@ -13,7 +12,7 @@ int glob (const char * arg0 , int arg1 , int(* arg2 )(const char *, int), glob_t
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "glob", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "glob", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

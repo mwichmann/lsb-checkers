@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <term.h>
 #undef restartterm
 static int(*funcptr) (char * , int , int * ) = 0;
@@ -13,7 +12,7 @@ int restartterm (char * arg0 , int arg1 , int * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "restartterm");
+		funcptr = dlsym(RTLD_NEXT, "restartterm");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef subwin
 static WINDOW *(*funcptr) (WINDOW * , int , int , int , int ) = 0;
@@ -13,7 +12,7 @@ WINDOW * subwin (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 	int reset_flag = __lsb_check_params;
 	WINDOW * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "subwin");
+		funcptr = dlsym(RTLD_NEXT, "subwin");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

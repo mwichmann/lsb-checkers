@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <security/pam_appl.h>
 #undef pam_start
 static int(*funcptr) (const char * , const char * , const struct pam_conv * , pam_handle_t * * ) = 0;
@@ -13,7 +12,7 @@ int pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * a
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "pam_start");
+		funcptr = dlsym(RTLD_NEXT, "pam_start");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

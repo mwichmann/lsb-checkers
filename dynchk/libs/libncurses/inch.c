@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef inch
 static chtype(*funcptr) () = 0;
@@ -13,7 +12,7 @@ chtype inch ()
 	int reset_flag = __lsb_check_params;
 	chtype ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "inch");
+		funcptr = dlsym(RTLD_NEXT, "inch");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

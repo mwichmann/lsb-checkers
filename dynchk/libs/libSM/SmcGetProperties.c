@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmcGetProperties
 static int(*funcptr) (SmcConn , SmcPropReplyProc , SmPointer ) = 0;
@@ -13,7 +12,7 @@ int SmcGetProperties (SmcConn arg0 , SmcPropReplyProc arg1 , SmPointer arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "SmcGetProperties");
+		funcptr = dlsym(RTLD_NEXT, "SmcGetProperties");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

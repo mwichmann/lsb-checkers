@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #undef __register_atfork
 static int(*funcptr) (void(* )(), void(* )(), void(* )(), void * ) = 0;
@@ -13,7 +12,7 @@ int __register_atfork (void(* arg0 )(), void(* arg1 )(), void(* arg2 )(), void *
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "__register_atfork");
+		funcptr = dlsym(RTLD_NEXT, "__register_atfork");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

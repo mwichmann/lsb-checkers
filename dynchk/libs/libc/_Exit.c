@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdlib.h>
 #undef _Exit
 static void(*funcptr) (int ) = 0;
@@ -12,7 +11,7 @@ void _Exit (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "_Exit", "GLIBC_2.1.1");
+		funcptr = dlvsym(RTLD_NEXT, "_Exit", "GLIBC_2.1.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

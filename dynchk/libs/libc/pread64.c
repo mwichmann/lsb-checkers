@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stddef.h>
 #include <unistd.h>
 #undef pread64
@@ -14,7 +13,7 @@ ssize_t pread64 (int arg0 , void * arg1 , size_t arg2 , off64_t arg3 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "pread64", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "pread64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <search.h>
 #undef twalk
 static void(*funcptr) (const void * , __action_fn_t ) = 0;
@@ -12,7 +11,7 @@ void twalk (const void * arg0 , __action_fn_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "twalk", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "twalk", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

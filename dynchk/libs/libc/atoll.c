@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdlib.h>
 #undef atoll
 static long long(*funcptr) (const char * ) = 0;
@@ -13,7 +12,7 @@ long long atoll (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	long long ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "atoll");
+		funcptr = dlsym(RTLD_NEXT, "atoll");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

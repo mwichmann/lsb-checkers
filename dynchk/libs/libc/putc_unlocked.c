@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdio.h>
 #undef putc_unlocked
 static int(*funcptr) (int , FILE * ) = 0;
@@ -13,7 +12,7 @@ int putc_unlocked (int arg0 , FILE * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "putc_unlocked", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "putc_unlocked", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

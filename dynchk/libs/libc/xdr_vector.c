@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <rpc/xdr.h>
 #include <sys/types.h>
 #undef xdr_vector
@@ -14,7 +13,7 @@ bool_t xdr_vector (XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

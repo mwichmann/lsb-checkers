@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmcDeleteProperties
 static void(*funcptr) (SmcConn , int , char * * ) = 0;
@@ -12,7 +11,7 @@ void SmcDeleteProperties (SmcConn arg0 , int arg1 , char * * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "SmcDeleteProperties");
+		funcptr = dlsym(RTLD_NEXT, "SmcDeleteProperties");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

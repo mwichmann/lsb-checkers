@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <inttypes.h>
 #undef strtoimax
 static intmax_t(*funcptr) (const char * , char * * , int ) = 0;
@@ -13,7 +12,7 @@ intmax_t strtoimax (const char * arg0 , char * * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	intmax_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "strtoimax", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "strtoimax", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

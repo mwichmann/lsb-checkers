@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #undef pthread_once
 static int(*funcptr) (pthread_once_t * , void(* )(void)) = 0;
@@ -13,7 +12,7 @@ int pthread_once (pthread_once_t * arg0 , void(* arg1 )(void))
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

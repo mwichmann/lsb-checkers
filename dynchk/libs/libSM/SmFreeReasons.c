@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmFreeReasons
 static void(*funcptr) (int , char * * ) = 0;
@@ -12,7 +11,7 @@ void SmFreeReasons (int arg0 , char * * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "SmFreeReasons");
+		funcptr = dlsym(RTLD_NEXT, "SmFreeReasons");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

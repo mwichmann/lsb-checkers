@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <rpc/xdr.h>
 #include <sys/types.h>
 #undef xdr_array
@@ -14,7 +13,7 @@ bool_t xdr_array (XDR * arg0 , caddr_t * arg1 , u_int * arg2 , u_int arg3 , u_in
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef mvgetnstr
 static int(*funcptr) (int , int , char * , int ) = 0;
@@ -13,7 +12,7 @@ int mvgetnstr (int arg0 , int arg1 , char * arg2 , int arg3 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "mvgetnstr");
+		funcptr = dlsym(RTLD_NEXT, "mvgetnstr");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

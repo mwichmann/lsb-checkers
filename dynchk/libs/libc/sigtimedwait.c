@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <signal.h>
 #include <sys/time.h>
 #undef sigtimedwait
@@ -14,7 +13,7 @@ int sigtimedwait (const sigset_t * arg0 , siginfo_t * arg1 , const struct timesp
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "sigtimedwait", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "sigtimedwait", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <rpc/svc.h>
 #include <rpc/types.h>
 #undef svc_register
@@ -14,7 +13,7 @@ bool_t svc_register (SVCXPRT * arg0 , rpcprog_t arg1 , rpcvers_t arg2 , __dispat
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "svc_register", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "svc_register", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

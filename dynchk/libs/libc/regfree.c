@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <regex.h>
 #undef regfree
 static void(*funcptr) (regex_t * ) = 0;
@@ -12,7 +11,7 @@ void regfree (regex_t * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "regfree", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "regfree", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

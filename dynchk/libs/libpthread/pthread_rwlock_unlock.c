@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #undef pthread_rwlock_unlock
 static int(*funcptr) (pthread_rwlock_t * ) = 0;
@@ -13,7 +12,7 @@ int pthread_rwlock_unlock (pthread_rwlock_t * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "pthread_rwlock_unlock", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "pthread_rwlock_unlock", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

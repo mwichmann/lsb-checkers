@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <term.h>
 #include <curses.h>
 #undef overlay
@@ -14,7 +13,7 @@ int overlay (const WINDOW * arg0 , WINDOW * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "overlay");
+		funcptr = dlsym(RTLD_NEXT, "overlay");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
