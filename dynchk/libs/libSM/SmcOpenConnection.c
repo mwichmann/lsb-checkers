@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <X11/SM/SMlib.h>
 #undef SmcOpenConnection
-static SmcConn(*funcptr) (char * , SmPointer , int , int , unsigned long , SmcCallbacks * , char * , char * * , int , char * ) = 0;
+static SmcConn(*funcptr) (char * , SmPointer , int , int , unsigned long int , SmcCallbacks * , char * , char * * , int , char * ) = 0;
 
 extern int __lsb_check_params;
-SmcConn SmcOpenConnection (char * arg0 , SmPointer arg1 , int arg2 , int arg3 , unsigned long arg4 , SmcCallbacks * arg5 , char * arg6 , char * * arg7 , int arg8 , char * arg9 )
+SmcConn SmcOpenConnection (char * arg0 , SmPointer arg1 , int arg2 , int arg3 , unsigned long int arg4 , SmcCallbacks * arg5 , char * arg6 , char * * arg7 , int arg8 , char * arg9 )
 {
 	int reset_flag = __lsb_check_params;
 	SmcConn ret_value  ;
