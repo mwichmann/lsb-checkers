@@ -275,12 +275,12 @@ CheckMemberSize(struct statvfs,f_favail,8,12,40269)
 CheckOffset(struct statvfs,f_favail,56,12,40269)
 CheckMemberSize(struct statvfs,f_fsid,8,12,40270)
 CheckOffset(struct statvfs,f_fsid,64,12,40270)
-CheckMemberSize(struct statvfs,__f_unused,4,12,40271)
-CheckOffset(struct statvfs,__f_unused,72,12,40271)
 CheckMemberSize(struct statvfs,f_flag,8,12,40272)
 CheckOffset(struct statvfs,f_flag,80,12,40272)
 CheckMemberSize(struct statvfs,f_namemax,8,12,40273)
 CheckOffset(struct statvfs,f_namemax,88,12,40273)
+CheckMemberSize(struct statvfs,__f_spare,24,10,40361)
+CheckOffset(struct statvfs,__f_spare,48,10,40361)
 #endif
 
 #if __s390x__
@@ -303,12 +303,12 @@ CheckMemberSize(struct statvfs64,f_favail,8,12,40281)
 CheckOffset(struct statvfs64,f_favail,56,12,40281)
 CheckMemberSize(struct statvfs64,f_fsid,8,12,40282)
 CheckOffset(struct statvfs64,f_fsid,64,12,40282)
-CheckMemberSize(struct statvfs64,__f_unused,4,12,40283)
-CheckOffset(struct statvfs64,__f_unused,72,12,40283)
 CheckMemberSize(struct statvfs64,f_flag,8,12,40284)
 CheckOffset(struct statvfs64,f_flag,80,12,40284)
 CheckMemberSize(struct statvfs64,f_namemax,8,12,40285)
 CheckOffset(struct statvfs64,f_namemax,88,12,40285)
+CheckMemberSize(struct statvfs,__f_spare,24,10,40361)
+CheckOffset(struct statvfs,__f_spare,48,10,40361)
 #endif
 
 #if __s390__ && !__s390x__
