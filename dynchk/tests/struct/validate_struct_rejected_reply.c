@@ -3,11 +3,19 @@
 #include "../type_tests.h"
 #include <rpc/rpc_msg.h>
 
-void validate_struct_rejected_reply(struct rejected_reply  * input, char *name)
+int validate_struct_rejected_reply(struct rejected_reply  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->rj_stat,name );
-	validate_NULL_TYPETYPE(input->ru.RJ_versions.low,name );
-	validate_NULL_TYPETYPE(input->ru.RJ_versions.high,name );
-	validate_NULL_TYPETYPE(input->ru.RJ_why,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> rj_stat,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ru.RJ_versions. low,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ru.RJ_versions. high,name ));
+		failure = 1;
+return failure;
+	if(validate_NULL_TYPETYPE(input->ru. RJ_why,name ));
+		failure = 1;
+return failure;
+return failure;
 }
 

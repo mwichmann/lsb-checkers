@@ -3,10 +3,15 @@
 #include "../type_tests.h"
 #include <sys/socket.h>
 
-void validate_struct_cmsghdr(struct cmsghdr  * input, char *name)
+int validate_struct_cmsghdr(struct cmsghdr  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->cmsg_len,name );
-	validate_NULL_TYPETYPE(input->cmsg_level,name );
-	validate_NULL_TYPETYPE(input->cmsg_type,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> cmsg_len,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cmsg_level,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cmsg_type,name ));
+		failure = 1;
+return failure;
 }
 

@@ -3,8 +3,11 @@
 #include "../type_tests.h"
 #include <sched.h>
 
-void validate_struct_sched_param(struct sched_param  * input, char *name)
+int validate_struct_sched_param(struct sched_param  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->sched_priority,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> sched_priority,name ));
+		failure = 1;
+return failure;
 }
 

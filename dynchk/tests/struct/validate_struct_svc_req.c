@@ -3,13 +3,21 @@
 #include "../type_tests.h"
 #include <rpc/svc.h>
 
-void validate_struct_svc_req(struct svc_req  * input, char *name)
+int validate_struct_svc_req(struct svc_req  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->rq_prog,name );
-	validate_NULL_TYPETYPE(input->rq_vers,name );
-	validate_NULL_TYPETYPE(input->rq_proc,name );
-	validate_struct_opaque_auth( &(input->rq_cred),name );
-	validate_NULL_TYPETYPE(input->rq_clntcred,name );
-	validate_NULL_TYPETYPE(input->rq_xprt,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> rq_prog,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rq_vers,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rq_proc,name ));
+		failure = 1;
+	if(validate_struct_opaque_auth( &(input-> rq_cred),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rq_clntcred,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rq_xprt,name ));
+		failure = 1;
+return failure;
 }
 

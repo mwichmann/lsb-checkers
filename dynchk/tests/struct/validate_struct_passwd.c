@@ -3,14 +3,23 @@
 #include "../type_tests.h"
 #include <pwd.h>
 
-void validate_struct_passwd(struct passwd  * input, char *name)
+int validate_struct_passwd(struct passwd  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->pw_name,name );
-	validate_NULL_TYPETYPE(input->pw_passwd,name );
-	validate_NULL_TYPETYPE(input->pw_uid,name );
-	validate_NULL_TYPETYPE(input->pw_gid,name );
-	validate_NULL_TYPETYPE(input->pw_gecos,name );
-	validate_NULL_TYPETYPE(input->pw_dir,name );
-	validate_NULL_TYPETYPE(input->pw_shell,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> pw_name,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pw_passwd,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pw_uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pw_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pw_gecos,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pw_dir,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pw_shell,name ));
+		failure = 1;
+return failure;
 }
 

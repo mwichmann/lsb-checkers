@@ -3,15 +3,25 @@
 #include "../type_tests.h"
 #include <termios.h>
 
-void validate_struct_termios(struct termios  * input, char *name)
+int validate_struct_termios(struct termios  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->c_iflag,name );
-	validate_NULL_TYPETYPE(input->c_oflag,name );
-	validate_NULL_TYPETYPE(input->c_cflag,name );
-	validate_NULL_TYPETYPE(input->c_lflag,name );
-	validate_NULL_TYPETYPE(input->c_line,name );
-	validate_NULL_TYPETYPE(input->c_cc,name );
-	validate_NULL_TYPETYPE(input->c_ispeed,name );
-	validate_NULL_TYPETYPE(input->c_ospeed,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> c_iflag,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> c_oflag,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> c_cflag,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> c_lflag,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> c_line,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> c_cc,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> c_ispeed,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> c_ospeed,name ));
+		failure = 1;
+return failure;
 }
 

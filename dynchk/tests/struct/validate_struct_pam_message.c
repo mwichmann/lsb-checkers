@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <security/pam_appl.h>
 
-void validate_struct_pam_message(struct pam_message  * input, char *name)
+int validate_struct_pam_message(struct pam_message  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->msg_style,name );
-	validate_NULL_TYPETYPE(input->msg,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> msg_style,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> msg,name ));
+		failure = 1;
+return failure;
 }
 

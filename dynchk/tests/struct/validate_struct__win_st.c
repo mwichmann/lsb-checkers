@@ -3,35 +3,65 @@
 #include "../type_tests.h"
 #include <curses.h>
 
-void validate_struct__win_st(struct _win_st  * input, char *name)
+int validate_struct__win_st(struct _win_st  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->_cury,name );
-	validate_NULL_TYPETYPE(input->_curx,name );
-	validate_NULL_TYPETYPE(input->_maxy,name );
-	validate_NULL_TYPETYPE(input->_maxx,name );
-	validate_NULL_TYPETYPE(input->_begy,name );
-	validate_NULL_TYPETYPE(input->_begx,name );
-	validate_NULL_TYPETYPE(input->_flags,name );
-	validate_NULL_TYPETYPE(input->_attrs,name );
-	validate_NULL_TYPETYPE(input->_bkgd,name );
-	validate_NULL_TYPETYPE(input->_notimeout,name );
-	validate_NULL_TYPETYPE(input->_clear,name );
-	validate_NULL_TYPETYPE(input->_leaveok,name );
-	validate_NULL_TYPETYPE(input->_scroll,name );
-	validate_NULL_TYPETYPE(input->_idlok,name );
-	validate_NULL_TYPETYPE(input->_idcok,name );
-	validate_NULL_TYPETYPE(input->_immed,name );
-	validate_NULL_TYPETYPE(input->_sync,name );
-	validate_NULL_TYPETYPE(input->_use_keypad,name );
-	validate_NULL_TYPETYPE(input->_delay,name );
-	validate_struct_ldat(input->_line,name );
-	validate_NULL_TYPETYPE(input->_regtop,name );
-	validate_NULL_TYPETYPE(input->_regbottom,name );
-	validate_NULL_TYPETYPE(input->_parx,name );
-	validate_NULL_TYPETYPE(input->_pary,name );
-	validate_NULL_TYPETYPE(input->_parent,name );
-	validate_struct_pdat( &(input->_pad),name );
-	validate_NULL_TYPETYPE(input->_yoffset,name );
-	validate_NULL_TYPETYPE(input->_bkgrnd,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> _cury,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _curx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _maxy,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _maxx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _begy,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _begx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _flags,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _attrs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _bkgd,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _notimeout,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _clear,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _leaveok,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _scroll,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _idlok,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _idcok,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _immed,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _sync,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _use_keypad,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _delay,name ));
+		failure = 1;
+	if(validate_struct_ldat(input-> _line,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _regtop,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _regbottom,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _parx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _pary,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _parent,name ));
+		failure = 1;
+	if(validate_struct_pdat( &(input-> _pad),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _yoffset,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _bkgrnd,name ));
+		failure = 1;
+return failure;
 }
 

@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <security/pam_appl.h>
 
-void validate_struct_pam_response(struct pam_response  * input, char *name)
+int validate_struct_pam_response(struct pam_response  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->resp,name );
-	validate_NULL_TYPETYPE(input->resp_retcode,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> resp,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> resp_retcode,name ));
+		failure = 1;
+return failure;
 }
 

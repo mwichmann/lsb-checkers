@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <security/pam_appl.h>
 
-void validate_struct_pam_conv(struct pam_conv  * input, char *name)
+int validate_struct_pam_conv(struct pam_conv  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->conv,name );
-	validate_NULL_TYPETYPE(input->appdata_ptr,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> conv,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> appdata_ptr,name ));
+		failure = 1;
+return failure;
 }
 

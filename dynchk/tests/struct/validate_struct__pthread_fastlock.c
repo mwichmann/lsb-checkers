@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <pthread.h>
 
-void validate_struct__pthread_fastlock(struct _pthread_fastlock  * input, char *name)
+int validate_struct__pthread_fastlock(struct _pthread_fastlock  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->__status,name );
-	validate_NULL_TYPETYPE(input->__spinlock,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __status,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __spinlock,name ));
+		failure = 1;
+return failure;
 }
 

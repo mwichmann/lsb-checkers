@@ -3,12 +3,19 @@
 #include "../type_tests.h"
 #include <locale.h>
 
-void validate_struct___locale_struct(struct __locale_struct  * input, char *name)
+int validate_struct___locale_struct(struct __locale_struct  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->__locales,name );
-	validate_NULL_TYPETYPE(input->__ctype_b,name );
-	validate_NULL_TYPETYPE(input->__ctype_tolower,name );
-	validate_NULL_TYPETYPE(input->__ctype_toupper,name );
-	validate_NULL_TYPETYPE(input->__names,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __locales,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __ctype_b,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __ctype_tolower,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __ctype_toupper,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __names,name ));
+		failure = 1;
+return failure;
 }
 

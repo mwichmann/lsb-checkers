@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <sys/time.h>
 
-void validate_struct_itimerval(struct itimerval  * input, char *name)
+int validate_struct_itimerval(struct itimerval  * input, char *name)
 {
-	validate_struct_timeval( &(input->it_interval),name );
-	validate_struct_timeval( &(input->it_value),name );
+int failure = 0;
+	if(validate_struct_timeval( &(input-> it_interval),name ))
+		failure = 1;
+	if(validate_struct_timeval( &(input-> it_value),name ))
+		failure = 1;
+return failure;
 }
 

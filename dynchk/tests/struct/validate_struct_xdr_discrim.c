@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <rpc/xdr.h>
 
-void validate_struct_xdr_discrim(struct xdr_discrim  * input, char *name)
+int validate_struct_xdr_discrim(struct xdr_discrim  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->value,name );
-	validate_NULL_TYPETYPE(input->proc,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> value,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> proc,name ));
+		failure = 1;
+return failure;
 }
 

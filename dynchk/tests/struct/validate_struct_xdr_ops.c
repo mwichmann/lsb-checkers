@@ -3,17 +3,29 @@
 #include "../type_tests.h"
 #include <rpc/xdr.h>
 
-void validate_struct_xdr_ops(struct xdr_ops  * input, char *name)
+int validate_struct_xdr_ops(struct xdr_ops  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->x_getlong,name );
-	validate_NULL_TYPETYPE(input->x_putlong,name );
-	validate_NULL_TYPETYPE(input->x_getbytes,name );
-	validate_NULL_TYPETYPE(input->x_putbytes,name );
-	validate_NULL_TYPETYPE(input->x_getpostn,name );
-	validate_NULL_TYPETYPE(input->x_setpostn,name );
-	validate_NULL_TYPETYPE(input->x_inline,name );
-	validate_NULL_TYPETYPE(input->x_destroy,name );
-	validate_NULL_TYPETYPE(input->x_getint32,name );
-	validate_NULL_TYPETYPE(input->x_putint32,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> x_getlong,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_putlong,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_getbytes,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_putbytes,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_getpostn,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_setpostn,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_inline,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_destroy,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_getint32,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_putint32,name ));
+		failure = 1;
+return failure;
 }
 

@@ -3,21 +3,37 @@
 #include "../type_tests.h"
 #include <zlib.h>
 
-void validate_struct_z_stream_s(struct z_stream_s  * input, char *name)
+int validate_struct_z_stream_s(struct z_stream_s  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->next_in,name );
-	validate_NULL_TYPETYPE(input->avail_in,name );
-	validate_NULL_TYPETYPE(input->total_in,name );
-	validate_NULL_TYPETYPE(input->next_out,name );
-	validate_NULL_TYPETYPE(input->avail_out,name );
-	validate_NULL_TYPETYPE(input->total_out,name );
-	validate_NULL_TYPETYPE(input->msg,name );
-	validate_struct_internal_state(input->state,name );
-	validate_NULL_TYPETYPE(input->zalloc,name );
-	validate_NULL_TYPETYPE(input->zfree,name );
-	validate_NULL_TYPETYPE(input->opaque,name );
-	validate_NULL_TYPETYPE(input->data_type,name );
-	validate_NULL_TYPETYPE(input->adler,name );
-	validate_NULL_TYPETYPE(input->reserved,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> next_in,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> avail_in,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> total_in,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> next_out,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> avail_out,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> total_out,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> msg,name ));
+		failure = 1;
+	if(validate_struct_internal_state(input-> state,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> zalloc,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> zfree,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> opaque,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> data_type,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> adler,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> reserved,name ));
+		failure = 1;
+return failure;
 }
 

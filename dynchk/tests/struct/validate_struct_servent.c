@@ -3,11 +3,17 @@
 #include "../type_tests.h"
 #include <netdb.h>
 
-void validate_struct_servent(struct servent  * input, char *name)
+int validate_struct_servent(struct servent  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->s_name,name );
-	validate_NULL_TYPETYPE(input->s_aliases,name );
-	validate_NULL_TYPETYPE(input->s_port,name );
-	validate_NULL_TYPETYPE(input->s_proto,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> s_name,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> s_aliases,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> s_port,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> s_proto,name ));
+		failure = 1;
+return failure;
 }
 

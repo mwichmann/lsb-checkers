@@ -3,31 +3,57 @@
 #include "../type_tests.h"
 #include <locale.h>
 
-void validate_struct_lconv(struct lconv  * input, char *name)
+int validate_struct_lconv(struct lconv  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->decimal_point,name );
-	validate_NULL_TYPETYPE(input->thousands_sep,name );
-	validate_NULL_TYPETYPE(input->grouping,name );
-	validate_NULL_TYPETYPE(input->int_curr_symbol,name );
-	validate_NULL_TYPETYPE(input->currency_symbol,name );
-	validate_NULL_TYPETYPE(input->mon_decimal_point,name );
-	validate_NULL_TYPETYPE(input->mon_thousands_sep,name );
-	validate_NULL_TYPETYPE(input->mon_grouping,name );
-	validate_NULL_TYPETYPE(input->positive_sign,name );
-	validate_NULL_TYPETYPE(input->negative_sign,name );
-	validate_NULL_TYPETYPE(input->int_frac_digits,name );
-	validate_NULL_TYPETYPE(input->frac_digits,name );
-	validate_NULL_TYPETYPE(input->p_cs_precedes,name );
-	validate_NULL_TYPETYPE(input->p_sep_by_space,name );
-	validate_NULL_TYPETYPE(input->n_cs_precedes,name );
-	validate_NULL_TYPETYPE(input->n_sep_by_space,name );
-	validate_NULL_TYPETYPE(input->p_sign_posn,name );
-	validate_NULL_TYPETYPE(input->n_sign_posn,name );
-	validate_NULL_TYPETYPE(input->int_p_cs_precedes,name );
-	validate_NULL_TYPETYPE(input->int_p_sep_by_space,name );
-	validate_NULL_TYPETYPE(input->int_n_cs_precedes,name );
-	validate_NULL_TYPETYPE(input->int_n_sep_by_space,name );
-	validate_NULL_TYPETYPE(input->int_p_sign_posn,name );
-	validate_NULL_TYPETYPE(input->int_n_sign_posn,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> decimal_point,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> thousands_sep,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> grouping,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> int_curr_symbol,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> currency_symbol,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mon_decimal_point,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mon_thousands_sep,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mon_grouping,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> positive_sign,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> negative_sign,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> int_frac_digits,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> frac_digits,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> p_cs_precedes,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> p_sep_by_space,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> n_cs_precedes,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> n_sep_by_space,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> p_sign_posn,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> n_sign_posn,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> int_p_cs_precedes,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> int_p_sep_by_space,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> int_n_cs_precedes,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> int_n_sep_by_space,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> int_p_sign_posn,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> int_n_sign_posn,name ));
+		failure = 1;
+return failure;
 }
 

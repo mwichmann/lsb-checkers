@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <ftw.h>
 
-void validate_struct_FTW(struct FTW  * input, char *name)
+int validate_struct_FTW(struct FTW  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->base,name );
-	validate_NULL_TYPETYPE(input->level,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> base,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> level,name ));
+		failure = 1;
+return failure;
 }
 
