@@ -149,14 +149,20 @@ numsyms=hdr1->sh_size/hdr1->sh_entsize;
 syms1=(Elf32_Sym *)((caddr_t)file1->addr+hdr1->sh_offset);
 
 for(i=0;i<numsyms;i++) {
+	/* Static Symbols */
 	if( ELF32_ST_BIND(syms1[i].st_info) == STB_LOCAL ) continue;
+	/* Weak Symbols and provided by the app */
+	if( ELF32_ST_BIND(syms1[i].st_info) == STB_WEAK ) continue;
+	/* Actually provided by a section in the app */
+	if( syms1[i].st_shndx != 0 ) continue;
 	if( !(ELF32_ST_TYPE(syms1[i].st_info) == STT_OBJECT ||
 	      ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC) ) continue;
 /*
-fprintf(stderr,"%s %x %x\n",
+fprintf(stderr,"%s %x %x %x\n",
 	ElfGetStringIndex(file1,syms1[i].st_name,hdr1->sh_link),
 	ELF32_ST_BIND(syms1[i].st_info),
-	ELF32_ST_TYPE(syms1[i].st_info)
+	ELF32_ST_TYPE(syms1[i].st_info),
+	syms1[i].st_shndx
 	);
 */
 	for( j=0; j<numDynSyms; j++ ) 
