@@ -448,12 +448,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				/*
 				 * Three additional fields to check
 				 */
-				switch( vmi_rttip->flags ) {
-				case __non_diamond_repeat_mask:
-					break;
-				case __diamond_shaped_mask:
-					break;
-				default:
+				if( vmi_rttip->flags&(~_vmi_all_mask) ) {
 					TETJ_REPORT_INFO("VMI flags %lu (found) for class %s "
 													 "are not a legal value",
 													 vmi_rttip->flags, classp->name );
@@ -485,6 +480,12 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 						TETJ_REPORT_INFO("VMI basetype[%d] address %p (found) for class "
 														 "%s doesn't match %p (expected)",
 														 j, symp, classp->name, btip->base_type);
+						test_failed = 1;
+					}
+					if( (btip->offset_flags&((1<<_base_offset_shift)-1))&(~_base_all_mask) ) {
+						TETJ_REPORT_INFO("VMI base type flags %lu (found) for class %s "
+													 "are not a legal value",
+													 btip->offset_flags, classp->name );
 						test_failed = 1;
 					}
 					if (btip->offset_flags != classp->btinfo[j].offset_flags) 
@@ -520,6 +521,12 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				if (symp != p_rttip->pointee) {
 					TETJ_REPORT_INFO("Base type %p (expected) doesn't match %p %s (found)\n",
 													 symp, p_rttip->pointee, dlinfo.dli_sname);
+					test_failed = 1;
+				}
+				if (p_rttip->offset_flags&(~_pbase_all_mask)) {
+					TETJ_REPORT_INFO("pointer offset flags %x (found) for class %s "
+													 "not a legal value\n",
+													 p_rttip->offset_flags, classp->name);
 					test_failed = 1;
 				}
 				if (p_rttip->offset_flags != classp->flags) {
