@@ -19,6 +19,15 @@ struct versym {
 	int   deprecated;
 	};
 
+#if defined(__ia64__)
+typedef struct {
+        void *func;
+        void *gpoffset;
+        } fptr;
+#else
+typedef unsigned long fptr;
+#endif
+
 //In memory format
 struct classtypeinfo_mem {
 	void	*basevtable;
@@ -70,7 +79,7 @@ struct classtypeinfo {
 struct classvtable_mem {
 	unsigned long	baseoffset;
 	const char	*typeinfo;
-	const void	*virtfuncs[0];
+	fptr		virtfuncs[0];
 	};
 
 //DB format
