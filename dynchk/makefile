@@ -4,7 +4,7 @@ WRAPPER_LIBS = \
 	libs/libncurses/libncurses.o \
 	libs/libz/libz.o \
 	libs/libm/libm.o \
-	libs/libX11/libX11.o 
+#	libs/libX11/libX11.o 
 #	libs/libpthread/libpthread.o
 
 TEST_LIB = tests/tests.o
