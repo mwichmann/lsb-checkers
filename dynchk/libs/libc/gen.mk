@@ -643,7 +643,6 @@ __ctype_get_mb_cur_max.o \
 _longjmp.o \
 _setjmp.o \
 adjtime.o \
-adjtimex.o \
 asctime_r.o \
 bindtextdomain.o \
 bsd_signal.o \
