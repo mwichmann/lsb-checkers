@@ -2,7 +2,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-static int curmaxfd = 0;
+static int curmaxfd = -1;
 
 int validate_filedescriptor(const int fd, const char *name)
 {
