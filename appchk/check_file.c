@@ -8,7 +8,6 @@
 #include <libgen.h>
 #include <string.h>
 #include "check_file.h"
-#include "../elfchk/elfchk.h"
 #include "symbols.h"
 
 ElfFile * check_file(char *filename, struct tetj_handle *journal,
@@ -87,9 +86,49 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
   }
   else
   {
-    checksymbols(elffile, journal);
-
+      /* Only check symbols if file is a program and not one of the
+         extra libs provided on the command line */
+      if (isProgram) 
+      {
+        checksymbols(elffile, journal);
+      }
+  
   }
   return elffile;
 }
 
+void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
+{
+  int i;
+  char tmp_string[TMP_STRING_SIZE+1];
+  ElfFile	*elffile;
+  Elf_Shdr	*hdr1;
+
+  /* Open ELF file for analysis */
+  if( (elffile = OpenElfFile(filename)) == NULL ) 
+  {
+    snprintf(tmp_string, TMP_STRING_SIZE, 
+             "Unable to open file %s as ELF binary\n", filename);
+    fprintf(stderr, tmp_string);
+    exit(1);
+  }
+
+  /* Check all headers in extra lib */
+  checkElfhdr(elffile, isProgram, journal);
+
+  /* Search through program headers for the one with the dynamic
+     symbols in it. */
+  for(i=0;i<elffile->numph;i++)
+  {
+    hdr1=&(elffile->saddr[i]);
+
+    if(hdr1->sh_type == SHT_DYNSYM)
+    {
+      elffile->dynsymhdr=hdr1;
+    }
+  }
+
+  /* Check dynamic symbols needed by extra lib */
+  checksymbols(elffile, journal);
+
+}
