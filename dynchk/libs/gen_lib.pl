@@ -246,7 +246,7 @@ sub get_type_string($)
 	}
 	elsif($form eq "Array")
 	{
-		return get_type_string($basetype);
+		return get_type_string($basetype); #this has to be handled after the name.
 	}
 	elsif($form eq "FuncPtr")
 	{
@@ -257,7 +257,7 @@ sub get_type_string($)
 sub get_funcptr_declaration($)
 {
 	# This might fail if nested function pointers occur. (nowhere in current LSB)
-	# In that case, we can just use the dynamic-preparation strategy, a la write_body()
+	# In that case, we can just use the dynamic query-preparation strategy, a la write_body()
 	my ($TMid) = @_;
 	my $i = 0;
 	my $output = "(";
@@ -305,7 +305,6 @@ sub get_param_type # ($param_pos, $param_int)
 	$return_string .= get_type_string($type_id);
 	return $return_string;
 }
-
 
 # write code block for interface wrapper to 'fh'
 # if 'is_lsb', write code block for lsb_* interface wrapper to 'fh'
@@ -357,7 +356,7 @@ sub write_int_header # ($fh, $func_id)
 	{
 		print $fh "#include <" . $header . ">\n";
 	}
-	print $fh $type_string ."(*funcptr)(";
+	print $fh "static ". $type_string ."(*funcptr)(";
 	write_argument_list($fh, $func_id, 0);
 	print $fh ") = 0;\n\n";
 }
