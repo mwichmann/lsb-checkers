@@ -20,7 +20,7 @@ int scanf(const char *format, ...)
 		funcptr = dlsym(RTLD_NEXT, "vscanf");
 	if(__lsb_check_params)
 	{
-        	__lsb_output(5-__lsb_check_params, "setkey()");
+        	__lsb_output(5-__lsb_check_params, "scanf()");
 		__lsb_check_params=0;	
 		validate_RWaddress(format, "scanf");
 	}

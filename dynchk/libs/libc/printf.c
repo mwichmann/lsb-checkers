@@ -24,7 +24,7 @@ int printf(const char *format, ...)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(6-__lsb_check_params, "setkey()");
+		__lsb_output(6-__lsb_check_params, "printf()");
 		validate_RWaddress(format, "printf");
 	}
 	__lsb_check_params = reset_flag;

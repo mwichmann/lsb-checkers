@@ -21,7 +21,7 @@ int tcsetattr (int arg0 , int arg1, const struct termios * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-        	__lsb_output(5-__lsb_check_params, "setkey()");
+        	__lsb_output(5-__lsb_check_params, "tcsetattr()");
 		validate_NULL_TYPETYPE(arg0, "tcsetattr");
 		validate_NULL_TYPETYPE(arg1, "tcsetattr");
 		validate_NULL_TYPETYPE(arg2, "tcsetattr");

@@ -23,7 +23,7 @@ int sscanf(const char *str, const char *format, ...)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-        	__lsb_output(5-__lsb_check_params, "setkey()");
+        	__lsb_output(5-__lsb_check_params, "sscanf()");
 		validate_Rdaddress(str, "sscanf-1");
 		validate_Rdaddress(format, "sscanf-2");
 	}
