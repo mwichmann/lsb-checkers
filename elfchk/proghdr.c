@@ -27,25 +27,32 @@ PhTypeFuncRec	Headers[] = {
 	{PT_NOTE,	"PT_NOTE",	checkPT_NOTE},
 	{PT_SHLIB,	"PT_SHLIB",	checkPT_SHLIB},
 	{PT_PHDR,	"PT_PHDR",	checkPT_PHDR},
-	{PT_NUM,	"PT_NUM",	checkPT_NUM},
+	{PT_TLS,	"PT_TLS",	checkPT_TLS},
+	{PT_GNU_EH_FRAME,"PT_GNU_EH_FRAME",checkPT_GNU_EH_FRAME},
 	};
+
+static int numProgHeaders=sizeof(Headers)/sizeof(PhTypeFuncRec);
+
+/*
+ * Return convention: -1 is failed, 0 is not-tested, 1 is passed
+ */
 
 int
 checkPT_NULL(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-return 1;
+return 0;
 }
 
 int
 checkPT_LOAD(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-return 1;
+return 0;
 }
 
 int
 checkPT_DYNAMIC(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-return 1;
+return 0;
 }
 
 int
@@ -67,7 +74,7 @@ checkPT_INTERP(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   fprintf(stderr,"Incorrect program interpreter: %s\n", 
           file->addr+hdr->p_offset);
-  return 0;
+  return -1;
 }
 
 int
@@ -79,24 +86,33 @@ return check_NOTE(file, file->addr+hdr->p_offset, hdr->p_filesz, journal);
 int
 checkPT_SHLIB(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-return 1;
+return 0;
 }
 
 int
 checkPT_PHDR(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-return 1;
+/* HEader should point to the header table */
+return 0;
 }
 
 int
-checkPT_NUM(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+checkPT_TLS(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-return 1;
+return 0;
+}
+
+int
+checkPT_GNU_EH_FRAME(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+{
+fprintf( stderr, "Program Header PT_GNU_EH_FRAME not defined in the LSB\n");
+return 0;
 }
 
 void
 checkElfproghdr(int index, ElfFile *file, struct tetj_handle *journal)
 {
+int i;
 Elf32_Phdr *hdr;
 
 hdr=&(file->paddr[index]);
@@ -104,20 +120,30 @@ hdr=&(file->paddr[index]);
 if( !hdr )
 	return;
 
-if( hdr->p_type > PT_NUM ) {
-	fprintf(stderr,"Not checking Program Headers with type %x\n",
-		hdr->p_type);
-	return;
-	}
-
 #ifdef VERBOSE
-fprintf( stderr, "Header[%2d] %-12.12s\n",
-			index, Headers[hdr->p_type].name );
+fprintf( stderr, "Header[%2d] type %x\n",
+			index, hdr->p_type );
 #endif /* VERBOSE */
 
-if( !Headers[hdr->p_type].func(file,hdr,journal))
-	{
-	fprintf( stderr, "Header[%2d] %-12.12s Failed\n",
-			index, Headers[hdr->p_type].name );
+for(i=0;i<numProgHeaders;i++){
+	if( Headers[i].type == hdr->p_type ) {
+		switch( Headers[i].func(file,hdr,journal)) {
+		case 1: /* Pass */
+			break;
+		case 0: /* Not checked */
+			fprintf( stderr, "Header[%2d] %-12.12s Not checked\n",
+				index, Headers[i].name );
+			break;
+		case -1: /* Fail */
+			fprintf( stderr, "Header[%2d] %-12.12s Failed\n",
+				index, Headers[i].name );
+			break;
+			}
+		break;  /* Found it. Don't need to look any further */
+		}
+	}
+if( i == numProgHeaders ) {
+	fprintf( stderr, "Header[%2d] type %x Not checked\n",
+				index, hdr->p_type );
 	}
 }
