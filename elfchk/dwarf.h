@@ -9,7 +9,6 @@
 
 #include <sys/types.h>
 #include <elf.h>
-#include "dwarf2.h"
 
 typedef struct CIEFrameImage {
 	Elf32_Word	length;
@@ -55,6 +54,54 @@ typedef struct EHFRMHDR {
 	void		*eh_frame_ptr;
 	int		fde_count;
 	} EHFRMHDR;
+
+/* DWARF Call Frame Instruction - Taken from DWARF v2.0.0 */
+
+/* Primary Opcodes */
+
+#define DW_CFA_advance_loc	0x01
+#define DW_CFA_offset		0x02
+#define DW_CFA_restore		0x03
+
+/* Extended Opcodes (Primary == 0) */
+
+#define DW_CFA_nop		0x00
+#define DW_CFA_set_loc		0x01
+#define DW_CFA_advance_loc1	0x02
+#define DW_CFA_advance_loc2	0x03
+#define DW_CFA_advance_loc4	0x04
+#define DW_CFA_offset_extended	0x05
+#define DW_CFA_restore_extended	0x06
+#define DW_CFA_undefined	0x07
+#define DW_CFA_same_value	0x08
+#define DW_CFA_register		0x09
+#define DW_CFA_remember_state	0x0A
+#define DW_CFA_restore_state	0x0B
+#define DW_CFA_def_cfa		0x0C
+#define DW_CFA_def_cfa_register	0x0D
+#define DW_CFA_def_cfa_offset	0x0E
+
+/* DWARF Exception Header Encoding - Taken from LSB v1.3 */
+
+/* DWARF Exception Header value format */
+
+#define DW_EH_PE_omit           0xff
+
+#define DW_EH_PE_uleb128        0x01
+#define DW_EH_PE_udata2         0x02
+#define DW_EH_PE_udata4         0x03
+#define DW_EH_PE_udata8         0x04
+#define DW_EH_PE_sleb128        0x09
+#define DW_EH_PE_sdata2         0x0A
+#define DW_EH_PE_sdata4         0x0B
+#define DW_EH_PE_sdata8         0x0C
+
+/* DWARF Exception Header application */
+
+#define DW_EH_PE_absptr         0x00
+#define DW_EH_PE_pcrel          0x10
+#define DW_EH_PE_datarel        0x30
+
 
 /* dwarf.c */
 extern unsigned long int read_leb128(unsigned char *data, int *length_return, int sign);
