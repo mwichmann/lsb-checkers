@@ -100,7 +100,9 @@ my $get_funcptr_declaration_q = $dbh->prepare(
 	or die "Couldn't prepare gen_funcptr_declaration query: " . DBI->errstr;
 
 
-my $header_q = $dbh->prepare('SELECT Hname FROM Header WHERE Hstd="Yes"')
+my $header_q = $dbh->prepare(
+'select Hname from Header, HeaderGroup, Type where
+Tstatus != "Excluded" and Theadergroup = HGid and HGheader=Hid GROUP BY Hname')
 	or die "Couldn't prepare header query: ".DBI->errstr;
 
 ################################################################################
@@ -351,9 +353,11 @@ open($header_header_file, '>header_list.h')
 
 $header_q->execute() or die "Couldn't execute header query: ".DBI->errstr;
 HEADERLIST: while(my ($header_name) = $header_q->fetchrow_array())
-{
+{ 
 	# write header requirement to struct_tests_h.h
 	write_header_to_struct_tests_h($header_header_file, $header_name);
 }
 $header_q->finish;
 close $header_header_file
+
+
