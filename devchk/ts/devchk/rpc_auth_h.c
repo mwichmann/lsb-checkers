@@ -59,12 +59,10 @@ CheckOffset(struct AUTH,ah_ops,32,2,32037)
 CheckOffset(struct AUTH,ah_private,36,2,32038)
 #elif __s390__
 CheckTypeSize(struct AUTH,40, 9896, 10)
-Msg("Missing member data for AUTH on S390\n");
-CheckOffset(struct AUTH,ah_cred,0,10,32029)
-CheckOffset(struct AUTH,ah_verf,0,10,32030)
-CheckOffset(struct AUTH,ah_key,0,10,32031)
-CheckOffset(struct AUTH,ah_ops,0,10,32037)
-CheckOffset(struct AUTH,ah_private,0,10,32038)
+CheckOffset(struct AUTH,ah_verf,12,10,32030)
+CheckOffset(struct AUTH,ah_key,24,10,32031)
+CheckOffset(struct AUTH,ah_ops,32,10,32037)
+CheckOffset(struct AUTH,ah_private,36,10,32038)
 #elif __ia64__
 CheckTypeSize(struct AUTH,72, 9896, 3)
 CheckOffset(struct AUTH,ah_verf,24,3,32030)
@@ -88,6 +86,7 @@ Msg("Find size of AUTH (10391)\n");
 #endif
 
 #ifdef __i386__
+#elif __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10428,0);
 Msg("Find size of auth_ops * (10428)\n");
@@ -102,12 +101,10 @@ CheckOffset(struct auth_ops,ah_refresh,12,2,32035)
 CheckOffset(struct auth_ops,ah_destroy,16,2,32036)
 #elif __s390__
 CheckTypeSize(struct auth_ops,20, 9897, 10)
-Msg("Missing member data for auth_ops on S390\n");
-CheckOffset(struct auth_ops,ah_nextverf,0,10,32032)
-CheckOffset(struct auth_ops,ah_marshal,0,10,32033)
-CheckOffset(struct auth_ops,ah_validate,0,10,32034)
-CheckOffset(struct auth_ops,ah_refresh,0,10,32035)
-CheckOffset(struct auth_ops,ah_destroy,0,10,32036)
+CheckOffset(struct auth_ops,ah_marshal,4,10,32033)
+CheckOffset(struct auth_ops,ah_validate,8,10,32034)
+CheckOffset(struct auth_ops,ah_refresh,12,10,32035)
+CheckOffset(struct auth_ops,ah_destroy,16,10,32036)
 #elif __ia64__
 CheckTypeSize(struct auth_ops,40, 9897, 3)
 CheckOffset(struct auth_ops,ah_marshal,8,3,32033)

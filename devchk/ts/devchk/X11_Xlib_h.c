@@ -301,13 +301,11 @@ CheckOffset(struct funcs,sub_image,0,6,32870)
 CheckOffset(struct funcs,add_pixel,0,6,32871)
 #elif __s390__
 CheckTypeSize(struct funcs,24, 9291, 10)
-Msg("Missing member data for funcs on S390\n");
-CheckOffset(struct funcs,create_image,0,10,32866)
-CheckOffset(struct funcs,destroy_image,0,10,32867)
-CheckOffset(struct funcs,get_pixel,0,10,32868)
-CheckOffset(struct funcs,put_pixel,0,10,32869)
-CheckOffset(struct funcs,sub_image,0,10,32870)
-CheckOffset(struct funcs,add_pixel,0,10,32871)
+CheckOffset(struct funcs,destroy_image,4,10,32867)
+CheckOffset(struct funcs,get_pixel,8,10,32868)
+CheckOffset(struct funcs,put_pixel,12,10,32869)
+CheckOffset(struct funcs,sub_image,16,10,32870)
+CheckOffset(struct funcs,add_pixel,20,10,32871)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9291,0);
 Msg("Find size of funcs (9291)\n");

@@ -35,16 +35,14 @@ CheckOffset(struct SVCXPRT,xp_p2,48,2,32250)
 CheckOffset(struct SVCXPRT,xp_pad,52,2,32251)
 #elif __s390__
 CheckTypeSize(struct SVCXPRT,308, 9980, 10)
-Msg("Missing member data for SVCXPRT on S390\n");
-CheckOffset(struct SVCXPRT,xp_sock,0,10,32225)
-CheckOffset(struct SVCXPRT,xp_port,0,10,32226)
-CheckOffset(struct SVCXPRT,xp_ops,0,10,32245)
-CheckOffset(struct SVCXPRT,xp_addrlen,0,10,32246)
-CheckOffset(struct SVCXPRT,xp_raddr,0,10,32247)
-CheckOffset(struct SVCXPRT,xp_verf,0,10,32248)
-CheckOffset(struct SVCXPRT,xp_p1,0,10,32249)
-CheckOffset(struct SVCXPRT,xp_p2,0,10,32250)
-CheckOffset(struct SVCXPRT,xp_pad,0,10,32251)
+CheckOffset(struct SVCXPRT,xp_port,4,10,32226)
+CheckOffset(struct SVCXPRT,xp_ops,8,10,32245)
+CheckOffset(struct SVCXPRT,xp_addrlen,12,10,32246)
+CheckOffset(struct SVCXPRT,xp_raddr,16,10,32247)
+CheckOffset(struct SVCXPRT,xp_verf,32,10,32248)
+CheckOffset(struct SVCXPRT,xp_p1,44,10,32249)
+CheckOffset(struct SVCXPRT,xp_p2,48,10,32250)
+CheckOffset(struct SVCXPRT,xp_pad,52,10,32251)
 #elif __ia64__
 CheckTypeSize(struct SVCXPRT,336, 9980, 3)
 CheckOffset(struct SVCXPRT,xp_port,4,3,32226)
@@ -80,13 +78,11 @@ CheckOffset(struct xp_ops,xp_freeargs,16,2,32242)
 CheckOffset(struct xp_ops,xp_destroy,20,2,32244)
 #elif __s390__
 CheckTypeSize(struct xp_ops,24, 9981, 10)
-Msg("Missing member data for xp_ops on S390\n");
-CheckOffset(struct xp_ops,xp_recv,0,10,32229)
-CheckOffset(struct xp_ops,xp_stat,0,10,32231)
-CheckOffset(struct xp_ops,xp_getargs,0,10,32235)
-CheckOffset(struct xp_ops,xp_reply,0,10,32238)
-CheckOffset(struct xp_ops,xp_freeargs,0,10,32242)
-CheckOffset(struct xp_ops,xp_destroy,0,10,32244)
+CheckOffset(struct xp_ops,xp_stat,4,10,32231)
+CheckOffset(struct xp_ops,xp_getargs,8,10,32235)
+CheckOffset(struct xp_ops,xp_reply,12,10,32238)
+CheckOffset(struct xp_ops,xp_freeargs,16,10,32242)
+CheckOffset(struct xp_ops,xp_destroy,20,10,32244)
 #elif __ia64__
 CheckTypeSize(struct xp_ops,48, 9981, 3)
 CheckOffset(struct xp_ops,xp_stat,8,3,32231)
@@ -94,15 +90,9 @@ CheckOffset(struct xp_ops,xp_getargs,16,3,32235)
 CheckOffset(struct xp_ops,xp_reply,24,3,32238)
 CheckOffset(struct xp_ops,xp_freeargs,32,3,32242)
 CheckOffset(struct xp_ops,xp_destroy,40,3,32244)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
-Msg("Find size of xp_ops (9981)\n");
 #endif
 
-#ifdef __no_sym__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10430,0);
-Msg("Find size of xp_ops * (10430)\n");
+#ifdef __s390__
 #endif
 
 #ifdef TET_TEST

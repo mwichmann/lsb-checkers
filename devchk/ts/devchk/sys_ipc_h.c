@@ -24,20 +24,10 @@ Msg("Checking data structures in sys/ipc.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef IPC_SET
-	CompareConstant(IPC_SET,1,3450,architecture)
+#ifdef IPC_PRIVATE
+	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
 #else
-Msg( "Error: Constant not found: IPC_SET\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef IPC_EXCL
-	CompareConstant(IPC_EXCL,00002000,3447,architecture)
-#else
-Msg( "Error: Constant not found: IPC_EXCL\n");
+Msg( "Error: Constant not found: IPC_PRIVATE\n");
 cnt++;
 #endif
 
@@ -54,6 +44,16 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef IPC_EXCL
+	CompareConstant(IPC_EXCL,00002000,3447,architecture)
+#else
+Msg( "Error: Constant not found: IPC_EXCL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPC_NOWAIT
 	CompareConstant(IPC_NOWAIT,00004000,3448,architecture)
 #else
@@ -64,20 +64,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef IPC_PRIVATE
-	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
+#ifdef IPC_RMID
+	CompareConstant(IPC_RMID,0,3449,architecture)
 #else
-Msg( "Error: Constant not found: IPC_PRIVATE\n");
+Msg( "Error: Constant not found: IPC_RMID\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef IPC_RMID
-	CompareConstant(IPC_RMID,0,3449,architecture)
+#ifdef IPC_SET
+	CompareConstant(IPC_SET,1,3450,architecture)
 #else
-Msg( "Error: Constant not found: IPC_RMID\n");
+Msg( "Error: Constant not found: IPC_SET\n");
 cnt++;
 #endif
 
@@ -140,16 +140,16 @@ CheckOffset(struct ipc_perm,__unused2,0,6,34730)
 #ifdef __s390__
 CheckTypeSize(struct ipc_perm,36, 10404, 10)
 CheckOffset(struct ipc_perm,__key,0,10,34731)
-CheckOffset(struct ipc_perm,uid,0,10,34732)
-CheckOffset(struct ipc_perm,gid,0,10,34734)
-CheckOffset(struct ipc_perm,cuid,0,10,34733)
-CheckOffset(struct ipc_perm,cgid,0,10,34735)
-CheckOffset(struct ipc_perm,mode,0,10,34736)
-CheckOffset(struct ipc_perm,__pad1,0,10,34737)
-CheckOffset(struct ipc_perm,__seq,0,10,34738)
-CheckOffset(struct ipc_perm,__pad2,0,10,34739)
-CheckOffset(struct ipc_perm,__unused1,0,10,34740)
-CheckOffset(struct ipc_perm,__unused2,0,10,34741)
+CheckOffset(struct ipc_perm,uid,4,10,34732)
+CheckOffset(struct ipc_perm,gid,8,10,34734)
+CheckOffset(struct ipc_perm,cuid,12,10,34733)
+CheckOffset(struct ipc_perm,cgid,16,10,34735)
+CheckOffset(struct ipc_perm,mode,20,10,34736)
+CheckOffset(struct ipc_perm,__pad1,22,10,34737)
+CheckOffset(struct ipc_perm,__seq,24,10,34738)
+CheckOffset(struct ipc_perm,__pad2,26,10,34739)
+CheckOffset(struct ipc_perm,__unused1,28,10,34740)
+CheckOffset(struct ipc_perm,__unused2,32,10,34741)
 #endif
 
 #ifdef TET_TEST

@@ -24,20 +24,20 @@ Msg("Checking data structures in sys/time.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef ITIMER_VIRTUAL
-	CompareConstant(ITIMER_VIRTUAL,1,3586,architecture)
+#ifdef ITIMER_REAL
+	CompareConstant(ITIMER_REAL,0,3585,architecture)
 #else
-Msg( "Error: Constant not found: ITIMER_VIRTUAL\n");
+Msg( "Error: Constant not found: ITIMER_REAL\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef ITIMER_REAL
-	CompareConstant(ITIMER_REAL,0,3585,architecture)
+#ifdef ITIMER_VIRTUAL
+	CompareConstant(ITIMER_VIRTUAL,1,3586,architecture)
 #else
-Msg( "Error: Constant not found: ITIMER_REAL\n");
+Msg( "Error: Constant not found: ITIMER_VIRTUAL\n");
 cnt++;
 #endif
 
@@ -66,9 +66,7 @@ CheckOffset(struct timezone,tz_minuteswest,0,6,33506)
 CheckOffset(struct timezone,tz_dsttime,0,6,33507)
 #elif __s390__
 CheckTypeSize(struct timezone,8, 9855, 10)
-Msg("Missing member data for timezone on S390\n");
-CheckOffset(struct timezone,tz_minuteswest,0,10,33506)
-CheckOffset(struct timezone,tz_dsttime,0,10,33507)
+CheckOffset(struct timezone,tz_dsttime,4,10,33507)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9855,0);
 Msg("Find size of timezone (9855)\n");
@@ -87,9 +85,7 @@ CheckOffset(struct itimerval,it_interval,0,6,33510)
 CheckOffset(struct itimerval,it_value,0,6,33511)
 #elif __s390__
 CheckTypeSize(struct itimerval,16, 9861, 10)
-Msg("Missing member data for itimerval on S390\n");
-CheckOffset(struct itimerval,it_interval,0,10,33510)
-CheckOffset(struct itimerval,it_value,0,10,33511)
+CheckOffset(struct itimerval,it_value,8,10,33511)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9861,0);
 Msg("Find size of itimerval (9861)\n");
@@ -108,9 +104,7 @@ CheckOffset(struct timespec,tv_sec,0,6,33502)
 CheckOffset(struct timespec,tv_nsec,0,6,33503)
 #elif __s390__
 CheckTypeSize(struct timespec,8, 7018, 10)
-Msg("Missing member data for timespec on S390\n");
-CheckOffset(struct timespec,tv_sec,0,10,33502)
-CheckOffset(struct timespec,tv_nsec,0,10,33503)
+CheckOffset(struct timespec,tv_nsec,4,10,33503)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7018,0);
 Msg("Find size of timespec (7018)\n");
@@ -129,9 +123,7 @@ CheckOffset(struct timeval,tv_sec,0,6,33504)
 CheckOffset(struct timeval,tv_usec,0,6,33505)
 #elif __s390__
 CheckTypeSize(struct timeval,8, 9858, 10)
-Msg("Missing member data for timeval on S390\n");
-CheckOffset(struct timeval,tv_sec,0,10,33504)
-CheckOffset(struct timeval,tv_usec,0,10,33505)
+CheckOffset(struct timeval,tv_usec,4,10,33505)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9858,0);
 Msg("Find size of timeval (9858)\n");

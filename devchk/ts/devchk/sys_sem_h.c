@@ -34,16 +34,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef SEM_UNDO
-	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
-#else
-Msg( "Error: Constant not found: SEM_UNDO\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef GETALL
 	CompareConstant(GETALL,13,3201,architecture)
 #else
@@ -54,20 +44,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef SETALL
-	CompareConstant(SETALL,17,3205,architecture)
+#ifdef GETNCNT
+	CompareConstant(GETNCNT,14,3202,architecture)
 #else
-Msg( "Error: Constant not found: SETALL\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef GETPID
-	CompareConstant(GETPID,11,3199,architecture)
-#else
-Msg( "Error: Constant not found: GETPID\n");
+Msg( "Error: Constant not found: GETNCNT\n");
 cnt++;
 #endif
 
@@ -94,10 +74,30 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GETNCNT
-	CompareConstant(GETNCNT,14,3202,architecture)
+#ifdef SETALL
+	CompareConstant(SETALL,17,3205,architecture)
 #else
-Msg( "Error: Constant not found: GETNCNT\n");
+Msg( "Error: Constant not found: SETALL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef SEM_UNDO
+	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
+#else
+Msg( "Error: Constant not found: SEM_UNDO\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef GETPID
+	CompareConstant(GETPID,11,3199,architecture)
+#else
+Msg( "Error: Constant not found: GETPID\n");
 cnt++;
 #endif
 
@@ -119,10 +119,8 @@ CheckOffset(struct sembuf,sem_op,0,6,30119)
 CheckOffset(struct sembuf,sem_flg,0,6,30120)
 #elif __s390__
 CheckTypeSize(struct sembuf,6, 6982, 10)
-Msg("Missing member data for sembuf on S390\n");
-CheckOffset(struct sembuf,sem_num,0,10,30118)
-CheckOffset(struct sembuf,sem_op,0,10,30119)
-CheckOffset(struct sembuf,sem_flg,0,10,30120)
+CheckOffset(struct sembuf,sem_op,2,10,30119)
+CheckOffset(struct sembuf,sem_flg,4,10,30120)
 #endif
 
 #ifdef __i386__
@@ -161,13 +159,13 @@ CheckOffset(struct semid_ds,__unused4,0,6,34776)
 #ifdef __s390__
 CheckTypeSize(struct semid_ds,64, 10408, 10)
 CheckOffset(struct semid_ds,sem_perm,0,10,34775)
-CheckOffset(struct semid_ds,sem_otime,0,10,34777)
-CheckOffset(struct semid_ds,__unused1,0,10,34778)
-CheckOffset(struct semid_ds,sem_ctime,0,10,34779)
-CheckOffset(struct semid_ds,__unused2,0,10,34780)
-CheckOffset(struct semid_ds,sem_nsems,0,10,34781)
-CheckOffset(struct semid_ds,__unused3,0,10,34782)
-CheckOffset(struct semid_ds,__unused4,0,10,34783)
+CheckOffset(struct semid_ds,sem_otime,36,10,34777)
+CheckOffset(struct semid_ds,__unused1,40,10,34778)
+CheckOffset(struct semid_ds,sem_ctime,44,10,34779)
+CheckOffset(struct semid_ds,__unused2,48,10,34780)
+CheckOffset(struct semid_ds,sem_nsems,52,10,34781)
+CheckOffset(struct semid_ds,__unused3,56,10,34782)
+CheckOffset(struct semid_ds,__unused4,60,10,34783)
 #endif
 
 #ifdef TET_TEST

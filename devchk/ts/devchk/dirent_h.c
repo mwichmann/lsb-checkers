@@ -59,12 +59,10 @@ CheckOffset(struct dirent,d_type,0,6,34410)
 CheckOffset(struct dirent,d_name,0,6,34180)
 #elif __s390__
 CheckTypeSize(struct dirent,268, 10178, 10)
-Msg("Missing member data for dirent on S390\n");
-CheckOffset(struct dirent,d_ino,0,10,34177)
-CheckOffset(struct dirent,d_off,0,10,34178)
-CheckOffset(struct dirent,d_reclen,0,10,34179)
-CheckOffset(struct dirent,d_type,0,10,34410)
-CheckOffset(struct dirent,d_name,0,10,34180)
+CheckOffset(struct dirent,d_off,4,10,34178)
+CheckOffset(struct dirent,d_reclen,8,10,34179)
+CheckOffset(struct dirent,d_type,10,10,34410)
+CheckOffset(struct dirent,d_name,11,10,34180)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);
 Msg("Find size of dirent (10178)\n");

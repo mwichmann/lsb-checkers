@@ -53,6 +53,8 @@ Msg("Find size of enum_t (9895)\n");
 CheckTypeSize(rpcvers_t,4, 9993, 2)
 #elif __ia64__
 CheckTypeSize(rpcvers_t,8, 9993, 3)
+#elif __s390__
+CheckTypeSize(rpcvers_t,0, 9993, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9993,0);
 Msg("Find size of rpcvers_t (9993)\n");

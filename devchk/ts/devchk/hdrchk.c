@@ -37,6 +37,10 @@ int architecture=9;
 int architecture=10;
 #define __found_arch__
 #endif
+#ifdef __x86_64__
+int architecture=11;
+#define __found_arch__
+#endif
 #ifndef __found_arch__
 #error "Unable to identify architecture"
 #endif
