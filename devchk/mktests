@@ -46,6 +46,12 @@ print HARNESS "tcnt+=$fname();\n";
 print TESTS "/*\n * Test of $Hname\n */\n";
 print TESTS "#include \"hdrchk.h\"\n";
 print TESTS "#include \"sys/types.h\"\n";
+
+open(INCS,"<$fname.inc");
+while(<INCS>) {
+	print TESTS $_;
+	}
+close(INCS);
 print TESTS "#include \"$Hname\"\n";
 print TESTS "\n\n\n";
 print TESTS "int $fname()\n{\n";
@@ -68,19 +74,27 @@ for(1..$cth->numrows) {
 for(1..$tth->numrows) {
 	%tentry=$tth->fetchhash;
 	$Tid=$tentry{'Tid'};
-	if( $tentry{'Ttype'} eq 'S' ) {
-		print TESTS "CheckTypeSize(struct $tentry{'Tname'},$tentry{'Tsize'})\n";
+	$Tname=$tentry{'Tname'};
+	if( $Tname=~/anon/ ) { next; };
+	if( $tentry{'Ttype'} eq 'Struct' || $tentry{'Ttype'} eq 'Union' ) {
+		if( $tentry{'Ttype'} eq 'Struct' ) {
+			$type="struct";
+		} else {
+			$type="union";
+		}
+		print TESTS "CheckTypeSize($type $tentry{'Tname'},$tentry{'Tsize'})\n";
 		#Get the members
-		$select = "SELECT DISTINCT * FROM TypeMembers ";
+		$select = "SELECT DISTINCT * FROM TypeMember ";
 		$select.= "WHERE TMmemberof=$Tid ";
+		$select.= "AND TMbitfiled='No' ";
 		$select.= "ORDER BY TMposition ";
 		$mth = $Dbh->query($select) || die $Dbh->errmsg();
 		for(1..$mth->numrows) {
 			%mentry=$mth->fetchhash;
-			print TESTS "CheckOffset(struct $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMoffset'})\n";
+			print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMoffset'})\n";
 		}
 	} else {
-	print TESTS "CheckTypeSize($tentry{'Tname'},$tentry{'Tsize'})\n";
+		print TESTS "CheckTypeSize($tentry{'Tname'},$tentry{'Tsize'})\n";
 	}
 }
 
