@@ -59,6 +59,10 @@ checkhdrident( EI_CLASS, ELFCLASS64 )
 checkhdrident( EI_CLASS, ELFCLASS32 )
 #elif __powerpc64__
 checkhdrident( EI_CLASS, ELFCLASS64 )
+#elif __s390__
+checkhdrident( EI_CLASS, ELFCLASS64 )
+#elif __s390x__ && !__s390x__
+checkhdrident( EI_CLASS, ELFCLASS32 )
 #else
 fprintf(stderr, "EI_CLASS not checked!!\n");
 #endif
@@ -69,6 +73,10 @@ checkhdrident( EI_DATA, ELFDATA2LSB )
 #elif  __powerpc__ && !__powerpc64__
 checkhdrident( EI_DATA, ELFDATA2MSB )
 #elif __powerpc64__
+checkhdrident( EI_DATA, ELFDATA2MSB )
+#elif __s390__ && !__s390x__
+checkhdrident( EI_DATA, ELFDATA2MSB )
+#elif __s390x__
 checkhdrident( EI_DATA, ELFDATA2MSB )
 #else
 fprintf(stderr, "EI_DATA not checked!!\n");
@@ -117,6 +125,10 @@ checkhdrfield( e_machine, EM_IA_64 )
 checkhdrfield( e_machine, EM_PPC )
 #elif __powerpc64__
 checkhdrfield( e_machine, EM_PPC64 )
+#elif __s390__ && !__s390x__
+checkhdrfield( e_machine, EM_S390 )
+#elif __s390x__
+checkhdrfield( e_machine, EM_S390 )
 #else
 fprintf(stderr, "e_machine not checked!!\n");
 #endif
@@ -134,6 +146,10 @@ checkhdrfield( e_flags, 0 )
 checkhdrfield( e_flags, 0x10 )
 #elif defined ( __powerpc__ )
 checkhdrfield( e_flags, 0 )
+#elif __s390__ && !__s390x__
+checkhdrfield( e_flags, 0 )
+#elif __s390x__
+checkhdrfield( e_flags, 0x40 )
 #else
 fprintf(stderr, "e_flags not checked!!\n");
 #endif
