@@ -40,8 +40,8 @@ hdr.c:
 symvers.c:
 	cp ../elfchk/symvers.c .
 	
-dist: $(SRCS)
-	tar zcf cxxabichk.tar.gz $(SRCS) makefile
+dist: $(SRCS) README
+	tar zcf cxxabichk.tar.gz $(SRCS) makefile README
 
 clean:
 	rm -f $(OBJS) cxxabichk
