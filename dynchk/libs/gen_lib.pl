@@ -9,7 +9,6 @@
 #For example, I can pass just one data reference to functions, rather
 #than pass multiple (randomly sorted, randomly named) arguments.
 
-#something fishy with get_type_info_q: some queries are returning nulls.
 use strict;
 use DBI;
 use Getopt::Std;
@@ -23,7 +22,6 @@ my($DBName) = $LSBDB;
 my($DBUser) = $LSBUSER;
 my($DBPass) = $LSBDBPASSWD;
 my($DBHost) = $LSBDBHOST;
-my($arch_number) = 2;
 my($generate_gen_file) = 1;
 my($be_quiet) = 0;
 ##############################
@@ -33,7 +31,7 @@ my($be_quiet) = 0;
 my (%options);
 my($int_WHERE_add); my($int_FROM_add);
 
-getopts('hwqd:u:p:o:l:g:a:i:', \%options);
+getopts('hwqd:u:p:o:l:g:i:', \%options);
 
 if (exists($options{'h'}))
 {
@@ -48,7 +46,6 @@ Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
     -u username  Name of user for db access
     -p password  Password for db access
     -o hostname  Hostname for DB
-    -a arch      Target Architecture
     -i interface Comma-delimited list of interfaces
     -l l1,l2,... Comma-delimited list of libraries
     -g g1,g2,... Comma-delimited list of libgroups
@@ -81,13 +78,9 @@ $DBUser = $options{'u'} if exists($options{'u'});
 $DBPass = $options{'p'} if exists($options{'p'});
 $DBHost = $options{'o'} if exists($options{'o'});
 $DBName = $options{'d'} if exists($options{'d'});
-$arch_number = $options{'a'} if exists($options{'a'});
 $generate_gen_file = 0 if exists($options{'w'});
 $generate_gen_file = 0 if exists($options{'i'});
 $be_quiet = 1 if exists($options{'q'});
-
-if($arch_number == 8 or $arch_number < 2 or $arch_number > 12)
-{  die "Invalid architecture number.  Read $0 -h\n"; }
 
 ### Parse Lib and LibGroup options - turn comma-list into query conditions.
 if (exists($options{'l'}) && exists($options{'g'}))
@@ -288,7 +281,7 @@ sub get_type_string($$$)
 	$get_type_info_q->finish();
 
 	print "empties on Type $type_id; Param number $param_pos in Interface $param_int\n"
-		unless($name ne "" and $form ne "" and $basetype ne "");
+		if($name eq "" or $form eq "" or $basetype eq "");
 
 	$name =~ s/fptr-//;
 
