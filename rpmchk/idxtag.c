@@ -10,7 +10,7 @@ checkRpmIdx(RpmFile *file1, RpmHdrIndex *hidx, RpmIdxTagFuncRec Tags[],
 				int numtags, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
-int		i,j,nindex,tag;
+int		i,j,nindex,tag,type;
 RpmHeader	*hdr;
 
 hdr=(RpmHeader *)file1->nexthdr;
@@ -22,16 +22,22 @@ hcount=ntohl(hidx->count);
 
 for(i=0;i<nindex;i++) {
 	tag=ntohl(hidx[i].tag);
+	type=ntohl(hidx[i].type);
 	for(j=0;j<numtags;j++)
 		if( Tags[j].tag == tag ) {
 			Tags[j].status=Seen;
+			if( Tags[j].type != type ) {
+				fprintf(stderr, "Type for Index %s does not match. ", Tags[j].name );
+				fprintf(stderr, "Found %d but expecting %d.\n", type, Tags[j].type );
+			}
 			/* Check the expected type here */
 			Tags[j].func(file1, &hidx[i], journal);
 			break;
 			}
 	if( j == numtags ) {
 		fprintf(stderr,"checkRpmIdx() unexpected Index tag=%d type=%d offset=%x count=%x\n",
-				ntohl(hidx[i].tag), ntohl(hidx[i].type),ntohl(hidx[i].offset),ntohl(hidx[i].count));
+				ntohl(hidx[i].tag), ntohl(hidx[i].type),
+				ntohl(hidx[i].offset),ntohl(hidx[i].count));
 		/* checkRpmIdxUNKNOWN(file1, &hidx[i], journal); */
 		}
 	}
@@ -64,19 +70,37 @@ fprintf(stderr,"checkRpmIdxHDRIMAGE() type=%d offset=%x count=%x\n",
 void
 checkRpmIdxHDRSIGNATURES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int		htag, htype, hoffset, hcount;
-int		nindex;
+int		hoffset;
+int		i;
 RpmHeader	*hdr;
+RpmHdrIndex	*sigidx;
 
+hoffset=ntohl(hidx->offset);
+sigidx=(RpmHdrIndex *)(file1->storeaddr+hoffset);
+sigdata=(char *)(((char *)sigidx)+ntohl(sigidx->offset));
+
+/*
+int		htag, htype, hcount;
 hdr=(RpmHeader *)file1->nexthdr;
-nindex=ntohl(hdr->nindex);
 htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
 fprintf(stderr,"checkRpmIdxHDRSIGNATURES() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
+*/
+
+/*
+fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
+				data[0], data[1], data[2], data[3]);
+fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
+				data[4], data[5], data[6], data[7]);
+fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
+				data[8], data[9], data[10], data[11]);
+fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
+				data[12], data[13], data[14], data[15]);
+*/
+
 }
 
 void
@@ -133,6 +157,10 @@ fprintf(stderr,"checkRpmIdxHDRI18NTABLE() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
+#if 0
+/*
+ * These calues don't really show up as Indicies.
+ */
 void
 checkRpmIdxHDRSIGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
@@ -165,16 +193,37 @@ htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
-fprintf(stderr,"checkRpmIdxHDRTAGBASE() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
+fprintf(stderr,"checkRpmIdxHDRTAGBASE() type=%d offset=%x count=%x value: %s\n",
+						htype,hoffset,hcount, value);
 }
+#endif
 
 /*
  * These functions correspond to the tag values for a Signature
  */
 
 void
-checkRpmIdxSIGSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+unsigned int	*value;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+value=(int *)(file1->storeaddr+hoffset);
+
+fprintf(stderr,"checkRpmIdxSIZE() type=%d offset=%x count=%x size=%x\n",
+						htype,hoffset,hcount,*value);
+}
+
+void
+checkRpmIdxMD5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
 int		nindex;
@@ -187,12 +236,12 @@ htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
-fprintf(stderr,"checkRpmIdxSIGSIZE() type=%d offset=%x count=%x\n",
+fprintf(stderr,"checkRpmIdxMD5() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
 void
-checkRpmIdxSIGMD5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxGPG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
 int		nindex;
@@ -205,12 +254,12 @@ htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
-fprintf(stderr,"checkRpmIdxSIGMD5() type=%d offset=%x count=%x\n",
+fprintf(stderr,"checkRpmIdxGPG() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
 void
-checkRpmIdxSIGGPG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxPGP5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
 int		nindex;
@@ -223,16 +272,17 @@ htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
-fprintf(stderr,"checkRpmIdxSIGGPG() type=%d offset=%x count=%x\n",
+fprintf(stderr,"checkRpmIdxPGP5() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
 void
-checkRpmIdxSIGPGP5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
 int		nindex;
 RpmHeader	*hdr;
+char		*shadata;
 
 hdr=(RpmHeader *)file1->nexthdr;
 nindex=ntohl(hdr->nindex);
@@ -240,13 +290,23 @@ htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
+shadata=file1->storeaddr+hoffset;
 
-fprintf(stderr,"checkRpmIdxSIGPGP5() type=%d offset=%x count=%x\n",
+/*
+fprintf(stderr,"checkRpmIdxSHA1HEADER() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
+*/
+
+if( shadata != sigdata ) {
+	fprintf(stderr,"Location of SHA1 signature (%x) ", shadata );
+	fprintf(stderr,"doesn't match location set in HDRSIGNATURES(%x)\n",
+								sigdata);
+	}
+fprintf(stderr,"checkRpmIdxSHA1HEADER() Not yet checking SHA1 contents\n");
 }
 
 void
-checkRpmIdxSIGSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxPGP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
 int		nindex;
@@ -259,25 +319,7 @@ htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
-fprintf(stderr,"checkRpmIdxSIGSHA1HEADER() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
-}
-
-void
-checkRpmIdxSIGPGP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
-{
-int		htag, htype, hoffset, hcount;
-int		nindex;
-RpmHeader	*hdr;
-
-hdr=(RpmHeader *)file1->nexthdr;
-nindex=ntohl(hdr->nindex);
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
-
-fprintf(stderr,"checkRpmIdxSIGPGP() type=%d offset=%x count=%x\n",
+fprintf(stderr,"checkRpmIdxPGP() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
