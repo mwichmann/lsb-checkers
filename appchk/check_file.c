@@ -24,6 +24,24 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
   tetj_tp_count = 0;
   tetj_testcase_start(journal, ++tetj_activity_count, filename, "");
 
+  tetj_tp_count++;
+  snprintf(tmp_string, TMP_STRING_SIZE, "Looking for file %s", filename);
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
+
+  /* Open ELF file for analysis */
+  if( (elffile = OpenElfFile(filename)) == NULL ) 
+  {
+    snprintf(tmp_string, TMP_STRING_SIZE, 
+             "Unable to open file %s as ELF binary\n", filename);
+    fprintf(stderr, tmp_string);
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    return NULL;
+  }
+  else
+  {
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+  }
+
   /* Log binary file size */
   if (stat(filename, &stat_info)==-1)
   {
@@ -53,16 +71,6 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
     tmp_string[32] = 0;
     snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
     tetj_testcase_info(journal, tetj_activity_count, 0, 0, 0, 0, tmp_string2);
-  }
-
-  /* Do actual analysis */
-  if( (elffile = OpenElfFile(filename)) == NULL ) 
-  {
-    snprintf(tmp_string, TMP_STRING_SIZE, "Unable to open file %s\n", 
-             filename);
-    fprintf(stderr, tmp_string);
-    tetj_add_controller_error(journal, tmp_string);
-    return NULL;
   }
 
   checkElf(elffile, isProgram, journal);
