@@ -93,6 +93,10 @@ for(i=0; i<size; i++)
 int
 checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
+  /*
+   * Need to look at the section name, and figure out how to check it
+   * more closely.
+   */
   return checkBITS( "PROGBITS", file1, hdr1 );
 }
 
@@ -349,11 +353,20 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
       return;
     }
   }
-  snprintf(tmp_string, TMP_STRING_SIZE, "section %s is not in the LSB",
+  if( hdr1->sh_flags &SHF_ALLOC ) {
+  	snprintf(tmp_string, TMP_STRING_SIZE, "section %s is not in the LSB",
            ElfGetString(file1, hdr1->sh_name));
-  fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count,
-              TETJ_FAIL);
-  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+  	fprintf(stderr, "%s\n", tmp_string);
+  	tetj_result(journal, tetj_activity_count, tetj_tp_count,
+              	TETJ_FAIL);
+  	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+  } else {
+  	snprintf(tmp_string, TMP_STRING_SIZE, "ignoring %s: Not in the LSB but not loaded",
+           ElfGetString(file1, hdr1->sh_name));
+  	fprintf(stderr, "%s\n", tmp_string);
+  	tetj_result(journal, tetj_activity_count, tetj_tp_count,
+              	TETJ_WARNING);
+  	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+  }
   return;
 }
