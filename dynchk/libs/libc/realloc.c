@@ -5,10 +5,12 @@
 #include <stddef.h>
 static int(*funcptr)(void *, size_t) = 0;
 
+void * __libc_realloc(void *, size_t);
+
 void * realloc(void * arg0, size_t arg1)
 {
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "realloc");
+		funcptr = __libc_realloc;
 	validate_NULL_TYPETYPE(arg0, "realloc");
 	validate_NULL_TYPETYPE(arg1, "realloc");
 	return funcptr(arg0, arg1);
@@ -17,7 +19,7 @@ void * realloc(void * arg0, size_t arg1)
 void * lsb_realloc(void * arg0, size_t arg1)
 {
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "realloc");
+		funcptr = __libc_realloc;
 	return funcptr(arg0, arg1);
 }
 
