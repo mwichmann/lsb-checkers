@@ -7,6 +7,18 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZGVNSt10moneypunctIcLb1EE2idE","GLIBCPP_3.2"},
 #endif
+#if __i386__
+	{"_ZGVNSt10moneypunctIwLb0EE2idE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZGVNSt10moneypunctIwLb1EE2idE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZGVNSt11__timepunctIcE2idE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZGVNSt11__timepunctIwE2idE","GLIBCPP_3.2"},
+#endif
 	{"_ZNKSs12find_last_ofEPKcj","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNKSs12find_last_ofEPKcj","GLIBCPP_3.2"},
@@ -162,12 +174,177 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNKSs8max_sizeEv","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZNKSs8max_sizeEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE10neg_formatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE10pos_formatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE11curr_symbolEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE11do_groupingEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE11frac_digitsEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE13decimal_pointEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE13do_neg_formatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE13do_pos_formatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE13negative_signEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE13positive_signEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE13thousands_sepEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE14do_curr_symbolEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE14do_frac_digitsEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE16do_decimal_pointEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE16do_negative_signEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE16do_positive_signEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE16do_thousands_sepEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb0EE8groupingEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE10neg_formatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE10pos_formatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE11curr_symbolEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE11do_groupingEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE11frac_digitsEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE13decimal_pointEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE13do_neg_formatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE13do_pos_formatEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE13negative_signEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE13positive_signEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE13thousands_sepEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE14do_curr_symbolEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE14do_frac_digitsEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE16do_decimal_pointEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE16do_negative_signEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE16do_positive_signEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE16do_thousands_sepEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10moneypunctIwLb1EE8groupingEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10ostrstream5rdbufEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt10ostrstream6pcountEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE15_M_date_formatsEPPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE15_M_time_formatsEPPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE19_M_days_abbreviatedEPPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE20_M_date_time_formatsEPPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE21_M_months_abbreviatedEPPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE6_M_putEPcjPKcPK2tm","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE7_M_ampmEPPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE7_M_daysEPPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIcE9_M_monthsEPPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE15_M_date_formatsEPPKw","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE15_M_time_formatsEPPKw","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE19_M_days_abbreviatedEPPKw","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE20_M_date_time_formatsEPPKw","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE21_M_months_abbreviatedEPPKw","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE6_M_putEPwjPKwPK2tm","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE7_M_ampmEPPKw","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE7_M_daysEPPKw","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNKSt11__timepunctIwE9_M_monthsEPPKw","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZNKSt11logic_error4whatEv","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNKSt13runtime_error4whatEv","GLIBCPP_3.2"},
 #endif
 	{"_ZNKSt5ctypeIcE10do_scan_isEtPKcS2_","GLIBCPP_3.2"},
 #if __i386__
@@ -1063,6 +1240,15 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSsixEj","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZNSt10__num_base13_S_format_intERKSt8ios_basePccc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10__num_base15_S_format_floatERKSt8ios_basePcci","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10__num_base8_S_atomsE","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZNSt10bad_typeidD0Ev","GLIBCPP_3.2"},
 #endif
 #if __i386__
@@ -1105,10 +1291,173 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt10ctype_base6xdigitE","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZNSt10money_base18_S_default_patternE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10money_base20_S_construct_patternEccc","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZNSt10moneypunctIcLb0EE4intlE","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZNSt10moneypunctIcLb1EE4intlE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EE24_M_initialize_moneypunctEP15__locale_structPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EE2idE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EE4intlE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EEC1EP15__locale_structPKcj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EEC1Ej","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EEC2EP15__locale_structPKcj","GLIBCPP_3.2"},
+#endif
+	{"_ZNSt10moneypunctIwLb0EEC2EP15__locale_structj",""},
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EEC2Ej","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EED0Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EED1Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb0EED2Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EE24_M_initialize_moneypunctEP15__locale_struct","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EE24_M_initialize_moneypunctEP15__locale_structPKc","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EE2idE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EE4intlE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EEC1EP15__locale_structPKcj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EEC1EP15__locale_structj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EEC1Ej","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EEC2EP15__locale_structPKcj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EEC2EP15__locale_structj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EEC2Ej","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EED0Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EED1Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10moneypunctIwLb1EED2Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstream3strEv","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstream6freezeEb","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstreamC1EPciSt13_Ios_Openmode","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstreamC1Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstreamC2EPciSt13_Ios_Openmode","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstreamC2Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstreamD0Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstreamD1Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt10ostrstreamD2Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcE12_S_timezonesE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcE23_M_initialize_timepunctEP15__locale_struct","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcE2idE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcEC1EP15__locale_structPKcj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcEC1Ej","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcEC2EP15__locale_structPKcj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcEC2Ej","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcED0Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcED1Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIcED2Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwE12_S_timezonesE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwE23_M_initialize_timepunctEP15__locale_struct","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwE2idE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwEC1EP15__locale_structPKcj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwEC1Ej","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwEC2EP15__locale_structPKcj","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwEC2Ej","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwED0Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwED1Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt11__timepunctIwED2Ev","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZNSt11logic_errorC1ERKSs","GLIBCPP_3.2"},
@@ -1138,22 +1487,42 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt11range_errorD1Ev","GLIBCPP_3.2"},
 #endif
 	{"_ZNSt12ctype_bynameIcEC1EPKcj","GLIBCPP_3.2"},
+	{"_ZNSt12ctype_bynameIcEC1EPKcj","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt12ctype_bynameIcEC1EPKcj","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZNSt12ctype_bynameIcEC1EPKcj","GLIBCPP_3.2"},
 #endif
 	{"_ZNSt12ctype_bynameIcEC2EPKcj","GLIBCPP_3.2"},
+	{"_ZNSt12ctype_bynameIcEC2EPKcj","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt12ctype_bynameIcEC2EPKcj","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZNSt12ctype_bynameIcEC2EPKcj","GLIBCPP_3.2"},
 #endif
 	{"_ZNSt12ctype_bynameIcED0Ev","GLIBCPP_3.2"},
+	{"_ZNSt12ctype_bynameIcED0Ev","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt12ctype_bynameIcED0Ev","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZNSt12ctype_bynameIcED0Ev","GLIBCPP_3.2"},
 #endif
 	{"_ZNSt12ctype_bynameIcED1Ev","GLIBCPP_3.2"},
+	{"_ZNSt12ctype_bynameIcED1Ev","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt12ctype_bynameIcED1Ev","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZNSt12ctype_bynameIcED1Ev","GLIBCPP_3.2"},
 #endif
 	{"_ZNSt12ctype_bynameIcED2Ev","GLIBCPP_3.2"},
+	{"_ZNSt12ctype_bynameIcED2Ev","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt12ctype_bynameIcED2Ev","GLIBCPP_3.2"},
+#endif
 #if __i386__
 	{"_ZNSt12ctype_bynameIcED2Ev","GLIBCPP_3.2"},
 #endif
@@ -1200,18 +1569,6 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt12length_errorD1Ev","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZNSt12out_of_rangeC1ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt12out_of_rangeC2ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt12out_of_rangeD0Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt12out_of_rangeD1Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
 	{"_ZNSt13bad_exceptionD0Ev","GLIBCPP_3.2"},
 #endif
 #if __i386__
@@ -1219,21 +1576,6 @@ struct versym libstdcxx_so_5[] = {
 #endif
 #if __i386__
 	{"_ZNSt13bad_exceptionD2Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt13runtime_errorC1ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt13runtime_errorC2ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt13runtime_errorD0Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt13runtime_errorD1Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt13runtime_errorD2Ev","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZNSt14collate_bynameIcEC1EPKcj","GLIBCPP_3.2"},
@@ -1266,18 +1608,6 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt14collate_bynameIwED2Ev","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZNSt14overflow_errorC1ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt14overflow_errorC2ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt14overflow_errorD0Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt14overflow_errorD1Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
 	{"_ZNSt15numpunct_bynameIcEC1EPKcj","GLIBCPP_3.2"},
 #endif
 #if __i386__
@@ -1306,30 +1636,6 @@ struct versym libstdcxx_so_5[] = {
 #endif
 #if __i386__
 	{"_ZNSt15numpunct_bynameIwED2Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt15underflow_errorC1ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt15underflow_errorC2ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt15underflow_errorD0Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt15underflow_errorD1Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt16invalid_argumentC1ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt16invalid_argumentC2ERKSs","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt16invalid_argumentD0Ev","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZNSt16invalid_argumentD1Ev","GLIBCPP_3.2"},
 #endif
 	{"_ZNSt5ctypeIcE13classic_tableEv","GLIBCPP_3.2"},
 #if __i386__
@@ -1587,25 +1893,24 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt9type_infoD2Ev","GLIBCPP_3.2"},
 #endif
-	{"_ZSt10unexpectedv","GLIBCPP_3.2"},
-#if __i386__
-	{"_ZSt10unexpectedv","GLIBCPP_3.2"},
-#endif
-	{"_ZSt14set_unexpectedPFvvE","GLIBCPP_3.2"},
-#if __i386__
-	{"_ZSt14set_unexpectedPFvvE","GLIBCPP_3.2"},
-#endif
 	{"_ZSt18__throw_bad_typeidv","GLIBCPP_3.2"},
 #if __i386__
 	{"_ZSt18__throw_bad_typeidv","GLIBCPP_3.2"},
 #endif
-	{"_ZSt18uncaught_exceptionv","GLIBCPP_3.2"},
 #if __i386__
-	{"_ZSt18uncaught_exceptionv","GLIBCPP_3.2"},
+	{"_ZSt9has_facetISt11__timepunctIcEEbRKSt6locale","GLIBCPP_3.2"},
 #endif
-	{"_ZSt9terminatev","GLIBCPP_3.2"},
 #if __i386__
-	{"_ZSt9terminatev","GLIBCPP_3.2"},
+	{"_ZSt9has_facetISt11__timepunctIwEEbRKSt6locale","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZSt9use_facetISt10moneypunctIwLb1EEERKT_RKSt6locale","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZSt9use_facetISt11__timepunctIcEERKT_RKSt6locale","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZSt9use_facetISt11__timepunctIwEERKT_RKSt6locale","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTIN10__cxxabiv116__enum_type_infoE","GLIBCPP_3.2"},
@@ -1683,6 +1988,9 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTISo","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZTISt10__num_base","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZTISt10bad_typeid","GLIBCPP_3.2"},
 #endif
 #if __i386__
@@ -1692,16 +2000,40 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTISt10istrstream","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZTISt10money_base","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZTISt10moneypunctIcLb0EE","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTISt10moneypunctIcLb1EE","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZTISt10moneypunctIwLb0EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt10moneypunctIwLb1EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt10ostrstream","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt11__timepunctIcE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt11__timepunctIwE","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZTISt11logic_error","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTISt11range_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt12codecvt_base","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTISt12ctype_bynameIcE","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTISt12ctype_bynameIcE","GLIBCPP_3.2"},
@@ -1716,28 +2048,10 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTISt12length_error","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZTISt12out_of_range","GLIBCPP_3.2"},
-#endif
-#if __i386__
 	{"_ZTISt13bad_exception","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZTISt13runtime_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTISt14overflow_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTISt15underflow_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTISt16invalid_argument","GLIBCPP_3.2"},
-#endif
-#if __i386__
 	{"_ZTISt8bad_cast","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTISt9bad_alloc","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTISt9exception","GLIBCPP_3.2"},
@@ -1821,6 +2135,9 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTSSo","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZTSSt10__num_base","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZTSSt10bad_typeid","GLIBCPP_3.2"},
 #endif
 #if __i386__
@@ -1830,16 +2147,40 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTSSt10istrstream","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZTSSt10money_base","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZTSSt10moneypunctIcLb0EE","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTSSt10moneypunctIcLb1EE","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZTSSt10moneypunctIwLb0EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt10moneypunctIwLb1EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt10ostrstream","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt11__timepunctIcE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt11__timepunctIwE","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZTSSt11logic_error","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTSSt11range_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt12codecvt_base","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTSSt12ctype_bynameIcE","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTSSt12ctype_bynameIwE","GLIBCPP_3.2"},
@@ -1851,28 +2192,10 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTSSt12length_error","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZTSSt12out_of_range","GLIBCPP_3.2"},
-#endif
-#if __i386__
 	{"_ZTSSt13bad_exception","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZTSSt13runtime_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTSSt14overflow_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTSSt15underflow_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTSSt16invalid_argument","GLIBCPP_3.2"},
-#endif
-#if __i386__
 	{"_ZTSSt8bad_cast","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTSSt9bad_alloc","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTSSt9exception","GLIBCPP_3.2"},
@@ -1891,6 +2214,9 @@ struct versym libstdcxx_so_5[] = {
 #endif
 #if __i386__
 	{"_ZTTSt10istrstream","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTTSt10ostrstream","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTVN10__cxxabiv116__enum_type_infoE","GLIBCPP_3.2"},
@@ -1977,10 +2303,28 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTVSt10moneypunctIcLb1EE","GLIBCPP_3.2"},
 #endif
 #if __i386__
+	{"_ZTVSt10moneypunctIwLb0EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt10moneypunctIwLb1EE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt10ostrstream","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt11__timepunctIcE","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt11__timepunctIwE","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZTVSt11logic_error","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTVSt11range_error","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTVSt12ctype_bynameIcE","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTVSt12ctype_bynameIcE","GLIBCPP_3.2"},
@@ -1995,31 +2339,19 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZTVSt12length_error","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZTVSt12out_of_range","GLIBCPP_3.2"},
-#endif
-#if __i386__
 	{"_ZTVSt13bad_exception","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTVSt13runtime_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTVSt14overflow_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTVSt15underflow_error","GLIBCPP_3.2"},
-#endif
-#if __i386__
-	{"_ZTVSt16invalid_argument","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTVSt8bad_cast","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZTVSt9bad_alloc","GLIBCPP_3.2"},
+	{"_ZTVSt9exception","GLIBCPP_3.2"},
 #endif
 #if __i386__
-	{"_ZTVSt9exception","GLIBCPP_3.2"},
+	{"_ZTv0_n12_NSt10ostrstreamD0Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTv0_n12_NSt10ostrstreamD1Ev","GLIBCPP_3.2"},
 #endif
 	{"_ZdaPv","GLIBCPP_3.2"},
 #if __i386__
@@ -2674,7 +3006,7 @@ char *St10ostrstream_typeinfo_name[] = {
 	};
 
 struct classtypeinfo St10ostrstream_typeinfo = {
-	"",
+	"_ZTVSt10ostrstream",
 	"_ZTSSt10ostrstream",
 	St10ostrstream_typeinfo_name,
 	};
@@ -2703,7 +3035,7 @@ struct classinfo _ZSt10ostrstream_classinfo = {
 	"_ZSt10ostrstream",
 	"_ZTVSt10ostrstream",
 	"_ZTISt10ostrstream",
-	"",
+	"_ZTISt10ostrstream",
 	8,
 	0,
 	0,
@@ -2974,7 +3306,7 @@ struct classinfo _ZSt12domain_error_classinfo = {
 	"_ZSt12domain_error",
 	"_ZTVSt12domain_error",
 	"_ZTISt12domain_error",
-	"",
+	"_ZTISt12domain_error",
 	2,
 	0,
 	0,
@@ -3011,7 +3343,7 @@ struct classinfo _ZSt12length_error_classinfo = {
 	"_ZSt12length_error",
 	"_ZTVSt12length_error",
 	"_ZTISt12length_error",
-	"",
+	"_ZTISt11logic_error",
 	2,
 	0,
 	0,
@@ -3019,43 +3351,6 @@ struct classinfo _ZSt12length_error_classinfo = {
 	&St12length_error_typeinfo,
 	&St12length_error_vtable,
 	St12length_error_baseinfo,
-	};
-
-char *St12out_of_range_typeinfo_name[] = {
-	};
-
-struct classtypeinfo St12out_of_range_typeinfo = {
-	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTSSt12out_of_range",
-	St12out_of_range_typeinfo_name,
-	};
-
-char *St12out_of_range_vtable_name[] = {
-	"_ZNSt12out_of_rangeD1Ev",
-	"_ZNSt12out_of_rangeD0Ev",
-	};
-
-struct classvtable St12out_of_range_vtable = {
-	0,
-	"_ZTISt12out_of_range",
-	St12out_of_range_vtable_name,
-	};
-
-struct base_type_info St12out_of_range_baseinfo[] = {
-	};
-
-struct classinfo _ZSt12out_of_range_classinfo = {
-	"_ZSt12out_of_range",
-	"_ZTVSt12out_of_range",
-	"_ZTISt12out_of_range",
-	"",
-	2,
-	0,
-	0,
-	0,
-	&St12out_of_range_typeinfo,
-	&St12out_of_range_vtable,
-	St12out_of_range_baseinfo,
 	};
 
 char *St12strstreambuf_typeinfo_name[] = {
@@ -3308,43 +3603,6 @@ struct classinfo _ZSt13basic_fstreamIwSt11char_traitsIwEE_classinfo = {
 	&St13basic_fstreamIwSt11char_traitsIwEE_typeinfo,
 	&St13basic_fstreamIwSt11char_traitsIwEE_vtable,
 	St13basic_fstreamIwSt11char_traitsIwEE_baseinfo,
-	};
-
-char *St13runtime_error_typeinfo_name[] = {
-	};
-
-struct classtypeinfo St13runtime_error_typeinfo = {
-	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTSSt13runtime_error",
-	St13runtime_error_typeinfo_name,
-	};
-
-char *St13runtime_error_vtable_name[] = {
-	"_ZNSt13runtime_errorD1Ev",
-	"_ZNSt13runtime_errorD0Ev",
-	};
-
-struct classvtable St13runtime_error_vtable = {
-	0,
-	"_ZTISt13runtime_error",
-	St13runtime_error_vtable_name,
-	};
-
-struct base_type_info St13runtime_error_baseinfo[] = {
-	};
-
-struct classinfo _ZSt13runtime_error_classinfo = {
-	"_ZSt13runtime_error",
-	"_ZTVSt13runtime_error",
-	"_ZTISt13runtime_error",
-	"",
-	2,
-	0,
-	0,
-	0,
-	&St13runtime_error_typeinfo,
-	&St13runtime_error_vtable,
-	St13runtime_error_baseinfo,
 	};
 
 char *St14basic_ifstreamIcSt11char_traitsIcEE_typeinfo_name[] = {
@@ -3677,43 +3935,6 @@ struct classinfo _ZSt14collate_bynameIwE_classinfo = {
 	&St14collate_bynameIwE_typeinfo,
 	&St14collate_bynameIwE_vtable,
 	St14collate_bynameIwE_baseinfo,
-	};
-
-char *St14overflow_error_typeinfo_name[] = {
-	};
-
-struct classtypeinfo St14overflow_error_typeinfo = {
-	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTSSt14overflow_error",
-	St14overflow_error_typeinfo_name,
-	};
-
-char *St14overflow_error_vtable_name[] = {
-	"_ZNSt14overflow_errorD1Ev",
-	"_ZNSt14overflow_errorD0Ev",
-	};
-
-struct classvtable St14overflow_error_vtable = {
-	0,
-	"_ZTISt14overflow_error",
-	St14overflow_error_vtable_name,
-	};
-
-struct base_type_info St14overflow_error_baseinfo[] = {
-	};
-
-struct classinfo _ZSt14overflow_error_classinfo = {
-	"_ZSt14overflow_error",
-	"_ZTVSt14overflow_error",
-	"_ZTISt14overflow_error",
-	"",
-	2,
-	0,
-	0,
-	0,
-	&St14overflow_error_typeinfo,
-	&St14overflow_error_vtable,
-	St14overflow_error_baseinfo,
 	};
 
 char *St15basic_stringbufIcSt11char_traitsIcESaIcEE_typeinfo_name[] = {
@@ -4116,80 +4337,6 @@ struct classinfo _ZSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traits
 	&St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
-	};
-
-char *St15underflow_error_typeinfo_name[] = {
-	};
-
-struct classtypeinfo St15underflow_error_typeinfo = {
-	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTSSt15underflow_error",
-	St15underflow_error_typeinfo_name,
-	};
-
-char *St15underflow_error_vtable_name[] = {
-	"_ZNSt15underflow_errorD1Ev",
-	"_ZNSt15underflow_errorD0Ev",
-	};
-
-struct classvtable St15underflow_error_vtable = {
-	0,
-	"_ZTISt15underflow_error",
-	St15underflow_error_vtable_name,
-	};
-
-struct base_type_info St15underflow_error_baseinfo[] = {
-	};
-
-struct classinfo _ZSt15underflow_error_classinfo = {
-	"_ZSt15underflow_error",
-	"_ZTVSt15underflow_error",
-	"_ZTISt15underflow_error",
-	"",
-	2,
-	0,
-	0,
-	0,
-	&St15underflow_error_typeinfo,
-	&St15underflow_error_vtable,
-	St15underflow_error_baseinfo,
-	};
-
-char *St16invalid_argument_typeinfo_name[] = {
-	};
-
-struct classtypeinfo St16invalid_argument_typeinfo = {
-	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTSSt16invalid_argument",
-	St16invalid_argument_typeinfo_name,
-	};
-
-char *St16invalid_argument_vtable_name[] = {
-	"_ZNSt16invalid_argumentD1Ev",
-	"_ZNSt16invalid_argumentD0Ev",
-	};
-
-struct classvtable St16invalid_argument_vtable = {
-	0,
-	"_ZTISt16invalid_argument",
-	St16invalid_argument_vtable_name,
-	};
-
-struct base_type_info St16invalid_argument_baseinfo[] = {
-	};
-
-struct classinfo _ZSt16invalid_argument_classinfo = {
-	"_ZSt16invalid_argument",
-	"_ZTVSt16invalid_argument",
-	"_ZTISt16invalid_argument",
-	"",
-	2,
-	0,
-	0,
-	0,
-	&St16invalid_argument_typeinfo,
-	&St16invalid_argument_vtable,
-	St16invalid_argument_baseinfo,
 	};
 
 char *St17moneypunct_bynameIcLb0EE_typeinfo_name[] = {
@@ -4985,43 +5132,6 @@ struct classinfo _ZSt8numpunctIwE_classinfo = {
 	&St8numpunctIwE_typeinfo,
 	&St8numpunctIwE_vtable,
 	St8numpunctIwE_baseinfo,
-	};
-
-char *St9bad_alloc_typeinfo_name[] = {
-	};
-
-struct classtypeinfo St9bad_alloc_typeinfo = {
-	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTSSt9bad_alloc",
-	St9bad_alloc_typeinfo_name,
-	};
-
-char *St9bad_alloc_vtable_name[] = {
-	"_ZNSt9bad_allocD1Ev",
-	"_ZNSt9bad_allocD0Ev",
-	};
-
-struct classvtable St9bad_alloc_vtable = {
-	0,
-	"_ZTISt9bad_alloc",
-	St9bad_alloc_vtable_name,
-	};
-
-struct base_type_info St9bad_alloc_baseinfo[] = {
-	};
-
-struct classinfo _ZSt9bad_alloc_classinfo = {
-	"_ZSt9bad_alloc",
-	"_ZTVSt9bad_alloc",
-	"_ZTISt9bad_alloc",
-	"",
-	2,
-	0,
-	0,
-	0,
-	&St9bad_alloc_typeinfo,
-	&St9bad_alloc_vtable,
-	St9bad_alloc_baseinfo,
 	};
 
 char *St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name[] = {
@@ -6843,7 +6953,7 @@ struct classinfo _ZSt10moneypunctIwLb0EE_classinfo = {
 	"_ZSt10moneypunctIwLb0EE",
 	"_ZTVSt10moneypunctIwLb0EE",
 	"_ZTISt10moneypunctIwLb0EE",
-	"",
+	"_ZTISt10moneypunctIwLb0EE",
 	8,
 	0,
 	2,
@@ -6888,7 +6998,7 @@ struct classinfo _ZSt10moneypunctIwLb1EE_classinfo = {
 	"_ZSt10moneypunctIwLb1EE",
 	"_ZTVSt10moneypunctIwLb1EE",
 	"_ZTISt10moneypunctIwLb1EE",
-	"",
+	"_ZTISt10moneypunctIwLb1EE",
 	8,
 	0,
 	2,
@@ -8105,7 +8215,7 @@ struct classinfo _ZSt10__num_base_classinfo = {
 	"_ZSt10__num_base",
 	"",
 	"_ZTISt10__num_base",
-	"",
+	"_ZTISt10__num_base",
 	0,
 	0,
 	0,
@@ -8140,7 +8250,7 @@ struct classinfo _ZSt12codecvt_base_classinfo = {
 	"_ZSt12codecvt_base",
 	"",
 	"_ZTISt12codecvt_base",
-	"",
+	"_ZTISt12codecvt_base",
 	0,
 	0,
 	0,
@@ -8619,14 +8729,12 @@ struct classinfo *libstdcxx_so_5_classinfo[] = {
 	&_ZSt12ctype_bynameIwE_classinfo,
 	&_ZSt12domain_error_classinfo,
 	&_ZSt12length_error_classinfo,
-	&_ZSt12out_of_range_classinfo,
 	&_ZSt12strstreambuf_classinfo,
 	&_ZSt13bad_exception_classinfo,
 	&_ZSt13basic_filebufIcSt11char_traitsIcEE_classinfo,
 	&_ZSt13basic_filebufIwSt11char_traitsIwEE_classinfo,
 	&_ZSt13basic_fstreamIcSt11char_traitsIcEE_classinfo,
 	&_ZSt13basic_fstreamIwSt11char_traitsIwEE_classinfo,
-	&_ZSt13runtime_error_classinfo,
 	&_ZSt14basic_ifstreamIcSt11char_traitsIcEE_classinfo,
 	&_ZSt14basic_ifstreamIwSt11char_traitsIwEE_classinfo,
 	&_ZSt14basic_ofstreamIcSt11char_traitsIcEE_classinfo,
@@ -8635,7 +8743,6 @@ struct classinfo *libstdcxx_so_5_classinfo[] = {
 	&_ZSt14codecvt_bynameIwc11__mbstate_tE_classinfo,
 	&_ZSt14collate_bynameIcE_classinfo,
 	&_ZSt14collate_bynameIwE_classinfo,
-	&_ZSt14overflow_error_classinfo,
 	&_ZSt15basic_stringbufIcSt11char_traitsIcESaIcEE_classinfo,
 	&_ZSt15basic_stringbufIwSt11char_traitsIwESaIwEE_classinfo,
 	&_ZSt15messages_bynameIcE_classinfo,
@@ -8646,8 +8753,6 @@ struct classinfo *libstdcxx_so_5_classinfo[] = {
 	&_ZSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_classinfo,
 	&_ZSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_classinfo,
 	&_ZSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_classinfo,
-	&_ZSt15underflow_error_classinfo,
-	&_ZSt16invalid_argument_classinfo,
 	&_ZSt17moneypunct_bynameIcLb0EE_classinfo,
 	&_ZSt17moneypunct_bynameIcLb1EE_classinfo,
 	&_ZSt17moneypunct_bynameIwLb0EE_classinfo,
@@ -8667,7 +8772,6 @@ struct classinfo *libstdcxx_so_5_classinfo[] = {
 	&_ZSt8bad_cast_classinfo,
 	&_ZSt8numpunctIcE_classinfo,
 	&_ZSt8numpunctIwE_classinfo,
-	&_ZSt9bad_alloc_classinfo,
 	&_ZSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_classinfo,
 	&_ZSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_classinfo,
 	&_ZSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_classinfo,
