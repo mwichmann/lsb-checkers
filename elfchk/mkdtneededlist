@@ -8,10 +8,11 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
 $select = "SELECT DISTINCT * FROM Library ";
-$select.= "LEFT JOIN Architecture ON Aid=Larch ";
+$select.= "LEFT JOIN ArchLib ON Lid=ALlid ";
+$select.= "LEFT JOIN Architecture ON Aid=ALaid ";
 $select.= "WHERE Library.Lstd='Yes' ";
 $select.= "AND Architecture.Aname!='None' ";
-$select.= "ORDER BY Lrunname ";
+$select.= "ORDER BY ALrunname ";
 
 #print $select;
 
@@ -23,7 +24,7 @@ for(1..$sth->numrows) {
 	if( $entry{'Aname'} ne "All" ) {
                 print "#if defined(".$entry{'Asymbol'}.")\n";
         }
-	printf "\t\"%s\",\n",$entry{'Lrunname'};
+	printf "\t\"%s\",\n",$entry{'ALrunname'};
 	if( $entry{'Aname'} ne "All" ) {
                 print "#endif /* ".$entry{'Asymbol'}." */\n";
         }
