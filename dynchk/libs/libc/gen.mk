@@ -1,3 +1,5 @@
+# __sigsetjmp.o \
+
 GEN_FUNCS = \
 _Exit.o \
 __assert_fail.o \
@@ -16,7 +18,6 @@ __libc_current_sigrtmin.o \
 __lxstat.o \
 __lxstat64.o \
 __mempcpy.o \
-__sigsetjmp.o \
 __stpcpy.o \
 __strtod_internal.o \
 __strtof_internal.o \
