@@ -234,6 +234,36 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef F_GETLK64
+	CompareConstant(F_GETLK64,12,1192,architecture)
+#else
+Msg( "Error: Constant not found: F_GETLK64\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef F_SETLK64
+	CompareConstant(F_SETLK64,13,1193,architecture)
+#else
+Msg( "Error: Constant not found: F_SETLK64\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef F_SETLKW64
+	CompareConstant(F_SETLKW64,14,1194,architecture)
+#else
+Msg( "Error: Constant not found: F_SETLKW64\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef F_SETOWN
 	CompareConstant(F_SETOWN,8,1195,architecture)
 #else
