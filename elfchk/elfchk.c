@@ -5,15 +5,27 @@
  * Copyright (c) 2002 Chris Yeoh (yeohc@au.ibm.com)
  *
  */
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 #include "elfchk.h"
 #include "hdr.h"
 #include "proghdr.h"
 #include "sections.h"
 
+int elfchk_debug=0;
+
 void
 checkElf(ElfFile *file1, int isProgram, struct tetj_handle *journal)
 {
 int	i;
+char	*ptr;
+
+if( (ptr=getenv("ELFCHK_DEBUG")) != NULL ) {
+	elfchk_debug=strtod(ptr,NULL);
+	if( elfchk_debug&DEBUG_ENV_OVERRIDES )
+		fprintf(stderr,"elfchk debug set to 0x%x\n", elfchk_debug );
+	}
 
 checkElfhdr(file1, isProgram, journal);
 for(i=0;i<file1->numph;i++)

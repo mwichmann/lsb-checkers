@@ -33,6 +33,18 @@ struct versym {
 #endif
 
 /*
+ * Debugging interface: Set the environment variable ELFCHK_DEBUG to a value
+ * that corresponds to the bits defined below.
+ */
+#define DEBUG_ENV_OVERRIDES	0x0001
+#define DEBUG_PROGRAM_HEADERS	0x0002
+#define DEBUG_SECTION_HEADERS	0x0004
+#define DEBUG_SECTION_CONTENTS	0x0008
+#define DEBUG_VERSION_CONTENTS	0x0010
+
+extern int elfchk_debug;
+
+/*
  * External tables that are generated from the DB.
  */
 
