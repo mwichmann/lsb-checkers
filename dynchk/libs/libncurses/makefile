@@ -2,6 +2,8 @@ HAND_FUNCS= \
 
 include gen.mk
 
+CC=lsbcc
+
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
 all: $(FUNCS) libncurses.o
