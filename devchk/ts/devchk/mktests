@@ -74,7 +74,8 @@ sub writetest($$)
 	$select.= "LEFT JOIN Architecture ON Aid=ATaid ";
 	$select.= "WHERE HGheader=$Hid ";
 	$select.= "AND Theadergroup=HGid ";
-	$select.= "AND Tid IN ($typelist)";
+	$select.= "AND Tid IN ($typelist) ";
+	$select.= "AND Tstatus != 'Excluded'";
 	$select.= "ORDER BY Theadergroup,Tid ";
 	$tth = $Dbh->query($select) || die $Dbh->errmsg();
 	if( $cth->numrows == 0 && $tth->numrows == 0 ) {

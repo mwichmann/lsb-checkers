@@ -106,6 +106,20 @@ Msg( "Warning: Constant not found: PTHREAD_CANCEL_ASYNCHRONOUS\n");
 Msg( "Warning: Constant not found: PTHREAD_CANCELED\n");
 #endif
 
+#ifdef __i386__
+CheckTypeSize(pthread_key_t,4, 9059, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9059,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(pthread_t,4, 9040, 2)
+#elif __ia64__
+CheckTypeSize(pthread_t,8, 9040, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9040,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

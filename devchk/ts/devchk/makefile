@@ -2,16 +2,11 @@ OBJS = hdrchk.o \
 	GL_gl_h.o \
 	GL_glx_h.o \
 	X11_ICE_ICElib_h.o \
-	X11_Intrinsic_h.o \
 	X11_SM_SMlib_h.o \
 	X11_X_h.o \
-	X11_XKBlib_h.o \
 	X11_Xcms_h.o \
 	X11_Xlib_h.o \
-	X11_Xresource_h.o \
 	X11_Xutil_h.o \
-	X11_extensions_XKBgeom_h.o \
-	X11_extensions_Xdbe_h.o \
 	X11_extensions_security_h.o \
 	X11_extensions_sync_h.o \
 	aio_h.o \
@@ -33,17 +28,17 @@ OBJS = hdrchk.o \
 	nl_types_h.o \
 	pthread_h.o \
 	regex_h.o \
-	rpc_xdr_h.o \
 	search_h.o \
 	semaphore_h.o \
 	setjmp_h.o \
 	signal_h.o \
+	stddef_h.o \
 	stdio_h.o \
 	stdlib_h.o \
 	sys_ipc_h.o \
+	sys_shm_h.o \
 	sys_socket_h.o \
 	sys_stat_h.o \
-	sys_time_h.o \
 	sys_types_h.o \
 	sys_wait_h.o \
 	termios_h.o \
@@ -51,7 +46,6 @@ OBJS = hdrchk.o \
 	unistd_h.o \
 	wchar_h.o \
 	wctype_h.o \
-	zlib_h.o \
 	intrinsic.o 
 
 ifdef TET_ROOT

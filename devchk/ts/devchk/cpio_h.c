@@ -22,6 +22,7 @@ int pcnt=0;
 Msg("Checking data structures in cpio.h\n");
 #endif
 
+/* No test for MAGIC */
 #ifdef C_IRUSR
 	CompareConstant(C_IRUSR,000400)
 #else

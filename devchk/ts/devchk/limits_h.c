@@ -22,6 +22,12 @@ int pcnt=0;
 Msg("Checking data structures in limits.h\n");
 #endif
 
+#ifdef HUGE_VAL
+	CompareConstant(HUGE_VAL,0xFFFFFFFF)
+#else
+Msg( "Warning: Constant not found: HUGE_VAL\n");
+#endif
+
 #ifdef MB_LEN_MAX
 	CompareConstant(MB_LEN_MAX,16)
 #else

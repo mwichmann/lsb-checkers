@@ -33,18 +33,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8540,0);
 #endif
 
 #ifdef __i386__
-#elif __ia64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8919,0);
-#endif
-
-#ifdef __i386__
-#elif __ia64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8920,0);
-#endif
-
-#ifdef __i386__
 CheckTypeSize(XErrorHandler,4, 8930, 2)
 #elif __ia64__
 CheckTypeSize(XErrorHandler,8, 8930, 3)
