@@ -10,12 +10,12 @@ div_t div (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "div");
-	validate_NULL_TYPETYPE(arg0, "div");
-	validate_NULL_TYPETYPE(arg1, "div");
+	validate_NULL_TYPETYPE(  arg0, "div");
+	validate_NULL_TYPETYPE(  arg1, "div");
 	return funcptr(arg0, arg1);
 }
 
-div_t lsb_div (int arg0 , int arg1 )
+div_t __lsb_div (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "div");

@@ -11,13 +11,13 @@ SVCXPRT * svctcp_create (int arg0 , u_int arg1 , u_int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svctcp_create");
-	validate_NULL_TYPETYPE(arg0, "svctcp_create");
-	validate_NULL_TYPETYPE(arg1, "svctcp_create");
-	validate_NULL_TYPETYPE(arg2, "svctcp_create");
+	validate_NULL_TYPETYPE(  arg0, "svctcp_create");
+	validate_NULL_TYPETYPE(  arg1, "svctcp_create");
+	validate_NULL_TYPETYPE(  arg2, "svctcp_create");
 	return funcptr(arg0, arg1, arg2);
 }
 
-SVCXPRT * lsb_svctcp_create (int arg0 , u_int arg1 , u_int arg2 )
+SVCXPRT * __lsb_svctcp_create (int arg0 , u_int arg1 , u_int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svctcp_create");

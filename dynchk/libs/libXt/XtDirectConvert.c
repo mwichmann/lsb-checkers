@@ -20,7 +20,7 @@ void XtDirectConvert(XtConverter arg0, XrmValuePtr arg1, Cardinal arg2, XrmValue
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtDirectConvert(XtConverter arg0, XrmValuePtr arg1, Cardinal arg2, XrmValuePtr arg3, XrmValue * arg4)
+void __lsb_XtDirectConvert(XtConverter arg0, XrmValuePtr arg1, Cardinal arg2, XrmValuePtr arg3, XrmValue * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtDirectConvert");

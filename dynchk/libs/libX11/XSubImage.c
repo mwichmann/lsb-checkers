@@ -11,7 +11,7 @@ XImage * XSubImage()
 	return funcptr();
 }
 
-XImage * lsb_XSubImage()
+XImage * __lsb_XSubImage()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSubImage");

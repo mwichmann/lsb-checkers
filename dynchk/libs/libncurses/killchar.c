@@ -13,7 +13,7 @@ char killchar ()
 	return funcptr();
 }
 
-char lsb_killchar ()
+char __lsb_killchar ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "killchar");

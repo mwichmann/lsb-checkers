@@ -13,7 +13,7 @@ int nocbreak ()
 	return funcptr();
 }
 
-int lsb_nocbreak ()
+int __lsb_nocbreak ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nocbreak");

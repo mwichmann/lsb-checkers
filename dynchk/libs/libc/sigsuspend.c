@@ -10,11 +10,12 @@ int sigsuspend (const sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigsuspend");
-	validate_NULL_TYPETYPE(arg0, "sigsuspend");
+	validate_Rdaddress( arg0, "sigsuspend");
+	validate_NULL_TYPETYPE(  arg0, "sigsuspend");
 	return funcptr(arg0);
 }
 
-int lsb_sigsuspend (const sigset_t * arg0 )
+int __lsb_sigsuspend (const sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigsuspend");

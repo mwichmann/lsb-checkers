@@ -16,7 +16,7 @@ int XDefineCursor(Display * arg0, Window arg1, Cursor arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XDefineCursor(Display * arg0, Window arg1, Cursor arg2)
+int __lsb_XDefineCursor(Display * arg0, Window arg1, Cursor arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefineCursor");

@@ -22,7 +22,7 @@ void glColorTable(GLenum arg0, GLenum arg1, GLsizei arg2, GLenum arg3, GLenum ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glColorTable(GLenum arg0, GLenum arg1, GLsizei arg2, GLenum arg3, GLenum arg4, GLvoid * arg5)
+void __lsb_glColorTable(GLenum arg0, GLenum arg1, GLsizei arg2, GLenum arg3, GLenum arg4, GLvoid * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glColorTable");

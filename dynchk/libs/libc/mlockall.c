@@ -10,11 +10,11 @@ int mlockall (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlockall");
-	validate_NULL_TYPETYPE(arg0, "mlockall");
+	validate_NULL_TYPETYPE(  arg0, "mlockall");
 	return funcptr(arg0);
 }
 
-int lsb_mlockall (int arg0 )
+int __lsb_mlockall (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlockall");

@@ -14,7 +14,7 @@ void glGetIntegerv(GLenum arg0, GLint * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glGetIntegerv(GLenum arg0, GLint * arg1)
+void __lsb_glGetIntegerv(GLenum arg0, GLint * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetIntegerv");

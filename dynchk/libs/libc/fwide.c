@@ -11,12 +11,13 @@ int fwide (FILE * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fwide");
-	validate_NULL_TYPETYPE(arg0, "fwide");
-	validate_NULL_TYPETYPE(arg1, "fwide");
+	validate_Rdaddress( arg0, "fwide");
+	validate_NULL_TYPETYPE(  arg0, "fwide");
+	validate_NULL_TYPETYPE(  arg1, "fwide");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fwide (FILE * arg0 , int arg1 )
+int __lsb_fwide (FILE * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fwide");

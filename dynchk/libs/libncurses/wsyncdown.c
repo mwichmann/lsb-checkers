@@ -10,11 +10,12 @@ void wsyncdown (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsyncdown");
-	validate_NULL_TYPETYPE(arg0, "wsyncdown");
+	validate_Rdaddress( arg0, "wsyncdown");
+	validate_NULL_TYPETYPE(  arg0, "wsyncdown");
 	funcptr(arg0);
 }
 
-void lsb_wsyncdown (WINDOW * arg0 )
+void __lsb_wsyncdown (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsyncdown");

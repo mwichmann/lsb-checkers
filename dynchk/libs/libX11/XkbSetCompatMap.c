@@ -15,7 +15,7 @@ int XkbSetCompatMap(Display * arg0, unsigned int arg1, XkbDescPtr arg2, int arg3
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XkbSetCompatMap(Display * arg0, unsigned int arg1, XkbDescPtr arg2, int arg3)
+int __lsb_XkbSetCompatMap(Display * arg0, unsigned int arg1, XkbDescPtr arg2, int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSetCompatMap");

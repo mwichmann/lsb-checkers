@@ -11,11 +11,11 @@ wint_t putwchar (wchar_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwchar");
-	validate_NULL_TYPETYPE(arg0, "putwchar");
+	validate_NULL_TYPETYPE(  arg0, "putwchar");
 	return funcptr(arg0);
 }
 
-wint_t lsb_putwchar (wchar_t arg0 )
+wint_t __lsb_putwchar (wchar_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwchar");

@@ -20,7 +20,7 @@ int XrmQGetSearchList(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, Xrm
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XrmQGetSearchList(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, XrmSearchList arg3, int arg4)
+int __lsb_XrmQGetSearchList(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, XrmSearchList arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmQGetSearchList");

@@ -11,7 +11,7 @@ _Unwind_Word _Unwind_GetGR()
 	return funcptr();
 }
 
-_Unwind_Word lsb__Unwind_GetGR()
+_Unwind_Word __lsb__Unwind_GetGR()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetGR");

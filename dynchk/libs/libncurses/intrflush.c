@@ -10,12 +10,13 @@ int intrflush (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "intrflush");
-	validate_NULL_TYPETYPE(arg0, "intrflush");
-	validate_NULL_TYPETYPE(arg1, "intrflush");
+	validate_Rdaddress( arg0, "intrflush");
+	validate_NULL_TYPETYPE(  arg0, "intrflush");
+	validate_NULL_TYPETYPE(  arg1, "intrflush");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_intrflush (WINDOW * arg0 , bool arg1 )
+int __lsb_intrflush (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "intrflush");

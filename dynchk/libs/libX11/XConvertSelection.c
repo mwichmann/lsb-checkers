@@ -22,7 +22,7 @@ int XConvertSelection(Display * arg0, Atom arg1, Atom arg2, Atom arg3, Window ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XConvertSelection(Display * arg0, Atom arg1, Atom arg2, Atom arg3, Window arg4, Time arg5)
+int __lsb_XConvertSelection(Display * arg0, Atom arg1, Atom arg2, Atom arg3, Window arg4, Time arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XConvertSelection");

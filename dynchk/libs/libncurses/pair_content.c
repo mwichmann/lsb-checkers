@@ -10,13 +10,15 @@ int pair_content (short arg0 , short * arg1 , short * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pair_content");
-	validate_NULL_TYPETYPE(arg0, "pair_content");
-	validate_NULL_TYPETYPE(arg1, "pair_content");
-	validate_NULL_TYPETYPE(arg2, "pair_content");
+	validate_NULL_TYPETYPE(  arg0, "pair_content");
+	validate_Rdaddress( arg1, "pair_content");
+	validate_NULL_TYPETYPE(  arg1, "pair_content");
+	validate_Rdaddress( arg2, "pair_content");
+	validate_NULL_TYPETYPE(  arg2, "pair_content");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_pair_content (short arg0 , short * arg1 , short * arg2 )
+int __lsb_pair_content (short arg0 , short * arg1 , short * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pair_content");

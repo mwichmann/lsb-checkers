@@ -20,7 +20,7 @@ void XtRemoveEventHandler(Widget arg0, EventMask arg1, int arg2, XtEventHandler 
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtRemoveEventHandler(Widget arg0, EventMask arg1, int arg2, XtEventHandler arg3, XtPointer arg4)
+void __lsb_XtRemoveEventHandler(Widget arg0, EventMask arg1, int arg2, XtEventHandler arg3, XtPointer arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRemoveEventHandler");

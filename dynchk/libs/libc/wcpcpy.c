@@ -11,12 +11,14 @@ wchar_t * wcpcpy (wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcpcpy");
-	validate_NULL_TYPETYPE(arg0, "wcpcpy");
-	validate_NULL_TYPETYPE(arg1, "wcpcpy");
+	validate_Rdaddress( arg0, "wcpcpy");
+	validate_NULL_TYPETYPE(  arg0, "wcpcpy");
+	validate_Rdaddress( arg1, "wcpcpy");
+	validate_NULL_TYPETYPE(  arg1, "wcpcpy");
 	return funcptr(arg0, arg1);
 }
 
-wchar_t * lsb_wcpcpy (wchar_t * arg0 , const wchar_t * arg1 )
+wchar_t * __lsb_wcpcpy (wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcpcpy");

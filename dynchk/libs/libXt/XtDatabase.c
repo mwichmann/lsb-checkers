@@ -12,7 +12,7 @@ XrmDatabase XtDatabase(Display * arg0)
 	return funcptr(arg0);
 }
 
-XrmDatabase lsb_XtDatabase(Display * arg0)
+XrmDatabase __lsb_XtDatabase(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtDatabase");

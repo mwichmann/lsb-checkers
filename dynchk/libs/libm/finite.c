@@ -10,11 +10,11 @@ int finite (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finite");
-	validate_NULL_TYPETYPE(arg0, "finite");
+	validate_NULL_TYPETYPE(  arg0, "finite");
 	return funcptr(arg0);
 }
 
-int lsb_finite (double arg0 )
+int __lsb_finite (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finite");

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef conjl
 static long double complex(*funcptr) (long double complex ) = 0;
@@ -11,11 +10,11 @@ long double complex conjl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conjl");
-	validate_NULL_TYPETYPE(arg0, "conjl");
+	validate_NULL_TYPETYPE(  arg0, "conjl");
 	return funcptr(arg0);
 }
 
-long double complex lsb_conjl (long double complex arg0 )
+long double complex __lsb_conjl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conjl");

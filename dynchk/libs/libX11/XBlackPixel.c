@@ -13,7 +13,7 @@ unsigned long XBlackPixel(Display * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-unsigned long lsb_XBlackPixel(Display * arg0, int arg1)
+unsigned long __lsb_XBlackPixel(Display * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XBlackPixel");

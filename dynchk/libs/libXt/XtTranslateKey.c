@@ -17,7 +17,7 @@ void XtTranslateKey(Display * arg0, unsigned int arg1, Modifiers arg2, Modifiers
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtTranslateKey(Display * arg0, unsigned int arg1, Modifiers arg2, Modifiers * arg3, KeySym * arg4)
+void __lsb_XtTranslateKey(Display * arg0, unsigned int arg1, Modifiers arg2, Modifiers * arg3, KeySym * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtTranslateKey");

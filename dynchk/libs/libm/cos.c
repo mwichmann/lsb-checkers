@@ -10,11 +10,11 @@ double cos (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cos");
-	validate_NULL_TYPETYPE(arg0, "cos");
+	validate_NULL_TYPETYPE(  arg0, "cos");
 	return funcptr(arg0);
 }
 
-double lsb_cos (double arg0 )
+double __lsb_cos (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cos");

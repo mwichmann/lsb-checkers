@@ -13,7 +13,7 @@ struct protoent * getprotoent ()
 	return funcptr();
 }
 
-struct protoent * lsb_getprotoent ()
+struct protoent * __lsb_getprotoent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotoent");

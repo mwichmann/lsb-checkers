@@ -11,11 +11,11 @@ pid_t __getpgid (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__getpgid");
-	validate_NULL_TYPETYPE(arg0, "__getpgid");
+	validate_NULL_TYPETYPE(  arg0, "__getpgid");
 	return funcptr(arg0);
 }
 
-pid_t lsb___getpgid (pid_t arg0 )
+pid_t __lsb___getpgid (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__getpgid");

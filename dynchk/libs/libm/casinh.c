@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef casinh
 static double complex(*funcptr) (double complex ) = 0;
@@ -11,11 +10,11 @@ double complex casinh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinh");
-	validate_NULL_TYPETYPE(arg0, "casinh");
+	validate_NULL_TYPETYPE(  arg0, "casinh");
 	return funcptr(arg0);
 }
 
-double complex lsb_casinh (double complex arg0 )
+double complex __lsb_casinh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinh");

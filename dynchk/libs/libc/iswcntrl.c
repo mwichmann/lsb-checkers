@@ -10,11 +10,11 @@ int iswcntrl (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswcntrl");
-	validate_NULL_TYPETYPE(arg0, "iswcntrl");
+	validate_NULL_TYPETYPE(  arg0, "iswcntrl");
 	return funcptr(arg0);
 }
 
-int lsb_iswcntrl (wint_t arg0 )
+int __lsb_iswcntrl (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswcntrl");

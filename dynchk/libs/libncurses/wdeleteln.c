@@ -10,11 +10,12 @@ int wdeleteln (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wdeleteln");
-	validate_NULL_TYPETYPE(arg0, "wdeleteln");
+	validate_Rdaddress( arg0, "wdeleteln");
+	validate_NULL_TYPETYPE(  arg0, "wdeleteln");
 	return funcptr(arg0);
 }
 
-int lsb_wdeleteln (WINDOW * arg0 )
+int __lsb_wdeleteln (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wdeleteln");

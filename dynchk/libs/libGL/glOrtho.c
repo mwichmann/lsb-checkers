@@ -23,7 +23,7 @@ void glOrtho(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3, GLdoubl
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glOrtho(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3, GLdouble arg4, GLdouble arg5)
+void __lsb_glOrtho(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3, GLdouble arg4, GLdouble arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glOrtho");

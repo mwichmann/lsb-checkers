@@ -30,7 +30,7 @@ void glMap2f(GLenum arg0, GLfloat arg1, GLfloat arg2, GLint arg3, GLint arg4, GL
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
-void lsb_glMap2f(GLenum arg0, GLfloat arg1, GLfloat arg2, GLint arg3, GLint arg4, GLfloat arg5, GLfloat arg6, GLint arg7, GLint arg8, GLfloat * arg9)
+void __lsb_glMap2f(GLenum arg0, GLfloat arg1, GLfloat arg2, GLint arg3, GLint arg4, GLfloat arg5, GLfloat arg6, GLint arg7, GLint arg8, GLfloat * arg9)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glMap2f");

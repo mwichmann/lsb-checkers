@@ -18,7 +18,7 @@ void SmcRequestSaveYourself(SmcConn arg0, int arg1, int arg2, int arg3, int arg4
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_SmcRequestSaveYourself(SmcConn arg0, int arg1, int arg2, int arg3, int arg4, int arg5)
+void __lsb_SmcRequestSaveYourself(SmcConn arg0, int arg1, int arg2, int arg3, int arg4, int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcRequestSaveYourself");

@@ -10,11 +10,12 @@ void funlockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "funlockfile");
-	validate_NULL_TYPETYPE(arg0, "funlockfile");
+	validate_Rdaddress( arg0, "funlockfile");
+	validate_NULL_TYPETYPE(  arg0, "funlockfile");
 	funcptr(arg0);
 }
 
-void lsb_funlockfile (FILE * arg0 )
+void __lsb_funlockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "funlockfile");

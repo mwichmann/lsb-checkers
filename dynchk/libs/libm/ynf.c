@@ -10,12 +10,12 @@ float ynf (int arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ynf");
-	validate_NULL_TYPETYPE(arg0, "ynf");
-	validate_NULL_TYPETYPE(arg1, "ynf");
+	validate_NULL_TYPETYPE(  arg0, "ynf");
+	validate_NULL_TYPETYPE(  arg1, "ynf");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_ynf (int arg0 , float arg1 )
+float __lsb_ynf (int arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ynf");

@@ -17,7 +17,7 @@ int XSetDashes(Display * arg0, GC arg1, int arg2, char * arg3, int arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XSetDashes(Display * arg0, GC arg1, int arg2, char * arg3, int arg4)
+int __lsb_XSetDashes(Display * arg0, GC arg1, int arg2, char * arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetDashes");

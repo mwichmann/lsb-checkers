@@ -10,11 +10,11 @@ long jrand48 (unsigned short arg0 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jrand48");
-	validate_NULL_TYPETYPE(arg0, "jrand48");
+	validate_NULL_TYPETYPE(  arg0, "jrand48");
 	return funcptr(arg0);
 }
 
-long lsb_jrand48 (unsigned short arg0 [])
+long __lsb_jrand48 (unsigned short arg0 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jrand48");

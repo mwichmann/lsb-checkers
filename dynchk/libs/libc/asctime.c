@@ -10,11 +10,12 @@ char * asctime (const struct tm * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asctime");
-	validate_NULL_TYPETYPE(arg0, "asctime");
+	validate_Rdaddress( arg0, "asctime");
+	validate_NULL_TYPETYPE(  arg0, "asctime");
 	return funcptr(arg0);
 }
 
-char * lsb_asctime (const struct tm * arg0 )
+char * __lsb_asctime (const struct tm * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asctime");

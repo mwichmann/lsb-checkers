@@ -10,12 +10,12 @@ int mvgetch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetch");
-	validate_NULL_TYPETYPE(arg0, "mvgetch");
-	validate_NULL_TYPETYPE(arg1, "mvgetch");
+	validate_NULL_TYPETYPE(  arg0, "mvgetch");
+	validate_NULL_TYPETYPE(  arg1, "mvgetch");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_mvgetch (int arg0 , int arg1 )
+int __lsb_mvgetch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetch");

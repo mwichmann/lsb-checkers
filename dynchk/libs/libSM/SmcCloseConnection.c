@@ -15,7 +15,7 @@ SmcCloseStatus SmcCloseConnection(SmcConn arg0, int arg1, char * * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-SmcCloseStatus lsb_SmcCloseConnection(SmcConn arg0, int arg1, char * * arg2)
+SmcCloseStatus __lsb_SmcCloseConnection(SmcConn arg0, int arg1, char * * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcCloseConnection");

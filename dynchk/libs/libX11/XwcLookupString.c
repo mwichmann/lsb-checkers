@@ -18,7 +18,7 @@ int XwcLookupString(XIC arg0, XKeyPressedEvent * arg1, wchar_t * arg2, int arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XwcLookupString(XIC arg0, XKeyPressedEvent * arg1, wchar_t * arg2, int arg3, KeySym * arg4, int * arg5)
+int __lsb_XwcLookupString(XIC arg0, XKeyPressedEvent * arg1, wchar_t * arg2, int arg3, KeySym * arg4, int * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XwcLookupString");

@@ -13,7 +13,7 @@ XtAppContext XtWidgetToApplicationContext(Widget arg0)
 	return funcptr(arg0);
 }
 
-XtAppContext lsb_XtWidgetToApplicationContext(Widget arg0)
+XtAppContext __lsb_XtWidgetToApplicationContext(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtWidgetToApplicationContext");

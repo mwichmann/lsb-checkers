@@ -21,7 +21,7 @@ void XtGetSelectionParameters(Widget arg0, Atom arg1, XtRequestId arg2, Atom * a
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-void lsb_XtGetSelectionParameters(Widget arg0, Atom arg1, XtRequestId arg2, Atom * arg3, XtPointer * arg4, unsigned long * arg5, int * arg6)
+void __lsb_XtGetSelectionParameters(Widget arg0, Atom arg1, XtRequestId arg2, Atom * arg3, XtPointer * arg4, unsigned long * arg5, int * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionParameters");

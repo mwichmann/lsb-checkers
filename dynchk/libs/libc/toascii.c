@@ -10,11 +10,11 @@ int toascii (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "toascii");
-	validate_NULL_TYPETYPE(arg0, "toascii");
+	validate_NULL_TYPETYPE(  arg0, "toascii");
 	return funcptr(arg0);
 }
 
-int lsb_toascii (int arg0 )
+int __lsb_toascii (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "toascii");

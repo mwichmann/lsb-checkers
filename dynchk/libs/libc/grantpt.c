@@ -10,11 +10,11 @@ int grantpt (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "grantpt");
-	validate_NULL_TYPETYPE(arg0, "grantpt");
+	validate_NULL_TYPETYPE(  arg0, "grantpt");
 	return funcptr(arg0);
 }
 
-int lsb_grantpt (int arg0 )
+int __lsb_grantpt (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "grantpt");

@@ -14,7 +14,7 @@ void glDeleteTextures(GLsizei arg0, GLuint * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glDeleteTextures(GLsizei arg0, GLuint * arg1)
+void __lsb_glDeleteTextures(GLsizei arg0, GLuint * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glDeleteTextures");

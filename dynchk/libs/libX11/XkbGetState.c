@@ -14,7 +14,7 @@ int XkbGetState(Display * arg0, unsigned int arg1, XkbStatePtr arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbGetState(Display * arg0, unsigned int arg1, XkbStatePtr arg2)
+int __lsb_XkbGetState(Display * arg0, unsigned int arg1, XkbStatePtr arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbGetState");

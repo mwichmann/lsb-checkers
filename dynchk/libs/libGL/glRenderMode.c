@@ -13,7 +13,7 @@ GLint glRenderMode(GLenum arg0)
 	return funcptr(arg0);
 }
 
-GLint lsb_glRenderMode(GLenum arg0)
+GLint __lsb_glRenderMode(GLenum arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glRenderMode");

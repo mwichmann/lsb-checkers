@@ -13,7 +13,7 @@ Screen * XtScreen(Widget arg0)
 	return funcptr(arg0);
 }
 
-Screen * lsb_XtScreen(Widget arg0)
+Screen * __lsb_XtScreen(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtScreen");

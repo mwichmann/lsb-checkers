@@ -12,16 +12,17 @@ void * mmap64 (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off6
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mmap64");
-	validate_NULL_TYPETYPE(arg0, "mmap64");
-	validate_NULL_TYPETYPE(arg1, "mmap64");
-	validate_NULL_TYPETYPE(arg2, "mmap64");
-	validate_NULL_TYPETYPE(arg3, "mmap64");
-	validate_NULL_TYPETYPE(arg4, "mmap64");
-	validate_NULL_TYPETYPE(arg5, "mmap64");
+	validate_Rdaddress( arg0, "mmap64");
+	validate_NULL_TYPETYPE(  arg0, "mmap64");
+	validate_NULL_TYPETYPE(  arg1, "mmap64");
+	validate_NULL_TYPETYPE(  arg2, "mmap64");
+	validate_NULL_TYPETYPE(  arg3, "mmap64");
+	validate_NULL_TYPETYPE(  arg4, "mmap64");
+	validate_NULL_TYPETYPE(  arg5, "mmap64");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void * lsb_mmap64 (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off64_t arg5 )
+void * __lsb_mmap64 (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off64_t arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mmap64");

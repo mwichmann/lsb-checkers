@@ -13,7 +13,7 @@ EventMask XtBuildEventMask(Widget arg0)
 	return funcptr(arg0);
 }
 
-EventMask lsb_XtBuildEventMask(Widget arg0)
+EventMask __lsb_XtBuildEventMask(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtBuildEventMask");

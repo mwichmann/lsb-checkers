@@ -10,11 +10,12 @@ int fileno (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fileno");
-	validate_NULL_TYPETYPE(arg0, "fileno");
+	validate_Rdaddress( arg0, "fileno");
+	validate_NULL_TYPETYPE(  arg0, "fileno");
 	return funcptr(arg0);
 }
 
-int lsb_fileno (FILE * arg0 )
+int __lsb_fileno (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fileno");

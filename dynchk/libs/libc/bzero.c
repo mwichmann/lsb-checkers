@@ -11,12 +11,13 @@ void bzero (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bzero");
-	validate_NULL_TYPETYPE(arg0, "bzero");
-	validate_NULL_TYPETYPE(arg1, "bzero");
+	validate_Rdaddress( arg0, "bzero");
+	validate_NULL_TYPETYPE(  arg0, "bzero");
+	validate_NULL_TYPETYPE(  arg1, "bzero");
 	funcptr(arg0, arg1);
 }
 
-void lsb_bzero (void * arg0 , size_t arg1 )
+void __lsb_bzero (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bzero");

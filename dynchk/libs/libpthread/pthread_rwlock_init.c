@@ -10,12 +10,14 @@ int pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_init");
-	validate_NULL_TYPETYPE(arg0, "pthread_rwlock_init");
-	validate_NULL_TYPETYPE(arg1, "pthread_rwlock_init");
+	validate_Rdaddress( arg0, "pthread_rwlock_init");
+	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_init");
+	validate_Rdaddress( arg1, "pthread_rwlock_init");
+	validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_init");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * arg1 )
+int __lsb_pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_init");

@@ -15,7 +15,7 @@ Colormap * XListInstalledColormaps(Display * arg0, Window arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-Colormap * lsb_XListInstalledColormaps(Display * arg0, Window arg1, int * arg2)
+Colormap * __lsb_XListInstalledColormaps(Display * arg0, Window arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XListInstalledColormaps");

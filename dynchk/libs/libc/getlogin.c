@@ -13,7 +13,7 @@ char * getlogin ()
 	return funcptr();
 }
 
-char * lsb_getlogin ()
+char * __lsb_getlogin ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getlogin");

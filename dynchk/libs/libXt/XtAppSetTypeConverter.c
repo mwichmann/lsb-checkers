@@ -25,7 +25,7 @@ void XtAppSetTypeConverter(XtAppContext arg0, char * arg1, char * arg2, XtTypeCo
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-void lsb_XtAppSetTypeConverter(XtAppContext arg0, char * arg1, char * arg2, XtTypeConverter arg3, XtConvertArgList arg4, Cardinal arg5, XtCacheType arg6, XtDestructor arg7)
+void __lsb_XtAppSetTypeConverter(XtAppContext arg0, char * arg1, char * arg2, XtTypeConverter arg3, XtConvertArgList arg4, Cardinal arg5, XtCacheType arg6, XtDestructor arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppSetTypeConverter");

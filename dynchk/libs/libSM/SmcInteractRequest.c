@@ -18,7 +18,7 @@ int SmcInteractRequest(SmcConn arg0, int arg1, SmcInteractProc arg2, SmPointer a
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_SmcInteractRequest(SmcConn arg0, int arg1, SmcInteractProc arg2, SmPointer arg3)
+int __lsb_SmcInteractRequest(SmcConn arg0, int arg1, SmcInteractProc arg2, SmPointer arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcInteractRequest");

@@ -10,13 +10,13 @@ float fmaf (float arg0 , float arg1 , float arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaf");
-	validate_NULL_TYPETYPE(arg0, "fmaf");
-	validate_NULL_TYPETYPE(arg1, "fmaf");
-	validate_NULL_TYPETYPE(arg2, "fmaf");
+	validate_NULL_TYPETYPE(  arg0, "fmaf");
+	validate_NULL_TYPETYPE(  arg1, "fmaf");
+	validate_NULL_TYPETYPE(  arg2, "fmaf");
 	return funcptr(arg0, arg1, arg2);
 }
 
-float lsb_fmaf (float arg0 , float arg1 , float arg2 )
+float __lsb_fmaf (float arg0 , float arg1 , float arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaf");

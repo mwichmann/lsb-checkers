@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef conjf
 static float complex(*funcptr) (float complex ) = 0;
@@ -11,11 +10,11 @@ float complex conjf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conjf");
-	validate_NULL_TYPETYPE(arg0, "conjf");
+	validate_NULL_TYPETYPE(  arg0, "conjf");
 	return funcptr(arg0);
 }
 
-float complex lsb_conjf (float complex arg0 )
+float complex __lsb_conjf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conjf");

@@ -11,7 +11,7 @@ _Unwind_Ptr _Unwind_GetDataRelBase()
 	return funcptr();
 }
 
-_Unwind_Ptr lsb__Unwind_GetDataRelBase()
+_Unwind_Ptr __lsb__Unwind_GetDataRelBase()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetDataRelBase");

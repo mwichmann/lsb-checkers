@@ -11,7 +11,7 @@ Boolean XtIsWidget()
 	return funcptr();
 }
 
-Boolean lsb_XtIsWidget()
+Boolean __lsb_XtIsWidget()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsWidget");

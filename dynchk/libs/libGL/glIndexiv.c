@@ -12,7 +12,7 @@ void glIndexiv(GLint * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glIndexiv(GLint * arg0)
+void __lsb_glIndexiv(GLint * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glIndexiv");

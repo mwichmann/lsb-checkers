@@ -10,12 +10,14 @@ int sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwaitinfo");
-	validate_NULL_TYPETYPE(arg0, "sigwaitinfo");
-	validate_NULL_TYPETYPE(arg1, "sigwaitinfo");
+	validate_Rdaddress( arg0, "sigwaitinfo");
+	validate_NULL_TYPETYPE(  arg0, "sigwaitinfo");
+	validate_Rdaddress( arg1, "sigwaitinfo");
+	validate_NULL_TYPETYPE(  arg1, "sigwaitinfo");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 )
+int __lsb_sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwaitinfo");

@@ -10,11 +10,11 @@ char * strsignal (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsignal");
-	validate_NULL_TYPETYPE(arg0, "strsignal");
+	validate_NULL_TYPETYPE(  arg0, "strsignal");
 	return funcptr(arg0);
 }
 
-char * lsb_strsignal (int arg0 )
+char * __lsb_strsignal (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsignal");

@@ -10,13 +10,14 @@ int bind (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bind");
-	validate_filedescriptor(arg0, "bind");
-	validate_RWaddress(arg1, "bind");
-	validate_NULL_TYPETYPE(arg2, "bind");
+	validate_filedescriptor(  arg0, "bind");
+	validate_Rdaddress( arg1, "bind");
+	validate_RWaddress(  arg1, "bind");
+	validate_NULL_TYPETYPE(  arg2, "bind");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_bind (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
+int __lsb_bind (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bind");

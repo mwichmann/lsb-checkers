@@ -19,7 +19,7 @@ int XClearArea(Display * arg0, Window arg1, int arg2, int arg3, unsigned int arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_XClearArea(Display * arg0, Window arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, int arg6)
+int __lsb_XClearArea(Display * arg0, Window arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XClearArea");

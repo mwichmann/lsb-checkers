@@ -16,7 +16,7 @@ void XtKeysymToKeycodeList(Display * arg0, KeySym arg1, KeyCode * * arg2, Cardin
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XtKeysymToKeycodeList(Display * arg0, KeySym arg1, KeyCode * * arg2, Cardinal * arg3)
+void __lsb_XtKeysymToKeycodeList(Display * arg0, KeySym arg1, KeyCode * * arg2, Cardinal * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtKeysymToKeycodeList");

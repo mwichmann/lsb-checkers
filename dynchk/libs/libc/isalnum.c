@@ -10,11 +10,11 @@ int isalnum (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isalnum");
-	validate_NULL_TYPETYPE(arg0, "isalnum");
+	validate_NULL_TYPETYPE(  arg0, "isalnum");
 	return funcptr(arg0);
 }
 
-int lsb_isalnum (int arg0 )
+int __lsb_isalnum (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isalnum");

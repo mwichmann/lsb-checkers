@@ -10,12 +10,14 @@ int gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gettimeofday");
-	validate_NULL_TYPETYPE(arg0, "gettimeofday");
-	validate_NULL_TYPETYPE(arg1, "gettimeofday");
+	validate_Rdaddress( arg0, "gettimeofday");
+	validate_NULL_TYPETYPE(  arg0, "gettimeofday");
+	validate_Rdaddress( arg1, "gettimeofday");
+	validate_NULL_TYPETYPE(  arg1, "gettimeofday");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
+int __lsb_gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gettimeofday");

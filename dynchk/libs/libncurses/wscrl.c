@@ -10,12 +10,13 @@ int wscrl (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wscrl");
-	validate_NULL_TYPETYPE(arg0, "wscrl");
-	validate_NULL_TYPETYPE(arg1, "wscrl");
+	validate_Rdaddress( arg0, "wscrl");
+	validate_NULL_TYPETYPE(  arg0, "wscrl");
+	validate_NULL_TYPETYPE(  arg1, "wscrl");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wscrl (WINDOW * arg0 , int arg1 )
+int __lsb_wscrl (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wscrl");

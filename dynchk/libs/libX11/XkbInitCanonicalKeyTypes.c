@@ -14,7 +14,7 @@ int XkbInitCanonicalKeyTypes(XkbDescPtr arg0, unsigned int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbInitCanonicalKeyTypes(XkbDescPtr arg0, unsigned int arg1, int arg2)
+int __lsb_XkbInitCanonicalKeyTypes(XkbDescPtr arg0, unsigned int arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbInitCanonicalKeyTypes");

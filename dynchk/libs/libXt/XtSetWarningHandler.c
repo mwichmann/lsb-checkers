@@ -13,7 +13,7 @@ void XtSetWarningHandler(XtErrorHandler arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtSetWarningHandler(XtErrorHandler arg0)
+void __lsb_XtSetWarningHandler(XtErrorHandler arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSetWarningHandler");

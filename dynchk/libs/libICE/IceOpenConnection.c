@@ -18,7 +18,7 @@ IceConn IceOpenConnection(char * arg0, IcePointer arg1, int arg2, int arg3, int 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-IceConn lsb_IceOpenConnection(char * arg0, IcePointer arg1, int arg2, int arg3, int arg4, char * arg5)
+IceConn __lsb_IceOpenConnection(char * arg0, IcePointer arg1, int arg2, int arg3, int arg4, char * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceOpenConnection");

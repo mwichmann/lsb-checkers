@@ -10,11 +10,11 @@ int scrl (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrl");
-	validate_NULL_TYPETYPE(arg0, "scrl");
+	validate_NULL_TYPETYPE(  arg0, "scrl");
 	return funcptr(arg0);
 }
 
-int lsb_scrl (int arg0 )
+int __lsb_scrl (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrl");

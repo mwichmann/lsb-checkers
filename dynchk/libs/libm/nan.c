@@ -10,11 +10,12 @@ double nan (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nan");
-	validate_NULL_TYPETYPE(arg0, "nan");
+	validate_Rdaddress( arg0, "nan");
+	validate_NULL_TYPETYPE(  arg0, "nan");
 	return funcptr(arg0);
 }
 
-double lsb_nan (const char * arg0 )
+double __lsb_nan (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nan");

@@ -10,15 +10,17 @@ int wchgat (WINDOW * arg0 , int arg1 , attr_t arg2 , short arg3 , const void * a
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wchgat");
-	validate_NULL_TYPETYPE(arg0, "wchgat");
-	validate_NULL_TYPETYPE(arg1, "wchgat");
-	validate_NULL_TYPETYPE(arg2, "wchgat");
-	validate_NULL_TYPETYPE(arg3, "wchgat");
-	validate_NULL_TYPETYPE(arg4, "wchgat");
+	validate_Rdaddress( arg0, "wchgat");
+	validate_NULL_TYPETYPE(  arg0, "wchgat");
+	validate_NULL_TYPETYPE(  arg1, "wchgat");
+	validate_NULL_TYPETYPE(  arg2, "wchgat");
+	validate_NULL_TYPETYPE(  arg3, "wchgat");
+	validate_Rdaddress( arg4, "wchgat");
+	validate_NULL_TYPETYPE(  arg4, "wchgat");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_wchgat (WINDOW * arg0 , int arg1 , attr_t arg2 , short arg3 , const void * arg4 )
+int __lsb_wchgat (WINDOW * arg0 , int arg1 , attr_t arg2 , short arg3 , const void * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wchgat");

@@ -12,7 +12,7 @@ KeySym XStringToKeysym(char * arg0)
 	return funcptr(arg0);
 }
 
-KeySym lsb_XStringToKeysym(char * arg0)
+KeySym __lsb_XStringToKeysym(char * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XStringToKeysym");

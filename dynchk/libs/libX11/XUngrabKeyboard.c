@@ -14,7 +14,7 @@ int XUngrabKeyboard(Display * arg0, Time arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XUngrabKeyboard(Display * arg0, Time arg1)
+int __lsb_XUngrabKeyboard(Display * arg0, Time arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XUngrabKeyboard");

@@ -13,7 +13,7 @@ IceConn SmcGetIceConnection(SmcConn arg0)
 	return funcptr(arg0);
 }
 
-IceConn lsb_SmcGetIceConnection(SmcConn arg0)
+IceConn __lsb_SmcGetIceConnection(SmcConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcGetIceConnection");

@@ -16,7 +16,7 @@ void glNormalPointer(GLenum arg0, GLsizei arg1, GLvoid * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glNormalPointer(GLenum arg0, GLsizei arg1, GLvoid * arg2)
+void __lsb_glNormalPointer(GLenum arg0, GLsizei arg1, GLvoid * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glNormalPointer");

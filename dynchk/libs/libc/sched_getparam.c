@@ -11,12 +11,13 @@ int sched_getparam (pid_t arg0 , struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_getparam");
-	validate_NULL_TYPETYPE(arg0, "sched_getparam");
-	validate_NULL_TYPETYPE(arg1, "sched_getparam");
+	validate_NULL_TYPETYPE(  arg0, "sched_getparam");
+	validate_Rdaddress( arg1, "sched_getparam");
+	validate_NULL_TYPETYPE(  arg1, "sched_getparam");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sched_getparam (pid_t arg0 , struct sched_param * arg1 )
+int __lsb_sched_getparam (pid_t arg0 , struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_getparam");

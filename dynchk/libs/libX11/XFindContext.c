@@ -17,7 +17,7 @@ int XFindContext(Display * arg0, XID arg1, XContext arg2, XPointer * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XFindContext(Display * arg0, XID arg1, XContext arg2, XPointer * arg3)
+int __lsb_XFindContext(Display * arg0, XID arg1, XContext arg2, XPointer * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFindContext");

@@ -10,11 +10,11 @@ long long llabs (long long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llabs");
-	validate_NULL_TYPETYPE(arg0, "llabs");
+	validate_NULL_TYPETYPE(  arg0, "llabs");
 	return funcptr(arg0);
 }
 
-long long lsb_llabs (long long arg0 )
+long long __lsb_llabs (long long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llabs");

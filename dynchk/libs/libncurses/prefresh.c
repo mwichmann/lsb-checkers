@@ -10,17 +10,18 @@ int prefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int ar
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "prefresh");
-	validate_NULL_TYPETYPE(arg0, "prefresh");
-	validate_NULL_TYPETYPE(arg1, "prefresh");
-	validate_NULL_TYPETYPE(arg2, "prefresh");
-	validate_NULL_TYPETYPE(arg3, "prefresh");
-	validate_NULL_TYPETYPE(arg4, "prefresh");
-	validate_NULL_TYPETYPE(arg5, "prefresh");
-	validate_NULL_TYPETYPE(arg6, "prefresh");
+	validate_Rdaddress( arg0, "prefresh");
+	validate_NULL_TYPETYPE(  arg0, "prefresh");
+	validate_NULL_TYPETYPE(  arg1, "prefresh");
+	validate_NULL_TYPETYPE(  arg2, "prefresh");
+	validate_NULL_TYPETYPE(  arg3, "prefresh");
+	validate_NULL_TYPETYPE(  arg4, "prefresh");
+	validate_NULL_TYPETYPE(  arg5, "prefresh");
+	validate_NULL_TYPETYPE(  arg6, "prefresh");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_prefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 )
+int __lsb_prefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "prefresh");

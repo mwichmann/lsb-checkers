@@ -10,12 +10,13 @@ int getrlimit (__rlimit_resource_t arg0 , struct rlimit * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrlimit");
-	validate_NULL_TYPETYPE(arg0, "getrlimit");
-	validate_NULL_TYPETYPE(arg1, "getrlimit");
+	validate_NULL_TYPETYPE(  arg0, "getrlimit");
+	validate_Rdaddress( arg1, "getrlimit");
+	validate_NULL_TYPETYPE(  arg1, "getrlimit");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_getrlimit (__rlimit_resource_t arg0 , struct rlimit * arg1 )
+int __lsb_getrlimit (__rlimit_resource_t arg0 , struct rlimit * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrlimit");

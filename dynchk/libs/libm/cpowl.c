@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef cpowl
 static long double complex(*funcptr) (long double complex , long double complex ) = 0;
@@ -11,12 +10,12 @@ long double complex cpowl (long double complex arg0 , long double complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpowl");
-	validate_NULL_TYPETYPE(arg0, "cpowl");
-	validate_NULL_TYPETYPE(arg1, "cpowl");
+	validate_NULL_TYPETYPE(  arg0, "cpowl");
+	validate_NULL_TYPETYPE(  arg1, "cpowl");
 	return funcptr(arg0, arg1);
 }
 
-long double complex lsb_cpowl (long double complex arg0 , long double complex arg1 )
+long double complex __lsb_cpowl (long double complex arg0 , long double complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpowl");

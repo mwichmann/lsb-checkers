@@ -16,7 +16,7 @@ int XRecolorCursor(Display * arg0, Cursor arg1, XColor * arg2, XColor * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XRecolorCursor(Display * arg0, Cursor arg1, XColor * arg2, XColor * arg3)
+int __lsb_XRecolorCursor(Display * arg0, Cursor arg1, XColor * arg2, XColor * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XRecolorCursor");

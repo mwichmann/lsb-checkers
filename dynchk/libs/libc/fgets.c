@@ -10,13 +10,15 @@ char * fgets (char * arg0 , int arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgets");
-	validate_NULL_TYPETYPE(arg0, "fgets");
-	validate_NULL_TYPETYPE(arg1, "fgets");
-	validate_NULL_TYPETYPE(arg2, "fgets");
+	validate_Rdaddress( arg0, "fgets");
+	validate_NULL_TYPETYPE(  arg0, "fgets");
+	validate_NULL_TYPETYPE(  arg1, "fgets");
+	validate_Rdaddress( arg2, "fgets");
+	validate_NULL_TYPETYPE(  arg2, "fgets");
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_fgets (char * arg0 , int arg1 , FILE * arg2 )
+char * __lsb_fgets (char * arg0 , int arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgets");

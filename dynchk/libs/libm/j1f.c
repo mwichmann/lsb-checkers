@@ -10,11 +10,11 @@ float j1f (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j1f");
-	validate_NULL_TYPETYPE(arg0, "j1f");
+	validate_NULL_TYPETYPE(  arg0, "j1f");
 	return funcptr(arg0);
 }
 
-float lsb_j1f (float arg0 )
+float __lsb_j1f (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j1f");

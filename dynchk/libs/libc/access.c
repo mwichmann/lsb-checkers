@@ -10,12 +10,13 @@ int access (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "access");
-	validate_NULL_TYPETYPE(arg0, "access");
-	validate_NULL_TYPETYPE(arg1, "access");
+	validate_Rdaddress( arg0, "access");
+	validate_NULL_TYPETYPE(  arg0, "access");
+	validate_NULL_TYPETYPE(  arg1, "access");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_access (const char * arg0 , int arg1 )
+int __lsb_access (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "access");

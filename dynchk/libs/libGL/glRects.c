@@ -19,7 +19,7 @@ void glRects(GLshort arg0, GLshort arg1, GLshort arg2, GLshort arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glRects(GLshort arg0, GLshort arg1, GLshort arg2, GLshort arg3)
+void __lsb_glRects(GLshort arg0, GLshort arg1, GLshort arg2, GLshort arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glRects");

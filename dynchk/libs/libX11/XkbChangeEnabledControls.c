@@ -15,7 +15,7 @@ static int(*funcptr)(Display *, unsigned int, unsigned int, unsigned int) = 0;
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
- lsb_XkbChangeEnabledControls(Display * arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3)
+ __lsb_XkbChangeEnabledControls(Display * arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbChangeEnabledControls");

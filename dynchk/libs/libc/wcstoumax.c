@@ -11,13 +11,16 @@ uintmax_t wcstoumax (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoumax");
-	validate_NULL_TYPETYPE(arg0, "wcstoumax");
-	validate_NULL_TYPETYPE(arg1, "wcstoumax");
-	validate_NULL_TYPETYPE(arg2, "wcstoumax");
+	validate_Rdaddress( arg0, "wcstoumax");
+	validate_NULL_TYPETYPE(  arg0, "wcstoumax");
+	validate_Rdaddress( arg1, "wcstoumax");
+	validate_Rdaddress(* arg1, "wcstoumax");
+	validate_NULL_TYPETYPE(  arg1, "wcstoumax");
+	validate_NULL_TYPETYPE(  arg2, "wcstoumax");
 	return funcptr(arg0, arg1, arg2);
 }
 
-uintmax_t lsb_wcstoumax (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+uintmax_t __lsb_wcstoumax (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoumax");

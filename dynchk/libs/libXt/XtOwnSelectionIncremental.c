@@ -27,7 +27,7 @@ Boolean XtOwnSelectionIncremental(Widget arg0, Atom arg1, Time arg2, XtConvertSe
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-Boolean lsb_XtOwnSelectionIncremental(Widget arg0, Atom arg1, Time arg2, XtConvertSelectionIncrProc arg3, XtLoseSelectionIncrProc arg4, XtSelectionDoneIncrProc arg5, XtCancelConvertSelectionProc arg6, XtPointer arg7)
+Boolean __lsb_XtOwnSelectionIncremental(Widget arg0, Atom arg1, Time arg2, XtConvertSelectionIncrProc arg3, XtLoseSelectionIncrProc arg4, XtSelectionDoneIncrProc arg5, XtCancelConvertSelectionProc arg6, XtPointer arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtOwnSelectionIncremental");

@@ -10,11 +10,11 @@ int dup (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dup");
-	validate_NULL_TYPETYPE(arg0, "dup");
+	validate_NULL_TYPETYPE(  arg0, "dup");
 	return funcptr(arg0);
 }
 
-int lsb_dup (int arg0 )
+int __lsb_dup (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dup");

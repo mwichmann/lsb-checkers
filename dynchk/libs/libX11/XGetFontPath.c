@@ -13,7 +13,7 @@ char * * XGetFontPath(Display * arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * * lsb_XGetFontPath(Display * arg0, int * arg1)
+char * * __lsb_XGetFontPath(Display * arg0, int * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetFontPath");

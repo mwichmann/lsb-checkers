@@ -11,11 +11,11 @@ int hcreate (size_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hcreate");
-	validate_NULL_TYPETYPE(arg0, "hcreate");
+	validate_NULL_TYPETYPE(  arg0, "hcreate");
 	return funcptr(arg0);
 }
 
-int lsb_hcreate (size_t arg0 )
+int __lsb_hcreate (size_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hcreate");

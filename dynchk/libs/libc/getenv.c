@@ -10,11 +10,12 @@ char * getenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getenv");
-	validate_NULL_TYPETYPE(arg0, "getenv");
+	validate_Rdaddress( arg0, "getenv");
+	validate_NULL_TYPETYPE(  arg0, "getenv");
 	return funcptr(arg0);
 }
 
-char * lsb_getenv (const char * arg0 )
+char * __lsb_getenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getenv");

@@ -10,11 +10,11 @@ int isxdigit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isxdigit");
-	validate_NULL_TYPETYPE(arg0, "isxdigit");
+	validate_NULL_TYPETYPE(  arg0, "isxdigit");
 	return funcptr(arg0);
 }
 
-int lsb_isxdigit (int arg0 )
+int __lsb_isxdigit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isxdigit");

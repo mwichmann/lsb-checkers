@@ -13,7 +13,7 @@ int noraw ()
 	return funcptr();
 }
 
-int lsb_noraw ()
+int __lsb_noraw ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "noraw");

@@ -13,7 +13,7 @@ void XtRemoveWorkProc(XtWorkProcId arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtRemoveWorkProc(XtWorkProcId arg0)
+void __lsb_XtRemoveWorkProc(XtWorkProcId arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRemoveWorkProc");

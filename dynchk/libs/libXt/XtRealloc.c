@@ -14,7 +14,7 @@ char * XtRealloc(char * arg0, Cardinal arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_XtRealloc(char * arg0, Cardinal arg1)
+char * __lsb_XtRealloc(char * arg0, Cardinal arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRealloc");

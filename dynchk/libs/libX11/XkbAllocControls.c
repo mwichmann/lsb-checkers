@@ -13,7 +13,7 @@ int XkbAllocControls(XkbDescPtr arg0, unsigned int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XkbAllocControls(XkbDescPtr arg0, unsigned int arg1)
+int __lsb_XkbAllocControls(XkbDescPtr arg0, unsigned int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbAllocControls");

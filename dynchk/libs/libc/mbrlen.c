@@ -12,13 +12,15 @@ size_t mbrlen (const char * arg0 , size_t arg1 , mbstate_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbrlen");
-	validate_NULL_TYPETYPE(arg0, "mbrlen");
-	validate_NULL_TYPETYPE(arg1, "mbrlen");
-	validate_NULL_TYPETYPE(arg2, "mbrlen");
+	validate_Rdaddress( arg0, "mbrlen");
+	validate_NULL_TYPETYPE(  arg0, "mbrlen");
+	validate_NULL_TYPETYPE(  arg1, "mbrlen");
+	validate_Rdaddress( arg2, "mbrlen");
+	validate_NULL_TYPETYPE(  arg2, "mbrlen");
 	return funcptr(arg0, arg1, arg2);
 }
 
-size_t lsb_mbrlen (const char * arg0 , size_t arg1 , mbstate_t * arg2 )
+size_t __lsb_mbrlen (const char * arg0 , size_t arg1 , mbstate_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbrlen");

@@ -10,12 +10,13 @@ int nodelay (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nodelay");
-	validate_NULL_TYPETYPE(arg0, "nodelay");
-	validate_NULL_TYPETYPE(arg1, "nodelay");
+	validate_Rdaddress( arg0, "nodelay");
+	validate_NULL_TYPETYPE(  arg0, "nodelay");
+	validate_NULL_TYPETYPE(  arg1, "nodelay");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_nodelay (WINDOW * arg0 , bool arg1 )
+int __lsb_nodelay (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nodelay");

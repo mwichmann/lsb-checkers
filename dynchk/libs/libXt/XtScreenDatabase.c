@@ -12,7 +12,7 @@ XrmDatabase XtScreenDatabase(Screen * arg0)
 	return funcptr(arg0);
 }
 
-XrmDatabase lsb_XtScreenDatabase(Screen * arg0)
+XrmDatabase __lsb_XtScreenDatabase(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtScreenDatabase");

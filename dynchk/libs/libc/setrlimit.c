@@ -10,12 +10,13 @@ int setrlimit (__rlimit_resource_t arg0 , const struct rlimit * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setrlimit");
-	validate_NULL_TYPETYPE(arg0, "setrlimit");
-	validate_NULL_TYPETYPE(arg1, "setrlimit");
+	validate_NULL_TYPETYPE(  arg0, "setrlimit");
+	validate_Rdaddress( arg1, "setrlimit");
+	validate_NULL_TYPETYPE(  arg1, "setrlimit");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_setrlimit (__rlimit_resource_t arg0 , const struct rlimit * arg1 )
+int __lsb_setrlimit (__rlimit_resource_t arg0 , const struct rlimit * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setrlimit");

@@ -12,15 +12,19 @@ int select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct ti
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "select");
-	validate_NULL_TYPETYPE(arg0, "select");
-	validate_NULL_TYPETYPE(arg1, "select");
-	validate_NULL_TYPETYPE(arg2, "select");
-	validate_NULL_TYPETYPE(arg3, "select");
-	validate_NULL_TYPETYPE(arg4, "select");
+	validate_NULL_TYPETYPE(  arg0, "select");
+	validate_Rdaddress( arg1, "select");
+	validate_NULL_TYPETYPE(  arg1, "select");
+	validate_Rdaddress( arg2, "select");
+	validate_NULL_TYPETYPE(  arg2, "select");
+	validate_Rdaddress( arg3, "select");
+	validate_NULL_TYPETYPE(  arg3, "select");
+	validate_Rdaddress( arg4, "select");
+	validate_NULL_TYPETYPE(  arg4, "select");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct timeval * arg4 )
+int __lsb_select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct timeval * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "select");

@@ -18,7 +18,7 @@ void XtCreateWindow(Widget arg0, unsigned int arg1, Visual * arg2, XtValueMask a
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtCreateWindow(Widget arg0, unsigned int arg1, Visual * arg2, XtValueMask arg3, XSetWindowAttributes * arg4)
+void __lsb_XtCreateWindow(Widget arg0, unsigned int arg1, Visual * arg2, XtValueMask arg3, XSetWindowAttributes * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtCreateWindow");

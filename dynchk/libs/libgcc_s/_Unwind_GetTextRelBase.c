@@ -11,7 +11,7 @@ _Unwind_Ptr _Unwind_GetTextRelBase()
 	return funcptr();
 }
 
-_Unwind_Ptr lsb__Unwind_GetTextRelBase()
+_Unwind_Ptr __lsb__Unwind_GetTextRelBase()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetTextRelBase");

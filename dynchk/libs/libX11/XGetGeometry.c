@@ -21,7 +21,7 @@ int XGetGeometry(Display * arg0, Drawable arg1, Window * arg2, int * arg3, int *
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-int lsb_XGetGeometry(Display * arg0, Drawable arg1, Window * arg2, int * arg3, int * arg4, unsigned int * arg5, unsigned int * arg6, unsigned int * arg7, unsigned int * arg8)
+int __lsb_XGetGeometry(Display * arg0, Drawable arg1, Window * arg2, int * arg3, int * arg4, unsigned int * arg5, unsigned int * arg6, unsigned int * arg7, unsigned int * arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetGeometry");

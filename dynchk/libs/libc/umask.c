@@ -11,11 +11,11 @@ mode_t umask (mode_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "umask");
-	validate_NULL_TYPETYPE(arg0, "umask");
+	validate_NULL_TYPETYPE(  arg0, "umask");
 	return funcptr(arg0);
 }
 
-mode_t lsb_umask (mode_t arg0 )
+mode_t __lsb_umask (mode_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "umask");

@@ -10,12 +10,13 @@ double frexp (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexp");
-	validate_NULL_TYPETYPE(arg0, "frexp");
-	validate_NULL_TYPETYPE(arg1, "frexp");
+	validate_NULL_TYPETYPE(  arg0, "frexp");
+	validate_Rdaddress( arg1, "frexp");
+	validate_NULL_TYPETYPE(  arg1, "frexp");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_frexp (double arg0 , int * arg1 )
+double __lsb_frexp (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexp");

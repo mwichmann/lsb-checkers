@@ -12,7 +12,7 @@ void XSecurityFreeXauth(Xauth * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XSecurityFreeXauth(Xauth * arg0)
+void __lsb_XSecurityFreeXauth(Xauth * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSecurityFreeXauth");

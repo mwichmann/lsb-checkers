@@ -10,12 +10,12 @@ long double nexttowardl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nexttowardl");
-	validate_NULL_TYPETYPE(arg0, "nexttowardl");
-	validate_NULL_TYPETYPE(arg1, "nexttowardl");
+	validate_NULL_TYPETYPE(  arg0, "nexttowardl");
+	validate_NULL_TYPETYPE(  arg1, "nexttowardl");
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_nexttowardl (long double arg0 , long double arg1 )
+long double __lsb_nexttowardl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nexttowardl");

@@ -16,7 +16,7 @@ int XSetFont(Display * arg0, GC arg1, Font arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSetFont(Display * arg0, GC arg1, Font arg2)
+int __lsb_XSetFont(Display * arg0, GC arg1, Font arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetFont");

@@ -13,7 +13,7 @@ int XkbComputeShapeBounds(XkbShapePtr arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XkbComputeShapeBounds(XkbShapePtr arg0)
+int __lsb_XkbComputeShapeBounds(XkbShapePtr arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbComputeShapeBounds");

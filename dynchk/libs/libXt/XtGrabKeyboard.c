@@ -18,7 +18,7 @@ int XtGrabKeyboard(Widget arg0, int arg1, int arg2, int arg3, Time arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XtGrabKeyboard(Widget arg0, int arg1, int arg2, int arg3, Time arg4)
+int __lsb_XtGrabKeyboard(Widget arg0, int arg1, int arg2, int arg3, Time arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGrabKeyboard");

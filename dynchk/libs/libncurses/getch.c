@@ -13,7 +13,7 @@ int getch ()
 	return funcptr();
 }
 
-int lsb_getch ()
+int __lsb_getch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getch");

@@ -11,13 +11,16 @@ long long wcstoll (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoll");
-	validate_NULL_TYPETYPE(arg0, "wcstoll");
-	validate_NULL_TYPETYPE(arg1, "wcstoll");
-	validate_NULL_TYPETYPE(arg2, "wcstoll");
+	validate_Rdaddress( arg0, "wcstoll");
+	validate_NULL_TYPETYPE(  arg0, "wcstoll");
+	validate_Rdaddress( arg1, "wcstoll");
+	validate_Rdaddress(* arg1, "wcstoll");
+	validate_NULL_TYPETYPE(  arg1, "wcstoll");
+	validate_NULL_TYPETYPE(  arg2, "wcstoll");
 	return funcptr(arg0, arg1, arg2);
 }
 
-long long lsb_wcstoll (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+long long __lsb_wcstoll (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoll");

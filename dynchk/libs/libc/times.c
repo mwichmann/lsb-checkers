@@ -10,11 +10,12 @@ clock_t times (struct tms * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "times");
-	validate_NULL_TYPETYPE(arg0, "times");
+	validate_Rdaddress( arg0, "times");
+	validate_NULL_TYPETYPE(  arg0, "times");
 	return funcptr(arg0);
 }
 
-clock_t lsb_times (struct tms * arg0 )
+clock_t __lsb_times (struct tms * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "times");

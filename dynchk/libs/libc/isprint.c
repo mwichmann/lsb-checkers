@@ -10,11 +10,11 @@ int isprint (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isprint");
-	validate_NULL_TYPETYPE(arg0, "isprint");
+	validate_NULL_TYPETYPE(  arg0, "isprint");
 	return funcptr(arg0);
 }
 
-int lsb_isprint (int arg0 )
+int __lsb_isprint (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isprint");

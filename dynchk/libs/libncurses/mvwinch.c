@@ -10,13 +10,14 @@ chtype mvwinch (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinch");
-	validate_NULL_TYPETYPE(arg0, "mvwinch");
-	validate_NULL_TYPETYPE(arg1, "mvwinch");
-	validate_NULL_TYPETYPE(arg2, "mvwinch");
+	validate_Rdaddress( arg0, "mvwinch");
+	validate_NULL_TYPETYPE(  arg0, "mvwinch");
+	validate_NULL_TYPETYPE(  arg1, "mvwinch");
+	validate_NULL_TYPETYPE(  arg2, "mvwinch");
 	return funcptr(arg0, arg1, arg2);
 }
 
-chtype lsb_mvwinch (WINDOW * arg0 , int arg1 , int arg2 )
+chtype __lsb_mvwinch (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinch");

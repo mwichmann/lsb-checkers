@@ -10,14 +10,19 @@ int pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * a
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_start");
-	validate_NULL_TYPETYPE(arg0, "pam_start");
-	validate_NULL_TYPETYPE(arg1, "pam_start");
-	validate_NULL_TYPETYPE(arg2, "pam_start");
-	validate_NULL_TYPETYPE(arg3, "pam_start");
+	validate_Rdaddress( arg0, "pam_start");
+	validate_NULL_TYPETYPE(  arg0, "pam_start");
+	validate_Rdaddress( arg1, "pam_start");
+	validate_NULL_TYPETYPE(  arg1, "pam_start");
+	validate_Rdaddress( arg2, "pam_start");
+	validate_NULL_TYPETYPE(  arg2, "pam_start");
+	validate_Rdaddress( arg3, "pam_start");
+	validate_Rdaddress(* arg3, "pam_start");
+	validate_NULL_TYPETYPE(  arg3, "pam_start");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * arg2 , pam_handle_t * * arg3 )
+int __lsb_pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * arg2 , pam_handle_t * * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_start");

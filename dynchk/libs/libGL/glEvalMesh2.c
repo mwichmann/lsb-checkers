@@ -21,7 +21,7 @@ void glEvalMesh2(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_glEvalMesh2(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint arg4)
+void __lsb_glEvalMesh2(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glEvalMesh2");

@@ -10,11 +10,12 @@ pid_t wait (int * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wait");
-	validate_NULL_TYPETYPE(arg0, "wait");
+	validate_Rdaddress( arg0, "wait");
+	validate_NULL_TYPETYPE(  arg0, "wait");
 	return funcptr(arg0);
 }
 
-pid_t lsb_wait (int * arg0 )
+pid_t __lsb_wait (int * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wait");

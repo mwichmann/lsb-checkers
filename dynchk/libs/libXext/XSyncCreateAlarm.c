@@ -14,7 +14,7 @@ XSyncAlarm XSyncCreateAlarm(Display * arg0, unsigned long arg1, XSyncAlarmAttrib
 	return funcptr(arg0, arg1, arg2);
 }
 
-XSyncAlarm lsb_XSyncCreateAlarm(Display * arg0, unsigned long arg1, XSyncAlarmAttributes * arg2)
+XSyncAlarm __lsb_XSyncCreateAlarm(Display * arg0, unsigned long arg1, XSyncAlarmAttributes * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncCreateAlarm");

@@ -10,12 +10,14 @@ char * strpbrk (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strpbrk");
-	validate_NULL_TYPETYPE(arg0, "strpbrk");
-	validate_NULL_TYPETYPE(arg1, "strpbrk");
+	validate_Rdaddress( arg0, "strpbrk");
+	validate_NULL_TYPETYPE(  arg0, "strpbrk");
+	validate_Rdaddress( arg1, "strpbrk");
+	validate_NULL_TYPETYPE(  arg1, "strpbrk");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strpbrk (const char * arg0 , const char * arg1 )
+char * __lsb_strpbrk (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strpbrk");

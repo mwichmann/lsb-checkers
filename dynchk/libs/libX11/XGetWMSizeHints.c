@@ -18,7 +18,7 @@ int XGetWMSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, long * arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XGetWMSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, long * arg3, Atom arg4)
+int __lsb_XGetWMSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, long * arg3, Atom arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetWMSizeHints");

@@ -11,12 +11,14 @@ char * ctime_r (const time_t * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctime_r");
-	validate_NULL_TYPETYPE(arg0, "ctime_r");
-	validate_RWaddress(arg1, "ctime_r");
+	validate_Rdaddress( arg0, "ctime_r");
+	validate_NULL_TYPETYPE(  arg0, "ctime_r");
+	validate_Rdaddress( arg1, "ctime_r");
+	validate_RWaddress(  arg1, "ctime_r");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_ctime_r (const time_t * arg0 , char * arg1 )
+char * __lsb_ctime_r (const time_t * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctime_r");

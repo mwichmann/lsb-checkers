@@ -13,7 +13,7 @@ GLXContextID glXGetContextIDEXT(GLXContext arg0)
 	return funcptr(arg0);
 }
 
-GLXContextID lsb_glXGetContextIDEXT(GLXContext arg0)
+GLXContextID __lsb_glXGetContextIDEXT(GLXContext arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXGetContextIDEXT");

@@ -10,14 +10,15 @@ int mvaddnstr (int arg0 , int arg1 , const char * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvaddnstr");
-	validate_NULL_TYPETYPE(arg0, "mvaddnstr");
-	validate_NULL_TYPETYPE(arg1, "mvaddnstr");
-	validate_NULL_TYPETYPE(arg2, "mvaddnstr");
-	validate_NULL_TYPETYPE(arg3, "mvaddnstr");
+	validate_NULL_TYPETYPE(  arg0, "mvaddnstr");
+	validate_NULL_TYPETYPE(  arg1, "mvaddnstr");
+	validate_Rdaddress( arg2, "mvaddnstr");
+	validate_NULL_TYPETYPE(  arg2, "mvaddnstr");
+	validate_NULL_TYPETYPE(  arg3, "mvaddnstr");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_mvaddnstr (int arg0 , int arg1 , const char * arg2 , int arg3 )
+int __lsb_mvaddnstr (int arg0 , int arg1 , const char * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvaddnstr");

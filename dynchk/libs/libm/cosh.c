@@ -10,11 +10,11 @@ double cosh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cosh");
-	validate_NULL_TYPETYPE(arg0, "cosh");
+	validate_NULL_TYPETYPE(  arg0, "cosh");
 	return funcptr(arg0);
 }
 
-double lsb_cosh (double arg0 )
+double __lsb_cosh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cosh");

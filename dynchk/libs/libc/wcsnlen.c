@@ -11,12 +11,13 @@ size_t wcsnlen (const wchar_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsnlen");
-	validate_NULL_TYPETYPE(arg0, "wcsnlen");
-	validate_NULL_TYPETYPE(arg1, "wcsnlen");
+	validate_Rdaddress( arg0, "wcsnlen");
+	validate_NULL_TYPETYPE(  arg0, "wcsnlen");
+	validate_NULL_TYPETYPE(  arg1, "wcsnlen");
 	return funcptr(arg0, arg1);
 }
 
-size_t lsb_wcsnlen (const wchar_t * arg0 , size_t arg1 )
+size_t __lsb_wcsnlen (const wchar_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsnlen");

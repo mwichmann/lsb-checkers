@@ -13,7 +13,7 @@ void XSyncIntToValue(XSyncValue * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XSyncIntToValue(XSyncValue * arg0, int arg1)
+void __lsb_XSyncIntToValue(XSyncValue * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncIntToValue");

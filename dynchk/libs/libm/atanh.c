@@ -10,11 +10,11 @@ double atanh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanh");
-	validate_NULL_TYPETYPE(arg0, "atanh");
+	validate_NULL_TYPETYPE(  arg0, "atanh");
 	return funcptr(arg0);
 }
 
-double lsb_atanh (double arg0 )
+double __lsb_atanh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanh");

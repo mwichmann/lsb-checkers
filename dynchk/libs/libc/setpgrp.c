@@ -13,7 +13,7 @@ int setpgrp ()
 	return funcptr();
 }
 
-int lsb_setpgrp ()
+int __lsb_setpgrp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpgrp");

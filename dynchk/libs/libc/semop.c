@@ -11,13 +11,14 @@ int semop (int arg0 , struct sembuf * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "semop");
-	validate_NULL_TYPETYPE(arg0, "semop");
-	validate_NULL_TYPETYPE(arg1, "semop");
-	validate_NULL_TYPETYPE(arg2, "semop");
+	validate_NULL_TYPETYPE(  arg0, "semop");
+	validate_Rdaddress( arg1, "semop");
+	validate_NULL_TYPETYPE(  arg1, "semop");
+	validate_NULL_TYPETYPE(  arg2, "semop");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_semop (int arg0 , struct sembuf * arg1 , size_t arg2 )
+int __lsb_semop (int arg0 , struct sembuf * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "semop");

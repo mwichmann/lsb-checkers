@@ -11,13 +11,15 @@ int vwscanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwscanw");
-	validate_NULL_TYPETYPE(arg0, "vwscanw");
-	validate_NULL_TYPETYPE(arg1, "vwscanw");
-	validate_NULL_TYPETYPE(arg2, "vwscanw");
+	validate_Rdaddress( arg0, "vwscanw");
+	validate_NULL_TYPETYPE(  arg0, "vwscanw");
+	validate_Rdaddress( arg1, "vwscanw");
+	validate_NULL_TYPETYPE(  arg1, "vwscanw");
+	validate_NULL_TYPETYPE(  arg2, "vwscanw");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vwscanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
+int __lsb_vwscanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwscanw");

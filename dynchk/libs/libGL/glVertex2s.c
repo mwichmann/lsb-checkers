@@ -15,7 +15,7 @@ void glVertex2s(GLshort arg0, GLshort arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glVertex2s(GLshort arg0, GLshort arg1)
+void __lsb_glVertex2s(GLshort arg0, GLshort arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glVertex2s");

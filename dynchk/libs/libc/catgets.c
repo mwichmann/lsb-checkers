@@ -10,14 +10,15 @@ char * catgets (nl_catd arg0 , int arg1 , int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catgets");
-	validate_NULL_TYPETYPE(arg0, "catgets");
-	validate_NULL_TYPETYPE(arg1, "catgets");
-	validate_NULL_TYPETYPE(arg2, "catgets");
-	validate_NULL_TYPETYPE(arg3, "catgets");
+	validate_NULL_TYPETYPE(  arg0, "catgets");
+	validate_NULL_TYPETYPE(  arg1, "catgets");
+	validate_NULL_TYPETYPE(  arg2, "catgets");
+	validate_Rdaddress( arg3, "catgets");
+	validate_NULL_TYPETYPE(  arg3, "catgets");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-char * lsb_catgets (nl_catd arg0 , int arg1 , int arg2 , const char * arg3 )
+char * __lsb_catgets (nl_catd arg0 , int arg1 , int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catgets");

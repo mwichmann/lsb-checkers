@@ -10,11 +10,11 @@ int isatty (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isatty");
-	validate_NULL_TYPETYPE(arg0, "isatty");
+	validate_NULL_TYPETYPE(  arg0, "isatty");
 	return funcptr(arg0);
 }
 
-int lsb_isatty (int arg0 )
+int __lsb_isatty (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isatty");

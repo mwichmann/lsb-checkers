@@ -17,7 +17,7 @@ XtLanguageProc XtSetLanguageProc(XtAppContext arg0, XtLanguageProc arg1, XtPoint
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtLanguageProc lsb_XtSetLanguageProc(XtAppContext arg0, XtLanguageProc arg1, XtPointer arg2)
+XtLanguageProc __lsb_XtSetLanguageProc(XtAppContext arg0, XtLanguageProc arg1, XtPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSetLanguageProc");

@@ -13,7 +13,7 @@ struct passwd * getpwent ()
 	return funcptr();
 }
 
-struct passwd * lsb_getpwent ()
+struct passwd * __lsb_getpwent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwent");

@@ -10,11 +10,12 @@ int acct (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acct");
-	validate_NULL_TYPETYPE(arg0, "acct");
+	validate_Rdaddress( arg0, "acct");
+	validate_NULL_TYPETYPE(  arg0, "acct");
 	return funcptr(arg0);
 }
 
-int lsb_acct (const char * arg0 )
+int __lsb_acct (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acct");

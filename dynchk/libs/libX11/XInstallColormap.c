@@ -14,7 +14,7 @@ int XInstallColormap(Display * arg0, Colormap arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XInstallColormap(Display * arg0, Colormap arg1)
+int __lsb_XInstallColormap(Display * arg0, Colormap arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XInstallColormap");

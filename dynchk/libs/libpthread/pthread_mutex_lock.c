@@ -16,7 +16,7 @@ int pthread_mutex_lock (pthread_mutex_t * arg0 )
 	return funcptr(arg0);
 }
 
-int lsb_pthread_mutex_lock (pthread_mutex_t * arg0 )
+int __lsb_pthread_mutex_lock (pthread_mutex_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = __pthread_mutex_lock;

@@ -17,7 +17,7 @@ int XkbKeyTypesForCoreSymbols(XkbDescPtr arg0, int arg1, KeySym * arg2, unsigned
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XkbKeyTypesForCoreSymbols(XkbDescPtr arg0, int arg1, KeySym * arg2, unsigned int arg3, int * arg4, KeySym * arg5)
+int __lsb_XkbKeyTypesForCoreSymbols(XkbDescPtr arg0, int arg1, KeySym * arg2, unsigned int arg3, int * arg4, KeySym * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbKeyTypesForCoreSymbols");

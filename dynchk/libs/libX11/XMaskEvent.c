@@ -14,7 +14,7 @@ int XMaskEvent(Display * arg0, long arg1, XEvent * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XMaskEvent(Display * arg0, long arg1, XEvent * arg2)
+int __lsb_XMaskEvent(Display * arg0, long arg1, XEvent * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XMaskEvent");

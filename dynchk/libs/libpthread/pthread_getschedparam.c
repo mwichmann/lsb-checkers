@@ -11,13 +11,15 @@ int pthread_getschedparam (pthread_t arg0 , int * arg1 , struct sched_param * ar
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_getschedparam");
-	validate_NULL_TYPETYPE(arg0, "pthread_getschedparam");
-	validate_NULL_TYPETYPE(arg1, "pthread_getschedparam");
-	validate_NULL_TYPETYPE(arg2, "pthread_getschedparam");
+	validate_NULL_TYPETYPE(  arg0, "pthread_getschedparam");
+	validate_Rdaddress( arg1, "pthread_getschedparam");
+	validate_NULL_TYPETYPE(  arg1, "pthread_getschedparam");
+	validate_Rdaddress( arg2, "pthread_getschedparam");
+	validate_NULL_TYPETYPE(  arg2, "pthread_getschedparam");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_pthread_getschedparam (pthread_t arg0 , int * arg1 , struct sched_param * arg2 )
+int __lsb_pthread_getschedparam (pthread_t arg0 , int * arg1 , struct sched_param * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_getschedparam");

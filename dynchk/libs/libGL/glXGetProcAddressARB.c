@@ -12,7 +12,7 @@ fptr-glXGetProcAddressARB glXGetProcAddressARB(void arg0)
 	return funcptr(arg0);
 }
 
-fptr-glXGetProcAddressARB lsb_glXGetProcAddressARB(void arg0)
+fptr-glXGetProcAddressARB __lsb_glXGetProcAddressARB(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXGetProcAddressARB");

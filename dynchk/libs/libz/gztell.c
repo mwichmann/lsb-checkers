@@ -10,11 +10,11 @@ z_off_t gztell (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gztell");
-	validate_NULL_TYPETYPE(arg0, "gztell");
+	validate_NULL_TYPETYPE(  arg0, "gztell");
 	return funcptr(arg0);
 }
 
-z_off_t lsb_gztell (gzFile arg0 )
+z_off_t __lsb_gztell (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gztell");

@@ -10,11 +10,11 @@ unsigned int alarm (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "alarm");
-	validate_NULL_TYPETYPE(arg0, "alarm");
+	validate_NULL_TYPETYPE(  arg0, "alarm");
 	return funcptr(arg0);
 }
 
-unsigned int lsb_alarm (unsigned int arg0 )
+unsigned int __lsb_alarm (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "alarm");

@@ -13,7 +13,7 @@ int XkbCopyKeyType(XkbKeyTypePtr arg0, XkbKeyTypePtr arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XkbCopyKeyType(XkbKeyTypePtr arg0, XkbKeyTypePtr arg1)
+int __lsb_XkbCopyKeyType(XkbKeyTypePtr arg0, XkbKeyTypePtr arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbCopyKeyType");

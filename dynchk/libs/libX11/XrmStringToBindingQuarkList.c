@@ -16,7 +16,7 @@ void XrmStringToBindingQuarkList(char * arg0, XrmBindingList arg1, XrmQuarkList 
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XrmStringToBindingQuarkList(char * arg0, XrmBindingList arg1, XrmQuarkList arg2)
+void __lsb_XrmStringToBindingQuarkList(char * arg0, XrmBindingList arg1, XrmQuarkList arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmStringToBindingQuarkList");

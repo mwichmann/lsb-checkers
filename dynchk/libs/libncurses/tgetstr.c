@@ -10,12 +10,15 @@ char * tgetstr (char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetstr");
-	validate_NULL_TYPETYPE(arg0, "tgetstr");
-	validate_NULL_TYPETYPE(arg1, "tgetstr");
+	validate_Rdaddress( arg0, "tgetstr");
+	validate_NULL_TYPETYPE(  arg0, "tgetstr");
+	validate_Rdaddress( arg1, "tgetstr");
+	validate_Rdaddress(* arg1, "tgetstr");
+	validate_NULL_TYPETYPE(  arg1, "tgetstr");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_tgetstr (char * arg0 , char * * arg1 )
+char * __lsb_tgetstr (char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetstr");

@@ -13,7 +13,7 @@ GContext XGContextFromGC(GC arg0)
 	return funcptr(arg0);
 }
 
-GContext lsb_XGContextFromGC(GC arg0)
+GContext __lsb_XGContextFromGC(GC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGContextFromGC");

@@ -12,7 +12,7 @@ int XPending(Display * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XPending(Display * arg0)
+int __lsb_XPending(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XPending");

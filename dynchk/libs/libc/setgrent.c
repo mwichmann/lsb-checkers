@@ -13,7 +13,7 @@ void setgrent ()
 	funcptr();
 }
 
-void lsb_setgrent ()
+void __lsb_setgrent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgrent");

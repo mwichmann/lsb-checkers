@@ -10,11 +10,12 @@ int getc_unlocked (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getc_unlocked");
-	validate_NULL_TYPETYPE(arg0, "getc_unlocked");
+	validate_Rdaddress( arg0, "getc_unlocked");
+	validate_NULL_TYPETYPE(  arg0, "getc_unlocked");
 	return funcptr(arg0);
 }
 
-int lsb_getc_unlocked (FILE * arg0 )
+int __lsb_getc_unlocked (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getc_unlocked");

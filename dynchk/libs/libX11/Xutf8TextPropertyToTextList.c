@@ -15,7 +15,7 @@ int Xutf8TextPropertyToTextList(Display * arg0, XTextProperty * arg1, char ** * 
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_Xutf8TextPropertyToTextList(Display * arg0, XTextProperty * arg1, char ** * arg2, int * arg3)
+int __lsb_Xutf8TextPropertyToTextList(Display * arg0, XTextProperty * arg1, char ** * arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "Xutf8TextPropertyToTextList");

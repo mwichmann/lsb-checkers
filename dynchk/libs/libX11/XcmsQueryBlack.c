@@ -16,7 +16,7 @@ int XcmsQueryBlack(XcmsCCC arg0, XcmsColorFormat arg1, XcmsColor * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XcmsQueryBlack(XcmsCCC arg0, XcmsColorFormat arg1, XcmsColor * arg2)
+int __lsb_XcmsQueryBlack(XcmsCCC arg0, XcmsColorFormat arg1, XcmsColor * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsQueryBlack");

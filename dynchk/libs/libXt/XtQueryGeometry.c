@@ -15,7 +15,7 @@ XtGeometryResult XtQueryGeometry(Widget arg0, XtWidgetGeometry * arg1, XtWidgetG
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtGeometryResult lsb_XtQueryGeometry(Widget arg0, XtWidgetGeometry * arg1, XtWidgetGeometry * arg2)
+XtGeometryResult __lsb_XtQueryGeometry(Widget arg0, XtWidgetGeometry * arg1, XtWidgetGeometry * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtQueryGeometry");

@@ -16,7 +16,7 @@ int XSetWMProtocols(Display * arg0, Window arg1, Atom * arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XSetWMProtocols(Display * arg0, Window arg1, Atom * arg2, int arg3)
+int __lsb_XSetWMProtocols(Display * arg0, Window arg1, Atom * arg2, int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetWMProtocols");

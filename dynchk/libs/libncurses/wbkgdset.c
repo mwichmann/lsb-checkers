@@ -10,12 +10,13 @@ void wbkgdset (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wbkgdset");
-	validate_NULL_TYPETYPE(arg0, "wbkgdset");
-	validate_NULL_TYPETYPE(arg1, "wbkgdset");
+	validate_Rdaddress( arg0, "wbkgdset");
+	validate_NULL_TYPETYPE(  arg0, "wbkgdset");
+	validate_NULL_TYPETYPE(  arg1, "wbkgdset");
 	funcptr(arg0, arg1);
 }
 
-void lsb_wbkgdset (WINDOW * arg0 , chtype arg1 )
+void __lsb_wbkgdset (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wbkgdset");

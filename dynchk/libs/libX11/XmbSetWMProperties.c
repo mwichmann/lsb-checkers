@@ -21,7 +21,7 @@ void XmbSetWMProperties(Display * arg0, Window arg1, char * arg2, char * arg3, c
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-void lsb_XmbSetWMProperties(Display * arg0, Window arg1, char * arg2, char * arg3, char * * arg4, int arg5, XSizeHints * arg6, XWMHints * arg7, XClassHint * arg8)
+void __lsb_XmbSetWMProperties(Display * arg0, Window arg1, char * arg2, char * arg3, char * * arg4, int arg5, XSizeHints * arg6, XWMHints * arg7, XClassHint * arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XmbSetWMProperties");

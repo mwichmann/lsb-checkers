@@ -10,12 +10,14 @@ int waddstr (WINDOW * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waddstr");
-	validate_NULL_TYPETYPE(arg0, "waddstr");
-	validate_NULL_TYPETYPE(arg1, "waddstr");
+	validate_Rdaddress( arg0, "waddstr");
+	validate_NULL_TYPETYPE(  arg0, "waddstr");
+	validate_Rdaddress( arg1, "waddstr");
+	validate_NULL_TYPETYPE(  arg1, "waddstr");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_waddstr (WINDOW * arg0 , const char * arg1 )
+int __lsb_waddstr (WINDOW * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waddstr");

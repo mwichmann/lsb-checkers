@@ -14,7 +14,7 @@ void XtAddExposureToRegion(XEvent * arg0, Region arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtAddExposureToRegion(XEvent * arg0, Region arg1)
+void __lsb_XtAddExposureToRegion(XEvent * arg0, Region arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAddExposureToRegion");

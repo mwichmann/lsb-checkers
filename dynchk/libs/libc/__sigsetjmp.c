@@ -10,12 +10,12 @@ int __sigsetjmp (jmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__sigsetjmp");
-	validate_NULL_TYPETYPE(arg0, "__sigsetjmp");
-	validate_NULL_TYPETYPE(arg1, "__sigsetjmp");
+	validate_NULL_TYPETYPE(  arg0, "__sigsetjmp");
+	validate_NULL_TYPETYPE(  arg1, "__sigsetjmp");
 	return funcptr(arg0, arg1);
 }
 
-int lsb___sigsetjmp (jmp_buf arg0 , int arg1 )
+int __lsb___sigsetjmp (jmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__sigsetjmp");

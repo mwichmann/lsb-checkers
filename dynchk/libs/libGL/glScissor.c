@@ -19,7 +19,7 @@ void glScissor(GLint arg0, GLint arg1, GLsizei arg2, GLsizei arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glScissor(GLint arg0, GLint arg1, GLsizei arg2, GLsizei arg3)
+void __lsb_glScissor(GLint arg0, GLint arg1, GLsizei arg2, GLsizei arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glScissor");

@@ -11,14 +11,16 @@ size_t regerror (int arg0 , const regex_t * arg1 , char * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regerror");
-	validate_NULL_TYPETYPE(arg0, "regerror");
-	validate_NULL_TYPETYPE(arg1, "regerror");
-	validate_NULL_TYPETYPE(arg2, "regerror");
-	validate_NULL_TYPETYPE(arg3, "regerror");
+	validate_NULL_TYPETYPE(  arg0, "regerror");
+	validate_Rdaddress( arg1, "regerror");
+	validate_NULL_TYPETYPE(  arg1, "regerror");
+	validate_Rdaddress( arg2, "regerror");
+	validate_NULL_TYPETYPE(  arg2, "regerror");
+	validate_NULL_TYPETYPE(  arg3, "regerror");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-size_t lsb_regerror (int arg0 , const regex_t * arg1 , char * arg2 , size_t arg3 )
+size_t __lsb_regerror (int arg0 , const regex_t * arg1 , char * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regerror");

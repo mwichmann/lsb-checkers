@@ -10,11 +10,12 @@ speed_t cfgetispeed (const struct termios * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfgetispeed");
-	validate_NULL_TYPETYPE(arg0, "cfgetispeed");
+	validate_Rdaddress( arg0, "cfgetispeed");
+	validate_NULL_TYPETYPE(  arg0, "cfgetispeed");
 	return funcptr(arg0);
 }
 
-speed_t lsb_cfgetispeed (const struct termios * arg0 )
+speed_t __lsb_cfgetispeed (const struct termios * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfgetispeed");

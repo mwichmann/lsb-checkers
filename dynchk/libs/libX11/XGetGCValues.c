@@ -16,7 +16,7 @@ int XGetGCValues(Display * arg0, GC arg1, unsigned long arg2, XGCValues * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XGetGCValues(Display * arg0, GC arg1, unsigned long arg2, XGCValues * arg3)
+int __lsb_XGetGCValues(Display * arg0, GC arg1, unsigned long arg2, XGCValues * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetGCValues");

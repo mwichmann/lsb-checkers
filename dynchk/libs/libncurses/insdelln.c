@@ -10,11 +10,11 @@ int insdelln (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insdelln");
-	validate_NULL_TYPETYPE(arg0, "insdelln");
+	validate_NULL_TYPETYPE(  arg0, "insdelln");
 	return funcptr(arg0);
 }
 
-int lsb_insdelln (int arg0 )
+int __lsb_insdelln (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insdelln");

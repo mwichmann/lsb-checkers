@@ -10,11 +10,12 @@ int wclear (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclear");
-	validate_NULL_TYPETYPE(arg0, "wclear");
+	validate_Rdaddress( arg0, "wclear");
+	validate_NULL_TYPETYPE(  arg0, "wclear");
 	return funcptr(arg0);
 }
 
-int lsb_wclear (WINDOW * arg0 )
+int __lsb_wclear (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclear");

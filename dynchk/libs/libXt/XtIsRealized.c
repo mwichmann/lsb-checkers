@@ -13,7 +13,7 @@ Boolean XtIsRealized(Widget arg0)
 	return funcptr(arg0);
 }
 
-Boolean lsb_XtIsRealized(Widget arg0)
+Boolean __lsb_XtIsRealized(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsRealized");

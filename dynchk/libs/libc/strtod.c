@@ -10,12 +10,15 @@ double strtod (const char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtod");
-	validate_NULL_TYPETYPE(arg0, "strtod");
-	validate_NULL_TYPETYPE(arg1, "strtod");
+	validate_Rdaddress( arg0, "strtod");
+	validate_NULL_TYPETYPE(  arg0, "strtod");
+	validate_Rdaddress( arg1, "strtod");
+	validate_Rdaddress(* arg1, "strtod");
+	validate_NULL_TYPETYPE(  arg1, "strtod");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_strtod (const char * arg0 , char * * arg1 )
+double __lsb_strtod (const char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtod");

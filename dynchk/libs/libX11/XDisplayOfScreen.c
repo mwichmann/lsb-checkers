@@ -12,7 +12,7 @@ Display * XDisplayOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-Display * lsb_XDisplayOfScreen(Screen * arg0)
+Display * __lsb_XDisplayOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDisplayOfScreen");

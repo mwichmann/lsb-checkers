@@ -13,7 +13,7 @@ GLuint glGenLists(GLsizei arg0)
 	return funcptr(arg0);
 }
 
-GLuint lsb_glGenLists(GLsizei arg0)
+GLuint __lsb_glGenLists(GLsizei arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGenLists");

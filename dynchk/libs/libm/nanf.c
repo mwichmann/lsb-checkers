@@ -10,11 +10,12 @@ float nanf (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanf");
-	validate_NULL_TYPETYPE(arg0, "nanf");
+	validate_Rdaddress( arg0, "nanf");
+	validate_NULL_TYPETYPE(  arg0, "nanf");
 	return funcptr(arg0);
 }
 
-float lsb_nanf (const char * arg0 )
+float __lsb_nanf (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanf");

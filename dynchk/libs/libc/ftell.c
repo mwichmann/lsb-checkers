@@ -10,11 +10,12 @@ long ftell (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftell");
-	validate_NULL_TYPETYPE(arg0, "ftell");
+	validate_Rdaddress( arg0, "ftell");
+	validate_NULL_TYPETYPE(  arg0, "ftell");
 	return funcptr(arg0);
 }
 
-long lsb_ftell (FILE * arg0 )
+long __lsb_ftell (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftell");

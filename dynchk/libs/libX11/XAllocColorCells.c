@@ -19,7 +19,7 @@ int XAllocColorCells(Display * arg0, Colormap arg1, int arg2, unsigned long * ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_XAllocColorCells(Display * arg0, Colormap arg1, int arg2, unsigned long * arg3, unsigned int arg4, unsigned long * arg5, unsigned int arg6)
+int __lsb_XAllocColorCells(Display * arg0, Colormap arg1, int arg2, unsigned long * arg3, unsigned int arg4, unsigned long * arg5, unsigned int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllocColorCells");

@@ -10,12 +10,12 @@ long double fmaxl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaxl");
-	validate_NULL_TYPETYPE(arg0, "fmaxl");
-	validate_NULL_TYPETYPE(arg1, "fmaxl");
+	validate_NULL_TYPETYPE(  arg0, "fmaxl");
+	validate_NULL_TYPETYPE(  arg1, "fmaxl");
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_fmaxl (long double arg0 , long double arg1 )
+long double __lsb_fmaxl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaxl");

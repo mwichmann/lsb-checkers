@@ -10,11 +10,11 @@ int iconv_close (iconv_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iconv_close");
-	validate_NULL_TYPETYPE(arg0, "iconv_close");
+	validate_NULL_TYPETYPE(  arg0, "iconv_close");
 	return funcptr(arg0);
 }
 
-int lsb_iconv_close (iconv_t arg0 )
+int __lsb_iconv_close (iconv_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iconv_close");

@@ -10,11 +10,11 @@ int delay_output (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delay_output");
-	validate_NULL_TYPETYPE(arg0, "delay_output");
+	validate_NULL_TYPETYPE(  arg0, "delay_output");
 	return funcptr(arg0);
 }
 
-int lsb_delay_output (int arg0 )
+int __lsb_delay_output (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delay_output");

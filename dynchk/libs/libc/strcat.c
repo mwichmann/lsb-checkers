@@ -10,12 +10,14 @@ char * strcat (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcat");
-	validate_NULL_TYPETYPE(arg0, "strcat");
-	validate_NULL_TYPETYPE(arg1, "strcat");
+	validate_Rdaddress( arg0, "strcat");
+	validate_NULL_TYPETYPE(  arg0, "strcat");
+	validate_Rdaddress( arg1, "strcat");
+	validate_NULL_TYPETYPE(  arg1, "strcat");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strcat (char * arg0 , const char * arg1 )
+char * __lsb_strcat (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcat");

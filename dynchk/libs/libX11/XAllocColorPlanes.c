@@ -23,7 +23,7 @@ int XAllocColorPlanes(Display * arg0, Colormap arg1, int arg2, unsigned long * a
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 }
 
-int lsb_XAllocColorPlanes(Display * arg0, Colormap arg1, int arg2, unsigned long * arg3, int arg4, int arg5, int arg6, int arg7, unsigned long * arg8, unsigned long * arg9, unsigned long * arg10)
+int __lsb_XAllocColorPlanes(Display * arg0, Colormap arg1, int arg2, unsigned long * arg3, int arg4, int arg5, int arg6, int arg7, unsigned long * arg8, unsigned long * arg9, unsigned long * arg10)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllocColorPlanes");

@@ -11,13 +11,14 @@ int fseeko (FILE * arg0 , off_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseeko");
-	validate_NULL_TYPETYPE(arg0, "fseeko");
-	validate_NULL_TYPETYPE(arg1, "fseeko");
-	validate_NULL_TYPETYPE(arg2, "fseeko");
+	validate_Rdaddress( arg0, "fseeko");
+	validate_NULL_TYPETYPE(  arg0, "fseeko");
+	validate_NULL_TYPETYPE(  arg1, "fseeko");
+	validate_NULL_TYPETYPE(  arg2, "fseeko");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_fseeko (FILE * arg0 , off_t arg1 , int arg2 )
+int __lsb_fseeko (FILE * arg0 , off_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseeko");

@@ -13,7 +13,7 @@ void * malloc(size_t arg0)
 	return funcptr(arg0);
 }
 
-void * lsb_malloc(size_t arg0)
+void * __lsb_malloc(size_t arg0)
 {
 	if(!funcptr)
 		funcptr = __libc_malloc;

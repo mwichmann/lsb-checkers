@@ -17,7 +17,7 @@ int XLookupColor(Display * arg0, Colormap arg1, char * arg2, XColor * arg3, XCol
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XLookupColor(Display * arg0, Colormap arg1, char * arg2, XColor * arg3, XColor * arg4)
+int __lsb_XLookupColor(Display * arg0, Colormap arg1, char * arg2, XColor * arg3, XColor * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XLookupColor");

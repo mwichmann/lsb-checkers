@@ -14,7 +14,7 @@ long ulimit (int arg0 , long arg1 )
 	return funcptr(arg0, arg1);
 }
 
-long lsb_ulimit (int arg0 , long arg1 )
+long __lsb_ulimit (int arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ulimit");

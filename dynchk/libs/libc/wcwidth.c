@@ -11,11 +11,11 @@ int wcwidth (wchar_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcwidth");
-	validate_NULL_TYPETYPE(arg0, "wcwidth");
+	validate_NULL_TYPETYPE(  arg0, "wcwidth");
 	return funcptr(arg0);
 }
 
-int lsb_wcwidth (wchar_t arg0 )
+int __lsb_wcwidth (wchar_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcwidth");

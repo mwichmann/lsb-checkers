@@ -24,7 +24,7 @@ void XtGrabButton(Widget arg0, int arg1, Modifiers arg2, int arg3, unsigned int 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-void lsb_XtGrabButton(Widget arg0, int arg1, Modifiers arg2, int arg3, unsigned int arg4, int arg5, int arg6, Window arg7, Cursor arg8)
+void __lsb_XtGrabButton(Widget arg0, int arg1, Modifiers arg2, int arg3, unsigned int arg4, int arg5, int arg6, Window arg7, Cursor arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGrabButton");

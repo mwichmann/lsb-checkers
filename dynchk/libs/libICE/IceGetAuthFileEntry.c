@@ -14,7 +14,7 @@ IceAuthFileEntry * IceGetAuthFileEntry(char * arg0, char * arg1, char * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-IceAuthFileEntry * lsb_IceGetAuthFileEntry(char * arg0, char * arg1, char * arg2)
+IceAuthFileEntry * __lsb_IceGetAuthFileEntry(char * arg0, char * arg1, char * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceGetAuthFileEntry");

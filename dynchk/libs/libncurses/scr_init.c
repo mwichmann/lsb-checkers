@@ -10,11 +10,12 @@ int scr_init (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_init");
-	validate_NULL_TYPETYPE(arg0, "scr_init");
+	validate_Rdaddress( arg0, "scr_init");
+	validate_NULL_TYPETYPE(  arg0, "scr_init");
 	return funcptr(arg0);
 }
 
-int lsb_scr_init (const char * arg0 )
+int __lsb_scr_init (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_init");

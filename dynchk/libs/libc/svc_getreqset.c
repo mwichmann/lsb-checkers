@@ -11,11 +11,12 @@ void svc_getreqset (fd_set * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_getreqset");
-	validate_NULL_TYPETYPE(arg0, "svc_getreqset");
+	validate_Rdaddress( arg0, "svc_getreqset");
+	validate_NULL_TYPETYPE(  arg0, "svc_getreqset");
 	funcptr(arg0);
 }
 
-void lsb_svc_getreqset (fd_set * arg0 )
+void __lsb_svc_getreqset (fd_set * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_getreqset");

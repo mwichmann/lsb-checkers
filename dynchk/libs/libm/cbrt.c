@@ -10,11 +10,11 @@ double cbrt (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbrt");
-	validate_NULL_TYPETYPE(arg0, "cbrt");
+	validate_NULL_TYPETYPE(  arg0, "cbrt");
 	return funcptr(arg0);
 }
 
-double lsb_cbrt (double arg0 )
+double __lsb_cbrt (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbrt");

@@ -10,11 +10,12 @@ int fgetc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetc");
-	validate_NULL_TYPETYPE(arg0, "fgetc");
+	validate_Rdaddress( arg0, "fgetc");
+	validate_NULL_TYPETYPE(  arg0, "fgetc");
 	return funcptr(arg0);
 }
 
-int lsb_fgetc (FILE * arg0 )
+int __lsb_fgetc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetc");

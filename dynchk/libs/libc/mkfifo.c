@@ -11,12 +11,13 @@ int mkfifo (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mkfifo");
-	validate_NULL_TYPETYPE(arg0, "mkfifo");
-	validate_NULL_TYPETYPE(arg1, "mkfifo");
+	validate_Rdaddress( arg0, "mkfifo");
+	validate_NULL_TYPETYPE(  arg0, "mkfifo");
+	validate_NULL_TYPETYPE(  arg1, "mkfifo");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_mkfifo (const char * arg0 , mode_t arg1 )
+int __lsb_mkfifo (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mkfifo");

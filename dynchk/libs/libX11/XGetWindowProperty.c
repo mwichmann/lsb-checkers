@@ -26,7 +26,7 @@ int XGetWindowProperty(Display * arg0, Window arg1, Atom arg2, long arg3, long a
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 }
 
-int lsb_XGetWindowProperty(Display * arg0, Window arg1, Atom arg2, long arg3, long arg4, int arg5, Atom arg6, Atom * arg7, int * arg8, unsigned long * arg9, unsigned long * arg10, unsigned char * * arg11)
+int __lsb_XGetWindowProperty(Display * arg0, Window arg1, Atom arg2, long arg3, long arg4, int arg5, Atom arg6, Atom * arg7, int * arg8, unsigned long * arg9, unsigned long * arg10, unsigned char * * arg11)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetWindowProperty");

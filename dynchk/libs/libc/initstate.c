@@ -11,13 +11,14 @@ char * initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initstate");
-	validate_NULL_TYPETYPE(arg0, "initstate");
-	validate_NULL_TYPETYPE(arg1, "initstate");
-	validate_NULL_TYPETYPE(arg2, "initstate");
+	validate_NULL_TYPETYPE(  arg0, "initstate");
+	validate_Rdaddress( arg1, "initstate");
+	validate_NULL_TYPETYPE(  arg1, "initstate");
+	validate_NULL_TYPETYPE(  arg2, "initstate");
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
+char * __lsb_initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initstate");

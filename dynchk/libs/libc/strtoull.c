@@ -10,13 +10,16 @@ unsigned long long strtoull (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoull");
-	validate_NULL_TYPETYPE(arg0, "strtoull");
-	validate_NULL_TYPETYPE(arg1, "strtoull");
-	validate_NULL_TYPETYPE(arg2, "strtoull");
+	validate_Rdaddress( arg0, "strtoull");
+	validate_NULL_TYPETYPE(  arg0, "strtoull");
+	validate_Rdaddress( arg1, "strtoull");
+	validate_Rdaddress(* arg1, "strtoull");
+	validate_NULL_TYPETYPE(  arg1, "strtoull");
+	validate_NULL_TYPETYPE(  arg2, "strtoull");
 	return funcptr(arg0, arg1, arg2);
 }
 
-unsigned long long lsb_strtoull (const char * arg0 , char * * arg1 , int arg2 )
+unsigned long long __lsb_strtoull (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoull");

@@ -13,7 +13,7 @@ IceConnectStatus IceConnectionStatus(IceConn arg0)
 	return funcptr(arg0);
 }
 
-IceConnectStatus lsb_IceConnectionStatus(IceConn arg0)
+IceConnectStatus __lsb_IceConnectionStatus(IceConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceConnectionStatus");

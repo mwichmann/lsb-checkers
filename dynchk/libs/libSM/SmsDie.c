@@ -13,7 +13,7 @@ void SmsDie(SmsConn arg0)
 	return funcptr(arg0);
 }
 
-void lsb_SmsDie(SmsConn arg0)
+void __lsb_SmsDie(SmsConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmsDie");

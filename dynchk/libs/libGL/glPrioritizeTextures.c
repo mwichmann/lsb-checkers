@@ -15,7 +15,7 @@ void glPrioritizeTextures(GLsizei arg0, GLuint * arg1, GLclampf * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glPrioritizeTextures(GLsizei arg0, GLuint * arg1, GLclampf * arg2)
+void __lsb_glPrioritizeTextures(GLsizei arg0, GLuint * arg1, GLclampf * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glPrioritizeTextures");

@@ -14,7 +14,7 @@ XSyncCounter XSyncCreateCounter(Display * arg0, XSyncValue arg1)
 	return funcptr(arg0, arg1);
 }
 
-XSyncCounter lsb_XSyncCreateCounter(Display * arg0, XSyncValue arg1)
+XSyncCounter __lsb_XSyncCreateCounter(Display * arg0, XSyncValue arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncCreateCounter");

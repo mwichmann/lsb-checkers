@@ -13,7 +13,7 @@ bool_t xdr_void ()
 	return funcptr();
 }
 
-bool_t lsb_xdr_void ()
+bool_t __lsb_xdr_void ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_void");

@@ -10,12 +10,13 @@ int pam_acct_mgmt (pam_handle_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_acct_mgmt");
-	validate_NULL_TYPETYPE(arg0, "pam_acct_mgmt");
-	validate_NULL_TYPETYPE(arg1, "pam_acct_mgmt");
+	validate_Rdaddress( arg0, "pam_acct_mgmt");
+	validate_NULL_TYPETYPE(  arg0, "pam_acct_mgmt");
+	validate_NULL_TYPETYPE(  arg1, "pam_acct_mgmt");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pam_acct_mgmt (pam_handle_t * arg0 , int arg1 )
+int __lsb_pam_acct_mgmt (pam_handle_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_acct_mgmt");

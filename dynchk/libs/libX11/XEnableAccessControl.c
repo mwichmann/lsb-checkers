@@ -12,7 +12,7 @@ int XEnableAccessControl(Display * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XEnableAccessControl(Display * arg0)
+int __lsb_XEnableAccessControl(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XEnableAccessControl");

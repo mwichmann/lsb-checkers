@@ -13,7 +13,7 @@ int XkbGetGeometry(Display * arg0, XkbDescPtr arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XkbGetGeometry(Display * arg0, XkbDescPtr arg1)
+int __lsb_XkbGetGeometry(Display * arg0, XkbDescPtr arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbGetGeometry");

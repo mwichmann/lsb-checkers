@@ -10,11 +10,11 @@ double round (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "round");
-	validate_NULL_TYPETYPE(arg0, "round");
+	validate_NULL_TYPETYPE(  arg0, "round");
 	return funcptr(arg0);
 }
 
-double lsb_round (double arg0 )
+double __lsb_round (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "round");

@@ -10,11 +10,12 @@ int chroot (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chroot");
-	validate_NULL_TYPETYPE(arg0, "chroot");
+	validate_Rdaddress( arg0, "chroot");
+	validate_NULL_TYPETYPE(  arg0, "chroot");
 	return funcptr(arg0);
 }
 
-int lsb_chroot (const char * arg0 )
+int __lsb_chroot (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chroot");

@@ -13,7 +13,7 @@ void glRectfv(GLfloat * arg0, GLfloat * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glRectfv(GLfloat * arg0, GLfloat * arg1)
+void __lsb_glRectfv(GLfloat * arg0, GLfloat * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glRectfv");

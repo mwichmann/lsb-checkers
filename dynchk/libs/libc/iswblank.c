@@ -10,11 +10,11 @@ int iswblank (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswblank");
-	validate_NULL_TYPETYPE(arg0, "iswblank");
+	validate_NULL_TYPETYPE(  arg0, "iswblank");
 	return funcptr(arg0);
 }
 
-int lsb_iswblank (wint_t arg0 )
+int __lsb_iswblank (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswblank");

@@ -11,12 +11,13 @@ int creat (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creat");
-	validate_NULL_TYPETYPE(arg0, "creat");
-	validate_NULL_TYPETYPE(arg1, "creat");
+	validate_Rdaddress( arg0, "creat");
+	validate_NULL_TYPETYPE(  arg0, "creat");
+	validate_NULL_TYPETYPE(  arg1, "creat");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_creat (const char * arg0 , mode_t arg1 )
+int __lsb_creat (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creat");

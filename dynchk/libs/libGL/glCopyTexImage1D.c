@@ -25,7 +25,7 @@ void glCopyTexImage1D(GLenum arg0, GLint arg1, GLenum arg2, GLint arg3, GLint ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-void lsb_glCopyTexImage1D(GLenum arg0, GLint arg1, GLenum arg2, GLint arg3, GLint arg4, GLsizei arg5, GLint arg6)
+void __lsb_glCopyTexImage1D(GLenum arg0, GLint arg1, GLenum arg2, GLint arg3, GLint arg4, GLsizei arg5, GLint arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glCopyTexImage1D");

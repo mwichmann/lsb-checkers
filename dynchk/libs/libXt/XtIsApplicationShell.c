@@ -11,7 +11,7 @@ Boolean XtIsApplicationShell()
 	return funcptr();
 }
 
-Boolean lsb_XtIsApplicationShell()
+Boolean __lsb_XtIsApplicationShell()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsApplicationShell");

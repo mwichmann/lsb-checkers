@@ -10,11 +10,11 @@ char * keyname (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keyname");
-	validate_NULL_TYPETYPE(arg0, "keyname");
+	validate_NULL_TYPETYPE(  arg0, "keyname");
 	return funcptr(arg0);
 }
 
-char * lsb_keyname (int arg0 )
+char * __lsb_keyname (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keyname");

@@ -11,15 +11,20 @@ int getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t a
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrnam_r");
-	validate_NULL_TYPETYPE(arg0, "getgrnam_r");
-	validate_NULL_TYPETYPE(arg1, "getgrnam_r");
-	validate_NULL_TYPETYPE(arg2, "getgrnam_r");
-	validate_NULL_TYPETYPE(arg3, "getgrnam_r");
-	validate_NULL_TYPETYPE(arg4, "getgrnam_r");
+	validate_Rdaddress( arg0, "getgrnam_r");
+	validate_NULL_TYPETYPE(  arg0, "getgrnam_r");
+	validate_Rdaddress( arg1, "getgrnam_r");
+	validate_NULL_TYPETYPE(  arg1, "getgrnam_r");
+	validate_Rdaddress( arg2, "getgrnam_r");
+	validate_NULL_TYPETYPE(  arg2, "getgrnam_r");
+	validate_NULL_TYPETYPE(  arg3, "getgrnam_r");
+	validate_Rdaddress( arg4, "getgrnam_r");
+	validate_Rdaddress(* arg4, "getgrnam_r");
+	validate_NULL_TYPETYPE(  arg4, "getgrnam_r");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
+int __lsb_getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrnam_r");

@@ -27,7 +27,7 @@ int IceRegisterForProtocolReply(char * arg0, char * arg1, char * arg2, int arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 }
 
-int lsb_IceRegisterForProtocolReply(char * arg0, char * arg1, char * arg2, int arg3, IcePaVersionRec * arg4, int arg5, char * * arg6, IcePaAuthProc * arg7, IceHostBasedAuthProc arg8, IceProtocolSetupProc arg9, IceProtocolActivateProc arg10, IceIOErrorProc arg11)
+int __lsb_IceRegisterForProtocolReply(char * arg0, char * arg1, char * arg2, int arg3, IcePaVersionRec * arg4, int arg5, char * * arg6, IcePaAuthProc * arg7, IceHostBasedAuthProc arg8, IceProtocolSetupProc arg9, IceProtocolActivateProc arg10, IceIOErrorProc arg11)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceRegisterForProtocolReply");

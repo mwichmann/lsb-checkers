@@ -14,7 +14,7 @@ void XtAppSetSelectionTimeout(XtAppContext arg0, unsigned long arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtAppSetSelectionTimeout(XtAppContext arg0, unsigned long arg1)
+void __lsb_XtAppSetSelectionTimeout(XtAppContext arg0, unsigned long arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppSetSelectionTimeout");

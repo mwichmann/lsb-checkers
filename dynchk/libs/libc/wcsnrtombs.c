@@ -12,15 +12,19 @@ size_t wcsnrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , size_t a
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsnrtombs");
-	validate_NULL_TYPETYPE(arg0, "wcsnrtombs");
-	validate_NULL_TYPETYPE(arg1, "wcsnrtombs");
-	validate_NULL_TYPETYPE(arg2, "wcsnrtombs");
-	validate_NULL_TYPETYPE(arg3, "wcsnrtombs");
-	validate_NULL_TYPETYPE(arg4, "wcsnrtombs");
+	validate_Rdaddress( arg0, "wcsnrtombs");
+	validate_NULL_TYPETYPE(  arg0, "wcsnrtombs");
+	validate_Rdaddress( arg1, "wcsnrtombs");
+	validate_Rdaddress(* arg1, "wcsnrtombs");
+	validate_NULL_TYPETYPE(  arg1, "wcsnrtombs");
+	validate_NULL_TYPETYPE(  arg2, "wcsnrtombs");
+	validate_NULL_TYPETYPE(  arg3, "wcsnrtombs");
+	validate_Rdaddress( arg4, "wcsnrtombs");
+	validate_NULL_TYPETYPE(  arg4, "wcsnrtombs");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-size_t lsb_wcsnrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , size_t arg3 , mbstate_t * arg4 )
+size_t __lsb_wcsnrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , size_t arg3 , mbstate_t * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsnrtombs");

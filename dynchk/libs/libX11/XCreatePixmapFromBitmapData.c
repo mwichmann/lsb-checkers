@@ -20,7 +20,7 @@ Pixmap XCreatePixmapFromBitmapData(Display * arg0, Drawable arg1, char * arg2, u
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-Pixmap lsb_XCreatePixmapFromBitmapData(Display * arg0, Drawable arg1, char * arg2, unsigned int arg3, unsigned int arg4, unsigned long arg5, unsigned long arg6, unsigned int arg7)
+Pixmap __lsb_XCreatePixmapFromBitmapData(Display * arg0, Drawable arg1, char * arg2, unsigned int arg3, unsigned int arg4, unsigned long arg5, unsigned long arg6, unsigned int arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreatePixmapFromBitmapData");

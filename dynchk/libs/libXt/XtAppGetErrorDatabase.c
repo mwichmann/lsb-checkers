@@ -13,7 +13,7 @@ XrmDatabase * XtAppGetErrorDatabase(XtAppContext arg0)
 	return funcptr(arg0);
 }
 
-XrmDatabase * lsb_XtAppGetErrorDatabase(XtAppContext arg0)
+XrmDatabase * __lsb_XtAppGetErrorDatabase(XtAppContext arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppGetErrorDatabase");

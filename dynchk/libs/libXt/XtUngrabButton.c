@@ -16,7 +16,7 @@ void XtUngrabButton(Widget arg0, unsigned int arg1, Modifiers arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XtUngrabButton(Widget arg0, unsigned int arg1, Modifiers arg2)
+void __lsb_XtUngrabButton(Widget arg0, unsigned int arg1, Modifiers arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtUngrabButton");

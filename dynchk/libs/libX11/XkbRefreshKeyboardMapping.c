@@ -12,7 +12,7 @@ int XkbRefreshKeyboardMapping(XkbMapNotifyEvent * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XkbRefreshKeyboardMapping(XkbMapNotifyEvent * arg0)
+int __lsb_XkbRefreshKeyboardMapping(XkbMapNotifyEvent * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbRefreshKeyboardMapping");

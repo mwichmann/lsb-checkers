@@ -13,7 +13,7 @@ void IceFreeListenObjs(int arg0, IceListenObj * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_IceFreeListenObjs(int arg0, IceListenObj * arg1)
+void __lsb_IceFreeListenObjs(int arg0, IceListenObj * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceFreeListenObjs");

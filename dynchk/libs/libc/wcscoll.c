@@ -11,12 +11,14 @@ int wcscoll (const wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcscoll");
-	validate_NULL_TYPETYPE(arg0, "wcscoll");
-	validate_NULL_TYPETYPE(arg1, "wcscoll");
+	validate_Rdaddress( arg0, "wcscoll");
+	validate_NULL_TYPETYPE(  arg0, "wcscoll");
+	validate_Rdaddress( arg1, "wcscoll");
+	validate_NULL_TYPETYPE(  arg1, "wcscoll");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wcscoll (const wchar_t * arg0 , const wchar_t * arg1 )
+int __lsb_wcscoll (const wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcscoll");

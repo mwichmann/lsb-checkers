@@ -16,7 +16,7 @@ void XtMenuPopupAction(Widget arg0, XEvent * arg1, String * arg2, Cardinal * arg
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XtMenuPopupAction(Widget arg0, XEvent * arg1, String * arg2, Cardinal * arg3)
+void __lsb_XtMenuPopupAction(Widget arg0, XEvent * arg1, String * arg2, Cardinal * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtMenuPopupAction");

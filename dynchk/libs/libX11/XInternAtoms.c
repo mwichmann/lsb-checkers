@@ -16,7 +16,7 @@ int XInternAtoms(Display * arg0, char * * arg1, int arg2, int arg3, Atom * arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XInternAtoms(Display * arg0, char * * arg1, int arg2, int arg3, Atom * arg4)
+int __lsb_XInternAtoms(Display * arg0, char * * arg1, int arg2, int arg3, Atom * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XInternAtoms");

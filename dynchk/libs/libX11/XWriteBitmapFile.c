@@ -19,7 +19,7 @@ int XWriteBitmapFile(Display * arg0, char * arg1, Pixmap arg2, unsigned int arg3
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_XWriteBitmapFile(Display * arg0, char * arg1, Pixmap arg2, unsigned int arg3, unsigned int arg4, int arg5, int arg6)
+int __lsb_XWriteBitmapFile(Display * arg0, char * arg1, Pixmap arg2, unsigned int arg3, unsigned int arg4, int arg5, int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XWriteBitmapFile");

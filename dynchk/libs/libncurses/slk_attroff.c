@@ -10,11 +10,11 @@ int slk_attroff (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_attroff");
-	validate_NULL_TYPETYPE(arg0, "slk_attroff");
+	validate_NULL_TYPETYPE(  arg0, "slk_attroff");
 	return funcptr(arg0);
 }
 
-int lsb_slk_attroff (const chtype arg0 )
+int __lsb_slk_attroff (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_attroff");

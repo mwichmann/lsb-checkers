@@ -13,7 +13,7 @@ bool has_il ()
 	return funcptr();
 }
 
-bool lsb_has_il ()
+bool __lsb_has_il ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "has_il");

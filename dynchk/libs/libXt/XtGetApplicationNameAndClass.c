@@ -14,7 +14,7 @@ void XtGetApplicationNameAndClass(Display * arg0, String * arg1, String * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XtGetApplicationNameAndClass(Display * arg0, String * arg1, String * arg2)
+void __lsb_XtGetApplicationNameAndClass(Display * arg0, String * arg1, String * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetApplicationNameAndClass");

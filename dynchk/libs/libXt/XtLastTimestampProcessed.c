@@ -12,7 +12,7 @@ Time XtLastTimestampProcessed(Display * arg0)
 	return funcptr(arg0);
 }
 
-Time lsb_XtLastTimestampProcessed(Display * arg0)
+Time __lsb_XtLastTimestampProcessed(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtLastTimestampProcessed");

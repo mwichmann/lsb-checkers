@@ -19,7 +19,7 @@ int XkbSetDebuggingFlags(Display * arg0, unsigned int arg1, unsigned int arg2, c
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-int lsb_XkbSetDebuggingFlags(Display * arg0, unsigned int arg1, unsigned int arg2, char * arg3, unsigned int arg4, unsigned int arg5, unsigned int * arg6, unsigned int * arg7)
+int __lsb_XkbSetDebuggingFlags(Display * arg0, unsigned int arg1, unsigned int arg2, char * arg3, unsigned int arg4, unsigned int arg5, unsigned int * arg6, unsigned int * arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSetDebuggingFlags");

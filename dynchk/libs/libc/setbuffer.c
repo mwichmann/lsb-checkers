@@ -11,13 +11,15 @@ void setbuffer (FILE * arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuffer");
-	validate_NULL_TYPETYPE(arg0, "setbuffer");
-	validate_NULL_TYPETYPE(arg1, "setbuffer");
-	validate_NULL_TYPETYPE(arg2, "setbuffer");
+	validate_Rdaddress( arg0, "setbuffer");
+	validate_NULL_TYPETYPE(  arg0, "setbuffer");
+	validate_Rdaddress( arg1, "setbuffer");
+	validate_NULL_TYPETYPE(  arg1, "setbuffer");
+	validate_NULL_TYPETYPE(  arg2, "setbuffer");
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_setbuffer (FILE * arg0 , char * arg1 , size_t arg2 )
+void __lsb_setbuffer (FILE * arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuffer");

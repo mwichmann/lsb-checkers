@@ -12,7 +12,7 @@ void glNormal3bv(GLbyte * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glNormal3bv(GLbyte * arg0)
+void __lsb_glNormal3bv(GLbyte * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glNormal3bv");

@@ -11,11 +11,11 @@ int sched_getscheduler (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_getscheduler");
-	validate_NULL_TYPETYPE(arg0, "sched_getscheduler");
+	validate_NULL_TYPETYPE(  arg0, "sched_getscheduler");
 	return funcptr(arg0);
 }
 
-int lsb_sched_getscheduler (pid_t arg0 )
+int __lsb_sched_getscheduler (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_getscheduler");

@@ -10,14 +10,15 @@ int nftw64 (const char * arg0 , __nftw64_func_t arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nftw64");
-	validate_NULL_TYPETYPE(arg0, "nftw64");
-	validate_NULL_TYPETYPE(arg1, "nftw64");
-	validate_NULL_TYPETYPE(arg2, "nftw64");
-	validate_NULL_TYPETYPE(arg3, "nftw64");
+	validate_Rdaddress( arg0, "nftw64");
+	validate_NULL_TYPETYPE(  arg0, "nftw64");
+	validate_NULL_TYPETYPE(  arg1, "nftw64");
+	validate_NULL_TYPETYPE(  arg2, "nftw64");
+	validate_NULL_TYPETYPE(  arg3, "nftw64");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_nftw64 (const char * arg0 , __nftw64_func_t arg1 , int arg2 , int arg3 )
+int __lsb_nftw64 (const char * arg0 , __nftw64_func_t arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nftw64");

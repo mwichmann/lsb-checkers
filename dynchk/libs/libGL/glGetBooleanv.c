@@ -14,7 +14,7 @@ void glGetBooleanv(GLenum arg0, GLboolean * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glGetBooleanv(GLenum arg0, GLboolean * arg1)
+void __lsb_glGetBooleanv(GLenum arg0, GLboolean * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetBooleanv");

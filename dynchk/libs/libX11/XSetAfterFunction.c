@@ -12,7 +12,7 @@ fptr-XSetAfterFunction XSetAfterFunction(Display * arg0)
 	return funcptr(arg0);
 }
 
-fptr-XSetAfterFunction lsb_XSetAfterFunction(Display * arg0)
+fptr-XSetAfterFunction __lsb_XSetAfterFunction(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetAfterFunction");

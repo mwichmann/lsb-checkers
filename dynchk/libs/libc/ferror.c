@@ -10,11 +10,12 @@ int ferror (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ferror");
-	validate_NULL_TYPETYPE(arg0, "ferror");
+	validate_Rdaddress( arg0, "ferror");
+	validate_NULL_TYPETYPE(  arg0, "ferror");
 	return funcptr(arg0);
 }
 
-int lsb_ferror (FILE * arg0 )
+int __lsb_ferror (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ferror");

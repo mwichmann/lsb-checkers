@@ -12,14 +12,18 @@ size_t mbsrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , mbstate_t
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbsrtowcs");
-	validate_NULL_TYPETYPE(arg0, "mbsrtowcs");
-	validate_NULL_TYPETYPE(arg1, "mbsrtowcs");
-	validate_NULL_TYPETYPE(arg2, "mbsrtowcs");
-	validate_NULL_TYPETYPE(arg3, "mbsrtowcs");
+	validate_Rdaddress( arg0, "mbsrtowcs");
+	validate_NULL_TYPETYPE(  arg0, "mbsrtowcs");
+	validate_Rdaddress( arg1, "mbsrtowcs");
+	validate_Rdaddress(* arg1, "mbsrtowcs");
+	validate_NULL_TYPETYPE(  arg1, "mbsrtowcs");
+	validate_NULL_TYPETYPE(  arg2, "mbsrtowcs");
+	validate_Rdaddress( arg3, "mbsrtowcs");
+	validate_NULL_TYPETYPE(  arg3, "mbsrtowcs");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-size_t lsb_mbsrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , mbstate_t * arg3 )
+size_t __lsb_mbsrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , mbstate_t * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbsrtowcs");

@@ -24,7 +24,7 @@ int XCopyArea(Display * arg0, Drawable arg1, Drawable arg2, GC arg3, int arg4, i
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
-int lsb_XCopyArea(Display * arg0, Drawable arg1, Drawable arg2, GC arg3, int arg4, int arg5, unsigned int arg6, unsigned int arg7, int arg8, int arg9)
+int __lsb_XCopyArea(Display * arg0, Drawable arg1, Drawable arg2, GC arg3, int arg4, int arg5, unsigned int arg6, unsigned int arg7, int arg8, int arg9)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCopyArea");

@@ -10,12 +10,12 @@ int iswctype (wint_t arg0 , wctype_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswctype");
-	validate_NULL_TYPETYPE(arg0, "iswctype");
-	validate_NULL_TYPETYPE(arg1, "iswctype");
+	validate_NULL_TYPETYPE(  arg0, "iswctype");
+	validate_NULL_TYPETYPE(  arg1, "iswctype");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_iswctype (wint_t arg0 , wctype_t arg1 )
+int __lsb_iswctype (wint_t arg0 , wctype_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswctype");

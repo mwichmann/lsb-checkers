@@ -15,7 +15,7 @@ int XOffsetRegion(Region arg0, int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XOffsetRegion(Region arg0, int arg1, int arg2)
+int __lsb_XOffsetRegion(Region arg0, int arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XOffsetRegion");

@@ -10,12 +10,14 @@ int link (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "link");
-	validate_NULL_TYPETYPE(arg0, "link");
-	validate_NULL_TYPETYPE(arg1, "link");
+	validate_Rdaddress( arg0, "link");
+	validate_NULL_TYPETYPE(  arg0, "link");
+	validate_Rdaddress( arg1, "link");
+	validate_NULL_TYPETYPE(  arg1, "link");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_link (const char * arg0 , const char * arg1 )
+int __lsb_link (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "link");

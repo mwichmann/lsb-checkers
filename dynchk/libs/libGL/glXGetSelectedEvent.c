@@ -15,7 +15,7 @@ void glXGetSelectedEvent(Display * arg0, GLXDrawable arg1, unsigned long * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glXGetSelectedEvent(Display * arg0, GLXDrawable arg1, unsigned long * arg2)
+void __lsb_glXGetSelectedEvent(Display * arg0, GLXDrawable arg1, unsigned long * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXGetSelectedEvent");

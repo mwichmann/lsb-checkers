@@ -23,7 +23,7 @@ int XtGrabPointer(Widget arg0, int arg1, unsigned int arg2, int arg3, int arg4, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-int lsb_XtGrabPointer(Widget arg0, int arg1, unsigned int arg2, int arg3, int arg4, Window arg5, Cursor arg6, Time arg7)
+int __lsb_XtGrabPointer(Widget arg0, int arg1, unsigned int arg2, int arg3, int arg4, Window arg5, Cursor arg6, Time arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGrabPointer");

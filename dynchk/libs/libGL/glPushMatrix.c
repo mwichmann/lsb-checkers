@@ -12,7 +12,7 @@ void glPushMatrix(void arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glPushMatrix(void arg0)
+void __lsb_glPushMatrix(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glPushMatrix");

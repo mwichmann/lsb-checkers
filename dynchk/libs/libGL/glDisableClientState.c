@@ -13,7 +13,7 @@ void glDisableClientState(GLenum arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glDisableClientState(GLenum arg0)
+void __lsb_glDisableClientState(GLenum arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glDisableClientState");

@@ -10,12 +10,15 @@ float strtof (const char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtof");
-	validate_NULL_TYPETYPE(arg0, "strtof");
-	validate_NULL_TYPETYPE(arg1, "strtof");
+	validate_Rdaddress( arg0, "strtof");
+	validate_NULL_TYPETYPE(  arg0, "strtof");
+	validate_Rdaddress( arg1, "strtof");
+	validate_Rdaddress(* arg1, "strtof");
+	validate_NULL_TYPETYPE(  arg1, "strtof");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_strtof (const char * arg0 , char * * arg1 )
+float __lsb_strtof (const char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtof");

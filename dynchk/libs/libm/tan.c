@@ -10,11 +10,11 @@ double tan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tan");
-	validate_NULL_TYPETYPE(arg0, "tan");
+	validate_NULL_TYPETYPE(  arg0, "tan");
 	return funcptr(arg0);
 }
 
-double lsb_tan (double arg0 )
+double __lsb_tan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tan");

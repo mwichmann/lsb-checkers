@@ -10,12 +10,13 @@ gzFile gzdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzdopen");
-	validate_NULL_TYPETYPE(arg0, "gzdopen");
-	validate_NULL_TYPETYPE(arg1, "gzdopen");
+	validate_NULL_TYPETYPE(  arg0, "gzdopen");
+	validate_Rdaddress( arg1, "gzdopen");
+	validate_NULL_TYPETYPE(  arg1, "gzdopen");
 	return funcptr(arg0, arg1);
 }
 
-gzFile lsb_gzdopen (int arg0 , const char * arg1 )
+gzFile __lsb_gzdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzdopen");

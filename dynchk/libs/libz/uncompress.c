@@ -10,14 +10,17 @@ int uncompress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "uncompress");
-	validate_NULL_TYPETYPE(arg0, "uncompress");
-	validate_NULL_TYPETYPE(arg1, "uncompress");
-	validate_NULL_TYPETYPE(arg2, "uncompress");
-	validate_NULL_TYPETYPE(arg3, "uncompress");
+	validate_Rdaddress( arg0, "uncompress");
+	validate_NULL_TYPETYPE(  arg0, "uncompress");
+	validate_Rdaddress( arg1, "uncompress");
+	validate_NULL_TYPETYPE(  arg1, "uncompress");
+	validate_Rdaddress( arg2, "uncompress");
+	validate_NULL_TYPETYPE(  arg2, "uncompress");
+	validate_NULL_TYPETYPE(  arg3, "uncompress");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_uncompress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
+int __lsb_uncompress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "uncompress");

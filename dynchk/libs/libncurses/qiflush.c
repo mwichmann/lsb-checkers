@@ -13,7 +13,7 @@ void qiflush ()
 	funcptr();
 }
 
-void lsb_qiflush ()
+void __lsb_qiflush ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "qiflush");

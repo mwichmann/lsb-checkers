@@ -17,7 +17,7 @@ int XcmsTekHVCQueryMaxVSamples(XcmsCCC arg0, XcmsFloat arg1, XcmsColor * arg2, u
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XcmsTekHVCQueryMaxVSamples(XcmsCCC arg0, XcmsFloat arg1, XcmsColor * arg2, unsigned int arg3)
+int __lsb_XcmsTekHVCQueryMaxVSamples(XcmsCCC arg0, XcmsFloat arg1, XcmsColor * arg2, unsigned int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsTekHVCQueryMaxVSamples");

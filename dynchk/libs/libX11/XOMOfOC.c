@@ -13,7 +13,7 @@ XOM XOMOfOC(XOC arg0)
 	return funcptr(arg0);
 }
 
-XOM lsb_XOMOfOC(XOC arg0)
+XOM __lsb_XOMOfOC(XOC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XOMOfOC");

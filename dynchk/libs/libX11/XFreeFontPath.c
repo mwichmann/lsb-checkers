@@ -12,7 +12,7 @@ int XFreeFontPath(char * * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XFreeFontPath(char * * arg0)
+int __lsb_XFreeFontPath(char * * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFreeFontPath");

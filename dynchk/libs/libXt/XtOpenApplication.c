@@ -26,7 +26,7 @@ Widget XtOpenApplication(XtAppContext * arg0, char * arg1, XrmOptionDescList arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
-Widget lsb_XtOpenApplication(XtAppContext * arg0, char * arg1, XrmOptionDescList arg2, Cardinal arg3, int * arg4, String * arg5, String * arg6, WidgetClass arg7, ArgList arg8, Cardinal arg9)
+Widget __lsb_XtOpenApplication(XtAppContext * arg0, char * arg1, XrmOptionDescList arg2, Cardinal arg3, int * arg4, String * arg5, String * arg6, WidgetClass arg7, ArgList arg8, Cardinal arg9)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtOpenApplication");

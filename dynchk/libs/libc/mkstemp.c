@@ -10,11 +10,12 @@ int mkstemp (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mkstemp");
-	validate_NULL_TYPETYPE(arg0, "mkstemp");
+	validate_Rdaddress( arg0, "mkstemp");
+	validate_NULL_TYPETYPE(  arg0, "mkstemp");
 	return funcptr(arg0);
 }
 
-int lsb_mkstemp (char * arg0 )
+int __lsb_mkstemp (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mkstemp");

@@ -17,7 +17,7 @@ int XReadBitmapFileData(char * arg0, unsigned int * arg1, unsigned int * arg2, u
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XReadBitmapFileData(char * arg0, unsigned int * arg1, unsigned int * arg2, unsigned char * * arg3, int * arg4, int * arg5)
+int __lsb_XReadBitmapFileData(char * arg0, unsigned int * arg1, unsigned int * arg2, unsigned char * * arg3, int * arg4, int * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XReadBitmapFileData");

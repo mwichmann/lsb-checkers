@@ -10,12 +10,12 @@ WINDOW * newpad (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newpad");
-	validate_NULL_TYPETYPE(arg0, "newpad");
-	validate_NULL_TYPETYPE(arg1, "newpad");
+	validate_NULL_TYPETYPE(  arg0, "newpad");
+	validate_NULL_TYPETYPE(  arg1, "newpad");
 	return funcptr(arg0, arg1);
 }
 
-WINDOW * lsb_newpad (int arg0 , int arg1 )
+WINDOW * __lsb_newpad (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newpad");

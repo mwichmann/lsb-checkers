@@ -17,7 +17,7 @@ void XrmQPutStringResource(XrmDatabase * arg0, XrmBindingList arg1, XrmQuarkList
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XrmQPutStringResource(XrmDatabase * arg0, XrmBindingList arg1, XrmQuarkList arg2, char * arg3)
+void __lsb_XrmQPutStringResource(XrmDatabase * arg0, XrmBindingList arg1, XrmQuarkList arg2, char * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmQPutStringResource");

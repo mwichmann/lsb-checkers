@@ -12,7 +12,7 @@ Window XRootWindowOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-Window lsb_XRootWindowOfScreen(Screen * arg0)
+Window __lsb_XRootWindowOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XRootWindowOfScreen");

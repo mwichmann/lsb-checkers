@@ -20,7 +20,7 @@ Cursor XCreateGlyphCursor(Display * arg0, Font arg1, Font arg2, unsigned int arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-Cursor lsb_XCreateGlyphCursor(Display * arg0, Font arg1, Font arg2, unsigned int arg3, unsigned int arg4, XColor * arg5, XColor * arg6)
+Cursor __lsb_XCreateGlyphCursor(Display * arg0, Font arg1, Font arg2, unsigned int arg3, unsigned int arg4, XColor * arg5, XColor * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreateGlyphCursor");

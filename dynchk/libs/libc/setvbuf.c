@@ -11,14 +11,16 @@ int setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setvbuf");
-	validate_NULL_TYPETYPE(arg0, "setvbuf");
-	validate_NULL_TYPETYPE(arg1, "setvbuf");
-	validate_NULL_TYPETYPE(arg2, "setvbuf");
-	validate_NULL_TYPETYPE(arg3, "setvbuf");
+	validate_Rdaddress( arg0, "setvbuf");
+	validate_NULL_TYPETYPE(  arg0, "setvbuf");
+	validate_Rdaddress( arg1, "setvbuf");
+	validate_NULL_TYPETYPE(  arg1, "setvbuf");
+	validate_NULL_TYPETYPE(  arg2, "setvbuf");
+	validate_NULL_TYPETYPE(  arg3, "setvbuf");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
+int __lsb_setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setvbuf");

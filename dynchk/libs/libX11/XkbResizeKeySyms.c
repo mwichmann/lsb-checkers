@@ -14,7 +14,7 @@ KeySym * XkbResizeKeySyms(XkbDescPtr arg0, int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-KeySym * lsb_XkbResizeKeySyms(XkbDescPtr arg0, int arg1, int arg2)
+KeySym * __lsb_XkbResizeKeySyms(XkbDescPtr arg0, int arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbResizeKeySyms");

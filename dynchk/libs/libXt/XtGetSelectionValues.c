@@ -22,7 +22,7 @@ void XtGetSelectionValues(Widget arg0, Atom arg1, Atom * arg2, int arg3, XtSelec
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-void lsb_XtGetSelectionValues(Widget arg0, Atom arg1, Atom * arg2, int arg3, XtSelectionCallbackProc arg4, XtPointer * arg5, Time arg6)
+void __lsb_XtGetSelectionValues(Widget arg0, Atom arg1, Atom * arg2, int arg3, XtSelectionCallbackProc arg4, XtPointer * arg5, Time arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionValues");

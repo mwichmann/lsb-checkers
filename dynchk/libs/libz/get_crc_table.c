@@ -13,7 +13,7 @@ const uLongf * get_crc_table ()
 	return funcptr();
 }
 
-const uLongf * lsb_get_crc_table ()
+const uLongf * __lsb_get_crc_table ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "get_crc_table");

@@ -10,13 +10,15 @@ int restartterm (char * arg0 , int arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "restartterm");
-	validate_NULL_TYPETYPE(arg0, "restartterm");
-	validate_NULL_TYPETYPE(arg1, "restartterm");
-	validate_NULL_TYPETYPE(arg2, "restartterm");
+	validate_Rdaddress( arg0, "restartterm");
+	validate_NULL_TYPETYPE(  arg0, "restartterm");
+	validate_NULL_TYPETYPE(  arg1, "restartterm");
+	validate_Rdaddress( arg2, "restartterm");
+	validate_NULL_TYPETYPE(  arg2, "restartterm");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_restartterm (char * arg0 , int arg1 , int * arg2 )
+int __lsb_restartterm (char * arg0 , int arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "restartterm");

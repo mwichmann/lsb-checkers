@@ -17,7 +17,7 @@ int XcmsCIELabClipL(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, unsigned 
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XcmsCIELabClipL(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, unsigned int arg3, int * arg4)
+int __lsb_XcmsCIELabClipL(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, unsigned int arg3, int * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsCIELabClipL");

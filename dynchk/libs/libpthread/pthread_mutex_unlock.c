@@ -10,11 +10,12 @@ int pthread_mutex_unlock (pthread_mutex_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_mutex_unlock");
-	validate_NULL_TYPETYPE(arg0, "pthread_mutex_unlock");
+	validate_Rdaddress( arg0, "pthread_mutex_unlock");
+	validate_NULL_TYPETYPE(  arg0, "pthread_mutex_unlock");
 	return funcptr(arg0);
 }
 
-int lsb_pthread_mutex_unlock (pthread_mutex_t * arg0 )
+int __lsb_pthread_mutex_unlock (pthread_mutex_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_mutex_unlock");

@@ -22,7 +22,7 @@ void glColorSubTable(GLenum arg0, GLsizei arg1, GLsizei arg2, GLenum arg3, GLenu
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glColorSubTable(GLenum arg0, GLsizei arg1, GLsizei arg2, GLenum arg3, GLenum arg4, GLvoid * arg5)
+void __lsb_glColorSubTable(GLenum arg0, GLsizei arg1, GLsizei arg2, GLenum arg3, GLenum arg4, GLvoid * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glColorSubTable");

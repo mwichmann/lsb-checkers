@@ -10,12 +10,13 @@ int putc (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putc");
-	validate_NULL_TYPETYPE(arg0, "putc");
-	validate_NULL_TYPETYPE(arg1, "putc");
+	validate_NULL_TYPETYPE(  arg0, "putc");
+	validate_Rdaddress( arg1, "putc");
+	validate_NULL_TYPETYPE(  arg1, "putc");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_putc (int arg0 , FILE * arg1 )
+int __lsb_putc (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putc");

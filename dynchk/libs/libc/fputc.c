@@ -10,12 +10,13 @@ int fputc (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputc");
-	validate_NULL_TYPETYPE(arg0, "fputc");
-	validate_NULL_TYPETYPE(arg1, "fputc");
+	validate_NULL_TYPETYPE(  arg0, "fputc");
+	validate_Rdaddress( arg1, "fputc");
+	validate_NULL_TYPETYPE(  arg1, "fputc");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fputc (int arg0 , FILE * arg1 )
+int __lsb_fputc (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputc");

@@ -17,7 +17,7 @@ void XSetWMSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, Atom arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XSetWMSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, Atom arg3)
+void __lsb_XSetWMSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, Atom arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetWMSizeHints");

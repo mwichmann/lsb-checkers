@@ -14,7 +14,7 @@ void glXDestroyWindow(Display * arg0, GLXWindow arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glXDestroyWindow(Display * arg0, GLXWindow arg1)
+void __lsb_glXDestroyWindow(Display * arg0, GLXWindow arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXDestroyWindow");

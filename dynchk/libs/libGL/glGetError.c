@@ -12,7 +12,7 @@ GLenum glGetError(void arg0)
 	return funcptr(arg0);
 }
 
-GLenum lsb_glGetError(void arg0)
+GLenum __lsb_glGetError(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetError");

@@ -10,11 +10,12 @@ int brk (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "brk");
-	validate_NULL_TYPETYPE(arg0, "brk");
+	validate_Rdaddress( arg0, "brk");
+	validate_NULL_TYPETYPE(  arg0, "brk");
 	return funcptr(arg0);
 }
 
-int lsb_brk (void * arg0 )
+int __lsb_brk (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "brk");

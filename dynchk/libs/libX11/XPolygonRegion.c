@@ -14,7 +14,7 @@ Region XPolygonRegion(XPoint * arg0, int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-Region lsb_XPolygonRegion(XPoint * arg0, int arg1, int arg2)
+Region __lsb_XPolygonRegion(XPoint * arg0, int arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XPolygonRegion");

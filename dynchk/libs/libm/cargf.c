@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef cargf
 static float(*funcptr) (float complex ) = 0;
@@ -11,11 +10,11 @@ float cargf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cargf");
-	validate_NULL_TYPETYPE(arg0, "cargf");
+	validate_NULL_TYPETYPE(  arg0, "cargf");
 	return funcptr(arg0);
 }
 
-float lsb_cargf (float complex arg0 )
+float __lsb_cargf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cargf");

@@ -10,11 +10,11 @@ int iswupper (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswupper");
-	validate_NULL_TYPETYPE(arg0, "iswupper");
+	validate_NULL_TYPETYPE(  arg0, "iswupper");
 	return funcptr(arg0);
 }
 
-int lsb_iswupper (wint_t arg0 )
+int __lsb_iswupper (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswupper");

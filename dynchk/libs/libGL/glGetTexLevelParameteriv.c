@@ -18,7 +18,7 @@ void glGetTexLevelParameteriv(GLenum arg0, GLint arg1, GLenum arg2, GLint * arg3
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glGetTexLevelParameteriv(GLenum arg0, GLint arg1, GLenum arg2, GLint * arg3)
+void __lsb_glGetTexLevelParameteriv(GLenum arg0, GLint arg1, GLenum arg2, GLint * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetTexLevelParameteriv");

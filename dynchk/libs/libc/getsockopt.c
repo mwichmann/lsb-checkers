@@ -10,15 +10,17 @@ int getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsockopt");
-	validate_NULL_TYPETYPE(arg0, "getsockopt");
-	validate_NULL_TYPETYPE(arg1, "getsockopt");
-	validate_NULL_TYPETYPE(arg2, "getsockopt");
-	validate_NULL_TYPETYPE(arg3, "getsockopt");
-	validate_NULL_TYPETYPE(arg4, "getsockopt");
+	validate_NULL_TYPETYPE(  arg0, "getsockopt");
+	validate_NULL_TYPETYPE(  arg1, "getsockopt");
+	validate_NULL_TYPETYPE(  arg2, "getsockopt");
+	validate_Rdaddress( arg3, "getsockopt");
+	validate_NULL_TYPETYPE(  arg3, "getsockopt");
+	validate_Rdaddress( arg4, "getsockopt");
+	validate_NULL_TYPETYPE(  arg4, "getsockopt");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 )
+int __lsb_getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsockopt");

@@ -18,7 +18,7 @@ void glDrawElements(GLenum arg0, GLsizei arg1, GLenum arg2, GLvoid * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glDrawElements(GLenum arg0, GLsizei arg1, GLenum arg2, GLvoid * arg3)
+void __lsb_glDrawElements(GLenum arg0, GLsizei arg1, GLenum arg2, GLvoid * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glDrawElements");

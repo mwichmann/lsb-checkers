@@ -13,7 +13,7 @@ GLboolean glIsTexture(GLuint arg0)
 	return funcptr(arg0);
 }
 
-GLboolean lsb_glIsTexture(GLuint arg0)
+GLboolean __lsb_glIsTexture(GLuint arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glIsTexture");

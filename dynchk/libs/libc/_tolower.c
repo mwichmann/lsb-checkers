@@ -10,11 +10,11 @@ int _tolower (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_tolower");
-	validate_NULL_TYPETYPE(arg0, "_tolower");
+	validate_NULL_TYPETYPE(  arg0, "_tolower");
 	return funcptr(arg0);
 }
 
-int lsb__tolower (int arg0 )
+int __lsb__tolower (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_tolower");

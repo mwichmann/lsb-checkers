@@ -10,11 +10,11 @@ void srandom (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srandom");
-	validate_NULL_TYPETYPE(arg0, "srandom");
+	validate_NULL_TYPETYPE(  arg0, "srandom");
 	funcptr(arg0);
 }
 
-void lsb_srandom (unsigned int arg0 )
+void __lsb_srandom (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srandom");

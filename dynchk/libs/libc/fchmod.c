@@ -11,12 +11,12 @@ int fchmod (int arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchmod");
-	validate_NULL_TYPETYPE(arg0, "fchmod");
-	validate_NULL_TYPETYPE(arg1, "fchmod");
+	validate_NULL_TYPETYPE(  arg0, "fchmod");
+	validate_NULL_TYPETYPE(  arg1, "fchmod");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fchmod (int arg0 , mode_t arg1 )
+int __lsb_fchmod (int arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchmod");

@@ -17,7 +17,7 @@ int XwcTextExtents(XFontSet arg0, wchar_t * arg1, int arg2, XRectangle * arg3, X
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XwcTextExtents(XFontSet arg0, wchar_t * arg1, int arg2, XRectangle * arg3, XRectangle * arg4)
+int __lsb_XwcTextExtents(XFontSet arg0, wchar_t * arg1, int arg2, XRectangle * arg3, XRectangle * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XwcTextExtents");

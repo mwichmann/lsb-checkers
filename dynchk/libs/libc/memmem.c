@@ -11,14 +11,16 @@ void * memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memmem");
-	validate_NULL_TYPETYPE(arg0, "memmem");
-	validate_NULL_TYPETYPE(arg1, "memmem");
-	validate_NULL_TYPETYPE(arg2, "memmem");
-	validate_NULL_TYPETYPE(arg3, "memmem");
+	validate_Rdaddress( arg0, "memmem");
+	validate_NULL_TYPETYPE(  arg0, "memmem");
+	validate_NULL_TYPETYPE(  arg1, "memmem");
+	validate_Rdaddress( arg2, "memmem");
+	validate_NULL_TYPETYPE(  arg2, "memmem");
+	validate_NULL_TYPETYPE(  arg3, "memmem");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void * lsb_memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3 )
+void * __lsb_memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memmem");

@@ -10,11 +10,12 @@ int redrawwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "redrawwin");
-	validate_NULL_TYPETYPE(arg0, "redrawwin");
+	validate_Rdaddress( arg0, "redrawwin");
+	validate_NULL_TYPETYPE(  arg0, "redrawwin");
 	return funcptr(arg0);
 }
 
-int lsb_redrawwin (WINDOW * arg0 )
+int __lsb_redrawwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "redrawwin");

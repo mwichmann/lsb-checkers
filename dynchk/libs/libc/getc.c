@@ -10,11 +10,12 @@ int getc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getc");
-	validate_NULL_TYPETYPE(arg0, "getc");
+	validate_Rdaddress( arg0, "getc");
+	validate_NULL_TYPETYPE(  arg0, "getc");
 	return funcptr(arg0);
 }
 
-int lsb_getc (FILE * arg0 )
+int __lsb_getc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getc");

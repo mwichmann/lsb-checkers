@@ -13,7 +13,7 @@ void glDrawBuffer(GLenum arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glDrawBuffer(GLenum arg0)
+void __lsb_glDrawBuffer(GLenum arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glDrawBuffer");

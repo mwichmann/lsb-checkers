@@ -10,11 +10,12 @@ void perror (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "perror");
-	validate_NULL_TYPETYPE(arg0, "perror");
+	validate_Rdaddress( arg0, "perror");
+	validate_NULL_TYPETYPE(  arg0, "perror");
 	funcptr(arg0);
 }
 
-void lsb_perror (const char * arg0 )
+void __lsb_perror (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "perror");

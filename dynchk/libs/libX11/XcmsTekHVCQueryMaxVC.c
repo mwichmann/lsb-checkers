@@ -16,7 +16,7 @@ int XcmsTekHVCQueryMaxVC(XcmsCCC arg0, XcmsFloat arg1, XcmsColor * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XcmsTekHVCQueryMaxVC(XcmsCCC arg0, XcmsFloat arg1, XcmsColor * arg2)
+int __lsb_XcmsTekHVCQueryMaxVC(XcmsCCC arg0, XcmsFloat arg1, XcmsColor * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsTekHVCQueryMaxVC");

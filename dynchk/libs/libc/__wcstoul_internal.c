@@ -11,14 +11,17 @@ unsigned long __wcstoul_internal (const wchar_t * arg0 , wchar_t * * arg1 , int 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstoul_internal");
-	validate_NULL_TYPETYPE(arg0, "__wcstoul_internal");
-	validate_NULL_TYPETYPE(arg1, "__wcstoul_internal");
-	validate_NULL_TYPETYPE(arg2, "__wcstoul_internal");
-	validate_NULL_TYPETYPE(arg3, "__wcstoul_internal");
+	validate_Rdaddress( arg0, "__wcstoul_internal");
+	validate_NULL_TYPETYPE(  arg0, "__wcstoul_internal");
+	validate_Rdaddress( arg1, "__wcstoul_internal");
+	validate_Rdaddress(* arg1, "__wcstoul_internal");
+	validate_NULL_TYPETYPE(  arg1, "__wcstoul_internal");
+	validate_NULL_TYPETYPE(  arg2, "__wcstoul_internal");
+	validate_NULL_TYPETYPE(  arg3, "__wcstoul_internal");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-unsigned long lsb___wcstoul_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int arg3 )
+unsigned long __lsb___wcstoul_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstoul_internal");

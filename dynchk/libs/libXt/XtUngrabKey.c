@@ -16,7 +16,7 @@ void XtUngrabKey(Widget arg0, unsigned int arg1, Modifiers arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XtUngrabKey(Widget arg0, unsigned int arg1, Modifiers arg2)
+void __lsb_XtUngrabKey(Widget arg0, unsigned int arg1, Modifiers arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtUngrabKey");

@@ -10,14 +10,17 @@ int compress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "compress");
-	validate_NULL_TYPETYPE(arg0, "compress");
-	validate_NULL_TYPETYPE(arg1, "compress");
-	validate_NULL_TYPETYPE(arg2, "compress");
-	validate_NULL_TYPETYPE(arg3, "compress");
+	validate_Rdaddress( arg0, "compress");
+	validate_NULL_TYPETYPE(  arg0, "compress");
+	validate_Rdaddress( arg1, "compress");
+	validate_NULL_TYPETYPE(  arg1, "compress");
+	validate_Rdaddress( arg2, "compress");
+	validate_NULL_TYPETYPE(  arg2, "compress");
+	validate_NULL_TYPETYPE(  arg3, "compress");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_compress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
+int __lsb_compress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "compress");

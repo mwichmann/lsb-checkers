@@ -17,7 +17,7 @@ XcmsWhiteAdjustProc XcmsSetWhiteAdjustProc(XcmsCCC arg0, XcmsWhiteAdjustProc arg
 	return funcptr(arg0, arg1, arg2);
 }
 
-XcmsWhiteAdjustProc lsb_XcmsSetWhiteAdjustProc(XcmsCCC arg0, XcmsWhiteAdjustProc arg1, XPointer arg2)
+XcmsWhiteAdjustProc __lsb_XcmsSetWhiteAdjustProc(XcmsCCC arg0, XcmsWhiteAdjustProc arg1, XPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsSetWhiteAdjustProc");

@@ -18,7 +18,7 @@ int XShmGetImage(Display * arg0, Drawable arg1, XImage * arg2, int arg3, int arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XShmGetImage(Display * arg0, Drawable arg1, XImage * arg2, int arg3, int arg4, unsigned long arg5)
+int __lsb_XShmGetImage(Display * arg0, Drawable arg1, XImage * arg2, int arg3, int arg4, unsigned long arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShmGetImage");

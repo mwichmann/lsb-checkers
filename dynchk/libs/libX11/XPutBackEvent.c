@@ -13,7 +13,7 @@ int XPutBackEvent(Display * arg0, XEvent * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XPutBackEvent(Display * arg0, XEvent * arg1)
+int __lsb_XPutBackEvent(Display * arg0, XEvent * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XPutBackEvent");

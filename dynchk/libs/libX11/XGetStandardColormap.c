@@ -17,7 +17,7 @@ int XGetStandardColormap(Display * arg0, Window arg1, XStandardColormap * arg2, 
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XGetStandardColormap(Display * arg0, Window arg1, XStandardColormap * arg2, Atom arg3)
+int __lsb_XGetStandardColormap(Display * arg0, Window arg1, XStandardColormap * arg2, Atom arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetStandardColormap");

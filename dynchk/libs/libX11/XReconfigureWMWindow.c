@@ -17,7 +17,7 @@ int XReconfigureWMWindow(Display * arg0, Window arg1, int arg2, unsigned int arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XReconfigureWMWindow(Display * arg0, Window arg1, int arg2, unsigned int arg3, XWindowChanges * arg4)
+int __lsb_XReconfigureWMWindow(Display * arg0, Window arg1, int arg2, unsigned int arg3, XWindowChanges * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XReconfigureWMWindow");

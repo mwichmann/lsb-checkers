@@ -21,7 +21,7 @@ void XShapeCombineRectangles(Display * arg0, Window arg1, int arg2, int arg3, in
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-void lsb_XShapeCombineRectangles(Display * arg0, Window arg1, int arg2, int arg3, int arg4, XRectangle * arg5, int arg6, int arg7, int arg8)
+void __lsb_XShapeCombineRectangles(Display * arg0, Window arg1, int arg2, int arg3, int arg4, XRectangle * arg5, int arg6, int arg7, int arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShapeCombineRectangles");

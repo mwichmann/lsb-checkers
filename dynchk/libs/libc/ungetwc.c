@@ -12,12 +12,13 @@ wint_t ungetwc (wint_t arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetwc");
-	validate_NULL_TYPETYPE(arg0, "ungetwc");
-	validate_NULL_TYPETYPE(arg1, "ungetwc");
+	validate_NULL_TYPETYPE(  arg0, "ungetwc");
+	validate_Rdaddress( arg1, "ungetwc");
+	validate_NULL_TYPETYPE(  arg1, "ungetwc");
 	return funcptr(arg0, arg1);
 }
 
-wint_t lsb_ungetwc (wint_t arg0 , FILE * arg1 )
+wint_t __lsb_ungetwc (wint_t arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetwc");

@@ -10,11 +10,11 @@ double sin (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sin");
-	validate_NULL_TYPETYPE(arg0, "sin");
+	validate_NULL_TYPETYPE(  arg0, "sin");
 	return funcptr(arg0);
 }
 
-double lsb_sin (double arg0 )
+double __lsb_sin (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sin");

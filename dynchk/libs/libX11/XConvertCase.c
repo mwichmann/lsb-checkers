@@ -15,7 +15,7 @@ void XConvertCase(KeySym arg0, KeySym * arg1, KeySym * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XConvertCase(KeySym arg0, KeySym * arg1, KeySym * arg2)
+void __lsb_XConvertCase(KeySym arg0, KeySym * arg1, KeySym * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XConvertCase");

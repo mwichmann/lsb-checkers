@@ -11,13 +11,15 @@ wchar_t * wmemcpy (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmemcpy");
-	validate_NULL_TYPETYPE(arg0, "wmemcpy");
-	validate_NULL_TYPETYPE(arg1, "wmemcpy");
-	validate_NULL_TYPETYPE(arg2, "wmemcpy");
+	validate_Rdaddress( arg0, "wmemcpy");
+	validate_NULL_TYPETYPE(  arg0, "wmemcpy");
+	validate_Rdaddress( arg1, "wmemcpy");
+	validate_NULL_TYPETYPE(  arg1, "wmemcpy");
+	validate_NULL_TYPETYPE(  arg2, "wmemcpy");
 	return funcptr(arg0, arg1, arg2);
 }
 
-wchar_t * lsb_wmemcpy (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
+wchar_t * __lsb_wmemcpy (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmemcpy");

@@ -14,7 +14,7 @@ int XkbSetControls(Display * arg0, unsigned long arg1, XkbDescPtr arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbSetControls(Display * arg0, unsigned long arg1, XkbDescPtr arg2)
+int __lsb_XkbSetControls(Display * arg0, unsigned long arg1, XkbDescPtr arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSetControls");

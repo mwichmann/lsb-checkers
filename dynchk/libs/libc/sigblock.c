@@ -10,11 +10,11 @@ int sigblock (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigblock");
-	validate_NULL_TYPETYPE(arg0, "sigblock");
+	validate_NULL_TYPETYPE(  arg0, "sigblock");
 	return funcptr(arg0);
 }
 
-int lsb_sigblock (int arg0 )
+int __lsb_sigblock (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigblock");

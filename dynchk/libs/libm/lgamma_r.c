@@ -10,12 +10,13 @@ double lgamma_r (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgamma_r");
-	validate_NULL_TYPETYPE(arg0, "lgamma_r");
-	validate_NULL_TYPETYPE(arg1, "lgamma_r");
+	validate_NULL_TYPETYPE(  arg0, "lgamma_r");
+	validate_Rdaddress( arg1, "lgamma_r");
+	validate_NULL_TYPETYPE(  arg1, "lgamma_r");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_lgamma_r (double arg0 , int * arg1 )
+double __lsb_lgamma_r (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgamma_r");

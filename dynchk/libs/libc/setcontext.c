@@ -10,11 +10,12 @@ int setcontext (const struct ucontext * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setcontext");
-	validate_NULL_TYPETYPE(arg0, "setcontext");
+	validate_Rdaddress( arg0, "setcontext");
+	validate_NULL_TYPETYPE(  arg0, "setcontext");
 	return funcptr(arg0);
 }
 
-int lsb_setcontext (const struct ucontext * arg0 )
+int __lsb_setcontext (const struct ucontext * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setcontext");

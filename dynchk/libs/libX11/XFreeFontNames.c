@@ -12,7 +12,7 @@ int XFreeFontNames(char * * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XFreeFontNames(char * * arg0)
+int __lsb_XFreeFontNames(char * * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFreeFontNames");

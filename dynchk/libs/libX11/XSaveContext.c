@@ -17,7 +17,7 @@ int XSaveContext(Display * arg0, XID arg1, XContext arg2, char * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XSaveContext(Display * arg0, XID arg1, XContext arg2, char * arg3)
+int __lsb_XSaveContext(Display * arg0, XID arg1, XContext arg2, char * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSaveContext");

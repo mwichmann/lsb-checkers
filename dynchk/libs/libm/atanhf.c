@@ -10,11 +10,11 @@ float atanhf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanhf");
-	validate_NULL_TYPETYPE(arg0, "atanhf");
+	validate_NULL_TYPETYPE(  arg0, "atanhf");
 	return funcptr(arg0);
 }
 
-float lsb_atanhf (float arg0 )
+float __lsb_atanhf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanhf");

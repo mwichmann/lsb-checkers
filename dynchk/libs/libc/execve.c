@@ -10,13 +10,14 @@ int execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execve");
-	validate_NULL_TYPETYPE(arg0, "execve");
-	validate_NULL_TYPETYPE(arg1, "execve");
-	validate_NULL_TYPETYPE(arg2, "execve");
+	validate_Rdaddress( arg0, "execve");
+	validate_NULL_TYPETYPE(  arg0, "execve");
+	validate_NULL_TYPETYPE(  arg1, "execve");
+	validate_NULL_TYPETYPE(  arg2, "execve");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
+int __lsb_execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execve");

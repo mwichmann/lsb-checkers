@@ -10,12 +10,13 @@ int leaveok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "leaveok");
-	validate_NULL_TYPETYPE(arg0, "leaveok");
-	validate_NULL_TYPETYPE(arg1, "leaveok");
+	validate_Rdaddress( arg0, "leaveok");
+	validate_NULL_TYPETYPE(  arg0, "leaveok");
+	validate_NULL_TYPETYPE(  arg1, "leaveok");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_leaveok (WINDOW * arg0 , bool arg1 )
+int __lsb_leaveok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "leaveok");

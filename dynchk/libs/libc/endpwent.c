@@ -13,7 +13,7 @@ void endpwent ()
 	funcptr();
 }
 
-void lsb_endpwent ()
+void __lsb_endpwent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endpwent");

@@ -13,7 +13,7 @@ long gethostid ()
 	return funcptr();
 }
 
-long lsb_gethostid ()
+long __lsb_gethostid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostid");

@@ -10,12 +10,14 @@ int pthread_join (pthread_t arg0 , void * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_join");
-	validate_NULL_TYPETYPE(arg0, "pthread_join");
-	validate_NULL_TYPETYPE(arg1, "pthread_join");
+	validate_NULL_TYPETYPE(  arg0, "pthread_join");
+	validate_Rdaddress( arg1, "pthread_join");
+	validate_Rdaddress(* arg1, "pthread_join");
+	validate_NULL_TYPETYPE(  arg1, "pthread_join");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_join (pthread_t arg0 , void * * arg1 )
+int __lsb_pthread_join (pthread_t arg0 , void * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_join");

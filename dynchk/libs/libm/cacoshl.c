@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef cacoshl
 static long double complex(*funcptr) (long double complex ) = 0;
@@ -11,11 +10,11 @@ long double complex cacoshl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacoshl");
-	validate_NULL_TYPETYPE(arg0, "cacoshl");
+	validate_NULL_TYPETYPE(  arg0, "cacoshl");
 	return funcptr(arg0);
 }
 
-long double complex lsb_cacoshl (long double complex arg0 )
+long double complex __lsb_cacoshl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacoshl");

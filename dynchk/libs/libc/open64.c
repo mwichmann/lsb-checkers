@@ -26,7 +26,7 @@ int open64(const char *pathname, int flags, ...)
 	return funcptr(pathname, flags, mode);
 }
 
-int lsb_open64(const char *pathname, int flags, mode_t mode)
+int __lsb_open64(const char *pathname, int flags, mode_t mode)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "open64");

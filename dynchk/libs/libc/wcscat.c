@@ -11,12 +11,14 @@ wchar_t * wcscat (wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcscat");
-	validate_NULL_TYPETYPE(arg0, "wcscat");
-	validate_NULL_TYPETYPE(arg1, "wcscat");
+	validate_Rdaddress( arg0, "wcscat");
+	validate_NULL_TYPETYPE(  arg0, "wcscat");
+	validate_Rdaddress( arg1, "wcscat");
+	validate_NULL_TYPETYPE(  arg1, "wcscat");
 	return funcptr(arg0, arg1);
 }
 
-wchar_t * lsb_wcscat (wchar_t * arg0 , const wchar_t * arg1 )
+wchar_t * __lsb_wcscat (wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcscat");

@@ -12,14 +12,15 @@ ssize_t pwrite (int arg0 , const void * arg1 , size_t arg2 , off_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pwrite");
-	validate_NULL_TYPETYPE(arg0, "pwrite");
-	validate_NULL_TYPETYPE(arg1, "pwrite");
-	validate_NULL_TYPETYPE(arg2, "pwrite");
-	validate_NULL_TYPETYPE(arg3, "pwrite");
+	validate_NULL_TYPETYPE(  arg0, "pwrite");
+	validate_Rdaddress( arg1, "pwrite");
+	validate_NULL_TYPETYPE(  arg1, "pwrite");
+	validate_NULL_TYPETYPE(  arg2, "pwrite");
+	validate_NULL_TYPETYPE(  arg3, "pwrite");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-ssize_t lsb_pwrite (int arg0 , const void * arg1 , size_t arg2 , off_t arg3 )
+ssize_t __lsb_pwrite (int arg0 , const void * arg1 , size_t arg2 , off_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pwrite");

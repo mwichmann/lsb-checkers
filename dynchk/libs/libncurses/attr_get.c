@@ -10,13 +10,16 @@ int attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_get");
-	validate_NULL_TYPETYPE(arg0, "attr_get");
-	validate_NULL_TYPETYPE(arg1, "attr_get");
-	validate_NULL_TYPETYPE(arg2, "attr_get");
+	validate_Rdaddress( arg0, "attr_get");
+	validate_NULL_TYPETYPE(  arg0, "attr_get");
+	validate_Rdaddress( arg1, "attr_get");
+	validate_NULL_TYPETYPE(  arg1, "attr_get");
+	validate_Rdaddress( arg2, "attr_get");
+	validate_NULL_TYPETYPE(  arg2, "attr_get");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
+int __lsb_attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_get");

@@ -10,12 +10,12 @@ float fdimf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdimf");
-	validate_NULL_TYPETYPE(arg0, "fdimf");
-	validate_NULL_TYPETYPE(arg1, "fdimf");
+	validate_NULL_TYPETYPE(  arg0, "fdimf");
+	validate_NULL_TYPETYPE(  arg1, "fdimf");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_fdimf (float arg0 , float arg1 )
+float __lsb_fdimf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdimf");

@@ -24,7 +24,7 @@ void * mmap (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off_t 
 	return ret;
 }
 
-void * lsb_mmap (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off_t arg5 )
+void * __lsb_mmap (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off_t arg5 )
 {
 	void *ret;
 

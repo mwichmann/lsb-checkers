@@ -13,7 +13,7 @@ char * XtMalloc(Cardinal arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_XtMalloc(Cardinal arg0)
+char * __lsb_XtMalloc(Cardinal arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtMalloc");

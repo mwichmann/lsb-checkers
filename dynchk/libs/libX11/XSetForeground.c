@@ -15,7 +15,7 @@ int XSetForeground(Display * arg0, GC arg1, unsigned long arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSetForeground(Display * arg0, GC arg1, unsigned long arg2)
+int __lsb_XSetForeground(Display * arg0, GC arg1, unsigned long arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetForeground");

@@ -11,11 +11,11 @@ uint32_t ntohl (uint32_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ntohl");
-	validate_NULL_TYPETYPE(arg0, "ntohl");
+	validate_NULL_TYPETYPE(  arg0, "ntohl");
 	return funcptr(arg0);
 }
 
-uint32_t lsb_ntohl (uint32_t arg0 )
+uint32_t __lsb_ntohl (uint32_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ntohl");

@@ -18,7 +18,7 @@ int XDrawSegments(Display * arg0, Drawable arg1, GC arg2, XSegment * arg3, int a
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XDrawSegments(Display * arg0, Drawable arg1, GC arg2, XSegment * arg3, int arg4)
+int __lsb_XDrawSegments(Display * arg0, Drawable arg1, GC arg2, XSegment * arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDrawSegments");

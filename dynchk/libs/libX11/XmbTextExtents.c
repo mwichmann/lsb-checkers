@@ -17,7 +17,7 @@ int XmbTextExtents(XFontSet arg0, char * arg1, int arg2, XRectangle * arg3, XRec
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XmbTextExtents(XFontSet arg0, char * arg1, int arg2, XRectangle * arg3, XRectangle * arg4)
+int __lsb_XmbTextExtents(XFontSet arg0, char * arg1, int arg2, XRectangle * arg3, XRectangle * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XmbTextExtents");

@@ -13,7 +13,7 @@ chtype inch ()
 	return funcptr();
 }
 
-chtype lsb_inch ()
+chtype __lsb_inch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inch");

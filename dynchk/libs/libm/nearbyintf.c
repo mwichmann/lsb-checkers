@@ -10,11 +10,11 @@ float nearbyintf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nearbyintf");
-	validate_NULL_TYPETYPE(arg0, "nearbyintf");
+	validate_NULL_TYPETYPE(  arg0, "nearbyintf");
 	return funcptr(arg0);
 }
 
-float lsb_nearbyintf (float arg0 )
+float __lsb_nearbyintf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nearbyintf");

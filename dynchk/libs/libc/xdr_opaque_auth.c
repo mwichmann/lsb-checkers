@@ -11,12 +11,14 @@ bool_t xdr_opaque_auth (XDR * arg0 , struct opaque_auth * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_opaque_auth");
-	validate_NULL_TYPETYPE(arg0, "xdr_opaque_auth");
-	validate_NULL_TYPETYPE(arg1, "xdr_opaque_auth");
+	validate_Rdaddress( arg0, "xdr_opaque_auth");
+	validate_NULL_TYPETYPE(  arg0, "xdr_opaque_auth");
+	validate_Rdaddress( arg1, "xdr_opaque_auth");
+	validate_NULL_TYPETYPE(  arg1, "xdr_opaque_auth");
 	return funcptr(arg0, arg1);
 }
 
-bool_t lsb_xdr_opaque_auth (XDR * arg0 , struct opaque_auth * arg1 )
+bool_t __lsb_xdr_opaque_auth (XDR * arg0 , struct opaque_auth * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_opaque_auth");

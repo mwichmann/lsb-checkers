@@ -10,11 +10,11 @@ int __isnanf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__isnanf");
-	validate_NULL_TYPETYPE(arg0, "__isnanf");
+	validate_NULL_TYPETYPE(  arg0, "__isnanf");
 	return funcptr(arg0);
 }
 
-int lsb___isnanf (float arg0 )
+int __lsb___isnanf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__isnanf");

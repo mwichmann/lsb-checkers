@@ -12,7 +12,7 @@ void glTexCoord3fv(GLfloat * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glTexCoord3fv(GLfloat * arg0)
+void __lsb_glTexCoord3fv(GLfloat * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glTexCoord3fv");

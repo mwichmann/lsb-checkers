@@ -21,7 +21,7 @@ int XTranslateCoordinates(Display * arg0, Window arg1, Window arg2, int arg3, in
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-int lsb_XTranslateCoordinates(Display * arg0, Window arg1, Window arg2, int arg3, int arg4, int * arg5, int * arg6, Window * arg7)
+int __lsb_XTranslateCoordinates(Display * arg0, Window arg1, Window arg2, int arg3, int arg4, int * arg5, int * arg6, Window * arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XTranslateCoordinates");

@@ -10,11 +10,11 @@ void timeout (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "timeout");
-	validate_NULL_TYPETYPE(arg0, "timeout");
+	validate_NULL_TYPETYPE(  arg0, "timeout");
 	funcptr(arg0);
 }
 
-void lsb_timeout (int arg0 )
+void __lsb_timeout (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "timeout");

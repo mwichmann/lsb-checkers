@@ -14,7 +14,7 @@ int XFreePixmap(Display * arg0, Pixmap arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XFreePixmap(Display * arg0, Pixmap arg1)
+int __lsb_XFreePixmap(Display * arg0, Pixmap arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFreePixmap");

@@ -10,15 +10,16 @@ WINDOW * subwin (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "subwin");
-	validate_NULL_TYPETYPE(arg0, "subwin");
-	validate_NULL_TYPETYPE(arg1, "subwin");
-	validate_NULL_TYPETYPE(arg2, "subwin");
-	validate_NULL_TYPETYPE(arg3, "subwin");
-	validate_NULL_TYPETYPE(arg4, "subwin");
+	validate_Rdaddress( arg0, "subwin");
+	validate_NULL_TYPETYPE(  arg0, "subwin");
+	validate_NULL_TYPETYPE(  arg1, "subwin");
+	validate_NULL_TYPETYPE(  arg2, "subwin");
+	validate_NULL_TYPETYPE(  arg3, "subwin");
+	validate_NULL_TYPETYPE(  arg4, "subwin");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-WINDOW * lsb_subwin (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
+WINDOW * __lsb_subwin (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "subwin");

@@ -10,13 +10,15 @@ int __xstat (int arg0 , const char * arg1 , struct stat * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__xstat");
-	validate_NULL_TYPETYPE(arg0, "__xstat");
-	validate_NULL_TYPETYPE(arg1, "__xstat");
-	validate_NULL_TYPETYPE(arg2, "__xstat");
+	validate_NULL_TYPETYPE(  arg0, "__xstat");
+	validate_Rdaddress( arg1, "__xstat");
+	validate_NULL_TYPETYPE(  arg1, "__xstat");
+	validate_Rdaddress( arg2, "__xstat");
+	validate_NULL_TYPETYPE(  arg2, "__xstat");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb___xstat (int arg0 , const char * arg1 , struct stat * arg2 )
+int __lsb___xstat (int arg0 , const char * arg1 , struct stat * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__xstat");

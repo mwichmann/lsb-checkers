@@ -18,7 +18,7 @@ XtInputId XtAddInput(int arg0, XtPointer arg1, XtInputCallbackProc arg2, XtPoint
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-XtInputId lsb_XtAddInput(int arg0, XtPointer arg1, XtInputCallbackProc arg2, XtPointer arg3)
+XtInputId __lsb_XtAddInput(int arg0, XtPointer arg1, XtInputCallbackProc arg2, XtPointer arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAddInput");

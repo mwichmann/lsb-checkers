@@ -13,7 +13,7 @@ void glClearDepth(GLclampd arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glClearDepth(GLclampd arg0)
+void __lsb_glClearDepth(GLclampd arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glClearDepth");

@@ -10,12 +10,13 @@ void immedok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "immedok");
-	validate_NULL_TYPETYPE(arg0, "immedok");
-	validate_NULL_TYPETYPE(arg1, "immedok");
+	validate_Rdaddress( arg0, "immedok");
+	validate_NULL_TYPETYPE(  arg0, "immedok");
+	validate_NULL_TYPETYPE(  arg1, "immedok");
 	funcptr(arg0, arg1);
 }
 
-void lsb_immedok (WINDOW * arg0 , bool arg1 )
+void __lsb_immedok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "immedok");

@@ -17,7 +17,7 @@ XtBlockHookId XtAppAddBlockHook(XtAppContext arg0, XtBlockHookProc arg1, XtPoint
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtBlockHookId lsb_XtAppAddBlockHook(XtAppContext arg0, XtBlockHookProc arg1, XtPointer arg2)
+XtBlockHookId __lsb_XtAppAddBlockHook(XtAppContext arg0, XtBlockHookProc arg1, XtPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppAddBlockHook");

@@ -10,11 +10,11 @@ int iswpunct (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswpunct");
-	validate_NULL_TYPETYPE(arg0, "iswpunct");
+	validate_NULL_TYPETYPE(  arg0, "iswpunct");
 	return funcptr(arg0);
 }
 
-int lsb_iswpunct (wint_t arg0 )
+int __lsb_iswpunct (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswpunct");

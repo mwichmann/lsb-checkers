@@ -10,11 +10,12 @@ int ftime (struct timeb * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftime");
-	validate_NULL_TYPETYPE(arg0, "ftime");
+	validate_Rdaddress( arg0, "ftime");
+	validate_NULL_TYPETYPE(  arg0, "ftime");
 	return funcptr(arg0);
 }
 
-int lsb_ftime (struct timeb * arg0 )
+int __lsb_ftime (struct timeb * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftime");

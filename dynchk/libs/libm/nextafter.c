@@ -10,12 +10,12 @@ double nextafter (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nextafter");
-	validate_NULL_TYPETYPE(arg0, "nextafter");
-	validate_NULL_TYPETYPE(arg1, "nextafter");
+	validate_NULL_TYPETYPE(  arg0, "nextafter");
+	validate_NULL_TYPETYPE(  arg1, "nextafter");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_nextafter (double arg0 , double arg1 )
+double __lsb_nextafter (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nextafter");

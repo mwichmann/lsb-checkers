@@ -10,11 +10,12 @@ int wclrtobot (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclrtobot");
-	validate_NULL_TYPETYPE(arg0, "wclrtobot");
+	validate_Rdaddress( arg0, "wclrtobot");
+	validate_NULL_TYPETYPE(  arg0, "wclrtobot");
 	return funcptr(arg0);
 }
 
-int lsb_wclrtobot (WINDOW * arg0 )
+int __lsb_wclrtobot (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclrtobot");

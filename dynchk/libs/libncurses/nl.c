@@ -13,7 +13,7 @@ int nl ()
 	return funcptr();
 }
 
-int lsb_nl ()
+int __lsb_nl ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nl");

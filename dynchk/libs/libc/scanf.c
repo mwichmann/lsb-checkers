@@ -17,7 +17,7 @@ int scanf(const char *format, ...)
 	return funcptr(format, args);
 }
 
-int lsb_scanf(const char *format, ...)
+int __lsb_scanf(const char *format, ...)
 {	
 	va_list args;
 	va_start(args, format);

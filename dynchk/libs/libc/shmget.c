@@ -12,13 +12,13 @@ int shmget (key_t arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmget");
-	validate_NULL_TYPETYPE(arg0, "shmget");
-	validate_NULL_TYPETYPE(arg1, "shmget");
-	validate_NULL_TYPETYPE(arg2, "shmget");
+	validate_NULL_TYPETYPE(  arg0, "shmget");
+	validate_NULL_TYPETYPE(  arg1, "shmget");
+	validate_NULL_TYPETYPE(  arg2, "shmget");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_shmget (key_t arg0 , size_t arg1 , int arg2 )
+int __lsb_shmget (key_t arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmget");

@@ -10,13 +10,14 @@ void openlog (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openlog");
-	validate_NULL_TYPETYPE(arg0, "openlog");
-	validate_NULL_TYPETYPE(arg1, "openlog");
-	validate_NULL_TYPETYPE(arg2, "openlog");
+	validate_Rdaddress( arg0, "openlog");
+	validate_NULL_TYPETYPE(  arg0, "openlog");
+	validate_NULL_TYPETYPE(  arg1, "openlog");
+	validate_NULL_TYPETYPE(  arg2, "openlog");
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_openlog (const char * arg0 , int arg1 , int arg2 )
+void __lsb_openlog (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openlog");

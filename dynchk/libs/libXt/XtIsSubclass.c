@@ -15,7 +15,7 @@ Boolean XtIsSubclass(Widget arg0, WidgetClass arg1)
 	return funcptr(arg0, arg1);
 }
 
-Boolean lsb_XtIsSubclass(Widget arg0, WidgetClass arg1)
+Boolean __lsb_XtIsSubclass(Widget arg0, WidgetClass arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsSubclass");

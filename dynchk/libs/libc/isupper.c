@@ -10,11 +10,11 @@ int isupper (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isupper");
-	validate_NULL_TYPETYPE(arg0, "isupper");
+	validate_NULL_TYPETYPE(  arg0, "isupper");
 	return funcptr(arg0);
 }
 
-int lsb_isupper (int arg0 )
+int __lsb_isupper (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isupper");

@@ -13,7 +13,7 @@ int doupdate ()
 	return funcptr();
 }
 
-int lsb_doupdate ()
+int __lsb_doupdate ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "doupdate");

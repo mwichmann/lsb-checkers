@@ -10,11 +10,11 @@ int isspace (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isspace");
-	validate_NULL_TYPETYPE(arg0, "isspace");
+	validate_NULL_TYPETYPE(  arg0, "isspace");
 	return funcptr(arg0);
 }
 
-int lsb_isspace (int arg0 )
+int __lsb_isspace (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isspace");

@@ -11,7 +11,7 @@ Boolean XtIsConstraint()
 	return funcptr();
 }
 
-Boolean lsb_XtIsConstraint()
+Boolean __lsb_XtIsConstraint()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsConstraint");

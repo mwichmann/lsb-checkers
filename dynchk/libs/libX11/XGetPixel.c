@@ -11,7 +11,7 @@ unsigned long XGetPixel()
 	return funcptr();
 }
 
-unsigned long lsb_XGetPixel()
+unsigned long __lsb_XGetPixel()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetPixel");

@@ -13,7 +13,7 @@ XExtCodes * XInitExtension(Display * arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-XExtCodes * lsb_XInitExtension(Display * arg0, char * arg1)
+XExtCodes * __lsb_XInitExtension(Display * arg0, char * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XInitExtension");

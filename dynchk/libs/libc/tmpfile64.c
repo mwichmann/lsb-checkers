@@ -13,7 +13,7 @@ FILE * tmpfile64 ()
 	return funcptr();
 }
 
-FILE * lsb_tmpfile64 ()
+FILE * __lsb_tmpfile64 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tmpfile64");

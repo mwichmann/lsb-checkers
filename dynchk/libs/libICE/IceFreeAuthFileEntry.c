@@ -12,7 +12,7 @@ void IceFreeAuthFileEntry(IceAuthFileEntry * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_IceFreeAuthFileEntry(IceAuthFileEntry * arg0)
+void __lsb_IceFreeAuthFileEntry(IceAuthFileEntry * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceFreeAuthFileEntry");

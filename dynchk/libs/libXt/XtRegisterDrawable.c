@@ -16,7 +16,7 @@ void XtRegisterDrawable(Display * arg0, Drawable arg1, Widget arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XtRegisterDrawable(Display * arg0, Drawable arg1, Widget arg2)
+void __lsb_XtRegisterDrawable(Display * arg0, Drawable arg1, Widget arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRegisterDrawable");

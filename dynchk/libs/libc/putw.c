@@ -10,12 +10,13 @@ int putw (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putw");
-	validate_NULL_TYPETYPE(arg0, "putw");
-	validate_NULL_TYPETYPE(arg1, "putw");
+	validate_NULL_TYPETYPE(  arg0, "putw");
+	validate_Rdaddress( arg1, "putw");
+	validate_NULL_TYPETYPE(  arg1, "putw");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_putw (int arg0 , FILE * arg1 )
+int __lsb_putw (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putw");

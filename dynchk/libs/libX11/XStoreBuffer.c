@@ -15,7 +15,7 @@ int XStoreBuffer(Display * arg0, char * arg1, int arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XStoreBuffer(Display * arg0, char * arg1, int arg2, int arg3)
+int __lsb_XStoreBuffer(Display * arg0, char * arg1, int arg2, int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XStoreBuffer");

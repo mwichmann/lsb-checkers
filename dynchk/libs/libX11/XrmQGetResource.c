@@ -19,7 +19,7 @@ int XrmQGetResource(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, XrmRe
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XrmQGetResource(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, XrmRepresentation * arg3, XrmValue * arg4)
+int __lsb_XrmQGetResource(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, XrmRepresentation * arg3, XrmValue * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmQGetResource");

@@ -12,15 +12,19 @@ int getpwuid_r (uid_t arg0 , struct passwd * arg1 , char * arg2 , size_t arg3 , 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwuid_r");
-	validate_NULL_TYPETYPE(arg0, "getpwuid_r");
-	validate_NULL_TYPETYPE(arg1, "getpwuid_r");
-	validate_NULL_TYPETYPE(arg2, "getpwuid_r");
-	validate_NULL_TYPETYPE(arg3, "getpwuid_r");
-	validate_NULL_TYPETYPE(arg4, "getpwuid_r");
+	validate_NULL_TYPETYPE(  arg0, "getpwuid_r");
+	validate_Rdaddress( arg1, "getpwuid_r");
+	validate_NULL_TYPETYPE(  arg1, "getpwuid_r");
+	validate_Rdaddress( arg2, "getpwuid_r");
+	validate_NULL_TYPETYPE(  arg2, "getpwuid_r");
+	validate_NULL_TYPETYPE(  arg3, "getpwuid_r");
+	validate_Rdaddress( arg4, "getpwuid_r");
+	validate_Rdaddress(* arg4, "getpwuid_r");
+	validate_NULL_TYPETYPE(  arg4, "getpwuid_r");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_getpwuid_r (uid_t arg0 , struct passwd * arg1 , char * arg2 , size_t arg3 , struct passwd * * arg4 )
+int __lsb_getpwuid_r (uid_t arg0 , struct passwd * arg1 , char * arg2 , size_t arg3 , struct passwd * * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwuid_r");

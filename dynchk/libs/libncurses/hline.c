@@ -10,12 +10,12 @@ int hline (chtype arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hline");
-	validate_NULL_TYPETYPE(arg0, "hline");
-	validate_NULL_TYPETYPE(arg1, "hline");
+	validate_NULL_TYPETYPE(  arg0, "hline");
+	validate_NULL_TYPETYPE(  arg1, "hline");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_hline (chtype arg0 , int arg1 )
+int __lsb_hline (chtype arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hline");

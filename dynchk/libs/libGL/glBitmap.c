@@ -24,7 +24,7 @@ void glBitmap(GLsizei arg0, GLsizei arg1, GLfloat arg2, GLfloat arg3, GLfloat ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-void lsb_glBitmap(GLsizei arg0, GLsizei arg1, GLfloat arg2, GLfloat arg3, GLfloat arg4, GLfloat arg5, GLubyte * arg6)
+void __lsb_glBitmap(GLsizei arg0, GLsizei arg1, GLfloat arg2, GLfloat arg3, GLfloat arg4, GLfloat arg5, GLubyte * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glBitmap");

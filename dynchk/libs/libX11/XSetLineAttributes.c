@@ -18,7 +18,7 @@ int XSetLineAttributes(Display * arg0, GC arg1, unsigned int arg2, int arg3, int
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XSetLineAttributes(Display * arg0, GC arg1, unsigned int arg2, int arg3, int arg4, int arg5)
+int __lsb_XSetLineAttributes(Display * arg0, GC arg1, unsigned int arg2, int arg3, int arg4, int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetLineAttributes");

@@ -13,7 +13,7 @@ bool isendwin ()
 	return funcptr();
 }
 
-bool lsb_isendwin ()
+bool __lsb_isendwin ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isendwin");

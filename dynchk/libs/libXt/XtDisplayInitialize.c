@@ -21,7 +21,7 @@ void XtDisplayInitialize(XtAppContext arg0, Display * arg1, char * arg2, char * 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-void lsb_XtDisplayInitialize(XtAppContext arg0, Display * arg1, char * arg2, char * arg3, XrmOptionDescRec * arg4, Cardinal arg5, int * arg6, char * * arg7)
+void __lsb_XtDisplayInitialize(XtAppContext arg0, Display * arg1, char * arg2, char * arg3, XrmOptionDescRec * arg4, Cardinal arg5, int * arg6, char * * arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtDisplayInitialize");

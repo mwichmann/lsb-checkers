@@ -22,7 +22,7 @@ int tcsetattr (int arg0 , int arg1, const struct termios * arg2 )
 	return ret;
 }
 
-int lsb_tcsetattr (int arg0 , int arg1, const struct termios * arg2 )
+int __lsb_tcsetattr (int arg0 , int arg1, const struct termios * arg2 )
 {
 	int ret;
 

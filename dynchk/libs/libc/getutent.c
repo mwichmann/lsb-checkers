@@ -13,7 +13,7 @@ struct utmp * getutent ()
 	return funcptr();
 }
 
-struct utmp * lsb_getutent ()
+struct utmp * __lsb_getutent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutent");

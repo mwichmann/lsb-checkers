@@ -10,12 +10,13 @@ int clearok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clearok");
-	validate_NULL_TYPETYPE(arg0, "clearok");
-	validate_NULL_TYPETYPE(arg1, "clearok");
+	validate_Rdaddress( arg0, "clearok");
+	validate_NULL_TYPETYPE(  arg0, "clearok");
+	validate_NULL_TYPETYPE(  arg1, "clearok");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_clearok (WINDOW * arg0 , bool arg1 )
+int __lsb_clearok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clearok");

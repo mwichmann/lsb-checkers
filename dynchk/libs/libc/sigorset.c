@@ -10,13 +10,16 @@ int sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigorset");
-	validate_NULL_TYPETYPE(arg0, "sigorset");
-	validate_NULL_TYPETYPE(arg1, "sigorset");
-	validate_NULL_TYPETYPE(arg2, "sigorset");
+	validate_Rdaddress( arg0, "sigorset");
+	validate_NULL_TYPETYPE(  arg0, "sigorset");
+	validate_Rdaddress( arg1, "sigorset");
+	validate_NULL_TYPETYPE(  arg1, "sigorset");
+	validate_Rdaddress( arg2, "sigorset");
+	validate_NULL_TYPETYPE(  arg2, "sigorset");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
+int __lsb_sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigorset");

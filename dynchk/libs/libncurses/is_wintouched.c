@@ -10,11 +10,12 @@ bool is_wintouched (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "is_wintouched");
-	validate_NULL_TYPETYPE(arg0, "is_wintouched");
+	validate_Rdaddress( arg0, "is_wintouched");
+	validate_NULL_TYPETYPE(  arg0, "is_wintouched");
 	return funcptr(arg0);
 }
 
-bool lsb_is_wintouched (WINDOW * arg0 )
+bool __lsb_is_wintouched (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "is_wintouched");

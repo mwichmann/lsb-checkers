@@ -10,11 +10,11 @@ double gamma (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gamma");
-	validate_NULL_TYPETYPE(arg0, "gamma");
+	validate_NULL_TYPETYPE(  arg0, "gamma");
 	return funcptr(arg0);
 }
 
-double lsb_gamma (double arg0 )
+double __lsb_gamma (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gamma");

@@ -32,7 +32,7 @@ void glTexSubImage3D(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint arg4
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 }
 
-void lsb_glTexSubImage3D(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint arg4, GLsizei arg5, GLsizei arg6, GLsizei arg7, GLenum arg8, GLenum arg9, GLvoid * arg10)
+void __lsb_glTexSubImage3D(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint arg4, GLsizei arg5, GLsizei arg6, GLsizei arg7, GLenum arg8, GLenum arg9, GLvoid * arg10)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glTexSubImage3D");

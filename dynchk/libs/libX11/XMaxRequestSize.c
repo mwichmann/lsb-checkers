@@ -12,7 +12,7 @@ long XMaxRequestSize(Display * arg0)
 	return funcptr(arg0);
 }
 
-long lsb_XMaxRequestSize(Display * arg0)
+long __lsb_XMaxRequestSize(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XMaxRequestSize");

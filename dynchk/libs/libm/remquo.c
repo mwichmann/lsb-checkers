@@ -10,13 +10,14 @@ double remquo (double arg0 , double arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquo");
-	validate_NULL_TYPETYPE(arg0, "remquo");
-	validate_NULL_TYPETYPE(arg1, "remquo");
-	validate_NULL_TYPETYPE(arg2, "remquo");
+	validate_NULL_TYPETYPE(  arg0, "remquo");
+	validate_NULL_TYPETYPE(  arg1, "remquo");
+	validate_Rdaddress( arg2, "remquo");
+	validate_NULL_TYPETYPE(  arg2, "remquo");
 	return funcptr(arg0, arg1, arg2);
 }
 
-double lsb_remquo (double arg0 , double arg1 , int * arg2 )
+double __lsb_remquo (double arg0 , double arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquo");

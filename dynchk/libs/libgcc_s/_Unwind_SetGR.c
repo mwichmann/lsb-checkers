@@ -11,7 +11,7 @@ void _Unwind_SetGR()
 	funcptr();
 }
 
-void lsb__Unwind_SetGR()
+void __lsb__Unwind_SetGR()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_SetGR");

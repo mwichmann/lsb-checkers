@@ -11,7 +11,7 @@ int XESetWireToError()
 	return funcptr();
 }
 
-int lsb_XESetWireToError()
+int __lsb_XESetWireToError()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetWireToError");

@@ -11,7 +11,7 @@ Boolean XtIsComposite()
 	return funcptr();
 }
 
-Boolean lsb_XtIsComposite()
+Boolean __lsb_XtIsComposite()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsComposite");

@@ -10,12 +10,14 @@ int utime (const char * arg0 , const struct utimbuf * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "utime");
-	validate_NULL_TYPETYPE(arg0, "utime");
-	validate_NULL_TYPETYPE(arg1, "utime");
+	validate_Rdaddress( arg0, "utime");
+	validate_NULL_TYPETYPE(  arg0, "utime");
+	validate_Rdaddress( arg1, "utime");
+	validate_NULL_TYPETYPE(  arg1, "utime");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_utime (const char * arg0 , const struct utimbuf * arg1 )
+int __lsb_utime (const char * arg0 , const struct utimbuf * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "utime");

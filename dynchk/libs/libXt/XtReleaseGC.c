@@ -15,7 +15,7 @@ void XtReleaseGC(Widget arg0, GC arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtReleaseGC(Widget arg0, GC arg1)
+void __lsb_XtReleaseGC(Widget arg0, GC arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtReleaseGC");

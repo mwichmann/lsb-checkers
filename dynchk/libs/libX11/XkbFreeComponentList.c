@@ -12,7 +12,7 @@ void XkbFreeComponentList(XkbComponentListPtr arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XkbFreeComponentList(XkbComponentListPtr arg0)
+void __lsb_XkbFreeComponentList(XkbComponentListPtr arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbFreeComponentList");

@@ -10,13 +10,14 @@ char * tgoto (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgoto");
-	validate_NULL_TYPETYPE(arg0, "tgoto");
-	validate_NULL_TYPETYPE(arg1, "tgoto");
-	validate_NULL_TYPETYPE(arg2, "tgoto");
+	validate_Rdaddress( arg0, "tgoto");
+	validate_NULL_TYPETYPE(  arg0, "tgoto");
+	validate_NULL_TYPETYPE(  arg1, "tgoto");
+	validate_NULL_TYPETYPE(  arg2, "tgoto");
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_tgoto (const char * arg0 , int arg1 , int arg2 )
+char * __lsb_tgoto (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgoto");

@@ -10,11 +10,11 @@ int sigpause (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigpause");
-	validate_NULL_TYPETYPE(arg0, "sigpause");
+	validate_NULL_TYPETYPE(  arg0, "sigpause");
 	return funcptr(arg0);
 }
 
-int lsb_sigpause (int arg0 )
+int __lsb_sigpause (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigpause");

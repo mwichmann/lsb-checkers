@@ -10,11 +10,11 @@ int isalpha (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isalpha");
-	validate_NULL_TYPETYPE(arg0, "isalpha");
+	validate_NULL_TYPETYPE(  arg0, "isalpha");
 	return funcptr(arg0);
 }
 
-int lsb_isalpha (int arg0 )
+int __lsb_isalpha (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isalpha");

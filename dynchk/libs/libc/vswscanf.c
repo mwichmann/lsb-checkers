@@ -12,13 +12,15 @@ int vswscanf (const wchar_t * arg0 , const wchar_t * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vswscanf");
-	validate_NULL_TYPETYPE(arg0, "vswscanf");
-	validate_NULL_TYPETYPE(arg1, "vswscanf");
-	validate_NULL_TYPETYPE(arg2, "vswscanf");
+	validate_Rdaddress( arg0, "vswscanf");
+	validate_NULL_TYPETYPE(  arg0, "vswscanf");
+	validate_Rdaddress( arg1, "vswscanf");
+	validate_NULL_TYPETYPE(  arg1, "vswscanf");
+	validate_NULL_TYPETYPE(  arg2, "vswscanf");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vswscanf (const wchar_t * arg0 , const wchar_t * arg1 , va_list arg2 )
+int __lsb_vswscanf (const wchar_t * arg0 , const wchar_t * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vswscanf");

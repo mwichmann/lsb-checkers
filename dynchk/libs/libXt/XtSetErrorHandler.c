@@ -13,7 +13,7 @@ void XtSetErrorHandler(XtErrorHandler arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtSetErrorHandler(XtErrorHandler arg0)
+void __lsb_XtSetErrorHandler(XtErrorHandler arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSetErrorHandler");

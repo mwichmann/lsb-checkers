@@ -15,7 +15,7 @@ int dlclose (void * arg0 )
 }
 #endif
 
-int lsb_dlclose (void * arg0 )
+int __lsb_dlclose (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlclose");

@@ -16,7 +16,7 @@ int XGetWMNormalHints(Display * arg0, Window arg1, XSizeHints * arg2, long * arg
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XGetWMNormalHints(Display * arg0, Window arg1, XSizeHints * arg2, long * arg3)
+int __lsb_XGetWMNormalHints(Display * arg0, Window arg1, XSizeHints * arg2, long * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetWMNormalHints");

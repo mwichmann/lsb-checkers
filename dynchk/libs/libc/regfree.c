@@ -10,11 +10,12 @@ void regfree (regex_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regfree");
-	validate_NULL_TYPETYPE(arg0, "regfree");
+	validate_Rdaddress( arg0, "regfree");
+	validate_NULL_TYPETYPE(  arg0, "regfree");
 	funcptr(arg0);
 }
 
-void lsb_regfree (regex_t * arg0 )
+void __lsb_regfree (regex_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regfree");

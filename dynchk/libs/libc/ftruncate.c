@@ -11,12 +11,12 @@ int ftruncate (int arg0 , off_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftruncate");
-	validate_NULL_TYPETYPE(arg0, "ftruncate");
-	validate_NULL_TYPETYPE(arg1, "ftruncate");
+	validate_NULL_TYPETYPE(  arg0, "ftruncate");
+	validate_NULL_TYPETYPE(  arg1, "ftruncate");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_ftruncate (int arg0 , off_t arg1 )
+int __lsb_ftruncate (int arg0 , off_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftruncate");

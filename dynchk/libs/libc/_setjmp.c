@@ -10,11 +10,11 @@ int _setjmp (jmp_buf arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_setjmp");
-	validate_NULL_TYPETYPE(arg0, "_setjmp");
+	validate_NULL_TYPETYPE(  arg0, "_setjmp");
 	return funcptr(arg0);
 }
 
-int lsb__setjmp (jmp_buf arg0 )
+int __lsb__setjmp (jmp_buf arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_setjmp");

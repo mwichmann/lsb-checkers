@@ -13,7 +13,7 @@ char * longname ()
 	return funcptr();
 }
 
-char * lsb_longname ()
+char * __lsb_longname ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "longname");

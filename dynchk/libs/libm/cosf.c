@@ -10,11 +10,11 @@ float cosf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cosf");
-	validate_NULL_TYPETYPE(arg0, "cosf");
+	validate_NULL_TYPETYPE(  arg0, "cosf");
 	return funcptr(arg0);
 }
 
-float lsb_cosf (float arg0 )
+float __lsb_cosf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cosf");

@@ -12,7 +12,7 @@ XrmQuark XrmUniqueQuark(void arg0)
 	return funcptr(arg0);
 }
 
-XrmQuark lsb_XrmUniqueQuark(void arg0)
+XrmQuark __lsb_XrmUniqueQuark(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmUniqueQuark");

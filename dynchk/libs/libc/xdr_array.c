@@ -11,16 +11,19 @@ bool_t xdr_array (XDR * arg0 , caddr_t * arg1 , u_int * arg2 , u_int arg3 , u_in
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_array");
-	validate_NULL_TYPETYPE(arg0, "xdr_array");
-	validate_NULL_TYPETYPE(arg1, "xdr_array");
-	validate_NULL_TYPETYPE(arg2, "xdr_array");
-	validate_NULL_TYPETYPE(arg3, "xdr_array");
-	validate_NULL_TYPETYPE(arg4, "xdr_array");
-	validate_NULL_TYPETYPE(arg5, "xdr_array");
+	validate_Rdaddress( arg0, "xdr_array");
+	validate_NULL_TYPETYPE(  arg0, "xdr_array");
+	validate_Rdaddress( arg1, "xdr_array");
+	validate_NULL_TYPETYPE(  arg1, "xdr_array");
+	validate_Rdaddress( arg2, "xdr_array");
+	validate_NULL_TYPETYPE(  arg2, "xdr_array");
+	validate_NULL_TYPETYPE(  arg3, "xdr_array");
+	validate_NULL_TYPETYPE(  arg4, "xdr_array");
+	validate_NULL_TYPETYPE(  arg5, "xdr_array");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-bool_t lsb_xdr_array (XDR * arg0 , caddr_t * arg1 , u_int * arg2 , u_int arg3 , u_int arg4 , xdrproc_t arg5 )
+bool_t __lsb_xdr_array (XDR * arg0 , caddr_t * arg1 , u_int * arg2 , u_int arg3 , u_int arg4 , xdrproc_t arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_array");

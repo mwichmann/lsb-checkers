@@ -13,7 +13,7 @@ Display * XcmsDisplayOfCCC(XcmsCCC arg0)
 	return funcptr(arg0);
 }
 
-Display * lsb_XcmsDisplayOfCCC(XcmsCCC arg0)
+Display * __lsb_XcmsDisplayOfCCC(XcmsCCC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsDisplayOfCCC");

@@ -17,7 +17,7 @@ int XSetSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, Atom arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XSetSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, Atom arg3)
+int __lsb_XSetSizeHints(Display * arg0, Window arg1, XSizeHints * arg2, Atom arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetSizeHints");

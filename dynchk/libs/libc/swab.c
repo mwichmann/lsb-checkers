@@ -11,13 +11,15 @@ void swab (const void * arg0 , void * arg1 , ssize_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swab");
-	validate_NULL_TYPETYPE(arg0, "swab");
-	validate_NULL_TYPETYPE(arg1, "swab");
-	validate_NULL_TYPETYPE(arg2, "swab");
+	validate_Rdaddress( arg0, "swab");
+	validate_NULL_TYPETYPE(  arg0, "swab");
+	validate_Rdaddress( arg1, "swab");
+	validate_NULL_TYPETYPE(  arg1, "swab");
+	validate_NULL_TYPETYPE(  arg2, "swab");
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_swab (const void * arg0 , void * arg1 , ssize_t arg2 )
+void __lsb_swab (const void * arg0 , void * arg1 , ssize_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swab");

@@ -10,12 +10,13 @@ int winsdelln (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsdelln");
-	validate_NULL_TYPETYPE(arg0, "winsdelln");
-	validate_NULL_TYPETYPE(arg1, "winsdelln");
+	validate_Rdaddress( arg0, "winsdelln");
+	validate_NULL_TYPETYPE(  arg0, "winsdelln");
+	validate_NULL_TYPETYPE(  arg1, "winsdelln");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_winsdelln (WINDOW * arg0 , int arg1 )
+int __lsb_winsdelln (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsdelln");

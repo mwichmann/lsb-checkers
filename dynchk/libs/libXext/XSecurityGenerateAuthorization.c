@@ -16,7 +16,7 @@ Xauth * XSecurityGenerateAuthorization(Display * arg0, Xauth * arg1, unsigned lo
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-Xauth * lsb_XSecurityGenerateAuthorization(Display * arg0, Xauth * arg1, unsigned long arg2, XSecurityAuthorizationAttributes * arg3, XSecurityAuthorization * arg4)
+Xauth * __lsb_XSecurityGenerateAuthorization(Display * arg0, Xauth * arg1, unsigned long arg2, XSecurityAuthorizationAttributes * arg3, XSecurityAuthorization * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSecurityGenerateAuthorization");

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef ctanl
 static long double complex(*funcptr) (long double complex ) = 0;
@@ -11,11 +10,11 @@ long double complex ctanl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanl");
-	validate_NULL_TYPETYPE(arg0, "ctanl");
+	validate_NULL_TYPETYPE(  arg0, "ctanl");
 	return funcptr(arg0);
 }
 
-long double complex lsb_ctanl (long double complex arg0 )
+long double complex __lsb_ctanl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanl");

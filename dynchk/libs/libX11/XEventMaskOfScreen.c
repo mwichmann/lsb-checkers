@@ -12,7 +12,7 @@ long XEventMaskOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-long lsb_XEventMaskOfScreen(Screen * arg0)
+long __lsb_XEventMaskOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XEventMaskOfScreen");

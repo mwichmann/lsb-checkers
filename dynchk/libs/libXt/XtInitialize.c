@@ -18,7 +18,7 @@ Widget XtInitialize(char * arg0, char * arg1, XrmOptionDescRec * arg2, Cardinal 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-Widget lsb_XtInitialize(char * arg0, char * arg1, XrmOptionDescRec * arg2, Cardinal arg3, int * arg4, char * * arg5)
+Widget __lsb_XtInitialize(char * arg0, char * arg1, XrmOptionDescRec * arg2, Cardinal arg3, int * arg4, char * * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtInitialize");

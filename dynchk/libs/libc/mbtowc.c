@@ -11,13 +11,15 @@ int mbtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbtowc");
-	validate_NULL_TYPETYPE(arg0, "mbtowc");
-	validate_NULL_TYPETYPE(arg1, "mbtowc");
-	validate_NULL_TYPETYPE(arg2, "mbtowc");
+	validate_Rdaddress( arg0, "mbtowc");
+	validate_NULL_TYPETYPE(  arg0, "mbtowc");
+	validate_Rdaddress( arg1, "mbtowc");
+	validate_NULL_TYPETYPE(  arg1, "mbtowc");
+	validate_NULL_TYPETYPE(  arg2, "mbtowc");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mbtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 )
+int __lsb_mbtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbtowc");

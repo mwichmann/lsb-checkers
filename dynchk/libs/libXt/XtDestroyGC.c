@@ -13,7 +13,7 @@ void XtDestroyGC(GC arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtDestroyGC(GC arg0)
+void __lsb_XtDestroyGC(GC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtDestroyGC");

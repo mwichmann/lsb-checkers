@@ -13,7 +13,7 @@ int rand ()
 	return funcptr();
 }
 
-int lsb_rand ()
+int __lsb_rand ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rand");

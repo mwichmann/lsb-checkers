@@ -10,12 +10,12 @@ double yn (int arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "yn");
-	validate_NULL_TYPETYPE(arg0, "yn");
-	validate_NULL_TYPETYPE(arg1, "yn");
+	validate_NULL_TYPETYPE(  arg0, "yn");
+	validate_NULL_TYPETYPE(  arg1, "yn");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_yn (int arg0 , double arg1 )
+double __lsb_yn (int arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "yn");

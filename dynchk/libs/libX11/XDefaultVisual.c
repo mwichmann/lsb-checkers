@@ -13,7 +13,7 @@ Visual * XDefaultVisual(Display * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-Visual * lsb_XDefaultVisual(Display * arg0, int arg1)
+Visual * __lsb_XDefaultVisual(Display * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultVisual");

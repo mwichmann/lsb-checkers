@@ -10,12 +10,14 @@ int pthread_attr_getinheritsched (const pthread_attr_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_getinheritsched");
-	validate_NULL_TYPETYPE(arg0, "pthread_attr_getinheritsched");
-	validate_NULL_TYPETYPE(arg1, "pthread_attr_getinheritsched");
+	validate_Rdaddress( arg0, "pthread_attr_getinheritsched");
+	validate_NULL_TYPETYPE(  arg0, "pthread_attr_getinheritsched");
+	validate_Rdaddress( arg1, "pthread_attr_getinheritsched");
+	validate_NULL_TYPETYPE(  arg1, "pthread_attr_getinheritsched");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_attr_getinheritsched (const pthread_attr_t * arg0 , int * arg1 )
+int __lsb_pthread_attr_getinheritsched (const pthread_attr_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_getinheritsched");

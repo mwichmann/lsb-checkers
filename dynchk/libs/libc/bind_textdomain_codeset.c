@@ -10,12 +10,14 @@ char * bind_textdomain_codeset (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bind_textdomain_codeset");
-	validate_NULL_TYPETYPE(arg0, "bind_textdomain_codeset");
-	validate_NULL_TYPETYPE(arg1, "bind_textdomain_codeset");
+	validate_Rdaddress( arg0, "bind_textdomain_codeset");
+	validate_NULL_TYPETYPE(  arg0, "bind_textdomain_codeset");
+	validate_Rdaddress( arg1, "bind_textdomain_codeset");
+	validate_NULL_TYPETYPE(  arg1, "bind_textdomain_codeset");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_bind_textdomain_codeset (const char * arg0 , const char * arg1 )
+char * __lsb_bind_textdomain_codeset (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bind_textdomain_codeset");

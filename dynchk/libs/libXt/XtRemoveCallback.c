@@ -18,7 +18,7 @@ void XtRemoveCallback(Widget arg0, char * arg1, XtCallbackProc arg2, XtPointer a
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XtRemoveCallback(Widget arg0, char * arg1, XtCallbackProc arg2, XtPointer arg3)
+void __lsb_XtRemoveCallback(Widget arg0, char * arg1, XtCallbackProc arg2, XtPointer arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRemoveCallback");

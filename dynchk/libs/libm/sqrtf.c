@@ -10,11 +10,11 @@ float sqrtf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sqrtf");
-	validate_NULL_TYPETYPE(arg0, "sqrtf");
+	validate_NULL_TYPETYPE(  arg0, "sqrtf");
 	return funcptr(arg0);
 }
 
-float lsb_sqrtf (float arg0 )
+float __lsb_sqrtf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sqrtf");

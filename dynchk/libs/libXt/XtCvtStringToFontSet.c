@@ -20,7 +20,7 @@ Boolean XtCvtStringToFontSet(Display * arg0, XrmValuePtr arg1, Cardinal * arg2, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-Boolean lsb_XtCvtStringToFontSet(Display * arg0, XrmValuePtr arg1, Cardinal * arg2, XrmValuePtr arg3, XrmValuePtr arg4, XtPointer * arg5)
+Boolean __lsb_XtCvtStringToFontSet(Display * arg0, XrmValuePtr arg1, Cardinal * arg2, XrmValuePtr arg3, XrmValuePtr arg4, XtPointer * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtCvtStringToFontSet");

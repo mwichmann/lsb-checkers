@@ -10,11 +10,12 @@ char * cuserid (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cuserid");
-	validate_NULL_TYPETYPE(arg0, "cuserid");
+	validate_Rdaddress( arg0, "cuserid");
+	validate_NULL_TYPETYPE(  arg0, "cuserid");
 	return funcptr(arg0);
 }
 
-char * lsb_cuserid (char * arg0 )
+char * __lsb_cuserid (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cuserid");

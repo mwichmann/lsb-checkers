@@ -11,13 +11,14 @@ int chown (const char * arg0 , uid_t arg1 , gid_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chown");
-	validate_NULL_TYPETYPE(arg0, "chown");
-	validate_NULL_TYPETYPE(arg1, "chown");
-	validate_NULL_TYPETYPE(arg2, "chown");
+	validate_Rdaddress( arg0, "chown");
+	validate_NULL_TYPETYPE(  arg0, "chown");
+	validate_NULL_TYPETYPE(  arg1, "chown");
+	validate_NULL_TYPETYPE(  arg2, "chown");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_chown (const char * arg0 , uid_t arg1 , gid_t arg2 )
+int __lsb_chown (const char * arg0 , uid_t arg1 , gid_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chown");

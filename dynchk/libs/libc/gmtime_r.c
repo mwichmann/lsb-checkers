@@ -11,12 +11,14 @@ struct tm * gmtime_r (const time_t * arg0 , struct tm * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gmtime_r");
-	validate_NULL_TYPETYPE(arg0, "gmtime_r");
-	validate_NULL_TYPETYPE(arg1, "gmtime_r");
+	validate_Rdaddress( arg0, "gmtime_r");
+	validate_NULL_TYPETYPE(  arg0, "gmtime_r");
+	validate_Rdaddress( arg1, "gmtime_r");
+	validate_NULL_TYPETYPE(  arg1, "gmtime_r");
 	return funcptr(arg0, arg1);
 }
 
-struct tm * lsb_gmtime_r (const time_t * arg0 , struct tm * arg1 )
+struct tm * __lsb_gmtime_r (const time_t * arg0 , struct tm * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gmtime_r");

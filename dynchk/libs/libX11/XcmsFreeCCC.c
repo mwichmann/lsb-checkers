@@ -13,7 +13,7 @@ void XcmsFreeCCC(XcmsCCC arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XcmsFreeCCC(XcmsCCC arg0)
+void __lsb_XcmsFreeCCC(XcmsCCC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsFreeCCC");

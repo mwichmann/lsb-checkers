@@ -11,7 +11,7 @@ Boolean XtIsSessionShell()
 	return funcptr();
 }
 
-Boolean lsb_XtIsSessionShell()
+Boolean __lsb_XtIsSessionShell()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsSessionShell");

@@ -14,7 +14,7 @@ KeyCode XKeysymToKeycode(Display * arg0, KeySym arg1)
 	return funcptr(arg0, arg1);
 }
 
-KeyCode lsb_XKeysymToKeycode(Display * arg0, KeySym arg1)
+KeyCode __lsb_XKeysymToKeycode(Display * arg0, KeySym arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XKeysymToKeycode");

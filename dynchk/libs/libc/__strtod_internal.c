@@ -10,13 +10,16 @@ double __strtod_internal (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtod_internal");
-	validate_NULL_TYPETYPE(arg0, "__strtod_internal");
-	validate_RWaddress(arg1, "__strtod_internal");
-	validate_NULL_TYPETYPE(arg2, "__strtod_internal");
+	validate_Rdaddress( arg0, "__strtod_internal");
+	validate_NULL_TYPETYPE(  arg0, "__strtod_internal");
+	validate_Rdaddress( arg1, "__strtod_internal");
+	validate_Rdaddress(* arg1, "__strtod_internal");
+	validate_RWaddress(  arg1, "__strtod_internal");
+	validate_NULL_TYPETYPE(  arg2, "__strtod_internal");
 	return funcptr(arg0, arg1, arg2);
 }
 
-double lsb___strtod_internal (const char * arg0 , char * * arg1 , int arg2 )
+double __lsb___strtod_internal (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtod_internal");

@@ -15,7 +15,7 @@ void XkbFreeGeomSections(XkbGeometryPtr arg0, int arg1, int arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XkbFreeGeomSections(XkbGeometryPtr arg0, int arg1, int arg2, int arg3)
+void __lsb_XkbFreeGeomSections(XkbGeometryPtr arg0, int arg1, int arg2, int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbFreeGeomSections");

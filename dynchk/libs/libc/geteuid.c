@@ -13,7 +13,7 @@ uid_t geteuid ()
 	return funcptr();
 }
 
-uid_t lsb_geteuid ()
+uid_t __lsb_geteuid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "geteuid");

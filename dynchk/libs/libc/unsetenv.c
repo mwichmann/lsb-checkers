@@ -10,11 +10,12 @@ int unsetenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unsetenv");
-	validate_NULL_TYPETYPE(arg0, "unsetenv");
+	validate_Rdaddress( arg0, "unsetenv");
+	validate_NULL_TYPETYPE(  arg0, "unsetenv");
 	return funcptr(arg0);
 }
 
-int lsb_unsetenv (const char * arg0 )
+int __lsb_unsetenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unsetenv");

@@ -16,7 +16,7 @@ int XMatchVisualInfo(Display * arg0, int arg1, int arg2, int arg3, XVisualInfo *
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XMatchVisualInfo(Display * arg0, int arg1, int arg2, int arg3, XVisualInfo * arg4)
+int __lsb_XMatchVisualInfo(Display * arg0, int arg1, int arg2, int arg3, XVisualInfo * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XMatchVisualInfo");

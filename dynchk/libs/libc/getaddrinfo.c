@@ -10,14 +10,19 @@ int getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo *
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getaddrinfo");
-	validate_NULL_TYPETYPE(arg0, "getaddrinfo");
-	validate_NULL_TYPETYPE(arg1, "getaddrinfo");
-	validate_NULL_TYPETYPE(arg2, "getaddrinfo");
-	validate_NULL_TYPETYPE(arg3, "getaddrinfo");
+	validate_Rdaddress( arg0, "getaddrinfo");
+	validate_NULL_TYPETYPE(  arg0, "getaddrinfo");
+	validate_Rdaddress( arg1, "getaddrinfo");
+	validate_NULL_TYPETYPE(  arg1, "getaddrinfo");
+	validate_Rdaddress( arg2, "getaddrinfo");
+	validate_NULL_TYPETYPE(  arg2, "getaddrinfo");
+	validate_Rdaddress( arg3, "getaddrinfo");
+	validate_Rdaddress(* arg3, "getaddrinfo");
+	validate_NULL_TYPETYPE(  arg3, "getaddrinfo");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo * arg2 , struct addrinfo * * arg3 )
+int __lsb_getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo * arg2 , struct addrinfo * * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getaddrinfo");

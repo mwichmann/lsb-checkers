@@ -14,7 +14,7 @@ void XtAppError(XtAppContext arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtAppError(XtAppContext arg0, char * arg1)
+void __lsb_XtAppError(XtAppContext arg0, char * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppError");

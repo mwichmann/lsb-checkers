@@ -10,13 +10,14 @@ int fseek (FILE * arg0 , long arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseek");
-	validate_NULL_TYPETYPE(arg0, "fseek");
-	validate_NULL_TYPETYPE(arg1, "fseek");
-	validate_NULL_TYPETYPE(arg2, "fseek");
+	validate_Rdaddress( arg0, "fseek");
+	validate_NULL_TYPETYPE(  arg0, "fseek");
+	validate_NULL_TYPETYPE(  arg1, "fseek");
+	validate_NULL_TYPETYPE(  arg2, "fseek");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_fseek (FILE * arg0 , long arg1 , int arg2 )
+int __lsb_fseek (FILE * arg0 , long arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseek");

@@ -22,7 +22,7 @@ void XtAppGetErrorDatabaseText(XtAppContext arg0, char * arg1, char * arg2, char
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-void lsb_XtAppGetErrorDatabaseText(XtAppContext arg0, char * arg1, char * arg2, char * arg3, char * arg4, String arg5, int arg6, XrmDatabase arg7)
+void __lsb_XtAppGetErrorDatabaseText(XtAppContext arg0, char * arg1, char * arg2, char * arg3, char * arg4, String arg5, int arg6, XrmDatabase arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppGetErrorDatabaseText");

@@ -22,7 +22,7 @@ void glMap1d(GLenum arg0, GLdouble arg1, GLdouble arg2, GLint arg3, GLint arg4, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glMap1d(GLenum arg0, GLdouble arg1, GLdouble arg2, GLint arg3, GLint arg4, GLdouble * arg5)
+void __lsb_glMap1d(GLenum arg0, GLdouble arg1, GLdouble arg2, GLint arg3, GLint arg4, GLdouble * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glMap1d");

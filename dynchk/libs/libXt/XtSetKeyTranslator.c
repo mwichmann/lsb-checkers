@@ -14,7 +14,7 @@ void XtSetKeyTranslator(Display * arg0, XtKeyProc arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtSetKeyTranslator(Display * arg0, XtKeyProc arg1)
+void __lsb_XtSetKeyTranslator(Display * arg0, XtKeyProc arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSetKeyTranslator");

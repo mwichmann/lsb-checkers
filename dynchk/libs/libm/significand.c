@@ -10,11 +10,11 @@ double significand (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "significand");
-	validate_NULL_TYPETYPE(arg0, "significand");
+	validate_NULL_TYPETYPE(  arg0, "significand");
 	return funcptr(arg0);
 }
 
-double lsb_significand (double arg0 )
+double __lsb_significand (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "significand");

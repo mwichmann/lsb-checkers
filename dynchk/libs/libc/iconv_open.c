@@ -10,12 +10,14 @@ iconv_t iconv_open (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iconv_open");
-	validate_NULL_TYPETYPE(arg0, "iconv_open");
-	validate_NULL_TYPETYPE(arg1, "iconv_open");
+	validate_Rdaddress( arg0, "iconv_open");
+	validate_NULL_TYPETYPE(  arg0, "iconv_open");
+	validate_Rdaddress( arg1, "iconv_open");
+	validate_NULL_TYPETYPE(  arg1, "iconv_open");
 	return funcptr(arg0, arg1);
 }
 
-iconv_t lsb_iconv_open (const char * arg0 , const char * arg1 )
+iconv_t __lsb_iconv_open (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iconv_open");

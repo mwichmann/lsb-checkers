@@ -13,7 +13,7 @@ Cursor XCreateFontCursor(Display * arg0, unsigned int arg1)
 	return funcptr(arg0, arg1);
 }
 
-Cursor lsb_XCreateFontCursor(Display * arg0, unsigned int arg1)
+Cursor __lsb_XCreateFontCursor(Display * arg0, unsigned int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreateFontCursor");

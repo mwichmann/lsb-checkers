@@ -40,7 +40,7 @@ int ioctl(int fd, unsigned long request, ...)
 	return funcptr(fd, request, arg);
 }
 
-int lsb_ioctl(int fd, unsigned long request, ...)
+int __lsb_ioctl(int fd, unsigned long request, ...)
 {
 	va_list arg;
 	va_start(arg, request);

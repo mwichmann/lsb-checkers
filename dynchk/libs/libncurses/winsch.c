@@ -10,12 +10,13 @@ int winsch (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsch");
-	validate_NULL_TYPETYPE(arg0, "winsch");
-	validate_NULL_TYPETYPE(arg1, "winsch");
+	validate_Rdaddress( arg0, "winsch");
+	validate_NULL_TYPETYPE(  arg0, "winsch");
+	validate_NULL_TYPETYPE(  arg1, "winsch");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_winsch (WINDOW * arg0 , chtype arg1 )
+int __lsb_winsch (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsch");

@@ -10,12 +10,14 @@ char * strtok (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtok");
-	validate_NULL_TYPETYPE(arg0, "strtok");
-	validate_NULL_TYPETYPE(arg1, "strtok");
+	validate_Rdaddress( arg0, "strtok");
+	validate_NULL_TYPETYPE(  arg0, "strtok");
+	validate_Rdaddress( arg1, "strtok");
+	validate_NULL_TYPETYPE(  arg1, "strtok");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strtok (char * arg0 , const char * arg1 )
+char * __lsb_strtok (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtok");

@@ -13,7 +13,7 @@ XFontSetExtents * XExtentsOfFontSet(XFontSet arg0)
 	return funcptr(arg0);
 }
 
-XFontSetExtents * lsb_XExtentsOfFontSet(XFontSet arg0)
+XFontSetExtents * __lsb_XExtentsOfFontSet(XFontSet arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XExtentsOfFontSet");

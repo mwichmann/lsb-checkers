@@ -14,7 +14,7 @@ KeySym * XtGetKeysymTable(Display * arg0, KeyCode * arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-KeySym * lsb_XtGetKeysymTable(Display * arg0, KeyCode * arg1, int * arg2)
+KeySym * __lsb_XtGetKeysymTable(Display * arg0, KeyCode * arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetKeysymTable");

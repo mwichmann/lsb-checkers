@@ -13,7 +13,7 @@ WINDOW * initscr ()
 	return funcptr();
 }
 
-WINDOW * lsb_initscr ()
+WINDOW * __lsb_initscr ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initscr");

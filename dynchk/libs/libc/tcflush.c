@@ -10,12 +10,12 @@ int tcflush (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcflush");
-	validate_NULL_TYPETYPE(arg0, "tcflush");
-	validate_NULL_TYPETYPE(arg1, "tcflush");
+	validate_NULL_TYPETYPE(  arg0, "tcflush");
+	validate_NULL_TYPETYPE(  arg1, "tcflush");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_tcflush (int arg0 , int arg1 )
+int __lsb_tcflush (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcflush");

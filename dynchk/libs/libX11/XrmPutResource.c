@@ -15,7 +15,7 @@ void XrmPutResource(XrmDatabase * arg0, char * arg1, char * arg2, XrmValue * arg
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XrmPutResource(XrmDatabase * arg0, char * arg1, char * arg2, XrmValue * arg3)
+void __lsb_XrmPutResource(XrmDatabase * arg0, char * arg1, char * arg2, XrmValue * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmPutResource");

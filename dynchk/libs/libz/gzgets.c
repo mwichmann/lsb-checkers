@@ -10,13 +10,14 @@ char * gzgets (gzFile arg0 , char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzgets");
-	validate_NULL_TYPETYPE(arg0, "gzgets");
-	validate_NULL_TYPETYPE(arg1, "gzgets");
-	validate_NULL_TYPETYPE(arg2, "gzgets");
+	validate_NULL_TYPETYPE(  arg0, "gzgets");
+	validate_Rdaddress( arg1, "gzgets");
+	validate_NULL_TYPETYPE(  arg1, "gzgets");
+	validate_NULL_TYPETYPE(  arg2, "gzgets");
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_gzgets (gzFile arg0 , char * arg1 , int arg2 )
+char * __lsb_gzgets (gzFile arg0 , char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzgets");

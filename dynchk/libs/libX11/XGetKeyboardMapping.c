@@ -15,7 +15,7 @@ KeySym * XGetKeyboardMapping(Display * arg0, unsigned int arg1, int arg2, int * 
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-KeySym * lsb_XGetKeyboardMapping(Display * arg0, unsigned int arg1, int arg2, int * arg3)
+KeySym * __lsb_XGetKeyboardMapping(Display * arg0, unsigned int arg1, int arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetKeyboardMapping");

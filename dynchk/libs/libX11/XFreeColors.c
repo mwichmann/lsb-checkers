@@ -17,7 +17,7 @@ int XFreeColors(Display * arg0, Colormap arg1, unsigned long * arg2, int arg3, u
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XFreeColors(Display * arg0, Colormap arg1, unsigned long * arg2, int arg3, unsigned long arg4)
+int __lsb_XFreeColors(Display * arg0, Colormap arg1, unsigned long * arg2, int arg3, unsigned long arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFreeColors");

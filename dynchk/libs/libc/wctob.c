@@ -11,11 +11,11 @@ int wctob (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctob");
-	validate_NULL_TYPETYPE(arg0, "wctob");
+	validate_NULL_TYPETYPE(  arg0, "wctob");
 	return funcptr(arg0);
 }
 
-int lsb_wctob (wint_t arg0 )
+int __lsb_wctob (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctob");

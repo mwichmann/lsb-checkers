@@ -14,7 +14,7 @@ int XFreeCursor(Display * arg0, Cursor arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XFreeCursor(Display * arg0, Cursor arg1)
+int __lsb_XFreeCursor(Display * arg0, Cursor arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFreeCursor");

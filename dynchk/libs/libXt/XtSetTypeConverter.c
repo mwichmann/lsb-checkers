@@ -23,7 +23,7 @@ void XtSetTypeConverter(char * arg0, char * arg1, XtTypeConverter arg2, XtConver
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-void lsb_XtSetTypeConverter(char * arg0, char * arg1, XtTypeConverter arg2, XtConvertArgList arg3, Cardinal arg4, XtCacheType arg5, XtDestructor arg6)
+void __lsb_XtSetTypeConverter(char * arg0, char * arg1, XtTypeConverter arg2, XtConvertArgList arg3, Cardinal arg4, XtCacheType arg5, XtDestructor arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSetTypeConverter");

@@ -14,7 +14,7 @@ IceConn IceAcceptConnection(IceListenObj arg0, IceAcceptStatus * arg1)
 	return funcptr(arg0, arg1);
 }
 
-IceConn lsb_IceAcceptConnection(IceListenObj arg0, IceAcceptStatus * arg1)
+IceConn __lsb_IceAcceptConnection(IceListenObj arg0, IceAcceptStatus * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceAcceptConnection");

@@ -10,11 +10,11 @@ float cbrtf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbrtf");
-	validate_NULL_TYPETYPE(arg0, "cbrtf");
+	validate_NULL_TYPETYPE(  arg0, "cbrtf");
 	return funcptr(arg0);
 }
 
-float lsb_cbrtf (float arg0 )
+float __lsb_cbrtf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbrtf");

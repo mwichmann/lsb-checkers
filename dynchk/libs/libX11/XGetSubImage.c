@@ -23,7 +23,7 @@ XImage * XGetSubImage(Display * arg0, Drawable arg1, int arg2, int arg3, unsigne
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 }
 
-XImage * lsb_XGetSubImage(Display * arg0, Drawable arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, unsigned long arg6, int arg7, XImage * arg8, int arg9, int arg10)
+XImage * __lsb_XGetSubImage(Display * arg0, Drawable arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, unsigned long arg6, int arg7, XImage * arg8, int arg9, int arg10)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetSubImage");

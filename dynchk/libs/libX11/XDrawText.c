@@ -20,7 +20,7 @@ int XDrawText(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, XTextI
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_XDrawText(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, XTextItem * arg5, int arg6)
+int __lsb_XDrawText(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, XTextItem * arg5, int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDrawText");

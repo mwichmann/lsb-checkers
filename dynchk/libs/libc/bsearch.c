@@ -11,15 +11,17 @@ void * bsearch (const void * arg0 , const void * arg1 , size_t arg2 , size_t arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bsearch");
-	validate_NULL_TYPETYPE(arg0, "bsearch");
-	validate_NULL_TYPETYPE(arg1, "bsearch");
-	validate_NULL_TYPETYPE(arg2, "bsearch");
-	validate_NULL_TYPETYPE(arg3, "bsearch");
-	validate_NULL_TYPETYPE(arg4, "bsearch");
+	validate_Rdaddress( arg0, "bsearch");
+	validate_NULL_TYPETYPE(  arg0, "bsearch");
+	validate_Rdaddress( arg1, "bsearch");
+	validate_NULL_TYPETYPE(  arg1, "bsearch");
+	validate_NULL_TYPETYPE(  arg2, "bsearch");
+	validate_NULL_TYPETYPE(  arg3, "bsearch");
+	validate_NULL_TYPETYPE(  arg4, "bsearch");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void * lsb_bsearch (const void * arg0 , const void * arg1 , size_t arg2 , size_t arg3 , __compar_fn_t arg4 )
+void * __lsb_bsearch (const void * arg0 , const void * arg1 , size_t arg2 , size_t arg3 , __compar_fn_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bsearch");

@@ -15,7 +15,7 @@ GLboolean glAreTexturesResident(GLsizei arg0, GLuint * arg1, GLboolean * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-GLboolean lsb_glAreTexturesResident(GLsizei arg0, GLuint * arg1, GLboolean * arg2)
+GLboolean __lsb_glAreTexturesResident(GLsizei arg0, GLuint * arg1, GLboolean * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glAreTexturesResident");

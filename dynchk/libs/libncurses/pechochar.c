@@ -10,12 +10,13 @@ int pechochar (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pechochar");
-	validate_NULL_TYPETYPE(arg0, "pechochar");
-	validate_NULL_TYPETYPE(arg1, "pechochar");
+	validate_Rdaddress( arg0, "pechochar");
+	validate_NULL_TYPETYPE(  arg0, "pechochar");
+	validate_NULL_TYPETYPE(  arg1, "pechochar");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pechochar (WINDOW * arg0 , chtype arg1 )
+int __lsb_pechochar (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pechochar");

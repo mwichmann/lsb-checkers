@@ -10,11 +10,12 @@ void wsyncup (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsyncup");
-	validate_NULL_TYPETYPE(arg0, "wsyncup");
+	validate_Rdaddress( arg0, "wsyncup");
+	validate_NULL_TYPETYPE(  arg0, "wsyncup");
 	funcptr(arg0);
 }
 
-void lsb_wsyncup (WINDOW * arg0 )
+void __lsb_wsyncup (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsyncup");

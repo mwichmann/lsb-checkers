@@ -13,7 +13,7 @@ char erasechar ()
 	return funcptr();
 }
 
-char lsb_erasechar ()
+char __lsb_erasechar ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erasechar");

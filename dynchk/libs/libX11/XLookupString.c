@@ -16,7 +16,7 @@ int XLookupString(XKeyEvent * arg0, char * arg1, int arg2, KeySym * arg3, XCompo
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XLookupString(XKeyEvent * arg0, char * arg1, int arg2, KeySym * arg3, XComposeStatus * arg4)
+int __lsb_XLookupString(XKeyEvent * arg0, char * arg1, int arg2, KeySym * arg3, XComposeStatus * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XLookupString");

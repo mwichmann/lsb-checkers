@@ -14,7 +14,7 @@ XdbeBackBufferAttributes * XdbeGetBackBufferAttributes(Display * arg0, XdbeBackB
 	return funcptr(arg0, arg1);
 }
 
-XdbeBackBufferAttributes * lsb_XdbeGetBackBufferAttributes(Display * arg0, XdbeBackBuffer arg1)
+XdbeBackBufferAttributes * __lsb_XdbeGetBackBufferAttributes(Display * arg0, XdbeBackBuffer arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XdbeGetBackBufferAttributes");

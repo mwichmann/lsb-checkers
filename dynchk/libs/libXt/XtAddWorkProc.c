@@ -15,7 +15,7 @@ XtWorkProcId XtAddWorkProc(XtWorkProc arg0, XtPointer arg1)
 	return funcptr(arg0, arg1);
 }
 
-XtWorkProcId lsb_XtAddWorkProc(XtWorkProc arg0, XtPointer arg1)
+XtWorkProcId __lsb_XtAddWorkProc(XtWorkProc arg0, XtPointer arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAddWorkProc");

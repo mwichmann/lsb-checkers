@@ -15,7 +15,7 @@ void XtReleasePropertyAtom(Widget arg0, Atom arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtReleasePropertyAtom(Widget arg0, Atom arg1)
+void __lsb_XtReleasePropertyAtom(Widget arg0, Atom arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtReleasePropertyAtom");

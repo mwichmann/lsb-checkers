@@ -18,7 +18,7 @@ int XTextExtents16(XFontStruct * arg0, XChar2b * arg1, int arg2, int * arg3, int
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_XTextExtents16(XFontStruct * arg0, XChar2b * arg1, int arg2, int * arg3, int * arg4, int * arg5, XCharStruct * arg6)
+int __lsb_XTextExtents16(XFontStruct * arg0, XChar2b * arg1, int arg2, int * arg3, int * arg4, int * arg5, XCharStruct * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XTextExtents16");

@@ -15,7 +15,7 @@ XtGeometryResult XtMakeGeometryRequest(Widget arg0, XtWidgetGeometry * arg1, XtW
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtGeometryResult lsb_XtMakeGeometryRequest(Widget arg0, XtWidgetGeometry * arg1, XtWidgetGeometry * arg2)
+XtGeometryResult __lsb_XtMakeGeometryRequest(Widget arg0, XtWidgetGeometry * arg1, XtWidgetGeometry * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtMakeGeometryRequest");

@@ -14,7 +14,7 @@ XdbeScreenVisualInfo * XdbeGetVisualInfo(Display * arg0, Drawable * arg1, int * 
 	return funcptr(arg0, arg1, arg2);
 }
 
-XdbeScreenVisualInfo * lsb_XdbeGetVisualInfo(Display * arg0, Drawable * arg1, int * arg2)
+XdbeScreenVisualInfo * __lsb_XdbeGetVisualInfo(Display * arg0, Drawable * arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XdbeGetVisualInfo");

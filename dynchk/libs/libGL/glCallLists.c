@@ -16,7 +16,7 @@ void glCallLists(GLsizei arg0, GLenum arg1, GLvoid * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glCallLists(GLsizei arg0, GLenum arg1, GLvoid * arg2)
+void __lsb_glCallLists(GLsizei arg0, GLenum arg1, GLvoid * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glCallLists");

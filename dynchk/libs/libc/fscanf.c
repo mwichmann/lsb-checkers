@@ -15,7 +15,7 @@ int fscanf(FILE *f, const char *format, ...)
 	return funcptr(f, format, args);
 }
 
-int lsb_fscanf(FILE *f, const char *format, ...)
+int __lsb_fscanf(FILE *f, const char *format, ...)
 {	
 	va_list args;
 	va_start(args, format);

@@ -12,7 +12,7 @@ unsigned long XAllPlanes(void arg0)
 	return funcptr(arg0);
 }
 
-unsigned long lsb_XAllPlanes(void arg0)
+unsigned long __lsb_XAllPlanes(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllPlanes");

@@ -13,7 +13,7 @@ int munlockall ()
 	return funcptr();
 }
 
-int lsb_munlockall ()
+int __lsb_munlockall ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "munlockall");

@@ -13,7 +13,7 @@ int IceCheckShutdownNegotiation(IceConn arg0)
 	return funcptr(arg0);
 }
 
-int lsb_IceCheckShutdownNegotiation(IceConn arg0)
+int __lsb_IceCheckShutdownNegotiation(IceConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceCheckShutdownNegotiation");

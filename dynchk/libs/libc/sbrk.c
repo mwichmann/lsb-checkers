@@ -11,11 +11,11 @@ void * sbrk (ptrdiff_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sbrk");
-	validate_NULL_TYPETYPE(arg0, "sbrk");
+	validate_NULL_TYPETYPE(  arg0, "sbrk");
 	return funcptr(arg0);
 }
 
-void * lsb_sbrk (ptrdiff_t arg0 )
+void * __lsb_sbrk (ptrdiff_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sbrk");

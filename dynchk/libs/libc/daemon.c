@@ -10,12 +10,12 @@ int daemon (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "daemon");
-	validate_NULL_TYPETYPE(arg0, "daemon");
-	validate_NULL_TYPETYPE(arg1, "daemon");
+	validate_NULL_TYPETYPE(  arg0, "daemon");
+	validate_NULL_TYPETYPE(  arg1, "daemon");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_daemon (int arg0 , int arg1 )
+int __lsb_daemon (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "daemon");

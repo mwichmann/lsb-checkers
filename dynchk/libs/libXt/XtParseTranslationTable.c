@@ -12,7 +12,7 @@ XtTranslations XtParseTranslationTable(char * arg0)
 	return funcptr(arg0);
 }
 
-XtTranslations lsb_XtParseTranslationTable(char * arg0)
+XtTranslations __lsb_XtParseTranslationTable(char * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtParseTranslationTable");

@@ -12,7 +12,7 @@ Boolean XtToolkitThreadInitialize(void arg0)
 	return funcptr(arg0);
 }
 
-Boolean lsb_XtToolkitThreadInitialize(void arg0)
+Boolean __lsb_XtToolkitThreadInitialize(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtToolkitThreadInitialize");

@@ -13,7 +13,7 @@ int start_color ()
 	return funcptr();
 }
 
-int lsb_start_color ()
+int __lsb_start_color ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "start_color");

@@ -18,7 +18,7 @@ int XmbLookupString(XIC arg0, XKeyPressedEvent * arg1, char * arg2, int arg3, Ke
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XmbLookupString(XIC arg0, XKeyPressedEvent * arg1, char * arg2, int arg3, KeySym * arg4, int * arg5)
+int __lsb_XmbLookupString(XIC arg0, XKeyPressedEvent * arg1, char * arg2, int arg3, KeySym * arg4, int * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XmbLookupString");

@@ -23,7 +23,7 @@ Boolean XtOwnSelection(Widget arg0, Atom arg1, Time arg2, XtConvertSelectionProc
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-Boolean lsb_XtOwnSelection(Widget arg0, Atom arg1, Time arg2, XtConvertSelectionProc arg3, XtLoseSelectionProc arg4, XtSelectionDoneProc arg5)
+Boolean __lsb_XtOwnSelection(Widget arg0, Atom arg1, Time arg2, XtConvertSelectionProc arg3, XtLoseSelectionProc arg4, XtSelectionDoneProc arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtOwnSelection");

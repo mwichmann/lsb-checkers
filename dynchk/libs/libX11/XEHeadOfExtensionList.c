@@ -13,7 +13,7 @@ XExtData * * XEHeadOfExtensionList(XEDataObject arg0)
 	return funcptr(arg0);
 }
 
-XExtData * * lsb_XEHeadOfExtensionList(XEDataObject arg0)
+XExtData * * __lsb_XEHeadOfExtensionList(XEDataObject arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XEHeadOfExtensionList");

@@ -13,7 +13,7 @@ void IceAppUnlockConn(IceConn arg0)
 	return funcptr(arg0);
 }
 
-void lsb_IceAppUnlockConn(IceConn arg0)
+void __lsb_IceAppUnlockConn(IceConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceAppUnlockConn");

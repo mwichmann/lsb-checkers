@@ -16,7 +16,7 @@ void glTexGendv(GLenum arg0, GLenum arg1, GLdouble * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glTexGendv(GLenum arg0, GLenum arg1, GLdouble * arg2)
+void __lsb_glTexGendv(GLenum arg0, GLenum arg1, GLdouble * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glTexGendv");

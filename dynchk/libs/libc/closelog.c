@@ -13,7 +13,7 @@ void closelog ()
 	funcptr();
 }
 
-void lsb_closelog ()
+void __lsb_closelog ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "closelog");

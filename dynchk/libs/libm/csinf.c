@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef csinf
 static float complex(*funcptr) (float complex ) = 0;
@@ -11,11 +10,11 @@ float complex csinf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinf");
-	validate_NULL_TYPETYPE(arg0, "csinf");
+	validate_NULL_TYPETYPE(  arg0, "csinf");
 	return funcptr(arg0);
 }
 
-float complex lsb_csinf (float complex arg0 )
+float complex __lsb_csinf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinf");

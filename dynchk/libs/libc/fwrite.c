@@ -11,14 +11,16 @@ size_t fwrite (const void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fwrite");
-	validate_NULL_TYPETYPE(arg0, "fwrite");
-	validate_NULL_TYPETYPE(arg1, "fwrite");
-	validate_NULL_TYPETYPE(arg2, "fwrite");
-	validate_NULL_TYPETYPE(arg3, "fwrite");
+	validate_Rdaddress( arg0, "fwrite");
+	validate_NULL_TYPETYPE(  arg0, "fwrite");
+	validate_NULL_TYPETYPE(  arg1, "fwrite");
+	validate_NULL_TYPETYPE(  arg2, "fwrite");
+	validate_Rdaddress( arg3, "fwrite");
+	validate_NULL_TYPETYPE(  arg3, "fwrite");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-size_t lsb_fwrite (const void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
+size_t __lsb_fwrite (const void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fwrite");

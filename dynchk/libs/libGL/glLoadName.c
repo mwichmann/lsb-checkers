@@ -13,7 +13,7 @@ void glLoadName(GLuint arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glLoadName(GLuint arg0)
+void __lsb_glLoadName(GLuint arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glLoadName");

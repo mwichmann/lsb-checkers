@@ -17,7 +17,7 @@ XtSignalId XtAppAddSignal(XtAppContext arg0, XtSignalCallbackProc arg1, XtPointe
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtSignalId lsb_XtAppAddSignal(XtAppContext arg0, XtSignalCallbackProc arg1, XtPointer arg2)
+XtSignalId __lsb_XtAppAddSignal(XtAppContext arg0, XtSignalCallbackProc arg1, XtPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppAddSignal");

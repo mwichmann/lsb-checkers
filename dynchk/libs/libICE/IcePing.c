@@ -17,7 +17,7 @@ int IcePing(IceConn arg0, IcePingReplyProc arg1, IcePointer arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_IcePing(IceConn arg0, IcePingReplyProc arg1, IcePointer arg2)
+int __lsb_IcePing(IceConn arg0, IcePingReplyProc arg1, IcePointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IcePing");

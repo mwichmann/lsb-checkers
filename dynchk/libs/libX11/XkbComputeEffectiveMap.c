@@ -14,7 +14,7 @@ int XkbComputeEffectiveMap(XkbDescPtr arg0, XkbKeyTypePtr arg1, unsigned char * 
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbComputeEffectiveMap(XkbDescPtr arg0, XkbKeyTypePtr arg1, unsigned char * arg2)
+int __lsb_XkbComputeEffectiveMap(XkbDescPtr arg0, XkbKeyTypePtr arg1, unsigned char * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbComputeEffectiveMap");

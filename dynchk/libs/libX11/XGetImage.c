@@ -20,7 +20,7 @@ XImage * XGetImage(Display * arg0, Drawable arg1, int arg2, int arg3, unsigned i
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-XImage * lsb_XGetImage(Display * arg0, Drawable arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, unsigned long arg6, int arg7)
+XImage * __lsb_XGetImage(Display * arg0, Drawable arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, unsigned long arg6, int arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetImage");

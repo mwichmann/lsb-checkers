@@ -10,11 +10,12 @@ wctrans_t wctrans (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctrans");
-	validate_NULL_TYPETYPE(arg0, "wctrans");
+	validate_Rdaddress( arg0, "wctrans");
+	validate_NULL_TYPETYPE(  arg0, "wctrans");
 	return funcptr(arg0);
 }
 
-wctrans_t lsb_wctrans (const char * arg0 )
+wctrans_t __lsb_wctrans (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctrans");

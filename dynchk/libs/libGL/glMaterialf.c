@@ -17,7 +17,7 @@ void glMaterialf(GLenum arg0, GLenum arg1, GLfloat arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glMaterialf(GLenum arg0, GLenum arg1, GLfloat arg2)
+void __lsb_glMaterialf(GLenum arg0, GLenum arg1, GLfloat arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glMaterialf");

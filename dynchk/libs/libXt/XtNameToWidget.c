@@ -14,7 +14,7 @@ Widget XtNameToWidget(Widget arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-Widget lsb_XtNameToWidget(Widget arg0, char * arg1)
+Widget __lsb_XtNameToWidget(Widget arg0, char * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtNameToWidget");

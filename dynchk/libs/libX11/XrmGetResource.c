@@ -17,7 +17,7 @@ int XrmGetResource(XrmDatabase arg0, char * arg1, char * arg2, char * * arg3, Xr
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XrmGetResource(XrmDatabase arg0, char * arg1, char * arg2, char * * arg3, XrmValue * arg4)
+int __lsb_XrmGetResource(XrmDatabase arg0, char * arg1, char * arg2, char * * arg3, XrmValue * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmGetResource");

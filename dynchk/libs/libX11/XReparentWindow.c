@@ -18,7 +18,7 @@ int XReparentWindow(Display * arg0, Window arg1, Window arg2, int arg3, int arg4
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XReparentWindow(Display * arg0, Window arg1, Window arg2, int arg3, int arg4)
+int __lsb_XReparentWindow(Display * arg0, Window arg1, Window arg2, int arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XReparentWindow");

@@ -13,7 +13,7 @@ int slk_noutrefresh ()
 	return funcptr();
 }
 
-int lsb_slk_noutrefresh ()
+int __lsb_slk_noutrefresh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_noutrefresh");

@@ -13,7 +13,7 @@ int XDisplayHeightMM(Display * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XDisplayHeightMM(Display * arg0, int arg1)
+int __lsb_XDisplayHeightMM(Display * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDisplayHeightMM");

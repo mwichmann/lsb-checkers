@@ -13,7 +13,7 @@ XFontStruct * XLoadQueryFont(Display * arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-XFontStruct * lsb_XLoadQueryFont(Display * arg0, char * arg1)
+XFontStruct * __lsb_XLoadQueryFont(Display * arg0, char * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XLoadQueryFont");

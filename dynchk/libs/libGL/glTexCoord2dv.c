@@ -12,7 +12,7 @@ void glTexCoord2dv(GLdouble * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glTexCoord2dv(GLdouble * arg0)
+void __lsb_glTexCoord2dv(GLdouble * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glTexCoord2dv");

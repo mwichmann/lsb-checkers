@@ -10,11 +10,12 @@ int getcontext (ucontext_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getcontext");
-	validate_NULL_TYPETYPE(arg0, "getcontext");
+	validate_Rdaddress( arg0, "getcontext");
+	validate_NULL_TYPETYPE(  arg0, "getcontext");
 	return funcptr(arg0);
 }
 
-int lsb_getcontext (ucontext_t * arg0 )
+int __lsb_getcontext (ucontext_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getcontext");

@@ -12,7 +12,7 @@ XClassHint * XAllocClassHint(void arg0)
 	return funcptr(arg0);
 }
 
-XClassHint * lsb_XAllocClassHint(void arg0)
+XClassHint * __lsb_XAllocClassHint(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllocClassHint");

@@ -10,12 +10,12 @@ ENTRY * hsearch (ENTRY arg0 , ACTION arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hsearch");
-	validate_NULL_TYPETYPE(arg0, "hsearch");
-	validate_NULL_TYPETYPE(arg1, "hsearch");
+	validate_NULL_TYPETYPE(  arg0, "hsearch");
+	validate_NULL_TYPETYPE(  arg1, "hsearch");
 	return funcptr(arg0, arg1);
 }
 
-ENTRY * lsb_hsearch (ENTRY arg0 , ACTION arg1 )
+ENTRY * __lsb_hsearch (ENTRY arg0 , ACTION arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hsearch");

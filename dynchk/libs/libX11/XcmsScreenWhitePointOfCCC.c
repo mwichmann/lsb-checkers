@@ -13,7 +13,7 @@ XcmsColor * XcmsScreenWhitePointOfCCC(XcmsCCC arg0)
 	return funcptr(arg0);
 }
 
-XcmsColor * lsb_XcmsScreenWhitePointOfCCC(XcmsCCC arg0)
+XcmsColor * __lsb_XcmsScreenWhitePointOfCCC(XcmsCCC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsScreenWhitePointOfCCC");

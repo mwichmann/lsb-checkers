@@ -15,7 +15,7 @@ void XtUngrabKeyboard(Widget arg0, Time arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtUngrabKeyboard(Widget arg0, Time arg1)
+void __lsb_XtUngrabKeyboard(Widget arg0, Time arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtUngrabKeyboard");

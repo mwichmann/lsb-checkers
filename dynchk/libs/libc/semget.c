@@ -11,13 +11,13 @@ int semget (key_t arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "semget");
-	validate_NULL_TYPETYPE(arg0, "semget");
-	validate_NULL_TYPETYPE(arg1, "semget");
-	validate_NULL_TYPETYPE(arg2, "semget");
+	validate_NULL_TYPETYPE(  arg0, "semget");
+	validate_NULL_TYPETYPE(  arg1, "semget");
+	validate_NULL_TYPETYPE(  arg2, "semget");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_semget (key_t arg0 , int arg1 , int arg2 )
+int __lsb_semget (key_t arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "semget");

@@ -12,7 +12,7 @@ int XProtocolRevision(Display * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XProtocolRevision(Display * arg0)
+int __lsb_XProtocolRevision(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XProtocolRevision");

@@ -13,7 +13,7 @@ XtCheckpointToken XtSessionGetToken(Widget arg0)
 	return funcptr(arg0);
 }
 
-XtCheckpointToken lsb_XtSessionGetToken(Widget arg0)
+XtCheckpointToken __lsb_XtSessionGetToken(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSessionGetToken");

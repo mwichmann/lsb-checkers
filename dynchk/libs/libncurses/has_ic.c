@@ -13,7 +13,7 @@ bool has_ic ()
 	return funcptr();
 }
 
-bool lsb_has_ic ()
+bool __lsb_has_ic ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "has_ic");

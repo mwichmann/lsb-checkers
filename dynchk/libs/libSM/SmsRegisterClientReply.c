@@ -14,7 +14,7 @@ int SmsRegisterClientReply(SmsConn arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_SmsRegisterClientReply(SmsConn arg0, char * arg1)
+int __lsb_SmsRegisterClientReply(SmsConn arg0, char * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmsRegisterClientReply");

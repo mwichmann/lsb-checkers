@@ -18,7 +18,7 @@ void XtGetErrorDatabaseText(char * arg0, char * arg1, char * arg2, char * arg3, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XtGetErrorDatabaseText(char * arg0, char * arg1, char * arg2, char * arg3, String arg4, int arg5)
+void __lsb_XtGetErrorDatabaseText(char * arg0, char * arg1, char * arg2, char * arg3, String arg4, int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetErrorDatabaseText");

@@ -10,12 +10,13 @@ char * rindex (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rindex");
-	validate_NULL_TYPETYPE(arg0, "rindex");
-	validate_NULL_TYPETYPE(arg1, "rindex");
+	validate_Rdaddress( arg0, "rindex");
+	validate_NULL_TYPETYPE(  arg0, "rindex");
+	validate_NULL_TYPETYPE(  arg1, "rindex");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_rindex (const char * arg0 , int arg1 )
+char * __lsb_rindex (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rindex");

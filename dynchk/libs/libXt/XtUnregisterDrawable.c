@@ -14,7 +14,7 @@ void XtUnregisterDrawable(Display * arg0, Drawable arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtUnregisterDrawable(Display * arg0, Drawable arg1)
+void __lsb_XtUnregisterDrawable(Display * arg0, Drawable arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtUnregisterDrawable");

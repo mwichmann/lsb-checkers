@@ -12,7 +12,7 @@ void glIndexsv(GLshort * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glIndexsv(GLshort * arg0)
+void __lsb_glIndexsv(GLshort * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glIndexsv");

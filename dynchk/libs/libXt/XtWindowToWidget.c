@@ -14,7 +14,7 @@ Widget XtWindowToWidget(Display * arg0, Window arg1)
 	return funcptr(arg0, arg1);
 }
 
-Widget lsb_XtWindowToWidget(Display * arg0, Window arg1)
+Widget __lsb_XtWindowToWidget(Display * arg0, Window arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtWindowToWidget");

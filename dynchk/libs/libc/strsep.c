@@ -10,12 +10,15 @@ char * strsep (char * * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsep");
-	validate_NULL_TYPETYPE(arg0, "strsep");
-	validate_NULL_TYPETYPE(arg1, "strsep");
+	validate_Rdaddress( arg0, "strsep");
+	validate_Rdaddress(* arg0, "strsep");
+	validate_NULL_TYPETYPE(  arg0, "strsep");
+	validate_Rdaddress( arg1, "strsep");
+	validate_NULL_TYPETYPE(  arg1, "strsep");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strsep (char * * arg0 , const char * arg1 )
+char * __lsb_strsep (char * * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsep");

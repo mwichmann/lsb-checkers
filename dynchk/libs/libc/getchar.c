@@ -13,7 +13,7 @@ int getchar ()
 	return funcptr();
 }
 
-int lsb_getchar ()
+int __lsb_getchar ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getchar");

@@ -14,7 +14,7 @@ int XCheckTypedEvent(Display * arg0, int arg1, XEvent * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XCheckTypedEvent(Display * arg0, int arg1, XEvent * arg2)
+int __lsb_XCheckTypedEvent(Display * arg0, int arg1, XEvent * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCheckTypedEvent");

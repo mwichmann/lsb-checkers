@@ -14,7 +14,7 @@ unsigned long XShapeInputSelected(Display * arg0, Window arg1)
 	return funcptr(arg0, arg1);
 }
 
-unsigned long lsb_XShapeInputSelected(Display * arg0, Window arg1)
+unsigned long __lsb_XShapeInputSelected(Display * arg0, Window arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShapeInputSelected");

@@ -13,7 +13,7 @@ char * XcmsPrefixOfFormat(XcmsColorFormat arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_XcmsPrefixOfFormat(XcmsColorFormat arg0)
+char * __lsb_XcmsPrefixOfFormat(XcmsColorFormat arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsPrefixOfFormat");

@@ -10,12 +10,14 @@ char * strcasestr (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcasestr");
-	validate_NULL_TYPETYPE(arg0, "strcasestr");
-	validate_NULL_TYPETYPE(arg1, "strcasestr");
+	validate_Rdaddress( arg0, "strcasestr");
+	validate_NULL_TYPETYPE(  arg0, "strcasestr");
+	validate_Rdaddress( arg1, "strcasestr");
+	validate_NULL_TYPETYPE(  arg1, "strcasestr");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strcasestr (const char * arg0 , const char * arg1 )
+char * __lsb_strcasestr (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcasestr");

@@ -14,7 +14,7 @@ int XSyncDestroyAlarm(Display * arg0, XSyncAlarm arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XSyncDestroyAlarm(Display * arg0, XSyncAlarm arg1)
+int __lsb_XSyncDestroyAlarm(Display * arg0, XSyncAlarm arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncDestroyAlarm");

@@ -12,7 +12,7 @@ Widget XtHooksOfDisplay(Display * arg0)
 	return funcptr(arg0);
 }
 
-Widget lsb_XtHooksOfDisplay(Display * arg0)
+Widget __lsb_XtHooksOfDisplay(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtHooksOfDisplay");

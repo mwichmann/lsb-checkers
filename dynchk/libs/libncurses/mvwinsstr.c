@@ -10,14 +10,16 @@ int mvwinsstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinsstr");
-	validate_NULL_TYPETYPE(arg0, "mvwinsstr");
-	validate_NULL_TYPETYPE(arg1, "mvwinsstr");
-	validate_NULL_TYPETYPE(arg2, "mvwinsstr");
-	validate_NULL_TYPETYPE(arg3, "mvwinsstr");
+	validate_Rdaddress( arg0, "mvwinsstr");
+	validate_NULL_TYPETYPE(  arg0, "mvwinsstr");
+	validate_NULL_TYPETYPE(  arg1, "mvwinsstr");
+	validate_NULL_TYPETYPE(  arg2, "mvwinsstr");
+	validate_Rdaddress( arg3, "mvwinsstr");
+	validate_NULL_TYPETYPE(  arg3, "mvwinsstr");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_mvwinsstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 )
+int __lsb_mvwinsstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinsstr");

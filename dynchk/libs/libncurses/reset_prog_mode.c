@@ -13,7 +13,7 @@ int reset_prog_mode ()
 	return funcptr();
 }
 
-int lsb_reset_prog_mode ()
+int __lsb_reset_prog_mode ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "reset_prog_mode");

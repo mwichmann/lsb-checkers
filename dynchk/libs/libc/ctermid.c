@@ -10,11 +10,12 @@ char * ctermid (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctermid");
-	validate_NULL_TYPETYPE(arg0, "ctermid");
+	validate_Rdaddress( arg0, "ctermid");
+	validate_NULL_TYPETYPE(  arg0, "ctermid");
 	return funcptr(arg0);
 }
 
-char * lsb_ctermid (char * arg0 )
+char * __lsb_ctermid (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctermid");

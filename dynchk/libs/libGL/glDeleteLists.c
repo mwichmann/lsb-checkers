@@ -15,7 +15,7 @@ void glDeleteLists(GLuint arg0, GLsizei arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glDeleteLists(GLuint arg0, GLsizei arg1)
+void __lsb_glDeleteLists(GLuint arg0, GLsizei arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glDeleteLists");

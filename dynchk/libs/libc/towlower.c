@@ -10,11 +10,11 @@ wint_t towlower (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towlower");
-	validate_NULL_TYPETYPE(arg0, "towlower");
+	validate_NULL_TYPETYPE(  arg0, "towlower");
 	return funcptr(arg0);
 }
 
-wint_t lsb_towlower (wint_t arg0 )
+wint_t __lsb_towlower (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towlower");

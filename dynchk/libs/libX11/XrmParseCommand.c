@@ -18,7 +18,7 @@ void XrmParseCommand(XrmDatabase * arg0, XrmOptionDescList arg1, int arg2, char 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XrmParseCommand(XrmDatabase * arg0, XrmOptionDescList arg1, int arg2, char * arg3, int * arg4, char * * arg5)
+void __lsb_XrmParseCommand(XrmDatabase * arg0, XrmOptionDescList arg1, int arg2, char * arg3, int * arg4, char * * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmParseCommand");

@@ -10,11 +10,11 @@ int gzrewind (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzrewind");
-	validate_NULL_TYPETYPE(arg0, "gzrewind");
+	validate_NULL_TYPETYPE(  arg0, "gzrewind");
 	return funcptr(arg0);
 }
 
-int lsb_gzrewind (gzFile arg0 )
+int __lsb_gzrewind (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzrewind");

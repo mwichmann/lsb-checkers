@@ -15,7 +15,7 @@ void glPixelTransferi(GLenum arg0, GLint arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glPixelTransferi(GLenum arg0, GLint arg1)
+void __lsb_glPixelTransferi(GLenum arg0, GLint arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glPixelTransferi");

@@ -13,7 +13,7 @@ void filter ()
 	funcptr();
 }
 
-void lsb_filter ()
+void __lsb_filter ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "filter");

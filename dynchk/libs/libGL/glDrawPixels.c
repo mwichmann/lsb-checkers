@@ -20,7 +20,7 @@ void glDrawPixels(GLsizei arg0, GLsizei arg1, GLenum arg2, GLenum arg3, GLvoid *
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_glDrawPixels(GLsizei arg0, GLsizei arg1, GLenum arg2, GLenum arg3, GLvoid * arg4)
+void __lsb_glDrawPixels(GLsizei arg0, GLsizei arg1, GLenum arg2, GLenum arg3, GLvoid * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glDrawPixels");

@@ -10,11 +10,12 @@ int wstandout (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wstandout");
-	validate_NULL_TYPETYPE(arg0, "wstandout");
+	validate_Rdaddress( arg0, "wstandout");
+	validate_NULL_TYPETYPE(  arg0, "wstandout");
 	return funcptr(arg0);
 }
 
-int lsb_wstandout (WINDOW * arg0 )
+int __lsb_wstandout (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wstandout");

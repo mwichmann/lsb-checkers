@@ -10,11 +10,11 @@ struct protoent * getprotobynumber (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotobynumber");
-	validate_NULL_TYPETYPE(arg0, "getprotobynumber");
+	validate_NULL_TYPETYPE(  arg0, "getprotobynumber");
 	return funcptr(arg0);
 }
 
-struct protoent * lsb_getprotobynumber (int arg0 )
+struct protoent * __lsb_getprotobynumber (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotobynumber");

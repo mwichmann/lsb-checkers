@@ -10,11 +10,11 @@ int insch (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insch");
-	validate_NULL_TYPETYPE(arg0, "insch");
+	validate_NULL_TYPETYPE(  arg0, "insch");
 	return funcptr(arg0);
 }
 
-int lsb_insch (chtype arg0 )
+int __lsb_insch (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insch");

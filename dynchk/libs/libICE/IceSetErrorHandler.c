@@ -13,7 +13,7 @@ IceErrorHandler IceSetErrorHandler(IceErrorHandler arg0)
 	return funcptr(arg0);
 }
 
-IceErrorHandler lsb_IceSetErrorHandler(IceErrorHandler arg0)
+IceErrorHandler __lsb_IceSetErrorHandler(IceErrorHandler arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceSetErrorHandler");

@@ -13,7 +13,7 @@ void glActiveTextureARB(GLenum arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glActiveTextureARB(GLenum arg0)
+void __lsb_glActiveTextureARB(GLenum arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glActiveTextureARB");

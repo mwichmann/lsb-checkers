@@ -10,13 +10,14 @@ int msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgctl");
-	validate_NULL_TYPETYPE(arg0, "msgctl");
-	validate_NULL_TYPETYPE(arg1, "msgctl");
-	validate_NULL_TYPETYPE(arg2, "msgctl");
+	validate_NULL_TYPETYPE(  arg0, "msgctl");
+	validate_NULL_TYPETYPE(  arg1, "msgctl");
+	validate_Rdaddress( arg2, "msgctl");
+	validate_NULL_TYPETYPE(  arg2, "msgctl");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
+int __lsb_msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgctl");

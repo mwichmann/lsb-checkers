@@ -18,7 +18,7 @@ int XcmsCIELuvQueryMaxC(XcmsCCC arg0, XcmsFloat arg1, XcmsFloat arg2, XcmsColor 
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XcmsCIELuvQueryMaxC(XcmsCCC arg0, XcmsFloat arg1, XcmsFloat arg2, XcmsColor * arg3)
+int __lsb_XcmsCIELuvQueryMaxC(XcmsCCC arg0, XcmsFloat arg1, XcmsFloat arg2, XcmsColor * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsCIELuvQueryMaxC");

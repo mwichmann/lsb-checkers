@@ -12,7 +12,7 @@ int XcmsAddColorSpace(XcmsColorSpace * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XcmsAddColorSpace(XcmsColorSpace * arg0)
+int __lsb_XcmsAddColorSpace(XcmsColorSpace * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsAddColorSpace");

@@ -21,7 +21,7 @@ Window XCreateSimpleWindow(Display * arg0, Window arg1, int arg2, int arg3, unsi
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-Window lsb_XCreateSimpleWindow(Display * arg0, Window arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, unsigned int arg6, unsigned long arg7, unsigned long arg8)
+Window __lsb_XCreateSimpleWindow(Display * arg0, Window arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, unsigned int arg6, unsigned long arg7, unsigned long arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreateSimpleWindow");

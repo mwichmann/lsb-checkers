@@ -10,12 +10,14 @@ void insque (void * arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insque");
-	validate_NULL_TYPETYPE(arg0, "insque");
-	validate_NULL_TYPETYPE(arg1, "insque");
+	validate_Rdaddress( arg0, "insque");
+	validate_NULL_TYPETYPE(  arg0, "insque");
+	validate_Rdaddress( arg1, "insque");
+	validate_NULL_TYPETYPE(  arg1, "insque");
 	funcptr(arg0, arg1);
 }
 
-void lsb_insque (void * arg0 , void * arg1 )
+void __lsb_insque (void * arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insque");

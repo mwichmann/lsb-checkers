@@ -15,7 +15,7 @@ int XSyncSetPriority(Display * arg0, XID arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSyncSetPriority(Display * arg0, XID arg1, int arg2)
+int __lsb_XSyncSetPriority(Display * arg0, XID arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncSetPriority");

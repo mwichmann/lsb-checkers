@@ -10,11 +10,12 @@ char * * pam_getenvlist (pam_handle_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_getenvlist");
-	validate_NULL_TYPETYPE(arg0, "pam_getenvlist");
+	validate_Rdaddress( arg0, "pam_getenvlist");
+	validate_NULL_TYPETYPE(  arg0, "pam_getenvlist");
 	return funcptr(arg0);
 }
 
-char * * lsb_pam_getenvlist (pam_handle_t * arg0 )
+char * * __lsb_pam_getenvlist (pam_handle_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_getenvlist");

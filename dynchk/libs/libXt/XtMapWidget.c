@@ -11,7 +11,7 @@ void XtMapWidget()
 	return funcptr();
 }
 
-void lsb_XtMapWidget()
+void __lsb_XtMapWidget()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtMapWidget");

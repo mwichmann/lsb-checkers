@@ -14,7 +14,7 @@ XWMHints * XGetWMHints(Display * arg0, Window arg1)
 	return funcptr(arg0, arg1);
 }
 
-XWMHints * lsb_XGetWMHints(Display * arg0, Window arg1)
+XWMHints * __lsb_XGetWMHints(Display * arg0, Window arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetWMHints");

@@ -17,7 +17,7 @@ void XtRegisterGrabAction(XtActionProc arg0, int arg1, unsigned int arg2, int ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtRegisterGrabAction(XtActionProc arg0, int arg1, unsigned int arg2, int arg3, int arg4)
+void __lsb_XtRegisterGrabAction(XtActionProc arg0, int arg1, unsigned int arg2, int arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRegisterGrabAction");

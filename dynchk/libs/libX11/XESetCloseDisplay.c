@@ -11,7 +11,7 @@ int * XESetCloseDisplay()
 	return funcptr();
 }
 
-int * lsb_XESetCloseDisplay()
+int * __lsb_XESetCloseDisplay()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetCloseDisplay");

@@ -21,7 +21,7 @@ int XSetStandardProperties(Display * arg0, Window arg1, char * arg2, char * arg3
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-int lsb_XSetStandardProperties(Display * arg0, Window arg1, char * arg2, char * arg3, Pixmap arg4, char * * arg5, int arg6, XSizeHints * arg7)
+int __lsb_XSetStandardProperties(Display * arg0, Window arg1, char * arg2, char * arg3, Pixmap arg4, char * * arg5, int arg6, XSizeHints * arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetStandardProperties");

@@ -13,7 +13,7 @@ int delch ()
 	return funcptr();
 }
 
-int lsb_delch ()
+int __lsb_delch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delch");

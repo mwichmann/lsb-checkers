@@ -10,11 +10,11 @@ long double floorl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "floorl");
-	validate_NULL_TYPETYPE(arg0, "floorl");
+	validate_NULL_TYPETYPE(  arg0, "floorl");
 	return funcptr(arg0);
 }
 
-long double lsb_floorl (long double arg0 )
+long double __lsb_floorl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "floorl");

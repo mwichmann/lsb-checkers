@@ -14,7 +14,7 @@ void XtAppReleaseCacheRefs(XtAppContext arg0, XtCacheRef * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtAppReleaseCacheRefs(XtAppContext arg0, XtCacheRef * arg1)
+void __lsb_XtAppReleaseCacheRefs(XtAppContext arg0, XtCacheRef * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppReleaseCacheRefs");

@@ -10,11 +10,11 @@ int unlockpt (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unlockpt");
-	validate_NULL_TYPETYPE(arg0, "unlockpt");
+	validate_NULL_TYPETYPE(  arg0, "unlockpt");
 	return funcptr(arg0);
 }
 
-int lsb_unlockpt (int arg0 )
+int __lsb_unlockpt (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unlockpt");

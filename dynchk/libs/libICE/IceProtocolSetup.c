@@ -23,7 +23,7 @@ IceProtocolSetupStatus IceProtocolSetup(IceConn arg0, int arg1, IcePointer arg2,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
-IceProtocolSetupStatus lsb_IceProtocolSetup(IceConn arg0, int arg1, IcePointer arg2, int arg3, int * arg4, int * arg5, char * * arg6, char * * arg7, int arg8, char * arg9)
+IceProtocolSetupStatus __lsb_IceProtocolSetup(IceConn arg0, int arg1, IcePointer arg2, int arg3, int * arg4, int * arg5, char * * arg6, char * * arg7, int arg8, char * arg9)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceProtocolSetup");

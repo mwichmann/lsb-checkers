@@ -10,12 +10,13 @@ key_t ftok (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftok");
-	validate_NULL_TYPETYPE(arg0, "ftok");
-	validate_NULL_TYPETYPE(arg1, "ftok");
+	validate_Rdaddress( arg0, "ftok");
+	validate_NULL_TYPETYPE(  arg0, "ftok");
+	validate_NULL_TYPETYPE(  arg1, "ftok");
 	return funcptr(arg0, arg1);
 }
 
-key_t lsb_ftok (const char * arg0 , int arg1 )
+key_t __lsb_ftok (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftok");

@@ -10,12 +10,13 @@ int sigdelset (sigset_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigdelset");
-	validate_NULL_TYPETYPE(arg0, "sigdelset");
-	validate_NULL_TYPETYPE(arg1, "sigdelset");
+	validate_Rdaddress( arg0, "sigdelset");
+	validate_NULL_TYPETYPE(  arg0, "sigdelset");
+	validate_NULL_TYPETYPE(  arg1, "sigdelset");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sigdelset (sigset_t * arg0 , int arg1 )
+int __lsb_sigdelset (sigset_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigdelset");

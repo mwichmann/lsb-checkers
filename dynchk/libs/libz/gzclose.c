@@ -10,11 +10,11 @@ int gzclose (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzclose");
-	validate_NULL_TYPETYPE(arg0, "gzclose");
+	validate_NULL_TYPETYPE(  arg0, "gzclose");
 	return funcptr(arg0);
 }
 
-int lsb_gzclose (gzFile arg0 )
+int __lsb_gzclose (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzclose");

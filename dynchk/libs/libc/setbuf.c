@@ -10,12 +10,14 @@ void setbuf (FILE * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuf");
-	validate_NULL_TYPETYPE(arg0, "setbuf");
-	validate_NULL_TYPETYPE(arg1, "setbuf");
+	validate_Rdaddress( arg0, "setbuf");
+	validate_NULL_TYPETYPE(  arg0, "setbuf");
+	validate_Rdaddress( arg1, "setbuf");
+	validate_NULL_TYPETYPE(  arg1, "setbuf");
 	funcptr(arg0, arg1);
 }
 
-void lsb_setbuf (FILE * arg0 , char * arg1 )
+void __lsb_setbuf (FILE * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuf");

@@ -10,11 +10,11 @@ int sched_get_priority_max (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_get_priority_max");
-	validate_NULL_TYPETYPE(arg0, "sched_get_priority_max");
+	validate_NULL_TYPETYPE(  arg0, "sched_get_priority_max");
 	return funcptr(arg0);
 }
 
-int lsb_sched_get_priority_max (int arg0 )
+int __lsb_sched_get_priority_max (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_get_priority_max");

@@ -13,7 +13,7 @@ XtInputMask XtAppPending(XtAppContext arg0)
 	return funcptr(arg0);
 }
 
-XtInputMask lsb_XtAppPending(XtAppContext arg0)
+XtInputMask __lsb_XtAppPending(XtAppContext arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppPending");

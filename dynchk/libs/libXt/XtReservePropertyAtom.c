@@ -13,7 +13,7 @@ Atom XtReservePropertyAtom(Widget arg0)
 	return funcptr(arg0);
 }
 
-Atom lsb_XtReservePropertyAtom(Widget arg0)
+Atom __lsb_XtReservePropertyAtom(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtReservePropertyAtom");

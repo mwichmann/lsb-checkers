@@ -23,7 +23,7 @@ void XtGetSelectionValueIncremental(Widget arg0, Atom arg1, Atom arg2, XtSelecti
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XtGetSelectionValueIncremental(Widget arg0, Atom arg1, Atom arg2, XtSelectionCallbackProc arg3, XtPointer arg4, Time arg5)
+void __lsb_XtGetSelectionValueIncremental(Widget arg0, Atom arg1, Atom arg2, XtSelectionCallbackProc arg3, XtPointer arg4, Time arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionValueIncremental");

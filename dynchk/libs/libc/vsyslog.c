@@ -11,13 +11,14 @@ void vsyslog (int arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vsyslog");
-	validate_NULL_TYPETYPE(arg0, "vsyslog");
-	validate_NULL_TYPETYPE(arg1, "vsyslog");
-	validate_NULL_TYPETYPE(arg2, "vsyslog");
+	validate_NULL_TYPETYPE(  arg0, "vsyslog");
+	validate_Rdaddress( arg1, "vsyslog");
+	validate_NULL_TYPETYPE(  arg1, "vsyslog");
+	validate_NULL_TYPETYPE(  arg2, "vsyslog");
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_vsyslog (int arg0 , const char * arg1 , va_list arg2 )
+void __lsb_vsyslog (int arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vsyslog");

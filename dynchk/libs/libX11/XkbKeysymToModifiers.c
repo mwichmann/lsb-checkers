@@ -14,7 +14,7 @@ unsigned int XkbKeysymToModifiers(Display * arg0, KeySym arg1)
 	return funcptr(arg0, arg1);
 }
 
-unsigned int lsb_XkbKeysymToModifiers(Display * arg0, KeySym arg1)
+unsigned int __lsb_XkbKeysymToModifiers(Display * arg0, KeySym arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbKeysymToModifiers");

@@ -13,7 +13,7 @@ void XUnsetICFocus(XIC arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XUnsetICFocus(XIC arg0)
+void __lsb_XUnsetICFocus(XIC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XUnsetICFocus");

@@ -12,7 +12,7 @@ Window XDefaultRootWindow(Display * arg0)
 	return funcptr(arg0);
 }
 
-Window lsb_XDefaultRootWindow(Display * arg0)
+Window __lsb_XDefaultRootWindow(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultRootWindow");

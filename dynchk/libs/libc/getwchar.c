@@ -13,7 +13,7 @@ wint_t getwchar ()
 	return funcptr();
 }
 
-wint_t lsb_getwchar ()
+wint_t __lsb_getwchar ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwchar");

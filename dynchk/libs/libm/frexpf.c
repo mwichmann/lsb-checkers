@@ -10,12 +10,13 @@ float frexpf (float arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexpf");
-	validate_NULL_TYPETYPE(arg0, "frexpf");
-	validate_NULL_TYPETYPE(arg1, "frexpf");
+	validate_NULL_TYPETYPE(  arg0, "frexpf");
+	validate_Rdaddress( arg1, "frexpf");
+	validate_NULL_TYPETYPE(  arg1, "frexpf");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_frexpf (float arg0 , int * arg1 )
+float __lsb_frexpf (float arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexpf");

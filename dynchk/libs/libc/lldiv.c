@@ -10,12 +10,12 @@ lldiv_t lldiv (long long arg0 , long long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lldiv");
-	validate_NULL_TYPETYPE(arg0, "lldiv");
-	validate_NULL_TYPETYPE(arg1, "lldiv");
+	validate_NULL_TYPETYPE(  arg0, "lldiv");
+	validate_NULL_TYPETYPE(  arg1, "lldiv");
 	return funcptr(arg0, arg1);
 }
 
-lldiv_t lsb_lldiv (long long arg0 , long long arg1 )
+lldiv_t __lsb_lldiv (long long arg0 , long long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lldiv");

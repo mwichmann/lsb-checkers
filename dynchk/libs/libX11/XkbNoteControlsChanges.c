@@ -14,7 +14,7 @@ void XkbNoteControlsChanges(XkbControlsChangesPtr arg0, XkbControlsNotifyEvent *
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XkbNoteControlsChanges(XkbControlsChangesPtr arg0, XkbControlsNotifyEvent * arg1, unsigned int arg2)
+void __lsb_XkbNoteControlsChanges(XkbControlsChangesPtr arg0, XkbControlsNotifyEvent * arg1, unsigned int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbNoteControlsChanges");

@@ -15,7 +15,7 @@ void SmcDeleteProperties(SmcConn arg0, int arg1, char * * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_SmcDeleteProperties(SmcConn arg0, int arg1, char * * arg2)
+void __lsb_SmcDeleteProperties(SmcConn arg0, int arg1, char * * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcDeleteProperties");

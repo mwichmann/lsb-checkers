@@ -16,7 +16,7 @@ char * * XListFontsWithInfo(Display * arg0, char * arg1, int arg2, int * arg3, X
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-char * * lsb_XListFontsWithInfo(Display * arg0, char * arg1, int arg2, int * arg3, XFontStruct * * arg4)
+char * * __lsb_XListFontsWithInfo(Display * arg0, char * arg1, int arg2, int * arg3, XFontStruct * * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XListFontsWithInfo");

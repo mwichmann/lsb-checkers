@@ -11,13 +11,15 @@ size_t wcstombs (char * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstombs");
-	validate_NULL_TYPETYPE(arg0, "wcstombs");
-	validate_NULL_TYPETYPE(arg1, "wcstombs");
-	validate_NULL_TYPETYPE(arg2, "wcstombs");
+	validate_Rdaddress( arg0, "wcstombs");
+	validate_NULL_TYPETYPE(  arg0, "wcstombs");
+	validate_Rdaddress( arg1, "wcstombs");
+	validate_NULL_TYPETYPE(  arg1, "wcstombs");
+	validate_NULL_TYPETYPE(  arg2, "wcstombs");
 	return funcptr(arg0, arg1, arg2);
 }
 
-size_t lsb_wcstombs (char * arg0 , const wchar_t * arg1 , size_t arg2 )
+size_t __lsb_wcstombs (char * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstombs");

@@ -18,7 +18,7 @@ int XQueryTree(Display * arg0, Window arg1, Window * arg2, Window * arg3, Window
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XQueryTree(Display * arg0, Window arg1, Window * arg2, Window * arg3, Window * * arg4, unsigned int * arg5)
+int __lsb_XQueryTree(Display * arg0, Window arg1, Window * arg2, Window * arg3, Window * * arg4, unsigned int * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XQueryTree");

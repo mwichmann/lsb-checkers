@@ -20,7 +20,7 @@ void glGetSeparableFilter(GLenum arg0, GLenum arg1, GLenum arg2, GLvoid * arg3, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glGetSeparableFilter(GLenum arg0, GLenum arg1, GLenum arg2, GLvoid * arg3, GLvoid * arg4, GLvoid * arg5)
+void __lsb_glGetSeparableFilter(GLenum arg0, GLenum arg1, GLenum arg2, GLvoid * arg3, GLvoid * arg4, GLvoid * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetSeparableFilter");

@@ -10,12 +10,13 @@ int getrusage (int arg0 , struct rusage * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrusage");
-	validate_NULL_TYPETYPE(arg0, "getrusage");
-	validate_NULL_TYPETYPE(arg1, "getrusage");
+	validate_NULL_TYPETYPE(  arg0, "getrusage");
+	validate_Rdaddress( arg1, "getrusage");
+	validate_NULL_TYPETYPE(  arg1, "getrusage");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_getrusage (int arg0 , struct rusage * arg1 )
+int __lsb_getrusage (int arg0 , struct rusage * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrusage");

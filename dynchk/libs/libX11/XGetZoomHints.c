@@ -15,7 +15,7 @@ int XGetZoomHints(Display * arg0, Window arg1, XSizeHints * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XGetZoomHints(Display * arg0, Window arg1, XSizeHints * arg2)
+int __lsb_XGetZoomHints(Display * arg0, Window arg1, XSizeHints * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetZoomHints");

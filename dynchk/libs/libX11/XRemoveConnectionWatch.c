@@ -16,7 +16,7 @@ void XRemoveConnectionWatch(Display * arg0, XConnectionWatchProc arg1, XPointer 
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XRemoveConnectionWatch(Display * arg0, XConnectionWatchProc arg1, XPointer arg2)
+void __lsb_XRemoveConnectionWatch(Display * arg0, XConnectionWatchProc arg1, XPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XRemoveConnectionWatch");

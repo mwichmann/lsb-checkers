@@ -10,11 +10,11 @@ void srand48 (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srand48");
-	validate_NULL_TYPETYPE(arg0, "srand48");
+	validate_NULL_TYPETYPE(  arg0, "srand48");
 	funcptr(arg0);
 }
 
-void lsb_srand48 (long arg0 )
+void __lsb_srand48 (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srand48");

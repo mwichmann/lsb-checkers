@@ -13,7 +13,7 @@ KeySym XLookupKeysym(XKeyEvent * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-KeySym lsb_XLookupKeysym(XKeyEvent * arg0, int arg1)
+KeySym __lsb_XLookupKeysym(XKeyEvent * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XLookupKeysym");

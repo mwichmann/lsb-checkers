@@ -13,7 +13,7 @@ char * SmcRelease(SmcConn arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_SmcRelease(SmcConn arg0)
+char * __lsb_SmcRelease(SmcConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcRelease");

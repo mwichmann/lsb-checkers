@@ -11,11 +11,11 @@ uint16_t ntohs (uint16_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ntohs");
-	validate_NULL_TYPETYPE(arg0, "ntohs");
+	validate_NULL_TYPETYPE(  arg0, "ntohs");
 	return funcptr(arg0);
 }
 
-uint16_t lsb_ntohs (uint16_t arg0 )
+uint16_t __lsb_ntohs (uint16_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ntohs");

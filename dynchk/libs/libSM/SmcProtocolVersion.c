@@ -13,7 +13,7 @@ int SmcProtocolVersion(SmcConn arg0)
 	return funcptr(arg0);
 }
 
-int lsb_SmcProtocolVersion(SmcConn arg0)
+int __lsb_SmcProtocolVersion(SmcConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcProtocolVersion");

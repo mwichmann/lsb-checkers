@@ -11,13 +11,15 @@ int bcmp (const void * arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bcmp");
-	validate_NULL_TYPETYPE(arg0, "bcmp");
-	validate_NULL_TYPETYPE(arg1, "bcmp");
-	validate_NULL_TYPETYPE(arg2, "bcmp");
+	validate_Rdaddress( arg0, "bcmp");
+	validate_NULL_TYPETYPE(  arg0, "bcmp");
+	validate_Rdaddress( arg1, "bcmp");
+	validate_NULL_TYPETYPE(  arg1, "bcmp");
+	validate_NULL_TYPETYPE(  arg2, "bcmp");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_bcmp (const void * arg0 , const void * arg1 , size_t arg2 )
+int __lsb_bcmp (const void * arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bcmp");

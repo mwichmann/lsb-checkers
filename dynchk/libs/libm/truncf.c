@@ -10,11 +10,11 @@ float truncf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncf");
-	validate_NULL_TYPETYPE(arg0, "truncf");
+	validate_NULL_TYPETYPE(  arg0, "truncf");
 	return funcptr(arg0);
 }
 
-float lsb_truncf (float arg0 )
+float __lsb_truncf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncf");

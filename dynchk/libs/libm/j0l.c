@@ -10,11 +10,11 @@ long double j0l (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j0l");
-	validate_NULL_TYPETYPE(arg0, "j0l");
+	validate_NULL_TYPETYPE(  arg0, "j0l");
 	return funcptr(arg0);
 }
 
-long double lsb_j0l (long double arg0 )
+long double __lsb_j0l (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j0l");

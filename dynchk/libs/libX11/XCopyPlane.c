@@ -25,7 +25,7 @@ int XCopyPlane(Display * arg0, Drawable arg1, Drawable arg2, GC arg3, int arg4, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 }
 
-int lsb_XCopyPlane(Display * arg0, Drawable arg1, Drawable arg2, GC arg3, int arg4, int arg5, unsigned int arg6, unsigned int arg7, int arg8, int arg9, unsigned long arg10)
+int __lsb_XCopyPlane(Display * arg0, Drawable arg1, Drawable arg2, GC arg3, int arg4, int arg5, unsigned int arg6, unsigned int arg7, int arg8, int arg9, unsigned long arg10)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCopyPlane");

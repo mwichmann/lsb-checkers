@@ -14,7 +14,7 @@ int glXIsDirect(Display * arg0, GLXContext arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_glXIsDirect(Display * arg0, GLXContext arg1)
+int __lsb_glXIsDirect(Display * arg0, GLXContext arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXIsDirect");

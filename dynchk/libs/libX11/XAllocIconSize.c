@@ -12,7 +12,7 @@ XIconSize * XAllocIconSize(void arg0)
 	return funcptr(arg0);
 }
 
-XIconSize * lsb_XAllocIconSize(void arg0)
+XIconSize * __lsb_XAllocIconSize(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllocIconSize");

@@ -19,7 +19,7 @@ Xauth * XauGetBestAuthByAddr(unsigned int arg0, unsigned int arg1, char * arg2, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-Xauth * lsb_XauGetBestAuthByAddr(unsigned int arg0, unsigned int arg1, char * arg2, unsigned int arg3, char * arg4, int arg5, char * * arg6, int * arg7)
+Xauth * __lsb_XauGetBestAuthByAddr(unsigned int arg0, unsigned int arg1, char * arg2, unsigned int arg3, char * arg4, int arg5, char * * arg6, int * arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XauGetBestAuthByAddr");

@@ -19,7 +19,7 @@ void glColorMask(GLboolean arg0, GLboolean arg1, GLboolean arg2, GLboolean arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glColorMask(GLboolean arg0, GLboolean arg1, GLboolean arg2, GLboolean arg3)
+void __lsb_glColorMask(GLboolean arg0, GLboolean arg1, GLboolean arg2, GLboolean arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glColorMask");

@@ -13,7 +13,7 @@ int standout ()
 	return funcptr();
 }
 
-int lsb_standout ()
+int __lsb_standout ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "standout");

@@ -16,7 +16,7 @@ int XSetWindowBackgroundPixmap(Display * arg0, Window arg1, Pixmap arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSetWindowBackgroundPixmap(Display * arg0, Window arg1, Pixmap arg2)
+int __lsb_XSetWindowBackgroundPixmap(Display * arg0, Window arg1, Pixmap arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetWindowBackgroundPixmap");

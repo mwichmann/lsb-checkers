@@ -11,12 +11,13 @@ int mlock (const void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlock");
-	validate_NULL_TYPETYPE(arg0, "mlock");
-	validate_NULL_TYPETYPE(arg1, "mlock");
+	validate_Rdaddress( arg0, "mlock");
+	validate_NULL_TYPETYPE(  arg0, "mlock");
+	validate_NULL_TYPETYPE(  arg1, "mlock");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_mlock (const void * arg0 , size_t arg1 )
+int __lsb_mlock (const void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlock");

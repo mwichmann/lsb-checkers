@@ -13,7 +13,7 @@ GLboolean glIsList(GLuint arg0)
 	return funcptr(arg0);
 }
 
-GLboolean lsb_glIsList(GLuint arg0)
+GLboolean __lsb_glIsList(GLuint arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glIsList");

@@ -12,7 +12,7 @@ void glGetPolygonStipple(GLubyte * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glGetPolygonStipple(GLubyte * arg0)
+void __lsb_glGetPolygonStipple(GLubyte * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetPolygonStipple");

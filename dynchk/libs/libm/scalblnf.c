@@ -10,12 +10,12 @@ float scalblnf (float arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalblnf");
-	validate_NULL_TYPETYPE(arg0, "scalblnf");
-	validate_NULL_TYPETYPE(arg1, "scalblnf");
+	validate_NULL_TYPETYPE(  arg0, "scalblnf");
+	validate_NULL_TYPETYPE(  arg1, "scalblnf");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_scalblnf (float arg0 , long arg1 )
+float __lsb_scalblnf (float arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalblnf");

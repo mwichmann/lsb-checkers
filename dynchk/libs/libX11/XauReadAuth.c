@@ -13,7 +13,7 @@ Xauth * XauReadAuth(FILE arg0)
 	return funcptr(arg0);
 }
 
-Xauth * lsb_XauReadAuth(FILE arg0)
+Xauth * __lsb_XauReadAuth(FILE arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XauReadAuth");

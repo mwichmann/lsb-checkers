@@ -17,7 +17,7 @@ static int(*funcptr)(Display *, KeySym *, unsigned int, char *, int, int *) = 0;
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
- lsb_XkbTranslateKeySym(Display * arg0, KeySym * arg1, unsigned int arg2, char * arg3, int arg4, int * arg5)
+ __lsb_XkbTranslateKeySym(Display * arg0, KeySym * arg1, unsigned int arg2, char * arg3, int arg4, int * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbTranslateKeySym");

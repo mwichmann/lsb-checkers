@@ -10,13 +10,15 @@ int tputs (const char * arg0 , int arg1 , int(* arg2 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tputs");
-	validate_NULL_TYPETYPE(arg0, "tputs");
-	validate_NULL_TYPETYPE(arg1, "tputs");
-	validate_NULL_TYPETYPE(arg2, "tputs");
+	validate_Rdaddress( arg0, "tputs");
+	validate_NULL_TYPETYPE(  arg0, "tputs");
+	validate_NULL_TYPETYPE(  arg1, "tputs");
+validate_Rdaddress( arg2, "tputs");
+	validate_NULL_TYPETYPE(  arg2, "tputs");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_tputs (const char * arg0 , int arg1 , int(* arg2 )(int))
+int __lsb_tputs (const char * arg0 , int arg1 , int(* arg2 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tputs");

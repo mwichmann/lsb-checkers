@@ -13,7 +13,7 @@ int standend ()
 	return funcptr();
 }
 
-int lsb_standend ()
+int __lsb_standend ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "standend");

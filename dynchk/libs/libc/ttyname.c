@@ -10,11 +10,11 @@ char * ttyname (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ttyname");
-	validate_NULL_TYPETYPE(arg0, "ttyname");
+	validate_NULL_TYPETYPE(  arg0, "ttyname");
 	return funcptr(arg0);
 }
 
-char * lsb_ttyname (int arg0 )
+char * __lsb_ttyname (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ttyname");

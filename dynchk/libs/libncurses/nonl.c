@@ -13,7 +13,7 @@ int nonl ()
 	return funcptr();
 }
 
-int lsb_nonl ()
+int __lsb_nonl ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nonl");

@@ -10,16 +10,17 @@ int mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const v
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvchgat");
-	validate_NULL_TYPETYPE(arg0, "mvchgat");
-	validate_NULL_TYPETYPE(arg1, "mvchgat");
-	validate_NULL_TYPETYPE(arg2, "mvchgat");
-	validate_NULL_TYPETYPE(arg3, "mvchgat");
-	validate_NULL_TYPETYPE(arg4, "mvchgat");
-	validate_NULL_TYPETYPE(arg5, "mvchgat");
+	validate_NULL_TYPETYPE(  arg0, "mvchgat");
+	validate_NULL_TYPETYPE(  arg1, "mvchgat");
+	validate_NULL_TYPETYPE(  arg2, "mvchgat");
+	validate_NULL_TYPETYPE(  arg3, "mvchgat");
+	validate_NULL_TYPETYPE(  arg4, "mvchgat");
+	validate_Rdaddress( arg5, "mvchgat");
+	validate_NULL_TYPETYPE(  arg5, "mvchgat");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const void * arg5 )
+int __lsb_mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const void * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvchgat");

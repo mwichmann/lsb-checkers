@@ -12,7 +12,7 @@ GC XDefaultGCOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-GC lsb_XDefaultGCOfScreen(Screen * arg0)
+GC __lsb_XDefaultGCOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultGCOfScreen");

@@ -17,7 +17,7 @@ XtWorkProcId XtAppAddWorkProc(XtAppContext arg0, XtWorkProc arg1, XtPointer arg2
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtWorkProcId lsb_XtAppAddWorkProc(XtAppContext arg0, XtWorkProc arg1, XtPointer arg2)
+XtWorkProcId __lsb_XtAppAddWorkProc(XtAppContext arg0, XtWorkProc arg1, XtPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppAddWorkProc");

@@ -13,7 +13,7 @@ unsigned long IceLastSentSequenceNumber(IceConn arg0)
 	return funcptr(arg0);
 }
 
-unsigned long lsb_IceLastSentSequenceNumber(IceConn arg0)
+unsigned long __lsb_IceLastSentSequenceNumber(IceConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceLastSentSequenceNumber");

@@ -14,7 +14,7 @@ void glFogfv(GLenum arg0, GLfloat * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glFogfv(GLenum arg0, GLfloat * arg1)
+void __lsb_glFogfv(GLenum arg0, GLfloat * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glFogfv");

@@ -15,7 +15,7 @@ GLXFBConfig * glXChooseFBConfig(Display * arg0, int arg1, int * arg2, int * arg3
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-GLXFBConfig * lsb_glXChooseFBConfig(Display * arg0, int arg1, int * arg2, int * arg3)
+GLXFBConfig * __lsb_glXChooseFBConfig(Display * arg0, int arg1, int * arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXChooseFBConfig");

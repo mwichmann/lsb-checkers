@@ -16,7 +16,7 @@ GC XtGetGC(Widget arg0, XtGCMask arg1, XGCValues * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-GC lsb_XtGetGC(Widget arg0, XtGCMask arg1, XGCValues * arg2)
+GC __lsb_XtGetGC(Widget arg0, XtGCMask arg1, XGCValues * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetGC");

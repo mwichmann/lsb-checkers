@@ -14,7 +14,7 @@ char * dlerror ()
 }
 #endif
 
-char * lsb_dlerror ()
+char * __lsb_dlerror ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlerror");

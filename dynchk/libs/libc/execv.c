@@ -10,12 +10,13 @@ int execv (const char * arg0 , char *const  arg1 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execv");
-	validate_NULL_TYPETYPE(arg0, "execv");
-	validate_NULL_TYPETYPE(arg1, "execv");
+	validate_Rdaddress( arg0, "execv");
+	validate_NULL_TYPETYPE(  arg0, "execv");
+	validate_NULL_TYPETYPE(  arg1, "execv");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_execv (const char * arg0 , char *const  arg1 [])
+int __lsb_execv (const char * arg0 , char *const  arg1 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execv");

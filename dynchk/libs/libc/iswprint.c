@@ -10,11 +10,11 @@ int iswprint (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswprint");
-	validate_NULL_TYPETYPE(arg0, "iswprint");
+	validate_NULL_TYPETYPE(  arg0, "iswprint");
 	return funcptr(arg0);
 }
 
-int lsb_iswprint (wint_t arg0 )
+int __lsb_iswprint (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswprint");

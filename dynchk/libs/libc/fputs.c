@@ -10,12 +10,14 @@ int fputs (const char * arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputs");
-	validate_NULL_TYPETYPE(arg0, "fputs");
-	validate_NULL_TYPETYPE(arg1, "fputs");
+	validate_Rdaddress( arg0, "fputs");
+	validate_NULL_TYPETYPE(  arg0, "fputs");
+	validate_Rdaddress( arg1, "fputs");
+	validate_NULL_TYPETYPE(  arg1, "fputs");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fputs (const char * arg0 , FILE * arg1 )
+int __lsb_fputs (const char * arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputs");

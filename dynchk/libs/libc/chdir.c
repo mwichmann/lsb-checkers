@@ -10,11 +10,12 @@ int chdir (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chdir");
-	validate_NULL_TYPETYPE(arg0, "chdir");
+	validate_Rdaddress( arg0, "chdir");
+	validate_NULL_TYPETYPE(  arg0, "chdir");
 	return funcptr(arg0);
 }
 
-int lsb_chdir (const char * arg0 )
+int __lsb_chdir (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chdir");

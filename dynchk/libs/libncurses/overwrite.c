@@ -11,12 +11,14 @@ int overwrite (const WINDOW * arg0 , WINDOW * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "overwrite");
-	validate_NULL_TYPETYPE(arg0, "overwrite");
-	validate_NULL_TYPETYPE(arg1, "overwrite");
+	validate_Rdaddress( arg0, "overwrite");
+	validate_NULL_TYPETYPE(  arg0, "overwrite");
+	validate_Rdaddress( arg1, "overwrite");
+	validate_NULL_TYPETYPE(  arg1, "overwrite");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_overwrite (const WINDOW * arg0 , WINDOW * arg1 )
+int __lsb_overwrite (const WINDOW * arg0 , WINDOW * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "overwrite");

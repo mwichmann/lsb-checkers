@@ -15,7 +15,7 @@ XVisualInfo * XGetVisualInfo(Display * arg0, long arg1, XVisualInfo * arg2, int 
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-XVisualInfo * lsb_XGetVisualInfo(Display * arg0, long arg1, XVisualInfo * arg2, int * arg3)
+XVisualInfo * __lsb_XGetVisualInfo(Display * arg0, long arg1, XVisualInfo * arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetVisualInfo");

@@ -10,12 +10,14 @@ int wgetstr (WINDOW * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wgetstr");
-	validate_NULL_TYPETYPE(arg0, "wgetstr");
-	validate_NULL_TYPETYPE(arg1, "wgetstr");
+	validate_Rdaddress( arg0, "wgetstr");
+	validate_NULL_TYPETYPE(  arg0, "wgetstr");
+	validate_Rdaddress( arg1, "wgetstr");
+	validate_NULL_TYPETYPE(  arg1, "wgetstr");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wgetstr (WINDOW * arg0 , char * arg1 )
+int __lsb_wgetstr (WINDOW * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wgetstr");

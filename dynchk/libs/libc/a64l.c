@@ -10,11 +10,12 @@ long a64l (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "a64l");
-	validate_NULL_TYPETYPE(arg0, "a64l");
+	validate_Rdaddress( arg0, "a64l");
+	validate_NULL_TYPETYPE(  arg0, "a64l");
 	return funcptr(arg0);
 }
 
-long lsb_a64l (const char * arg0 )
+long __lsb_a64l (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "a64l");

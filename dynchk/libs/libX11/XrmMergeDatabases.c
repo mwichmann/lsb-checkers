@@ -14,7 +14,7 @@ void XrmMergeDatabases(XrmDatabase arg0, XrmDatabase * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XrmMergeDatabases(XrmDatabase arg0, XrmDatabase * arg1)
+void __lsb_XrmMergeDatabases(XrmDatabase arg0, XrmDatabase * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmMergeDatabases");

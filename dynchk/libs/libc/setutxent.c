@@ -13,7 +13,7 @@ void setutxent ()
 	funcptr();
 }
 
-void lsb_setutxent ()
+void __lsb_setutxent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setutxent");

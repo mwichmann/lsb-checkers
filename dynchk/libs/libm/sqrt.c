@@ -10,11 +10,11 @@ double sqrt (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sqrt");
-	validate_NULL_TYPETYPE(arg0, "sqrt");
+	validate_NULL_TYPETYPE(  arg0, "sqrt");
 	return funcptr(arg0);
 }
 
-double lsb_sqrt (double arg0 )
+double __lsb_sqrt (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sqrt");

@@ -12,7 +12,7 @@ int XBitmapUnit(Display * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XBitmapUnit(Display * arg0)
+int __lsb_XBitmapUnit(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XBitmapUnit");

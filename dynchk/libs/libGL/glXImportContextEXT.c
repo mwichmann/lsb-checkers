@@ -14,7 +14,7 @@ GLXContext glXImportContextEXT(Display * arg0, GLXContextID arg1)
 	return funcptr(arg0, arg1);
 }
 
-GLXContext lsb_glXImportContextEXT(Display * arg0, GLXContextID arg1)
+GLXContext __lsb_glXImportContextEXT(Display * arg0, GLXContextID arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXImportContextEXT");

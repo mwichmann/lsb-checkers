@@ -10,11 +10,11 @@ int iswspace (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswspace");
-	validate_NULL_TYPETYPE(arg0, "iswspace");
+	validate_NULL_TYPETYPE(  arg0, "iswspace");
 	return funcptr(arg0);
 }
 
-int lsb_iswspace (wint_t arg0 )
+int __lsb_iswspace (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswspace");

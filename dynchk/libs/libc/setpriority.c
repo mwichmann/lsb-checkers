@@ -11,13 +11,13 @@ int setpriority (__priority_which_t arg0 , id_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpriority");
-	validate_NULL_TYPETYPE(arg0, "setpriority");
-	validate_NULL_TYPETYPE(arg1, "setpriority");
-	validate_NULL_TYPETYPE(arg2, "setpriority");
+	validate_NULL_TYPETYPE(  arg0, "setpriority");
+	validate_NULL_TYPETYPE(  arg1, "setpriority");
+	validate_NULL_TYPETYPE(  arg2, "setpriority");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_setpriority (__priority_which_t arg0 , id_t arg1 , int arg2 )
+int __lsb_setpriority (__priority_which_t arg0 , id_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpriority");

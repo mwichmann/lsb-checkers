@@ -17,7 +17,7 @@ int printf(const char *format, ...)
 	return funcptr(format, args);
 }
 
-int lsb_printf(const char *format, ...)
+int __lsb_printf(const char *format, ...)
 {	
 	va_list args;
 	va_start(args, format);

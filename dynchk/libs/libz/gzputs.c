@@ -10,12 +10,13 @@ int gzputs (gzFile arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzputs");
-	validate_NULL_TYPETYPE(arg0, "gzputs");
-	validate_NULL_TYPETYPE(arg1, "gzputs");
+	validate_NULL_TYPETYPE(  arg0, "gzputs");
+	validate_Rdaddress( arg1, "gzputs");
+	validate_NULL_TYPETYPE(  arg1, "gzputs");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_gzputs (gzFile arg0 , const char * arg1 )
+int __lsb_gzputs (gzFile arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzputs");

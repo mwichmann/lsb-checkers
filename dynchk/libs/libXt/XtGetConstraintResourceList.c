@@ -15,7 +15,7 @@ void XtGetConstraintResourceList(WidgetClass arg0, XtResourceList * arg1, Cardin
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XtGetConstraintResourceList(WidgetClass arg0, XtResourceList * arg1, Cardinal * arg2)
+void __lsb_XtGetConstraintResourceList(WidgetClass arg0, XtResourceList * arg1, Cardinal * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetConstraintResourceList");

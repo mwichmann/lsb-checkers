@@ -19,7 +19,7 @@ void glColor4us(GLushort arg0, GLushort arg1, GLushort arg2, GLushort arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glColor4us(GLushort arg0, GLushort arg1, GLushort arg2, GLushort arg3)
+void __lsb_glColor4us(GLushort arg0, GLushort arg1, GLushort arg2, GLushort arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glColor4us");

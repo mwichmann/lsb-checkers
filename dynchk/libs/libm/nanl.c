@@ -10,11 +10,12 @@ long double nanl (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanl");
-	validate_NULL_TYPETYPE(arg0, "nanl");
+	validate_Rdaddress( arg0, "nanl");
+	validate_NULL_TYPETYPE(  arg0, "nanl");
 	return funcptr(arg0);
 }
 
-long double lsb_nanl (const char * arg0 )
+long double __lsb_nanl (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanl");

@@ -23,7 +23,7 @@ void glMapGrid2d(GLint arg0, GLdouble arg1, GLdouble arg2, GLint arg3, GLdouble 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glMapGrid2d(GLint arg0, GLdouble arg1, GLdouble arg2, GLint arg3, GLdouble arg4, GLdouble arg5)
+void __lsb_glMapGrid2d(GLint arg0, GLdouble arg1, GLdouble arg2, GLint arg3, GLdouble arg4, GLdouble arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glMapGrid2d");

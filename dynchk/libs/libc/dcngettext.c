@@ -10,15 +10,18 @@ char * dcngettext (const char * arg0 , const char * arg1 , const char * arg2 , u
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dcngettext");
-	validate_NULL_TYPETYPE(arg0, "dcngettext");
-	validate_NULL_TYPETYPE(arg1, "dcngettext");
-	validate_NULL_TYPETYPE(arg2, "dcngettext");
-	validate_NULL_TYPETYPE(arg3, "dcngettext");
-	validate_NULL_TYPETYPE(arg4, "dcngettext");
+	validate_Rdaddress( arg0, "dcngettext");
+	validate_NULL_TYPETYPE(  arg0, "dcngettext");
+	validate_Rdaddress( arg1, "dcngettext");
+	validate_NULL_TYPETYPE(  arg1, "dcngettext");
+	validate_Rdaddress( arg2, "dcngettext");
+	validate_NULL_TYPETYPE(  arg2, "dcngettext");
+	validate_NULL_TYPETYPE(  arg3, "dcngettext");
+	validate_NULL_TYPETYPE(  arg4, "dcngettext");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-char * lsb_dcngettext (const char * arg0 , const char * arg1 , const char * arg2 , unsigned long arg3 , int arg4 )
+char * __lsb_dcngettext (const char * arg0 , const char * arg1 , const char * arg2 , unsigned long arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dcngettext");

@@ -16,7 +16,7 @@ XcmsCCC XcmsSetCCCOfColormap(Display * arg0, Colormap arg1, XcmsCCC arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-XcmsCCC lsb_XcmsSetCCCOfColormap(Display * arg0, Colormap arg1, XcmsCCC arg2)
+XcmsCCC __lsb_XcmsSetCCCOfColormap(Display * arg0, Colormap arg1, XcmsCCC arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsSetCCCOfColormap");

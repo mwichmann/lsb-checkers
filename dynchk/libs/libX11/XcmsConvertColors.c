@@ -18,7 +18,7 @@ int XcmsConvertColors(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, XcmsCol
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XcmsConvertColors(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, XcmsColorFormat arg3, int * arg4)
+int __lsb_XcmsConvertColors(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, XcmsColorFormat arg3, int * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsConvertColors");

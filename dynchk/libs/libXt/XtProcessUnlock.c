@@ -12,7 +12,7 @@ void XtProcessUnlock(void arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtProcessUnlock(void arg0)
+void __lsb_XtProcessUnlock(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtProcessUnlock");

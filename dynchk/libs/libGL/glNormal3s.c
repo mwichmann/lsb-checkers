@@ -17,7 +17,7 @@ void glNormal3s(GLshort arg0, GLshort arg1, GLshort arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glNormal3s(GLshort arg0, GLshort arg1, GLshort arg2)
+void __lsb_glNormal3s(GLshort arg0, GLshort arg1, GLshort arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glNormal3s");

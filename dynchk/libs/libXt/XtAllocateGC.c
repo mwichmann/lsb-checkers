@@ -22,7 +22,7 @@ GC XtAllocateGC(Widget arg0, Cardinal arg1, XtGCMask arg2, XGCValues * arg3, XtG
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-GC lsb_XtAllocateGC(Widget arg0, Cardinal arg1, XtGCMask arg2, XGCValues * arg3, XtGCMask arg4, XtGCMask arg5)
+GC __lsb_XtAllocateGC(Widget arg0, Cardinal arg1, XtGCMask arg2, XGCValues * arg3, XtGCMask arg4, XtGCMask arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAllocateGC");

@@ -13,7 +13,7 @@ XExtData * XFindOnExtensionList(XExtData * * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-XExtData * lsb_XFindOnExtensionList(XExtData * * arg0, int arg1)
+XExtData * __lsb_XFindOnExtensionList(XExtData * * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFindOnExtensionList");

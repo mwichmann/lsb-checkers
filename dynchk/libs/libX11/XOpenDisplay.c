@@ -12,7 +12,7 @@ Display * XOpenDisplay(char * arg0)
 	return funcptr(arg0);
 }
 
-Display * lsb_XOpenDisplay(char * arg0)
+Display * __lsb_XOpenDisplay(char * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XOpenDisplay");

@@ -10,11 +10,12 @@ int sigreturn (struct sigcontext * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigreturn");
-	validate_NULL_TYPETYPE(arg0, "sigreturn");
+	validate_Rdaddress( arg0, "sigreturn");
+	validate_NULL_TYPETYPE(  arg0, "sigreturn");
 	return funcptr(arg0);
 }
 
-int lsb_sigreturn (struct sigcontext * arg0 )
+int __lsb_sigreturn (struct sigcontext * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigreturn");

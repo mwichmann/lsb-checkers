@@ -12,7 +12,7 @@ void _XtInherit(void arg0)
 	return funcptr(arg0);
 }
 
-void lsb__XtInherit(void arg0)
+void __lsb__XtInherit(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_XtInherit");

@@ -10,11 +10,12 @@ char * strdup (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strdup");
-	validate_NULL_TYPETYPE(arg0, "strdup");
+	validate_Rdaddress( arg0, "strdup");
+	validate_NULL_TYPETYPE(  arg0, "strdup");
 	return funcptr(arg0);
 }
 
-char * lsb_strdup (const char * arg0 )
+char * __lsb_strdup (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strdup");

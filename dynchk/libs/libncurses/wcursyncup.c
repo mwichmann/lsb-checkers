@@ -10,11 +10,12 @@ void wcursyncup (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcursyncup");
-	validate_NULL_TYPETYPE(arg0, "wcursyncup");
+	validate_Rdaddress( arg0, "wcursyncup");
+	validate_NULL_TYPETYPE(  arg0, "wcursyncup");
 	funcptr(arg0);
 }
 
-void lsb_wcursyncup (WINDOW * arg0 )
+void __lsb_wcursyncup (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcursyncup");

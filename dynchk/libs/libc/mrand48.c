@@ -13,7 +13,7 @@ long mrand48 ()
 	return funcptr();
 }
 
-long lsb_mrand48 ()
+long __lsb_mrand48 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mrand48");

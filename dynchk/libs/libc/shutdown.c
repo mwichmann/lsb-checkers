@@ -10,12 +10,12 @@ int shutdown (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shutdown");
-	validate_NULL_TYPETYPE(arg0, "shutdown");
-	validate_NULL_TYPETYPE(arg1, "shutdown");
+	validate_NULL_TYPETYPE(  arg0, "shutdown");
+	validate_NULL_TYPETYPE(  arg1, "shutdown");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_shutdown (int arg0 , int arg1 )
+int __lsb_shutdown (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shutdown");

@@ -12,7 +12,7 @@ int XkbIgnoreExtension(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XkbIgnoreExtension(int arg0)
+int __lsb_XkbIgnoreExtension(int arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbIgnoreExtension");

@@ -13,7 +13,7 @@ GC XDefaultGC(Display * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-GC lsb_XDefaultGC(Display * arg0, int arg1)
+GC __lsb_XDefaultGC(Display * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultGC");

@@ -10,12 +10,13 @@ void twalk (const void * arg0 , __action_fn_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "twalk");
-	validate_NULL_TYPETYPE(arg0, "twalk");
-	validate_NULL_TYPETYPE(arg1, "twalk");
+	validate_Rdaddress( arg0, "twalk");
+	validate_NULL_TYPETYPE(  arg0, "twalk");
+	validate_NULL_TYPETYPE(  arg1, "twalk");
 	funcptr(arg0, arg1);
 }
 
-void lsb_twalk (const void * arg0 , __action_fn_t arg1 )
+void __lsb_twalk (const void * arg0 , __action_fn_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "twalk");

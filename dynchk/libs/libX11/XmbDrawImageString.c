@@ -22,7 +22,7 @@ void XmbDrawImageString(Display * arg0, Drawable arg1, XFontSet arg2, GC arg3, i
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-void lsb_XmbDrawImageString(Display * arg0, Drawable arg1, XFontSet arg2, GC arg3, int arg4, int arg5, char * arg6, int arg7)
+void __lsb_XmbDrawImageString(Display * arg0, Drawable arg1, XFontSet arg2, GC arg3, int arg4, int arg5, char * arg6, int arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XmbDrawImageString");

@@ -10,11 +10,12 @@ int werase (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "werase");
-	validate_NULL_TYPETYPE(arg0, "werase");
+	validate_Rdaddress( arg0, "werase");
+	validate_NULL_TYPETYPE(  arg0, "werase");
 	return funcptr(arg0);
 }
 
-int lsb_werase (WINDOW * arg0 )
+int __lsb_werase (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "werase");

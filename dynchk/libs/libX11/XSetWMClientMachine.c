@@ -15,7 +15,7 @@ void XSetWMClientMachine(Display * arg0, Window arg1, XTextProperty * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XSetWMClientMachine(Display * arg0, Window arg1, XTextProperty * arg2)
+void __lsb_XSetWMClientMachine(Display * arg0, Window arg1, XTextProperty * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetWMClientMachine");

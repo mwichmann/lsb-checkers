@@ -12,7 +12,7 @@ XrmDatabase * XtGetErrorDatabase(void arg0)
 	return funcptr(arg0);
 }
 
-XrmDatabase * lsb_XtGetErrorDatabase(void arg0)
+XrmDatabase * __lsb_XtGetErrorDatabase(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetErrorDatabase");

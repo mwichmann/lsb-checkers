@@ -18,7 +18,7 @@ void XtRegisterExtensionSelector(Display * arg0, int arg1, int arg2, XtExtension
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtRegisterExtensionSelector(Display * arg0, int arg1, int arg2, XtExtensionSelectProc arg3, XtPointer arg4)
+void __lsb_XtRegisterExtensionSelector(Display * arg0, int arg1, int arg2, XtExtensionSelectProc arg3, XtPointer arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRegisterExtensionSelector");

@@ -10,11 +10,12 @@ int pthread_condattr_destroy (pthread_condattr_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_condattr_destroy");
-	validate_NULL_TYPETYPE(arg0, "pthread_condattr_destroy");
+	validate_Rdaddress( arg0, "pthread_condattr_destroy");
+	validate_NULL_TYPETYPE(  arg0, "pthread_condattr_destroy");
 	return funcptr(arg0);
 }
 
-int lsb_pthread_condattr_destroy (pthread_condattr_t * arg0 )
+int __lsb_pthread_condattr_destroy (pthread_condattr_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_condattr_destroy");
