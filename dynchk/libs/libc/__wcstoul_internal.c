@@ -13,8 +13,8 @@ unsigned long __wcstoul_internal (const wchar_t * arg0 , wchar_t * * arg1 , int 
 		funcptr = dlsym(RTLD_NEXT, "__wcstoul_internal");
 	validate_Rdaddress( arg0, "__wcstoul_internal");
 	validate_NULL_TYPETYPE(  arg0, "__wcstoul_internal");
-	validate_Rdaddress( arg1, "__wcstoul_internal");
 	validate_Rdaddress(* arg1, "__wcstoul_internal");
+	validate_Rdaddress( arg1, "__wcstoul_internal");
 	validate_NULL_TYPETYPE(  arg1, "__wcstoul_internal");
 	validate_NULL_TYPETYPE(  arg2, "__wcstoul_internal");
 	validate_NULL_TYPETYPE(  arg3, "__wcstoul_internal");

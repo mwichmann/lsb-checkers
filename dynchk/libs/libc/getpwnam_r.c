@@ -18,8 +18,8 @@ int getpwnam_r (const char * arg0 , struct passwd * arg1 , char * arg2 , size_t 
 	validate_Rdaddress( arg2, "getpwnam_r");
 	validate_NULL_TYPETYPE(  arg2, "getpwnam_r");
 	validate_NULL_TYPETYPE(  arg3, "getpwnam_r");
-	validate_Rdaddress( arg4, "getpwnam_r");
 	validate_Rdaddress(* arg4, "getpwnam_r");
+	validate_Rdaddress( arg4, "getpwnam_r");
 	validate_NULL_TYPETYPE(  arg4, "getpwnam_r");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }

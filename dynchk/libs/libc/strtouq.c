@@ -12,8 +12,8 @@ unsigned long long strtouq (const char * arg0 , char * * arg1 , int arg2 )
 		funcptr = dlsym(RTLD_NEXT, "strtouq");
 	validate_Rdaddress( arg0, "strtouq");
 	validate_NULL_TYPETYPE(  arg0, "strtouq");
-	validate_Rdaddress( arg1, "strtouq");
 	validate_Rdaddress(* arg1, "strtouq");
+	validate_Rdaddress( arg1, "strtouq");
 	validate_NULL_TYPETYPE(  arg1, "strtouq");
 	validate_NULL_TYPETYPE(  arg2, "strtouq");
 	return funcptr(arg0, arg1, arg2);

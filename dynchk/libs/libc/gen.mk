@@ -312,6 +312,7 @@ strncmp.o \
 strncpy.o \
 strpbrk.o \
 strptime.o \
+strrchr.o \
 strsignal.o \
 strspn.o \
 strstr.o \
