@@ -1,5 +1,5 @@
-LSBAPPCHK_VERSION=unofficial
-CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBAPPCHK_VERSION=\"$(LSBAPPCHK_VERSION)\" -Wall
+LSBARCHK_VERSION=unofficial
+CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBARCHK_VERSION=\"$(LSBARCHK_VERSION)\" -Wall
 
 OBJS=archk.o libraries.o symbols.o check_archive.o
 LIB=../elfchk/libelfchk.a ../tetj/libtetj.a
