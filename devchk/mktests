@@ -133,6 +133,7 @@ for(1..$tth->numrows) {
 	$ATsize=$tentry{'ATsize'};
 	$Asymbol=$tentry{'Asymbol'};
 	if( $Tname=~/anon/ ) { next; };
+	if( $Tname=~/fptr/ ) { next; };
 	if( $tentry{'Ttype'} eq 'Struct' || $tentry{'Ttype'} eq 'Union' ) {
 		if( $tentry{'Ttype'} eq 'Struct' ) {
 			$type="struct";
