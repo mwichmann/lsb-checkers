@@ -3,7 +3,6 @@ int main()
 	/* We need one function from each library to cause
 		 the library to get linked */
 	printf("This program should never get executed. It does nothing.\n");
-	exit(1);
 
 	/* libGL */
 	glAccum();
@@ -53,10 +52,8 @@ int main()
 	/* libz */
 	compress();
 
-#ifdef _CXXABICHK_
 	/* libstdc++ */
 	__cxa_pure_virtual();
-#endif
 }
 
 
