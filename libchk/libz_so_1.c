@@ -37,5 +37,7 @@ char *libz_so_1[] = {
 	"inflateSetDictionary",
 	"inflateSync",
 	"inflateSyncPoint",
+	"uncompress",
 	"zError",
+	"zlibVersion",
 	0,};

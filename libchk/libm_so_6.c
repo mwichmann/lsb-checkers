@@ -161,6 +161,8 @@ char *libm_so_6[] = {
 	"ilogb",
 	"ilogbf",
 	"ilogbl",
+	"imaxabs",
+	"imaxdiv",
 	"j0",
 	"j0f",
 	"j0l",

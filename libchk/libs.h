@@ -1,6 +1,6 @@
 /* Generated file */
 extern char *ld_lsb_so_1[];
-extern char *libGL_so_1_2[];
+extern char *libGL_so_1[];
 extern char *libICE_so_6[];
 extern char *libSM_so_6[];
 extern char *libX11_so_6[];
