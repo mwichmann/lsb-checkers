@@ -3,29 +3,29 @@
 
 #include "elfchk.h"
 
-typedef void (*SectionFcn)(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
+typedef int (*SectionFcn)(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
 
-void checkDUMMY(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkNOBITS(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkNULL(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkHASH(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkSTRTAB(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkNOTE(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkSYMTAB(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkDYNSYM(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkDYNAMIC(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkREL(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkRELA(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkGNU_versym(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkGNU_verdef(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
-void checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkDUMMY(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkNOBITS(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkNULL(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkHASH(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkSTRTAB(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkNOTE(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkSYMTAB(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkDYNSYM(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkDYNAMIC(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkREL(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkRELA(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkGNU_versym(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkGNU_verdef(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
+int checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 , struct tetj_handle *);
 #if defined(__ia64__)
-void checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1 , struct tetj_handle *);
-void checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1 , struct tetj_handle *);
+int checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1 , struct tetj_handle *);
+int checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1 , struct tetj_handle *);
 #endif
 
 extern void checkElfsection(int index, ElfFile *file1, 
