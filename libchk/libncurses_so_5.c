@@ -1,8 +1,13 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libncurses_so_5[] = {
+	{"COLORS",""},
+	{"COLOR_PAIR",""},
+	{"COLOR_PAIRS",""},
 	{"COLS",""},
 	{"LINES",""},
+	{"PAIR_NUMBER",""},
+	{"acs_map",""},
 	{"addch",""},
 	{"addchnstr",""},
 	{"addchstr",""},

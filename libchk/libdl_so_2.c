@@ -11,7 +11,7 @@ struct versym libdl_so_2[] = {
 	{"dladdr","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"dladdr","GLIBC_2.0"},
+	{"dladdr","GLIBC_2.2.5"},
 #endif
 #if __s390__ && !__s390x__
 	{"dladdr","GLIBC_2.0"},
@@ -32,7 +32,7 @@ struct versym libdl_so_2[] = {
 	{"dlclose","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"dlclose","GLIBC_2.0"},
+	{"dlclose","GLIBC_2.2.5"},
 #endif
 #if __s390__ && !__s390x__
 	{"dlclose","GLIBC_2.0"},
@@ -53,7 +53,7 @@ struct versym libdl_so_2[] = {
 	{"dlerror","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"dlerror","GLIBC_2.0"},
+	{"dlerror","GLIBC_2.2.5"},
 #endif
 #if __s390__ && !__s390x__
 	{"dlerror","GLIBC_2.0"},
@@ -74,7 +74,7 @@ struct versym libdl_so_2[] = {
 	{"dlopen","GLIBC_2.1"},
 #endif
 #if __powerpc64__
-	{"dlopen","GLIBC_2.1"},
+	{"dlopen","GLIBC_2.2.5"},
 #endif
 #if __s390__ && !__s390x__
 	{"dlopen","GLIBC_2.1"},
@@ -95,7 +95,7 @@ struct versym libdl_so_2[] = {
 	{"dlsym","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"dlsym","GLIBC_2.0"},
+	{"dlsym","GLIBC_2.2.5"},
 #endif
 #if __s390__ && !__s390x__
 	{"dlsym","GLIBC_2.0"},

@@ -32,6 +32,9 @@ struct DynamicInfo DynamicInfo[] = {
 #if __s390__ && !__s390x__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
 #endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
+#endif /* __x86_64__ */
 #if __s390x__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
 #endif /* __s390x__ */
@@ -58,6 +61,9 @@ struct DynamicInfo DynamicInfo[] = {
 #if __s390__ && !__s390x__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
+#endif /* __x86_64__ */
 #if __s390x__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* __s390x__ */
@@ -78,6 +84,9 @@ struct DynamicInfo DynamicInfo[] = {
 #if __s390__ && !__s390x__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
 #endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
+#endif /* __x86_64__ */
 #if __s390x__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
 #endif /* __s390x__ */
