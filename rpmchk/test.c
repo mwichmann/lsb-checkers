@@ -19,6 +19,9 @@ int main(int argc, char *argv[])
 RpmFile	*rpmfile;
 char	*ptr;
 
+lanananame = "lsb";
+set_myappname(lanananame);
+
 if( argc != 2 ) {
 	fprintf(stderr, "%s: bad argument count %d\n", argv[0], argc );
 	usage(argv[0]);

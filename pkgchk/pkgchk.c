@@ -1,7 +1,7 @@
 /* 
  *
- * Copyright (c) 2002 The Free Standards Group Inc
- * Copyright (c) 2002 Stuart Anderson (anderson@freestandards.org)
+ * Copyright (c) 2002-2005 The Free Standards Group Inc
+ * Copyright (c) 2002-2005 Stuart Anderson (anderson@freestandards.org)
  *
  */
 #include <stdio.h>
@@ -37,7 +37,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.6 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.7 $";
 
 int
 main(int argc, char *argv[])
@@ -58,6 +58,7 @@ main(int argc, char *argv[])
     command_line = concat_string(command_line, " ");
   }
 
+  /* Parse args here, and allow lanananame to be set via command line option */
   if( argc != 2 ) {
     fprintf(stderr, "%s: bad argument count %d\n", argv[0], argc );
     usage(argv[0]);
@@ -69,6 +70,8 @@ main(int argc, char *argv[])
       fprintf(stderr,"rpmchk debug set to 0x%x\n", rpmchkdebug );
     }
 
+  if( lanananame )
+	  set_myappname(lanananame);
 
   if( (rpmfile = OpenRpmFile(argv[1])) == NULL ) {
     fprintf(stderr, "%s: Unable to open file %s\n", argv[0], argv[1] );

@@ -1,7 +1,7 @@
 /* 
  *
- * Copyright (c) 2002 The Free Standards Group Inc
- * Copyright (c) 2002 Stuart Anderson (anderson@freestandards.org)
+ * Copyright (c) 2002-2005 The Free Standards Group Inc
+ * Copyright (c) 2002-2005 Stuart Anderson (anderson@freestandards.org)
  *
  */
 #include <stdio.h>
@@ -484,7 +484,8 @@ checkRpmIdxNAME(RpmFile * file1, RpmHdrIndex * hidx,
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Package name: %s\n", pkgname);
 
-    set_myappname(pkgname);
+    if( !lanananame )
+    	set_myappname(pkgname);
 }
 
 void
@@ -985,35 +986,16 @@ void
 checkRpmIdxREQUIRENAME(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int i, d, hoffset, hcount;
+    int hoffset, hcount;
     char *name;
 
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
     name = file1->storeaddr + hoffset;
-    for (i = 0; i < hcount; i++) {
-	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
-	    fprintf(stderr, "Required Name: %s\n", name);
-	if (strcmp(name, "rpmlib(PayloadFilesHavePrefix)") == 0)
-	    hasPayloadFilesHavePrefix = 1;
-	if (strcmp(name, "rpmlib(CompressedFileNames)") == 0)
-	    hasCompressedFileNames = 1;
-	for (d = 0; d < numdeps; d++) {
-	    if (strcmp(validdeps[d], name) == 0) {
-		lsbdepidx = i;
-		break;
-	    }
-	}
-	name += strlen(name) + 1;
-    }
-
-    if (lsbdepidx < 0) {
-	fprintf(stderr,
-		"RPMTAG_REQUIRENAME did not contain some or all of ");
-	for (d = 0; d < numdeps; d++) {
-	    fprintf(stderr, "\"%s\" \n", validdeps[d]);
-	}
-    }
+    numrequirename = hcount;
+    requirename = name;
+    if( requirename && requireversion )
+	    check_dependencies(journal);
 }
 
 void
@@ -1388,17 +1370,10 @@ checkRpmIdxREQUIREVERSION(RpmFile * file1, RpmHdrIndex * hidx,
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
     name = file1->storeaddr + hoffset;
-    for (i = 0; i < hcount; i++) {
-	if (i == lsbdepidx && strcmp(name, validdepver) != 0) {
-	    fprintf(stderr, "Incorrect version on \"lsb\" dependency: ");
-	    fprintf(stderr, "expecting %s but found %s\n", validdepver,
-		    name);
-	}
-	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
-	    fprintf(stderr, "Required Version: %s\n", name);
-	fprintf(stderr, "Required Version not checked: %s\n", name);
-	name += strlen(name) + 1;
-    }
+    numrequireversion = hcount;
+    requireversion = name;
+    if( requirename && requireversion )
+	    check_dependencies(journal);
 }
 
 void
@@ -1572,7 +1547,7 @@ checkRpmIdxPREIN(RpmFile * file1, RpmHdrIndex * hidx,
 
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Pre-install program: %s\n", prog);
-    fprintf(stderr, "Pre-install program not checked: %s\n", prog);
+    fprintf(stderr, "Pre-install program not checked\n");
 
 }
 
@@ -1588,7 +1563,7 @@ checkRpmIdxPOSTIN(RpmFile * file1, RpmHdrIndex * hidx,
 
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Post-install program: %s\n", prog);
-    fprintf(stderr, "Post-install program not checked: %s\n", prog);
+    fprintf(stderr, "Post-install program not checked\n");
 }
 
 void
@@ -1603,7 +1578,7 @@ checkRpmIdxPREUN(RpmFile * file1, RpmHdrIndex * hidx,
 
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Pre-uninstall program: %s\n", prog);
-    fprintf(stderr, "Pre-uninstall program not checked: %s\n", prog);
+    fprintf(stderr, "Pre-uninstall program not checked\n");
 }
 
 void
@@ -1618,5 +1593,5 @@ checkRpmIdxPOSTUN(RpmFile * file1, RpmHdrIndex * hidx,
 
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Post-uninstall program: %s\n", prog);
-    fprintf(stderr, "Post-uninstall program not checked: %s\n", prog);
+    fprintf(stderr, "Post-uninstall program not checked\n");
 }
