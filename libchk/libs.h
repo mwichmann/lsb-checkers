@@ -34,6 +34,9 @@ extern struct versym libc_so_6[];
 #if __s390__ && !__s390x__
 extern struct versym libc_so_6[];
 #endif
+#if __x86_64__
+extern struct versym libc_so_6[];
+#endif
 #if __s390x__
 extern struct versym libc_so_6[];
 #endif
@@ -56,6 +59,9 @@ extern struct versym libcrypt_so_1[];
 #if __s390__ && !__s390x__
 extern struct versym libcrypt_so_1[];
 #endif
+#if __x86_64__
+extern struct versym libcrypt_so_1[];
+#endif
 #if __s390x__
 extern struct versym libcrypt_so_1[];
 #endif
@@ -75,6 +81,9 @@ extern struct versym libdl_so_2[];
 #if __s390__ && !__s390x__
 extern struct versym libdl_so_2[];
 #endif
+#if __x86_64__
+extern struct versym libdl_so_2[];
+#endif
 #if __s390x__
 extern struct versym libdl_so_2[];
 #endif
@@ -91,6 +100,9 @@ extern struct versym libm_so_6[];
 extern struct versym libm_so_6[];
 #endif
 #if __s390__ && !__s390x__
+extern struct versym libm_so_6[];
+#endif
+#if __x86_64__
 extern struct versym libm_so_6[];
 #endif
 #if __s390x__
@@ -115,6 +127,9 @@ extern struct versym libpthread_so_0[];
 extern struct versym libpthread_so_0[];
 #endif
 #if __s390__ && !__s390x__
+extern struct versym libpthread_so_0[];
+#endif
+#if __x86_64__
 extern struct versym libpthread_so_0[];
 #endif
 #if __s390x__
