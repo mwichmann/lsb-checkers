@@ -3,10 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-#include <zlib.h>
-static int(*funcptr)(z_streamp, z_streamp) = 0;
+#undef deflateCopy
+static int(*funcptr) (z_streamp , z_streamp ) = 0;
 
-int deflateCopy(z_streamp arg0, z_streamp arg1)
+int deflateCopy (z_streamp arg0 , z_streamp arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateCopy");
@@ -15,7 +15,7 @@ int deflateCopy(z_streamp arg0, z_streamp arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_deflateCopy(z_streamp arg0, z_streamp arg1)
+int lsb_deflateCopy (z_streamp arg0 , z_streamp arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateCopy");

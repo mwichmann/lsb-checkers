@@ -3,11 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-#include <zlib.h>
-#include <zlib.h>
-static uLong(*funcptr)(uLong, const Bytef *, uInt) = 0;
+#undef crc32
+static uLong(*funcptr) (uLong , const Bytef * , uInt ) = 0;
 
-uLong crc32(uLong arg0, const Bytef * arg1, uInt arg2)
+uLong crc32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "crc32");
@@ -17,7 +16,7 @@ uLong crc32(uLong arg0, const Bytef * arg1, uInt arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-uLong lsb_crc32(uLong arg0, const Bytef * arg1, uInt arg2)
+uLong lsb_crc32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "crc32");

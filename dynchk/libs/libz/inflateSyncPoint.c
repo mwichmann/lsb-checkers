@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static int(*funcptr)(z_streamp) = 0;
+#undef inflateSyncPoint
+static int(*funcptr) (z_streamp ) = 0;
 
-int inflateSyncPoint(z_streamp arg0)
+int inflateSyncPoint (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSyncPoint");
@@ -13,7 +14,7 @@ int inflateSyncPoint(z_streamp arg0)
 	return funcptr(arg0);
 }
 
-int lsb_inflateSyncPoint(z_streamp arg0)
+int lsb_inflateSyncPoint (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSyncPoint");

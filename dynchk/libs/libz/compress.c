@@ -3,10 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-#include <zlib.h>
-static int(*funcptr)(Bytef *, uLongf *, const Bytef *, uLong) = 0;
+#undef compress
+static int(*funcptr) (Bytef * , uLongf * , const Bytef * , uLong ) = 0;
 
-int compress(Bytef * arg0, uLongf * arg1, const Bytef * arg2, uLong arg3)
+int compress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "compress");
@@ -17,7 +17,7 @@ int compress(Bytef * arg0, uLongf * arg1, const Bytef * arg2, uLong arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_compress(Bytef * arg0, uLongf * arg1, const Bytef * arg2, uLong arg3)
+int lsb_compress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "compress");

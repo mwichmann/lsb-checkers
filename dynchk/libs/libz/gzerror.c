@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static const char *(*funcptr)(gzFile, int *) = 0;
+#undef gzerror
+static const char *(*funcptr) (gzFile , int * ) = 0;
 
-const char * gzerror(gzFile arg0, int * arg1)
+const char * gzerror (gzFile arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzerror");
@@ -14,7 +15,7 @@ const char * gzerror(gzFile arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-const char * lsb_gzerror(gzFile arg0, int * arg1)
+const char * lsb_gzerror (gzFile arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzerror");

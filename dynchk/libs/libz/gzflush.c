@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static int(*funcptr)(gzFile, int) = 0;
+#undef gzflush
+static int(*funcptr) (gzFile , int ) = 0;
 
-int gzflush(gzFile arg0, int arg1)
+int gzflush (gzFile arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzflush");
@@ -14,7 +15,7 @@ int gzflush(gzFile arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_gzflush(gzFile arg0, int arg1)
+int lsb_gzflush (gzFile arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzflush");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-static int(*funcptr)(gzFile) = 0;
+#undef gzeof
+static int(*funcptr) (gzFile ) = 0;
 
-int gzeof(gzFile arg0)
+int gzeof (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzeof");
@@ -13,7 +14,7 @@ int gzeof(gzFile arg0)
 	return funcptr(arg0);
 }
 
-int lsb_gzeof(gzFile arg0)
+int lsb_gzeof (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzeof");

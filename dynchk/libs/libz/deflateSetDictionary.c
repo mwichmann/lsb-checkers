@@ -3,11 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <zlib.h>
-#include <zlib.h>
-#include <zlib.h>
-static int(*funcptr)(z_streamp, const Bytef *, uInt) = 0;
+#undef deflateSetDictionary
+static int(*funcptr) (z_streamp , const Bytef * , uInt ) = 0;
 
-int deflateSetDictionary(z_streamp arg0, const Bytef * arg1, uInt arg2)
+int deflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateSetDictionary");
@@ -17,7 +16,7 @@ int deflateSetDictionary(z_streamp arg0, const Bytef * arg1, uInt arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_deflateSetDictionary(z_streamp arg0, const Bytef * arg1, uInt arg2)
+int lsb_deflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateSetDictionary");
