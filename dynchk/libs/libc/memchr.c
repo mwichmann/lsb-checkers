@@ -14,11 +14,11 @@ void * memchr (const void * arg0 , int arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "memchr");
+		funcptr = dlvsym(RTLD_NEXT, "memchr", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "memchr()");
+		__lsb_output(4, "memchr()");
 		validate_RWaddress( arg0, "memchr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "memchr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "memchr - arg1");

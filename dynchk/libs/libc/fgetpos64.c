@@ -13,11 +13,11 @@ int fgetpos64 (FILE * arg0 , fpos64_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fgetpos64");
+		funcptr = dlvsym(RTLD_NEXT, "fgetpos64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fgetpos64()");
+		__lsb_output(4, "fgetpos64()");
 		validate_RWaddress( arg0, "fgetpos64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fgetpos64 - arg0");
 		validate_RWaddress( arg1, "fgetpos64 - arg1");

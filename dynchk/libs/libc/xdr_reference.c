@@ -14,11 +14,11 @@ bool_t xdr_reference (XDR * arg0 , caddr_t * arg1 , u_int arg2 , xdrproc_t arg3 
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_reference");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_reference", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdr_reference()");
+		__lsb_output(4, "xdr_reference()");
 		validate_RWaddress( arg0, "xdr_reference - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_reference - arg0");
 		validate_RWaddress( arg1, "xdr_reference - arg1");

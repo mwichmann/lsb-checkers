@@ -13,11 +13,11 @@ wint_t towctrans (wint_t arg0 , wctrans_t arg1 )
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "towctrans");
+		funcptr = dlvsym(RTLD_NEXT, "towctrans", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "towctrans()");
+		__lsb_output(4, "towctrans()");
 		validate_NULL_TYPETYPE(  arg0, "towctrans - arg0");
 		validate_NULL_TYPETYPE(  arg1, "towctrans - arg1");
 	}

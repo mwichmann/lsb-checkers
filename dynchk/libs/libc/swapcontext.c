@@ -13,11 +13,11 @@ int swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "swapcontext");
+		funcptr = dlvsym(RTLD_NEXT, "swapcontext", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "swapcontext()");
+		__lsb_output(4, "swapcontext()");
 		validate_RWaddress( arg0, "swapcontext - arg0");
 		validate_NULL_TYPETYPE(  arg0, "swapcontext - arg0");
 		validate_Rdaddress( arg1, "swapcontext - arg1");

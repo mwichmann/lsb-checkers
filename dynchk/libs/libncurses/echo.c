@@ -17,7 +17,7 @@ int echo ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "echo()");
+		__lsb_output(4, "echo()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

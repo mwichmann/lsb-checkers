@@ -13,11 +13,11 @@ long atol (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "atol");
+		funcptr = dlvsym(RTLD_NEXT, "atol", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "atol()");
+		__lsb_output(4, "atol()");
 		validate_RWaddress( arg0, "atol - arg0");
 		validate_NULL_TYPETYPE(  arg0, "atol - arg0");
 	}

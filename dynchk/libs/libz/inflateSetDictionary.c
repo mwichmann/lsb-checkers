@@ -17,7 +17,7 @@ int inflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "inflateSetDictionary()");
+		__lsb_output(4, "inflateSetDictionary()");
 		validate_NULL_TYPETYPE(  arg0, "inflateSetDictionary - arg0");
 		validate_Rdaddress( arg1, "inflateSetDictionary - arg1");
 		validate_NULL_TYPETYPE(  arg1, "inflateSetDictionary - arg1");

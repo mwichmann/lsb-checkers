@@ -17,7 +17,7 @@ int scr_init (const char * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "scr_init()");
+		__lsb_output(4, "scr_init()");
 		validate_Rdaddress( arg0, "scr_init - arg0");
 		validate_NULL_TYPETYPE(  arg0, "scr_init - arg0");
 	}

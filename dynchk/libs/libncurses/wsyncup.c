@@ -16,7 +16,7 @@ void wsyncup (WINDOW * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wsyncup()");
+		__lsb_output(4, "wsyncup()");
 		validate_RWaddress( arg0, "wsyncup - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wsyncup - arg0");
 	}

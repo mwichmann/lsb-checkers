@@ -13,11 +13,11 @@ clock_t clock ()
 	int reset_flag = __lsb_check_params;
 	clock_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clock");
+		funcptr = dlvsym(RTLD_NEXT, "clock", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clock()");
+		__lsb_output(4, "clock()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

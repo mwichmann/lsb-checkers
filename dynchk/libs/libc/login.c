@@ -12,11 +12,11 @@ void login (const struct utmp * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "login");
+		funcptr = dlvsym(RTLD_NEXT, "login", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "login()");
+		__lsb_output(4, "login()");
 		validate_Rdaddress( arg0, "login - arg0");
 		validate_NULL_TYPETYPE(  arg0, "login - arg0");
 	}

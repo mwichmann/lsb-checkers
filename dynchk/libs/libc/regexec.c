@@ -14,11 +14,11 @@ int regexec (const regex_t * arg0 , const char * arg1 , size_t arg2 , regmatch_t
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "regexec");
+		funcptr = dlvsym(RTLD_NEXT, "regexec", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "regexec()");
+		__lsb_output(4, "regexec()");
 		validate_Rdaddress( arg0, "regexec - arg0");
 		validate_NULL_TYPETYPE(  arg0, "regexec - arg0");
 		validate_Rdaddress( arg1, "regexec - arg1");

@@ -17,7 +17,7 @@ int reset_prog_mode ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "reset_prog_mode()");
+		__lsb_output(4, "reset_prog_mode()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -18,7 +18,7 @@ int putwin (WINDOW * arg0 , FILE * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "putwin()");
+		__lsb_output(4, "putwin()");
 		validate_RWaddress( arg0, "putwin - arg0");
 		validate_NULL_TYPETYPE(  arg0, "putwin - arg0");
 		validate_RWaddress( arg1, "putwin - arg1");

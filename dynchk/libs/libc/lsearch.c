@@ -15,11 +15,11 @@ void * lsearch (const void * arg0 , void * arg1 , size_t * arg2 , size_t arg3 , 
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lsearch");
+		funcptr = dlvsym(RTLD_NEXT, "lsearch", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "lsearch()");
+		__lsb_output(4, "lsearch()");
 		validate_Rdaddress( arg0, "lsearch - arg0");
 		validate_NULL_TYPETYPE(  arg0, "lsearch - arg0");
 		validate_RWaddress( arg1, "lsearch - arg1");

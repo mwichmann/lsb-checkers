@@ -14,11 +14,11 @@ char * strerror_r (int arg0 , char * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strerror_r");
+		funcptr = dlvsym(RTLD_NEXT, "strerror_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strerror_r()");
+		__lsb_output(4, "strerror_r()");
 		validate_NULL_TYPETYPE(  arg0, "strerror_r - arg0");
 		validate_RWaddress( arg1, "strerror_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "strerror_r - arg1");

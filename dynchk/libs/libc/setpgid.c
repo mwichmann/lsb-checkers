@@ -14,11 +14,11 @@ int setpgid (pid_t arg0 , pid_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setpgid");
+		funcptr = dlvsym(RTLD_NEXT, "setpgid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setpgid()");
+		__lsb_output(4, "setpgid()");
 		validate_NULL_TYPETYPE(  arg0, "setpgid - arg0");
 		validate_NULL_TYPETYPE(  arg1, "setpgid - arg1");
 	}

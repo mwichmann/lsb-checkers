@@ -17,7 +17,7 @@ int prefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int ar
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "prefresh()");
+		__lsb_output(4, "prefresh()");
 		validate_RWaddress( arg0, "prefresh - arg0");
 		validate_NULL_TYPETYPE(  arg0, "prefresh - arg0");
 		validate_NULL_TYPETYPE(  arg1, "prefresh - arg1");

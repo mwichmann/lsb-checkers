@@ -13,11 +13,11 @@ long __strtol_internal (const char * arg0 , char * * arg1 , int arg2 , int arg3 
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__strtol_internal");
+		funcptr = dlvsym(RTLD_NEXT, "__strtol_internal", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__strtol_internal()");
+		__lsb_output(4, "__strtol_internal()");
 		validate_Rdaddress( arg0, "__strtol_internal - arg0");
 		validate_NULL_TYPETYPE(  arg0, "__strtol_internal - arg0");
 		if( arg1 ) {

@@ -14,11 +14,11 @@ int mlock (const void * arg0 , size_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mlock");
+		funcptr = dlvsym(RTLD_NEXT, "mlock", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mlock()");
+		__lsb_output(4, "mlock()");
 		validate_Rdaddress( arg0, "mlock - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mlock - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mlock - arg1");

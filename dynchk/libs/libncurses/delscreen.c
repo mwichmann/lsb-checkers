@@ -16,7 +16,7 @@ void delscreen (SCREEN * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "delscreen()");
+		__lsb_output(4, "delscreen()");
 		validate_RWaddress( arg0, "delscreen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "delscreen - arg0");
 	}

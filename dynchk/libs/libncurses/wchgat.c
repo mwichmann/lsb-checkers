@@ -17,7 +17,7 @@ int wchgat (WINDOW * arg0 , int arg1 , attr_t arg2 , short arg3 , const void * a
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wchgat()");
+		__lsb_output(4, "wchgat()");
 		validate_RWaddress( arg0, "wchgat - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wchgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wchgat - arg1");

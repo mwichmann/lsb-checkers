@@ -13,11 +13,11 @@ long double y0l (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "y0l");
+		funcptr = dlvsym(RTLD_NEXT, "y0l", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "y0l()");
+		__lsb_output(4, "y0l()");
 		validate_NULL_TYPETYPE(  arg0, "y0l - arg0");
 	}
 	ret_value = funcptr(arg0);

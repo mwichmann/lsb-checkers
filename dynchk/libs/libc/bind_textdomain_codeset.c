@@ -17,7 +17,7 @@ char * bind_textdomain_codeset (const char * arg0 , const char * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "bind_textdomain_codeset()");
+		__lsb_output(4, "bind_textdomain_codeset()");
 		validate_Rdaddress( arg0, "bind_textdomain_codeset - arg0");
 		validate_NULL_TYPETYPE(  arg0, "bind_textdomain_codeset - arg0");
 		validate_Rdaddress( arg1, "bind_textdomain_codeset - arg1");

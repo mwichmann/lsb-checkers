@@ -13,11 +13,11 @@ float pow10f (float arg0 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pow10f");
+		funcptr = dlvsym(RTLD_NEXT, "pow10f", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "pow10f()");
+		__lsb_output(4, "pow10f()");
 		validate_NULL_TYPETYPE(  arg0, "pow10f - arg0");
 	}
 	ret_value = funcptr(arg0);

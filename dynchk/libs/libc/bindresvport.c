@@ -13,11 +13,11 @@ int bindresvport (int arg0 , struct sockaddr_in * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "bindresvport");
+		funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "bindresvport()");
+		__lsb_output(4, "bindresvport()");
 		validate_NULL_TYPETYPE(  arg0, "bindresvport - arg0");
 		validate_RWaddress( arg1, "bindresvport - arg1");
 		validate_NULL_TYPETYPE(  arg1, "bindresvport - arg1");

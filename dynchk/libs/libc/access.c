@@ -13,11 +13,11 @@ int access (const char * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "access");
+		funcptr = dlvsym(RTLD_NEXT, "access", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "access()");
+		__lsb_output(4, "access()");
 		validate_Rdaddress( arg0, "access - arg0");
 		validate_pathname(  arg0, "access - arg0");
 		validate_NULL_TYPETYPE(  arg1, "access - arg1");

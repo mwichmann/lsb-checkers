@@ -13,11 +13,11 @@ int raise (int arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "raise");
+		funcptr = dlvsym(RTLD_NEXT, "raise", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "raise()");
+		__lsb_output(4, "raise()");
 		validate_NULL_TYPETYPE(  arg0, "raise - arg0");
 	}
 	ret_value = funcptr(arg0);

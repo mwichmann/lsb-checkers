@@ -14,11 +14,11 @@ struct tm * localtime (const time_t * arg0 )
 	int reset_flag = __lsb_check_params;
 	struct tm * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "localtime");
+		funcptr = dlvsym(RTLD_NEXT, "localtime", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "localtime()");
+		__lsb_output(4, "localtime()");
 		validate_Rdaddress( arg0, "localtime - arg0");
 		validate_NULL_TYPETYPE(  arg0, "localtime - arg0");
 	}

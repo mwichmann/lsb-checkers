@@ -13,11 +13,11 @@ wctrans_t wctrans (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	wctrans_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wctrans");
+		funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wctrans()");
+		__lsb_output(4, "wctrans()");
 		validate_Rdaddress( arg0, "wctrans - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wctrans - arg0");
 	}

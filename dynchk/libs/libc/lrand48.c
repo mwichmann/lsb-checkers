@@ -13,11 +13,11 @@ long lrand48 ()
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lrand48");
+		funcptr = dlvsym(RTLD_NEXT, "lrand48", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "lrand48()");
+		__lsb_output(4, "lrand48()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

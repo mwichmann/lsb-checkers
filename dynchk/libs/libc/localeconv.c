@@ -13,11 +13,11 @@ struct lconv * localeconv ()
 	int reset_flag = __lsb_check_params;
 	struct lconv * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "localeconv");
+		funcptr = dlvsym(RTLD_NEXT, "localeconv", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "localeconv()");
+		__lsb_output(4, "localeconv()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

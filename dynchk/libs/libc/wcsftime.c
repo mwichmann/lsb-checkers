@@ -15,11 +15,11 @@ size_t wcsftime (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , const str
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcsftime");
+		funcptr = dlvsym(RTLD_NEXT, "wcsftime", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcsftime()");
+		__lsb_output(4, "wcsftime()");
 		validate_RWaddress( arg0, "wcsftime - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsftime - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wcsftime - arg1");

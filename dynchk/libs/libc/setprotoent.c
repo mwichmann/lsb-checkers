@@ -12,11 +12,11 @@ void setprotoent (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setprotoent");
+		funcptr = dlvsym(RTLD_NEXT, "setprotoent", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setprotoent()");
+		__lsb_output(4, "setprotoent()");
 		validate_NULL_TYPETYPE(  arg0, "setprotoent - arg0");
 	}
 	funcptr(arg0);

@@ -13,11 +13,11 @@ int symlink (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "symlink");
+		funcptr = dlvsym(RTLD_NEXT, "symlink", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "symlink()");
+		__lsb_output(4, "symlink()");
 		validate_Rdaddress( arg0, "symlink - arg0");
 		validate_NULL_TYPETYPE(  arg0, "symlink - arg0");
 		validate_Rdaddress( arg1, "symlink - arg1");

@@ -14,11 +14,11 @@ size_t wcsspn (const wchar_t * arg0 , const wchar_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcsspn");
+		funcptr = dlvsym(RTLD_NEXT, "wcsspn", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcsspn()");
+		__lsb_output(4, "wcsspn()");
 		validate_Rdaddress( arg0, "wcsspn - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsspn - arg0");
 		validate_Rdaddress( arg1, "wcsspn - arg1");

@@ -12,11 +12,11 @@ void siglongjmp (sigjmp_buf arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "siglongjmp");
+		funcptr = dlvsym(RTLD_NEXT, "siglongjmp", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "siglongjmp()");
+		__lsb_output(4, "siglongjmp()");
 		validate_NULL_TYPETYPE(  arg0, "siglongjmp - arg0");
 		validate_NULL_TYPETYPE(  arg1, "siglongjmp - arg1");
 	}

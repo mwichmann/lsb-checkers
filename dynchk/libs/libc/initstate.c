@@ -14,11 +14,11 @@ char * initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "initstate");
+		funcptr = dlvsym(RTLD_NEXT, "initstate", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "initstate()");
+		__lsb_output(4, "initstate()");
 		validate_NULL_TYPETYPE(  arg0, "initstate - arg0");
 		validate_RWaddress( arg1, "initstate - arg1");
 		validate_NULL_TYPETYPE(  arg1, "initstate - arg1");

@@ -14,11 +14,11 @@ wchar_t * wcswcs (const wchar_t * arg0 , const wchar_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	wchar_t * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcswcs");
+		funcptr = dlvsym(RTLD_NEXT, "wcswcs", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcswcs()");
+		__lsb_output(4, "wcswcs()");
 		validate_Rdaddress( arg0, "wcswcs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcswcs - arg0");
 		validate_Rdaddress( arg1, "wcswcs - arg1");

@@ -14,11 +14,11 @@ int ftruncate (int arg0 , off_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ftruncate");
+		funcptr = dlvsym(RTLD_NEXT, "ftruncate", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ftruncate()");
+		__lsb_output(4, "ftruncate()");
 		validate_NULL_TYPETYPE(  arg0, "ftruncate - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ftruncate - arg1");
 	}

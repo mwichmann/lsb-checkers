@@ -13,11 +13,11 @@ struct hostent * gethostbyname (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	struct hostent * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gethostbyname");
+		funcptr = dlvsym(RTLD_NEXT, "gethostbyname", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gethostbyname()");
+		__lsb_output(4, "gethostbyname()");
 		validate_Rdaddress( arg0, "gethostbyname - arg0");
 		validate_NULL_TYPETYPE(  arg0, "gethostbyname - arg0");
 	}

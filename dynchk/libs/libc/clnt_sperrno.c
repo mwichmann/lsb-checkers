@@ -13,11 +13,11 @@ char * clnt_sperrno (enum clnt_stat arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clnt_sperrno");
+		funcptr = dlvsym(RTLD_NEXT, "clnt_sperrno", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clnt_sperrno()");
+		__lsb_output(4, "clnt_sperrno()");
 		validate_NULL_TYPETYPE(  arg0, "clnt_sperrno - arg0");
 	}
 	ret_value = funcptr(arg0);

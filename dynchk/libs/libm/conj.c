@@ -13,11 +13,11 @@ double complex conj (double complex arg0 )
 	int reset_flag = __lsb_check_params;
 	double complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "conj");
+		funcptr = dlvsym(RTLD_NEXT, "conj", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "conj()");
+		__lsb_output(4, "conj()");
 		validate_NULL_TYPETYPE(  arg0, "conj - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -13,11 +13,11 @@ int __libc_current_sigrtmax ()
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__libc_current_sigrtmax");
+		funcptr = dlvsym(RTLD_NEXT, "__libc_current_sigrtmax", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__libc_current_sigrtmax()");
+		__lsb_output(4, "__libc_current_sigrtmax()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

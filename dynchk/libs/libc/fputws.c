@@ -15,11 +15,11 @@ int fputws (const wchar_t * arg0 , FILE * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fputws");
+		funcptr = dlvsym(RTLD_NEXT, "fputws", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fputws()");
+		__lsb_output(4, "fputws()");
 		validate_Rdaddress( arg0, "fputws - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fputws - arg0");
 		validate_RWaddress( arg1, "fputws - arg1");

@@ -13,11 +13,11 @@ int getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getutent_r");
+		funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getutent_r()");
+		__lsb_output(4, "getutent_r()");
 		validate_RWaddress( arg0, "getutent_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getutent_r - arg0");
 		validate_RWaddress( arg1, "getutent_r - arg1");

@@ -13,11 +13,11 @@ int remove (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "remove");
+		funcptr = dlvsym(RTLD_NEXT, "remove", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "remove()");
+		__lsb_output(4, "remove()");
 		validate_Rdaddress( arg0, "remove - arg0");
 		validate_NULL_TYPETYPE(  arg0, "remove - arg0");
 	}

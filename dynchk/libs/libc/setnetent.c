@@ -12,11 +12,11 @@ void setnetent (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setnetent");
+		funcptr = dlvsym(RTLD_NEXT, "setnetent", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setnetent()");
+		__lsb_output(4, "setnetent()");
 		validate_NULL_TYPETYPE(  arg0, "setnetent - arg0");
 	}
 	funcptr(arg0);

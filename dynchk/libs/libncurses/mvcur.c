@@ -17,7 +17,7 @@ int mvcur (int arg0 , int arg1 , int arg2 , int arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvcur()");
+		__lsb_output(4, "mvcur()");
 		validate_NULL_TYPETYPE(  arg0, "mvcur - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvcur - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvcur - arg2");

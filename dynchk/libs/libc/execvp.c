@@ -13,11 +13,11 @@ int execvp (const char * arg0 , char *const  arg1 [])
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "execvp");
+		funcptr = dlvsym(RTLD_NEXT, "execvp", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "execvp()");
+		__lsb_output(4, "execvp()");
 		validate_Rdaddress( arg0, "execvp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "execvp - arg0");
 		validate_NULL_TYPETYPE(  arg1, "execvp - arg1");

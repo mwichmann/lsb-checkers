@@ -14,11 +14,11 @@ struct CLIENT * clnt_create (const char * arg0 , const u_long arg1 , const u_lon
 	int reset_flag = __lsb_check_params;
 	struct CLIENT * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clnt_create");
+		funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clnt_create()");
+		__lsb_output(4, "clnt_create()");
 		validate_Rdaddress( arg0, "clnt_create - arg0");
 		validate_NULL_TYPETYPE(  arg0, "clnt_create - arg0");
 		validate_NULL_TYPETYPE(  arg1, "clnt_create - arg1");

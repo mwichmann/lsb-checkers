@@ -14,7 +14,7 @@ int munmap (void * arg0 , size_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "munmap");
+		funcptr = dlvsym(RTLD_NEXT, "munmap", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

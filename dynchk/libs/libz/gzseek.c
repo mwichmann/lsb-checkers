@@ -17,7 +17,7 @@ z_off_t gzseek (gzFile arg0 , z_off_t arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gzseek()");
+		__lsb_output(4, "gzseek()");
 		validate_NULL_TYPETYPE(  arg0, "gzseek - arg0");
 		validate_NULL_TYPETYPE(  arg1, "gzseek - arg1");
 		validate_NULL_TYPETYPE(  arg2, "gzseek - arg2");

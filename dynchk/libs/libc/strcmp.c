@@ -13,11 +13,11 @@ int strcmp (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strcmp");
+		funcptr = dlvsym(RTLD_NEXT, "strcmp", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strcmp()");
+		__lsb_output(4, "strcmp()");
 		validate_RWaddress( arg0, "strcmp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strcmp - arg0");
 		validate_RWaddress( arg1, "strcmp - arg1");

@@ -13,11 +13,11 @@ int isascii (int arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "isascii");
+		funcptr = dlvsym(RTLD_NEXT, "isascii", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "isascii()");
+		__lsb_output(4, "isascii()");
 		validate_NULL_TYPETYPE(  arg0, "isascii - arg0");
 	}
 	ret_value = funcptr(arg0);

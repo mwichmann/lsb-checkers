@@ -14,11 +14,11 @@ int forkpty (int * arg0 , char * arg1 , struct termios * arg2 , struct winsize *
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "forkpty");
+		funcptr = dlvsym(RTLD_NEXT, "forkpty", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "forkpty()");
+		__lsb_output(4, "forkpty()");
 		validate_RWaddress( arg0, "forkpty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "forkpty - arg0");
 		validate_RWaddress( arg1, "forkpty - arg1");

@@ -13,11 +13,11 @@ int getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getsockopt");
+		funcptr = dlvsym(RTLD_NEXT, "getsockopt", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getsockopt()");
+		__lsb_output(4, "getsockopt()");
 		validate_NULL_TYPETYPE(  arg0, "getsockopt - arg0");
 		validate_NULL_TYPETYPE(  arg1, "getsockopt - arg1");
 		validate_NULL_TYPETYPE(  arg2, "getsockopt - arg2");

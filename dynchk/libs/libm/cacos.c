@@ -13,11 +13,11 @@ double complex cacos (double complex arg0 )
 	int reset_flag = __lsb_check_params;
 	double complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "cacos");
+		funcptr = dlvsym(RTLD_NEXT, "cacos", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "cacos()");
+		__lsb_output(4, "cacos()");
 		validate_NULL_TYPETYPE(  arg0, "cacos - arg0");
 	}
 	ret_value = funcptr(arg0);

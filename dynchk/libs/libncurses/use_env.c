@@ -16,7 +16,7 @@ void use_env (bool arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "use_env()");
+		__lsb_output(4, "use_env()");
 		validate_NULL_TYPETYPE(  arg0, "use_env - arg0");
 	}
 	funcptr(arg0);

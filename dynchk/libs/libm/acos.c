@@ -13,11 +13,11 @@ double acos (double arg0 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "acos");
+		funcptr = dlvsym(RTLD_NEXT, "acos", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "acos()");
+		__lsb_output(4, "acos()");
 		validate_NULL_TYPETYPE(  arg0, "acos - arg0");
 	}
 	ret_value = funcptr(arg0);

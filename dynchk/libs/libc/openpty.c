@@ -14,11 +14,11 @@ int openpty (int * arg0 , int * arg1 , char * arg2 , struct termios * arg3 , str
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "openpty");
+		funcptr = dlvsym(RTLD_NEXT, "openpty", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "openpty()");
+		__lsb_output(4, "openpty()");
 		validate_RWaddress( arg0, "openpty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "openpty - arg0");
 		validate_RWaddress( arg1, "openpty - arg1");

@@ -14,11 +14,11 @@ int creat (const char * arg0 , mode_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "creat");
+		funcptr = dlvsym(RTLD_NEXT, "creat", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "creat()");
+		__lsb_output(4, "creat()");
 		validate_Rdaddress( arg0, "creat - arg0");
 		validate_NULL_TYPETYPE(  arg0, "creat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "creat - arg1");

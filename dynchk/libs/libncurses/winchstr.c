@@ -17,7 +17,7 @@ int winchstr (WINDOW * arg0 , chtype * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "winchstr()");
+		__lsb_output(4, "winchstr()");
 		validate_RWaddress( arg0, "winchstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "winchstr - arg0");
 		validate_RWaddress( arg1, "winchstr - arg1");

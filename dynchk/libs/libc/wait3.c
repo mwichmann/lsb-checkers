@@ -14,11 +14,11 @@ pid_t wait3 (int * arg0 , int arg1 , struct rusage * arg2 )
 	int reset_flag = __lsb_check_params;
 	pid_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wait3");
+		funcptr = dlvsym(RTLD_NEXT, "wait3", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wait3()");
+		__lsb_output(4, "wait3()");
 		validate_RWaddress( arg0, "wait3 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wait3 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wait3 - arg1");

@@ -17,7 +17,7 @@ float log10f (float arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "log10f()");
+		__lsb_output(4, "log10f()");
 		validate_NULL_TYPETYPE(  arg0, "log10f - arg0");
 	}
 	ret_value = funcptr(arg0);

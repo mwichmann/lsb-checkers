@@ -13,11 +13,11 @@ int iswblank (wint_t arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "iswblank");
+		funcptr = dlvsym(RTLD_NEXT, "iswblank", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "iswblank()");
+		__lsb_output(4, "iswblank()");
 		validate_NULL_TYPETYPE(  arg0, "iswblank - arg0");
 	}
 	ret_value = funcptr(arg0);

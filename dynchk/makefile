@@ -30,8 +30,8 @@ $(TEST_LIB)::
 $(FHS_LIB):: 
 	cd fhs && make all
 
-liblsbdynchk.so: $(WRAPPER_LIBS) $(FHS_LIB) $(TEST_LIB) misc/global_flag.o  misc/lsb_output.o makefile
-	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 misc/lsb_output.o misc/global_flag.o $(REAL_LIBS) $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) 
+liblsbdynchk.so: $(WRAPPER_LIBS) $(FHS_LIB) $(TEST_LIB) misc/global_flag.o misc/lsb_output.o makefile liblsbdynchk.Version
+	ld -shared --version-script liblsbdynchk.Version -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 $(REAL_LIBS) $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/lsb_output.o misc/global_flag.o
 
 lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \

@@ -13,11 +13,11 @@ wint_t getwchar ()
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getwchar");
+		funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getwchar()");
+		__lsb_output(4, "getwchar()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

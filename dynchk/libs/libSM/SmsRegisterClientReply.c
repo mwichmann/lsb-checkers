@@ -17,7 +17,7 @@ int SmsRegisterClientReply (SmsConn arg0 , char * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmsRegisterClientReply()");
+		__lsb_output(4, "SmsRegisterClientReply()");
 		validate_NULL_TYPETYPE(  arg0, "SmsRegisterClientReply - arg0");
 		validate_RWaddress( arg1, "SmsRegisterClientReply - arg1");
 		validate_NULL_TYPETYPE(  arg1, "SmsRegisterClientReply - arg1");

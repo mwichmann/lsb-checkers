@@ -17,7 +17,7 @@ int deflateCopy (z_streamp arg0 , z_streamp arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "deflateCopy()");
+		__lsb_output(4, "deflateCopy()");
 		validate_NULL_TYPETYPE(  arg0, "deflateCopy - arg0");
 		validate_NULL_TYPETYPE(  arg1, "deflateCopy - arg1");
 	}

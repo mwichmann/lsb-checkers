@@ -13,11 +13,11 @@ float complex catanhf (float complex arg0 )
 	int reset_flag = __lsb_check_params;
 	float complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "catanhf");
+		funcptr = dlvsym(RTLD_NEXT, "catanhf", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "catanhf()");
+		__lsb_output(4, "catanhf()");
 		validate_NULL_TYPETYPE(  arg0, "catanhf - arg0");
 	}
 	ret_value = funcptr(arg0);

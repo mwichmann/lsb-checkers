@@ -16,7 +16,7 @@ void SmcRequestSaveYourself (SmcConn arg0 , int arg1 , int arg2 , int arg3 , int
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmcRequestSaveYourself()");
+		__lsb_output(4, "SmcRequestSaveYourself()");
 		validate_NULL_TYPETYPE(  arg0, "SmcRequestSaveYourself - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcRequestSaveYourself - arg1");
 		validate_NULL_TYPETYPE(  arg2, "SmcRequestSaveYourself - arg2");

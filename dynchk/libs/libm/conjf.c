@@ -13,11 +13,11 @@ float complex conjf (float complex arg0 )
 	int reset_flag = __lsb_check_params;
 	float complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "conjf");
+		funcptr = dlvsym(RTLD_NEXT, "conjf", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "conjf()");
+		__lsb_output(4, "conjf()");
 		validate_NULL_TYPETYPE(  arg0, "conjf - arg0");
 	}
 	ret_value = funcptr(arg0);

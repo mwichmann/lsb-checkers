@@ -13,11 +13,11 @@ int flock (int arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "flock");
+		funcptr = dlvsym(RTLD_NEXT, "flock", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "flock()");
+		__lsb_output(4, "flock()");
 		validate_NULL_TYPETYPE(  arg0, "flock - arg0");
 		validate_NULL_TYPETYPE(  arg1, "flock - arg1");
 	}

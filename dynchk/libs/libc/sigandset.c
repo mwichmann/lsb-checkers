@@ -13,11 +13,11 @@ int sigandset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigandset");
+		funcptr = dlvsym(RTLD_NEXT, "sigandset", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigandset()");
+		__lsb_output(4, "sigandset()");
 		validate_RWaddress( arg0, "sigandset - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigandset - arg0");
 		validate_Rdaddress( arg1, "sigandset - arg1");

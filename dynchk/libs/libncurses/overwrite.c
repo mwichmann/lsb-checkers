@@ -18,7 +18,7 @@ int overwrite (const WINDOW * arg0 , WINDOW * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "overwrite()");
+		__lsb_output(4, "overwrite()");
 		validate_Rdaddress( arg0, "overwrite - arg0");
 		validate_NULL_TYPETYPE(  arg0, "overwrite - arg0");
 		validate_RWaddress( arg1, "overwrite - arg1");

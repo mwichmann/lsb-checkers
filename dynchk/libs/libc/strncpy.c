@@ -14,11 +14,11 @@ char * strncpy (char * arg0 , const char * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strncpy");
+		funcptr = dlvsym(RTLD_NEXT, "strncpy", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strncpy()");
+		__lsb_output(4, "strncpy()");
 		validate_RWaddress( arg0, "strncpy - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strncpy - arg0");
 		validate_RWaddress( arg1, "strncpy - arg1");

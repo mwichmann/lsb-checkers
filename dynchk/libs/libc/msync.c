@@ -14,11 +14,11 @@ int msync (void * arg0 , size_t arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "msync");
+		funcptr = dlvsym(RTLD_NEXT, "msync", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "msync()");
+		__lsb_output(4, "msync()");
 		validate_RWaddress( arg0, "msync - arg0");
 		validate_NULL_TYPETYPE(  arg0, "msync - arg0");
 		validate_NULL_TYPETYPE(  arg1, "msync - arg1");

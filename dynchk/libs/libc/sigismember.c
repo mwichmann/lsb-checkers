@@ -13,11 +13,11 @@ int sigismember (const sigset_t * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigismember");
+		funcptr = dlvsym(RTLD_NEXT, "sigismember", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigismember()");
+		__lsb_output(4, "sigismember()");
 		validate_Rdaddress( arg0, "sigismember - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigismember - arg0");
 		validate_NULL_TYPETYPE(  arg1, "sigismember - arg1");

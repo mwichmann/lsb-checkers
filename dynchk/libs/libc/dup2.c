@@ -13,11 +13,11 @@ int dup2 (int arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dup2");
+		funcptr = dlvsym(RTLD_NEXT, "dup2", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "dup2()");
+		__lsb_output(4, "dup2()");
 		validate_NULL_TYPETYPE(  arg0, "dup2 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "dup2 - arg1");
 	}

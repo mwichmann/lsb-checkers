@@ -12,11 +12,11 @@ void clnt_perrno (enum clnt_stat arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clnt_perrno");
+		funcptr = dlvsym(RTLD_NEXT, "clnt_perrno", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clnt_perrno()");
+		__lsb_output(4, "clnt_perrno()");
 		validate_NULL_TYPETYPE(  arg0, "clnt_perrno - arg0");
 	}
 	funcptr(arg0);

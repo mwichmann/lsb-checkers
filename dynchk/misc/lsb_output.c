@@ -14,6 +14,7 @@
  * This is affected by the following environment variables:
  * LSB_OUTPUT_LEVEL : level above which we don't report output.
  * LSB_OUTPUT_FILE  : file to which output is sent.
+ * LSB_ALWAYS_FLUSH : if this exists, flush output after every print.
  *
  * These environment variables can be set by options to the lsbdynchk script.
  */
@@ -24,13 +25,18 @@
 #include <stdarg.h>
 #include <string.h>
 
+extern int __lsb_check_params;
 int __vlsb_output(int level, char *format, va_list args)
 {	
 	static int need_init = 1;
 	static FILE * output;
 	static int out_level = 0;
 	static char prefix[10];
+	static int always_flush;
 	
+	int check_save = __lsb_check_params;
+	__lsb_check_params = 0;
+
 	char * filename = NULL;
 	char * level_name = NULL;
 	if(need_init)
@@ -59,8 +65,13 @@ int __vlsb_output(int level, char *format, va_list args)
 		{
 			out_level = atoi(level_name);
 		}
+		if(getenv("LSB_ALWAYS_FLUSH"))
+		    always_flush=1;
+		else
+		    always_flush=0;
+		    
 	}
-//	printf("frotz(%d)\n",level);
+
 	if(level <= out_level)
 	{
 		if(out_level > 0)
@@ -69,7 +80,11 @@ int __vlsb_output(int level, char *format, va_list args)
 			fprintf(output, "%s ", prefix);
 		vfprintf(output, format, args);
 		fprintf(output, "\n");
+		if(always_flush)
+		    fflush(output);
 	}
+
+	__lsb_check_params = check_save;
 	return 0;
 }
 

@@ -14,11 +14,11 @@ int mbsinit (const mbstate_t * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mbsinit");
+		funcptr = dlvsym(RTLD_NEXT, "mbsinit", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mbsinit()");
+		__lsb_output(4, "mbsinit()");
 		validate_Rdaddress( arg0, "mbsinit - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mbsinit - arg0");
 	}

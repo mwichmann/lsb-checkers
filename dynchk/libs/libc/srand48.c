@@ -12,11 +12,11 @@ void srand48 (long arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "srand48");
+		funcptr = dlvsym(RTLD_NEXT, "srand48", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "srand48()");
+		__lsb_output(4, "srand48()");
 		validate_NULL_TYPETYPE(  arg0, "srand48 - arg0");
 	}
 	funcptr(arg0);

@@ -16,7 +16,7 @@ void SmsSaveYourselfPhase2 (SmsConn arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmsSaveYourselfPhase2()");
+		__lsb_output(4, "SmsSaveYourselfPhase2()");
 		validate_NULL_TYPETYPE(  arg0, "SmsSaveYourselfPhase2 - arg0");
 	}
 	funcptr(arg0);

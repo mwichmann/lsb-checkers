@@ -18,7 +18,7 @@ int vscanf (const char * arg0 , va_list arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "vscanf()");
+		__lsb_output(4, "vscanf()");
 		validate_Rdaddress( arg0, "vscanf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vscanf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "vscanf - arg1");

@@ -13,11 +13,11 @@ void swab (const void * arg0 , void * arg1 , ssize_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "swab");
+		funcptr = dlvsym(RTLD_NEXT, "swab", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "swab()");
+		__lsb_output(4, "swab()");
 		validate_Rdaddress( arg0, "swab - arg0");
 		validate_NULL_TYPETYPE(  arg0, "swab - arg0");
 		validate_RWaddress( arg1, "swab - arg1");

@@ -14,11 +14,11 @@ wint_t fgetwc_unlocked (FILE * arg0 )
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fgetwc_unlocked");
+		funcptr = dlvsym(RTLD_NEXT, "fgetwc_unlocked", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fgetwc_unlocked()");
+		__lsb_output(4, "fgetwc_unlocked()");
 		validate_RWaddress( arg0, "fgetwc_unlocked - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fgetwc_unlocked - arg0");
 	}

@@ -14,11 +14,11 @@ wchar_t * wcspbrk (const wchar_t * arg0 , const wchar_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	wchar_t * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcspbrk");
+		funcptr = dlvsym(RTLD_NEXT, "wcspbrk", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcspbrk()");
+		__lsb_output(4, "wcspbrk()");
 		validate_Rdaddress( arg0, "wcspbrk - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcspbrk - arg0");
 		validate_Rdaddress( arg1, "wcspbrk - arg1");

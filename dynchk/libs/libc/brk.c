@@ -13,11 +13,11 @@ int brk (void * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "brk");
+		funcptr = dlvsym(RTLD_NEXT, "brk", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "brk()");
+		__lsb_output(4, "brk()");
 		validate_RWaddress( arg0, "brk - arg0");
 		validate_NULL_TYPETYPE(  arg0, "brk - arg0");
 	}

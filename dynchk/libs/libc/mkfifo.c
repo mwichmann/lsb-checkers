@@ -14,11 +14,11 @@ int mkfifo (const char * arg0 , mode_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mkfifo");
+		funcptr = dlvsym(RTLD_NEXT, "mkfifo", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mkfifo()");
+		__lsb_output(4, "mkfifo()");
 		validate_Rdaddress( arg0, "mkfifo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mkfifo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mkfifo - arg1");

@@ -14,11 +14,11 @@ int wcscmp (const wchar_t * arg0 , const wchar_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcscmp");
+		funcptr = dlvsym(RTLD_NEXT, "wcscmp", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcscmp()");
+		__lsb_output(4, "wcscmp()");
 		validate_Rdaddress( arg0, "wcscmp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcscmp - arg0");
 		validate_Rdaddress( arg1, "wcscmp - arg1");

@@ -17,7 +17,7 @@ int attr_off (attr_t arg0 , void * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "attr_off()");
+		__lsb_output(4, "attr_off()");
 		validate_NULL_TYPETYPE(  arg0, "attr_off - arg0");
 		validate_RWaddress( arg1, "attr_off - arg1");
 		validate_NULL_TYPETYPE(  arg1, "attr_off - arg1");

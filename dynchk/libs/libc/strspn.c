@@ -13,11 +13,11 @@ size_t strspn (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strspn");
+		funcptr = dlvsym(RTLD_NEXT, "strspn", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strspn()");
+		__lsb_output(4, "strspn()");
 		validate_Rdaddress( arg0, "strspn - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strspn - arg0");
 		validate_Rdaddress( arg1, "strspn - arg1");

@@ -15,11 +15,11 @@ void * mmap64 (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off6
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mmap64");
+		funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mmap64()");
+		__lsb_output(4, "mmap64()");
 		validate_RWaddress( arg0, "mmap64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mmap64 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mmap64 - arg1");

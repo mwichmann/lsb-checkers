@@ -17,7 +17,7 @@ int addch (const chtype arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "addch()");
+		__lsb_output(4, "addch()");
 		validate_NULL_TYPETYPE(  arg0, "addch - arg0");
 	}
 	ret_value = funcptr(arg0);

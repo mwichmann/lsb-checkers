@@ -17,7 +17,7 @@ int addstr (const char * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "addstr()");
+		__lsb_output(4, "addstr()");
 		validate_Rdaddress( arg0, "addstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "addstr - arg0");
 	}

@@ -12,11 +12,11 @@ void twalk (const void * arg0 , __action_fn_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "twalk");
+		funcptr = dlvsym(RTLD_NEXT, "twalk", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "twalk()");
+		__lsb_output(4, "twalk()");
 		validate_Rdaddress( arg0, "twalk - arg0");
 		validate_NULL_TYPETYPE(  arg0, "twalk - arg0");
 		validate_NULL_TYPETYPE(  arg1, "twalk - arg1");

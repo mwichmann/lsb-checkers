@@ -13,11 +13,11 @@ int __fxstat64 (int arg0 , int arg1 , struct stat64 * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__fxstat64");
+		funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__fxstat64()");
+		__lsb_output(4, "__fxstat64()");
 		validate_NULL_TYPETYPE(  arg0, "__fxstat64 - arg0");
 		validate_filedescriptor(  arg1, "__fxstat64 - arg1");
 		validate_RWaddress( arg2, "__fxstat64 - arg2");

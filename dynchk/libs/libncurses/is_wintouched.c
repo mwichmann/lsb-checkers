@@ -17,7 +17,7 @@ bool is_wintouched (WINDOW * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "is_wintouched()");
+		__lsb_output(4, "is_wintouched()");
 		validate_RWaddress( arg0, "is_wintouched - arg0");
 		validate_NULL_TYPETYPE(  arg0, "is_wintouched - arg0");
 	}

@@ -14,11 +14,11 @@ int sigtimedwait (const sigset_t * arg0 , siginfo_t * arg1 , const struct timesp
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigtimedwait");
+		funcptr = dlvsym(RTLD_NEXT, "sigtimedwait", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigtimedwait()");
+		__lsb_output(4, "sigtimedwait()");
 		validate_Rdaddress( arg0, "sigtimedwait - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigtimedwait - arg0");
 		validate_RWaddress( arg1, "sigtimedwait - arg1");

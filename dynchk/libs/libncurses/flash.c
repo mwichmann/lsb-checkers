@@ -17,7 +17,7 @@ int flash ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "flash()");
+		__lsb_output(4, "flash()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -14,11 +14,11 @@ long __wcstol_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__wcstol_internal");
+		funcptr = dlvsym(RTLD_NEXT, "__wcstol_internal", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__wcstol_internal()");
+		__lsb_output(4, "__wcstol_internal()");
 		validate_Rdaddress( arg0, "__wcstol_internal - arg0");
 		validate_NULL_TYPETYPE(  arg0, "__wcstol_internal - arg0");
 		validate_RWaddress( arg1, "__wcstol_internal - arg1");

@@ -14,11 +14,11 @@ int fseeko64 (FILE * arg0 , loff_t arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fseeko64");
+		funcptr = dlvsym(RTLD_NEXT, "fseeko64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fseeko64()");
+		__lsb_output(4, "fseeko64()");
 		validate_RWaddress( arg0, "fseeko64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fseeko64 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fseeko64 - arg1");

@@ -17,7 +17,7 @@ int attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "attr_get()");
+		__lsb_output(4, "attr_get()");
 		validate_RWaddress( arg0, "attr_get - arg0");
 		validate_NULL_TYPETYPE(  arg0, "attr_get - arg0");
 		validate_RWaddress( arg1, "attr_get - arg1");

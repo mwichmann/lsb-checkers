@@ -13,11 +13,11 @@ struct dirent64 * readdir64 (DIR * arg0 )
 	int reset_flag = __lsb_check_params;
 	struct dirent64 * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "readdir64");
+		funcptr = dlvsym(RTLD_NEXT, "readdir64", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "readdir64()");
+		__lsb_output(4, "readdir64()");
 		validate_RWaddress( arg0, "readdir64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "readdir64 - arg0");
 	}

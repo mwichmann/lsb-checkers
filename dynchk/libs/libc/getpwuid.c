@@ -14,11 +14,11 @@ struct passwd * getpwuid (uid_t arg0 )
 	int reset_flag = __lsb_check_params;
 	struct passwd * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getpwuid");
+		funcptr = dlvsym(RTLD_NEXT, "getpwuid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getpwuid()");
+		__lsb_output(4, "getpwuid()");
 		validate_NULL_TYPETYPE(  arg0, "getpwuid - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -13,11 +13,11 @@ int munlockall ()
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "munlockall");
+		funcptr = dlvsym(RTLD_NEXT, "munlockall", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "munlockall()");
+		__lsb_output(4, "munlockall()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

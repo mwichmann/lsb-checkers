@@ -13,11 +13,11 @@ long double ynl (int arg0 , long double arg1 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ynl");
+		funcptr = dlvsym(RTLD_NEXT, "ynl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ynl()");
+		__lsb_output(4, "ynl()");
 		validate_NULL_TYPETYPE(  arg0, "ynl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ynl - arg1");
 	}

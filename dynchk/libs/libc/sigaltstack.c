@@ -13,11 +13,11 @@ int sigaltstack (const struct sigaltstack * arg0 , struct sigaltstack * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigaltstack");
+		funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigaltstack()");
+		__lsb_output(4, "sigaltstack()");
 		validate_Rdaddress( arg0, "sigaltstack - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigaltstack - arg0");
 		validate_RWaddress( arg1, "sigaltstack - arg1");

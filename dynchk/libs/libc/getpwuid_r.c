@@ -15,11 +15,11 @@ int getpwuid_r (uid_t arg0 , struct passwd * arg1 , char * arg2 , size_t arg3 , 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getpwuid_r");
+		funcptr = dlvsym(RTLD_NEXT, "getpwuid_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getpwuid_r()");
+		__lsb_output(4, "getpwuid_r()");
 		validate_NULL_TYPETYPE(  arg0, "getpwuid_r - arg0");
 		validate_RWaddress( arg1, "getpwuid_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getpwuid_r - arg1");

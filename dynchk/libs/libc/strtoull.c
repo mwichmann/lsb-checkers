@@ -13,11 +13,11 @@ unsigned long long strtoull (const char * arg0 , char * * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	unsigned long long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strtoull");
+		funcptr = dlvsym(RTLD_NEXT, "strtoull", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strtoull()");
+		__lsb_output(4, "strtoull()");
 		validate_Rdaddress( arg0, "strtoull - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtoull - arg0");
 		validate_RWaddress( arg1, "strtoull - arg1");

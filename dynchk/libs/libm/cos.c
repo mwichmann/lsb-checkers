@@ -13,11 +13,11 @@ double cos (double arg0 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "cos");
+		funcptr = dlvsym(RTLD_NEXT, "cos", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "cos()");
+		__lsb_output(4, "cos()");
 		validate_NULL_TYPETYPE(  arg0, "cos - arg0");
 	}
 	ret_value = funcptr(arg0);

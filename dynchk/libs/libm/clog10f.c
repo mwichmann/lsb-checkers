@@ -13,11 +13,11 @@ float complex clog10f (float complex arg0 )
 	int reset_flag = __lsb_check_params;
 	float complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clog10f");
+		funcptr = dlvsym(RTLD_NEXT, "clog10f", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clog10f()");
+		__lsb_output(4, "clog10f()");
 		validate_NULL_TYPETYPE(  arg0, "clog10f - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -13,11 +13,11 @@ imaxdiv_t imaxdiv (intmax_t arg0 , intmax_t arg1 )
 	int reset_flag = __lsb_check_params;
 	imaxdiv_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "imaxdiv");
+		funcptr = dlvsym(RTLD_NEXT, "imaxdiv", "GLIBC_2.1.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "imaxdiv()");
+		__lsb_output(4, "imaxdiv()");
 		validate_NULL_TYPETYPE(  arg0, "imaxdiv - arg0");
 		validate_NULL_TYPETYPE(  arg1, "imaxdiv - arg1");
 	}

@@ -17,7 +17,7 @@ long double logl (long double arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "logl()");
+		__lsb_output(4, "logl()");
 		validate_NULL_TYPETYPE(  arg0, "logl - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -14,11 +14,11 @@ char * nl_langinfo (nl_item arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nl_langinfo");
+		funcptr = dlvsym(RTLD_NEXT, "nl_langinfo", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "nl_langinfo()");
+		__lsb_output(4, "nl_langinfo()");
 		validate_NULL_TYPETYPE(  arg0, "nl_langinfo - arg0");
 	}
 	ret_value = funcptr(arg0);

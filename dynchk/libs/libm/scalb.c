@@ -13,11 +13,11 @@ double scalb (double arg0 , double arg1 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "scalb");
+		funcptr = dlvsym(RTLD_NEXT, "scalb", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "scalb()");
+		__lsb_output(4, "scalb()");
 		validate_NULL_TYPETYPE(  arg0, "scalb - arg0");
 		validate_NULL_TYPETYPE(  arg1, "scalb - arg1");
 	}

@@ -17,7 +17,7 @@ int mvwinsstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvwinsstr()");
+		__lsb_output(4, "mvwinsstr()");
 		validate_RWaddress( arg0, "mvwinsstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mvwinsstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwinsstr - arg1");

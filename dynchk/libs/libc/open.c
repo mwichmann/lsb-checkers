@@ -21,7 +21,7 @@ int open(const char *pathname, int flags, ...)
 	mode = va_arg(args,mode_t);
 
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "open");
+	    funcptr = dlvsym(RTLD_NEXT, "open", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

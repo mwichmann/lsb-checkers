@@ -13,11 +13,11 @@ off_t ftello (FILE * arg0 )
 	int reset_flag = __lsb_check_params;
 	off_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ftello");
+		funcptr = dlvsym(RTLD_NEXT, "ftello", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ftello()");
+		__lsb_output(4, "ftello()");
 		validate_RWaddress( arg0, "ftello - arg0");
 		validate_NULL_TYPETYPE(  arg0, "ftello - arg0");
 	}

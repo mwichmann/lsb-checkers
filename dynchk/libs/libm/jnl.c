@@ -13,11 +13,11 @@ long double jnl (int arg0 , long double arg1 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "jnl");
+		funcptr = dlvsym(RTLD_NEXT, "jnl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "jnl()");
+		__lsb_output(4, "jnl()");
 		validate_NULL_TYPETYPE(  arg0, "jnl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "jnl - arg1");
 	}

@@ -13,11 +13,11 @@ float ldexpf (float arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ldexpf");
+		funcptr = dlvsym(RTLD_NEXT, "ldexpf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ldexpf()");
+		__lsb_output(4, "ldexpf()");
 		validate_NULL_TYPETYPE(  arg0, "ldexpf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ldexpf - arg1");
 	}

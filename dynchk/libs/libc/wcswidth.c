@@ -14,11 +14,11 @@ int wcswidth (const wchar_t * arg0 , size_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcswidth");
+		funcptr = dlvsym(RTLD_NEXT, "wcswidth", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcswidth()");
+		__lsb_output(4, "wcswidth()");
 		validate_Rdaddress( arg0, "wcswidth - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcswidth - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wcswidth - arg1");

@@ -16,7 +16,7 @@ void SmcSetProperties (SmcConn arg0 , int arg1 , SmProp * * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmcSetProperties()");
+		__lsb_output(4, "SmcSetProperties()");
 		validate_NULL_TYPETYPE(  arg0, "SmcSetProperties - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcSetProperties - arg1");
 		validate_RWaddress( arg2, "SmcSetProperties - arg2");

@@ -13,11 +13,11 @@ intmax_t strtoimax (const char * arg0 , char * * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	intmax_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strtoimax");
+		funcptr = dlvsym(RTLD_NEXT, "strtoimax", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strtoimax()");
+		__lsb_output(4, "strtoimax()");
 		validate_Rdaddress( arg0, "strtoimax - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtoimax - arg0");
 		validate_RWaddress( arg1, "strtoimax - arg1");

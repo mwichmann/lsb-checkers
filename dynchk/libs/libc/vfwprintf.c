@@ -16,11 +16,11 @@ int vfwprintf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vfwprintf");
+		funcptr = dlvsym(RTLD_NEXT, "vfwprintf", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "vfwprintf()");
+		__lsb_output(4, "vfwprintf()");
 		validate_RWaddress( arg0, "vfwprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vfwprintf - arg0");
 		validate_Rdaddress( arg1, "vfwprintf - arg1");

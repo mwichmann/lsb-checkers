@@ -14,11 +14,11 @@ size_t strftime (char * arg0 , size_t arg1 , const char * arg2 , const struct tm
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strftime");
+		funcptr = dlvsym(RTLD_NEXT, "strftime", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strftime()");
+		__lsb_output(4, "strftime()");
 		validate_RWaddress( arg0, "strftime - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strftime - arg0");
 		validate_NULL_TYPETYPE(  arg1, "strftime - arg1");

@@ -13,11 +13,11 @@ int regcomp (regex_t * arg0 , const char * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "regcomp");
+		funcptr = dlvsym(RTLD_NEXT, "regcomp", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "regcomp()");
+		__lsb_output(4, "regcomp()");
 		validate_RWaddress( arg0, "regcomp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "regcomp - arg0");
 		validate_Rdaddress( arg1, "regcomp - arg1");

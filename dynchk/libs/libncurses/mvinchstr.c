@@ -17,7 +17,7 @@ int mvinchstr (int arg0 , int arg1 , chtype * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvinchstr()");
+		__lsb_output(4, "mvinchstr()");
 		validate_NULL_TYPETYPE(  arg0, "mvinchstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvinchstr - arg1");
 		validate_RWaddress( arg2, "mvinchstr - arg2");

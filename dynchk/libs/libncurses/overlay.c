@@ -18,7 +18,7 @@ int overlay (const WINDOW * arg0 , WINDOW * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "overlay()");
+		__lsb_output(4, "overlay()");
 		validate_Rdaddress( arg0, "overlay - arg0");
 		validate_NULL_TYPETYPE(  arg0, "overlay - arg0");
 		validate_RWaddress( arg1, "overlay - arg1");

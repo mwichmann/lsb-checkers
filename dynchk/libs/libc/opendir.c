@@ -13,11 +13,11 @@ DIR * opendir (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	DIR * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "opendir");
+		funcptr = dlvsym(RTLD_NEXT, "opendir", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "opendir()");
+		__lsb_output(4, "opendir()");
 		validate_Rdaddress( arg0, "opendir - arg0");
 		validate_pathname(  arg0, "opendir - arg0");
 	}

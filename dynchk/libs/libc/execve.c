@@ -13,11 +13,11 @@ int execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "execve");
+		funcptr = dlvsym(RTLD_NEXT, "execve", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "execve()");
+		__lsb_output(4, "execve()");
 		validate_Rdaddress( arg0, "execve - arg0");
 		validate_pathname(  arg0, "execve - arg0");
 		validate_NULL_TYPETYPE(  arg1, "execve - arg1");

@@ -14,11 +14,11 @@ int nanosleep (const struct timespec * arg0 , struct timespec * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nanosleep");
+		funcptr = dlvsym(RTLD_NEXT, "nanosleep", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "nanosleep()");
+		__lsb_output(4, "nanosleep()");
 		validate_Rdaddress( arg0, "nanosleep - arg0");
 		validate_NULL_TYPETYPE(  arg0, "nanosleep - arg0");
 		if( arg1 ) {

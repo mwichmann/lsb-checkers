@@ -13,11 +13,11 @@ int unlink (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "unlink");
+		funcptr = dlvsym(RTLD_NEXT, "unlink", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "unlink()");
+		__lsb_output(4, "unlink()");
 		validate_Rdaddress( arg0, "unlink - arg0");
 		validate_pathname(  arg0, "unlink - arg0");
 	}

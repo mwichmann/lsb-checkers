@@ -15,11 +15,11 @@ bool_t svc_sendreply (SVCXPRT * arg0 , xdrproc_t arg1 , caddr_t arg2 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svc_sendreply");
+		funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "svc_sendreply()");
+		__lsb_output(4, "svc_sendreply()");
 		validate_RWaddress( arg0, "svc_sendreply - arg0");
 		validate_NULL_TYPETYPE(  arg0, "svc_sendreply - arg0");
 		validate_NULL_TYPETYPE(  arg1, "svc_sendreply - arg1");

@@ -13,11 +13,11 @@ FILE * tmpfile ()
 	int reset_flag = __lsb_check_params;
 	FILE * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tmpfile");
+		funcptr = dlvsym(RTLD_NEXT, "tmpfile", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tmpfile()");
+		__lsb_output(4, "tmpfile()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

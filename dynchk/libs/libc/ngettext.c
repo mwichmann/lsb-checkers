@@ -17,7 +17,7 @@ char * ngettext (const char * arg0 , const char * arg1 , unsigned long arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ngettext()");
+		__lsb_output(4, "ngettext()");
 		validate_Rdaddress( arg0, "ngettext - arg0");
 		validate_NULL_TYPETYPE(  arg0, "ngettext - arg0");
 		validate_Rdaddress( arg1, "ngettext - arg1");

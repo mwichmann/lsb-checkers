@@ -12,11 +12,11 @@ void openlog (const char * arg0 , int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "openlog");
+		funcptr = dlvsym(RTLD_NEXT, "openlog", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "openlog()");
+		__lsb_output(4, "openlog()");
 		validate_Rdaddress( arg0, "openlog - arg0");
 		validate_NULL_TYPETYPE(  arg0, "openlog - arg0");
 		validate_NULL_TYPETYPE(  arg1, "openlog - arg1");

@@ -18,7 +18,7 @@ void * tdelete (const void * arg0 , void * * arg1 , __compar_fn_t arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tdelete()");
+		__lsb_output(4, "tdelete()");
 		validate_Rdaddress( arg0, "tdelete - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tdelete - arg0");
 		validate_RWaddress( arg1, "tdelete - arg1");

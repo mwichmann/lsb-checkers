@@ -14,11 +14,11 @@ size_t fread (void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fread");
+		funcptr = dlvsym(RTLD_NEXT, "fread", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fread()");
+		__lsb_output(4, "fread()");
 		validate_RWaddress( arg0, "fread - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fread - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fread - arg1");

@@ -13,11 +13,11 @@ int fmtmsg (long arg0 , const char * arg1 , int arg2 , const char * arg3 , const
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fmtmsg");
+		funcptr = dlvsym(RTLD_NEXT, "fmtmsg", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fmtmsg()");
+		__lsb_output(4, "fmtmsg()");
 		validate_NULL_TYPETYPE(  arg0, "fmtmsg - arg0");
 		validate_Rdaddress( arg1, "fmtmsg - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fmtmsg - arg1");

@@ -13,11 +13,11 @@ long double complex ctanl (long double complex arg0 )
 	int reset_flag = __lsb_check_params;
 	long double complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ctanl");
+		funcptr = dlvsym(RTLD_NEXT, "ctanl", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ctanl()");
+		__lsb_output(4, "ctanl()");
 		validate_NULL_TYPETYPE(  arg0, "ctanl - arg0");
 	}
 	ret_value = funcptr(arg0);

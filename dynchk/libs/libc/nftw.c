@@ -13,11 +13,11 @@ int nftw (const char * arg0 , __nftw_func_t arg1 , int arg2 , int arg3 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nftw");
+		funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "nftw()");
+		__lsb_output(4, "nftw()");
 		validate_Rdaddress( arg0, "nftw - arg0");
 		validate_NULL_TYPETYPE(  arg0, "nftw - arg0");
 		validate_NULL_TYPETYPE(  arg1, "nftw - arg1");

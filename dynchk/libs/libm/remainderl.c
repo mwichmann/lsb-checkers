@@ -13,11 +13,11 @@ long double remainderl (long double arg0 , long double arg1 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "remainderl");
+		funcptr = dlvsym(RTLD_NEXT, "remainderl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "remainderl()");
+		__lsb_output(4, "remainderl()");
 		validate_NULL_TYPETYPE(  arg0, "remainderl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "remainderl - arg1");
 	}

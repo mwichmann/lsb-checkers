@@ -15,11 +15,11 @@ int sched_rr_get_interval (pid_t arg0 , struct timespec * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sched_rr_get_interval");
+		funcptr = dlvsym(RTLD_NEXT, "sched_rr_get_interval", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sched_rr_get_interval()");
+		__lsb_output(4, "sched_rr_get_interval()");
 		validate_NULL_TYPETYPE(  arg0, "sched_rr_get_interval - arg0");
 		validate_RWaddress( arg1, "sched_rr_get_interval - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sched_rr_get_interval - arg1");

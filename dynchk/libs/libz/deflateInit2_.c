@@ -17,7 +17,7 @@ int deflateInit2_ (z_streamp arg0 , int arg1 , int arg2 , int arg3 , int arg4 , 
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "deflateInit2_()");
+		__lsb_output(4, "deflateInit2_()");
 		validate_NULL_TYPETYPE(  arg0, "deflateInit2_ - arg0");
 		validate_NULL_TYPETYPE(  arg1, "deflateInit2_ - arg1");
 		validate_NULL_TYPETYPE(  arg2, "deflateInit2_ - arg2");

@@ -13,11 +13,11 @@ pid_t getpid ()
 	int reset_flag = __lsb_check_params;
 	pid_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getpid");
+		funcptr = dlvsym(RTLD_NEXT, "getpid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getpid()");
+		__lsb_output(4, "getpid()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

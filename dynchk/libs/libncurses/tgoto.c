@@ -17,7 +17,7 @@ char * tgoto (const char * arg0 , int arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tgoto()");
+		__lsb_output(4, "tgoto()");
 		validate_Rdaddress( arg0, "tgoto - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tgoto - arg0");
 		validate_NULL_TYPETYPE(  arg1, "tgoto - arg1");

@@ -14,11 +14,11 @@ void * sbrk (ptrdiff_t arg0 )
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sbrk");
+		funcptr = dlvsym(RTLD_NEXT, "sbrk", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sbrk()");
+		__lsb_output(4, "sbrk()");
 		validate_NULL_TYPETYPE(  arg0, "sbrk - arg0");
 	}
 	ret_value = funcptr(arg0);

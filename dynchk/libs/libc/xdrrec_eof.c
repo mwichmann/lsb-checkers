@@ -13,11 +13,11 @@ bool_t xdrrec_eof (XDR * arg0 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdrrec_eof");
+		funcptr = dlvsym(RTLD_NEXT, "xdrrec_eof", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdrrec_eof()");
+		__lsb_output(4, "xdrrec_eof()");
 		validate_RWaddress( arg0, "xdrrec_eof - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdrrec_eof - arg0");
 	}

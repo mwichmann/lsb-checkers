@@ -14,11 +14,11 @@ int random_r (struct random_data * arg0 , int32_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "random_r");
+		funcptr = dlvsym(RTLD_NEXT, "random_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "random_r()");
+		__lsb_output(4, "random_r()");
 		validate_RWaddress( arg0, "random_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "random_r - arg0");
 		validate_RWaddress( arg1, "random_r - arg1");

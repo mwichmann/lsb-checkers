@@ -15,11 +15,11 @@ int vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vswprintf");
+		funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "vswprintf()");
+		__lsb_output(4, "vswprintf()");
 		validate_RWaddress( arg0, "vswprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vswprintf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "vswprintf - arg1");

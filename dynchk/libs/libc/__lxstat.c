@@ -13,11 +13,11 @@ int __lxstat (int arg0 , const char * arg1 , struct stat * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__lxstat");
+		funcptr = dlvsym(RTLD_NEXT, "__lxstat", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__lxstat()");
+		__lsb_output(4, "__lxstat()");
 		validate_NULL_TYPETYPE(  arg0, "__lxstat - arg0");
 		validate_RWaddress( arg1, "__lxstat - arg1");
 		validate_NULL_TYPETYPE(  arg1, "__lxstat - arg1");

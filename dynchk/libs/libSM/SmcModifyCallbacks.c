@@ -16,7 +16,7 @@ void SmcModifyCallbacks (SmcConn arg0 , unsigned long arg1 , SmcCallbacks * arg2
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmcModifyCallbacks()");
+		__lsb_output(4, "SmcModifyCallbacks()");
 		validate_NULL_TYPETYPE(  arg0, "SmcModifyCallbacks - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcModifyCallbacks - arg1");
 		validate_RWaddress( arg2, "SmcModifyCallbacks - arg2");

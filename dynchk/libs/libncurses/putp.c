@@ -17,7 +17,7 @@ int putp (const char * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "putp()");
+		__lsb_output(4, "putp()");
 		validate_Rdaddress( arg0, "putp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "putp - arg0");
 	}

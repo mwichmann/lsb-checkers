@@ -13,11 +13,11 @@ int getopt_long_only (int arg0 , char *const  arg1 [], const char * arg2 , const
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getopt_long_only");
+		funcptr = dlvsym(RTLD_NEXT, "getopt_long_only", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getopt_long_only()");
+		__lsb_output(4, "getopt_long_only()");
 		validate_NULL_TYPETYPE(  arg0, "getopt_long_only - arg0");
 		validate_NULL_TYPETYPE(  arg1, "getopt_long_only - arg1");
 		validate_Rdaddress( arg2, "getopt_long_only - arg2");

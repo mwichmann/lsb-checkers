@@ -17,7 +17,7 @@ int readdir_r (DIR * arg0 , struct dirent * arg1 , struct dirent * * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "readdir_r()");
+		__lsb_output(4, "readdir_r()");
 		validate_RWaddress( arg0, "readdir_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "readdir_r - arg0");
 		validate_RWaddress( arg1, "readdir_r - arg1");

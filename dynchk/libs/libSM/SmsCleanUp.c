@@ -16,7 +16,7 @@ void SmsCleanUp (SmsConn arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmsCleanUp()");
+		__lsb_output(4, "SmsCleanUp()");
 		validate_NULL_TYPETYPE(  arg0, "SmsCleanUp - arg0");
 	}
 	funcptr(arg0);

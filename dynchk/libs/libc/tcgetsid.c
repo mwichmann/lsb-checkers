@@ -13,11 +13,11 @@ pid_t tcgetsid (int arg0 )
 	int reset_flag = __lsb_check_params;
 	pid_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tcgetsid");
+		funcptr = dlvsym(RTLD_NEXT, "tcgetsid", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tcgetsid()");
+		__lsb_output(4, "tcgetsid()");
 		validate_NULL_TYPETYPE(  arg0, "tcgetsid - arg0");
 	}
 	ret_value = funcptr(arg0);

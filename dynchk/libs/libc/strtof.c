@@ -13,11 +13,11 @@ float strtof (const char * arg0 , char * * arg1 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strtof");
+		funcptr = dlvsym(RTLD_NEXT, "strtof", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strtof()");
+		__lsb_output(4, "strtof()");
 		validate_Rdaddress( arg0, "strtof - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtof - arg0");
 		validate_RWaddress( arg1, "strtof - arg1");

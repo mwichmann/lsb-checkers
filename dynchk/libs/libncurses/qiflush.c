@@ -16,7 +16,7 @@ void qiflush ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "qiflush()");
+		__lsb_output(4, "qiflush()");
 	}
 	funcptr();
 	__lsb_check_params = reset_flag;

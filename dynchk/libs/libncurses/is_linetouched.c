@@ -17,7 +17,7 @@ bool is_linetouched (WINDOW * arg0 , int arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "is_linetouched()");
+		__lsb_output(4, "is_linetouched()");
 		validate_RWaddress( arg0, "is_linetouched - arg0");
 		validate_NULL_TYPETYPE(  arg0, "is_linetouched - arg0");
 		validate_NULL_TYPETYPE(  arg1, "is_linetouched - arg1");

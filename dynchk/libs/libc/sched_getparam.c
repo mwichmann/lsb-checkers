@@ -14,11 +14,11 @@ int sched_getparam (pid_t arg0 , struct sched_param * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sched_getparam");
+		funcptr = dlvsym(RTLD_NEXT, "sched_getparam", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sched_getparam()");
+		__lsb_output(4, "sched_getparam()");
 		validate_NULL_TYPETYPE(  arg0, "sched_getparam - arg0");
 		validate_RWaddress( arg1, "sched_getparam - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sched_getparam - arg1");

@@ -13,11 +13,11 @@ int fsetpos (FILE * arg0 , const fpos_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fsetpos");
+		funcptr = dlvsym(RTLD_NEXT, "fsetpos", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fsetpos()");
+		__lsb_output(4, "fsetpos()");
 		validate_RWaddress( arg0, "fsetpos - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fsetpos - arg0");
 		validate_Rdaddress( arg1, "fsetpos - arg1");

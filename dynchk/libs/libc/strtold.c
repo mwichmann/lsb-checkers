@@ -13,11 +13,11 @@ long double strtold (const char * arg0 , char * * arg1 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strtold");
+		funcptr = dlvsym(RTLD_NEXT, "strtold", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strtold()");
+		__lsb_output(4, "strtold()");
 		validate_Rdaddress( arg0, "strtold - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtold - arg0");
 		validate_RWaddress( arg1, "strtold - arg1");

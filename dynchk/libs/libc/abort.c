@@ -12,11 +12,11 @@ void abort ()
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "abort");
+		funcptr = dlvsym(RTLD_NEXT, "abort", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "abort()");
+		__lsb_output(4, "abort()");
 	}
 	funcptr();
 	__lsb_check_params = reset_flag;

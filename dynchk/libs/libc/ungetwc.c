@@ -15,11 +15,11 @@ wint_t ungetwc (wint_t arg0 , FILE * arg1 )
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ungetwc");
+		funcptr = dlvsym(RTLD_NEXT, "ungetwc", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ungetwc()");
+		__lsb_output(4, "ungetwc()");
 		validate_NULL_TYPETYPE(  arg0, "ungetwc - arg0");
 		validate_RWaddress( arg1, "ungetwc - arg1");
 		validate_NULL_TYPETYPE(  arg1, "ungetwc - arg1");

@@ -15,11 +15,11 @@ size_t mbrlen (const char * arg0 , size_t arg1 , mbstate_t * arg2 )
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mbrlen");
+		funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mbrlen()");
+		__lsb_output(4, "mbrlen()");
 		validate_Rdaddress( arg0, "mbrlen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mbrlen - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mbrlen - arg1");

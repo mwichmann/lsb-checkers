@@ -17,7 +17,7 @@ int winstr (WINDOW * arg0 , char * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "winstr()");
+		__lsb_output(4, "winstr()");
 		validate_RWaddress( arg0, "winstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "winstr - arg0");
 		validate_RWaddress( arg1, "winstr - arg1");

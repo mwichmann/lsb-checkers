@@ -13,11 +13,11 @@ int link (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "link");
+		funcptr = dlvsym(RTLD_NEXT, "link", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "link()");
+		__lsb_output(4, "link()");
 		validate_Rdaddress( arg0, "link - arg0");
 		validate_NULL_TYPETYPE(  arg0, "link - arg0");
 		validate_Rdaddress( arg1, "link - arg1");

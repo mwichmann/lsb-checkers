@@ -13,11 +13,11 @@ char * l64a (long arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "l64a");
+		funcptr = dlvsym(RTLD_NEXT, "l64a", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "l64a()");
+		__lsb_output(4, "l64a()");
 		validate_NULL_TYPETYPE(  arg0, "l64a - arg0");
 	}
 	ret_value = funcptr(arg0);

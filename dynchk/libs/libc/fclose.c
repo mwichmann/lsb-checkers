@@ -13,11 +13,11 @@ int fclose (FILE * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fclose");
+		funcptr = dlvsym(RTLD_NEXT, "fclose", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fclose()");
+		__lsb_output(4, "fclose()");
 		validate_RWaddress( arg0, "fclose - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fclose - arg0");
 	}

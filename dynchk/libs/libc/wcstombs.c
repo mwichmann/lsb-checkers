@@ -14,11 +14,11 @@ size_t wcstombs (char * arg0 , const wchar_t * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcstombs");
+		funcptr = dlvsym(RTLD_NEXT, "wcstombs", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcstombs()");
+		__lsb_output(4, "wcstombs()");
 		validate_RWaddress( arg0, "wcstombs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstombs - arg0");
 		validate_Rdaddress( arg1, "wcstombs - arg1");

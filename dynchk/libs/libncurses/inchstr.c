@@ -17,7 +17,7 @@ int inchstr (chtype * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "inchstr()");
+		__lsb_output(4, "inchstr()");
 		validate_RWaddress( arg0, "inchstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "inchstr - arg0");
 	}

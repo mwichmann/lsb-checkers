@@ -13,11 +13,11 @@ long double erfcl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "erfcl");
+		funcptr = dlvsym(RTLD_NEXT, "erfcl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "erfcl()");
+		__lsb_output(4, "erfcl()");
 		validate_NULL_TYPETYPE(  arg0, "erfcl - arg0");
 	}
 	ret_value = funcptr(arg0);

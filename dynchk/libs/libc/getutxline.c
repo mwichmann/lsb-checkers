@@ -13,11 +13,11 @@ struct utmpx * getutxline (const struct utmpx * arg0 )
 	int reset_flag = __lsb_check_params;
 	struct utmpx * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getutxline");
+		funcptr = dlvsym(RTLD_NEXT, "getutxline", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getutxline()");
+		__lsb_output(4, "getutxline()");
 		validate_Rdaddress( arg0, "getutxline - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getutxline - arg0");
 	}

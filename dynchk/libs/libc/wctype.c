@@ -13,11 +13,11 @@ wctype_t wctype (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	wctype_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wctype");
+		funcptr = dlvsym(RTLD_NEXT, "wctype", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wctype()");
+		__lsb_output(4, "wctype()");
 		validate_Rdaddress( arg0, "wctype - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wctype - arg0");
 	}

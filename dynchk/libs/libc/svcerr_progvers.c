@@ -13,11 +13,11 @@ void svcerr_progvers (SVCXPRT * arg0 , rpcvers_t arg1 , rpcvers_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svcerr_progvers");
+		funcptr = dlvsym(RTLD_NEXT, "svcerr_progvers", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "svcerr_progvers()");
+		__lsb_output(4, "svcerr_progvers()");
 		validate_RWaddress( arg0, "svcerr_progvers - arg0");
 		validate_NULL_TYPETYPE(  arg0, "svcerr_progvers - arg0");
 		validate_NULL_TYPETYPE(  arg1, "svcerr_progvers - arg1");

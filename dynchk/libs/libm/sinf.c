@@ -13,11 +13,11 @@ float sinf (float arg0 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sinf");
+		funcptr = dlvsym(RTLD_NEXT, "sinf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sinf()");
+		__lsb_output(4, "sinf()");
 		validate_NULL_TYPETYPE(  arg0, "sinf - arg0");
 	}
 	ret_value = funcptr(arg0);

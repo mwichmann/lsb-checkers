@@ -13,11 +13,11 @@ long double lgammal (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lgammal");
+		funcptr = dlvsym(RTLD_NEXT, "lgammal", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "lgammal()");
+		__lsb_output(4, "lgammal()");
 		validate_NULL_TYPETYPE(  arg0, "lgammal - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -17,7 +17,7 @@ char * tgetstr (char * arg0 , char * * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tgetstr()");
+		__lsb_output(4, "tgetstr()");
 		validate_RWaddress( arg0, "tgetstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tgetstr - arg0");
 		validate_RWaddress( arg1, "tgetstr - arg1");

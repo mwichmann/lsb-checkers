@@ -14,11 +14,11 @@ ssize_t write (int arg0 , const void * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "write");
+		funcptr = dlvsym(RTLD_NEXT, "write", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "write()");
+		__lsb_output(4, "write()");
 		validate_filedescriptor(  arg0, "write - arg0");
 		validate_Rdaddress( arg1, "write - arg1");
 		validate_RWaddress(  arg1, "write - arg1");

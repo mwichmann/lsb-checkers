@@ -14,11 +14,11 @@ int sched_getscheduler (pid_t arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sched_getscheduler");
+		funcptr = dlvsym(RTLD_NEXT, "sched_getscheduler", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sched_getscheduler()");
+		__lsb_output(4, "sched_getscheduler()");
 		validate_NULL_TYPETYPE(  arg0, "sched_getscheduler - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -13,11 +13,11 @@ float remquof (float arg0 , float arg1 , int * arg2 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "remquof");
+		funcptr = dlvsym(RTLD_NEXT, "remquof", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "remquof()");
+		__lsb_output(4, "remquof()");
 		validate_NULL_TYPETYPE(  arg0, "remquof - arg0");
 		validate_NULL_TYPETYPE(  arg1, "remquof - arg1");
 		validate_RWaddress( arg2, "remquof - arg2");

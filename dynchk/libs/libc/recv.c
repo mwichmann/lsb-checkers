@@ -14,11 +14,11 @@ ssize_t recv (int arg0 , void * arg1 , size_t arg2 , int arg3 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "recv");
+		funcptr = dlvsym(RTLD_NEXT, "recv", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "recv()");
+		__lsb_output(4, "recv()");
 		validate_NULL_TYPETYPE(  arg0, "recv - arg0");
 		validate_RWaddress( arg1, "recv - arg1");
 		validate_NULL_TYPETYPE(  arg1, "recv - arg1");

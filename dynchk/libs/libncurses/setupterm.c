@@ -17,7 +17,7 @@ int setupterm (char * arg0 , int arg1 , int * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setupterm()");
+		__lsb_output(4, "setupterm()");
 		validate_RWaddress( arg0, "setupterm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "setupterm - arg0");
 		validate_NULL_TYPETYPE(  arg1, "setupterm - arg1");

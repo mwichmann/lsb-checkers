@@ -17,7 +17,7 @@ int getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo *
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getaddrinfo()");
+		__lsb_output(4, "getaddrinfo()");
 		validate_Rdaddress( arg0, "getaddrinfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getaddrinfo - arg0");
 		validate_Rdaddress( arg1, "getaddrinfo - arg1");

@@ -17,7 +17,7 @@ SmcConn SmcOpenConnection (char * arg0 , SmPointer arg1 , int arg2 , int arg3 , 
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmcOpenConnection()");
+		__lsb_output(4, "SmcOpenConnection()");
 		validate_RWaddress( arg0, "SmcOpenConnection - arg0");
 		validate_NULL_TYPETYPE(  arg0, "SmcOpenConnection - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcOpenConnection - arg1");

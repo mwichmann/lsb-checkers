@@ -13,11 +13,11 @@ int bind (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "bind");
+		funcptr = dlvsym(RTLD_NEXT, "bind", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "bind()");
+		__lsb_output(4, "bind()");
 		validate_filedescriptor(  arg0, "bind - arg0");
 		validate_Rdaddress( arg1, "bind - arg1");
 		validate_RWaddress(  arg1, "bind - arg1");

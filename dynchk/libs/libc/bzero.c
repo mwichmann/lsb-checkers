@@ -13,11 +13,11 @@ void bzero (void * arg0 , size_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "bzero");
+		funcptr = dlvsym(RTLD_NEXT, "bzero", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "bzero()");
+		__lsb_output(4, "bzero()");
 		validate_RWaddress( arg0, "bzero - arg0");
 		validate_NULL_TYPETYPE(  arg0, "bzero - arg0");
 		validate_NULL_TYPETYPE(  arg1, "bzero - arg1");

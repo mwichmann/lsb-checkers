@@ -593,9 +593,11 @@ system.o \
 tcdrain.o \
 tcflow.o \
 tcflush.o \
+tcgetattr.o \
 tcgetpgrp.o \
 tcgetsid.o \
 tcsendbreak.o \
+tcsetattr.o \
 tcsetpgrp.o \
 tdelete.o \
 telldir.o \

@@ -17,7 +17,7 @@ int statvfs64 (const char * arg0 , struct statvfs64 * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "statvfs64()");
+		__lsb_output(4, "statvfs64()");
 		validate_Rdaddress( arg0, "statvfs64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "statvfs64 - arg0");
 		validate_RWaddress( arg1, "statvfs64 - arg1");

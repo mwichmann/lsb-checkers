@@ -14,11 +14,11 @@ bool_t svc_register (SVCXPRT * arg0 , rpcprog_t arg1 , rpcvers_t arg2 , __dispat
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svc_register");
+		funcptr = dlvsym(RTLD_NEXT, "svc_register", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "svc_register()");
+		__lsb_output(4, "svc_register()");
 		validate_RWaddress( arg0, "svc_register - arg0");
 		validate_NULL_TYPETYPE(  arg0, "svc_register - arg0");
 		validate_NULL_TYPETYPE(  arg1, "svc_register - arg1");

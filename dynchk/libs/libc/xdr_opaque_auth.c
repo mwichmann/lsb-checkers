@@ -14,11 +14,11 @@ bool_t xdr_opaque_auth (XDR * arg0 , struct opaque_auth * arg1 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_opaque_auth");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_opaque_auth", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdr_opaque_auth()");
+		__lsb_output(4, "xdr_opaque_auth()");
 		validate_RWaddress( arg0, "xdr_opaque_auth - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_opaque_auth - arg0");
 		validate_RWaddress( arg1, "xdr_opaque_auth - arg1");

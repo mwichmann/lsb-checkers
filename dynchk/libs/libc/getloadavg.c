@@ -14,11 +14,11 @@ int getloadavg (double arg0 [], int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getloadavg");
+		funcptr = dlvsym(RTLD_NEXT, "getloadavg", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getloadavg()");
+		__lsb_output(4, "getloadavg()");
 		validate_NULL_TYPETYPE(  arg0, "getloadavg - arg0");
 		validate_NULL_TYPETYPE(  arg1, "getloadavg - arg1");
 	}

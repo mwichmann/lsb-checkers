@@ -17,7 +17,7 @@ int mvwaddchnstr (WINDOW * arg0 , int arg1 , int arg2 , const chtype * arg3 , in
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvwaddchnstr()");
+		__lsb_output(4, "mvwaddchnstr()");
 		validate_RWaddress( arg0, "mvwaddchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mvwaddchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwaddchnstr - arg1");

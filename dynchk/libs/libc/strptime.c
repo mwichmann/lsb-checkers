@@ -13,11 +13,11 @@ char * strptime (const char * arg0 , const char * arg1 , struct tm * arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strptime");
+		funcptr = dlvsym(RTLD_NEXT, "strptime", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strptime()");
+		__lsb_output(4, "strptime()");
 		validate_Rdaddress( arg0, "strptime - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strptime - arg0");
 		validate_Rdaddress( arg1, "strptime - arg1");

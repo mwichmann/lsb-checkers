@@ -13,11 +13,11 @@ char * __strtok_r (char * arg0 , const char * arg1 , char * * arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__strtok_r");
+		funcptr = dlvsym(RTLD_NEXT, "__strtok_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__strtok_r()");
+		__lsb_output(4, "__strtok_r()");
 		validate_RWaddress( arg0, "__strtok_r - arg0");
 		validate_RWaddress(  arg0, "__strtok_r - arg0");
 		validate_Rdaddress( arg1, "__strtok_r - arg1");

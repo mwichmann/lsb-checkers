@@ -13,11 +13,11 @@ char * getlogin ()
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getlogin");
+		funcptr = dlvsym(RTLD_NEXT, "getlogin", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getlogin()");
+		__lsb_output(4, "getlogin()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

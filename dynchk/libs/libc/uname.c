@@ -13,11 +13,11 @@ int uname (struct utsname * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "uname");
+		funcptr = dlvsym(RTLD_NEXT, "uname", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "uname()");
+		__lsb_output(4, "uname()");
 		validate_RWaddress( arg0, "uname - arg0");
 		validate_NULL_TYPETYPE(  arg0, "uname - arg0");
 	}

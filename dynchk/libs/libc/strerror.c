@@ -13,11 +13,11 @@ char * strerror (int arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strerror");
+		funcptr = dlvsym(RTLD_NEXT, "strerror", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strerror()");
+		__lsb_output(4, "strerror()");
 		validate_NULL_TYPETYPE(  arg0, "strerror - arg0");
 	}
 	ret_value = funcptr(arg0);

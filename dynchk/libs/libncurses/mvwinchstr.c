@@ -17,7 +17,7 @@ int mvwinchstr (WINDOW * arg0 , int arg1 , int arg2 , chtype * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvwinchstr()");
+		__lsb_output(4, "mvwinchstr()");
 		validate_RWaddress( arg0, "mvwinchstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mvwinchstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwinchstr - arg1");

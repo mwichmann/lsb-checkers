@@ -14,11 +14,11 @@ int getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t a
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getgrnam_r");
+		funcptr = dlvsym(RTLD_NEXT, "getgrnam_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getgrnam_r()");
+		__lsb_output(4, "getgrnam_r()");
 		validate_Rdaddress( arg0, "getgrnam_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getgrnam_r - arg0");
 		validate_RWaddress( arg1, "getgrnam_r - arg1");

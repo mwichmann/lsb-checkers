@@ -14,11 +14,11 @@ ssize_t recvfrom (int arg0 , void * arg1 , size_t arg2 , int arg3 , struct socka
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "recvfrom");
+		funcptr = dlvsym(RTLD_NEXT, "recvfrom", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "recvfrom()");
+		__lsb_output(4, "recvfrom()");
 		validate_NULL_TYPETYPE(  arg0, "recvfrom - arg0");
 		validate_RWaddress( arg1, "recvfrom - arg1");
 		validate_NULL_TYPETYPE(  arg1, "recvfrom - arg1");

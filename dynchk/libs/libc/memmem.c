@@ -14,11 +14,11 @@ void * memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "memmem");
+		funcptr = dlvsym(RTLD_NEXT, "memmem", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "memmem()");
+		__lsb_output(4, "memmem()");
 		validate_Rdaddress( arg0, "memmem - arg0");
 		validate_NULL_TYPETYPE(  arg0, "memmem - arg0");
 		validate_NULL_TYPETYPE(  arg1, "memmem - arg1");

@@ -13,6 +13,7 @@ use strict;
 use DBI;
 use Getopt::Std;
 use IO::Handle;
+use IO::File;
 
 ### Get environment variables
 
@@ -24,6 +25,7 @@ my($DBPass) = $LSBDBPASSWD;
 my($DBHost) = $LSBDBHOST;
 my($generate_gen_file) = 1;
 my($be_quiet) = 0;
+
 ##############################
 # Option handlers
 ##############################
@@ -128,7 +130,7 @@ my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSE
 	or die "Couldn't connect to database: " . DBI->errstr;
 
 my $int_q = $dbh->prepare(
-'SELECT Iid, Ireturn, Asymbol
+'SELECT Iid, Ireturn, Asymbol, Iversion
 FROM Interface, Architecture
 WHERE Iname = ?
   AND Aid = Iarch 
@@ -186,6 +188,12 @@ my $write_int_wrapper_q = $dbh->prepare(
 'SELECT Ppos, Pint, Pnull FROM Parameter WHERE Pint = ? ORDER BY Ppos')
 	or die "Couldn't prepare write_int_wrapper query: " . DBI->errstr;
 
+my $get_func_version_q = $dbh->prepare(
+'SELECT Vname from Version WHERE Vid = ?')
+    or die "Couldn't prepare get_func_version query: ".DBI->errstr;
+my $version_count_q = $dbh->prepare('SELECT COUNT(*) from Version')
+    or die "Couldn't prepare version_count query: ".DBI->errstr;
+
 my $write_int_header_q = $dbh->prepare(
 'SELECT Theadergroup, Tid
 FROM  Parameter, Type
@@ -233,7 +241,7 @@ my $get_funcptr_declaration_q = $dbh->prepare(
 # Subroutines 
 ##############################
 
-sub debug # (@everyone)
+sub debug # (@some_list)
 {
 	foreach my $out (@_)
 	{
@@ -263,6 +271,75 @@ sub has_ellipsis # ($func_name)
 	}
 	return 0;
 }
+
+
+################################################################################
+#                The version script subsystem.
+################################################################################
+my @vs_fh;
+my @vs_fh_name;
+my @vs_fh_isopen;
+
+sub init_vs_fh
+{
+    my ($v_id);
+    $version_count_q->execute();
+    my ($count) = $version_count_q->fetchrow_array();
+
+    for($v_id = 1; $v_id <= $count; $v_id++)
+    {
+	$get_func_version_q->execute($v_id);
+	if( my ($v_name) = $get_func_version_q->fetchrow_array())
+	{
+	    $vs_fh_name[$v_id] = $v_name;
+	    $vs_fh_isopen[$v_id] = 0;
+	}
+    }
+    return 0;    
+}
+
+sub open_vs_fh #(v_id)
+{
+    my($v_id) = @_;
+
+    return -1  if($vs_fh_isopen[$v_id] > 0);
+
+    $vs_fh[$v_id] = new IO::File ">". $vs_fh_name[ $v_id ] . ".Version";
+    print {$vs_fh[$v_id]} $vs_fh_name[$v_id]." {\n";
+    
+    $vs_fh_isopen[$v_id] = 1;
+    return 0;
+}
+
+sub close_vs_fh #(v_id)
+{
+    my($v_id) = @_;
+    return -1 if($vs_fh_isopen[$v_id] != 1);
+    print {$vs_fh[$v_id]} "};\n";
+    close $vs_fh[$v_id];
+    $vs_fh_isopen[$v_id] = 2;
+}
+
+sub clean_vs_fh
+{
+    my $i;
+    for($i = 0; $i < @vs_fh_isopen; $i++)
+    {
+	close_vs_fh($i) if($vs_fh_isopen[$i] and $vs_fh_isopen[$i] == 1);
+    }
+}
+	    
+sub write_int_vscript #(func_id, func_name, v_id)
+{
+    my($func_id, $func_name, $v_id) = @_;
+    return -1 if($v_id == 0);
+    open_vs_fh($v_id);  #only does anything if this file is not yet open.
+    print {$vs_fh[$v_id]} "  $func_name;\n" ;
+}
+
+################################################################################
+#    Functions for getting C code right.
+################################################################################
 
 sub get_type_string($$$);
 
@@ -416,6 +493,10 @@ sub get_param_type # ($param_pos, $param_int)
 	return ($left_string,$right_string);
 }
 
+################################################################################
+#     Functions that write C code.
+################################################################################
+
 # write code that checks the addresses of pointers.
 sub write_addy_checker
 {
@@ -450,7 +531,7 @@ sub write_addy_checker
 # if 'is_lsb', write code block for __lsb_* interface wrapper to 'fh'
 sub write_int_wrapper
 {
-	my($fh, $func_id, $func_name, $func_left_type, $func_right_type, $is_lsb) = @_;
+	my($fh, $func_id, $func_name, $func_vid, $func_left_type, $func_right_type, $is_lsb) = @_;
 	my $i = 0; my $j = 0;
 
 	print $fh "{\n";
@@ -458,13 +539,23 @@ sub write_int_wrapper
 	print $fh "\t$func_left_type ret_value $func_right_type;\n" unless($func_left_type eq "void");
 
 	print $fh "\tif(!funcptr)\n";
-	print $fh "\t\tfuncptr = dlsym(RTLD_NEXT, \"" . $func_name . "\");\n";
+	if($func_vid == 0)
+	{   
+	    print $fh "\t\tfuncptr = dlsym(RTLD_NEXT, \"$func_name\");\n";
+	}
+	else
+	{
+	    $get_func_version_q->execute($func_vid)
+		or die "Couldn't execute get_func_version_q: ".DBI->errstr;
+	    my($func_version_name) = $get_func_version_q->fetchrow_array();
+	    print $fh "\t\tfuncptr = dlvsym(RTLD_NEXT, \"$func_name\", \"$func_version_name\");\n"; 
+	}
 	$write_int_wrapper_q->execute($func_id)
 		or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
 
 	print $fh "\tif(__lsb_check_params)\n\t{\n";
 	print $fh "\t\t__lsb_check_params=0;\n";
-	print $fh "\t\t__lsb_output(5-reset_flag, \"$func_name()\");\n";	
+	print $fh "\t\t__lsb_output(4, \"$func_name()\");\n";	
 	
 	VALCALL: while( my($param_pos, $param_int, $param_null) = $write_int_wrapper_q->fetchrow_array() )
 	{
@@ -638,19 +729,22 @@ sub add_to_gen_mk # ($func_name, $lib_name)
 		close $gen_fh;
 	}
 }
-##############################
-# Main section
-##############################
+################################################################################
+#     Main section
+################################################################################
 
 # Open utility output files
 
 my $ell_file = IO::Handle->new();
 open($ell_file, ">ellipsis_funcs")
 	or die "Can't open the output file ellipsis_funcs: $!";
-my $lsb_h_file = IO::Handle->new();
-open($lsb_h_file, ">all_lsb_funcs.h")
-	or die "Can't open the output file all_lsb_funcs.h: $!";
+# my $lsb_h_file = IO::Handle->new();
+# open($lsb_h_file, ">all_lsb_funcs.h")
+# 	or die "Can't open the output file all_lsb_funcs.h: $!";
 my $int_file = IO::Handle->new();
+
+# initialize version script files
+init_vs_fh();
 
 # Write .c files for interface wrappers
 my $progress = 1;
@@ -660,64 +754,74 @@ $| = 1;
 
 # Read "hand_coded" and store the do-not-generate list.
 open(DNG_FILE, "hand_coded")
-	or die "Can't open input file hand_coded: $!";
+    or die "Can't open input file hand_coded: $!";
 my @do_not_generate = <DNG_FILE>;
 close DNG_FILE;
 
+
 FUNC: while(my ($func_name, $func_lib) = $int_name_q->fetchrow_array())
 {
-	# Skip interface if it has an ellipsis type - it must be hand-coded.
-	if(has_ellipsis($func_name))
-	{
-		print $ell_file $func_name . "\n";
-		next FUNC;
-	}
-	if(contains($func_name."\n", @do_not_generate))
-	{
-		next FUNC;
-	}
+    my $gen_this = 1;
+    # Skip interface if it has an ellipsis type - it must be hand-coded.
+    if(has_ellipsis($func_name))
+    {
+	print $ell_file $func_name . "\n";
+ 	$gen_this = 0;
+    }
+    elsif(contains($func_name."\n", @do_not_generate))
+    {
+	$gen_this = 0;
+    }
+
+    if($gen_this)
+    {
 	# Add interface to correct gen.mk file
 	add_to_gen_mk($func_name, $func_lib) if($generate_gen_file);
 	# Create interface's .c file
 	open($int_file, ">" . $func_lib . "/" . $func_name . '.c')
 	    or die "Can't open output: $!";
-
-	$int_q->execute($func_name) or die "Can't execute int query: ".DBI->errstr;
-	while(my ($func_id, $func_type, $func_arch) = $int_q->fetchrow_array())
+    }   
+    $int_q->execute($func_name) or die "Can't execute int query: ".DBI->errstr;
+    while(my ($func_id, $func_type, $func_arch, $func_vid) = $int_q->fetchrow_array())
+    {
+	if($gen_this)
 	{
 	    my ($left_type_string, $right_type_string) = get_type_string($func_type, -1, 0);
 	    
-	    # Add interface to the __lsb_* function header
-	    write_int_declaration($lsb_h_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
+	    # Add interface to the __lsb_* function header (This doesn't get used anymore)
+	    # write_int_declaration($lsb_h_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
 	    
 	    # Open conditional architecture magic
 	    unless($func_arch eq "1")
 	    {
 		print $int_file "#if "; write_arch_macro($int_file, $func_arch); print $int_file "\n";
 	    }
-		    
+	    
 	    # Write interface's .c file
 	    write_int_header($int_file, $left_type_string, $right_type_string, $func_name, $func_id);
 	    write_int_declaration($int_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
-	    write_int_wrapper($int_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
+	    write_int_wrapper($int_file, $func_id, $func_name, $func_vid, $left_type_string, $right_type_string, 0);
 
 	    unless($func_arch eq "1")
 	    {
 		print $int_file "#endif /*"; write_arch_macro($int_file, $func_arch); print $int_file "*/\n";
 	    }
-	    
 	}
-	
-	$progress ++;
-	    
-	unless($be_quiet)
-	{  print "." if ($progress % 50 == 0); }
+	# Put interface in version script
+	write_int_vscript($func_id, $func_name, $func_vid);
+    }
+    
+    $progress ++;
+    
+    unless($be_quiet)
+    {  print "." if ($progress % 50 == 0); }
 
-	close($int_file);
+    close($int_file);
 
 }
 	
 close($ell_file);
-	
-close($lsb_h_file);
+#close($lsb_h_file);
+clean_vs_fh;
+
 print "Done generating libraries!\a\n" unless($be_quiet);

@@ -13,11 +13,11 @@ char * dirname (char * arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dirname");
+		funcptr = dlvsym(RTLD_NEXT, "dirname", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "dirname()");
+		__lsb_output(4, "dirname()");
 		validate_RWaddress( arg0, "dirname - arg0");
 		validate_NULL_TYPETYPE(  arg0, "dirname - arg0");
 	}

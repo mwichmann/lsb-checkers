@@ -13,11 +13,11 @@ struct servent * getservbyport (int arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	struct servent * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getservbyport");
+		funcptr = dlvsym(RTLD_NEXT, "getservbyport", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getservbyport()");
+		__lsb_output(4, "getservbyport()");
 		validate_NULL_TYPETYPE(  arg0, "getservbyport - arg0");
 		validate_Rdaddress( arg1, "getservbyport - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getservbyport - arg1");

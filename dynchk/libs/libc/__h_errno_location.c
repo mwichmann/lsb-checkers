@@ -17,7 +17,7 @@ int * __h_errno_location ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__h_errno_location()");
+		__lsb_output(4, "__h_errno_location()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

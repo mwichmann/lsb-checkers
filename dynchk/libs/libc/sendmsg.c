@@ -13,11 +13,11 @@ ssize_t sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sendmsg");
+		funcptr = dlvsym(RTLD_NEXT, "sendmsg", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sendmsg()");
+		__lsb_output(4, "sendmsg()");
 		validate_NULL_TYPETYPE(  arg0, "sendmsg - arg0");
 		validate_Rdaddress( arg1, "sendmsg - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sendmsg - arg1");

@@ -17,7 +17,7 @@ int wattr_get (WINDOW * arg0 , attr_t * arg1 , short * arg2 , void * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wattr_get()");
+		__lsb_output(4, "wattr_get()");
 		validate_RWaddress( arg0, "wattr_get - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wattr_get - arg0");
 		validate_RWaddress( arg1, "wattr_get - arg1");

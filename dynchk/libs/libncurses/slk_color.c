@@ -17,7 +17,7 @@ int slk_color (short arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "slk_color()");
+		__lsb_output(4, "slk_color()");
 		validate_NULL_TYPETYPE(  arg0, "slk_color - arg0");
 	}
 	ret_value = funcptr(arg0);

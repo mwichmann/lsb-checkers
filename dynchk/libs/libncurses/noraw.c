@@ -17,7 +17,7 @@ int noraw ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "noraw()");
+		__lsb_output(4, "noraw()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

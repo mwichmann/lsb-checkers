@@ -13,11 +13,11 @@ long double acosl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "acosl");
+		funcptr = dlvsym(RTLD_NEXT, "acosl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "acosl()");
+		__lsb_output(4, "acosl()");
 		validate_NULL_TYPETYPE(  arg0, "acosl - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -13,11 +13,11 @@ int putenv (char * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "putenv");
+		funcptr = dlvsym(RTLD_NEXT, "putenv", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "putenv()");
+		__lsb_output(4, "putenv()");
 		validate_RWaddress( arg0, "putenv - arg0");
 		validate_NULL_TYPETYPE(  arg0, "putenv - arg0");
 	}

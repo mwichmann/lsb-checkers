@@ -17,7 +17,7 @@ int inflateInit_ (z_streamp arg0 , const char * arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "inflateInit_()");
+		__lsb_output(4, "inflateInit_()");
 		validate_NULL_TYPETYPE(  arg0, "inflateInit_ - arg0");
 		validate_Rdaddress( arg1, "inflateInit_ - arg1");
 		validate_NULL_TYPETYPE(  arg1, "inflateInit_ - arg1");

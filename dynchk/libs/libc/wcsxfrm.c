@@ -14,11 +14,11 @@ size_t wcsxfrm (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcsxfrm");
+		funcptr = dlvsym(RTLD_NEXT, "wcsxfrm", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcsxfrm()");
+		__lsb_output(4, "wcsxfrm()");
 		validate_RWaddress( arg0, "wcsxfrm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsxfrm - arg0");
 		validate_Rdaddress( arg1, "wcsxfrm - arg1");
