@@ -12,12 +12,12 @@ Prefix, if supplied, is a prefix to prepend to all paths
 # Python version
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.4 $
+# This is $Revision: 1.5 $
 #
 # $Log: cmdchk.py,v $
-# Revision 1.4  2004/01/29 23:03:15  mats
-# Check in a version that includes a "reverse check" (mainly for the si).
-# Needs more work so this check can be optional and results logged.
+# Revision 1.5  2004/01/29 23:43:12  mats
+# Fix up the report-extras code. Can't remove elements from the same
+# list you're stepping through, so step through a temporary copy.
 #
 # Revision 1.3  2003/11/18 16:44:35  mats
 # minor simplification
@@ -49,6 +49,11 @@ prefix = ""
 class Path:
     def __init__(self, name):
 	self.name = name
+    
+    def dump(self, tag):
+	sys.stderr.write("%s from %s:\n" % (tag, self.name))
+	for cmd in self.cmds:
+	    sys.stderr.write("   %s\n" % cmd)
 
 
 def check_cmd(journal, cmdname):
@@ -85,34 +90,31 @@ def check_cmd(journal, cmdname):
 
 
 def check_extras(journal, database):
-    """collect all the commands in binpaths. Strike them off if they
-    match ones in the command list. Print the rest"""
-    pathvec = []
+    """collect all the commands in binpaths. Strike them off if they match
+    ones in the command list from the LSB database. Report the extras."""
     for path in binpaths:
 	if prefix:
 	    path = prefix + path
-	i = Path(path)
-	i.cmds = os.listdir(path)
-	for command in i.cmds:
+	location = Path(path)
+	location.cmds = os.listdir(path)
+        ## location.dump("DEBUG: initial list")
+	for command in location.cmds[:]:	# examine a copy
 	    if command in database.cmds:
-		i.cmds.remove(command)
-	pathvec.append(i)
-
-    for i in pathvec:
-	if len(i.cmds):
-	    sys.stderr.write("Extra commands in %s:\n" % i.name)
-	    for cmd in i.cmds:
-		sys.stderr.write("   " + cmd + "\n")
+		location.cmds.remove(command)	# so we can remove from orig
+	if len(location.cmds):
+	    location.dump("Extra commands")
 
 
 def parse_cmds(cmdfile):
-    i = Path("database")
+    """pull in the required-command list generated from the LSB database"""
+    database = Path("database")
     cmds = []
     for line in open(cmdfile).readlines():
         if line[0] == '#': continue
         cmds.append(line.split()[0])	# two elements per line
-    i.cmds = cmds
-    return i
+    database.cmds = cmds
+    ## database.dump("DEBUG: initial list")
+    return database
 
 
 if len(sys.argv) > 1:
