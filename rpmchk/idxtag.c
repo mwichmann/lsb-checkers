@@ -539,6 +539,23 @@ if( strcmp(name,architecture) != 0 ) {
 }
 
 void
+checkRpmIdxOLDFILENAMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset, hcount, i;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+oldfilenames=(char *)(file1->storeaddr+hoffset);
+name=oldfilenames;
+for(i=0;i<hcount;i++) {
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Old filename: %s\n",name);
+	name+=strlen(name)+1;
+	}
+}
+
+void
 checkRpmIdxFILESIZES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	hcount,hoffset, i;
@@ -645,7 +662,9 @@ for(i=0;i<hcount;i++) {
 	fflags[i]=htonl(fflags[i]);
 	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
 		fprintf(stderr,"File flags: %x\n",fflags[i]);
+/*XXXSTU
 	fprintf(stderr,"File flags not checked: %x\n",fflags[i]);
+*/
 	}
 }
 
@@ -708,7 +727,9 @@ for(i=0;i<hcount;i++) {
 	flagp[i]=htonl(flagp[i]);
 	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
 		fprintf(stderr,"File Verify Flag: %x\n",flagp[i]);
+/*XXXSTU
 	fprintf(stderr,"File Verify Flag not checked: %x\n",flagp[i]);
+*/
 	}
 }
 
@@ -791,6 +812,8 @@ for(i=0;i<hcount;i++) {
 		lsbdepidx=i;
 	if( strcmp(name,"rpmlib(PayloadFilesHavePrefix)") == 0 ) 
 		hasPayloadFilesHavePrefix=1;
+	if( strcmp(name,"rpmlib(CompressedFileNames)") == 0 ) 
+		hasCompressedFileNames=1;
 	fprintf(stderr,"Required Name: %s\n", name );
 	name+=strlen(name)+1;
 	}
@@ -1039,6 +1062,7 @@ for(i=0;i<hcount;i++) {
 	basenames[i]=name;
 	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
 		fprintf(stderr,"Basename: %s\n", name );
+	fprintf(stderr,"Basename: %s\n", name );
 	name+=strlen(name)+1;
 	}
 }
@@ -1144,7 +1168,10 @@ hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
 if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
 	fprintf(stderr,"Payload flags: %s\n", name );
-fprintf(stderr,"Payload flags not checked: %s\n", name );
+if( strcmp(name,"9") != 0 ) {
+	fprintf(stderr,"Invalid RPMTAG_PAYLOADFLAGS: expecting \"9\"");
+	fprintf(stderr," but found %s\n", name );
+	}
 }
 
 void
