@@ -20,7 +20,8 @@ struct versym {
 	};
 
 #if defined(__alpha) || defined(__alpha__) || \
-    defined(__ia64__) || defined(__powerpc64__) || defined(__s390x__)
+    defined(__ia64__) || defined(__powerpc64__) || defined(__s390x__) || \
+    defined(__x86_64__)
 
 #define Elf_Ehdr Elf64_Ehdr
 #define Elf_Shdr Elf64_Shdr

@@ -29,3 +29,6 @@ char *ProgInterp =
 #if __s390x__
 	"/lib/ld-lsb-s390x.so.1";
 #endif
+#if __x86_64__
+	"/lib/ld-lsb-x86_64.so.1";
+#endif
