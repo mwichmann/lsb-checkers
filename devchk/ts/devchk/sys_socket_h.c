@@ -195,6 +195,56 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SO_RCVLOWAT
+	CompareConstant(SO_RCVLOWAT,18,3230,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVLOWAT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SO_SNDLOWAT
+	CompareConstant(SO_SNDLOWAT,19,3231,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDLOWAT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SO_RCVTIMEO
+	CompareConstant(SO_RCVTIMEO,20,3232,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVTIMEO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SO_SNDTIMEO
+	CompareConstant(SO_SNDTIMEO,21,3233,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDTIMEO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SO_ACCEPTCONN
+	CompareConstant(SO_ACCEPTCONN,30,3243,architecture)
+#else
+Msg( "Error: Constant not found: SO_ACCEPTCONN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SOCK_STREAM
 	CompareConstant(SOCK_STREAM,1,3244,architecture)
 #else
@@ -249,6 +299,16 @@ cnt++;
 	CompareConstant(SOCK_PACKET,10,3249,architecture)
 #else
 Msg( "Error: Constant not found: SOCK_PACKET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SCM_RIGHTS
+	CompareConstant(SCM_RIGHTS,0x01,3252,architecture)
+#else
+Msg( "Error: Constant not found: SCM_RIGHTS\n");
 cnt++;
 #endif
 
@@ -409,6 +469,36 @@ cnt++;
 	CompareConstant(SOL_RAW,255,3335,architecture)
 #else
 Msg( "Error: Constant not found: SOL_RAW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CMSG_NXTHDR(mhdr,
+	CompareConstant(CMSG_NXTHDR(mhdr,,cmsg)cmsg_nxthdr((mhdr),(cmsg)),3350,architecture)
+#else
+Msg( "Error: Constant not found: CMSG_NXTHDR(mhdr,\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CMSG_DATA(cmsg)
+	CompareConstant(CMSG_DATA(cmsg),((void*)((char*)(cmsg)+CMSG_ALIGN(sizeof(structcmsghdr)))),3351,architecture)
+#else
+Msg( "Error: Constant not found: CMSG_DATA(cmsg)\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CMSG_FIRSTHDR(msg)
+	CompareConstant(CMSG_FIRSTHDR(msg),__CMSG_FIRSTHDR((msg)->msg_control,(msg)->msg_controllen),3355,architecture)
+#else
+Msg( "Error: Constant not found: CMSG_FIRSTHDR(msg)\n");
 cnt++;
 #endif
 
