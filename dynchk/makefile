@@ -19,6 +19,8 @@ LIB64=$(shell case `arch` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
 #REAL_LIBS = -L/opt/lsb/lib$(LIB64) -lXt -lICE -l SM -lX11 -lGL -lncurses -lpam -lz -lm -ldl -lc 
 REAL_LIBS = -L/opt/lsb/lib$(LIB64) -ldl
 
+#TODO: generalize building stuff in the "misc" directory
+
 all: liblsbdynchk.so lsbdynchk
 
 $(WRAPPER_LIBS): build_libs makefile
