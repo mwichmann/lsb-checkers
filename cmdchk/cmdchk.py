@@ -12,9 +12,12 @@ Prefix, if supplied, is a prefix to prepend to all paths
 # Python version
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.5 $
+# This is $Revision: 1.6 $
 #
 # $Log: cmdchk.py,v $
+# Revision 1.6  2004/10/31 14:51:29  mats
+# Use new convenience methods for results
+#
 # Revision 1.5  2004/01/29 23:43:12  mats
 # Fix up the report-extras code. Can't remove elements from the same
 # list you're stepping through, so step through a temporary copy.
@@ -41,7 +44,8 @@ binpaths = [
         "/sbin",
         "/usr/bin",
         "/usr/sbin",
-        "/usr/X11R6/bin"
+        "/usr/X11R6/bin",
+	"/usr/lib/lsb"		# is this okay to search?
 ]
 
 prefix = ""
@@ -68,22 +72,22 @@ def check_cmd(journal, cmdname):
 	    path = prefix + path
 	filename = path + os.sep + cmdname
 	if os.access(filename,R_OK|X_OK):
-	    journal.result(tetj.TETJ_PASS)
+	    journal.result_pass()
 	    break
 
 	if os.path.exists(filename):
-	    # access() failed but it exists: issue a FIP
+	    # it exists but access() failed: issue a FIP
 	    # (probably need to be running as root)
 	    sys.stderr.write("Couldn't access %s\n" % cmdname)
 	    tmp_string = "File found cannot be accessed: " + filename
 	    journal.testcase_info(0, 1, 1, tmp_string)
-	    journal.result(tetj.TETJ_FIP)
+	    journal.result_fip()
 	    break
 
     else: 
-        # no breaks: not found at all
+        # fallthrough: not found at all
 	sys.stderr.write("Couldn't find %s\n" % cmdname)
-	journal.result(tetj.TETJ_FAIL)
+	journal.result_fail()
 
     journal.purpose_end()
     journal.testcase_end()
