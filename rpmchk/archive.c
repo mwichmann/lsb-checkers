@@ -272,8 +272,8 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	devmin=strtol(num,NULL,16);
 
-	if( filedevs && (makedev(devmaj,devmin) != filedevs[fileindex]) ) {
-		fprintf(stderr,"File dev (%x) for %s not the same as specified in RPMTAG_FILEDEVICES (%x)\n", makedev(devmaj,devmin), filename, filedevs[fileindex] );
+	if( filedevs && (rpmmakedev(devmaj,devmin) != filedevs[fileindex]) ) {
+		fprintf(stderr,"File dev (%x) for %s not the same as specified in RPMTAG_FILEDEVICES (%x)\n", rpmmakedev(devmaj,devmin), filename, filedevs[fileindex] );
 	}
 
 	/*
@@ -288,8 +288,8 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	devmin=strtol(num,NULL,16);
 
-	if( filerdevs && (makedev(devmaj,devmin) != filerdevs[fileindex]) ) {
-		fprintf(stderr,"File rdev (%x) for %s not the same as specified in RPMTAG_FILERDEVS (%x)\n", makedev(devmaj,devmin), filename, filerdevs[fileindex] );
+	if( filerdevs && (rpmmakedev(devmaj,devmin) != filerdevs[fileindex]) ) {
+		fprintf(stderr,"File rdev (%x) for %s not the same as specified in RPMTAG_FILERDEVS (%x)\n", rpmmakedev(devmaj,devmin), filename, filerdevs[fileindex] );
 	}
 
 	/*

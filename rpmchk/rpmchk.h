@@ -176,6 +176,10 @@ typedef struct {
 	char	c_checksum[8];
 	} RpmArchiveHeader;
 
+#define rpmmakedev(major, minor) ((((unsigned int) (major)) << 8) | \
+		                   ((unsigned int) (minor)))
+
+
 /*
  * Debugging interface: Set the environment variable RPMCHK_DEBUG to a value
  * that corresponds to the bits defined below.
@@ -190,6 +194,8 @@ extern int rpmchkdebug;
 extern char *architecture;
 extern char *validos;
 extern char *validdepver;
+extern char *validdeps[];
+extern int numdeps;
 extern char *pkgname;
 extern unsigned char *sigdata;
 extern int lsbdepidx;
