@@ -46,4 +46,6 @@ int	numdirnames;
 
 int	hasPayloadFilesHavePrefix=0;
 int	hasCompressedFileNames=0;
+int	hasOldFilenames=0;
+int	hasNewFilenames=0;
 int	rpmchkdebug;

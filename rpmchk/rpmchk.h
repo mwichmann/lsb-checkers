@@ -205,6 +205,8 @@ extern char **dirnames;
 extern int  numdirnames;
 extern int  hasPayloadFilesHavePrefix;
 extern int  hasCompressedFileNames;
+extern int  hasOldFilenames;
+extern int  hasNewFilenames;
 
 /* util.c */
 extern RpmFile *OpenRpmFile(char *name);

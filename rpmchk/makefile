@@ -1,7 +1,7 @@
 CFLAGS=-g -Wall
 
 OBJS=archive.o hdr.o idxtag.o lead.o rpmchk.o util.o vals.o fhs.o idxtbl.o \
-	md5c.o
+	md5c.o check.o
 GENSRCS=rpmtag.h idxtbl.c
 LIBS= ../tetj/libtetj.a
 LIB=librpmchk.a
