@@ -1,0 +1,132 @@
+#!/usr/local/bin/perl
+
+use CGI;
+use Mysql;
+
+sub writetest($$)
+{
+local($Hid,$Hname)=@_;
+my(%entry);
+
+$fname=$Hname;
+$fname =~ tr/\/./__/;
+$filename = $fname.".c";
+$objname = $fname.".o";
+
+open(TESTS,">$filename") || die "Can't open $filename for writing";
+print "Writing tests for $Hname to $filename\n";
+
+#Get Constants
+$select = "SELECT DISTINCT * FROM Constants,HeaderGroup ";
+$select.= "WHERE HGheader=$Hid ";
+$select.= "AND Cheadgroup=HGid ";
+$select.= "ORDER BY Cheadgroup ";
+$cth = $Dbh->query($select) || die $Dbh->errmsg();
+
+#Get Types
+$select = "SELECT DISTINCT * FROM Types,HeaderGroup ";
+$select.= "WHERE HGheader=$Hid ";
+$select.= "AND Theadergroup=HGid ";
+$select.= "ORDER BY Theadergroup ";
+$tth = $Dbh->query($select) || die $Dbh->errmsg();
+if( $cth->numrows == 0 && $tth->numrows == 0 ) {
+	print TESTS "/*\n * No values in $Hname\n */\n";
+	close(TESTS);
+	return;
+	}
+
+print MAKEFILE "\\\n\t$objname ";
+print HARNESS "tcnt+=$fname();\n";
+
+
+print TESTS "/*\n * Test of $Hname\n */\n";
+print TESTS "#include \"hdrchk.h\"\n";
+print TESTS "#include \"sys/types.h\"\n";
+print TESTS "#include \"$Hname\"\n";
+print TESTS "\n\n\n";
+print TESTS "int $fname()\n{\n";
+print TESTS "int cnt=0;\n";
+
+for(1..$cth->numrows) {
+	%entry=$cth->fetchhash;
+	# Need to make sure it is an integer
+	if( $entry{'Ctype'} eq 'I' ) {
+		print TESTS "#ifdef $entry{'Cname'}\n";
+		print TESTS "CompareConstant($entry{'Cname'},$entry{'Cvalue'})\n";
+		print TESTS "#else\n";
+		print TESTS "Msg( \"Warning: Constant not found: $entry{'Cname'}\\n\");\n";
+		print TESTS "#endif\n";
+	} else {
+		print TESTS "/* No test for $entry{'Cname'} */\n";
+	}
+}
+
+for(1..$tth->numrows) {
+	%tentry=$tth->fetchhash;
+	$Tid=$tentry{'Tid'};
+	if( $tentry{'Ttype'} eq 'S' ) {
+		print TESTS "CheckTypeSize(struct $tentry{'Tname'},$tentry{'Tsize'})\n";
+		#Get the members
+		$select = "SELECT DISTINCT * FROM TypeMembers ";
+		$select.= "WHERE TMmemberof=$Tid ";
+		$select.= "ORDER BY TMposition ";
+		$mth = $Dbh->query($select) || die $Dbh->errmsg();
+		for(1..$mth->numrows) {
+			%mentry=$mth->fetchhash;
+			print TESTS "CheckOffset(struct $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMoffset'})\n";
+		}
+	} else {
+	print TESTS "CheckTypeSize($tentry{'Tname'},$tentry{'Tsize'})\n";
+	}
+}
+
+print TESTS "printf(\"%d tests in $Hname\\n\",cnt);\n";
+print TESTS "return cnt;\n";
+print TESTS "}\n";
+
+close(TESTS);
+}
+
+
+open(HARNESS,">hdrchk.c") || die "Can't open hdrchk.c for writing";
+print HARNESS "#include <stdio.h>\n";
+print HARNESS "#include <stdarg.h>\n\n";
+print HARNESS "Msg( char *f, ...)\n";
+print HARNESS "{\n";
+print HARNESS "va_list args;\n";
+print HARNESS "va_start(args,f);\n";
+print HARNESS "vfprintf(stderr, f, args);\n";
+print HARNESS "va_end(args);\n";
+print HARNESS "}\n\n";
+print HARNESS "int tcnt=0;\n\n";
+print HARNESS "main()\n{\n";
+open(MAKEFILE,">makefile") || die "Can't open makefile for writing";
+#print MAKEFILE "CFLAGS = -g -I../../headers\n";
+print MAKEFILE "OBJS = hdrchk.o ";
+
+$Dbh = Mysql->connect(localhost) || die $Mysql::db_errstr;
+$Dbh->selectdb("Linux") || die $Dbh->errmsg();
+
+$select = "SELECT DISTINCT * FROM Headers ";
+$select.= "WHERE Hstd='Y' ";
+$select.= "ORDER BY Hname ";
+#print $select;
+
+$hth = $Dbh->query($select) || die $Dbh->errmsg();
+for(1..$hth->numrows) {
+	%entry=$hth->fetchhash;
+	writetest($entry{'Hid'},$entry{'Hname'});
+}
+print MAKEFILE "\n\n";
+print MAKEFILE "hdrchk: \$\(OBJS)\n";
+print MAKEFILE "\tcc -o hdrchk \$\(OBJS)\n";
+print MAKEFILE "\n";
+print MAKEFILE "hdrchk.o: hdrchk.c\n";
+print MAKEFILE "\tcc -g -c hdrchk.c\n";
+print MAKEFILE "\n\n";
+print MAKEFILE "clean:\n\trm \$\(OBJS)\n";
+close(MAKEFILE);
+
+print HARNESS "printf(\"Total Tests: %d\\n\", tcnt );\n";
+print HARNESS "}\n";
+close(HARNESS);

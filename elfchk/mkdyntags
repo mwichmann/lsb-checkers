@@ -1,0 +1,28 @@
+#!/usr/local/bin/perl
+
+use CGI;
+use Mysql;
+
+$Dbh = Mysql->connect("localhost") || die $Mysql::db_errstr;
+$Dbh->selectdb("Linux") || die $Dbh->errmsg();
+
+$select = "SELECT DISTINCT * FROM DynamicEntries ";
+$select.= "ORDER BY DEname ";
+
+#print $select;
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+print "#include \"elfchk.h\"\n";
+print "#include \"dynamic.h\"\n\n";
+
+print "struct DynamicInfo DynamicInfo[] = {\n";
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	printf "\t{\"%s\",",$entry{'DEname'};
+	printf "%s,",$entry{'DEname'};
+	printf "check%s},\n",$entry{'DEname'};
+}
+print "\t};\n\n";
+print "int numDynamicInfo = sizeof(DynamicInfo)/sizeof(struct DynamicInfo);";
+

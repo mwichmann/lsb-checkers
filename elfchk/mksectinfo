@@ -1,0 +1,35 @@
+#!/usr/local/bin/perl
+
+use CGI;
+use Mysql;
+
+$Dbh = Mysql->connect("localhost") || die $Mysql::db_errstr;
+$Dbh->selectdb("Linux") || die $Dbh->errmsg();
+
+$select = "SELECT DISTINCT * FROM ElfSections,SectionTypes ";
+$select.= "WHERE EStype=STid ";
+$select.= "ORDER BY ESname ";
+
+#print $select;
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+print "#include \"elfchk.h\"\n";
+print "#include \"sections.h\"\n\n";
+
+print "struct SectionInfo SectionInfo[] = {\n";
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	printf "\t{\"%s\",",$entry{'ESname'};
+	printf "%s,",$entry{'STname'};
+	printf "%s,",$entry{'ESattributes'};
+	@typename=split('_',$entry{'STname'},2);
+	if( @typename[1] ) {
+		printf "check%s},\n",@typename[1];
+	} else {
+		printf "checkDUMMY},\n";
+	}
+}
+print "\t};\n\n";
+print "int numSectionInfo = sizeof(SectionInfo)/sizeof(struct SectionInfo);";
+

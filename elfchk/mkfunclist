@@ -1,0 +1,26 @@
+#!/usr/local/bin/perl
+
+use CGI;
+use Mysql;
+
+$Dbh = Mysql->connect(localhost) || die $Mysql::db_errstr;
+$Dbh->selectdb("Linux") || die $Dbh->errmsg();
+
+$select = "SELECT DISTINCT Iname FROM Interface,Library,LibInt ";
+$select.= "WHERE Interface.Iid=LibInt.LIint ";
+$select.= "AND LibInt.LIlib=Library.Lid ";
+$select.= "AND Library.Lstd='Y' ";
+$select.= "ORDER BY Iname ";
+
+#print $select;
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+print "char *DynSyms[] = {\n";
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	printf "\t\"%s\",\n",$entry{'Iname'};
+}
+print "\t};\n";
+print "int numDynSyms = sizeof(DynSyms)/sizeof(char *);";
+
