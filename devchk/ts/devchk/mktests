@@ -62,6 +62,7 @@ sub writetest($$)
 	#Get Constants
 	$select = "SELECT DISTINCT * FROM Constant,HeaderGroup ";
 	$select.= "WHERE HGheader=$Hid ";
+	$select.= "AND Cstd='Yes' ";
 	$select.= "AND Cheadgroup=HGid ";
 	$select.= "ORDER BY Cheadgroup ";
 	$cth = $Dbh->query($select) || die $Dbh->errmsg();
@@ -111,16 +112,16 @@ sub writetest($$)
 	print TESTS "#endif\n\n";
 
 	for(1..$cth->numrows) {
-		%entry=$cth->fetchhash;
+		%centry=$cth->fetchhash;
 		# Need to make sure it is an integer
-		if( $entry{'Ctype'} eq 'I' ) {
-			print TESTS "#ifdef $entry{'Cname'}\n";
-			print TESTS "\tCompareConstant($entry{'Cname'},$entry{'Cvalue'})\n";
+		if( $centry{'Ctype'} eq 'int' ) {
+			print TESTS "#ifdef $centry{'Cname'}\n";
+			print TESTS "\tCompareConstant($centry{'Cname'},$centry{'Cvalue'})\n";
 			print TESTS "#else\n";
-			print TESTS "Msg( \"Warning: Constant not found: $entry{'Cname'}\\n\");\n";
+			print TESTS "Msg( \"Warning: Constant not found: $centry{'Cname'}\\n\");\n";
 			print TESTS "#endif\n\n";
 		} else {
-			print TESTS "/* No test for $entry{'Cname'} */\n";
+			print TESTS "/* No test for $centry{'Cname'} */\n";
 		}
 	}
 
@@ -172,10 +173,12 @@ sub writetest($$)
 			print TESTS "CheckTypeSize($Tname,$ATsize)\n";
 		}
 	}
-	print TESTS "#else\n";
-	print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-	print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
-	print TESTS "#endif\n\n";
+	if( $lastid != 0 ) {
+		print TESTS "#else\n";
+		print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+		print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+		print TESTS "#endif\n\n";
+		}
 
 	print TESTS "#ifdef TET_TEST\n";
 	print TESTS "if (pcnt == cnt )\n";
@@ -280,7 +283,7 @@ $select.= "LEFT JOIN ArchType ON ATtid=Tid ";
 $select.= "LEFT JOIN Architecture ON Aid=ATaid ";
 $select.= "WHERE Ttype='Intrinsic' ";
 $select.= "AND Tname!='...' ";
-$select.= "ORDER BY Tid";
+$select.= "ORDER BY Tid,ATaid";
 $tth = $Dbh->query($select) || die $Dbh->errmsg();
 if( $tth->numrows == 0 ) {
 	print TESTS "/*\n * No values in $Hname\n */\n";
