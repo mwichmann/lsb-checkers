@@ -385,7 +385,7 @@ Msg( "No definition for _STAT_VER (4955, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4955,%d);\n", architecture, _STAT_VER);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if _LSB_DEFAULT_ARCH
 /* No test for st_atime */
 #else
 Msg( "No definition for st_atime (5132, macro) in db\n");
@@ -393,7 +393,7 @@ Msg( "No definition for st_atime (5132, macro) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5132,%s);\n", architecture, st_atime);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if _LSB_DEFAULT_ARCH
 /* No test for st_mtime */
 #else
 Msg( "No definition for st_mtime (5133, macro) in db\n");
@@ -401,7 +401,7 @@ Msg( "No definition for st_mtime (5133, macro) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5133,%s);\n", architecture, st_mtime);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if _LSB_DEFAULT_ARCH
 /* No test for st_ctime */
 #else
 Msg( "No definition for st_ctime (5134, macro) in db\n");
