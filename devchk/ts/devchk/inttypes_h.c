@@ -42,32 +42,10 @@ Msg("Find size of imaxdiv_t (6898)\n");
 
 #if __i386__
 CheckTypeSize(intmax_t,8, 9016, 2)
-#elif __ia64__
-CheckTypeSize(intmax_t,8, 9016, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(intmax_t,8, 9016, 6)
-#elif __s390__
-CheckTypeSize(intmax_t,8, 9016, 10)
-#elif __powerpc64__
-CheckTypeSize(intmax_t,8, 9016, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9016,0);
-Msg("Find size of intmax_t (9016)\n");
 #endif
 
-#if __i386__
-CheckTypeSize(uintmax_t,8, 9017, 2)
-#elif __ia64__
-CheckTypeSize(uintmax_t,8, 9017, 3)
-#elif __powerpc__ && !__powerpc64__
+#if __powerpc__ && !__powerpc64__
 CheckTypeSize(uintmax_t,8, 9017, 6)
-#elif __s390__
-CheckTypeSize(uintmax_t,8, 9017, 10)
-#elif __powerpc64__
-CheckTypeSize(uintmax_t,8, 9017, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9017,0);
-Msg("Find size of uintmax_t (9017)\n");
 #endif
 
 #if __i386__
@@ -173,6 +151,38 @@ CheckTypeSize(uint64_t,8, 10176, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10176,0);
 Msg("Find size of uint64_t (10176)\n");
+#endif
+
+#if __ia64__
+CheckTypeSize(intmax_t,8, 10460, 3)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(intmax_t,8, 10461, 9)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(intmax_t,8, 10462, 6)
+#endif
+
+#if __s390__
+CheckTypeSize(intmax_t,8, 10463, 10)
+#endif
+
+#if __ia64__
+CheckTypeSize(uintmax_t,8, 10464, 3)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(uintmax_t,8, 10465, 9)
+#endif
+
+#if __s390__
+CheckTypeSize(uintmax_t,8, 10466, 10)
+#endif
+
+#if __i386__
+CheckTypeSize(uintmax_t,8, 10467, 2)
 #endif
 
 #ifdef TET_TEST
