@@ -13,8 +13,8 @@ bool_t xdr_string (XDR * arg0 , char * * arg1 , u_int arg2 )
 		funcptr = dlsym(RTLD_NEXT, "xdr_string");
 	validate_Rdaddress( arg0, "xdr_string");
 	validate_NULL_TYPETYPE(  arg0, "xdr_string");
-	validate_Rdaddress(* arg1, "xdr_string");
 	validate_Rdaddress( arg1, "xdr_string");
+	validate_Rdaddress(* arg1, "xdr_string");
 	validate_NULL_TYPETYPE(  arg1, "xdr_string");
 	validate_NULL_TYPETYPE(  arg2, "xdr_string");
 	return funcptr(arg0, arg1, arg2);

@@ -13,8 +13,8 @@ int pam_get_item (const pam_handle_t * arg0 , int arg1 , const void * * arg2 )
 	validate_Rdaddress( arg0, "pam_get_item");
 	validate_NULL_TYPETYPE(  arg0, "pam_get_item");
 	validate_NULL_TYPETYPE(  arg1, "pam_get_item");
-	validate_Rdaddress(* arg2, "pam_get_item");
 	validate_Rdaddress( arg2, "pam_get_item");
+	validate_Rdaddress(* arg2, "pam_get_item");
 	validate_NULL_TYPETYPE(  arg2, "pam_get_item");
 	return funcptr(arg0, arg1, arg2);
 }
