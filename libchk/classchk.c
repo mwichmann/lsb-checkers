@@ -12,6 +12,8 @@
 #include "tetj.h"
 #include "libchk.h"
 
+#define DEBUG
+
 /*
  * Some architectures treat function pointers as structures which contains the
  * address of the function, plus some adjustment value which must be taken into
@@ -222,7 +224,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Did not find symbol for Virtual table entry "
 														 "[%d][%d](%ld) expecting %s\n",
-														 v, j, vtvirtfuncs[j],
+														 v, j, fptr2ptr(vtvirtfuncs[j]),
 														 classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
@@ -235,7 +237,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 							int s;
 							for(s=0;s<12;s++) {
 								memset(&dlinfo2,0,sizeof(dlinfo2));
-								dladdr(vtvirtfuncs[s], &dlinfo2);
+								dladdr(fptr2ptr(vtvirtfuncs[s]), &dlinfo2);
 								fprintf(stderr,"vtable[%d] %p %s\n", s, vtvirtfuncs[s], dlinfo2.dli_sname );
 							}
 							memset(&dlinfo2,0,sizeof(dlinfo2));
