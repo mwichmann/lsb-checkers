@@ -5,12 +5,12 @@
 
 void validate_struct_random_data(struct random_data * input)
 {
-	validate_NULL_TYPETYPE(input->int32_t *);
-	validate_NULL_TYPETYPE(input->int32_t *);
-	validate_NULL_TYPETYPE(input->int32_t *);
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->int32_t *);
+	validate_NULL_TYPETYPE(input->fptr);
+	validate_NULL_TYPETYPE(input->rptr);
+	validate_NULL_TYPETYPE(input->state);
+	validate_NULL_TYPETYPE(input->rand_type);
+	validate_NULL_TYPETYPE(input->rand_deg);
+	validate_NULL_TYPETYPE(input->rand_sep);
+	validate_NULL_TYPETYPE(input->end_ptr);
 }
 

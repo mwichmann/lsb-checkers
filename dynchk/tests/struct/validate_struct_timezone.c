@@ -5,7 +5,7 @@
 
 void validate_struct_timezone(struct timezone * input)
 {
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->tz_minuteswest);
+	validate_NULL_TYPETYPE(input->tz_dsttime);
 }
 

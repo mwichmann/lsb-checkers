@@ -5,8 +5,8 @@
 
 void validate_struct_opaque_auth(struct opaque_auth * input)
 {
-	validate_NULL_TYPETYPE(input->enum_t);
-	validate_NULL_TYPETYPE(input->caddr_t);
-	validate_NULL_TYPETYPE(input->u_int);
+	validate_NULL_TYPETYPE(input->oa_flavor);
+	validate_NULL_TYPETYPE(input->oa_base);
+	validate_NULL_TYPETYPE(input->oa_length);
 }
 

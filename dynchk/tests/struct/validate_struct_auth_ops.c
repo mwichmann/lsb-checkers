@@ -5,10 +5,10 @@
 
 void validate_struct_auth_ops(struct auth_ops * input)
 {
-	validate_NULL_TYPETYPE(input->void(*ah_nextverf)(struct AUTH *));
-	validate_NULL_TYPETYPE(input->int(*ah_marshal)(struct AUTH *struct XDR *));
-	validate_NULL_TYPETYPE(input->int(*ah_validate)(struct AUTH *struct opaque_auth *));
-	validate_NULL_TYPETYPE(input->int(*ah_refresh)(struct AUTH *));
-	validate_NULL_TYPETYPE(input->void(*ah_destroy)(struct AUTH *));
+	validate_NULL_TYPETYPE(input->ah_nextverf);
+	validate_NULL_TYPETYPE(input->ah_marshal);
+	validate_NULL_TYPETYPE(input->ah_validate);
+	validate_NULL_TYPETYPE(input->ah_refresh);
+	validate_NULL_TYPETYPE(input->ah_destroy);
 }
 

@@ -5,7 +5,7 @@
 
 void validate_struct_ipv6_mreq(struct ipv6_mreq * input)
 {
-	validate_struct_in6_addr(input->struct in6_addr);
-	validate_NULL_TYPETYPE(input->int);
+	validate_struct_in6_addr( &(input->ipv6mr_multiaddr) );
+	validate_NULL_TYPETYPE(input->ipv6mr_interface);
 }
 

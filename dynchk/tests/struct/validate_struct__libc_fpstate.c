@@ -5,14 +5,14 @@
 
 void validate_struct__libc_fpstate(struct _libc_fpstate * input)
 {
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->struct _libc_fpreg);
-	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->cw);
+	validate_NULL_TYPETYPE(input->sw);
+	validate_NULL_TYPETYPE(input->tag);
+	validate_NULL_TYPETYPE(input->ipoff);
+	validate_NULL_TYPETYPE(input->cssel);
+	validate_NULL_TYPETYPE(input->dataoff);
+	validate_NULL_TYPETYPE(input->datasel);
+	validate_NULL_TYPETYPE(input->_st);
+	validate_NULL_TYPETYPE(input->status);
 }
 

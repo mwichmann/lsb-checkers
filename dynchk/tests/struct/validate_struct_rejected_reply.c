@@ -5,9 +5,9 @@
 
 void validate_struct_rejected_reply(struct rejected_reply * input)
 {
-	validate_NULL_TYPETYPE(input->enum reject_stat);
-	validate_NULL_TYPETYPE(input->ru.RJ_versions.unsigned long);
-	validate_NULL_TYPETYPE(input->ru.RJ_versions.unsigned long);
-	validate_NULL_TYPETYPE(input->ru.enum auth_stat);
+	validate_NULL_TYPETYPE(input->rj_stat);
+	validate_NULL_TYPETYPE(input->ru.RJ_versions.low);
+	validate_NULL_TYPETYPE(input->ru.RJ_versions.high);
+	validate_NULL_TYPETYPE(input->ru.RJ_why);
 }
 

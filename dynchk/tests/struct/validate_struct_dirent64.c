@@ -5,10 +5,10 @@
 
 void validate_struct_dirent64(struct dirent64 * input)
 {
-	validate_NULL_TYPETYPE(input->uint64_t);
-	validate_NULL_TYPETYPE(input->int64_t);
-	validate_NULL_TYPETYPE(input->unsigned short);
-	validate_NULL_TYPETYPE(input->unsigned char);
-	validate_NULL_TYPETYPE(input->char);
+	validate_NULL_TYPETYPE(input->d_ino);
+	validate_NULL_TYPETYPE(input->d_off);
+	validate_NULL_TYPETYPE(input->d_reclen);
+	validate_NULL_TYPETYPE(input->d_type);
+	validate_NULL_TYPETYPE(input->d_name);
 }
 

@@ -5,8 +5,8 @@
 
 void validate_struct_CLIENT(struct CLIENT * input)
 {
-	validate_struct_AUTH(input->struct AUTH *);
-	validate_struct_clnt_ops(input->struct clnt_ops *);
-	validate_NULL_TYPETYPE(input->caddr_t);
+	validate_struct_AUTH(input->cl_auth);
+	validate_struct_clnt_ops(input->cl_ops);
+	validate_NULL_TYPETYPE(input->cl_private);
 }
 

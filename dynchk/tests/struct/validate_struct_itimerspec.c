@@ -5,7 +5,7 @@
 
 void validate_struct_itimerspec(struct itimerspec * input)
 {
-	validate_struct_timespec(input->struct timespec);
-	validate_struct_timespec(input->struct timespec);
+	validate_struct_timespec( &(input->it_interval) );
+	validate_struct_timespec( &(input->it_value) );
 }
 

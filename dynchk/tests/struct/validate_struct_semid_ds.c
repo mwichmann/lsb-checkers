@@ -5,13 +5,13 @@
 
 void validate_struct_semid_ds(struct semid_ds * input)
 {
-	validate_struct_ipc_perm(input->struct ipc_perm);
-	validate_NULL_TYPETYPE(input->time_t);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->time_t);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_struct_ipc_perm( &(input->sem_perm) );
+	validate_NULL_TYPETYPE(input->sem_otime);
+	validate_NULL_TYPETYPE(input->__unused1);
+	validate_NULL_TYPETYPE(input->sem_ctime);
+	validate_NULL_TYPETYPE(input->__unused2);
+	validate_NULL_TYPETYPE(input->sem_nsems);
+	validate_NULL_TYPETYPE(input->__unused3);
+	validate_NULL_TYPETYPE(input->__unused4);
 }
 

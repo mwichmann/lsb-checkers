@@ -5,21 +5,21 @@
 
 void validate_struct_rusage(struct rusage * input)
 {
-	validate_struct_timeval(input->struct timeval);
-	validate_struct_timeval(input->struct timeval);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
-	validate_NULL_TYPETYPE(input->long);
+	validate_struct_timeval( &(input->ru_utime) );
+	validate_struct_timeval( &(input->ru_stime) );
+	validate_NULL_TYPETYPE(input->ru_maxrss);
+	validate_NULL_TYPETYPE(input->ru_ixrss);
+	validate_NULL_TYPETYPE(input->ru_idrss);
+	validate_NULL_TYPETYPE(input->ru_isrss);
+	validate_NULL_TYPETYPE(input->ru_minflt);
+	validate_NULL_TYPETYPE(input->ru_majflt);
+	validate_NULL_TYPETYPE(input->ru_nswap);
+	validate_NULL_TYPETYPE(input->ru_inblock);
+	validate_NULL_TYPETYPE(input->ru_oublock);
+	validate_NULL_TYPETYPE(input->ru_msgsnd);
+	validate_NULL_TYPETYPE(input->ru_msgrcv);
+	validate_NULL_TYPETYPE(input->ru_nsignals);
+	validate_NULL_TYPETYPE(input->ru_nvcsw);
+	validate_NULL_TYPETYPE(input->ru_nivcsw);
 }
 

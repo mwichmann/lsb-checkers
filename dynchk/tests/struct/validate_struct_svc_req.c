@@ -5,11 +5,11 @@
 
 void validate_struct_svc_req(struct svc_req * input)
 {
-	validate_NULL_TYPETYPE(input->rpcprog_t);
-	validate_NULL_TYPETYPE(input->rpcvers_t);
-	validate_NULL_TYPETYPE(input->rpcproc_t);
-	validate_struct_opaque_auth(input->struct opaque_auth);
-	validate_NULL_TYPETYPE(input->caddr_t);
-	validate_NULL_TYPETYPE(input->SVCXPRT *);
+	validate_NULL_TYPETYPE(input->rq_prog);
+	validate_NULL_TYPETYPE(input->rq_vers);
+	validate_NULL_TYPETYPE(input->rq_proc);
+	validate_struct_opaque_auth( &(input->rq_cred) );
+	validate_NULL_TYPETYPE(input->rq_clntcred);
+	validate_NULL_TYPETYPE(input->rq_xprt);
 }
 

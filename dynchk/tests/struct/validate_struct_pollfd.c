@@ -5,8 +5,8 @@
 
 void validate_struct_pollfd(struct pollfd * input)
 {
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->short);
-	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->fd);
+	validate_NULL_TYPETYPE(input->events);
+	validate_NULL_TYPETYPE(input->revents);
 }
 

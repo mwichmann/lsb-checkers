@@ -5,7 +5,7 @@
 
 void validate_struct__fpreg(struct _fpreg * input)
 {
-	validate_NULL_TYPETYPE(input->unsigned short);
-	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->significand);
+	validate_NULL_TYPETYPE(input->exponent);
 }
 

@@ -5,9 +5,9 @@
 
 void validate_struct_rpc_msg(struct rpc_msg * input)
 {
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->enum msg_type);
-	validate_struct_call_body(input->ru.struct call_body);
-	validate_struct_reply_body(input->ru.struct reply_body);
+	validate_NULL_TYPETYPE(input->rm_xid);
+	validate_NULL_TYPETYPE(input->rm_direction);
+	validate_struct_call_body( &(input->ru.RM_cmb) );
+	validate_struct_reply_body( &(input->ru.RM_rmb) );
 }
 

@@ -5,8 +5,8 @@
 
 void validate_struct__fpxreg(struct _fpxreg * input)
 {
-	validate_NULL_TYPETYPE(input->unsigned short);
-	validate_NULL_TYPETYPE(input->unsigned short);
-	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->significand);
+	validate_NULL_TYPETYPE(input->exponent);
+	validate_NULL_TYPETYPE(input->padding);
 }
 

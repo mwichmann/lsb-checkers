@@ -5,9 +5,9 @@
 
 void validate_struct_netent(struct netent * input)
 {
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char * *);
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->unsigned int);
+	validate_NULL_TYPETYPE(input->n_name);
+	validate_NULL_TYPETYPE(input->n_aliases);
+	validate_NULL_TYPETYPE(input->n_addrtype);
+	validate_NULL_TYPETYPE(input->n_net);
 }
 

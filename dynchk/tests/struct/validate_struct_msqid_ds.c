@@ -5,19 +5,19 @@
 
 void validate_struct_msqid_ds(struct msqid_ds * input)
 {
-	validate_struct_ipc_perm(input->struct ipc_perm);
-	validate_NULL_TYPETYPE(input->time_t);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->time_t);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->time_t);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->msgqnum_t);
-	validate_NULL_TYPETYPE(input->msglen_t);
-	validate_NULL_TYPETYPE(input->pid_t);
-	validate_NULL_TYPETYPE(input->pid_t);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_struct_ipc_perm( &(input->msg_perm) );
+	validate_NULL_TYPETYPE(input->msg_stime);
+	validate_NULL_TYPETYPE(input->__unused1);
+	validate_NULL_TYPETYPE(input->msg_rtime);
+	validate_NULL_TYPETYPE(input->__unused2);
+	validate_NULL_TYPETYPE(input->msg_ctime);
+	validate_NULL_TYPETYPE(input->__unused3);
+	validate_NULL_TYPETYPE(input->__msg_cbytes);
+	validate_NULL_TYPETYPE(input->msg_qnum);
+	validate_NULL_TYPETYPE(input->msg_qbytes);
+	validate_NULL_TYPETYPE(input->msg_lspid);
+	validate_NULL_TYPETYPE(input->msg_lrpid);
+	validate_NULL_TYPETYPE(input->__unused4);
+	validate_NULL_TYPETYPE(input->__unused5);
 }
 

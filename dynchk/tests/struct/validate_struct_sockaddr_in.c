@@ -5,9 +5,9 @@
 
 void validate_struct_sockaddr_in(struct sockaddr_in * input)
 {
-	validate_socketfamily(input->sa_family_t);
-	validate_socketport(input->unsigned short);
-	validate_IPv4Address(input->struct in_addr);
-	validate_NULL_TYPETYPE(input->unsigned char);
+	validate_socketfamily(input->sin_family);
+	validate_socketport(input->sin_port);
+	validate_IPv4Address( &(input->sin_addr) );
+	validate_NULL_TYPETYPE(input->sin_zero);
 }
 

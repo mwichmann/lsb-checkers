@@ -5,11 +5,11 @@
 
 void validate_struct_accepted_reply(struct accepted_reply * input)
 {
-	validate_struct_opaque_auth(input->struct opaque_auth);
-	validate_NULL_TYPETYPE(input->enum accept_stat);
-	validate_NULL_TYPETYPE(input->ru.AR_versions.unsigned long);
-	validate_NULL_TYPETYPE(input->ru.AR_versions.unsigned long);
-	validate_NULL_TYPETYPE(input->ru.AR_results.caddr_t);
-	validate_NULL_TYPETYPE(input->ru.AR_results.xdrproc_t);
+	validate_struct_opaque_auth( &(input->ar_verf) );
+	validate_NULL_TYPETYPE(input->ar_stat);
+	validate_NULL_TYPETYPE(input->ru.AR_versions.low);
+	validate_NULL_TYPETYPE(input->ru.AR_versions.high);
+	validate_NULL_TYPETYPE(input->ru.AR_results.where);
+	validate_NULL_TYPETYPE(input->ru.AR_results.proc);
 }
 

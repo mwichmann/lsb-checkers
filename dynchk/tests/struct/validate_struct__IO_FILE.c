@@ -5,6 +5,6 @@
 
 void validate_struct__IO_FILE(struct _IO_FILE * input)
 {
-	validate_NULL_TYPETYPE(input->char);
+	validate_NULL_TYPETYPE(input->dummy);
 }
 

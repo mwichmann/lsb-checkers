@@ -5,10 +5,10 @@
 
 void validate_struct_exception(struct exception * input)
 {
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->double);
-	validate_NULL_TYPETYPE(input->double);
-	validate_NULL_TYPETYPE(input->double);
+	validate_NULL_TYPETYPE(input->type);
+	validate_NULL_TYPETYPE(input->name);
+	validate_NULL_TYPETYPE(input->arg1);
+	validate_NULL_TYPETYPE(input->arg2);
+	validate_NULL_TYPETYPE(input->retval);
 }
 
