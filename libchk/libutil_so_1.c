@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libutil_so_1[] = {
 #if __i386__
@@ -127,3 +128,7 @@ struct versym libutil_so_1[] = {
 	{"openpty","GLIBC_2.2"},
 #endif
 	{0,0}};
+
+struct classinfo *libutil_so_1_classinfo[] = {
+
+	NULL	};

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libXt_so_6[] = {
 	{"XtAddActions",""},
@@ -332,3 +333,7 @@ struct versym libXt_so_6[] = {
 	{"wmShellClassRec",""},
 	{"wmShellWidgetClass",""},
 	{0,0}};
+
+struct classinfo *libXt_so_6_classinfo[] = {
+
+	NULL	};

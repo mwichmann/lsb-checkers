@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libICE_so_6[] = {
 	{"IceAcceptConnection",""},
@@ -50,3 +51,7 @@ struct versym libICE_so_6[] = {
 	{"IceVendor",""},
 	{"IceWriteAuthFileEntry",""},
 	{0,0}};
+
+struct classinfo *libICE_so_6_classinfo[] = {
+
+	NULL	};

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libX11_so_6[] = {
 	{"XActivateScreenSaver",""},
@@ -717,3 +718,7 @@ struct versym libX11_so_6[] = {
 	{"XwcTextPerCharExtents",""},
 	{"XwcTextPropertyToTextList",""},
 	{0,0}};
+
+struct classinfo *libX11_so_6_classinfo[] = {
+
+	NULL	};

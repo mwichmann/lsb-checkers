@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libcrypt_so_1[] = {
 #if __i386__
@@ -64,3 +65,7 @@ struct versym libcrypt_so_1[] = {
 	{"setkey","GLIBC_2.2"},
 #endif
 	{0,0}};
+
+struct classinfo *libcrypt_so_1_classinfo[] = {
+
+	NULL	};

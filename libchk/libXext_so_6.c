@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libXext_so_6[] = {
 	{"DPMSCapable",""},
@@ -77,3 +78,7 @@ struct versym libXext_so_6[] = {
 	{"XdbeQueryExtension",""},
 	{"XdbeSwapBuffers",""},
 	{0,0}};
+
+struct classinfo *libXext_so_6_classinfo[] = {
+
+	NULL	};
