@@ -107,6 +107,14 @@ CheckTypeSize(FILE,216, 8782, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
 #endif
 
+#ifdef __i386__
+CheckTypeSize(fpos_t,12, 9108, 2)
+#elif __ia64__
+CheckTypeSize(fpos_t,16, 9108, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9108,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

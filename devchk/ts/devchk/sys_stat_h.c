@@ -79,6 +79,7 @@ cnt++;
 #endif
 
 /* No test for S_TYPEISMQ(buf) */
+/* No test for S_TYPEISSEM(buf) */
 /* No test for S_TYPEISSHM(buf) */
 #ifdef S_ISUID
 	CompareConstant(S_ISUID,0x0800)

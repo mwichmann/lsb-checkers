@@ -113,6 +113,14 @@ Msg( "Error: Constant not found: LC_IDENTIFICATION\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct lconv,56, 6919, 2)
+#elif __ia64__
+CheckTypeSize(struct lconv,96, 6919, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6919,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

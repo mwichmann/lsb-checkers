@@ -23,6 +23,22 @@ Msg("Checking data structures in X11/ICE/ICElib.h\n");
 #endif
 
 #ifdef __i386__
+CheckTypeSize(IcePoVersionRec,12, 8206, 2)
+#elif __ia64__
+CheckTypeSize(IcePoVersionRec,16, 8206, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8206,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(IcePaVersionRec,12, 8208, 2)
+#elif __ia64__
+CheckTypeSize(IcePaVersionRec,16, 8208, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8208,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(IcePointer,4, 8180, 2)
 #elif __ia64__
 CheckTypeSize(IcePointer,8, 8180, 3)
@@ -47,6 +63,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8740,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(IceAcceptStatus,4, 8742, 2)
+#elif __ia64__
+CheckTypeSize(IceAcceptStatus,4, 8742, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8742,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(IceCloseStatus,4, 8744, 2)
 #elif __ia64__
 CheckTypeSize(IceCloseStatus,4, 8744, 3)
@@ -63,11 +87,35 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8746,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(IceReplyWaitInfo,16, 8196, 2)
+#elif __ia64__
+CheckTypeSize(IceReplyWaitInfo,24, 8196, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8196,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(IceWatchProc,4, 8749, 2)
 #elif __ia64__
 CheckTypeSize(IceWatchProc,8, 8749, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8749,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(IcePoAuthProc,4, 8756, 2)
+#elif __ia64__
+CheckTypeSize(IcePoAuthProc,8, 8756, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8756,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(IcePaAuthProc,4, 8758, 2)
+#elif __ia64__
+CheckTypeSize(IcePaAuthProc,8, 8758, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8758,0);
 #endif
 
 #ifdef __i386__

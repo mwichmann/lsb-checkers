@@ -918,6 +918,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8651,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(SCREEN,0, 8653, 2)
+#elif __ia64__
+CheckTypeSize(SCREEN,0, 8653, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8653,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(WINDOW,100, 8655, 2)
+#elif __ia64__
+CheckTypeSize(WINDOW,152, 8655, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8655,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(attr_t,4, 8656, 2)
 #elif __ia64__
 CheckTypeSize(attr_t,8, 8656, 3)

@@ -155,6 +155,22 @@ Msg( "Error: Constant not found: GLOB_NOSYS\n");
 cnt++;
 #endif
 
+#ifdef __ia64__
+CheckTypeSize(glob_t,72, 9005, 3)
+#elif __i386__
+CheckTypeSize(glob_t,36, 9005, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9005,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(glob64_t,36, 9007, 2)
+#elif __ia64__
+CheckTypeSize(glob64_t,72, 9007, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9007,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

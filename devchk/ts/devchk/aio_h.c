@@ -78,6 +78,23 @@ Msg( "Error: Constant not found: LIO_NOWAIT\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct aiocb,144, 8633, 2)
+CheckOffset(struct aiocb,__pad,108,2,29659)
+#elif __ia64__
+CheckTypeSize(struct aiocb,168, 8633, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8633,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct aiocb64,144, 8639, 2)
+#elif __ia64__
+CheckTypeSize(struct aiocb64,168, 8639, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8639,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

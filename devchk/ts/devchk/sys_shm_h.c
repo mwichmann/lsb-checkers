@@ -37,6 +37,25 @@ Msg( "Error: Constant not found: SHM_RND\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct shmid_ds,84, 9129, 2)
+CheckOffset(struct shmid_ds,shm_perm,0,2,33702)
+CheckOffset(struct shmid_ds,shm_segsz,36,2,33703)
+CheckOffset(struct shmid_ds,shm_atime,40,2,33704)
+CheckOffset(struct shmid_ds,__unused1,44,2,33710)
+CheckOffset(struct shmid_ds,shm_dtime,48,2,33705)
+CheckOffset(struct shmid_ds,__unused2,52,2,33711)
+CheckOffset(struct shmid_ds,shm_ctime,56,2,33706)
+CheckOffset(struct shmid_ds,__unused3,60,2,33712)
+CheckOffset(struct shmid_ds,shm_cpid,64,2,33707)
+CheckOffset(struct shmid_ds,shm_lpid,68,2,33708)
+CheckOffset(struct shmid_ds,shm_nattch,72,2,33709)
+#elif __ia64__
+CheckTypeSize(struct shmid_ds,112, 9129, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9129,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

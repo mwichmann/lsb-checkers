@@ -59,7 +59,7 @@
 		HDRCHKTEST_PASS \
 	}
 
-#define CheckOffset(str,member,offset) \
+#define CheckOffset(str,member,offset,aid, tmid) \
 { \
 	str foo; \
 	char *foob=(char *)&foo; \
@@ -69,7 +69,8 @@
 	Log("Purpose: Check offset of (\" #member \") is %d\n", offset); \
 	if( (foom-foob) != offset ) { \
 		Msg("offset(" #member ") is %d instead of " #offset "\n",(foom-foob)); \
-		Msg("UPDATE TypeMember SET TMoffset=%d WHERE TMname='" #member "';\n", (foom-foob)); \
+		Msg("REPLACE INTO ArchTypeMem (ATMaid,ATMtmid,ATMoffset) "); \
+		Msg("VALUES (%d, %d,%d );\n",aid,tmid, (foom-foob)); \
 		HDRCHKTEST_FAIL \
 	} \
 	else { \

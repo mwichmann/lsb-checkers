@@ -57,6 +57,20 @@ Msg( "Error: Constant not found: SIG_SETMASK\n");
 cnt++;
 #endif
 
+#ifdef SIGEV_SIGNAL
+	CompareConstant(SIGEV_SIGNAL,0)
+#else
+Msg( "Error: Constant not found: SIGEV_SIGNAL\n");
+cnt++;
+#endif
+
+#ifdef SIGEV_THREAD
+	CompareConstant(SIGEV_THREAD,0)
+#else
+Msg( "Error: Constant not found: SIGEV_THREAD\n");
+cnt++;
+#endif
+
 #ifdef SIGHUP
 	CompareConstant(SIGHUP,1)
 #else
@@ -225,6 +239,13 @@ Msg( "Error: Constant not found: SIGTTOU\n");
 cnt++;
 #endif
 
+#ifdef SIGURG
+	CompareConstant(SIGURG,23)
+#else
+Msg( "Error: Constant not found: SIGURG\n");
+cnt++;
+#endif
+
 #ifdef SIGXCPU
 	CompareConstant(SIGXCPU,24)
 #else
@@ -344,6 +365,41 @@ Msg( "Error: Constant not found: SIGEV_NONE\n");
 cnt++;
 #endif
 
+#ifdef SI_ASYNCIO
+	CompareConstant(SI_ASYNCIO,-4)
+#else
+Msg( "Error: Constant not found: SI_ASYNCIO\n");
+cnt++;
+#endif
+
+#ifdef SI_MESGQ
+	CompareConstant(SI_MESGQ,-3)
+#else
+Msg( "Error: Constant not found: SI_MESGQ\n");
+cnt++;
+#endif
+
+#ifdef SI_QUEUE
+	CompareConstant(SI_QUEUE,-1)
+#else
+Msg( "Error: Constant not found: SI_QUEUE\n");
+cnt++;
+#endif
+
+#ifdef SI_TIMER
+	CompareConstant(SI_TIMER,-2)
+#else
+Msg( "Error: Constant not found: SI_TIMER\n");
+cnt++;
+#endif
+
+#ifdef SI_USER
+	CompareConstant(SI_USER,0)
+#else
+Msg( "Error: Constant not found: SI_USER\n");
+cnt++;
+#endif
+
 #ifdef _NSIG
 	CompareConstant(_NSIG,64)
 #else
@@ -434,6 +490,30 @@ CheckTypeSize(__sighandler_t,4, 6966, 2)
 CheckTypeSize(__sighandler_t,8, 6966, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(siginfo_t,128, 9099, 2)
+#elif __ia64__
+CheckTypeSize(siginfo_t,128, 9099, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(sigset_t,128, 10163, 2)
+#elif __ia64__
+CheckTypeSize(sigset_t,128, 10163, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct sigaction,140, 9097, 2)
+#elif __ia64__
+CheckTypeSize(struct sigaction,144, 9097, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9097,0);
 #endif
 
 #ifdef TET_TEST

@@ -114,6 +114,14 @@ Msg( "Error: Constant not found: M_SQRT1_2\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct exception,32, 10010, 2)
+#elif __ia64__
+CheckTypeSize(struct exception,40, 10010, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10010,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

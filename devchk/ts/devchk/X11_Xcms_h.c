@@ -26,6 +26,14 @@ Msg("Checking data structures in X11/Xcms.h\n");
 #endif
 
 #ifdef __i386__
+CheckTypeSize(XcmsFunctionSet,12, 8364, 2)
+#elif __ia64__
+CheckTypeSize(XcmsFunctionSet,24, 8364, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8364,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(XcmsColorFormat,4, 8320, 2)
 #elif __ia64__
 CheckTypeSize(XcmsColorFormat,8, 8320, 3)
@@ -39,6 +47,14 @@ CheckTypeSize(XcmsFloat,8, 8321, 2)
 CheckTypeSize(XcmsFloat,8, 8321, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8321,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsColor,40, 8342, 2)
+#elif __ia64__
+CheckTypeSize(XcmsColor,48, 8342, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8342,0);
 #endif
 
 #ifdef __i386__
@@ -63,6 +79,14 @@ CheckTypeSize(XcmsCCC,4, 8853, 2)
 CheckTypeSize(XcmsCCC,8, 8853, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8853,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsColorSpace,24, 8362, 2)
+#elif __ia64__
+CheckTypeSize(XcmsColorSpace,48, 8362, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8362,0);
 #endif
 
 #ifdef TET_TEST

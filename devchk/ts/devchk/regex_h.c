@@ -268,6 +268,14 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(regex_t,32, 6945, 2)
+#elif __ia64__
+CheckTypeSize(regex_t,64, 6945, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(regmatch_t,8, 6949, 2)
 #elif __ia64__
 CheckTypeSize(regmatch_t,8, 6949, 3)

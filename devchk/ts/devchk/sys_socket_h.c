@@ -282,6 +282,22 @@ CheckTypeSize(socklen_t,4, 9155, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9155,0);
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct sockaddr,16, 6906, 2)
+#elif __ia64__
+CheckTypeSize(struct sockaddr,16, 6906, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6906,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct msghdr,28, 6908, 2)
+#elif __ia64__
+CheckTypeSize(struct msghdr,56, 6908, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6908,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

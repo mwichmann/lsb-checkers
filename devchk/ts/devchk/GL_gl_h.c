@@ -487,6 +487,14 @@ CheckTypeSize(GLbitfield,4, 8145, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8145,0);
 #endif
 
+#ifdef __ia64__
+CheckTypeSize(GLvoid,1, 8146, 3)
+#elif __i386__
+CheckTypeSize(GLvoid,1, 8146, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8146,0);
+#endif
+
 #ifdef __i386__
 CheckTypeSize(GLbyte,1, 8147, 2)
 #elif __ia64__

@@ -43,6 +43,38 @@ Msg( "Error: Constant not found: ITIMER_PROF\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct timezone,8, 9855, 2)
+#elif __ia64__
+CheckTypeSize(struct timezone,8, 9855, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9855,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct itimerval,16, 9861, 2)
+#elif __ia64__
+CheckTypeSize(struct itimerval,32, 9861, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9861,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct timespec,8, 7018, 2)
+#elif __ia64__
+CheckTypeSize(struct timespec,16, 7018, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7018,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct timeval,8, 9858, 2)
+#elif __ia64__
+CheckTypeSize(struct timeval,16, 9858, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9858,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
