@@ -20384,9 +20384,6 @@ const char *Sd_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NSdD1Ev",
 #endif
-#if __not_def__
-	"_ZThn16_NSdD1Ev",
-#endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NSdD1Ev",
 #endif
@@ -20394,6 +20391,9 @@ const char *Sd_vtable_name_1 [] = {
 	"_ZThn16_NSdD1Ev",
 #endif
 #if __s390x__
+	"_ZThn16_NSdD1Ev",
+#endif
+#if __powerpc64__
 	"_ZThn16_NSdD1Ev",
 #endif
 #if __ia64__
