@@ -1,0 +1,11 @@
+cmdchk
+------
+
+This program tests that the commands specified are located on the system
+in an expected place.
+
+Running the run_tests program will generate a report of the system.
+
+Please send any feedback you may have to lsb-test@linuxbase.org
+--
+Last updated 2002/05/27

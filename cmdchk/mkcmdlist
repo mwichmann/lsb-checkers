@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+
+use CGI;
+use Mysql;
+
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+sub usage()
+{
+print STDERR "mkcmdlist\n";
+die;
+}
+
+# Uncomment to trace SQL statments
+#$trace=1;
+
+#
+# 2) Establish connection to the database
+#
+
+$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+
+#
+# 3) Get the list of cmds
+#
+
+open(CMDS,">cmds.c");
+print CMDS "/* Generated file */\n";
+print CMDS "#include \"../tetj/tetj.h\"\n\n";
+print CMDS "extern void check_cmd(char *cmd, char *cmdpath, struct tetj_handle *journal);\n";
+
+print CMDS "void check_cmds(struct tetj_handle *journal)\n{\n";
+
+$select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
+$select.= "WHERE Cstatus='Included' ";
+$select.= "ORDER BY Cname ";
+
+#print $select;
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	$cmdname=$entry{'Cname'};
+	print CMDS "check_cmd(\"$cmdname\",\"".$entry{'Cpath'}."\",journal);\n";
+}
+
+print CMDS "}\n";
+close(CMDS);
