@@ -83,7 +83,6 @@ check_cmd("mktemp","/bin/mktemp",journal);
 check_cmd("more","/bin/more",journal);
 check_cmd("mount","/bin/mount",journal);
 check_cmd("msgfmt","/usr/bin/msgfmt",journal);
-check_cmd("msgmerge","/usr/bin/msgmerge",journal);
 check_cmd("mv","/bin/mv",journal);
 check_cmd("newgrp","/usr/bin/newgrp",journal);
 check_cmd("nice","/bin/nice",journal);
@@ -135,5 +134,4 @@ check_cmd("userdel","/usr/sbin/userdel",journal);
 check_cmd("usermod","/usr/sbin/usermod",journal);
 check_cmd("wc","/usr/bin/wc",journal);
 check_cmd("xargs","/usr/bin/xargs",journal);
-check_cmd("xgettext","/usr/bin/xgettext",journal);
 }
