@@ -162,8 +162,6 @@ struct versym libm_so_6[] = {
 	{"ilogb","GLIBC_2.0"},
 	{"ilogbf","GLIBC_2.0"},
 	{"ilogbl","GLIBC_2.0"},
-	{"imaxabs",""},
-	{"imaxdiv",""},
 	{"j0","GLIBC_2.0"},
 	{"j0f","GLIBC_2.0"},
 	{"j0l","GLIBC_2.0"},
