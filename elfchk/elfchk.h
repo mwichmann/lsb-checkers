@@ -26,6 +26,35 @@ struct classtypeinfo_mem {
 	void	*basetypeinfo[0];
 	};
 
+struct si_classtypeinfo_mem {
+	void	*basevtable;
+	char	*name;
+	void	*basetype;
+	void	*basetypeinfo[0];
+	};
+
+struct base_type_info {
+	void	*basevtable;
+	struct classtypeinfo_mem *base_type;
+	long	offset_flags;
+	};
+
+struct vmi_classtypeinfo_mem {
+	void	*basevtable;
+	char	*name;
+	int	flags;
+	int	base_count;
+	struct base_type_info base_info[0];
+	};
+
+struct pbasetypeinfo_mem {
+	void	*basevtable;
+	char	*name;
+	int	offset_flags;
+	struct classtypeinfo_mem *pointee;
+	void	*basetypeinfo[0];
+	};
+
 //DB format
 struct classtypeinfo {
 	char	*basevtable;
