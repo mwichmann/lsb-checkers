@@ -7,3 +7,6 @@ fscanf
 sscanf
 scanf
 mmap
+malloc
+calloc
+realloc
