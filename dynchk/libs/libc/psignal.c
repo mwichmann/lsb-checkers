@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <signal.h>
 #undef psignal
 static void(*funcptr) (int , const char * ) = 0;
@@ -12,7 +11,7 @@ void psignal (int arg0 , const char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "psignal", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "psignal", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

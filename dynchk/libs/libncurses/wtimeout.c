@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef wtimeout
 static void(*funcptr) (WINDOW * , int ) = 0;
@@ -12,7 +11,7 @@ void wtimeout (WINDOW * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "wtimeout");
+		funcptr = dlsym(RTLD_NEXT, "wtimeout");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

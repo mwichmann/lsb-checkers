@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #undef pthread_attr_setstackaddr
 static int(*funcptr) (pthread_attr_t * , void * ) = 0;
@@ -13,7 +12,7 @@ int pthread_attr_setstackaddr (pthread_attr_t * arg0 , void * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "pthread_attr_setstackaddr", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "pthread_attr_setstackaddr", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

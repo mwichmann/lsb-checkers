@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef curs_set
 static int(*funcptr) (int ) = 0;
@@ -13,7 +12,7 @@ int curs_set (int arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "curs_set");
+		funcptr = dlsym(RTLD_NEXT, "curs_set");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <termios.h>
 #undef cfsetospeed
 static int(*funcptr) (struct termios * , speed_t ) = 0;
@@ -13,7 +12,7 @@ int cfsetospeed (struct termios * arg0 , speed_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "cfsetospeed", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "cfsetospeed", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

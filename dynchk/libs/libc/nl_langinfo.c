@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <nl_types.h>
 #include <langinfo.h>
 #undef nl_langinfo
@@ -14,7 +13,7 @@ char * nl_langinfo (nl_item arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "nl_langinfo", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "nl_langinfo", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

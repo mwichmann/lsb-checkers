@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef attr_off
 static int(*funcptr) (attr_t , void * ) = 0;
@@ -13,7 +12,7 @@ int attr_off (attr_t arg0 , void * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "attr_off");
+		funcptr = dlsym(RTLD_NEXT, "attr_off");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <complex.h>
 #undef cabs
 static double(*funcptr) (double complex ) = 0;
@@ -13,7 +12,7 @@ double cabs (double complex arg0 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "cabs", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "cabs", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

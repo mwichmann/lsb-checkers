@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <string.h>
 #undef strpbrk
 static char *(*funcptr) (const char * , const char * ) = 0;
@@ -13,7 +12,7 @@ char * strpbrk (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "strpbrk", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "strpbrk", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

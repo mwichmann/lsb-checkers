@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #undef pthread_mutex_init
 static int(*funcptr) (pthread_mutex_t * , const pthread_mutexattr_t * ) = 0;
@@ -13,7 +12,7 @@ int pthread_mutex_init (pthread_mutex_t * arg0 , const pthread_mutexattr_t * arg
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "pthread_mutex_init", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_init", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

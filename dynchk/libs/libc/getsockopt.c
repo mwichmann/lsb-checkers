@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <sys/socket.h>
 #undef getsockopt
 static int(*funcptr) (int , int , int , void * , socklen_t * ) = 0;
@@ -13,7 +12,7 @@ int getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "getsockopt", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "getsockopt", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <sys/time.h>
 #undef gettimeofday
 static int(*funcptr) (struct timeval * , struct timezone * ) = 0;
@@ -13,7 +12,7 @@ int gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "gettimeofday", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "gettimeofday", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef pnoutrefresh
 static int(*funcptr) (WINDOW * , int , int , int , int , int , int ) = 0;
@@ -13,7 +12,7 @@ int pnoutrefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , in
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "pnoutrefresh");
+		funcptr = dlsym(RTLD_NEXT, "pnoutrefresh");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmcModifyCallbacks
 static void(*funcptr) (SmcConn , unsigned long , SmcCallbacks * ) = 0;
@@ -12,7 +11,7 @@ void SmcModifyCallbacks (SmcConn arg0 , unsigned long arg1 , SmcCallbacks * arg2
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "SmcModifyCallbacks");
+		funcptr = dlsym(RTLD_NEXT, "SmcModifyCallbacks");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

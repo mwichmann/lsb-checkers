@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <inttypes.h>
 #undef imaxdiv
 static imaxdiv_t(*funcptr) (intmax_t , intmax_t ) = 0;
@@ -13,7 +12,7 @@ imaxdiv_t imaxdiv (intmax_t arg0 , intmax_t arg1 )
 	int reset_flag = __lsb_check_params;
 	imaxdiv_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "imaxdiv", "GLIBC_2.1.1");
+		funcptr = dlvsym(RTLD_NEXT, "imaxdiv", "GLIBC_2.1.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

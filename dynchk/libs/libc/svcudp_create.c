@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <rpc/svc.h>
 #undef svcudp_create
 static SVCXPRT *(*funcptr) (int ) = 0;
@@ -13,7 +12,7 @@ SVCXPRT * svcudp_create (int arg0 )
 	int reset_flag = __lsb_check_params;
 	SVCXPRT * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "svcudp_create", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "svcudp_create", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

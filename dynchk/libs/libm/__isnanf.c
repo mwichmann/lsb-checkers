@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef __isnanf
 static int(*funcptr) (float ) = 0;
@@ -13,7 +12,7 @@ int __isnanf (float arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "__isnanf");
+		funcptr = dlsym(RTLD_NEXT, "__isnanf");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

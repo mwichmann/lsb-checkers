@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef wbkgdset
 static void(*funcptr) (WINDOW * , chtype ) = 0;
@@ -12,7 +11,7 @@ void wbkgdset (WINDOW * arg0 , chtype arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "wbkgdset");
+		funcptr = dlsym(RTLD_NEXT, "wbkgdset");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <time.h>
 #include <stddef.h>
 #undef strftime
@@ -14,7 +13,7 @@ size_t strftime (char * arg0 , size_t arg1 , const char * arg2 , const struct tm
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "strftime", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "strftime", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

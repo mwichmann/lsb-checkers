@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef log10f
 static float(*funcptr) (float ) = 0;
@@ -13,7 +12,7 @@ float log10f (float arg0 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "log10f");
+		funcptr = dlsym(RTLD_NEXT, "log10f");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

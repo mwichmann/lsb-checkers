@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef termattrs
 static chtype(*funcptr) () = 0;
@@ -13,7 +12,7 @@ chtype termattrs ()
 	int reset_flag = __lsb_check_params;
 	chtype ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "termattrs");
+		funcptr = dlsym(RTLD_NEXT, "termattrs");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

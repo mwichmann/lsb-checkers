@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmsSaveYourself
 static void(*funcptr) (SmsConn , int , int , int , int ) = 0;
@@ -12,7 +11,7 @@ void SmsSaveYourself (SmsConn arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "SmsSaveYourself");
+		funcptr = dlsym(RTLD_NEXT, "SmsSaveYourself");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

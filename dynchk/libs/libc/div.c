@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdlib.h>
 #undef div
 static div_t(*funcptr) (int , int ) = 0;
@@ -13,7 +12,7 @@ div_t div (int arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	div_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "div", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "div", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -3,7 +3,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef exp2l
 static long double(*funcptr) (long double ) = 0;
@@ -14,7 +13,7 @@ long double exp2l (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "exp2l");
+		funcptr = dlsym(RTLD_NEXT, "exp2l");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
@@ -32,7 +31,6 @@ long double exp2l (long double arg0 )
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef exp2l
 static long double(*funcptr) (long double ) = 0;
@@ -43,7 +41,7 @@ long double exp2l (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "exp2l");
+		funcptr = dlsym(RTLD_NEXT, "exp2l");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
@@ -61,7 +59,6 @@ long double exp2l (long double arg0 )
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef exp2l
 static long double(*funcptr) (long double ) = 0;
@@ -72,7 +69,7 @@ long double exp2l (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "exp2l");
+		funcptr = dlsym(RTLD_NEXT, "exp2l");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

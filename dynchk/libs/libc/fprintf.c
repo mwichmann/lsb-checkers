@@ -1,6 +1,5 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <dlfcn.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -17,7 +16,7 @@ int fprintf(FILE *f, const char *format, ...)
 	int reset_flag = __lsb_check_params;
 	size_t ret_value;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "vfprintf", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "vfprintf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params = 0;

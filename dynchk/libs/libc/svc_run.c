@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <rpc/svc.h>
 #undef svc_run
 static void(*funcptr) () = 0;
@@ -12,7 +11,7 @@ void svc_run ()
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "svc_run", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "svc_run", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

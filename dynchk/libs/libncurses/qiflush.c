@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef qiflush
 static void(*funcptr) () = 0;
@@ -12,7 +11,7 @@ void qiflush ()
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "qiflush");
+		funcptr = dlsym(RTLD_NEXT, "qiflush");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

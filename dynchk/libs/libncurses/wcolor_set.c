@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef wcolor_set
 static int(*funcptr) (WINDOW * , short , void * ) = 0;
@@ -13,7 +12,7 @@ int wcolor_set (WINDOW * arg0 , short arg1 , void * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "wcolor_set");
+		funcptr = dlsym(RTLD_NEXT, "wcolor_set");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

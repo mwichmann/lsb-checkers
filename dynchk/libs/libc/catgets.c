@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <nl_types.h>
 #undef catgets
 static char *(*funcptr) (nl_catd , int , int , const char * ) = 0;
@@ -13,7 +12,7 @@ char * catgets (nl_catd arg0 , int arg1 , int arg2 , const char * arg3 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "catgets", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "catgets", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <fmtmsg.h>
 #undef fmtmsg
 static int(*funcptr) (long , const char * , int , const char * , const char * , const char * ) = 0;
@@ -13,7 +12,7 @@ int fmtmsg (long arg0 , const char * arg1 , int arg2 , const char * arg3 , const
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "fmtmsg", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "fmtmsg", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

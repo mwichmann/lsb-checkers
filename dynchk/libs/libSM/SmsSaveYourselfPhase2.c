@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmsSaveYourselfPhase2
 static void(*funcptr) (SmsConn ) = 0;
@@ -12,7 +11,7 @@ void SmsSaveYourselfPhase2 (SmsConn arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "SmsSaveYourselfPhase2");
+		funcptr = dlsym(RTLD_NEXT, "SmsSaveYourselfPhase2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdarg.h>
 #include <stdio.h>
 #undef vscanf
@@ -14,7 +13,7 @@ int vscanf (const char * arg0 , va_list arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "vscanf");
+		funcptr = dlsym(RTLD_NEXT, "vscanf");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef leaveok
 static int(*funcptr) (WINDOW * , bool ) = 0;
@@ -13,7 +12,7 @@ int leaveok (WINDOW * arg0 , bool arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "leaveok");
+		funcptr = dlsym(RTLD_NEXT, "leaveok");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

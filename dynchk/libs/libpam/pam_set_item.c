@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <security/pam_appl.h>
 #undef pam_set_item
 static int(*funcptr) (pam_handle_t * , int , const void * ) = 0;
@@ -13,7 +12,7 @@ int pam_set_item (pam_handle_t * arg0 , int arg1 , const void * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "pam_set_item");
+		funcptr = dlsym(RTLD_NEXT, "pam_set_item");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

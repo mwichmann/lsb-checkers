@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <security/pam_appl.h>
 #undef pam_chauthtok
 static int(*funcptr) (pam_handle_t * , int ) = 0;
@@ -13,7 +12,7 @@ int pam_chauthtok (pam_handle_t * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "pam_chauthtok");
+		funcptr = dlsym(RTLD_NEXT, "pam_chauthtok");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

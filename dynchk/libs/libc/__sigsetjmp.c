@@ -6,7 +6,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <dlfcn.h>
 #include <setjmp.h>
 #undef __sigsetjmp

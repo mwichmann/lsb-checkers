@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <signal.h>
 #undef sigaction
 static int(*funcptr) (int , const struct sigaction * , struct sigaction * ) = 0;
@@ -13,7 +12,7 @@ int sigaction (int arg0 , const struct sigaction * arg1 , struct sigaction * arg
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

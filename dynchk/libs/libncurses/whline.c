@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef whline
 static int(*funcptr) (WINDOW * , chtype , int ) = 0;
@@ -13,7 +12,7 @@ int whline (WINDOW * arg0 , chtype arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "whline");
+		funcptr = dlsym(RTLD_NEXT, "whline");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

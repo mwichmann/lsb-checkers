@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef reset_prog_mode
 static int(*funcptr) () = 0;
@@ -13,7 +12,7 @@ int reset_prog_mode ()
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "reset_prog_mode");
+		funcptr = dlsym(RTLD_NEXT, "reset_prog_mode");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

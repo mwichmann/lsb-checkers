@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmsProtocolRevision
 static int(*funcptr) (SmsConn ) = 0;
@@ -13,7 +12,7 @@ int SmsProtocolRevision (SmsConn arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "SmsProtocolRevision");
+		funcptr = dlsym(RTLD_NEXT, "SmsProtocolRevision");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef mvwchgat
 static int(*funcptr) (WINDOW * , int , int , int , attr_t , short , const void * ) = 0;
@@ -13,7 +12,7 @@ int mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , sho
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "mvwchgat");
+		funcptr = dlsym(RTLD_NEXT, "mvwchgat");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

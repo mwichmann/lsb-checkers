@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <zlib.h>
 #undef gzseek
 static z_off_t(*funcptr) (gzFile , z_off_t , int ) = 0;
@@ -13,7 +12,7 @@ z_off_t gzseek (gzFile arg0 , z_off_t arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	z_off_t ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "gzseek");
+		funcptr = dlsym(RTLD_NEXT, "gzseek");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

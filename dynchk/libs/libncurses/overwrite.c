@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #include <term.h>
 #undef overwrite
@@ -14,7 +13,7 @@ int overwrite (const WINDOW * arg0 , WINDOW * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "overwrite");
+		funcptr = dlsym(RTLD_NEXT, "overwrite");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

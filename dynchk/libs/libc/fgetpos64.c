@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <stdio.h>
 #undef fgetpos64
 static int(*funcptr) (FILE * , fpos64_t * ) = 0;
@@ -13,7 +12,7 @@ int fgetpos64 (FILE * arg0 , fpos64_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "fgetpos64", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "fgetpos64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

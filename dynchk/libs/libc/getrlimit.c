@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <sys/resource.h>
 #undef getrlimit
 static int(*funcptr) (__rlimit_resource_t , struct rlimit * ) = 0;
@@ -13,7 +12,7 @@ int getrlimit (__rlimit_resource_t arg0 , struct rlimit * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "getrlimit", "GLIBC_2.2");
+		funcptr = dlvsym(RTLD_NEXT, "getrlimit", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

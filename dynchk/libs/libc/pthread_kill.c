@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #include <signal.h>
 #undef pthread_kill
@@ -14,7 +13,7 @@ int pthread_kill (pthread_t arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "pthread_kill", "GLIBC_2.0");
+		funcptr = dlvsym(RTLD_NEXT, "pthread_kill", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

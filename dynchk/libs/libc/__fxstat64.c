@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <sys/stat.h>
 #undef __fxstat64
 static int(*funcptr) (int , int , struct stat64 * ) = 0;
@@ -13,7 +12,7 @@ int __fxstat64 (int arg0 , int arg1 , struct stat64 * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
+		funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

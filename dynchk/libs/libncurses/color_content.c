@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef color_content
 static int(*funcptr) (short , short * , short * , short * ) = 0;
@@ -13,7 +12,7 @@ int color_content (short arg0 , short * arg1 , short * arg2 , short * arg3 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "color_content");
+		funcptr = dlsym(RTLD_NEXT, "color_content");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

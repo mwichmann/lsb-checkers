@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <signal.h>
 #undef sigwaitinfo
 static int(*funcptr) (const sigset_t * , siginfo_t * ) = 0;
@@ -13,7 +12,7 @@ int sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.1");
+		funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

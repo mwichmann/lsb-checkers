@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
 #include <sys/statvfs.h>
 #undef statvfs64
 static int(*funcptr) (const char * , struct statvfs64 * ) = 0;
@@ -13,7 +12,7 @@ int statvfs64 (const char * arg0 , struct statvfs64 * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "statvfs64");
+		funcptr = dlsym(RTLD_NEXT, "statvfs64");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
