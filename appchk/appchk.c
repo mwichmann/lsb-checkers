@@ -31,7 +31,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.15 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.16 $";
 
 int
 main(int argc, char *argv[])
@@ -120,11 +120,22 @@ main(int argc, char *argv[])
   /* Log extra libraries to look for symbols in */
   tetj_add_config(journal, extra_libraries);
 
-  /* Check libraries */
+  /* Add all extra libs to DT_NEEDED list */
   for (i=0; i<extra_lib_count; i++)
   {
     addDTNeeded(extra_lib_list[i]);
+  }
+
+  /* Add symbols from extra libs to list */
+  for (i=0; i<extra_lib_count; i++)
+  {
     add_library_symbols(extra_lib_list[i], journal);
+  }
+
+  /* Check all extra libs */
+  for (i=0; i<extra_lib_count; i++)
+  { 
+    check_lib(extra_lib_list[i], journal, 0);
   }
 
   /* Check binary */
