@@ -26,7 +26,7 @@ struct SectionInfo SectionInfo[] = {
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
 #if defined(__powerpc__)
-	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __powerpc__ */
 #if defined(__powerpc__)
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
@@ -89,6 +89,9 @@ struct SectionInfo SectionInfo[] = {
 #endif /* __powerpc__ */
 #if defined(__powerpc__)
 	{".rela.got",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __powerpc__ */
+#if defined(__powerpc__)
+	{".rela.got2",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ */
 #if defined(__ia64__)
 	{".rela.IA_64.pltoff",SHT_RELA,SHF_ALLOC,checkRELA},

@@ -68,6 +68,7 @@ extern void sys_time_h();
 extern void sys_timeb_h();
 extern void sys_times_h();
 extern void sys_types_h();
+extern void sys_un_h();
 extern void sys_utsname_h();
 extern void sys_wait_h();
 extern void syslog_h();

@@ -268,6 +268,7 @@ struct versym libGL_so_1[] = {
 	{"glPixelTransferf",""},
 	{"glPixelTransferi",""},
 	{"glPixelZoom",""},
+	{"glPointParameterfvEXT",""},
 	{"glPointSize",""},
 	{"glPolygonMode",""},
 	{"glPolygonOffset",""},

@@ -2065,6 +2065,15 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getdate_err","GLIBC_2.1"},
 #endif
+#if defined(__ia64__)
+	{"getdomainname","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"getdomainname","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"getdomainname","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getegid","GLIBC_2.0"},
 #endif
@@ -4546,6 +4555,16 @@ struct versym libc_so_6_1[] = {
 #endif
 #if defined(__powerpc__)
 	{"setcontext","GLIBC_2.0"},
+#endif
+	{"setdomainname",""},
+#if defined(__ia64__)
+	{"setdomainname","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"setdomainname","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"setdomainname","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
 	{"setegid","GLIBC_2.0"},

@@ -24,6 +24,16 @@ Msg("Checking data structures in netinet/in.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef IP_TOS
+	CompareConstant(IP_TOS,1,4662,architecture)
+#else
+Msg( "Error: Constant not found: IP_TOS\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IPPROTO_IP
 	CompareConstant(IPPROTO_IP,0,4445,architecture)
 #else

@@ -136,10 +136,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for lstat(path,buf) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,3,4955,architecture)
 #else
@@ -147,14 +143,6 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for fstat(fd,buf) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for stat(path,buf) */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
