@@ -51,6 +51,7 @@ extern struct versym libdl_so_2[];
 #if defined(__powerpc64__)
 extern struct versym libdl_so_2[];
 #endif
+extern struct versym libgcc_s_so_1[];
 extern struct versym libGL_so_1[];
 extern struct versym libICE_so_6[];
 #if defined(__i386__)

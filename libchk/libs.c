@@ -56,6 +56,7 @@ check_lib("libdl.so.2",libdl_so_2, journal);
 #if defined(__powerpc64__)
 check_lib("libdl.so.2",libdl_so_2, journal);
 #endif
+check_lib("libgcc_s.so.1",libgcc_s_so_1,journal);
 check_lib("libGL.so.1",libGL_so_1,journal);
 check_lib("libICE.so.6",libICE_so_6,journal);
 #if defined(__i386__)
