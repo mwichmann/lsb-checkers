@@ -12,7 +12,6 @@ LIBOBJS = \
 	libm_so_6_1.o \
 	libncurses_so_5.o \
 	libpthread_so_0.o \
-	librt_so_1.o \
 	libSM_so_6.o \
 	libutil_so_1.o \
 	libX11_so_6.o \

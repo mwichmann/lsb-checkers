@@ -30,7 +30,6 @@ check_lib("libm.so.6.1",libm_so_6_1, journal);
 #endif
 check_lib("libncurses.so.5",libncurses_so_5,journal);
 check_lib("libpthread.so.0",libpthread_so_0,journal);
-check_lib("librt.so.1",librt_so_1,journal);
 check_lib("libSM.so.6",libSM_so_6,journal);
 check_lib("libutil.so.1",libutil_so_1,journal);
 check_lib("libX11.so.6",libX11_so_6,journal);
