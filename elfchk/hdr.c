@@ -96,7 +96,7 @@ checkhdrident( EI_ABIVERSION, 0 )
 tetj_tp_count++; \
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check header field "#member" is "#value); \
 if( hdr1->member != value ) { \
-	snprintf( tmp_string, TMP_STRING_SIZE, "compareElfhdr: %s isn't expected value %s, found %x instead\n", #member, #value, hdr1->member); \
+	snprintf( tmp_string, TMP_STRING_SIZE, "compareElfhdr: %s isn't expected value %s, found %x instead", #member, #value, hdr1->member); \
         fprintf(stderr, "%s\n", tmp_string); \
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL); \
