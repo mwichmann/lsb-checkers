@@ -9,7 +9,7 @@ CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBL
 all:: libchk
 
 libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
-	cc $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj
+	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj
 
 libs.c:
 	./mkfunclist
