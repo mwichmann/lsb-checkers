@@ -2379,11 +2379,14 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getpwnam","GLIBC_2.0"},
 #endif
-#if defined(__powerpc__)
+#if defined(__i386__)
 	{"getpwnam_r","GLIBC_2.0"},
 #endif
-#if defined(__i386__)
+#if defined(__powerpc__)
 	{"getpwnam_r","GLIBC_2.1.2"},
+#endif
+#if defined(__ia64__)
+	{"getpwnam_r","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
 	{"getpwuid","GLIBC_2.0"},
