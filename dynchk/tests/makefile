@@ -11,7 +11,7 @@ CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFIL
 CFLAGS += -fPIC -Wall 
 
 all: $(TESTS)
-	ar cvq libtests.a $(TESTS)
+	ld -r -o tests.o $(TESTS)
 
 clean:
-	rm -f $(TESTS) libtests.a
+	rm -f $(TESTS) libtests.a tests.o
