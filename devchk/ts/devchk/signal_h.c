@@ -784,6 +784,8 @@ CheckTypeSize(_s390_regs_common,4, 10838, )
 CheckTypeSize(sighandler_t,4, 9374, 2)
 #elif __powerpc64__
 CheckTypeSize(sighandler_t,0, 9374, 9)
+#elif __ia64__
+CheckTypeSize(sighandler_t,0, 9374, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9374,0);
 Msg("Find size of sighandler_t (9374)\n");

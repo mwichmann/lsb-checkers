@@ -611,6 +611,7 @@ Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
 
 #if __i386__
 #elif __powerpc64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
 Msg("Find size of const pthread_rwlockattr_t * (10811)\n");
