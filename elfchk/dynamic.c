@@ -382,6 +382,15 @@ fprintf(stderr, "checkDT_RELCOUNT Dynamic Tag\n" );
 }
 
 int
+checkDT_RELACOUNT(ElfFile *file1, Elf32_Shdr *hdr1, Elf32_Dyn *dyn1, struct tetj_handle *journal)
+{
+#ifdef VERBOSE
+fprintf(stderr, "checkDT_RELACOUNT Dynamic Tag\n" );
+#endif /* VERBOSE */
+ return 1; 
+}
+
+int
 checkDT_RELENT(ElfFile *file1, Elf32_Shdr *hdr1, Elf32_Dyn *dyn1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
