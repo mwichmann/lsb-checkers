@@ -45,6 +45,8 @@ install:
 	install lsbdynchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsbdynchk.1
 
 
+distclean: clean
+
 clean:
 	for d in libs tests;do (cd $$d && make clean);done
 	rm -f *~ liblsbdynchk.so.1
