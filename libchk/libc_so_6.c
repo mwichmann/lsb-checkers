@@ -497,6 +497,7 @@ struct versym libc_so_6[] = {
 	{"seteuid","GLIBC_2.0"},
 	{"setgid","GLIBC_2.0"},
 	{"setgrent","GLIBC_2.0"},
+	{"setgroups","GLIBC_2.0"},
 	{"sethostent","GLIBC_2.0"},
 	{"sethostid","GLIBC_2.0"},
 	{"sethostname","GLIBC_2.0"},
