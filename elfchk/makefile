@@ -34,4 +34,7 @@ sectinfo.c:
 	./mksectinfo >sectinfo.c
 
 clean:
-	rm -f $(OBJS) $(GENSRCS) $(LIB)
+	rm -f $(OBJS) $(LIB)
+
+distclean: clean
+	rm -f $(GENSRCS)
