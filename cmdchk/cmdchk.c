@@ -3,11 +3,14 @@
  *
  * Copyright (c) 2002 The Free Standards Group Inc.
  *
- * Stuart Anderson (anderson@metrolink.com)
+ * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.6 $
+ * This is $Revision: 1.7 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.7  2002/11/26 00:25:29  anderson
+ * Give credit where due
+ *
  * Revision 1.6  2002/09/20 15:57:03  mwichmann
  * Changed a couple of instances of libchk->cmdchk; also build cmdlist
  *
@@ -48,7 +51,7 @@ char *binpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) cmdchk_revision = "$Revision: 1.6 $";
+static const char * __attribute((unused)) cmdchk_revision = "$Revision: 1.7 $";
 
 
 void
