@@ -96,7 +96,6 @@ tcnt+=X11_Xlib_h();
 tcnt+=X11_Xutil_h();
 tcnt+=X11_extensions_security_h();
 tcnt+=X11_extensions_sync_h();
-tcnt+=assert_h();
 tcnt+=complex_h();
 tcnt+=cpio_h();
 tcnt+=ctype_h();
