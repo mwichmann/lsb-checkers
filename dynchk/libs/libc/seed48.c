@@ -10,9 +10,10 @@ extern int __lsb_check_params;
 unsigned short * seed48 (unsigned short arg0 [3])
 {
 	int reset_flag = __lsb_check_params;
-	unsigned short * ret_value  ;
+	unsigned short * ret_value;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seed48");
+
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
