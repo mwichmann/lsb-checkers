@@ -1,6 +1,6 @@
-CFLAGS=-g
+CFLAGS=-g 
 
-OBJS=appchk.o 
+OBJS=appchk.o libraries.o symbols.o
 LIB=../elfchk/libelfchk.a
 
 all: appchk
