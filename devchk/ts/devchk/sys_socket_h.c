@@ -603,6 +603,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SOMAXCONN
+	CompareConstant(SOMAXCONN,128,3311,architecture)
+#else
+Msg( "Error: Constant not found: SOMAXCONN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef MSG_OOB
 	CompareConstant(MSG_OOB,1,3312,architecture)
 #else
