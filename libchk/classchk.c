@@ -217,11 +217,12 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					 * Look up the name of the symbol associated with the funcptr
 					 * found in the vtable.
 					 */
+					memset(&dlinfo,0,sizeof(dlinfo));
 					if( !dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo) ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Did not find symbol for Virtual table entry "
-														 "[%d](%x) expecting %s\n", j,
-														 vtvirtfuncs[j],
+														 "[%d][%d](%x) expecting %s\n",
+														 v, j, vtvirtfuncs[j],
 														 classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
@@ -229,10 +230,10 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					/*
 					 * 1.4.1) Make sure we found a named symbol at all.
 					 */
-					if ( !test_failed && !dlinfo.dli_saddr && classp->vtable[v].virtfuncs[j][0] ) {
+					if ( !dlinfo.dli_saddr && classp->vtable[v].virtfuncs[j][0] ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Did not find symbol addr for Virtual table entry "
-														 "[%d] expecting %s\n",
+														 "[%d][%d] expecting %s\n", v,
 														 j, classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
@@ -251,19 +252,19 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 										 dlinfo.dli_sname, classp->vtable[v].virtfuncs[j]);
 						}
 						fprintf(stderr,"Class %s\n", classp->name );
-						TETJ_REPORT_INFO("Symbol address found for Virtual table entry [%d] "
+						TETJ_REPORT_INFO("Symbol address found for Virtual table entry [%d][%d] "
 														 "%p (found) doesn't match %p (expected).\n",
-														 j, dlinfo.dli_saddr, fptr2ptr(vtvirtfuncs[j]));
+														 v, j, dlinfo.dli_saddr, fptr2ptr(vtvirtfuncs[j]));
 						test_failed = 1;
 					}
 
 					/*
 					 * 1.4.3) Make sure we found a named symbol at all.
 					 */
-					if ( !dlinfo.dli_sname ) {
+					if ( !dlinfo.dli_sname && classp->vtable[v].virtfuncs[j][0] ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Did not find symbol name for Virtual table entry "
-														 "[%d] expecting %s\n",
+														 "[%d][%d] expecting %s\n", v,
 														 j, classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
