@@ -104,11 +104,11 @@ else
 EXTRALIBS =
 endif
 
-ARCH=`uname -m`
-ifeq ($(ARCH), "s390x")
+ARCH:=$(shell uname -m)
+ifeq ($(ARCH),s390x)
 XLIBDIR=/usr/X11R6/lib64
 else 
-ifeq ($(ARCH), "ppc64")
+ifeq ($(ARCH),ppc64)
 XLIBDIR=/usr/X11R6/lib64
 else
 XLIBDIR=/usr/X11R6/lib
