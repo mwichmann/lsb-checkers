@@ -15,6 +15,7 @@ struct SectionInfo SectionInfo[] = {
 	{".eh_frame",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".fini",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 	{".gnu.version",SHT_GNU_versym,SHF_ALLOC,checkGNU_versym},
+	{".gnu.version_d",SHT_GNU_verneed,SHF_ALLOC,checkGNU_verneed},
 	{".gnu.version_r",SHT_GNU_verneed,SHF_ALLOC,checkGNU_verneed},
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".hash",SHT_HASH,SHF_ALLOC,checkHASH},
