@@ -22,6 +22,12 @@ typedef struct	{
 	ProgHeadFcn	func;
 	} PhTypeFuncRec;
 
+
+#ifndef PT_GNU_STACK
+#warning "PT_GNU_STACK not found in elf.h - time to update your system"
+#define PT_GNU_STACK    0x6474e551 
+#endif
+
 PhTypeFuncRec	Headers[] = {
 	{PT_NULL,	"PT_NULL",	checkPT_NULL},
 	{PT_LOAD,	"PT_LOAD",	checkPT_LOAD},
