@@ -20,3 +20,6 @@ char *ProgInterp =
 #if defined(__ia64__)
 	"/lib/ld-lsb-ia64.so.1";
 #endif
+#if defined(__s390__)
+	"/lib/ld-lsb-s390.so.1";
+#endif
