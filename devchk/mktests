@@ -10,6 +10,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 sub writetest($$)
 {
 local($Hid,$Hname)=@_;
+local($lastid);
 my(%entry);
 
 #
@@ -67,7 +68,7 @@ $select.= "LEFT JOIN Architecture ON Aid=ATaid ";
 $select.= "WHERE HGheader=$Hid ";
 $select.= "AND Theadergroup=HGid ";
 $select.= "AND Tid IN ($typelist)";
-$select.= "ORDER BY Theadergroup ";
+$select.= "ORDER BY Theadergroup,Tid ";
 $tth = $Dbh->query($select) || die $Dbh->errmsg();
 if( $cth->numrows == 0 && $tth->numrows == 0 ) {
 	print TESTS "/*\n * No values in $Hname\n */\n";
@@ -107,10 +108,30 @@ for(1..$cth->numrows) {
 	}
 }
 
+$lastid=0;
 for(1..$tth->numrows) {
 	%tentry=$tth->fetchhash;
+	# Do this before we reset the value, so we can re-use the values
+	# from the last time through the loop is we need them
+	if( $tentry{'Tid'} != $lastid ) {
+		if( $lastid != 0 ) {
+			# We have output at least one type, and now we need to
+			# put a catchall else clause
+
+			print TESTS "#else\n";
+			print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+			print TESTS "#endif\n";
+		}
+		print TESTS "#ifdef $tentry{'Asymbol'}\n";
+		$lastid=$tentry{'Tid'};
+	} else {
+		print TESTS "#elif $tentry{'Asymbol'}\n";
+	}
 	$Tid=$tentry{'Tid'};
 	$Tname=$tentry{'Tname'};
+	$ATsize=$tentry{'ATsize'};
+	$Asymbol=$tentry{'Asymbol'};
 	if( $Tname=~/anon/ ) { next; };
 	if( $tentry{'Ttype'} eq 'Struct' || $tentry{'Ttype'} eq 'Union' ) {
 		if( $tentry{'Ttype'} eq 'Struct' ) {
@@ -118,7 +139,7 @@ for(1..$tth->numrows) {
 		} else {
 			$type="union";
 		}
-		print TESTS "CheckTypeSize($type $tentry{'Tname'},$tentry{'ATsize'},$tentry{'Tid'})\n";
+		print TESTS "CheckTypeSize($type $Tname,$ATsize,$Tid)\n";
 		#Get the members
 		$select = "SELECT DISTINCT * FROM TypeMember ";
 		$select.= "WHERE TMmemberof=$Tid ";
@@ -130,9 +151,13 @@ for(1..$tth->numrows) {
 			print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMoffset'})\n";
 		}
 	} else {
-		print TESTS "CheckTypeSize($tentry{'Tname'},$tentry{'ATsize'},$entry{'Tid'})\n";
+		print TESTS "CheckTypeSize($Tname,$ATsize,$Tid)\n";
 	}
 }
+print TESTS "#else\n";
+print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+print TESTS "#endif\n";
 
 print TESTS "printf(\"%d tests in $Hname\\n\",cnt);\n";
 print TESTS "return cnt;\n";
@@ -201,6 +226,7 @@ $select = "SELECT DISTINCT * FROM Type ";
 $select.= "LEFT JOIN ArchType ON ATtid=Tid ";
 $select.= "LEFT JOIN Architecture ON Aid=ATaid ";
 $select.= "WHERE Ttype='Intrinsic' ";
+$select.= "ORDER BY Tid";
 $tth = $Dbh->query($select) || die $Dbh->errmsg();
 if( $tth->numrows == 0 ) {
 	print TESTS "/*\n * No values in $Hname\n */\n";
@@ -219,11 +245,35 @@ print TESTS "\n\n\n";
 print TESTS "int intrinsic()\n{\n";
 print TESTS "int cnt=0;\n";
 
+$lastid=0;
 for(1..$tth->numrows) {
 	%tentry=$tth->fetchhash;
+	# Do this before we reset the value, so we can re-use the values
+	# from the last tiem through the loop is we need them
+	if( $tentry{'Tid'} != $lastid ) {
+		if( $lastid != 0 ) {
+			# We have output at least one type, and now we need to
+			# put a catchall else clause
+
+			print TESTS "#else\n";
+			print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+			print TESTS "#endif\n";
+		}
+		print TESTS "#ifdef $tentry{'Asymbol'}\n";
+		$lastid=$tentry{'Tid'};
+	} else {
+		print TESTS "#elif $tentry{'Asymbol'}\n";
+	}
+	$Tid=$tentry{'Tid'};
+	$ATsize=$tentry{'ATsize'};
 	$Tname=$tentry{'Tname'};
-	print TESTS "CheckTypeSize($tentry{'Tname'},$tentry{'ATsize'},$tentry{'Tid'})\n";
+	print TESTS "CheckTypeSize($Tname,$ATsize,$Tid)\n";
 }
+print TESTS "#else\n";
+print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+print TESTS "#endif\n";
 
 print TESTS "printf(\"%d intrinsic types\\n\",cnt);\n";
 print TESTS "return cnt;\n";
