@@ -12,7 +12,7 @@
 #include "../tetj/tetj.h"
 
 int
-checkDUMMY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkDUMMY(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "DUMMY SECTION\n" );
@@ -21,7 +21,7 @@ fprintf(stderr, "DUMMY SECTION\n" );
 }
 
 int
-checkGNU_versym(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkGNU_versym(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_versym SECTION\n" );
@@ -30,7 +30,7 @@ fprintf(stderr, "checkGNU_versym SECTION\n" );
 }
 
 int
-checkGNU_verdef(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkGNU_verdef(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_verdef SECTION\n" );
@@ -39,7 +39,7 @@ fprintf(stderr, "checkGNU_verdef SECTION\n" );
 }
 
 int
-checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkGNU_verneed(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_verneed SECTION\n" );
@@ -48,7 +48,7 @@ fprintf(stderr, "checkGNU_verneed SECTION\n" );
 }
 
 int
-checkNOBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkNOBITS(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "NOBITS SECTION\n" );
@@ -57,7 +57,7 @@ fprintf(stderr, "NOBITS SECTION\n" );
 }
 
 int
-checkNULL(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkNULL(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "NULL SECTION\n" );
@@ -66,7 +66,7 @@ fprintf(stderr, "NULL SECTION\n" );
 }
 
 int
-checkBITS(char *secname, ElfFile *file1, Elf32_Shdr *hdr1)
+checkBITS(char *secname, ElfFile *file1, Elf_Shdr *hdr1)
 {
 caddr_t	bits1;
 
@@ -92,7 +92,7 @@ for(i=0; i<size; i++)
 }
 
 int
-checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
   int i;
   /*
@@ -114,28 +114,28 @@ fprintf(stderr, "Contents of section %s not checked.\n",
 }
 
 int
-checkHASH(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkHASH(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
   return checkBITS( "HASH", file1, hdr1 );
 }
 
 int
-checkSTRTAB(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkSTRTAB(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
   return checkBITS( "STRTAB", file1, hdr1 );
 }
 
 int
-checkNOTE(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkNOTE(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
   return check_NOTE(file1, ((caddr_t)(file1->addr)+hdr1->sh_offset), hdr1->sh_size, journal );
 }
 
 int
-checkSYMBOLS(char *secname, ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkSYMBOLS(char *secname, ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numsyms;
-Elf32_Sym	*syms1;
+Elf_Sym	*syms1;
 
 #ifdef VERBOSE
 fprintf(stderr, "%s SECTION\n", secname );
@@ -143,7 +143,7 @@ fprintf(stderr, "%s SECTION\n", secname );
 
 numsyms=hdr1->sh_size/hdr1->sh_entsize;
 
-syms1=(Elf32_Sym *)((caddr_t)file1->addr+hdr1->sh_offset);
+syms1=(Elf_Sym *)((caddr_t)file1->addr+hdr1->sh_offset);
 
 for(i=0;i<numsyms;i++)
 	{
@@ -169,14 +169,14 @@ for(i=0;i<numsyms;i++)
 }
 
 int
-checkSYMTAB(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkSYMTAB(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 checkSYMBOLS( "SYMTAB", file1, hdr1, journal );
  return 1; 
 }
 
 int
-checkDYNSYM(ElfFile *file, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkDYNSYM(ElfFile *file, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "DYNSYM\n" );
@@ -187,10 +187,10 @@ file->dynsymhdr=hdr1;
 }
 
 int
-checkREL(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkREL(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numrels, pass=1;
-Elf32_Rel	*rel1;
+Elf_Rel	*rel1;
 
 #ifdef VERBOSE
 fprintf(stderr, "REL SECTION\n" );
@@ -198,7 +198,7 @@ fprintf(stderr, "REL SECTION\n" );
 
 numrels=hdr1->sh_size/hdr1->sh_entsize;
 
-rel1=(Elf32_Rel *)((caddr_t)file1->addr+hdr1->sh_offset);
+rel1=(Elf_Rel *)((caddr_t)file1->addr+hdr1->sh_offset);
 
 #define comparerelfield( field ) \
 if( rel1[i].field != rel2[i].field ) { \
@@ -220,10 +220,10 @@ for(i=0;i<numrels;i++)
 }
 
 int
-checkRELA(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkRELA(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numrels, pass = 1;
-Elf32_Rela	*rel1;
+Elf_Rela	*rel1;
 
 #ifdef VERBOSE
 fprintf(stderr, "RELA SECTION\n" );
@@ -231,7 +231,7 @@ fprintf(stderr, "RELA SECTION\n" );
 
 numrels=hdr1->sh_size/hdr1->sh_entsize;
 
-rel1=(Elf32_Rela *)((caddr_t)file1->addr+hdr1->sh_offset);
+rel1=(Elf_Rela *)((caddr_t)file1->addr+hdr1->sh_offset);
 
 #define comparerelfield( field ) \
 if( rel1[i].field != rel2[i].field ) { \
@@ -253,7 +253,7 @@ for(i=0;i<numrels;i++)
 }
 
 int
-checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkINIT_ARRAY(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "INIT_ARRAY SECTION\n" );
@@ -262,7 +262,7 @@ fprintf(stderr, "INIT_ARRAY SECTION\n" );
 }
 
 int
-checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPREINIT_ARRAY(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "PREINIT_ARRAY SECTION\n" );
@@ -271,7 +271,7 @@ fprintf(stderr, "PREINIT_ARRAY SECTION\n" );
 }
 
 int
-checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkFINI_ARRAY(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "FINI_ARRAY SECTION\n" );
@@ -300,7 +300,7 @@ fprintf(stderr, "IA_64_UNWIND SECTION\n" );
 #endif
 
 void
-dumpsection(Elf32_Shdr *hdr)
+dumpsection(Elf_Shdr *hdr)
 {
 fprintf(stderr,"sh_type %x\n", hdr->sh_type );
 fprintf(stderr,"sh_flags %x\n", hdr->sh_flags );
@@ -317,7 +317,7 @@ return;
 void
 checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
 {
-  Elf32_Shdr	*hdr1;
+  Elf_Shdr	*hdr1;
   int	i;
   int fail = 0;
 #define TMP_STRING_SIZE (200)

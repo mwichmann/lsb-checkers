@@ -15,16 +15,16 @@ checkElfhdr(ElfFile *file1, int isProgram, struct tetj_handle *journal)
 {
 #define TMP_STRING_SIZE (400)
   char tmp_string[TMP_STRING_SIZE+1];
-Elf32_Ehdr *hdr1;
+Elf_Ehdr *hdr1;
 
-hdr1=(Elf32_Ehdr *)file1->addr;
+hdr1=(Elf_Ehdr *)file1->addr;
 
 if( hdr1->e_phoff ) {
-	file1->paddr=(Elf32_Phdr *)((caddr_t)file1->addr+hdr1->e_phoff);
+	file1->paddr=(Elf_Phdr *)((caddr_t)file1->addr+hdr1->e_phoff);
 	file1->numph = hdr1->e_phnum;
 	}
 if( hdr1->e_shoff ) {
-	file1->saddr=(Elf32_Shdr *)((caddr_t)file1->addr+hdr1->e_shoff);
+	file1->saddr=(Elf_Shdr *)((caddr_t)file1->addr+hdr1->e_shoff);
 	file1->numsh = hdr1->e_shnum;
 	}
 

@@ -11,9 +11,9 @@
 void
 getSymbolVersionInfo(ElfFile *file)
 {
-Elf32_Shdr	*hdr;
-Elf32_Verdaux	*verdaux;
-Elf32_Vernaux	*vernaux;
+Elf_Shdr	*hdr;
+Elf_Verdaux	*verdaux;
+Elf_Vernaux	*vernaux;
 int	numvernaux,numverdaux,i,j;
 
 for(i=0;i<file->numsh;i++) {
@@ -50,14 +50,14 @@ for(i=0;i<file->numsh;i++) {
 
 file->numsyms=file->symhdr->sh_size/file->symhdr->sh_entsize;
 
-file->syms=(Elf32_Sym *)((caddr_t)file->addr+file->symhdr->sh_offset);
+file->syms=(Elf_Sym *)((caddr_t)file->addr+file->symhdr->sh_offset);
 if( file->verhdr )
-	file->vers=(Elf32_Half *)((caddr_t)file->addr+file->verhdr->sh_offset);
+	file->vers=(Elf_Half *)((caddr_t)file->addr+file->verhdr->sh_offset);
 if( file->verdhdr )
-	file->verd=(Elf32_Verdef *)((caddr_t)file->addr+file->verdhdr->sh_offset);
+	file->verd=(Elf_Verdef *)((caddr_t)file->addr+file->verdhdr->sh_offset);
 if( file->vernhdr )
-	file->vern=(Elf32_Verneed *)((caddr_t)file->addr+file->vernhdr->sh_offset);
-file->dyns=(Elf32_Dyn *)((caddr_t)file->addr+file->dynhdr->sh_offset);
+	file->vern=(Elf_Verneed *)((caddr_t)file->addr+file->vernhdr->sh_offset);
+file->dyns=(Elf_Dyn *)((caddr_t)file->addr+file->dynhdr->sh_offset);
 
 /*
 Look in dynhdr to get the number of entries in verd, so we can parse it.
@@ -79,7 +79,7 @@ if( file->verd )
 #ifdef DEBUG
 		printf("version index %x\n", verd->vd_ndx);
 #endif
-		verdaux=(Elf32_Verdaux *)((char *)file->verd+file->verd->vd_aux);
+		verdaux=(Elf_Verdaux *)((char *)file->verd+file->verd->vd_aux);
 		numverdaux=file->verd->vd_cnt;
 		/* Note, we only want the first (ie best) version in a list */
 		file->versionnames[file->verd->vd_ndx]=ElfGetStringIndex(file,
@@ -90,9 +90,9 @@ if( file->verd )
 			printf("version %x %x %s\n", i, verdaux->vda_name,
 		  	ElfGetStringIndex(file,verdaux->vda_name,verdhdr->sh_link));
 #endif
-			verdaux=(Elf32_Verdaux *)((char *)verdaux+ verdaux->vda_next);
+			verdaux=(Elf_Verdaux *)((char *)verdaux+ verdaux->vda_next);
 			}
-		file->verd=(Elf32_Verdef *)((char *)file->verd+file->verd->vd_next);
+		file->verd=(Elf_Verdef *)((char *)file->verd+file->verd->vd_next);
 		}
 
 if( file->vern )
@@ -100,7 +100,7 @@ if( file->vern )
 #ifdef DEBUG
 		printf("version index %x\n", fil->vern->vn_ndx);
 #endif
-		vernaux=(Elf32_Vernaux *)((char *)file->vern+file->vern->vn_aux);
+		vernaux=(Elf_Vernaux *)((char *)file->vern+file->vern->vn_aux);
 		numvernaux=file->vern->vn_cnt;
 		/* Note, we only want the first (ie best) version in a list */
 		if( !file->versionnames[vernaux->vna_other] )
@@ -115,8 +115,8 @@ if( file->vern )
 			file->versionnames[vernaux->vna_other]=ElfGetStringIndex(file,
 						vernaux->vna_name,
 						file->vernhdr->sh_link);
-			vernaux=(Elf32_Vernaux *)((char *)vernaux+ vernaux->vna_next);
+			vernaux=(Elf_Vernaux *)((char *)vernaux+ vernaux->vna_next);
 			}
-		file->vern=(Elf32_Verneed *)((char *)file->vern+file->vern->vn_next);
+		file->vern=(Elf_Verneed *)((char *)file->vern+file->vern->vn_next);
 		}
 }

@@ -7,7 +7,7 @@ int
 checksymbols(ElfFile *file, struct tetj_handle *journal)
 {
   int	i, j, numsyms;
-  Elf32_Sym	*syms1;
+  Elf_Sym	*syms1;
 #define TMP_STRING_LENGTH 100  
   char tmp_string[TMP_STRING_LENGTH];
   
@@ -18,7 +18,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
 
   numsyms=file->dynsymhdr->sh_size/file->dynsymhdr->sh_entsize;
 
-  syms1=(Elf32_Sym *)((caddr_t)file->addr+file->dynsymhdr->sh_offset);
+  syms1=(Elf_Sym *)((caddr_t)file->addr+file->dynsymhdr->sh_offset);
 
   for(i=0;i<numsyms;i++)
   {

@@ -27,7 +27,7 @@ ProgBitsFuncRec ProgbitsInfo[] = {
 int numProgbitsInfo = sizeof(ProgbitsInfo)/sizeof(ProgBitsFuncRec);
 
 int
-checkPROGBITS_data(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_data(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 /*
  * .data contains arbitrary initialized data. There is nothing to check.
@@ -36,7 +36,7 @@ return 1;
 }
 
 int
-checkPROGBITS_data1(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_data1(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 /*
  * .data contains arbitrary initialized data. There is nothing to check.
@@ -45,7 +45,7 @@ return 1;
 }
 
 int
-checkPROGBITS_eh_frame(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_eh_frame(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
         int error;
         if( elfchk_debug&DEBUG_SECTION_CONTENTS )
@@ -70,7 +70,7 @@ checkPROGBITS_eh_frame(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *jou
 }
 
 int
-checkPROGBITS_eh_frame_hdr(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_eh_frame_hdr(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 EHFRMHDRImage	*frmhdrimg;
 EHFRMHDR	frmhdr;
@@ -126,7 +126,7 @@ return 1;
 }
 
 int
-checkPROGBITS_interp(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_interp(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 char	*iname;
 
@@ -141,7 +141,7 @@ return 0;
 }
 
 int
-checkPROGBITS_rodata(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_rodata(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 /*
  * .rodata contains arbitrary initialized data. There is nothing to check.
@@ -150,7 +150,7 @@ return 1;
 }
 
 int
-checkPROGBITS_rodata1(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_rodata1(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 /*
  * .rodata1 contains arbitrary initialized data. There is nothing to check.
@@ -159,7 +159,7 @@ return 1;
 }
 
 int
-checkPROGBITS_sdata(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_sdata(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 /*
  * .sdata contains arbitrary initialized data. There is nothing to check.
@@ -168,7 +168,7 @@ return 1;
 }
 
 int
-checkPROGBITS_sdata1(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+checkPROGBITS_sdata1(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 /*
  * .sdata1 contains arbitrary initialized data. There is nothing to check.
