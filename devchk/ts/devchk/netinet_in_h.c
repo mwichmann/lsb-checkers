@@ -182,6 +182,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef IP_TTL
+	CompareConstant(IP_TTL,2,4663,architecture)
+#else
+Msg( "Error: Constant not found: IP_TTL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IP_OPTIONS
+	CompareConstant(IP_OPTIONS,4,4665,architecture)
+#else
+Msg( "Error: Constant not found: IP_OPTIONS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef IP_MULTICAST_IF
 	CompareConstant(IP_MULTICAST_IF,32,4681,architecture)
 #else

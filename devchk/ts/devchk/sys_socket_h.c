@@ -693,6 +693,30 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for CMSG_ALIGN(len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CMSG_NXTHDR(mhdr,cmsg) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CMSG_DATA(cmsg) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CMSG_SPACE(len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CMSG_LEN(len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CMSG_FIRSTHDR(msg) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SIOCGIFFLAGS
 	CompareConstant(SIOCGIFFLAGS,0x8913,3383,architecture)
 #else
