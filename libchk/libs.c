@@ -29,15 +29,14 @@ check_lib("libdl.so.2",libdl_so_2,journal);
 #if defined(__i386__)
 check_lib("libm.so.6",libm_so_6, journal);
 #endif
+#if defined(__ia64__)
+check_lib("libm.so.6.1",libm_so_6_1, journal);
+#endif
 check_lib("libncurses.so.5",libncurses_so_5,journal);
 #if defined(__i386__)
 check_lib("libpthread.so.0",libpthread_so_0, journal);
 #endif
-#if defined(__i386__)
-check_lib("librt.so.1",librt_so_1, journal);
-#endif
-#if defined(__i386__)
-check_lib("libutil.so.1",libutil_so_1, journal);
-#endif
+check_lib("librt.so.1",librt_so_1,journal);
+check_lib("libutil.so.1",libutil_so_1,journal);
 check_lib("libz.so.1",libz_so_1,journal);
 }
