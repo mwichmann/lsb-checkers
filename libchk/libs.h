@@ -2,32 +2,32 @@
 #include "../elfchk/elfchk.h"
 
 #if __ia64__
-extern struct versym ld_lsb_ia64_so_2[];
-extern struct classinfo ld_lsb_ia64_so_2_classinfo[];
+extern struct versym ld_lsb_ia64_so_3[];
+extern struct classinfo ld_lsb_ia64_so_3_classinfo[];
 #endif
 #if __powerpc__ && !__powerpc64__
-extern struct versym ld_lsb_ppc32_so_2[];
-extern struct classinfo ld_lsb_ppc32_so_2_classinfo[];
+extern struct versym ld_lsb_ppc32_so_3[];
+extern struct classinfo ld_lsb_ppc32_so_3_classinfo[];
 #endif
 #if __s390__ && !__s390x__
-extern struct versym ld_lsb_s390_so_2[];
-extern struct classinfo ld_lsb_s390_so_2_classinfo[];
+extern struct versym ld_lsb_s390_so_3[];
+extern struct classinfo ld_lsb_s390_so_3_classinfo[];
 #endif
 #if __i386__
-extern struct versym ld_lsb_so_2[];
-extern struct classinfo ld_lsb_so_2_classinfo[];
+extern struct versym ld_lsb_so_3[];
+extern struct classinfo ld_lsb_so_3_classinfo[];
 #endif
 #if __powerpc64__
-extern struct versym ld_lsb_ppc64_so_2[];
-extern struct classinfo ld_lsb_ppc64_so_2_classinfo[];
+extern struct versym ld_lsb_ppc64_so_3[];
+extern struct classinfo ld_lsb_ppc64_so_3_classinfo[];
 #endif
 #if __s390x__
-extern struct versym ld_lsb_s390x_so_2[];
-extern struct classinfo ld_lsb_s390x_so_2_classinfo[];
+extern struct versym ld_lsb_s390x_so_3[];
+extern struct classinfo ld_lsb_s390x_so_3_classinfo[];
 #endif
 #if __x86_64__
-extern struct versym ld_lsb_x86_64_so_2[];
-extern struct classinfo ld_lsb_x86_64_so_2_classinfo[];
+extern struct versym ld_lsb_x86_64_so_3[];
+extern struct classinfo ld_lsb_x86_64_so_3_classinfo[];
 #endif
 #if __s390x__
 extern struct versym libc_so_6[];
