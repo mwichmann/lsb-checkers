@@ -20,19 +20,34 @@ struct versym {
 	};
 
 //In memory format
-struct classtypeinfo {
+struct classtypeinfo_mem {
 	void	*basevtable;
 	char	*name;
 	void	*basetypeinfo[];
 	};
 
+//DB format
+struct classtypeinfo {
+	char	*basevtable;
+	char	*name;
+	char	*basetypeinfo[];
+	};
+
 //In memory format
-struct classvtable {
+struct classvtable_mem {
 	int	baseoffset;
 	char	*typeinfo;
 	void	*virtfuncs[];
 	};
 
+//DB format
+struct classvtable {
+	int	baseoffset;
+	char	*typeinfo;
+	char	*virtfuncs[];
+	};
+
+// No in memory format for this one
 struct classinfo {
 	char	*name;
 	char	*vtablename;
