@@ -163,7 +163,6 @@ $Dbh->selectdb("lsb") || die $Dbh->errmsg();
 $select = "SELECT DISTINCT * FROM Header ";
 $select.= "WHERE Hstd='Yes' ";
 $select.= "ORDER BY Hname ";
-print $select;
 
 $hth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$hth->numrows) {
@@ -171,6 +170,7 @@ for(1..$hth->numrows) {
 	writetest($entry{'Hid'},$entry{'Hname'});
 }
 print MAKEFILE "\n\n";
+print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE\n\n";
 print MAKEFILE "all: hdrchk\n\n";
 print MAKEFILE "hdrchk: \$\(OBJS)\n";
 print MAKEFILE "\tcc -o hdrchk \$\(OBJS)\n";
