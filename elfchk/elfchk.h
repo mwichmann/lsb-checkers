@@ -191,6 +191,7 @@ extern char *ProgInterp;
 typedef	struct	{
 	int	fd;
 	caddr_t     addr;  /* Start address of the file */
+	caddr_t     araddr;/* Start address of the file if an archive */
 	Elf_Shdr *saddr; /* Start address of the next section of the file */
 	Elf_Phdr *paddr; /* address of the program header of the file */
 	caddr_t     straddr;  /* Start address of the string table */
