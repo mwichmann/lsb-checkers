@@ -3,7 +3,7 @@ include libs.mk
 
 OBJS = libchk.o libs.o $(LIBOBJS)
 
-CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\"
+CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -Wall
 
 all:: libchk
 
@@ -16,5 +16,12 @@ libs.c:
 install:
 	install libchk $$LSBHOME/src/build/usr/bin/lsblibchk
 
+# Distclean means will need database to rebuild
+distclean: clean
+	rm -f libs.h libs.c
+
 clean:
-	rm -f $(OBJS) libs.h libs.c
+	rm -f $(OBJS)
+
+.PHONE: clean distclean
+
