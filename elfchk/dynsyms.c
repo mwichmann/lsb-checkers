@@ -16589,25 +16589,25 @@ struct versym DynSyms[] = {
 	{"adjtime","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"adjtimex","GLIBC_2.0",0,"LSB-Core"},
+	{"adjtimex","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __ia64__
-	{"adjtimex","GLIBC_2.2",0,"LSB-Core"},
+	{"adjtimex","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"adjtimex","GLIBC_2.0",0,"LSB-Core"},
+	{"adjtimex","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"adjtimex","GLIBC_2.3",0,"LSB-Core"},
+	{"adjtimex","GLIBC_2.3",1,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"adjtimex","GLIBC_2.0",0,"LSB-Core"},
+	{"adjtimex","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"adjtimex","GLIBC_2.2.5",0,"LSB-Core"},
+	{"adjtimex","GLIBC_2.2.5",1,"LSB-Core"},
 #endif
 #if __s390x__
-	{"adjtimex","GLIBC_2.2",0,"LSB-Core"},
+	{"adjtimex","GLIBC_2.2",1,"LSB-Core"},
 #endif
 	{"adler32","",0,"LSB-Core"},
 #if __i386__
