@@ -38,7 +38,7 @@ struct versym libpthread_so_0[] = {
 	{"_pthread_cleanup_push","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"_pthread_cleanup_push","GLIBC_2.0"},
+	{"_pthread_cleanup_push","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"_pthread_cleanup_push","GLIBC_2.2"},
