@@ -15,7 +15,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal)
 char tmp_string[TMP_STRING_SIZE+1];
 gzFile	*zfile;
 RpmArchiveHeader ahdr;
-char	ch;
+int	badcpiomagic=0;
 
 file1->archive=(caddr_t)file1->nexthdr;
 
@@ -68,9 +68,8 @@ if( (zfile=gzdopen(file1->fd,"r")) == NULL ) {
  */
 
 while( !gzeof(zfile) ) {
-	char	filename[256]; /* XXX Potential overflow!! */
+	char	*fptr,filename[256]; /* XXX Potential overflow!! */
 	char	num[9];
-	char	*s;
 	int	size;
 
 	gzread(zfile, &ahdr, sizeof(ahdr) );
@@ -83,7 +82,7 @@ while( !gzeof(zfile) ) {
 	printf("filesize: %8.8s\n", ahdr.c_filesize );
 	printf("namesize: %8.8s\n", ahdr.c_namesize );
 */
-	if( !(strncmp(ahdr.c_magic,"070707",6) == 0) ) {
+	if( !(strncmp(ahdr.c_magic,"070707",6) == 0) && !badcpiomagic ) {
         	snprintf( tmp_string, TMP_STRING_SIZE,
     		"checkRpmArchive: Archive record has wrong magic %6.6s instead of 070707",
 		ahdr.c_magic);
@@ -91,18 +90,18 @@ while( !gzeof(zfile) ) {
         	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 							0, 0, 0, tmp_string);
         	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-		/* For some reason, he cpio format in RPM has a magic of
+		/* For some reason, the cpio format in RPM has a magic of
 			070701 instead of 070707 as is defined for cpio */
 		if( !(strncmp(ahdr.c_magic,"0707",4) == 0) ) {
 			return;
 		}
+		badcpiomagic=1;
 	}
 	/* Read in the filename */
 	memcpy(num,ahdr.c_namesize,8);
 	num[8]=0; /* NULL terminate the namesize */
 	size=strtol(num,NULL,16);
 	gzread(zfile, filename, size );
-	printf("Filename:  %s\n",filename);
 	/*
 	 * Check/fix padding here
 	 */
@@ -126,5 +125,17 @@ while( !gzeof(zfile) ) {
 	size%=4;
 	//printf("padding %d\n", size);
 	gzseek(zfile,size,SEEK_CUR);
+
+	if( strcmp(filename,"TRAILER!!!") == 0 ) {
+		/* End of archive */
+		return;
+		}
+
+	/* Now, check the filename */
+	if( filename[0] == '.' && filename[1] == '/' )
+		fptr=&filename[1];
+	else
+		fptr=&filename[0];
+	checkRpmArchiveFilename(fptr, journal);
 	}
 }

@@ -210,4 +210,7 @@ extern RpmFile *OpenRpmFile(char *name);
 extern void checkRpm(RpmFile *file1, struct tetj_handle *journal);
 extern void checkRpmLead(RpmFile *file1, struct tetj_handle *journal);
 extern void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
+
+/* fhs.c */
+extern void checkRpmArchiveFilename(char *filename, struct tetj_handle *journal);
 #endif /* _RPMCHK_H */

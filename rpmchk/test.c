@@ -2,13 +2,24 @@
 #include <stdio.h>
 #include "rpmchk.h"
 
+void usage(char *progname)
+{
+fprintf(stderr,"Usage: %s rpmname\n",progname);
+exit(1);
+}
+
 int main(int argc, char *argv[])
 {
 RpmFile	*rpmfile;
 
-if( (rpmfile = OpenRpmFile("./lsbdev.rpm")) == NULL ) {
+if( argc != 2 ) {
+	fprintf(stderr, "%s: bad argument count %d\n", argv[0], argc );
+	usage(argv[0]);
+	}
+
+if( (rpmfile = OpenRpmFile(argv[1])) == NULL ) {
 	fprintf(stderr, "%s: Unable to open file %s\n", argv[0], argv[1] );
-	exit(2);
+	usage(argv[0]);
 	}
 
 checkRpm(rpmfile, NULL);
