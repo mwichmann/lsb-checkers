@@ -35,7 +35,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _XOPEN_SOURCE
-	CompareConstant(_XOPEN_SOURCE,500,5098,architecture)
+	CompareConstant(_XOPEN_SOURCE,600,5098,architecture)
 #else
 Msg( "Error: Constant not found: _XOPEN_SOURCE\n");
 cnt++;
@@ -195,7 +195,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef __STDC_ISO_10646__
-	CompareConstant(__STDC_ISO_10646__,1,5115,architecture)
+	CompareConstant(__STDC_ISO_10646__,200009L,5115,architecture)
 #else
 Msg( "Error: Constant not found: __STDC_ISO_10646__\n");
 cnt++;
