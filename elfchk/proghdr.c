@@ -61,6 +61,7 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
 char tmp_string[TMP_STRING_SIZE+1];
 int i,secflags=0;
+int fail = 0;
 
 tetj_tp_count++;
 
@@ -88,8 +89,7 @@ for(i=0;i<file->numsh;i++) {
 			tetj_testcase_info(journal, tetj_activity_count,
 					tetj_tp_count, 0, 0, 0, tmp_string);
 			fprintf(stderr, "%s\n", tmp_string);
-			tetj_result(journal, tetj_activity_count,
-					tetj_tp_count, TETJ_FAIL);
+			fail = 1;
 		}
 		/*
 		 * See if section flags correspond to those for this segment 
@@ -105,11 +105,14 @@ for(i=0;i<file->numsh;i++) {
 			tetj_testcase_info(journal, tetj_activity_count,
 					tetj_tp_count, 0, 0, 0, tmp_string);
 			fprintf(stderr, "%s\n", tmp_string);
-			tetj_result(journal, tetj_activity_count,
-					tetj_tp_count, TETJ_FAIL);
+			fail = 1;
 		}
 	}
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
+	tetj_result(journal, tetj_activity_count,	tetj_tp_count, 
+							fail=1 ? TETJ_FAIL : TETJ_PASS);
+
+	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 }
 
 return 0;
@@ -120,6 +123,7 @@ checkPT_DYNAMIC(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
   char tmp_string[TMP_STRING_SIZE+1];
   int i;
+	int fail = 0;
 	
   tetj_tp_count++;
 
@@ -135,8 +139,7 @@ checkPT_DYNAMIC(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 			tetj_testcase_info(journal, tetj_activity_count,
 					tetj_tp_count, 0, 0, 0, tmp_string);
 			fprintf(stderr, "%s\n", tmp_string);
-			tetj_result(journal, tetj_activity_count,
-					tetj_tp_count, TETJ_FAIL);
+			fail = 1;
 		  }
 		if( file->saddr[i].sh_offset != hdr->p_offset ) {
 			snprintf(tmp_string, TMP_STRING_SIZE,
@@ -144,8 +147,7 @@ checkPT_DYNAMIC(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 			tetj_testcase_info(journal, tetj_activity_count,
 					tetj_tp_count, 0, 0, 0, tmp_string);
 			fprintf(stderr, "%s\n", tmp_string);
-			tetj_result(journal, tetj_activity_count,
-					tetj_tp_count, TETJ_FAIL);
+			fail = 1;
 		  }
 		if( file->saddr[i].sh_size != hdr->p_filesz ) {
 			snprintf(tmp_string, TMP_STRING_SIZE,
@@ -153,11 +155,13 @@ checkPT_DYNAMIC(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 			tetj_testcase_info(journal, tetj_activity_count,
 					tetj_tp_count, 0, 0, 0, tmp_string);
 			fprintf(stderr, "%s\n", tmp_string);
-			tetj_result(journal, tetj_activity_count,
-					tetj_tp_count, TETJ_FAIL);
+			fail = 1;
 		  }
 	}
   }
+
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, 
+							fail=1 ? TETJ_FAIL : TETJ_PASS);
 
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
@@ -234,7 +238,7 @@ checkPT_PHDR(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     return 1;
   }
   snprintf(tmp_string, TMP_STRING_SIZE,
-		"PHDR offset doesn't match expected %x vs %x", 
+		"PHDR offset doesn't match expected %p vs %p", 
           	file->addr+hdr->p_offset,file->paddr);
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
@@ -287,7 +291,8 @@ int
 checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
   char tmp_string[TMP_STRING_SIZE+1];
-	
+	int fail = 0;
+
   tetj_tp_count++;
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
@@ -300,8 +305,7 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+		fail = 1;
   }
   /* Header members should be zero */
   if( hdr->p_vaddr != 0 )
@@ -310,8 +314,7 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+		fail = 1;
   }
   /* Header members should be zero */
   if( hdr->p_paddr != 0 )
@@ -320,8 +323,7 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+		fail = 1;
   }
   /* Header members should be zero */
   if( hdr->p_filesz != 0 )
@@ -330,8 +332,7 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+		fail = 1;
   }
   /* Header members should be zero */
   if( hdr->p_memsz != 0 )
@@ -340,8 +341,7 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+		fail = 1;
   }
   /* Header flags should be in the set PF_X|PF_W|PF_R */
   if( hdr->p_filesz & ~(PF_X|PF_W|PF_R) )
@@ -351,11 +351,11 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+		fail = 1;
   }
 
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, 
+							fail=1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
