@@ -9,6 +9,7 @@ appchk: $(OBJS) $(LIB)
 	$(CC) $(CFLAGS) -o appchk $(OBJS) $(LIB)
 
 install:
+	install -d $$LSBHOME/src/build/usr/bin
 	install appchk $$LSBHOME/src/build/usr/bin/lsbappchk
 
 clean:
