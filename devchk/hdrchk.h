@@ -11,15 +11,19 @@
 		}
 
 #define CheckTypeSize(type,size) \
-	cnt++;if( sizeof(type) != size ) \
-		Msg("sizeof(" #type ") is %d instead of " #size "\n",sizeof(type));
+	cnt++;if( sizeof(type) != size ) { \
+		Msg("sizeof(" #type ") is %d instead of " #size "\n",sizeof(type)); \
+		Msg("UPDATE Type SET Tsize=%d WHERE Tname='" #type "';\n", sizeof(type)); \
+	}
 
 #define CheckOffset(str,member,offset) \
 	{ \
 	str foo; \
 	char *foob=(char *)&foo; \
 	char *foom=(char *)&(foo.member); \
-	cnt++;if( (foom-foob) != offset ) \
+	cnt++;if( (foom-foob) != offset ) { \
 		Msg("offset(" #member ") is %d instead of " #offset "\n",(foom-foob)); \
+		Msg("UPDATE TypeMember SET TMoffset=%d WHERE TMname='" #member "';\n", (foom-foob)); \
+	} \
 	}
 
