@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.36 $
+ * This is $Revision: 1.37 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.37  2004/05/12 14:23:38  anderson
+ * Bug 227 - logic snafu
+ *
  * Revision 1.36  2004/04/22 12:51:59  anderson
  * check_libs isn't used by cxxabichk, so just leave it out completely
  *
@@ -156,7 +159,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.36 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.37 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -458,7 +461,7 @@ void check_libs(struct tetj_handle *journal)
 {
 	int	i=0;
 	do {
-		if( module && (strcmp(module,modlibs[i].modname)==0) )
+		if( !module || (module && (strcmp(module,modlibs[i].modname)==0)) )
 			check_lib(modlibs[i].runname, modlibs[i].symbols,
 				modlibs[i].classinfo, journal);
 	} while( modlibs[++i].modname );
