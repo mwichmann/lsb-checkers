@@ -4,7 +4,7 @@
 #include "../tetj/tetj.h"
 
 void
-checkDUMMY(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkDUMMY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "DUMMY SECTION\n" );
@@ -12,7 +12,7 @@ fprintf(stderr, "DUMMY SECTION\n" );
 }
 
 void
-checkGNU_versym(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkGNU_versym(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_versym SECTION\n" );
@@ -20,7 +20,7 @@ fprintf(stderr, "checkGNU_versym SECTION\n" );
 }
 
 void
-checkGNU_verdef(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkGNU_verdef(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_verdef SECTION\n" );
@@ -28,7 +28,7 @@ fprintf(stderr, "checkGNU_verdef SECTION\n" );
 }
 
 void
-checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_verneed SECTION\n" );
@@ -36,7 +36,7 @@ fprintf(stderr, "checkGNU_verneed SECTION\n" );
 }
 
 void
-checkNOBITS(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkNOBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "NOBITS SECTION\n" );
@@ -44,7 +44,7 @@ fprintf(stderr, "NOBITS SECTION\n" );
 }
 
 void
-checkNULL(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkNULL(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "NULL SECTION\n" );
@@ -77,31 +77,31 @@ for(i=0; i<size; i++)
 }
 
 void
-checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 checkBITS( "PROGBITS", file1, hdr1 );
 }
 
 void
-checkHASH(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkHASH(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 checkBITS( "HASH", file1, hdr1 );
 }
 
 void
-checkSTRTAB(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkSTRTAB(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 checkBITS( "STRTAB", file1, hdr1 );
 }
 
 void
-checkNOTE(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkNOTE(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 checkBITS( "NOTE", file1, hdr1 );
 }
 
 void
-checkSYMBOLS(char *secname, ElfFile *file1, Elf32_Shdr *hdr1 )
+checkSYMBOLS(char *secname, ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numsyms;
 Elf32_Sym	*syms1;
@@ -137,13 +137,13 @@ for(i=0;i<numsyms;i++)
 }
 
 void
-checkSYMTAB(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkSYMTAB(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
-checkSYMBOLS( "SYMTAB", file1, hdr1 );
+checkSYMBOLS( "SYMTAB", file1, hdr1, journal );
 }
 
 void
-checkDYNSYM(ElfFile *file, Elf32_Shdr *hdr1 )
+checkDYNSYM(ElfFile *file, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "DYNSYM\n" );
@@ -153,7 +153,7 @@ file->dynsymhdr=hdr1;
 }
 
 void
-checkREL(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkREL(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numrels;
 Elf32_Rel	*rel1;
@@ -184,7 +184,7 @@ for(i=0;i<numrels;i++)
 }
 
 void
-checkRELA(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkRELA(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numrels;
 Elf32_Rela	*rel1;
@@ -215,7 +215,7 @@ for(i=0;i<numrels;i++)
 }
 
 void
-checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "INIT_ARRAY SECTION\n" );
@@ -223,7 +223,7 @@ fprintf(stderr, "INIT_ARRAY SECTION\n" );
 }
 
 void
-checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "PREINIT_ARRAY SECTION\n" );
@@ -231,7 +231,7 @@ fprintf(stderr, "PREINIT_ARRAY SECTION\n" );
 }
 
 void
-checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 )
+checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "FINI_ARRAY SECTION\n" );
@@ -240,7 +240,7 @@ fprintf(stderr, "FINI_ARRAY SECTION\n" );
 
 #if defined(__ia64__)
 void
-checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1 )
+checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "IA_64_EXT SECTION\n" );
@@ -248,7 +248,7 @@ fprintf(stderr, "IA_64_EXT SECTION\n" );
 }
 
 void
-checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1 )
+checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "IA_64_UNWIND SECTION\n" );
@@ -315,7 +315,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
           fail = 1;
         }
       }
-      SectionInfo[i].func(file1, hdr1);
+      SectionInfo[i].func(file1, hdr1, journal);
       tetj_result(journal, tetj_activity_count, tetj_tp_count,
                   fail ? TETJ_FAIL : TETJ_PASS);
       return;
