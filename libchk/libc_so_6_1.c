@@ -634,6 +634,7 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"__rawmemchr","GLIBC_2.2"},
 #endif
+	{"__register_atfork","GLIBC_2.3.2"},
 #if __i386__
 	{"__sigsetjmp","GLIBC_2.0"},
 #endif

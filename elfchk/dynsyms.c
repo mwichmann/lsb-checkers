@@ -14896,14 +14896,90 @@ struct versym DynSyms[] = {
 	{"_ZdaPvRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
 	{"_ZdlPv","GLIBCPP_3.2",0,"LSB-Core"},
 	{"_ZdlPvRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#if __i386__
 	{"_Znaj","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Znaj","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __s390__ && !__s390x__
+	{"_Znaj","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __i386__
 	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __ia64__
 	{"_Znam","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __powerpc64__
+	{"_Znam","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __x86_64__
+	{"_Znam","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __s390x__
+	{"_Znam","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __ia64__
 	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __powerpc64__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __x86_64__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __s390x__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __i386__
 	{"_Znwj","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Znwj","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __s390__ && !__s390x__
+	{"_Znwj","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __i386__
 	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __ia64__
 	{"_Znwm","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __powerpc64__
+	{"_Znwm","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __x86_64__
+	{"_Znwm","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __s390x__
+	{"_Znwm","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __ia64__
 	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __powerpc64__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __x86_64__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
+#if __s390x__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2",0,"LSB-Core"},
+#endif
 #if __i386__
 	{"__assert_fail","GLIBC_2.0",0,"LSB-Core"},
 #endif
@@ -15476,6 +15552,7 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"__rawmemchr","GLIBC_2.2",0,"LSB-Core"},
 #endif
+	{"__register_atfork","GLIBC_2.3.2",0,"LSB-Core"},
 #if __i386__
 	{"__sigsetjmp","GLIBC_2.0",0,"LSB-Core"},
 #endif
