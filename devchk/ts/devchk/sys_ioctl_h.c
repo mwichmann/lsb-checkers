@@ -57,6 +57,14 @@ Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef TIOCNOTTY
+	CompareConstant(TIOCNOTTY,21538,4627,architecture)
+#else
+Msg( "Error: Constant not found: TIOCNOTTY\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for TIOCNOTTY (4627, int) in db\n");
 #ifdef TIOCNOTTY

@@ -133,6 +133,14 @@ Msg( "Error: Constant not found: __INT_MAX__\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef __INT_MAX__
+	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
+#else
+Msg( "Error: Constant not found: __INT_MAX__\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for __INT_MAX__ (3600, int) in db\n");
 #ifdef __INT_MAX__
@@ -223,6 +231,14 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef LONG_MAX
+	CompareConstant(LONG_MAX,2147483647,16,architecture)
+#else
+Msg( "Error: Constant not found: LONG_MAX\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for LONG_MAX (16, int) in db\n");
 #ifdef LONG_MAX
@@ -258,6 +274,14 @@ cnt++;
 #elif __i386__
 #ifdef ULONG_MAX
 	CompareConstant(ULONG_MAX,0xFFFFFFFFUL,18,architecture)
+#else
+Msg( "Error: Constant not found: ULONG_MAX\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef ULONG_MAX
+	CompareConstant(ULONG_MAX,-1,18,architecture)
 #else
 Msg( "Error: Constant not found: ULONG_MAX\n");
 cnt++;
