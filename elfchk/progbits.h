@@ -12,6 +12,7 @@ typedef int (*ProgBitsFcn)(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
 int checkPROGBITS_data(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
 int checkPROGBITS_data1(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
 int checkPROGBITS_eh_frame(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
+int checkPROGBITS_eh_frame_hdr(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
 int checkPROGBITS_interp(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
 int checkPROGBITS_rodata(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
 int checkPROGBITS_rodata1(ElfFile *, Elf32_Shdr *, struct tetj_handle *);
