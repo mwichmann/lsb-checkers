@@ -40,8 +40,8 @@ print "/* Generated file - Do Not Edit */\n\n";
 print "#include \"rpmchk.h\"\n";
 print "#include \"tagfuncs.h\"\n\n";
 
-dumptable("Rgroup='Signature'","SigTags");
+dumptable("Rgroup LIKE 'Sig%'","SigTags");
 print "\nint numSigIdxTags = sizeof(SigTags)/sizeof(RpmIdxTagFuncRec);\n\n";
-dumptable("(Rgroup!='Signature' AND Rgroup!='Ignore')","HdrTags");
+dumptable("(Rgroup NOT LIKE 'Sig%' AND Rgroup!='Ignore')","HdrTags");
 print "int numHdrIdxTags = sizeof(HdrTags)/sizeof(RpmIdxTagFuncRec);\n";
 
