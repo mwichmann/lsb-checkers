@@ -83,25 +83,6 @@ Msg( "No definition for _SC_GR0_OFFSET (5031, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5031,%d);\n", architecture, _SC_GR0_OFFSET);
 #endif
 #endif
-#if __i386__
-CheckTypeSize(stack_t,12, 9314, 2)
-#elif __ia64__
-CheckTypeSize(stack_t,24, 9314, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(stack_t,12, 9314, 6)
-#elif __s390x__
-CheckTypeSize(stack_t,24, 9314, 12)
-#elif __s390__ && !__s390x__
-CheckTypeSize(stack_t,12, 9314, 10)
-#elif __x86_64__
-CheckTypeSize(stack_t,24, 9314, 11)
-#elif __powerpc64__
-CheckTypeSize(stack_t,24, 9314, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
-Msg("Find size of stack_t (9314)\n");
-#endif
-
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct pt_regs,176, 10528, 6)
 CheckMemberSize(struct pt_regs,gpr,128,6,40166)
@@ -142,34 +123,6 @@ CheckMemberSize(struct _libc_fpxreg,padding,6,11,40469)
 CheckOffset(struct _libc_fpxreg,padding,10,11,40469)
 #endif
 
-#if __powerpc64__
-CheckTypeSize(struct pt_regs,352, 10823, 9)
-CheckMemberSize(struct pt_regs,gpr,256,9,40589)
-CheckOffset(struct pt_regs,gpr,0,9,40589)
-CheckMemberSize(struct pt_regs,nip,8,9,40590)
-CheckOffset(struct pt_regs,nip,256,9,40590)
-CheckMemberSize(struct pt_regs,msr,8,9,40591)
-CheckOffset(struct pt_regs,msr,264,9,40591)
-CheckMemberSize(struct pt_regs,orig_gpr3,8,9,40592)
-CheckOffset(struct pt_regs,orig_gpr3,272,9,40592)
-CheckMemberSize(struct pt_regs,link,8,9,40594)
-CheckOffset(struct pt_regs,link,288,9,40594)
-CheckMemberSize(struct pt_regs,xer,8,9,40595)
-CheckOffset(struct pt_regs,xer,296,9,40595)
-CheckMemberSize(struct pt_regs,ccr,8,9,40596)
-CheckOffset(struct pt_regs,ccr,304,9,40596)
-CheckMemberSize(struct pt_regs,mq,8,9,40597)
-CheckOffset(struct pt_regs,mq,312,9,40597)
-CheckMemberSize(struct pt_regs,trap,8,9,40598)
-CheckOffset(struct pt_regs,trap,320,9,40598)
-CheckMemberSize(struct pt_regs,dar,8,9,40599)
-CheckOffset(struct pt_regs,dar,328,9,40599)
-CheckMemberSize(struct pt_regs,dsisr,8,9,40600)
-CheckOffset(struct pt_regs,dsisr,336,9,40600)
-CheckMemberSize(struct pt_regs,result,8,9,40601)
-CheckOffset(struct pt_regs,result,344,9,40601)
-#endif
-
 #if __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
 #endif
@@ -184,10 +137,6 @@ CheckTypeSize(gregset_t,76, 10224, 2)
 
 #if __x86_64__
 CheckTypeSize(gregset_t,92, 10796, 11)
-#endif
-
-#if __powerpc64__
-CheckTypeSize(elf_gregset_t,384, 10827, 9)
 #endif
 
 #if __i386__
@@ -270,10 +219,6 @@ CheckOffset(struct _libc_fpstate,padding,0,11,40481)
 
 #if __x86_64__
 CheckTypeSize(fpregset_t,8, 10802, 11)
-#endif
-
-#if __powerpc64__
-CheckTypeSize(elf_fpregset_t,264, 10830, 9)
 #endif
 
 #if __i386__
@@ -420,14 +365,6 @@ CheckOffset(struct ucontext,__fpregs_mem,0,11,40489)
 
 #if __x86_64__
 CheckTypeSize(ucontext_t,4, 10804, 11)
-#endif
-
-#if __s390x__
-CheckTypeSize(_psw_t,16, 10571, 12)
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(_psw_t,8, 10581, 10)
 #endif
 
 #ifdef TET_TEST
