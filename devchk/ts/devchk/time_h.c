@@ -61,7 +61,7 @@ CheckTypeSize(struct tm,56, 7019, 3)
 CheckTypeSize(struct tm,44, 7019, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
-Msg("Find size of itimerspec (7019)\n");
+Msg("Find size of tm (7019)\n");
 #endif
 
 #ifdef __i386__

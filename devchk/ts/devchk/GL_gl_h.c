@@ -661,7 +661,7 @@ CheckTypeSize(GLenum,4, 8143, 3)
 CheckTypeSize(GLenum,4, 8143, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8143,0);
-Msg("Find size of GLboolean (8143)\n");
+Msg("Find size of GLenum (8143)\n");
 #endif
 
 #ifdef __i386__
@@ -672,7 +672,7 @@ CheckTypeSize(GLboolean,1, 8144, 3)
 CheckTypeSize(GLboolean,1, 8144, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8144,0);
-Msg("Find size of GLbitfield (8144)\n");
+Msg("Find size of GLboolean (8144)\n");
 #endif
 
 #ifdef __i386__
@@ -683,7 +683,7 @@ CheckTypeSize(GLbitfield,4, 8145, 3)
 CheckTypeSize(GLbitfield,4, 8145, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8145,0);
-Msg("Find size of GLvoid (8145)\n");
+Msg("Find size of GLbitfield (8145)\n");
 #endif
 
 #ifdef __ia64__
@@ -694,7 +694,7 @@ CheckTypeSize(GLvoid,1, 8146, 2)
 CheckTypeSize(GLvoid,1, 8146, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8146,0);
-Msg("Find size of GLbyte (8146)\n");
+Msg("Find size of GLvoid (8146)\n");
 #endif
 
 #ifdef __i386__
@@ -705,7 +705,7 @@ CheckTypeSize(GLbyte,1, 8147, 3)
 CheckTypeSize(GLbyte,1, 8147, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8147,0);
-Msg("Find size of GLshort (8147)\n");
+Msg("Find size of GLbyte (8147)\n");
 #endif
 
 #ifdef __i386__
@@ -716,7 +716,7 @@ CheckTypeSize(GLshort,2, 8148, 3)
 CheckTypeSize(GLshort,2, 8148, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8148,0);
-Msg("Find size of GLint (8148)\n");
+Msg("Find size of GLshort (8148)\n");
 #endif
 
 #ifdef __i386__
@@ -727,7 +727,7 @@ CheckTypeSize(GLint,4, 8149, 3)
 CheckTypeSize(GLint,4, 8149, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8149,0);
-Msg("Find size of GLubyte (8149)\n");
+Msg("Find size of GLint (8149)\n");
 #endif
 
 #ifdef __i386__
@@ -738,7 +738,7 @@ CheckTypeSize(GLubyte,1, 8150, 3)
 CheckTypeSize(GLubyte,1, 8150, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8150,0);
-Msg("Find size of GLushort (8150)\n");
+Msg("Find size of GLubyte (8150)\n");
 #endif
 
 #ifdef __i386__
@@ -749,7 +749,7 @@ CheckTypeSize(GLushort,2, 8151, 3)
 CheckTypeSize(GLushort,2, 8151, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8151,0);
-Msg("Find size of GLuint (8151)\n");
+Msg("Find size of GLushort (8151)\n");
 #endif
 
 #ifdef __i386__
@@ -760,7 +760,7 @@ CheckTypeSize(GLuint,4, 8152, 3)
 CheckTypeSize(GLuint,4, 8152, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8152,0);
-Msg("Find size of GLsizei (8152)\n");
+Msg("Find size of GLuint (8152)\n");
 #endif
 
 #ifdef __i386__
@@ -771,7 +771,7 @@ CheckTypeSize(GLsizei,4, 8153, 3)
 CheckTypeSize(GLsizei,4, 8153, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8153,0);
-Msg("Find size of GLfloat (8153)\n");
+Msg("Find size of GLsizei (8153)\n");
 #endif
 
 #ifdef __i386__
@@ -782,7 +782,7 @@ CheckTypeSize(GLfloat,4, 8154, 3)
 CheckTypeSize(GLfloat,4, 8154, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8154,0);
-Msg("Find size of GLclampf (8154)\n");
+Msg("Find size of GLfloat (8154)\n");
 #endif
 
 #ifdef __i386__
@@ -793,7 +793,7 @@ CheckTypeSize(GLclampf,4, 8155, 3)
 CheckTypeSize(GLclampf,4, 8155, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8155,0);
-Msg("Find size of GLdouble (8155)\n");
+Msg("Find size of GLclampf (8155)\n");
 #endif
 
 #ifdef __i386__
@@ -804,7 +804,7 @@ CheckTypeSize(GLdouble,8, 8156, 3)
 CheckTypeSize(GLdouble,8, 8156, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8156,0);
-Msg("Find size of GLclampd (8156)\n");
+Msg("Find size of GLdouble (8156)\n");
 #endif
 
 #ifdef __i386__

@@ -31,7 +31,7 @@ CheckTypeSize(WidgetClass,8, 9583, 3)
 CheckTypeSize(WidgetClass,4, 9583, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9583,0);
-Msg("Find size of Cardinal (9583)\n");
+Msg("Find size of WidgetClass (9583)\n");
 #endif
 
 #ifdef __i386__

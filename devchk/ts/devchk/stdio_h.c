@@ -141,7 +141,7 @@ CheckTypeSize(FILE,216, 8782, 3)
 CheckTypeSize(FILE,152, 8782, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
-Msg("Find size of fpos_t (8782)\n");
+Msg("Find size of FILE (8782)\n");
 #endif
 
 #ifdef __i386__
@@ -152,7 +152,7 @@ CheckTypeSize(fpos_t,16, 9108, 3)
 CheckTypeSize(fpos_t,12, 9108, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9108,0);
-Msg("Find size of fpos64_t (9108)\n");
+Msg("Find size of fpos_t (9108)\n");
 #endif
 
 #ifdef __i386__
@@ -163,7 +163,7 @@ CheckTypeSize(fpos64_t,16, 9109, 3)
 CheckTypeSize(fpos64_t,16, 9109, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9109,0);
-Msg("Find size of anon-fpos_t (9109)\n");
+Msg("Find size of fpos64_t (9109)\n");
 #endif
 
 #ifdef __i386__

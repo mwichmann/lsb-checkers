@@ -75,7 +75,7 @@ CheckTypeSize(struct _ObjectPart,48, 10261, 3)
 CheckTypeSize(struct _ObjectPart,28, 10261, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10261,0);
-Msg("Find size of ObjectPart (10261)\n");
+Msg("Find size of _ObjectPart (10261)\n");
 #endif
 
 #ifdef __i386__
@@ -86,7 +86,7 @@ CheckTypeSize(ObjectPart,48, 10264, 3)
 CheckTypeSize(ObjectPart,28, 10264, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10264,0);
-Msg("Find size of _ObjectRec (10264)\n");
+Msg("Find size of ObjectPart (10264)\n");
 #endif
 
 #ifdef __i386__
@@ -97,7 +97,7 @@ CheckTypeSize(struct _ObjectRec,48, 10262, 3)
 CheckTypeSize(struct _ObjectRec,28, 10262, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
-Msg("Find size of ObjectRec (10262)\n");
+Msg("Find size of _ObjectRec (10262)\n");
 #endif
 
 #ifdef __i386__
@@ -108,7 +108,7 @@ CheckTypeSize(ObjectRec,48, 10263, 3)
 CheckTypeSize(ObjectRec,28, 10263, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10263,0);
-Msg("Find size of _ObjectClassPart (10263)\n");
+Msg("Find size of ObjectRec (10263)\n");
 #endif
 
 #ifdef __i386__
@@ -120,7 +120,7 @@ CheckTypeSize(struct _ObjectClassPart,224, 10265, 3)
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10265,0);
-Msg("Find size of ObjectClassPart (10265)\n");
+Msg("Find size of _ObjectClassPart (10265)\n");
 #endif
 
 #ifdef __i386__
@@ -131,7 +131,7 @@ CheckTypeSize(ObjectClassPart,224, 10266, 3)
 CheckTypeSize(ObjectClassPart,116, 10266, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10266,0);
-Msg("Find size of ObjectClassExtensionRec (10266)\n");
+Msg("Find size of ObjectClassPart (10266)\n");
 #endif
 
 #ifdef __i386__
@@ -142,7 +142,7 @@ CheckTypeSize(ObjectClassExtensionRec,48, 10268, 3)
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10268,0);
-Msg("Find size of ObjectClassExtension (10268)\n");
+Msg("Find size of ObjectClassExtensionRec (10268)\n");
 #endif
 
 #ifdef __i386__
@@ -153,7 +153,7 @@ CheckTypeSize(ObjectClassExtension,8, 10270, 3)
 CheckTypeSize(ObjectClassExtension,4, 10270, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10270,0);
-Msg("Find size of _ObjectClassRec (10270)\n");
+Msg("Find size of ObjectClassExtension (10270)\n");
 #endif
 
 #ifdef __i386__
@@ -164,7 +164,7 @@ CheckTypeSize(struct _ObjectClassRec,224, 10271, 3)
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
-Msg("Find size of ObjectClassRec (10271)\n");
+Msg("Find size of _ObjectClassRec (10271)\n");
 #endif
 
 #ifdef __i386__
@@ -175,7 +175,7 @@ CheckTypeSize(ObjectClassRec,224, 10272, 3)
 CheckTypeSize(ObjectClassRec,116, 10272, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10272,0);
-Msg("Find size of anon-_ObjectClassExtensionRec (10272)\n");
+Msg("Find size of ObjectClassRec (10272)\n");
 #endif
 
 #ifdef __i386__
@@ -183,7 +183,7 @@ Msg("Find size of anon-_ObjectClassExtensionRec (10272)\n");
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10267,0);
-Msg("Find size of _ObjectClassExtensionRec * (10267)\n");
+Msg("Find size of anon-_ObjectClassExtensionRec (10267)\n");
 #endif
 
 #ifdef __i386__

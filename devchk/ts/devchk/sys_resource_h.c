@@ -171,7 +171,7 @@ CheckTypeSize(rlim_t,8, 10210, 3)
 CheckTypeSize(rlim_t,4, 10210, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10210,0);
-Msg("Find size of rlim64_t (10210)\n");
+Msg("Find size of rlim_t (10210)\n");
 #endif
 
 #ifdef __i386__
@@ -182,7 +182,7 @@ CheckTypeSize(rlim64_t,8, 10273, 3)
 CheckTypeSize(rlim64_t,8, 10273, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10273,0);
-Msg("Find size of rlimit (10273)\n");
+Msg("Find size of rlim64_t (10273)\n");
 #endif
 
 #ifdef __i386__
@@ -197,7 +197,7 @@ CheckOffset(struct rlimit,rlim_max,8,3,34263)
 CheckTypeSize(struct rlimit,8, 9120, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9120,0);
-Msg("Find size of rlimit64 (9120)\n");
+Msg("Find size of rlimit (9120)\n");
 #endif
 
 #ifdef __i386__
@@ -210,7 +210,7 @@ CheckTypeSize(struct rlimit64,16, 9122, 3)
 CheckTypeSize(struct rlimit64,16, 9122, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9122,0);
-Msg("Find size of rusage (9122)\n");
+Msg("Find size of rlimit64 (9122)\n");
 #endif
 
 #ifdef __i386__

@@ -28,7 +28,7 @@ Msg("Checking data structures in wordexp.h\n");
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9200,0);
-Msg("Find size of wordexp_t (9200)\n");
+Msg("Find size of anon-wordexp.h-7 (9200)\n");
 #endif
 
 #ifdef __i386__
@@ -39,7 +39,7 @@ CheckTypeSize(wordexp_t,24, 7029, 3)
 CheckTypeSize(wordexp_t,12, 7029, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7029,0);
-Msg("Find size of anon-wordexp.h-45 (7029)\n");
+Msg("Find size of wordexp_t (7029)\n");
 #endif
 
 #ifdef __i386__

@@ -34,7 +34,7 @@ CheckTypeSize(IceAuthFileEntry,56, 8228, 3)
 CheckTypeSize(IceAuthFileEntry,28, 8228, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8228,0);
-Msg("Find size of IceAuthDataEntry (8228)\n");
+Msg("Find size of IceAuthFileEntry (8228)\n");
 #endif
 
 #ifdef __i386__

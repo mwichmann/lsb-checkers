@@ -341,7 +341,7 @@ CheckTypeSize(struct stat,144, 8693, 3)
 CheckTypeSize(struct stat,88, 8693, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8693,0);
-Msg("Find size of stat64 (8693)\n");
+Msg("Find size of stat (8693)\n");
 #endif
 
 #ifdef __i386__

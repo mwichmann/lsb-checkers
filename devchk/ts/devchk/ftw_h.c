@@ -99,7 +99,7 @@ cnt++;
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8989,0);
-Msg("Find size of anon-ftw.h-34 (8989)\n");
+Msg("Find size of anon-ftw.h-13 (8989)\n");
 #endif
 
 #ifdef __i386__
@@ -107,7 +107,7 @@ Msg("Find size of anon-ftw.h-34 (8989)\n");
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8990,0);
-Msg("Find size of FTW (8990)\n");
+Msg("Find size of anon-ftw.h-34 (8990)\n");
 #endif
 
 #ifdef __i386__
@@ -118,7 +118,7 @@ CheckTypeSize(struct FTW,8, 8691, 3)
 CheckTypeSize(struct FTW,8, 8691, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8691,0);
-Msg("Find size of __ftw_func_t (8691)\n");
+Msg("Find size of FTW (8691)\n");
 #endif
 
 #ifdef __i386__
@@ -129,7 +129,7 @@ CheckTypeSize(__ftw_func_t,8, 8992, 3)
 CheckTypeSize(__ftw_func_t,4, 8992, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8992,0);
-Msg("Find size of __ftw64_func_t (8992)\n");
+Msg("Find size of __ftw_func_t (8992)\n");
 #endif
 
 #ifdef __i386__
@@ -140,7 +140,7 @@ CheckTypeSize(__ftw64_func_t,8, 8994, 3)
 CheckTypeSize(__ftw64_func_t,4, 8994, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8994,0);
-Msg("Find size of __nftw_func_t (8994)\n");
+Msg("Find size of __ftw64_func_t (8994)\n");
 #endif
 
 #ifdef __i386__
@@ -151,7 +151,7 @@ CheckTypeSize(__nftw_func_t,8, 8996, 3)
 CheckTypeSize(__nftw_func_t,4, 8996, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8996,0);
-Msg("Find size of __nftw64_func_t (8996)\n");
+Msg("Find size of __nftw_func_t (8996)\n");
 #endif
 
 #ifdef __i386__

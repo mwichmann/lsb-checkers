@@ -1076,7 +1076,7 @@ CheckTypeSize(sig_atomic_t,4, 9092, 3)
 CheckTypeSize(sig_atomic_t,4, 9092, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
-Msg("Find size of sigstack (9092)\n");
+Msg("Find size of sig_atomic_t (9092)\n");
 #endif
 
 #ifdef __i386__
@@ -1087,7 +1087,7 @@ CheckTypeSize(struct sigstack,16, 9315, 3)
 CheckTypeSize(struct sigstack,8, 9315, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
-Msg("Find size of __sighandler_t (9315)\n");
+Msg("Find size of sigstack (9315)\n");
 #endif
 
 #ifdef __i386__
@@ -1098,7 +1098,7 @@ CheckTypeSize(__sighandler_t,8, 6966, 3)
 CheckTypeSize(__sighandler_t,4, 6966, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
-Msg("Find size of sigval_t (6966)\n");
+Msg("Find size of __sighandler_t (6966)\n");
 #endif
 
 #ifdef __i386__
@@ -1109,7 +1109,7 @@ CheckTypeSize(sigval_t,8, 9320, 3)
 CheckTypeSize(sigval_t,4, 9320, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
-Msg("Find size of anon-_sigev_un (9320)\n");
+Msg("Find size of sigval_t (9320)\n");
 #endif
 
 #ifdef __i386__
@@ -1117,7 +1117,7 @@ Msg("Find size of anon-_sigev_un (9320)\n");
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10189,0);
-Msg("Find size of sigevent_t (10189)\n");
+Msg("Find size of anon-_sigev_un (10189)\n");
 #endif
 
 #ifdef __i386__
@@ -1128,7 +1128,7 @@ CheckTypeSize(sigevent_t,64, 10190, 3)
 CheckTypeSize(sigevent_t,64, 10190, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
-Msg("Find size of siginfo_t (10190)\n");
+Msg("Find size of sigevent_t (10190)\n");
 #endif
 
 #ifdef __i386__
@@ -1139,7 +1139,7 @@ CheckTypeSize(siginfo_t,128, 9099, 3)
 CheckTypeSize(siginfo_t,128, 9099, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
-Msg("Find size of sigset_t (9099)\n");
+Msg("Find size of siginfo_t (9099)\n");
 #endif
 
 #ifdef __i386__
@@ -1150,7 +1150,7 @@ CheckTypeSize(sigset_t,128, 10163, 3)
 CheckTypeSize(sigset_t,128, 10163, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
-Msg("Find size of sigaction (10163)\n");
+Msg("Find size of sigset_t (10163)\n");
 #endif
 
 #ifdef __i386__
@@ -1161,7 +1161,7 @@ CheckTypeSize(struct sigaction,144, 9097, 3)
 CheckTypeSize(struct sigaction,140, 9097, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9097,0);
-Msg("Find size of stack_t (9097)\n");
+Msg("Find size of sigaction (9097)\n");
 #endif
 
 #ifdef __i386__

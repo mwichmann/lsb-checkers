@@ -1381,7 +1381,7 @@ CheckTypeSize(off64_t,8, 9112, 3)
 CheckTypeSize(off64_t,8, 9112, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9112,0);
-Msg("Find size of intptr_t (9112)\n");
+Msg("Find size of off64_t (9112)\n");
 #endif
 
 #ifdef __i386__

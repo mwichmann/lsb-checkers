@@ -35,7 +35,7 @@ CheckTypeSize(GLXContext,8, 8164, 3)
 CheckTypeSize(GLXContext,4, 8164, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8164,0);
-Msg("Find size of GLXFBConfig (8164)\n");
+Msg("Find size of GLXContext (8164)\n");
 #endif
 
 #ifdef __i386__
@@ -46,7 +46,7 @@ CheckTypeSize(GLXFBConfig,8, 8165, 3)
 CheckTypeSize(GLXFBConfig,4, 8165, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8165,0);
-Msg("Find size of GLXContextID (8165)\n");
+Msg("Find size of GLXFBConfig (8165)\n");
 #endif
 
 #ifdef __i386__
@@ -57,7 +57,7 @@ CheckTypeSize(GLXContextID,8, 8717, 3)
 CheckTypeSize(GLXContextID,4, 8717, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8717,0);
-Msg("Find size of GLXPixmap (8717)\n");
+Msg("Find size of GLXContextID (8717)\n");
 #endif
 
 #ifdef __i386__
@@ -68,7 +68,7 @@ CheckTypeSize(GLXPixmap,8, 8718, 3)
 CheckTypeSize(GLXPixmap,4, 8718, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8718,0);
-Msg("Find size of GLXDrawable (8718)\n");
+Msg("Find size of GLXPixmap (8718)\n");
 #endif
 
 #ifdef __i386__
@@ -79,7 +79,7 @@ CheckTypeSize(GLXDrawable,8, 8719, 3)
 CheckTypeSize(GLXDrawable,4, 8719, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8719,0);
-Msg("Find size of GLXPbuffer (8719)\n");
+Msg("Find size of GLXDrawable (8719)\n");
 #endif
 
 #ifdef __i386__
@@ -90,7 +90,7 @@ CheckTypeSize(GLXPbuffer,8, 8720, 3)
 CheckTypeSize(GLXPbuffer,4, 8720, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8720,0);
-Msg("Find size of GLXWindow (8720)\n");
+Msg("Find size of GLXPbuffer (8720)\n");
 #endif
 
 #ifdef __i386__

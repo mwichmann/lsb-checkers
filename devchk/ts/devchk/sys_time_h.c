@@ -61,7 +61,7 @@ CheckTypeSize(struct timezone,8, 9855, 3)
 CheckTypeSize(struct timezone,8, 9855, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9855,0);
-Msg("Find size of itimerval (9855)\n");
+Msg("Find size of timezone (9855)\n");
 #endif
 
 #ifdef __i386__
@@ -72,7 +72,7 @@ CheckTypeSize(struct itimerval,32, 9861, 3)
 CheckTypeSize(struct itimerval,16, 9861, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9861,0);
-Msg("Find size of timespec (9861)\n");
+Msg("Find size of itimerval (9861)\n");
 #endif
 
 #ifdef __i386__
@@ -83,7 +83,7 @@ CheckTypeSize(struct timespec,16, 7018, 3)
 CheckTypeSize(struct timespec,8, 7018, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7018,0);
-Msg("Find size of timeval (7018)\n");
+Msg("Find size of timespec (7018)\n");
 #endif
 
 #ifdef __i386__
