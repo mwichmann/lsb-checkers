@@ -25,7 +25,11 @@ ElfFile * open_archive(char *filename, struct tetj_handle *journal,
   ElfFile	*elffile;
   
   tetj_tp_count = 0;
-  tetj_testcase_start(journal, ++tetj_activity_count, filename, "");
+  if (isProgram)
+    snprintf(tmp_string, TMP_STRING_SIZE, "main_%s", filename);
+  else
+    snprintf(tmp_string, TMP_STRING_SIZE, "%s", filename);
+  tetj_testcase_start(journal, ++tetj_activity_count, tmp_string, "");
 
   tetj_tp_count++;
   snprintf(tmp_string, TMP_STRING_SIZE, "Looking for file %s", filename);
@@ -59,7 +63,7 @@ ElfFile * open_archive(char *filename, struct tetj_handle *journal,
     exit(1);
   }
   snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
-  tetj_testcase_info(journal, tetj_activity_count, 0, 0, 0, 0, tmp_string);
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
 
   /* md5sum of binary */
   snprintf(tmp_string, TMP_STRING_SIZE, "md5sum %s", filename);
@@ -77,7 +81,7 @@ ElfFile * open_archive(char *filename, struct tetj_handle *journal,
   {
     tmp_string[32] = 0;
     snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
-    tetj_testcase_info(journal, tetj_activity_count, 0, 0, 0, 0, tmp_string2);
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string2);
   }
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
