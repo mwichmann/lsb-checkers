@@ -5,14 +5,20 @@ _pthread_cleanup_push.o \
 pthread_attr_destroy.o \
 pthread_attr_getdetachstate.o \
 pthread_attr_getguardsize.o \
+pthread_attr_getinheritsched.o \
 pthread_attr_getschedparam.o \
+pthread_attr_getschedpolicy.o \
+pthread_attr_getscope.o \
 pthread_attr_getstack.o \
 pthread_attr_getstackaddr.o \
 pthread_attr_getstacksize.o \
 pthread_attr_init.o \
 pthread_attr_setdetachstate.o \
 pthread_attr_setguardsize.o \
+pthread_attr_setinheritsched.o \
 pthread_attr_setschedparam.o \
+pthread_attr_setschedpolicy.o \
+pthread_attr_setscope.o \
 pthread_attr_setstack.o \
 pthread_attr_setstackaddr.o \
 pthread_attr_setstacksize.o \
@@ -32,6 +38,7 @@ pthread_detach.o \
 pthread_equal.o \
 pthread_exit.o \
 pthread_getconcurrency.o \
+pthread_getschedparam.o \
 pthread_getspecific.o \
 pthread_join.o \
 pthread_key_create.o \
@@ -64,6 +71,8 @@ pthread_self.o \
 pthread_setcancelstate.o \
 pthread_setcanceltype.o \
 pthread_setconcurrency.o \
+pthread_setschedparam.o \
+pthread_setschedprio.o \
 pthread_setspecific.o \
 pthread_testcancel.o \
 sem_close.o \
