@@ -54,7 +54,32 @@ for(i=0;i<nindex;i++) {
 		}
 	}
 
-/* Go through the table, and make sure that the required Indices were seen */
+	/*
+	 * Go through the table, and make sure that the required Indices
+	 * were seen.
+	 */
+	for(j=0;j<numtags;j++) {
+		if( Tags[j].reqd == Required && Tags[j].status == NotSeen ) {
+			fprintf(stderr,
+				"checkRpmIdx() Required Index %s not found\n",
+							Tags[j].name );
+		}
+		if( Tags[j].reqd == Deprecated && Tags[j].status == Seen ) {
+			fprintf(stderr,
+				"checkRpmIdx() Deprecated Index %s found\n",
+							Tags[j].name );
+		}
+		if( Tags[j].reqd == Obsoleted && Tags[j].status == Seen ) {
+			fprintf(stderr,
+				"checkRpmIdx() Obsoleted Index %s found\n",
+							Tags[j].name );
+		}
+		if( Tags[j].reqd == Reserved && Tags[j].status == Seen ) {
+			fprintf(stderr,
+				"checkRpmIdx() Reserved Index %s found\n",
+							Tags[j].name );
+		}
+	}
 }
 
 /*
