@@ -15,7 +15,8 @@ libs.c:
 	./mkfunclist
 
 install:
-	install libchk $$LSBHOME/src/build/usr/bin/lsblibchk
+	install -d $(INSTALL_ROOT)/$(BINDIR)
+	install libchk $(INSTALL_ROOT)/$(BINDIR)/lsblibchk
 
 # Distclean means will need database to rebuild
 distclean: clean
@@ -24,5 +25,5 @@ distclean: clean
 clean:
 	rm -f $(OBJS) libchk
 
-.PHONE: clean distclean
+.PHONE: clean distclean install
 
