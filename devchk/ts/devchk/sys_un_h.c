@@ -51,7 +51,7 @@ CheckMemberSize(struct sockaddr_un,sun_path,108,6,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,6,34486)
 #elif __powerpc64__
 CheckTypeSize(struct sockaddr_un,110, 9152, 9)
-CheckMemberSize(struct sockaddr_un,sun_path,0,9,34486)
+CheckMemberSize(struct sockaddr_un,sun_path,108,9,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,9,34486)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9152,0);

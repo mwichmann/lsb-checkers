@@ -59,11 +59,11 @@ CheckMemberSize(struct option,val,0,10,32261)
 CheckOffset(struct option,val,12,10,32261)
 #elif __powerpc64__
 CheckTypeSize(struct option,32, 10000, 9)
-CheckMemberSize(struct option,has_arg,0,9,32259)
+CheckMemberSize(struct option,has_arg,4,9,32259)
 CheckOffset(struct option,has_arg,8,9,32259)
-CheckMemberSize(struct option,flag,0,9,32260)
+CheckMemberSize(struct option,flag,8,9,32260)
 CheckOffset(struct option,flag,16,9,32260)
-CheckMemberSize(struct option,val,0,9,32261)
+CheckMemberSize(struct option,val,4,9,32261)
 CheckOffset(struct option,val,24,9,32261)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);

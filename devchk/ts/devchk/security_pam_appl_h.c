@@ -500,7 +500,7 @@ CheckMemberSize(struct pam_conv,appdata_ptr,4,6,34589)
 CheckOffset(struct pam_conv,appdata_ptr,4,6,34589)
 #elif __powerpc64__
 CheckTypeSize(struct pam_conv,16, 10352, 9)
-CheckMemberSize(struct pam_conv,appdata_ptr,0,9,34589)
+CheckMemberSize(struct pam_conv,appdata_ptr,8,9,34589)
 CheckOffset(struct pam_conv,appdata_ptr,8,9,34589)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10352,0);
@@ -542,7 +542,7 @@ CheckMemberSize(struct pam_message,msg,4,6,34585)
 CheckOffset(struct pam_message,msg,4,6,34585)
 #elif __powerpc64__
 CheckTypeSize(struct pam_message,16, 10356, 9)
-CheckMemberSize(struct pam_message,msg,0,9,34585)
+CheckMemberSize(struct pam_message,msg,8,9,34585)
 CheckOffset(struct pam_message,msg,8,9,34585)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10356,0);
@@ -573,7 +573,7 @@ CheckMemberSize(struct pam_response,resp_retcode,4,6,34587)
 CheckOffset(struct pam_response,resp_retcode,4,6,34587)
 #elif __powerpc64__
 CheckTypeSize(struct pam_response,16, 10358, 9)
-CheckMemberSize(struct pam_response,resp_retcode,0,9,34587)
+CheckMemberSize(struct pam_response,resp_retcode,4,9,34587)
 CheckOffset(struct pam_response,resp_retcode,8,9,34587)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10358,0);

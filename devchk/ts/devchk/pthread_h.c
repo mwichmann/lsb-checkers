@@ -304,7 +304,7 @@ CheckMemberSize(struct _pthread_fastlock,__spinlock,0,10,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427)
 #elif __powerpc64__
 CheckTypeSize(struct _pthread_fastlock,16, 10105, 9)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,0,9,34427)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,9,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,8,9,34427)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10105,0);

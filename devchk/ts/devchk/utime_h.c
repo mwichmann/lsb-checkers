@@ -43,7 +43,7 @@ CheckMemberSize(struct utimbuf,modtime,0,10,30206)
 CheckOffset(struct utimbuf,modtime,4,10,30206)
 #elif __powerpc64__
 CheckTypeSize(struct utimbuf,16, 7023, 9)
-CheckMemberSize(struct utimbuf,modtime,0,9,30206)
+CheckMemberSize(struct utimbuf,modtime,8,9,30206)
 CheckOffset(struct utimbuf,modtime,8,9,30206)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7023,0);

@@ -59,11 +59,11 @@ CheckMemberSize(struct group,gr_mem,0,10,29795)
 CheckOffset(struct group,gr_mem,12,10,29795)
 #elif __powerpc64__
 CheckTypeSize(struct group,32, 6894, 9)
-CheckMemberSize(struct group,gr_passwd,0,9,29793)
+CheckMemberSize(struct group,gr_passwd,8,9,29793)
 CheckOffset(struct group,gr_passwd,8,9,29793)
-CheckMemberSize(struct group,gr_gid,0,9,29794)
+CheckMemberSize(struct group,gr_gid,4,9,29794)
 CheckOffset(struct group,gr_gid,16,9,29794)
-CheckMemberSize(struct group,gr_mem,0,9,29795)
+CheckMemberSize(struct group,gr_mem,8,9,29795)
 CheckOffset(struct group,gr_mem,24,9,29795)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6894,0);

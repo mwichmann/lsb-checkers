@@ -109,9 +109,9 @@ CheckMemberSize(struct pollfd,revents,0,10,34414)
 CheckOffset(struct pollfd,revents,6,10,34414)
 #elif __powerpc64__
 CheckTypeSize(struct pollfd,8, 9913, 9)
-CheckMemberSize(struct pollfd,events,0,9,34413)
+CheckMemberSize(struct pollfd,events,2,9,34413)
 CheckOffset(struct pollfd,events,4,9,34413)
-CheckMemberSize(struct pollfd,revents,0,9,34414)
+CheckMemberSize(struct pollfd,revents,2,9,34414)
 CheckOffset(struct pollfd,revents,6,9,34414)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
