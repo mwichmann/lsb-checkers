@@ -172,6 +172,14 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for pthread_cleanup_push(routine,arg) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for pthread_cleanup_pop(execute) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_MUTEX_TIMED_NP
 	CompareConstant(PTHREAD_MUTEX_TIMED_NP,1,4958,architecture)
 #else
@@ -237,6 +245,21 @@ Msg( "Error: Constant not found: PTHREAD_RWLOCK_DEFAULT_NP\n");
 cnt++;
 #endif
 
+#endif
+
+#if __i386__
+CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 2)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,2,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,2,40619)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,2,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,4,2,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,2,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,2,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,2,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,12,2,40622)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6931,0);
+Msg("Find size of _pthread_cleanup_buffer (6931)\n");
 #endif
 
 #if __i386__
