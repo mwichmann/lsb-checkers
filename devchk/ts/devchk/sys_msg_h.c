@@ -29,6 +29,12 @@ Msg( "Error: Constant not found: MSG_NOERROR\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct msqid_ds,88, 9117, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9117,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

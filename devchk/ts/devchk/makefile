@@ -19,8 +19,10 @@ OBJS = hdrchk.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
+	fmtmsg_h.o \
 	fnmatch_h.o \
 	ftw_h.o \
+	getopt_h.o \
 	glob_h.o \
 	grp_h.o \
 	iconv_h.o \

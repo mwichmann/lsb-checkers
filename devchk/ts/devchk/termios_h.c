@@ -316,13 +316,6 @@ Msg( "Error: Constant not found: TCSAFLUSH\n");
 cnt++;
 #endif
 
-#ifdef NCCS
-	CompareConstant(NCCS,32)
-#else
-Msg( "Error: Constant not found: NCCS\n");
-cnt++;
-#endif
-
 #ifdef VINTR
 	CompareConstant(VINTR,0)
 #else
@@ -820,12 +813,25 @@ Msg( "Error: Constant not found: B38400\n");
 cnt++;
 #endif
 
+#ifdef NCCS
+	CompareConstant(NCCS,32)
+#else
+Msg( "Error: Constant not found: NCCS\n");
+cnt++;
+#endif
+
 #ifdef __i386__
 CheckTypeSize(speed_t,4, 9186, 2)
 #elif __ia64__
 CheckTypeSize(speed_t,4, 9186, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct termios,60, 9187, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9187,0);
 #endif
 
 #ifdef TET_TEST

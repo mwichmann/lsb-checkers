@@ -22,6 +22,76 @@ int pcnt=0;
 Msg("Checking data structures in sys/socket.h\n");
 #endif
 
+#ifdef SHUT_RD
+	CompareConstant(SHUT_RD,SHUT_RD)
+#else
+Msg( "Error: Constant not found: SHUT_RD\n");
+cnt++;
+#endif
+
+#ifdef SHUT_WR
+	CompareConstant(SHUT_WR,SHUT_WR)
+#else
+Msg( "Error: Constant not found: SHUT_WR\n");
+cnt++;
+#endif
+
+#ifdef SHUT_RDWR
+	CompareConstant(SHUT_RDWR,SHUT_RDWR)
+#else
+Msg( "Error: Constant not found: SHUT_RDWR\n");
+cnt++;
+#endif
+
+#ifdef MSG_OOB
+	CompareConstant(MSG_OOB,1)
+#else
+Msg( "Error: Constant not found: MSG_OOB\n");
+cnt++;
+#endif
+
+#ifdef MSG_PEEK
+	CompareConstant(MSG_PEEK,2)
+#else
+Msg( "Error: Constant not found: MSG_PEEK\n");
+cnt++;
+#endif
+
+#ifdef MSG_DONTROUTE
+	CompareConstant(MSG_DONTROUTE,4)
+#else
+Msg( "Error: Constant not found: MSG_DONTROUTE\n");
+cnt++;
+#endif
+
+#ifdef MSG_CTRUNC
+	CompareConstant(MSG_CTRUNC,8)
+#else
+Msg( "Error: Constant not found: MSG_CTRUNC\n");
+cnt++;
+#endif
+
+#ifdef MSG_TRUNC
+	CompareConstant(MSG_TRUNC,0x20)
+#else
+Msg( "Error: Constant not found: MSG_TRUNC\n");
+cnt++;
+#endif
+
+#ifdef MSG_EOR
+	CompareConstant(MSG_EOR,0x80)
+#else
+Msg( "Error: Constant not found: MSG_EOR\n");
+cnt++;
+#endif
+
+#ifdef MSG_WAITALL
+	CompareConstant(MSG_WAITALL,0x100)
+#else
+Msg( "Error: Constant not found: MSG_WAITALL\n");
+cnt++;
+#endif
+
 #ifdef AF_UNSPEC
 	CompareConstant(AF_UNSPEC,0)
 #else
