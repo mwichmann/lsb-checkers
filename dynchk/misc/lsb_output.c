@@ -37,6 +37,12 @@ int __lsb_output(int level, char *format, ...)
 	{
 		filename = getenv("LSB_OUTPUT_FILE");
 		level_name = getenv("LSB_OUTPUT_LEVEL");
+
+		if(filename)
+		printf("DYNCHK DEBUG: filename = %s\n",filename);
+		if(level_name)
+		printf("DYNCHK DEBUG: level = %s\n", level_name);
+		
 		if(filename)
 			output = fopen(filename, "w");
 		if(!output || !filename)
