@@ -25,6 +25,12 @@ struct SectionInfo SectionInfo[] = {
 #if defined(__ia64__)
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
+#if defined(__powerpc__)
+	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __powerpc__ */
+#if defined(__powerpc__)
+	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __powerpc__ */
 	{".hash",SHT_HASH,SHF_ALLOC,checkHASH},
 #if defined(__ia64__)
 	{".IA_64.archext",SHT_IA_64_EXT,0,checkIA_64_EXT},
@@ -51,6 +57,9 @@ struct SectionInfo SectionInfo[] = {
 #if defined(__ia64__)
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __ia64__ */
+#if defined(__powerpc__)
+	{".plt",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_EXECINSTR,checkNOBITS},
+#endif /* __powerpc__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
 #if defined(__i386__)
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
@@ -70,12 +79,27 @@ struct SectionInfo SectionInfo[] = {
 #if defined(__i386__)
 	{".rel.text",SHT_REL,0,checkREL},
 #endif /* __i386__ */
+#if defined(__powerpc__)
+	{".rela.bss",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __powerpc__ */
 #if defined(__ia64__)
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __ia64__ */
+#if defined(__powerpc__)
+	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __powerpc__ */
+#if defined(__powerpc__)
+	{".rela.got",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __powerpc__ */
 #if defined(__ia64__)
 	{".rela.IA_64.pltoff",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __ia64__ */
+#if defined(__powerpc__)
+	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __powerpc__ */
+#if defined(__powerpc__)
+	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __powerpc__ */
 	{".rodata",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 	{".rodata1",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 #if defined(__i386__)
@@ -84,9 +108,15 @@ struct SectionInfo SectionInfo[] = {
 #if defined(__ia64__)
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkNOBITS},
 #endif /* __ia64__ */
+#if defined(__powerpc__)
+	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+#endif /* __powerpc__ */
 #if defined(__ia64__)
 	{".sdata",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
+#if defined(__powerpc__)
+	{".sdata",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+#endif /* __powerpc__ */
 #if defined(__ia64__)
 	{".sdata1",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
