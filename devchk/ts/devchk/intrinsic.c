@@ -34,17 +34,17 @@ CheckTypeSize(char,1)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,2,0);
 #endif
 
-#ifdef __ia64__
+#ifdef __i386__
 CheckTypeSize(unsigned char,1)
-#elif __i386__
+#elif __ia64__
 CheckTypeSize(unsigned char,1)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,3,0);
 #endif
 
-#ifdef __ia64__
+#ifdef __i386__
 CheckTypeSize(short,2)
-#elif __i386__
+#elif __ia64__
 CheckTypeSize(short,2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,4,0);
@@ -74,25 +74,25 @@ CheckTypeSize(unsigned int,4)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7,0);
 #endif
 
-#ifdef __ia64__
-CheckTypeSize(long,8)
-#elif __i386__
+#ifdef __i386__
 CheckTypeSize(long,4)
+#elif __ia64__
+CheckTypeSize(long,8)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8,0);
 #endif
 
-#ifdef __ia64__
-CheckTypeSize(unsigned long,8)
-#elif __i386__
+#ifdef __i386__
 CheckTypeSize(unsigned long,4)
+#elif __ia64__
+CheckTypeSize(unsigned long,8)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9,0);
 #endif
 
-#ifdef __ia64__
+#ifdef __i386__
 CheckTypeSize(long long,8)
-#elif __i386__
+#elif __ia64__
 CheckTypeSize(long long,8)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10,0);
@@ -122,10 +122,10 @@ CheckTypeSize(double,8)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13,0);
 #endif
 
-#ifdef __ia64__
-CheckTypeSize(long double,16)
-#elif __i386__
+#ifdef __i386__
 CheckTypeSize(long double,12)
+#elif __ia64__
+CheckTypeSize(long double,16)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14,0);
 #endif
