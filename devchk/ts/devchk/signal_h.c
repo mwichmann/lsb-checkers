@@ -800,7 +800,7 @@ CheckTypeSize(_psw_t,8, 10581, 10)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_s390_regs_common,136, 10821, 10)
+CheckTypeSize(_s390_regs_common,16, 10821, 10)
 #endif
 
 #if __powerpc64__
@@ -844,7 +844,7 @@ CheckTypeSize(sighandler_t,8, 9374, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sighandler_t,4, 9374, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(sighandler_t,0, 9374, 10)
+CheckTypeSize(sighandler_t,4, 9374, 10)
 #elif __s390x__
 CheckTypeSize(sighandler_t,0, 9374, 12)
 #else
@@ -979,11 +979,11 @@ CheckTypeSize(struct sigaction,140, 10402, 10)
 CheckMemberSize(struct sigaction,__sigaction_handler,4,10,34716)
 CheckOffset(struct sigaction,__sigaction_handler,0,10,34716)
 CheckMemberSize(struct sigaction,sa_flags,4,10,34717)
-CheckOffset(struct sigaction,sa_flags,132,10,34717)
+CheckOffset(struct sigaction,sa_flags,4,10,34717)
 CheckMemberSize(struct sigaction,sa_restorer,4,10,34718)
-CheckOffset(struct sigaction,sa_restorer,136,10,34718)
+CheckOffset(struct sigaction,sa_restorer,8,10,34718)
 CheckMemberSize(struct sigaction,sa_mask,128,10,34719)
-CheckOffset(struct sigaction,sa_mask,4,10,34719)
+CheckOffset(struct sigaction,sa_mask,12,10,34719)
 #endif
 
 #if __powerpc64__
@@ -1118,11 +1118,11 @@ CheckOffset(struct _xmmreg,element,0,11,40386)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_s390_fp_regs,136, 10832, 10)
+CheckTypeSize(_s390_fp_regs,16, 10832, 10)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_sigregs,272, 10834, 10)
+CheckTypeSize(_sigregs,32, 10834, 10)
 #endif
 
 #if __s390x__
@@ -1334,11 +1334,11 @@ CheckOffset(struct sigcontext,fp_regs,448,9,40603)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(struct sigcontext,12, 10817, 10)
-CheckMemberSize(struct sigcontext,oldmask,8,10,40608)
+CheckTypeSize(struct sigcontext,8, 10817, 10)
+CheckMemberSize(struct sigcontext,oldmask,4,10,40608)
 CheckOffset(struct sigcontext,oldmask,0,10,40608)
 CheckMemberSize(struct sigcontext,sregs,4,10,40609)
-CheckOffset(struct sigcontext,sregs,8,10,40609)
+CheckOffset(struct sigcontext,sregs,4,10,40609)
 #endif
 
 #if __s390x__

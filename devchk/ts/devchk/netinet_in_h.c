@@ -264,6 +264,11 @@ CheckMemberSize(struct ip_mreq,imr_multiaddr,4,2,33768)
 CheckOffset(struct ip_mreq,imr_multiaddr,0,2,33768)
 CheckMemberSize(struct ip_mreq,imr_interface,4,2,33769)
 CheckOffset(struct ip_mreq,imr_interface,4,2,33769)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct ip_mreq,0, 10146, 10)
+Msg("Missing member data for ip_mreq on S390\n");
+CheckOffset(struct ip_mreq,imr_multiaddr,0,10,33768)
+CheckOffset(struct ip_mreq,imr_interface,0,10,33769)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10146,0);
 Msg("Find size of ip_mreq (10146)\n");

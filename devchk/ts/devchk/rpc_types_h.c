@@ -70,7 +70,7 @@ CheckTypeSize(rpcprog_t,8, 9992, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rpcprog_t,4, 9992, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcprog_t,0, 9992, 10)
+CheckTypeSize(rpcprog_t,4, 9992, 10)
 #elif __s390x__
 CheckTypeSize(rpcprog_t,0, 9992, 12)
 #else
@@ -106,7 +106,7 @@ CheckTypeSize(rpcproc_t,8, 9994, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rpcproc_t,4, 9994, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcproc_t,0, 9994, 10)
+CheckTypeSize(rpcproc_t,4, 9994, 10)
 #elif __s390x__
 CheckTypeSize(rpcproc_t,0, 9994, 12)
 #else
@@ -123,7 +123,7 @@ CheckTypeSize(rpcprot_t,8, 9998, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rpcprot_t,4, 9998, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcprot_t,0, 9998, 10)
+CheckTypeSize(rpcprot_t,4, 9998, 10)
 #elif __s390x__
 CheckTypeSize(rpcprot_t,0, 9998, 12)
 #else

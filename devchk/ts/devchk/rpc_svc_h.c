@@ -292,7 +292,7 @@ CheckTypeSize(__dispatch_fn_t,8, 9997, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__dispatch_fn_t,4, 9997, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__dispatch_fn_t,0, 9997, 10)
+CheckTypeSize(__dispatch_fn_t,4, 9997, 10)
 #elif __s390x__
 CheckTypeSize(__dispatch_fn_t,0, 9997, 12)
 #else
@@ -349,14 +349,17 @@ CheckOffset(struct svc_req,rq_clntcred,24,6,32256)
 CheckMemberSize(struct svc_req,rq_xprt,4,6,32257)
 CheckOffset(struct svc_req,rq_xprt,28,6,32257)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct svc_req,0, 9991, 10)
-Msg("Missing member data for svc_req on S390\n");
-CheckOffset(struct svc_req,rq_prog,0,10,32252)
-CheckOffset(struct svc_req,rq_vers,0,10,32253)
-CheckOffset(struct svc_req,rq_proc,0,10,32254)
-CheckOffset(struct svc_req,rq_cred,0,10,32255)
-CheckOffset(struct svc_req,rq_clntcred,0,10,32256)
-CheckOffset(struct svc_req,rq_xprt,0,10,32257)
+CheckTypeSize(struct svc_req,32, 9991, 10)
+CheckMemberSize(struct svc_req,rq_vers,4,10,32253)
+CheckOffset(struct svc_req,rq_vers,4,10,32253)
+CheckMemberSize(struct svc_req,rq_proc,4,10,32254)
+CheckOffset(struct svc_req,rq_proc,8,10,32254)
+CheckMemberSize(struct svc_req,rq_cred,12,10,32255)
+CheckOffset(struct svc_req,rq_cred,12,10,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,4,10,32256)
+CheckOffset(struct svc_req,rq_clntcred,24,10,32256)
+CheckMemberSize(struct svc_req,rq_xprt,4,10,32257)
+CheckOffset(struct svc_req,rq_xprt,28,10,32257)
 #elif __s390x__
 CheckTypeSize(struct svc_req,0, 9991, 12)
 Msg("Missing member data for svc_req on S390X\n");
