@@ -1,8 +1,8 @@
-#!/bin/ksh
+#!/bin/bash
 
 # Record information about the Linux system
 #
-# This is $Revision: 1.1 $
+# This is $Revision: 1.2 $
 
 TMPFILE=/tmp/machine_info.$$
 
