@@ -11,9 +11,13 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.5 $
+# This is $Revision: 1.6 $
 #
 # $Log: tetj.py,v $
+# Revision 1.6  2004/10/31 14:49:52  mats
+# Add convenience methods like result_pass() so user doesn't need to fiddle
+# with result code macros
+#
 # Revision 1.5  2004/02/12 22:20:01  mats
 # old change that never got checked in: journal lines are buffered,
 # and the write is done at the end.  Makes it easier to change
@@ -152,6 +156,47 @@ class Journal:
     def testcase_info(self, context, block, sequence, message):
 	self.journal.append("520|%u %u %u %u %u|%s\n" %
 	    (self.activity,self.testcase,context,block,sequence,message))
+
+    # add convenience methods for results
+    def result_pass(self):
+	self.result(TETJ_PASS)
+
+    def result_fail(self):
+	self.result(TETJ_FAIL)
+
+    def result_unresolved(self):
+	self.result(TETJ_UNRESOLVED)
+
+    def result_notinuse(self):
+	self.result(TETJ_NOTINUSE)
+
+    def result_unsupported(self):
+	self.result(TETJ_UNSUPPORTED)
+
+    def result_untested(self):
+	self.result(TETJ_UNTESTED)
+
+    def result_uninitiated(self):
+	self.result(TETJ_UNINITIATED)
+
+    def result_notinuse(self):
+	self.result(TETJ_NOTINUSE)
+
+    def result_unreported(self):
+	self.result(TETJ_UNREPORTED)
+
+    def result_warning(self):
+	self.result(TETJ_WARNING)
+
+    def result_fip(self):
+	self.result(TETJ_FIP)
+
+    def result_notimp(self):
+	self.result(TETJ_NOTIMP)
+
+    def result_unapprove(self):
+	self.result(TETJ_UNAPPROVE)
+
 
 
 def _test():
