@@ -20,8 +20,12 @@ be specified as many times as needed, and will prevent lsbappchk from
 complaining about symbols which are provided in those shared
 libraries.
 .PP
-Lsbappchk cannot detect all conformance problems.  In particular, it
-is a static test and does not actually run the application.  Lsbappchk
+A journal file named journal.appchk.<appname> where appname is the
+first binary specified is created. It contains a record of the test
+results. You must have write access to the current working directory
+in order to run lsbappchk successfully.
+.PP
+The lsbappchk program cannot detect all conformance problems.  In particular, itis a static test and does not actually run the application.  Lsbappchk
 will not find any behaviors which show themselves only at run\-time
 (for example, anything involving the File Hierarchy Standard, or
 constants and other such items which are found in header files).
@@ -29,6 +33,8 @@ constants and other such items which are found in header files).
 The contributors to the Linux Standard Base.
 .SH "REPORTING BUGS"
 Report bugs to <lsb-test@linuxbase.org>.
+.SH "BUGS"
+Should be able to specify where to write the journal file.
 .SH "SEE ALSO"
 Linux Standard Base specification and other documents at
 http://www.linuxbase.org/
