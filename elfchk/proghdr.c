@@ -230,7 +230,7 @@ checkPT_PHDR(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
                      "Check PHDR program header");
 
   /* Header should point to the header table */
-  if( file->addr+hdr->p_offset == file->paddr )
+  if( (void *)(file->addr+hdr->p_offset) == (void *)file->paddr )
   {
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
