@@ -281,7 +281,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_NAN
-	CompareConstant(FP_NAN,1,5257,architecture)
+	CompareConstant(FP_NAN,0,5257,architecture)
 #else
 Msg( "Error: Constant not found: FP_NAN\n");
 cnt++;
@@ -291,7 +291,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_INFINITE
-	CompareConstant(FP_INFINITE,2,5258,architecture)
+	CompareConstant(FP_INFINITE,1,5258,architecture)
 #else
 Msg( "Error: Constant not found: FP_INFINITE\n");
 cnt++;
@@ -301,7 +301,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_ZERO
-	CompareConstant(FP_ZERO,3,5259,architecture)
+	CompareConstant(FP_ZERO,2,5259,architecture)
 #else
 Msg( "Error: Constant not found: FP_ZERO\n");
 cnt++;
@@ -311,7 +311,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_SUBNORMAL
-	CompareConstant(FP_SUBNORMAL,4,5260,architecture)
+	CompareConstant(FP_SUBNORMAL,3,5260,architecture)
 #else
 Msg( "Error: Constant not found: FP_SUBNORMAL\n");
 cnt++;
@@ -321,7 +321,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_NORMAL
-	CompareConstant(FP_NORMAL,5,5261,architecture)
+	CompareConstant(FP_NORMAL,4,5261,architecture)
 #else
 Msg( "Error: Constant not found: FP_NORMAL\n");
 cnt++;
@@ -329,9 +329,57 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if __powerpc64__
+#ifdef FP_ILOGB0
+	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGB0\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef FP_ILOGB0
+	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGB0\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef FP_ILOGB0
+	CompareConstant(FP_ILOGB0,-2147483648,5262,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGB0\n");
+cnt++;
+#endif
+
+#elif __i386__
 #ifdef FP_ILOGB0
 	CompareConstant(FP_ILOGB0,(-2147483647 - 1),5262,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGB0\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef FP_ILOGB0
+	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGB0\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef FP_ILOGB0
+	CompareConstant(FP_ILOGB0,-2147483648,5262,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGB0\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef FP_ILOGB0
+	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture)
 #else
 Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
@@ -343,9 +391,57 @@ Msg( "No definition for FP_ILOGB0 (5262, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5262,%d);\n", architecture, FP_ILOGB0);
 #endif
 #endif
-#if __i386__
+#if __powerpc64__
+#ifdef FP_ILOGBNAN
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGBNAN\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef FP_ILOGBNAN
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGBNAN\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef FP_ILOGBNAN
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGBNAN\n");
+cnt++;
+#endif
+
+#elif __i386__
 #ifdef FP_ILOGBNAN
 	CompareConstant(FP_ILOGBNAN,(-2147483647 - 1),5263,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGBNAN\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef FP_ILOGBNAN
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGBNAN\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef FP_ILOGBNAN
+	CompareConstant(FP_ILOGBNAN,-2147483648,5263,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGBNAN\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef FP_ILOGBNAN
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
 #else
 Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
