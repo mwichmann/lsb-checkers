@@ -1,4 +1,4 @@
-LIBS=libc #libncurses libz libdl libpam libgcc_s libm libpthread  libz
+LIBS=libc libncurses #libz libdl libpam libgcc_s libm libpthread  libz
 
 CFLAGS = -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED \
 	-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE \
