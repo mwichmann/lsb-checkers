@@ -7,7 +7,8 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname FROM Interface,Library,LibGroup,LGInt ";
+$select = "SELECT DISTINCT Iname,Vname FROM Interface,Library,LibGroup,LGInt ";
+$select.= "LEFT JOIN Version ON Vid=Iversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=Library.Lid ";
@@ -18,11 +19,12 @@ $select.= "ORDER BY Iname ";
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
-print "char *DynSyms[] = {\n";
+print "#include \"elfchk.h\"\n";
+print "struct versym DynSyms[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
-	printf "\t\"%s\",\n",$entry{'Iname'};
+	printf "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
 }
 print "\t};\n";
-print "int numDynSyms = sizeof(DynSyms)/sizeof(char *);\n";
+print "int numDynSyms = sizeof(DynSyms)/sizeof(struct versym);\n";
 
