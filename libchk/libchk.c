@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.6 $
+ * This is $Revision: 1.7 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.7  2001/10/31 01:35:15  cyeoh
+ * search LSB paths first for libraries
+ *
  * Revision 1.6  2001/07/30 20:10:19  cyeoh
  * Add more version information printed
  *
@@ -22,6 +25,8 @@
 #include "elfchk.h"
 
 char *libpaths[] = {
+	"/lib/lsb/%s",
+	"/usr/lib/lsb/%s",
 	"/lib/%s",
 	"/usr/lib/%s",
 	"/usr/X11R6/lib/%s",
@@ -29,7 +34,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char *libchk_revision = "$Revision: 1.6 $";
+static const char *libchk_revision = "$Revision: 1.7 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
