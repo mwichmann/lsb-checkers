@@ -169,11 +169,11 @@ CheckMemberSize(struct ifaddr,ifa_next,8,3,34497)
 CheckOffset(struct ifaddr,ifa_next,40,3,34497)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct ifaddr,40, 10286, 10)
-CheckMemberSize(struct ifaddr,ifa_ifu,0,10,34466)
+CheckMemberSize(struct ifaddr,ifa_ifu,16,10,34466)
 CheckOffset(struct ifaddr,ifa_ifu,16,10,34466)
-CheckMemberSize(struct ifaddr,ifa_ifp,0,10,34496)
+CheckMemberSize(struct ifaddr,ifa_ifp,4,10,34496)
 CheckOffset(struct ifaddr,ifa_ifp,32,10,34496)
-CheckMemberSize(struct ifaddr,ifa_next,0,10,34497)
+CheckMemberSize(struct ifaddr,ifa_next,4,10,34497)
 CheckOffset(struct ifaddr,ifa_next,36,10,34497)
 #elif __powerpc64__
 CheckTypeSize(struct ifaddr,48, 10286, 9)
@@ -221,7 +221,7 @@ CheckMemberSize(struct ifreq,ifr_ifru,24,3,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,3,34483)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct ifreq,32, 10290, 10)
-CheckMemberSize(struct ifreq,ifr_ifru,0,10,34483)
+CheckMemberSize(struct ifreq,ifr_ifru,16,10,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,10,34483)
 #elif __powerpc64__
 CheckTypeSize(struct ifreq,40, 10290, 9)
@@ -276,6 +276,11 @@ CheckOffset(struct ifconf,ifc_ifcu,4,6,34469)
 CheckTypeSize(struct ifconf,16, 10288, 12)
 CheckMemberSize(struct ifconf,ifc_ifcu,8,12,34469)
 CheckOffset(struct ifconf,ifc_ifcu,8,12,34469)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct ifconf,0, 10288, 10)
+Msg("Missing member data for ifconf on S390\n");
+CheckOffset(struct ifconf,ifc_len,0,10,34467)
+CheckOffset(struct ifconf,ifc_ifcu,0,10,34469)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10288,0);
 Msg("Find size of ifconf (10288)\n");
@@ -285,6 +290,7 @@ Msg("Find size of ifconf (10288)\n");
 #elif __s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __ia64__
+#elif __s390__ && !__s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10289,0);
 Msg("Find size of anon-ifc_ifcu (10289)\n");

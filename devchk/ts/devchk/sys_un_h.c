@@ -43,7 +43,7 @@ CheckMemberSize(struct sockaddr_un,sun_path,108,3,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,3,34486)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct sockaddr_un,110, 9152, 10)
-CheckMemberSize(struct sockaddr_un,sun_path,0,10,34486)
+CheckMemberSize(struct sockaddr_un,sun_path,108,10,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,10,34486)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sockaddr_un,110, 9152, 6)

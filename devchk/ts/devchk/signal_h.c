@@ -748,7 +748,7 @@ CheckMemberSize(struct sigstack,ss_onstack,4,6,34195)
 CheckOffset(struct sigstack,ss_onstack,4,6,34195)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct sigstack,8, 9315, 10)
-CheckMemberSize(struct sigstack,ss_onstack,0,10,34195)
+CheckMemberSize(struct sigstack,ss_onstack,4,10,34195)
 CheckOffset(struct sigstack,ss_onstack,4,10,34195)
 #elif __powerpc64__
 CheckTypeSize(struct sigstack,16, 9315, 9)
@@ -898,11 +898,11 @@ CheckOffset(struct sigaction,sa_restorer,136,6,34714)
 CheckTypeSize(struct sigaction,140, 10402, 10)
 CheckMemberSize(struct sigaction,__sigaction_handler,4,10,34716)
 CheckOffset(struct sigaction,__sigaction_handler,0,10,34716)
-CheckMemberSize(struct sigaction,sa_flags,0,10,34717)
+CheckMemberSize(struct sigaction,sa_flags,4,10,34717)
 CheckOffset(struct sigaction,sa_flags,132,10,34717)
-CheckMemberSize(struct sigaction,sa_restorer,0,10,34718)
+CheckMemberSize(struct sigaction,sa_restorer,4,10,34718)
 CheckOffset(struct sigaction,sa_restorer,136,10,34718)
-CheckMemberSize(struct sigaction,sa_mask,0,10,34719)
+CheckMemberSize(struct sigaction,sa_mask,128,10,34719)
 CheckOffset(struct sigaction,sa_mask,4,10,34719)
 #endif
 
@@ -934,6 +934,8 @@ CheckTypeSize(stack_t,24, 9314, 3)
 CheckTypeSize(stack_t,12, 9314, 6)
 #elif __s390x__
 CheckTypeSize(stack_t,24, 9314, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(stack_t,0, 9314, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
 Msg("Find size of stack_t (9314)\n");

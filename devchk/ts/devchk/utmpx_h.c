@@ -27,6 +27,7 @@ Msg("Checking data structures in utmpx.h\n");
 #if __i386__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390x__
+#elif __s390__ && !__s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10558,0);
 Msg("Find size of utmpx * (10558)\n");
@@ -110,6 +111,20 @@ CheckMemberSize(struct utmpx,ut_addr_v6,16,12,40295)
 CheckOffset(struct utmpx,ut_addr_v6,348,12,40295)
 CheckMemberSize(struct utmpx,__unused,20,12,40296)
 CheckOffset(struct utmpx,__unused,364,12,40296)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct utmpx,0, 10555, 10)
+Msg("Missing member data for utmpx on S390\n");
+CheckOffset(struct utmpx,ut_type,0,10,40286)
+CheckOffset(struct utmpx,ut_pid,0,10,40287)
+CheckOffset(struct utmpx,ut_line,0,10,40288)
+CheckOffset(struct utmpx,ut_id,0,10,40289)
+CheckOffset(struct utmpx,ut_user,0,10,40290)
+CheckOffset(struct utmpx,ut_host,0,10,40291)
+CheckOffset(struct utmpx,ut_exit,0,10,40292)
+CheckOffset(struct utmpx,ut_session,0,10,40293)
+CheckOffset(struct utmpx,ut_tv,0,10,40294)
+CheckOffset(struct utmpx,ut_addr_v6,0,10,40295)
+CheckOffset(struct utmpx,__unused,0,10,40296)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10555,0);
 Msg("Find size of utmpx (10555)\n");

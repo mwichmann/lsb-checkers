@@ -103,9 +103,9 @@ CheckMemberSize(struct pollfd,revents,2,3,34414)
 CheckOffset(struct pollfd,revents,6,3,34414)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct pollfd,8, 9913, 10)
-CheckMemberSize(struct pollfd,events,0,10,34413)
+CheckMemberSize(struct pollfd,events,2,10,34413)
 CheckOffset(struct pollfd,events,4,10,34413)
-CheckMemberSize(struct pollfd,revents,0,10,34414)
+CheckMemberSize(struct pollfd,revents,2,10,34414)
 CheckOffset(struct pollfd,revents,6,10,34414)
 #elif __powerpc64__
 CheckTypeSize(struct pollfd,8, 9913, 9)
