@@ -1,25 +1,25 @@
 /* Generated file - Do Not Edit */
 char *DtNeeded[] = {
 #if __ia64__
-	"/lib/ld-lsb-ia64.so.2",
+	"/lib/ld-lsb-ia64.so.3",
 #endif /* __ia64__ */
 #if __powerpc__ && !__powerpc64__
-	"/lib/ld-lsb-ppc32.so.2",
+	"/lib/ld-lsb-ppc32.so.3",
 #endif /* __powerpc__ && !__powerpc64__ */
 #if __s390__ && !__s390x__
-	"/lib/ld-lsb-s390.so.2",
+	"/lib/ld-lsb-s390.so.3",
 #endif /* __s390__ && !__s390x__ */
 #if __i386__
-	"/lib/ld-lsb.so.2",
+	"/lib/ld-lsb.so.3",
 #endif /* __i386__ */
 #if __powerpc64__
-	"/lib64/ld-lsb-ppc64.so.2",
+	"/lib64/ld-lsb-ppc64.so.3",
 #endif /* __powerpc64__ */
 #if __s390x__
-	"/lib64/ld-lsb-s390x.so.2",
+	"/lib64/ld-lsb-s390x.so.3",
 #endif /* __s390x__ */
 #if __x86_64__
-	"/lib64/ld-lsb-x86-64.so.2",
+	"/lib64/ld-lsb-x86-64.so.3",
 #endif /* __x86_64__ */
 #if __i386__
 	"libc.so.6",
