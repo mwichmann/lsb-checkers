@@ -1,56 +1,100 @@
 #include <stdio.h>
 #include <getopt.h>
-#include "../elfchk/elfchk.h"
+#include <string.h>
+#include <stdlib.h>
+#include <libgen.h>
+#include <limits.h>
+#include "../tetj/tetj.h"
+#include "check_file.h"
+#include "libraries.h"
 
-extern int add_library_symbols(char *);
-extern int checksymbols(ElfFile *);
+char *
+concat_string(char *input, char *addition)
+{
+  char *tmp;
+  if (input)
+  {
+    tmp = realloc(input, strlen(input)+strlen(addition)+1);
+    if (!tmp) abort();
+    return strcat(tmp, addition);
+  }
+  else
+  {
+    return strdup(addition);
+  }
+}
 
 int
 main(int argc, char *argv[])
 {
-char	c;
-ElfFile	*elffile;
+  char	c;
+  struct tetj_handle *journal;
+  char *command_line = NULL;
+  int i;
+  char *extra_libraries;
+  char **extra_lib_list = NULL;
+  int extra_lib_count = 0;
+#define TMP_STRING_SIZE (PATH_MAX+20)
+  char tmp_string[TMP_STRING_SIZE+1];
 
-while(1) {
-	c=getopt(argc,argv,"L:");
-	if( c == -1 )
-		break;
-	switch(c) {
-		case 'L':
-			printf("Adding symbols for library %s\n", optarg);
-			add_library_symbols(optarg);
-			break;
-		default:
-			printf ("?? getopt returned character code 0%o ??\n", c);
-		}
-	}
+  printf("%s " LSBVERSION "\n", argv[0]);
+  extra_libraries = strdup("EXTRA_LIBRARIES=");
 
-if( optind >= argc ) {
-	fprintf(stderr, "usage: %s [-L libpath ] file\n", argv[0] );
-	exit(1);
-	}
+  for (i=0; i<argc; i++)
+  {
+    command_line = concat_string(command_line, argv[i]);
+    command_line = concat_string(command_line, " ");
+  }
+  
+  /* Parse options */
+  while(1) {
+    c=getopt(argc,argv,"L:");
+    if( c == -1 )
+      break;
+    switch(c) {
+    case 'L':
+      printf("Adding symbols for library %s\n", optarg);
+      extra_lib_count++;
+      extra_lib_list = realloc(extra_lib_list, 
+                               sizeof(char *)*extra_lib_count);
+      extra_lib_list[extra_lib_count-1] = strdup(optarg);
+      extra_libraries = concat_string(extra_libraries, optarg);
+      extra_libraries = concat_string(extra_libraries, " ");
+      break;
+    default:
+      printf ("?? getopt returned character code 0%o ??\n", c);
+    }
+  }
 
-printf("%s " LSBVERSION "\n", argv[0]);
+  if( optind >= argc ) {
+    fprintf(stderr, "usage: %s [-L libpath ] file\n", argv[0] );
+    exit(1);
+  }
 
-if( (elffile = OpenElfFile(argv[optind])) == NULL ) {
-	fprintf(stderr, "%s: Unable to open file %s\n", argv[0], argv[optind] );
-	exit(2);
-	}
+  /* Start journal logging */
+  snprintf(tmp_string, TMP_STRING_SIZE, "journal.appchk.%s", 
+           basename(argv[optind]));
+  if (tetj_start_journal(tmp_string, &journal, command_line)!=0)
+  {
+    perror("Could not open journal file");
+    exit(1);
+  }
 
-checkElf(elffile, 1);
- if (elffile->symhdr==NULL)
- {
-   printf("Not a dynamically linked executable.\n"
-     "No point checking symbols\n");
- }
- else
- {
-   checksymbols(elffile);
- }
-/*
-check_intepreter(elffile);
-check_DT_NEEDED(elffile);
-check_symbols(elffile);
-*/
-exit(0);
+  /* Log extra libraries to look for symbols in */
+  tetj_add_config(journal, extra_libraries);
+
+  /* Check libraries */
+  for (i=0; i<extra_lib_count; i++)
+  {
+    add_library_symbols(extra_lib_list[i], journal);
+  }
+
+  /* Check binary */
+  for (i=optind; i<argc; i++)
+  {
+    check_file(argv[i], journal, 1);
+  }
+
+  tetj_close_journal(journal);
+  exit(0);
 }
