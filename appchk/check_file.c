@@ -36,7 +36,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
     fprintf(stderr, tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-    return NULL;
+    exit(1);
   }
   else
   {
@@ -50,7 +50,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
              filename);
     perror(tmp_string);
     tetj_add_controller_error(journal, tmp_string);
-    return NULL;
+    exit(1);
   }
   snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
   tetj_testcase_info(journal, tetj_activity_count, 0, 0, 0, 0, tmp_string);
