@@ -30,6 +30,7 @@ dirname /usr/bin/dirname
 dmesg /bin/dmesg
 du /usr/bin/du
 echo /bin/echo
+ed /bin/ed
 egrep /bin/egrep
 env /usr/bin/env
 expand /usr/bin/expand
@@ -55,7 +56,7 @@ hostname /bin/hostname
 iconv /usr/bin/iconv
 id /usr/bin/id
 install /usr/bin/install
-install_initd /sbin/install_initd
+install_initd /usr/lib/lsb/install_initd
 ipcrm /usr/bin/ipcrm
 ipcs /usr/bin/ipcs
 join /usr/bin/join
@@ -64,11 +65,14 @@ killall /usr/bin/killall
 ln /bin/ln
 locale /usr/bin/locale
 localedef /usr/bin/localedef
+logger /usr/bin/logger
 logname /usr/bin/logname
+lp /usr/bin/lp
 lpr /usr/bin/lpr
 ls /bin/ls
 lsb_release /bin/lsb_release
 m4 /usr/bin/m4
+mailx /usr/bin/mailx
 make /usr/bin/make
 man /usr/bin/man
 md5sum /usr/bin/md5sum
@@ -89,12 +93,13 @@ passwd /usr/bin/passwd
 paste /usr/bin/paste
 patch /usr/bin/patch
 pathchk /usr/bin/pathchk
+pax /usr/bin/pax
 pidof /bin/pidof
 pr /usr/bin/pr
 printf /usr/bin/printf
 ps /bin/ps
 pwd /bin/pwd
-remove_initd /sbin/remove_initd
+remove_initd /usr/lib/lsb/remove_initd
 renice /usr/bin/renice
 rm /bin/rm
 rmdir /bin/rmdir
