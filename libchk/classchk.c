@@ -115,7 +115,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					vtbaseoffset  = vtablep->cat1.baseoffset;
 					vttypeinfo    = vtablep->cat1.typeinfo;
 					vtvirtfuncs   = vtablep->cat1.virtfuncs;
-					vtableinc     = sizeof(struct cat1vtable_mem)+(classp->vtable[v].numvfuncs*sizeof( void *));
+					vtableinc     = sizeof(struct cat1vtable_mem)+(classp->vtable[v].numvfuncs*sizeof(fptr));
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 					break;
 				case 2:
@@ -123,7 +123,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					vtbaseoffset  = vtablep->cat2.baseoffset;
 					vttypeinfo    = vtablep->cat2.typeinfo;
 					vtvirtfuncs   = vtablep->cat2.virtfuncs;
-					vtableinc     = sizeof(struct cat2vtable_mem)+(classp->vtable[v].numvfuncs*sizeof( void *));
+					vtableinc     = sizeof(struct cat2vtable_mem)+(classp->vtable[v].numvfuncs*sizeof(fptr));
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 					break;
 				default:
