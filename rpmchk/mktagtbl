@@ -42,6 +42,6 @@ print "#include \"tagfuncs.h\"\n\n";
 
 dumptable("Rgroup='Signature'","SigTags");
 print "\nint numSigIdxTags = sizeof(SigTags)/sizeof(RpmIdxTagFuncRec);\n\n";
-dumptable("(Rgroup!='Header' AND Rgroup!='Ignore')","HdrTags");
+dumptable("(Rgroup!='Signature' AND Rgroup!='Ignore')","HdrTags");
 print "int numHdrIdxTags = sizeof(HdrTags)/sizeof(RpmIdxTagFuncRec);\n";
 
