@@ -3157,6 +3157,19 @@ struct versym libstdcxx_so_5[] = {
 #endif
 	{"_ZNSi3getERSt15basic_streambufIcSt11char_traitsIcEE","GLIBCPP_3.2"},
 	{"_ZNSi3getERSt15basic_streambufIcSt11char_traitsIcEEc","GLIBCPP_3.2"},
+	{"_ZNSi3getEv","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSi4readEPci","GLIBCPP_3.2"},
+#endif
+#if __arm__
+	{"_ZNSi4readEPci","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSi4readEPci","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSi4readEPci","GLIBCPP_3.2"},
+#endif
 #if __ia64__
 	{"_ZNSi4readEPcl","GLIBCPP_3.2"},
 #endif
@@ -3166,6 +3179,7 @@ struct versym libstdcxx_so_5[] = {
 #if __s390x__
 	{"_ZNSi4readEPcl","GLIBCPP_3.2"},
 #endif
+	{"_ZNSi5seekgElSt12_Ios_Seekdir","GLIBCPP_3.2"},
 #if __ia64__
 	{"_ZNSi6ignoreEli","GLIBCPP_3.2"},
 #endif
@@ -3204,8 +3218,22 @@ struct versym libstdcxx_so_5[] = {
 #endif
 	{"_ZNSiC1EPSt15basic_streambufIcSt11char_traitsIcEE","GLIBCPP_3.2"},
 	{"_ZNSiC2EPSt15basic_streambufIcSt11char_traitsIcEE","GLIBCPP_3.2"},
+	{"_ZNSiD2Ev","GLIBCPP_3.2"},
 	{"_ZNSirsEPFRSt9basic_iosIcSt11char_traitsIcEES3_E","GLIBCPP_3.2"},
 	{"_ZNSirsEPSt15basic_streambufIcSt11char_traitsIcEE","GLIBCPP_3.2"},
+	{"_ZNSirsERPv","GLIBCPP_3.2"},
+	{"_ZNSirsERb","GLIBCPP_3.2"},
+	{"_ZNSirsERd","GLIBCPP_3.2"},
+	{"_ZNSirsERe","GLIBCPP_3.2"},
+	{"_ZNSirsERf","GLIBCPP_3.2"},
+	{"_ZNSirsERi","GLIBCPP_3.2"},
+	{"_ZNSirsERj","GLIBCPP_3.2"},
+	{"_ZNSirsERl","GLIBCPP_3.2"},
+	{"_ZNSirsERm","GLIBCPP_3.2"},
+	{"_ZNSirsERs","GLIBCPP_3.2"},
+	{"_ZNSirsERt","GLIBCPP_3.2"},
+	{"_ZNSirsERx","GLIBCPP_3.2"},
+	{"_ZNSirsERy","GLIBCPP_3.2"},
 	{"_ZNSo3putEc","GLIBCPP_3.2"},
 	{"_ZNSo5flushEv","GLIBCPP_3.2"},
 	{"_ZNSo5seekpESt4fposI11__mbstate_tE","GLIBCPP_3.2"},
@@ -4167,6 +4195,19 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt10ctype_base5spaceE","GLIBCPP_3.2"},
 	{"_ZNSt10ctype_base5upperE","GLIBCPP_3.2"},
 	{"_ZNSt10ctype_base6xdigitE","GLIBCPP_3.2"},
+	{"_ZNSt10istrstreamC1EPKc","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt10istrstreamC1EPKci","GLIBCPP_3.2"},
+#endif
+#if __arm__
+	{"_ZNSt10istrstreamC1EPKci","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt10istrstreamC1EPKci","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt10istrstreamC1EPKci","GLIBCPP_3.2"},
+#endif
 #if __ia64__
 	{"_ZNSt10istrstreamC1EPKcl","GLIBCPP_3.2"},
 #endif
@@ -7347,6 +7388,18 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt21__numeric_limits_base9is_iec559E","GLIBCPP_3.2"},
 	{"_ZNSt21__numeric_limits_base9is_moduloE","GLIBCPP_3.2"},
 	{"_ZNSt21__numeric_limits_base9is_signedE","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE10deallocateEPvj","GLIBCPP_3.2"},
+#endif
+#if __arm__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE10deallocateEPvj","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE10deallocateEPvj","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE10deallocateEPvj","GLIBCPP_3.2"},
+#endif
 #if __ia64__
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE10deallocateEPvm","GLIBCPP_3.2"},
 #endif
@@ -7375,6 +7428,7 @@ struct versym libstdcxx_so_5[] = {
 #if __s390x__
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE11_S_round_upEm","GLIBCPP_3.2"},
 #endif
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE12_S_free_listE","GLIBCPP_3.2"},
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE12_S_heap_sizeE","GLIBCPP_3.2"},
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE13_S_start_freeE","GLIBCPP_3.2"},
 #if __ia64__
@@ -7396,6 +7450,20 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE17_S_freelist_indexEm","GLIBCPP_3.2"},
 #endif
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE22_S_node_allocator_lockE","GLIBCPP_3.2"},
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE5_LockC1Ev","GLIBCPP_3.2"},
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE5_LockD1Ev","GLIBCPP_3.2"},
+#if __i386__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE8allocateEj","GLIBCPP_3.2"},
+#endif
+#if __arm__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE8allocateEj","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE8allocateEj","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE8allocateEj","GLIBCPP_3.2"},
+#endif
 #if __ia64__
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE8allocateEm","GLIBCPP_3.2"},
 #endif
@@ -7404,6 +7472,18 @@ struct versym libstdcxx_so_5[] = {
 #endif
 #if __s390x__
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE8allocateEm","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE9_S_refillEj","GLIBCPP_3.2"},
+#endif
+#if __arm__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE9_S_refillEj","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE9_S_refillEj","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE9_S_refillEj","GLIBCPP_3.2"},
 #endif
 #if __ia64__
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE9_S_refillEm","GLIBCPP_3.2"},
@@ -10099,6 +10179,30 @@ struct versym libstdcxx_so_5[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTv0_n12_NSiD1Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTv0_n12_NSoD0Ev","GLIBCPP_3.2"},
+#endif
+#if __arm__
+	{"_ZTv0_n12_NSoD0Ev","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTv0_n12_NSoD0Ev","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTv0_n12_NSoD0Ev","GLIBCPP_3.2"},
+#endif
+#if __i386__
+	{"_ZTv0_n12_NSoD1Ev","GLIBCPP_3.2"},
+#endif
+#if __arm__
+	{"_ZTv0_n12_NSoD1Ev","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTv0_n12_NSoD1Ev","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTv0_n12_NSoD1Ev","GLIBCPP_3.2"},
 #endif
 #if __i386__
 	{"_ZTv0_n12_NSt10ostrstreamD0Ev","GLIBCPP_3.2"},
