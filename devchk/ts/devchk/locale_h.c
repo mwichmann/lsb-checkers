@@ -449,7 +449,7 @@ Msg("Find size of lconv (6919)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct __locale_struct,64, 10531, 2)
+CheckTypeSize(struct __locale_struct,116, 10531, 2)
 CheckMemberSize(struct __locale_struct,__locales,52,2,40181)
 CheckOffset(struct __locale_struct,__locales,0,2,40181)
 CheckMemberSize(struct __locale_struct,__ctype_b,4,2,40182)
@@ -458,8 +458,10 @@ CheckMemberSize(struct __locale_struct,__ctype_tolower,4,2,40183)
 CheckOffset(struct __locale_struct,__ctype_tolower,56,2,40183)
 CheckMemberSize(struct __locale_struct,__ctype_toupper,4,2,40184)
 CheckOffset(struct __locale_struct,__ctype_toupper,60,2,40184)
+CheckMemberSize(struct __locale_struct,__names,52,2,40185)
+CheckOffset(struct __locale_struct,__names,64,2,40185)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct __locale_struct,64, 10531, 6)
+CheckTypeSize(struct __locale_struct,116, 10531, 6)
 CheckMemberSize(struct __locale_struct,__locales,52,6,40181)
 CheckOffset(struct __locale_struct,__locales,0,6,40181)
 #elif __ia64__
@@ -499,6 +501,19 @@ CheckTypeSize(__locale_t,8, 10533, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10533,0);
 Msg("Find size of __locale_t (10533)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(locale_t,4, 10534, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(locale_t,4, 10534, 6)
+#elif __ia64__
+CheckTypeSize(locale_t,8, 10534, 3)
+#elif __s390x__
+CheckTypeSize(locale_t,0, 10534, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10534,0);
+Msg("Find size of locale_t (10534)\n");
 #endif
 
 #ifdef TET_TEST

@@ -121,6 +121,10 @@ CheckMemberSize(struct _libc_fpreg,exponent,2,2,34316)
 CheckOffset(struct _libc_fpreg,exponent,8,2,34316)
 #endif
 
+#if __s390x__
+CheckTypeSize(fpreg_t,8, 10566, 12)
+#endif
+
 #if __i386__
 CheckTypeSize(struct _libc_fpstate,112, 10226, 2)
 CheckMemberSize(struct _libc_fpstate,cw,4,2,34317)
@@ -149,6 +153,10 @@ CheckTypeSize(fpregset_t,4, 10228, 2)
 CheckTypeSize(fpregset_t,136, 10228, 10)
 #endif
 
+#if __s390x__
+CheckTypeSize(fpregset_t,16, 10569, 12)
+#endif
+
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
@@ -168,6 +176,10 @@ CheckTypeSize(mcontext_t,2656, 10328, 3)
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(mcontext_t,32, 10329, 6)
+#endif
+
+#if __s390x__
+CheckTypeSize(mcontext_t,32, 10573, 12)
 #endif
 
 #if __i386__
@@ -216,6 +228,28 @@ CheckMemberSize(struct ucontext,uc_mcontext,32,6,40159)
 CheckOffset(struct ucontext,uc_mcontext,20,6,40159)
 CheckMemberSize(struct ucontext,uc_sigmask,128,6,40160)
 CheckOffset(struct ucontext,uc_sigmask,52,6,40160)
+#endif
+
+#if __s390x__
+CheckTypeSize(struct ucontext,64, 10574, 12)
+CheckMemberSize(struct ucontext,uc_flags,8,12,40307)
+CheckOffset(struct ucontext,uc_flags,0,12,40307)
+CheckMemberSize(struct ucontext,uc_link,8,12,40311)
+CheckOffset(struct ucontext,uc_link,0,12,40311)
+CheckMemberSize(struct ucontext,uc_stack,24,12,40308)
+CheckOffset(struct ucontext,uc_stack,8,12,40308)
+CheckMemberSize(struct ucontext,uc_mcontext,32,12,40309)
+CheckOffset(struct ucontext,uc_mcontext,32,12,40309)
+CheckMemberSize(struct ucontext,uc_sigmask,0,12,40310)
+CheckOffset(struct ucontext,uc_sigmask,64,12,40310)
+#endif
+
+#if __s390x__
+CheckTypeSize(ucontext_t,64, 10575, 12)
+#endif
+
+#if __s390x__
+CheckTypeSize(__psw_t,16, 10571, 12)
 #endif
 
 #ifdef TET_TEST
