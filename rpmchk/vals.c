@@ -49,8 +49,8 @@ RpmRequireRec validdeps[] = {
 	{"lsb-core-amd64",LSBVERSION, 0, 1 },
 	{"lsb-graphics-amd64",LSBVERSION, 0, 0 },
 #elif __powerpc__ && !__powerpc64__
-	{"lsb-core-ppc",LSBVERSION, 0, 1 },
-	{"lsb-graphics-ppc",LSBVERSION, 0, 0 },
+	{"lsb-core-ppc32",LSBVERSION, 0, 1 },
+	{"lsb-graphics-ppc32",LSBVERSION, 0, 0 },
 #elif __powerpc64__
 	{"lsb-core-ppc64",LSBVERSION, 0, 1 },
 	{"lsb-graphics-ppc64",LSBVERSION, 0, 0 },
