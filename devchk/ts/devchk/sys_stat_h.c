@@ -108,88 +108,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for S_ISLNK(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISREG(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISDIR(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISCHR(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISBLK(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISFIFO(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISSOCK(m) */
-#endif
-
-#if __powerpc64__
-#ifdef _STAT_VER
-	CompareConstant(_STAT_VER,3,4955,architecture)
-#else
-Msg( "Error: Constant not found: _STAT_VER\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef _STAT_VER
-	CompareConstant(_STAT_VER,3,4955,architecture)
-#else
-Msg( "Error: Constant not found: _STAT_VER\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef _STAT_VER
-	CompareConstant(_STAT_VER,1,4955,architecture)
-#else
-Msg( "Error: Constant not found: _STAT_VER\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef _STAT_VER
-	CompareConstant(_STAT_VER,3,4955,architecture)
-#else
-Msg( "Error: Constant not found: _STAT_VER\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef _STAT_VER
-	CompareConstant(_STAT_VER,3,4955,architecture)
-#else
-Msg( "Error: Constant not found: _STAT_VER\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef _STAT_VER
-	CompareConstant(_STAT_VER,3,4955,architecture)
-#else
-Msg( "Error: Constant not found: _STAT_VER\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for _STAT_VER (4955, int) in db\n");
-#ifdef _STAT_VER
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4955,%d);\n", architecture, _STAT_VER);
-#endif
-#endif
-#if _LSB_DEFAULT_ARCH
 /* No test for S_TYPEISSEM(buf) */
 #endif
 
@@ -377,6 +295,88 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISLNK(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISREG(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISDIR(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISCHR(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISBLK(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISFIFO(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISSOCK(m) */
+#endif
+
+#if __powerpc64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,1,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for _STAT_VER (4955, int) in db\n");
+#ifdef _STAT_VER
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4955,%d);\n", architecture, _STAT_VER);
+#endif
+#endif
 #if __i386__
 CheckTypeSize(struct stat,88, 8693, 2)
 CheckMemberSize(struct stat,__pad1,2,2,33633)

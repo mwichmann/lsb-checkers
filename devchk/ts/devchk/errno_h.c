@@ -24,6 +24,406 @@ Msg("Checking data structures in errno.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef EREMOTE
+	CompareConstant(EREMOTE,66,100,architecture)
+#else
+Msg( "Error: Constant not found: EREMOTE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENOLINK
+	CompareConstant(ENOLINK,67,101,architecture)
+#else
+Msg( "Error: Constant not found: ENOLINK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EADV
+	CompareConstant(EADV,68,102,architecture)
+#else
+Msg( "Error: Constant not found: EADV\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ESRMNT
+	CompareConstant(ESRMNT,69,103,architecture)
+#else
+Msg( "Error: Constant not found: ESRMNT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ECOMM
+	CompareConstant(ECOMM,70,104,architecture)
+#else
+Msg( "Error: Constant not found: ECOMM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EPROTO
+	CompareConstant(EPROTO,71,105,architecture)
+#else
+Msg( "Error: Constant not found: EPROTO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EMULTIHOP
+	CompareConstant(EMULTIHOP,72,106,architecture)
+#else
+Msg( "Error: Constant not found: EMULTIHOP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EDOTDOT
+	CompareConstant(EDOTDOT,73,107,architecture)
+#else
+Msg( "Error: Constant not found: EDOTDOT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EBADMSG
+	CompareConstant(EBADMSG,74,108,architecture)
+#else
+Msg( "Error: Constant not found: EBADMSG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EOVERFLOW
+	CompareConstant(EOVERFLOW,75,109,architecture)
+#else
+Msg( "Error: Constant not found: EOVERFLOW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENOTUNIQ
+	CompareConstant(ENOTUNIQ,76,110,architecture)
+#else
+Msg( "Error: Constant not found: ENOTUNIQ\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EBADFD
+	CompareConstant(EBADFD,77,111,architecture)
+#else
+Msg( "Error: Constant not found: EBADFD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EREMCHG
+	CompareConstant(EREMCHG,78,112,architecture)
+#else
+Msg( "Error: Constant not found: EREMCHG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ELIBACC
+	CompareConstant(ELIBACC,79,113,architecture)
+#else
+Msg( "Error: Constant not found: ELIBACC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ELIBBAD
+	CompareConstant(ELIBBAD,80,114,architecture)
+#else
+Msg( "Error: Constant not found: ELIBBAD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ELIBSCN
+	CompareConstant(ELIBSCN,81,115,architecture)
+#else
+Msg( "Error: Constant not found: ELIBSCN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ELIBMAX
+	CompareConstant(ELIBMAX,82,116,architecture)
+#else
+Msg( "Error: Constant not found: ELIBMAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ELIBEXEC
+	CompareConstant(ELIBEXEC,83,117,architecture)
+#else
+Msg( "Error: Constant not found: ELIBEXEC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EILSEQ
+	CompareConstant(EILSEQ,84,118,architecture)
+#else
+Msg( "Error: Constant not found: EILSEQ\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ERESTART
+	CompareConstant(ERESTART,85,119,architecture)
+#else
+Msg( "Error: Constant not found: ERESTART\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ESTRPIPE
+	CompareConstant(ESTRPIPE,86,120,architecture)
+#else
+Msg( "Error: Constant not found: ESTRPIPE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EUSERS
+	CompareConstant(EUSERS,87,121,architecture)
+#else
+Msg( "Error: Constant not found: EUSERS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENOTSOCK
+	CompareConstant(ENOTSOCK,88,122,architecture)
+#else
+Msg( "Error: Constant not found: ENOTSOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EDESTADDRREQ
+	CompareConstant(EDESTADDRREQ,89,123,architecture)
+#else
+Msg( "Error: Constant not found: EDESTADDRREQ\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EMSGSIZE
+	CompareConstant(EMSGSIZE,90,124,architecture)
+#else
+Msg( "Error: Constant not found: EMSGSIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EPROTOTYPE
+	CompareConstant(EPROTOTYPE,91,125,architecture)
+#else
+Msg( "Error: Constant not found: EPROTOTYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENOPROTOOPT
+	CompareConstant(ENOPROTOOPT,92,126,architecture)
+#else
+Msg( "Error: Constant not found: ENOPROTOOPT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EPROTONOSUPPORT
+	CompareConstant(EPROTONOSUPPORT,93,127,architecture)
+#else
+Msg( "Error: Constant not found: EPROTONOSUPPORT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ESOCKTNOSUPPORT
+	CompareConstant(ESOCKTNOSUPPORT,94,128,architecture)
+#else
+Msg( "Error: Constant not found: ESOCKTNOSUPPORT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EOPNOTSUPP
+	CompareConstant(EOPNOTSUPP,95,129,architecture)
+#else
+Msg( "Error: Constant not found: EOPNOTSUPP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EPFNOSUPPORT
+	CompareConstant(EPFNOSUPPORT,96,130,architecture)
+#else
+Msg( "Error: Constant not found: EPFNOSUPPORT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EAFNOSUPPORT
+	CompareConstant(EAFNOSUPPORT,97,131,architecture)
+#else
+Msg( "Error: Constant not found: EAFNOSUPPORT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EADDRINUSE
+	CompareConstant(EADDRINUSE,98,132,architecture)
+#else
+Msg( "Error: Constant not found: EADDRINUSE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EADDRNOTAVAIL
+	CompareConstant(EADDRNOTAVAIL,99,133,architecture)
+#else
+Msg( "Error: Constant not found: EADDRNOTAVAIL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENETDOWN
+	CompareConstant(ENETDOWN,100,134,architecture)
+#else
+Msg( "Error: Constant not found: ENETDOWN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENETUNREACH
+	CompareConstant(ENETUNREACH,101,135,architecture)
+#else
+Msg( "Error: Constant not found: ENETUNREACH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENETRESET
+	CompareConstant(ENETRESET,102,136,architecture)
+#else
+Msg( "Error: Constant not found: ENETRESET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ECONNABORTED
+	CompareConstant(ECONNABORTED,103,137,architecture)
+#else
+Msg( "Error: Constant not found: ECONNABORTED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ECONNRESET
+	CompareConstant(ECONNRESET,104,138,architecture)
+#else
+Msg( "Error: Constant not found: ECONNRESET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENOBUFS
+	CompareConstant(ENOBUFS,105,139,architecture)
+#else
+Msg( "Error: Constant not found: ENOBUFS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef EISCONN
 	CompareConstant(EISCONN,106,140,architecture)
 #else
@@ -648,30 +1048,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef EREMOTE
-	CompareConstant(EREMOTE,66,100,architecture)
-#else
-Msg( "Error: Constant not found: EREMOTE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef ENOMSG
 	CompareConstant(ENOMSG,42,76,architecture)
 #else
 Msg( "Error: Constant not found: ENOMSG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ENOLINK
-	CompareConstant(ENOLINK,67,101,architecture)
-#else
-Msg( "Error: Constant not found: ENOLINK\n");
 cnt++;
 #endif
 
@@ -698,90 +1078,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef EADV
-	CompareConstant(EADV,68,102,architecture)
-#else
-Msg( "Error: Constant not found: EADV\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ESRMNT
-	CompareConstant(ESRMNT,69,103,architecture)
-#else
-Msg( "Error: Constant not found: ESRMNT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef EL2NSYNC
 	CompareConstant(EL2NSYNC,45,79,architecture)
 #else
 Msg( "Error: Constant not found: EL2NSYNC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ECOMM
-	CompareConstant(ECOMM,70,104,architecture)
-#else
-Msg( "Error: Constant not found: ECOMM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EPROTO
-	CompareConstant(EPROTO,71,105,architecture)
-#else
-Msg( "Error: Constant not found: EPROTO\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EMULTIHOP
-	CompareConstant(EMULTIHOP,72,106,architecture)
-#else
-Msg( "Error: Constant not found: EMULTIHOP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EDOTDOT
-	CompareConstant(EDOTDOT,73,107,architecture)
-#else
-Msg( "Error: Constant not found: EDOTDOT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EBADMSG
-	CompareConstant(EBADMSG,74,108,architecture)
-#else
-Msg( "Error: Constant not found: EBADMSG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EOVERFLOW
-	CompareConstant(EOVERFLOW,75,109,architecture)
-#else
-Msg( "Error: Constant not found: EOVERFLOW\n");
 cnt++;
 #endif
 
@@ -828,110 +1128,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef ENOTUNIQ
-	CompareConstant(ENOTUNIQ,76,110,architecture)
-#else
-Msg( "Error: Constant not found: ENOTUNIQ\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EBADFD
-	CompareConstant(EBADFD,77,111,architecture)
-#else
-Msg( "Error: Constant not found: EBADFD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EREMCHG
-	CompareConstant(EREMCHG,78,112,architecture)
-#else
-Msg( "Error: Constant not found: EREMCHG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef ENOANO
 	CompareConstant(ENOANO,55,89,architecture)
 #else
 Msg( "Error: Constant not found: ENOANO\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ELIBACC
-	CompareConstant(ELIBACC,79,113,architecture)
-#else
-Msg( "Error: Constant not found: ELIBACC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ELIBBAD
-	CompareConstant(ELIBBAD,80,114,architecture)
-#else
-Msg( "Error: Constant not found: ELIBBAD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ELIBSCN
-	CompareConstant(ELIBSCN,81,115,architecture)
-#else
-Msg( "Error: Constant not found: ELIBSCN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ELIBMAX
-	CompareConstant(ELIBMAX,82,116,architecture)
-#else
-Msg( "Error: Constant not found: ELIBMAX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ELIBEXEC
-	CompareConstant(ELIBEXEC,83,117,architecture)
-#else
-Msg( "Error: Constant not found: ELIBEXEC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EILSEQ
-	CompareConstant(EILSEQ,84,118,architecture)
-#else
-Msg( "Error: Constant not found: EILSEQ\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ERESTART
-	CompareConstant(ERESTART,85,119,architecture)
-#else
-Msg( "Error: Constant not found: ERESTART\n");
 cnt++;
 #endif
 
@@ -1052,40 +1252,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef ESTRPIPE
-	CompareConstant(ESTRPIPE,86,120,architecture)
-#else
-Msg( "Error: Constant not found: ESTRPIPE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EUSERS
-	CompareConstant(EUSERS,87,121,architecture)
-#else
-Msg( "Error: Constant not found: EUSERS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef ENOSR
 	CompareConstant(ENOSR,63,97,architecture)
 #else
 Msg( "Error: Constant not found: ENOSR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ENOTSOCK
-	CompareConstant(ENOTSOCK,88,122,architecture)
-#else
-Msg( "Error: Constant not found: ENOTSOCK\n");
 cnt++;
 #endif
 
@@ -1106,176 +1276,6 @@ cnt++;
 	CompareConstant(ENOPKG,65,99,architecture)
 #else
 Msg( "Error: Constant not found: ENOPKG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EDESTADDRREQ
-	CompareConstant(EDESTADDRREQ,89,123,architecture)
-#else
-Msg( "Error: Constant not found: EDESTADDRREQ\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EMSGSIZE
-	CompareConstant(EMSGSIZE,90,124,architecture)
-#else
-Msg( "Error: Constant not found: EMSGSIZE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EPROTOTYPE
-	CompareConstant(EPROTOTYPE,91,125,architecture)
-#else
-Msg( "Error: Constant not found: EPROTOTYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ENOPROTOOPT
-	CompareConstant(ENOPROTOOPT,92,126,architecture)
-#else
-Msg( "Error: Constant not found: ENOPROTOOPT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EPROTONOSUPPORT
-	CompareConstant(EPROTONOSUPPORT,93,127,architecture)
-#else
-Msg( "Error: Constant not found: EPROTONOSUPPORT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ESOCKTNOSUPPORT
-	CompareConstant(ESOCKTNOSUPPORT,94,128,architecture)
-#else
-Msg( "Error: Constant not found: ESOCKTNOSUPPORT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EOPNOTSUPP
-	CompareConstant(EOPNOTSUPP,95,129,architecture)
-#else
-Msg( "Error: Constant not found: EOPNOTSUPP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EPFNOSUPPORT
-	CompareConstant(EPFNOSUPPORT,96,130,architecture)
-#else
-Msg( "Error: Constant not found: EPFNOSUPPORT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EAFNOSUPPORT
-	CompareConstant(EAFNOSUPPORT,97,131,architecture)
-#else
-Msg( "Error: Constant not found: EAFNOSUPPORT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EADDRINUSE
-	CompareConstant(EADDRINUSE,98,132,architecture)
-#else
-Msg( "Error: Constant not found: EADDRINUSE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EADDRNOTAVAIL
-	CompareConstant(EADDRNOTAVAIL,99,133,architecture)
-#else
-Msg( "Error: Constant not found: EADDRNOTAVAIL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ENETDOWN
-	CompareConstant(ENETDOWN,100,134,architecture)
-#else
-Msg( "Error: Constant not found: ENETDOWN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ENETUNREACH
-	CompareConstant(ENETUNREACH,101,135,architecture)
-#else
-Msg( "Error: Constant not found: ENETUNREACH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ENETRESET
-	CompareConstant(ENETRESET,102,136,architecture)
-#else
-Msg( "Error: Constant not found: ENETRESET\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ECONNABORTED
-	CompareConstant(ECONNABORTED,103,137,architecture)
-#else
-Msg( "Error: Constant not found: ECONNABORTED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ECONNRESET
-	CompareConstant(ECONNRESET,104,138,architecture)
-#else
-Msg( "Error: Constant not found: ECONNRESET\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ENOBUFS
-	CompareConstant(ENOBUFS,105,139,architecture)
-#else
-Msg( "Error: Constant not found: ENOBUFS\n");
 cnt++;
 #endif
 

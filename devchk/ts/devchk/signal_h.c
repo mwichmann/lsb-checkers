@@ -24,6 +24,46 @@ Msg("Checking data structures in signal.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef NSIG
+	CompareConstant(NSIG,64,2460,architecture)
+#else
+Msg( "Error: Constant not found: NSIG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SV_ONSTACK
+	CompareConstant(SV_ONSTACK,(1<<0),2462,architecture)
+#else
+Msg( "Error: Constant not found: SV_ONSTACK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SV_INTERRUPT
+	CompareConstant(SV_INTERRUPT,(1<<1),2463,architecture)
+#else
+Msg( "Error: Constant not found: SV_INTERRUPT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SV_RESETHAND
+	CompareConstant(SV_RESETHAND,(1<<2),2464,architecture)
+#else
+Msg( "Error: Constant not found: SV_RESETHAND\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SIGHUP
 	CompareConstant(SIGHUP,1,3102,architecture)
 #else
@@ -294,30 +334,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SIGEV_NONE
-	CompareConstant(SIGEV_NONE,1,4868,architecture)
-#else
-Msg( "Error: Constant not found: SIGEV_NONE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef SIGVTALRM
 	CompareConstant(SIGVTALRM,26,3129,architecture)
 #else
 Msg( "Error: Constant not found: SIGVTALRM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SIGEV_SIGNAL
-	CompareConstant(SIGEV_SIGNAL,0,4869,architecture)
-#else
-Msg( "Error: Constant not found: SIGEV_SIGNAL\n");
 cnt++;
 #endif
 
@@ -334,30 +354,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SIGEV_THREAD
-	CompareConstant(SIGEV_THREAD,2,4870,architecture)
-#else
-Msg( "Error: Constant not found: SIGEV_THREAD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef SIGWINCH
 	CompareConstant(SIGWINCH,28,3131,architecture)
 #else
 Msg( "Error: Constant not found: SIGWINCH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SI_ASYNCIO
-	CompareConstant(SI_ASYNCIO,-4,4871,architecture)
-#else
-Msg( "Error: Constant not found: SI_ASYNCIO\n");
 cnt++;
 #endif
 
@@ -374,30 +374,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SI_MESGQ
-	CompareConstant(SI_MESGQ,-3,4872,architecture)
-#else
-Msg( "Error: Constant not found: SI_MESGQ\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef SIGPOLL
 	CompareConstant(SIGPOLL,SIGIO,3133,architecture)
 #else
 Msg( "Error: Constant not found: SIGPOLL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SI_QUEUE
-	CompareConstant(SI_QUEUE,-1,4873,architecture)
-#else
-Msg( "Error: Constant not found: SI_QUEUE\n");
 cnt++;
 #endif
 
@@ -414,30 +394,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SI_TIMER
-	CompareConstant(SI_TIMER,-2,4874,architecture)
-#else
-Msg( "Error: Constant not found: SI_TIMER\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef SIGSYS
 	CompareConstant(SIGSYS,31,3135,architecture)
 #else
 Msg( "Error: Constant not found: SIGSYS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SI_USER
-	CompareConstant(SI_USER,0,4875,architecture)
-#else
-Msg( "Error: Constant not found: SI_USER\n");
 cnt++;
 #endif
 
@@ -668,51 +628,91 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SIGEV_NONE
+	CompareConstant(SIGEV_NONE,1,4868,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_NONE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIGEV_SIGNAL
+	CompareConstant(SIGEV_SIGNAL,0,4869,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_SIGNAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIGEV_THREAD
+	CompareConstant(SIGEV_THREAD,2,4870,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_THREAD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_ASYNCIO
+	CompareConstant(SI_ASYNCIO,-4,4871,architecture)
+#else
+Msg( "Error: Constant not found: SI_ASYNCIO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_MESGQ
+	CompareConstant(SI_MESGQ,-3,4872,architecture)
+#else
+Msg( "Error: Constant not found: SI_MESGQ\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_QUEUE
+	CompareConstant(SI_QUEUE,-1,4873,architecture)
+#else
+Msg( "Error: Constant not found: SI_QUEUE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_TIMER
+	CompareConstant(SI_TIMER,-2,4874,architecture)
+#else
+Msg( "Error: Constant not found: SI_TIMER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_USER
+	CompareConstant(SI_USER,0,4875,architecture)
+#else
+Msg( "Error: Constant not found: SI_USER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for si_timer1 */
 #endif
 
 #if _LSB_DEFAULT_ARCH
 /* No test for si_timer2 */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef NSIG
-	CompareConstant(NSIG,64,2460,architecture)
-#else
-Msg( "Error: Constant not found: NSIG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SV_ONSTACK
-	CompareConstant(SV_ONSTACK,(1<<0),2462,architecture)
-#else
-Msg( "Error: Constant not found: SV_ONSTACK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SV_INTERRUPT
-	CompareConstant(SV_INTERRUPT,(1<<1),2463,architecture)
-#else
-Msg( "Error: Constant not found: SV_INTERRUPT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SV_RESETHAND
-	CompareConstant(SV_RESETHAND,(1<<2),2464,architecture)
-#else
-Msg( "Error: Constant not found: SV_RESETHAND\n");
-cnt++;
-#endif
-
 #endif
 
 #if __i386__

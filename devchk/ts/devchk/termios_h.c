@@ -26,6 +26,1238 @@ Msg("Checking data structures in termios.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef NCCS
+	CompareConstant(NCCS,32,1776,architecture)
+#else
+Msg( "Error: Constant not found: NCCS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef VINTR
+	CompareConstant(VINTR,0,1777,architecture)
+#else
+Msg( "Error: Constant not found: VINTR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef VQUIT
+	CompareConstant(VQUIT,1,1778,architecture)
+#else
+Msg( "Error: Constant not found: VQUIT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef VERASE
+	CompareConstant(VERASE,2,1779,architecture)
+#else
+Msg( "Error: Constant not found: VERASE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef VKILL
+	CompareConstant(VKILL,3,1780,architecture)
+#else
+Msg( "Error: Constant not found: VKILL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef VEOF
+	CompareConstant(VEOF,4,1781,architecture)
+#else
+Msg( "Error: Constant not found: VEOF\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef VTIME
+	CompareConstant(VTIME,7,1782,architecture)
+#else
+Msg( "Error: Constant not found: VTIME\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VTIME
+	CompareConstant(VTIME,7,1782,architecture)
+#else
+Msg( "Error: Constant not found: VTIME\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VTIME
+	CompareConstant(VTIME,5,1782,architecture)
+#else
+Msg( "Error: Constant not found: VTIME\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VTIME
+	CompareConstant(VTIME,5,1782,architecture)
+#else
+Msg( "Error: Constant not found: VTIME\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VTIME
+	CompareConstant(VTIME,5,1782,architecture)
+#else
+Msg( "Error: Constant not found: VTIME\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VTIME
+	CompareConstant(VTIME,5,1782,architecture)
+#else
+Msg( "Error: Constant not found: VTIME\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VTIME (1782, int) in db\n");
+#ifdef VTIME
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1782,%d);\n", architecture, VTIME);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VMIN
+	CompareConstant(VMIN,5,1783,architecture)
+#else
+Msg( "Error: Constant not found: VMIN\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VMIN
+	CompareConstant(VMIN,5,1783,architecture)
+#else
+Msg( "Error: Constant not found: VMIN\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VMIN
+	CompareConstant(VMIN,6,1783,architecture)
+#else
+Msg( "Error: Constant not found: VMIN\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VMIN
+	CompareConstant(VMIN,6,1783,architecture)
+#else
+Msg( "Error: Constant not found: VMIN\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VMIN
+	CompareConstant(VMIN,6,1783,architecture)
+#else
+Msg( "Error: Constant not found: VMIN\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VMIN
+	CompareConstant(VMIN,6,1783,architecture)
+#else
+Msg( "Error: Constant not found: VMIN\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VMIN (1783, int) in db\n");
+#ifdef VMIN
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1783,%d);\n", architecture, VMIN);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VSWTC
+	CompareConstant(VSWTC,9,1784,architecture)
+#else
+Msg( "Error: Constant not found: VSWTC\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VSWTC
+	CompareConstant(VSWTC,9,1784,architecture)
+#else
+Msg( "Error: Constant not found: VSWTC\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VSWTC
+	CompareConstant(VSWTC,7,1784,architecture)
+#else
+Msg( "Error: Constant not found: VSWTC\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VSWTC
+	CompareConstant(VSWTC,7,1784,architecture)
+#else
+Msg( "Error: Constant not found: VSWTC\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VSWTC
+	CompareConstant(VSWTC,7,1784,architecture)
+#else
+Msg( "Error: Constant not found: VSWTC\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VSWTC
+	CompareConstant(VSWTC,7,1784,architecture)
+#else
+Msg( "Error: Constant not found: VSWTC\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VSWTC (1784, int) in db\n");
+#ifdef VSWTC
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1784,%d);\n", architecture, VSWTC);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VSTART
+	CompareConstant(VSTART,13,1785,architecture)
+#else
+Msg( "Error: Constant not found: VSTART\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VSTART
+	CompareConstant(VSTART,13,1785,architecture)
+#else
+Msg( "Error: Constant not found: VSTART\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VSTART
+	CompareConstant(VSTART,8,1785,architecture)
+#else
+Msg( "Error: Constant not found: VSTART\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VSTART
+	CompareConstant(VSTART,8,1785,architecture)
+#else
+Msg( "Error: Constant not found: VSTART\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VSTART
+	CompareConstant(VSTART,8,1785,architecture)
+#else
+Msg( "Error: Constant not found: VSTART\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VSTART
+	CompareConstant(VSTART,8,1785,architecture)
+#else
+Msg( "Error: Constant not found: VSTART\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VSTART (1785, int) in db\n");
+#ifdef VSTART
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1785,%d);\n", architecture, VSTART);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VSTOP
+	CompareConstant(VSTOP,14,1786,architecture)
+#else
+Msg( "Error: Constant not found: VSTOP\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VSTOP
+	CompareConstant(VSTOP,14,1786,architecture)
+#else
+Msg( "Error: Constant not found: VSTOP\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VSTOP
+	CompareConstant(VSTOP,9,1786,architecture)
+#else
+Msg( "Error: Constant not found: VSTOP\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VSTOP
+	CompareConstant(VSTOP,9,1786,architecture)
+#else
+Msg( "Error: Constant not found: VSTOP\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VSTOP
+	CompareConstant(VSTOP,9,1786,architecture)
+#else
+Msg( "Error: Constant not found: VSTOP\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VSTOP
+	CompareConstant(VSTOP,9,1786,architecture)
+#else
+Msg( "Error: Constant not found: VSTOP\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VSTOP (1786, int) in db\n");
+#ifdef VSTOP
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1786,%d);\n", architecture, VSTOP);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VSUSP
+	CompareConstant(VSUSP,12,1787,architecture)
+#else
+Msg( "Error: Constant not found: VSUSP\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VSUSP
+	CompareConstant(VSUSP,12,1787,architecture)
+#else
+Msg( "Error: Constant not found: VSUSP\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VSUSP
+	CompareConstant(VSUSP,10,1787,architecture)
+#else
+Msg( "Error: Constant not found: VSUSP\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VSUSP
+	CompareConstant(VSUSP,10,1787,architecture)
+#else
+Msg( "Error: Constant not found: VSUSP\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VSUSP
+	CompareConstant(VSUSP,10,1787,architecture)
+#else
+Msg( "Error: Constant not found: VSUSP\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VSUSP
+	CompareConstant(VSUSP,10,1787,architecture)
+#else
+Msg( "Error: Constant not found: VSUSP\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VSUSP (1787, int) in db\n");
+#ifdef VSUSP
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1787,%d);\n", architecture, VSUSP);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VEOL
+	CompareConstant(VEOL,6,1788,architecture)
+#else
+Msg( "Error: Constant not found: VEOL\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VEOL
+	CompareConstant(VEOL,6,1788,architecture)
+#else
+Msg( "Error: Constant not found: VEOL\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VEOL
+	CompareConstant(VEOL,11,1788,architecture)
+#else
+Msg( "Error: Constant not found: VEOL\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VEOL
+	CompareConstant(VEOL,11,1788,architecture)
+#else
+Msg( "Error: Constant not found: VEOL\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VEOL
+	CompareConstant(VEOL,11,1788,architecture)
+#else
+Msg( "Error: Constant not found: VEOL\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VEOL
+	CompareConstant(VEOL,11,1788,architecture)
+#else
+Msg( "Error: Constant not found: VEOL\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VEOL (1788, int) in db\n");
+#ifdef VEOL
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1788,%d);\n", architecture, VEOL);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VREPRINT
+	CompareConstant(VREPRINT,11,1789,architecture)
+#else
+Msg( "Error: Constant not found: VREPRINT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VREPRINT
+	CompareConstant(VREPRINT,11,1789,architecture)
+#else
+Msg( "Error: Constant not found: VREPRINT\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VREPRINT
+	CompareConstant(VREPRINT,12,1789,architecture)
+#else
+Msg( "Error: Constant not found: VREPRINT\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VREPRINT
+	CompareConstant(VREPRINT,12,1789,architecture)
+#else
+Msg( "Error: Constant not found: VREPRINT\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VREPRINT
+	CompareConstant(VREPRINT,12,1789,architecture)
+#else
+Msg( "Error: Constant not found: VREPRINT\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VREPRINT
+	CompareConstant(VREPRINT,12,1789,architecture)
+#else
+Msg( "Error: Constant not found: VREPRINT\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VREPRINT (1789, int) in db\n");
+#ifdef VREPRINT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1789,%d);\n", architecture, VREPRINT);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VDISCARD
+	CompareConstant(VDISCARD,16,1790,architecture)
+#else
+Msg( "Error: Constant not found: VDISCARD\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VDISCARD
+	CompareConstant(VDISCARD,16,1790,architecture)
+#else
+Msg( "Error: Constant not found: VDISCARD\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VDISCARD
+	CompareConstant(VDISCARD,13,1790,architecture)
+#else
+Msg( "Error: Constant not found: VDISCARD\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VDISCARD
+	CompareConstant(VDISCARD,13,1790,architecture)
+#else
+Msg( "Error: Constant not found: VDISCARD\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VDISCARD
+	CompareConstant(VDISCARD,13,1790,architecture)
+#else
+Msg( "Error: Constant not found: VDISCARD\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VDISCARD
+	CompareConstant(VDISCARD,13,1790,architecture)
+#else
+Msg( "Error: Constant not found: VDISCARD\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VDISCARD (1790, int) in db\n");
+#ifdef VDISCARD
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1790,%d);\n", architecture, VDISCARD);
+#endif
+#endif
+#if __powerpc64__
+#ifdef VWERASE
+	CompareConstant(VWERASE,10,1791,architecture)
+#else
+Msg( "Error: Constant not found: VWERASE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VWERASE
+	CompareConstant(VWERASE,10,1791,architecture)
+#else
+Msg( "Error: Constant not found: VWERASE\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VWERASE
+	CompareConstant(VWERASE,14,1791,architecture)
+#else
+Msg( "Error: Constant not found: VWERASE\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VWERASE
+	CompareConstant(VWERASE,14,1791,architecture)
+#else
+Msg( "Error: Constant not found: VWERASE\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VWERASE
+	CompareConstant(VWERASE,14,1791,architecture)
+#else
+Msg( "Error: Constant not found: VWERASE\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VWERASE
+	CompareConstant(VWERASE,14,1791,architecture)
+#else
+Msg( "Error: Constant not found: VWERASE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VWERASE (1791, int) in db\n");
+#ifdef VWERASE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1791,%d);\n", architecture, VWERASE);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+#ifdef VLNEXT
+	CompareConstant(VLNEXT,15,1792,architecture)
+#else
+Msg( "Error: Constant not found: VLNEXT\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef VEOL2
+	CompareConstant(VEOL2,8,1793,architecture)
+#else
+Msg( "Error: Constant not found: VEOL2\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef VEOL2
+	CompareConstant(VEOL2,8,1793,architecture)
+#else
+Msg( "Error: Constant not found: VEOL2\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef VEOL2
+	CompareConstant(VEOL2,16,1793,architecture)
+#else
+Msg( "Error: Constant not found: VEOL2\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef VEOL2
+	CompareConstant(VEOL2,16,1793,architecture)
+#else
+Msg( "Error: Constant not found: VEOL2\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef VEOL2
+	CompareConstant(VEOL2,16,1793,architecture)
+#else
+Msg( "Error: Constant not found: VEOL2\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef VEOL2
+	CompareConstant(VEOL2,16,1793,architecture)
+#else
+Msg( "Error: Constant not found: VEOL2\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for VEOL2 (1793, int) in db\n");
+#ifdef VEOL2
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1793,%d);\n", architecture, VEOL2);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+#ifdef IGNBRK
+	CompareConstant(IGNBRK,0000001,1794,architecture)
+#else
+Msg( "Error: Constant not found: IGNBRK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BRKINT
+	CompareConstant(BRKINT,0000002,1795,architecture)
+#else
+Msg( "Error: Constant not found: BRKINT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IGNPAR
+	CompareConstant(IGNPAR,0000004,1796,architecture)
+#else
+Msg( "Error: Constant not found: IGNPAR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PARMRK
+	CompareConstant(PARMRK,0000010,1797,architecture)
+#else
+Msg( "Error: Constant not found: PARMRK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef INPCK
+	CompareConstant(INPCK,0000020,1798,architecture)
+#else
+Msg( "Error: Constant not found: INPCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ISTRIP
+	CompareConstant(ISTRIP,0000040,1799,architecture)
+#else
+Msg( "Error: Constant not found: ISTRIP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef INLCR
+	CompareConstant(INLCR,0000100,1800,architecture)
+#else
+Msg( "Error: Constant not found: INLCR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IGNCR
+	CompareConstant(IGNCR,0000200,1801,architecture)
+#else
+Msg( "Error: Constant not found: IGNCR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ICRNL
+	CompareConstant(ICRNL,0000400,1802,architecture)
+#else
+Msg( "Error: Constant not found: ICRNL\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef IUCLC
+	CompareConstant(IUCLC,4096,1803,architecture)
+#else
+Msg( "Error: Constant not found: IUCLC\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef IUCLC
+	CompareConstant(IUCLC,4096,1803,architecture)
+#else
+Msg( "Error: Constant not found: IUCLC\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef IUCLC
+	CompareConstant(IUCLC,0001000,1803,architecture)
+#else
+Msg( "Error: Constant not found: IUCLC\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef IUCLC
+	CompareConstant(IUCLC,0001000,1803,architecture)
+#else
+Msg( "Error: Constant not found: IUCLC\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef IUCLC
+	CompareConstant(IUCLC,0001000,1803,architecture)
+#else
+Msg( "Error: Constant not found: IUCLC\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef IUCLC
+	CompareConstant(IUCLC,0001000,1803,architecture)
+#else
+Msg( "Error: Constant not found: IUCLC\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for IUCLC (1803, int) in db\n");
+#ifdef IUCLC
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1803,%d);\n", architecture, IUCLC);
+#endif
+#endif
+#if __powerpc64__
+#ifdef IXON
+	CompareConstant(IXON,512,1804,architecture)
+#else
+Msg( "Error: Constant not found: IXON\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef IXON
+	CompareConstant(IXON,512,1804,architecture)
+#else
+Msg( "Error: Constant not found: IXON\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef IXON
+	CompareConstant(IXON,0002000,1804,architecture)
+#else
+Msg( "Error: Constant not found: IXON\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef IXON
+	CompareConstant(IXON,0002000,1804,architecture)
+#else
+Msg( "Error: Constant not found: IXON\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef IXON
+	CompareConstant(IXON,0002000,1804,architecture)
+#else
+Msg( "Error: Constant not found: IXON\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef IXON
+	CompareConstant(IXON,0002000,1804,architecture)
+#else
+Msg( "Error: Constant not found: IXON\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for IXON (1804, int) in db\n");
+#ifdef IXON
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1804,%d);\n", architecture, IXON);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+#ifdef IXANY
+	CompareConstant(IXANY,0004000,1805,architecture)
+#else
+Msg( "Error: Constant not found: IXANY\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef IXOFF
+	CompareConstant(IXOFF,1024,1806,architecture)
+#else
+Msg( "Error: Constant not found: IXOFF\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef IXOFF
+	CompareConstant(IXOFF,1024,1806,architecture)
+#else
+Msg( "Error: Constant not found: IXOFF\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef IXOFF
+	CompareConstant(IXOFF,0010000,1806,architecture)
+#else
+Msg( "Error: Constant not found: IXOFF\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef IXOFF
+	CompareConstant(IXOFF,0010000,1806,architecture)
+#else
+Msg( "Error: Constant not found: IXOFF\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef IXOFF
+	CompareConstant(IXOFF,0010000,1806,architecture)
+#else
+Msg( "Error: Constant not found: IXOFF\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef IXOFF
+	CompareConstant(IXOFF,0010000,1806,architecture)
+#else
+Msg( "Error: Constant not found: IXOFF\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for IXOFF (1806, int) in db\n");
+#ifdef IXOFF
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1806,%d);\n", architecture, IXOFF);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+#ifdef IMAXBEL
+	CompareConstant(IMAXBEL,0020000,1807,architecture)
+#else
+Msg( "Error: Constant not found: IMAXBEL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef OPOST
+	CompareConstant(OPOST,0000001,1808,architecture)
+#else
+Msg( "Error: Constant not found: OPOST\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef OLCUC
+	CompareConstant(OLCUC,4,1809,architecture)
+#else
+Msg( "Error: Constant not found: OLCUC\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef OLCUC
+	CompareConstant(OLCUC,4,1809,architecture)
+#else
+Msg( "Error: Constant not found: OLCUC\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef OLCUC
+	CompareConstant(OLCUC,0000002,1809,architecture)
+#else
+Msg( "Error: Constant not found: OLCUC\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef OLCUC
+	CompareConstant(OLCUC,0000002,1809,architecture)
+#else
+Msg( "Error: Constant not found: OLCUC\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef OLCUC
+	CompareConstant(OLCUC,0000002,1809,architecture)
+#else
+Msg( "Error: Constant not found: OLCUC\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef OLCUC
+	CompareConstant(OLCUC,0000002,1809,architecture)
+#else
+Msg( "Error: Constant not found: OLCUC\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for OLCUC (1809, int) in db\n");
+#ifdef OLCUC
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1809,%d);\n", architecture, OLCUC);
+#endif
+#endif
+#if __powerpc64__
+#ifdef ONLCR
+	CompareConstant(ONLCR,2,1810,architecture)
+#else
+Msg( "Error: Constant not found: ONLCR\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef ONLCR
+	CompareConstant(ONLCR,2,1810,architecture)
+#else
+Msg( "Error: Constant not found: ONLCR\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef ONLCR
+	CompareConstant(ONLCR,0000004,1810,architecture)
+#else
+Msg( "Error: Constant not found: ONLCR\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef ONLCR
+	CompareConstant(ONLCR,0000004,1810,architecture)
+#else
+Msg( "Error: Constant not found: ONLCR\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef ONLCR
+	CompareConstant(ONLCR,0000004,1810,architecture)
+#else
+Msg( "Error: Constant not found: ONLCR\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef ONLCR
+	CompareConstant(ONLCR,0000004,1810,architecture)
+#else
+Msg( "Error: Constant not found: ONLCR\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for ONLCR (1810, int) in db\n");
+#ifdef ONLCR
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1810,%d);\n", architecture, ONLCR);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+#ifdef OCRNL
+	CompareConstant(OCRNL,0000010,1811,architecture)
+#else
+Msg( "Error: Constant not found: OCRNL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ONOCR
+	CompareConstant(ONOCR,0000020,1812,architecture)
+#else
+Msg( "Error: Constant not found: ONOCR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ONLRET
+	CompareConstant(ONLRET,0000040,1813,architecture)
+#else
+Msg( "Error: Constant not found: ONLRET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef OFILL
+	CompareConstant(OFILL,0000100,1814,architecture)
+#else
+Msg( "Error: Constant not found: OFILL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef OFDEL
+	CompareConstant(OFDEL,0000200,1815,architecture)
+#else
+Msg( "Error: Constant not found: OFDEL\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef NLDLY
+	CompareConstant(NLDLY,768,1816,architecture)
+#else
+Msg( "Error: Constant not found: NLDLY\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef NLDLY
+	CompareConstant(NLDLY,768,1816,architecture)
+#else
+Msg( "Error: Constant not found: NLDLY\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef NLDLY
+	CompareConstant(NLDLY,0000400,1816,architecture)
+#else
+Msg( "Error: Constant not found: NLDLY\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef NLDLY
+	CompareConstant(NLDLY,0000400,1816,architecture)
+#else
+Msg( "Error: Constant not found: NLDLY\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef NLDLY
+	CompareConstant(NLDLY,0000400,1816,architecture)
+#else
+Msg( "Error: Constant not found: NLDLY\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef NLDLY
+	CompareConstant(NLDLY,0000400,1816,architecture)
+#else
+Msg( "Error: Constant not found: NLDLY\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for NLDLY (1816, int) in db\n");
+#ifdef NLDLY
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1816,%d);\n", architecture, NLDLY);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+#ifdef NL0
+	CompareConstant(NL0,0000000,1817,architecture)
+#else
+Msg( "Error: Constant not found: NL0\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef NL1
+	CompareConstant(NL1,0000400,1818,architecture)
+#else
+Msg( "Error: Constant not found: NL1\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef CRDLY
+	CompareConstant(CRDLY,12288,1819,architecture)
+#else
+Msg( "Error: Constant not found: CRDLY\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef CRDLY
+	CompareConstant(CRDLY,12288,1819,architecture)
+#else
+Msg( "Error: Constant not found: CRDLY\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef CRDLY
+	CompareConstant(CRDLY,0003000,1819,architecture)
+#else
+Msg( "Error: Constant not found: CRDLY\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef CRDLY
+	CompareConstant(CRDLY,0003000,1819,architecture)
+#else
+Msg( "Error: Constant not found: CRDLY\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef CRDLY
+	CompareConstant(CRDLY,0003000,1819,architecture)
+#else
+Msg( "Error: Constant not found: CRDLY\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef CRDLY
+	CompareConstant(CRDLY,0003000,1819,architecture)
+#else
+Msg( "Error: Constant not found: CRDLY\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for CRDLY (1819, int) in db\n");
+#ifdef CRDLY
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1819,%d);\n", architecture, CRDLY);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
 #ifdef CR0
 	CompareConstant(CR0,0000000,1820,architecture)
 #else
@@ -477,193 +1709,11 @@ Msg( "No definition for BSDLY (1829, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1829,%d);\n", architecture, BSDLY);
 #endif
 #endif
-#if __powerpc64__
-#ifdef FLUSHO
-	CompareConstant(FLUSHO,8388608,1900,architecture)
-#else
-Msg( "Error: Constant not found: FLUSHO\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef FLUSHO
-	CompareConstant(FLUSHO,8388608,1900,architecture)
-#else
-Msg( "Error: Constant not found: FLUSHO\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef FLUSHO
-	CompareConstant(FLUSHO,0010000,1900,architecture)
-#else
-Msg( "Error: Constant not found: FLUSHO\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef FLUSHO
-	CompareConstant(FLUSHO,0010000,1900,architecture)
-#else
-Msg( "Error: Constant not found: FLUSHO\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef FLUSHO
-	CompareConstant(FLUSHO,0010000,1900,architecture)
-#else
-Msg( "Error: Constant not found: FLUSHO\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef FLUSHO
-	CompareConstant(FLUSHO,0010000,1900,architecture)
-#else
-Msg( "Error: Constant not found: FLUSHO\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for FLUSHO (1900, int) in db\n");
-#ifdef FLUSHO
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1900,%d);\n", architecture, FLUSHO);
-#endif
-#endif
-#if __powerpc64__
-#ifdef PENDIN
-	CompareConstant(PENDIN,536870912,1901,architecture)
-#else
-Msg( "Error: Constant not found: PENDIN\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef PENDIN
-	CompareConstant(PENDIN,536870912,1901,architecture)
-#else
-Msg( "Error: Constant not found: PENDIN\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef PENDIN
-	CompareConstant(PENDIN,0040000,1901,architecture)
-#else
-Msg( "Error: Constant not found: PENDIN\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef PENDIN
-	CompareConstant(PENDIN,0040000,1901,architecture)
-#else
-Msg( "Error: Constant not found: PENDIN\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef PENDIN
-	CompareConstant(PENDIN,0040000,1901,architecture)
-#else
-Msg( "Error: Constant not found: PENDIN\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef PENDIN
-	CompareConstant(PENDIN,0040000,1901,architecture)
-#else
-Msg( "Error: Constant not found: PENDIN\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for PENDIN (1901, int) in db\n");
-#ifdef PENDIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1901,%d);\n", architecture, PENDIN);
-#endif
-#endif
-#if __powerpc64__
-#ifdef IEXTEN
-	CompareConstant(IEXTEN,1024,1902,architecture)
-#else
-Msg( "Error: Constant not found: IEXTEN\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef IEXTEN
-	CompareConstant(IEXTEN,1024,1902,architecture)
-#else
-Msg( "Error: Constant not found: IEXTEN\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef IEXTEN
-	CompareConstant(IEXTEN,0100000,1902,architecture)
-#else
-Msg( "Error: Constant not found: IEXTEN\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef IEXTEN
-	CompareConstant(IEXTEN,0100000,1902,architecture)
-#else
-Msg( "Error: Constant not found: IEXTEN\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef IEXTEN
-	CompareConstant(IEXTEN,0100000,1902,architecture)
-#else
-Msg( "Error: Constant not found: IEXTEN\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef IEXTEN
-	CompareConstant(IEXTEN,0100000,1902,architecture)
-#else
-Msg( "Error: Constant not found: IEXTEN\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for IEXTEN (1902, int) in db\n");
-#ifdef IEXTEN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1902,%d);\n", architecture, IEXTEN);
-#endif
-#endif
-#if _LSB_DEFAULT_ARCH
-#ifdef TCOOFF
-	CompareConstant(TCOOFF,0,1903,architecture)
-#else
-Msg( "Error: Constant not found: TCOOFF\n");
-cnt++;
-#endif
-
-#endif
-
 #if _LSB_DEFAULT_ARCH
 #ifdef BS0
 	CompareConstant(BS0,0000000,1830,architecture)
 #else
 Msg( "Error: Constant not found: BS0\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef TCOON
-	CompareConstant(TCOON,1,1904,architecture)
-#else
-Msg( "Error: Constant not found: TCOON\n");
 cnt++;
 #endif
 
@@ -723,16 +1773,6 @@ Msg( "No definition for BS1 (1831, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1831,%d);\n", architecture, BS1);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
-#ifdef TCIOFF
-	CompareConstant(TCIOFF,2,1905,architecture)
-#else
-Msg( "Error: Constant not found: TCIOFF\n");
-cnt++;
-#endif
-
-#endif
-
 #if __powerpc64__
 #ifdef FFDLY
 	CompareConstant(FFDLY,16384,1832,architecture)
@@ -788,30 +1828,10 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1832,%d);\n", arch
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-#ifdef TCION
-	CompareConstant(TCION,3,1906,architecture)
-#else
-Msg( "Error: Constant not found: TCION\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef FF0
 	CompareConstant(FF0,0000000,1833,architecture)
 #else
 Msg( "Error: Constant not found: FF0\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef TCIFLUSH
-	CompareConstant(TCIFLUSH,0,1907,architecture)
-#else
-Msg( "Error: Constant not found: TCIFLUSH\n");
 cnt++;
 #endif
 
@@ -926,30 +1946,10 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1835,%d);\n", arch
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-#ifdef TCOFLUSH
-	CompareConstant(TCOFLUSH,1,1908,architecture)
-#else
-Msg( "Error: Constant not found: TCOFLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef VT0
 	CompareConstant(VT0,0000000,1836,architecture)
 #else
 Msg( "Error: Constant not found: VT0\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef TCIOFLUSH
-	CompareConstant(TCIOFLUSH,2,1909,architecture)
-#else
-Msg( "Error: Constant not found: TCIOFLUSH\n");
 cnt++;
 #endif
 
@@ -1009,36 +2009,6 @@ Msg( "No definition for VT1 (1837, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1837,%d);\n", architecture, VT1);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
-#ifdef TCSANOW
-	CompareConstant(TCSANOW,0,1910,architecture)
-#else
-Msg( "Error: Constant not found: TCSANOW\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef TCSADRAIN
-	CompareConstant(TCSADRAIN,1,1911,architecture)
-#else
-Msg( "Error: Constant not found: TCSADRAIN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef TCSAFLUSH
-	CompareConstant(TCSAFLUSH,2,1912,architecture)
-#else
-Msg( "Error: Constant not found: TCSAFLUSH\n");
-cnt++;
-#endif
-
-#endif
-
 #if _LSB_DEFAULT_ARCH
 #ifdef B0
 	CompareConstant(B0,0000000,1840,architecture)
@@ -1130,50 +2100,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef NCCS
-	CompareConstant(NCCS,32,1776,architecture)
-#else
-Msg( "Error: Constant not found: NCCS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef B1200
 	CompareConstant(B1200,0000011,1849,architecture)
 #else
 Msg( "Error: Constant not found: B1200\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef VINTR
-	CompareConstant(VINTR,0,1777,architecture)
-#else
-Msg( "Error: Constant not found: VINTR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef VQUIT
-	CompareConstant(VQUIT,1,1778,architecture)
-#else
-Msg( "Error: Constant not found: VQUIT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef VERASE
-	CompareConstant(VERASE,2,1779,architecture)
-#else
-Msg( "Error: Constant not found: VERASE\n");
 cnt++;
 #endif
 
@@ -1220,30 +2150,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef VKILL
-	CompareConstant(VKILL,3,1780,architecture)
-#else
-Msg( "Error: Constant not found: VKILL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef B19200
 	CompareConstant(B19200,0000016,1854,architecture)
 #else
 Msg( "Error: Constant not found: B19200\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef VEOF
-	CompareConstant(VEOF,4,1781,architecture)
-#else
-Msg( "Error: Constant not found: VEOF\n");
 cnt++;
 #endif
 
@@ -1259,168 +2169,6 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
-#ifdef VTIME
-	CompareConstant(VTIME,7,1782,architecture)
-#else
-Msg( "Error: Constant not found: VTIME\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VTIME
-	CompareConstant(VTIME,7,1782,architecture)
-#else
-Msg( "Error: Constant not found: VTIME\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VTIME
-	CompareConstant(VTIME,5,1782,architecture)
-#else
-Msg( "Error: Constant not found: VTIME\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VTIME
-	CompareConstant(VTIME,5,1782,architecture)
-#else
-Msg( "Error: Constant not found: VTIME\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VTIME
-	CompareConstant(VTIME,5,1782,architecture)
-#else
-Msg( "Error: Constant not found: VTIME\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VTIME
-	CompareConstant(VTIME,5,1782,architecture)
-#else
-Msg( "Error: Constant not found: VTIME\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VTIME (1782, int) in db\n");
-#ifdef VTIME
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1782,%d);\n", architecture, VTIME);
-#endif
-#endif
-#if __powerpc64__
-#ifdef VMIN
-	CompareConstant(VMIN,5,1783,architecture)
-#else
-Msg( "Error: Constant not found: VMIN\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VMIN
-	CompareConstant(VMIN,5,1783,architecture)
-#else
-Msg( "Error: Constant not found: VMIN\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VMIN
-	CompareConstant(VMIN,6,1783,architecture)
-#else
-Msg( "Error: Constant not found: VMIN\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VMIN
-	CompareConstant(VMIN,6,1783,architecture)
-#else
-Msg( "Error: Constant not found: VMIN\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VMIN
-	CompareConstant(VMIN,6,1783,architecture)
-#else
-Msg( "Error: Constant not found: VMIN\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VMIN
-	CompareConstant(VMIN,6,1783,architecture)
-#else
-Msg( "Error: Constant not found: VMIN\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VMIN (1783, int) in db\n");
-#ifdef VMIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1783,%d);\n", architecture, VMIN);
-#endif
-#endif
-#if __powerpc64__
-#ifdef VSWTC
-	CompareConstant(VSWTC,9,1784,architecture)
-#else
-Msg( "Error: Constant not found: VSWTC\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VSWTC
-	CompareConstant(VSWTC,9,1784,architecture)
-#else
-Msg( "Error: Constant not found: VSWTC\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VSWTC
-	CompareConstant(VSWTC,7,1784,architecture)
-#else
-Msg( "Error: Constant not found: VSWTC\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VSWTC
-	CompareConstant(VSWTC,7,1784,architecture)
-#else
-Msg( "Error: Constant not found: VSWTC\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VSWTC
-	CompareConstant(VSWTC,7,1784,architecture)
-#else
-Msg( "Error: Constant not found: VSWTC\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VSWTC
-	CompareConstant(VSWTC,7,1784,architecture)
-#else
-Msg( "Error: Constant not found: VSWTC\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VSWTC (1784, int) in db\n");
-#ifdef VSWTC
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1784,%d);\n", architecture, VSWTC);
-#endif
-#endif
 #if __powerpc64__
 #ifdef CSIZE
 	CompareConstant(CSIZE,768,1858,architecture)
@@ -1475,60 +2223,6 @@ Msg( "No definition for CSIZE (1858, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1858,%d);\n", architecture, CSIZE);
 #endif
 #endif
-#if __powerpc64__
-#ifdef VSTART
-	CompareConstant(VSTART,13,1785,architecture)
-#else
-Msg( "Error: Constant not found: VSTART\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VSTART
-	CompareConstant(VSTART,13,1785,architecture)
-#else
-Msg( "Error: Constant not found: VSTART\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VSTART
-	CompareConstant(VSTART,8,1785,architecture)
-#else
-Msg( "Error: Constant not found: VSTART\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VSTART
-	CompareConstant(VSTART,8,1785,architecture)
-#else
-Msg( "Error: Constant not found: VSTART\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VSTART
-	CompareConstant(VSTART,8,1785,architecture)
-#else
-Msg( "Error: Constant not found: VSTART\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VSTART
-	CompareConstant(VSTART,8,1785,architecture)
-#else
-Msg( "Error: Constant not found: VSTART\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VSTART (1785, int) in db\n");
-#ifdef VSTART
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1785,%d);\n", architecture, VSTART);
-#endif
-#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef CS5
 	CompareConstant(CS5,0000000,1859,architecture)
@@ -1539,222 +2233,6 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
-#ifdef VSTOP
-	CompareConstant(VSTOP,14,1786,architecture)
-#else
-Msg( "Error: Constant not found: VSTOP\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VSTOP
-	CompareConstant(VSTOP,14,1786,architecture)
-#else
-Msg( "Error: Constant not found: VSTOP\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VSTOP
-	CompareConstant(VSTOP,9,1786,architecture)
-#else
-Msg( "Error: Constant not found: VSTOP\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VSTOP
-	CompareConstant(VSTOP,9,1786,architecture)
-#else
-Msg( "Error: Constant not found: VSTOP\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VSTOP
-	CompareConstant(VSTOP,9,1786,architecture)
-#else
-Msg( "Error: Constant not found: VSTOP\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VSTOP
-	CompareConstant(VSTOP,9,1786,architecture)
-#else
-Msg( "Error: Constant not found: VSTOP\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VSTOP (1786, int) in db\n");
-#ifdef VSTOP
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1786,%d);\n", architecture, VSTOP);
-#endif
-#endif
-#if __powerpc64__
-#ifdef VSUSP
-	CompareConstant(VSUSP,12,1787,architecture)
-#else
-Msg( "Error: Constant not found: VSUSP\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VSUSP
-	CompareConstant(VSUSP,12,1787,architecture)
-#else
-Msg( "Error: Constant not found: VSUSP\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VSUSP
-	CompareConstant(VSUSP,10,1787,architecture)
-#else
-Msg( "Error: Constant not found: VSUSP\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VSUSP
-	CompareConstant(VSUSP,10,1787,architecture)
-#else
-Msg( "Error: Constant not found: VSUSP\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VSUSP
-	CompareConstant(VSUSP,10,1787,architecture)
-#else
-Msg( "Error: Constant not found: VSUSP\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VSUSP
-	CompareConstant(VSUSP,10,1787,architecture)
-#else
-Msg( "Error: Constant not found: VSUSP\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VSUSP (1787, int) in db\n");
-#ifdef VSUSP
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1787,%d);\n", architecture, VSUSP);
-#endif
-#endif
-#if __powerpc64__
-#ifdef VEOL
-	CompareConstant(VEOL,6,1788,architecture)
-#else
-Msg( "Error: Constant not found: VEOL\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VEOL
-	CompareConstant(VEOL,6,1788,architecture)
-#else
-Msg( "Error: Constant not found: VEOL\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VEOL
-	CompareConstant(VEOL,11,1788,architecture)
-#else
-Msg( "Error: Constant not found: VEOL\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VEOL
-	CompareConstant(VEOL,11,1788,architecture)
-#else
-Msg( "Error: Constant not found: VEOL\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VEOL
-	CompareConstant(VEOL,11,1788,architecture)
-#else
-Msg( "Error: Constant not found: VEOL\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VEOL
-	CompareConstant(VEOL,11,1788,architecture)
-#else
-Msg( "Error: Constant not found: VEOL\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VEOL (1788, int) in db\n");
-#ifdef VEOL
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1788,%d);\n", architecture, VEOL);
-#endif
-#endif
-#if __powerpc64__
-#ifdef VREPRINT
-	CompareConstant(VREPRINT,11,1789,architecture)
-#else
-Msg( "Error: Constant not found: VREPRINT\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VREPRINT
-	CompareConstant(VREPRINT,11,1789,architecture)
-#else
-Msg( "Error: Constant not found: VREPRINT\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VREPRINT
-	CompareConstant(VREPRINT,12,1789,architecture)
-#else
-Msg( "Error: Constant not found: VREPRINT\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VREPRINT
-	CompareConstant(VREPRINT,12,1789,architecture)
-#else
-Msg( "Error: Constant not found: VREPRINT\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VREPRINT
-	CompareConstant(VREPRINT,12,1789,architecture)
-#else
-Msg( "Error: Constant not found: VREPRINT\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VREPRINT
-	CompareConstant(VREPRINT,12,1789,architecture)
-#else
-Msg( "Error: Constant not found: VREPRINT\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VREPRINT (1789, int) in db\n");
-#ifdef VREPRINT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1789,%d);\n", architecture, VREPRINT);
-#endif
-#endif
 #if __powerpc64__
 #ifdef CS6
 	CompareConstant(CS6,256,1860,architecture)
@@ -1972,60 +2450,6 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1863,%d);\n", arch
 #endif
 #endif
 #if __powerpc64__
-#ifdef VDISCARD
-	CompareConstant(VDISCARD,16,1790,architecture)
-#else
-Msg( "Error: Constant not found: VDISCARD\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VDISCARD
-	CompareConstant(VDISCARD,16,1790,architecture)
-#else
-Msg( "Error: Constant not found: VDISCARD\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VDISCARD
-	CompareConstant(VDISCARD,13,1790,architecture)
-#else
-Msg( "Error: Constant not found: VDISCARD\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VDISCARD
-	CompareConstant(VDISCARD,13,1790,architecture)
-#else
-Msg( "Error: Constant not found: VDISCARD\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VDISCARD
-	CompareConstant(VDISCARD,13,1790,architecture)
-#else
-Msg( "Error: Constant not found: VDISCARD\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VDISCARD
-	CompareConstant(VDISCARD,13,1790,architecture)
-#else
-Msg( "Error: Constant not found: VDISCARD\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VDISCARD (1790, int) in db\n");
-#ifdef VDISCARD
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1790,%d);\n", architecture, VDISCARD);
-#endif
-#endif
-#if __powerpc64__
 #ifdef CREAD
 	CompareConstant(CREAD,2048,1864,architecture)
 #else
@@ -2077,60 +2501,6 @@ cnt++;
 Msg( "No definition for CREAD (1864, int) in db\n");
 #ifdef CREAD
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1864,%d);\n", architecture, CREAD);
-#endif
-#endif
-#if __powerpc64__
-#ifdef VWERASE
-	CompareConstant(VWERASE,10,1791,architecture)
-#else
-Msg( "Error: Constant not found: VWERASE\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VWERASE
-	CompareConstant(VWERASE,10,1791,architecture)
-#else
-Msg( "Error: Constant not found: VWERASE\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VWERASE
-	CompareConstant(VWERASE,14,1791,architecture)
-#else
-Msg( "Error: Constant not found: VWERASE\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VWERASE
-	CompareConstant(VWERASE,14,1791,architecture)
-#else
-Msg( "Error: Constant not found: VWERASE\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VWERASE
-	CompareConstant(VWERASE,14,1791,architecture)
-#else
-Msg( "Error: Constant not found: VWERASE\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VWERASE
-	CompareConstant(VWERASE,14,1791,architecture)
-#else
-Msg( "Error: Constant not found: VWERASE\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VWERASE (1791, int) in db\n");
-#ifdef VWERASE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1791,%d);\n", architecture, VWERASE);
 #endif
 #endif
 #if __powerpc64__
@@ -2187,16 +2557,6 @@ Msg( "No definition for PARENB (1865, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1865,%d);\n", architecture, PARENB);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
-#ifdef VLNEXT
-	CompareConstant(VLNEXT,15,1792,architecture)
-#else
-Msg( "Error: Constant not found: VLNEXT\n");
-cnt++;
-#endif
-
-#endif
-
 #if __powerpc64__
 #ifdef PARODD
 	CompareConstant(PARODD,8192,1866,architecture)
@@ -2249,60 +2609,6 @@ cnt++;
 Msg( "No definition for PARODD (1866, int) in db\n");
 #ifdef PARODD
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1866,%d);\n", architecture, PARODD);
-#endif
-#endif
-#if __powerpc64__
-#ifdef VEOL2
-	CompareConstant(VEOL2,8,1793,architecture)
-#else
-Msg( "Error: Constant not found: VEOL2\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef VEOL2
-	CompareConstant(VEOL2,8,1793,architecture)
-#else
-Msg( "Error: Constant not found: VEOL2\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef VEOL2
-	CompareConstant(VEOL2,16,1793,architecture)
-#else
-Msg( "Error: Constant not found: VEOL2\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef VEOL2
-	CompareConstant(VEOL2,16,1793,architecture)
-#else
-Msg( "Error: Constant not found: VEOL2\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef VEOL2
-	CompareConstant(VEOL2,16,1793,architecture)
-#else
-Msg( "Error: Constant not found: VEOL2\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef VEOL2
-	CompareConstant(VEOL2,16,1793,architecture)
-#else
-Msg( "Error: Constant not found: VEOL2\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for VEOL2 (1793, int) in db\n");
-#ifdef VEOL2
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1793,%d);\n", architecture, VEOL2);
 #endif
 #endif
 #if __powerpc64__
@@ -2359,16 +2665,6 @@ Msg( "No definition for HUPCL (1867, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1867,%d);\n", architecture, HUPCL);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
-#ifdef IGNBRK
-	CompareConstant(IGNBRK,0000001,1794,architecture)
-#else
-Msg( "Error: Constant not found: IGNBRK\n");
-cnt++;
-#endif
-
-#endif
-
 #if __powerpc64__
 #ifdef CLOCAL
 	CompareConstant(CLOCAL,32768,1868,architecture)
@@ -2423,56 +2719,6 @@ Msg( "No definition for CLOCAL (1868, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1868,%d);\n", architecture, CLOCAL);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
-#ifdef BRKINT
-	CompareConstant(BRKINT,0000002,1795,architecture)
-#else
-Msg( "Error: Constant not found: BRKINT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IGNPAR
-	CompareConstant(IGNPAR,0000004,1796,architecture)
-#else
-Msg( "Error: Constant not found: IGNPAR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PARMRK
-	CompareConstant(PARMRK,0000010,1797,architecture)
-#else
-Msg( "Error: Constant not found: PARMRK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef INPCK
-	CompareConstant(INPCK,0000020,1798,architecture)
-#else
-Msg( "Error: Constant not found: INPCK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ISTRIP
-	CompareConstant(ISTRIP,0000040,1799,architecture)
-#else
-Msg( "Error: Constant not found: ISTRIP\n");
-cnt++;
-#endif
-
-#endif
-
 #if __powerpc64__
 #ifdef ISIG
 	CompareConstant(ISIG,128,1888,architecture)
@@ -3077,514 +3323,268 @@ Msg( "No definition for ECHOKE (1899, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1899,%d);\n", architecture, ECHOKE);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
-#ifdef INLCR
-	CompareConstant(INLCR,0000100,1800,architecture)
-#else
-Msg( "Error: Constant not found: INLCR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IGNCR
-	CompareConstant(IGNCR,0000200,1801,architecture)
-#else
-Msg( "Error: Constant not found: IGNCR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ICRNL
-	CompareConstant(ICRNL,0000400,1802,architecture)
-#else
-Msg( "Error: Constant not found: ICRNL\n");
-cnt++;
-#endif
-
-#endif
-
 #if __powerpc64__
-#ifdef IUCLC
-	CompareConstant(IUCLC,4096,1803,architecture)
+#ifdef FLUSHO
+	CompareConstant(FLUSHO,8388608,1900,architecture)
 #else
-Msg( "Error: Constant not found: IUCLC\n");
+Msg( "Error: Constant not found: FLUSHO\n");
 cnt++;
 #endif
 
 #elif __powerpc__ && !__powerpc64__
-#ifdef IUCLC
-	CompareConstant(IUCLC,4096,1803,architecture)
+#ifdef FLUSHO
+	CompareConstant(FLUSHO,8388608,1900,architecture)
 #else
-Msg( "Error: Constant not found: IUCLC\n");
+Msg( "Error: Constant not found: FLUSHO\n");
 cnt++;
 #endif
 
 #elif __ia64__
-#ifdef IUCLC
-	CompareConstant(IUCLC,0001000,1803,architecture)
+#ifdef FLUSHO
+	CompareConstant(FLUSHO,0010000,1900,architecture)
 #else
-Msg( "Error: Constant not found: IUCLC\n");
+Msg( "Error: Constant not found: FLUSHO\n");
 cnt++;
 #endif
 
 #elif __i386__
-#ifdef IUCLC
-	CompareConstant(IUCLC,0001000,1803,architecture)
+#ifdef FLUSHO
+	CompareConstant(FLUSHO,0010000,1900,architecture)
 #else
-Msg( "Error: Constant not found: IUCLC\n");
+Msg( "Error: Constant not found: FLUSHO\n");
 cnt++;
 #endif
 
 #elif __x86_64__
-#ifdef IUCLC
-	CompareConstant(IUCLC,0001000,1803,architecture)
+#ifdef FLUSHO
+	CompareConstant(FLUSHO,0010000,1900,architecture)
 #else
-Msg( "Error: Constant not found: IUCLC\n");
+Msg( "Error: Constant not found: FLUSHO\n");
 cnt++;
 #endif
 
 #elif __s390__
-#ifdef IUCLC
-	CompareConstant(IUCLC,0001000,1803,architecture)
+#ifdef FLUSHO
+	CompareConstant(FLUSHO,0010000,1900,architecture)
 #else
-Msg( "Error: Constant not found: IUCLC\n");
+Msg( "Error: Constant not found: FLUSHO\n");
 cnt++;
 #endif
 
 #else
-Msg( "No definition for IUCLC (1803, int) in db\n");
-#ifdef IUCLC
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1803,%d);\n", architecture, IUCLC);
+Msg( "No definition for FLUSHO (1900, int) in db\n");
+#ifdef FLUSHO
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1900,%d);\n", architecture, FLUSHO);
 #endif
 #endif
 #if __powerpc64__
-#ifdef IXON
-	CompareConstant(IXON,512,1804,architecture)
+#ifdef PENDIN
+	CompareConstant(PENDIN,536870912,1901,architecture)
 #else
-Msg( "Error: Constant not found: IXON\n");
+Msg( "Error: Constant not found: PENDIN\n");
 cnt++;
 #endif
 
 #elif __powerpc__ && !__powerpc64__
-#ifdef IXON
-	CompareConstant(IXON,512,1804,architecture)
+#ifdef PENDIN
+	CompareConstant(PENDIN,536870912,1901,architecture)
 #else
-Msg( "Error: Constant not found: IXON\n");
+Msg( "Error: Constant not found: PENDIN\n");
 cnt++;
 #endif
 
 #elif __ia64__
-#ifdef IXON
-	CompareConstant(IXON,0002000,1804,architecture)
+#ifdef PENDIN
+	CompareConstant(PENDIN,0040000,1901,architecture)
 #else
-Msg( "Error: Constant not found: IXON\n");
+Msg( "Error: Constant not found: PENDIN\n");
 cnt++;
 #endif
 
 #elif __i386__
-#ifdef IXON
-	CompareConstant(IXON,0002000,1804,architecture)
+#ifdef PENDIN
+	CompareConstant(PENDIN,0040000,1901,architecture)
 #else
-Msg( "Error: Constant not found: IXON\n");
+Msg( "Error: Constant not found: PENDIN\n");
 cnt++;
 #endif
 
 #elif __x86_64__
-#ifdef IXON
-	CompareConstant(IXON,0002000,1804,architecture)
+#ifdef PENDIN
+	CompareConstant(PENDIN,0040000,1901,architecture)
 #else
-Msg( "Error: Constant not found: IXON\n");
+Msg( "Error: Constant not found: PENDIN\n");
 cnt++;
 #endif
 
 #elif __s390__
-#ifdef IXON
-	CompareConstant(IXON,0002000,1804,architecture)
+#ifdef PENDIN
+	CompareConstant(PENDIN,0040000,1901,architecture)
 #else
-Msg( "Error: Constant not found: IXON\n");
+Msg( "Error: Constant not found: PENDIN\n");
 cnt++;
 #endif
 
 #else
-Msg( "No definition for IXON (1804, int) in db\n");
-#ifdef IXON
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1804,%d);\n", architecture, IXON);
+Msg( "No definition for PENDIN (1901, int) in db\n");
+#ifdef PENDIN
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1901,%d);\n", architecture, PENDIN);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
-#ifdef IXANY
-	CompareConstant(IXANY,0004000,1805,architecture)
-#else
-Msg( "Error: Constant not found: IXANY\n");
-cnt++;
-#endif
-
-#endif
-
 #if __powerpc64__
-#ifdef IXOFF
-	CompareConstant(IXOFF,1024,1806,architecture)
+#ifdef IEXTEN
+	CompareConstant(IEXTEN,1024,1902,architecture)
 #else
-Msg( "Error: Constant not found: IXOFF\n");
+Msg( "Error: Constant not found: IEXTEN\n");
 cnt++;
 #endif
 
 #elif __powerpc__ && !__powerpc64__
-#ifdef IXOFF
-	CompareConstant(IXOFF,1024,1806,architecture)
+#ifdef IEXTEN
+	CompareConstant(IEXTEN,1024,1902,architecture)
 #else
-Msg( "Error: Constant not found: IXOFF\n");
+Msg( "Error: Constant not found: IEXTEN\n");
 cnt++;
 #endif
 
 #elif __ia64__
-#ifdef IXOFF
-	CompareConstant(IXOFF,0010000,1806,architecture)
+#ifdef IEXTEN
+	CompareConstant(IEXTEN,0100000,1902,architecture)
 #else
-Msg( "Error: Constant not found: IXOFF\n");
+Msg( "Error: Constant not found: IEXTEN\n");
 cnt++;
 #endif
 
 #elif __i386__
-#ifdef IXOFF
-	CompareConstant(IXOFF,0010000,1806,architecture)
+#ifdef IEXTEN
+	CompareConstant(IEXTEN,0100000,1902,architecture)
 #else
-Msg( "Error: Constant not found: IXOFF\n");
+Msg( "Error: Constant not found: IEXTEN\n");
 cnt++;
 #endif
 
 #elif __x86_64__
-#ifdef IXOFF
-	CompareConstant(IXOFF,0010000,1806,architecture)
+#ifdef IEXTEN
+	CompareConstant(IEXTEN,0100000,1902,architecture)
 #else
-Msg( "Error: Constant not found: IXOFF\n");
+Msg( "Error: Constant not found: IEXTEN\n");
 cnt++;
 #endif
 
 #elif __s390__
-#ifdef IXOFF
-	CompareConstant(IXOFF,0010000,1806,architecture)
+#ifdef IEXTEN
+	CompareConstant(IEXTEN,0100000,1902,architecture)
 #else
-Msg( "Error: Constant not found: IXOFF\n");
+Msg( "Error: Constant not found: IEXTEN\n");
 cnt++;
 #endif
 
 #else
-Msg( "No definition for IXOFF (1806, int) in db\n");
-#ifdef IXOFF
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1806,%d);\n", architecture, IXOFF);
+Msg( "No definition for IEXTEN (1902, int) in db\n");
+#ifdef IEXTEN
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1902,%d);\n", architecture, IEXTEN);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-#ifdef IMAXBEL
-	CompareConstant(IMAXBEL,0020000,1807,architecture)
+#ifdef TCOOFF
+	CompareConstant(TCOOFF,0,1903,architecture)
 #else
-Msg( "Error: Constant not found: IMAXBEL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef OPOST
-	CompareConstant(OPOST,0000001,1808,architecture)
-#else
-Msg( "Error: Constant not found: OPOST\n");
-cnt++;
-#endif
-
-#endif
-
-#if __powerpc64__
-#ifdef OLCUC
-	CompareConstant(OLCUC,4,1809,architecture)
-#else
-Msg( "Error: Constant not found: OLCUC\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef OLCUC
-	CompareConstant(OLCUC,4,1809,architecture)
-#else
-Msg( "Error: Constant not found: OLCUC\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef OLCUC
-	CompareConstant(OLCUC,0000002,1809,architecture)
-#else
-Msg( "Error: Constant not found: OLCUC\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef OLCUC
-	CompareConstant(OLCUC,0000002,1809,architecture)
-#else
-Msg( "Error: Constant not found: OLCUC\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef OLCUC
-	CompareConstant(OLCUC,0000002,1809,architecture)
-#else
-Msg( "Error: Constant not found: OLCUC\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef OLCUC
-	CompareConstant(OLCUC,0000002,1809,architecture)
-#else
-Msg( "Error: Constant not found: OLCUC\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for OLCUC (1809, int) in db\n");
-#ifdef OLCUC
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1809,%d);\n", architecture, OLCUC);
-#endif
-#endif
-#if __powerpc64__
-#ifdef ONLCR
-	CompareConstant(ONLCR,2,1810,architecture)
-#else
-Msg( "Error: Constant not found: ONLCR\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef ONLCR
-	CompareConstant(ONLCR,2,1810,architecture)
-#else
-Msg( "Error: Constant not found: ONLCR\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef ONLCR
-	CompareConstant(ONLCR,0000004,1810,architecture)
-#else
-Msg( "Error: Constant not found: ONLCR\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef ONLCR
-	CompareConstant(ONLCR,0000004,1810,architecture)
-#else
-Msg( "Error: Constant not found: ONLCR\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef ONLCR
-	CompareConstant(ONLCR,0000004,1810,architecture)
-#else
-Msg( "Error: Constant not found: ONLCR\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef ONLCR
-	CompareConstant(ONLCR,0000004,1810,architecture)
-#else
-Msg( "Error: Constant not found: ONLCR\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for ONLCR (1810, int) in db\n");
-#ifdef ONLCR
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1810,%d);\n", architecture, ONLCR);
-#endif
-#endif
-#if _LSB_DEFAULT_ARCH
-#ifdef OCRNL
-	CompareConstant(OCRNL,0000010,1811,architecture)
-#else
-Msg( "Error: Constant not found: OCRNL\n");
+Msg( "Error: Constant not found: TCOOFF\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef ONOCR
-	CompareConstant(ONOCR,0000020,1812,architecture)
+#ifdef TCOON
+	CompareConstant(TCOON,1,1904,architecture)
 #else
-Msg( "Error: Constant not found: ONOCR\n");
+Msg( "Error: Constant not found: TCOON\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef ONLRET
-	CompareConstant(ONLRET,0000040,1813,architecture)
+#ifdef TCIOFF
+	CompareConstant(TCIOFF,2,1905,architecture)
 #else
-Msg( "Error: Constant not found: ONLRET\n");
+Msg( "Error: Constant not found: TCIOFF\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef OFILL
-	CompareConstant(OFILL,0000100,1814,architecture)
+#ifdef TCION
+	CompareConstant(TCION,3,1906,architecture)
 #else
-Msg( "Error: Constant not found: OFILL\n");
+Msg( "Error: Constant not found: TCION\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef OFDEL
-	CompareConstant(OFDEL,0000200,1815,architecture)
+#ifdef TCIFLUSH
+	CompareConstant(TCIFLUSH,0,1907,architecture)
 #else
-Msg( "Error: Constant not found: OFDEL\n");
-cnt++;
-#endif
-
-#endif
-
-#if __powerpc64__
-#ifdef NLDLY
-	CompareConstant(NLDLY,768,1816,architecture)
-#else
-Msg( "Error: Constant not found: NLDLY\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef NLDLY
-	CompareConstant(NLDLY,768,1816,architecture)
-#else
-Msg( "Error: Constant not found: NLDLY\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef NLDLY
-	CompareConstant(NLDLY,0000400,1816,architecture)
-#else
-Msg( "Error: Constant not found: NLDLY\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef NLDLY
-	CompareConstant(NLDLY,0000400,1816,architecture)
-#else
-Msg( "Error: Constant not found: NLDLY\n");
-cnt++;
-#endif
-
-#elif __x86_64__
-#ifdef NLDLY
-	CompareConstant(NLDLY,0000400,1816,architecture)
-#else
-Msg( "Error: Constant not found: NLDLY\n");
-cnt++;
-#endif
-
-#elif __s390__
-#ifdef NLDLY
-	CompareConstant(NLDLY,0000400,1816,architecture)
-#else
-Msg( "Error: Constant not found: NLDLY\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for NLDLY (1816, int) in db\n");
-#ifdef NLDLY
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1816,%d);\n", architecture, NLDLY);
-#endif
-#endif
-#if _LSB_DEFAULT_ARCH
-#ifdef NL0
-	CompareConstant(NL0,0000000,1817,architecture)
-#else
-Msg( "Error: Constant not found: NL0\n");
+Msg( "Error: Constant not found: TCIFLUSH\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef NL1
-	CompareConstant(NL1,0000400,1818,architecture)
+#ifdef TCOFLUSH
+	CompareConstant(TCOFLUSH,1,1908,architecture)
 #else
-Msg( "Error: Constant not found: NL1\n");
+Msg( "Error: Constant not found: TCOFLUSH\n");
 cnt++;
 #endif
 
 #endif
 
-#if __powerpc64__
-#ifdef CRDLY
-	CompareConstant(CRDLY,12288,1819,architecture)
+#if _LSB_DEFAULT_ARCH
+#ifdef TCIOFLUSH
+	CompareConstant(TCIOFLUSH,2,1909,architecture)
 #else
-Msg( "Error: Constant not found: CRDLY\n");
+Msg( "Error: Constant not found: TCIOFLUSH\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
-#ifdef CRDLY
-	CompareConstant(CRDLY,12288,1819,architecture)
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef TCSANOW
+	CompareConstant(TCSANOW,0,1910,architecture)
 #else
-Msg( "Error: Constant not found: CRDLY\n");
+Msg( "Error: Constant not found: TCSANOW\n");
 cnt++;
 #endif
 
-#elif __ia64__
-#ifdef CRDLY
-	CompareConstant(CRDLY,0003000,1819,architecture)
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef TCSADRAIN
+	CompareConstant(TCSADRAIN,1,1911,architecture)
 #else
-Msg( "Error: Constant not found: CRDLY\n");
+Msg( "Error: Constant not found: TCSADRAIN\n");
 cnt++;
 #endif
 
-#elif __i386__
-#ifdef CRDLY
-	CompareConstant(CRDLY,0003000,1819,architecture)
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef TCSAFLUSH
+	CompareConstant(TCSAFLUSH,2,1912,architecture)
 #else
-Msg( "Error: Constant not found: CRDLY\n");
+Msg( "Error: Constant not found: TCSAFLUSH\n");
 cnt++;
 #endif
 
-#elif __x86_64__
-#ifdef CRDLY
-	CompareConstant(CRDLY,0003000,1819,architecture)
-#else
-Msg( "Error: Constant not found: CRDLY\n");
-cnt++;
 #endif
 
-#elif __s390__
-#ifdef CRDLY
-	CompareConstant(CRDLY,0003000,1819,architecture)
-#else
-Msg( "Error: Constant not found: CRDLY\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for CRDLY (1819, int) in db\n");
-#ifdef CRDLY
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1819,%d);\n", architecture, CRDLY);
-#endif
-#endif
 #if __i386__
 CheckTypeSize(struct winsize,8, 10301, 2)
 CheckMemberSize(struct winsize,ws_col,2,2,34488)

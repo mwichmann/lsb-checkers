@@ -25,26 +25,6 @@ Msg("Checking data structures in ftw.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef FTW_DP
-	CompareConstant(FTW_DP,FTW_DP,3060,architecture)
-#else
-Msg( "Error: Constant not found: FTW_DP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef FTW_SLN
-	CompareConstant(FTW_SLN,FTW_SLN,3061,architecture)
-#else
-Msg( "Error: Constant not found: FTW_SLN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef FTW_F
 	CompareConstant(FTW_F,FTW_F,1230,architecture)
 #else
@@ -89,6 +69,26 @@ cnt++;
 	CompareConstant(FTW_SL,FTW_SL,1234,architecture)
 #else
 Msg( "Error: Constant not found: FTW_SL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FTW_DP
+	CompareConstant(FTW_DP,FTW_DP,3060,architecture)
+#else
+Msg( "Error: Constant not found: FTW_DP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FTW_SLN
+	CompareConstant(FTW_SLN,FTW_SLN,3061,architecture)
+#else
+Msg( "Error: Constant not found: FTW_SLN\n");
 cnt++;
 #endif
 

@@ -24,36 +24,6 @@ Msg("Checking data structures in rpc/clnt.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CLSET_RETRY_TIMEOUT
-	CompareConstant(CLSET_RETRY_TIMEOUT,4,4302,architecture)
-#else
-Msg( "Error: Constant not found: CLSET_RETRY_TIMEOUT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef CLGET_RETRY_TIMEOUT
-	CompareConstant(CLGET_RETRY_TIMEOUT,5,4303,architecture)
-#else
-Msg( "Error: Constant not found: CLGET_RETRY_TIMEOUT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef NULLPROC
-	CompareConstant(NULLPROC,((u_long)0),4310,architecture)
-#else
-Msg( "Error: Constant not found: NULLPROC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_TIMEOUT
 	CompareConstant(CLSET_TIMEOUT,1,4286,architecture)
 #else
@@ -178,6 +148,36 @@ cnt++;
 	CompareConstant(CLSET_PROG,15,4298,architecture)
 #else
 Msg( "Error: Constant not found: CLSET_PROG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLSET_RETRY_TIMEOUT
+	CompareConstant(CLSET_RETRY_TIMEOUT,4,4302,architecture)
+#else
+Msg( "Error: Constant not found: CLSET_RETRY_TIMEOUT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLGET_RETRY_TIMEOUT
+	CompareConstant(CLGET_RETRY_TIMEOUT,5,4303,architecture)
+#else
+Msg( "Error: Constant not found: CLGET_RETRY_TIMEOUT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef NULLPROC
+	CompareConstant(NULLPROC,((u_long)0),4310,architecture)
+#else
+Msg( "Error: Constant not found: NULLPROC\n");
 cnt++;
 #endif
 

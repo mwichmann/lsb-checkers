@@ -24,10 +24,10 @@ Msg("Checking data structures in netinet/in.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IP_TOS
-	CompareConstant(IP_TOS,1,4662,architecture)
+#ifdef SOL_IP
+	CompareConstant(SOL_IP,0,3330,architecture)
 #else
-Msg( "Error: Constant not found: IP_TOS\n");
+Msg( "Error: Constant not found: SOL_IP\n");
 cnt++;
 #endif
 
@@ -124,10 +124,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SOL_IP
-	CompareConstant(SOL_IP,0,3330,architecture)
+#ifdef IP_TOS
+	CompareConstant(IP_TOS,1,4662,architecture)
 #else
-Msg( "Error: Constant not found: SOL_IP\n");
+Msg( "Error: Constant not found: IP_TOS\n");
 cnt++;
 #endif
 
