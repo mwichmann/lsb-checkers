@@ -634,6 +634,7 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"__rawmemchr","GLIBC_2.2",0,"LSB-Core",0,1},
 #endif
+	{"__register_atfork","GLIBC_2.3.2",0,"LSB-Core",0,1},
 #if __i386__
 	{"__sigsetjmp","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
@@ -6914,69 +6915,6 @@ struct versym libc_so_6_1[] = {
 	{"isgraph","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"isinf","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __ia64__
-	{"isinf","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"isinf","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __powerpc64__
-	{"isinf","GLIBC_2.3",0,"LSB-Core",4,1},
-#endif
-#if __s390__ && !__s390x__
-	{"isinf","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __x86_64__
-	{"isinf","GLIBC_2.2.5",0,"LSB-Core",4,1},
-#endif
-#if __s390x__
-	{"isinf","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __i386__
-	{"isinff","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __ia64__
-	{"isinff","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"isinff","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __powerpc64__
-	{"isinff","GLIBC_2.3",0,"LSB-Core",4,1},
-#endif
-#if __s390__ && !__s390x__
-	{"isinff","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __x86_64__
-	{"isinff","GLIBC_2.2.5",0,"LSB-Core",4,1},
-#endif
-#if __s390x__
-	{"isinff","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __i386__
-	{"isinfl","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __ia64__
-	{"isinfl","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"isinfl","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __powerpc64__
-	{"isinfl","GLIBC_2.3",0,"LSB-Core",4,1},
-#endif
-#if __s390__ && !__s390x__
-	{"isinfl","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __x86_64__
-	{"isinfl","GLIBC_2.2.5",0,"LSB-Core",4,1},
-#endif
-#if __s390x__
-	{"isinfl","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __i386__
 	{"islower","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
@@ -6996,69 +6934,6 @@ struct versym libc_so_6_1[] = {
 #endif
 #if __s390x__
 	{"islower","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __i386__
-	{"isnan","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __ia64__
-	{"isnan","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"isnan","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __powerpc64__
-	{"isnan","GLIBC_2.3",0,"LSB-Core",4,1},
-#endif
-#if __s390__ && !__s390x__
-	{"isnan","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __x86_64__
-	{"isnan","GLIBC_2.2.5",0,"LSB-Core",4,1},
-#endif
-#if __s390x__
-	{"isnan","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __i386__
-	{"isnanf","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __ia64__
-	{"isnanf","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"isnanf","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __powerpc64__
-	{"isnanf","GLIBC_2.3",0,"LSB-Core",4,1},
-#endif
-#if __s390__ && !__s390x__
-	{"isnanf","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __x86_64__
-	{"isnanf","GLIBC_2.2.5",0,"LSB-Core",4,1},
-#endif
-#if __s390x__
-	{"isnanf","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __i386__
-	{"isnanl","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __ia64__
-	{"isnanl","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"isnanl","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __powerpc64__
-	{"isnanl","GLIBC_2.3",0,"LSB-Core",4,1},
-#endif
-#if __s390__ && !__s390x__
-	{"isnanl","GLIBC_2.0",0,"LSB-Core",4,1},
-#endif
-#if __x86_64__
-	{"isnanl","GLIBC_2.2.5",0,"LSB-Core",4,1},
-#endif
-#if __s390x__
-	{"isnanl","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"isprint","GLIBC_2.0",0,"LSB-Core",4,1},
@@ -8828,7 +8703,7 @@ struct versym libc_so_6_1[] = {
 	{"nftw","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"nftw","GLIBC_2.2.5",0,"LSB-Core",4,1},
+	{"nftw","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"nftw","GLIBC_2.1",0,"LSB-Core",4,1},
@@ -8849,7 +8724,7 @@ struct versym libc_so_6_1[] = {
 	{"nftw64","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"nftw64","GLIBC_2.2.5",0,"LSB-Core",4,1},
+	{"nftw64","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"nftw64","GLIBC_2.1",0,"LSB-Core",4,1},
@@ -10130,7 +10005,7 @@ struct versym libc_so_6_1[] = {
 	{"regexec","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"regexec","GLIBC_2.3.3",0,"LSB-Core",4,1},
+	{"regexec","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"regexec","GLIBC_2.0",0,"LSB-Core",4,1},
