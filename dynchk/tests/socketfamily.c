@@ -2,7 +2,7 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 
-void validate_socketfamily(sa_family_t input, const char *name)
+int validate_socketfamily(sa_family_t input, const char *name)
 {
 	switch( input ) {
 	case AF_UNIX:
