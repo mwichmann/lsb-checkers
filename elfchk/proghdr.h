@@ -19,6 +19,8 @@ extern int checkPT_SHLIB(ElfFile *, Elf_Phdr *, struct tetj_handle *);
 extern int checkPT_PHDR(ElfFile *, Elf_Phdr *, struct tetj_handle *);
 extern int checkPT_TLS(ElfFile *, Elf_Phdr *, struct tetj_handle *);
 extern int checkPT_GNU_EH_FRAME(ElfFile *, Elf_Phdr *, struct tetj_handle *);
+extern int checkPT_GNU_STACK(ElfFile *, Elf_Phdr *, struct tetj_handle *);
+extern int checkPT_IA_64_UNWIND(ElfFile *, Elf_Phdr *, struct tetj_handle *);
 extern void checkElfproghdr(int index, ElfFile *file1, struct tetj_handle *);
 
 #endif /* _PROGHDR_H */

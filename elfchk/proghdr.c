@@ -30,6 +30,10 @@ PhTypeFuncRec	Headers[] = {
 	{PT_PHDR,	"PT_PHDR",	checkPT_PHDR},
 	{PT_TLS,	"PT_TLS",	checkPT_TLS},
 	{PT_GNU_EH_FRAME,"PT_GNU_EH_FRAME",checkPT_GNU_EH_FRAME},
+	{PT_GNU_STACK,	"PT_GNU_STACK",	checkPT_GNU_STACK},
+#if __ia64__
+	{PT_IA_64_UNWIND,"PT_IA_64_UNWIND",checkPT_IA_64_UNWIND},
+#endif
 	};
 
 static int numProgHeaders=sizeof(Headers)/sizeof(PhTypeFuncRec);
@@ -114,6 +118,20 @@ checkPT_GNU_EH_FRAME(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
 return 0;
 }
+
+int
+checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+{
+return 0;
+}
+
+#if __ia64__
+int
+checkPT_IA_64_UNWIND(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+{
+return 0;
+}
+#endif
 
 void
 checkElfproghdr(int index, ElfFile *file, struct tetj_handle *journal)
