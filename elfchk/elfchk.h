@@ -94,6 +94,9 @@ extern void checkElf(ElfFile *file1, int isProgram,
 /* note.c */
 extern int check_NOTE(ElfFile *file, unsigned char *notes, int length, struct tetj_handle *journal);
 
+/* dumpbytes.c */
+extern void dumpbytes(unsigned char *ptr, int size);
+
 /* Add non LSB libraries to list which are ok to be in the DT_NEEDED section */
 extern void addDTNeeded (char *filename);
 #endif /* _ELFCHK_H */
