@@ -13,8 +13,8 @@ bool_t xdr_bytes (XDR * arg0 , char * * arg1 , u_int * arg2 , u_int arg3 )
 		funcptr = dlsym(RTLD_NEXT, "xdr_bytes");
 	validate_Rdaddress( arg0, "xdr_bytes");
 	validate_NULL_TYPETYPE(  arg0, "xdr_bytes");
-	validate_Rdaddress(* arg1, "xdr_bytes");
 	validate_Rdaddress( arg1, "xdr_bytes");
+	validate_Rdaddress(* arg1, "xdr_bytes");
 	validate_NULL_TYPETYPE(  arg1, "xdr_bytes");
 	validate_Rdaddress( arg2, "xdr_bytes");
 	validate_NULL_TYPETYPE(  arg2, "xdr_bytes");

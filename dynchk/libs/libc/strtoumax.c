@@ -12,8 +12,8 @@ uintmax_t strtoumax (const char * arg0 , char * * arg1 , int arg2 )
 		funcptr = dlsym(RTLD_NEXT, "strtoumax");
 	validate_Rdaddress( arg0, "strtoumax");
 	validate_NULL_TYPETYPE(  arg0, "strtoumax");
-	validate_Rdaddress(* arg1, "strtoumax");
 	validate_Rdaddress( arg1, "strtoumax");
+	validate_Rdaddress(* arg1, "strtoumax");
 	validate_NULL_TYPETYPE(  arg1, "strtoumax");
 	validate_NULL_TYPETYPE(  arg2, "strtoumax");
 	return funcptr(arg0, arg1, arg2);

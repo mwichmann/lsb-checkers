@@ -16,8 +16,8 @@ int getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo *
 	validate_NULL_TYPETYPE(  arg1, "getaddrinfo");
 	validate_Rdaddress( arg2, "getaddrinfo");
 	validate_NULL_TYPETYPE(  arg2, "getaddrinfo");
-	validate_Rdaddress(* arg3, "getaddrinfo");
 	validate_Rdaddress( arg3, "getaddrinfo");
+	validate_Rdaddress(* arg3, "getaddrinfo");
 	validate_NULL_TYPETYPE(  arg3, "getaddrinfo");
 	return funcptr(arg0, arg1, arg2, arg3);
 }

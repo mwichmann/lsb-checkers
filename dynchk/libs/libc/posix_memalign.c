@@ -11,8 +11,8 @@ int posix_memalign (void * * arg0 , size_t arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "posix_memalign");
-	validate_Rdaddress(* arg0, "posix_memalign");
 	validate_Rdaddress( arg0, "posix_memalign");
+	validate_Rdaddress(* arg0, "posix_memalign");
 	validate_NULL_TYPETYPE(  arg0, "posix_memalign");
 	validate_NULL_TYPETYPE(  arg1, "posix_memalign");
 	validate_NULL_TYPETYPE(  arg2, "posix_memalign");

@@ -12,8 +12,8 @@ long double __strtold_internal (const char * arg0 , char * * arg1 , int arg2 )
 		funcptr = dlsym(RTLD_NEXT, "__strtold_internal");
 	validate_Rdaddress( arg0, "__strtold_internal");
 	validate_NULL_TYPETYPE(  arg0, "__strtold_internal");
-	validate_Rdaddress(* arg1, "__strtold_internal");
 	validate_Rdaddress( arg1, "__strtold_internal");
+	validate_Rdaddress(* arg1, "__strtold_internal");
 	validate_RWaddress(  arg1, "__strtold_internal");
 	validate_NULL_TYPETYPE(  arg2, "__strtold_internal");
 	return funcptr(arg0, arg1, arg2);

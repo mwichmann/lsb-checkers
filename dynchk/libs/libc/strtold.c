@@ -12,8 +12,8 @@ long double strtold (const char * arg0 , char * * arg1 )
 		funcptr = dlsym(RTLD_NEXT, "strtold");
 	validate_Rdaddress( arg0, "strtold");
 	validate_NULL_TYPETYPE(  arg0, "strtold");
-	validate_Rdaddress(* arg1, "strtold");
 	validate_Rdaddress( arg1, "strtold");
+	validate_Rdaddress(* arg1, "strtold");
 	validate_NULL_TYPETYPE(  arg1, "strtold");
 	return funcptr(arg0, arg1);
 }

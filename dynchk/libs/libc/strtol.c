@@ -12,8 +12,8 @@ long strtol (const char * arg0 , char * * arg1 , int arg2 )
 		funcptr = dlsym(RTLD_NEXT, "strtol");
 	validate_Rdaddress( arg0, "strtol");
 	validate_NULL_TYPETYPE(  arg0, "strtol");
-	validate_Rdaddress(* arg1, "strtol");
 	validate_Rdaddress( arg1, "strtol");
+	validate_Rdaddress(* arg1, "strtol");
 	validate_NULL_TYPETYPE(  arg1, "strtol");
 	validate_NULL_TYPETYPE(  arg2, "strtol");
 	return funcptr(arg0, arg1, arg2);

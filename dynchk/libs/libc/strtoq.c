@@ -12,8 +12,8 @@ long long strtoq (const char * arg0 , char * * arg1 , int arg2 )
 		funcptr = dlsym(RTLD_NEXT, "strtoq");
 	validate_Rdaddress( arg0, "strtoq");
 	validate_NULL_TYPETYPE(  arg0, "strtoq");
-	validate_Rdaddress(* arg1, "strtoq");
 	validate_Rdaddress( arg1, "strtoq");
+	validate_Rdaddress(* arg1, "strtoq");
 	validate_NULL_TYPETYPE(  arg1, "strtoq");
 	validate_NULL_TYPETYPE(  arg2, "strtoq");
 	return funcptr(arg0, arg1, arg2);
