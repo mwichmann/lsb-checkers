@@ -50,7 +50,7 @@ checkRpmSignature(RpmFile *file1, struct tetj_handle *journal)
 {
 RpmHeader	*hdr;
 RpmHdrIndex	*hindex;
-int	i,nindex;
+int	nindex;
 
 hdr=(RpmHeader *)file1->nexthdr;
 hindex=(RpmHdrIndex *)(hdr+1);
@@ -74,7 +74,7 @@ checkRpmHeader(RpmFile *file1, struct tetj_handle *journal)
 {
 RpmHeader	*hdr;
 RpmHdrIndex	*hindex;
-int	i,nindex;
+int	nindex;
 
 hdr=(RpmHeader *)file1->nexthdr;
 hindex=(RpmHdrIndex *)(hdr+1);
