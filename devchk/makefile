@@ -51,4 +51,4 @@ hdrchk.o: hdrchk.c
 
 
 clean:
-	rm $(OBJS)
+	rm -f $(OBJS)
