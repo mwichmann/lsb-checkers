@@ -10,26 +10,60 @@
 #define FHS_WRITE	0x10	/* App may write to this path */
 #define FHS_EXEC	0x20	/* App may execute files from this path */
 #define FHS_CREATE	0x40	/* App may create files in this path */
+#define FHS_INSTALL	0x80	/* Package may install files in this path */
 
 struct fhspath {
 	char	*path;
 	int	flags;
+	char	*fhssect;
 };
 
 static struct fhspath fhspaths[] = {
-	{ "/dev/null", FHS_READ|FHS_WRITE },
-	{ "/dev/tty", FHS_READ|FHS_WRITE },
-	{ "/dev/zero", FHS_READ|0 },
-	{ "/dev/", FHS_PREFIX|FHS_READ|FHS_WRITE },
-	{ "/opt/%s/", FHS_PREFIX|FHS_FORMAT|FHS_READ|FHS_WRITE|FHS_CREATE },
-	{ "/etc/opt/%s/", FHS_PREFIX|FHS_FORMAT|FHS_READ },
-	{ "/var/opt/%s/", FHS_PREFIX|FHS_FORMAT|FHS_READ|FHS_WRITE },
-	{ "/usr/share/", FHS_PREFIX|FHS_READ},
-	{ "/bin/", FHS_PREFIX|FHS_EXEC },
-	{ "/usr/bin/", FHS_PREFIX|FHS_EXEC },
-	{ "/tmp/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE },
-	{ "/usr/tmp/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE },
-	{ "/", FHS_PREFIX },
+	{ "/bin/", FHS_PREFIX|FHS_EXEC,"3.4" },
+	{ "/dev/null", FHS_READ|FHS_WRITE,"6.1.3" },
+	{ "/dev/tty", FHS_READ|FHS_WRITE,"6.1.3" },
+	{ "/dev/zero", FHS_READ,"6.1.3" },
+	{ "/dev/", FHS_PREFIX|FHS_READ|FHS_WRITE,"3.6" },
+	{ "/etc/", FHS_PREFIX,"3.7"},
+	{ "/etc/opt/%s/", FHS_PREFIX|FHS_FORMAT|FHS_READ|FHS_INSTALL,"3.7.4" },
+	{ "/home/", FHS_PREFIX, "3.8"},
+	{ "/lib/", FHS_PREFIX,"3.9"},
+	{ "/lib/cpp", FHS_PREFIX|FHS_EXEC,"3.9.2"},
+	{ "/lib32/", FHS_PREFIX,"3.10"},
+	{ "/lib64/", FHS_PREFIX,"3.10"},
+	{ "/media/", FHS_PREFIX,"3.11"},
+	{ "/media/floppy", FHS_PREFIX|FHS_READ|FHS_WRITE,"3.11.2"},
+	{ "/media/cdrom", FHS_PREFIX|FHS_READ|FHS_WRITE,"3.11.2"},
+	{ "/media/cdrecorder", FHS_PREFIX|FHS_READ|FHS_WRITE,"3.11.2"},
+	{ "/media/zip", FHS_PREFIX|FHS_READ|FHS_WRITE,"3.11.2"},
+	{ "/opt/%s/", FHS_PREFIX|FHS_FORMAT|FHS_READ|FHS_WRITE|FHS_CREATE|FHS_INSTALL,"3.13" },
+	{ "/opt/%s/bin/", FHS_PREFIX|FHS_FORMAT|FHS_EXEC|FHS_INSTALL,"3.13.2" },
+	{ "/opt/%s/share/man/", FHS_PREFIX|FHS_FORMAT|FHS_READ|FHS_INSTALL,"3.13.2" },
+	{ "/root/", FHS_PREFIX,"3.14" },
+	{ "/sbin/", FHS_PREFIX|FHS_EXEC,"3.15" },
+	{ "/srv/", FHS_PREFIX,"3.16" },
+	{ "/tmp/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE, "3.17" },
+	{ "/usr/bin/", FHS_PREFIX|FHS_EXEC,"4.5" },
+	{ "/usr/include/", FHS_PREFIX|FHS_READ,"4.6" },
+	{ "/usr/lib/", FHS_PREFIX,"4.7" },
+	{ "/usr/lib32/", FHS_PREFIX,"4.8" },
+	{ "/usr/lib64/", FHS_PREFIX,"4.8" },
+	{ "/usr/local/", FHS_PREFIX,"4.8.2" },
+	{ "/usr/sbin/", FHS_PREFIX|FHS_EXEC,"4.10" },
+	{ "/usr/share/", FHS_PREFIX|FHS_READ,"4.11" },
+	{ "/var/cache/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE,"5.5" },
+	{ "/var/games/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE,"5.7" },
+	{ "/var/lib/%s/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE,"5.8" },
+	{ "/var/lock/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE, "5.9" },
+	{ "/var/log/%s/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE, "5.10" },
+	{ "/var/mail/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE, "5.11" },
+	{ "/var/opt/%s/", FHS_PREFIX|FHS_FORMAT|FHS_READ|FHS_WRITE,"5.12" },
+	{ "/var/run/%s.pid", FHS_FORMAT|FHS_READ|FHS_WRITE,"5.13" },
+	{ "/var/run/%s/", FHS_PREFIX|FHS_FORMAT|FHS_READ|FHS_WRITE,"5.13" },
+	{ "/var/spool/%s/", FHS_PREFIX|FHS_FORMAT|FHS_READ|FHS_WRITE,"5.14" },
+	{ "/var/tmp/", FHS_PREFIX|FHS_READ|FHS_WRITE|FHS_CREATE,"5.15" },
+	{ "/proc", FHS_PREFIX, "6.1.6" },
+	{ "/", FHS_PREFIX, "3.1" },
 };
 
 int numpaths = sizeof(fhspaths)/sizeof(struct fhspath);
@@ -110,6 +144,11 @@ int is_fhs_creatable(char *path)
 	return match_fhs_attributes(mkabsolutepath(path),FHS_CREATE);
 }
 
+int is_fhs_installable(char *path)
+{
+	return match_fhs_attributes(mkabsolutepath(path),FHS_INSTALL);
+}
+
 int is_fhs_execable(char *path)
 {
 	return match_fhs_attributes(mkabsolutepath(path),FHS_EXEC);
@@ -129,7 +168,7 @@ struct fhstest {
 	{"/tmp/foo",1,1,1,0},
 	{"/bin/ls",0,0,0,1},
 	{"/usr/bin/vi",0,0,0,1},
-	{"/sbin/init",0,0,0,0},
+	{"/sbin/init",0,0,0,1},
 };
 
 int numtests=sizeof(testset)/sizeof(struct fhstest);
