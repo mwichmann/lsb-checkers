@@ -239,10 +239,10 @@ CheckMemberSize(struct msqid_ds,msg_lspid,4,11,40444)
 CheckOffset(struct msqid_ds,msg_lspid,0,11,40444)
 CheckMemberSize(struct msqid_ds,msg_lrpid,4,11,40445)
 CheckOffset(struct msqid_ds,msg_lrpid,0,11,40445)
-CheckMemberSize(struct msqid_ds,__unused1,4,11,40446)
-CheckOffset(struct msqid_ds,__unused1,0,11,40446)
-CheckMemberSize(struct msqid_ds,__unused2,4,11,40447)
-CheckOffset(struct msqid_ds,__unused2,0,11,40447)
+CheckMemberSize(struct msqid_ds,__unused4,4,11,40446)
+CheckOffset(struct msqid_ds,__unused4,0,11,40446)
+CheckMemberSize(struct msqid_ds,__unused5,4,11,40447)
+CheckOffset(struct msqid_ds,__unused5,0,11,40447)
 #endif
 
 #ifdef TET_TEST
