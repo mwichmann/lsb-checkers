@@ -30,8 +30,6 @@ PhTypeFuncRec	Headers[] = {
 	{PT_NUM,	"PT_NUM",	checkPT_NUM},
 	};
 
-extern char *ProgInterp;
-
 int
 checkPT_NULL(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
