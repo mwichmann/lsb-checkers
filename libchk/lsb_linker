@@ -2,24 +2,24 @@
 
 case `uname -m` in
     ia64)
-        echo /lib/ld-lsb-ia64.so.2
+        echo /lib/ld-lsb-ia64.so.3
         ;;
     ppc)
-        echo /lib/ld-lsb-ppc32.so.2
+        echo /lib/ld-lsb-ppc32.so.3
         ;;
     ppc64)
-        echo /lib64/ld-lsb-ppc64.so.2
+        echo /lib64/ld-lsb-ppc64.so.3
         ;;
     s390)
-        echo /lib/ld-lsb-s390.so.2
+        echo /lib/ld-lsb-s390.so.3
         ;;
     s390x)
-        echo /lib64/ld-lsb-s390x.so.2
+        echo /lib64/ld-lsb-s390x.so.3
         ;;
     *86|athlon)
-        echo /lib/ld-lsb.so.2
+        echo /lib/ld-lsb.so.3
         ;;
     x86_64)
-        echo /lib64/ld-lsb-x86-64.so.2
+        echo /lib64/ld-lsb-x86-64.so.3
         ;;
 esac
