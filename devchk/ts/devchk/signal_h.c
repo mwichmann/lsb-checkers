@@ -119,6 +119,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGBUS (3109) in db\n");
+#ifdef SIGBUS
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3109,%s)\n", architecture, SIGBUS);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SIGFPE
@@ -166,6 +169,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGUSR1 (3112) in db\n");
+#ifdef SIGUSR1
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3112,%s)\n", architecture, SIGUSR1);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SIGSEGV
@@ -203,6 +209,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGUSR2 (3114) in db\n");
+#ifdef SIGUSR2
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3114,%s)\n", architecture, SIGUSR2);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SIGPIPE
@@ -260,6 +269,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGSTKFLT (3118) in db\n");
+#ifdef SIGSTKFLT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3118,%s)\n", architecture, SIGSTKFLT);
+#endif
 #endif
 #ifdef __powerpc__
 #ifdef SIGCHLD
@@ -287,6 +299,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGCHLD (3119) in db\n");
+#ifdef SIGCHLD
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3119,%s)\n", architecture, SIGCHLD);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SIGCLD
@@ -324,6 +339,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGCONT (3121) in db\n");
+#ifdef SIGCONT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3121,%s)\n", architecture, SIGCONT);
+#endif
 #endif
 #ifdef __powerpc__
 #ifdef SIGSTOP
@@ -351,6 +369,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGSTOP (3122) in db\n");
+#ifdef SIGSTOP
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3122,%s)\n", architecture, SIGSTOP);
+#endif
 #endif
 #ifdef __powerpc__
 #ifdef SIGTSTP
@@ -378,6 +399,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGTSTP (3123) in db\n");
+#ifdef SIGTSTP
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3123,%s)\n", architecture, SIGTSTP);
+#endif
 #endif
 #ifdef __powerpc__
 #ifdef SIGTTIN
@@ -405,6 +429,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGTTIN (3124) in db\n");
+#ifdef SIGTTIN
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3124,%s)\n", architecture, SIGTTIN);
+#endif
 #endif
 #ifdef __powerpc__
 #ifdef SIGTTOU
@@ -432,6 +459,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGTTOU (3125) in db\n");
+#ifdef SIGTTOU
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3125,%s)\n", architecture, SIGTTOU);
+#endif
 #endif
 #ifdef __powerpc__
 #ifdef SIGURG
@@ -459,6 +489,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGURG (3126) in db\n");
+#ifdef SIGURG
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3126,%s)\n", architecture, SIGURG);
+#endif
 #endif
 #ifdef __powerpc__
 #ifdef SIGXCPU
@@ -486,6 +519,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGXCPU (3127) in db\n");
+#ifdef SIGXCPU
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3127,%s)\n", architecture, SIGXCPU);
+#endif
 #endif
 #ifdef __powerpc__
 #ifdef SIGXFSZ
@@ -513,6 +549,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGXFSZ (3128) in db\n");
+#ifdef SIGXFSZ
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3128,%s)\n", architecture, SIGXFSZ);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SIGEV_NONE
@@ -550,6 +589,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGVTALRM (3129) in db\n");
+#ifdef SIGVTALRM
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3129,%s)\n", architecture, SIGVTALRM);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SIGEV_SIGNAL
@@ -631,6 +673,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGWINCH (3131) in db\n");
+#ifdef SIGWINCH
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3131,%s)\n", architecture, SIGWINCH);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SI_ASYNCIO
@@ -668,6 +713,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGIO (3132) in db\n");
+#ifdef SIGIO
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3132,%s)\n", architecture, SIGIO);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SI_MESGQ
@@ -725,6 +773,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGPWR (3134) in db\n");
+#ifdef SIGPWR
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3134,%s)\n", architecture, SIGPWR);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SI_TIMER
@@ -762,6 +813,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGSYS (3135) in db\n");
+#ifdef SIGSYS
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3135,%s)\n", architecture, SIGSYS);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SI_USER
@@ -799,6 +853,9 @@ cnt++;
 
 #else
 Msg( "No definition for SIGUNUSED (3136) in db\n");
+#ifdef SIGUNUSED
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3136,%s)\n", architecture, SIGUNUSED);
+#endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SIGRTMIN
