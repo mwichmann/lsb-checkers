@@ -12,4 +12,4 @@ libdl.o : $(FUNCS)
 
 
 clean:
-	rm -f $(FUNCS)
+	rm -f $(FUNCS) libdl.o
