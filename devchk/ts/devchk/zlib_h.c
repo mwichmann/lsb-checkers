@@ -824,11 +824,11 @@ CheckMemberSize(struct internal_state,dummy,4,9,34081)
 CheckOffset(struct internal_state,dummy,0,9,34081)
 #elif __s390x__
 CheckTypeSize(struct internal_state,4, 9874, 12)
-Msg("Missing member data for internal_state on S390X\n");
+CheckMemberSize(struct internal_state,dummy,4,12,34081)
 CheckOffset(struct internal_state,dummy,0,12,34081)
 #elif __x86_64__
 CheckTypeSize(struct internal_state,4, 9874, 11)
-Msg("Missing member data for internal_state on x86-64\n");
+CheckMemberSize(struct internal_state,dummy,4,11,34081)
 CheckOffset(struct internal_state,dummy,0,11,34081)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9874,0);

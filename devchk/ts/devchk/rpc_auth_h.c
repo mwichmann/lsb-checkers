@@ -300,8 +300,9 @@ CheckOffset(union des_block,key,0,12,32024)
 CheckOffset(union des_block,c,0,12,32025)
 #elif __x86_64__
 CheckTypeSize(union des_block,8, 9888, 11)
-Msg("Missing member data for des_block on x86-64\n");
+CheckMemberSize(union des_block,key,8,11,32024)
 CheckOffset(union des_block,key,0,11,32024)
+CheckMemberSize(union des_block,c,8,11,32025)
 CheckOffset(union des_block,c,0,11,32025)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9888,0);
