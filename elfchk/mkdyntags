@@ -25,5 +25,5 @@ for(1..$sth->numrows) {
 	printf "check%s},\n",$entry{'DEname'};
 }
 print "\t};\n\n";
-print "int numDynamicInfo = sizeof(DynamicInfo)/sizeof(struct DynamicInfo);";
+print "int numDynamicInfo = sizeof(DynamicInfo)/sizeof(struct DynamicInfo);\n";
 
