@@ -2,9 +2,11 @@
 #include <string.h>
 #include <time.h>
 #include "rpmchk.h"
+#include "md5.h"
 #include "tagfuncs.h"
 #include "../tetj/tetj.h"
 
+MD5_CTX md5ctx;
 
 void
 checkRpmIdx(RpmFile *file1, RpmHdrIndex *hidx, RpmIdxTagFuncRec Tags[],
@@ -267,7 +269,7 @@ void
 checkRpmIdxSIGSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		hoffset;
-unsigned int	*value,size,tagsize;
+unsigned int	*value,size;
 
 /*
 RpmHeader	*hdr;
@@ -280,16 +282,16 @@ hcount=ntohl(hidx->count);
 */
 hoffset=ntohl(hidx->offset);
 value=(int *)(file1->storeaddr+hoffset);
-tagsize=htonl(*value);
+sigsize=htonl(*value);
 size=file1->size-((char *)file1->header-file1->addr);
 
 /*
 fprintf(stderr,"checkRpmIdxSIGSIZE() type=%d offset=%x count=%x size=%x\n",
 						htype,hoffset,hcount,htonl(*value));
 */
-if( tagsize != size ) {
+if( sigsize != size ) {
 	fprintf(stderr,"SIGTAG_SIZE value %d doesn't match expected value %d\n",
-				tagsize,	size );
+				sigsize,	size );
 	}
 
 }
@@ -297,8 +299,11 @@ if( tagsize != size ) {
 void
 checkRpmIdxMD5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
+int		hoffset;
+unsigned char	*md5hdr,md5sum[16];
 /*
-int		htag, htype, hoffset, hcount;
+*/
+int		htag, htype, hcount;
 int		nindex;
 RpmHeader	*hdr;
 
@@ -306,13 +311,34 @@ hdr=(RpmHeader *)file1->nexthdr;
 nindex=ntohl(hdr->nindex);
 htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
+hoffset=ntohl(hidx->offset);
+md5hdr=(int *)(file1->storeaddr+hoffset);
 
-fprintf(stderr,"checkRpmIdxMD5() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
+/*
+fprintf(stderr,"%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x\n",
+                        md5hdr[0], md5hdr[1], md5hdr[2], md5hdr[3],
+                        md5hdr[4], md5hdr[5], md5hdr[6], md5hdr[7],
+                        md5hdr[8], md5hdr[9], md5hdr[10], md5hdr[11],
+                        md5hdr[12], md5hdr[13], md5hdr[14], md5hdr[15] );
 */
-fprintf(stderr,"checkRpmIdxMD5() Not yet checking MD5 contents\n");
+
+MD5Init(&md5ctx);
+MD5Update(&md5ctx,file1->header,sigsize);
+MD5Final(md5sum,&md5ctx);
+
+/*
+fprintf(stderr,"%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x\n",
+                        md5sum[0], md5sum[1], md5sum[2], md5sum[3],
+                        md5sum[4], md5sum[5], md5sum[6], md5sum[7],
+                        md5sum[8], md5sum[9], md5sum[10], md5sum[11],
+                        md5sum[12], md5sum[13], md5sum[14], md5sum[15] );
+*/
+
+if( memcmp(md5hdr,md5sum,16) != 0 ) {
+	fprintf(stderr,
+		"SIGTAG_MD5 calculated value doesn't match expected value\n");
+	}
 }
 
 void

@@ -146,6 +146,7 @@ extern char *validdepver;
 extern char *pkgname;
 extern unsigned char *sigdata;
 extern int lsbdepidx;
+extern int sigsize;
 extern int archivesize;
 extern unsigned int *filesizes;
 extern unsigned short *filemodes;

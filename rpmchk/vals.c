@@ -23,6 +23,7 @@ int  lsbdepidx=-1;
  * another part. 
  */
 unsigned char *sigdata;
+int  sigsize;
 int  archivesize;
 unsigned int	*filesizes;
 unsigned short	*filemodes;
