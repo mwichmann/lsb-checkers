@@ -3,9 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
-static int(*funcptr)(pthread_rwlock_t *, const struct timespec *) = 0;
+#include <sys/time.h>
+#undef pthread_rwlock_timedwrlock
+static int(*funcptr) (pthread_rwlock_t * , const struct timespec * ) = 0;
 
-int pthread_rwlock_timedwrlock(pthread_rwlock_t * arg0, const struct timespec * arg1)
+int pthread_rwlock_timedwrlock (pthread_rwlock_t * arg0 , const struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_timedwrlock");
@@ -14,7 +16,7 @@ int pthread_rwlock_timedwrlock(pthread_rwlock_t * arg0, const struct timespec * 
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_rwlock_timedwrlock(pthread_rwlock_t * arg0, const struct timespec * arg1)
+int lsb_pthread_rwlock_timedwrlock (pthread_rwlock_t * arg0 , const struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_timedwrlock");

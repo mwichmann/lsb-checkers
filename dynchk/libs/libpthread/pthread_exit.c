@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(void *) = 0;
+#undef pthread_exit
+static void(*funcptr) (void * ) = 0;
 
-void pthread_exit(void * arg0)
+void pthread_exit (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_exit");
@@ -12,7 +13,7 @@ void pthread_exit(void * arg0)
 	funcptr(arg0);
 }
 
-void lsb_pthread_exit(void * arg0)
+void lsb_pthread_exit (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_exit");

@@ -3,9 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
-static int(*funcptr)(pthread_t, int *, struct sched_param *) = 0;
+#include <sched.h>
+#undef pthread_getschedparam
+static int(*funcptr) (pthread_t , int * , struct sched_param * ) = 0;
 
-int pthread_getschedparam(pthread_t arg0, int * arg1, struct sched_param * arg2)
+int pthread_getschedparam (pthread_t arg0 , int * arg1 , struct sched_param * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_getschedparam");
@@ -15,7 +17,7 @@ int pthread_getschedparam(pthread_t arg0, int * arg1, struct sched_param * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_pthread_getschedparam(pthread_t arg0, int * arg1, struct sched_param * arg2)
+int lsb_pthread_getschedparam (pthread_t arg0 , int * arg1 , struct sched_param * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_getschedparam");

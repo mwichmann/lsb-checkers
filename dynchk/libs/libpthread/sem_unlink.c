@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *) = 0;
+#undef sem_unlink
+static int(*funcptr) (const char * ) = 0;
 
-int sem_unlink(const char * arg0)
+int sem_unlink (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_unlink");
@@ -12,7 +13,7 @@ int sem_unlink(const char * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sem_unlink(const char * arg0)
+int lsb_sem_unlink (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_unlink");

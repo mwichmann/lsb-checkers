@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(pthread_cond_t *, pthread_mutex_t *) = 0;
+#include <pthread.h>
+#undef pthread_cond_wait
+static int(*funcptr) (pthread_cond_t * , pthread_mutex_t * ) = 0;
 
-int pthread_cond_wait(pthread_cond_t * arg0, pthread_mutex_t * arg1)
+int pthread_cond_wait (pthread_cond_t * arg0 , pthread_mutex_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cond_wait");
@@ -13,7 +15,7 @@ int pthread_cond_wait(pthread_cond_t * arg0, pthread_mutex_t * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_cond_wait(pthread_cond_t * arg0, pthread_mutex_t * arg1)
+int lsb_pthread_cond_wait (pthread_cond_t * arg0 , pthread_mutex_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cond_wait");

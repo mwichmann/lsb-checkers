@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
-static int(*funcptr)(pthread_key_t *, void(*destr_func)(void *)) = 0;
+#undef pthread_key_create
+static int(*funcptr) (pthread_key_t * , void(*destr_func)(void *) ) = 0;
 
-int pthread_key_create(pthread_key_t * arg0, void(*destr_func)(void *) arg1)
+int pthread_key_create (pthread_key_t * arg0 , void(*arg1)(void *) )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_key_create");
@@ -14,7 +15,7 @@ int pthread_key_create(pthread_key_t * arg0, void(*destr_func)(void *) arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_key_create(pthread_key_t * arg0, void(*destr_func)(void *) arg1)
+int lsb_pthread_key_create (pthread_key_t * arg0 , void(*arg1)(void *) )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_key_create");

@@ -2,9 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(pthread_attr_t *, const struct sched_param *) = 0;
+#include <pthread.h>
+#include <sched.h>
+#undef pthread_attr_setschedparam
+static int(*funcptr) (pthread_attr_t * , const struct sched_param * ) = 0;
 
-int pthread_attr_setschedparam(pthread_attr_t * arg0, const struct sched_param * arg1)
+int pthread_attr_setschedparam (pthread_attr_t * arg0 , const struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_setschedparam");
@@ -13,7 +16,7 @@ int pthread_attr_setschedparam(pthread_attr_t * arg0, const struct sched_param *
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_attr_setschedparam(pthread_attr_t * arg0, const struct sched_param * arg1)
+int lsb_pthread_attr_setschedparam (pthread_attr_t * arg0 , const struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_setschedparam");

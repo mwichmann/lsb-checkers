@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
-static int(*funcptr)(pthread_rwlock_t *, const pthread_rwlockattr_t *) = 0;
+#undef pthread_rwlock_init
+static int(*funcptr) (pthread_rwlock_t * , const pthread_rwlockattr_t * ) = 0;
 
-int pthread_rwlock_init(pthread_rwlock_t * arg0, const pthread_rwlockattr_t * arg1)
+int pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_init");
@@ -14,7 +15,7 @@ int pthread_rwlock_init(pthread_rwlock_t * arg0, const pthread_rwlockattr_t * ar
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_rwlock_init(pthread_rwlock_t * arg0, const pthread_rwlockattr_t * arg1)
+int lsb_pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_init");

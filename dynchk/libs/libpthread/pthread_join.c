@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
-static int(*funcptr)(pthread_t, void * *) = 0;
+#undef pthread_join
+static int(*funcptr) (pthread_t , void * * ) = 0;
 
-int pthread_join(pthread_t arg0, void * * arg1)
+int pthread_join (pthread_t arg0 , void * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_join");
@@ -14,7 +15,7 @@ int pthread_join(pthread_t arg0, void * * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_join(pthread_t arg0, void * * arg1)
+int lsb_pthread_join (pthread_t arg0 , void * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_join");

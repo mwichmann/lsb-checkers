@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(pthread_rwlockattr_t *) = 0;
+#include <pthread.h>
+#undef pthread_rwlockattr_destroy
+static int(*funcptr) (pthread_rwlockattr_t * ) = 0;
 
-int pthread_rwlockattr_destroy(pthread_rwlockattr_t * arg0)
+int pthread_rwlockattr_destroy (pthread_rwlockattr_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlockattr_destroy");
@@ -12,7 +14,7 @@ int pthread_rwlockattr_destroy(pthread_rwlockattr_t * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_pthread_rwlockattr_destroy(pthread_rwlockattr_t * arg0)
+int lsb_pthread_rwlockattr_destroy (pthread_rwlockattr_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlockattr_destroy");

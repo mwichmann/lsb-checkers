@@ -3,9 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(pthread_attr_t *, size_t) = 0;
+#include <pthread.h>
+#undef pthread_attr_setstacksize
+static int(*funcptr) (pthread_attr_t * , size_t ) = 0;
 
-int pthread_attr_setstacksize(pthread_attr_t * arg0, size_t arg1)
+int pthread_attr_setstacksize (pthread_attr_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_setstacksize");
@@ -14,7 +16,7 @@ int pthread_attr_setstacksize(pthread_attr_t * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_attr_setstacksize(pthread_attr_t * arg0, size_t arg1)
+int lsb_pthread_attr_setstacksize (pthread_attr_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_setstacksize");

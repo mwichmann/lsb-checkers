@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(pthread_condattr_t *, int *) = 0;
+#include <pthread.h>
+#undef pthread_condattr_getpshared
+static int(*funcptr) (const pthread_condattr_t * , int * ) = 0;
 
-int pthread_condattr_getpshared(pthread_condattr_t * arg0, int * arg1)
+int pthread_condattr_getpshared (const pthread_condattr_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_condattr_getpshared");
@@ -13,7 +15,7 @@ int pthread_condattr_getpshared(pthread_condattr_t * arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_condattr_getpshared(pthread_condattr_t * arg0, int * arg1)
+int lsb_pthread_condattr_getpshared (const pthread_condattr_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_condattr_getpshared");
