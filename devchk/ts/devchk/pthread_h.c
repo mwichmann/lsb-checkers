@@ -451,13 +451,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9049,0);
 Msg("Find size of pthread_mutexattr_t (9049)\n");
 #endif
 
-#if __x86_64__
+#if __i386__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9050,0);
 Msg("Find size of pthread_mutexattr_t * (9050)\n");
 #endif
 
-#if __x86_64__
+#if __i386__
+CheckTypeSize(const pthread_mutexattr_t,4, 10881, 2)
+#elif __x86_64__
 CheckTypeSize(const pthread_mutexattr_t,0, 10881, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10881,0);
@@ -491,7 +494,7 @@ Msg("Find size of pthread_attr_t (9042)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_cond_t,12, 9051, 2)
+CheckTypeSize(pthread_cond_t,48, 9051, 2)
 #elif __ia64__
 CheckTypeSize(pthread_cond_t,24, 9051, 3)
 #elif __powerpc__ && !__powerpc64__

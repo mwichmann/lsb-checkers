@@ -133,7 +133,15 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __i386__
+#ifdef _POSIX_VERSION
+	CompareConstant(_POSIX_VERSION,200112,1919,architecture)
+#else
+Msg( "Error: Constant not found: _POSIX_VERSION\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef _POSIX_VERSION
 	CompareConstant(_POSIX_VERSION,199506L,1919,architecture)
 #else
@@ -153,7 +161,15 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __i386__
+#ifdef _POSIX2_VERSION
+	CompareConstant(_POSIX2_VERSION,200112,1921,architecture)
+#else
+Msg( "Error: Constant not found: _POSIX2_VERSION\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef _POSIX2_VERSION
 	CompareConstant(_POSIX2_VERSION,199209L,1921,architecture)
 #else
