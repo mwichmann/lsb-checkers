@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <zlib.h>
 #undef gzwrite
-static int(*funcptr) (gzFile , voidp , unsigned int ) = 0;
+static int(*funcptr) (gzFile , voidpc , unsigned int ) = 0;
 
-int gzwrite (gzFile arg0 , voidp arg1 , unsigned int arg2 )
+int gzwrite (gzFile arg0 , voidpc arg1 , unsigned int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzwrite");
@@ -16,7 +16,7 @@ int gzwrite (gzFile arg0 , voidp arg1 , unsigned int arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_gzwrite (gzFile arg0 , voidp arg1 , unsigned int arg2 )
+int lsb_gzwrite (gzFile arg0 , voidpc arg1 , unsigned int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzwrite");
