@@ -1,6 +1,6 @@
 HAND_FUNCS= \
 fprintf.o ioctl.o open.o open64.o printf.o fscanf.o sscanf.o scanf.o mmap.o \
-calloc.o malloc.o realloc.o free.o
+calloc.o malloc.o realloc.o free.o tcgetattr.o tcsetattr.o
 
 include gen.mk
 
