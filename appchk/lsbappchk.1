@@ -15,10 +15,10 @@ and the list of functions and global data used by the
 application. Warnings are produced for anything that is used, but not
 contained in the LSB specification.
 .TP
-\fB\-L \fIpathtolib\fR
-Specify libraries which are part of the application.  This option can
-be specified as many times as needed, and will prevent lsbappchk from
-complaining about symbols which are provided in those shared
+\fB\-L \fInameoflib\fR
+Specify the full path of a library which is part of the application.  This
+option can be specified as many times as needed, and will prevent lsbappchk
+from complaining about symbols which are provided in those shared
 libraries.
 .PP
 A journal file named journal.appchk.<appname> where appname is the
