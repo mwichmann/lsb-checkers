@@ -50,6 +50,13 @@ Msg( "Error: Constant not found: RE_CONTEXT_INDEP_ANCHORS\n");
 cnt++;
 #endif
 
+#ifdef RE_CONTEXT_INDEP_OPS
+	CompareConstant(RE_CONTEXT_INDEP_OPS,(RE_CONTEXT_INDEP_ANCHORS<<1))
+#else
+Msg( "Error: Constant not found: RE_CONTEXT_INDEP_OPS\n");
+cnt++;
+#endif
+
 #ifdef RE_CONTEXT_INVALID_OPS
 	CompareConstant(RE_CONTEXT_INVALID_OPS,(RE_CONTEXT_INDEP_OPS<<1))
 #else
@@ -75,6 +82,13 @@ cnt++;
 	CompareConstant(RE_HAT_LISTS_NOT_NEWLINE,(RE_DOT_NOT_NULL<<1))
 #else
 Msg( "Error: Constant not found: RE_HAT_LISTS_NOT_NEWLINE\n");
+cnt++;
+#endif
+
+#ifdef RE_INTERVALS
+	CompareConstant(RE_INTERVALS,(RE_HAT_LISTS_NOT_NEWLINE<<1))
+#else
+Msg( "Error: Constant not found: RE_INTERVALS\n");
 cnt++;
 #endif
 
@@ -134,6 +148,34 @@ Msg( "Error: Constant not found: RE_UNMATCHED_RIGHT_PAREN_ORD\n");
 cnt++;
 #endif
 
+#ifdef RE_NO_POSIX_BACKTRACKING
+	CompareConstant(RE_NO_POSIX_BACKTRACKING,(RE_UNMATCHED_RIGHT_PAREN_ORD<<1))
+#else
+Msg( "Error: Constant not found: RE_NO_POSIX_BACKTRACKING\n");
+cnt++;
+#endif
+
+#ifdef RE_NO_GNU_OPS
+	CompareConstant(RE_NO_GNU_OPS,(RE_NO_POSIX_BACKTRACKING<<1))
+#else
+Msg( "Error: Constant not found: RE_NO_GNU_OPS\n");
+cnt++;
+#endif
+
+#ifdef RE_DEBUG
+	CompareConstant(RE_DEBUG,(RE_NO_GNU_OPS<<1))
+#else
+Msg( "Error: Constant not found: RE_DEBUG\n");
+cnt++;
+#endif
+
+#ifdef RE_INVALID_INTERVAL_ORD
+	CompareConstant(RE_INVALID_INTERVAL_ORD,(RE_DEBUG<<1))
+#else
+Msg( "Error: Constant not found: RE_INVALID_INTERVAL_ORD\n");
+cnt++;
+#endif
+
 #ifdef RE_SYNTAX_AWK
 	CompareConstant(RE_SYNTAX_AWK,(RE_BACKSLASH_ESCAPE_IN_LISTS|RE_DOT_NOT_NULL|RE_NO_BK_PARENS| RE_NO_BK_REFS| RE_NO_BK_VBAR| RE_NO_EMPTY_RANGES| RE_DOT_NEWLINE| RE_CONTEXT_INDEP_ANCHORS| RE_UNMATCHED_RIGHT_PAREN_ORD | RE_NO_GNU_OPS))
 #else
@@ -187,6 +229,13 @@ cnt++;
 	CompareConstant(RE_SYNTAX_SED,RE_SYNTAX_POSIX_BASIC)
 #else
 Msg( "Error: Constant not found: RE_SYNTAX_SED\n");
+cnt++;
+#endif
+
+#ifdef _RE_SYNTAX_POSIX_COMMON
+	CompareConstant(_RE_SYNTAX_POSIX_COMMON,(RE_CHAR_CLASSES|RE_DOT_NEWLINE|RE_DOT_NOT_NULL|RE_INTERVALS))
+#else
+Msg( "Error: Constant not found: _RE_SYNTAX_POSIX_COMMON\n");
 cnt++;
 #endif
 
@@ -271,14 +320,25 @@ cnt++;
 CheckTypeSize(reg_syntax_t,4, 6941, 2)
 #elif __ia64__
 CheckTypeSize(reg_syntax_t,8, 6941, 3)
+#elif __powerpc__
+CheckTypeSize(reg_syntax_t,4, 6941, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6941,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct re_pattern_buffer,32, 6944, 2)
+CheckOffset(struct re_pattern_buffer,buffer,0,2,30066)
+CheckOffset(struct re_pattern_buffer,allocated,4,2,30067)
+CheckOffset(struct re_pattern_buffer,used,8,2,30068)
+CheckOffset(struct re_pattern_buffer,syntax,12,2,30069)
+CheckOffset(struct re_pattern_buffer,fastmap,16,2,30070)
+CheckOffset(struct re_pattern_buffer,translate,20,2,30071)
+CheckOffset(struct re_pattern_buffer,re_nsub,24,2,30072)
 #elif __ia64__
 CheckTypeSize(struct re_pattern_buffer,64, 6944, 3)
+#elif __powerpc__
+CheckTypeSize(struct re_pattern_buffer,32, 6944, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6944,0);
 #endif
@@ -287,6 +347,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6944,0);
 CheckTypeSize(regex_t,32, 6945, 2)
 #elif __ia64__
 CheckTypeSize(regex_t,64, 6945, 3)
+#elif __powerpc__
+CheckTypeSize(regex_t,32, 6945, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
 #endif
@@ -295,6 +357,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
 CheckTypeSize(regoff_t,4, 6946, 2)
 #elif __ia64__
 CheckTypeSize(regoff_t,4, 6946, 3)
+#elif __powerpc__
+CheckTypeSize(regoff_t,4, 6946, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6946,0);
 #endif
@@ -303,6 +367,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6946,0);
 CheckTypeSize(regmatch_t,8, 6949, 2)
 #elif __ia64__
 CheckTypeSize(regmatch_t,8, 6949, 3)
+#elif __powerpc__
+CheckTypeSize(regmatch_t,8, 6949, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6949,0);
 #endif

@@ -17,7 +17,6 @@ OBJS = hdrchk.o \
 	X11_Xutil_h.o \
 	X11_extensions_security_h.o \
 	X11_extensions_sync_h.o \
-	aio_h.o \
 	assert_h.o \
 	cpio_h.o \
 	ctype_h.o \
@@ -38,6 +37,7 @@ OBJS = hdrchk.o \
 	limits_h.o \
 	locale_h.o \
 	math_h.o \
+	net_if_h.o \
 	netdb_h.o \
 	netinet_in_h.o \
 	nl_types_h.o \
@@ -57,8 +57,8 @@ OBJS = hdrchk.o \
 	sys_mman_h.o \
 	sys_msg_h.o \
 	sys_param_h.o \
+	sys_poll_h.o \
 	sys_resource_h.o \
-	sys_select_h.o \
 	sys_sem_h.o \
 	sys_shm_h.o \
 	sys_socket_h.o \
@@ -77,6 +77,7 @@ OBJS = hdrchk.o \
 	ulimit_h.o \
 	unistd_h.o \
 	utime_h.o \
+	utmp_h.o \
 	wchar_h.o \
 	wctype_h.o \
 	wordexp_h.o \
@@ -100,10 +101,10 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	cc -o hdrchk $(OBJS) $(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 
+	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 -lpthread
 
 hdrchk.o: hdrchk.c
-	cc $(CFLAGS) -g -c hdrchk.c
+	$(CC) $(CFLAGS) -g -c hdrchk.c
 
 
 hdrchk.c:

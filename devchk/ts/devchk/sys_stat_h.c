@@ -214,6 +214,16 @@ cnt++;
 /* No test for S_ISBLK(m) */
 /* No test for S_ISFIFO(m) */
 /* No test for S_ISSOCK(m) */
+/* No test for lstat(path,buf) */
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+/* No test for fstat(fd,buf) */
+/* No test for stat(path,buf) */
 #ifdef __i386__
 CheckTypeSize(struct stat,88, 8693, 2)
 #elif __ia64__

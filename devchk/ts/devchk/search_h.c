@@ -33,14 +33,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6953,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(__action_fn_t,4, 6956, 2)
-#elif __ia64__
-CheckTypeSize(__action_fn_t,8, 6956, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6956,0);
-#endif
-
-#ifdef __i386__
 CheckTypeSize(ACTION,4, 9081, 2)
 #elif __ia64__
 CheckTypeSize(ACTION,4, 9081, 3)
@@ -54,6 +46,14 @@ CheckTypeSize(VISIT,4, 9085, 2)
 CheckTypeSize(VISIT,4, 9085, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9085,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(__action_fn_t,4, 6956, 2)
+#elif __ia64__
+CheckTypeSize(__action_fn_t,8, 6956, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6956,0);
 #endif
 
 #ifdef TET_TEST

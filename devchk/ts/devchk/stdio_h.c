@@ -103,6 +103,8 @@ cnt++;
 CheckTypeSize(FILE,148, 8782, 2)
 #elif __ia64__
 CheckTypeSize(FILE,216, 8782, 3)
+#elif __powerpc__
+CheckTypeSize(FILE,152, 8782, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
 #endif
@@ -111,6 +113,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
 CheckTypeSize(fpos_t,12, 9108, 2)
 #elif __ia64__
 CheckTypeSize(fpos_t,16, 9108, 3)
+#elif __powerpc__
+CheckTypeSize(fpos_t,12, 9108, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9108,0);
 #endif
@@ -121,6 +125,12 @@ CheckTypeSize(fpos64_t,16, 9109, 2)
 CheckTypeSize(fpos64_t,16, 9109, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9109,0);
+#endif
+
+#ifdef __i386__
+#endif
+
+#ifdef __no_sym__
 #endif
 
 #ifdef TET_TEST

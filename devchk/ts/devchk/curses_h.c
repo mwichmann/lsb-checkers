@@ -26,6 +26,140 @@ int pcnt=0;
 Msg("Checking data structures in curses.h\n");
 #endif
 
+/* No test for NCURSES_BITS(mask,shift) */
+#ifdef A_NORMAL
+	CompareConstant(A_NORMAL,0L)
+#else
+Msg( "Error: Constant not found: A_NORMAL\n");
+cnt++;
+#endif
+
+#ifdef A_ATTRIBUTES
+	CompareConstant(A_ATTRIBUTES,NCURSES_BITS(~(1UL-1UL),0))
+#else
+Msg( "Error: Constant not found: A_ATTRIBUTES\n");
+cnt++;
+#endif
+
+#ifdef A_CHARTEXT
+	CompareConstant(A_CHARTEXT,(NCURSES_BITS(1UL,0)-1UL))
+#else
+Msg( "Error: Constant not found: A_CHARTEXT\n");
+cnt++;
+#endif
+
+#ifdef A_COLOR
+	CompareConstant(A_COLOR,NCURSES_BITS(((1UL)<<8)-1UL,0))
+#else
+Msg( "Error: Constant not found: A_COLOR\n");
+cnt++;
+#endif
+
+#ifdef A_STANDOUT
+	CompareConstant(A_STANDOUT,NCURSES_BITS(1UL,8))
+#else
+Msg( "Error: Constant not found: A_STANDOUT\n");
+cnt++;
+#endif
+
+#ifdef A_UNDERLINE
+	CompareConstant(A_UNDERLINE,NCURSES_BITS(1UL,9))
+#else
+Msg( "Error: Constant not found: A_UNDERLINE\n");
+cnt++;
+#endif
+
+#ifdef A_REVERSE
+	CompareConstant(A_REVERSE,NCURSES_BITS(1UL,10))
+#else
+Msg( "Error: Constant not found: A_REVERSE\n");
+cnt++;
+#endif
+
+#ifdef A_BLINK
+	CompareConstant(A_BLINK,NCURSES_BITS(1UL,11))
+#else
+Msg( "Error: Constant not found: A_BLINK\n");
+cnt++;
+#endif
+
+#ifdef A_DIM
+	CompareConstant(A_DIM,NCURSES_BITS(1UL,12))
+#else
+Msg( "Error: Constant not found: A_DIM\n");
+cnt++;
+#endif
+
+#ifdef A_BOLD
+	CompareConstant(A_BOLD,NCURSES_BITS(1UL,13))
+#else
+Msg( "Error: Constant not found: A_BOLD\n");
+cnt++;
+#endif
+
+#ifdef A_ALTCHARSET
+	CompareConstant(A_ALTCHARSET,NCURSES_BITS(1UL,14))
+#else
+Msg( "Error: Constant not found: A_ALTCHARSET\n");
+cnt++;
+#endif
+
+#ifdef A_INVIS
+	CompareConstant(A_INVIS,NCURSES_BITS(1UL,15))
+#else
+Msg( "Error: Constant not found: A_INVIS\n");
+cnt++;
+#endif
+
+#ifdef A_PROTECT
+	CompareConstant(A_PROTECT,NCURSES_BITS(1UL,16))
+#else
+Msg( "Error: Constant not found: A_PROTECT\n");
+cnt++;
+#endif
+
+#ifdef A_HORIZONTAL
+	CompareConstant(A_HORIZONTAL,NCURSES_BITS(1UL,17))
+#else
+Msg( "Error: Constant not found: A_HORIZONTAL\n");
+cnt++;
+#endif
+
+#ifdef A_LEFT
+	CompareConstant(A_LEFT,NCURSES_BITS(1UL,18))
+#else
+Msg( "Error: Constant not found: A_LEFT\n");
+cnt++;
+#endif
+
+#ifdef A_LOW
+	CompareConstant(A_LOW,NCURSES_BITS(1UL,19))
+#else
+Msg( "Error: Constant not found: A_LOW\n");
+cnt++;
+#endif
+
+#ifdef A_RIGHT
+	CompareConstant(A_RIGHT,NCURSES_BITS(1UL,20))
+#else
+Msg( "Error: Constant not found: A_RIGHT\n");
+cnt++;
+#endif
+
+#ifdef A_TOP
+	CompareConstant(A_TOP,NCURSES_BITS(1UL,21))
+#else
+Msg( "Error: Constant not found: A_TOP\n");
+cnt++;
+#endif
+
+#ifdef A_VERTICAL
+	CompareConstant(A_VERTICAL,NCURSES_BITS(1UL,22))
+#else
+Msg( "Error: Constant not found: A_VERTICAL\n");
+cnt++;
+#endif
+
 #ifdef WA_ATTRIBUTES
 	CompareConstant(WA_ATTRIBUTES,A_ATTRIBUTES)
 #else
@@ -926,17 +1060,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8653,0);
 #endif
 
 #ifdef __i386__
-CheckTypeSize(struct _win_st,100, 8654, 2)
-#elif __ia64__
-CheckTypeSize(struct _win_st,152, 8654, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
-#endif
-
-#ifdef __i386__
 CheckTypeSize(WINDOW,100, 8655, 2)
 #elif __ia64__
 CheckTypeSize(WINDOW,152, 8655, 3)
+#elif __powerpc__
+CheckTypeSize(WINDOW,100, 8655, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8655,0);
 #endif
@@ -947,6 +1075,64 @@ CheckTypeSize(attr_t,4, 8656, 2)
 CheckTypeSize(attr_t,8, 8656, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8656,0);
+#endif
+
+#ifdef 1
+CheckTypeSize(cchar_t,0, 8658, 1)
+#elif __i386__
+CheckTypeSize(cchar_t,24, 8658, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8658,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct pdat,12, 8663, 2)
+CheckOffset(struct pdat,_pad_y,0,2,29725)
+CheckOffset(struct pdat,_pad_x,2,2,29726)
+CheckOffset(struct pdat,_pad_top,4,2,29727)
+CheckOffset(struct pdat,_pad_left,6,2,29728)
+CheckOffset(struct pdat,_pad_bottom,8,2,29729)
+CheckOffset(struct pdat,_pad_right,10,2,29730)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct _win_st,100, 8654, 2)
+CheckOffset(struct _win_st,_cury,0,2,29700)
+CheckOffset(struct _win_st,_curx,2,2,29701)
+CheckOffset(struct _win_st,_maxy,4,2,29702)
+CheckOffset(struct _win_st,_maxx,6,2,29703)
+CheckOffset(struct _win_st,_begy,8,2,29704)
+CheckOffset(struct _win_st,_begx,10,2,29705)
+CheckOffset(struct _win_st,_flags,12,2,29706)
+CheckOffset(struct _win_st,_attrs,16,2,29707)
+CheckOffset(struct _win_st,_bkgd,20,2,29708)
+CheckOffset(struct _win_st,_notimeout,24,2,29709)
+CheckOffset(struct _win_st,_clear,25,2,29710)
+CheckOffset(struct _win_st,_leaveok,26,2,29711)
+CheckOffset(struct _win_st,_scroll,27,2,29712)
+CheckOffset(struct _win_st,_idlok,28,2,29713)
+CheckOffset(struct _win_st,_idcok,29,2,29714)
+CheckOffset(struct _win_st,_immed,30,2,29715)
+CheckOffset(struct _win_st,_sync,31,2,29716)
+CheckOffset(struct _win_st,_use_keypad,32,2,29717)
+CheckOffset(struct _win_st,_delay,36,2,29718)
+CheckOffset(struct _win_st,_line,40,2,29719)
+CheckOffset(struct _win_st,_regtop,44,2,29720)
+CheckOffset(struct _win_st,_regbottom,46,2,29721)
+CheckOffset(struct _win_st,_parx,48,2,29722)
+CheckOffset(struct _win_st,_pary,52,2,29723)
+CheckOffset(struct _win_st,_parent,56,2,29724)
+CheckOffset(struct _win_st,_pad,60,2,29731)
+CheckOffset(struct _win_st,_yoffset,72,2,29732)
+CheckOffset(struct _win_st,_bkgrnd,76,2,34437)
+#elif __ia64__
+CheckTypeSize(struct _win_st,152, 8654, 3)
+#elif __powerpc__
+CheckTypeSize(struct _win_st,100, 8654, 6)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
 #endif
 
 #ifdef TET_TEST

@@ -23,14 +23,14 @@ Msg("Checking data structures in wchar.h\n");
 #endif
 
 #ifdef WCHAR_MIN
-	CompareConstant(WCHAR_MIN,__WCHAR_MIN)
+	CompareConstant(WCHAR_MIN,0)
 #else
 Msg( "Error: Constant not found: WCHAR_MIN\n");
 cnt++;
 #endif
 
 #ifdef WCHAR_MAX
-	CompareConstant(WCHAR_MAX,__WCHAR_MAX)
+	CompareConstant(WCHAR_MAX,0xffffff)
 #else
 Msg( "Error: Constant not found: WCHAR_MAX\n");
 cnt++;
@@ -41,14 +41,6 @@ cnt++;
 #else
 Msg( "Error: Constant not found: WEOF\n");
 cnt++;
-#endif
-
-#ifdef __i386__
-CheckTypeSize(mbstate_t,8, 9235, 2)
-#elif __ia64__
-CheckTypeSize(mbstate_t,8, 9235, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9235,0);
 #endif
 
 #ifdef TET_TEST

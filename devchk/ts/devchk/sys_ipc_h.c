@@ -73,8 +73,21 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(struct ipc_perm,36, 10128, 2)
+CheckOffset(struct ipc_perm,__key,0,2,33724)
+CheckOffset(struct ipc_perm,uid,4,2,33725)
+CheckOffset(struct ipc_perm,gid,8,2,33726)
+CheckOffset(struct ipc_perm,cuid,12,2,33727)
+CheckOffset(struct ipc_perm,cgid,16,2,33728)
+CheckOffset(struct ipc_perm,mode,20,2,33729)
+CheckOffset(struct ipc_perm,__pad1,22,2,33730)
+CheckOffset(struct ipc_perm,__seq,24,2,34416)
+CheckOffset(struct ipc_perm,__pad2,26,2,34417)
+CheckOffset(struct ipc_perm,__unused1,28,2,34418)
+CheckOffset(struct ipc_perm,__unused2,32,2,34419)
 #elif __ia64__
 CheckTypeSize(struct ipc_perm,48, 10128, 3)
+#elif __powerpc__
+CheckTypeSize(struct ipc_perm,48, 10128, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10128,0);
 #endif

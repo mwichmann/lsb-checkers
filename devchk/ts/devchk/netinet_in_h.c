@@ -29,10 +29,19 @@ Msg( "Error: Constant not found: INADDR_ANY\n");
 cnt++;
 #endif
 
+#ifdef INADDR_BROADCAST
+	CompareConstant(INADDR_BROADCAST,(0xffffffff))
+#else
+Msg( "Error: Constant not found: INADDR_BROADCAST\n");
+cnt++;
+#endif
+
 #ifdef __i386__
 CheckTypeSize(struct in_addr,4, 10143, 2)
 #elif __ia64__
 CheckTypeSize(struct in_addr,4, 10143, 3)
+#elif __powerpc__
+CheckTypeSize(struct in_addr,4, 10143, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);
 #endif
@@ -41,6 +50,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);
 CheckTypeSize(struct sockaddr_in,16, 9141, 2)
 #elif __ia64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 3)
+#elif __powerpc__
+CheckTypeSize(struct sockaddr_in,16, 9141, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 #endif

@@ -29,6 +29,8 @@ Msg("Checking data structures in X11/ICE/ICEutil.h\n");
 CheckTypeSize(IceAuthFileEntry,28, 8228, 2)
 #elif __ia64__
 CheckTypeSize(IceAuthFileEntry,56, 8228, 3)
+#elif __powerpc__
+CheckTypeSize(IceAuthFileEntry,28, 8228, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8228,0);
 #endif
@@ -37,6 +39,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8228,0);
 CheckTypeSize(IceAuthDataEntry,20, 8230, 2)
 #elif __ia64__
 CheckTypeSize(IceAuthDataEntry,40, 8230, 3)
+#elif __powerpc__
+CheckTypeSize(IceAuthDataEntry,20, 8230, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8230,0);
 #endif

@@ -47,6 +47,8 @@ cnt++;
 CheckTypeSize(struct tm,44, 7019, 2)
 #elif __ia64__
 CheckTypeSize(struct tm,56, 7019, 3)
+#elif __powerpc__
+CheckTypeSize(struct tm,44, 7019, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 #endif
@@ -55,6 +57,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 CheckTypeSize(struct itimerspec,16, 10101, 2)
 #elif __ia64__
 CheckTypeSize(struct itimerspec,32, 10101, 3)
+#elif __powerpc__
+CheckTypeSize(struct itimerspec,16, 10101, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 #endif

@@ -30,6 +30,8 @@ Msg("Checking data structures in X11/Xutil.h\n");
 CheckTypeSize(XSizeHints,72, 8301, 2)
 #elif __ia64__
 CheckTypeSize(XSizeHints,80, 8301, 3)
+#elif __powerpc__
+CheckTypeSize(XSizeHints,72, 8301, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8301,0);
 #endif
@@ -38,6 +40,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8301,0);
 CheckTypeSize(XWMHints,36, 8303, 2)
 #elif __ia64__
 CheckTypeSize(XWMHints,56, 8303, 3)
+#elif __powerpc__
+CheckTypeSize(XWMHints,36, 8303, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8303,0);
 #endif
@@ -46,6 +50,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8303,0);
 CheckTypeSize(XTextProperty,16, 8305, 2)
 #elif __ia64__
 CheckTypeSize(XTextProperty,32, 8305, 3)
+#elif __powerpc__
+CheckTypeSize(XTextProperty,16, 8305, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8305,0);
 #endif
@@ -54,6 +60,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8305,0);
 CheckTypeSize(XIconSize,24, 8309, 2)
 #elif __ia64__
 CheckTypeSize(XIconSize,24, 8309, 3)
+#elif __powerpc__
+CheckTypeSize(XIconSize,24, 8309, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8309,0);
 #endif
@@ -62,6 +70,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8309,0);
 CheckTypeSize(XClassHint,8, 8311, 2)
 #elif __ia64__
 CheckTypeSize(XClassHint,16, 8311, 3)
+#elif __powerpc__
+CheckTypeSize(XClassHint,8, 8311, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8311,0);
 #endif
@@ -70,6 +80,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8311,0);
 CheckTypeSize(XComposeStatus,8, 8313, 2)
 #elif __ia64__
 CheckTypeSize(XComposeStatus,16, 8313, 3)
+#elif __powerpc__
+CheckTypeSize(XComposeStatus,8, 8313, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8313,0);
 #endif
@@ -78,6 +90,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8313,0);
 CheckTypeSize(Region,4, 8314, 2)
 #elif __ia64__
 CheckTypeSize(Region,8, 8314, 3)
+#elif __powerpc__
+CheckTypeSize(Region,4, 8314, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8314,0);
 #endif
@@ -86,6 +100,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8314,0);
 CheckTypeSize(XVisualInfo,40, 8316, 2)
 #elif __ia64__
 CheckTypeSize(XVisualInfo,64, 8316, 3)
+#elif __powerpc__
+CheckTypeSize(XVisualInfo,40, 8316, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8316,0);
 #endif
@@ -94,6 +110,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8316,0);
 CheckTypeSize(XStandardColormap,40, 8318, 2)
 #elif __ia64__
 CheckTypeSize(XStandardColormap,80, 8318, 3)
+#elif __powerpc__
+CheckTypeSize(XStandardColormap,40, 8318, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8318,0);
 #endif
@@ -102,6 +120,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8318,0);
 CheckTypeSize(XContext,4, 8319, 2)
 #elif __ia64__
 CheckTypeSize(XContext,4, 8319, 3)
+#elif __powerpc__
+CheckTypeSize(XContext,4, 8319, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8319,0);
 #endif
@@ -110,6 +130,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8319,0);
 CheckTypeSize(XICCEncodingStyle,4, 8832, 2)
 #elif __ia64__
 CheckTypeSize(XICCEncodingStyle,4, 8832, 3)
+#elif __powerpc__
+CheckTypeSize(XICCEncodingStyle,4, 8832, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8832,0);
 #endif

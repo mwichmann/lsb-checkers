@@ -49,6 +49,8 @@ cnt++;
 CheckTypeSize(CompositeClassPart,40, 10244, 3)
 #elif __i386__
 CheckTypeSize(CompositeClassPart,20, 10244, 2)
+#elif __powerpc__
+CheckTypeSize(CompositeClassPart,20, 10244, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
 #endif
@@ -57,6 +59,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
 CheckTypeSize(CompositeClassRec,264, 10240, 3)
 #elif __i386__
 CheckTypeSize(CompositeClassRec,136, 10240, 2)
+#elif __powerpc__
+CheckTypeSize(CompositeClassRec,136, 10240, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10240,0);
 #endif

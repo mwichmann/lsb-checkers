@@ -103,20 +103,38 @@ cnt++;
 CheckTypeSize(rlim_t,4, 10210, 2)
 #elif __ia64__
 CheckTypeSize(rlim_t,8, 10210, 3)
+#elif __powerpc__
+CheckTypeSize(rlim_t,4, 10210, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10210,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(rlim64_t,8, 10273, 2)
+#elif __ia64__
+CheckTypeSize(rlim64_t,8, 10273, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10273,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(struct rlimit,8, 9120, 2)
+CheckOffset(struct rlimit,rlim_cur,0,2,34262)
+CheckOffset(struct rlimit,rlim_max,4,2,34263)
 #elif __ia64__
 CheckTypeSize(struct rlimit,16, 9120, 3)
+CheckOffset(struct rlimit,rlim_cur,0,3,34262)
+CheckOffset(struct rlimit,rlim_max,8,3,34263)
+#elif __powerpc__
+CheckTypeSize(struct rlimit,8, 9120, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9120,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct rlimit64,16, 9122, 2)
+CheckOffset(struct rlimit64,rlim_cur,0,2,34266)
+CheckOffset(struct rlimit64,rlim_max,8,2,34267)
 #elif __ia64__
 CheckTypeSize(struct rlimit64,16, 9122, 3)
 #else
@@ -125,8 +143,42 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9122,0);
 
 #ifdef __i386__
 CheckTypeSize(struct rusage,72, 9125, 2)
+CheckOffset(struct rusage,ru_utime,0,2,34246)
+CheckOffset(struct rusage,ru_stime,8,2,34247)
+CheckOffset(struct rusage,ru_maxrss,16,2,34248)
+CheckOffset(struct rusage,ru_ixrss,20,2,34249)
+CheckOffset(struct rusage,ru_idrss,24,2,34250)
+CheckOffset(struct rusage,ru_isrss,28,2,34251)
+CheckOffset(struct rusage,ru_minflt,32,2,34252)
+CheckOffset(struct rusage,ru_majflt,36,2,34253)
+CheckOffset(struct rusage,ru_nswap,40,2,34254)
+CheckOffset(struct rusage,ru_inblock,44,2,34255)
+CheckOffset(struct rusage,ru_oublock,48,2,34256)
+CheckOffset(struct rusage,ru_msgsnd,52,2,34257)
+CheckOffset(struct rusage,ru_msgrcv,56,2,34258)
+CheckOffset(struct rusage,ru_nsignals,60,2,34259)
+CheckOffset(struct rusage,ru_nvcsw,64,2,34260)
+CheckOffset(struct rusage,ru_nivcsw,68,2,34261)
 #elif __ia64__
 CheckTypeSize(struct rusage,144, 9125, 3)
+CheckOffset(struct rusage,ru_utime,0,3,34246)
+CheckOffset(struct rusage,ru_stime,0,3,34247)
+CheckOffset(struct rusage,ru_maxrss,0,3,34248)
+CheckOffset(struct rusage,ru_ixrss,0,3,34249)
+CheckOffset(struct rusage,ru_idrss,0,3,34250)
+CheckOffset(struct rusage,ru_isrss,0,3,34251)
+CheckOffset(struct rusage,ru_minflt,0,3,34252)
+CheckOffset(struct rusage,ru_majflt,0,3,34253)
+CheckOffset(struct rusage,ru_nswap,0,3,34254)
+CheckOffset(struct rusage,ru_inblock,0,3,34255)
+CheckOffset(struct rusage,ru_oublock,0,3,34256)
+CheckOffset(struct rusage,ru_msgsnd,0,3,34257)
+CheckOffset(struct rusage,ru_msgrcv,0,3,34258)
+CheckOffset(struct rusage,ru_nsignals,0,3,34259)
+CheckOffset(struct rusage,ru_nvcsw,0,3,34260)
+CheckOffset(struct rusage,ru_nivcsw,0,3,34261)
+#elif __powerpc__
+CheckTypeSize(struct rusage,72, 9125, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9125,0);
 #endif
