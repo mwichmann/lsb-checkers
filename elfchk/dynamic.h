@@ -50,6 +50,7 @@ int checkDT_RELACOUNT(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_RELENT(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_RELSZ(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_RPATH(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
+int checkDT_RUNPATH(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_SONAME(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_SYMBOLIC(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_SYMINENT(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
