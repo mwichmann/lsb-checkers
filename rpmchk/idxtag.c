@@ -598,6 +598,34 @@ checkRpmIdxSIZE(RpmFile * file1, RpmHdrIndex * hidx,
 }
 
 void
+checkRpmIdxDISTRIBUTION(RpmFile * file1, RpmHdrIndex * hidx,
+		struct tetj_handle *journal)
+{
+    int hoffset;
+    char *name;
+
+    hoffset = ntohl(hidx->offset);
+    name = file1->storeaddr + hoffset;
+
+    if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
+	fprintf(stderr, "Package Distribution: %s.\n", name);
+}
+
+void
+checkRpmIdxVENDOR(RpmFile * file1, RpmHdrIndex * hidx,
+		struct tetj_handle *journal)
+{
+    int hoffset;
+    char *name;
+
+    hoffset = ntohl(hidx->offset);
+    name = file1->storeaddr + hoffset;
+
+    if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
+	fprintf(stderr, "Package Vendor: %s.\n", name);
+}
+
+void
 checkRpmIdxLICENSE(RpmFile * file1, RpmHdrIndex * hidx,
 		   struct tetj_handle *journal)
 {
@@ -623,6 +651,20 @@ checkRpmIdxGROUP(RpmFile * file1, RpmHdrIndex * hidx,
 
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Package Group: %s\n", name);
+}
+
+void
+checkRpmIdxURL(RpmFile * file1, RpmHdrIndex * hidx,
+		struct tetj_handle *journal)
+{
+    int hoffset;
+    char *name;
+
+    hoffset = ntohl(hidx->offset);
+    name = file1->storeaddr + hoffset;
+
+    if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
+	fprintf(stderr, "Package Url: %s.\n", name);
 }
 
 void
@@ -1319,6 +1361,20 @@ checkRpmIdxOPTFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 }
 
 void
+checkRpmIdxDISTURL(RpmFile * file1, RpmHdrIndex * hidx,
+		struct tetj_handle *journal)
+{
+    int hoffset;
+    char *name;
+
+    hoffset = ntohl(hidx->offset);
+    name = file1->storeaddr + hoffset;
+
+    if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
+	fprintf(stderr, "Package DistUrl: %s.\n", name);
+}
+
+void
 checkRpmIdxPAYLOADFORMAT(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
@@ -1364,7 +1420,7 @@ void
 checkRpmIdxREQUIREVERSION(RpmFile * file1, RpmHdrIndex * hidx,
 			  struct tetj_handle *journal)
 {
-    int i, hoffset, hcount;
+    int hoffset, hcount;
     char *name;
 
     hoffset = ntohl(hidx->offset);
