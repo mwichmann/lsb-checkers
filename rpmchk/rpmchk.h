@@ -1,7 +1,7 @@
 /* 
  *
- * Copyright (c) 2002 The Free Standards Group Inc
- * Copyright (c) 2002 Stuart Anderson (anderson@freestandards.org)
+ * Copyright (c) 2002-2005 The Free Standards Group Inc
+ * Copyright (c) 2002-2005 Stuart Anderson (anderson@freestandards.org)
  *
  */
 #ifndef _RPMCHK_H
@@ -135,7 +135,7 @@ typedef	struct	{
 
 typedef void (*IdxTagFunc)(RpmFile *, RpmHdrIndex *, struct tetj_handle *);
 
-typedef enum { Required, Optional, Deprecated, Obsoleted, Reserved,  } RpmIdxReqd ;
+typedef enum { Required, Optional, Deprecated, Obsoleted, Reserved, Informational  } RpmIdxReqd ;
 
 typedef enum { NotSeen, Seen } RpmIdxStatus ;
 
@@ -154,6 +154,15 @@ extern int numSigIdxTags;
 extern RpmIdxTagFuncRec HdrTags[];
 extern int numHdrIdxTags;
 
+/*
+ * REQUIRED* - ie dependency things
+ */
+typedef struct {
+	char *reqname;
+	char *reqversion;
+	int seenit;
+	int isrequired;
+	} RpmRequireRec;
 /*
  * Archive format -
  * really cpio, but it doesn't actually match the cpio definition ?!?!?!
@@ -193,8 +202,12 @@ extern int rpmchkdebug;
 /* vals.c */
 extern char *architecture;
 extern char *validos;
-extern char *validdepver;
-extern char *validdeps[];
+extern char *lanananame;
+extern RpmRequireRec validdeps[];
+extern char *requirename;
+extern int numrequirename;
+extern char *requireversion;
+extern int numrequireversion;
 extern int numdeps;
 extern char *pkgname;
 extern unsigned char *sigdata;
@@ -243,5 +256,8 @@ void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
 
 /* rpmchk.c */
 void checkRpmMetaData(RpmFile *file1, struct tetj_handle *journal);
+
+/* dependencies.c */
+extern void check_dependencies(struct tetj_handle *journal);
 
 #endif /* _RPMCHK_H */

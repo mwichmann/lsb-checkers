@@ -1,7 +1,7 @@
 /* 
  *
- * Copyright (c) 2002 The Free Standards Group Inc
- * Copyright (c) 2002 Stuart Anderson (anderson@freestandards.org)
+ * Copyright (c) 2002-2005 The Free Standards Group Inc
+ * Copyright (c) 2002-2005 Stuart Anderson (anderson@freestandards.org)
  *
  */
 #include "rpmchk.h"
@@ -23,27 +23,32 @@ char *architecture =
 #endif
 
 char *validos = "linux";
-char *validdepver = "2.0";
 
-char *validdeps[] = {
-	"lsb-core-noarch",
-	"lsb-graphics-noarch",
+char *lanananame = NULL;
+
+RpmRequireRec validdeps[] = {
+	{"rpmlib(VersionedDependencies)","3.0.3-1", 0, 0 },
+	{"rpmlib(PayloadFilesHavePrefix)","4.0-1", 0, 0 },
+	{"rpmlib(CompressedFileNames)","3.0.4-1", 0, 0 },
+	{"/bin/sh","", 0, 0 },
+	{"lsb-core-noarch",LSBVERSION, 0, 0 },
+	{"lsb-graphics-noarch",LSBVERSION, 0, 0 },
 #if defined(__i386__)
-	"lsb-core-ia32",
-	"lsb-graphics-ia32",
+	{"lsb-core-ia32",LSBVERSION, 0, 1 },
+	{"lsb-graphics-ia32",LSBVERSION, 0, 0 },
 #elif defined(__ia64__)
-	"lsb-core-ia64",
-	"lsb-graphics-ia64",
+	{"lsb-core-ia64",LSBVERSION, 0, 1 },
+	{"lsb-graphics-ia64",LSBVERSION, 0, 1 },
 #elif defined(__x86_64__)
-	"lsb-core-amd64",
-	"lsb-graphics-amd64",
+	{"lsb-core-amd64",LSBVERSION, 0, 1 },
+	{"lsb-graphics-amd64",LSBVERSION, 0, 0 },
 #elif defined(__powerpc__)
-	"lsb-core-ppc",
-	"lsb-graphics-ppc",
+	{"lsb-core-ppc",LSBVERSION, 0, 1 },
+	{"lsb-graphics-ppc",LSBVERSION, 0, 0 },
 #endif
 	};
 
-int numdeps = sizeof(validdeps)/sizeof(char *);
+int numdeps = sizeof(validdeps)/sizeof(RpmRequireRec);
 
 char *pkgname;
 int  lsbdepidx=-1;
@@ -72,9 +77,13 @@ char	**basenames;
 char	**dirnames;
 int	numdirnames;
 int	numdirindicies;
+char	*requirename = NULL;
+char	*requireversion = NULL;
+int	numrequirename;
+int	numrequireversion;
 
 int	hasPayloadFilesHavePrefix=0;
 int	hasCompressedFileNames=0;
 int	hasOldFilenames=0;
 int	hasNewFilenames=0;
-int	rpmchkdebug;
+int	rpmchkdebug=0;
