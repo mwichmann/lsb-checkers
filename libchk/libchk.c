@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.52 $
+ * This is $Revision: 1.53 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.53  2004/12/14 16:46:52  mats
+ * remove spurious blank lines in journal after library match
+ *
  * Revision 1.52  2004/12/14 16:33:28  mats
  * fiddle with reporting of extra versions
  *
@@ -201,7 +204,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.52 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.53 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -460,8 +463,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   tetj_tp_count = 0;
 
   tetj_tp_count++;
-  snprintf(tmp_string, TMP_STRING_SIZE, "Looking for library %s",
-           libname);
+  snprintf(tmp_string, TMP_STRING_SIZE, "Looking for library %s", libname);
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
   if (libname[0]!='/')
@@ -471,7 +473,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     {
       if (strcmp(libname, library_paths[i].library)==0)
       {
-	snprintf(tmp_string, TMP_STRING_SIZE, "Found match for %s as %s\n",
+	snprintf(tmp_string, TMP_STRING_SIZE, "Found match for %s as %s",
 	         library_paths[i].library, library_paths[i].fullpath);
 	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 	                   0, 0, 0, tmp_string);
