@@ -133,6 +133,7 @@ my $int_q = $dbh->prepare(
 'SELECT Iid, Ireturn, Asymbol, Iversion
 FROM Interface, Architecture
 WHERE Iname = ?
+  AND Istatus = "Included"
   AND Aid = Iarch 
 GROUP BY Iid ORDER BY Iarch'
 ) or die "Couldn't prepare int query: " . DBI ->errstr;
