@@ -1,6 +1,7 @@
 // Maintained by hand (Matt Elder, Stuart Anderson)
 
 #include "../../tests/type_tests.h"
+#include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <stddef.h>
 #include <sys/types.h>
@@ -8,7 +9,6 @@
 static void *(*funcptr) (void * , size_t , int , int , int , off_t ) = 0;
 
 extern int __lsb_check_params;
-extern int __lsb_output(int, char*, ...);
 void * mmap (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off_t arg5 )
 {
 	void *ret;
@@ -19,7 +19,7 @@ void * mmap (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off_t 
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-        	__lsb_output(5-__lsb_check_params, "mmap()");
+        	__lsb_output(5-reset_flag, "mmap()");
 		validate_NULL_TYPETYPE(arg0, "mmap");
 		validate_NULL_TYPETYPE(arg1, "mmap");
 		validate_NULL_TYPETYPE(arg2, "mmap");

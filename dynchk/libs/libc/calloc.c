@@ -1,4 +1,7 @@
+// Maintained by hand (Matt Elder)
+
 #include "../../tests/type_tests.h"
+#include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stddef.h>
@@ -6,7 +9,6 @@ static void *(*funcptr)(size_t, size_t) = 0;
 
 extern void *__libc_calloc(size_t,size_t);
 extern int __lsb_check_params;
-extern int __lsb_output(int, char*, ...);
 void * calloc(size_t arg0, size_t arg1)
 {
 	int reset_flag = __lsb_check_params;
@@ -16,7 +18,7 @@ void * calloc(size_t arg0, size_t arg1)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-        	__lsb_output(5-__lsb_check_params, "calloc()");
+        	__lsb_output(5-reset_flag, "calloc()");
 		validate_NULL_TYPETYPE(arg0, "calloc");
 		validate_NULL_TYPETYPE(arg1, "calloc");
 	}

@@ -1,4 +1,5 @@
 #include "../../tests/type_tests.h"
+#include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -7,7 +8,6 @@
 static int (*funcptr)(FILE *f, const char *, ...) = 0;
 
 extern int __lsb_check_params;
-extern int __lsb_output(int, char*, ...);
 int fscanf(FILE *f, const char *format, ...)
 {	
 	va_list args;
@@ -19,7 +19,7 @@ int fscanf(FILE *f, const char *format, ...)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params = 0;
-		__lsb_output(5-__lsb_check_params, "fscanf()");
+		__lsb_output(5-reset_flag, "fscanf()");
 	}
 	ret_value = funcptr(f, format, args);
 	__lsb_check_params = reset_flag;

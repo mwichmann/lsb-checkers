@@ -1,6 +1,7 @@
 // Maintained by hand (Stuart Anderson, Matt Elder)
 
 #include "../../tests/type_tests.h"
+#include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -44,7 +45,7 @@ int ioctl(int fd, unsigned long request, ...)
 	{
 		if(__lsb_check_params)
 		{
-        		__lsb_output(5-__lsb_check_params, "ioctl()");
+        		__lsb_output(5-reset_flag, "ioctl()");
 			__lsb_check_params=0;
 			validate_filedescriptor(fd, "ioctl");
 			validate_ioctlreq(request, "ioctl");

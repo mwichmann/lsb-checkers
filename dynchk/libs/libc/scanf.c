@@ -1,6 +1,7 @@
 // Maintained by hand (Matt Elder, Stuart Anderson)
 
 #include "../../tests/type_tests.h"
+#include "../../misc/lsb_output.h"
 #include <dlfcn.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -9,7 +10,6 @@
 static int (*funcptr)(const char *, ...) = 0;
 
 extern int __lsb_check_params;
-extern int __lsb_output(int, char*, ...);
 int scanf(const char *format, ...)
 {	
 	va_list args;
@@ -20,7 +20,7 @@ int scanf(const char *format, ...)
 		funcptr = dlsym(RTLD_NEXT, "vscanf");
 	if(__lsb_check_params)
 	{
-        	__lsb_output(5-__lsb_check_params, "scanf()");
+        	__lsb_output(5-reset_flag, "scanf()");
 		__lsb_check_params=0;	
 		validate_RWaddress(format, "scanf");
 	}
