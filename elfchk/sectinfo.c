@@ -32,7 +32,7 @@ struct SectionInfo SectionInfo[] = {
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
 	{".rel.data",SHT_REL,0,checkREL},
-	{".rel.dyn",SHT_REL,0,checkREL},
+	{".rel.dyn",SHT_REL,SHF_ALLOC,checkREL},
 	{".rel.got",SHT_REL,SHF_ALLOC,checkREL},
 	{".rel.plt",SHT_REL,SHF_ALLOC,checkREL},
 	{".rel.text",SHT_REL,0,checkREL},
