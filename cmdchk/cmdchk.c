@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@metrolink.com)
  *
- * This is $Revision: 1.3 $
+ * This is $Revision: 1.4 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.4  2002/07/17 07:19:20  cyeoh
+ * remove elfchk header include as not needed
+ *
  * Revision 1.3  2002/07/17 04:58:30  cyeoh
  * Adds version tag to journal file
  *
@@ -27,7 +30,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-#include "elfchk.h"
 #include "hdr.h"
 #include "../tetj/tetj.h"
 
@@ -41,7 +43,7 @@ char *binpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) cmdchk_revision = "$Revision: 1.3 $";
+static const char * __attribute((unused)) cmdchk_revision = "$Revision: 1.4 $";
 
 
 void
