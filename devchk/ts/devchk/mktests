@@ -120,7 +120,8 @@ sub writetest($$)
 			print TESTS "#ifdef $centry{'Cname'}\n";
 			print TESTS "\tCompareConstant($centry{'Cname'},$centry{'ACvalue'})\n";
 			print TESTS "#else\n";
-			print TESTS "Msg( \"Warning: Constant not found: $centry{'Cname'}\\n\");\n";
+			print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
+                        print TESTS "cnt++;\n";
 			print TESTS "#endif\n\n";
 		} else {
 			print TESTS "/* No test for $centry{'Cname'} */\n";

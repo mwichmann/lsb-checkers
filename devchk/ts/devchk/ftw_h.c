@@ -26,43 +26,50 @@ Msg("Checking data structures in ftw.h\n");
 #ifdef FTW_F
 	CompareConstant(FTW_F,FTW_F)
 #else
-Msg( "Warning: Constant not found: FTW_F\n");
+Msg( "Error: Constant not found: FTW_F\n");
+cnt++;
 #endif
 
 #ifdef FTW_D
 	CompareConstant(FTW_D,FTW_D)
 #else
-Msg( "Warning: Constant not found: FTW_D\n");
+Msg( "Error: Constant not found: FTW_D\n");
+cnt++;
 #endif
 
 #ifdef FTW_DNR
 	CompareConstant(FTW_DNR,FTW_DNR)
 #else
-Msg( "Warning: Constant not found: FTW_DNR\n");
+Msg( "Error: Constant not found: FTW_DNR\n");
+cnt++;
 #endif
 
 #ifdef FTW_NS
 	CompareConstant(FTW_NS,FTW_NS)
 #else
-Msg( "Warning: Constant not found: FTW_NS\n");
+Msg( "Error: Constant not found: FTW_NS\n");
+cnt++;
 #endif
 
 #ifdef FTW_SL
 	CompareConstant(FTW_SL,FTW_SL)
 #else
-Msg( "Warning: Constant not found: FTW_SL\n");
+Msg( "Error: Constant not found: FTW_SL\n");
+cnt++;
 #endif
 
 #ifdef FTW_DP
 	CompareConstant(FTW_DP,FTW_DP)
 #else
-Msg( "Warning: Constant not found: FTW_DP\n");
+Msg( "Error: Constant not found: FTW_DP\n");
+cnt++;
 #endif
 
 #ifdef FTW_SLN
 	CompareConstant(FTW_SLN,FTW_SLN)
 #else
-Msg( "Warning: Constant not found: FTW_SLN\n");
+Msg( "Error: Constant not found: FTW_SLN\n");
+cnt++;
 #endif
 
 #ifdef __i386__

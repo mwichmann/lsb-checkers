@@ -22,160 +22,186 @@ int pcnt=0;
 Msg("Checking data structures in fcntl.h\n");
 #endif
 
+#ifdef O_ACCMODE
+	CompareConstant(O_ACCMODE,0003)
+#else
+Msg( "Error: Constant not found: O_ACCMODE\n");
+cnt++;
+#endif
+
 #ifdef O_RDONLY
 	CompareConstant(O_RDONLY,00)
 #else
-Msg( "Warning: Constant not found: O_RDONLY\n");
+Msg( "Error: Constant not found: O_RDONLY\n");
+cnt++;
 #endif
 
 #ifdef O_WRONLY
 	CompareConstant(O_WRONLY,01)
 #else
-Msg( "Warning: Constant not found: O_WRONLY\n");
+Msg( "Error: Constant not found: O_WRONLY\n");
+cnt++;
 #endif
 
 #ifdef O_RDWR
 	CompareConstant(O_RDWR,02)
 #else
-Msg( "Warning: Constant not found: O_RDWR\n");
+Msg( "Error: Constant not found: O_RDWR\n");
+cnt++;
 #endif
 
 #ifdef O_CREAT
 	CompareConstant(O_CREAT,0100)
 #else
-Msg( "Warning: Constant not found: O_CREAT\n");
+Msg( "Error: Constant not found: O_CREAT\n");
+cnt++;
 #endif
 
 #ifdef O_EXCL
 	CompareConstant(O_EXCL,0200)
 #else
-Msg( "Warning: Constant not found: O_EXCL\n");
+Msg( "Error: Constant not found: O_EXCL\n");
+cnt++;
 #endif
 
 #ifdef O_NOCTTY
 	CompareConstant(O_NOCTTY,0400)
 #else
-Msg( "Warning: Constant not found: O_NOCTTY\n");
+Msg( "Error: Constant not found: O_NOCTTY\n");
+cnt++;
 #endif
 
 #ifdef O_TRUNC
 	CompareConstant(O_TRUNC,01000)
 #else
-Msg( "Warning: Constant not found: O_TRUNC\n");
+Msg( "Error: Constant not found: O_TRUNC\n");
+cnt++;
 #endif
 
 #ifdef O_APPEND
 	CompareConstant(O_APPEND,02000)
 #else
-Msg( "Warning: Constant not found: O_APPEND\n");
+Msg( "Error: Constant not found: O_APPEND\n");
+cnt++;
 #endif
 
 #ifdef O_NONBLOCK
 	CompareConstant(O_NONBLOCK,04000)
 #else
-Msg( "Warning: Constant not found: O_NONBLOCK\n");
+Msg( "Error: Constant not found: O_NONBLOCK\n");
+cnt++;
+#endif
+
+#ifdef O_NDELAY
+	CompareConstant(O_NDELAY,04000)
+#else
+Msg( "Error: Constant not found: O_NDELAY\n");
+cnt++;
 #endif
 
 #ifdef O_SYNC
 	CompareConstant(O_SYNC,010000)
 #else
-Msg( "Warning: Constant not found: O_SYNC\n");
-#endif
-
-#ifdef O_ACCMODE
-	CompareConstant(O_ACCMODE,0003)
-#else
-Msg( "Warning: Constant not found: O_ACCMODE\n");
+Msg( "Error: Constant not found: O_SYNC\n");
+cnt++;
 #endif
 
 #ifdef O_ASYNC
 	CompareConstant(O_ASYNC,020000)
 #else
-Msg( "Warning: Constant not found: O_ASYNC\n");
+Msg( "Error: Constant not found: O_ASYNC\n");
+cnt++;
 #endif
 
 #ifdef F_DUPFD
 	CompareConstant(F_DUPFD,0)
 #else
-Msg( "Warning: Constant not found: F_DUPFD\n");
+Msg( "Error: Constant not found: F_DUPFD\n");
+cnt++;
 #endif
 
 #ifdef F_GETFD
 	CompareConstant(F_GETFD,1)
 #else
-Msg( "Warning: Constant not found: F_GETFD\n");
+Msg( "Error: Constant not found: F_GETFD\n");
+cnt++;
 #endif
 
 #ifdef F_SETFD
 	CompareConstant(F_SETFD,2)
 #else
-Msg( "Warning: Constant not found: F_SETFD\n");
+Msg( "Error: Constant not found: F_SETFD\n");
+cnt++;
 #endif
 
 #ifdef F_GETFL
 	CompareConstant(F_GETFL,3)
 #else
-Msg( "Warning: Constant not found: F_GETFL\n");
+Msg( "Error: Constant not found: F_GETFL\n");
+cnt++;
 #endif
 
 #ifdef F_SETFL
 	CompareConstant(F_SETFL,4)
 #else
-Msg( "Warning: Constant not found: F_SETFL\n");
+Msg( "Error: Constant not found: F_SETFL\n");
+cnt++;
 #endif
 
 #ifdef F_GETLK
 	CompareConstant(F_GETLK,5)
 #else
-Msg( "Warning: Constant not found: F_GETLK\n");
+Msg( "Error: Constant not found: F_GETLK\n");
+cnt++;
 #endif
 
 #ifdef F_SETLK
 	CompareConstant(F_SETLK,6)
 #else
-Msg( "Warning: Constant not found: F_SETLK\n");
+Msg( "Error: Constant not found: F_SETLK\n");
+cnt++;
 #endif
 
 #ifdef F_SETLKW
 	CompareConstant(F_SETLKW,7)
 #else
-Msg( "Warning: Constant not found: F_SETLKW\n");
+Msg( "Error: Constant not found: F_SETLKW\n");
+cnt++;
 #endif
 
 #ifdef F_SETOWN
 	CompareConstant(F_SETOWN,8)
 #else
-Msg( "Warning: Constant not found: F_SETOWN\n");
+Msg( "Error: Constant not found: F_SETOWN\n");
+cnt++;
 #endif
 
 #ifdef F_GETOWN
 	CompareConstant(F_GETOWN,9)
 #else
-Msg( "Warning: Constant not found: F_GETOWN\n");
-#endif
-
-#ifdef FD_CLOEXEC
-	CompareConstant(FD_CLOEXEC,1)
-#else
-Msg( "Warning: Constant not found: FD_CLOEXEC\n");
+Msg( "Error: Constant not found: F_GETOWN\n");
+cnt++;
 #endif
 
 #ifdef F_RDLCK
 	CompareConstant(F_RDLCK,0)
 #else
-Msg( "Warning: Constant not found: F_RDLCK\n");
+Msg( "Error: Constant not found: F_RDLCK\n");
+cnt++;
 #endif
 
 #ifdef F_WRLCK
 	CompareConstant(F_WRLCK,1)
 #else
-Msg( "Warning: Constant not found: F_WRLCK\n");
+Msg( "Error: Constant not found: F_WRLCK\n");
+cnt++;
 #endif
 
 #ifdef F_UNLCK
 	CompareConstant(F_UNLCK,2)
 #else
-Msg( "Warning: Constant not found: F_UNLCK\n");
+Msg( "Error: Constant not found: F_UNLCK\n");
+cnt++;
 #endif
 
 #ifdef TET_TEST

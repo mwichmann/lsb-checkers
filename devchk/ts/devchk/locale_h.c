@@ -25,79 +25,92 @@ Msg("Checking data structures in locale.h\n");
 #ifdef LC_CTYPE
 	CompareConstant(LC_CTYPE,0)
 #else
-Msg( "Warning: Constant not found: LC_CTYPE\n");
+Msg( "Error: Constant not found: LC_CTYPE\n");
+cnt++;
 #endif
 
 #ifdef LC_NUMERIC
-	CompareConstant(LC_NUMERIC,__LC_NUMERIC)
+	CompareConstant(LC_NUMERIC,1)
 #else
-Msg( "Warning: Constant not found: LC_NUMERIC\n");
+Msg( "Error: Constant not found: LC_NUMERIC\n");
+cnt++;
 #endif
 
 #ifdef LC_TIME
-	CompareConstant(LC_TIME,__LC_TIME)
+	CompareConstant(LC_TIME,2)
 #else
-Msg( "Warning: Constant not found: LC_TIME\n");
+Msg( "Error: Constant not found: LC_TIME\n");
+cnt++;
 #endif
 
 #ifdef LC_COLLATE
-	CompareConstant(LC_COLLATE,__LC_COLLATE)
+	CompareConstant(LC_COLLATE,3)
 #else
-Msg( "Warning: Constant not found: LC_COLLATE\n");
+Msg( "Error: Constant not found: LC_COLLATE\n");
+cnt++;
 #endif
 
 #ifdef LC_MONETARY
-	CompareConstant(LC_MONETARY,__LC_MONETARY)
+	CompareConstant(LC_MONETARY,4)
 #else
-Msg( "Warning: Constant not found: LC_MONETARY\n");
+Msg( "Error: Constant not found: LC_MONETARY\n");
+cnt++;
 #endif
 
 #ifdef LC_MESSAGES
-	CompareConstant(LC_MESSAGES,__LC_MESSAGES)
+	CompareConstant(LC_MESSAGES,5)
 #else
-Msg( "Warning: Constant not found: LC_MESSAGES\n");
+Msg( "Error: Constant not found: LC_MESSAGES\n");
+cnt++;
 #endif
 
 #ifdef LC_ALL
-	CompareConstant(LC_ALL,__LC_ALL)
+	CompareConstant(LC_ALL,6)
 #else
-Msg( "Warning: Constant not found: LC_ALL\n");
+Msg( "Error: Constant not found: LC_ALL\n");
+cnt++;
 #endif
 
 #ifdef LC_PAPER
-	CompareConstant(LC_PAPER,__LC_PAPER)
+	CompareConstant(LC_PAPER,7)
 #else
-Msg( "Warning: Constant not found: LC_PAPER\n");
+Msg( "Error: Constant not found: LC_PAPER\n");
+cnt++;
 #endif
 
 #ifdef LC_NAME
-	CompareConstant(LC_NAME,__LC_NAME)
+	CompareConstant(LC_NAME,8)
 #else
-Msg( "Warning: Constant not found: LC_NAME\n");
+Msg( "Error: Constant not found: LC_NAME\n");
+cnt++;
 #endif
 
 #ifdef LC_ADDRESS
-	CompareConstant(LC_ADDRESS,__LC_ADDRESS)
+	CompareConstant(LC_ADDRESS,9)
 #else
-Msg( "Warning: Constant not found: LC_ADDRESS\n");
+Msg( "Error: Constant not found: LC_ADDRESS\n");
+cnt++;
 #endif
 
 #ifdef LC_TELEPHONE
-	CompareConstant(LC_TELEPHONE,__LC_TELEPHONE)
+	CompareConstant(LC_TELEPHONE,10)
 #else
-Msg( "Warning: Constant not found: LC_TELEPHONE\n");
+Msg( "Error: Constant not found: LC_TELEPHONE\n");
+cnt++;
 #endif
 
 #ifdef LC_MEASUREMENT
-	CompareConstant(LC_MEASUREMENT,__LC_MEASUREMENT)
+	CompareConstant(LC_MEASUREMENT,11)
 #else
-Msg( "Warning: Constant not found: LC_MEASUREMENT\n");
+Msg( "Error: Constant not found: LC_MEASUREMENT\n");
+cnt++;
 #endif
 
 #ifdef LC_IDENTIFICATION
-	CompareConstant(LC_IDENTIFICATION,__LC_IDENTIFICATION)
+	CompareConstant(LC_IDENTIFICATION,12)
 #else
-Msg( "Warning: Constant not found: LC_IDENTIFICATION\n");
+Msg( "Error: Constant not found: LC_IDENTIFICATION\n");
+cnt++;
 #endif
 
 #ifdef TET_TEST

@@ -25,19 +25,22 @@ Msg("Checking data structures in wchar.h\n");
 #ifdef WCHAR_MIN
 	CompareConstant(WCHAR_MIN,__WCHAR_MIN)
 #else
-Msg( "Warning: Constant not found: WCHAR_MIN\n");
+Msg( "Error: Constant not found: WCHAR_MIN\n");
+cnt++;
 #endif
 
 #ifdef WCHAR_MAX
 	CompareConstant(WCHAR_MAX,__WCHAR_MAX)
 #else
-Msg( "Warning: Constant not found: WCHAR_MAX\n");
+Msg( "Error: Constant not found: WCHAR_MAX\n");
+cnt++;
 #endif
 
 #ifdef WEOF
 	CompareConstant(WEOF,(0xffffffffu))
 #else
-Msg( "Warning: Constant not found: WEOF\n");
+Msg( "Error: Constant not found: WEOF\n");
+cnt++;
 #endif
 
 #ifdef __i386__

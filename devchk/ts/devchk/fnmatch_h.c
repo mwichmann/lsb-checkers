@@ -25,25 +25,29 @@ Msg("Checking data structures in fnmatch.h\n");
 #ifdef FNM_PATHNAME
 	CompareConstant(FNM_PATHNAME,(1<<0))
 #else
-Msg( "Warning: Constant not found: FNM_PATHNAME\n");
+Msg( "Error: Constant not found: FNM_PATHNAME\n");
+cnt++;
 #endif
 
 #ifdef FNM_NOESCAPE
 	CompareConstant(FNM_NOESCAPE,(1<<1))
 #else
-Msg( "Warning: Constant not found: FNM_NOESCAPE\n");
+Msg( "Error: Constant not found: FNM_NOESCAPE\n");
+cnt++;
 #endif
 
 #ifdef FNM_PERIOD
 	CompareConstant(FNM_PERIOD,(1<<2))
 #else
-Msg( "Warning: Constant not found: FNM_PERIOD\n");
+Msg( "Error: Constant not found: FNM_PERIOD\n");
+cnt++;
 #endif
 
 #ifdef FNM_NOMATCH
 	CompareConstant(FNM_NOMATCH,1)
 #else
-Msg( "Warning: Constant not found: FNM_NOMATCH\n");
+Msg( "Error: Constant not found: FNM_NOMATCH\n");
+cnt++;
 #endif
 
 #ifdef TET_TEST

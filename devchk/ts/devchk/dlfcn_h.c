@@ -25,25 +25,29 @@ Msg("Checking data structures in dlfcn.h\n");
 #ifdef RTLD_LAZY
 	CompareConstant(RTLD_LAZY,0x00001)
 #else
-Msg( "Warning: Constant not found: RTLD_LAZY\n");
+Msg( "Error: Constant not found: RTLD_LAZY\n");
+cnt++;
 #endif
 
 #ifdef RTLD_NOW
 	CompareConstant(RTLD_NOW,0x00002)
 #else
-Msg( "Warning: Constant not found: RTLD_NOW\n");
+Msg( "Error: Constant not found: RTLD_NOW\n");
+cnt++;
 #endif
 
 #ifdef RTLD_GLOBAL
 	CompareConstant(RTLD_GLOBAL,0x00100)
 #else
-Msg( "Warning: Constant not found: RTLD_GLOBAL\n");
+Msg( "Error: Constant not found: RTLD_GLOBAL\n");
+cnt++;
 #endif
 
 #ifdef RTLD_LOCAL
 	CompareConstant(RTLD_LOCAL,0)
 #else
-Msg( "Warning: Constant not found: RTLD_LOCAL\n");
+Msg( "Error: Constant not found: RTLD_LOCAL\n");
+cnt++;
 #endif
 
 #ifdef TET_TEST

@@ -25,13 +25,15 @@ Msg("Checking data structures in semaphore.h\n");
 #ifdef SEM_FAILED
 	CompareConstant(SEM_FAILED,((sem_t*)0))
 #else
-Msg( "Warning: Constant not found: SEM_FAILED\n");
+Msg( "Error: Constant not found: SEM_FAILED\n");
+cnt++;
 #endif
 
 #ifdef SEM_VALUE_MAX
 	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)))
 #else
-Msg( "Warning: Constant not found: SEM_VALUE_MAX\n");
+Msg( "Error: Constant not found: SEM_VALUE_MAX\n");
+cnt++;
 #endif
 
 #ifdef TET_TEST

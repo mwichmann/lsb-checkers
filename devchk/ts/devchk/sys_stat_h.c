@@ -23,131 +23,187 @@ Msg("Checking data structures in sys/stat.h\n");
 #endif
 
 #ifdef S_IFMT
-	CompareConstant(S_IFMT,__S_IFMT)
+	CompareConstant(S_IFMT,0xf000)
 #else
-Msg( "Warning: Constant not found: S_IFMT\n");
+Msg( "Error: Constant not found: S_IFMT\n");
+cnt++;
 #endif
 
 #ifdef S_IFDIR
-	CompareConstant(S_IFDIR,__S_IFDIR)
+	CompareConstant(S_IFDIR,0x4000)
 #else
-Msg( "Warning: Constant not found: S_IFDIR\n");
+Msg( "Error: Constant not found: S_IFDIR\n");
+cnt++;
 #endif
 
 #ifdef S_IFCHR
-	CompareConstant(S_IFCHR,__S_IFCHR)
+	CompareConstant(S_IFCHR,0x2000)
 #else
-Msg( "Warning: Constant not found: S_IFCHR\n");
+Msg( "Error: Constant not found: S_IFCHR\n");
+cnt++;
 #endif
 
 #ifdef S_IFBLK
-	CompareConstant(S_IFBLK,__S_IFBLK)
+	CompareConstant(S_IFBLK,0x6000)
 #else
-Msg( "Warning: Constant not found: S_IFBLK\n");
+Msg( "Error: Constant not found: S_IFBLK\n");
+cnt++;
 #endif
 
 #ifdef S_IFREG
-	CompareConstant(S_IFREG,__S_IFREG)
+	CompareConstant(S_IFREG,0x8000)
 #else
-Msg( "Warning: Constant not found: S_IFREG\n");
+Msg( "Error: Constant not found: S_IFREG\n");
+cnt++;
 #endif
 
 #ifdef S_IFIFO
-	CompareConstant(S_IFIFO,__S_IFIFO)
+	CompareConstant(S_IFIFO,0x1000)
 #else
-Msg( "Warning: Constant not found: S_IFIFO\n");
+Msg( "Error: Constant not found: S_IFIFO\n");
+cnt++;
 #endif
 
 #ifdef S_IFLNK
-	CompareConstant(S_IFLNK,__S_IFLNK)
+	CompareConstant(S_IFLNK,0xa000)
 #else
-Msg( "Warning: Constant not found: S_IFLNK\n");
+Msg( "Error: Constant not found: S_IFLNK\n");
+cnt++;
 #endif
 
 #ifdef S_IFSOCK
-	CompareConstant(S_IFSOCK,__S_IFSOCK)
+	CompareConstant(S_IFSOCK,0xc000)
 #else
-Msg( "Warning: Constant not found: S_IFSOCK\n");
+Msg( "Error: Constant not found: S_IFSOCK\n");
+cnt++;
 #endif
 
 #ifdef S_ISUID
-	CompareConstant(S_ISUID,__S_ISUID)
+	CompareConstant(S_ISUID,0x0800)
 #else
-Msg( "Warning: Constant not found: S_ISUID\n");
+Msg( "Error: Constant not found: S_ISUID\n");
+cnt++;
 #endif
 
 #ifdef S_ISGID
-	CompareConstant(S_ISGID,__S_ISGID)
+	CompareConstant(S_ISGID,0x0400)
 #else
-Msg( "Warning: Constant not found: S_ISGID\n");
+Msg( "Error: Constant not found: S_ISGID\n");
+cnt++;
 #endif
 
 #ifdef S_IRUSR
-	CompareConstant(S_IRUSR,__S_IREAD)
+	CompareConstant(S_IRUSR,0x0100)
 #else
-Msg( "Warning: Constant not found: S_IRUSR\n");
+Msg( "Error: Constant not found: S_IRUSR\n");
+cnt++;
 #endif
 
 #ifdef S_IWUSR
-	CompareConstant(S_IWUSR,__S_IWRITE)
+	CompareConstant(S_IWUSR,0x0080)
 #else
-Msg( "Warning: Constant not found: S_IWUSR\n");
+Msg( "Error: Constant not found: S_IWUSR\n");
+cnt++;
 #endif
 
 #ifdef S_IXUSR
-	CompareConstant(S_IXUSR,__S_IEXEC)
+	CompareConstant(S_IXUSR,0x0040)
 #else
-Msg( "Warning: Constant not found: S_IXUSR\n");
+Msg( "Error: Constant not found: S_IXUSR\n");
+cnt++;
 #endif
 
 #ifdef S_IRWXU
-	CompareConstant(S_IRWXU,(__S_IREAD|__S_IWRITE|__S_IEXEC))
+	CompareConstant(S_IRWXU,(S_IREAD|S_IWRITE|S_IEXEC))
 #else
-Msg( "Warning: Constant not found: S_IRWXU\n");
+Msg( "Error: Constant not found: S_IRWXU\n");
+cnt++;
+#endif
+
+#ifdef S_IREAD
+	CompareConstant(S_IREAD,S_IRUSR)
+#else
+Msg( "Error: Constant not found: S_IREAD\n");
+cnt++;
+#endif
+
+#ifdef S_IWRITE
+	CompareConstant(S_IWRITE,S_IWUSR)
+#else
+Msg( "Error: Constant not found: S_IWRITE\n");
+cnt++;
+#endif
+
+#ifdef S_IEXEC
+	CompareConstant(S_IEXEC,S_IXUSR)
+#else
+Msg( "Error: Constant not found: S_IEXEC\n");
+cnt++;
 #endif
 
 #ifdef S_IRGRP
 	CompareConstant(S_IRGRP,(S_IRUSR>>3))
 #else
-Msg( "Warning: Constant not found: S_IRGRP\n");
+Msg( "Error: Constant not found: S_IRGRP\n");
+cnt++;
 #endif
 
 #ifdef S_IWGRP
 	CompareConstant(S_IWGRP,(S_IWUSR>>3))
 #else
-Msg( "Warning: Constant not found: S_IWGRP\n");
+Msg( "Error: Constant not found: S_IWGRP\n");
+cnt++;
 #endif
 
 #ifdef S_IXGRP
 	CompareConstant(S_IXGRP,(S_IXUSR>>3))
 #else
-Msg( "Warning: Constant not found: S_IXGRP\n");
+Msg( "Error: Constant not found: S_IXGRP\n");
+cnt++;
 #endif
 
 #ifdef S_IRWXG
 	CompareConstant(S_IRWXG,(S_IRWXU>>3))
 #else
-Msg( "Warning: Constant not found: S_IRWXG\n");
+Msg( "Error: Constant not found: S_IRWXG\n");
+cnt++;
 #endif
 
 #ifdef S_IROTH
 	CompareConstant(S_IROTH,(S_IRGRP>>3))
 #else
-Msg( "Warning: Constant not found: S_IROTH\n");
+Msg( "Error: Constant not found: S_IROTH\n");
+cnt++;
 #endif
 
 #ifdef S_IWOTH
 	CompareConstant(S_IWOTH,(S_IWGRP>>3))
 #else
-Msg( "Warning: Constant not found: S_IWOTH\n");
+Msg( "Error: Constant not found: S_IWOTH\n");
+cnt++;
 #endif
 
 #ifdef S_IXOTH
 	CompareConstant(S_IXOTH,(S_IXGRP>>3))
 #else
-Msg( "Warning: Constant not found: S_IXOTH\n");
+Msg( "Error: Constant not found: S_IXOTH\n");
+cnt++;
 #endif
 
+#ifdef S_IRWXO
+	CompareConstant(S_IRWXO,(S_IRWXG>>3))
+#else
+Msg( "Error: Constant not found: S_IRWXO\n");
+cnt++;
+#endif
+
+/* No test for S_ISLNK(m) */
+/* No test for S_ISREG(m) */
+/* No test for S_ISDIR(m) */
+/* No test for S_ISCHR(m) */
+/* No test for S_ISBLK(m) */
+/* No test for S_ISFIFO(m) */
+/* No test for S_ISSOCK(m) */
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

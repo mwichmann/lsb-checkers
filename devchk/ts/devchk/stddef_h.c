@@ -22,10 +22,12 @@ int pcnt=0;
 Msg("Checking data structures in stddef.h\n");
 #endif
 
-#ifdef NULL
-	CompareConstant(NULL,((void*)0))
+#ifdef __i386__
+CheckTypeSize(size_t,4, 8969, 2)
+#elif __ia64__
+CheckTypeSize(size_t,0, 8969, 3)
 #else
-Msg( "Warning: Constant not found: NULL\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
 #endif
 
 #ifdef TET_TEST
