@@ -363,6 +363,8 @@ Msg("Find size of fsid_t (9367)\n");
 CheckTypeSize(useconds_t,4, 9369, 2)
 #elif __powerpc64__
 CheckTypeSize(useconds_t,0, 9369, 9)
+#elif __ia64__
+CheckTypeSize(useconds_t,0, 9369, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9369,0);
 Msg("Find size of useconds_t (9369)\n");
