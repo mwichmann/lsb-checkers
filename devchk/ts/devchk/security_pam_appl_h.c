@@ -502,6 +502,11 @@ CheckOffset(struct pam_conv,appdata_ptr,4,6,34589)
 CheckTypeSize(struct pam_conv,16, 10352, 9)
 CheckMemberSize(struct pam_conv,appdata_ptr,8,9,34589)
 CheckOffset(struct pam_conv,appdata_ptr,8,9,34589)
+#elif __s390x__
+CheckTypeSize(struct pam_conv,0, 10352, 12)
+Msg("Missing member data for pam_conv on S390X\n");
+CheckOffset(struct pam_conv,conv,0,12,34588)
+CheckOffset(struct pam_conv,appdata_ptr,0,12,34589)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10352,0);
 Msg("Find size of pam_conv (10352)\n");
@@ -517,6 +522,8 @@ CheckTypeSize(pam_handle_t,4, 10354, 3)
 CheckTypeSize(pam_handle_t,4, 10354, 6)
 #elif __powerpc64__
 CheckTypeSize(pam_handle_t,4, 10354, 9)
+#elif __s390x__
+CheckTypeSize(pam_handle_t,0, 10354, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10354,0);
 Msg("Find size of pam_handle_t (10354)\n");
@@ -544,6 +551,11 @@ CheckOffset(struct pam_message,msg,4,6,34585)
 CheckTypeSize(struct pam_message,16, 10356, 9)
 CheckMemberSize(struct pam_message,msg,8,9,34585)
 CheckOffset(struct pam_message,msg,8,9,34585)
+#elif __s390x__
+CheckTypeSize(struct pam_message,0, 10356, 12)
+Msg("Missing member data for pam_message on S390X\n");
+CheckOffset(struct pam_message,msg_style,0,12,34584)
+CheckOffset(struct pam_message,msg,0,12,34585)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10356,0);
 Msg("Find size of pam_message (10356)\n");
@@ -575,6 +587,11 @@ CheckOffset(struct pam_response,resp_retcode,4,6,34587)
 CheckTypeSize(struct pam_response,16, 10358, 9)
 CheckMemberSize(struct pam_response,resp_retcode,4,9,34587)
 CheckOffset(struct pam_response,resp_retcode,8,9,34587)
+#elif __s390x__
+CheckTypeSize(struct pam_response,0, 10358, 12)
+Msg("Missing member data for pam_response on S390X\n");
+CheckOffset(struct pam_response,resp,0,12,34586)
+CheckOffset(struct pam_response,resp_retcode,0,12,34587)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10358,0);
 Msg("Find size of pam_response (10358)\n");

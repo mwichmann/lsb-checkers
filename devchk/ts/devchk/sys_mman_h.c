@@ -175,6 +175,14 @@ Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
 #endif
 
+#elif __s390x__
+#ifdef MCL_CURRENT
+	CompareConstant(MCL_CURRENT,1,3519,architecture)
+#else
+Msg( "Error: Constant not found: MCL_CURRENT\n");
+cnt++;
+#endif
+
 #elif __x86_64__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,1,3519,architecture)
@@ -222,6 +230,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef MCL_FUTURE
+	CompareConstant(MCL_FUTURE,2,3520,architecture)
+#else
+Msg( "Error: Constant not found: MCL_FUTURE\n");
+cnt++;
+#endif
+
+#elif __s390x__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,2,3520,architecture)
 #else

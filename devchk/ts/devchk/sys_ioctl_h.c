@@ -55,6 +55,14 @@ Msg( "Error: Constant not found: FIONREAD\n");
 cnt++;
 #endif
 
+#elif __s390x__
+#ifdef FIONREAD
+	CompareConstant(FIONREAD,21531,4619,architecture)
+#else
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
+#endif
+
 #elif __x86_64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,0x541B,4619,architecture)
@@ -104,6 +112,14 @@ cnt++;
 #elif __i386__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,0x5422,4627,architecture)
+#else
+Msg( "Error: Constant not found: TIOCNOTTY\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef TIOCNOTTY
+	CompareConstant(TIOCNOTTY,21538,4627,architecture)
 #else
 Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;

@@ -28,6 +28,7 @@ Msg("Checking data structures in rpc/xdr.h\n");
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9933,0);
 Msg("Find size of xdr_op (9933)\n");
@@ -97,6 +98,15 @@ CheckMemberSize(struct XDR,x_base,8,9,32196)
 CheckOffset(struct XDR,x_base,32,9,32196)
 CheckMemberSize(struct XDR,x_handy,4,9,32197)
 CheckOffset(struct XDR,x_handy,40,9,32197)
+#elif __s390x__
+CheckTypeSize(struct XDR,0, 9934, 12)
+Msg("Missing member data for XDR on S390X\n");
+CheckOffset(struct XDR,x_op,0,12,32162)
+CheckOffset(struct XDR,x_ops,0,12,32193)
+CheckOffset(struct XDR,x_public,0,12,32194)
+CheckOffset(struct XDR,x_private,0,12,32195)
+CheckOffset(struct XDR,x_base,0,12,32196)
+CheckOffset(struct XDR,x_handy,0,12,32197)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9934,0);
 Msg("Find size of XDR (9934)\n");
@@ -112,6 +122,8 @@ CheckTypeSize(XDR,24, 10412, 10)
 CheckTypeSize(XDR,24, 10412, 6)
 #elif __powerpc64__
 CheckTypeSize(XDR,48, 10412, 9)
+#elif __s390x__
+CheckTypeSize(XDR,0, 10412, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10412,0);
 Msg("Find size of XDR (10412)\n");
@@ -127,6 +139,8 @@ CheckTypeSize(xdrproc_t,4, 9948, 10)
 CheckTypeSize(xdrproc_t,4, 9948, 6)
 #elif __powerpc64__
 CheckTypeSize(xdrproc_t,8, 9948, 9)
+#elif __s390x__
+CheckTypeSize(xdrproc_t,0, 9948, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9948,0);
 Msg("Find size of xdrproc_t (9948)\n");
@@ -236,6 +250,19 @@ CheckMemberSize(struct xdr_ops,x_getint32,8,9,32189)
 CheckOffset(struct xdr_ops,x_getint32,64,9,32189)
 CheckMemberSize(struct xdr_ops,x_putint32,8,9,32192)
 CheckOffset(struct xdr_ops,x_putint32,72,9,32192)
+#elif __s390x__
+CheckTypeSize(struct xdr_ops,0, 9935, 12)
+Msg("Missing member data for xdr_ops on S390X\n");
+CheckOffset(struct xdr_ops,x_getlong,0,12,32165)
+CheckOffset(struct xdr_ops,x_putlong,0,12,32168)
+CheckOffset(struct xdr_ops,x_getbytes,0,12,32172)
+CheckOffset(struct xdr_ops,x_putbytes,0,12,32176)
+CheckOffset(struct xdr_ops,x_getpostn,0,12,32178)
+CheckOffset(struct xdr_ops,x_setpostn,0,12,32181)
+CheckOffset(struct xdr_ops,x_inline,0,12,32184)
+CheckOffset(struct xdr_ops,x_destroy,0,12,32186)
+CheckOffset(struct xdr_ops,x_getint32,0,12,32189)
+CheckOffset(struct xdr_ops,x_putint32,0,12,32192)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9935,0);
 Msg("Find size of xdr_ops (9935)\n");
@@ -261,6 +288,11 @@ CheckOffset(struct xdr_discrim,proc,8,9,32199)
 CheckTypeSize(struct xdr_discrim,8, 9949, 10)
 CheckMemberSize(struct xdr_discrim,proc,0,10,32199)
 CheckOffset(struct xdr_discrim,proc,4,10,32199)
+#elif __s390x__
+CheckTypeSize(struct xdr_discrim,0, 9949, 12)
+Msg("Missing member data for xdr_discrim on S390X\n");
+CheckOffset(struct xdr_discrim,value,0,12,32198)
+CheckOffset(struct xdr_discrim,proc,0,12,32199)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9949,0);
 Msg("Find size of xdr_discrim (9949)\n");

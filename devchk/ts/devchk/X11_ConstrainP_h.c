@@ -50,6 +50,8 @@ CheckTypeSize(ConstraintPart,4, 10250, 6)
 CheckTypeSize(ConstraintPart,4, 10250, 10)
 #elif __powerpc64__
 CheckTypeSize(ConstraintPart,8, 10250, 9)
+#elif __s390x__
+CheckTypeSize(ConstraintPart,0, 10250, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
 Msg("Find size of ConstraintPart (10250)\n");
@@ -65,6 +67,8 @@ CheckTypeSize(ConstraintClassPart,28, 10252, 6)
 CheckTypeSize(ConstraintClassPart,28, 10252, 10)
 #elif __powerpc64__
 CheckTypeSize(ConstraintClassPart,48, 10252, 9)
+#elif __s390x__
+CheckTypeSize(ConstraintClassPart,0, 10252, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
 Msg("Find size of ConstraintClassPart (10252)\n");
@@ -80,6 +84,8 @@ CheckTypeSize(ConstraintClassRec,164, 10258, 6)
 CheckTypeSize(ConstraintClassRec,164, 10258, 10)
 #elif __powerpc64__
 CheckTypeSize(ConstraintClassRec,312, 10258, 9)
+#elif __s390x__
+CheckTypeSize(ConstraintClassRec,0, 10258, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10258,0);
 Msg("Find size of ConstraintClassRec (10258)\n");

@@ -65,6 +65,13 @@ CheckMemberSize(struct group,gr_gid,4,9,29794)
 CheckOffset(struct group,gr_gid,16,9,29794)
 CheckMemberSize(struct group,gr_mem,8,9,29795)
 CheckOffset(struct group,gr_mem,24,9,29795)
+#elif __s390x__
+CheckTypeSize(struct group,0, 6894, 12)
+Msg("Missing member data for group on S390X\n");
+CheckOffset(struct group,gr_name,0,12,29792)
+CheckOffset(struct group,gr_passwd,0,12,29793)
+CheckOffset(struct group,gr_gid,0,12,29794)
+CheckOffset(struct group,gr_mem,0,12,29795)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6894,0);
 Msg("Find size of group (6894)\n");

@@ -725,6 +725,8 @@ CheckTypeSize(sig_atomic_t,4, 9092, 6)
 CheckTypeSize(sig_atomic_t,4, 9092, 10)
 #elif __powerpc64__
 CheckTypeSize(sig_atomic_t,4, 9092, 9)
+#elif __s390x__
+CheckTypeSize(sig_atomic_t,0, 9092, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
@@ -752,6 +754,11 @@ CheckOffset(struct sigstack,ss_onstack,4,10,34195)
 CheckTypeSize(struct sigstack,16, 9315, 9)
 CheckMemberSize(struct sigstack,ss_onstack,4,9,34195)
 CheckOffset(struct sigstack,ss_onstack,8,9,34195)
+#elif __s390x__
+CheckTypeSize(struct sigstack,0, 9315, 12)
+Msg("Missing member data for sigstack on S390X\n");
+CheckOffset(struct sigstack,ss_sp,0,12,34194)
+CheckOffset(struct sigstack,ss_onstack,0,12,34195)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
 Msg("Find size of sigstack (9315)\n");
@@ -770,6 +777,8 @@ CheckTypeSize(__sighandler_t,4, 6966, 6)
 CheckTypeSize(__sighandler_t,4, 6966, 10)
 #elif __powerpc64__
 CheckTypeSize(__sighandler_t,8, 6966, 9)
+#elif __s390x__
+CheckTypeSize(__sighandler_t,0, 6966, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
 Msg("Find size of __sighandler_t (6966)\n");
@@ -785,6 +794,8 @@ CheckTypeSize(sigval_t,4, 9320, 6)
 CheckTypeSize(sigval_t,4, 9320, 10)
 #elif __powerpc64__
 CheckTypeSize(sigval_t,8, 9320, 9)
+#elif __s390x__
+CheckTypeSize(sigval_t,0, 9320, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
 Msg("Find size of sigval_t (9320)\n");
@@ -795,6 +806,7 @@ Msg("Find size of sigval_t (9320)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __s390__ && !__s390x__
 #elif __powerpc64__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10189,0);
 Msg("Find size of anon-_sigev_un (10189)\n");
@@ -810,6 +822,8 @@ CheckTypeSize(sigevent_t,64, 10190, 6)
 CheckTypeSize(sigevent_t,64, 10190, 10)
 #elif __powerpc64__
 CheckTypeSize(sigevent_t,64, 10190, 9)
+#elif __s390x__
+CheckTypeSize(sigevent_t,0, 10190, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
 Msg("Find size of sigevent_t (10190)\n");
@@ -825,6 +839,8 @@ CheckTypeSize(siginfo_t,128, 9099, 6)
 CheckTypeSize(siginfo_t,128, 9099, 10)
 #elif __powerpc64__
 CheckTypeSize(siginfo_t,128, 9099, 9)
+#elif __s390x__
+CheckTypeSize(siginfo_t,0, 9099, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
 Msg("Find size of siginfo_t (9099)\n");
@@ -838,6 +854,8 @@ CheckTypeSize(sigset_t,128, 10163, 3)
 CheckTypeSize(sigset_t,128, 10163, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(sigset_t,128, 10163, 10)
+#elif __s390x__
+CheckTypeSize(sigset_t,0, 10163, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
 Msg("Find size of sigset_t (10163)\n");
@@ -907,6 +925,8 @@ CheckTypeSize(stack_t,12, 9314, 2)
 CheckTypeSize(stack_t,24, 9314, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(stack_t,12, 9314, 6)
+#elif __s390x__
+CheckTypeSize(stack_t,0, 9314, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
 Msg("Find size of stack_t (9314)\n");

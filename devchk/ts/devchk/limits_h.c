@@ -115,6 +115,14 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
+#elif __s390x__
+#ifdef LONG_MAX
+	CompareConstant(LONG_MAX,-1,16,architecture)
+#else
+Msg( "Error: Constant not found: LONG_MAX\n");
+cnt++;
+#endif
+
 #elif __s390__ && !__s390x__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,2147483647,16,architecture)
@@ -313,6 +321,14 @@ Msg( "Error: Constant not found: CHAR_MIN\n");
 cnt++;
 #endif
 
+#elif __s390x__
+#ifdef CHAR_MIN
+	CompareConstant(CHAR_MIN,0,8,architecture)
+#else
+Msg( "Error: Constant not found: CHAR_MIN\n");
+cnt++;
+#endif
+
 #elif __x86_64__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,SCHAR_MIN,8,architecture)
@@ -362,6 +378,14 @@ cnt++;
 #elif __i386__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,SCHAR_MAX,9,architecture)
+#else
+Msg( "Error: Constant not found: CHAR_MAX\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef CHAR_MAX
+	CompareConstant(CHAR_MAX,255,9,architecture)
 #else
 Msg( "Error: Constant not found: CHAR_MAX\n");
 cnt++;

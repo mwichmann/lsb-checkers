@@ -53,6 +53,8 @@ CheckTypeSize(nl_catd,4, 6923, 6)
 CheckTypeSize(nl_catd,4, 6923, 10)
 #elif __powerpc64__
 CheckTypeSize(nl_catd,8, 6923, 9)
+#elif __s390x__
+CheckTypeSize(nl_catd,0, 6923, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6923,0);
 Msg("Find size of nl_catd (6923)\n");
@@ -68,6 +70,8 @@ CheckTypeSize(nl_item,4, 6924, 6)
 CheckTypeSize(nl_item,4, 6924, 10)
 #elif __powerpc64__
 CheckTypeSize(nl_item,4, 6924, 9)
+#elif __s390x__
+CheckTypeSize(nl_item,0, 6924, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6924,0);
 Msg("Find size of nl_item (6924)\n");
