@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "sections.h"
+#include "progbits.h"
 #include "../tetj/tetj.h"
 
 int
@@ -93,11 +94,21 @@ for(i=0; i<size; i++)
 int
 checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
+  int i;
   /*
    * Need to look at the section name, and figure out how to check it
    * more closely.
    */
-  return checkBITS( "PROGBITS", file1, hdr1 );
+
+  for(i=0;i<numProgbitsInfo;i++ ) {
+	if( strcmp(ElfGetString(file1, hdr1->sh_name),
+	      ProgbitsInfo[i].secname) == 0 ) {
+  		return ProgbitsInfo[i].func( file1, hdr1, journal );
+	}
+  }
+  fprintf(stderr, "Contents of section %s not checked.\n",
+				ElfGetString(file1, hdr1->sh_name));
+  return 0;
 }
 
 int

@@ -41,6 +41,11 @@ extern int numDtNeeded;
 extern struct versym DynSyms[];
 extern int numDynSyms;
 
+/*
+ * Global values that may be checked in various places.
+ */
+extern char *ProgInterp;
+
 
 typedef	struct	{
 	int	fd;
