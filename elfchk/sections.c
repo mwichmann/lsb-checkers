@@ -106,9 +106,11 @@ checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
   		return ProgbitsInfo[i].func( file1, hdr1, journal );
 	}
   }
+#ifdef VERBOSE
 fprintf(stderr, "Contents of section %s not checked.\n",
 				ElfGetString(file1, hdr1->sh_name));
-  return 0;
+#endif
+  return 1;
 }
 
 int
