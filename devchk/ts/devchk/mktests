@@ -1,0 +1,391 @@
+#!/usr/bin/perl
+
+use Mysql;
+
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+# Uncomment to trace SQL statments
+#$trace=1;
+
+# counter used to calculate test number
+$cnt=0;
+
+sub writetest($$)
+{
+	local($Hid,$Hname)=@_;
+	local($lastid);
+	my(%entry);
+
+	#
+	# Get the return types
+	#
+	$select = "SELECT Ireturn FROM Interface ";
+	$select.= "WHERE Iheader=$Hid ";
+	$select.= "AND Istatus='Included' ";
+	#$select.= "AND Iarch=$Aid";
+	print $select,"\n" if $trace;
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+	for(1..$sth->numrows) {
+		%entry=$sth->fetchhash;
+		$type{$entry{'Ireturn'}}=1;
+	}
+
+	#
+	# Get the parameter types
+	#
+	$select = "SELECT Ptype FROM Interface,Parameter ";
+	$select.= "WHERE Iheader=$Hid ";
+	$select.= "AND Pint=Iid ";
+	$select.= "AND Istatus='Included' ";
+	#$select.= "AND Iarch=$Aid";
+	print $select,"\n" if $trace;
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+	for(1..$sth->numrows) {
+		%entry=$sth->fetchhash;
+		$type{$entry{'Ptype'}}=1;
+	}
+
+	$typelist=join ',', keys(%type);
+
+	if( $typelist eq "" ) { return 0; }
+
+	$fname=$Hname;
+	$fname =~ tr/\/./__/;
+	$filename = $fname.".c";
+	$objname = $fname.".o";
+
+	open(TESTS,">$filename") || die "Can't open $filename for writing";
+	print "Writing tests for $Hname to $filename\n";
+
+	#Get Constants
+	$select = "SELECT DISTINCT * FROM Constant,HeaderGroup ";
+	$select.= "WHERE HGheader=$Hid ";
+	$select.= "AND Cheadgroup=HGid ";
+	$select.= "ORDER BY Cheadgroup ";
+	$cth = $Dbh->query($select) || die $Dbh->errmsg();
+
+	#Get Types
+	$select = "SELECT DISTINCT * FROM Type,HeaderGroup ";
+	$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+	$select.= "LEFT JOIN Architecture ON Aid=ATaid ";
+	$select.= "WHERE HGheader=$Hid ";
+	$select.= "AND Theadergroup=HGid ";
+	$select.= "AND Tid IN ($typelist)";
+	$select.= "ORDER BY Theadergroup,Tid ";
+	$tth = $Dbh->query($select) || die $Dbh->errmsg();
+	if( $cth->numrows == 0 && $tth->numrows == 0 ) {
+		print TESTS "/*\n * No values in $Hname\n */\n";
+		close(TESTS);
+		return;
+	}
+
+	print MAKEFILE "\\\n\t$objname ";
+	print HARNESS "tcnt+=$fname();\n";
+	print SUBDEFS "extern void $fname();\n";
+	$cnt++;
+	print TET_HDR "\t{ $fname, $cnt },\n";
+
+
+	print TESTS "/*\n * Test of $Hname\n */\n";
+	print TESTS "#include \"hdrchk.h\"\n";
+	print TESTS "#include \"sys/types.h\"\n";
+
+	open(INCS,"<$fname.inc");
+	while(<INCS>) {
+		print TESTS $_;
+	}
+	close(INCS);
+	print TESTS "#include \"$Hname\"\n";
+	print TESTS "\n\n\n";
+	print TESTS "#ifdef TET_TEST\n";
+	print TESTS "void $fname()\n{\n";
+	print TESTS "#else\n";
+	print TESTS "int $fname()\n{\n";
+	print TESTS "#endif\n\n";
+	print TESTS "int cnt=0;\n\n";
+	print TESTS "#ifdef TET_TEST\n";
+	print TESTS "int pcnt=0;\n";
+	print TESTS "Msg(\"Checking data structures in $Hname\\n\");\n";
+	print TESTS "#endif\n\n";
+
+	for(1..$cth->numrows) {
+		%entry=$cth->fetchhash;
+		# Need to make sure it is an integer
+		if( $entry{'Ctype'} eq 'I' ) {
+			print TESTS "#ifdef $entry{'Cname'}\n";
+			print TESTS "\tCompareConstant($entry{'Cname'},$entry{'Cvalue'})\n";
+			print TESTS "#else\n";
+			print TESTS "Msg( \"Warning: Constant not found: $entry{'Cname'}\\n\");\n";
+			print TESTS "#endif\n\n";
+		} else {
+			print TESTS "/* No test for $entry{'Cname'} */\n";
+		}
+	}
+
+	$lastid=0;
+	for(1..$tth->numrows) {
+		%tentry=$tth->fetchhash;
+		if( !$tentry{'Asymbol'} ) { $tentry{'Asymbol'}='__no_sym__'; }
+		# Do this before we reset the value, so we can re-use the values
+		# from the last time through the loop is we need them
+		if( $tentry{'Tid'} != $lastid ) {
+			if( $lastid != 0 ) {
+				# We have output at least one type, and now we need to
+				# put a catchall else clause
+
+				print TESTS "#else\n";
+				print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+				print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+				print TESTS "#endif\n\n";
+			}
+			print TESTS "#ifdef $tentry{'Asymbol'}\n";
+			$lastid=$tentry{'Tid'};
+		} else {
+			print TESTS "#elif $tentry{'Asymbol'}\n";
+		}
+		$Tid=$tentry{'Tid'};
+		$Tname=$tentry{'Tname'};
+		$ATsize=$tentry{'ATsize'};
+		$Asymbol=$tentry{'Asymbol'};
+		if( $Tname=~/anon/ ) { next; };
+		if( $Tname=~/fptr/ ) { next; };
+		if( $tentry{'Ttype'} eq 'Struct' || $tentry{'Ttype'} eq 'Union' ) {
+			if( $tentry{'Ttype'} eq 'Struct' ) {
+				$type="struct";
+			} else {
+				$type="union";
+			}
+			print TESTS "CheckTypeSize($type $Tname,$ATsize)\n";
+			#Get the members
+			$select = "SELECT DISTINCT * FROM TypeMember ";
+			$select.= "WHERE TMmemberof=$Tid ";
+			$select.= "AND TMbitfiled='No' ";
+			$select.= "ORDER BY TMposition ";
+			$mth = $Dbh->query($select) || die $Dbh->errmsg();
+			for(1..$mth->numrows) {
+				%mentry=$mth->fetchhash;
+				print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMoffset'})\n";
+			}
+		} else {
+			print TESTS "CheckTypeSize($Tname,$ATsize)\n";
+		}
+	}
+	print TESTS "#else\n";
+	print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+	print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+	print TESTS "#endif\n\n";
+
+	print TESTS "#ifdef TET_TEST\n";
+	print TESTS "if (pcnt == cnt )\n";
+	print TESTS "\ttet_result(TET_PASS);\n";
+	print TESTS "else\n";
+	print TESTS "\ttet_result(TET_FAIL);\n";
+	print TESTS "return;\n";	
+	print TESTS "#else\n";
+	print TESTS "printf(\"%d tests in $Hname\\n\",cnt);\n";
+	print TESTS "return cnt;\n";
+	print TESTS "#endif\n\n";
+	print TESTS "}\n";
+
+	close(TESTS);
+}
+
+
+$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER,$LSBDBPASSWD) || die $Mysql::db_errstr;
+
+$Dbh->selectdb("lsb") || die $Dbh->errmsg();
+
+if( $ARGV[0] ne "" ) {
+	$select = "SELECT DISTINCT * FROM Header ";
+	$select.= "WHERE Hstd='Yes' ";
+	$select.= "AND Hname='".$ARGV[0]."'";
+	$hth = $Dbh->query($select) || die $Dbh->errmsg();
+	%entry=$hth->fetchhash;
+	writetest($entry{'Hid'},$entry{'Hname'});
+	exit;
+}
+
+open(HARNESS,">hdrchk.c") || die "Can't open hdrchk.c for writing";
+print HARNESS "#include <stdio.h>\n";
+print HARNESS "#include <stdarg.h>\n\n";
+open(MAKEFILE,">makefile") || die "Can't open makefile for writing";
+#print MAKEFILE "CFLAGS = -g -I../../headers\n";
+print MAKEFILE "OBJS = hdrchk.o ";
+
+$select = "SELECT DISTINCT * FROM Architecture ";
+$select.= "WHERE Aname!='All'";
+
+$ath = $Dbh->query($select) || die $Dbh->errmsg();
+for(1..$ath->numrows) {
+	%entry=$ath->fetchhash;
+	print HARNESS "#ifdef ",$entry{'Asymbol'},"\n";
+	print HARNESS "int architecture=",$entry{'Aid'},";\n";
+	print HARNESS "#define __found_arch__\n";
+	print HARNESS "#endif\n";
+}
+
+print HARNESS "#ifndef __found_arch__\n";
+print HARNESS "#error \"Unable to identify architecture\"\n";
+print HARNESS "#endif\n\n";
+
+print HARNESS "#ifdef TET_TEST\n\n";
+print HARNESS "#include \"hdrchk_tet.h\"\n\n";
+print HARNESS "#endif\n\n";
+
+print HARNESS "Msg( char *f, ...)\n";
+print HARNESS "{\n";
+print HARNESS "va_list args;\n";
+print HARNESS "va_start(args,f);\n";
+print HARNESS "vfprintf(stderr, f, args);\n";
+print HARNESS "va_end(args);\n";
+print HARNESS "}\n\n";
+print HARNESS "int tcnt=0;\n\n";
+print HARNESS "#ifndef TET_TEST\n\n";
+print HARNESS "main()\n{\n";
+
+open(TET_HDR,">hdrchk_tet.h") || die "Can't open hdrchk_tet.h for writing";
+print TET_HDR "#include <tet_api.h>\n\n";
+print TET_HDR "#include \"testdefs.h\"\n\n";
+
+print TET_HDR "static void startup(), cleanup();\n\n";
+print TET_HDR "void (*tet_startup)() = NULL;\n";
+print TET_HDR "void (*tet_cleanup)() = NULL;\n\n";
+print TET_HDR "struct tet_testlist tet_testlist[] = {\n";
+
+open(SUBDEFS,">testdefs.h") || die "Can't open testdefs.h for writing";
+
+$select = "SELECT DISTINCT * FROM Header ";
+$select.= "WHERE Hstd='Yes' ";
+$select.= "ORDER BY Hname ";
+
+#
+# Dump out each header
+#
+$hth = $Dbh->query($select) || die $Dbh->errmsg();
+for(1..$hth->numrows) {
+	%entry=$hth->fetchhash;
+	writetest($entry{'Hid'},$entry{'Hname'});
+}
+
+#
+# Dump out the fundamental types (Intrinsic types)
+#
+open(TESTS,">intrinsic.c") || die "Can't open intrinsic.c for writing";
+
+#Get Types
+$select = "SELECT DISTINCT * FROM Type ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+$select.= "LEFT JOIN Architecture ON Aid=ATaid ";
+$select.= "WHERE Ttype='Intrinsic' ";
+$select.= "AND Tname!='...' ";
+$select.= "ORDER BY Tid";
+$tth = $Dbh->query($select) || die $Dbh->errmsg();
+if( $tth->numrows == 0 ) {
+	print TESTS "/*\n * No values in $Hname\n */\n";
+	close(TESTS);
+	return;
+	}
+
+print MAKEFILE "\\\n\tintrinsic.o ";
+print HARNESS "tcnt+=intrinsic();\n";
+
+
+print TESTS "/*\n * Test of intrinsic types\n */\n";
+print TESTS "#include \"hdrchk.h\"\n";
+print TESTS "#include \"sys/types.h\"\n";
+print TESTS "\n\n\n";
+print TESTS "#ifdef TET_TEST\n";
+print TESTS "void intrinsic()\n{\n";
+print TESTS "#else\n";
+print TESTS "int intrinsic()\n{\n";
+print TESTS "#endif\n";
+print TESTS "int cnt=0;\n";
+print TESTS "#ifdef TET_TEST\n";
+print TESTS "int pcnt=0;\n";
+print TESTS "#endif\n\n";
+
+$lastid=0;
+for(1..$tth->numrows) {
+	%tentry=$tth->fetchhash;
+	# Do this before we reset the value, so we can re-use the values
+	# from the last time through the loop if we need them
+	if( $tentry{'Tid'} != $lastid ) {
+		if( $lastid != 0 ) {
+			# We have output at least one type, and now we need to
+			# put a catch-all else clause
+
+			print TESTS "#else\n";
+			print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+			print TESTS "#endif\n\n";
+		}
+		print TESTS "#ifdef $tentry{'Asymbol'}\n";
+		$lastid=$tentry{'Tid'};
+	} else {
+		print TESTS "#elif $tentry{'Asymbol'}\n";
+	}
+	$Tid=$tentry{'Tid'};
+	$ATsize=$tentry{'ATsize'};
+	$Tname=$tentry{'Tname'};
+	print TESTS "CheckTypeSize($Tname,$ATsize)\n";
+}
+print TESTS "#else\n";
+print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+print TESTS "#endif\n\n";
+
+print TESTS "#ifdef TET_TEST\n";
+print TESTS "if (pcnt == cnt )\n";
+print TESTS "\ttet_result(TET_PASS);\n";
+print TESTS "else\n";
+print TESTS "\ttet_result(TET_FAIL);\n";
+print TESTS "return;\n";	
+print TESTS "#else\n";
+print TESTS "printf(\"%d intrinsic types\\n\",cnt);\n";
+print TESTS "return cnt;\n";
+print TESTS "#endif\n\n";
+print TESTS "}\n";
+close(TEST);
+
+#
+# Finish up and close the files
+#
+print MAKEFILE "\n\n";
+print MAKEFILE "ifdef TET_ROOT\n";
+print MAKEFILE "LIBDIR = \$\(TET_ROOT)/lib/tet3\n";
+print MAKEFILE "INCDIR = \$\(TET_ROOT)/inc/tet3\n";
+print MAKEFILE "EXTRALIBS = \$\(LIBDIR)/tcm.o \$\(LIBDIR)/libapi.a\n";
+print MAKEFILE "else\n";
+print MAKEFILE "EXTRALIBS =\n";
+print MAKEFILE "endif\n\n";
+
+print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE\n\n";
+
+
+print MAKEFILE "ifdef TET_ROOT\n";
+print MAKEFILE "CFLAGS += -DTET_TEST -I\$\(INCDIR)\n";
+print MAKEFILE "endif\n\n";
+
+print MAKEFILE "all: hdrchk\n\n";
+print MAKEFILE "hdrchk: \$\(OBJS)\n";
+print MAKEFILE "\tcc -o hdrchk \$\(OBJS) \$\(EXTRALIBS)\n";
+print MAKEFILE "\n";
+print MAKEFILE "hdrchk.o: hdrchk.c\n";
+print MAKEFILE "\tcc \$\(CFLAGS) -g -c hdrchk.c\n";
+print MAKEFILE "\n\n";
+print MAKEFILE "install:\n";
+print MAKEFILE "\n\n";
+print MAKEFILE "clean:\n\trm -f \$\(OBJS)\n\n";
+print MAKEFILE "clobber:\tclean\n";
+print MAKEFILE "\trm -f *.c hdrchk_tet.h testdefs.h hdrchk\n";
+close(MAKEFILE);
+
+print HARNESS "printf(\"Total Tests: %d\\n\", tcnt );\n";
+print HARNESS "}\n";
+print HARNESS "#endif\n";
+close(HARNESS);
+
+print TET_HDR "	{ NULL, 0 }\n";
+print TET_HDR "};\n";
+close(TET_HDR);
+close(SUBDEFS);
