@@ -111,10 +111,11 @@ for(1..$vsth->numrows) {
 }
 print $LIB "\t};\n\n";
 
-if( $$class{'CInumvfunc'} != $numvtablefuns ) {
-	print STDERR "Wrong NumVfuncs for ".$$class{'CIname'}." ";
-	print STDERR $$class{'CInumvfunc'}." vs $numvtablefuns\n";
-	}
+# This should be compared w/ CVnumvtfuncs instead
+#if( $$class{'CInumvfunc'} != $numvtablefuns ) {
+#	print STDERR "Wrong NumVfuncs for ".$$class{'CIname'}." ";
+#	print STDERR $$class{'CInumvfunc'}." vs $numvtablefuns\n";
+#	}
 } # $$class{'CInumvtab'}
 
 #
