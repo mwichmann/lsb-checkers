@@ -4,6 +4,15 @@
 #include "../../include/elf.h"
 */
 
+#if defined(__alpha) || defined(__alpha__) || \
+    defined(__ia64__) || defined(ia64)
+#define Elf32_Shdr Elf64_Shdr
+#define Elf32_Phdr Elf64_Phdr
+#define Elf32_Dyn  Elf64_Dyn
+#define Elf32_Sym  Elf64_Sym
+#define Elf32_Rel  Elf64_Rel
+#endif
+
 /*
  * External tables that are generated from the DB.
  */
