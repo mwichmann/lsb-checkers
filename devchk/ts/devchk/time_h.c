@@ -59,6 +59,8 @@ CheckTypeSize(struct tm,44, 7019, 2)
 CheckTypeSize(struct tm,56, 7019, 3)
 #elif __powerpc__
 CheckTypeSize(struct tm,44, 7019, 6)
+#elif __s390__
+CheckTypeSize(struct tm,0, 7019, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 Msg("Find size of tm (7019)\n");
@@ -70,6 +72,8 @@ CheckTypeSize(struct itimerspec,16, 10101, 2)
 CheckTypeSize(struct itimerspec,32, 10101, 3)
 #elif __powerpc__
 CheckTypeSize(struct itimerspec,16, 10101, 6)
+#elif __s390__
+CheckTypeSize(struct itimerspec,0, 10101, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");

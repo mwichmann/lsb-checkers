@@ -59,6 +59,8 @@ CheckTypeSize(struct timezone,8, 9855, 2)
 CheckTypeSize(struct timezone,8, 9855, 3)
 #elif __powerpc__
 CheckTypeSize(struct timezone,8, 9855, 6)
+#elif __s390__
+CheckTypeSize(struct timezone,0, 9855, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9855,0);
 Msg("Find size of timezone (9855)\n");
@@ -70,6 +72,8 @@ CheckTypeSize(struct itimerval,16, 9861, 2)
 CheckTypeSize(struct itimerval,32, 9861, 3)
 #elif __powerpc__
 CheckTypeSize(struct itimerval,16, 9861, 6)
+#elif __s390__
+CheckTypeSize(struct itimerval,0, 9861, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9861,0);
 Msg("Find size of itimerval (9861)\n");
@@ -81,6 +85,8 @@ CheckTypeSize(struct timespec,8, 7018, 2)
 CheckTypeSize(struct timespec,16, 7018, 3)
 #elif __powerpc__
 CheckTypeSize(struct timespec,8, 7018, 6)
+#elif __s390__
+CheckTypeSize(struct timespec,0, 7018, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7018,0);
 Msg("Find size of timespec (7018)\n");
@@ -92,6 +98,8 @@ CheckTypeSize(struct timeval,8, 9858, 2)
 CheckTypeSize(struct timeval,16, 9858, 3)
 #elif __powerpc__
 CheckTypeSize(struct timeval,8, 9858, 6)
+#elif __s390__
+CheckTypeSize(struct timeval,0, 9858, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9858,0);
 Msg("Find size of timeval (9858)\n");

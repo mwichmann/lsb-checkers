@@ -219,6 +219,8 @@ CheckTypeSize(glob_t,72, 9005, 3)
 CheckTypeSize(glob_t,36, 9005, 2)
 #elif __powerpc__
 CheckTypeSize(glob_t,36, 9005, 6)
+#elif __s390__
+CheckTypeSize(glob_t,0, 9005, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9005,0);
 Msg("Find size of glob_t (9005)\n");
@@ -230,6 +232,8 @@ CheckTypeSize(glob64_t,36, 9007, 2)
 CheckTypeSize(glob64_t,72, 9007, 3)
 #elif __powerpc__
 CheckTypeSize(glob64_t,36, 9007, 6)
+#elif __s390__
+CheckTypeSize(glob64_t,0, 9007, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9007,0);
 Msg("Find size of glob64_t (9007)\n");

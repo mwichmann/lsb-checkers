@@ -109,6 +109,8 @@ CheckTypeSize(struct sembuf,6, 6982, 2)
 CheckTypeSize(struct sembuf,6, 6982, 3)
 #elif __powerpc__
 CheckTypeSize(struct sembuf,6, 6982, 6)
+#elif __s390__
+CheckTypeSize(struct sembuf,0, 6982, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
 Msg("Find size of sembuf (6982)\n");
@@ -128,6 +130,8 @@ CheckOffset(struct semid_ds,__unused4,60,2,34297)
 CheckTypeSize(struct semid_ds,88, 10211, 3)
 #elif __powerpc__
 CheckTypeSize(struct semid_ds,80, 10211, 6)
+#elif __s390__
+CheckTypeSize(struct semid_ds,0, 10211, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10211,0);
 Msg("Find size of semid_ds (10211)\n");

@@ -304,6 +304,8 @@ CheckOffset(struct flock,l_pid,12,2,34306)
 CheckTypeSize(struct flock,32, 10217, 3)
 #elif __powerpc__
 CheckTypeSize(struct flock,16, 10217, 6)
+#elif __s390__
+CheckTypeSize(struct flock,0, 10217, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
 Msg("Find size of flock (10217)\n");
@@ -320,6 +322,8 @@ CheckOffset(struct flock64,l_pid,20,2,34311)
 CheckTypeSize(struct flock64,32, 10218, 3)
 #elif __powerpc__
 CheckTypeSize(struct flock64,32, 10218, 6)
+#elif __s390__
+CheckTypeSize(struct flock64,0, 10218, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
 Msg("Find size of flock64 (10218)\n");

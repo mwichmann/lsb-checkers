@@ -183,6 +183,8 @@ CheckTypeSize(struct exception,32, 10010, 2)
 CheckTypeSize(struct exception,40, 10010, 3)
 #elif __powerpc__
 CheckTypeSize(struct exception,32, 10010, 6)
+#elif __s390__
+CheckTypeSize(struct exception,0, 10010, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10010,0);
 Msg("Find size of exception (10010)\n");

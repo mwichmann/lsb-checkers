@@ -81,6 +81,14 @@ Msg( "Error: Constant not found: CHAR_MIN\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef CHAR_MIN
+	CompareConstant(CHAR_MIN,0,8,architecture)
+#else
+Msg( "Error: Constant not found: CHAR_MIN\n");
+cnt++;
+#endif
+
 #elif _LSB_DEFAULT_ARCH
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,SCHAR_MIN,8,architecture)
@@ -92,6 +100,14 @@ cnt++;
 #endif
 
 #ifdef __powerpc__
+#ifdef CHAR_MAX
+	CompareConstant(CHAR_MAX,255,9,architecture)
+#else
+Msg( "Error: Constant not found: CHAR_MAX\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,255,9,architecture)
 #else
@@ -254,7 +270,15 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#ifdef __s390__
+#ifdef PATH_MAX
+	CompareConstant(PATH_MAX,4095,29,architecture)
+#else
+Msg( "Error: Constant not found: PATH_MAX\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef PATH_MAX
 	CompareConstant(PATH_MAX,4096,29,architecture)
 #else

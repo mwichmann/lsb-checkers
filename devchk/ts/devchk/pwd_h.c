@@ -29,6 +29,8 @@ CheckTypeSize(struct passwd,28, 6938, 2)
 CheckTypeSize(struct passwd,48, 6938, 3)
 #elif __powerpc__
 CheckTypeSize(struct passwd,28, 6938, 6)
+#elif __s390__
+CheckTypeSize(struct passwd,0, 6938, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6938,0);
 Msg("Find size of passwd (6938)\n");
