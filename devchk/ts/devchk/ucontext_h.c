@@ -39,6 +39,14 @@ Msg( "Error: Constant not found: NGREG\n");
 cnt++;
 #endif
 
+#elif __s390x__
+#ifdef NGREG
+	CompareConstant(NGREG,27,4929,architecture)
+#else
+Msg( "Error: Constant not found: NGREG\n");
+cnt++;
+#endif
+
 #elif __s390__ && !__s390x__
 #ifdef NGREG
 	CompareConstant(NGREG,36,4929,architecture)
@@ -110,6 +118,7 @@ CheckTypeSize(fpregset_t,136, 10228, 10)
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
 Msg("Find size of anon-mcontext (10229)\n");

@@ -45,6 +45,11 @@ CheckOffset(struct utimbuf,modtime,4,10,30206)
 CheckTypeSize(struct utimbuf,16, 7023, 9)
 CheckMemberSize(struct utimbuf,modtime,8,9,30206)
 CheckOffset(struct utimbuf,modtime,8,9,30206)
+#elif __s390x__
+CheckTypeSize(struct utimbuf,0, 7023, 12)
+Msg("Missing member data for utimbuf on S390X\n");
+CheckOffset(struct utimbuf,actime,0,12,30205)
+CheckOffset(struct utimbuf,modtime,0,12,30206)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7023,0);
 Msg("Find size of utimbuf (7023)\n");

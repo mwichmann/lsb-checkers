@@ -163,6 +163,20 @@ CheckMemberSize(struct tm,tm_gmtoff,8,9,33521)
 CheckOffset(struct tm,tm_gmtoff,40,9,33521)
 CheckMemberSize(struct tm,tm_zone,8,9,33522)
 CheckOffset(struct tm,tm_zone,48,9,33522)
+#elif __s390x__
+CheckTypeSize(struct tm,0, 7019, 12)
+Msg("Missing member data for tm on S390X\n");
+CheckOffset(struct tm,tm_sec,0,12,33512)
+CheckOffset(struct tm,tm_min,0,12,33513)
+CheckOffset(struct tm,tm_hour,0,12,33514)
+CheckOffset(struct tm,tm_mday,0,12,33515)
+CheckOffset(struct tm,tm_mon,0,12,33516)
+CheckOffset(struct tm,tm_year,0,12,33517)
+CheckOffset(struct tm,tm_wday,0,12,33518)
+CheckOffset(struct tm,tm_yday,0,12,33519)
+CheckOffset(struct tm,tm_isdst,0,12,33520)
+CheckOffset(struct tm,tm_gmtoff,0,12,33521)
+CheckOffset(struct tm,tm_zone,0,12,33522)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 Msg("Find size of tm (7019)\n");
@@ -188,6 +202,11 @@ CheckOffset(struct itimerspec,it_value,8,10,33509)
 CheckTypeSize(struct itimerspec,32, 10101, 9)
 CheckMemberSize(struct itimerspec,it_value,16,9,33509)
 CheckOffset(struct itimerspec,it_value,16,9,33509)
+#elif __s390x__
+CheckTypeSize(struct itimerspec,0, 10101, 12)
+Msg("Missing member data for itimerspec on S390X\n");
+CheckOffset(struct itimerspec,it_interval,0,12,33508)
+CheckOffset(struct itimerspec,it_value,0,12,33509)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");

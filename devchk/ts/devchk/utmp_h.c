@@ -175,6 +175,11 @@ CheckOffset(struct exit_status,e_exit,2,10,34454)
 CheckTypeSize(struct exit_status,4, 10282, 9)
 CheckMemberSize(struct exit_status,e_exit,2,9,34454)
 CheckOffset(struct exit_status,e_exit,2,9,34454)
+#elif __s390x__
+CheckTypeSize(struct exit_status,0, 10282, 12)
+Msg("Missing member data for exit_status on S390X\n");
+CheckOffset(struct exit_status,e_termination,0,12,34453)
+CheckOffset(struct exit_status,e_exit,0,12,34454)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10282,0);
 Msg("Find size of exit_status (10282)\n");
@@ -212,6 +217,12 @@ CheckMemberSize(struct lastlog,ll_line,32,9,34461)
 CheckOffset(struct lastlog,ll_line,8,9,34461)
 CheckMemberSize(struct lastlog,ll_host,256,9,34462)
 CheckOffset(struct lastlog,ll_host,40,9,34462)
+#elif __s390x__
+CheckTypeSize(struct lastlog,0, 10285, 12)
+Msg("Missing member data for lastlog on S390X\n");
+CheckOffset(struct lastlog,ll_time,0,12,34460)
+CheckOffset(struct lastlog,ll_line,0,12,34461)
+CheckOffset(struct lastlog,ll_host,0,12,34462)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10285,0);
 Msg("Find size of lastlog (10285)\n");
@@ -329,6 +340,20 @@ CheckMemberSize(struct utmp,ut_addr_v6,16,9,34458)
 CheckOffset(struct utmp,ut_addr_v6,348,9,34458)
 CheckMemberSize(struct utmp,__unused,20,9,34459)
 CheckOffset(struct utmp,__unused,364,9,34459)
+#elif __s390x__
+CheckTypeSize(struct utmp,0, 10281, 12)
+Msg("Missing member data for utmp on S390X\n");
+CheckOffset(struct utmp,ut_type,0,12,34447)
+CheckOffset(struct utmp,ut_pid,0,12,34448)
+CheckOffset(struct utmp,ut_line,0,12,34449)
+CheckOffset(struct utmp,ut_id,0,12,34450)
+CheckOffset(struct utmp,ut_user,0,12,34451)
+CheckOffset(struct utmp,ut_host,0,12,34452)
+CheckOffset(struct utmp,ut_exit,0,12,34455)
+CheckOffset(struct utmp,ut_session,0,12,34456)
+CheckOffset(struct utmp,ut_tv,0,12,34457)
+CheckOffset(struct utmp,ut_addr_v6,0,12,34458)
+CheckOffset(struct utmp,__unused,0,12,34459)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10281,0);
 Msg("Find size of utmp (10281)\n");
