@@ -9,17 +9,16 @@ lsbarchk \- check LSB conformance of static archive
 .RB [ \-M
 .IR modulename ]
 .RB [ \-L
-.IR pathtolib ]...
-.IR libname ...
+.IR pathtolib "] ..."
+.I libname
 .SH DESCRIPTION
 .PP
-Measure an application executable's conformance to the Linux Standard
-Base (LSB) specification. The object format of the application is
-checked, as is the list of shared libraries used by the application,
-and the list of functions and global data used by the
-application. Warnings are produced for anything that is referenced
-but not contained in the LSB specification. lsbarchk's view
-of valid libraries and interfaces can be expanded.
+Measure a static archive's suitability for inclusion in an LSB
+conforming binary.  Checks if any unresolved external references
+are to interfaces which are not part of the LSB specification.
+Since some unresolved external references may be intentional,
+.I lsbarchk
+can be instructed to look at additional libraries for such references.
 .TP
 \fB\-o \fIoutputfile\fR
 Write the journal file (see below) to \fIoutputfile\fR
@@ -32,36 +31,47 @@ Check the symbols found in all modules.
 Check only the symbols found in module \fImodulename\fR.
 .TP
 \fB\-L \fInameoflib\fR
-Specify the full pathname of a shared library which is part of the application.
-This option can be specified as many times as needed, and will prevent lsbarchk
-from complaining about symbols which are provided in those shared
-libraries. The order of libraries specified this way is significant:
-since lsbarchk does not actually run the application, it cannot deduce the
-library dependency graph.
+Specify the full pathname of a library which will be part of the application.
+This option can be specified as many times as needed, and will prevent 
+.I lsbarchk
+from complaining about symbols which are provided in those libraries.
+The order of libraries specified this way is significant.
+Note that by using -L, you are predicting libraries which will be
+specified at link time; if 
+.I lsbarchk
+is thus convinced not to report on certain issues,
+and then the libraries are NOT used at link time,
+IR lsbarchk 's
+answers are not very useful!
 .PP
-A journal file is created named journal.archk.\fIappname\fR, 
-where \fIappname\fR is the first binary specified. It contains a record of
-the test results in a format that can be submitted for LSB Certification.
+A journal file is created named 
+.BI journal.archk. libname ,
+where 
+.I libname
+is the library specified on the command line. It contains a record of
+the test results in a format that can be processed by the same tools
+used for LSB Certification (e.g. 
+.IR tjreport ).
 You must have write access to the current working directory
-in order to run lsbarchk successfully, or use the \fI-o\fR option to
+in order to run 
+.I lsbarchk
+successfully, or use the \fI-o\fR option to
 specify an alternate location for the journal.
-.PP
-The lsbarchk program cannot detect all conformance problems.  In particular,
-it is a static test and does not actually run the application.  Lsbarchk
-will not find any behaviors which show themselves only at run\-time
-(for example, anything involving the File Hierarchy Standard, or
-constants and other such items which are found in header files). Lsbarchk
-will warn that it cannot determine the validity of a call to \fIioctl\fR.
-The dynamic checker should be used to test run\-time behavior.
 .SH "NOTES"
-lsbarchk is intended to be used on applications compiled in LSB mode.
-When used as an analysis tool on native applications, it will likely
-report failures, such as symbols with the wrong symbol version, which
-will vanish when the application is compiled correctly.
+.I lsbarchk 
+is a predictive tool.  It can identify some problems which are
+certain to be issues, but depending on how the final binary is
+constructed, may miss others. 
+.I lsbappchk
+should always be run on the final binary.
 .SH "AUTHORS"
 The contributors to the Linux Standard Base.
 .SH "REPORTING BUGS"
-Report bugs to <lsb-test@linuxbase.org>.
+If you obtained this checker from the LSB ftp site,
+report bugs at http://bugs.linuxbase.org or email to
+<lsb-test@freestandards.org>.  If you obtained this
+from your distribution, report bugs back to the
+distribution in the normal way.
 .SH "SEE ALSO"
 Linux Standard Base specification and other documents at
 http://www.linuxbase.org/
