@@ -5085,6 +5085,9 @@ struct versym libc_so_6_1[] = {
 #if __powerpc__ && !__powerpc64__
 	{"gets","GLIBC_2.0"},
 #endif
+#if __s390__ && !__s390x__
+	{"gets","GLIBC_2.0"},
+#endif
 #if __s390x__
 	{"gets","GLIBC_2.2"},
 #endif
@@ -12157,7 +12160,7 @@ struct versym libc_so_6_1[] = {
 	{"tdelete","GLIBC_2.2.5"},
 #endif
 #if __s390__ && !__s390x__
-	{"tdelete","GLIBC_2.2"},
+	{"tdelete","GLIBC_2.0"},
 #endif
 #if __s390x__
 	{"tdelete","GLIBC_2.2"},
