@@ -161,7 +161,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 				printf("%p (expected).\n", fptr2ptr(vtvirtfuncs[j]));
 			}
 
-			if ( !dlinfo.dli_sname) {
+			if ( !dlinfo.dli_sname & !libchk_debug&LIBCHK_DEBUG_CXXHUSH) {
 					printf("Did not find symbol name for Virtual table entry ");
 					printf("[%d] expecting %s\n",
 									j, classp->vtable->virtfuncs[j] );

@@ -5,6 +5,7 @@
 
 #define LIBCHK_DEBUG_NEWVERS		0x0001
 #define LIBCHK_DEBUG_CLASSDETAILS	0x0002
+#define LIBCHK_DEBUG_CXXHUSH		0x0004
 
 extern int libchk_debug;
 
