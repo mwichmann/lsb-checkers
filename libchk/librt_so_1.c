@@ -23,4 +23,7 @@ struct versym librt_so_1[] = {
 	{"lio_listio64","GLIBC_2.1"},
 	{"shm_open","GLIBC_2.2"},
 	{"shm_unlink","GLIBC_2.2"},
+	{"timer_create",""},
+	{"timer_delete",""},
+	{"timer_gettime",""},
 	{0,0}};
