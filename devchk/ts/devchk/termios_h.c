@@ -1605,7 +1605,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef NOFLSH
-	CompareConstant(NOFLSH,-2147483648,1895,architecture)
+	CompareConstant(NOFLSH,0x80000000,1895,architecture)
 #else
 Msg( "Error: Constant not found: NOFLSH\n");
 cnt++;
