@@ -83,7 +83,6 @@ OBJS = hdrchk.o \
 	sys_wait_h.o \
 	syslog_h.o \
 	tar_h.o \
-	term_h.o \
 	termios_h.o \
 	time_h.o \
 	ucontext_h.o \
