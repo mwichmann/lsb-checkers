@@ -7,7 +7,7 @@ CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBC
 all:: cmdchk cmdlist
 
 cmdchk: $(OBJS) ../tetj/libtetj.a
-	cc $(CFLAGS) -o cmdchk $(OBJS) ../tetj/libtetj.a
+	$(CC) $(CFLAGS) -o cmdchk $(OBJS) ../tetj/libtetj.a
 
 cmds.c:
 	./mkcmdlist
