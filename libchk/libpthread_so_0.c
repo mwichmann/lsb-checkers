@@ -468,19 +468,19 @@ struct versym libpthread_so_0[] = {
 #if defined(__powerpc__)
 	{"pthread_rwlock_rdlock","GLIBC_2.1"},
 #endif
-#if defined(__ia64__)
+#if defined(__i386__)
 	{"pthread_rwlock_timedrdlock","GLIBC_2.2"},
 #endif
-#if defined(__i386__)
+#if defined(__ia64__)
 	{"pthread_rwlock_timedrdlock","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
 	{"pthread_rwlock_timedrdlock","GLIBC_2.2"},
 #endif
-#if defined(__ia64__)
+#if defined(__i386__)
 	{"pthread_rwlock_timedwrlock","GLIBC_2.2"},
 #endif
-#if defined(__i386__)
+#if defined(__ia64__)
 	{"pthread_rwlock_timedwrlock","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
