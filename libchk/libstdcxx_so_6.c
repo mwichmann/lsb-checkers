@@ -19567,6 +19567,9 @@ const char *Si_vtable_name_1 [] = {
 #if __s390x__
 	"_ZTv0_n24_NSiD1Ev",
 #endif
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSiD1Ev",
+#endif
 #if __ia64__
 	"_ZTv0_n24_NSiD0Ev",
 #endif
