@@ -34,6 +34,18 @@ Msg( "Warning: Constant not found: RTLD_LAZY\n");
 Msg( "Warning: Constant not found: RTLD_NOW\n");
 #endif
 
+#ifdef RTLD_GLOBAL
+	CompareConstant(RTLD_GLOBAL,0x00100)
+#else
+Msg( "Warning: Constant not found: RTLD_GLOBAL\n");
+#endif
+
+#ifdef RTLD_LOCAL
+	CompareConstant(RTLD_LOCAL,0)
+#else
+Msg( "Warning: Constant not found: RTLD_LOCAL\n");
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

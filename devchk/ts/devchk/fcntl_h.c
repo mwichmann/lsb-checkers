@@ -94,6 +94,90 @@ Msg( "Warning: Constant not found: O_ACCMODE\n");
 Msg( "Warning: Constant not found: O_ASYNC\n");
 #endif
 
+#ifdef F_DUPFD
+	CompareConstant(F_DUPFD,0)
+#else
+Msg( "Warning: Constant not found: F_DUPFD\n");
+#endif
+
+#ifdef F_GETFD
+	CompareConstant(F_GETFD,1)
+#else
+Msg( "Warning: Constant not found: F_GETFD\n");
+#endif
+
+#ifdef F_SETFD
+	CompareConstant(F_SETFD,2)
+#else
+Msg( "Warning: Constant not found: F_SETFD\n");
+#endif
+
+#ifdef F_GETFL
+	CompareConstant(F_GETFL,3)
+#else
+Msg( "Warning: Constant not found: F_GETFL\n");
+#endif
+
+#ifdef F_SETFL
+	CompareConstant(F_SETFL,4)
+#else
+Msg( "Warning: Constant not found: F_SETFL\n");
+#endif
+
+#ifdef F_GETLK
+	CompareConstant(F_GETLK,5)
+#else
+Msg( "Warning: Constant not found: F_GETLK\n");
+#endif
+
+#ifdef F_SETLK
+	CompareConstant(F_SETLK,6)
+#else
+Msg( "Warning: Constant not found: F_SETLK\n");
+#endif
+
+#ifdef F_SETLKW
+	CompareConstant(F_SETLKW,7)
+#else
+Msg( "Warning: Constant not found: F_SETLKW\n");
+#endif
+
+#ifdef F_SETOWN
+	CompareConstant(F_SETOWN,8)
+#else
+Msg( "Warning: Constant not found: F_SETOWN\n");
+#endif
+
+#ifdef F_GETOWN
+	CompareConstant(F_GETOWN,9)
+#else
+Msg( "Warning: Constant not found: F_GETOWN\n");
+#endif
+
+#ifdef FD_CLOEXEC
+	CompareConstant(FD_CLOEXEC,1)
+#else
+Msg( "Warning: Constant not found: FD_CLOEXEC\n");
+#endif
+
+#ifdef F_RDLCK
+	CompareConstant(F_RDLCK,0)
+#else
+Msg( "Warning: Constant not found: F_RDLCK\n");
+#endif
+
+#ifdef F_WRLCK
+	CompareConstant(F_WRLCK,1)
+#else
+Msg( "Warning: Constant not found: F_WRLCK\n");
+#endif
+
+#ifdef F_UNLCK
+	CompareConstant(F_UNLCK,2)
+#else
+Msg( "Warning: Constant not found: F_UNLCK\n");
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
