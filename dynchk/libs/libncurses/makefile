@@ -2,7 +2,7 @@ HAND_FUNCS= \
 
 include gen.mk
 
-# CC=lsbcc
+CC=lsbcc
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 

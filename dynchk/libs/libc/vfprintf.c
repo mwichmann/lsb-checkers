@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #undef vfprintf
 static int(*funcptr) (FILE * , const char * , va_list ) = 0;
 

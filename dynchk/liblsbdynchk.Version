@@ -138,7 +138,6 @@ GLIBC_2.0 {
   ecvt;
   encrypt;
   endgrent;
-  endnetent;
   endprotoent;
   endpwent;
   endservent;
@@ -221,7 +220,6 @@ GLIBC_2.0 {
   getchar;
   getchar_unlocked;
   getcwd;
-  getdomainname;
   getegid;
   getenv;
   geteuid;
@@ -238,7 +236,6 @@ GLIBC_2.0 {
   gethostname;
   getitimer;
   getlogin;
-  getnetbyaddr;
   getopt;
   getopt_long;
   getopt_long_only;
@@ -430,9 +427,15 @@ GLIBC_2.0 {
   psignal;
   pthread_attr_destroy;
   pthread_attr_getdetachstate;
+  pthread_attr_getinheritsched;
   pthread_attr_getschedparam;
+  pthread_attr_getschedpolicy;
+  pthread_attr_getscope;
   pthread_attr_setdetachstate;
+  pthread_attr_setinheritsched;
   pthread_attr_setschedparam;
+  pthread_attr_setschedpolicy;
+  pthread_attr_setscope;
   pthread_cancel;
   pthread_cond_broadcast;
   pthread_cond_destroy;
@@ -446,6 +449,7 @@ GLIBC_2.0 {
   pthread_detach;
   pthread_equal;
   pthread_exit;
+  pthread_getschedparam;
   pthread_getspecific;
   pthread_join;
   pthread_key_create;
@@ -462,6 +466,7 @@ GLIBC_2.0 {
   pthread_self;
   pthread_setcancelstate;
   pthread_setcanceltype;
+  pthread_setschedparam;
   pthread_setspecific;
   pthread_sigmask;
   pthread_testcancel;
@@ -477,7 +482,6 @@ GLIBC_2.0 {
   rand;
   rand_r;
   random;
-  random_r;
   read;
   readdir;
   readlink;
@@ -537,13 +541,11 @@ GLIBC_2.0 {
   setgid;
   setgrent;
   setgroups;
-  sethostid;
   sethostname;
   setitimer;
   setkey;
   setlocale;
   setlogmask;
-  setnetent;
   setpgid;
   setpgrp;
   setpriority;
@@ -567,11 +569,9 @@ GLIBC_2.0 {
   sigaddset;
   sigaltstack;
   sigandset;
-  sigblock;
   sigdelset;
   sigemptyset;
   sigfillset;
-  siggetmask;
   siginterrupt;
   sigisemptyset;
   sigismember;
@@ -585,7 +585,6 @@ GLIBC_2.0 {
   sigpending;
   sigprocmask;
   sigreturn;
-  sigstack;
   sigsuspend;
   sigwait;
   sin;
@@ -620,7 +619,6 @@ GLIBC_2.0 {
   strerror;
   strerror_r;
   strfmon;
-  strfry;
   strftime;
   strlen;
   strncasecmp;
@@ -717,7 +715,7 @@ GLIBC_2.0 {
   vsnprintf;
   vsprintf;
   wait;
-  wait3;
+  wait4;
   waitpid;
   wcpcpy;
   wcpncpy;
@@ -887,6 +885,17 @@ GLIBC_2.1 {
   fdimf;
   fdiml;
   fdopen;
+  feclearexcept;
+  fegetenv;
+  fegetexceptflag;
+  fegetround;
+  feholdexcept;
+  feraiseexcept;
+  fesetenv;
+  fesetexceptflag;
+  fesetround;
+  fetestexcept;
+  feupdateenv;
   fgetpos64;
   fma;
   fmaf;
@@ -1013,7 +1022,6 @@ GLIBC_2.1 {
   strcasestr;
   strtoimax;
   strtoumax;
-  strverscmp;
   swapcontext;
   tcgetsid;
   tgamma;
@@ -1041,6 +1049,7 @@ GLIBC_2.2.3 {
   fnmatch;
 };
 GLIBC_2.2 {
+  __fpending;
   __fxstat64;
   __lxstat64;
   __xstat64;

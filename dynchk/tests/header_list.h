@@ -5,6 +5,7 @@
 #include <dirent.h>
 #include <dlfcn.h>
 #include <fcntl.h>
+#include <fenv.h>
 #include <ftw.h>
 #include <getopt.h>
 #include <glob.h>
