@@ -2,6 +2,12 @@
 #include "elfchk.h"
 struct versym libpthread_so_0[] = {
 #if __i386__
+	{"_pthread_cleanup_pop","GLIBC_2.0"},
+#endif
+#if __i386__
+	{"_pthread_cleanup_push","GLIBC_2.0"},
+#endif
+#if __i386__
 	{"pthread_atfork","GLIBC_2.0"},
 #endif
 #if __ia64__
