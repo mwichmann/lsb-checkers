@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <sys/types.h>
+#include "../libs/lsb_funcs.h"
 
 void validate_filemode(const mode_t arg, const char *name)
 {
