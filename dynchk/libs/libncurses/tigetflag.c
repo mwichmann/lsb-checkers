@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *) = 0;
+#undef tigetflag
+static int(*funcptr) (const char * ) = 0;
 
-int tigetflag(char * arg0)
+int tigetflag (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tigetflag");
@@ -12,7 +13,7 @@ int tigetflag(char * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_tigetflag(char * arg0)
+int lsb_tigetflag (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tigetflag");

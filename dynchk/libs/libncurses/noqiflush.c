@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef noqiflush
+static void(*funcptr) () = 0;
 
-void noqiflush()
+void noqiflush ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "noqiflush");
 	funcptr();
 }
 
-void lsb_noqiflush()
+void lsb_noqiflush ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "noqiflush");

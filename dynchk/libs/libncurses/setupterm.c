@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, int, int *) = 0;
+#undef setupterm
+static int(*funcptr) (const char * , int , int * ) = 0;
 
-int setupterm(char * arg0, int arg1, int * arg2)
+int setupterm (const char * arg0 , int arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setupterm");
@@ -14,7 +15,7 @@ int setupterm(char * arg0, int arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_setupterm(char * arg0, int arg1, int * arg2)
+int lsb_setupterm (const char * arg0 , int arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setupterm");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef doupdate
+static int(*funcptr) () = 0;
 
-int doupdate()
+int doupdate ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "doupdate");
 	return funcptr();
 }
 
-int lsb_doupdate()
+int lsb_doupdate ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "doupdate");

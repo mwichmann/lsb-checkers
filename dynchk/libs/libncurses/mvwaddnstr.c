@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int, int, const char *, int) = 0;
+#include <curses.h>
+#undef mvwaddnstr
+static int(*funcptr) (WINDOW * , int , int , const char * , int ) = 0;
 
-int mvwaddnstr(WINDOW * arg0, int arg1, int arg2, const char * arg3, int arg4)
+int mvwaddnstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwaddnstr");
@@ -16,7 +18,7 @@ int mvwaddnstr(WINDOW * arg0, int arg1, int arg2, const char * arg3, int arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_mvwaddnstr(WINDOW * arg0, int arg1, int arg2, const char * arg3, int arg4)
+int lsb_mvwaddnstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwaddnstr");

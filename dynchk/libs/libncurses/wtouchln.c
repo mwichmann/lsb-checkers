@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int, int, int) = 0;
+#include <curses.h>
+#undef wtouchln
+static int(*funcptr) (WINDOW * , int , int , int ) = 0;
 
-int wtouchln(WINDOW * arg0, int arg1, int arg2, int arg3)
+int wtouchln (WINDOW * arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wtouchln");
@@ -15,7 +17,7 @@ int wtouchln(WINDOW * arg0, int arg1, int arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_wtouchln(WINDOW * arg0, int arg1, int arg2, int arg3)
+int lsb_wtouchln (WINDOW * arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wtouchln");

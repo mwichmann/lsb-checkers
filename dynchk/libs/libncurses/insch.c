@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(chtype) = 0;
+#undef insch
+static int(*funcptr) (chtype ) = 0;
 
-int insch(chtype arg0)
+int insch (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insch");
@@ -13,7 +14,7 @@ int insch(chtype arg0)
 	return funcptr(arg0);
 }
 
-int lsb_insch(chtype arg0)
+int lsb_insch (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insch");

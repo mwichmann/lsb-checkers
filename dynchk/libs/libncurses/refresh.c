@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef refresh
+static int(*funcptr) () = 0;
 
-int refresh()
+int refresh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "refresh");
 	return funcptr();
 }
 
-int lsb_refresh()
+int lsb_refresh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "refresh");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static WINDOW *(*funcptr)(FILE *) = 0;
+#undef getwin
+static WINDOW *(*funcptr) (FILE * ) = 0;
 
-WINDOW * getwin(FILE * arg0)
+WINDOW * getwin (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwin");
@@ -13,7 +14,7 @@ WINDOW * getwin(FILE * arg0)
 	return funcptr(arg0);
 }
 
-WINDOW * lsb_getwin(FILE * arg0)
+WINDOW * lsb_getwin (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwin");

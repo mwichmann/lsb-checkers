@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef wnoutrefresh
+static int(*funcptr) (WINDOW * ) = 0;
 
-int wnoutrefresh(WINDOW * arg0)
+int wnoutrefresh (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wnoutrefresh");
@@ -12,7 +14,7 @@ int wnoutrefresh(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_wnoutrefresh(WINDOW * arg0)
+int lsb_wnoutrefresh (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wnoutrefresh");

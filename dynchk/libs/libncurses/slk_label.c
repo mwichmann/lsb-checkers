@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(int) = 0;
+#undef slk_label
+static char *(*funcptr) (int ) = 0;
 
-char * slk_label(int arg0)
+char * slk_label (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_label");
@@ -12,7 +13,7 @@ char * slk_label(int arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_slk_label(int arg0)
+char * lsb_slk_label (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_label");

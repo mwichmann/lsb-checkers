@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *) = 0;
+#undef getstr
+static int(*funcptr) (char * ) = 0;
 
-int getstr(char * arg0)
+int getstr (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getstr");
@@ -12,7 +13,7 @@ int getstr(char * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_getstr(char * arg0)
+int lsb_getstr (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getstr");

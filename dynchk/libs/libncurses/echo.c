@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef echo
+static int(*funcptr) () = 0;
 
-int echo()
+int echo ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "echo");
 	return funcptr();
 }
 
-int lsb_echo()
+int lsb_echo ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "echo");

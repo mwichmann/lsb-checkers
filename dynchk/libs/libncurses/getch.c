@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef getch
+static int(*funcptr) () = 0;
 
-int getch()
+int getch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getch");
 	return funcptr();
 }
 
-int lsb_getch()
+int lsb_getch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getch");

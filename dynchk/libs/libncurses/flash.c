@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef flash
+static int(*funcptr) () = 0;
 
-int flash()
+int flash ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flash");
 	return funcptr();
 }
 
-int lsb_flash()
+int lsb_flash ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flash");

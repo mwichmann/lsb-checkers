@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int, int) = 0;
+#include <curses.h>
+#undef mvwgetch
+static int(*funcptr) (WINDOW * , int , int ) = 0;
 
-int mvwgetch(WINDOW * arg0, int arg1, int arg2)
+int mvwgetch (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwgetch");
@@ -14,7 +16,7 @@ int mvwgetch(WINDOW * arg0, int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mvwgetch(WINDOW * arg0, int arg1, int arg2)
+int lsb_mvwgetch (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwgetch");

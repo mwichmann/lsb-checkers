@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(int, int, chtype) = 0;
+#undef mvinsch
+static int(*funcptr) (int , int , chtype ) = 0;
 
-int mvinsch(int arg0, int arg1, chtype arg2)
+int mvinsch (int arg0 , int arg1 , chtype arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinsch");
@@ -15,7 +16,7 @@ int mvinsch(int arg0, int arg1, chtype arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mvinsch(int arg0, int arg1, chtype arg2)
+int lsb_mvinsch (int arg0 , int arg1 , chtype arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinsch");

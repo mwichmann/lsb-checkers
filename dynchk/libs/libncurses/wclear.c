@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef wclear
+static int(*funcptr) (WINDOW * ) = 0;
 
-int wclear(WINDOW * arg0)
+int wclear (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclear");
@@ -12,7 +14,7 @@ int wclear(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_wclear(WINDOW * arg0)
+int lsb_wclear (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclear");

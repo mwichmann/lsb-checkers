@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static chtype(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef getbkgd
+static chtype(*funcptr) (WINDOW * ) = 0;
 
-chtype getbkgd(WINDOW * arg0)
+chtype getbkgd (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getbkgd");
@@ -12,7 +14,7 @@ chtype getbkgd(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-chtype lsb_getbkgd(WINDOW * arg0)
+chtype lsb_getbkgd (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getbkgd");

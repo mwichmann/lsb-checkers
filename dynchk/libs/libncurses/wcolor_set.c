@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, short, void *) = 0;
+#include <curses.h>
+#undef wcolor_set
+static int(*funcptr) (WINDOW * , short , void * ) = 0;
 
-int wcolor_set(WINDOW * arg0, short arg1, void * arg2)
+int wcolor_set (WINDOW * arg0 , short arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcolor_set");
@@ -14,7 +16,7 @@ int wcolor_set(WINDOW * arg0, short arg1, void * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_wcolor_set(WINDOW * arg0, short arg1, void * arg2)
+int lsb_wcolor_set (WINDOW * arg0 , short arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcolor_set");

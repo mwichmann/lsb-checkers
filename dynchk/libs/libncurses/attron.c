@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef attron
+static int(*funcptr) (int ) = 0;
 
-int attron(int arg0)
+int attron (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attron");
@@ -12,7 +13,7 @@ int attron(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_attron(int arg0)
+int lsb_attron (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attron");

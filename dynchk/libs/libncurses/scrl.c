@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef scrl
+static int(*funcptr) (int ) = 0;
 
-int scrl(int arg0)
+int scrl (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrl");
@@ -12,7 +13,7 @@ int scrl(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_scrl(int arg0)
+int lsb_scrl (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrl");

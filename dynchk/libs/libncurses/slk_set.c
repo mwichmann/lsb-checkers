@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, const char *, int) = 0;
+#undef slk_set
+static int(*funcptr) (int , const char * , int ) = 0;
 
-int slk_set(int arg0, const char * arg1, int arg2)
+int slk_set (int arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_set");
@@ -14,7 +15,7 @@ int slk_set(int arg0, const char * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_slk_set(int arg0, const char * arg1, int arg2)
+int lsb_slk_set (int arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_set");

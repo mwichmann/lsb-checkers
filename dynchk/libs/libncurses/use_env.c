@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static void(*funcptr)(bool) = 0;
+#undef use_env
+static void(*funcptr) (bool ) = 0;
 
-void use_env(bool arg0)
+void use_env (bool arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "use_env");
@@ -13,7 +14,7 @@ void use_env(bool arg0)
 	funcptr(arg0);
 }
 
-void lsb_use_env(bool arg0)
+void lsb_use_env (bool arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "use_env");

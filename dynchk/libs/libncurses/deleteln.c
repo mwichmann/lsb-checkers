@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef deleteln
+static int(*funcptr) () = 0;
 
-int deleteln()
+int deleteln ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deleteln");
 	return funcptr();
 }
 
-int lsb_deleteln()
+int lsb_deleteln ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deleteln");

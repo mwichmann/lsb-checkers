@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef winsertln
+static int(*funcptr) (WINDOW * ) = 0;
 
-int winsertln(WINDOW * arg0)
+int winsertln (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsertln");
@@ -12,7 +14,7 @@ int winsertln(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_winsertln(WINDOW * arg0)
+int lsb_winsertln (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsertln");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static void(*funcptr)(chtype) = 0;
+#undef bkgdset
+static void(*funcptr) (chtype ) = 0;
 
-void bkgdset(chtype arg0)
+void bkgdset (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bkgdset");
@@ -13,7 +14,7 @@ void bkgdset(chtype arg0)
 	funcptr(arg0);
 }
 
-void lsb_bkgdset(chtype arg0)
+void lsb_bkgdset (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bkgdset");

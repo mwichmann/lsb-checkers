@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(WINDOW *, bool) = 0;
+#undef keypad
+static int(*funcptr) (WINDOW * , bool ) = 0;
 
-int keypad(WINDOW * arg0, bool arg1)
+int keypad (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keypad");
@@ -14,7 +15,7 @@ int keypad(WINDOW * arg0, bool arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_keypad(WINDOW * arg0, bool arg1)
+int lsb_keypad (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keypad");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(TERMINAL *) = 0;
+#include <term.h>
+#undef del_curterm
+static int(*funcptr) (TERMINAL * ) = 0;
 
-int del_curterm(TERMINAL * arg0)
+int del_curterm (TERMINAL * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "del_curterm");
@@ -12,7 +14,7 @@ int del_curterm(TERMINAL * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_del_curterm(TERMINAL * arg0)
+int lsb_del_curterm (TERMINAL * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "del_curterm");

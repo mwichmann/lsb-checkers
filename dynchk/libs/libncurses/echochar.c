@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const chtype) = 0;
+#include <curses.h>
+#undef echochar
+static int(*funcptr) (const chtype ) = 0;
 
-int echochar(const chtype arg0)
+int echochar (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "echochar");
@@ -12,7 +14,7 @@ int echochar(const chtype arg0)
 	return funcptr(arg0);
 }
 
-int lsb_echochar(const chtype arg0)
+int lsb_echochar (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "echochar");

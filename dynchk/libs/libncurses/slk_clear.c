@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef slk_clear
+static int(*funcptr) () = 0;
 
-int slk_clear()
+int slk_clear ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_clear");
 	return funcptr();
 }
 
-int lsb_slk_clear()
+int lsb_slk_clear ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_clear");

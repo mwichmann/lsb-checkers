@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef wsyncdown
+static void(*funcptr) (WINDOW * ) = 0;
 
-void wsyncdown(WINDOW * arg0)
+void wsyncdown (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsyncdown");
@@ -12,7 +14,7 @@ void wsyncdown(WINDOW * arg0)
 	funcptr(arg0);
 }
 
-void lsb_wsyncdown(WINDOW * arg0)
+void lsb_wsyncdown (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsyncdown");

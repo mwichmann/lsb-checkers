@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(char *, int, int) = 0;
+#undef tgoto
+static char *(*funcptr) (const char * , int , int ) = 0;
 
-char * tgoto(char * arg0, int arg1, int arg2)
+char * tgoto (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgoto");
@@ -14,7 +15,7 @@ char * tgoto(char * arg0, int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_tgoto(char * arg0, int arg1, int arg2)
+char * lsb_tgoto (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgoto");

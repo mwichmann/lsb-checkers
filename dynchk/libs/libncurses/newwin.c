@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static WINDOW *(*funcptr)(int, int, int, int) = 0;
+#undef newwin
+static WINDOW *(*funcptr) (int , int , int , int ) = 0;
 
-WINDOW * newwin(int arg0, int arg1, int arg2, int arg3)
+WINDOW * newwin (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newwin");
@@ -15,7 +16,7 @@ WINDOW * newwin(int arg0, int arg1, int arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-WINDOW * lsb_newwin(int arg0, int arg1, int arg2, int arg3)
+WINDOW * lsb_newwin (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newwin");

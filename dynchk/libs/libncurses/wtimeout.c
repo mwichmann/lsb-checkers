@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(WINDOW *, int) = 0;
+#include <curses.h>
+#undef wtimeout
+static void(*funcptr) (WINDOW * , int ) = 0;
 
-void wtimeout(WINDOW * arg0, int arg1)
+void wtimeout (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wtimeout");
@@ -13,7 +15,7 @@ void wtimeout(WINDOW * arg0, int arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_wtimeout(WINDOW * arg0, int arg1)
+void lsb_wtimeout (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wtimeout");

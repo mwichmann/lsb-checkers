@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef def_prog_mode
+static int(*funcptr) () = 0;
 
-int def_prog_mode()
+int def_prog_mode ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "def_prog_mode");
 	return funcptr();
 }
 
-int lsb_def_prog_mode()
+int lsb_def_prog_mode ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "def_prog_mode");

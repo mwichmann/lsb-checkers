@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(chtype) = 0;
+#undef vidattr
+static int(*funcptr) (chtype ) = 0;
 
-int vidattr(chtype arg0)
+int vidattr (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidattr");
@@ -13,7 +14,7 @@ int vidattr(chtype arg0)
 	return funcptr(arg0);
 }
 
-int lsb_vidattr(chtype arg0)
+int lsb_vidattr (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidattr");

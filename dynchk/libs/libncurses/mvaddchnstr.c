@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, const chtype *, int) = 0;
+#include <curses.h>
+#undef mvaddchnstr
+static int(*funcptr) (int , int , const chtype * , int ) = 0;
 
-int mvaddchnstr(int arg0, int arg1, const chtype * arg2, int arg3)
+int mvaddchnstr (int arg0 , int arg1 , const chtype * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvaddchnstr");
@@ -15,7 +17,7 @@ int mvaddchnstr(int arg0, int arg1, const chtype * arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_mvaddchnstr(int arg0, int arg1, const chtype * arg2, int arg3)
+int lsb_mvaddchnstr (int arg0 , int arg1 , const chtype * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvaddchnstr");

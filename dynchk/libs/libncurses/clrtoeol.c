@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef clrtoeol
+static int(*funcptr) () = 0;
 
-int clrtoeol()
+int clrtoeol ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clrtoeol");
 	return funcptr();
 }
 
-int lsb_clrtoeol()
+int lsb_clrtoeol ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clrtoeol");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(WINDOW *, bool) = 0;
+#undef scrollok
+static int(*funcptr) (WINDOW * , bool ) = 0;
 
-int scrollok(WINDOW * arg0, bool arg1)
+int scrollok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrollok");
@@ -14,7 +15,7 @@ int scrollok(WINDOW * arg0, bool arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_scrollok(WINDOW * arg0, bool arg1)
+int lsb_scrollok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrollok");

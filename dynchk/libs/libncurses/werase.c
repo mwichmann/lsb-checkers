@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef werase
+static int(*funcptr) (WINDOW * ) = 0;
 
-int werase(WINDOW * arg0)
+int werase (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "werase");
@@ -12,7 +14,7 @@ int werase(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_werase(WINDOW * arg0)
+int lsb_werase (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "werase");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef beep
+static int(*funcptr) () = 0;
 
-int beep()
+int beep ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "beep");
 	return funcptr();
 }
 
-int lsb_beep()
+int lsb_beep ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "beep");

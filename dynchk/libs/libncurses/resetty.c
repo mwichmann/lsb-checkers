@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef resetty
+static int(*funcptr) () = 0;
 
-int resetty()
+int resetty ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "resetty");
 	return funcptr();
 }
 
-int lsb_resetty()
+int lsb_resetty ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "resetty");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(int, attr_t, short, const void *) = 0;
+#undef chgat
+static int(*funcptr) (int , attr_t , short , const void * ) = 0;
 
-int chgat(int arg0, attr_t arg1, short arg2, const void * arg3)
+int chgat (int arg0 , attr_t arg1 , short arg2 , const void * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chgat");
@@ -16,7 +17,7 @@ int chgat(int arg0, attr_t arg1, short arg2, const void * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_chgat(int arg0, attr_t arg1, short arg2, const void * arg3)
+int lsb_chgat (int arg0 , attr_t arg1 , short arg2 , const void * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chgat");

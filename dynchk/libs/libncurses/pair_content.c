@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(short, short *, short *) = 0;
+#undef pair_content
+static int(*funcptr) (short , short * , short * ) = 0;
 
-int pair_content(short arg0, short * arg1, short * arg2)
+int pair_content (short arg0 , short * arg1 , short * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pair_content");
@@ -14,7 +15,7 @@ int pair_content(short arg0, short * arg1, short * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_pair_content(short arg0, short * arg1, short * arg2)
+int lsb_pair_content (short arg0 , short * arg1 , short * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pair_content");

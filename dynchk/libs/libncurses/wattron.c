@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int) = 0;
+#include <curses.h>
+#undef wattron
+static int(*funcptr) (WINDOW * , int ) = 0;
 
-int wattron(WINDOW * arg0, int arg1)
+int wattron (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattron");
@@ -13,7 +15,7 @@ int wattron(WINDOW * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wattron(WINDOW * arg0, int arg1)
+int lsb_wattron (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattron");

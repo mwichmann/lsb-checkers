@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int, int, int, int, int, int) = 0;
+#include <curses.h>
+#undef prefresh
+static int(*funcptr) (WINDOW * , int , int , int , int , int , int ) = 0;
 
-int prefresh(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6)
+int prefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "prefresh");
@@ -18,7 +20,7 @@ int prefresh(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4, int arg5, in
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_prefresh(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6)
+int lsb_prefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "prefresh");

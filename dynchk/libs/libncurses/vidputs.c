@@ -3,10 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-#include <curses.h>
-static int(*funcptr)(chtype, int(*vidputs_int)(int)) = 0;
+#undef vidputs
+static int(*funcptr) (chtype , int(*)(int) ) = 0;
 
-int vidputs(chtype arg0, int(*vidputs_int)(int) arg1)
+int vidputs (chtype arg0 , int(*arg1)(int) )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidputs");
@@ -15,7 +15,7 @@ int vidputs(chtype arg0, int(*vidputs_int)(int) arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_vidputs(chtype arg0, int(*vidputs_int)(int) arg1)
+int lsb_vidputs (chtype arg0 , int(*arg1)(int) )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidputs");

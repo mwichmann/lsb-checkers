@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef clrtobot
+static int(*funcptr) () = 0;
 
-int clrtobot()
+int clrtobot ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clrtobot");
 	return funcptr();
 }
 
-int lsb_clrtobot()
+int lsb_clrtobot ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clrtobot");

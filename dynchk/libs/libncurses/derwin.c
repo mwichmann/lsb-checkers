@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static WINDOW *(*funcptr)(WINDOW *, int, int, int, int) = 0;
+#include <curses.h>
+#undef derwin
+static WINDOW *(*funcptr) (WINDOW * , int , int , int , int ) = 0;
 
-WINDOW * derwin(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4)
+WINDOW * derwin (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "derwin");
@@ -16,7 +18,7 @@ WINDOW * derwin(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-WINDOW * lsb_derwin(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4)
+WINDOW * lsb_derwin (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "derwin");

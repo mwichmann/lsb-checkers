@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef slk_touch
+static int(*funcptr) () = 0;
 
-int slk_touch()
+int slk_touch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_touch");
 	return funcptr();
 }
 
-int lsb_slk_touch()
+int lsb_slk_touch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_touch");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int) = 0;
+#include <curses.h>
+#undef wscrl
+static int(*funcptr) (WINDOW * , int ) = 0;
 
-int wscrl(WINDOW * arg0, int arg1)
+int wscrl (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wscrl");
@@ -13,7 +15,7 @@ int wscrl(WINDOW * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wscrl(WINDOW * arg0, int arg1)
+int lsb_wscrl (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wscrl");

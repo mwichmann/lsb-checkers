@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static void(*funcptr)(WINDOW *, chtype) = 0;
+#undef wbkgdset
+static void(*funcptr) (WINDOW * , chtype ) = 0;
 
-void wbkgdset(WINDOW * arg0, chtype arg1)
+void wbkgdset (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wbkgdset");
@@ -14,7 +15,7 @@ void wbkgdset(WINDOW * arg0, chtype arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_wbkgdset(WINDOW * arg0, chtype arg1)
+void lsb_wbkgdset (WINDOW * arg0 , chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wbkgdset");
