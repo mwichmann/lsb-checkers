@@ -1,6 +1,11 @@
 
 /*
- * Utility macors used by the header tests
+ * Utility macros used by the header tests
+ */
+/*
+ * Note, the SQL statments below are not for normal use. They are present
+ * simply as an aid for the development of the LSB, and will be removed in
+ * the final version of this tool.
  */
 #define CompareConstant(const,value) \
 	cnt++;if( const != value ) {\
@@ -10,10 +15,10 @@
 		Msg("UPDATE Constants SET Cvalue=%d WHERE Cname='" #const "';\n", const); */ \
 		}
 
-#define CheckTypeSize(type,size) \
+#define CheckTypeSize(type,size,tid) \
 	cnt++;if( sizeof(type) != size ) { \
 		Msg("sizeof(" #type ") is %d instead of " #size "\n",sizeof(type)); \
-		Msg("UPDATE Type SET Tsize=%d WHERE Tname='" #type "';\n", sizeof(type)); \
+		Msg("UPDATE ArchType SET ATsize=%d WHERE ATtid=" #tid " AND ATaid=%d;\n", sizeof(type), architecture); \
 	}
 
 #define CheckOffset(str,member,offset) \
@@ -27,3 +32,5 @@
 	} \
 	}
 
+
+extern int architecture;

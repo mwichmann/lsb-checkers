@@ -10,7 +10,7 @@
 int nl_types_h()
 {
 int cnt=0;
-CheckTypeSize(nl_catd,4)
+CheckTypeSize(nl_catd,4,)
 printf("%d tests in nl_types.h\n",cnt);
 return cnt;
 }
