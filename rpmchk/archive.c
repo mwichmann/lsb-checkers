@@ -5,23 +5,28 @@
 #include <zlib.h>
 #include <cpio.h>
 #include "rpmchk.h"
+#include "md5.h"
 #include "tagfuncs.h"
 #include "../tetj/tetj.h"
+
+MD5_CTX	md5ctx;
+unsigned char	fbuf[1024];
 
 void
 checkRpmArchive(RpmFile *file1, struct tetj_handle *journal)
 {
 #define TMP_STRING_SIZE (400)
 char tmp_string[TMP_STRING_SIZE+1];
+unsigned char	md5sum[17],md5str[33],*fmd5=filemd5s;
 gzFile	*zfile;
 RpmArchiveHeader ahdr;
-int	badcpiomagic=0;
 int	startoffset,endoffset;
 int	fileindex=0;
+int	filesizesum=0;
 
 file1->archive=(caddr_t)file1->nexthdr;
 
-fprintf(stderr,"checkRpmArchive() archive=%x\n", file1->archive );
+fprintf(stderr,"checkRpmArchive() archive=%x\n", (int)file1->archive );
 
 /* Check the RpmHeader magic value */
 tetj_tp_count++;
@@ -71,9 +76,10 @@ startoffset=gztell(zfile);
  */
 
 while( !gzeof(zfile) ) {
-	char	*fptr,filename[256]; /* XXX Potential overflow!! */
+	char	*fptr,filename[1024]; /* XXX Potential overflow!! */
 	char	num[9];
-	int	size;
+	int	size,mode,devmaj,devmin;
+	time_t	ftime;
 
 	gzread(zfile, &ahdr, sizeof(ahdr) );
 /*
@@ -81,30 +87,34 @@ while( !gzeof(zfile) ) {
 	printf("Magic: %6.6s\n", ahdr.c_magic );
 	printf("ino: %8.8s\n", ahdr.c_ino );
 	printf("Mode: %8.8s\n", ahdr.c_mode );
+	printf("Rdev: %8.8s,%8.8s\n", ahdr.c_rdevmajor,ahdr.c_rdevminor );
 	printf("mtime: %8.8s\n", ahdr.c_mtime );
 	printf("filesize: %8.8s\n", ahdr.c_filesize );
 	printf("namesize: %8.8s\n", ahdr.c_namesize );
 */
-	if( !(strncmp(ahdr.c_magic,"070707",6) == 0) && !badcpiomagic ) {
+	if( !(strncmp(ahdr.c_magic,"070701",6) == 0) ) {
         	snprintf( tmp_string, TMP_STRING_SIZE,
-    		"checkRpmArchive: Archive record has wrong magic %6.6s instead of 070707",
+    		"checkRpmArchive: Archive record has wrong magic %6.6s instead of 070701",
 		ahdr.c_magic);
         	fprintf(stderr, "%s\n", tmp_string);
         	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 							0, 0, 0, tmp_string);
         	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-		/* For some reason, the cpio format in RPM has a magic of
-			070701 instead of 070707 as is defined for cpio */
-		if( !(strncmp(ahdr.c_magic,"0707",4) == 0) ) {
-			return;
-		}
-		badcpiomagic=1;
 	}
 	/* Read in the filename */
 	memcpy(num,ahdr.c_namesize,8);
 	num[8]=0; /* NULL terminate the namesize */
 	size=strtol(num,NULL,16);
 	gzread(zfile, filename, size );
+
+	/*
+	 * Check for the end of the archive
+	 */
+	if( strcmp(filename,"TRAILER!!!") == 0 ) {
+		/* End of archive */
+		break;
+		}
+
 	/*
 	 * Check/fix padding here - the amount of space used for the header
 	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
@@ -121,15 +131,81 @@ while( !gzeof(zfile) ) {
 	memcpy(num,ahdr.c_filesize,8);
 	num[8]=0;
 	size=strtol(num,NULL,16);
-	gzseek(zfile,size,SEEK_CUR);
 
-	/* Check the file size against the RPMTAG_FILESIZES value */
+	/*
+	 * Check the file size against the RPMTAG_FILESIZES value
+	 */
 
 	/* Directories have no size, but RPMTAG_FILESIZES sez 1024 */
-	if( size && (size != htonl(filesizes[fileindex])) ) {
-		fprintf(stderr,"Filesize (%d) for %s not that same a specified in RPMTAG_FILESIZES (%d)\n", size, filename, htonl(filesizes[fileindex]) );
+	if( size && (size != filesizes[fileindex]) ) {
+		fprintf(stderr,"Filesize (%d) for %s not that same a specified in RPMTAG_FILESIZES (%d)\n", size, filename, filesizes[fileindex] );
 	}
-	fileindex++;
+	filesizesum+=size;
+
+	/*
+	 * Check the file modes against the RPMTAG_FILEMODES value
+	 */
+
+	memcpy(num,ahdr.c_mode,8);
+	num[8]=0;
+	mode=strtol(num,NULL,16);
+
+	if( (mode != filemodes[fileindex]) ) {
+		fprintf(stderr,"Filemode  (%o) for %s not that same a specified in RPMTAG_FILEMODES (%o)\n", mode, filename, filemodes[fileindex] );
+	}
+
+	/*
+	 * Check the file modes against the RPMTAG_FILERDEVS value
+	 */
+
+	memcpy(num,ahdr.c_rdevmajor,8);
+	num[8]=0;
+	devmaj=strtol(num,NULL,16);
+
+	memcpy(num,ahdr.c_rdevminor,8);
+	num[8]=0;
+	devmin=strtol(num,NULL,16);
+
+	if( (makedev(devmaj,devmin) != filedevs[fileindex]) ) {
+		fprintf(stderr,"File rdev (%x) for %s not that same a specified in RPMTAG_FILERDEVS (%x)\n", makedev(devmaj,devmin), filename, filedevs[fileindex] );
+	}
+
+	/*
+	 * Check the file modes against the RPMTAG_FILEMTIMES value
+	 */
+
+	memcpy(num,ahdr.c_mtime,8);
+	num[8]=0;
+	ftime=strtol(num,NULL,16);
+
+	if( (ftime != filetimes[fileindex]) ) {
+		fprintf(stderr,"File time  (%x) for %s not that same a specified in RPMTAG_FILEMTIMES (%x)\n", (unsigned int)ftime, filename, filetimes[fileindex] );
+	}
+
+	/*
+	 * Check the file modes against the RPMTAG_FILEMD5S value
+	 */
+
+	if( size ) {
+		MD5Init(&md5ctx);
+		while ( size>0 ) {
+			gzread(zfile,fbuf,size>1024?1024:size);
+			MD5Update(&md5ctx,fbuf,size>1024?1024:size);
+			size-=1024;
+			}
+		MD5Final(md5sum,&md5ctx);
+		sprintf(md5str,"%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x",
+			md5sum[0], md5sum[1], md5sum[2], md5sum[3],
+			md5sum[4], md5sum[5], md5sum[6], md5sum[7],
+			md5sum[8], md5sum[9], md5sum[10], md5sum[11],
+			md5sum[12], md5sum[13], md5sum[14], md5sum[15] );
+
+		if( strncmp(fmd5,md5str,16) != 0 ) {
+			fprintf(stderr,"File MD5 (%s) for %s does not match value in RPMTAG_FILEMD5S (%s)\n", md5str, filename, fmd5 );
+			}
+	}
+	fmd5+=strlen(fmd5)+1;
+
 
 	/*
 	 * Check/fix padding here - the amount of space used for the file
@@ -144,10 +220,6 @@ while( !gzeof(zfile) ) {
 	//printf("padding %d\n", size);
 	gzseek(zfile,size,SEEK_CUR);
 
-	if( strcmp(filename,"TRAILER!!!") == 0 ) {
-		/* End of archive */
-		break;
-		}
 
 	/* Now, check the filename */
 	if( filename[0] == '.' && filename[1] == '/' )
@@ -155,9 +227,18 @@ while( !gzeof(zfile) ) {
 	else
 		fptr=&filename[0];
 	checkRpmArchiveFilename(fptr, journal);
+
+	fileindex++;
 	}
 
 endoffset=gztell(zfile);
 
 fprintf(stderr,"%d bytes in uncompressed archive\n", endoffset-startoffset);
+fprintf(stderr,"%d bytes in archive files\n", filesizesum);
+
+if( filesizesum != archivesize ) {
+		fprintf(stderr,"Sum of file sizes (%d) does ",filesizesum);
+		fprintf(stderr,"not match the value in RPMTAG_SIZE (%d)\n",
+							archivesize );
+	}
 }

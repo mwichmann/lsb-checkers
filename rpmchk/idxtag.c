@@ -357,7 +357,7 @@ checkRpmIdxSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *jou
 int		htag, htype, hoffset, hcount;
 int		nindex;
 RpmHeader	*hdr;
-unsigned char		*shadata;
+unsigned char	*shadata;
 
 hdr=(RpmHeader *)file1->nexthdr;
 nindex=ntohl(hdr->nindex);
@@ -373,9 +373,10 @@ fprintf(stderr,"checkRpmIdxSHA1HEADER() type=%d offset=%x count=%x\n",
 */
 
 if( shadata != sigdata ) {
-	fprintf(stderr,"Location of SHA1 signature (%x) ", (long)shadata );
+	fprintf(stderr,"Location of SHA1 signature (%x) ",
+						(unsigned int)shadata );
 	fprintf(stderr,"doesn't match location set in HDRSIGNATURES(%x)\n",
-							(long)sigdata);
+						(unsigned int)sigdata);
 	}
 fprintf(stderr,"checkRpmIdxSHA1HEADER() Not yet checking SHA1 contents\n");
 }
@@ -751,7 +752,74 @@ hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 filesizes=(int *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
-	fprintf(stderr,"Filesize: %d\n",htonl(filesizes[i]));
+	filesizes[i]=htonl(filesizes[i]);
+	fprintf(stderr,"Filesize: %d\n",filesizes[i]);
+	}
+}
+
+void
+checkRpmIdxFILEMODES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount,i;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filemodes=(short *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	filemodes[i]=htons(filemodes[i]);
+	fprintf(stderr,"Filemodes: %x\n",filemodes[i]);
+	}
+}
+
+void
+checkRpmIdxFILERDEVS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount,i;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filedevs=(short *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	filedevs[i]=htons(filedevs[i]);
+	fprintf(stderr,"Filedevs: %o\n",filedevs[i]);
+	}
+}
+
+void
+checkRpmIdxFILEMTIMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount,i;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filetimes=(int *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	filetimes[i]=htonl(filetimes[i]);
+	fprintf(stderr,"Filetime: %d\n",filetimes[i]);
+	}
+}
+
+void
+checkRpmIdxFILEMD5S(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filemd5s=(char *)(file1->storeaddr+hoffset);
+name=filemd5s;
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"File MD5: %s\n",name);
+	name+=strlen(name)+1;
 	}
 }
 

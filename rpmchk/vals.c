@@ -24,5 +24,9 @@ int  lsbdepidx=-1;
  */
 unsigned char *sigdata;
 int  archivesize;
-int	*filesizes;
+unsigned int	*filesizes;
+unsigned short	*filemodes;
+unsigned short	*filedevs;
+unsigned int	*filetimes;
+char	*filemd5s;
 int	*filenames;
