@@ -180,6 +180,38 @@ for(i=0;i<numrels;i++)
 	comparerelfield( r_info )
 */
 	}
+#undef comparerelfield
+}
+
+void
+checkRELA(ElfFile *file1, Elf32_Shdr *hdr1 )
+{
+int	i, numrels;
+Elf32_Rela	*rel1;
+
+#ifdef VERBOSE
+fprintf(stderr, "RELA SECTION\n" );
+#endif /* VERBOSE */
+
+numrels=hdr1->sh_size/hdr1->sh_entsize;
+
+rel1=(Elf32_Rela *)((caddr_t)file1->addr+hdr1->sh_offset);
+
+#define comparerelfield( field ) \
+if( rel1[i].field != rel2[i].field ) { \
+	fprintf( stderr, "compareRELA: %s doesn't match\n", #field); \
+	fprintf( stderr, "%8.8x != ", rel1[i].field ); \
+	fprintf( stderr, "%8.8x\n", rel2[i].field ); \
+	}
+
+for(i=0;i<numrels;i++)
+	{
+/*
+	comparerelfield( r_offset )
+	comparerelfield( r_info )
+*/
+	}
+#undef comparerelfield
 }
 
 void
@@ -271,7 +303,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
       }
       if( hdr1->sh_flags != SectionInfo[i].attributes )
       {
-        if( hdr1->sh_flags|SHF_ALLOC != SectionInfo[i].attributes ) 
+        if( (hdr1->sh_flags|SHF_ALLOC) != SectionInfo[i].attributes ) 
         {
           snprintf(tmp_string, TMP_STRING_SIZE,
                    "Section %s: sh_flags is wrong. expecting %x, got %x",
