@@ -1,7 +1,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(void *, size_t) = 0;
+static void *(*funcptr)(void *, size_t) = 0;
 
 void * __libc_realloc(void *, size_t);
 
