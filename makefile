@@ -2,13 +2,13 @@ SUBDIRS=tetj elfchk appchk rpmchk devchk/ts/devchk libchk cmdchk pkgchk
 
 
 all:
-	for d in $(SUBDIRS);do (cd $$d && make all LSBVERSION=$$LSBVERSION);done
+	for d in $(SUBDIRS);do (cd $$d && $(MAKE) all LSBVERSION=$$LSBVERSION);done
 
 install:
-	for d in $(SUBDIRS);do (cd $$d && make install);done
+	for d in $(SUBDIRS);do (cd $$d && $(MAKE) install);done
 
 clean:
-	for d in $(SUBDIRS);do (cd $$d && make clean);done
+	for d in $(SUBDIRS);do (cd $$d && $(MAKE) clean);done
 
 distclean:
-	for d in $(SUBDIRS);do (cd $$d && make distclean);done
+	for d in $(SUBDIRS);do (cd $$d && $(MAKE) distclean);done
