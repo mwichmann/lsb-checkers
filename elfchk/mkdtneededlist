@@ -18,6 +18,7 @@ $select.= "ORDER BY ALrunname ";
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
+print "/* Generated file - Do Not Edit */\n";
 print "char *DtNeeded[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
