@@ -159,38 +159,6 @@ typedef	struct	{
 	RpmHeader	*nexthdr;
 	caddr_t     storeaddr;  /* Start store for the current header */
 	caddr_t     archive;
-#if 0
-	Elf32_Shdr *saddr; /* Start address of the next section of the file */
-	Elf32_Phdr *paddr; /* address of the program header of the file */
-	caddr_t     straddr;  /* Start address of the string table */
-	int	strndx;	   /* index of the string table */
-	int	numph;
-	int	numsh;
-	Elf32_Shdr *dynsymhdr;	/* Dynamic Symbol table header */
-
-	int	numsyms;
-	Elf32_Shdr *symhdr;	/* Symbol table header */
-	Elf32_Sym	*syms; /* Array of symbol entries */
-
-	Elf32_Shdr *dynhdr;	/* Dynamic entries header */
-	Elf32_Dyn	*dyns; /* Array of dynamic entries */
-	int	numdynents;
-
-	Elf32_Shdr *dynshdr;	/* Dynamic string table header */
-
-	Elf32_Shdr *verhdr;	/* Version entries header */
-	Elf32_Half	*vers; /* Array of version entries */
-
-	Elf32_Shdr *verdhdr;	/* Version definition header */
-	Elf32_Verdef	*verd; /* Array of verdef entries */
-	int	numverdefs;
-
-	Elf32_Shdr *vernhdr;	/* Version dependency header */
-	Elf32_Verneed	*vern; /* Array of verneed entries */
-	int	numverneed;
-
-	char	*versionnames[32]; /* arbitrary size, but big enough for now */
-#endif
 	}	RpmFile;
 
 /* RPM Index things */
@@ -207,6 +175,28 @@ extern RpmIdxTagFuncRec SigTags[];
 extern int numSigIdxTags;
 extern RpmIdxTagFuncRec HdrTags[];
 extern int numHdrIdxTags;
+
+/*
+ * Archive format -
+ * really cpio, but it doesn't actually match the cpio definition ?!?!?!
+ */
+
+typedef struct {
+	char	c_magic[6];
+	char	c_ino[8];
+	char	c_mode[8];
+	char	c_uid[8];
+	char	c_gid[8];
+	char	c_nlink[8];
+	char	c_mtime[8];
+	char	c_filesize[8];
+	char	c_devmajor[8];
+	char	c_devminor[8];
+	char	c_rdevmajor[8];
+	char	c_rdevminor[8];
+	char	c_namesize[8];
+	char	c_checksum[8];
+	} RpmArchiveHeader;
 
 /* vals.c */
 extern char *architecture;

@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <zlib.h>
+#include <cpio.h>
 #include "rpmchk.h"
 #include "tagfuncs.h"
 #include "../tetj/tetj.h"
@@ -9,6 +13,9 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal)
 {
 #define TMP_STRING_SIZE (400)
 char tmp_string[TMP_STRING_SIZE+1];
+gzFile	*zfile;
+RpmArchiveHeader ahdr;
+char	ch;
 
 file1->archive=(caddr_t)file1->nexthdr;
 
@@ -20,7 +27,7 @@ tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check magic val
 if( !( file1->archive[0]==(char)0x1f
     && file1->archive[1]==(char)0x8b) ) {
         snprintf( tmp_string, TMP_STRING_SIZE,
-    "compareRpmHeader: magic isn't expected value 0x1f8b, found %x%x instead\n",
+    "checkRpmArchive: magic isn't expected value 0x1f8b, found %x%x instead\n",
 	     (unsigned int)file1->archive[0], (unsigned int)file1->archive[1]); 
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
@@ -31,19 +38,93 @@ if( !( file1->archive[0]==(char)0x1f
 }
 tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
 
-#if 0
-/* Check the RpmHeader version */
-tetj_tp_count++;
-tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check magic value");
-if(hdr->version != RPMHDRVER ) {
-        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmHeader: magic isn't expected value RPMHDRMAG, found %x %x %x instead\n", hdr->magic[0], hdr->magic[1], hdr->magic[2]); 
-        fprintf(stderr, "%s\n", tmp_string);
-        tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
-        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-} else {
-        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); 
-}
-tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
-#endif
+/*
+ * Now we need to set up zlib so that we can read/decompres the archive.
+ */
 
+if( lseek(file1->fd, (file1->archive-file1->addr), SEEK_SET) < 0 ) {
+        snprintf( tmp_string, TMP_STRING_SIZE,
+    "checkRpmArchive: Unable to seek to start of archive\n");
+        fprintf(stderr, "%s\n", tmp_string);
+        tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+							0, 0, 0, tmp_string);
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	return;
+	}
+
+if( (zfile=gzdopen(file1->fd,"r")) == NULL ) {
+        snprintf( tmp_string, TMP_STRING_SIZE,
+    "checkRpmArchive: Unable to open compressed archive\n");
+        fprintf(stderr, "%s\n", tmp_string);
+        tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+							0, 0, 0, tmp_string);
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	return;
+	}
+
+/*
+ * The archive is really a cpio format file, so start reading records
+ * and examining them.
+ */
+
+while( !gzeof(zfile) ) {
+	char	filename[256]; /* XXX Potential overflow!! */
+	char	num[9];
+	char	*s;
+	int	size;
+
+	gzread(zfile, &ahdr, sizeof(ahdr) );
+/*
+	printf("***************************\n");
+	printf("Magic: %6.6s\n", ahdr.c_magic );
+	printf("ino: %8.8s\n", ahdr.c_ino );
+	printf("Mode: %8.8s\n", ahdr.c_mode );
+	printf("mtime: %8.8s\n", ahdr.c_mtime );
+	printf("filesize: %8.8s\n", ahdr.c_filesize );
+	printf("namesize: %8.8s\n", ahdr.c_namesize );
+*/
+	if( !(strncmp(ahdr.c_magic,"070707",6) == 0) ) {
+        	snprintf( tmp_string, TMP_STRING_SIZE,
+    		"checkRpmArchive: Archive record has wrong magic %6.6s instead of 070707",
+		ahdr.c_magic);
+        	fprintf(stderr, "%s\n", tmp_string);
+        	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+							0, 0, 0, tmp_string);
+        	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+		/* For some reason, he cpio format in RPM has a magic of
+			070701 instead of 070707 as is defined for cpio */
+		if( !(strncmp(ahdr.c_magic,"0707",4) == 0) ) {
+			return;
+		}
+	}
+	/* Read in the filename */
+	memcpy(num,ahdr.c_namesize,8);
+	num[8]=0; /* NULL terminate the namesize */
+	size=strtol(num,NULL,16);
+	gzread(zfile, filename, size );
+	printf("Filename:  %s\n",filename);
+	/*
+	 * Check/fix padding here
+	 */
+	size=gztell(zfile);
+	size%=4;
+	size=4-size;
+	size%=4;
+	//printf("padding %d\n", size);
+	gzseek(zfile,size,SEEK_CUR);
+
+	/* Skip the file contents */
+	memcpy(num,ahdr.c_filesize,8);
+	num[8]=0;
+	size=strtol(num,NULL,16);
+	gzseek(zfile,size,SEEK_CUR);
+
+	size=gztell(zfile);
+	//printf("offset %x\n", size);
+	size%=4;
+	size=4-size;
+	size%=4;
+	//printf("padding %d\n", size);
+	gzseek(zfile,size,SEEK_CUR);
+	}
 }
