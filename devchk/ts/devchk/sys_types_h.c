@@ -265,25 +265,6 @@ Msg("Find size of key_t (9116)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(id_t,4, 9169, 2)
-#elif __ia64__
-CheckTypeSize(id_t,4, 9169, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(id_t,4, 9169, 6)
-#elif __s390__ && !__s390x__
-CheckTypeSize(id_t,4, 9169, 10)
-#elif __powerpc64__
-CheckTypeSize(id_t,4, 9169, 9)
-#elif __s390x__
-CheckTypeSize(id_t,4, 9169, 12)
-#elif __x86_64__
-CheckTypeSize(id_t,4, 9169, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9169,0);
-Msg("Find size of id_t (9169)\n");
-#endif
-
-#if __i386__
 CheckTypeSize(suseconds_t,4, 9249, 2)
 #elif __ia64__
 CheckTypeSize(suseconds_t,8, 9249, 3)
@@ -480,6 +461,25 @@ CheckTypeSize(int64_t,8, 10872, 10)
 
 #if __i386__
 CheckTypeSize(ssize_t,4, 9029, 2)
+#endif
+
+#if __i386__
+CheckTypeSize(id_t,4, 9169, 2)
+#elif __ia64__
+CheckTypeSize(id_t,4, 9169, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(id_t,4, 9169, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(id_t,4, 9169, 10)
+#elif __powerpc64__
+CheckTypeSize(id_t,4, 9169, 9)
+#elif __s390x__
+CheckTypeSize(id_t,4, 9169, 12)
+#elif __x86_64__
+CheckTypeSize(id_t,4, 9169, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9169,0);
+Msg("Find size of id_t (9169)\n");
 #endif
 
 #if __powerpc__ && !__powerpc64__
