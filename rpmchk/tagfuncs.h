@@ -21,8 +21,11 @@ extern void checkRpmIdxDESCRIPTION(RpmFile *file1, RpmHdrIndex *hidx, struct tet
 extern void checkRpmIdxBUILDTIME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxBUILDHOST(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxDISTRIBUTION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxVENDOR(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxLICENSE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxGROUP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxURL(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxOS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxARCH(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxOLDFILENAMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
@@ -62,6 +65,7 @@ extern void checkRpmIdxDIRINDEXES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj
 extern void checkRpmIdxBASENAMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxDIRNAMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxOPTFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxDISTURL(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxPAYLOADFORMAT(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxPAYLOADCOMPRESSOR(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxREQUIREVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
