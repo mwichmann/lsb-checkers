@@ -360,11 +360,11 @@ CheckOffset(struct rpc_msg,rm_direction,8,11,34827)
 CheckMemberSize(struct rpc_msg,ru,80,11,34828)
 CheckOffset(struct rpc_msg,ru,16,11,34828)
 #elif __powerpc64__
-CheckTypeSize(struct rpc_msg,0, 9984, 9)
-Msg("Missing member data for rpc_msg on PPC64\n");
-CheckOffset(struct rpc_msg,rm_xid,0,9,34826)
-CheckOffset(struct rpc_msg,rm_direction,0,9,34827)
-CheckOffset(struct rpc_msg,ru,0,9,34828)
+CheckTypeSize(struct rpc_msg,96, 9984, 9)
+CheckMemberSize(struct rpc_msg,rm_direction,4,9,34827)
+CheckOffset(struct rpc_msg,rm_direction,8,9,34827)
+CheckMemberSize(struct rpc_msg,ru,80,9,34828)
+CheckOffset(struct rpc_msg,ru,16,9,34828)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");

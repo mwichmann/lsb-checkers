@@ -353,7 +353,7 @@ CheckTypeSize(const uLongf,4, 10517, 10)
 #elif __x86_64__
 CheckTypeSize(const uLongf,8, 10517, 11)
 #elif __powerpc64__
-CheckTypeSize(const uLongf,0, 10517, 9)
+CheckTypeSize(const uLongf,8, 10517, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10517,0);
 Msg("Find size of const uLongf (10517)\n");
@@ -498,7 +498,7 @@ CheckTypeSize(z_off_t,4, 10519, 10)
 #elif __x86_64__
 CheckTypeSize(z_off_t,8, 10519, 11)
 #elif __powerpc64__
-CheckTypeSize(z_off_t,0, 10519, 9)
+CheckTypeSize(z_off_t,8, 10519, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10519,0);
 Msg("Find size of z_off_t (10519)\n");
@@ -886,7 +886,7 @@ CheckTypeSize(const Bytef,1, 10511, 10)
 #elif __x86_64__
 CheckTypeSize(const Bytef,1, 10511, 11)
 #elif __powerpc64__
-CheckTypeSize(const Bytef,0, 10511, 9)
+CheckTypeSize(const Bytef,1, 10511, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10511,0);
 Msg("Find size of const Bytef (10511)\n");
