@@ -1,3 +1,8 @@
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 /* TET version */
 
 #ifdef TET_TEST
@@ -9,6 +14,8 @@
 #else
 #define HDRCHKTEST_PASS
 #define HDRCHKTEST_FAIL
+int Msg(char *f, ...);
+int Log(char *f, ...);
 #endif
 
 /*
@@ -148,3 +155,7 @@
 }
 
 extern int architecture;
+
+#ifdef __cplusplus
+}
+#endif
