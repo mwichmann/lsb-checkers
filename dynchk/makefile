@@ -14,11 +14,23 @@ $(TEST_LIB):
 
 liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) makefile
 	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB)
+	if [ -n "$(LIBDIR)" ] ; \
+	then \
+	   sed -e "s#@LIBDIR@#`echo $(LIBDIR)`#" <lsbdynchk.sed >lsbdynchk; \
+	else \
+	   sed -e "s#@LIBDIR@#`pwd`#" <lsbdynchk.sed >lsbdynchk; \
+	fi
 
 test:
 
 install:
-	cp -f liblsbdynchk.so.1 /usr/lib/liblsbdynchk.so.1
+	install -d $(INSTALL_ROOT)/$(LIBDIR)
+	install liblsbdynchk.so.1 $(INSTALL_ROOT)/$(LIBDIR)/liblsbdynchk.so.1
+	install -d $(INSTALL_ROOT)/$(BINDIR)
+	install lsbdynchk $(INSTALL_ROOT)/$(BINDIR)/lsbdynchk
+	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
+	install lsbdynchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbdynchk.1
+
 
 clean:
 	for d in libs tests;do (cd $$d && make clean);done
