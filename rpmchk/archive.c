@@ -105,7 +105,9 @@ while( !gzeof(zfile) ) {
 	size=strtol(num,NULL,16);
 	gzread(zfile, filename, size );
 	/*
-	 * Check/fix padding here
+	 * Check/fix padding here - the amount of space used for the header
+	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
+	 * may need to be skipped.
 	 */
 	size=gztell(zfile);
 	size%=4;
@@ -120,6 +122,11 @@ while( !gzeof(zfile) ) {
 	size=strtol(num,NULL,16);
 	gzseek(zfile,size,SEEK_CUR);
 
+	/*
+	 * Check/fix padding here - the amount of space used for the file
+	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
+	 * may need to be skipped.
+	 */
 	size=gztell(zfile);
 	//printf("offset %x\n", size);
 	size%=4;
