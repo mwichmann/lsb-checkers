@@ -53,8 +53,11 @@ check_class_info(char *libname, struct classinfo *classes[],
 	void	*symp;
 	void	**basetypes;
 	struct classtypeinfo_mem *rttip;
-	struct classvtable_mem	*vtablep;
+	union classvtable_mem	*vtablep;
 	struct classinfo	*classp;
+	unsigned long vtvcalloffset, vtbaseoffset;
+	const char *vttypeinfo;
+	fptr *vtvirtfuncs;
 
 	if (classes == NULL) 
 		return 0;
@@ -81,33 +84,53 @@ check_class_info(char *libname, struct classinfo *classes[],
 		if (vtablep)
 		{
 
+		switch( classp->vtcategory ) {
+			case 1:
+				vtvcalloffset = 0;
+				vtbaseoffset  = vtablep->cat1.baseoffset;
+				vttypeinfo    = vtablep->cat1.typeinfo;
+				vtvirtfuncs   = vtablep->cat1.virtfuncs;
+				break;
+			case 2:
+				vtvcalloffset = vtablep->cat2.vcalloffset;
+				vtbaseoffset  = vtablep->cat2.baseoffset;
+				vttypeinfo    = vtablep->cat2.typeinfo;
+				vtvirtfuncs   = vtablep->cat2.virtfuncs;
+				break;
+			default:
+				fprintf(stderr,"Unhandled VT category %d\n",
+						classp->vtcategory );
+				break;
+		}
+
 		/*
 		 * 1.1) Check the baseoffset
 		 */
-		if (vtablep->baseoffset != classp->vtable->baseoffset) 
+		if (vtbaseoffset != classp->vtable->baseoffset) 
 		{
 			printf("Vtable baseoffset %ld (expected) doesn't match %ld (found)\n",
-						 classp->vtable->baseoffset, vtablep->baseoffset);
-			fprintf(stderr,"BASEO:%s:0:%ld\n", classp->name,vtablep->baseoffset);
+						 classp->vtable->baseoffset, vtbaseoffset);
+			fprintf(stderr,"BASEO:%s:0:%ld\n", classp->name,vtbaseoffset);
 		}
 
 		/*
-		if (vtablep->baseoffset != 0) 
-		{
-			printf("Non-zero baseoffset. ");
-			printf("Skipping checks 'cause this isn't fully understood yet,\n");
-			continue;
-		}
-		*/
-
-		/*
-		 * 1.2) Check the pointer to the RTTI, both by value and by name
+		 * 1.2) Check the vcalloffset
 		 */
-		dladdr(vtablep->typeinfo,&dlinfo);
-		if (dlinfo.dli_saddr != vtablep->typeinfo) 
+		if (vtvcalloffset != classp->vtable->vcalloffset) 
+		{
+			printf("Vtable vcalloffset %ld (expected) doesn't match %ld (found)\n",
+						 classp->vtable->vcalloffset, vtvcalloffset);
+			fprintf(stderr,"BASEVO:%s:0:%ld\n", classp->name,vtvcalloffset);
+		}
+
+		/*
+		 * 1.3) Check the pointer to the RTTI, both by value and by name
+		 */
+		dladdr(vttypeinfo,&dlinfo);
+		if (dlinfo.dli_saddr != vttypeinfo) 
 		{
 			printf("Uhoh1. Not an exact match %p %p\n",
-					dlinfo.dli_saddr, vtablep->typeinfo);
+					dlinfo.dli_saddr, vttypeinfo);
 		}
 	
 		if (strcmp(classp->vtable->typeinfo,dlinfo.dli_sname)) 
@@ -118,18 +141,18 @@ check_class_info(char *libname, struct classinfo *classes[],
 		}
 
 		/*
-		 * 1.3) Check the virtual function pointers
+		 * 1.4) Check the virtual function pointers
 		 */
 		for (j=0;j<classp->numvirtfuncs;j++) 
 		{
 			/* Hmm... this doesn't seem to be used anywhere
 			symp=dlsym(dlhndl, classp->vtable->virtfuncs[j]);
 			*/
-			dladdr(fptr2ptr(vtablep->virtfuncs[j]), &dlinfo);
-			if (dlinfo.dli_saddr!=fptr2ptr(vtablep->virtfuncs[j])) 
+			dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo);
+			if (dlinfo.dli_saddr!=fptr2ptr(vtvirtfuncs[j])) 
 			{
 				printf("Uhoh2. Not an exact match %p %p\n",
-							 dlinfo.dli_saddr, fptr2ptr(vtablep->virtfuncs[j]));
+							 dlinfo.dli_saddr, fptr2ptr(vtvirtfuncs[j]));
 				printf("Uhoh2. Not an exact match %s %s\n",
 							 dlinfo.dli_sname, classp->vtable->virtfuncs[j]);
 			}
@@ -167,7 +190,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		if (symp+(2*sizeof(long)) != rttip->basevtable) 
 		{
 			dladdr(rttip->basevtable-8, &dlinfo);
-			if (vtablep && dlinfo.dli_saddr != vtablep->typeinfo) 
+			if (vtablep && dlinfo.dli_saddr != vttypeinfo) 
 			{
 				printf("Uhoh3. Not an exact match\n");
 			}
@@ -194,7 +217,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 *
 		 * There are 5 different possible base types, each one implies a
 		 * different RTTI layout. Here we have to identify each one, and
-		 * check the fileds that are unique to each one.
+		 * check the fields that are unique to each one.
 		 */
 
 		basetypes = NULL;
@@ -208,6 +231,8 @@ check_class_info(char *libname, struct classinfo *classes[],
 			 * No additional fields to check
 			 */
 			basetypes = rttip->basetypeinfo;
+			if( classp->numbaseinfo )
+				fprintf(stderr,"fundamental_type_info & baseinfos\n");
 		}
 		/*
 		 * abi::__class_type_info
@@ -219,6 +244,8 @@ check_class_info(char *libname, struct classinfo *classes[],
 			 * No additional fields to check
 			 */
 			basetypes = rttip->basetypeinfo;
+			if( classp->numbaseinfo )
+				fprintf(stderr,"class_type_info & baseinfos\n");
 		}
 		/*
 		 * abi::__si_class_type_info
@@ -241,6 +268,8 @@ check_class_info(char *libname, struct classinfo *classes[],
 				fprintf(stderr,"BASEN:%s:0:%s\n", classp->name, dlinfo.dli_sname);
 			}
 			basetypes = si_rttip->basetypeinfo;
+			if( classp->numbaseinfo )
+				fprintf(stderr,"si_class_type_info & baseinfos\n");
 		}
 		/*
 		 * abi::__vmi_class_type_info
@@ -310,12 +339,14 @@ check_class_info(char *libname, struct classinfo *classes[],
 								classp->name,p_rttip->offset_flags);
 			}
 			basetypes = ((struct pbasetypeinfo_mem*)rttip)->basetypeinfo;
+			if( classp->numbaseinfo )
+				fprintf(stderr,"pbase_type_info & baseinfos\n");
 		}
 
 		/*
 		 * Check the base types info
 		 */
-		if (!basetypes) {
+		if (classp->numbaseinfo && !basetypes) {
 			printf("Aigghhh no basetypes!!\n");
 			continue;
 		}
