@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "elfchk.h"
 #include "proghdr.h"
 
 #define VERBOSE
@@ -84,6 +85,12 @@ hdr=&(file->paddr[index]);
 
 if( !hdr )
 	return;
+
+if( hdr->p_type > PT_NUM ) {
+	fprintf(stderr,"Not checking PRogram Headers with type %x\n",
+		hdr->p_type);
+	return;
+	}
 
 #ifdef VERBOSE
 fprintf( stderr, "Header[%2d] %-12.12s\n",
