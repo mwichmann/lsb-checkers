@@ -277,7 +277,7 @@ print LIBS "#include \"libs.h\"\n";
 print LIBS "#include \"libchk.h\"\n\n";
 print LIBS "#include \"../tetj/tetj.h\"\n\n";
 
-print LIBS "void check_libs(struct tetj_handle *journal)\n{\n";
+print LIBS "struct modlib modlibs [] = { \n";
 
 open(LIBSH,">libs.h");
 print LIBSH "/* Generated file */\n";
@@ -287,7 +287,9 @@ open(MAKE,">libs.mk");
 print MAKE "# Generated file #\n";
 print MAKE "LIBOBJS = \\\n";
 
-$select = "SELECT DISTINCT Lid,ALrunname,Asymbol,Aname FROM Library ";
+$select = "SELECT DISTINCT Mname,Lid,ALrunname,Asymbol,Aname FROM Module ";
+$select.= "LEFT JOIN ModLib ON MLmid=Mid ";
+$select.= "LEFT JOIN Library ON Lid=MLlid ";
 $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE Lstd='Yes' ";
@@ -304,8 +306,10 @@ for(1..$sth->numrows) {
 	if( !$entry{'ALrunname'} ) {
 		next;
 		}
+	$modname=$entry{'Mname'};
 	$libname=$entry{'ALrunname'};
 	$asym=$entry{'Asymbol'};
+	$modname =~ s/-/_/g;
 	$libname =~ s/\./_/g;
 	$libname =~ s/-/_/g;
 	$libname =~ s/\+/x/g;
@@ -313,8 +317,9 @@ for(1..$sth->numrows) {
 	@libname = split('/',$libname);
 	$libname = pop(@libname);
 	if( $asym != "1" ) {
+		print LIBS "/* $modname */\n";
 		print LIBS "#if $asym\n";
-		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo,journal);\n";
+		print LIBS "\t{\"$modname\",\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 		print LIBS "#endif\n";
 		print LIBSH "#if $asym\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
@@ -322,7 +327,7 @@ for(1..$sth->numrows) {
 		print LIBSH "#endif\n";
 	} else {
 		if( !$seenit{$libname} ) {
-			print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo,journal);\n";
+			print LIBS "\t{\"$modname\",\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 			print LIBSH "extern struct versym ".$libname."[];\n";
 			print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
 			}
@@ -335,7 +340,8 @@ for(1..$sth->numrows) {
 		}
 }
 
-print LIBS "}\n";
+print LIBS "{NULL,NULL,NULL,NULL}\n";
+print LIBS "};\n";
 close(LIBS);
 close(LIBH);
 close(MAKE);

@@ -6,9 +6,15 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.32 $
+ * This is $Revision: 1.33 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.33  2004/04/20 20:10:02  anderson
+ * Restructure things so that libs belong to a specification module. Currently,
+ * the code checkes everything, which is that same as the p[revious behavior.
+ * An option still needs to be added that specifies which Module to limit
+ * the check by.
+ *
  * Revision 1.32  2003/10/31 00:05:15  cyeoh
  * Adds error message logging to journal file
  *
@@ -140,7 +146,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.32 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.33 $";
 
 /* Some debugging bits which are useful to maintainers,
  * but probably not others
@@ -432,7 +438,15 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
 }
 
 /* Generated function by mkfunclist */
-extern void check_libs(struct tetj_handle *journal); 
+void check_libs(struct tetj_handle *journal)
+{
+	int	i=0;
+	do {
+		check_lib(modlibs[i].runname, modlibs[i].symbols,
+				modlibs[i].classinfo, journal);
+	} while( modlibs[++i].modname );
+
+}
 
 void init_library_table(char *filename)
 {
