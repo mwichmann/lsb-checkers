@@ -18,6 +18,7 @@ sub writetest($$)
 	local($lastid);
 	my(%entry);
 
+
 	#
 	# Get the return types
 	#
@@ -74,6 +75,7 @@ sub writetest($$)
 	#Get Constants
 	$select = "SELECT DISTINCT * FROM Constant,HeaderGroup ";
 	$select.= "LEFT JOIN ArchConst ON ACcid=Cid ";
+	$select.= "LEFT JOIN Architecture ON Aid=ACaid ";
 	$select.= "WHERE HGheader=$Hid ";
 	$select.= "AND Cstd='Yes' ";
 	$select.= "AND Cheadgroup=HGid ";
@@ -107,6 +109,7 @@ sub writetest($$)
 	print TESTS "/*\n * Test of $Hname\n */\n";
 	print TESTS "#include \"hdrchk.h\"\n";
 	print TESTS "#include \"sys/types.h\"\n";
+	print TESTS "#define _LSB_DEFAULT_ARCH 1\n";
 
 	open(INCS,"<$fname.inc");
 	while(<INCS>) {
@@ -126,12 +129,41 @@ sub writetest($$)
 	print TESTS "Msg(\"Checking data structures in $Hname\\n\");\n";
 	print TESTS "#endif\n\n";
 
-	for(1..$cth->numrows) {
-		%centry=$cth->fetchhash;
-		# Need to make sure it is an integer
+	my(%constHash);
+	for (1..$cth->numrows)
+	{
+	    my(%centry);
+	    %centry=$cth->fetchhash;
+	    $constHash{$centry{'Cid'}}{$centry{'Aid'}} = \%centry;
+	}
+
+	
+	foreach $cid (keys %constHash)
+	{
+	    $archCount = 0;
+	    foreach $archId (reverse sort keys %{$constHash{$cid}})
+	    {
+		%centry = %{$constHash{$cid}{$archId}};
+		$cname_save = $centry{'Cname'};
+		$type_save = $centry{'Ctype'};
+		$cid_save = $centry{'Cid'};
+		if ($centry{'Aid'} == 1) 
+		{
+		    $centry{Asymbol} = "_LSB_DEFAULT_ARCH";
+		}
+		if ($archCount==0)
+		{
+		    print TESTS "#ifdef $centry{Asymbol}\n";
+		}
+		else
+		{
+		    print TESTS "#elif $centry{Asymbol}\n";
+		}
+		$archCount++;
+
 		if( $centry{'Ctype'} eq 'int' ) {
 			print TESTS "#ifdef $centry{'Cname'}\n";
-			print TESTS "\tCompareConstant($centry{'Cname'},$centry{'ACvalue'})\n";
+			print TESTS "\tCompareConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture)\n";
 			print TESTS "#else\n";
 			print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                         print TESTS "cnt++;\n";
@@ -146,6 +178,25 @@ sub writetest($$)
 		} else {
 			print TESTS "/* No test for $centry{'Cname'} */\n";
 		}
+	    }
+	    if (exists($constHash{$cid}{1}))
+	    {
+		print TESTS "#endif\n\n";
+	    }
+	    else
+	    {
+		print TESTS "#else\n";
+		print TESTS "Msg( \"No definition for $cname_save ($cid_save) in db\\n\");\n";
+#  		if ($ctype_save eq 'int')
+#  		{
+#  		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%d)\\n\", architecture, $cname_save);\n";
+#  		}
+#  		else
+#  		{
+#  		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%s)\\n\", architecture, $cname_save);\n";
+#  		}
+  		print TESTS "#endif\n";
+  	    }
 	}
 
 	$lastid=0;
@@ -163,6 +214,7 @@ sub writetest($$)
 				print TESTS "#else\n";
 				print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 				print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+				print TESTS "Msg(\"Find size of $tentry{'Tname'} ($Tid)\\n\");\n";
 				}
 				print TESTS "#endif\n\n";
 			}
@@ -214,6 +266,7 @@ sub writetest($$)
 			print TESTS "#else\n";
 			print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+			print TESTS "Msg(\"Find size of $tentry{'Tname'} ($Tid)\\n\");\n";
 			}
 		print TESTS "#endif\n\n";
 		}
