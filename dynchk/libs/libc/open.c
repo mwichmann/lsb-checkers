@@ -7,6 +7,7 @@
 
 static int(*funcptr)(const char *, int, mode_t) = 0;
 
+extern int __lsb_check_params;
 int open(const char *pathname, int flags, ...)
 {
 	int reset_flag = __lsb_check_params;

@@ -26,6 +26,6 @@ int printf(const char *format, ...)
 		validate_RWaddress(format, "printf");
 	}
 	__lsb_check_params = reset_flag;
-	return ret_value;
 	ret_value = funcptr(format, args);
+	return ret_value;
 }

@@ -10,7 +10,7 @@ extern int __lsb_check_params;
 void * malloc(size_t arg0)
 {
 	int reset_flag = __lsb_check_params;
-	void ret_value;
+	void * ret_value;
 	if(!funcptr)
 		funcptr = __libc_malloc;
 	if(__lsb_check_params)
