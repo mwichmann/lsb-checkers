@@ -8,6 +8,7 @@
 static int(*funcptr) (FILE * , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int fwide (FILE * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int fwide (FILE * arg0 , int arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "fwide()");
 	validate_Rdaddress( arg0, "fwide - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fwide - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fwide - arg1");

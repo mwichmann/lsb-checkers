@@ -7,6 +7,7 @@
 static int(*funcptr) (nl_catd ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int catclose (nl_catd arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int catclose (nl_catd arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "catclose()");
 		validate_NULL_TYPETYPE(  arg0, "catclose - arg0");
 	}
 	ret_value = funcptr(arg0);

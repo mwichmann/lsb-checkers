@@ -8,6 +8,7 @@
 static int(*funcptr) (const WINDOW * , WINDOW * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int overwrite (const WINDOW * arg0 , WINDOW * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int overwrite (const WINDOW * arg0 , WINDOW * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "overwrite()");
 	validate_Rdaddress( arg0, "overwrite - arg0");
 		validate_NULL_TYPETYPE(  arg0, "overwrite - arg0");
 	validate_Rdaddress( arg1, "overwrite - arg1");

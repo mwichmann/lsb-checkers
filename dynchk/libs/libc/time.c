@@ -8,6 +8,7 @@
 static time_t(*funcptr) (time_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 time_t time (time_t * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ time_t time (time_t * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "time()");
 	validate_Rdaddress( arg0, "time - arg0");
 		validate_NULL_TYPETYPE(  arg0, "time - arg0");
 	}

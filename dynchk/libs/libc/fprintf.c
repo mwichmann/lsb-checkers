@@ -7,6 +7,7 @@
 static int (*funcptr)(FILE *f, const char *, ...) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int fprintf(FILE *f, const char *format, ...)
 {	
 	va_list args;
@@ -18,6 +19,7 @@ int fprintf(FILE *f, const char *format, ...)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params = 0;
+        	__lsb_output(5-__lsb_check_params, "setkey()");
 		// validate_stuff(?)
 	}
 	ret_value = funcptr(f, format, args);

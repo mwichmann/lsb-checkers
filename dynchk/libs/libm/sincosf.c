@@ -7,6 +7,7 @@
 static void(*funcptr) (float , float * , float * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void sincosf (float arg0 , float * arg1 , float * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -15,6 +16,7 @@ void sincosf (float arg0 , float * arg1 , float * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sincosf()");
 		validate_NULL_TYPETYPE(  arg0, "sincosf - arg0");
 	validate_Rdaddress( arg1, "sincosf - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sincosf - arg1");

@@ -7,6 +7,7 @@
 static void(*funcptr) () = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void qiflush ()
 {
 	int reset_flag = __lsb_check_params;
@@ -15,6 +16,7 @@ void qiflush ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "qiflush()");
 	}
 	funcptr();
 	__lsb_check_params = reset_flag;

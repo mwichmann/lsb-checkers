@@ -8,6 +8,7 @@
 static int(*funcptr) (pid_t , int , const struct sched_param * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int sched_setscheduler (pid_t arg0 , int arg1 , const struct sched_param * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int sched_setscheduler (pid_t arg0 , int arg1 , const struct sched_param * arg2 
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sched_setscheduler()");
 		validate_NULL_TYPETYPE(  arg0, "sched_setscheduler - arg0");
 		validate_NULL_TYPETYPE(  arg1, "sched_setscheduler - arg1");
 	validate_Rdaddress( arg2, "sched_setscheduler - arg2");

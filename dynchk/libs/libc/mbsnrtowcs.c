@@ -9,6 +9,7 @@
 static size_t(*funcptr) (wchar_t * , const char * * , size_t , size_t , mbstate_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 size_t mbsnrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , size_t arg3 , mbstate_t * arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ size_t mbsnrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , size_t a
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "mbsnrtowcs()");
 	validate_Rdaddress( arg0, "mbsnrtowcs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mbsnrtowcs - arg0");
 	validate_Rdaddress( arg1, "mbsnrtowcs - arg1");

@@ -8,6 +8,7 @@
 static wchar_t *(*funcptr) (const wchar_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 wchar_t * wcsdup (const wchar_t * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ wchar_t * wcsdup (const wchar_t * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "wcsdup()");
 	validate_Rdaddress( arg0, "wcsdup - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsdup - arg0");
 	}

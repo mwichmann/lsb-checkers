@@ -8,6 +8,7 @@
 static ssize_t(*funcptr) (int , const void * , size_t , int , const struct sockaddr * , socklen_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 ssize_t sendto (int arg0 , const void * arg1 , size_t arg2 , int arg3 , const struct sockaddr * arg4 , socklen_t arg5 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ ssize_t sendto (int arg0 , const void * arg1 , size_t arg2 , int arg3 , const st
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sendto()");
 		validate_NULL_TYPETYPE(  arg0, "sendto - arg0");
 	validate_Rdaddress( arg1, "sendto - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sendto - arg1");

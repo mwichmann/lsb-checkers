@@ -7,6 +7,7 @@
 static struct servent *(*funcptr) (const char * , const char * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 struct servent * getservbyname (const char * arg0 , const char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ struct servent * getservbyname (const char * arg0 , const char * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getservbyname()");
 	validate_Rdaddress( arg0, "getservbyname - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getservbyname - arg0");
 	validate_Rdaddress( arg1, "getservbyname - arg1");

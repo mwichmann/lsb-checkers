@@ -8,6 +8,7 @@
 static int(*funcptr) (const regex_t * , const char * , size_t , regmatch_t [], int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int regexec (const regex_t * arg0 , const char * arg1 , size_t arg2 , regmatch_t arg3 [], int arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int regexec (const regex_t * arg0 , const char * arg1 , size_t arg2 , regmatch_t
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "regexec()");
 	validate_Rdaddress( arg0, "regexec - arg0");
 		validate_NULL_TYPETYPE(  arg0, "regexec - arg0");
 	validate_Rdaddress( arg1, "regexec - arg1");

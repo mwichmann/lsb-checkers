@@ -7,6 +7,7 @@
 static long(*funcptr) (float ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 long lrintf (float arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ long lrintf (float arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "lrintf()");
 		validate_NULL_TYPETYPE(  arg0, "lrintf - arg0");
 	}
 	ret_value = funcptr(arg0);

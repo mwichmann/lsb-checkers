@@ -8,6 +8,7 @@
 static bool_t(*funcptr) (SVCXPRT * , rpcprog_t , rpcvers_t , __dispatch_fn_t , rpcprot_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 bool_t svc_register (SVCXPRT * arg0 , rpcprog_t arg1 , rpcvers_t arg2 , __dispatch_fn_t arg3 , rpcprot_t arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ bool_t svc_register (SVCXPRT * arg0 , rpcprog_t arg1 , rpcvers_t arg2 , __dispat
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "svc_register()");
 	validate_Rdaddress( arg0, "svc_register - arg0");
 		validate_NULL_TYPETYPE(  arg0, "svc_register - arg0");
 		validate_NULL_TYPETYPE(  arg1, "svc_register - arg1");

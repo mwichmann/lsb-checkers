@@ -34,7 +34,7 @@ load_memmap()
 	char rd,wr,ex;
 	int ret;
 	char buf[256];
-
+	if(inmemmap) return;
 	inmemmap=1;
 	/*
 	setvbuf(stdout,NULL, _IOLBF, 0);

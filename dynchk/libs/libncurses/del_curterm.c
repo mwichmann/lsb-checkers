@@ -7,6 +7,7 @@
 static int(*funcptr) (TERMINAL * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int del_curterm (TERMINAL * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int del_curterm (TERMINAL * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "del_curterm()");
 	validate_Rdaddress( arg0, "del_curterm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "del_curterm - arg0");
 	}

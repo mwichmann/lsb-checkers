@@ -10,6 +10,7 @@ extern void __lsb_permit_ioctl();
 extern void __lsb_forbid_ioctl();
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int tcsetattr (int arg0 , int arg1, const struct termios * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -20,6 +21,7 @@ int tcsetattr (int arg0 , int arg1, const struct termios * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+        	__lsb_output(5-__lsb_check_params, "setkey()");
 		validate_NULL_TYPETYPE(arg0, "tcsetattr");
 		validate_NULL_TYPETYPE(arg1, "tcsetattr");
 		validate_NULL_TYPETYPE(arg2, "tcsetattr");

@@ -7,6 +7,7 @@
 static int(*funcptr) (int , attr_t , short , const void * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int chgat (int arg0 , attr_t arg1 , short arg2 , const void * arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int chgat (int arg0 , attr_t arg1 , short arg2 , const void * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "chgat()");
 		validate_NULL_TYPETYPE(  arg0, "chgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "chgat - arg1");
 		validate_NULL_TYPETYPE(  arg2, "chgat - arg2");

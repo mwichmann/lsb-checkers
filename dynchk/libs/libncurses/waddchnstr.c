@@ -7,6 +7,7 @@
 static int(*funcptr) (WINDOW * , const chtype * , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int waddchnstr (WINDOW * arg0 , const chtype * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int waddchnstr (WINDOW * arg0 , const chtype * arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "waddchnstr()");
 	validate_Rdaddress( arg0, "waddchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "waddchnstr - arg0");
 	validate_Rdaddress( arg1, "waddchnstr - arg1");

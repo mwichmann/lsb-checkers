@@ -8,6 +8,7 @@
 static int(*funcptr) (const void * , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int munlock (const void * arg0 , size_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int munlock (const void * arg0 , size_t arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "munlock()");
 	validate_Rdaddress( arg0, "munlock - arg0");
 		validate_NULL_TYPETYPE(  arg0, "munlock - arg0");
 		validate_NULL_TYPETYPE(  arg1, "munlock - arg1");

@@ -7,6 +7,7 @@
 static char *(*funcptr) (char * , int , FILE * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 char * fgets (char * arg0 , int arg1 , FILE * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ char * fgets (char * arg0 , int arg1 , FILE * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "fgets()");
 	validate_Rdaddress( arg0, "fgets - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fgets - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fgets - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (const char * , struct statvfs64 * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int statvfs64 (const char * arg0 , struct statvfs64 * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int statvfs64 (const char * arg0 , struct statvfs64 * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "statvfs64()");
 	validate_Rdaddress( arg0, "statvfs64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "statvfs64 - arg0");
 	validate_Rdaddress( arg1, "statvfs64 - arg1");

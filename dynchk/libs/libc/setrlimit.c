@@ -7,6 +7,7 @@
 static int(*funcptr) (__rlimit_resource_t , const struct rlimit * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int setrlimit (__rlimit_resource_t arg0 , const struct rlimit * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int setrlimit (__rlimit_resource_t arg0 , const struct rlimit * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "setrlimit()");
 		validate_NULL_TYPETYPE(  arg0, "setrlimit - arg0");
 	validate_Rdaddress( arg1, "setrlimit - arg1");
 		validate_NULL_TYPETYPE(  arg1, "setrlimit - arg1");

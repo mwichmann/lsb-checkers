@@ -7,6 +7,7 @@
 static ENTRY *(*funcptr) (ENTRY , ACTION ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 ENTRY * hsearch (ENTRY arg0 , ACTION arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ ENTRY * hsearch (ENTRY arg0 , ACTION arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "hsearch()");
 		validate_NULL_TYPETYPE(  arg0, "hsearch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "hsearch - arg1");
 	}

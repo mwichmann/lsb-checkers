@@ -8,6 +8,7 @@
 static float(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 float __wcstof_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ float __wcstof_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "__wcstof_internal()");
 	validate_Rdaddress( arg0, "__wcstof_internal - arg0");
 		validate_NULL_TYPETYPE(  arg0, "__wcstof_internal - arg0");
 	validate_Rdaddress( arg1, "__wcstof_internal - arg1");

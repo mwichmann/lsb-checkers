@@ -7,6 +7,7 @@
 static int(*funcptr) (int , int , chtype , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int mvhline (int arg0 , int arg1 , chtype arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int mvhline (int arg0 , int arg1 , chtype arg2 , int arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "mvhline()");
 		validate_NULL_TYPETYPE(  arg0, "mvhline - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvhline - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvhline - arg2");

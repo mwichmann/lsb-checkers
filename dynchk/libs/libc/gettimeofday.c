@@ -7,6 +7,7 @@
 static int(*funcptr) (struct timeval * , struct timezone * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "gettimeofday()");
 	validate_Rdaddress( arg0, "gettimeofday - arg0");
 		validate_NULL_TYPETYPE(  arg0, "gettimeofday - arg0");
 		if( arg1 ) {

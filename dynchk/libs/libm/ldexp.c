@@ -7,6 +7,7 @@
 static double(*funcptr) (double , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 double ldexp (double arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ double ldexp (double arg0 , int arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "ldexp()");
 		validate_NULL_TYPETYPE(  arg0, "ldexp - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ldexp - arg1");
 	}

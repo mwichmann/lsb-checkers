@@ -5,12 +5,9 @@
  *
  * level: level of output to create.  Higher is less important.
  *        -1: lsb compliance error: 
- *        	a bad parameter get passed.
- *         4: shallow trace:
+ *        	normally, when a bad parameter get passed.
+ *         5: shallow trace:
  *         	an lsb function was called from outside dynchk. 
- *         5: deep trace: 
- *         	an lsb function was called, possibly from within dynchk
- *         	(Useful for debugging libdynchk itself)
  * 
  * format, ... : output message, a la printf
  *
@@ -31,30 +28,33 @@ int __lsb_output(int level, char *format, ...)
 	va_start(args, format);
 
 	static int need_init = 1;
-	static FILE * output = 0;
+	static FILE * output;
 	static int out_level = 0;
 	
-	char * filename;
-	char * level_name;
-	
+	char * filename = NULL;
+	char * level_name = NULL;
 	if(need_init)
 	{
-		filename = getenv("LSB_OUTPUT_LEVEL");
-		level_name = getenv("LSB_OUTPUT_FILE");
+		filename = getenv("LSB_OUTPUT_FILE");
+		level_name = getenv("LSB_OUTPUT_LEVEL");
 		if(filename)
 			output = fopen(filename, "w");
-		if(!output)
+		if(!output || !filename)
 			output = stderr;
 		if(level_name)
 			out_level = atoi(level_name);
+			
 		need_init = 0;
 	}
 
 	if(level <= out_level)
 	{
+		if(out_level > 0)
+			fprintf(output, "DYNCHK(%d): ", level);
+		else
+			fprintf(output, "DYNCHK: ");
 		vfprintf(output, format, args);
-		va_end(args);
-		return 1;
+		fprintf(output, "\n");
 	}
 	va_end(args);
 	return 0;

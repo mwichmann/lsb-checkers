@@ -8,6 +8,7 @@
 static int(*funcptr) (int , uid_t , gid_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int fchown (int arg0 , uid_t arg1 , gid_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int fchown (int arg0 , uid_t arg1 , gid_t arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "fchown()");
 		validate_NULL_TYPETYPE(  arg0, "fchown - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fchown - arg1");
 		validate_NULL_TYPETYPE(  arg2, "fchown - arg2");

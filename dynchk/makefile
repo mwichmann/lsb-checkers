@@ -10,16 +10,16 @@ TEST_LIB = tests/tests.o
 
 all: liblsbdynchk.so lsbdynchk
 
-$(WRAPPER_LIBS): build_libs
+$(WRAPPER_LIBS): build_libs makefile
 
 build_libs:
 	cd libs && make all
 
-$(TEST_LIB)::
+$(TEST_LIB):: 
 	cd tests && make all
 
-liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) global_flag.o makefile
-	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB) global_flag.o
+liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) misc/global_flag.o  misc/lsb_output.o makefile
+	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB) misc/global_flag.o misc/lsb_output.o
 
 lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \

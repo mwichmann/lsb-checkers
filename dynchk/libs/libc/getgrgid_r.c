@@ -9,6 +9,7 @@
 static int(*funcptr) (gid_t , struct group * , char * , size_t , struct group * * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int getgrgid_r (gid_t arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ int getgrgid_r (gid_t arg0 , struct group * arg1 , char * arg2 , size_t arg3 , s
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getgrgid_r()");
 		validate_NULL_TYPETYPE(  arg0, "getgrgid_r - arg0");
 	validate_Rdaddress( arg1, "getgrgid_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getgrgid_r - arg1");

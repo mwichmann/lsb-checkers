@@ -8,6 +8,7 @@
 static void *(*funcptr) (ptrdiff_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void * sbrk (ptrdiff_t arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ void * sbrk (ptrdiff_t arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sbrk()");
 		validate_NULL_TYPETYPE(  arg0, "sbrk - arg0");
 	}
 	ret_value = funcptr(arg0);

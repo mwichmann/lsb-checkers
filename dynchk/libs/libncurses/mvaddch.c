@@ -7,6 +7,7 @@
 static int(*funcptr) (int , int , const chtype ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int mvaddch (int arg0 , int arg1 , const chtype arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int mvaddch (int arg0 , int arg1 , const chtype arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "mvaddch()");
 		validate_NULL_TYPETYPE(  arg0, "mvaddch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvaddch - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvaddch - arg2");

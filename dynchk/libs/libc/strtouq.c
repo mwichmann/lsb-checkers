@@ -7,6 +7,7 @@
 static unsigned long long(*funcptr) (const char * , char * * , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 unsigned long long strtouq (const char * arg0 , char * * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ unsigned long long strtouq (const char * arg0 , char * * arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "strtouq()");
 	validate_Rdaddress( arg0, "strtouq - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtouq - arg0");
 	validate_Rdaddress( arg1, "strtouq - arg1");

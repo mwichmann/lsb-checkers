@@ -8,6 +8,7 @@
 static struct CLIENT *(*funcptr) (const char * , const u_long , const u_long , const char * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 struct CLIENT * clnt_create (const char * arg0 , const u_long arg1 , const u_long arg2 , const char * arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ struct CLIENT * clnt_create (const char * arg0 , const u_long arg1 , const u_lon
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "clnt_create()");
 	validate_Rdaddress( arg0, "clnt_create - arg0");
 		validate_NULL_TYPETYPE(  arg0, "clnt_create - arg0");
 		validate_NULL_TYPETYPE(  arg1, "clnt_create - arg1");

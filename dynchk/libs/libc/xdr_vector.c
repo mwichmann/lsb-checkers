@@ -8,6 +8,7 @@
 static bool_t(*funcptr) (XDR * , char * , u_int , u_int , xdrproc_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 bool_t xdr_vector (XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_t arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ bool_t xdr_vector (XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "xdr_vector()");
 	validate_Rdaddress( arg0, "xdr_vector - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_vector - arg0");
 	validate_Rdaddress( arg1, "xdr_vector - arg1");

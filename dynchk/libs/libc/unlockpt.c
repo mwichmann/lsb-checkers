@@ -7,6 +7,7 @@
 static int(*funcptr) (int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int unlockpt (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int unlockpt (int arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "unlockpt()");
 		validate_NULL_TYPETYPE(  arg0, "unlockpt - arg0");
 	}
 	ret_value = funcptr(arg0);

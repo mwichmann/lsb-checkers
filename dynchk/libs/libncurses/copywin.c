@@ -8,6 +8,7 @@
 static int(*funcptr) (const WINDOW * , WINDOW * , int , int , int , int , int , int , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 , int arg7 , int arg8 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "copywin()");
 	validate_Rdaddress( arg0, "copywin - arg0");
 		validate_NULL_TYPETYPE(  arg0, "copywin - arg0");
 	validate_Rdaddress( arg1, "copywin - arg1");

@@ -8,6 +8,7 @@
 static int(*funcptr) (pid_t , pid_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int setpgid (pid_t arg0 , pid_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int setpgid (pid_t arg0 , pid_t arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "setpgid()");
 		validate_NULL_TYPETYPE(  arg0, "setpgid - arg0");
 		validate_NULL_TYPETYPE(  arg1, "setpgid - arg1");
 	}

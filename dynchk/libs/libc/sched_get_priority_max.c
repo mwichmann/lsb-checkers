@@ -7,6 +7,7 @@
 static int(*funcptr) (int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int sched_get_priority_max (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int sched_get_priority_max (int arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sched_get_priority_max()");
 		validate_NULL_TYPETYPE(  arg0, "sched_get_priority_max - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -7,6 +7,7 @@
 static int(*funcptr) (WINDOW * , attr_t , void * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int wattr_on (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int wattr_on (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "wattr_on()");
 	validate_Rdaddress( arg0, "wattr_on - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wattr_on - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wattr_on - arg1");

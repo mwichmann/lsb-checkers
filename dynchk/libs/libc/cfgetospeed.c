@@ -7,6 +7,7 @@
 static speed_t(*funcptr) (const struct termios * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 speed_t cfgetospeed (const struct termios * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ speed_t cfgetospeed (const struct termios * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "cfgetospeed()");
 	validate_Rdaddress( arg0, "cfgetospeed - arg0");
 		validate_NULL_TYPETYPE(  arg0, "cfgetospeed - arg0");
 	}

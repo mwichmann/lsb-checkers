@@ -8,6 +8,7 @@
 static void(*funcptr) (XDR * , caddr_t , u_int , enum xdr_op ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void xdrmem_create (XDR * arg0 , caddr_t arg1 , u_int arg2 , enum xdr_op arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ void xdrmem_create (XDR * arg0 , caddr_t arg1 , u_int arg2 , enum xdr_op arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "xdrmem_create()");
 	validate_Rdaddress( arg0, "xdrmem_create - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdrmem_create - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xdrmem_create - arg1");

@@ -9,6 +9,7 @@
 static wchar_t *(*funcptr) (wchar_t * , int , FILE * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 wchar_t * fgetws (wchar_t * arg0 , int arg1 , FILE * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ wchar_t * fgetws (wchar_t * arg0 , int arg1 , FILE * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "fgetws()");
 	validate_Rdaddress( arg0, "fgetws - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fgetws - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fgetws - arg1");

@@ -7,6 +7,7 @@
 static char *(*funcptr) (enum clnt_stat ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 char * clnt_sperrno (enum clnt_stat arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ char * clnt_sperrno (enum clnt_stat arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "clnt_sperrno()");
 		validate_NULL_TYPETYPE(  arg0, "clnt_sperrno - arg0");
 	}
 	ret_value = funcptr(arg0);

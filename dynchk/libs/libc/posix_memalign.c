@@ -8,6 +8,7 @@
 static int(*funcptr) (void * * , size_t , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int posix_memalign (void * * arg0 , size_t arg1 , size_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int posix_memalign (void * * arg0 , size_t arg1 , size_t arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "posix_memalign()");
 	validate_Rdaddress( arg0, "posix_memalign - arg0");
 	validate_Rdaddress(* arg0, "posix_memalign - arg0");
 		validate_NULL_TYPETYPE(  arg0, "posix_memalign - arg0");

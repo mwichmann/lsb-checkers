@@ -8,6 +8,7 @@
 static bool_t(*funcptr) (XDR * , enum_t * , char * , const struct xdr_discrim * , xdrproc_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 bool_t xdr_union (XDR * arg0 , enum_t * arg1 , char * arg2 , const struct xdr_discrim * arg3 , xdrproc_t arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ bool_t xdr_union (XDR * arg0 , enum_t * arg1 , char * arg2 , const struct xdr_di
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "xdr_union()");
 	validate_Rdaddress( arg0, "xdr_union - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_union - arg0");
 	validate_Rdaddress( arg1, "xdr_union - arg1");

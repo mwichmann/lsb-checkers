@@ -8,6 +8,7 @@
 static int(*funcptr) (key_t , int , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int semget (key_t arg0 , int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int semget (key_t arg0 , int arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "semget()");
 		validate_NULL_TYPETYPE(  arg0, "semget - arg0");
 		validate_NULL_TYPETYPE(  arg1, "semget - arg1");
 		validate_NULL_TYPETYPE(  arg2, "semget - arg2");

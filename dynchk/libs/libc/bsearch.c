@@ -8,6 +8,7 @@
 static void *(*funcptr) (const void * , const void * , size_t , size_t , __compar_fn_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void * bsearch (const void * arg0 , const void * arg1 , size_t arg2 , size_t arg3 , __compar_fn_t arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ void * bsearch (const void * arg0 , const void * arg1 , size_t arg2 , size_t arg
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "bsearch()");
 	validate_Rdaddress( arg0, "bsearch - arg0");
 		validate_NULL_TYPETYPE(  arg0, "bsearch - arg0");
 	validate_Rdaddress( arg1, "bsearch - arg1");

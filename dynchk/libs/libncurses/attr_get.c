@@ -7,6 +7,7 @@
 static int(*funcptr) (attr_t * , short * , void * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "attr_get()");
 	validate_Rdaddress( arg0, "attr_get - arg0");
 		validate_NULL_TYPETYPE(  arg0, "attr_get - arg0");
 	validate_Rdaddress( arg1, "attr_get - arg1");

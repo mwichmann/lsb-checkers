@@ -7,6 +7,7 @@
 static int(*funcptr) (FILE * , const fpos_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int fsetpos (FILE * arg0 , const fpos_t * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int fsetpos (FILE * arg0 , const fpos_t * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "fsetpos()");
 	validate_Rdaddress( arg0, "fsetpos - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fsetpos - arg0");
 	validate_Rdaddress( arg1, "fsetpos - arg1");

@@ -7,6 +7,7 @@
 static struct protoent *(*funcptr) () = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 struct protoent * getprotoent ()
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ struct protoent * getprotoent ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getprotoent()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

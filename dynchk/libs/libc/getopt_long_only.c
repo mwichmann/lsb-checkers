@@ -7,6 +7,7 @@
 static int(*funcptr) (int , char *const  [], const char * , const struct option * , int * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int getopt_long_only (int arg0 , char *const  arg1 [], const char * arg2 , const struct option * arg3 , int * arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int getopt_long_only (int arg0 , char *const  arg1 [], const char * arg2 , const
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "getopt_long_only()");
 		validate_NULL_TYPETYPE(  arg0, "getopt_long_only - arg0");
 		validate_NULL_TYPETYPE(  arg1, "getopt_long_only - arg1");
 	validate_Rdaddress( arg2, "getopt_long_only - arg2");

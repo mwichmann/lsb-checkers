@@ -8,6 +8,7 @@
 static wchar_t *(*funcptr) (const wchar_t * , wchar_t , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 wchar_t * wmemchr (const wchar_t * arg0 , wchar_t arg1 , size_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ wchar_t * wmemchr (const wchar_t * arg0 , wchar_t arg1 , size_t arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "wmemchr()");
 	validate_Rdaddress( arg0, "wmemchr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wmemchr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wmemchr - arg1");

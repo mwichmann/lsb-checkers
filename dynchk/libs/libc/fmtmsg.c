@@ -7,6 +7,7 @@
 static int(*funcptr) (long , const char * , int , const char * , const char * , const char * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int fmtmsg (long arg0 , const char * arg1 , int arg2 , const char * arg3 , const char * arg4 , const char * arg5 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int fmtmsg (long arg0 , const char * arg1 , int arg2 , const char * arg3 , const
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "fmtmsg()");
 		validate_NULL_TYPETYPE(  arg0, "fmtmsg - arg0");
 	validate_Rdaddress( arg1, "fmtmsg - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fmtmsg - arg1");

@@ -8,6 +8,7 @@
 static unsigned long long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 unsigned long long wcstoull (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ unsigned long long wcstoull (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "wcstoull()");
 	validate_Rdaddress( arg0, "wcstoull - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstoull - arg0");
 	validate_Rdaddress( arg1, "wcstoull - arg1");

@@ -9,6 +9,7 @@
 static int(*funcptr) (int , fd_set * , fd_set * , fd_set * , struct timeval * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct timeval * arg4 )
 {
 	int reset_flag = __lsb_check_params;
@@ -18,6 +19,7 @@ int select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct ti
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "select()");
 		validate_NULL_TYPETYPE(  arg0, "select - arg0");
 		if( arg1 ) {
 	validate_Rdaddress( arg1, "select - arg1");

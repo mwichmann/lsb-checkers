@@ -10,6 +10,7 @@
 static int(*funcptr) (FILE * , const wchar_t * , va_list ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int vfwprintf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -19,6 +20,7 @@ int vfwprintf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "vfwprintf()");
 	validate_Rdaddress( arg0, "vfwprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vfwprintf - arg0");
 	validate_Rdaddress( arg1, "vfwprintf - arg1");

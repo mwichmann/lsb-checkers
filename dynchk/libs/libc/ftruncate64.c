@@ -7,6 +7,7 @@
 static int(*funcptr) (int , off64_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int ftruncate64 (int arg0 , off64_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int ftruncate64 (int arg0 , off64_t arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "ftruncate64()");
 		validate_NULL_TYPETYPE(  arg0, "ftruncate64 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ftruncate64 - arg1");
 	}

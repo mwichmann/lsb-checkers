@@ -7,6 +7,4 @@ Usage:
 	(from the dynchk directory)
 	./lsbdynchk `command'
 
-Problems:
-segfault.
 

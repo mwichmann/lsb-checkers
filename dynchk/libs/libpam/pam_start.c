@@ -7,6 +7,7 @@
 static int(*funcptr) (const char * , const char * , const struct pam_conv * , pam_handle_t * * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * arg2 , pam_handle_t * * arg3 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * a
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "pam_start()");
 	validate_Rdaddress( arg0, "pam_start - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pam_start - arg0");
 	validate_Rdaddress( arg1, "pam_start - arg1");

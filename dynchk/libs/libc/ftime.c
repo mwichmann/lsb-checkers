@@ -7,6 +7,7 @@
 static int(*funcptr) (struct timeb * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int ftime (struct timeb * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int ftime (struct timeb * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "ftime()");
 	validate_Rdaddress( arg0, "ftime - arg0");
 		validate_NULL_TYPETYPE(  arg0, "ftime - arg0");
 	}

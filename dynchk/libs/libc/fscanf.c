@@ -6,20 +6,23 @@
  
 static int (*funcptr)(FILE *f, const char *, ...) = 0;
 
+extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int fscanf(FILE *f, const char *format, ...)
 {	
 	va_list args;
+	int reset_flag = __lsb_check_params;
+	int ret_value;
 	va_start(args, format);
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfscanf");
-	return funcptr(f, format, args);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params = 0;
+		__lsb_output(5-__lsb_check_params, "setkey()");
+	}
+	ret_value = funcptr(f, format, args);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 
-int __lsb_fscanf(FILE *f, const char *format, ...)
-{	
-	va_list args;
-	va_start(args, format);
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vfscanf");
-	return funcptr(f, format, args);
-}

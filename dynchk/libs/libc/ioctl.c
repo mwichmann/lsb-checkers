@@ -26,6 +26,7 @@ ioctlok=0;
 }
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int ioctl(int fd, unsigned long request, ...)
 {
 	int reset_flag = __lsb_check_params;
@@ -41,13 +42,15 @@ int ioctl(int fd, unsigned long request, ...)
 	{
 		if(__lsb_check_params)
 		{
+        		__lsb_output(5-__lsb_check_params, "setkey()");
 			__lsb_check_params=0;
 			validate_filedescriptor(fd, "ioctl");
 			validate_ioctlreq(request, "ioctl");
 			validate_RWaddress(arg, "ioctl");
 		}
 	}
-	// else { output error message; }
+	else
+		__lsb_output(-1, "ioctl used without permission from dynchk.\nThis indicates that ioctl was called from within an application.");
 	ret_value = funcptr(fd, request, arg);
 	__lsb_check_params = reset_flag;
 	return ret_value;

@@ -8,6 +8,7 @@
 static uint16_t(*funcptr) (uint16_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 uint16_t ntohs (uint16_t arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ uint16_t ntohs (uint16_t arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "ntohs()");
 		validate_NULL_TYPETYPE(  arg0, "ntohs - arg0");
 	}
 	ret_value = funcptr(arg0);

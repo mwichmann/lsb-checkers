@@ -10,6 +10,7 @@
 static int (*funcptr)(const char *, ...) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int printf(const char *format, ...)
 {	
 	int reset_flag = __lsb_check_params;
@@ -23,6 +24,7 @@ int printf(const char *format, ...)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+		__lsb_output(6-__lsb_check_params, "setkey()");
 		validate_RWaddress(format, "printf");
 	}
 	__lsb_check_params = reset_flag;

@@ -8,6 +8,7 @@
 static bool_t(*funcptr) (XDR * , struct rpc_msg * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 bool_t xdr_callhdr (XDR * arg0 , struct rpc_msg * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ bool_t xdr_callhdr (XDR * arg0 , struct rpc_msg * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "xdr_callhdr()");
 	validate_Rdaddress( arg0, "xdr_callhdr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_callhdr - arg0");
 	validate_Rdaddress( arg1, "xdr_callhdr - arg1");

@@ -7,6 +7,7 @@
 static int(*funcptr) (int , const char * , struct stat * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int __xstat (int arg0 , const char * arg1 , struct stat * arg2 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int __xstat (int arg0 , const char * arg1 , struct stat * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "__xstat()");
 		validate_NULL_TYPETYPE(  arg0, "__xstat - arg0");
 	validate_Rdaddress( arg1, "__xstat - arg1");
 		validate_NULL_TYPETYPE(  arg1, "__xstat - arg1");

@@ -7,6 +7,7 @@
 static double(*funcptr) () = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 double drand48 ()
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ double drand48 ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "drand48()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;
