@@ -10,10 +10,8 @@ int fprintf(FILE *f, const char *format, ...)
 {	
 	va_list args;
 	va_start(args, format);
-lsb_printf("fprintf called!! funcptr=%p\n",funcptr);
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfprintf");
-lsb_printf("fprintf calling %p!!\n",funcptr);
 	return funcptr(f, format, args);
 }
 
