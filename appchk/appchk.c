@@ -26,7 +26,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.12 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.13 $";
 
 int
 main(int argc, char *argv[])
@@ -92,8 +92,9 @@ main(int argc, char *argv[])
 	}
 	if (tetj_start_journal(journal_filename, &journal, command_line)!=0)
 	{
-		printf("Could not open journal file %s for output\n",
+		printf("Could not open journal file %s for output..exiting\n",
 					 journal_filename);
+		printf("Use -o <filename> to specify an alternate location for the journal file\n");
 		exit(1);
   }
 
