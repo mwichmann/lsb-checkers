@@ -6,9 +6,19 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.24 $
+ * This is $Revision: 1.25 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.25  2003/08/29 13:18:39  anderson
+ * Change to build as standalone cxxabichk:
+ *
+ * 1) Don't include tetj.h using a rletive path
+ * 2) #ifdef _CXXABICHK_ a couple of things
+ * 3) Call check_lib() directly for libstdcxx instead of check_libs().
+ *
+ * Add some maintainer diagnostics for checking symbol versions. Report
+ * when newer version are found.
+ *
  * Revision 1.24  2003/08/26 07:58:38  cyeoh
  * libchk now calculates dynamically where the lsb libraries are by
  * using ldd and a dummy LSB binary which is linked against all LSB libraries
@@ -89,7 +99,12 @@
 #include "elfchk.h"
 #include "libchk.h"
 #include "hdr.h"
-#include "../tetj/tetj.h"
+#include "tetj.h"
+
+#ifdef _CXXABICHK_
+extern struct versym libstdcxx_so_5[];
+extern struct classinfo libstdcxx_so_5_classinfo[];
+#endif
 
 #define MAX_LENGTH_STRING 80
 struct libpath 
@@ -102,7 +117,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.24 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.25 $";
 
 extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
 
@@ -111,7 +126,7 @@ extern int check_class_info(char *libname, struct classinfo classes[], struct te
 int
 check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
 {
-  int j;
+  int i, j;
   char *symbol_name;
   /* See if this symbol is in the dynsyn section of the library */
 
@@ -193,7 +208,42 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
         continue;
       }
 
-      if (strcmp(file->versionnames[vers], entry->vername) != 0) 
+#ifdef DEBUG
+      printf("Symbol %s vers %s\n",
+             ElfGetStringIndex(file,file->syms[j].st_name,
+                               file->symhdr->sh_link),
+             file->versionnames[vers]);
+#endif
+
+      /* Convert the Version from the DB into a numerical value so we can do
+         more interesting comparisons */
+
+      for(i=2;i<file->numverdefs;i++)
+	if( strcmp(file->versionnames[i], entry->vername) == 0 )
+		break;
+
+      /* If the version matches, stop, we are done */
+      if (vers == i )
+	return 1;
+
+      /* If the version in the libary is greater, then warn, if in
+         maintainer mode */
+      if (vers > i )
+      {
+        if (print_warnings)
+        {
+          printf("    %s has newer version %s, expecting ",
+                 ElfGetStringIndex(file,file->syms[j].st_name,
+                                   file->symhdr->sh_link),
+                 file->versionnames[vers]);
+            printf("%s\n", entry->vername);
+	
+        }
+      }
+
+      /* If the version in the library is less than (older), only warn if
+         print_warning is true. */
+      if (vers < i )
       {
         if (print_warnings)
         {
@@ -206,19 +256,7 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
           else
             printf("unversioned\n");
 
-#ifdef DEBUG
-      printf("Symbol %s vers %s\n",
-             ElfGetStringIndex(file,file->syms[j].st_name,
-                               file->symhdr->sh_link),
-             file->versionnames[vers]);
-#endif
-
         }
-      }
-      else
-      {
-        /* Found match */
-        return 1;
       }
     }
   }
@@ -434,10 +472,19 @@ int main(int argc, char *argv[])
     exit(1);
   }
 
+
+#ifdef _CXXABICHK_
+  snprintf(tmp_string, TMP_STRING_SIZE, "C++ ABI Checker" );
+
+  tetj_add_config(journal, tmp_string);
+
+  check_lib("libstdc++.so.5",libstdcxx_so_5,libstdcxx_so_5_classinfo,journal);
+#else
   snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
   tetj_add_config(journal, tmp_string);
 
   check_libs(journal);
+#endif
 
   tetj_close_journal(journal);
 
