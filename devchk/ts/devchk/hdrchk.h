@@ -3,6 +3,7 @@
 #ifdef TET_TEST
 #include <tet_api.h>
 #define Msg tet_printf
+#define Log tet_printf
 #define HDRCHKTEST_PASS pcnt++;
 #define HDRCHKTEST_FAIL  /* no increment of pcnt */
 #else
@@ -15,8 +16,8 @@
  */
 #define CompareConstant(const,value) \
 	cnt++; \
-	Msg("subtest %d\n", cnt); \
-	Msg("Purpose: Compare Constant "#const" has value  %d\n", value); \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Compare Constant "#const" has value  %d\n", value); \
 	if( const != value ) {\
 		Msg(#const " is %d instead of expected %d\n", const, value); \
 		/* Msg(#const " is %f instead of expected %f\n", const, value); \
@@ -31,8 +32,8 @@
 
 #define CheckTypeSize(type,size) \
 	cnt++; \
-	Msg("subtest %d\n", cnt); \
-	Msg("Purpose: Check sizeof( "#type" ) is %d\n", size); \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Check sizeof( "#type" ) is %d\n", size); \
 	if( sizeof(type) != size ) { \
 		Msg("sizeof(" #type ") is %d instead of " #size "\n",sizeof(type)); \
 		Msg("UPDATE Type SET Tsize=%d WHERE Tname='" #type "';\n", sizeof(type)); \
@@ -48,8 +49,8 @@
 	char *foob=(char *)&foo; \
 	char *foom=(char *)&(foo.member); \
 	cnt++; \
-	Msg("subtest %d\n", cnt); \
-	Msg("Purpose: Check offset of (\" #member \") is %d\n", offset); \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Check offset of (\" #member \") is %d\n", offset); \
 	if( (foom-foob) != offset ) { \
 		Msg("offset(" #member ") is %d instead of " #offset "\n",(foom-foob)); \
 		Msg("UPDATE TypeMember SET TMoffset=%d WHERE TMname='" #member "';\n", (foom-foob)); \
