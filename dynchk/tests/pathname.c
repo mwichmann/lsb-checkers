@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include "../fhs/fhschk.h"
 
-int validate_pathname(const char *arg, int flags, const char *name)
+int validate_pathname_flags(const char *arg, int flags, const char *name)
 {
 	if( (flags&O_RDONLY) || (flags&O_RDWR) )
 		if( !is_fhs_readable(arg)) {
@@ -21,4 +21,9 @@ int validate_pathname(const char *arg, int flags, const char *name)
 		return 1;
 		}
 	return 0;
+}
+
+int validate_pathname(const char *arg, const char *name)
+{
+return validate_pathname_flags(arg,O_RDONLY,name);
 }
