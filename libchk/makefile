@@ -21,7 +21,7 @@ distclean: clean
 	rm -f libs.h libs.c
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) libchk
 
 .PHONE: clean distclean
 
