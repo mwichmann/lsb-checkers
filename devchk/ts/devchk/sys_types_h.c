@@ -25,6 +25,14 @@ Msg("Checking data structures in sys/types.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+/* No test for FD_SET(d,set) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for FD_CLR(d,set) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef FD_SETSIZE
 	CompareConstant(FD_SETSIZE,1024,4416,architecture)
 #else
@@ -36,14 +44,6 @@ cnt++;
 
 #ifdef _LSB_DEFAULT_ARCH
 /* No test for FD_ZERO(fdsetp) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for FD_SET(d,set) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for FD_CLR(d,set) */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -367,6 +367,26 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9172,0);
 Msg("Find size of blkcnt_t (9172)\n");
 #endif
 
+#ifdef __ia64__
+CheckTypeSize(fsblkcnt_t,8, 9174, 3)
+#elif __i386__
+CheckTypeSize(fsblkcnt_t,4, 9174, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9174,0);
+Msg("Find size of fsblkcnt_t (9174)\n");
+#endif
+
+#ifdef __i386__
+CheckTypeSize(fsfilcnt_t,4, 9176, 2)
+#elif __ia64__
+CheckTypeSize(fsfilcnt_t,8, 9176, 3)
+#elif __powerpc__
+CheckTypeSize(fsfilcnt_t,4, 9176, 6)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9176,0);
+Msg("Find size of fsfilcnt_t (9176)\n");
+#endif
+
 #ifdef __i386__
 CheckTypeSize(blkcnt64_t,8, 9178, 2)
 #elif __powerpc__
@@ -376,6 +396,28 @@ CheckTypeSize(blkcnt64_t,8, 9178, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9178,0);
 Msg("Find size of blkcnt64_t (9178)\n");
+#endif
+
+#ifdef __i386__
+CheckTypeSize(fsblkcnt64_t,8, 9180, 2)
+#elif __powerpc__
+CheckTypeSize(fsblkcnt64_t,8, 9180, 6)
+#elif __ia64__
+CheckTypeSize(fsblkcnt64_t,8, 9180, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9180,0);
+Msg("Find size of fsblkcnt64_t (9180)\n");
+#endif
+
+#ifdef __i386__
+CheckTypeSize(fsfilcnt64_t,8, 9182, 2)
+#elif __ia64__
+CheckTypeSize(fsfilcnt64_t,8, 9182, 3)
+#elif __powerpc__
+CheckTypeSize(fsfilcnt64_t,8, 9182, 6)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9182,0);
+Msg("Find size of fsfilcnt64_t (9182)\n");
 #endif
 
 #ifdef __i386__

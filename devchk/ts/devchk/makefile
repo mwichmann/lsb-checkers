@@ -48,6 +48,7 @@ OBJS = hdrchk.o \
 	regex_h.o \
 	sched_h.o \
 	search_h.o \
+	security_pam_appl_h.o \
 	semaphore_h.o \
 	setjmp_h.o \
 	signal_h.o \
@@ -73,10 +74,10 @@ OBJS = hdrchk.o \
 	sys_types_h.o \
 	sys_un_h.o \
 	sys_utsname_h.o \
-	sys_vfs_h.o \
 	sys_wait_h.o \
 	syslog_h.o \
 	tar_h.o \
+	term_h.o \
 	termios_h.o \
 	time_h.o \
 	ucontext_h.o \

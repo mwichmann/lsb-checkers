@@ -25,11 +25,11 @@ Msg("Checking data structures in setjmp.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for sigsetjmp(a,b) */
+/* No test for setjmp(env) */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for setjmp(env) */
+/* No test for sigsetjmp(a,b) */
 #endif
 
 #ifdef __i386__

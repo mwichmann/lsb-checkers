@@ -24,50 +24,10 @@ Msg("Checking data structures in zlib.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_NEED_DICT
-	CompareConstant(Z_NEED_DICT,2,4220,architecture)
+#ifdef Z_NO_COMPRESSION
+	CompareConstant(Z_NO_COMPRESSION,0,4227,architecture)
 #else
-Msg( "Error: Constant not found: Z_NEED_DICT\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef MAX_WBITS
-	CompareConstant(MAX_WBITS,15,5022,architecture)
-#else
-Msg( "Error: Constant not found: MAX_WBITS\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_ERRNO
-	CompareConstant(Z_ERRNO,(-1),4221,architecture)
-#else
-Msg( "Error: Constant not found: Z_ERRNO\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_STREAM_ERROR
-	CompareConstant(Z_STREAM_ERROR,(-2),4222,architecture)
-#else
-Msg( "Error: Constant not found: Z_STREAM_ERROR\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_DATA_ERROR
-	CompareConstant(Z_DATA_ERROR,(-3),4223,architecture)
-#else
-Msg( "Error: Constant not found: Z_DATA_ERROR\n");
+Msg( "Error: Constant not found: Z_NO_COMPRESSION\n");
 cnt++;
 #endif
 
@@ -84,186 +44,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_BUF_ERROR
-	CompareConstant(Z_BUF_ERROR,(-5),4225,architecture)
-#else
-Msg( "Error: Constant not found: Z_BUF_ERROR\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_NO_COMPRESSION
-	CompareConstant(Z_NO_COMPRESSION,0,4227,architecture)
-#else
-Msg( "Error: Constant not found: Z_NO_COMPRESSION\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_BEST_SPEED
-	CompareConstant(Z_BEST_SPEED,1,4228,architecture)
-#else
-Msg( "Error: Constant not found: Z_BEST_SPEED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_BEST_COMPRESSION
-	CompareConstant(Z_BEST_COMPRESSION,9,4229,architecture)
-#else
-Msg( "Error: Constant not found: Z_BEST_COMPRESSION\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_DEFAULT_COMPRESSION
-	CompareConstant(Z_DEFAULT_COMPRESSION,(-1),4230,architecture)
-#else
-Msg( "Error: Constant not found: Z_DEFAULT_COMPRESSION\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_FILTERED
-	CompareConstant(Z_FILTERED,1,4231,architecture)
-#else
-Msg( "Error: Constant not found: Z_FILTERED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_HUFFMAN_ONLY
-	CompareConstant(Z_HUFFMAN_ONLY,2,4232,architecture)
-#else
-Msg( "Error: Constant not found: Z_HUFFMAN_ONLY\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_DEFAULT_STRATEGY
-	CompareConstant(Z_DEFAULT_STRATEGY,0,4233,architecture)
-#else
-Msg( "Error: Constant not found: Z_DEFAULT_STRATEGY\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_BINARY
-	CompareConstant(Z_BINARY,0,4234,architecture)
-#else
-Msg( "Error: Constant not found: Z_BINARY\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_ASCII
-	CompareConstant(Z_ASCII,1,4235,architecture)
-#else
-Msg( "Error: Constant not found: Z_ASCII\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_UNKNOWN
-	CompareConstant(Z_UNKNOWN,2,4236,architecture)
-#else
-Msg( "Error: Constant not found: Z_UNKNOWN\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_DEFLATED
-	CompareConstant(Z_DEFLATED,8,4237,architecture)
-#else
-Msg( "Error: Constant not found: Z_DEFLATED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_NULL
-	CompareConstant(Z_NULL,0,4238,architecture)
-#else
-Msg( "Error: Constant not found: Z_NULL\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for deflateInit(strm,level) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for inflateInit(strm) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for deflateInit2(strm,level, method, windowBits, memLevel, strat */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for inflateInit2(strm,windowBits) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef ZLIB_VERSION
 	CompareStringConstant(ZLIB_VERSION,"1.1.4")
 #else
 Msg( "Error: Constant not found: ZLIB_VERSION\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_NO_FLUSH
-	CompareConstant(Z_NO_FLUSH,0,4213,architecture)
-#else
-Msg( "Error: Constant not found: Z_NO_FLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_PARTIAL_FLUSH
-	CompareConstant(Z_PARTIAL_FLUSH,1,4214,architecture)
-#else
-Msg( "Error: Constant not found: Z_PARTIAL_FLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_SYNC_FLUSH
-	CompareConstant(Z_SYNC_FLUSH,2,4215,architecture)
-#else
-Msg( "Error: Constant not found: Z_SYNC_FLUSH\n");
 cnt++;
 #endif
 
@@ -280,6 +64,64 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_NEED_DICT
+	CompareConstant(Z_NEED_DICT,2,4220,architecture)
+#else
+Msg( "Error: Constant not found: Z_NEED_DICT\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_DEFLATED
+	CompareConstant(Z_DEFLATED,8,4237,architecture)
+#else
+Msg( "Error: Constant not found: Z_DEFLATED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for inflateInit(strm) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for deflateInit2(strm,level, method, windowBits, memLevel, stratgey) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_HUFFMAN_ONLY
+	CompareConstant(Z_HUFFMAN_ONLY,2,4232,architecture)
+#else
+Msg( "Error: Constant not found: Z_HUFFMAN_ONLY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_NO_FLUSH
+	CompareConstant(Z_NO_FLUSH,0,4213,architecture)
+#else
+Msg( "Error: Constant not found: Z_NO_FLUSH\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_DEFAULT_COMPRESSION
+	CompareConstant(Z_DEFAULT_COMPRESSION,(-1),4230,architecture)
+#else
+Msg( "Error: Constant not found: Z_DEFAULT_COMPRESSION\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef Z_FINISH
 	CompareConstant(Z_FINISH,4,4217,architecture)
 #else
@@ -290,10 +132,134 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_DATA_ERROR
+	CompareConstant(Z_DATA_ERROR,(-3),4223,architecture)
+#else
+Msg( "Error: Constant not found: Z_DATA_ERROR\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_PARTIAL_FLUSH
+	CompareConstant(Z_PARTIAL_FLUSH,1,4214,architecture)
+#else
+Msg( "Error: Constant not found: Z_PARTIAL_FLUSH\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_UNKNOWN
+	CompareConstant(Z_UNKNOWN,2,4236,architecture)
+#else
+Msg( "Error: Constant not found: Z_UNKNOWN\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for deflateInit(strm,level) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef Z_OK
 	CompareConstant(Z_OK,0,4218,architecture)
 #else
 Msg( "Error: Constant not found: Z_OK\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_BINARY
+	CompareConstant(Z_BINARY,0,4234,architecture)
+#else
+Msg( "Error: Constant not found: Z_BINARY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_STREAM_ERROR
+	CompareConstant(Z_STREAM_ERROR,(-2),4222,architecture)
+#else
+Msg( "Error: Constant not found: Z_STREAM_ERROR\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef MAX_MEM_LEVEL
+	CompareConstant(MAX_MEM_LEVEL,9,5021,architecture)
+#else
+Msg( "Error: Constant not found: MAX_MEM_LEVEL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_ASCII
+	CompareConstant(Z_ASCII,1,4235,architecture)
+#else
+Msg( "Error: Constant not found: Z_ASCII\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_BEST_COMPRESSION
+	CompareConstant(Z_BEST_COMPRESSION,9,4229,architecture)
+#else
+Msg( "Error: Constant not found: Z_BEST_COMPRESSION\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_DEFAULT_STRATEGY
+	CompareConstant(Z_DEFAULT_STRATEGY,0,4233,architecture)
+#else
+Msg( "Error: Constant not found: Z_DEFAULT_STRATEGY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_NULL
+	CompareConstant(Z_NULL,0,4238,architecture)
+#else
+Msg( "Error: Constant not found: Z_NULL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_SYNC_FLUSH
+	CompareConstant(Z_SYNC_FLUSH,2,4215,architecture)
+#else
+Msg( "Error: Constant not found: Z_SYNC_FLUSH\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef MAX_WBITS
+	CompareConstant(MAX_WBITS,15,5022,architecture)
+#else
+Msg( "Error: Constant not found: MAX_WBITS\n");
 cnt++;
 #endif
 
@@ -310,10 +276,44 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef MAX_MEM_LEVEL
-	CompareConstant(MAX_MEM_LEVEL,9,5021,architecture)
+/* No test for inflateInit2(strm,windowBits) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_BEST_SPEED
+	CompareConstant(Z_BEST_SPEED,1,4228,architecture)
 #else
-Msg( "Error: Constant not found: MAX_MEM_LEVEL\n");
+Msg( "Error: Constant not found: Z_BEST_SPEED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_FILTERED
+	CompareConstant(Z_FILTERED,1,4231,architecture)
+#else
+Msg( "Error: Constant not found: Z_FILTERED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_ERRNO
+	CompareConstant(Z_ERRNO,(-1),4221,architecture)
+#else
+Msg( "Error: Constant not found: Z_ERRNO\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_BUF_ERROR
+	CompareConstant(Z_BUF_ERROR,(-5),4225,architecture)
+#else
+Msg( "Error: Constant not found: Z_BUF_ERROR\n");
 cnt++;
 #endif
 
@@ -326,15 +326,6 @@ CheckTypeSize(intf,4, 10168, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10168,0);
 Msg("Find size of intf (10168)\n");
-#endif
-
-#ifdef __i386__
-CheckTypeSize(uIntf,4, 10169, 2)
-#elif __ia64__
-CheckTypeSize(uIntf,4, 10169, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10169,0);
-Msg("Find size of uIntf (10169)\n");
 #endif
 
 #ifdef __i386__
@@ -489,6 +480,15 @@ CheckTypeSize(Bytef,1, 9876, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9876,0);
 Msg("Find size of Bytef (9876)\n");
+#endif
+
+#ifdef __i386__
+CheckTypeSize(uIntf,4, 10169, 2)
+#elif __ia64__
+CheckTypeSize(uIntf,4, 10169, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10169,0);
+Msg("Find size of uIntf (10169)\n");
 #endif
 
 #ifdef TET_TEST

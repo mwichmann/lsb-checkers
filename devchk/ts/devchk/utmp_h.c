@@ -24,90 +24,10 @@ Msg("Checking data structures in utmp.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef UT_LINESIZE
-	CompareConstant(UT_LINESIZE,32,4960,architecture)
-#else
-Msg( "Error: Constant not found: UT_LINESIZE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef UT_NAMESIZE
-	CompareConstant(UT_NAMESIZE,32,4961,architecture)
-#else
-Msg( "Error: Constant not found: UT_NAMESIZE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef UT_HOSTSIZE
-	CompareConstant(UT_HOSTSIZE,256,4962,architecture)
-#else
-Msg( "Error: Constant not found: UT_HOSTSIZE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef EMPTY
 	CompareConstant(EMPTY,0,4963,architecture)
 #else
 Msg( "Error: Constant not found: EMPTY\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef RUN_LVL
-	CompareConstant(RUN_LVL,1,4964,architecture)
-#else
-Msg( "Error: Constant not found: RUN_LVL\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef BOOT_TIME
-	CompareConstant(BOOT_TIME,2,4965,architecture)
-#else
-Msg( "Error: Constant not found: BOOT_TIME\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef NEW_TIME
-	CompareConstant(NEW_TIME,3,4966,architecture)
-#else
-Msg( "Error: Constant not found: NEW_TIME\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef OLD_TIME
-	CompareConstant(OLD_TIME,4,4967,architecture)
-#else
-Msg( "Error: Constant not found: OLD_TIME\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef INIT_PROCESS
-	CompareConstant(INIT_PROCESS,5,4968,architecture)
-#else
-Msg( "Error: Constant not found: INIT_PROCESS\n");
 cnt++;
 #endif
 
@@ -124,10 +44,70 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef USER_PROCESS
-	CompareConstant(USER_PROCESS,7,4970,architecture)
+#ifdef ACCOUNTING
+	CompareConstant(ACCOUNTING,9,4972,architecture)
 #else
-Msg( "Error: Constant not found: USER_PROCESS\n");
+Msg( "Error: Constant not found: ACCOUNTING\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef BOOT_TIME
+	CompareConstant(BOOT_TIME,2,4965,architecture)
+#else
+Msg( "Error: Constant not found: BOOT_TIME\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef RUN_LVL
+	CompareConstant(RUN_LVL,1,4964,architecture)
+#else
+Msg( "Error: Constant not found: RUN_LVL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef INIT_PROCESS
+	CompareConstant(INIT_PROCESS,5,4968,architecture)
+#else
+Msg( "Error: Constant not found: INIT_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef UT_LINESIZE
+	CompareConstant(UT_LINESIZE,32,4960,architecture)
+#else
+Msg( "Error: Constant not found: UT_LINESIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef OLD_TIME
+	CompareConstant(OLD_TIME,4,4967,architecture)
+#else
+Msg( "Error: Constant not found: OLD_TIME\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef UT_NAMESIZE
+	CompareConstant(UT_NAMESIZE,32,4961,architecture)
+#else
+Msg( "Error: Constant not found: UT_NAMESIZE\n");
 cnt++;
 #endif
 
@@ -144,10 +124,30 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef ACCOUNTING
-	CompareConstant(ACCOUNTING,9,4972,architecture)
+#ifdef USER_PROCESS
+	CompareConstant(USER_PROCESS,7,4970,architecture)
 #else
-Msg( "Error: Constant not found: ACCOUNTING\n");
+Msg( "Error: Constant not found: USER_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NEW_TIME
+	CompareConstant(NEW_TIME,3,4966,architecture)
+#else
+Msg( "Error: Constant not found: NEW_TIME\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef UT_HOSTSIZE
+	CompareConstant(UT_HOSTSIZE,256,4962,architecture)
+#else
+Msg( "Error: Constant not found: UT_HOSTSIZE\n");
 cnt++;
 #endif
 
