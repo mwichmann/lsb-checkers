@@ -66,17 +66,29 @@ my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST,
 	or die "Couldn't connect to database: " . DBI->errstr;
 
 my $struct_q = $dbh->prepare(
-'SELECT Tname, Tid, Hname
+'SELECT Tname, Hname
 FROM Type, HeaderGroup, Header
 WHERE Ttype = "Struct"
   AND Theadergroup = HGid
   AND HGheader = Hid
   AND Tstatus != "Excluded"
+  AND Tstatus != "Indirect"
   AND Hstd = "Yes"
   AND (Tarch = 1 OR Tarch = '.$Arch.')
-GROUP BY Tid'
+GROUP BY Tname'
 							 )
 	or die "Couldn't prepare struct query: " . DBI->errstr;
+
+my $struct_arch_q = $dbh->prepare(
+'SELECT Tid, Asymbol
+FROM Architecture, Type
+WHERE Aid = Tarch
+  AND Tname = ?
+  AND Ttype = "Struct"
+  AND Tstatus != "Indirect"
+  AND Tstatus != "Excluded"
+ORDER BY Tarch'
+) or die "Couldn't prepare struct_Arch query: ".DBI->errstr;
 
 # Warning - funkiness:  @write_body_q[] is not prepared here.
 # It is prepared dynamically in write_body_q to properly handle recursion
@@ -306,6 +318,37 @@ sub write_validate_declaration
 	print $fh ";" if($header_format);
 	print $fh "\n";
 }
+sub write_arch_macro
+{
+	my($fh, $arch_name) = @_;
+	if($arch_name =~ /^(\w+)\s*&&.*!\s*(\w+)/)
+	{	print $fh "defined($1) && !defined($2)";
+	}
+	else
+	{	print $fh "defined($arch_name)";
+	}
+}
+
+sub open_arch
+{
+	my($fh, $arch_name) = @_;
+	unless($arch_name eq "1")
+	{
+		print $fh "#if ";
+		write_arch_macro($fh, $arch_name);
+		print $fh "\n";
+	}
+}
+sub close_arch
+{
+	my($fh, $arch_name) = @_;
+	unless($arch_name eq "1")
+	{
+		print $fh "#endif /*";
+		write_arch_macro($fh, $arch_name);
+		print $fh "*/\n";
+	}
+}
 
 ################################################################################
 #
@@ -324,11 +367,11 @@ open($header_file, '>struct_tests.h')
 	or die "Couldn't create file struct_tests.h: ".DBI->errstr;
 
  
-STRUCT: while(my ($struct_name, $struct_id, $struct_header) = $struct_q->fetchrow_array())
+STRUCT: while(my ($struct_name, $struct_header) = $struct_q->fetchrow_array())
 {
 	# This needs to be fixed at some point:
 	# some structure types are apprently in subdirectories. 
-    # I need a naming scheme that handles this.
+	# I need a naming scheme that handles this.
 	next STRUCT if($struct_name =~ /\//); 
 	
 	# Type members whose Tname begins with "anon-" are anonymous structs.
@@ -346,14 +389,25 @@ STRUCT: while(my ($struct_name, $struct_id, $struct_header) = $struct_q->fetchro
 	open($validate_file, '>struct/validate_struct_' . $struct_name . '.c')
 		or die $struct_name."Can't open output: $!";
 
-	write_header($validate_file, $struct_header, 1);
-	write_validate_declaration($validate_file, $struct_name, $struct_id, 0);
-	write_body($validate_file, "input->", $struct_id, 0); 
-	
-	close $validate_file;
+	$struct_arch_q->execute($struct_name)
+		or die "Couldn't execute struct_arch query: ".DBI->errstr;
 
-	# write declaration to struct_tests.h
-	write_validate_declaration($header_file, $struct_name, $struct_id, 1);
+	write_header($validate_file, $struct_header, 1);
+	
+	while(my ($struct_id, $struct_arch) = $struct_arch_q->fetchrow_array())
+	{
+		open_arch($validate_file, $struct_arch);
+		write_validate_declaration($validate_file, $struct_name, $struct_id, 0);
+		write_body($validate_file, "input->", $struct_id, 0); 
+		close_arch($validate_file, $struct_arch);
+
+		open_arch($header_file, $struct_arch);
+		write_validate_declaration($header_file, $struct_name, $struct_id, 1);
+		close_arch($header_file, $struct_arch);
+	}
+	$struct_arch_q->finish();
+
+	close $validate_file;
 }
 $struct_q->finish;
 print STRUCT_MK "\n";
