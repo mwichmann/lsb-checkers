@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.58 $
+ * This is $Revision: 1.59 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.59  2005/03/21 13:58:56  anderson
+ * Make the default report new symbols for now - turn of later for final release
+ *
  * Revision 1.58  2005/03/01 19:09:15  anderson
  * bug #513 - make isProgram be tri-state to support prog, libs & objs
  *
@@ -219,14 +222,14 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.58 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.59 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
  * but probably not others
  */
 
-int libchk_debug=LIBCHK_DEBUG_CXXHUSH;
+int libchk_debug=LIBCHK_DEBUG_CXXHUSH|LIBCHK_DEBUG_NEWVERS;
 
 /*
  * What module to check against. - NULL means check all
