@@ -149,7 +149,7 @@ checkhdrfield( e_flags, 0 )
 #elif __s390__ && !__s390x__
 checkhdrfield( e_flags, 0 )
 #elif __s390x__
-checkhdrfield( e_flags, 0x40 )
+checkhdrfield( e_flags, 0 )
 #else
 fprintf(stderr, "e_flags not checked!!\n");
 #endif
