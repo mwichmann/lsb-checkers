@@ -60,6 +60,20 @@
 		HDRCHKTEST_PASS \
 	}
 
+#define CheckArrayTypeSize(type,basesize,size,tid,aid) \
+	cnt++; \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Check sizeof( "#type" ) is %d\n", size); \
+	if( sizeof(type) != basesize*size ) { \
+		Msg("sizeof(" #type ") is %d instead of %d * %d\n", sizeof(type), basesize, size ); \
+		Msg("REPLACE INTO ArchType (ATtid,ATaid,ATsize) "); \
+		Msg("VALUES (%d, %d, %d);\n", tid, aid, sizeof(type)/basesize); \
+		HDRCHKTEST_FAIL \
+	} \
+	else { \
+		HDRCHKTEST_PASS \
+	}
+
 #define CheckOffset(str,member,offset,aid, tmid) \
 { \
 	str foo; \
