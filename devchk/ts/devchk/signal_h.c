@@ -800,7 +800,7 @@ CheckTypeSize(_psw_t,8, 10581, 10)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_s390_regs_common,16, 10821, 10)
+CheckTypeSize(_s390_regs_common,136, 10821, 10)
 #endif
 
 #if __powerpc64__
@@ -832,7 +832,7 @@ CheckOffset(struct pt_regs,result,344,9,40601)
 #endif
 
 #if __s390x__
-CheckTypeSize(_s390_regs_common,32, 10838, 12)
+CheckTypeSize(_s390_regs_common,208, 10838, 12)
 #endif
 
 #if __i386__
@@ -981,11 +981,11 @@ CheckTypeSize(struct sigaction,140, 10402, 10)
 CheckMemberSize(struct sigaction,__sigaction_handler,4,10,34716)
 CheckOffset(struct sigaction,__sigaction_handler,0,10,34716)
 CheckMemberSize(struct sigaction,sa_flags,4,10,34717)
-CheckOffset(struct sigaction,sa_flags,4,10,34717)
+CheckOffset(struct sigaction,sa_flags,132,10,34717)
 CheckMemberSize(struct sigaction,sa_restorer,4,10,34718)
-CheckOffset(struct sigaction,sa_restorer,8,10,34718)
+CheckOffset(struct sigaction,sa_restorer,136,10,34718)
 CheckMemberSize(struct sigaction,sa_mask,128,10,34719)
-CheckOffset(struct sigaction,sa_mask,12,10,34719)
+CheckOffset(struct sigaction,sa_mask,4,10,34719)
 #endif
 
 #if __powerpc64__
@@ -1121,19 +1121,19 @@ CheckOffset(struct _xmmreg,element,0,11,40386)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_s390_fp_regs,16, 10832, 10)
+CheckTypeSize(_s390_fp_regs,136, 10832, 10)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_sigregs,32, 10834, 10)
+CheckTypeSize(_sigregs,272, 10834, 10)
 #endif
 
 #if __s390x__
-CheckTypeSize(_s390_fp_regs,16, 10840, 12)
+CheckTypeSize(_s390_fp_regs,136, 10840, 12)
 #endif
 
 #if __s390x__
-CheckTypeSize(_sigregs,48, 10842, 12)
+CheckTypeSize(_sigregs,344, 10842, 12)
 #endif
 
 #if __i386__
@@ -1323,29 +1323,29 @@ CheckOffset(struct sigcontext,__reserved1,192,11,40425)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(struct sigcontext,816, 10816, 9)
-CheckMemberSize(struct sigcontext,_unused,8,9,40580)
+CheckTypeSize(struct sigcontext,712, 10816, 9)
+CheckMemberSize(struct sigcontext,_unused,32,9,40580)
 CheckOffset(struct sigcontext,_unused,0,9,40580)
 CheckMemberSize(struct sigcontext,signal,4,9,40581)
-CheckOffset(struct sigcontext,signal,8,9,40581)
+CheckOffset(struct sigcontext,signal,32,9,40581)
 CheckMemberSize(struct sigcontext,handler,8,9,40582)
-CheckOffset(struct sigcontext,handler,16,9,40582)
+CheckOffset(struct sigcontext,handler,40,9,40582)
 CheckMemberSize(struct sigcontext,oldmask,8,9,40583)
-CheckOffset(struct sigcontext,oldmask,24,9,40583)
+CheckOffset(struct sigcontext,oldmask,48,9,40583)
 CheckMemberSize(struct sigcontext,regs,8,9,40584)
-CheckOffset(struct sigcontext,regs,32,9,40584)
-CheckMemberSize(struct sigcontext,gp_regs,512,9,40602)
-CheckOffset(struct sigcontext,gp_regs,40,9,40602)
+CheckOffset(struct sigcontext,regs,56,9,40584)
+CheckMemberSize(struct sigcontext,gp_regs,384,9,40602)
+CheckOffset(struct sigcontext,gp_regs,64,9,40602)
 CheckMemberSize(struct sigcontext,fp_regs,264,9,40603)
-CheckOffset(struct sigcontext,fp_regs,552,9,40603)
+CheckOffset(struct sigcontext,fp_regs,448,9,40603)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(struct sigcontext,8, 10817, 10)
-CheckMemberSize(struct sigcontext,oldmask,4,10,40608)
+CheckTypeSize(struct sigcontext,12, 10817, 10)
+CheckMemberSize(struct sigcontext,oldmask,8,10,40608)
 CheckOffset(struct sigcontext,oldmask,0,10,40608)
 CheckMemberSize(struct sigcontext,sregs,4,10,40609)
-CheckOffset(struct sigcontext,sregs,4,10,40609)
+CheckOffset(struct sigcontext,sregs,8,10,40609)
 #endif
 
 #if __s390x__
