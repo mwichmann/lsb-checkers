@@ -12,7 +12,6 @@ check_lib("libXext.so.6",libXext_so_6);
 check_lib("libXt.so.6",libXt_so_6);
 check_lib("libc.so.6",libc_so_6);
 check_lib("libcrypt.so.1",libcrypt_so_1);
-check_lib("libdb.so.3",libdb_so_3);
 check_lib("libdl.so.2",libdl_so_2);
 check_lib("libm.so.6",libm_so_6);
 check_lib("libncurses.so.5",libncurses_so_5);
