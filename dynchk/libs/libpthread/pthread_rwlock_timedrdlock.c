@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #include <sys/time.h>
 #undef pthread_rwlock_timedrdlock
@@ -14,7 +14,7 @@ int pthread_rwlock_timedrdlock (pthread_rwlock_t * arg0 , const struct timespec 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_timedrdlock");
+		funcptr = lsb_dlsym(RTLD_NEXT, "pthread_rwlock_timedrdlock");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XOpenIM
 static XIM(*funcptr) (Display * , struct _XrmHashBucketRec * , char * , char * ) = 0;
@@ -13,11 +13,11 @@ XIM XOpenIM (Display * arg0 , struct _XrmHashBucketRec * arg1 , char * arg2 , ch
 	int reset_flag = __lsb_check_params;
 	XIM ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XOpenIM ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XOpenIM");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XOpenIM()");
+		__lsb_output(4, "XOpenIM()");
 		validate_RWaddress( arg0, "XOpenIM - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XOpenIM - arg0");
 		validate_RWaddress( arg1, "XOpenIM - arg1");

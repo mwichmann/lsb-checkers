@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XQueryKeymap
 static int(*funcptr) (Display * , char ) = 0;
@@ -13,11 +13,11 @@ int XQueryKeymap (Display * arg0 , char arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XQueryKeymap ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XQueryKeymap");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XQueryKeymap()");
+		__lsb_output(4, "XQueryKeymap()");
 		validate_RWaddress( arg0, "XQueryKeymap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XQueryKeymap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XQueryKeymap - arg1");

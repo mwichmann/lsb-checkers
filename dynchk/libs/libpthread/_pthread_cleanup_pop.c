@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #undef _pthread_cleanup_pop
 static void(*funcptr) (struct _pthread_cleanup_buffer * , int ) = 0;
@@ -12,7 +12,7 @@ void _pthread_cleanup_pop (struct _pthread_cleanup_buffer * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "_pthread_cleanup_pop");
+		funcptr = lsb_dlsym(RTLD_NEXT, "_pthread_cleanup_pop");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

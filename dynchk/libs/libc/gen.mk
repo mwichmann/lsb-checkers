@@ -115,7 +115,6 @@ dup2.o \
 ecvt.o \
 encrypt.o \
 endgrent.o \
-endnetent.o \
 endprotoent.o \
 endpwent.o \
 endservent.o \
@@ -212,7 +211,6 @@ getitimer.o \
 getloadavg.o \
 getlogin.o \
 getnameinfo.o \
-getnetbyaddr.o \
 getopt.o \
 getopt_long.o \
 getopt_long_only.o \
@@ -466,7 +464,6 @@ setitimer.o \
 setkey.o \
 setlocale.o \
 setlogmask.o \
-setnetent.o \
 setpgid.o \
 setpgrp.o \
 setpriority.o \
@@ -511,7 +508,6 @@ sigqueue.o \
 sigrelse.o \
 sigreturn.o \
 sigset.o \
-sigstack.o \
 sigsuspend.o \
 sigtimedwait.o \
 sigwait.o \

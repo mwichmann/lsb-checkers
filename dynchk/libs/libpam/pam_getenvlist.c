@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <security/pam_appl.h>
 #undef pam_getenvlist
 static char * *(*funcptr) (pam_handle_t * ) = 0;
@@ -13,7 +13,7 @@ char * * pam_getenvlist (pam_handle_t * arg0 )
 	int reset_flag = __lsb_check_params;
 	char * * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pam_getenvlist");
+		funcptr = lsb_dlsym(RTLD_NEXT, "pam_getenvlist");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

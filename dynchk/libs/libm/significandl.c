@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef significandl
 static long double(*funcptr) (long double ) = 0;
@@ -13,7 +13,7 @@ long double significandl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "significandl", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "significandl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

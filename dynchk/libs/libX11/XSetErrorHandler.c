@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XSetErrorHandler
 static XErrorHandler(*funcptr) (XErrorHandler ) = 0;
@@ -13,11 +13,11 @@ XErrorHandler XSetErrorHandler (XErrorHandler arg0 )
 	int reset_flag = __lsb_check_params;
 	XErrorHandler ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSetErrorHandler ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XSetErrorHandler");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSetErrorHandler()");
+		__lsb_output(4, "XSetErrorHandler()");
 		validate_NULL_TYPETYPE(  arg0, "XSetErrorHandler - arg0");
 	}
 	ret_value = funcptr(arg0);

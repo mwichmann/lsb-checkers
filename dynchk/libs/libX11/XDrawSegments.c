@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XDrawSegments
@@ -14,11 +14,11 @@ int XDrawSegments (Display * arg0 , Drawable arg1 , GC arg2 , XSegment * arg3 , 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XDrawSegments ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XDrawSegments");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XDrawSegments()");
+		__lsb_output(4, "XDrawSegments()");
 		validate_RWaddress( arg0, "XDrawSegments - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDrawSegments - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDrawSegments - arg1");

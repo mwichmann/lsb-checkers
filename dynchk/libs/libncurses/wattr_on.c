@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef wattr_on
 static int(*funcptr) (WINDOW * , attr_t , void * ) = 0;
@@ -13,7 +13,7 @@ int wattr_on (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wattr_on");
+		funcptr = lsb_dlsym(RTLD_NEXT, "wattr_on");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

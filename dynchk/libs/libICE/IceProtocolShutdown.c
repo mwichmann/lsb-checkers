@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceProtocolShutdown
 static int(*funcptr) (IceConn , int ) = 0;
@@ -13,11 +13,11 @@ int IceProtocolShutdown (IceConn arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceProtocolShutdown ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceProtocolShutdown");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceProtocolShutdown()");
+		__lsb_output(4, "IceProtocolShutdown()");
 		validate_NULL_TYPETYPE(  arg0, "IceProtocolShutdown - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceProtocolShutdown - arg1");
 	}

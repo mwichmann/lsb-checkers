@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetSubImage
@@ -14,11 +14,11 @@ XImage * XGetSubImage (Display * arg0 , Drawable arg1 , int arg2 , int arg3 , un
 	int reset_flag = __lsb_check_params;
 	XImage * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetSubImage ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetSubImage");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetSubImage()");
+		__lsb_output(4, "XGetSubImage()");
 		validate_RWaddress( arg0, "XGetSubImage - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetSubImage - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetSubImage - arg1");

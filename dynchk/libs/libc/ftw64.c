@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <ftw.h>
 #undef ftw64
 static int(*funcptr) (const char * , __ftw64_func_t , int ) = 0;
@@ -13,7 +13,7 @@ int ftw64 (const char * arg0 , __ftw64_func_t arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "ftw64", "GLIBC_2.1");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "ftw64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

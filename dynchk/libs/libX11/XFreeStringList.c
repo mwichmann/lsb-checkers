@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XFreeStringList
 static void(*funcptr) (char * * ) = 0;
@@ -12,11 +12,11 @@ void XFreeStringList (char * * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XFreeStringList ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XFreeStringList");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XFreeStringList()");
+		__lsb_output(4, "XFreeStringList()");
 		validate_RWaddress( arg0, "XFreeStringList - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreeStringList - arg0");
 	}

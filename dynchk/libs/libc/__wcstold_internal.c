@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stddef.h>
 #include <wchar.h>
 #undef __wcstold_internal
@@ -14,7 +14,7 @@ long double __wcstold_internal (const wchar_t * arg0 , wchar_t * * arg1 , int ar
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "__wcstold_internal", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "__wcstold_internal", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

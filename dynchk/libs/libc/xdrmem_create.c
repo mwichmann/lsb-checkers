@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <rpc/xdr.h>
 #include <sys/types.h>
 #undef xdrmem_create
@@ -13,7 +13,7 @@ void xdrmem_create (XDR * arg0 , caddr_t arg1 , u_int arg2 , enum xdr_op arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "xdrmem_create", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "xdrmem_create", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

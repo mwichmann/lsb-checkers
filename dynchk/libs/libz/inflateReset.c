@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <zlib.h>
 #undef inflateReset
 static int(*funcptr) (z_streamp ) = 0;
@@ -13,7 +13,7 @@ int inflateReset (z_streamp arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "inflateReset");
+		funcptr = lsb_dlsym(RTLD_NEXT, "inflateReset");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

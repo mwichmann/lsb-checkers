@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XPending
 static int(*funcptr) (Display * ) = 0;
@@ -13,11 +13,11 @@ int XPending (Display * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XPending ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XPending");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XPending()");
+		__lsb_output(4, "XPending()");
 		validate_RWaddress( arg0, "XPending - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XPending - arg0");
 	}

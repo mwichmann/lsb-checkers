@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XDefaultGC
 static GC(*funcptr) (Display * , int ) = 0;
@@ -13,11 +13,11 @@ GC XDefaultGC (Display * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	GC ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XDefaultGC ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XDefaultGC");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XDefaultGC()");
+		__lsb_output(4, "XDefaultGC()");
 		validate_RWaddress( arg0, "XDefaultGC - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDefaultGC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDefaultGC - arg1");

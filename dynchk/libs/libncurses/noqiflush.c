@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef noqiflush
 static void(*funcptr) () = 0;
@@ -12,7 +12,7 @@ void noqiflush ()
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "noqiflush");
+		funcptr = lsb_dlsym(RTLD_NEXT, "noqiflush");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

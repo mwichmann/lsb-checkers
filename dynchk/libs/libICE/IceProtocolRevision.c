@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceProtocolRevision
 static int(*funcptr) (IceConn ) = 0;
@@ -13,11 +13,11 @@ int IceProtocolRevision (IceConn arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceProtocolRevision ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceProtocolRevision");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceProtocolRevision()");
+		__lsb_output(4, "IceProtocolRevision()");
 		validate_NULL_TYPETYPE(  arg0, "IceProtocolRevision - arg0");
 	}
 	ret_value = funcptr(arg0);

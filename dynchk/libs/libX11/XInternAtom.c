@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XInternAtom
 static Atom(*funcptr) (Display * , const char * , int ) = 0;
@@ -13,11 +13,11 @@ Atom XInternAtom (Display * arg0 , const char * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	Atom ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XInternAtom ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XInternAtom");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XInternAtom()");
+		__lsb_output(4, "XInternAtom()");
 		validate_RWaddress( arg0, "XInternAtom - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XInternAtom - arg0");
 		validate_Rdaddress( arg1, "XInternAtom - arg1");

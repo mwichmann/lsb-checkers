@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <sys/ipc.h>
 #undef ftok
 static key_t(*funcptr) (const char * , int ) = 0;
@@ -13,7 +13,7 @@ key_t ftok (const char * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	key_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "ftok", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "ftok", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <sys/resource.h>
 #include <sys/types.h>
 #undef getpriority
@@ -14,7 +14,7 @@ int getpriority (__priority_which_t arg0 , id_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "getpriority", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "getpriority", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

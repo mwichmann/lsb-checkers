@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #include <X11/SM/SMlib.h>
 #undef SmsInitialize
@@ -14,7 +14,7 @@ int SmsInitialize (char * arg0 , char * arg1 , SmsNewClientProc arg2 , SmPointer
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "SmsInitialize");
+		funcptr = lsb_dlsym(RTLD_NEXT, "SmsInitialize");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

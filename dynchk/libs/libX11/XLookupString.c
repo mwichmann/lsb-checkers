@@ -2,10 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
-#include <X11/X.h>
 #include <X11/Xutil.h>
+#include <X11/X.h>
 #undef XLookupString
 static int(*funcptr) (XKeyEvent * , char * , int , KeySym * , XComposeStatus * ) = 0;
 
@@ -15,11 +15,11 @@ int XLookupString (XKeyEvent * arg0 , char * arg1 , int arg2 , KeySym * arg3 , X
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XLookupString ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XLookupString");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XLookupString()");
+		__lsb_output(4, "XLookupString()");
 		validate_RWaddress( arg0, "XLookupString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XLookupString - arg0");
 		validate_RWaddress( arg1, "XLookupString - arg1");

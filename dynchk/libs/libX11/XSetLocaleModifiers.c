@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XSetLocaleModifiers
 static char *(*funcptr) (const char * ) = 0;
@@ -13,11 +13,11 @@ char * XSetLocaleModifiers (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSetLocaleModifiers ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XSetLocaleModifiers");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSetLocaleModifiers()");
+		__lsb_output(4, "XSetLocaleModifiers()");
 		validate_Rdaddress( arg0, "XSetLocaleModifiers - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetLocaleModifiers - arg0");
 	}

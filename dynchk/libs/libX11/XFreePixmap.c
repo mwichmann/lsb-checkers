@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XFreePixmap
 static int(*funcptr) (Display * , Pixmap ) = 0;
 
@@ -14,11 +14,11 @@ int XFreePixmap (Display * arg0 , Pixmap arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XFreePixmap ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XFreePixmap");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XFreePixmap()");
+		__lsb_output(4, "XFreePixmap()");
 		validate_RWaddress( arg0, "XFreePixmap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreePixmap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFreePixmap - arg1");

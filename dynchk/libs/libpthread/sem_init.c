@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <semaphore.h>
 #undef sem_init
 static int(*funcptr) (sem_t * , int , unsigned int ) = 0;
@@ -13,7 +13,7 @@ int sem_init (sem_t * arg0 , int arg1 , unsigned int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "sem_init", "GLIBC_2.1");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "sem_init", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

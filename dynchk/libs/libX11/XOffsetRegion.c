@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xutil.h>
 #undef XOffsetRegion
 static int(*funcptr) (Region , int , int ) = 0;
@@ -13,11 +13,11 @@ int XOffsetRegion (Region arg0 , int arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XOffsetRegion ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XOffsetRegion");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XOffsetRegion()");
+		__lsb_output(4, "XOffsetRegion()");
 		validate_NULL_TYPETYPE(  arg0, "XOffsetRegion - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XOffsetRegion - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XOffsetRegion - arg2");

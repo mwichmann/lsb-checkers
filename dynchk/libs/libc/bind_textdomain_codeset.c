@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <libintl.h>
 #undef bind_textdomain_codeset
 static char *(*funcptr) (const char * , const char * ) = 0;
@@ -13,7 +13,7 @@ char * bind_textdomain_codeset (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "bind_textdomain_codeset");
+		funcptr = lsb_dlsym(RTLD_NEXT, "bind_textdomain_codeset");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

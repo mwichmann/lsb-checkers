@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XLastKnownRequestProcessed
 static unsigned long(*funcptr) (Display * ) = 0;
@@ -13,11 +13,11 @@ unsigned long XLastKnownRequestProcessed (Display * arg0 )
 	int reset_flag = __lsb_check_params;
 	unsigned long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XLastKnownRequestProcessed ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XLastKnownRequestProcessed");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XLastKnownRequestProcessed()");
+		__lsb_output(4, "XLastKnownRequestProcessed()");
 		validate_RWaddress( arg0, "XLastKnownRequestProcessed - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XLastKnownRequestProcessed - arg0");
 	}

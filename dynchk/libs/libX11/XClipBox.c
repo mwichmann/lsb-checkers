@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xutil.h>
+#include <X11/Xlib.h>
 #undef XClipBox
 static int(*funcptr) (Region , XRectangle * ) = 0;
 
@@ -14,11 +14,11 @@ int XClipBox (Region arg0 , XRectangle * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XClipBox ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XClipBox");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XClipBox()");
+		__lsb_output(4, "XClipBox()");
 		validate_NULL_TYPETYPE(  arg0, "XClipBox - arg0");
 		validate_RWaddress( arg1, "XClipBox - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XClipBox - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xutil.h>
 #undef XPointInRegion
 static int(*funcptr) (Region , int , int ) = 0;
@@ -13,11 +13,11 @@ int XPointInRegion (Region arg0 , int arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XPointInRegion ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XPointInRegion");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XPointInRegion()");
+		__lsb_output(4, "XPointInRegion()");
 		validate_NULL_TYPETYPE(  arg0, "XPointInRegion - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XPointInRegion - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XPointInRegion - arg2");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xutil.h>
 #undef XAllocWMHints
 static XWMHints *(*funcptr) () = 0;
@@ -13,11 +13,11 @@ XWMHints * XAllocWMHints ()
 	int reset_flag = __lsb_check_params;
 	XWMHints * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XAllocWMHints ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XAllocWMHints");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XAllocWMHints()");
+		__lsb_output(4, "XAllocWMHints()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XKeycodeToKeysym
 static KeySym(*funcptr) (Display * , unsigned int , int ) = 0;
@@ -13,11 +13,11 @@ KeySym XKeycodeToKeysym (Display * arg0 , unsigned int arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	KeySym ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XKeycodeToKeysym ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XKeycodeToKeysym");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XKeycodeToKeysym()");
+		__lsb_output(4, "XKeycodeToKeysym()");
 		validate_RWaddress( arg0, "XKeycodeToKeysym - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XKeycodeToKeysym - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XKeycodeToKeysym - arg1");

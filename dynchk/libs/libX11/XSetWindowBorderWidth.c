@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/X.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XSetWindowBorderWidth
 static int(*funcptr) (Display * , Window , unsigned int ) = 0;
 
@@ -14,11 +14,11 @@ int XSetWindowBorderWidth (Display * arg0 , Window arg1 , unsigned int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSetWindowBorderWidth ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XSetWindowBorderWidth");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSetWindowBorderWidth()");
+		__lsb_output(4, "XSetWindowBorderWidth()");
 		validate_RWaddress( arg0, "XSetWindowBorderWidth - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetWindowBorderWidth - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetWindowBorderWidth - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XLocaleOfOM
 static char *(*funcptr) (XOM ) = 0;
@@ -13,11 +13,11 @@ char * XLocaleOfOM (XOM arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XLocaleOfOM ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XLocaleOfOM");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XLocaleOfOM()");
+		__lsb_output(4, "XLocaleOfOM()");
 		validate_NULL_TYPETYPE(  arg0, "XLocaleOfOM - arg0");
 	}
 	ret_value = funcptr(arg0);

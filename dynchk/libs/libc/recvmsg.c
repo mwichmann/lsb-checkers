@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <sys/socket.h>
 #undef recvmsg
 static ssize_t(*funcptr) (int , struct msghdr * , int ) = 0;
@@ -13,7 +13,7 @@ ssize_t recvmsg (int arg0 , struct msghdr * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "recvmsg", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "recvmsg", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

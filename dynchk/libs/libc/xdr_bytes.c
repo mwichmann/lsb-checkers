@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <rpc/xdr.h>
 #include <sys/types.h>
 #undef xdr_bytes
@@ -14,7 +14,7 @@ bool_t xdr_bytes (XDR * arg0 , char * * arg1 , u_int * arg2 , u_int arg3 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "xdr_bytes", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "xdr_bytes", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

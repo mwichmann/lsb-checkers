@@ -2,10 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xutil.h>
-#include <X11/X.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
+#include <X11/Xutil.h>
 #undef XDeleteContext
 static int(*funcptr) (Display * , XID , XContext ) = 0;
 
@@ -15,11 +15,11 @@ int XDeleteContext (Display * arg0 , XID arg1 , XContext arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XDeleteContext ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XDeleteContext");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XDeleteContext()");
+		__lsb_output(4, "XDeleteContext()");
 		validate_RWaddress( arg0, "XDeleteContext - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDeleteContext - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDeleteContext - arg1");

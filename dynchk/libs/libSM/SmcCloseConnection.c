@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmcCloseConnection
 static SmcCloseStatus(*funcptr) (SmcConn , int , char * * ) = 0;
@@ -13,7 +13,7 @@ SmcCloseStatus SmcCloseConnection (SmcConn arg0 , int arg1 , char * * arg2 )
 	int reset_flag = __lsb_check_params;
 	SmcCloseStatus ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "SmcCloseConnection");
+		funcptr = lsb_dlsym(RTLD_NEXT, "SmcCloseConnection");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

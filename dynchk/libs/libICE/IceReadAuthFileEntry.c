@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stdio.h>
 #include <X11/ICE/ICEutil.h>
 #undef IceReadAuthFileEntry
@@ -14,11 +14,11 @@ IceAuthFileEntry * IceReadAuthFileEntry (FILE arg0 )
 	int reset_flag = __lsb_check_params;
 	IceAuthFileEntry * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceReadAuthFileEntry ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceReadAuthFileEntry");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceReadAuthFileEntry()");
+		__lsb_output(4, "IceReadAuthFileEntry()");
 		validate_NULL_TYPETYPE(  arg0, "IceReadAuthFileEntry - arg0");
 	}
 	ret_value = funcptr(arg0);

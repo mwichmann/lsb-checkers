@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <semaphore.h>
 #include <sys/time.h>
 #undef sem_timedwait
@@ -14,7 +14,7 @@ int sem_timedwait (sem_t * arg0 , const struct timespec * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "sem_timedwait", "GLIBC_2.2");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "sem_timedwait", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

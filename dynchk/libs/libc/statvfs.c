@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <sys/statvfs.h>
 #undef statvfs
 static int(*funcptr) (const char * , struct statvfs * ) = 0;
@@ -13,7 +13,7 @@ int statvfs (const char * arg0 , struct statvfs * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "statvfs", "GLIBC_2.1");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "statvfs", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

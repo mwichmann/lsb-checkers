@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceLastSentSequenceNumber
 static unsigned long(*funcptr) (IceConn ) = 0;
@@ -13,11 +13,11 @@ unsigned long IceLastSentSequenceNumber (IceConn arg0 )
 	int reset_flag = __lsb_check_params;
 	unsigned long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceLastSentSequenceNumber ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceLastSentSequenceNumber");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceLastSentSequenceNumber()");
+		__lsb_output(4, "IceLastSentSequenceNumber()");
 		validate_NULL_TYPETYPE(  arg0, "IceLastSentSequenceNumber - arg0");
 	}
 	ret_value = funcptr(arg0);

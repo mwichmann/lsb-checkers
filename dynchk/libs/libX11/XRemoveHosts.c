@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XRemoveHosts
 static int(*funcptr) (Display * , XHostAddress * , int ) = 0;
@@ -13,11 +13,11 @@ int XRemoveHosts (Display * arg0 , XHostAddress * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XRemoveHosts ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XRemoveHosts");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XRemoveHosts()");
+		__lsb_output(4, "XRemoveHosts()");
 		validate_RWaddress( arg0, "XRemoveHosts - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XRemoveHosts - arg0");
 		validate_RWaddress( arg1, "XRemoveHosts - arg1");

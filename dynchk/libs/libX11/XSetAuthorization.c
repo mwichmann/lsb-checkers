@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XSetAuthorization
 static void(*funcptr) (char * , int , char * , int ) = 0;
@@ -12,11 +12,11 @@ void XSetAuthorization (char * arg0 , int arg1 , char * arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSetAuthorization ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XSetAuthorization");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSetAuthorization()");
+		__lsb_output(4, "XSetAuthorization()");
 		validate_RWaddress( arg0, "XSetAuthorization - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetAuthorization - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetAuthorization - arg1");

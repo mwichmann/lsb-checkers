@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XAddExtension
 static XExtCodes *(*funcptr) (Display * ) = 0;
@@ -13,11 +13,11 @@ XExtCodes * XAddExtension (Display * arg0 )
 	int reset_flag = __lsb_check_params;
 	XExtCodes * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XAddExtension ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XAddExtension");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XAddExtension()");
+		__lsb_output(4, "XAddExtension()");
 		validate_RWaddress( arg0, "XAddExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAddExtension - arg0");
 	}

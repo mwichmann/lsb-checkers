@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XFreeModifiermap
 static int(*funcptr) (XModifierKeymap * ) = 0;
@@ -13,11 +13,11 @@ int XFreeModifiermap (XModifierKeymap * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XFreeModifiermap ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XFreeModifiermap");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XFreeModifiermap()");
+		__lsb_output(4, "XFreeModifiermap()");
 		validate_RWaddress( arg0, "XFreeModifiermap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreeModifiermap - arg0");
 	}

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <sys/socket.h>
 #undef connect
 static int(*funcptr) (int , const struct sockaddr * , socklen_t ) = 0;
@@ -13,7 +13,7 @@ int connect (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "connect", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "connect", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

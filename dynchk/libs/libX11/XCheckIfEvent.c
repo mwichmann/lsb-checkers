@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XCheckIfEvent
 static int(*funcptr) (Display * , XEvent * , struct anon-X11/Xlib.h-2379 , XPointer ) = 0;
@@ -13,11 +13,11 @@ int XCheckIfEvent (Display * arg0 , XEvent * arg1 , struct anon-X11/Xlib.h-2379 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XCheckIfEvent ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XCheckIfEvent");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XCheckIfEvent()");
+		__lsb_output(4, "XCheckIfEvent()");
 		validate_RWaddress( arg0, "XCheckIfEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCheckIfEvent - arg0");
 		validate_RWaddress( arg1, "XCheckIfEvent - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XCreateImage
 static XImage *(*funcptr) (Display * , Visual * , unsigned int , int , int , char * , unsigned int , unsigned int , int , int ) = 0;
@@ -13,11 +13,11 @@ XImage * XCreateImage (Display * arg0 , Visual * arg1 , unsigned int arg2 , int 
 	int reset_flag = __lsb_check_params;
 	XImage * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XCreateImage ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XCreateImage");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XCreateImage()");
+		__lsb_output(4, "XCreateImage()");
 		validate_RWaddress( arg0, "XCreateImage - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateImage - arg0");
 		validate_RWaddress( arg1, "XCreateImage - arg1");

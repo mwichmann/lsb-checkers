@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceRemoveConnectionWatch
 static void(*funcptr) (IceWatchProc , IcePointer ) = 0;
@@ -12,11 +12,11 @@ void IceRemoveConnectionWatch (IceWatchProc arg0 , IcePointer arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceRemoveConnectionWatch ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceRemoveConnectionWatch");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceRemoveConnectionWatch()");
+		__lsb_output(4, "IceRemoveConnectionWatch()");
 		validate_NULL_TYPETYPE(  arg0, "IceRemoveConnectionWatch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceRemoveConnectionWatch - arg1");
 	}

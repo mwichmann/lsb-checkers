@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetGeometry
@@ -14,11 +14,11 @@ int XGetGeometry (Display * arg0 , Drawable arg1 , Window * arg2 , int * arg3 , 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetGeometry ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetGeometry");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetGeometry()");
+		__lsb_output(4, "XGetGeometry()");
 		validate_RWaddress( arg0, "XGetGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetGeometry - arg1");

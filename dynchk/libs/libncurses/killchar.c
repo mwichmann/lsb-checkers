@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef killchar
 static char(*funcptr) () = 0;
@@ -13,7 +13,7 @@ char killchar ()
 	int reset_flag = __lsb_check_params;
 	char ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "killchar");
+		funcptr = lsb_dlsym(RTLD_NEXT, "killchar");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

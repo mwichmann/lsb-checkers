@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XFillRectangle
@@ -14,11 +14,11 @@ int XFillRectangle (Display * arg0 , Drawable arg1 , GC arg2 , int arg3 , int ar
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XFillRectangle ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XFillRectangle");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XFillRectangle()");
+		__lsb_output(4, "XFillRectangle()");
 		validate_RWaddress( arg0, "XFillRectangle - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFillRectangle - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFillRectangle - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stdio.h>
 #include <curses.h>
 #undef putwin
@@ -14,7 +14,7 @@ int putwin (WINDOW * arg0 , FILE * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "putwin");
+		funcptr = lsb_dlsym(RTLD_NEXT, "putwin");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceSetErrorHandler
 static IceErrorHandler(*funcptr) (IceErrorHandler ) = 0;
@@ -13,11 +13,11 @@ IceErrorHandler IceSetErrorHandler (IceErrorHandler arg0 )
 	int reset_flag = __lsb_check_params;
 	IceErrorHandler ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceSetErrorHandler ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceSetErrorHandler");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceSetErrorHandler()");
+		__lsb_output(4, "IceSetErrorHandler()");
 		validate_NULL_TYPETYPE(  arg0, "IceSetErrorHandler - arg0");
 	}
 	ret_value = funcptr(arg0);

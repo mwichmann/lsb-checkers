@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #undef XKeysymToString
@@ -14,11 +14,11 @@ char * XKeysymToString (KeySym arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XKeysymToString ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XKeysymToString");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XKeysymToString()");
+		__lsb_output(4, "XKeysymToString()");
 		validate_NULL_TYPETYPE(  arg0, "XKeysymToString - arg0");
 	}
 	ret_value = funcptr(arg0);

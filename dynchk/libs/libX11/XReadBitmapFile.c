@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #undef XReadBitmapFile
@@ -14,11 +14,11 @@ int XReadBitmapFile (Display * arg0 , Drawable arg1 , const char * arg2 , unsign
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XReadBitmapFile ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XReadBitmapFile");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XReadBitmapFile()");
+		__lsb_output(4, "XReadBitmapFile()");
 		validate_RWaddress( arg0, "XReadBitmapFile - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XReadBitmapFile - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XReadBitmapFile - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <wchar.h>
 #undef getwchar
 static wint_t(*funcptr) () = 0;
@@ -13,7 +13,7 @@ wint_t getwchar ()
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

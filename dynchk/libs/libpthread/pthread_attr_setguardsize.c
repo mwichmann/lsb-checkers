@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #include <stddef.h>
 #undef pthread_attr_setguardsize
@@ -14,7 +14,7 @@ int pthread_attr_setguardsize (pthread_attr_t * arg0 , size_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "pthread_attr_setguardsize", "GLIBC_2.1");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "pthread_attr_setguardsize", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

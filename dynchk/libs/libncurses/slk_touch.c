@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef slk_touch
 static int(*funcptr) () = 0;
@@ -13,7 +13,7 @@ int slk_touch ()
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "slk_touch");
+		funcptr = lsb_dlsym(RTLD_NEXT, "slk_touch");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

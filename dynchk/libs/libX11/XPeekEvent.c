@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XPeekEvent
 static int(*funcptr) (Display * , XEvent * ) = 0;
@@ -13,11 +13,11 @@ int XPeekEvent (Display * arg0 , XEvent * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XPeekEvent ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XPeekEvent");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XPeekEvent()");
+		__lsb_output(4, "XPeekEvent()");
 		validate_RWaddress( arg0, "XPeekEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XPeekEvent - arg0");
 		validate_RWaddress( arg1, "XPeekEvent - arg1");

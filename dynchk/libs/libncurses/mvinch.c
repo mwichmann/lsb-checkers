@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef mvinch
 static chtype(*funcptr) (int , int ) = 0;
@@ -13,7 +13,7 @@ chtype mvinch (int arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	chtype ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvinch");
+		funcptr = lsb_dlsym(RTLD_NEXT, "mvinch");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #undef XCreateSimpleWindow
@@ -14,11 +14,11 @@ Window XCreateSimpleWindow (Display * arg0 , Window arg1 , int arg2 , int arg3 ,
 	int reset_flag = __lsb_check_params;
 	Window ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XCreateSimpleWindow ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XCreateSimpleWindow");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XCreateSimpleWindow()");
+		__lsb_output(4, "XCreateSimpleWindow()");
 		validate_RWaddress( arg0, "XCreateSimpleWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateSimpleWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreateSimpleWindow - arg1");

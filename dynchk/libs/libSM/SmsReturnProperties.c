@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmsReturnProperties
 static void(*funcptr) (SmsConn , int , SmProp * * ) = 0;
@@ -12,7 +12,7 @@ void SmsReturnProperties (SmsConn arg0 , int arg1 , SmProp * * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "SmsReturnProperties");
+		funcptr = lsb_dlsym(RTLD_NEXT, "SmsReturnProperties");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

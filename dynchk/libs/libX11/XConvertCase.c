@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
 #include <X11/Xutil.h>
 #undef XConvertCase
@@ -13,11 +13,11 @@ void XConvertCase (KeySym arg0 , KeySym * arg1 , KeySym * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XConvertCase ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XConvertCase");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XConvertCase()");
+		__lsb_output(4, "XConvertCase()");
 		validate_NULL_TYPETYPE(  arg0, "XConvertCase - arg0");
 		validate_RWaddress( arg1, "XConvertCase - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XConvertCase - arg1");

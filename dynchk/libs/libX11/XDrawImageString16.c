@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XDrawImageString16
@@ -14,11 +14,11 @@ int XDrawImageString16 (Display * arg0 , Drawable arg1 , GC arg2 , int arg3 , in
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XDrawImageString16 ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XDrawImageString16");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XDrawImageString16()");
+		__lsb_output(4, "XDrawImageString16()");
 		validate_RWaddress( arg0, "XDrawImageString16 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDrawImageString16 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDrawImageString16 - arg1");

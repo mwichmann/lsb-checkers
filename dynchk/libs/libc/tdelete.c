@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stdlib.h>
 #include <search.h>
 #undef tdelete
@@ -14,7 +14,7 @@ void * tdelete (const void * arg0 , void * * arg1 , __compar_fn_t arg2 )
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tdelete");
+		funcptr = lsb_dlsym(RTLD_NEXT, "tdelete");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

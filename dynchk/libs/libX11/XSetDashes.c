@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XSetDashes
 static int(*funcptr) (Display * , GC , int , const char * , int ) = 0;
@@ -13,11 +13,11 @@ int XSetDashes (Display * arg0 , GC arg1 , int arg2 , const char * arg3 , int ar
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSetDashes ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XSetDashes");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSetDashes()");
+		__lsb_output(4, "XSetDashes()");
 		validate_RWaddress( arg0, "XSetDashes - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetDashes - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetDashes - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmcRequestSaveYourselfPhase2
 static int(*funcptr) (SmcConn , SmcSaveYourselfPhase2Proc , SmPointer ) = 0;
@@ -13,7 +13,7 @@ int SmcRequestSaveYourselfPhase2 (SmcConn arg0 , SmcSaveYourselfPhase2Proc arg1 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "SmcRequestSaveYourselfPhase2");
+		funcptr = lsb_dlsym(RTLD_NEXT, "SmcRequestSaveYourselfPhase2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

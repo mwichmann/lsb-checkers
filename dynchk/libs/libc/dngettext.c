@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <libintl.h>
 #undef dngettext
 static char *(*funcptr) (const char * , const char * , const char * , unsigned long ) = 0;
@@ -13,7 +13,7 @@ char * dngettext (const char * arg0 , const char * arg1 , const char * arg2 , un
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dngettext");
+		funcptr = lsb_dlsym(RTLD_NEXT, "dngettext");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

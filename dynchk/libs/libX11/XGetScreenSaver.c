@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XGetScreenSaver
 static int(*funcptr) (Display * , int * , int * , int * , int * ) = 0;
@@ -13,11 +13,11 @@ int XGetScreenSaver (Display * arg0 , int * arg1 , int * arg2 , int * arg3 , int
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetScreenSaver ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetScreenSaver");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetScreenSaver()");
+		__lsb_output(4, "XGetScreenSaver()");
 		validate_RWaddress( arg0, "XGetScreenSaver - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetScreenSaver - arg0");
 		validate_RWaddress( arg1, "XGetScreenSaver - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XNextEvent
 static int(*funcptr) (Display * , XEvent * ) = 0;
@@ -13,11 +13,11 @@ int XNextEvent (Display * arg0 , XEvent * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XNextEvent ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XNextEvent");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XNextEvent()");
+		__lsb_output(4, "XNextEvent()");
 		validate_RWaddress( arg0, "XNextEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XNextEvent - arg0");
 		validate_RWaddress( arg1, "XNextEvent - arg1");

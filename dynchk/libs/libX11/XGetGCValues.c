@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XGetGCValues
 static int(*funcptr) (Display * , GC , unsigned long , XGCValues * ) = 0;
@@ -13,11 +13,11 @@ int XGetGCValues (Display * arg0 , GC arg1 , unsigned long arg2 , XGCValues * ar
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetGCValues ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetGCValues");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetGCValues()");
+		__lsb_output(4, "XGetGCValues()");
 		validate_RWaddress( arg0, "XGetGCValues - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetGCValues - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetGCValues - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <netdb.h>
 #undef getprotobynumber
 static struct protoent *(*funcptr) (int ) = 0;
@@ -13,7 +13,7 @@ struct protoent * getprotobynumber (int arg0 )
 	int reset_flag = __lsb_check_params;
 	struct protoent * ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "getprotobynumber", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "getprotobynumber", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <pthread.h>
 #include <stddef.h>
 #undef pthread_attr_setstack
@@ -14,7 +14,7 @@ int pthread_attr_setstack (pthread_attr_t * arg0 , void * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_attr_setstack");
+		funcptr = lsb_dlsym(RTLD_NEXT, "pthread_attr_setstack");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
