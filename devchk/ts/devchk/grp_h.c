@@ -73,6 +73,14 @@ CheckMemberSize(struct group,gr_gid,4,12,29794)
 CheckOffset(struct group,gr_gid,16,12,29794)
 CheckMemberSize(struct group,gr_mem,8,12,29795)
 CheckOffset(struct group,gr_mem,24,12,29795)
+#elif __x86_64__
+CheckTypeSize(struct group,32, 6894, 11)
+CheckMemberSize(struct group,gr_passwd,8,11,29793)
+CheckOffset(struct group,gr_passwd,8,11,29793)
+CheckMemberSize(struct group,gr_gid,4,11,29794)
+CheckOffset(struct group,gr_gid,16,11,29794)
+CheckMemberSize(struct group,gr_mem,8,11,29795)
+CheckOffset(struct group,gr_mem,24,11,29795)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6894,0);
 Msg("Find size of group (6894)\n");

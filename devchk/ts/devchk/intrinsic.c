@@ -28,6 +28,8 @@ CheckTypeSize(void,1,1,6)
 CheckTypeSize(void,1,1,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(void,1,1,10)
+#elif __x86_64__
+CheckTypeSize(void,1,1,11)
 #elif __s390x__
 CheckTypeSize(void,1,1,12)
 #else
@@ -44,6 +46,8 @@ CheckTypeSize(char,1,2,6)
 CheckTypeSize(char,1,2,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(char,1,2,10)
+#elif __x86_64__
+CheckTypeSize(char,1,2,11)
 #elif __s390x__
 CheckTypeSize(char,1,2,12)
 #else
@@ -60,6 +64,8 @@ CheckTypeSize(unsigned char,1,3,6)
 CheckTypeSize(unsigned char,1,3,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned char,1,3,10)
+#elif __x86_64__
+CheckTypeSize(unsigned char,1,3,11)
 #elif __s390x__
 CheckTypeSize(unsigned char,1,3,12)
 #else
@@ -76,6 +82,8 @@ CheckTypeSize(short,2,4,6)
 CheckTypeSize(short,2,4,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(short,2,4,10)
+#elif __x86_64__
+CheckTypeSize(short,2,4,11)
 #elif __s390x__
 CheckTypeSize(short,2,4,12)
 #else
@@ -92,6 +100,8 @@ CheckTypeSize(unsigned short,2,5,6)
 CheckTypeSize(unsigned short,2,5,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned short,2,5,10)
+#elif __x86_64__
+CheckTypeSize(unsigned short,2,5,11)
 #elif __s390x__
 CheckTypeSize(unsigned short,2,5,12)
 #else
@@ -108,6 +118,8 @@ CheckTypeSize(int,4,6,6)
 CheckTypeSize(int,4,6,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(int,4,6,10)
+#elif __x86_64__
+CheckTypeSize(int,4,6,11)
 #elif __s390x__
 CheckTypeSize(int,4,6,12)
 #else
@@ -124,6 +136,8 @@ CheckTypeSize(unsigned int,4,7,6)
 CheckTypeSize(unsigned int,4,7,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned int,4,7,10)
+#elif __x86_64__
+CheckTypeSize(unsigned int,4,7,11)
 #elif __s390x__
 CheckTypeSize(unsigned int,4,7,12)
 #else
@@ -140,6 +154,8 @@ CheckTypeSize(long,4,8,6)
 CheckTypeSize(long,8,8,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(long,4,8,10)
+#elif __x86_64__
+CheckTypeSize(long,8,8,11)
 #elif __s390x__
 CheckTypeSize(long,8,8,12)
 #else
@@ -156,6 +172,8 @@ CheckTypeSize(unsigned long,4,9,6)
 CheckTypeSize(unsigned long,8,9,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned long,4,9,10)
+#elif __x86_64__
+CheckTypeSize(unsigned long,8,9,11)
 #elif __s390x__
 CheckTypeSize(unsigned long,8,9,12)
 #else
@@ -172,6 +190,8 @@ CheckTypeSize(long long,8,10,6)
 CheckTypeSize(long long,8,10,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(long long,8,10,10)
+#elif __x86_64__
+CheckTypeSize(long long,8,10,11)
 #elif __s390x__
 CheckTypeSize(long long,8,10,12)
 #else
@@ -188,6 +208,8 @@ CheckTypeSize(unsigned long long,8,11,6)
 CheckTypeSize(unsigned long long,8,11,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(unsigned long long,8,11,10)
+#elif __x86_64__
+CheckTypeSize(unsigned long long,8,11,11)
 #elif __s390x__
 CheckTypeSize(unsigned long long,8,11,12)
 #else
@@ -204,6 +226,8 @@ CheckTypeSize(float,4,12,6)
 CheckTypeSize(float,4,12,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(float,4,12,10)
+#elif __x86_64__
+CheckTypeSize(float,4,12,11)
 #elif __s390x__
 CheckTypeSize(float,4,12,12)
 #else
@@ -220,6 +244,8 @@ CheckTypeSize(double,8,13,6)
 CheckTypeSize(double,8,13,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(double,8,13,10)
+#elif __x86_64__
+CheckTypeSize(double,8,13,11)
 #elif __s390x__
 CheckTypeSize(double,8,13,12)
 #else
@@ -236,6 +262,8 @@ CheckTypeSize(long double,8,14,6)
 CheckTypeSize(long double,8,14,9)
 #elif __s390__ && !__s390x__
 CheckTypeSize(long double,8,14,10)
+#elif __x86_64__
+CheckTypeSize(long double,16,14,11)
 #elif __s390x__
 CheckTypeSize(long double,8,14,12)
 #else
@@ -246,6 +274,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14,0);
 CheckTypeSize(signed char,1,10505,1)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10505,0);
+#endif
+
+#if __powerpc64__
+CheckTypeSize(elf_greg_t,4,10825,9)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10825,0);
 #endif
 
 #ifdef TET_TEST

@@ -179,6 +179,10 @@ CheckOffset(struct exit_status,e_exit,2,9,34454)
 CheckTypeSize(struct exit_status,4, 10282, 12)
 CheckMemberSize(struct exit_status,e_exit,2,12,34454)
 CheckOffset(struct exit_status,e_exit,2,12,34454)
+#elif __x86_64__
+CheckTypeSize(struct exit_status,4, 10282, 11)
+CheckMemberSize(struct exit_status,e_exit,2,11,34454)
+CheckOffset(struct exit_status,e_exit,2,11,34454)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10282,0);
 Msg("Find size of exit_status (10282)\n");
@@ -222,6 +226,12 @@ CheckMemberSize(struct lastlog,ll_line,32,12,34461)
 CheckOffset(struct lastlog,ll_line,4,12,34461)
 CheckMemberSize(struct lastlog,ll_host,256,12,34462)
 CheckOffset(struct lastlog,ll_host,36,12,34462)
+#elif __x86_64__
+CheckTypeSize(struct lastlog,292, 10285, 11)
+CheckMemberSize(struct lastlog,ll_line,32,11,34461)
+CheckOffset(struct lastlog,ll_line,4,11,34461)
+CheckMemberSize(struct lastlog,ll_host,256,11,34462)
+CheckOffset(struct lastlog,ll_host,36,11,34462)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10285,0);
 Msg("Find size of lastlog (10285)\n");
@@ -361,6 +371,28 @@ CheckMemberSize(struct utmp,ut_addr_v6,16,12,34458)
 CheckOffset(struct utmp,ut_addr_v6,348,12,34458)
 CheckMemberSize(struct utmp,__unused,20,12,34459)
 CheckOffset(struct utmp,__unused,364,12,34459)
+#elif __x86_64__
+CheckTypeSize(struct utmp,384, 10281, 11)
+CheckMemberSize(struct utmp,ut_pid,4,11,34448)
+CheckOffset(struct utmp,ut_pid,4,11,34448)
+CheckMemberSize(struct utmp,ut_line,32,11,34449)
+CheckOffset(struct utmp,ut_line,8,11,34449)
+CheckMemberSize(struct utmp,ut_id,4,11,34450)
+CheckOffset(struct utmp,ut_id,40,11,34450)
+CheckMemberSize(struct utmp,ut_user,32,11,34451)
+CheckOffset(struct utmp,ut_user,44,11,34451)
+CheckMemberSize(struct utmp,ut_host,256,11,34452)
+CheckOffset(struct utmp,ut_host,76,11,34452)
+CheckMemberSize(struct utmp,ut_exit,4,11,34455)
+CheckOffset(struct utmp,ut_exit,332,11,34455)
+CheckMemberSize(struct utmp,ut_session,4,11,34456)
+CheckOffset(struct utmp,ut_session,336,11,34456)
+CheckMemberSize(struct utmp,ut_tv,8,11,34457)
+CheckOffset(struct utmp,ut_tv,340,11,34457)
+CheckMemberSize(struct utmp,ut_addr_v6,16,11,34458)
+CheckOffset(struct utmp,ut_addr_v6,348,11,34458)
+CheckMemberSize(struct utmp,__unused,20,11,34459)
+CheckOffset(struct utmp,__unused,364,11,34459)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10281,0);
 Msg("Find size of utmp (10281)\n");

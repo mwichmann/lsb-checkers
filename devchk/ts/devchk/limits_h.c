@@ -123,6 +123,14 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
+#elif __x86_64__
+#ifdef LONG_MAX
+	CompareConstant(LONG_MAX,0x7FFFFFFFFFFFFFFFL,16,architecture)
+#else
+Msg( "Error: Constant not found: LONG_MAX\n");
+cnt++;
+#endif
+
 #elif __s390__ && !__s390x__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,2147483647,16,architecture)
@@ -214,6 +222,16 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%s);\n", archit
 	CompareConstant(MB_LEN_MAX,16,2,architecture)
 #else
 Msg( "Error: Constant not found: MB_LEN_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef NGROUPS_MAX
+	CompareConstant(NGROUPS_MAX,32,21,architecture)
+#else
+Msg( "Error: Constant not found: NGROUPS_MAX\n");
 cnt++;
 #endif
 
@@ -386,6 +404,14 @@ cnt++;
 #elif __s390x__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,255,9,architecture)
+#else
+Msg( "Error: Constant not found: CHAR_MAX\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef CHAR_MAX
+	CompareConstant(CHAR_MAX,127,9,architecture)
 #else
 Msg( "Error: Constant not found: CHAR_MAX\n");
 cnt++;

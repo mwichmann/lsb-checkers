@@ -71,6 +71,12 @@ CheckMemberSize(struct accepted_reply,ar_stat,4,12,34801)
 CheckOffset(struct accepted_reply,ar_stat,24,12,34801)
 CheckMemberSize(struct accepted_reply,ru,16,12,34830)
 CheckOffset(struct accepted_reply,ru,32,12,34830)
+#elif __x86_64__
+CheckTypeSize(struct accepted_reply,48, 10417, 11)
+CheckMemberSize(struct accepted_reply,ar_stat,4,11,34801)
+CheckOffset(struct accepted_reply,ar_stat,24,11,34801)
+CheckMemberSize(struct accepted_reply,ru,16,11,34830)
+CheckOffset(struct accepted_reply,ru,32,11,34830)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10417,0);
 Msg("Find size of accepted_reply (10417)\n");
@@ -82,6 +88,7 @@ Msg("Find size of accepted_reply (10417)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10418,0);
 Msg("Find size of anon-accepted_reply-ru (10418)\n");
@@ -93,6 +100,7 @@ Msg("Find size of anon-accepted_reply-ru (10418)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10419,0);
 Msg("Find size of anon-accepted_reply-ar_vers (10419)\n");
@@ -104,6 +112,7 @@ Msg("Find size of anon-accepted_reply-ar_vers (10419)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10420,0);
 Msg("Find size of anon-accepted_reply-ar_results (10420)\n");
@@ -115,6 +124,7 @@ Msg("Find size of anon-accepted_reply-ar_results (10420)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10421,0);
 Msg("Find size of anon-rejected_reply-rj_vers (10421)\n");
@@ -126,6 +136,7 @@ Msg("Find size of anon-rejected_reply-rj_vers (10421)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10422,0);
 Msg("Find size of anon-rejected_reply-ru (10422)\n");
@@ -159,6 +170,10 @@ CheckOffset(struct rejected_reply,ru,8,9,34813)
 CheckTypeSize(struct rejected_reply,24, 10423, 12)
 CheckMemberSize(struct rejected_reply,ru,16,12,34813)
 CheckOffset(struct rejected_reply,ru,8,12,34813)
+#elif __x86_64__
+CheckTypeSize(struct rejected_reply,24, 10423, 11)
+CheckMemberSize(struct rejected_reply,ru,16,11,34813)
+CheckOffset(struct rejected_reply,ru,8,11,34813)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
@@ -170,6 +185,7 @@ Msg("Find size of rejected_reply (10423)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10424,0);
 Msg("Find size of anon-reply_bodu-ru (10424)\n");
@@ -203,6 +219,10 @@ CheckOffset(struct reply_body,ru,8,9,34817)
 CheckTypeSize(struct reply_body,56, 10425, 12)
 CheckMemberSize(struct reply_body,ru,48,12,34817)
 CheckOffset(struct reply_body,ru,8,12,34817)
+#elif __x86_64__
+CheckTypeSize(struct reply_body,56, 10425, 11)
+CheckMemberSize(struct reply_body,ru,48,11,34817)
+CheckOffset(struct reply_body,ru,8,11,34817)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10425,0);
 Msg("Find size of reply_body (10425)\n");
@@ -282,6 +302,18 @@ CheckMemberSize(struct call_body,cb_cred,24,12,34822)
 CheckOffset(struct call_body,cb_cred,32,12,34822)
 CheckMemberSize(struct call_body,cb_verf,24,12,34823)
 CheckOffset(struct call_body,cb_verf,56,12,34823)
+#elif __x86_64__
+CheckTypeSize(struct call_body,80, 10426, 11)
+CheckMemberSize(struct call_body,cb_prog,8,11,34819)
+CheckOffset(struct call_body,cb_prog,8,11,34819)
+CheckMemberSize(struct call_body,cb_vers,8,11,34820)
+CheckOffset(struct call_body,cb_vers,16,11,34820)
+CheckMemberSize(struct call_body,cb_proc,8,11,34821)
+CheckOffset(struct call_body,cb_proc,24,11,34821)
+CheckMemberSize(struct call_body,cb_cred,24,11,34822)
+CheckOffset(struct call_body,cb_cred,32,11,34822)
+CheckMemberSize(struct call_body,cb_verf,24,11,34823)
+CheckOffset(struct call_body,cb_verf,56,11,34823)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10426,0);
 Msg("Find size of call_body (10426)\n");
@@ -321,6 +353,12 @@ CheckMemberSize(struct rpc_msg,rm_direction,4,12,34827)
 CheckOffset(struct rpc_msg,rm_direction,8,12,34827)
 CheckMemberSize(struct rpc_msg,ru,80,12,34828)
 CheckOffset(struct rpc_msg,ru,16,12,34828)
+#elif __x86_64__
+CheckTypeSize(struct rpc_msg,96, 9984, 11)
+CheckMemberSize(struct rpc_msg,rm_direction,4,11,34827)
+CheckOffset(struct rpc_msg,rm_direction,8,11,34827)
+CheckMemberSize(struct rpc_msg,ru,80,11,34828)
+CheckOffset(struct rpc_msg,ru,16,11,34828)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");
@@ -339,6 +377,7 @@ Msg("Find size of rpc_msg (9984)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10427,0);
 Msg("Find size of anon-rpc_msg-ru (10427)\n");

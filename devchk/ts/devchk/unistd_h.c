@@ -64,6 +64,46 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef F_ULOCK
+	CompareConstant(F_ULOCK,0,1216,architecture)
+#else
+Msg( "Error: Constant not found: F_ULOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef F_LOCK
+	CompareConstant(F_LOCK,1,1217,architecture)
+#else
+Msg( "Error: Constant not found: F_LOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef F_TLOCK
+	CompareConstant(F_TLOCK,2,1218,architecture)
+#else
+Msg( "Error: Constant not found: F_TLOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef F_TEST
+	CompareConstant(F_TEST,3,1219,architecture)
+#else
+Msg( "Error: Constant not found: F_TEST\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SEEK_SET
 	CompareConstant(SEEK_SET,0,1635,architecture)
 #else
@@ -1405,6 +1445,8 @@ CheckTypeSize(off64_t,8, 9112, 10)
 CheckTypeSize(off64_t,8, 9112, 9)
 #elif __s390x__
 CheckTypeSize(off64_t,8, 9112, 12)
+#elif __x86_64__
+CheckTypeSize(off64_t,8, 9112, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9112,0);
 Msg("Find size of off64_t (9112)\n");
@@ -1428,6 +1470,10 @@ CheckTypeSize(intptr_t,4, 10515, 6)
 
 #if __s390__ && !__s390x__
 CheckTypeSize(intptr_t,4, 10516, 10)
+#endif
+
+#if __x86_64__
+CheckTypeSize(intptr_t,8, 10786, 11)
 #endif
 
 #ifdef TET_TEST

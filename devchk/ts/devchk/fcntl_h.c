@@ -355,6 +355,16 @@ CheckMemberSize(struct flock,l_len,8,12,34305)
 CheckOffset(struct flock,l_len,16,12,34305)
 CheckMemberSize(struct flock,l_pid,4,12,34306)
 CheckOffset(struct flock,l_pid,24,12,34306)
+#elif __x86_64__
+CheckTypeSize(struct flock,32, 10217, 11)
+CheckMemberSize(struct flock,l_whence,2,11,34303)
+CheckOffset(struct flock,l_whence,2,11,34303)
+CheckMemberSize(struct flock,l_start,8,11,34304)
+CheckOffset(struct flock,l_start,8,11,34304)
+CheckMemberSize(struct flock,l_len,8,11,34305)
+CheckOffset(struct flock,l_len,16,11,34305)
+CheckMemberSize(struct flock,l_pid,4,11,34306)
+CheckOffset(struct flock,l_pid,24,11,34306)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
 Msg("Find size of flock (10217)\n");
@@ -422,6 +432,16 @@ CheckMemberSize(struct flock64,l_len,8,12,34310)
 CheckOffset(struct flock64,l_len,16,12,34310)
 CheckMemberSize(struct flock64,l_pid,4,12,34311)
 CheckOffset(struct flock64,l_pid,24,12,34311)
+#elif __x86_64__
+CheckTypeSize(struct flock64,32, 10218, 11)
+CheckMemberSize(struct flock64,l_whence,2,11,34308)
+CheckOffset(struct flock64,l_whence,2,11,34308)
+CheckMemberSize(struct flock64,l_start,8,11,34309)
+CheckOffset(struct flock64,l_start,8,11,34309)
+CheckMemberSize(struct flock64,l_len,8,11,34310)
+CheckOffset(struct flock64,l_len,16,11,34310)
+CheckMemberSize(struct flock64,l_pid,4,11,34311)
+CheckOffset(struct flock64,l_pid,24,11,34311)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
 Msg("Find size of flock64 (10218)\n");

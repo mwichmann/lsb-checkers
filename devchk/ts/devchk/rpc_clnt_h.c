@@ -24,6 +24,26 @@ Msg("Checking data structures in rpc/clnt.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for clnt_call(rh, proc, xargs, argsp, xres, resp, secs) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for clnt_abort(rh) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for clnt_geterr(rh,errp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for clnt_freeres(rh,xres,resp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for clnt_control(cl,rq,in) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_TIMEOUT
 	CompareConstant(CLSET_TIMEOUT,1,4286,architecture)
 #else
@@ -174,6 +194,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for clnt_destroy(rh) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef NULLPROC
 	CompareConstant(NULLPROC,((u_long)0),4310,architecture)
 #else
@@ -189,6 +213,7 @@ cnt++;
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9916,0);
 Msg("Find size of clnt_stat (9916)\n");
@@ -218,6 +243,10 @@ CheckOffset(struct rpc_err,ru,8,9,32102)
 CheckTypeSize(struct rpc_err,24, 9917, 12)
 CheckMemberSize(struct rpc_err,ru,16,12,32102)
 CheckOffset(struct rpc_err,ru,8,12,32102)
+#elif __x86_64__
+CheckTypeSize(struct rpc_err,24, 9917, 11)
+CheckMemberSize(struct rpc_err,ru,16,11,32102)
+CheckOffset(struct rpc_err,ru,8,11,32102)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9917,0);
 Msg("Find size of rpc_err (9917)\n");
@@ -295,6 +324,18 @@ CheckMemberSize(struct clnt_ops,cl_destroy,8,12,32108)
 CheckOffset(struct clnt_ops,cl_destroy,32,12,32108)
 CheckMemberSize(struct clnt_ops,cl_control,8,12,32109)
 CheckOffset(struct clnt_ops,cl_control,40,12,32109)
+#elif __x86_64__
+CheckTypeSize(struct clnt_ops,48, 9922, 11)
+CheckMemberSize(struct clnt_ops,cl_abort,8,11,32105)
+CheckOffset(struct clnt_ops,cl_abort,8,11,32105)
+CheckMemberSize(struct clnt_ops,cl_geterr,8,11,32106)
+CheckOffset(struct clnt_ops,cl_geterr,16,11,32106)
+CheckMemberSize(struct clnt_ops,cl_freeres,8,11,32107)
+CheckOffset(struct clnt_ops,cl_freeres,24,11,32107)
+CheckMemberSize(struct clnt_ops,cl_destroy,8,11,32108)
+CheckOffset(struct clnt_ops,cl_destroy,32,11,32108)
+CheckMemberSize(struct clnt_ops,cl_control,8,11,32109)
+CheckOffset(struct clnt_ops,cl_control,40,11,32109)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9922,0);
 Msg("Find size of clnt_ops (9922)\n");
@@ -336,6 +377,12 @@ CheckMemberSize(struct CLIENT,cl_ops,8,12,32110)
 CheckOffset(struct CLIENT,cl_ops,8,12,32110)
 CheckMemberSize(struct CLIENT,cl_private,8,12,32111)
 CheckOffset(struct CLIENT,cl_private,16,12,32111)
+#elif __x86_64__
+CheckTypeSize(struct CLIENT,24, 9921, 11)
+CheckMemberSize(struct CLIENT,cl_ops,8,11,32110)
+CheckOffset(struct CLIENT,cl_ops,8,11,32110)
+CheckMemberSize(struct CLIENT,cl_private,8,11,32111)
+CheckOffset(struct CLIENT,cl_private,16,11,32111)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9921,0);
 Msg("Find size of CLIENT (9921)\n");

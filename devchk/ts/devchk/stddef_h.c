@@ -49,6 +49,8 @@ CheckTypeSize(wchar_t,4, 8848, 10)
 CheckTypeSize(wchar_t,4, 8848, 9)
 #elif __s390x__
 CheckTypeSize(wchar_t,4, 8848, 12)
+#elif __x86_64__
+CheckTypeSize(wchar_t,4, 8848, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
 Msg("Find size of wchar_t (8848)\n");
@@ -96,6 +98,14 @@ CheckTypeSize(ptrdiff_t,8, 10476, 9)
 
 #if __s390x__
 CheckTypeSize(size_t,8, 10554, 12)
+#endif
+
+#if __x86_64__
+CheckTypeSize(ptrdiff_t,8, 10783, 11)
+#endif
+
+#if __x86_64__
+CheckTypeSize(size_t,8, 10784, 11)
 #endif
 
 #ifdef TET_TEST

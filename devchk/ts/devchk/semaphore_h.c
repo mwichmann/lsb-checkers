@@ -55,6 +55,8 @@ CheckTypeSize(sem_t,16, 6960, 10)
 CheckTypeSize(sem_t,32, 6960, 9)
 #elif __s390x__
 CheckTypeSize(sem_t,32, 6960, 12)
+#elif __x86_64__
+CheckTypeSize(sem_t,32, 6960, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6960,0);
 Msg("Find size of sem_t (6960)\n");

@@ -119,6 +119,12 @@ CheckMemberSize(struct pollfd,events,2,12,34413)
 CheckOffset(struct pollfd,events,4,12,34413)
 CheckMemberSize(struct pollfd,revents,2,12,34414)
 CheckOffset(struct pollfd,revents,6,12,34414)
+#elif __x86_64__
+CheckTypeSize(struct pollfd,8, 9913, 11)
+CheckMemberSize(struct pollfd,events,2,11,34413)
+CheckOffset(struct pollfd,events,4,11,34413)
+CheckMemberSize(struct pollfd,revents,2,11,34414)
+CheckOffset(struct pollfd,revents,6,11,34414)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
 Msg("Find size of pollfd (9913)\n");

@@ -34,6 +34,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef CLK_TCK
+	CompareConstant(CLK_TCK,((clock_t)__sysconf(2)),2474,architecture)
+#else
+Msg( "Error: Constant not found: CLK_TCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef CLOCK_REALTIME
 	CompareConstant(CLOCK_REALTIME,0,2475,architecture)
 #else
@@ -185,6 +195,28 @@ CheckMemberSize(struct tm,tm_gmtoff,8,12,33521)
 CheckOffset(struct tm,tm_gmtoff,40,12,33521)
 CheckMemberSize(struct tm,tm_zone,8,12,33522)
 CheckOffset(struct tm,tm_zone,48,12,33522)
+#elif __x86_64__
+CheckTypeSize(struct tm,56, 7019, 11)
+CheckMemberSize(struct tm,tm_min,4,11,33513)
+CheckOffset(struct tm,tm_min,4,11,33513)
+CheckMemberSize(struct tm,tm_hour,4,11,33514)
+CheckOffset(struct tm,tm_hour,8,11,33514)
+CheckMemberSize(struct tm,tm_mday,4,11,33515)
+CheckOffset(struct tm,tm_mday,12,11,33515)
+CheckMemberSize(struct tm,tm_mon,4,11,33516)
+CheckOffset(struct tm,tm_mon,16,11,33516)
+CheckMemberSize(struct tm,tm_year,4,11,33517)
+CheckOffset(struct tm,tm_year,20,11,33517)
+CheckMemberSize(struct tm,tm_wday,4,11,33518)
+CheckOffset(struct tm,tm_wday,24,11,33518)
+CheckMemberSize(struct tm,tm_yday,4,11,33519)
+CheckOffset(struct tm,tm_yday,28,11,33519)
+CheckMemberSize(struct tm,tm_isdst,4,11,33520)
+CheckOffset(struct tm,tm_isdst,32,11,33520)
+CheckMemberSize(struct tm,tm_gmtoff,8,11,33521)
+CheckOffset(struct tm,tm_gmtoff,40,11,33521)
+CheckMemberSize(struct tm,tm_zone,8,11,33522)
+CheckOffset(struct tm,tm_zone,48,11,33522)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 Msg("Find size of tm (7019)\n");
@@ -214,6 +246,10 @@ CheckOffset(struct itimerspec,it_value,16,9,33509)
 CheckTypeSize(struct itimerspec,32, 10101, 12)
 CheckMemberSize(struct itimerspec,it_value,16,12,33509)
 CheckOffset(struct itimerspec,it_value,16,12,33509)
+#elif __x86_64__
+CheckTypeSize(struct itimerspec,32, 10101, 11)
+CheckMemberSize(struct itimerspec,it_value,16,11,33509)
+CheckOffset(struct itimerspec,it_value,16,11,33509)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");

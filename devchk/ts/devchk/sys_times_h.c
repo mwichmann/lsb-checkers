@@ -71,6 +71,14 @@ CheckMemberSize(struct tms,tms_cutime,8,12,30170)
 CheckOffset(struct tms,tms_cutime,16,12,30170)
 CheckMemberSize(struct tms,tms_cstime,8,12,30171)
 CheckOffset(struct tms,tms_cstime,24,12,30171)
+#elif __x86_64__
+CheckTypeSize(struct tms,32, 6990, 11)
+CheckMemberSize(struct tms,tms_stime,8,11,30169)
+CheckOffset(struct tms,tms_stime,8,11,30169)
+CheckMemberSize(struct tms,tms_cutime,8,11,30170)
+CheckOffset(struct tms,tms_cutime,16,11,30170)
+CheckMemberSize(struct tms,tms_cstime,8,11,30171)
+CheckOffset(struct tms,tms_cstime,24,11,30171)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6990,0);
 Msg("Find size of tms (6990)\n");

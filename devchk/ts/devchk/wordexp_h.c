@@ -29,6 +29,7 @@ Msg("Checking data structures in wordexp.h\n");
 #elif __s390__ && !__s390x__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9200,0);
 Msg("Find size of anon-wordexp.h-7 (9200)\n");
@@ -46,6 +47,8 @@ CheckTypeSize(wordexp_t,12, 7029, 10)
 CheckTypeSize(wordexp_t,24, 7029, 9)
 #elif __s390x__
 CheckTypeSize(wordexp_t,24, 7029, 12)
+#elif __x86_64__
+CheckTypeSize(wordexp_t,24, 7029, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7029,0);
 Msg("Find size of wordexp_t (7029)\n");
@@ -57,6 +60,7 @@ Msg("Find size of wordexp_t (7029)\n");
 #elif __s390__ && !__s390x__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9201,0);
 Msg("Find size of anon-wordexp.h-45 (9201)\n");

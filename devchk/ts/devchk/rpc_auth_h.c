@@ -29,6 +29,7 @@ Msg("Checking data structures in rpc/auth.h\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9887,0);
 Msg("Find size of auth_stat (9887)\n");
@@ -80,6 +81,12 @@ CheckMemberSize(struct opaque_auth,oa_base,8,12,32027)
 CheckOffset(struct opaque_auth,oa_base,8,12,32027)
 CheckMemberSize(struct opaque_auth,oa_length,4,12,32028)
 CheckOffset(struct opaque_auth,oa_length,16,12,32028)
+#elif __x86_64__
+CheckTypeSize(struct opaque_auth,24, 9894, 11)
+CheckMemberSize(struct opaque_auth,oa_base,8,11,32027)
+CheckOffset(struct opaque_auth,oa_base,8,11,32027)
+CheckMemberSize(struct opaque_auth,oa_length,4,11,32028)
+CheckOffset(struct opaque_auth,oa_length,16,11,32028)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9894,0);
 Msg("Find size of opaque_auth (9894)\n");
@@ -145,6 +152,16 @@ CheckMemberSize(struct AUTH,ah_ops,8,12,32037)
 CheckOffset(struct AUTH,ah_ops,56,12,32037)
 CheckMemberSize(struct AUTH,ah_private,8,12,32038)
 CheckOffset(struct AUTH,ah_private,64,12,32038)
+#elif __x86_64__
+CheckTypeSize(struct AUTH,72, 9896, 11)
+CheckMemberSize(struct AUTH,ah_verf,24,11,32030)
+CheckOffset(struct AUTH,ah_verf,24,11,32030)
+CheckMemberSize(struct AUTH,ah_key,8,11,32031)
+CheckOffset(struct AUTH,ah_key,48,11,32031)
+CheckMemberSize(struct AUTH,ah_ops,8,11,32037)
+CheckOffset(struct AUTH,ah_ops,56,11,32037)
+CheckMemberSize(struct AUTH,ah_private,8,11,32038)
+CheckOffset(struct AUTH,ah_private,64,11,32038)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9896,0);
 Msg("Find size of AUTH (9896)\n");
@@ -162,6 +179,8 @@ CheckTypeSize(AUTH,40, 10391, 6)
 CheckTypeSize(AUTH,72, 10391, 9)
 #elif __s390x__
 CheckTypeSize(AUTH,72, 10391, 12)
+#elif __x86_64__
+CheckTypeSize(AUTH,72, 10391, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10391,0);
 Msg("Find size of AUTH (10391)\n");
@@ -229,6 +248,16 @@ CheckMemberSize(struct auth_ops,ah_refresh,8,12,32035)
 CheckOffset(struct auth_ops,ah_refresh,24,12,32035)
 CheckMemberSize(struct auth_ops,ah_destroy,8,12,32036)
 CheckOffset(struct auth_ops,ah_destroy,32,12,32036)
+#elif __x86_64__
+CheckTypeSize(struct auth_ops,40, 9897, 11)
+CheckMemberSize(struct auth_ops,ah_marshal,8,11,32033)
+CheckOffset(struct auth_ops,ah_marshal,8,11,32033)
+CheckMemberSize(struct auth_ops,ah_validate,8,11,32034)
+CheckOffset(struct auth_ops,ah_validate,16,11,32034)
+CheckMemberSize(struct auth_ops,ah_refresh,8,11,32035)
+CheckOffset(struct auth_ops,ah_refresh,24,11,32035)
+CheckMemberSize(struct auth_ops,ah_destroy,8,11,32036)
+CheckOffset(struct auth_ops,ah_destroy,32,11,32036)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9897,0);
 Msg("Find size of auth_ops (9897)\n");
@@ -269,6 +298,11 @@ CheckTypeSize(union des_block,8, 9888, 12)
 Msg("Missing member data for des_block on S390X\n");
 CheckOffset(union des_block,key,0,12,32024)
 CheckOffset(union des_block,c,0,12,32025)
+#elif __x86_64__
+CheckTypeSize(union des_block,8, 9888, 11)
+Msg("Missing member data for des_block on x86-64\n");
+CheckOffset(union des_block,key,0,11,32024)
+CheckOffset(union des_block,c,0,11,32025)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9888,0);
 Msg("Find size of des_block (9888)\n");

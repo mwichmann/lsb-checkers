@@ -37,6 +37,8 @@ CheckTypeSize(DIR,0, 10175, 10)
 CheckTypeSize(DIR,0, 10175, 9)
 #elif __s390x__
 CheckTypeSize(DIR,0, 10175, 12)
+#elif __x86_64__
+CheckTypeSize(DIR,0, 10175, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10175,0);
 Msg("Find size of DIR (10175)\n");
@@ -100,6 +102,16 @@ CheckMemberSize(struct dirent,d_type,1,12,34410)
 CheckOffset(struct dirent,d_type,18,12,34410)
 CheckMemberSize(struct dirent,d_name,256,12,34180)
 CheckOffset(struct dirent,d_name,19,12,34180)
+#elif __x86_64__
+CheckTypeSize(struct dirent,280, 10178, 11)
+CheckMemberSize(struct dirent,d_off,8,11,34178)
+CheckOffset(struct dirent,d_off,8,11,34178)
+CheckMemberSize(struct dirent,d_reclen,2,11,34179)
+CheckOffset(struct dirent,d_reclen,16,11,34179)
+CheckMemberSize(struct dirent,d_type,1,11,34410)
+CheckOffset(struct dirent,d_type,18,11,34410)
+CheckMemberSize(struct dirent,d_name,256,11,34180)
+CheckOffset(struct dirent,d_name,19,11,34180)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);
 Msg("Find size of dirent (10178)\n");
@@ -175,6 +187,16 @@ CheckMemberSize(struct dirent64,d_type,1,12,34184)
 CheckOffset(struct dirent64,d_type,18,12,34184)
 CheckMemberSize(struct dirent64,d_name,256,12,34185)
 CheckOffset(struct dirent64,d_name,19,12,34185)
+#elif __x86_64__
+CheckTypeSize(struct dirent64,280, 10179, 11)
+CheckMemberSize(struct dirent64,d_off,8,11,34182)
+CheckOffset(struct dirent64,d_off,8,11,34182)
+CheckMemberSize(struct dirent64,d_reclen,2,11,34183)
+CheckOffset(struct dirent64,d_reclen,16,11,34183)
+CheckMemberSize(struct dirent64,d_type,1,11,34184)
+CheckOffset(struct dirent64,d_type,18,11,34184)
+CheckMemberSize(struct dirent64,d_name,256,11,34185)
+CheckOffset(struct dirent64,d_name,19,11,34185)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10179,0);
 Msg("Find size of dirent64 (10179)\n");

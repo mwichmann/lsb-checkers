@@ -23,6 +23,24 @@ int pcnt=0;
 Msg("Checking data structures in rpc/svc.h\n");
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for svc_getargs(xprt,xargs, argsp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for svc_freeargs(xprt,xargs, argsp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RPC_ANYSOCK
+	CompareConstant(RPC_ANYSOCK,-1,4376,architecture)
+#else
+Msg( "Error: Constant not found: RPC_ANYSOCK\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(struct SVCXPRT,308, 9980, 2)
 CheckMemberSize(struct SVCXPRT,xp_port,2,2,32226)
@@ -131,6 +149,24 @@ CheckMemberSize(struct SVCXPRT,xp_p2,8,12,32250)
 CheckOffset(struct SVCXPRT,xp_p2,72,12,32250)
 CheckMemberSize(struct SVCXPRT,xp_pad,256,12,32251)
 CheckOffset(struct SVCXPRT,xp_pad,80,12,32251)
+#elif __x86_64__
+CheckTypeSize(struct SVCXPRT,336, 9980, 11)
+CheckMemberSize(struct SVCXPRT,xp_port,2,11,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,11,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,8,11,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,11,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,11,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,16,11,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,11,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,20,11,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,24,11,32248)
+CheckOffset(struct SVCXPRT,xp_verf,40,11,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,8,11,32249)
+CheckOffset(struct SVCXPRT,xp_p1,64,11,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,8,11,32250)
+CheckOffset(struct SVCXPRT,xp_p2,72,11,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,11,32251)
+CheckOffset(struct SVCXPRT,xp_pad,80,11,32251)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9980,0);
 Msg("Find size of SVCXPRT (9980)\n");
@@ -148,6 +184,8 @@ CheckTypeSize(SVCXPRT,308, 10390, 6)
 CheckTypeSize(SVCXPRT,336, 10390, 9)
 #elif __s390x__
 CheckTypeSize(SVCXPRT,336, 10390, 12)
+#elif __x86_64__
+CheckTypeSize(SVCXPRT,336, 10390, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10390,0);
 Msg("Find size of SVCXPRT (10390)\n");
@@ -213,12 +251,48 @@ CheckMemberSize(struct xp_ops,xp_freeargs,8,12,32242)
 CheckOffset(struct xp_ops,xp_freeargs,32,12,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,8,12,32244)
 CheckOffset(struct xp_ops,xp_destroy,40,12,32244)
+#elif __x86_64__
+CheckTypeSize(struct xp_ops,48, 9981, 11)
+CheckMemberSize(struct xp_ops,xp_stat,8,11,32231)
+CheckOffset(struct xp_ops,xp_stat,8,11,32231)
+CheckMemberSize(struct xp_ops,xp_getargs,8,11,32235)
+CheckOffset(struct xp_ops,xp_getargs,16,11,32235)
+CheckMemberSize(struct xp_ops,xp_reply,8,11,32238)
+CheckOffset(struct xp_ops,xp_reply,24,11,32238)
+CheckMemberSize(struct xp_ops,xp_freeargs,8,11,32242)
+CheckOffset(struct xp_ops,xp_freeargs,32,11,32242)
+CheckMemberSize(struct xp_ops,xp_destroy,8,11,32244)
+CheckOffset(struct xp_ops,xp_destroy,40,11,32244)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");
 #endif
 
 #if __s390__ && !__s390x__
+#endif
+
+#if __i386__
+CheckTypeSize(__dispatch_fn_t,4, 9997, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9997,0);
+Msg("Find size of __dispatch_fn_t (9997)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(struct svc_req,32, 9991, 2)
+CheckMemberSize(struct svc_req,rq_vers,4,2,32253)
+CheckOffset(struct svc_req,rq_vers,4,2,32253)
+CheckMemberSize(struct svc_req,rq_proc,4,2,32254)
+CheckOffset(struct svc_req,rq_proc,8,2,32254)
+CheckMemberSize(struct svc_req,rq_cred,12,2,32255)
+CheckOffset(struct svc_req,rq_cred,12,2,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,4,2,32256)
+CheckOffset(struct svc_req,rq_clntcred,24,2,32256)
+CheckMemberSize(struct svc_req,rq_xprt,4,2,32257)
+CheckOffset(struct svc_req,rq_xprt,28,2,32257)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9991,0);
+Msg("Find size of svc_req (9991)\n");
 #endif
 
 #ifdef TET_TEST

@@ -94,6 +94,8 @@ CheckTypeSize(idtype_t,4, 9185, 10)
 CheckTypeSize(idtype_t,4, 9185, 9)
 #elif __s390x__
 CheckTypeSize(idtype_t,4, 9185, 12)
+#elif __x86_64__
+CheckTypeSize(idtype_t,4, 9185, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9185,0);
 Msg("Find size of idtype_t (9185)\n");

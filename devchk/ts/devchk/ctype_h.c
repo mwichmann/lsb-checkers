@@ -29,6 +29,7 @@ Msg("Checking data structures in ctype.h\n");
 #elif __s390__ && !__s390x__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8976,0);
 Msg("Find size of anon-ctype.h-13 (8976)\n");

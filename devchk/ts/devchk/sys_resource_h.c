@@ -34,6 +34,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef RUSAGE_CHILDREN
+	CompareConstant(RUSAGE_CHILDREN,(-1),3530,architecture)
+#else
+Msg( "Error: Constant not found: RUSAGE_CHILDREN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RUSAGE_BOTH
+	CompareConstant(RUSAGE_BOTH,(-2),3531,architecture)
+#else
+Msg( "Error: Constant not found: RUSAGE_BOTH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef PRIO_PROCESS
 	CompareConstant(PRIO_PROCESS,0,3534,architecture)
 #else
@@ -175,6 +195,8 @@ CheckTypeSize(rlim_t,4, 10210, 10)
 CheckTypeSize(rlim_t,8, 10210, 9)
 #elif __s390x__
 CheckTypeSize(rlim_t,8, 10210, 12)
+#elif __x86_64__
+CheckTypeSize(rlim_t,8, 10210, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10210,0);
 Msg("Find size of rlim_t (10210)\n");
@@ -192,6 +214,8 @@ CheckTypeSize(rlim64_t,8, 10273, 10)
 CheckTypeSize(rlim64_t,8, 10273, 9)
 #elif __s390x__
 CheckTypeSize(rlim64_t,8, 10273, 12)
+#elif __x86_64__
+CheckTypeSize(rlim64_t,8, 10273, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10273,0);
 Msg("Find size of rlim64_t (10273)\n");
@@ -225,6 +249,10 @@ CheckOffset(struct rlimit,rlim_max,8,9,34263)
 CheckTypeSize(struct rlimit,16, 9120, 12)
 CheckMemberSize(struct rlimit,rlim_max,8,12,34263)
 CheckOffset(struct rlimit,rlim_max,8,12,34263)
+#elif __x86_64__
+CheckTypeSize(struct rlimit,16, 9120, 11)
+CheckMemberSize(struct rlimit,rlim_max,8,11,34263)
+CheckOffset(struct rlimit,rlim_max,8,11,34263)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9120,0);
 Msg("Find size of rlimit (9120)\n");
@@ -256,6 +284,10 @@ CheckOffset(struct rlimit64,rlim_max,8,9,34267)
 CheckTypeSize(struct rlimit64,16, 9122, 12)
 CheckMemberSize(struct rlimit64,rlim_max,8,12,34267)
 CheckOffset(struct rlimit64,rlim_max,8,12,34267)
+#elif __x86_64__
+CheckTypeSize(struct rlimit64,16, 9122, 11)
+CheckMemberSize(struct rlimit64,rlim_max,8,11,34267)
+CheckOffset(struct rlimit64,rlim_max,8,11,34267)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9122,0);
 Msg("Find size of rlimit64 (9122)\n");
@@ -457,6 +489,38 @@ CheckMemberSize(struct rusage,ru_nvcsw,8,12,34260)
 CheckOffset(struct rusage,ru_nvcsw,128,12,34260)
 CheckMemberSize(struct rusage,ru_nivcsw,8,12,34261)
 CheckOffset(struct rusage,ru_nivcsw,136,12,34261)
+#elif __x86_64__
+CheckTypeSize(struct rusage,144, 9125, 11)
+CheckMemberSize(struct rusage,ru_stime,16,11,34247)
+CheckOffset(struct rusage,ru_stime,16,11,34247)
+CheckMemberSize(struct rusage,ru_maxrss,8,11,34248)
+CheckOffset(struct rusage,ru_maxrss,32,11,34248)
+CheckMemberSize(struct rusage,ru_ixrss,8,11,34249)
+CheckOffset(struct rusage,ru_ixrss,40,11,34249)
+CheckMemberSize(struct rusage,ru_idrss,8,11,34250)
+CheckOffset(struct rusage,ru_idrss,48,11,34250)
+CheckMemberSize(struct rusage,ru_isrss,8,11,34251)
+CheckOffset(struct rusage,ru_isrss,56,11,34251)
+CheckMemberSize(struct rusage,ru_minflt,8,11,34252)
+CheckOffset(struct rusage,ru_minflt,64,11,34252)
+CheckMemberSize(struct rusage,ru_majflt,8,11,34253)
+CheckOffset(struct rusage,ru_majflt,72,11,34253)
+CheckMemberSize(struct rusage,ru_nswap,8,11,34254)
+CheckOffset(struct rusage,ru_nswap,80,11,34254)
+CheckMemberSize(struct rusage,ru_inblock,8,11,34255)
+CheckOffset(struct rusage,ru_inblock,88,11,34255)
+CheckMemberSize(struct rusage,ru_oublock,8,11,34256)
+CheckOffset(struct rusage,ru_oublock,96,11,34256)
+CheckMemberSize(struct rusage,ru_msgsnd,8,11,34257)
+CheckOffset(struct rusage,ru_msgsnd,104,11,34257)
+CheckMemberSize(struct rusage,ru_msgrcv,8,11,34258)
+CheckOffset(struct rusage,ru_msgrcv,112,11,34258)
+CheckMemberSize(struct rusage,ru_nsignals,8,11,34259)
+CheckOffset(struct rusage,ru_nsignals,120,11,34259)
+CheckMemberSize(struct rusage,ru_nvcsw,8,11,34260)
+CheckOffset(struct rusage,ru_nvcsw,128,11,34260)
+CheckMemberSize(struct rusage,ru_nivcsw,8,11,34261)
+CheckOffset(struct rusage,ru_nivcsw,136,11,34261)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9125,0);
 Msg("Find size of rusage (9125)\n");
