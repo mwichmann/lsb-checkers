@@ -134,9 +134,9 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __INT_MAX__ (3600) in db\n");
+Msg( "No definition for __INT_MAX__ (3600, int) in db\n");
 #ifdef __INT_MAX__
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3600,%s)\n", architecture, __INT_MAX__);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3600,%d)\n", architecture, __INT_MAX__);
 #endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
@@ -224,9 +224,9 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for LONG_MAX (16) in db\n");
+Msg( "No definition for LONG_MAX (16, int) in db\n");
 #ifdef LONG_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,16,%s)\n", architecture, LONG_MAX);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,16,%d)\n", architecture, LONG_MAX);
 #endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
@@ -264,9 +264,9 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ULONG_MAX (18) in db\n");
+Msg( "No definition for ULONG_MAX (18, int) in db\n");
 #ifdef ULONG_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%s)\n", architecture, ULONG_MAX);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%d)\n", architecture, ULONG_MAX);
 #endif
 #endif
 #ifdef _LSB_DEFAULT_ARCH
