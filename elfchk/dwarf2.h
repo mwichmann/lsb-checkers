@@ -604,7 +604,7 @@ enum dwarf_macinfo_record_type
     DW_MACINFO_vendor_ext = 255
   };
 
-/* @@@ For use with GNU frame unwind information.  */
+/* DWARF Exception Header Encoding */
 
 #define DW_EH_PE_absptr		0x00
 #define DW_EH_PE_omit		0xff
