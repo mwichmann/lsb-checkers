@@ -197,6 +197,24 @@ fprintf(stderr, "FINI_ARRAY SECTION\n" );
 #endif /* VERBOSE */
 }
 
+#if defined(__ia64__)
+void
+checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1 )
+{
+#ifdef VERBOSE
+fprintf(stderr, "IA_64_EXT SECTION\n" );
+#endif /* VERBOSE */
+}
+
+void
+checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1 )
+{
+#ifdef VERBOSE
+fprintf(stderr, "IA_64_UNWIND SECTION\n" );
+#endif /* VERBOSE */
+}
+#endif
+
 void
 checkElfsection(int index, ElfFile *file1)
 {
