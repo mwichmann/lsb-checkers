@@ -59,6 +59,9 @@ cnt++;
 
 #else
 Msg( "No definition for TIOCNOTTY (4627) in db\n");
+#ifdef TIOCNOTTY
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4627,%s)\n", architecture, TIOCNOTTY);
+#endif
 #endif
 #ifdef TET_TEST
 if (pcnt == cnt )
