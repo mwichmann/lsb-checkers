@@ -1,0 +1,46 @@
+17) Index Record must contain legal Tag value
+    TESTS:
+
+	a) Verify that the simple package with legal Tag values install correctly
+	b) Verify that the simple package with illegal Tag values fails to install
+
+18) Index Record must contain legal Type value
+    TESTS:
+
+	a) Verify that the simple package with legal type values install correctly
+	b) Verify that the simple package with illegal type values fails to install
+
+19) Index Record offset value must be between 0 and the value in hsize
+    TESTS:
+
+	a) Verify that the simple package with 0<offset<hsize install correctly
+	b) Verify that the simple package with offset=0 fails to install
+	c) Verify that the simple package with offset>0 fails to install
+
+20) Verify all types listed in Table 16-3 (and implemented) can be installed
+
+	a) Verify that a simple package containing each type installs correctly
+
+21) Verify alignment of types listed in Table 16-3 (and implemented)
+
+	a) Verify that a simple package containing each type correctly aligned installs correctly
+	b) Verify that a simple package containing each type incorrectly aligned fails to install
+
+22) RPM_STRING_ARRAY_TYPE must contain count number of NUL seperated strings.
+    TESTS:
+
+	a) Verify that the simple package with matching count/num strings install correctly
+	b) Verify that the simple package with mismatched count/num strings fails to install
+
+23) RPM_I18NSTRING_TYPE must always have a count if 1
+    TESTS:
+
+	a) Verify that the simple package with RPM_I18NSTRING_TYPE index count of 1 installs correctly
+	b) Verify that the simple package with RPM_I18NSTRING_TYPE index count not 1 fails to install
+
+24) RPM_I18NSTRING_TYPE index has the same number of entries as the count of the HDRTAG_HDRI18NTABLE index.
+    TESTS:
+
+	a) Verify that a simple package with RPM_I18NSTRING_TYPE strings matching the count of the HDRTAG_HDRI18NTABLE index installs correctly
+	b) Verify that a simple package with RPM_I18NSTRING_TYPE strings not matching the count of the HDRTAG_HDRI18NTABLE index fails to install correctly
+

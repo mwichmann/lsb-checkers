@@ -1,0 +1,24 @@
+25) Header Private tag RPMTAG_HEADERSIGNATURES must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_HEADERSIGNATURES in the Signature Section installs correctly
+	b) Verify that a simple package without RPMTAG_HEADERSIGNATURES installs correctly
+	c) Verify that a simple package with RPMTAG_HEADERSIGNATURES in the Header Section fails to install correctly
+	d) Verify that a simple package with RPMTAG_HEADERSIGNATURES of type other than BIN fails to install correctly
+	e) Verify that a simple package with RPMTAG_HEADERSIGNATURES of count other than 16 fails to install correctly
+
+26) Header Private tag RPMTAG_HEADERIMMUTABLE must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_HEADERIMMUTABLE installs correctly
+	b) Verify that a simple package without RPMTAG_HEADERIMMUTABLE installs correctly
+	c) Verify that a simple package with RPMTAG_HEADERIMMUTABLE of type other than BIN fails to install correctly
+	d) Verify that a simple package with RPMTAG_HEADERIMMUTABLE of count other than 16 fails to install correctly
+
+27) Header Private tag RPMTAG_HEADERI18NTABLE must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_HEADERI18NTABLE installs correctly
+	b) Verify that a simple package without RPMTAG_HEADERI18NTABLE installs correctly
+	c) Verify that a simple package with RPMTAG_HEADERI18NTABLE of type other than STRING_ARRAY fails to install correctly
+

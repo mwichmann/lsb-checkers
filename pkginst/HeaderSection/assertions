@@ -1,0 +1,244 @@
+28) Header Section tag SIGTAG_SIGSIZE must be supported
+    TESTS:
+
+	a) Verify that a simple package with SIGTAG_SIGSIZE in the Signature Section installs correctly
+	b) Verify that a simple package without SIGTAG_SIGSIZE fails to install correctly
+	c) Verify that a simple package with SIGTAG_SIGSIZE in the Header Section fails to install correctly
+	d) Verify that a simple package with SIGTAG_SIGSIZE value not equal to the sizeof the Header and Payload sections fails to install correctly
+	e) Verify that a simple package with SIGTAG_SIGSIZE of type other than INT32 fails to install correctly
+	f) Verify that a simple package with SIGTAG_SIGSIZE of count other than 1 fails to install correctly
+
+29) Header Section tag SIGTAG_PAYLOADSIZE must be supported
+    TESTS:
+
+	a) Verify that a simple package with SIGTAG_PAYLOADSIZE in the Signature Section installs correctly
+	b) Verify that a simple package without SIGTAG_PAYLOADSIZE installs correctly
+	c) Verify that a simple package with SIGTAG_PAYLOADSIZE in the Header Section fails to install correctly
+	d) Verify that a simple package with SIGTAG_PAYLOADSIZE value not equal to the sizeof the uncompressed Payload section fails to install correctly
+	e) Verify that a simple package with SIGTAG_PAYLOADSIZE of type other than INT32 fails to install correctly
+	f) Verify that a simple package with SIGTAG_PAYLOADSIZE of count other than 1 fails to install correctly
+
+30) Header Section tag SIGTAG_MD5 must be supported
+    TESTS:
+
+	a) Verify that a simple package with SIGTAG_MD5 in the Signature Section installs correctly
+	b) Verify that a simple package without SIGTAG_MD5 fails to install correctly
+	c) Verify that a simple package with SIGTAG_MD5 in the Header Section fails to install correctly
+	d) Verify that a simple package with SIGTAG_MD5 value not equal to the 128-bit MD5 checksum of the combined Header and Archive Sections fails to install correctly
+	e) Verify that a simple package with SIGTAG_MD5 of type other than BIN fails to install correctly
+	f) Verify that a simple package with SIGTAG_MD5 of count other than 16 fails to install correctly
+
+31) Header Section tag SIGTAG_SHA1HEADER must be supported
+    TESTS:
+
+	a) Verify that a simple package with SIGTAG_SHA1HEADER in the Signature Section installs correctly
+	b) Verify that a simple package without SIGTAG_SHA1HEADER installs correctly
+	c) Verify that a simple package with SIGTAG_SHA1HEADER in the Header Section fails to install correctly
+	d) Verify that a simple package with SIGTAG_SHA1HEADER value not equal to the SHA1 checksum of the Header Section fails to install correctly
+	e) Verify that a simple package with SIGTAG_SHA1HEADER of type other than STRING fails to install correctly
+	f) Verify that a simple package with SIGTAG_SHA1HEADER of count other than 1 fails to install correctly
+
+32) Header Section tag SIGTAG_PGP must be supported
+    TESTS:
+
+	a) Verify that a simple package with SIGTAG_PGP in the Signature Section installs correctly
+	b) Verify that a simple package without SIGTAG_PGP installs correctly
+	c) Verify that a simple package with SIGTAG_PGP in the Header Section fails to install correctly
+	d) Verify that a simple package with SIGTAG_PGP value not equal to the RSA signature of the combined Header and Payload Section fails to install correctly
+	e) Verify that a simple package with SIGTAG_PGP of type other than BIN fails to install correctly
+	f) Verify that a simple package with SIGTAG_PGP of count other than 1 fails to install correctly
+
+33) Header Section tag SIGTAG_GPG must be supported
+    TESTS:
+
+	a) Verify that a simple package with SIGTAG_GPG in the Signature Section installs correctly
+	b) Verify that a simple package without SIGTAG_GPG installs correctly
+	c) Verify that a simple package with SIGTAG_GPG in the Header Section fails to install correctly
+	d) Verify that a simple package with SIGTAG_GPG value not equal to the DSA signature of the combined Header and Payload Section fails to install correctly
+	e) Verify that a simple package with SIGTAG_GPG of type other than BIN fails to install correctly
+	f) Verify that a simple package with SIGTAG_GPG of count other than 1 fails to install correctly
+
+34) Header Section tag SIGTAG_DSAHEADER must be supported
+    TESTS:
+
+	a) Verify that a simple package with SIGTAG_DSAHEADER in the Signature Section installs correctly
+	b) Verify that a simple package without SIGTAG_DSAHEADER installs correctly
+	c) Verify that a simple package with SIGTAG_DSAHEADER in the Header Section fails to install correctly
+	d) Verify that a simple package with SIGTAG_DSAHEADER value not equal to the DSA signature of the Header Section fails to install correctly
+	e) Verify that a simple package with SIGTAG_DSAHEADER of type other than BIN fails to install correctly
+	f) Verify that a simple package with SIGTAG_DSAHEADER of count other than 1 fails to install correctly
+
+32) Header Section tag SIGTAG_RSAHEADER must be supported
+    TESTS:
+
+	a) Verify that a simple package with SIGTAG_RSAHEADER in the Signature Section installs correctly
+	b) Verify that a simple package without SIGTAG_RSAHEADER installs correctly
+	c) Verify that a simple package with SIGTAG_RSAHEADER in the Header Section fails to install correctly
+	d) Verify that a simple package with SIGTAG_RSAHEADER value not equal to the RSA signature of the Header Section fails to install correctly
+	e) Verify that a simple package with SIGTAG_RSAHEADER of type other than BIN fails to install correctly
+	f) Verify that a simple package with SIGTAG_RSAHEADER of count other than 1 fails to install correctly
+
+33) Header Section tag RPMTAG_NAME must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_NAME in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_NAME fails to install
+	c) Verify that a simple package with RPMTAG_NAME in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_NAME matches the name displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_NAME of type other than STRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_NAME of count other than 1 fails to install correctly
+
+34) Header Section tag RPMTAG_VERSION must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_VERSION in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_VERSION fails to install
+	c) Verify that a simple package with RPMTAG_VERSION in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_VERSION matches the version displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_VERSION of type other than STRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_VERSION of count other than 1 fails to install correctly
+
+35) Header Section tag RPMTAG_RELEASE must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_RELEASE in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_RELEASE fails to install
+	c) Verify that a simple package with RPMTAG_RELEASE in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_RELEASE matches the release displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_RELEASE of type other than STRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_RELEASE of count other than 1 fails to install correctly
+
+36) Header Section tag RPMTAG_SUMMARY must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_SUMMARY in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_SUMMARY fails to install
+	c) Verify that a simple package with RPMTAG_SUMMARY in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_SUMMARY matches the summary displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_SUMMARY of type other than I18NSTRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_SUMMARY of count other than 1 fails to install correctly
+
+37) Header Section tag RPMTAG_DESCRIPTION must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_DESCRIPTION in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_DESCRIPTION fails to install
+	c) Verify that a simple package with RPMTAG_DESCRIPTION in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_DESCRIPTION matches the description displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_DESCRIPTION of type other than I18NSTRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_DESCRIPTION of count other than 1 fails to install correctly
+
+38) Header Section tag RPMTAG_SIZE must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_SIZE in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_SIZE fails to install
+	c) Verify that a simple package with RPMTAG_SIZE in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_SIZE is equal to the sum of the sizes of the regular files in the Payload archive.
+	e) Verify that a simple package with RPMTAG_SIZE of type other than INT32 fails to install correctly
+	f) Verify that a simple package with RPMTAG_SIZE of count other than 1 fails to install correctly
+
+39) Header Section tag RPMTAG_LICENSE must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_LICENSE in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_LICENSE fails to install
+	c) Verify that a simple package with RPMTAG_LICENSE in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_LICENSE matches the description displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_LICENSE of type other than STRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_LICENSE of count other than 1 fails to install correctly
+
+40) Header Section tag RPMTAG_GROUP must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_GROUP in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_GROUP fails to install
+	c) Verify that a simple package with RPMTAG_GROUP in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_GROUP matches the group displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_GROUP of type other than I18NSTRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_GROUP of count other than 1 fails to install correctly
+
+41) Header Section tag RPMTAG_OS must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_OS in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_OS fails to install
+	c) Verify that a simple package with RPMTAG_OS in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_OS matches the OS displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_OS of type other than STRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_OS of count other than 1 fails to install correctly
+
+42) Header Section tag RPMTAG_ARCH must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_ARCH in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_ARCH fails to install
+	c) Verify that a simple package with RPMTAG_ARCH in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_ARCH matches the architecture displayed by the installation tool
+	e) Verify that a simple package with RPMTAG_ARCH of type other than STRING fails to install correctly
+	f) Verify that a simple package with RPMTAG_ARCH of count other than 1 fails to install correctly
+
+43) Header Section tag RPMTAG_SOURCERPM must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_SOURCERPM in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_SOURCERPM installs correctly
+	c) Verify that a simple package with RPMTAG_SOURCERPM in the Signature Section fails to install correctly
+	d) Verify that a simple package with RPMTAG_SOURCERPM of type other than STRING fails to install correctly
+	e) Verify that a simple package with RPMTAG_SOURCERPM of count other than 1 fails to install correctly
+
+44) Header Section tag RPMTAG_ARCHIVESIZE must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_ARCHIVESIZE in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_ARCHIVESIZE installs correctly
+	c) Verify that a simple package with RPMTAG_ARCHIVESIZE in the Signature Section fails to install correctly
+	d) Verify that the value specified by RPMTAG_ARCHIVESIZE is equal to the size of the uncompresses Payload archive
+	e) Verify that a simple package with RPMTAG_ARCHIVESIZE of type other than INT32 fails to install correctly
+	f) Verify that a simple package with RPMTAG_ARCHIVESIZE of count other than 1 fails to install correctly
+
+45) Header Section tag RPMTAG_RPMVERSION must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_RPMVERSION in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_RPMVERSION installs correctly
+	c) Verify that a simple package with RPMTAG_RPMVERSION in the Signature Section fails to install correctly
+	d) Verify that a simple package with RPMTAG_RPMVERSION of type other than STRING fails to install correctly
+	e) Verify that a simple package with RPMTAG_RPMVERSION of count other than 1 fails to install correctly
+
+46) Header Section tag RPMTAG_COOKIE must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_COOKIE in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_COOKIE installs correctly
+	c) Verify that a simple package with RPMTAG_COOKIE in the Signature Section fails to install correctly
+	d) Verify that a simple package with RPMTAG_COOKIE of type other than STRING fails to install correctly
+	e) Verify that a simple package with RPMTAG_COOKIE of count other than 1 fails to install correctly
+
+47) Header Section tag RPMTAG_PAYLOADFORMAT must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_PAYLOADFORMAT in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_PAYLOADFORMAT fails to install
+	c) Verify that a simple package with RPMTAG_PAYLOADFORMAT in the Signature Section fails to install correctly
+	d) Verify that a simple package with RPMTAG_PAYLOADFORMAT of type other than STRING fails to install correctly
+	e) Verify that a simple package with RPMTAG_PAYLOADFORMAT of count other than 1 fails to install correctly
+
+48) Header Section tag RPMTAG_PAYLOADCOMPRESSOR must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_PAYLOADCOMPRESSOR in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_PAYLOADCOMPRESSOR fails to install
+	c) Verify that a simple package with RPMTAG_PAYLOADCOMPRESSOR in the Signature Section fails to install correctly
+	d) Verify that a simple package with RPMTAG_PAYLOADCOMPRESSOR of type other than STRING fails to install correctly
+	e) Verify that a simple package with RPMTAG_PAYLOADCOMPRESSOR of count other than 1 fails to install correctly
+
+49) Header Section tag RPMTAG_PAYLOADFLAGS must be supported
+    TESTS:
+
+	a) Verify that a simple package with RPMTAG_PAYLOADFLAGS in the Header Section installs correctly
+	b) Verify that a simple package without RPMTAG_PAYLOADFLAGS fails to install
+	c) Verify that a simple package with RPMTAG_PAYLOADFLAGS in the Signature Section fails to install correctly
+	d) Verify that a simple package with RPMTAG_PAYLOADFLAGS of type other than STRING fails to install correctly
+	e) Verify that a simple package with RPMTAG_PAYLOADFLAGS of count other than 1 fails to install correctly
+

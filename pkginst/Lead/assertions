@@ -1,0 +1,59 @@
+ 1) Lead section identifies file
+    TESTS:
+
+	a) Verify that the simple package when installed is identified by the
+	   name in the Lead section.
+
+ 2) Lead section contains magic value of "\355\253\356\333"
+    TESTS:
+
+	a) Verify that the simple package with correct magic installs correctly
+	b) Verify that the simple package with incorrect magic fails to install
+
+ 3) Lead section contains major number of 3
+    TESTS:
+
+	a) Verify that the simple package with correct major number installs correctly
+	b) Verify that the simple package with incorrect major number fails to install
+
+ 4) Lead section contains minor number of 0
+    TESTS:
+
+	a) Verify that the simple package with correct minor number installs correctly
+	b) Verify that the simple package with incorrect minor number fails to install
+
+ 5) Lead section contains type number of 0
+    TESTS:
+
+	a) Verify that the simple package with correct type number installs correctly
+	b) Verify that the simple package with incorrect type number fails to install
+
+ 6) Lead section contains archnum as specified in the archLSB.
+    TESTS:
+
+	a) Verify that the simple package with correct archnum installs correctly
+	b) Verify that the simple package with incorrect archnum fails to install
+
+ 7) Lead field name is NUL terminated
+    TESTS:
+
+	a) Verify that the simple package with correct name installs correctly
+	b) Verify that the simple package with incorrect name fails to install
+
+ 8) Lead section contains osnum number of 0
+    TESTS:
+
+	a) Verify that the simple package with correct osnum installs correctly
+	b) Verify that the simple package with incorrect osnum fails to install
+
+ 9) Lead section contains signature_type number of 5
+    TESTS:
+
+	a) Verify that the simple package with correct name installs correctly
+	b) Verify that the simple package with incorrect name fails to install
+
+10) Value of Lead reserved space is ignored
+    TESTS:
+
+	a) Verify that the simple package with random value in reserved field installs correctly
+

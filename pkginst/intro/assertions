@@ -1,0 +1,21 @@
+
+ 1) RPM file contains 4 sections
+    TESTS:
+
+	a) Simple package containing all 4 sections installs correctly
+	b) Simple package missing 1st sections fails to install correctly
+	c) Simple package missing 2nd sections fails to install correctly
+	d) Simple package missing 3rd sections fails to install correctly
+	e) Simple package missing 4th sections fails to install correctly
+
+ 2) RPM file section must be in order
+    TESTS:
+
+	a) Simple package containing all 4 sections installs correctly
+	b) Simple package with 1st and 2nd section swapped fails to install correctly
+	c) Simple package with 1st and 3rd section swapped fails to install correctly
+	d) Simple package with 1st and 4th section swapped fails to install correctly
+	e) Simple package with 2nd and 3rd section swapped fails to install correctly
+	f) Simple package with 2nd and 4th section swapped fails to install correctly
+	g) Simple package with 3rd and 4th section swapped fails to install correctly
+
