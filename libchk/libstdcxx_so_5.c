@@ -13267,14 +13267,90 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZdaPvRKSt9nothrow_t","GLIBCPP_3.2"},
 	{"_ZdlPv","GLIBCPP_3.2"},
 	{"_ZdlPvRKSt9nothrow_t","GLIBCPP_3.2"},
+#if __i386__
 	{"_Znaj","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Znaj","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_Znaj","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __ia64__
 	{"_Znam","GLIBCPP_3.2"},
+#endif
+#if __powerpc64__
+	{"_Znam","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
+	{"_Znam","GLIBCPP_3.2"},
+#endif
+#if __s390x__
+	{"_Znam","GLIBCPP_3.2"},
+#endif
+#if __ia64__
 	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __powerpc64__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __s390x__
+	{"_ZnamRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_Znwj","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Znwj","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_Znwj","GLIBCPP_3.2"},
+#endif
+#if __i386__
 	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZnwjRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __ia64__
 	{"_Znwm","GLIBCPP_3.2"},
+#endif
+#if __powerpc64__
+	{"_Znwm","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
+	{"_Znwm","GLIBCPP_3.2"},
+#endif
+#if __s390x__
+	{"_Znwm","GLIBCPP_3.2"},
+#endif
+#if __ia64__
 	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __powerpc64__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
+#if __s390x__
+	{"_ZnwmRKSt9nothrow_t","GLIBCPP_3.2"},
+#endif
 	{"__cxa_allocate_exception","CXXABI_1.2"},
 	{"__cxa_bad_cast","CXXABI_1.2"},
 	{"__cxa_bad_typeid","CXXABI_1.2"},
