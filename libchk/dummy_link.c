@@ -52,6 +52,11 @@ int main()
 
 	/* libz */
 	compress();
+
+#ifdef _CXXABICHK_
+	/* libstdc++ */
+	__cxa_pure_virtual();
+#endif
 }
 
 
