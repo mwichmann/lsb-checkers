@@ -1,3 +1,10 @@
+/*
+ *
+ * Copyright (c) 2001-2002 The Free Standards Group Inc
+ * Copyright (c) 2000-2002 Stuart Anderson (anderson@freestnadards.org)
+ * Copyright (c) 2002 Chris Yeoh (yeohc@au.ibm.com)
+ *
+ */
 #ifndef _ELFCHK_H
 #define _ELFCHK_H
 

@@ -1,3 +1,10 @@
+/*
+ *
+ * Copyright (c) 2001-2002 The Free Standards Group Inc
+ * Copyright (c) 2000-2002 Stuart Anderson (anderson@freestnadards.org)
+ * Copyright (c) 2002 Chris Yeoh (yeohc@au.ibm.com)
+ *
+ */
 
 struct tetj_handle;
 typedef int (*DynTagsFcn)(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, 
