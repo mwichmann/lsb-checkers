@@ -63,6 +63,16 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef RTLD_NEXT
+	CompareConstant(RTLD_NEXT,((void *) -1l),5185,architecture)
+#else
+Msg( "Error: Constant not found: RTLD_NEXT\n");
+cnt++;
+#endif
+
+#endif
+
 #if __ia64__
 CheckTypeSize(Dl_info,32, 10008, 3)
 #elif __i386__

@@ -231,6 +231,14 @@ cnt++;
 /* No test for INFINITY */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for isnan(x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for isinf(x) */
+#endif
+
 #if __i386__
 CheckTypeSize(struct exception,32, 10010, 2)
 CheckMemberSize(struct exception,type,4,2,32294)
