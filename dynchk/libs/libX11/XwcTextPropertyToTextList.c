@@ -6,11 +6,11 @@
 #include <X11/Xutil.h>
 #include <stddef.h>
 #undef XwcTextPropertyToTextList
-static int(*funcptr) (Display * , const XTextProperty * , wchar_t * * * , int * ) = 0;
+static int(*funcptr) (Display * , XTextProperty * , wchar_t * * * , int * ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XwcTextPropertyToTextList (Display * arg0 , const XTextProperty * arg1 , wchar_t * * * arg2 , int * arg3 )
+int XwcTextPropertyToTextList (Display * arg0 , XTextProperty * arg1 , wchar_t * * * arg2 , int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -20,15 +20,13 @@ int XwcTextPropertyToTextList (Display * arg0 , const XTextProperty * arg1 , wch
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XwcTextPropertyToTextList()");
-	validate_Rdaddress( arg0, "XwcTextPropertyToTextList - arg0");
+	validate_RWaddress( arg0, "XwcTextPropertyToTextList - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XwcTextPropertyToTextList - arg0");
-	validate_Rdaddress( arg1, "XwcTextPropertyToTextList - arg1");
+	validate_RWaddress( arg1, "XwcTextPropertyToTextList - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XwcTextPropertyToTextList - arg1");
-	validate_Rdaddress( arg2, "XwcTextPropertyToTextList - arg2");
-	validate_Rdaddress(* arg2, "XwcTextPropertyToTextList - arg2");
-	validate_Rdaddress(** arg2, "XwcTextPropertyToTextList - arg2");
+	validate_RWaddress( arg2, "XwcTextPropertyToTextList - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XwcTextPropertyToTextList - arg2");
-	validate_Rdaddress( arg3, "XwcTextPropertyToTextList - arg3");
+	validate_RWaddress( arg3, "XwcTextPropertyToTextList - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XwcTextPropertyToTextList - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -4,11 +4,11 @@
 #include <dlfcn.h>
 #include <X11/Xlib.h>
 #undef XTextWidth16
-static int(*funcptr) (XFontStruct * , const XChar2b * , int ) = 0;
+static int(*funcptr) (XFontStruct * , XChar2b * , int ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XTextWidth16 (XFontStruct * arg0 , const XChar2b * arg1 , int arg2 )
+int XTextWidth16 (XFontStruct * arg0 , XChar2b * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -18,9 +18,9 @@ int XTextWidth16 (XFontStruct * arg0 , const XChar2b * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XTextWidth16()");
-	validate_Rdaddress( arg0, "XTextWidth16 - arg0");
+	validate_RWaddress( arg0, "XTextWidth16 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XTextWidth16 - arg0");
-	validate_Rdaddress( arg1, "XTextWidth16 - arg1");
+	validate_RWaddress( arg1, "XTextWidth16 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XTextWidth16 - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XTextWidth16 - arg2");
 	}

@@ -5,11 +5,11 @@
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XCreateGlyphCursor
-static Cursor(*funcptr) (Display * , Font , Font , unsigned int , unsigned int , XColor const * , XColor const * ) = 0;
+static Cursor(*funcptr) (Display * , Font , Font , unsigned int , unsigned int , XColor * , XColor * ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-Cursor XCreateGlyphCursor (Display * arg0 , Font arg1 , Font arg2 , unsigned int arg3 , unsigned int arg4 , XColor const * arg5 , XColor const * arg6 )
+Cursor XCreateGlyphCursor (Display * arg0 , Font arg1 , Font arg2 , unsigned int arg3 , unsigned int arg4 , XColor * arg5 , XColor * arg6 )
 {
 	int reset_flag = __lsb_check_params;
 	Cursor ret_value  ;
@@ -19,15 +19,15 @@ Cursor XCreateGlyphCursor (Display * arg0 , Font arg1 , Font arg2 , unsigned int
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCreateGlyphCursor()");
-	validate_Rdaddress( arg0, "XCreateGlyphCursor - arg0");
+	validate_RWaddress( arg0, "XCreateGlyphCursor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateGlyphCursor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreateGlyphCursor - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XCreateGlyphCursor - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XCreateGlyphCursor - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XCreateGlyphCursor - arg4");
-	validate_Rdaddress( arg5, "XCreateGlyphCursor - arg5");
+	validate_RWaddress( arg5, "XCreateGlyphCursor - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XCreateGlyphCursor - arg5");
-	validate_Rdaddress( arg6, "XCreateGlyphCursor - arg6");
+	validate_RWaddress( arg6, "XCreateGlyphCursor - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XCreateGlyphCursor - arg6");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

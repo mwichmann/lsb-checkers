@@ -4,11 +4,11 @@
 #include <dlfcn.h>
 #include <X11/Xlib.h>
 #undef XTextExtents16
-static int(*funcptr) (XFontStruct * , const XChar2b * , int , int * , int * , int * , XCharStruct * ) = 0;
+static int(*funcptr) (XFontStruct * , XChar2b * , int , int * , int * , int * , XCharStruct * ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XTextExtents16 (XFontStruct * arg0 , const XChar2b * arg1 , int arg2 , int * arg3 , int * arg4 , int * arg5 , XCharStruct * arg6 )
+int XTextExtents16 (XFontStruct * arg0 , XChar2b * arg1 , int arg2 , int * arg3 , int * arg4 , int * arg5 , XCharStruct * arg6 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -18,18 +18,18 @@ int XTextExtents16 (XFontStruct * arg0 , const XChar2b * arg1 , int arg2 , int *
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XTextExtents16()");
-	validate_Rdaddress( arg0, "XTextExtents16 - arg0");
+	validate_RWaddress( arg0, "XTextExtents16 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XTextExtents16 - arg0");
-	validate_Rdaddress( arg1, "XTextExtents16 - arg1");
+	validate_RWaddress( arg1, "XTextExtents16 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XTextExtents16 - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XTextExtents16 - arg2");
-	validate_Rdaddress( arg3, "XTextExtents16 - arg3");
+	validate_RWaddress( arg3, "XTextExtents16 - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XTextExtents16 - arg3");
-	validate_Rdaddress( arg4, "XTextExtents16 - arg4");
+	validate_RWaddress( arg4, "XTextExtents16 - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XTextExtents16 - arg4");
-	validate_Rdaddress( arg5, "XTextExtents16 - arg5");
+	validate_RWaddress( arg5, "XTextExtents16 - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XTextExtents16 - arg5");
-	validate_Rdaddress( arg6, "XTextExtents16 - arg6");
+	validate_RWaddress( arg6, "XTextExtents16 - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XTextExtents16 - arg6");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
