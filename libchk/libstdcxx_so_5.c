@@ -17757,7 +17757,7 @@ struct base_type_info Si_baseinfo[] = {
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __ia64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __arm__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
@@ -17769,16 +17769,16 @@ struct base_type_info Si_baseinfo[] = {
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __powerpc64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __x86_64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __s390x__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 	};
 
@@ -17849,7 +17849,7 @@ struct base_type_info So_baseinfo[] = {
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __ia64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __arm__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
@@ -17861,16 +17861,16 @@ struct base_type_info So_baseinfo[] = {
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __powerpc64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __x86_64__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 #if __s390x__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
 #endif
 	};
 
@@ -17941,7 +17941,7 @@ struct base_type_info St13basic_istreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __ia64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __arm__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
@@ -17953,16 +17953,16 @@ struct base_type_info St13basic_istreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __powerpc64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __x86_64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __s390x__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 	};
 
@@ -18033,7 +18033,7 @@ struct base_type_info St13basic_ostreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __ia64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __arm__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
@@ -18045,16 +18045,16 @@ struct base_type_info St13basic_ostreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __powerpc64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __x86_64__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 #if __s390x__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545472U},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
 #endif
 	};
 
