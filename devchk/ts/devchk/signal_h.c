@@ -1101,7 +1101,16 @@ CheckOffset(struct sigcontext,sc_mask,2640,3,34579)
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sigcontext,32, 10300, 6)
-Msg("Missing member data for sigcontext on PPC32\n");
+CheckMemberSize(struct sigcontext,_unused,16,6,40161)
+CheckOffset(struct sigcontext,_unused,0,6,40161)
+CheckMemberSize(struct sigcontext,signal,4,6,40162)
+CheckOffset(struct sigcontext,signal,16,6,40162)
+CheckMemberSize(struct sigcontext,handler,4,6,40163)
+CheckOffset(struct sigcontext,handler,20,6,40163)
+CheckMemberSize(struct sigcontext,oldmask,4,6,40164)
+CheckOffset(struct sigcontext,oldmask,24,6,40164)
+CheckMemberSize(struct sigcontext,regs,4,6,40165)
+CheckOffset(struct sigcontext,regs,28,6,40165)
 #endif
 
 #ifdef TET_TEST

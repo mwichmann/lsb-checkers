@@ -75,6 +75,36 @@ Msg( "No definition for _SC_GR0_OFFSET (5031, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5031,%d);\n", architecture, _SC_GR0_OFFSET);
 #endif
 #endif
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(struct pt_regs,176, 10528, 6)
+CheckMemberSize(struct pt_regs,gpr,128,6,40166)
+CheckOffset(struct pt_regs,gpr,0,6,40166)
+CheckMemberSize(struct pt_regs,nip,4,6,40167)
+CheckOffset(struct pt_regs,nip,128,6,40167)
+CheckMemberSize(struct pt_regs,msr,4,6,40168)
+CheckOffset(struct pt_regs,msr,132,6,40168)
+CheckMemberSize(struct pt_regs,orig_gpr3,4,6,40169)
+CheckOffset(struct pt_regs,orig_gpr3,136,6,40169)
+CheckMemberSize(struct pt_regs,ctr,4,6,40170)
+CheckOffset(struct pt_regs,ctr,140,6,40170)
+CheckMemberSize(struct pt_regs,link,4,6,40171)
+CheckOffset(struct pt_regs,link,144,6,40171)
+CheckMemberSize(struct pt_regs,xer,4,6,40172)
+CheckOffset(struct pt_regs,xer,148,6,40172)
+CheckMemberSize(struct pt_regs,ccr,4,6,40173)
+CheckOffset(struct pt_regs,ccr,152,6,40173)
+CheckMemberSize(struct pt_regs,mq,4,6,40174)
+CheckOffset(struct pt_regs,mq,156,6,40174)
+CheckMemberSize(struct pt_regs,trap,4,6,40175)
+CheckOffset(struct pt_regs,trap,160,6,40175)
+CheckMemberSize(struct pt_regs,dar,4,6,40176)
+CheckOffset(struct pt_regs,dar,164,6,40176)
+CheckMemberSize(struct pt_regs,dsisr,4,6,40177)
+CheckOffset(struct pt_regs,dsisr,168,6,40177)
+CheckMemberSize(struct pt_regs,result,4,6,40178)
+CheckOffset(struct pt_regs,result,172,6,40178)
+#endif
+
 #if __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
 #endif
@@ -137,7 +167,29 @@ CheckTypeSize(mcontext_t,32, 10329, 6)
 #endif
 
 #if __i386__
+CheckTypeSize(struct ucontext,20, 10219, 2)
+CheckMemberSize(struct ucontext,uc_flags,4,2,34312)
+CheckOffset(struct ucontext,uc_flags,0,2,34312)
+CheckMemberSize(struct ucontext,uc_link,4,2,34313)
+CheckOffset(struct ucontext,uc_link,0,2,34313)
+CheckMemberSize(struct ucontext,uc_stack,4,2,34314)
+CheckOffset(struct ucontext,uc_stack,0,2,34314)
+CheckMemberSize(struct ucontext,uc_mcontext,4,2,34330)
+CheckOffset(struct ucontext,uc_mcontext,0,2,34330)
+CheckMemberSize(struct ucontext,uc_sigmask,4,2,34331)
+CheckOffset(struct ucontext,uc_sigmask,0,2,34331)
+CheckMemberSize(struct ucontext,__fpregs_mem,4,2,34332)
+CheckOffset(struct ucontext,__fpregs_mem,0,2,34332)
+#endif
+
+#if __i386__
 CheckTypeSize(ucontext_t,348, 10220, 2)
+#endif
+
+#if __ia64__
+CheckTypeSize(struct ucontext,2656, 10330, 3)
+CheckMemberSize(struct ucontext,_u,2656,3,34549)
+CheckOffset(struct ucontext,_u,0,3,34549)
 #endif
 
 #if __ia64__
@@ -146,6 +198,20 @@ CheckTypeSize(ucontext_t,2656, 10331, 3)
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(ucontext_t,180, 10335, 6)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(struct ucontext,180, 10526, 6)
+CheckMemberSize(struct ucontext,uc_flags,4,6,40156)
+CheckOffset(struct ucontext,uc_flags,0,6,40156)
+CheckMemberSize(struct ucontext,uc_link,4,6,40157)
+CheckOffset(struct ucontext,uc_link,4,6,40157)
+CheckMemberSize(struct ucontext,uc_stack,12,6,40158)
+CheckOffset(struct ucontext,uc_stack,8,6,40158)
+CheckMemberSize(struct ucontext,uc_mcontext,32,6,40159)
+CheckOffset(struct ucontext,uc_mcontext,20,6,40159)
+CheckMemberSize(struct ucontext,uc_sigmask,128,6,40160)
+CheckOffset(struct ucontext,uc_sigmask,52,6,40160)
 #endif
 
 #ifdef TET_TEST
