@@ -55,34 +55,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev","CXXABI_1.3",0,"LSB-C++",0,1},
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev","CXXABI_1.3",0,"LSB-C++",0,1},
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD2Ev","CXXABI_1.3",0,"LSB-C++",0,1},
-	{"_ZN10__gnu_norm15_List_node_base4hookEPS0_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN10__gnu_norm15_List_node_base4swapERS0_S1_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN10__gnu_norm15_List_node_base6unhookEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN10__gnu_norm15_List_node_base7reverseEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN10__gnu_norm15_List_node_base8transferEPS0_S1_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN11__gnu_debug19_Safe_iterator_base9_M_attachEPNS_19_Safe_sequence_baseEb","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN11__gnu_debug19_Safe_iterator_base9_M_detachEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN11__gnu_debug19_Safe_sequence_base13_M_detach_allEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN11__gnu_debug19_Safe_sequence_base18_M_detach_singularEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN11__gnu_debug19_Safe_sequence_base22_M_revalidate_singularEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN11__gnu_debug19_Safe_sequence_base7_M_swapERS0_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZN9__gnu_cxx12__atomic_addEPVii","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __powerpc64__
-	{"_ZN9__gnu_cxx17__pool_alloc_base12_M_get_mutexEv","GLIBCXX_3.4.2",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEm","GLIBCXX_3.4.2",0,"LSB-C++",0,1},
-#endif
-	{"_ZN9__gnu_cxx18__exchange_and_addEPVii","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __powerpc64__
-	{"_ZN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEE4fileEv","GLIBCXX_3.4.2",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEE4fileEv","GLIBCXX_3.4.2",0,"LSB-C++",0,1},
-#endif
 	{"_ZN9__gnu_cxx27__verbose_terminate_handlerEv","CXXABI_1.3",0,"LSB-C++",0,1},
 	{"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj","CXXABI_1.3",0,"LSB-C++",0,1},
 	{"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE","CXXABI_1.3",0,"LSB-C++",0,1},
@@ -221,14 +193,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.3",0,"LSB-C++",0,1},
 #endif
 	{"_ZNK10__cxxabiv129__pointer_to_member_type_info15__pointer_catchEPKNS_17__pbase_type_infoEPPvj","CXXABI_1.3",0,"LSB-C++",0,1},
-	{"_ZNK11__gnu_debug16_Error_formatter10_M_messageENS_13_Debug_msg_idE","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNK11__gnu_debug16_Error_formatter10_Parameter14_M_print_fieldEPKS0_PKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNK11__gnu_debug16_Error_formatter10_Parameter20_M_print_descriptionEPKS0_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNK11__gnu_debug16_Error_formatter13_M_print_wordEPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNK11__gnu_debug16_Error_formatter15_M_print_stringEPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNK11__gnu_debug16_Error_formatter8_M_errorEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNK11__gnu_debug19_Safe_iterator_base11_M_singularEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNK11__gnu_debug19_Safe_iterator_base14_M_can_compareERKS0_","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #if __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofEPKwj","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
@@ -7349,11 +7313,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt14overflow_errorC2ERKSs","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt14overflow_errorD0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt14overflow_errorD1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt15_List_node_base4hookEPS_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt15_List_node_base4swapERS_S0_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt15_List_node_base6unhookEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt15_List_node_base7reverseEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt15_List_node_base8transferEPS_S0_","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #if __ia64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE10pubseekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
@@ -7751,7 +7710,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEEaSERKS2_","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE15_M_update_egptrEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE15_M_update_egptrEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE17_M_stringbuf_initESt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE3strERKSs","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #if __i386__
@@ -7778,22 +7736,10 @@ struct versym libstdcxx_so_6[] = {
 #if __i386__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcjj","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
-#if __i386__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcjj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcjj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcjj","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __ia64__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __powerpc64__
@@ -7802,16 +7748,7 @@ struct versym libstdcxx_so_6[] = {
 #if __s390__ && !__s390x__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
-#if __s390__ && !__s390x__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __x86_64__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __s390x__
@@ -7832,16 +7769,7 @@ struct versym libstdcxx_so_6[] = {
 #if __i386__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
-#if __i386__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __s390__ && !__s390x__
@@ -7857,7 +7785,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEEC2ESt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE15_M_update_egptrEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE15_M_update_egptrEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE17_M_stringbuf_initESt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE3strERKSbIwS1_S2_E","GLIBCXX_3.4",0,"LSB-C++",0,1},
@@ -7885,22 +7812,10 @@ struct versym libstdcxx_so_6[] = {
 #if __i386__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwjj","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
-#if __i386__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwjj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwjj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwjj","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __ia64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __powerpc64__
@@ -7909,16 +7824,7 @@ struct versym libstdcxx_so_6[] = {
 #if __s390__ && !__s390x__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
-#if __s390__ && !__s390x__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __x86_64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwmm","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __s390x__
@@ -7939,16 +7845,7 @@ struct versym libstdcxx_so_6[] = {
 #if __i386__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
-#if __i386__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __s390__ && !__s390x__
@@ -8328,194 +8225,10 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt15underflow_errorC2ERKSs","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15underflow_errorD0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt15underflow_errorD1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt16__numpunct_cacheIcE8_M_cacheERKSt6locale","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __i386__
-	{"_ZNSt16__numpunct_cacheIcEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt16__numpunct_cacheIcEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt16__numpunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt16__numpunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt16__numpunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt16__numpunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt16__numpunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt16__numpunct_cacheIcEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt16__numpunct_cacheIcEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt16__numpunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt16__numpunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt16__numpunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt16__numpunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt16__numpunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt16__numpunct_cacheIcED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt16__numpunct_cacheIcED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt16__numpunct_cacheIcED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt16__numpunct_cacheIwE8_M_cacheERKSt6locale","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __i386__
-	{"_ZNSt16__numpunct_cacheIwEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt16__numpunct_cacheIwEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt16__numpunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt16__numpunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt16__numpunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt16__numpunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt16__numpunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt16__numpunct_cacheIwEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt16__numpunct_cacheIwEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt16__numpunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt16__numpunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt16__numpunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt16__numpunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt16__numpunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt16__numpunct_cacheIwED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt16__numpunct_cacheIwED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt16__numpunct_cacheIwED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt16invalid_argumentC1ERKSs","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt16invalid_argumentC2ERKSs","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt16invalid_argumentD0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt16invalid_argumentD1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt17__timepunct_cacheIcE12_S_timezonesE","GLIBCXX_3.4",0,"LSB-C++",0,0},
-#if __i386__
-	{"_ZNSt17__timepunct_cacheIcEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt17__timepunct_cacheIcEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt17__timepunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt17__timepunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt17__timepunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt17__timepunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt17__timepunct_cacheIcEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt17__timepunct_cacheIcEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt17__timepunct_cacheIcEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt17__timepunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt17__timepunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt17__timepunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt17__timepunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt17__timepunct_cacheIcEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt17__timepunct_cacheIcED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt17__timepunct_cacheIcED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt17__timepunct_cacheIcED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt17__timepunct_cacheIwE12_S_timezonesE","GLIBCXX_3.4",0,"LSB-C++",0,0},
-#if __i386__
-	{"_ZNSt17__timepunct_cacheIwEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt17__timepunct_cacheIwEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt17__timepunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt17__timepunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt17__timepunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt17__timepunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt17__timepunct_cacheIwEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt17__timepunct_cacheIwEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt17__timepunct_cacheIwEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt17__timepunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt17__timepunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt17__timepunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt17__timepunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt17__timepunct_cacheIwEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt17__timepunct_cacheIwED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt17__timepunct_cacheIwED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt17__timepunct_cacheIwED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt17moneypunct_bynameIcLb0EE4intlE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 #if __i386__
 	{"_ZNSt17moneypunct_bynameIcLb0EEC1EPKcj","GLIBCXX_3.4",0,"LSB-C++",0,1},
@@ -8700,190 +8413,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt17moneypunct_bynameIwLb1EED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt17moneypunct_bynameIwLb1EED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt17moneypunct_bynameIwLb1EED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIcLb0EE8_M_cacheERKSt6locale","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __i386__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt18__moneypunct_cacheIcLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt18__moneypunct_cacheIcLb0EED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIcLb0EED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIcLb0EED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIcLb1EE8_M_cacheERKSt6locale","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __i386__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt18__moneypunct_cacheIcLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt18__moneypunct_cacheIcLb1EED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIcLb1EED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIcLb1EED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIwLb0EE8_M_cacheERKSt6locale","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __i386__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt18__moneypunct_cacheIwLb0EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt18__moneypunct_cacheIwLb0EED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIwLb0EED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIwLb0EED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIwLb1EE8_M_cacheERKSt6locale","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __i386__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt18__moneypunct_cacheIwLb1EEC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt18__moneypunct_cacheIwLb1EED0Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIwLb1EED1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt18__moneypunct_cacheIwLb1EED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt18basic_stringstreamIcSt11char_traitsIcESaIcEE3strERKSs","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt18basic_stringstreamIcSt11char_traitsIcESaIcEEC1ERKSsSt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt18basic_stringstreamIcSt11char_traitsIcESaIcEEC1ESt13_Ios_Openmode","GLIBCXX_3.4",0,"LSB-C++",0,1},
@@ -9180,138 +8709,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt6locale3allE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZNSt6locale4noneE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZNSt6locale4timeE","GLIBCXX_3.4",0,"LSB-C++",0,0},
-	{"_ZNSt6locale5_Impl16_M_install_facetEPKNS_2idEPKNS_5facetE","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt6locale5_Impl16_M_replace_facetEPKS0_PKNS_2idE","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt6locale5_Impl19_M_replace_categoryEPKS0_PKPKNS_2idE","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt6locale5_Impl21_M_replace_categoriesEPKS0_i","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#if __i386__
-	{"_ZNSt6locale5_ImplC1EPKcj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt6locale5_ImplC1EPKcj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt6locale5_ImplC1ERKS0_j","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt6locale5_ImplC1ERKS0_j","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt6locale5_ImplC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt6locale5_ImplC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt6locale5_ImplC2EPKcj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt6locale5_ImplC2EPKcj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt6locale5_ImplC2ERKS0_j","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt6locale5_ImplC2ERKS0_j","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt6locale5_ImplC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt6locale5_ImplC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-	{"_ZNSt6locale5_ImplD1Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt6locale5_ImplD2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt6locale5ctypeE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZNSt6locale5facet15_S_get_c_localeEv","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt6locale5facet17_S_clone_c_localeERP15__locale_struct","GLIBCXX_3.4",0,"LSB-C++",0,1},
@@ -10262,27 +9659,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt8numpunctIwEC1EP15__locale_structm","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __i386__
-	{"_ZNSt8numpunctIwEC1EPSt16__numpunct_cacheIwEj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt8numpunctIwEC1EPSt16__numpunct_cacheIwEj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt8numpunctIwEC1EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt8numpunctIwEC1EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt8numpunctIwEC1EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt8numpunctIwEC1EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt8numpunctIwEC1EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
 	{"_ZNSt8numpunctIwEC1Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -10323,27 +9699,6 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if __s390x__
 	{"_ZNSt8numpunctIwEC2EP15__locale_structm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __i386__
-	{"_ZNSt8numpunctIwEC2EPSt16__numpunct_cacheIwEj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt8numpunctIwEC2EPSt16__numpunct_cacheIwEj","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __ia64__
-	{"_ZNSt8numpunctIwEC2EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"_ZNSt8numpunctIwEC2EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt8numpunctIwEC2EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __x86_64__
-	{"_ZNSt8numpunctIwEC2EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"_ZNSt8numpunctIwEC2EPSt16__numpunct_cacheIwEm","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __i386__
 	{"_ZNSt8numpunctIwEC2Ej","GLIBCXX_3.4",0,"LSB-C++",0,1},
@@ -10705,7 +10060,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt9bad_allocD2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE10exceptionsESt12_Ios_Iostate","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE11_M_setstateESt12_Ios_Iostate","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt9basic_iosIcSt11char_traitsIcEE15_M_cache_localeERKSt6locale","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE4fillEc","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E","GLIBCXX_3.4",0,"LSB-C++",0,1},
@@ -10723,7 +10077,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEED2Ev","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE10exceptionsESt12_Ios_Iostate","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE11_M_setstateESt12_Ios_Iostate","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZNSt9basic_iosIwSt11char_traitsIwEE15_M_cache_localeERKSt6locale","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE3tieEPSt13basic_ostreamIwS1_E","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE4fillEw","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE4initEPSt15basic_streambufIwS1_E","GLIBCXX_3.4",0,"LSB-C++",0,1},
@@ -10947,28 +10300,19 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZSt15set_new_handlerPFvvE","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt16__throw_bad_castv","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt17__throw_bad_allocv","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt18_Rb_tree_decrementPKSt18_Rb_tree_node_base","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt18__throw_bad_typeidv","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt18uncaught_exceptionv","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt19__throw_ios_failurePKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt19__throw_logic_errorPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt19__throw_range_errorPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt20_Rb_tree_black_countPKSt18_Rb_tree_node_baseS1_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt20_Rb_tree_rotate_leftPSt18_Rb_tree_node_baseRS0_","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt20__throw_domain_errorPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt20__throw_length_errorPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt20__throw_out_of_rangePKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt21_Rb_tree_rotate_rightPSt18_Rb_tree_node_baseRS0_","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt21__throw_bad_exceptionv","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt21__throw_runtime_errorPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt22__throw_overflow_errorPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt23__throw_underflow_errorPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt24__throw_invalid_argumentPKc","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_","GLIBCXX_3.4",0,"LSB-C++",0,1},
-	{"_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt2wsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt2wsIwSt11char_traitsIwEERSt13basic_istreamIT_T0_ES6_","GLIBCXX_3.4",0,"LSB-C++",0,1},
 	{"_ZSt3cin","GLIBCXX_3.4",0,"LSB-C++",0,0},
@@ -11121,8 +10465,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTIN10__cxxabiv129__pointer_to_member_type_infoE","CXXABI_1.3",0,"LSB-C++",0,0},
 	{"_ZTIN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTIN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
-	{"_ZTIN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
-	{"_ZTIN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTINSt6locale5facetE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTINSt8ios_base7failureE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTIPKa","CXXABI_1.3",0,"LSB-C++",0,0},
@@ -11289,8 +10631,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTSN10__cxxabiv129__pointer_to_member_type_infoE","CXXABI_1.3",0,"LSB-C++",0,0},
 	{"_ZTSN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTSN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
-	{"_ZTSN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
-	{"_ZTSN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTSNSt6locale5facetE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTSNSt8ios_base7failureE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTSPKa","CXXABI_1.3",0,"LSB-C++",0,0},
@@ -11476,8 +10816,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTVN10__cxxabiv121__vmi_class_type_infoE","CXXABI_1.3",0,"LSB-C++",0,0},
 	{"_ZTVN10__cxxabiv123__fundamental_type_infoE","CXXABI_1.3",0,"LSB-C++",0,0},
 	{"_ZTVN10__cxxabiv129__pointer_to_member_type_infoE","CXXABI_1.3",0,"LSB-C++",0,0},
-	{"_ZTVN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
-	{"_ZTVN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTVNSt6locale5facetE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTVNSt8ios_base7failureE","GLIBCXX_3.4",0,"LSB-C++",0,0},
 	{"_ZTVSd","GLIBCXX_3.4",0,"LSB-C++",0,0},
