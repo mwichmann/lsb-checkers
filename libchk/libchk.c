@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.42 $
+ * This is $Revision: 1.43 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.43  2004/08/06 18:43:53  anderson
+ * First cut at actually checking symbol size for OBJT
+ *
  * Revision 1.42  2004/07/28 14:02:07  anderson
  * As a default now, turn off some of the extraneous messages
  *
@@ -177,7 +180,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.42 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.43 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -329,6 +332,64 @@ check_symbol(ElfFile *file, struct versym *entry)
   return foundit;
 }
 
+/* Returns 1 on match, 0 otherwise */
+int
+check_size(ElfFile *file, struct versym *entry)
+{
+  int j;
+  char *symbol_name;
+  int foundit=0;
+  /* See if this symbol is in the dynsyn section of the library */
+
+  /* printf("Looking for %s\n", entry->name); */
+  for (j=0; j<file->numsyms; j++) 
+  {
+    if ( !(ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT) )
+    {
+      continue;
+    }
+#ifdef DEBUG
+    printf("Bind=%x\n", ELF32_ST_BIND(file->syms[j].st_info) );
+    printf("Type=%x\n", ELF32_ST_TYPE(file->syms[j].st_info) );
+    printf("Comparing %s and %s\n", 
+           ElfGetStringIndex(file,file->syms[j].st_name,
+                             file->symhdr->sh_link),entry->name);
+#endif
+    symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
+				    file->symhdr->sh_link);
+#if __powerpc64__
+    /* On PPC64 systems the real text for functions is stored in a symbol
+       of the same name, but prepended with a '.'. Since in the LSB DB
+       we store the names of the functions without a '.' we need this horrible
+       horrible hack so libchk can match against the correct symbols */
+    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) 
+    {
+	symbol_name++;
+    }
+#endif
+    if (strcmp(symbol_name,entry->name) == 0)
+    {
+    /* Now, check to see if it has the right size associated with it */
+
+	if( file->syms[j].st_size != entry->size ) {
+			fprintf(stderr, "size for %s doesn't match %d vs %d\n",
+							symbol_name, file->syms[j].st_size, entry->size );
+			return -1;
+	} else {
+#ifdef DEBUG
+			fprintf(stderr, "size for %s does match %d vs %d\n",
+							symbol_name, file->syms[j].st_size, entry->size );
+#endif
+			return 1;
+	}
+
+    }
+  }
+
+  /* Did not find exact match for symbol */
+  return 0;
+}
+
 
 void
 check_lib(char *libname, struct versym *entries, struct classinfo *classes, struct tetj_handle *journal)
@@ -435,6 +496,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 
   for (i=0; entries[i].name; i++) 
   {
+    /* Check the symbol version */
     tetj_tp_count++;
     snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)",
             entries[i].name, entries[i].vername>0 ? entries[i].vername :
@@ -462,6 +524,45 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
       check_symbol(file, entries+i);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    /* Check the symbol size, if it's an OBJT */
+    snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)",
+            entries[i].name, entries[i].vername>0 ? entries[i].vername :
+            "unversioned");
+#ifdef notyet
+    switch(check_size(file, entries+i)) {
+	case 0: /* Not an obj */
+			break;
+	case 1: /* Passed */
+    {
+      tetj_tp_count++;
+      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                       tmp_string);
+      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+      tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+	  break;
+    }
+	case 2: /* Failed */
+    {
+      tetj_tp_count++;
+      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                       tmp_string);
+#if 0
+      /* Failed to match */
+			snprintf(tmp_string, TMP_STRING_SIZE, "Didn't find %s (%s) in %s",
+							 entries[i].name,
+							 strlen(entries[i].vername)>0 ? entries[i].vername : 
+							   "(unversioned)",
+							 libname);
+			printf("%s\n", tmp_string);
+			tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+												 0, 0, 0, tmp_string);
+#endif
+
+      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+      tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    }
+   }
+#endif
   }
 
 /*   printf("Checking Class Information in %s\n", filename ); */
