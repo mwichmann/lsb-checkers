@@ -656,8 +656,7 @@ CheckTypeSize(fenv_t,8, 11040, 6)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(struct fenv_t,8, 11041, 9)
-Msg("Missing member data for fenv_t on PPC64\n");
+CheckTypeSize(fenv_t,8, 11041, 9)
 #endif
 
 #if __ia64__
@@ -677,7 +676,10 @@ CheckTypeSize(fenv_t,28, 11048, 2)
 #endif
 
 #if __x86_64__
-CheckTypeSize(fenv_t,4, 11056, 11)
+CheckTypeSize(fenv_t,32, 11056, 11)
+#endif
+
+#if __x86_64__
 #endif
 
 #ifdef TET_TEST
