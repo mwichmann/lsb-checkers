@@ -35,6 +35,8 @@ int __lsb_output(int level, char *format, ...)
 	char * level_name = NULL;
 	if(need_init)
 	{
+		need_init = 0;
+
 		filename = getenv("LSB_OUTPUT_FILE");
 		level_name = getenv("LSB_OUTPUT_LEVEL");
 
@@ -50,7 +52,6 @@ int __lsb_output(int level, char *format, ...)
 		if(level_name)
 			out_level = atoi(level_name);
 			
-		need_init = 0;
 	}
 
 	if(level <= out_level)
