@@ -7,6 +7,8 @@ LIB=libelfchk.a
 
 all: $(LIB) test
 
+install:
+
 $(LIB): $(OBJS)
 	rm -f $(LIB);ar clq $(LIB) $(OBJS)
 
