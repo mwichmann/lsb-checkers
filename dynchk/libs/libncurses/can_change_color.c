@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef can_change_color
 static bool(*funcptr) () = 0;
 

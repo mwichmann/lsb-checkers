@@ -34,7 +34,6 @@ pthread_key_create.o \
 pthread_key_delete.o \
 pthread_mutex_destroy.o \
 pthread_mutex_init.o \
-pthread_mutex_lock.o \
 pthread_mutex_trylock.o \
 pthread_mutex_unlock.o \
 pthread_mutexattr_destroy.o \

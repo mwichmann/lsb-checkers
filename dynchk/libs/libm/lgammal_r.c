@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef lgammal_r
 static long double(*funcptr) (long double , int * ) = 0;
 

@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef cabsl
-static long double(*funcptr) (long double ) = 0;
+static long double(*funcptr) (long double complex ) = 0;
 
-long double cabsl (long double arg0 )
+long double cabsl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cabsl");
@@ -13,7 +15,7 @@ long double cabsl (long double arg0 )
 	return funcptr(arg0);
 }
 
-long double lsb_cabsl (long double arg0 )
+long double lsb_cabsl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cabsl");

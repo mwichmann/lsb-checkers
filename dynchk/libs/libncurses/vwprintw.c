@@ -5,9 +5,9 @@
 #include <curses.h>
 #include <stdarg.h>
 #undef vwprintw
-static int(*funcptr) (WINDOW * , const char * , va_list ) = 0;
+static int(*funcptr) (WINDOW * , char * , va_list ) = 0;
 
-int vwprintw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
+int vwprintw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwprintw");
@@ -17,7 +17,7 @@ int vwprintw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vwprintw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
+int lsb_vwprintw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwprintw");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef reset_shell_mode
 static int(*funcptr) () = 0;
 

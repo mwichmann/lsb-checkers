@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef ungetch
 static int(*funcptr) (int ) = 0;
 

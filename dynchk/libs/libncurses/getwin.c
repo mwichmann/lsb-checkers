@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
+#include <curses.h>
 #undef getwin
 static WINDOW *(*funcptr) (FILE * ) = 0;
 

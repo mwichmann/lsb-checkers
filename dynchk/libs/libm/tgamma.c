@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef tgamma
 static double(*funcptr) (double ) = 0;
 

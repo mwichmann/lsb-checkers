@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef keyname
-static const char *(*funcptr) (int ) = 0;
+static char *(*funcptr) (int ) = 0;
 
-const char * keyname (int arg0 )
+char * keyname (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keyname");
@@ -13,7 +14,7 @@ const char * keyname (int arg0 )
 	return funcptr(arg0);
 }
 
-const char * lsb_keyname (int arg0 )
+char * lsb_keyname (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keyname");

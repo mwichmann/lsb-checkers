@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef fabsf
 static float(*funcptr) (float ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef mvaddnstr
 static int(*funcptr) (int , int , const char * , int ) = 0;
 

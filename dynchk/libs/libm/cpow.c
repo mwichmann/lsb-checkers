@@ -2,20 +2,24 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef cpow
-static double(*funcptr) () = 0;
+static double complex(*funcptr) (double complex , double complex ) = 0;
 
-double cpow ()
+double complex cpow (double complex arg0 , double complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpow");
-	return funcptr();
+	validate_NULL_TYPETYPE(arg0, "cpow");
+	validate_NULL_TYPETYPE(arg1, "cpow");
+	return funcptr(arg0, arg1);
 }
 
-double lsb_cpow ()
+double complex lsb_cpow (double complex arg0 , double complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpow");
-	return funcptr();
+	return funcptr(arg0, arg1);
 }
 

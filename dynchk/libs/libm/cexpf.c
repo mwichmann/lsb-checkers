@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef cexpf
-static float(*funcptr) (float ) = 0;
+static float complex(*funcptr) (float complex ) = 0;
 
-float cexpf (float arg0 )
+float complex cexpf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cexpf");
@@ -13,7 +15,7 @@ float cexpf (float arg0 )
 	return funcptr(arg0);
 }
 
-float lsb_cexpf (float arg0 )
+float complex lsb_cexpf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cexpf");

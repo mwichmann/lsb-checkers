@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <term.h>
 #undef putp
 static int(*funcptr) (const char * ) = 0;
 

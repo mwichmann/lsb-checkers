@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef sincosl
 static void(*funcptr) (long double , long double * , long double * ) = 0;
 

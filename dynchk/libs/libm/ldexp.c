@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef ldexp
 static double(*funcptr) (double , int ) = 0;
 

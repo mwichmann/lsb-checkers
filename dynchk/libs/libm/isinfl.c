@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef isinfl
 static int(*funcptr) (long double ) = 0;
 

@@ -2,20 +2,23 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef casinh
-static double(*funcptr) () = 0;
+static double complex(*funcptr) (double complex ) = 0;
 
-double casinh ()
+double complex casinh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinh");
-	return funcptr();
+	validate_NULL_TYPETYPE(arg0, "casinh");
+	return funcptr(arg0);
 }
 
-double lsb_casinh ()
+double complex lsb_casinh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinh");
-	return funcptr();
+	return funcptr(arg0);
 }
 

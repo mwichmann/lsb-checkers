@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <zlib.h>
 #undef get_crc_table
 static const uLongf *(*funcptr) () = 0;
 

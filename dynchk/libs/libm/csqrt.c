@@ -2,20 +2,23 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef csqrt
-static double(*funcptr) () = 0;
+static double complex(*funcptr) (double complex ) = 0;
 
-double csqrt ()
+double complex csqrt (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csqrt");
-	return funcptr();
+	validate_NULL_TYPETYPE(arg0, "csqrt");
+	return funcptr(arg0);
 }
 
-double lsb_csqrt ()
+double complex lsb_csqrt (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csqrt");
-	return funcptr();
+	return funcptr(arg0);
 }
 

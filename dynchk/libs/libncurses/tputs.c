@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <term.h>
 #undef tputs
-static int(*funcptr) (const char * , int , int(*)(int) ) = 0;
+static int(*funcptr) (const char * , int , int(* )(int)) = 0;
 
-int tputs (const char * arg0 , int arg1 , int(*arg2)(int) )
+int tputs (const char * arg0 , int arg1 , int(* arg2 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tputs");
@@ -16,7 +16,7 @@ int tputs (const char * arg0 , int arg1 , int(*arg2)(int) )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_tputs (const char * arg0 , int arg1 , int(*arg2)(int) )
+int lsb_tputs (const char * arg0 , int arg1 , int(* arg2 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tputs");

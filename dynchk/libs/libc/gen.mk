@@ -643,7 +643,6 @@ _longjmp.o \
 _setjmp.o \
 adjtime.o \
 adjtimex.o \
-advance.o \
 asctime_r.o \
 bindtextdomain.o \
 bsd_signal.o \
@@ -683,7 +682,6 @@ readdir_r.o \
 realpath.o \
 setbuffer.o \
 setenv.o \
-step.o \
 stpcpy.o \
 stpncpy.o \
 tdelete.o \

@@ -2,20 +2,23 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef cproj
-static double(*funcptr) () = 0;
+static double complex(*funcptr) (double complex ) = 0;
 
-double cproj ()
+double complex cproj (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cproj");
-	return funcptr();
+	validate_NULL_TYPETYPE(arg0, "cproj");
+	return funcptr(arg0);
 }
 
-double lsb_cproj ()
+double complex lsb_cproj (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cproj");
-	return funcptr();
+	return funcptr(arg0);
 }
 

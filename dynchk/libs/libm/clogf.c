@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef clogf
-static float(*funcptr) (float ) = 0;
+static float complex(*funcptr) (float complex ) = 0;
 
-float clogf (float arg0 )
+float complex clogf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clogf");
@@ -13,7 +15,7 @@ float clogf (float arg0 )
 	return funcptr(arg0);
 }
 
-float lsb_clogf (float arg0 )
+float complex lsb_clogf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clogf");

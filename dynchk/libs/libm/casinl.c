@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef casinl
-static long double(*funcptr) (long double ) = 0;
+static long double complex(*funcptr) (long double complex ) = 0;
 
-long double casinl (long double arg0 )
+long double complex casinl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinl");
@@ -13,7 +15,7 @@ long double casinl (long double arg0 )
 	return funcptr(arg0);
 }
 
-long double lsb_casinl (long double arg0 )
+long double complex lsb_casinl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinl");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef atan2l
 static long double(*funcptr) (long double , long double ) = 0;
 

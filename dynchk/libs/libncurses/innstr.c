@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef innstr
 static int(*funcptr) (char * , int ) = 0;
 

@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/types.h>
 #include <grp.h>
 #include <stddef.h>
-#include <sys/types.h>
 #undef getgrgid_r
 static int(*funcptr) (gid_t , struct group * , char * , size_t , struct group * * ) = 0;
 

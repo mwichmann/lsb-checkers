@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef remquo
 static double(*funcptr) (double , double , int * ) = 0;
 

@@ -3,10 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
+#include <curses.h>
 #undef newterm
-static SCREEN *(*funcptr) (const char * , FILE * , FILE * ) = 0;
+static SCREEN *(*funcptr) (char * , FILE * , FILE * ) = 0;
 
-SCREEN * newterm (const char * arg0 , FILE * arg1 , FILE * arg2 )
+SCREEN * newterm (char * arg0 , FILE * arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newterm");
@@ -16,7 +17,7 @@ SCREEN * newterm (const char * arg0 , FILE * arg1 , FILE * arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-SCREEN * lsb_newterm (const char * arg0 , FILE * arg1 , FILE * arg2 )
+SCREEN * lsb_newterm (char * arg0 , FILE * arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newterm");

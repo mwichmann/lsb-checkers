@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef mvcur
 static int(*funcptr) (int , int , int , int ) = 0;
 

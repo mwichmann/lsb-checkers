@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <zlib.h>
 #undef zError
 static const char *(*funcptr) (int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef slk_label
 static char *(*funcptr) (int ) = 0;
 

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <pthread.h>
 #undef pthread_key_create
-static int(*funcptr) (pthread_key_t * , void(*destr_func)(void *) ) = 0;
+static int(*funcptr) (pthread_key_t * , void(* )(void *)) = 0;
 
-int pthread_key_create (pthread_key_t * arg0 , void(*arg1)(void *) )
+int pthread_key_create (pthread_key_t * arg0 , void(* arg1 )(void *))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_key_create");
@@ -15,7 +15,7 @@ int pthread_key_create (pthread_key_t * arg0 , void(*arg1)(void *) )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_key_create (pthread_key_t * arg0 , void(*arg1)(void *) )
+int lsb_pthread_key_create (pthread_key_t * arg0 , void(* arg1 )(void *))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_key_create");

@@ -2,20 +2,23 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef ccosh
-static double(*funcptr) () = 0;
+static double complex(*funcptr) (double complex ) = 0;
 
-double ccosh ()
+double complex ccosh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccosh");
-	return funcptr();
+	validate_NULL_TYPETYPE(arg0, "ccosh");
+	return funcptr(arg0);
 }
 
-double lsb_ccosh ()
+double complex lsb_ccosh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccosh");
-	return funcptr();
+	return funcptr(arg0);
 }
 

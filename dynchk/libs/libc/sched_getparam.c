@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <sched.h>
 #include <sys/types.h>
+#include <sched.h>
 #undef sched_getparam
 static int(*funcptr) (pid_t , struct sched_param * ) = 0;
 

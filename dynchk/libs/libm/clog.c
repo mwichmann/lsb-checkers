@@ -2,20 +2,23 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef clog
-static double(*funcptr) () = 0;
+static double complex(*funcptr) (double complex ) = 0;
 
-double clog ()
+double complex clog (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clog");
-	return funcptr();
+	validate_NULL_TYPETYPE(arg0, "clog");
+	return funcptr(arg0);
 }
 
-double lsb_clog ()
+double complex lsb_clog (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clog");
-	return funcptr();
+	return funcptr(arg0);
 }
 

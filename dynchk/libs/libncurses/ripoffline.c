@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <curses.h>
 #undef ripoffline
-static int(*funcptr) (int , int (*)(WINDOW *,int) ) = 0;
+static int(*funcptr) (int , int(* )(WINDOW *, int)) = 0;
 
-int ripoffline (int arg0 , int(*arg1)(WINDOW *,int) )
+int ripoffline (int arg0 , int(* arg1 )(WINDOW *, int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ripoffline");
@@ -15,7 +15,7 @@ int ripoffline (int arg0 , int(*arg1)(WINDOW *,int) )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_ripoffline (int arg0 , int(*arg1)(WINDOW *,int) )
+int lsb_ripoffline (int arg0 , int(* arg1 )(WINDOW *, int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ripoffline");

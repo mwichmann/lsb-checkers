@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <curses.h>
 #undef unctrl
-static const char *(*funcptr) (chtype ) = 0;
+static char *(*funcptr) (chtype ) = 0;
 
-const char * unctrl (chtype arg0 )
+char * unctrl (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unctrl");
@@ -14,7 +14,7 @@ const char * unctrl (chtype arg0 )
 	return funcptr(arg0);
 }
 
-const char * lsb_unctrl (chtype arg0 )
+char * lsb_unctrl (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unctrl");

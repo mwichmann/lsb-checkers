@@ -5,9 +5,9 @@
 #include <stddef.h>
 #include <wchar.h>
 #undef wcstoq
-static long long(*funcptr) (const wchar_t * , wchar_t * , int ) = 0;
+static long long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
-long long wcstoq (const wchar_t * arg0 , wchar_t * arg1 , int arg2 )
+long long wcstoq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoq");
@@ -17,7 +17,7 @@ long long wcstoq (const wchar_t * arg0 , wchar_t * arg1 , int arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-long long lsb_wcstoq (const wchar_t * arg0 , wchar_t * arg1 , int arg2 )
+long long lsb_wcstoq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoq");

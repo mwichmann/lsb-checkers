@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef casinf
-static float(*funcptr) (float ) = 0;
+static float complex(*funcptr) (float complex ) = 0;
 
-float casinf (float arg0 )
+float complex casinf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinf");
@@ -13,7 +15,7 @@ float casinf (float arg0 )
 	return funcptr(arg0);
 }
 
-float lsb_casinf (float arg0 )
+float complex lsb_casinf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "casinf");
