@@ -22,6 +22,300 @@ int pcnt=0;
 Msg("Checking data structures in termios.h\n");
 #endif
 
+#ifdef IUCLC
+	CompareConstant(IUCLC,0001000)
+#else
+Msg( "Error: Constant not found: IUCLC\n");
+cnt++;
+#endif
+
+#ifdef OPOST
+	CompareConstant(OPOST,0000001)
+#else
+Msg( "Error: Constant not found: OPOST\n");
+cnt++;
+#endif
+
+#ifdef OLCUC
+	CompareConstant(OLCUC,0000002)
+#else
+Msg( "Error: Constant not found: OLCUC\n");
+cnt++;
+#endif
+
+#ifdef ONLCR
+	CompareConstant(ONLCR,0000004)
+#else
+Msg( "Error: Constant not found: ONLCR\n");
+cnt++;
+#endif
+
+#ifdef OCRNL
+	CompareConstant(OCRNL,0000010)
+#else
+Msg( "Error: Constant not found: OCRNL\n");
+cnt++;
+#endif
+
+#ifdef ONOCR
+	CompareConstant(ONOCR,0000020)
+#else
+Msg( "Error: Constant not found: ONOCR\n");
+cnt++;
+#endif
+
+#ifdef ONLRET
+	CompareConstant(ONLRET,0000040)
+#else
+Msg( "Error: Constant not found: ONLRET\n");
+cnt++;
+#endif
+
+#ifdef OFILL
+	CompareConstant(OFILL,0000100)
+#else
+Msg( "Error: Constant not found: OFILL\n");
+cnt++;
+#endif
+
+#ifdef OFDEL
+	CompareConstant(OFDEL,0000200)
+#else
+Msg( "Error: Constant not found: OFDEL\n");
+cnt++;
+#endif
+
+#ifdef NLDLY
+	CompareConstant(NLDLY,0000400)
+#else
+Msg( "Error: Constant not found: NLDLY\n");
+cnt++;
+#endif
+
+#ifdef NL0
+	CompareConstant(NL0,0000000)
+#else
+Msg( "Error: Constant not found: NL0\n");
+cnt++;
+#endif
+
+#ifdef NL1
+	CompareConstant(NL1,0000400)
+#else
+Msg( "Error: Constant not found: NL1\n");
+cnt++;
+#endif
+
+#ifdef CRDLY
+	CompareConstant(CRDLY,0003000)
+#else
+Msg( "Error: Constant not found: CRDLY\n");
+cnt++;
+#endif
+
+#ifdef CR0
+	CompareConstant(CR0,0000000)
+#else
+Msg( "Error: Constant not found: CR0\n");
+cnt++;
+#endif
+
+#ifdef CR1
+	CompareConstant(CR1,0001000)
+#else
+Msg( "Error: Constant not found: CR1\n");
+cnt++;
+#endif
+
+#ifdef CR2
+	CompareConstant(CR2,0002000)
+#else
+Msg( "Error: Constant not found: CR2\n");
+cnt++;
+#endif
+
+#ifdef CR3
+	CompareConstant(CR3,0003000)
+#else
+Msg( "Error: Constant not found: CR3\n");
+cnt++;
+#endif
+
+#ifdef TABDLY
+	CompareConstant(TABDLY,0014000)
+#else
+Msg( "Error: Constant not found: TABDLY\n");
+cnt++;
+#endif
+
+#ifdef TAB0
+	CompareConstant(TAB0,0000000)
+#else
+Msg( "Error: Constant not found: TAB0\n");
+cnt++;
+#endif
+
+#ifdef TAB1
+	CompareConstant(TAB1,0004000)
+#else
+Msg( "Error: Constant not found: TAB1\n");
+cnt++;
+#endif
+
+#ifdef TAB2
+	CompareConstant(TAB2,0010000)
+#else
+Msg( "Error: Constant not found: TAB2\n");
+cnt++;
+#endif
+
+#ifdef TAB3
+	CompareConstant(TAB3,0014000)
+#else
+Msg( "Error: Constant not found: TAB3\n");
+cnt++;
+#endif
+
+#ifdef BSDLY
+	CompareConstant(BSDLY,0020000)
+#else
+Msg( "Error: Constant not found: BSDLY\n");
+cnt++;
+#endif
+
+#ifdef BS0
+	CompareConstant(BS0,0000000)
+#else
+Msg( "Error: Constant not found: BS0\n");
+cnt++;
+#endif
+
+#ifdef BS1
+	CompareConstant(BS1,0020000)
+#else
+Msg( "Error: Constant not found: BS1\n");
+cnt++;
+#endif
+
+#ifdef FFDLY
+	CompareConstant(FFDLY,0100000)
+#else
+Msg( "Error: Constant not found: FFDLY\n");
+cnt++;
+#endif
+
+#ifdef FF0
+	CompareConstant(FF0,0000000)
+#else
+Msg( "Error: Constant not found: FF0\n");
+cnt++;
+#endif
+
+#ifdef FF1
+	CompareConstant(FF1,0100000)
+#else
+Msg( "Error: Constant not found: FF1\n");
+cnt++;
+#endif
+
+#ifdef VTDLY
+	CompareConstant(VTDLY,0040000)
+#else
+Msg( "Error: Constant not found: VTDLY\n");
+cnt++;
+#endif
+
+#ifdef VT0
+	CompareConstant(VT0,0000000)
+#else
+Msg( "Error: Constant not found: VT0\n");
+cnt++;
+#endif
+
+#ifdef VT1
+	CompareConstant(VT1,0040000)
+#else
+Msg( "Error: Constant not found: VT1\n");
+cnt++;
+#endif
+
+#ifdef XCASE
+	CompareConstant(XCASE,0000004)
+#else
+Msg( "Error: Constant not found: XCASE\n");
+cnt++;
+#endif
+
+#ifdef TCOOFF
+	CompareConstant(TCOOFF,0)
+#else
+Msg( "Error: Constant not found: TCOOFF\n");
+cnt++;
+#endif
+
+#ifdef TCOON
+	CompareConstant(TCOON,1)
+#else
+Msg( "Error: Constant not found: TCOON\n");
+cnt++;
+#endif
+
+#ifdef TCIOFF
+	CompareConstant(TCIOFF,2)
+#else
+Msg( "Error: Constant not found: TCIOFF\n");
+cnt++;
+#endif
+
+#ifdef TCION
+	CompareConstant(TCION,3)
+#else
+Msg( "Error: Constant not found: TCION\n");
+cnt++;
+#endif
+
+#ifdef TCIFLUSH
+	CompareConstant(TCIFLUSH,0)
+#else
+Msg( "Error: Constant not found: TCIFLUSH\n");
+cnt++;
+#endif
+
+#ifdef TCOFLUSH
+	CompareConstant(TCOFLUSH,1)
+#else
+Msg( "Error: Constant not found: TCOFLUSH\n");
+cnt++;
+#endif
+
+#ifdef TCIOFLUSH
+	CompareConstant(TCIOFLUSH,2)
+#else
+Msg( "Error: Constant not found: TCIOFLUSH\n");
+cnt++;
+#endif
+
+#ifdef TCSANOW
+	CompareConstant(TCSANOW,0)
+#else
+Msg( "Error: Constant not found: TCSANOW\n");
+cnt++;
+#endif
+
+#ifdef TCSADRAIN
+	CompareConstant(TCSADRAIN,1)
+#else
+Msg( "Error: Constant not found: TCSADRAIN\n");
+cnt++;
+#endif
+
+#ifdef TCSAFLUSH
+	CompareConstant(TCSAFLUSH,2)
+#else
+Msg( "Error: Constant not found: TCSAFLUSH\n");
+cnt++;
+#endif
+
 #ifdef NCCS
 	CompareConstant(NCCS,32)
 #else
@@ -61,13 +355,6 @@ cnt++;
 	CompareConstant(VEOF,4)
 #else
 Msg( "Error: Constant not found: VEOF\n");
-cnt++;
-#endif
-
-#ifdef VTIME
-	CompareConstant(VTIME,5)
-#else
-Msg( "Error: Constant not found: VTIME\n");
 cnt++;
 #endif
 
@@ -281,13 +568,6 @@ Msg( "Error: Constant not found: CSTOPB\n");
 cnt++;
 #endif
 
-#ifdef CREAD
-	CompareConstant(CREAD,0000200)
-#else
-Msg( "Error: Constant not found: CREAD\n");
-cnt++;
-#endif
-
 #ifdef PARENB
 	CompareConstant(PARENB,0000400)
 #else
@@ -313,13 +593,6 @@ cnt++;
 	CompareConstant(CLOCAL,0004000)
 #else
 Msg( "Error: Constant not found: CLOCAL\n");
-cnt++;
-#endif
-
-#ifdef CRTSCTS
-	CompareConstant(CRTSCTS,020000000000)
-#else
-Msg( "Error: Constant not found: CRTSCTS\n");
 cnt++;
 #endif
 
@@ -531,6 +804,12 @@ cnt++;
 #else
 Msg( "Error: Constant not found: B38400\n");
 cnt++;
+#endif
+
+#ifdef __i386__
+CheckTypeSize(speed_t,4, 9186, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 #endif
 
 #ifdef TET_TEST

@@ -33,7 +33,7 @@ cnt++;
 #ifdef __i386__
 CheckTypeSize(__compar_fn_t,4, 9231, 2)
 #elif __ia64__
-CheckTypeSize(__compar_fn_t,0, 9231, 3)
+CheckTypeSize(__compar_fn_t,8, 9231, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
 #endif

@@ -59,6 +59,8 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(FILE,148, 8782, 2)
+#elif __ia64__
+CheckTypeSize(FILE,0, 8782, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
 #endif

@@ -25,7 +25,8 @@ Msg("Checking data structures in sys/ioctl.h\n");
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,0x541B)
 #else
-Msg( "Warning: Constant not found: FIONREAD\n");
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
 #endif
 
 #ifdef TET_TEST

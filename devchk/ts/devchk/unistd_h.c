@@ -43,6 +43,41 @@ Msg( "Error: Constant not found: SEEK_END\n");
 cnt++;
 #endif
 
+#ifdef STDIN_FILENO
+	CompareConstant(STDIN_FILENO,0)
+#else
+Msg( "Error: Constant not found: STDIN_FILENO\n");
+cnt++;
+#endif
+
+#ifdef STDOUT_FILENO
+	CompareConstant(STDOUT_FILENO,1)
+#else
+Msg( "Error: Constant not found: STDOUT_FILENO\n");
+cnt++;
+#endif
+
+#ifdef STDERR_FILENO
+	CompareConstant(STDERR_FILENO,2)
+#else
+Msg( "Error: Constant not found: STDERR_FILENO\n");
+cnt++;
+#endif
+
+#ifdef _SC_OPEN_MAX
+	CompareConstant(_SC_OPEN_MAX,4)
+#else
+Msg( "Error: Constant not found: _SC_OPEN_MAX\n");
+cnt++;
+#endif
+
+#ifdef _SC_CLK_TCK
+	CompareConstant(_SC_CLK_TCK,2)
+#else
+Msg( "Error: Constant not found: _SC_CLK_TCK\n");
+cnt++;
+#endif
+
 #ifdef R_OK
 	CompareConstant(R_OK,4)
 #else
@@ -81,14 +116,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9029,0);
 
 #ifdef __i386__
 CheckTypeSize(pid_t,4, 9094, 2)
+#elif __ia64__
+CheckTypeSize(pid_t,0, 9094, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9094,0);
-#endif
-
-#ifdef __i386__
-CheckTypeSize(off_t,4, 9111, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9111,0);
 #endif
 
 #ifdef TET_TEST

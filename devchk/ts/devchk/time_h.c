@@ -22,6 +22,27 @@ int pcnt=0;
 Msg("Checking data structures in time.h\n");
 #endif
 
+#ifdef CLOCKS_PER_SEC
+	CompareConstant(CLOCKS_PER_SEC,1000000l)
+#else
+Msg( "Error: Constant not found: CLOCKS_PER_SEC\n");
+cnt++;
+#endif
+
+#ifdef CLOCK_REALTIME
+	CompareConstant(CLOCK_REALTIME,0)
+#else
+Msg( "Error: Constant not found: CLOCK_REALTIME\n");
+cnt++;
+#endif
+
+#ifdef TIMER_ABSTIME
+	CompareConstant(TIMER_ABSTIME,1)
+#else
+Msg( "Error: Constant not found: TIMER_ABSTIME\n");
+cnt++;
+#endif
+
 #ifdef __i386__
 CheckTypeSize(clock_t,4, 9164, 2)
 #elif __ia64__

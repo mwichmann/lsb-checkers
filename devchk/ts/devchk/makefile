@@ -37,18 +37,21 @@ OBJS = hdrchk.o \
 	stdio_h.o \
 	stdlib_h.o \
 	sys_ioctl_h.o \
-	sys_ipc_h.o \
 	sys_mman_h.o \
 	sys_param_h.o \
+	sys_resource_h.o \
 	sys_select_h.o \
+	sys_sem_h.o \
 	sys_shm_h.o \
 	sys_socket_h.o \
 	sys_stat_h.o \
 	sys_time_h.o \
 	sys_types_h.o \
 	sys_wait_h.o \
+	tar_h.o \
 	termios_h.o \
 	time_h.o \
+	ulimit_h.o \
 	unistd_h.o \
 	wchar_h.o \
 	wctype_h.o \
