@@ -23,6 +23,12 @@ struct DynamicInfo DynamicInfo[] = {
 #if __powerpc64__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
 #endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
+#endif /* __s390__ && !__s390x__ */
+#if __s390x__
+	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
+#endif /* __s390x__ */
 	{"DT_LOOS",DT_LOOS,checkDT_LOOS},
 	{"DT_LOPROC",DT_LOPROC,checkDT_LOPROC},
 	{"DT_NEEDED",DT_NEEDED,checkDT_NEEDED},
@@ -37,6 +43,12 @@ struct DynamicInfo DynamicInfo[] = {
 #if __powerpc64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
+#endif /* __s390__ && !__s390x__ */
+#if __s390x__
+	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
+#endif /* __s390x__ */
 	{"DT_PLTREL",DT_PLTREL,checkDT_PLTREL},
 	{"DT_PLTRELSZ",DT_PLTRELSZ,checkDT_PLTRELSZ},
 	{"DT_POSFLAG_1",DT_POSFLAG_1,checkDT_POSFLAG_1},
