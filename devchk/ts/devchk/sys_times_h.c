@@ -35,11 +35,9 @@ CheckOffset(struct tms,tms_cutime,16,3,30170)
 CheckOffset(struct tms,tms_cstime,24,3,30171)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct tms,16, 6990, 6)
-Msg("Missing member data for tms on PPC32\n");
-CheckOffset(struct tms,tms_utime,0,6,30168)
-CheckOffset(struct tms,tms_stime,0,6,30169)
-CheckOffset(struct tms,tms_cutime,0,6,30170)
-CheckOffset(struct tms,tms_cstime,0,6,30171)
+CheckOffset(struct tms,tms_stime,4,6,30169)
+CheckOffset(struct tms,tms_cutime,8,6,30170)
+CheckOffset(struct tms,tms_cstime,12,6,30171)
 #elif __s390__
 CheckTypeSize(struct tms,16, 6990, 10)
 CheckOffset(struct tms,tms_stime,4,10,30169)

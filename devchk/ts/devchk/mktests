@@ -190,11 +190,11 @@ sub writetest($$)
                 print TESTS "#ifdef $cname_save\n";
   		if ($type_save eq 'int')
   		{
-  		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%d)\\n\", architecture, $cname_save);\n";
+  		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%d);\\n\", architecture, $cname_save);\n";
   		}
   		else
   		{
-  		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%s)\\n\", architecture, $cname_save);\n";
+  		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%s);\\n\", architecture, $cname_save);\n";
   		}
   		print TESTS "#endif\n";
   		print TESTS "#endif\n";

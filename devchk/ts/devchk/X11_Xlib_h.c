@@ -292,13 +292,11 @@ CheckOffset(struct funcs,sub_image,32,3,32870)
 CheckOffset(struct funcs,add_pixel,40,3,32871)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct funcs,24, 9291, 6)
-Msg("Missing member data for funcs on PPC32\n");
-CheckOffset(struct funcs,create_image,0,6,32866)
-CheckOffset(struct funcs,destroy_image,0,6,32867)
-CheckOffset(struct funcs,get_pixel,0,6,32868)
-CheckOffset(struct funcs,put_pixel,0,6,32869)
-CheckOffset(struct funcs,sub_image,0,6,32870)
-CheckOffset(struct funcs,add_pixel,0,6,32871)
+CheckOffset(struct funcs,destroy_image,4,6,32867)
+CheckOffset(struct funcs,get_pixel,8,6,32868)
+CheckOffset(struct funcs,put_pixel,12,6,32869)
+CheckOffset(struct funcs,sub_image,16,6,32870)
+CheckOffset(struct funcs,add_pixel,20,6,32871)
 #elif __s390__
 CheckTypeSize(struct funcs,24, 9291, 10)
 CheckOffset(struct funcs,destroy_image,4,10,32867)

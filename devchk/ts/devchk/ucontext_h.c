@@ -34,7 +34,7 @@ cnt++;
 #else
 Msg( "No definition for _SC_GR0_OFFSET (5031, int) in db\n");
 #ifdef _SC_GR0_OFFSET
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5031,%d)\n", architecture, _SC_GR0_OFFSET);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5031,%d);\n", architecture, _SC_GR0_OFFSET);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -64,7 +64,7 @@ cnt++;
 #else
 Msg( "No definition for NGREG (4929, int) in db\n");
 #ifdef NGREG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4929,%d)\n", architecture, NGREG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4929,%d);\n", architecture, NGREG);
 #endif
 #endif
 #if __i386__
@@ -98,6 +98,8 @@ CheckOffset(struct _libc_fpstate,status,108,2,34324)
 CheckTypeSize(fpregset_t,4, 10228, 2)
 #elif __s390__
 CheckTypeSize(fpregset_t,136, 10228, 10)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(fpregset_t,0, 10228, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10228,0);
 Msg("Find size of fpregset_t (10228)\n");

@@ -36,11 +36,9 @@ CheckOffset(struct option,flag,16,3,32260)
 CheckOffset(struct option,val,24,3,32261)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct option,16, 10000, 6)
-Msg("Missing member data for option on PPC32\n");
-CheckOffset(struct option,name,0,6,32258)
-CheckOffset(struct option,has_arg,0,6,32259)
-CheckOffset(struct option,flag,0,6,32260)
-CheckOffset(struct option,val,0,6,32261)
+CheckOffset(struct option,has_arg,4,6,32259)
+CheckOffset(struct option,flag,8,6,32260)
+CheckOffset(struct option,val,12,6,32261)
 #elif __s390__
 CheckTypeSize(struct option,16, 10000, 10)
 CheckOffset(struct option,has_arg,4,10,32259)

@@ -36,11 +36,9 @@ CheckOffset(struct group,gr_gid,16,3,29794)
 CheckOffset(struct group,gr_mem,24,3,29795)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct group,16, 6894, 6)
-Msg("Missing member data for group on PPC32\n");
-CheckOffset(struct group,gr_name,0,6,29792)
-CheckOffset(struct group,gr_passwd,0,6,29793)
-CheckOffset(struct group,gr_gid,0,6,29794)
-CheckOffset(struct group,gr_mem,0,6,29795)
+CheckOffset(struct group,gr_passwd,4,6,29793)
+CheckOffset(struct group,gr_gid,8,6,29794)
+CheckOffset(struct group,gr_mem,12,6,29795)
 #elif __s390__
 CheckTypeSize(struct group,16, 6894, 10)
 CheckOffset(struct group,gr_passwd,4,10,29793)

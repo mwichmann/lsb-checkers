@@ -263,7 +263,15 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc__ && !__powerpc64__
+#ifdef RE_SYNTAX_GNU_AWK
+	CompareConstant(RE_SYNTAX_GNU_AWK,1290349,1580,architecture)
+#else
+Msg( "Error: Constant not found: RE_SYNTAX_GNU_AWK\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef RE_SYNTAX_GNU_AWK
 	CompareConstant(RE_SYNTAX_GNU_AWK,((RE_SYNTAX_POSIX_EXTENDED|RE_BACKSLASH_ESCAPE_IN_LISTS|RE_DEBUG)& ~(RE_DOT_NOT_NULL | RE_INTERVALS | RE_CONTEXT_INDEP_OPS| RE_CONTEXT_INVALID_OPS)),1580,architecture)
 #else
@@ -475,14 +483,12 @@ CheckOffset(struct re_pattern_buffer,translate,40,3,30071)
 CheckOffset(struct re_pattern_buffer,re_nsub,48,3,30072)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct re_pattern_buffer,32, 6944, 6)
-Msg("Missing member data for re_pattern_buffer on PPC32\n");
-CheckOffset(struct re_pattern_buffer,buffer,0,6,30066)
-CheckOffset(struct re_pattern_buffer,allocated,0,6,30067)
-CheckOffset(struct re_pattern_buffer,used,0,6,30068)
-CheckOffset(struct re_pattern_buffer,syntax,0,6,30069)
-CheckOffset(struct re_pattern_buffer,fastmap,0,6,30070)
-CheckOffset(struct re_pattern_buffer,translate,0,6,30071)
-CheckOffset(struct re_pattern_buffer,re_nsub,0,6,30072)
+CheckOffset(struct re_pattern_buffer,allocated,4,6,30067)
+CheckOffset(struct re_pattern_buffer,used,8,6,30068)
+CheckOffset(struct re_pattern_buffer,syntax,12,6,30069)
+CheckOffset(struct re_pattern_buffer,fastmap,16,6,30070)
+CheckOffset(struct re_pattern_buffer,translate,20,6,30071)
+CheckOffset(struct re_pattern_buffer,re_nsub,24,6,30072)
 #elif __s390__
 CheckTypeSize(struct re_pattern_buffer,32, 6944, 10)
 CheckOffset(struct re_pattern_buffer,allocated,4,10,30067)

@@ -238,6 +238,8 @@ CheckTypeSize(fsid_t,8, 9367, 2)
 CheckTypeSize(fsid_t,8, 9367, 3)
 #elif __s390__
 CheckTypeSize(fsid_t,8, 9367, 10)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(fsid_t,0, 9367, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9367,0);
 Msg("Find size of fsid_t (9367)\n");
@@ -431,6 +433,8 @@ CheckTypeSize(fsblkcnt_t,8, 9174, 3)
 CheckTypeSize(fsblkcnt_t,4, 9174, 2)
 #elif __s390__
 CheckTypeSize(fsblkcnt_t,4, 9174, 10)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(fsblkcnt_t,0, 9174, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9174,0);
 Msg("Find size of fsblkcnt_t (9174)\n");

@@ -83,6 +83,8 @@ CheckTypeSize(uint,4, 9265, 2)
 CheckTypeSize(uint,4, 9265, 3)
 #elif __s390__
 CheckTypeSize(uint,4, 9265, 10)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(uint,0, 9265, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9265,0);
 Msg("Find size of uint (9265)\n");

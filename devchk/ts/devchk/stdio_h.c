@@ -171,6 +171,7 @@ Msg("Find size of fpos64_t (9109)\n");
 #endif
 
 #if __s390__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10275,0);
 Msg("Find size of anon-fpos64_t (10275)\n");

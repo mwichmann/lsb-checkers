@@ -51,12 +51,10 @@ CheckOffset(struct dirent,d_type,18,3,34410)
 CheckOffset(struct dirent,d_name,19,3,34180)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct dirent,268, 10178, 6)
-Msg("Missing member data for dirent on PPC32\n");
-CheckOffset(struct dirent,d_ino,0,6,34177)
-CheckOffset(struct dirent,d_off,0,6,34178)
-CheckOffset(struct dirent,d_reclen,0,6,34179)
-CheckOffset(struct dirent,d_type,0,6,34410)
-CheckOffset(struct dirent,d_name,0,6,34180)
+CheckOffset(struct dirent,d_off,4,6,34178)
+CheckOffset(struct dirent,d_reclen,8,6,34179)
+CheckOffset(struct dirent,d_type,10,6,34410)
+CheckOffset(struct dirent,d_name,11,6,34180)
 #elif __s390__
 CheckTypeSize(struct dirent,268, 10178, 10)
 CheckOffset(struct dirent,d_off,4,10,34178)

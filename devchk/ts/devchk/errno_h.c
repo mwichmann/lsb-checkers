@@ -612,7 +612,7 @@ cnt++;
 #else
 Msg( "No definition for EDEADLK (69, int) in db\n");
 #ifdef EDEADLK
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,69,%d)\n", architecture, EDEADLK);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,69,%d);\n", architecture, EDEADLK);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -650,7 +650,7 @@ cnt++;
 #else
 Msg( "No definition for ENAMETOOLONG (70, int) in db\n");
 #ifdef ENAMETOOLONG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,70,%d)\n", architecture, ENAMETOOLONG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,70,%d);\n", architecture, ENAMETOOLONG);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -688,7 +688,7 @@ cnt++;
 #else
 Msg( "No definition for ENOLCK (71, int) in db\n");
 #ifdef ENOLCK
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,71,%d)\n", architecture, ENOLCK);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,71,%d);\n", architecture, ENOLCK);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -726,7 +726,7 @@ cnt++;
 #else
 Msg( "No definition for ENOSYS (72, int) in db\n");
 #ifdef ENOSYS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,72,%d)\n", architecture, ENOSYS);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,72,%d);\n", architecture, ENOSYS);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -764,7 +764,7 @@ cnt++;
 #else
 Msg( "No definition for ENOTEMPTY (73, int) in db\n");
 #ifdef ENOTEMPTY
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,73,%d)\n", architecture, ENOTEMPTY);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,73,%d);\n", architecture, ENOTEMPTY);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -802,7 +802,7 @@ cnt++;
 #else
 Msg( "No definition for ELOOP (74, int) in db\n");
 #ifdef ELOOP
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,74,%d)\n", architecture, ELOOP);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,74,%d);\n", architecture, ELOOP);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -850,7 +850,7 @@ cnt++;
 #else
 Msg( "No definition for EREMOTE (100, int) in db\n");
 #ifdef EREMOTE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,100,%d)\n", architecture, EREMOTE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,100,%d);\n", architecture, EREMOTE);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -888,7 +888,7 @@ cnt++;
 #else
 Msg( "No definition for ENOMSG (76, int) in db\n");
 #ifdef ENOMSG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,76,%d)\n", architecture, ENOMSG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,76,%d);\n", architecture, ENOMSG);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -926,7 +926,7 @@ cnt++;
 #else
 Msg( "No definition for ENOLINK (101, int) in db\n");
 #ifdef ENOLINK
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,101,%d)\n", architecture, ENOLINK);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,101,%d);\n", architecture, ENOLINK);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -964,7 +964,7 @@ cnt++;
 #else
 Msg( "No definition for EIDRM (77, int) in db\n");
 #ifdef EIDRM
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,77,%d)\n", architecture, EIDRM);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,77,%d);\n", architecture, EIDRM);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1002,7 +1002,7 @@ cnt++;
 #else
 Msg( "No definition for ECHRNG (78, int) in db\n");
 #ifdef ECHRNG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,78,%d)\n", architecture, ECHRNG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,78,%d);\n", architecture, ECHRNG);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1040,7 +1040,7 @@ cnt++;
 #else
 Msg( "No definition for EADV (102, int) in db\n");
 #ifdef EADV
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,102,%d)\n", architecture, EADV);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,102,%d);\n", architecture, EADV);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1078,7 +1078,7 @@ cnt++;
 #else
 Msg( "No definition for ESRMNT (103, int) in db\n");
 #ifdef ESRMNT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,103,%d)\n", architecture, ESRMNT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,103,%d);\n", architecture, ESRMNT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1116,7 +1116,7 @@ cnt++;
 #else
 Msg( "No definition for EL2NSYNC (79, int) in db\n");
 #ifdef EL2NSYNC
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,79,%d)\n", architecture, EL2NSYNC);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,79,%d);\n", architecture, EL2NSYNC);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1154,7 +1154,7 @@ cnt++;
 #else
 Msg( "No definition for ECOMM (104, int) in db\n");
 #ifdef ECOMM
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,104,%d)\n", architecture, ECOMM);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,104,%d);\n", architecture, ECOMM);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1192,7 +1192,7 @@ cnt++;
 #else
 Msg( "No definition for EPROTO (105, int) in db\n");
 #ifdef EPROTO
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,105,%d)\n", architecture, EPROTO);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,105,%d);\n", architecture, EPROTO);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1230,7 +1230,7 @@ cnt++;
 #else
 Msg( "No definition for EMULTIHOP (106, int) in db\n");
 #ifdef EMULTIHOP
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,106,%d)\n", architecture, EMULTIHOP);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,106,%d);\n", architecture, EMULTIHOP);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1268,7 +1268,7 @@ cnt++;
 #else
 Msg( "No definition for EDOTDOT (107, int) in db\n");
 #ifdef EDOTDOT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,107,%d)\n", architecture, EDOTDOT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,107,%d);\n", architecture, EDOTDOT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1306,7 +1306,7 @@ cnt++;
 #else
 Msg( "No definition for EBADMSG (108, int) in db\n");
 #ifdef EBADMSG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,108,%d)\n", architecture, EBADMSG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,108,%d);\n", architecture, EBADMSG);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1344,7 +1344,7 @@ cnt++;
 #else
 Msg( "No definition for EOVERFLOW (109, int) in db\n");
 #ifdef EOVERFLOW
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,109,%d)\n", architecture, EOVERFLOW);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,109,%d);\n", architecture, EOVERFLOW);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1382,7 +1382,7 @@ cnt++;
 #else
 Msg( "No definition for EL3HLT (80, int) in db\n");
 #ifdef EL3HLT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,80,%d)\n", architecture, EL3HLT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,80,%d);\n", architecture, EL3HLT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1420,7 +1420,7 @@ cnt++;
 #else
 Msg( "No definition for EL3RST (81, int) in db\n");
 #ifdef EL3RST
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,81,%d)\n", architecture, EL3RST);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,81,%d);\n", architecture, EL3RST);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1458,7 +1458,7 @@ cnt++;
 #else
 Msg( "No definition for ELNRNG (82, int) in db\n");
 #ifdef ELNRNG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,82,%d)\n", architecture, ELNRNG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,82,%d);\n", architecture, ELNRNG);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1496,7 +1496,7 @@ cnt++;
 #else
 Msg( "No definition for EUNATCH (83, int) in db\n");
 #ifdef EUNATCH
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,83,%d)\n", architecture, EUNATCH);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,83,%d);\n", architecture, EUNATCH);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1534,7 +1534,7 @@ cnt++;
 #else
 Msg( "No definition for ENOTUNIQ (110, int) in db\n");
 #ifdef ENOTUNIQ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,110,%d)\n", architecture, ENOTUNIQ);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,110,%d);\n", architecture, ENOTUNIQ);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1572,7 +1572,7 @@ cnt++;
 #else
 Msg( "No definition for EBADFD (111, int) in db\n");
 #ifdef EBADFD
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,111,%d)\n", architecture, EBADFD);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,111,%d);\n", architecture, EBADFD);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1610,7 +1610,7 @@ cnt++;
 #else
 Msg( "No definition for EREMCHG (112, int) in db\n");
 #ifdef EREMCHG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,112,%d)\n", architecture, EREMCHG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,112,%d);\n", architecture, EREMCHG);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1648,7 +1648,7 @@ cnt++;
 #else
 Msg( "No definition for ENOANO (89, int) in db\n");
 #ifdef ENOANO
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,89,%d)\n", architecture, ENOANO);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,89,%d);\n", architecture, ENOANO);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1686,7 +1686,7 @@ cnt++;
 #else
 Msg( "No definition for ELIBACC (113, int) in db\n");
 #ifdef ELIBACC
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,113,%d)\n", architecture, ELIBACC);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,113,%d);\n", architecture, ELIBACC);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1724,7 +1724,7 @@ cnt++;
 #else
 Msg( "No definition for ELIBBAD (114, int) in db\n");
 #ifdef ELIBBAD
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,114,%d)\n", architecture, ELIBBAD);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,114,%d);\n", architecture, ELIBBAD);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1762,7 +1762,7 @@ cnt++;
 #else
 Msg( "No definition for ELIBSCN (115, int) in db\n");
 #ifdef ELIBSCN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,115,%d)\n", architecture, ELIBSCN);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,115,%d);\n", architecture, ELIBSCN);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1800,7 +1800,7 @@ cnt++;
 #else
 Msg( "No definition for ELIBMAX (116, int) in db\n");
 #ifdef ELIBMAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,116,%d)\n", architecture, ELIBMAX);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,116,%d);\n", architecture, ELIBMAX);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1838,7 +1838,7 @@ cnt++;
 #else
 Msg( "No definition for ELIBEXEC (117, int) in db\n");
 #ifdef ELIBEXEC
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,117,%d)\n", architecture, ELIBEXEC);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,117,%d);\n", architecture, ELIBEXEC);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1876,7 +1876,7 @@ cnt++;
 #else
 Msg( "No definition for EILSEQ (118, int) in db\n");
 #ifdef EILSEQ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,118,%d)\n", architecture, EILSEQ);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,118,%d);\n", architecture, EILSEQ);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1914,7 +1914,7 @@ cnt++;
 #else
 Msg( "No definition for ERESTART (119, int) in db\n");
 #ifdef ERESTART
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,119,%d)\n", architecture, ERESTART);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,119,%d);\n", architecture, ERESTART);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1952,7 +1952,7 @@ cnt++;
 #else
 Msg( "No definition for EBADRQC (90, int) in db\n");
 #ifdef EBADRQC
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,90,%d)\n", architecture, EBADRQC);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,90,%d);\n", architecture, EBADRQC);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1990,7 +1990,7 @@ cnt++;
 #else
 Msg( "No definition for EBADSLT (91, int) in db\n");
 #ifdef EBADSLT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,91,%d)\n", architecture, EBADSLT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,91,%d);\n", architecture, EBADSLT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2046,7 +2046,7 @@ cnt++;
 #else
 Msg( "No definition for EBFONT (93, int) in db\n");
 #ifdef EBFONT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,93,%d)\n", architecture, EBFONT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,93,%d);\n", architecture, EBFONT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2084,7 +2084,7 @@ cnt++;
 #else
 Msg( "No definition for ENOSTR (94, int) in db\n");
 #ifdef ENOSTR
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,94,%d)\n", architecture, ENOSTR);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,94,%d);\n", architecture, ENOSTR);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2122,7 +2122,7 @@ cnt++;
 #else
 Msg( "No definition for ENODATA (95, int) in db\n");
 #ifdef ENODATA
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,95,%d)\n", architecture, ENODATA);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,95,%d);\n", architecture, ENODATA);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2160,7 +2160,7 @@ cnt++;
 #else
 Msg( "No definition for ETIME (96, int) in db\n");
 #ifdef ETIME
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,96,%d)\n", architecture, ETIME);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,96,%d);\n", architecture, ETIME);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2198,7 +2198,7 @@ cnt++;
 #else
 Msg( "No definition for ESTRPIPE (120, int) in db\n");
 #ifdef ESTRPIPE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,120,%d)\n", architecture, ESTRPIPE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,120,%d);\n", architecture, ESTRPIPE);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2236,7 +2236,7 @@ cnt++;
 #else
 Msg( "No definition for EUSERS (121, int) in db\n");
 #ifdef EUSERS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,121,%d)\n", architecture, EUSERS);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,121,%d);\n", architecture, EUSERS);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2274,7 +2274,7 @@ cnt++;
 #else
 Msg( "No definition for ENOSR (97, int) in db\n");
 #ifdef ENOSR
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,97,%d)\n", architecture, ENOSR);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,97,%d);\n", architecture, ENOSR);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2312,7 +2312,7 @@ cnt++;
 #else
 Msg( "No definition for ENOTSOCK (122, int) in db\n");
 #ifdef ENOTSOCK
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,122,%d)\n", architecture, ENOTSOCK);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,122,%d);\n", architecture, ENOTSOCK);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2350,7 +2350,7 @@ cnt++;
 #else
 Msg( "No definition for ENONET (98, int) in db\n");
 #ifdef ENONET
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,98,%d)\n", architecture, ENONET);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,98,%d);\n", architecture, ENONET);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2388,7 +2388,7 @@ cnt++;
 #else
 Msg( "No definition for ENOPKG (99, int) in db\n");
 #ifdef ENOPKG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,99,%d)\n", architecture, ENOPKG);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,99,%d);\n", architecture, ENOPKG);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2426,7 +2426,7 @@ cnt++;
 #else
 Msg( "No definition for EDESTADDRREQ (123, int) in db\n");
 #ifdef EDESTADDRREQ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,123,%d)\n", architecture, EDESTADDRREQ);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,123,%d);\n", architecture, EDESTADDRREQ);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2464,7 +2464,7 @@ cnt++;
 #else
 Msg( "No definition for EMSGSIZE (124, int) in db\n");
 #ifdef EMSGSIZE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,124,%d)\n", architecture, EMSGSIZE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,124,%d);\n", architecture, EMSGSIZE);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2502,7 +2502,7 @@ cnt++;
 #else
 Msg( "No definition for EPROTOTYPE (125, int) in db\n");
 #ifdef EPROTOTYPE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,125,%d)\n", architecture, EPROTOTYPE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,125,%d);\n", architecture, EPROTOTYPE);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2540,7 +2540,7 @@ cnt++;
 #else
 Msg( "No definition for ENOPROTOOPT (126, int) in db\n");
 #ifdef ENOPROTOOPT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,126,%d)\n", architecture, ENOPROTOOPT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,126,%d);\n", architecture, ENOPROTOOPT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2578,7 +2578,7 @@ cnt++;
 #else
 Msg( "No definition for EPROTONOSUPPORT (127, int) in db\n");
 #ifdef EPROTONOSUPPORT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,127,%d)\n", architecture, EPROTONOSUPPORT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,127,%d);\n", architecture, EPROTONOSUPPORT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2616,7 +2616,7 @@ cnt++;
 #else
 Msg( "No definition for ESOCKTNOSUPPORT (128, int) in db\n");
 #ifdef ESOCKTNOSUPPORT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,128,%d)\n", architecture, ESOCKTNOSUPPORT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,128,%d);\n", architecture, ESOCKTNOSUPPORT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2654,7 +2654,7 @@ cnt++;
 #else
 Msg( "No definition for EOPNOTSUPP (129, int) in db\n");
 #ifdef EOPNOTSUPP
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,129,%d)\n", architecture, EOPNOTSUPP);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,129,%d);\n", architecture, EOPNOTSUPP);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2692,7 +2692,7 @@ cnt++;
 #else
 Msg( "No definition for EPFNOSUPPORT (130, int) in db\n");
 #ifdef EPFNOSUPPORT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,130,%d)\n", architecture, EPFNOSUPPORT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,130,%d);\n", architecture, EPFNOSUPPORT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2730,7 +2730,7 @@ cnt++;
 #else
 Msg( "No definition for EAFNOSUPPORT (131, int) in db\n");
 #ifdef EAFNOSUPPORT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,131,%d)\n", architecture, EAFNOSUPPORT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,131,%d);\n", architecture, EAFNOSUPPORT);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2768,7 +2768,7 @@ cnt++;
 #else
 Msg( "No definition for EADDRINUSE (132, int) in db\n");
 #ifdef EADDRINUSE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,132,%d)\n", architecture, EADDRINUSE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,132,%d);\n", architecture, EADDRINUSE);
 #endif
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -2806,7 +2806,7 @@ cnt++;
 #else
 Msg( "No definition for EADDRNOTAVAIL (133, int) in db\n");
 #ifdef EADDRNOTAVAIL
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,133,%d)\n", architecture, EADDRNOTAVAIL);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,133,%d);\n", architecture, EADDRNOTAVAIL);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
