@@ -133,10 +133,16 @@ cnt++;
 
 #endif
 
+#if 1
 CheckTypeSize(struct in_addr,4, 10143, 1)
 CheckMemberSize(struct in_addr,s_addr,4,1,33767)
 CheckOffset(struct in_addr,s_addr,0,1,33767)
+#endif
+
+#if 1
 CheckTypeSize(in_addr_t,4, 10302, 1)
+#endif
+
 #if __i386__
 CheckTypeSize(struct sockaddr_in,16, 9141, 2)
 CheckMemberSize(struct sockaddr_in,sin_port,2,2,33777)

@@ -253,6 +253,9 @@ CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
 CheckTypeSize(struct ifconf,16, 10288, 3)
 CheckMemberSize(struct ifconf,ifc_ifcu,8,3,34469)
 CheckOffset(struct ifconf,ifc_ifcu,8,3,34469)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10288,0);
+Msg("Find size of ifconf (10288)\n");
 #endif
 
 #if __no_sym__

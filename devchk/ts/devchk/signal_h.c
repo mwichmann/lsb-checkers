@@ -835,6 +835,9 @@ CheckTypeSize(sigset_t,128, 10163, 3)
 CheckTypeSize(sigset_t,128, 10163, 6)
 #elif __s390__
 CheckTypeSize(sigset_t,128, 10163, 10)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
+Msg("Find size of sigset_t (10163)\n");
 #endif
 
 #if __i386__
@@ -881,15 +884,15 @@ CheckMemberSize(struct sigaction,sa_restorer,0,10,34718)
 CheckOffset(struct sigaction,sa_restorer,136,10,34718)
 CheckMemberSize(struct sigaction,sa_mask,0,10,34719)
 CheckOffset(struct sigaction,sa_mask,4,10,34719)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10402,0);
-Msg("Find size of sigaction (10402)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(stack_t,12, 9314, 2)
 #elif __ia64__
 CheckTypeSize(stack_t,24, 9314, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
+Msg("Find size of stack_t (9314)\n");
 #endif
 
 #if __i386__
@@ -1058,6 +1061,11 @@ CheckMemberSize(struct sigcontext,sc_rsvd,112,3,34578)
 CheckOffset(struct sigcontext,sc_rsvd,2528,3,34578)
 CheckMemberSize(struct sigcontext,sc_mask,8,3,34579)
 CheckOffset(struct sigcontext,sc_mask,2640,3,34579)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(struct sigcontext,32, 10300, 6)
+Msg("Missing member data for sigcontext on PPC32\n");
 #endif
 
 #ifdef TET_TEST

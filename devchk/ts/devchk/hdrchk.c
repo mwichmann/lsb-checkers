@@ -154,7 +154,6 @@ tcnt+=sys_utsname_h();
 tcnt+=sys_wait_h();
 tcnt+=syslog_h();
 tcnt+=tar_h();
-tcnt+=term_h();
 tcnt+=termios_h();
 tcnt+=time_h();
 tcnt+=ucontext_h();

@@ -109,14 +109,14 @@ CheckOffset(struct _libc_fpstate,status,108,2,34324)
 CheckTypeSize(fpregset_t,4, 10228, 2)
 #elif __s390__
 CheckTypeSize(fpregset_t,136, 10228, 10)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10228,0);
-Msg("Find size of fpregset_t (10228)\n");
 #endif
 
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
+Msg("Find size of anon-mcontext (10229)\n");
 #endif
 
 #if __i386__

@@ -52,9 +52,6 @@ CheckArrayTypeSize(__jmp_buf,4,58, 10411, 6)
 CheckArrayTypeSize(__jmp_buf,4,80, 10411, 9)
 #elif __i386__
 CheckArrayTypeSize(__jmp_buf,4,0, 10411, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10411,0);
-Msg("Find size of __jmp_buf (10411)\n");
 #endif
 
 #if __ia64__
@@ -67,9 +64,6 @@ CheckArrayTypeSize(jmp_buf,1,188, 6962, 6)
 CheckArrayTypeSize(jmp_buf,1,456, 6962, 9)
 #elif 1
 CheckArrayTypeSize(jmp_buf,1,1, 6962, 1)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
-Msg("Find size of jmp_buf (6962)\n");
 #endif
 
 #if __i386__
