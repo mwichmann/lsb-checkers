@@ -10,14 +10,14 @@ int mvcur (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvcur");
-	validate_NULL_TYPETYPE(arg0, "mvcur");
-	validate_NULL_TYPETYPE(arg1, "mvcur");
-	validate_NULL_TYPETYPE(arg2, "mvcur");
-	validate_NULL_TYPETYPE(arg3, "mvcur");
+	validate_NULL_TYPETYPE(  arg0, "mvcur");
+	validate_NULL_TYPETYPE(  arg1, "mvcur");
+	validate_NULL_TYPETYPE(  arg2, "mvcur");
+	validate_NULL_TYPETYPE(  arg3, "mvcur");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_mvcur (int arg0 , int arg1 , int arg2 , int arg3 )
+int __lsb_mvcur (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvcur");

@@ -10,11 +10,11 @@ long double coshl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "coshl");
-	validate_NULL_TYPETYPE(arg0, "coshl");
+	validate_NULL_TYPETYPE(  arg0, "coshl");
 	return funcptr(arg0);
 }
 
-long double lsb_coshl (long double arg0 )
+long double __lsb_coshl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "coshl");

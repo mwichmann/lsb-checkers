@@ -11,12 +11,13 @@ int creat64 (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creat64");
-	validate_NULL_TYPETYPE(arg0, "creat64");
-	validate_NULL_TYPETYPE(arg1, "creat64");
+	validate_Rdaddress( arg0, "creat64");
+	validate_NULL_TYPETYPE(  arg0, "creat64");
+	validate_NULL_TYPETYPE(  arg1, "creat64");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_creat64 (const char * arg0 , mode_t arg1 )
+int __lsb_creat64 (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creat64");

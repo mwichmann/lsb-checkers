@@ -13,7 +13,7 @@ Visual * XcmsVisualOfCCC(XcmsCCC arg0)
 	return funcptr(arg0);
 }
 
-Visual * lsb_XcmsVisualOfCCC(XcmsCCC arg0)
+Visual * __lsb_XcmsVisualOfCCC(XcmsCCC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsVisualOfCCC");

@@ -10,11 +10,11 @@ int attrset (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attrset");
-	validate_NULL_TYPETYPE(arg0, "attrset");
+	validate_NULL_TYPETYPE(  arg0, "attrset");
 	return funcptr(arg0);
 }
 
-int lsb_attrset (int arg0 )
+int __lsb_attrset (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attrset");

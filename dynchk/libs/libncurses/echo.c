@@ -13,7 +13,7 @@ int echo ()
 	return funcptr();
 }
 
-int lsb_echo ()
+int __lsb_echo ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "echo");

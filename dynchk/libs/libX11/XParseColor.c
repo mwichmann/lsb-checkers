@@ -16,7 +16,7 @@ int XParseColor(Display * arg0, Colormap arg1, char * arg2, XColor * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XParseColor(Display * arg0, Colormap arg1, char * arg2, XColor * arg3)
+int __lsb_XParseColor(Display * arg0, Colormap arg1, char * arg2, XColor * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XParseColor");

@@ -10,12 +10,13 @@ int scrollok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrollok");
-	validate_NULL_TYPETYPE(arg0, "scrollok");
-	validate_NULL_TYPETYPE(arg1, "scrollok");
+	validate_Rdaddress( arg0, "scrollok");
+	validate_NULL_TYPETYPE(  arg0, "scrollok");
+	validate_NULL_TYPETYPE(  arg1, "scrollok");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_scrollok (WINDOW * arg0 , bool arg1 )
+int __lsb_scrollok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrollok");

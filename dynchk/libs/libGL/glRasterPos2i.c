@@ -15,7 +15,7 @@ void glRasterPos2i(GLint arg0, GLint arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glRasterPos2i(GLint arg0, GLint arg1)
+void __lsb_glRasterPos2i(GLint arg0, GLint arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glRasterPos2i");

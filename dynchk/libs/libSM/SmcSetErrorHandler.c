@@ -13,7 +13,7 @@ SmcErrorHandler SmcSetErrorHandler(SmcErrorHandler arg0)
 	return funcptr(arg0);
 }
 
-SmcErrorHandler lsb_SmcSetErrorHandler(SmcErrorHandler arg0)
+SmcErrorHandler __lsb_SmcSetErrorHandler(SmcErrorHandler arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcSetErrorHandler");

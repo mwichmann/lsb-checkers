@@ -10,13 +10,15 @@ int sigaction (int arg0 , const struct sigaction * arg1 , struct sigaction * arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigaction");
-	validate_NULL_TYPETYPE(arg0, "sigaction");
-	validate_NULL_TYPETYPE(arg1, "sigaction");
-	validate_NULL_TYPETYPE(arg2, "sigaction");
+	validate_NULL_TYPETYPE(  arg0, "sigaction");
+	validate_Rdaddress( arg1, "sigaction");
+	validate_NULL_TYPETYPE(  arg1, "sigaction");
+	validate_Rdaddress( arg2, "sigaction");
+	validate_NULL_TYPETYPE(  arg2, "sigaction");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sigaction (int arg0 , const struct sigaction * arg1 , struct sigaction * arg2 )
+int __lsb_sigaction (int arg0 , const struct sigaction * arg1 , struct sigaction * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigaction");

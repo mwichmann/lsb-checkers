@@ -16,7 +16,7 @@ int glXMakeCurrent(Display * arg0, GLXDrawable arg1, GLXContext arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_glXMakeCurrent(Display * arg0, GLXDrawable arg1, GLXContext arg2)
+int __lsb_glXMakeCurrent(Display * arg0, GLXDrawable arg1, GLXContext arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXMakeCurrent");

@@ -10,11 +10,12 @@ char * setstate (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setstate");
-	validate_NULL_TYPETYPE(arg0, "setstate");
+	validate_Rdaddress( arg0, "setstate");
+	validate_NULL_TYPETYPE(  arg0, "setstate");
 	return funcptr(arg0);
 }
 
-char * lsb_setstate (char * arg0 )
+char * __lsb_setstate (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setstate");

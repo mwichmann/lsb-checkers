@@ -10,12 +10,12 @@ double copysign (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copysign");
-	validate_NULL_TYPETYPE(arg0, "copysign");
-	validate_NULL_TYPETYPE(arg1, "copysign");
+	validate_NULL_TYPETYPE(  arg0, "copysign");
+	validate_NULL_TYPETYPE(  arg1, "copysign");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_copysign (double arg0 , double arg1 )
+double __lsb_copysign (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copysign");

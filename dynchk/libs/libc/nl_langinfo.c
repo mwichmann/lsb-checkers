@@ -11,11 +11,11 @@ char * nl_langinfo (nl_item arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nl_langinfo");
-	validate_NULL_TYPETYPE(arg0, "nl_langinfo");
+	validate_NULL_TYPETYPE(  arg0, "nl_langinfo");
 	return funcptr(arg0);
 }
 
-char * lsb_nl_langinfo (nl_item arg0 )
+char * __lsb_nl_langinfo (nl_item arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nl_langinfo");

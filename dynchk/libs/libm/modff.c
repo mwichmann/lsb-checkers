@@ -10,12 +10,13 @@ float modff (float arg0 , float * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "modff");
-	validate_NULL_TYPETYPE(arg0, "modff");
-	validate_NULL_TYPETYPE(arg1, "modff");
+	validate_NULL_TYPETYPE(  arg0, "modff");
+	validate_Rdaddress( arg1, "modff");
+	validate_NULL_TYPETYPE(  arg1, "modff");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_modff (float arg0 , float * arg1 )
+float __lsb_modff (float arg0 , float * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "modff");

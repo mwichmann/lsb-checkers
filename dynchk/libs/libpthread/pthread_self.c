@@ -13,7 +13,7 @@ pthread_t pthread_self ()
 	return funcptr();
 }
 
-pthread_t lsb_pthread_self ()
+pthread_t __lsb_pthread_self ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_self");

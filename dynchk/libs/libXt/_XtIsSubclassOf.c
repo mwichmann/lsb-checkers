@@ -18,7 +18,7 @@ Boolean _XtIsSubclassOf(Widget arg0, WidgetClass arg1, WidgetClass arg2, unsigne
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-Boolean lsb__XtIsSubclassOf(Widget arg0, WidgetClass arg1, WidgetClass arg2, unsigned int arg3)
+Boolean __lsb__XtIsSubclassOf(Widget arg0, WidgetClass arg1, WidgetClass arg2, unsigned int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_XtIsSubclassOf");

@@ -12,7 +12,7 @@ void XtSetSelectionTimeout(unsigned long arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtSetSelectionTimeout(unsigned long arg0)
+void __lsb_XtSetSelectionTimeout(unsigned long arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSetSelectionTimeout");

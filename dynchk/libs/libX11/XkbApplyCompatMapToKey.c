@@ -15,7 +15,7 @@ static int(*funcptr)(XkbDescPtr, KeyCode, XkbChangesPtr) = 0;
 	return funcptr(arg0, arg1, arg2);
 }
 
- lsb_XkbApplyCompatMapToKey(XkbDescPtr arg0, KeyCode arg1, XkbChangesPtr arg2)
+ __lsb_XkbApplyCompatMapToKey(XkbDescPtr arg0, KeyCode arg1, XkbChangesPtr arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbApplyCompatMapToKey");

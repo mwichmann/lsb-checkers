@@ -14,7 +14,7 @@ char * XGetAtomName(Display * arg0, Atom arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_XGetAtomName(Display * arg0, Atom arg1)
+char * __lsb_XGetAtomName(Display * arg0, Atom arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetAtomName");

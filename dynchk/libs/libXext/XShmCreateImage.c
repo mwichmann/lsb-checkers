@@ -19,7 +19,7 @@ XImage * XShmCreateImage(Display * arg0, Visual * arg1, unsigned int arg2, int a
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-XImage * lsb_XShmCreateImage(Display * arg0, Visual * arg1, unsigned int arg2, int arg3, char * arg4, XShmSegmentInfo * arg5, unsigned int arg6, unsigned int arg7)
+XImage * __lsb_XShmCreateImage(Display * arg0, Visual * arg1, unsigned int arg2, int arg3, char * arg4, XShmSegmentInfo * arg5, unsigned int arg6, unsigned int arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShmCreateImage");

@@ -10,12 +10,12 @@ int tcsendbreak (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcsendbreak");
-	validate_NULL_TYPETYPE(arg0, "tcsendbreak");
-	validate_NULL_TYPETYPE(arg1, "tcsendbreak");
+	validate_NULL_TYPETYPE(  arg0, "tcsendbreak");
+	validate_NULL_TYPETYPE(  arg1, "tcsendbreak");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_tcsendbreak (int arg0 , int arg1 )
+int __lsb_tcsendbreak (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcsendbreak");

@@ -25,7 +25,7 @@ void glSeparableFilter2D(GLenum arg0, GLenum arg1, GLsizei arg2, GLsizei arg3, G
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-void lsb_glSeparableFilter2D(GLenum arg0, GLenum arg1, GLsizei arg2, GLsizei arg3, GLenum arg4, GLenum arg5, GLvoid * arg6, GLvoid * arg7)
+void __lsb_glSeparableFilter2D(GLenum arg0, GLenum arg1, GLsizei arg2, GLsizei arg3, GLenum arg4, GLenum arg5, GLvoid * arg6, GLvoid * arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glSeparableFilter2D");

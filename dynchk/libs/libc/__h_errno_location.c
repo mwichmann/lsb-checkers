@@ -13,7 +13,7 @@ int * __h_errno_location ()
 	return funcptr();
 }
 
-int * lsb___h_errno_location ()
+int * __lsb___h_errno_location ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__h_errno_location");

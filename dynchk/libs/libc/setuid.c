@@ -11,11 +11,11 @@ int setuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setuid");
-	validate_NULL_TYPETYPE(arg0, "setuid");
+	validate_NULL_TYPETYPE(  arg0, "setuid");
 	return funcptr(arg0);
 }
 
-int lsb_setuid (uid_t arg0 )
+int __lsb_setuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setuid");

@@ -15,7 +15,7 @@ GLXPbuffer glXCreatePbuffer(Display * arg0, GLXFBConfig arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-GLXPbuffer lsb_glXCreatePbuffer(Display * arg0, GLXFBConfig arg1, int * arg2)
+GLXPbuffer __lsb_glXCreatePbuffer(Display * arg0, GLXFBConfig arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXCreatePbuffer");

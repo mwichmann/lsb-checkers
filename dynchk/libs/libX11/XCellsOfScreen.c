@@ -12,7 +12,7 @@ int XCellsOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XCellsOfScreen(Screen * arg0)
+int __lsb_XCellsOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCellsOfScreen");

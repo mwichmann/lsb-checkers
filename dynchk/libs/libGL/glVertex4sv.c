@@ -12,7 +12,7 @@ void glVertex4sv(GLshort * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glVertex4sv(GLshort * arg0)
+void __lsb_glVertex4sv(GLshort * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glVertex4sv");

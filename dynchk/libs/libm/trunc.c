@@ -10,11 +10,11 @@ double trunc (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "trunc");
-	validate_NULL_TYPETYPE(arg0, "trunc");
+	validate_NULL_TYPETYPE(  arg0, "trunc");
 	return funcptr(arg0);
 }
 
-double lsb_trunc (double arg0 )
+double __lsb_trunc (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "trunc");

@@ -13,7 +13,7 @@ int XSyncValueIsZero(XSyncValue arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XSyncValueIsZero(XSyncValue arg0)
+int __lsb_XSyncValueIsZero(XSyncValue arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncValueIsZero");

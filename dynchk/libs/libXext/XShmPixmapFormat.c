@@ -12,7 +12,7 @@ int XShmPixmapFormat(Display * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XShmPixmapFormat(Display * arg0)
+int __lsb_XShmPixmapFormat(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShmPixmapFormat");

@@ -13,7 +13,7 @@ void XtAppUnlock(XtAppContext arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtAppUnlock(XtAppContext arg0)
+void __lsb_XtAppUnlock(XtAppContext arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppUnlock");

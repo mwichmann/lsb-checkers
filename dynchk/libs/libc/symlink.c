@@ -10,12 +10,14 @@ int symlink (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "symlink");
-	validate_NULL_TYPETYPE(arg0, "symlink");
-	validate_NULL_TYPETYPE(arg1, "symlink");
+	validate_Rdaddress( arg0, "symlink");
+	validate_NULL_TYPETYPE(  arg0, "symlink");
+	validate_Rdaddress( arg1, "symlink");
+	validate_NULL_TYPETYPE(  arg1, "symlink");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_symlink (const char * arg0 , const char * arg1 )
+int __lsb_symlink (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "symlink");

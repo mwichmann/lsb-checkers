@@ -15,7 +15,7 @@ int XSyncQueryCounter(Display * arg0, XSyncCounter arg1, XSyncValue * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSyncQueryCounter(Display * arg0, XSyncCounter arg1, XSyncValue * arg2)
+int __lsb_XSyncQueryCounter(Display * arg0, XSyncCounter arg1, XSyncValue * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncQueryCounter");

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef ccoshf
 static float complex(*funcptr) (float complex ) = 0;
@@ -11,11 +10,11 @@ float complex ccoshf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccoshf");
-	validate_NULL_TYPETYPE(arg0, "ccoshf");
+	validate_NULL_TYPETYPE(  arg0, "ccoshf");
 	return funcptr(arg0);
 }
 
-float complex lsb_ccoshf (float complex arg0 )
+float complex __lsb_ccoshf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccoshf");

@@ -12,7 +12,7 @@ Visual * XDefaultVisualOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-Visual * lsb_XDefaultVisualOfScreen(Screen * arg0)
+Visual * __lsb_XDefaultVisualOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultVisualOfScreen");

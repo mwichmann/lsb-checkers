@@ -17,7 +17,7 @@ void XSyncValueSubtract(XSyncValue * arg0, XSyncValue arg1, XSyncValue arg2, int
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XSyncValueSubtract(XSyncValue * arg0, XSyncValue arg1, XSyncValue arg2, int * arg3)
+void __lsb_XSyncValueSubtract(XSyncValue * arg0, XSyncValue arg1, XSyncValue arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncValueSubtract");

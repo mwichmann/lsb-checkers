@@ -10,12 +10,13 @@ long double frexpl (long double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexpl");
-	validate_NULL_TYPETYPE(arg0, "frexpl");
-	validate_NULL_TYPETYPE(arg1, "frexpl");
+	validate_NULL_TYPETYPE(  arg0, "frexpl");
+	validate_Rdaddress( arg1, "frexpl");
+	validate_NULL_TYPETYPE(  arg1, "frexpl");
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_frexpl (long double arg0 , int * arg1 )
+long double __lsb_frexpl (long double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexpl");

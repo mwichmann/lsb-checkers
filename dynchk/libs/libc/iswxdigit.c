@@ -10,11 +10,11 @@ int iswxdigit (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswxdigit");
-	validate_NULL_TYPETYPE(arg0, "iswxdigit");
+	validate_NULL_TYPETYPE(  arg0, "iswxdigit");
 	return funcptr(arg0);
 }
 
-int lsb_iswxdigit (wint_t arg0 )
+int __lsb_iswxdigit (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswxdigit");

@@ -10,11 +10,11 @@ double asin (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asin");
-	validate_NULL_TYPETYPE(arg0, "asin");
+	validate_NULL_TYPETYPE(  arg0, "asin");
 	return funcptr(arg0);
 }
 
-double lsb_asin (double arg0 )
+double __lsb_asin (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asin");

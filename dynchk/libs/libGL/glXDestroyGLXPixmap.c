@@ -14,7 +14,7 @@ void glXDestroyGLXPixmap(Display * arg0, GLXPixmap arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glXDestroyGLXPixmap(Display * arg0, GLXPixmap arg1)
+void __lsb_glXDestroyGLXPixmap(Display * arg0, GLXPixmap arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXDestroyGLXPixmap");

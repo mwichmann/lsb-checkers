@@ -16,7 +16,7 @@ XdbeBackBuffer XdbeAllocateBackBufferName(Display * arg0, Window arg1, XdbeSwapA
 	return funcptr(arg0, arg1, arg2);
 }
 
-XdbeBackBuffer lsb_XdbeAllocateBackBufferName(Display * arg0, Window arg1, XdbeSwapAction arg2)
+XdbeBackBuffer __lsb_XdbeAllocateBackBufferName(Display * arg0, Window arg1, XdbeSwapAction arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XdbeAllocateBackBufferName");

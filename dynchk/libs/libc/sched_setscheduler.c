@@ -11,13 +11,14 @@ int sched_setscheduler (pid_t arg0 , int arg1 , const struct sched_param * arg2 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setscheduler");
-	validate_NULL_TYPETYPE(arg0, "sched_setscheduler");
-	validate_NULL_TYPETYPE(arg1, "sched_setscheduler");
-	validate_NULL_TYPETYPE(arg2, "sched_setscheduler");
+	validate_NULL_TYPETYPE(  arg0, "sched_setscheduler");
+	validate_NULL_TYPETYPE(  arg1, "sched_setscheduler");
+	validate_Rdaddress( arg2, "sched_setscheduler");
+	validate_NULL_TYPETYPE(  arg2, "sched_setscheduler");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sched_setscheduler (pid_t arg0 , int arg1 , const struct sched_param * arg2 )
+int __lsb_sched_setscheduler (pid_t arg0 , int arg1 , const struct sched_param * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setscheduler");

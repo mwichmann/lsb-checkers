@@ -17,7 +17,7 @@ GLXPixmap glXCreatePixmap(Display * arg0, GLXFBConfig arg1, Pixmap arg2, int * a
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-GLXPixmap lsb_glXCreatePixmap(Display * arg0, GLXFBConfig arg1, Pixmap arg2, int * arg3)
+GLXPixmap __lsb_glXCreatePixmap(Display * arg0, GLXFBConfig arg1, Pixmap arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXCreatePixmap");

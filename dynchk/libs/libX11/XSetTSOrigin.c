@@ -16,7 +16,7 @@ int XSetTSOrigin(Display * arg0, GC arg1, int arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XSetTSOrigin(Display * arg0, GC arg1, int arg2, int arg3)
+int __lsb_XSetTSOrigin(Display * arg0, GC arg1, int arg2, int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetTSOrigin");

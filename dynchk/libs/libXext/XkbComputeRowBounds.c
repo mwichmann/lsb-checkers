@@ -16,7 +16,7 @@ int XkbComputeRowBounds(XkbGeometryPtr arg0, XkbSectionPtr arg1, XkbRowPtr arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbComputeRowBounds(XkbGeometryPtr arg0, XkbSectionPtr arg1, XkbRowPtr arg2)
+int __lsb_XkbComputeRowBounds(XkbGeometryPtr arg0, XkbSectionPtr arg1, XkbRowPtr arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbComputeRowBounds");

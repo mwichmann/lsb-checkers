@@ -12,7 +12,7 @@ VisualID XVisualIDFromVisual(Visual * arg0)
 	return funcptr(arg0);
 }
 
-VisualID lsb_XVisualIDFromVisual(Visual * arg0)
+VisualID __lsb_XVisualIDFromVisual(Visual * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XVisualIDFromVisual");

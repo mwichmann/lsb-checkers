@@ -13,7 +13,7 @@ GLboolean glIsEnabled(GLenum arg0)
 	return funcptr(arg0);
 }
 
-GLboolean lsb_glIsEnabled(GLenum arg0)
+GLboolean __lsb_glIsEnabled(GLenum arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glIsEnabled");

@@ -10,11 +10,11 @@ float expf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "expf");
-	validate_NULL_TYPETYPE(arg0, "expf");
+	validate_NULL_TYPETYPE(  arg0, "expf");
 	return funcptr(arg0);
 }
 
-float lsb_expf (float arg0 )
+float __lsb_expf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "expf");

@@ -11,7 +11,7 @@ void XtUnmapWidget()
 	return funcptr();
 }
 
-void lsb_XtUnmapWidget()
+void __lsb_XtUnmapWidget()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtUnmapWidget");

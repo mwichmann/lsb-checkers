@@ -13,7 +13,7 @@ Display * XtDisplayOfObject(Widget arg0)
 	return funcptr(arg0);
 }
 
-Display * lsb_XtDisplayOfObject(Widget arg0)
+Display * __lsb_XtDisplayOfObject(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtDisplayOfObject");

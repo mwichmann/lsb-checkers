@@ -10,11 +10,11 @@ long double sinl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinl");
-	validate_NULL_TYPETYPE(arg0, "sinl");
+	validate_NULL_TYPETYPE(  arg0, "sinl");
 	return funcptr(arg0);
 }
 
-long double lsb_sinl (long double arg0 )
+long double __lsb_sinl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinl");

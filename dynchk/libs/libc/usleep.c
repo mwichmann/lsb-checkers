@@ -11,11 +11,11 @@ int usleep (useconds_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "usleep");
-	validate_NULL_TYPETYPE(arg0, "usleep");
+	validate_NULL_TYPETYPE(  arg0, "usleep");
 	return funcptr(arg0);
 }
 
-int lsb_usleep (useconds_t arg0 )
+int __lsb_usleep (useconds_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "usleep");

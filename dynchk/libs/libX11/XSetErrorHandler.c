@@ -13,7 +13,7 @@ XErrorHandler XSetErrorHandler(XErrorHandler arg0)
 	return funcptr(arg0);
 }
 
-XErrorHandler lsb_XSetErrorHandler(XErrorHandler arg0)
+XErrorHandler __lsb_XSetErrorHandler(XErrorHandler arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetErrorHandler");

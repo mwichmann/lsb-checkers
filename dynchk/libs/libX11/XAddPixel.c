@@ -11,7 +11,7 @@ int XAddPixel()
 	return funcptr();
 }
 
-int lsb_XAddPixel()
+int __lsb_XAddPixel()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAddPixel");

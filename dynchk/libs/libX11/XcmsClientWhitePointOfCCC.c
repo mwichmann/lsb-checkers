@@ -13,7 +13,7 @@ XcmsColor * XcmsClientWhitePointOfCCC(XcmsCCC arg0)
 	return funcptr(arg0);
 }
 
-XcmsColor * lsb_XcmsClientWhitePointOfCCC(XcmsCCC arg0)
+XcmsColor * __lsb_XcmsClientWhitePointOfCCC(XcmsCCC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsClientWhitePointOfCCC");

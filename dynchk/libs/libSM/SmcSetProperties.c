@@ -15,7 +15,7 @@ void SmcSetProperties(SmcConn arg0, int arg1, SmProp * * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_SmcSetProperties(SmcConn arg0, int arg1, SmProp * * arg2)
+void __lsb_SmcSetProperties(SmcConn arg0, int arg1, SmProp * * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcSetProperties");

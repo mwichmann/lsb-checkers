@@ -14,7 +14,7 @@ void SmcInteractDone(SmcConn arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_SmcInteractDone(SmcConn arg0, int arg1)
+void __lsb_SmcInteractDone(SmcConn arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcInteractDone");

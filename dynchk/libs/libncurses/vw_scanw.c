@@ -11,13 +11,15 @@ int vw_scanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vw_scanw");
-	validate_NULL_TYPETYPE(arg0, "vw_scanw");
-	validate_NULL_TYPETYPE(arg1, "vw_scanw");
-	validate_NULL_TYPETYPE(arg2, "vw_scanw");
+	validate_Rdaddress( arg0, "vw_scanw");
+	validate_NULL_TYPETYPE(  arg0, "vw_scanw");
+	validate_Rdaddress( arg1, "vw_scanw");
+	validate_NULL_TYPETYPE(  arg1, "vw_scanw");
+	validate_NULL_TYPETYPE(  arg2, "vw_scanw");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vw_scanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
+int __lsb_vw_scanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vw_scanw");

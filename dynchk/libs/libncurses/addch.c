@@ -10,11 +10,11 @@ int addch (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addch");
-	validate_NULL_TYPETYPE(arg0, "addch");
+	validate_NULL_TYPETYPE(  arg0, "addch");
 	return funcptr(arg0);
 }
 
-int lsb_addch (const chtype arg0 )
+int __lsb_addch (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addch");

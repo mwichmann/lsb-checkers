@@ -16,7 +16,7 @@ Colormap XCreateColormap(Display * arg0, Window arg1, Visual * arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-Colormap lsb_XCreateColormap(Display * arg0, Window arg1, Visual * arg2, int arg3)
+Colormap __lsb_XCreateColormap(Display * arg0, Window arg1, Visual * arg2, int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreateColormap");

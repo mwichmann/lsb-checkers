@@ -11,12 +11,13 @@ int vprintf (const char * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vprintf");
-	validate_NULL_TYPETYPE(arg0, "vprintf");
-	validate_NULL_TYPETYPE(arg1, "vprintf");
+	validate_Rdaddress( arg0, "vprintf");
+	validate_NULL_TYPETYPE(  arg0, "vprintf");
+	validate_NULL_TYPETYPE(  arg1, "vprintf");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_vprintf (const char * arg0 , va_list arg1 )
+int __lsb_vprintf (const char * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vprintf");

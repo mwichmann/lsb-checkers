@@ -12,7 +12,7 @@ void glVertex2dv(GLdouble * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glVertex2dv(GLdouble * arg0)
+void __lsb_glVertex2dv(GLdouble * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glVertex2dv");

@@ -13,7 +13,7 @@ XIM XIMOfIC(XIC arg0)
 	return funcptr(arg0);
 }
 
-XIM lsb_XIMOfIC(XIC arg0)
+XIM __lsb_XIMOfIC(XIC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XIMOfIC");

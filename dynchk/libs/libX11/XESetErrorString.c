@@ -11,7 +11,7 @@ int XESetErrorString()
 	return funcptr();
 }
 
-int lsb_XESetErrorString()
+int __lsb_XESetErrorString()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetErrorString");

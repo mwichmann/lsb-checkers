@@ -13,7 +13,7 @@ XcmsCCC XcmsDefaultCCC(Display * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-XcmsCCC lsb_XcmsDefaultCCC(Display * arg0, int arg1)
+XcmsCCC __lsb_XcmsDefaultCCC(Display * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsDefaultCCC");

@@ -10,11 +10,12 @@ int sem_wait (sem_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_wait");
-	validate_NULL_TYPETYPE(arg0, "sem_wait");
+	validate_Rdaddress( arg0, "sem_wait");
+	validate_NULL_TYPETYPE(  arg0, "sem_wait");
 	return funcptr(arg0);
 }
 
-int lsb_sem_wait (sem_t * arg0 )
+int __lsb_sem_wait (sem_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_wait");

@@ -12,7 +12,7 @@ unsigned long XWhitePixelOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-unsigned long lsb_XWhitePixelOfScreen(Screen * arg0)
+unsigned long __lsb_XWhitePixelOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XWhitePixelOfScreen");

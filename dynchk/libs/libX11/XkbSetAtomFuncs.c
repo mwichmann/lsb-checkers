@@ -15,7 +15,7 @@ void XkbSetAtomFuncs(XkbInternAtomFunc arg0, XkbGetAtomNameFunc arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XkbSetAtomFuncs(XkbInternAtomFunc arg0, XkbGetAtomNameFunc arg1)
+void __lsb_XkbSetAtomFuncs(XkbInternAtomFunc arg0, XkbGetAtomNameFunc arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSetAtomFuncs");

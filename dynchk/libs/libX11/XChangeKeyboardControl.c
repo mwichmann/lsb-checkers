@@ -14,7 +14,7 @@ int XChangeKeyboardControl(Display * arg0, unsigned long arg1, XKeyboardControl 
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XChangeKeyboardControl(Display * arg0, unsigned long arg1, XKeyboardControl * arg2)
+int __lsb_XChangeKeyboardControl(Display * arg0, unsigned long arg1, XKeyboardControl * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XChangeKeyboardControl");

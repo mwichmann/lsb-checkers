@@ -13,7 +13,7 @@ chtype termattrs ()
 	return funcptr();
 }
 
-chtype lsb_termattrs ()
+chtype __lsb_termattrs ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "termattrs");

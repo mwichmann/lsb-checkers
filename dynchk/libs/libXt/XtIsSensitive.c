@@ -13,7 +13,7 @@ Boolean XtIsSensitive(Widget arg0)
 	return funcptr(arg0);
 }
 
-Boolean lsb_XtIsSensitive(Widget arg0)
+Boolean __lsb_XtIsSensitive(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsSensitive");

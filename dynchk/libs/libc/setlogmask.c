@@ -10,11 +10,11 @@ int setlogmask (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setlogmask");
-	validate_NULL_TYPETYPE(arg0, "setlogmask");
+	validate_NULL_TYPETYPE(  arg0, "setlogmask");
 	return funcptr(arg0);
 }
 
-int lsb_setlogmask (int arg0 )
+int __lsb_setlogmask (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setlogmask");

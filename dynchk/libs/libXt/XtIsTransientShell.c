@@ -11,7 +11,7 @@ Boolean XtIsTransientShell()
 	return funcptr();
 }
 
-Boolean lsb_XtIsTransientShell()
+Boolean __lsb_XtIsTransientShell()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsTransientShell");

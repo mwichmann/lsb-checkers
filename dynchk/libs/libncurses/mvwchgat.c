@@ -10,17 +10,19 @@ int mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , sho
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwchgat");
-	validate_NULL_TYPETYPE(arg0, "mvwchgat");
-	validate_NULL_TYPETYPE(arg1, "mvwchgat");
-	validate_NULL_TYPETYPE(arg2, "mvwchgat");
-	validate_NULL_TYPETYPE(arg3, "mvwchgat");
-	validate_NULL_TYPETYPE(arg4, "mvwchgat");
-	validate_NULL_TYPETYPE(arg5, "mvwchgat");
-	validate_NULL_TYPETYPE(arg6, "mvwchgat");
+	validate_Rdaddress( arg0, "mvwchgat");
+	validate_NULL_TYPETYPE(  arg0, "mvwchgat");
+	validate_NULL_TYPETYPE(  arg1, "mvwchgat");
+	validate_NULL_TYPETYPE(  arg2, "mvwchgat");
+	validate_NULL_TYPETYPE(  arg3, "mvwchgat");
+	validate_NULL_TYPETYPE(  arg4, "mvwchgat");
+	validate_NULL_TYPETYPE(  arg5, "mvwchgat");
+	validate_Rdaddress( arg6, "mvwchgat");
+	validate_NULL_TYPETYPE(  arg6, "mvwchgat");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , short arg5 , const void * arg6 )
+int __lsb_mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , short arg5 , const void * arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwchgat");

@@ -15,7 +15,7 @@ void * calloc(size_t arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-void * lsb_calloc(size_t arg0, size_t arg1)
+void * __lsb_calloc(size_t arg0, size_t arg1)
 {
 	if(!funcptr)
 		funcptr = __libc_calloc;

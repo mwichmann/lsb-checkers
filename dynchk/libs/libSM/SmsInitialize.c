@@ -21,7 +21,7 @@ int SmsInitialize(char * arg0, char * arg1, SmsNewClientProc arg2, SmPointer arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_SmsInitialize(char * arg0, char * arg1, SmsNewClientProc arg2, SmPointer arg3, IceHostBasedAuthProc arg4, int arg5, char * arg6)
+int __lsb_SmsInitialize(char * arg0, char * arg1, SmsNewClientProc arg2, SmPointer arg3, IceHostBasedAuthProc arg4, int arg5, char * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmsInitialize");

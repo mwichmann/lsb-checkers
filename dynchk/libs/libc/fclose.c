@@ -10,11 +10,12 @@ int fclose (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fclose");
-	validate_NULL_TYPETYPE(arg0, "fclose");
+	validate_Rdaddress( arg0, "fclose");
+	validate_NULL_TYPETYPE(  arg0, "fclose");
 	return funcptr(arg0);
 }
 
-int lsb_fclose (FILE * arg0 )
+int __lsb_fclose (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fclose");

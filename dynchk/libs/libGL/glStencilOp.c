@@ -17,7 +17,7 @@ void glStencilOp(GLenum arg0, GLenum arg1, GLenum arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glStencilOp(GLenum arg0, GLenum arg1, GLenum arg2)
+void __lsb_glStencilOp(GLenum arg0, GLenum arg1, GLenum arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glStencilOp");

@@ -11,11 +11,11 @@ struct passwd * getpwuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwuid");
-	validate_NULL_TYPETYPE(arg0, "getpwuid");
+	validate_NULL_TYPETYPE(  arg0, "getpwuid");
 	return funcptr(arg0);
 }
 
-struct passwd * lsb_getpwuid (uid_t arg0 )
+struct passwd * __lsb_getpwuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwuid");

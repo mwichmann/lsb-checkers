@@ -10,12 +10,14 @@ size_t strcspn (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcspn");
-	validate_NULL_TYPETYPE(arg0, "strcspn");
-	validate_NULL_TYPETYPE(arg1, "strcspn");
+	validate_Rdaddress( arg0, "strcspn");
+	validate_NULL_TYPETYPE(  arg0, "strcspn");
+	validate_Rdaddress( arg1, "strcspn");
+	validate_NULL_TYPETYPE(  arg1, "strcspn");
 	return funcptr(arg0, arg1);
 }
 
-size_t lsb_strcspn (const char * arg0 , const char * arg1 )
+size_t __lsb_strcspn (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcspn");

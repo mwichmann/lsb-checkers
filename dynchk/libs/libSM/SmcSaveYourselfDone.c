@@ -14,7 +14,7 @@ void SmcSaveYourselfDone(SmcConn arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_SmcSaveYourselfDone(SmcConn arg0, int arg1)
+void __lsb_SmcSaveYourselfDone(SmcConn arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcSaveYourselfDone");

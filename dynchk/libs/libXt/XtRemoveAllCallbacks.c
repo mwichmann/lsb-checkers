@@ -14,7 +14,7 @@ void XtRemoveAllCallbacks(Widget arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtRemoveAllCallbacks(Widget arg0, char * arg1)
+void __lsb_XtRemoveAllCallbacks(Widget arg0, char * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRemoveAllCallbacks");

@@ -13,7 +13,7 @@ void glClearStencil(GLint arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glClearStencil(GLint arg0)
+void __lsb_glClearStencil(GLint arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glClearStencil");

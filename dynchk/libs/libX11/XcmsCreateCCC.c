@@ -23,7 +23,7 @@ XcmsCCC XcmsCreateCCC(Display * arg0, int arg1, Visual * arg2, XcmsColor * arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-XcmsCCC lsb_XcmsCreateCCC(Display * arg0, int arg1, Visual * arg2, XcmsColor * arg3, XcmsCompressionProc arg4, XPointer arg5, XcmsWhiteAdjustProc arg6, XPointer arg7)
+XcmsCCC __lsb_XcmsCreateCCC(Display * arg0, int arg1, Visual * arg2, XcmsColor * arg3, XcmsCompressionProc arg4, XPointer arg5, XcmsWhiteAdjustProc arg6, XPointer arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsCreateCCC");

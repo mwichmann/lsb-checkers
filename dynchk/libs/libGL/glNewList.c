@@ -15,7 +15,7 @@ void glNewList(GLuint arg0, GLenum arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glNewList(GLuint arg0, GLenum arg1)
+void __lsb_glNewList(GLuint arg0, GLenum arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glNewList");

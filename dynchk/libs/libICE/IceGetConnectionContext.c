@@ -13,7 +13,7 @@ IcePointer IceGetConnectionContext(IceConn arg0)
 	return funcptr(arg0);
 }
 
-IcePointer lsb_IceGetConnectionContext(IceConn arg0)
+IcePointer __lsb_IceGetConnectionContext(IceConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceGetConnectionContext");

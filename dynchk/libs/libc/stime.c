@@ -11,11 +11,12 @@ int stime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "stime");
-	validate_NULL_TYPETYPE(arg0, "stime");
+	validate_Rdaddress( arg0, "stime");
+	validate_NULL_TYPETYPE(  arg0, "stime");
 	return funcptr(arg0);
 }
 
-int lsb_stime (const time_t * arg0 )
+int __lsb_stime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "stime");

@@ -17,7 +17,7 @@ void glColor3ui(GLuint arg0, GLuint arg1, GLuint arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glColor3ui(GLuint arg0, GLuint arg1, GLuint arg2)
+void __lsb_glColor3ui(GLuint arg0, GLuint arg1, GLuint arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glColor3ui");

@@ -10,11 +10,12 @@ bool_t xdrrec_eof (XDR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrrec_eof");
-	validate_NULL_TYPETYPE(arg0, "xdrrec_eof");
+	validate_Rdaddress( arg0, "xdrrec_eof");
+	validate_NULL_TYPETYPE(  arg0, "xdrrec_eof");
 	return funcptr(arg0);
 }
 
-bool_t lsb_xdrrec_eof (XDR * arg0 )
+bool_t __lsb_xdrrec_eof (XDR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrrec_eof");

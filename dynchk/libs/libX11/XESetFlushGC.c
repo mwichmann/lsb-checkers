@@ -11,7 +11,7 @@ int XESetFlushGC()
 	return funcptr();
 }
 
-int lsb_XESetFlushGC()
+int __lsb_XESetFlushGC()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetFlushGC");

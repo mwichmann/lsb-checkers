@@ -13,7 +13,7 @@ char * XKeysymToString(KeySym arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_XKeysymToString(KeySym arg0)
+char * __lsb_XKeysymToString(KeySym arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XKeysymToString");

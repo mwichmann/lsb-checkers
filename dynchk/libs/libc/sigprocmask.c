@@ -10,13 +10,15 @@ int sigprocmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigprocmask");
-	validate_NULL_TYPETYPE(arg0, "sigprocmask");
-	validate_NULL_TYPETYPE(arg1, "sigprocmask");
-	validate_NULL_TYPETYPE(arg2, "sigprocmask");
+	validate_NULL_TYPETYPE(  arg0, "sigprocmask");
+	validate_Rdaddress( arg1, "sigprocmask");
+	validate_NULL_TYPETYPE(  arg1, "sigprocmask");
+	validate_Rdaddress( arg2, "sigprocmask");
+	validate_NULL_TYPETYPE(  arg2, "sigprocmask");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sigprocmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
+int __lsb_sigprocmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigprocmask");

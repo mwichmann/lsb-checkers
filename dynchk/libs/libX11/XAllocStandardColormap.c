@@ -12,7 +12,7 @@ XStandardColormap * XAllocStandardColormap(void arg0)
 	return funcptr(arg0);
 }
 
-XStandardColormap * lsb_XAllocStandardColormap(void arg0)
+XStandardColormap * __lsb_XAllocStandardColormap(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllocStandardColormap");

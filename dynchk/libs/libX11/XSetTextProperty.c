@@ -17,7 +17,7 @@ void XSetTextProperty(Display * arg0, Window arg1, XTextProperty * arg2, Atom ar
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XSetTextProperty(Display * arg0, Window arg1, XTextProperty * arg2, Atom arg3)
+void __lsb_XSetTextProperty(Display * arg0, Window arg1, XTextProperty * arg2, Atom arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetTextProperty");

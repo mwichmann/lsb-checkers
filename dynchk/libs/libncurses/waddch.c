@@ -10,12 +10,13 @@ int waddch (WINDOW * arg0 , const chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waddch");
-	validate_NULL_TYPETYPE(arg0, "waddch");
-	validate_NULL_TYPETYPE(arg1, "waddch");
+	validate_Rdaddress( arg0, "waddch");
+	validate_NULL_TYPETYPE(  arg0, "waddch");
+	validate_NULL_TYPETYPE(  arg1, "waddch");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_waddch (WINDOW * arg0 , const chtype arg1 )
+int __lsb_waddch (WINDOW * arg0 , const chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waddch");

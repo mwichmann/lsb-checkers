@@ -16,7 +16,7 @@ void * dlopen (const char * arg0 , int arg1 )
 }
 #endif
 
-void * lsb_dlopen (const char * arg0 , int arg1 )
+void * __lsb_dlopen (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlopen");

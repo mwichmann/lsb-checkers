@@ -15,7 +15,7 @@ XkbComponentListPtr XkbListComponents(Display * arg0, unsigned int arg1, XkbComp
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-XkbComponentListPtr lsb_XkbListComponents(Display * arg0, unsigned int arg1, XkbComponentNamesPtr arg2, int * arg3)
+XkbComponentListPtr __lsb_XkbListComponents(Display * arg0, unsigned int arg1, XkbComponentNamesPtr arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbListComponents");

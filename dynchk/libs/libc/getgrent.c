@@ -13,7 +13,7 @@ struct group * getgrent ()
 	return funcptr();
 }
 
-struct group * lsb_getgrent ()
+struct group * __lsb_getgrent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrent");

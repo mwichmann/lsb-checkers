@@ -10,12 +10,14 @@ int pthread_cond_wait (pthread_cond_t * arg0 , pthread_mutex_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cond_wait");
-	validate_NULL_TYPETYPE(arg0, "pthread_cond_wait");
-	validate_NULL_TYPETYPE(arg1, "pthread_cond_wait");
+	validate_Rdaddress( arg0, "pthread_cond_wait");
+	validate_NULL_TYPETYPE(  arg0, "pthread_cond_wait");
+	validate_Rdaddress( arg1, "pthread_cond_wait");
+	validate_NULL_TYPETYPE(  arg1, "pthread_cond_wait");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_cond_wait (pthread_cond_t * arg0 , pthread_mutex_t * arg1 )
+int __lsb_pthread_cond_wait (pthread_cond_t * arg0 , pthread_mutex_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cond_wait");

@@ -10,11 +10,11 @@ float gammaf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gammaf");
-	validate_NULL_TYPETYPE(arg0, "gammaf");
+	validate_NULL_TYPETYPE(  arg0, "gammaf");
 	return funcptr(arg0);
 }
 
-float lsb_gammaf (float arg0 )
+float __lsb_gammaf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gammaf");

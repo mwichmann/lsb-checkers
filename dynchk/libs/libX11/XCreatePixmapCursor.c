@@ -20,7 +20,7 @@ Cursor XCreatePixmapCursor(Display * arg0, Pixmap arg1, Pixmap arg2, XColor * ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-Cursor lsb_XCreatePixmapCursor(Display * arg0, Pixmap arg1, Pixmap arg2, XColor * arg3, XColor * arg4, unsigned int arg5, unsigned int arg6)
+Cursor __lsb_XCreatePixmapCursor(Display * arg0, Pixmap arg1, Pixmap arg2, XColor * arg3, XColor * arg4, unsigned int arg5, unsigned int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreatePixmapCursor");

@@ -14,7 +14,7 @@ int XTextWidth(XFontStruct * arg0, char * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XTextWidth(XFontStruct * arg0, char * arg1, int arg2)
+int __lsb_XTextWidth(XFontStruct * arg0, char * arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XTextWidth");

@@ -14,7 +14,7 @@ int IceWriteAuthFileEntry(FILE arg0, IceAuthFileEntry * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_IceWriteAuthFileEntry(FILE arg0, IceAuthFileEntry * arg1)
+int __lsb_IceWriteAuthFileEntry(FILE arg0, IceAuthFileEntry * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceWriteAuthFileEntry");

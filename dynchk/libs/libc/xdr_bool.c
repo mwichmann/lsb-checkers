@@ -11,12 +11,14 @@ bool_t xdr_bool (XDR * arg0 , bool_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_bool");
-	validate_NULL_TYPETYPE(arg0, "xdr_bool");
-	validate_NULL_TYPETYPE(arg1, "xdr_bool");
+	validate_Rdaddress( arg0, "xdr_bool");
+	validate_NULL_TYPETYPE(  arg0, "xdr_bool");
+	validate_Rdaddress( arg1, "xdr_bool");
+	validate_NULL_TYPETYPE(  arg1, "xdr_bool");
 	return funcptr(arg0, arg1);
 }
 
-bool_t lsb_xdr_bool (XDR * arg0 , bool_t * arg1 )
+bool_t __lsb_xdr_bool (XDR * arg0 , bool_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_bool");

@@ -13,7 +13,7 @@ void XtDestroyApplicationContext(XtAppContext arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtDestroyApplicationContext(XtAppContext arg0)
+void __lsb_XtDestroyApplicationContext(XtAppContext arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtDestroyApplicationContext");

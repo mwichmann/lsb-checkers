@@ -11,14 +11,16 @@ size_t fread (void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fread");
-	validate_NULL_TYPETYPE(arg0, "fread");
-	validate_NULL_TYPETYPE(arg1, "fread");
-	validate_NULL_TYPETYPE(arg2, "fread");
-	validate_NULL_TYPETYPE(arg3, "fread");
+	validate_Rdaddress( arg0, "fread");
+	validate_NULL_TYPETYPE(  arg0, "fread");
+	validate_NULL_TYPETYPE(  arg1, "fread");
+	validate_NULL_TYPETYPE(  arg2, "fread");
+	validate_Rdaddress( arg3, "fread");
+	validate_NULL_TYPETYPE(  arg3, "fread");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-size_t lsb_fread (void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
+size_t __lsb_fread (void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fread");

@@ -14,7 +14,7 @@ int XkbAllocGeometry(XkbDescPtr arg0, XkbGeometrySizesPtr arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XkbAllocGeometry(XkbDescPtr arg0, XkbGeometrySizesPtr arg1)
+int __lsb_XkbAllocGeometry(XkbDescPtr arg0, XkbGeometrySizesPtr arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbAllocGeometry");

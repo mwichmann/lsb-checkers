@@ -14,7 +14,7 @@ XHostAddress * XListHosts(Display * arg0, int * arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-XHostAddress * lsb_XListHosts(Display * arg0, int * arg1, int * arg2)
+XHostAddress * __lsb_XListHosts(Display * arg0, int * arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XListHosts");

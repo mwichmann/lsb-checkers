@@ -10,13 +10,15 @@ int fnmatch (const char * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fnmatch");
-	validate_NULL_TYPETYPE(arg0, "fnmatch");
-	validate_NULL_TYPETYPE(arg1, "fnmatch");
-	validate_NULL_TYPETYPE(arg2, "fnmatch");
+	validate_Rdaddress( arg0, "fnmatch");
+	validate_NULL_TYPETYPE(  arg0, "fnmatch");
+	validate_Rdaddress( arg1, "fnmatch");
+	validate_NULL_TYPETYPE(  arg1, "fnmatch");
+	validate_NULL_TYPETYPE(  arg2, "fnmatch");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_fnmatch (const char * arg0 , const char * arg1 , int arg2 )
+int __lsb_fnmatch (const char * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fnmatch");

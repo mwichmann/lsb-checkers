@@ -15,7 +15,7 @@ int XkbGetNamedGeometry(Display * arg0, XkbDescPtr arg1, Atom arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbGetNamedGeometry(Display * arg0, XkbDescPtr arg1, Atom arg2)
+int __lsb_XkbGetNamedGeometry(Display * arg0, XkbDescPtr arg1, Atom arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbGetNamedGeometry");

@@ -10,12 +10,14 @@ FILE * popen (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "popen");
-	validate_NULL_TYPETYPE(arg0, "popen");
-	validate_NULL_TYPETYPE(arg1, "popen");
+	validate_Rdaddress( arg0, "popen");
+	validate_NULL_TYPETYPE(  arg0, "popen");
+	validate_Rdaddress( arg1, "popen");
+	validate_NULL_TYPETYPE(  arg1, "popen");
 	return funcptr(arg0, arg1);
 }
 
-FILE * lsb_popen (const char * arg0 , const char * arg1 )
+FILE * __lsb_popen (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "popen");

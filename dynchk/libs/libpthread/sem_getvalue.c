@@ -10,12 +10,14 @@ int sem_getvalue (sem_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_getvalue");
-	validate_NULL_TYPETYPE(arg0, "sem_getvalue");
-	validate_NULL_TYPETYPE(arg1, "sem_getvalue");
+	validate_Rdaddress( arg0, "sem_getvalue");
+	validate_NULL_TYPETYPE(  arg0, "sem_getvalue");
+	validate_Rdaddress( arg1, "sem_getvalue");
+	validate_NULL_TYPETYPE(  arg1, "sem_getvalue");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sem_getvalue (sem_t * arg0 , int * arg1 )
+int __lsb_sem_getvalue (sem_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_getvalue");

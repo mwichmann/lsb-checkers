@@ -10,12 +10,12 @@ float fmodf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmodf");
-	validate_NULL_TYPETYPE(arg0, "fmodf");
-	validate_NULL_TYPETYPE(arg1, "fmodf");
+	validate_NULL_TYPETYPE(  arg0, "fmodf");
+	validate_NULL_TYPETYPE(  arg1, "fmodf");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_fmodf (float arg0 , float arg1 )
+float __lsb_fmodf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmodf");

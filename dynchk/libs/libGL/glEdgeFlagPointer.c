@@ -14,7 +14,7 @@ void glEdgeFlagPointer(GLsizei arg0, GLvoid * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glEdgeFlagPointer(GLsizei arg0, GLvoid * arg1)
+void __lsb_glEdgeFlagPointer(GLsizei arg0, GLvoid * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glEdgeFlagPointer");

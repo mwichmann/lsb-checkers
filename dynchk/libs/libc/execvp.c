@@ -10,12 +10,13 @@ int execvp (const char * arg0 , char *const  arg1 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execvp");
-	validate_NULL_TYPETYPE(arg0, "execvp");
-	validate_NULL_TYPETYPE(arg1, "execvp");
+	validate_Rdaddress( arg0, "execvp");
+	validate_NULL_TYPETYPE(  arg0, "execvp");
+	validate_NULL_TYPETYPE(  arg1, "execvp");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_execvp (const char * arg0 , char *const  arg1 [])
+int __lsb_execvp (const char * arg0 , char *const  arg1 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execvp");

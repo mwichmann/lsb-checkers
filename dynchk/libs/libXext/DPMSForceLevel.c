@@ -13,7 +13,7 @@ int DPMSForceLevel(Display * arg0, CARD16 arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_DPMSForceLevel(Display * arg0, CARD16 arg1)
+int __lsb_DPMSForceLevel(Display * arg0, CARD16 arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "DPMSForceLevel");

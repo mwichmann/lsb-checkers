@@ -14,7 +14,7 @@ XVisualInfo * glXChooseVisual(Display * arg0, int arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-XVisualInfo * lsb_glXChooseVisual(Display * arg0, int arg1, int * arg2)
+XVisualInfo * __lsb_glXChooseVisual(Display * arg0, int arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXChooseVisual");

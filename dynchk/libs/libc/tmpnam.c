@@ -10,11 +10,12 @@ char * tmpnam (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tmpnam");
-	validate_NULL_TYPETYPE(arg0, "tmpnam");
+	validate_Rdaddress( arg0, "tmpnam");
+	validate_NULL_TYPETYPE(  arg0, "tmpnam");
 	return funcptr(arg0);
 }
 
-char * lsb_tmpnam (char * arg0 )
+char * __lsb_tmpnam (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tmpnam");

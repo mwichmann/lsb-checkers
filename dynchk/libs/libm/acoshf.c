@@ -10,11 +10,11 @@ float acoshf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acoshf");
-	validate_NULL_TYPETYPE(arg0, "acoshf");
+	validate_NULL_TYPETYPE(  arg0, "acoshf");
 	return funcptr(arg0);
 }
 
-float lsb_acoshf (float arg0 )
+float __lsb_acoshf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acoshf");

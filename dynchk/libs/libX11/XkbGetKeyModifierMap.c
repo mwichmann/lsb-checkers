@@ -15,7 +15,7 @@ static int(*funcptr)(Display *, unsigned int, unsigned int, XkbDescPtr) = 0;
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
- lsb_XkbGetKeyModifierMap(Display * arg0, unsigned int arg1, unsigned int arg2, XkbDescPtr arg3)
+ __lsb_XkbGetKeyModifierMap(Display * arg0, unsigned int arg1, unsigned int arg2, XkbDescPtr arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbGetKeyModifierMap");

@@ -16,7 +16,7 @@ int XSetTile(Display * arg0, GC arg1, Pixmap arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSetTile(Display * arg0, GC arg1, Pixmap arg2)
+int __lsb_XSetTile(Display * arg0, GC arg1, Pixmap arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetTile");

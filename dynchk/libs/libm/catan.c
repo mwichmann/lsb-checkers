@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef catan
 static double complex(*funcptr) (double complex ) = 0;
@@ -11,11 +10,11 @@ double complex catan (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catan");
-	validate_NULL_TYPETYPE(arg0, "catan");
+	validate_NULL_TYPETYPE(  arg0, "catan");
 	return funcptr(arg0);
 }
 
-double complex lsb_catan (double complex arg0 )
+double complex __lsb_catan (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catan");

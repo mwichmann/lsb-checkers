@@ -12,7 +12,7 @@ GLXContext glXGetCurrentContext(void arg0)
 	return funcptr(arg0);
 }
 
-GLXContext lsb_glXGetCurrentContext(void arg0)
+GLXContext __lsb_glXGetCurrentContext(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXGetCurrentContext");

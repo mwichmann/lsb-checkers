@@ -19,7 +19,7 @@ void XrmQPutResource(XrmDatabase * arg0, XrmBindingList arg1, XrmQuarkList arg2,
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XrmQPutResource(XrmDatabase * arg0, XrmBindingList arg1, XrmQuarkList arg2, XrmRepresentation arg3, XrmValue * arg4)
+void __lsb_XrmQPutResource(XrmDatabase * arg0, XrmBindingList arg1, XrmQuarkList arg2, XrmRepresentation arg3, XrmValue * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmQPutResource");

@@ -23,7 +23,7 @@ void XtGetApplicationResources(Widget arg0, XtPointer arg1, XtResourceList arg2,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XtGetApplicationResources(Widget arg0, XtPointer arg1, XtResourceList arg2, Cardinal arg3, ArgList arg4, Cardinal arg5)
+void __lsb_XtGetApplicationResources(Widget arg0, XtPointer arg1, XtResourceList arg2, Cardinal arg3, ArgList arg4, Cardinal arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetApplicationResources");

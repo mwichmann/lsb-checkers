@@ -12,7 +12,7 @@ GLXDrawable glXGetCurrentDrawable(void arg0)
 	return funcptr(arg0);
 }
 
-GLXDrawable lsb_glXGetCurrentDrawable(void arg0)
+GLXDrawable __lsb_glXGetCurrentDrawable(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXGetCurrentDrawable");

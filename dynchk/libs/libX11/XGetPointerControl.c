@@ -15,7 +15,7 @@ int XGetPointerControl(Display * arg0, int * arg1, int * arg2, int * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XGetPointerControl(Display * arg0, int * arg1, int * arg2, int * arg3)
+int __lsb_XGetPointerControl(Display * arg0, int * arg1, int * arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetPointerControl");

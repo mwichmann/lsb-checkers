@@ -13,7 +13,7 @@ void XtSessionReturnToken(XtCheckpointToken arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtSessionReturnToken(XtCheckpointToken arg0)
+void __lsb_XtSessionReturnToken(XtCheckpointToken arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSessionReturnToken");

@@ -13,7 +13,7 @@ int SmsProtocolVersion(SmsConn arg0)
 	return funcptr(arg0);
 }
 
-int lsb_SmsProtocolVersion(SmsConn arg0)
+int __lsb_SmsProtocolVersion(SmsConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmsProtocolVersion");

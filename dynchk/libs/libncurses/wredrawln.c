@@ -10,13 +10,14 @@ int wredrawln (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wredrawln");
-	validate_NULL_TYPETYPE(arg0, "wredrawln");
-	validate_NULL_TYPETYPE(arg1, "wredrawln");
-	validate_NULL_TYPETYPE(arg2, "wredrawln");
+	validate_Rdaddress( arg0, "wredrawln");
+	validate_NULL_TYPETYPE(  arg0, "wredrawln");
+	validate_NULL_TYPETYPE(  arg1, "wredrawln");
+	validate_NULL_TYPETYPE(  arg2, "wredrawln");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_wredrawln (WINDOW * arg0 , int arg1 , int arg2 )
+int __lsb_wredrawln (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wredrawln");

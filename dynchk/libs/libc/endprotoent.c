@@ -13,7 +13,7 @@ void endprotoent ()
 	funcptr();
 }
 
-void lsb_endprotoent ()
+void __lsb_endprotoent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endprotoent");

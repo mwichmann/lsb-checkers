@@ -18,7 +18,7 @@ int XSetState(Display * arg0, GC arg1, unsigned long arg2, unsigned long arg3, i
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XSetState(Display * arg0, GC arg1, unsigned long arg2, unsigned long arg3, int arg4, unsigned long arg5)
+int __lsb_XSetState(Display * arg0, GC arg1, unsigned long arg2, unsigned long arg3, int arg4, unsigned long arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetState");

@@ -12,7 +12,7 @@ XrmDatabase XrmGetStringDatabase(char * arg0)
 	return funcptr(arg0);
 }
 
-XrmDatabase lsb_XrmGetStringDatabase(char * arg0)
+XrmDatabase __lsb_XrmGetStringDatabase(char * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmGetStringDatabase");

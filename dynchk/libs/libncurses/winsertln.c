@@ -10,11 +10,12 @@ int winsertln (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsertln");
-	validate_NULL_TYPETYPE(arg0, "winsertln");
+	validate_Rdaddress( arg0, "winsertln");
+	validate_NULL_TYPETYPE(  arg0, "winsertln");
 	return funcptr(arg0);
 }
 
-int lsb_winsertln (WINDOW * arg0 )
+int __lsb_winsertln (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsertln");

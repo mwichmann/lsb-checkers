@@ -10,12 +10,13 @@ int fstatvfs (int arg0 , struct statvfs * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fstatvfs");
-	validate_NULL_TYPETYPE(arg0, "fstatvfs");
-	validate_NULL_TYPETYPE(arg1, "fstatvfs");
+	validate_NULL_TYPETYPE(  arg0, "fstatvfs");
+	validate_Rdaddress( arg1, "fstatvfs");
+	validate_NULL_TYPETYPE(  arg1, "fstatvfs");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fstatvfs (int arg0 , struct statvfs * arg1 )
+int __lsb_fstatvfs (int arg0 , struct statvfs * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fstatvfs");

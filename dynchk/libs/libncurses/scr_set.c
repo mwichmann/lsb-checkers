@@ -10,11 +10,12 @@ int scr_set (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_set");
-	validate_NULL_TYPETYPE(arg0, "scr_set");
+	validate_Rdaddress( arg0, "scr_set");
+	validate_NULL_TYPETYPE(  arg0, "scr_set");
 	return funcptr(arg0);
 }
 
-int lsb_scr_set (const char * arg0 )
+int __lsb_scr_set (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_set");

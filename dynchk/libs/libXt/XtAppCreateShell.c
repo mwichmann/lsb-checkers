@@ -20,7 +20,7 @@ Widget XtAppCreateShell(char * arg0, char * arg1, WidgetClass arg2, Display * ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-Widget lsb_XtAppCreateShell(char * arg0, char * arg1, WidgetClass arg2, Display * arg3, ArgList arg4, Cardinal arg5)
+Widget __lsb_XtAppCreateShell(char * arg0, char * arg1, WidgetClass arg2, Display * arg3, ArgList arg4, Cardinal arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppCreateShell");

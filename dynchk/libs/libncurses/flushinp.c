@@ -13,7 +13,7 @@ int flushinp ()
 	return funcptr();
 }
 
-int lsb_flushinp ()
+int __lsb_flushinp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flushinp");

@@ -18,7 +18,7 @@ static int(*funcptr)(XkbDescPtr, KeyCode, int, int, KeySym *, XkbChangesPtr) = 0
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
- lsb_XkbUpdateMapFromCore(XkbDescPtr arg0, KeyCode arg1, int arg2, int arg3, KeySym * arg4, XkbChangesPtr arg5)
+ __lsb_XkbUpdateMapFromCore(XkbDescPtr arg0, KeyCode arg1, int arg2, int arg3, KeySym * arg4, XkbChangesPtr arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbUpdateMapFromCore");

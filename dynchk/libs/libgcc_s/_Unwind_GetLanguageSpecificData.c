@@ -11,7 +11,7 @@ _Unwind_Ptr _Unwind_GetLanguageSpecificData()
 	return funcptr();
 }
 
-_Unwind_Ptr lsb__Unwind_GetLanguageSpecificData()
+_Unwind_Ptr __lsb__Unwind_GetLanguageSpecificData()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetLanguageSpecificData");

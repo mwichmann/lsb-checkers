@@ -17,7 +17,7 @@ void glRasterPos3d(GLdouble arg0, GLdouble arg1, GLdouble arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glRasterPos3d(GLdouble arg0, GLdouble arg1, GLdouble arg2)
+void __lsb_glRasterPos3d(GLdouble arg0, GLdouble arg1, GLdouble arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glRasterPos3d");

@@ -10,11 +10,11 @@ long double expl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "expl");
-	validate_NULL_TYPETYPE(arg0, "expl");
+	validate_NULL_TYPETYPE(  arg0, "expl");
 	return funcptr(arg0);
 }
 
-long double lsb_expl (long double arg0 )
+long double __lsb_expl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "expl");

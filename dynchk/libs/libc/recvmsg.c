@@ -10,13 +10,14 @@ ssize_t recvmsg (int arg0 , struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recvmsg");
-	validate_NULL_TYPETYPE(arg0, "recvmsg");
-	validate_NULL_TYPETYPE(arg1, "recvmsg");
-	validate_NULL_TYPETYPE(arg2, "recvmsg");
+	validate_NULL_TYPETYPE(  arg0, "recvmsg");
+	validate_Rdaddress( arg1, "recvmsg");
+	validate_NULL_TYPETYPE(  arg1, "recvmsg");
+	validate_NULL_TYPETYPE(  arg2, "recvmsg");
 	return funcptr(arg0, arg1, arg2);
 }
 
-ssize_t lsb_recvmsg (int arg0 , struct msghdr * arg1 , int arg2 )
+ssize_t __lsb_recvmsg (int arg0 , struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recvmsg");

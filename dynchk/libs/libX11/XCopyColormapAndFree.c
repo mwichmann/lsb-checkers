@@ -14,7 +14,7 @@ Colormap XCopyColormapAndFree(Display * arg0, Colormap arg1)
 	return funcptr(arg0, arg1);
 }
 
-Colormap lsb_XCopyColormapAndFree(Display * arg0, Colormap arg1)
+Colormap __lsb_XCopyColormapAndFree(Display * arg0, Colormap arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCopyColormapAndFree");

@@ -12,7 +12,7 @@ int XInitThreads(void arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XInitThreads(void arg0)
+int __lsb_XInitThreads(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XInitThreads");

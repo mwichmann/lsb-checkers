@@ -10,12 +10,12 @@ chtype mvinch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinch");
-	validate_NULL_TYPETYPE(arg0, "mvinch");
-	validate_NULL_TYPETYPE(arg1, "mvinch");
+	validate_NULL_TYPETYPE(  arg0, "mvinch");
+	validate_NULL_TYPETYPE(  arg1, "mvinch");
 	return funcptr(arg0, arg1);
 }
 
-chtype lsb_mvinch (int arg0 , int arg1 )
+chtype __lsb_mvinch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinch");

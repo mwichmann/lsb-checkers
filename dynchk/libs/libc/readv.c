@@ -11,13 +11,14 @@ ssize_t readv (int arg0 , const struct iovec * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readv");
-	validate_NULL_TYPETYPE(arg0, "readv");
-	validate_NULL_TYPETYPE(arg1, "readv");
-	validate_NULL_TYPETYPE(arg2, "readv");
+	validate_NULL_TYPETYPE(  arg0, "readv");
+	validate_Rdaddress( arg1, "readv");
+	validate_NULL_TYPETYPE(  arg1, "readv");
+	validate_NULL_TYPETYPE(  arg2, "readv");
 	return funcptr(arg0, arg1, arg2);
 }
 
-ssize_t lsb_readv (int arg0 , const struct iovec * arg1 , int arg2 )
+ssize_t __lsb_readv (int arg0 , const struct iovec * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readv");

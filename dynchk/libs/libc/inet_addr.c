@@ -10,11 +10,12 @@ in_addr_t inet_addr (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_addr");
-	validate_NULL_TYPETYPE(arg0, "inet_addr");
+	validate_Rdaddress( arg0, "inet_addr");
+	validate_NULL_TYPETYPE(  arg0, "inet_addr");
 	return funcptr(arg0);
 }
 
-in_addr_t lsb_inet_addr (const char * arg0 )
+in_addr_t __lsb_inet_addr (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_addr");

@@ -17,7 +17,7 @@ XcmsCompressionProc XcmsSetCompressionProc(XcmsCCC arg0, XcmsCompressionProc arg
 	return funcptr(arg0, arg1, arg2);
 }
 
-XcmsCompressionProc lsb_XcmsSetCompressionProc(XcmsCCC arg0, XcmsCompressionProc arg1, XPointer arg2)
+XcmsCompressionProc __lsb_XcmsSetCompressionProc(XcmsCCC arg0, XcmsCompressionProc arg1, XPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsSetCompressionProc");

@@ -10,11 +10,11 @@ void setservent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setservent");
-	validate_NULL_TYPETYPE(arg0, "setservent");
+	validate_NULL_TYPETYPE(  arg0, "setservent");
 	funcptr(arg0);
 }
 
-void lsb_setservent (int arg0 )
+void __lsb_setservent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setservent");

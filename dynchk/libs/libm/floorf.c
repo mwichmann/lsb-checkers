@@ -10,11 +10,11 @@ float floorf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "floorf");
-	validate_NULL_TYPETYPE(arg0, "floorf");
+	validate_NULL_TYPETYPE(  arg0, "floorf");
 	return funcptr(arg0);
 }
 
-float lsb_floorf (float arg0 )
+float __lsb_floorf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "floorf");

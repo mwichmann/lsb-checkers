@@ -10,11 +10,12 @@ long telldir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "telldir");
-	validate_NULL_TYPETYPE(arg0, "telldir");
+	validate_Rdaddress( arg0, "telldir");
+	validate_NULL_TYPETYPE(  arg0, "telldir");
 	return funcptr(arg0);
 }
 
-long lsb_telldir (DIR * arg0 )
+long __lsb_telldir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "telldir");

@@ -11,12 +11,12 @@ int killpg (pid_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "killpg");
-	validate_NULL_TYPETYPE(arg0, "killpg");
-	validate_NULL_TYPETYPE(arg1, "killpg");
+	validate_NULL_TYPETYPE(  arg0, "killpg");
+	validate_NULL_TYPETYPE(  arg1, "killpg");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_killpg (pid_t arg0 , int arg1 )
+int __lsb_killpg (pid_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "killpg");

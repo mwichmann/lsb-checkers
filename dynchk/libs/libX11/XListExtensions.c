@@ -13,7 +13,7 @@ char * * XListExtensions(Display * arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * * lsb_XListExtensions(Display * arg0, int * arg1)
+char * * __lsb_XListExtensions(Display * arg0, int * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XListExtensions");

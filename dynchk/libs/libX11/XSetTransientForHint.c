@@ -16,7 +16,7 @@ int XSetTransientForHint(Display * arg0, Window arg1, Window arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSetTransientForHint(Display * arg0, Window arg1, Window arg2)
+int __lsb_XSetTransientForHint(Display * arg0, Window arg1, Window arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetTransientForHint");

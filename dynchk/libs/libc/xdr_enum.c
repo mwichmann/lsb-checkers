@@ -11,12 +11,14 @@ bool_t xdr_enum (XDR * arg0 , enum_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_enum");
-	validate_NULL_TYPETYPE(arg0, "xdr_enum");
-	validate_NULL_TYPETYPE(arg1, "xdr_enum");
+	validate_Rdaddress( arg0, "xdr_enum");
+	validate_NULL_TYPETYPE(  arg0, "xdr_enum");
+	validate_Rdaddress( arg1, "xdr_enum");
+	validate_NULL_TYPETYPE(  arg1, "xdr_enum");
 	return funcptr(arg0, arg1);
 }
 
-bool_t lsb_xdr_enum (XDR * arg0 , enum_t * arg1 )
+bool_t __lsb_xdr_enum (XDR * arg0 , enum_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_enum");

@@ -13,7 +13,7 @@ Window XRootWindow(Display * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-Window lsb_XRootWindow(Display * arg0, int arg1)
+Window __lsb_XRootWindow(Display * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XRootWindow");

@@ -21,7 +21,7 @@ void XtAppAddConverter(XtAppContext arg0, char * arg1, char * arg2, XtConverter 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XtAppAddConverter(XtAppContext arg0, char * arg1, char * arg2, XtConverter arg3, XtConvertArgList arg4, Cardinal arg5)
+void __lsb_XtAppAddConverter(XtAppContext arg0, char * arg1, char * arg2, XtConverter arg3, XtConvertArgList arg4, Cardinal arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppAddConverter");

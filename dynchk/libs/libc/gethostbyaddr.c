@@ -11,13 +11,14 @@ struct hostent * gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyaddr");
-	validate_NULL_TYPETYPE(arg0, "gethostbyaddr");
-	validate_NULL_TYPETYPE(arg1, "gethostbyaddr");
-	validate_NULL_TYPETYPE(arg2, "gethostbyaddr");
+	validate_Rdaddress( arg0, "gethostbyaddr");
+	validate_NULL_TYPETYPE(  arg0, "gethostbyaddr");
+	validate_NULL_TYPETYPE(  arg1, "gethostbyaddr");
+	validate_NULL_TYPETYPE(  arg2, "gethostbyaddr");
 	return funcptr(arg0, arg1, arg2);
 }
 
-struct hostent * lsb_gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
+struct hostent * __lsb_gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyaddr");

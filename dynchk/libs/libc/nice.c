@@ -10,11 +10,11 @@ int nice (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nice");
-	validate_NULL_TYPETYPE(arg0, "nice");
+	validate_NULL_TYPETYPE(  arg0, "nice");
 	return funcptr(arg0);
 }
 
-int lsb_nice (int arg0 )
+int __lsb_nice (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nice");

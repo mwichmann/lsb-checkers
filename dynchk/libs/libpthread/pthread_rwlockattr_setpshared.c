@@ -10,12 +10,13 @@ int pthread_rwlockattr_setpshared (pthread_rwlockattr_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlockattr_setpshared");
-	validate_NULL_TYPETYPE(arg0, "pthread_rwlockattr_setpshared");
-	validate_NULL_TYPETYPE(arg1, "pthread_rwlockattr_setpshared");
+	validate_Rdaddress( arg0, "pthread_rwlockattr_setpshared");
+	validate_NULL_TYPETYPE(  arg0, "pthread_rwlockattr_setpshared");
+	validate_NULL_TYPETYPE(  arg1, "pthread_rwlockattr_setpshared");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_rwlockattr_setpshared (pthread_rwlockattr_t * arg0 , int arg1 )
+int __lsb_pthread_rwlockattr_setpshared (pthread_rwlockattr_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlockattr_setpshared");

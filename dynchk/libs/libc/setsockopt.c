@@ -10,15 +10,16 @@ int setsockopt (int arg0 , int arg1 , int arg2 , const void * arg3 , socklen_t a
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setsockopt");
-	validate_NULL_TYPETYPE(arg0, "setsockopt");
-	validate_NULL_TYPETYPE(arg1, "setsockopt");
-	validate_NULL_TYPETYPE(arg2, "setsockopt");
-	validate_NULL_TYPETYPE(arg3, "setsockopt");
-	validate_NULL_TYPETYPE(arg4, "setsockopt");
+	validate_NULL_TYPETYPE(  arg0, "setsockopt");
+	validate_NULL_TYPETYPE(  arg1, "setsockopt");
+	validate_NULL_TYPETYPE(  arg2, "setsockopt");
+	validate_Rdaddress( arg3, "setsockopt");
+	validate_NULL_TYPETYPE(  arg3, "setsockopt");
+	validate_NULL_TYPETYPE(  arg4, "setsockopt");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_setsockopt (int arg0 , int arg1 , int arg2 , const void * arg3 , socklen_t arg4 )
+int __lsb_setsockopt (int arg0 , int arg1 , int arg2 , const void * arg3 , socklen_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setsockopt");

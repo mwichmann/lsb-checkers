@@ -10,11 +10,11 @@ int __isnan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__isnan");
-	validate_NULL_TYPETYPE(arg0, "__isnan");
+	validate_NULL_TYPETYPE(  arg0, "__isnan");
 	return funcptr(arg0);
 }
 
-int lsb___isnan (double arg0 )
+int __lsb___isnan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__isnan");

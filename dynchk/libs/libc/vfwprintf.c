@@ -13,13 +13,15 @@ int vfwprintf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfwprintf");
-	validate_NULL_TYPETYPE(arg0, "vfwprintf");
-	validate_NULL_TYPETYPE(arg1, "vfwprintf");
-	validate_NULL_TYPETYPE(arg2, "vfwprintf");
+	validate_Rdaddress( arg0, "vfwprintf");
+	validate_NULL_TYPETYPE(  arg0, "vfwprintf");
+	validate_Rdaddress( arg1, "vfwprintf");
+	validate_NULL_TYPETYPE(  arg1, "vfwprintf");
+	validate_NULL_TYPETYPE(  arg2, "vfwprintf");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vfwprintf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
+int __lsb_vfwprintf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfwprintf");

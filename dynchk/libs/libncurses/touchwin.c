@@ -10,11 +10,12 @@ int touchwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "touchwin");
-	validate_NULL_TYPETYPE(arg0, "touchwin");
+	validate_Rdaddress( arg0, "touchwin");
+	validate_NULL_TYPETYPE(  arg0, "touchwin");
 	return funcptr(arg0);
 }
 
-int lsb_touchwin (WINDOW * arg0 )
+int __lsb_touchwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "touchwin");

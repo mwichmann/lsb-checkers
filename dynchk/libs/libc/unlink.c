@@ -10,11 +10,12 @@ int unlink (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unlink");
-	validate_NULL_TYPETYPE(arg0, "unlink");
+	validate_Rdaddress( arg0, "unlink");
+	validate_NULL_TYPETYPE(  arg0, "unlink");
 	return funcptr(arg0);
 }
 
-int lsb_unlink (const char * arg0 )
+int __lsb_unlink (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unlink");

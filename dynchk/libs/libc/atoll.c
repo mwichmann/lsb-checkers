@@ -10,11 +10,12 @@ long long atoll (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atoll");
-	validate_NULL_TYPETYPE(arg0, "atoll");
+	validate_Rdaddress( arg0, "atoll");
+	validate_NULL_TYPETYPE(  arg0, "atoll");
 	return funcptr(arg0);
 }
 
-long long lsb_atoll (const char * arg0 )
+long long __lsb_atoll (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atoll");

@@ -15,7 +15,7 @@ int XwcTextPropertyToTextList(Display * arg0, XTextProperty * arg1, wchar_t ** *
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XwcTextPropertyToTextList(Display * arg0, XTextProperty * arg1, wchar_t ** * arg2, int * arg3)
+int __lsb_XwcTextPropertyToTextList(Display * arg0, XTextProperty * arg1, wchar_t ** * arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XwcTextPropertyToTextList");

@@ -13,7 +13,7 @@ gid_t getgid ()
 	return funcptr();
 }
 
-gid_t lsb_getgid ()
+gid_t __lsb_getgid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgid");

@@ -19,7 +19,7 @@ int XGrabKey(Display * arg0, int arg1, unsigned int arg2, Window arg3, int arg4,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_XGrabKey(Display * arg0, int arg1, unsigned int arg2, Window arg3, int arg4, int arg5, int arg6)
+int __lsb_XGrabKey(Display * arg0, int arg1, unsigned int arg2, Window arg3, int arg4, int arg5, int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGrabKey");

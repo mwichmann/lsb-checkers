@@ -14,7 +14,7 @@ int XkbGetNames(Display * arg0, unsigned int arg1, XkbDescPtr arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbGetNames(Display * arg0, unsigned int arg1, XkbDescPtr arg2)
+int __lsb_XkbGetNames(Display * arg0, unsigned int arg1, XkbDescPtr arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbGetNames");

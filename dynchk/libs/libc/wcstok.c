@@ -11,13 +11,17 @@ wchar_t * wcstok (wchar_t * arg0 , const wchar_t * arg1 , wchar_t * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstok");
-	validate_NULL_TYPETYPE(arg0, "wcstok");
-	validate_NULL_TYPETYPE(arg1, "wcstok");
-	validate_NULL_TYPETYPE(arg2, "wcstok");
+	validate_Rdaddress( arg0, "wcstok");
+	validate_NULL_TYPETYPE(  arg0, "wcstok");
+	validate_Rdaddress( arg1, "wcstok");
+	validate_NULL_TYPETYPE(  arg1, "wcstok");
+	validate_Rdaddress( arg2, "wcstok");
+	validate_Rdaddress(* arg2, "wcstok");
+	validate_NULL_TYPETYPE(  arg2, "wcstok");
 	return funcptr(arg0, arg1, arg2);
 }
 
-wchar_t * lsb_wcstok (wchar_t * arg0 , const wchar_t * arg1 , wchar_t * * arg2 )
+wchar_t * __lsb_wcstok (wchar_t * arg0 , const wchar_t * arg1 , wchar_t * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstok");

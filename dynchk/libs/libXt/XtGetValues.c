@@ -17,7 +17,7 @@ void XtGetValues(Widget arg0, ArgList arg1, Cardinal arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XtGetValues(Widget arg0, ArgList arg1, Cardinal arg2)
+void __lsb_XtGetValues(Widget arg0, ArgList arg1, Cardinal arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetValues");

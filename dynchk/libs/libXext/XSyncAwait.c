@@ -14,7 +14,7 @@ int XSyncAwait(Display * arg0, XSyncWaitCondition * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSyncAwait(Display * arg0, XSyncWaitCondition * arg1, int arg2)
+int __lsb_XSyncAwait(Display * arg0, XSyncWaitCondition * arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncAwait");

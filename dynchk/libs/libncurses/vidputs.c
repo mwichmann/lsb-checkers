@@ -10,12 +10,13 @@ int vidputs (chtype arg0 , int(* arg1 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidputs");
-	validate_NULL_TYPETYPE(arg0, "vidputs");
-	validate_NULL_TYPETYPE(arg1, "vidputs");
+	validate_NULL_TYPETYPE(  arg0, "vidputs");
+validate_Rdaddress( arg1, "vidputs");
+	validate_NULL_TYPETYPE(  arg1, "vidputs");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_vidputs (chtype arg0 , int(* arg1 )(int))
+int __lsb_vidputs (chtype arg0 , int(* arg1 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidputs");

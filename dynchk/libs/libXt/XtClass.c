@@ -13,7 +13,7 @@ WidgetClass XtClass(Widget arg0)
 	return funcptr(arg0);
 }
 
-WidgetClass lsb_XtClass(Widget arg0)
+WidgetClass __lsb_XtClass(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtClass");

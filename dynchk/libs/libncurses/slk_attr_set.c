@@ -10,13 +10,14 @@ int slk_attr_set (const attr_t arg0 , short arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_attr_set");
-	validate_NULL_TYPETYPE(arg0, "slk_attr_set");
-	validate_NULL_TYPETYPE(arg1, "slk_attr_set");
-	validate_NULL_TYPETYPE(arg2, "slk_attr_set");
+	validate_NULL_TYPETYPE(  arg0, "slk_attr_set");
+	validate_NULL_TYPETYPE(  arg1, "slk_attr_set");
+	validate_Rdaddress( arg2, "slk_attr_set");
+	validate_NULL_TYPETYPE(  arg2, "slk_attr_set");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_slk_attr_set (const attr_t arg0 , short arg1 , void * arg2 )
+int __lsb_slk_attr_set (const attr_t arg0 , short arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_attr_set");

@@ -15,7 +15,7 @@ Atom * XListProperties(Display * arg0, Window arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-Atom * lsb_XListProperties(Display * arg0, Window arg1, int * arg2)
+Atom * __lsb_XListProperties(Display * arg0, Window arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XListProperties");

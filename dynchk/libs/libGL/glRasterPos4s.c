@@ -19,7 +19,7 @@ void glRasterPos4s(GLshort arg0, GLshort arg1, GLshort arg2, GLshort arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glRasterPos4s(GLshort arg0, GLshort arg1, GLshort arg2, GLshort arg3)
+void __lsb_glRasterPos4s(GLshort arg0, GLshort arg1, GLshort arg2, GLshort arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glRasterPos4s");

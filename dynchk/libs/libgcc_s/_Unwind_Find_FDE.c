@@ -11,7 +11,7 @@ fde * _Unwind_Find_FDE()
 	return funcptr();
 }
 
-fde * lsb__Unwind_Find_FDE()
+fde * __lsb__Unwind_Find_FDE()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_Find_FDE");

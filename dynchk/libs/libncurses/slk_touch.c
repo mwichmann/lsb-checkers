@@ -13,7 +13,7 @@ int slk_touch ()
 	return funcptr();
 }
 
-int lsb_slk_touch ()
+int __lsb_slk_touch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_touch");

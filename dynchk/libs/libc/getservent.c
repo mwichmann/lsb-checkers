@@ -13,7 +13,7 @@ struct servent * getservent ()
 	return funcptr();
 }
 
-struct servent * lsb_getservent ()
+struct servent * __lsb_getservent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getservent");

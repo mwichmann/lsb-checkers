@@ -24,7 +24,7 @@ Widget XtAppInitialize(XtAppContext * arg0, char * arg1, XrmOptionDescList arg2,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-Widget lsb_XtAppInitialize(XtAppContext * arg0, char * arg1, XrmOptionDescList arg2, Cardinal arg3, int * arg4, String * arg5, String * arg6, ArgList arg7, Cardinal arg8)
+Widget __lsb_XtAppInitialize(XtAppContext * arg0, char * arg1, XrmOptionDescList arg2, Cardinal arg3, int * arg4, String * arg5, String * arg6, ArgList arg7, Cardinal arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppInitialize");

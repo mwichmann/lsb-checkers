@@ -21,7 +21,7 @@ XImage * XCreateImage(Display * arg0, Visual * arg1, unsigned int arg2, int arg3
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
-XImage * lsb_XCreateImage(Display * arg0, Visual * arg1, unsigned int arg2, int arg3, int arg4, char * arg5, unsigned int arg6, unsigned int arg7, int arg8, int arg9)
+XImage * __lsb_XCreateImage(Display * arg0, Visual * arg1, unsigned int arg2, int arg3, int arg4, char * arg5, unsigned int arg6, unsigned int arg7, int arg8, int arg9)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreateImage");

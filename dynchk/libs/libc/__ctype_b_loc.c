@@ -13,7 +13,7 @@ const unsigned short * * __ctype_b_loc ()
 	return funcptr();
 }
 
-const unsigned short * * lsb___ctype_b_loc ()
+const unsigned short * * __lsb___ctype_b_loc ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_b_loc");

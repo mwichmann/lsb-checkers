@@ -10,13 +10,16 @@ FILE * freopen (const char * arg0 , const char * arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freopen");
-	validate_NULL_TYPETYPE(arg0, "freopen");
-	validate_NULL_TYPETYPE(arg1, "freopen");
-	validate_NULL_TYPETYPE(arg2, "freopen");
+	validate_Rdaddress( arg0, "freopen");
+	validate_NULL_TYPETYPE(  arg0, "freopen");
+	validate_Rdaddress( arg1, "freopen");
+	validate_NULL_TYPETYPE(  arg1, "freopen");
+	validate_Rdaddress( arg2, "freopen");
+	validate_NULL_TYPETYPE(  arg2, "freopen");
 	return funcptr(arg0, arg1, arg2);
 }
 
-FILE * lsb_freopen (const char * arg0 , const char * arg1 , FILE * arg2 )
+FILE * __lsb_freopen (const char * arg0 , const char * arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freopen");

@@ -11,7 +11,7 @@ void _Unwind_Resume()
 	funcptr();
 }
 
-void lsb__Unwind_Resume()
+void __lsb__Unwind_Resume()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_Resume");

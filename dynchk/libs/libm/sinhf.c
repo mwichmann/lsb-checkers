@@ -10,11 +10,11 @@ float sinhf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinhf");
-	validate_NULL_TYPETYPE(arg0, "sinhf");
+	validate_NULL_TYPETYPE(  arg0, "sinhf");
 	return funcptr(arg0);
 }
 
-float lsb_sinhf (float arg0 )
+float __lsb_sinhf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinhf");

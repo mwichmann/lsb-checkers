@@ -16,7 +16,7 @@ void XtResizeWidget(Widget arg0, unsigned int arg1, unsigned int arg2, unsigned 
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XtResizeWidget(Widget arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3)
+void __lsb_XtResizeWidget(Widget arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtResizeWidget");

@@ -13,7 +13,7 @@ void pthread_testcancel ()
 	funcptr();
 }
 
-void lsb_pthread_testcancel ()
+void __lsb_pthread_testcancel ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_testcancel");

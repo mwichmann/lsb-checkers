@@ -10,12 +10,12 @@ int siginterrupt (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siginterrupt");
-	validate_NULL_TYPETYPE(arg0, "siginterrupt");
-	validate_NULL_TYPETYPE(arg1, "siginterrupt");
+	validate_NULL_TYPETYPE(  arg0, "siginterrupt");
+	validate_NULL_TYPETYPE(  arg1, "siginterrupt");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_siginterrupt (int arg0 , int arg1 )
+int __lsb_siginterrupt (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siginterrupt");

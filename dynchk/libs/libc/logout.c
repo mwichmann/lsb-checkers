@@ -10,11 +10,12 @@ int logout (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "logout");
-	validate_NULL_TYPETYPE(arg0, "logout");
+	validate_Rdaddress( arg0, "logout");
+	validate_NULL_TYPETYPE(  arg0, "logout");
 	return funcptr(arg0);
 }
 
-int lsb_logout (const char * arg0 )
+int __lsb_logout (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "logout");

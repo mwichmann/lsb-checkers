@@ -1,3 +1,3 @@
-export LD_PRELOAD=/home/anderson/LSB/tests/misc/dynchk/liblsbdynchk.so.1
+export LD_PRELOAD=/home/elder/tests/misc/dynchk/liblsbdynchk.so.1
 exec $*
 unset LD_PRELOAD

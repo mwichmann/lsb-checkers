@@ -12,7 +12,7 @@ void glRasterPos3iv(GLint * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glRasterPos3iv(GLint * arg0)
+void __lsb_glRasterPos3iv(GLint * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glRasterPos3iv");

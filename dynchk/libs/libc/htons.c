@@ -11,11 +11,11 @@ uint16_t htons (uint16_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htons");
-	validate_NULL_TYPETYPE(arg0, "htons");
+	validate_NULL_TYPETYPE(  arg0, "htons");
 	return funcptr(arg0);
 }
 
-uint16_t lsb_htons (uint16_t arg0 )
+uint16_t __lsb_htons (uint16_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htons");

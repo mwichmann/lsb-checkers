@@ -15,7 +15,7 @@ int XGetWMName(Display * arg0, Window arg1, XTextProperty * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XGetWMName(Display * arg0, Window arg1, XTextProperty * arg2)
+int __lsb_XGetWMName(Display * arg0, Window arg1, XTextProperty * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetWMName");

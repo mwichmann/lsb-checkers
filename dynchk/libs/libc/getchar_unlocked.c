@@ -13,7 +13,7 @@ int getchar_unlocked ()
 	return funcptr();
 }
 
-int lsb_getchar_unlocked ()
+int __lsb_getchar_unlocked ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getchar_unlocked");

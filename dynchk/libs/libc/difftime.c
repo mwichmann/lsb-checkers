@@ -11,12 +11,12 @@ double difftime (time_t arg0 , time_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "difftime");
-	validate_NULL_TYPETYPE(arg0, "difftime");
-	validate_NULL_TYPETYPE(arg1, "difftime");
+	validate_NULL_TYPETYPE(  arg0, "difftime");
+	validate_NULL_TYPETYPE(  arg1, "difftime");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_difftime (time_t arg0 , time_t arg1 )
+double __lsb_difftime (time_t arg0 , time_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "difftime");

@@ -10,13 +10,14 @@ int inflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSetDictionary");
-	validate_NULL_TYPETYPE(arg0, "inflateSetDictionary");
-	validate_NULL_TYPETYPE(arg1, "inflateSetDictionary");
-	validate_NULL_TYPETYPE(arg2, "inflateSetDictionary");
+	validate_NULL_TYPETYPE(  arg0, "inflateSetDictionary");
+	validate_Rdaddress( arg1, "inflateSetDictionary");
+	validate_NULL_TYPETYPE(  arg1, "inflateSetDictionary");
+	validate_NULL_TYPETYPE(  arg2, "inflateSetDictionary");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_inflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
+int __lsb_inflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSetDictionary");

@@ -23,7 +23,7 @@ void XtChangeManagedSet(WidgetList arg0, Cardinal arg1, XtDoChangeProc arg2, XtP
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XtChangeManagedSet(WidgetList arg0, Cardinal arg1, XtDoChangeProc arg2, XtPointer arg3, WidgetList arg4, Cardinal arg5)
+void __lsb_XtChangeManagedSet(WidgetList arg0, Cardinal arg1, XtDoChangeProc arg2, XtPointer arg3, WidgetList arg4, Cardinal arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtChangeManagedSet");

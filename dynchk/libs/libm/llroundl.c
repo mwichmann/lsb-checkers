@@ -10,11 +10,11 @@ long long llroundl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llroundl");
-	validate_NULL_TYPETYPE(arg0, "llroundl");
+	validate_NULL_TYPETYPE(  arg0, "llroundl");
 	return funcptr(arg0);
 }
 
-long long lsb_llroundl (long double arg0 )
+long long __lsb_llroundl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llroundl");

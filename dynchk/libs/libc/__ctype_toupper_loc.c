@@ -13,7 +13,7 @@ const int32_t * * __ctype_toupper_loc ()
 	return funcptr();
 }
 
-const int32_t * * lsb___ctype_toupper_loc ()
+const int32_t * * __lsb___ctype_toupper_loc ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_toupper_loc");

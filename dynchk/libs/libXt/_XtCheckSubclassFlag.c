@@ -14,7 +14,7 @@ Boolean _XtCheckSubclassFlag(Widget arg0, unsigned int arg1)
 	return funcptr(arg0, arg1);
 }
 
-Boolean lsb__XtCheckSubclassFlag(Widget arg0, unsigned int arg1)
+Boolean __lsb__XtCheckSubclassFlag(Widget arg0, unsigned int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_XtCheckSubclassFlag");

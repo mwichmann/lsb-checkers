@@ -10,17 +10,20 @@ int getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , s
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnameinfo");
-	validate_NULL_TYPETYPE(arg0, "getnameinfo");
-	validate_NULL_TYPETYPE(arg1, "getnameinfo");
-	validate_NULL_TYPETYPE(arg2, "getnameinfo");
-	validate_NULL_TYPETYPE(arg3, "getnameinfo");
-	validate_NULL_TYPETYPE(arg4, "getnameinfo");
-	validate_NULL_TYPETYPE(arg5, "getnameinfo");
-	validate_NULL_TYPETYPE(arg6, "getnameinfo");
+	validate_Rdaddress( arg0, "getnameinfo");
+	validate_NULL_TYPETYPE(  arg0, "getnameinfo");
+	validate_NULL_TYPETYPE(  arg1, "getnameinfo");
+	validate_Rdaddress( arg2, "getnameinfo");
+	validate_NULL_TYPETYPE(  arg2, "getnameinfo");
+	validate_NULL_TYPETYPE(  arg3, "getnameinfo");
+	validate_Rdaddress( arg4, "getnameinfo");
+	validate_NULL_TYPETYPE(  arg4, "getnameinfo");
+	validate_NULL_TYPETYPE(  arg5, "getnameinfo");
+	validate_NULL_TYPETYPE(  arg6, "getnameinfo");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , socklen_t arg3 , char * arg4 , socklen_t arg5 , unsigned int arg6 )
+int __lsb_getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , socklen_t arg3 , char * arg4 , socklen_t arg5 , unsigned int arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnameinfo");

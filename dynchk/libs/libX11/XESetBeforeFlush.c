@@ -11,7 +11,7 @@ int XESetBeforeFlush()
 	return funcptr();
 }
 
-int lsb_XESetBeforeFlush()
+int __lsb_XESetBeforeFlush()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetBeforeFlush");

@@ -13,7 +13,7 @@ KeySym XtGetActionKeysym(XEvent * arg0, Modifiers * arg1)
 	return funcptr(arg0, arg1);
 }
 
-KeySym lsb_XtGetActionKeysym(XEvent * arg0, Modifiers * arg1)
+KeySym __lsb_XtGetActionKeysym(XEvent * arg0, Modifiers * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetActionKeysym");

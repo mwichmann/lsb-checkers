@@ -19,7 +19,7 @@ void glHistogram(GLenum arg0, GLsizei arg1, GLenum arg2, GLboolean arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glHistogram(GLenum arg0, GLsizei arg1, GLenum arg2, GLboolean arg3)
+void __lsb_glHistogram(GLenum arg0, GLsizei arg1, GLenum arg2, GLboolean arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glHistogram");

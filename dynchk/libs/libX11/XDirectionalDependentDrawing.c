@@ -13,7 +13,7 @@ int XDirectionalDependentDrawing(XFontSet arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XDirectionalDependentDrawing(XFontSet arg0)
+int __lsb_XDirectionalDependentDrawing(XFontSet arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDirectionalDependentDrawing");

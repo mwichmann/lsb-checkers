@@ -10,12 +10,12 @@ float nextafterf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nextafterf");
-	validate_NULL_TYPETYPE(arg0, "nextafterf");
-	validate_NULL_TYPETYPE(arg1, "nextafterf");
+	validate_NULL_TYPETYPE(  arg0, "nextafterf");
+	validate_NULL_TYPETYPE(  arg1, "nextafterf");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_nextafterf (float arg0 , float arg1 )
+float __lsb_nextafterf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nextafterf");

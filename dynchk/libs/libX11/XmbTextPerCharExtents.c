@@ -21,7 +21,7 @@ int XmbTextPerCharExtents(XFontSet arg0, char * arg1, int arg2, XRectangle * arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-int lsb_XmbTextPerCharExtents(XFontSet arg0, char * arg1, int arg2, XRectangle * arg3, XRectangle * arg4, int arg5, int * arg6, XRectangle * arg7, XRectangle * arg8)
+int __lsb_XmbTextPerCharExtents(XFontSet arg0, char * arg1, int arg2, XRectangle * arg3, XRectangle * arg4, int arg5, int * arg6, XRectangle * arg7, XRectangle * arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XmbTextPerCharExtents");

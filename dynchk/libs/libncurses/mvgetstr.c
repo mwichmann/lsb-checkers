@@ -10,13 +10,14 @@ int mvgetstr (int arg0 , int arg1 , char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetstr");
-	validate_NULL_TYPETYPE(arg0, "mvgetstr");
-	validate_NULL_TYPETYPE(arg1, "mvgetstr");
-	validate_NULL_TYPETYPE(arg2, "mvgetstr");
+	validate_NULL_TYPETYPE(  arg0, "mvgetstr");
+	validate_NULL_TYPETYPE(  arg1, "mvgetstr");
+	validate_Rdaddress( arg2, "mvgetstr");
+	validate_NULL_TYPETYPE(  arg2, "mvgetstr");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mvgetstr (int arg0 , int arg1 , char * arg2 )
+int __lsb_mvgetstr (int arg0 , int arg1 , char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetstr");

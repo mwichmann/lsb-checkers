@@ -14,7 +14,7 @@ XtCallbackStatus XtHasCallbacks(Widget arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-XtCallbackStatus lsb_XtHasCallbacks(Widget arg0, char * arg1)
+XtCallbackStatus __lsb_XtHasCallbacks(Widget arg0, char * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtHasCallbacks");

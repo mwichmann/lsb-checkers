@@ -10,12 +10,14 @@ char * strcpy (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcpy");
-	validate_NULL_TYPETYPE(arg0, "strcpy");
-	validate_NULL_TYPETYPE(arg1, "strcpy");
+	validate_Rdaddress( arg0, "strcpy");
+	validate_NULL_TYPETYPE(  arg0, "strcpy");
+	validate_Rdaddress( arg1, "strcpy");
+	validate_NULL_TYPETYPE(  arg1, "strcpy");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strcpy (char * arg0 , const char * arg1 )
+char * __lsb_strcpy (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcpy");

@@ -19,7 +19,7 @@ int XcmsLookupColor(Display * arg0, Colormap arg1, char * arg2, XcmsColor * arg3
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XcmsLookupColor(Display * arg0, Colormap arg1, char * arg2, XcmsColor * arg3, XcmsColor * arg4, XcmsColorFormat arg5)
+int __lsb_XcmsLookupColor(Display * arg0, Colormap arg1, char * arg2, XcmsColor * arg3, XcmsColor * arg4, XcmsColorFormat arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsLookupColor");

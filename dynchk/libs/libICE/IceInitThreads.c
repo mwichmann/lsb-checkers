@@ -12,7 +12,7 @@ int IceInitThreads(void arg0)
 	return funcptr(arg0);
 }
 
-int lsb_IceInitThreads(void arg0)
+int __lsb_IceInitThreads(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceInitThreads");

@@ -22,7 +22,7 @@ int XFillArc(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, unsigne
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-int lsb_XFillArc(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, unsigned int arg5, unsigned int arg6, int arg7, int arg8)
+int __lsb_XFillArc(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, unsigned int arg5, unsigned int arg6, int arg7, int arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFillArc");

@@ -18,7 +18,7 @@ int XkbLookupKeyBinding(Display * arg0, KeySym arg1, unsigned int arg2, char * a
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XkbLookupKeyBinding(Display * arg0, KeySym arg1, unsigned int arg2, char * arg3, int arg4, int * arg5)
+int __lsb_XkbLookupKeyBinding(Display * arg0, KeySym arg1, unsigned int arg2, char * arg3, int arg4, int * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbLookupKeyBinding");

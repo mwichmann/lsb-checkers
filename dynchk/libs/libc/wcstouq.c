@@ -11,13 +11,16 @@ unsigned long long wcstouq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstouq");
-	validate_NULL_TYPETYPE(arg0, "wcstouq");
-	validate_NULL_TYPETYPE(arg1, "wcstouq");
-	validate_NULL_TYPETYPE(arg2, "wcstouq");
+	validate_Rdaddress( arg0, "wcstouq");
+	validate_NULL_TYPETYPE(  arg0, "wcstouq");
+	validate_Rdaddress( arg1, "wcstouq");
+	validate_Rdaddress(* arg1, "wcstouq");
+	validate_NULL_TYPETYPE(  arg1, "wcstouq");
+	validate_NULL_TYPETYPE(  arg2, "wcstouq");
 	return funcptr(arg0, arg1, arg2);
 }
 
-unsigned long long lsb_wcstouq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+unsigned long long __lsb_wcstouq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstouq");

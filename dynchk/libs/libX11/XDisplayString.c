@@ -12,7 +12,7 @@ char * XDisplayString(Display * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_XDisplayString(Display * arg0)
+char * __lsb_XDisplayString(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDisplayString");

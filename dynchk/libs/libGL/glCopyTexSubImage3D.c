@@ -29,7 +29,7 @@ void glCopyTexSubImage3D(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-void lsb_glCopyTexSubImage3D(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint arg4, GLint arg5, GLint arg6, GLsizei arg7, GLsizei arg8)
+void __lsb_glCopyTexSubImage3D(GLenum arg0, GLint arg1, GLint arg2, GLint arg3, GLint arg4, GLint arg5, GLint arg6, GLsizei arg7, GLsizei arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glCopyTexSubImage3D");

@@ -13,7 +13,7 @@ GLubyte * glGetString(GLenum arg0)
 	return funcptr(arg0);
 }
 
-GLubyte * lsb_glGetString(GLenum arg0)
+GLubyte * __lsb_glGetString(GLenum arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetString");

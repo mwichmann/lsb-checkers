@@ -10,12 +10,12 @@ imaxdiv_t imaxdiv (intmax_t arg0 , intmax_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "imaxdiv");
-	validate_NULL_TYPETYPE(arg0, "imaxdiv");
-	validate_NULL_TYPETYPE(arg1, "imaxdiv");
+	validate_NULL_TYPETYPE(  arg0, "imaxdiv");
+	validate_NULL_TYPETYPE(  arg1, "imaxdiv");
 	return funcptr(arg0, arg1);
 }
 
-imaxdiv_t lsb_imaxdiv (intmax_t arg0 , intmax_t arg1 )
+imaxdiv_t __lsb_imaxdiv (intmax_t arg0 , intmax_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "imaxdiv");

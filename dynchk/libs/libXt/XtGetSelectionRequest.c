@@ -17,7 +17,7 @@ XSelectionRequestEvent * XtGetSelectionRequest(Widget arg0, Atom arg1, XtRequest
 	return funcptr(arg0, arg1, arg2);
 }
 
-XSelectionRequestEvent * lsb_XtGetSelectionRequest(Widget arg0, Atom arg1, XtRequestId arg2)
+XSelectionRequestEvent * __lsb_XtGetSelectionRequest(Widget arg0, Atom arg1, XtRequestId arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionRequest");

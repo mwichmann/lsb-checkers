@@ -19,7 +19,7 @@ void glColor4d(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glColor4d(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3)
+void __lsb_glColor4d(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glColor4d");

@@ -13,7 +13,7 @@ pid_t setsid ()
 	return funcptr();
 }
 
-pid_t lsb_setsid ()
+pid_t __lsb_setsid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setsid");

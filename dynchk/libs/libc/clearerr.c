@@ -10,11 +10,12 @@ void clearerr (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clearerr");
-	validate_NULL_TYPETYPE(arg0, "clearerr");
+	validate_Rdaddress( arg0, "clearerr");
+	validate_NULL_TYPETYPE(  arg0, "clearerr");
 	funcptr(arg0);
 }
 
-void lsb_clearerr (FILE * arg0 )
+void __lsb_clearerr (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clearerr");

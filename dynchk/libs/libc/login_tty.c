@@ -10,11 +10,11 @@ int login_tty (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "login_tty");
-	validate_NULL_TYPETYPE(arg0, "login_tty");
+	validate_NULL_TYPETYPE(  arg0, "login_tty");
 	return funcptr(arg0);
 }
 
-int lsb_login_tty (int arg0 )
+int __lsb_login_tty (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "login_tty");

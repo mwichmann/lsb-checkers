@@ -10,11 +10,11 @@ int inflateSyncPoint (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSyncPoint");
-	validate_NULL_TYPETYPE(arg0, "inflateSyncPoint");
+	validate_NULL_TYPETYPE(  arg0, "inflateSyncPoint");
 	return funcptr(arg0);
 }
 
-int lsb_inflateSyncPoint (z_streamp arg0 )
+int __lsb_inflateSyncPoint (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSyncPoint");

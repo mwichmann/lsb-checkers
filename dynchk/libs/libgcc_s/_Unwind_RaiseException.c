@@ -11,7 +11,7 @@ _Unwind_Reason_Code _Unwind_RaiseException()
 	return funcptr();
 }
 
-_Unwind_Reason_Code lsb__Unwind_RaiseException()
+_Unwind_Reason_Code __lsb__Unwind_RaiseException()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_RaiseException");

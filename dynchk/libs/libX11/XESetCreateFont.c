@@ -11,7 +11,7 @@ int XESetCreateFont()
 	return funcptr();
 }
 
-int lsb_XESetCreateFont()
+int __lsb_XESetCreateFont()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetCreateFont");

@@ -19,7 +19,7 @@ XTimeCoord * XGetMotionEvents(Display * arg0, Window arg1, Time arg2, Time arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-XTimeCoord * lsb_XGetMotionEvents(Display * arg0, Window arg1, Time arg2, Time arg3, int * arg4)
+XTimeCoord * __lsb_XGetMotionEvents(Display * arg0, Window arg1, Time arg2, Time arg3, int * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetMotionEvents");

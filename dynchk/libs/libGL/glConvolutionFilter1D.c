@@ -22,7 +22,7 @@ void glConvolutionFilter1D(GLenum arg0, GLenum arg1, GLsizei arg2, GLenum arg3, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glConvolutionFilter1D(GLenum arg0, GLenum arg1, GLsizei arg2, GLenum arg3, GLenum arg4, GLvoid * arg5)
+void __lsb_glConvolutionFilter1D(GLenum arg0, GLenum arg1, GLsizei arg2, GLenum arg3, GLenum arg4, GLvoid * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glConvolutionFilter1D");

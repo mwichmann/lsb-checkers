@@ -13,7 +13,7 @@ int __getpagesize ()
 	return funcptr();
 }
 
-int lsb___getpagesize ()
+int __lsb___getpagesize ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__getpagesize");

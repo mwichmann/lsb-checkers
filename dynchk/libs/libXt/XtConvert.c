@@ -17,7 +17,7 @@ void XtConvert(Widget arg0, char * arg1, XrmValue * arg2, char * arg3, XrmValue 
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtConvert(Widget arg0, char * arg1, XrmValue * arg2, char * arg3, XrmValue * arg4)
+void __lsb_XtConvert(Widget arg0, char * arg1, XrmValue * arg2, char * arg3, XrmValue * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtConvert");

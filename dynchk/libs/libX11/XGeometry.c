@@ -24,7 +24,7 @@ int XGeometry(Display * arg0, int arg1, char * arg2, char * arg3, unsigned int a
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 }
 
-int lsb_XGeometry(Display * arg0, int arg1, char * arg2, char * arg3, unsigned int arg4, unsigned int arg5, unsigned int arg6, int arg7, int arg8, int * arg9, int * arg10, int * arg11, int * arg12)
+int __lsb_XGeometry(Display * arg0, int arg1, char * arg2, char * arg3, unsigned int arg4, unsigned int arg5, unsigned int arg6, int arg7, int arg8, int * arg9, int * arg10, int * arg11, int * arg12)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGeometry");

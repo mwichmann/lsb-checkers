@@ -13,7 +13,7 @@ int XCloseOM(XOM arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XCloseOM(XOM arg0)
+int __lsb_XCloseOM(XOM arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCloseOM");

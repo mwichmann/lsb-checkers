@@ -10,11 +10,12 @@ int closedir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "closedir");
-	validate_NULL_TYPETYPE(arg0, "closedir");
+	validate_Rdaddress( arg0, "closedir");
+	validate_NULL_TYPETYPE(  arg0, "closedir");
 	return funcptr(arg0);
 }
 
-int lsb_closedir (DIR * arg0 )
+int __lsb_closedir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "closedir");

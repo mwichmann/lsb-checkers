@@ -17,7 +17,7 @@ int XGetTextProperty(Display * arg0, Window arg1, XTextProperty * arg2, Atom arg
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XGetTextProperty(Display * arg0, Window arg1, XTextProperty * arg2, Atom arg3)
+int __lsb_XGetTextProperty(Display * arg0, Window arg1, XTextProperty * arg2, Atom arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetTextProperty");

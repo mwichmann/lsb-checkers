@@ -13,7 +13,7 @@ void tzset ()
 	funcptr();
 }
 
-void lsb_tzset ()
+void __lsb_tzset ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tzset");

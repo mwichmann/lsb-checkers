@@ -10,11 +10,11 @@ double asinh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asinh");
-	validate_NULL_TYPETYPE(arg0, "asinh");
+	validate_NULL_TYPETYPE(  arg0, "asinh");
 	return funcptr(arg0);
 }
 
-double lsb_asinh (double arg0 )
+double __lsb_asinh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asinh");

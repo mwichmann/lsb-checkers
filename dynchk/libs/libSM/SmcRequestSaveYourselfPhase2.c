@@ -17,7 +17,7 @@ int SmcRequestSaveYourselfPhase2(SmcConn arg0, SmcSaveYourselfPhase2Proc arg1, S
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_SmcRequestSaveYourselfPhase2(SmcConn arg0, SmcSaveYourselfPhase2Proc arg1, SmPointer arg2)
+int __lsb_SmcRequestSaveYourselfPhase2(SmcConn arg0, SmcSaveYourselfPhase2Proc arg1, SmPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcRequestSaveYourselfPhase2");

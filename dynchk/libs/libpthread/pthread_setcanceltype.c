@@ -10,12 +10,13 @@ int pthread_setcanceltype (int arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_setcanceltype");
-	validate_NULL_TYPETYPE(arg0, "pthread_setcanceltype");
-	validate_NULL_TYPETYPE(arg1, "pthread_setcanceltype");
+	validate_NULL_TYPETYPE(  arg0, "pthread_setcanceltype");
+	validate_Rdaddress( arg1, "pthread_setcanceltype");
+	validate_NULL_TYPETYPE(  arg1, "pthread_setcanceltype");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_setcanceltype (int arg0 , int * arg1 )
+int __lsb_pthread_setcanceltype (int arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_setcanceltype");

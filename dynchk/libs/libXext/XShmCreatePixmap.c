@@ -19,7 +19,7 @@ Pixmap XShmCreatePixmap(Display * arg0, Drawable arg1, char * arg2, XShmSegmentI
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-Pixmap lsb_XShmCreatePixmap(Display * arg0, Drawable arg1, char * arg2, XShmSegmentInfo * arg3, unsigned int arg4, unsigned int arg5, unsigned int arg6)
+Pixmap __lsb_XShmCreatePixmap(Display * arg0, Drawable arg1, char * arg2, XShmSegmentInfo * arg3, unsigned int arg4, unsigned int arg5, unsigned int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShmCreatePixmap");

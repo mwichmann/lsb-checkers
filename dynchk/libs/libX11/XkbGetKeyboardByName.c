@@ -17,7 +17,7 @@ static int(*funcptr)(Display *, unsigned int, XkbComponentNamesPtr, unsigned int
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
- lsb_XkbGetKeyboardByName(Display * arg0, unsigned int arg1, XkbComponentNamesPtr arg2, unsigned int arg3, unsigned int arg4, int arg5)
+ __lsb_XkbGetKeyboardByName(Display * arg0, unsigned int arg1, XkbComponentNamesPtr arg2, unsigned int arg3, unsigned int arg4, int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbGetKeyboardByName");

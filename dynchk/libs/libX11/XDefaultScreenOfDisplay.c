@@ -12,7 +12,7 @@ Screen * XDefaultScreenOfDisplay(Display * arg0)
 	return funcptr(arg0);
 }
 
-Screen * lsb_XDefaultScreenOfDisplay(Display * arg0)
+Screen * __lsb_XDefaultScreenOfDisplay(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultScreenOfDisplay");

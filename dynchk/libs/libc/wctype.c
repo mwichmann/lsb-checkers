@@ -10,11 +10,12 @@ wctype_t wctype (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctype");
-	validate_NULL_TYPETYPE(arg0, "wctype");
+	validate_Rdaddress( arg0, "wctype");
+	validate_NULL_TYPETYPE(  arg0, "wctype");
 	return funcptr(arg0);
 }
 
-wctype_t lsb_wctype (const char * arg0 )
+wctype_t __lsb_wctype (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctype");

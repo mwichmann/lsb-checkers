@@ -13,7 +13,7 @@ int XFreeFont(Display * arg0, XFontStruct * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XFreeFont(Display * arg0, XFontStruct * arg1)
+int __lsb_XFreeFont(Display * arg0, XFontStruct * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFreeFont");

@@ -13,7 +13,7 @@ int raw ()
 	return funcptr();
 }
 
-int lsb_raw ()
+int __lsb_raw ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "raw");

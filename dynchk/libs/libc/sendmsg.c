@@ -10,13 +10,14 @@ ssize_t sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sendmsg");
-	validate_NULL_TYPETYPE(arg0, "sendmsg");
-	validate_NULL_TYPETYPE(arg1, "sendmsg");
-	validate_NULL_TYPETYPE(arg2, "sendmsg");
+	validate_NULL_TYPETYPE(  arg0, "sendmsg");
+	validate_Rdaddress( arg1, "sendmsg");
+	validate_NULL_TYPETYPE(  arg1, "sendmsg");
+	validate_NULL_TYPETYPE(  arg2, "sendmsg");
 	return funcptr(arg0, arg1, arg2);
 }
 
-ssize_t lsb_sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
+ssize_t __lsb_sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sendmsg");

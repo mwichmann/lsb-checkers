@@ -10,13 +10,13 @@ int gzsetparams (gzFile arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzsetparams");
-	validate_NULL_TYPETYPE(arg0, "gzsetparams");
-	validate_NULL_TYPETYPE(arg1, "gzsetparams");
-	validate_NULL_TYPETYPE(arg2, "gzsetparams");
+	validate_NULL_TYPETYPE(  arg0, "gzsetparams");
+	validate_NULL_TYPETYPE(  arg1, "gzsetparams");
+	validate_NULL_TYPETYPE(  arg2, "gzsetparams");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_gzsetparams (gzFile arg0 , int arg1 , int arg2 )
+int __lsb_gzsetparams (gzFile arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzsetparams");

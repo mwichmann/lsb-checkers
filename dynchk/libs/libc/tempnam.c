@@ -10,12 +10,14 @@ char * tempnam (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tempnam");
-	validate_NULL_TYPETYPE(arg0, "tempnam");
-	validate_NULL_TYPETYPE(arg1, "tempnam");
+	validate_Rdaddress( arg0, "tempnam");
+	validate_NULL_TYPETYPE(  arg0, "tempnam");
+	validate_Rdaddress( arg1, "tempnam");
+	validate_NULL_TYPETYPE(  arg1, "tempnam");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_tempnam (const char * arg0 , const char * arg1 )
+char * __lsb_tempnam (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tempnam");

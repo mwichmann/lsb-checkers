@@ -13,7 +13,7 @@ Boolean XtAppGetExitFlag(XtAppContext arg0)
 	return funcptr(arg0);
 }
 
-Boolean lsb_XtAppGetExitFlag(XtAppContext arg0)
+Boolean __lsb_XtAppGetExitFlag(XtAppContext arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppGetExitFlag");

@@ -20,7 +20,7 @@ void XwcDrawText(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, Xwc
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-void lsb_XwcDrawText(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, XwcTextItem * arg5, int arg6)
+void __lsb_XwcDrawText(Display * arg0, Drawable arg1, GC arg2, int arg3, int arg4, XwcTextItem * arg5, int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XwcDrawText");

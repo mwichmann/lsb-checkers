@@ -13,7 +13,7 @@ int savetty ()
 	return funcptr();
 }
 
-int lsb_savetty ()
+int __lsb_savetty ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "savetty");

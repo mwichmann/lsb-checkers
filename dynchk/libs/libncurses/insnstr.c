@@ -10,12 +10,13 @@ int insnstr (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insnstr");
-	validate_NULL_TYPETYPE(arg0, "insnstr");
-	validate_NULL_TYPETYPE(arg1, "insnstr");
+	validate_Rdaddress( arg0, "insnstr");
+	validate_NULL_TYPETYPE(  arg0, "insnstr");
+	validate_NULL_TYPETYPE(  arg1, "insnstr");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_insnstr (const char * arg0 , int arg1 )
+int __lsb_insnstr (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insnstr");

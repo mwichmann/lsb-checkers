@@ -10,12 +10,12 @@ double ldexp (double arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexp");
-	validate_NULL_TYPETYPE(arg0, "ldexp");
-	validate_NULL_TYPETYPE(arg1, "ldexp");
+	validate_NULL_TYPETYPE(  arg0, "ldexp");
+	validate_NULL_TYPETYPE(  arg1, "ldexp");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_ldexp (double arg0 , int arg1 )
+double __lsb_ldexp (double arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexp");

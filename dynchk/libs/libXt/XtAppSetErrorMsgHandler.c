@@ -15,7 +15,7 @@ XtErrorMsgHandler XtAppSetErrorMsgHandler(XtAppContext arg0, XtErrorMsgHandler a
 	return funcptr(arg0, arg1);
 }
 
-XtErrorMsgHandler lsb_XtAppSetErrorMsgHandler(XtAppContext arg0, XtErrorMsgHandler arg1)
+XtErrorMsgHandler __lsb_XtAppSetErrorMsgHandler(XtAppContext arg0, XtErrorMsgHandler arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppSetErrorMsgHandler");

@@ -11,7 +11,7 @@ int XESetFreeGC()
 	return funcptr();
 }
 
-int lsb_XESetFreeGC()
+int __lsb_XESetFreeGC()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetFreeGC");

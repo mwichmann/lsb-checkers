@@ -11,11 +11,11 @@ int setgid (gid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgid");
-	validate_NULL_TYPETYPE(arg0, "setgid");
+	validate_NULL_TYPETYPE(  arg0, "setgid");
 	return funcptr(arg0);
 }
 
-int lsb_setgid (gid_t arg0 )
+int __lsb_setgid (gid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgid");

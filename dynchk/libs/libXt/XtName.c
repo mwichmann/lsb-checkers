@@ -13,7 +13,7 @@ String XtName(Widget arg0)
 	return funcptr(arg0);
 }
 
-String lsb_XtName(Widget arg0)
+String __lsb_XtName(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtName");

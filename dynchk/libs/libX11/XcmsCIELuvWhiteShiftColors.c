@@ -20,7 +20,7 @@ int XcmsCIELuvWhiteShiftColors(XcmsCCC arg0, XcmsColor * arg1, XcmsColor * arg2,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_XcmsCIELuvWhiteShiftColors(XcmsCCC arg0, XcmsColor * arg1, XcmsColor * arg2, XcmsColorFormat arg3, XcmsColor * arg4, unsigned int arg5, int * arg6)
+int __lsb_XcmsCIELuvWhiteShiftColors(XcmsCCC arg0, XcmsColor * arg1, XcmsColor * arg2, XcmsColorFormat arg3, XcmsColor * arg4, unsigned int arg5, int * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsCIELuvWhiteShiftColors");

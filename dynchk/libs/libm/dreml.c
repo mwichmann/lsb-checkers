@@ -10,12 +10,12 @@ long double dreml (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dreml");
-	validate_NULL_TYPETYPE(arg0, "dreml");
-	validate_NULL_TYPETYPE(arg1, "dreml");
+	validate_NULL_TYPETYPE(  arg0, "dreml");
+	validate_NULL_TYPETYPE(  arg1, "dreml");
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_dreml (long double arg0 , long double arg1 )
+long double __lsb_dreml (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dreml");

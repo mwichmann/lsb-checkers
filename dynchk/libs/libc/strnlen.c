@@ -11,12 +11,13 @@ size_t strnlen (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strnlen");
-	validate_NULL_TYPETYPE(arg0, "strnlen");
-	validate_NULL_TYPETYPE(arg1, "strnlen");
+	validate_Rdaddress( arg0, "strnlen");
+	validate_NULL_TYPETYPE(  arg0, "strnlen");
+	validate_NULL_TYPETYPE(  arg1, "strnlen");
 	return funcptr(arg0, arg1);
 }
 
-size_t lsb_strnlen (const char * arg0 , size_t arg1 )
+size_t __lsb_strnlen (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strnlen");

@@ -11,7 +11,7 @@ Boolean XtIsTopLevelShell()
 	return funcptr();
 }
 
-Boolean lsb_XtIsTopLevelShell()
+Boolean __lsb_XtIsTopLevelShell()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsTopLevelShell");

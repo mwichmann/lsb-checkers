@@ -17,7 +17,7 @@ static int(*funcptr)(XkbDescPtr, KeyCode, unsigned int, unsigned int *, KeySym *
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
- lsb_XkbTranslateKeyCode(XkbDescPtr arg0, KeyCode arg1, unsigned int arg2, unsigned int * arg3, KeySym * arg4)
+ __lsb_XkbTranslateKeyCode(XkbDescPtr arg0, KeyCode arg1, unsigned int arg2, unsigned int * arg3, KeySym * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbTranslateKeyCode");

@@ -10,11 +10,12 @@ WINDOW * dupwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dupwin");
-	validate_NULL_TYPETYPE(arg0, "dupwin");
+	validate_Rdaddress( arg0, "dupwin");
+	validate_NULL_TYPETYPE(  arg0, "dupwin");
 	return funcptr(arg0);
 }
 
-WINDOW * lsb_dupwin (WINDOW * arg0 )
+WINDOW * __lsb_dupwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dupwin");

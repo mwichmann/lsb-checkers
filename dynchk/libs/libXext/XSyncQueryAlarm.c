@@ -15,7 +15,7 @@ int XSyncQueryAlarm(Display * arg0, XSyncAlarm arg1, XSyncAlarmAttributes * arg2
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSyncQueryAlarm(Display * arg0, XSyncAlarm arg1, XSyncAlarmAttributes * arg2)
+int __lsb_XSyncQueryAlarm(Display * arg0, XSyncAlarm arg1, XSyncAlarmAttributes * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncQueryAlarm");

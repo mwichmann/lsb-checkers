@@ -15,7 +15,7 @@ int DPMSSetTimeouts(Display * arg0, CARD16 arg1, CARD16 arg2, CARD16 arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_DPMSSetTimeouts(Display * arg0, CARD16 arg1, CARD16 arg2, CARD16 arg3)
+int __lsb_DPMSSetTimeouts(Display * arg0, CARD16 arg1, CARD16 arg2, CARD16 arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "DPMSSetTimeouts");

@@ -10,11 +10,12 @@ int shmdt (const void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmdt");
-	validate_NULL_TYPETYPE(arg0, "shmdt");
+	validate_Rdaddress( arg0, "shmdt");
+	validate_NULL_TYPETYPE(  arg0, "shmdt");
 	return funcptr(arg0);
 }
 
-int lsb_shmdt (const void * arg0 )
+int __lsb_shmdt (const void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmdt");

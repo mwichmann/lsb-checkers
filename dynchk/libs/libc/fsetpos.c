@@ -10,12 +10,14 @@ int fsetpos (FILE * arg0 , const fpos_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos");
-	validate_NULL_TYPETYPE(arg0, "fsetpos");
-	validate_NULL_TYPETYPE(arg1, "fsetpos");
+	validate_Rdaddress( arg0, "fsetpos");
+	validate_NULL_TYPETYPE(  arg0, "fsetpos");
+	validate_Rdaddress( arg1, "fsetpos");
+	validate_NULL_TYPETYPE(  arg1, "fsetpos");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fsetpos (FILE * arg0 , const fpos_t * arg1 )
+int __lsb_fsetpos (FILE * arg0 , const fpos_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos");

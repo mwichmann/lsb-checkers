@@ -16,7 +16,7 @@ int XResizeWindow(Display * arg0, Window arg1, unsigned int arg2, unsigned int a
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XResizeWindow(Display * arg0, Window arg1, unsigned int arg2, unsigned int arg3)
+int __lsb_XResizeWindow(Display * arg0, Window arg1, unsigned int arg2, unsigned int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XResizeWindow");

@@ -13,7 +13,7 @@ int XAddToExtensionList(_XExtData * * arg0, XExtData * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XAddToExtensionList(_XExtData * * arg0, XExtData * arg1)
+int __lsb_XAddToExtensionList(_XExtData * * arg0, XExtData * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAddToExtensionList");

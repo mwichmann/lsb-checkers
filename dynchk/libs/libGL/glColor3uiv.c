@@ -12,7 +12,7 @@ void glColor3uiv(GLuint * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glColor3uiv(GLuint * arg0)
+void __lsb_glColor3uiv(GLuint * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glColor3uiv");

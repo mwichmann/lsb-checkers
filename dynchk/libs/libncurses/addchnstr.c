@@ -10,12 +10,13 @@ int addchnstr (const chtype * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addchnstr");
-	validate_NULL_TYPETYPE(arg0, "addchnstr");
-	validate_NULL_TYPETYPE(arg1, "addchnstr");
+	validate_Rdaddress( arg0, "addchnstr");
+	validate_NULL_TYPETYPE(  arg0, "addchnstr");
+	validate_NULL_TYPETYPE(  arg1, "addchnstr");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_addchnstr (const chtype * arg0 , int arg1 )
+int __lsb_addchnstr (const chtype * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addchnstr");

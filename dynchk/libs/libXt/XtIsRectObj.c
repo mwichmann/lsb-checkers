@@ -11,7 +11,7 @@ Boolean XtIsRectObj()
 	return funcptr();
 }
 
-Boolean lsb_XtIsRectObj()
+Boolean __lsb_XtIsRectObj()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsRectObj");

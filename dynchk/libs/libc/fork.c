@@ -13,7 +13,7 @@ pid_t fork ()
 	return funcptr();
 }
 
-pid_t lsb_fork ()
+pid_t __lsb_fork ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fork");

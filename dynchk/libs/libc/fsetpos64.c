@@ -10,12 +10,14 @@ int fsetpos64 (FILE * arg0 , const fpos64_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos64");
-	validate_NULL_TYPETYPE(arg0, "fsetpos64");
-	validate_NULL_TYPETYPE(arg1, "fsetpos64");
+	validate_Rdaddress( arg0, "fsetpos64");
+	validate_NULL_TYPETYPE(  arg0, "fsetpos64");
+	validate_Rdaddress( arg1, "fsetpos64");
+	validate_NULL_TYPETYPE(  arg1, "fsetpos64");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fsetpos64 (FILE * arg0 , const fpos64_t * arg1 )
+int __lsb_fsetpos64 (FILE * arg0 , const fpos64_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos64");

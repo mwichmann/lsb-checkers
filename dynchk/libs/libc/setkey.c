@@ -10,11 +10,12 @@ void setkey (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setkey");
-	validate_NULL_TYPETYPE(arg0, "setkey");
+	validate_Rdaddress( arg0, "setkey");
+	validate_NULL_TYPETYPE(  arg0, "setkey");
 	funcptr(arg0);
 }
 
-void lsb_setkey (const char * arg0 )
+void __lsb_setkey (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setkey");

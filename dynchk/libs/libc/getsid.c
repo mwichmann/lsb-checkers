@@ -11,11 +11,11 @@ pid_t getsid (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsid");
-	validate_NULL_TYPETYPE(arg0, "getsid");
+	validate_NULL_TYPETYPE(  arg0, "getsid");
 	return funcptr(arg0);
 }
 
-pid_t lsb_getsid (pid_t arg0 )
+pid_t __lsb_getsid (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsid");

@@ -10,12 +10,13 @@ int putc_unlocked (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putc_unlocked");
-	validate_NULL_TYPETYPE(arg0, "putc_unlocked");
-	validate_NULL_TYPETYPE(arg1, "putc_unlocked");
+	validate_NULL_TYPETYPE(  arg0, "putc_unlocked");
+	validate_Rdaddress( arg1, "putc_unlocked");
+	validate_NULL_TYPETYPE(  arg1, "putc_unlocked");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_putc_unlocked (int arg0 , FILE * arg1 )
+int __lsb_putc_unlocked (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putc_unlocked");

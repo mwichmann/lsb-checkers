@@ -10,11 +10,11 @@ int sigignore (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigignore");
-	validate_NULL_TYPETYPE(arg0, "sigignore");
+	validate_NULL_TYPETYPE(  arg0, "sigignore");
 	return funcptr(arg0);
 }
 
-int lsb_sigignore (int arg0 )
+int __lsb_sigignore (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigignore");

@@ -10,11 +10,11 @@ int napms (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "napms");
-	validate_NULL_TYPETYPE(arg0, "napms");
+	validate_NULL_TYPETYPE(  arg0, "napms");
 	return funcptr(arg0);
 }
 
-int lsb_napms (int arg0 )
+int __lsb_napms (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "napms");

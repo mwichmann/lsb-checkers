@@ -10,11 +10,12 @@ void rewinddir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rewinddir");
-	validate_NULL_TYPETYPE(arg0, "rewinddir");
+	validate_Rdaddress( arg0, "rewinddir");
+	validate_NULL_TYPETYPE(  arg0, "rewinddir");
 	funcptr(arg0);
 }
 
-void lsb_rewinddir (DIR * arg0 )
+void __lsb_rewinddir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rewinddir");

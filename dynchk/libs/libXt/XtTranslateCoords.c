@@ -17,7 +17,7 @@ void XtTranslateCoords(Widget arg0, int arg1, int arg2, Position * arg3, Positio
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtTranslateCoords(Widget arg0, int arg1, int arg2, Position * arg3, Position * arg4)
+void __lsb_XtTranslateCoords(Widget arg0, int arg1, int arg2, Position * arg3, Position * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtTranslateCoords");

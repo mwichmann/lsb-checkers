@@ -18,7 +18,7 @@ void XtCallActionProc(Widget arg0, char * arg1, XEvent * arg2, String * arg3, Ca
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtCallActionProc(Widget arg0, char * arg1, XEvent * arg2, String * arg3, Cardinal arg4)
+void __lsb_XtCallActionProc(Widget arg0, char * arg1, XEvent * arg2, String * arg3, Cardinal arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtCallActionProc");

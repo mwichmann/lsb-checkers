@@ -13,7 +13,7 @@ int XcmsScreenNumberOfCCC(XcmsCCC arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XcmsScreenNumberOfCCC(XcmsCCC arg0)
+int __lsb_XcmsScreenNumberOfCCC(XcmsCCC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsScreenNumberOfCCC");

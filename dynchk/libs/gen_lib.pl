@@ -130,7 +130,6 @@ FROM Interface, Header, Library' . $interface_FROM_add .
    AND (Iarch = 1 OR IArch = '.$arch_number.') ' . $interface_WHERE_add .
 "GROUP BY Iid" ## This removes duplicate entries.
 ) or die "Couldn't prepare interface query: " . DBI ->errstr;
-
 my $has_ellipsis_q = $dbh->prepare(
 'SELECT Tname
 FROM Parameter, Type
@@ -157,7 +156,15 @@ WHERE Ppos = ?
   AND Pint = ?
   AND Ptype = Tid'
 ) or die "Couldn't prepare write_param_type query: " . DBI->errstr;
-	
+
+my $write_addy_checker_q = $dbh->prepare(
+'SELECT Tbasetype, Ttype from Type where Tid = ?')
+	or die "Couldn't prepare write_addy_checker query: ".DBI->errstr;
+
+my $get_param_typeid_q = $dbh->prepare(
+'SELECT Ptype from Parameter where Ppos = ? and Pint = ?')
+	or die "Couldn't prepare get_param_typeid query: " . DBI->errstr;
+
 my $write_int_wrapper_q = $dbh->prepare(
 'SELECT Ppos, Pint FROM Parameter WHERE Pint = ? ORDER BY Ppos')
 	or die "Couldn't prepare write_int_wrapper query: " . DBI->errstr;
@@ -371,7 +378,7 @@ sub get_param_typetype # ($param_pos, $param_int)
 	}
    
 	return ("struct_".$type,"&") if($typeform eq "Struct");
-	return ("union_".$type,"&") if($typeform eq "Union");
+	# return ("union_".$type,"&") if($typeform eq "Union");
 	# Should I handle ($typeform eq "Pointer") ?
 	return ("NULL_TYPETYPE","");
 }
@@ -389,8 +396,27 @@ sub get_param_type # ($param_pos, $param_int)
 	return ($left_string,$right_string);
 }
 
+
+# write code that checks the addresses of pointers.
+sub write_addy_checker
+{
+	my($fh, $type_id, $arg_name, $left_name, $func_name)=@_;
+	$write_addy_checker_q->execute($type_id)
+		or die "Couldn't execute write_addy_checker query: ".DBI->errstr;
+	my($basetype, $typeform) = $write_addy_checker_q->fetchrow_array();
+	if($typeform eq "Pointer")
+	{
+		print $fh "\tvalidate_Rdaddress($left_name $arg_name, \"$func_name\");\n";
+		write_addy_checker($fh, $basetype, $arg_name, "*".$left_name, $func_name);
+	}
+	elsif($typeform eq "FuncPtr")
+	{
+		print $fh "validate_Rdaddress($left_name $arg_name, \"$func_name\");\n";
+	}
+}
+
 # write code block for interface wrapper to 'fh'
-# if 'is_lsb', write code block for lsb_* interface wrapper to 'fh'
+# if 'is_lsb', write code block for __lsb_* interface wrapper to 'fh'
 sub write_int_wrapper
 {
 	my($fh, $func_id, $func_name, $func_left_type, $func_right_type, $is_lsb) = @_;
@@ -403,16 +429,18 @@ sub write_int_wrapper
 		or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
 	VALCALL: while( my($param_pos, $param_int) = $write_int_wrapper_q->fetchrow_array() )
 	{
-
-		my($left_ptype,$right_ptype) = get_param_type($param_pos, $param_int);
-
-		next VALCALL if($left_ptype eq "void");
+		$get_param_typeid_q->execute($param_pos, $param_int)
+			or die "Couldn't execute get_param_typeid query: " . DBI->errstr;
+		my($typeid) = $get_param_typeid_q->fetchrow_array();
+		
+		next VALCALL if($typeid == 1);
 
 		unless($is_lsb)
 		{
 			my($typetype, $dereference) = get_param_typetype($param_pos, $param_int);
-			print $fh "\tvalidate_".$typetype.
-				"(" . $dereference . "arg" . $i . ", \"" . $func_name . "\");\n";
+			write_addy_checker($fh, $typeid, "arg$i", "", $func_name);
+
+			print $fh "\tvalidate_$typetype( $dereference arg$i, \"$func_name\");\n";
 		}
 		$i++;
 	}
@@ -508,12 +536,12 @@ sub write_argument_list # ($fh, $func_id, $add_arg)
 }
 
 # write function declaration for 'interface' to 'fh'
-# if 'is_lsb', write the lsb_* wrapper's declaration
+# if 'is_lsb', write the __lsb_* wrapper's declaration
 sub write_int_declaration 
 {
 	my($fh, $func_id, $func_name, $func_left_type, $func_right_type, $is_lsb) = @_;
 	print $fh $func_left_type . " ";
-	print $fh "lsb_" if($is_lsb);
+	print $fh "__lsb_" if($is_lsb);
 	print $fh $func_name . $func_right_type . "(";
 	write_argument_list($fh, $func_id, 1);
 	
@@ -585,7 +613,7 @@ FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fet
 	# Add interface to correct gen.mk file
 	add_to_gen_mk($func_name, $func_lib) if($generate_gen_file);
 
-	# Add interface to the lsb_* function header
+	# Add interface to the __lsb_* function header
 	write_int_declaration($lsb_h_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
 
 	# Create interface's .c file

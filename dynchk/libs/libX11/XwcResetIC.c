@@ -13,7 +13,7 @@ wchar_t * XwcResetIC(XIC arg0)
 	return funcptr(arg0);
 }
 
-wchar_t * lsb_XwcResetIC(XIC arg0)
+wchar_t * __lsb_XwcResetIC(XIC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XwcResetIC");

@@ -10,11 +10,11 @@ int close (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "close");
-	validate_filedescriptor(arg0, "close");
+	validate_filedescriptor(  arg0, "close");
 	return funcptr(arg0);
 }
 
-int lsb_close (int arg0 )
+int __lsb_close (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "close");

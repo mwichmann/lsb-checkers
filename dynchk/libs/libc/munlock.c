@@ -11,12 +11,13 @@ int munlock (const void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "munlock");
-	validate_NULL_TYPETYPE(arg0, "munlock");
-	validate_NULL_TYPETYPE(arg1, "munlock");
+	validate_Rdaddress( arg0, "munlock");
+	validate_NULL_TYPETYPE(  arg0, "munlock");
+	validate_NULL_TYPETYPE(  arg1, "munlock");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_munlock (const void * arg0 , size_t arg1 )
+int __lsb_munlock (const void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "munlock");

@@ -10,11 +10,12 @@ void wordfree (wordexp_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wordfree");
-	validate_NULL_TYPETYPE(arg0, "wordfree");
+	validate_Rdaddress( arg0, "wordfree");
+	validate_NULL_TYPETYPE(  arg0, "wordfree");
 	funcptr(arg0);
 }
 
-void lsb_wordfree (wordexp_t * arg0 )
+void __lsb_wordfree (wordexp_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wordfree");

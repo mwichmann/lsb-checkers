@@ -12,7 +12,7 @@ XExtCodes * XAddExtension(Display * arg0)
 	return funcptr(arg0);
 }
 
-XExtCodes * lsb_XAddExtension(Display * arg0)
+XExtCodes * __lsb_XAddExtension(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAddExtension");

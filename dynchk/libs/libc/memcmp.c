@@ -11,13 +11,15 @@ int memcmp (const void * arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memcmp");
-	validate_NULL_TYPETYPE(arg0, "memcmp");
-	validate_NULL_TYPETYPE(arg1, "memcmp");
-	validate_NULL_TYPETYPE(arg2, "memcmp");
+	validate_Rdaddress( arg0, "memcmp");
+	validate_NULL_TYPETYPE(  arg0, "memcmp");
+	validate_Rdaddress( arg1, "memcmp");
+	validate_NULL_TYPETYPE(  arg1, "memcmp");
+	validate_NULL_TYPETYPE(  arg2, "memcmp");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_memcmp (const void * arg0 , const void * arg1 , size_t arg2 )
+int __lsb_memcmp (const void * arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memcmp");

@@ -14,7 +14,7 @@ int XUnmapSubwindows(Display * arg0, Window arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XUnmapSubwindows(Display * arg0, Window arg1)
+int __lsb_XUnmapSubwindows(Display * arg0, Window arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XUnmapSubwindows");

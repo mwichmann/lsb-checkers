@@ -15,7 +15,7 @@ int XAllocColor(Display * arg0, Colormap arg1, XColor * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XAllocColor(Display * arg0, Colormap arg1, XColor * arg2)
+int __lsb_XAllocColor(Display * arg0, Colormap arg1, XColor * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllocColor");

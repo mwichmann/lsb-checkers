@@ -11,12 +11,13 @@ int sethostname (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sethostname");
-	validate_NULL_TYPETYPE(arg0, "sethostname");
-	validate_NULL_TYPETYPE(arg1, "sethostname");
+	validate_Rdaddress( arg0, "sethostname");
+	validate_NULL_TYPETYPE(  arg0, "sethostname");
+	validate_NULL_TYPETYPE(  arg1, "sethostname");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sethostname (const char * arg0 , size_t arg1 )
+int __lsb_sethostname (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sethostname");

@@ -12,7 +12,7 @@ XkbDescPtr XkbAllocKeyboard(void arg0)
 	return funcptr(arg0);
 }
 
-XkbDescPtr lsb_XkbAllocKeyboard(void arg0)
+XkbDescPtr __lsb_XkbAllocKeyboard(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbAllocKeyboard");

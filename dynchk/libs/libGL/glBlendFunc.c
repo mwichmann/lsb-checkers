@@ -15,7 +15,7 @@ void glBlendFunc(GLenum arg0, GLenum arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glBlendFunc(GLenum arg0, GLenum arg1)
+void __lsb_glBlendFunc(GLenum arg0, GLenum arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glBlendFunc");

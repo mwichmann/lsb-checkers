@@ -14,7 +14,7 @@ void * realloc(void * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-void * lsb_realloc(void * arg0, size_t arg1)
+void * __lsb_realloc(void * arg0, size_t arg1)
 {
 	if(!funcptr)
 		funcptr = __libc_realloc;

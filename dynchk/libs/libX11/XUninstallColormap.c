@@ -14,7 +14,7 @@ int XUninstallColormap(Display * arg0, Colormap arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XUninstallColormap(Display * arg0, Colormap arg1)
+int __lsb_XUninstallColormap(Display * arg0, Colormap arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XUninstallColormap");

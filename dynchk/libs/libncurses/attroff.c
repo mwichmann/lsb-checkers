@@ -10,11 +10,11 @@ int attroff (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attroff");
-	validate_NULL_TYPETYPE(arg0, "attroff");
+	validate_NULL_TYPETYPE(  arg0, "attroff");
 	return funcptr(arg0);
 }
 
-int lsb_attroff (int arg0 )
+int __lsb_attroff (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attroff");

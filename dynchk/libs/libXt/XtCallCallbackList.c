@@ -17,7 +17,7 @@ void XtCallCallbackList(Widget arg0, XtCallbackList arg1, XtPointer arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XtCallCallbackList(Widget arg0, XtCallbackList arg1, XtPointer arg2)
+void __lsb_XtCallCallbackList(Widget arg0, XtCallbackList arg1, XtPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtCallCallbackList");

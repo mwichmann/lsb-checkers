@@ -10,11 +10,11 @@ double atan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atan");
-	validate_NULL_TYPETYPE(arg0, "atan");
+	validate_NULL_TYPETYPE(  arg0, "atan");
 	return funcptr(arg0);
 }
 
-double lsb_atan (double arg0 )
+double __lsb_atan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atan");

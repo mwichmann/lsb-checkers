@@ -25,7 +25,7 @@ void XtGetSubresources(Widget arg0, XtPointer arg1, char * arg2, char * arg3, Xt
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-void lsb_XtGetSubresources(Widget arg0, XtPointer arg1, char * arg2, char * arg3, XtResourceList arg4, Cardinal arg5, ArgList arg6, Cardinal arg7)
+void __lsb_XtGetSubresources(Widget arg0, XtPointer arg1, char * arg2, char * arg3, XtResourceList arg4, Cardinal arg5, ArgList arg6, Cardinal arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetSubresources");

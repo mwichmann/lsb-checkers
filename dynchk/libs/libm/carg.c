@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef carg
 static double(*funcptr) (double complex ) = 0;
@@ -11,11 +10,11 @@ double carg (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "carg");
-	validate_NULL_TYPETYPE(arg0, "carg");
+	validate_NULL_TYPETYPE(  arg0, "carg");
 	return funcptr(arg0);
 }
 
-double lsb_carg (double complex arg0 )
+double __lsb_carg (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "carg");

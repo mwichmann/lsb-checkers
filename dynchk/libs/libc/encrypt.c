@@ -10,12 +10,13 @@ void encrypt (char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "encrypt");
-	validate_NULL_TYPETYPE(arg0, "encrypt");
-	validate_NULL_TYPETYPE(arg1, "encrypt");
+	validate_Rdaddress( arg0, "encrypt");
+	validate_NULL_TYPETYPE(  arg0, "encrypt");
+	validate_NULL_TYPETYPE(  arg1, "encrypt");
 	funcptr(arg0, arg1);
 }
 
-void lsb_encrypt (char * arg0 , int arg1 )
+void __lsb_encrypt (char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "encrypt");

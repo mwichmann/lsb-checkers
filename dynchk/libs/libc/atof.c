@@ -10,11 +10,12 @@ double atof (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atof");
-	validate_NULL_TYPETYPE(arg0, "atof");
+	validate_Rdaddress( arg0, "atof");
+	validate_NULL_TYPETYPE(  arg0, "atof");
 	return funcptr(arg0);
 }
 
-double lsb_atof (const char * arg0 )
+double __lsb_atof (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atof");

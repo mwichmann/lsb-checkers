@@ -16,7 +16,7 @@ int IceListenForWellKnownConnections(char * arg0, int * arg1, IceListenObj * * a
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_IceListenForWellKnownConnections(char * arg0, int * arg1, IceListenObj * * arg2, int arg3, char * arg4)
+int __lsb_IceListenForWellKnownConnections(char * arg0, int * arg1, IceListenObj * * arg2, int arg3, char * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceListenForWellKnownConnections");

@@ -13,7 +13,7 @@ void abort ()
 	funcptr();
 }
 
-void lsb_abort ()
+void __lsb_abort ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "abort");

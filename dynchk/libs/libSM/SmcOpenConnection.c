@@ -22,7 +22,7 @@ SmcConn SmcOpenConnection(char * arg0, SmPointer arg1, int arg2, int arg3, unsig
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
-SmcConn lsb_SmcOpenConnection(char * arg0, SmPointer arg1, int arg2, int arg3, unsigned long arg4, SmcCallbacks * arg5, char * arg6, char * * arg7, int arg8, char * arg9)
+SmcConn __lsb_SmcOpenConnection(char * arg0, SmPointer arg1, int arg2, int arg3, unsigned long arg4, SmcCallbacks * arg5, char * arg6, char * * arg7, int arg8, char * arg9)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcOpenConnection");

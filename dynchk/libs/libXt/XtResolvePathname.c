@@ -22,7 +22,7 @@ String XtResolvePathname(Display * arg0, char * arg1, char * arg2, char * arg3, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-String lsb_XtResolvePathname(Display * arg0, char * arg1, char * arg2, char * arg3, char * arg4, Substitution arg5, Cardinal arg6, XtFilePredicate arg7)
+String __lsb_XtResolvePathname(Display * arg0, char * arg1, char * arg2, char * arg3, char * arg4, Substitution arg5, Cardinal arg6, XtFilePredicate arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtResolvePathname");

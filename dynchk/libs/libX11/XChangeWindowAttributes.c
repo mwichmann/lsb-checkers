@@ -16,7 +16,7 @@ int XChangeWindowAttributes(Display * arg0, Window arg1, unsigned long arg2, XSe
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XChangeWindowAttributes(Display * arg0, Window arg1, unsigned long arg2, XSetWindowAttributes * arg3)
+int __lsb_XChangeWindowAttributes(Display * arg0, Window arg1, unsigned long arg2, XSetWindowAttributes * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XChangeWindowAttributes");

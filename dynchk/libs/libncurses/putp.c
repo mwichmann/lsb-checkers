@@ -10,11 +10,12 @@ int putp (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putp");
-	validate_NULL_TYPETYPE(arg0, "putp");
+	validate_Rdaddress( arg0, "putp");
+	validate_NULL_TYPETYPE(  arg0, "putp");
 	return funcptr(arg0);
 }
 
-int lsb_putp (const char * arg0 )
+int __lsb_putp (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putp");

@@ -10,12 +10,14 @@ FILE * fopen64 (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fopen64");
-	validate_NULL_TYPETYPE(arg0, "fopen64");
-	validate_NULL_TYPETYPE(arg1, "fopen64");
+	validate_Rdaddress( arg0, "fopen64");
+	validate_NULL_TYPETYPE(  arg0, "fopen64");
+	validate_Rdaddress( arg1, "fopen64");
+	validate_NULL_TYPETYPE(  arg1, "fopen64");
 	return funcptr(arg0, arg1);
 }
 
-FILE * lsb_fopen64 (const char * arg0 , const char * arg1 )
+FILE * __lsb_fopen64 (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fopen64");

@@ -13,7 +13,7 @@ int sched_yield ()
 	return funcptr();
 }
 
-int lsb_sched_yield ()
+int __lsb_sched_yield ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_yield");

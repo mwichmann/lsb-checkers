@@ -12,7 +12,7 @@ XSizeHints * XAllocSizeHints(void arg0)
 	return funcptr(arg0);
 }
 
-XSizeHints * lsb_XAllocSizeHints(void arg0)
+XSizeHints * __lsb_XAllocSizeHints(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllocSizeHints");

@@ -15,7 +15,7 @@ void SmcModifyCallbacks(SmcConn arg0, unsigned long arg1, SmcCallbacks * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_SmcModifyCallbacks(SmcConn arg0, unsigned long arg1, SmcCallbacks * arg2)
+void __lsb_SmcModifyCallbacks(SmcConn arg0, unsigned long arg1, SmcCallbacks * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcModifyCallbacks");

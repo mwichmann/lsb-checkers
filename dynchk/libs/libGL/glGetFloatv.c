@@ -14,7 +14,7 @@ void glGetFloatv(GLenum arg0, GLfloat * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glGetFloatv(GLenum arg0, GLfloat * arg1)
+void __lsb_glGetFloatv(GLenum arg0, GLfloat * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetFloatv");

@@ -17,7 +17,7 @@ int XSetInputFocus(Display * arg0, Window arg1, int arg2, Time arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XSetInputFocus(Display * arg0, Window arg1, int arg2, Time arg3)
+int __lsb_XSetInputFocus(Display * arg0, Window arg1, int arg2, Time arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetInputFocus");

@@ -10,13 +10,13 @@ int mvinsch (int arg0 , int arg1 , chtype arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinsch");
-	validate_NULL_TYPETYPE(arg0, "mvinsch");
-	validate_NULL_TYPETYPE(arg1, "mvinsch");
-	validate_NULL_TYPETYPE(arg2, "mvinsch");
+	validate_NULL_TYPETYPE(  arg0, "mvinsch");
+	validate_NULL_TYPETYPE(  arg1, "mvinsch");
+	validate_NULL_TYPETYPE(  arg2, "mvinsch");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mvinsch (int arg0 , int arg1 , chtype arg2 )
+int __lsb_mvinsch (int arg0 , int arg1 , chtype arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinsch");

@@ -10,12 +10,12 @@ int flock (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flock");
-	validate_NULL_TYPETYPE(arg0, "flock");
-	validate_NULL_TYPETYPE(arg1, "flock");
+	validate_NULL_TYPETYPE(  arg0, "flock");
+	validate_NULL_TYPETYPE(  arg1, "flock");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_flock (int arg0 , int arg1 )
+int __lsb_flock (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flock");

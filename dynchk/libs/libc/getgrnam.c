@@ -10,11 +10,12 @@ struct group * getgrnam (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrnam");
-	validate_NULL_TYPETYPE(arg0, "getgrnam");
+	validate_Rdaddress( arg0, "getgrnam");
+	validate_NULL_TYPETYPE(  arg0, "getgrnam");
 	return funcptr(arg0);
 }
 
-struct group * lsb_getgrnam (const char * arg0 )
+struct group * __lsb_getgrnam (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrnam");

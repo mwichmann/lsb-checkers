@@ -11,12 +11,13 @@ wchar_t * wcsrchr (const wchar_t * arg0 , wchar_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsrchr");
-	validate_NULL_TYPETYPE(arg0, "wcsrchr");
-	validate_NULL_TYPETYPE(arg1, "wcsrchr");
+	validate_Rdaddress( arg0, "wcsrchr");
+	validate_NULL_TYPETYPE(  arg0, "wcsrchr");
+	validate_NULL_TYPETYPE(  arg1, "wcsrchr");
 	return funcptr(arg0, arg1);
 }
 
-wchar_t * lsb_wcsrchr (const wchar_t * arg0 , wchar_t arg1 )
+wchar_t * __lsb_wcsrchr (const wchar_t * arg0 , wchar_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsrchr");

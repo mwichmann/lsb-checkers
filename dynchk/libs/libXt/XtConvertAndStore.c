@@ -17,7 +17,7 @@ Boolean XtConvertAndStore(Widget arg0, char * arg1, XrmValue * arg2, char * arg3
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-Boolean lsb_XtConvertAndStore(Widget arg0, char * arg1, XrmValue * arg2, char * arg3, XrmValue * arg4)
+Boolean __lsb_XtConvertAndStore(Widget arg0, char * arg1, XrmValue * arg2, char * arg3, XrmValue * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtConvertAndStore");

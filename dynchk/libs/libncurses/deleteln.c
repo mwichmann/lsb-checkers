@@ -13,7 +13,7 @@ int deleteln ()
 	return funcptr();
 }
 
-int lsb_deleteln ()
+int __lsb_deleteln ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deleteln");

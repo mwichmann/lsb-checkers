@@ -13,7 +13,7 @@ void hdestroy ()
 	funcptr();
 }
 
-void lsb_hdestroy ()
+void __lsb_hdestroy ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hdestroy");

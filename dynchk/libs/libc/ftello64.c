@@ -10,11 +10,12 @@ loff_t ftello64 (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftello64");
-	validate_NULL_TYPETYPE(arg0, "ftello64");
+	validate_Rdaddress( arg0, "ftello64");
+	validate_NULL_TYPETYPE(  arg0, "ftello64");
 	return funcptr(arg0);
 }
 
-loff_t lsb_ftello64 (FILE * arg0 )
+loff_t __lsb_ftello64 (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftello64");

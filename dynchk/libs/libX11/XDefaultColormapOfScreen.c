@@ -12,7 +12,7 @@ Colormap XDefaultColormapOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-Colormap lsb_XDefaultColormapOfScreen(Screen * arg0)
+Colormap __lsb_XDefaultColormapOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultColormapOfScreen");

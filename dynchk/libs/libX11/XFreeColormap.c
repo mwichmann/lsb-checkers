@@ -14,7 +14,7 @@ int XFreeColormap(Display * arg0, Colormap arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XFreeColormap(Display * arg0, Colormap arg1)
+int __lsb_XFreeColormap(Display * arg0, Colormap arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFreeColormap");

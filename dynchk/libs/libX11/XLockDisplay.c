@@ -12,7 +12,7 @@ void XLockDisplay(Display * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XLockDisplay(Display * arg0)
+void __lsb_XLockDisplay(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XLockDisplay");

@@ -14,7 +14,7 @@ int XStringListToTextProperty(char * * arg0, int arg1, XTextProperty * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XStringListToTextProperty(char * * arg0, int arg1, XTextProperty * arg2)
+int __lsb_XStringListToTextProperty(char * * arg0, int arg1, XTextProperty * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XStringListToTextProperty");

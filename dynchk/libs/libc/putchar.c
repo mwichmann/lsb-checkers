@@ -10,11 +10,11 @@ int putchar (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putchar");
-	validate_NULL_TYPETYPE(arg0, "putchar");
+	validate_NULL_TYPETYPE(  arg0, "putchar");
 	return funcptr(arg0);
 }
 
-int lsb_putchar (int arg0 )
+int __lsb_putchar (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putchar");

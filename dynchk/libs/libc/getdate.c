@@ -10,11 +10,12 @@ struct tm * getdate (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getdate");
-	validate_NULL_TYPETYPE(arg0, "getdate");
+	validate_Rdaddress( arg0, "getdate");
+	validate_NULL_TYPETYPE(  arg0, "getdate");
 	return funcptr(arg0);
 }
 
-struct tm * lsb_getdate (const char * arg0 )
+struct tm * __lsb_getdate (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getdate");

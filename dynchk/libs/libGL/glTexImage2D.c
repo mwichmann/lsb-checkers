@@ -28,7 +28,7 @@ void glTexImage2D(GLenum arg0, GLint arg1, GLint arg2, GLsizei arg3, GLsizei arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-void lsb_glTexImage2D(GLenum arg0, GLint arg1, GLint arg2, GLsizei arg3, GLsizei arg4, GLint arg5, GLenum arg6, GLenum arg7, GLvoid * arg8)
+void __lsb_glTexImage2D(GLenum arg0, GLint arg1, GLint arg2, GLsizei arg3, GLsizei arg4, GLint arg5, GLenum arg6, GLenum arg7, GLvoid * arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glTexImage2D");

@@ -16,7 +16,7 @@ XFontSet XCreateFontSet(Display * arg0, char * arg1, char ** * arg2, int * arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-XFontSet lsb_XCreateFontSet(Display * arg0, char * arg1, char ** * arg2, int * arg3, char * * arg4)
+XFontSet __lsb_XCreateFontSet(Display * arg0, char * arg1, char ** * arg2, int * arg3, char * * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreateFontSet");

@@ -10,13 +10,15 @@ void sincosl (long double arg0 , long double * arg1 , long double * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sincosl");
-	validate_NULL_TYPETYPE(arg0, "sincosl");
-	validate_NULL_TYPETYPE(arg1, "sincosl");
-	validate_NULL_TYPETYPE(arg2, "sincosl");
+	validate_NULL_TYPETYPE(  arg0, "sincosl");
+	validate_Rdaddress( arg1, "sincosl");
+	validate_NULL_TYPETYPE(  arg1, "sincosl");
+	validate_Rdaddress( arg2, "sincosl");
+	validate_NULL_TYPETYPE(  arg2, "sincosl");
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_sincosl (long double arg0 , long double * arg1 , long double * arg2 )
+void __lsb_sincosl (long double arg0 , long double * arg1 , long double * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sincosl");

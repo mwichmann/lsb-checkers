@@ -11,13 +11,15 @@ int vfprintf (FILE * arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfprintf");
-	validate_NULL_TYPETYPE(arg0, "vfprintf");
-	validate_NULL_TYPETYPE(arg1, "vfprintf");
-	validate_NULL_TYPETYPE(arg2, "vfprintf");
+	validate_Rdaddress( arg0, "vfprintf");
+	validate_NULL_TYPETYPE(  arg0, "vfprintf");
+	validate_Rdaddress( arg1, "vfprintf");
+	validate_NULL_TYPETYPE(  arg1, "vfprintf");
+	validate_NULL_TYPETYPE(  arg2, "vfprintf");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vfprintf (FILE * arg0 , const char * arg1 , va_list arg2 )
+int __lsb_vfprintf (FILE * arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfprintf");

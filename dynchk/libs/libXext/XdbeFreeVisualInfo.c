@@ -12,7 +12,7 @@ void XdbeFreeVisualInfo(XdbeScreenVisualInfo * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XdbeFreeVisualInfo(XdbeScreenVisualInfo * arg0)
+void __lsb_XdbeFreeVisualInfo(XdbeScreenVisualInfo * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XdbeFreeVisualInfo");

@@ -22,7 +22,7 @@ void XtInsertEventHandler(Widget arg0, EventMask arg1, int arg2, XtEventHandler 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XtInsertEventHandler(Widget arg0, EventMask arg1, int arg2, XtEventHandler arg3, XtPointer arg4, XtListPosition arg5)
+void __lsb_XtInsertEventHandler(Widget arg0, EventMask arg1, int arg2, XtEventHandler arg3, XtPointer arg4, XtListPosition arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtInsertEventHandler");

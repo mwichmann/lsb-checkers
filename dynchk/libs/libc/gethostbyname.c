@@ -10,11 +10,12 @@ struct hostent * gethostbyname (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyname");
-	validate_NULL_TYPETYPE(arg0, "gethostbyname");
+	validate_Rdaddress( arg0, "gethostbyname");
+	validate_NULL_TYPETYPE(  arg0, "gethostbyname");
 	return funcptr(arg0);
 }
 
-struct hostent * lsb_gethostbyname (const char * arg0 )
+struct hostent * __lsb_gethostbyname (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyname");

@@ -12,7 +12,7 @@ void XwcFreeStringList(wchar_t * * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XwcFreeStringList(wchar_t * * arg0)
+void __lsb_XwcFreeStringList(wchar_t * * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XwcFreeStringList");

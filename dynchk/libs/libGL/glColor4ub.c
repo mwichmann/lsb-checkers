@@ -19,7 +19,7 @@ void glColor4ub(GLubyte arg0, GLubyte arg1, GLubyte arg2, GLubyte arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glColor4ub(GLubyte arg0, GLubyte arg1, GLubyte arg2, GLubyte arg3)
+void __lsb_glColor4ub(GLubyte arg0, GLubyte arg1, GLubyte arg2, GLubyte arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glColor4ub");

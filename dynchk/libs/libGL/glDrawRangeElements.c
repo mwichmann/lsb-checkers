@@ -22,7 +22,7 @@ void glDrawRangeElements(GLenum arg0, GLuint arg1, GLuint arg2, GLsizei arg3, GL
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glDrawRangeElements(GLenum arg0, GLuint arg1, GLuint arg2, GLsizei arg3, GLenum arg4, GLvoid * arg5)
+void __lsb_glDrawRangeElements(GLenum arg0, GLuint arg1, GLuint arg2, GLsizei arg3, GLenum arg4, GLvoid * arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glDrawRangeElements");

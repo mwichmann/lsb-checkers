@@ -14,7 +14,7 @@ void glMultiTexCoord1ivARB(GLenum arg0, GLint * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glMultiTexCoord1ivARB(GLenum arg0, GLint * arg1)
+void __lsb_glMultiTexCoord1ivARB(GLenum arg0, GLint * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glMultiTexCoord1ivARB");

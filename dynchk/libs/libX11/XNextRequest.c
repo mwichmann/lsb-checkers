@@ -12,7 +12,7 @@ unsigned long XNextRequest(Display * arg0)
 	return funcptr(arg0);
 }
 
-unsigned long lsb_XNextRequest(Display * arg0)
+unsigned long __lsb_XNextRequest(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XNextRequest");

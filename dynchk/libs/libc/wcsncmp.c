@@ -11,13 +11,15 @@ int wcsncmp (const wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsncmp");
-	validate_NULL_TYPETYPE(arg0, "wcsncmp");
-	validate_NULL_TYPETYPE(arg1, "wcsncmp");
-	validate_NULL_TYPETYPE(arg2, "wcsncmp");
+	validate_Rdaddress( arg0, "wcsncmp");
+	validate_NULL_TYPETYPE(  arg0, "wcsncmp");
+	validate_Rdaddress( arg1, "wcsncmp");
+	validate_NULL_TYPETYPE(  arg1, "wcsncmp");
+	validate_NULL_TYPETYPE(  arg2, "wcsncmp");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_wcsncmp (const wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
+int __lsb_wcsncmp (const wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsncmp");

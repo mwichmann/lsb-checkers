@@ -17,7 +17,7 @@ int XkbSetIgnoreLockMods(Display * arg0, unsigned int arg1, unsigned int arg2, u
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XkbSetIgnoreLockMods(Display * arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3, unsigned int arg4, unsigned int arg5)
+int __lsb_XkbSetIgnoreLockMods(Display * arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3, unsigned int arg4, unsigned int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSetIgnoreLockMods");

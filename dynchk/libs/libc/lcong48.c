@@ -10,11 +10,11 @@ void lcong48 (unsigned short arg0 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lcong48");
-	validate_NULL_TYPETYPE(arg0, "lcong48");
+	validate_NULL_TYPETYPE(  arg0, "lcong48");
 	funcptr(arg0);
 }
 
-void lsb_lcong48 (unsigned short arg0 [])
+void __lsb_lcong48 (unsigned short arg0 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lcong48");

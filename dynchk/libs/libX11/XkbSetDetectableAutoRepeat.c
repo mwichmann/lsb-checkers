@@ -14,7 +14,7 @@ int XkbSetDetectableAutoRepeat(Display * arg0, int arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbSetDetectableAutoRepeat(Display * arg0, int arg1, int * arg2)
+int __lsb_XkbSetDetectableAutoRepeat(Display * arg0, int arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSetDetectableAutoRepeat");

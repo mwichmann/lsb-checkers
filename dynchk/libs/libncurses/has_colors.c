@@ -13,7 +13,7 @@ bool has_colors ()
 	return funcptr();
 }
 
-bool lsb_has_colors ()
+bool __lsb_has_colors ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "has_colors");

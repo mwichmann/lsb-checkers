@@ -15,7 +15,7 @@ void glVertex2d(GLdouble arg0, GLdouble arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glVertex2d(GLdouble arg0, GLdouble arg1)
+void __lsb_glVertex2d(GLdouble arg0, GLdouble arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glVertex2d");

@@ -11,7 +11,7 @@ Boolean XtIsVendorShell()
 	return funcptr();
 }
 
-Boolean lsb_XtIsVendorShell()
+Boolean __lsb_XtIsVendorShell()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsVendorShell");

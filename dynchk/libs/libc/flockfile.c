@@ -10,11 +10,12 @@ void flockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flockfile");
-	validate_NULL_TYPETYPE(arg0, "flockfile");
+	validate_Rdaddress( arg0, "flockfile");
+	validate_NULL_TYPETYPE(  arg0, "flockfile");
 	funcptr(arg0);
 }
 
-void lsb_flockfile (FILE * arg0 )
+void __lsb_flockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flockfile");

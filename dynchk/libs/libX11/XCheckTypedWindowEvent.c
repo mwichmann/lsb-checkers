@@ -16,7 +16,7 @@ int XCheckTypedWindowEvent(Display * arg0, Window arg1, int arg2, XEvent * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XCheckTypedWindowEvent(Display * arg0, Window arg1, int arg2, XEvent * arg3)
+int __lsb_XCheckTypedWindowEvent(Display * arg0, Window arg1, int arg2, XEvent * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCheckTypedWindowEvent");

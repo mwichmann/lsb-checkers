@@ -13,7 +13,7 @@ int def_shell_mode ()
 	return funcptr();
 }
 
-int lsb_def_shell_mode ()
+int __lsb_def_shell_mode ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "def_shell_mode");

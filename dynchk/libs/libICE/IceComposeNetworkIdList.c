@@ -13,7 +13,7 @@ char * IceComposeNetworkIdList(int arg0, IceListenObj * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_IceComposeNetworkIdList(int arg0, IceListenObj * arg1)
+char * __lsb_IceComposeNetworkIdList(int arg0, IceListenObj * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceComposeNetworkIdList");

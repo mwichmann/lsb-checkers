@@ -12,7 +12,7 @@ char * XServerVendor(Display * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_XServerVendor(Display * arg0)
+char * __lsb_XServerVendor(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XServerVendor");

@@ -13,7 +13,7 @@ void XrmDestroyDatabase(XrmDatabase arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XrmDestroyDatabase(XrmDatabase arg0)
+void __lsb_XrmDestroyDatabase(XrmDatabase arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmDestroyDatabase");

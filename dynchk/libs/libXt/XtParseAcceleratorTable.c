@@ -12,7 +12,7 @@ XtAccelerators XtParseAcceleratorTable(char * arg0)
 	return funcptr(arg0);
 }
 
-XtAccelerators lsb_XtParseAcceleratorTable(char * arg0)
+XtAccelerators __lsb_XtParseAcceleratorTable(char * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtParseAcceleratorTable");

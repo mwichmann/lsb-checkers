@@ -13,7 +13,7 @@ Display * XDisplayOfOM(XOM arg0)
 	return funcptr(arg0);
 }
 
-Display * lsb_XDisplayOfOM(XOM arg0)
+Display * __lsb_XDisplayOfOM(XOM arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDisplayOfOM");

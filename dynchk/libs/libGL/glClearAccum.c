@@ -19,7 +19,7 @@ void glClearAccum(GLfloat arg0, GLfloat arg1, GLfloat arg2, GLfloat arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glClearAccum(GLfloat arg0, GLfloat arg1, GLfloat arg2, GLfloat arg3)
+void __lsb_glClearAccum(GLfloat arg0, GLfloat arg1, GLfloat arg2, GLfloat arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glClearAccum");

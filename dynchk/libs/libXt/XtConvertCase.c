@@ -16,7 +16,7 @@ void XtConvertCase(Display * arg0, KeySym arg1, KeySym * arg2, KeySym * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_XtConvertCase(Display * arg0, KeySym arg1, KeySym * arg2, KeySym * arg3)
+void __lsb_XtConvertCase(Display * arg0, KeySym arg1, KeySym * arg2, KeySym * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtConvertCase");

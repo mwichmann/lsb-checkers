@@ -13,7 +13,7 @@ void XSetICFocus(XIC arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XSetICFocus(XIC arg0)
+void __lsb_XSetICFocus(XIC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetICFocus");

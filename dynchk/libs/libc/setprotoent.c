@@ -10,11 +10,11 @@ void setprotoent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setprotoent");
-	validate_NULL_TYPETYPE(arg0, "setprotoent");
+	validate_NULL_TYPETYPE(  arg0, "setprotoent");
 	funcptr(arg0);
 }
 
-void lsb_setprotoent (int arg0 )
+void __lsb_setprotoent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setprotoent");

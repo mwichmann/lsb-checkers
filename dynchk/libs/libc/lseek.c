@@ -11,13 +11,13 @@ off_t lseek (int arg0 , off_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lseek");
-	validate_NULL_TYPETYPE(arg0, "lseek");
-	validate_NULL_TYPETYPE(arg1, "lseek");
-	validate_NULL_TYPETYPE(arg2, "lseek");
+	validate_NULL_TYPETYPE(  arg0, "lseek");
+	validate_NULL_TYPETYPE(  arg1, "lseek");
+	validate_NULL_TYPETYPE(  arg2, "lseek");
 	return funcptr(arg0, arg1, arg2);
 }
 
-off_t lsb_lseek (int arg0 , off_t arg1 , int arg2 )
+off_t __lsb_lseek (int arg0 , off_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lseek");

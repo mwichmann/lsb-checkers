@@ -10,11 +10,12 @@ int scr_dump (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_dump");
-	validate_NULL_TYPETYPE(arg0, "scr_dump");
+	validate_Rdaddress( arg0, "scr_dump");
+	validate_NULL_TYPETYPE(  arg0, "scr_dump");
 	return funcptr(arg0);
 }
 
-int lsb_scr_dump (const char * arg0 )
+int __lsb_scr_dump (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_dump");

@@ -10,11 +10,12 @@ int matherr (struct exception * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "matherr");
-	validate_NULL_TYPETYPE(arg0, "matherr");
+	validate_Rdaddress( arg0, "matherr");
+	validate_NULL_TYPETYPE(  arg0, "matherr");
 	return funcptr(arg0);
 }
 
-int lsb_matherr (struct exception * arg0 )
+int __lsb_matherr (struct exception * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "matherr");

@@ -11,13 +11,14 @@ int mprotect (void * arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mprotect");
-	validate_NULL_TYPETYPE(arg0, "mprotect");
-	validate_NULL_TYPETYPE(arg1, "mprotect");
-	validate_NULL_TYPETYPE(arg2, "mprotect");
+	validate_Rdaddress( arg0, "mprotect");
+	validate_NULL_TYPETYPE(  arg0, "mprotect");
+	validate_NULL_TYPETYPE(  arg1, "mprotect");
+	validate_NULL_TYPETYPE(  arg2, "mprotect");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mprotect (void * arg0 , size_t arg1 , int arg2 )
+int __lsb_mprotect (void * arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mprotect");

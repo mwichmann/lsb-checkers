@@ -10,11 +10,11 @@ int ffs (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ffs");
-	validate_NULL_TYPETYPE(arg0, "ffs");
+	validate_NULL_TYPETYPE(  arg0, "ffs");
 	return funcptr(arg0);
 }
 
-int lsb_ffs (int arg0 )
+int __lsb_ffs (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ffs");

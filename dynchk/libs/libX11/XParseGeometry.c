@@ -16,7 +16,7 @@ int XParseGeometry(char * arg0, int * arg1, int * arg2, unsigned int * arg3, uns
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XParseGeometry(char * arg0, int * arg1, int * arg2, unsigned int * arg3, unsigned int * arg4)
+int __lsb_XParseGeometry(char * arg0, int * arg1, int * arg2, unsigned int * arg3, unsigned int * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XParseGeometry");

@@ -13,7 +13,7 @@ int clrtobot ()
 	return funcptr();
 }
 
-int lsb_clrtobot ()
+int __lsb_clrtobot ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clrtobot");

@@ -10,11 +10,12 @@ int pthread_rwlock_tryrdlock (pthread_rwlock_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_tryrdlock");
-	validate_NULL_TYPETYPE(arg0, "pthread_rwlock_tryrdlock");
+	validate_Rdaddress( arg0, "pthread_rwlock_tryrdlock");
+	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_tryrdlock");
 	return funcptr(arg0);
 }
 
-int lsb_pthread_rwlock_tryrdlock (pthread_rwlock_t * arg0 )
+int __lsb_pthread_rwlock_tryrdlock (pthread_rwlock_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_tryrdlock");

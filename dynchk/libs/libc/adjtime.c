@@ -10,12 +10,14 @@ int adjtime (const struct timeval * arg0 , struct timeval * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adjtime");
-	validate_NULL_TYPETYPE(arg0, "adjtime");
-	validate_NULL_TYPETYPE(arg1, "adjtime");
+	validate_Rdaddress( arg0, "adjtime");
+	validate_NULL_TYPETYPE(  arg0, "adjtime");
+	validate_Rdaddress( arg1, "adjtime");
+	validate_NULL_TYPETYPE(  arg1, "adjtime");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_adjtime (const struct timeval * arg0 , struct timeval * arg1 )
+int __lsb_adjtime (const struct timeval * arg0 , struct timeval * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adjtime");

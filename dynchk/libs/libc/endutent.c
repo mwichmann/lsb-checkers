@@ -13,7 +13,7 @@ void endutent ()
 	funcptr();
 }
 
-void lsb_endutent ()
+void __lsb_endutent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endutent");

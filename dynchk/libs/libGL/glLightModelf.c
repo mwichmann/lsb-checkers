@@ -15,7 +15,7 @@ void glLightModelf(GLenum arg0, GLfloat arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glLightModelf(GLenum arg0, GLfloat arg1)
+void __lsb_glLightModelf(GLenum arg0, GLfloat arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glLightModelf");

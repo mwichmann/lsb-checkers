@@ -11,19 +11,21 @@ int copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copywin");
-	validate_NULL_TYPETYPE(arg0, "copywin");
-	validate_NULL_TYPETYPE(arg1, "copywin");
-	validate_NULL_TYPETYPE(arg2, "copywin");
-	validate_NULL_TYPETYPE(arg3, "copywin");
-	validate_NULL_TYPETYPE(arg4, "copywin");
-	validate_NULL_TYPETYPE(arg5, "copywin");
-	validate_NULL_TYPETYPE(arg6, "copywin");
-	validate_NULL_TYPETYPE(arg7, "copywin");
-	validate_NULL_TYPETYPE(arg8, "copywin");
+	validate_Rdaddress( arg0, "copywin");
+	validate_NULL_TYPETYPE(  arg0, "copywin");
+	validate_Rdaddress( arg1, "copywin");
+	validate_NULL_TYPETYPE(  arg1, "copywin");
+	validate_NULL_TYPETYPE(  arg2, "copywin");
+	validate_NULL_TYPETYPE(  arg3, "copywin");
+	validate_NULL_TYPETYPE(  arg4, "copywin");
+	validate_NULL_TYPETYPE(  arg5, "copywin");
+	validate_NULL_TYPETYPE(  arg6, "copywin");
+	validate_NULL_TYPETYPE(  arg7, "copywin");
+	validate_NULL_TYPETYPE(  arg8, "copywin");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-int lsb_copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 , int arg7 , int arg8 )
+int __lsb_copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 , int arg7 , int arg8 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copywin");

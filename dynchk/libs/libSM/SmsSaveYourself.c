@@ -17,7 +17,7 @@ void SmsSaveYourself(SmsConn arg0, int arg1, int arg2, int arg3, int arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_SmsSaveYourself(SmsConn arg0, int arg1, int arg2, int arg3, int arg4)
+void __lsb_SmsSaveYourself(SmsConn arg0, int arg1, int arg2, int arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmsSaveYourself");

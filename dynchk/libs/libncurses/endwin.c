@@ -13,7 +13,7 @@ int endwin ()
 	return funcptr();
 }
 
-int lsb_endwin ()
+int __lsb_endwin ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endwin");

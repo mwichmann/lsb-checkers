@@ -13,7 +13,7 @@ void XtRemoveGrab(Widget arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtRemoveGrab(Widget arg0)
+void __lsb_XtRemoveGrab(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtRemoveGrab");

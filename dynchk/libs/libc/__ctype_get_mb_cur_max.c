@@ -13,7 +13,7 @@ size_t __ctype_get_mb_cur_max ()
 	return funcptr();
 }
 
-size_t lsb___ctype_get_mb_cur_max ()
+size_t __lsb___ctype_get_mb_cur_max ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_get_mb_cur_max");

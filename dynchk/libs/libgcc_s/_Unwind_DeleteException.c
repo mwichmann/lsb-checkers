@@ -13,7 +13,7 @@ void _Unwind_DeleteException(struct _Unwind_Exception * arg0)
 	funcptr(arg0);
 }
 
-void lsb__Unwind_DeleteException(struct _Unwind_Exception * arg0)
+void __lsb__Unwind_DeleteException(struct _Unwind_Exception * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_DeleteException");

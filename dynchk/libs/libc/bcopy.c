@@ -11,13 +11,15 @@ void bcopy (const void * arg0 , void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bcopy");
-	validate_NULL_TYPETYPE(arg0, "bcopy");
-	validate_NULL_TYPETYPE(arg1, "bcopy");
-	validate_NULL_TYPETYPE(arg2, "bcopy");
+	validate_Rdaddress( arg0, "bcopy");
+	validate_NULL_TYPETYPE(  arg0, "bcopy");
+	validate_Rdaddress( arg1, "bcopy");
+	validate_NULL_TYPETYPE(  arg1, "bcopy");
+	validate_NULL_TYPETYPE(  arg2, "bcopy");
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_bcopy (const void * arg0 , void * arg1 , size_t arg2 )
+void __lsb_bcopy (const void * arg0 , void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bcopy");

@@ -14,7 +14,7 @@ void glGetPointerv(GLenum arg0, void * * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glGetPointerv(GLenum arg0, void * * arg1)
+void __lsb_glGetPointerv(GLenum arg0, void * * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetPointerv");

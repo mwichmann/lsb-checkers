@@ -11,11 +11,11 @@ uint32_t htonl (uint32_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htonl");
-	validate_NULL_TYPETYPE(arg0, "htonl");
+	validate_NULL_TYPETYPE(  arg0, "htonl");
 	return funcptr(arg0);
 }
 
-uint32_t lsb_htonl (uint32_t arg0 )
+uint32_t __lsb_htonl (uint32_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htonl");

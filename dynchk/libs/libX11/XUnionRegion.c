@@ -17,7 +17,7 @@ int XUnionRegion(Region arg0, Region arg1, Region arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XUnionRegion(Region arg0, Region arg1, Region arg2)
+int __lsb_XUnionRegion(Region arg0, Region arg1, Region arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XUnionRegion");

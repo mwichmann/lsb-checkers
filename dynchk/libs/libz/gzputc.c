@@ -10,12 +10,12 @@ int gzputc (gzFile arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzputc");
-	validate_NULL_TYPETYPE(arg0, "gzputc");
-	validate_NULL_TYPETYPE(arg1, "gzputc");
+	validate_NULL_TYPETYPE(  arg0, "gzputc");
+	validate_NULL_TYPETYPE(  arg1, "gzputc");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_gzputc (gzFile arg0 , int arg1 )
+int __lsb_gzputc (gzFile arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzputc");

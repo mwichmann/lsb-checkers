@@ -19,7 +19,7 @@ void XtAddConverter(char * arg0, char * arg1, XtConverter arg2, XtConvertArgList
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtAddConverter(char * arg0, char * arg1, XtConverter arg2, XtConvertArgList arg3, Cardinal arg4)
+void __lsb_XtAddConverter(char * arg0, char * arg1, XtConverter arg2, XtConvertArgList arg3, Cardinal arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAddConverter");

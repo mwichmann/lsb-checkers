@@ -15,7 +15,7 @@ IceProcessMessagesStatus IceProcessMessages(IceConn arg0, IceReplyWaitInfo * arg
 	return funcptr(arg0, arg1, arg2);
 }
 
-IceProcessMessagesStatus lsb_IceProcessMessages(IceConn arg0, IceReplyWaitInfo * arg1, int * arg2)
+IceProcessMessagesStatus __lsb_IceProcessMessages(IceConn arg0, IceReplyWaitInfo * arg1, int * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceProcessMessages");

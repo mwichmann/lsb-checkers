@@ -12,7 +12,7 @@ char * XDefaultString(void arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_XDefaultString(void arg0)
+char * __lsb_XDefaultString(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultString");

@@ -14,7 +14,7 @@ void glGetPixelMapuiv(GLenum arg0, GLuint * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glGetPixelMapuiv(GLenum arg0, GLuint * arg1)
+void __lsb_glGetPixelMapuiv(GLenum arg0, GLuint * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetPixelMapuiv");

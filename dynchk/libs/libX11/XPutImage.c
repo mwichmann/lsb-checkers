@@ -23,7 +23,7 @@ int XPutImage(Display * arg0, Drawable arg1, GC arg2, XImage * arg3, int arg4, i
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
-int lsb_XPutImage(Display * arg0, Drawable arg1, GC arg2, XImage * arg3, int arg4, int arg5, int arg6, int arg7, unsigned int arg8, unsigned int arg9)
+int __lsb_XPutImage(Display * arg0, Drawable arg1, GC arg2, XImage * arg3, int arg4, int arg5, int arg6, int arg7, unsigned int arg8, unsigned int arg9)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XPutImage");

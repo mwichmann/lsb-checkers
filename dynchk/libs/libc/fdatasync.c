@@ -10,11 +10,11 @@ int fdatasync (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdatasync");
-	validate_NULL_TYPETYPE(arg0, "fdatasync");
+	validate_NULL_TYPETYPE(  arg0, "fdatasync");
 	return funcptr(arg0);
 }
 
-int lsb_fdatasync (int arg0 )
+int __lsb_fdatasync (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdatasync");

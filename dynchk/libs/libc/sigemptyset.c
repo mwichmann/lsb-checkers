@@ -10,11 +10,12 @@ int sigemptyset (sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigemptyset");
-	validate_NULL_TYPETYPE(arg0, "sigemptyset");
+	validate_Rdaddress( arg0, "sigemptyset");
+	validate_NULL_TYPETYPE(  arg0, "sigemptyset");
 	return funcptr(arg0);
 }
 
-int lsb_sigemptyset (sigset_t * arg0 )
+int __lsb_sigemptyset (sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigemptyset");

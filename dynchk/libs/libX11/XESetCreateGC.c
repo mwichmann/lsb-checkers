@@ -11,7 +11,7 @@ int XESetCreateGC()
 	return funcptr();
 }
 
-int lsb_XESetCreateGC()
+int __lsb_XESetCreateGC()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetCreateGC");

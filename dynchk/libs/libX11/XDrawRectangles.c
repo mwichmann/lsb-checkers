@@ -18,7 +18,7 @@ int XDrawRectangles(Display * arg0, Drawable arg1, GC arg2, XRectangle * arg3, i
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XDrawRectangles(Display * arg0, Drawable arg1, GC arg2, XRectangle * arg3, int arg4)
+int __lsb_XDrawRectangles(Display * arg0, Drawable arg1, GC arg2, XRectangle * arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDrawRectangles");

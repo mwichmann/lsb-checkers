@@ -11,7 +11,7 @@ _Unwind_Ptr _Unwind_GetIP()
 	return funcptr();
 }
 
-_Unwind_Ptr lsb__Unwind_GetIP()
+_Unwind_Ptr __lsb__Unwind_GetIP()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetIP");

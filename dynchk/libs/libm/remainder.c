@@ -10,12 +10,12 @@ double remainder (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remainder");
-	validate_NULL_TYPETYPE(arg0, "remainder");
-	validate_NULL_TYPETYPE(arg1, "remainder");
+	validate_NULL_TYPETYPE(  arg0, "remainder");
+	validate_NULL_TYPETYPE(  arg1, "remainder");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_remainder (double arg0 , double arg1 )
+double __lsb_remainder (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remainder");

@@ -10,12 +10,13 @@ const char * gzerror (gzFile arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzerror");
-	validate_NULL_TYPETYPE(arg0, "gzerror");
-	validate_NULL_TYPETYPE(arg1, "gzerror");
+	validate_NULL_TYPETYPE(  arg0, "gzerror");
+	validate_Rdaddress( arg1, "gzerror");
+	validate_NULL_TYPETYPE(  arg1, "gzerror");
 	return funcptr(arg0, arg1);
 }
 
-const char * lsb_gzerror (gzFile arg0 , int * arg1 )
+const char * __lsb_gzerror (gzFile arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzerror");

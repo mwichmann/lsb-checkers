@@ -10,11 +10,12 @@ int scroll (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scroll");
-	validate_NULL_TYPETYPE(arg0, "scroll");
+	validate_Rdaddress( arg0, "scroll");
+	validate_NULL_TYPETYPE(  arg0, "scroll");
 	return funcptr(arg0);
 }
 
-int lsb_scroll (WINDOW * arg0 )
+int __lsb_scroll (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scroll");

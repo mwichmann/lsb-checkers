@@ -17,7 +17,7 @@ void glXCopyContext(Display * arg0, GLXContext arg1, GLXContext arg2, unsigned l
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glXCopyContext(Display * arg0, GLXContext arg1, GLXContext arg2, unsigned long arg3)
+void __lsb_glXCopyContext(Display * arg0, GLXContext arg1, GLXContext arg2, unsigned long arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXCopyContext");

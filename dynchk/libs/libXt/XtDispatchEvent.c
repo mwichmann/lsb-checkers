@@ -12,7 +12,7 @@ Boolean XtDispatchEvent(XEvent * arg0)
 	return funcptr(arg0);
 }
 
-Boolean lsb_XtDispatchEvent(XEvent * arg0)
+Boolean __lsb_XtDispatchEvent(XEvent * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtDispatchEvent");

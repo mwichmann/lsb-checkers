@@ -13,7 +13,7 @@ bool can_change_color ()
 	return funcptr();
 }
 
-bool lsb_can_change_color ()
+bool __lsb_can_change_color ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "can_change_color");

@@ -10,12 +10,12 @@ long double scalblnl (long double arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalblnl");
-	validate_NULL_TYPETYPE(arg0, "scalblnl");
-	validate_NULL_TYPETYPE(arg1, "scalblnl");
+	validate_NULL_TYPETYPE(  arg0, "scalblnl");
+	validate_NULL_TYPETYPE(  arg1, "scalblnl");
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_scalblnl (long double arg0 , long arg1 )
+long double __lsb_scalblnl (long double arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalblnl");

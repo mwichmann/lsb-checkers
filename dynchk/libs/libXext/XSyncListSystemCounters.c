@@ -13,7 +13,7 @@ XSyncSystemCounter * XSyncListSystemCounters(Display * arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-XSyncSystemCounter * lsb_XSyncListSystemCounters(Display * arg0, int * arg1)
+XSyncSystemCounter * __lsb_XSyncListSystemCounters(Display * arg0, int * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncListSystemCounters");

@@ -10,12 +10,13 @@ int pthread_mutexattr_settype (pthread_mutexattr_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_mutexattr_settype");
-	validate_NULL_TYPETYPE(arg0, "pthread_mutexattr_settype");
-	validate_NULL_TYPETYPE(arg1, "pthread_mutexattr_settype");
+	validate_Rdaddress( arg0, "pthread_mutexattr_settype");
+	validate_NULL_TYPETYPE(  arg0, "pthread_mutexattr_settype");
+	validate_NULL_TYPETYPE(  arg1, "pthread_mutexattr_settype");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_mutexattr_settype (pthread_mutexattr_t * arg0 , int arg1 )
+int __lsb_pthread_mutexattr_settype (pthread_mutexattr_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_mutexattr_settype");

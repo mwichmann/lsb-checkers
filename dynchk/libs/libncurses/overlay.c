@@ -11,12 +11,14 @@ int overlay (const WINDOW * arg0 , WINDOW * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "overlay");
-	validate_NULL_TYPETYPE(arg0, "overlay");
-	validate_NULL_TYPETYPE(arg1, "overlay");
+	validate_Rdaddress( arg0, "overlay");
+	validate_NULL_TYPETYPE(  arg0, "overlay");
+	validate_Rdaddress( arg1, "overlay");
+	validate_NULL_TYPETYPE(  arg1, "overlay");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_overlay (const WINDOW * arg0 , WINDOW * arg1 )
+int __lsb_overlay (const WINDOW * arg0 , WINDOW * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "overlay");

@@ -12,7 +12,7 @@ unsigned int XkbGetXlibControls(Display * arg0)
 	return funcptr(arg0);
 }
 
-unsigned int lsb_XkbGetXlibControls(Display * arg0)
+unsigned int __lsb_XkbGetXlibControls(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbGetXlibControls");

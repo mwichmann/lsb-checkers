@@ -10,11 +10,11 @@ int slk_init (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_init");
-	validate_NULL_TYPETYPE(arg0, "slk_init");
+	validate_NULL_TYPETYPE(  arg0, "slk_init");
 	return funcptr(arg0);
 }
 
-int lsb_slk_init (int arg0 )
+int __lsb_slk_init (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_init");

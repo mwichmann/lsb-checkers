@@ -12,7 +12,7 @@ Display * glXGetCurrentDisplay(void arg0)
 	return funcptr(arg0);
 }
 
-Display * lsb_glXGetCurrentDisplay(void arg0)
+Display * __lsb_glXGetCurrentDisplay(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXGetCurrentDisplay");

@@ -11,7 +11,7 @@ int XESetFreeFont()
 	return funcptr();
 }
 
-int lsb_XESetFreeFont()
+int __lsb_XESetFreeFont()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetFreeFont");

@@ -20,7 +20,7 @@ XtPointer XtGetClassExtension(WidgetClass arg0, Cardinal arg1, XrmQuark arg2, lo
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-XtPointer lsb_XtGetClassExtension(WidgetClass arg0, Cardinal arg1, XrmQuark arg2, long arg3, Cardinal arg4)
+XtPointer __lsb_XtGetClassExtension(WidgetClass arg0, Cardinal arg1, XrmQuark arg2, long arg3, Cardinal arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetClassExtension");

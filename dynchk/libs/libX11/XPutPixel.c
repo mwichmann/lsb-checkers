@@ -11,7 +11,7 @@ int XPutPixel()
 	return funcptr();
 }
 
-int lsb_XPutPixel()
+int __lsb_XPutPixel()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XPutPixel");

@@ -12,7 +12,7 @@ void glRasterPos3sv(GLshort * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glRasterPos3sv(GLshort * arg0)
+void __lsb_glRasterPos3sv(GLshort * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glRasterPos3sv");

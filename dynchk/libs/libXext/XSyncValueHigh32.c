@@ -13,7 +13,7 @@ int XSyncValueHigh32(XSyncValue arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XSyncValueHigh32(XSyncValue arg0)
+int __lsb_XSyncValueHigh32(XSyncValue arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncValueHigh32");

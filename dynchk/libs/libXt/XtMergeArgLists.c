@@ -19,7 +19,7 @@ ArgList XtMergeArgLists(ArgList arg0, Cardinal arg1, ArgList arg2, Cardinal arg3
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-ArgList lsb_XtMergeArgLists(ArgList arg0, Cardinal arg1, ArgList arg2, Cardinal arg3)
+ArgList __lsb_XtMergeArgLists(ArgList arg0, Cardinal arg1, ArgList arg2, Cardinal arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtMergeArgLists");

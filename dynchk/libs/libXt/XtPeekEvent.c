@@ -12,7 +12,7 @@ Boolean XtPeekEvent(XEvent * arg0)
 	return funcptr(arg0);
 }
 
-Boolean lsb_XtPeekEvent(XEvent * arg0)
+Boolean __lsb_XtPeekEvent(XEvent * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtPeekEvent");

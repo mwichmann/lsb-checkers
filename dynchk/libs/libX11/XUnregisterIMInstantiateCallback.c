@@ -19,7 +19,7 @@ int XUnregisterIMInstantiateCallback(Display * arg0, _XrmHashBucketRec * arg1, c
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XUnregisterIMInstantiateCallback(Display * arg0, _XrmHashBucketRec * arg1, char * arg2, char * arg3, XIDProc arg4, XPointer arg5)
+int __lsb_XUnregisterIMInstantiateCallback(Display * arg0, _XrmHashBucketRec * arg1, char * arg2, char * arg3, XIDProc arg4, XPointer arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XUnregisterIMInstantiateCallback");

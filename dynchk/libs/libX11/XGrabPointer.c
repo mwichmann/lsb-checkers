@@ -24,7 +24,7 @@ int XGrabPointer(Display * arg0, Window arg1, int arg2, unsigned int arg3, int a
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-int lsb_XGrabPointer(Display * arg0, Window arg1, int arg2, unsigned int arg3, int arg4, int arg5, Window arg6, Cursor arg7, Time arg8)
+int __lsb_XGrabPointer(Display * arg0, Window arg1, int arg2, unsigned int arg3, int arg4, int arg5, Window arg6, Cursor arg7, Time arg8)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGrabPointer");

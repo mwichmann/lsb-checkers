@@ -20,7 +20,7 @@ void glGetHistogram(GLenum arg0, GLboolean arg1, GLenum arg2, GLenum arg3, GLvoi
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_glGetHistogram(GLenum arg0, GLboolean arg1, GLenum arg2, GLenum arg3, GLvoid * arg4)
+void __lsb_glGetHistogram(GLenum arg0, GLboolean arg1, GLenum arg2, GLenum arg3, GLvoid * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGetHistogram");

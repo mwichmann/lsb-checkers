@@ -11,7 +11,7 @@ String XtNewString()
 	return funcptr();
 }
 
-String lsb_XtNewString()
+String __lsb_XtNewString()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtNewString");

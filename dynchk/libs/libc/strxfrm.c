@@ -11,13 +11,15 @@ size_t strxfrm (char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strxfrm");
-	validate_NULL_TYPETYPE(arg0, "strxfrm");
-	validate_NULL_TYPETYPE(arg1, "strxfrm");
-	validate_NULL_TYPETYPE(arg2, "strxfrm");
+	validate_Rdaddress( arg0, "strxfrm");
+	validate_NULL_TYPETYPE(  arg0, "strxfrm");
+	validate_Rdaddress( arg1, "strxfrm");
+	validate_NULL_TYPETYPE(  arg1, "strxfrm");
+	validate_NULL_TYPETYPE(  arg2, "strxfrm");
 	return funcptr(arg0, arg1, arg2);
 }
 
-size_t lsb_strxfrm (char * arg0 , const char * arg1 , size_t arg2 )
+size_t __lsb_strxfrm (char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strxfrm");

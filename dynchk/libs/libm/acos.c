@@ -10,11 +10,11 @@ double acos (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acos");
-	validate_NULL_TYPETYPE(arg0, "acos");
+	validate_NULL_TYPETYPE(  arg0, "acos");
 	return funcptr(arg0);
 }
 
-double lsb_acos (double arg0 )
+double __lsb_acos (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acos");

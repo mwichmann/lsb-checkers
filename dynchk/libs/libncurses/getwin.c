@@ -11,11 +11,12 @@ WINDOW * getwin (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwin");
-	validate_NULL_TYPETYPE(arg0, "getwin");
+	validate_Rdaddress( arg0, "getwin");
+	validate_NULL_TYPETYPE(  arg0, "getwin");
 	return funcptr(arg0);
 }
 
-WINDOW * lsb_getwin (FILE * arg0 )
+WINDOW * __lsb_getwin (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwin");

@@ -13,7 +13,7 @@ int erase ()
 	return funcptr();
 }
 
-int lsb_erase ()
+int __lsb_erase ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erase");

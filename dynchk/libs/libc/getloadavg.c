@@ -11,12 +11,12 @@ int getloadavg (double arg0 [], int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getloadavg");
-	validate_NULL_TYPETYPE(arg0, "getloadavg");
-	validate_NULL_TYPETYPE(arg1, "getloadavg");
+	validate_NULL_TYPETYPE(  arg0, "getloadavg");
+	validate_NULL_TYPETYPE(  arg1, "getloadavg");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_getloadavg (double arg0 [], int arg1 )
+int __lsb_getloadavg (double arg0 [], int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getloadavg");

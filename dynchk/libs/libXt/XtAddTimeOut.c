@@ -16,7 +16,7 @@ XtIntervalId XtAddTimeOut(unsigned long arg0, XtTimerCallbackProc arg1, XtPointe
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtIntervalId lsb_XtAddTimeOut(unsigned long arg0, XtTimerCallbackProc arg1, XtPointer arg2)
+XtIntervalId __lsb_XtAddTimeOut(unsigned long arg0, XtTimerCallbackProc arg1, XtPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAddTimeOut");

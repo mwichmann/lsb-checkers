@@ -10,11 +10,12 @@ int tigetflag (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tigetflag");
-	validate_NULL_TYPETYPE(arg0, "tigetflag");
+	validate_Rdaddress( arg0, "tigetflag");
+	validate_NULL_TYPETYPE(  arg0, "tigetflag");
 	return funcptr(arg0);
 }
 
-int lsb_tigetflag (char * arg0 )
+int __lsb_tigetflag (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tigetflag");

@@ -22,7 +22,7 @@ int XChangeProperty(Display * arg0, Window arg1, Atom arg2, Atom arg3, int arg4,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-int lsb_XChangeProperty(Display * arg0, Window arg1, Atom arg2, Atom arg3, int arg4, int arg5, unsigned char * arg6, int arg7)
+int __lsb_XChangeProperty(Display * arg0, Window arg1, Atom arg2, Atom arg3, int arg4, int arg5, unsigned char * arg6, int arg7)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XChangeProperty");

@@ -22,7 +22,7 @@ Boolean XtCallConverter(Display * arg0, XtTypeConverter arg1, XrmValuePtr arg2, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-Boolean lsb_XtCallConverter(Display * arg0, XtTypeConverter arg1, XrmValuePtr arg2, Cardinal arg3, XrmValuePtr arg4, XrmValue * arg5, XtCacheRef * arg6)
+Boolean __lsb_XtCallConverter(Display * arg0, XtTypeConverter arg1, XrmValuePtr arg2, Cardinal arg3, XrmValuePtr arg4, XrmValue * arg5, XtCacheRef * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtCallConverter");

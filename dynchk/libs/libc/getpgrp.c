@@ -13,7 +13,7 @@ pid_t getpgrp ()
 	return funcptr();
 }
 
-pid_t lsb_getpgrp ()
+pid_t __lsb_getpgrp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpgrp");

@@ -10,11 +10,12 @@ int sigfillset (sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigfillset");
-	validate_NULL_TYPETYPE(arg0, "sigfillset");
+	validate_Rdaddress( arg0, "sigfillset");
+	validate_NULL_TYPETYPE(  arg0, "sigfillset");
 	return funcptr(arg0);
 }
 
-int lsb_sigfillset (sigset_t * arg0 )
+int __lsb_sigfillset (sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigfillset");

@@ -13,7 +13,7 @@ int resetty ()
 	return funcptr();
 }
 
-int lsb_resetty ()
+int __lsb_resetty ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "resetty");

@@ -10,12 +10,14 @@ int strcoll (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcoll");
-	validate_NULL_TYPETYPE(arg0, "strcoll");
-	validate_NULL_TYPETYPE(arg1, "strcoll");
+	validate_Rdaddress( arg0, "strcoll");
+	validate_NULL_TYPETYPE(  arg0, "strcoll");
+	validate_Rdaddress( arg1, "strcoll");
+	validate_NULL_TYPETYPE(  arg1, "strcoll");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_strcoll (const char * arg0 , const char * arg1 )
+int __lsb_strcoll (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcoll");

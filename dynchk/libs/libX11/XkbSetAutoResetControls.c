@@ -15,7 +15,7 @@ int XkbSetAutoResetControls(Display * arg0, unsigned int arg1, unsigned int * ar
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XkbSetAutoResetControls(Display * arg0, unsigned int arg1, unsigned int * arg2, unsigned int * arg3)
+int __lsb_XkbSetAutoResetControls(Display * arg0, unsigned int arg1, unsigned int * arg2, unsigned int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSetAutoResetControls");

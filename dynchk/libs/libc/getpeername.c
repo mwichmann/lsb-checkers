@@ -10,13 +10,15 @@ int getpeername (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpeername");
-	validate_NULL_TYPETYPE(arg0, "getpeername");
-	validate_NULL_TYPETYPE(arg1, "getpeername");
-	validate_NULL_TYPETYPE(arg2, "getpeername");
+	validate_NULL_TYPETYPE(  arg0, "getpeername");
+	validate_Rdaddress( arg1, "getpeername");
+	validate_NULL_TYPETYPE(  arg1, "getpeername");
+	validate_Rdaddress( arg2, "getpeername");
+	validate_NULL_TYPETYPE(  arg2, "getpeername");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_getpeername (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
+int __lsb_getpeername (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpeername");

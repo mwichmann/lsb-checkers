@@ -14,7 +14,7 @@ XFontStruct * XQueryFont(Display * arg0, XID arg1)
 	return funcptr(arg0, arg1);
 }
 
-XFontStruct * lsb_XQueryFont(Display * arg0, XID arg1)
+XFontStruct * __lsb_XQueryFont(Display * arg0, XID arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XQueryFont");

@@ -10,12 +10,13 @@ struct servent * getservbyport (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getservbyport");
-	validate_NULL_TYPETYPE(arg0, "getservbyport");
-	validate_NULL_TYPETYPE(arg1, "getservbyport");
+	validate_NULL_TYPETYPE(  arg0, "getservbyport");
+	validate_Rdaddress( arg1, "getservbyport");
+	validate_NULL_TYPETYPE(  arg1, "getservbyport");
 	return funcptr(arg0, arg1);
 }
 
-struct servent * lsb_getservbyport (int arg0 , const char * arg1 )
+struct servent * __lsb_getservbyport (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getservbyport");

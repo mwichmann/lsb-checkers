@@ -13,7 +13,7 @@ pid_t getpid ()
 	return funcptr();
 }
 
-pid_t lsb_getpid ()
+pid_t __lsb_getpid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpid");

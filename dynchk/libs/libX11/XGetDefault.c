@@ -14,7 +14,7 @@ char * XGetDefault(Display * arg0, char * arg1, char * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_XGetDefault(Display * arg0, char * arg1, char * arg2)
+char * __lsb_XGetDefault(Display * arg0, char * arg1, char * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetDefault");

@@ -14,7 +14,7 @@ int XUnloadFont(Display * arg0, Font arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XUnloadFont(Display * arg0, Font arg1)
+int __lsb_XUnloadFont(Display * arg0, Font arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XUnloadFont");

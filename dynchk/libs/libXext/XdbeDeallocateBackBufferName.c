@@ -14,7 +14,7 @@ int XdbeDeallocateBackBufferName(Display * arg0, XdbeBackBuffer arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XdbeDeallocateBackBufferName(Display * arg0, XdbeBackBuffer arg1)
+int __lsb_XdbeDeallocateBackBufferName(Display * arg0, XdbeBackBuffer arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XdbeDeallocateBackBufferName");

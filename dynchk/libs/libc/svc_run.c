@@ -13,7 +13,7 @@ void svc_run ()
 	funcptr();
 }
 
-void lsb_svc_run ()
+void __lsb_svc_run ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_run");

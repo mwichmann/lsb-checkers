@@ -10,11 +10,11 @@ char * unctrl (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unctrl");
-	validate_NULL_TYPETYPE(arg0, "unctrl");
+	validate_NULL_TYPETYPE(  arg0, "unctrl");
 	return funcptr(arg0);
 }
 
-char * lsb_unctrl (chtype arg0 )
+char * __lsb_unctrl (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unctrl");

@@ -14,7 +14,7 @@ int XcmsSetWhitePoint(XcmsCCC arg0, XcmsColor * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XcmsSetWhitePoint(XcmsCCC arg0, XcmsColor * arg1)
+int __lsb_XcmsSetWhitePoint(XcmsCCC arg0, XcmsColor * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsSetWhitePoint");

@@ -10,11 +10,12 @@ int tgetnum (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetnum");
-	validate_NULL_TYPETYPE(arg0, "tgetnum");
+	validate_Rdaddress( arg0, "tgetnum");
+	validate_NULL_TYPETYPE(  arg0, "tgetnum");
 	return funcptr(arg0);
 }
 
-int lsb_tgetnum (char * arg0 )
+int __lsb_tgetnum (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetnum");

@@ -10,11 +10,11 @@ double tgamma (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgamma");
-	validate_NULL_TYPETYPE(arg0, "tgamma");
+	validate_NULL_TYPETYPE(  arg0, "tgamma");
 	return funcptr(arg0);
 }
 
-double lsb_tgamma (double arg0 )
+double __lsb_tgamma (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgamma");

@@ -13,7 +13,7 @@ XIOErrorHandler XSetIOErrorHandler(XIOErrorHandler arg0)
 	return funcptr(arg0);
 }
 
-XIOErrorHandler lsb_XSetIOErrorHandler(XIOErrorHandler arg0)
+XIOErrorHandler __lsb_XSetIOErrorHandler(XIOErrorHandler arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetIOErrorHandler");

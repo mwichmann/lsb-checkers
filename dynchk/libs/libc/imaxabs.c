@@ -10,11 +10,11 @@ intmax_t imaxabs (intmax_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "imaxabs");
-	validate_NULL_TYPETYPE(arg0, "imaxabs");
+	validate_NULL_TYPETYPE(  arg0, "imaxabs");
 	return funcptr(arg0);
 }
 
-intmax_t lsb_imaxabs (intmax_t arg0 )
+intmax_t __lsb_imaxabs (intmax_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "imaxabs");

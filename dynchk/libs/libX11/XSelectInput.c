@@ -15,7 +15,7 @@ int XSelectInput(Display * arg0, Window arg1, long arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XSelectInput(Display * arg0, Window arg1, long arg2)
+int __lsb_XSelectInput(Display * arg0, Window arg1, long arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSelectInput");

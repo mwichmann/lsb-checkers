@@ -14,7 +14,7 @@ Boolean XtCallAcceptFocus(Widget arg0, Time * arg1)
 	return funcptr(arg0, arg1);
 }
 
-Boolean lsb_XtCallAcceptFocus(Widget arg0, Time * arg1)
+Boolean __lsb_XtCallAcceptFocus(Widget arg0, Time * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtCallAcceptFocus");

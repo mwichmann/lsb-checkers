@@ -10,13 +10,14 @@ int mvwgetch (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwgetch");
-	validate_NULL_TYPETYPE(arg0, "mvwgetch");
-	validate_NULL_TYPETYPE(arg1, "mvwgetch");
-	validate_NULL_TYPETYPE(arg2, "mvwgetch");
+	validate_Rdaddress( arg0, "mvwgetch");
+	validate_NULL_TYPETYPE(  arg0, "mvwgetch");
+	validate_NULL_TYPETYPE(  arg1, "mvwgetch");
+	validate_NULL_TYPETYPE(  arg2, "mvwgetch");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mvwgetch (WINDOW * arg0 , int arg1 , int arg2 )
+int __lsb_mvwgetch (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwgetch");

@@ -10,11 +10,11 @@ int isinf (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isinf");
-	validate_NULL_TYPETYPE(arg0, "isinf");
+	validate_NULL_TYPETYPE(  arg0, "isinf");
 	return funcptr(arg0);
 }
 
-int lsb_isinf (double arg0 )
+int __lsb_isinf (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isinf");

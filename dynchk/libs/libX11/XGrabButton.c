@@ -24,7 +24,7 @@ int XGrabButton(Display * arg0, unsigned int arg1, unsigned int arg2, Window arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
-int lsb_XGrabButton(Display * arg0, unsigned int arg1, unsigned int arg2, Window arg3, int arg4, unsigned int arg5, int arg6, int arg7, Window arg8, Cursor arg9)
+int __lsb_XGrabButton(Display * arg0, unsigned int arg1, unsigned int arg2, Window arg3, int arg4, unsigned int arg5, int arg6, int arg7, Window arg8, Cursor arg9)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGrabButton");

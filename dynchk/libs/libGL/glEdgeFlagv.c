@@ -12,7 +12,7 @@ void glEdgeFlagv(GLboolean * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glEdgeFlagv(GLboolean * arg0)
+void __lsb_glEdgeFlagv(GLboolean * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glEdgeFlagv");

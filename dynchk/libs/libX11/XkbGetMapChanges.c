@@ -14,7 +14,7 @@ int XkbGetMapChanges(Display * arg0, XkbDescPtr arg1, XkbMapChangesPtr arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbGetMapChanges(Display * arg0, XkbDescPtr arg1, XkbMapChangesPtr arg2)
+int __lsb_XkbGetMapChanges(Display * arg0, XkbDescPtr arg1, XkbMapChangesPtr arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbGetMapChanges");

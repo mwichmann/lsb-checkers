@@ -15,7 +15,7 @@ void XtAppProcessEvent(XtAppContext arg0, XtInputMask arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtAppProcessEvent(XtAppContext arg0, XtInputMask arg1)
+void __lsb_XtAppProcessEvent(XtAppContext arg0, XtInputMask arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppProcessEvent");

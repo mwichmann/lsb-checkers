@@ -16,7 +16,7 @@ int XcmsRGBiToCIEXYZ(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, int * ar
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XcmsRGBiToCIEXYZ(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, int * arg3)
+int __lsb_XcmsRGBiToCIEXYZ(XcmsCCC arg0, XcmsColor * arg1, unsigned int arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsRGBiToCIEXYZ");

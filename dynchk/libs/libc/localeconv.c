@@ -13,7 +13,7 @@ struct lconv * localeconv ()
 	return funcptr();
 }
 
-struct lconv * lsb_localeconv ()
+struct lconv * __lsb_localeconv ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "localeconv");

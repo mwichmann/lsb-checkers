@@ -10,11 +10,11 @@ int iswlower (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswlower");
-	validate_NULL_TYPETYPE(arg0, "iswlower");
+	validate_NULL_TYPETYPE(  arg0, "iswlower");
 	return funcptr(arg0);
 }
 
-int lsb_iswlower (wint_t arg0 )
+int __lsb_iswlower (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswlower");

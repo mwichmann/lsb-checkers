@@ -13,7 +13,7 @@ double drand48 ()
 	return funcptr();
 }
 
-double lsb_drand48 ()
+double __lsb_drand48 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "drand48");

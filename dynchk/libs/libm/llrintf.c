@@ -10,11 +10,11 @@ long long llrintf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llrintf");
-	validate_NULL_TYPETYPE(arg0, "llrintf");
+	validate_NULL_TYPETYPE(  arg0, "llrintf");
 	return funcptr(arg0);
 }
 
-long long lsb_llrintf (float arg0 )
+long long __lsb_llrintf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llrintf");

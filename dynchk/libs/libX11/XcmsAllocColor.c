@@ -17,7 +17,7 @@ int XcmsAllocColor(Display * arg0, Colormap arg1, XcmsColor * arg2, XcmsColorFor
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XcmsAllocColor(Display * arg0, Colormap arg1, XcmsColor * arg2, XcmsColorFormat arg3)
+int __lsb_XcmsAllocColor(Display * arg0, Colormap arg1, XcmsColor * arg2, XcmsColorFormat arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsAllocColor");

@@ -16,7 +16,7 @@ void glXQueryDrawable(Display * arg0, GLXDrawable arg1, int arg2, unsigned int *
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glXQueryDrawable(Display * arg0, GLXDrawable arg1, int arg2, unsigned int * arg3)
+void __lsb_glXQueryDrawable(Display * arg0, GLXDrawable arg1, int arg2, unsigned int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXQueryDrawable");

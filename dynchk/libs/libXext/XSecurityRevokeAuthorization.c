@@ -14,7 +14,7 @@ int XSecurityRevokeAuthorization(Display * arg0, XSecurityAuthorization arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XSecurityRevokeAuthorization(Display * arg0, XSecurityAuthorization arg1)
+int __lsb_XSecurityRevokeAuthorization(Display * arg0, XSecurityAuthorization arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSecurityRevokeAuthorization");

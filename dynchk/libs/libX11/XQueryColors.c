@@ -16,7 +16,7 @@ int XQueryColors(Display * arg0, Colormap arg1, XColor * arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_XQueryColors(Display * arg0, Colormap arg1, XColor * arg2, int arg3)
+int __lsb_XQueryColors(Display * arg0, Colormap arg1, XColor * arg2, int arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XQueryColors");

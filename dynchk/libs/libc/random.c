@@ -13,7 +13,7 @@ long random ()
 	return funcptr();
 }
 
-long lsb_random ()
+long __lsb_random ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "random");

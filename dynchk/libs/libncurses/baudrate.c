@@ -13,7 +13,7 @@ int baudrate ()
 	return funcptr();
 }
 
-int lsb_baudrate ()
+int __lsb_baudrate ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "baudrate");

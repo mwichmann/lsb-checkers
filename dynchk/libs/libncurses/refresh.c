@@ -13,7 +13,7 @@ int refresh ()
 	return funcptr();
 }
 
-int lsb_refresh ()
+int __lsb_refresh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "refresh");

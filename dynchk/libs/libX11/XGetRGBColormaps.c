@@ -18,7 +18,7 @@ int XGetRGBColormaps(Display * arg0, Window arg1, XStandardColormap * * arg2, in
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XGetRGBColormaps(Display * arg0, Window arg1, XStandardColormap * * arg2, int * arg3, Atom arg4)
+int __lsb_XGetRGBColormaps(Display * arg0, Window arg1, XStandardColormap * * arg2, int * arg3, Atom arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetRGBColormaps");

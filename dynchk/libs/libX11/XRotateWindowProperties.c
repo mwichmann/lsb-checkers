@@ -17,7 +17,7 @@ int XRotateWindowProperties(Display * arg0, Window arg1, Atom * arg2, int arg3, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XRotateWindowProperties(Display * arg0, Window arg1, Atom * arg2, int arg3, int arg4)
+int __lsb_XRotateWindowProperties(Display * arg0, Window arg1, Atom * arg2, int arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XRotateWindowProperties");

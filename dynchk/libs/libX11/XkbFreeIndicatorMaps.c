@@ -12,7 +12,7 @@ void XkbFreeIndicatorMaps(XkbDescPtr arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XkbFreeIndicatorMaps(XkbDescPtr arg0)
+void __lsb_XkbFreeIndicatorMaps(XkbDescPtr arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbFreeIndicatorMaps");

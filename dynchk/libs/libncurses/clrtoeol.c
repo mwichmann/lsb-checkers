@@ -13,7 +13,7 @@ int clrtoeol ()
 	return funcptr();
 }
 
-int lsb_clrtoeol ()
+int __lsb_clrtoeol ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clrtoeol");

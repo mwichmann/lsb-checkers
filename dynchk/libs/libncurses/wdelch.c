@@ -10,11 +10,12 @@ int wdelch (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wdelch");
-	validate_NULL_TYPETYPE(arg0, "wdelch");
+	validate_Rdaddress( arg0, "wdelch");
+	validate_NULL_TYPETYPE(  arg0, "wdelch");
 	return funcptr(arg0);
 }
 
-int lsb_wdelch (WINDOW * arg0 )
+int __lsb_wdelch (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wdelch");

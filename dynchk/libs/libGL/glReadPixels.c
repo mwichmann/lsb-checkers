@@ -24,7 +24,7 @@ void glReadPixels(GLint arg0, GLint arg1, GLsizei arg2, GLsizei arg3, GLenum arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-void lsb_glReadPixels(GLint arg0, GLint arg1, GLsizei arg2, GLsizei arg3, GLenum arg4, GLenum arg5, GLvoid * arg6)
+void __lsb_glReadPixels(GLint arg0, GLint arg1, GLsizei arg2, GLsizei arg3, GLenum arg4, GLenum arg5, GLvoid * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glReadPixels");

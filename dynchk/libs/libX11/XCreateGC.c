@@ -16,7 +16,7 @@ GC XCreateGC(Display * arg0, Drawable arg1, unsigned long arg2, XGCValues * arg3
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-GC lsb_XCreateGC(Display * arg0, Drawable arg1, unsigned long arg2, XGCValues * arg3)
+GC __lsb_XCreateGC(Display * arg0, Drawable arg1, unsigned long arg2, XGCValues * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreateGC");

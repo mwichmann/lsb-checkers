@@ -11,11 +11,12 @@ wint_t getwc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwc");
-	validate_NULL_TYPETYPE(arg0, "getwc");
+	validate_Rdaddress( arg0, "getwc");
+	validate_NULL_TYPETYPE(  arg0, "getwc");
 	return funcptr(arg0);
 }
 
-wint_t lsb_getwc (FILE * arg0 )
+wint_t __lsb_getwc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwc");

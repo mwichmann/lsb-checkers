@@ -19,7 +19,7 @@ int XDrawLines(Display * arg0, Drawable arg1, GC arg2, XPoint * arg3, int arg4, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XDrawLines(Display * arg0, Drawable arg1, GC arg2, XPoint * arg3, int arg4, int arg5)
+int __lsb_XDrawLines(Display * arg0, Drawable arg1, GC arg2, XPoint * arg3, int arg4, int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDrawLines");

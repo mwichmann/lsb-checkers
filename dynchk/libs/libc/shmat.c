@@ -10,13 +10,14 @@ void * shmat (int arg0 , const void * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmat");
-	validate_NULL_TYPETYPE(arg0, "shmat");
-	validate_NULL_TYPETYPE(arg1, "shmat");
-	validate_NULL_TYPETYPE(arg2, "shmat");
+	validate_NULL_TYPETYPE(  arg0, "shmat");
+	validate_Rdaddress( arg1, "shmat");
+	validate_NULL_TYPETYPE(  arg1, "shmat");
+	validate_NULL_TYPETYPE(  arg2, "shmat");
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_shmat (int arg0 , const void * arg1 , int arg2 )
+void * __lsb_shmat (int arg0 , const void * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmat");

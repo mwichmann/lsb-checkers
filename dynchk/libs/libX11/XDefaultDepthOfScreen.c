@@ -12,7 +12,7 @@ int XDefaultDepthOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XDefaultDepthOfScreen(Screen * arg0)
+int __lsb_XDefaultDepthOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDefaultDepthOfScreen");

@@ -13,7 +13,7 @@ struct utmpx * getutxent ()
 	return funcptr();
 }
 
-struct utmpx * lsb_getutxent ()
+struct utmpx * __lsb_getutxent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutxent");

@@ -10,12 +10,14 @@ void clnt_perror (struct CLIENT * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_perror");
-	validate_NULL_TYPETYPE(arg0, "clnt_perror");
-	validate_NULL_TYPETYPE(arg1, "clnt_perror");
+	validate_Rdaddress( arg0, "clnt_perror");
+	validate_NULL_TYPETYPE(  arg0, "clnt_perror");
+	validate_Rdaddress( arg1, "clnt_perror");
+	validate_NULL_TYPETYPE(  arg1, "clnt_perror");
 	funcptr(arg0, arg1);
 }
 
-void lsb_clnt_perror (struct CLIENT * arg0 , const char * arg1 )
+void __lsb_clnt_perror (struct CLIENT * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_perror");

@@ -10,14 +10,14 @@ WINDOW * newwin (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newwin");
-	validate_NULL_TYPETYPE(arg0, "newwin");
-	validate_NULL_TYPETYPE(arg1, "newwin");
-	validate_NULL_TYPETYPE(arg2, "newwin");
-	validate_NULL_TYPETYPE(arg3, "newwin");
+	validate_NULL_TYPETYPE(  arg0, "newwin");
+	validate_NULL_TYPETYPE(  arg1, "newwin");
+	validate_NULL_TYPETYPE(  arg2, "newwin");
+	validate_NULL_TYPETYPE(  arg3, "newwin");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-WINDOW * lsb_newwin (int arg0 , int arg1 , int arg2 , int arg3 )
+WINDOW * __lsb_newwin (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newwin");

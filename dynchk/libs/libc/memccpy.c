@@ -11,14 +11,16 @@ void * memccpy (void * arg0 , const void * arg1 , int arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memccpy");
-	validate_NULL_TYPETYPE(arg0, "memccpy");
-	validate_NULL_TYPETYPE(arg1, "memccpy");
-	validate_NULL_TYPETYPE(arg2, "memccpy");
-	validate_NULL_TYPETYPE(arg3, "memccpy");
+	validate_Rdaddress( arg0, "memccpy");
+	validate_NULL_TYPETYPE(  arg0, "memccpy");
+	validate_Rdaddress( arg1, "memccpy");
+	validate_NULL_TYPETYPE(  arg1, "memccpy");
+	validate_NULL_TYPETYPE(  arg2, "memccpy");
+	validate_NULL_TYPETYPE(  arg3, "memccpy");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void * lsb_memccpy (void * arg0 , const void * arg1 , int arg2 , size_t arg3 )
+void * __lsb_memccpy (void * arg0 , const void * arg1 , int arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memccpy");

@@ -10,11 +10,12 @@ int fflush (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fflush");
-	validate_NULL_TYPETYPE(arg0, "fflush");
+	validate_Rdaddress( arg0, "fflush");
+	validate_NULL_TYPETYPE(  arg0, "fflush");
 	return funcptr(arg0);
 }
 
-int lsb_fflush (FILE * arg0 )
+int __lsb_fflush (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fflush");

@@ -10,11 +10,11 @@ int tcdrain (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcdrain");
-	validate_NULL_TYPETYPE(arg0, "tcdrain");
+	validate_NULL_TYPETYPE(  arg0, "tcdrain");
 	return funcptr(arg0);
 }
 
-int lsb_tcdrain (int arg0 )
+int __lsb_tcdrain (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcdrain");

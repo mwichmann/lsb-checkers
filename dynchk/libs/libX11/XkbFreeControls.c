@@ -14,7 +14,7 @@ void XkbFreeControls(XkbDescPtr arg0, unsigned int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XkbFreeControls(XkbDescPtr arg0, unsigned int arg1, int arg2)
+void __lsb_XkbFreeControls(XkbDescPtr arg0, unsigned int arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbFreeControls");

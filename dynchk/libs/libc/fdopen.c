@@ -10,12 +10,13 @@ FILE * fdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdopen");
-	validate_NULL_TYPETYPE(arg0, "fdopen");
-	validate_NULL_TYPETYPE(arg1, "fdopen");
+	validate_NULL_TYPETYPE(  arg0, "fdopen");
+	validate_Rdaddress( arg1, "fdopen");
+	validate_NULL_TYPETYPE(  arg1, "fdopen");
 	return funcptr(arg0, arg1);
 }
 
-FILE * lsb_fdopen (int arg0 , const char * arg1 )
+FILE * __lsb_fdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdopen");

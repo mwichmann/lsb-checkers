@@ -12,7 +12,7 @@ XrmDatabase XrmGetFileDatabase(char * arg0)
 	return funcptr(arg0);
 }
 
-XrmDatabase lsb_XrmGetFileDatabase(char * arg0)
+XrmDatabase __lsb_XrmGetFileDatabase(char * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmGetFileDatabase");

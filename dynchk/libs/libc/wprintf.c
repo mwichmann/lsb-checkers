@@ -15,7 +15,7 @@ int wprintf (const wchar_t * arg0 , const wchar_t * arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wprintf (const wchar_t * arg0 , const wchar_t * arg1 )
+int __lsb_wprintf (const wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wprintf");

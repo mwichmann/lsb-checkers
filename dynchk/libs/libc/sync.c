@@ -13,7 +13,7 @@ void sync ()
 	funcptr();
 }
 
-void lsb_sync ()
+void __lsb_sync ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sync");

@@ -10,15 +10,17 @@ int mvwgetnstr (WINDOW * arg0 , int arg1 , int arg2 , char * arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwgetnstr");
-	validate_NULL_TYPETYPE(arg0, "mvwgetnstr");
-	validate_NULL_TYPETYPE(arg1, "mvwgetnstr");
-	validate_NULL_TYPETYPE(arg2, "mvwgetnstr");
-	validate_NULL_TYPETYPE(arg3, "mvwgetnstr");
-	validate_NULL_TYPETYPE(arg4, "mvwgetnstr");
+	validate_Rdaddress( arg0, "mvwgetnstr");
+	validate_NULL_TYPETYPE(  arg0, "mvwgetnstr");
+	validate_NULL_TYPETYPE(  arg1, "mvwgetnstr");
+	validate_NULL_TYPETYPE(  arg2, "mvwgetnstr");
+	validate_Rdaddress( arg3, "mvwgetnstr");
+	validate_NULL_TYPETYPE(  arg3, "mvwgetnstr");
+	validate_NULL_TYPETYPE(  arg4, "mvwgetnstr");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_mvwgetnstr (WINDOW * arg0 , int arg1 , int arg2 , char * arg3 , int arg4 )
+int __lsb_mvwgetnstr (WINDOW * arg0 , int arg1 , int arg2 , char * arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwgetnstr");

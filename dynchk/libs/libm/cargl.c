@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef cargl
 static long double(*funcptr) (long double complex ) = 0;
@@ -11,11 +10,11 @@ long double cargl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cargl");
-	validate_NULL_TYPETYPE(arg0, "cargl");
+	validate_NULL_TYPETYPE(  arg0, "cargl");
 	return funcptr(arg0);
 }
 
-long double lsb_cargl (long double complex arg0 )
+long double __lsb_cargl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cargl");

@@ -13,7 +13,7 @@ int noecho ()
 	return funcptr();
 }
 
-int lsb_noecho ()
+int __lsb_noecho ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "noecho");

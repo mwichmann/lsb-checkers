@@ -10,11 +10,12 @@ int untouchwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "untouchwin");
-	validate_NULL_TYPETYPE(arg0, "untouchwin");
+	validate_Rdaddress( arg0, "untouchwin");
+	validate_NULL_TYPETYPE(  arg0, "untouchwin");
 	return funcptr(arg0);
 }
 
-int lsb_untouchwin (WINDOW * arg0 )
+int __lsb_untouchwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "untouchwin");

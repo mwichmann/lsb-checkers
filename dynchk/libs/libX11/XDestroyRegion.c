@@ -13,7 +13,7 @@ int XDestroyRegion(Region arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XDestroyRegion(Region arg0)
+int __lsb_XDestroyRegion(Region arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDestroyRegion");

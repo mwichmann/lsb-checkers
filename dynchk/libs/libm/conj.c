@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef conj
 static double complex(*funcptr) (double complex ) = 0;
@@ -11,11 +10,11 @@ double complex conj (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conj");
-	validate_NULL_TYPETYPE(arg0, "conj");
+	validate_NULL_TYPETYPE(  arg0, "conj");
 	return funcptr(arg0);
 }
 
-double complex lsb_conj (double complex arg0 )
+double complex __lsb_conj (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conj");

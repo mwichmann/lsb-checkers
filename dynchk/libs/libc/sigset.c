@@ -10,12 +10,12 @@ sighandler_t sigset (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigset");
-	validate_NULL_TYPETYPE(arg0, "sigset");
-	validate_NULL_TYPETYPE(arg1, "sigset");
+	validate_NULL_TYPETYPE(  arg0, "sigset");
+	validate_NULL_TYPETYPE(  arg1, "sigset");
 	return funcptr(arg0, arg1);
 }
 
-sighandler_t lsb_sigset (int arg0 , sighandler_t arg1 )
+sighandler_t __lsb_sigset (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigset");

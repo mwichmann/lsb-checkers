@@ -10,11 +10,11 @@ int isdigit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isdigit");
-	validate_NULL_TYPETYPE(arg0, "isdigit");
+	validate_NULL_TYPETYPE(  arg0, "isdigit");
 	return funcptr(arg0);
 }
 
-int lsb_isdigit (int arg0 )
+int __lsb_isdigit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isdigit");

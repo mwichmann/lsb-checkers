@@ -10,12 +10,12 @@ sighandler_t __sysv_signal (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__sysv_signal");
-	validate_NULL_TYPETYPE(arg0, "__sysv_signal");
-	validate_NULL_TYPETYPE(arg1, "__sysv_signal");
+	validate_NULL_TYPETYPE(  arg0, "__sysv_signal");
+	validate_NULL_TYPETYPE(  arg1, "__sysv_signal");
 	return funcptr(arg0, arg1);
 }
 
-sighandler_t lsb___sysv_signal (int arg0 , sighandler_t arg1 )
+sighandler_t __lsb___sysv_signal (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__sysv_signal");

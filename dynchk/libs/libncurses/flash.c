@@ -13,7 +13,7 @@ int flash ()
 	return funcptr();
 }
 
-int lsb_flash ()
+int __lsb_flash ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flash");

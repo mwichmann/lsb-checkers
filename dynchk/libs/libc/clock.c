@@ -13,7 +13,7 @@ clock_t clock ()
 	return funcptr();
 }
 
-clock_t lsb_clock ()
+clock_t __lsb_clock ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clock");

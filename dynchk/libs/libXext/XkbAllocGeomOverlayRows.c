@@ -14,7 +14,7 @@ int XkbAllocGeomOverlayRows(XkbOverlayPtr arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XkbAllocGeomOverlayRows(XkbOverlayPtr arg0, int arg1)
+int __lsb_XkbAllocGeomOverlayRows(XkbOverlayPtr arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbAllocGeomOverlayRows");

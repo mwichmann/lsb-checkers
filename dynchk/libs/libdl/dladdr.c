@@ -17,7 +17,7 @@ int dladdr (const void * arg0 , Dl_info * arg1 )
 }
 #endif
 
-int lsb_dladdr (const void * arg0 , Dl_info * arg1 )
+int __lsb_dladdr (const void * arg0 , Dl_info * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dladdr");

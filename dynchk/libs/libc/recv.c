@@ -11,14 +11,15 @@ ssize_t recv (int arg0 , void * arg1 , size_t arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recv");
-	validate_NULL_TYPETYPE(arg0, "recv");
-	validate_NULL_TYPETYPE(arg1, "recv");
-	validate_NULL_TYPETYPE(arg2, "recv");
-	validate_NULL_TYPETYPE(arg3, "recv");
+	validate_NULL_TYPETYPE(  arg0, "recv");
+	validate_Rdaddress( arg1, "recv");
+	validate_NULL_TYPETYPE(  arg1, "recv");
+	validate_NULL_TYPETYPE(  arg2, "recv");
+	validate_NULL_TYPETYPE(  arg3, "recv");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-ssize_t lsb_recv (int arg0 , void * arg1 , size_t arg2 , int arg3 )
+ssize_t __lsb_recv (int arg0 , void * arg1 , size_t arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recv");

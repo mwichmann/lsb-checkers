@@ -10,12 +10,14 @@ gzFile gzopen (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzopen");
-	validate_NULL_TYPETYPE(arg0, "gzopen");
-	validate_NULL_TYPETYPE(arg1, "gzopen");
+	validate_Rdaddress( arg0, "gzopen");
+	validate_NULL_TYPETYPE(  arg0, "gzopen");
+	validate_Rdaddress( arg1, "gzopen");
+	validate_NULL_TYPETYPE(  arg1, "gzopen");
 	return funcptr(arg0, arg1);
 }
 
-gzFile lsb_gzopen (const char * arg0 , const char * arg1 )
+gzFile __lsb_gzopen (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzopen");

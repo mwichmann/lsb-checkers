@@ -10,11 +10,11 @@ float sinf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinf");
-	validate_NULL_TYPETYPE(arg0, "sinf");
+	validate_NULL_TYPETYPE(  arg0, "sinf");
 	return funcptr(arg0);
 }
 
-float lsb_sinf (float arg0 )
+float __lsb_sinf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinf");

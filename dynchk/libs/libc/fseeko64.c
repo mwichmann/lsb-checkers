@@ -11,13 +11,14 @@ int fseeko64 (FILE * arg0 , loff_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseeko64");
-	validate_NULL_TYPETYPE(arg0, "fseeko64");
-	validate_NULL_TYPETYPE(arg1, "fseeko64");
-	validate_NULL_TYPETYPE(arg2, "fseeko64");
+	validate_Rdaddress( arg0, "fseeko64");
+	validate_NULL_TYPETYPE(  arg0, "fseeko64");
+	validate_NULL_TYPETYPE(  arg1, "fseeko64");
+	validate_NULL_TYPETYPE(  arg2, "fseeko64");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_fseeko64 (FILE * arg0 , loff_t arg1 , int arg2 )
+int __lsb_fseeko64 (FILE * arg0 , loff_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseeko64");

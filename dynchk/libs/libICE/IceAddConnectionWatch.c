@@ -15,7 +15,7 @@ int IceAddConnectionWatch(IceWatchProc arg0, IcePointer arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_IceAddConnectionWatch(IceWatchProc arg0, IcePointer arg1)
+int __lsb_IceAddConnectionWatch(IceWatchProc arg0, IcePointer arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceAddConnectionWatch");

@@ -14,7 +14,7 @@ void XkbNoteNameChanges(XkbNameChangesPtr arg0, XkbNamesNotifyEvent * arg1, unsi
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XkbNoteNameChanges(XkbNameChangesPtr arg0, XkbNamesNotifyEvent * arg1, unsigned int arg2)
+void __lsb_XkbNoteNameChanges(XkbNameChangesPtr arg0, XkbNamesNotifyEvent * arg1, unsigned int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbNoteNameChanges");

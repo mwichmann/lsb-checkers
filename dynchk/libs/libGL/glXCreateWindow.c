@@ -17,7 +17,7 @@ GLXWindow glXCreateWindow(Display * arg0, GLXFBConfig arg1, Window arg2, int * a
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-GLXWindow lsb_glXCreateWindow(Display * arg0, GLXFBConfig arg1, Window arg2, int * arg3)
+GLXWindow __lsb_glXCreateWindow(Display * arg0, GLXFBConfig arg1, Window arg2, int * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXCreateWindow");

@@ -13,7 +13,7 @@ char * XmbResetIC(XIC arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_XmbResetIC(XIC arg0)
+char * __lsb_XmbResetIC(XIC arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XmbResetIC");

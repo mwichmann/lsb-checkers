@@ -10,11 +10,11 @@ const char * zError (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "zError");
-	validate_NULL_TYPETYPE(arg0, "zError");
+	validate_NULL_TYPETYPE(  arg0, "zError");
 	return funcptr(arg0);
 }
 
-const char * lsb_zError (int arg0 )
+const char * __lsb_zError (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "zError");

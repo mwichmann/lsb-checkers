@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef cpowf
 static float complex(*funcptr) (float complex , float complex ) = 0;
@@ -11,12 +10,12 @@ float complex cpowf (float complex arg0 , float complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpowf");
-	validate_NULL_TYPETYPE(arg0, "cpowf");
-	validate_NULL_TYPETYPE(arg1, "cpowf");
+	validate_NULL_TYPETYPE(  arg0, "cpowf");
+	validate_NULL_TYPETYPE(  arg1, "cpowf");
 	return funcptr(arg0, arg1);
 }
 
-float complex lsb_cpowf (float complex arg0 , float complex arg1 )
+float complex __lsb_cpowf (float complex arg0 , float complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpowf");

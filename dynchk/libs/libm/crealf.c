@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef crealf
 static float(*funcptr) (float complex ) = 0;
@@ -11,11 +10,11 @@ float crealf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "crealf");
-	validate_NULL_TYPETYPE(arg0, "crealf");
+	validate_NULL_TYPETYPE(  arg0, "crealf");
 	return funcptr(arg0);
 }
 
-float lsb_crealf (float complex arg0 )
+float __lsb_crealf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "crealf");

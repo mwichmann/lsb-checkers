@@ -12,7 +12,7 @@ Xauth * XSecurityAllocXauth(void arg0)
 	return funcptr(arg0);
 }
 
-Xauth * lsb_XSecurityAllocXauth(void arg0)
+Xauth * __lsb_XSecurityAllocXauth(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSecurityAllocXauth");

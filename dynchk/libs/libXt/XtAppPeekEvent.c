@@ -14,7 +14,7 @@ Boolean XtAppPeekEvent(XtAppContext arg0, XEvent * arg1)
 	return funcptr(arg0, arg1);
 }
 
-Boolean lsb_XtAppPeekEvent(XtAppContext arg0, XEvent * arg1)
+Boolean __lsb_XtAppPeekEvent(XtAppContext arg0, XEvent * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppPeekEvent");

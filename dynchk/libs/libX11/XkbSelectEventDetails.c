@@ -16,7 +16,7 @@ int XkbSelectEventDetails(Display * arg0, unsigned int arg1, unsigned int arg2, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XkbSelectEventDetails(Display * arg0, unsigned int arg1, unsigned int arg2, unsigned long arg3, unsigned long arg4)
+int __lsb_XkbSelectEventDetails(Display * arg0, unsigned int arg1, unsigned int arg2, unsigned long arg3, unsigned long arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSelectEventDetails");

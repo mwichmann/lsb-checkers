@@ -11,7 +11,7 @@ _Unwind_Ptr _Unwind_ForcedUnwind()
 	return funcptr();
 }
 
-_Unwind_Ptr lsb__Unwind_ForcedUnwind()
+_Unwind_Ptr __lsb__Unwind_ForcedUnwind()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_ForcedUnwind");

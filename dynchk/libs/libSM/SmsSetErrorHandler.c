@@ -13,7 +13,7 @@ SmsErrorHandler SmsSetErrorHandler(SmsErrorHandler arg0)
 	return funcptr(arg0);
 }
 
-SmsErrorHandler lsb_SmsSetErrorHandler(SmsErrorHandler arg0)
+SmsErrorHandler __lsb_SmsSetErrorHandler(SmsErrorHandler arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmsSetErrorHandler");

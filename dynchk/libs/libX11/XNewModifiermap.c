@@ -12,7 +12,7 @@ XModifierKeymap * XNewModifiermap(int arg0)
 	return funcptr(arg0);
 }
 
-XModifierKeymap * lsb_XNewModifiermap(int arg0)
+XModifierKeymap * __lsb_XNewModifiermap(int arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XNewModifiermap");

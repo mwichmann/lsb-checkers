@@ -10,11 +10,12 @@ int delwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delwin");
-	validate_NULL_TYPETYPE(arg0, "delwin");
+	validate_Rdaddress( arg0, "delwin");
+	validate_NULL_TYPETYPE(  arg0, "delwin");
 	return funcptr(arg0);
 }
 
-int lsb_delwin (WINDOW * arg0 )
+int __lsb_delwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delwin");

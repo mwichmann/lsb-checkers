@@ -11,7 +11,7 @@ _Unwind_Ptr _Unwind_GetRegionStart()
 	return funcptr();
 }
 
-_Unwind_Ptr lsb__Unwind_GetRegionStart()
+_Unwind_Ptr __lsb__Unwind_GetRegionStart()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetRegionStart");

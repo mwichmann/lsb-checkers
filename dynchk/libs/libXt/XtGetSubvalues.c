@@ -21,7 +21,7 @@ void XtGetSubvalues(XtPointer arg0, XtResourceList arg1, Cardinal arg2, ArgList 
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void lsb_XtGetSubvalues(XtPointer arg0, XtResourceList arg1, Cardinal arg2, ArgList arg3, Cardinal arg4)
+void __lsb_XtGetSubvalues(XtPointer arg0, XtResourceList arg1, Cardinal arg2, ArgList arg3, Cardinal arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetSubvalues");

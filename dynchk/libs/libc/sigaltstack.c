@@ -10,12 +10,14 @@ int sigaltstack (const struct sigaltstack * arg0 , struct sigaltstack * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigaltstack");
-	validate_NULL_TYPETYPE(arg0, "sigaltstack");
-	validate_NULL_TYPETYPE(arg1, "sigaltstack");
+	validate_Rdaddress( arg0, "sigaltstack");
+	validate_NULL_TYPETYPE(  arg0, "sigaltstack");
+	validate_Rdaddress( arg1, "sigaltstack");
+	validate_NULL_TYPETYPE(  arg1, "sigaltstack");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sigaltstack (const struct sigaltstack * arg0 , struct sigaltstack * arg1 )
+int __lsb_sigaltstack (const struct sigaltstack * arg0 , struct sigaltstack * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigaltstack");

@@ -14,7 +14,7 @@ KeySym XKeycodeToKeysym(Display * arg0, unsigned int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-KeySym lsb_XKeycodeToKeysym(Display * arg0, unsigned int arg1, int arg2)
+KeySym __lsb_XKeycodeToKeysym(Display * arg0, unsigned int arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XKeycodeToKeysym");

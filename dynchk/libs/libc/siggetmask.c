@@ -13,7 +13,7 @@ int siggetmask ()
 	return funcptr();
 }
 
-int lsb_siggetmask ()
+int __lsb_siggetmask ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siggetmask");

@@ -13,7 +13,7 @@ char * termname ()
 	return funcptr();
 }
 
-char * lsb_termname ()
+char * __lsb_termname ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "termname");

@@ -11,11 +11,12 @@ struct tm * gmtime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gmtime");
-	validate_NULL_TYPETYPE(arg0, "gmtime");
+	validate_Rdaddress( arg0, "gmtime");
+	validate_NULL_TYPETYPE(  arg0, "gmtime");
 	return funcptr(arg0);
 }
 
-struct tm * lsb_gmtime (const time_t * arg0 )
+struct tm * __lsb_gmtime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gmtime");

@@ -13,7 +13,7 @@ Screen * XScreenOfDisplay(Display * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-Screen * lsb_XScreenOfDisplay(Display * arg0, int arg1)
+Screen * __lsb_XScreenOfDisplay(Display * arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XScreenOfDisplay");

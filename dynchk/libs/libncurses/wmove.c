@@ -10,13 +10,14 @@ int wmove (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmove");
-	validate_NULL_TYPETYPE(arg0, "wmove");
-	validate_NULL_TYPETYPE(arg1, "wmove");
-	validate_NULL_TYPETYPE(arg2, "wmove");
+	validate_Rdaddress( arg0, "wmove");
+	validate_NULL_TYPETYPE(  arg0, "wmove");
+	validate_NULL_TYPETYPE(  arg1, "wmove");
+	validate_NULL_TYPETYPE(  arg2, "wmove");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_wmove (WINDOW * arg0 , int arg1 , int arg2 )
+int __lsb_wmove (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmove");

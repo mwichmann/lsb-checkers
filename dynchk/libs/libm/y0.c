@@ -10,11 +10,11 @@ double y0 (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "y0");
-	validate_NULL_TYPETYPE(arg0, "y0");
+	validate_NULL_TYPETYPE(  arg0, "y0");
 	return funcptr(arg0);
 }
 
-double lsb_y0 (double arg0 )
+double __lsb_y0 (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "y0");

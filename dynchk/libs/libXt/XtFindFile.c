@@ -18,7 +18,7 @@ String XtFindFile(char * arg0, Substitution arg1, Cardinal arg2, XtFilePredicate
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-String lsb_XtFindFile(char * arg0, Substitution arg1, Cardinal arg2, XtFilePredicate arg3)
+String __lsb_XtFindFile(char * arg0, Substitution arg1, Cardinal arg2, XtFilePredicate arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtFindFile");

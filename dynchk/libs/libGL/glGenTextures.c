@@ -14,7 +14,7 @@ void glGenTextures(GLsizei arg0, GLuint * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glGenTextures(GLsizei arg0, GLuint * arg1)
+void __lsb_glGenTextures(GLsizei arg0, GLuint * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glGenTextures");

@@ -11,13 +11,14 @@ size_t confstr (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "confstr");
-	validate_NULL_TYPETYPE(arg0, "confstr");
-	validate_RWaddress(arg1, "confstr");
-	validate_NULL_TYPETYPE(arg2, "confstr");
+	validate_NULL_TYPETYPE(  arg0, "confstr");
+	validate_Rdaddress( arg1, "confstr");
+	validate_RWaddress(  arg1, "confstr");
+	validate_NULL_TYPETYPE(  arg2, "confstr");
 	return funcptr(arg0, arg1, arg2);
 }
 
-size_t lsb_confstr (int arg0 , char * arg1 , size_t arg2 )
+size_t __lsb_confstr (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "confstr");

@@ -15,7 +15,7 @@ int XSyncValueGreaterThan(XSyncValue arg0, XSyncValue arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XSyncValueGreaterThan(XSyncValue arg0, XSyncValue arg1)
+int __lsb_XSyncValueGreaterThan(XSyncValue arg0, XSyncValue arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncValueGreaterThan");

@@ -19,7 +19,7 @@ void glTexCoord4d(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glTexCoord4d(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3)
+void __lsb_glTexCoord4d(GLdouble arg0, GLdouble arg1, GLdouble arg2, GLdouble arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glTexCoord4d");

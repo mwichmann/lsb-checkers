@@ -10,11 +10,12 @@ int getstr (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getstr");
-	validate_NULL_TYPETYPE(arg0, "getstr");
+	validate_Rdaddress( arg0, "getstr");
+	validate_NULL_TYPETYPE(  arg0, "getstr");
 	return funcptr(arg0);
 }
 
-int lsb_getstr (char * arg0 )
+int __lsb_getstr (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getstr");

@@ -10,11 +10,11 @@ double log1p (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "log1p");
-	validate_NULL_TYPETYPE(arg0, "log1p");
+	validate_NULL_TYPETYPE(  arg0, "log1p");
 	return funcptr(arg0);
 }
 
-double lsb_log1p (double arg0 )
+double __lsb_log1p (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "log1p");

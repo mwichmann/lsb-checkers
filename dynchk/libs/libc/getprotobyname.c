@@ -10,11 +10,12 @@ struct protoent * getprotobyname (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotobyname");
-	validate_NULL_TYPETYPE(arg0, "getprotobyname");
+	validate_Rdaddress( arg0, "getprotobyname");
+	validate_NULL_TYPETYPE(  arg0, "getprotobyname");
 	return funcptr(arg0);
 }
 
-struct protoent * lsb_getprotobyname (const char * arg0 )
+struct protoent * __lsb_getprotobyname (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotobyname");

@@ -13,7 +13,7 @@ int slk_clear ()
 	return funcptr();
 }
 
-int lsb_slk_clear ()
+int __lsb_slk_clear ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_clear");

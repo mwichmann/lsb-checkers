@@ -12,7 +12,7 @@ void glLoadMatrixf(GLfloat * arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glLoadMatrixf(GLfloat * arg0)
+void __lsb_glLoadMatrixf(GLfloat * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glLoadMatrixf");

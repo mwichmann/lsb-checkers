@@ -12,7 +12,7 @@ XWMHints * XAllocWMHints(void arg0)
 	return funcptr(arg0);
 }
 
-XWMHints * lsb_XAllocWMHints(void arg0)
+XWMHints * __lsb_XAllocWMHints(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XAllocWMHints");

@@ -15,7 +15,7 @@ void XtInstallAccelerators(Widget arg0, Widget arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtInstallAccelerators(Widget arg0, Widget arg1)
+void __lsb_XtInstallAccelerators(Widget arg0, Widget arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtInstallAccelerators");

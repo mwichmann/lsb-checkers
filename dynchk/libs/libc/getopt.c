@@ -10,13 +10,14 @@ int getopt (int arg0 , char *const  arg1 [], const char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getopt");
-	validate_NULL_TYPETYPE(arg0, "getopt");
-	validate_NULL_TYPETYPE(arg1, "getopt");
-	validate_NULL_TYPETYPE(arg2, "getopt");
+	validate_NULL_TYPETYPE(  arg0, "getopt");
+	validate_NULL_TYPETYPE(  arg1, "getopt");
+	validate_Rdaddress( arg2, "getopt");
+	validate_NULL_TYPETYPE(  arg2, "getopt");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_getopt (int arg0 , char *const  arg1 [], const char * arg2 )
+int __lsb_getopt (int arg0 , char *const  arg1 [], const char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getopt");

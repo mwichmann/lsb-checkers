@@ -10,14 +10,18 @@ int pthread_create (pthread_t * arg0 , const pthread_attr_t * arg1 , void *(* ar
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_create");
-	validate_NULL_TYPETYPE(arg0, "pthread_create");
-	validate_NULL_TYPETYPE(arg1, "pthread_create");
-	validate_NULL_TYPETYPE(arg2, "pthread_create");
-	validate_NULL_TYPETYPE(arg3, "pthread_create");
+	validate_Rdaddress( arg0, "pthread_create");
+	validate_NULL_TYPETYPE(  arg0, "pthread_create");
+	validate_Rdaddress( arg1, "pthread_create");
+	validate_NULL_TYPETYPE(  arg1, "pthread_create");
+validate_Rdaddress( arg2, "pthread_create");
+	validate_NULL_TYPETYPE(  arg2, "pthread_create");
+	validate_Rdaddress( arg3, "pthread_create");
+	validate_NULL_TYPETYPE(  arg3, "pthread_create");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_pthread_create (pthread_t * arg0 , const pthread_attr_t * arg1 , void *(* arg2 )(void *), void * arg3 )
+int __lsb_pthread_create (pthread_t * arg0 , const pthread_attr_t * arg1 , void *(* arg2 )(void *), void * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_create");

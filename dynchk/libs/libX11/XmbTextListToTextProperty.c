@@ -17,7 +17,7 @@ int XmbTextListToTextProperty(Display * arg0, char * * arg1, int arg2, XICCEncod
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XmbTextListToTextProperty(Display * arg0, char * * arg1, int arg2, XICCEncodingStyle arg3, XTextProperty * arg4)
+int __lsb_XmbTextListToTextProperty(Display * arg0, char * * arg1, int arg2, XICCEncodingStyle arg3, XTextProperty * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XmbTextListToTextProperty");

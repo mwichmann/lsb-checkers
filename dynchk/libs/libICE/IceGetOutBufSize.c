@@ -13,7 +13,7 @@ int IceGetOutBufSize(IceConn arg0)
 	return funcptr(arg0);
 }
 
-int lsb_IceGetOutBufSize(IceConn arg0)
+int __lsb_IceGetOutBufSize(IceConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceGetOutBufSize");

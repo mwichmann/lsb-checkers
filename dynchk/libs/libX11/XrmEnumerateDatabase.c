@@ -21,7 +21,7 @@ int XrmEnumerateDatabase(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XrmEnumerateDatabase(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, int arg3, int arg4, XPointer arg5)
+int __lsb_XrmEnumerateDatabase(XrmDatabase arg0, XrmNameList arg1, XrmClassList arg2, int arg3, int arg4, XPointer arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmEnumerateDatabase");

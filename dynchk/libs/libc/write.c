@@ -11,13 +11,14 @@ ssize_t write (int arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "write");
-	validate_filedescriptor(arg0, "write");
-	validate_RWaddress(arg1, "write");
-	validate_NULL_TYPETYPE(arg2, "write");
+	validate_filedescriptor(  arg0, "write");
+	validate_Rdaddress( arg1, "write");
+	validate_RWaddress(  arg1, "write");
+	validate_NULL_TYPETYPE(  arg2, "write");
 	return funcptr(arg0, arg1, arg2);
 }
 
-ssize_t lsb_write (int arg0 , const void * arg1 , size_t arg2 )
+ssize_t __lsb_write (int arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "write");

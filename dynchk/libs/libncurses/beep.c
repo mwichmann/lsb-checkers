@@ -13,7 +13,7 @@ int beep ()
 	return funcptr();
 }
 
-int lsb_beep ()
+int __lsb_beep ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "beep");

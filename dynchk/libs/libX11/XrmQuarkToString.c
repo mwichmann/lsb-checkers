@@ -13,7 +13,7 @@ XrmString XrmQuarkToString(XrmQuark arg0)
 	return funcptr(arg0);
 }
 
-XrmString lsb_XrmQuarkToString(XrmQuark arg0)
+XrmString __lsb_XrmQuarkToString(XrmQuark arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmQuarkToString");

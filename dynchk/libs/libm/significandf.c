@@ -10,11 +10,11 @@ float significandf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "significandf");
-	validate_NULL_TYPETYPE(arg0, "significandf");
+	validate_NULL_TYPETYPE(  arg0, "significandf");
 	return funcptr(arg0);
 }
 
-float lsb_significandf (float arg0 )
+float __lsb_significandf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "significandf");

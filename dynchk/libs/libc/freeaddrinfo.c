@@ -10,11 +10,12 @@ void freeaddrinfo (struct addrinfo * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freeaddrinfo");
-	validate_NULL_TYPETYPE(arg0, "freeaddrinfo");
+	validate_Rdaddress( arg0, "freeaddrinfo");
+	validate_NULL_TYPETYPE(  arg0, "freeaddrinfo");
 	funcptr(arg0);
 }
 
-void lsb_freeaddrinfo (struct addrinfo * arg0 )
+void __lsb_freeaddrinfo (struct addrinfo * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freeaddrinfo");

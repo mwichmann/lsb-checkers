@@ -15,7 +15,7 @@ void XtOverrideTranslations(Widget arg0, XtTranslations arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_XtOverrideTranslations(Widget arg0, XtTranslations arg1)
+void __lsb_XtOverrideTranslations(Widget arg0, XtTranslations arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtOverrideTranslations");

@@ -10,11 +10,12 @@ TERMINAL * set_curterm (TERMINAL * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "set_curterm");
-	validate_NULL_TYPETYPE(arg0, "set_curterm");
+	validate_Rdaddress( arg0, "set_curterm");
+	validate_NULL_TYPETYPE(  arg0, "set_curterm");
 	return funcptr(arg0);
 }
 
-TERMINAL * lsb_set_curterm (TERMINAL * arg0 )
+TERMINAL * __lsb_set_curterm (TERMINAL * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "set_curterm");

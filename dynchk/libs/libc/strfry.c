@@ -10,11 +10,12 @@ char * strfry (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strfry");
-	validate_NULL_TYPETYPE(arg0, "strfry");
+	validate_Rdaddress( arg0, "strfry");
+	validate_NULL_TYPETYPE(  arg0, "strfry");
 	return funcptr(arg0);
 }
 
-char * lsb_strfry (char * arg0 )
+char * __lsb_strfry (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strfry");

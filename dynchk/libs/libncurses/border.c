@@ -10,18 +10,18 @@ int border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "border");
-	validate_NULL_TYPETYPE(arg0, "border");
-	validate_NULL_TYPETYPE(arg1, "border");
-	validate_NULL_TYPETYPE(arg2, "border");
-	validate_NULL_TYPETYPE(arg3, "border");
-	validate_NULL_TYPETYPE(arg4, "border");
-	validate_NULL_TYPETYPE(arg5, "border");
-	validate_NULL_TYPETYPE(arg6, "border");
-	validate_NULL_TYPETYPE(arg7, "border");
+	validate_NULL_TYPETYPE(  arg0, "border");
+	validate_NULL_TYPETYPE(  arg1, "border");
+	validate_NULL_TYPETYPE(  arg2, "border");
+	validate_NULL_TYPETYPE(  arg3, "border");
+	validate_NULL_TYPETYPE(  arg4, "border");
+	validate_NULL_TYPETYPE(  arg5, "border");
+	validate_NULL_TYPETYPE(  arg6, "border");
+	validate_NULL_TYPETYPE(  arg7, "border");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-int lsb_border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 )
+int __lsb_border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "border");

@@ -10,12 +10,13 @@ char * strchr (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strchr");
-	validate_NULL_TYPETYPE(arg0, "strchr");
-	validate_NULL_TYPETYPE(arg1, "strchr");
+	validate_Rdaddress( arg0, "strchr");
+	validate_NULL_TYPETYPE(  arg0, "strchr");
+	validate_NULL_TYPETYPE(  arg1, "strchr");
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strchr (const char * arg0 , int arg1 )
+char * __lsb_strchr (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strchr");

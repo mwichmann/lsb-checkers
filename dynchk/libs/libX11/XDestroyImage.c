@@ -12,7 +12,7 @@ int XDestroyImage(XImage * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XDestroyImage(XImage * arg0)
+int __lsb_XDestroyImage(XImage * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XDestroyImage");

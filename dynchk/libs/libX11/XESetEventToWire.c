@@ -11,7 +11,7 @@ int XESetEventToWire()
 	return funcptr();
 }
 
-int lsb_XESetEventToWire()
+int __lsb_XESetEventToWire()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetEventToWire");

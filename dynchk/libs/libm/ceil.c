@@ -10,11 +10,11 @@ double ceil (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ceil");
-	validate_NULL_TYPETYPE(arg0, "ceil");
+	validate_NULL_TYPETYPE(  arg0, "ceil");
 	return funcptr(arg0);
 }
 
-double lsb_ceil (double arg0 )
+double __lsb_ceil (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ceil");

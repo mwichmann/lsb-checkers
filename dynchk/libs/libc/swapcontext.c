@@ -10,12 +10,14 @@ int swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swapcontext");
-	validate_NULL_TYPETYPE(arg0, "swapcontext");
-	validate_NULL_TYPETYPE(arg1, "swapcontext");
+	validate_Rdaddress( arg0, "swapcontext");
+	validate_NULL_TYPETYPE(  arg0, "swapcontext");
+	validate_Rdaddress( arg1, "swapcontext");
+	validate_NULL_TYPETYPE(  arg1, "swapcontext");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
+int __lsb_swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swapcontext");

@@ -10,13 +10,14 @@ int shmctl (int arg0 , int arg1 , struct shmid_ds * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmctl");
-	validate_NULL_TYPETYPE(arg0, "shmctl");
-	validate_NULL_TYPETYPE(arg1, "shmctl");
-	validate_NULL_TYPETYPE(arg2, "shmctl");
+	validate_NULL_TYPETYPE(  arg0, "shmctl");
+	validate_NULL_TYPETYPE(  arg1, "shmctl");
+	validate_Rdaddress( arg2, "shmctl");
+	validate_NULL_TYPETYPE(  arg2, "shmctl");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_shmctl (int arg0 , int arg1 , struct shmid_ds * arg2 )
+int __lsb_shmctl (int arg0 , int arg1 , struct shmid_ds * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmctl");

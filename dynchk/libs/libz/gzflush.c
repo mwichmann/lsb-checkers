@@ -10,12 +10,12 @@ int gzflush (gzFile arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzflush");
-	validate_NULL_TYPETYPE(arg0, "gzflush");
-	validate_NULL_TYPETYPE(arg1, "gzflush");
+	validate_NULL_TYPETYPE(  arg0, "gzflush");
+	validate_NULL_TYPETYPE(  arg1, "gzflush");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_gzflush (gzFile arg0 , int arg1 )
+int __lsb_gzflush (gzFile arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzflush");

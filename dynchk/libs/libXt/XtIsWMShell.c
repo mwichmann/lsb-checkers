@@ -11,7 +11,7 @@ Boolean XtIsWMShell()
 	return funcptr();
 }
 
-Boolean lsb_XtIsWMShell()
+Boolean __lsb_XtIsWMShell()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsWMShell");

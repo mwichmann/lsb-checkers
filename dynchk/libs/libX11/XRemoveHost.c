@@ -13,7 +13,7 @@ int XRemoveHost(Display * arg0, XHostAddress * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XRemoveHost(Display * arg0, XHostAddress * arg1)
+int __lsb_XRemoveHost(Display * arg0, XHostAddress * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XRemoveHost");

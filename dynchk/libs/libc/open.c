@@ -26,7 +26,7 @@ int open(const char *pathname, int flags, ...)
 	return funcptr(pathname, flags, mode);
 }
 
-int lsb_open(const char *pathname, int flags, mode_t mode)
+int __lsb_open(const char *pathname, int flags, mode_t mode)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "open");

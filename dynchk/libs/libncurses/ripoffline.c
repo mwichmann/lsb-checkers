@@ -10,12 +10,13 @@ int ripoffline (int arg0 , int(* arg1 )(WINDOW *, int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ripoffline");
-	validate_NULL_TYPETYPE(arg0, "ripoffline");
-	validate_NULL_TYPETYPE(arg1, "ripoffline");
+	validate_NULL_TYPETYPE(  arg0, "ripoffline");
+validate_Rdaddress( arg1, "ripoffline");
+	validate_NULL_TYPETYPE(  arg1, "ripoffline");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_ripoffline (int arg0 , int(* arg1 )(WINDOW *, int))
+int __lsb_ripoffline (int arg0 , int(* arg1 )(WINDOW *, int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ripoffline");

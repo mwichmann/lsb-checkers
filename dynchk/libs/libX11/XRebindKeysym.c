@@ -18,7 +18,7 @@ int XRebindKeysym(Display * arg0, KeySym arg1, KeySym * arg2, int arg3, unsigned
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XRebindKeysym(Display * arg0, KeySym arg1, KeySym * arg2, int arg3, unsigned char * arg4, int arg5)
+int __lsb_XRebindKeysym(Display * arg0, KeySym arg1, KeySym * arg2, int arg3, unsigned char * arg4, int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XRebindKeysym");

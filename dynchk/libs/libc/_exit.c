@@ -10,11 +10,11 @@ void _exit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_exit");
-	validate_NULL_TYPETYPE(arg0, "_exit");
+	validate_NULL_TYPETYPE(  arg0, "_exit");
 	funcptr(arg0);
 }
 
-void lsb__exit (int arg0 )
+void __lsb__exit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_exit");

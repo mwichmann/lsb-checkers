@@ -18,7 +18,7 @@ void glTexCoordPointer(GLint arg0, GLenum arg1, GLsizei arg2, GLvoid * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_glTexCoordPointer(GLint arg0, GLenum arg1, GLsizei arg2, GLvoid * arg3)
+void __lsb_glTexCoordPointer(GLint arg0, GLenum arg1, GLsizei arg2, GLvoid * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glTexCoordPointer");

@@ -10,12 +10,14 @@ int strcmp (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcmp");
-	validate_NULL_TYPETYPE(arg0, "strcmp");
-	validate_NULL_TYPETYPE(arg1, "strcmp");
+	validate_Rdaddress( arg0, "strcmp");
+	validate_NULL_TYPETYPE(  arg0, "strcmp");
+	validate_Rdaddress( arg1, "strcmp");
+	validate_NULL_TYPETYPE(  arg1, "strcmp");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_strcmp (const char * arg0 , const char * arg1 )
+int __lsb_strcmp (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcmp");

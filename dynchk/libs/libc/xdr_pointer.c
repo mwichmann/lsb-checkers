@@ -11,14 +11,17 @@ bool_t xdr_pointer (XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_pointer");
-	validate_NULL_TYPETYPE(arg0, "xdr_pointer");
-	validate_NULL_TYPETYPE(arg1, "xdr_pointer");
-	validate_NULL_TYPETYPE(arg2, "xdr_pointer");
-	validate_NULL_TYPETYPE(arg3, "xdr_pointer");
+	validate_Rdaddress( arg0, "xdr_pointer");
+	validate_NULL_TYPETYPE(  arg0, "xdr_pointer");
+	validate_Rdaddress( arg1, "xdr_pointer");
+	validate_Rdaddress(* arg1, "xdr_pointer");
+	validate_NULL_TYPETYPE(  arg1, "xdr_pointer");
+	validate_NULL_TYPETYPE(  arg2, "xdr_pointer");
+	validate_NULL_TYPETYPE(  arg3, "xdr_pointer");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-bool_t lsb_xdr_pointer (XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t arg3 )
+bool_t __lsb_xdr_pointer (XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_pointer");

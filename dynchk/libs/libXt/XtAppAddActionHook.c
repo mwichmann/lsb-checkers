@@ -17,7 +17,7 @@ XtActionHookId XtAppAddActionHook(XtAppContext arg0, XtActionHookProc arg1, XtPo
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtActionHookId lsb_XtAppAddActionHook(XtAppContext arg0, XtActionHookProc arg1, XtPointer arg2)
+XtActionHookId __lsb_XtAppAddActionHook(XtAppContext arg0, XtActionHookProc arg1, XtPointer arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtAppAddActionHook");

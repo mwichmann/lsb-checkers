@@ -10,11 +10,12 @@ void cfmakeraw (struct termios * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfmakeraw");
-	validate_NULL_TYPETYPE(arg0, "cfmakeraw");
+	validate_Rdaddress( arg0, "cfmakeraw");
+	validate_NULL_TYPETYPE(  arg0, "cfmakeraw");
 	funcptr(arg0);
 }
 
-void lsb_cfmakeraw (struct termios * arg0 )
+void __lsb_cfmakeraw (struct termios * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfmakeraw");

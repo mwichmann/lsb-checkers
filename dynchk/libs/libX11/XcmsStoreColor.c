@@ -15,7 +15,7 @@ int XcmsStoreColor(Display * arg0, Colormap arg1, XcmsColor * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XcmsStoreColor(Display * arg0, Colormap arg1, XcmsColor * arg2)
+int __lsb_XcmsStoreColor(Display * arg0, Colormap arg1, XcmsColor * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XcmsStoreColor");

@@ -13,7 +13,7 @@ Window XtWindowOfObject(Widget arg0)
 	return funcptr(arg0);
 }
 
-Window lsb_XtWindowOfObject(Widget arg0)
+Window __lsb_XtWindowOfObject(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtWindowOfObject");

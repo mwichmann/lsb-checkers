@@ -15,7 +15,7 @@ XIM XOpenIM(Display * arg0, _XrmHashBucketRec * arg1, char * arg2, char * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-XIM lsb_XOpenIM(Display * arg0, _XrmHashBucketRec * arg1, char * arg2, char * arg3)
+XIM __lsb_XOpenIM(Display * arg0, _XrmHashBucketRec * arg1, char * arg2, char * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XOpenIM");

@@ -23,7 +23,7 @@ void glCopyConvolutionFilter2D(GLenum arg0, GLenum arg1, GLint arg2, GLint arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_glCopyConvolutionFilter2D(GLenum arg0, GLenum arg1, GLint arg2, GLint arg3, GLsizei arg4, GLsizei arg5)
+void __lsb_glCopyConvolutionFilter2D(GLenum arg0, GLenum arg1, GLint arg2, GLint arg3, GLsizei arg4, GLsizei arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glCopyConvolutionFilter2D");

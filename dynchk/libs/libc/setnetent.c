@@ -10,11 +10,11 @@ void setnetent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setnetent");
-	validate_NULL_TYPETYPE(arg0, "setnetent");
+	validate_NULL_TYPETYPE(  arg0, "setnetent");
 	funcptr(arg0);
 }
 
-void lsb_setnetent (int arg0 )
+void __lsb_setnetent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setnetent");

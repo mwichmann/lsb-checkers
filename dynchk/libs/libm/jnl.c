@@ -10,12 +10,12 @@ long double jnl (int arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jnl");
-	validate_NULL_TYPETYPE(arg0, "jnl");
-	validate_NULL_TYPETYPE(arg1, "jnl");
+	validate_NULL_TYPETYPE(  arg0, "jnl");
+	validate_NULL_TYPETYPE(  arg1, "jnl");
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_jnl (int arg0 , long double arg1 )
+long double __lsb_jnl (int arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jnl");

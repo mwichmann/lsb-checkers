@@ -20,7 +20,7 @@ void XShapeCombineRegion(Display * arg0, Window arg1, int arg2, int arg3, int ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-void lsb_XShapeCombineRegion(Display * arg0, Window arg1, int arg2, int arg3, int arg4, Region arg5, int arg6)
+void __lsb_XShapeCombineRegion(Display * arg0, Window arg1, int arg2, int arg3, int arg4, Region arg5, int arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShapeCombineRegion");

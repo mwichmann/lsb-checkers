@@ -10,12 +10,13 @@ int wechochar (WINDOW * arg0 , const chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wechochar");
-	validate_NULL_TYPETYPE(arg0, "wechochar");
-	validate_NULL_TYPETYPE(arg1, "wechochar");
+	validate_Rdaddress( arg0, "wechochar");
+	validate_NULL_TYPETYPE(  arg0, "wechochar");
+	validate_NULL_TYPETYPE(  arg1, "wechochar");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wechochar (WINDOW * arg0 , const chtype arg1 )
+int __lsb_wechochar (WINDOW * arg0 , const chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wechochar");

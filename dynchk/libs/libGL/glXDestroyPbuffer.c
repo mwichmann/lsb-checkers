@@ -14,7 +14,7 @@ void glXDestroyPbuffer(Display * arg0, GLXPbuffer arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glXDestroyPbuffer(Display * arg0, GLXPbuffer arg1)
+void __lsb_glXDestroyPbuffer(Display * arg0, GLXPbuffer arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXDestroyPbuffer");

@@ -10,11 +10,12 @@ int tigetnum (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tigetnum");
-	validate_NULL_TYPETYPE(arg0, "tigetnum");
+	validate_Rdaddress( arg0, "tigetnum");
+	validate_NULL_TYPETYPE(  arg0, "tigetnum");
 	return funcptr(arg0);
 }
 
-int lsb_tigetnum (char * arg0 )
+int __lsb_tigetnum (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tigetnum");

@@ -15,7 +15,7 @@ XOM XOpenOM(Display * arg0, _XrmHashBucketRec * arg1, char * arg2, char * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-XOM lsb_XOpenOM(Display * arg0, _XrmHashBucketRec * arg1, char * arg2, char * arg3)
+XOM __lsb_XOpenOM(Display * arg0, _XrmHashBucketRec * arg1, char * arg2, char * arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XOpenOM");

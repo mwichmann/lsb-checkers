@@ -14,7 +14,7 @@ Atom XInternAtom(Display * arg0, char * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-Atom lsb_XInternAtom(Display * arg0, char * arg1, int arg2)
+Atom __lsb_XInternAtom(Display * arg0, char * arg1, int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XInternAtom");

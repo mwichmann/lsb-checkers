@@ -12,14 +12,15 @@ ssize_t pread (int arg0 , void * arg1 , size_t arg2 , off_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pread");
-	validate_NULL_TYPETYPE(arg0, "pread");
-	validate_NULL_TYPETYPE(arg1, "pread");
-	validate_NULL_TYPETYPE(arg2, "pread");
-	validate_NULL_TYPETYPE(arg3, "pread");
+	validate_NULL_TYPETYPE(  arg0, "pread");
+	validate_Rdaddress( arg1, "pread");
+	validate_NULL_TYPETYPE(  arg1, "pread");
+	validate_NULL_TYPETYPE(  arg2, "pread");
+	validate_NULL_TYPETYPE(  arg3, "pread");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-ssize_t lsb_pread (int arg0 , void * arg1 , size_t arg2 , off_t arg3 )
+ssize_t __lsb_pread (int arg0 , void * arg1 , size_t arg2 , off_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pread");

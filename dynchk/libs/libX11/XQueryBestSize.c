@@ -19,7 +19,7 @@ int XQueryBestSize(Display * arg0, int arg1, Drawable arg2, unsigned int arg3, u
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_XQueryBestSize(Display * arg0, int arg1, Drawable arg2, unsigned int arg3, unsigned int arg4, unsigned int * arg5, unsigned int * arg6)
+int __lsb_XQueryBestSize(Display * arg0, int arg1, Drawable arg2, unsigned int arg3, unsigned int arg4, unsigned int * arg5, unsigned int * arg6)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XQueryBestSize");

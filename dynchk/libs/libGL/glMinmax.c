@@ -17,7 +17,7 @@ void glMinmax(GLenum arg0, GLenum arg1, GLboolean arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_glMinmax(GLenum arg0, GLenum arg1, GLboolean arg2)
+void __lsb_glMinmax(GLenum arg0, GLenum arg1, GLboolean arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glMinmax");

@@ -15,7 +15,7 @@ int XGetIconName(Display * arg0, Window arg1, char * * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XGetIconName(Display * arg0, Window arg1, char * * arg2)
+int __lsb_XGetIconName(Display * arg0, Window arg1, char * * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetIconName");

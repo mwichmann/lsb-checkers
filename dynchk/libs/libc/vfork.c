@@ -13,7 +13,7 @@ pid_t vfork ()
 	return funcptr();
 }
 
-pid_t lsb_vfork ()
+pid_t __lsb_vfork ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfork");

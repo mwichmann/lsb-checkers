@@ -13,7 +13,7 @@ unsigned int XSyncValueLow32(XSyncValue arg0)
 	return funcptr(arg0);
 }
 
-unsigned int lsb_XSyncValueLow32(XSyncValue arg0)
+unsigned int __lsb_XSyncValueLow32(XSyncValue arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncValueLow32");

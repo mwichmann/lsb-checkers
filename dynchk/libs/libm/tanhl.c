@@ -10,11 +10,11 @@ long double tanhl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tanhl");
-	validate_NULL_TYPETYPE(arg0, "tanhl");
+	validate_NULL_TYPETYPE(  arg0, "tanhl");
 	return funcptr(arg0);
 }
 
-long double lsb_tanhl (long double arg0 )
+long double __lsb_tanhl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tanhl");

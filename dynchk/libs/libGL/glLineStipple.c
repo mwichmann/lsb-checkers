@@ -15,7 +15,7 @@ void glLineStipple(GLint arg0, GLushort arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glLineStipple(GLint arg0, GLushort arg1)
+void __lsb_glLineStipple(GLint arg0, GLushort arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glLineStipple");

@@ -14,7 +14,7 @@ int XkbLockGroup(Display * arg0, unsigned int arg1, unsigned int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XkbLockGroup(Display * arg0, unsigned int arg1, unsigned int arg2)
+int __lsb_XkbLockGroup(Display * arg0, unsigned int arg1, unsigned int arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbLockGroup");

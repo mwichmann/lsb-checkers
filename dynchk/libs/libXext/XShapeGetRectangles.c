@@ -17,7 +17,7 @@ XRectangle * XShapeGetRectangles(Display * arg0, Window arg1, int arg2, int * ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-XRectangle * lsb_XShapeGetRectangles(Display * arg0, Window arg1, int arg2, int * arg3, int * arg4)
+XRectangle * __lsb_XShapeGetRectangles(Display * arg0, Window arg1, int arg2, int * arg3, int * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShapeGetRectangles");

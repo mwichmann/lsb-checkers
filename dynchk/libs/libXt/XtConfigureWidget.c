@@ -18,7 +18,7 @@ void XtConfigureWidget(Widget arg0, int arg1, int arg2, unsigned int arg3, unsig
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XtConfigureWidget(Widget arg0, int arg1, int arg2, unsigned int arg3, unsigned int arg4, unsigned int arg5)
+void __lsb_XtConfigureWidget(Widget arg0, int arg1, int arg2, unsigned int arg3, unsigned int arg4, unsigned int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtConfigureWidget");

@@ -11,7 +11,7 @@ int XESetCopyGC()
 	return funcptr();
 }
 
-int lsb_XESetCopyGC()
+int __lsb_XESetCopyGC()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XESetCopyGC");

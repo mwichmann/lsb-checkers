@@ -11,7 +11,7 @@ Boolean XtIsOverrideShell()
 	return funcptr();
 }
 
-Boolean lsb_XtIsOverrideShell()
+Boolean __lsb_XtIsOverrideShell()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsOverrideShell");

@@ -18,7 +18,7 @@ GLXContext glXCreateNewContext(Display * arg0, GLXFBConfig arg1, int arg2, GLXCo
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-GLXContext lsb_glXCreateNewContext(Display * arg0, GLXFBConfig arg1, int arg2, GLXContext arg3, int arg4)
+GLXContext __lsb_glXCreateNewContext(Display * arg0, GLXFBConfig arg1, int arg2, GLXContext arg3, int arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXCreateNewContext");

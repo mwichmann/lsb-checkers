@@ -10,11 +10,12 @@ void svcerr_decode (SVCXPRT * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_decode");
-	validate_NULL_TYPETYPE(arg0, "svcerr_decode");
+	validate_Rdaddress( arg0, "svcerr_decode");
+	validate_NULL_TYPETYPE(  arg0, "svcerr_decode");
 	funcptr(arg0);
 }
 
-void lsb_svcerr_decode (SVCXPRT * arg0 )
+void __lsb_svcerr_decode (SVCXPRT * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_decode");

@@ -15,7 +15,7 @@ void XSetWMNormalHints(Display * arg0, Window arg1, XSizeHints * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XSetWMNormalHints(Display * arg0, Window arg1, XSizeHints * arg2)
+void __lsb_XSetWMNormalHints(Display * arg0, Window arg1, XSizeHints * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSetWMNormalHints");

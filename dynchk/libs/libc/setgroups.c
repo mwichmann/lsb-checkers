@@ -12,12 +12,13 @@ int setgroups (size_t arg0 , const gid_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgroups");
-	validate_NULL_TYPETYPE(arg0, "setgroups");
-	validate_NULL_TYPETYPE(arg1, "setgroups");
+	validate_NULL_TYPETYPE(  arg0, "setgroups");
+	validate_Rdaddress( arg1, "setgroups");
+	validate_NULL_TYPETYPE(  arg1, "setgroups");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_setgroups (size_t arg0 , const gid_t * arg1 )
+int __lsb_setgroups (size_t arg0 , const gid_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgroups");

@@ -10,11 +10,11 @@ double tanh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tanh");
-	validate_NULL_TYPETYPE(arg0, "tanh");
+	validate_NULL_TYPETYPE(  arg0, "tanh");
 	return funcptr(arg0);
 }
 
-double lsb_tanh (double arg0 )
+double __lsb_tanh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tanh");

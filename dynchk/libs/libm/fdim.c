@@ -10,12 +10,12 @@ double fdim (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdim");
-	validate_NULL_TYPETYPE(arg0, "fdim");
-	validate_NULL_TYPETYPE(arg1, "fdim");
+	validate_NULL_TYPETYPE(  arg0, "fdim");
+	validate_NULL_TYPETYPE(  arg1, "fdim");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_fdim (double arg0 , double arg1 )
+double __lsb_fdim (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdim");

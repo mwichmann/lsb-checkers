@@ -12,7 +12,7 @@ XtAppContext XtDisplayToApplicationContext(Display * arg0)
 	return funcptr(arg0);
 }
 
-XtAppContext lsb_XtDisplayToApplicationContext(Display * arg0)
+XtAppContext __lsb_XtDisplayToApplicationContext(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtDisplayToApplicationContext");

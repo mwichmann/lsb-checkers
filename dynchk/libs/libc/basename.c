@@ -10,11 +10,12 @@ char * basename (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "basename");
-	validate_NULL_TYPETYPE(arg0, "basename");
+	validate_Rdaddress( arg0, "basename");
+	validate_NULL_TYPETYPE(  arg0, "basename");
 	return funcptr(arg0);
 }
 
-char * lsb_basename (const char * arg0 )
+char * __lsb_basename (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "basename");

@@ -14,7 +14,7 @@ int XClipBox(Region arg0, XRectangle * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XClipBox(Region arg0, XRectangle * arg1)
+int __lsb_XClipBox(Region arg0, XRectangle * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XClipBox");

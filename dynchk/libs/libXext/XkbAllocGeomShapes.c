@@ -13,7 +13,7 @@ int XkbAllocGeomShapes(XkbGeometryPtr arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XkbAllocGeomShapes(XkbGeometryPtr arg0, int arg1)
+int __lsb_XkbAllocGeomShapes(XkbGeometryPtr arg0, int arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbAllocGeomShapes");

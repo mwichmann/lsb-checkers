@@ -13,7 +13,7 @@ struct AUTH * authnone_create ()
 	return funcptr();
 }
 
-struct AUTH * lsb_authnone_create ()
+struct AUTH * __lsb_authnone_create ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "authnone_create");

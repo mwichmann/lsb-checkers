@@ -18,7 +18,7 @@ int XkbSetNamedIndicator(Display * arg0, Atom arg1, int arg2, int arg3, int arg4
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_XkbSetNamedIndicator(Display * arg0, Atom arg1, int arg2, int arg3, int arg4, XkbIndicatorMapPtr arg5)
+int __lsb_XkbSetNamedIndicator(Display * arg0, Atom arg1, int arg2, int arg3, int arg4, XkbIndicatorMapPtr arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XkbSetNamedIndicator");

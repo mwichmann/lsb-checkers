@@ -13,7 +13,7 @@ int XShmAttach(Display * arg0, XShmSegmentInfo * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_XShmAttach(Display * arg0, XShmSegmentInfo * arg1)
+int __lsb_XShmAttach(Display * arg0, XShmSegmentInfo * arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XShmAttach");

@@ -10,12 +10,12 @@ double hypot (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hypot");
-	validate_NULL_TYPETYPE(arg0, "hypot");
-	validate_NULL_TYPETYPE(arg1, "hypot");
+	validate_NULL_TYPETYPE(  arg0, "hypot");
+	validate_NULL_TYPETYPE(  arg1, "hypot");
 	return funcptr(arg0, arg1);
 }
 
-double lsb_hypot (double arg0 , double arg1 )
+double __lsb_hypot (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hypot");

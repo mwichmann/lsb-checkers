@@ -12,7 +12,7 @@ int XFreeExtensionList(char * * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XFreeExtensionList(char * * arg0)
+int __lsb_XFreeExtensionList(char * * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XFreeExtensionList");

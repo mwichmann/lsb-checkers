@@ -15,7 +15,7 @@ void glEvalCoord2f(GLfloat arg0, GLfloat arg1)
 	return funcptr(arg0, arg1);
 }
 
-void lsb_glEvalCoord2f(GLfloat arg0, GLfloat arg1)
+void __lsb_glEvalCoord2f(GLfloat arg0, GLfloat arg1)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glEvalCoord2f");

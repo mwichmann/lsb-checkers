@@ -13,7 +13,7 @@ int XSyncValueIsNegative(XSyncValue arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XSyncValueIsNegative(XSyncValue arg0)
+int __lsb_XSyncValueIsNegative(XSyncValue arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSyncValueIsNegative");

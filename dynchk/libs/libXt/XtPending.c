@@ -12,7 +12,7 @@ Boolean XtPending(void arg0)
 	return funcptr(arg0);
 }
 
-Boolean lsb_XtPending(void arg0)
+Boolean __lsb_XtPending(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtPending");

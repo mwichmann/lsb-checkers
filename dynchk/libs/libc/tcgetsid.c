@@ -10,11 +10,11 @@ pid_t tcgetsid (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcgetsid");
-	validate_NULL_TYPETYPE(arg0, "tcgetsid");
+	validate_NULL_TYPETYPE(  arg0, "tcgetsid");
 	return funcptr(arg0);
 }
 
-pid_t lsb_tcgetsid (int arg0 )
+pid_t __lsb_tcgetsid (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcgetsid");

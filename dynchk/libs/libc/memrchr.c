@@ -11,13 +11,14 @@ void * memrchr (const void * arg0 , int arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memrchr");
-	validate_NULL_TYPETYPE(arg0, "memrchr");
-	validate_NULL_TYPETYPE(arg1, "memrchr");
-	validate_NULL_TYPETYPE(arg2, "memrchr");
+	validate_Rdaddress( arg0, "memrchr");
+	validate_NULL_TYPETYPE(  arg0, "memrchr");
+	validate_NULL_TYPETYPE(  arg1, "memrchr");
+	validate_NULL_TYPETYPE(  arg2, "memrchr");
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_memrchr (const void * arg0 , int arg1 , size_t arg2 )
+void * __lsb_memrchr (const void * arg0 , int arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memrchr");

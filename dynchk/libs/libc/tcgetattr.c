@@ -21,7 +21,7 @@ int tcgetattr (int arg0 , struct termios * arg1 )
 	return ret;
 }
 
-int lsb_tcgetattr (int arg0 , struct termios * arg1 )
+int __lsb_tcgetattr (int arg0 , struct termios * arg1 )
 {
 	int ret;
 

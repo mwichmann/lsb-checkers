@@ -10,14 +10,18 @@ int wattr_get (WINDOW * arg0 , attr_t * arg1 , short * arg2 , void * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattr_get");
-	validate_NULL_TYPETYPE(arg0, "wattr_get");
-	validate_NULL_TYPETYPE(arg1, "wattr_get");
-	validate_NULL_TYPETYPE(arg2, "wattr_get");
-	validate_NULL_TYPETYPE(arg3, "wattr_get");
+	validate_Rdaddress( arg0, "wattr_get");
+	validate_NULL_TYPETYPE(  arg0, "wattr_get");
+	validate_Rdaddress( arg1, "wattr_get");
+	validate_NULL_TYPETYPE(  arg1, "wattr_get");
+	validate_Rdaddress( arg2, "wattr_get");
+	validate_NULL_TYPETYPE(  arg2, "wattr_get");
+	validate_Rdaddress( arg3, "wattr_get");
+	validate_NULL_TYPETYPE(  arg3, "wattr_get");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_wattr_get (WINDOW * arg0 , attr_t * arg1 , short * arg2 , void * arg3 )
+int __lsb_wattr_get (WINDOW * arg0 , attr_t * arg1 , short * arg2 , void * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattr_get");

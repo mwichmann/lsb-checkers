@@ -13,7 +13,7 @@ Widget XtParent(Widget arg0)
 	return funcptr(arg0);
 }
 
-Widget lsb_XtParent(Widget arg0)
+Widget __lsb_XtParent(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtParent");

@@ -17,7 +17,7 @@ int XSendEvent(Display * arg0, Window arg1, int arg2, long arg3, XEvent * arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_XSendEvent(Display * arg0, Window arg1, int arg2, long arg3, XEvent * arg4)
+int __lsb_XSendEvent(Display * arg0, Window arg1, int arg2, long arg3, XEvent * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XSendEvent");

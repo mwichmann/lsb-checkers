@@ -21,7 +21,7 @@ void XtSetSelectionParameters(Widget arg0, Atom arg1, Atom arg2, XtPointer arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_XtSetSelectionParameters(Widget arg0, Atom arg1, Atom arg2, XtPointer arg3, unsigned long arg4, int arg5)
+void __lsb_XtSetSelectionParameters(Widget arg0, Atom arg1, Atom arg2, XtPointer arg3, unsigned long arg4, int arg5)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSetSelectionParameters");

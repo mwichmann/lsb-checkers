@@ -12,14 +12,16 @@ int vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vswprintf");
-	validate_NULL_TYPETYPE(arg0, "vswprintf");
-	validate_NULL_TYPETYPE(arg1, "vswprintf");
-	validate_NULL_TYPETYPE(arg2, "vswprintf");
-	validate_NULL_TYPETYPE(arg3, "vswprintf");
+	validate_Rdaddress( arg0, "vswprintf");
+	validate_NULL_TYPETYPE(  arg0, "vswprintf");
+	validate_NULL_TYPETYPE(  arg1, "vswprintf");
+	validate_Rdaddress( arg2, "vswprintf");
+	validate_NULL_TYPETYPE(  arg2, "vswprintf");
+	validate_NULL_TYPETYPE(  arg3, "vswprintf");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg3 )
+int __lsb_vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vswprintf");

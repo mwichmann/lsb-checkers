@@ -10,11 +10,11 @@ int raise (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "raise");
-	validate_NULL_TYPETYPE(arg0, "raise");
+	validate_NULL_TYPETYPE(  arg0, "raise");
 	return funcptr(arg0);
 }
 
-int lsb_raise (int arg0 )
+int __lsb_raise (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "raise");

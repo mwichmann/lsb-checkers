@@ -12,7 +12,7 @@ XtAppContext XtCreateApplicationContext(void arg0)
 	return funcptr(arg0);
 }
 
-XtAppContext lsb_XtCreateApplicationContext(void arg0)
+XtAppContext __lsb_XtCreateApplicationContext(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtCreateApplicationContext");

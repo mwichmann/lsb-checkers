@@ -17,7 +17,7 @@ XtGeometryResult XtMakeResizeRequest(Widget arg0, unsigned int arg1, unsigned in
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-XtGeometryResult lsb_XtMakeResizeRequest(Widget arg0, unsigned int arg1, unsigned int arg2, Dimension * arg3, Dimension * arg4)
+XtGeometryResult __lsb_XtMakeResizeRequest(Widget arg0, unsigned int arg1, unsigned int arg2, Dimension * arg3, Dimension * arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtMakeResizeRequest");

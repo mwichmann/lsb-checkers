@@ -12,7 +12,7 @@ gensrc:
 	for d in $(LIBS);do (./gen_lib.pl -l $$d );done
 
 header:
-	for d in $(LIBS);do (cd $$d;cproto $(CDEFINES) *.c )| grep 'lsb_' ;done > lsb_funcs.h
+	for d in $(LIBS);do (cd $$d;cproto $(CDEFINES) *.c )| grep 'lsb_' ;done > __lsb_funcs.h
 	
 
 clean:

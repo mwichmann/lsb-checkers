@@ -10,11 +10,11 @@ int ungetch (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetch");
-	validate_NULL_TYPETYPE(arg0, "ungetch");
+	validate_NULL_TYPETYPE(  arg0, "ungetch");
 	return funcptr(arg0);
 }
 
-int lsb_ungetch (int arg0 )
+int __lsb_ungetch (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetch");

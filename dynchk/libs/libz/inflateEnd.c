@@ -10,11 +10,11 @@ int inflateEnd (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateEnd");
-	validate_NULL_TYPETYPE(arg0, "inflateEnd");
+	validate_NULL_TYPETYPE(  arg0, "inflateEnd");
 	return funcptr(arg0);
 }
 
-int lsb_inflateEnd (z_streamp arg0 )
+int __lsb_inflateEnd (z_streamp arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateEnd");

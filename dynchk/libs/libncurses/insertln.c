@@ -13,7 +13,7 @@ int insertln ()
 	return funcptr();
 }
 
-int lsb_insertln ()
+int __lsb_insertln ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insertln");

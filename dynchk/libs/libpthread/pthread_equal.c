@@ -10,12 +10,12 @@ int pthread_equal (pthread_t arg0 , pthread_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_equal");
-	validate_NULL_TYPETYPE(arg0, "pthread_equal");
-	validate_NULL_TYPETYPE(arg1, "pthread_equal");
+	validate_NULL_TYPETYPE(  arg0, "pthread_equal");
+	validate_NULL_TYPETYPE(  arg1, "pthread_equal");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_equal (pthread_t arg0 , pthread_t arg1 )
+int __lsb_pthread_equal (pthread_t arg0 , pthread_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_equal");

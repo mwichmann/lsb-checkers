@@ -13,7 +13,7 @@ const int32_t * * __ctype_tolower_loc ()
 	return funcptr();
 }
 
-const int32_t * * lsb___ctype_tolower_loc ()
+const int32_t * * __lsb___ctype_tolower_loc ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_tolower_loc");

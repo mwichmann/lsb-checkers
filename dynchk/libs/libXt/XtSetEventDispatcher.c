@@ -15,7 +15,7 @@ XtEventDispatchProc XtSetEventDispatcher(Display * arg0, int arg1, XtEventDispat
 	return funcptr(arg0, arg1, arg2);
 }
 
-XtEventDispatchProc lsb_XtSetEventDispatcher(Display * arg0, int arg1, XtEventDispatchProc arg2)
+XtEventDispatchProc __lsb_XtSetEventDispatcher(Display * arg0, int arg1, XtEventDispatchProc arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtSetEventDispatcher");

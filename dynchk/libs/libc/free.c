@@ -15,7 +15,7 @@ void free (void * arg0 )
 	funcptr(arg0);
 }
 
-void lsb_free (void * arg0 )
+void __lsb_free (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = __libc_free;

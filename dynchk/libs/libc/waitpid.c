@@ -11,13 +11,14 @@ pid_t waitpid (pid_t arg0 , int * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waitpid");
-	validate_NULL_TYPETYPE(arg0, "waitpid");
-	validate_NULL_TYPETYPE(arg1, "waitpid");
-	validate_NULL_TYPETYPE(arg2, "waitpid");
+	validate_NULL_TYPETYPE(  arg0, "waitpid");
+	validate_Rdaddress( arg1, "waitpid");
+	validate_NULL_TYPETYPE(  arg1, "waitpid");
+	validate_NULL_TYPETYPE(  arg2, "waitpid");
 	return funcptr(arg0, arg1, arg2);
 }
 
-pid_t lsb_waitpid (pid_t arg0 , int * arg1 , int arg2 )
+pid_t __lsb_waitpid (pid_t arg0 , int * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waitpid");

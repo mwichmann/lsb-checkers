@@ -10,11 +10,12 @@ int atoi (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atoi");
-	validate_NULL_TYPETYPE(arg0, "atoi");
+	validate_Rdaddress( arg0, "atoi");
+	validate_NULL_TYPETYPE(  arg0, "atoi");
 	return funcptr(arg0);
 }
 
-int lsb_atoi (const char * arg0 )
+int __lsb_atoi (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atoi");

@@ -10,11 +10,12 @@ char * getwd (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwd");
-	validate_NULL_TYPETYPE(arg0, "getwd");
+	validate_Rdaddress( arg0, "getwd");
+	validate_NULL_TYPETYPE(  arg0, "getwd");
 	return funcptr(arg0);
 }
 
-char * lsb_getwd (char * arg0 )
+char * __lsb_getwd (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwd");

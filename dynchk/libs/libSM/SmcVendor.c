@@ -13,7 +13,7 @@ char * SmcVendor(SmcConn arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_SmcVendor(SmcConn arg0)
+char * __lsb_SmcVendor(SmcConn arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcVendor");

@@ -10,12 +10,13 @@ void wtimeout (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wtimeout");
-	validate_NULL_TYPETYPE(arg0, "wtimeout");
-	validate_NULL_TYPETYPE(arg1, "wtimeout");
+	validate_Rdaddress( arg0, "wtimeout");
+	validate_NULL_TYPETYPE(  arg0, "wtimeout");
+	validate_NULL_TYPETYPE(  arg1, "wtimeout");
 	funcptr(arg0, arg1);
 }
 
-void lsb_wtimeout (WINDOW * arg0 , int arg1 )
+void __lsb_wtimeout (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wtimeout");

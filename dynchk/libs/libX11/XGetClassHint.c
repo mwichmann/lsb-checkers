@@ -15,7 +15,7 @@ int XGetClassHint(Display * arg0, Window arg1, XClassHint * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_XGetClassHint(Display * arg0, Window arg1, XClassHint * arg2)
+int __lsb_XGetClassHint(Display * arg0, Window arg1, XClassHint * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XGetClassHint");

@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef creall
 static long double(*funcptr) (long double complex ) = 0;
@@ -11,11 +10,11 @@ long double creall (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creall");
-	validate_NULL_TYPETYPE(arg0, "creall");
+	validate_NULL_TYPETYPE(  arg0, "creall");
 	return funcptr(arg0);
 }
 
-long double lsb_creall (long double complex arg0 )
+long double __lsb_creall (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creall");

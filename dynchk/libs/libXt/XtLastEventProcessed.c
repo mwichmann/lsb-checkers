@@ -12,7 +12,7 @@ XEvent * XtLastEventProcessed(Display * arg0)
 	return funcptr(arg0);
 }
 
-XEvent * lsb_XtLastEventProcessed(Display * arg0)
+XEvent * __lsb_XtLastEventProcessed(Display * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtLastEventProcessed");

@@ -12,7 +12,7 @@ char * IceAuthFileName(void arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_IceAuthFileName(void arg0)
+char * __lsb_IceAuthFileName(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceAuthFileName");

@@ -15,7 +15,7 @@ void XtGetActionList(WidgetClass arg0, XtActionList * arg1, Cardinal * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void lsb_XtGetActionList(WidgetClass arg0, XtActionList * arg1, Cardinal * arg2)
+void __lsb_XtGetActionList(WidgetClass arg0, XtActionList * arg1, Cardinal * arg2)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtGetActionList");

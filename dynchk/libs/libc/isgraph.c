@@ -10,11 +10,11 @@ int isgraph (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isgraph");
-	validate_NULL_TYPETYPE(arg0, "isgraph");
+	validate_NULL_TYPETYPE(  arg0, "isgraph");
 	return funcptr(arg0);
 }
 
-int lsb_isgraph (int arg0 )
+int __lsb_isgraph (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isgraph");

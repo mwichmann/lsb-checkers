@@ -18,7 +18,7 @@ void * dlsym (void * arg0 , const char * arg1 )
 }
 #endif
 
-void * lsb_dlsym (void * arg0 , const char * arg1 )
+void * __lsb_dlsym (void * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = _dl_sym;

@@ -10,11 +10,11 @@ long double atanhl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanhl");
-	validate_NULL_TYPETYPE(arg0, "atanhl");
+	validate_NULL_TYPETYPE(  arg0, "atanhl");
 	return funcptr(arg0);
 }
 
-long double lsb_atanhl (long double arg0 )
+long double __lsb_atanhl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atanhl");

@@ -13,7 +13,7 @@ void noqiflush ()
 	funcptr();
 }
 
-void lsb_noqiflush ()
+void __lsb_noqiflush ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "noqiflush");

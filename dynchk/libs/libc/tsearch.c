@@ -11,13 +11,16 @@ void * tsearch (const void * arg0 , void * * arg1 , __compar_fn_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tsearch");
-	validate_NULL_TYPETYPE(arg0, "tsearch");
-	validate_NULL_TYPETYPE(arg1, "tsearch");
-	validate_NULL_TYPETYPE(arg2, "tsearch");
+	validate_Rdaddress( arg0, "tsearch");
+	validate_NULL_TYPETYPE(  arg0, "tsearch");
+	validate_Rdaddress( arg1, "tsearch");
+	validate_Rdaddress(* arg1, "tsearch");
+	validate_NULL_TYPETYPE(  arg1, "tsearch");
+	validate_NULL_TYPETYPE(  arg2, "tsearch");
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_tsearch (const void * arg0 , void * * arg1 , __compar_fn_t arg2 )
+void * __lsb_tsearch (const void * arg0 , void * * arg1 , __compar_fn_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tsearch");

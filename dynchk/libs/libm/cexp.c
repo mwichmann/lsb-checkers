@@ -2,7 +2,6 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <math.h>
 #include <complex.h>
 #undef cexp
 static double complex(*funcptr) (double complex ) = 0;
@@ -11,11 +10,11 @@ double complex cexp (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cexp");
-	validate_NULL_TYPETYPE(arg0, "cexp");
+	validate_NULL_TYPETYPE(  arg0, "cexp");
 	return funcptr(arg0);
 }
 
-double complex lsb_cexp (double complex arg0 )
+double complex __lsb_cexp (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cexp");

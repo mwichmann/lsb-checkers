@@ -12,7 +12,7 @@ int XHeightMMOfScreen(Screen * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_XHeightMMOfScreen(Screen * arg0)
+int __lsb_XHeightMMOfScreen(Screen * arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XHeightMMOfScreen");

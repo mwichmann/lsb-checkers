@@ -10,12 +10,12 @@ float remainderf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remainderf");
-	validate_NULL_TYPETYPE(arg0, "remainderf");
-	validate_NULL_TYPETYPE(arg1, "remainderf");
+	validate_NULL_TYPETYPE(  arg0, "remainderf");
+	validate_NULL_TYPETYPE(  arg1, "remainderf");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_remainderf (float arg0 , float arg1 )
+float __lsb_remainderf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remainderf");

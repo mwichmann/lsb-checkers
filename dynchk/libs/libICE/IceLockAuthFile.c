@@ -15,7 +15,7 @@ int IceLockAuthFile(char * arg0, int arg1, int arg2, long arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_IceLockAuthFile(char * arg0, int arg1, int arg2, long arg3)
+int __lsb_IceLockAuthFile(char * arg0, int arg1, int arg2, long arg3)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "IceLockAuthFile");

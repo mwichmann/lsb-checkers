@@ -10,12 +10,12 @@ float ldexpf (float arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexpf");
-	validate_NULL_TYPETYPE(arg0, "ldexpf");
-	validate_NULL_TYPETYPE(arg1, "ldexpf");
+	validate_NULL_TYPETYPE(  arg0, "ldexpf");
+	validate_NULL_TYPETYPE(  arg1, "ldexpf");
 	return funcptr(arg0, arg1);
 }
 
-float lsb_ldexpf (float arg0 , int arg1 )
+float __lsb_ldexpf (float arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexpf");

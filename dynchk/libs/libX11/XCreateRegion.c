@@ -12,7 +12,7 @@ Region XCreateRegion(void arg0)
 	return funcptr(arg0);
 }
 
-Region lsb_XCreateRegion(void arg0)
+Region __lsb_XCreateRegion(void arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XCreateRegion");

@@ -13,7 +13,7 @@ int pause ()
 	return funcptr();
 }
 
-int lsb_pause ()
+int __lsb_pause ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pause");

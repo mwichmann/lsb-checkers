@@ -20,7 +20,7 @@ Widget XtCreateWidget(char * arg0, WidgetClass arg1, Widget arg2, ArgList arg3, 
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-Widget lsb_XtCreateWidget(char * arg0, WidgetClass arg1, Widget arg2, ArgList arg3, Cardinal arg4)
+Widget __lsb_XtCreateWidget(char * arg0, WidgetClass arg1, Widget arg2, ArgList arg3, Cardinal arg4)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtCreateWidget");

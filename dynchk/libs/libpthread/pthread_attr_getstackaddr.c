@@ -10,12 +10,15 @@ int pthread_attr_getstackaddr (const pthread_attr_t * arg0 , void * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_getstackaddr");
-	validate_NULL_TYPETYPE(arg0, "pthread_attr_getstackaddr");
-	validate_NULL_TYPETYPE(arg1, "pthread_attr_getstackaddr");
+	validate_Rdaddress( arg0, "pthread_attr_getstackaddr");
+	validate_NULL_TYPETYPE(  arg0, "pthread_attr_getstackaddr");
+	validate_Rdaddress( arg1, "pthread_attr_getstackaddr");
+	validate_Rdaddress(* arg1, "pthread_attr_getstackaddr");
+	validate_NULL_TYPETYPE(  arg1, "pthread_attr_getstackaddr");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_attr_getstackaddr (const pthread_attr_t * arg0 , void * * arg1 )
+int __lsb_pthread_attr_getstackaddr (const pthread_attr_t * arg0 , void * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_getstackaddr");

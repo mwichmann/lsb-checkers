@@ -22,7 +22,7 @@ int XWMGeometry(Display * arg0, int arg1, char * arg2, char * arg3, unsigned int
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 }
 
-int lsb_XWMGeometry(Display * arg0, int arg1, char * arg2, char * arg3, unsigned int arg4, XSizeHints * arg5, int * arg6, int * arg7, int * arg8, int * arg9, int * arg10)
+int __lsb_XWMGeometry(Display * arg0, int arg1, char * arg2, char * arg3, unsigned int arg4, XSizeHints * arg5, int * arg6, int * arg7, int * arg8, int * arg9, int * arg10)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XWMGeometry");

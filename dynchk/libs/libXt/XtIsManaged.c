@@ -13,7 +13,7 @@ Boolean XtIsManaged(Widget arg0)
 	return funcptr(arg0);
 }
 
-Boolean lsb_XtIsManaged(Widget arg0)
+Boolean __lsb_XtIsManaged(Widget arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtIsManaged");

@@ -10,11 +10,12 @@ int tgetflag (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetflag");
-	validate_NULL_TYPETYPE(arg0, "tgetflag");
+	validate_Rdaddress( arg0, "tgetflag");
+	validate_NULL_TYPETYPE(  arg0, "tgetflag");
 	return funcptr(arg0);
 }
 
-int lsb_tgetflag (char * arg0 )
+int __lsb_tgetflag (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetflag");

@@ -10,13 +10,14 @@ int __fxstat (int arg0 , int arg1 , struct stat * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__fxstat");
-	validate_NULL_TYPETYPE(arg0, "__fxstat");
-	validate_NULL_TYPETYPE(arg1, "__fxstat");
-	validate_NULL_TYPETYPE(arg2, "__fxstat");
+	validate_NULL_TYPETYPE(  arg0, "__fxstat");
+	validate_NULL_TYPETYPE(  arg1, "__fxstat");
+	validate_Rdaddress( arg2, "__fxstat");
+	validate_NULL_TYPETYPE(  arg2, "__fxstat");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb___fxstat (int arg0 , int arg1 , struct stat * arg2 )
+int __lsb___fxstat (int arg0 , int arg1 , struct stat * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__fxstat");

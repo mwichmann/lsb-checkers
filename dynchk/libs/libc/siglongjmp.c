@@ -10,12 +10,12 @@ void siglongjmp (sigjmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siglongjmp");
-	validate_NULL_TYPETYPE(arg0, "siglongjmp");
-	validate_NULL_TYPETYPE(arg1, "siglongjmp");
+	validate_NULL_TYPETYPE(  arg0, "siglongjmp");
+	validate_NULL_TYPETYPE(  arg1, "siglongjmp");
 	funcptr(arg0, arg1);
 }
 
-void lsb_siglongjmp (sigjmp_buf arg0 , int arg1 )
+void __lsb_siglongjmp (sigjmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siglongjmp");

@@ -11,13 +11,13 @@ int fchown (int arg0 , uid_t arg1 , gid_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchown");
-	validate_NULL_TYPETYPE(arg0, "fchown");
-	validate_NULL_TYPETYPE(arg1, "fchown");
-	validate_NULL_TYPETYPE(arg2, "fchown");
+	validate_NULL_TYPETYPE(  arg0, "fchown");
+	validate_NULL_TYPETYPE(  arg1, "fchown");
+	validate_NULL_TYPETYPE(  arg2, "fchown");
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_fchown (int arg0 , uid_t arg1 , gid_t arg2 )
+int __lsb_fchown (int arg0 , uid_t arg1 , gid_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchown");

@@ -13,7 +13,7 @@ void XtInitializeWidgetClass(WidgetClass arg0)
 	return funcptr(arg0);
 }
 
-void lsb_XtInitializeWidgetClass(WidgetClass arg0)
+void __lsb_XtInitializeWidgetClass(WidgetClass arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XtInitializeWidgetClass");

@@ -13,7 +13,7 @@ void glClear(GLbitfield arg0)
 	return funcptr(arg0);
 }
 
-void lsb_glClear(GLbitfield arg0)
+void __lsb_glClear(GLbitfield arg0)
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glClear");

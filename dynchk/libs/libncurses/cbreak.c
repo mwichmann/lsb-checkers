@@ -13,7 +13,7 @@ int cbreak ()
 	return funcptr();
 }
 
-int lsb_cbreak ()
+int __lsb_cbreak ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbreak");
