@@ -93,6 +93,16 @@ CheckMemberSize(struct passwd,pw_dir,8,9,30046)
 CheckOffset(struct passwd,pw_dir,32,9,30046)
 CheckMemberSize(struct passwd,pw_shell,8,9,30047)
 CheckOffset(struct passwd,pw_shell,40,9,30047)
+#elif __s390x__
+CheckTypeSize(struct passwd,0, 6938, 12)
+Msg("Missing member data for passwd on S390X\n");
+CheckOffset(struct passwd,pw_name,0,12,30041)
+CheckOffset(struct passwd,pw_passwd,0,12,30042)
+CheckOffset(struct passwd,pw_uid,0,12,30043)
+CheckOffset(struct passwd,pw_gid,0,12,30044)
+CheckOffset(struct passwd,pw_gecos,0,12,30045)
+CheckOffset(struct passwd,pw_dir,0,12,30046)
+CheckOffset(struct passwd,pw_shell,0,12,30047)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6938,0);
 Msg("Find size of passwd (6938)\n");

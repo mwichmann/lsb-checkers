@@ -33,6 +33,8 @@ CheckTypeSize(Xauth,32, 8961, 6)
 CheckTypeSize(Xauth,32, 8961, 10)
 #elif __powerpc64__
 CheckTypeSize(Xauth,64, 8961, 9)
+#elif __s390x__
+CheckTypeSize(Xauth,0, 8961, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8961,0);
 Msg("Find size of Xauth (8961)\n");

@@ -62,6 +62,8 @@ CheckTypeSize(jmp_buf,364, 6962, 6)
 CheckTypeSize(jmp_buf,456, 6962, 9)
 #elif __not_def__
 CheckTypeSize(jmp_buf,1, 6962, 8)
+#elif __s390x__
+CheckTypeSize(jmp_buf,0, 6962, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
 Msg("Find size of jmp_buf (6962)\n");
@@ -77,6 +79,8 @@ CheckTypeSize(sigjmp_buf,364, 6963, 6)
 CheckTypeSize(sigjmp_buf,188, 6963, 10)
 #elif __powerpc64__
 CheckTypeSize(sigjmp_buf,456, 6963, 9)
+#elif __s390x__
+CheckTypeSize(sigjmp_buf,0, 6963, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6963,0);
 Msg("Find size of sigjmp_buf (6963)\n");

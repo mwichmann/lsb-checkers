@@ -183,6 +183,13 @@ CheckMemberSize(struct sockaddr_in,sin_addr,4,9,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,9,33778)
 CheckMemberSize(struct sockaddr_in,sin_zero,8,9,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,9,33779)
+#elif __s390x__
+CheckTypeSize(struct sockaddr_in,0, 9141, 12)
+Msg("Missing member data for sockaddr_in on S390X\n");
+CheckOffset(struct sockaddr_in,sin_family,0,12,33776)
+CheckOffset(struct sockaddr_in,sin_port,0,12,33777)
+CheckOffset(struct sockaddr_in,sin_addr,0,12,33778)
+CheckOffset(struct sockaddr_in,sin_zero,0,12,33779)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 Msg("Find size of sockaddr_in (9141)\n");

@@ -143,6 +143,8 @@ CheckTypeSize(fpos_t,12, 9108, 6)
 CheckTypeSize(fpos_t,12, 9108, 10)
 #elif __powerpc64__
 CheckTypeSize(fpos_t,16, 9108, 9)
+#elif __s390x__
+CheckTypeSize(fpos_t,0, 9108, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9108,0);
 Msg("Find size of fpos_t (9108)\n");
@@ -158,6 +160,8 @@ CheckTypeSize(fpos64_t,16, 9109, 6)
 CheckTypeSize(fpos64_t,16, 9109, 10)
 #elif __powerpc64__
 CheckTypeSize(fpos64_t,16, 9109, 9)
+#elif __s390x__
+CheckTypeSize(fpos64_t,0, 9109, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9109,0);
 Msg("Find size of fpos64_t (9109)\n");
@@ -178,6 +182,8 @@ CheckTypeSize(FILE,152, 8782, 6)
 CheckTypeSize(FILE,152, 8782, 10)
 #elif __powerpc64__
 CheckTypeSize(FILE,216, 8782, 9)
+#elif __s390x__
+CheckTypeSize(FILE,0, 8782, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
 Msg("Find size of FILE (8782)\n");
