@@ -26,5 +26,5 @@ distclean: clean
 clean:
 	rm -f $(OBJS) cmdchk
 
-.PHONE: clean distclean
+.PHONY: clean distclean
 
