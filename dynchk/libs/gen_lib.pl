@@ -207,7 +207,7 @@ my $basetype_header_q = $dbh->prepare(
 
 my $header_name_q = $dbh->prepare(
 'Select Hname from HeaderGroup, Header
-Where ? = HGid and HGheader = Hid')
+Where ? = HGid and HGheader = Hid ORDER BY Hid')
 	or die "Couldn't prepare header_name query: ".DBI->errstr;
 
 my $write_int_declaration_q = $dbh->prepare(
