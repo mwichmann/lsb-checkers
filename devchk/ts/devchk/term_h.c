@@ -35,7 +35,7 @@ CheckTypeSize(TERMINAL,0, 10846, 10)
 #elif __s390x__
 CheckTypeSize(TERMINAL,0, 10846, 12)
 #elif __ia64__
-CheckTypeSize(TERMINAL,0, 10846, 3)
+CheckTypeSize(TERMINAL,200, 10846, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10846,0);
 Msg("Find size of TERMINAL (10846)\n");
