@@ -8,7 +8,11 @@ FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
 CFLAGS=-I../../tests -fPIC -Wall 
 
-all: $(FUNCS)
+all: $(FUNCS) libc.o
+
+libc.o : $(FUNCS)
+	$(LD) -r -o $@ $(FUNCS)
+
 
 clean:
 	rm -f $(FUNCS)
