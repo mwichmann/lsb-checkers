@@ -1,0 +1,90 @@
+tetj is a simple way of creating journals which can be analysed
+using standard TET journal tools without having to compile or
+link against the TET libraries.  It does not pretend to be a
+full tet implementation.
+
+tetj.py is an experimental Python version.
+
+tetj/tetj.py support for the TET journal entry types:
+
+These types are supported
+========================================================
+Test Case Controller Start
+	0|version time date|who
+Local System Information
+	5|sysname nodename release version machine|text
+Test Case Start
+	10|activity testcase time|IClist
+Configuration Variable Setting
+	30||variable=value
+Test Case Controller Message
+	50||text
+Text Case End
+	80|activity status time|text
+Test Purpose Start
+	200|activity TPnumber time|text
+Test Purpose Result
+	220|activity TPnumber result time|result-name
+Invocable Component Start
+	400|activity ICnumber TPcount time|text
+Invocable Component End
+	410|activity ICnumber TPcount time|text
+Test Case Information
+	520|activity TPnumber context block sequence|text
+Test Case Controller End
+	900|time|text
+
+These types are NOT currently supported
+========================================================
+Test Case Manager Start
+	15|activity version ICcount|text
+Local System Configuration Start
+	20|pathname mode|text
+Remote System Configuration Start
+	20|nnn mode|text
+Configuration End
+	40||text
+Scenario Information
+	70||text
+User Abort
+	90|time|text
+Captured Output
+	100|activity|text
+Build Start
+	110|activity testcase time|text
+Build End
+	130|activity status time|text
+Clean Start
+	300|activity testcase time|text
+Clean End
+	320|activity status time|text
+Test Case Manager Message
+	510|activity|text
+Parallel Start
+	600|count|text
+Parallel End
+	620||text
+Implied Sequential Start
+	630||text
+Implied Sequential End
+	640||text
+Repeat Start
+	700|count|text
+Repeat End
+	720||text
+Timed Loop Start
+	730|seconds|text
+Timed Loop End
+	740||text
+Random Start
+	750||text
+Random End
+	760||text
+Remote Start
+	800|nnn1,nnn2,...|text
+Remote End
+	820||text
+Distributed Start
+	830|nnn1,nnn2,...|text
+Distributed End
+	840||text
