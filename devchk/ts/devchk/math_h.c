@@ -239,6 +239,124 @@ cnt++;
 /* No test for isinf(x) */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for isfinite(x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for fpclassify(x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for isnormal(x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for signbit(x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for isgreater(x,y) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for isgreaterequal(x,y) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for isless(x,y) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for islessequal(x, y) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for islessgreater(x, y) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for isunordered(u, v) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FP_NAN
+	CompareConstant(FP_NAN,1,5257,architecture)
+#else
+Msg( "Error: Constant not found: FP_NAN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FP_INFINITE
+	CompareConstant(FP_INFINITE,2,5258,architecture)
+#else
+Msg( "Error: Constant not found: FP_INFINITE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FP_ZERO
+	CompareConstant(FP_ZERO,3,5259,architecture)
+#else
+Msg( "Error: Constant not found: FP_ZERO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FP_SUBNORMAL
+	CompareConstant(FP_SUBNORMAL,4,5260,architecture)
+#else
+Msg( "Error: Constant not found: FP_SUBNORMAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FP_NORMAL
+	CompareConstant(FP_NORMAL,5,5261,architecture)
+#else
+Msg( "Error: Constant not found: FP_NORMAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if __i386__
+#ifdef FP_ILOGB0
+	CompareConstant(FP_ILOGB0,(-2147483647 - 1),5262,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGB0\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for FP_ILOGB0 (5262, int) in db\n");
+#ifdef FP_ILOGB0
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5262,%d);\n", architecture, FP_ILOGB0);
+#endif
+#endif
+#if __i386__
+#ifdef FP_ILOGBNAN
+	CompareConstant(FP_ILOGBNAN,(-2147483647 - 1),5263,architecture)
+#else
+Msg( "Error: Constant not found: FP_ILOGBNAN\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for FP_ILOGBNAN (5263, int) in db\n");
+#ifdef FP_ILOGBNAN
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5263,%d);\n", architecture, FP_ILOGBNAN);
+#endif
+#endif
 #if __i386__
 CheckTypeSize(struct exception,32, 10010, 2)
 CheckMemberSize(struct exception,type,4,2,32294)
