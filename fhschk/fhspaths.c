@@ -82,6 +82,12 @@ void get_myappname()
 	myappname="testapp";
 }
 
+void set_myappname(char *app)
+{
+	/* use /proc/self/exe or something to figure this out */
+	myappname=strdup(app);
+}
+
 /*
  * This is the engine for checking FHS things. It called only from the set
  * of wrapper functions further below that provied a more usage oritented
@@ -146,7 +152,7 @@ int is_fhs_creatable(char *path)
 
 int is_fhs_installable(char *path)
 {
-	return match_fhs_attributes(mkabsolutepath(path),FHS_INSTALL);
+	return match_fhs_attributes(_mkabsolutepath("/",path),FHS_INSTALL);
 }
 
 int is_fhs_execable(char *path)

@@ -447,6 +447,8 @@ pkgname=file1->storeaddr+hoffset;
 
 if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
 	fprintf(stderr,"Package name: %s\n",pkgname);
+
+set_myappname(pkgname);
 }
 
 void
