@@ -21,6 +21,9 @@ $sth = $Dbh->query($select) || die $Dbh->errmsg();
 print "char *DtNeeded[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
+	if( $entry{'ALrunname'} eq "" ) {
+		next;
+		}
 	if( $entry{'Aname'} ne "All" ) {
                 print "#if defined(".$entry{'Asymbol'}.")\n";
         }
