@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.30 $
+ * This is $Revision: 1.31 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.31  2003/10/28 21:38:25  mats
+ * printf format fixes
+ *
  * Revision 1.30  2003/10/28 19:32:12  anderson
  * 1) Add use of env variable LIBCHK_DEBUG
  * 2) cleanup warnings in class checking code and hide some of them behind
@@ -134,7 +137,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.30 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.31 $";
 
 /* Some debugging bits which are useful to maintainers,
  * but probably not others
@@ -310,20 +313,19 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
   if (libname[0]!='/')
   {
     /* Find the library */
-		for (i=0; i<library_path_count; i++)
-		{
-			if (strcmp(libname, library_paths[i].library)==0)
-			{
-				snprintf(tmp_string, TMP_STRING_SIZE, "Found match for %s as %s\n", 
-								 library_paths[i].library,
-							 library_paths[i].fullpath);
-				tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-													 0, 0, 0, tmp_string);
-				file = OpenElfFile(library_paths[i].fullpath);
-				strncpy(filename, library_paths[i].fullpath, PATH_MAX);
-				break;
-			}
-		}
+    for (i=0; i<library_path_count; i++)
+    {
+      if (strcmp(libname, library_paths[i].library)==0)
+      {
+	snprintf(tmp_string, TMP_STRING_SIZE, "Found match for %s as %s\n",
+	         library_paths[i].library, library_paths[i].fullpath);
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	                   0, 0, 0, tmp_string);
+	file = OpenElfFile(library_paths[i].fullpath);
+	strncpy(filename, library_paths[i].fullpath, PATH_MAX);
+	break;
+      }
+    }
   }
   else
   {
