@@ -1393,6 +1393,27 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0},
 #endif
+#if __mc68000__
+	{"_Unwind_GetDataRelBase","GCC_3.0",0},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Unwind_GetDataRelBase","GCC_3.0",0},
+#endif
+#if __alpha__
+	{"_Unwind_GetDataRelBase","GCC_3.0",0},
+#endif
+#if __powerpc64__
+	{"_Unwind_GetDataRelBase","GCC_3.0",0},
+#endif
+#if __s390__ && !__s390x__
+	{"_Unwind_GetDataRelBase","GCC_3.0",0},
+#endif
+#if __x86_64__
+	{"_Unwind_GetDataRelBase","GCC_3.0",0},
+#endif
+#if __s390x__
+	{"_Unwind_GetDataRelBase","GCC_3.0",0},
+#endif
 	{"_Unwind_GetGR","",0},
 #if __i386__
 	{"_Unwind_GetGR","GCC_3.0",0},
@@ -1579,8 +1600,8 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_RaiseException","GCC_3.0",0},
 #endif
-	{"_Unwind_Resume","GCC_3.0",0},
 	{"_Unwind_Resume","",0},
+	{"_Unwind_Resume","GCC_3.0",0},
 #if __i386__
 	{"_Unwind_Resume","GCC_3.0",0},
 #endif
@@ -12988,21 +13009,6 @@ struct versym DynSyms[] = {
 	{"__daylight","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"__dcgettext","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"__dcgettext","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"__dcgettext","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"__dcgettext","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"__dcgettext","GLIBC_2.2.5",0},
-#endif
-#if __i386__
 	{"__divdi3","GLIBC_2.0",0},
 #endif
 	{"__dynamic_cast","CXXABI_1.2",0},
@@ -13428,9 +13434,6 @@ struct versym DynSyms[] = {
 	{"__mempcpy","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"__moddi3","GLIBC_2.0",0},
-#endif
-#if __i386__
 	{"__rawmemchr","GLIBC_2.1",0},
 #endif
 #if __ia64__
@@ -13765,9 +13768,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"__tzname","GLIBC_2.2",0},
-#endif
-#if __i386__
-	{"__udivdi3","GLIBC_2.0",0},
 #endif
 #if __i386__
 	{"__umoddi3","GLIBC_2.0",0},
@@ -14555,36 +14555,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"alarm","GLIBC_2.2",0},
-#endif
-#if __i386__
-	{"alphasort","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"alphasort","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"alphasort","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"alphasort","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"alphasort","GLIBC_2.2.5",0},
-#endif
-#if __i386__
-	{"alphasort64","GLIBC_2.1",0},
-#endif
-#if __ia64__
-	{"alphasort64","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"alphasort64","GLIBC_2.1",0},
-#endif
-#if __powerpc64__
-	{"alphasort64","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"alphasort64","GLIBC_2.2.5",0},
 #endif
 	{"applicationShellWidgetClass","",0},
 #if __i386__
@@ -18354,21 +18324,6 @@ struct versym DynSyms[] = {
 	{"endgrent","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"endhostent","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"endhostent","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"endhostent","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"endhostent","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"endhostent","GLIBC_2.2.5",0},
-#endif
-#if __i386__
 	{"endnetent","GLIBC_2.0",0},
 #endif
 #if __ia64__
@@ -19254,7 +19209,7 @@ struct versym DynSyms[] = {
 	{"fdopen","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"feclearexcept","GLIBC_2.1",0},
+	{"feclearexcept","GLIBC_2.2",0},
 #endif
 #if __ia64__
 	{"feclearexcept","GLIBC_2.2",0},
@@ -19266,7 +19221,7 @@ struct versym DynSyms[] = {
 	{"feclearexcept","GLIBC_2.2.5",0},
 #endif
 #if __s390__ && !__s390x__
-	{"feclearexcept","GLIBC_2.1",0},
+	{"feclearexcept","GLIBC_2.2",0},
 #endif
 #if __x86_64__
 	{"feclearexcept","GLIBC_2.2.5",0},
@@ -19422,7 +19377,7 @@ struct versym DynSyms[] = {
 	{"ferror","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"fesetenv","GLIBC_2.1",0},
+	{"fesetenv","GLIBC_2.2",0},
 #endif
 #if __ia64__
 	{"fesetenv","GLIBC_2.2",0},
@@ -19434,7 +19389,7 @@ struct versym DynSyms[] = {
 	{"fesetenv","GLIBC_2.2.5",0},
 #endif
 #if __s390__ && !__s390x__
-	{"fesetenv","GLIBC_2.1",0},
+	{"fesetenv","GLIBC_2.2",0},
 #endif
 #if __x86_64__
 	{"fesetenv","GLIBC_2.2.5",0},
@@ -19443,7 +19398,7 @@ struct versym DynSyms[] = {
 	{"fesetenv","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"fesetexceptflag","GLIBC_2.1",0},
+	{"fesetexceptflag","GLIBC_2.2",0},
 #endif
 #if __ia64__
 	{"fesetexceptflag","GLIBC_2.2",0},
@@ -19455,7 +19410,7 @@ struct versym DynSyms[] = {
 	{"fesetexceptflag","GLIBC_2.2.5",0},
 #endif
 #if __s390__ && !__s390x__
-	{"fesetexceptflag","GLIBC_2.1",0},
+	{"fesetexceptflag","GLIBC_2.2",0},
 #endif
 #if __x86_64__
 	{"fesetexceptflag","GLIBC_2.2.5",0},
@@ -19632,7 +19587,7 @@ struct versym DynSyms[] = {
 	{"fgetpos","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"fgetpos64","GLIBC_2.1",0},
+	{"fgetpos64","GLIBC_2.2",0},
 #endif
 #if __ia64__
 	{"fgetpos64","GLIBC_2.2",0},
@@ -20727,36 +20682,6 @@ struct versym DynSyms[] = {
 	{"fsetpos64","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"fstatfs","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"fstatfs","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"fstatfs","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"fstatfs","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"fstatfs","GLIBC_2.2.5",0},
-#endif
-#if __i386__
-	{"fstatfs64","GLIBC_2.1",0},
-#endif
-#if __ia64__
-	{"fstatfs64","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"fstatfs64","GLIBC_2.1",0},
-#endif
-#if __powerpc64__
-	{"fstatfs64","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"fstatfs64","GLIBC_2.2.5",0},
-#endif
-#if __i386__
 	{"fstatvfs","GLIBC_2.1",0},
 #endif
 #if __ia64__
@@ -21672,15 +21597,6 @@ struct versym DynSyms[] = {
 	{"gethostbyaddr","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"gethostbyaddr_r","GLIBC_2.1.2",0},
-#endif
-#if __ia64__
-	{"gethostbyaddr_r","GLIBC_2.2",0},
-#endif
-#if __x86_64__
-	{"gethostbyaddr_r","GLIBC_2.2.5",0},
-#endif
-#if __i386__
 	{"gethostbyname","GLIBC_2.0",0},
 #endif
 #if __ia64__
@@ -21721,15 +21637,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"gethostbyname_r","GLIBC_2.2",0},
-#endif
-#if __i386__
-	{"gethostent_r","GLIBC_2.1.2",0},
-#endif
-#if __ia64__
-	{"gethostent_r","GLIBC_2.2",0},
-#endif
-#if __x86_64__
-	{"gethostent_r","GLIBC_2.2.5",0},
 #endif
 #if __i386__
 	{"gethostid","GLIBC_2.0",0},
@@ -22267,7 +22174,7 @@ struct versym DynSyms[] = {
 	{"getrlimit","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"getrlimit64","GLIBC_2.1",0},
+	{"getrlimit64","GLIBC_2.2",0},
 #endif
 #if __ia64__
 	{"getrlimit64","GLIBC_2.2",0},
@@ -22739,9 +22646,7 @@ struct versym DynSyms[] = {
 	{"glBindTexture","",0},
 	{"glBitmap","",0},
 	{"glBlendColor","",0},
-	{"glBlendColorEXT","",0},
 	{"glBlendEquation","",0},
-	{"glBlendEquationEXT","",0},
 	{"glBlendFunc","",0},
 	{"glCallList","",0},
 	{"glCallLists","",0},
@@ -22998,7 +22903,6 @@ struct versym DynSyms[] = {
 	{"glPixelTransferf","",0},
 	{"glPixelTransferi","",0},
 	{"glPixelZoom","",0},
-	{"glPointParameterfvEXT","",0},
 	{"glPointSize","",0},
 	{"glPolygonMode","",0},
 	{"glPolygonOffset","",0},
@@ -26796,7 +26700,7 @@ struct versym DynSyms[] = {
 	{"mrand48","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"msgctl","GLIBC_2.0",0},
+	{"msgctl","GLIBC_2.2",0},
 #endif
 #if __ia64__
 	{"msgctl","GLIBC_2.2",0},
@@ -27689,7 +27593,6 @@ struct versym DynSyms[] = {
 	{"pam_get_item","",0},
 	{"pam_getenvlist","",0},
 	{"pam_open_session","",0},
-	{"pam_set_data","",0},
 	{"pam_set_item","",0},
 	{"pam_setcred","",0},
 	{"pam_start","",0},
@@ -28512,48 +28415,6 @@ struct versym DynSyms[] = {
 	{"pthread_cancel","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"pthread_cleanup_pop","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"pthread_cleanup_pop","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_cleanup_pop","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"pthread_cleanup_pop","GLIBC_2.2.5",0},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_cleanup_pop","GLIBC_2.0",0},
-#endif
-#if __x86_64__
-	{"pthread_cleanup_pop","GLIBC_2.2.5",0},
-#endif
-#if __s390x__
-	{"pthread_cleanup_pop","GLIBC_2.2",0},
-#endif
-#if __i386__
-	{"pthread_cleanup_push","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"pthread_cleanup_push","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_cleanup_push","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"pthread_cleanup_push","GLIBC_2.2.5",0},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_cleanup_push","GLIBC_2.0",0},
-#endif
-#if __x86_64__
-	{"pthread_cleanup_push","GLIBC_2.2.5",0},
-#endif
-#if __s390x__
-	{"pthread_cleanup_push","GLIBC_2.2",0},
-#endif
-#if __i386__
 	{"pthread_cond_broadcast","GLIBC_2.0",0},
 #endif
 #if __ia64__
@@ -28596,25 +28457,25 @@ struct versym DynSyms[] = {
 	{"pthread_cond_destroy","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"pthread_cond_init","GLIBC_2.0",0},
+	{"pthread_cond_init","GLIBC_2.3.2",0},
 #endif
 #if __ia64__
-	{"pthread_cond_init","GLIBC_2.2",0},
+	{"pthread_cond_init","GLIBC_2.3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pthread_cond_init","GLIBC_2.0",0},
+	{"pthread_cond_init","GLIBC_2.3.2",0},
 #endif
 #if __powerpc64__
-	{"pthread_cond_init","GLIBC_2.2.5",0},
+	{"pthread_cond_init","GLIBC_2.3.2",0},
 #endif
 #if __s390__ && !__s390x__
-	{"pthread_cond_init","GLIBC_2.0",0},
+	{"pthread_cond_init","GLIBC_2.3.2",0},
 #endif
 #if __x86_64__
-	{"pthread_cond_init","GLIBC_2.2.5",0},
+	{"pthread_cond_init","GLIBC_2.3.2",0},
 #endif
 #if __s390x__
-	{"pthread_cond_init","GLIBC_2.2",0},
+	{"pthread_cond_init","GLIBC_2.3.2",0},
 #endif
 #if __i386__
 	{"pthread_cond_signal","GLIBC_2.0",0},
@@ -28638,46 +28499,46 @@ struct versym DynSyms[] = {
 	{"pthread_cond_signal","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"pthread_cond_timedwait","GLIBC_2.0",0},
+	{"pthread_cond_timedwait","GLIBC_2.3.2",0},
 #endif
 #if __ia64__
-	{"pthread_cond_timedwait","GLIBC_2.2",0},
+	{"pthread_cond_timedwait","GLIBC_2.3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pthread_cond_timedwait","GLIBC_2.0",0},
+	{"pthread_cond_timedwait","GLIBC_2.3.2",0},
 #endif
 #if __powerpc64__
-	{"pthread_cond_timedwait","GLIBC_2.2.5",0},
+	{"pthread_cond_timedwait","GLIBC_2.3.2",0},
 #endif
 #if __s390__ && !__s390x__
-	{"pthread_cond_timedwait","GLIBC_2.0",0},
+	{"pthread_cond_timedwait","GLIBC_2.3.2",0},
 #endif
 #if __x86_64__
-	{"pthread_cond_timedwait","GLIBC_2.2.5",0},
+	{"pthread_cond_timedwait","GLIBC_2.3.2",0},
 #endif
 #if __s390x__
-	{"pthread_cond_timedwait","GLIBC_2.2",0},
+	{"pthread_cond_timedwait","GLIBC_2.3.2",0},
 #endif
 #if __i386__
-	{"pthread_cond_wait","GLIBC_2.0",0},
+	{"pthread_cond_wait","GLIBC_2.3.2",0},
 #endif
 #if __ia64__
-	{"pthread_cond_wait","GLIBC_2.2",0},
+	{"pthread_cond_wait","GLIBC_2.3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pthread_cond_wait","GLIBC_2.0",0},
+	{"pthread_cond_wait","GLIBC_2.3.2",0},
 #endif
 #if __powerpc64__
-	{"pthread_cond_wait","GLIBC_2.2.5",0},
+	{"pthread_cond_wait","GLIBC_2.3.2",0},
 #endif
 #if __s390__ && !__s390x__
-	{"pthread_cond_wait","GLIBC_2.0",0},
+	{"pthread_cond_wait","GLIBC_2.3.2",0},
 #endif
 #if __x86_64__
-	{"pthread_cond_wait","GLIBC_2.2.5",0},
+	{"pthread_cond_wait","GLIBC_2.3.2",0},
 #endif
 #if __s390x__
-	{"pthread_cond_wait","GLIBC_2.2",0},
+	{"pthread_cond_wait","GLIBC_2.3.2",0},
 #endif
 #if __i386__
 	{"pthread_condattr_destroy","GLIBC_2.0",0},
@@ -30217,25 +30078,25 @@ struct versym DynSyms[] = {
 	{"realloc","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"realpath","GLIBC_2.0",0},
+	{"realpath","GLIBC_2.3",0},
 #endif
 #if __ia64__
-	{"realpath","GLIBC_2.2",0},
+	{"realpath","GLIBC_2.3",0},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"realpath","GLIBC_2.0",0},
+	{"realpath","GLIBC_2.3",0},
 #endif
 #if __powerpc64__
-	{"realpath","GLIBC_2.2.5",0},
+	{"realpath","GLIBC_2.3",0},
 #endif
 #if __s390__ && !__s390x__
-	{"realpath","GLIBC_2.0",0},
+	{"realpath","GLIBC_2.3",0},
 #endif
 #if __x86_64__
-	{"realpath","GLIBC_2.2.5",0},
+	{"realpath","GLIBC_2.3",0},
 #endif
 #if __s390x__
-	{"realpath","GLIBC_2.2",0},
+	{"realpath","GLIBC_2.3",0},
 #endif
 	{"rectObjClass","",0},
 	{"rectObjClassRec","",0},
@@ -31814,21 +31675,6 @@ struct versym DynSyms[] = {
 	{"setgroups","GLIBC_2.2",0},
 #endif
 #if __i386__
-	{"sethostent","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"sethostent","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"sethostent","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"sethostent","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"sethostent","GLIBC_2.2.5",0},
-#endif
-#if __i386__
 	{"sethostid","GLIBC_2.0",0},
 #endif
 #if __ia64__
@@ -31953,24 +31799,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"setlogmask","GLIBC_2.2",0},
-#endif
-#if __i386__
-	{"setmntent","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"setmntent","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"setmntent","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"setmntent","GLIBC_2.2.5",0},
-#endif
-#if __s390__ && !__s390x__
-	{"setmntent","GLIBC_2.0",0},
-#endif
-#if __x86_64__
-	{"setmntent","GLIBC_2.2.5",0},
 #endif
 #if __i386__
 	{"setnetent","GLIBC_2.0",0},
@@ -33362,8 +33190,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"sleep","GLIBC_2.2",0},
 #endif
-	{"slk_attr_off","",0},
-	{"slk_attr_on","",0},
 	{"slk_attr_set","",0},
 	{"slk_attroff","",0},
 	{"slk_attron","",0},
@@ -33608,24 +33434,6 @@ struct versym DynSyms[] = {
 	{"standend","",0},
 	{"standout","",0},
 	{"start_color","",0},
-#if __i386__
-	{"statfs","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"statfs","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"statfs","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"statfs","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"statfs","GLIBC_2.2.5",0},
-#endif
-#if __i386__
-	{"statfs64","GLIBC_2.1",0},
-#endif
 #if __i386__
 	{"statvfs","GLIBC_2.1",0},
 #endif
@@ -36861,21 +36669,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"wait4","GLIBC_2.2",0},
-#endif
-#if __i386__
-	{"waitid","GLIBC_2.1",0},
-#endif
-#if __ia64__
-	{"waitid","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"waitid","GLIBC_2.1",0},
-#endif
-#if __powerpc64__
-	{"waitid","GLIBC_2.2.5",0},
-#endif
-#if __x86_64__
-	{"waitid","GLIBC_2.2.5",0},
 #endif
 #if __i386__
 	{"waitpid","GLIBC_2.0",0},
