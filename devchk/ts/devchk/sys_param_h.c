@@ -24,20 +24,20 @@ Msg("Checking data structures in sys/param.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef NOFILE
-	CompareConstant(NOFILE,256,4400,architecture)
+#ifdef MAXPATHLEN
+	CompareConstant(MAXPATHLEN,4096,4399,architecture)
 #else
-Msg( "Error: Constant not found: NOFILE\n");
+Msg( "Error: Constant not found: MAXPATHLEN\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef MAXPATHLEN
-	CompareConstant(MAXPATHLEN,4096,4399,architecture)
+#ifdef NOFILE
+	CompareConstant(NOFILE,256,4400,architecture)
 #else
-Msg( "Error: Constant not found: MAXPATHLEN\n");
+Msg( "Error: Constant not found: NOFILE\n");
 cnt++;
 #endif
 

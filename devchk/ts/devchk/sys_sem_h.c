@@ -24,6 +24,26 @@ Msg("Checking data structures in sys/sem.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SEM_UNDO
+	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
+#else
+Msg( "Error: Constant not found: SEM_UNDO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GETPID
+	CompareConstant(GETPID,11,3199,architecture)
+#else
+Msg( "Error: Constant not found: GETPID\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef GETVAL
 	CompareConstant(GETVAL,12,3200,architecture)
 #else
@@ -78,26 +98,6 @@ cnt++;
 	CompareConstant(SETALL,17,3205,architecture)
 #else
 Msg( "Error: Constant not found: SETALL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SEM_UNDO
-	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
-#else
-Msg( "Error: Constant not found: SEM_UNDO\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GETPID
-	CompareConstant(GETPID,11,3199,architecture)
-#else
-Msg( "Error: Constant not found: GETPID\n");
 cnt++;
 #endif
 

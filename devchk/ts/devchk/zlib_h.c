@@ -24,20 +24,80 @@ Msg("Checking data structures in zlib.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef Z_NEED_DICT
-	CompareConstant(Z_NEED_DICT,2,4220,architecture)
+#ifdef Z_NO_FLUSH
+	CompareConstant(Z_NO_FLUSH,0,4213,architecture)
 #else
-Msg( "Error: Constant not found: Z_NEED_DICT\n");
+Msg( "Error: Constant not found: Z_NO_FLUSH\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef MAX_WBITS
-	CompareConstant(MAX_WBITS,15,5022,architecture)
+#ifdef Z_PARTIAL_FLUSH
+	CompareConstant(Z_PARTIAL_FLUSH,1,4214,architecture)
 #else
-Msg( "Error: Constant not found: MAX_WBITS\n");
+Msg( "Error: Constant not found: Z_PARTIAL_FLUSH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef Z_SYNC_FLUSH
+	CompareConstant(Z_SYNC_FLUSH,2,4215,architecture)
+#else
+Msg( "Error: Constant not found: Z_SYNC_FLUSH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef Z_FULL_FLUSH
+	CompareConstant(Z_FULL_FLUSH,3,4216,architecture)
+#else
+Msg( "Error: Constant not found: Z_FULL_FLUSH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef Z_FINISH
+	CompareConstant(Z_FINISH,4,4217,architecture)
+#else
+Msg( "Error: Constant not found: Z_FINISH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef Z_OK
+	CompareConstant(Z_OK,0,4218,architecture)
+#else
+Msg( "Error: Constant not found: Z_OK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef Z_STREAM_END
+	CompareConstant(Z_STREAM_END,1,4219,architecture)
+#else
+Msg( "Error: Constant not found: Z_STREAM_END\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef Z_NEED_DICT
+	CompareConstant(Z_NEED_DICT,2,4220,architecture)
+#else
+Msg( "Error: Constant not found: Z_NEED_DICT\n");
 cnt++;
 #endif
 
@@ -230,80 +290,20 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef Z_NO_FLUSH
-	CompareConstant(Z_NO_FLUSH,0,4213,architecture)
-#else
-Msg( "Error: Constant not found: Z_NO_FLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef Z_PARTIAL_FLUSH
-	CompareConstant(Z_PARTIAL_FLUSH,1,4214,architecture)
-#else
-Msg( "Error: Constant not found: Z_PARTIAL_FLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef Z_SYNC_FLUSH
-	CompareConstant(Z_SYNC_FLUSH,2,4215,architecture)
-#else
-Msg( "Error: Constant not found: Z_SYNC_FLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef Z_FULL_FLUSH
-	CompareConstant(Z_FULL_FLUSH,3,4216,architecture)
-#else
-Msg( "Error: Constant not found: Z_FULL_FLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef Z_FINISH
-	CompareConstant(Z_FINISH,4,4217,architecture)
-#else
-Msg( "Error: Constant not found: Z_FINISH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef Z_OK
-	CompareConstant(Z_OK,0,4218,architecture)
-#else
-Msg( "Error: Constant not found: Z_OK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef Z_STREAM_END
-	CompareConstant(Z_STREAM_END,1,4219,architecture)
-#else
-Msg( "Error: Constant not found: Z_STREAM_END\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef MAX_MEM_LEVEL
 	CompareConstant(MAX_MEM_LEVEL,9,5021,architecture)
 #else
 Msg( "Error: Constant not found: MAX_MEM_LEVEL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MAX_WBITS
+	CompareConstant(MAX_WBITS,15,5022,architecture)
+#else
+Msg( "Error: Constant not found: MAX_WBITS\n");
 cnt++;
 #endif
 

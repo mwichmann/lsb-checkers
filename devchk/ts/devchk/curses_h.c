@@ -28,19 +28,253 @@ Msg("Checking data structures in curses.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for getyx(win,y,x) */
+#ifdef WA_ATTRIBUTES
+	CompareConstant(WA_ATTRIBUTES,A_ATTRIBUTES,2509,architecture)
+#else
+Msg( "Error: Constant not found: WA_ATTRIBUTES\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for getbegyx(win,y,x) */
+#ifdef WA_NORMAL
+	CompareConstant(WA_NORMAL,A_NORMAL,2510,architecture)
+#else
+Msg( "Error: Constant not found: WA_NORMAL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for getmaxyx(win,y,x) */
+#ifdef WA_STANDOUT
+	CompareConstant(WA_STANDOUT,A_STANDOUT,2511,architecture)
+#else
+Msg( "Error: Constant not found: WA_STANDOUT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for getparyx(win,y,x) */
+#ifdef WA_UNDERLINE
+	CompareConstant(WA_UNDERLINE,A_UNDERLINE,2512,architecture)
+#else
+Msg( "Error: Constant not found: WA_UNDERLINE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_REVERSE
+	CompareConstant(WA_REVERSE,A_REVERSE,2513,architecture)
+#else
+Msg( "Error: Constant not found: WA_REVERSE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_BLINK
+	CompareConstant(WA_BLINK,A_BLINK,2514,architecture)
+#else
+Msg( "Error: Constant not found: WA_BLINK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_DIM
+	CompareConstant(WA_DIM,A_DIM,2515,architecture)
+#else
+Msg( "Error: Constant not found: WA_DIM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_BOLD
+	CompareConstant(WA_BOLD,A_BOLD,2516,architecture)
+#else
+Msg( "Error: Constant not found: WA_BOLD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_ALTCHARSET
+	CompareConstant(WA_ALTCHARSET,A_ALTCHARSET,2517,architecture)
+#else
+Msg( "Error: Constant not found: WA_ALTCHARSET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_INVIS
+	CompareConstant(WA_INVIS,A_INVIS,2518,architecture)
+#else
+Msg( "Error: Constant not found: WA_INVIS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_PROTECT
+	CompareConstant(WA_PROTECT,A_PROTECT,2519,architecture)
+#else
+Msg( "Error: Constant not found: WA_PROTECT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_HORIZONTAL
+	CompareConstant(WA_HORIZONTAL,A_HORIZONTAL,2520,architecture)
+#else
+Msg( "Error: Constant not found: WA_HORIZONTAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_LEFT
+	CompareConstant(WA_LEFT,A_LEFT,2521,architecture)
+#else
+Msg( "Error: Constant not found: WA_LEFT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_LOW
+	CompareConstant(WA_LOW,A_LOW,2522,architecture)
+#else
+Msg( "Error: Constant not found: WA_LOW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_RIGHT
+	CompareConstant(WA_RIGHT,A_RIGHT,2523,architecture)
+#else
+Msg( "Error: Constant not found: WA_RIGHT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_TOP
+	CompareConstant(WA_TOP,A_TOP,2524,architecture)
+#else
+Msg( "Error: Constant not found: WA_TOP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WA_VERTICAL
+	CompareConstant(WA_VERTICAL,A_VERTICAL,2525,architecture)
+#else
+Msg( "Error: Constant not found: WA_VERTICAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLOR_BLACK
+	CompareConstant(COLOR_BLACK,0,2526,architecture)
+#else
+Msg( "Error: Constant not found: COLOR_BLACK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLOR_RED
+	CompareConstant(COLOR_RED,1,2527,architecture)
+#else
+Msg( "Error: Constant not found: COLOR_RED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLOR_GREEN
+	CompareConstant(COLOR_GREEN,2,2528,architecture)
+#else
+Msg( "Error: Constant not found: COLOR_GREEN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLOR_YELLOW
+	CompareConstant(COLOR_YELLOW,3,2529,architecture)
+#else
+Msg( "Error: Constant not found: COLOR_YELLOW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLOR_BLUE
+	CompareConstant(COLOR_BLUE,4,2530,architecture)
+#else
+Msg( "Error: Constant not found: COLOR_BLUE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLOR_MAGENTA
+	CompareConstant(COLOR_MAGENTA,5,2531,architecture)
+#else
+Msg( "Error: Constant not found: COLOR_MAGENTA\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLOR_CYAN
+	CompareConstant(COLOR_CYAN,6,2532,architecture)
+#else
+Msg( "Error: Constant not found: COLOR_CYAN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLOR_WHITE
+	CompareConstant(COLOR_WHITE,7,2533,architecture)
+#else
+Msg( "Error: Constant not found: COLOR_WHITE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -108,66 +342,6 @@ cnt++;
 	CompareConstant(_HASMOVED,0x20,2584,architecture)
 #else
 Msg( "Error: Constant not found: _HASMOVED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef KEY_CODE_YES
-	CompareConstant(KEY_CODE_YES,0400,2804,architecture)
-#else
-Msg( "Error: Constant not found: KEY_CODE_YES\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef KEY_MIN
-	CompareConstant(KEY_MIN,0401,2805,architecture)
-#else
-Msg( "Error: Constant not found: KEY_MIN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef KEY_BREAK
-	CompareConstant(KEY_BREAK,0401,2806,architecture)
-#else
-Msg( "Error: Constant not found: KEY_BREAK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef KEY_DOWN
-	CompareConstant(KEY_DOWN,0402,2807,architecture)
-#else
-Msg( "Error: Constant not found: KEY_DOWN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef KEY_UP
-	CompareConstant(KEY_UP,0403,2808,architecture)
-#else
-Msg( "Error: Constant not found: KEY_UP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef KEY_LEFT
-	CompareConstant(KEY_LEFT,0404,2809,architecture)
-#else
-Msg( "Error: Constant not found: KEY_LEFT\n");
 cnt++;
 #endif
 
@@ -242,6 +416,202 @@ cnt++;
 	CompareConstant(A_REVERSE,NCURSES_BITS(1UL,10),2599,architecture)
 #else
 Msg( "Error: Constant not found: A_REVERSE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_BLINK
+	CompareConstant(A_BLINK,NCURSES_BITS(1UL,11),2600,architecture)
+#else
+Msg( "Error: Constant not found: A_BLINK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_DIM
+	CompareConstant(A_DIM,NCURSES_BITS(1UL,12),2601,architecture)
+#else
+Msg( "Error: Constant not found: A_DIM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_BOLD
+	CompareConstant(A_BOLD,NCURSES_BITS(1UL,13),2602,architecture)
+#else
+Msg( "Error: Constant not found: A_BOLD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_ALTCHARSET
+	CompareConstant(A_ALTCHARSET,NCURSES_BITS(1UL,14),2603,architecture)
+#else
+Msg( "Error: Constant not found: A_ALTCHARSET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_INVIS
+	CompareConstant(A_INVIS,NCURSES_BITS(1UL,15),2604,architecture)
+#else
+Msg( "Error: Constant not found: A_INVIS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_PROTECT
+	CompareConstant(A_PROTECT,NCURSES_BITS(1UL,16),2605,architecture)
+#else
+Msg( "Error: Constant not found: A_PROTECT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_HORIZONTAL
+	CompareConstant(A_HORIZONTAL,NCURSES_BITS(1UL,17),2606,architecture)
+#else
+Msg( "Error: Constant not found: A_HORIZONTAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_LEFT
+	CompareConstant(A_LEFT,NCURSES_BITS(1UL,18),2607,architecture)
+#else
+Msg( "Error: Constant not found: A_LEFT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_LOW
+	CompareConstant(A_LOW,NCURSES_BITS(1UL,19),2608,architecture)
+#else
+Msg( "Error: Constant not found: A_LOW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_RIGHT
+	CompareConstant(A_RIGHT,NCURSES_BITS(1UL,20),2609,architecture)
+#else
+Msg( "Error: Constant not found: A_RIGHT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_TOP
+	CompareConstant(A_TOP,NCURSES_BITS(1UL,21),2610,architecture)
+#else
+Msg( "Error: Constant not found: A_TOP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef A_VERTICAL
+	CompareConstant(A_VERTICAL,NCURSES_BITS(1UL,22),2611,architecture)
+#else
+Msg( "Error: Constant not found: A_VERTICAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for getyx(win,y,x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for getbegyx(win,y,x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for getmaxyx(win,y,x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for getparyx(win,y,x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef KEY_CODE_YES
+	CompareConstant(KEY_CODE_YES,0400,2804,architecture)
+#else
+Msg( "Error: Constant not found: KEY_CODE_YES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef KEY_MIN
+	CompareConstant(KEY_MIN,0401,2805,architecture)
+#else
+Msg( "Error: Constant not found: KEY_MIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef KEY_BREAK
+	CompareConstant(KEY_BREAK,0401,2806,architecture)
+#else
+Msg( "Error: Constant not found: KEY_BREAK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef KEY_DOWN
+	CompareConstant(KEY_DOWN,0402,2807,architecture)
+#else
+Msg( "Error: Constant not found: KEY_DOWN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef KEY_UP
+	CompareConstant(KEY_UP,0403,2808,architecture)
+#else
+Msg( "Error: Constant not found: KEY_UP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef KEY_LEFT
+	CompareConstant(KEY_LEFT,0404,2809,architecture)
+#else
+Msg( "Error: Constant not found: KEY_LEFT\n");
 cnt++;
 #endif
 
@@ -838,16 +1208,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef WA_ATTRIBUTES
-	CompareConstant(WA_ATTRIBUTES,A_ATTRIBUTES,2509,architecture)
-#else
-Msg( "Error: Constant not found: WA_ATTRIBUTES\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef KEY_SDC
 	CompareConstant(KEY_SDC,0577,2870,architecture)
 #else
@@ -942,116 +1302,6 @@ cnt++;
 	CompareConstant(KEY_SIC,0610,2879,architecture)
 #else
 Msg( "Error: Constant not found: KEY_SIC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_NORMAL
-	CompareConstant(WA_NORMAL,A_NORMAL,2510,architecture)
-#else
-Msg( "Error: Constant not found: WA_NORMAL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_STANDOUT
-	CompareConstant(WA_STANDOUT,A_STANDOUT,2511,architecture)
-#else
-Msg( "Error: Constant not found: WA_STANDOUT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_UNDERLINE
-	CompareConstant(WA_UNDERLINE,A_UNDERLINE,2512,architecture)
-#else
-Msg( "Error: Constant not found: WA_UNDERLINE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_REVERSE
-	CompareConstant(WA_REVERSE,A_REVERSE,2513,architecture)
-#else
-Msg( "Error: Constant not found: WA_REVERSE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_BLINK
-	CompareConstant(WA_BLINK,A_BLINK,2514,architecture)
-#else
-Msg( "Error: Constant not found: WA_BLINK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_DIM
-	CompareConstant(WA_DIM,A_DIM,2515,architecture)
-#else
-Msg( "Error: Constant not found: WA_DIM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_BOLD
-	CompareConstant(WA_BOLD,A_BOLD,2516,architecture)
-#else
-Msg( "Error: Constant not found: WA_BOLD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_ALTCHARSET
-	CompareConstant(WA_ALTCHARSET,A_ALTCHARSET,2517,architecture)
-#else
-Msg( "Error: Constant not found: WA_ALTCHARSET\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_INVIS
-	CompareConstant(WA_INVIS,A_INVIS,2518,architecture)
-#else
-Msg( "Error: Constant not found: WA_INVIS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_PROTECT
-	CompareConstant(WA_PROTECT,A_PROTECT,2519,architecture)
-#else
-Msg( "Error: Constant not found: WA_PROTECT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef TRACE_MAXIMUM
-	CompareConstant(TRACE_MAXIMUM,0xffff,2951,architecture)
-#else
-Msg( "Error: Constant not found: TRACE_MAXIMUM\n");
 cnt++;
 #endif
 
@@ -1158,106 +1408,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef WA_HORIZONTAL
-	CompareConstant(WA_HORIZONTAL,A_HORIZONTAL,2520,architecture)
-#else
-Msg( "Error: Constant not found: WA_HORIZONTAL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_LEFT
-	CompareConstant(WA_LEFT,A_LEFT,2521,architecture)
-#else
-Msg( "Error: Constant not found: WA_LEFT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_LOW
-	CompareConstant(WA_LOW,A_LOW,2522,architecture)
-#else
-Msg( "Error: Constant not found: WA_LOW\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_RIGHT
-	CompareConstant(WA_RIGHT,A_RIGHT,2523,architecture)
-#else
-Msg( "Error: Constant not found: WA_RIGHT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_TOP
-	CompareConstant(WA_TOP,A_TOP,2524,architecture)
-#else
-Msg( "Error: Constant not found: WA_TOP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WA_VERTICAL
-	CompareConstant(WA_VERTICAL,A_VERTICAL,2525,architecture)
-#else
-Msg( "Error: Constant not found: WA_VERTICAL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef COLOR_BLACK
-	CompareConstant(COLOR_BLACK,0,2526,architecture)
-#else
-Msg( "Error: Constant not found: COLOR_BLACK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef COLOR_RED
-	CompareConstant(COLOR_RED,1,2527,architecture)
-#else
-Msg( "Error: Constant not found: COLOR_RED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef COLOR_GREEN
-	CompareConstant(COLOR_GREEN,2,2528,architecture)
-#else
-Msg( "Error: Constant not found: COLOR_GREEN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef COLOR_YELLOW
-	CompareConstant(COLOR_YELLOW,3,2529,architecture)
-#else
-Msg( "Error: Constant not found: COLOR_YELLOW\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef KEY_SRSUME
 	CompareConstant(KEY_SRSUME,0623,2890,architecture)
 #else
@@ -1348,160 +1498,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef A_BLINK
-	CompareConstant(A_BLINK,NCURSES_BITS(1UL,11),2600,architecture)
+#ifdef TRACE_MAXIMUM
+	CompareConstant(TRACE_MAXIMUM,0xffff,2951,architecture)
 #else
-Msg( "Error: Constant not found: A_BLINK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_DIM
-	CompareConstant(A_DIM,NCURSES_BITS(1UL,12),2601,architecture)
-#else
-Msg( "Error: Constant not found: A_DIM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_BOLD
-	CompareConstant(A_BOLD,NCURSES_BITS(1UL,13),2602,architecture)
-#else
-Msg( "Error: Constant not found: A_BOLD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef COLOR_BLUE
-	CompareConstant(COLOR_BLUE,4,2530,architecture)
-#else
-Msg( "Error: Constant not found: COLOR_BLUE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_ALTCHARSET
-	CompareConstant(A_ALTCHARSET,NCURSES_BITS(1UL,14),2603,architecture)
-#else
-Msg( "Error: Constant not found: A_ALTCHARSET\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef COLOR_MAGENTA
-	CompareConstant(COLOR_MAGENTA,5,2531,architecture)
-#else
-Msg( "Error: Constant not found: COLOR_MAGENTA\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_INVIS
-	CompareConstant(A_INVIS,NCURSES_BITS(1UL,15),2604,architecture)
-#else
-Msg( "Error: Constant not found: A_INVIS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef COLOR_CYAN
-	CompareConstant(COLOR_CYAN,6,2532,architecture)
-#else
-Msg( "Error: Constant not found: COLOR_CYAN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_PROTECT
-	CompareConstant(A_PROTECT,NCURSES_BITS(1UL,16),2605,architecture)
-#else
-Msg( "Error: Constant not found: A_PROTECT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef COLOR_WHITE
-	CompareConstant(COLOR_WHITE,7,2533,architecture)
-#else
-Msg( "Error: Constant not found: COLOR_WHITE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_HORIZONTAL
-	CompareConstant(A_HORIZONTAL,NCURSES_BITS(1UL,17),2606,architecture)
-#else
-Msg( "Error: Constant not found: A_HORIZONTAL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_LEFT
-	CompareConstant(A_LEFT,NCURSES_BITS(1UL,18),2607,architecture)
-#else
-Msg( "Error: Constant not found: A_LEFT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_LOW
-	CompareConstant(A_LOW,NCURSES_BITS(1UL,19),2608,architecture)
-#else
-Msg( "Error: Constant not found: A_LOW\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_RIGHT
-	CompareConstant(A_RIGHT,NCURSES_BITS(1UL,20),2609,architecture)
-#else
-Msg( "Error: Constant not found: A_RIGHT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_TOP
-	CompareConstant(A_TOP,NCURSES_BITS(1UL,21),2610,architecture)
-#else
-Msg( "Error: Constant not found: A_TOP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef A_VERTICAL
-	CompareConstant(A_VERTICAL,NCURSES_BITS(1UL,22),2611,architecture)
-#else
-Msg( "Error: Constant not found: A_VERTICAL\n");
+Msg( "Error: Constant not found: TRACE_MAXIMUM\n");
 cnt++;
 #endif
 

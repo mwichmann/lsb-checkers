@@ -74,16 +74,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef REG_NOMATCH
-	CompareConstant(REG_NOMATCH,-1,3092,architecture)
-#else
-Msg( "Error: Constant not found: REG_NOMATCH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef RE_CONTEXT_INVALID_OPS
 	CompareConstant(RE_CONTEXT_INVALID_OPS,(RE_CONTEXT_INDEP_OPS<<1),1561,architecture)
 #else
@@ -428,6 +418,16 @@ cnt++;
 	CompareConstant(REG_NOTEOL,(1<<1),1598,architecture)
 #else
 Msg( "Error: Constant not found: REG_NOTEOL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef REG_NOMATCH
+	CompareConstant(REG_NOMATCH,-1,3092,architecture)
+#else
+Msg( "Error: Constant not found: REG_NOMATCH\n");
 cnt++;
 #endif
 

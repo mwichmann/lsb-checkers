@@ -24,6 +24,46 @@ Msg("Checking data structures in cpio.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef MAGIC
+	CompareStringConstant(MAGIC,"070707")
+#else
+Msg( "Error: Constant not found: MAGIC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef C_IRUSR
+	CompareConstant(C_IRUSR,000400,1097,architecture)
+#else
+Msg( "Error: Constant not found: C_IRUSR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef C_IWUSR
+	CompareConstant(C_IWUSR,000200,1098,architecture)
+#else
+Msg( "Error: Constant not found: C_IWUSR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef C_IXUSR
+	CompareConstant(C_IXUSR,000100,1099,architecture)
+#else
+Msg( "Error: Constant not found: C_IXUSR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IRGRP
 	CompareConstant(C_IRGRP,000040,1100,architecture)
 #else
@@ -188,46 +228,6 @@ cnt++;
 	CompareConstant(C_ISREG,0100000,1116,architecture)
 #else
 Msg( "Error: Constant not found: C_ISREG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef MAGIC
-	CompareStringConstant(MAGIC,"070707")
-#else
-Msg( "Error: Constant not found: MAGIC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef C_IRUSR
-	CompareConstant(C_IRUSR,000400,1097,architecture)
-#else
-Msg( "Error: Constant not found: C_IRUSR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef C_IWUSR
-	CompareConstant(C_IWUSR,000200,1098,architecture)
-#else
-Msg( "Error: Constant not found: C_IWUSR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef C_IXUSR
-	CompareConstant(C_IXUSR,000100,1099,architecture)
-#else
-Msg( "Error: Constant not found: C_IXUSR\n");
 cnt++;
 #endif
 

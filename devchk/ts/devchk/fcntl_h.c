@@ -24,6 +24,76 @@ Msg("Checking data structures in fcntl.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef O_ACCMODE
+	CompareConstant(O_ACCMODE,0003,1168,architecture)
+#else
+Msg( "Error: Constant not found: O_ACCMODE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef O_RDONLY
+	CompareConstant(O_RDONLY,00,1169,architecture)
+#else
+Msg( "Error: Constant not found: O_RDONLY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef O_WRONLY
+	CompareConstant(O_WRONLY,01,1170,architecture)
+#else
+Msg( "Error: Constant not found: O_WRONLY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef O_RDWR
+	CompareConstant(O_RDWR,02,1171,architecture)
+#else
+Msg( "Error: Constant not found: O_RDWR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef O_CREAT
+	CompareConstant(O_CREAT,0100,1172,architecture)
+#else
+Msg( "Error: Constant not found: O_CREAT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef O_EXCL
+	CompareConstant(O_EXCL,0200,1173,architecture)
+#else
+Msg( "Error: Constant not found: O_EXCL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef O_NOCTTY
+	CompareConstant(O_NOCTTY,0400,1174,architecture)
+#else
+Msg( "Error: Constant not found: O_NOCTTY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef O_TRUNC
 	CompareConstant(O_TRUNC,01000,1175,architecture)
 #else
@@ -218,76 +288,6 @@ cnt++;
 	CompareConstant(F_UNLCK,2,1200,architecture)
 #else
 Msg( "Error: Constant not found: F_UNLCK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef O_ACCMODE
-	CompareConstant(O_ACCMODE,0003,1168,architecture)
-#else
-Msg( "Error: Constant not found: O_ACCMODE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef O_RDONLY
-	CompareConstant(O_RDONLY,00,1169,architecture)
-#else
-Msg( "Error: Constant not found: O_RDONLY\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef O_WRONLY
-	CompareConstant(O_WRONLY,01,1170,architecture)
-#else
-Msg( "Error: Constant not found: O_WRONLY\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef O_RDWR
-	CompareConstant(O_RDWR,02,1171,architecture)
-#else
-Msg( "Error: Constant not found: O_RDWR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef O_CREAT
-	CompareConstant(O_CREAT,0100,1172,architecture)
-#else
-Msg( "Error: Constant not found: O_CREAT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef O_EXCL
-	CompareConstant(O_EXCL,0200,1173,architecture)
-#else
-Msg( "Error: Constant not found: O_EXCL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef O_NOCTTY
-	CompareConstant(O_NOCTTY,0400,1174,architecture)
-#else
-Msg( "Error: Constant not found: O_NOCTTY\n");
 cnt++;
 #endif
 

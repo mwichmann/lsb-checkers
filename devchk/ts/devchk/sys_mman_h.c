@@ -24,6 +24,16 @@ Msg("Checking data structures in sys/mman.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef MAP_FAILED
+	CompareConstant(MAP_FAILED,((void*)-1),1747,architecture)
+#else
+Msg( "Error: Constant not found: MAP_FAILED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef PROT_READ
 	CompareConstant(PROT_READ,0x1,3503,architecture)
 #else
@@ -246,16 +256,6 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3520,%d);\n", arch
 	CompareConstant(MAP_ANON,MAP_ANONYMOUS,3526,architecture)
 #else
 Msg( "Error: Constant not found: MAP_ANON\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef MAP_FAILED
-	CompareConstant(MAP_FAILED,((void*)-1),1747,architecture)
-#else
-Msg( "Error: Constant not found: MAP_FAILED\n");
 cnt++;
 #endif
 

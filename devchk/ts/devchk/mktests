@@ -138,7 +138,7 @@ sub writetest($$)
 	}
 
 	
-	foreach $cid (keys %constHash)
+	foreach $cid (sort keys %constHash)
 	{
 	    $archCount = 0;
 	    foreach $archId (reverse sort keys %{$constHash{$cid}})

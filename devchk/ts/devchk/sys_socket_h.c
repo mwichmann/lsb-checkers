@@ -25,90 +25,30 @@ Msg("Checking data structures in sys/socket.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef PF_UNSPEC
-	CompareConstant(PF_UNSPEC,AF_UNSPEC,3283,architecture)
+#ifdef SHUT_RD
+	CompareConstant(SHUT_RD,0,2466,architecture)
 #else
-Msg( "Error: Constant not found: PF_UNSPEC\n");
+Msg( "Error: Constant not found: SHUT_RD\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef PF_UNIX
-	CompareConstant(PF_UNIX,AF_UNIX,3284,architecture)
+#ifdef SHUT_WR
+	CompareConstant(SHUT_WR,1,2467,architecture)
 #else
-Msg( "Error: Constant not found: PF_UNIX\n");
+Msg( "Error: Constant not found: SHUT_WR\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef PF_LOCAL
-	CompareConstant(PF_LOCAL,AF_LOCAL,3285,architecture)
+#ifdef SHUT_RDWR
+	CompareConstant(SHUT_RDWR,2,2468,architecture)
 #else
-Msg( "Error: Constant not found: PF_LOCAL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PF_INET
-	CompareConstant(PF_INET,AF_INET,3286,architecture)
-#else
-Msg( "Error: Constant not found: PF_INET\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PF_INET6
-	CompareConstant(PF_INET6,AF_INET6,3294,architecture)
-#else
-Msg( "Error: Constant not found: PF_INET6\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SIOCGIFCONF
-	CompareConstant(SIOCGIFCONF,0x8912,3382,architecture)
-#else
-Msg( "Error: Constant not found: SIOCGIFCONF\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SIOCGIFFLAGS
-	CompareConstant(SIOCGIFFLAGS,0x8913,3383,architecture)
-#else
-Msg( "Error: Constant not found: SIOCGIFFLAGS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SIOCGIFADDR
-	CompareConstant(SIOCGIFADDR,0x8915,3385,architecture)
-#else
-Msg( "Error: Constant not found: SIOCGIFADDR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SIOCGIFNETMASK
-	CompareConstant(SIOCGIFNETMASK,0x891b,3391,architecture)
-#else
-Msg( "Error: Constant not found: SIOCGIFNETMASK\n");
+Msg( "Error: Constant not found: SHUT_RDWR\n");
 cnt++;
 #endif
 
@@ -255,46 +195,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef MSG_OOB
-	CompareConstant(MSG_OOB,1,3312,architecture)
-#else
-Msg( "Error: Constant not found: MSG_OOB\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef MSG_PEEK
-	CompareConstant(MSG_PEEK,2,3313,architecture)
-#else
-Msg( "Error: Constant not found: MSG_PEEK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef MSG_DONTROUTE
-	CompareConstant(MSG_DONTROUTE,4,3314,architecture)
-#else
-Msg( "Error: Constant not found: MSG_DONTROUTE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef MSG_CTRUNC
-	CompareConstant(MSG_CTRUNC,8,3316,architecture)
-#else
-Msg( "Error: Constant not found: MSG_CTRUNC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef SOCK_STREAM
 	CompareConstant(SOCK_STREAM,1,3244,architecture)
 #else
@@ -309,16 +209,6 @@ cnt++;
 	CompareConstant(SOCK_DGRAM,2,3245,architecture)
 #else
 Msg( "Error: Constant not found: SOCK_DGRAM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef MSG_TRUNC
-	CompareConstant(MSG_TRUNC,0x20,3318,architecture)
-#else
-Msg( "Error: Constant not found: MSG_TRUNC\n");
 cnt++;
 #endif
 
@@ -359,26 +249,6 @@ cnt++;
 	CompareConstant(SOCK_PACKET,10,3249,architecture)
 #else
 Msg( "Error: Constant not found: SOCK_PACKET\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef MSG_EOR
-	CompareConstant(MSG_EOR,0x80,3320,architecture)
-#else
-Msg( "Error: Constant not found: MSG_EOR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef MSG_WAITALL
-	CompareConstant(MSG_WAITALL,0x100,3321,architecture)
-#else
-Msg( "Error: Constant not found: MSG_WAITALL\n");
 cnt++;
 #endif
 
@@ -455,16 +325,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SOL_RAW
-	CompareConstant(SOL_RAW,255,3335,architecture)
-#else
-Msg( "Error: Constant not found: SOL_RAW\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef AF_NETROM
 	CompareConstant(AF_NETROM,6,3262,architecture)
 #else
@@ -515,30 +375,170 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SHUT_RD
-	CompareConstant(SHUT_RD,0,2466,architecture)
+#ifdef PF_UNSPEC
+	CompareConstant(PF_UNSPEC,AF_UNSPEC,3283,architecture)
 #else
-Msg( "Error: Constant not found: SHUT_RD\n");
+Msg( "Error: Constant not found: PF_UNSPEC\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SHUT_WR
-	CompareConstant(SHUT_WR,1,2467,architecture)
+#ifdef PF_UNIX
+	CompareConstant(PF_UNIX,AF_UNIX,3284,architecture)
 #else
-Msg( "Error: Constant not found: SHUT_WR\n");
+Msg( "Error: Constant not found: PF_UNIX\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SHUT_RDWR
-	CompareConstant(SHUT_RDWR,2,2468,architecture)
+#ifdef PF_LOCAL
+	CompareConstant(PF_LOCAL,AF_LOCAL,3285,architecture)
 #else
-Msg( "Error: Constant not found: SHUT_RDWR\n");
+Msg( "Error: Constant not found: PF_LOCAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PF_INET
+	CompareConstant(PF_INET,AF_INET,3286,architecture)
+#else
+Msg( "Error: Constant not found: PF_INET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PF_INET6
+	CompareConstant(PF_INET6,AF_INET6,3294,architecture)
+#else
+Msg( "Error: Constant not found: PF_INET6\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MSG_OOB
+	CompareConstant(MSG_OOB,1,3312,architecture)
+#else
+Msg( "Error: Constant not found: MSG_OOB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MSG_PEEK
+	CompareConstant(MSG_PEEK,2,3313,architecture)
+#else
+Msg( "Error: Constant not found: MSG_PEEK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MSG_DONTROUTE
+	CompareConstant(MSG_DONTROUTE,4,3314,architecture)
+#else
+Msg( "Error: Constant not found: MSG_DONTROUTE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MSG_CTRUNC
+	CompareConstant(MSG_CTRUNC,8,3316,architecture)
+#else
+Msg( "Error: Constant not found: MSG_CTRUNC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MSG_TRUNC
+	CompareConstant(MSG_TRUNC,0x20,3318,architecture)
+#else
+Msg( "Error: Constant not found: MSG_TRUNC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MSG_EOR
+	CompareConstant(MSG_EOR,0x80,3320,architecture)
+#else
+Msg( "Error: Constant not found: MSG_EOR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MSG_WAITALL
+	CompareConstant(MSG_WAITALL,0x100,3321,architecture)
+#else
+Msg( "Error: Constant not found: MSG_WAITALL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SOL_RAW
+	CompareConstant(SOL_RAW,255,3335,architecture)
+#else
+Msg( "Error: Constant not found: SOL_RAW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFCONF
+	CompareConstant(SIOCGIFCONF,0x8912,3382,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFCONF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFFLAGS
+	CompareConstant(SIOCGIFFLAGS,0x8913,3383,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFFLAGS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFADDR
+	CompareConstant(SIOCGIFADDR,0x8915,3385,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFADDR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFNETMASK
+	CompareConstant(SIOCGIFNETMASK,0x891b,3391,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFNETMASK\n");
 cnt++;
 #endif
 

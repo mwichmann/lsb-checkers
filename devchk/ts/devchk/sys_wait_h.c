@@ -25,26 +25,6 @@ Msg("Checking data structures in sys/wait.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef WNOHANG
-	CompareConstant(WNOHANG,0x00000001,3490,architecture)
-#else
-Msg( "Error: Constant not found: WNOHANG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef WUNTRACED
-	CompareConstant(WUNTRACED,0x00000002,3491,architecture)
-#else
-Msg( "Error: Constant not found: WUNTRACED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for WEXITSTATUS(status) */
 #endif
 
@@ -80,6 +60,26 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 /* No test for WCOREDUMP(status) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WNOHANG
+	CompareConstant(WNOHANG,0x00000001,3490,architecture)
+#else
+Msg( "Error: Constant not found: WNOHANG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef WUNTRACED
+	CompareConstant(WUNTRACED,0x00000002,3491,architecture)
+#else
+Msg( "Error: Constant not found: WUNTRACED\n");
+cnt++;
+#endif
+
 #endif
 
 #if __i386__
