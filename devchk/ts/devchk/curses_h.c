@@ -1513,6 +1513,8 @@ CheckTypeSize(chtype,4, 8650, 2)
 CheckTypeSize(chtype,8, 8650, 3)
 #elif __powerpc__
 CheckTypeSize(chtype,4, 8650, 6)
+#elif __s390__
+CheckTypeSize(chtype,0, 8650, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8650,0);
 Msg("Find size of chtype (8650)\n");
@@ -1524,6 +1526,8 @@ CheckTypeSize(bool,1, 8651, 2)
 CheckTypeSize(bool,4, 8651, 3)
 #elif __powerpc__
 CheckTypeSize(bool,4, 8651, 6)
+#elif __s390__
+CheckTypeSize(bool,0, 8651, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8651,0);
 Msg("Find size of bool (8651)\n");
@@ -1535,6 +1539,8 @@ CheckTypeSize(SCREEN,0, 8653, 2)
 CheckTypeSize(SCREEN,0, 8653, 3)
 #elif __powerpc__
 CheckTypeSize(SCREEN,0, 8653, 6)
+#elif __s390__
+CheckTypeSize(SCREEN,0, 8653, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8653,0);
 Msg("Find size of SCREEN (8653)\n");
@@ -1546,6 +1552,8 @@ CheckTypeSize(WINDOW,100, 8655, 2)
 CheckTypeSize(WINDOW,152, 8655, 3)
 #elif __powerpc__
 CheckTypeSize(WINDOW,124, 8655, 6)
+#elif __s390__
+CheckTypeSize(WINDOW,0, 8655, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8655,0);
 Msg("Find size of WINDOW (8655)\n");
@@ -1557,6 +1565,8 @@ CheckTypeSize(attr_t,4, 8656, 2)
 CheckTypeSize(attr_t,8, 8656, 3)
 #elif __powerpc__
 CheckTypeSize(attr_t,4, 8656, 6)
+#elif __s390__
+CheckTypeSize(attr_t,0, 8656, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8656,0);
 Msg("Find size of attr_t (8656)\n");
@@ -1568,6 +1578,8 @@ CheckTypeSize(cchar_t,24, 8658, 2)
 CheckTypeSize(cchar_t,24, 8658, 6)
 #elif __ia64__
 CheckTypeSize(cchar_t,32, 8658, 3)
+#elif __s390__
+CheckTypeSize(cchar_t,0, 8658, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8658,0);
 Msg("Find size of cchar_t (8658)\n");
@@ -1591,6 +1603,8 @@ CheckOffset(struct pdat,_pad_top,4,3,29727)
 CheckOffset(struct pdat,_pad_left,6,3,29728)
 CheckOffset(struct pdat,_pad_bottom,8,3,29729)
 CheckOffset(struct pdat,_pad_right,10,3,29730)
+#elif __s390__
+CheckTypeSize(struct pdat,0, 8663, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
 Msg("Find size of pdat (8663)\n");
@@ -1658,6 +1672,8 @@ CheckOffset(struct _win_st,_yoffset,116,3,29732)
 CheckOffset(struct _win_st,_bkgrnd,120,3,34437)
 #elif __powerpc__
 CheckTypeSize(struct _win_st,124, 8654, 6)
+#elif __s390__
+CheckTypeSize(struct _win_st,0, 8654, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
 Msg("Find size of _win_st (8654)\n");

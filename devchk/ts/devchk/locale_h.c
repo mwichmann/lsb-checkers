@@ -183,6 +183,8 @@ CheckOffset(struct lconv,int_n_sign_posn,53,2,34436)
 CheckTypeSize(struct lconv,96, 6919, 3)
 #elif __powerpc__
 CheckTypeSize(struct lconv,56, 6919, 6)
+#elif __s390__
+CheckTypeSize(struct lconv,0, 6919, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6919,0);
 Msg("Find size of lconv (6919)\n");

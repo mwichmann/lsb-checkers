@@ -161,6 +161,8 @@ CheckOffset(struct exit_status,e_exit,2,2,34454)
 CheckTypeSize(struct exit_status,4, 10282, 6)
 #elif __ia64__
 CheckTypeSize(struct exit_status,4, 10282, 3)
+#elif __s390__
+CheckTypeSize(struct exit_status,0, 10282, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10282,0);
 Msg("Find size of exit_status (10282)\n");
@@ -175,6 +177,8 @@ CheckOffset(struct lastlog,ll_host,36,2,34462)
 CheckTypeSize(struct lastlog,292, 10285, 6)
 #elif __ia64__
 CheckTypeSize(struct lastlog,296, 10285, 3)
+#elif __s390__
+CheckTypeSize(struct lastlog,0, 10285, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10285,0);
 Msg("Find size of lastlog (10285)\n");
@@ -197,6 +201,8 @@ CheckOffset(struct utmp,__unused,364,2,34459)
 CheckTypeSize(struct utmp,384, 10281, 6)
 #elif __ia64__
 CheckTypeSize(struct utmp,400, 10281, 3)
+#elif __s390__
+CheckTypeSize(struct utmp,0, 10281, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10281,0);
 Msg("Find size of utmp (10281)\n");

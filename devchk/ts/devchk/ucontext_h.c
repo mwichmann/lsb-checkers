@@ -82,6 +82,8 @@ CheckOffset(struct _libc_fpstate,status,108,2,34324)
 
 #ifdef __i386__
 CheckTypeSize(fpregset_t,4, 10228, 2)
+#elif __s390__
+CheckTypeSize(fpregset_t,0, 10228, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10228,0);
 Msg("Find size of fpregset_t (10228)\n");

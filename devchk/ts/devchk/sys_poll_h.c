@@ -89,6 +89,8 @@ CheckTypeSize(struct pollfd,8, 9913, 2)
 CheckTypeSize(struct pollfd,8, 9913, 6)
 #elif __ia64__
 CheckTypeSize(struct pollfd,8, 9913, 3)
+#elif __s390__
+CheckTypeSize(struct pollfd,0, 9913, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
 Msg("Find size of pollfd (9913)\n");

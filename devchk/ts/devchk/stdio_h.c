@@ -93,7 +93,15 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#ifdef __s390__
+#ifdef FILENAME_MAX
+	CompareConstant(FILENAME_MAX,4095,3188,architecture)
+#else
+Msg( "Error: Constant not found: FILENAME_MAX\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef FILENAME_MAX
 	CompareConstant(FILENAME_MAX,4096,3188,architecture)
 #else
@@ -139,6 +147,8 @@ CheckTypeSize(FILE,148, 8782, 2)
 CheckTypeSize(FILE,216, 8782, 3)
 #elif __powerpc__
 CheckTypeSize(FILE,152, 8782, 6)
+#elif __s390__
+CheckTypeSize(FILE,0, 8782, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
 Msg("Find size of FILE (8782)\n");
@@ -150,6 +160,8 @@ CheckTypeSize(fpos_t,12, 9108, 2)
 CheckTypeSize(fpos_t,16, 9108, 3)
 #elif __powerpc__
 CheckTypeSize(fpos_t,12, 9108, 6)
+#elif __s390__
+CheckTypeSize(fpos_t,0, 9108, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9108,0);
 Msg("Find size of fpos_t (9108)\n");
@@ -161,6 +173,8 @@ CheckTypeSize(fpos64_t,16, 9109, 2)
 CheckTypeSize(fpos64_t,16, 9109, 3)
 #elif __powerpc__
 CheckTypeSize(fpos64_t,16, 9109, 6)
+#elif __s390__
+CheckTypeSize(fpos64_t,0, 9109, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9109,0);
 Msg("Find size of fpos64_t (9109)\n");

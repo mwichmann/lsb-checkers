@@ -25,6 +25,8 @@ Msg("Checking data structures in rpc/svc.h\n");
 
 #ifdef __i386__
 CheckTypeSize(struct SVCXPRT,308, 9980, 2)
+#elif __s390__
+CheckTypeSize(struct SVCXPRT,0, 9980, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9980,0);
 Msg("Find size of SVCXPRT (9980)\n");
@@ -32,6 +34,8 @@ Msg("Find size of SVCXPRT (9980)\n");
 
 #ifdef __i386__
 CheckTypeSize(SVCXPRT,308, 10390, 2)
+#elif __s390__
+CheckTypeSize(SVCXPRT,0, 10390, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10390,0);
 Msg("Find size of SVCXPRT (10390)\n");
@@ -39,6 +43,8 @@ Msg("Find size of SVCXPRT (10390)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct xp_ops,24, 9981, 2)
+#elif __s390__
+CheckTypeSize(struct xp_ops,0, 9981, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");

@@ -317,6 +317,8 @@ CheckTypeSize(struct servent,16, 10134, 2)
 CheckTypeSize(struct servent,32, 10134, 3)
 #elif __powerpc__
 CheckTypeSize(struct servent,16, 10134, 6)
+#elif __s390__
+CheckTypeSize(struct servent,0, 10134, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10134,0);
 Msg("Find size of servent (10134)\n");
@@ -328,6 +330,8 @@ CheckTypeSize(struct hostent,20, 10136, 2)
 CheckTypeSize(struct hostent,32, 10136, 3)
 #elif __powerpc__
 CheckTypeSize(struct hostent,20, 10136, 6)
+#elif __s390__
+CheckTypeSize(struct hostent,0, 10136, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10136,0);
 Msg("Find size of hostent (10136)\n");
@@ -340,6 +344,8 @@ CheckOffset(struct protoent,p_aliases,4,2,33743)
 CheckOffset(struct protoent,p_proto,8,2,33744)
 #elif __ia64__
 CheckTypeSize(struct protoent,24, 10139, 3)
+#elif __s390__
+CheckTypeSize(struct protoent,0, 10139, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10139,0);
 Msg("Find size of protoent (10139)\n");
@@ -347,6 +353,8 @@ Msg("Find size of protoent (10139)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct netent,16, 10141, 2)
+#elif __s390__
+CheckTypeSize(struct netent,0, 10141, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10141,0);
 Msg("Find size of netent (10141)\n");
@@ -354,6 +362,8 @@ Msg("Find size of netent (10141)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct addrinfo,32, 10125, 2)
+#elif __s390__
+CheckTypeSize(struct addrinfo,0, 10125, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10125,0);
 Msg("Find size of addrinfo (10125)\n");

@@ -169,6 +169,8 @@ CheckTypeSize(rlim_t,4, 10210, 2)
 CheckTypeSize(rlim_t,8, 10210, 3)
 #elif __powerpc__
 CheckTypeSize(rlim_t,4, 10210, 6)
+#elif __s390__
+CheckTypeSize(rlim_t,0, 10210, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10210,0);
 Msg("Find size of rlim_t (10210)\n");
@@ -180,6 +182,8 @@ CheckTypeSize(rlim64_t,8, 10273, 2)
 CheckTypeSize(rlim64_t,8, 10273, 3)
 #elif __powerpc__
 CheckTypeSize(rlim64_t,8, 10273, 6)
+#elif __s390__
+CheckTypeSize(rlim64_t,0, 10273, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10273,0);
 Msg("Find size of rlim64_t (10273)\n");
@@ -195,6 +199,8 @@ CheckOffset(struct rlimit,rlim_cur,0,3,34262)
 CheckOffset(struct rlimit,rlim_max,8,3,34263)
 #elif __powerpc__
 CheckTypeSize(struct rlimit,8, 9120, 6)
+#elif __s390__
+CheckTypeSize(struct rlimit,0, 9120, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9120,0);
 Msg("Find size of rlimit (9120)\n");
@@ -208,6 +214,8 @@ CheckOffset(struct rlimit64,rlim_max,8,2,34267)
 CheckTypeSize(struct rlimit64,16, 9122, 3)
 #elif __powerpc__
 CheckTypeSize(struct rlimit64,16, 9122, 6)
+#elif __s390__
+CheckTypeSize(struct rlimit64,0, 9122, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9122,0);
 Msg("Find size of rlimit64 (9122)\n");
@@ -251,6 +259,8 @@ CheckOffset(struct rusage,ru_nvcsw,128,3,34260)
 CheckOffset(struct rusage,ru_nivcsw,136,3,34261)
 #elif __powerpc__
 CheckTypeSize(struct rusage,72, 9125, 6)
+#elif __s390__
+CheckTypeSize(struct rusage,0, 9125, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9125,0);
 Msg("Find size of rusage (9125)\n");

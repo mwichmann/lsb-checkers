@@ -29,6 +29,8 @@ CheckTypeSize(WidgetClass,4, 9583, 2)
 CheckTypeSize(WidgetClass,8, 9583, 3)
 #elif __powerpc__
 CheckTypeSize(WidgetClass,4, 9583, 6)
+#elif __s390__
+CheckTypeSize(WidgetClass,0, 9583, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9583,0);
 Msg("Find size of WidgetClass (9583)\n");
@@ -40,6 +42,8 @@ CheckTypeSize(Cardinal,4, 9608, 2)
 CheckTypeSize(Cardinal,4, 9608, 3)
 #elif __powerpc__
 CheckTypeSize(Cardinal,4, 9608, 6)
+#elif __s390__
+CheckTypeSize(Cardinal,0, 9608, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9608,0);
 Msg("Find size of Cardinal (9608)\n");

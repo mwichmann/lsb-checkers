@@ -31,6 +31,8 @@ CheckOffset(struct utimbuf,modtime,4,2,30206)
 CheckTypeSize(struct utimbuf,16, 7023, 3)
 #elif __powerpc__
 CheckTypeSize(struct utimbuf,8, 7023, 6)
+#elif __s390__
+CheckTypeSize(struct utimbuf,0, 7023, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7023,0);
 Msg("Find size of utimbuf (7023)\n");

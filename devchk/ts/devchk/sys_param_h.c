@@ -33,7 +33,15 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#ifdef __s390__
+#ifdef MAXPATHLEN
+	CompareConstant(MAXPATHLEN,4095,4399,architecture)
+#else
+Msg( "Error: Constant not found: MAXPATHLEN\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef MAXPATHLEN
 	CompareConstant(MAXPATHLEN,4096,4399,architecture)
 #else

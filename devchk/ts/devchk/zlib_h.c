@@ -313,6 +313,8 @@ cnt++;
 CheckTypeSize(intf,4, 10168, 2)
 #elif __ia64__
 CheckTypeSize(intf,4, 10168, 3)
+#elif __s390__
+CheckTypeSize(intf,0, 10168, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10168,0);
 Msg("Find size of intf (10168)\n");
@@ -324,6 +326,8 @@ CheckTypeSize(voidpf,4, 9868, 2)
 CheckTypeSize(voidpf,4, 9868, 6)
 #elif __ia64__
 CheckTypeSize(voidpf,8, 9868, 3)
+#elif __s390__
+CheckTypeSize(voidpf,0, 9868, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9868,0);
 Msg("Find size of voidpf (9868)\n");
@@ -335,6 +339,8 @@ CheckTypeSize(uInt,4, 9870, 2)
 CheckTypeSize(uInt,4, 9870, 6)
 #elif __ia64__
 CheckTypeSize(uInt,4, 9870, 3)
+#elif __s390__
+CheckTypeSize(uInt,0, 9870, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9870,0);
 Msg("Find size of uInt (9870)\n");
@@ -346,6 +352,8 @@ CheckTypeSize(uLong,4, 9878, 2)
 CheckTypeSize(uLong,4, 9878, 6)
 #elif __ia64__
 CheckTypeSize(uLong,8, 9878, 3)
+#elif __s390__
+CheckTypeSize(uLong,0, 9878, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9878,0);
 Msg("Find size of uLong (9878)\n");
@@ -357,6 +365,8 @@ CheckTypeSize(uLongf,4, 9883, 2)
 CheckTypeSize(uLongf,4, 9883, 6)
 #elif __ia64__
 CheckTypeSize(uLongf,8, 9883, 3)
+#elif __s390__
+CheckTypeSize(uLongf,0, 9883, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9883,0);
 Msg("Find size of uLongf (9883)\n");
@@ -368,6 +378,8 @@ CheckTypeSize(voidp,4, 9885, 2)
 CheckTypeSize(voidp,4, 9885, 6)
 #elif __ia64__
 CheckTypeSize(voidp,8, 9885, 3)
+#elif __s390__
+CheckTypeSize(voidp,0, 9885, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9885,0);
 Msg("Find size of voidp (9885)\n");
@@ -379,6 +391,8 @@ CheckTypeSize(Byte,1, 10166, 2)
 CheckTypeSize(Byte,1, 10166, 6)
 #elif __ia64__
 CheckTypeSize(Byte,1, 10166, 3)
+#elif __s390__
+CheckTypeSize(Byte,0, 10166, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10166,0);
 Msg("Find size of Byte (10166)\n");
@@ -390,6 +404,8 @@ CheckTypeSize(struct z_stream_s,56, 9875, 2)
 CheckTypeSize(struct z_stream_s,56, 9875, 6)
 #elif __ia64__
 CheckTypeSize(struct z_stream_s,112, 9875, 3)
+#elif __s390__
+CheckTypeSize(struct z_stream_s,0, 9875, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9875,0);
 Msg("Find size of z_stream_s (9875)\n");
@@ -401,6 +417,8 @@ CheckTypeSize(z_stream,56, 9880, 2)
 CheckTypeSize(z_stream,56, 9880, 6)
 #elif __ia64__
 CheckTypeSize(z_stream,112, 9880, 3)
+#elif __s390__
+CheckTypeSize(z_stream,0, 9880, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9880,0);
 Msg("Find size of z_stream (9880)\n");
@@ -412,6 +430,8 @@ CheckTypeSize(z_streamp,4, 9882, 2)
 CheckTypeSize(z_streamp,8, 9882, 3)
 #elif __powerpc__
 CheckTypeSize(z_streamp,4, 9882, 6)
+#elif __s390__
+CheckTypeSize(z_streamp,0, 9882, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9882,0);
 Msg("Find size of z_streamp (9882)\n");
@@ -423,6 +443,8 @@ CheckTypeSize(gzFile,4, 9886, 2)
 CheckTypeSize(gzFile,8, 9886, 3)
 #elif __powerpc__
 CheckTypeSize(gzFile,4, 9886, 6)
+#elif __s390__
+CheckTypeSize(gzFile,0, 9886, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9886,0);
 Msg("Find size of gzFile (9886)\n");
@@ -434,6 +456,8 @@ CheckTypeSize(alloc_func,4, 9871, 2)
 CheckTypeSize(alloc_func,4, 9871, 6)
 #elif __ia64__
 CheckTypeSize(alloc_func,8, 9871, 3)
+#elif __s390__
+CheckTypeSize(alloc_func,0, 9871, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9871,0);
 Msg("Find size of alloc_func (9871)\n");
@@ -445,6 +469,8 @@ CheckTypeSize(free_func,4, 9873, 2)
 CheckTypeSize(free_func,4, 9873, 6)
 #elif __ia64__
 CheckTypeSize(free_func,8, 9873, 3)
+#elif __s390__
+CheckTypeSize(free_func,0, 9873, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9873,0);
 Msg("Find size of free_func (9873)\n");
@@ -456,6 +482,8 @@ CheckTypeSize(struct internal_state,4, 9874, 2)
 CheckTypeSize(struct internal_state,4, 9874, 6)
 #elif __ia64__
 CheckTypeSize(struct internal_state,4, 9874, 3)
+#elif __s390__
+CheckTypeSize(struct internal_state,0, 9874, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9874,0);
 Msg("Find size of internal_state (9874)\n");
@@ -467,6 +495,8 @@ CheckTypeSize(Bytef,1, 9876, 2)
 CheckTypeSize(Bytef,1, 9876, 6)
 #elif __ia64__
 CheckTypeSize(Bytef,1, 9876, 3)
+#elif __s390__
+CheckTypeSize(Bytef,0, 9876, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9876,0);
 Msg("Find size of Bytef (9876)\n");
@@ -476,6 +506,8 @@ Msg("Find size of Bytef (9876)\n");
 CheckTypeSize(uIntf,4, 10169, 2)
 #elif __ia64__
 CheckTypeSize(uIntf,4, 10169, 3)
+#elif __s390__
+CheckTypeSize(uIntf,0, 10169, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10169,0);
 Msg("Find size of uIntf (10169)\n");

@@ -31,6 +31,8 @@ CheckTypeSize(DIR,0, 10175, 3)
 CheckTypeSize(DIR,0, 10175, 2)
 #elif __powerpc__
 CheckTypeSize(DIR,0, 10175, 6)
+#elif __s390__
+CheckTypeSize(DIR,0, 10175, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10175,0);
 Msg("Find size of DIR (10175)\n");
@@ -45,6 +47,8 @@ CheckOffset(struct dirent,d_reclen,8,2,34179)
 CheckTypeSize(struct dirent,280, 10178, 3)
 #elif __powerpc__
 CheckTypeSize(struct dirent,268, 10178, 6)
+#elif __s390__
+CheckTypeSize(struct dirent,0, 10178, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);
 Msg("Find size of dirent (10178)\n");
@@ -56,6 +60,8 @@ CheckTypeSize(struct dirent64,280, 10179, 3)
 CheckTypeSize(struct dirent64,276, 10179, 2)
 #elif __powerpc__
 CheckTypeSize(struct dirent64,280, 10179, 6)
+#elif __s390__
+CheckTypeSize(struct dirent64,0, 10179, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10179,0);
 Msg("Find size of dirent64 (10179)\n");
