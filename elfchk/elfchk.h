@@ -19,6 +19,30 @@ struct versym {
 	int   deprecated;
 	};
 
+//In memory format
+struct classtypeinfo {
+	void	*basevtable;
+	char	*name;
+	void	*basetypeinfo[];
+	};
+
+//In memory format
+struct classvtable {
+	int	baseoffset;
+	char	*typeinfo;
+	void	*virtfuncs[];
+	};
+
+struct classinfo {
+	char	*name;
+	char	*vtablename;
+	char	*rttiname;
+	int	numvirtfuncs;
+	int	numbaseinfo;
+	struct classtypeinfo *typeinfo;
+	struct classvtable *vtable;
+	};
+
 #if defined(__alpha) || defined(__alpha__) || \
     defined(__ia64__) || defined(__powerpc64__) || defined(__s390x__) || \
     defined(__x86_64__)
