@@ -311,6 +311,16 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef IPPORT_RESERVED
+	CompareConstant(IPPORT_RESERVED,1024,4740,architecture)
+#else
+Msg( "Error: Constant not found: IPPORT_RESERVED\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(struct servent,16, 10134, 2)
 CheckMemberSize(struct servent,s_aliases,4,2,33734)

@@ -23,15 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in signal.h\n");
 #endif
 
-#if __i386__
-#ifdef NSIG
-	CompareConstant(NSIG,65,2460,architecture)
-#else
-Msg( "Error: Constant not found: NSIG\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NSIG
 	CompareConstant(NSIG,64,2460,architecture)
 #else
