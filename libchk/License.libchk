@@ -1,0 +1,28 @@
++++++++++++++LIBCHK END USER LICENCE+++++++++++
+
+BY RETRIEVING THIS DISTRIBUTION OF LIBCHK, YOU ARE CONSENTING
+TO BE BOUND BY THIS AGREEMENT. IF YOU DO NOT AGREE TO ALL OF THE
+TERMS OF THIS AGREEMENT, DO NOT INSTALL THE PRODUCT, AND DESTROY YOUR
+COPY.
+
+libchk End User Licence
+_______________________
+
+Copyright (c) 2001 The Free Standards Group Inc.
+All rights reserved except as granted by this License.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the "Artistic License" which comes with this
+Kit, with the following modification:
+        a) "executable(s)" should be interpreted to include
+          "test case(s)"
+        b) if you wish to make changes as defined in clause 2 and 3, and
+         distribute a modified version of this package, then
+        clauses 3c and 4c are required
+        c) Clause 7 is rephrased as follows: "Subroutines supplied by you 
+        and linked into this Package shall not be considered part of this
+        Package".
+         
+You should have received a copy of the Artistic License with this
+Kit, in the file named "Artistic".  If not, we'll be glad to provide one.
+

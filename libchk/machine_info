@@ -1,0 +1,45 @@
+#!/bin/ksh
+
+# Record information about the Linux system
+#
+# This is $Revision: 1.1 $
+
+TMPFILE=/tmp/machine_info.$$
+
+echo lsb_release output:
+echo ===================
+
+
+lsb_release -a >> $TMPFILE 2>&1
+
+echo
+echo uname output:
+echo =============
+
+uname -a
+
+echo
+echo Packages installed:
+echo ===================
+
+# Get list of DEB packages installed
+COLUMNS=130 dpkg -l > $TMPFILE 2> /dev/null
+if [ -s $TMPFILE ]; then
+    echo 
+    echo DEB Packages
+    echo ------------
+    cat $TMPFILE
+fi
+rm -f $TMPFILE
+
+# Get list of RPM packages installed
+rpm -qa > $TMPFILE 2> /dev/null
+if [ -s $TMPFILE ]; then
+    echo 
+    echo RPM Packages
+    echo ------------
+    cat $TMPFILE
+fi
+rm -f $TMPFILE
+
+exit 0
