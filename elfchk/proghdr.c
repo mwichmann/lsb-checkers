@@ -120,10 +120,9 @@ hdr=&(file->paddr[index]);
 if( !hdr )
 	return;
 
-#ifdef VERBOSE
+if( elfchk_debug&DEBUG_PROGRAM_HEADERS )
 fprintf( stderr, "Header[%2d] type %x\n",
 			index, hdr->p_type );
-#endif /* VERBOSE */
 
 for(i=0;i<numProgHeaders;i++){
 	if( Headers[i].type == hdr->p_type ) {
@@ -131,6 +130,7 @@ for(i=0;i<numProgHeaders;i++){
 		case 1: /* Pass */
 			break;
 		case 0: /* Not checked */
+			if( elfchk_debug&DEBUG_PROGRAM_HEADERS )
 			fprintf( stderr, "Header[%2d] %-12.12s Not checked\n",
 				index, Headers[i].name );
 			break;
