@@ -41,7 +41,7 @@ CheckTypeSize(__jmp_buf,560, 10409, 3)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(__jmp_buf,448, 10410, 6)
+CheckTypeSize(__jmp_buf,232, 10410, 6)
 #endif
 
 #if __s390__ && !__s390x__
