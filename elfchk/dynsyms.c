@@ -1591,7 +1591,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_RaiseException","GCC_3.0",0},
 #endif
-	{"_Unwind_Resume","",0},
 #if __i386__
 	{"_Unwind_Resume","GCC_3.0",0},
 #endif
@@ -1622,7 +1621,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_Resume","GCC_3.0",0},
 #endif
-	{"_Unwind_SetGR","",0},
 #if __i386__
 	{"_Unwind_SetGR","GCC_3.0",0},
 #endif
