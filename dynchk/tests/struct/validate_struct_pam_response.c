@@ -5,7 +5,7 @@
 
 void validate_struct_pam_response(struct pam_response * input)
 {
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->resp);
+	validate_NULL_TYPETYPE(input->resp_retcode);
 }
 

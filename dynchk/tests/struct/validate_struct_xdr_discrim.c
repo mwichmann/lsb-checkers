@@ -5,7 +5,7 @@
 
 void validate_struct_xdr_discrim(struct xdr_discrim * input)
 {
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->xdrproc_t);
+	validate_NULL_TYPETYPE(input->value);
+	validate_NULL_TYPETYPE(input->proc);
 }
 

@@ -5,29 +5,29 @@
 
 void validate_struct_lconv(struct lconv * input)
 {
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
-	validate_NULL_TYPETYPE(input->char);
+	validate_NULL_TYPETYPE(input->decimal_point);
+	validate_NULL_TYPETYPE(input->thousands_sep);
+	validate_NULL_TYPETYPE(input->grouping);
+	validate_NULL_TYPETYPE(input->int_curr_symbol);
+	validate_NULL_TYPETYPE(input->currency_symbol);
+	validate_NULL_TYPETYPE(input->mon_decimal_point);
+	validate_NULL_TYPETYPE(input->mon_thousands_sep);
+	validate_NULL_TYPETYPE(input->mon_grouping);
+	validate_NULL_TYPETYPE(input->positive_sign);
+	validate_NULL_TYPETYPE(input->negative_sign);
+	validate_NULL_TYPETYPE(input->int_frac_digits);
+	validate_NULL_TYPETYPE(input->frac_digits);
+	validate_NULL_TYPETYPE(input->p_cs_precedes);
+	validate_NULL_TYPETYPE(input->p_sep_by_space);
+	validate_NULL_TYPETYPE(input->n_cs_precedes);
+	validate_NULL_TYPETYPE(input->n_sep_by_space);
+	validate_NULL_TYPETYPE(input->p_sign_posn);
+	validate_NULL_TYPETYPE(input->n_sign_posn);
+	validate_NULL_TYPETYPE(input->int_p_cs_precedes);
+	validate_NULL_TYPETYPE(input->int_p_sep_by_space);
+	validate_NULL_TYPETYPE(input->int_n_cs_precedes);
+	validate_NULL_TYPETYPE(input->int_n_sep_by_space);
+	validate_NULL_TYPETYPE(input->int_p_sign_posn);
+	validate_NULL_TYPETYPE(input->int_n_sign_posn);
 }
 

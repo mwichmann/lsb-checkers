@@ -5,7 +5,7 @@
 
 void validate_struct_rlimit(struct rlimit * input)
 {
-	validate_NULL_TYPETYPE(input->rlim_t);
-	validate_NULL_TYPETYPE(input->rlim_t);
+	validate_NULL_TYPETYPE(input->rlim_cur);
+	validate_NULL_TYPETYPE(input->rlim_max);
 }
 

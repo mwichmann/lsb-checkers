@@ -5,19 +5,19 @@
 
 void validate_struct_re_pattern_buffer(struct re_pattern_buffer * input)
 {
-	validate_NULL_TYPETYPE(input->unsigned char *);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->reg_syntax_t);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->size_t);
-	validate_NULL_TYPETYPE(input->unsigned int);
-	validate_NULL_TYPETYPE(input->unsigned int);
-	validate_NULL_TYPETYPE(input->unsigned int);
-	validate_NULL_TYPETYPE(input->unsigned int);
-	validate_NULL_TYPETYPE(input->unsigned int);
-	validate_NULL_TYPETYPE(input->unsigned int);
-	validate_NULL_TYPETYPE(input->unsigned int);
+	validate_NULL_TYPETYPE(input->buffer);
+	validate_NULL_TYPETYPE(input->allocated);
+	validate_NULL_TYPETYPE(input->used);
+	validate_NULL_TYPETYPE(input->syntax);
+	validate_NULL_TYPETYPE(input->fastmap);
+	validate_NULL_TYPETYPE(input->translate);
+	validate_NULL_TYPETYPE(input->re_nsub);
+	validate_NULL_TYPETYPE(input->can_be_null);
+	validate_NULL_TYPETYPE(input->regs_allocated);
+	validate_NULL_TYPETYPE(input->fastmap_accurate);
+	validate_NULL_TYPETYPE(input->no_sub);
+	validate_NULL_TYPETYPE(input->not_bol);
+	validate_NULL_TYPETYPE(input->not_eol);
+	validate_NULL_TYPETYPE(input->newline_anchor);
 }
 

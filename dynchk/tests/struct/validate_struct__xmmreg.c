@@ -5,6 +5,6 @@
 
 void validate_struct__xmmreg(struct _xmmreg * input)
 {
-	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->element);
 }
 

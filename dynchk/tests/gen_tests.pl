@@ -268,19 +268,23 @@ ORDER BY TMposition'
 		{
 			write_body($fh, $ref_tree.$name.".", $type_id, $depth + 1);
 		}
+		elsif($typeform eq "Struct")
+		{
+			print $fh "\tvalidate_".$typetype."( &(".$ref_tree.$name.") );\n";
+		}
 		else
 		{
-			print $fh "\tvalidate_".$typetype."(".$ref_tree.get_type_string($type_id).");\n";
+			print $fh "\tvalidate_".$typetype."(".$ref_tree.$name.");\n";
 		}
 	}
 	print $fh "}\n\n" if($depth == 0);
 }
 sub write_validate_declaration 
 {
-	my ($fh, $struct_name, $header_format) = @_;	
+	my ($fh, $struct_name, $struct_id, $header_format) = @_;	
 	print $fh "extern " if($header_format);
 	print $fh "void validate_struct_" . $struct_name .
-		"(struct " . $struct_name ." * input)";
+		"(" . get_type_string($struct_id) ." * input)";
 	print $fh ";" if($header_format);
 	print $fh "\n";
 }
@@ -327,7 +331,7 @@ STRUCT: while(my ($struct_name, $struct_id, $struct_header) = $struct_q->fetchro
 		or die $struct_name."Can't open output: $!";
 
 	write_header($validate_file, $struct_header, 1);
-	write_validate_declaration($validate_file, $struct_name, 0);
+	write_validate_declaration($validate_file, $struct_name, $struct_id, 0);
 	write_body($validate_file, "input->", $struct_id, 0); 
 	
 	close $validate_file;
@@ -336,7 +340,7 @@ STRUCT: while(my ($struct_name, $struct_id, $struct_header) = $struct_q->fetchro
 	write_header_to_struct_tests_h($header_header_file, $struct_header);
 
 	# write declaration to struct_tests.h
-	write_validate_declaration($header_file, $struct_name, 1);
+	write_validate_declaration($header_file, $struct_name, $struct_id, 1);
 }
 print STRUCT_MK "\n";
 close STRUCT_MK;

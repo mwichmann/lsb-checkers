@@ -5,7 +5,7 @@
 
 void validate_struct_pam_message(struct pam_message * input)
 {
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->const char *);
+	validate_NULL_TYPETYPE(input->msg_style);
+	validate_NULL_TYPETYPE(input->msg);
 }
 

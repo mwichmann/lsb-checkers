@@ -5,6 +5,6 @@
 
 void validate_struct_sched_param(struct sched_param * input)
 {
-	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->sched_priority);
 }
 

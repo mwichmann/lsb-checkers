@@ -5,11 +5,11 @@
 
 void validate_struct_ifmap(struct ifmap * input)
 {
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned short);
-	validate_NULL_TYPETYPE(input->unsigned char);
-	validate_NULL_TYPETYPE(input->unsigned char);
-	validate_NULL_TYPETYPE(input->unsigned char);
+	validate_NULL_TYPETYPE(input->mem_start);
+	validate_NULL_TYPETYPE(input->mem_end);
+	validate_NULL_TYPETYPE(input->base_addr);
+	validate_NULL_TYPETYPE(input->irq);
+	validate_NULL_TYPETYPE(input->dma);
+	validate_NULL_TYPETYPE(input->port);
 }
 

@@ -5,9 +5,9 @@
 
 void validate_struct_group(struct group * input)
 {
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->char *);
-	validate_NULL_TYPETYPE(input->gid_t);
-	validate_NULL_TYPETYPE(input->char * *);
+	validate_NULL_TYPETYPE(input->gr_name);
+	validate_NULL_TYPETYPE(input->gr_passwd);
+	validate_NULL_TYPETYPE(input->gr_gid);
+	validate_NULL_TYPETYPE(input->gr_mem);
 }
 

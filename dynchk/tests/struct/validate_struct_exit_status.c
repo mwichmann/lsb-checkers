@@ -5,7 +5,7 @@
 
 void validate_struct_exit_status(struct exit_status * input)
 {
-	validate_NULL_TYPETYPE(input->short);
-	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->e_termination);
+	validate_NULL_TYPETYPE(input->e_exit);
 }
 

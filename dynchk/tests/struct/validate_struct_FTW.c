@@ -5,7 +5,7 @@
 
 void validate_struct_FTW(struct FTW * input)
 {
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->base);
+	validate_NULL_TYPETYPE(input->level);
 }
 

@@ -5,10 +5,10 @@
 
 void validate_struct_sigaction(struct sigaction * input)
 {
-	validate_NULL_TYPETYPE(input->__sigaction_handler.sighandler_t);
-	validate_NULL_TYPETYPE(input->__sigaction_handler.void(*_sa_sigaction)(intsiginfo_t *void *));
-	validate_NULL_TYPETYPE(input->sigset_t);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->void(*sa_restorer)());
+	validate_NULL_TYPETYPE(input->__sigaction_handler._sa_handler);
+	validate_NULL_TYPETYPE(input->__sigaction_handler._sa_sigaction);
+	validate_NULL_TYPETYPE(input->sa_mask);
+	validate_NULL_TYPETYPE(input->sa_flags);
+	validate_NULL_TYPETYPE(input->sa_restorer);
 }
 

@@ -5,18 +5,18 @@
 
 void validate_struct_ifreq(struct ifreq * input)
 {
-	validate_NULL_TYPETYPE(input->ifr_ifrn.char);
-	validate_struct_sockaddr(input->ifr_ifru.struct sockaddr);
-	validate_struct_sockaddr(input->ifr_ifru.struct sockaddr);
-	validate_struct_sockaddr(input->ifr_ifru.struct sockaddr);
-	validate_struct_sockaddr(input->ifr_ifru.struct sockaddr);
-	validate_struct_sockaddr(input->ifr_ifru.struct sockaddr);
-	validate_NULL_TYPETYPE(input->ifr_ifru.short);
-	validate_NULL_TYPETYPE(input->ifr_ifru.int);
-	validate_NULL_TYPETYPE(input->ifr_ifru.int);
-	validate_NULL_TYPETYPE(input->ifr_ifru.char);
-	validate_NULL_TYPETYPE(input->ifr_ifru.char);
-	validate_NULL_TYPETYPE(input->ifr_ifru.caddr_t);
-	validate_struct_ifmap(input->ifr_ifru.struct ifmap);
+	validate_NULL_TYPETYPE(input->ifr_ifrn.ifrn_name);
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_addr) );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_dstaddr) );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_broadaddr) );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_netmask) );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_hwaddr) );
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_flags);
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_ivalue);
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_mtu);
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_slave);
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_newname);
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_data);
+	validate_struct_ifmap( &(input->ifr_ifru.ifru_map) );
 }
 

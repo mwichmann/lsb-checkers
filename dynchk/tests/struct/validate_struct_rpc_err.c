@@ -5,12 +5,12 @@
 
 void validate_struct_rpc_err(struct rpc_err * input)
 {
-	validate_NULL_TYPETYPE(input->enum clnt_stat);
-	validate_NULL_TYPETYPE(input->ru.int);
-	validate_NULL_TYPETYPE(input->ru.enum auth_stat);
-	validate_NULL_TYPETYPE(input->ru.RE_vers.u_long);
-	validate_NULL_TYPETYPE(input->ru.RE_vers.u_long);
-	validate_NULL_TYPETYPE(input->ru.RE_lb.long);
-	validate_NULL_TYPETYPE(input->ru.RE_lb.long);
+	validate_NULL_TYPETYPE(input->re_status);
+	validate_NULL_TYPETYPE(input->ru.RE_errno);
+	validate_NULL_TYPETYPE(input->ru.RE_why);
+	validate_NULL_TYPETYPE(input->ru.RE_vers.low);
+	validate_NULL_TYPETYPE(input->ru.RE_vers.high);
+	validate_NULL_TYPETYPE(input->ru.RE_lb.s1);
+	validate_NULL_TYPETYPE(input->ru.RE_lb.s2);
 }
 

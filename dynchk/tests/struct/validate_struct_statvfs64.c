@@ -5,18 +5,18 @@
 
 void validate_struct_statvfs64(struct statvfs64 * input)
 {
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->fsblkcnt64_t);
-	validate_NULL_TYPETYPE(input->fsblkcnt64_t);
-	validate_NULL_TYPETYPE(input->fsblkcnt64_t);
-	validate_NULL_TYPETYPE(input->fsfilcnt64_t);
-	validate_NULL_TYPETYPE(input->fsfilcnt64_t);
-	validate_NULL_TYPETYPE(input->fsfilcnt64_t);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->unsigned long);
-	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->f_bsize);
+	validate_NULL_TYPETYPE(input->f_frsize);
+	validate_NULL_TYPETYPE(input->f_blocks);
+	validate_NULL_TYPETYPE(input->f_bfree);
+	validate_NULL_TYPETYPE(input->f_bavail);
+	validate_NULL_TYPETYPE(input->f_files);
+	validate_NULL_TYPETYPE(input->f_ffree);
+	validate_NULL_TYPETYPE(input->f_favail);
+	validate_NULL_TYPETYPE(input->f_fsid);
+	validate_NULL_TYPETYPE(input->__f_unused);
+	validate_NULL_TYPETYPE(input->f_flag);
+	validate_NULL_TYPETYPE(input->f_namemax);
+	validate_NULL_TYPETYPE(input->__f_spare);
 }
 

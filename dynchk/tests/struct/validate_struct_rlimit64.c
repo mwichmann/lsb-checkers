@@ -5,7 +5,7 @@
 
 void validate_struct_rlimit64(struct rlimit64 * input)
 {
-	validate_NULL_TYPETYPE(input->rlim64_t);
-	validate_NULL_TYPETYPE(input->rlim64_t);
+	validate_NULL_TYPETYPE(input->rlim_cur);
+	validate_NULL_TYPETYPE(input->rlim_max);
 }
 

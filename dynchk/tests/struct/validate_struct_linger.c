@@ -5,7 +5,7 @@
 
 void validate_struct_linger(struct linger * input)
 {
-	validate_NULL_TYPETYPE(input->int);
-	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->l_onoff);
+	validate_NULL_TYPETYPE(input->l_linger);
 }
 
