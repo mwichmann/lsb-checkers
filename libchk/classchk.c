@@ -162,7 +162,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 			/*
 			 * 1.4.1) Make sure we found a named symbol at all.
 			 */
-			if ( !dlinfo.dli_saddr & (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS)) {
+			if ( !dlinfo.dli_saddr & !(libchk_debug&LIBCHK_DEBUG_CXXHUSH)) {
 					printf("Did not find symbol addr for Virtual table entry ");
 					printf("[%d] expecting %s\n",
 									j, classp->vtable->virtfuncs[j] );
@@ -189,7 +189,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 			/*
 			 * 1.4.3) Make sure we found a named symbol at all.
 			 */
-			if ( !dlinfo.dli_sname & (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS)) {
+			if ( !dlinfo.dli_sname & !(libchk_debug&LIBCHK_DEBUG_CXXHUSH)) {
 					printf("Did not find symbol name for Virtual table entry ");
 					printf("[%d] expecting %s\n",
 									j, classp->vtable->virtfuncs[j] );
