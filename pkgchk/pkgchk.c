@@ -37,7 +37,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.5 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.6 $";
 
 int
 main(int argc, char *argv[])
@@ -87,9 +87,9 @@ main(int argc, char *argv[])
   /* Log version number for lsbpkgchk package */
   snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbpkgchk " LSBPKGCHK_VERSION);
   tetj_add_config(journal, tmp_string);
-
+  tetj_testcase_start(journal, tetj_activity_count, argv[1], "TC Start");
   checkRpm(rpmfile, journal);
-
+  tetj_testcase_end(journal, tetj_activity_count, "", "TC End");
   tetj_close_journal(journal);
   exit(0);
 }
