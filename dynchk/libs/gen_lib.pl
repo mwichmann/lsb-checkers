@@ -396,7 +396,6 @@ sub get_param_type # ($param_pos, $param_int)
 	return ($left_string,$right_string);
 }
 
-
 # write code that checks the addresses of pointers.
 sub write_addy_checker
 {
@@ -423,11 +422,19 @@ sub write_int_wrapper
 	my($fh, $func_id, $func_name, $func_left_type, $func_right_type, $is_lsb) = @_;
 	my $i = 0; my $j = 0;
 
-	print $fh "{\n\tif(!funcptr)\n";
+	print $fh "{\n";
+	print $fh "\tint reset_flag = __lsb_check_params;\n";
+	print $fh "\t$func_left_type ret_value $func_right_type;\n";
+
+	print $fh "\tif(!funcptr)\n";
 	print $fh "\t\tfuncptr = dlsym(RTLD_NEXT, \"" . $func_name . "\");\n";
 	
 	$write_int_wrapper_q->execute($func_id)
 		or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
+
+	print $fh "\tif(check_parms)\n\t{\n";
+	print $fh "\t\tcheck_params=0;\n";
+
 	VALCALL: while( my($param_pos, $param_int, $param_null) = $write_int_wrapper_q->fetchrow_array() )
 	{
 		$get_param_typeid_q->execute($param_pos, $param_int)
@@ -436,23 +443,25 @@ sub write_int_wrapper
 		
 		next VALCALL if($typeid == 1);
 
-		unless($is_lsb)
+		unless($is_lsb) #I should be able to remove the is_lsb controls, if the flag system works.
 		{
 			my($typetype, $dereference) = get_param_typetype($param_pos, $param_int);
 			if( $param_null eq 'Y' ) {
-				print $fh "\tif( arg$i ) {\n";
+				print $fh "\t\tif( arg$i ) {\n";
 			}
 			write_addy_checker($fh, $typeid, "arg$i", "", "$func_name - arg$i");
 			if( $param_null eq 'Y' ) {
-				print $fh "\t}\n";
+				print $fh "\t\t}\n";
 			}
 
-			print $fh "\tvalidate_$typetype( $dereference arg$i, \"$func_name - arg$i\");\n";
+			print $fh "\t\tvalidate_$typetype( $dereference arg$i, \"$func_name - arg$i\");\n";
+			
 		}
 		$i++;
 	}
-	print $fh "\t";
-	print $fh "return " unless($func_left_type eq "void");
+
+	print $fh "\t\t";
+	print $fh "ret_value = " unless($func_left_type eq "void");
 	print $fh "funcptr(";
 	
 	while($j < $i)
@@ -461,7 +470,10 @@ sub write_int_wrapper
 		print $fh "arg".$j;
 		$j++;
 	}
-	print $fh ");\n}\n\n";
+	print $fh ");\n";
+	print $fh "\tcheck_params = reset_flag;\n";
+	print $fh "\treturn ret_value;\n" unless($func_left_type eq "void");
+	print $fh "}\n\n";
 }
 
 my $simple_header_q = $dbh->prepare(
@@ -507,7 +519,6 @@ sub write_int_header
 		}
 	}
 
-#   This appears to break stuff.
 	if(!contains($main_header, @headers_found))
 	{
 		print $fh "#include <".$main_header.">\n";
@@ -518,6 +529,7 @@ sub write_int_header
 	print $fh "static ". $left_type ."(*funcptr)".$right_type."(";
 	write_argument_list($fh, $func_id, 0);
 	print $fh ") = 0;\n\n";
+	print $fh "extern int __lsb_check_params;\n";
 }
 
 # write argument list for a function declaration.
