@@ -1402,7 +1402,7 @@ CheckTypeSize(off64_t,8, 9112, 6)
 #elif __s390__
 CheckTypeSize(off64_t,8, 9112, 10)
 #elif __powerpc64__
-CheckTypeSize(off64_t,0, 9112, 9)
+CheckTypeSize(off64_t,8, 9112, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9112,0);
 Msg("Find size of off64_t (9112)\n");
@@ -1417,7 +1417,7 @@ CheckTypeSize(intptr_t,4, 9196, 6)
 #elif __s390__
 CheckTypeSize(intptr_t,4, 9196, 10)
 #elif __powerpc64__
-CheckTypeSize(intptr_t,0, 9196, 9)
+CheckTypeSize(intptr_t,8, 9196, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9196,0);
 Msg("Find size of intptr_t (9196)\n");

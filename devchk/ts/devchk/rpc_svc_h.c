@@ -64,17 +64,15 @@ CheckOffset(struct SVCXPRT,xp_p1,44,6,32249)
 CheckOffset(struct SVCXPRT,xp_p2,48,6,32250)
 CheckOffset(struct SVCXPRT,xp_pad,52,6,32251)
 #elif __powerpc64__
-CheckTypeSize(struct SVCXPRT,0, 9980, 9)
-Msg("Missing member data for SVCXPRT on PPC64\n");
-CheckOffset(struct SVCXPRT,xp_sock,0,9,32225)
-CheckOffset(struct SVCXPRT,xp_port,0,9,32226)
-CheckOffset(struct SVCXPRT,xp_ops,0,9,32245)
-CheckOffset(struct SVCXPRT,xp_addrlen,0,9,32246)
-CheckOffset(struct SVCXPRT,xp_raddr,0,9,32247)
-CheckOffset(struct SVCXPRT,xp_verf,0,9,32248)
-CheckOffset(struct SVCXPRT,xp_p1,0,9,32249)
-CheckOffset(struct SVCXPRT,xp_p2,0,9,32250)
-CheckOffset(struct SVCXPRT,xp_pad,0,9,32251)
+CheckTypeSize(struct SVCXPRT,336, 9980, 9)
+CheckOffset(struct SVCXPRT,xp_port,4,9,32226)
+CheckOffset(struct SVCXPRT,xp_ops,8,9,32245)
+CheckOffset(struct SVCXPRT,xp_addrlen,16,9,32246)
+CheckOffset(struct SVCXPRT,xp_raddr,20,9,32247)
+CheckOffset(struct SVCXPRT,xp_verf,40,9,32248)
+CheckOffset(struct SVCXPRT,xp_p1,64,9,32249)
+CheckOffset(struct SVCXPRT,xp_p2,72,9,32250)
+CheckOffset(struct SVCXPRT,xp_pad,80,9,32251)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9980,0);
 Msg("Find size of SVCXPRT (9980)\n");
@@ -89,7 +87,7 @@ CheckTypeSize(SVCXPRT,336, 10390, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SVCXPRT,308, 10390, 6)
 #elif __powerpc64__
-CheckTypeSize(SVCXPRT,0, 10390, 9)
+CheckTypeSize(SVCXPRT,336, 10390, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10390,0);
 Msg("Find size of SVCXPRT (10390)\n");

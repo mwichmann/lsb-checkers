@@ -72,7 +72,7 @@ CheckTypeSize(Dl_info,16, 10008, 6)
 #elif __s390__
 CheckTypeSize(Dl_info,16, 10008, 10)
 #elif __powerpc64__
-CheckTypeSize(Dl_info,0, 10008, 9)
+CheckTypeSize(Dl_info,32, 10008, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10008,0);
 Msg("Find size of Dl_info (10008)\n");

@@ -40,11 +40,9 @@ CheckTypeSize(struct accepted_reply,24, 10417, 6)
 CheckOffset(struct accepted_reply,ar_stat,12,6,34801)
 CheckOffset(struct accepted_reply,ru,16,6,34830)
 #elif __powerpc64__
-CheckTypeSize(struct accepted_reply,0, 10417, 9)
-Msg("Missing member data for accepted_reply on PPC64\n");
-CheckOffset(struct accepted_reply,ar_verf,0,9,34800)
-CheckOffset(struct accepted_reply,ar_stat,0,9,34801)
-CheckOffset(struct accepted_reply,ru,0,9,34830)
+CheckTypeSize(struct accepted_reply,48, 10417, 9)
+CheckOffset(struct accepted_reply,ar_stat,24,9,34801)
+CheckOffset(struct accepted_reply,ru,32,9,34830)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10417,0);
 Msg("Find size of accepted_reply (10417)\n");
@@ -115,10 +113,8 @@ CheckOffset(struct rejected_reply,ru,4,10,34813)
 CheckTypeSize(struct rejected_reply,12, 10423, 6)
 CheckOffset(struct rejected_reply,ru,4,6,34813)
 #elif __powerpc64__
-CheckTypeSize(struct rejected_reply,0, 10423, 9)
-Msg("Missing member data for rejected_reply on PPC64\n");
-CheckOffset(struct rejected_reply,rj_stat,0,9,34812)
-CheckOffset(struct rejected_reply,ru,0,9,34813)
+CheckTypeSize(struct rejected_reply,24, 10423, 9)
+CheckOffset(struct rejected_reply,ru,8,9,34813)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
@@ -149,10 +145,8 @@ CheckOffset(struct reply_body,ru,4,10,34817)
 CheckTypeSize(struct reply_body,28, 10425, 6)
 CheckOffset(struct reply_body,ru,4,6,34817)
 #elif __powerpc64__
-CheckTypeSize(struct reply_body,0, 10425, 9)
-Msg("Missing member data for reply_body on PPC64\n");
-CheckOffset(struct reply_body,rp_stat,0,9,34816)
-CheckOffset(struct reply_body,ru,0,9,34817)
+CheckTypeSize(struct reply_body,56, 10425, 9)
+CheckOffset(struct reply_body,ru,8,9,34817)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10425,0);
 Msg("Find size of reply_body (10425)\n");
@@ -188,14 +182,12 @@ CheckOffset(struct call_body,cb_proc,12,6,34821)
 CheckOffset(struct call_body,cb_cred,16,6,34822)
 CheckOffset(struct call_body,cb_verf,28,6,34823)
 #elif __powerpc64__
-CheckTypeSize(struct call_body,0, 10426, 9)
-Msg("Missing member data for call_body on PPC64\n");
-CheckOffset(struct call_body,cb_rpcvers,0,9,34818)
-CheckOffset(struct call_body,cb_prog,0,9,34819)
-CheckOffset(struct call_body,cb_vers,0,9,34820)
-CheckOffset(struct call_body,cb_proc,0,9,34821)
-CheckOffset(struct call_body,cb_cred,0,9,34822)
-CheckOffset(struct call_body,cb_verf,0,9,34823)
+CheckTypeSize(struct call_body,80, 10426, 9)
+CheckOffset(struct call_body,cb_prog,8,9,34819)
+CheckOffset(struct call_body,cb_vers,16,9,34820)
+CheckOffset(struct call_body,cb_proc,24,9,34821)
+CheckOffset(struct call_body,cb_cred,32,9,34822)
+CheckOffset(struct call_body,cb_verf,56,9,34823)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10426,0);
 Msg("Find size of call_body (10426)\n");

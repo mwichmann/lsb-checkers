@@ -164,12 +164,10 @@ CheckOffset(struct ifaddr,ifa_ifu,16,10,34466)
 CheckOffset(struct ifaddr,ifa_ifp,32,10,34496)
 CheckOffset(struct ifaddr,ifa_next,36,10,34497)
 #elif __powerpc64__
-CheckTypeSize(struct ifaddr,0, 10286, 9)
-Msg("Missing member data for ifaddr on PPC64\n");
-CheckOffset(struct ifaddr,ifa_addr,0,9,34463)
-CheckOffset(struct ifaddr,ifa_ifu,0,9,34466)
-CheckOffset(struct ifaddr,ifa_ifp,0,9,34496)
-CheckOffset(struct ifaddr,ifa_next,0,9,34497)
+CheckTypeSize(struct ifaddr,48, 10286, 9)
+CheckOffset(struct ifaddr,ifa_ifu,16,9,34466)
+CheckOffset(struct ifaddr,ifa_ifp,32,9,34496)
+CheckOffset(struct ifaddr,ifa_next,40,9,34497)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10286,0);
 Msg("Find size of ifaddr (10286)\n");
@@ -198,10 +196,8 @@ CheckOffset(struct ifreq,ifr_ifru,16,3,34483)
 CheckTypeSize(struct ifreq,32, 10290, 10)
 CheckOffset(struct ifreq,ifr_ifru,16,10,34483)
 #elif __powerpc64__
-CheckTypeSize(struct ifreq,0, 10290, 9)
-Msg("Missing member data for ifreq on PPC64\n");
-CheckOffset(struct ifreq,ifr_ifrn,0,9,34471)
-CheckOffset(struct ifreq,ifr_ifru,0,9,34483)
+CheckTypeSize(struct ifreq,40, 10290, 9)
+CheckOffset(struct ifreq,ifr_ifru,16,9,34483)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10290,0);
 Msg("Find size of ifreq (10290)\n");

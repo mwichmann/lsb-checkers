@@ -46,7 +46,7 @@ CheckTypeSize(wchar_t,4, 8848, 6)
 #elif __s390__
 CheckTypeSize(wchar_t,4, 8848, 10)
 #elif __powerpc64__
-CheckTypeSize(wchar_t,0, 8848, 9)
+CheckTypeSize(wchar_t,4, 8848, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
 Msg("Find size of wchar_t (8848)\n");
@@ -61,7 +61,7 @@ CheckTypeSize(size_t,4, 8969, 6)
 #elif __s390__
 CheckTypeSize(size_t,4, 8969, 10)
 #elif __powerpc64__
-CheckTypeSize(size_t,0, 8969, 9)
+CheckTypeSize(size_t,8, 8969, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
 Msg("Find size of size_t (8969)\n");
@@ -76,7 +76,7 @@ CheckTypeSize(ptrdiff_t,4, 9027, 6)
 #elif __s390__
 CheckTypeSize(ptrdiff_t,4, 9027, 10)
 #elif __powerpc64__
-CheckTypeSize(ptrdiff_t,0, 9027, 9)
+CheckTypeSize(ptrdiff_t,8, 9027, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9027,0);
 Msg("Find size of ptrdiff_t (9027)\n");
