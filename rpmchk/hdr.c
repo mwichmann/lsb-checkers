@@ -63,7 +63,7 @@ hoffset=((char *)(file1->header))-file1->addr;
 
 /* Make sure it is aligned correctly */
 hoffset+=7;
-hoffset&=(~3);
+hoffset&=(~7);
 file1->header=(RpmHeader *)(file1->addr+hoffset);
 
 /*
