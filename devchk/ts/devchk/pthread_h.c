@@ -583,15 +583,19 @@ CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,11,34443)
 CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,11,34444)
 CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,11,34444)
 #elif __powerpc64__
-CheckTypeSize(struct _pthread_rwlock_t,0, 10279, 9)
-Msg("Missing member data for _pthread_rwlock_t on PPC64\n");
-CheckOffset(struct _pthread_rwlock_t,__rw_lock,0,9,34438)
-CheckOffset(struct _pthread_rwlock_t,__rw_readers,0,9,34439)
-CheckOffset(struct _pthread_rwlock_t,__rw_writer,0,9,34440)
-CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,0,9,34441)
-CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,0,9,34442)
-CheckOffset(struct _pthread_rwlock_t,__rw_kind,0,9,34443)
-CheckOffset(struct _pthread_rwlock_t,__rw_pshared,0,9,34444)
+CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 9)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,9,34439)
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,9,34439)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,9,34440)
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,9,34440)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,9,34441)
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,9,34441)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,9,34442)
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,9,34442)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,9,34443)
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,9,34443)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,9,34444)
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,9,34444)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10279,0);
 Msg("Find size of _pthread_rwlock_t (10279)\n");
@@ -612,6 +616,7 @@ Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
 #if __i386__
 #elif __powerpc64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
 Msg("Find size of const pthread_rwlockattr_t * (10811)\n");

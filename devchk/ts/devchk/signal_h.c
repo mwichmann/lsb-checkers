@@ -778,14 +778,18 @@ CheckTypeSize(_s390_regs_common,4, 10821, 10)
 
 #if __no_sym__
 CheckTypeSize(_s390_regs_common,4, 10838, )
+#elif __s390x__
+CheckTypeSize(_s390_regs_common,4, 10838, 12)
 #endif
 
 #if __i386__
 CheckTypeSize(sighandler_t,4, 9374, 2)
 #elif __powerpc64__
-CheckTypeSize(sighandler_t,0, 9374, 9)
+CheckTypeSize(sighandler_t,8, 9374, 9)
 #elif __ia64__
 CheckTypeSize(sighandler_t,0, 9374, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(sighandler_t,0, 9374, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9374,0);
 Msg("Find size of sighandler_t (9374)\n");
@@ -873,7 +877,7 @@ CheckTypeSize(sigset_t,128, 10163, 12)
 #elif __x86_64__
 CheckTypeSize(sigset_t,128, 10163, 11)
 #elif __powerpc64__
-CheckTypeSize(sigset_t,0, 10163, 9)
+CheckTypeSize(sigset_t,128, 10163, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
 Msg("Find size of sigset_t (10163)\n");

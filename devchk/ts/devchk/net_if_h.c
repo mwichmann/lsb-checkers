@@ -300,10 +300,9 @@ CheckTypeSize(struct ifconf,16, 10288, 11)
 CheckMemberSize(struct ifconf,ifc_ifcu,8,11,34469)
 CheckOffset(struct ifconf,ifc_ifcu,8,11,34469)
 #elif __powerpc64__
-CheckTypeSize(struct ifconf,0, 10288, 9)
-Msg("Missing member data for ifconf on PPC64\n");
-CheckOffset(struct ifconf,ifc_len,0,9,34467)
-CheckOffset(struct ifconf,ifc_ifcu,0,9,34469)
+CheckTypeSize(struct ifconf,16, 10288, 9)
+CheckMemberSize(struct ifconf,ifc_ifcu,8,9,34469)
+CheckOffset(struct ifconf,ifc_ifcu,8,9,34469)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10288,0);
 Msg("Find size of ifconf (10288)\n");
