@@ -6,22 +6,22 @@
  
 static int (*funcptr)(const char *, ...) = 0;
 
-int printf(const char *format, ...)
+int scanf(const char *format, ...)
 {	
 	va_list args;
 	va_start(args, format);
 
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vprintf");
-	validate_RWaddress(format, "printf");
+		funcptr = dlsym(RTLD_NEXT, "vscanf");
+	validate_RWaddress(format, "scanf");
 	return funcptr(format, args);
 }
 
-int lsb_printf(const char *format, ...)
+int lsb_scanf(const char *format, ...)
 {	
 	va_list args;
 	va_start(args, format);
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vprintf");
+		funcptr = dlsym(RTLD_NEXT, "vscanf");
 	return funcptr(format, args);
 }
