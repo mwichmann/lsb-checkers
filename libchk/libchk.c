@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.22 $
+ * This is $Revision: 1.23 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.23  2003/07/16 07:07:47  cyeoh
+ * Workaround for .symbols for ppc64. Eeek!
+ *
  * Revision 1.22  2003/05/15 15:35:05  anderson
  * Pick up some RPC updates
  *
@@ -98,7 +101,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.22 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.23 $";
 
 extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
 
@@ -108,6 +111,7 @@ int
 check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
 {
   int j;
+  char *symbol_name;
   /* See if this symbol is in the dynsyn section of the library */
 
   /* printf("Looking for %s\n", entry->name); */
@@ -115,7 +119,9 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
   {
     if (! (ELF32_ST_TYPE(file->syms[j].st_info) == STT_FUNC ||
            ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT))
+    {
       continue;
+    }
 #ifdef DEBUG
     printf("Bind=%x\n", ELF32_ST_BIND(file->syms[j].st_info) );
     printf("Type=%x\n", ELF32_ST_TYPE(file->syms[j].st_info) );
@@ -123,9 +129,19 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
            ElfGetStringIndex(file,file->syms[j].st_name,
                              file->symhdr->sh_link),entry->name);
 #endif
-    if (strcmp(ElfGetStringIndex(file,file->syms[j].st_name,
-                                 file->symhdr->sh_link),entry->name) 
-        == 0)
+    symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
+				    file->symhdr->sh_link);
+#if __powerpc64__
+    /* On PPC64 systems the real text for functions is stored in a symbol
+       of the same name, but prepended with a '.'. Since in the LSB DB
+       we store the names of the functions without a '.' we need this horrible
+       horrible hack so libchk can match against the correct symbols */
+    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) 
+    {
+	symbol_name++;
+    }
+#endif
+    if (strcmp(symbol_name,entry->name) == 0)
     {
 
       /* Now, check to see if it has the right version associated with it */
