@@ -47,7 +47,7 @@ CheckArrayTypeSize(__jmp_buf,4,58, 10410, 6)
 #if __s390__
 CheckArrayTypeSize(__jmp_buf,4,14, 10411, 10)
 #elif __powerpc__ && !__powerpc64__
-CheckArrayTypeSize(__jmp_buf,4,232, 10411, 6)
+CheckArrayTypeSize(__jmp_buf,4,58, 10411, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10411,0);
 Msg("Find size of __jmp_buf (10411)\n");
@@ -57,8 +57,6 @@ Msg("Find size of __jmp_buf (10411)\n");
 CheckArrayTypeSize(jmp_buf,1,704, 6962, 3)
 #elif __i386__
 CheckArrayTypeSize(jmp_buf,1,156, 6962, 2)
-#elif 1
-CheckArrayTypeSize(jmp_buf,1,188, 6962, 1)
 #elif __powerpc__ && !__powerpc64__
 CheckArrayTypeSize(jmp_buf,1,188, 6962, 6)
 #else
