@@ -103,6 +103,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
             tetj_result(journal, tetj_activity_count, tetj_tp_count, 
                         TETJ_FAIL);
             tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+						continue;
           }
         }
 
@@ -118,7 +119,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
             tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
                                0, 0, tmp_string);
             tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-                        TETJ_FAIL);
+                        TETJ_WARNING);
             tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
           }
 	/*
@@ -134,6 +135,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
             tetj_result(journal, tetj_activity_count, tetj_tp_count, 
                         TETJ_FIP);
             tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+						continue;
           }
       }
     }
