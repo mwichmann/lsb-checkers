@@ -531,7 +531,7 @@ CheckTypeSize(struct linger,8, 6907, 3)
 CheckTypeSize(struct linger,8, 6907, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6907,0);
-Msg("Find size of cmsghdr (6907)\n");
+Msg("Find size of linger (6907)\n");
 #endif
 
 #ifdef __i386__
@@ -542,7 +542,7 @@ CheckTypeSize(struct cmsghdr,16, 6909, 3)
 CheckTypeSize(struct cmsghdr,12, 6909, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6909,0);
-Msg("Find size of iovec (6909)\n");
+Msg("Find size of cmsghdr (6909)\n");
 #endif
 
 #ifdef __i386__
@@ -553,7 +553,7 @@ CheckTypeSize(struct iovec,16, 9022, 3)
 CheckTypeSize(struct iovec,8, 9022, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9022,0);
-Msg("Find size of sa_family_t (9022)\n");
+Msg("Find size of iovec (9022)\n");
 #endif
 
 #ifdef __i386__
@@ -564,7 +564,7 @@ CheckTypeSize(sa_family_t,2, 6905, 3)
 CheckTypeSize(sa_family_t,2, 6905, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6905,0);
-Msg("Find size of socklen_t (6905)\n");
+Msg("Find size of sa_family_t (6905)\n");
 #endif
 
 #ifdef __i386__
@@ -575,7 +575,7 @@ CheckTypeSize(socklen_t,4, 9155, 3)
 CheckTypeSize(socklen_t,4, 9155, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9155,0);
-Msg("Find size of sockaddr (9155)\n");
+Msg("Find size of socklen_t (9155)\n");
 #endif
 
 #ifdef __i386__
@@ -586,7 +586,7 @@ CheckTypeSize(struct sockaddr,16, 6906, 3)
 CheckTypeSize(struct sockaddr,16, 6906, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6906,0);
-Msg("Find size of msghdr (6906)\n");
+Msg("Find size of sockaddr (6906)\n");
 #endif
 
 #ifdef __i386__

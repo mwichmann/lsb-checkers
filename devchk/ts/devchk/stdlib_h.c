@@ -72,7 +72,7 @@ CheckTypeSize(__compar_fn_t,8, 9231, 3)
 CheckTypeSize(__compar_fn_t,4, 9231, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
-Msg("Find size of div_t (9231)\n");
+Msg("Find size of __compar_fn_t (9231)\n");
 #endif
 
 #ifdef __i386__
@@ -83,7 +83,7 @@ CheckTypeSize(div_t,8, 6973, 3)
 CheckTypeSize(div_t,8, 6973, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6973,0);
-Msg("Find size of ldiv_t (6973)\n");
+Msg("Find size of div_t (6973)\n");
 #endif
 
 #ifdef __i386__
@@ -94,7 +94,7 @@ CheckTypeSize(ldiv_t,16, 6975, 3)
 CheckTypeSize(ldiv_t,8, 6975, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
-Msg("Find size of lldiv_t (6975)\n");
+Msg("Find size of ldiv_t (6975)\n");
 #endif
 
 #ifdef __i386__

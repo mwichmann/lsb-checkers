@@ -48,7 +48,7 @@ CheckTypeSize(ConstraintPart,4, 10250, 2)
 CheckTypeSize(ConstraintPart,4, 10250, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
-Msg("Find size of ConstraintClassPart (10250)\n");
+Msg("Find size of ConstraintPart (10250)\n");
 #endif
 
 #ifdef __ia64__
@@ -59,7 +59,7 @@ CheckTypeSize(ConstraintClassPart,28, 10252, 2)
 CheckTypeSize(ConstraintClassPart,28, 10252, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
-Msg("Find size of ConstraintClassRec (10252)\n");
+Msg("Find size of ConstraintClassPart (10252)\n");
 #endif
 
 #ifdef __ia64__

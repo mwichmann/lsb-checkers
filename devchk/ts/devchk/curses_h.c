@@ -1479,7 +1479,7 @@ CheckTypeSize(chtype,8, 8650, 3)
 CheckTypeSize(chtype,4, 8650, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8650,0);
-Msg("Find size of bool (8650)\n");
+Msg("Find size of chtype (8650)\n");
 #endif
 
 #ifdef __i386__
@@ -1490,7 +1490,7 @@ CheckTypeSize(bool,4, 8651, 3)
 CheckTypeSize(bool,4, 8651, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8651,0);
-Msg("Find size of SCREEN (8651)\n");
+Msg("Find size of bool (8651)\n");
 #endif
 
 #ifdef __i386__
@@ -1501,7 +1501,7 @@ CheckTypeSize(SCREEN,0, 8653, 3)
 CheckTypeSize(SCREEN,0, 8653, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8653,0);
-Msg("Find size of WINDOW (8653)\n");
+Msg("Find size of SCREEN (8653)\n");
 #endif
 
 #ifdef __i386__
@@ -1512,7 +1512,7 @@ CheckTypeSize(WINDOW,152, 8655, 3)
 CheckTypeSize(WINDOW,124, 8655, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8655,0);
-Msg("Find size of attr_t (8655)\n");
+Msg("Find size of WINDOW (8655)\n");
 #endif
 
 #ifdef __i386__
@@ -1523,7 +1523,7 @@ CheckTypeSize(attr_t,8, 8656, 3)
 CheckTypeSize(attr_t,4, 8656, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8656,0);
-Msg("Find size of cchar_t (8656)\n");
+Msg("Find size of attr_t (8656)\n");
 #endif
 
 #ifdef 1
@@ -1534,7 +1534,7 @@ CheckTypeSize(cchar_t,24, 8658, 2)
 CheckTypeSize(cchar_t,24, 8658, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8658,0);
-Msg("Find size of pdat (8658)\n");
+Msg("Find size of cchar_t (8658)\n");
 #endif
 
 #ifdef __i386__
@@ -1549,7 +1549,7 @@ CheckOffset(struct pdat,_pad_right,10,2,29730)
 CheckTypeSize(struct pdat,12, 8663, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
-Msg("Find size of _win_st (8663)\n");
+Msg("Find size of pdat (8663)\n");
 #endif
 
 #ifdef __i386__

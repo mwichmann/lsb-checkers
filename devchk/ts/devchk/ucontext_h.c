@@ -73,7 +73,7 @@ CheckOffset(struct _libc_fpstate,status,108,2,34324)
 CheckTypeSize(fpregset_t,4, 10228, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10228,0);
-Msg("Find size of anon-mcontext (10228)\n");
+Msg("Find size of fpregset_t (10228)\n");
 #endif
 
 #ifdef __i386__
@@ -81,7 +81,7 @@ Msg("Find size of anon-mcontext (10228)\n");
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
-Msg("Find size of mcontext_t (10229)\n");
+Msg("Find size of anon-mcontext (10229)\n");
 #endif
 
 #ifdef __i386__
@@ -92,7 +92,7 @@ CheckTypeSize(mcontext_t,2656, 10230, 3)
 CheckTypeSize(mcontext_t,32, 10230, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10230,0);
-Msg("Find size of ucontext_t (10230)\n");
+Msg("Find size of mcontext_t (10230)\n");
 #endif
 
 #ifdef __i386__

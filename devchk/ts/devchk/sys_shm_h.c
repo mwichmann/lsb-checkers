@@ -53,7 +53,7 @@ CheckTypeSize(shmatt_t,4, 10212, 2)
 CheckTypeSize(shmatt_t,4, 10212, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10212,0);
-Msg("Find size of shmid_ds (10212)\n");
+Msg("Find size of shmatt_t (10212)\n");
 #endif
 
 #ifdef __i386__

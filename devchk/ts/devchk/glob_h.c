@@ -221,7 +221,7 @@ CheckTypeSize(glob_t,36, 9005, 2)
 CheckTypeSize(glob_t,36, 9005, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9005,0);
-Msg("Find size of glob64_t (9005)\n");
+Msg("Find size of glob_t (9005)\n");
 #endif
 
 #ifdef __i386__

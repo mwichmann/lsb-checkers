@@ -40,7 +40,7 @@ CheckTypeSize(__jmp_buf,24, 9089, 3)
 CheckTypeSize(__jmp_buf,6, 9089, 1)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9089,0);
-Msg("Find size of jmp_buf (9089)\n");
+Msg("Find size of __jmp_buf (9089)\n");
 #endif
 
 #ifdef __ia64__
@@ -51,7 +51,7 @@ CheckTypeSize(jmp_buf,156, 6962, 2)
 CheckTypeSize(jmp_buf,1, 6962, 1)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
-Msg("Find size of sigjmp_buf (6962)\n");
+Msg("Find size of jmp_buf (6962)\n");
 #endif
 
 #ifdef __i386__
@@ -62,7 +62,7 @@ CheckTypeSize(sigjmp_buf,704, 6963, 3)
 CheckTypeSize(sigjmp_buf,364, 6963, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6963,0);
-Msg("Find size of __jmp_buf_tag (6963)\n");
+Msg("Find size of sigjmp_buf (6963)\n");
 #endif
 
 #ifdef __i386__

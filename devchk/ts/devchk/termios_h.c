@@ -1611,7 +1611,7 @@ CheckOffset(struct winsize,ws_xpixel,4,1,34489)
 CheckOffset(struct winsize,ws_ypixel,6,1,34490)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10301,0);
-Msg("Find size of speed_t (10301)\n");
+Msg("Find size of winsize (10301)\n");
 #endif
 
 #ifdef __i386__
@@ -1622,7 +1622,7 @@ CheckTypeSize(speed_t,4, 9186, 3)
 CheckTypeSize(speed_t,4, 9186, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
-Msg("Find size of cc_t (9186)\n");
+Msg("Find size of speed_t (9186)\n");
 #endif
 
 #ifdef __i386__
@@ -1633,7 +1633,7 @@ CheckTypeSize(cc_t,1, 10206, 3)
 CheckTypeSize(cc_t,1, 10206, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
-Msg("Find size of tcflag_t (10206)\n");
+Msg("Find size of cc_t (10206)\n");
 #endif
 
 #ifdef __i386__
@@ -1644,7 +1644,7 @@ CheckTypeSize(tcflag_t,4, 10207, 3)
 CheckTypeSize(tcflag_t,4, 10207, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10207,0);
-Msg("Find size of termios (10207)\n");
+Msg("Find size of tcflag_t (10207)\n");
 #endif
 
 #ifdef __i386__

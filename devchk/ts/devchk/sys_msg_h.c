@@ -43,7 +43,7 @@ CheckTypeSize(msglen_t,4, 10214, 2)
 CheckTypeSize(msglen_t,4, 10214, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10214,0);
-Msg("Find size of msqid_ds (10214)\n");
+Msg("Find size of msglen_t (10214)\n");
 #endif
 
 #ifdef __i386__

@@ -39,7 +39,7 @@ CheckTypeSize(voidpf,4, 9868, 2)
 CheckTypeSize(voidpf,4, 9868, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9868,0);
-Msg("Find size of uInt (9868)\n");
+Msg("Find size of voidpf (9868)\n");
 #endif
 
 #ifdef __i386__
@@ -48,7 +48,7 @@ CheckTypeSize(uInt,4, 9870, 2)
 CheckTypeSize(uInt,4, 9870, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9870,0);
-Msg("Find size of uLong (9870)\n");
+Msg("Find size of uInt (9870)\n");
 #endif
 
 #ifdef __i386__
@@ -57,7 +57,7 @@ CheckTypeSize(uLong,4, 9878, 2)
 CheckTypeSize(uLong,4, 9878, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9878,0);
-Msg("Find size of uLongf (9878)\n");
+Msg("Find size of uLong (9878)\n");
 #endif
 
 #ifdef __i386__
@@ -66,7 +66,7 @@ CheckTypeSize(uLongf,4, 9883, 2)
 CheckTypeSize(uLongf,4, 9883, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9883,0);
-Msg("Find size of voidp (9883)\n");
+Msg("Find size of uLongf (9883)\n");
 #endif
 
 #ifdef __i386__
@@ -75,7 +75,7 @@ CheckTypeSize(voidp,4, 9885, 2)
 CheckTypeSize(voidp,4, 9885, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9885,0);
-Msg("Find size of Byte (9885)\n");
+Msg("Find size of voidp (9885)\n");
 #endif
 
 #ifdef __i386__
@@ -84,7 +84,7 @@ CheckTypeSize(Byte,1, 10166, 2)
 CheckTypeSize(Byte,1, 10166, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10166,0);
-Msg("Find size of z_stream_s (10166)\n");
+Msg("Find size of Byte (10166)\n");
 #endif
 
 #ifdef __i386__
@@ -93,7 +93,7 @@ CheckTypeSize(struct z_stream_s,56, 9875, 2)
 CheckTypeSize(struct z_stream_s,56, 9875, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9875,0);
-Msg("Find size of z_stream (9875)\n");
+Msg("Find size of z_stream_s (9875)\n");
 #endif
 
 #ifdef __i386__
@@ -102,7 +102,7 @@ CheckTypeSize(z_stream,56, 9880, 2)
 CheckTypeSize(z_stream,56, 9880, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9880,0);
-Msg("Find size of z_streamp (9880)\n");
+Msg("Find size of z_stream (9880)\n");
 #endif
 
 #ifdef __i386__
@@ -113,7 +113,7 @@ CheckTypeSize(z_streamp,8, 9882, 3)
 CheckTypeSize(z_streamp,4, 9882, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9882,0);
-Msg("Find size of gzFile (9882)\n");
+Msg("Find size of z_streamp (9882)\n");
 #endif
 
 #ifdef __i386__
@@ -124,7 +124,7 @@ CheckTypeSize(gzFile,8, 9886, 3)
 CheckTypeSize(gzFile,4, 9886, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9886,0);
-Msg("Find size of alloc_func (9886)\n");
+Msg("Find size of gzFile (9886)\n");
 #endif
 
 #ifdef __i386__
@@ -133,7 +133,7 @@ CheckTypeSize(alloc_func,4, 9871, 2)
 CheckTypeSize(alloc_func,4, 9871, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9871,0);
-Msg("Find size of free_func (9871)\n");
+Msg("Find size of alloc_func (9871)\n");
 #endif
 
 #ifdef __i386__
@@ -142,7 +142,7 @@ CheckTypeSize(free_func,4, 9873, 2)
 CheckTypeSize(free_func,4, 9873, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9873,0);
-Msg("Find size of internal_state (9873)\n");
+Msg("Find size of free_func (9873)\n");
 #endif
 
 #ifdef __i386__
@@ -151,7 +151,7 @@ CheckTypeSize(struct internal_state,4, 9874, 2)
 CheckTypeSize(struct internal_state,4, 9874, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9874,0);
-Msg("Find size of Bytef (9874)\n");
+Msg("Find size of internal_state (9874)\n");
 #endif
 
 #ifdef __i386__

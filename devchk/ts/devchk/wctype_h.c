@@ -32,7 +32,7 @@ CheckTypeSize(wctype_t,8, 7024, 3)
 CheckTypeSize(wctype_t,4, 7024, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7024,0);
-Msg("Find size of wint_t (7024)\n");
+Msg("Find size of wctype_t (7024)\n");
 #endif
 
 #ifdef __i386__
@@ -43,7 +43,7 @@ CheckTypeSize(wint_t,4, 8980, 3)
 CheckTypeSize(wint_t,4, 8980, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8980,0);
-Msg("Find size of wctrans_t (8980)\n");
+Msg("Find size of wint_t (8980)\n");
 #endif
 
 #ifdef __i386__
@@ -54,7 +54,7 @@ CheckTypeSize(wctrans_t,8, 9199, 3)
 CheckTypeSize(wctrans_t,4, 9199, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9199,0);
-Msg("Find size of mbstate_t (9199)\n");
+Msg("Find size of wctrans_t (9199)\n");
 #endif
 
 #ifdef __i386__

@@ -459,7 +459,7 @@ CheckTypeSize(reg_syntax_t,8, 6941, 3)
 CheckTypeSize(reg_syntax_t,4, 6941, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6941,0);
-Msg("Find size of re_pattern_buffer (6941)\n");
+Msg("Find size of reg_syntax_t (6941)\n");
 #endif
 
 #ifdef __i386__
@@ -477,7 +477,7 @@ CheckTypeSize(struct re_pattern_buffer,64, 6944, 3)
 CheckTypeSize(struct re_pattern_buffer,32, 6944, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6944,0);
-Msg("Find size of regex_t (6944)\n");
+Msg("Find size of re_pattern_buffer (6944)\n");
 #endif
 
 #ifdef __i386__
@@ -488,7 +488,7 @@ CheckTypeSize(regex_t,64, 6945, 3)
 CheckTypeSize(regex_t,32, 6945, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
-Msg("Find size of regoff_t (6945)\n");
+Msg("Find size of regex_t (6945)\n");
 #endif
 
 #ifdef __i386__
@@ -499,7 +499,7 @@ CheckTypeSize(regoff_t,4, 6946, 3)
 CheckTypeSize(regoff_t,4, 6946, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6946,0);
-Msg("Find size of regmatch_t (6946)\n");
+Msg("Find size of regoff_t (6946)\n");
 #endif
 
 #ifdef __i386__

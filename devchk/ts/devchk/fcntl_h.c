@@ -296,7 +296,7 @@ CheckTypeSize(struct flock,32, 10217, 3)
 CheckTypeSize(struct flock,16, 10217, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
-Msg("Find size of flock64 (10217)\n");
+Msg("Find size of flock (10217)\n");
 #endif
 
 #ifdef __i386__

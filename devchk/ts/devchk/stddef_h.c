@@ -45,7 +45,7 @@ CheckTypeSize(wchar_t,4, 8848, 3)
 CheckTypeSize(wchar_t,4, 8848, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
-Msg("Find size of size_t (8848)\n");
+Msg("Find size of wchar_t (8848)\n");
 #endif
 
 #ifdef __i386__
@@ -56,7 +56,7 @@ CheckTypeSize(size_t,8, 8969, 3)
 CheckTypeSize(size_t,4, 8969, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
-Msg("Find size of ptrdiff_t (8969)\n");
+Msg("Find size of size_t (8969)\n");
 #endif
 
 #ifdef __i386__

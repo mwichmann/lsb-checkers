@@ -51,7 +51,7 @@ CheckTypeSize(nl_catd,8, 6923, 3)
 CheckTypeSize(nl_catd,4, 6923, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6923,0);
-Msg("Find size of nl_item (6923)\n");
+Msg("Find size of nl_catd (6923)\n");
 #endif
 
 #ifdef __i386__

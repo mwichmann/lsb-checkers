@@ -131,7 +131,7 @@ CheckTypeSize(struct in_addr,4, 10143, 3)
 CheckTypeSize(struct in_addr,4, 10143, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);
-Msg("Find size of in_addr_t (10143)\n");
+Msg("Find size of in_addr (10143)\n");
 #endif
 
 #ifdef __i386__
@@ -142,7 +142,7 @@ CheckTypeSize(in_addr_t,4, 10302, 6)
 CheckTypeSize(in_addr_t,4, 10302, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10302,0);
-Msg("Find size of sockaddr_in (10302)\n");
+Msg("Find size of in_addr_t (10302)\n");
 #endif
 
 #ifdef __i386__

@@ -66,7 +66,7 @@ CheckTypeSize(CompositeClassPart,20, 10244, 2)
 CheckTypeSize(CompositeClassPart,20, 10244, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
-Msg("Find size of CompositeClassRec (10244)\n");
+Msg("Find size of CompositeClassPart (10244)\n");
 #endif
 
 #ifdef __ia64__

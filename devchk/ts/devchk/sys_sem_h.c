@@ -111,7 +111,7 @@ CheckTypeSize(struct sembuf,6, 6982, 3)
 CheckTypeSize(struct sembuf,6, 6982, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
-Msg("Find size of semid_ds (6982)\n");
+Msg("Find size of sembuf (6982)\n");
 #endif
 
 #ifdef __i386__

@@ -38,7 +38,7 @@ CheckTypeSize(XtOrderProc,4, 10245, 2)
 CheckTypeSize(XtOrderProc,4, 10245, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10245,0);
-Msg("Find size of XtDoChangeProc (10245)\n");
+Msg("Find size of XtOrderProc (10245)\n");
 #endif
 
 #ifdef __ia64__

@@ -37,7 +37,7 @@ CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
 CheckTypeSize(XSecurityAuthorization,4, 8596, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
-Msg("Find size of XSecurityAuthorizationAttributes (8596)\n");
+Msg("Find size of XSecurityAuthorization (8596)\n");
 #endif
 
 #ifdef __i386__

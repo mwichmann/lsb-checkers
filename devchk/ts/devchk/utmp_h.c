@@ -161,7 +161,7 @@ CheckOffset(struct exit_status,e_exit,2,2,34454)
 CheckTypeSize(struct exit_status,4, 10282, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10282,0);
-Msg("Find size of lastlog (10282)\n");
+Msg("Find size of exit_status (10282)\n");
 #endif
 
 #ifdef __i386__
@@ -173,7 +173,7 @@ CheckOffset(struct lastlog,ll_host,36,2,34462)
 CheckTypeSize(struct lastlog,292, 10285, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10285,0);
-Msg("Find size of utmp (10285)\n");
+Msg("Find size of lastlog (10285)\n");
 #endif
 
 #ifdef __i386__

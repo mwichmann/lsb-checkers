@@ -149,14 +149,14 @@ CheckTypeSize(struct ifaddr,40, 10286, 2)
 CheckTypeSize(struct ifaddr,40, 10286, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10286,0);
-Msg("Find size of anon-ifa_ifu (10286)\n");
+Msg("Find size of ifaddr (10286)\n");
 #endif
 
 #ifdef __i386__
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10287,0);
-Msg("Find size of ifreq (10287)\n");
+Msg("Find size of anon-ifa_ifu (10287)\n");
 #endif
 
 #ifdef __i386__
@@ -165,21 +165,21 @@ CheckTypeSize(struct ifreq,32, 10290, 2)
 CheckTypeSize(struct ifreq,32, 10290, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10290,0);
-Msg("Find size of anon-ifr_ifrn (10290)\n");
+Msg("Find size of ifreq (10290)\n");
 #endif
 
 #ifdef __i386__
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10291,0);
-Msg("Find size of anon-ifr_ifru (10291)\n");
+Msg("Find size of anon-ifr_ifrn (10291)\n");
 #endif
 
 #ifdef __i386__
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10292,0);
-Msg("Find size of ifconf (10292)\n");
+Msg("Find size of anon-ifr_ifru (10292)\n");
 #endif
 
 #ifdef __i386__

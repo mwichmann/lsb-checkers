@@ -33,7 +33,7 @@ CheckTypeSize(ENTRY,16, 6953, 3)
 CheckTypeSize(ENTRY,8, 6953, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6953,0);
-Msg("Find size of ACTION (6953)\n");
+Msg("Find size of ENTRY (6953)\n");
 #endif
 
 #ifdef __i386__
@@ -44,7 +44,7 @@ CheckTypeSize(ACTION,4, 9081, 3)
 CheckTypeSize(ACTION,4, 9081, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9081,0);
-Msg("Find size of VISIT (9081)\n");
+Msg("Find size of ACTION (9081)\n");
 #endif
 
 #ifdef __i386__
@@ -55,7 +55,7 @@ CheckTypeSize(VISIT,4, 9085, 3)
 CheckTypeSize(VISIT,4, 9085, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9085,0);
-Msg("Find size of __action_fn_t (9085)\n");
+Msg("Find size of VISIT (9085)\n");
 #endif
 
 #ifdef __i386__
