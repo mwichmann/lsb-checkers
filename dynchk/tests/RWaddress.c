@@ -7,7 +7,7 @@ void validate_RWaddress(const void *address, const char *name)
 {
 	if( !mem_is_RW(address) ) {
 		lsb_fprintf(stderr,
-				"Parameter to %s is not a valid RW address\n",
-				name );
+				"Parameter to %s is not a valid RW address %p\n",
+				name, address );
 	}
 }
