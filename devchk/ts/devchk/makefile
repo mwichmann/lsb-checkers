@@ -129,10 +129,10 @@ install:
 
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) hdrchk
 
 clobber:	clean
-	rm -f *.c hdrchk_tet.h testdefs.h hdrchk
+	rm -f *.c hdrchk_tet.h testdefs.h
 
 
 distclean:	clobber
