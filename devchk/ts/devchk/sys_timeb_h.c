@@ -63,6 +63,13 @@ CheckMemberSize(struct timeb,timezone,2,9,34300)
 CheckOffset(struct timeb,timezone,10,9,34300)
 CheckMemberSize(struct timeb,dstflag,2,9,34301)
 CheckOffset(struct timeb,dstflag,12,9,34301)
+#elif __s390x__
+CheckTypeSize(struct timeb,0, 10216, 12)
+Msg("Missing member data for timeb on S390X\n");
+CheckOffset(struct timeb,time,0,12,34298)
+CheckOffset(struct timeb,millitm,0,12,34299)
+CheckOffset(struct timeb,timezone,0,12,34300)
+CheckOffset(struct timeb,dstflag,0,12,34301)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10216,0);
 Msg("Find size of timeb (10216)\n");

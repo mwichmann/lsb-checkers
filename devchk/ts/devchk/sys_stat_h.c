@@ -355,6 +355,14 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
+#elif __s390x__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,1,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
 #elif __x86_64__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,3,4955,architecture)

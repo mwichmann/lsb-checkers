@@ -73,6 +73,11 @@ CheckOffset(struct timezone,tz_dsttime,4,10,33507)
 CheckTypeSize(struct timezone,8, 9855, 9)
 CheckMemberSize(struct timezone,tz_dsttime,4,9,33507)
 CheckOffset(struct timezone,tz_dsttime,4,9,33507)
+#elif __s390x__
+CheckTypeSize(struct timezone,0, 9855, 12)
+Msg("Missing member data for timezone on S390X\n");
+CheckOffset(struct timezone,tz_minuteswest,0,12,33506)
+CheckOffset(struct timezone,tz_dsttime,0,12,33507)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9855,0);
 Msg("Find size of timezone (9855)\n");
@@ -98,6 +103,11 @@ CheckOffset(struct itimerval,it_value,8,10,33511)
 CheckTypeSize(struct itimerval,32, 9861, 9)
 CheckMemberSize(struct itimerval,it_value,16,9,33511)
 CheckOffset(struct itimerval,it_value,16,9,33511)
+#elif __s390x__
+CheckTypeSize(struct itimerval,0, 9861, 12)
+Msg("Missing member data for itimerval on S390X\n");
+CheckOffset(struct itimerval,it_interval,0,12,33510)
+CheckOffset(struct itimerval,it_value,0,12,33511)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9861,0);
 Msg("Find size of itimerval (9861)\n");
@@ -123,6 +133,11 @@ CheckOffset(struct timespec,tv_nsec,4,10,33503)
 CheckTypeSize(struct timespec,16, 7018, 9)
 CheckMemberSize(struct timespec,tv_nsec,8,9,33503)
 CheckOffset(struct timespec,tv_nsec,8,9,33503)
+#elif __s390x__
+CheckTypeSize(struct timespec,0, 7018, 12)
+Msg("Missing member data for timespec on S390X\n");
+CheckOffset(struct timespec,tv_sec,0,12,33502)
+CheckOffset(struct timespec,tv_nsec,0,12,33503)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7018,0);
 Msg("Find size of timespec (7018)\n");
@@ -148,6 +163,11 @@ CheckOffset(struct timeval,tv_usec,4,10,33505)
 CheckTypeSize(struct timeval,16, 9858, 9)
 CheckMemberSize(struct timeval,tv_usec,8,9,33505)
 CheckOffset(struct timeval,tv_usec,8,9,33505)
+#elif __s390x__
+CheckTypeSize(struct timeval,0, 9858, 12)
+Msg("Missing member data for timeval on S390X\n");
+CheckOffset(struct timeval,tv_sec,0,12,33504)
+CheckOffset(struct timeval,tv_usec,0,12,33505)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9858,0);
 Msg("Find size of timeval (9858)\n");
