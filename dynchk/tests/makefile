@@ -12,5 +12,8 @@ CFLAGS += -fPIC -Wall -g
 all: $(TESTS)
 	ld -r -o tests.o $(TESTS)
 
+gensrc:
+	./gen_tests.pl
+
 clean:
 	rm -f $(TESTS) libtests.a tests.o
