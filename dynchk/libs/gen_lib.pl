@@ -21,7 +21,7 @@ my($arch_number) = 2;
 my (%options);
 my($interface_WHERE_add); my($interface_FROM_add);
 
-getopts('d:u:p:o:hl:o:a:', \%options);
+getopts('d:u:p:o:hl:o:a:i:', \%options);
 
 if (exists($options{'h'}))
 {
@@ -35,8 +35,11 @@ Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
     -p password  Password for db access
     -o hostname  Hostname for DB
 	-a arch      Target Architecture
+	-i interface Comma-delimited list of interfaces
     -l l1,l2,... Comma-delimited list of libraries
     -g g1,g2,... Comma-delimited list of libgroups
+
+	do not use -i with -l or -g. 
          
     If -l or -g are specified, every interface wrapper in
 	the listed libraries or libgroups will be generated.  
@@ -97,7 +100,13 @@ else
 	$interface_WHERE_add = "\n";
 }
 
-
+if(exists($options{'i'} ) )
+{
+	if(exists($options{'l'}) or exists($options{'g'}))
+	{	die "Don't use -i with -l or -g.  See $0 -h\n"; }
+	$interface_WHERE_add .= 'AND ( Iname ="'
+		.join('"OR Iname = "', split(/,/, $options{'i'}) ) . '")' . "\n";
+}
 
 ##############################
 # Database Queries
@@ -139,7 +148,7 @@ my $get_param_typetype_q2 = $dbh->prepare(
 	or die "Couldn't prepare write_param_typetype query 2: " . DBI->errstr;
  
 my $get_param_type_q = $dbh->prepare(
-'SELECT Tname, Tid, Pconst FROM Parameter, Type
+'SELECT Tname, Tid, Pconst, Parsize FROM Parameter, Type
 WHERE Ppos = ?
   AND Pint = ?
   AND Ptype = Tid'
@@ -177,9 +186,13 @@ my $get_type_info_q =
 	$dbh->prepare('SELECT Tname, Ttype, Tbasetype FROM Type WHERE Tid = ?' )
 	or die "Couldn't prepare type_info query: " . DBI->errstr;
 
-my $get_array_info_q =
+my $get_ATsize_q =
 	$dbh->prepare('SELECT ATsize from Type, ArchType where Tid = ? and ATtid = Tid and ATaid = Tarch')
-	or die "Couldn't prepare array_info query: ".DBI->errstr;
+	or die "Couldn't prepare ATsize query: ".DBI->errstr;
+
+my $get_parsize_q =
+	$dbh->prepare('SELECT Parsize from Parameter where Pint = ? and Ppos = ?')
+	or die "Couldn't prepare parsize query: ".DBI->errstr;
 
 my $get_type_form_q = $dbh->prepare('SELECT Ttype FROM Type WHERE Tid = ?')
 	or die "Couldn't prepare type_from query: " . DBI->errstr;
@@ -223,13 +236,16 @@ sub has_ellipsis # ($func_id)
 	return 0;
 }
 
-sub get_type_string($);
+sub get_type_string($$$);
 
-sub get_type_string($) 
+sub get_type_string($$$) 
 {
-	my ($type_id)=@_;
+	my ($type_id, $param_pos, $param_int)=@_;
 	my ($pre_type,$post_type) = ("","");
 	my $next_form;
+
+	$param_pos = -1 if(!$param_pos);
+	$param_int = 0 if(!$param_int);
 
 	$get_type_info_q->execute($type_id) 
 		or die "Couldn't execute type_info query: " . DBI->errstr;
@@ -240,7 +256,7 @@ sub get_type_string($)
 
 	if($basetype and $basetype!=$type_id and $form ne "Typedef")
 	{
-		($pre_type, $post_type) = get_type_string($basetype);
+		($pre_type, $post_type) = get_type_string($basetype, -1, 0);
 	}
 	else
 	{
@@ -280,12 +296,29 @@ sub get_type_string($)
 	}
 	elsif($form eq "Array")
 	{
-		$get_array_info_q->execute($type_id)
-			or die "Couldn't execute array info query: ".DBI->errstr;
-		my $array_size;
-		unless(($array_size) = $get_array_info_q->fetchrow_array())
-		{  $array_size = ''; }
-		$post_type .= "[". $array_size ."]";
+		$get_ATsize_q->execute($type_id)
+			or die "Couldn't execute ATsize query: ".DBI->errstr;
+		$get_parsize_q->execute($param_int, $param_pos)
+			or die "Couldn't execute parsize query: ".DBI->errstr;
+		my $at_size;
+		my $parsize;
+		unless(($at_size) = $get_ATsize_q->fetchrow_array())
+		{  $at_size = 0; }
+		unless(($parsize) = $get_parsize_q->fetchrow_array())
+		{  $parsize = "NULL"; }
+		
+		if($at_size != 0)
+		{	
+			$post_type .= "[". $at_size ."]";
+		}
+		elsif ($parsize ne "NULL" and $parsize != 0) 
+		{   
+			$post_type .= "[" . $parsize . "]";
+		}
+		else
+		{
+			$post_type .="[]";
+		}
 		return ($pre_type, $post_type); 
 	}
 	elsif($form eq "FuncPtr")
@@ -309,9 +342,9 @@ sub get_funcptr_declaration($)
 	{
 		my($left,$right);
 		$output.=", " if ($i>0);
-		($left,$right)=get_type_string($type_id);
+		($left,$right)=get_type_string($type_id, 0, -1);
 		$output.=$left;
-		print "Unexpected post-name ".$right." for type ".$type_id."\n" if($right ne "");
+		$i++;
 	}
 	$get_funcptr_declaration_q->finish;
 	$output.=")";
@@ -346,7 +379,7 @@ sub get_param_type # ($param_pos, $param_int)
 	$get_param_type_q->execute($param_pos, $param_int);
 	my($type, $type_id, $is_const) = $get_param_type_q->fetchrow_array();
 
-	my($left_string, $right_string) = get_type_string($type_id);
+	my($left_string, $right_string) = get_type_string($type_id, $param_pos, $param_int);
 	$left_string = "const ". $left_string if ($is_const eq 'Y');
 
 	return ($left_string,$right_string);
@@ -392,17 +425,20 @@ sub write_int_wrapper
 	print $fh ");\n}\n\n";
 }
 
-#my $simple_header_q = $dbh->prepare(
-#'select Hname from Interface, Header where Iid = ? and Hid = Iheader')
-#	or die "Couldn't prepare simple_header query: ".DBI->errstr;
+my $simple_header_q = $dbh->prepare(
+'select Hname from Interface, Header where Iid = ? and Hid = Iheader')
+	or die "Couldn't prepare simple_header query: ".DBI->errstr;
 
 # write generation comments and needed headers for 'interface' to 'fh'
 sub write_int_header 
 {
 	my($fh, $left_type, $right_type, $func_name, $func_id)=@_;
+
+#   This is not needed if the later main_header section is commented out.
 #	$simple_header_q->execute($func_id)
 #		or die "Couldn't execute simple_header query: ".DBI->errstr;
 #	my($main_header) = $simple_header_q->fetchrow_array();
+
 	print $fh "// Generated by gen_lib.pl\n\n";
 	print $fh "#include \"../../tests/type_tests.h\"\n";
 	print $fh "#include <dlfcn.h>\n";
@@ -411,11 +447,6 @@ sub write_int_header
 	$write_int_header_q->execute($func_id)
 		or die "Couldn't execute write_int_header query: " . DBI->errstr;
 
-#	if(!contains($main_header, @headers_found))
-#	{
-#		print $fh "#include <".$main_header.">\n";
-#		$headers_found[@headers_found]=$main_header;
-#	}
 	while(my($header_group_id, $base_type) = $write_int_header_q->fetchrow_array() )
 	{
 		while($header_group_id == 0 and $base_type != 0)
@@ -436,6 +467,14 @@ sub write_int_header
 			}
 		}
 	}
+
+#   This appears to break stuff.
+#	if(!contains($main_header, @headers_found))
+#	{
+#		print $fh "#include <".$main_header.">\n";
+#		$headers_found[@headers_found]=$main_header;
+#	}
+	
 	print $fh "#undef ".$func_name."\n";
 	print $fh "static ". $left_type ."(*funcptr)".$right_type."(";
 	write_argument_list($fh, $func_id, 0);
@@ -537,7 +576,7 @@ FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fet
 	{
 		next FUNC;
 	}
-	my ($left_type_string, $right_type_string) = get_type_string($func_type);
+	my ($left_type_string, $right_type_string) = get_type_string($func_type, -1, 0);
 	
 	# Add interface to correct gen.mk file
 	add_to_gen_mk($func_name, $func_lib);
