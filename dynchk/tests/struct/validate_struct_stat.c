@@ -3,24 +3,285 @@
 #include "../type_tests.h"
 #include <sys/stat.h>
 
-void validate_struct_stat(struct stat  * input, char *name)
+#if defined(__i386__)
+int validate_struct_stat(struct stat  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->st_dev,name );
-	validate_NULL_TYPETYPE(input->__pad1,name );
-	validate_NULL_TYPETYPE(input->st_ino,name );
-	validate_NULL_TYPETYPE(input->st_mode,name );
-	validate_NULL_TYPETYPE(input->st_nlink,name );
-	validate_NULL_TYPETYPE(input->st_uid,name );
-	validate_NULL_TYPETYPE(input->st_gid,name );
-	validate_NULL_TYPETYPE(input->st_rdev,name );
-	validate_NULL_TYPETYPE(input->__pad2,name );
-	validate_NULL_TYPETYPE(input->st_size,name );
-	validate_NULL_TYPETYPE(input->st_blksize,name );
-	validate_NULL_TYPETYPE(input->st_blocks,name );
-	validate_struct_timespec( &(input->st_atim),name );
-	validate_struct_timespec( &(input->st_mtim),name );
-	validate_struct_timespec( &(input->st_ctim),name );
-	validate_NULL_TYPETYPE(input->__unused4,name );
-	validate_NULL_TYPETYPE(input->__unused5,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> st_dev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_ino,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_nlink,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_rdev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_size,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blksize,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blocks,name ));
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_atim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_mtim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_ctim),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+return failure;
 }
 
+#endif /*defined(__i386__)*/
+#if defined(__ia64__)
+int validate_struct_stat(struct stat  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> st_dev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_ino,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_nlink,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pad0,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_rdev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_size,name ));
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_atim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_mtim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_ctim),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blksize,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blocks,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__ia64__)*/
+#if defined(__powerpc__) && !defined(__powerpc64__)
+int validate_struct_stat(struct stat  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> st_dev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_ino,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_nlink,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_rdev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_size,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blksize,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blocks,name ));
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_atim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_mtim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_ctim),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__powerpc__) && !defined(__powerpc64__)*/
+#if defined(__powerpc64__)
+int validate_struct_stat(struct stat  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> st_dev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_ino,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_nlink,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_rdev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_size,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blksize,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blocks,name ));
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_atim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_mtim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_ctim),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused6,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__powerpc64__)*/
+#if defined(__s390__) && !defined(__s390x__)
+int validate_struct_stat(struct stat  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> st_dev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_ino,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_nlink,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_rdev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_size,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blksize,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blocks,name ));
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_atim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_mtim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_ctim),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__s390__) && !defined(__s390x__)*/
+#if defined(__x86_64__)
+int validate_struct_stat(struct stat  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> st_dev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_ino,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_nlink,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pad0,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_rdev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_size,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blksize,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blocks,name ));
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_atim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_mtim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_ctim),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__x86_64__)*/
+#if defined(__s390x__)
+int validate_struct_stat(struct stat  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> st_dev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_ino,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_nlink,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> pad0,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_rdev,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_size,name ));
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_atim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_mtim),name ))
+		failure = 1;
+	if(validate_struct_timespec( &(input-> st_ctim),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blksize,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> st_blocks,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__s390x__)*/

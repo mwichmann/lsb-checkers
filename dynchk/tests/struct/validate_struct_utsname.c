@@ -3,13 +3,21 @@
 #include "../type_tests.h"
 #include <sys/utsname.h>
 
-void validate_struct_utsname(struct utsname  * input, char *name)
+int validate_struct_utsname(struct utsname  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->sysname,name );
-	validate_NULL_TYPETYPE(input->nodename,name );
-	validate_NULL_TYPETYPE(input->release,name );
-	validate_NULL_TYPETYPE(input->version,name );
-	validate_NULL_TYPETYPE(input->machine,name );
-	validate_NULL_TYPETYPE(input->domainname,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> sysname,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> nodename,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> release,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> version,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> machine,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> domainname,name ));
+		failure = 1;
+return failure;
 }
 

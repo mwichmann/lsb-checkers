@@ -3,13 +3,21 @@
 #include "../type_tests.h"
 #include <rpc/xdr.h>
 
-void validate_struct_XDR(struct XDR  * input, char *name)
+int validate_struct_XDR(struct XDR  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->x_op,name );
-	validate_struct_xdr_ops(input->x_ops,name );
-	validate_NULL_TYPETYPE(input->x_public,name );
-	validate_NULL_TYPETYPE(input->x_private,name );
-	validate_NULL_TYPETYPE(input->x_base,name );
-	validate_NULL_TYPETYPE(input->x_handy,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> x_op,name ));
+		failure = 1;
+	if(validate_struct_xdr_ops(input-> x_ops,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_public,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_private,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_base,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> x_handy,name ));
+		failure = 1;
+return failure;
 }
 

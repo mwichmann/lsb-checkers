@@ -3,35 +3,251 @@
 #include "../type_tests.h"
 #include <signal.h>
 
-void validate_struct_sigcontext(struct sigcontext  * input, char *name)
+#if defined(__i386__)
+int validate_struct_sigcontext(struct sigcontext  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->gs,name );
-	validate_NULL_TYPETYPE(input->__gsh,name );
-	validate_NULL_TYPETYPE(input->fs,name );
-	validate_NULL_TYPETYPE(input->__fsh,name );
-	validate_NULL_TYPETYPE(input->es,name );
-	validate_NULL_TYPETYPE(input->__esh,name );
-	validate_NULL_TYPETYPE(input->ds,name );
-	validate_NULL_TYPETYPE(input->__dsh,name );
-	validate_NULL_TYPETYPE(input->edi,name );
-	validate_NULL_TYPETYPE(input->esi,name );
-	validate_NULL_TYPETYPE(input->ebp,name );
-	validate_NULL_TYPETYPE(input->esp,name );
-	validate_NULL_TYPETYPE(input->ebx,name );
-	validate_NULL_TYPETYPE(input->edx,name );
-	validate_NULL_TYPETYPE(input->ecx,name );
-	validate_NULL_TYPETYPE(input->eax,name );
-	validate_NULL_TYPETYPE(input->trapno,name );
-	validate_NULL_TYPETYPE(input->err,name );
-	validate_NULL_TYPETYPE(input->eip,name );
-	validate_NULL_TYPETYPE(input->cs,name );
-	validate_NULL_TYPETYPE(input->__csh,name );
-	validate_NULL_TYPETYPE(input->eflags,name );
-	validate_NULL_TYPETYPE(input->esp_at_signal,name );
-	validate_NULL_TYPETYPE(input->ss,name );
-	validate_NULL_TYPETYPE(input->__ssh,name );
-	validate_struct__fpstate(input->fpstate,name );
-	validate_NULL_TYPETYPE(input->oldmask,name );
-	validate_NULL_TYPETYPE(input->cr2,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> gs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __gsh,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> fs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __fsh,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> es,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __esh,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ds,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __dsh,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> edi,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> esi,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ebp,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> esp,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ebx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> edx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ecx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> eax,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> trapno,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> err,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> eip,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __csh,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> eflags,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> esp_at_signal,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ss,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __ssh,name ));
+		failure = 1;
+	if(validate_struct__fpstate(input-> fpstate,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> oldmask,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cr2,name ));
+		failure = 1;
+return failure;
 }
 
+#endif /*defined(__i386__)*/
+#if defined(__ia64__)
+int validate_struct_sigcontext(struct sigcontext  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> sc_flags,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_nat,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_stack,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ip,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_cfm,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_um,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar_rsc,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar_bsp,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar_rnat,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar_ccv,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar_unat,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar_fpsr,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar_pfs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar_lc,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_pr,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_br,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_gr,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_fr,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_rbs_base,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_loadrs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar25,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_ar26,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_rsvd,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sc_mask,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__ia64__)*/
+#if defined(__powerpc__) && !defined(__powerpc64__)
+int validate_struct_sigcontext(struct sigcontext  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> _unused,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> signal,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> handler,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> oldmask,name ));
+		failure = 1;
+	if(validate_struct_pt_regs(input-> regs,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__powerpc__) && !defined(__powerpc64__)*/
+#if defined(__powerpc64__)
+int validate_struct_sigcontext(struct sigcontext  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> _unused,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> signal,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> handler,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> oldmask,name ));
+		failure = 1;
+	if(validate_struct_pt_regs(input-> regs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gp_regs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> fp_regs,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__powerpc64__)*/
+#if defined(__s390__) && !defined(__s390x__)
+int validate_struct_sigcontext(struct sigcontext  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> oldmask,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sregs,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__s390__) && !defined(__s390x__)*/
+#if defined(__x86_64__)
+int validate_struct_sigcontext(struct sigcontext  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> r8,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> r9,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> r10,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> r11,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> r12,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> r13,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> r14,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> r15,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rdi,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rsi,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rbp,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rbx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rdx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rax,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rcx,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rsp,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rip,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> eflags,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> fs,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad0,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> err,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> trapno,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> oldmask,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cr2,name ));
+		failure = 1;
+	if(validate_struct__fpstate(input-> fpstate,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __reserved1,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__x86_64__)*/
+#if defined(__s390x__)
+int validate_struct_sigcontext(struct sigcontext  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> oldmask,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sregs,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__s390x__)*/

@@ -3,18 +3,31 @@
 #include "../type_tests.h"
 #include <time.h>
 
-void validate_struct_tm(struct tm  * input, char *name)
+int validate_struct_tm(struct tm  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->tm_sec,name );
-	validate_NULL_TYPETYPE(input->tm_min,name );
-	validate_NULL_TYPETYPE(input->tm_hour,name );
-	validate_NULL_TYPETYPE(input->tm_mday,name );
-	validate_NULL_TYPETYPE(input->tm_mon,name );
-	validate_NULL_TYPETYPE(input->tm_year,name );
-	validate_NULL_TYPETYPE(input->tm_wday,name );
-	validate_NULL_TYPETYPE(input->tm_yday,name );
-	validate_NULL_TYPETYPE(input->tm_isdst,name );
-	validate_NULL_TYPETYPE(input->tm_gmtoff,name );
-	validate_NULL_TYPETYPE(input->tm_zone,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> tm_sec,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_min,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_hour,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_mday,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_mon,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_year,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_wday,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_yday,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_isdst,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_gmtoff,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tm_zone,name ));
+		failure = 1;
+return failure;
 }
 

@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <sys/socket.h>
 
-void validate_struct_linger(struct linger  * input, char *name)
+int validate_struct_linger(struct linger  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->l_onoff,name );
-	validate_NULL_TYPETYPE(input->l_linger,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> l_onoff,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> l_linger,name ));
+		failure = 1;
+return failure;
 }
 

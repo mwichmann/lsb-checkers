@@ -3,10 +3,15 @@
 #include "../type_tests.h"
 #include <rpc/clnt.h>
 
-void validate_struct_CLIENT(struct CLIENT  * input, char *name)
+int validate_struct_CLIENT(struct CLIENT  * input, char *name)
 {
-	validate_struct_AUTH(input->cl_auth,name );
-	validate_struct_clnt_ops(input->cl_ops,name );
-	validate_NULL_TYPETYPE(input->cl_private,name );
+int failure = 0;
+	if(validate_struct_AUTH(input-> cl_auth,name ));
+		failure = 1;
+	if(validate_struct_clnt_ops(input-> cl_ops,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cl_private,name ));
+		failure = 1;
+return failure;
 }
 

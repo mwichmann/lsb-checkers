@@ -3,20 +3,37 @@
 #include "../type_tests.h"
 #include <net/if.h>
 
-void validate_struct_ifreq(struct ifreq  * input, char *name)
+int validate_struct_ifreq(struct ifreq  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ifr_ifrn.ifrn_name,name );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_addr),name );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_dstaddr),name );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_broadaddr),name );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_netmask),name );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_hwaddr),name );
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_flags,name );
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_ivalue,name );
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_mtu,name );
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_slave,name );
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_newname,name );
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_data,name );
-	validate_struct_ifmap( &(input->ifr_ifru.ifru_map),name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input->ifr_ifrn. ifrn_name,name ));
+		failure = 1;
+return failure;
+	if(validate_struct_sockaddr( &(input->ifr_ifru. ifru_addr),name ))
+		failure = 1;
+	if(validate_struct_sockaddr( &(input->ifr_ifru. ifru_dstaddr),name ))
+		failure = 1;
+	if(validate_struct_sockaddr( &(input->ifr_ifru. ifru_broadaddr),name ))
+		failure = 1;
+	if(validate_struct_sockaddr( &(input->ifr_ifru. ifru_netmask),name ))
+		failure = 1;
+	if(validate_struct_sockaddr( &(input->ifr_ifru. ifru_hwaddr),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ifr_ifru. ifru_flags,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ifr_ifru. ifru_ivalue,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ifr_ifru. ifru_mtu,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ifr_ifru. ifru_slave,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ifr_ifru. ifru_newname,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ifr_ifru. ifru_data,name ));
+		failure = 1;
+	if(validate_struct_ifmap( &(input->ifr_ifru. ifru_map),name ))
+		failure = 1;
+return failure;
+return failure;
 }
 

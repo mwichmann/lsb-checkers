@@ -3,11 +3,17 @@
 #include "../type_tests.h"
 #include <grp.h>
 
-void validate_struct_group(struct group  * input, char *name)
+int validate_struct_group(struct group  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->gr_name,name );
-	validate_NULL_TYPETYPE(input->gr_passwd,name );
-	validate_NULL_TYPETYPE(input->gr_gid,name );
-	validate_NULL_TYPETYPE(input->gr_mem,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> gr_name,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gr_passwd,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gr_gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gr_mem,name ));
+		failure = 1;
+return failure;
 }
 

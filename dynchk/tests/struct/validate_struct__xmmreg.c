@@ -3,8 +3,23 @@
 #include "../type_tests.h"
 #include <signal.h>
 
-void validate_struct__xmmreg(struct _xmmreg  * input, char *name)
+#if defined(__i386__)
+int validate_struct__xmmreg(struct _xmmreg  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->element,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> element,name ));
+		failure = 1;
+return failure;
 }
 
+#endif /*defined(__i386__)*/
+#if defined(__x86_64__)
+int validate_struct__xmmreg(struct _xmmreg  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> element,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__x86_64__)*/

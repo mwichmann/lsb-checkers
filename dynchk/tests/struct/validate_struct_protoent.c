@@ -3,10 +3,15 @@
 #include "../type_tests.h"
 #include <netdb.h>
 
-void validate_struct_protoent(struct protoent  * input, char *name)
+int validate_struct_protoent(struct protoent  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->p_name,name );
-	validate_NULL_TYPETYPE(input->p_aliases,name );
-	validate_NULL_TYPETYPE(input->p_proto,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> p_name,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> p_aliases,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> p_proto,name ));
+		failure = 1;
+return failure;
 }
 

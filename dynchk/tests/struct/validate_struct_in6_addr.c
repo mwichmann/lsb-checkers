@@ -3,10 +3,16 @@
 #include "../type_tests.h"
 #include <netinet/in.h>
 
-void validate_struct_in6_addr(struct in6_addr  * input, char *name)
+int validate_struct_in6_addr(struct in6_addr  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->in6_u.u6_addr8,name );
-	validate_NULL_TYPETYPE(input->in6_u.u6_addr16,name );
-	validate_NULL_TYPETYPE(input->in6_u.u6_addr32,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input->in6_u. u6_addr8,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->in6_u. u6_addr16,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->in6_u. u6_addr32,name ));
+		failure = 1;
+return failure;
+return failure;
 }
 

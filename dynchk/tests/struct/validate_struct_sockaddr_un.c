@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <sys/un.h>
 
-void validate_struct_sockaddr_un(struct sockaddr_un  * input, char *name)
+int validate_struct_sockaddr_un(struct sockaddr_un  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->sun_family,name );
-	validate_NULL_TYPETYPE(input->sun_path,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> sun_family,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sun_path,name ));
+		failure = 1;
+return failure;
 }
 

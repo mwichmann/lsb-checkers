@@ -3,13 +3,21 @@
 #include "../type_tests.h"
 #include <rpc/clnt.h>
 
-void validate_struct_clnt_ops(struct clnt_ops  * input, char *name)
+int validate_struct_clnt_ops(struct clnt_ops  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->cl_call,name );
-	validate_NULL_TYPETYPE(input->cl_abort,name );
-	validate_NULL_TYPETYPE(input->cl_geterr,name );
-	validate_NULL_TYPETYPE(input->cl_freeres,name );
-	validate_NULL_TYPETYPE(input->cl_destroy,name );
-	validate_NULL_TYPETYPE(input->cl_control,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> cl_call,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cl_abort,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cl_geterr,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cl_freeres,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cl_destroy,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cl_control,name ));
+		failure = 1;
+return failure;
 }
 

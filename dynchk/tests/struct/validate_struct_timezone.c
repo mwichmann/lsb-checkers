@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <sys/time.h>
 
-void validate_struct_timezone(struct timezone  * input, char *name)
+int validate_struct_timezone(struct timezone  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->tz_minuteswest,name );
-	validate_NULL_TYPETYPE(input->tz_dsttime,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> tz_minuteswest,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tz_dsttime,name ));
+		failure = 1;
+return failure;
 }
 

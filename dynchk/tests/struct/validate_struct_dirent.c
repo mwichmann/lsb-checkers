@@ -3,12 +3,19 @@
 #include "../type_tests.h"
 #include <dirent.h>
 
-void validate_struct_dirent(struct dirent  * input, char *name)
+int validate_struct_dirent(struct dirent  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->d_ino,name );
-	validate_NULL_TYPETYPE(input->d_off,name );
-	validate_NULL_TYPETYPE(input->d_reclen,name );
-	validate_NULL_TYPETYPE(input->d_type,name );
-	validate_NULL_TYPETYPE(input->d_name,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> d_ino,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> d_off,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> d_reclen,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> d_type,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> d_name,name ));
+		failure = 1;
+return failure;
 }
 

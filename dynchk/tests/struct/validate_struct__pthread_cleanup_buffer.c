@@ -3,11 +3,17 @@
 #include "../type_tests.h"
 #include <pthread.h>
 
-void validate_struct__pthread_cleanup_buffer(struct _pthread_cleanup_buffer  * input, char *name)
+int validate_struct__pthread_cleanup_buffer(struct _pthread_cleanup_buffer  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->__routine,name );
-	validate_NULL_TYPETYPE(input->__arg,name );
-	validate_NULL_TYPETYPE(input->__canceltype,name );
-	validate_struct__pthread_cleanup_buffer(input->__prev,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __routine,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __arg,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __canceltype,name ));
+		failure = 1;
+	if(validate_struct__pthread_cleanup_buffer(input-> __prev,name ));
+		failure = 1;
+return failure;
 }
 

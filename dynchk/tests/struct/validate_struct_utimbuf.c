@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <utime.h>
 
-void validate_struct_utimbuf(struct utimbuf  * input, char *name)
+int validate_struct_utimbuf(struct utimbuf  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->actime,name );
-	validate_NULL_TYPETYPE(input->modtime,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> actime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> modtime,name ));
+		failure = 1;
+return failure;
 }
 

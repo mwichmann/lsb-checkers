@@ -3,8 +3,11 @@
 #include "../type_tests.h"
 #include <netinet/in.h>
 
-void validate_struct_in_addr(struct in_addr  * input, char *name)
+int validate_struct_in_addr(struct in_addr  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->s_addr,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> s_addr,name ));
+		failure = 1;
+return failure;
 }
 

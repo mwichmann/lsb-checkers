@@ -3,18 +3,205 @@
 #include "../type_tests.h"
 #include <sys/ipc.h>
 
-void validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
+#if defined(__i386__)
+int validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->__key,name );
-	validate_NULL_TYPETYPE(input->uid,name );
-	validate_NULL_TYPETYPE(input->gid,name );
-	validate_NULL_TYPETYPE(input->cuid,name );
-	validate_NULL_TYPETYPE(input->cgid,name );
-	validate_NULL_TYPETYPE(input->mode,name );
-	validate_NULL_TYPETYPE(input->__pad1,name );
-	validate_NULL_TYPETYPE(input->__seq,name );
-	validate_NULL_TYPETYPE(input->__pad2,name );
-	validate_NULL_TYPETYPE(input->__unused1,name );
-	validate_NULL_TYPETYPE(input->__unused2,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __key,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cuid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cgid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __seq,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+return failure;
 }
 
+#endif /*defined(__i386__)*/
+#if defined(__ia64__)
+int validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __key,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cuid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cgid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __seq,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__ia64__)*/
+#if defined(__powerpc__) && !defined(__powerpc64__)
+int validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __key,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cuid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cgid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __seq,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__powerpc__) && !defined(__powerpc64__)*/
+#if defined(__powerpc64__)
+int validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __key,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cuid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cgid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __seq,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__powerpc64__)*/
+#if defined(__s390__) && !defined(__s390x__)
+int validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __key,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cuid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cgid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __seq,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__s390__) && !defined(__s390x__)*/
+#if defined(__x86_64__)
+int validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __key,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cuid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cgid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __seq,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__x86_64__)*/
+#if defined(__s390x__)
+int validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __key,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> uid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> gid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cuid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cgid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mode,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __seq,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __pad2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__s390x__)*/

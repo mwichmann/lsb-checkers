@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <sys/socket.h>
 
-void validate_struct_sockaddr(struct sockaddr  * input, char *name)
+int validate_struct_sockaddr(struct sockaddr  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->sa_family,name );
-	validate_NULL_TYPETYPE(input->sa_data,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> sa_family,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sa_data,name ));
+		failure = 1;
+return failure;
 }
 

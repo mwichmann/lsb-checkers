@@ -3,14 +3,26 @@
 #include "../type_tests.h"
 #include <rpc/clnt.h>
 
-void validate_struct_rpc_err(struct rpc_err  * input, char *name)
+int validate_struct_rpc_err(struct rpc_err  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->re_status,name );
-	validate_NULL_TYPETYPE(input->ru.RE_errno,name );
-	validate_NULL_TYPETYPE(input->ru.RE_why,name );
-	validate_NULL_TYPETYPE(input->ru.RE_vers.low,name );
-	validate_NULL_TYPETYPE(input->ru.RE_vers.high,name );
-	validate_NULL_TYPETYPE(input->ru.RE_lb.s1,name );
-	validate_NULL_TYPETYPE(input->ru.RE_lb.s2,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> re_status,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ru. RE_errno,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ru. RE_why,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ru.RE_vers. low,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ru.RE_vers. high,name ));
+		failure = 1;
+return failure;
+	if(validate_NULL_TYPETYPE(input->ru.RE_lb. s1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input->ru.RE_lb. s2,name ));
+		failure = 1;
+return failure;
+return failure;
+return failure;
 }
 

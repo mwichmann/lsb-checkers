@@ -3,11 +3,17 @@
 #include "../type_tests.h"
 #include <pty.h>
 
-void validate_struct_winsize(struct winsize  * input, char *name)
+int validate_struct_winsize(struct winsize  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ws_row,name );
-	validate_NULL_TYPETYPE(input->ws_col,name );
-	validate_NULL_TYPETYPE(input->ws_xpixel,name );
-	validate_NULL_TYPETYPE(input->ws_ypixel,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> ws_row,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ws_col,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ws_xpixel,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ws_ypixel,name ));
+		failure = 1;
+return failure;
 }
 

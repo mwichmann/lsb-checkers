@@ -3,16 +3,59 @@
 #include "../type_tests.h"
 #include <ucontext.h>
 
-void validate_struct__libc_fpstate(struct _libc_fpstate  * input, char *name)
+#if defined(__i386__)
+int validate_struct__libc_fpstate(struct _libc_fpstate  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->cw,name );
-	validate_NULL_TYPETYPE(input->sw,name );
-	validate_NULL_TYPETYPE(input->tag,name );
-	validate_NULL_TYPETYPE(input->ipoff,name );
-	validate_NULL_TYPETYPE(input->cssel,name );
-	validate_NULL_TYPETYPE(input->dataoff,name );
-	validate_NULL_TYPETYPE(input->datasel,name );
-	validate_NULL_TYPETYPE(input->_st,name );
-	validate_NULL_TYPETYPE(input->status,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> cw,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> sw,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tag,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ipoff,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cssel,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> dataoff,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> datasel,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _st,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> status,name ));
+		failure = 1;
+return failure;
 }
 
+#endif /*defined(__i386__)*/
+#if defined(__x86_64__)
+int validate_struct__libc_fpstate(struct _libc_fpstate  * input, char *name)
+{
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> cwd,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> swd,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ftw,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> fop,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rip,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> rdp,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mxcsr,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> mxcr_mask,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _st,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _xmm,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> padding,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__x86_64__)*/

@@ -3,9 +3,13 @@
 #include "../type_tests.h"
 #include <sys/time.h>
 
-void validate_struct_timespec(struct timespec  * input, char *name)
+int validate_struct_timespec(struct timespec  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->tv_sec,name );
-	validate_NULL_TYPETYPE(input->tv_nsec,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> tv_sec,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> tv_nsec,name ));
+		failure = 1;
+return failure;
 }
 

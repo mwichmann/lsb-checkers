@@ -3,10 +3,15 @@
 #include "../type_tests.h"
 #include <setjmp.h>
 
-void validate_struct___jmp_buf_tag(struct __jmp_buf_tag  * input, char *name)
+int validate_struct___jmp_buf_tag(struct __jmp_buf_tag  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->__jmpbuf,name );
-	validate_NULL_TYPETYPE(input->__mask_was_saved,name );
-	validate_NULL_TYPETYPE(input->__saved_mask,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> __jmpbuf,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __mask_was_saved,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __saved_mask,name ));
+		failure = 1;
+return failure;
 }
 

@@ -3,20 +3,219 @@
 #include "../type_tests.h"
 #include <sys/shm.h>
 
-void validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
+#if defined(__i386__)
+int validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
 {
-	validate_struct_ipc_perm( &(input->shm_perm),name );
-	validate_NULL_TYPETYPE(input->shm_segsz,name );
-	validate_NULL_TYPETYPE(input->shm_atime,name );
-	validate_NULL_TYPETYPE(input->__unused1,name );
-	validate_NULL_TYPETYPE(input->shm_dtime,name );
-	validate_NULL_TYPETYPE(input->__unused2,name );
-	validate_NULL_TYPETYPE(input->shm_ctime,name );
-	validate_NULL_TYPETYPE(input->__unused3,name );
-	validate_NULL_TYPETYPE(input->shm_cpid,name );
-	validate_NULL_TYPETYPE(input->shm_lpid,name );
-	validate_NULL_TYPETYPE(input->shm_nattch,name );
-	validate_NULL_TYPETYPE(input->__unused4,name );
-	validate_NULL_TYPETYPE(input->__unused5,name );
+int failure = 0;
+	if(validate_struct_ipc_perm( &(input-> shm_perm),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_segsz,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_atime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_dtime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_ctime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused3,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_cpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_lpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_nattch,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+return failure;
 }
 
+#endif /*defined(__i386__)*/
+#if defined(__ia64__)
+int validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
+{
+int failure = 0;
+	if(validate_struct_ipc_perm( &(input-> shm_perm),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_segsz,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_atime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_dtime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_ctime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_cpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_lpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_nattch,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__ia64__)*/
+#if defined(__powerpc__) && !defined(__powerpc64__)
+int validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
+{
+int failure = 0;
+	if(validate_struct_ipc_perm( &(input-> shm_perm),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_atime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_dtime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused3,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_ctime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_segsz,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_cpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_lpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_nattch,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused6,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__powerpc__) && !defined(__powerpc64__)*/
+#if defined(__powerpc64__)
+int validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
+{
+int failure = 0;
+	if(validate_struct_ipc_perm( &(input-> shm_perm),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_atime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_dtime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_ctime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_segsz,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_cpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_lpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_nattch,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused6,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__powerpc64__)*/
+#if defined(__s390__) && !defined(__s390x__)
+int validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
+{
+int failure = 0;
+	if(validate_struct_ipc_perm( &(input-> shm_perm),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_segsz,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_atime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused1,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_dtime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused2,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_ctime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused3,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_cpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_lpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_nattch,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__s390__) && !defined(__s390x__)*/
+#if defined(__x86_64__)
+int validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
+{
+int failure = 0;
+	if(validate_struct_ipc_perm( &(input-> shm_perm),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_segsz,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_atime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_dtime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_ctime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_cpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_lpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_nattch,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__x86_64__)*/
+#if defined(__s390x__)
+int validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
+{
+int failure = 0;
+	if(validate_struct_ipc_perm( &(input-> shm_perm),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_segsz,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_atime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_dtime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_ctime,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_cpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_lpid,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> shm_nattch,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused4,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> __unused5,name ));
+		failure = 1;
+return failure;
+}
+
+#endif /*defined(__s390x__)*/

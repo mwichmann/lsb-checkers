@@ -3,21 +3,37 @@
 #include "../type_tests.h"
 #include <regex.h>
 
-void validate_struct_re_pattern_buffer(struct re_pattern_buffer  * input, char *name)
+int validate_struct_re_pattern_buffer(struct re_pattern_buffer  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->buffer,name );
-	validate_NULL_TYPETYPE(input->allocated,name );
-	validate_NULL_TYPETYPE(input->used,name );
-	validate_NULL_TYPETYPE(input->syntax,name );
-	validate_NULL_TYPETYPE(input->fastmap,name );
-	validate_NULL_TYPETYPE(input->translate,name );
-	validate_NULL_TYPETYPE(input->re_nsub,name );
-	validate_NULL_TYPETYPE(input->can_be_null,name );
-	validate_NULL_TYPETYPE(input->regs_allocated,name );
-	validate_NULL_TYPETYPE(input->fastmap_accurate,name );
-	validate_NULL_TYPETYPE(input->no_sub,name );
-	validate_NULL_TYPETYPE(input->not_bol,name );
-	validate_NULL_TYPETYPE(input->not_eol,name );
-	validate_NULL_TYPETYPE(input->newline_anchor,name );
+int failure = 0;
+	if(validate_NULL_TYPETYPE(input-> buffer,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> allocated,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> used,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> syntax,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> fastmap,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> translate,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> re_nsub,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> can_be_null,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> regs_allocated,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> fastmap_accurate,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> no_sub,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> not_bol,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> not_eol,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> newline_anchor,name ));
+		failure = 1;
+return failure;
 }
 

@@ -3,7 +3,9 @@
 #include "../type_tests.h"
 #include <security/pam_appl.h>
 
-void validate_struct_pam_handle(struct pam_handle  * input, char *name)
+int validate_struct_pam_handle(struct pam_handle  * input, char *name)
 {
+int failure = 0;
+return failure;
 }
 
