@@ -1,0 +1,34 @@
+<PACKAGE>
+include(../good-lead.xml)
+<signature>
+	<headerrec>
+		<magic>0xba 0xad 0xbe 0xef</magic>
+		<reserved>0x00 0x00 0x00 0x00</reserved>
+		<nindex>3</nindex>
+		<hsize>22</hsize>
+	</headerrec>
+	<index>
+		<tag>SIGTAG_SIGSIZE</tag>
+		<type>INT32</type>
+		<offset>0</offset>
+		<count>1</count>
+		<data>992</data>
+	</index>
+	<index>
+		<tag>SIGTAG_MD5</tag>
+		<type>BIN</type>
+		<offset>4</offset>
+		<count>16</count>
+		<data>3ff7919ecc85dfd55e8e950d5b1fdfea</data>
+	</index>
+	<index>
+		<tag>RPMTAG_HEADERI18NTABLE</tag>
+		<type>STRING_ARRAY</type>
+		<offset>20</offset>
+		<count>1</count>
+		<data>C</data>
+	</index>
+</signature>
+include(../good-header.xml)
+include(../good-payload.xml)
+</PACKAGE>
