@@ -589,6 +589,9 @@ struct versym libm_so_6[] = {
 #if __s390x__
 	{"atanl","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
+#if __i386__
+	{"cabs","GLIBC_2.1",0,"LSB-Core",8,1},
+#endif
 #if __ia64__
 	{"cabs","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
@@ -2948,67 +2951,67 @@ struct versym libm_so_6[] = {
 	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"fesetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"fesetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"fesetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"fesetenv","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"fesetenv","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fesetenv","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fesetenv","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"fesetenv","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"fesetenv","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"fesetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetenv","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"fesetexceptflag","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"fesetexceptflag","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fesetexceptflag","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fesetexceptflag","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"fesetexceptflag","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"fesetexceptflag","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"fesetround","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fesetround","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"fesetround","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetround","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"fesetround","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fesetround","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"fesetround","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"fesetround","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fesetround","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"fesetround","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"fesetround","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"fesetround","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"fesetround","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetround","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"fetestexcept","GLIBC_2.1",0,"LSB-Core",4,1},
