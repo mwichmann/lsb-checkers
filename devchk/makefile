@@ -43,6 +43,8 @@ OBJS = hdrchk.o \
 	wctype_h.o \
 	wordexp_h.o 
 
+all: hdrchk
+
 hdrchk: $(OBJS)
 	cc -o hdrchk $(OBJS)
 
