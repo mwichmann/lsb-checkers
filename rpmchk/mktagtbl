@@ -26,6 +26,7 @@ for(1..$sth->numrows) {
 	printf "{%s,\t", $entry{'Rname'};
 	printf "\"%s\",\t", $entry{'Rname'};
 	printf "%s,\t", $entry{'Rtype'};
+	printf "%s,\t", $entry{'Rcount'};
 	split('_',$entry{'Rname'});
 	$tagname=@_[1];
 	printf "checkRpmIdx%s,\t", $tagname;
