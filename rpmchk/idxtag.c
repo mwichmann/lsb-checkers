@@ -761,6 +761,11 @@ for(i=0;i<hcount;i++) {
 	flag=htonl(flagp[i]);
 	//fprintf(stderr,"Required Flag: %x ",flag);
 	mapbit(RPMSENSE_RPMLIB);
+	mapbit(RPMSENSE_SCRIPT_POSTUN);
+	mapbit(RPMSENSE_SCRIPT_PREUN);
+	mapbit(RPMSENSE_SCRIPT_POST);
+	mapbit(RPMSENSE_SCRIPT_PRE);
+	mapbit(RPMSENSE_INTERP);
 	mapbit(RPMSENSE_PREREQ);
 	mapbit(RPMSENSE_EQUAL);
 	mapbit(RPMSENSE_GREATER);
