@@ -1,4 +1,4 @@
-char *libncurses_so_4[] = {
+char *libncurses_so_5[] = {
 	"addch",
 	"addchnstr",
 	"addchstr",
