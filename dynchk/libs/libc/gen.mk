@@ -633,6 +633,7 @@ unsetenv.o \
 usleep.o \
 utime.o \
 utimes.o \
+utmpname.o \
 vasprintf.o \
 vdprintf.o \
 vfork.o \
