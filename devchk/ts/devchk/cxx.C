@@ -2249,14 +2249,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10763,0);
 #endif
 
 #if __i386__
-#define TYPE _ZSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_trait
-CheckTypeSize(TYPE,0,10666,2)
-#undef TYPE
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10666,0);
-#endif
-
-#if __i386__
 #define TYPE std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >
 CheckTypeSize(TYPE,8,10765,2)
 #undef TYPE
