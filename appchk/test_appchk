@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# Regression tests for appchk
+
+# Copyright (C) 2001 The Free Standards Group Inc.
+# Chris Yeoh <cyeoh@au1.ibm.com>
+
+# Try executing appchk with no arguments
+# We expect it to return with error code 1
+printf "Running appchk with no arguments. Expect an error... "
+./appchk > /dev/null 2>&1
+if [ $? -ne 1 ]; then
+  echo "appchk did not fail with no arguments"
+	exit 1
+else
+	echo "OK"
+fi
+
+# Try running appchk on /bin/cat
+# Although /bin/cat is probably not LSB compliant, we expect it to succeed
+# as appchk does not return a non-zero return code if the program(s)
+# being analysed are not compliant
+PROG=/bin/cat
+printf "Running appchk on $PROG..."
+JOURNAL_FILE=journal.appchk.`basename $PROG`
+rm -f $JOURNAL_FILE
+./appchk $PROG > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "Failed to run appchk on $PROG"
+	exit 1
+else
+		# Check that the journal file is complete (it has an end marker)
+		LAST_CODE=`tail -1 $JOURNAL_FILE | cut -f1 -d'|'`
+		if [ "$LAST_CODE" -ne "900" ]; then
+				echo Journal file is incomplete
+				exit 1
+		else
+				rm -f $JOURNAL_FILE
+				echo OK
+    fi
+fi
+
+echo 
+echo All tests succeeded
+
+exit 0
