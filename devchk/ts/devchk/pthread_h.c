@@ -282,12 +282,13 @@ CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,10,40621)
 CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,10,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,12,10,40622)
 #elif __ia64__
-CheckTypeSize(struct _pthread_cleanup_buffer,0, 6931, 3)
-Msg("Missing member data for _pthread_cleanup_buffer on IA64\n");
-CheckOffset(struct _pthread_cleanup_buffer,__routine,0,3,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,0,3,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,0,3,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,0,3,40622)
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 3)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,3,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,3,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,3,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,3,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,3,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,3,40622)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6931,0);
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
