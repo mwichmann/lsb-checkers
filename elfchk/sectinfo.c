@@ -218,7 +218,7 @@ struct SectionInfo SectionInfo[] = {
 	{".toc",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc64__ */
 #if __powerpc64__
-	{".toc1",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+	{".toc1",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc64__ */
 #if __powerpc64__
 	{".tocbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
