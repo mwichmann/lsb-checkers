@@ -146,73 +146,73 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7,0);
 #endif
 
 #if __i386__
-CheckTypeSize(long,4,8,2)
+CheckTypeSize(long int,4,8,2)
 #elif __ia64__
-CheckTypeSize(long,8,8,3)
+CheckTypeSize(long int,8,8,3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(long,4,8,6)
+CheckTypeSize(long int,4,8,6)
 #elif __powerpc64__
-CheckTypeSize(long,8,8,9)
+CheckTypeSize(long int,8,8,9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(long,4,8,10)
+CheckTypeSize(long int,4,8,10)
 #elif __x86_64__
-CheckTypeSize(long,8,8,11)
+CheckTypeSize(long int,8,8,11)
 #elif __s390x__
-CheckTypeSize(long,8,8,12)
+CheckTypeSize(long int,8,8,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8,0);
 #endif
 
 #if __i386__
-CheckTypeSize(unsigned long,4,9,2)
+CheckTypeSize(unsigned long int,4,9,2)
 #elif __ia64__
-CheckTypeSize(unsigned long,8,9,3)
+CheckTypeSize(unsigned long int,8,9,3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(unsigned long,4,9,6)
+CheckTypeSize(unsigned long int,4,9,6)
 #elif __powerpc64__
-CheckTypeSize(unsigned long,8,9,9)
+CheckTypeSize(unsigned long int,8,9,9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(unsigned long,4,9,10)
+CheckTypeSize(unsigned long int,4,9,10)
 #elif __x86_64__
-CheckTypeSize(unsigned long,8,9,11)
+CheckTypeSize(unsigned long int,8,9,11)
 #elif __s390x__
-CheckTypeSize(unsigned long,8,9,12)
+CheckTypeSize(unsigned long int,8,9,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9,0);
 #endif
 
 #if __i386__
-CheckTypeSize(long long,8,10,2)
+CheckTypeSize(long long int,8,10,2)
 #elif __ia64__
-CheckTypeSize(long long,8,10,3)
+CheckTypeSize(long long int,8,10,3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(long long,8,10,6)
+CheckTypeSize(long long int,8,10,6)
 #elif __powerpc64__
-CheckTypeSize(long long,8,10,9)
+CheckTypeSize(long long int,8,10,9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(long long,8,10,10)
+CheckTypeSize(long long int,8,10,10)
 #elif __x86_64__
-CheckTypeSize(long long,8,10,11)
+CheckTypeSize(long long int,8,10,11)
 #elif __s390x__
-CheckTypeSize(long long,8,10,12)
+CheckTypeSize(long long int,8,10,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10,0);
 #endif
 
 #if __i386__
-CheckTypeSize(unsigned long long,8,11,2)
+CheckTypeSize(unsigned long long int,8,11,2)
 #elif __ia64__
-CheckTypeSize(unsigned long long,8,11,3)
+CheckTypeSize(unsigned long long int,8,11,3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(unsigned long long,8,11,6)
+CheckTypeSize(unsigned long long int,8,11,6)
 #elif __powerpc64__
-CheckTypeSize(unsigned long long,8,11,9)
+CheckTypeSize(unsigned long long int,8,11,9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(unsigned long long,8,11,10)
+CheckTypeSize(unsigned long long int,8,11,10)
 #elif __x86_64__
-CheckTypeSize(unsigned long long,8,11,11)
+CheckTypeSize(unsigned long long int,8,11,11)
 #elif __s390x__
-CheckTypeSize(unsigned long long,8,11,12)
+CheckTypeSize(unsigned long long int,8,11,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11,0);
 #endif
