@@ -88,6 +88,12 @@ Msg("Find size of AUTH (10391)\n");
 #endif
 
 #ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10428,0);
+Msg("Find size of auth_ops * (10428)\n");
+#endif
+
+#ifdef __i386__
 CheckTypeSize(struct auth_ops,20, 9897, 2)
 CheckOffset(struct auth_ops,ah_nextverf,0,2,32032)
 CheckOffset(struct auth_ops,ah_marshal,4,2,32033)

@@ -99,6 +99,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");
 #endif
 
+#ifdef __no_sym__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10430,0);
+Msg("Find size of xp_ops * (10430)\n");
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

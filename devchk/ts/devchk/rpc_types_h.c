@@ -49,6 +49,15 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9895,0);
 Msg("Find size of enum_t (9895)\n");
 #endif
 
+#ifdef __i386__
+CheckTypeSize(rpcvers_t,4, 9993, 2)
+#elif __ia64__
+CheckTypeSize(rpcvers_t,8, 9993, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9993,0);
+Msg("Find size of rpcvers_t (9993)\n");
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -142,19 +142,6 @@ cnt++;
 #endif
 
 #ifdef __i386__
-CheckTypeSize(FILE,148, 8782, 2)
-#elif __ia64__
-CheckTypeSize(FILE,216, 8782, 3)
-#elif __powerpc__
-CheckTypeSize(FILE,152, 8782, 6)
-#elif __s390__
-CheckTypeSize(FILE,152, 8782, 10)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
-Msg("Find size of FILE (8782)\n");
-#endif
-
-#ifdef __i386__
 CheckTypeSize(fpos_t,12, 9108, 2)
 #elif __ia64__
 CheckTypeSize(fpos_t,16, 9108, 3)
@@ -184,6 +171,22 @@ Msg("Find size of fpos64_t (9109)\n");
 #endif
 
 #ifdef __no_sym__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10275,0);
+Msg("Find size of anon-fpos64_t (10275)\n");
+#endif
+
+#ifdef __i386__
+CheckTypeSize(FILE,148, 8782, 2)
+#elif __ia64__
+CheckTypeSize(FILE,216, 8782, 3)
+#elif __powerpc__
+CheckTypeSize(FILE,152, 8782, 6)
+#elif __s390__
+CheckTypeSize(FILE,152, 8782, 10)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
+Msg("Find size of FILE (8782)\n");
 #endif
 
 #ifdef TET_TEST
