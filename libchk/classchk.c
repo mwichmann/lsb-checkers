@@ -10,6 +10,7 @@
 #include "elfchk.h"
 #include "hdr.h"
 #include "tetj.h"
+#include "libchk.h"
 
 /*
  * Some architectures treat function pointers as structures which contains the
@@ -127,7 +128,8 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 * 1.3) Check the pointer to the RTTI, both by value and by name
 		 */
 		dladdr(vttypeinfo,&dlinfo);
-		if (dlinfo.dli_saddr != vttypeinfo) 
+		if ( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) &&
+						dlinfo.dli_saddr != vttypeinfo) 
 		{
 			printf("Uhoh1. Not an exact match %p %p\n",
 					dlinfo.dli_saddr, vttypeinfo);
@@ -137,7 +139,6 @@ check_class_info(char *libname, struct classinfo *classes[],
 		{
 			printf("RTTI Name %s (expected) doesn't match %s (found)\n",
 						 classp->vtable->typeinfo,dlinfo.dli_sname);
-			fprintf(stderr,"RTTI:%s:0:%s\n", classp->name,dlinfo.dli_sname);
 		}
 
 		/*
@@ -145,35 +146,44 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 */
 		for (j=0;j<classp->numvirtfuncs;j++) 
 		{
-			/* Hmm... this doesn't seem to be used anywhere
-			symp=dlsym(dlhndl, classp->vtable->virtfuncs[j]);
-			*/
 			dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo);
-			if (dlinfo.dli_saddr!=fptr2ptr(vtvirtfuncs[j])) 
+			if( dlinfo.dli_saddr &&
+							(dlinfo.dli_saddr!=fptr2ptr(vtvirtfuncs[j])) ) 
 			{
-				printf("Uhoh2. Not an exact match %p %p\n",
+				if( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) ) {
+					printf("Uhoh2. Not an exact match %p %p\n",
 							 dlinfo.dli_saddr, fptr2ptr(vtvirtfuncs[j]));
-				printf("Uhoh2. Not an exact match %s %s\n",
+					printf("Uhoh2. Not an exact match %s %s\n",
 							 dlinfo.dli_sname, classp->vtable->virtfuncs[j]);
+				}
+				printf("Symbol address found for Virtual table entry [%d] ", j);
+				printf("%p (found) doesn't match ", dlinfo.dli_saddr );
+				printf("%p (expected).\n", fptr2ptr(vtvirtfuncs[j]));
 			}
 
+			if ( !dlinfo.dli_sname) {
+					printf("Did not find symbol name for Virtual table entry ");
+					printf("[%d] expecting %s\n",
+									j, classp->vtable->virtfuncs[j] );
+			}
 			if (((classp->vtable->virtfuncs[j] && dlinfo.dli_sname) &&
-					 strcmp(classp->vtable->virtfuncs[j], dlinfo.dli_sname)) ||
+					strcmp(classp->vtable->virtfuncs[j], dlinfo.dli_sname)) ||
 					(dlinfo.dli_sname && !classp->vtable->virtfuncs[j])) 
 			{
 				printf("Virtual Function[%d] %s (expected) ",
 							 j, classp->vtable->virtfuncs[j]);
 				printf("doesn't match %s (found)\n", dlinfo.dli_sname);
-				fprintf(stderr,"VFUNC:%s:%d:%s\n", classp->name,j, dlinfo.dli_sname);
 			}
 		}
 		} /* (vtablep) */
 		else {
-			fprintf(stderr,"No vtable found in library for %s\n",classp->name);
+			printf("No vtable found in library for %s\n", classp->name);
 		}
 		} /* (*classp->vtablename) */
 		else {
-			printf("No vtable name for %s\n",classp->name);
+			if( libchk_debug&LIBCHK_DEBUG_CLASSDETAILS ) {
+				printf("No vtable name for %s\n",classp->name);
+			}
 		}
 
 		/*
@@ -190,13 +200,13 @@ check_class_info(char *libname, struct classinfo *classes[],
 		if (symp+(2*sizeof(long)) != rttip->basevtable) 
 		{
 			dladdr(rttip->basevtable-8, &dlinfo);
-			if (vtablep && dlinfo.dli_saddr != vttypeinfo) 
+			if( libchk_debug&LIBCHK_DEBUG_CLASSDETAILS &&
+							(vtablep && dlinfo.dli_saddr != vttypeinfo) )
 			{
 				printf("Uhoh3. Not an exact match\n");
 			}
 			printf("Base vtype %p (expected) doesn't match %p %s (found)\n",
 						 symp, rttip->basevtable, dlinfo.dli_sname);
-			fprintf(stderr,"BASEV:%s:0:%s\n", classp->name, dlinfo.dli_sname);
 		}
 
 		/*
@@ -265,7 +275,6 @@ check_class_info(char *libname, struct classinfo *classes[],
 			{
 				printf("Base type %p (expected) doesn't match %p %s (found)\n",
 							 symp, si_rttip->basetype, dlinfo.dli_sname);
-				fprintf(stderr,"BASEN:%s:0:%s\n", classp->name, dlinfo.dli_sname);
 			}
 			basetypes = si_rttip->basetypeinfo;
 			if( classp->numbaseinfo )
@@ -286,13 +295,15 @@ check_class_info(char *libname, struct classinfo *classes[],
 			 */
 			if (vmi_rttip->flags != classp->flags) 
 			{
-				fprintf(stderr,"VMIF:%s:0:%d\n",
-								classp->name, vmi_rttip->flags);
+				printf("VMI flags %ul (found) for class %s ",
+								vmi_rttip->flags, classp->name );
+				printf("doesn't match %ul (expected)\n",classp->flags);
 			}
 			if (vmi_rttip->base_count != classp->numvmitypes) 
 			{
-				fprintf(stderr,"NVMI:%s:0:%d\n",
-								classp->name,vmi_rttip->base_count);
+				printf("Number of VMI basetypes %d (found) for class %s ",
+								vmi_rttip->base_count, classp->name );
+				printf("doesn't match %d (expected)\n",classp->numvmitypes);
 			}
 			for (j=0; j<classp->numvmitypes; j++)
 			{
@@ -301,13 +312,16 @@ check_class_info(char *libname, struct classinfo *classes[],
 				symp = dlsym(dlhndl, classp->btinfo[j].base_type);
 				if (symp != btip->base_type) 
 				{
-					fprintf(stderr,"BTIB:%s:%d:%s\n",
-									classp->name, j, dlinfo.dli_sname);
+					printf("VMI basetype[%d] address %p (found) for class %s ",
+									j, symp, classp->name );
+					printf("doesn't match %p (expected)\n",btip->base_type);
 				}
-				if (btip->offset_flags !=	classp->btinfo[j].offset_flags) 
+				if (btip->offset_flags != classp->btinfo[j].offset_flags) 
 				{
-					fprintf(stderr,"BTIF:%s:%d:%lu\n",
-									classp->name, j, btip->offset_flags);
+					printf("VMI basetype[%d] flags %ul (found) for class %s ",
+									j, btip->offset_flags, classp->name );
+					printf("doesn't match %ul (expected)\n",
+									classp->btinfo[j].offset_flags);
 				}
 			}
 			basetypes = (void **)((char *)vmi_rttip->base_info)+
@@ -334,11 +348,12 @@ check_class_info(char *libname, struct classinfo *classes[],
 			if (symp != p_rttip->pointee) {
 				printf("Base type %p (expected) doesn't match %p %s (found)\n",
 							 symp, p_rttip->pointee, dlinfo.dli_sname);
-				fprintf(stderr,"BASEN:%s:0:%s\n", classp->name, dlinfo.dli_sname);
 			}
 			if (p_rttip->offset_flags != classp->flags) {
-				fprintf(stderr,"VMIF:%s:0:%d\n",
-								classp->name,p_rttip->offset_flags);
+					printf("pointer offset flags %x (found) for class %s ",
+									p_rttip->offset_flags, classp->name );
+					printf("doesn't match %x (expected)\n",
+									classp->flags);
 			}
 			basetypes = ((struct pbasetypeinfo_mem*)rttip)->basetypeinfo;
 			if( classp->numbaseinfo )
@@ -349,7 +364,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 * Check the base types info
 		 */
 		if (classp->numbaseinfo && !basetypes) {
-			printf("Aigghhh no basetypes!!\n");
+			fprintf(stderr,"Aigghhh no basetypes!!\n");
 			continue;
 		}
 
@@ -357,7 +372,8 @@ check_class_info(char *libname, struct classinfo *classes[],
 		{
 			symp = dlsym(dlhndl, classp->typeinfo->basetypeinfo[j]);
 			dladdr(basetypes[j]-8, &dlinfo);
-			if (dlinfo.dli_saddr+8 != basetypes[j])
+			if ((libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) &&
+							dlinfo.dli_saddr+8 != basetypes[j])
 			{
 				printf("Uhoh4. Not an exact match %p %p\n", 
 							 dlinfo.dli_saddr, basetypes[j]);
@@ -366,14 +382,12 @@ check_class_info(char *libname, struct classinfo *classes[],
 			{
 				printf("Basetype[%d] %p (expected) doesn't match %p (found)\n", j, 
 							 symp, basetypes[j]);
-				fprintf(stderr,"BASET:%s:%d:%s\n", classp->name,j,dlinfo.dli_sname);
 			}
 		}
 
 		} else { /* (rttip) */
 			char	str[256];
 			sprintf(str, "_ZTI%s", &(classp->name[2]));
-			fprintf(stderr, "RTTI:%s:0:%s\n", classp->name,str);
 			printf("No RTTI name for %s\n", str);
 		}
 	}
