@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.41 $
+ * This is $Revision: 1.42 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.42  2004/07/28 14:02:07  anderson
+ * As a default now, turn off some of the extraneous messages
+ *
  * Revision 1.41  2004/07/27 18:52:31  cyeoh
  * Adds missing testcase end marker
  *
@@ -174,14 +177,14 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.41 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.42 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
  * but probably not others
  */
 
-int libchk_debug=0;
+int libchk_debug=LIBCHK_DEBUG_CXXHUSH;
 
 /*
  * What module to check against. - NULL means check all
