@@ -23,13 +23,35 @@ int pcnt=0;
 Msg("Checking data structures in sys/shm.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#ifdef __ia64__
+/* No test for SHMLBA */
+#elif _LSB_DEFAULT_ARCH
 /* No test for SHMLBA */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef SHM_R
+	CompareConstant(SHM_R,0400,3467,architecture)
+#else
+Msg( "Error: Constant not found: SHM_R\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef SHM_W
+	CompareConstant(SHM_W,0200,3468,architecture)
+#else
+Msg( "Error: Constant not found: SHM_W\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef SHM_RDONLY
-	CompareConstant(SHM_RDONLY,4096,3469,architecture)
+	CompareConstant(SHM_RDONLY,010000,3469,architecture)
 #else
 Msg( "Error: Constant not found: SHM_RDONLY\n");
 cnt++;
@@ -47,13 +69,40 @@ cnt++;
 
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef SHM_REMAP
+	CompareConstant(SHM_REMAP,040000,3471,architecture)
+#else
+Msg( "Error: Constant not found: SHM_REMAP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef SHM_LOCK
+	CompareConstant(SHM_LOCK,11,3472,architecture)
+#else
+Msg( "Error: Constant not found: SHM_LOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef SHM_UNLOCK
+	CompareConstant(SHM_UNLOCK,12,3473,architecture)
+#else
+Msg( "Error: Constant not found: SHM_UNLOCK\n");
+cnt++;
+#endif
+
+#endif
+
 #ifdef __i386__
 CheckTypeSize(shmatt_t,4, 10212, 2)
 #elif __powerpc__
 CheckTypeSize(shmatt_t,4, 10212, 6)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10212,0);
-Msg("Find size of shmatt_t (10212)\n");
 #endif
 
 #ifdef __i386__
@@ -71,13 +120,24 @@ CheckOffset(struct shmid_ds,shm_lpid,68,2,33708)
 CheckOffset(struct shmid_ds,shm_nattch,72,2,33709)
 CheckOffset(struct shmid_ds,__unused4,76,2,34264)
 CheckOffset(struct shmid_ds,__unused5,80,2,34265)
-#elif __ia64__
-CheckTypeSize(struct shmid_ds,112, 9129, 3)
-#elif __powerpc__
-CheckTypeSize(struct shmid_ds,104, 9129, 6)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9129,0);
-Msg("Find size of shmid_ds (9129)\n");
+#endif
+
+#ifdef __ia64__
+CheckTypeSize(struct shmid_ds,112, 10336, 3)
+CheckOffset(struct shmid_ds,shm_perm,0,3,34550)
+CheckOffset(struct shmid_ds,shm_segsz,48,3,34551)
+CheckOffset(struct shmid_ds,shm_atime,56,3,34552)
+CheckOffset(struct shmid_ds,shm_dtime,64,3,34553)
+CheckOffset(struct shmid_ds,shm_ctime,72,3,34554)
+CheckOffset(struct shmid_ds,shm_cpid,80,3,34555)
+CheckOffset(struct shmid_ds,shm_lpid,84,3,34556)
+CheckOffset(struct shmid_ds,shm_nattch,88,3,34557)
+CheckOffset(struct shmid_ds,__unused1,96,3,34558)
+CheckOffset(struct shmid_ds,__unused2,104,3,34559)
+#endif
+
+#ifdef __powerpc__
+CheckTypeSize(struct shmid_ds,104, 10337, 6)
 #endif
 
 #ifdef TET_TEST

@@ -66,12 +66,14 @@ OBJS = hdrchk.o \
 	sys_shm_h.o \
 	sys_socket_h.o \
 	sys_stat_h.o \
+	sys_statvfs_h.o \
 	sys_time_h.o \
 	sys_timeb_h.o \
 	sys_times_h.o \
 	sys_types_h.o \
 	sys_un_h.o \
 	sys_utsname_h.o \
+	sys_vfs_h.o \
 	sys_wait_h.o \
 	syslog_h.o \
 	tar_h.o \

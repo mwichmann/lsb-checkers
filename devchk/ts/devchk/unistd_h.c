@@ -24,6 +24,26 @@ Msg("Checking data structures in unistd.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef _POSIX_VDISABLE
+	CompareConstant(_POSIX_VDISABLE,'\0',5028,architecture)
+#else
+Msg( "Error: Constant not found: _POSIX_VDISABLE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef _POSIX_NO_TRUNC
+	CompareConstant(_POSIX_NO_TRUNC,1,5029,architecture)
+#else
+Msg( "Error: Constant not found: _POSIX_NO_TRUNC\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef _SC_MEMLOCK
 	CompareConstant(_SC_MEMLOCK,17,4800,architecture)
 #else
@@ -118,6 +138,16 @@ cnt++;
 	CompareConstant(_SC_PRIORITY_SCHEDULING,10,4809,architecture)
 #else
 Msg( "Error: Constant not found: _SC_PRIORITY_SCHEDULING\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef _POSIX_CHOWN_RESTRICTED
+	CompareConstant(_POSIX_CHOWN_RESTRICTED,1,5030,architecture)
+#else
+Msg( "Error: Constant not found: _POSIX_CHOWN_RESTRICTED\n");
 cnt++;
 #endif
 

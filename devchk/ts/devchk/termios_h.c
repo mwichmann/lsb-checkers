@@ -1604,17 +1604,6 @@ cnt++;
 #endif
 
 #ifdef __i386__
-CheckTypeSize(struct winsize,8, 10301, 2)
-#elif __ia64__
-CheckTypeSize(struct winsize,8, 10301, 3)
-#elif __powerpc__
-CheckTypeSize(struct winsize,8, 10301, 6)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10301,0);
-Msg("Find size of winsize (10301)\n");
-#endif
-
-#ifdef __i386__
 CheckTypeSize(speed_t,4, 9186, 2)
 #elif __ia64__
 CheckTypeSize(speed_t,4, 9186, 3)

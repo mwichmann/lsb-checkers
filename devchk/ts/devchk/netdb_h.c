@@ -128,6 +128,8 @@ CheckTypeSize(struct protoent,12, 10139, 2)
 CheckOffset(struct protoent,p_name,0,2,33742)
 CheckOffset(struct protoent,p_aliases,4,2,33743)
 CheckOffset(struct protoent,p_proto,8,2,33744)
+#elif __ia64__
+CheckTypeSize(struct protoent,24, 10139, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10139,0);
 Msg("Find size of protoent (10139)\n");

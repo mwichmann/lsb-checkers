@@ -247,6 +247,7 @@ sub writetest($$)
 			$select.= "AND TMbitfield = 0 ";
 			$select.= "AND ATMaid=$Aid ";
 			$select.= "ORDER BY TMposition ";
+			print $select,"\n" if $trace;
 			$mth = $Dbh->query($select) || die $Dbh->errmsg();
 			for(1..$mth->numrows) {
 				%mentry=$mth->fetchhash;

@@ -113,15 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef __ia64__
-#ifdef MS_INVALIDATE
-	CompareConstant(MS_INVALIDATE,4,3517,architecture)
-#else
-Msg( "Error: Constant not found: MS_INVALIDATE\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef MS_INVALIDATE
 	CompareConstant(MS_INVALIDATE,2,3517,architecture)
 #else
@@ -131,15 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef __ia64__
-#ifdef MS_SYNC
-	CompareConstant(MS_SYNC,2,3518,architecture)
-#else
-Msg( "Error: Constant not found: MS_SYNC\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef MS_SYNC
 	CompareConstant(MS_SYNC,4,3518,architecture)
 #else
