@@ -20,7 +20,7 @@ LIB64=$(shell case `arch` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
 
 #XXX add /opt/lsb/lib or /opt/lsb/lib64, for the moment leave old path in place too
 dummy_link: dummy_link.o makefile
-	$(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) -L/opt/lsb/lib$(LIB64) -L/opt/lsbdev-base/lib -lGL -lICE -lSM -lX11 -lXext -lXt -lc -lcrypt -ldl -lgcc_s -lm -lncurses -lpam -lpthread -lutil -lz -lstdc++ dummy_link.o -o $@
+	$(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) -L/opt/lsb/lib$(LIB64) -L/opt/lsbdev-base/lib dummy_link.o -lGL -lICE -lSM -lX11 -lXext -lXt -lc -lcrypt -ldl -lgcc_s -lm -lncurses -lpam -lpthread -lutil -lz -lstdc++  -o $@
 
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)
