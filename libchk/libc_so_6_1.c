@@ -4898,7 +4898,7 @@ struct versym libc_so_6_1[] = {
 	{"getcontext","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"getcontext","GLIBC_2.1"},
+	{"getcontext","GLIBC_2.3.3"},
 #endif
 #if __powerpc64__
 	{"getcontext","GLIBC_2.2.5"},
@@ -5832,27 +5832,6 @@ struct versym libc_so_6_1[] = {
 #endif
 #if __s390x__
 	{"getrusage","GLIBC_2.2"},
-#endif
-#if __i386__
-	{"gets","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"gets","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"gets","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"gets","GLIBC_2.2.5"},
-#endif
-#if __s390__ && !__s390x__
-	{"gets","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"gets","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"gets","GLIBC_2.2"},
 #endif
 #if __i386__
 	{"getservbyname","GLIBC_2.0"},
@@ -8093,7 +8072,7 @@ struct versym libc_so_6_1[] = {
 	{"makecontext","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"makecontext","GLIBC_2.1"},
+	{"makecontext","GLIBC_2.3.3"},
 #endif
 #if __powerpc64__
 	{"makecontext","GLIBC_2.2.5"},
@@ -10883,7 +10862,7 @@ struct versym libc_so_6_1[] = {
 	{"setcontext","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"setcontext","GLIBC_2.0"},
+	{"setcontext","GLIBC_2.3.3"},
 #endif
 #if __powerpc64__
 	{"setcontext","GLIBC_2.2.5"},
