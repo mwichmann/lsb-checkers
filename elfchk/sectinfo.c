@@ -1,3 +1,4 @@
+/* Generated file - Do Not Edit */
 #include "elfchk.h"
 #include "sections.h"
 
@@ -18,7 +19,6 @@ struct SectionInfo SectionInfo[] = {
 	{".gnu.version",SHT_GNU_versym,SHF_ALLOC,checkGNU_versym},
 	{".gnu.version_d",SHT_GNU_verdef,SHF_ALLOC,checkGNU_verdef},
 	{".gnu.version_r",SHT_GNU_verneed,SHF_ALLOC,checkGNU_verneed},
-	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #if defined(__i386__)
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __i386__ */
