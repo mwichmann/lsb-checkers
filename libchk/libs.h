@@ -29,19 +29,7 @@ extern struct classinfo ld_lsb_s390x_so_1_classinfo[];
 extern struct versym ld_lsb_x86_64_so_1[];
 extern struct classinfo ld_lsb_x86_64_so_1_classinfo[];
 #endif
-#if __i386__
-extern struct versym libc_so_6[];
-extern struct classinfo libc_so_6_classinfo[];
-#endif
-#if __powerpc__ && !__powerpc64__
-extern struct versym libc_so_6[];
-extern struct classinfo libc_so_6_classinfo[];
-#endif
-#if __powerpc64__
-extern struct versym libc_so_6[];
-extern struct classinfo libc_so_6_classinfo[];
-#endif
-#if __s390__ && !__s390x__
+#if __s390x__
 extern struct versym libc_so_6[];
 extern struct classinfo libc_so_6_classinfo[];
 #endif
@@ -49,7 +37,19 @@ extern struct classinfo libc_so_6_classinfo[];
 extern struct versym libc_so_6[];
 extern struct classinfo libc_so_6_classinfo[];
 #endif
-#if __s390x__
+#if __s390__ && !__s390x__
+extern struct versym libc_so_6[];
+extern struct classinfo libc_so_6_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libc_so_6[];
+extern struct classinfo libc_so_6_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libc_so_6[];
+extern struct classinfo libc_so_6_classinfo[];
+#endif
+#if __i386__
 extern struct versym libc_so_6[];
 extern struct classinfo libc_so_6_classinfo[];
 #endif
@@ -57,25 +57,7 @@ extern struct classinfo libc_so_6_classinfo[];
 extern struct versym libc_so_6_1[];
 extern struct classinfo libc_so_6_1_classinfo[];
 #endif
-extern struct versym libcrypt_so_1[];
-extern struct classinfo libcrypt_so_1_classinfo[];
-#if __i386__
-extern struct versym libcrypt_so_1[];
-extern struct classinfo libcrypt_so_1_classinfo[];
-#endif
-#if __ia64__
-extern struct versym libcrypt_so_1[];
-extern struct classinfo libcrypt_so_1_classinfo[];
-#endif
-#if __powerpc__ && !__powerpc64__
-extern struct versym libcrypt_so_1[];
-extern struct classinfo libcrypt_so_1_classinfo[];
-#endif
-#if __powerpc64__
-extern struct versym libcrypt_so_1[];
-extern struct classinfo libcrypt_so_1_classinfo[];
-#endif
-#if __s390__ && !__s390x__
+#if __s390x__
 extern struct versym libcrypt_so_1[];
 extern struct classinfo libcrypt_so_1_classinfo[];
 #endif
@@ -83,29 +65,27 @@ extern struct classinfo libcrypt_so_1_classinfo[];
 extern struct versym libcrypt_so_1[];
 extern struct classinfo libcrypt_so_1_classinfo[];
 #endif
-#if __s390x__
+#if __s390__ && !__s390x__
 extern struct versym libcrypt_so_1[];
 extern struct classinfo libcrypt_so_1_classinfo[];
 #endif
-extern struct versym libdl_so_2[];
-extern struct classinfo libdl_so_2_classinfo[];
-#if __i386__
-extern struct versym libdl_so_2[];
-extern struct classinfo libdl_so_2_classinfo[];
-#endif
-#if __ia64__
-extern struct versym libdl_so_2[];
-extern struct classinfo libdl_so_2_classinfo[];
+#if __powerpc64__
+extern struct versym libcrypt_so_1[];
+extern struct classinfo libcrypt_so_1_classinfo[];
 #endif
 #if __powerpc__ && !__powerpc64__
-extern struct versym libdl_so_2[];
-extern struct classinfo libdl_so_2_classinfo[];
+extern struct versym libcrypt_so_1[];
+extern struct classinfo libcrypt_so_1_classinfo[];
 #endif
-#if __powerpc64__
-extern struct versym libdl_so_2[];
-extern struct classinfo libdl_so_2_classinfo[];
+#if __ia64__
+extern struct versym libcrypt_so_1[];
+extern struct classinfo libcrypt_so_1_classinfo[];
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
+extern struct versym libcrypt_so_1[];
+extern struct classinfo libcrypt_so_1_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libdl_so_2[];
 extern struct classinfo libdl_so_2_classinfo[];
 #endif
@@ -113,7 +93,23 @@ extern struct classinfo libdl_so_2_classinfo[];
 extern struct versym libdl_so_2[];
 extern struct classinfo libdl_so_2_classinfo[];
 #endif
-#if __s390x__
+#if __s390__ && !__s390x__
+extern struct versym libdl_so_2[];
+extern struct classinfo libdl_so_2_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libdl_so_2[];
+extern struct classinfo libdl_so_2_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libdl_so_2[];
+extern struct classinfo libdl_so_2_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libdl_so_2[];
+extern struct classinfo libdl_so_2_classinfo[];
+#endif
+#if __i386__
 extern struct versym libdl_so_2[];
 extern struct classinfo libdl_so_2_classinfo[];
 #endif
@@ -123,19 +119,7 @@ extern struct versym libGL_so_1[];
 extern struct classinfo libGL_so_1_classinfo[];
 extern struct versym libICE_so_6[];
 extern struct classinfo libICE_so_6_classinfo[];
-#if __i386__
-extern struct versym libm_so_6[];
-extern struct classinfo libm_so_6_classinfo[];
-#endif
-#if __powerpc__ && !__powerpc64__
-extern struct versym libm_so_6[];
-extern struct classinfo libm_so_6_classinfo[];
-#endif
-#if __powerpc64__
-extern struct versym libm_so_6[];
-extern struct classinfo libm_so_6_classinfo[];
-#endif
-#if __s390__ && !__s390x__
+#if __s390x__
 extern struct versym libm_so_6[];
 extern struct classinfo libm_so_6_classinfo[];
 #endif
@@ -143,7 +127,19 @@ extern struct classinfo libm_so_6_classinfo[];
 extern struct versym libm_so_6[];
 extern struct classinfo libm_so_6_classinfo[];
 #endif
-#if __s390x__
+#if __s390__ && !__s390x__
+extern struct versym libm_so_6[];
+extern struct classinfo libm_so_6_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libm_so_6[];
+extern struct classinfo libm_so_6_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libm_so_6[];
+extern struct classinfo libm_so_6_classinfo[];
+#endif
+#if __i386__
 extern struct versym libm_so_6[];
 extern struct classinfo libm_so_6_classinfo[];
 #endif
@@ -155,25 +151,7 @@ extern struct versym libncurses_so_5[];
 extern struct classinfo libncurses_so_5_classinfo[];
 extern struct versym libpam_so_0[];
 extern struct classinfo libpam_so_0_classinfo[];
-extern struct versym libpthread_so_0[];
-extern struct classinfo libpthread_so_0_classinfo[];
-#if __i386__
-extern struct versym libpthread_so_0[];
-extern struct classinfo libpthread_so_0_classinfo[];
-#endif
-#if __ia64__
-extern struct versym libpthread_so_0[];
-extern struct classinfo libpthread_so_0_classinfo[];
-#endif
-#if __powerpc__ && !__powerpc64__
-extern struct versym libpthread_so_0[];
-extern struct classinfo libpthread_so_0_classinfo[];
-#endif
-#if __powerpc64__
-extern struct versym libpthread_so_0[];
-extern struct classinfo libpthread_so_0_classinfo[];
-#endif
-#if __s390__ && !__s390x__
+#if __s390x__
 extern struct versym libpthread_so_0[];
 extern struct classinfo libpthread_so_0_classinfo[];
 #endif
@@ -181,14 +159,28 @@ extern struct classinfo libpthread_so_0_classinfo[];
 extern struct versym libpthread_so_0[];
 extern struct classinfo libpthread_so_0_classinfo[];
 #endif
-#if __s390x__
+#if __s390__ && !__s390x__
+extern struct versym libpthread_so_0[];
+extern struct classinfo libpthread_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libpthread_so_0[];
+extern struct classinfo libpthread_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libpthread_so_0[];
+extern struct classinfo libpthread_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libpthread_so_0[];
+extern struct classinfo libpthread_so_0_classinfo[];
+#endif
+#if __i386__
 extern struct versym libpthread_so_0[];
 extern struct classinfo libpthread_so_0_classinfo[];
 #endif
 extern struct versym libSM_so_6[];
 extern struct classinfo libSM_so_6_classinfo[];
-extern struct versym libstdcxx_so_5[];
-extern struct classinfo libstdcxx_so_5_classinfo[];
 #if __i386__
 extern struct versym libstdcxx_so_5[];
 extern struct classinfo libstdcxx_so_5_classinfo[];
