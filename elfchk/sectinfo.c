@@ -74,7 +74,7 @@ struct SectionInfo SectionInfo[] = {
 	{".opd",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc64__ */
 #if __ia64__
-	{".opd",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+	{".opd",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 #endif /* __ia64__ */
 #if __i386__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
