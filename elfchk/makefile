@@ -13,17 +13,17 @@ $(LIB): $(OBJS)
 test: test.c $(LIB)
 	cc -o test $(CFLAGS) test.c $(LIB)
 
-dynsyms.c: mkfunclist
-	mkfunclist >dynsyms.c
+dynsyms.c: ./mkfunclist
+	./mkfunclist >dynsyms.c
 
-dyntags.c: mkdyntags
-	mkdyntags >dyntags.c
+dyntags.c: ./mkdyntags
+	./mkdyntags >dyntags.c
 
-dtneeded.c: mkdtneededlist
-	mkdtneededlist >dtneeded.c
+dtneeded.c: ./mkdtneededlist
+	./mkdtneededlist >dtneeded.c
 
-sectinfo.c: mksectinfo
-	mksectinfo >sectinfo.c
+sectinfo.c: ./mksectinfo
+	./mksectinfo >sectinfo.c
 
 clean:
 	rm -f $(OBJS) $(GENSRCS) $(LIB)
