@@ -9,6 +9,22 @@ int architecture=2;
 int architecture=3;
 #define __found_arch__
 #endif
+#ifdef __arm__
+int architecture=4;
+#define __found_arch__
+#endif
+#ifdef __mc68000__
+int architecture=5;
+#define __found_arch__
+#endif
+#ifdef __powerpc__
+int architecture=6;
+#define __found_arch__
+#endif
+#ifdef __alpha__
+int architecture=7;
+#define __found_arch__
+#endif
 #ifndef __found_arch__
 #error "Unable to identify architecture"
 #endif
@@ -29,6 +45,7 @@ tcnt+=GL_gl_h();
 tcnt+=GL_glx_h();
 tcnt+=X11_ICE_ICElib_h();
 tcnt+=X11_SM_SMlib_h();
+tcnt+=X11_X_h();
 tcnt+=X11_Xcms_h();
 tcnt+=X11_Xlib_h();
 tcnt+=X11_Xutil_h();
@@ -45,6 +62,7 @@ tcnt+=setjmp_h();
 tcnt+=signal_h();
 tcnt+=stdlib_h();
 tcnt+=sys_socket_h();
+tcnt+=sys_types_h();
 tcnt+=sys_wait_h();
 tcnt+=time_h();
 tcnt+=unistd_h();

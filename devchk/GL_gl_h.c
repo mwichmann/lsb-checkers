@@ -11,102 +11,102 @@ int GL_gl_h()
 {
 int cnt=0;
 #ifdef __i386__
-CheckTypeSize(GLenum,4,6424)
+CheckTypeSize(GLenum,4,8143)
 #elif __ia64__
-CheckTypeSize(GLenum,4,6424)
+CheckTypeSize(GLenum,4,8143)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6424,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8143,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLboolean,1,6425)
+CheckTypeSize(GLboolean,1,8144)
 #elif __ia64__
-CheckTypeSize(GLboolean,1,6425)
+CheckTypeSize(GLboolean,1,8144)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6425,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8144,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLbitfield,4,6426)
+CheckTypeSize(GLbitfield,4,8145)
 #elif __ia64__
-CheckTypeSize(GLbitfield,4,6426)
+CheckTypeSize(GLbitfield,4,8145)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6426,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8145,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLbyte,1,6428)
+CheckTypeSize(GLbyte,1,8147)
 #elif __ia64__
-CheckTypeSize(GLbyte,1,6428)
+CheckTypeSize(GLbyte,1,8147)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6428,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8147,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLshort,2,6429)
+CheckTypeSize(GLshort,2,8148)
 #elif __ia64__
-CheckTypeSize(GLshort,2,6429)
+CheckTypeSize(GLshort,2,8148)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6429,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8148,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLint,4,6430)
+CheckTypeSize(GLint,4,8149)
 #elif __ia64__
-CheckTypeSize(GLint,4,6430)
+CheckTypeSize(GLint,4,8149)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6430,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8149,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLubyte,1,6431)
+CheckTypeSize(GLubyte,1,8150)
 #elif __ia64__
-CheckTypeSize(GLubyte,1,6431)
+CheckTypeSize(GLubyte,1,8150)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6431,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8150,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLushort,2,6432)
+CheckTypeSize(GLushort,2,8151)
 #elif __ia64__
-CheckTypeSize(GLushort,2,6432)
+CheckTypeSize(GLushort,2,8151)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6432,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8151,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLuint,4,6433)
+CheckTypeSize(GLuint,4,8152)
 #elif __ia64__
-CheckTypeSize(GLuint,4,6433)
+CheckTypeSize(GLuint,4,8152)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6433,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8152,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLsizei,4,6434)
+CheckTypeSize(GLsizei,4,8153)
 #elif __ia64__
-CheckTypeSize(GLsizei,4,6434)
+CheckTypeSize(GLsizei,4,8153)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6434,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8153,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLfloat,4,6435)
+CheckTypeSize(GLfloat,4,8154)
 #elif __ia64__
-CheckTypeSize(GLfloat,4,6435)
+CheckTypeSize(GLfloat,4,8154)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6435,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8154,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLclampf,4,6436)
+CheckTypeSize(GLclampf,4,8155)
 #elif __ia64__
-CheckTypeSize(GLclampf,4,6436)
+CheckTypeSize(GLclampf,4,8155)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6436,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8155,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLdouble,8,6437)
+CheckTypeSize(GLdouble,8,8156)
 #elif __ia64__
-CheckTypeSize(GLdouble,8,6437)
+CheckTypeSize(GLdouble,8,8156)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6437,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8156,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GLclampd,8,6438)
+CheckTypeSize(GLclampd,8,8157)
 #elif __ia64__
-CheckTypeSize(GLclampd,8,6438)
+CheckTypeSize(GLclampd,8,8157)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6438,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8157,0);
 #endif
 printf("%d tests in GL/gl.h\n",cnt);
 return cnt;

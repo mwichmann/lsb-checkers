@@ -18,11 +18,11 @@ CheckTypeSize(wctype_t,8,7024)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7024,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(wctrans_t,4,7026)
+CheckTypeSize(wctrans_t,4,9199)
 #elif __ia64__
-CheckTypeSize(wctrans_t,8,7026)
+CheckTypeSize(wctrans_t,8,9199)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7026,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9199,0);
 #endif
 printf("%d tests in wctype.h\n",cnt);
 return cnt;

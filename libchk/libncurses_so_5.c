@@ -134,7 +134,6 @@ struct versym libncurses_so_5[] = {
 	{"mvwvline",""},
 	{"napms",""},
 	{"newpad",""},
-	{"newscr",""},
 	{"newterm",""},
 	{"newwin",""},
 	{"nl",""},
