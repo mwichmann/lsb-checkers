@@ -7,10 +7,11 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname FROM Interface,Library,LibInt ";
-$select.= "WHERE Interface.Iid=LibInt.LIint ";
-$select.= "AND LibInt.LIlib=Library.Lid ";
-$select.= "AND Library.Lstd='Y' ";
+$select = "SELECT DISTINCT Iname FROM Interface,Library,LibGroup,LGInt ";
+$select.= "WHERE Interface.Iid=LGInt.LGIint ";
+$select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
+$select.= "AND LibGroup.LGlib=Library.Lid ";
+$select.= "AND Library.Lstd='Yes' ";
 $select.= "ORDER BY Iname ";
 
 #print $select;

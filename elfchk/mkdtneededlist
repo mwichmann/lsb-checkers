@@ -8,7 +8,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
 $select = "SELECT DISTINCT Lrunname FROM Library ";
-$select.= "WHERE Library.Lstd='Y' ";
+$select.= "WHERE Library.Lstd='Yes' ";
 $select.= "ORDER BY Lrunname ";
 
 #print $select;
