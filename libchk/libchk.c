@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.33 $
+ * This is $Revision: 1.34 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.34  2004/04/21 12:48:26  anderson
+ * Add -M modulename
+ *
  * Revision 1.33  2004/04/20 20:10:02  anderson
  * Restructure things so that libs belong to a specification module. Currently,
  * the code checkes everything, which is that same as the p[revious behavior.
@@ -120,6 +123,7 @@
 #include <unistd.h>
 #include <limits.h>
 #include <stdio.h>
+#include <getopt.h>
 #include <libgen.h>
 #include <string.h>
 #include <stdlib.h>
@@ -146,13 +150,19 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.33 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.34 $";
 
-/* Some debugging bits which are useful to maintainers,
+/*
+ * Some debugging bits which are useful to maintainers,
  * but probably not others
  */
 
 int libchk_debug=0;
+
+/*
+ * What module to check against. - NULL means check all
+ */
+char *module = NULL;
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -442,7 +452,8 @@ void check_libs(struct tetj_handle *journal)
 {
 	int	i=0;
 	do {
-		check_lib(modlibs[i].runname, modlibs[i].symbols,
+		if( module && (strcmp(module,modlibs[i].modname)==0) )
+			check_lib(modlibs[i].runname, modlibs[i].symbols,
 				modlibs[i].classinfo, journal);
 	} while( modlibs[++i].modname );
 
@@ -501,6 +512,7 @@ void init_library_table(char *filename)
 
 int main(int argc, char *argv[])
 {
+  signed char c;
   struct tetj_handle *journal;
   char *ptr,tmp_string[TMP_STRING_SIZE+1];
   
@@ -508,15 +520,34 @@ int main(int argc, char *argv[])
 	  libchk_debug=strtod(ptr,NULL);
   }
 
+  /* Parse options */
+  while(1) {
+      c=getopt(argc,argv,"M:");
+      if( c == -1 )
+        break;
+      switch(c) {
+      case 'M':
+	module=optarg;
+	printf("Only checking libraries in module %s\n", module);
+	for(ptr=module;*ptr;ptr++)
+		if(*ptr == '-') *ptr='_'; 
+        break;
+      default:
+        printf ("?? getopt returned character code 0%o ??\n", c);
+      }
+  }
+
 #ifndef _CXXABICHK_
-	if (argc!=2)
+	if (argc<=optind)
 	{
 		fprintf(stderr, 
 					 "Need to supply file containing lookup map of shared libraries\n");
 		exit(1);
 	}
-	init_library_table(argv[1]);
+	init_library_table(argv[optind]);
 #endif
+
+
 
   if (tetj_start_journal("journal.libchk", &journal, "libchk")!=0)
   {
@@ -543,4 +574,4 @@ int main(int argc, char *argv[])
 
   exit(0);
 }
-
+  

@@ -13,6 +13,6 @@ ldd $START_FROM_DIR/dummy_link | sed -e 's/[[:space:]]\+/ /g'  -e 's/^ //' -e 's
 /' > /tmp/lsblibchk.$$
                                                                                    
 
-$START_FROM_DIR/libchk /tmp/lsblibchk.$$
+$START_FROM_DIR/libchk $* /tmp/lsblibchk.$$
 
 rm /tmp/lsblibchk.$$
