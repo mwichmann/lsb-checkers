@@ -10,8 +10,7 @@
 int signal_h()
 {
 int cnt=0;
-CheckTypeSize(__sighandler_t,4)
-CheckTypeSize(sigset_t,128)
+CheckTypeSize(__sighandler_t,0)
 printf("%d tests in signal.h\n",cnt);
 return cnt;
 }

@@ -10,13 +10,13 @@
 int GL_glx_h()
 {
 int cnt=0;
-CheckTypeSize(GLXFBConfig,4)
-CheckTypeSize(GLXContext,4)
-CheckTypeSize(GLXWindow,4)
-CheckTypeSize(GLXPbuffer,4)
-CheckTypeSize(GLXDrawable,4)
-CheckTypeSize(GLXPixmap,4)
-CheckTypeSize(GLXContextID,4)
+CheckTypeSize(GLXFBConfig,0)
+CheckTypeSize(GLXContext,0)
+CheckTypeSize(GLXWindow,0)
+CheckTypeSize(GLXPbuffer,0)
+CheckTypeSize(GLXDrawable,0)
+CheckTypeSize(GLXPixmap,0)
+CheckTypeSize(GLXContextID,0)
 printf("%d tests in GL/glx.h\n",cnt);
 return cnt;
 }

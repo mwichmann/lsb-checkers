@@ -2,34 +2,24 @@ OBJS = hdrchk.o \
 	GL_gl_h.o \
 	GL_glx_h.o \
 	X11_ICE_ICElib_h.o \
-	X11_ICE_ICEutil_h.o \
 	X11_SM_SMlib_h.o \
 	X11_Xcms_h.o \
 	X11_Xlib_h.o \
 	X11_Xutil_h.o \
 	curses_h.o \
-	dirent_h.o \
 	ftw_h.o \
-	glob_h.o \
-	grp_h.o \
 	iconv_h.o \
-	locale_h.o \
+	inttypes_h.o \
 	nl_types_h.o \
-	pwd_h.o \
-	regex_h.o \
 	search_h.o \
-	semaphore_h.o \
 	setjmp_h.o \
 	signal_h.o \
-	stdio_h.o \
 	stdlib_h.o \
 	sys_socket_h.o \
 	sys_types_h.o \
 	sys_wait_h.o \
 	time_h.o \
-	wchar_h.o \
-	wctype_h.o \
-	wordexp_h.o 
+	wctype_h.o 
 
 all: hdrchk
 
