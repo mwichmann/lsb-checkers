@@ -482,6 +482,10 @@ dumpbytes(ptr,fdeimage.length);
 			                (unsigned long)fdeimage.CIE_pointer);
 		}
 
+	/*
+	 * These really depend on the FDE encoding as specified in
+	 * the CIE Augmentation data
+	 */
         fdeimage.initial_location = *(long **)ptr;
         ptr += sizeof(long);
         used += sizeof(long);
