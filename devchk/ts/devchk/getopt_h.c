@@ -78,6 +78,13 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);
 Msg("Find size of option (10000)\n");
 #endif
 
+#if __no_sym__
+CheckTypeSize(const option,, 10591, )
+#endif
+
+#if __no_sym__
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

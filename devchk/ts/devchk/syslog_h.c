@@ -371,6 +371,26 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef LOG_PRIMASK
+	CompareConstant(LOG_PRIMASK,0x07,5118,architecture)
+#else
+Msg( "Error: Constant not found: LOG_PRIMASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LOG_FACMASK
+	CompareConstant(LOG_FACMASK,0x03f8,5121,architecture)
+#else
+Msg( "Error: Constant not found: LOG_FACMASK\n");
+cnt++;
+#endif
+
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
