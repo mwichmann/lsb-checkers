@@ -119,12 +119,10 @@ CheckOffset(union des_block,key,0,2,32024)
 CheckOffset(union des_block,c,0,2,32025)
 #elif __s390__
 CheckTypeSize(union des_block,8, 9888, 10)
-Msg("Missing member data for des_block on S390\n");
 CheckOffset(union des_block,key,0,10,32024)
 CheckOffset(union des_block,c,0,10,32025)
 #elif __ia64__
 CheckTypeSize(union des_block,8, 9888, 3)
-Msg("Missing member data for des_block on IA64\n");
 CheckOffset(union des_block,key,0,3,32024)
 CheckOffset(union des_block,c,0,3,32025)
 #else
