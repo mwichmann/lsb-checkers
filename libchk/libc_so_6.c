@@ -5015,7 +5015,7 @@ struct versym libc_so_6[] = {
 	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
+	{"getgrouplist","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
@@ -9153,7 +9153,7 @@ struct versym libc_so_6[] = {
 	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
+	{"posix_openpt","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
