@@ -12875,48 +12875,9 @@ struct versym libstdcxx_so_6[] = {
 #if __powerpc64__
 	{"asinl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"atan2l","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"atan2l","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"atan2l","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"atan2l","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __powerpc64__
 	{"atanl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
 #endif
-#if __powerpc64__
-	{"ceill","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"coshl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"coshl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"coshl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"coshl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"cosl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"cosl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"cosl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"cosl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __powerpc__ && !__powerpc64__
 	{"expl","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
@@ -12928,71 +12889,17 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if __s390x__
 	{"expl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"floorl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"fmodl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
 #endif
 #if __powerpc64__
 	{"frexpl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"hypotl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"hypotl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"hypotl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"hypotl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 #if __powerpc64__
 	{"ldexpl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"log10l","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"log10l","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"log10l","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"log10l","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"logl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"logl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"logl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"logl","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __powerpc64__
 	{"modfl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"powl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"powl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"powl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"powl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
 	{"sinhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __powerpc64__
@@ -13003,42 +12910,6 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if __s390x__
 	{"sinhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"sinl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"sinl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"sinl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"sinl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"sqrtl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"sqrtl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"sqrtl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"sqrtl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"tanhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"tanhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"tanhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"tanhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"tanl","GLIBCXX_3.4",0,"LSB-C++",0,1},
