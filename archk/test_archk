@@ -24,7 +24,7 @@ EXTRA=../tetj/libtetj.a
 printf "Running archk on $PROG..."
 JOURNAL_FILE=journal.archk.`basename $PROG`
 rm -f $JOURNAL_FILE
-./archk $PROG > /dev/null 2>&1
+./archk $PROG -L  $EXTRA > /dev/null 2>&1
 if [ $? -ne 0 ]; then
 	echo "Failed to run archk on $PROG"
 	exit 1
