@@ -4,8 +4,44 @@ struct versym libpthread_so_0[] = {
 #if __i386__
 	{"_pthread_cleanup_pop","GLIBC_2.0"},
 #endif
+#if __ia64__
+	{"_pthread_cleanup_pop","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_pthread_cleanup_pop","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"_pthread_cleanup_pop","GLIBC_2.2.5"},
+#endif
+#if __s390__ && !__s390x__
+	{"_pthread_cleanup_pop","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"_pthread_cleanup_pop","GLIBC_2.0"},
+#endif
+#if __s390x__
+	{"_pthread_cleanup_pop","GLIBC_2.2"},
+#endif
 #if __i386__
 	{"_pthread_cleanup_push","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"_pthread_cleanup_push","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_pthread_cleanup_push","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"_pthread_cleanup_push","GLIBC_2.2.5"},
+#endif
+#if __s390__ && !__s390x__
+	{"_pthread_cleanup_push","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"_pthread_cleanup_push","GLIBC_2.0"},
+#endif
+#if __s390x__
+	{"_pthread_cleanup_push","GLIBC_2.2"},
 #endif
 #if __i386__
 	{"pthread_atfork","GLIBC_2.0"},
