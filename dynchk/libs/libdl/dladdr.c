@@ -6,6 +6,7 @@
 static int(*funcptr) (const void * , Dl_info * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int dladdr (const void * arg0 , Dl_info * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -15,9 +16,10 @@ int dladdr (const void * arg0 , Dl_info * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "dladdr()");
 	validate_Rdaddress( arg0, "dladdr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "dladdr - arg0");
-	validate_Rdaddress( arg1, "dladdr - arg1");
+	validate_RWaddress( arg1, "dladdr - arg1");
 		validate_NULL_TYPETYPE(  arg1, "dladdr - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);
