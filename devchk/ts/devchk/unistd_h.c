@@ -144,16 +144,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _POSIX2_C_VERSION
-	CompareConstant(_POSIX2_C_VERSION,199209L,1920,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX2_C_VERSION\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX2_VERSION
 	CompareConstant(_POSIX2_VERSION,200112L,1921,architecture)
 #else
@@ -258,16 +248,6 @@ cnt++;
 	CompareConstant(_SC_CLK_TCK,2,3596,architecture)
 #else
 Msg( "Error: Constant not found: _SC_CLK_TCK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef _POSIX_ASYNCHRONOUS_IO
-	CompareConstant(_POSIX_ASYNCHRONOUS_IO,200112,4749,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_ASYNCHRONOUS_IO\n");
 cnt++;
 #endif
 
@@ -454,26 +434,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _POSIX_PRIORITY_SCHEDULING
-	CompareConstant(_POSIX_PRIORITY_SCHEDULING,200112,4769,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_PRIORITY_SCHEDULING\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef _POSIX_REALTIME_SIGNALS
-	CompareConstant(_POSIX_REALTIME_SIGNALS,200112,4770,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_REALTIME_SIGNALS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SEMAPHORES
 	CompareConstant(_POSIX_SEMAPHORES,200112,4771,architecture)
 #else
@@ -488,16 +448,6 @@ cnt++;
 	CompareConstant(_POSIX_SHARED_MEMORY_OBJECTS,200112,4772,architecture)
 #else
 Msg( "Error: Constant not found: _POSIX_SHARED_MEMORY_OBJECTS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef _POSIX_SYNCHRONIZED_IO
-	CompareConstant(_POSIX_SYNCHRONIZED_IO,200112,4773,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_SYNCHRONIZED_IO\n");
 cnt++;
 #endif
 
@@ -1704,16 +1654,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _SC_IPV6
-	CompareConstant(_SC_IPV6,1,5214,architecture)
-#else
-Msg( "Error: Constant not found: _SC_IPV6\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef _SC_LOGIN_NAME_MAX
 	CompareConstant(_SC_LOGIN_NAME_MAX,71,5215,architecture)
 #else
@@ -1728,16 +1668,6 @@ cnt++;
 	CompareConstant(_SC_MONOTONIC_CLOCK,149,5216,architecture)
 #else
 Msg( "Error: Constant not found: _SC_MONOTONIC_CLOCK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef _SC_RAW_SOCKETS
-	CompareConstant(_SC_RAW_SOCKETS,1,5218,architecture)
-#else
-Msg( "Error: Constant not found: _SC_RAW_SOCKETS\n");
 cnt++;
 #endif
 
@@ -1804,16 +1734,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _SC_SS_REPL_MAX
-	CompareConstant(_SC_SS_REPL_MAX,1,5225,architecture)
-#else
-Msg( "Error: Constant not found: _SC_SS_REPL_MAX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef _SC_SYMLOOP_MAX
 	CompareConstant(_SC_SYMLOOP_MAX,173,5226,architecture)
 #else
@@ -1874,16 +1794,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _SC_TRACE_EVENT_NAME_MAX
-	CompareConstant(_SC_TRACE_EVENT_NAME_MAX,1,5232,architecture)
-#else
-Msg( "Error: Constant not found: _SC_TRACE_EVENT_NAME_MAX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef _SC_TRACE_INHERIT
 	CompareConstant(_SC_TRACE_INHERIT,183,5233,architecture)
 #else
@@ -1904,36 +1814,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _SC_TRACE_NAME_MAX
-	CompareConstant(_SC_TRACE_NAME_MAX,1,5235,architecture)
-#else
-Msg( "Error: Constant not found: _SC_TRACE_NAME_MAX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef _SC_TRACE_SYS_MAX
-	CompareConstant(_SC_TRACE_SYS_MAX,1,5236,architecture)
-#else
-Msg( "Error: Constant not found: _SC_TRACE_SYS_MAX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef _SC_TRACE_USER_EVENT_MAX
-	CompareConstant(_SC_TRACE_USER_EVENT_MAX,1,5237,architecture)
-#else
-Msg( "Error: Constant not found: _SC_TRACE_USER_EVENT_MAX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef _SC_TTY_NAME_MAX
 	CompareConstant(_SC_TTY_NAME_MAX,72,5238,architecture)
 #else
@@ -1948,16 +1828,6 @@ cnt++;
 	CompareConstant(_SC_TYPED_MEMORY_OBJECTS,165,5239,architecture)
 #else
 Msg( "Error: Constant not found: _SC_TYPED_MEMORY_OBJECTS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef _SC_XOPEN_STREAMS
-	CompareConstant(_SC_XOPEN_STREAMS,1,5240,architecture)
-#else
-Msg( "Error: Constant not found: _SC_XOPEN_STREAMS\n");
 cnt++;
 #endif
 
