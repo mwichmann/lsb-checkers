@@ -1,6 +1,7 @@
-#include "limits.h"
-#include "stdlib.h"
-#include "string.h"
+#include <limits.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include "fhschk.h"
 
 #define FHS_PREFIX	0x01	/* Path is only a prefix */

@@ -1,3 +1,4 @@
+CFLAGS=-Wall
 OBJS = fhspaths.o mkabs.o
 LIB = libfhschk.a
 
