@@ -98,7 +98,6 @@ remove_initd /sbin/remove_initd
 renice /usr/bin/renice
 rm /bin/rm
 rmdir /bin/rmdir
-rsync /usr/bin/rsync
 sed /bin/sed
 sendmail /usr/sbin/sendmail
 sh /bin/sh
@@ -109,7 +108,6 @@ split /usr/bin/split
 strip /usr/bin/strip
 stty /usr/bin/stty
 su /bin/su
-sum /usr/bin/sum
 sync /bin/sync
 tail /usr/bin/tail
 tar /bin/tar
