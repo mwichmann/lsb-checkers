@@ -92,6 +92,30 @@ Msg( "Error: Constant not found: RLIM_SAVED_MAX\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct rlimit,8, 9120, 2)
+#elif __ia64__
+CheckTypeSize(struct rlimit,16, 9120, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9120,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct rlimit64,16, 9122, 2)
+#elif __ia64__
+CheckTypeSize(struct rlimit64,16, 9122, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9122,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct rusage,72, 9125, 2)
+#elif __ia64__
+CheckTypeSize(struct rusage,144, 9125, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9125,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -45,6 +45,14 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(int32_t,4, 6997, 2)
+#elif __ia64__
+CheckTypeSize(int32_t,4, 6997, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6997,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(size_t,4, 8969, 2)
 #elif __ia64__
 CheckTypeSize(size_t,8, 8969, 3)
@@ -122,6 +130,22 @@ CheckTypeSize(clock_t,4, 9164, 2)
 CheckTypeSize(clock_t,8, 9164, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9164,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(time_t,4, 9191, 2)
+#elif __ia64__
+CheckTypeSize(time_t,8, 9191, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9191,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(fd_set,128, 10133, 2)
+#elif __ia64__
+CheckTypeSize(fd_set,128, 10133, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10133,0);
 #endif
 
 #ifdef __i386__

@@ -2450,6 +2450,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8178,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(KeyCode,1, 8179, 2)
+#elif __ia64__
+CheckTypeSize(KeyCode,1, 8179, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8179,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(Drawable,4, 8727, 2)
 #elif __ia64__
 CheckTypeSize(Drawable,8, 8727, 3)

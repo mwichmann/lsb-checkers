@@ -36,6 +36,14 @@ CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
 #endif
 
+#ifdef __i386__
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2)
+#elif __ia64__
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8598,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

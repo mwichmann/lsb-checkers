@@ -75,6 +75,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8802,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(SmProp,16, 8237, 2)
+#elif __ia64__
+CheckTypeSize(SmProp,32, 8237, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8237,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(SmcCallbacks,32, 8259, 2)
+#elif __ia64__
+CheckTypeSize(SmcCallbacks,64, 8259, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8259,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(SmsNewClientProc,4, 8825, 2)
 #elif __ia64__
 CheckTypeSize(SmsNewClientProc,8, 8825, 3)

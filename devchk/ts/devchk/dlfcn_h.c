@@ -50,6 +50,14 @@ Msg( "Error: Constant not found: RTLD_LOCAL\n");
 cnt++;
 #endif
 
+#ifdef __ia64__
+CheckTypeSize(Dl_info,32, 10008, 3)
+#elif __i386__
+CheckTypeSize(Dl_info,16, 10008, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10008,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

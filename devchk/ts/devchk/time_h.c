@@ -43,6 +43,14 @@ Msg( "Error: Constant not found: TIMER_ABSTIME\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct tm,44, 7019, 2)
+#elif __ia64__
+CheckTypeSize(struct tm,56, 7019, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

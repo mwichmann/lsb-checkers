@@ -36,6 +36,14 @@ Msg( "Error: Constant not found: SEM_VALUE_MAX\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(sem_t,16, 6960, 2)
+#elif __ia64__
+CheckTypeSize(sem_t,32, 6960, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6960,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

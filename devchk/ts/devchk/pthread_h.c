@@ -130,11 +130,59 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9059,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(pthread_once_t,4, 9062, 2)
+#elif __ia64__
+CheckTypeSize(pthread_once_t,4, 9062, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9062,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(pthread_t,4, 9040, 2)
 #elif __ia64__
 CheckTypeSize(pthread_t,8, 9040, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9040,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(pthread_mutex_t,24, 9047, 2)
+#elif __ia64__
+CheckTypeSize(pthread_mutex_t,40, 9047, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9047,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 2)
+#elif __ia64__
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9049,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(pthread_attr_t,36, 9042, 2)
+#elif __ia64__
+CheckTypeSize(pthread_attr_t,56, 9042, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9042,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(pthread_cond_t,12, 9051, 2)
+#elif __ia64__
+CheckTypeSize(pthread_cond_t,24, 9051, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9051,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(pthread_condattr_t,4, 9053, 2)
+#elif __ia64__
+CheckTypeSize(pthread_condattr_t,4, 9053, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9053,0);
 #endif
 
 #ifdef TET_TEST

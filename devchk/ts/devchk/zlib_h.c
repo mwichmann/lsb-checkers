@@ -24,12 +24,16 @@ Msg("Checking data structures in zlib.h\n");
 
 #ifdef __i386__
 CheckTypeSize(z_streamp,4, 9882, 2)
+#elif __ia64__
+CheckTypeSize(z_streamp,8, 9882, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9882,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(gzFile,4, 9886, 2)
+#elif __ia64__
+CheckTypeSize(gzFile,8, 9886, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9886,0);
 #endif

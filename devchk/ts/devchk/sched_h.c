@@ -43,6 +43,14 @@ Msg( "Error: Constant not found: SCHED_RR\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct sched_param,4, 9045, 2)
+#elif __ia64__
+CheckTypeSize(struct sched_param,4, 9045, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9045,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

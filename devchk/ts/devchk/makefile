@@ -2,8 +2,10 @@ OBJS = hdrchk.o \
 	GL_gl_h.o \
 	GL_glx_h.o \
 	X11_ICE_ICElib_h.o \
+	X11_ICE_ICEutil_h.o \
 	X11_SM_SMlib_h.o \
 	X11_X_h.o \
+	X11_Xauth_h.o \
 	X11_Xcms_h.o \
 	X11_Xlib_h.o \
 	X11_Xutil_h.o \
@@ -13,12 +15,14 @@ OBJS = hdrchk.o \
 	assert_h.o \
 	cpio_h.o \
 	curses_h.o \
+	dirent_h.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
 	fnmatch_h.o \
 	ftw_h.o \
 	glob_h.o \
+	grp_h.o \
 	iconv_h.o \
 	inttypes_h.o \
 	limits_h.o \
@@ -28,12 +32,14 @@ OBJS = hdrchk.o \
 	netinet_in_h.o \
 	nl_types_h.o \
 	pthread_h.o \
+	pwd_h.o \
 	regex_h.o \
 	sched_h.o \
 	search_h.o \
 	semaphore_h.o \
 	setjmp_h.o \
 	signal_h.o \
+	stddef_h.o \
 	stdio_h.o \
 	stdlib_h.o \
 	sys_ioctl_h.o \
@@ -48,15 +54,19 @@ OBJS = hdrchk.o \
 	sys_socket_h.o \
 	sys_stat_h.o \
 	sys_time_h.o \
+	sys_times_h.o \
 	sys_types_h.o \
+	sys_utsname_h.o \
 	sys_wait_h.o \
 	tar_h.o \
 	termios_h.o \
 	time_h.o \
 	ulimit_h.o \
 	unistd_h.o \
+	utime_h.o \
 	wchar_h.o \
 	wctype_h.o \
+	wordexp_h.o \
 	zlib_h.o \
 	intrinsic.o 
 
@@ -68,7 +78,7 @@ else
 EXTRALIBS =
 endif
 
-CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -I/usr/X11R6/include 
+CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include 
 
 ifdef TET_ROOT
 CFLAGS += -DTET_TEST -I$(INCDIR)
