@@ -10,6 +10,7 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 $select = "SELECT DISTINCT * FROM Library ";
 $select.= "LEFT JOIN Architecture ON Aid=Larch ";
 $select.= "WHERE Library.Lstd='Yes' ";
+$select.= "AND Architecture.Aname!='None' ";
 $select.= "ORDER BY Lrunname ";
 
 #print $select;
