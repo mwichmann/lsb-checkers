@@ -104,7 +104,7 @@ struct versym libm_so_6_1[] = {
 	{"__fpclassifyf","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"__fpclassifyf","GLIBC_2.1",0,"LSB-Core",4,1},
+	{"__fpclassifyf","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"__fpclassifyl","GLIBC_2.1",0,"LSB-Core",4,1},
@@ -112,20 +112,8 @@ struct versym libm_so_6_1[] = {
 #if __ia64__
 	{"__fpclassifyl","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"__fpclassifyl","GLIBC_2.1",0,"LSB-Core",4,1},
-#endif
-#if __powerpc64__
-	{"__fpclassifyl","GLIBC_2.3",0,"LSB-Core",4,1},
-#endif
-#if __s390__ && !__s390x__
-	{"__fpclassifyl","GLIBC_2.1",0,"LSB-Core",4,1},
-#endif
 #if __x86_64__
 	{"__fpclassifyl","GLIBC_2.2.5",0,"LSB-Core",4,1},
-#endif
-#if __s390x__
-	{"__fpclassifyl","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"__signbit","GLIBC_2.1",0,"LSB-Core",4,1},
@@ -157,11 +145,14 @@ struct versym libm_so_6_1[] = {
 #if __ia64__
 	{"__signbitl","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"__signbitl","GLIBC_2.1",0,"LSB-Core",4,1},
+#if __s390__ && !__s390x__
+	{"__signbitl","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
-#if __powerpc64__
-	{"__signbitl","GLIBC_2.3",0,"LSB-Core",4,1},
+#if __x86_64__
+	{"__signbitl","GLIBC_2.2.5",0,"LSB-Core",4,1},
+#endif
+#if __s390x__
+	{"__signbitl","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"acos","GLIBC_2.0",0,"LSB-Core",8,1},
@@ -2570,7 +2561,7 @@ struct versym libm_so_6_1[] = {
 	{"exp2","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"exp2","GLIBC_2.0",0,"LSB-Core",8,1},
+	{"exp2","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __x86_64__
 	{"exp2","GLIBC_2.2.5",0,"LSB-Core",8,1},
@@ -2591,7 +2582,7 @@ struct versym libm_so_6_1[] = {
 	{"exp2f","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"exp2f","GLIBC_2.0",0,"LSB-Core",4,1},
+	{"exp2f","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
 	{"exp2f","GLIBC_2.2.5",0,"LSB-Core",4,1},
@@ -4373,7 +4364,7 @@ struct versym libm_so_6_1[] = {
 	{"log2","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
-	{"log2","GLIBC_2.2.5",0,"LSB-Core",8,1},
+	{"log2","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
 	{"log2","GLIBC_2.1",0,"LSB-Core",8,1},
