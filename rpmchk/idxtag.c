@@ -913,21 +913,25 @@ for(i=0;i<hcount;i++) {
 void
 checkRpmIdxREQUIRENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	i, hoffset, hcount;
+int	i, d, hoffset, hcount;
 char	*name;
 
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
 for(i=0;i<hcount;i++) {
-	if( strcmp(name,"lsb") == 0 ) 
-		lsbdepidx=i;
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Required Name: %s\n", name );
 	if( strcmp(name,"rpmlib(PayloadFilesHavePrefix)") == 0 ) 
 		hasPayloadFilesHavePrefix=1;
 	if( strcmp(name,"rpmlib(CompressedFileNames)") == 0 ) 
 		hasCompressedFileNames=1;
-	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
-		fprintf(stderr,"Required Name: %s\n", name );
+	for(d=0;d<numdeps;d++) {
+		if( strcmp(validdeps[d],name) == 0 )  {
+			lsbdepidx=i;
+			break;
+			}
+		}
 	name+=strlen(name)+1;
 	}
 

@@ -25,6 +25,24 @@ char *architecture =
 char *validos = "linux";
 char *validdepver = "2.0";
 
+char *validdeps[] = {
+#if defined(__i386__)
+	"lsb-core-ia32",
+	"lsb-graphics-ia32",
+#elif defined(__ia64__)
+	"lsb-core-ia64",
+	"lsb-graphics-ia64",
+#elif defined(__x86_64__)
+	"lsb-core-amd64",
+	"lsb-graphics-amd64",
+#elif defined(__powerpc__)
+	"lsb-core-ppc",
+	"lsb-graphics-ppc",
+#endif
+	};
+
+int numdeps = sizeof(validdeps)/sizeof(char *);
+
 char *pkgname;
 int  lsbdepidx=-1;
 
