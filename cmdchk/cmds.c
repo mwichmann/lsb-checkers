@@ -75,6 +75,7 @@ check_cmd("lp","/usr/bin/lp",journal);
 check_cmd("lpr","/usr/bin/lpr",journal);
 check_cmd("ls","/bin/ls",journal);
 check_cmd("lsb_release","/bin/lsb_release",journal);
+check_cmd("lsbinstall","/usr/lib/lsb/lsbinstall",journal);
 check_cmd("m4","/usr/bin/m4",journal);
 check_cmd("mailx","/usr/bin/mailx",journal);
 check_cmd("make","/usr/bin/make",journal);
