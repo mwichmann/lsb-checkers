@@ -20,9 +20,6 @@
 	Log("Purpose: Compare Constant "#const" has value  %d\n", value); \
 	if( const != value ) {\
 		Msg(#const " is %d instead of expected %d\n", const, value); \
-		/* Msg(#const " is %f instead of expected %f\n", const, value); \
-		Msg(#const " is %g instead of expected %g\n", const, value); \
-		Msg("UPDATE Constants SET Cvalue=%d WHERE Cname='" #const "';\n", const); */ \
 		Msg("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES(%d," #cid ",%d);\n", aid, const);  \
 		HDRCHKTEST_FAIL \
 	} \
@@ -33,10 +30,49 @@
 #define CompareLongConstant(const,value,cid,aid) \
 	cnt++; \
 	Log("subtest %d\n", cnt); \
-	Log("Purpose: Compare Constant "#const" has value  %d\n", value); \
+	Log("Purpose: Compare Constant "#const" has value  %ld\n", value); \
 	if( (long)const != value ) {\
 		Msg(#const " is %ld instead of expected %ld\n", const, value); \
-		Msg("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES(%d," #cid ",%d);\n", aid, const);  \
+		Msg("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES(%d," #cid ",%ld);\n", aid, const);  \
+		HDRCHKTEST_FAIL \
+	} \
+	else { \
+		HDRCHKTEST_PASS \
+	} 
+
+#define CompareFloatConstant(const,value,cid,aid) \
+	cnt++; \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Compare Constant "#const" has value  %f\n", value); \
+	if( (float)const != value ) {\
+		Msg(#const " is %f instead of expected %f\n", const, value); \
+		Msg("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES(%d," #cid ",%f);\n", aid, const);  \
+		HDRCHKTEST_FAIL \
+	} \
+	else { \
+		HDRCHKTEST_PASS \
+	} 
+
+#define CompareDoubleConstant(const,value,cid,aid) \
+	cnt++; \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Compare Constant "#const" has value  %a\n", value); \
+	if( (double)const != value ) {\
+		Msg(#const " is %a instead of expected %a\n", const, value); \
+		Msg("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES(%d," #cid ",%a);\n", aid, const);  \
+		HDRCHKTEST_FAIL \
+	} \
+	else { \
+		HDRCHKTEST_PASS \
+	} 
+
+#define CompareLongDoubleConstant(const,value,cid,aid) \
+	cnt++; \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Compare Constant "#const" has value  %La\n", value); \
+	if( (long double)const != value ) {\
+		Msg(#const " is %La instead of expected %La\n", const, value); \
+		Msg("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES(%d," #cid ",%La);\n", aid, const);  \
 		HDRCHKTEST_FAIL \
 	} \
 	else { \
