@@ -96,9 +96,38 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
             tetj_result(journal, tetj_activity_count, tetj_tp_count, 
                         TETJ_FAIL);
             tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-            continue;
           }
         }
+
+	/*
+	 * Check to see if the symbol has been deprecated. If so, issue a
+	 * warning.
+	 */
+	if( DynSyms[j].deprecated ) {
+            snprintf(tmp_string, TMP_STRING_LENGTH,
+                     "Symbol %s has been deprecated",
+                     DynSyms[j].name);
+            printf("%s\n", tmp_string);
+            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
+                               0, 0, tmp_string);
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, 
+                        TETJ_FAIL);
+            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+          }
+	/*
+	 * Check to see if the symbol is "ioctl". If so, issue a special 
+	 * warning.
+	 */
+	if( strcmp( DynSyms[j].name, "ioctl" ) == 0 ) {
+            snprintf(tmp_string, TMP_STRING_LENGTH,
+                     "Unable to determine if parameters to ioctl() are used in accordance with the LSB. ");
+            printf("%s\n", tmp_string);
+            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
+                               0, 0, tmp_string);
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, 
+                        TETJ_FAIL);
+            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+          }
       }
     }
 
