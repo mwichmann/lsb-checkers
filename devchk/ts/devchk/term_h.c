@@ -30,6 +30,8 @@ Msg("Checking data structures in term.h\n");
 CheckTypeSize(TERMINAL,0, 10846, 6)
 #elif __i386__
 CheckTypeSize(TERMINAL,0, 10846, 2)
+#elif __s390__ && !__s390x__
+CheckTypeSize(TERMINAL,0, 10846, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10846,0);
 Msg("Find size of TERMINAL (10846)\n");

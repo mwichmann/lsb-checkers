@@ -272,6 +272,13 @@ CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,6,40621)
 CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,6,40621)
 CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,6,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,12,6,40622)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _pthread_cleanup_buffer,0, 6931, 10)
+Msg("Missing member data for _pthread_cleanup_buffer on S390\n");
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,10,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,0,10,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,0,10,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,0,10,40622)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6931,0);
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
