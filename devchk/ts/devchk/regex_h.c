@@ -325,7 +325,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef RE_SYNTAX_POSIX_BASIC
-	CompareConstant(RE_SYNTAX_POSIX_BASIC,(_RE_SYNTAX_POSIX_COMMON|RE_BK_PLUS_QMRE_CONTEXT_INVALID_DUP|),1588,architecture)
+	CompareConstant(RE_SYNTAX_POSIX_BASIC,(_RE_SYNTAX_POSIX_COMMON|RE_BK_PLUS_QM),1588,architecture)
 #else
 Msg( "Error: Constant not found: RE_SYNTAX_POSIX_BASIC\n");
 cnt++;
