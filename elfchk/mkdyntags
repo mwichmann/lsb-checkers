@@ -14,6 +14,7 @@ $select.= "ORDER BY DEname ";
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
+print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n";
 print "#include \"dynamic.h\"\n\n";
 

@@ -19,6 +19,7 @@ $select.= "ORDER BY Iname ";
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
+print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n";
 print "struct versym DynSyms[] = {\n";
 for(1..$sth->numrows) {
