@@ -6,11 +6,19 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
+ * This is $Revision: 1.6 $
+ *
+ * $Log: libchk.c,v $
+ * Revision 1.6  2001/07/30 20:10:19  cyeoh
+ * Add more version information printed
+ *
+ *
  */
 
 #include <unistd.h>
 #include <limits.h>
 #include <stdio.h>
+#include <libgen.h>
 #include "elfchk.h"
 
 char *libpaths[] = {
@@ -18,6 +26,10 @@ char *libpaths[] = {
 	"/usr/lib/%s",
 	"/usr/X11R6/lib/%s",
 	0 };
+
+/* Real CVS revision number so we can strings it from
+   the binary if necessary */
+static const char *libchk_revision = "$Revision: 1.6 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -173,7 +185,9 @@ check_lib(char *libname, struct versym entries[])
 
 int main(int argc, char *argv[])
 {
-  printf("%s " LSBVERSION "\n", argv[0]);
+  printf("%s built for Specification Version " LSBVERSION "\n", 
+         basename(argv[0]));
+  printf("Program Revision: 1.0\n\n");
   check_libs();
   exit(0);
 }
