@@ -9,9 +9,6 @@ void check_libs(struct tetj_handle *journal)
 #if __ia64__
 check_lib("/lib/ld-lsb-ia64.so.1",ld_lsb_ia64_so_1, journal);
 #endif
-#if __powerpc64__
-check_lib("/lib/ld-lsb-ppc64.so.1",ld_lsb_ppc64_so_1, journal);
-#endif
 #if __s390__
 check_lib("/lib/ld-lsb-s390.so.1",ld_lsb_s390_so_1, journal);
 #endif
@@ -23,6 +20,9 @@ check_lib("/lib/ld-lsb.so.1",ld_lsb_so_1, journal);
 #endif
 #if __powerpc__ && !__powerpc64__
 check_lib("/lib/ld-lsb.so.1",ld_lsb_so_1, journal);
+#endif
+#if __powerpc64__
+check_lib("/lib64/ld-lsb-ppc64.so.1",ld_lsb_ppc64_so_1, journal);
 #endif
 #if __i386__
 check_lib("libc.so.6",libc_so_6, journal);
