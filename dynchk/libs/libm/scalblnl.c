@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <math.h>
 #undef scalblnl
-static long double(*funcptr) (long double , long ) = 0;
+static long double(*funcptr) (long double , long int ) = 0;
 
 extern int __lsb_check_params;
-long double scalblnl (long double arg0 , long arg1 )
+long double scalblnl (long double arg0 , long int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
