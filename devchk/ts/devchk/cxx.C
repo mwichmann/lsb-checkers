@@ -362,19 +362,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10711,0);
 
 #if __i386__
 #define TYPE __gnu_cxx::stdio_filebuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,140,10600,2)
+CheckTypeSize(TYPE,136,10600,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE __gnu_cxx::stdio_filebuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,248,10600,3)
+CheckTypeSize(TYPE,240,10600,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE __gnu_cxx::stdio_filebuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,140,10600,6)
+CheckTypeSize(TYPE,136,10600,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE __gnu_cxx::stdio_filebuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,248,10600,9)
+CheckTypeSize(TYPE,240,10600,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE __gnu_cxx::stdio_filebuf<char, std::char_traits<char> >
@@ -382,7 +382,7 @@ CheckTypeSize(TYPE,140,10600,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE __gnu_cxx::stdio_filebuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,248,10600,11)
+CheckTypeSize(TYPE,240,10600,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE __gnu_cxx::stdio_filebuf<char, std::char_traits<char> >
@@ -394,19 +394,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10600,0);
 
 #if __i386__
 #define TYPE __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,156,10601,2)
+CheckTypeSize(TYPE,140,10601,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,256,10601,3)
+CheckTypeSize(TYPE,240,10601,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,156,10601,6)
+CheckTypeSize(TYPE,140,10601,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,256,10601,9)
+CheckTypeSize(TYPE,240,10601,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t> >
@@ -414,7 +414,7 @@ CheckTypeSize(TYPE,156,10601,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,256,10601,11)
+CheckTypeSize(TYPE,240,10601,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t> >
@@ -458,19 +458,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10625,0);
 
 #if __i386__
 #define TYPE std::ios_base::failure
-CheckTypeSize(TYPE,260,10622,2)
+CheckTypeSize(TYPE,8,10622,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::ios_base::failure
-CheckTypeSize(TYPE,264,10622,3)
+CheckTypeSize(TYPE,16,10622,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::ios_base::failure
-CheckTypeSize(TYPE,260,10622,6)
+CheckTypeSize(TYPE,8,10622,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::ios_base::failure
-CheckTypeSize(TYPE,264,10622,9)
+CheckTypeSize(TYPE,16,10622,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::ios_base::failure
@@ -478,7 +478,7 @@ CheckTypeSize(TYPE,260,10622,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::ios_base::failure
-CheckTypeSize(TYPE,264,10622,11)
+CheckTypeSize(TYPE,16,10622,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::ios_base::failure
@@ -714,19 +714,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10677,0);
 
 #if __i386__
 #define TYPE std::istrstream
-CheckTypeSize(TYPE,236,10693,2)
+CheckTypeSize(TYPE,188,10693,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::istrstream
-CheckTypeSize(TYPE,456,10693,3)
+CheckTypeSize(TYPE,368,10693,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::istrstream
-CheckTypeSize(TYPE,236,10693,6)
+CheckTypeSize(TYPE,188,10693,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::istrstream
-CheckTypeSize(TYPE,456,10693,9)
+CheckTypeSize(TYPE,368,10693,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::istrstream
@@ -734,7 +734,7 @@ CheckTypeSize(TYPE,236,10693,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::istrstream
-CheckTypeSize(TYPE,456,10693,11)
+CheckTypeSize(TYPE,368,10693,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::istrstream
@@ -778,19 +778,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10675,0);
 
 #if __i386__
 #define TYPE std::moneypunct<char, false>
-CheckTypeSize(TYPE,40,10639,2)
+CheckTypeSize(TYPE,12,10639,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::moneypunct<char, false>
-CheckTypeSize(TYPE,72,10639,3)
+CheckTypeSize(TYPE,24,10639,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::moneypunct<char, false>
-CheckTypeSize(TYPE,40,10639,6)
+CheckTypeSize(TYPE,12,10639,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::moneypunct<char, false>
-CheckTypeSize(TYPE,72,10639,9)
+CheckTypeSize(TYPE,24,10639,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::moneypunct<char, false>
@@ -798,7 +798,7 @@ CheckTypeSize(TYPE,40,10639,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::moneypunct<char, false>
-CheckTypeSize(TYPE,72,10639,11)
+CheckTypeSize(TYPE,24,10639,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::moneypunct<char, false>
@@ -810,19 +810,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10639,0);
 
 #if __i386__
 #define TYPE std::moneypunct<char, true>
-CheckTypeSize(TYPE,40,10638,2)
+CheckTypeSize(TYPE,12,10638,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::moneypunct<char, true>
-CheckTypeSize(TYPE,72,10638,3)
+CheckTypeSize(TYPE,24,10638,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::moneypunct<char, true>
-CheckTypeSize(TYPE,40,10638,6)
+CheckTypeSize(TYPE,12,10638,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::moneypunct<char, true>
-CheckTypeSize(TYPE,72,10638,9)
+CheckTypeSize(TYPE,24,10638,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::moneypunct<char, true>
@@ -830,7 +830,7 @@ CheckTypeSize(TYPE,40,10638,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::moneypunct<char, true>
-CheckTypeSize(TYPE,72,10638,11)
+CheckTypeSize(TYPE,24,10638,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::moneypunct<char, true>
@@ -842,19 +842,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10638,0);
 
 #if __i386__
 #define TYPE std::moneypunct<wchar_t, false>
-CheckTypeSize(TYPE,44,10641,2)
+CheckTypeSize(TYPE,12,10641,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::moneypunct<wchar_t, false>
-CheckTypeSize(TYPE,72,10641,3)
+CheckTypeSize(TYPE,24,10641,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::moneypunct<wchar_t, false>
-CheckTypeSize(TYPE,44,10641,6)
+CheckTypeSize(TYPE,12,10641,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::moneypunct<wchar_t, false>
-CheckTypeSize(TYPE,72,10641,9)
+CheckTypeSize(TYPE,24,10641,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::moneypunct<wchar_t, false>
@@ -862,7 +862,7 @@ CheckTypeSize(TYPE,44,10641,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::moneypunct<wchar_t, false>
-CheckTypeSize(TYPE,72,10641,11)
+CheckTypeSize(TYPE,24,10641,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::moneypunct<wchar_t, false>
@@ -874,19 +874,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10641,0);
 
 #if __i386__
 #define TYPE std::moneypunct<wchar_t, true>
-CheckTypeSize(TYPE,44,10640,2)
+CheckTypeSize(TYPE,12,10640,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::moneypunct<wchar_t, true>
-CheckTypeSize(TYPE,72,10640,3)
+CheckTypeSize(TYPE,24,10640,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::moneypunct<wchar_t, true>
-CheckTypeSize(TYPE,44,10640,6)
+CheckTypeSize(TYPE,12,10640,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::moneypunct<wchar_t, true>
-CheckTypeSize(TYPE,72,10640,9)
+CheckTypeSize(TYPE,24,10640,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::moneypunct<wchar_t, true>
@@ -894,7 +894,7 @@ CheckTypeSize(TYPE,44,10640,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::moneypunct<wchar_t, true>
-CheckTypeSize(TYPE,72,10640,11)
+CheckTypeSize(TYPE,24,10640,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::moneypunct<wchar_t, true>
@@ -906,19 +906,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10640,0);
 
 #if __i386__
 #define TYPE std::ostrstream
-CheckTypeSize(TYPE,232,10694,2)
+CheckTypeSize(TYPE,184,10694,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::ostrstream
-CheckTypeSize(TYPE,448,10694,3)
+CheckTypeSize(TYPE,360,10694,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::ostrstream
-CheckTypeSize(TYPE,232,10694,6)
+CheckTypeSize(TYPE,184,10694,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::ostrstream
-CheckTypeSize(TYPE,448,10694,9)
+CheckTypeSize(TYPE,360,10694,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::ostrstream
@@ -926,7 +926,7 @@ CheckTypeSize(TYPE,232,10694,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::ostrstream
-CheckTypeSize(TYPE,448,10694,11)
+CheckTypeSize(TYPE,360,10694,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::ostrstream
@@ -938,19 +938,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10694,0);
 
 #if __i386__
 #define TYPE std::__timepunct<char>
-CheckTypeSize(TYPE,204,10636,2)
+CheckTypeSize(TYPE,20,10636,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::__timepunct<char>
-CheckTypeSize(TYPE,408,10636,3)
+CheckTypeSize(TYPE,40,10636,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::__timepunct<char>
-CheckTypeSize(TYPE,204,10636,6)
+CheckTypeSize(TYPE,20,10636,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::__timepunct<char>
-CheckTypeSize(TYPE,408,10636,9)
+CheckTypeSize(TYPE,40,10636,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::__timepunct<char>
@@ -958,7 +958,7 @@ CheckTypeSize(TYPE,204,10636,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::__timepunct<char>
-CheckTypeSize(TYPE,408,10636,11)
+CheckTypeSize(TYPE,40,10636,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::__timepunct<char>
@@ -970,19 +970,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10636,0);
 
 #if __i386__
 #define TYPE std::__timepunct<wchar_t>
-CheckTypeSize(TYPE,204,10637,2)
+CheckTypeSize(TYPE,20,10637,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::__timepunct<wchar_t>
-CheckTypeSize(TYPE,408,10637,3)
+CheckTypeSize(TYPE,40,10637,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::__timepunct<wchar_t>
-CheckTypeSize(TYPE,204,10637,6)
+CheckTypeSize(TYPE,20,10637,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::__timepunct<wchar_t>
-CheckTypeSize(TYPE,408,10637,9)
+CheckTypeSize(TYPE,40,10637,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::__timepunct<wchar_t>
@@ -990,7 +990,7 @@ CheckTypeSize(TYPE,204,10637,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::__timepunct<wchar_t>
-CheckTypeSize(TYPE,408,10637,11)
+CheckTypeSize(TYPE,40,10637,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::__timepunct<wchar_t>
@@ -1098,19 +1098,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10676,0);
 
 #if __i386__
 #define TYPE std::ctype_byname<char>
-CheckTypeSize(TYPE,28,10628,2)
+CheckTypeSize(TYPE,544,10628,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::ctype_byname<char>
-CheckTypeSize(TYPE,56,10628,3)
+CheckTypeSize(TYPE,576,10628,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::ctype_byname<char>
-CheckTypeSize(TYPE,28,10628,6)
+CheckTypeSize(TYPE,544,10628,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::ctype_byname<char>
-CheckTypeSize(TYPE,56,10628,9)
+CheckTypeSize(TYPE,576,10628,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::ctype_byname<char>
@@ -1118,7 +1118,7 @@ CheckTypeSize(TYPE,28,10628,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::ctype_byname<char>
-CheckTypeSize(TYPE,56,10628,11)
+CheckTypeSize(TYPE,576,10628,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::ctype_byname<char>
@@ -1130,19 +1130,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10628,0);
 
 #if __i386__
 #define TYPE std::ctype_byname<wchar_t>
-CheckTypeSize(TYPE,12,10629,2)
+CheckTypeSize(TYPE,1264,10629,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::ctype_byname<wchar_t>
-CheckTypeSize(TYPE,24,10629,3)
+CheckTypeSize(TYPE,1344,10629,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::ctype_byname<wchar_t>
-CheckTypeSize(TYPE,12,10629,6)
+CheckTypeSize(TYPE,1264,10629,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::ctype_byname<wchar_t>
-CheckTypeSize(TYPE,24,10629,9)
+CheckTypeSize(TYPE,1344,10629,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::ctype_byname<wchar_t>
@@ -1150,7 +1150,7 @@ CheckTypeSize(TYPE,12,10629,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::ctype_byname<wchar_t>
-CheckTypeSize(TYPE,24,10629,11)
+CheckTypeSize(TYPE,1344,10629,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::ctype_byname<wchar_t>
@@ -1258,19 +1258,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10613,0);
 
 #if __i386__
 #define TYPE std::strstreambuf
-CheckTypeSize(TYPE,92,10692,2)
+CheckTypeSize(TYPE,44,10692,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::strstreambuf
-CheckTypeSize(TYPE,176,10692,3)
+CheckTypeSize(TYPE,88,10692,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::strstreambuf
-CheckTypeSize(TYPE,92,10692,6)
+CheckTypeSize(TYPE,44,10692,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::strstreambuf
-CheckTypeSize(TYPE,176,10692,9)
+CheckTypeSize(TYPE,88,10692,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::strstreambuf
@@ -1278,7 +1278,7 @@ CheckTypeSize(TYPE,92,10692,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::strstreambuf
-CheckTypeSize(TYPE,176,10692,11)
+CheckTypeSize(TYPE,88,10692,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::strstreambuf
@@ -1738,19 +1738,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10608,0);
 
 #if __i386__
 #define TYPE std::codecvt_byname<char, char, __mbstate_t>
-CheckTypeSize(TYPE,8,10656,2)
+CheckTypeSize(TYPE,12,10656,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::codecvt_byname<char, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10656,3)
+CheckTypeSize(TYPE,24,10656,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::codecvt_byname<char, char, __mbstate_t>
-CheckTypeSize(TYPE,8,10656,6)
+CheckTypeSize(TYPE,12,10656,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::codecvt_byname<char, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10656,9)
+CheckTypeSize(TYPE,24,10656,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::codecvt_byname<char, char, __mbstate_t>
@@ -1758,7 +1758,7 @@ CheckTypeSize(TYPE,8,10656,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::codecvt_byname<char, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10656,11)
+CheckTypeSize(TYPE,24,10656,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::codecvt_byname<char, char, __mbstate_t>
@@ -1770,19 +1770,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10656,0);
 
 #if __i386__
 #define TYPE std::codecvt_byname<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,8,10670,2)
+CheckTypeSize(TYPE,12,10670,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::codecvt_byname<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10670,3)
+CheckTypeSize(TYPE,24,10670,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::codecvt_byname<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,8,10670,6)
+CheckTypeSize(TYPE,12,10670,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::codecvt_byname<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10670,9)
+CheckTypeSize(TYPE,24,10670,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::codecvt_byname<wchar_t, char, __mbstate_t>
@@ -1790,7 +1790,7 @@ CheckTypeSize(TYPE,8,10670,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::codecvt_byname<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10670,11)
+CheckTypeSize(TYPE,24,10670,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::codecvt_byname<wchar_t, char, __mbstate_t>
@@ -1898,19 +1898,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10615,0);
 
 #if __i386__
 #define TYPE std::basic_streambuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,80,10690,2)
+CheckTypeSize(TYPE,32,10690,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_streambuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,152,10690,3)
+CheckTypeSize(TYPE,64,10690,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_streambuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,80,10690,6)
+CheckTypeSize(TYPE,32,10690,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_streambuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,152,10690,9)
+CheckTypeSize(TYPE,64,10690,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_streambuf<char, std::char_traits<char> >
@@ -1918,7 +1918,7 @@ CheckTypeSize(TYPE,80,10690,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_streambuf<char, std::char_traits<char> >
-CheckTypeSize(TYPE,152,10690,11)
+CheckTypeSize(TYPE,64,10690,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_streambuf<char, std::char_traits<char> >
@@ -1930,19 +1930,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10690,0);
 
 #if __i386__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,84,10691,2)
+CheckTypeSize(TYPE,32,10691,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,152,10691,3)
+CheckTypeSize(TYPE,64,10691,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,84,10691,6)
+CheckTypeSize(TYPE,32,10691,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,152,10691,9)
+CheckTypeSize(TYPE,64,10691,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
@@ -1950,7 +1950,7 @@ CheckTypeSize(TYPE,84,10691,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,152,10691,11)
+CheckTypeSize(TYPE,64,10691,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
@@ -1962,19 +1962,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10691,0);
 
 #if __i386__
 #define TYPE std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,84,10680,2)
+CheckTypeSize(TYPE,40,10680,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,160,10680,3)
+CheckTypeSize(TYPE,80,10680,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,84,10680,6)
+CheckTypeSize(TYPE,40,10680,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,160,10680,9)
+CheckTypeSize(TYPE,80,10680,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
@@ -1982,7 +1982,7 @@ CheckTypeSize(TYPE,84,10680,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,160,10680,11)
+CheckTypeSize(TYPE,80,10680,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >
@@ -1994,19 +1994,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10680,0);
 
 #if __i386__
 #define TYPE std::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,88,10684,2)
+CheckTypeSize(TYPE,40,10684,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,160,10684,3)
+CheckTypeSize(TYPE,80,10684,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,88,10684,6)
+CheckTypeSize(TYPE,40,10684,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,160,10684,9)
+CheckTypeSize(TYPE,80,10684,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
@@ -2014,7 +2014,7 @@ CheckTypeSize(TYPE,88,10684,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,160,10684,11)
+CheckTypeSize(TYPE,80,10684,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_stringbuf<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
@@ -2090,19 +2090,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10669,0);
 
 #if __i386__
 #define TYPE std::numpunct_byname<char>
-CheckTypeSize(TYPE,28,10648,2)
+CheckTypeSize(TYPE,12,10648,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::numpunct_byname<char>
-CheckTypeSize(TYPE,48,10648,3)
+CheckTypeSize(TYPE,24,10648,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::numpunct_byname<char>
-CheckTypeSize(TYPE,28,10648,6)
+CheckTypeSize(TYPE,12,10648,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::numpunct_byname<char>
-CheckTypeSize(TYPE,48,10648,9)
+CheckTypeSize(TYPE,24,10648,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::numpunct_byname<char>
@@ -2110,7 +2110,7 @@ CheckTypeSize(TYPE,28,10648,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::numpunct_byname<char>
-CheckTypeSize(TYPE,48,10648,11)
+CheckTypeSize(TYPE,24,10648,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::numpunct_byname<char>
@@ -2122,19 +2122,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10648,0);
 
 #if __i386__
 #define TYPE std::numpunct_byname<wchar_t>
-CheckTypeSize(TYPE,32,10662,2)
+CheckTypeSize(TYPE,12,10662,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::numpunct_byname<wchar_t>
-CheckTypeSize(TYPE,56,10662,3)
+CheckTypeSize(TYPE,24,10662,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::numpunct_byname<wchar_t>
-CheckTypeSize(TYPE,32,10662,6)
+CheckTypeSize(TYPE,12,10662,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::numpunct_byname<wchar_t>
-CheckTypeSize(TYPE,56,10662,9)
+CheckTypeSize(TYPE,24,10662,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::numpunct_byname<wchar_t>
@@ -2142,7 +2142,7 @@ CheckTypeSize(TYPE,32,10662,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::numpunct_byname<wchar_t>
-CheckTypeSize(TYPE,56,10662,11)
+CheckTypeSize(TYPE,24,10662,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::numpunct_byname<wchar_t>
@@ -2346,19 +2346,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10611,0);
 
 #if __i386__
 #define TYPE std::moneypunct_byname<char, false>
-CheckTypeSize(TYPE,44,10644,2)
+CheckTypeSize(TYPE,12,10644,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::moneypunct_byname<char, false>
-CheckTypeSize(TYPE,80,10644,3)
+CheckTypeSize(TYPE,24,10644,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::moneypunct_byname<char, false>
-CheckTypeSize(TYPE,44,10644,6)
+CheckTypeSize(TYPE,12,10644,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::moneypunct_byname<char, false>
-CheckTypeSize(TYPE,80,10644,9)
+CheckTypeSize(TYPE,24,10644,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::moneypunct_byname<char, false>
@@ -2366,7 +2366,7 @@ CheckTypeSize(TYPE,44,10644,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::moneypunct_byname<char, false>
-CheckTypeSize(TYPE,80,10644,11)
+CheckTypeSize(TYPE,24,10644,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::moneypunct_byname<char, false>
@@ -2378,19 +2378,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10644,0);
 
 #if __i386__
 #define TYPE std::moneypunct_byname<char, true>
-CheckTypeSize(TYPE,44,10645,2)
+CheckTypeSize(TYPE,12,10645,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::moneypunct_byname<char, true>
-CheckTypeSize(TYPE,80,10645,3)
+CheckTypeSize(TYPE,24,10645,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::moneypunct_byname<char, true>
-CheckTypeSize(TYPE,44,10645,6)
+CheckTypeSize(TYPE,12,10645,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::moneypunct_byname<char, true>
-CheckTypeSize(TYPE,80,10645,9)
+CheckTypeSize(TYPE,24,10645,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::moneypunct_byname<char, true>
@@ -2398,7 +2398,7 @@ CheckTypeSize(TYPE,44,10645,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::moneypunct_byname<char, true>
-CheckTypeSize(TYPE,80,10645,11)
+CheckTypeSize(TYPE,24,10645,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::moneypunct_byname<char, true>
@@ -2410,19 +2410,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10645,0);
 
 #if __i386__
 #define TYPE std::moneypunct_byname<wchar_t, false>
-CheckTypeSize(TYPE,48,10658,2)
+CheckTypeSize(TYPE,12,10658,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::moneypunct_byname<wchar_t, false>
-CheckTypeSize(TYPE,80,10658,3)
+CheckTypeSize(TYPE,24,10658,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::moneypunct_byname<wchar_t, false>
-CheckTypeSize(TYPE,48,10658,6)
+CheckTypeSize(TYPE,12,10658,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::moneypunct_byname<wchar_t, false>
-CheckTypeSize(TYPE,80,10658,9)
+CheckTypeSize(TYPE,24,10658,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::moneypunct_byname<wchar_t, false>
@@ -2430,7 +2430,7 @@ CheckTypeSize(TYPE,48,10658,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::moneypunct_byname<wchar_t, false>
-CheckTypeSize(TYPE,80,10658,11)
+CheckTypeSize(TYPE,24,10658,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::moneypunct_byname<wchar_t, false>
@@ -2442,19 +2442,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10658,0);
 
 #if __i386__
 #define TYPE std::moneypunct_byname<wchar_t, true>
-CheckTypeSize(TYPE,48,10659,2)
+CheckTypeSize(TYPE,12,10659,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::moneypunct_byname<wchar_t, true>
-CheckTypeSize(TYPE,80,10659,3)
+CheckTypeSize(TYPE,24,10659,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::moneypunct_byname<wchar_t, true>
-CheckTypeSize(TYPE,48,10659,6)
+CheckTypeSize(TYPE,12,10659,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::moneypunct_byname<wchar_t, true>
-CheckTypeSize(TYPE,80,10659,9)
+CheckTypeSize(TYPE,24,10659,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::moneypunct_byname<wchar_t, true>
@@ -2462,7 +2462,7 @@ CheckTypeSize(TYPE,48,10659,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::moneypunct_byname<wchar_t, true>
-CheckTypeSize(TYPE,80,10659,11)
+CheckTypeSize(TYPE,24,10659,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::moneypunct_byname<wchar_t, true>
@@ -2474,19 +2474,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10659,0);
 
 #if __i386__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,232,10683,2)
+CheckTypeSize(TYPE,188,10683,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,448,10683,3)
+CheckTypeSize(TYPE,368,10683,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,232,10683,6)
+CheckTypeSize(TYPE,188,10683,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,448,10683,9)
+CheckTypeSize(TYPE,368,10683,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
@@ -2494,7 +2494,7 @@ CheckTypeSize(TYPE,232,10683,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,448,10683,11)
+CheckTypeSize(TYPE,368,10683,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
@@ -2506,19 +2506,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10683,0);
 
 #if __i386__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,240,10687,2)
+CheckTypeSize(TYPE,192,10687,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,448,10687,3)
+CheckTypeSize(TYPE,368,10687,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,240,10687,6)
+CheckTypeSize(TYPE,192,10687,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,448,10687,9)
+CheckTypeSize(TYPE,368,10687,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
@@ -2526,7 +2526,7 @@ CheckTypeSize(TYPE,240,10687,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,448,10687,11)
+CheckTypeSize(TYPE,368,10687,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
@@ -2538,19 +2538,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10687,0);
 
 #if __i386__
 #define TYPE std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,228,10681,2)
+CheckTypeSize(TYPE,184,10681,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,440,10681,3)
+CheckTypeSize(TYPE,360,10681,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,228,10681,6)
+CheckTypeSize(TYPE,184,10681,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,440,10681,9)
+CheckTypeSize(TYPE,360,10681,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
@@ -2558,7 +2558,7 @@ CheckTypeSize(TYPE,228,10681,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,440,10681,11)
+CheckTypeSize(TYPE,360,10681,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >
@@ -2570,19 +2570,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10681,0);
 
 #if __i386__
 #define TYPE std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,236,10685,2)
+CheckTypeSize(TYPE,188,10685,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,440,10685,3)
+CheckTypeSize(TYPE,360,10685,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,236,10685,6)
+CheckTypeSize(TYPE,188,10685,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,440,10685,9)
+CheckTypeSize(TYPE,360,10685,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
@@ -2590,7 +2590,7 @@ CheckTypeSize(TYPE,236,10685,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,440,10685,11)
+CheckTypeSize(TYPE,360,10685,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
@@ -2602,19 +2602,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10685,0);
 
 #if __i386__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,224,10682,2)
+CheckTypeSize(TYPE,180,10682,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,432,10682,3)
+CheckTypeSize(TYPE,352,10682,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,224,10682,6)
+CheckTypeSize(TYPE,180,10682,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,432,10682,9)
+CheckTypeSize(TYPE,352,10682,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
@@ -2622,7 +2622,7 @@ CheckTypeSize(TYPE,224,10682,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,432,10682,11)
+CheckTypeSize(TYPE,352,10682,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
@@ -2634,19 +2634,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10682,0);
 
 #if __i386__
 #define TYPE std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,232,10686,2)
+CheckTypeSize(TYPE,184,10686,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,432,10686,3)
+CheckTypeSize(TYPE,352,10686,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,232,10686,6)
+CheckTypeSize(TYPE,184,10686,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,432,10686,9)
+CheckTypeSize(TYPE,352,10686,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
@@ -2654,7 +2654,7 @@ CheckTypeSize(TYPE,232,10686,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,432,10686,11)
+CheckTypeSize(TYPE,352,10686,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
@@ -2794,19 +2794,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10631,0);
 
 #if __i386__
 #define TYPE std::ctype<char>
-CheckTypeSize(TYPE,28,10598,2)
+CheckTypeSize(TYPE,544,10598,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::ctype<char>
-CheckTypeSize(TYPE,56,10598,3)
+CheckTypeSize(TYPE,576,10598,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::ctype<char>
-CheckTypeSize(TYPE,28,10598,6)
+CheckTypeSize(TYPE,544,10598,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::ctype<char>
-CheckTypeSize(TYPE,56,10598,9)
+CheckTypeSize(TYPE,576,10598,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::ctype<char>
@@ -2814,7 +2814,7 @@ CheckTypeSize(TYPE,28,10598,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::ctype<char>
-CheckTypeSize(TYPE,56,10598,11)
+CheckTypeSize(TYPE,576,10598,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::ctype<char>
@@ -2826,19 +2826,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10598,0);
 
 #if __i386__
 #define TYPE std::ctype<wchar_t>
-CheckTypeSize(TYPE,12,10599,2)
+CheckTypeSize(TYPE,1264,10599,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::ctype<wchar_t>
-CheckTypeSize(TYPE,24,10599,3)
+CheckTypeSize(TYPE,1344,10599,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::ctype<wchar_t>
-CheckTypeSize(TYPE,12,10599,6)
+CheckTypeSize(TYPE,1264,10599,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::ctype<wchar_t>
-CheckTypeSize(TYPE,24,10599,9)
+CheckTypeSize(TYPE,1344,10599,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::ctype<wchar_t>
@@ -2846,7 +2846,7 @@ CheckTypeSize(TYPE,12,10599,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::ctype<wchar_t>
-CheckTypeSize(TYPE,24,10599,11)
+CheckTypeSize(TYPE,1344,10599,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::ctype<wchar_t>
@@ -2858,19 +2858,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10599,0);
 
 #if __i386__
 #define TYPE std::codecvt<char, char, __mbstate_t>
-CheckTypeSize(TYPE,8,10596,2)
+CheckTypeSize(TYPE,12,10596,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::codecvt<char, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10596,3)
+CheckTypeSize(TYPE,24,10596,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::codecvt<char, char, __mbstate_t>
-CheckTypeSize(TYPE,8,10596,6)
+CheckTypeSize(TYPE,12,10596,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::codecvt<char, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10596,9)
+CheckTypeSize(TYPE,24,10596,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::codecvt<char, char, __mbstate_t>
@@ -2878,7 +2878,7 @@ CheckTypeSize(TYPE,8,10596,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::codecvt<char, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10596,11)
+CheckTypeSize(TYPE,24,10596,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::codecvt<char, char, __mbstate_t>
@@ -2890,19 +2890,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10596,0);
 
 #if __i386__
 #define TYPE std::codecvt<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,8,10597,2)
+CheckTypeSize(TYPE,12,10597,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::codecvt<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10597,3)
+CheckTypeSize(TYPE,24,10597,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::codecvt<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,8,10597,6)
+CheckTypeSize(TYPE,12,10597,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::codecvt<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10597,9)
+CheckTypeSize(TYPE,24,10597,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::codecvt<wchar_t, char, __mbstate_t>
@@ -2910,7 +2910,7 @@ CheckTypeSize(TYPE,8,10597,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::codecvt<wchar_t, char, __mbstate_t>
-CheckTypeSize(TYPE,16,10597,11)
+CheckTypeSize(TYPE,24,10597,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::codecvt<wchar_t, char, __mbstate_t>
@@ -3146,19 +3146,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10700,0);
 
 #if __i386__
 #define TYPE std::ios_base
-CheckTypeSize(TYPE,108,10621,2)
+CheckTypeSize(TYPE,112,10621,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::ios_base
-CheckTypeSize(TYPE,208,10621,3)
+CheckTypeSize(TYPE,216,10621,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::ios_base
-CheckTypeSize(TYPE,108,10621,6)
+CheckTypeSize(TYPE,112,10621,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::ios_base
-CheckTypeSize(TYPE,208,10621,9)
+CheckTypeSize(TYPE,216,10621,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::ios_base
@@ -3166,7 +3166,7 @@ CheckTypeSize(TYPE,108,10621,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::ios_base
-CheckTypeSize(TYPE,208,10621,11)
+CheckTypeSize(TYPE,216,10621,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::ios_base
@@ -3242,19 +3242,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10643,0);
 
 #if __i386__
 #define TYPE std::numpunct<char>
-CheckTypeSize(TYPE,24,10632,2)
+CheckTypeSize(TYPE,12,10632,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::numpunct<char>
-CheckTypeSize(TYPE,40,10632,3)
+CheckTypeSize(TYPE,24,10632,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::numpunct<char>
-CheckTypeSize(TYPE,24,10632,6)
+CheckTypeSize(TYPE,12,10632,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::numpunct<char>
-CheckTypeSize(TYPE,40,10632,9)
+CheckTypeSize(TYPE,24,10632,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::numpunct<char>
@@ -3262,7 +3262,7 @@ CheckTypeSize(TYPE,24,10632,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::numpunct<char>
-CheckTypeSize(TYPE,40,10632,11)
+CheckTypeSize(TYPE,24,10632,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::numpunct<char>
@@ -3274,19 +3274,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10632,0);
 
 #if __i386__
 #define TYPE std::numpunct<wchar_t>
-CheckTypeSize(TYPE,28,10633,2)
+CheckTypeSize(TYPE,12,10633,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::numpunct<wchar_t>
-CheckTypeSize(TYPE,48,10633,3)
+CheckTypeSize(TYPE,24,10633,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::numpunct<wchar_t>
-CheckTypeSize(TYPE,28,10633,6)
+CheckTypeSize(TYPE,12,10633,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::numpunct<wchar_t>
-CheckTypeSize(TYPE,48,10633,9)
+CheckTypeSize(TYPE,24,10633,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::numpunct<wchar_t>
@@ -3294,7 +3294,7 @@ CheckTypeSize(TYPE,28,10633,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::numpunct<wchar_t>
-CheckTypeSize(TYPE,48,10633,11)
+CheckTypeSize(TYPE,24,10633,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::numpunct<wchar_t>
@@ -3690,19 +3690,19 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10661,0);
 
 #if __i386__
 #define TYPE std::strstream
-CheckTypeSize(TYPE,240,10695,2)
+CheckTypeSize(TYPE,192,10695,2)
 #undef TYPE
 #elif __ia64__
 #define TYPE std::strstream
-CheckTypeSize(TYPE,464,10695,3)
+CheckTypeSize(TYPE,376,10695,3)
 #undef TYPE
 #elif __powerpc__ && !__powerpc64__
 #define TYPE std::strstream
-CheckTypeSize(TYPE,240,10695,6)
+CheckTypeSize(TYPE,192,10695,6)
 #undef TYPE
 #elif __powerpc64__
 #define TYPE std::strstream
-CheckTypeSize(TYPE,464,10695,9)
+CheckTypeSize(TYPE,376,10695,9)
 #undef TYPE
 #elif __s390__ && !__s390x__
 #define TYPE std::strstream
@@ -3710,7 +3710,7 @@ CheckTypeSize(TYPE,240,10695,10)
 #undef TYPE
 #elif __x86_64__
 #define TYPE std::strstream
-CheckTypeSize(TYPE,464,10695,11)
+CheckTypeSize(TYPE,376,10695,11)
 #undef TYPE
 #elif __s390x__
 #define TYPE std::strstream
