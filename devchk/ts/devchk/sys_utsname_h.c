@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "sys/utsname.h"
 
 
@@ -30,6 +31,7 @@ CheckTypeSize(struct utsname,390, 7013, 3)
 CheckTypeSize(struct utsname,390, 7013, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7013,0);
+Msg("Find size of utsname (7013)\n");
 #endif
 
 #ifdef TET_TEST

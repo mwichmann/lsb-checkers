@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "netinet/in.h"
 
 
@@ -22,18 +23,24 @@ int pcnt=0;
 Msg("Checking data structures in netinet/in.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef INADDR_ANY
-	CompareConstant(INADDR_ANY,0)
+	CompareConstant(INADDR_ANY,0,4489,architecture)
 #else
 Msg( "Error: Constant not found: INADDR_ANY\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef INADDR_BROADCAST
-	CompareConstant(INADDR_BROADCAST,(0xffffffff))
+	CompareConstant(INADDR_BROADCAST,(0xffffffff),4490,architecture)
 #else
 Msg( "Error: Constant not found: INADDR_BROADCAST\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
@@ -44,6 +51,7 @@ CheckTypeSize(struct in_addr,4, 10143, 3)
 CheckTypeSize(struct in_addr,4, 10143, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);
+Msg("Find size of sockaddr_in (10143)\n");
 #endif
 
 #ifdef __i386__
@@ -54,6 +62,7 @@ CheckTypeSize(struct sockaddr_in,16, 9141, 3)
 CheckTypeSize(struct sockaddr_in,16, 9141, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
+Msg("Find size of sockaddr_in (9141)\n");
 #endif
 
 #ifdef TET_TEST

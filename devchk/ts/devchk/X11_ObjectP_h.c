@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -29,25 +30,34 @@ int pcnt=0;
 Msg("Checking data structures in X11/ObjectP.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef XtObjectExtensionVersion
-	CompareConstant(XtObjectExtensionVersion,1L)
+	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
 #else
 Msg( "Error: Constant not found: XtObjectExtensionVersion\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef XtInheritAllocate
-	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit))
+	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
 #else
 Msg( "Error: Constant not found: XtInheritAllocate\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef XtInheritDeallocate
-	CompareConstant(XtInheritDeallocate,((XtDeallocateProc) _XtInherit))
+	CompareConstant(XtInheritDeallocate,((XtDeallocateProc) _XtInherit),4946,architecture)
 #else
 Msg( "Error: Constant not found: XtInheritDeallocate\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
@@ -65,6 +75,7 @@ CheckTypeSize(struct _ObjectPart,48, 10261, 3)
 CheckTypeSize(struct _ObjectPart,28, 10261, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10261,0);
+Msg("Find size of ObjectPart (10261)\n");
 #endif
 
 #ifdef __i386__
@@ -75,6 +86,7 @@ CheckTypeSize(ObjectPart,48, 10264, 3)
 CheckTypeSize(ObjectPart,28, 10264, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10264,0);
+Msg("Find size of _ObjectRec (10264)\n");
 #endif
 
 #ifdef __i386__
@@ -85,6 +97,7 @@ CheckTypeSize(struct _ObjectRec,48, 10262, 3)
 CheckTypeSize(struct _ObjectRec,28, 10262, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
+Msg("Find size of ObjectRec (10262)\n");
 #endif
 
 #ifdef __i386__
@@ -95,6 +108,7 @@ CheckTypeSize(ObjectRec,48, 10263, 3)
 CheckTypeSize(ObjectRec,28, 10263, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10263,0);
+Msg("Find size of _ObjectClassPart (10263)\n");
 #endif
 
 #ifdef __i386__
@@ -106,6 +120,7 @@ CheckTypeSize(struct _ObjectClassPart,224, 10265, 3)
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10265,0);
+Msg("Find size of ObjectClassPart (10265)\n");
 #endif
 
 #ifdef __i386__
@@ -116,6 +131,7 @@ CheckTypeSize(ObjectClassPart,224, 10266, 3)
 CheckTypeSize(ObjectClassPart,116, 10266, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10266,0);
+Msg("Find size of ObjectClassExtensionRec (10266)\n");
 #endif
 
 #ifdef __i386__
@@ -126,6 +142,7 @@ CheckTypeSize(ObjectClassExtensionRec,48, 10268, 3)
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10268,0);
+Msg("Find size of ObjectClassExtension (10268)\n");
 #endif
 
 #ifdef __i386__
@@ -136,6 +153,7 @@ CheckTypeSize(ObjectClassExtension,8, 10270, 3)
 CheckTypeSize(ObjectClassExtension,4, 10270, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10270,0);
+Msg("Find size of _ObjectClassRec (10270)\n");
 #endif
 
 #ifdef __i386__
@@ -146,6 +164,7 @@ CheckTypeSize(struct _ObjectClassRec,224, 10271, 3)
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
+Msg("Find size of ObjectClassRec (10271)\n");
 #endif
 
 #ifdef __i386__
@@ -156,12 +175,15 @@ CheckTypeSize(ObjectClassRec,224, 10272, 3)
 CheckTypeSize(ObjectClassRec,116, 10272, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10272,0);
+Msg("Find size of anon-_ObjectClassExtensionRec (10272)\n");
 #endif
 
 #ifdef __i386__
 #elif __ia64__
+#elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10267,0);
+Msg("Find size of _ObjectClassExtensionRec * (10267)\n");
 #endif
 
 #ifdef __i386__
@@ -169,6 +191,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10267,0);
 #elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10269,0);
+Msg("Find size of _ObjectClassExtensionRec * (10269)\n");
 #endif
 
 #ifdef TET_TEST

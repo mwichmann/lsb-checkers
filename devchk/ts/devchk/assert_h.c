@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "assert.h"
 
 
@@ -22,7 +23,10 @@ int pcnt=0;
 Msg("Checking data structures in assert.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 /* No test for assert(expr) */
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "sys/param.h"
 
 
@@ -22,18 +23,24 @@ int pcnt=0;
 Msg("Checking data structures in sys/param.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NOFILE
+	CompareConstant(NOFILE,256,4400,architecture)
+#else
+Msg( "Error: Constant not found: NOFILE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef MAXPATHLEN
-	CompareConstant(MAXPATHLEN,4096)
+	CompareConstant(MAXPATHLEN,4096,4399,architecture)
 #else
 Msg( "Error: Constant not found: MAXPATHLEN\n");
 cnt++;
 #endif
 
-#ifdef NOFILE
-	CompareConstant(NOFILE,256)
-#else
-Msg( "Error: Constant not found: NOFILE\n");
-cnt++;
 #endif
 
 #ifdef TET_TEST

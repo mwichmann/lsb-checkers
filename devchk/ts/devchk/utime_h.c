@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "utime.h"
 
 
@@ -28,8 +29,11 @@ CheckOffset(struct utimbuf,actime,0,2,30205)
 CheckOffset(struct utimbuf,modtime,4,2,30206)
 #elif __ia64__
 CheckTypeSize(struct utimbuf,16, 7023, 3)
+#elif __powerpc__
+CheckTypeSize(struct utimbuf,8, 7023, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7023,0);
+Msg("Find size of utimbuf (7023)\n");
 #endif
 
 #ifdef TET_TEST

@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "ucontext.h"
 
 
@@ -22,13 +23,25 @@ int pcnt=0;
 Msg("Checking data structures in ucontext.h\n");
 #endif
 
+#ifdef __powerpc__
 #ifdef NGREG
-	CompareConstant(NGREG,19)
+	CompareConstant(NGREG,48,4929,architecture)
 #else
 Msg( "Error: Constant not found: NGREG\n");
 cnt++;
 #endif
 
+#elif __i386__
+#ifdef NGREG
+	CompareConstant(NGREG,19,4929,architecture)
+#else
+Msg( "Error: Constant not found: NGREG\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for NGREG (4929) in db\n");
+#endif
 #ifdef __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
 #endif
@@ -60,12 +73,15 @@ CheckOffset(struct _libc_fpstate,status,108,2,34324)
 CheckTypeSize(fpregset_t,4, 10228, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10228,0);
+Msg("Find size of anon-mcontext (10228)\n");
 #endif
 
 #ifdef __i386__
 #elif __ia64__
+#elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
+Msg("Find size of mcontext_t (10229)\n");
 #endif
 
 #ifdef __i386__
@@ -76,6 +92,7 @@ CheckTypeSize(mcontext_t,2656, 10230, 3)
 CheckTypeSize(mcontext_t,32, 10230, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10230,0);
+Msg("Find size of ucontext_t (10230)\n");
 #endif
 
 #ifdef __i386__
@@ -86,6 +103,7 @@ CheckTypeSize(ucontext_t,2656, 10220, 3)
 CheckTypeSize(ucontext_t,180, 10220, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10220,0);
+Msg("Find size of ucontext_t (10220)\n");
 #endif
 
 #ifdef TET_TEST

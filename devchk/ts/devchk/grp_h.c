@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "grp.h"
 
 
@@ -30,8 +31,11 @@ CheckOffset(struct group,gr_gid,8,2,29794)
 CheckOffset(struct group,gr_mem,12,2,29795)
 #elif __ia64__
 CheckTypeSize(struct group,32, 6894, 3)
+#elif __powerpc__
+CheckTypeSize(struct group,16, 6894, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6894,0);
+Msg("Find size of group (6894)\n");
 #endif
 
 #ifdef TET_TEST

@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <stdio.h>
 #include <wchar.h>
 #include <X11/X.h>
@@ -36,6 +37,7 @@ CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
 CheckTypeSize(XSecurityAuthorization,4, 8596, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
+Msg("Find size of XSecurityAuthorizationAttributes (8596)\n");
 #endif
 
 #ifdef __i386__
@@ -46,6 +48,7 @@ CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3)
 CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8598,0);
+Msg("Find size of XSecurityAuthorizationAttributes (8598)\n");
 #endif
 
 #ifdef TET_TEST

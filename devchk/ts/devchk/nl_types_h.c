@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "nl_types.h"
 
 
@@ -22,18 +23,24 @@ int pcnt=0;
 Msg("Checking data structures in nl_types.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef NL_SETD
-	CompareConstant(NL_SETD,1)
+	CompareConstant(NL_SETD,1,1531,architecture)
 #else
 Msg( "Error: Constant not found: NL_SETD\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef NL_CAT_LOCALE
-	CompareConstant(NL_CAT_LOCALE,1)
+	CompareConstant(NL_CAT_LOCALE,1,1532,architecture)
 #else
 Msg( "Error: Constant not found: NL_CAT_LOCALE\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
@@ -44,6 +51,7 @@ CheckTypeSize(nl_catd,8, 6923, 3)
 CheckTypeSize(nl_catd,4, 6923, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6923,0);
+Msg("Find size of nl_item (6923)\n");
 #endif
 
 #ifdef __i386__
@@ -54,6 +62,7 @@ CheckTypeSize(nl_item,4, 6924, 3)
 CheckTypeSize(nl_item,4, 6924, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6924,0);
+Msg("Find size of nl_item (6924)\n");
 #endif
 
 #ifdef TET_TEST

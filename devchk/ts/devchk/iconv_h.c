@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "iconv.h"
 
 
@@ -30,6 +31,7 @@ CheckTypeSize(iconv_t,8, 6895, 3)
 CheckTypeSize(iconv_t,4, 6895, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6895,0);
+Msg("Find size of iconv_t (6895)\n");
 #endif
 
 #ifdef TET_TEST

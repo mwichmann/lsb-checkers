@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include <X11/X.h>
 #include "X11/Xlib.h"
@@ -28,8 +29,11 @@ Msg("Checking data structures in X11/Xlib.h\n");
 CheckTypeSize(struct _XDisplay,176, 7053, 2)
 #elif __ia64__
 CheckTypeSize(struct _XDisplay,296, 7053, 3)
+#elif __powerpc__
+CheckTypeSize(struct _XDisplay,176, 7053, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7053,0);
+Msg("Find size of XColor (7053)\n");
 #endif
 
 #ifdef __i386__
@@ -40,6 +44,7 @@ CheckTypeSize(XColor,16, 8402, 3)
 CheckTypeSize(XColor,12, 8402, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8402,0);
+Msg("Find size of XVaNestedList (8402)\n");
 #endif
 
 #ifdef __i386__
@@ -50,6 +55,7 @@ CheckTypeSize(XVaNestedList,8, 8540, 3)
 CheckTypeSize(XVaNestedList,4, 8540, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8540,0);
+Msg("Find size of XErrorHandler (8540)\n");
 #endif
 
 #ifdef __i386__
@@ -60,6 +66,7 @@ CheckTypeSize(XErrorHandler,8, 8930, 3)
 CheckTypeSize(XErrorHandler,4, 8930, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8930,0);
+Msg("Find size of XIOErrorHandler (8930)\n");
 #endif
 
 #ifdef __i386__
@@ -70,6 +77,7 @@ CheckTypeSize(XIOErrorHandler,8, 8932, 3)
 CheckTypeSize(XIOErrorHandler,4, 8932, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8932,0);
+Msg("Find size of XConnectionWatchProc (8932)\n");
 #endif
 
 #ifdef __i386__
@@ -80,6 +88,7 @@ CheckTypeSize(XConnectionWatchProc,8, 8956, 3)
 CheckTypeSize(XConnectionWatchProc,4, 8956, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8956,0);
+Msg("Find size of XExtData (8956)\n");
 #endif
 
 #ifdef __i386__
@@ -90,6 +99,7 @@ CheckTypeSize(XExtData,32, 8368, 3)
 CheckTypeSize(XExtData,16, 8368, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8368,0);
+Msg("Find size of XExtCodes (8368)\n");
 #endif
 
 #ifdef __i386__
@@ -100,6 +110,7 @@ CheckTypeSize(XExtCodes,16, 8370, 3)
 CheckTypeSize(XExtCodes,16, 8370, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8370,0);
+Msg("Find size of XPixmapFormatValues (8370)\n");
 #endif
 
 #ifdef __i386__
@@ -110,6 +121,7 @@ CheckTypeSize(XPixmapFormatValues,12, 8372, 3)
 CheckTypeSize(XPixmapFormatValues,12, 8372, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8372,0);
+Msg("Find size of XGCValues (8372)\n");
 #endif
 
 #ifdef __i386__
@@ -120,6 +132,7 @@ CheckTypeSize(XGCValues,128, 8374, 3)
 CheckTypeSize(XGCValues,92, 8374, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8374,0);
+Msg("Find size of GC (8374)\n");
 #endif
 
 #ifdef __i386__
@@ -130,6 +143,7 @@ CheckTypeSize(GC,8, 8375, 3)
 CheckTypeSize(GC,4, 8375, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8375,0);
+Msg("Find size of Visual (8375)\n");
 #endif
 
 #ifdef __i386__
@@ -140,6 +154,7 @@ CheckTypeSize(Visual,56, 8377, 3)
 CheckTypeSize(Visual,32, 8377, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8377,0);
+Msg("Find size of Depth (8377)\n");
 #endif
 
 #ifdef __i386__
@@ -150,6 +165,7 @@ CheckTypeSize(Depth,16, 8379, 3)
 CheckTypeSize(Depth,12, 8379, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8379,0);
+Msg("Find size of Screen (8379)\n");
 #endif
 
 #ifdef __i386__
@@ -160,6 +176,7 @@ CheckTypeSize(Screen,128, 8381, 3)
 CheckTypeSize(Screen,80, 8381, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8381,0);
+Msg("Find size of ScreenFormat (8381)\n");
 #endif
 
 #ifdef __i386__
@@ -170,6 +187,7 @@ CheckTypeSize(ScreenFormat,24, 8383, 3)
 CheckTypeSize(ScreenFormat,16, 8383, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8383,0);
+Msg("Find size of XSetWindowAttributes (8383)\n");
 #endif
 
 #ifdef __i386__
@@ -180,6 +198,7 @@ CheckTypeSize(XSetWindowAttributes,112, 8385, 3)
 CheckTypeSize(XSetWindowAttributes,60, 8385, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8385,0);
+Msg("Find size of XWindowAttributes (8385)\n");
 #endif
 
 #ifdef __i386__
@@ -190,6 +209,7 @@ CheckTypeSize(XWindowAttributes,136, 8387, 3)
 CheckTypeSize(XWindowAttributes,92, 8387, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8387,0);
+Msg("Find size of XHostAddress (8387)\n");
 #endif
 
 #ifdef __i386__
@@ -200,6 +220,7 @@ CheckTypeSize(XHostAddress,16, 8389, 3)
 CheckTypeSize(XHostAddress,12, 8389, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8389,0);
+Msg("Find size of XImage (8389)\n");
 #endif
 
 #ifdef __i386__
@@ -210,14 +231,18 @@ CheckTypeSize(XImage,136, 8398, 3)
 CheckTypeSize(XImage,88, 8398, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8398,0);
+Msg("Find size of funcs (8398)\n");
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct funcs,24, 9291, 2)
 #elif __ia64__
 CheckTypeSize(struct funcs,48, 9291, 3)
+#elif __powerpc__
+CheckTypeSize(struct funcs,24, 9291, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9291,0);
+Msg("Find size of XWindowChanges (9291)\n");
 #endif
 
 #ifdef __i386__
@@ -228,6 +253,7 @@ CheckTypeSize(XWindowChanges,40, 8400, 3)
 CheckTypeSize(XWindowChanges,28, 8400, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8400,0);
+Msg("Find size of XSegment (8400)\n");
 #endif
 
 #ifdef __i386__
@@ -238,6 +264,7 @@ CheckTypeSize(XSegment,8, 8404, 3)
 CheckTypeSize(XSegment,8, 8404, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8404,0);
+Msg("Find size of XPoint (8404)\n");
 #endif
 
 #ifdef __i386__
@@ -248,6 +275,7 @@ CheckTypeSize(XPoint,4, 8406, 3)
 CheckTypeSize(XPoint,4, 8406, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8406,0);
+Msg("Find size of XRectangle (8406)\n");
 #endif
 
 #ifdef __i386__
@@ -258,6 +286,7 @@ CheckTypeSize(XRectangle,8, 8408, 3)
 CheckTypeSize(XRectangle,8, 8408, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8408,0);
+Msg("Find size of XArc (8408)\n");
 #endif
 
 #ifdef __i386__
@@ -268,6 +297,7 @@ CheckTypeSize(XArc,12, 8410, 3)
 CheckTypeSize(XArc,12, 8410, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8410,0);
+Msg("Find size of XKeyboardControl (8410)\n");
 #endif
 
 #ifdef __i386__
@@ -278,6 +308,7 @@ CheckTypeSize(XKeyboardControl,32, 8412, 3)
 CheckTypeSize(XKeyboardControl,32, 8412, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8412,0);
+Msg("Find size of XKeyboardState (8412)\n");
 #endif
 
 #ifdef __i386__
@@ -288,6 +319,7 @@ CheckTypeSize(XKeyboardState,64, 8414, 3)
 CheckTypeSize(XKeyboardState,56, 8414, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8414,0);
+Msg("Find size of XTimeCoord (8414)\n");
 #endif
 
 #ifdef __i386__
@@ -298,6 +330,7 @@ CheckTypeSize(XTimeCoord,16, 8416, 3)
 CheckTypeSize(XTimeCoord,8, 8416, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8416,0);
+Msg("Find size of XModifierKeymap (8416)\n");
 #endif
 
 #ifdef __i386__
@@ -308,14 +341,18 @@ CheckTypeSize(XModifierKeymap,16, 8418, 3)
 CheckTypeSize(XModifierKeymap,8, 8418, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8418,0);
+Msg("Find size of Display (8418)\n");
 #endif
 
 #ifdef __i386__
 CheckTypeSize(Display,176, 8419, 2)
 #elif __ia64__
 CheckTypeSize(Display,296, 8419, 3)
+#elif __powerpc__
+CheckTypeSize(Display,176, 8419, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8419,0);
+Msg("Find size of XKeyEvent (8419)\n");
 #endif
 
 #ifdef __i386__
@@ -326,6 +363,7 @@ CheckTypeSize(XKeyEvent,96, 8425, 3)
 CheckTypeSize(XKeyEvent,60, 8425, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8425,0);
+Msg("Find size of XKeyPressedEvent (8425)\n");
 #endif
 
 #ifdef __i386__
@@ -336,6 +374,7 @@ CheckTypeSize(XKeyPressedEvent,96, 8426, 3)
 CheckTypeSize(XKeyPressedEvent,60, 8426, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8426,0);
+Msg("Find size of XKeyReleasedEvent (8426)\n");
 #endif
 
 #ifdef __i386__
@@ -346,6 +385,7 @@ CheckTypeSize(XKeyReleasedEvent,96, 8427, 3)
 CheckTypeSize(XKeyReleasedEvent,60, 8427, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8427,0);
+Msg("Find size of XButtonEvent (8427)\n");
 #endif
 
 #ifdef __i386__
@@ -356,6 +396,7 @@ CheckTypeSize(XButtonEvent,96, 8429, 3)
 CheckTypeSize(XButtonEvent,60, 8429, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8429,0);
+Msg("Find size of XButtonPressedEvent (8429)\n");
 #endif
 
 #ifdef __i386__
@@ -366,6 +407,7 @@ CheckTypeSize(XButtonPressedEvent,96, 8430, 3)
 CheckTypeSize(XButtonPressedEvent,60, 8430, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8430,0);
+Msg("Find size of XButtonReleasedEvent (8430)\n");
 #endif
 
 #ifdef __i386__
@@ -376,6 +418,7 @@ CheckTypeSize(XButtonReleasedEvent,96, 8431, 3)
 CheckTypeSize(XButtonReleasedEvent,60, 8431, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8431,0);
+Msg("Find size of XMotionEvent (8431)\n");
 #endif
 
 #ifdef __i386__
@@ -386,6 +429,7 @@ CheckTypeSize(XMotionEvent,96, 8433, 3)
 CheckTypeSize(XMotionEvent,60, 8433, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8433,0);
+Msg("Find size of XPointerMovedEvent (8433)\n");
 #endif
 
 #ifdef __i386__
@@ -396,6 +440,7 @@ CheckTypeSize(XPointerMovedEvent,96, 8434, 3)
 CheckTypeSize(XPointerMovedEvent,60, 8434, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8434,0);
+Msg("Find size of XCrossingEvent (8434)\n");
 #endif
 
 #ifdef __i386__
@@ -406,6 +451,7 @@ CheckTypeSize(XCrossingEvent,104, 8436, 3)
 CheckTypeSize(XCrossingEvent,68, 8436, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8436,0);
+Msg("Find size of XEnterWindowEvent (8436)\n");
 #endif
 
 #ifdef __i386__
@@ -416,6 +462,7 @@ CheckTypeSize(XEnterWindowEvent,104, 8437, 3)
 CheckTypeSize(XEnterWindowEvent,68, 8437, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8437,0);
+Msg("Find size of XLeaveWindowEvent (8437)\n");
 #endif
 
 #ifdef __i386__
@@ -426,6 +473,7 @@ CheckTypeSize(XLeaveWindowEvent,104, 8438, 3)
 CheckTypeSize(XLeaveWindowEvent,68, 8438, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8438,0);
+Msg("Find size of XFocusChangeEvent (8438)\n");
 #endif
 
 #ifdef __i386__
@@ -436,6 +484,7 @@ CheckTypeSize(XFocusChangeEvent,48, 8440, 3)
 CheckTypeSize(XFocusChangeEvent,28, 8440, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8440,0);
+Msg("Find size of XFocusInEvent (8440)\n");
 #endif
 
 #ifdef __i386__
@@ -446,6 +495,7 @@ CheckTypeSize(XFocusInEvent,48, 8441, 3)
 CheckTypeSize(XFocusInEvent,28, 8441, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8441,0);
+Msg("Find size of XFocusOutEvent (8441)\n");
 #endif
 
 #ifdef __i386__
@@ -456,6 +506,7 @@ CheckTypeSize(XFocusOutEvent,48, 8442, 3)
 CheckTypeSize(XFocusOutEvent,28, 8442, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8442,0);
+Msg("Find size of XKeymapEvent (8442)\n");
 #endif
 
 #ifdef __i386__
@@ -466,6 +517,7 @@ CheckTypeSize(XKeymapEvent,72, 8444, 3)
 CheckTypeSize(XKeymapEvent,52, 8444, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8444,0);
+Msg("Find size of XExposeEvent (8444)\n");
 #endif
 
 #ifdef __i386__
@@ -476,6 +528,7 @@ CheckTypeSize(XExposeEvent,64, 8446, 3)
 CheckTypeSize(XExposeEvent,40, 8446, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8446,0);
+Msg("Find size of XGraphicsExposeEvent (8446)\n");
 #endif
 
 #ifdef __i386__
@@ -486,6 +539,7 @@ CheckTypeSize(XGraphicsExposeEvent,72, 8448, 3)
 CheckTypeSize(XGraphicsExposeEvent,48, 8448, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8448,0);
+Msg("Find size of XNoExposeEvent (8448)\n");
 #endif
 
 #ifdef __i386__
@@ -496,6 +550,7 @@ CheckTypeSize(XNoExposeEvent,48, 8450, 3)
 CheckTypeSize(XNoExposeEvent,28, 8450, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8450,0);
+Msg("Find size of XVisibilityEvent (8450)\n");
 #endif
 
 #ifdef __i386__
@@ -506,6 +561,7 @@ CheckTypeSize(XVisibilityEvent,48, 8452, 3)
 CheckTypeSize(XVisibilityEvent,24, 8452, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8452,0);
+Msg("Find size of XCreateWindowEvent (8452)\n");
 #endif
 
 #ifdef __i386__
@@ -516,6 +572,7 @@ CheckTypeSize(XCreateWindowEvent,72, 8454, 3)
 CheckTypeSize(XCreateWindowEvent,48, 8454, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8454,0);
+Msg("Find size of XDestroyWindowEvent (8454)\n");
 #endif
 
 #ifdef __i386__
@@ -526,6 +583,7 @@ CheckTypeSize(XDestroyWindowEvent,48, 8456, 3)
 CheckTypeSize(XDestroyWindowEvent,24, 8456, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8456,0);
+Msg("Find size of XUnmapEvent (8456)\n");
 #endif
 
 #ifdef __i386__
@@ -536,6 +594,7 @@ CheckTypeSize(XUnmapEvent,56, 8458, 3)
 CheckTypeSize(XUnmapEvent,28, 8458, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8458,0);
+Msg("Find size of XMapEvent (8458)\n");
 #endif
 
 #ifdef __i386__
@@ -546,6 +605,7 @@ CheckTypeSize(XMapEvent,56, 8460, 3)
 CheckTypeSize(XMapEvent,28, 8460, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8460,0);
+Msg("Find size of XMapRequestEvent (8460)\n");
 #endif
 
 #ifdef __i386__
@@ -556,6 +616,7 @@ CheckTypeSize(XMapRequestEvent,48, 8462, 3)
 CheckTypeSize(XMapRequestEvent,24, 8462, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8462,0);
+Msg("Find size of XReparentEvent (8462)\n");
 #endif
 
 #ifdef __i386__
@@ -566,6 +627,7 @@ CheckTypeSize(XReparentEvent,72, 8464, 3)
 CheckTypeSize(XReparentEvent,40, 8464, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8464,0);
+Msg("Find size of XConfigureEvent (8464)\n");
 #endif
 
 #ifdef __i386__
@@ -576,6 +638,7 @@ CheckTypeSize(XConfigureEvent,88, 8466, 3)
 CheckTypeSize(XConfigureEvent,52, 8466, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8466,0);
+Msg("Find size of XGravityEvent (8466)\n");
 #endif
 
 #ifdef __i386__
@@ -586,6 +649,7 @@ CheckTypeSize(XGravityEvent,56, 8468, 3)
 CheckTypeSize(XGravityEvent,32, 8468, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8468,0);
+Msg("Find size of XResizeRequestEvent (8468)\n");
 #endif
 
 #ifdef __i386__
@@ -596,6 +660,7 @@ CheckTypeSize(XResizeRequestEvent,48, 8470, 3)
 CheckTypeSize(XResizeRequestEvent,28, 8470, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8470,0);
+Msg("Find size of XConfigureRequestEvent (8470)\n");
 #endif
 
 #ifdef __i386__
@@ -606,6 +671,7 @@ CheckTypeSize(XConfigureRequestEvent,96, 8472, 3)
 CheckTypeSize(XConfigureRequestEvent,56, 8472, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8472,0);
+Msg("Find size of XCirculateEvent (8472)\n");
 #endif
 
 #ifdef __i386__
@@ -616,6 +682,7 @@ CheckTypeSize(XCirculateEvent,56, 8474, 3)
 CheckTypeSize(XCirculateEvent,28, 8474, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8474,0);
+Msg("Find size of XCirculateRequestEvent (8474)\n");
 #endif
 
 #ifdef __i386__
@@ -626,6 +693,7 @@ CheckTypeSize(XCirculateRequestEvent,56, 8476, 3)
 CheckTypeSize(XCirculateRequestEvent,28, 8476, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8476,0);
+Msg("Find size of XPropertyEvent (8476)\n");
 #endif
 
 #ifdef __i386__
@@ -636,6 +704,7 @@ CheckTypeSize(XPropertyEvent,64, 8478, 3)
 CheckTypeSize(XPropertyEvent,32, 8478, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8478,0);
+Msg("Find size of XSelectionClearEvent (8478)\n");
 #endif
 
 #ifdef __i386__
@@ -646,6 +715,7 @@ CheckTypeSize(XSelectionClearEvent,56, 8480, 3)
 CheckTypeSize(XSelectionClearEvent,28, 8480, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8480,0);
+Msg("Find size of XSelectionRequestEvent (8480)\n");
 #endif
 
 #ifdef __i386__
@@ -656,6 +726,7 @@ CheckTypeSize(XSelectionRequestEvent,80, 8482, 3)
 CheckTypeSize(XSelectionRequestEvent,40, 8482, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8482,0);
+Msg("Find size of XSelectionEvent (8482)\n");
 #endif
 
 #ifdef __i386__
@@ -666,6 +737,7 @@ CheckTypeSize(XSelectionEvent,72, 8484, 3)
 CheckTypeSize(XSelectionEvent,36, 8484, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8484,0);
+Msg("Find size of XColormapEvent (8484)\n");
 #endif
 
 #ifdef __i386__
@@ -676,6 +748,7 @@ CheckTypeSize(XColormapEvent,56, 8486, 3)
 CheckTypeSize(XColormapEvent,32, 8486, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8486,0);
+Msg("Find size of XClientMessageEvent (8486)\n");
 #endif
 
 #ifdef __i386__
@@ -686,6 +759,7 @@ CheckTypeSize(XClientMessageEvent,96, 8489, 3)
 CheckTypeSize(XClientMessageEvent,48, 8489, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8489,0);
+Msg("Find size of XMappingEvent (8489)\n");
 #endif
 
 #ifdef __i386__
@@ -696,6 +770,7 @@ CheckTypeSize(XMappingEvent,56, 8491, 3)
 CheckTypeSize(XMappingEvent,32, 8491, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8491,0);
+Msg("Find size of XErrorEvent (8491)\n");
 #endif
 
 #ifdef __i386__
@@ -706,6 +781,7 @@ CheckTypeSize(XErrorEvent,40, 8493, 3)
 CheckTypeSize(XErrorEvent,20, 8493, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8493,0);
+Msg("Find size of XAnyEvent (8493)\n");
 #endif
 
 #ifdef __i386__
@@ -716,6 +792,7 @@ CheckTypeSize(XAnyEvent,40, 8495, 3)
 CheckTypeSize(XAnyEvent,20, 8495, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8495,0);
+Msg("Find size of XEvent (8495)\n");
 #endif
 
 #ifdef __i386__
@@ -726,6 +803,7 @@ CheckTypeSize(XEvent,192, 8497, 3)
 CheckTypeSize(XEvent,96, 8497, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8497,0);
+Msg("Find size of XCharStruct (8497)\n");
 #endif
 
 #ifdef __i386__
@@ -736,6 +814,7 @@ CheckTypeSize(XCharStruct,12, 8499, 3)
 CheckTypeSize(XCharStruct,12, 8499, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8499,0);
+Msg("Find size of XFontProp (8499)\n");
 #endif
 
 #ifdef __i386__
@@ -746,6 +825,7 @@ CheckTypeSize(XFontProp,16, 8501, 3)
 CheckTypeSize(XFontProp,8, 8501, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8501,0);
+Msg("Find size of XFontStruct (8501)\n");
 #endif
 
 #ifdef __i386__
@@ -756,6 +836,7 @@ CheckTypeSize(XFontStruct,96, 8503, 3)
 CheckTypeSize(XFontStruct,80, 8503, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8503,0);
+Msg("Find size of XFontSetExtents (8503)\n");
 #endif
 
 #ifdef __i386__
@@ -766,6 +847,7 @@ CheckTypeSize(XFontSetExtents,16, 8513, 3)
 CheckTypeSize(XFontSetExtents,16, 8513, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8513,0);
+Msg("Find size of XTextItem (8513)\n");
 #endif
 
 #ifdef __i386__
@@ -776,6 +858,7 @@ CheckTypeSize(XTextItem,24, 8505, 3)
 CheckTypeSize(XTextItem,16, 8505, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8505,0);
+Msg("Find size of XChar2b (8505)\n");
 #endif
 
 #ifdef __i386__
@@ -786,6 +869,7 @@ CheckTypeSize(XChar2b,2, 8507, 3)
 CheckTypeSize(XChar2b,2, 8507, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8507,0);
+Msg("Find size of XTextItem16 (8507)\n");
 #endif
 
 #ifdef __i386__
@@ -796,6 +880,7 @@ CheckTypeSize(XTextItem16,24, 8509, 3)
 CheckTypeSize(XTextItem16,16, 8509, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8509,0);
+Msg("Find size of XEDataObject (8509)\n");
 #endif
 
 #ifdef __i386__
@@ -806,6 +891,7 @@ CheckTypeSize(XEDataObject,8, 8511, 3)
 CheckTypeSize(XEDataObject,4, 8511, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8511,0);
+Msg("Find size of XOM (8511)\n");
 #endif
 
 #ifdef __i386__
@@ -816,6 +902,7 @@ CheckTypeSize(XOM,8, 8514, 3)
 CheckTypeSize(XOM,4, 8514, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8514,0);
+Msg("Find size of XOC (8514)\n");
 #endif
 
 #ifdef __i386__
@@ -826,6 +913,7 @@ CheckTypeSize(XOC,8, 8515, 3)
 CheckTypeSize(XOC,4, 8515, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8515,0);
+Msg("Find size of XFontSet (8515)\n");
 #endif
 
 #ifdef __i386__
@@ -836,6 +924,7 @@ CheckTypeSize(XFontSet,8, 8516, 3)
 CheckTypeSize(XFontSet,4, 8516, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8516,0);
+Msg("Find size of XmbTextItem (8516)\n");
 #endif
 
 #ifdef __i386__
@@ -846,6 +935,7 @@ CheckTypeSize(XmbTextItem,24, 8518, 3)
 CheckTypeSize(XmbTextItem,16, 8518, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8518,0);
+Msg("Find size of XwcTextItem (8518)\n");
 #endif
 
 #ifdef __i386__
@@ -856,6 +946,7 @@ CheckTypeSize(XwcTextItem,24, 8520, 3)
 CheckTypeSize(XwcTextItem,16, 8520, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8520,0);
+Msg("Find size of XIM (8520)\n");
 #endif
 
 #ifdef __i386__
@@ -866,6 +957,7 @@ CheckTypeSize(XIM,8, 8529, 3)
 CheckTypeSize(XIM,4, 8529, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8529,0);
+Msg("Find size of XIC (8529)\n");
 #endif
 
 #ifdef __i386__
@@ -876,6 +968,7 @@ CheckTypeSize(XIC,8, 8530, 3)
 CheckTypeSize(XIC,4, 8530, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8530,0);
+Msg("Find size of XIDProc (8530)\n");
 #endif
 
 #ifdef __i386__
@@ -886,6 +979,7 @@ CheckTypeSize(XIDProc,8, 8902, 3)
 CheckTypeSize(XIDProc,4, 8902, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8902,0);
+Msg("Find size of XPointer (8902)\n");
 #endif
 
 #ifdef __i386__
@@ -896,6 +990,7 @@ CheckTypeSize(XPointer,8, 8365, 3)
 CheckTypeSize(XPointer,4, 8365, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8365,0);
+Msg("Find size of XPointer (8365)\n");
 #endif
 
 #ifdef TET_TEST

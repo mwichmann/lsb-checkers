@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "semaphore.h"
 
 
@@ -22,26 +23,35 @@ int pcnt=0;
 Msg("Checking data structures in semaphore.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef SEM_FAILED
-	CompareConstant(SEM_FAILED,((sem_t*)0))
+	CompareConstant(SEM_FAILED,((sem_t*)0),1624,architecture)
 #else
 Msg( "Error: Constant not found: SEM_FAILED\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef SEM_VALUE_MAX
-	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)))
+	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)),1625,architecture)
 #else
 Msg( "Error: Constant not found: SEM_VALUE_MAX\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
 CheckTypeSize(sem_t,16, 6960, 2)
 #elif __ia64__
 CheckTypeSize(sem_t,32, 6960, 3)
+#elif __powerpc__
+CheckTypeSize(sem_t,16, 6960, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6960,0);
+Msg("Find size of sem_t (6960)\n");
 #endif
 
 #ifdef TET_TEST

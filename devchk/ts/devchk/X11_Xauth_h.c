@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "X11/Xauth.h"
 
 
@@ -30,6 +31,7 @@ CheckTypeSize(Xauth,64, 8961, 3)
 CheckTypeSize(Xauth,32, 8961, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8961,0);
+Msg("Find size of Xauth (8961)\n");
 #endif
 
 #ifdef TET_TEST

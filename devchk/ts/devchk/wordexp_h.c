@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "wordexp.h"
 
 
@@ -24,8 +25,10 @@ Msg("Checking data structures in wordexp.h\n");
 
 #ifdef __i386__
 #elif __ia64__
+#elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9200,0);
+Msg("Find size of wordexp_t (9200)\n");
 #endif
 
 #ifdef __i386__
@@ -36,12 +39,15 @@ CheckTypeSize(wordexp_t,24, 7029, 3)
 CheckTypeSize(wordexp_t,12, 7029, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7029,0);
+Msg("Find size of anon-wordexp.h-45 (7029)\n");
 #endif
 
 #ifdef __i386__
 #elif __ia64__
+#elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9201,0);
+Msg("Find size of anon-wordexp.h-45 (9201)\n");
 #endif
 
 #ifdef TET_TEST

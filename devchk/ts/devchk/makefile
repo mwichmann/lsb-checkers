@@ -52,6 +52,7 @@ OBJS = hdrchk.o \
 	stddef_h.o \
 	stdio_h.o \
 	stdlib_h.o \
+	sys_file_h.o \
 	sys_ioctl_h.o \
 	sys_ipc_h.o \
 	sys_mman_h.o \
@@ -101,7 +102,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 -lpthread
+	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c

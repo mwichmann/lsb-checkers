@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "ctype.h"
 
 
@@ -24,8 +25,10 @@ Msg("Checking data structures in ctype.h\n");
 
 #ifdef __i386__
 #elif __ia64__
+#elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8976,0);
+Msg("Find size of anon-ctype.h-13 (8976)\n");
 #endif
 
 #ifdef TET_TEST

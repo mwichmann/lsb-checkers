@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include "stdlib.h"
 
@@ -23,32 +24,44 @@ int pcnt=0;
 Msg("Checking data structures in stdlib.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef RAND_MAX
-	CompareConstant(RAND_MAX,2147483647)
+	CompareConstant(RAND_MAX,2147483647,1647,architecture)
 #else
 Msg( "Error: Constant not found: RAND_MAX\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef EXIT_FAILURE
-	CompareConstant(EXIT_FAILURE,1)
+	CompareConstant(EXIT_FAILURE,1,1648,architecture)
 #else
 Msg( "Error: Constant not found: EXIT_FAILURE\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef EXIT_SUCCESS
-	CompareConstant(EXIT_SUCCESS,0)
+	CompareConstant(EXIT_SUCCESS,0,1649,architecture)
 #else
 Msg( "Error: Constant not found: EXIT_SUCCESS\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef MB_CUR_MAX
-	CompareConstant(MB_CUR_MAX,(__ctype_get_mb_cur_max()))
+	CompareConstant(MB_CUR_MAX,(__ctype_get_mb_cur_max()),1650,architecture)
 #else
 Msg( "Error: Constant not found: MB_CUR_MAX\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
@@ -59,6 +72,7 @@ CheckTypeSize(__compar_fn_t,8, 9231, 3)
 CheckTypeSize(__compar_fn_t,4, 9231, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
+Msg("Find size of div_t (9231)\n");
 #endif
 
 #ifdef __i386__
@@ -69,6 +83,7 @@ CheckTypeSize(div_t,8, 6973, 3)
 CheckTypeSize(div_t,8, 6973, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6973,0);
+Msg("Find size of ldiv_t (6973)\n");
 #endif
 
 #ifdef __i386__
@@ -79,14 +94,18 @@ CheckTypeSize(ldiv_t,16, 6975, 3)
 CheckTypeSize(ldiv_t,8, 6975, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
+Msg("Find size of lldiv_t (6975)\n");
 #endif
 
 #ifdef __i386__
 CheckTypeSize(lldiv_t,16, 6897, 2)
 #elif __ia64__
 CheckTypeSize(lldiv_t,16, 6897, 3)
+#elif __powerpc__
+CheckTypeSize(lldiv_t,16, 6897, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6897,0);
+Msg("Find size of lldiv_t (6897)\n");
 #endif
 
 #ifdef TET_TEST

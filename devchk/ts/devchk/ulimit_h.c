@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "ulimit.h"
 
 
@@ -22,18 +23,24 @@ int pcnt=0;
 Msg("Checking data structures in ulimit.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef UL_GETFSIZE
-	CompareConstant(UL_GETFSIZE,1)
+	CompareConstant(UL_GETFSIZE,1,1916,architecture)
 #else
 Msg( "Error: Constant not found: UL_GETFSIZE\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef UL_SETFSIZE
-	CompareConstant(UL_SETFSIZE,2)
+	CompareConstant(UL_SETFSIZE,2,1917,architecture)
 #else
 Msg( "Error: Constant not found: UL_SETFSIZE\n");
 cnt++;
+#endif
+
 #endif
 
 #ifdef TET_TEST
