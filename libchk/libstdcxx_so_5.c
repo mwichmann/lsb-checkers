@@ -2299,11 +2299,17 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNKSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE12_M_group_intERKSscRSt8ios_basePcS9_Ri","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE12_M_widen_intES3_RSt8ios_basecPci","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_convert_intIlEES3_S3_RSt8ios_basecT_","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_convert_intIlEES3_S3_RSt8ios_basecccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_convert_intImEES3_S3_RSt8ios_basecT_","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_convert_intImEES3_S3_RSt8ios_basecccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_convert_intIxEES3_S3_RSt8ios_basecT_","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_convert_intIxEES3_S3_RSt8ios_basecccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_convert_intIyEES3_S3_RSt8ios_basecT_","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_convert_intIyEES3_S3_RSt8ios_basecccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_group_floatERKSscPKcPcS9_Ri","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_widen_floatES3_RSt8ios_basecPci","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE16_M_convert_floatIdEES3_S3_RSt8ios_baseccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE16_M_convert_floatIeEES3_S3_RSt8ios_baseccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
@@ -2315,6 +2321,15 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecx","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecy","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#if __i386__
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6_M_padEciRSt8ios_basePcPKcRi","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6_M_padEciRSt8ios_basePcPKcRi","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6_M_padEciRSt8ios_basePcPKcRi","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
+#endif
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecPKv","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecb","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecd","GLIBCPP_3.2",0,"LSB-Core",0,1},
@@ -2324,11 +2339,16 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecx","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecy","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE9_M_insertES3_RSt8ios_basecPKci","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE12_M_group_intERKSswRSt8ios_basePwS9_Ri","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE12_M_widen_intES3_RSt8ios_basewPci","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_convert_intIlEES3_S3_RSt8ios_basewccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_convert_intImEES3_S3_RSt8ios_basewT_","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_convert_intImEES3_S3_RSt8ios_basewccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_convert_intIxEES3_S3_RSt8ios_basewT_","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_convert_intIxEES3_S3_RSt8ios_basewccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_convert_intIyEES3_S3_RSt8ios_basewT_","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_convert_intIyEES3_S3_RSt8ios_basewccT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_group_floatERKSswPKwPwS9_Ri","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_widen_floatES3_RSt8ios_basewPci","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE16_M_convert_floatIdEES3_S3_RSt8ios_basewcT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE16_M_convert_floatIeEES3_S3_RSt8ios_basewcT_","GLIBCPP_3.2",0,"LSB-Core",0,1},
@@ -2340,6 +2360,15 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES3_RSt8ios_basewm","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES3_RSt8ios_basewx","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES3_RSt8ios_basewy","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#if __i386__
+	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6_M_padEwiRSt8ios_basePwPKwRi","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6_M_padEwiRSt8ios_basePwPKwRi","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6_M_padEwiRSt8ios_basePwPKwRi","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
+#endif
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_RSt8ios_basewPKv","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_RSt8ios_basewb","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_RSt8ios_basewd","GLIBCPP_3.2",0,"LSB-Core",0,1},
@@ -5879,6 +5908,7 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt11range_errorD1Ev","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt12__basic_fileIcE10sys_ungetcEi","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt12__basic_fileIcE12_M_open_modeESt13_Ios_OpenmodeRiS2_Pc","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNSt12__basic_fileIcE16showmanyc_helperEv","GLIBCPP_3.2.3",0,"LSB-Core",0,1},
 	{"_ZNSt12__basic_fileIcE2fdEv","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt12__basic_fileIcE4openEPKcSt13_Ios_Openmodei","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt12__basic_fileIcE4syncEv","GLIBCPP_3.2",0,"LSB-Core",0,1},
@@ -8979,7 +9009,7 @@ struct versym libstdcxx_so_5[] = {
 #if __s390x__
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE11_S_round_upEm","GLIBCPP_3.2",0,"LSB-Core",0,1},
 #endif
-	{"_ZNSt24__default_alloc_templateILb1ELi0EE12_S_force_newE","GLIBCPP_3.2.2",0,"LSB-Core",0,1},
+	{"_ZNSt24__default_alloc_templateILb1ELi0EE12_S_force_newE","GLIBCPP_3.2.2",0,"LSB-Core",0,0},
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE12_S_free_listE","GLIBCPP_3.2",0,"LSB-Core",0,0},
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE12_S_heap_sizeE","GLIBCPP_3.2",0,"LSB-Core",0,0},
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE13_S_start_freeE","GLIBCPP_3.2",0,"LSB-Core",0,0},
@@ -10977,6 +11007,7 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt9bad_allocD1Ev","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt9bad_allocD2Ev","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE10exceptionsESt12_Ios_Iostate","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNSt9basic_iosIcSt11char_traitsIcEE11_M_setstateESt12_Ios_Iostate","GLIBCPP_3.2.4",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE15_M_cache_facetsERKSt6locale","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE3tieEPSo","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEE4fillEc","GLIBCPP_3.2",0,"LSB-Core",0,1},
@@ -10994,6 +11025,7 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEED1Ev","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIcSt11char_traitsIcEED2Ev","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE10exceptionsESt12_Ios_Iostate","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZNSt9basic_iosIwSt11char_traitsIwEE11_M_setstateESt12_Ios_Iostate","GLIBCPP_3.2.4",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE15_M_cache_facetsERKSt6locale","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE3tieEPSt13basic_ostreamIwS1_E","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSt9basic_iosIwSt11char_traitsIwEE4fillEw","GLIBCPP_3.2",0,"LSB-Core",0,1},
@@ -11430,8 +11462,10 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZStlsIwSt11char_traitsIwEERSt13basic_ostreamIT_T0_ES6_c","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZStlsIwSt11char_traitsIwESaIwEERSt13basic_ostreamIT_T0_ES7_RKSbIS4_S5_T1_E","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_","GLIBCPP_3.2.1",0,"LSB-Core",0,1},
 	{"_ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ES3_RKS6_","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZStplIwSt11char_traitsIwESaIwEESbIT_T0_T1_EPKS3_RKS6_","GLIBCPP_3.2",0,"LSB-Core",0,1},
+	{"_ZStplIwSt11char_traitsIwESaIwEESbIT_T0_T1_ERKS6_S8_","GLIBCPP_3.2.1",0,"LSB-Core",0,1},
 	{"_ZStplIwSt11char_traitsIwESaIwEESbIT_T0_T1_ES3_RKS6_","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZStrsISt11char_traitsIcEERSt13basic_istreamIcT_ES5_Pa","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZStrsISt11char_traitsIcEERSt13basic_istreamIcT_ES5_Ph","GLIBCPP_3.2",0,"LSB-Core",0,1},
