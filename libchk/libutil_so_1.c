@@ -11,7 +11,7 @@ struct versym libutil_so_1[] = {
 	{"forkpty","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"forkpty","GLIBC_2.2.5"},
+	{"forkpty","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"forkpty","GLIBC_2.0"},
@@ -32,7 +32,7 @@ struct versym libutil_so_1[] = {
 	{"login","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"login","GLIBC_2.2.5"},
+	{"login","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"login","GLIBC_2.0"},
@@ -53,7 +53,7 @@ struct versym libutil_so_1[] = {
 	{"login_tty","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"login_tty","GLIBC_2.2.5"},
+	{"login_tty","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"login_tty","GLIBC_2.0"},
@@ -74,7 +74,7 @@ struct versym libutil_so_1[] = {
 	{"logout","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"logout","GLIBC_2.2.5"},
+	{"logout","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"logout","GLIBC_2.0"},
@@ -95,7 +95,7 @@ struct versym libutil_so_1[] = {
 	{"logwtmp","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"logwtmp","GLIBC_2.2.5"},
+	{"logwtmp","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"logwtmp","GLIBC_2.0"},
@@ -116,7 +116,7 @@ struct versym libutil_so_1[] = {
 	{"openpty","GLIBC_2.0"},
 #endif
 #if __powerpc64__
-	{"openpty","GLIBC_2.2.5"},
+	{"openpty","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"openpty","GLIBC_2.0"},
