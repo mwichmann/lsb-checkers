@@ -199,7 +199,7 @@ sub writetest($$)
   		{
   		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%d);\\n\", architecture, $cname_save);\n";
   		}
-  		else
+  		if ($type_save eq 'string')
   		{
   		    print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%s);\\n\", architecture, $cname_save);\n";
   		}
