@@ -4,7 +4,7 @@ all:
 	for d in $(LIBS);do (cd $$d && make all);done
 
 gensrc:
-	for l in $(LIBS);do (./generate_library.pl -l $$d );done
+	for d in $(LIBS);do (./gen_lib.pl -l $$d );done
 
 clean:
 	for d in $(LIBS);do (cd $$d && make clean);done
