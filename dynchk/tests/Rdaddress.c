@@ -3,7 +3,7 @@
 #include "../libs/__lsb_funcs.h"
 #include "memmap.h"
 
-void validate_Rdaddress(const void *address, const char *name)
+int validate_Rdaddress(const void *address, const char *name)
 {
 	if( !mem_is_Rd(address) ) {
 		__lsb_fprintf(stderr,
@@ -11,4 +11,5 @@ void validate_Rdaddress(const void *address, const char *name)
 				address, name );
 		__lsb_abort();
 	}
+	return 0;
 }

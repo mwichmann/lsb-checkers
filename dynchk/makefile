@@ -10,7 +10,10 @@ TEST_LIB = tests/tests.o
 
 all: liblsbdynchk.so lsbdynchk
 
-$(WRAPPER_LIBS)::
+$(WRAPPER_LIBS): build_libs
+	
+
+build_libs:
 	cd libs && make all
 
 $(TEST_LIB):
