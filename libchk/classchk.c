@@ -51,7 +51,7 @@ return (void *)fptr;
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
   fprintf(stderr, "%s\n", tmp_string)
 
-
+  
 int
 check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle *journal)
 {
@@ -74,7 +74,6 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 
 	tetj_tp_count++;
 	snprintf(tmp_string, TMP_STRING_SIZE, "Attempt to dlopen %s", libname);
-	tetj_tp_count++;
 	tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 	dlhndl = dlopen(libname, RTLD_LAZY);
 	if (dlhndl==NULL)
@@ -97,9 +96,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 		/*
 		 * 1) First, check the Vtable info
 		 */
-		tetj_tp_count++;
 		tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			       	   "Checking Vtable info");
+											 "Checking Vtable info");
 		if (*classp->vtablename)
 		{
 			vtablep=dlsym(dlhndl,classp->vtablename);
@@ -130,10 +128,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 				/*
 				 * 1.1) Check the baseoffset
 				 */
-				tetj_tp_count++;
-				tetj_purpose_start(journal, tetj_activity_count,
-					           tetj_tp_count,
-						   "Checking baseoffset");
+				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+													 "Checking baseoffset");
 				if (vtbaseoffset != classp->vtable->baseoffset) 
 				{
 					TETJ_REPORT_INFO("Vtable baseoffset %ld (expected) doesn't match %ld "
@@ -151,10 +147,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 				/*
 				 * 1.2) Check the vcalloffset
 				 */
-				tetj_tp_count++;
-				tetj_purpose_start(journal, tetj_activity_count,
-					           tetj_tp_count,
-						   "Checking vcalloffset");
+				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+													 "Checking vcalloffset");
 				if (vtvcalloffset != classp->vtable->vcalloffset) 
 				{
 					TETJ_REPORT_INFO("Vtable vcalloffset %ld (expected) doesn't match %ld "
@@ -172,10 +166,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 				/*
 				 * 1.3) Check the pointer to the RTTI, both by value and by name
 				 */
-				tetj_tp_count++;
-				tetj_purpose_start(journal, tetj_activity_count,
-					       	   tetj_tp_count,
-						   "Checking rtti value");
+				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+													 "Checking rtti value");
 				test_failed = 0;
 				dladdr(vttypeinfo,&dlinfo);
 				if ( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) &&
@@ -200,10 +192,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 				/*
 				 * 1.4) Check the virtual function pointers
 				 */
-				tetj_tp_count++;
-				tetj_purpose_start(journal, tetj_activity_count,
-					       	   tetj_tp_count,
-						   "Checking virtual function pointers");
+				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+													 "Checking virtual function pointers");
 				test_failed = 0;
 				for (j=0;j<classp->numvirtfuncs;j++) 
 				{
@@ -293,9 +283,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 		/*
 		 * 2) Second, check the RTTI info
 		 */
-		tetj_tp_count++;
 		tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			       	   "Checking rtti info");
+											 "Checking rtti info");
 		rttip = dlsym(dlhndl, classp->rttiname);
 
 		if (rttip) 
@@ -307,10 +296,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 			/*
 			 * 2.1) Check the Vtable of the base class
 			 */
-			tetj_tp_count++;
-			tetj_purpose_start(journal, tetj_activity_count,
-				       	   tetj_tp_count,
-					   "Checking vtable of base class");
+			tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+												 "Checking vtable of base class");
 			symp = dlsym(dlhndl, classp->typeinfo->basevtable);
 			if (symp+(2*sizeof(long)) != rttip->basevtable) 
 			{
@@ -337,10 +324,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 			 * We store the class name as _Zfoo, so we need to
 			 * skip the _Z when comparing against the name is the object.
 			 */
-			tetj_tp_count++;
-			tetj_purpose_start(journal, tetj_activity_count,
-				       	   tetj_tp_count,
-					   "Check name string for type");
+			tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+												 "Check name string for type");
 			if (strcmp(&(classp->name[2]),rttip->name)) 
 			{
 				TETJ_REPORT_INFO("Class name %s (found) doesn't match %s (expected)\n",
@@ -361,10 +346,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 			 * check the fields that are unique to each one.
 			 */
 
-			tetj_tp_count++;
-			tetj_purpose_start(journal, tetj_activity_count,
-				       	   tetj_tp_count,
-					   "Check remaining rtti fields");
+			tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+												 "Check remaining rtti fields");
 			test_failed = 0;
 			basetypes = NULL;
 			/*
@@ -511,10 +494,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 			/*
 			 * Check the base types info
 			 */
-			tetj_tp_count++;
-			tetj_purpose_start(journal, tetj_activity_count,
-				       	   tetj_tp_count,
-					   "Check basetypes existance");
+			tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+												 "Check basetypes existance");
 			if (classp->numbaseinfo && !basetypes) {
 				TETJ_REPORT_INFO("Aigghhh no basetypes!!");
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -526,10 +507,8 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 
 				test_failed = 0;
-				tetj_tp_count++;
-				tetj_purpose_start(journal, tetj_activity_count,
-					       	   tetj_tp_count,
-						   "Check base type info");
+				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+													 "Check base type info");
 				for (j=0; j<classp->numbaseinfo; j++) 
 				{
 					symp = dlsym(dlhndl, classp->typeinfo->basetypeinfo[j]);
