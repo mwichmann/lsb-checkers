@@ -13,6 +13,7 @@
 #include <sys/sysmacros.h>
 #include <zlib.h>
 #include <cpio.h>
+#include <libgen.h>
 #include "rpmchk.h"
 #include "md5.h"
 #include "tagfuncs.h"
@@ -21,18 +22,82 @@
 MD5_CTX	md5ctx;
 unsigned char	fbuf[1024];
 
+int
+findfileindex(char *filename)
+{
+char	*fmt,tagfilename[PATH_MAX+1],tmpfilename[PATH_MAX+1];
+char	*fname,*foldnames=oldfilenames;
+int	i,j,fileindex=-1;
+
+/*
+ * Check the file name against the RPMTAG_DIRNAME, RPMTAG_DIRINDEXES,
+ * RPMTAG_BASENAME values.
+ */
+
+if(hasPayloadFilesHavePrefix) {
+	fmt=".%s";
+} else {
+	fmt="%s";
+}
+
+if( hasCompressedFileNames ) {
+    if( hasNewFilenames ) {
+      strcpy(tmpfilename,filename);
+      fname=basename(tmpfilename);
+      *fname='\000';
+      
+      for(i=0;i<numdirnames;i++) {
+        sprintf(tagfilename,fmt,dirnames[i]);
+	if(strcmp(tmpfilename,tagfilename) == 0 )
+		break;
+      }
+      if( i == numdirnames )
+	fprintf(stderr," no dir found!!!\n" );
+
+      strcpy(tmpfilename,filename);
+      fname=basename(tmpfilename);
+
+      for(j=0;j<numdirindicies;j++) {
+	if(dirindicies[j]==i) {
+	  if(strcmp(basenames[j],fname) == 0 )
+		fileindex=j;
+	}
+      }
+
+      if( fileindex < 0 )
+	fprintf(stderr," no basename found!!!\n" );
+
+    }
+} else {
+    if( hasOldFilenames ) {
+       /*
+     	* The RPMTAG starts with a '/', but the cpio
+     	* filename doesn't, so skip the first char.
+     	*/
+	if( strcmp(filename,foldnames+1) != 0 ) {
+		fprintf(stderr,
+		    "Payload filename %s doesn't match RPMTAG based name %s\n",
+			filename, foldnames+1);
+	}
+	foldnames+=strlen(foldnames)+1;
+    }
+ }
+return fileindex;
+}
+
 void
 checkRpmArchive(RpmFile *file1, struct tetj_handle *journal)
 {
 #define TMP_STRING_SIZE (400)
 char tmp_string[TMP_STRING_SIZE+1];
 unsigned char	md5sum[17],md5str[33];
-unsigned char	*fmd5=filemd5s,*flinktos=filelinktos,*foldnames=oldfilenames;
+unsigned char	*fmd5=filemd5s,*flinktos=filelinktos;
 gzFile	*zfile;
 RpmArchiveHeader ahdr;
 int	startoffset,endoffset;
 int	fileindex=0;
 int	filesizesum=0;
+int	i;
 
 file1->archive=(caddr_t)file1->nexthdr;
 
@@ -88,25 +153,24 @@ startoffset=gztell(zfile);
  */
 
 while( !gzeof(zfile) ) {
-	char	*fptr,*fmt,filename[PATH_MAX+1],tagfilename[PATH_MAX+1];
+	char	*fptr,filename[PATH_MAX+1];
 	char	num[9];
 	int	size,mode,devmaj,devmin,flink,fino;
 	time_t	ftime;
 
 	gzread(zfile, &ahdr, sizeof(ahdr) );
 /*
-	printf("***************************\n");
-	printf("Magic: %6.6s\n", ahdr.c_magic );
-	printf("ino: %8.8s\n", ahdr.c_ino );
-	printf("Mode: %8.8s\n", ahdr.c_mode );
-	printf("Rdev: %8.8s,%8.8s\n", ahdr.c_rdevmajor,ahdr.c_rdevminor );
-	printf("mtime: %8.8s\n", ahdr.c_mtime );
-	printf("nlink: %8.8s\n", ahdr.c_nlink );
+	fprintf(stderr,"***************************\n");
+	fprintf(stderr,"Magic: %6.6s\n", ahdr.c_magic );
+	fprintf(stderr,"ino: %8.8s\n", ahdr.c_ino );
+	fprintf(stderr,"Mode: %8.8s\n", ahdr.c_mode );
+	fprintf(stderr,"Rdev: %8.8s,%8.8s\n", ahdr.c_rdevmajor,ahdr.c_rdevminor );
+	fprintf(stderr,"mtime: %8.8s\n", ahdr.c_mtime );
+	fprintf(stderr,"nlink: %8.8s\n", ahdr.c_nlink );
 	fprintf(stderr,"filesize: %8.8s\n", ahdr.c_filesize );
-	printf("namesize: %8.8s\n", ahdr.c_namesize );
-	printf("UID: %8.8s\n", ahdr.c_uid );
-	printf("GID: %8.8s\n", ahdr.c_gid );
-	fprintf(stderr,"filesize: %8.8s\n", ahdr.c_filesize );
+	fprintf(stderr,"namesize: %8.8s\n", ahdr.c_namesize );
+	fprintf(stderr,"UID: %8.8s\n", ahdr.c_uid );
+	fprintf(stderr,"GID: %8.8s\n", ahdr.c_gid );
 	fprintf(stderr,"dev: %8.8s,%8.8s\n", ahdr.c_devmajor,ahdr.c_devminor );
 */
 
@@ -127,6 +191,9 @@ while( !gzeof(zfile) ) {
 	gzread(zfile, filename, size );
 	filename[size]='\000';
 	/*
+	fprintf(stderr,"filename: %s\n", filename );
+	 */
+	/*
 	 * Check/fix padding here - the amount of space used for the header
 	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
 	 * may need to be skipped.
@@ -146,6 +213,11 @@ while( !gzeof(zfile) ) {
 		break;
 		}
 
+	/* Get the number of links */
+	memcpy(num,ahdr.c_nlink,8);
+	num[8]=0;
+	flink=strtol(num,NULL,16);
+
 	/* Skip the file contents */
 	memcpy(num,ahdr.c_filesize,8);
 	num[8]=0;
@@ -156,51 +228,7 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	mode=strtol(num,NULL,16);
 
-	/*
-	 * Check the file name against the RPMTAG_DIRNAME, RPMTAG_DIRINDEXES,
-	 * RPMTAG_BASENAME values.
-	 */
-
-	if(hasPayloadFilesHavePrefix) {
-		fmt=".%s%s";
-	} else {
-		fmt="%s%s";
-	}
-	if( hasCompressedFileNames ) {
-	    if( hasNewFilenames ) {
-	      if( dirindicies[fileindex] <= numdirnames ) {
-		/*
-		fprintf(stderr,"dirindex: %x\n", dirindicies[fileindex]);
-		fprintf(stderr,"dirname: %s\n",
-					dirnames[dirindicies[fileindex]]);
-		fprintf(stderr,"basename: %s\n", basenames[fileindex]);
-		*/
-		sprintf(tagfilename,fmt,
-			dirnames[dirindicies[fileindex]],basenames[fileindex]);
-
-		if( strcmp(filename,tagfilename) != 0 ) {
-			fprintf(stderr,
-		    "Payload filename %s doesn't match RPMTAG based name %s\n",
-			filename, tagfilename);
-		}
-	      } else {
-		fprintf(stderr,"dirindex out of range!!!\n");
-	      }
-	    }
-	} else {
-	    if( hasOldFilenames ) {
-	       /*
-	     	* The RPMTAG starts with a '/', but the cpio
-	     	* filename doesn't, so skip the first char.
-	     	*/
-		if( strcmp(filename,foldnames+1) != 0 ) {
-			fprintf(stderr,
-		    "Payload filename %s doesn't match RPMTAG based name %s\n",
-			filename, foldnames+1);
-		}
-		foldnames+=strlen(foldnames)+1;
-	    }
-	}
+        fileindex=findfileindex(filename);
 
 	/*
 	 * Check the file size against the RPMTAG_FILESIZES value
@@ -208,7 +236,7 @@ while( !gzeof(zfile) ) {
 
 	if( filesizes ) {
 	    /* Directories have no size, but RPMTAG_FILESIZES sez 1024 */
-	    if( S_ISREG(mode) && (size != filesizes[fileindex]) ) {
+	    if( flink==1 && S_ISREG(mode) && (size != filesizes[fileindex]) ) {
 		fprintf(stderr,"Filesize (%d) for %s not that same a specified in RPMTAG_FILESIZES (%d)\n", size, filename, filesizes[fileindex] );
 		}
 
@@ -287,6 +315,10 @@ while( !gzeof(zfile) ) {
 	 * Check the file modes against the RPMTAG_FILEMD5S value
 	 */
 
+	fmd5=filemd5s;
+	for(i=0;i<fileindex;i++)
+	    fmd5+=strlen(fmd5)+1;
+
 	if ( fmd5 ) {
 	    if( S_ISREG(mode) ) {
 		MD5Init(&md5ctx);
@@ -302,7 +334,7 @@ while( !gzeof(zfile) ) {
 			md5sum[8], md5sum[9], md5sum[10], md5sum[11],
 			md5sum[12], md5sum[13], md5sum[14], md5sum[15] );
 
-		if( strncmp(fmd5,md5str,16) != 0 ) {
+		if( flink==1 && strncmp(fmd5,md5str,16) != 0 ) {
 			fprintf(stderr,"File MD5 (%s) for %s does not match value in RPMTAG_FILEMD5S (%s)\n", md5str, filename, fmd5 );
 			}
 	    } else {
@@ -319,11 +351,11 @@ while( !gzeof(zfile) ) {
 	 * Check the file nlink against the RPMTAG_FILELINKTOS value
 	 */
 
-	memcpy(num,ahdr.c_nlink,8);
-	num[8]=0;
-	flink=strtol(num,NULL,16);
+	flinktos=filelinktos;
+	for(i=0;i<fileindex;i++)
+	    flinktos+=strlen(flinktos)+1;
 
-	if( flinktos ) {
+	if( flink==1 && flinktos ) {
 	    if( S_ISREG(mode) && flink>1 && !*flinktos ) {
 		fprintf(stderr,"File link expected, but no FILELINKTOS entry\n");
 	    }
