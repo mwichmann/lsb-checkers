@@ -4,10 +4,13 @@ OBJS = hdrchk.o \
 	X11_ICE_ICElib_h.o \
 	X11_ICE_ICEutil_h.o \
 	X11_SM_SMlib_h.o \
+	X11_X_h.o \
 	X11_Xcms_h.o \
 	X11_Xlib_h.o \
+	X11_Xutil_h.o \
 	aio_h.o \
 	ctype_h.o \
+	curses_h.o \
 	dirent_h.o \
 	ftw_h.o \
 	glob_h.o \
@@ -37,19 +40,21 @@ OBJS = hdrchk.o \
 	sys_wait_h.o \
 	time_h.o \
 	ulimit_h.o \
-	unistd_h.o \
 	utime_h.o \
 	wchar_h.o \
 	wctype_h.o \
 	wordexp_h.o 
 
-all: hdrchk 
+all: hdrchk
 
 hdrchk: $(OBJS)
 	cc -o hdrchk $(OBJS)
 
 hdrchk.o: hdrchk.c
 	cc -g -c hdrchk.c
+
+
+install:
 
 
 clean:

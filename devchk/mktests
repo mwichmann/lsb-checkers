@@ -144,6 +144,8 @@ print MAKEFILE "\n";
 print MAKEFILE "hdrchk.o: hdrchk.c\n";
 print MAKEFILE "\tcc -g -c hdrchk.c\n";
 print MAKEFILE "\n\n";
+print MAKEFILE "install:\n";
+print MAKEFILE "\n\n";
 print MAKEFILE "clean:\n\trm -f \$\(OBJS)\n";
 close(MAKEFILE);
 
