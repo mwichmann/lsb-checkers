@@ -57,7 +57,8 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 */
 		if (!(*classp->vtablename)) 
 		{
-			fprintf(stderr,"Panic: No vtable name!!");
+			fprintf(stderr,"Panic: No vtable name for %s!!\n",
+							classp->name);
 			continue;
 		}
 		vtablep=dlsym(dlhndl,classp->vtablename);
@@ -67,9 +68,9 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 */
 		if (vtablep->baseoffset != classp->vtable->baseoffset) 
 		{
-			printf("Vtable baseoffset %d (expected) doesn't match %d (found)\n",
+			printf("Vtable baseoffset %ld (expected) doesn't match %ld (found)\n",
 						 classp->vtable->baseoffset, vtablep->baseoffset);
-			fprintf(stderr,"BASEO:%s:0:%d\n", classp->name,vtablep->baseoffset);
+			fprintf(stderr,"BASEO:%s:0:%ld\n", classp->name,vtablep->baseoffset);
 		}
 
 		if (vtablep->baseoffset != 0) 
