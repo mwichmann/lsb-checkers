@@ -112,17 +112,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6941,0);
 Msg("Find size of reg_syntax_t (6941)\n");
 #endif
 
-#if __no_sym__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9072,0);
-Msg("Find size of anon-regex.h-27 (9072)\n");
+#if 1
 #endif
 
-#if __no_sym__
-CheckTypeSize(reg_errcode_t,, 9073, )
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9073,0);
-Msg("Find size of reg_errcode_t (9073)\n");
+#if 1
+CheckTypeSize(reg_errcode_t,4, 9073, 1)
 #endif
 
 #if __i386__
