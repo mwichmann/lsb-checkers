@@ -149,49 +149,7 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"__ctype_get_mb_cur_max","GLIBC_2.2"},
 #endif
-#if __i386__
-	{"__ctype_tolower","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"__ctype_tolower","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"__ctype_tolower","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"__ctype_tolower","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"__ctype_tolower","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"__ctype_tolower","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"__ctype_tolower","GLIBC_2.2"},
-#endif
 	{"__ctype_tolower_loc","GLIBC_2.3"},
-#if __i386__
-	{"__ctype_toupper","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"__ctype_toupper","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"__ctype_toupper","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"__ctype_toupper","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"__ctype_toupper","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"__ctype_toupper","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"__ctype_toupper","GLIBC_2.2"},
-#endif
 	{"__ctype_toupper_loc","GLIBC_2.3"},
 #if __i386__
 	{"__cxa_atexit","GLIBC_2.1.3"},
