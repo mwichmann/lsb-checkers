@@ -1,15 +1,19 @@
-LIBS=libc libncurses libz libdl libpam libm libz #libpthread libgcc_s
+LIBS=libc libncurses libz libdl libpam libm libz libpthread #libgcc_s
 
-CFLAGS = -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED \
+CDEFINES = -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED \
 	-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE \
-	-D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include \
-	-fPIC -Wall
+	-D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS
+CFLAGS= $(CDEFINES) -fPIC -Wall -I/usr/X11R6/include 
 
 all:
 	for d in $(LIBS);do (cd $$d && make all CFLAGS="$(CFLAGS)" );done
 
 gensrc:
 	for d in $(LIBS);do (./gen_lib.pl -l $$d );done
+
+header:
+	for d in $(LIBS);do (cd $$d;cproto $(CDEFINES) *.c )| grep 'lsb_' ;done > lsb_funcs.h
+	
 
 clean:
 	for d in $(LIBS);do (cd $$d && make clean);done
