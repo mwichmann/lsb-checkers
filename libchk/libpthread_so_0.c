@@ -185,7 +185,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_attr_getstack","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"pthread_attr_getstack","GLIBC_2.2",0,"LSB-Core",4,1},
+	{"pthread_attr_getstack","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
 	{"pthread_attr_getstack","GLIBC_2.2",0,"LSB-Core",4,1},
@@ -680,22 +680,22 @@ struct versym libpthread_so_0[] = {
 	{"pthread_getconcurrency","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"pthread_getconcurrency","GLIBC_2.1",0,"LSB-Core",4,1},
+	{"pthread_getconcurrency","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"pthread_getconcurrency","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"pthread_getconcurrency","GLIBC_2.1",0,"LSB-Core",4,1},
+	{"pthread_getconcurrency","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_getconcurrency","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"pthread_getconcurrency","GLIBC_2.1",0,"LSB-Core",4,1},
+	{"pthread_getconcurrency","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"pthread_getconcurrency","GLIBC_2.1",0,"LSB-Core",4,1},
+	{"pthread_getconcurrency","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"pthread_getspecific","GLIBC_2.0",0,"LSB-Core",0,1},

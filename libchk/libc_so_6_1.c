@@ -6473,10 +6473,90 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"iconv_open","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
-	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",0,1},
-	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",0,1},
+#if __i386__
+	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",1,1},
+#endif
+#if __ia64__
+	{"if_freenameindex","GLIBC_2.2",0,"LSB-Core",1,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",1,1},
+#endif
+#if __powerpc64__
+	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",1,1},
+#endif
+#if __s390__ && !__s390x__
+	{"if_freenameindex","GLIBC_2.1",0,"LSB-Core",1,1},
+#endif
+#if __x86_64__
+	{"if_freenameindex","GLIBC_2.2.5",0,"LSB-Core",1,1},
+#endif
+#if __s390x__
+	{"if_freenameindex","GLIBC_2.2",0,"LSB-Core",1,1},
+#endif
+#if __i386__
+	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",4,1},
+#endif
+#if __ia64__
+	{"if_indextoname","GLIBC_2.2",0,"LSB-Core",8,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",4,1},
+#endif
+#if __powerpc64__
+	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",8,1},
+#endif
+#if __s390__ && !__s390x__
+	{"if_indextoname","GLIBC_2.1",0,"LSB-Core",4,1},
+#endif
+#if __x86_64__
+	{"if_indextoname","GLIBC_2.2.5",0,"LSB-Core",8,1},
+#endif
+#if __s390x__
+	{"if_indextoname","GLIBC_2.2",0,"LSB-Core",8,1},
+#endif
+#if __i386__
 	{"if_nameindex","GLIBC_2.1",0,"LSB-Core",0,1},
-	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",0,1},
+#endif
+#if __ia64__
+	{"if_nameindex","GLIBC_2.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"if_nameindex","GLIBC_2.1",0,"LSB-Core",0,1},
+#endif
+#if __powerpc64__
+	{"if_nameindex","GLIBC_2.1",0,"LSB-Core",0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"if_nameindex","GLIBC_2.1",0,"LSB-Core",0,1},
+#endif
+#if __x86_64__
+	{"if_nameindex","GLIBC_2.2.5",0,"LSB-Core",0,1},
+#endif
+#if __s390x__
+	{"if_nameindex","GLIBC_2.2",0,"LSB-Core",0,1},
+#endif
+#if __i386__
+	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",4,1},
+#endif
+#if __ia64__
+	{"if_nametoindex","GLIBC_2.2",0,"LSB-Core",4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",4,1},
+#endif
+#if __powerpc64__
+	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"if_nametoindex","GLIBC_2.1",0,"LSB-Core",4,1},
+#endif
+#if __x86_64__
+	{"if_nametoindex","GLIBC_2.2.5",0,"LSB-Core",4,1},
+#endif
+#if __s390x__
+	{"if_nametoindex","GLIBC_2.2",0,"LSB-Core",4,1},
+#endif
 #if __i386__
 	{"imaxabs","GLIBC_2.1.1",0,"LSB-Core",8,1},
 #endif
@@ -11981,6 +12061,27 @@ struct versym libc_so_6_1[] = {
 #endif
 	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",0,1},
 #if __i386__
+	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __ia64__
+	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __powerpc64__
+	{"sockatmark","GLIBC_2.3",0,"LSB-Core",4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __x86_64__
+	{"sockatmark","GLIBC_2.2.5",0,"LSB-Core",4,1},
+#endif
+#if __s390x__
+	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __i386__
 	{"socket","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
@@ -14651,22 +14752,22 @@ struct versym libc_so_6_1[] = {
 	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+	{"utmpname","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+	{"utmpname","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+	{"utmpname","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
-	{"utmpname","GLIBC_2.0",0,"LSB-Core",4,1},
+	{"utmpname","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
 	{"vasprintf","GLIBC_2.0",0,"LSB-Core",4,1},
