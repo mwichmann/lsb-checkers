@@ -17,6 +17,7 @@ int checkDT_STRSZ(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_STRTAB(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_SYMENT(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_SYMTAB(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
+int checkDT_ADDRRNGHI(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_ADDRRNGLO(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_AUXILIARY(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);
 int checkDT_BIND_NOW(ElfFile *, Elf32_Shdr *, Elf32_Dyn *, struct tetj_handle *);

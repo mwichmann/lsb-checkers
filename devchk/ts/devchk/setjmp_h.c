@@ -37,7 +37,7 @@ CheckTypeSize(__jmp_buf,24, 9089, 2)
 #elif __ia64__
 CheckTypeSize(__jmp_buf,24, 9089, 3)
 #elif 1
-CheckTypeSize(__jmp_buf,232, 9089, 1)
+CheckTypeSize(__jmp_buf,6, 9089, 1)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9089,0);
 Msg("Find size of jmp_buf (9089)\n");
@@ -48,7 +48,7 @@ CheckTypeSize(jmp_buf,1, 6962, 3)
 #elif __i386__
 CheckTypeSize(jmp_buf,156, 6962, 2)
 #elif 1
-CheckTypeSize(jmp_buf,364, 6962, 1)
+CheckTypeSize(jmp_buf,1, 6962, 1)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
 Msg("Find size of sigjmp_buf (6962)\n");
