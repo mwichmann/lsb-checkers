@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long long(*funcptr)(float) = 0;
+#undef llrintf
+static long long(*funcptr) (float ) = 0;
 
-long long llrintf(float arg0)
+long long llrintf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llrintf");
@@ -12,7 +13,7 @@ long long llrintf(float arg0)
 	return funcptr(arg0);
 }
 
-long long lsb_llrintf(float arg0)
+long long lsb_llrintf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llrintf");

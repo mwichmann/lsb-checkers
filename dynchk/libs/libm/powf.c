@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float, float) = 0;
+#undef powf
+static float(*funcptr) (float , float ) = 0;
 
-float powf(float arg0, float arg1)
+float powf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "powf");
@@ -13,7 +14,7 @@ float powf(float arg0, float arg1)
 	return funcptr(arg0, arg1);
 }
 
-float lsb_powf(float arg0, float arg1)
+float lsb_powf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "powf");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(float) = 0;
+#undef finitef
+static int(*funcptr) (float ) = 0;
 
-int finitef(float arg0)
+int finitef (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finitef");
@@ -12,7 +13,7 @@ int finitef(float arg0)
 	return funcptr(arg0);
 }
 
-int lsb_finitef(float arg0)
+int lsb_finitef (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finitef");

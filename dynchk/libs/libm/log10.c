@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double) = 0;
+#undef log10
+static double(*funcptr) (double ) = 0;
 
-double log10(double arg0)
+double log10 (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "log10");
@@ -12,7 +13,7 @@ double log10(double arg0)
 	return funcptr(arg0);
 }
 
-double lsb_log10(double arg0)
+double lsb_log10 (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "log10");

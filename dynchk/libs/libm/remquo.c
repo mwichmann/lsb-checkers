@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double, double, int *) = 0;
+#undef remquo
+static double(*funcptr) (double , double , int * ) = 0;
 
-double remquo(double arg0, double arg1, int * arg2)
+double remquo (double arg0 , double arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquo");
@@ -14,7 +15,7 @@ double remquo(double arg0, double arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-double lsb_remquo(double arg0, double arg1, int * arg2)
+double lsb_remquo (double arg0 , double arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquo");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double) = 0;
+#undef acosh
+static double(*funcptr) (double ) = 0;
 
-double acosh(double arg0)
+double acosh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acosh");
@@ -12,7 +13,7 @@ double acosh(double arg0)
 	return funcptr(arg0);
 }
 
-double lsb_acosh(double arg0)
+double lsb_acosh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acosh");

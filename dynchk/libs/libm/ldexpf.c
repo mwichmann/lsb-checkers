@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float, int) = 0;
+#undef ldexpf
+static float(*funcptr) (float , int ) = 0;
 
-float ldexpf(float arg0, int arg1)
+float ldexpf (float arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexpf");
@@ -13,7 +14,7 @@ float ldexpf(float arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-float lsb_ldexpf(float arg0, int arg1)
+float lsb_ldexpf (float arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexpf");

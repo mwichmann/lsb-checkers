@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(const char *) = 0;
+#undef nanl
+static long double(*funcptr) (const char * ) = 0;
 
-long double nanl(const char * arg0)
+long double nanl (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanl");
@@ -12,7 +13,7 @@ long double nanl(const char * arg0)
 	return funcptr(arg0);
 }
 
-long double lsb_nanl(const char * arg0)
+long double lsb_nanl (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanl");

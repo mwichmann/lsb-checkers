@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef cosf
+static float(*funcptr) (float ) = 0;
 
-float cosf(float arg0)
+float cosf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cosf");
@@ -12,7 +13,7 @@ float cosf(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_cosf(float arg0)
+float lsb_cosf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cosf");

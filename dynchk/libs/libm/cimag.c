@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef cimag
+static double(*funcptr) () = 0;
 
-double cimag()
+double cimag ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cimag");
 	return funcptr();
 }
 
-double lsb_cimag()
+double lsb_cimag ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cimag");

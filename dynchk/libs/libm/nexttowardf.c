@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float, long double) = 0;
+#undef nexttowardf
+static float(*funcptr) (float , long double ) = 0;
 
-float nexttowardf(float arg0, long double arg1)
+float nexttowardf (float arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nexttowardf");
@@ -13,7 +14,7 @@ float nexttowardf(float arg0, long double arg1)
 	return funcptr(arg0, arg1);
 }
 
-float lsb_nexttowardf(float arg0, long double arg1)
+float lsb_nexttowardf (float arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nexttowardf");

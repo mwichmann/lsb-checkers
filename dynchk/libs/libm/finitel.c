@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(long double) = 0;
+#undef finitel
+static int(*funcptr) (long double ) = 0;
 
-int finitel(long double arg0)
+int finitel (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finitel");
@@ -12,7 +13,7 @@ int finitel(long double arg0)
 	return funcptr(arg0);
 }
 
-int lsb_finitel(long double arg0)
+int lsb_finitel (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finitel");

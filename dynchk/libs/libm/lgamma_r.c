@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double, int *) = 0;
+#undef lgamma_r
+static double(*funcptr) (double , int * ) = 0;
 
-double lgamma_r(double arg0, int * arg1)
+double lgamma_r (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgamma_r");
@@ -13,7 +14,7 @@ double lgamma_r(double arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_lgamma_r(double arg0, int * arg1)
+double lsb_lgamma_r (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgamma_r");

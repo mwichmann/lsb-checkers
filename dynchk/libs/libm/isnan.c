@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(double) = 0;
+#undef isnan
+static int(*funcptr) (double ) = 0;
 
-int isnan(double arg0)
+int isnan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isnan");
@@ -12,7 +13,7 @@ int isnan(double arg0)
 	return funcptr(arg0);
 }
 
-int lsb_isnan(double arg0)
+int lsb_isnan (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isnan");

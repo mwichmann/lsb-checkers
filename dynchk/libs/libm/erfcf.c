@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef erfcf
+static float(*funcptr) (float ) = 0;
 
-float erfcf(float arg0)
+float erfcf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erfcf");
@@ -12,7 +13,7 @@ float erfcf(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_erfcf(float arg0)
+float lsb_erfcf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erfcf");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef ctan
+static double(*funcptr) () = 0;
 
-double ctan()
+double ctan ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctan");
 	return funcptr();
 }
 
-double lsb_ctan()
+double lsb_ctan ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctan");

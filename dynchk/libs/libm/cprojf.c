@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef cprojf
+static float(*funcptr) (float ) = 0;
 
-float cprojf(float arg0)
+float cprojf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cprojf");
@@ -12,7 +13,7 @@ float cprojf(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_cprojf(float arg0)
+float lsb_cprojf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cprojf");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(const char *) = 0;
+#undef nanf
+static float(*funcptr) (const char * ) = 0;
 
-float nanf(const char * arg0)
+float nanf (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanf");
@@ -12,7 +13,7 @@ float nanf(const char * arg0)
 	return funcptr(arg0);
 }
 
-float lsb_nanf(const char * arg0)
+float lsb_nanf (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanf");

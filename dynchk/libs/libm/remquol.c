@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double, long double, int *) = 0;
+#undef remquol
+static long double(*funcptr) (long double , long double , int * ) = 0;
 
-long double remquol(long double arg0, long double arg1, int * arg2)
+long double remquol (long double arg0 , long double arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquol");
@@ -14,7 +15,7 @@ long double remquol(long double arg0, long double arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-long double lsb_remquol(long double arg0, long double arg1, int * arg2)
+long double lsb_remquol (long double arg0 , long double arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquol");

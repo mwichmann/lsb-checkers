@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double, double, double) = 0;
+#undef fma
+static double(*funcptr) (double , double , double ) = 0;
 
-double fma(double arg0, double arg1, double arg2)
+double fma (double arg0 , double arg1 , double arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fma");
@@ -14,7 +15,7 @@ double fma(double arg0, double arg1, double arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-double lsb_fma(double arg0, double arg1, double arg2)
+double lsb_fma (double arg0 , double arg1 , double arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fma");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double) = 0;
+#undef gamma
+static double(*funcptr) (double ) = 0;
 
-double gamma(double arg0)
+double gamma (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gamma");
@@ -12,7 +13,7 @@ double gamma(double arg0)
 	return funcptr(arg0);
 }
 
-double lsb_gamma(double arg0)
+double lsb_gamma (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gamma");

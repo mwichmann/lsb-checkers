@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double) = 0;
+#undef asin
+static double(*funcptr) (double ) = 0;
 
-double asin(double arg0)
+double asin (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asin");
@@ -12,7 +13,7 @@ double asin(double arg0)
 	return funcptr(arg0);
 }
 
-double lsb_asin(double arg0)
+double lsb_asin (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asin");

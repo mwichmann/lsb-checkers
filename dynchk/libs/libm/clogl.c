@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double) = 0;
+#undef clogl
+static long double(*funcptr) (long double ) = 0;
 
-long double clogl(long double arg0)
+long double clogl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clogl");
@@ -12,7 +13,7 @@ long double clogl(long double arg0)
 	return funcptr(arg0);
 }
 
-long double lsb_clogl(long double arg0)
+long double lsb_clogl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clogl");

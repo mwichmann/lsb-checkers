@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(double) = 0;
+#undef ilogb
+static int(*funcptr) (double ) = 0;
 
-int ilogb(double arg0)
+int ilogb (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ilogb");
@@ -12,7 +13,7 @@ int ilogb(double arg0)
 	return funcptr(arg0);
 }
 
-int lsb_ilogb(double arg0)
+int lsb_ilogb (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ilogb");

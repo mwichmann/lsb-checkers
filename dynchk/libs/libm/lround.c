@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(double) = 0;
+#undef lround
+static long(*funcptr) (double ) = 0;
 
-long lround(double arg0)
+long lround (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lround");
@@ -12,7 +13,7 @@ long lround(double arg0)
 	return funcptr(arg0);
 }
 
-long lsb_lround(double arg0)
+long lsb_lround (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lround");

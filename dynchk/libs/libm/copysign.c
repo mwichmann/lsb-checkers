@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double, double) = 0;
+#undef copysign
+static double(*funcptr) (double , double ) = 0;
 
-double copysign(double arg0, double arg1)
+double copysign (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copysign");
@@ -13,7 +14,7 @@ double copysign(double arg0, double arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_copysign(double arg0, double arg1)
+double lsb_copysign (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copysign");

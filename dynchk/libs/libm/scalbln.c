@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double, long) = 0;
+#undef scalbln
+static double(*funcptr) (double , long ) = 0;
 
-double scalbln(double arg0, long arg1)
+double scalbln (double arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalbln");
@@ -13,7 +14,7 @@ double scalbln(double arg0, long arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_scalbln(double arg0, long arg1)
+double lsb_scalbln (double arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalbln");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(double, double) = 0;
+#undef fmod
+static double(*funcptr) (double , double ) = 0;
 
-double fmod(double arg0, double arg1)
+double fmod (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmod");
@@ -13,7 +14,7 @@ double fmod(double arg0, double arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_fmod(double arg0, double arg1)
+double lsb_fmod (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmod");

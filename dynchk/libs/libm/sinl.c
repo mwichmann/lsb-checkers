@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double) = 0;
+#undef sinl
+static long double(*funcptr) (long double ) = 0;
 
-long double sinl(long double arg0)
+long double sinl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinl");
@@ -12,7 +13,7 @@ long double sinl(long double arg0)
 	return funcptr(arg0);
 }
 
-long double lsb_sinl(long double arg0)
+long double lsb_sinl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinl");

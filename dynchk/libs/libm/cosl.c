@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double) = 0;
+#undef cosl
+static long double(*funcptr) (long double ) = 0;
 
-long double cosl(long double arg0)
+long double cosl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cosl");
@@ -12,7 +13,7 @@ long double cosl(long double arg0)
 	return funcptr(arg0);
 }
 
-long double lsb_cosl(long double arg0)
+long double lsb_cosl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cosl");

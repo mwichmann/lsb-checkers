@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct exception *) = 0;
+#include <math.h>
+#undef matherr
+static int(*funcptr) (struct exception * ) = 0;
 
-int matherr(struct exception * arg0)
+int matherr (struct exception * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "matherr");
@@ -12,7 +14,7 @@ int matherr(struct exception * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_matherr(struct exception * arg0)
+int lsb_matherr (struct exception * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "matherr");

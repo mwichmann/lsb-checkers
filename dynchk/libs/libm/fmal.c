@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double, long double, long double) = 0;
+#undef fmal
+static long double(*funcptr) (long double , long double , long double ) = 0;
 
-long double fmal(long double arg0, long double arg1, long double arg2)
+long double fmal (long double arg0 , long double arg1 , long double arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmal");
@@ -14,7 +15,7 @@ long double fmal(long double arg0, long double arg1, long double arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-long double lsb_fmal(long double arg0, long double arg1, long double arg2)
+long double lsb_fmal (long double arg0 , long double arg1 , long double arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmal");

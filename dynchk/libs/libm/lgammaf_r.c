@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float, int *) = 0;
+#undef lgammaf_r
+static float(*funcptr) (float , int * ) = 0;
 
-float lgammaf_r(float arg0, int * arg1)
+float lgammaf_r (float arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgammaf_r");
@@ -13,7 +14,7 @@ float lgammaf_r(float arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-float lsb_lgammaf_r(float arg0, int * arg1)
+float lsb_lgammaf_r (float arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgammaf_r");

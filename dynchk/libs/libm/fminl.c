@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(long double, long double) = 0;
+#undef fminl
+static long double(*funcptr) (long double , long double ) = 0;
 
-long double fminl(long double arg0, long double arg1)
+long double fminl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fminl");
@@ -13,7 +14,7 @@ long double fminl(long double arg0, long double arg1)
 	return funcptr(arg0, arg1);
 }
 
-long double lsb_fminl(long double arg0, long double arg1)
+long double lsb_fminl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fminl");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(float) = 0;
+#undef cacosf
+static float(*funcptr) (float ) = 0;
 
-float cacosf(float arg0)
+float cacosf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacosf");
@@ -12,7 +13,7 @@ float cacosf(float arg0)
 	return funcptr(arg0);
 }
 
-float lsb_cacosf(float arg0)
+float lsb_cacosf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacosf");
