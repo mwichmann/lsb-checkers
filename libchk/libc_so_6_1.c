@@ -1516,15 +1516,6 @@ struct versym libc_so_6_1[] = {
 	{"fdatasync","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
-	{"fdetach","GLIBC_2.1"},
-#endif
-#if defined(__ia64__)
-	{"fdetach","GLIBC_2.2"},
-#endif
-#if defined(__powerpc__)
-	{"fdetach","GLIBC_2.1"},
-#endif
-#if defined(__i386__)
 	{"fdopen","GLIBC_2.1"},
 #endif
 #if defined(__ia64__)
@@ -2272,15 +2263,6 @@ struct versym libc_so_6_1[] = {
 	{"getlogin","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
-	{"getmsg","GLIBC_2.1"},
-#endif
-#if defined(__ia64__)
-	{"getmsg","GLIBC_2.2"},
-#endif
-#if defined(__powerpc__)
-	{"getmsg","GLIBC_2.1"},
-#endif
-#if defined(__i386__)
 	{"getnetbyaddr","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
@@ -2717,15 +2699,6 @@ struct versym libc_so_6_1[] = {
 #endif
 #if defined(__powerpc__)
 	{"grantpt","GLIBC_2.1"},
-#endif
-#if defined(__i386__)
-	{"h_errno","GLIBC_2.0"},
-#endif
-#if defined(__ia64__)
-	{"h_errno","GLIBC_2.2"},
-#endif
-#if defined(__powerpc__)
-	{"h_errno","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
 	{"hcreate","GLIBC_2.0"},
