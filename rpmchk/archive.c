@@ -94,6 +94,8 @@ while( !gzeof(zfile) ) {
 	printf("nlink: %8.8s\n", ahdr.c_nlink );
 	printf("filesize: %8.8s\n", ahdr.c_filesize );
 	printf("namesize: %8.8s\n", ahdr.c_namesize );
+	printf("UID: %8.8s\n", ahdr.c_uid );
+	printf("GID: %8.8s\n", ahdr.c_gid );
 */
 	if( !(strncmp(ahdr.c_magic,"070701",6) == 0) ) {
         	snprintf( tmp_string, TMP_STRING_SIZE,

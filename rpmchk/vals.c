@@ -1,3 +1,4 @@
+#include "rpmchk.h"
 /*
  * This file contains some values which must match, and some places to
  * stick things which are discovered in one place, but used in another.
@@ -23,23 +24,24 @@ int  lsbdepidx=-1;
  * another part. 
  */
 unsigned char *sigdata;
-int  sigsize;
-int  archivesize;
-int  rpmtagsize;
-unsigned int	*filesizes;
-unsigned short	*filemodes;
-unsigned int	*filedevs;
-unsigned short	*filerdevs;
-unsigned int	*fileinodes;
-unsigned int	*filetimes;
+uint32_t  sigsize;
+uint32_t  archivesize;
+uint32_t  rpmtagsize;
+uint32_t *filesizes;
+uint16_t *filemodes;
+uint32_t *filedevs;
+uint16_t *filerdevs;
+uint32_t *fileinodes;
+uint32_t *filetimes;
 char	*filemd5s;
 char	*filelinktos;
-int	*fileusernames;
-int	*filegroupnames;
+char	*fileusernames;
+char	*filegroupnames;
 char	*filelangs;
-int	*dirindicies;
+uint32_t	*dirindicies;
 char	**basenames;
 char	**dirnames;
 int	numdirnames;
 
 int	hasPayloadFilesHavePrefix;
+int	rpmchkdebug;
