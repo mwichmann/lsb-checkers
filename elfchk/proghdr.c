@@ -59,63 +59,62 @@ return 0;
 int
 checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
-char tmp_string[TMP_STRING_SIZE+1];
-int i,secflags=0;
-int fail = 0;
+	char tmp_string[TMP_STRING_SIZE+1];
+	int i,secflags=0;
+	int fail = 0;
 
-tetj_tp_count++;
+	tetj_tp_count++;
 
-tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+	tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check PT_LOAD program header");
 
-if(hdr->p_flags&PF_R)
-	secflags|=SHF_ALLOC;
-if(hdr->p_flags&PF_W)
-	secflags|=SHF_WRITE;
-if(hdr->p_flags&PF_X)
-	secflags|=SHF_EXECINSTR;
+	if(hdr->p_flags&PF_R)
+		secflags|=SHF_ALLOC;
+	if(hdr->p_flags&PF_W)
+		secflags|=SHF_WRITE;
+	if(hdr->p_flags&PF_X)
+		secflags|=SHF_EXECINSTR;
 
-for(i=0;i<file->numsh;i++) {
-	if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
-	    (file->saddr[i].sh_addr <= hdr->p_vaddr+hdr->p_memsz) ) {
-		/* Section appears to belong to this segment */
+	for(i=0;i<file->numsh;i++) {
+		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+				(file->saddr[i].sh_addr <= hdr->p_vaddr+hdr->p_memsz) ) {
+			/* Section appears to belong to this segment */
 
-		/* See if section extends past this end of this segment */
-		if( file->saddr[i].sh_addr+file->saddr[i].sh_size >
-				hdr->p_vaddr+hdr->p_memsz ) {
-			snprintf(tmp_string, TMP_STRING_SIZE,
-				"Section %s does not fit in Segment", 
-          			ElfGetString(file, file->saddr[i].sh_name));
-			tetj_testcase_info(journal, tetj_activity_count,
-					tetj_tp_count, 0, 0, 0, tmp_string);
-			fprintf(stderr, "%s\n", tmp_string);
-			fail = 1;
+			/* See if section extends past this end of this segment */
+			if( file->saddr[i].sh_addr+file->saddr[i].sh_size >
+					hdr->p_vaddr+hdr->p_memsz ) {
+				snprintf(tmp_string, TMP_STRING_SIZE,
+								 "Section %s does not fit in Segment", 
+								 ElfGetString(file, file->saddr[i].sh_name));
+				tetj_testcase_info(journal, tetj_activity_count,
+													 tetj_tp_count, 0, 0, 0, tmp_string);
+				fprintf(stderr, "%s\n", tmp_string);
+				fail = 1;
+			}
+			/*
+			 * See if section flags correspond to those for this segment 
+			 *
+			 * A section may have fewer capabilities than the segment, but
+			 * should not require a capability not provided by the segment
+			 */
+			if( file->saddr[i].sh_flags&~secflags ) {
+				snprintf(tmp_string, TMP_STRING_SIZE,
+								 "Section %s flags %x does not correspond to Segment flags %x", 
+								 ElfGetString(file, file->saddr[i].sh_name),
+								 file->saddr[i].sh_flags, hdr->p_flags );
+				tetj_testcase_info(journal, tetj_activity_count,
+													 tetj_tp_count, 0, 0, 0, tmp_string);
+				fprintf(stderr, "%s\n", tmp_string);
+				fail = 1;
+			}
 		}
-		/*
-		 * See if section flags correspond to those for this segment 
-		 *
-		 * A section may have fewer capabilities than the segment, but
-		 * should not require a capability not provided by the segment
-		 */
-		if( file->saddr[i].sh_flags&~secflags ) {
-			snprintf(tmp_string, TMP_STRING_SIZE,
-				"Section %s flags %x does not correspond to Segment flags %x", 
-          			ElfGetString(file, file->saddr[i].sh_name),
-					file->saddr[i].sh_flags, hdr->p_flags );
-			tetj_testcase_info(journal, tetj_activity_count,
-					tetj_tp_count, 0, 0, 0, tmp_string);
-			fprintf(stderr, "%s\n", tmp_string);
-			fail = 1;
-		}
+
+		tetj_result(journal, tetj_activity_count,	tetj_tp_count, 
+								fail=1 ? TETJ_FAIL : TETJ_PASS);
+
+		tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 	}
-
-	tetj_result(journal, tetj_activity_count,	tetj_tp_count, 
-							fail=1 ? TETJ_FAIL : TETJ_PASS);
-
-	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-}
-
-return 0;
+	return 0;
 }
 
 int
