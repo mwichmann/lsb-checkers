@@ -1,3 +1,4 @@
+/* Generated file - Do Not Edit */
 #include "elfchk.h"
 #include "dynamic.h"
 
@@ -31,6 +32,7 @@ struct DynamicInfo DynamicInfo[] = {
 	{"DT_RELA",DT_RELA,checkDT_RELA},
 	{"DT_RELAENT",DT_RELAENT,checkDT_RELAENT},
 	{"DT_RELASZ",DT_RELASZ,checkDT_RELASZ},
+	{"DT_RELCOUNT",DT_RELCOUNT,checkDT_RELCOUNT},
 	{"DT_RELENT",DT_RELENT,checkDT_RELENT},
 	{"DT_RELSZ",DT_RELSZ,checkDT_RELSZ},
 	{"DT_RPATH",DT_RPATH,checkDT_RPATH},

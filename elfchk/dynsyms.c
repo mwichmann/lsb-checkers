@@ -1,3 +1,4 @@
+/* Generated file - Do Not Edit */
 #include "elfchk.h"
 struct versym DynSyms[] = {
 	{"COLS",""},
@@ -2308,6 +2309,7 @@ struct versym DynSyms[] = {
 	{"l64a","GLIBC_2.0"},
 	{"labs","GLIBC_2.0"},
 	{"lchown","GLIBC_2.0"},
+	{"lcong48","GLIBC_2.0"},
 	{"ldexp","GLIBC_2.0"},
 	{"ldexpf","GLIBC_2.0"},
 	{"ldexpl","GLIBC_2.0"},
@@ -2585,6 +2587,7 @@ struct versym DynSyms[] = {
 	{"pthread_self","GLIBC_2.0"},
 	{"pthread_setcancelstate","GLIBC_2.0"},
 	{"pthread_setcanceltype","GLIBC_2.0"},
+	{"pthread_setconcurrency",""},
 	{"pthread_setschedparam","GLIBC_2.0"},
 	{"pthread_setspecific","GLIBC_2.0"},
 	{"pthread_sigmask","GLIBC_2.0"},
@@ -2710,6 +2713,7 @@ struct versym DynSyms[] = {
 	{"setbuffer","GLIBC_2.0"},
 	{"setcontext","GLIBC_2.0"},
 	{"setegid","GLIBC_2.0"},
+	{"setenv",""},
 	{"seteuid","GLIBC_2.0"},
 	{"setgid","GLIBC_2.0"},
 	{"setgrent","GLIBC_2.0"},
@@ -2731,6 +2735,7 @@ struct versym DynSyms[] = {
 	{"setregid","GLIBC_2.0"},
 	{"setreuid","GLIBC_2.0"},
 	{"setrlimit","GLIBC_2.2"},
+	{"setrlimit64",""},
 	{"setscrreg",""},
 	{"setservent","GLIBC_2.0"},
 	{"setsid","GLIBC_2.0"},
@@ -2970,6 +2975,7 @@ struct versym DynSyms[] = {
 	{"ungetwc","GLIBC_2.2"},
 	{"unlink","GLIBC_2.0"},
 	{"unlockpt","GLIBC_2.1"},
+	{"unsetenv",""},
 	{"untouchwin",""},
 	{"use_env",""},
 	{"usleep","GLIBC_2.0"},
@@ -2990,6 +2996,7 @@ struct versym DynSyms[] = {
 	{"vsprintf","GLIBC_2.0"},
 	{"vswprintf","GLIBC_2.2"},
 	{"vswscanf","GLIBC_2.2"},
+	{"vsyslog",""},
 	{"vw_printw",""},
 	{"vw_scanw",""},
 	{"vwprintf","GLIBC_2.2"},
