@@ -259,6 +259,8 @@ CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,2,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,12,2,40622)
 #elif __s390x__
 CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 12)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,12,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,12,40619)
 CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,12,40620)
 CheckOffset(struct _pthread_cleanup_buffer,__arg,8,12,40620)
 CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,12,40621)
@@ -267,6 +269,8 @@ CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,12,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,24,12,40622)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 6)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,6,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,6,40619)
 CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,6,40620)
 CheckOffset(struct _pthread_cleanup_buffer,__arg,4,6,40620)
 CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,6,40621)
@@ -275,6 +279,8 @@ CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,6,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,12,6,40622)
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 10)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,10,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,10,40619)
 CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,10,40620)
 CheckOffset(struct _pthread_cleanup_buffer,__arg,4,10,40620)
 CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,10,40621)
@@ -283,6 +289,8 @@ CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,10,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,12,10,40622)
 #elif __ia64__
 CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 3)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,3,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,3,40619)
 CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,3,40620)
 CheckOffset(struct _pthread_cleanup_buffer,__arg,8,3,40620)
 CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,3,40621)
@@ -290,14 +298,19 @@ CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,3,40621)
 CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,3,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,24,3,40622)
 #elif __powerpc64__
-CheckTypeSize(struct _pthread_cleanup_buffer,0, 6931, 9)
-Msg("Missing member data for _pthread_cleanup_buffer on PPC64\n");
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 9)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,9,40619)
 CheckOffset(struct _pthread_cleanup_buffer,__routine,0,9,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,0,9,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,0,9,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,0,9,40622)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,9,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,9,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,9,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,9,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,9,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,9,40622)
 #elif __x86_64__
 CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 11)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,11,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,11,40619)
 CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,11,40620)
 CheckOffset(struct _pthread_cleanup_buffer,__arg,8,11,40620)
 CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,11,40621)
@@ -360,15 +373,15 @@ Msg("Find size of pthread_once_t (9062)\n");
 #endif
 
 #if __arm__
-CheckTypeSize(__pthread_cond_align_t,4, 10917, 4)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 4)
 #elif __i386__
-CheckTypeSize(__pthread_cond_align_t,4, 10917, 2)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 2)
 #elif __ia64__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__pthread_cond_align_t,4, 10917, 6)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__pthread_cond_align_t,4, 10917, 10)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 10)
 #elif __powerpc64__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 9)
 #elif __s390x__
@@ -498,11 +511,11 @@ CheckTypeSize(pthread_cond_t,48, 9051, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_cond_t,48, 9051, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_cond_t,12, 9051, 10)
+CheckTypeSize(pthread_cond_t,48, 9051, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_cond_t,24, 9051, 9)
+CheckTypeSize(pthread_cond_t,48, 9051, 9)
 #elif __s390x__
-CheckTypeSize(pthread_cond_t,24, 9051, 12)
+CheckTypeSize(pthread_cond_t,48, 9051, 12)
 #elif __x86_64__
 CheckTypeSize(pthread_cond_t,48, 9051, 11)
 #else

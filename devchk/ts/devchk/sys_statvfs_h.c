@@ -256,7 +256,7 @@ CheckOffset(struct statvfs64,__f_spare,88,9,40149)
 #endif
 
 #if __s390x__
-CheckTypeSize(struct statvfs,96, 10552, 12)
+CheckTypeSize(struct statvfs,112, 10552, 12)
 CheckMemberSize(struct statvfs,f_bsize,8,12,40262)
 CheckOffset(struct statvfs,f_bsize,0,12,40262)
 CheckMemberSize(struct statvfs,f_frsize,8,12,40263)
@@ -278,13 +278,13 @@ CheckOffset(struct statvfs,f_fsid,64,12,40270)
 CheckMemberSize(struct statvfs,f_flag,8,12,40272)
 CheckOffset(struct statvfs,f_flag,72,12,40272)
 CheckMemberSize(struct statvfs,f_namemax,8,12,40273)
-CheckOffset(struct statvfs,f_namemax,88,12,40273)
-CheckMemberSize(struct statvfs,__f_spare,32,12,40271)
-CheckOffset(struct statvfs,__f_spare,96,12,40271)
+CheckOffset(struct statvfs,f_namemax,80,12,40273)
+CheckMemberSize(struct statvfs,__f_spare,24,12,40271)
+CheckOffset(struct statvfs,__f_spare,88,12,40271)
 #endif
 
 #if __s390x__
-CheckTypeSize(struct statvfs64,96, 10553, 12)
+CheckTypeSize(struct statvfs64,112, 10553, 12)
 CheckMemberSize(struct statvfs64,f_bsize,8,12,40274)
 CheckOffset(struct statvfs64,f_bsize,0,12,40274)
 CheckMemberSize(struct statvfs64,f_frsize,8,12,40275)
