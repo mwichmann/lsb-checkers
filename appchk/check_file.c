@@ -11,7 +11,7 @@
 #include "symbols.h"
 
 ElfFile * check_file(char *filename, struct tetj_handle *journal,
-                int isProgram)
+                Elf_type isLib)
 {
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
@@ -75,7 +75,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
   }
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-  checkElf(elffile, isProgram, journal);
+  checkElf(elffile, isLib, journal);
   if (elffile->symhdr==NULL)
   {
     strncpy(tmp_string, 
@@ -88,7 +88,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
   {
       /* Only check symbols if file is a program and not one of the
          extra libs provided on the command line */
-      if (isProgram) 
+      if (isLib == ELF_IS_EXEC) 
       {
         checksymbols(elffile, journal);
       }
@@ -97,7 +97,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
   return elffile;
 }
 
-void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
+void check_lib(char *filename, struct tetj_handle *journal, Elf_type isLib)
 {
   int i;
   char tmp_string[TMP_STRING_SIZE+1];
@@ -114,7 +114,7 @@ void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
   }
 
   /* Check all headers in extra lib */
-  checkElfhdr(elffile, isProgram, journal);
+  checkElfhdr(elffile, isLib, journal);
 
   /* Search through program headers for the one with the dynamic
      symbols in it. */

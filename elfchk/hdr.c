@@ -11,7 +11,7 @@
 #include "tetj.h"
 
 void
-checkElfhdr(ElfFile *file1, int isProgram, struct tetj_handle *journal)
+checkElfhdr(ElfFile *file1, Elf_type expect, struct tetj_handle *journal)
 {
 #define TMP_STRING_SIZE (400)
   char tmp_string[TMP_STRING_SIZE+1];
@@ -110,13 +110,16 @@ tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
 
 /* Check e_type */
 
-if (isProgram)
-{
-  checkhdrfield( e_type, ET_EXEC )
-}
-else
-{
-  checkhdrfield( e_type, ET_DYN )
+switch( expect ) {
+	case ELF_IS_EXEC:
+		checkhdrfield( e_type, ET_EXEC )
+		break;
+	case ELF_IS_DSO:
+		checkhdrfield( e_type, ET_DYN )
+		break;
+	case ELF_IS_OBJ:
+		checkhdrfield( e_type, ET_REL )
+		break;
 }
 
 /* Check e_machine */
