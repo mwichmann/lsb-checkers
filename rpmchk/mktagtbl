@@ -9,10 +9,10 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 sub
 dumptable($$)
 {
-local($ttype,$tname)=@_;
+local($condition,$tname)=@_;
 
 $select = "SELECT DISTINCT * FROM RpmTag ";
-$select.= "WHERE Rgroup='Private' OR Rgroup='".$ttype."' ";
+$select.= "WHERE Rgroup='Private' OR ".$condition." ";
 $select.= "ORDER BY Rgroup,Rtag ";
 
 #print "$select\n";
@@ -40,8 +40,8 @@ print "/* Generated file - Do Not Edit */\n\n";
 print "#include \"rpmchk.h\"\n";
 print "#include \"tagfuncs.h\"\n\n";
 
-dumptable("Signature","SigTags");
+dumptable("Rgroup='Signature'","SigTags");
 print "\nint numSigIdxTags = sizeof(SigTags)/sizeof(RpmIdxTagFuncRec);\n\n";
-dumptable("Header","HdrTags");
+dumptable("(Rgroup!='Header' AND Rgroup!='Ignore')","HdrTags");
 print "int numHdrIdxTags = sizeof(HdrTags)/sizeof(RpmIdxTagFuncRec);\n";
 
