@@ -66,6 +66,9 @@ struct DynamicInfo DynamicInfo[] = {
 #if __s390x__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* __s390x__ */
+#if __m32r__
+	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
+#endif /* __m32r__ */
 	{"DT_PLTREL",DT_PLTREL,checkDT_PLTREL},
 	{"DT_PLTRELSZ",DT_PLTRELSZ,checkDT_PLTRELSZ},
 	{"DT_POSFLAG_1",DT_POSFLAG_1,checkDT_POSFLAG_1},
@@ -89,6 +92,9 @@ struct DynamicInfo DynamicInfo[] = {
 #if __s390x__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
 #endif /* __s390x__ */
+#if __m32r__
+	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
+#endif /* __m32r__ */
 	{"DT_RELAENT",DT_RELAENT,checkDT_RELAENT},
 	{"DT_RELASZ",DT_RELASZ,checkDT_RELASZ},
 	{"DT_RELCOUNT",DT_RELCOUNT,checkDT_RELCOUNT},

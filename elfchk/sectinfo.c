@@ -47,6 +47,9 @@ struct SectionInfo SectionInfo[] = {
 #if __x86_64__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __x86_64__ */
+#if __m32r__
+	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __m32r__ */
 #if __powerpc__ && !__powerpc64__
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -97,6 +100,9 @@ struct SectionInfo SectionInfo[] = {
 #if __x86_64__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __x86_64__ */
+#if __m32r__
+	{".plt",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+#endif /* __m32r__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
 #if __i386__
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
@@ -152,6 +158,9 @@ struct SectionInfo SectionInfo[] = {
 #if __x86_64__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __x86_64__ */
+#if __m32r__
+	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __m32r__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.got",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -176,6 +185,9 @@ struct SectionInfo SectionInfo[] = {
 #if __x86_64__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __x86_64__ */
+#if __m32r__
+	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __m32r__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -193,6 +205,9 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc64__
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 #endif /* __powerpc64__ */
+#if __m32r__
+	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+#endif /* __m32r__ */
 #if __ia64__
 	{".sdata",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
