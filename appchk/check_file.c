@@ -82,6 +82,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
             "Not a dynamically linked executable.\n"
            "No point checking symbols\n", TMP_STRING_SIZE);
     tetj_testcase_info(journal, tetj_activity_count, 0, 0, 0, 0, tmp_string);
+    fprintf(stderr, tmp_string);
   }
   else
   {
