@@ -1,19 +1,19 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libpam_so_0[] = {
-	{"pam_acct_mgmt",""},
-	{"pam_authenticate",""},
-	{"pam_chauthtok",""},
-	{"pam_close_session",""},
-	{"pam_end",""},
-	{"pam_fail_delay",""},
-	{"pam_get_item",""},
-	{"pam_getenvlist",""},
-	{"pam_open_session",""},
-	{"pam_set_item",""},
-	{"pam_setcred",""},
-	{"pam_start",""},
-	{"pam_strerror",""},
+	{"pam_acct_mgmt","",0,"",0,1},
+	{"pam_authenticate","",0,"",0,1},
+	{"pam_chauthtok","",0,"",0,1},
+	{"pam_close_session","",0,"",0,1},
+	{"pam_end","",0,"",0,1},
+	{"pam_fail_delay","",0,"",0,1},
+	{"pam_get_item","",0,"",0,1},
+	{"pam_getenvlist","",0,"",0,1},
+	{"pam_open_session","",0,"",0,1},
+	{"pam_set_item","",0,"",0,1},
+	{"pam_setcred","",0,"",0,1},
+	{"pam_start","",0,"",0,1},
+	{"pam_strerror","",0,"",0,1},
 	{0,0}};
 
 struct classinfo *libpam_so_0_classinfo[] = {
