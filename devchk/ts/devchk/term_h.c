@@ -29,7 +29,7 @@ Msg("Checking data structures in term.h\n");
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(TERMINAL,0, 10846, 6)
 #elif __i386__
-CheckTypeSize(TERMINAL,0, 10846, 2)
+CheckTypeSize(TERMINAL,168, 10846, 2)
 #elif __s390__ && !__s390x__
 CheckTypeSize(TERMINAL,0, 10846, 10)
 #elif __s390x__
