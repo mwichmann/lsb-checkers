@@ -2305,12 +2305,6 @@ struct versym libc_so_6[] = {
 	{"gethostbyaddr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
-	{"gethostbyaddr_r","GLIBC_2.1.2"},
-#endif
-#if defined(__ia64__)
-	{"gethostbyaddr_r","GLIBC_2.2"},
-#endif
-#if defined(__i386__)
 	{"gethostbyname","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
