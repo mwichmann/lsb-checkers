@@ -16,7 +16,6 @@ extern void X11_Xlib_h();
 extern void X11_Xutil_h();
 extern void X11_extensions_security_h();
 extern void X11_extensions_sync_h();
-extern void assert_h();
 extern void complex_h();
 extern void cpio_h();
 extern void ctype_h();

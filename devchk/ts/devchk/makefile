@@ -17,7 +17,6 @@ OBJS = hdrchk.o \
 	X11_Xutil_h.o \
 	X11_extensions_security_h.o \
 	X11_extensions_sync_h.o \
-	assert_h.o \
 	complex_h.o \
 	cpio_h.o \
 	ctype_h.o \
