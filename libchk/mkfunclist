@@ -97,16 +97,38 @@ print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\n";
 print $LIB "\t".$vtablename."_name,\n";
 print $LIB "\t};\n\n";
 
+#
+# Output base info type here.
+#
+$baseinfoname=$classbase."_baseinfo";
+
+$select = "SELECT * FROM VMIBaseTypes ";
+$select.= "WHERE VBTcid=".$$class{'CIid'}." ";
+$select.= "ORDER BY VBTpos";
+
+#print $select;
+
+print $LIB "struct base_type_info ".$baseinfoname."[] = {\n";
+$vsth = $Dbh->query($select) || die $Dbh->errmsg();
+for(1..$$class{'CInumvmitypes'}) {
+	%entry=$vsth->fetchhash;
+	print $LIB "\t{\"".getinterfacename($entry{'VBTbasetype'})."\",";
+	print $LIB "\t".$entry{'VBTflags'}."},\n";
+}
+print $LIB "\t};\n\n";
+
 print $LIB "struct classinfo ".$$class{'CIname'}."_classinfo = {\n";
 print $LIB "\t\"".$$class{'CIname'}."\",\n";
-#print $LIB "\t\"_ZTV".$classbase."\",\n";
 print $LIB "\t\"".getinterfacename($$class{'CIvtable'})."\",\n";
 print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\n";
-#print $LIB "\t\"_ZTI".$classbase."\",\n";
+print $LIB "\t\"".getinterfacename($$class{'CIbase'})."\",\n";
 print $LIB "\t$numvtablefuns,\n";
 print $LIB "\t$numtypeinfofuns,\n";
+print $LIB "\t".$$class{'CInumvmitypes'}.",\n";
+print $LIB "\t".$$class{'CIflags'}.",\n";
 print $LIB "\t&$typeinfoname,\n";
 print $LIB "\t&$vtablename,\n";
+print $LIB "\t$baseinfoname,\n";
 print $LIB "\t};\n\n";
 }
 

@@ -39,9 +39,9 @@ for(i=0;classes[i]!=NULL;i++) {
 	/*
 	 * First, check the Vtable info
 	 */
+	if( *classp->vtablename ) {
 	vtablep=dlsym(dlhndl,classp->vtablename);
 
-if( vtablep ) {
 	/*
 	 * Check the baseoffset
 	 */
@@ -93,13 +93,16 @@ fprintf(stderr,"RTTI:%s:0:%s\n", classp->name,dlinfo.dli_sname);
 fprintf(stderr,"VFUNC:%s:%d:%s\n", classp->name,j,dlinfo.dli_sname);
 			}
 		}
-} else {
+}
+#if 0
+else {
 	char	str[256];
 	
 	sprintf(str,"_ZTV%s",&(classp->name[2]));
 fprintf(stderr,"vtabl:%s:0:%s\n", classp->name,str);
 	printf("Vtable name %s not found\n",classp->vtablename);
 }
+#endif
 
 	/*
 	 * Second, check the RTTI info
@@ -169,33 +172,83 @@ fprintf(stderr,"BASEV:%s:0:%s\n", classp->name,dlinfo.dli_sname);
 	 */
 	if( strcmp(classp->typeinfo->basevtable,
 			"_ZTVN10__cxxabiv120__si_class_type_infoE") == 0 ) {
+		struct si_classtypeinfo_mem *si_rttip;
+
+		si_rttip=(struct si_classtypeinfo_mem*)rttip;
 		/*
-		 * One additional field to check
+		 * Check the basename.
 		 */
-		basetypes=((struct si_classtypeinfo_mem*)rttip)->basetypeinfo;
+		symp=dlsym(dlhndl,classp->basename);
+		dladdr(si_rttip->basetype,&dlinfo);
+		if( symp != si_rttip->basetype ) {
+		printf("Base type %p (expected) doesn't match %p %s (found)\n",
+			symp, si_rttip->basetype, dlinfo.dli_sname );
+fprintf(stderr,"BASEN:%s:0:%s\n", classp->name,dlinfo.dli_sname);
+		}
+		basetypes=si_rttip->basetypeinfo;
 	}
 	/*
 	 * abi::__vmi_class_type_info
 	 */
 	if( strcmp(classp->typeinfo->basevtable,
 			"_ZTVN10__cxxabiv121__vmi_class_type_infoE") == 0 ) {
+		struct vmi_classtypeinfo_mem *vmi_rttip;
+		struct base_type_info_mem *btip;
+
+		vmi_rttip=(struct vmi_classtypeinfo_mem*)rttip;
 		/*
 		 * Three additional fields to check
 		 */
-		struct vmi_classtypeinfo_mem *vmictip;
-
-		vmictip=((struct vmi_classtypeinfo_mem*)rttip);
-		basetypes=(void **)((char *)vmictip->base_info)+
-			  (vmictip->base_count*sizeof(struct base_type_info));
+		if( vmi_rttip->flags != classp->flags ) {
+			fprintf(stderr,"VMIF:%s:0:%d\n",
+				classp->name,vmi_rttip->flags);
+			}
+		if( vmi_rttip->base_count != classp->numvmitypes ) {
+			fprintf(stderr,"NVMI:%s:0:%d\n",
+				classp->name,vmi_rttip->base_count);
+		}
+		for(j=0;j<classp->numvmitypes;j++) {
+			btip=&(vmi_rttip->base_info[j]);
+			dladdr(btip->base_type,&dlinfo);
+			symp=dlsym(dlhndl,classp->btinfo[j].base_type);
+			if( symp != btip->base_type ) {
+				fprintf(stderr,"BTIB:%s:%d:%s\n",
+				classp->name,j,dlinfo.dli_sname);
+				}
+			if( btip->offset_flags !=
+			    classp->btinfo[j].offset_flags ) {
+				fprintf(stderr,"BTIF:%s:%d:%d\n",
+				classp->name,j,btip->offset_flags);
+				}
+		}
+		basetypes=(void **)((char *)vmi_rttip->base_info)+
+			  (vmi_rttip->base_count*sizeof(struct base_type_info_mem));
 	}
 	/*
 	 * abi::__pbase_type_info
 	 */
 	if( strcmp(classp->typeinfo->basevtable,
 			"_ZTVN10__cxxabiv119__pointer_type_infoE") == 0 ) {
+		struct pbasetypeinfo_mem *p_rttip;
+
+		p_rttip=(struct pbasetypeinfo_mem*)rttip;
 		/*
 		 * Two additional fields to check
 		 */
+		/*
+		 * Check the basename.
+		 */
+		symp=dlsym(dlhndl,classp->basename);
+		dladdr(p_rttip->pointee,&dlinfo);
+		if( symp != p_rttip->pointee ) {
+		printf("Base type %p (expected) doesn't match %p %s (found)\n",
+			symp, p_rttip->pointee, dlinfo.dli_sname );
+fprintf(stderr,"BASEN:%s:0:%s\n", classp->name,dlinfo.dli_sname);
+		}
+		if( p_rttip->offset_flags != classp->flags ) {
+			fprintf(stderr,"VMIF:%s:0:%d\n",
+				classp->name,p_rttip->offset_flags);
+			}
 		basetypes=((struct pbasetypeinfo_mem*)rttip)->basetypeinfo;
 	}
 
@@ -226,6 +279,10 @@ fprintf(stderr,"BASET:%s:%d:%s\n", classp->name,j,dlinfo.dli_sname);
 	printf("\tname: %s\n", rttip->name);
 */
 	} else {
+	char	str[256];
+	
+	sprintf(str,"_ZTI%s",&(classp->name[2]));
+fprintf(stderr,"RTTI:%s:0:%s\n", classp->name,str);
 	printf("RTTI name %s not found\n",classp->rttiname);
 }
 	}
