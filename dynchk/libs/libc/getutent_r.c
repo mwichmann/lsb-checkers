@@ -21,7 +21,6 @@ int getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 	validate_Rdaddress( arg0, "getutent_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getutent_r - arg0");
 	validate_Rdaddress( arg1, "getutent_r - arg1");
-	validate_Rdaddress(* arg1, "getutent_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getutent_r - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -8,6 +8,7 @@
 static int(*funcptr) (sem_t * , const struct timespec * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int sem_timedwait (sem_t * arg0 , const struct timespec * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int sem_timedwait (sem_t * arg0 , const struct timespec * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "sem_timedwait()");
 	validate_Rdaddress( arg0, "sem_timedwait - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sem_timedwait - arg0");
 	validate_Rdaddress( arg1, "sem_timedwait - arg1");

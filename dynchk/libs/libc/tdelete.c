@@ -22,7 +22,6 @@ void * tdelete (const void * arg0 , void * * arg1 , __compar_fn_t arg2 )
 	validate_Rdaddress( arg0, "tdelete - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tdelete - arg0");
 	validate_Rdaddress( arg1, "tdelete - arg1");
-	validate_Rdaddress(* arg1, "tdelete - arg1");
 		validate_NULL_TYPETYPE(  arg1, "tdelete - arg1");
 		validate_NULL_TYPETYPE(  arg2, "tdelete - arg2");
 	}

@@ -8,6 +8,7 @@
 static int(*funcptr) (pthread_attr_t * , size_t ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int pthread_attr_setstacksize (pthread_attr_t * arg0 , size_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -17,6 +18,7 @@ int pthread_attr_setstacksize (pthread_attr_t * arg0 , size_t arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "pthread_attr_setstacksize()");
 	validate_Rdaddress( arg0, "pthread_attr_setstacksize - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_attr_setstacksize - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pthread_attr_setstacksize - arg1");

@@ -410,8 +410,11 @@ sub write_addy_checker
 	if($typeform eq "Pointer")
 	{
 		print $fh "\tvalidate_Rdaddress($left_name $arg_name, \"$func_name - $left_name$arg_name\");\n";
-		$left_name = "*".$left_name;
-		write_addy_checker($fh, $basetype, $arg_name, $left_name, $func_name);
+		# Only do this if we have a specific type to test against.
+		# Recursing on pointer to pointers doesn't work because the
+		# values may not be defined or valid after the first pointer.
+		#$left_name = "*".$left_name;
+		#write_addy_checker($fh, $basetype, $arg_name, $left_name, $func_name);
 	}
 	elsif($typeform eq "FuncPtr")
 	{

@@ -22,7 +22,6 @@ double __strtod_internal (const char * arg0 , char * * arg1 , int arg2 )
 		validate_NULL_TYPETYPE(  arg0, "__strtod_internal - arg0");
 		if( arg1 ) {
 	validate_Rdaddress( arg1, "__strtod_internal - arg1");
-	validate_Rdaddress(* arg1, "__strtod_internal - *arg1");
 		}
 		validate_NULL_TYPETYPE(  arg1, "__strtod_internal - arg1");
 		validate_NULL_TYPETYPE(  arg2, "__strtod_internal - arg2");

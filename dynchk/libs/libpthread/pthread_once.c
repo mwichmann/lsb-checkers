@@ -7,6 +7,7 @@
 static int(*funcptr) (pthread_once_t * , void(* )(void)) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int pthread_once (pthread_once_t * arg0 , void(* arg1 )(void))
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int pthread_once (pthread_once_t * arg0 , void(* arg1 )(void))
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "pthread_once()");
 	validate_Rdaddress( arg0, "pthread_once - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_once - arg0");
 validate_Rdaddress( arg1, "pthread_once - arg1");

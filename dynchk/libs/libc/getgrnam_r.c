@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <grp.h>
 #include <stddef.h>
+#include <grp.h>
 #undef getgrnam_r
 static int(*funcptr) (const char * , struct group * , char * , size_t , struct group * * ) = 0;
 
@@ -27,7 +27,6 @@ int getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t a
 		validate_NULL_TYPETYPE(  arg2, "getgrnam_r - arg2");
 		validate_NULL_TYPETYPE(  arg3, "getgrnam_r - arg3");
 	validate_Rdaddress( arg4, "getgrnam_r - arg4");
-	validate_Rdaddress(* arg4, "getgrnam_r - arg4");
 		validate_NULL_TYPETYPE(  arg4, "getgrnam_r - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

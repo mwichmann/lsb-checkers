@@ -22,7 +22,6 @@ bool_t xdr_pointer (XDR * arg0 , char * * arg1 , u_int arg2 , xdrproc_t arg3 )
 	validate_Rdaddress( arg0, "xdr_pointer - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_pointer - arg0");
 	validate_Rdaddress( arg1, "xdr_pointer - arg1");
-	validate_Rdaddress(* arg1, "xdr_pointer - arg1");
 		validate_NULL_TYPETYPE(  arg1, "xdr_pointer - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xdr_pointer - arg2");
 		validate_NULL_TYPETYPE(  arg3, "xdr_pointer - arg3");

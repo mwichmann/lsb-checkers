@@ -22,7 +22,6 @@ long long wcstoll (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 	validate_Rdaddress( arg0, "wcstoll - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstoll - arg0");
 	validate_Rdaddress( arg1, "wcstoll - arg1");
-	validate_Rdaddress(* arg1, "wcstoll - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcstoll - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wcstoll - arg2");
 	}

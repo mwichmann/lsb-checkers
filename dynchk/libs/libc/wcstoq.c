@@ -22,7 +22,6 @@ long long wcstoq (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 	validate_Rdaddress( arg0, "wcstoq - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstoq - arg0");
 	validate_Rdaddress( arg1, "wcstoq - arg1");
-	validate_Rdaddress(* arg1, "wcstoq - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcstoq - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wcstoq - arg2");
 	}

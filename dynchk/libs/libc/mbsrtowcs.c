@@ -23,7 +23,6 @@ size_t mbsrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , mbstate_t
 	validate_Rdaddress( arg0, "mbsrtowcs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mbsrtowcs - arg0");
 	validate_Rdaddress( arg1, "mbsrtowcs - arg1");
-	validate_Rdaddress(* arg1, "mbsrtowcs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "mbsrtowcs - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mbsrtowcs - arg2");
 	validate_Rdaddress( arg3, "mbsrtowcs - arg3");

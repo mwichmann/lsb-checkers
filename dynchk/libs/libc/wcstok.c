@@ -24,7 +24,6 @@ wchar_t * wcstok (wchar_t * arg0 , const wchar_t * arg1 , wchar_t * * arg2 )
 	validate_Rdaddress( arg1, "wcstok - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcstok - arg1");
 	validate_Rdaddress( arg2, "wcstok - arg2");
-	validate_Rdaddress(* arg2, "wcstok - arg2");
 		validate_NULL_TYPETYPE(  arg2, "wcstok - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -21,7 +21,6 @@ long double __strtold_internal (const char * arg0 , char * * arg1 , int arg2 )
 	validate_Rdaddress( arg0, "__strtold_internal - arg0");
 		validate_NULL_TYPETYPE(  arg0, "__strtold_internal - arg0");
 	validate_Rdaddress( arg1, "__strtold_internal - arg1");
-	validate_Rdaddress(* arg1, "__strtold_internal - arg1");
 		validate_RWaddress(  arg1, "__strtold_internal - arg1");
 		validate_NULL_TYPETYPE(  arg2, "__strtold_internal - arg2");
 	}

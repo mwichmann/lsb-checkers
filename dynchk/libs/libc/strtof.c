@@ -21,7 +21,6 @@ float strtof (const char * arg0 , char * * arg1 )
 	validate_Rdaddress( arg0, "strtof - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtof - arg0");
 	validate_Rdaddress( arg1, "strtof - arg1");
-	validate_Rdaddress(* arg1, "strtof - arg1");
 		validate_NULL_TYPETYPE(  arg1, "strtof - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

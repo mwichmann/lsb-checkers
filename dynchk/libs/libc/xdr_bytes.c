@@ -22,7 +22,6 @@ bool_t xdr_bytes (XDR * arg0 , char * * arg1 , u_int * arg2 , u_int arg3 )
 	validate_Rdaddress( arg0, "xdr_bytes - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_bytes - arg0");
 	validate_Rdaddress( arg1, "xdr_bytes - arg1");
-	validate_Rdaddress(* arg1, "xdr_bytes - arg1");
 		validate_NULL_TYPETYPE(  arg1, "xdr_bytes - arg1");
 	validate_Rdaddress( arg2, "xdr_bytes - arg2");
 		validate_NULL_TYPETYPE(  arg2, "xdr_bytes - arg2");
