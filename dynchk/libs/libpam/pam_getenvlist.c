@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char * *(*funcptr)(pam_handle_t *) = 0;
+#include <security/pam_appl.h>
+#undef pam_getenvlist
+static char * *(*funcptr) (pam_handle_t * ) = 0;
 
-char * * pam_getenvlist(pam_handle_t * arg0)
+char * * pam_getenvlist (pam_handle_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_getenvlist");
@@ -12,7 +14,7 @@ char * * pam_getenvlist(pam_handle_t * arg0)
 	return funcptr(arg0);
 }
 
-char * * lsb_pam_getenvlist(pam_handle_t * arg0)
+char * * lsb_pam_getenvlist (pam_handle_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_getenvlist");

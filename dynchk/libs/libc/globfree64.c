@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <glob.h>
 #undef globfree64
 static void(*funcptr) (glob64_t * ) = 0;
 
