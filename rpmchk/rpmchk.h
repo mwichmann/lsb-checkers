@@ -209,6 +209,7 @@ extern uint32_t  *dirindicies;
 extern char **basenames;
 extern char **dirnames;
 extern int  numdirnames;
+extern int  numdirindicies;
 extern int  hasPayloadFilesHavePrefix;
 extern int  hasCompressedFileNames;
 extern int  hasOldFilenames;
