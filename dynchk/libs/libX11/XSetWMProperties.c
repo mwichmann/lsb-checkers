@@ -19,22 +19,21 @@ void XSetWMProperties (Display * arg0 , Window arg1 , XTextProperty * arg2 , XTe
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetWMProperties()");
-	validate_Rdaddress( arg0, "XSetWMProperties - arg0");
+	validate_RWaddress( arg0, "XSetWMProperties - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetWMProperties - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetWMProperties - arg1");
-	validate_Rdaddress( arg2, "XSetWMProperties - arg2");
+	validate_RWaddress( arg2, "XSetWMProperties - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XSetWMProperties - arg2");
-	validate_Rdaddress( arg3, "XSetWMProperties - arg3");
+	validate_RWaddress( arg3, "XSetWMProperties - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XSetWMProperties - arg3");
-	validate_Rdaddress( arg4, "XSetWMProperties - arg4");
-	validate_Rdaddress(* arg4, "XSetWMProperties - arg4");
+	validate_RWaddress( arg4, "XSetWMProperties - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XSetWMProperties - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XSetWMProperties - arg5");
-	validate_Rdaddress( arg6, "XSetWMProperties - arg6");
+	validate_RWaddress( arg6, "XSetWMProperties - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XSetWMProperties - arg6");
-	validate_Rdaddress( arg7, "XSetWMProperties - arg7");
+	validate_RWaddress( arg7, "XSetWMProperties - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XSetWMProperties - arg7");
-	validate_Rdaddress( arg8, "XSetWMProperties - arg8");
+	validate_RWaddress( arg8, "XSetWMProperties - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XSetWMProperties - arg8");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);

@@ -21,7 +21,9 @@ int nanosleep (const struct timespec * arg0 , struct timespec * arg1 )
 	__lsb_output(5-__lsb_check_params, "nanosleep()");
 	validate_Rdaddress( arg0, "nanosleep - arg0");
 		validate_NULL_TYPETYPE(  arg0, "nanosleep - arg0");
+		if( arg1 ) {
 	validate_RWaddress( arg1, "nanosleep - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "nanosleep - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -19,7 +19,7 @@ DIR * opendir (const char * arg0 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "opendir()");
 	validate_Rdaddress( arg0, "opendir - arg0");
-		validate_NULL_TYPETYPE(  arg0, "opendir - arg0");
+		validate_pathname(  arg0, "opendir - arg0");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;
