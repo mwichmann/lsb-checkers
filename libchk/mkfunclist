@@ -78,7 +78,7 @@ print MAKE "LIBOBJS = \\\n";
 $select = "SELECT DISTINCT Lid,ALrunname,Asymbol,Aname FROM Library ";
 $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
-$select.= "WHERE Lstd!='No' ";
+$select.= "WHERE Lstd='Yes' ";
 $select.= "AND Aname!='None' ";
 $select.= "ORDER BY ALrunname,Aid ";
 
