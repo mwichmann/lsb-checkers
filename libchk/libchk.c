@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.27 $
+ * This is $Revision: 1.28 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.28  2003/09/12 11:41:59  anderson
+ * Allow a single argument which specifies the lib to check when in cxxabichk mode
+ *
  * Revision 1.27  2003/09/01 05:38:31  cyeoh
  * Log file not found errors to journal file
  *
@@ -123,7 +126,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.27 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.28 $";
 
 extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
 
@@ -489,7 +492,8 @@ int main(int argc, char *argv[])
 
   tetj_add_config(journal, tmp_string);
 
-  check_lib("/usr/lib/libstdc++.so.5",libstdcxx_so_5,libstdcxx_so_5_classinfo,journal);
+  check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.5",
+		  libstdcxx_so_5,libstdcxx_so_5_classinfo,journal);
 #else
   snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
   tetj_add_config(journal, tmp_string);
