@@ -6,7 +6,7 @@
 #define _LSB_DEFAULT_ARCH 1
 #include <sys/ioctl.h> 
 
-#include "termios.h"
+#include "pty.h"
 
 
 
