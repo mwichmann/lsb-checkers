@@ -131,6 +131,22 @@ CheckMemberSize(struct _libc_fpxreg,padding,6,11,40469)
 CheckOffset(struct _libc_fpxreg,padding,10,11,40469)
 #endif
 
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _libc_vrstate,528, 10908, 6)
+CheckMemberSize(struct _libc_vrstate,vrregs,512,6,40642)
+CheckOffset(struct _libc_vrstate,vrregs,0,6,40642)
+CheckMemberSize(struct _libc_vrstate,vscr,4,6,40643)
+CheckOffset(struct _libc_vrstate,vscr,512,6,40643)
+CheckMemberSize(struct _libc_vrstate,vrsave,4,6,40644)
+CheckOffset(struct _libc_vrstate,vrsave,516,6,40644)
+CheckMemberSize(struct _libc_vrstate,_pad,8,6,40645)
+CheckOffset(struct _libc_vrstate,_pad,520,6,40645)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(vrregset_t,528, 10909, 6)
+#endif
+
 #if __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
 #endif
@@ -145,6 +161,10 @@ CheckTypeSize(gregset_t,76, 10224, 2)
 
 #if __x86_64__
 CheckTypeSize(gregset_t,184, 10796, 11)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(gregset_t,192, 10905, 6)
 #endif
 
 #if __i386__
@@ -187,8 +207,6 @@ CheckOffset(struct _libc_fpstate,status,108,2,34324)
 
 #if __i386__
 CheckTypeSize(fpregset_t,4, 10228, 2)
-#elif __s390__ && !__s390x__
-CheckTypeSize(fpregset_t,136, 10228, 10)
 #endif
 
 #if __s390x__
@@ -229,6 +247,20 @@ CheckOffset(struct _libc_fpstate,padding,416,11,40481)
 CheckTypeSize(fpregset_t,8, 10802, 11)
 #endif
 
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _libc_fpstate,272, 10906, 6)
+CheckMemberSize(struct _libc_fpstate,fpregs,256,6,40639)
+CheckOffset(struct _libc_fpstate,fpregs,0,6,40639)
+CheckMemberSize(struct _libc_fpstate,fpscr,8,6,40640)
+CheckOffset(struct _libc_fpstate,fpscr,256,6,40640)
+CheckMemberSize(struct _libc_fpstate,_pad,8,6,40641)
+CheckOffset(struct _libc_fpstate,_pad,264,6,40641)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(fpregset_t,272, 10907, 6)
+#endif
+
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
@@ -249,8 +281,8 @@ CheckTypeSize(mcontext_t,88, 10230, 2)
 CheckTypeSize(mcontext_t,2656, 10328, 3)
 #endif
 
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(mcontext_t,32, 10329, 6)
+#if __powerpc64__
+CheckTypeSize(mcontext_t,992, 10329, 9)
 #endif
 
 #if __s390x__
@@ -263,6 +295,10 @@ CheckTypeSize(mcontext_t,272, 10588, 10)
 
 #if __x86_64__
 CheckTypeSize(mcontext_t,256, 10798, 11)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(mcontext_t,992, 10911, 6)
 #endif
 
 #if __i386__
@@ -296,21 +332,25 @@ CheckTypeSize(ucontext_t,2656, 10331, 3)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(ucontext_t,180, 10335, 6)
+CheckTypeSize(ucontext_t,1184, 10335, 6)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(struct ucontext,180, 10526, 6)
+CheckTypeSize(struct ucontext,1184, 10526, 6)
 CheckMemberSize(struct ucontext,uc_flags,4,6,40156)
 CheckOffset(struct ucontext,uc_flags,0,6,40156)
 CheckMemberSize(struct ucontext,uc_link,4,6,40157)
 CheckOffset(struct ucontext,uc_link,4,6,40157)
 CheckMemberSize(struct ucontext,uc_stack,12,6,40158)
 CheckOffset(struct ucontext,uc_stack,8,6,40158)
-CheckMemberSize(struct ucontext,uc_mcontext,32,6,40159)
-CheckOffset(struct ucontext,uc_mcontext,20,6,40159)
+CheckMemberSize(struct ucontext,uc_pad,28,6,40628)
+CheckOffset(struct ucontext,uc_pad,20,6,40628)
+CheckMemberSize(struct ucontext,uc_mcontext,4,6,40631)
+CheckOffset(struct ucontext,uc_mcontext,48,6,40631)
 CheckMemberSize(struct ucontext,uc_sigmask,128,6,40160)
 CheckOffset(struct ucontext,uc_sigmask,52,6,40160)
+CheckMemberSize(struct ucontext,uc_reg_space,1004,6,40649)
+CheckOffset(struct ucontext,uc_reg_space,180,6,40649)
 #endif
 
 #if __s390x__
@@ -373,6 +413,14 @@ CheckOffset(struct ucontext,__fpregs_mem,424,11,40489)
 
 #if __x86_64__
 CheckTypeSize(ucontext_t,936, 10804, 11)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(union uc_regs_ptr,4, 10915, 6)
+CheckMemberSize(union uc_regs_ptr,regs,4,6,40650)
+CheckOffset(union uc_regs_ptr,regs,0,6,40650)
+CheckMemberSize(union uc_regs_ptr,uc_regs,4,6,40651)
+CheckOffset(union uc_regs_ptr,uc_regs,0,6,40651)
 #endif
 
 #ifdef TET_TEST
