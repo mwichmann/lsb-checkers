@@ -15,6 +15,9 @@ install:
 	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
 	install lsbappchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbappchk.1
 
+test: appchk
+	./test_appchk
+
 clean:
 	rm -f $(OBJS) appchk
 
