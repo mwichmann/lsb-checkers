@@ -4650,22 +4650,22 @@ struct versym libc_so_6_1[] = {
 	{"gai_strerror","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"gai_strerror","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"gai_strerror","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"gai_strerror","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"gai_strerror","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"gai_strerror","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"gai_strerror","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"gai_strerror","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"gai_strerror","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"gai_strerror","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"gai_strerror","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"gai_strerror","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"gai_strerror","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"gcvt","GLIBC_2.0",0,"LSB-Core",4,1},
@@ -6666,22 +6666,22 @@ struct versym libc_so_6_1[] = {
 	{"inet_ntop","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
-	{"inet_ntop","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"inet_ntop","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"inet_ntop","GLIBC_2.0",0,"LSB-Core",0,1},
+	{"inet_ntop","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"inet_ntop","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"inet_ntop","GLIBC_2.3",0,"LSB-Core",8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"inet_ntop","GLIBC_2.0",0,"LSB-Core",0,1},
+	{"inet_ntop","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"inet_ntop","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"inet_ntop","GLIBC_2.2.5",0,"LSB-Core",8,1},
 #endif
 #if __s390x__
-	{"inet_ntop","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"inet_ntop","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"inet_pton","GLIBC_2.0",0,"LSB-Core",4,1},
