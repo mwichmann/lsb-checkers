@@ -31,20 +31,20 @@ Msg("Checking data structures in X11/ObjectP.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef XtInheritAllocate
-	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
+#ifdef XtObjectExtensionVersion
+	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
 #else
-Msg( "Error: Constant not found: XtInheritAllocate\n");
+Msg( "Error: Constant not found: XtObjectExtensionVersion\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef XtObjectExtensionVersion
-	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
+#ifdef XtInheritAllocate
+	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
 #else
-Msg( "Error: Constant not found: XtObjectExtensionVersion\n");
+Msg( "Error: Constant not found: XtInheritAllocate\n");
 cnt++;
 #endif
 
@@ -89,14 +89,12 @@ CheckOffset(struct _ObjectPart,destroy_callbacks,0,6,34368)
 CheckOffset(struct _ObjectPart,constraints,0,6,34369)
 #elif __s390__
 CheckTypeSize(struct _ObjectPart,28, 10261, 10)
-Msg("Missing member data for _ObjectPart on S390\n");
-CheckOffset(struct _ObjectPart,self,0,10,34363)
-CheckOffset(struct _ObjectPart,widget_class,0,10,34364)
-CheckOffset(struct _ObjectPart,parent,0,10,34365)
-CheckOffset(struct _ObjectPart,xrm_name,0,10,34366)
-CheckOffset(struct _ObjectPart,being_destroyed,0,10,34367)
-CheckOffset(struct _ObjectPart,destroy_callbacks,0,10,34368)
-CheckOffset(struct _ObjectPart,constraints,0,10,34369)
+CheckOffset(struct _ObjectPart,widget_class,4,10,34364)
+CheckOffset(struct _ObjectPart,parent,8,10,34365)
+CheckOffset(struct _ObjectPart,xrm_name,12,10,34366)
+CheckOffset(struct _ObjectPart,being_destroyed,16,10,34367)
+CheckOffset(struct _ObjectPart,destroy_callbacks,20,10,34368)
+CheckOffset(struct _ObjectPart,constraints,24,10,34369)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10261,0);
 Msg("Find size of _ObjectPart (10261)\n");
@@ -218,39 +216,37 @@ CheckOffset(struct _ObjectClassPart,obj14,0,6,34400)
 CheckOffset(struct _ObjectClassPart,extension,0,6,34401)
 #elif __s390__
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 10)
-Msg("Missing member data for _ObjectClassPart on S390\n");
-CheckOffset(struct _ObjectClassPart,superclass,0,10,34370)
-CheckOffset(struct _ObjectClassPart,class_name,0,10,34371)
-CheckOffset(struct _ObjectClassPart,widget_size,0,10,34372)
-CheckOffset(struct _ObjectClassPart,class_initialize,0,10,34373)
-CheckOffset(struct _ObjectClassPart,class_part_initialize,0,10,34374)
-CheckOffset(struct _ObjectClassPart,class_inited,0,10,34375)
-CheckOffset(struct _ObjectClassPart,initialize,0,10,34376)
-CheckOffset(struct _ObjectClassPart,initialize_hook,0,10,34377)
-CheckOffset(struct _ObjectClassPart,obj1,0,10,34378)
-CheckOffset(struct _ObjectClassPart,obj2,0,10,34379)
-CheckOffset(struct _ObjectClassPart,obj3,0,10,34380)
-CheckOffset(struct _ObjectClassPart,resources,0,10,34381)
-CheckOffset(struct _ObjectClassPart,num_resources,0,10,34382)
-CheckOffset(struct _ObjectClassPart,xrm_class,0,10,34383)
-CheckOffset(struct _ObjectClassPart,obj4,0,10,34384)
-CheckOffset(struct _ObjectClassPart,obj5,0,10,34385)
-CheckOffset(struct _ObjectClassPart,obj6,0,10,34386)
-CheckOffset(struct _ObjectClassPart,obj7,0,10,34387)
-CheckOffset(struct _ObjectClassPart,destroy,0,10,34388)
-CheckOffset(struct _ObjectClassPart,obj8,0,10,34389)
-CheckOffset(struct _ObjectClassPart,obj9,0,10,34390)
-CheckOffset(struct _ObjectClassPart,set_values,0,10,34391)
-CheckOffset(struct _ObjectClassPart,set_values_hook,0,10,34392)
-CheckOffset(struct _ObjectClassPart,obj10,0,10,34393)
-CheckOffset(struct _ObjectClassPart,get_values_hook,0,10,34394)
-CheckOffset(struct _ObjectClassPart,obj11,0,10,34395)
-CheckOffset(struct _ObjectClassPart,version,0,10,34396)
-CheckOffset(struct _ObjectClassPart,callback_private,0,10,34397)
-CheckOffset(struct _ObjectClassPart,obj12,0,10,34398)
-CheckOffset(struct _ObjectClassPart,obj13,0,10,34399)
-CheckOffset(struct _ObjectClassPart,obj14,0,10,34400)
-CheckOffset(struct _ObjectClassPart,extension,0,10,34401)
+CheckOffset(struct _ObjectClassPart,class_name,4,10,34371)
+CheckOffset(struct _ObjectClassPart,widget_size,8,10,34372)
+CheckOffset(struct _ObjectClassPart,class_initialize,12,10,34373)
+CheckOffset(struct _ObjectClassPart,class_part_initialize,16,10,34374)
+CheckOffset(struct _ObjectClassPart,class_inited,20,10,34375)
+CheckOffset(struct _ObjectClassPart,initialize,24,10,34376)
+CheckOffset(struct _ObjectClassPart,initialize_hook,28,10,34377)
+CheckOffset(struct _ObjectClassPart,obj1,32,10,34378)
+CheckOffset(struct _ObjectClassPart,obj2,36,10,34379)
+CheckOffset(struct _ObjectClassPart,obj3,40,10,34380)
+CheckOffset(struct _ObjectClassPart,resources,44,10,34381)
+CheckOffset(struct _ObjectClassPart,num_resources,48,10,34382)
+CheckOffset(struct _ObjectClassPart,xrm_class,52,10,34383)
+CheckOffset(struct _ObjectClassPart,obj4,56,10,34384)
+CheckOffset(struct _ObjectClassPart,obj5,57,10,34385)
+CheckOffset(struct _ObjectClassPart,obj6,58,10,34386)
+CheckOffset(struct _ObjectClassPart,obj7,59,10,34387)
+CheckOffset(struct _ObjectClassPart,destroy,60,10,34388)
+CheckOffset(struct _ObjectClassPart,obj8,64,10,34389)
+CheckOffset(struct _ObjectClassPart,obj9,68,10,34390)
+CheckOffset(struct _ObjectClassPart,set_values,72,10,34391)
+CheckOffset(struct _ObjectClassPart,set_values_hook,76,10,34392)
+CheckOffset(struct _ObjectClassPart,obj10,80,10,34393)
+CheckOffset(struct _ObjectClassPart,get_values_hook,84,10,34394)
+CheckOffset(struct _ObjectClassPart,obj11,88,10,34395)
+CheckOffset(struct _ObjectClassPart,version,92,10,34396)
+CheckOffset(struct _ObjectClassPart,callback_private,96,10,34397)
+CheckOffset(struct _ObjectClassPart,obj12,100,10,34398)
+CheckOffset(struct _ObjectClassPart,obj13,104,10,34399)
+CheckOffset(struct _ObjectClassPart,obj14,108,10,34400)
+CheckOffset(struct _ObjectClassPart,extension,112,10,34401)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10265,0);
 Msg("Find size of _ObjectClassPart (10265)\n");

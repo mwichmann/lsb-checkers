@@ -41,9 +41,7 @@ CheckTypeSize(struct sockaddr_un,110, 9152, 3)
 CheckOffset(struct sockaddr_un,sun_path,2,3,34486)
 #elif __s390__
 CheckTypeSize(struct sockaddr_un,110, 9152, 10)
-Msg("Missing member data for sockaddr_un on S390\n");
-CheckOffset(struct sockaddr_un,sun_family,0,10,34485)
-CheckOffset(struct sockaddr_un,sun_path,0,10,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,10,34486)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9152,0);
 Msg("Find size of sockaddr_un (9152)\n");

@@ -24,16 +24,6 @@ Msg("Checking data structures in time.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef TIMER_ABSTIME
-	CompareConstant(TIMER_ABSTIME,1,2478,architecture)
-#else
-Msg( "Error: Constant not found: TIMER_ABSTIME\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef CLOCKS_PER_SEC
 	CompareConstant(CLOCKS_PER_SEC,1000000l,2473,architecture)
 #else
@@ -48,6 +38,16 @@ cnt++;
 	CompareConstant(CLOCK_REALTIME,0,2475,architecture)
 #else
 Msg( "Error: Constant not found: CLOCK_REALTIME\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TIMER_ABSTIME
+	CompareConstant(TIMER_ABSTIME,1,2478,architecture)
+#else
+Msg( "Error: Constant not found: TIMER_ABSTIME\n");
 cnt++;
 #endif
 
@@ -93,18 +93,16 @@ CheckOffset(struct tm,tm_gmtoff,0,6,33521)
 CheckOffset(struct tm,tm_zone,0,6,33522)
 #elif __s390__
 CheckTypeSize(struct tm,44, 7019, 10)
-Msg("Missing member data for tm on S390\n");
-CheckOffset(struct tm,tm_sec,0,10,33512)
-CheckOffset(struct tm,tm_min,0,10,33513)
-CheckOffset(struct tm,tm_hour,0,10,33514)
-CheckOffset(struct tm,tm_mday,0,10,33515)
-CheckOffset(struct tm,tm_mon,0,10,33516)
-CheckOffset(struct tm,tm_year,0,10,33517)
-CheckOffset(struct tm,tm_wday,0,10,33518)
-CheckOffset(struct tm,tm_yday,0,10,33519)
-CheckOffset(struct tm,tm_isdst,0,10,33520)
-CheckOffset(struct tm,tm_gmtoff,0,10,33521)
-CheckOffset(struct tm,tm_zone,0,10,33522)
+CheckOffset(struct tm,tm_min,4,10,33513)
+CheckOffset(struct tm,tm_hour,8,10,33514)
+CheckOffset(struct tm,tm_mday,12,10,33515)
+CheckOffset(struct tm,tm_mon,16,10,33516)
+CheckOffset(struct tm,tm_year,20,10,33517)
+CheckOffset(struct tm,tm_wday,24,10,33518)
+CheckOffset(struct tm,tm_yday,28,10,33519)
+CheckOffset(struct tm,tm_isdst,32,10,33520)
+CheckOffset(struct tm,tm_gmtoff,36,10,33521)
+CheckOffset(struct tm,tm_zone,40,10,33522)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 Msg("Find size of tm (7019)\n");
@@ -123,9 +121,7 @@ CheckOffset(struct itimerspec,it_interval,0,6,33508)
 CheckOffset(struct itimerspec,it_value,0,6,33509)
 #elif __s390__
 CheckTypeSize(struct itimerspec,16, 10101, 10)
-Msg("Missing member data for itimerspec on S390\n");
-CheckOffset(struct itimerspec,it_interval,0,10,33508)
-CheckOffset(struct itimerspec,it_value,0,10,33509)
+CheckOffset(struct itimerspec,it_value,8,10,33509)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");
