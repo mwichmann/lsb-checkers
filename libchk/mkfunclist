@@ -79,6 +79,9 @@ $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
+	if( !$entry{'ALrunname'} ) {
+		next;
+		}
 	$libname=$entry{'ALrunname'};
 	$asym=$entry{'Asymbol'};
 	$libname =~ s/\./_/g;
