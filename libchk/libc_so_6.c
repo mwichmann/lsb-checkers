@@ -193,6 +193,60 @@ struct versym libc_so_6[] = {
 	{"__h_errno_location","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
+	{"__isinf","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"__isinf","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"__isinf","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"__isinff","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"__isinff","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"__isinff","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"__isinfl","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"__isinfl","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"__isinfl","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"__isnan","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"__isnan","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"__isnan","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"__isnanf","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"__isnanf","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"__isnanf","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"__isnanl","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"__isnanl","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"__isnanl","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
 	{"__libc_current_sigrtmax","GLIBC_2.1"},
 #endif
 #if defined(__ia64__)
@@ -695,6 +749,15 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"asctime_r","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"asprintf","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"asprintf","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"asprintf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
 	{"atexit","GLIBC_2.0"},
@@ -1777,6 +1840,15 @@ struct versym libc_so_6[] = {
 	{"free","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
+	{"freeaddrinfo","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"freeaddrinfo","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"freeaddrinfo","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
 	{"freopen","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
@@ -2029,6 +2101,15 @@ struct versym libc_so_6[] = {
 	{"fwscanf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
+	{"gai_strerror","GLIBC_2.1"},
+#endif
+#if defined(__ia64__)
+	{"gai_strerror","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"gai_strerror","GLIBC_2.1"},
+#endif
+#if defined(__i386__)
 	{"gcvt","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
@@ -2036,6 +2117,15 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"gcvt","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"getaddrinfo","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"getaddrinfo","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"getaddrinfo","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
 	{"getc","GLIBC_2.0"},
@@ -2173,6 +2263,15 @@ struct versym libc_so_6[] = {
 	{"getgrgid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
+	{"getgrgid_r","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"getgrgid_r","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"getgrgid_r","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
 	{"getgrnam","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
@@ -2180,6 +2279,12 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"getgrnam","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"getgrnam_r","GLIBC_2.1.2"},
+#endif
+#if defined(__powerpc__)
+	{"getgrnam_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
 	{"getgroups","GLIBC_2.0"},
@@ -2200,6 +2305,12 @@ struct versym libc_so_6[] = {
 	{"gethostbyaddr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
+	{"gethostbyaddr_r","GLIBC_2.1.2"},
+#endif
+#if defined(__ia64__)
+	{"gethostbyaddr_r","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"gethostbyname","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
@@ -2216,6 +2327,12 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"gethostbyname_r","GLIBC_2.1.2"},
+#endif
+#if defined(__i386__)
+	{"gethostent_r","GLIBC_2.1.2"},
+#endif
+#if defined(__ia64__)
+	{"gethostent_r","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
 	{"gethostid","GLIBC_2.0"},
@@ -2261,6 +2378,15 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"getlogin","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"getnameinfo","GLIBC_2.1"},
+#endif
+#if defined(__ia64__)
+	{"getnameinfo","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"getnameinfo","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
 	{"getnetbyaddr","GLIBC_2.0"},
@@ -2827,6 +2953,24 @@ struct versym libc_so_6[] = {
 	{"inet_ntoa","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
+	{"inet_ntop","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"inet_ntop","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"inet_ntop","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"inet_pton","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"inet_pton","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"inet_pton","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
 	{"initgroups","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
@@ -2948,6 +3092,15 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"isinf","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"isinff","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"isinff","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"isinff","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
 	{"isinfl","GLIBC_2.0"},
@@ -3767,6 +3920,15 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"nftw64","GLIBC_2.1"},
+#endif
+#if defined(__i386__)
+	{"ngettext","GLIBC_2.2"},
+#endif
+#if defined(__ia64__)
+	{"ngettext","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"ngettext","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
 	{"nice","GLIBC_2.0"},
@@ -5272,6 +5434,9 @@ struct versym libc_so_6[] = {
 	{"statfs","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
+	{"statfs64","GLIBC_2.1"},
+#endif
+#if defined(__i386__)
 	{"statvfs","GLIBC_2.1"},
 #endif
 #if defined(__ia64__)
@@ -5279,6 +5444,15 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"statvfs","GLIBC_2.1"},
+#endif
+#if defined(__i386__)
+	{"statvfs64","GLIBC_2.1"},
+#endif
+#if defined(__ia64__)
+	{"statvfs64","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"statvfs64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
 	{"stderr","GLIBC_2.0"},
