@@ -40,7 +40,7 @@ if( efile->size == 0 ) {
 	exit(-1);	/* Silently exit */
 	}
 
-if( (efile->addr=mmap(0, efile->size, PROT_READ, MAP_PRIVATE, efile->fd, 0)) == (caddr_t)-1 ) {
+if( (efile->addr=mmap(0, efile->size, PROT_READ|PROT_WRITE, MAP_PRIVATE, efile->fd, 0)) == (caddr_t)-1 ) {
 	perror( "unable to mmap() file" );
 	close(efile->fd);
 	free(efile);
