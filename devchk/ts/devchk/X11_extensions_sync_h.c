@@ -30,6 +30,8 @@ Msg("Checking data structures in X11/extensions/sync.h\n");
 CheckTypeSize(XSyncSystemCounter,16, 8615, 2)
 #elif __ia64__
 CheckTypeSize(XSyncSystemCounter,24, 8615, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncSystemCounter,16, 8615, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8615,0);
 #endif
@@ -38,6 +40,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8615,0);
 CheckTypeSize(XSyncTrigger,20, 8617, 2)
 #elif __ia64__
 CheckTypeSize(XSyncTrigger,24, 8617, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncTrigger,20, 8617, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8617,0);
 #endif
@@ -46,6 +50,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8617,0);
 CheckTypeSize(XSyncWaitCondition,28, 8619, 2)
 #elif __ia64__
 CheckTypeSize(XSyncWaitCondition,32, 8619, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncWaitCondition,28, 8619, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8619,0);
 #endif
@@ -54,6 +60,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8619,0);
 CheckTypeSize(XSyncAlarmAttributes,36, 8621, 2)
 #elif __ia64__
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncAlarmAttributes,36, 8621, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8621,0);
 #endif
@@ -62,6 +70,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8621,0);
 CheckTypeSize(XSyncCounter,4, 8609, 2)
 #elif __ia64__
 CheckTypeSize(XSyncCounter,8, 8609, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncCounter,4, 8609, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8609,0);
 #endif
@@ -70,6 +80,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8609,0);
 CheckTypeSize(XSyncAlarm,4, 8610, 2)
 #elif __ia64__
 CheckTypeSize(XSyncAlarm,8, 8610, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncAlarm,4, 8610, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8610,0);
 #endif
@@ -78,6 +90,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8610,0);
 CheckTypeSize(XSyncValue,8, 8612, 2)
 #elif __ia64__
 CheckTypeSize(XSyncValue,8, 8612, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncValue,8, 8612, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8612,0);
 #endif
@@ -86,6 +100,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8612,0);
 CheckTypeSize(XSyncValueType,4, 8964, 2)
 #elif __ia64__
 CheckTypeSize(XSyncValueType,4, 8964, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncValueType,4, 8964, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8964,0);
 #endif
@@ -94,6 +110,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8964,0);
 CheckTypeSize(XSyncTestType,4, 8966, 2)
 #elif __ia64__
 CheckTypeSize(XSyncTestType,4, 8966, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncTestType,4, 8966, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8966,0);
 #endif
@@ -102,6 +120,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8966,0);
 CheckTypeSize(XSyncAlarmState,4, 8968, 2)
 #elif __ia64__
 CheckTypeSize(XSyncAlarmState,4, 8968, 3)
+#elif __powerpc__
+CheckTypeSize(XSyncAlarmState,4, 8968, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8968,0);
 #endif

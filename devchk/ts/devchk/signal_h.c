@@ -400,13 +400,6 @@ Msg( "Error: Constant not found: SI_USER\n");
 cnt++;
 #endif
 
-#ifdef _NSIG
-	CompareConstant(_NSIG,64)
-#else
-Msg( "Error: Constant not found: _NSIG\n");
-cnt++;
-#endif
-
 #ifdef SA_NOCLDSTOP
 	CompareConstant(SA_NOCLDSTOP,0x00000001)
 #else
@@ -481,6 +474,8 @@ cnt++;
 CheckTypeSize(sig_atomic_t,4, 9092, 2)
 #elif __ia64__
 CheckTypeSize(sig_atomic_t,4, 9092, 3)
+#elif __powerpc__
+CheckTypeSize(sig_atomic_t,4, 9092, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
 #endif
@@ -497,6 +492,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
 CheckTypeSize(__sighandler_t,4, 6966, 2)
 #elif __ia64__
 CheckTypeSize(__sighandler_t,8, 6966, 3)
+#elif __powerpc__
+CheckTypeSize(__sighandler_t,4, 6966, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
 #endif
@@ -505,6 +502,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
 CheckTypeSize(sigval_t,4, 9320, 2)
 #elif __ia64__
 CheckTypeSize(sigval_t,8, 9320, 3)
+#elif __powerpc__
+CheckTypeSize(sigval_t,4, 9320, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
 #endif
@@ -519,6 +518,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10189,0);
 CheckTypeSize(sigevent_t,64, 10190, 2)
 #elif __ia64__
 CheckTypeSize(sigevent_t,64, 10190, 3)
+#elif __powerpc__
+CheckTypeSize(sigevent_t,64, 10190, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
 #endif
@@ -527,6 +528,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
 CheckTypeSize(siginfo_t,128, 9099, 2)
 #elif __ia64__
 CheckTypeSize(siginfo_t,128, 9099, 3)
+#elif __powerpc__
+CheckTypeSize(siginfo_t,128, 9099, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
 #endif
@@ -535,6 +538,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
 CheckTypeSize(sigset_t,128, 10163, 2)
 #elif __ia64__
 CheckTypeSize(sigset_t,128, 10163, 3)
+#elif __powerpc__
+CheckTypeSize(sigset_t,128, 10163, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
 #endif
@@ -567,16 +572,14 @@ CheckTypeSize(struct _fpxreg,16, 10202, 2)
 
 #ifdef __i386__
 CheckTypeSize(struct _xmmreg,16, 10203, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10203,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct sigcontext,88, 10005, 2)
 #elif __ia64__
 CheckTypeSize(struct sigcontext,2656, 10005, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10005,0);
+#elif __powerpc__
+CheckTypeSize(struct sigcontext,32, 10005, 6)
 #endif
 
 #ifdef TET_TEST

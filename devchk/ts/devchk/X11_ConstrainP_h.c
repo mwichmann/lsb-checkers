@@ -40,6 +40,8 @@ cnt++;
 CheckTypeSize(ConstraintPart,8, 10250, 3)
 #elif __i386__
 CheckTypeSize(ConstraintPart,4, 10250, 2)
+#elif __powerpc__
+CheckTypeSize(ConstraintPart,4, 10250, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
 #endif
@@ -48,6 +50,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
 CheckTypeSize(ConstraintClassPart,48, 10252, 3)
 #elif __i386__
 CheckTypeSize(ConstraintClassPart,28, 10252, 2)
+#elif __powerpc__
+CheckTypeSize(ConstraintClassPart,28, 10252, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
 #endif
@@ -56,6 +60,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
 CheckTypeSize(ConstraintClassRec,312, 10258, 3)
 #elif __i386__
 CheckTypeSize(ConstraintClassRec,164, 10258, 2)
+#elif __powerpc__
+CheckTypeSize(ConstraintClassRec,164, 10258, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10258,0);
 #endif

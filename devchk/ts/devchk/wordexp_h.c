@@ -32,6 +32,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9200,0);
 CheckTypeSize(wordexp_t,12, 7029, 2)
 #elif __ia64__
 CheckTypeSize(wordexp_t,24, 7029, 3)
+#elif __powerpc__
+CheckTypeSize(wordexp_t,12, 7029, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7029,0);
 #endif

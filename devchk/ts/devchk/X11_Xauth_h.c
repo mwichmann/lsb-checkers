@@ -26,6 +26,8 @@ Msg("Checking data structures in X11/Xauth.h\n");
 CheckTypeSize(Xauth,32, 8961, 2)
 #elif __ia64__
 CheckTypeSize(Xauth,64, 8961, 3)
+#elif __powerpc__
+CheckTypeSize(Xauth,32, 8961, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8961,0);
 #endif

@@ -34,23 +34,30 @@ CheckTypeSize(greg_t,4, 10222, 2)
 #endif
 
 #ifdef __i386__
-CheckTypeSize(gregset_t,76, 10224, 2)
+CheckTypeSize(gregset_t,19, 10224, 2)
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct _libc_fpreg,10, 10225, 2)
+CheckOffset(struct _libc_fpreg,significand,0,2,34315)
+CheckOffset(struct _libc_fpreg,exponent,8,2,34316)
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct _libc_fpstate,112, 10226, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10226,0);
+CheckOffset(struct _libc_fpstate,cw,0,2,34317)
+CheckOffset(struct _libc_fpstate,sw,4,2,34318)
+CheckOffset(struct _libc_fpstate,tag,8,2,34319)
+CheckOffset(struct _libc_fpstate,ipoff,12,2,34320)
+CheckOffset(struct _libc_fpstate,cssel,16,2,34321)
+CheckOffset(struct _libc_fpstate,dataoff,20,2,34322)
+CheckOffset(struct _libc_fpstate,datasel,24,2,34323)
+CheckOffset(struct _libc_fpstate,_st,28,2,34325)
+CheckOffset(struct _libc_fpstate,status,108,2,34324)
 #endif
 
 #ifdef __i386__
 CheckTypeSize(fpregset_t,4, 10228, 2)
-#elif __ia64__
-CheckTypeSize(fpregset_t,4, 10228, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10228,0);
 #endif
@@ -65,6 +72,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
 CheckTypeSize(mcontext_t,88, 10230, 2)
 #elif __ia64__
 CheckTypeSize(mcontext_t,2656, 10230, 3)
+#elif __powerpc__
+CheckTypeSize(mcontext_t,32, 10230, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10230,0);
 #endif
@@ -73,6 +82,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10230,0);
 CheckTypeSize(ucontext_t,348, 10220, 2)
 #elif __ia64__
 CheckTypeSize(ucontext_t,2656, 10220, 3)
+#elif __powerpc__
+CheckTypeSize(ucontext_t,180, 10220, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10220,0);
 #endif

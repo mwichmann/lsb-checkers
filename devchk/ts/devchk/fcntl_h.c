@@ -206,6 +206,11 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(struct flock,16, 10217, 2)
+CheckOffset(struct flock,l_type,0,2,34302)
+CheckOffset(struct flock,l_whence,2,2,34303)
+CheckOffset(struct flock,l_start,4,2,34304)
+CheckOffset(struct flock,l_len,8,2,34305)
+CheckOffset(struct flock,l_pid,12,2,34306)
 #elif __ia64__
 CheckTypeSize(struct flock,32, 10217, 3)
 #else
@@ -214,6 +219,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
 
 #ifdef __i386__
 CheckTypeSize(struct flock64,24, 10218, 2)
+CheckOffset(struct flock64,l_type,0,2,34307)
+CheckOffset(struct flock64,l_whence,2,2,34308)
+CheckOffset(struct flock64,l_start,4,2,34309)
+CheckOffset(struct flock64,l_len,12,2,34310)
+CheckOffset(struct flock64,l_pid,20,2,34311)
 #elif __ia64__
 CheckTypeSize(struct flock64,32, 10218, 3)
 #else

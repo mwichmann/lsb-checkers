@@ -26,6 +26,8 @@ Msg("Checking data structures in sys/utsname.h\n");
 CheckTypeSize(struct utsname,390, 7013, 2)
 #elif __ia64__
 CheckTypeSize(struct utsname,390, 7013, 3)
+#elif __powerpc__
+CheckTypeSize(struct utsname,390, 7013, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7013,0);
 #endif

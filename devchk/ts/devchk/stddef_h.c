@@ -34,6 +34,8 @@ cnt++;
 CheckTypeSize(wchar_t,4, 8848, 2)
 #elif __ia64__
 CheckTypeSize(wchar_t,4, 8848, 3)
+#elif __powerpc__
+CheckTypeSize(wchar_t,4, 8848, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
 #endif
@@ -42,6 +44,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
 CheckTypeSize(size_t,4, 8969, 2)
 #elif __ia64__
 CheckTypeSize(size_t,8, 8969, 3)
+#elif __powerpc__
+CheckTypeSize(size_t,4, 8969, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
 #endif
@@ -50,6 +54,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
 CheckTypeSize(ptrdiff_t,4, 9027, 2)
 #elif __ia64__
 CheckTypeSize(ptrdiff_t,8, 9027, 3)
+#elif __powerpc__
+CheckTypeSize(ptrdiff_t,4, 9027, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9027,0);
 #endif

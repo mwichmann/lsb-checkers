@@ -47,6 +47,8 @@ cnt++;
 CheckTypeSize(struct sched_param,4, 9045, 2)
 #elif __ia64__
 CheckTypeSize(struct sched_param,4, 9045, 3)
+#elif __powerpc__
+CheckTypeSize(struct sched_param,4, 9045, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9045,0);
 #endif

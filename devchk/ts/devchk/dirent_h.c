@@ -39,6 +39,8 @@ CheckOffset(struct dirent,d_off,4,2,34178)
 CheckOffset(struct dirent,d_reclen,8,2,34179)
 #elif __ia64__
 CheckTypeSize(struct dirent,280, 10178, 3)
+#elif __powerpc__
+CheckTypeSize(struct dirent,268, 10178, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);
 #endif

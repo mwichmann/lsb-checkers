@@ -32,6 +32,8 @@ Msg("Checking data structures in X11/extensions/security.h\n");
 CheckTypeSize(XSecurityAuthorization,4, 8596, 2)
 #elif __ia64__
 CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
+#elif __powerpc__
+CheckTypeSize(XSecurityAuthorization,4, 8596, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
 #endif
@@ -40,6 +42,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
 CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2)
 #elif __ia64__
 CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3)
+#elif __powerpc__
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8598,0);
 #endif

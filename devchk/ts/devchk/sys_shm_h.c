@@ -39,6 +39,8 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(shmatt_t,4, 10212, 2)
+#elif __powerpc__
+CheckTypeSize(shmatt_t,4, 10212, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10212,0);
 #endif
@@ -56,8 +58,12 @@ CheckOffset(struct shmid_ds,__unused3,60,2,33712)
 CheckOffset(struct shmid_ds,shm_cpid,64,2,33707)
 CheckOffset(struct shmid_ds,shm_lpid,68,2,33708)
 CheckOffset(struct shmid_ds,shm_nattch,72,2,33709)
+CheckOffset(struct shmid_ds,__unused4,76,2,34264)
+CheckOffset(struct shmid_ds,__unused5,80,2,34265)
 #elif __ia64__
 CheckTypeSize(struct shmid_ds,112, 9129, 3)
+#elif __powerpc__
+CheckTypeSize(struct shmid_ds,104, 9129, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9129,0);
 #endif

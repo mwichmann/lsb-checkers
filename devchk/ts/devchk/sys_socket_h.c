@@ -23,21 +23,21 @@ Msg("Checking data structures in sys/socket.h\n");
 #endif
 
 #ifdef SHUT_RD
-	CompareConstant(SHUT_RD,SHUT_RD)
+	CompareConstant(SHUT_RD,0)
 #else
 Msg( "Error: Constant not found: SHUT_RD\n");
 cnt++;
 #endif
 
 #ifdef SHUT_WR
-	CompareConstant(SHUT_WR,SHUT_WR)
+	CompareConstant(SHUT_WR,1)
 #else
 Msg( "Error: Constant not found: SHUT_WR\n");
 cnt++;
 #endif
 
 #ifdef SHUT_RDWR
-	CompareConstant(SHUT_RDWR,SHUT_RDWR)
+	CompareConstant(SHUT_RDWR,2)
 #else
 Msg( "Error: Constant not found: SHUT_RDWR\n");
 cnt++;
@@ -103,6 +103,13 @@ cnt++;
 	CompareConstant(MSG_WAITALL,0x100)
 #else
 Msg( "Error: Constant not found: MSG_WAITALL\n");
+cnt++;
+#endif
+
+#ifdef SIOCGIFCONF
+	CompareConstant(SIOCGIFCONF,0x8912)
+#else
+Msg( "Error: Constant not found: SIOCGIFCONF\n");
 cnt++;
 #endif
 
@@ -362,6 +369,8 @@ cnt++;
 CheckTypeSize(struct linger,8, 6907, 2)
 #elif __ia64__
 CheckTypeSize(struct linger,8, 6907, 3)
+#elif __powerpc__
+CheckTypeSize(struct linger,8, 6907, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6907,0);
 #endif
@@ -370,6 +379,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6907,0);
 CheckTypeSize(struct cmsghdr,12, 6909, 2)
 #elif __ia64__
 CheckTypeSize(struct cmsghdr,16, 6909, 3)
+#elif __powerpc__
+CheckTypeSize(struct cmsghdr,12, 6909, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6909,0);
 #endif
@@ -378,6 +389,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6909,0);
 CheckTypeSize(struct iovec,8, 9022, 2)
 #elif __ia64__
 CheckTypeSize(struct iovec,16, 9022, 3)
+#elif __powerpc__
+CheckTypeSize(struct iovec,8, 9022, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9022,0);
 #endif
@@ -386,6 +399,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9022,0);
 CheckTypeSize(sa_family_t,2, 6905, 2)
 #elif __ia64__
 CheckTypeSize(sa_family_t,2, 6905, 3)
+#elif __powerpc__
+CheckTypeSize(sa_family_t,2, 6905, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6905,0);
 #endif
@@ -394,6 +409,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6905,0);
 CheckTypeSize(socklen_t,4, 9155, 2)
 #elif __ia64__
 CheckTypeSize(socklen_t,4, 9155, 3)
+#elif __powerpc__
+CheckTypeSize(socklen_t,4, 9155, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9155,0);
 #endif
@@ -402,6 +419,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9155,0);
 CheckTypeSize(struct sockaddr,16, 6906, 2)
 #elif __ia64__
 CheckTypeSize(struct sockaddr,16, 6906, 3)
+#elif __powerpc__
+CheckTypeSize(struct sockaddr,16, 6906, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6906,0);
 #endif
@@ -410,6 +429,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6906,0);
 CheckTypeSize(struct msghdr,28, 6908, 2)
 #elif __ia64__
 CheckTypeSize(struct msghdr,56, 6908, 3)
+#elif __powerpc__
+CheckTypeSize(struct msghdr,28, 6908, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6908,0);
 #endif

@@ -26,6 +26,8 @@ Msg("Checking data structures in iconv.h\n");
 CheckTypeSize(iconv_t,4, 6895, 2)
 #elif __ia64__
 CheckTypeSize(iconv_t,8, 6895, 3)
+#elif __powerpc__
+CheckTypeSize(iconv_t,4, 6895, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6895,0);
 #endif

@@ -824,6 +824,8 @@ cnt++;
 CheckTypeSize(speed_t,4, 9186, 2)
 #elif __ia64__
 CheckTypeSize(speed_t,4, 9186, 3)
+#elif __powerpc__
+CheckTypeSize(speed_t,4, 9186, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 #endif
@@ -832,6 +834,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 CheckTypeSize(cc_t,1, 10206, 2)
 #elif __ia64__
 CheckTypeSize(cc_t,1, 10206, 3)
+#elif __powerpc__
+CheckTypeSize(cc_t,1, 10206, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
 #endif
@@ -840,14 +844,26 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
 CheckTypeSize(tcflag_t,4, 10207, 2)
 #elif __ia64__
 CheckTypeSize(tcflag_t,4, 10207, 3)
+#elif __powerpc__
+CheckTypeSize(tcflag_t,4, 10207, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10207,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct termios,60, 9187, 2)
+CheckOffset(struct termios,c_iflag,0,2,34268)
+CheckOffset(struct termios,c_oflag,4,2,34269)
+CheckOffset(struct termios,c_cflag,8,2,34270)
+CheckOffset(struct termios,c_lflag,12,2,34271)
+CheckOffset(struct termios,c_line,16,2,34272)
+CheckOffset(struct termios,c_cc,17,2,34273)
+CheckOffset(struct termios,c_ispeed,52,2,34274)
+CheckOffset(struct termios,c_ospeed,56,2,34275)
 #elif __ia64__
 CheckTypeSize(struct termios,60, 9187, 3)
+#elif __powerpc__
+CheckTypeSize(struct termios,60, 9187, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9187,0);
 #endif

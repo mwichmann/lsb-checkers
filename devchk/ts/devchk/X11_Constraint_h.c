@@ -33,6 +33,8 @@ Msg("Checking data structures in X11/Constraint.h\n");
 CheckTypeSize(ConstraintWidgetClass,8, 10260, 3)
 #elif __i386__
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 2)
+#elif __powerpc__
+CheckTypeSize(ConstraintWidgetClass,4, 10260, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10260,0);
 #endif
