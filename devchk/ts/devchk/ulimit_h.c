@@ -23,14 +23,14 @@ Msg("Checking data structures in ulimit.h\n");
 #endif
 
 #ifdef UL_GETFSIZE
-	CompareConstant(UL_GETFSIZE,UL_GETFSIZE)
+	CompareConstant(UL_GETFSIZE,1)
 #else
 Msg( "Error: Constant not found: UL_GETFSIZE\n");
 cnt++;
 #endif
 
 #ifdef UL_SETFSIZE
-	CompareConstant(UL_SETFSIZE,UL_SETFSIZE)
+	CompareConstant(UL_SETFSIZE,2)
 #else
 Msg( "Error: Constant not found: UL_SETFSIZE\n");
 cnt++;

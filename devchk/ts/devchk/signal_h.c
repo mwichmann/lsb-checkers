@@ -36,6 +36,27 @@ Msg( "Error: Constant not found: SIGRTMAX\n");
 cnt++;
 #endif
 
+#ifdef SIG_BLOCK
+	CompareConstant(SIG_BLOCK,0)
+#else
+Msg( "Error: Constant not found: SIG_BLOCK\n");
+cnt++;
+#endif
+
+#ifdef SIG_UNBLOCK
+	CompareConstant(SIG_UNBLOCK,1)
+#else
+Msg( "Error: Constant not found: SIG_UNBLOCK\n");
+cnt++;
+#endif
+
+#ifdef SIG_SETMASK
+	CompareConstant(SIG_SETMASK,2)
+#else
+Msg( "Error: Constant not found: SIG_SETMASK\n");
+cnt++;
+#endif
+
 #ifdef SIGHUP
 	CompareConstant(SIGHUP,1)
 #else
@@ -313,6 +334,27 @@ cnt++;
 	CompareConstant(SV_RESETHAND,(1<<2))
 #else
 Msg( "Error: Constant not found: SV_RESETHAND\n");
+cnt++;
+#endif
+
+#ifdef SIGEV_NONE
+	CompareConstant(SIGEV_NONE,1)
+#else
+Msg( "Error: Constant not found: SIGEV_NONE\n");
+cnt++;
+#endif
+
+#ifdef _NSIG
+	CompareConstant(_NSIG,64)
+#else
+Msg( "Error: Constant not found: _NSIG\n");
+cnt++;
+#endif
+
+#ifdef _NSIG_WORDS
+	CompareConstant(_NSIG_WORDS,((_NSIG/sizeof(long))>>3))
+#else
+Msg( "Error: Constant not found: _NSIG_WORDS\n");
 cnt++;
 #endif
 

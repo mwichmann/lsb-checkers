@@ -43,6 +43,20 @@ Msg( "Error: Constant not found: MAP_PRIVATE\n");
 cnt++;
 #endif
 
+#ifdef MCL_CURRENT
+	CompareConstant(MCL_CURRENT,1)
+#else
+Msg( "Error: Constant not found: MCL_CURRENT\n");
+cnt++;
+#endif
+
+#ifdef MCL_FUTURE
+	CompareConstant(MCL_FUTURE,2)
+#else
+Msg( "Error: Constant not found: MCL_FUTURE\n");
+cnt++;
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

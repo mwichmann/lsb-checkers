@@ -29,15 +29,17 @@ OBJS = hdrchk.o \
 	nl_types_h.o \
 	pthread_h.o \
 	regex_h.o \
+	sched_h.o \
 	search_h.o \
 	semaphore_h.o \
 	setjmp_h.o \
 	signal_h.o \
-	stddef_h.o \
 	stdio_h.o \
 	stdlib_h.o \
 	sys_ioctl_h.o \
+	sys_ipc_h.o \
 	sys_mman_h.o \
+	sys_msg_h.o \
 	sys_param_h.o \
 	sys_resource_h.o \
 	sys_select_h.o \

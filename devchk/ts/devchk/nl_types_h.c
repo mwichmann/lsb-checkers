@@ -22,6 +22,20 @@ int pcnt=0;
 Msg("Checking data structures in nl_types.h\n");
 #endif
 
+#ifdef NL_SETD
+	CompareConstant(NL_SETD,1)
+#else
+Msg( "Error: Constant not found: NL_SETD\n");
+cnt++;
+#endif
+
+#ifdef NL_CAT_LOCALE
+	CompareConstant(NL_CAT_LOCALE,1)
+#else
+Msg( "Error: Constant not found: NL_CAT_LOCALE\n");
+cnt++;
+#endif
+
 #ifdef __i386__
 CheckTypeSize(nl_catd,4, 6923, 2)
 #elif __ia64__

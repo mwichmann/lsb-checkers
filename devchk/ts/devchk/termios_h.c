@@ -526,6 +526,13 @@ Msg( "Error: Constant not found: IMAXBEL\n");
 cnt++;
 #endif
 
+#ifdef VTIME
+	CompareConstant(VTIME,5)
+#else
+Msg( "Error: Constant not found: VTIME\n");
+cnt++;
+#endif
+
 #ifdef CSIZE
 	CompareConstant(CSIZE,0000060)
 #else
@@ -565,6 +572,13 @@ cnt++;
 	CompareConstant(CSTOPB,0000100)
 #else
 Msg( "Error: Constant not found: CSTOPB\n");
+cnt++;
+#endif
+
+#ifdef CREAD
+	CompareConstant(CREAD,0000200)
+#else
+Msg( "Error: Constant not found: CREAD\n");
 cnt++;
 #endif
 

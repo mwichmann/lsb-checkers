@@ -23,6 +23,27 @@ int pcnt=0;
 Msg("Checking data structures in stdlib.h\n");
 #endif
 
+#ifdef RAND_MAX
+	CompareConstant(RAND_MAX,2147483647)
+#else
+Msg( "Error: Constant not found: RAND_MAX\n");
+cnt++;
+#endif
+
+#ifdef EXIT_FAILURE
+	CompareConstant(EXIT_FAILURE,1)
+#else
+Msg( "Error: Constant not found: EXIT_FAILURE\n");
+cnt++;
+#endif
+
+#ifdef EXIT_SUCCESS
+	CompareConstant(EXIT_SUCCESS,0)
+#else
+Msg( "Error: Constant not found: EXIT_SUCCESS\n");
+cnt++;
+#endif
+
 #ifdef MB_CUR_MAX
 	CompareConstant(MB_CUR_MAX,(__ctype_get_mb_cur_max()))
 #else

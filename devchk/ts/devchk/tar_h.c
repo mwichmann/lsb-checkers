@@ -169,10 +169,24 @@ Msg( "Error: Constant not found: CONTTYPE\n");
 cnt++;
 #endif
 
+#ifdef TMAGIC
+	CompareStringConstant(TMAGIC,"ustar")
+#else
+Msg( "Error: Constant not found: TMAGIC\n");
+cnt++;
+#endif
+
 #ifdef TMAGLEN
 	CompareConstant(TMAGLEN,6)
 #else
 Msg( "Error: Constant not found: TMAGLEN\n");
+cnt++;
+#endif
+
+#ifdef TVERSION
+	CompareStringConstant(TVERSION,"00")
+#else
+Msg( "Error: Constant not found: TVERSION\n");
 cnt++;
 #endif
 

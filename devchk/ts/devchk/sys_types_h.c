@@ -30,6 +30,28 @@ Msg( "Error: Constant not found: NULL\n");
 cnt++;
 #endif
 
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,32)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#ifdef __FDSET_LONGS
+	CompareConstant(__FDSET_LONGS,16)
+#else
+Msg( "Error: Constant not found: __FDSET_LONGS\n");
+cnt++;
+#endif
+
+#ifdef __i386__
+CheckTypeSize(size_t,4, 8969, 2)
+#elif __ia64__
+CheckTypeSize(size_t,8, 8969, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
+#endif
+
 #ifdef __i386__
 CheckTypeSize(__ssize_t,4, 8970, 2)
 #elif __ia64__
@@ -55,11 +77,27 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8972,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(ssize_t,4, 9029, 2)
+#elif __ia64__
+CheckTypeSize(ssize_t,8, 9029, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9029,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(__uid_t,4, 9068, 2)
 #elif __ia64__
 CheckTypeSize(__uid_t,4, 9068, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9068,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(pid_t,4, 9094, 2)
+#elif __ia64__
+CheckTypeSize(pid_t,4, 9094, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9094,0);
 #endif
 
 #ifdef __i386__
@@ -76,6 +114,14 @@ CheckTypeSize(key_t,4, 9116, 2)
 CheckTypeSize(key_t,4, 9116, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9116,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(clock_t,4, 9164, 2)
+#elif __ia64__
+CheckTypeSize(clock_t,8, 9164, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9164,0);
 #endif
 
 #ifdef __i386__

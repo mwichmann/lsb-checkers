@@ -29,10 +29,52 @@ Msg( "Error: Constant not found: BUFSIZ\n");
 cnt++;
 #endif
 
+#ifdef P_tmpdir
+	CompareStringConstant(P_tmpdir,"<pathname>")
+#else
+Msg( "Error: Constant not found: P_tmpdir\n");
+cnt++;
+#endif
+
 #ifdef EOF
 	CompareConstant(EOF,(-1))
 #else
 Msg( "Error: Constant not found: EOF\n");
+cnt++;
+#endif
+
+#ifdef L_tmpnam
+	CompareConstant(L_tmpnam,128)
+#else
+Msg( "Error: Constant not found: L_tmpnam\n");
+cnt++;
+#endif
+
+#ifdef FILENAME_MAX
+	CompareConstant(FILENAME_MAX,4095)
+#else
+Msg( "Error: Constant not found: FILENAME_MAX\n");
+cnt++;
+#endif
+
+#ifdef FOPEN_MAX
+	CompareConstant(FOPEN_MAX,16)
+#else
+Msg( "Error: Constant not found: FOPEN_MAX\n");
+cnt++;
+#endif
+
+#ifdef L_ctermid
+	CompareConstant(L_ctermid,9)
+#else
+Msg( "Error: Constant not found: L_ctermid\n");
+cnt++;
+#endif
+
+#ifdef L_cuserid
+	CompareConstant(L_cuserid,9)
+#else
+Msg( "Error: Constant not found: L_cuserid\n");
 cnt++;
 #endif
 
