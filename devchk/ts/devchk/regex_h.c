@@ -325,7 +325,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef RE_SYNTAX_POSIX_BASIC
-	CompareConstant(RE_SYNTAX_POSIX_BASIC,(_RE_SYNTAX_POSIX_COMMON|RE_BK_PLUS_QM),1588,architecture)
+	CompareConstant(RE_SYNTAX_POSIX_BASIC,(_RE_SYNTAX_POSIX_COMMON|RE_BK_PLUS_QMRE_CONTEXT_INVALID_DUP|),1588,architecture)
 #else
 Msg( "Error: Constant not found: RE_SYNTAX_POSIX_BASIC\n");
 cnt++;
@@ -428,6 +428,36 @@ cnt++;
 	CompareConstant(REG_NOMATCH,-1,3092,architecture)
 #else
 Msg( "Error: Constant not found: REG_NOMATCH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RE_ICASE
+	CompareConstant(RE_ICASE, (RE_INVALID_INTERVAL_ORD << 1),5264,architecture)
+#else
+Msg( "Error: Constant not found: RE_ICASE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RE_CARET_ANCHORS_HERE
+	CompareConstant(RE_CARET_ANCHORS_HERE,(RE_ICASE << 1),5265,architecture)
+#else
+Msg( "Error: Constant not found: RE_CARET_ANCHORS_HERE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RE_CONTEXT_INVALID_DUP
+	CompareConstant(RE_CONTEXT_INVALID_DUP,(RE_CARET_ANCHORS_HERE << 1),5266,architecture)
+#else
+Msg( "Error: Constant not found: RE_CONTEXT_INVALID_DUP\n");
 cnt++;
 #endif
 
