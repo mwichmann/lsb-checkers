@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include "elfchk.h"
 #include "dwarf.h"
 
 unsigned long int
@@ -40,6 +41,9 @@ int check_CFI(unsigned char *ptr,int length)
 int	numused,used=0;
 int	tmp;
 
+/* XXXSTU - Need to check the values read in eah record */
+
+
 /*
 fprintf(stderr,"\nCFI found at %x", ptr );
 dumpbytes(ptr,8);
@@ -48,48 +52,73 @@ dumpbytes(ptr,8);
 used++; /* The op code */
 switch( *ptr ) {
 	case 0x00: /* DW_CFA_nop */
-		fprintf(stderr,"DW_CFA_nop\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_nop\n" );
+		}
 		break;
 	case 0x02: /* DW_CFA_advance_loc1 */
-		fprintf(stderr,"DW_CFA_advance_loc1\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_advance_loc1\n" );
+			}
 		tmp=*(int *)(ptr);ptr+=sizeof(int);used+=sizeof(int);
 		break;
 	case 0x03: /* DW_CFA_advance_loc2 */
-		fprintf(stderr,"DW_CFA_advance_loc2\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_advance_loc2\n" );
+			}
 		tmp=*(int *)(ptr);ptr+=sizeof(int);used+=sizeof(int);
 		break;
 	case 0x04: /* DW_CFA_advance_loc4 */
-		fprintf(stderr,"DW_CFA_advance_loc4\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_advance_loc4\n" );
+			}
 		tmp=*(int *)(ptr);ptr+=sizeof(int);used+=sizeof(int);
 		break;
 	case 0x05: /* DW_CFA_offset_extended */
-		fprintf(stderr,"DW_CFA_offset_extended\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_offset_extended\n" );
+			}
 		tmp=read_leb128(ptr,&numused,1);ptr+=numused;used+=numused;
 		tmp=read_leb128(ptr,&numused,1);ptr+=numused;used+=numused;
 		break;
 	case 0x0D: /* DW_CFA_def_cfa_register */
-		fprintf(stderr,"DW_CFA_def_cfa_register\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_def_cfa_register\n" );
+			}
 		tmp=read_leb128(ptr,&numused,1);ptr+=numused;used+=numused;
 		break;
 	case 0x0E: /* DW_CFA_def_cfa_offset */
-		fprintf(stderr,"DW_CFA_def_cfa_offset\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_def_cfa_offset\n" );
+			}
 		tmp=read_leb128(ptr,&numused,1);ptr+=numused;used+=numused;
 		break;
 	case 0x0C: /* DW_CFA_def_cfa */
-		fprintf(stderr,"DW_CFA_def_cfa\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_def_cfa\n" );
+			}
 		tmp=read_leb128(ptr,&numused,0);ptr+=numused;used+=numused;
 		tmp=read_leb128(ptr,&numused,0);ptr+=numused;used+=numused;
 		break;
 	case 0x85: /* DW_CFA_offset|DW_CFA_offset_extended */
-		fprintf(stderr,"DW_CFA_offset|DW_CFA_offset_extended\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,
+				"DW_CFA_offset|DW_CFA_offset_extended\n" );
+			}
 		tmp=read_leb128(ptr,&numused,0);ptr+=numused;used+=numused;
 		break;
 	case 0x88: /* DW_CFA_offset|DW_CFA_same_value */
-		fprintf(stderr,"DW_CFA_offset|DW_CFA_same_value\n" );
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_offset|DW_CFA_same_value\n" );
+			}
 		tmp=read_leb128(ptr,&numused,0);ptr+=numused;used+=numused;
 		break;
 	default:
-		fprintf(stderr,"********** Unexpected CFI opcode %x **\n", *ptr);
+		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,
+				"********** Unexpected CFI opcode %x **\n",
+				*ptr);
+			}
 	}
 
 return used;
@@ -113,10 +142,12 @@ fdeimage.initial_location=*(int **)ptr;ptr+=4;length-=4;used+=4;
 fdeimage.address_range=*(int *)ptr;ptr+=4;length-=4;used+=4;
 fdeimage.address_range=read_leb128(ptr,&numused,1);ptr+=numused;length-=numused;used+=4;
 
-fprintf(stderr,"length: %x\n", fdeimage.length);
-fprintf(stderr,"CIE_pointer: %x\n", fdeimage.CIE_pointer);
-fprintf(stderr,"initial_location: %x\n", fdeimage.initial_location);
-fprintf(stderr,"address_range: %x\n", fdeimage.address_range);
+if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+	fprintf(stderr,"length: %x\n", fdeimage.length);
+	fprintf(stderr,"CIE_pointer: %x\n", fdeimage.CIE_pointer);
+	fprintf(stderr,"initial_location: %x\n", fdeimage.initial_location);
+	fprintf(stderr,"address_range: %x\n", fdeimage.address_range);
+	}
 
 endptr+=fdeimage.length;
 while(ptr<endptr)
@@ -142,10 +173,13 @@ frame.length=frameimg->length;
 frame.cie=frameimg->cie;
 frame.version=frameimg->version;
 frame.augmentation=frameimg->augmentation;
-fprintf(stderr,"length: %x\n", frame.length);
-fprintf(stderr,"cie: %x\n", frame.cie);
-fprintf(stderr,"ver: %x\n", frame.version);
-fprintf(stderr,"aug: %s\n", frame.augmentation);
+
+if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+	fprintf(stderr,"length: %x\n", frame.length);
+	fprintf(stderr,"cie: %x\n", frame.cie);
+	fprintf(stderr,"ver: %x\n", frame.version);
+	fprintf(stderr,"aug: %s\n", frame.augmentation);
+	}
 
 ptr=(unsigned char *)(&frameimg->augmentation[0])+strlen(frameimg->augmentation)+1;
 
@@ -153,26 +187,38 @@ frame.code_alignment_factor=read_leb128(ptr,&numused,0);ptr+=numused;
 frame.data_alignment_factor=read_leb128(ptr,&numused,1);ptr+=numused;
 frame.return_address_register=*ptr++;
 
-fprintf(stderr,"code_af: %d\n", frame.code_alignment_factor);
-fprintf(stderr,"data_af: %d\n", frame.data_alignment_factor);
-fprintf(stderr,"return_address_register: %x\n", frame.return_address_register);
+if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+	fprintf(stderr,"code_af: %d\n", frame.code_alignment_factor);
+	fprintf(stderr,"data_af: %d\n", frame.data_alignment_factor);
+	fprintf(stderr,"return_address_register: %x\n",
+		frame.return_address_register);
+	}
 
 /* Get the info related with 'z' */
 frame.augmentation_len=read_leb128(ptr,&numused,0);ptr+=numused;
-fprintf(stderr,"augmentation_len: %x\n", frame.augmentation_len);
+if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+	fprintf(stderr,"augmentation_len: %x\n", frame.augmentation_len);
+	}
 
 /* Get the info related with 'P' */
 frame.encoding=*ptr++;
 frame.personality_routine=*(unsigned char **)ptr;
 ptr+=sizeof(unsigned char *);
-fprintf(stderr,"encoding: %x\n", frame.encoding);
-fprintf(stderr,"per routine: %x\n", frame.personality_routine);
+
+if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+	fprintf(stderr,"encoding: %x\n", frame.encoding);
+	fprintf(stderr,"per routine: %x\n", frame.personality_routine);
+	}
 
 /* Get the CFIs */
 
-fprintf(stderr,"%x bytes of CFI\n", ptr-(unsigned char *)frameimg);
+if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
+	fprintf(stderr,"%x bytes of CFI\n", ptr-(unsigned char *)frameimg);
+	}
+
 while( (ptr-(unsigned char *)frameimg) < frameimg->length+sizeof(int) ) {
-	ptr+=check_CFI(ptr,(frameimg->length+sizeof(int))-(ptr-(unsigned char *)frameimg));
+	ptr+=check_CFI(ptr,(frameimg->length+sizeof(int))-
+					(ptr-(unsigned char *)frameimg));
 	}
 
 length-=frame.length;
