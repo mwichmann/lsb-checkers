@@ -157,6 +157,9 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
+#if __s390x__
+	{".sbss",SHT_PROGBITS,SHF_WRITE,checkPROGBITS},
+#endif /* __s390x__ */
 #if __ia64__
 	{".sdata",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
