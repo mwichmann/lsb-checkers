@@ -78,7 +78,7 @@ $select.= "ORDER BY VTpos";
 
 #print $select;
 
-print $LIB "char *".$vtablename."_name[] = {\n";
+print $LIB "const char *".$vtablename."_name[] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 $numvtablefuns=0;
 for(1..$$class{'CInumvfunc'}) {
