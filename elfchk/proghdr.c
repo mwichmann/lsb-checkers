@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "elfchk.h"
 #include "proghdr.h"
-
+#include "../tetj/tetj.h"
 
 typedef int (*ProgHeadFcn)(ElfFile *, Elf32_Phdr *, struct tetj_handle *);
 
@@ -45,10 +45,23 @@ return 1;
 int
 checkPT_INTERP(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-if( !strcmp(file->addr+hdr->p_offset, ProgInterp ) )
-	return 1;
-fprintf(stderr,"Incorrect program interpreter: %s\n", file->addr+hdr->p_offset);
-return 0;
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                     "Check program interpreter");
+
+  if( !strcmp(file->addr+hdr->p_offset, ProgInterp ) )
+  {
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    return 1;
+  }
+
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+  fprintf(stderr,"Incorrect program interpreter: %s\n", 
+          file->addr+hdr->p_offset);
+  return 0;
 }
 
 int
