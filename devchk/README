@@ -1,6 +1,7 @@
 This is the devchk TET test suite, also known as LSB-HDR.  It
 is used for development environment certification.  This test
-suite verifies binary values in specific header files.
+suite verifies binary values in specific header files. *NOTE* It
+is possible to build a version without TET. 
 
 You may build with the test suite source files that have been checked 
 into the source tree.  In most cases, this should work well.  If you 
@@ -15,6 +16,7 @@ build and execute the test suite.
 
 
 CREATE THE TEST SUITE SOURCE FILES
+==================================
 
    NOTE: See the README file included with each module for installation
          instructions.
@@ -49,6 +51,10 @@ CREATE THE TEST SUITE SOURCE FILES
 
 
 BUILD AND EXECUTE THE TEST SUITE
+================================
+
+USING TET
+---------
 
 1. Set the environment variable TET_ROOT and make sure the TET bin 
    directory is in your PATH:
@@ -60,3 +66,19 @@ BUILD AND EXECUTE THE TEST SUITE
 
 	# tcc -b
 	# tcc -e
+
+3. The log file for the latest execution of the tests will be left
+   in the results/0xxxe/ directory where xxx is the highest number
+   in the results directory. You can use the vres program
+   in the BIN directory to summaries the test results.
+ 
+
+NOT USING TET
+-------------
+1. cd to ts/devchk
+
+2. Make hdrchk
+   	# make
+
+3. Run the tests
+   ./hdrchk 
