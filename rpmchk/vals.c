@@ -1,3 +1,9 @@
+/* 
+ *
+ * Copyright (c) 2002 The Free Standards Group Inc
+ * Copyright (c) 2002 Stuart Anderson (anderson@freestnadards.org)
+ *
+ */
 #include "rpmchk.h"
 /*
  * This file contains some values which must match, and some places to
