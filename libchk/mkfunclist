@@ -1,9 +1,26 @@
 #!/usr/bin/perl
 
 use CGI;
+use Getopt::Long;
 use Mysql;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+sub usage()
+{
+print STDERR "mkfunclist -a <archname>\n";
+die;
+}
+
+# Uncomment to trace SQL statments
+#$trace=1;
+
+#
+# 1) process the arguments
+#
+GetOptions("a=s" => \$archname);
+
+if( !$archname ) { usage(); }
 
 sub mklibsyms($$)
 {
@@ -31,8 +48,30 @@ print LIB "\t{0,0}};\n";
 close(LIB);
 }
 
+#
+# 2) Establish connection to the database
+#
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+
+#
+# 3) get & print the architecture info
+#
+$select = "SELECT * FROM Architecture WHERE ";
+$select.= "Aname='All'";
+print STDERR $select,"\n" if $trace;
+$sth = $Dbh->query($select) || die $select."\n".$Dbh->errmsg();
+
+%entry=$sth->fetchhash;
+$AllAid=$entry{'Aid'};
+
+$select = "SELECT * FROM Architecture WHERE ";
+$select.= "Aname=".$Dbh->quote($archname);
+print STDERR $select,"\n" if $trace;
+$sth = $Dbh->query($select) || die $select."\n".$Dbh->errmsg();
+
+%entry=$sth->fetchhash;
+$Aid=$entry{'Aid'};
 
 open(LIBS,">libs.c");
 print LIBS "/* Generated file */\n";
@@ -49,7 +88,8 @@ print MAKE "# Generated file #\n";
 print MAKE "LIBOBJS = \\\n";
 
 $select = "SELECT DISTINCT Lid,Lrunname FROM Library ";
-$select.= "WHERE Library.Lstd='Yes' ";
+$select.= "WHERE Lstd='Yes' ";
+$select.= "AND Larch IN ($Aid,$AllAid) ";
 $select.= "ORDER BY Lrunname ";
 
 #print $select;
