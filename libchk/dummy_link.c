@@ -35,7 +35,7 @@ int main()
 	_Unwind_DeleteException();
 
 	/* libm */
-	acos();
+	acos(0.0);
 
 	/* libncurses */
 	addch();
