@@ -15121,7 +15121,7 @@ const char *St13basic_fstreamIcSt11char_traitsIcEE_vtable_name_2 [] = {
 	"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev",
+	"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev",
 #endif
 #if __ia64__
 	"_ZTv0_n24_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev",
@@ -15142,13 +15142,13 @@ const char *St13basic_fstreamIcSt11char_traitsIcEE_vtable_name_2 [] = {
 	"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev",
+	"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev",
 #endif
 #if __ia64__
 	"_ZTv0_n24_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev",
 #endif
 #if __s390__ && !__s390x__
-	"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev",
+	"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev",
 #endif
 #if __powerpc64__
 	"_ZTv0_n24_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev",
