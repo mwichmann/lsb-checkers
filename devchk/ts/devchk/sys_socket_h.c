@@ -578,9 +578,7 @@ CheckTypeSize(struct linger,8, 6907, 2)
 CheckOffset(struct linger,l_linger,4,2,33675)
 #elif __ia64__
 CheckTypeSize(struct linger,8, 6907, 3)
-Msg("Missing member data for linger on IA64\n");
-CheckOffset(struct linger,l_onoff,0,3,33674)
-CheckOffset(struct linger,l_linger,0,3,33675)
+CheckOffset(struct linger,l_linger,4,3,33675)
 #elif __powerpc__
 CheckTypeSize(struct linger,8, 6907, 6)
 Msg("Missing member data for linger on PPC32\n");
@@ -602,10 +600,8 @@ CheckOffset(struct cmsghdr,cmsg_level,4,2,33686)
 CheckOffset(struct cmsghdr,cmsg_type,8,2,33687)
 #elif __ia64__
 CheckTypeSize(struct cmsghdr,16, 6909, 3)
-Msg("Missing member data for cmsghdr on IA64\n");
-CheckOffset(struct cmsghdr,cmsg_len,0,3,33685)
-CheckOffset(struct cmsghdr,cmsg_level,0,3,33686)
-CheckOffset(struct cmsghdr,cmsg_type,0,3,33687)
+CheckOffset(struct cmsghdr,cmsg_level,8,3,33686)
+CheckOffset(struct cmsghdr,cmsg_type,12,3,33687)
 #elif __powerpc__
 CheckTypeSize(struct cmsghdr,12, 6909, 6)
 Msg("Missing member data for cmsghdr on PPC32\n");
@@ -628,9 +624,7 @@ CheckTypeSize(struct iovec,8, 9022, 2)
 CheckOffset(struct iovec,iov_len,4,2,33677)
 #elif __ia64__
 CheckTypeSize(struct iovec,16, 9022, 3)
-Msg("Missing member data for iovec on IA64\n");
-CheckOffset(struct iovec,iov_base,0,3,33676)
-CheckOffset(struct iovec,iov_len,0,3,33677)
+CheckOffset(struct iovec,iov_len,8,3,33677)
 #elif __powerpc__
 CheckTypeSize(struct iovec,8, 9022, 6)
 Msg("Missing member data for iovec on PPC32\n");
@@ -677,9 +671,7 @@ CheckTypeSize(struct sockaddr,16, 6906, 2)
 CheckOffset(struct sockaddr,sa_data,2,2,33673)
 #elif __ia64__
 CheckTypeSize(struct sockaddr,16, 6906, 3)
-Msg("Missing member data for sockaddr on IA64\n");
-CheckOffset(struct sockaddr,sa_family,0,3,33672)
-CheckOffset(struct sockaddr,sa_data,0,3,33673)
+CheckOffset(struct sockaddr,sa_data,2,3,33673)
 #elif __powerpc__
 CheckTypeSize(struct sockaddr,16, 6906, 6)
 Msg("Missing member data for sockaddr on PPC32\n");
@@ -705,14 +697,12 @@ CheckOffset(struct msghdr,msg_controllen,20,2,33683)
 CheckOffset(struct msghdr,msg_flags,24,2,33684)
 #elif __ia64__
 CheckTypeSize(struct msghdr,56, 6908, 3)
-Msg("Missing member data for msghdr on IA64\n");
-CheckOffset(struct msghdr,msg_name,0,3,33678)
-CheckOffset(struct msghdr,msg_namelen,0,3,33679)
-CheckOffset(struct msghdr,msg_iov,0,3,33680)
-CheckOffset(struct msghdr,msg_iovlen,0,3,33681)
-CheckOffset(struct msghdr,msg_control,0,3,33682)
-CheckOffset(struct msghdr,msg_controllen,0,3,33683)
-CheckOffset(struct msghdr,msg_flags,0,3,33684)
+CheckOffset(struct msghdr,msg_namelen,8,3,33679)
+CheckOffset(struct msghdr,msg_iov,16,3,33680)
+CheckOffset(struct msghdr,msg_iovlen,24,3,33681)
+CheckOffset(struct msghdr,msg_control,32,3,33682)
+CheckOffset(struct msghdr,msg_controllen,40,3,33683)
+CheckOffset(struct msghdr,msg_flags,48,3,33684)
 #elif __powerpc__
 CheckTypeSize(struct msghdr,28, 6908, 6)
 Msg("Missing member data for msghdr on PPC32\n");

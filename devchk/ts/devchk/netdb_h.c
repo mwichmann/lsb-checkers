@@ -318,11 +318,9 @@ CheckOffset(struct servent,s_port,8,2,33735)
 CheckOffset(struct servent,s_proto,12,2,33736)
 #elif __ia64__
 CheckTypeSize(struct servent,32, 10134, 3)
-Msg("Missing member data for servent on IA64\n");
-CheckOffset(struct servent,s_name,0,3,33733)
-CheckOffset(struct servent,s_aliases,0,3,33734)
-CheckOffset(struct servent,s_port,0,3,33735)
-CheckOffset(struct servent,s_proto,0,3,33736)
+CheckOffset(struct servent,s_aliases,8,3,33734)
+CheckOffset(struct servent,s_port,16,3,33735)
+CheckOffset(struct servent,s_proto,24,3,33736)
 #elif __powerpc__
 CheckTypeSize(struct servent,16, 10134, 6)
 Msg("Missing member data for servent on PPC32\n");
@@ -350,12 +348,10 @@ CheckOffset(struct hostent,h_length,12,2,33740)
 CheckOffset(struct hostent,h_addr_list,16,2,33741)
 #elif __ia64__
 CheckTypeSize(struct hostent,32, 10136, 3)
-Msg("Missing member data for hostent on IA64\n");
-CheckOffset(struct hostent,h_name,0,3,33737)
-CheckOffset(struct hostent,h_aliases,0,3,33738)
-CheckOffset(struct hostent,h_addrtype,0,3,33739)
-CheckOffset(struct hostent,h_length,0,3,33740)
-CheckOffset(struct hostent,h_addr_list,0,3,33741)
+CheckOffset(struct hostent,h_aliases,8,3,33738)
+CheckOffset(struct hostent,h_addrtype,16,3,33739)
+CheckOffset(struct hostent,h_length,20,3,33740)
+CheckOffset(struct hostent,h_addr_list,24,3,33741)
 #elif __powerpc__
 CheckTypeSize(struct hostent,20, 10136, 6)
 Msg("Missing member data for hostent on PPC32\n");
@@ -384,10 +380,8 @@ CheckOffset(struct protoent,p_aliases,4,2,33743)
 CheckOffset(struct protoent,p_proto,8,2,33744)
 #elif __ia64__
 CheckTypeSize(struct protoent,24, 10139, 3)
-Msg("Missing member data for protoent on IA64\n");
-CheckOffset(struct protoent,p_name,0,3,33742)
-CheckOffset(struct protoent,p_aliases,0,3,33743)
-CheckOffset(struct protoent,p_proto,0,3,33744)
+CheckOffset(struct protoent,p_aliases,8,3,33743)
+CheckOffset(struct protoent,p_proto,16,3,33744)
 #elif __s390__
 CheckTypeSize(struct protoent,12, 10139, 10)
 Msg("Missing member data for protoent on S390\n");
@@ -399,7 +393,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10139,0);
 Msg("Find size of protoent (10139)\n");
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+CheckTypeSize(struct netent,24, 10141, 3)
+CheckOffset(struct netent,n_aliases,8,3,33746)
+CheckOffset(struct netent,n_addrtype,16,3,33747)
+CheckOffset(struct netent,n_net,20,3,33748)
+#elif __i386__
 CheckTypeSize(struct netent,16, 10141, 2)
 CheckOffset(struct netent,n_aliases,4,2,33746)
 CheckOffset(struct netent,n_addrtype,8,2,33747)
@@ -416,7 +415,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10141,0);
 Msg("Find size of netent (10141)\n");
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+CheckTypeSize(struct addrinfo,48, 10125, 3)
+CheckOffset(struct addrinfo,ai_family,4,3,33695)
+CheckOffset(struct addrinfo,ai_socktype,8,3,33696)
+CheckOffset(struct addrinfo,ai_protocol,12,3,33697)
+CheckOffset(struct addrinfo,ai_addrlen,16,3,33698)
+CheckOffset(struct addrinfo,ai_addr,24,3,33699)
+CheckOffset(struct addrinfo,ai_canonname,32,3,33700)
+CheckOffset(struct addrinfo,ai_next,40,3,33701)
+#elif __i386__
 CheckTypeSize(struct addrinfo,32, 10125, 2)
 CheckOffset(struct addrinfo,ai_family,4,2,33695)
 CheckOffset(struct addrinfo,ai_socktype,8,2,33696)

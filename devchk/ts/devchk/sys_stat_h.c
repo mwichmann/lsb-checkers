@@ -362,29 +362,6 @@ CheckOffset(struct stat,st_ctime,72,2,33648)
 CheckOffset(struct stat,__unused3,76,2,33649)
 CheckOffset(struct stat,__unused4,80,2,33650)
 CheckOffset(struct stat,__unused5,84,2,33651)
-#elif __ia64__
-CheckTypeSize(struct stat,144, 8693, 3)
-Msg("Missing member data for stat on IA64\n");
-CheckOffset(struct stat,st_dev,0,3,33632)
-CheckOffset(struct stat,__pad1,0,3,33633)
-CheckOffset(struct stat,st_ino,0,3,33634)
-CheckOffset(struct stat,st_mode,0,3,33635)
-CheckOffset(struct stat,st_nlink,0,3,33636)
-CheckOffset(struct stat,st_uid,0,3,33637)
-CheckOffset(struct stat,st_gid,0,3,33638)
-CheckOffset(struct stat,st_rdev,0,3,33639)
-CheckOffset(struct stat,__pad2,0,3,33640)
-CheckOffset(struct stat,st_size,0,3,33641)
-CheckOffset(struct stat,st_blksize,0,3,33642)
-CheckOffset(struct stat,st_blocks,0,3,33643)
-CheckOffset(struct stat,st_atime,0,3,33644)
-CheckOffset(struct stat,__unused1,0,3,33645)
-CheckOffset(struct stat,st_mtime,0,3,33646)
-CheckOffset(struct stat,__unused2,0,3,33647)
-CheckOffset(struct stat,st_ctime,0,3,33648)
-CheckOffset(struct stat,__unused3,0,3,33649)
-CheckOffset(struct stat,__unused4,0,3,33650)
-CheckOffset(struct stat,__unused5,0,3,33651)
 #elif __powerpc__
 CheckTypeSize(struct stat,88, 8693, 6)
 Msg("Missing member data for stat on PPC32\n");
@@ -431,9 +408,6 @@ CheckOffset(struct stat,st_ctime,0,10,33648)
 CheckOffset(struct stat,__unused3,0,10,33649)
 CheckOffset(struct stat,__unused4,0,10,33650)
 CheckOffset(struct stat,__unused5,0,10,33651)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8693,0);
-Msg("Find size of stat (8693)\n");
 #endif
 
 #ifdef __i386__
@@ -456,50 +430,6 @@ CheckOffset(struct stat64,__unused2,76,2,33667)
 CheckOffset(struct stat64,st_ctime,80,2,33668)
 CheckOffset(struct stat64,__unused3,84,2,33669)
 CheckOffset(struct stat64,st_ino,88,2,33670)
-#elif __ia64__
-CheckTypeSize(struct stat64,144, 8697, 3)
-Msg("Missing member data for stat64 on IA64\n");
-CheckOffset(struct stat64,st_dev,0,3,33652)
-CheckOffset(struct stat64,__pad1,0,3,33653)
-CheckOffset(struct stat64,__st_ino,0,3,33654)
-CheckOffset(struct stat64,st_mode,0,3,33655)
-CheckOffset(struct stat64,st_nlink,0,3,33656)
-CheckOffset(struct stat64,st_uid,0,3,33657)
-CheckOffset(struct stat64,st_gid,0,3,33658)
-CheckOffset(struct stat64,st_rdev,0,3,33659)
-CheckOffset(struct stat64,__pad2,0,3,33660)
-CheckOffset(struct stat64,st_size,0,3,33661)
-CheckOffset(struct stat64,st_blksize,0,3,33662)
-CheckOffset(struct stat64,st_blocks,0,3,33663)
-CheckOffset(struct stat64,st_atime,0,3,33664)
-CheckOffset(struct stat64,__unused1,0,3,33665)
-CheckOffset(struct stat64,st_mtime,0,3,33666)
-CheckOffset(struct stat64,__unused2,0,3,33667)
-CheckOffset(struct stat64,st_ctime,0,3,33668)
-CheckOffset(struct stat64,__unused3,0,3,33669)
-CheckOffset(struct stat64,st_ino,0,3,33670)
-#elif __powerpc__
-CheckTypeSize(struct stat64,104, 8697, 6)
-Msg("Missing member data for stat64 on PPC32\n");
-CheckOffset(struct stat64,st_dev,0,6,33652)
-CheckOffset(struct stat64,__pad1,0,6,33653)
-CheckOffset(struct stat64,__st_ino,0,6,33654)
-CheckOffset(struct stat64,st_mode,0,6,33655)
-CheckOffset(struct stat64,st_nlink,0,6,33656)
-CheckOffset(struct stat64,st_uid,0,6,33657)
-CheckOffset(struct stat64,st_gid,0,6,33658)
-CheckOffset(struct stat64,st_rdev,0,6,33659)
-CheckOffset(struct stat64,__pad2,0,6,33660)
-CheckOffset(struct stat64,st_size,0,6,33661)
-CheckOffset(struct stat64,st_blksize,0,6,33662)
-CheckOffset(struct stat64,st_blocks,0,6,33663)
-CheckOffset(struct stat64,st_atime,0,6,33664)
-CheckOffset(struct stat64,__unused1,0,6,33665)
-CheckOffset(struct stat64,st_mtime,0,6,33666)
-CheckOffset(struct stat64,__unused2,0,6,33667)
-CheckOffset(struct stat64,st_ctime,0,6,33668)
-CheckOffset(struct stat64,__unused3,0,6,33669)
-CheckOffset(struct stat64,st_ino,0,6,33670)
 #elif __s390__
 CheckTypeSize(struct stat64,104, 8697, 10)
 Msg("Missing member data for stat64 on S390\n");
@@ -522,9 +452,33 @@ CheckOffset(struct stat64,__unused2,0,10,33667)
 CheckOffset(struct stat64,st_ctime,0,10,33668)
 CheckOffset(struct stat64,__unused3,0,10,33669)
 CheckOffset(struct stat64,st_ino,0,10,33670)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8697,0);
-Msg("Find size of stat64 (8697)\n");
+#endif
+
+#ifdef __ia64__
+CheckTypeSize(struct stat,144, 10397, 3)
+CheckOffset(struct stat,st_dev,0,3,34670)
+CheckOffset(struct stat,st_ino,8,3,34671)
+CheckOffset(struct stat,st_nlink,16,3,34672)
+CheckOffset(struct stat,st_mode,24,3,34673)
+CheckOffset(struct stat,st_uid,28,3,34674)
+CheckOffset(struct stat,st_gid,32,3,34675)
+CheckOffset(struct stat,pad0,36,3,34676)
+CheckOffset(struct stat,st_rdev,40,3,34677)
+CheckOffset(struct stat,st_size,48,3,34678)
+CheckOffset(struct stat,st_atime,56,3,34679)
+CheckOffset(struct stat,__reserved0,64,3,34680)
+CheckOffset(struct stat,st_mtime,72,3,34681)
+CheckOffset(struct stat,__reserved1,80,3,34683)
+CheckOffset(struct stat,st_ctime,88,3,34682)
+CheckOffset(struct stat,__reserved2,96,3,34684)
+CheckOffset(struct stat,st_blksize,104,3,34685)
+CheckOffset(struct stat,st_blocks,112,3,34687)
+CheckOffset(struct stat,__unused,120,3,34686)
+#endif
+
+#ifdef __powerpc__
+CheckTypeSize(struct stat64,104, 10398, 6)
+Msg("Missing member data for stat64 on PPC32\n");
 #endif
 
 #ifdef TET_TEST

@@ -283,9 +283,7 @@ CheckOffset(struct _pthread_fastlock,__status,0,2,33602)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,2,34427)
 #elif __ia64__
 CheckTypeSize(struct _pthread_fastlock,16, 10105, 3)
-Msg("Missing member data for _pthread_fastlock on IA64\n");
-CheckOffset(struct _pthread_fastlock,__status,0,3,33602)
-CheckOffset(struct _pthread_fastlock,__spinlock,0,3,34427)
+CheckOffset(struct _pthread_fastlock,__spinlock,8,3,34427)
 #elif __powerpc__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 6)
 Msg("Missing member data for _pthread_fastlock on PPC32\n");

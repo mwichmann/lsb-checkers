@@ -23,7 +23,8 @@ int pcnt=0;
 Msg("Checking data structures in rpc/auth.h\n");
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+#elif __i386__
 #elif __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9887,0);
@@ -40,6 +41,11 @@ CheckTypeSize(struct opaque_auth,12, 9894, 10)
 CheckOffset(struct opaque_auth,oa_flavor,0,10,32026)
 CheckOffset(struct opaque_auth,oa_base,4,10,32027)
 CheckOffset(struct opaque_auth,oa_length,8,10,32028)
+#elif __ia64__
+CheckTypeSize(struct opaque_auth,24, 9894, 3)
+CheckOffset(struct opaque_auth,oa_flavor,0,3,32026)
+CheckOffset(struct opaque_auth,oa_base,8,3,32027)
+CheckOffset(struct opaque_auth,oa_length,16,3,32028)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9894,0);
 Msg("Find size of opaque_auth (9894)\n");
@@ -59,6 +65,12 @@ CheckOffset(struct AUTH,ah_verf,0,10,32030)
 CheckOffset(struct AUTH,ah_key,0,10,32031)
 CheckOffset(struct AUTH,ah_ops,0,10,32037)
 CheckOffset(struct AUTH,ah_private,0,10,32038)
+#elif __ia64__
+CheckTypeSize(struct AUTH,72, 9896, 3)
+CheckOffset(struct AUTH,ah_verf,24,3,32030)
+CheckOffset(struct AUTH,ah_key,48,3,32031)
+CheckOffset(struct AUTH,ah_ops,56,3,32037)
+CheckOffset(struct AUTH,ah_private,64,3,32038)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9896,0);
 Msg("Find size of AUTH (9896)\n");
@@ -68,6 +80,8 @@ Msg("Find size of AUTH (9896)\n");
 CheckTypeSize(AUTH,40, 10391, 2)
 #elif __s390__
 CheckTypeSize(AUTH,40, 10391, 10)
+#elif __ia64__
+CheckTypeSize(AUTH,72, 10391, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10391,0);
 Msg("Find size of AUTH (10391)\n");
@@ -88,6 +102,12 @@ CheckOffset(struct auth_ops,ah_marshal,0,10,32033)
 CheckOffset(struct auth_ops,ah_validate,0,10,32034)
 CheckOffset(struct auth_ops,ah_refresh,0,10,32035)
 CheckOffset(struct auth_ops,ah_destroy,0,10,32036)
+#elif __ia64__
+CheckTypeSize(struct auth_ops,40, 9897, 3)
+CheckOffset(struct auth_ops,ah_marshal,8,3,32033)
+CheckOffset(struct auth_ops,ah_validate,16,3,32034)
+CheckOffset(struct auth_ops,ah_refresh,24,3,32035)
+CheckOffset(struct auth_ops,ah_destroy,32,3,32036)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9897,0);
 Msg("Find size of auth_ops (9897)\n");
@@ -102,6 +122,11 @@ CheckTypeSize(union des_block,8, 9888, 10)
 Msg("Missing member data for des_block on S390\n");
 CheckOffset(union des_block,key,0,10,32024)
 CheckOffset(union des_block,c,0,10,32025)
+#elif __ia64__
+CheckTypeSize(union des_block,8, 9888, 3)
+Msg("Missing member data for des_block on IA64\n");
+CheckOffset(union des_block,key,0,3,32024)
+CheckOffset(union des_block,c,0,3,32025)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9888,0);
 Msg("Find size of des_block (9888)\n");

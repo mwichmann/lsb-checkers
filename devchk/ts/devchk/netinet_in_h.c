@@ -133,11 +133,9 @@ CheckOffset(struct sockaddr_in,sin_addr,4,2,33778)
 CheckOffset(struct sockaddr_in,sin_zero,8,2,33779)
 #elif __ia64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 3)
-Msg("Missing member data for sockaddr_in on IA64\n");
-CheckOffset(struct sockaddr_in,sin_family,0,3,33776)
-CheckOffset(struct sockaddr_in,sin_port,0,3,33777)
-CheckOffset(struct sockaddr_in,sin_addr,0,3,33778)
-CheckOffset(struct sockaddr_in,sin_zero,0,3,33779)
+CheckOffset(struct sockaddr_in,sin_port,2,3,33777)
+CheckOffset(struct sockaddr_in,sin_addr,4,3,33778)
+CheckOffset(struct sockaddr_in,sin_zero,8,3,33779)
 #elif __powerpc__
 CheckTypeSize(struct sockaddr_in,16, 9141, 6)
 Msg("Missing member data for sockaddr_in on PPC32\n");

@@ -233,7 +233,15 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+#ifdef __INT_MAX__
+	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
+#else
+Msg( "Error: Constant not found: __INT_MAX__\n");
+cnt++;
+#endif
+
+#elif __i386__
 #ifdef __INT_MAX__
 	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
 #else

@@ -1300,9 +1300,7 @@ CheckOffset(struct sigstack,ss_sp,0,2,34194)
 CheckOffset(struct sigstack,ss_onstack,4,2,34195)
 #elif __ia64__
 CheckTypeSize(struct sigstack,16, 9315, 3)
-Msg("Missing member data for sigstack on IA64\n");
-CheckOffset(struct sigstack,ss_sp,0,3,34194)
-CheckOffset(struct sigstack,ss_onstack,0,3,34195)
+CheckOffset(struct sigstack,ss_onstack,8,3,34195)
 #elif __powerpc__
 CheckTypeSize(struct sigstack,8, 9315, 6)
 Msg("Missing member data for sigstack on PPC32\n");
@@ -1387,40 +1385,40 @@ CheckTypeSize(sigset_t,128, 10163, 3)
 CheckTypeSize(sigset_t,128, 10163, 6)
 #elif __s390__
 CheckTypeSize(sigset_t,128, 10163, 10)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
-Msg("Find size of sigset_t (10163)\n");
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct sigaction,140, 9097, 2)
+CheckOffset(struct sigaction,__sigaction_handler,0,2,34019)
 CheckOffset(struct sigaction,sa_flags,132,2,34020)
 CheckOffset(struct sigaction,sa_restorer,136,2,34021)
-CheckOffset(struct sigaction,sa_mask,4,2,34022)
-#elif __ia64__
-CheckTypeSize(struct sigaction,144, 9097, 3)
-Msg("Missing member data for sigaction on IA64\n");
-CheckOffset(struct sigaction,__sigaction_handler,0,3,34019)
-CheckOffset(struct sigaction,sa_flags,0,3,34020)
-CheckOffset(struct sigaction,sa_restorer,0,3,34021)
-CheckOffset(struct sigaction,sa_mask,0,3,34022)
-#elif __powerpc__
-CheckTypeSize(struct sigaction,140, 9097, 6)
-Msg("Missing member data for sigaction on PPC32\n");
-CheckOffset(struct sigaction,__sigaction_handler,0,6,34019)
-CheckOffset(struct sigaction,sa_flags,0,6,34020)
-CheckOffset(struct sigaction,sa_restorer,0,6,34021)
-CheckOffset(struct sigaction,sa_mask,0,6,34022)
-#elif __s390__
-CheckTypeSize(struct sigaction,140, 9097, 10)
-Msg("Missing member data for sigaction on S390\n");
-CheckOffset(struct sigaction,__sigaction_handler,0,10,34019)
-CheckOffset(struct sigaction,sa_flags,0,10,34020)
-CheckOffset(struct sigaction,sa_restorer,0,10,34021)
-CheckOffset(struct sigaction,sa_mask,0,10,34022)
+CheckOffset(struct sigaction,sa_maskmake,4,2,34022)
+#endif
+
+#ifdef __ia64__
+CheckTypeSize(struct sigaction,144, 10393, 3)
+CheckOffset(struct sigaction,__sigaction_handler,0,3,34641)
+CheckOffset(struct sigaction,sa_flags,8,3,34642)
+CheckOffset(struct sigaction,sa_mask,16,3,34643)
+#endif
+
+#ifdef __powerpc__
+CheckTypeSize(struct sigaction,140, 10401, 6)
+CheckOffset(struct sigaction,__sigaction_handler,0,6,34712)
+CheckOffset(struct sigaction,sa_flags,0,6,34713)
+CheckOffset(struct sigaction,sa_restorer,0,6,34714)
+CheckOffset(struct sigaction,sa_mask,0,6,34715)
+#endif
+
+#ifdef __s390__
+CheckTypeSize(struct sigaction,140, 10402, 10)
+CheckOffset(struct sigaction,__sigaction_handler,0,10,34716)
+CheckOffset(struct sigaction,sa_flags,0,10,34717)
+CheckOffset(struct sigaction,sa_restorer,0,10,34718)
+CheckOffset(struct sigaction,sa_mask,0,10,34719)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9097,0);
-Msg("Find size of sigaction (9097)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10402,0);
+Msg("Find size of sigaction (10402)\n");
 #endif
 
 #ifdef __i386__

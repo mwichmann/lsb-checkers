@@ -467,14 +467,12 @@ CheckOffset(struct re_pattern_buffer,translate,20,2,30071)
 CheckOffset(struct re_pattern_buffer,re_nsub,24,2,30072)
 #elif __ia64__
 CheckTypeSize(struct re_pattern_buffer,64, 6944, 3)
-Msg("Missing member data for re_pattern_buffer on IA64\n");
-CheckOffset(struct re_pattern_buffer,buffer,0,3,30066)
-CheckOffset(struct re_pattern_buffer,allocated,0,3,30067)
-CheckOffset(struct re_pattern_buffer,used,0,3,30068)
-CheckOffset(struct re_pattern_buffer,syntax,0,3,30069)
-CheckOffset(struct re_pattern_buffer,fastmap,0,3,30070)
-CheckOffset(struct re_pattern_buffer,translate,0,3,30071)
-CheckOffset(struct re_pattern_buffer,re_nsub,0,3,30072)
+CheckOffset(struct re_pattern_buffer,allocated,8,3,30067)
+CheckOffset(struct re_pattern_buffer,used,16,3,30068)
+CheckOffset(struct re_pattern_buffer,syntax,24,3,30069)
+CheckOffset(struct re_pattern_buffer,fastmap,32,3,30070)
+CheckOffset(struct re_pattern_buffer,translate,40,3,30071)
+CheckOffset(struct re_pattern_buffer,re_nsub,48,3,30072)
 #elif __powerpc__
 CheckTypeSize(struct re_pattern_buffer,32, 6944, 6)
 Msg("Missing member data for re_pattern_buffer on PPC32\n");

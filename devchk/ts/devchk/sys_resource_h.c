@@ -218,9 +218,7 @@ CheckOffset(struct rlimit64,rlim_cur,0,2,34266)
 CheckOffset(struct rlimit64,rlim_max,8,2,34267)
 #elif __ia64__
 CheckTypeSize(struct rlimit64,16, 9122, 3)
-Msg("Missing member data for rlimit64 on IA64\n");
-CheckOffset(struct rlimit64,rlim_cur,0,3,34266)
-CheckOffset(struct rlimit64,rlim_max,0,3,34267)
+CheckOffset(struct rlimit64,rlim_max,8,3,34267)
 #elif __powerpc__
 CheckTypeSize(struct rlimit64,16, 9122, 6)
 Msg("Missing member data for rlimit64 on PPC32\n");

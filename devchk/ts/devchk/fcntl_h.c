@@ -302,12 +302,10 @@ CheckOffset(struct flock,l_len,8,2,34305)
 CheckOffset(struct flock,l_pid,12,2,34306)
 #elif __ia64__
 CheckTypeSize(struct flock,32, 10217, 3)
-Msg("Missing member data for flock on IA64\n");
-CheckOffset(struct flock,l_type,0,3,34302)
-CheckOffset(struct flock,l_whence,0,3,34303)
-CheckOffset(struct flock,l_start,0,3,34304)
-CheckOffset(struct flock,l_len,0,3,34305)
-CheckOffset(struct flock,l_pid,0,3,34306)
+CheckOffset(struct flock,l_whence,2,3,34303)
+CheckOffset(struct flock,l_start,8,3,34304)
+CheckOffset(struct flock,l_len,16,3,34305)
+CheckOffset(struct flock,l_pid,24,3,34306)
 #elif __powerpc__
 CheckTypeSize(struct flock,16, 10217, 6)
 Msg("Missing member data for flock on PPC32\n");
@@ -338,12 +336,10 @@ CheckOffset(struct flock64,l_len,12,2,34310)
 CheckOffset(struct flock64,l_pid,20,2,34311)
 #elif __ia64__
 CheckTypeSize(struct flock64,32, 10218, 3)
-Msg("Missing member data for flock64 on IA64\n");
-CheckOffset(struct flock64,l_type,0,3,34307)
-CheckOffset(struct flock64,l_whence,0,3,34308)
-CheckOffset(struct flock64,l_start,0,3,34309)
-CheckOffset(struct flock64,l_len,0,3,34310)
-CheckOffset(struct flock64,l_pid,0,3,34311)
+CheckOffset(struct flock64,l_whence,2,3,34308)
+CheckOffset(struct flock64,l_start,8,3,34309)
+CheckOffset(struct flock64,l_len,16,3,34310)
+CheckOffset(struct flock64,l_pid,24,3,34311)
 #elif __powerpc__
 CheckTypeSize(struct flock64,32, 10218, 6)
 Msg("Missing member data for flock64 on PPC32\n");
