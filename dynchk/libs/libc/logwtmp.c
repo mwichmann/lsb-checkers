@@ -6,23 +6,23 @@
 #undef logwtmp
 static void(*funcptr) (const char * , const char * , const char * ) = 0;
 
+extern int __lsb_check_params;
 void logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "logwtmp");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "logwtmp - arg0");
-	validate_NULL_TYPETYPE(  arg0, "logwtmp - arg0");
+		validate_NULL_TYPETYPE(  arg0, "logwtmp - arg0");
 	validate_Rdaddress( arg1, "logwtmp - arg1");
-	validate_NULL_TYPETYPE(  arg1, "logwtmp - arg1");
+		validate_NULL_TYPETYPE(  arg1, "logwtmp - arg1");
 	validate_Rdaddress( arg2, "logwtmp - arg2");
-	validate_NULL_TYPETYPE(  arg2, "logwtmp - arg2");
+		validate_NULL_TYPETYPE(  arg2, "logwtmp - arg2");
+	}
 	funcptr(arg0, arg1, arg2);
-}
-
-void __lsb_logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "logwtmp");
-	funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
 }
 

@@ -7,21 +7,23 @@
 #undef initstate
 static char *(*funcptr) (unsigned int , char * , size_t ) = 0;
 
+extern int __lsb_check_params;
 char * initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initstate");
-	validate_NULL_TYPETYPE(  arg0, "initstate - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "initstate - arg0");
 	validate_Rdaddress( arg1, "initstate - arg1");
-	validate_NULL_TYPETYPE(  arg1, "initstate - arg1");
-	validate_NULL_TYPETYPE(  arg2, "initstate - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-char * __lsb_initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "initstate");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "initstate - arg1");
+		validate_NULL_TYPETYPE(  arg2, "initstate - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

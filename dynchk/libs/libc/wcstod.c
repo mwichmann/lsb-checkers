@@ -7,22 +7,24 @@
 #undef wcstod
 static double(*funcptr) (const wchar_t * , wchar_t * * ) = 0;
 
+extern int __lsb_check_params;
 double wcstod (const wchar_t * arg0 , wchar_t * * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstod");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wcstod - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wcstod - arg0");
+		validate_NULL_TYPETYPE(  arg0, "wcstod - arg0");
 	validate_Rdaddress( arg1, "wcstod - arg1");
 	validate_Rdaddress(* arg1, "wcstod - arg1");
-	validate_NULL_TYPETYPE(  arg1, "wcstod - arg1");
-	return funcptr(arg0, arg1);
-}
-
-double __lsb_wcstod (const wchar_t * arg0 , wchar_t * * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcstod");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "wcstod - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,20 +6,22 @@
 #undef gzwrite
 static int(*funcptr) (gzFile , voidpc , unsigned int ) = 0;
 
+extern int __lsb_check_params;
 int gzwrite (gzFile arg0 , voidpc arg1 , unsigned int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzwrite");
-	validate_NULL_TYPETYPE(  arg0, "gzwrite - arg0");
-	validate_NULL_TYPETYPE(  arg1, "gzwrite - arg1");
-	validate_NULL_TYPETYPE(  arg2, "gzwrite - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_gzwrite (gzFile arg0 , voidpc arg1 , unsigned int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gzwrite");
-	return funcptr(arg0, arg1, arg2);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "gzwrite - arg0");
+		validate_NULL_TYPETYPE(  arg1, "gzwrite - arg1");
+		validate_NULL_TYPETYPE(  arg2, "gzwrite - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

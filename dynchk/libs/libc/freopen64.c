@@ -6,23 +6,25 @@
 #undef freopen64
 static FILE *(*funcptr) (const char * , const char * , FILE * ) = 0;
 
+extern int __lsb_check_params;
 FILE * freopen64 (const char * arg0 , const char * arg1 , FILE * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	FILE * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freopen64");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "freopen64 - arg0");
-	validate_NULL_TYPETYPE(  arg0, "freopen64 - arg0");
+		validate_NULL_TYPETYPE(  arg0, "freopen64 - arg0");
 	validate_Rdaddress( arg1, "freopen64 - arg1");
-	validate_NULL_TYPETYPE(  arg1, "freopen64 - arg1");
+		validate_NULL_TYPETYPE(  arg1, "freopen64 - arg1");
 	validate_Rdaddress( arg2, "freopen64 - arg2");
-	validate_NULL_TYPETYPE(  arg2, "freopen64 - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-FILE * __lsb_freopen64 (const char * arg0 , const char * arg1 , FILE * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "freopen64");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "freopen64 - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

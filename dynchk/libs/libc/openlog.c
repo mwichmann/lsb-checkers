@@ -6,21 +6,21 @@
 #undef openlog
 static void(*funcptr) (const char * , int , int ) = 0;
 
+extern int __lsb_check_params;
 void openlog (const char * arg0 , int arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openlog");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "openlog - arg0");
-	validate_NULL_TYPETYPE(  arg0, "openlog - arg0");
-	validate_NULL_TYPETYPE(  arg1, "openlog - arg1");
-	validate_NULL_TYPETYPE(  arg2, "openlog - arg2");
+		validate_NULL_TYPETYPE(  arg0, "openlog - arg0");
+		validate_NULL_TYPETYPE(  arg1, "openlog - arg1");
+		validate_NULL_TYPETYPE(  arg2, "openlog - arg2");
+	}
 	funcptr(arg0, arg1, arg2);
-}
-
-void __lsb_openlog (const char * arg0 , int arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "openlog");
-	funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
 }
 

@@ -7,22 +7,24 @@
 #undef wcstof
 static float(*funcptr) (const wchar_t * , wchar_t * * ) = 0;
 
+extern int __lsb_check_params;
 float wcstof (const wchar_t * arg0 , wchar_t * * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	float ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstof");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wcstof - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wcstof - arg0");
+		validate_NULL_TYPETYPE(  arg0, "wcstof - arg0");
 	validate_Rdaddress( arg1, "wcstof - arg1");
 	validate_Rdaddress(* arg1, "wcstof - arg1");
-	validate_NULL_TYPETYPE(  arg1, "wcstof - arg1");
-	return funcptr(arg0, arg1);
-}
-
-float __lsb_wcstof (const wchar_t * arg0 , wchar_t * * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcstof");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "wcstof - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -7,25 +7,27 @@
 #undef xdr_bytes
 static bool_t(*funcptr) (XDR * , char * * , u_int * , u_int ) = 0;
 
+extern int __lsb_check_params;
 bool_t xdr_bytes (XDR * arg0 , char * * arg1 , u_int * arg2 , u_int arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	bool_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_bytes");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "xdr_bytes - arg0");
-	validate_NULL_TYPETYPE(  arg0, "xdr_bytes - arg0");
+		validate_NULL_TYPETYPE(  arg0, "xdr_bytes - arg0");
 	validate_Rdaddress( arg1, "xdr_bytes - arg1");
 	validate_Rdaddress(* arg1, "xdr_bytes - arg1");
-	validate_NULL_TYPETYPE(  arg1, "xdr_bytes - arg1");
+		validate_NULL_TYPETYPE(  arg1, "xdr_bytes - arg1");
 	validate_Rdaddress( arg2, "xdr_bytes - arg2");
-	validate_NULL_TYPETYPE(  arg2, "xdr_bytes - arg2");
-	validate_NULL_TYPETYPE(  arg3, "xdr_bytes - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-bool_t __lsb_xdr_bytes (XDR * arg0 , char * * arg1 , u_int * arg2 , u_int arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_bytes");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg2, "xdr_bytes - arg2");
+		validate_NULL_TYPETYPE(  arg3, "xdr_bytes - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

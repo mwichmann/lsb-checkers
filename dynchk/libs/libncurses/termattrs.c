@@ -6,17 +6,19 @@
 #undef termattrs
 static chtype(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 chtype termattrs ()
 {
+	int reset_flag = __lsb_check_params;
+	chtype ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "termattrs");
-	return funcptr();
-}
-
-chtype __lsb_termattrs ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "termattrs");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,19 @@
 #undef random
 static long(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 long random ()
 {
+	int reset_flag = __lsb_check_params;
+	long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "random");
-	return funcptr();
-}
-
-long __lsb_random ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "random");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

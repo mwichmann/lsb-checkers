@@ -6,18 +6,18 @@
 #undef setnetent
 static void(*funcptr) (int ) = 0;
 
+extern int __lsb_check_params;
 void setnetent (int arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setnetent");
-	validate_NULL_TYPETYPE(  arg0, "setnetent - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "setnetent - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_setnetent (int arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setnetent");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

@@ -6,21 +6,23 @@
 #undef popen
 static FILE *(*funcptr) (const char * , const char * ) = 0;
 
+extern int __lsb_check_params;
 FILE * popen (const char * arg0 , const char * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	FILE * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "popen");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "popen - arg0");
-	validate_NULL_TYPETYPE(  arg0, "popen - arg0");
+		validate_NULL_TYPETYPE(  arg0, "popen - arg0");
 	validate_Rdaddress( arg1, "popen - arg1");
-	validate_NULL_TYPETYPE(  arg1, "popen - arg1");
-	return funcptr(arg0, arg1);
-}
-
-FILE * __lsb_popen (const char * arg0 , const char * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "popen");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "popen - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

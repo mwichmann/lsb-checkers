@@ -6,21 +6,21 @@
 #undef setbuf
 static void(*funcptr) (FILE * , char * ) = 0;
 
+extern int __lsb_check_params;
 void setbuf (FILE * arg0 , char * arg1 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuf");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "setbuf - arg0");
-	validate_NULL_TYPETYPE(  arg0, "setbuf - arg0");
+		validate_NULL_TYPETYPE(  arg0, "setbuf - arg0");
 	validate_Rdaddress( arg1, "setbuf - arg1");
-	validate_NULL_TYPETYPE(  arg1, "setbuf - arg1");
+		validate_NULL_TYPETYPE(  arg1, "setbuf - arg1");
+	}
 	funcptr(arg0, arg1);
-}
-
-void __lsb_setbuf (FILE * arg0 , char * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setbuf");
-	funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
 }
 

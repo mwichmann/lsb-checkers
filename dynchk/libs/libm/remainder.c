@@ -6,19 +6,21 @@
 #undef remainder
 static double(*funcptr) (double , double ) = 0;
 
+extern int __lsb_check_params;
 double remainder (double arg0 , double arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remainder");
-	validate_NULL_TYPETYPE(  arg0, "remainder - arg0");
-	validate_NULL_TYPETYPE(  arg1, "remainder - arg1");
-	return funcptr(arg0, arg1);
-}
-
-double __lsb_remainder (double arg0 , double arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "remainder");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "remainder - arg0");
+		validate_NULL_TYPETYPE(  arg1, "remainder - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

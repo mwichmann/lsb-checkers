@@ -6,19 +6,19 @@
 #undef flockfile
 static void(*funcptr) (FILE * ) = 0;
 
+extern int __lsb_check_params;
 void flockfile (FILE * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flockfile");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "flockfile - arg0");
-	validate_NULL_TYPETYPE(  arg0, "flockfile - arg0");
+		validate_NULL_TYPETYPE(  arg0, "flockfile - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_flockfile (FILE * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "flockfile");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

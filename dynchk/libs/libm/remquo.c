@@ -6,21 +6,23 @@
 #undef remquo
 static double(*funcptr) (double , double , int * ) = 0;
 
+extern int __lsb_check_params;
 double remquo (double arg0 , double arg1 , int * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquo");
-	validate_NULL_TYPETYPE(  arg0, "remquo - arg0");
-	validate_NULL_TYPETYPE(  arg1, "remquo - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "remquo - arg0");
+		validate_NULL_TYPETYPE(  arg1, "remquo - arg1");
 	validate_Rdaddress( arg2, "remquo - arg2");
-	validate_NULL_TYPETYPE(  arg2, "remquo - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-double __lsb_remquo (double arg0 , double arg1 , int * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "remquo");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "remquo - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

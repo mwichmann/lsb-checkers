@@ -6,21 +6,23 @@
 #undef winchstr
 static int(*funcptr) (WINDOW * , chtype * ) = 0;
 
+extern int __lsb_check_params;
 int winchstr (WINDOW * arg0 , chtype * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winchstr");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "winchstr - arg0");
-	validate_NULL_TYPETYPE(  arg0, "winchstr - arg0");
+		validate_NULL_TYPETYPE(  arg0, "winchstr - arg0");
 	validate_Rdaddress( arg1, "winchstr - arg1");
-	validate_NULL_TYPETYPE(  arg1, "winchstr - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_winchstr (WINDOW * arg0 , chtype * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "winchstr");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "winchstr - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

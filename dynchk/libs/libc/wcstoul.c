@@ -7,23 +7,25 @@
 #undef wcstoul
 static unsigned long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
+extern int __lsb_check_params;
 unsigned long wcstoul (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	unsigned long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoul");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wcstoul - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wcstoul - arg0");
+		validate_NULL_TYPETYPE(  arg0, "wcstoul - arg0");
 	validate_Rdaddress( arg1, "wcstoul - arg1");
 	validate_Rdaddress(* arg1, "wcstoul - arg1");
-	validate_NULL_TYPETYPE(  arg1, "wcstoul - arg1");
-	validate_NULL_TYPETYPE(  arg2, "wcstoul - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-unsigned long __lsb_wcstoul (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcstoul");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "wcstoul - arg1");
+		validate_NULL_TYPETYPE(  arg2, "wcstoul - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

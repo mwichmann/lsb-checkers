@@ -7,19 +7,21 @@
 #undef getnetbyaddr
 static struct netent *(*funcptr) (uint32_t , int ) = 0;
 
+extern int __lsb_check_params;
 struct netent * getnetbyaddr (uint32_t arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	struct netent * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnetbyaddr");
-	validate_NULL_TYPETYPE(  arg0, "getnetbyaddr - arg0");
-	validate_NULL_TYPETYPE(  arg1, "getnetbyaddr - arg1");
-	return funcptr(arg0, arg1);
-}
-
-struct netent * __lsb_getnetbyaddr (uint32_t arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getnetbyaddr");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "getnetbyaddr - arg0");
+		validate_NULL_TYPETYPE(  arg1, "getnetbyaddr - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,19 @@
 #undef get_crc_table
 static const uLongf *(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 const uLongf * get_crc_table ()
 {
+	int reset_flag = __lsb_check_params;
+	const uLongf * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "get_crc_table");
-	return funcptr();
-}
-
-const uLongf * __lsb_get_crc_table ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "get_crc_table");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

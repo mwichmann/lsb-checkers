@@ -7,25 +7,27 @@
 #undef sendto
 static ssize_t(*funcptr) (int , const void * , size_t , int , const struct sockaddr * , socklen_t ) = 0;
 
+extern int __lsb_check_params;
 ssize_t sendto (int arg0 , const void * arg1 , size_t arg2 , int arg3 , const struct sockaddr * arg4 , socklen_t arg5 )
 {
+	int reset_flag = __lsb_check_params;
+	ssize_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sendto");
-	validate_NULL_TYPETYPE(  arg0, "sendto - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "sendto - arg0");
 	validate_Rdaddress( arg1, "sendto - arg1");
-	validate_NULL_TYPETYPE(  arg1, "sendto - arg1");
-	validate_NULL_TYPETYPE(  arg2, "sendto - arg2");
-	validate_NULL_TYPETYPE(  arg3, "sendto - arg3");
+		validate_NULL_TYPETYPE(  arg1, "sendto - arg1");
+		validate_NULL_TYPETYPE(  arg2, "sendto - arg2");
+		validate_NULL_TYPETYPE(  arg3, "sendto - arg3");
 	validate_Rdaddress( arg4, "sendto - arg4");
-	validate_NULL_TYPETYPE(  arg4, "sendto - arg4");
-	validate_NULL_TYPETYPE(  arg5, "sendto - arg5");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
-}
-
-ssize_t __lsb_sendto (int arg0 , const void * arg1 , size_t arg2 , int arg3 , const struct sockaddr * arg4 , socklen_t arg5 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sendto");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
+		validate_NULL_TYPETYPE(  arg4, "sendto - arg4");
+		validate_NULL_TYPETYPE(  arg5, "sendto - arg5");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

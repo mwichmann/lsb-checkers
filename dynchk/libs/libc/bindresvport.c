@@ -6,20 +6,22 @@
 #undef bindresvport
 static int(*funcptr) (int , struct sockaddr_in * ) = 0;
 
+extern int __lsb_check_params;
 int bindresvport (int arg0 , struct sockaddr_in * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bindresvport");
-	validate_NULL_TYPETYPE(  arg0, "bindresvport - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "bindresvport - arg0");
 	validate_Rdaddress( arg1, "bindresvport - arg1");
-	validate_NULL_TYPETYPE(  arg1, "bindresvport - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_bindresvport (int arg0 , struct sockaddr_in * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "bindresvport");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "bindresvport - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

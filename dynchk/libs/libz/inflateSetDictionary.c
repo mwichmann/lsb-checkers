@@ -6,21 +6,23 @@
 #undef inflateSetDictionary
 static int(*funcptr) (z_streamp , const Bytef * , uInt ) = 0;
 
+extern int __lsb_check_params;
 int inflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSetDictionary");
-	validate_NULL_TYPETYPE(  arg0, "inflateSetDictionary - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "inflateSetDictionary - arg0");
 	validate_Rdaddress( arg1, "inflateSetDictionary - arg1");
-	validate_NULL_TYPETYPE(  arg1, "inflateSetDictionary - arg1");
-	validate_NULL_TYPETYPE(  arg2, "inflateSetDictionary - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_inflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "inflateSetDictionary");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "inflateSetDictionary - arg1");
+		validate_NULL_TYPETYPE(  arg2, "inflateSetDictionary - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

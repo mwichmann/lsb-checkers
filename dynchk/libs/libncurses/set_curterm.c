@@ -6,19 +6,21 @@
 #undef set_curterm
 static TERMINAL *(*funcptr) (TERMINAL * ) = 0;
 
+extern int __lsb_check_params;
 TERMINAL * set_curterm (TERMINAL * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	TERMINAL * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "set_curterm");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "set_curterm - arg0");
-	validate_NULL_TYPETYPE(  arg0, "set_curterm - arg0");
-	return funcptr(arg0);
-}
-
-TERMINAL * __lsb_set_curterm (TERMINAL * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "set_curterm");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "set_curterm - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,21 @@
 #undef atan2f
 static float(*funcptr) (float , float ) = 0;
 
+extern int __lsb_check_params;
 float atan2f (float arg0 , float arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	float ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atan2f");
-	validate_NULL_TYPETYPE(  arg0, "atan2f - arg0");
-	validate_NULL_TYPETYPE(  arg1, "atan2f - arg1");
-	return funcptr(arg0, arg1);
-}
-
-float __lsb_atan2f (float arg0 , float arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "atan2f");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "atan2f - arg0");
+		validate_NULL_TYPETYPE(  arg1, "atan2f - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,19 @@
 #undef __ctype_get_mb_cur_max
 static size_t(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 size_t __ctype_get_mb_cur_max ()
 {
+	int reset_flag = __lsb_check_params;
+	size_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_get_mb_cur_max");
-	return funcptr();
-}
-
-size_t __lsb___ctype_get_mb_cur_max ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__ctype_get_mb_cur_max");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

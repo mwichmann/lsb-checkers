@@ -7,23 +7,25 @@
 #undef clnt_create
 static struct CLIENT *(*funcptr) (const char * , const u_long , const u_long , const char * ) = 0;
 
+extern int __lsb_check_params;
 struct CLIENT * clnt_create (const char * arg0 , const u_long arg1 , const u_long arg2 , const char * arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	struct CLIENT * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_create");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "clnt_create - arg0");
-	validate_NULL_TYPETYPE(  arg0, "clnt_create - arg0");
-	validate_NULL_TYPETYPE(  arg1, "clnt_create - arg1");
-	validate_NULL_TYPETYPE(  arg2, "clnt_create - arg2");
+		validate_NULL_TYPETYPE(  arg0, "clnt_create - arg0");
+		validate_NULL_TYPETYPE(  arg1, "clnt_create - arg1");
+		validate_NULL_TYPETYPE(  arg2, "clnt_create - arg2");
 	validate_Rdaddress( arg3, "clnt_create - arg3");
-	validate_NULL_TYPETYPE(  arg3, "clnt_create - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-struct CLIENT * __lsb_clnt_create (const char * arg0 , const u_long arg1 , const u_long arg2 , const char * arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clnt_create");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg3, "clnt_create - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

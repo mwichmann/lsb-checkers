@@ -6,18 +6,20 @@
 #undef close
 static int(*funcptr) (int ) = 0;
 
+extern int __lsb_check_params;
 int close (int arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "close");
-	validate_filedescriptor(  arg0, "close - arg0");
-	return funcptr(arg0);
-}
-
-int __lsb_close (int arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "close");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_filedescriptor(  arg0, "close - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

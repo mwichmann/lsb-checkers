@@ -6,24 +6,26 @@
 #undef mvwinsnstr
 static int(*funcptr) (WINDOW * , int , int , const char * , int ) = 0;
 
+extern int __lsb_check_params;
 int mvwinsnstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 , int arg4 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinsnstr");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "mvwinsnstr - arg0");
-	validate_NULL_TYPETYPE(  arg0, "mvwinsnstr - arg0");
-	validate_NULL_TYPETYPE(  arg1, "mvwinsnstr - arg1");
-	validate_NULL_TYPETYPE(  arg2, "mvwinsnstr - arg2");
+		validate_NULL_TYPETYPE(  arg0, "mvwinsnstr - arg0");
+		validate_NULL_TYPETYPE(  arg1, "mvwinsnstr - arg1");
+		validate_NULL_TYPETYPE(  arg2, "mvwinsnstr - arg2");
 	validate_Rdaddress( arg3, "mvwinsnstr - arg3");
-	validate_NULL_TYPETYPE(  arg3, "mvwinsnstr - arg3");
-	validate_NULL_TYPETYPE(  arg4, "mvwinsnstr - arg4");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
-}
-
-int __lsb_mvwinsnstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 , int arg4 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvwinsnstr");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
+		validate_NULL_TYPETYPE(  arg3, "mvwinsnstr - arg3");
+		validate_NULL_TYPETYPE(  arg4, "mvwinsnstr - arg4");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

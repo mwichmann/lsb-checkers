@@ -6,22 +6,24 @@
 #undef pthread_sigmask
 static int(*funcptr) (int , const sigset_t * , sigset_t * ) = 0;
 
+extern int __lsb_check_params;
 int pthread_sigmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_sigmask");
-	validate_NULL_TYPETYPE(  arg0, "pthread_sigmask - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "pthread_sigmask - arg0");
 	validate_Rdaddress( arg1, "pthread_sigmask - arg1");
-	validate_NULL_TYPETYPE(  arg1, "pthread_sigmask - arg1");
+		validate_NULL_TYPETYPE(  arg1, "pthread_sigmask - arg1");
 	validate_Rdaddress( arg2, "pthread_sigmask - arg2");
-	validate_NULL_TYPETYPE(  arg2, "pthread_sigmask - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_pthread_sigmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_sigmask");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "pthread_sigmask - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,26 +6,28 @@
 #undef deflateInit2_
 static int(*funcptr) (z_streamp , int , int , int , int , int , const char * , int ) = 0;
 
+extern int __lsb_check_params;
 int deflateInit2_ (z_streamp arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int arg5 , const char * arg6 , int arg7 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateInit2_");
-	validate_NULL_TYPETYPE(  arg0, "deflateInit2_ - arg0");
-	validate_NULL_TYPETYPE(  arg1, "deflateInit2_ - arg1");
-	validate_NULL_TYPETYPE(  arg2, "deflateInit2_ - arg2");
-	validate_NULL_TYPETYPE(  arg3, "deflateInit2_ - arg3");
-	validate_NULL_TYPETYPE(  arg4, "deflateInit2_ - arg4");
-	validate_NULL_TYPETYPE(  arg5, "deflateInit2_ - arg5");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "deflateInit2_ - arg0");
+		validate_NULL_TYPETYPE(  arg1, "deflateInit2_ - arg1");
+		validate_NULL_TYPETYPE(  arg2, "deflateInit2_ - arg2");
+		validate_NULL_TYPETYPE(  arg3, "deflateInit2_ - arg3");
+		validate_NULL_TYPETYPE(  arg4, "deflateInit2_ - arg4");
+		validate_NULL_TYPETYPE(  arg5, "deflateInit2_ - arg5");
 	validate_Rdaddress( arg6, "deflateInit2_ - arg6");
-	validate_NULL_TYPETYPE(  arg6, "deflateInit2_ - arg6");
-	validate_NULL_TYPETYPE(  arg7, "deflateInit2_ - arg7");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-}
-
-int __lsb_deflateInit2_ (z_streamp arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int arg5 , const char * arg6 , int arg7 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "deflateInit2_");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+		validate_NULL_TYPETYPE(  arg6, "deflateInit2_ - arg6");
+		validate_NULL_TYPETYPE(  arg7, "deflateInit2_ - arg7");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,21 @@
 #undef fmaxl
 static long double(*funcptr) (long double , long double ) = 0;
 
+extern int __lsb_check_params;
 long double fmaxl (long double arg0 , long double arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	long double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaxl");
-	validate_NULL_TYPETYPE(  arg0, "fmaxl - arg0");
-	validate_NULL_TYPETYPE(  arg1, "fmaxl - arg1");
-	return funcptr(arg0, arg1);
-}
-
-long double __lsb_fmaxl (long double arg0 , long double arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fmaxl");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "fmaxl - arg0");
+		validate_NULL_TYPETYPE(  arg1, "fmaxl - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

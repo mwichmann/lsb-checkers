@@ -6,19 +6,21 @@
 #undef cpow
 static double complex(*funcptr) (double complex , double complex ) = 0;
 
+extern int __lsb_check_params;
 double complex cpow (double complex arg0 , double complex arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	double complex ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpow");
-	validate_NULL_TYPETYPE(  arg0, "cpow - arg0");
-	validate_NULL_TYPETYPE(  arg1, "cpow - arg1");
-	return funcptr(arg0, arg1);
-}
-
-double complex __lsb_cpow (double complex arg0 , double complex arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "cpow");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "cpow - arg0");
+		validate_NULL_TYPETYPE(  arg1, "cpow - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

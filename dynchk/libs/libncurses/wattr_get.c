@@ -6,25 +6,27 @@
 #undef wattr_get
 static int(*funcptr) (WINDOW * , attr_t * , short * , void * ) = 0;
 
+extern int __lsb_check_params;
 int wattr_get (WINDOW * arg0 , attr_t * arg1 , short * arg2 , void * arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattr_get");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wattr_get - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wattr_get - arg0");
+		validate_NULL_TYPETYPE(  arg0, "wattr_get - arg0");
 	validate_Rdaddress( arg1, "wattr_get - arg1");
-	validate_NULL_TYPETYPE(  arg1, "wattr_get - arg1");
+		validate_NULL_TYPETYPE(  arg1, "wattr_get - arg1");
 	validate_Rdaddress( arg2, "wattr_get - arg2");
-	validate_NULL_TYPETYPE(  arg2, "wattr_get - arg2");
+		validate_NULL_TYPETYPE(  arg2, "wattr_get - arg2");
 	validate_Rdaddress( arg3, "wattr_get - arg3");
-	validate_NULL_TYPETYPE(  arg3, "wattr_get - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_wattr_get (WINDOW * arg0 , attr_t * arg1 , short * arg2 , void * arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wattr_get");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg3, "wattr_get - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

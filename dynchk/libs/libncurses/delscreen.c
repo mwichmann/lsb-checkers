@@ -6,19 +6,19 @@
 #undef delscreen
 static void(*funcptr) (SCREEN * ) = 0;
 
+extern int __lsb_check_params;
 void delscreen (SCREEN * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delscreen");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "delscreen - arg0");
-	validate_NULL_TYPETYPE(  arg0, "delscreen - arg0");
+		validate_NULL_TYPETYPE(  arg0, "delscreen - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_delscreen (SCREEN * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "delscreen");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

@@ -6,17 +6,17 @@
 #undef setpwent
 static void(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 void setpwent ()
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpwent");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
 	funcptr();
-}
-
-void __lsb_setpwent ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setpwent");
-	funcptr();
+	__lsb_check_params = reset_flag;
 }
 

@@ -8,20 +8,22 @@
 #undef setgroups
 static int(*funcptr) (size_t , const gid_t * ) = 0;
 
+extern int __lsb_check_params;
 int setgroups (size_t arg0 , const gid_t * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgroups");
-	validate_NULL_TYPETYPE(  arg0, "setgroups - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "setgroups - arg0");
 	validate_Rdaddress( arg1, "setgroups - arg1");
-	validate_NULL_TYPETYPE(  arg1, "setgroups - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_setgroups (size_t arg0 , const gid_t * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setgroups");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "setgroups - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -7,21 +7,23 @@
 #undef xdr_enum
 static bool_t(*funcptr) (XDR * , enum_t * ) = 0;
 
+extern int __lsb_check_params;
 bool_t xdr_enum (XDR * arg0 , enum_t * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	bool_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_enum");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "xdr_enum - arg0");
-	validate_NULL_TYPETYPE(  arg0, "xdr_enum - arg0");
+		validate_NULL_TYPETYPE(  arg0, "xdr_enum - arg0");
 	validate_Rdaddress( arg1, "xdr_enum - arg1");
-	validate_NULL_TYPETYPE(  arg1, "xdr_enum - arg1");
-	return funcptr(arg0, arg1);
-}
-
-bool_t __lsb_xdr_enum (XDR * arg0 , enum_t * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_enum");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "xdr_enum - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

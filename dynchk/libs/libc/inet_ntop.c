@@ -7,23 +7,25 @@
 #undef inet_ntop
 static const char *(*funcptr) (int , const void * , char * , size_t ) = 0;
 
+extern int __lsb_check_params;
 const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , size_t arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	const char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntop");
-	validate_NULL_TYPETYPE(  arg0, "inet_ntop - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "inet_ntop - arg0");
 	validate_Rdaddress( arg1, "inet_ntop - arg1");
-	validate_NULL_TYPETYPE(  arg1, "inet_ntop - arg1");
+		validate_NULL_TYPETYPE(  arg1, "inet_ntop - arg1");
 	validate_Rdaddress( arg2, "inet_ntop - arg2");
-	validate_NULL_TYPETYPE(  arg2, "inet_ntop - arg2");
-	validate_NULL_TYPETYPE(  arg3, "inet_ntop - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-const char * __lsb_inet_ntop (int arg0 , const void * arg1 , char * arg2 , size_t arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "inet_ntop");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg2, "inet_ntop - arg2");
+		validate_NULL_TYPETYPE(  arg3, "inet_ntop - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,21 @@
 #undef nexttowardl
 static long double(*funcptr) (long double , long double ) = 0;
 
+extern int __lsb_check_params;
 long double nexttowardl (long double arg0 , long double arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	long double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nexttowardl");
-	validate_NULL_TYPETYPE(  arg0, "nexttowardl - arg0");
-	validate_NULL_TYPETYPE(  arg1, "nexttowardl - arg1");
-	return funcptr(arg0, arg1);
-}
-
-long double __lsb_nexttowardl (long double arg0 , long double arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nexttowardl");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "nexttowardl - arg0");
+		validate_NULL_TYPETYPE(  arg1, "nexttowardl - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

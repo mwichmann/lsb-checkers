@@ -6,19 +6,19 @@
 #undef regfree
 static void(*funcptr) (regex_t * ) = 0;
 
+extern int __lsb_check_params;
 void regfree (regex_t * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regfree");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "regfree - arg0");
-	validate_NULL_TYPETYPE(  arg0, "regfree - arg0");
+		validate_NULL_TYPETYPE(  arg0, "regfree - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_regfree (regex_t * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "regfree");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

@@ -6,19 +6,21 @@
 #undef times
 static clock_t(*funcptr) (struct tms * ) = 0;
 
+extern int __lsb_check_params;
 clock_t times (struct tms * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	clock_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "times");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "times - arg0");
-	validate_NULL_TYPETYPE(  arg0, "times - arg0");
-	return funcptr(arg0);
-}
-
-clock_t __lsb_times (struct tms * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "times");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "times - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

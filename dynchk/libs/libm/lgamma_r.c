@@ -6,20 +6,22 @@
 #undef lgamma_r
 static double(*funcptr) (double , int * ) = 0;
 
+extern int __lsb_check_params;
 double lgamma_r (double arg0 , int * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgamma_r");
-	validate_NULL_TYPETYPE(  arg0, "lgamma_r - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "lgamma_r - arg0");
 	validate_Rdaddress( arg1, "lgamma_r - arg1");
-	validate_NULL_TYPETYPE(  arg1, "lgamma_r - arg1");
-	return funcptr(arg0, arg1);
-}
-
-double __lsb_lgamma_r (double arg0 , int * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lgamma_r");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "lgamma_r - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

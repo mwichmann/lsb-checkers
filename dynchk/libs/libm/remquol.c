@@ -6,21 +6,23 @@
 #undef remquol
 static long double(*funcptr) (long double , long double , int * ) = 0;
 
+extern int __lsb_check_params;
 long double remquol (long double arg0 , long double arg1 , int * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	long double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquol");
-	validate_NULL_TYPETYPE(  arg0, "remquol - arg0");
-	validate_NULL_TYPETYPE(  arg1, "remquol - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "remquol - arg0");
+		validate_NULL_TYPETYPE(  arg1, "remquol - arg1");
 	validate_Rdaddress( arg2, "remquol - arg2");
-	validate_NULL_TYPETYPE(  arg2, "remquol - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-long double __lsb_remquol (long double arg0 , long double arg1 , int * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "remquol");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "remquol - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

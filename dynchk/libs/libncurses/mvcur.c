@@ -6,21 +6,23 @@
 #undef mvcur
 static int(*funcptr) (int , int , int , int ) = 0;
 
+extern int __lsb_check_params;
 int mvcur (int arg0 , int arg1 , int arg2 , int arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvcur");
-	validate_NULL_TYPETYPE(  arg0, "mvcur - arg0");
-	validate_NULL_TYPETYPE(  arg1, "mvcur - arg1");
-	validate_NULL_TYPETYPE(  arg2, "mvcur - arg2");
-	validate_NULL_TYPETYPE(  arg3, "mvcur - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_mvcur (int arg0 , int arg1 , int arg2 , int arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvcur");
-	return funcptr(arg0, arg1, arg2, arg3);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "mvcur - arg0");
+		validate_NULL_TYPETYPE(  arg1, "mvcur - arg1");
+		validate_NULL_TYPETYPE(  arg2, "mvcur - arg2");
+		validate_NULL_TYPETYPE(  arg3, "mvcur - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

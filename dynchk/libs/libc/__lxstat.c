@@ -6,22 +6,24 @@
 #undef __lxstat
 static int(*funcptr) (int , const char * , struct stat * ) = 0;
 
+extern int __lsb_check_params;
 int __lxstat (int arg0 , const char * arg1 , struct stat * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__lxstat");
-	validate_NULL_TYPETYPE(  arg0, "__lxstat - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "__lxstat - arg0");
 	validate_Rdaddress( arg1, "__lxstat - arg1");
-	validate_NULL_TYPETYPE(  arg1, "__lxstat - arg1");
+		validate_NULL_TYPETYPE(  arg1, "__lxstat - arg1");
 	validate_Rdaddress( arg2, "__lxstat - arg2");
-	validate_NULL_TYPETYPE(  arg2, "__lxstat - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb___lxstat (int arg0 , const char * arg1 , struct stat * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__lxstat");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "__lxstat - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

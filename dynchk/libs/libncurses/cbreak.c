@@ -6,17 +6,19 @@
 #undef cbreak
 static int(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 int cbreak ()
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbreak");
-	return funcptr();
-}
-
-int __lsb_cbreak ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "cbreak");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

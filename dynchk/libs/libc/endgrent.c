@@ -6,17 +6,17 @@
 #undef endgrent
 static void(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 void endgrent ()
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endgrent");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
 	funcptr();
-}
-
-void __lsb_endgrent ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "endgrent");
-	funcptr();
+	__lsb_check_params = reset_flag;
 }
 

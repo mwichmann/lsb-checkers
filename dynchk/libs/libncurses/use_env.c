@@ -6,18 +6,18 @@
 #undef use_env
 static void(*funcptr) (bool ) = 0;
 
+extern int __lsb_check_params;
 void use_env (bool arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "use_env");
-	validate_NULL_TYPETYPE(  arg0, "use_env - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "use_env - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_use_env (bool arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "use_env");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

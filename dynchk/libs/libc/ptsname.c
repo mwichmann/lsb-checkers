@@ -6,18 +6,20 @@
 #undef ptsname
 static char *(*funcptr) (int ) = 0;
 
+extern int __lsb_check_params;
 char * ptsname (int arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ptsname");
-	validate_NULL_TYPETYPE(  arg0, "ptsname - arg0");
-	return funcptr(arg0);
-}
-
-char * __lsb_ptsname (int arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ptsname");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "ptsname - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

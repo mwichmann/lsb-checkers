@@ -6,18 +6,20 @@
 #undef labs
 static long(*funcptr) (long ) = 0;
 
+extern int __lsb_check_params;
 long labs (long arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "labs");
-	validate_NULL_TYPETYPE(  arg0, "labs - arg0");
-	return funcptr(arg0);
-}
-
-long __lsb_labs (long arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "labs");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "labs - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

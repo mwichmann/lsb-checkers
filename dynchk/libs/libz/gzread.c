@@ -6,20 +6,22 @@
 #undef gzread
 static int(*funcptr) (gzFile , voidp , unsigned int ) = 0;
 
+extern int __lsb_check_params;
 int gzread (gzFile arg0 , voidp arg1 , unsigned int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzread");
-	validate_NULL_TYPETYPE(  arg0, "gzread - arg0");
-	validate_NULL_TYPETYPE(  arg1, "gzread - arg1");
-	validate_NULL_TYPETYPE(  arg2, "gzread - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_gzread (gzFile arg0 , voidp arg1 , unsigned int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gzread");
-	return funcptr(arg0, arg1, arg2);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "gzread - arg0");
+		validate_NULL_TYPETYPE(  arg1, "gzread - arg1");
+		validate_NULL_TYPETYPE(  arg2, "gzread - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

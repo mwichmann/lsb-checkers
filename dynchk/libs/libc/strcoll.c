@@ -6,21 +6,23 @@
 #undef strcoll
 static int(*funcptr) (const char * , const char * ) = 0;
 
+extern int __lsb_check_params;
 int strcoll (const char * arg0 , const char * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcoll");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "strcoll - arg0");
-	validate_NULL_TYPETYPE(  arg0, "strcoll - arg0");
+		validate_NULL_TYPETYPE(  arg0, "strcoll - arg0");
 	validate_Rdaddress( arg1, "strcoll - arg1");
-	validate_NULL_TYPETYPE(  arg1, "strcoll - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_strcoll (const char * arg0 , const char * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strcoll");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "strcoll - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,22 +6,24 @@
 #undef setlocale
 static char *(*funcptr) (int , const char * ) = 0;
 
+extern int __lsb_check_params;
 char * setlocale (int arg0 , const char * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setlocale");
-	validate_NULL_TYPETYPE(  arg0, "setlocale - arg0");
-	if( arg1 ) {
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "setlocale - arg0");
+		if( arg1 ) {
 	validate_Rdaddress( arg1, "setlocale - arg1");
+		}
+		validate_NULL_TYPETYPE(  arg1, "setlocale - arg1");
 	}
-	validate_NULL_TYPETYPE(  arg1, "setlocale - arg1");
-	return funcptr(arg0, arg1);
-}
-
-char * __lsb_setlocale (int arg0 , const char * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setlocale");
-	return funcptr(arg0, arg1);
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

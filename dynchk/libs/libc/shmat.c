@@ -6,21 +6,23 @@
 #undef shmat
 static void *(*funcptr) (int , const void * , int ) = 0;
 
+extern int __lsb_check_params;
 void * shmat (int arg0 , const void * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	void * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmat");
-	validate_NULL_TYPETYPE(  arg0, "shmat - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "shmat - arg0");
 	validate_Rdaddress( arg1, "shmat - arg1");
-	validate_NULL_TYPETYPE(  arg1, "shmat - arg1");
-	validate_NULL_TYPETYPE(  arg2, "shmat - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-void * __lsb_shmat (int arg0 , const void * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "shmat");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "shmat - arg1");
+		validate_NULL_TYPETYPE(  arg2, "shmat - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,20 +6,20 @@
 #undef psignal
 static void(*funcptr) (int , const char * ) = 0;
 
+extern int __lsb_check_params;
 void psignal (int arg0 , const char * arg1 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "psignal");
-	validate_NULL_TYPETYPE(  arg0, "psignal - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "psignal - arg0");
 	validate_Rdaddress( arg1, "psignal - arg1");
-	validate_NULL_TYPETYPE(  arg1, "psignal - arg1");
+		validate_NULL_TYPETYPE(  arg1, "psignal - arg1");
+	}
 	funcptr(arg0, arg1);
-}
-
-void __lsb_psignal (int arg0 , const char * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "psignal");
-	funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
 }
 

@@ -6,23 +6,25 @@
 #undef wattr_set
 static int(*funcptr) (WINDOW * , attr_t , short , void * ) = 0;
 
+extern int __lsb_check_params;
 int wattr_set (WINDOW * arg0 , attr_t arg1 , short arg2 , void * arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattr_set");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wattr_set - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wattr_set - arg0");
-	validate_NULL_TYPETYPE(  arg1, "wattr_set - arg1");
-	validate_NULL_TYPETYPE(  arg2, "wattr_set - arg2");
+		validate_NULL_TYPETYPE(  arg0, "wattr_set - arg0");
+		validate_NULL_TYPETYPE(  arg1, "wattr_set - arg1");
+		validate_NULL_TYPETYPE(  arg2, "wattr_set - arg2");
 	validate_Rdaddress( arg3, "wattr_set - arg3");
-	validate_NULL_TYPETYPE(  arg3, "wattr_set - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_wattr_set (WINDOW * arg0 , attr_t arg1 , short arg2 , void * arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wattr_set");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg3, "wattr_set - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,22 +6,24 @@
 #undef mvaddnstr
 static int(*funcptr) (int , int , const char * , int ) = 0;
 
+extern int __lsb_check_params;
 int mvaddnstr (int arg0 , int arg1 , const char * arg2 , int arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvaddnstr");
-	validate_NULL_TYPETYPE(  arg0, "mvaddnstr - arg0");
-	validate_NULL_TYPETYPE(  arg1, "mvaddnstr - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "mvaddnstr - arg0");
+		validate_NULL_TYPETYPE(  arg1, "mvaddnstr - arg1");
 	validate_Rdaddress( arg2, "mvaddnstr - arg2");
-	validate_NULL_TYPETYPE(  arg2, "mvaddnstr - arg2");
-	validate_NULL_TYPETYPE(  arg3, "mvaddnstr - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_mvaddnstr (int arg0 , int arg1 , const char * arg2 , int arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvaddnstr");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg2, "mvaddnstr - arg2");
+		validate_NULL_TYPETYPE(  arg3, "mvaddnstr - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

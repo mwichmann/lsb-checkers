@@ -6,19 +6,19 @@
 #undef login
 static void(*funcptr) (const struct utmp * ) = 0;
 
+extern int __lsb_check_params;
 void login (const struct utmp * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "login");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "login - arg0");
-	validate_NULL_TYPETYPE(  arg0, "login - arg0");
+		validate_NULL_TYPETYPE(  arg0, "login - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_login (const struct utmp * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "login");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

@@ -8,23 +8,25 @@
 #undef vsnprintf
 static int(*funcptr) (char * , size_t , const char * , va_list ) = 0;
 
+extern int __lsb_check_params;
 int vsnprintf (char * arg0 , size_t arg1 , const char * arg2 , va_list arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vsnprintf");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "vsnprintf - arg0");
-	validate_NULL_TYPETYPE(  arg0, "vsnprintf - arg0");
-	validate_NULL_TYPETYPE(  arg1, "vsnprintf - arg1");
+		validate_NULL_TYPETYPE(  arg0, "vsnprintf - arg0");
+		validate_NULL_TYPETYPE(  arg1, "vsnprintf - arg1");
 	validate_Rdaddress( arg2, "vsnprintf - arg2");
-	validate_NULL_TYPETYPE(  arg2, "vsnprintf - arg2");
-	validate_NULL_TYPETYPE(  arg3, "vsnprintf - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_vsnprintf (char * arg0 , size_t arg1 , const char * arg2 , va_list arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vsnprintf");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg2, "vsnprintf - arg2");
+		validate_NULL_TYPETYPE(  arg3, "vsnprintf - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

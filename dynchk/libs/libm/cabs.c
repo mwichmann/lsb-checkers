@@ -6,18 +6,20 @@
 #undef cabs
 static double(*funcptr) (double complex ) = 0;
 
+extern int __lsb_check_params;
 double cabs (double complex arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cabs");
-	validate_NULL_TYPETYPE(  arg0, "cabs - arg0");
-	return funcptr(arg0);
-}
-
-double __lsb_cabs (double complex arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "cabs");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "cabs - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -7,22 +7,24 @@
 #undef readlink
 static int(*funcptr) (const char * , char * , size_t ) = 0;
 
+extern int __lsb_check_params;
 int readlink (const char * arg0 , char * arg1 , size_t arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readlink");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "readlink - arg0");
-	validate_NULL_TYPETYPE(  arg0, "readlink - arg0");
+		validate_NULL_TYPETYPE(  arg0, "readlink - arg0");
 	validate_Rdaddress( arg1, "readlink - arg1");
-	validate_NULL_TYPETYPE(  arg1, "readlink - arg1");
-	validate_NULL_TYPETYPE(  arg2, "readlink - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_readlink (const char * arg0 , char * arg1 , size_t arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "readlink");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "readlink - arg1");
+		validate_NULL_TYPETYPE(  arg2, "readlink - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,23 +6,25 @@
 #undef sigorset
 static int(*funcptr) (sigset_t * , const sigset_t * , const sigset_t * ) = 0;
 
+extern int __lsb_check_params;
 int sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigorset");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "sigorset - arg0");
-	validate_NULL_TYPETYPE(  arg0, "sigorset - arg0");
+		validate_NULL_TYPETYPE(  arg0, "sigorset - arg0");
 	validate_Rdaddress( arg1, "sigorset - arg1");
-	validate_NULL_TYPETYPE(  arg1, "sigorset - arg1");
+		validate_NULL_TYPETYPE(  arg1, "sigorset - arg1");
 	validate_Rdaddress( arg2, "sigorset - arg2");
-	validate_NULL_TYPETYPE(  arg2, "sigorset - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigorset");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "sigorset - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

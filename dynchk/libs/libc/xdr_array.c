@@ -7,26 +7,28 @@
 #undef xdr_array
 static bool_t(*funcptr) (XDR * , caddr_t * , u_int * , u_int , u_int , xdrproc_t ) = 0;
 
+extern int __lsb_check_params;
 bool_t xdr_array (XDR * arg0 , caddr_t * arg1 , u_int * arg2 , u_int arg3 , u_int arg4 , xdrproc_t arg5 )
 {
+	int reset_flag = __lsb_check_params;
+	bool_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_array");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "xdr_array - arg0");
-	validate_NULL_TYPETYPE(  arg0, "xdr_array - arg0");
+		validate_NULL_TYPETYPE(  arg0, "xdr_array - arg0");
 	validate_Rdaddress( arg1, "xdr_array - arg1");
-	validate_NULL_TYPETYPE(  arg1, "xdr_array - arg1");
+		validate_NULL_TYPETYPE(  arg1, "xdr_array - arg1");
 	validate_Rdaddress( arg2, "xdr_array - arg2");
-	validate_NULL_TYPETYPE(  arg2, "xdr_array - arg2");
-	validate_NULL_TYPETYPE(  arg3, "xdr_array - arg3");
-	validate_NULL_TYPETYPE(  arg4, "xdr_array - arg4");
-	validate_NULL_TYPETYPE(  arg5, "xdr_array - arg5");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
-}
-
-bool_t __lsb_xdr_array (XDR * arg0 , caddr_t * arg1 , u_int * arg2 , u_int arg3 , u_int arg4 , xdrproc_t arg5 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_array");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
+		validate_NULL_TYPETYPE(  arg2, "xdr_array - arg2");
+		validate_NULL_TYPETYPE(  arg3, "xdr_array - arg3");
+		validate_NULL_TYPETYPE(  arg4, "xdr_array - arg4");
+		validate_NULL_TYPETYPE(  arg5, "xdr_array - arg5");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

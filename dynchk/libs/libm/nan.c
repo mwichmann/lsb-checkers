@@ -6,19 +6,21 @@
 #undef nan
 static double(*funcptr) (const char * ) = 0;
 
+extern int __lsb_check_params;
 double nan (const char * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nan");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "nan - arg0");
-	validate_NULL_TYPETYPE(  arg0, "nan - arg0");
-	return funcptr(arg0);
-}
-
-double __lsb_nan (const char * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nan");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "nan - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

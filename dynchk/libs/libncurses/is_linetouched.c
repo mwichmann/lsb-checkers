@@ -6,20 +6,22 @@
 #undef is_linetouched
 static bool(*funcptr) (WINDOW * , int ) = 0;
 
+extern int __lsb_check_params;
 bool is_linetouched (WINDOW * arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	bool ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "is_linetouched");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "is_linetouched - arg0");
-	validate_NULL_TYPETYPE(  arg0, "is_linetouched - arg0");
-	validate_NULL_TYPETYPE(  arg1, "is_linetouched - arg1");
-	return funcptr(arg0, arg1);
-}
-
-bool __lsb_is_linetouched (WINDOW * arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "is_linetouched");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg0, "is_linetouched - arg0");
+		validate_NULL_TYPETYPE(  arg1, "is_linetouched - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

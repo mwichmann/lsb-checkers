@@ -6,18 +6,20 @@
 #undef tanl
 static long double(*funcptr) (long double ) = 0;
 
+extern int __lsb_check_params;
 long double tanl (long double arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	long double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tanl");
-	validate_NULL_TYPETYPE(  arg0, "tanl - arg0");
-	return funcptr(arg0);
-}
-
-long double __lsb_tanl (long double arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tanl");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "tanl - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

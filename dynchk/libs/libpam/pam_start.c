@@ -6,26 +6,28 @@
 #undef pam_start
 static int(*funcptr) (const char * , const char * , const struct pam_conv * , pam_handle_t * * ) = 0;
 
+extern int __lsb_check_params;
 int pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * arg2 , pam_handle_t * * arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_start");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "pam_start - arg0");
-	validate_NULL_TYPETYPE(  arg0, "pam_start - arg0");
+		validate_NULL_TYPETYPE(  arg0, "pam_start - arg0");
 	validate_Rdaddress( arg1, "pam_start - arg1");
-	validate_NULL_TYPETYPE(  arg1, "pam_start - arg1");
+		validate_NULL_TYPETYPE(  arg1, "pam_start - arg1");
 	validate_Rdaddress( arg2, "pam_start - arg2");
-	validate_NULL_TYPETYPE(  arg2, "pam_start - arg2");
+		validate_NULL_TYPETYPE(  arg2, "pam_start - arg2");
 	validate_Rdaddress( arg3, "pam_start - arg3");
 	validate_Rdaddress(* arg3, "pam_start - arg3");
-	validate_NULL_TYPETYPE(  arg3, "pam_start - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * arg2 , pam_handle_t * * arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pam_start");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg3, "pam_start - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

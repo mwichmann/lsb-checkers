@@ -6,21 +6,23 @@
 #undef pthread_rwlock_init
 static int(*funcptr) (pthread_rwlock_t * , const pthread_rwlockattr_t * ) = 0;
 
+extern int __lsb_check_params;
 int pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_init");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "pthread_rwlock_init - arg0");
-	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_init - arg0");
+		validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_init - arg0");
 	validate_Rdaddress( arg1, "pthread_rwlock_init - arg1");
-	validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_init - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_init");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_init - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,22 +6,24 @@
 #undef getutent_r
 static int(*funcptr) (struct utmp * , struct utmp * * ) = 0;
 
+extern int __lsb_check_params;
 int getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutent_r");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "getutent_r - arg0");
-	validate_NULL_TYPETYPE(  arg0, "getutent_r - arg0");
+		validate_NULL_TYPETYPE(  arg0, "getutent_r - arg0");
 	validate_Rdaddress( arg1, "getutent_r - arg1");
 	validate_Rdaddress(* arg1, "getutent_r - arg1");
-	validate_NULL_TYPETYPE(  arg1, "getutent_r - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getutent_r");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "getutent_r - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

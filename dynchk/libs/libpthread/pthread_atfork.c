@@ -6,23 +6,25 @@
 #undef pthread_atfork
 static pid_t(*funcptr) (void(* )(), void(* )(), void(* )()) = 0;
 
+extern int __lsb_check_params;
 pid_t pthread_atfork (void(* arg0 )(), void(* arg1 )(), void(* arg2 )())
 {
+	int reset_flag = __lsb_check_params;
+	pid_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_atfork");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 validate_Rdaddress( arg0, "pthread_atfork - arg0");
-	validate_NULL_TYPETYPE(  arg0, "pthread_atfork - arg0");
+		validate_NULL_TYPETYPE(  arg0, "pthread_atfork - arg0");
 validate_Rdaddress( arg1, "pthread_atfork - arg1");
-	validate_NULL_TYPETYPE(  arg1, "pthread_atfork - arg1");
+		validate_NULL_TYPETYPE(  arg1, "pthread_atfork - arg1");
 validate_Rdaddress( arg2, "pthread_atfork - arg2");
-	validate_NULL_TYPETYPE(  arg2, "pthread_atfork - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-pid_t __lsb_pthread_atfork (void(* arg0 )(), void(* arg1 )(), void(* arg2 )())
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_atfork");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "pthread_atfork - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -8,20 +8,22 @@
 #undef ungetwc
 static wint_t(*funcptr) (wint_t , FILE * ) = 0;
 
+extern int __lsb_check_params;
 wint_t ungetwc (wint_t arg0 , FILE * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	wint_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetwc");
-	validate_NULL_TYPETYPE(  arg0, "ungetwc - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "ungetwc - arg0");
 	validate_Rdaddress( arg1, "ungetwc - arg1");
-	validate_NULL_TYPETYPE(  arg1, "ungetwc - arg1");
-	return funcptr(arg0, arg1);
-}
-
-wint_t __lsb_ungetwc (wint_t arg0 , FILE * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ungetwc");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "ungetwc - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

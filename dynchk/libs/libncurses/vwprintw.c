@@ -7,22 +7,24 @@
 #undef vwprintw
 static int(*funcptr) (WINDOW * , char * , va_list ) = 0;
 
+extern int __lsb_check_params;
 int vwprintw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwprintw");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "vwprintw - arg0");
-	validate_NULL_TYPETYPE(  arg0, "vwprintw - arg0");
+		validate_NULL_TYPETYPE(  arg0, "vwprintw - arg0");
 	validate_Rdaddress( arg1, "vwprintw - arg1");
-	validate_NULL_TYPETYPE(  arg1, "vwprintw - arg1");
-	validate_NULL_TYPETYPE(  arg2, "vwprintw - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_vwprintw (WINDOW * arg0 , char * arg1 , va_list arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vwprintw");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "vwprintw - arg1");
+		validate_NULL_TYPETYPE(  arg2, "vwprintw - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

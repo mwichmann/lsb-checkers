@@ -6,20 +6,22 @@
 #undef wechochar
 static int(*funcptr) (WINDOW * , const chtype ) = 0;
 
+extern int __lsb_check_params;
 int wechochar (WINDOW * arg0 , const chtype arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wechochar");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wechochar - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wechochar - arg0");
-	validate_NULL_TYPETYPE(  arg1, "wechochar - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_wechochar (WINDOW * arg0 , const chtype arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wechochar");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg0, "wechochar - arg0");
+		validate_NULL_TYPETYPE(  arg1, "wechochar - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,19 @@
 #undef pthread_exit
 static void(*funcptr) (void * ) = 0;
 
+extern int __lsb_check_params;
 void pthread_exit (void * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_exit");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "pthread_exit - arg0");
-	validate_NULL_TYPETYPE(  arg0, "pthread_exit - arg0");
+		validate_NULL_TYPETYPE(  arg0, "pthread_exit - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_pthread_exit (void * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_exit");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

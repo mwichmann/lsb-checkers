@@ -6,20 +6,20 @@
 #undef twalk
 static void(*funcptr) (const void * , __action_fn_t ) = 0;
 
+extern int __lsb_check_params;
 void twalk (const void * arg0 , __action_fn_t arg1 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "twalk");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "twalk - arg0");
-	validate_NULL_TYPETYPE(  arg0, "twalk - arg0");
-	validate_NULL_TYPETYPE(  arg1, "twalk - arg1");
+		validate_NULL_TYPETYPE(  arg0, "twalk - arg0");
+		validate_NULL_TYPETYPE(  arg1, "twalk - arg1");
+	}
 	funcptr(arg0, arg1);
-}
-
-void __lsb_twalk (const void * arg0 , __action_fn_t arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "twalk");
-	funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
 }
 

@@ -7,23 +7,25 @@
 #undef memmem
 static void *(*funcptr) (const void * , size_t , const void * , size_t ) = 0;
 
+extern int __lsb_check_params;
 void * memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	void * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memmem");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "memmem - arg0");
-	validate_NULL_TYPETYPE(  arg0, "memmem - arg0");
-	validate_NULL_TYPETYPE(  arg1, "memmem - arg1");
+		validate_NULL_TYPETYPE(  arg0, "memmem - arg0");
+		validate_NULL_TYPETYPE(  arg1, "memmem - arg1");
 	validate_Rdaddress( arg2, "memmem - arg2");
-	validate_NULL_TYPETYPE(  arg2, "memmem - arg2");
-	validate_NULL_TYPETYPE(  arg3, "memmem - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-void * __lsb_memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "memmem");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg2, "memmem - arg2");
+		validate_NULL_TYPETYPE(  arg3, "memmem - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

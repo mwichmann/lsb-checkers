@@ -6,24 +6,26 @@
 #undef __strtoul_internal
 static unsigned long(*funcptr) (const char * , char * * , int , int ) = 0;
 
+extern int __lsb_check_params;
 unsigned long __strtoul_internal (const char * arg0 , char * * arg1 , int arg2 , int arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	unsigned long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtoul_internal");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "__strtoul_internal - arg0");
-	validate_NULL_TYPETYPE(  arg0, "__strtoul_internal - arg0");
+		validate_NULL_TYPETYPE(  arg0, "__strtoul_internal - arg0");
 	validate_Rdaddress( arg1, "__strtoul_internal - arg1");
 	validate_Rdaddress(* arg1, "__strtoul_internal - arg1");
-	validate_RWaddress(  arg1, "__strtoul_internal - arg1");
-	validate_NULL_TYPETYPE(  arg2, "__strtoul_internal - arg2");
-	validate_NULL_TYPETYPE(  arg3, "__strtoul_internal - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-unsigned long __lsb___strtoul_internal (const char * arg0 , char * * arg1 , int arg2 , int arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__strtoul_internal");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_RWaddress(  arg1, "__strtoul_internal - arg1");
+		validate_NULL_TYPETYPE(  arg2, "__strtoul_internal - arg2");
+		validate_NULL_TYPETYPE(  arg3, "__strtoul_internal - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

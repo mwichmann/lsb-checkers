@@ -7,21 +7,23 @@
 #undef poll
 static int(*funcptr) (struct pollfd * , nfds_t , int ) = 0;
 
+extern int __lsb_check_params;
 int poll (struct pollfd * arg0 , nfds_t arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "poll");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "poll - arg0");
-	validate_NULL_TYPETYPE(  arg0, "poll - arg0");
-	validate_NULL_TYPETYPE(  arg1, "poll - arg1");
-	validate_NULL_TYPETYPE(  arg2, "poll - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_poll (struct pollfd * arg0 , nfds_t arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "poll");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg0, "poll - arg0");
+		validate_NULL_TYPETYPE(  arg1, "poll - arg1");
+		validate_NULL_TYPETYPE(  arg2, "poll - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

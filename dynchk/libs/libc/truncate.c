@@ -7,20 +7,22 @@
 #undef truncate
 static int(*funcptr) (const char * , off_t ) = 0;
 
+extern int __lsb_check_params;
 int truncate (const char * arg0 , off_t arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncate");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "truncate - arg0");
-	validate_NULL_TYPETYPE(  arg0, "truncate - arg0");
-	validate_NULL_TYPETYPE(  arg1, "truncate - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_truncate (const char * arg0 , off_t arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "truncate");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg0, "truncate - arg0");
+		validate_NULL_TYPETYPE(  arg1, "truncate - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -7,19 +7,21 @@
 #undef msgget
 static int(*funcptr) (key_t , int ) = 0;
 
+extern int __lsb_check_params;
 int msgget (key_t arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgget");
-	validate_NULL_TYPETYPE(  arg0, "msgget - arg0");
-	validate_NULL_TYPETYPE(  arg1, "msgget - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_msgget (key_t arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "msgget");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "msgget - arg0");
+		validate_NULL_TYPETYPE(  arg1, "msgget - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,25 +6,27 @@
 #undef border
 static int(*funcptr) (chtype , chtype , chtype , chtype , chtype , chtype , chtype , chtype ) = 0;
 
+extern int __lsb_check_params;
 int border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "border");
-	validate_NULL_TYPETYPE(  arg0, "border - arg0");
-	validate_NULL_TYPETYPE(  arg1, "border - arg1");
-	validate_NULL_TYPETYPE(  arg2, "border - arg2");
-	validate_NULL_TYPETYPE(  arg3, "border - arg3");
-	validate_NULL_TYPETYPE(  arg4, "border - arg4");
-	validate_NULL_TYPETYPE(  arg5, "border - arg5");
-	validate_NULL_TYPETYPE(  arg6, "border - arg6");
-	validate_NULL_TYPETYPE(  arg7, "border - arg7");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-}
-
-int __lsb_border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "border");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "border - arg0");
+		validate_NULL_TYPETYPE(  arg1, "border - arg1");
+		validate_NULL_TYPETYPE(  arg2, "border - arg2");
+		validate_NULL_TYPETYPE(  arg3, "border - arg3");
+		validate_NULL_TYPETYPE(  arg4, "border - arg4");
+		validate_NULL_TYPETYPE(  arg5, "border - arg5");
+		validate_NULL_TYPETYPE(  arg6, "border - arg6");
+		validate_NULL_TYPETYPE(  arg7, "border - arg7");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

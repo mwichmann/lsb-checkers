@@ -6,18 +6,20 @@
 #undef coshf
 static float(*funcptr) (float ) = 0;
 
+extern int __lsb_check_params;
 float coshf (float arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	float ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "coshf");
-	validate_NULL_TYPETYPE(  arg0, "coshf - arg0");
-	return funcptr(arg0);
-}
-
-float __lsb_coshf (float arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "coshf");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "coshf - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,20 +6,22 @@
 #undef modff
 static float(*funcptr) (float , float * ) = 0;
 
+extern int __lsb_check_params;
 float modff (float arg0 , float * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	float ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "modff");
-	validate_NULL_TYPETYPE(  arg0, "modff - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "modff - arg0");
 	validate_Rdaddress( arg1, "modff - arg1");
-	validate_NULL_TYPETYPE(  arg1, "modff - arg1");
-	return funcptr(arg0, arg1);
-}
-
-float __lsb_modff (float arg0 , float * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "modff");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "modff - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,18 +6,20 @@
 #undef towlower
 static wint_t(*funcptr) (wint_t ) = 0;
 
+extern int __lsb_check_params;
 wint_t towlower (wint_t arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	wint_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towlower");
-	validate_NULL_TYPETYPE(  arg0, "towlower - arg0");
-	return funcptr(arg0);
-}
-
-wint_t __lsb_towlower (wint_t arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "towlower");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "towlower - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

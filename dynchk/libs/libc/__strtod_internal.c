@@ -6,23 +6,25 @@
 #undef __strtod_internal
 static double(*funcptr) (const char * , char * * , int ) = 0;
 
+extern int __lsb_check_params;
 double __strtod_internal (const char * arg0 , char * * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtod_internal");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "__strtod_internal - arg0");
-	validate_NULL_TYPETYPE(  arg0, "__strtod_internal - arg0");
+		validate_NULL_TYPETYPE(  arg0, "__strtod_internal - arg0");
 	validate_Rdaddress( arg1, "__strtod_internal - arg1");
 	validate_Rdaddress(* arg1, "__strtod_internal - arg1");
-	validate_RWaddress(  arg1, "__strtod_internal - arg1");
-	validate_NULL_TYPETYPE(  arg2, "__strtod_internal - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-double __lsb___strtod_internal (const char * arg0 , char * * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__strtod_internal");
-	return funcptr(arg0, arg1, arg2);
+		validate_RWaddress(  arg1, "__strtod_internal - arg1");
+		validate_NULL_TYPETYPE(  arg2, "__strtod_internal - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

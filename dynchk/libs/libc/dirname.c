@@ -6,19 +6,21 @@
 #undef dirname
 static char *(*funcptr) (char * ) = 0;
 
+extern int __lsb_check_params;
 char * dirname (char * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dirname");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "dirname - arg0");
-	validate_NULL_TYPETYPE(  arg0, "dirname - arg0");
-	return funcptr(arg0);
-}
-
-char * __lsb_dirname (char * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dirname");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "dirname - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,21 +6,23 @@
 #undef mvhline
 static int(*funcptr) (int , int , chtype , int ) = 0;
 
+extern int __lsb_check_params;
 int mvhline (int arg0 , int arg1 , chtype arg2 , int arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvhline");
-	validate_NULL_TYPETYPE(  arg0, "mvhline - arg0");
-	validate_NULL_TYPETYPE(  arg1, "mvhline - arg1");
-	validate_NULL_TYPETYPE(  arg2, "mvhline - arg2");
-	validate_NULL_TYPETYPE(  arg3, "mvhline - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_mvhline (int arg0 , int arg1 , chtype arg2 , int arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvhline");
-	return funcptr(arg0, arg1, arg2, arg3);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "mvhline - arg0");
+		validate_NULL_TYPETYPE(  arg1, "mvhline - arg1");
+		validate_NULL_TYPETYPE(  arg2, "mvhline - arg2");
+		validate_NULL_TYPETYPE(  arg3, "mvhline - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,20 +6,22 @@
 #undef catopen
 static nl_catd(*funcptr) (const char * , int ) = 0;
 
+extern int __lsb_check_params;
 nl_catd catopen (const char * arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	nl_catd ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catopen");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "catopen - arg0");
-	validate_NULL_TYPETYPE(  arg0, "catopen - arg0");
-	validate_NULL_TYPETYPE(  arg1, "catopen - arg1");
-	return funcptr(arg0, arg1);
-}
-
-nl_catd __lsb_catopen (const char * arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "catopen");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg0, "catopen - arg0");
+		validate_NULL_TYPETYPE(  arg1, "catopen - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

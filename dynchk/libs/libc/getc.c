@@ -6,19 +6,21 @@
 #undef getc
 static int(*funcptr) (FILE * ) = 0;
 
+extern int __lsb_check_params;
 int getc (FILE * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getc");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "getc - arg0");
-	validate_NULL_TYPETYPE(  arg0, "getc - arg0");
-	return funcptr(arg0);
-}
-
-int __lsb_getc (FILE * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getc");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "getc - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

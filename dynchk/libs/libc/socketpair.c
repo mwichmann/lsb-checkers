@@ -6,21 +6,23 @@
 #undef socketpair
 static int(*funcptr) (int , int , int , int [2]) = 0;
 
+extern int __lsb_check_params;
 int socketpair (int arg0 , int arg1 , int arg2 , int arg3 [2])
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "socketpair");
-	validate_NULL_TYPETYPE(  arg0, "socketpair - arg0");
-	validate_NULL_TYPETYPE(  arg1, "socketpair - arg1");
-	validate_NULL_TYPETYPE(  arg2, "socketpair - arg2");
-	validate_NULL_TYPETYPE(  arg3, "socketpair - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_socketpair (int arg0 , int arg1 , int arg2 , int arg3 [2])
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "socketpair");
-	return funcptr(arg0, arg1, arg2, arg3);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "socketpair - arg0");
+		validate_NULL_TYPETYPE(  arg1, "socketpair - arg1");
+		validate_NULL_TYPETYPE(  arg2, "socketpair - arg2");
+		validate_NULL_TYPETYPE(  arg3, "socketpair - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

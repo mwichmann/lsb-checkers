@@ -6,17 +6,19 @@
 #undef localeconv
 static struct lconv *(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 struct lconv * localeconv ()
 {
+	int reset_flag = __lsb_check_params;
+	struct lconv * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "localeconv");
-	return funcptr();
-}
-
-struct lconv * __lsb_localeconv ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "localeconv");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

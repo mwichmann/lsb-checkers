@@ -8,22 +8,24 @@
 #undef wcrtomb
 static size_t(*funcptr) (char * , wchar_t , mbstate_t * ) = 0;
 
+extern int __lsb_check_params;
 size_t wcrtomb (char * arg0 , wchar_t arg1 , mbstate_t * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	size_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcrtomb");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wcrtomb - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wcrtomb - arg0");
-	validate_NULL_TYPETYPE(  arg1, "wcrtomb - arg1");
+		validate_NULL_TYPETYPE(  arg0, "wcrtomb - arg0");
+		validate_NULL_TYPETYPE(  arg1, "wcrtomb - arg1");
 	validate_Rdaddress( arg2, "wcrtomb - arg2");
-	validate_NULL_TYPETYPE(  arg2, "wcrtomb - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-size_t __lsb_wcrtomb (char * arg0 , wchar_t arg1 , mbstate_t * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcrtomb");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "wcrtomb - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

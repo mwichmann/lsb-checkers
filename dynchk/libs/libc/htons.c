@@ -7,18 +7,20 @@
 #undef htons
 static uint16_t(*funcptr) (uint16_t ) = 0;
 
+extern int __lsb_check_params;
 uint16_t htons (uint16_t arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	uint16_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htons");
-	validate_NULL_TYPETYPE(  arg0, "htons - arg0");
-	return funcptr(arg0);
-}
-
-uint16_t __lsb_htons (uint16_t arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "htons");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "htons - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,18 +6,20 @@
 #undef zError
 static const char *(*funcptr) (int ) = 0;
 
+extern int __lsb_check_params;
 const char * zError (int arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	const char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "zError");
-	validate_NULL_TYPETYPE(  arg0, "zError - arg0");
-	return funcptr(arg0);
-}
-
-const char * __lsb_zError (int arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "zError");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "zError - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -7,25 +7,27 @@
 #undef forkpty
 static int(*funcptr) (int * , char * , struct termios * , struct winsize * ) = 0;
 
+extern int __lsb_check_params;
 int forkpty (int * arg0 , char * arg1 , struct termios * arg2 , struct winsize * arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "forkpty");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "forkpty - arg0");
-	validate_NULL_TYPETYPE(  arg0, "forkpty - arg0");
+		validate_NULL_TYPETYPE(  arg0, "forkpty - arg0");
 	validate_Rdaddress( arg1, "forkpty - arg1");
-	validate_NULL_TYPETYPE(  arg1, "forkpty - arg1");
+		validate_NULL_TYPETYPE(  arg1, "forkpty - arg1");
 	validate_Rdaddress( arg2, "forkpty - arg2");
-	validate_NULL_TYPETYPE(  arg2, "forkpty - arg2");
+		validate_NULL_TYPETYPE(  arg2, "forkpty - arg2");
 	validate_Rdaddress( arg3, "forkpty - arg3");
-	validate_NULL_TYPETYPE(  arg3, "forkpty - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_forkpty (int * arg0 , char * arg1 , struct termios * arg2 , struct winsize * arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "forkpty");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg3, "forkpty - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 
