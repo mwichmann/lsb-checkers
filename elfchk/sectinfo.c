@@ -32,12 +32,15 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390__
+#if __s390__ && !__s390x__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
-#endif /* __s390__ */
+#endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc64__ */
+#if __s390x__
+	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __s390x__ */
 #if __powerpc__ && !__powerpc64__
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -73,12 +76,15 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".plt",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_EXECINSTR,checkNOBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390__
+#if __s390__ && !__s390x__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
-#endif /* __s390__ */
+#endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc64__ */
+#if __s390x__
+	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
+#endif /* __s390x__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
 #if __i386__
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
@@ -107,12 +113,15 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390__
+#if __s390__ && !__s390x__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
-#endif /* __s390__ */
+#endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc64__ */
+#if __s390x__
+	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __s390x__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.got",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -125,12 +134,15 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390__
+#if __s390__ && !__s390x__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
-#endif /* __s390__ */
+#endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc64__ */
+#if __s390x__
+	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __s390x__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
