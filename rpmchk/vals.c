@@ -23,7 +23,7 @@ char *architecture =
 #endif
 
 char *validos = "linux";
-char *validdepver = "1.3";
+char *validdepver = "2.0";
 
 char *pkgname;
 int  lsbdepidx=-1;
