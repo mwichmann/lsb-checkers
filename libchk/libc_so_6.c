@@ -5005,7 +5005,27 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"getgrnam_r","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
-	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",0,1},
+#if __i386__
+	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __ia64__
+	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __powerpc64__
+	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
+#if __x86_64__
+	{"getgrouplist","GLIBC_2.2.5",0,"LSB-Core",4,1},
+#endif
+#if __s390x__
+	{"getgrouplist","GLIBC_2.2.4",0,"LSB-Core",4,1},
+#endif
 #if __i386__
 	{"getgroups","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
@@ -9123,7 +9143,27 @@ struct versym libc_so_6[] = {
 #if __s390x__
 	{"posix_memalign","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
-	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",0,1},
+#if __i386__
+	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
+#endif
+#if __ia64__
+	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
+#endif
+#if __powerpc64__
+	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
+#endif
+#if __x86_64__
+	{"posix_openpt","GLIBC_2.2.5",0,"LSB-Core",4,1},
+#endif
+#if __s390x__
+	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",4,1},
+#endif
 #if __i386__
 	{"printf","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
