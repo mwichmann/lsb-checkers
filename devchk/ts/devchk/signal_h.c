@@ -886,12 +886,12 @@ CheckOffset(struct sigaction,sa_mask,16,3,34643)
 CheckTypeSize(struct sigaction,140, 10401, 6)
 CheckMemberSize(struct sigaction,__sigaction_handler,4,6,34712)
 CheckOffset(struct sigaction,__sigaction_handler,0,6,34712)
+CheckMemberSize(struct sigaction,sa_mask,128,6,34715)
+CheckOffset(struct sigaction,sa_mask,4,6,34715)
 CheckMemberSize(struct sigaction,sa_flags,4,6,34713)
 CheckOffset(struct sigaction,sa_flags,132,6,34713)
 CheckMemberSize(struct sigaction,sa_restorer,4,6,34714)
 CheckOffset(struct sigaction,sa_restorer,136,6,34714)
-CheckMemberSize(struct sigaction,sa_mask,128,6,34715)
-CheckOffset(struct sigaction,sa_mask,4,6,34715)
 #endif
 
 #if __s390__ && !__s390x__

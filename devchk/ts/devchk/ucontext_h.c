@@ -167,19 +167,19 @@ CheckTypeSize(mcontext_t,32, 10329, 6)
 #endif
 
 #if __i386__
-CheckTypeSize(struct ucontext,20, 10219, 2)
+CheckTypeSize(struct ucontext,348, 10219, 2)
 CheckMemberSize(struct ucontext,uc_flags,4,2,34312)
 CheckOffset(struct ucontext,uc_flags,0,2,34312)
 CheckMemberSize(struct ucontext,uc_link,4,2,34313)
-CheckOffset(struct ucontext,uc_link,0,2,34313)
-CheckMemberSize(struct ucontext,uc_stack,4,2,34314)
-CheckOffset(struct ucontext,uc_stack,0,2,34314)
-CheckMemberSize(struct ucontext,uc_mcontext,4,2,34330)
-CheckOffset(struct ucontext,uc_mcontext,0,2,34330)
-CheckMemberSize(struct ucontext,uc_sigmask,4,2,34331)
-CheckOffset(struct ucontext,uc_sigmask,0,2,34331)
-CheckMemberSize(struct ucontext,__fpregs_mem,4,2,34332)
-CheckOffset(struct ucontext,__fpregs_mem,0,2,34332)
+CheckOffset(struct ucontext,uc_link,4,2,34313)
+CheckMemberSize(struct ucontext,uc_stack,12,2,34314)
+CheckOffset(struct ucontext,uc_stack,8,2,34314)
+CheckMemberSize(struct ucontext,uc_mcontext,88,2,34330)
+CheckOffset(struct ucontext,uc_mcontext,20,2,34330)
+CheckMemberSize(struct ucontext,uc_sigmask,128,2,34331)
+CheckOffset(struct ucontext,uc_sigmask,108,2,34331)
+CheckMemberSize(struct ucontext,__fpregs_mem,112,2,34332)
+CheckOffset(struct ucontext,__fpregs_mem,236,2,34332)
 #endif
 
 #if __i386__
