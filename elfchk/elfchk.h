@@ -50,6 +50,11 @@ struct base_type_info_mem {
 	unsigned long	offset_flags;
 	};
 
+typedef enum {
+	__virtual_mask = 0x1,
+	__public_mask = 0x2
+	} offset_flags;
+
 struct base_type_info {
 	char	*base_type;
 	unsigned long	offset_flags;
@@ -68,10 +73,18 @@ struct vmi_classtypeinfo_mem {
 	struct base_type_info_mem base_info[0];
 	};
 
+typedef enum {
+	__const_mask = 0x1,
+	__volatile_mask = 0x2,
+	__restrict_mask = 0x4,
+	__incomplete_mask = 0x8,
+	__incomplete_Class_mask = 0x10
+	} pbase_flags;
+
 struct pbasetypeinfo_mem {
 	void	*basevtable;
 	char	*name;
-	unsigned int	offset_flags;
+	pbase_flags	offset_flags;
 	struct classtypeinfo_mem *pointee;
 	void	*basetypeinfo[0];
 	};
