@@ -10,7 +10,7 @@ all:: libchk
 libchk: $(OBJS) ../elfchk/libelfchk.a
 	cc $(CFLAGS) -o libchk $(OBJS) -L../elfchk -lelfchk
 
-libs.c: mkfunclist
+libs.c:
 	./mkfunclist
 
 install:
