@@ -12,7 +12,19 @@ char *DtNeeded[] = {
 #if defined(__ia64__)
 	"libc.so.6.1",
 #endif /* __ia64__ */
+#if defined(__i386__)
 	"libcrypt.so.1",
+#endif /* __i386__ */
+#if defined(__ia64__)
+	"libcrypt.so.1",
+#endif /* __ia64__ */
+	"libcrypt.so.1",
+#if defined(__i386__)
+	"libdl.so.2",
+#endif /* __i386__ */
+#if defined(__ia64__)
+	"libdl.so.2",
+#endif /* __ia64__ */
 	"libdl.so.2",
 	"libGL.so.1",
 	"libICE.so.6",
@@ -23,8 +35,13 @@ char *DtNeeded[] = {
 	"libm.so.6.1",
 #endif /* __ia64__ */
 	"libncurses.so.5",
+#if defined(__ia64__)
 	"libpthread.so.0",
-	"librt.so.1",
+#endif /* __ia64__ */
+	"libpthread.so.0",
+#if defined(__i386__)
+	"libpthread.so.0",
+#endif /* __i386__ */
 	"libSM.so.6",
 	"libutil.so.1",
 	"libX11.so.6",
