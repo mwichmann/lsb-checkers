@@ -12,6 +12,9 @@ check_lib("/lib/ld-lsb-64.so.1",ld_lsb_64_so_1, journal);
 #if defined(__ia64__)
 check_lib("/lib/ld-lsb-ia64.so.1",ld_lsb_ia64_so_1, journal);
 #endif
+#if defined(__s390__)
+check_lib("/lib/ld-lsb-s390.so.1",ld_lsb_s390_so_1, journal);
+#endif
 #if defined(__i386__)
 check_lib("/lib/ld-lsb.so.1",ld_lsb_so_1, journal);
 #endif
@@ -25,6 +28,9 @@ check_lib("libc.so.6",libc_so_6, journal);
 check_lib("libc.so.6",libc_so_6, journal);
 #endif
 #if defined(__powerpc64__)
+check_lib("libc.so.6",libc_so_6, journal);
+#endif
+#if defined(__s390__)
 check_lib("libc.so.6",libc_so_6, journal);
 #endif
 #if defined(__ia64__)
@@ -43,6 +49,9 @@ check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #if defined(__powerpc64__)
 check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #endif
+#if defined(__s390__)
+check_lib("libcrypt.so.1",libcrypt_so_1, journal);
+#endif
 check_lib("libdl.so.2",libdl_so_2,journal);
 #if defined(__i386__)
 check_lib("libdl.so.2",libdl_so_2, journal);
@@ -56,6 +65,9 @@ check_lib("libdl.so.2",libdl_so_2, journal);
 #if defined(__powerpc64__)
 check_lib("libdl.so.2",libdl_so_2, journal);
 #endif
+#if defined(__s390__)
+check_lib("libdl.so.2",libdl_so_2, journal);
+#endif
 check_lib("libgcc_s.so.1",libgcc_s_so_1,journal);
 check_lib("libGL.so.1",libGL_so_1,journal);
 check_lib("libICE.so.6",libICE_so_6,journal);
@@ -66,6 +78,9 @@ check_lib("libm.so.6",libm_so_6, journal);
 check_lib("libm.so.6",libm_so_6, journal);
 #endif
 #if defined(__powerpc64__)
+check_lib("libm.so.6",libm_so_6, journal);
+#endif
+#if defined(__s390__)
 check_lib("libm.so.6",libm_so_6, journal);
 #endif
 #if defined(__ia64__)
@@ -84,6 +99,9 @@ check_lib("libpthread.so.0",libpthread_so_0, journal);
 check_lib("libpthread.so.0",libpthread_so_0, journal);
 #endif
 #if defined(__powerpc64__)
+check_lib("libpthread.so.0",libpthread_so_0, journal);
+#endif
+#if defined(__s390__)
 check_lib("libpthread.so.0",libpthread_so_0, journal);
 #endif
 check_lib("libSM.so.6",libSM_so_6,journal);

@@ -9,6 +9,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_Exit","GLIBC_2.1.1"},
 #endif
+#if defined(__s390__)
+	{"_Exit","GLIBC_2.1.1"},
+#endif
 #if defined(__i386__)
 	{"_IO_feof","GLIBC_2.0"},
 #endif
@@ -16,6 +19,9 @@ struct versym libc_so_6_1[] = {
 	{"_IO_feof","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"_IO_feof","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"_IO_feof","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -27,6 +33,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_IO_getc","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"_IO_getc","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"_IO_putc","GLIBC_2.0"},
 #endif
@@ -34,6 +43,9 @@ struct versym libc_so_6_1[] = {
 	{"_IO_putc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"_IO_putc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"_IO_putc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -45,6 +57,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_IO_puts","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"_IO_puts","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__assert_fail","GLIBC_2.0"},
 #endif
@@ -52,6 +67,9 @@ struct versym libc_so_6_1[] = {
 	{"__assert_fail","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__assert_fail","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__assert_fail","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -63,6 +81,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__ctype_b","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__ctype_b","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__ctype_get_mb_cur_max","GLIBC_2.0"},
 #endif
@@ -70,6 +91,9 @@ struct versym libc_so_6_1[] = {
 	{"__ctype_get_mb_cur_max","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__ctype_get_mb_cur_max","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__ctype_get_mb_cur_max","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -81,6 +105,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__ctype_tolower","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__ctype_tolower","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__ctype_toupper","GLIBC_2.0"},
 #endif
@@ -88,6 +115,9 @@ struct versym libc_so_6_1[] = {
 	{"__ctype_toupper","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__ctype_toupper","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__ctype_toupper","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -99,6 +129,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__cxa_atexit","GLIBC_2.1.3"},
 #endif
+#if defined(__s390__)
+	{"__cxa_atexit","GLIBC_2.1.3"},
+#endif
 #if defined(__i386__)
 	{"__daylight","GLIBC_2.0"},
 #endif
@@ -106,6 +139,9 @@ struct versym libc_so_6_1[] = {
 	{"__daylight","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__daylight","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__daylight","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -129,6 +165,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__environ","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__environ","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__errno_location","GLIBC_2.0"},
 #endif
@@ -138,6 +177,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__errno_location","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__errno_location","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__fpending","GLIBC_2.2"},
 #endif
@@ -145,6 +187,9 @@ struct versym libc_so_6_1[] = {
 	{"__fpending","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__fpending","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"__fpending","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -156,6 +201,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__fxstat","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__fxstat","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__fxstat64","GLIBC_2.2"},
 #endif
@@ -163,6 +211,9 @@ struct versym libc_so_6_1[] = {
 	{"__fxstat64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__fxstat64","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"__fxstat64","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -174,6 +225,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__getpagesize","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__getpagesize","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__getpgid","GLIBC_2.0"},
 #endif
@@ -181,6 +235,9 @@ struct versym libc_so_6_1[] = {
 	{"__getpgid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__getpgid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__getpgid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -192,6 +249,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__h_errno_location","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__h_errno_location","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__isinf","GLIBC_2.0"},
 #endif
@@ -199,6 +259,9 @@ struct versym libc_so_6_1[] = {
 	{"__isinf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__isinf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__isinf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -210,6 +273,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__isinff","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__isinff","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__isinfl","GLIBC_2.0"},
 #endif
@@ -217,6 +283,9 @@ struct versym libc_so_6_1[] = {
 	{"__isinfl","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__isinfl","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__isinfl","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -228,6 +297,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__isnan","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__isnan","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__isnanf","GLIBC_2.0"},
 #endif
@@ -235,6 +307,9 @@ struct versym libc_so_6_1[] = {
 	{"__isnanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__isnanf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__isnanf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -246,6 +321,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__isnanl","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__isnanl","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__libc_current_sigrtmax","GLIBC_2.1"},
 #endif
@@ -253,6 +331,9 @@ struct versym libc_so_6_1[] = {
 	{"__libc_current_sigrtmax","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__libc_current_sigrtmax","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"__libc_current_sigrtmax","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -264,6 +345,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__libc_current_sigrtmin","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"__libc_current_sigrtmin","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"__libc_start_main","GLIBC_2.0"},
 #endif
@@ -271,6 +355,9 @@ struct versym libc_so_6_1[] = {
 	{"__libc_start_main","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__libc_start_main","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__libc_start_main","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -282,6 +369,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__lxstat","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__lxstat","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__lxstat64","GLIBC_2.2"},
 #endif
@@ -289,6 +379,9 @@ struct versym libc_so_6_1[] = {
 	{"__lxstat64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__lxstat64","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"__lxstat64","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -298,6 +391,9 @@ struct versym libc_so_6_1[] = {
 	{"__mempcpy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__mempcpy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__mempcpy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -312,6 +408,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__rawmemchr","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"__rawmemchr","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"__sigsetjmp","GLIBC_2.0"},
 #endif
@@ -319,6 +418,9 @@ struct versym libc_so_6_1[] = {
 	{"__sigsetjmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__sigsetjmp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__sigsetjmp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -330,6 +432,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__stpcpy","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__stpcpy","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__strdup","GLIBC_2.0"},
 #endif
@@ -337,6 +442,9 @@ struct versym libc_so_6_1[] = {
 	{"__strdup","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__strdup","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__strdup","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -348,6 +456,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__strtod_internal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__strtod_internal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__strtof_internal","GLIBC_2.0"},
 #endif
@@ -355,6 +466,9 @@ struct versym libc_so_6_1[] = {
 	{"__strtof_internal","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__strtof_internal","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__strtof_internal","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -366,6 +480,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__strtok_r","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__strtok_r","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__strtol_internal","GLIBC_2.0"},
 #endif
@@ -373,6 +490,9 @@ struct versym libc_so_6_1[] = {
 	{"__strtol_internal","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__strtol_internal","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__strtol_internal","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -384,6 +504,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__strtold_internal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__strtold_internal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__strtoll_internal","GLIBC_2.0"},
 #endif
@@ -391,6 +514,9 @@ struct versym libc_so_6_1[] = {
 	{"__strtoll_internal","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__strtoll_internal","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__strtoll_internal","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -402,6 +528,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__strtoul_internal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__strtoul_internal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__strtoull_internal","GLIBC_2.0"},
 #endif
@@ -411,6 +540,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__strtoull_internal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__strtoull_internal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__sysconf","GLIBC_2.2"},
 #endif
@@ -418,6 +550,9 @@ struct versym libc_so_6_1[] = {
 	{"__sysconf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__sysconf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"__sysconf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -429,6 +564,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__sysv_signal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__sysv_signal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__timezone","GLIBC_2.0"},
 #endif
@@ -438,6 +576,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__timezone","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__timezone","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__tzname","GLIBC_2.0"},
 #endif
@@ -445,6 +586,9 @@ struct versym libc_so_6_1[] = {
 	{"__tzname","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__tzname","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__tzname","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -462,6 +606,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__wcstod_internal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__wcstod_internal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__wcstof_internal","GLIBC_2.0"},
 #endif
@@ -469,6 +616,9 @@ struct versym libc_so_6_1[] = {
 	{"__wcstof_internal","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__wcstof_internal","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__wcstof_internal","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -480,6 +630,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__wcstol_internal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__wcstol_internal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__wcstold_internal","GLIBC_2.0"},
 #endif
@@ -487,6 +640,9 @@ struct versym libc_so_6_1[] = {
 	{"__wcstold_internal","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__wcstold_internal","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__wcstold_internal","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -498,6 +654,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__wcstoul_internal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__wcstoul_internal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__xmknod","GLIBC_2.0"},
 #endif
@@ -505,6 +664,9 @@ struct versym libc_so_6_1[] = {
 	{"__xmknod","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__xmknod","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"__xmknod","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -516,6 +678,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__xstat","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"__xstat","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__xstat64","GLIBC_2.2"},
 #endif
@@ -523,6 +688,9 @@ struct versym libc_so_6_1[] = {
 	{"__xstat64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"__xstat64","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"__xstat64","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -534,6 +702,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_environ","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"_environ","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"_exit","GLIBC_2.0"},
 #endif
@@ -541,6 +712,9 @@ struct versym libc_so_6_1[] = {
 	{"_exit","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"_exit","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"_exit","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -552,6 +726,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_longjmp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"_longjmp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"_nl_msg_cat_cntr","GLIBC_2.0"},
 #endif
@@ -559,6 +736,9 @@ struct versym libc_so_6_1[] = {
 	{"_nl_msg_cat_cntr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"_nl_msg_cat_cntr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"_nl_msg_cat_cntr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -570,6 +750,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_obstack_begin","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"_obstack_begin","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"_obstack_newchunk","GLIBC_2.0"},
 #endif
@@ -577,6 +760,9 @@ struct versym libc_so_6_1[] = {
 	{"_obstack_newchunk","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"_obstack_newchunk","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"_obstack_newchunk","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -588,6 +774,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_setjmp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"_setjmp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"_sys_errlist","GLIBC_2.1"},
 #endif
@@ -595,6 +784,9 @@ struct versym libc_so_6_1[] = {
 	{"_sys_errlist","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"_sys_errlist","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"_sys_errlist","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -606,6 +798,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_sys_siglist","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"_sys_siglist","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"_tolower","GLIBC_2.0"},
 #endif
@@ -613,6 +808,9 @@ struct versym libc_so_6_1[] = {
 	{"_tolower","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"_tolower","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"_tolower","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -624,6 +822,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"_toupper","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"_toupper","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"a64l","GLIBC_2.0"},
 #endif
@@ -631,6 +832,9 @@ struct versym libc_so_6_1[] = {
 	{"a64l","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"a64l","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"a64l","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -642,6 +846,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"abort","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"abort","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"abs","GLIBC_2.0"},
 #endif
@@ -649,6 +856,9 @@ struct versym libc_so_6_1[] = {
 	{"abs","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"abs","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"abs","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -660,6 +870,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"accept","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"accept","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"access","GLIBC_2.0"},
 #endif
@@ -667,6 +880,9 @@ struct versym libc_so_6_1[] = {
 	{"access","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"access","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"access","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -678,6 +894,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"acct","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"acct","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"adjtime","GLIBC_2.0"},
 #endif
@@ -685,6 +904,9 @@ struct versym libc_so_6_1[] = {
 	{"adjtime","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"adjtime","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"adjtime","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -696,6 +918,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"adjtimex","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"adjtimex","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"advance","GLIBC_2.0"},
 #endif
@@ -705,6 +930,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"advance","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"advance","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"alarm","GLIBC_2.0"},
 #endif
@@ -712,6 +940,9 @@ struct versym libc_so_6_1[] = {
 	{"alarm","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"alarm","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"alarm","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -741,6 +972,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"asctime","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"asctime","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"asctime_r","GLIBC_2.0"},
 #endif
@@ -750,6 +984,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"asctime_r","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"asctime_r","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"asprintf","GLIBC_2.0"},
 #endif
@@ -757,6 +994,9 @@ struct versym libc_so_6_1[] = {
 	{"asprintf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"asprintf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"asprintf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -777,6 +1017,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"atof","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"atof","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"atoi","GLIBC_2.0"},
 #endif
@@ -784,6 +1027,9 @@ struct versym libc_so_6_1[] = {
 	{"atoi","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"atoi","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"atoi","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -795,6 +1041,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"atol","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"atol","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"authnone_create","GLIBC_2.0"},
 #endif
@@ -802,6 +1051,9 @@ struct versym libc_so_6_1[] = {
 	{"authnone_create","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"authnone_create","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"authnone_create","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -813,6 +1065,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"basename","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"basename","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"bcmp","GLIBC_2.0"},
 #endif
@@ -820,6 +1075,9 @@ struct versym libc_so_6_1[] = {
 	{"bcmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"bcmp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"bcmp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -831,6 +1089,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"bcopy","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"bcopy","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"bind","GLIBC_2.0"},
 #endif
@@ -840,6 +1101,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"bind","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"bind","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"bind_textdomain_codeset","GLIBC_2.2"},
 #endif
@@ -847,6 +1111,9 @@ struct versym libc_so_6_1[] = {
 	{"bind_textdomain_codeset","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"bind_textdomain_codeset","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"bind_textdomain_codeset","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -858,6 +1125,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"bindresvport","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"bindresvport","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"bindtextdomain","GLIBC_2.0"},
 #endif
@@ -865,6 +1135,9 @@ struct versym libc_so_6_1[] = {
 	{"bindtextdomain","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"bindtextdomain","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"bindtextdomain","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -876,6 +1149,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"brk","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"brk","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"bsd_signal","GLIBC_2.0"},
 #endif
@@ -883,6 +1159,9 @@ struct versym libc_so_6_1[] = {
 	{"bsd_signal","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"bsd_signal","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"bsd_signal","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -894,6 +1173,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"bsearch","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"bsearch","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"btowc","GLIBC_2.0"},
 #endif
@@ -901,6 +1183,9 @@ struct versym libc_so_6_1[] = {
 	{"btowc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"btowc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"btowc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -912,6 +1197,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"bzero","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"bzero","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"calloc","GLIBC_2.0"},
 #endif
@@ -919,6 +1207,9 @@ struct versym libc_so_6_1[] = {
 	{"calloc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"calloc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"calloc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -930,6 +1221,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"catclose","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"catclose","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"catgets","GLIBC_2.0"},
 #endif
@@ -937,6 +1231,9 @@ struct versym libc_so_6_1[] = {
 	{"catgets","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"catgets","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"catgets","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -948,6 +1245,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"catopen","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"catopen","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"cfgetispeed","GLIBC_2.0"},
 #endif
@@ -955,6 +1255,9 @@ struct versym libc_so_6_1[] = {
 	{"cfgetispeed","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"cfgetispeed","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"cfgetispeed","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -966,6 +1269,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"cfgetospeed","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"cfgetospeed","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"cfmakeraw","GLIBC_2.0"},
 #endif
@@ -973,6 +1279,9 @@ struct versym libc_so_6_1[] = {
 	{"cfmakeraw","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"cfmakeraw","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"cfmakeraw","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -984,6 +1293,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"cfsetispeed","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"cfsetispeed","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"cfsetospeed","GLIBC_2.0"},
 #endif
@@ -991,6 +1303,9 @@ struct versym libc_so_6_1[] = {
 	{"cfsetospeed","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"cfsetospeed","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"cfsetospeed","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1002,6 +1317,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"cfsetspeed","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"cfsetspeed","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"chdir","GLIBC_2.0"},
 #endif
@@ -1009,6 +1327,9 @@ struct versym libc_so_6_1[] = {
 	{"chdir","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"chdir","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"chdir","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1020,6 +1341,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"chmod","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"chmod","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"chown","GLIBC_2.1"},
 #endif
@@ -1027,6 +1351,9 @@ struct versym libc_so_6_1[] = {
 	{"chown","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"chown","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"chown","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -1038,6 +1365,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"chroot","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"chroot","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"clearerr","GLIBC_2.0"},
 #endif
@@ -1045,6 +1375,9 @@ struct versym libc_so_6_1[] = {
 	{"clearerr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"clearerr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"clearerr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1056,6 +1389,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"clnt_create","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"clnt_create","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"clnt_pcreateerror","GLIBC_2.0"},
 #endif
@@ -1063,6 +1399,9 @@ struct versym libc_so_6_1[] = {
 	{"clnt_pcreateerror","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"clnt_pcreateerror","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"clnt_pcreateerror","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1074,6 +1413,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"clnt_perrno","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"clnt_perrno","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"clnt_perror","GLIBC_2.0"},
 #endif
@@ -1081,6 +1423,9 @@ struct versym libc_so_6_1[] = {
 	{"clnt_perror","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"clnt_perror","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"clnt_perror","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1092,6 +1437,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"clnt_spcreateerror","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"clnt_spcreateerror","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"clnt_sperrno","GLIBC_2.0"},
 #endif
@@ -1099,6 +1447,9 @@ struct versym libc_so_6_1[] = {
 	{"clnt_sperrno","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"clnt_sperrno","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"clnt_sperrno","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1110,6 +1461,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"clnt_sperror","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"clnt_sperror","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"clock","GLIBC_2.0"},
 #endif
@@ -1117,6 +1471,9 @@ struct versym libc_so_6_1[] = {
 	{"clock","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"clock","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"clock","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1128,6 +1485,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"close","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"close","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"closedir","GLIBC_2.0"},
 #endif
@@ -1135,6 +1495,9 @@ struct versym libc_so_6_1[] = {
 	{"closedir","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"closedir","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"closedir","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1146,6 +1509,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"closelog","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"closelog","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"confstr","GLIBC_2.0"},
 #endif
@@ -1153,6 +1519,9 @@ struct versym libc_so_6_1[] = {
 	{"confstr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"confstr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"confstr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1164,6 +1533,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"connect","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"connect","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"creat","GLIBC_2.0"},
 #endif
@@ -1171,6 +1543,9 @@ struct versym libc_so_6_1[] = {
 	{"creat","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"creat","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"creat","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1182,6 +1557,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"creat64","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"creat64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"ctermid","GLIBC_2.0"},
 #endif
@@ -1189,6 +1567,9 @@ struct versym libc_so_6_1[] = {
 	{"ctermid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ctermid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ctermid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1200,6 +1581,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ctime","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ctime","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ctime_r","GLIBC_2.0"},
 #endif
@@ -1207,6 +1591,9 @@ struct versym libc_so_6_1[] = {
 	{"ctime_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ctime_r","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ctime_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1218,6 +1605,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"cuserid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"cuserid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"daemon","GLIBC_2.0"},
 #endif
@@ -1225,6 +1615,9 @@ struct versym libc_so_6_1[] = {
 	{"daemon","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"daemon","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"daemon","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1236,6 +1629,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"daylight","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"daylight","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"dcgettext","GLIBC_2.0"},
 #endif
@@ -1245,6 +1641,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"dcgettext","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"dcgettext","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"dcngettext","GLIBC_2.2"},
 #endif
@@ -1252,6 +1651,9 @@ struct versym libc_so_6_1[] = {
 	{"dcngettext","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"dcngettext","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"dcngettext","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -1263,6 +1665,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"dgettext","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"dgettext","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"difftime","GLIBC_2.0"},
 #endif
@@ -1270,6 +1675,9 @@ struct versym libc_so_6_1[] = {
 	{"difftime","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"difftime","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"difftime","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1281,6 +1689,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"dirname","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"dirname","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"div","GLIBC_2.0"},
 #endif
@@ -1290,6 +1701,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"div","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"div","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"dngettext","GLIBC_2.2"},
 #endif
@@ -1297,6 +1711,9 @@ struct versym libc_so_6_1[] = {
 	{"dngettext","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"dngettext","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"dngettext","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -1308,6 +1725,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"drand48","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"drand48","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"dup","GLIBC_2.0"},
 #endif
@@ -1315,6 +1735,9 @@ struct versym libc_so_6_1[] = {
 	{"dup","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"dup","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"dup","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1326,6 +1749,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"dup2","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"dup2","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ecvt","GLIBC_2.0"},
 #endif
@@ -1335,6 +1761,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ecvt","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ecvt","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"endgrent","GLIBC_2.0"},
 #endif
@@ -1342,6 +1771,9 @@ struct versym libc_so_6_1[] = {
 	{"endgrent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"endgrent","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"endgrent","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1362,6 +1794,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"endnetent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"endnetent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"endprotoent","GLIBC_2.0"},
 #endif
@@ -1369,6 +1804,9 @@ struct versym libc_so_6_1[] = {
 	{"endprotoent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"endprotoent","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"endprotoent","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1380,6 +1818,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"endpwent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"endpwent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"endservent","GLIBC_2.0"},
 #endif
@@ -1387,6 +1828,9 @@ struct versym libc_so_6_1[] = {
 	{"endservent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"endservent","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"endservent","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1398,6 +1842,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"endutent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"endutent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"endutxent","GLIBC_2.1"},
 #endif
@@ -1405,6 +1852,9 @@ struct versym libc_so_6_1[] = {
 	{"endutxent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"endutxent","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"endutxent","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -1416,6 +1866,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"environ","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"environ","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"erand48","GLIBC_2.0"},
 #endif
@@ -1423,6 +1876,9 @@ struct versym libc_so_6_1[] = {
 	{"erand48","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"erand48","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"erand48","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1434,6 +1890,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"err","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"err","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"error","GLIBC_2.0"},
 #endif
@@ -1441,6 +1900,9 @@ struct versym libc_so_6_1[] = {
 	{"error","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"error","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"error","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1452,6 +1914,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"errx","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"errx","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"execl","GLIBC_2.0"},
 #endif
@@ -1459,6 +1924,9 @@ struct versym libc_so_6_1[] = {
 	{"execl","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"execl","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"execl","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1470,6 +1938,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"execle","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"execle","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"execlp","GLIBC_2.0"},
 #endif
@@ -1477,6 +1948,9 @@ struct versym libc_so_6_1[] = {
 	{"execlp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"execlp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"execlp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1488,6 +1962,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"execv","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"execv","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"execve","GLIBC_2.0"},
 #endif
@@ -1495,6 +1972,9 @@ struct versym libc_so_6_1[] = {
 	{"execve","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"execve","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"execve","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1506,6 +1986,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"execvp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"execvp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"exit","GLIBC_2.0"},
 #endif
@@ -1513,6 +1996,9 @@ struct versym libc_so_6_1[] = {
 	{"exit","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"exit","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"exit","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1524,6 +2010,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fchdir","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fchdir","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fchmod","GLIBC_2.0"},
 #endif
@@ -1531,6 +2020,9 @@ struct versym libc_so_6_1[] = {
 	{"fchmod","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fchmod","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"fchmod","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1542,6 +2034,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fchown","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fchown","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fclose","GLIBC_2.1"},
 #endif
@@ -1549,6 +2044,9 @@ struct versym libc_so_6_1[] = {
 	{"fclose","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fclose","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"fclose","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -1560,6 +2058,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fcntl","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fcntl","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fcvt","GLIBC_2.0"},
 #endif
@@ -1567,6 +2068,9 @@ struct versym libc_so_6_1[] = {
 	{"fcvt","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fcvt","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"fcvt","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1578,6 +2082,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fdatasync","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fdatasync","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fdopen","GLIBC_2.1"},
 #endif
@@ -1585,6 +2092,9 @@ struct versym libc_so_6_1[] = {
 	{"fdopen","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fdopen","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"fdopen","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -1596,6 +2106,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"feof","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"feof","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ferror","GLIBC_2.0"},
 #endif
@@ -1603,6 +2116,9 @@ struct versym libc_so_6_1[] = {
 	{"ferror","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ferror","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ferror","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1614,6 +2130,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fflush","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fflush","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fflush_unlocked","GLIBC_2.0"},
 #endif
@@ -1621,6 +2140,9 @@ struct versym libc_so_6_1[] = {
 	{"fflush_unlocked","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fflush_unlocked","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"fflush_unlocked","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1632,6 +2154,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ffs","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ffs","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fgetc","GLIBC_2.0"},
 #endif
@@ -1639,6 +2164,9 @@ struct versym libc_so_6_1[] = {
 	{"fgetc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fgetc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"fgetc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1650,6 +2178,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fgetpos","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"fgetpos","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"fgetpos64","GLIBC_2.1"},
 #endif
@@ -1657,6 +2188,9 @@ struct versym libc_so_6_1[] = {
 	{"fgetpos64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fgetpos64","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"fgetpos64","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -1668,6 +2202,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fgets","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fgets","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fgetwc","GLIBC_2.2"},
 #endif
@@ -1677,6 +2214,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fgetwc","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"fgetwc","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"fgetwc_unlocked","GLIBC_2.2"},
 #endif
@@ -1684,6 +2224,9 @@ struct versym libc_so_6_1[] = {
 	{"fgetwc_unlocked","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fgetwc_unlocked","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"fgetwc_unlocked","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -1693,6 +2236,9 @@ struct versym libc_so_6_1[] = {
 	{"fgetws","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fgetws","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"fgetws","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -1704,6 +2250,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fileno","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fileno","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"flock","GLIBC_2.0"},
 #endif
@@ -1711,6 +2260,9 @@ struct versym libc_so_6_1[] = {
 	{"flock","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"flock","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"flock","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1722,6 +2274,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"flockfile","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"flockfile","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fmtmsg","GLIBC_2.1"},
 #endif
@@ -1731,6 +2286,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fmtmsg","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"fmtmsg","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"fnmatch","GLIBC_2.2.3"},
 #endif
@@ -1738,6 +2296,9 @@ struct versym libc_so_6_1[] = {
 	{"fnmatch","GLIBC_2.2.3"},
 #endif
 #if defined(__powerpc__)
+	{"fnmatch","GLIBC_2.2.3"},
+#endif
+#if defined(__s390__)
 	{"fnmatch","GLIBC_2.2.3"},
 #endif
 #if defined(__i386__)
@@ -1749,6 +2310,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fopen","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"fopen","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"fopen64","GLIBC_2.1"},
 #endif
@@ -1756,6 +2320,9 @@ struct versym libc_so_6_1[] = {
 	{"fopen64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fopen64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"fopen64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -1767,6 +2334,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fork","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fork","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fpathconf","GLIBC_2.0"},
 #endif
@@ -1774,6 +2344,9 @@ struct versym libc_so_6_1[] = {
 	{"fpathconf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fpathconf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"fpathconf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1785,6 +2358,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fprintf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fprintf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fputc","GLIBC_2.0"},
 #endif
@@ -1792,6 +2368,9 @@ struct versym libc_so_6_1[] = {
 	{"fputc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fputc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"fputc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1803,6 +2382,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fputs","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fputs","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fputwc","GLIBC_2.2"},
 #endif
@@ -1812,6 +2394,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fputwc","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"fputwc","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"fputws","GLIBC_2.2"},
 #endif
@@ -1819,6 +2404,9 @@ struct versym libc_so_6_1[] = {
 	{"fputws","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fputws","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"fputws","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -1830,6 +2418,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fread","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fread","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"free","GLIBC_2.0"},
 #endif
@@ -1837,6 +2428,9 @@ struct versym libc_so_6_1[] = {
 	{"free","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"free","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"free","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1848,6 +2442,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"freeaddrinfo","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"freeaddrinfo","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"freopen","GLIBC_2.0"},
 #endif
@@ -1855,6 +2452,9 @@ struct versym libc_so_6_1[] = {
 	{"freopen","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"freopen","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"freopen","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1866,6 +2466,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"freopen64","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"freopen64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"fscanf","GLIBC_2.0"},
 #endif
@@ -1873,6 +2476,9 @@ struct versym libc_so_6_1[] = {
 	{"fscanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fscanf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"fscanf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1884,6 +2490,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fseek","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fseek","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fseeko","GLIBC_2.1"},
 #endif
@@ -1891,6 +2500,9 @@ struct versym libc_so_6_1[] = {
 	{"fseeko","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fseeko","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"fseeko","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -1902,6 +2514,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fseeko64","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"fseeko64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"fsetpos","GLIBC_2.0"},
 #endif
@@ -1911,6 +2526,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fsetpos","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"fsetpos","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"fsetpos64","GLIBC_2.1"},
 #endif
@@ -1918,6 +2536,9 @@ struct versym libc_so_6_1[] = {
 	{"fsetpos64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fsetpos64","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"fsetpos64","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -1947,6 +2568,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fstatvfs","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"fstatvfs","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"fstatvfs64","GLIBC_2.1"},
 #endif
@@ -1954,6 +2578,9 @@ struct versym libc_so_6_1[] = {
 	{"fstatvfs64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fstatvfs64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"fstatvfs64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -1965,6 +2592,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fsync","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fsync","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ftell","GLIBC_2.0"},
 #endif
@@ -1972,6 +2602,9 @@ struct versym libc_so_6_1[] = {
 	{"ftell","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ftell","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ftell","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -1983,6 +2616,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ftello","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"ftello","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"ftello64","GLIBC_2.1"},
 #endif
@@ -1990,6 +2626,9 @@ struct versym libc_so_6_1[] = {
 	{"ftello64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ftello64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"ftello64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2001,6 +2640,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ftime","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ftime","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ftok","GLIBC_2.0"},
 #endif
@@ -2008,6 +2650,9 @@ struct versym libc_so_6_1[] = {
 	{"ftok","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ftok","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ftok","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2019,6 +2664,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ftruncate","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ftruncate","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ftruncate64","GLIBC_2.1"},
 #endif
@@ -2026,6 +2674,9 @@ struct versym libc_so_6_1[] = {
 	{"ftruncate64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ftruncate64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"ftruncate64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2037,6 +2688,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ftrylockfile","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ftrylockfile","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ftw","GLIBC_2.0"},
 #endif
@@ -2044,6 +2698,9 @@ struct versym libc_so_6_1[] = {
 	{"ftw","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ftw","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ftw","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2055,6 +2712,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ftw64","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"ftw64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"funlockfile","GLIBC_2.0"},
 #endif
@@ -2064,6 +2724,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"funlockfile","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"funlockfile","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fwide","GLIBC_2.2"},
 #endif
@@ -2073,6 +2736,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fwide","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"fwide","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"fwprintf","GLIBC_2.2"},
 #endif
@@ -2080,6 +2746,9 @@ struct versym libc_so_6_1[] = {
 	{"fwprintf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fwprintf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"fwprintf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -2091,6 +2760,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"fwrite","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"fwrite","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"fwscanf","GLIBC_2.2"},
 #endif
@@ -2098,6 +2770,9 @@ struct versym libc_so_6_1[] = {
 	{"fwscanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"fwscanf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"fwscanf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -2109,6 +2784,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"gai_strerror","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"gai_strerror","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"gcvt","GLIBC_2.0"},
 #endif
@@ -2116,6 +2794,9 @@ struct versym libc_so_6_1[] = {
 	{"gcvt","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"gcvt","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"gcvt","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2127,6 +2808,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getaddrinfo","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getaddrinfo","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getc","GLIBC_2.0"},
 #endif
@@ -2134,6 +2818,9 @@ struct versym libc_so_6_1[] = {
 	{"getc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2145,6 +2832,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getc_unlocked","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getc_unlocked","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getchar","GLIBC_2.0"},
 #endif
@@ -2152,6 +2842,9 @@ struct versym libc_so_6_1[] = {
 	{"getchar","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getchar","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getchar","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2163,6 +2856,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getchar_unlocked","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getchar_unlocked","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getcontext","GLIBC_2.1"},
 #endif
@@ -2170,6 +2866,9 @@ struct versym libc_so_6_1[] = {
 	{"getcontext","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getcontext","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"getcontext","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2181,6 +2880,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getcwd","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getcwd","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getdate","GLIBC_2.1"},
 #endif
@@ -2188,6 +2890,9 @@ struct versym libc_so_6_1[] = {
 	{"getdate","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getdate","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"getdate","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2199,6 +2904,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getdate_err","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"getdate_err","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"getdomainname","GLIBC_2.0"},
 #endif
@@ -2206,6 +2914,9 @@ struct versym libc_so_6_1[] = {
 	{"getdomainname","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getdomainname","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getdomainname","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2217,6 +2928,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getegid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getegid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getenv","GLIBC_2.0"},
 #endif
@@ -2224,6 +2938,9 @@ struct versym libc_so_6_1[] = {
 	{"getenv","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getenv","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getenv","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2235,6 +2952,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"geteuid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"geteuid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getgid","GLIBC_2.0"},
 #endif
@@ -2242,6 +2962,9 @@ struct versym libc_so_6_1[] = {
 	{"getgid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getgid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getgid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2253,6 +2976,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getgrent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getgrent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getgrgid","GLIBC_2.0"},
 #endif
@@ -2260,6 +2986,9 @@ struct versym libc_so_6_1[] = {
 	{"getgrgid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getgrgid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getgrgid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2271,6 +3000,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getgrgid_r","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getgrgid_r","GLIBC_2.1.2"},
+#endif
 #if defined(__i386__)
 	{"getgrnam","GLIBC_2.0"},
 #endif
@@ -2278,6 +3010,9 @@ struct versym libc_so_6_1[] = {
 	{"getgrnam","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getgrnam","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getgrnam","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2295,6 +3030,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getgroups","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getgroups","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"gethostbyaddr","GLIBC_2.0"},
 #endif
@@ -2302,6 +3040,9 @@ struct versym libc_so_6_1[] = {
 	{"gethostbyaddr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"gethostbyaddr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"gethostbyaddr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2313,6 +3054,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"gethostbyname","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"gethostbyname","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"gethostbyname_r","GLIBC_2.1.2"},
 #endif
@@ -2320,6 +3064,9 @@ struct versym libc_so_6_1[] = {
 	{"gethostbyname_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"gethostbyname_r","GLIBC_2.1.2"},
+#endif
+#if defined(__s390__)
 	{"gethostbyname_r","GLIBC_2.1.2"},
 #endif
 #if defined(__i386__)
@@ -2331,6 +3078,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"gethostid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"gethostid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"gethostname","GLIBC_2.0"},
 #endif
@@ -2338,6 +3088,9 @@ struct versym libc_so_6_1[] = {
 	{"gethostname","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"gethostname","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"gethostname","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2349,6 +3102,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getitimer","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getitimer","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getloadavg","GLIBC_2.2"},
 #endif
@@ -2356,6 +3112,9 @@ struct versym libc_so_6_1[] = {
 	{"getloadavg","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getloadavg","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"getloadavg","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -2367,6 +3126,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getlogin","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getlogin","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getnameinfo","GLIBC_2.1"},
 #endif
@@ -2374,6 +3136,9 @@ struct versym libc_so_6_1[] = {
 	{"getnameinfo","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getnameinfo","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"getnameinfo","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2385,6 +3150,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getnetbyaddr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getnetbyaddr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getopt","GLIBC_2.0"},
 #endif
@@ -2392,6 +3160,9 @@ struct versym libc_so_6_1[] = {
 	{"getopt","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getopt","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getopt","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2403,6 +3174,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getopt_long","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getopt_long","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getopt_long_only","GLIBC_2.0"},
 #endif
@@ -2410,6 +3184,9 @@ struct versym libc_so_6_1[] = {
 	{"getopt_long_only","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getopt_long_only","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getopt_long_only","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2421,6 +3198,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getpagesize","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getpagesize","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getpeername","GLIBC_2.0"},
 #endif
@@ -2428,6 +3208,9 @@ struct versym libc_so_6_1[] = {
 	{"getpeername","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getpeername","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getpeername","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2439,6 +3222,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getpgid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getpgid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getpgrp","GLIBC_2.0"},
 #endif
@@ -2446,6 +3232,9 @@ struct versym libc_so_6_1[] = {
 	{"getpgrp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getpgrp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getpgrp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2457,6 +3246,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getpid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getpid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getppid","GLIBC_2.0"},
 #endif
@@ -2464,6 +3256,9 @@ struct versym libc_so_6_1[] = {
 	{"getppid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getppid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getppid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2475,6 +3270,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getpriority","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getpriority","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getprotobyname","GLIBC_2.0"},
 #endif
@@ -2482,6 +3280,9 @@ struct versym libc_so_6_1[] = {
 	{"getprotobyname","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getprotobyname","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getprotobyname","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2493,6 +3294,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getprotobynumber","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getprotobynumber","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getprotoent","GLIBC_2.0"},
 #endif
@@ -2500,6 +3304,9 @@ struct versym libc_so_6_1[] = {
 	{"getprotoent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getprotoent","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getprotoent","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2511,6 +3318,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getpwent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getpwent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getpwnam","GLIBC_2.0"},
 #endif
@@ -2518,6 +3328,9 @@ struct versym libc_so_6_1[] = {
 	{"getpwnam","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getpwnam","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getpwnam","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2535,6 +3348,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getpwuid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getpwuid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getpwuid_r","GLIBC_2.0"},
 #endif
@@ -2542,6 +3358,9 @@ struct versym libc_so_6_1[] = {
 	{"getpwuid_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getpwuid_r","GLIBC_2.1.2"},
+#endif
+#if defined(__s390__)
 	{"getpwuid_r","GLIBC_2.1.2"},
 #endif
 #if defined(__i386__)
@@ -2553,6 +3372,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getrlimit","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"getrlimit","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"getrlimit64","GLIBC_2.1"},
 #endif
@@ -2562,6 +3384,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getrlimit64","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"getrlimit64","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"getrusage","GLIBC_2.0"},
 #endif
@@ -2569,6 +3394,9 @@ struct versym libc_so_6_1[] = {
 	{"getrusage","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getrusage","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getrusage","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2589,6 +3417,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getservbyname","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getservbyname","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getservbyport","GLIBC_2.0"},
 #endif
@@ -2596,6 +3427,9 @@ struct versym libc_so_6_1[] = {
 	{"getservbyport","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getservbyport","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getservbyport","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2607,6 +3441,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getservent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getservent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getsid","GLIBC_2.0"},
 #endif
@@ -2614,6 +3451,9 @@ struct versym libc_so_6_1[] = {
 	{"getsid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getsid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getsid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2625,6 +3465,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getsockname","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getsockname","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getsockopt","GLIBC_2.0"},
 #endif
@@ -2632,6 +3475,9 @@ struct versym libc_so_6_1[] = {
 	{"getsockopt","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getsockopt","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getsockopt","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2643,6 +3489,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getsubopt","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getsubopt","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"gettext","GLIBC_2.0"},
 #endif
@@ -2650,6 +3499,9 @@ struct versym libc_so_6_1[] = {
 	{"gettext","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"gettext","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"gettext","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2661,6 +3513,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"gettimeofday","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"gettimeofday","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getuid","GLIBC_2.0"},
 #endif
@@ -2668,6 +3523,9 @@ struct versym libc_so_6_1[] = {
 	{"getuid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getuid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getuid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2679,6 +3537,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getutent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getutent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getutent_r","GLIBC_2.0"},
 #endif
@@ -2686,6 +3547,9 @@ struct versym libc_so_6_1[] = {
 	{"getutent_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getutent_r","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"getutent_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2697,6 +3561,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getutxent","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"getutxent","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"getutxid","GLIBC_2.1"},
 #endif
@@ -2704,6 +3571,9 @@ struct versym libc_so_6_1[] = {
 	{"getutxid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getutxid","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"getutxid","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2715,6 +3585,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getutxline","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"getutxline","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"getw","GLIBC_2.0"},
 #endif
@@ -2724,6 +3597,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getw","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getw","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"getwc","GLIBC_2.2"},
 #endif
@@ -2733,6 +3609,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getwc","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"getwc","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"getwchar","GLIBC_2.2"},
 #endif
@@ -2740,6 +3619,9 @@ struct versym libc_so_6_1[] = {
 	{"getwchar","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"getwchar","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"getwchar","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -2751,6 +3633,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getwd","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"getwd","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"glob","GLIBC_2.0"},
 #endif
@@ -2758,6 +3643,9 @@ struct versym libc_so_6_1[] = {
 	{"glob","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"glob","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"glob","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2769,6 +3657,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"glob64","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"glob64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"globfree","GLIBC_2.0"},
 #endif
@@ -2776,6 +3667,9 @@ struct versym libc_so_6_1[] = {
 	{"globfree","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"globfree","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"globfree","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2787,6 +3681,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"globfree64","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"globfree64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"gmtime","GLIBC_2.0"},
 #endif
@@ -2794,6 +3691,9 @@ struct versym libc_so_6_1[] = {
 	{"gmtime","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"gmtime","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"gmtime","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2805,6 +3705,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"gmtime_r","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"gmtime_r","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"grantpt","GLIBC_2.1"},
 #endif
@@ -2812,6 +3715,9 @@ struct versym libc_so_6_1[] = {
 	{"grantpt","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"grantpt","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"grantpt","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2823,6 +3729,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"hcreate","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"hcreate","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"hdestroy","GLIBC_2.0"},
 #endif
@@ -2830,6 +3739,9 @@ struct versym libc_so_6_1[] = {
 	{"hdestroy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"hdestroy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"hdestroy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2841,6 +3753,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"hsearch","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"hsearch","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"htonl","GLIBC_2.0"},
 #endif
@@ -2848,6 +3763,9 @@ struct versym libc_so_6_1[] = {
 	{"htonl","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"htonl","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"htonl","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2859,6 +3777,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"htons","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"htons","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iconv","GLIBC_2.1"},
 #endif
@@ -2866,6 +3787,9 @@ struct versym libc_so_6_1[] = {
 	{"iconv","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iconv","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"iconv","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2877,6 +3801,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"iconv_close","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"iconv_close","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"iconv_open","GLIBC_2.1"},
 #endif
@@ -2884,6 +3811,9 @@ struct versym libc_so_6_1[] = {
 	{"iconv_open","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iconv_open","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"iconv_open","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -2895,6 +3825,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"imaxabs","GLIBC_2.1.1"},
 #endif
+#if defined(__s390__)
+	{"imaxabs","GLIBC_2.1.1"},
+#endif
 #if defined(__i386__)
 	{"imaxdiv","GLIBC_2.1.1"},
 #endif
@@ -2902,6 +3835,9 @@ struct versym libc_so_6_1[] = {
 	{"imaxdiv","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"imaxdiv","GLIBC_2.1.1"},
+#endif
+#if defined(__s390__)
 	{"imaxdiv","GLIBC_2.1.1"},
 #endif
 #if defined(__i386__)
@@ -2913,6 +3849,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"index","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"index","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"inet_addr","GLIBC_2.0"},
 #endif
@@ -2920,6 +3859,9 @@ struct versym libc_so_6_1[] = {
 	{"inet_addr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"inet_addr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"inet_addr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2931,6 +3873,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"inet_aton","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"inet_aton","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"inet_ntoa","GLIBC_2.0"},
 #endif
@@ -2938,6 +3883,9 @@ struct versym libc_so_6_1[] = {
 	{"inet_ntoa","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"inet_ntoa","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"inet_ntoa","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2949,6 +3897,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"inet_ntop","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"inet_ntop","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"inet_pton","GLIBC_2.0"},
 #endif
@@ -2956,6 +3907,9 @@ struct versym libc_so_6_1[] = {
 	{"inet_pton","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"inet_pton","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"inet_pton","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2967,6 +3921,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"initgroups","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"initgroups","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"initstate","GLIBC_2.0"},
 #endif
@@ -2974,6 +3931,9 @@ struct versym libc_so_6_1[] = {
 	{"initstate","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"initstate","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"initstate","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -2985,6 +3945,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"insque","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"insque","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ioctl","GLIBC_2.0"},
 #endif
@@ -2992,6 +3955,9 @@ struct versym libc_so_6_1[] = {
 	{"ioctl","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ioctl","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ioctl","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3009,6 +3975,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isalnum","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isalnum","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"isalpha","GLIBC_2.0"},
 #endif
@@ -3016,6 +3985,9 @@ struct versym libc_so_6_1[] = {
 	{"isalpha","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"isalpha","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"isalpha","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3027,6 +3999,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isascii","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isascii","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"isatty","GLIBC_2.0"},
 #endif
@@ -3034,6 +4009,9 @@ struct versym libc_so_6_1[] = {
 	{"isatty","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"isatty","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"isatty","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3045,6 +4023,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isblank","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isblank","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iscntrl","GLIBC_2.0"},
 #endif
@@ -3052,6 +4033,9 @@ struct versym libc_so_6_1[] = {
 	{"iscntrl","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iscntrl","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"iscntrl","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3063,6 +4047,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isdigit","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isdigit","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"isgraph","GLIBC_2.0"},
 #endif
@@ -3070,6 +4057,9 @@ struct versym libc_so_6_1[] = {
 	{"isgraph","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"isgraph","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"isgraph","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3081,6 +4071,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isinf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isinf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"isinff","GLIBC_2.0"},
 #endif
@@ -3088,6 +4081,9 @@ struct versym libc_so_6_1[] = {
 	{"isinff","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"isinff","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"isinff","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3099,6 +4095,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isinfl","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isinfl","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"islower","GLIBC_2.0"},
 #endif
@@ -3106,6 +4105,9 @@ struct versym libc_so_6_1[] = {
 	{"islower","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"islower","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"islower","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3117,6 +4119,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isnan","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isnan","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"isnanf","GLIBC_2.0"},
 #endif
@@ -3124,6 +4129,9 @@ struct versym libc_so_6_1[] = {
 	{"isnanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"isnanf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"isnanf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3135,6 +4143,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isnanl","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isnanl","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"isprint","GLIBC_2.0"},
 #endif
@@ -3142,6 +4153,9 @@ struct versym libc_so_6_1[] = {
 	{"isprint","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"isprint","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"isprint","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3153,6 +4167,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ispunct","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ispunct","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"isspace","GLIBC_2.0"},
 #endif
@@ -3160,6 +4177,9 @@ struct versym libc_so_6_1[] = {
 	{"isspace","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"isspace","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"isspace","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3171,6 +4191,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isupper","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isupper","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iswalnum","GLIBC_2.0"},
 #endif
@@ -3178,6 +4201,9 @@ struct versym libc_so_6_1[] = {
 	{"iswalnum","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iswalnum","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"iswalnum","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3189,6 +4215,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"iswalpha","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"iswalpha","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iswblank","GLIBC_2.1"},
 #endif
@@ -3196,6 +4225,9 @@ struct versym libc_so_6_1[] = {
 	{"iswblank","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iswblank","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"iswblank","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -3207,6 +4239,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"iswcntrl","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"iswcntrl","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iswctype","GLIBC_2.0"},
 #endif
@@ -3214,6 +4249,9 @@ struct versym libc_so_6_1[] = {
 	{"iswctype","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iswctype","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"iswctype","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3225,6 +4263,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"iswdigit","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"iswdigit","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iswgraph","GLIBC_2.0"},
 #endif
@@ -3232,6 +4273,9 @@ struct versym libc_so_6_1[] = {
 	{"iswgraph","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iswgraph","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"iswgraph","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3243,6 +4287,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"iswlower","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"iswlower","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iswprint","GLIBC_2.0"},
 #endif
@@ -3250,6 +4297,9 @@ struct versym libc_so_6_1[] = {
 	{"iswprint","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iswprint","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"iswprint","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3261,6 +4311,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"iswpunct","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"iswpunct","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iswspace","GLIBC_2.0"},
 #endif
@@ -3268,6 +4321,9 @@ struct versym libc_so_6_1[] = {
 	{"iswspace","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iswspace","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"iswspace","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3279,6 +4335,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"iswupper","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"iswupper","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"iswxdigit","GLIBC_2.0"},
 #endif
@@ -3286,6 +4345,9 @@ struct versym libc_so_6_1[] = {
 	{"iswxdigit","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"iswxdigit","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"iswxdigit","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3297,6 +4359,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"isxdigit","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"isxdigit","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"jrand48","GLIBC_2.0"},
 #endif
@@ -3304,6 +4369,9 @@ struct versym libc_so_6_1[] = {
 	{"jrand48","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"jrand48","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"jrand48","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3315,6 +4383,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"key_decryptsession","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"key_decryptsession","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"kill","GLIBC_2.0"},
 #endif
@@ -3322,6 +4393,9 @@ struct versym libc_so_6_1[] = {
 	{"kill","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"kill","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"kill","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3333,6 +4407,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"killpg","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"killpg","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"l64a","GLIBC_2.0"},
 #endif
@@ -3340,6 +4417,9 @@ struct versym libc_so_6_1[] = {
 	{"l64a","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"l64a","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"l64a","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3351,6 +4431,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"labs","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"labs","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"lchown","GLIBC_2.0"},
 #endif
@@ -3358,6 +4441,9 @@ struct versym libc_so_6_1[] = {
 	{"lchown","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"lchown","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"lchown","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3369,6 +4455,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"lcong48","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"lcong48","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ldiv","GLIBC_2.0"},
 #endif
@@ -3376,6 +4465,9 @@ struct versym libc_so_6_1[] = {
 	{"ldiv","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ldiv","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ldiv","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3387,6 +4479,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"lfind","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"lfind","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"link","GLIBC_2.0"},
 #endif
@@ -3394,6 +4489,9 @@ struct versym libc_so_6_1[] = {
 	{"link","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"link","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"link","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3405,6 +4503,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"listen","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"listen","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"llabs","GLIBC_2.0"},
 #endif
@@ -3412,6 +4513,9 @@ struct versym libc_so_6_1[] = {
 	{"llabs","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"llabs","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"llabs","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3423,6 +4527,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"lldiv","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"lldiv","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"loc1","GLIBC_2.0"},
 #endif
@@ -3430,6 +4537,9 @@ struct versym libc_so_6_1[] = {
 	{"loc1","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"loc1","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"loc1","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3441,6 +4551,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"loc2","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"loc2","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"localeconv","GLIBC_2.0"},
 #endif
@@ -3448,6 +4561,9 @@ struct versym libc_so_6_1[] = {
 	{"localeconv","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"localeconv","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"localeconv","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -3459,6 +4575,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"localtime","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"localtime","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"localtime_r","GLIBC_2.0"},
 #endif
@@ -3466,6 +4585,9 @@ struct versym libc_so_6_1[] = {
 	{"localtime_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"localtime_r","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"localtime_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3477,6 +4599,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"lockf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"lockf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"lockf64","GLIBC_2.1"},
 #endif
@@ -3484,6 +4609,9 @@ struct versym libc_so_6_1[] = {
 	{"lockf64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"lockf64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"lockf64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -3495,6 +4623,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"locs","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"locs","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"longjmp","GLIBC_2.0"},
 #endif
@@ -3502,6 +4633,9 @@ struct versym libc_so_6_1[] = {
 	{"longjmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"longjmp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"longjmp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3513,6 +4647,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"lrand48","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"lrand48","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"lsearch","GLIBC_2.0"},
 #endif
@@ -3520,6 +4657,9 @@ struct versym libc_so_6_1[] = {
 	{"lsearch","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"lsearch","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"lsearch","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3531,6 +4671,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"lseek","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"lseek","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"lseek64","GLIBC_2.1"},
 #endif
@@ -3538,6 +4681,9 @@ struct versym libc_so_6_1[] = {
 	{"lseek64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"lseek64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"lseek64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -3549,6 +4695,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"makecontext","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"makecontext","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"malloc","GLIBC_2.0"},
 #endif
@@ -3556,6 +4705,9 @@ struct versym libc_so_6_1[] = {
 	{"malloc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"malloc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"malloc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3567,6 +4719,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mblen","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mblen","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mbrlen","GLIBC_2.0"},
 #endif
@@ -3574,6 +4729,9 @@ struct versym libc_so_6_1[] = {
 	{"mbrlen","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mbrlen","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"mbrlen","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3585,6 +4743,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mbrtowc","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mbrtowc","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mbsinit","GLIBC_2.0"},
 #endif
@@ -3592,6 +4753,9 @@ struct versym libc_so_6_1[] = {
 	{"mbsinit","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mbsinit","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"mbsinit","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3603,6 +4767,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mbsnrtowcs","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mbsnrtowcs","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mbsrtowcs","GLIBC_2.0"},
 #endif
@@ -3610,6 +4777,9 @@ struct versym libc_so_6_1[] = {
 	{"mbsrtowcs","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mbsrtowcs","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"mbsrtowcs","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3621,6 +4791,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mbstowcs","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mbstowcs","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mbtowc","GLIBC_2.0"},
 #endif
@@ -3628,6 +4801,9 @@ struct versym libc_so_6_1[] = {
 	{"mbtowc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mbtowc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"mbtowc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3639,6 +4815,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"memccpy","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"memccpy","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"memchr","GLIBC_2.0"},
 #endif
@@ -3646,6 +4825,9 @@ struct versym libc_so_6_1[] = {
 	{"memchr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"memchr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"memchr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3657,6 +4839,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"memcmp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"memcmp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"memcpy","GLIBC_2.0"},
 #endif
@@ -3664,6 +4849,9 @@ struct versym libc_so_6_1[] = {
 	{"memcpy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"memcpy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"memcpy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3675,6 +4863,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"memmem","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"memmem","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"memmove","GLIBC_2.0"},
 #endif
@@ -3684,6 +4875,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"memmove","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"memmove","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"memrchr","GLIBC_2.2"},
 #endif
@@ -3691,6 +4885,9 @@ struct versym libc_so_6_1[] = {
 	{"memrchr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"memrchr","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"memrchr","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -3702,6 +4899,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"memset","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"memset","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mkdir","GLIBC_2.0"},
 #endif
@@ -3709,6 +4909,9 @@ struct versym libc_so_6_1[] = {
 	{"mkdir","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mkdir","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"mkdir","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3720,6 +4923,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mkfifo","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mkfifo","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mkstemp","GLIBC_2.0"},
 #endif
@@ -3729,6 +4935,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mkstemp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mkstemp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mkstemp64","GLIBC_2.2"},
 #endif
@@ -3736,6 +4945,9 @@ struct versym libc_so_6_1[] = {
 	{"mkstemp64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mkstemp64","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"mkstemp64","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -3747,6 +4959,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mktemp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mktemp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mktime","GLIBC_2.0"},
 #endif
@@ -3754,6 +4969,9 @@ struct versym libc_so_6_1[] = {
 	{"mktime","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mktime","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"mktime","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3765,6 +4983,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mlock","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mlock","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mlockall","GLIBC_2.0"},
 #endif
@@ -3772,6 +4993,9 @@ struct versym libc_so_6_1[] = {
 	{"mlockall","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mlockall","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"mlockall","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3783,6 +5007,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mmap","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mmap","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mmap64","GLIBC_2.1"},
 #endif
@@ -3790,6 +5017,9 @@ struct versym libc_so_6_1[] = {
 	{"mmap64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mmap64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"mmap64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -3801,6 +5031,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"mprotect","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"mprotect","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"mrand48","GLIBC_2.0"},
 #endif
@@ -3808,6 +5041,9 @@ struct versym libc_so_6_1[] = {
 	{"mrand48","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"mrand48","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"mrand48","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3819,6 +5055,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"msgctl","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"msgctl","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"msgget","GLIBC_2.0"},
 #endif
@@ -3826,6 +5065,9 @@ struct versym libc_so_6_1[] = {
 	{"msgget","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"msgget","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"msgget","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3837,6 +5079,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"msgrcv","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"msgrcv","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"msgsnd","GLIBC_2.0"},
 #endif
@@ -3844,6 +5089,9 @@ struct versym libc_so_6_1[] = {
 	{"msgsnd","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"msgsnd","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"msgsnd","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3855,6 +5103,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"msync","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"msync","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"munlock","GLIBC_2.0"},
 #endif
@@ -3862,6 +5113,9 @@ struct versym libc_so_6_1[] = {
 	{"munlock","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"munlock","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"munlock","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3873,6 +5127,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"munlockall","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"munlockall","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"munmap","GLIBC_2.0"},
 #endif
@@ -3880,6 +5137,9 @@ struct versym libc_so_6_1[] = {
 	{"munmap","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"munmap","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"munmap","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3891,6 +5151,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"nanosleep","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"nanosleep","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"nftw","GLIBC_2.1"},
 #endif
@@ -3898,6 +5161,9 @@ struct versym libc_so_6_1[] = {
 	{"nftw","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"nftw","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"nftw","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -3909,6 +5175,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"nftw64","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"nftw64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"ngettext","GLIBC_2.2"},
 #endif
@@ -3916,6 +5185,9 @@ struct versym libc_so_6_1[] = {
 	{"ngettext","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ngettext","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"ngettext","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -3927,6 +5199,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"nice","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"nice","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"nl_langinfo","GLIBC_2.0"},
 #endif
@@ -3934,6 +5209,9 @@ struct versym libc_so_6_1[] = {
 	{"nl_langinfo","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"nl_langinfo","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"nl_langinfo","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3945,6 +5223,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"nrand48","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"nrand48","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ntohl","GLIBC_2.0"},
 #endif
@@ -3952,6 +5233,9 @@ struct versym libc_so_6_1[] = {
 	{"ntohl","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ntohl","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ntohl","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3963,6 +5247,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ntohs","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ntohs","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"obstack_free","GLIBC_2.0"},
 #endif
@@ -3970,6 +5257,9 @@ struct versym libc_so_6_1[] = {
 	{"obstack_free","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"obstack_free","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"obstack_free","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -3981,6 +5271,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"open","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"open","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"open64","GLIBC_2.1"},
 #endif
@@ -3988,6 +5281,9 @@ struct versym libc_so_6_1[] = {
 	{"open64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"open64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"open64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -3999,6 +5295,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"opendir","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"opendir","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"openlog","GLIBC_2.0"},
 #endif
@@ -4006,6 +5305,9 @@ struct versym libc_so_6_1[] = {
 	{"openlog","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"openlog","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"openlog","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4017,6 +5319,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"optarg","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"optarg","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"opterr","GLIBC_2.0"},
 #endif
@@ -4024,6 +5329,9 @@ struct versym libc_so_6_1[] = {
 	{"opterr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"opterr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"opterr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4035,6 +5343,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"optind","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"optind","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"optopt","GLIBC_2.0"},
 #endif
@@ -4042,6 +5353,9 @@ struct versym libc_so_6_1[] = {
 	{"optopt","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"optopt","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"optopt","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4053,6 +5367,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"pathconf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"pathconf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"pause","GLIBC_2.0"},
 #endif
@@ -4060,6 +5377,9 @@ struct versym libc_so_6_1[] = {
 	{"pause","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"pause","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"pause","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4071,6 +5391,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"pclose","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"pclose","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"perror","GLIBC_2.0"},
 #endif
@@ -4078,6 +5401,9 @@ struct versym libc_so_6_1[] = {
 	{"perror","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"perror","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"perror","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4089,6 +5415,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"pipe","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"pipe","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"poll","GLIBC_2.0"},
 #endif
@@ -4096,6 +5425,9 @@ struct versym libc_so_6_1[] = {
 	{"poll","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"poll","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"poll","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4107,6 +5439,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"popen","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"popen","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"posix_memalign","GLIBC_2.2"},
 #endif
@@ -4114,6 +5449,9 @@ struct versym libc_so_6_1[] = {
 	{"posix_memalign","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"posix_memalign","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"posix_memalign","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -4125,6 +5463,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"pread","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"pread","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"pread64","GLIBC_2.1"},
 #endif
@@ -4132,6 +5473,9 @@ struct versym libc_so_6_1[] = {
 	{"pread64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"pread64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"pread64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -4143,6 +5487,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"printf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"printf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"psignal","GLIBC_2.0"},
 #endif
@@ -4150,6 +5497,9 @@ struct versym libc_so_6_1[] = {
 	{"psignal","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"psignal","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"psignal","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4161,6 +5511,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ptsname","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"ptsname","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"putc","GLIBC_2.0"},
 #endif
@@ -4168,6 +5521,9 @@ struct versym libc_so_6_1[] = {
 	{"putc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"putc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"putc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4179,6 +5535,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"putc_unlocked","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"putc_unlocked","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"putchar","GLIBC_2.0"},
 #endif
@@ -4186,6 +5545,9 @@ struct versym libc_so_6_1[] = {
 	{"putchar","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"putchar","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"putchar","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4197,6 +5559,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"putchar_unlocked","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"putchar_unlocked","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"putenv","GLIBC_2.0"},
 #endif
@@ -4204,6 +5569,9 @@ struct versym libc_so_6_1[] = {
 	{"putenv","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"putenv","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"putenv","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4215,6 +5583,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"puts","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"puts","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"pututxline","GLIBC_2.1"},
 #endif
@@ -4222,6 +5593,9 @@ struct versym libc_so_6_1[] = {
 	{"pututxline","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"pututxline","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"pututxline","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -4233,6 +5607,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"putw","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"putw","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"putwc","GLIBC_2.2"},
 #endif
@@ -4242,6 +5619,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"putwc","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"putwc","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"putwchar","GLIBC_2.2"},
 #endif
@@ -4249,6 +5629,9 @@ struct versym libc_so_6_1[] = {
 	{"putwchar","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"putwchar","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"putwchar","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -4260,6 +5643,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"pwrite","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"pwrite","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"pwrite64","GLIBC_2.1"},
 #endif
@@ -4267,6 +5653,9 @@ struct versym libc_so_6_1[] = {
 	{"pwrite64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"pwrite64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"pwrite64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -4278,6 +5667,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"qsort","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"qsort","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"raise","GLIBC_2.0"},
 #endif
@@ -4285,6 +5677,9 @@ struct versym libc_so_6_1[] = {
 	{"raise","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"raise","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"raise","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4296,6 +5691,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"rand","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"rand","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"rand_r","GLIBC_2.0"},
 #endif
@@ -4303,6 +5701,9 @@ struct versym libc_so_6_1[] = {
 	{"rand_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"rand_r","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"rand_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4314,6 +5715,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"random","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"random","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"random_r","GLIBC_2.0"},
 #endif
@@ -4321,6 +5725,9 @@ struct versym libc_so_6_1[] = {
 	{"random_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"random_r","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"random_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4332,6 +5739,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"re_comp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"re_comp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"re_exec","GLIBC_2.0"},
 #endif
@@ -4339,6 +5749,9 @@ struct versym libc_so_6_1[] = {
 	{"re_exec","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"re_exec","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"re_exec","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4350,6 +5763,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"read","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"read","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"readdir","GLIBC_2.0"},
 #endif
@@ -4359,6 +5775,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"readdir","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"readdir","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"readdir64","GLIBC_2.2"},
 #endif
@@ -4366,6 +5785,9 @@ struct versym libc_so_6_1[] = {
 	{"readdir64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"readdir64","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"readdir64","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -4377,6 +5799,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"readdir_r","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"readdir_r","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"readlink","GLIBC_2.0"},
 #endif
@@ -4384,6 +5809,9 @@ struct versym libc_so_6_1[] = {
 	{"readlink","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"readlink","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"readlink","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4395,6 +5823,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"readv","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"readv","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"realloc","GLIBC_2.0"},
 #endif
@@ -4402,6 +5833,9 @@ struct versym libc_so_6_1[] = {
 	{"realloc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"realloc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"realloc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4413,6 +5847,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"realpath","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"realpath","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"recv","GLIBC_2.0"},
 #endif
@@ -4420,6 +5857,9 @@ struct versym libc_so_6_1[] = {
 	{"recv","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"recv","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"recv","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4431,6 +5871,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"recvfrom","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"recvfrom","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"recvmsg","GLIBC_2.0"},
 #endif
@@ -4438,6 +5881,9 @@ struct versym libc_so_6_1[] = {
 	{"recvmsg","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"recvmsg","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"recvmsg","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4449,6 +5895,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"regcomp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"regcomp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"regerror","GLIBC_2.0"},
 #endif
@@ -4456,6 +5905,9 @@ struct versym libc_so_6_1[] = {
 	{"regerror","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"regerror","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"regerror","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4467,6 +5919,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"regexec","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"regexec","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"regfree","GLIBC_2.0"},
 #endif
@@ -4474,6 +5929,9 @@ struct versym libc_so_6_1[] = {
 	{"regfree","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"regfree","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"regfree","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4485,6 +5943,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"remove","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"remove","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"remque","GLIBC_2.0"},
 #endif
@@ -4492,6 +5953,9 @@ struct versym libc_so_6_1[] = {
 	{"remque","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"remque","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"remque","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4503,6 +5967,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"rename","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"rename","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"rewind","GLIBC_2.0"},
 #endif
@@ -4510,6 +5977,9 @@ struct versym libc_so_6_1[] = {
 	{"rewind","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"rewind","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"rewind","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4521,6 +5991,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"rewinddir","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"rewinddir","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"rindex","GLIBC_2.0"},
 #endif
@@ -4528,6 +6001,9 @@ struct versym libc_so_6_1[] = {
 	{"rindex","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"rindex","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"rindex","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4539,6 +6015,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"rmdir","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"rmdir","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sbrk","GLIBC_2.0"},
 #endif
@@ -4546,6 +6025,9 @@ struct versym libc_so_6_1[] = {
 	{"sbrk","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sbrk","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sbrk","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4557,6 +6039,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"scanf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"scanf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sched_get_priority_max","GLIBC_2.0"},
 #endif
@@ -4564,6 +6049,9 @@ struct versym libc_so_6_1[] = {
 	{"sched_get_priority_max","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sched_get_priority_max","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sched_get_priority_max","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4575,6 +6063,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sched_get_priority_min","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sched_get_priority_min","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sched_getparam","GLIBC_2.0"},
 #endif
@@ -4582,6 +6073,9 @@ struct versym libc_so_6_1[] = {
 	{"sched_getparam","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sched_getparam","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sched_getparam","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4593,6 +6087,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sched_getscheduler","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sched_getscheduler","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sched_rr_get_interval","GLIBC_2.0"},
 #endif
@@ -4600,6 +6097,9 @@ struct versym libc_so_6_1[] = {
 	{"sched_rr_get_interval","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sched_rr_get_interval","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sched_rr_get_interval","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4611,6 +6111,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sched_setparam","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sched_setparam","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sched_setscheduler","GLIBC_2.0"},
 #endif
@@ -4618,6 +6121,9 @@ struct versym libc_so_6_1[] = {
 	{"sched_setscheduler","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sched_setscheduler","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sched_setscheduler","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4629,6 +6135,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sched_yield","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sched_yield","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"seed48","GLIBC_2.0"},
 #endif
@@ -4636,6 +6145,9 @@ struct versym libc_so_6_1[] = {
 	{"seed48","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"seed48","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"seed48","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4647,6 +6159,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"seekdir","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"seekdir","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"select","GLIBC_2.0"},
 #endif
@@ -4654,6 +6169,9 @@ struct versym libc_so_6_1[] = {
 	{"select","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"select","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"select","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4665,6 +6183,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"semctl","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"semctl","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"semget","GLIBC_2.0"},
 #endif
@@ -4672,6 +6193,9 @@ struct versym libc_so_6_1[] = {
 	{"semget","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"semget","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"semget","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4683,6 +6207,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"semop","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"semop","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"send","GLIBC_2.0"},
 #endif
@@ -4690,6 +6217,9 @@ struct versym libc_so_6_1[] = {
 	{"send","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"send","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"send","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4701,6 +6231,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sendmsg","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sendmsg","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sendto","GLIBC_2.0"},
 #endif
@@ -4708,6 +6241,9 @@ struct versym libc_so_6_1[] = {
 	{"sendto","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sendto","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sendto","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4719,6 +6255,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setbuf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setbuf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setbuffer","GLIBC_2.0"},
 #endif
@@ -4726,6 +6265,9 @@ struct versym libc_so_6_1[] = {
 	{"setbuffer","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setbuffer","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setbuffer","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4737,6 +6279,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setcontext","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setcontext","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setdomainname","GLIBC_2.0"},
 #endif
@@ -4744,6 +6289,9 @@ struct versym libc_so_6_1[] = {
 	{"setdomainname","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setdomainname","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setdomainname","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4755,6 +6303,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setegid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setegid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setenv","GLIBC_2.0"},
 #endif
@@ -4762,6 +6313,9 @@ struct versym libc_so_6_1[] = {
 	{"setenv","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setenv","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setenv","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4773,6 +6327,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"seteuid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"seteuid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setgid","GLIBC_2.0"},
 #endif
@@ -4780,6 +6337,9 @@ struct versym libc_so_6_1[] = {
 	{"setgid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setgid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setgid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4791,6 +6351,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setgrent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setgrent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setgroups","GLIBC_2.0"},
 #endif
@@ -4798,6 +6361,9 @@ struct versym libc_so_6_1[] = {
 	{"setgroups","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setgroups","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setgroups","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4818,6 +6384,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sethostid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sethostid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sethostname","GLIBC_2.0"},
 #endif
@@ -4825,6 +6394,9 @@ struct versym libc_so_6_1[] = {
 	{"sethostname","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sethostname","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sethostname","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4836,6 +6408,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setitimer","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setitimer","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setlocale","GLIBC_2.0"},
 #endif
@@ -4843,6 +6418,9 @@ struct versym libc_so_6_1[] = {
 	{"setlocale","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setlocale","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setlocale","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4854,6 +6432,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setlogmask","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setlogmask","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setmntent","GLIBC_2.0"},
 #endif
@@ -4861,6 +6442,9 @@ struct versym libc_so_6_1[] = {
 	{"setmntent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setmntent","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setmntent","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4872,6 +6456,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setnetent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setnetent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setpgid","GLIBC_2.0"},
 #endif
@@ -4879,6 +6466,9 @@ struct versym libc_so_6_1[] = {
 	{"setpgid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setpgid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setpgid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4890,6 +6480,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setpgrp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setpgrp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setpriority","GLIBC_2.0"},
 #endif
@@ -4897,6 +6490,9 @@ struct versym libc_so_6_1[] = {
 	{"setpriority","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setpriority","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setpriority","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4908,6 +6504,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setprotoent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setprotoent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setpwent","GLIBC_2.0"},
 #endif
@@ -4915,6 +6514,9 @@ struct versym libc_so_6_1[] = {
 	{"setpwent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setpwent","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setpwent","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4926,6 +6528,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setregid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setregid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setreuid","GLIBC_2.0"},
 #endif
@@ -4935,6 +6540,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setreuid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setreuid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setrlimit","GLIBC_2.2"},
 #endif
@@ -4942,6 +6550,9 @@ struct versym libc_so_6_1[] = {
 	{"setrlimit","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setrlimit","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"setrlimit","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -4953,6 +6564,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setrlimit64","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"setrlimit64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"setservent","GLIBC_2.0"},
 #endif
@@ -4960,6 +6574,9 @@ struct versym libc_so_6_1[] = {
 	{"setservent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setservent","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setservent","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4971,6 +6588,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setsid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setsid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setsockopt","GLIBC_2.0"},
 #endif
@@ -4978,6 +6598,9 @@ struct versym libc_so_6_1[] = {
 	{"setsockopt","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setsockopt","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setsockopt","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -4989,6 +6612,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setstate","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setstate","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setuid","GLIBC_2.0"},
 #endif
@@ -4996,6 +6622,9 @@ struct versym libc_so_6_1[] = {
 	{"setuid","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setuid","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"setuid","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5007,6 +6636,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setutent","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setutent","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"setutxent","GLIBC_2.1"},
 #endif
@@ -5014,6 +6646,9 @@ struct versym libc_so_6_1[] = {
 	{"setutxent","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"setutxent","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"setutxent","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -5025,6 +6660,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setvbuf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"setvbuf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"shmat","GLIBC_2.0"},
 #endif
@@ -5034,6 +6672,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"shmat","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"shmat","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"shmctl","GLIBC_2.2"},
 #endif
@@ -5041,6 +6682,9 @@ struct versym libc_so_6_1[] = {
 	{"shmctl","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"shmctl","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"shmctl","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -5052,6 +6696,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"shmdt","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"shmdt","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"shmget","GLIBC_2.0"},
 #endif
@@ -5059,6 +6706,9 @@ struct versym libc_so_6_1[] = {
 	{"shmget","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"shmget","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"shmget","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5070,6 +6720,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"shutdown","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"shutdown","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigaction","GLIBC_2.0"},
 #endif
@@ -5077,6 +6730,9 @@ struct versym libc_so_6_1[] = {
 	{"sigaction","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigaction","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigaction","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5088,6 +6744,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigaddset","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigaddset","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigaltstack","GLIBC_2.0"},
 #endif
@@ -5095,6 +6754,9 @@ struct versym libc_so_6_1[] = {
 	{"sigaltstack","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigaltstack","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigaltstack","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5106,6 +6768,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigandset","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigandset","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigblock","GLIBC_2.0"},
 #endif
@@ -5113,6 +6778,9 @@ struct versym libc_so_6_1[] = {
 	{"sigblock","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigblock","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigblock","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5124,6 +6792,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigdelset","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigdelset","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigemptyset","GLIBC_2.0"},
 #endif
@@ -5131,6 +6802,9 @@ struct versym libc_so_6_1[] = {
 	{"sigemptyset","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigemptyset","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigemptyset","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5142,6 +6816,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigfillset","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigfillset","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"siggetmask","GLIBC_2.0"},
 #endif
@@ -5149,6 +6826,9 @@ struct versym libc_so_6_1[] = {
 	{"siggetmask","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"siggetmask","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"siggetmask","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5160,6 +6840,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sighold","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"sighold","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"sigignore","GLIBC_2.1"},
 #endif
@@ -5167,6 +6850,9 @@ struct versym libc_so_6_1[] = {
 	{"sigignore","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigignore","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"sigignore","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -5178,6 +6864,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"siginterrupt","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"siginterrupt","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigisemptyset","GLIBC_2.0"},
 #endif
@@ -5185,6 +6874,9 @@ struct versym libc_so_6_1[] = {
 	{"sigisemptyset","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigisemptyset","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigisemptyset","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5196,6 +6888,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigismember","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigismember","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"siglongjmp","GLIBC_2.0"},
 #endif
@@ -5203,6 +6898,9 @@ struct versym libc_so_6_1[] = {
 	{"siglongjmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"siglongjmp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"siglongjmp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5214,6 +6912,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"signal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"signal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigorset","GLIBC_2.0"},
 #endif
@@ -5221,6 +6922,9 @@ struct versym libc_so_6_1[] = {
 	{"sigorset","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigorset","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigorset","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5232,6 +6936,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigpause","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigpause","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigpending","GLIBC_2.0"},
 #endif
@@ -5239,6 +6946,9 @@ struct versym libc_so_6_1[] = {
 	{"sigpending","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigpending","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigpending","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5250,6 +6960,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigprocmask","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigprocmask","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigqueue","GLIBC_2.1"},
 #endif
@@ -5257,6 +6970,9 @@ struct versym libc_so_6_1[] = {
 	{"sigqueue","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigqueue","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"sigqueue","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -5268,6 +6984,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigrelse","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"sigrelse","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"sigreturn","GLIBC_2.0"},
 #endif
@@ -5275,6 +6994,9 @@ struct versym libc_so_6_1[] = {
 	{"sigreturn","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigreturn","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigreturn","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5286,6 +7008,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigset","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"sigset","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"sigstack","GLIBC_2.0"},
 #endif
@@ -5293,6 +7018,9 @@ struct versym libc_so_6_1[] = {
 	{"sigstack","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigstack","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sigstack","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5304,6 +7032,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigsuspend","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigsuspend","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigtimedwait","GLIBC_2.1"},
 #endif
@@ -5311,6 +7042,9 @@ struct versym libc_so_6_1[] = {
 	{"sigtimedwait","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigtimedwait","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"sigtimedwait","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -5322,6 +7056,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sigwait","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sigwait","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sigwaitinfo","GLIBC_2.1"},
 #endif
@@ -5329,6 +7066,9 @@ struct versym libc_so_6_1[] = {
 	{"sigwaitinfo","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sigwaitinfo","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"sigwaitinfo","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -5340,6 +7080,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sleep","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sleep","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"snprintf","GLIBC_2.0"},
 #endif
@@ -5347,6 +7090,9 @@ struct versym libc_so_6_1[] = {
 	{"snprintf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"snprintf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"snprintf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5358,6 +7104,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"socket","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"socket","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"socketpair","GLIBC_2.0"},
 #endif
@@ -5365,6 +7114,9 @@ struct versym libc_so_6_1[] = {
 	{"socketpair","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"socketpair","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"socketpair","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5376,6 +7128,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sprintf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sprintf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"srand","GLIBC_2.0"},
 #endif
@@ -5383,6 +7138,9 @@ struct versym libc_so_6_1[] = {
 	{"srand","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"srand","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"srand","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5394,6 +7152,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"srand48","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"srand48","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"srandom","GLIBC_2.0"},
 #endif
@@ -5403,6 +7164,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"srandom","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"srandom","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sscanf","GLIBC_2.0"},
 #endif
@@ -5410,6 +7174,9 @@ struct versym libc_so_6_1[] = {
 	{"sscanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sscanf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sscanf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5433,6 +7200,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"statvfs","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"statvfs","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"statvfs64","GLIBC_2.1"},
 #endif
@@ -5440,6 +7210,9 @@ struct versym libc_so_6_1[] = {
 	{"statvfs64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"statvfs64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"statvfs64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -5451,6 +7224,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"stderr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"stderr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"stdin","GLIBC_2.0"},
 #endif
@@ -5458,6 +7234,9 @@ struct versym libc_so_6_1[] = {
 	{"stdin","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"stdin","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"stdin","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5469,6 +7248,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"stdout","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"stdout","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"step","GLIBC_2.0"},
 #endif
@@ -5476,6 +7258,9 @@ struct versym libc_so_6_1[] = {
 	{"step","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"step","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"step","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5487,6 +7272,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"stime","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"stime","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"stpcpy","GLIBC_2.0"},
 #endif
@@ -5494,6 +7282,9 @@ struct versym libc_so_6_1[] = {
 	{"stpcpy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"stpcpy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"stpcpy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5505,6 +7296,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"stpncpy","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"stpncpy","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strcasecmp","GLIBC_2.0"},
 #endif
@@ -5512,6 +7306,9 @@ struct versym libc_so_6_1[] = {
 	{"strcasecmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strcasecmp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strcasecmp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5523,6 +7320,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strcasestr","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"strcasestr","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"strcat","GLIBC_2.0"},
 #endif
@@ -5530,6 +7330,9 @@ struct versym libc_so_6_1[] = {
 	{"strcat","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strcat","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strcat","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5541,6 +7344,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strchr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strchr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strcmp","GLIBC_2.0"},
 #endif
@@ -5548,6 +7354,9 @@ struct versym libc_so_6_1[] = {
 	{"strcmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strcmp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strcmp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5559,6 +7368,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strcoll","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strcoll","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strcpy","GLIBC_2.0"},
 #endif
@@ -5566,6 +7378,9 @@ struct versym libc_so_6_1[] = {
 	{"strcpy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strcpy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strcpy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5577,6 +7392,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strcspn","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strcspn","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strdup","GLIBC_2.0"},
 #endif
@@ -5584,6 +7402,9 @@ struct versym libc_so_6_1[] = {
 	{"strdup","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strdup","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strdup","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5595,6 +7416,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strerror","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strerror","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strerror_r","GLIBC_2.0"},
 #endif
@@ -5602,6 +7426,9 @@ struct versym libc_so_6_1[] = {
 	{"strerror_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strerror_r","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strerror_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5613,6 +7440,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strfmon","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strfmon","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strfry","GLIBC_2.0"},
 #endif
@@ -5620,6 +7450,9 @@ struct versym libc_so_6_1[] = {
 	{"strfry","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strfry","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strfry","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5631,6 +7464,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strftime","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strftime","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strlen","GLIBC_2.0"},
 #endif
@@ -5638,6 +7474,9 @@ struct versym libc_so_6_1[] = {
 	{"strlen","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strlen","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strlen","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5649,6 +7488,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strncasecmp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strncasecmp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strncat","GLIBC_2.0"},
 #endif
@@ -5656,6 +7498,9 @@ struct versym libc_so_6_1[] = {
 	{"strncat","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strncat","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strncat","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5667,6 +7512,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strncmp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strncmp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strncpy","GLIBC_2.0"},
 #endif
@@ -5674,6 +7522,9 @@ struct versym libc_so_6_1[] = {
 	{"strncpy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strncpy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strncpy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5685,6 +7536,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strndup","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strndup","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strnlen","GLIBC_2.0"},
 #endif
@@ -5692,6 +7546,9 @@ struct versym libc_so_6_1[] = {
 	{"strnlen","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strnlen","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strnlen","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5703,6 +7560,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strpbrk","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strpbrk","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strptime","GLIBC_2.0"},
 #endif
@@ -5710,6 +7570,9 @@ struct versym libc_so_6_1[] = {
 	{"strptime","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strptime","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strptime","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5721,6 +7584,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strrchr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strrchr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strsep","GLIBC_2.0"},
 #endif
@@ -5728,6 +7594,9 @@ struct versym libc_so_6_1[] = {
 	{"strsep","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strsep","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strsep","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5739,6 +7608,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strsignal","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strsignal","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strspn","GLIBC_2.0"},
 #endif
@@ -5746,6 +7618,9 @@ struct versym libc_so_6_1[] = {
 	{"strspn","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strspn","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strspn","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5757,6 +7632,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strstr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strstr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strtod","GLIBC_2.0"},
 #endif
@@ -5764,6 +7642,9 @@ struct versym libc_so_6_1[] = {
 	{"strtod","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strtod","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strtod","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5775,6 +7656,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strtof","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strtof","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strtoimax","GLIBC_2.1"},
 #endif
@@ -5782,6 +7666,9 @@ struct versym libc_so_6_1[] = {
 	{"strtoimax","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strtoimax","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"strtoimax","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -5793,6 +7680,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strtok","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strtok","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strtok_r","GLIBC_2.0"},
 #endif
@@ -5800,6 +7690,9 @@ struct versym libc_so_6_1[] = {
 	{"strtok_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strtok_r","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strtok_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5811,6 +7704,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strtol","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strtol","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strtold","GLIBC_2.0"},
 #endif
@@ -5818,6 +7714,9 @@ struct versym libc_so_6_1[] = {
 	{"strtold","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strtold","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strtold","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5829,6 +7728,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strtoll","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strtoll","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strtoq","GLIBC_2.0"},
 #endif
@@ -5836,6 +7738,9 @@ struct versym libc_so_6_1[] = {
 	{"strtoq","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strtoq","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strtoq","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5847,6 +7752,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strtoul","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"strtoul","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"strtoull","GLIBC_2.0"},
 #endif
@@ -5854,6 +7762,9 @@ struct versym libc_so_6_1[] = {
 	{"strtoull","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strtoull","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strtoull","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5865,6 +7776,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strtoumax","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"strtoumax","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"strtouq","GLIBC_2.0"},
 #endif
@@ -5872,6 +7786,9 @@ struct versym libc_so_6_1[] = {
 	{"strtouq","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strtouq","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strtouq","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5883,6 +7800,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"strverscmp","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"strverscmp","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"strxfrm","GLIBC_2.0"},
 #endif
@@ -5890,6 +7810,9 @@ struct versym libc_so_6_1[] = {
 	{"strxfrm","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"strxfrm","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"strxfrm","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5901,6 +7824,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"svc_getreqset","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"svc_getreqset","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"svcerr_auth","GLIBC_2.0"},
 #endif
@@ -5908,6 +7834,9 @@ struct versym libc_so_6_1[] = {
 	{"svcerr_auth","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"svcerr_auth","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"svcerr_auth","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5919,6 +7848,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"svcerr_decode","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"svcerr_decode","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"svcerr_noproc","GLIBC_2.0"},
 #endif
@@ -5926,6 +7858,9 @@ struct versym libc_so_6_1[] = {
 	{"svcerr_noproc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"svcerr_noproc","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"svcerr_noproc","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5937,6 +7872,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"svcerr_noprog","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"svcerr_noprog","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"svcerr_progvers","GLIBC_2.0"},
 #endif
@@ -5944,6 +7882,9 @@ struct versym libc_so_6_1[] = {
 	{"svcerr_progvers","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"svcerr_progvers","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"svcerr_progvers","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5955,6 +7896,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"svcerr_systemerr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"svcerr_systemerr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"svcerr_weakauth","GLIBC_2.0"},
 #endif
@@ -5962,6 +7906,9 @@ struct versym libc_so_6_1[] = {
 	{"svcerr_weakauth","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"svcerr_weakauth","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"svcerr_weakauth","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -5973,6 +7920,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"swab","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"swab","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"swapcontext","GLIBC_2.1"},
 #endif
@@ -5982,6 +7932,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"swapcontext","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"swapcontext","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"swprintf","GLIBC_2.2"},
 #endif
@@ -5991,6 +7944,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"swprintf","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"swprintf","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"swscanf","GLIBC_2.2"},
 #endif
@@ -5998,6 +7954,9 @@ struct versym libc_so_6_1[] = {
 	{"swscanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"swscanf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"swscanf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -6009,6 +7968,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"symlink","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"symlink","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"sync","GLIBC_2.0"},
 #endif
@@ -6016,6 +7978,9 @@ struct versym libc_so_6_1[] = {
 	{"sync","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"sync","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"sync","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6027,6 +7992,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"sysconf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"sysconf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"syslog","GLIBC_2.0"},
 #endif
@@ -6034,6 +8002,9 @@ struct versym libc_so_6_1[] = {
 	{"syslog","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"syslog","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"syslog","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6045,6 +8016,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"system","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"system","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"tcdrain","GLIBC_2.0"},
 #endif
@@ -6052,6 +8026,9 @@ struct versym libc_so_6_1[] = {
 	{"tcdrain","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"tcdrain","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"tcdrain","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6063,6 +8040,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tcflow","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tcflow","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"tcflush","GLIBC_2.0"},
 #endif
@@ -6070,6 +8050,9 @@ struct versym libc_so_6_1[] = {
 	{"tcflush","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"tcflush","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"tcflush","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6081,6 +8064,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tcgetattr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tcgetattr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"tcgetpgrp","GLIBC_2.0"},
 #endif
@@ -6088,6 +8074,9 @@ struct versym libc_so_6_1[] = {
 	{"tcgetpgrp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"tcgetpgrp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"tcgetpgrp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6099,6 +8088,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tcgetsid","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"tcgetsid","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"tcsendbreak","GLIBC_2.0"},
 #endif
@@ -6106,6 +8098,9 @@ struct versym libc_so_6_1[] = {
 	{"tcsendbreak","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"tcsendbreak","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"tcsendbreak","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6117,6 +8112,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tcsetattr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tcsetattr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"tcsetpgrp","GLIBC_2.0"},
 #endif
@@ -6126,6 +8124,10 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tcsetpgrp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tcsetpgrp","GLIBC_2.0"},
+#endif
+	{"tdelete",""},
 #if defined(__i386__)
 	{"telldir","GLIBC_2.0"},
 #endif
@@ -6133,6 +8135,9 @@ struct versym libc_so_6_1[] = {
 	{"telldir","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"telldir","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"telldir","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6144,6 +8149,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tempnam","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tempnam","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"textdomain","GLIBC_2.0"},
 #endif
@@ -6151,6 +8159,9 @@ struct versym libc_so_6_1[] = {
 	{"textdomain","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"textdomain","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"textdomain","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6162,6 +8173,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tfind","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tfind","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"time","GLIBC_2.0"},
 #endif
@@ -6169,6 +8183,9 @@ struct versym libc_so_6_1[] = {
 	{"time","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"time","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"time","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6180,6 +8197,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"times","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"times","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"timezone","GLIBC_2.0"},
 #endif
@@ -6187,6 +8207,9 @@ struct versym libc_so_6_1[] = {
 	{"timezone","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"timezone","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"timezone","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6198,6 +8221,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tmpfile","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"tmpfile","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"tmpfile64","GLIBC_2.1"},
 #endif
@@ -6205,6 +8231,9 @@ struct versym libc_so_6_1[] = {
 	{"tmpfile64","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"tmpfile64","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"tmpfile64","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -6216,6 +8245,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tmpnam","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tmpnam","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"toascii","GLIBC_2.0"},
 #endif
@@ -6223,6 +8255,9 @@ struct versym libc_so_6_1[] = {
 	{"toascii","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"toascii","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"toascii","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6234,6 +8269,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tolower","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tolower","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"toupper","GLIBC_2.0"},
 #endif
@@ -6241,6 +8279,9 @@ struct versym libc_so_6_1[] = {
 	{"toupper","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"toupper","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"toupper","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6252,6 +8293,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"towctrans","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"towctrans","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"towlower","GLIBC_2.0"},
 #endif
@@ -6259,6 +8303,9 @@ struct versym libc_so_6_1[] = {
 	{"towlower","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"towlower","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"towlower","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6270,6 +8317,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"towupper","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"towupper","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"truncate","GLIBC_2.0"},
 #endif
@@ -6277,6 +8327,9 @@ struct versym libc_so_6_1[] = {
 	{"truncate","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"truncate","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"truncate","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6288,6 +8341,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"truncate64","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"truncate64","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"tsearch","GLIBC_2.0"},
 #endif
@@ -6295,6 +8351,9 @@ struct versym libc_so_6_1[] = {
 	{"tsearch","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"tsearch","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"tsearch","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6306,6 +8365,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ttyname","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ttyname","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ttyname_r","GLIBC_2.0"},
 #endif
@@ -6313,6 +8375,9 @@ struct versym libc_so_6_1[] = {
 	{"ttyname_r","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ttyname_r","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ttyname_r","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6324,6 +8389,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"twalk","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"twalk","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"tzname","GLIBC_2.0"},
 #endif
@@ -6331,6 +8399,9 @@ struct versym libc_so_6_1[] = {
 	{"tzname","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"tzname","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"tzname","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6342,6 +8413,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"tzset","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"tzset","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ualarm","GLIBC_2.0"},
 #endif
@@ -6349,6 +8423,9 @@ struct versym libc_so_6_1[] = {
 	{"ualarm","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ualarm","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"ualarm","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6360,6 +8437,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ulimit","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ulimit","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"umask","GLIBC_2.0"},
 #endif
@@ -6367,6 +8447,9 @@ struct versym libc_so_6_1[] = {
 	{"umask","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"umask","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"umask","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6378,6 +8461,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"uname","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"uname","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ungetc","GLIBC_2.0"},
 #endif
@@ -6387,6 +8473,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"ungetc","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"ungetc","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"ungetwc","GLIBC_2.2"},
 #endif
@@ -6394,6 +8483,9 @@ struct versym libc_so_6_1[] = {
 	{"ungetwc","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"ungetwc","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"ungetwc","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -6405,6 +8497,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"unlink","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"unlink","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"unlockpt","GLIBC_2.1"},
 #endif
@@ -6412,6 +8507,9 @@ struct versym libc_so_6_1[] = {
 	{"unlockpt","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"unlockpt","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"unlockpt","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -6423,6 +8521,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"unsetenv","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"unsetenv","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"usleep","GLIBC_2.0"},
 #endif
@@ -6430,6 +8531,9 @@ struct versym libc_so_6_1[] = {
 	{"usleep","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"usleep","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"usleep","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6441,6 +8545,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"utime","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"utime","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"utimes","GLIBC_2.0"},
 #endif
@@ -6448,6 +8555,9 @@ struct versym libc_so_6_1[] = {
 	{"utimes","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"utimes","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"utimes","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6459,6 +8569,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"vasprintf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"vasprintf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"vdprintf","GLIBC_2.0"},
 #endif
@@ -6466,6 +8579,9 @@ struct versym libc_so_6_1[] = {
 	{"vdprintf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"vdprintf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"vdprintf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6477,6 +8593,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"verrx","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"verrx","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"vfork","GLIBC_2.0"},
 #endif
@@ -6484,6 +8603,9 @@ struct versym libc_so_6_1[] = {
 	{"vfork","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"vfork","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"vfork","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6495,6 +8617,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"vfprintf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"vfprintf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"vfwprintf","GLIBC_2.2"},
 #endif
@@ -6504,6 +8629,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"vfwprintf","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"vfwprintf","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"vfwscanf","GLIBC_2.2"},
 #endif
@@ -6511,6 +8639,9 @@ struct versym libc_so_6_1[] = {
 	{"vfwscanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"vfwscanf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"vfwscanf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -6522,6 +8653,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"vprintf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"vprintf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"vsnprintf","GLIBC_2.0"},
 #endif
@@ -6529,6 +8663,9 @@ struct versym libc_so_6_1[] = {
 	{"vsnprintf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"vsnprintf","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"vsnprintf","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6540,6 +8677,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"vsprintf","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"vsprintf","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"vswprintf","GLIBC_2.2"},
 #endif
@@ -6549,6 +8689,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"vswprintf","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"vswprintf","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"vswscanf","GLIBC_2.2"},
 #endif
@@ -6556,6 +8699,9 @@ struct versym libc_so_6_1[] = {
 	{"vswscanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"vswscanf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"vswscanf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -6567,6 +8713,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"vsyslog","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"vsyslog","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"vwprintf","GLIBC_2.2"},
 #endif
@@ -6576,6 +8725,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"vwprintf","GLIBC_2.2"},
 #endif
+#if defined(__s390__)
+	{"vwprintf","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"vwscanf","GLIBC_2.2"},
 #endif
@@ -6583,6 +8735,9 @@ struct versym libc_so_6_1[] = {
 	{"vwscanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"vwscanf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"vwscanf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -6594,6 +8749,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wait","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wait","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wait3","GLIBC_2.0"},
 #endif
@@ -6603,6 +8761,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wait3","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wait3","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wait4","GLIBC_2.0"},
 #endif
@@ -6610,6 +8771,9 @@ struct versym libc_so_6_1[] = {
 	{"wait4","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wait4","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wait4","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6630,6 +8794,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"waitpid","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"waitpid","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"warn","GLIBC_2.0"},
 #endif
@@ -6637,6 +8804,9 @@ struct versym libc_so_6_1[] = {
 	{"warn","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"warn","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"warn","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6648,6 +8818,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"warnx","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"warnx","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcpcpy","GLIBC_2.0"},
 #endif
@@ -6655,6 +8828,9 @@ struct versym libc_so_6_1[] = {
 	{"wcpcpy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcpcpy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcpcpy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6666,6 +8842,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcpncpy","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcpncpy","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcrtomb","GLIBC_2.0"},
 #endif
@@ -6673,6 +8852,9 @@ struct versym libc_so_6_1[] = {
 	{"wcrtomb","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcrtomb","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcrtomb","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6684,6 +8866,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcscasecmp","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"wcscasecmp","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"wcscat","GLIBC_2.0"},
 #endif
@@ -6691,6 +8876,9 @@ struct versym libc_so_6_1[] = {
 	{"wcscat","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcscat","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcscat","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6702,6 +8890,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcschr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcschr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcscmp","GLIBC_2.0"},
 #endif
@@ -6709,6 +8900,9 @@ struct versym libc_so_6_1[] = {
 	{"wcscmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcscmp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcscmp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6720,6 +8914,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcscoll","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcscoll","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcscpy","GLIBC_2.0"},
 #endif
@@ -6727,6 +8924,9 @@ struct versym libc_so_6_1[] = {
 	{"wcscpy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcscpy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcscpy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6738,6 +8938,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcscspn","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcscspn","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcsdup","GLIBC_2.0"},
 #endif
@@ -6747,6 +8950,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcsdup","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcsdup","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcsftime","GLIBC_2.2"},
 #endif
@@ -6754,6 +8960,9 @@ struct versym libc_so_6_1[] = {
 	{"wcsftime","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcsftime","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"wcsftime","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -6765,6 +8974,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcslen","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcslen","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcsncasecmp","GLIBC_2.1"},
 #endif
@@ -6772,6 +8984,9 @@ struct versym libc_so_6_1[] = {
 	{"wcsncasecmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcsncasecmp","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"wcsncasecmp","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -6783,6 +8998,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcsncat","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcsncat","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcsncmp","GLIBC_2.0"},
 #endif
@@ -6790,6 +9008,9 @@ struct versym libc_so_6_1[] = {
 	{"wcsncmp","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcsncmp","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcsncmp","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6801,6 +9022,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcsncpy","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcsncpy","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcsnlen","GLIBC_2.1"},
 #endif
@@ -6808,6 +9032,9 @@ struct versym libc_so_6_1[] = {
 	{"wcsnlen","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcsnlen","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"wcsnlen","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -6819,6 +9046,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcsnrtombs","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcsnrtombs","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcspbrk","GLIBC_2.0"},
 #endif
@@ -6826,6 +9056,9 @@ struct versym libc_so_6_1[] = {
 	{"wcspbrk","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcspbrk","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcspbrk","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6837,6 +9070,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcsrchr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcsrchr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcsrtombs","GLIBC_2.0"},
 #endif
@@ -6844,6 +9080,9 @@ struct versym libc_so_6_1[] = {
 	{"wcsrtombs","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcsrtombs","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcsrtombs","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6855,6 +9094,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcsspn","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcsspn","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcsstr","GLIBC_2.0"},
 #endif
@@ -6862,6 +9104,9 @@ struct versym libc_so_6_1[] = {
 	{"wcsstr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcsstr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcsstr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6873,6 +9118,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcstod","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcstod","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcstof","GLIBC_2.0"},
 #endif
@@ -6880,6 +9128,9 @@ struct versym libc_so_6_1[] = {
 	{"wcstof","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcstof","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcstof","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6891,6 +9142,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcstoimax","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"wcstoimax","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"wcstok","GLIBC_2.0"},
 #endif
@@ -6898,6 +9152,9 @@ struct versym libc_so_6_1[] = {
 	{"wcstok","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcstok","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcstok","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6909,6 +9166,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcstol","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcstol","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcstold","GLIBC_2.0"},
 #endif
@@ -6916,6 +9176,9 @@ struct versym libc_so_6_1[] = {
 	{"wcstold","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcstold","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcstold","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6927,6 +9190,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcstoll","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"wcstoll","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"wcstombs","GLIBC_2.0"},
 #endif
@@ -6934,6 +9200,9 @@ struct versym libc_so_6_1[] = {
 	{"wcstombs","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcstombs","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcstombs","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6945,6 +9214,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcstoq","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcstoq","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcstoul","GLIBC_2.0"},
 #endif
@@ -6952,6 +9224,9 @@ struct versym libc_so_6_1[] = {
 	{"wcstoul","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcstoul","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcstoul","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -6963,6 +9238,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcstoull","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"wcstoull","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"wcstoumax","GLIBC_2.1"},
 #endif
@@ -6970,6 +9248,9 @@ struct versym libc_so_6_1[] = {
 	{"wcstoumax","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcstoumax","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"wcstoumax","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -6981,6 +9262,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcstouq","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcstouq","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcswcs","GLIBC_2.1"},
 #endif
@@ -6988,6 +9272,9 @@ struct versym libc_so_6_1[] = {
 	{"wcswcs","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcswcs","GLIBC_2.1"},
+#endif
+#if defined(__s390__)
 	{"wcswcs","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
@@ -6999,6 +9286,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcswidth","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcswidth","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wcsxfrm","GLIBC_2.0"},
 #endif
@@ -7006,6 +9296,9 @@ struct versym libc_so_6_1[] = {
 	{"wcsxfrm","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wcsxfrm","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wcsxfrm","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7017,6 +9310,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wctob","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wctob","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wctomb","GLIBC_2.0"},
 #endif
@@ -7024,6 +9320,9 @@ struct versym libc_so_6_1[] = {
 	{"wctomb","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wctomb","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wctomb","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7035,6 +9334,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wctrans","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wctrans","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wctype","GLIBC_2.0"},
 #endif
@@ -7042,6 +9344,9 @@ struct versym libc_so_6_1[] = {
 	{"wctype","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wctype","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wctype","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7053,6 +9358,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wcwidth","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wcwidth","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wmemchr","GLIBC_2.0"},
 #endif
@@ -7060,6 +9368,9 @@ struct versym libc_so_6_1[] = {
 	{"wmemchr","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wmemchr","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wmemchr","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7071,6 +9382,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wmemcmp","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wmemcmp","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wmemcpy","GLIBC_2.0"},
 #endif
@@ -7078,6 +9392,9 @@ struct versym libc_so_6_1[] = {
 	{"wmemcpy","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wmemcpy","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wmemcpy","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7089,6 +9406,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wmemmove","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"wmemmove","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wmemset","GLIBC_2.0"},
 #endif
@@ -7096,6 +9416,9 @@ struct versym libc_so_6_1[] = {
 	{"wmemset","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wmemset","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"wmemset","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7107,6 +9430,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wordexp","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"wordexp","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"wordfree","GLIBC_2.1"},
 #endif
@@ -7116,6 +9442,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"wordfree","GLIBC_2.1"},
 #endif
+#if defined(__s390__)
+	{"wordfree","GLIBC_2.1"},
+#endif
 #if defined(__i386__)
 	{"wprintf","GLIBC_2.2"},
 #endif
@@ -7123,6 +9452,9 @@ struct versym libc_so_6_1[] = {
 	{"wprintf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wprintf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"wprintf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -7134,6 +9466,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"write","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"write","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"writev","GLIBC_2.0"},
 #endif
@@ -7143,6 +9478,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"writev","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"writev","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"wscanf","GLIBC_2.2"},
 #endif
@@ -7150,6 +9488,9 @@ struct versym libc_so_6_1[] = {
 	{"wscanf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"wscanf","GLIBC_2.2"},
+#endif
+#if defined(__s390__)
 	{"wscanf","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
@@ -7161,6 +9502,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_accepted_reply","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_accepted_reply","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_array","GLIBC_2.0"},
 #endif
@@ -7168,6 +9512,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_array","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_array","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_array","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7179,6 +9526,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_bool","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_bool","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_bytes","GLIBC_2.0"},
 #endif
@@ -7186,6 +9536,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_bytes","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_bytes","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_bytes","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7197,6 +9550,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_callhdr","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_callhdr","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_callmsg","GLIBC_2.0"},
 #endif
@@ -7204,6 +9560,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_callmsg","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_callmsg","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_callmsg","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7215,6 +9574,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_char","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_char","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_double","GLIBC_2.0"},
 #endif
@@ -7222,6 +9584,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_double","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_double","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_double","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7233,6 +9598,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_enum","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_enum","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_float","GLIBC_2.0"},
 #endif
@@ -7240,6 +9608,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_float","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_float","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_float","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7251,6 +9622,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_free","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_free","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_int","GLIBC_2.0"},
 #endif
@@ -7258,6 +9632,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_int","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_int","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_int","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7269,6 +9646,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_long","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_long","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_opaque","GLIBC_2.0"},
 #endif
@@ -7276,6 +9656,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_opaque","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_opaque","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_opaque","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7287,6 +9670,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_opaque_auth","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_opaque_auth","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_pointer","GLIBC_2.0"},
 #endif
@@ -7294,6 +9680,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_pointer","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_pointer","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_pointer","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7305,6 +9694,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_reference","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_reference","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_rejected_reply","GLIBC_2.0"},
 #endif
@@ -7312,6 +9704,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_rejected_reply","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_rejected_reply","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_rejected_reply","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7323,6 +9718,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_replymsg","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_replymsg","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_short","GLIBC_2.0"},
 #endif
@@ -7330,6 +9728,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_short","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_short","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_short","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7341,6 +9742,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_string","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_string","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_u_char","GLIBC_2.0"},
 #endif
@@ -7348,6 +9752,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_u_char","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_u_char","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_u_char","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7359,6 +9766,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_u_long","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_u_long","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_u_short","GLIBC_2.0"},
 #endif
@@ -7366,6 +9776,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_u_short","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_u_short","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_u_short","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7377,6 +9790,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_union","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_union","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_vector","GLIBC_2.0"},
 #endif
@@ -7384,6 +9800,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_vector","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_vector","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_vector","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7395,6 +9814,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdr_void","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdr_void","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdr_wrapstring","GLIBC_2.0"},
 #endif
@@ -7402,6 +9824,9 @@ struct versym libc_so_6_1[] = {
 	{"xdr_wrapstring","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdr_wrapstring","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdr_wrapstring","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
@@ -7413,6 +9838,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdrmem_create","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdrmem_create","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdrrec_create","GLIBC_2.0"},
 #endif
@@ -7422,6 +9850,9 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"xdrrec_create","GLIBC_2.0"},
 #endif
+#if defined(__s390__)
+	{"xdrrec_create","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"xdrrec_eof","GLIBC_2.0"},
 #endif
@@ -7429,6 +9860,9 @@ struct versym libc_so_6_1[] = {
 	{"xdrrec_eof","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
+	{"xdrrec_eof","GLIBC_2.0"},
+#endif
+#if defined(__s390__)
 	{"xdrrec_eof","GLIBC_2.0"},
 #endif
 	{0,0}};
