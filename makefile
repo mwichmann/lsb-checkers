@@ -1,4 +1,4 @@
-SUBDIRS=elfchk appchk devchk/ts/devchk libchk
+SUBDIRS=tetj elfchk appchk devchk/ts/devchk libchk
 
 
 all:
