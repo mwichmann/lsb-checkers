@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.37 $
+ * This is $Revision: 1.38 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.38  2004/05/12 16:04:52  anderson
+ * We want to be able to query for newer version at any time
+ *
  * Revision 1.37  2004/05/12 14:23:38  anderson
  * Bug 227 - logic snafu
  *
@@ -159,7 +162,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.37 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.38 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -281,7 +284,7 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
          maintainer mode */
       if (vers > i )
       {
-        if (print_warnings || (libchk_debug&LIBCHK_DEBUG_NEWVERS) )
+        if ((libchk_debug&LIBCHK_DEBUG_NEWVERS) )
         {
           printf("    %s has newer version %s, expecting ",
                  ElfGetStringIndex(file,file->syms[j].st_name,
