@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.43 $
+ * This is $Revision: 1.44 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.44  2004/08/09 13:53:13  anderson
+ * Turn on checking the sizes, but don't gripe the DB sez 0 meaning the data hasn't been filled in
+ *
  * Revision 1.43  2004/08/06 18:43:53  anderson
  * First cut at actually checking symbol size for OBJT
  *
@@ -180,7 +183,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.43 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.44 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -338,7 +341,6 @@ check_size(ElfFile *file, struct versym *entry)
 {
   int j;
   char *symbol_name;
-  int foundit=0;
   /* See if this symbol is in the dynsyn section of the library */
 
   /* printf("Looking for %s\n", entry->name); */
@@ -371,6 +373,10 @@ check_size(ElfFile *file, struct versym *entry)
     {
     /* Now, check to see if it has the right size associated with it */
 
+	if( entry->size == 0 ) {
+		/* Until the DB is fully populated, skip the check is the size is 0 */
+		return 0;
+	}
 	if( file->syms[j].st_size != entry->size ) {
 			fprintf(stderr, "size for %s doesn't match %d vs %d\n",
 							symbol_name, file->syms[j].st_size, entry->size );
@@ -528,7 +534,6 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)",
             entries[i].name, entries[i].vername>0 ? entries[i].vername :
             "unversioned");
-#ifdef notyet
     switch(check_size(file, entries+i)) {
 	case 0: /* Not an obj */
 			break;
@@ -562,7 +567,6 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
       tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     }
    }
-#endif
   }
 
 /*   printf("Checking Class Information in %s\n", filename ); */
