@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include <limits.h>
 #include <sys/stat.h>
+#include <sys/sysmacros.h>
 #include <zlib.h>
 #include <cpio.h>
 #include "rpmchk.h"
