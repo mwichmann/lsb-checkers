@@ -13,7 +13,8 @@
 #include <netinet/in.h>
 #include "header_list.h"
 
-extern void validate_pathname(const char *arg, int, const char *name);
+extern void validate_pathname(const char *arg, const char *name);
+extern void validate_pathname_flags(const char *arg, int, const char *name);
 extern void validate_filemode(const mode_t arg, const char *name);
 extern void validate_RWaddress(const void *address, const char *name);
 extern void validate_Rdaddress(const void *address, const char *name);
