@@ -8,7 +8,6 @@ __isnanl.o \
 copysign.o \
 finite.o \
 frexp.o \
-isinf.o \
 ldexp.o \
 modf.o \
 acos.o \
@@ -60,11 +59,6 @@ finitef.o \
 finitel.o \
 frexpf.o \
 frexpl.o \
-isinff.o \
-isinfl.o \
-isnan.o \
-isnanf.o \
-isnanl.o \
 ldexpf.o \
 ldexpl.o \
 modff.o \
