@@ -24,90 +24,30 @@ Msg("Checking data structures in tar.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef TSUID
-	CompareConstant(TSUID,04000,1750,architecture)
+#ifdef DIRTYPE
+	CompareConstant(DIRTYPE,'5',1768,architecture)
 #else
-Msg( "Error: Constant not found: TSUID\n");
+Msg( "Error: Constant not found: DIRTYPE\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef TSGID
-	CompareConstant(TSGID,02000,1751,architecture)
+#ifdef LNKTYPE
+	CompareConstant(LNKTYPE,'1',1764,architecture)
 #else
-Msg( "Error: Constant not found: TSGID\n");
+Msg( "Error: Constant not found: LNKTYPE\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef TSVTX
-	CompareConstant(TSVTX,01000,1752,architecture)
+#ifdef TMAGLEN
+	CompareConstant(TMAGLEN,6,1772,architecture)
 #else
-Msg( "Error: Constant not found: TSVTX\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef TUREAD
-	CompareConstant(TUREAD,00400,1753,architecture)
-#else
-Msg( "Error: Constant not found: TUREAD\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef TUWRITE
-	CompareConstant(TUWRITE,00200,1754,architecture)
-#else
-Msg( "Error: Constant not found: TUWRITE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef TUEXEC
-	CompareConstant(TUEXEC,00100,1755,architecture)
-#else
-Msg( "Error: Constant not found: TUEXEC\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef TGREAD
-	CompareConstant(TGREAD,00040,1756,architecture)
-#else
-Msg( "Error: Constant not found: TGREAD\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef TGWRITE
-	CompareConstant(TGWRITE,00020,1757,architecture)
-#else
-Msg( "Error: Constant not found: TGWRITE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef TGEXEC
-	CompareConstant(TGEXEC,00010,1758,architecture)
-#else
-Msg( "Error: Constant not found: TGEXEC\n");
+Msg( "Error: Constant not found: TMAGLEN\n");
 cnt++;
 #endif
 
@@ -134,60 +74,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef TOEXEC
-	CompareConstant(TOEXEC,00001,1761,architecture)
+#ifdef TUEXEC
+	CompareConstant(TUEXEC,00100,1755,architecture)
 #else
-Msg( "Error: Constant not found: TOEXEC\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef REGTYPE
-	CompareConstant(REGTYPE,'0',1762,architecture)
-#else
-Msg( "Error: Constant not found: REGTYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef AREGTYPE
-	CompareConstant(AREGTYPE,'\0',1763,architecture)
-#else
-Msg( "Error: Constant not found: AREGTYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef LNKTYPE
-	CompareConstant(LNKTYPE,'1',1764,architecture)
-#else
-Msg( "Error: Constant not found: LNKTYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef SYMTYPE
-	CompareConstant(SYMTYPE,'2',1765,architecture)
-#else
-Msg( "Error: Constant not found: SYMTYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef CHRTYPE
-	CompareConstant(CHRTYPE,'3',1766,architecture)
-#else
-Msg( "Error: Constant not found: CHRTYPE\n");
+Msg( "Error: Constant not found: TUEXEC\n");
 cnt++;
 #endif
 
@@ -204,10 +94,110 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef DIRTYPE
-	CompareConstant(DIRTYPE,'5',1768,architecture)
+#ifdef TSGID
+	CompareConstant(TSGID,02000,1751,architecture)
 #else
-Msg( "Error: Constant not found: DIRTYPE\n");
+Msg( "Error: Constant not found: TSGID\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef REGTYPE
+	CompareConstant(REGTYPE,'0',1762,architecture)
+#else
+Msg( "Error: Constant not found: REGTYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TGREAD
+	CompareConstant(TGREAD,00040,1756,architecture)
+#else
+Msg( "Error: Constant not found: TGREAD\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TSVTX
+	CompareConstant(TSVTX,01000,1752,architecture)
+#else
+Msg( "Error: Constant not found: TSVTX\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TGEXEC
+	CompareConstant(TGEXEC,00010,1758,architecture)
+#else
+Msg( "Error: Constant not found: TGEXEC\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TSUID
+	CompareConstant(TSUID,04000,1750,architecture)
+#else
+Msg( "Error: Constant not found: TSUID\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TUWRITE
+	CompareConstant(TUWRITE,00200,1754,architecture)
+#else
+Msg( "Error: Constant not found: TUWRITE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TVERSION
+	CompareStringConstant(TVERSION,"00")
+#else
+Msg( "Error: Constant not found: TVERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef CHRTYPE
+	CompareConstant(CHRTYPE,'3',1766,architecture)
+#else
+Msg( "Error: Constant not found: CHRTYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TUREAD
+	CompareConstant(TUREAD,00400,1753,architecture)
+#else
+Msg( "Error: Constant not found: TUREAD\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef AREGTYPE
+	CompareConstant(AREGTYPE,'\0',1763,architecture)
+#else
+Msg( "Error: Constant not found: AREGTYPE\n");
 cnt++;
 #endif
 
@@ -218,6 +208,16 @@ cnt++;
 	CompareConstant(FIFOTYPE,'6',1769,architecture)
 #else
 Msg( "Error: Constant not found: FIFOTYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TGWRITE
+	CompareConstant(TGWRITE,00020,1757,architecture)
+#else
+Msg( "Error: Constant not found: TGWRITE\n");
 cnt++;
 #endif
 
@@ -244,20 +244,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef TMAGLEN
-	CompareConstant(TMAGLEN,6,1772,architecture)
+#ifdef SYMTYPE
+	CompareConstant(SYMTYPE,'2',1765,architecture)
 #else
-Msg( "Error: Constant not found: TMAGLEN\n");
+Msg( "Error: Constant not found: SYMTYPE\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef TVERSION
-	CompareStringConstant(TVERSION,"00")
+#ifdef TOEXEC
+	CompareConstant(TOEXEC,00001,1761,architecture)
 #else
-Msg( "Error: Constant not found: TVERSION\n");
+Msg( "Error: Constant not found: TOEXEC\n");
 cnt++;
 #endif
 

@@ -34,6 +34,16 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef SEM_UNDO
+	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
+#else
+Msg( "Error: Constant not found: SEM_UNDO\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef GETALL
 	CompareConstant(GETALL,13,3201,architecture)
 #else
@@ -44,10 +54,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GETNCNT
-	CompareConstant(GETNCNT,14,3202,architecture)
+#ifdef SETALL
+	CompareConstant(SETALL,17,3205,architecture)
 #else
-Msg( "Error: Constant not found: GETNCNT\n");
+Msg( "Error: Constant not found: SETALL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef GETPID
+	CompareConstant(GETPID,11,3199,architecture)
+#else
+Msg( "Error: Constant not found: GETPID\n");
 cnt++;
 #endif
 
@@ -74,30 +94,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef SETALL
-	CompareConstant(SETALL,17,3205,architecture)
+#ifdef GETNCNT
+	CompareConstant(GETNCNT,14,3202,architecture)
 #else
-Msg( "Error: Constant not found: SETALL\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef SEM_UNDO
-	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
-#else
-Msg( "Error: Constant not found: SEM_UNDO\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef GETPID
-	CompareConstant(GETPID,11,3199,architecture)
-#else
-Msg( "Error: Constant not found: GETPID\n");
+Msg( "Error: Constant not found: GETNCNT\n");
 cnt++;
 #endif
 

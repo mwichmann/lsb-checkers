@@ -24,16 +24,6 @@ Msg("Checking data structures in fnmatch.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef FNM_PATHNAME
-	CompareConstant(FNM_PATHNAME,(1<<0),1221,architecture)
-#else
-Msg( "Error: Constant not found: FNM_PATHNAME\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef FNM_NOESCAPE
 	CompareConstant(FNM_NOESCAPE,(1<<1),1222,architecture)
 #else
@@ -58,6 +48,16 @@ cnt++;
 	CompareConstant(FNM_NOMATCH,1,1228,architecture)
 #else
 Msg( "Error: Constant not found: FNM_NOMATCH\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef FNM_PATHNAME
+	CompareConstant(FNM_PATHNAME,(1<<0),1221,architecture)
+#else
+Msg( "Error: Constant not found: FNM_PATHNAME\n");
 cnt++;
 #endif
 

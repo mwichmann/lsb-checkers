@@ -24,6 +24,16 @@ Msg("Checking data structures in sys/poll.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef POLLOUT
+	CompareConstant(POLLOUT,0x0004,4950,architecture)
+#else
+Msg( "Error: Constant not found: POLLOUT\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef POLLIN
 	CompareConstant(POLLIN,0x0001,4948,architecture)
 #else
@@ -44,20 +54,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef POLLOUT
-	CompareConstant(POLLOUT,0x0004,4950,architecture)
+#ifdef POLLNVAL
+	CompareConstant(POLLNVAL,0x0020,4953,architecture)
 #else
-Msg( "Error: Constant not found: POLLOUT\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef POLLERR
-	CompareConstant(POLLERR,0x0008,4951,architecture)
-#else
-Msg( "Error: Constant not found: POLLERR\n");
+Msg( "Error: Constant not found: POLLNVAL\n");
 cnt++;
 #endif
 
@@ -74,10 +74,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef POLLNVAL
-	CompareConstant(POLLNVAL,0x0020,4953,architecture)
+#ifdef POLLERR
+	CompareConstant(POLLERR,0x0008,4951,architecture)
 #else
-Msg( "Error: Constant not found: POLLNVAL\n");
+Msg( "Error: Constant not found: POLLERR\n");
 cnt++;
 #endif
 

@@ -31,20 +31,20 @@ Msg("Checking data structures in X11/ObjectP.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef XtObjectExtensionVersion
-	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
+#ifdef XtInheritAllocate
+	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
 #else
-Msg( "Error: Constant not found: XtObjectExtensionVersion\n");
+Msg( "Error: Constant not found: XtInheritAllocate\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef XtInheritAllocate
-	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
+#ifdef XtObjectExtensionVersion
+	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
 #else
-Msg( "Error: Constant not found: XtInheritAllocate\n");
+Msg( "Error: Constant not found: XtObjectExtensionVersion\n");
 cnt++;
 #endif
 

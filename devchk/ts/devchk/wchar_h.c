@@ -24,20 +24,20 @@ Msg("Checking data structures in wchar.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef WCHAR_MIN
-	CompareConstant(WCHAR_MIN,0x80000000,1953,architecture)
+#ifdef WCHAR_MAX
+	CompareConstant(WCHAR_MAX,0x7FFFFFFF,1954,architecture)
 #else
-Msg( "Error: Constant not found: WCHAR_MIN\n");
+Msg( "Error: Constant not found: WCHAR_MAX\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef WCHAR_MAX
-	CompareConstant(WCHAR_MAX,0x7FFFFFFF,1954,architecture)
+#ifdef WCHAR_MIN
+	CompareConstant(WCHAR_MIN,0x80000000,1953,architecture)
 #else
-Msg( "Error: Constant not found: WCHAR_MAX\n");
+Msg( "Error: Constant not found: WCHAR_MIN\n");
 cnt++;
 #endif
 

@@ -24,14 +24,10 @@ Msg("Checking data structures in netdb.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for h_errno */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef NETDB_INTERNAL
-	CompareConstant(NETDB_INTERNAL,-1,4433,architecture)
+#ifdef NO_ADDRESS
+	CompareConstant(NO_ADDRESS,NO_DATA,4439,architecture)
 #else
-Msg( "Error: Constant not found: NETDB_INTERNAL\n");
+Msg( "Error: Constant not found: NO_ADDRESS\n");
 cnt++;
 #endif
 
@@ -48,30 +44,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef HOST_NOT_FOUND
-	CompareConstant(HOST_NOT_FOUND,1,4435,architecture)
-#else
-Msg( "Error: Constant not found: HOST_NOT_FOUND\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef TRY_AGAIN
 	CompareConstant(TRY_AGAIN,2,4436,architecture)
 #else
 Msg( "Error: Constant not found: TRY_AGAIN\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef NO_RECOVERY
-	CompareConstant(NO_RECOVERY,3,4437,architecture)
-#else
-Msg( "Error: Constant not found: NO_RECOVERY\n");
 cnt++;
 #endif
 
@@ -88,17 +64,41 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef NO_ADDRESS
-	CompareConstant(NO_ADDRESS,NO_DATA,4439,architecture)
+/* No test for h_addr */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NETDB_INTERNAL
+	CompareConstant(NETDB_INTERNAL,-1,4433,architecture)
 #else
-Msg( "Error: Constant not found: NO_ADDRESS\n");
+Msg( "Error: Constant not found: NETDB_INTERNAL\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for h_addr */
+#ifdef HOST_NOT_FOUND
+	CompareConstant(HOST_NOT_FOUND,1,4435,architecture)
+#else
+Msg( "Error: Constant not found: HOST_NOT_FOUND\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for h_errno */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef NO_RECOVERY
+	CompareConstant(NO_RECOVERY,3,4437,architecture)
+#else
+Msg( "Error: Constant not found: NO_RECOVERY\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__

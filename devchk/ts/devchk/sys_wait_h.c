@@ -25,13 +25,11 @@ Msg("Checking data structures in sys/wait.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef WNOHANG
-	CompareConstant(WNOHANG,0x00000001,3490,architecture)
-#else
-Msg( "Error: Constant not found: WNOHANG\n");
-cnt++;
+/* No test for WIFSTOPPED(status) */
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for WIFSIGNALED(status) */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -45,7 +43,13 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for WEXITSTATUS(status) */
+#ifdef WNOHANG
+	CompareConstant(WNOHANG,0x00000001,3490,architecture)
+#else
+Msg( "Error: Constant not found: WNOHANG\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -53,19 +57,11 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+/* No test for WEXITSTATUS(status) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 /* No test for WSTOPSIG(status) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for WIFEXITED(status) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for WIFSIGNALED(status) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for WIFSTOPPED(status) */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -76,6 +72,10 @@ Msg( "Error: Constant not found: WCOREFLAG\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for WIFEXITED(status) */
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
