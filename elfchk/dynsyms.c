@@ -1321,7 +1321,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_DeleteException","GCC_3.0",0},
 #endif
-	{"_Unwind_Find_FDE","",0},
 #if __i386__
 	{"_Unwind_Find_FDE","GCC_3.0",0},
 #endif
@@ -1349,7 +1348,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_Find_FDE","GCC_3.0",0},
 #endif
-	{"_Unwind_ForcedUnwind","",0},
 #if __i386__
 	{"_Unwind_ForcedUnwind","GCC_3.0",0},
 #endif
@@ -1380,7 +1378,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_ForcedUnwind","GCC_3.0",0},
 #endif
-	{"_Unwind_GetDataRelBase","",0},
 #if __i386__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0},
 #endif
@@ -1408,7 +1405,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0},
 #endif
-	{"_Unwind_GetGR","",0},
 #if __i386__
 	{"_Unwind_GetGR","GCC_3.0",0},
 #endif
@@ -1439,7 +1435,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_GetGR","GCC_3.0",0},
 #endif
-	{"_Unwind_GetIP","",0},
 #if __i386__
 	{"_Unwind_GetIP","GCC_3.0",0},
 #endif
@@ -1470,7 +1465,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_GetIP","GCC_3.0",0},
 #endif
-	{"_Unwind_GetLanguageSpecificData","",0},
 #if __i386__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0},
 #endif
@@ -1501,7 +1495,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0},
 #endif
-	{"_Unwind_GetRegionStart","",0},
 #if __i386__
 	{"_Unwind_GetRegionStart","GCC_3.0",0},
 #endif
@@ -1532,8 +1525,10 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_GetRegionStart","GCC_3.0",0},
 #endif
-	{"_Unwind_GetTextRelBase","",0},
 #if __i386__
+	{"_Unwind_GetTextRelBase","GCC_3.0",0},
+#endif
+#if __ia64__
 	{"_Unwind_GetTextRelBase","GCC_3.0",0},
 #endif
 #if __arm__
@@ -1560,7 +1555,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_GetTextRelBase","GCC_3.0",0},
 #endif
-	{"_Unwind_RaiseException","",0},
 #if __i386__
 	{"_Unwind_RaiseException","GCC_3.0",0},
 #endif
@@ -1651,7 +1645,6 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_Unwind_SetGR","GCC_3.0",0},
 #endif
-	{"_Unwind_SetIP","",0},
 #if __i386__
 	{"_Unwind_SetIP","GCC_3.0",0},
 #endif
@@ -14421,7 +14414,6 @@ struct versym DynSyms[] = {
 	{"_ZdaPvRKSt9nothrow_t","GLIBCPP_3.2",0},
 	{"_ZdlPv","GLIBCPP_3.2",0},
 	{"_ZdlPvRKSt9nothrow_t","GLIBCPP_3.2",0},
-	{"_Znaj","",0},
 	{"_Znaj","GLIBCPP_3.2",0},
 	{"_ZnajRKSt9nothrow_t","GLIBCPP_3.2",0},
 	{"_Znam","GLIBCPP_3.2",0},
@@ -30002,25 +29994,25 @@ struct versym DynSyms[] = {
 	{"pthread_cond_broadcast","GLIBC_2.3.2",0},
 #endif
 #if __i386__
-	{"pthread_cond_destroy","GLIBC_2.0",0},
+	{"pthread_cond_destroy","GLIBC_2.3.2",0},
 #endif
 #if __ia64__
-	{"pthread_cond_destroy","GLIBC_2.2",0},
+	{"pthread_cond_destroy","GLIBC_2.3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pthread_cond_destroy","GLIBC_2.0",0},
+	{"pthread_cond_destroy","GLIBC_2.3.2",0},
 #endif
 #if __powerpc64__
-	{"pthread_cond_destroy","GLIBC_2.3",0},
+	{"pthread_cond_destroy","GLIBC_2.3.2",0},
 #endif
 #if __s390__ && !__s390x__
-	{"pthread_cond_destroy","GLIBC_2.0",0},
+	{"pthread_cond_destroy","GLIBC_2.3.2",0},
 #endif
 #if __x86_64__
-	{"pthread_cond_destroy","GLIBC_2.2.5",0},
+	{"pthread_cond_destroy","GLIBC_2.3.2",0},
 #endif
 #if __s390x__
-	{"pthread_cond_destroy","GLIBC_2.2",0},
+	{"pthread_cond_destroy","GLIBC_2.3.2",0},
 #endif
 #if __i386__
 	{"pthread_cond_init","GLIBC_2.3.2",0},
