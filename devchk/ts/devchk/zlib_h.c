@@ -505,6 +505,25 @@ Msg("Find size of z_off_t (10519)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(voidpc,4, 10995, 2)
+#elif __powerpc64__
+CheckTypeSize(voidpc,8, 10995, 9)
+#elif __ia64__
+CheckTypeSize(voidpc,8, 10995, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(voidpc,4, 10995, 6)
+#elif __x86_64__
+CheckTypeSize(voidpc,8, 10995, 11)
+#elif __s390x__
+CheckTypeSize(voidpc,8, 10995, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(voidpc,4, 10995, 10)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10995,0);
+Msg("Find size of voidpc (10995)\n");
+#endif
+
+#if __i386__
 CheckTypeSize(struct z_stream_s,56, 9875, 2)
 CheckMemberSize(struct z_stream_s,next_in,4,2,34067)
 CheckOffset(struct z_stream_s,next_in,0,2,34067)
