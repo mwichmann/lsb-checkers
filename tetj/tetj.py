@@ -6,14 +6,18 @@
 # can be analysed using standard TET journal tools without
 # having to compile or link against the TET libraries.
 #
-# (C) Copyright 2002 The Free Standards Group, Inc.
+# (C) Copyright 2002,2003 The Free Standards Group, Inc.
 #
-# Python module converted from C version (tetj.c 1.3)
-# 2002/09/20 Mats Wichmann, Intel
+# Python module originally converted from C version (tetj.c 1.3)
+# Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.1 $
+# This is $Revision: 1.2 $
 #
 # $Log: tetj.py,v $
+# Revision 1.2  2003/11/12 00:46:08  mats
+# Revision pass to make a "Journal" a class so it can hold state and
+# simplify a lot of the passing around of variables.
+#
 # Revision 1.1  2002/09/20 15:12:24  mwichmann
 # Initial converted version.  Includes a self-test harness.
 #
@@ -48,86 +52,98 @@ result_codes = {
     TETJ_UNAPPROVE: "UNAPPROVE",
 }
 
-class tetj_handle:
-    def __init__(self, journal):
-        self.journal = journal
-
-activity_count = 0
-tp_count = 0
 
 def get_current_time_string():
     return time.strftime("%H:%M:%S")
 
-def start_journal(pathname, command_run):
-    try:
-        f = open(pathname, 'w')
-    except IOerror:
-        return None
-    handle = tetj_handle(f)
+class Journal:
+    def __init__(self, pathname, command_run):
+	"""starts a new journal file"""
+	try:
+	    self.journal = open(pathname, 'w')
+	except IOerror:
+	    self.journal = None
+	self.activity = -1	# count will start at 0
+	self.testcase = 0
 
-    (sysname, nodename, release, version, machine) = os.uname()
-    datetime = time.strftime("%H:%M:%S %Y%m%d")
-    uid = os.getuid();
-    try:
-        pwent = pwd.getpwuid(uid);
-    except KeyError:
-        pwent = ""
+	(sysname, nodename, release, version, machine) = os.uname()
+	datetime = time.strftime("%H:%M:%S %Y%m%d")
+	uid = os.getuid();
+	try:
+	    pwent = pwd.getpwuid(uid);
+	except KeyError:
+	    pwent = ""
   
-    handle.journal.write("0|lsb-0.1 %s|User: %s (%i) TCC Start, Command line: %s\n" %
-          (datetime, pwent[0], uid, command_run))
+	self.journal.write("0|lsb-0.1 %s|User: %s (%i) TCC Start, Command line: %s\n" %
+	      (datetime, pwent[0], uid, command_run))
 
-    handle.journal.write("5|%s %s %s %s %s|System Information\n" %
-          (sysname, nodename, release, version, machine))
-          
-    return handle
+	self.journal.write("5|%s %s %s %s %s|System Information\n" %
+	      (sysname, nodename, release, version, machine))
 
-def close_journal(handle):
-    if handle:
-        handle.journal.write("900|%s|TCC End\n" % get_current_time_string())
-        return handle.journal.close()
-    else:
-        return 0
+    def close(self):
+	"""closes a journal file and finishes all processing"""
+	#XXX todo: flush all the stuff
+	if self.journal:
+	    self.journal.write("900|%s|TCC End\n" % get_current_time_string())
 
-def add_config(handle, message):
-    if handle:
-        handle.journal.write("30||%s\n" % message)
+    def add_config(self, message):
+	if self.journal:
+	    self.journal.write("30||%s\n" % message)
 
-def add_controller_error(handle, message):
-    if handle:
-        handle.journal.write("50||%s\n" % message)
+    def add_controller_error(self, message):
+	if self.journal:
+	    self.journal.write("50||%s\n" % message)
 
-def testcase_start(handle, activity, testcase, message):
-    if handle:
-        handle.journal.write("10|%u %s %s|TC Start%s\n" %
-            (activity, testcase, get_current_time_string(), message))
+    def testcase_start(self, message=None):
+	self.activity += 1
+	self.testcase = 0
+	if self.journal:
+	    self.journal.write("10|%u %s %s|TC Start" %
+		(self.activity, self.testcase, get_current_time_string()))
+	    if message: 
+		self.journal.write(", %s\n" % message)
+	    else:
+		self.journal.write("\n")
 
-def testcase_end(handle, activity, testcase, message):
-    if handle:
-        handle.journal.write("80|%u %s %s|TC End%s\n" %
-            (activity, testcase, get_current_time_string(), message))
+    def testcase_end(self, message=None):
+	if self.journal:
+	    self.journal.write("80|%u %s %s|TC End" %
+		(self.activity, self.testcase, get_current_time_string()))
+	    if message: 
+		self.journal.write(", %s\n" % message)
+	    else:
+		self.journal.write("\n")
 
-def purpose_start(handle, activity, tpnumber, message):
-    if (handle):
-        handle.journal.write("400|%u %u %s|IC Start\n" %
-            (activity, tpnumber, get_current_time_string()))
-        handle.journal.write("200|%u %u %s|%s\n" %
-            (activity, tpnumber, get_current_time_string(), message))
+    def purpose_start(self, message=None):
+	self.testcase += 1
+	if self.journal:
+	    #XXX 400's have an extra field before date
+	    self.journal.write("400|%u %u %s|IC Start\n" %
+		(self.activity, self.testcase, get_current_time_string()))
+	    self.journal.write("200|%u %u %s|TP Start" %
+		(self.activity, self.testcase, get_current_time_string()))
+	    if message: 
+		self.journal.write(", %s\n" % message)
+	    else:
+		self.journal.write("\n")
 
-def purpose_end(handle, activity, tpnumber):
-    if handle:
-        handle.journal.write("410|%u %u %s|IC End\n" %
-            (activity, tpnumber, get_current_time_string()))
+    def purpose_end(self):
+	if self.journal:
+	    #XXX 410's have an extra field before date
+	    self.journal.write("410|%u %u %s|IC End\n" %
+		(self.activity, self.testcase, get_current_time_string()))
 
-def result(handle, activity, tpnumber, result):
-    if handle:
-        code = result_codes.get(result, "UNKNOWN")
-        handle.journal.write("220|%u %u %i %s|%s\n" %
-            (activity, tpnumber, result, get_current_time_string(), code))
+    def result(self, result):
+	if self.journal:
+	    code = result_codes.get(result, "UNKNOWN")
+	    self.journal.write("220|%u %u %i %s|%s\n" %
+		(self.activity, self.testcase, result,
+		 get_current_time_string(), code))
 
-def testcase_info(handle,activity,tpnumber,context,block,sequence,message):
-    if handle:
-        handle.journal.write("520|%u %u %u %u %u|%s\n" %
-            (activity, tpnumber, context, block, sequence, message))
+    def testcase_info(self, context, block, sequence, message):
+	if self.journal:
+	    self.journal.write("520|%u %u %u %u %u|%s\n" %
+		(self.activity,self.testcase,context,block,sequence,message))
 
 
 def _test():
@@ -149,26 +165,21 @@ def _test():
         "alabaster": TETJ_UNAPPROVE
     }
     print "tetj.py: writing journal to journal.tetjtest"
-    journal = start_journal("journal.tetjtest", "tetjtest")
-    add_config(journal, "VSX_NAME=tetjtest unofficial")
-    activity_count = 1
-    testcase_start(journal, activity_count, "foo", "")
-    tp_count = 0
+    journal = Journal("journal.tetjtest", "tetjtest")
+    journal.add_config("VSX_NAME=tetjtest unofficial")
+    journal.testcase_start("foo")
     for (purpose, tpresult) in teststuff.items():
-        tp_count += 1
-        purpose_start(journal, activity_count, tp_count, purpose)
-        result(journal, activity_count, tp_count, tpresult)
-        purpose_end(journal, activity_count, tp_count)
-    testcase_end(journal, activity_count, "foo", "")
-    activity_count += 1
-    testcase_start(journal, activity_count, "bar", "")
+        journal.purpose_start(purpose)
+        journal.result(tpresult)
+        journal.purpose_end()
+    journal.testcase_end("foo")
+    journal.testcase_start("bar")
     for (purpose, tpresult) in teststuff.items():
-        tp_count += 1
-        purpose_start(journal, activity_count, tp_count, purpose)
-        result(journal, activity_count, tp_count, tpresult)
-        purpose_end(journal, activity_count, tp_count)
-    testcase_end(journal, activity_count, "bar", "")
-    close_journal(journal)
+        journal.purpose_start(purpose)
+        journal.result(tpresult)
+        journal.purpose_end()
+    journal.testcase_end("bar")
+    journal.close()
 
 if __name__ == "__main__":
     _test()
