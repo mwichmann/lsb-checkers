@@ -3,7 +3,7 @@ include libs.mk
 
 OBJS = libchk.o libs.o $(LIBOBJS)
 
-CFLAGS=-g -I../elfchk
+CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\"
 
 all:: libchk
 
