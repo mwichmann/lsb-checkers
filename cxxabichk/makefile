@@ -41,7 +41,7 @@ symvers.c:
 	cp ../elfchk/symvers.c .
 	
 dist: $(SRCS) README
-	tar zcf cxxabichk.tar.gz $(SRCS) makefile README
+	cd ..;tar zcf cxxabichk.tar.gz cxxabichk
 
 clean:
 	rm -f $(OBJS) cxxabichk
