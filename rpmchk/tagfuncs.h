@@ -7,7 +7,12 @@ extern void checkRpmIdxHEADERI18NTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct
 extern void checkRpmIdxHEADERSIGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxSIGSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxMD5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxGPG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxPGP5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxPGP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxDSAHEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxRSAHEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxRELEASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
@@ -33,7 +38,10 @@ extern void checkRpmIdxFILEGROUPNAME(RpmFile *file1, RpmHdrIndex *hidx, struct t
 extern void checkRpmIdxSOURCERPM(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxFILEVERIFYFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxARCHIVESIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxPAYLOADSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxPROVIDENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxPREREQ(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern void checkRpmIdxOBSOLETENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxREQUIREFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxREQUIRENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern void checkRpmIdxRPMVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);

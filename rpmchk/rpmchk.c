@@ -12,5 +12,6 @@ file1->nexthdr=file1->signature;
 /* RPM packages should have 2 Headers, the Signature, and the Header */
 checkRpmSignature(file1, journal);
 checkRpmHeader(file1, journal);
+checkRpmMetaData(file1, journal);
 checkRpmArchive(file1, journal);
 }
