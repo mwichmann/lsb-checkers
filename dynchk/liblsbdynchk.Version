@@ -1053,6 +1053,11 @@ GLIBC_2.2 {
   __fxstat64;
   __lxstat64;
   __xstat64;
+  clock_getcpuclockid;
+  clock_getres;
+  clock_gettime;
+  clock_nanosleep;
+  clock_settime;
   fgetwc;
   fgetwc_unlocked;
   fgetws;
@@ -1075,8 +1080,15 @@ GLIBC_2.2 {
   readdir64;
   sem_timedwait;
   setrlimit;
+  shm_open;
+  shm_unlink;
   swprintf;
   swscanf;
+  timer_create;
+  timer_delete;
+  timer_getoverrun;
+  timer_gettime;
+  timer_settime;
   ungetwc;
   vfwprintf;
   vfwscanf;
