@@ -39,7 +39,7 @@ for(1..$sth->numrows) {
 	} else {
 		printf "0";
 	}
-	printf ",\"%s\"",$entry{'Mname'};
+	printf ",%s",$entry{'Mname'};
 	printf "},\n";
         if ($entry{'Aname'} && $entry{'Aname'} ne "All")
         {

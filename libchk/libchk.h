@@ -15,7 +15,7 @@ extern int libchk_debug;
  */
 
 struct modlib {
-	char 		*modname;
+	int 		modname;
 	char 		*runname;
 	struct versym	*symbols;
 	struct classinfo *classinfo;

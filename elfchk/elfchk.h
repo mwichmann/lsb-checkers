@@ -17,7 +17,7 @@ struct versym {
 	char *name;
 	char *vername;
 	int   deprecated;
-	char *modname;
+	int modname;
 	int   size;
 	int   type; /* 0 = Data; 1 = Function */
 	};
@@ -198,6 +198,15 @@ struct classinfo {
 extern int elfchk_debug;
 
 /*
+ * Constants use to indicate LSB Modules. This should match what's in
+ * the Modules table of the SLB database.
+ */
+#define LSB_Core	0x01
+#define LSB_Graphics	0x02
+#define LSB_Cpp		0x04
+#define LSB_All_Modules	0x07
+
+/*
  * External tables that are generated from the DB.
  */
 
@@ -258,6 +267,8 @@ extern ElfFile *OpenElfFile(char *name);
 extern ElfFile *OpenFile(char *name);
 extern void checkElf(ElfFile *file1, int isProgram, 
                      struct tetj_handle *journal);
+extern char *getmodulename(int mod);
+extern int getmoduleval(char *mod);
 
 /* note.c */
 extern int check_NOTE(ElfFile *file, unsigned char *notes, int length, struct tetj_handle *journal);
