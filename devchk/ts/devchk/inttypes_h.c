@@ -190,10 +190,6 @@ CheckTypeSize(uintptr_t,8, 10508, 9)
 CheckTypeSize(uintptr_t,4, 10509, 10)
 #endif
 
-#if __not_def__
-CheckTypeSize(uintptr_t,4, 10510, 8)
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

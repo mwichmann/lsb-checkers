@@ -72,10 +72,6 @@ CheckTypeSize(greg_t,4, 10222, 2)
 #endif
 
 #if __i386__
-CheckArrayTypeSize(gregset_t,4,19, 10224, 2)
-#endif
-
-#if __i386__
 CheckTypeSize(struct _libc_fpreg,10, 10225, 2)
 CheckMemberSize(struct _libc_fpreg,significand,8,2,34315)
 CheckOffset(struct _libc_fpreg,significand,0,2,34315)

@@ -491,7 +491,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10279,0);
 Msg("Find size of _pthread_rwlock_t (10279)\n");
 #endif
 
-#if __no_sym__
+#if __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10280,0);
+Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
 #endif
 
 #ifdef TET_TEST
