@@ -122,6 +122,10 @@ Msg("Find size of itimerval (9861)\n");
 #if __x86_64__
 #endif
 
+#if 1
+CheckTypeSize(__itimer_which_t,4, 9862, 1)
+#endif
+
 #if __i386__
 CheckTypeSize(struct timespec,8, 7018, 2)
 CheckMemberSize(struct timespec,tv_nsec,4,2,33503)
