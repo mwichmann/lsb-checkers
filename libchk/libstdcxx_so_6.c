@@ -12869,60 +12869,6 @@ struct versym libstdcxx_so_6[] = {
 	{"__cxa_vec_new3","CXXABI_1.3",0,"LSB-C++",0,1},
 	{"__dynamic_cast","CXXABI_1.3",0,"LSB-C++",0,1},
 	{"__gxx_personality_v0","CXXABI_1.3",0,"LSB-C++",0,1},
-#if __powerpc64__
-	{"acosl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"asinl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"atanl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"expl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"expl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"expl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"expl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"frexpl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"ldexpl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"modfl","GLIBCXX_3.4.3",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"sinhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"sinhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"sinhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"sinhl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"tanl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __powerpc64__
-	{"tanl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390__ && !__s390x__
-	{"tanl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
-#if __s390x__
-	{"tanl","GLIBCXX_3.4",0,"LSB-C++",0,1},
-#endif
 	{0,0}};
 
 char *N10__cxxabiv116__enum_type_infoE_typeinfo_name[] = {
