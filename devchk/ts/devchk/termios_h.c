@@ -1612,7 +1612,7 @@ CheckTypeSize(struct winsize,8, 10301, 3)
 #elif __powerpc__
 CheckTypeSize(struct winsize,8, 10301, 6)
 #elif __s390__
-CheckTypeSize(struct winsize,0, 10301, 10)
+CheckTypeSize(struct winsize,8, 10301, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10301,0);
 Msg("Find size of winsize (10301)\n");
@@ -1625,7 +1625,7 @@ CheckTypeSize(speed_t,4, 9186, 3)
 #elif __powerpc__
 CheckTypeSize(speed_t,4, 9186, 6)
 #elif __s390__
-CheckTypeSize(speed_t,0, 9186, 10)
+CheckTypeSize(speed_t,4, 9186, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 Msg("Find size of speed_t (9186)\n");
@@ -1638,7 +1638,7 @@ CheckTypeSize(cc_t,1, 10206, 3)
 #elif __powerpc__
 CheckTypeSize(cc_t,1, 10206, 6)
 #elif __s390__
-CheckTypeSize(cc_t,0, 10206, 10)
+CheckTypeSize(cc_t,1, 10206, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
 Msg("Find size of cc_t (10206)\n");
@@ -1651,7 +1651,7 @@ CheckTypeSize(tcflag_t,4, 10207, 3)
 #elif __powerpc__
 CheckTypeSize(tcflag_t,4, 10207, 6)
 #elif __s390__
-CheckTypeSize(tcflag_t,0, 10207, 10)
+CheckTypeSize(tcflag_t,4, 10207, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10207,0);
 Msg("Find size of tcflag_t (10207)\n");
@@ -1672,7 +1672,7 @@ CheckTypeSize(struct termios,60, 9187, 3)
 #elif __powerpc__
 CheckTypeSize(struct termios,60, 9187, 6)
 #elif __s390__
-CheckTypeSize(struct termios,0, 9187, 10)
+CheckTypeSize(struct termios,60, 9187, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9187,0);
 Msg("Find size of termios (9187)\n");

@@ -150,7 +150,7 @@ CheckTypeSize(struct ifaddr,40, 10286, 6)
 #elif __ia64__
 CheckTypeSize(struct ifaddr,48, 10286, 3)
 #elif __s390__
-CheckTypeSize(struct ifaddr,0, 10286, 10)
+CheckTypeSize(struct ifaddr,40, 10286, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10286,0);
 Msg("Find size of ifaddr (10286)\n");
@@ -172,7 +172,7 @@ CheckTypeSize(struct ifreq,32, 10290, 6)
 #elif __ia64__
 CheckTypeSize(struct ifreq,40, 10290, 3)
 #elif __s390__
-CheckTypeSize(struct ifreq,0, 10290, 10)
+CheckTypeSize(struct ifreq,32, 10290, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10290,0);
 Msg("Find size of ifreq (10290)\n");

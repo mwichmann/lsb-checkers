@@ -34,7 +34,7 @@ CheckTypeSize(struct group,32, 6894, 3)
 #elif __powerpc__
 CheckTypeSize(struct group,16, 6894, 6)
 #elif __s390__
-CheckTypeSize(struct group,0, 6894, 10)
+CheckTypeSize(struct group,16, 6894, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6894,0);
 Msg("Find size of group (6894)\n");

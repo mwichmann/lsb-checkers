@@ -28,7 +28,7 @@ CheckTypeSize(bool_t,4, 9890, 1)
 #elif __i386__
 CheckTypeSize(bool_t,4, 9890, 2)
 #elif __s390__
-CheckTypeSize(bool_t,0, 9890, 10)
+CheckTypeSize(bool_t,4, 9890, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9890,0);
 Msg("Find size of bool_t (9890)\n");
@@ -37,7 +37,7 @@ Msg("Find size of bool_t (9890)\n");
 #ifdef __i386__
 CheckTypeSize(enum_t,4, 9895, 2)
 #elif __s390__
-CheckTypeSize(enum_t,0, 9895, 10)
+CheckTypeSize(enum_t,4, 9895, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9895,0);
 Msg("Find size of enum_t (9895)\n");

@@ -38,7 +38,7 @@ CheckTypeSize(struct sockaddr_un,110, 9152, 2)
 #elif __ia64__
 CheckTypeSize(struct sockaddr_un,110, 9152, 3)
 #elif __s390__
-CheckTypeSize(struct sockaddr_un,0, 9152, 10)
+CheckTypeSize(struct sockaddr_un,110, 9152, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9152,0);
 Msg("Find size of sockaddr_un (9152)\n");

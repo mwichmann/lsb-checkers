@@ -37,7 +37,7 @@ CheckTypeSize(ConstraintWidgetClass,4, 10260, 2)
 #elif __powerpc__
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 6)
 #elif __s390__
-CheckTypeSize(ConstraintWidgetClass,0, 10260, 10)
+CheckTypeSize(ConstraintWidgetClass,4, 10260, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10260,0);
 Msg("Find size of ConstraintWidgetClass (10260)\n");

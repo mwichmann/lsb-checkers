@@ -65,7 +65,7 @@ CheckTypeSize(CompositeClassPart,20, 10244, 2)
 #elif __powerpc__
 CheckTypeSize(CompositeClassPart,20, 10244, 6)
 #elif __s390__
-CheckTypeSize(CompositeClassPart,0, 10244, 10)
+CheckTypeSize(CompositeClassPart,20, 10244, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
 Msg("Find size of CompositeClassPart (10244)\n");
@@ -78,7 +78,7 @@ CheckTypeSize(CompositeClassRec,136, 10240, 2)
 #elif __powerpc__
 CheckTypeSize(CompositeClassRec,136, 10240, 6)
 #elif __s390__
-CheckTypeSize(CompositeClassRec,0, 10240, 10)
+CheckTypeSize(CompositeClassRec,136, 10240, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10240,0);
 Msg("Find size of CompositeClassRec (10240)\n");

@@ -33,7 +33,7 @@ Msg("Find size of xdr_op (9933)\n");
 #ifdef __i386__
 CheckTypeSize(struct XDR,24, 9934, 2)
 #elif __s390__
-CheckTypeSize(struct XDR,0, 9934, 10)
+CheckTypeSize(struct XDR,24, 9934, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9934,0);
 Msg("Find size of XDR (9934)\n");
@@ -42,7 +42,7 @@ Msg("Find size of XDR (9934)\n");
 #ifdef __i386__
 CheckTypeSize(struct xdr_ops,40, 9935, 2)
 #elif __s390__
-CheckTypeSize(struct xdr_ops,0, 9935, 10)
+CheckTypeSize(struct xdr_ops,40, 9935, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9935,0);
 Msg("Find size of xdr_ops (9935)\n");

@@ -36,7 +36,7 @@ CheckOffset(struct opaque_auth,oa_flavor,0,2,32026)
 CheckOffset(struct opaque_auth,oa_base,8,2,32027)
 CheckOffset(struct opaque_auth,oa_length,0,2,32028)
 #elif __s390__
-CheckTypeSize(struct opaque_auth,0, 9894, 10)
+CheckTypeSize(struct opaque_auth,12, 9894, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9894,0);
 Msg("Find size of opaque_auth (9894)\n");
@@ -45,7 +45,7 @@ Msg("Find size of opaque_auth (9894)\n");
 #ifdef __i386__
 CheckTypeSize(struct AUTH,40, 9896, 2)
 #elif __s390__
-CheckTypeSize(struct AUTH,0, 9896, 10)
+CheckTypeSize(struct AUTH,40, 9896, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9896,0);
 Msg("Find size of AUTH (9896)\n");
@@ -54,7 +54,7 @@ Msg("Find size of AUTH (9896)\n");
 #ifdef __i386__
 CheckTypeSize(AUTH,40, 10391, 2)
 #elif __s390__
-CheckTypeSize(AUTH,0, 10391, 10)
+CheckTypeSize(AUTH,40, 10391, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10391,0);
 Msg("Find size of AUTH (10391)\n");
@@ -68,7 +68,7 @@ CheckOffset(struct auth_ops,ah_validate,8,2,32034)
 CheckOffset(struct auth_ops,ah_refresh,12,2,32035)
 CheckOffset(struct auth_ops,ah_destroy,16,2,32036)
 #elif __s390__
-CheckTypeSize(struct auth_ops,0, 9897, 10)
+CheckTypeSize(struct auth_ops,20, 9897, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9897,0);
 Msg("Find size of auth_ops (9897)\n");
@@ -77,7 +77,7 @@ Msg("Find size of auth_ops (9897)\n");
 #ifdef __i386__
 CheckTypeSize(union des_block,8, 9888, 2)
 #elif __s390__
-CheckTypeSize(union des_block,0, 9888, 10)
+CheckTypeSize(union des_block,8, 9888, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9888,0);
 Msg("Find size of des_block (9888)\n");

@@ -482,7 +482,7 @@ CheckTypeSize(reg_syntax_t,8, 6941, 3)
 #elif __powerpc__
 CheckTypeSize(reg_syntax_t,4, 6941, 6)
 #elif __s390__
-CheckTypeSize(reg_syntax_t,0, 6941, 10)
+CheckTypeSize(reg_syntax_t,4, 6941, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6941,0);
 Msg("Find size of reg_syntax_t (6941)\n");
@@ -502,7 +502,7 @@ CheckTypeSize(struct re_pattern_buffer,64, 6944, 3)
 #elif __powerpc__
 CheckTypeSize(struct re_pattern_buffer,32, 6944, 6)
 #elif __s390__
-CheckTypeSize(struct re_pattern_buffer,0, 6944, 10)
+CheckTypeSize(struct re_pattern_buffer,32, 6944, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6944,0);
 Msg("Find size of re_pattern_buffer (6944)\n");
@@ -515,7 +515,7 @@ CheckTypeSize(regex_t,64, 6945, 3)
 #elif __powerpc__
 CheckTypeSize(regex_t,32, 6945, 6)
 #elif __s390__
-CheckTypeSize(regex_t,0, 6945, 10)
+CheckTypeSize(regex_t,32, 6945, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
 Msg("Find size of regex_t (6945)\n");
@@ -528,7 +528,7 @@ CheckTypeSize(regoff_t,4, 6946, 3)
 #elif __powerpc__
 CheckTypeSize(regoff_t,4, 6946, 6)
 #elif __s390__
-CheckTypeSize(regoff_t,0, 6946, 10)
+CheckTypeSize(regoff_t,4, 6946, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6946,0);
 Msg("Find size of regoff_t (6946)\n");
@@ -541,7 +541,7 @@ CheckTypeSize(regmatch_t,8, 6949, 3)
 #elif __powerpc__
 CheckTypeSize(regmatch_t,8, 6949, 6)
 #elif __s390__
-CheckTypeSize(regmatch_t,0, 6949, 10)
+CheckTypeSize(regmatch_t,8, 6949, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6949,0);
 Msg("Find size of regmatch_t (6949)\n");

@@ -580,7 +580,7 @@ CheckTypeSize(struct linger,8, 6907, 3)
 #elif __powerpc__
 CheckTypeSize(struct linger,8, 6907, 6)
 #elif __s390__
-CheckTypeSize(struct linger,0, 6907, 10)
+CheckTypeSize(struct linger,8, 6907, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6907,0);
 Msg("Find size of linger (6907)\n");
@@ -593,7 +593,7 @@ CheckTypeSize(struct cmsghdr,16, 6909, 3)
 #elif __powerpc__
 CheckTypeSize(struct cmsghdr,12, 6909, 6)
 #elif __s390__
-CheckTypeSize(struct cmsghdr,0, 6909, 10)
+CheckTypeSize(struct cmsghdr,12, 6909, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6909,0);
 Msg("Find size of cmsghdr (6909)\n");
@@ -606,7 +606,7 @@ CheckTypeSize(struct iovec,16, 9022, 3)
 #elif __powerpc__
 CheckTypeSize(struct iovec,8, 9022, 6)
 #elif __s390__
-CheckTypeSize(struct iovec,0, 9022, 10)
+CheckTypeSize(struct iovec,8, 9022, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9022,0);
 Msg("Find size of iovec (9022)\n");
@@ -619,7 +619,7 @@ CheckTypeSize(sa_family_t,2, 6905, 3)
 #elif __powerpc__
 CheckTypeSize(sa_family_t,2, 6905, 6)
 #elif __s390__
-CheckTypeSize(sa_family_t,0, 6905, 10)
+CheckTypeSize(sa_family_t,2, 6905, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6905,0);
 Msg("Find size of sa_family_t (6905)\n");
@@ -632,7 +632,7 @@ CheckTypeSize(socklen_t,4, 9155, 3)
 #elif __powerpc__
 CheckTypeSize(socklen_t,4, 9155, 6)
 #elif __s390__
-CheckTypeSize(socklen_t,0, 9155, 10)
+CheckTypeSize(socklen_t,4, 9155, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9155,0);
 Msg("Find size of socklen_t (9155)\n");
@@ -645,7 +645,7 @@ CheckTypeSize(struct sockaddr,16, 6906, 3)
 #elif __powerpc__
 CheckTypeSize(struct sockaddr,16, 6906, 6)
 #elif __s390__
-CheckTypeSize(struct sockaddr,0, 6906, 10)
+CheckTypeSize(struct sockaddr,16, 6906, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6906,0);
 Msg("Find size of sockaddr (6906)\n");
@@ -658,7 +658,7 @@ CheckTypeSize(struct msghdr,56, 6908, 3)
 #elif __powerpc__
 CheckTypeSize(struct msghdr,28, 6908, 6)
 #elif __s390__
-CheckTypeSize(struct msghdr,0, 6908, 10)
+CheckTypeSize(struct msghdr,28, 6908, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6908,0);
 Msg("Find size of msghdr (6908)\n");

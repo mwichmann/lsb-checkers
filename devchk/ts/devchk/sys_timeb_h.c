@@ -30,7 +30,7 @@ CheckTypeSize(struct timeb,16, 10216, 3)
 #elif __powerpc__
 CheckTypeSize(struct timeb,12, 10216, 6)
 #elif __s390__
-CheckTypeSize(struct timeb,0, 10216, 10)
+CheckTypeSize(struct timeb,12, 10216, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10216,0);
 Msg("Find size of timeb (10216)\n");

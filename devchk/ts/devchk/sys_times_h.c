@@ -30,7 +30,7 @@ CheckTypeSize(struct tms,32, 6990, 3)
 #elif __powerpc__
 CheckTypeSize(struct tms,16, 6990, 6)
 #elif __s390__
-CheckTypeSize(struct tms,0, 6990, 10)
+CheckTypeSize(struct tms,16, 6990, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6990,0);
 Msg("Find size of tms (6990)\n");

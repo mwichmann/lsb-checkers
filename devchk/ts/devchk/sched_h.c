@@ -60,7 +60,7 @@ CheckTypeSize(struct sched_param,4, 9045, 3)
 #elif __powerpc__
 CheckTypeSize(struct sched_param,4, 9045, 6)
 #elif __s390__
-CheckTypeSize(struct sched_param,0, 9045, 10)
+CheckTypeSize(struct sched_param,4, 9045, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9045,0);
 Msg("Find size of sched_param (9045)\n");
