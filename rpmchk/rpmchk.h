@@ -147,7 +147,11 @@ extern char *pkgname;
 extern unsigned char *sigdata;
 extern int lsbdepidx;
 extern int archivesize;
-extern int *filesizes;
+extern unsigned int *filesizes;
+extern unsigned short *filemodes;
+extern unsigned short *filedevs;
+extern unsigned int *filetimes;
+extern char *filemd5s;
 extern int *filenames;
 
 /* util.c */
