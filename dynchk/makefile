@@ -4,16 +4,17 @@ WRAPPER_LIBS = \
 	libs/libncurses/libncurses.o \
 	libs/libz/libz.o \
 	libs/libm/libm.o \
+	libs/libSM/libSM.o \
+	libs/libpthread/libpthread.o
+
 #	libs/libXt/libXt.o \
 #	libs/libICE/libICE.o \
-	libs/libSM/libSM.o \
 #	libs/libGL/libGL.o 
 #	libs/libX11/libX11.o 
-#	libs/libpthread/libpthread.o
+
 
 TEST_LIB = tests/tests.o
 FHS_LIB = fhs/fhs.o
-
 LIB64=$(shell case `arch` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
 REAL_LIBS = -L/opt/lsb/lib$(LIB64) -lXt -lICE -l SM -lX11 -lGL -lncurses -lpam -lz -lm -ldl -lc 
 
