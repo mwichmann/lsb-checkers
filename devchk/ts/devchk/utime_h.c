@@ -24,6 +24,8 @@ Msg("Checking data structures in utime.h\n");
 
 #ifdef __i386__
 CheckTypeSize(struct utimbuf,8, 7023, 2)
+CheckOffset(struct utimbuf,actime,0,2,30205)
+CheckOffset(struct utimbuf,modtime,4,2,30206)
 #elif __ia64__
 CheckTypeSize(struct utimbuf,16, 7023, 3)
 #else

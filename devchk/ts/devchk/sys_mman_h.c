@@ -71,6 +71,13 @@ Msg( "Error: Constant not found: MAP_PRIVATE\n");
 cnt++;
 #endif
 
+#ifdef MAP_FIXED
+	CompareConstant(MAP_FIXED,0x10)
+#else
+Msg( "Error: Constant not found: MAP_FIXED\n");
+cnt++;
+#endif
+
 #ifdef MS_ASYNC
 	CompareConstant(MS_ASYNC,1)
 #else

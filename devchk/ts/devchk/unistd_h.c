@@ -813,6 +813,13 @@ Msg( "Error: Constant not found: _SC_XOPEN_VERSION\n");
 cnt++;
 #endif
 
+#ifdef _SC_PAGESIZE
+	CompareConstant(_SC_PAGESIZE,30)
+#else
+Msg( "Error: Constant not found: _SC_PAGESIZE\n");
+cnt++;
+#endif
+
 #ifdef _CS_PATH
 	CompareConstant(_CS_PATH,0)
 #else
@@ -958,6 +965,12 @@ cnt++;
 #else
 Msg( "Error: Constant not found: _XOPEN_REALTIME\n");
 cnt++;
+#endif
+
+#ifdef __i386__
+CheckTypeSize(off64_t,8, 9112, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9112,0);
 #endif
 
 #ifdef TET_TEST

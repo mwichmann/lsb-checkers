@@ -24,6 +24,10 @@ Msg("Checking data structures in grp.h\n");
 
 #ifdef __i386__
 CheckTypeSize(struct group,16, 6894, 2)
+CheckOffset(struct group,gr_name,0,2,29792)
+CheckOffset(struct group,gr_passwd,4,2,29793)
+CheckOffset(struct group,gr_gid,8,2,29794)
+CheckOffset(struct group,gr_mem,12,2,29795)
 #elif __ia64__
 CheckTypeSize(struct group,32, 6894, 3)
 #else

@@ -1,8 +1,13 @@
 OBJS = hdrchk.o \
 	GL_gl_h.o \
 	GL_glx_h.o \
+	X11_Composite_h.o \
+	X11_CompositeP_h.o \
+	X11_ConstrainP_h.o \
 	X11_ICE_ICElib_h.o \
 	X11_ICE_ICEutil_h.o \
+	X11_Intrinsic_h.o \
+	X11_ObjectP_h.o \
 	X11_SM_SMlib_h.o \
 	X11_X_h.o \
 	X11_Xauth_h.o \
@@ -19,6 +24,7 @@ OBJS = hdrchk.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
+	float_h.o \
 	fmtmsg_h.o \
 	fnmatch_h.o \
 	ftw_h.o \
@@ -60,9 +66,11 @@ OBJS = hdrchk.o \
 	sys_types_h.o \
 	sys_utsname_h.o \
 	sys_wait_h.o \
+	syslog_h.o \
 	tar_h.o \
 	termios_h.o \
 	time_h.o \
+	ucontext_h.o \
 	ulimit_h.o \
 	unistd_h.o \
 	utime_h.o \
@@ -89,7 +97,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	cc -o hdrchk $(OBJS) $(EXTRALIBS)
+	cc -o hdrchk $(OBJS) $(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 
 
 hdrchk.o: hdrchk.c
 	cc $(CFLAGS) -g -c hdrchk.c

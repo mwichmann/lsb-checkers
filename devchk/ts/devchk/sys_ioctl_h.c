@@ -29,6 +29,13 @@ Msg( "Error: Constant not found: FIONREAD\n");
 cnt++;
 #endif
 
+#ifdef TIOCNOTTY
+	CompareConstant(TIOCNOTTY,0x5422)
+#else
+Msg( "Error: Constant not found: TIOCNOTTY\n");
+cnt++;
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
