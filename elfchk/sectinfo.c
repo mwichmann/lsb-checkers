@@ -228,6 +228,8 @@ struct SectionInfo SectionInfo[] = {
 	{".stabstr",SHT_STRTAB,0,checkSTRTAB},
 	{".strtab",SHT_STRTAB,SHF_ALLOC,checkSTRTAB},
 	{".symtab",SHT_SYMTAB,SHF_ALLOC,checkSYMTAB},
+	{".tbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_TLS,checkNOBITS},
+	{".tdata",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_TLS,checkPROGBITS},
 	{".text",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #if __powerpc64__
 	{".toc",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
