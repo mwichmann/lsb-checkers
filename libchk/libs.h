@@ -10,6 +10,9 @@ extern struct versym ld_lsb_ia64_so_1[];
 #if defined(__s390__)
 extern struct versym ld_lsb_s390_so_1[];
 #endif
+#if defined(__x86_64__)
+extern struct versym ld_lsb_x86_64_so_1[];
+#endif
 #if defined(__i386__)
 extern struct versym ld_lsb_so_1[];
 #endif

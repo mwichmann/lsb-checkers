@@ -15,6 +15,9 @@ check_lib("/lib/ld-lsb-ia64.so.1",ld_lsb_ia64_so_1, journal);
 #if defined(__s390__)
 check_lib("/lib/ld-lsb-s390.so.1",ld_lsb_s390_so_1, journal);
 #endif
+#if defined(__x86_64__)
+check_lib("/lib/ld-lsb-x86_64.so.1",ld_lsb_x86_64_so_1, journal);
+#endif
 #if defined(__i386__)
 check_lib("/lib/ld-lsb.so.1",ld_lsb_so_1, journal);
 #endif
