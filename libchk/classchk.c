@@ -146,7 +146,32 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 */
 		for (j=0;j<classp->numvirtfuncs;j++) 
 		{
-			dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo);
+			/*
+			printf("checking vtable[%d] %s\n", j, classp->vtable->virtfuncs[j]);
+			*/
+			/*
+			 * Look up the name of the symbol associated with the funcptr
+			 * found in the vtable.
+			 */
+			if( !dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo) ) {
+					printf("Did not find symbol name for Virtual table entry ");
+					printf("[%d] expecting %s\n",
+									j, classp->vtable->virtfuncs[j] );
+			}
+
+			/*
+			 * 1.4.1) Make sure we found a named symbol at all.
+			 */
+			if ( !dlinfo.dli_saddr & (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS)) {
+					printf("Did not find symbol addr for Virtual table entry ");
+					printf("[%d] expecting %s\n",
+									j, classp->vtable->virtfuncs[j] );
+			}
+
+			/*
+			 * 1.4.2) Check to see if the symbol found is an exact match 
+			 * for the funcptr that was used for the lookup.
+			 */
 			if( dlinfo.dli_saddr &&
 							(dlinfo.dli_saddr!=fptr2ptr(vtvirtfuncs[j])) ) 
 			{
@@ -161,11 +186,19 @@ check_class_info(char *libname, struct classinfo *classes[],
 				printf("%p (expected).\n", fptr2ptr(vtvirtfuncs[j]));
 			}
 
-			if ( !dlinfo.dli_sname & !libchk_debug&LIBCHK_DEBUG_CXXHUSH) {
+			/*
+			 * 1.4.3) Make sure we found a named symbol at all.
+			 */
+			if ( !dlinfo.dli_sname & (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS)) {
 					printf("Did not find symbol name for Virtual table entry ");
 					printf("[%d] expecting %s\n",
 									j, classp->vtable->virtfuncs[j] );
 			}
+
+			/*
+			 * 1.4.4) Check to see if the symbol name found matches what we
+			 * are expecting to find
+			 */
 			if (((classp->vtable->virtfuncs[j] && dlinfo.dli_sname) &&
 					strcmp(classp->vtable->virtfuncs[j], dlinfo.dli_sname)) ||
 					(dlinfo.dli_sname && !classp->vtable->virtfuncs[j])) 
@@ -181,7 +214,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		}
 		} /* (*classp->vtablename) */
 		else {
-			if( libchk_debug&LIBCHK_DEBUG_CLASSDETAILS ) {
+			if( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) ) {
 				printf("No vtable name for %s\n",classp->name);
 			}
 		}
@@ -200,7 +233,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		if (symp+(2*sizeof(long)) != rttip->basevtable) 
 		{
 			dladdr(rttip->basevtable-8, &dlinfo);
-			if( libchk_debug&LIBCHK_DEBUG_CLASSDETAILS &&
+			if( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) &&
 							(vtablep && dlinfo.dli_saddr != vttypeinfo) )
 			{
 				printf("Uhoh3. Not an exact match\n");
@@ -388,7 +421,8 @@ check_class_info(char *libname, struct classinfo *classes[],
 		} else { /* (rttip) */
 			char	str[256];
 			sprintf(str, "_ZTI%s", &(classp->name[2]));
-			printf("No RTTI name for %s\n", str);
+			printf("No RTTI name for %s ", str);
+			printf("(looking for %s)\n", classp->rttiname);
 		}
 	}
 
