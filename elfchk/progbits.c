@@ -32,7 +32,7 @@ checkPROGBITS_data(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal
 /*
  * .data contains arbitrary initialized data. There is nothing to check.
  */
-return 0;
+return 1;
 }
 
 int
@@ -41,7 +41,7 @@ checkPROGBITS_data1(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journa
 /*
  * .data contains arbitrary initialized data. There is nothing to check.
  */
-return 0;
+return 1;
 }
 
 int
@@ -57,7 +57,7 @@ if( elfchk_debug&DEBUG_SECTION_CONTENTS )
  */
 check_CIE((caddr_t)(file1->addr)+hdr1->sh_offset,hdr1->sh_size);
 
-return 0;
+return 1;
 }
 
 int
@@ -109,7 +109,7 @@ for(i=0;i<frmhdr.fde_count;i++) {
 	fprintf(stderr,"address: %x\n", tmp);
 	}
 
-return 0;
+return 1;
 }
 
 int
@@ -133,7 +133,7 @@ checkPROGBITS_rodata(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journ
 /*
  * .rodata contains arbitrary initialized data. There is nothing to check.
  */
-return 0;
+return 1;
 }
 
 int
@@ -142,7 +142,7 @@ checkPROGBITS_rodata1(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *jour
 /*
  * .rodata1 contains arbitrary initialized data. There is nothing to check.
  */
-return 0;
+return 1;
 }
 
 int
@@ -151,7 +151,7 @@ checkPROGBITS_sdata(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journa
 /*
  * .sdata contains arbitrary initialized data. There is nothing to check.
  */
-return 0;
+return 1;
 }
 
 int
@@ -160,5 +160,5 @@ checkPROGBITS_sdata1(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journ
 /*
  * .sdata1 contains arbitrary initialized data. There is nothing to check.
  */
-return 0;
+return 1;
 }
