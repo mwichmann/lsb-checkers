@@ -918,6 +918,14 @@ CheckMemberSize(struct sigaction,sa_restorer,0,9,40155)
 CheckOffset(struct sigaction,sa_restorer,12,9,40155)
 #endif
 
+#if __s390x__
+CheckTypeSize(struct sigaction,8, 10576, 12)
+CheckMemberSize(struct sigaction,sa_flags,8,12,40312)
+CheckOffset(struct sigaction,sa_flags,0,12,40312)
+CheckMemberSize(struct sigaction,sa_mask,0,12,40313)
+CheckOffset(struct sigaction,sa_mask,8,12,40313)
+#endif
+
 #if __i386__
 CheckTypeSize(stack_t,12, 9314, 2)
 #elif __ia64__
