@@ -14,6 +14,7 @@ use DBI;
 use Getopt::Std;
 use IO::Handle;
 
+
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 ################################################################################
@@ -83,33 +84,124 @@ GROUP BY Tid'
 my @write_body_q;
 my $write_body_counter = 0;
 
-my $get_member_typetype_q = $dbh->prepare(
-'SELECT TTname
-FROM TypeType
-WHERE TTid = ?'
-									  )
-	or die "Couldn't prepare member typetype query: " . DBI->errstr;
+my $get_member_typetype_q =
+$dbh->prepare('SELECT TTname FROM TypeType WHERE TTid = ?' )
+	or die "Couldn't prepare member_typetype query: " . DBI->errstr;
+
+my $get_type_info_q =
+	$dbh->prepare('SELECT Tname, Ttype, Tbasetype, Tarray FROM Type WHERE Tid = ?' )
+	or die "Couldn't prepare type_info query: " . DBI->errstr;
+
+my $get_type_form_q = $dbh->prepare('SELECT Ttype FROM Type WHERE Tid = ?')
+	or die "Couldn't prepare type_from query: " . DBI->errstr;
+
+my $get_funcptr_declaration_q = $dbh->prepare(
+'SELECT TMtypeid FROM TypeMember WHERE TMmemberof = ?' )
+	or die "Couldn't prepare gen_funcptr_declaration query: " . DBI->errstr;
 
 ################################################################################
 #
 # subroutines
 #
 ################################################################################
+
+sub get_type_string($);
+
+sub get_type_string($) 
+{
+	my ($type_id)=@_;
+	my $out_str = "";
+	my $next_form;
+
+	$get_type_info_q->execute($type_id) 
+		or die "Couldn't execute type_info query: " . DBI->errstr;
+	my ($name, $form, $basetype, $array_index) = $get_type_info_q->fetchrow_array();
+	$get_type_info_q->finish();
+
+	$name =~ s/fptr-//;
+
+	if($form eq "Intrinsic" or $form eq "Literal" or $form eq "Typedef")
+	{
+		return $name;
+	}
+	elsif($form eq "Struct")
+	{
+		return "struct " . $name;
+	}
+	elsif($form eq "Union")
+	{
+		return "union " . $name;
+	}
+	elsif($form eq "Enum")
+	{
+		return "enum ". $name;
+	}
+	elsif($form eq "Pointer")
+	{
+		return get_type_string($basetype)." *";
+	}
+	elsif($form eq "Const")
+	{
+		$get_type_form_q->execute($basetype)
+			or die "Couldn't execute type_form query: " . DBI->errstr;
+		($next_form) = $get_type_form_q->fetchrow_array();
+		$get_type_form_q->finish;
+		return get_type_string($basetype)."const " if($next_form eq "Pointer");
+		return "const ".get_type_string($basetype); # (else)
+	}
+	elsif($form eq "Array")
+	{
+		return get_type_string($basetype);
+	}
+	elsif($form eq "FuncPtr")
+	{
+		return get_type_string($basetype)."(*".$name.")".get_funcptr_declaration($type_id);
+	}
+}
+	
+sub get_funcptr_declaration($)
+{
+	# This might fail if nested function pointers occur.
+	# In that case, we can just use the dynamic-preparation strategy, a la write_body()
+	my ($TMid) = @_;
+	my $i = 0;
+	my $output = "(";
+	$get_funcptr_declaration_q->execute($TMid)
+		or die "Couldn't execute funcptr declaration query: " . DBI->errstr;
+	while( my($type_id) = $get_funcptr_declaration_q->fetchrow_array())
+	{
+		$output.=", " if ($i>0);
+		$output.=get_type_string($type_id);
+	}
+	$get_funcptr_declaration_q->finish;
+	$output.=")";
+	return $output;
+}
+
 sub get_member_typetype 
 {
-	my($type, $typeform, $typetypeid) = @_;
+	my($type, $typeform, $base_type, $typetypeid) = @_;
+	my $type_array;
 	if($typetypeid != 0)
 	{
 		$get_member_typetype_q->execute($typetypeid)
 			or die "Couldn't execute get_member_typetype query: " . DBI->errstr;
 		my($typetype) = $get_member_typetype_q->fetchrow_array();
+		$get_member_typetype_q->finish;
 		return $typetype;
 	}
    
 	return "ANONYMOUS" if($type =~ /\Aanon-/);
 	return "struct_".$type if($typeform eq "Struct");
 	return "union_".$type if($typeform eq "Union");
-	# Should I handle ($typeform eq "Pointer") ?
+	if($typeform eq "Pointer")
+	{
+		$get_type_info_q->execute($base_type);
+		($type, $typeform, $base_type, $typetypeid) = $get_type_info_q->fetchrow_array()
+			or die "Couldn't execute member_typety_ptr query: " . DBI->errstr;
+		return get_member_typetype($type, $typeform, $base_type, 0);
+	}
+
 	return "NULL_TYPETYPE";
 }
 
@@ -154,7 +246,7 @@ sub write_body($$$$)
 	{
 
 		$write_body_q[$write_body_counter] = $dbh->prepare(
-'SELECT TMname, TMtypetype, Tname, Ttype, Tid
+'SELECT TMname, TMtypetype, Tname, Ttype, Tbasetype, Tid
 FROM TypeMember, Type
 WHERE TMmemberof = ?
   AND TMtypeid = Tid
@@ -167,10 +259,10 @@ ORDER BY TMposition'
 
 	$write_body_q[$depth]->execute($struct_id)
 		or die "Couldn't execute write_body query: " . DBI->errstr;
-	while(my ($name, $typetypeid, $type, $typeform, $type_id) = $write_body_q[$depth]->fetchrow_array())
+	while(my ($name, $typetypeid, $type, $typeform, $base_type, $type_id) = $write_body_q[$depth]->fetchrow_array())
 	{
 		# Write call to validate_* function.
-		$typetype = get_member_typetype($type, $typeform, $typetypeid);
+		$typetype = get_member_typetype($type, $typeform, $base_type, $typetypeid);
 
 		if($typetype eq "ANONYMOUS")
 		{
@@ -178,7 +270,7 @@ ORDER BY TMposition'
 		}
 		else
 		{
-			print $fh "\tvalidate_".$typetype."(".$ref_tree.$name.");\n";
+			print $fh "\tvalidate_".$typetype."(".$ref_tree.get_type_string($type_id).");\n";
 		}
 	}
 	print $fh "}\n\n" if($depth == 0);

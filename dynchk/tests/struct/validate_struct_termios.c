@@ -5,13 +5,13 @@
 
 void validate_struct_termios(struct termios * input)
 {
-	validate_NULL_TYPETYPE(input->c_iflag);
-	validate_NULL_TYPETYPE(input->c_oflag);
-	validate_NULL_TYPETYPE(input->c_cflag);
-	validate_NULL_TYPETYPE(input->c_lflag);
-	validate_NULL_TYPETYPE(input->c_line);
-	validate_NULL_TYPETYPE(input->c_cc);
-	validate_NULL_TYPETYPE(input->c_ispeed);
-	validate_NULL_TYPETYPE(input->c_ospeed);
+	validate_NULL_TYPETYPE(input->tcflag_t);
+	validate_NULL_TYPETYPE(input->tcflag_t);
+	validate_NULL_TYPETYPE(input->tcflag_t);
+	validate_NULL_TYPETYPE(input->tcflag_t);
+	validate_NULL_TYPETYPE(input->cc_t);
+	validate_NULL_TYPETYPE(input->cc_t);
+	validate_NULL_TYPETYPE(input->speed_t);
+	validate_NULL_TYPETYPE(input->speed_t);
 }
 

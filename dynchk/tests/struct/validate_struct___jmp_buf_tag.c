@@ -5,8 +5,8 @@
 
 void validate_struct___jmp_buf_tag(struct __jmp_buf_tag * input)
 {
-	validate_NULL_TYPETYPE(input->__jmpbuf);
-	validate_NULL_TYPETYPE(input->__mask_was_saved);
-	validate_NULL_TYPETYPE(input->__saved_mask);
+	validate_NULL_TYPETYPE(input->__jmp_buf);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->sigset_t);
 }
 

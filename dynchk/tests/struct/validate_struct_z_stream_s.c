@@ -5,19 +5,19 @@
 
 void validate_struct_z_stream_s(struct z_stream_s * input)
 {
-	validate_NULL_TYPETYPE(input->next_in);
-	validate_NULL_TYPETYPE(input->avail_in);
-	validate_NULL_TYPETYPE(input->total_in);
-	validate_NULL_TYPETYPE(input->next_out);
-	validate_NULL_TYPETYPE(input->avail_out);
-	validate_NULL_TYPETYPE(input->total_out);
-	validate_NULL_TYPETYPE(input->msg);
-	validate_NULL_TYPETYPE(input->state);
-	validate_NULL_TYPETYPE(input->zalloc);
-	validate_NULL_TYPETYPE(input->zfree);
-	validate_NULL_TYPETYPE(input->opaque);
-	validate_NULL_TYPETYPE(input->data_type);
-	validate_NULL_TYPETYPE(input->adler);
-	validate_NULL_TYPETYPE(input->reserved);
+	validate_NULL_TYPETYPE(input->Bytef *);
+	validate_NULL_TYPETYPE(input->uInt);
+	validate_NULL_TYPETYPE(input->uLong);
+	validate_NULL_TYPETYPE(input->Bytef *);
+	validate_NULL_TYPETYPE(input->uInt);
+	validate_NULL_TYPETYPE(input->uLong);
+	validate_NULL_TYPETYPE(input->char *);
+	validate_struct_internal_state(input->struct internal_state *);
+	validate_NULL_TYPETYPE(input->alloc_func);
+	validate_NULL_TYPETYPE(input->free_func);
+	validate_NULL_TYPETYPE(input->voidpf);
+	validate_NULL_TYPETYPE(input->int);
+	validate_NULL_TYPETYPE(input->uLong);
+	validate_NULL_TYPETYPE(input->uLong);
 }
 

@@ -5,7 +5,7 @@
 
 void validate_struct_iovec(struct iovec * input)
 {
-	validate_NULL_TYPETYPE(input->iov_base);
-	validate_NULL_TYPETYPE(input->iov_len);
+	validate_NULL_TYPETYPE(input->void *);
+	validate_NULL_TYPETYPE(input->size_t);
 }
 

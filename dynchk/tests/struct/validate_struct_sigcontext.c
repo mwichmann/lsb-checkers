@@ -5,33 +5,33 @@
 
 void validate_struct_sigcontext(struct sigcontext * input)
 {
-	validate_NULL_TYPETYPE(input->gs);
-	validate_NULL_TYPETYPE(input->__gsh);
-	validate_NULL_TYPETYPE(input->fs);
-	validate_NULL_TYPETYPE(input->__fsh);
-	validate_NULL_TYPETYPE(input->es);
-	validate_NULL_TYPETYPE(input->__esh);
-	validate_NULL_TYPETYPE(input->ds);
-	validate_NULL_TYPETYPE(input->__dsh);
-	validate_NULL_TYPETYPE(input->edi);
-	validate_NULL_TYPETYPE(input->esi);
-	validate_NULL_TYPETYPE(input->ebp);
-	validate_NULL_TYPETYPE(input->esp);
-	validate_NULL_TYPETYPE(input->ebx);
-	validate_NULL_TYPETYPE(input->edx);
-	validate_NULL_TYPETYPE(input->ecx);
-	validate_NULL_TYPETYPE(input->eax);
-	validate_NULL_TYPETYPE(input->trapno);
-	validate_NULL_TYPETYPE(input->err);
-	validate_NULL_TYPETYPE(input->eip);
-	validate_NULL_TYPETYPE(input->cs);
-	validate_NULL_TYPETYPE(input->__csh);
-	validate_NULL_TYPETYPE(input->eflags);
-	validate_NULL_TYPETYPE(input->esp_at_signal);
-	validate_NULL_TYPETYPE(input->ss);
-	validate_NULL_TYPETYPE(input->__ssh);
-	validate_NULL_TYPETYPE(input->fpstate);
-	validate_NULL_TYPETYPE(input->oldmask);
-	validate_NULL_TYPETYPE(input->cr2);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_struct__fpstate(input->struct _fpstate *);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
 }
 

@@ -5,22 +5,22 @@
 
 void validate_struct_stat(struct stat * input)
 {
-	validate_NULL_TYPETYPE(input->st_dev);
-	validate_NULL_TYPETYPE(input->__pad1);
-	validate_NULL_TYPETYPE(input->st_ino);
-	validate_NULL_TYPETYPE(input->st_mode);
-	validate_NULL_TYPETYPE(input->st_nlink);
-	validate_NULL_TYPETYPE(input->st_uid);
-	validate_NULL_TYPETYPE(input->st_gid);
-	validate_NULL_TYPETYPE(input->st_rdev);
-	validate_NULL_TYPETYPE(input->__pad2);
-	validate_NULL_TYPETYPE(input->st_size);
-	validate_NULL_TYPETYPE(input->st_blksize);
-	validate_NULL_TYPETYPE(input->st_blocks);
-	validate_struct_timespec(input->st_atim);
-	validate_struct_timespec(input->st_mtim);
-	validate_struct_timespec(input->st_ctim);
-	validate_NULL_TYPETYPE(input->__unused4);
-	validate_NULL_TYPETYPE(input->__unused5);
+	validate_NULL_TYPETYPE(input->dev_t);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->mode_t);
+	validate_NULL_TYPETYPE(input->nlink_t);
+	validate_NULL_TYPETYPE(input->pid_t);
+	validate_NULL_TYPETYPE(input->gid_t);
+	validate_NULL_TYPETYPE(input->dev_t);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->off_t);
+	validate_NULL_TYPETYPE(input->blksize_t);
+	validate_NULL_TYPETYPE(input->blkcnt_t);
+	validate_struct_timespec(input->struct timespec);
+	validate_struct_timespec(input->struct timespec);
+	validate_struct_timespec(input->struct timespec);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_NULL_TYPETYPE(input->unsigned long);
 }
 

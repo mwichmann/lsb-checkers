@@ -5,7 +5,7 @@
 
 void validate_struct__pthread_fastlock(struct _pthread_fastlock * input)
 {
-	validate_NULL_TYPETYPE(input->__status);
-	validate_NULL_TYPETYPE(input->__spinlock);
+	validate_NULL_TYPETYPE(input->long);
+	validate_NULL_TYPETYPE(input->int);
 }
 

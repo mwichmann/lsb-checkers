@@ -5,10 +5,10 @@
 
 void validate_struct_AUTH(struct AUTH * input)
 {
-	validate_struct_opaque_auth(input->ah_cred);
-	validate_struct_opaque_auth(input->ah_verf);
-	validate_union_des_block(input->ah_key);
-	validate_NULL_TYPETYPE(input->ah_ops);
-	validate_NULL_TYPETYPE(input->ah_private);
+	validate_struct_opaque_auth(input->struct opaque_auth);
+	validate_struct_opaque_auth(input->struct opaque_auth);
+	validate_union_des_block(input->union des_block);
+	validate_struct_auth_ops(input->struct auth_ops *);
+	validate_NULL_TYPETYPE(input->caddr_t);
 }
 

@@ -5,9 +5,9 @@
 
 void validate_struct_timeb(struct timeb * input)
 {
-	validate_NULL_TYPETYPE(input->time);
-	validate_NULL_TYPETYPE(input->millitm);
-	validate_NULL_TYPETYPE(input->timezone);
-	validate_NULL_TYPETYPE(input->dstflag);
+	validate_NULL_TYPETYPE(input->time_t);
+	validate_NULL_TYPETYPE(input->unsigned short);
+	validate_NULL_TYPETYPE(input->short);
+	validate_NULL_TYPETYPE(input->short);
 }
 

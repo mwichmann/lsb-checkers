@@ -5,7 +5,7 @@
 
 void validate_struct_timeval(struct timeval * input)
 {
-	validate_NULL_TYPETYPE(input->tv_sec);
-	validate_NULL_TYPETYPE(input->tv_usec);
+	validate_NULL_TYPETYPE(input->time_t);
+	validate_NULL_TYPETYPE(input->suseconds_t);
 }
 

@@ -5,11 +5,11 @@
 
 void validate_struct_xp_ops(struct xp_ops * input)
 {
-	validate_NULL_TYPETYPE(input->xp_recv);
-	validate_NULL_TYPETYPE(input->xp_stat);
-	validate_NULL_TYPETYPE(input->xp_getargs);
-	validate_NULL_TYPETYPE(input->xp_reply);
-	validate_NULL_TYPETYPE(input->xp_freeargs);
-	validate_NULL_TYPETYPE(input->xp_destroy);
+	validate_NULL_TYPETYPE(input->bool_t(*xp_recv)(SVCXPRT *struct rpc_msg *));
+	validate_NULL_TYPETYPE(input->enum xprt_stat(*xp_stat)(SVCXPRT *));
+	validate_NULL_TYPETYPE(input->bool_t(*xp_getargs)(SVCXPRT *xdrproc_tcaddr_t));
+	validate_NULL_TYPETYPE(input->bool_t(*xp_reply)(SVCXPRT *struct rpc_msg *));
+	validate_NULL_TYPETYPE(input->bool_t(*xp_freeargs)(SVCXPRT *xdrproc_tcaddr_t));
+	validate_NULL_TYPETYPE(input->void(*xp_destroy)(SVCXPRT *));
 }
 

@@ -5,11 +5,11 @@
 
 void validate_struct_ucontext(struct ucontext * input)
 {
-	validate_NULL_TYPETYPE(input->uc_flags);
-	validate_NULL_TYPETYPE(input->uc_link);
-	validate_NULL_TYPETYPE(input->uc_stack);
-	validate_NULL_TYPETYPE(input->uc_mcontext);
-	validate_NULL_TYPETYPE(input->uc_sigmask);
-	validate_struct__libc_fpstate(input->__fpregs_mem);
+	validate_NULL_TYPETYPE(input->unsigned long);
+	validate_struct_ucontext(input->struct ucontext *);
+	validate_NULL_TYPETYPE(input->stack_t);
+	validate_NULL_TYPETYPE(input->mcontext_t);
+	validate_NULL_TYPETYPE(input->sigset_t);
+	validate_struct__libc_fpstate(input->struct _libc_fpstate);
 }
 

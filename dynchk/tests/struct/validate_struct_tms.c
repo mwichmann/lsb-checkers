@@ -5,9 +5,9 @@
 
 void validate_struct_tms(struct tms * input)
 {
-	validate_NULL_TYPETYPE(input->tms_utime);
-	validate_NULL_TYPETYPE(input->tms_stime);
-	validate_NULL_TYPETYPE(input->tms_cutime);
-	validate_NULL_TYPETYPE(input->tms_cstime);
+	validate_NULL_TYPETYPE(input->clock_t);
+	validate_NULL_TYPETYPE(input->clock_t);
+	validate_NULL_TYPETYPE(input->clock_t);
+	validate_NULL_TYPETYPE(input->clock_t);
 }
 
