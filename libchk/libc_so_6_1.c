@@ -9119,6 +9119,7 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"posix_memalign","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
+	{"posix_openpt","GLIBC_2.2.1",0,"LSB-Core",0,1},
 #if __i386__
 	{"printf","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
