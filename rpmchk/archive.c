@@ -78,9 +78,9 @@ startoffset=gztell(zfile);
  */
 
 while( !gzeof(zfile) ) {
-	char	*fptr,filename[1024]; /* XXX Potential overflow!! */
+	char	*fptr,*fmt,filename[PATH_MAX+1],tagfilename[PATH_MAX+1];
 	char	num[9];
-	int	size,mode,devmaj,devmin,flink;
+	int	size,mode,devmaj,devmin,flink,fino;
 	time_t	ftime;
 
 	gzread(zfile, &ahdr, sizeof(ahdr) );
@@ -109,7 +109,6 @@ while( !gzeof(zfile) ) {
 	num[8]=0; /* NULL terminate the namesize */
 	size=strtol(num,NULL,16);
 	gzread(zfile, filename, size );
-
 	/*
 	 * Check/fix padding here - the amount of space used for the header
 	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
@@ -140,6 +139,34 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	mode=strtol(num,NULL,16);
 
+	/*
+	 * Check the file name against the RPMTAG_DIRNAME, RPMTAG_DIRINDEXES,
+	 * RPMTAG_BASENAME values.
+	 */
+
+	if(hasPayloadFilesHavePrefix) {
+		fmt=".%s%s";
+	} else {
+		fmt="%s%s";
+	}
+	if( dirindicies[fileindex] <= numdirnames ) {
+		/*
+		fprintf(stderr,"dirindex: %x\n", dirindicies[fileindex]);
+		fprintf(stderr,"dirname: %s\n",
+					dirnames[dirindicies[fileindex]]);
+		fprintf(stderr,"basename: %s\n", basenames[fileindex]);
+		*/
+		sprintf(tagfilename,fmt,
+			dirnames[dirindicies[fileindex]],basenames[fileindex]);
+
+		if( strcmp(filename,tagfilename) != 0 ) {
+			fprintf(stderr,
+		    "Payload filename %s doesn't match RPMTAG based name %s\n",
+			filename, tagfilename);
+		}
+	} else {
+		fprintf(stderr,"dirindex out of range!!!\n");
+	}
 
 	/*
 	 * Check the file size against the RPMTAG_FILESIZES value
@@ -160,7 +187,23 @@ while( !gzeof(zfile) ) {
 	}
 
 	/*
-	 * Check the file modes against the RPMTAG_FILERDEVS value
+	 * Check the file dev against the RPMTAG_FILEDEVICES value
+	 */
+
+	memcpy(num,ahdr.c_devmajor,8);
+	num[8]=0;
+	devmaj=strtol(num,NULL,16);
+
+	memcpy(num,ahdr.c_devminor,8);
+	num[8]=0;
+	devmin=strtol(num,NULL,16);
+
+	if( (makedev(devmaj,devmin) != filedevs[fileindex]) ) {
+		fprintf(stderr,"File dev (%x) for %s not that same a specified in RPMTAG_FILEDEVICES (%x)\n", makedev(devmaj,devmin), filename, filedevs[fileindex] );
+	}
+
+	/*
+	 * Check the file rdev against the RPMTAG_FILERDEVS value
 	 */
 
 	memcpy(num,ahdr.c_rdevmajor,8);
@@ -171,8 +214,8 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	devmin=strtol(num,NULL,16);
 
-	if( (makedev(devmaj,devmin) != filedevs[fileindex]) ) {
-		fprintf(stderr,"File rdev (%x) for %s not that same a specified in RPMTAG_FILERDEVS (%x)\n", makedev(devmaj,devmin), filename, filedevs[fileindex] );
+	if( (makedev(devmaj,devmin) != filerdevs[fileindex]) ) {
+		fprintf(stderr,"File rdev (%x) for %s not that same a specified in RPMTAG_FILERDEVS (%x)\n", makedev(devmaj,devmin), filename, filerdevs[fileindex] );
 	}
 
 	/*
@@ -185,6 +228,18 @@ while( !gzeof(zfile) ) {
 
 	if( (ftime != filetimes[fileindex]) ) {
 		fprintf(stderr,"File time  (%x) for %s not that same a specified in RPMTAG_FILEMTIMES (%x)\n", (unsigned int)ftime, filename, filetimes[fileindex] );
+	}
+
+	/*
+	 * Check the file modes against the RPMTAG_FILEINODES value
+	 */
+
+	memcpy(num,ahdr.c_ino,8);
+	num[8]=0;
+	fino=strtol(num,NULL,16);
+
+	if( (fino != fileinodes[fileindex]) ) {
+		fprintf(stderr,"File inode  (%x) for %s not that same a specified in RPMTAG_FILEINODES (%x)\n", (unsigned int)fino, filename, fileinodes[fileindex] );
 	}
 
 	/*

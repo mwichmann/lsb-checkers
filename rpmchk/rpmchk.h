@@ -161,13 +161,20 @@ extern int archivesize;
 extern int rpmtagsize;
 extern unsigned int *filesizes;
 extern unsigned short *filemodes;
-extern unsigned short *filedevs;
+extern unsigned int *filedevs;
+extern unsigned short *filerdevs;
+extern unsigned int *fileinodes;
 extern unsigned int *filetimes;
 extern char *filemd5s;
 extern char *filelinktos;
 extern char *fileusernames;
 extern char *filegroupnames;
-extern int *filenames;
+extern char *filelangs;
+extern int  *dirindicies;
+extern char **basenames;
+extern char **dirnames;
+extern int  numdirnames;
+extern int  hasPayloadFilesHavePrefix;
 
 /* util.c */
 extern RpmFile *OpenRpmFile(char *name);
