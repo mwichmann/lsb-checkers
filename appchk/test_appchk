@@ -16,11 +16,11 @@ else
 	echo "OK"
 fi
 
-# Try running appchk on /bin/cat
-# Although /bin/cat is probably not LSB compliant, we expect it to succeed
+# Try running appchk on itself
+# Although appchk is probably not LSB compliant, we expect it to succeed
 # as appchk does not return a non-zero return code if the program(s)
 # being analysed are not compliant
-PROG=/bin/cat
+PROG=appchk
 printf "Running appchk on $PROG..."
 JOURNAL_FILE=journal.appchk.`basename $PROG`
 rm -f $JOURNAL_FILE
