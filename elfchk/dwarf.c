@@ -307,6 +307,22 @@ dumpbytes(ptr,8);
                 used += numused;
 		break;
 
+	case DW_CFA_GNU_negative_offset_extended:
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"DW_CFA_GNU_negative_offset_extended\n" );
+                }
+
+		/* Operand 1 - ULEB128 register */
+		tmp = decode_uleb128(ptr,&numused);
+                ptr += numused;
+                used += numused;
+
+		/* Operand 2 - ULEB128 register */
+		tmp = decode_uleb128(ptr,&numused);
+                ptr += numused;
+                used += numused;
+		break;
+
 /* 	case DW_CFA_expression: */
 /* 		if (elfchk_debug&DEBUG_DWARF_CONTENTS) { */
 /* 			fprintf(stderr,"DW_CFA_expression\n" ); */
@@ -440,13 +456,19 @@ int check_CFInformation(unsigned char *ptr)
                 {
                         /* Have CIE */
                         if (elfchk_debug & DEBUG_DWARF_CONTENTS)
+                        {
+                                fprintf(stderr, "-----------------------\n");
                                 fprintf(stderr, "CIE record\n");
+                        }
                         used = check_CIE(ptr);
                 }
                 else
                 {
                         if (elfchk_debug & DEBUG_DWARF_CONTENTS)
+                        {
+                                fprintf(stderr, "-----------------------\n");
                                 fprintf(stderr, "FDE record\n");
+                        }
                         used = check_FDE(ptr);
                 }
                 numused+=used;
@@ -480,6 +502,11 @@ int check_CIE(unsigned char *ptr)
         ptr = (unsigned char *)(frameimg->augmentation)
                 + strlen(frameimg->augmentation) + 1;
 
+        if (strcmp(frame.augmentation, "eh")==0)
+        {
+                ptr += sizeof(long);
+        }
+
         frame.code_alignment_factor = decode_uleb128(ptr, &numused);
         ptr += numused;
 
@@ -495,27 +522,36 @@ int check_CIE(unsigned char *ptr)
                         frame.return_address_register);
 	}
 
+
         /* Get the info related with 'z' */
-        frame.augmentation_len = decode_uleb128(ptr,&numused);
-        ptr += numused;
-        if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-                fprintf(stderr,"augmentation_len: %x\n", 
-                        frame.augmentation_len);
-	}
-        cfi_start = ptr + frame.augmentation_len;
+        if (frame.augmentation[0] == 'z')
+        {
+                frame.augmentation_len = decode_uleb128(ptr,&numused);
+                ptr += numused;
+                if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+                        fprintf(stderr,"augmentation_len: %x\n", 
+                                frame.augmentation_len);
+                }
+                cfi_start = ptr + frame.augmentation_len;
 
-        /* Get the info related with 'P' */
-        frame.encoding = *ptr++;
-        frame.personality_routine = *(unsigned char **)ptr;
-        ptr += sizeof(unsigned char *);
+                /* Get the info related with 'P' */
+                frame.encoding = *ptr++;
+                frame.personality_routine = *(unsigned char **)ptr;
+                ptr += sizeof(unsigned char *);
 
-        if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-                fprintf(stderr,"encoding: %x\n", frame.encoding);
-                fprintf(stderr,"per routine: %p\n", frame.personality_routine);
-	}
+                if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+                        fprintf(stderr,"encoding: %x\n", frame.encoding);
+                        fprintf(stderr,"per routine: %p\n", 
+                                frame.personality_routine);
+                }
+                /* We use the offset from the augmentation
+                   in this case because we don't know how
+                   to handle the info with L in the augmentation */
+                ptr = cfi_start;
+        }
+
 
         /* Get the CFIs */
-        ptr = cfi_start;
         if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
                 fprintf(stderr,"%x bytes of CFI\n", 
                         ptr - (unsigned char *)frameimg);

@@ -89,7 +89,8 @@ typedef struct EHFRMHDR {
 #define DW_CFA_def_cfa_offset_sf   0x13
 
 /* GNU Stuff */
-#define DW_CFA_GNU_args_size  0x2e
+#define DW_CFA_GNU_args_size                0x2e
+#define DW_CFA_GNU_negative_offset_extended 0x2f
 
 /* DWARF Exception Header Encoding - Taken from LSB v1.3 */
 
