@@ -11,9 +11,12 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.2 $
+# This is $Revision: 1.3 $
 #
 # $Log: tetj.py,v $
+# Revision 1.3  2003/11/12 17:17:12  mats
+# Add in missing field for 400/410 lines (for now, just hardcode it as '1')
+#
 # Revision 1.2  2003/11/12 00:46:08  mats
 # Revision pass to make a "Journal" a class so it can hold state and
 # simplify a lot of the passing around of variables.
@@ -74,7 +77,7 @@ class Journal:
 	except KeyError:
 	    pwent = ""
   
-	self.journal.write("0|lsb-0.1 %s|User: %s (%i) TCC Start, Command line: %s\n" %
+	self.journal.write("0|lsb-0.2 %s|User: %s (%i) TCC Start, Command line: %s\n" %
 	      (datetime, pwent[0], uid, command_run))
 
 	self.journal.write("5|%s %s %s %s %s|System Information\n" %
@@ -117,8 +120,12 @@ class Journal:
     def purpose_start(self, message=None):
 	self.testcase += 1
 	if self.journal:
-	    #XXX 400's have an extra field before date
-	    self.journal.write("400|%u %u %s|IC Start\n" %
+	    # This is a shortcut.  It assumes that every invocable component
+	    # has a single test purpose, instead of potentially multiple ones.
+	    # The wrapping should be: 400 (200 220) (200 220) ... 410
+	    # Instead we make the call purpose_start mean 400 200,
+	    # and predict the tp count within that ic as (hardwired) 1
+	    self.journal.write("400|%u %u 1 %s|IC Start\n" %
 		(self.activity, self.testcase, get_current_time_string()))
 	    self.journal.write("200|%u %u %s|TP Start" %
 		(self.activity, self.testcase, get_current_time_string()))
@@ -129,8 +136,8 @@ class Journal:
 
     def purpose_end(self):
 	if self.journal:
-	    #XXX 410's have an extra field before date
-	    self.journal.write("410|%u %u %s|IC End\n" %
+	    # see note above: the hardwired '1' should be a actual count
+	    self.journal.write("410|%u %u 1 %s|IC End\n" %
 		(self.activity, self.testcase, get_current_time_string()))
 
     def result(self, result):
