@@ -10,9 +10,6 @@
 int time_h()
 {
 int cnt=0;
-CheckTypeSize(struct timespec,0)
-CheckOffset(struct timespec,tv_sec,0)
-CheckOffset(struct timespec,tv_nsec,4)
 CheckTypeSize(time_t,4)
 CheckTypeSize(clock_t,4)
 CheckTypeSize(struct tm,0)

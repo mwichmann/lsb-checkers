@@ -12,6 +12,39 @@ sub writetest($$)
 local($Hid,$Hname)=@_;
 my(%entry);
 
+#
+# Get the return types
+#
+$select = "SELECT Ireturn FROM Interface ";
+$select.= "WHERE Iheader=$Hid ";
+$select.= "AND Istatus='Included' ";
+#$select.= "AND Iarch=$Aid";
+print $select,"\n" if $trace;
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+for(1..$sth->numrows) {
+        %entry=$sth->fetchhash;
+        $type{$entry{'Ireturn'}}=1;
+        }
+
+#
+# Get the parameter types
+#
+$select = "SELECT Ptype FROM Interface,Parameter ";
+$select.= "WHERE Iheader=$Hid ";
+$select.= "AND Pint=Iid ";
+$select.= "AND Istatus='Included' ";
+#$select.= "AND Iarch=$Aid";
+print $select,"\n" if $trace;
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+for(1..$sth->numrows) {
+        %entry=$sth->fetchhash;
+        $type{$entry{'Ptype'}}=1;
+        }
+
+$typelist=join ',', keys(%type);
+
+if( $typelist eq "" ) { return 0; }
+
 $fname=$Hname;
 $fname =~ tr/\/./__/;
 $filename = $fname.".c";
@@ -31,6 +64,7 @@ $cth = $Dbh->query($select) || die $Dbh->errmsg();
 $select = "SELECT DISTINCT * FROM Type,HeaderGroup ";
 $select.= "WHERE HGheader=$Hid ";
 $select.= "AND Theadergroup=HGid ";
+$select.= "AND Tid IN ($typelist)";
 $select.= "ORDER BY Theadergroup ";
 $tth = $Dbh->query($select) || die $Dbh->errmsg();
 if( $cth->numrows == 0 && $tth->numrows == 0 ) {
