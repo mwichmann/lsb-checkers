@@ -165,7 +165,8 @@ while( !gzeof(zfile) ) {
 		fmt="%s%s";
 	}
 	if( hasCompressedFileNames ) {
-	    if( dirindicies[fileindex] <= numdirnames ) {
+	    if( hasNewFilenames ) {
+	      if( dirindicies[fileindex] <= numdirnames ) {
 		/*
 		fprintf(stderr,"dirindex: %x\n", dirindicies[fileindex]);
 		fprintf(stderr,"dirname: %s\n",
@@ -180,42 +181,47 @@ while( !gzeof(zfile) ) {
 		    "Payload filename %s doesn't match RPMTAG based name %s\n",
 			filename, tagfilename);
 		}
-	    } else {
+	      } else {
 		fprintf(stderr,"dirindex out of range!!!\n");
+	      }
 	    }
 	} else {
-		/*
-		 * The RPMTAG starts with a '/', but the cpio
-		 * filename doesn't, so skip the first char.
-		 */
+	    if( hasOldFilenames ) {
+	       /*
+	     	* The RPMTAG starts with a '/', but the cpio
+	     	* filename doesn't, so skip the first char.
+	     	*/
 		if( strcmp(filename,foldnames+1) != 0 ) {
 			fprintf(stderr,
 		    "Payload filename %s doesn't match RPMTAG based name %s\n",
 			filename, foldnames+1);
 		}
 		foldnames+=strlen(foldnames)+1;
+	    }
 	}
 
 	/*
 	 * Check the file size against the RPMTAG_FILESIZES value
 	 */
 
-	/* Directories have no size, but RPMTAG_FILESIZES sez 1024 */
-	if( S_ISREG(mode) && (size != filesizes[fileindex]) ) {
+	if( filesizes ) {
+	    /* Directories have no size, but RPMTAG_FILESIZES sez 1024 */
+	    if( S_ISREG(mode) && (size != filesizes[fileindex]) ) {
 		fprintf(stderr,"Filesize (%d) for %s not that same a specified in RPMTAG_FILESIZES (%d)\n", size, filename, filesizes[fileindex] );
 		}
 
-	/* Accumulate the size for later comparison */
-	if( S_ISREG(mode) ) {
+	    /* Accumulate the size for later comparison */
+	    if( S_ISREG(mode) ) {
 		/* NB: RPM 3.0.6 also included the filesize from directories */
 		filesizesum+=size;
 		}
+	}
 
 	/*
 	 * Check the file modes against the RPMTAG_FILEMODES value
 	 */
 
-	if( (mode != filemodes[fileindex]) ) {
+	if( filemodes && (mode != filemodes[fileindex]) ) {
 		fprintf(stderr,"Filemode  (%o) for %s not the same as specified in RPMTAG_FILEMODES (%o)\n", mode, filename, filemodes[fileindex] );
 	}
 
@@ -231,7 +237,7 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	devmin=strtol(num,NULL,16);
 
-	if( (makedev(devmaj,devmin) != filedevs[fileindex]) ) {
+	if( filedevs && (makedev(devmaj,devmin) != filedevs[fileindex]) ) {
 		fprintf(stderr,"File dev (%x) for %s not the same as specified in RPMTAG_FILEDEVICES (%x)\n", makedev(devmaj,devmin), filename, filedevs[fileindex] );
 	}
 
@@ -247,7 +253,7 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	devmin=strtol(num,NULL,16);
 
-	if( (makedev(devmaj,devmin) != filerdevs[fileindex]) ) {
+	if( filerdevs && (makedev(devmaj,devmin) != filerdevs[fileindex]) ) {
 		fprintf(stderr,"File rdev (%x) for %s not the same as specified in RPMTAG_FILERDEVS (%x)\n", makedev(devmaj,devmin), filename, filerdevs[fileindex] );
 	}
 
@@ -259,7 +265,7 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	ftime=strtol(num,NULL,16);
 
-	if( (ftime != filetimes[fileindex]) ) {
+	if( filetimes && (ftime != filetimes[fileindex]) ) {
 		fprintf(stderr,"File time  (%x) for %s not the same as specified in RPMTAG_FILEMTIMES (%x)\n", (unsigned int)ftime, filename, filetimes[fileindex] );
 	}
 
@@ -271,7 +277,7 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	fino=strtol(num,NULL,16);
 
-	if( (fino != fileinodes[fileindex]) ) {
+	if( fileinodes && (fino != fileinodes[fileindex]) ) {
 		fprintf(stderr,"File inode  (%x) for %s not the same as specified in RPMTAG_FILEINODES (%x)\n", (unsigned int)fino, filename, fileinodes[fileindex] );
 	}
 
@@ -279,7 +285,8 @@ while( !gzeof(zfile) ) {
 	 * Check the file modes against the RPMTAG_FILEMD5S value
 	 */
 
-	if( S_ISREG(mode) ) {
+	if ( fmd5 ) {
+	    if( S_ISREG(mode) ) {
 		MD5Init(&md5ctx);
 		while ( size>0 ) {
 			gzread(zfile,fbuf,size>1024?1024:size);
@@ -296,30 +303,34 @@ while( !gzeof(zfile) ) {
 		if( strncmp(fmd5,md5str,16) != 0 ) {
 			fprintf(stderr,"File MD5 (%s) for %s does not match value in RPMTAG_FILEMD5S (%s)\n", md5str, filename, fmd5 );
 			}
-	} else {
+	    } else {
 		/* If it actually has a size, we need to eat those bytes */
 		while ( size>0 ) {
 			gzread(zfile,fbuf,size>1024?1024:size);
 			size-=1024;
 			}
+	    }
+	    fmd5+=strlen(fmd5)+1;
 	}
-	fmd5+=strlen(fmd5)+1;
 
 	/*
-	 * Check the file modes against the RPMTAG_FILELINKTOS value
+	 * Check the file nlink against the RPMTAG_FILELINKTOS value
 	 */
 
 	memcpy(num,ahdr.c_nlink,8);
 	num[8]=0;
 	flink=strtol(num,NULL,16);
 
-	if( S_ISREG(mode) && flink>1 && !*flinktos ) {
+	if( flinktos ) {
+	    if( S_ISREG(mode) && flink>1 && !*flinktos ) {
 		fprintf(stderr,"File link expected, but no FILELINKTOS entry\n");
-	}
-	if( S_ISREG(mode) && flink==1 && *flinktos ) {
+	    }
+	    if( S_ISREG(mode) && flink==1 && *flinktos ) {
 		fprintf(stderr,"File link not expected, but FILELINKTOS present\n");
+	    }
+	
+	    flinktos+=strlen(flinktos)+1;
 	}
-	filelinktos+=strlen(filelinktos)+1;
 
 
 	/*
