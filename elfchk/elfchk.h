@@ -33,9 +33,13 @@ struct si_classtypeinfo_mem {
 	void	*basetypeinfo[0];
 	};
 
-struct base_type_info {
-	void	*basevtable;
+struct base_type_info_mem {
 	struct classtypeinfo_mem *base_type;
+	long	offset_flags;
+	};
+
+struct base_type_info {
+	char	*base_type;
 	long	offset_flags;
 	};
 
@@ -44,7 +48,7 @@ struct vmi_classtypeinfo_mem {
 	char	*name;
 	int	flags;
 	int	base_count;
-	struct base_type_info base_info[0];
+	struct base_type_info_mem base_info[0];
 	};
 
 struct pbasetypeinfo_mem {
@@ -81,10 +85,14 @@ struct classinfo {
 	char	*name;
 	char	*vtablename;
 	char	*rttiname;
+	char	*basename;
 	int	numvirtfuncs;
 	int	numbaseinfo;
+	int	numvmitypes;
+	int	flags;
 	struct classtypeinfo *typeinfo;
 	struct classvtable *vtable;
+	struct base_type_info *btinfo;
 	};
 
 #if defined(__alpha) || defined(__alpha__) || \
