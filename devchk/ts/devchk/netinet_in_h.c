@@ -84,6 +84,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_IPV6
+	CompareConstant(IPPROTO_IPV6,41,4456,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_IPV6\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_ICMPV6
+	CompareConstant(IPPROTO_ICMPV6,58,4463,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_ICMPV6\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef IPPROTO_RAW
 	CompareConstant(IPPROTO_RAW,255,4470,architecture)
 #else
@@ -118,6 +138,34 @@ cnt++;
 	CompareConstant(INADDR_NONE,((unsigned long int) 0xffffffff),4491,architecture)
 #else
 Msg( "Error: Constant not found: INADDR_NONE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6ADDR_ANY_INIT */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6ADDR_LOOPBACK_INIT */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef INET_ADDRSTRLEN
+	CompareConstant(INET_ADDRSTRLEN,16,4503,architecture)
+#else
+Msg( "Error: Constant not found: INET_ADDRSTRLEN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef INET6_ADDRSTRLEN
+	CompareConstant(INET6_ADDRSTRLEN,46,4504,architecture)
+#else
+Msg( "Error: Constant not found: INET6_ADDRSTRLEN\n");
 cnt++;
 #endif
 
@@ -183,6 +231,76 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_UNICAST_HOPS
+	CompareConstant(IPV6_UNICAST_HOPS,16,4719,architecture)
+#else
+Msg( "Error: Constant not found: IPV6_UNICAST_HOPS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_MULTICAST_IF
+	CompareConstant(IPV6_MULTICAST_IF,17,4720,architecture)
+#else
+Msg( "Error: Constant not found: IPV6_MULTICAST_IF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_MULTICAST_HOPS
+	CompareConstant(IPV6_MULTICAST_HOPS,18,4721,architecture)
+#else
+Msg( "Error: Constant not found: IPV6_MULTICAST_HOPS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_MULTICAST_LOOP
+	CompareConstant(IPV6_MULTICAST_LOOP,19,4722,architecture)
+#else
+Msg( "Error: Constant not found: IPV6_MULTICAST_LOOP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_JOIN_GROUP
+	CompareConstant(IPV6_JOIN_GROUP,20,5128,architecture)
+#else
+Msg( "Error: Constant not found: IPV6_JOIN_GROUP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_LEAVE_GROUP
+	CompareConstant(IPV6_LEAVE_GROUP,21,5129,architecture)
+#else
+Msg( "Error: Constant not found: IPV6_LEAVE_GROUP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_V6ONLY
+	CompareConstant(IPV6_V6ONLY,26,5130,architecture)
+#else
+Msg( "Error: Constant not found: IPV6_V6ONLY\n");
+cnt++;
+#endif
+
+#endif
+
 #if 1
 CheckTypeSize(struct in_addr,4, 10143, 1)
 CheckMemberSize(struct in_addr,s_addr,4,1,33767)
@@ -191,6 +309,60 @@ CheckOffset(struct in_addr,s_addr,0,1,33767)
 
 #if 1
 CheckTypeSize(in_addr_t,4, 10302, 1)
+#endif
+
+#if 1
+CheckTypeSize(struct in6_addr,16, 6900, 1)
+CheckMemberSize(struct in6_addr,in6_u,16,1,33783)
+CheckOffset(struct in6_addr,in6_u,0,1,33783)
+#endif
+
+#if 1
+CheckTypeSize(struct ipv6_mreq,20, 6903, 1)
+CheckMemberSize(struct ipv6_mreq,ipv6mr_multiaddr,16,1,33789)
+CheckOffset(struct ipv6_mreq,ipv6mr_multiaddr,0,1,33789)
+CheckMemberSize(struct ipv6_mreq,ipv6mr_interface,4,1,33790)
+CheckOffset(struct ipv6_mreq,ipv6mr_interface,16,1,33790)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(struct ip_mreq,8, 10146, 6)
+CheckMemberSize(struct ip_mreq,imr_interface,4,6,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,6,33769)
+#elif __i386__
+CheckTypeSize(struct ip_mreq,8, 10146, 2)
+CheckMemberSize(struct ip_mreq,imr_multiaddr,4,2,33768)
+CheckOffset(struct ip_mreq,imr_multiaddr,0,2,33768)
+CheckMemberSize(struct ip_mreq,imr_interface,4,2,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,2,33769)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct ip_mreq,8, 10146, 10)
+CheckMemberSize(struct ip_mreq,imr_interface,4,10,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,10,33769)
+#elif __s390x__
+CheckTypeSize(struct ip_mreq,8, 10146, 12)
+CheckMemberSize(struct ip_mreq,imr_interface,4,12,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,12,33769)
+#elif __ia64__
+CheckTypeSize(struct ip_mreq,8, 10146, 3)
+CheckMemberSize(struct ip_mreq,imr_interface,4,3,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,3,33769)
+#elif __powerpc64__
+CheckTypeSize(struct ip_mreq,0, 10146, 9)
+Msg("Missing member data for ip_mreq on PPC64\n");
+CheckOffset(struct ip_mreq,imr_multiaddr,0,9,33768)
+CheckOffset(struct ip_mreq,imr_interface,0,9,33769)
+#elif __x86_64__
+CheckTypeSize(struct ip_mreq,8, 10146, 11)
+CheckMemberSize(struct ip_mreq,imr_interface,4,11,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,11,33769)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10146,0);
+Msg("Find size of ip_mreq (10146)\n");
+#endif
+
+#if 1
+CheckTypeSize(in_port_t,2, 10888, 1)
 #endif
 
 #if __i386__
@@ -254,40 +426,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 Msg("Find size of sockaddr_in (9141)\n");
 #endif
 
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(struct ip_mreq,8, 10146, 6)
-CheckMemberSize(struct ip_mreq,imr_interface,4,6,33769)
-CheckOffset(struct ip_mreq,imr_interface,4,6,33769)
-#elif __i386__
-CheckTypeSize(struct ip_mreq,8, 10146, 2)
-CheckMemberSize(struct ip_mreq,imr_multiaddr,4,2,33768)
-CheckOffset(struct ip_mreq,imr_multiaddr,0,2,33768)
-CheckMemberSize(struct ip_mreq,imr_interface,4,2,33769)
-CheckOffset(struct ip_mreq,imr_interface,4,2,33769)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct ip_mreq,8, 10146, 10)
-CheckMemberSize(struct ip_mreq,imr_interface,4,10,33769)
-CheckOffset(struct ip_mreq,imr_interface,4,10,33769)
-#elif __s390x__
-CheckTypeSize(struct ip_mreq,8, 10146, 12)
-CheckMemberSize(struct ip_mreq,imr_interface,4,12,33769)
-CheckOffset(struct ip_mreq,imr_interface,4,12,33769)
-#elif __ia64__
-CheckTypeSize(struct ip_mreq,8, 10146, 3)
-CheckMemberSize(struct ip_mreq,imr_interface,4,3,33769)
-CheckOffset(struct ip_mreq,imr_interface,4,3,33769)
-#elif __powerpc64__
-CheckTypeSize(struct ip_mreq,0, 10146, 9)
-Msg("Missing member data for ip_mreq on PPC64\n");
-CheckOffset(struct ip_mreq,imr_multiaddr,0,9,33768)
-CheckOffset(struct ip_mreq,imr_interface,0,9,33769)
-#elif __x86_64__
-CheckTypeSize(struct ip_mreq,8, 10146, 11)
-CheckMemberSize(struct ip_mreq,imr_interface,4,11,33769)
-CheckOffset(struct ip_mreq,imr_interface,4,11,33769)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10146,0);
-Msg("Find size of ip_mreq (10146)\n");
+#if 1
+CheckTypeSize(struct sockaddr_in6,28, 6902, 1)
+CheckMemberSize(struct sockaddr_in6,sin6_family,2,1,33784)
+CheckOffset(struct sockaddr_in6,sin6_family,0,1,33784)
+CheckMemberSize(struct sockaddr_in6,sin6_port,2,1,33785)
+CheckOffset(struct sockaddr_in6,sin6_port,2,1,33785)
+CheckMemberSize(struct sockaddr_in6,sin6_flowinfo,4,1,33786)
+CheckOffset(struct sockaddr_in6,sin6_flowinfo,4,1,33786)
+CheckMemberSize(struct sockaddr_in6,sin6_addr,16,1,33787)
+CheckOffset(struct sockaddr_in6,sin6_addr,8,1,33787)
+CheckMemberSize(struct sockaddr_in6,sin6_scope_id,4,1,33788)
+CheckOffset(struct sockaddr_in6,sin6_scope_id,24,1,33788)
 #endif
 
 #ifdef TET_TEST

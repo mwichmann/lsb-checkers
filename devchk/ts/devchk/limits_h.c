@@ -288,6 +288,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SSIZE_MAX
+	CompareConstant(SSIZE_MAX,LONG_MAX,5127,architecture)
+#else
+Msg( "Error: Constant not found: SSIZE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SCHAR_MAX
 	CompareConstant(SCHAR_MAX,127,6,architecture)
 #else

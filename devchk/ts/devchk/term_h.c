@@ -26,6 +26,14 @@ int pcnt=0;
 Msg("Checking data structures in term.h\n");
 #endif
 
+#if __i386__
+CheckTypeSize(struct term,168, 10850, 2)
+Msg("Missing member data for term on IA32\n");
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10850,0);
+Msg("Find size of term (10850)\n");
+#endif
+
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(TERMINAL,0, 10846, 6)
 #elif __i386__
