@@ -11,6 +11,7 @@
 #include <grp.h>
 #include <iconv.h>
 #include <inttypes.h>
+#include <iosfwd>
 #include <locale.h>
 #include <math.h>
 #include <net/if.h>
@@ -33,7 +34,6 @@
 #include <semaphore.h>
 #include <setjmp.h>
 #include <signal.h>
-#include <stdarg.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>

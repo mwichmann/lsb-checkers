@@ -48,6 +48,7 @@ extern int validate_struct_flock(struct flock  * input, char *name);
 extern int validate_struct_flock64(struct flock64  * input, char *name);
 extern int validate_struct_group(struct group  * input, char *name);
 extern int validate_struct_hostent(struct hostent  * input, char *name);
+extern int validate_struct_if_nameindex(struct if_nameindex  * input, char *name);
 extern int validate_struct_ifaddr(struct ifaddr  * input, char *name);
 extern int validate_struct_ifconf(struct ifconf  * input, char *name);
 extern int validate_struct_ifmap(struct ifmap  * input, char *name);
