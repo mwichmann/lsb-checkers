@@ -315,16 +315,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef PF_LOCAL
-	CompareConstant(PF_LOCAL,AF_LOCAL,3285,architecture)
-#else
-Msg( "Error: Constant not found: PF_LOCAL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef PF_INET
 	CompareConstant(PF_INET,AF_INET,3286,architecture)
 #else
