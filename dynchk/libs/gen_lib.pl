@@ -256,7 +256,7 @@ sub get_type_string($)
 	{
 		($pre_type,$post_type) = get_type_string($basetype);
 		$post_type .= "[". $array_index ."]";
-		return ($post_type, $post_type); 
+		return ($pre_type, $post_type); 
 	}
 	elsif($form eq "FuncPtr")
 	{
