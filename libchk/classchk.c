@@ -107,7 +107,6 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 			if (vtablep)
 			{
 			vtablesize=0;
-			if( classp->numvirttab > 1 ) fprintf(stderr,"Multiple vtables!!\n");
 			for(v=0;v<classp->numvirttab;v++) {
 				switch( classp->vtable[v].category ) {
 				case 1:
@@ -449,6 +448,17 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				/*
 				 * Three additional fields to check
 				 */
+				switch( vmi_rttip->flags ) {
+				case __non_diamond_repeat_mask:
+					break;
+				case __diamond_shaped_mask:
+					break;
+				default:
+					TETJ_REPORT_INFO("VMI flags %ul (found) for class %s "
+													 "are not a legal value",
+													 vmi_rttip->flags, classp->name );
+					test_failed = 1;
+				}
 				if (vmi_rttip->flags != classp->flags) 
 				{
 					TETJ_REPORT_INFO("VMI flags %ul (found) for class %s "
