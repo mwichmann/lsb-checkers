@@ -14,6 +14,9 @@ void checkDYNAMIC(ElfFile *file1, Elf32_Shdr *hdr1 );
 void checkREL(ElfFile *file1, Elf32_Shdr *hdr1 );
 void checkGNU_versym(ElfFile *file1, Elf32_Shdr *hdr1 );
 void checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1 );
+void checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
+void checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
+void checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 );
 
 struct SectionInfo {
 	char		*name;
