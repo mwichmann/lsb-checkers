@@ -44,16 +44,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef ZLIB_VERSION
-	CompareStringConstant(ZLIB_VERSION,"1.1.4")
-#else
-Msg( "Error: Constant not found: ZLIB_VERSION\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef Z_FULL_FLUSH
 	CompareConstant(Z_FULL_FLUSH,3,4216,architecture)
 #else
