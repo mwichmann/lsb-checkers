@@ -4,8 +4,8 @@ WRAPPER_LIBS = \
 	libs/libncurses/libncurses.o \
 	libs/libz/libz.o \
 	libs/libm/libm.o \
-	libs/libSM/libSM.o \
-	libs/libpthread/libpthread.o
+	libs/libpthread/libpthread.o \
+	libs/libSM/libSM.o 
 
 #	libs/libXt/libXt.o \
 #	libs/libICE/libICE.o \
@@ -16,7 +16,8 @@ WRAPPER_LIBS = \
 TEST_LIB = tests/tests.o
 FHS_LIB = fhs/fhs.o
 LIB64=$(shell case `arch` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
-REAL_LIBS = -L/opt/lsb/lib$(LIB64) -lXt -lICE -l SM -lX11 -lGL -lncurses -lpam -lz -lm -ldl -lc 
+#REAL_LIBS = -L/opt/lsb/lib$(LIB64) -lXt -lICE -l SM -lX11 -lGL -lncurses -lpam -lz -lm -ldl -lc 
+REAL_LIBS = -L/opt/lsb/lib$(LIB64) -ldl
 
 all: liblsbdynchk.so lsbdynchk
 
@@ -32,7 +33,7 @@ $(FHS_LIB)::
 	cd fhs && make all
 
 liblsbdynchk.so: $(WRAPPER_LIBS) $(FHS_LIB) $(TEST_LIB) misc/global_flag.o misc/lsb_output.o makefile liblsbdynchk.Version
-	ld -shared --version-script liblsbdynchk.Version -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 $(REAL_LIBS) $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/lsb_output.o misc/global_flag.o
+	gcc -shared -Wl,--version-script -Wl,liblsbdynchk.Version -Wl,-soname -Wl,liblsbdynchk.so.1 -o liblsbdynchk.so.1 $(REAL_LIBS) $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/lsb_output.o misc/global_flag.o
 
 lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \
@@ -60,3 +61,7 @@ clean:
 	rm -f *~ liblsbdynchk.so.1
 
 .PHONY: all install
+
+misc/global_flag.o: misc/global_flag.c
+misc/lsb_output.o: misc/lsb_output.c
+misc/startmain.o: misc/startmain.c
