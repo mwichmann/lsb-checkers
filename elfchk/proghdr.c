@@ -2,7 +2,6 @@
 #include "elfchk.h"
 #include "proghdr.h"
 
-#define VERBOSE
 
 typedef int (*ProgHeadFcn)(ElfFile *, Elf32_Phdr *, struct tetj_handle *);
 
@@ -87,7 +86,7 @@ if( !hdr )
 	return;
 
 if( hdr->p_type > PT_NUM ) {
-	fprintf(stderr,"Not checking PRogram Headers with type %x\n",
+	fprintf(stderr,"Not checking Program Headers with type %x\n",
 		hdr->p_type);
 	return;
 	}
