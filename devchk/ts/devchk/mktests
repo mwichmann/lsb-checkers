@@ -51,6 +51,18 @@ sub writetest($$)
 
 	if( $typelist eq "" ) { return 0; }
 
+	#Get referenced types
+	$select = "SELECT DISTINCT * FROM Type ";
+	$select.= "WHERE Tid IN ($typelist) ";
+	$select.= "AND Ttype = 'Pointer'";
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+	for(1..$sth->numrows) {
+		%entry=$sth->fetchhash;
+		$type{$entry{'Tbasetype'}}=1;
+	}
+
+	$typelist=join ',', keys(%type);
+
 	$fname=$Hname;
 	$fname =~ tr/\/./__/;
 	$filename = $fname.".c";
@@ -172,13 +184,15 @@ sub writetest($$)
 			print TESTS "CheckTypeSize($type $Tname,$ATsize, $Tid, $Aid)\n";
 			#Get the members
 			$select = "SELECT DISTINCT * FROM TypeMember ";
+			$select.= "LEFT JOIN ArchTypeMem ON ATMtmid=TMid ";
 			$select.= "WHERE TMmemberof=$Tid ";
 			$select.= "AND TMbitfiled='No' ";
+			$select.= "AND ATMaid=$Aid ";
 			$select.= "ORDER BY TMposition ";
 			$mth = $Dbh->query($select) || die $Dbh->errmsg();
 			for(1..$mth->numrows) {
 				%mentry=$mth->fetchhash;
-				print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMoffset'})\n";
+				print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMoffset'},$Aid,$mentry{'TMid'})\n";
 			}
 		} else {
 			print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
@@ -380,7 +394,7 @@ print MAKEFILE "else\n";
 print MAKEFILE "EXTRALIBS =\n";
 print MAKEFILE "endif\n\n";
 
-print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -I/usr/X11R6/include \n\n";
+print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include \n\n";
 
 
 print MAKEFILE "ifdef TET_ROOT\n";
