@@ -13,9 +13,14 @@ int validate_ioctlreq(const int req, const char *name)
 	case SIOCGIFFLAGS:
 	case SIOCGIFADDR:
 	case SIOCGIFNETMASK:
+	case SIOCGIFBRDADDR:
+	case SIOCGIFMTU:
 		break;
 		/* file related icotl()s */
 	case FIONREAD:
+		break;
+		/* tty related icotl()s */
+	case TIOCGWINSZ:
 		break;
 	default:
 		__lsb_fail(name, "Illegal ioctl request %x", req);
