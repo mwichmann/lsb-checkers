@@ -62,6 +62,8 @@ Msg("Find size of uintmax_t (9017)\n");
 CheckTypeSize(u_int,4, 9261, 2)
 #elif __powerpc__
 CheckTypeSize(u_int,4, 9261, 6)
+#elif __ia64__
+CheckTypeSize(u_int,4, 9261, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9261,0);
 Msg("Find size of u_int (9261)\n");
@@ -69,6 +71,8 @@ Msg("Find size of u_int (9261)\n");
 
 #ifdef __i386__
 CheckTypeSize(uint,4, 9265, 2)
+#elif __ia64__
+CheckTypeSize(uint,4, 9265, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9265,0);
 Msg("Find size of uint (9265)\n");

@@ -231,6 +231,7 @@ cnt++;
 
 #ifdef __i386__
 #elif __powerpc__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9056,0);
 Msg("Find size of pthread_rwlock_t * (9056)\n");
@@ -363,6 +364,8 @@ Msg("Find size of _pthread_descr (9087)\n");
 CheckTypeSize(pthread_rwlock_t,32, 9055, 2)
 #elif __powerpc__
 CheckTypeSize(pthread_rwlock_t,32, 9055, 6)
+#elif __ia64__
+CheckTypeSize(pthread_rwlock_t,56, 9055, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9055,0);
 Msg("Find size of pthread_rwlock_t (9055)\n");
@@ -372,6 +375,8 @@ Msg("Find size of pthread_rwlock_t (9055)\n");
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 2)
 #elif __powerpc__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 6)
+#elif __ia64__
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9057,0);
 Msg("Find size of pthread_rwlockattr_t (9057)\n");

@@ -120,6 +120,8 @@ Msg("Find size of u_int16_t (7000)\n");
 CheckTypeSize(u_int32_t,4, 7001, 2)
 #elif __powerpc__
 CheckTypeSize(u_int32_t,4, 7001, 6)
+#elif __ia64__
+CheckTypeSize(u_int32_t,4, 7001, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7001,0);
 Msg("Find size of u_int32_t (7001)\n");
@@ -203,9 +205,20 @@ Msg("Find size of suseconds_t (9249)\n");
 #endif
 
 #ifdef __i386__
+CheckTypeSize(fsid_t,8, 9367, 2)
+#elif __ia64__
+CheckTypeSize(fsid_t,8, 9367, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9367,0);
+Msg("Find size of fsid_t (9367)\n");
+#endif
+
+#ifdef __i386__
 CheckTypeSize(blksize_t,4, 9372, 2)
 #elif __powerpc__
 CheckTypeSize(blksize_t,4, 9372, 6)
+#elif __ia64__
+CheckTypeSize(blksize_t,8, 9372, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9372,0);
 Msg("Find size of blksize_t (9372)\n");
@@ -314,6 +327,8 @@ Msg("Find size of caddr_t (9258)\n");
 CheckTypeSize(ushort,2, 9264, 2)
 #elif __powerpc__
 CheckTypeSize(ushort,2, 9264, 6)
+#elif __ia64__
+CheckTypeSize(ushort,2, 9264, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9264,0);
 Msg("Find size of ushort (9264)\n");
@@ -323,6 +338,8 @@ Msg("Find size of ushort (9264)\n");
 CheckTypeSize(ino64_t,8, 8987, 2)
 #elif __powerpc__
 CheckTypeSize(ino64_t,8, 8987, 6)
+#elif __ia64__
+CheckTypeSize(ino64_t,8, 8987, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8987,0);
 Msg("Find size of ino64_t (8987)\n");
@@ -343,6 +360,8 @@ Msg("Find size of loff_t (9167)\n");
 CheckTypeSize(blkcnt_t,4, 9172, 2)
 #elif __powerpc__
 CheckTypeSize(blkcnt_t,4, 9172, 6)
+#elif __ia64__
+CheckTypeSize(blkcnt_t,8, 9172, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9172,0);
 Msg("Find size of blkcnt_t (9172)\n");
@@ -352,6 +371,8 @@ Msg("Find size of blkcnt_t (9172)\n");
 CheckTypeSize(blkcnt64_t,8, 9178, 2)
 #elif __powerpc__
 CheckTypeSize(blkcnt64_t,8, 9178, 6)
+#elif __ia64__
+CheckTypeSize(blkcnt64_t,8, 9178, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9178,0);
 Msg("Find size of blkcnt64_t (9178)\n");
@@ -361,6 +382,8 @@ Msg("Find size of blkcnt64_t (9178)\n");
 CheckTypeSize(u_char,1, 9259, 2)
 #elif __powerpc__
 CheckTypeSize(u_char,1, 9259, 6)
+#elif __ia64__
+CheckTypeSize(u_char,1, 9259, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9259,0);
 Msg("Find size of u_char (9259)\n");
@@ -370,6 +393,8 @@ Msg("Find size of u_char (9259)\n");
 CheckTypeSize(u_short,2, 9260, 2)
 #elif __powerpc__
 CheckTypeSize(u_short,2, 9260, 6)
+#elif __ia64__
+CheckTypeSize(u_short,2, 9260, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9260,0);
 Msg("Find size of u_short (9260)\n");
@@ -379,6 +404,8 @@ Msg("Find size of u_short (9260)\n");
 CheckTypeSize(u_long,4, 9262, 2)
 #elif __powerpc__
 CheckTypeSize(u_long,4, 9262, 6)
+#elif __ia64__
+CheckTypeSize(u_long,8, 9262, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9262,0);
 Msg("Find size of u_long (9262)\n");

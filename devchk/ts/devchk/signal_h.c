@@ -595,6 +595,16 @@ cnt++;
 
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef SIGEV_THREAD
+	CompareConstant(SIGEV_THREAD,2,4870,architecture)
+#else
+Msg( "Error: Constant not found: SIGEV_THREAD\n");
+cnt++;
+#endif
+
+#endif
+
 #ifdef __powerpc__
 #ifdef SIGWINCH
 	CompareConstant(SIGWINCH,28,3131,architecture)
@@ -622,16 +632,6 @@ cnt++;
 #else
 Msg( "No definition for SIGWINCH (3131) in db\n");
 #endif
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef SIGEV_THREAD
-	CompareConstant(SIGEV_THREAD,2,4870,architecture)
-#else
-Msg( "Error: Constant not found: SIGEV_THREAD\n");
-cnt++;
-#endif
-
-#endif
-
 #ifdef _LSB_DEFAULT_ARCH
 #ifdef SI_ASYNCIO
 	CompareConstant(SI_ASYNCIO,-4,4871,architecture)
@@ -1029,6 +1029,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+/* No test for si_timer2 */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef NSIG
 	CompareConstant(NSIG,64,2460,architecture)
 #else
@@ -1186,12 +1190,65 @@ CheckTypeSize(struct _fpxreg,16, 10202, 2)
 CheckTypeSize(struct _xmmreg,16, 10203, 2)
 #endif
 
+#ifdef __ia64__
+CheckTypeSize(struct ia64_fpreg,16, 10338, 3)
+CheckOffset(struct ia64_fpreg,u,0,3,34581)
+#endif
+
 #ifdef __i386__
 CheckTypeSize(struct sigcontext,88, 10005, 2)
+CheckOffset(struct sigcontext,gs,0,2,34196)
+CheckOffset(struct sigcontext,__gsh,2,2,34197)
+CheckOffset(struct sigcontext,fs,4,2,34198)
+CheckOffset(struct sigcontext,__fsh,6,2,34199)
+CheckOffset(struct sigcontext,es,8,2,34200)
+CheckOffset(struct sigcontext,__esh,10,2,34201)
+CheckOffset(struct sigcontext,ds,12,2,34202)
+CheckOffset(struct sigcontext,__dsh,14,2,34203)
+CheckOffset(struct sigcontext,edi,16,2,34204)
+CheckOffset(struct sigcontext,esi,20,2,34205)
+CheckOffset(struct sigcontext,ebp,24,2,34206)
+CheckOffset(struct sigcontext,esp,28,2,34207)
+CheckOffset(struct sigcontext,ebx,32,2,34208)
+CheckOffset(struct sigcontext,edx,36,2,34209)
+CheckOffset(struct sigcontext,ecx,40,2,34210)
+CheckOffset(struct sigcontext,eax,44,2,34211)
+CheckOffset(struct sigcontext,trapno,48,2,34212)
+CheckOffset(struct sigcontext,err,52,2,34213)
+CheckOffset(struct sigcontext,eip,56,2,34214)
+CheckOffset(struct sigcontext,cs,60,2,34215)
+CheckOffset(struct sigcontext,__csh,62,2,34216)
+CheckOffset(struct sigcontext,eflags,64,2,34217)
+CheckOffset(struct sigcontext,esp_at_signal,68,2,34218)
+CheckOffset(struct sigcontext,ss,72,2,34219)
+CheckOffset(struct sigcontext,__ssh,74,2,34220)
+CheckOffset(struct sigcontext,fpstate,76,2,34221)
+CheckOffset(struct sigcontext,oldmask,80,2,34222)
+CheckOffset(struct sigcontext,cr2,84,2,34223)
 #endif
 
 #ifdef __ia64__
 CheckTypeSize(struct sigcontext,2656, 10299, 3)
+CheckOffset(struct sigcontext,sc_flags,0,3,34560)
+CheckOffset(struct sigcontext,sc_nat,8,3,34561)
+CheckOffset(struct sigcontext,sc_stack,16,3,34562)
+CheckOffset(struct sigcontext,sc_ip,40,3,34563)
+CheckOffset(struct sigcontext,sc_cfm,48,3,34564)
+CheckOffset(struct sigcontext,sc_um,56,3,34565)
+CheckOffset(struct sigcontext,sc_ar_rsc,64,3,34566)
+CheckOffset(struct sigcontext,sc_ar_bsp,72,3,34567)
+CheckOffset(struct sigcontext,sc_ar_rnat,80,3,34568)
+CheckOffset(struct sigcontext,sc_ar_ccv,88,3,34569)
+CheckOffset(struct sigcontext,sc_ar_unat,96,3,34570)
+CheckOffset(struct sigcontext,sc_ar_fpsr,104,3,34571)
+CheckOffset(struct sigcontext,sc_ar_pfs,112,3,34572)
+CheckOffset(struct sigcontext,sc_ar_lc,120,3,34573)
+CheckOffset(struct sigcontext,sc_pr,128,3,34574)
+CheckOffset(struct sigcontext,sc_br,136,3,34575)
+CheckOffset(struct sigcontext,sc_gr,200,3,34576)
+CheckOffset(struct sigcontext,sc_fr,464,3,34577)
+CheckOffset(struct sigcontext,sc_rsvd,2528,3,34578)
+CheckOffset(struct sigcontext,sc_mask,2640,3,34579)
 #endif
 
 #ifdef __powerpc__

@@ -1547,6 +1547,14 @@ CheckOffset(struct pdat,_pad_bottom,8,2,29729)
 CheckOffset(struct pdat,_pad_right,10,2,29730)
 #elif __powerpc__
 CheckTypeSize(struct pdat,12, 8663, 6)
+#elif __ia64__
+CheckTypeSize(struct pdat,12, 8663, 3)
+CheckOffset(struct pdat,_pad_y,0,3,29725)
+CheckOffset(struct pdat,_pad_x,2,3,29726)
+CheckOffset(struct pdat,_pad_top,4,3,29727)
+CheckOffset(struct pdat,_pad_left,6,3,29728)
+CheckOffset(struct pdat,_pad_bottom,8,3,29729)
+CheckOffset(struct pdat,_pad_right,10,3,29730)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
 Msg("Find size of pdat (8663)\n");

@@ -23,6 +23,17 @@ int pcnt=0;
 Msg("Checking data structures in ucontext.h\n");
 #endif
 
+#ifdef __ia64__
+#ifdef _SC_GR0_OFFSET
+	CompareConstant(_SC_GR0_OFFSET,(((char *) &((struct sigcontext *) 0)->sc_gr[0]) - (char *) 0),5031,architecture)
+#else
+Msg( "Error: Constant not found: _SC_GR0_OFFSET\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for _SC_GR0_OFFSET (5031) in db\n");
+#endif
 #ifdef __powerpc__
 #ifdef NGREG
 	CompareConstant(NGREG,48,4929,architecture)
@@ -79,31 +90,30 @@ Msg("Find size of fpregset_t (10228)\n");
 #ifdef __i386__
 #elif __ia64__
 #elif __powerpc__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
-Msg("Find size of anon-mcontext (10229)\n");
 #endif
 
 #ifdef __i386__
 CheckTypeSize(mcontext_t,88, 10230, 2)
-#elif __ia64__
-CheckTypeSize(mcontext_t,2656, 10230, 3)
-#elif __powerpc__
-CheckTypeSize(mcontext_t,32, 10230, 6)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10230,0);
-Msg("Find size of mcontext_t (10230)\n");
+#endif
+
+#ifdef __ia64__
+CheckTypeSize(mcontext_t,2656, 10328, 3)
+#endif
+
+#ifdef __powerpc__
+CheckTypeSize(mcontext_t,32, 10329, 6)
 #endif
 
 #ifdef __i386__
 CheckTypeSize(ucontext_t,348, 10220, 2)
-#elif __ia64__
-CheckTypeSize(ucontext_t,2656, 10220, 3)
-#elif __powerpc__
-CheckTypeSize(ucontext_t,180, 10220, 6)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10220,0);
-Msg("Find size of ucontext_t (10220)\n");
+#endif
+
+#ifdef __ia64__
+CheckTypeSize(ucontext_t,2656, 10331, 3)
+#endif
+
+#ifdef __powerpc__
+CheckTypeSize(ucontext_t,180, 10335, 6)
 #endif
 
 #ifdef TET_TEST
