@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <pthread.h>
 #undef pthread_self
 static pthread_t(*funcptr) () = 0;
 

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <curses.h>
 #undef vidputs
-static int(*funcptr) (chtype , int(*)(int) ) = 0;
+static int(*funcptr) (chtype , int(* )(int)) = 0;
 
-int vidputs (chtype arg0 , int(*arg1)(int) )
+int vidputs (chtype arg0 , int(* arg1 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidputs");
@@ -15,7 +15,7 @@ int vidputs (chtype arg0 , int(*arg1)(int) )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_vidputs (chtype arg0 , int(*arg1)(int) )
+int lsb_vidputs (chtype arg0 , int(* arg1 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidputs");

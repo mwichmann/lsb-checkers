@@ -2,17 +2,21 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <pthread.h>
+#include <stddef.h>
 #undef pthread_attr_setguardsize
-static int(*funcptr) (pthread_attr_t *, size_t) = 0;
+static int(*funcptr) (pthread_attr_t * , size_t ) = 0;
 
-int pthread_attr_setguardsize (pthread_attr_t *arg0, size_t arg1)
+int pthread_attr_setguardsize (pthread_attr_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_setguardsize");
+	validate_NULL_TYPETYPE(arg0, "pthread_attr_setguardsize");
+	validate_NULL_TYPETYPE(arg1, "pthread_attr_setguardsize");
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_attr_setguardsize (pthread_attr_t *arg0, size_t arg1)
+int lsb_pthread_attr_setguardsize (pthread_attr_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_attr_setguardsize");

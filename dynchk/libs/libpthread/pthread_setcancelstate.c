@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <pthread.h>
 #undef pthread_setcancelstate
 static int(*funcptr) (int , int * ) = 0;
 

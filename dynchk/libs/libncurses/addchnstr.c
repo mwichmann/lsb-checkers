@@ -6,7 +6,7 @@
 #undef addchnstr
 static int(*funcptr) (const chtype * , int ) = 0;
 
-int addchnstr (const chtype *arg0 , int arg1 )
+int addchnstr (const chtype * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addchnstr");
@@ -15,7 +15,7 @@ int addchnstr (const chtype *arg0 , int arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_addchnstr (const chtype *arg0 , int arg1 )
+int lsb_addchnstr (const chtype * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addchnstr");

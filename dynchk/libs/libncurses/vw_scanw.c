@@ -5,9 +5,9 @@
 #include <curses.h>
 #include <stdarg.h>
 #undef vw_scanw
-static int(*funcptr) (WINDOW * , const char * , va_list ) = 0;
+static int(*funcptr) (WINDOW * , char * , va_list ) = 0;
 
-int vw_scanw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
+int vw_scanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vw_scanw");
@@ -17,7 +17,7 @@ int vw_scanw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vw_scanw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
+int lsb_vw_scanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vw_scanw");

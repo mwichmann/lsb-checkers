@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef mvinch
 static chtype(*funcptr) (int , int ) = 0;
 

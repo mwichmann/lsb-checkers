@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <pthread.h>
 #undef pthread_atfork
-static pid_t(*funcptr) (void(*prepare)() , void(*parent)() , void(*child)() ) = 0;
+static pid_t(*funcptr) (void(* )(), void(* )(), void(* )()) = 0;
 
-pid_t pthread_atfork (void(*arg0)() , void(*arg1)() , void(*arg2)() )
+pid_t pthread_atfork (void(* arg0 )(), void(* arg1 )(), void(* arg2 )())
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_atfork");
@@ -16,7 +16,7 @@ pid_t pthread_atfork (void(*arg0)() , void(*arg1)() , void(*arg2)() )
 	return funcptr(arg0, arg1, arg2);
 }
 
-pid_t lsb_pthread_atfork (void(*arg0)() , void(*arg1)() , void(*arg2)() )
+pid_t lsb_pthread_atfork (void(* arg0 )(), void(* arg1 )(), void(* arg2 )())
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_atfork");

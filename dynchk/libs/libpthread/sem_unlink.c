@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <semaphore.h>
 #undef sem_unlink
 static int(*funcptr) (const char * ) = 0;
 

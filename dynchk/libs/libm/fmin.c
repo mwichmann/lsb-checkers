@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef fmin
 static double(*funcptr) (double , double ) = 0;
 

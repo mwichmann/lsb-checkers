@@ -2,20 +2,23 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef ctanh
-static double(*funcptr) () = 0;
+static double complex(*funcptr) (double complex ) = 0;
 
-double ctanh ()
+double complex ctanh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanh");
-	return funcptr();
+	validate_NULL_TYPETYPE(arg0, "ctanh");
+	return funcptr(arg0);
 }
 
-double lsb_ctanh ()
+double complex lsb_ctanh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanh");
-	return funcptr();
+	return funcptr(arg0);
 }
 

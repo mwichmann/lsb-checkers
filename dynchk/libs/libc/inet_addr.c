@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <arpa/inet.h>
 #undef inet_addr
-static struct in_addr(*funcptr) (const char * ) = 0;
+static in_addr_t(*funcptr) (const char * ) = 0;
 
-struct in_addr inet_addr (const char * arg0 )
+in_addr_t inet_addr (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_addr");
@@ -14,7 +14,7 @@ struct in_addr inet_addr (const char * arg0 )
 	return funcptr(arg0);
 }
 
-struct in_addr lsb_inet_addr (const char * arg0 )
+in_addr_t lsb_inet_addr (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_addr");

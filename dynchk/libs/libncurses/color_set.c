@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #undef color_set
 static int(*funcptr) (short , void * ) = 0;
 

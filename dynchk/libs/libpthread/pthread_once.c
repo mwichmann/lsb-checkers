@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <pthread.h>
 #undef pthread_once
-static int(*funcptr) (pthread_once_t * , void(*init_routine)(void) ) = 0;
+static int(*funcptr) (pthread_once_t * , void(* )(void)) = 0;
 
-int pthread_once (pthread_once_t * arg0 , void(*arg1)(void) )
+int pthread_once (pthread_once_t * arg0 , void(* arg1 )(void))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_once");
@@ -15,7 +15,7 @@ int pthread_once (pthread_once_t * arg0 , void(*arg1)(void) )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_once (pthread_once_t * arg0 , void(*arg1)(void) )
+int lsb_pthread_once (pthread_once_t * arg0 , void(* arg1 )(void))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_once");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef lgammaf_r
 static float(*funcptr) (float , int * ) = 0;
 

@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef clog10l
-static long double(*funcptr) (long double ) = 0;
+static long double complex(*funcptr) (long double complex ) = 0;
 
-long double clog10l (long double arg0 )
+long double complex clog10l (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clog10l");
@@ -13,7 +15,7 @@ long double clog10l (long double arg0 )
 	return funcptr(arg0);
 }
 
-long double lsb_clog10l (long double arg0 )
+long double complex lsb_clog10l (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clog10l");

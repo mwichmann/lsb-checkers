@@ -5,9 +5,9 @@
 #include <stddef.h>
 #include <wchar.h>
 #undef __wcstold_internal
-static long double(*funcptr) (wchar_t * , wchar_t * * , int ) = 0;
+static long double(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
-long double __wcstold_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+long double __wcstold_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstold_internal");
@@ -17,7 +17,7 @@ long double __wcstold_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-long double lsb___wcstold_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+long double lsb___wcstold_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstold_internal");

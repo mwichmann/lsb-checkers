@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <zlib.h>
 #undef gzopen
 static gzFile(*funcptr) (const char * , const char * ) = 0;
 

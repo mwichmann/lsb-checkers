@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
+#include <complex.h>
 #undef ctanhf
-static float(*funcptr) (float ) = 0;
+static float complex(*funcptr) (float complex ) = 0;
 
-float ctanhf (float arg0 )
+float complex ctanhf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanhf");
@@ -13,7 +15,7 @@ float ctanhf (float arg0 )
 	return funcptr(arg0);
 }
 
-float lsb_ctanhf (float arg0 )
+float complex lsb_ctanhf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanhf");

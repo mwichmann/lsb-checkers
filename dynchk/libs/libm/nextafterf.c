@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef nextafterf
 static float(*funcptr) (float , float ) = 0;
 

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <pthread.h>
 #undef _pthread_cleanup_push
-static void(*funcptr) (struct _pthread_cleanup_buffer * , void(*__routine)(void *) , void * ) = 0;
+static void(*funcptr) (struct _pthread_cleanup_buffer * , void(* )(void *), void * ) = 0;
 
-void _pthread_cleanup_push (struct _pthread_cleanup_buffer * arg0 , void(*arg1)(void *) , void * arg2 )
+void _pthread_cleanup_push (struct _pthread_cleanup_buffer * arg0 , void(* arg1 )(void *), void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_pthread_cleanup_push");
@@ -16,7 +16,7 @@ void _pthread_cleanup_push (struct _pthread_cleanup_buffer * arg0 , void(*arg1)(
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb__pthread_cleanup_push (struct _pthread_cleanup_buffer * arg0 , void(*arg1)(void *) , void * arg2 )
+void lsb__pthread_cleanup_push (struct _pthread_cleanup_buffer * arg0 , void(* arg1 )(void *), void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_pthread_cleanup_push");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <math.h>
 #undef remquof
 static float(*funcptr) (float , float , int * ) = 0;
 
