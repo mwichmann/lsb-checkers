@@ -1,0 +1,9 @@
+fprintf
+ioctl
+open
+open64
+printf
+fscanf
+sscanf
+scanf
+mmap
