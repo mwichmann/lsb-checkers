@@ -88,5 +88,6 @@ if( memcmp(efile->addr, ELFMAG, SELFMAG) ) {
 	free(efile);
 	exit(-1);	/* Silently exit */
 	}
+return efile;
 }
 
