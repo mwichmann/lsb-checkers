@@ -1,9 +1,10 @@
+LSBLIBCHK_VERSION=unofficial
 
 include libs.mk
 
 OBJS = libchk.o libs.o $(LIBOBJS)
 
-CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -Wall
+CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
 all:: libchk
 
