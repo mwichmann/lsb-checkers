@@ -178,7 +178,7 @@ $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE Lstd='Yes' ";
 $select.= "AND Aname!='None' ";
-$select.= "AND Lname='libstdcxx' ";
+#$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid ";
 
 #print $select;
