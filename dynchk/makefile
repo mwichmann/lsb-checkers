@@ -8,7 +8,7 @@ WRAPPER_LIBS = \
 
 TEST_LIB = tests/tests.o
 
-all: liblsbdynchk.so
+all: liblsbdynchk.so lsbdynchk
 
 $(WRAPPER_LIBS)::
 	cd libs && make all
@@ -18,9 +18,11 @@ $(TEST_LIB):
 
 liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) makefile
 	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB)
+
+lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \
 	then \
-	   sed -e "s#@LIBDIR@#`echo $(LIBDIR)`#" <lsbdynchk.sed >lsbdynchk; \
+	   sed -e "s#@LIBDIR@#`echo $(INSTALL_ROOT)$(LIBDIR)`#" <lsbdynchk.sed >lsbdynchk; \
 	else \
 	   sed -e "s#@LIBDIR@#`pwd`#" <lsbdynchk.sed >lsbdynchk; \
 	fi
