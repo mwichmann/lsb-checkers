@@ -23,17 +23,9 @@ int pcnt=0;
 Msg("Checking data structures in wchar.h\n");
 #endif
 
-#ifdef __powerpc__
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef WCHAR_MIN
-	CompareConstant(WCHAR_MIN,-2147483648,1953,architecture)
-#else
-Msg( "Error: Constant not found: WCHAR_MIN\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
-#ifdef WCHAR_MIN
-	CompareConstant(WCHAR_MIN,0,1953,architecture)
+	CompareConstant(WCHAR_MIN,0x80000000,1953,architecture)
 #else
 Msg( "Error: Constant not found: WCHAR_MIN\n");
 cnt++;
@@ -41,17 +33,9 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef WCHAR_MAX
-	CompareConstant(WCHAR_MAX,2147483647,1954,architecture)
-#else
-Msg( "Error: Constant not found: WCHAR_MAX\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
-#ifdef WCHAR_MAX
-	CompareConstant(WCHAR_MAX,0xffffff,1954,architecture)
+	CompareConstant(WCHAR_MAX,0x7FFFFFFF,1954,architecture)
 #else
 Msg( "Error: Constant not found: WCHAR_MAX\n");
 cnt++;

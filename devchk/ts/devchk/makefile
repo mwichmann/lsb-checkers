@@ -34,6 +34,7 @@ OBJS = hdrchk.o \
 	grp_h.o \
 	iconv_h.o \
 	inttypes_h.o \
+	langinfo_h.o \
 	limits_h.o \
 	locale_h.o \
 	math_h.o \
