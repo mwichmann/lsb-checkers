@@ -26,7 +26,7 @@ for(1..$sth->numrows) {
 		next;
 		}
 	if( $entry{'Aname'} ne "All" ) {
-                print "#if defined(".$entry{'Asymbol'}.")\n";
+                print "#if ".$entry{'Asymbol'}."\n";
         }
 	printf "\t\"%s\",\n",$entry{'ALrunname'};
 	if( $entry{'Aname'} ne "All" ) {
