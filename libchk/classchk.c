@@ -12,8 +12,6 @@
 #include "tetj.h"
 #include "libchk.h"
 
-#define DEBUG
-
 /*
  * Some architectures treat function pointers as structures which contains the
  * address of the function, plus some adjustment value which must be taken into
