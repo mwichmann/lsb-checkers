@@ -37,7 +37,15 @@ if( (elffile = OpenElfFile(argv[optind])) == NULL ) {
 	}
 
 checkElf(elffile);
-checksymbols(elffile);
+ if (elffile->symhdr==NULL)
+ {
+   printf("Not a dynamically linked executable.\n"
+     "No point checking symbols\n");
+ }
+ else
+ {
+   checksymbols(elffile);
+ }
 /*
 check_intepreter(elffile);
 check_DT_NEEDED(elffile);

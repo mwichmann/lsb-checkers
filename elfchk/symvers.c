@@ -33,6 +33,13 @@ for(i=0;i<file->numsh;i++) {
 		}
 	}
 
+ if (file->symhdr==0)
+ {
+   /* Not a dynamically linked executable */
+   file->numsyms = 0;
+   return;
+ }
+
 file->numsyms=file->symhdr->sh_size/file->symhdr->sh_entsize;
 
 file->syms=(Elf32_Sym *)((caddr_t)file->addr+file->symhdr->sh_offset);
