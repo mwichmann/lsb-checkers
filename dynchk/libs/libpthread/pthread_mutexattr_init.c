@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
-static int(*funcptr)(pthread_mutexattr_t *) = 0;
+#undef pthread_mutexattr_init
+static int(*funcptr) (pthread_mutexattr_t * ) = 0;
 
-int pthread_mutexattr_init(pthread_mutexattr_t * arg0)
+int pthread_mutexattr_init (pthread_mutexattr_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_mutexattr_init");
@@ -13,7 +14,7 @@ int pthread_mutexattr_init(pthread_mutexattr_t * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_pthread_mutexattr_init(pthread_mutexattr_t * arg0)
+int lsb_pthread_mutexattr_init (pthread_mutexattr_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_mutexattr_init");

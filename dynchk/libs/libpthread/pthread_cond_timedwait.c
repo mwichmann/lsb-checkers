@@ -2,9 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(pthread_cond_t *, pthread_mutex_t *, struct timespec *) = 0;
+#include <pthread.h>
+#include <sys/time.h>
+#undef pthread_cond_timedwait
+static int(*funcptr) (pthread_cond_t * , pthread_mutex_t * , const struct timespec * ) = 0;
 
-int pthread_cond_timedwait(pthread_cond_t * arg0, pthread_mutex_t * arg1, struct timespec * arg2)
+int pthread_cond_timedwait (pthread_cond_t * arg0 , pthread_mutex_t * arg1 , const struct timespec * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cond_timedwait");
@@ -14,7 +17,7 @@ int pthread_cond_timedwait(pthread_cond_t * arg0, pthread_mutex_t * arg1, struct
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_pthread_cond_timedwait(pthread_cond_t * arg0, pthread_mutex_t * arg1, struct timespec * arg2)
+int lsb_pthread_cond_timedwait (pthread_cond_t * arg0 , pthread_mutex_t * arg1 , const struct timespec * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_cond_timedwait");

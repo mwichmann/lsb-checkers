@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef pthread_testcancel
+static void(*funcptr) () = 0;
 
-void pthread_testcancel()
+void pthread_testcancel ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_testcancel");
 	funcptr();
 }
 
-void lsb_pthread_testcancel()
+void lsb_pthread_testcancel ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_testcancel");

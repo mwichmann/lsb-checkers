@@ -3,9 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <semaphore.h>
-static int(*funcptr)(sem_t, const struct timespec *) = 0;
+#include <sys/time.h>
+#undef sem_timedwait
+static int(*funcptr) (sem_t * , const struct timespec * ) = 0;
 
-int sem_timedwait(sem_t arg0, const struct timespec * arg1)
+int sem_timedwait (sem_t *arg0 , const struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_timedwait");
@@ -14,7 +16,7 @@ int sem_timedwait(sem_t arg0, const struct timespec * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sem_timedwait(sem_t arg0, const struct timespec * arg1)
+int lsb_sem_timedwait (sem_t *arg0 , const struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_timedwait");

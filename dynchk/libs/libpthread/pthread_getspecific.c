@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
-static void *(*funcptr)(pthread_key_t) = 0;
+#undef pthread_getspecific
+static void *(*funcptr) (pthread_key_t ) = 0;
 
-void * pthread_getspecific(pthread_key_t arg0)
+void * pthread_getspecific (pthread_key_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_getspecific");
@@ -13,7 +14,7 @@ void * pthread_getspecific(pthread_key_t arg0)
 	return funcptr(arg0);
 }
 
-void * lsb_pthread_getspecific(pthread_key_t arg0)
+void * lsb_pthread_getspecific (pthread_key_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_getspecific");

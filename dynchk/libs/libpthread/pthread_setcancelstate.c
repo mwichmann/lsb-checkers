@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int *) = 0;
+#undef pthread_setcancelstate
+static int(*funcptr) (int , int * ) = 0;
 
-int pthread_setcancelstate(int arg0, int * arg1)
+int pthread_setcancelstate (int arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_setcancelstate");
@@ -13,7 +14,7 @@ int pthread_setcancelstate(int arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_setcancelstate(int arg0, int * arg1)
+int lsb_pthread_setcancelstate (int arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_setcancelstate");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(sem_t *) = 0;
+#include <semaphore.h>
+#undef sem_trywait
+static int(*funcptr) (sem_t * ) = 0;
 
-int sem_trywait(sem_t * arg0)
+int sem_trywait (sem_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_trywait");
@@ -12,7 +14,7 @@ int sem_trywait(sem_t * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sem_trywait(sem_t * arg0)
+int lsb_sem_trywait (sem_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_trywait");
