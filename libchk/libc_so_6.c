@@ -286,6 +286,7 @@ struct versym libc_so_6[] = {
 	{"gettimeofday","GLIBC_2.0"},
 	{"getuid","GLIBC_2.0"},
 	{"getutent","GLIBC_2.0"},
+	{"getutent_r","GLIBC_2.0"},
 	{"getutxent","GLIBC_2.1"},
 	{"getutxid","GLIBC_2.1"},
 	{"getutxline","GLIBC_2.1"},

@@ -1,7 +1,6 @@
 #!/usr/bin/perl
 
 use CGI;
-use Getopt::Long;
 use Mysql;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
@@ -14,13 +13,6 @@ die;
 
 # Uncomment to trace SQL statments
 #$trace=1;
-
-#
-# 1) process the arguments
-#
-GetOptions("a=s" => \$archname);
-
-if( !$archname ) { usage(); }
 
 sub mklibsyms($$)
 {
@@ -55,23 +47,8 @@ close(LIB);
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
 #
-# 3) get & print the architecture info
+# 3) Get the list of libs, and process tem
 #
-$select = "SELECT * FROM Architecture WHERE ";
-$select.= "Aname='All'";
-print STDERR $select,"\n" if $trace;
-$sth = $Dbh->query($select) || die $select."\n".$Dbh->errmsg();
-
-%entry=$sth->fetchhash;
-$AllAid=$entry{'Aid'};
-
-$select = "SELECT * FROM Architecture WHERE ";
-$select.= "Aname=".$Dbh->quote($archname);
-print STDERR $select,"\n" if $trace;
-$sth = $Dbh->query($select) || die $select."\n".$Dbh->errmsg();
-
-%entry=$sth->fetchhash;
-$Aid=$entry{'Aid'};
 
 open(LIBS,">libs.c");
 print LIBS "/* Generated file */\n";
@@ -87,9 +64,10 @@ open(MAKE,">libs.mk");
 print MAKE "# Generated file #\n";
 print MAKE "LIBOBJS = \\\n";
 
-$select = "SELECT DISTINCT Lid,Lrunname FROM Library ";
+$select = "SELECT DISTINCT Lid,Lrunname,Asymbol FROM Library ";
+$select.= "LEFT JOIN Architecture ON Larch=Aid ";
 $select.= "WHERE Lstd='Yes' ";
-$select.= "AND Larch IN ($Aid,$AllAid) ";
+#$select.= "AND Larch IN ($Aid,$AllAid) ";
 $select.= "ORDER BY Lrunname ";
 
 #print $select;
@@ -99,10 +77,20 @@ $sth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
 	$libname=$entry{'Lrunname'};
+	$asym=$entry{'Asymbol'};
 	$libname =~ s/\./_/g;
 	$libname =~ s/-/_/g;
-	print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname);\n";
-	print LIBSH "extern char *".$libname."[];\n";
+	if( $asym != "1" ) {
+		print LIBS "#if defined($asym)\n";
+		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname);\n";
+		print LIBS "#endif\n";
+		print LIBSH "#if defined($asym)\n";
+		print LIBSH "extern char *".$libname."[];\n";
+		print LIBSH "#endif\n";
+	} else {
+		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname);\n";
+		print LIBSH "extern char *".$libname."[];\n";
+	}
 	print MAKE "\t$libname.o \\\n";
 	mklibsyms($libname,$entry{'Lid'});
 }

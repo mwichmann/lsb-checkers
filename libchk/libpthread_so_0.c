@@ -27,7 +27,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_cond_wait","GLIBC_2.0"},
 	{"pthread_condattr_destroy","GLIBC_2.0"},
 	{"pthread_condattr_init","GLIBC_2.0"},
-	{"pthread_create","GLIBC_2.1"},
+	{"pthread_create","GLIBC_2.0"},
 	{"pthread_detach","GLIBC_2.0"},
 	{"pthread_equal","GLIBC_2.0"},
 	{"pthread_exit","GLIBC_2.0"},
