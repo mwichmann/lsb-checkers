@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.40 $
+ * This is $Revision: 1.41 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.41  2004/07/27 18:52:31  cyeoh
+ * Adds missing testcase end marker
+ *
  * Revision 1.40  2004/05/12 19:40:19  anderson
  * Change the logic to make the program more helpful.
  * remove print_warnings, instead, rely on the debug flags from the env to control
@@ -171,7 +174,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.40 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.41 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -461,6 +464,9 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 /*   printf("Checking Class Information in %s\n", filename ); */
 
   check_class_info(filename,classes,journal);
+
+	tetj_testcase_end(journal, tetj_activity_count, libname, "");
+
 }
 
 #ifndef _CXXABICHK_
