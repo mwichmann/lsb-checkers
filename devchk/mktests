@@ -137,13 +137,14 @@ for(1..$hth->numrows) {
 	writetest($entry{'Hid'},$entry{'Hname'});
 }
 print MAKEFILE "\n\n";
+print MAKEFILE "all: hdrchk\n\n";
 print MAKEFILE "hdrchk: \$\(OBJS)\n";
 print MAKEFILE "\tcc -o hdrchk \$\(OBJS)\n";
 print MAKEFILE "\n";
 print MAKEFILE "hdrchk.o: hdrchk.c\n";
 print MAKEFILE "\tcc -g -c hdrchk.c\n";
 print MAKEFILE "\n\n";
-print MAKEFILE "clean:\n\trm \$\(OBJS)\n";
+print MAKEFILE "clean:\n\trm -f \$\(OBJS)\n";
 close(MAKEFILE);
 
 print HARNESS "printf(\"Total Tests: %d\\n\", tcnt );\n";
