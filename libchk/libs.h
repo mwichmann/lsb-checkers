@@ -243,6 +243,8 @@ extern struct classinfo libpthread_so_0_classinfo[];
 extern struct versym libpthread_so_0[];
 extern struct classinfo libpthread_so_0_classinfo[];
 #endif
+extern struct versym librt_so_1[];
+extern struct classinfo librt_so_1_classinfo[];
 extern struct versym libSM_so_6[];
 extern struct classinfo libSM_so_6_classinfo[];
 #if __s390x__

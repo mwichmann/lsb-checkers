@@ -186,6 +186,7 @@ struct modlib modlibs [] = {
 #if __i386__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo},
 #endif
+	{LSB_Core,"librt.so.1",librt_so_1,librt_so_1_classinfo},
 	{LSB_Graphics,"libSM.so.6",libSM_so_6,libSM_so_6_classinfo},
 #if __s390x__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
