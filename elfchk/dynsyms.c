@@ -1290,7 +1290,7 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"_IO_puts","GLIBC_2.2",0},
 #endif
-	{"_Unwind_DeleteException","GCC_3.0",0},
+	{"_Unwind_DeleteException","",0},
 #if __i386__
 	{"_Unwind_DeleteException","GCC_3.0",0},
 #endif
@@ -2740,6 +2740,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNKSs12find_last_ofEcj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNKSs12find_last_ofEcj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNKSs12find_last_ofEcj","GLIBCPP_3.2",0},
 #endif
@@ -3620,6 +3623,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j","GLIBCPP_3.2",0},
 #endif
@@ -3630,6 +3636,9 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m","GLIBCPP_3.2",0},
 #endif
 #if __powerpc64__
+	{"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m","GLIBCPP_3.2",0},
+#endif
+#if __x86_64__
 	{"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m","GLIBCPP_3.2",0},
 #endif
 #if __s390x__
@@ -3647,6 +3656,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j","GLIBCPP_3.2",0},
 #endif
@@ -3657,6 +3669,9 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m","GLIBCPP_3.2",0},
 #endif
 #if __powerpc64__
+	{"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m","GLIBCPP_3.2",0},
+#endif
+#if __x86_64__
 	{"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m","GLIBCPP_3.2",0},
 #endif
 #if __s390x__
@@ -4808,6 +4823,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EPKwjRKS1_","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EPKwjRKS1_","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EPKwjRKS1_","GLIBCPP_3.2",0},
 #endif
@@ -4831,6 +4849,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jj","GLIBCPP_3.2",0},
 #endif
@@ -4841,6 +4862,9 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jjRKS1_","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jjRKS1_","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jjRKS1_","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -4871,6 +4895,9 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EjwRKS1_","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EjwRKS1_","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EjwRKS1_","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -4900,6 +4927,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EPKwjRKS1_","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EPKwjRKS1_","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EPKwjRKS1_","GLIBCPP_3.2",0},
 #endif
@@ -4923,6 +4953,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jj","GLIBCPP_3.2",0},
 #endif
@@ -4933,6 +4966,9 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jjRKS1_","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jjRKS1_","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jjRKS1_","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -4963,6 +4999,9 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EjwRKS1_","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EjwRKS1_","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EjwRKS1_","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5400,6 +5439,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs5eraseEjj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs5eraseEjj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs5eraseEjj","GLIBCPP_3.2",0},
 #endif
@@ -5420,6 +5462,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs6appendEPKcj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs6appendEPKcj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs6appendEPKcj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5444,6 +5489,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs6appendERKSsjj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs6appendERKSsjj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs6appendERKSsjj","GLIBCPP_3.2",0},
 #endif
@@ -5463,6 +5511,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs6appendEjc","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs6appendEjc","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs6appendEjc","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5487,6 +5538,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs6assignEPKcj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs6assignEPKcj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs6assignEPKcj","GLIBCPP_3.2",0},
 #endif
@@ -5509,6 +5563,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs6assignERKSsjj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs6assignERKSsjj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs6assignERKSsjj","GLIBCPP_3.2",0},
 #endif
@@ -5528,6 +5585,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs6assignEjc","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs6assignEjc","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs6assignEjc","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5552,6 +5612,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEjc","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEjc","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEjc","GLIBCPP_3.2",0},
 #endif
@@ -5573,6 +5636,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs6insertEjPKc","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs6insertEjPKc","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs6insertEjPKc","GLIBCPP_3.2",0},
 #endif
@@ -5583,6 +5649,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs6insertEjPKcj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs6insertEjPKcj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs6insertEjPKcj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5595,6 +5664,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs6insertEjRKSs","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs6insertEjRKSs","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs6insertEjRKSs","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5607,6 +5679,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs6insertEjRKSsjj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs6insertEjRKSsjj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs6insertEjRKSsjj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5619,6 +5694,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs6insertEjjc","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs6insertEjjc","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs6insertEjjc","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5679,6 +5757,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs6resizeEj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs6resizeEj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs6resizeEj","GLIBCPP_3.2",0},
 #endif
@@ -5689,6 +5770,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs6resizeEjc","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs6resizeEjc","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs6resizeEjc","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5726,6 +5810,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcj","GLIBCPP_3.2",0},
 #endif
@@ -5750,6 +5837,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_jc","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_jc","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_jc","GLIBCPP_3.2",0},
 #endif
@@ -5771,6 +5861,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSs7replaceEjjPKc","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSs7replaceEjjPKc","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSs7replaceEjjPKc","GLIBCPP_3.2",0},
 #endif
@@ -5781,6 +5874,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs7replaceEjjPKcj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs7replaceEjjPKcj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs7replaceEjjPKcj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5793,6 +5889,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs7replaceEjjRKSs","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs7replaceEjjRKSs","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs7replaceEjjRKSs","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5805,6 +5904,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs7replaceEjjRKSsjj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs7replaceEjjRKSsjj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs7replaceEjjRKSsjj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5817,6 +5919,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs7replaceEjjjc","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs7replaceEjjjc","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs7replaceEjjjc","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5874,6 +5979,9 @@ struct versym DynSyms[] = {
 	{"_ZNSs7reserveEj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSs7reserveEj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSs7reserveEj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -6106,6 +6214,9 @@ struct versym DynSyms[] = {
 	{"_ZNSsixEj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSsixEj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSsixEj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -6878,6 +6989,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt12ctype_bynameIcEC1EPKcj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt12ctype_bynameIcEC1EPKcj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt12ctype_bynameIcEC1EPKcj","GLIBCPP_3.2",0},
 #endif
@@ -6897,6 +7011,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt12ctype_bynameIcEC2EPKcj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt12ctype_bynameIcEC2EPKcj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt12ctype_bynameIcEC2EPKcj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -7427,10 +7544,14 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE5closeEv","GLIBCPP_3.2",0},
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE5imbueERKSt6locale","GLIBCPP_3.2",0},
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE5uflowEv","GLIBCPP_3.2",0},
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci","",0},
 #if __i386__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -7443,6 +7564,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl","GLIBCPP_3.2",0},
 #endif
 #if __powerpc64__
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl","GLIBCPP_3.2",0},
+#endif
+#if __x86_64__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl","GLIBCPP_3.2",0},
 #endif
 #if __s390x__
@@ -7479,6 +7603,15 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2",0},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2",0},
+#endif
+#if __s390__ && !__s390x__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2",0},
 #endif
 #if __ia64__
@@ -7544,6 +7677,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi","GLIBCPP_3.2",0},
 #endif
@@ -7554,6 +7690,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl","GLIBCPP_3.2",0},
 #endif
 #if __powerpc64__
+	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl","GLIBCPP_3.2",0},
+#endif
+#if __x86_64__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl","GLIBCPP_3.2",0},
 #endif
 #if __s390x__
@@ -8532,6 +8671,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci","GLIBCPP_3.2",0},
 #endif
@@ -8542,6 +8684,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl","GLIBCPP_3.2",0},
 #endif
 #if __powerpc64__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl","GLIBCPP_3.2",0},
+#endif
+#if __x86_64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl","GLIBCPP_3.2",0},
 #endif
 #if __s390x__
@@ -8711,6 +8856,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi","GLIBCPP_3.2",0},
 #endif
@@ -8723,11 +8871,26 @@ struct versym DynSyms[] = {
 #if __powerpc64__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl","GLIBCPP_3.2",0},
 #endif
+#if __x86_64__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl","GLIBCPP_3.2",0},
+#endif
 #if __s390x__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl","GLIBCPP_3.2",0},
 #endif
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6snextcEv","GLIBCPP_3.2",0},
 #if __i386__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2",0},
+#endif
+#if __arm__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2",0},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2",0},
+#endif
+#if __s390__ && !__s390x__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2",0},
 #endif
 #if __ia64__
@@ -8850,6 +9013,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci","GLIBCPP_3.2",0},
 #endif
@@ -8860,6 +9026,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl","GLIBCPP_3.2",0},
 #endif
 #if __powerpc64__
+	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl","GLIBCPP_3.2",0},
+#endif
+#if __x86_64__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl","GLIBCPP_3.2",0},
 #endif
 #if __s390x__
@@ -8894,12 +9063,27 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm","GLIBCPP_3.2",0},
 #endif
+#if __alpha__
+	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm","GLIBCPP_3.2",0},
+#endif
+#if __powerpc64__
+	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm","GLIBCPP_3.2",0},
+#endif
+#if __x86_64__
+	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm","GLIBCPP_3.2",0},
+#endif
+#if __s390x__
+	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm","GLIBCPP_3.2",0},
+#endif
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE17_M_stringbuf_initESt13_Ios_Openmode","GLIBCPP_3.2",0},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE3strERKSbIwS1_S2_E","GLIBCPP_3.2",0},
 #if __i386__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -8912,6 +9096,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl","GLIBCPP_3.2",0},
 #endif
 #if __powerpc64__
+	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl","GLIBCPP_3.2",0},
+#endif
+#if __x86_64__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl","GLIBCPP_3.2",0},
 #endif
 #if __s390x__
@@ -9724,6 +9911,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt5ctypeIcEC1EP15__locale_structPKtbj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt5ctypeIcEC1EP15__locale_structPKtbj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt5ctypeIcEC1EP15__locale_structPKtbj","GLIBCPP_3.2",0},
 #endif
@@ -9743,6 +9933,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIcEC1EPKtbj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt5ctypeIcEC1EPKtbj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt5ctypeIcEC1EPKtbj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -9764,6 +9957,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIcEC2EP15__locale_structPKtbj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt5ctypeIcEC2EP15__locale_structPKtbj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt5ctypeIcEC2EP15__locale_structPKtbj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -9785,6 +9981,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIcEC2EPKtbj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt5ctypeIcEC2EPKtbj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt5ctypeIcEC2EPKtbj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -9812,6 +10011,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt5ctypeIwEC1EP15__locale_structj","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt5ctypeIwEC1EP15__locale_structj","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt5ctypeIwEC1EP15__locale_structj","GLIBCPP_3.2",0},
 #endif
@@ -9831,6 +10033,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIwEC1Ej","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt5ctypeIwEC1Ej","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt5ctypeIwEC1Ej","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -9852,6 +10057,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIwEC2EP15__locale_structj","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt5ctypeIwEC2EP15__locale_structj","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt5ctypeIwEC2EP15__locale_structj","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -9873,6 +10081,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIwEC2Ej","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt5ctypeIwEC2Ej","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt5ctypeIwEC2Ej","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -10165,6 +10376,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC1Ej","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt7codecvtIcc11__mbstate_tEC1Ej","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC1Ej","GLIBCPP_3.2",0},
 #endif
@@ -10184,6 +10398,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt7codecvtIcc11__mbstate_tEC2Ej","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt7codecvtIcc11__mbstate_tEC2Ej","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC2Ej","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -10211,6 +10428,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC1Ej","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt7codecvtIwc11__mbstate_tEC1Ej","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC1Ej","GLIBCPP_3.2",0},
 #endif
@@ -10230,6 +10450,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt7codecvtIwc11__mbstate_tEC2Ej","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt7codecvtIwc11__mbstate_tEC2Ej","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC2Ej","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -10964,6 +11187,9 @@ struct versym DynSyms[] = {
 #if __arm__
 	{"_ZNSt8numpunctIwEC1Ej","GLIBCPP_3.2",0},
 #endif
+#if __mc68000__
+	{"_ZNSt8numpunctIwEC1Ej","GLIBCPP_3.2",0},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt8numpunctIwEC1Ej","GLIBCPP_3.2",0},
 #endif
@@ -11004,6 +11230,9 @@ struct versym DynSyms[] = {
 	{"_ZNSt8numpunctIwEC2Ej","GLIBCPP_3.2",0},
 #endif
 #if __arm__
+	{"_ZNSt8numpunctIwEC2Ej","GLIBCPP_3.2",0},
+#endif
+#if __mc68000__
 	{"_ZNSt8numpunctIwEC2Ej","GLIBCPP_3.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -12280,6 +12509,48 @@ struct versym DynSyms[] = {
 	{"_ZTVSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE","GLIBCPP_3.2",0},
 	{"_ZTVSt9strstream","GLIBCPP_3.2",0},
 	{"_ZTVSt9type_info","GLIBCPP_3.2",0},
+#if __ia64__
+	{"_ZThn16_NSdD0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSdD1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt13basic_fstreamIwSt11char_traitsIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt14basic_iostreamIwSt11char_traitsIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt14basic_iostreamIwSt11char_traitsIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt9strstreamD0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZThn16_NSt9strstreamD1Ev","GLIBCPP_3.2",0},
+#endif
 #if __i386__
 	{"_ZThn8_NSdD0Ev","GLIBCPP_3.2",0},
 #endif
@@ -12951,6 +13222,132 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZTv0_n12_NSt9strstreamD1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSdD0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSdD1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSiD0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSiD1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSoD0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSoD1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt10istrstreamD0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt10istrstreamD1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt10ostrstreamD0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt10ostrstreamD1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt13basic_fstreamIwSt11char_traitsIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_ifstreamIcSt11char_traitsIcEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_ifstreamIcSt11char_traitsIcEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_ifstreamIwSt11char_traitsIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_ifstreamIwSt11char_traitsIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_iostreamIwSt11char_traitsIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_iostreamIwSt11char_traitsIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt19basic_istringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt19basic_istringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt9strstreamD0Ev","GLIBCPP_3.2",0},
+#endif
+#if __ia64__
+	{"_ZTv0_n24_NSt9strstreamD1Ev","GLIBCPP_3.2",0},
 #endif
 	{"_ZdaPv","GLIBCPP_3.2",0},
 	{"_ZdaPvRKSt9nothrow_t","GLIBCPP_3.2",0},
@@ -13060,27 +13457,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"__assert_fail","GLIBC_2.2",0},
-#endif
-#if __i386__
-	{"__ctype_b","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"__ctype_b","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"__ctype_b","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"__ctype_b","GLIBC_2.2.5",0},
-#endif
-#if __s390__ && !__s390x__
-	{"__ctype_b","GLIBC_2.0",0},
-#endif
-#if __x86_64__
-	{"__ctype_b","GLIBC_2.2.5",0},
-#endif
-#if __s390x__
-	{"__ctype_b","GLIBC_2.2",0},
 #endif
 	{"__ctype_b_loc","GLIBC_2.3",0},
 #if __i386__
@@ -22432,27 +22808,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"getrusage","GLIBC_2.2",0},
-#endif
-#if __i386__
-	{"gets","GLIBC_2.0",0},
-#endif
-#if __ia64__
-	{"gets","GLIBC_2.2",0},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"gets","GLIBC_2.0",0},
-#endif
-#if __powerpc64__
-	{"gets","GLIBC_2.2.5",0},
-#endif
-#if __s390__ && !__s390x__
-	{"gets","GLIBC_2.0",0},
-#endif
-#if __x86_64__
-	{"gets","GLIBC_2.2.5",0},
-#endif
-#if __s390x__
-	{"gets","GLIBC_2.2",0},
 #endif
 #if __i386__
 	{"getservbyname","GLIBC_2.0",0},
