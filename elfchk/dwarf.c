@@ -111,18 +111,21 @@ dumpbytes(ptr,8);
 	 */
 	case DW_CFA_advance_loc:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_advance_loc\n" );
+			fprintf(stderr,"DW_CFA_advance_loc %x\n",rawop & 0x3F );
 		}
 		break;
 
 	case DW_CFA_offset:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_offset\n" );
+			fprintf(stderr,"DW_CFA_offset" );
 		}
 		/* Operand 1 - ULEB128 register */
 		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%x\n", tmp );
+                }
 		break;
 
 	case DW_CFA_restore:
@@ -190,11 +193,17 @@ dumpbytes(ptr,8);
 		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d", tmp );
+                }
 
 		/* Operand 2 - ULEB128 offset */
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," offset %d\n", tmp );
+                }
 		break;
 
 	case DW_CFA_restore_extended:
@@ -217,6 +226,9 @@ dumpbytes(ptr,8);
 		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d\n", tmp );
+                }
 		break;
 
 	case DW_CFA_same_value:
@@ -228,6 +240,9 @@ dumpbytes(ptr,8);
 		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d\n", tmp );
+                }
 		break;
 
 	case DW_CFA_register:
@@ -239,11 +254,17 @@ dumpbytes(ptr,8);
 		tmp = decode_uleb128(ptr,&numused);
                 ptr+=numused;
                 used+=numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d", tmp );
+                }
 
 		/* Operand 2 - ULEB128 register */
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d\n", tmp );
+                }
 		break;
 
 	case DW_CFA_remember_state:
@@ -260,18 +281,28 @@ dumpbytes(ptr,8);
 
 	case DW_CFA_def_cfa:
 		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_def_cfa\n" );
+			fprintf(stderr,"DW_CFA_def_cfa" );
                 }
 
 		/* Operand 1 - ULEB128 register */
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%x", tmp );
+                }
 
 		/* Operand 2 - ULEB128 offset */
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," offset %x", tmp );
+                }
+
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr,"\n" );
+                }
 		break;
 
 	case DW_CFA_def_cfa_register:
@@ -283,17 +314,23 @@ dumpbytes(ptr,8);
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d\n", tmp );
+                }
 		break;
 
 	case DW_CFA_def_cfa_offset:
 		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,"DW_CFA_def_cfa_offset\n" );
+			fprintf(stderr,"DW_CFA_def_cfa_offset" );
                 }
 
 		/* Operand 1 - ULEB128 register */
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," %d\n", tmp );
+                }
 		break;
 
 	case DW_CFA_GNU_args_size:
@@ -305,6 +342,9 @@ dumpbytes(ptr,8);
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d\n", tmp );
+                }
 		break;
 
 	case DW_CFA_GNU_negative_offset_extended:
@@ -316,11 +356,17 @@ dumpbytes(ptr,8);
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d", tmp );
+                }
 
 		/* Operand 2 - ULEB128 register */
 		tmp = decode_uleb128(ptr,&numused);
                 ptr += numused;
                 used += numused;
+		if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
+			fprintf(stderr," r%d\n", tmp );
+                }
 		break;
 
 /* 	case DW_CFA_expression: */
@@ -396,15 +442,15 @@ int check_FDE(unsigned char *ptr, int *error)
         FDEFrameHeader	fdeimage;
         unsigned char *endptr;
 
-/*
-fprintf(stderr,"FDE found at %x\n", ptr );
-dumpbytes(ptr,length);
-*/
-
         fdeimage.length = *(int *)ptr;
         ptr += 4;
         used += 4;
         endptr = ptr + fdeimage.length;
+/*
+fprintf(stderr,"FDE found at %p\n", ptr );
+dumpbytes(ptr,fdeimage.length);
+*/
+
 
         if (fdeimage.length==0)
         {
@@ -420,8 +466,8 @@ dumpbytes(ptr,length);
         ptr += sizeof(long);
         used += sizeof(long);
         
-	fdeimage.address_range = decode_sleb128(ptr,&numused);
-	ptr += numused;
+	fdeimage.address_range = decode_uleb128(ptr,&numused);
+	ptr += numused; 
 	used += 4;
 
         if(elfchk_debug & DEBUG_DWARF_CONTENTS) {
