@@ -76,7 +76,7 @@ decode_sleb128 (data, length_return)
 
 
 
-int check_CFI(unsigned char *ptr)
+int check_CFI(unsigned char *ptr, int *error)
 {
         int	numused,used=0;
         int	tmp;
@@ -378,15 +378,19 @@ dumpbytes(ptr,8);
 /* 		break; */
 
 	default:
-		fprintf(stderr, "********** Unexpected CFI opcode %x **\n",
-                        rawop);
+                if (elfchk_debug & DEBUG_DWARF_CONTENTS)
+                {
+                        fprintf(stderr,
+                                "********** Unexpected CFI opcode %x **\n",
+                                rawop);
+                }
+                *error = 1;
         }
-
         return used;
 
 }
 
-int check_FDE(unsigned char *ptr)
+int check_FDE(unsigned char *ptr, int *error)
 {
         int	used=0;
         FDEFrameHeader	fdeimage;
@@ -436,16 +440,17 @@ dumpbytes(ptr,length);
 	}
 
         while(ptr<endptr)
-                ptr += check_CFI(ptr);
+                ptr += check_CFI(ptr, error);
 
         return fdeimage.length + 4; /* length+sizeof(length) */
 }
 
-int check_CFInformation(unsigned char *ptr)
+int check_CFInformation(unsigned char *ptr, int *error)
 {
         int     used, numused = 0;
         CIEFrameImage *frameimg;
 
+        *error = 0;
         frameimg = (CIEFrameImage *)ptr;
 
         while (frameimg->length!=0)
@@ -460,7 +465,7 @@ int check_CFInformation(unsigned char *ptr)
                                 fprintf(stderr, "-----------------------\n");
                                 fprintf(stderr, "CIE record\n");
                         }
-                        used = check_CIE(ptr);
+                        used = check_CIE(ptr, error);
                 }
                 else
                 {
@@ -469,7 +474,7 @@ int check_CFInformation(unsigned char *ptr)
                                 fprintf(stderr, "-----------------------\n");
                                 fprintf(stderr, "FDE record\n");
                         }
-                        used = check_FDE(ptr);
+                        used = check_FDE(ptr, error);
                 }
                 numused+=used;
                 ptr += used;
@@ -478,7 +483,7 @@ int check_CFInformation(unsigned char *ptr)
         return numused;
 }
 
-int check_CIE(unsigned char *ptr)
+int check_CIE(unsigned char *ptr, int *error)
 {
         CIEFrameImage *frameimg;
         CIEFrame frame;
@@ -559,7 +564,7 @@ int check_CIE(unsigned char *ptr)
 
         while ( (ptr - (unsigned char *)frameimg) < 
                 frameimg->length + sizeof(int) ) {
-                ptr += check_CFI(ptr);
+                ptr += check_CFI(ptr, error);
 	}
 
         return ptr - start;

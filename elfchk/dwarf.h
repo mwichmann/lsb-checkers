@@ -116,9 +116,10 @@ typedef struct EHFRMHDR {
 
 /* dwarf.c */
 extern unsigned long int read_leb128(unsigned char *data, int *length_return, int sign);
-extern int check_CFI(unsigned char *ptr);
-extern int check_FDE(unsigned char *ptr);
-extern int check_CIE(unsigned char *ptr);
-extern int check_CFInformation(unsigned char *ptr);
+extern int check_CFI(unsigned char *ptr, int *error);
+extern int check_FDE(unsigned char *ptr, int *error);
+extern int check_CIE(unsigned char *ptr, int *error);
+extern int check_CFInformation(unsigned char *ptr, int *error);
 extern void *read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused);
+
 #endif /* _DWARF_H */
