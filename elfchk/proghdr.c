@@ -110,11 +110,11 @@ checkPT_SHLIB(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check SHLIB program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  snprintf(tmp_string, TMP_STRING_SIZE, "SHLIB not checked!");
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
   return 0;
@@ -130,11 +130,11 @@ checkPT_PHDR(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check PHDR program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  snprintf(tmp_string, TMP_STRING_SIZE, "PHDR not checked!");
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
@@ -149,11 +149,11 @@ checkPT_TLS(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check TLS program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  snprintf(tmp_string, TMP_STRING_SIZE, "TLS not checked!");
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
@@ -168,11 +168,11 @@ checkPT_GNU_EH_FRAME(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check GNU_EH_FRAME program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  snprintf(tmp_string, TMP_STRING_SIZE, "GNU_EH_FRAME not checked!");
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
@@ -187,11 +187,11 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check GNU_STACK program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  snprintf(tmp_string, TMP_STRING_SIZE, "GNU_STACK not checked!");
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
@@ -207,11 +207,11 @@ checkPT_IA_64_UNWIND(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check IA_64_UNWIND program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "not checked!");
+  snprintf(tmp_string, TMP_STRING_SIZE, "IA_64_UNWIND not checked!");
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
