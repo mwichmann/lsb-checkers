@@ -418,6 +418,15 @@ fprintf(stderr, "checkDT_RPATH Dynamic Tag\n" );
 }
 
 int
+checkDT_RUNPATH(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle *journal)
+{
+#ifdef VERBOSE
+fprintf(stderr, "checkDT_RUNPATH Dynamic Tag\n" );
+#endif /* VERBOSE */
+ return 1; 
+}
+
+int
 checkDT_SONAME(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
