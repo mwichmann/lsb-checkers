@@ -9457,6 +9457,9 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"pipe","GLIBC_2.2"},
 #endif
+	{"pmap_getport","GLIBC_2.0"},
+	{"pmap_set","GLIBC_2.0"},
+	{"pmap_unset","GLIBC_2.0"},
 #if __i386__
 	{"poll","GLIBC_2.0"},
 #endif
@@ -13657,6 +13660,9 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"svc_getreqset","GLIBC_2.2"},
 #endif
+	{"svc_register","GLIBC_2.0"},
+	{"svc_run","GLIBC_2.0"},
+	{"svc_sendreply","GLIBC_2.0"},
 #if __i386__
 	{"svcerr_auth","GLIBC_2.0"},
 #endif
@@ -13804,6 +13810,8 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"svcerr_weakauth","GLIBC_2.2"},
 #endif
+	{"svctcp_create","GLIBC_2.0"},
+	{"svcudp_create","GLIBC_2.0"},
 #if __i386__
 	{"swab","GLIBC_2.0"},
 #endif
