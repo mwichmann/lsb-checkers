@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+use CGI;
+use Mysql;
+
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+
+$select = "SELECT DISTINCT Iname FROM Interface WHERE Istatus='Included' ";
+$select.= "ORDER BY Iname ";
+
+#print $select;
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+print "char *DynSyms[] = {\n";
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	printf "\t\"%s\",\n",$entry{'Iname'};
+}
+print "\t};\n";
+print "int numDynSyms = sizeof(DynSyms)/sizeof(char *);\n";
+
