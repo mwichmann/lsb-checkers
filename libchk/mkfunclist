@@ -38,7 +38,7 @@ print LIB "struct versym ".$libname."[] = {\n";
 for(1..$lsth->numrows) {
 	%entry=$lsth->fetchhash;
 	if( $entry{'Aid'} && $entry{'Aname'} ne 'All' ) {
-		print LIB "#if defined($entry{'Asymbol'})\n";
+		print LIB "#if $entry{'Asymbol'}\n";
 		printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
 		print LIB "#endif\n";
 	} else {
