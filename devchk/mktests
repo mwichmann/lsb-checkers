@@ -1,7 +1,11 @@
-#!/usr/local/bin/perl
+#!/usr/bin/perl
 
-use CGI;
 use Mysql;
+
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+# Uncomment to trace SQL statments
+#$trace=1;
 
 sub writetest($$)
 {
@@ -17,14 +21,14 @@ open(TESTS,">$filename") || die "Can't open $filename for writing";
 print "Writing tests for $Hname to $filename\n";
 
 #Get Constants
-$select = "SELECT DISTINCT * FROM Constants,HeaderGroup ";
+$select = "SELECT DISTINCT * FROM Constant,HeaderGroup ";
 $select.= "WHERE HGheader=$Hid ";
 $select.= "AND Cheadgroup=HGid ";
 $select.= "ORDER BY Cheadgroup ";
 $cth = $Dbh->query($select) || die $Dbh->errmsg();
 
 #Get Types
-$select = "SELECT DISTINCT * FROM Types,HeaderGroup ";
+$select = "SELECT DISTINCT * FROM Type,HeaderGroup ";
 $select.= "WHERE HGheader=$Hid ";
 $select.= "AND Theadergroup=HGid ";
 $select.= "ORDER BY Theadergroup ";
@@ -104,13 +108,14 @@ open(MAKEFILE,">makefile") || die "Can't open makefile for writing";
 #print MAKEFILE "CFLAGS = -g -I../../headers\n";
 print MAKEFILE "OBJS = hdrchk.o ";
 
-$Dbh = Mysql->connect(localhost) || die $Mysql::db_errstr;
-$Dbh->selectdb("Linux") || die $Dbh->errmsg();
+$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER,$LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT * FROM Headers ";
-$select.= "WHERE Hstd='Y' ";
+$Dbh->selectdb("lsb") || die $Dbh->errmsg();
+
+$select = "SELECT DISTINCT * FROM Header ";
+$select.= "WHERE Hstd='Yes' ";
 $select.= "ORDER BY Hname ";
-#print $select;
+print $select;
 
 $hth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$hth->numrows) {
