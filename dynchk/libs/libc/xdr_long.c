@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <rpc/xdr.h>
 #undef xdr_long
-static bool_t(*funcptr) (XDR * , long * ) = 0;
+static bool_t(*funcptr) (XDR * , long int * ) = 0;
 
 extern int __lsb_check_params;
-bool_t xdr_long (XDR * arg0 , long * arg1 )
+bool_t xdr_long (XDR * arg0 , long int * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;

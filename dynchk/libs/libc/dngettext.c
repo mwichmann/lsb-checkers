@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <libintl.h>
 #undef dngettext
-static char *(*funcptr) (const char * , const char * , const char * , unsigned long ) = 0;
+static char *(*funcptr) (const char * , const char * , const char * , unsigned long int ) = 0;
 
 extern int __lsb_check_params;
-char * dngettext (const char * arg0 , const char * arg1 , const char * arg2 , unsigned long arg3 )
+char * dngettext (const char * arg0 , const char * arg1 , const char * arg2 , unsigned long int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;

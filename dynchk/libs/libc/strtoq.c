@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef strtoq
-static long long(*funcptr) (const char * , char * * , int ) = 0;
+static long long int(*funcptr) (const char * , char * * , int ) = 0;
 
 extern int __lsb_check_params;
-long long strtoq (const char * arg0 , char * * arg1 , int arg2 )
+long long int strtoq (const char * arg0 , char * * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	long long ret_value  ;
+	long long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "strtoq", "GLIBC_2.0");
 	if(__lsb_check_params)

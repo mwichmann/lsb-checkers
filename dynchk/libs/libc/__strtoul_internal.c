@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef __strtoul_internal
-static unsigned long(*funcptr) (const char * , char * * , int , int ) = 0;
+static unsigned long int(*funcptr) (const char * , char * * , int , int ) = 0;
 
 extern int __lsb_check_params;
-unsigned long __strtoul_internal (const char * arg0 , char * * arg1 , int arg2 , int arg3 )
+unsigned long int __strtoul_internal (const char * arg0 , char * * arg1 , int arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
-	unsigned long ret_value  ;
+	unsigned long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "__strtoul_internal", "GLIBC_2.0");
 	if(__lsb_check_params)

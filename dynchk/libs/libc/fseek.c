@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <stdio.h>
 #undef fseek
-static int(*funcptr) (FILE * , long , int ) = 0;
+static int(*funcptr) (FILE * , long int , int ) = 0;
 
 extern int __lsb_check_params;
-int fseek (FILE * arg0 , long arg1 , int arg2 )
+int fseek (FILE * arg0 , long int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;

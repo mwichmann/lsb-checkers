@@ -112,6 +112,7 @@ dngettext.o \
 drand48.o \
 dup.o \
 dup2.o \
+duplocale.o \
 ecvt.o \
 encrypt.o \
 endgrent.o \
@@ -160,6 +161,7 @@ fputwc.o \
 fputws.o \
 fread.o \
 freeaddrinfo.o \
+freelocale.o \
 freopen.o \
 freopen64.o \
 fseek.o \
@@ -202,6 +204,7 @@ getgrgid.o \
 getgrgid_r.o \
 getgrnam.o \
 getgrnam_r.o \
+getgrouplist.o \
 getgroups.o \
 gethostbyaddr.o \
 gethostbyname.o \
@@ -370,6 +373,7 @@ msync.o \
 munlock.o \
 munlockall.o \
 nanosleep.o \
+newlocale.o \
 nftw.o \
 nftw64.o \
 ngettext.o \
@@ -389,6 +393,7 @@ pipe.o \
 poll.o \
 popen.o \
 posix_memalign.o \
+posix_openpt.o \
 pread.o \
 pread64.o \
 psignal.o \
@@ -623,6 +628,7 @@ ungetwc.o \
 unlink.o \
 unlockpt.o \
 unsetenv.o \
+uselocale.o \
 usleep.o \
 utime.o \
 utimes.o \

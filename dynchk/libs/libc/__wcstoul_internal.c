@@ -5,13 +5,13 @@
 #include <stddef.h>
 #include <wchar.h>
 #undef __wcstoul_internal
-static unsigned long(*funcptr) (const wchar_t * , wchar_t * * , int , int ) = 0;
+static unsigned long int(*funcptr) (const wchar_t * , wchar_t * * , int , int ) = 0;
 
 extern int __lsb_check_params;
-unsigned long __wcstoul_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int arg3 )
+unsigned long int __wcstoul_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
-	unsigned long ret_value  ;
+	unsigned long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "__wcstoul_internal", "GLIBC_2.0");
 	if(__lsb_check_params)

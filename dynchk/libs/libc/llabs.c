@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef llabs
-static long long(*funcptr) (long long ) = 0;
+static long long int(*funcptr) (long long int ) = 0;
 
 extern int __lsb_check_params;
-long long llabs (long long arg0 )
+long long int llabs (long long int arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	long long ret_value  ;
+	long long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "llabs", "GLIBC_2.0");
 	if(__lsb_check_params)

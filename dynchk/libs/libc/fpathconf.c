@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <unistd.h>
 #undef fpathconf
-static long(*funcptr) (int , int ) = 0;
+static long int(*funcptr) (int , int ) = 0;
 
 extern int __lsb_check_params;
-long fpathconf (int arg0 , int arg1 )
+long int fpathconf (int arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "fpathconf", "GLIBC_2.0");
 	if(__lsb_check_params)

@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <stdlib.h>
 #undef random
-static long(*funcptr) () = 0;
+static long int(*funcptr) () = 0;
 
 extern int __lsb_check_params;
-long random ()
+long int random ()
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "random", "GLIBC_2.0");
 	if(__lsb_check_params)
