@@ -179,7 +179,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_attr_getstack","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
-	{"pthread_attr_getstack","GLIBC_2.2",0,"LSB-Core",4,1},
+	{"pthread_attr_getstack","GLIBC_2.3",0,"LSB-Core",4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_attr_getstack","GLIBC_2.2",0,"LSB-Core",4,1},
