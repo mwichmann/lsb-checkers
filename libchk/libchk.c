@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.18 $
+ * This is $Revision: 1.19 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.19  2003/03/26 22:21:16  anderson
+ * Add x86_64 support
+ *
  * Revision 1.18  2003/02/14 07:42:26  cyeoh
  * cope with different library paths on most 64 bit systems. Should
  * really determine this dynamically
@@ -69,7 +72,7 @@
 #include "hdr.h"
 #include "../tetj/tetj.h"
 
-#if __powerpc64__ || __s390x__
+#if __powerpc64__ || __s390x__ || __x86_64__
 #define LIBNAME "/lib64" 
 #else
 #define LIBNAME "/lib" 
@@ -85,7 +88,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.18 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.19 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
