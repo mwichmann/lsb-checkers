@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.47 $
+ * This is $Revision: 1.48 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.48  2004/10/22 16:55:21  mats
+ * More temporary fixes for bug #602
+ *
  * Revision 1.47  2004/10/22 16:20:22  anderson
  * Check to make sure we didn't fail to find a symbol at all
  *
@@ -192,7 +195,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.47 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.48 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -297,25 +300,26 @@ check_symbol(ElfFile *file, struct versym *entry)
       /* Convert the Version from the DB into a numerical value so we can do
          more interesting comparisons */
 
-      for(i=2;i<file->numverdefs;i++)
-      {
-	if( strcmp(file->versionnames[i], entry->vername) == 0 )
-		break;
-      }
+      i = 2;
+      do {
+	if (strcmp(file->versionnames[i], entry->vername) == 0) {
+	  foundit = i;
+	  break;
+	}
+        i++;
+      } while (i < file->numverdefs);
 
       /* Check to make sure we found the version at all */
-      if( i == file->numverdefs )
-      {
-        if ((libchk_debug) )
-        {
+      if (! foundit) {
+        if ((libchk_debug) ) {
           printf("    Did not find version %s anywhere!\n", entry->vername);
         }
-	return 0;
+	return foundit;
       }
 
-      /* If the version matches, stop, we are done */
+      /* If the version matches, return, we are done */
       if (vers == i)
-	foundit=1;
+	return foundit;
 
       /* If the version in the libary is greater, then warn, if in
          maintainer mode */
@@ -353,7 +357,7 @@ check_symbol(ElfFile *file, struct versym *entry)
   }
 
   /* Did not find exact match for symbol */
-  return foundit;
+  return 0;
 }
 
 /* Returns 1 on match, 0 otherwise */
