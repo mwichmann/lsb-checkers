@@ -17,7 +17,7 @@ struct versym libm_so_6_1[] = {
 	{"__finite","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __x86_64__
-	{"__finite","GLIBC_2.1",0,"LSB-Core",4,1},
+	{"__finite","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
 #if __s390x__
 	{"__finite","GLIBC_2.2",0,"LSB-Core",4,1},
