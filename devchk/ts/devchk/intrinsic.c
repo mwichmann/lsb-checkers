@@ -158,12 +158,6 @@ CheckTypeSize(long double,8,14,6)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14,0);
 #endif
 
-#ifdef __i386__
-CheckTypeSize(const char,1,10294,2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10294,0);
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -23,6 +23,16 @@ int pcnt=0;
 Msg("Checking data structures in zlib.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef ZLIB_VERSION
+	CompareStringConstant(ZLIB_VERSION,"1.1.4")
+#else
+Msg( "Error: Constant not found: ZLIB_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
 #ifdef __i386__
 CheckTypeSize(voidpf,4, 9868, 2)
 #elif __powerpc__

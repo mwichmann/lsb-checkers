@@ -24,6 +24,16 @@ Msg("Checking data structures in sys/socket.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef PF_UNIX
+	CompareConstant(PF_UNIX,AF_UNIX,3284,architecture)
+#else
+Msg( "Error: Constant not found: PF_UNIX\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef PF_INET
 	CompareConstant(PF_INET,AF_INET,3286,architecture)
 #else
