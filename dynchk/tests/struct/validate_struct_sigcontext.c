@@ -3,35 +3,35 @@
 #include "../type_tests.h"
 #include <signal.h>
 
-void validate_struct_sigcontext(struct sigcontext * input)
+void validate_struct_sigcontext(struct sigcontext  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->gs);
-	validate_NULL_TYPETYPE(input->__gsh);
-	validate_NULL_TYPETYPE(input->fs);
-	validate_NULL_TYPETYPE(input->__fsh);
-	validate_NULL_TYPETYPE(input->es);
-	validate_NULL_TYPETYPE(input->__esh);
-	validate_NULL_TYPETYPE(input->ds);
-	validate_NULL_TYPETYPE(input->__dsh);
-	validate_NULL_TYPETYPE(input->edi);
-	validate_NULL_TYPETYPE(input->esi);
-	validate_NULL_TYPETYPE(input->ebp);
-	validate_NULL_TYPETYPE(input->esp);
-	validate_NULL_TYPETYPE(input->ebx);
-	validate_NULL_TYPETYPE(input->edx);
-	validate_NULL_TYPETYPE(input->ecx);
-	validate_NULL_TYPETYPE(input->eax);
-	validate_NULL_TYPETYPE(input->trapno);
-	validate_NULL_TYPETYPE(input->err);
-	validate_NULL_TYPETYPE(input->eip);
-	validate_NULL_TYPETYPE(input->cs);
-	validate_NULL_TYPETYPE(input->__csh);
-	validate_NULL_TYPETYPE(input->eflags);
-	validate_NULL_TYPETYPE(input->esp_at_signal);
-	validate_NULL_TYPETYPE(input->ss);
-	validate_NULL_TYPETYPE(input->__ssh);
-	validate_struct__fpstate(input->fpstate);
-	validate_NULL_TYPETYPE(input->oldmask);
-	validate_NULL_TYPETYPE(input->cr2);
+	validate_NULL_TYPETYPE(input->gs,name );
+	validate_NULL_TYPETYPE(input->__gsh,name );
+	validate_NULL_TYPETYPE(input->fs,name );
+	validate_NULL_TYPETYPE(input->__fsh,name );
+	validate_NULL_TYPETYPE(input->es,name );
+	validate_NULL_TYPETYPE(input->__esh,name );
+	validate_NULL_TYPETYPE(input->ds,name );
+	validate_NULL_TYPETYPE(input->__dsh,name );
+	validate_NULL_TYPETYPE(input->edi,name );
+	validate_NULL_TYPETYPE(input->esi,name );
+	validate_NULL_TYPETYPE(input->ebp,name );
+	validate_NULL_TYPETYPE(input->esp,name );
+	validate_NULL_TYPETYPE(input->ebx,name );
+	validate_NULL_TYPETYPE(input->edx,name );
+	validate_NULL_TYPETYPE(input->ecx,name );
+	validate_NULL_TYPETYPE(input->eax,name );
+	validate_NULL_TYPETYPE(input->trapno,name );
+	validate_NULL_TYPETYPE(input->err,name );
+	validate_NULL_TYPETYPE(input->eip,name );
+	validate_NULL_TYPETYPE(input->cs,name );
+	validate_NULL_TYPETYPE(input->__csh,name );
+	validate_NULL_TYPETYPE(input->eflags,name );
+	validate_NULL_TYPETYPE(input->esp_at_signal,name );
+	validate_NULL_TYPETYPE(input->ss,name );
+	validate_NULL_TYPETYPE(input->__ssh,name );
+	validate_struct__fpstate(input->fpstate,name );
+	validate_NULL_TYPETYPE(input->oldmask,name );
+	validate_NULL_TYPETYPE(input->cr2,name );
 }
 

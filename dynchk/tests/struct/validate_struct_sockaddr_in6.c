@@ -3,12 +3,12 @@
 #include "../type_tests.h"
 #include <netinet/in.h>
 
-void validate_struct_sockaddr_in6(struct sockaddr_in6 * input)
+void validate_struct_sockaddr_in6(struct sockaddr_in6  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->sin6_family);
-	validate_NULL_TYPETYPE(input->sin6_port);
-	validate_NULL_TYPETYPE(input->sin6_flowinfo);
-	validate_struct_in6_addr( &(input->sin6_addr) );
-	validate_NULL_TYPETYPE(input->sin6_scope_id);
+	validate_NULL_TYPETYPE(input->sin6_family,name );
+	validate_NULL_TYPETYPE(input->sin6_port,name );
+	validate_NULL_TYPETYPE(input->sin6_flowinfo,name );
+	validate_struct_in6_addr( &(input->sin6_addr),name );
+	validate_NULL_TYPETYPE(input->sin6_scope_id,name );
 }
 

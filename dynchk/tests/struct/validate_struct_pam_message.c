@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <security/pam_appl.h>
 
-void validate_struct_pam_message(struct pam_message * input)
+void validate_struct_pam_message(struct pam_message  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->msg_style);
-	validate_NULL_TYPETYPE(input->msg);
+	validate_NULL_TYPETYPE(input->msg_style,name );
+	validate_NULL_TYPETYPE(input->msg,name );
 }
 

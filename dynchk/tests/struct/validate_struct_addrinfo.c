@@ -3,15 +3,15 @@
 #include "../type_tests.h"
 #include <netdb.h>
 
-void validate_struct_addrinfo(struct addrinfo * input)
+void validate_struct_addrinfo(struct addrinfo  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ai_flags);
-	validate_NULL_TYPETYPE(input->ai_family);
-	validate_NULL_TYPETYPE(input->ai_socktype);
-	validate_NULL_TYPETYPE(input->ai_protocol);
-	validate_NULL_TYPETYPE(input->ai_addrlen);
-	validate_struct_sockaddr(input->ai_addr);
-	validate_NULL_TYPETYPE(input->ai_canonname);
-	validate_struct_addrinfo(input->ai_next);
+	validate_NULL_TYPETYPE(input->ai_flags,name );
+	validate_NULL_TYPETYPE(input->ai_family,name );
+	validate_NULL_TYPETYPE(input->ai_socktype,name );
+	validate_NULL_TYPETYPE(input->ai_protocol,name );
+	validate_NULL_TYPETYPE(input->ai_addrlen,name );
+	validate_struct_sockaddr(input->ai_addr,name );
+	validate_NULL_TYPETYPE(input->ai_canonname,name );
+	validate_struct_addrinfo(input->ai_next,name );
 }
 

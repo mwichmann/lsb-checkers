@@ -3,11 +3,11 @@
 #include "../type_tests.h"
 #include <termios.h>
 
-void validate_struct_winsize(struct winsize * input)
+void validate_struct_winsize(struct winsize  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ws_row);
-	validate_NULL_TYPETYPE(input->ws_col);
-	validate_NULL_TYPETYPE(input->ws_xpixel);
-	validate_NULL_TYPETYPE(input->ws_ypixel);
+	validate_NULL_TYPETYPE(input->ws_row,name );
+	validate_NULL_TYPETYPE(input->ws_col,name );
+	validate_NULL_TYPETYPE(input->ws_xpixel,name );
+	validate_NULL_TYPETYPE(input->ws_ypixel,name );
 }
 

@@ -3,11 +3,11 @@
 #include "../type_tests.h"
 #include <netdb.h>
 
-void validate_struct_netent(struct netent * input)
+void validate_struct_netent(struct netent  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->n_name);
-	validate_NULL_TYPETYPE(input->n_aliases);
-	validate_NULL_TYPETYPE(input->n_addrtype);
-	validate_NULL_TYPETYPE(input->n_net);
+	validate_NULL_TYPETYPE(input->n_name,name );
+	validate_NULL_TYPETYPE(input->n_aliases,name );
+	validate_NULL_TYPETYPE(input->n_addrtype,name );
+	validate_NULL_TYPETYPE(input->n_net,name );
 }
 

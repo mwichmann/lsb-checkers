@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <sys/socket.h>
 
-void validate_struct_linger(struct linger * input)
+void validate_struct_linger(struct linger  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->l_onoff);
-	validate_NULL_TYPETYPE(input->l_linger);
+	validate_NULL_TYPETYPE(input->l_onoff,name );
+	validate_NULL_TYPETYPE(input->l_linger,name );
 }
 

@@ -3,12 +3,12 @@
 #include "../type_tests.h"
 #include <net/if.h>
 
-void validate_struct_ifaddr(struct ifaddr * input)
+void validate_struct_ifaddr(struct ifaddr  * input, char *name)
 {
-	validate_struct_sockaddr( &(input->ifa_addr) );
-	validate_struct_sockaddr( &(input->ifa_ifu.ifu_broadaddr) );
-	validate_struct_sockaddr( &(input->ifa_ifu.ifu_dstaddr) );
-	validate_NULL_TYPETYPE(input->ifa_ifp);
-	validate_NULL_TYPETYPE(input->ifa_next);
+	validate_struct_sockaddr( &(input->ifa_addr),name );
+	validate_struct_sockaddr( &(input->ifa_ifu.ifu_broadaddr),name );
+	validate_struct_sockaddr( &(input->ifa_ifu.ifu_dstaddr),name );
+	validate_NULL_TYPETYPE(input->ifa_ifp,name );
+	validate_NULL_TYPETYPE(input->ifa_next,name );
 }
 

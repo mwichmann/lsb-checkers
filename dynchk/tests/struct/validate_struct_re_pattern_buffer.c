@@ -3,21 +3,21 @@
 #include "../type_tests.h"
 #include <regex.h>
 
-void validate_struct_re_pattern_buffer(struct re_pattern_buffer * input)
+void validate_struct_re_pattern_buffer(struct re_pattern_buffer  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->buffer);
-	validate_NULL_TYPETYPE(input->allocated);
-	validate_NULL_TYPETYPE(input->used);
-	validate_NULL_TYPETYPE(input->syntax);
-	validate_NULL_TYPETYPE(input->fastmap);
-	validate_NULL_TYPETYPE(input->translate);
-	validate_NULL_TYPETYPE(input->re_nsub);
-	validate_NULL_TYPETYPE(input->can_be_null);
-	validate_NULL_TYPETYPE(input->regs_allocated);
-	validate_NULL_TYPETYPE(input->fastmap_accurate);
-	validate_NULL_TYPETYPE(input->no_sub);
-	validate_NULL_TYPETYPE(input->not_bol);
-	validate_NULL_TYPETYPE(input->not_eol);
-	validate_NULL_TYPETYPE(input->newline_anchor);
+	validate_NULL_TYPETYPE(input->buffer,name );
+	validate_NULL_TYPETYPE(input->allocated,name );
+	validate_NULL_TYPETYPE(input->used,name );
+	validate_NULL_TYPETYPE(input->syntax,name );
+	validate_NULL_TYPETYPE(input->fastmap,name );
+	validate_NULL_TYPETYPE(input->translate,name );
+	validate_NULL_TYPETYPE(input->re_nsub,name );
+	validate_NULL_TYPETYPE(input->can_be_null,name );
+	validate_NULL_TYPETYPE(input->regs_allocated,name );
+	validate_NULL_TYPETYPE(input->fastmap_accurate,name );
+	validate_NULL_TYPETYPE(input->no_sub,name );
+	validate_NULL_TYPETYPE(input->not_bol,name );
+	validate_NULL_TYPETYPE(input->not_eol,name );
+	validate_NULL_TYPETYPE(input->newline_anchor,name );
 }
 

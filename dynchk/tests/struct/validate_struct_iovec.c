@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <sys/socket.h>
 
-void validate_struct_iovec(struct iovec * input)
+void validate_struct_iovec(struct iovec  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->iov_base);
-	validate_NULL_TYPETYPE(input->iov_len);
+	validate_NULL_TYPETYPE(input->iov_base,name );
+	validate_NULL_TYPETYPE(input->iov_len,name );
 }
 

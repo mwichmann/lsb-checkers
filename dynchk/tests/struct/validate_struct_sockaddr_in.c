@@ -3,11 +3,11 @@
 #include "../type_tests.h"
 #include <netinet/in.h>
 
-void validate_struct_sockaddr_in(struct sockaddr_in * input)
+void validate_struct_sockaddr_in(struct sockaddr_in  * input, char *name)
 {
-	validate_socketfamily(input->sin_family);
-	validate_socketport(input->sin_port);
-	validate_IPv4Address( &(input->sin_addr) );
-	validate_NULL_TYPETYPE(input->sin_zero);
+	validate_socketfamily(input->sin_family,name );
+	validate_socketport(input->sin_port,name );
+	validate_IPv4Address( &(input->sin_addr),name );
+	validate_NULL_TYPETYPE(input->sin_zero,name );
 }
 

@@ -3,11 +3,11 @@
 #include "../type_tests.h"
 #include <curses.h>
 
-void validate_struct_ldat(struct ldat * input)
+void validate_struct_ldat(struct ldat  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->text);
-	validate_NULL_TYPETYPE(input->firstchar);
-	validate_NULL_TYPETYPE(input->lastchar);
-	validate_NULL_TYPETYPE(input->oldindex);
+	validate_NULL_TYPETYPE(input->text,name );
+	validate_NULL_TYPETYPE(input->firstchar,name );
+	validate_NULL_TYPETYPE(input->lastchar,name );
+	validate_NULL_TYPETYPE(input->oldindex,name );
 }
 

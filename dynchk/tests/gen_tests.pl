@@ -112,11 +112,10 @@ Tstatus != "Excluded" and Theadergroup = HGid and HGheader=Hid GROUP BY Hname')
 ################################################################################
 
 sub get_type_string($);
-
 sub get_type_string($) 
 {
 	my ($type_id)=@_;
-	my $out_str = "";
+	my ($pre_type,$post_type) = ("","");
 	my $next_form;
 
 	$get_type_info_q->execute($type_id) 
@@ -128,23 +127,24 @@ sub get_type_string($)
 
 	if($form eq "Intrinsic" or $form eq "Literal" or $form eq "Typedef")
 	{
-		return $name;
+		return ($name," ");
 	}
 	elsif($form eq "Struct")
 	{
-		return "struct " . $name;
+		return ("struct " . $name," ");
 	}
 	elsif($form eq "Union")
 	{
-		return "union " . $name;
+		return ("union " . $name," ");
 	}
 	elsif($form eq "Enum")
 	{
-		return "enum ". $name;
+		return ("enum ". $name," ");
 	}
 	elsif($form eq "Pointer")
 	{
-		return get_type_string($basetype)." *";
+		($pre_type,$post_type) = get_type_string($basetype);
+		return ($pre_type." *",$post_type);
 	}
 	elsif($form eq "Const")
 	{
@@ -152,23 +152,28 @@ sub get_type_string($)
 			or die "Couldn't execute type_form query: " . DBI->errstr;
 		($next_form) = $get_type_form_q->fetchrow_array();
 		$get_type_form_q->finish;
-		return get_type_string($basetype)."const " if($next_form eq "Pointer");
-		return "const ".get_type_string($basetype); # (else)
+		($pre_type,$post_type) = get_type_string($basetype);
+		return ($pre_type."const ",$post_type) if($next_form eq "Pointer");
+		return ("const ".$pre_type,$post_type); # (else)
 	}
 	elsif($form eq "Array")
 	{
-		return get_type_string($basetype);
+		($pre_type,$post_type) = get_type_string($basetype);
+		$post_type .= "[". $array_index ."]";
+		return ($pre_type, $post_type); 
 	}
 	elsif($form eq "FuncPtr")
 	{
-		return get_type_string($basetype)."(*".$name.")".get_funcptr_declaration($type_id);
+		($pre_type, $post_type) = get_type_string($basetype);
+		$pre_type.="(*".$name.")".get_funcptr_declaration($type_id);
+		return ($pre_type,$post_type);
 	}
 }
 	
 sub get_funcptr_declaration($)
 {
-	# This might fail if nested function pointers occur.
-	# In that case, we can just use the dynamic-preparation strategy, a la write_body()
+	# This might fail if nested function pointers occur. (nowhere in current LSB)
+	# In that case, we can just use the dynamic query-preparation strategy, a la write_body()
 	my ($TMid) = @_;
 	my $i = 0;
 	my $output = "(";
@@ -176,14 +181,17 @@ sub get_funcptr_declaration($)
 		or die "Couldn't execute funcptr declaration query: " . DBI->errstr;
 	while( my($type_id) = $get_funcptr_declaration_q->fetchrow_array())
 	{
+		my($left,$right);
 		$output.=", " if ($i>0);
-		$output.=get_type_string($type_id);
+		($left,$right)=get_type_string($type_id);
+		$output.=$left;
+		print "Unexpected post-name type in get_funcptr_declaration: ".$left if($right ne "");
 	}
 	$get_funcptr_declaration_q->finish;
 	$output.=")";
 	return $output;
 }
-
+	
 sub get_member_typetype 
 {
 	my($type, $typeform, $base_type, $typetypeid) = @_;
@@ -277,11 +285,11 @@ ORDER BY TMposition'
 		}
 		elsif($typeform eq "Struct")
 		{
-			print $fh "\tvalidate_".$typetype."( &(".$ref_tree.$name.") );\n";
+			print $fh "\tvalidate_".$typetype."( &(".$ref_tree.$name."),name );\n";
 		}
 		else
 		{
-			print $fh "\tvalidate_".$typetype."(".$ref_tree.$name.");\n";
+			print $fh "\tvalidate_".$typetype."(".$ref_tree.$name.",name );\n";
 		}
 	}
 	print $fh "}\n\n" if($depth == 0);
@@ -289,9 +297,10 @@ ORDER BY TMposition'
 sub write_validate_declaration 
 {
 	my ($fh, $struct_name, $struct_id, $header_format) = @_;	
+	my($left_type, $right_type)=get_type_string($struct_id);
 	print $fh "extern " if($header_format);
 	print $fh "void validate_struct_" . $struct_name .
-		"(" . get_type_string($struct_id) ." * input)";
+		"(" . $left_type.$right_type ." * input, char *name)";
 	print $fh ";" if($header_format);
 	print $fh "\n";
 }

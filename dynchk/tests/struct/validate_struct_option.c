@@ -3,11 +3,11 @@
 #include "../type_tests.h"
 #include <getopt.h>
 
-void validate_struct_option(struct option * input)
+void validate_struct_option(struct option  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->name);
-	validate_NULL_TYPETYPE(input->has_arg);
-	validate_NULL_TYPETYPE(input->flag);
-	validate_NULL_TYPETYPE(input->val);
+	validate_NULL_TYPETYPE(input->name,name );
+	validate_NULL_TYPETYPE(input->has_arg,name );
+	validate_NULL_TYPETYPE(input->flag,name );
+	validate_NULL_TYPETYPE(input->val,name );
 }
 

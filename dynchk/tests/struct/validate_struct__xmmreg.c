@@ -3,8 +3,8 @@
 #include "../type_tests.h"
 #include <signal.h>
 
-void validate_struct__xmmreg(struct _xmmreg * input)
+void validate_struct__xmmreg(struct _xmmreg  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->element);
+	validate_NULL_TYPETYPE(input->element,name );
 }
 

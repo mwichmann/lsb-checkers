@@ -3,23 +3,23 @@
 #include "../type_tests.h"
 #include <signal.h>
 
-void validate_struct__fpstate(struct _fpstate * input)
+void validate_struct__fpstate(struct _fpstate  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->cw);
-	validate_NULL_TYPETYPE(input->sw);
-	validate_NULL_TYPETYPE(input->tag);
-	validate_NULL_TYPETYPE(input->ipoff);
-	validate_NULL_TYPETYPE(input->cssel);
-	validate_NULL_TYPETYPE(input->dataoff);
-	validate_NULL_TYPETYPE(input->datasel);
-	validate_NULL_TYPETYPE(input->_st);
-	validate_NULL_TYPETYPE(input->status);
-	validate_NULL_TYPETYPE(input->magic);
-	validate_NULL_TYPETYPE(input->_fxsr_env);
-	validate_NULL_TYPETYPE(input->mxcsr);
-	validate_NULL_TYPETYPE(input->reserved);
-	validate_NULL_TYPETYPE(input->_fxsr_st);
-	validate_NULL_TYPETYPE(input->_xmm);
-	validate_NULL_TYPETYPE(input->padding);
+	validate_NULL_TYPETYPE(input->cw,name );
+	validate_NULL_TYPETYPE(input->sw,name );
+	validate_NULL_TYPETYPE(input->tag,name );
+	validate_NULL_TYPETYPE(input->ipoff,name );
+	validate_NULL_TYPETYPE(input->cssel,name );
+	validate_NULL_TYPETYPE(input->dataoff,name );
+	validate_NULL_TYPETYPE(input->datasel,name );
+	validate_NULL_TYPETYPE(input->_st,name );
+	validate_NULL_TYPETYPE(input->status,name );
+	validate_NULL_TYPETYPE(input->magic,name );
+	validate_NULL_TYPETYPE(input->_fxsr_env,name );
+	validate_NULL_TYPETYPE(input->mxcsr,name );
+	validate_NULL_TYPETYPE(input->reserved,name );
+	validate_NULL_TYPETYPE(input->_fxsr_st,name );
+	validate_NULL_TYPETYPE(input->_xmm,name );
+	validate_NULL_TYPETYPE(input->padding,name );
 }
 

@@ -3,8 +3,8 @@
 #include "../type_tests.h"
 #include <zlib.h>
 
-void validate_struct_internal_state(struct internal_state * input)
+void validate_struct_internal_state(struct internal_state  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->dummy);
+	validate_NULL_TYPETYPE(input->dummy,name );
 }
 

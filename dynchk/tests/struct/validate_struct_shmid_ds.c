@@ -3,20 +3,20 @@
 #include "../type_tests.h"
 #include <sys/shm.h>
 
-void validate_struct_shmid_ds(struct shmid_ds * input)
+void validate_struct_shmid_ds(struct shmid_ds  * input, char *name)
 {
-	validate_struct_ipc_perm( &(input->shm_perm) );
-	validate_NULL_TYPETYPE(input->shm_segsz);
-	validate_NULL_TYPETYPE(input->shm_atime);
-	validate_NULL_TYPETYPE(input->__unused1);
-	validate_NULL_TYPETYPE(input->shm_dtime);
-	validate_NULL_TYPETYPE(input->__unused2);
-	validate_NULL_TYPETYPE(input->shm_ctime);
-	validate_NULL_TYPETYPE(input->__unused3);
-	validate_NULL_TYPETYPE(input->shm_cpid);
-	validate_NULL_TYPETYPE(input->shm_lpid);
-	validate_NULL_TYPETYPE(input->shm_nattch);
-	validate_NULL_TYPETYPE(input->__unused4);
-	validate_NULL_TYPETYPE(input->__unused5);
+	validate_struct_ipc_perm( &(input->shm_perm),name );
+	validate_NULL_TYPETYPE(input->shm_segsz,name );
+	validate_NULL_TYPETYPE(input->shm_atime,name );
+	validate_NULL_TYPETYPE(input->__unused1,name );
+	validate_NULL_TYPETYPE(input->shm_dtime,name );
+	validate_NULL_TYPETYPE(input->__unused2,name );
+	validate_NULL_TYPETYPE(input->shm_ctime,name );
+	validate_NULL_TYPETYPE(input->__unused3,name );
+	validate_NULL_TYPETYPE(input->shm_cpid,name );
+	validate_NULL_TYPETYPE(input->shm_lpid,name );
+	validate_NULL_TYPETYPE(input->shm_nattch,name );
+	validate_NULL_TYPETYPE(input->__unused4,name );
+	validate_NULL_TYPETYPE(input->__unused5,name );
 }
 

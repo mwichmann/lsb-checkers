@@ -3,10 +3,10 @@
 #include "../type_tests.h"
 #include <sys/sem.h>
 
-void validate_struct_sembuf(struct sembuf * input)
+void validate_struct_sembuf(struct sembuf  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->sem_num);
-	validate_NULL_TYPETYPE(input->sem_op);
-	validate_NULL_TYPETYPE(input->sem_flg);
+	validate_NULL_TYPETYPE(input->sem_num,name );
+	validate_NULL_TYPETYPE(input->sem_op,name );
+	validate_NULL_TYPETYPE(input->sem_flg,name );
 }
 

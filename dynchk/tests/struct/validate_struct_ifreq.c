@@ -3,20 +3,20 @@
 #include "../type_tests.h"
 #include <net/if.h>
 
-void validate_struct_ifreq(struct ifreq * input)
+void validate_struct_ifreq(struct ifreq  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ifr_ifrn.ifrn_name);
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_addr) );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_dstaddr) );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_broadaddr) );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_netmask) );
-	validate_struct_sockaddr( &(input->ifr_ifru.ifru_hwaddr) );
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_flags);
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_ivalue);
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_mtu);
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_slave);
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_newname);
-	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_data);
-	validate_struct_ifmap( &(input->ifr_ifru.ifru_map) );
+	validate_NULL_TYPETYPE(input->ifr_ifrn.ifrn_name,name );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_addr),name );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_dstaddr),name );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_broadaddr),name );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_netmask),name );
+	validate_struct_sockaddr( &(input->ifr_ifru.ifru_hwaddr),name );
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_flags,name );
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_ivalue,name );
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_mtu,name );
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_slave,name );
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_newname,name );
+	validate_NULL_TYPETYPE(input->ifr_ifru.ifru_data,name );
+	validate_struct_ifmap( &(input->ifr_ifru.ifru_map),name );
 }
 

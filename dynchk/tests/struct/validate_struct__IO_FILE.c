@@ -3,8 +3,8 @@
 #include "../type_tests.h"
 #include <stdio.h>
 
-void validate_struct__IO_FILE(struct _IO_FILE * input)
+void validate_struct__IO_FILE(struct _IO_FILE  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->dummy);
+	validate_NULL_TYPETYPE(input->dummy,name );
 }
 

@@ -3,13 +3,13 @@
 #include "../type_tests.h"
 #include <net/if.h>
 
-void validate_struct_ifmap(struct ifmap * input)
+void validate_struct_ifmap(struct ifmap  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->mem_start);
-	validate_NULL_TYPETYPE(input->mem_end);
-	validate_NULL_TYPETYPE(input->base_addr);
-	validate_NULL_TYPETYPE(input->irq);
-	validate_NULL_TYPETYPE(input->dma);
-	validate_NULL_TYPETYPE(input->port);
+	validate_NULL_TYPETYPE(input->mem_start,name );
+	validate_NULL_TYPETYPE(input->mem_end,name );
+	validate_NULL_TYPETYPE(input->base_addr,name );
+	validate_NULL_TYPETYPE(input->irq,name );
+	validate_NULL_TYPETYPE(input->dma,name );
+	validate_NULL_TYPETYPE(input->port,name );
 }
 

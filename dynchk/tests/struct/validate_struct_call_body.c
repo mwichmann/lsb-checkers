@@ -3,13 +3,13 @@
 #include "../type_tests.h"
 #include <rpc/rpc_msg.h>
 
-void validate_struct_call_body(struct call_body * input)
+void validate_struct_call_body(struct call_body  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->cb_rpcvers);
-	validate_NULL_TYPETYPE(input->cb_prog);
-	validate_NULL_TYPETYPE(input->cb_vers);
-	validate_NULL_TYPETYPE(input->cb_proc);
-	validate_struct_opaque_auth( &(input->cb_cred) );
-	validate_struct_opaque_auth( &(input->cb_verf) );
+	validate_NULL_TYPETYPE(input->cb_rpcvers,name );
+	validate_NULL_TYPETYPE(input->cb_prog,name );
+	validate_NULL_TYPETYPE(input->cb_vers,name );
+	validate_NULL_TYPETYPE(input->cb_proc,name );
+	validate_struct_opaque_auth( &(input->cb_cred),name );
+	validate_struct_opaque_auth( &(input->cb_verf),name );
 }
 

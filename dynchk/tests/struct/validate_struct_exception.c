@@ -3,12 +3,12 @@
 #include "../type_tests.h"
 #include <math.h>
 
-void validate_struct_exception(struct exception * input)
+void validate_struct_exception(struct exception  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->type);
-	validate_NULL_TYPETYPE(input->name);
-	validate_NULL_TYPETYPE(input->arg1);
-	validate_NULL_TYPETYPE(input->arg2);
-	validate_NULL_TYPETYPE(input->retval);
+	validate_NULL_TYPETYPE(input->type,name );
+	validate_NULL_TYPETYPE(input->name,name );
+	validate_NULL_TYPETYPE(input->arg1,name );
+	validate_NULL_TYPETYPE(input->arg2,name );
+	validate_NULL_TYPETYPE(input->retval,name );
 }
 

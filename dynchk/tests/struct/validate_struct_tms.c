@@ -3,11 +3,11 @@
 #include "../type_tests.h"
 #include <sys/times.h>
 
-void validate_struct_tms(struct tms * input)
+void validate_struct_tms(struct tms  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->tms_utime);
-	validate_NULL_TYPETYPE(input->tms_stime);
-	validate_NULL_TYPETYPE(input->tms_cutime);
-	validate_NULL_TYPETYPE(input->tms_cstime);
+	validate_NULL_TYPETYPE(input->tms_utime,name );
+	validate_NULL_TYPETYPE(input->tms_stime,name );
+	validate_NULL_TYPETYPE(input->tms_cutime,name );
+	validate_NULL_TYPETYPE(input->tms_cstime,name );
 }
 

@@ -3,17 +3,17 @@
 #include "../type_tests.h"
 #include <rpc/xdr.h>
 
-void validate_struct_xdr_ops(struct xdr_ops * input)
+void validate_struct_xdr_ops(struct xdr_ops  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->x_getlong);
-	validate_NULL_TYPETYPE(input->x_putlong);
-	validate_NULL_TYPETYPE(input->x_getbytes);
-	validate_NULL_TYPETYPE(input->x_putbytes);
-	validate_NULL_TYPETYPE(input->x_getpostn);
-	validate_NULL_TYPETYPE(input->x_setpostn);
-	validate_NULL_TYPETYPE(input->x_inline);
-	validate_NULL_TYPETYPE(input->x_destroy);
-	validate_NULL_TYPETYPE(input->x_getint32);
-	validate_NULL_TYPETYPE(input->x_putint32);
+	validate_NULL_TYPETYPE(input->x_getlong,name );
+	validate_NULL_TYPETYPE(input->x_putlong,name );
+	validate_NULL_TYPETYPE(input->x_getbytes,name );
+	validate_NULL_TYPETYPE(input->x_putbytes,name );
+	validate_NULL_TYPETYPE(input->x_getpostn,name );
+	validate_NULL_TYPETYPE(input->x_setpostn,name );
+	validate_NULL_TYPETYPE(input->x_inline,name );
+	validate_NULL_TYPETYPE(input->x_destroy,name );
+	validate_NULL_TYPETYPE(input->x_getint32,name );
+	validate_NULL_TYPETYPE(input->x_putint32,name );
 }
 

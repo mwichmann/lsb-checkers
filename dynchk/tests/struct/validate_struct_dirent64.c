@@ -3,12 +3,12 @@
 #include "../type_tests.h"
 #include <dirent.h>
 
-void validate_struct_dirent64(struct dirent64 * input)
+void validate_struct_dirent64(struct dirent64  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->d_ino);
-	validate_NULL_TYPETYPE(input->d_off);
-	validate_NULL_TYPETYPE(input->d_reclen);
-	validate_NULL_TYPETYPE(input->d_type);
-	validate_NULL_TYPETYPE(input->d_name);
+	validate_NULL_TYPETYPE(input->d_ino,name );
+	validate_NULL_TYPETYPE(input->d_off,name );
+	validate_NULL_TYPETYPE(input->d_reclen,name );
+	validate_NULL_TYPETYPE(input->d_type,name );
+	validate_NULL_TYPETYPE(input->d_name,name );
 }
 

@@ -3,11 +3,11 @@
 #include "../type_tests.h"
 #include <sys/timeb.h>
 
-void validate_struct_timeb(struct timeb * input)
+void validate_struct_timeb(struct timeb  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->time);
-	validate_NULL_TYPETYPE(input->millitm);
-	validate_NULL_TYPETYPE(input->timezone);
-	validate_NULL_TYPETYPE(input->dstflag);
+	validate_NULL_TYPETYPE(input->time,name );
+	validate_NULL_TYPETYPE(input->millitm,name );
+	validate_NULL_TYPETYPE(input->timezone,name );
+	validate_NULL_TYPETYPE(input->dstflag,name );
 }
 

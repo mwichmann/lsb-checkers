@@ -3,7 +3,7 @@
 #include "../type_tests.h"
 #include <term.h>
 
-void validate_struct_term(struct term * input)
+void validate_struct_term(struct term  * input, char *name)
 {
 }
 

@@ -3,16 +3,16 @@
 #include "../type_tests.h"
 #include <rpc/svc.h>
 
-void validate_struct_SVCXPRT(struct SVCXPRT * input)
+void validate_struct_SVCXPRT(struct SVCXPRT  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->xp_sock);
-	validate_NULL_TYPETYPE(input->xp_port);
-	validate_struct_xp_ops(input->xp_ops);
-	validate_NULL_TYPETYPE(input->xp_addrlen);
-	validate_struct_sockaddr_in( &(input->xp_raddr) );
-	validate_struct_opaque_auth( &(input->xp_verf) );
-	validate_NULL_TYPETYPE(input->xp_p1);
-	validate_NULL_TYPETYPE(input->xp_p2);
-	validate_NULL_TYPETYPE(input->xp_pad);
+	validate_NULL_TYPETYPE(input->xp_sock,name );
+	validate_NULL_TYPETYPE(input->xp_port,name );
+	validate_struct_xp_ops(input->xp_ops,name );
+	validate_NULL_TYPETYPE(input->xp_addrlen,name );
+	validate_struct_sockaddr_in( &(input->xp_raddr),name );
+	validate_struct_opaque_auth( &(input->xp_verf),name );
+	validate_NULL_TYPETYPE(input->xp_p1,name );
+	validate_NULL_TYPETYPE(input->xp_p2,name );
+	validate_NULL_TYPETYPE(input->xp_pad,name );
 }
 

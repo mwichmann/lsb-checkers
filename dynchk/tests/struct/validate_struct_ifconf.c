@@ -3,10 +3,10 @@
 #include "../type_tests.h"
 #include <net/if.h>
 
-void validate_struct_ifconf(struct ifconf * input)
+void validate_struct_ifconf(struct ifconf  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ifc_len);
-	validate_NULL_TYPETYPE(input->ifc_ifcu.ifcu_buf);
-	validate_struct_ifreq(input->ifc_ifcu.ifcu_req);
+	validate_NULL_TYPETYPE(input->ifc_len,name );
+	validate_NULL_TYPETYPE(input->ifc_ifcu.ifcu_buf,name );
+	validate_struct_ifreq(input->ifc_ifcu.ifcu_req,name );
 }
 

@@ -3,35 +3,35 @@
 #include "../type_tests.h"
 #include <curses.h>
 
-void validate_struct__win_st(struct _win_st * input)
+void validate_struct__win_st(struct _win_st  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->_cury);
-	validate_NULL_TYPETYPE(input->_curx);
-	validate_NULL_TYPETYPE(input->_maxy);
-	validate_NULL_TYPETYPE(input->_maxx);
-	validate_NULL_TYPETYPE(input->_begy);
-	validate_NULL_TYPETYPE(input->_begx);
-	validate_NULL_TYPETYPE(input->_flags);
-	validate_NULL_TYPETYPE(input->_attrs);
-	validate_NULL_TYPETYPE(input->_bkgd);
-	validate_NULL_TYPETYPE(input->_notimeout);
-	validate_NULL_TYPETYPE(input->_clear);
-	validate_NULL_TYPETYPE(input->_leaveok);
-	validate_NULL_TYPETYPE(input->_scroll);
-	validate_NULL_TYPETYPE(input->_idlok);
-	validate_NULL_TYPETYPE(input->_idcok);
-	validate_NULL_TYPETYPE(input->_immed);
-	validate_NULL_TYPETYPE(input->_sync);
-	validate_NULL_TYPETYPE(input->_use_keypad);
-	validate_NULL_TYPETYPE(input->_delay);
-	validate_struct_ldat(input->_line);
-	validate_NULL_TYPETYPE(input->_regtop);
-	validate_NULL_TYPETYPE(input->_regbottom);
-	validate_NULL_TYPETYPE(input->_parx);
-	validate_NULL_TYPETYPE(input->_pary);
-	validate_NULL_TYPETYPE(input->_parent);
-	validate_struct_pdat( &(input->_pad) );
-	validate_NULL_TYPETYPE(input->_yoffset);
-	validate_NULL_TYPETYPE(input->_bkgrnd);
+	validate_NULL_TYPETYPE(input->_cury,name );
+	validate_NULL_TYPETYPE(input->_curx,name );
+	validate_NULL_TYPETYPE(input->_maxy,name );
+	validate_NULL_TYPETYPE(input->_maxx,name );
+	validate_NULL_TYPETYPE(input->_begy,name );
+	validate_NULL_TYPETYPE(input->_begx,name );
+	validate_NULL_TYPETYPE(input->_flags,name );
+	validate_NULL_TYPETYPE(input->_attrs,name );
+	validate_NULL_TYPETYPE(input->_bkgd,name );
+	validate_NULL_TYPETYPE(input->_notimeout,name );
+	validate_NULL_TYPETYPE(input->_clear,name );
+	validate_NULL_TYPETYPE(input->_leaveok,name );
+	validate_NULL_TYPETYPE(input->_scroll,name );
+	validate_NULL_TYPETYPE(input->_idlok,name );
+	validate_NULL_TYPETYPE(input->_idcok,name );
+	validate_NULL_TYPETYPE(input->_immed,name );
+	validate_NULL_TYPETYPE(input->_sync,name );
+	validate_NULL_TYPETYPE(input->_use_keypad,name );
+	validate_NULL_TYPETYPE(input->_delay,name );
+	validate_struct_ldat(input->_line,name );
+	validate_NULL_TYPETYPE(input->_regtop,name );
+	validate_NULL_TYPETYPE(input->_regbottom,name );
+	validate_NULL_TYPETYPE(input->_parx,name );
+	validate_NULL_TYPETYPE(input->_pary,name );
+	validate_NULL_TYPETYPE(input->_parent,name );
+	validate_struct_pdat( &(input->_pad),name );
+	validate_NULL_TYPETYPE(input->_yoffset,name );
+	validate_NULL_TYPETYPE(input->_bkgrnd,name );
 }
 
