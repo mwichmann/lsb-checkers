@@ -22,6 +22,13 @@ int pcnt=0;
 Msg("Checking data structures in sys/resource.h\n");
 #endif
 
+#ifdef RUSAGE_SELF
+	CompareConstant(RUSAGE_SELF,0)
+#else
+Msg( "Error: Constant not found: RUSAGE_SELF\n");
+cnt++;
+#endif
+
 #ifdef RLIMIT_CPU
 	CompareConstant(RLIMIT_CPU,0)
 #else

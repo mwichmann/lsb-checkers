@@ -22,12 +22,28 @@ int pcnt=0;
 Msg("Checking data structures in stddef.h\n");
 #endif
 
+#ifdef NULL
+	CompareConstant(NULL,((void*)0))
+#else
+Msg( "Error: Constant not found: NULL\n");
+cnt++;
+#endif
+
+/* No test for offsetof(TYPE,MEMBER) */
 #ifdef __i386__
 CheckTypeSize(wchar_t,4, 8848, 2)
 #elif __ia64__
 CheckTypeSize(wchar_t,4, 8848, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(size_t,4, 8969, 2)
+#elif __ia64__
+CheckTypeSize(size_t,8, 8969, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
 #endif
 
 #ifdef TET_TEST

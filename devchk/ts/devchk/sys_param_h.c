@@ -23,14 +23,7 @@ Msg("Checking data structures in sys/param.h\n");
 #endif
 
 #ifdef MAXPATHLEN
-	CompareConstant(MAXPATHLEN,4095)
-#else
-Msg( "Error: Constant not found: MAXPATHLEN\n");
-cnt++;
-#endif
-
-#ifdef MAXPATHLEN
-	CompareConstant(MAXPATHLEN,PATH_MAX)
+	CompareConstant(MAXPATHLEN,4096)
 #else
 Msg( "Error: Constant not found: MAXPATHLEN\n");
 cnt++;

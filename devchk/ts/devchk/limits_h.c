@@ -58,7 +58,7 @@ cnt++;
 #endif
 
 #ifdef PATH_MAX
-	CompareConstant(PATH_MAX,4095)
+	CompareConstant(PATH_MAX,4096)
 #else
 Msg( "Error: Constant not found: PATH_MAX\n");
 cnt++;

@@ -275,14 +275,6 @@ CheckTypeSize(regex_t,64, 6945, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
 #endif
 
-#ifdef __i386__
-CheckTypeSize(regmatch_t,8, 6949, 2)
-#elif __ia64__
-CheckTypeSize(regmatch_t,8, 6949, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6949,0);
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

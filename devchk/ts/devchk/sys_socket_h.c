@@ -43,6 +43,20 @@ Msg( "Error: Constant not found: SHUT_RDWR\n");
 cnt++;
 #endif
 
+#ifdef PF_INET
+	CompareConstant(PF_INET,AF_INET)
+#else
+Msg( "Error: Constant not found: PF_INET\n");
+cnt++;
+#endif
+
+#ifdef PF_INET6
+	CompareConstant(PF_INET6,AF_INET6)
+#else
+Msg( "Error: Constant not found: PF_INET6\n");
+cnt++;
+#endif
+
 #ifdef MSG_OOB
 	CompareConstant(MSG_OOB,1)
 #else

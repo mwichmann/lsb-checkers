@@ -95,6 +95,13 @@ Msg( "Error: Constant not found: S_ISGID\n");
 cnt++;
 #endif
 
+#ifdef S_ISVTX
+	CompareConstant(S_ISVTX,01000)
+#else
+Msg( "Error: Constant not found: S_ISVTX\n");
+cnt++;
+#endif
+
 #ifdef S_IRUSR
 	CompareConstant(S_IRUSR,0x0100)
 #else

@@ -29,6 +29,10 @@ int architecture=7;
 int architecture=8;
 #define __found_arch__
 #endif
+#ifdef __powerpc64__
+int architecture=9;
+#define __found_arch__
+#endif
 #ifndef __found_arch__
 #error "Unable to identify architecture"
 #endif
@@ -60,8 +64,13 @@ main()
 {
 tcnt+=GL_gl_h();
 tcnt+=GL_glx_h();
+tcnt+=X11_Composite_h();
+tcnt+=X11_CompositeP_h();
+tcnt+=X11_ConstrainP_h();
 tcnt+=X11_ICE_ICElib_h();
 tcnt+=X11_ICE_ICEutil_h();
+tcnt+=X11_Intrinsic_h();
+tcnt+=X11_ObjectP_h();
 tcnt+=X11_SM_SMlib_h();
 tcnt+=X11_X_h();
 tcnt+=X11_Xauth_h();
@@ -78,6 +87,7 @@ tcnt+=dirent_h();
 tcnt+=dlfcn_h();
 tcnt+=errno_h();
 tcnt+=fcntl_h();
+tcnt+=float_h();
 tcnt+=fmtmsg_h();
 tcnt+=fnmatch_h();
 tcnt+=ftw_h();
@@ -119,9 +129,11 @@ tcnt+=sys_times_h();
 tcnt+=sys_types_h();
 tcnt+=sys_utsname_h();
 tcnt+=sys_wait_h();
+tcnt+=syslog_h();
 tcnt+=tar_h();
 tcnt+=termios_h();
 tcnt+=time_h();
+tcnt+=ucontext_h();
 tcnt+=ulimit_h();
 tcnt+=unistd_h();
 tcnt+=utime_h();

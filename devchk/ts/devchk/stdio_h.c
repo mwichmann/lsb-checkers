@@ -30,7 +30,7 @@ cnt++;
 #endif
 
 #ifdef P_tmpdir
-	CompareStringConstant(P_tmpdir,"<pathname>")
+	CompareStringConstant(P_tmpdir,"/tmp")
 #else
 Msg( "Error: Constant not found: P_tmpdir\n");
 cnt++;
@@ -44,14 +44,14 @@ cnt++;
 #endif
 
 #ifdef L_tmpnam
-	CompareConstant(L_tmpnam,128)
+	CompareConstant(L_tmpnam,20)
 #else
 Msg( "Error: Constant not found: L_tmpnam\n");
 cnt++;
 #endif
 
 #ifdef FILENAME_MAX
-	CompareConstant(FILENAME_MAX,4095)
+	CompareConstant(FILENAME_MAX,4096)
 #else
 Msg( "Error: Constant not found: FILENAME_MAX\n");
 cnt++;

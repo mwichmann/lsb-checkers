@@ -1,17 +1,17 @@
 /*
- * Test of float.h
+ * Test of ucontext.h
  */
 #include "hdrchk.h"
 #include "sys/types.h"
-#include "float.h"
+#include "ucontext.h"
 
 
 
 #ifdef TET_TEST
-void float_h()
+void ucontext_h()
 {
 #else
-int float_h()
+int ucontext_h()
 {
 #endif
 
@@ -19,13 +19,13 @@ int cnt=0;
 
 #ifdef TET_TEST
 int pcnt=0;
-Msg("Checking data structures in float.h\n");
+Msg("Checking data structures in ucontext.h\n");
 #endif
 
-#ifdef DBL_MAX
-	CompareConstant(DBL_MAX,1.7976931348623157e+308)
+#ifdef NGREG
+	CompareConstant(NGREG,19)
 #else
-Msg( "Error: Constant not found: DBL_MAX\n");
+Msg( "Error: Constant not found: NGREG\n");
 cnt++;
 #endif
 
@@ -36,7 +36,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in float.h\n",cnt);
+printf("%d tests in ucontext.h\n",cnt);
 return cnt;
 #endif
 

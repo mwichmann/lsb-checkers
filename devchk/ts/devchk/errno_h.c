@@ -51,6 +51,13 @@ Msg( "Error: Constant not found: EINTR\n");
 cnt++;
 #endif
 
+#ifdef EIO
+	CompareConstant(EIO,5)
+#else
+Msg( "Error: Constant not found: EIO\n");
+cnt++;
+#endif
+
 #ifdef ENXIO
 	CompareConstant(ENXIO,6)
 #else

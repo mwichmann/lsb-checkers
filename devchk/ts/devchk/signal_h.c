@@ -65,7 +65,7 @@ cnt++;
 #endif
 
 #ifdef SIGEV_THREAD
-	CompareConstant(SIGEV_THREAD,0)
+	CompareConstant(SIGEV_THREAD,2)
 #else
 Msg( "Error: Constant not found: SIGEV_THREAD\n");
 cnt++;
@@ -404,13 +404,6 @@ cnt++;
 	CompareConstant(_NSIG,64)
 #else
 Msg( "Error: Constant not found: _NSIG\n");
-cnt++;
-#endif
-
-#ifdef _NSIG_WORDS
-	CompareConstant(_NSIG_WORDS,((_NSIG/sizeof(long))>>3))
-#else
-Msg( "Error: Constant not found: _NSIG_WORDS\n");
 cnt++;
 #endif
 
