@@ -394,7 +394,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
 	if( elfchk_debug&DEBUG_SECTION_HEADERS )
   		fprintf(stderr, "%s\n", tmp_string);
   	tetj_result(journal, tetj_activity_count, tetj_tp_count,
-              	TETJ_UNRESOLVED);
+              	TETJ_WARNING);
   	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   }
   return;
