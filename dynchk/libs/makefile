@@ -1,4 +1,4 @@
-LIBS=libc libcrypt libncurses libz libdl libpam libgcc_s libm libpthread libutil
+LIBS=libc libcrypt libncurses libz libdl libpam libgcc_s libm libpthread 
 
 all:
 	for d in $(LIBS);do (cd $$d && make all);done
