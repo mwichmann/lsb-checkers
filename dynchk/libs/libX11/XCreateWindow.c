@@ -29,7 +29,9 @@ Window XCreateWindow (Display * arg0 , Window arg1 , int arg2 , int arg3 , unsig
 		validate_NULL_TYPETYPE(  arg6, "XCreateWindow - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XCreateWindow - arg7");
 		validate_NULL_TYPETYPE(  arg8, "XCreateWindow - arg8");
+		if( arg9 ) {
 	validate_Rdaddress( arg9, "XCreateWindow - arg9");
+		}
 		validate_NULL_TYPETYPE(  arg9, "XCreateWindow - arg9");
 		validate_NULL_TYPETYPE(  arg10, "XCreateWindow - arg10");
 	validate_Rdaddress( arg11, "XCreateWindow - arg11");
