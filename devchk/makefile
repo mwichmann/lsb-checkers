@@ -28,6 +28,8 @@ OBJS = hdrchk.o \
 	ulimit_h.o \
 	wchar_h.o 
 
+all: hdrchk
+
 hdrchk: $(OBJS)
 	cc -o hdrchk $(OBJS)
 
