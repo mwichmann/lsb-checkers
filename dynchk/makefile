@@ -1,5 +1,5 @@
 WRAPPER_LIBS = libs/libc/*.o
-TEST_LIB = tests/libtests.a
+TEST_LIB = tests/tests.o
 
 all: liblsbdynchk.so
 
