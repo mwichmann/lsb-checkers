@@ -6,10 +6,12 @@
 #undef pthread_mutex_lock
 static int(*funcptr) (pthread_mutex_t * ) = 0;
 
+extern int(*__pthread_mutex_lock) (pthread_mutex_t * );
+
 int pthread_mutex_lock (pthread_mutex_t * arg0 )
 {
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_mutex_lock");
+		funcptr = __pthread_mutex_lock;
 	validate_NULL_TYPETYPE(arg0, "pthread_mutex_lock");
 	return funcptr(arg0);
 }
@@ -17,7 +19,7 @@ int pthread_mutex_lock (pthread_mutex_t * arg0 )
 int lsb_pthread_mutex_lock (pthread_mutex_t * arg0 )
 {
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_mutex_lock");
+		funcptr = __pthread_mutex_lock;
 	return funcptr(arg0);
 }
 
