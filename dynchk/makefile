@@ -30,12 +30,12 @@ lsbdynchk: lsbdynchk.sed
 test:
 
 install:
-	install -d $(INSTALL_ROOT)/$(LIBDIR)
-	install liblsbdynchk.so.1 $(INSTALL_ROOT)/$(LIBDIR)/liblsbdynchk.so.1
-	install -d $(INSTALL_ROOT)/$(BINDIR)
-	install lsbdynchk $(INSTALL_ROOT)/$(BINDIR)/lsbdynchk
-	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
-	install lsbdynchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbdynchk.1
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(LIBDIR)
+	install liblsbdynchk.so.1 $(DESTDIR)$(INSTALL_ROOT)/$(LIBDIR)/liblsbdynchk.so.1
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)
+	install lsbdynchk $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/lsbdynchk
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1
+	install lsbdynchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsbdynchk.1
 
 
 clean:
