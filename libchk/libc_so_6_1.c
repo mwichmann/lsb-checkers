@@ -9768,6 +9768,7 @@ struct versym libc_so_6_1[] = {
 #if __s390__
 	{"xdr_u_char","GLIBC_2.0"},
 #endif
+	{"xdr_u_int","GLIBC_2.0"},
 #if __i386__
 	{"xdr_u_long","GLIBC_2.0"},
 #endif
