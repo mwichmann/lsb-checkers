@@ -9,6 +9,19 @@
 
 extern int libchk_debug;
 
+/*
+ * Structure to keep track of which libs are in which modules
+ */
+
+struct modlib {
+	char 		*modname;
+	char 		*runname;
+	struct versym	**symbols;
+	struct classinfo **classinfo;
+};
+
+extern struct modlib modlibs[];
+
 /* classchk.c */
 extern int check_class_info(char *file, struct classinfo *classes[], struct tetj_handle *journal);
 /* libchk.c */
