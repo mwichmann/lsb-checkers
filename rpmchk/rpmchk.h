@@ -2,6 +2,7 @@
 #define _RPMCHK_H
 
 #include <sys/types.h>
+#include <netinet/in.h>
 
 struct tetj_handle;
 
@@ -49,6 +50,48 @@ typedef struct rpmheader {
 
 #define RPMHDRVER	1
 
+/*
+ * Each Index has a type associated with it. These are the types which
+ * may be used.
+ */
+typedef enum {
+	NULL_TYPE=0,
+	CHAR=1,
+	INT8=2,
+	INT16=3,
+	INT32=4,
+	INT64=5,
+	STRING=6,
+	BIN=7,
+	STRING_ARRAY=8
+	} RpmIndexType;
+
+/*
+ * Each index has a tag that identifies what it is. These are the tags which
+ * may be used.
+ */
+typedef enum {
+	SIGTAG_SIZE = 1000,
+	SIGTAG_MD5 = 1001,
+	SIGTAG_PGP = 1002
+	} SigIndexTag;
+
+typedef enum {
+	RPMTAG_IMAGE = 61,
+	RPMTAG_SIGNATURES = 62,
+	RPMTAG_IMMUTABLE = 63,
+	RPMTAG_REGIONS = 64,
+	RPMTAG_I18NTABLE = 100,
+	RPMTAG_SIGBASE	= 256,
+	RPMTAG_NAME	= 1000,
+	RPMTAG_VERSION	= 1001,
+	RPMTAG_RELEASE	= 1002,
+	RPMTAG_SERIAL	= 1003,
+	RPMTAG_SUMMARY	= 1004,
+
+	RPMTAG_VERIFYSCRIPT = 1079
+	} RpmIndexTag;
+
 typedef struct rpmhdrindex {
     int	tag;
     int	type;
@@ -66,6 +109,8 @@ typedef	struct	{
 	RpmLead	*laddr;
 	RpmHeader	*signature;
 	RpmHeader	*nexthdr;
+	caddr_t     storeaddr;  /* Start store for the current header */
+	caddr_t     archive;
 #if 0
 	Elf32_Shdr *saddr; /* Start address of the next section of the file */
 	Elf32_Phdr *paddr; /* address of the program header of the file */
@@ -100,7 +145,24 @@ typedef	struct	{
 #endif
 	}	RpmFile;
 
+/* RPM Index things */
+
+typedef void (*IdxTagFunc)(RpmFile *, RpmHdrIndex *, struct tetj_handle *);
+
+typedef struct	{
+	RpmIndexTag	tag;
+	char		*name;
+	IdxTagFunc	func;
+	} RpmIdxTagFuncRec;
+
+extern RpmIdxTagFuncRec SigTags[];
+extern int numSigIdxTags;
+extern RpmIdxTagFuncRec HdrTags[];
+extern int numHdrIdxTags;
+
 /* util.c */
 extern RpmFile *OpenRpmFile(char *name);
 extern void checkRpm(RpmFile *file1, struct tetj_handle *journal);
+extern void checkRpmLead(RpmFile *file1, struct tetj_handle *journal);
+extern void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
 #endif /* _RPMCHK_H */
