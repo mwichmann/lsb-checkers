@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include "hdr.h"
 #include "symvers.h"
+#include "../tetj/tetj.h"
 
 void
-checkElfhdr(ElfFile *file1, int isProgram)
+checkElfhdr(ElfFile *file1, int isProgram, struct tetj_handle *journal)
 {
+#define TMP_STRING_SIZE (400)
+  char tmp_string[TMP_STRING_SIZE+1];
 Elf32_Ehdr *hdr1;
 
 hdr1=(Elf32_Ehdr *)file1->addr;
@@ -21,9 +24,20 @@ if( hdr1->e_shoff ) {
 /* Check e_ident */
 
 #define checkhdrident( index, value ) \
+{ \
+tetj_tp_count++; \
+tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check header id "#index" is "#value); \
 if( hdr1->e_ident[index] != value ) { \
-	fprintf( stderr, "compareElfhdr: e_ident[%s] isn't expected value %s\n", #index, #value); \
-	}
+	snprintf( tmp_string, TMP_STRING_SIZE, "compareElfhdr: e_ident[%s] isn't expected value %s", #index, #value); \
+        fprintf(stderr, "%s\n", tmp_string); \
+        tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL); \
+	} \
+else \
+{ \
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); \
+} \
+}
 
 checkhdrident( EI_MAG0, ELFMAG0 )
 checkhdrident( EI_MAG1, ELFMAG1 )
@@ -50,9 +64,19 @@ checkhdrident( EI_ABIVERSION, 0 )
 #undef checkhdrident
 
 #define checkhdrfield( member, value ) \
+{ \
+tetj_tp_count++; \
+tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check header field "#member" is "#value); \
 if( hdr1->member != value ) { \
-	fprintf( stderr, "compareElfhdr: %s isn't expected value %s\n", #member, #value); \
-	fprintf( stderr, "\tfound %x instead\n", hdr1->member); \
+	snprintf( tmp_string, TMP_STRING_SIZE, "compareElfhdr: %s isn't expected value %s, found %x instead\n", #member, #value, hdr1->member); \
+        fprintf(stderr, "%s\n", tmp_string); \
+        tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL); \
+	} \
+else \
+{ \
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); \
+} \
 	}
 
 /* Check e_type */

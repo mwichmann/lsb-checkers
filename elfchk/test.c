@@ -11,7 +11,7 @@ if( (elffile = OpenElfFile("./test")) == NULL ) {
 	exit(2);
 	}
 
-checkElf(elffile, 1);
+checkElf(elffile, 1, NULL);
 /*
 check_intepreter(elffile);
 check_DT_NEEDED(elffile);

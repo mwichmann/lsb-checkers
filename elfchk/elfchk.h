@@ -4,6 +4,8 @@
 #include <sys/types.h>
 #include <elf.h>
 
+struct tetj_handle;
+
 struct versym {
 	char *name;
 	char *vername;
@@ -72,6 +74,7 @@ typedef	struct	{
 extern char *ElfGetStringIndex(ElfFile *file, int offset, int index);
 extern char *ElfGetString(ElfFile *file, int offset);
 extern ElfFile *OpenElfFile(char *name);
-extern void checkElf(ElfFile *file1, int isProgram);
+extern void checkElf(ElfFile *file1, int isProgram, 
+                     struct tetj_handle *journal);
 
 #endif /* _ELFCHK_H */

@@ -26,7 +26,8 @@ void checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1 );
 void checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1 );
 #endif
 
-extern void checkElfsection(int index, ElfFile *file1);
+extern void checkElfsection(int index, ElfFile *file1, 
+                            struct tetj_handle *journal);
 
 struct SectionInfo {
 	char		*name;

@@ -5,6 +5,7 @@
 
 /* Check elf header
    If its not a program its considered to be shared library */
-extern void checkElfhdr(ElfFile *file1, int isProgram);
+extern void checkElfhdr(ElfFile *file1, int isProgram, 
+                        struct tetj_handle *journal);
 
 #endif /* _ELF_HDR_H */
