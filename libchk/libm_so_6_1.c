@@ -2558,7 +2558,7 @@ struct versym libm_so_6_1[] = {
 	{"exp","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
-	{"exp2","GLIBC_2.0",0,"LSB-Core",8,1},
+	{"exp2","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
 	{"exp2","GLIBC_2.0",0,"LSB-Core",8,1},
@@ -2579,7 +2579,7 @@ struct versym libm_so_6_1[] = {
 	{"exp2","GLIBC_2.0",0,"LSB-Core",8,1},
 #endif
 #if __i386__
-	{"exp2f","GLIBC_2.0",0,"LSB-Core",4,1},
+	{"exp2f","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
 	{"exp2f","GLIBC_2.0",0,"LSB-Core",4,1},
@@ -2600,7 +2600,7 @@ struct versym libm_so_6_1[] = {
 	{"exp2f","GLIBC_2.0",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"exp2l","GLIBC_2.0",0,"LSB-Core",12,1},
+	{"exp2l","GLIBC_2.1",0,"LSB-Core",12,1},
 #endif
 #if __ia64__
 	{"exp2l","GLIBC_2.0",0,"LSB-Core",16,1},
@@ -4364,7 +4364,7 @@ struct versym libm_so_6_1[] = {
 	{"log1pl","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
-	{"log2","GLIBC_2.0",0,"LSB-Core",8,1},
+	{"log2","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __ia64__
 	{"log2","GLIBC_2.2",0,"LSB-Core",8,1},
@@ -4385,7 +4385,7 @@ struct versym libm_so_6_1[] = {
 	{"log2","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
-	{"log2f","GLIBC_2.0",0,"LSB-Core",4,1},
+	{"log2f","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __ia64__
 	{"log2f","GLIBC_2.2",0,"LSB-Core",4,1},
@@ -4406,7 +4406,7 @@ struct versym libm_so_6_1[] = {
 	{"log2f","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __i386__
-	{"log2l","GLIBC_2.0",0,"LSB-Core",12,1},
+	{"log2l","GLIBC_2.1",0,"LSB-Core",12,1},
 #endif
 #if __ia64__
 	{"log2l","GLIBC_2.2",0,"LSB-Core",16,1},

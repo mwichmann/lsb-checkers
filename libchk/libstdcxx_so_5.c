@@ -5059,6 +5059,48 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSspLEPKc","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSspLERKSs","GLIBCPP_3.2",0,"LSB-Core",0,1},
 	{"_ZNSspLEc","GLIBCPP_3.2",0,"LSB-Core",0,1},
+#if __i386__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCPP_3.2.3",0,"LSB-Core",4,0},
+#endif
+#if __ia64__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCPP_3.2.3",0,"LSB-Core",8,0},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCPP_3.2.3",0,"LSB-Core",4,0},
+#endif
+#if __powerpc64__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCPP_3.2.3",0,"LSB-Core",8,0},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCPP_3.2.3",0,"LSB-Core",4,0},
+#endif
+#if __x86_64__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCPP_3.2.3",0,"LSB-Core",8,0},
+#endif
+#if __s390x__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCPP_3.2.3",0,"LSB-Core",8,0},
+#endif
+#if __i386__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCPP_3.2.3",0,"LSB-Core",4,0},
+#endif
+#if __ia64__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCPP_3.2.3",0,"LSB-Core",8,0},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCPP_3.2.3",0,"LSB-Core",4,0},
+#endif
+#if __powerpc64__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCPP_3.2.3",0,"LSB-Core",8,0},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCPP_3.2.3",0,"LSB-Core",4,0},
+#endif
+#if __x86_64__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCPP_3.2.3",0,"LSB-Core",8,0},
+#endif
+#if __s390x__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCPP_3.2.3",0,"LSB-Core",8,0},
+#endif
 	{"_ZNSt10__num_base13_S_format_intERKSt8ios_basePccc","GLIBCPP_3.2",0,"LSB-Core",0,1},
 #if __i386__
 	{"_ZNSt10__num_base15_S_format_floatERKSt8ios_basePcci","GLIBCPP_3.2",0,"LSB-Core",0,1},
