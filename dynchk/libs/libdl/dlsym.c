@@ -5,10 +5,12 @@
 #undef dlsym
 static void *(*funcptr) (void * , const char * ) = 0;
 
+extern void *_dl_sym (void * , const char * );
+
 void * dlsym (void * arg0 , const char * arg1 )
 {
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dlsym");
+		funcptr = _dl_sym;
 	validate_NULL_TYPETYPE(arg0, "dlsym");
 	validate_NULL_TYPETYPE(arg1, "dlsym");
 	return funcptr(arg0, arg1);
@@ -17,7 +19,7 @@ void * dlsym (void * arg0 , const char * arg1 )
 void * lsb_dlsym (void * arg0 , const char * arg1 )
 {
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dlsym");
+		funcptr = _dl_sym;
 	return funcptr(arg0, arg1);
 }
 
