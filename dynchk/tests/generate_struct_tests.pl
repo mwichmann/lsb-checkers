@@ -77,7 +77,7 @@ ORDER BY TMposition'
 $struct_q->execute or die "Couldn't execute struct query: " . DBI->errstr;
 
 open(STRUCT_MK, '>struct.mk');
-print STRUCT_MK "STRUCTTESTS:";
+print STRUCT_MK "STRUCTTESTS = ";
 
 STRUCT: while(my ($struct_name, $struct_id, $struct_header) = $struct_q->fetchrow_array())
 {
