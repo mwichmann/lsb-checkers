@@ -18,9 +18,13 @@ size_t mbrtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 , mbstate_t * a
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+		if( arg0 ) {
 	validate_Rdaddress( arg0, "mbrtowc - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "mbrtowc - arg0");
+		if( arg1 ) {
 	validate_Rdaddress( arg1, "mbrtowc - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "mbrtowc - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mbrtowc - arg2");
 	validate_Rdaddress( arg3, "mbrtowc - arg3");
