@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.25 $
+ * This is $Revision: 1.26 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.26  2003/08/29 13:40:54  anderson
+ * Work around other recent fixes that I didn't have onthe airplane 8-). Specify the full path to libstdc__.so.5 to keeps things standalong for cxxabichk
+ *
  * Revision 1.25  2003/08/29 13:18:39  anderson
  * Change to build as standalone cxxabichk:
  *
@@ -117,7 +120,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.25 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.26 $";
 
 extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
 
@@ -396,7 +399,9 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
 
 /*   printf("Checking Class Information in %s\n", filename ); */
 
-/*   check_class_info(filename,classes,journal); */
+#ifdef _CXXABICHK_
+  check_class_info(filename,classes,journal);
+#endif
 }
 
 /* Generated function by mkfunclist */
@@ -458,6 +463,7 @@ int main(int argc, char *argv[])
   struct tetj_handle *journal;
   char tmp_string[TMP_STRING_SIZE+1];
   
+#ifndef _CXXABICHK_
 	if (argc!=2)
 	{
 		fprintf(stderr, 
@@ -465,6 +471,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 	init_library_table(argv[1]);
+#endif
 
   if (tetj_start_journal("journal.libchk", &journal, "libchk")!=0)
   {
@@ -478,7 +485,7 @@ int main(int argc, char *argv[])
 
   tetj_add_config(journal, tmp_string);
 
-  check_lib("libstdc++.so.5",libstdcxx_so_5,libstdcxx_so_5_classinfo,journal);
+  check_lib("/usr/lib/libstdc++.so.5",libstdcxx_so_5,libstdcxx_so_5_classinfo,journal);
 #else
   snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
   tetj_add_config(journal, tmp_string);
