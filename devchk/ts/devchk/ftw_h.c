@@ -116,23 +116,33 @@ Msg("Find size of anon-ftw.h-34 (8990)\n");
 
 #if __i386__
 CheckTypeSize(struct FTW,8, 8691, 2)
+CheckMemberSize(struct FTW,base,4,2,29758)
 CheckOffset(struct FTW,base,0,2,29758)
+CheckMemberSize(struct FTW,level,4,2,29759)
 CheckOffset(struct FTW,level,4,2,29759)
 #elif __ia64__
 CheckTypeSize(struct FTW,8, 8691, 3)
+CheckMemberSize(struct FTW,base,4,3,29758)
 CheckOffset(struct FTW,base,0,3,29758)
+CheckMemberSize(struct FTW,level,4,3,29759)
 CheckOffset(struct FTW,level,4,3,29759)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct FTW,8, 8691, 6)
+CheckMemberSize(struct FTW,base,4,6,29758)
 CheckOffset(struct FTW,base,0,6,29758)
+CheckMemberSize(struct FTW,level,4,6,29759)
 CheckOffset(struct FTW,level,4,6,29759)
 #elif __s390__
 CheckTypeSize(struct FTW,8, 8691, 10)
+CheckMemberSize(struct FTW,base,4,10,29758)
 CheckOffset(struct FTW,base,0,10,29758)
+CheckMemberSize(struct FTW,level,4,10,29759)
 CheckOffset(struct FTW,level,4,10,29759)
 #elif __powerpc64__
 CheckTypeSize(struct FTW,8, 8691, 9)
+CheckMemberSize(struct FTW,base,4,9,29758)
 CheckOffset(struct FTW,base,0,9,29758)
+CheckMemberSize(struct FTW,level,4,9,29759)
 CheckOffset(struct FTW,level,4,9,29759)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8691,0);

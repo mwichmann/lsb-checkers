@@ -35,18 +35,23 @@ cnt++;
 
 #if __i386__
 CheckTypeSize(struct sockaddr_un,110, 9152, 2)
+CheckMemberSize(struct sockaddr_un,sun_path,108,2,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,2,34486)
 #elif __ia64__
 CheckTypeSize(struct sockaddr_un,110, 9152, 3)
+CheckMemberSize(struct sockaddr_un,sun_path,108,3,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,3,34486)
 #elif __s390__
 CheckTypeSize(struct sockaddr_un,110, 9152, 10)
+CheckMemberSize(struct sockaddr_un,sun_path,0,10,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,10,34486)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sockaddr_un,110, 9152, 6)
+CheckMemberSize(struct sockaddr_un,sun_path,0,6,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,6,34486)
 #elif __powerpc64__
 CheckTypeSize(struct sockaddr_un,110, 9152, 9)
+CheckMemberSize(struct sockaddr_un,sun_path,0,9,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,9,34486)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9152,0);

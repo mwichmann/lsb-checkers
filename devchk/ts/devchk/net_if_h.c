@@ -145,28 +145,43 @@ cnt++;
 
 #if __i386__
 CheckTypeSize(struct ifaddr,40, 10286, 2)
+CheckMemberSize(struct ifaddr,ifa_ifu,16,2,34466)
 CheckOffset(struct ifaddr,ifa_ifu,16,2,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,4,2,34496)
 CheckOffset(struct ifaddr,ifa_ifp,32,2,34496)
+CheckMemberSize(struct ifaddr,ifa_next,4,2,34497)
 CheckOffset(struct ifaddr,ifa_next,36,2,34497)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct ifaddr,40, 10286, 6)
+CheckMemberSize(struct ifaddr,ifa_ifu,0,6,34466)
 CheckOffset(struct ifaddr,ifa_ifu,16,6,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,0,6,34496)
 CheckOffset(struct ifaddr,ifa_ifp,32,6,34496)
+CheckMemberSize(struct ifaddr,ifa_next,0,6,34497)
 CheckOffset(struct ifaddr,ifa_next,36,6,34497)
 #elif __ia64__
 CheckTypeSize(struct ifaddr,48, 10286, 3)
+CheckMemberSize(struct ifaddr,ifa_ifu,0,3,34466)
 CheckOffset(struct ifaddr,ifa_ifu,16,3,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,0,3,34496)
 CheckOffset(struct ifaddr,ifa_ifp,32,3,34496)
+CheckMemberSize(struct ifaddr,ifa_next,0,3,34497)
 CheckOffset(struct ifaddr,ifa_next,40,3,34497)
 #elif __s390__
 CheckTypeSize(struct ifaddr,40, 10286, 10)
+CheckMemberSize(struct ifaddr,ifa_ifu,0,10,34466)
 CheckOffset(struct ifaddr,ifa_ifu,16,10,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,0,10,34496)
 CheckOffset(struct ifaddr,ifa_ifp,32,10,34496)
+CheckMemberSize(struct ifaddr,ifa_next,0,10,34497)
 CheckOffset(struct ifaddr,ifa_next,36,10,34497)
 #elif __powerpc64__
 CheckTypeSize(struct ifaddr,48, 10286, 9)
+CheckMemberSize(struct ifaddr,ifa_ifu,0,9,34466)
 CheckOffset(struct ifaddr,ifa_ifu,16,9,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,0,9,34496)
 CheckOffset(struct ifaddr,ifa_ifp,32,9,34496)
+CheckMemberSize(struct ifaddr,ifa_next,0,9,34497)
 CheckOffset(struct ifaddr,ifa_next,40,9,34497)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10286,0);
@@ -185,18 +200,23 @@ Msg("Find size of anon-ifa_ifu (10287)\n");
 
 #if __i386__
 CheckTypeSize(struct ifreq,32, 10290, 2)
+CheckMemberSize(struct ifreq,ifr_ifru,16,2,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,2,34483)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct ifreq,32, 10290, 6)
+CheckMemberSize(struct ifreq,ifr_ifru,0,6,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,6,34483)
 #elif __ia64__
 CheckTypeSize(struct ifreq,40, 10290, 3)
+CheckMemberSize(struct ifreq,ifr_ifru,0,3,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,3,34483)
 #elif __s390__
 CheckTypeSize(struct ifreq,32, 10290, 10)
+CheckMemberSize(struct ifreq,ifr_ifru,0,10,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,10,34483)
 #elif __powerpc64__
 CheckTypeSize(struct ifreq,40, 10290, 9)
+CheckMemberSize(struct ifreq,ifr_ifru,0,9,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,9,34483)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10290,0);
@@ -225,10 +245,13 @@ Msg("Find size of anon-ifr_ifru (10292)\n");
 
 #if __i386__
 CheckTypeSize(struct ifconf,8, 10288, 2)
+CheckMemberSize(struct ifconf,ifc_len,4,2,34467)
 CheckOffset(struct ifconf,ifc_len,0,2,34467)
+CheckMemberSize(struct ifconf,ifc_ifcu,4,2,34469)
 CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
 #elif __ia64__
 CheckTypeSize(struct ifconf,16, 10288, 3)
+CheckMemberSize(struct ifconf,ifc_ifcu,0,3,34469)
 CheckOffset(struct ifconf,ifc_ifcu,8,3,34469)
 #endif
 

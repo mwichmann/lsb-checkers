@@ -265,6 +265,7 @@ sub writetest($$)
 				#
 				# XXXSTU - We really should fetch the info for the member type so we can validate the size in the DB
 				#
+				print TESTS "CheckMemberSize($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMsize'},$Aid,$mentry{'TMid'})\n";
 				print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMoffset'},$Aid,$mentry{'TMid'})\n";
 			    }
 			} else {

@@ -77,20 +77,31 @@ CheckArrayTypeSize(gregset_t,4,19, 10224, 2)
 
 #if __i386__
 CheckTypeSize(struct _libc_fpreg,10, 10225, 2)
+CheckMemberSize(struct _libc_fpreg,significand,8,2,34315)
 CheckOffset(struct _libc_fpreg,significand,0,2,34315)
+CheckMemberSize(struct _libc_fpreg,exponent,2,2,34316)
 CheckOffset(struct _libc_fpreg,exponent,8,2,34316)
 #endif
 
 #if __i386__
 CheckTypeSize(struct _libc_fpstate,112, 10226, 2)
+CheckMemberSize(struct _libc_fpstate,cw,4,2,34317)
 CheckOffset(struct _libc_fpstate,cw,0,2,34317)
+CheckMemberSize(struct _libc_fpstate,sw,4,2,34318)
 CheckOffset(struct _libc_fpstate,sw,4,2,34318)
+CheckMemberSize(struct _libc_fpstate,tag,4,2,34319)
 CheckOffset(struct _libc_fpstate,tag,8,2,34319)
+CheckMemberSize(struct _libc_fpstate,ipoff,4,2,34320)
 CheckOffset(struct _libc_fpstate,ipoff,12,2,34320)
+CheckMemberSize(struct _libc_fpstate,cssel,4,2,34321)
 CheckOffset(struct _libc_fpstate,cssel,16,2,34321)
+CheckMemberSize(struct _libc_fpstate,dataoff,4,2,34322)
 CheckOffset(struct _libc_fpstate,dataoff,20,2,34322)
+CheckMemberSize(struct _libc_fpstate,datasel,4,2,34323)
 CheckOffset(struct _libc_fpstate,datasel,24,2,34323)
+CheckMemberSize(struct _libc_fpstate,_st,80,2,34325)
 CheckOffset(struct _libc_fpstate,_st,28,2,34325)
+CheckMemberSize(struct _libc_fpstate,status,4,2,34324)
 CheckOffset(struct _libc_fpstate,status,108,2,34324)
 #endif
 
