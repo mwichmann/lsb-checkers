@@ -1522,19 +1522,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8650,0);
 Msg("Find size of chtype (8650)\n");
 #endif
 
-#if __ia64__
-CheckTypeSize(bool,4, 8651, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(bool,4, 8651, 6)
-#elif __s390__
-CheckTypeSize(bool,4, 8651, 10)
-#elif __powerpc64__
-CheckTypeSize(bool,4, 8651, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8651,0);
-Msg("Find size of bool (8651)\n");
-#endif
-
 #if __i386__
 CheckTypeSize(SCREEN,0, 8653, 2)
 #elif __ia64__
@@ -1662,10 +1649,6 @@ CheckOffset(struct pdat,_pad_right,10,9,29730)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
 Msg("Find size of pdat (8663)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(bool,1, 10437, 2)
 #endif
 
 #if __i386__
@@ -1955,6 +1938,26 @@ CheckOffset(struct _win_st,_bkgrnd,96,9,34437)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
 Msg("Find size of _win_st (8654)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(bool,1, 10437, 2)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(bool,4, 10438, 6)
+#endif
+
+#if __ia64__
+CheckTypeSize(bool,4, 10439, 3)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(bool,4, 10440, 9)
+#endif
+
+#if __s390__
+CheckTypeSize(bool,4, 10441, 10)
 #endif
 
 #ifdef TET_TEST
