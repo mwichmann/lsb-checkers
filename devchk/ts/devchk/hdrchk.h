@@ -64,7 +64,7 @@
 	Log("subtest %d\n", cnt); \
 	Log("Purpose: Check sizeof( "#type" ) is %d\n", size); \
 	if( sizeof(type) != size ) { \
-		Msg("sizeof(" #type ") is %d instead of " #size "\n",sizeof(type)); \
+		Msg("sizeof(" #type ") found %d instead of " #size "\n",sizeof(type)); \
 		Msg("REPLACE INTO ArchType (ATtid,ATaid,ATsize) "); \
 		Msg("VALUES (%d, %d, %d);\n", tid, aid, sizeof(type)); \
 		HDRCHKTEST_FAIL \
