@@ -73,6 +73,7 @@ $DBHost = $options{'o'} if exists($options{'o'});
 $DBName = $options{'d'} if exists($options{'d'});
 $arch_number = $options{'a'} if exists($options{'a'});
 $generate_gen_file = 0 if exists($options{'w'});
+$generate_gen_file = 0 if exists($options{'i'});
 $be_quiet = 1 if exists($options{'q'});
 
 if($arch_number == 8 or $arch_number < 2 or $arch_number > 12)
@@ -408,13 +409,13 @@ sub write_addy_checker
 	my($basetype, $typeform) = $write_addy_checker_q->fetchrow_array();
 	if($typeform eq "Pointer")
 	{
-		print $fh "\tvalidate_Rdaddress($left_name $arg_name, \"$func_name\");\n";
+		print $fh "\tvalidate_Rdaddress($left_name $arg_name, \"$func_name - $left_name$arg_name\");\n";
 		$left_name = "*".$left_name;
 		write_addy_checker($fh, $basetype, $arg_name, $left_name, $func_name);
 	}
 	elsif($typeform eq "FuncPtr")
 	{
-		print $fh "validate_Rdaddress($left_name $arg_name, \"$func_name\");\n";
+		print $fh "validate_Rdaddress($left_name $arg_name, \"$func_name - $arg_name\");\n";
 	}
 }
 
@@ -453,7 +454,7 @@ sub write_int_wrapper
 			if( $param_null eq 'Y' ) {
 				print $fh "\t\tif( arg$i ) {\n";
 			}
-			write_addy_checker($fh, $typeid, "arg$i", "", "$func_name - arg$i");
+			write_addy_checker($fh, $typeid, "arg$i", "", "$func_name");
 			if( $param_null eq 'Y' ) {
 				print $fh "\t\t}\n";
 			}
