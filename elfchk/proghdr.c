@@ -211,11 +211,11 @@ checkPT_SHLIB(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                      "Check SHLIB program header");
-  snprintf(tmp_string, TMP_STRING_SIZE, "SHLIB not checked!");
+  snprintf(tmp_string, TMP_STRING_SIZE, "PT_SHLIB is not permitted!");
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
   return 0;
