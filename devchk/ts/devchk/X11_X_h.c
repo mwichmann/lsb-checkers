@@ -3444,7 +3444,7 @@ CheckTypeSize(XID,4, 8171, 10)
 #elif __powerpc64__
 CheckTypeSize(XID,8, 8171, 9)
 #elif __s390x__
-CheckTypeSize(XID,0, 8171, 12)
+CheckTypeSize(XID,8, 8171, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8171,0);
 Msg("Find size of XID (8171)\n");
@@ -3461,7 +3461,7 @@ CheckTypeSize(Atom,4, 8173, 10)
 #elif __powerpc64__
 CheckTypeSize(Atom,8, 8173, 9)
 #elif __s390x__
-CheckTypeSize(Atom,0, 8173, 12)
+CheckTypeSize(Atom,8, 8173, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8173,0);
 Msg("Find size of Atom (8173)\n");
@@ -3478,7 +3478,7 @@ CheckTypeSize(VisualID,4, 8174, 10)
 #elif __powerpc64__
 CheckTypeSize(VisualID,8, 8174, 9)
 #elif __s390x__
-CheckTypeSize(VisualID,0, 8174, 12)
+CheckTypeSize(VisualID,8, 8174, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8174,0);
 Msg("Find size of VisualID (8174)\n");
@@ -3495,7 +3495,7 @@ CheckTypeSize(Time,4, 8175, 10)
 #elif __powerpc64__
 CheckTypeSize(Time,8, 8175, 9)
 #elif __s390x__
-CheckTypeSize(Time,0, 8175, 12)
+CheckTypeSize(Time,8, 8175, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8175,0);
 Msg("Find size of Time (8175)\n");
@@ -3512,7 +3512,7 @@ CheckTypeSize(Window,4, 8176, 10)
 #elif __powerpc64__
 CheckTypeSize(Window,8, 8176, 9)
 #elif __s390x__
-CheckTypeSize(Window,0, 8176, 12)
+CheckTypeSize(Window,8, 8176, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8176,0);
 Msg("Find size of Window (8176)\n");
@@ -3529,7 +3529,7 @@ CheckTypeSize(Font,4, 8177, 10)
 #elif __powerpc64__
 CheckTypeSize(Font,8, 8177, 9)
 #elif __s390x__
-CheckTypeSize(Font,0, 8177, 12)
+CheckTypeSize(Font,8, 8177, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8177,0);
 Msg("Find size of Font (8177)\n");
@@ -3546,7 +3546,7 @@ CheckTypeSize(Pixmap,4, 8178, 10)
 #elif __powerpc64__
 CheckTypeSize(Pixmap,8, 8178, 9)
 #elif __s390x__
-CheckTypeSize(Pixmap,0, 8178, 12)
+CheckTypeSize(Pixmap,8, 8178, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8178,0);
 Msg("Find size of Pixmap (8178)\n");
@@ -3563,7 +3563,7 @@ CheckTypeSize(KeyCode,1, 8179, 10)
 #elif __powerpc64__
 CheckTypeSize(KeyCode,1, 8179, 9)
 #elif __s390x__
-CheckTypeSize(KeyCode,0, 8179, 12)
+CheckTypeSize(KeyCode,1, 8179, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8179,0);
 Msg("Find size of KeyCode (8179)\n");
@@ -3580,7 +3580,7 @@ CheckTypeSize(Drawable,4, 8727, 10)
 #elif __powerpc64__
 CheckTypeSize(Drawable,8, 8727, 9)
 #elif __s390x__
-CheckTypeSize(Drawable,0, 8727, 12)
+CheckTypeSize(Drawable,8, 8727, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8727,0);
 Msg("Find size of Drawable (8727)\n");
@@ -3597,7 +3597,7 @@ CheckTypeSize(Cursor,4, 8728, 10)
 #elif __powerpc64__
 CheckTypeSize(Cursor,8, 8728, 9)
 #elif __s390x__
-CheckTypeSize(Cursor,0, 8728, 12)
+CheckTypeSize(Cursor,8, 8728, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8728,0);
 Msg("Find size of Cursor (8728)\n");
@@ -3614,7 +3614,7 @@ CheckTypeSize(Colormap,4, 8729, 10)
 #elif __powerpc64__
 CheckTypeSize(Colormap,8, 8729, 9)
 #elif __s390x__
-CheckTypeSize(Colormap,0, 8729, 12)
+CheckTypeSize(Colormap,8, 8729, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8729,0);
 Msg("Find size of Colormap (8729)\n");
@@ -3631,7 +3631,7 @@ CheckTypeSize(GContext,4, 8730, 10)
 #elif __powerpc64__
 CheckTypeSize(GContext,8, 8730, 9)
 #elif __s390x__
-CheckTypeSize(GContext,0, 8730, 12)
+CheckTypeSize(GContext,8, 8730, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8730,0);
 Msg("Find size of GContext (8730)\n");
@@ -3648,7 +3648,7 @@ CheckTypeSize(KeySym,4, 8731, 10)
 #elif __powerpc64__
 CheckTypeSize(KeySym,8, 8731, 9)
 #elif __s390x__
-CheckTypeSize(KeySym,0, 8731, 12)
+CheckTypeSize(KeySym,8, 8731, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8731,0);
 Msg("Find size of KeySym (8731)\n");

@@ -352,12 +352,13 @@ CheckOffset(struct servent,s_port,16,9,33735)
 CheckMemberSize(struct servent,s_proto,8,9,33736)
 CheckOffset(struct servent,s_proto,24,9,33736)
 #elif __s390x__
-CheckTypeSize(struct servent,0, 10134, 12)
-Msg("Missing member data for servent on S390X\n");
-CheckOffset(struct servent,s_name,0,12,33733)
-CheckOffset(struct servent,s_aliases,0,12,33734)
-CheckOffset(struct servent,s_port,0,12,33735)
-CheckOffset(struct servent,s_proto,0,12,33736)
+CheckTypeSize(struct servent,32, 10134, 12)
+CheckMemberSize(struct servent,s_aliases,8,12,33734)
+CheckOffset(struct servent,s_aliases,8,12,33734)
+CheckMemberSize(struct servent,s_port,4,12,33735)
+CheckOffset(struct servent,s_port,16,12,33735)
+CheckMemberSize(struct servent,s_proto,8,12,33736)
+CheckOffset(struct servent,s_proto,24,12,33736)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10134,0);
 Msg("Find size of servent (10134)\n");
@@ -414,13 +415,15 @@ CheckOffset(struct hostent,h_length,20,9,33740)
 CheckMemberSize(struct hostent,h_addr_list,8,9,33741)
 CheckOffset(struct hostent,h_addr_list,24,9,33741)
 #elif __s390x__
-CheckTypeSize(struct hostent,0, 10136, 12)
-Msg("Missing member data for hostent on S390X\n");
-CheckOffset(struct hostent,h_name,0,12,33737)
-CheckOffset(struct hostent,h_aliases,0,12,33738)
-CheckOffset(struct hostent,h_addrtype,0,12,33739)
-CheckOffset(struct hostent,h_length,0,12,33740)
-CheckOffset(struct hostent,h_addr_list,0,12,33741)
+CheckTypeSize(struct hostent,32, 10136, 12)
+CheckMemberSize(struct hostent,h_aliases,8,12,33738)
+CheckOffset(struct hostent,h_aliases,8,12,33738)
+CheckMemberSize(struct hostent,h_addrtype,4,12,33739)
+CheckOffset(struct hostent,h_addrtype,16,12,33739)
+CheckMemberSize(struct hostent,h_length,4,12,33740)
+CheckOffset(struct hostent,h_length,20,12,33740)
+CheckMemberSize(struct hostent,h_addr_list,8,12,33741)
+CheckOffset(struct hostent,h_addr_list,24,12,33741)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10136,0);
 Msg("Find size of hostent (10136)\n");
@@ -459,11 +462,11 @@ CheckOffset(struct protoent,p_aliases,8,9,33743)
 CheckMemberSize(struct protoent,p_proto,4,9,33744)
 CheckOffset(struct protoent,p_proto,16,9,33744)
 #elif __s390x__
-CheckTypeSize(struct protoent,0, 10139, 12)
-Msg("Missing member data for protoent on S390X\n");
-CheckOffset(struct protoent,p_name,0,12,33742)
-CheckOffset(struct protoent,p_aliases,0,12,33743)
-CheckOffset(struct protoent,p_proto,0,12,33744)
+CheckTypeSize(struct protoent,24, 10139, 12)
+CheckMemberSize(struct protoent,p_aliases,8,12,33743)
+CheckOffset(struct protoent,p_aliases,8,12,33743)
+CheckMemberSize(struct protoent,p_proto,4,12,33744)
+CheckOffset(struct protoent,p_proto,16,12,33744)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10139,0);
 Msg("Find size of protoent (10139)\n");
@@ -510,12 +513,13 @@ CheckOffset(struct netent,n_addrtype,16,9,33747)
 CheckMemberSize(struct netent,n_net,4,9,33748)
 CheckOffset(struct netent,n_net,20,9,33748)
 #elif __s390x__
-CheckTypeSize(struct netent,0, 10141, 12)
-Msg("Missing member data for netent on S390X\n");
-CheckOffset(struct netent,n_name,0,12,33745)
-CheckOffset(struct netent,n_aliases,0,12,33746)
-CheckOffset(struct netent,n_addrtype,0,12,33747)
-CheckOffset(struct netent,n_net,0,12,33748)
+CheckTypeSize(struct netent,24, 10141, 12)
+CheckMemberSize(struct netent,n_aliases,8,12,33746)
+CheckOffset(struct netent,n_aliases,8,12,33746)
+CheckMemberSize(struct netent,n_addrtype,4,12,33747)
+CheckOffset(struct netent,n_addrtype,16,12,33747)
+CheckMemberSize(struct netent,n_net,4,12,33748)
+CheckOffset(struct netent,n_net,20,12,33748)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10141,0);
 Msg("Find size of netent (10141)\n");
@@ -602,16 +606,21 @@ CheckOffset(struct addrinfo,ai_canonname,32,9,33700)
 CheckMemberSize(struct addrinfo,ai_next,8,9,33701)
 CheckOffset(struct addrinfo,ai_next,40,9,33701)
 #elif __s390x__
-CheckTypeSize(struct addrinfo,0, 10125, 12)
-Msg("Missing member data for addrinfo on S390X\n");
-CheckOffset(struct addrinfo,ai_flags,0,12,33694)
-CheckOffset(struct addrinfo,ai_family,0,12,33695)
-CheckOffset(struct addrinfo,ai_socktype,0,12,33696)
-CheckOffset(struct addrinfo,ai_protocol,0,12,33697)
-CheckOffset(struct addrinfo,ai_addrlen,0,12,33698)
-CheckOffset(struct addrinfo,ai_addr,0,12,33699)
-CheckOffset(struct addrinfo,ai_canonname,0,12,33700)
-CheckOffset(struct addrinfo,ai_next,0,12,33701)
+CheckTypeSize(struct addrinfo,48, 10125, 12)
+CheckMemberSize(struct addrinfo,ai_family,4,12,33695)
+CheckOffset(struct addrinfo,ai_family,4,12,33695)
+CheckMemberSize(struct addrinfo,ai_socktype,4,12,33696)
+CheckOffset(struct addrinfo,ai_socktype,8,12,33696)
+CheckMemberSize(struct addrinfo,ai_protocol,4,12,33697)
+CheckOffset(struct addrinfo,ai_protocol,12,12,33697)
+CheckMemberSize(struct addrinfo,ai_addrlen,4,12,33698)
+CheckOffset(struct addrinfo,ai_addrlen,16,12,33698)
+CheckMemberSize(struct addrinfo,ai_addr,8,12,33699)
+CheckOffset(struct addrinfo,ai_addr,24,12,33699)
+CheckMemberSize(struct addrinfo,ai_canonname,8,12,33700)
+CheckOffset(struct addrinfo,ai_canonname,32,12,33700)
+CheckMemberSize(struct addrinfo,ai_next,8,12,33701)
+CheckOffset(struct addrinfo,ai_next,40,12,33701)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10125,0);
 Msg("Find size of addrinfo (10125)\n");

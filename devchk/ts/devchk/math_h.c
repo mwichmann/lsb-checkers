@@ -238,13 +238,15 @@ CheckOffset(struct exception,arg2,24,9,32297)
 CheckMemberSize(struct exception,retval,8,9,32298)
 CheckOffset(struct exception,retval,32,9,32298)
 #elif __s390x__
-CheckTypeSize(struct exception,0, 10010, 12)
-Msg("Missing member data for exception on S390X\n");
-CheckOffset(struct exception,type,0,12,32294)
-CheckOffset(struct exception,name,0,12,32295)
-CheckOffset(struct exception,arg1,0,12,32296)
-CheckOffset(struct exception,arg2,0,12,32297)
-CheckOffset(struct exception,retval,0,12,32298)
+CheckTypeSize(struct exception,40, 10010, 12)
+CheckMemberSize(struct exception,name,8,12,32295)
+CheckOffset(struct exception,name,8,12,32295)
+CheckMemberSize(struct exception,arg1,8,12,32296)
+CheckOffset(struct exception,arg1,16,12,32296)
+CheckMemberSize(struct exception,arg2,8,12,32297)
+CheckOffset(struct exception,arg2,24,12,32297)
+CheckMemberSize(struct exception,retval,8,12,32298)
+CheckOffset(struct exception,retval,32,12,32298)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10010,0);
 Msg("Find size of exception (10010)\n");

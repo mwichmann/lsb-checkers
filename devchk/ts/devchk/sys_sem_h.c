@@ -128,11 +128,11 @@ CheckOffset(struct sembuf,sem_op,2,10,30119)
 CheckMemberSize(struct sembuf,sem_flg,0,10,30120)
 CheckOffset(struct sembuf,sem_flg,4,10,30120)
 #elif __s390x__
-CheckTypeSize(struct sembuf,0, 6982, 12)
-Msg("Missing member data for sembuf on S390X\n");
-CheckOffset(struct sembuf,sem_num,0,12,30118)
-CheckOffset(struct sembuf,sem_op,0,12,30119)
-CheckOffset(struct sembuf,sem_flg,0,12,30120)
+CheckTypeSize(struct sembuf,6, 6982, 12)
+CheckMemberSize(struct sembuf,sem_op,2,12,30119)
+CheckOffset(struct sembuf,sem_op,2,12,30119)
+CheckMemberSize(struct sembuf,sem_flg,2,12,30120)
+CheckOffset(struct sembuf,sem_flg,4,12,30120)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
 Msg("Find size of sembuf (6982)\n");

@@ -174,7 +174,7 @@ CheckTypeSize(rlim_t,4, 10210, 10)
 #elif __powerpc64__
 CheckTypeSize(rlim_t,8, 10210, 9)
 #elif __s390x__
-CheckTypeSize(rlim_t,0, 10210, 12)
+CheckTypeSize(rlim_t,8, 10210, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10210,0);
 Msg("Find size of rlim_t (10210)\n");
@@ -191,7 +191,7 @@ CheckTypeSize(rlim64_t,8, 10273, 10)
 #elif __powerpc64__
 CheckTypeSize(rlim64_t,8, 10273, 9)
 #elif __s390x__
-CheckTypeSize(rlim64_t,0, 10273, 12)
+CheckTypeSize(rlim64_t,8, 10273, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10273,0);
 Msg("Find size of rlim64_t (10273)\n");
@@ -222,10 +222,9 @@ CheckTypeSize(struct rlimit,16, 9120, 9)
 CheckMemberSize(struct rlimit,rlim_max,8,9,34263)
 CheckOffset(struct rlimit,rlim_max,8,9,34263)
 #elif __s390x__
-CheckTypeSize(struct rlimit,0, 9120, 12)
-Msg("Missing member data for rlimit on S390X\n");
-CheckOffset(struct rlimit,rlim_cur,0,12,34262)
-CheckOffset(struct rlimit,rlim_max,0,12,34263)
+CheckTypeSize(struct rlimit,16, 9120, 12)
+CheckMemberSize(struct rlimit,rlim_max,8,12,34263)
+CheckOffset(struct rlimit,rlim_max,8,12,34263)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9120,0);
 Msg("Find size of rlimit (9120)\n");
@@ -254,10 +253,9 @@ CheckTypeSize(struct rlimit64,16, 9122, 9)
 CheckMemberSize(struct rlimit64,rlim_max,8,9,34267)
 CheckOffset(struct rlimit64,rlim_max,8,9,34267)
 #elif __s390x__
-CheckTypeSize(struct rlimit64,0, 9122, 12)
-Msg("Missing member data for rlimit64 on S390X\n");
-CheckOffset(struct rlimit64,rlim_cur,0,12,34266)
-CheckOffset(struct rlimit64,rlim_max,0,12,34267)
+CheckTypeSize(struct rlimit64,16, 9122, 12)
+CheckMemberSize(struct rlimit64,rlim_max,8,12,34267)
+CheckOffset(struct rlimit64,rlim_max,8,12,34267)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9122,0);
 Msg("Find size of rlimit64 (9122)\n");
@@ -428,24 +426,37 @@ CheckOffset(struct rusage,ru_nvcsw,128,9,34260)
 CheckMemberSize(struct rusage,ru_nivcsw,8,9,34261)
 CheckOffset(struct rusage,ru_nivcsw,136,9,34261)
 #elif __s390x__
-CheckTypeSize(struct rusage,0, 9125, 12)
-Msg("Missing member data for rusage on S390X\n");
-CheckOffset(struct rusage,ru_utime,0,12,34246)
-CheckOffset(struct rusage,ru_stime,0,12,34247)
-CheckOffset(struct rusage,ru_maxrss,0,12,34248)
-CheckOffset(struct rusage,ru_ixrss,0,12,34249)
-CheckOffset(struct rusage,ru_idrss,0,12,34250)
-CheckOffset(struct rusage,ru_isrss,0,12,34251)
-CheckOffset(struct rusage,ru_minflt,0,12,34252)
-CheckOffset(struct rusage,ru_majflt,0,12,34253)
-CheckOffset(struct rusage,ru_nswap,0,12,34254)
-CheckOffset(struct rusage,ru_inblock,0,12,34255)
-CheckOffset(struct rusage,ru_oublock,0,12,34256)
-CheckOffset(struct rusage,ru_msgsnd,0,12,34257)
-CheckOffset(struct rusage,ru_msgrcv,0,12,34258)
-CheckOffset(struct rusage,ru_nsignals,0,12,34259)
-CheckOffset(struct rusage,ru_nvcsw,0,12,34260)
-CheckOffset(struct rusage,ru_nivcsw,0,12,34261)
+CheckTypeSize(struct rusage,144, 9125, 12)
+CheckMemberSize(struct rusage,ru_stime,16,12,34247)
+CheckOffset(struct rusage,ru_stime,16,12,34247)
+CheckMemberSize(struct rusage,ru_maxrss,8,12,34248)
+CheckOffset(struct rusage,ru_maxrss,32,12,34248)
+CheckMemberSize(struct rusage,ru_ixrss,8,12,34249)
+CheckOffset(struct rusage,ru_ixrss,40,12,34249)
+CheckMemberSize(struct rusage,ru_idrss,8,12,34250)
+CheckOffset(struct rusage,ru_idrss,48,12,34250)
+CheckMemberSize(struct rusage,ru_isrss,8,12,34251)
+CheckOffset(struct rusage,ru_isrss,56,12,34251)
+CheckMemberSize(struct rusage,ru_minflt,8,12,34252)
+CheckOffset(struct rusage,ru_minflt,64,12,34252)
+CheckMemberSize(struct rusage,ru_majflt,8,12,34253)
+CheckOffset(struct rusage,ru_majflt,72,12,34253)
+CheckMemberSize(struct rusage,ru_nswap,8,12,34254)
+CheckOffset(struct rusage,ru_nswap,80,12,34254)
+CheckMemberSize(struct rusage,ru_inblock,8,12,34255)
+CheckOffset(struct rusage,ru_inblock,88,12,34255)
+CheckMemberSize(struct rusage,ru_oublock,8,12,34256)
+CheckOffset(struct rusage,ru_oublock,96,12,34256)
+CheckMemberSize(struct rusage,ru_msgsnd,8,12,34257)
+CheckOffset(struct rusage,ru_msgsnd,104,12,34257)
+CheckMemberSize(struct rusage,ru_msgrcv,8,12,34258)
+CheckOffset(struct rusage,ru_msgrcv,112,12,34258)
+CheckMemberSize(struct rusage,ru_nsignals,8,12,34259)
+CheckOffset(struct rusage,ru_nsignals,120,12,34259)
+CheckMemberSize(struct rusage,ru_nvcsw,8,12,34260)
+CheckOffset(struct rusage,ru_nvcsw,128,12,34260)
+CheckMemberSize(struct rusage,ru_nivcsw,8,12,34261)
+CheckOffset(struct rusage,ru_nivcsw,136,12,34261)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9125,0);
 Msg("Find size of rusage (9125)\n");

@@ -48,7 +48,7 @@ CheckTypeSize(wchar_t,4, 8848, 10)
 #elif __powerpc64__
 CheckTypeSize(wchar_t,4, 8848, 9)
 #elif __s390x__
-CheckTypeSize(wchar_t,0, 8848, 12)
+CheckTypeSize(wchar_t,4, 8848, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
 Msg("Find size of wchar_t (8848)\n");

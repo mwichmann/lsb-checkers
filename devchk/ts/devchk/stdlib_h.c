@@ -75,7 +75,7 @@ CheckTypeSize(__compar_fn_t,4, 9231, 10)
 #elif __powerpc64__
 CheckTypeSize(__compar_fn_t,8, 9231, 9)
 #elif __s390x__
-CheckTypeSize(__compar_fn_t,0, 9231, 12)
+CheckTypeSize(__compar_fn_t,8, 9231, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
 Msg("Find size of __compar_fn_t (9231)\n");
@@ -126,15 +126,19 @@ CheckOffset(struct random_data,rand_sep,32,3,40032)
 CheckMemberSize(struct random_data,end_ptr,8,3,40033)
 CheckOffset(struct random_data,end_ptr,40,3,40033)
 #elif __s390x__
-CheckTypeSize(struct random_data,0, 10483, 12)
-Msg("Missing member data for random_data on S390X\n");
-CheckOffset(struct random_data,fptr,0,12,40027)
-CheckOffset(struct random_data,rptr,0,12,40028)
-CheckOffset(struct random_data,state,0,12,40029)
-CheckOffset(struct random_data,rand_type,0,12,40030)
-CheckOffset(struct random_data,rand_deg,0,12,40031)
-CheckOffset(struct random_data,rand_sep,0,12,40032)
-CheckOffset(struct random_data,end_ptr,0,12,40033)
+CheckTypeSize(struct random_data,48, 10483, 12)
+CheckMemberSize(struct random_data,rptr,8,12,40028)
+CheckOffset(struct random_data,rptr,8,12,40028)
+CheckMemberSize(struct random_data,state,8,12,40029)
+CheckOffset(struct random_data,state,16,12,40029)
+CheckMemberSize(struct random_data,rand_type,4,12,40030)
+CheckOffset(struct random_data,rand_type,24,12,40030)
+CheckMemberSize(struct random_data,rand_deg,4,12,40031)
+CheckOffset(struct random_data,rand_deg,28,12,40031)
+CheckMemberSize(struct random_data,rand_sep,4,12,40032)
+CheckOffset(struct random_data,rand_sep,32,12,40032)
+CheckMemberSize(struct random_data,end_ptr,8,12,40033)
+CheckOffset(struct random_data,end_ptr,40,12,40033)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10483,0);
 Msg("Find size of random_data (10483)\n");
@@ -151,7 +155,7 @@ CheckTypeSize(div_t,8, 6973, 10)
 #elif __powerpc64__
 CheckTypeSize(div_t,8, 6973, 9)
 #elif __s390x__
-CheckTypeSize(div_t,0, 6973, 12)
+CheckTypeSize(div_t,8, 6973, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6973,0);
 Msg("Find size of div_t (6973)\n");
@@ -168,7 +172,7 @@ CheckTypeSize(ldiv_t,8, 6975, 10)
 #elif __powerpc64__
 CheckTypeSize(ldiv_t,16, 6975, 9)
 #elif __s390x__
-CheckTypeSize(ldiv_t,0, 6975, 12)
+CheckTypeSize(ldiv_t,16, 6975, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
 Msg("Find size of ldiv_t (6975)\n");
@@ -185,7 +189,7 @@ CheckTypeSize(lldiv_t,16, 6897, 10)
 #elif __powerpc64__
 CheckTypeSize(lldiv_t,16, 6897, 9)
 #elif __s390x__
-CheckTypeSize(lldiv_t,0, 6897, 12)
+CheckTypeSize(lldiv_t,16, 6897, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6897,0);
 Msg("Find size of lldiv_t (6897)\n");

@@ -63,7 +63,7 @@ CheckTypeSize(jmp_buf,456, 6962, 9)
 #elif __not_def__
 CheckTypeSize(jmp_buf,1, 6962, 8)
 #elif __s390x__
-CheckTypeSize(jmp_buf,0, 6962, 12)
+CheckTypeSize(jmp_buf,280, 6962, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
 Msg("Find size of jmp_buf (6962)\n");
@@ -80,7 +80,7 @@ CheckTypeSize(sigjmp_buf,188, 6963, 10)
 #elif __powerpc64__
 CheckTypeSize(sigjmp_buf,456, 6963, 9)
 #elif __s390x__
-CheckTypeSize(sigjmp_buf,0, 6963, 12)
+CheckTypeSize(sigjmp_buf,280, 6963, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6963,0);
 Msg("Find size of sigjmp_buf (6963)\n");
@@ -95,11 +95,11 @@ CheckOffset(struct __jmp_buf_tag,__mask_was_saved,24,2,34040)
 CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,2,34041)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,28,2,34041)
 #elif 1
-CheckTypeSize(struct __jmp_buf_tag,1, 6961, 1)
+CheckTypeSize(struct __jmp_buf_tag,280, 6961, 1)
 CheckMemberSize(struct __jmp_buf_tag,__mask_was_saved,4,1,34040)
-CheckOffset(struct __jmp_buf_tag,__mask_was_saved,232,1,34040)
+CheckOffset(struct __jmp_buf_tag,__mask_was_saved,144,1,34040)
 CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,1,34041)
-CheckOffset(struct __jmp_buf_tag,__saved_mask,236,1,34041)
+CheckOffset(struct __jmp_buf_tag,__saved_mask,152,1,34041)
 #elif __ia64__
 CheckTypeSize(struct __jmp_buf_tag,704, 6961, 3)
 CheckMemberSize(struct __jmp_buf_tag,__jmpbuf,24,3,34039)

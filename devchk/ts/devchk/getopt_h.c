@@ -66,12 +66,13 @@ CheckOffset(struct option,flag,16,9,32260)
 CheckMemberSize(struct option,val,4,9,32261)
 CheckOffset(struct option,val,24,9,32261)
 #elif __s390x__
-CheckTypeSize(struct option,0, 10000, 12)
-Msg("Missing member data for option on S390X\n");
-CheckOffset(struct option,name,0,12,32258)
-CheckOffset(struct option,has_arg,0,12,32259)
-CheckOffset(struct option,flag,0,12,32260)
-CheckOffset(struct option,val,0,12,32261)
+CheckTypeSize(struct option,32, 10000, 12)
+CheckMemberSize(struct option,has_arg,4,12,32259)
+CheckOffset(struct option,has_arg,8,12,32259)
+CheckMemberSize(struct option,flag,8,12,32260)
+CheckOffset(struct option,flag,16,12,32260)
+CheckMemberSize(struct option,val,4,12,32261)
+CheckOffset(struct option,val,24,12,32261)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);
 Msg("Find size of option (10000)\n");
