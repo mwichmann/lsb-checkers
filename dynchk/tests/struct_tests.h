@@ -18,6 +18,7 @@ extern void validate_struct_timespec(struct timespec * input);
 extern void validate_struct_tm(struct tm * input);
 extern void validate_struct_utimbuf(struct utimbuf * input);
 extern void validate_struct__win_st(struct _win_st * input);
+extern void validate_struct_ldat(struct ldat * input);
 extern void validate_struct_pdat(struct pdat * input);
 extern void validate_struct_FTW(struct FTW * input);
 extern void validate_struct_stat(struct stat * input);
