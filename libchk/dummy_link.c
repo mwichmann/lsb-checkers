@@ -2,6 +2,8 @@ int main()
 {
 	/* We need one function from each library to cause
 		 the library to get linked */
+	printf("This program should never get executed. It does nothing.\n");
+	exit(1);
 
 	/* libGL */
 	glAccum();
