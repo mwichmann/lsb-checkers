@@ -23,7 +23,7 @@ $(TEST_LIB)::
 $(FHS_LIB):: 
 	cd fhs && make all
 
-liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/global_flag.o  misc/lsb_output.o makefile
+liblsbdynchk.so: $(WRAPPER_LIBS) $(FHS_LIB) $(TEST_LIB) misc/global_flag.o  misc/lsb_output.o makefile
 	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/global_flag.o misc/lsb_output.o
 
 lsbdynchk: lsbdynchk.sed
