@@ -406,13 +406,13 @@ sub write_addy_checker
 	my($basetype, $typeform) = $write_addy_checker_q->fetchrow_array();
 	if($typeform eq "Pointer")
 	{
-		print $fh "\tvalidate_Rdaddress($left_name $arg_name, \"$func_name\");\n";
+		print $fh "\tvalidate_Rdaddress($left_name $arg_name, \"$func_name - arg$i\");\n";
 		$left_name = "*".$left_name;
-		write_addy_checker($fh, $basetype, $arg_name, $left_name, $func_name);
+		write_addy_checker($fh, $basetype, $arg_name, $left_name, "$func_name - arg$i");
 	}
 	elsif($typeform eq "FuncPtr")
 	{
-		print $fh "validate_Rdaddress($left_name $arg_name, \"$func_name\");\n";
+		print $fh "validate_Rdaddress($left_name $arg_name, \"$func_name - arg$i\");\n";
 	}
 }
 
