@@ -26,7 +26,7 @@ check_lib("/lib64/ld-lsb-ppc64.so.1",ld_lsb_ppc64_so_1,ld_lsb_ppc64_so_1_classin
 check_lib("/lib64/ld-lsb-s390x.so.1",ld_lsb_s390x_so_1,ld_lsb_s390x_so_1_classinfo,journal);
 #endif
 #if __x86_64__
-check_lib("/lib64/ld-lsb-x86_64.so.1",ld_lsb_x86_64_so_1,ld_lsb_x86_64_so_1_classinfo,journal);
+check_lib("/lib64/ld-lsb-x86-64.so.1",ld_lsb_x86_64_so_1,ld_lsb_x86_64_so_1_classinfo,journal);
 #endif
 #if __i386__
 check_lib("libc.so.6",libc_so_6,libc_so_6_classinfo,journal);
