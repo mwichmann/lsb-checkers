@@ -29,7 +29,9 @@ int pcnt=0;
 Msg("Checking data structures in X11/Constraint.h\n");
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 3)
+#elif __i386__
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10260,0);

@@ -26,6 +26,8 @@ Msg("Checking data structures in X11/Xlib.h\n");
 
 #ifdef __i386__
 CheckTypeSize(struct _XDisplay,176, 7053, 2)
+#elif __ia64__
+CheckTypeSize(struct _XDisplay,296, 7053, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7053,0);
 #endif
@@ -120,6 +122,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8377,0);
 
 #ifdef __i386__
 CheckTypeSize(Depth,12, 8379, 2)
+#elif __ia64__
+CheckTypeSize(Depth,16, 8379, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8379,0);
 #endif
@@ -134,6 +138,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8381,0);
 
 #ifdef __i386__
 CheckTypeSize(ScreenFormat,16, 8383, 2)
+#elif __ia64__
+CheckTypeSize(ScreenFormat,24, 8383, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8383,0);
 #endif
@@ -172,6 +178,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8398,0);
 
 #ifdef __i386__
 CheckTypeSize(struct funcs,24, 9291, 2)
+#elif __ia64__
+CheckTypeSize(struct funcs,48, 9291, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9291,0);
 #endif
@@ -274,186 +282,248 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8426,0);
 
 #ifdef __i386__
 CheckTypeSize(XKeyReleasedEvent,60, 8427, 2)
+#elif __ia64__
+CheckTypeSize(XKeyReleasedEvent,96, 8427, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8427,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XButtonEvent,60, 8429, 2)
+#elif __ia64__
+CheckTypeSize(XButtonEvent,96, 8429, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8429,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XButtonPressedEvent,60, 8430, 2)
+#elif __ia64__
+CheckTypeSize(XButtonPressedEvent,96, 8430, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8430,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XButtonReleasedEvent,60, 8431, 2)
+#elif __ia64__
+CheckTypeSize(XButtonReleasedEvent,96, 8431, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8431,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XMotionEvent,60, 8433, 2)
+#elif __ia64__
+CheckTypeSize(XMotionEvent,96, 8433, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8433,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XPointerMovedEvent,60, 8434, 2)
+#elif __ia64__
+CheckTypeSize(XPointerMovedEvent,96, 8434, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8434,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XCrossingEvent,68, 8436, 2)
+#elif __ia64__
+CheckTypeSize(XCrossingEvent,104, 8436, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8436,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XEnterWindowEvent,68, 8437, 2)
+#elif __ia64__
+CheckTypeSize(XEnterWindowEvent,104, 8437, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8437,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XLeaveWindowEvent,68, 8438, 2)
+#elif __ia64__
+CheckTypeSize(XLeaveWindowEvent,104, 8438, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8438,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XFocusChangeEvent,28, 8440, 2)
+#elif __ia64__
+CheckTypeSize(XFocusChangeEvent,48, 8440, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8440,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XFocusInEvent,28, 8441, 2)
+#elif __ia64__
+CheckTypeSize(XFocusInEvent,48, 8441, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8441,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XFocusOutEvent,28, 8442, 2)
+#elif __ia64__
+CheckTypeSize(XFocusOutEvent,48, 8442, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8442,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XKeymapEvent,52, 8444, 2)
+#elif __ia64__
+CheckTypeSize(XKeymapEvent,72, 8444, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8444,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XExposeEvent,40, 8446, 2)
+#elif __ia64__
+CheckTypeSize(XExposeEvent,64, 8446, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8446,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XGraphicsExposeEvent,48, 8448, 2)
+#elif __ia64__
+CheckTypeSize(XGraphicsExposeEvent,72, 8448, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8448,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XNoExposeEvent,28, 8450, 2)
+#elif __ia64__
+CheckTypeSize(XNoExposeEvent,48, 8450, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8450,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XVisibilityEvent,24, 8452, 2)
+#elif __ia64__
+CheckTypeSize(XVisibilityEvent,48, 8452, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8452,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XCreateWindowEvent,48, 8454, 2)
+#elif __ia64__
+CheckTypeSize(XCreateWindowEvent,72, 8454, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8454,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XDestroyWindowEvent,24, 8456, 2)
+#elif __ia64__
+CheckTypeSize(XDestroyWindowEvent,48, 8456, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8456,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XUnmapEvent,28, 8458, 2)
+#elif __ia64__
+CheckTypeSize(XUnmapEvent,56, 8458, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8458,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XMapEvent,28, 8460, 2)
+#elif __ia64__
+CheckTypeSize(XMapEvent,56, 8460, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8460,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XMapRequestEvent,24, 8462, 2)
+#elif __ia64__
+CheckTypeSize(XMapRequestEvent,48, 8462, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8462,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XReparentEvent,40, 8464, 2)
+#elif __ia64__
+CheckTypeSize(XReparentEvent,72, 8464, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8464,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XConfigureEvent,52, 8466, 2)
+#elif __ia64__
+CheckTypeSize(XConfigureEvent,88, 8466, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8466,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XGravityEvent,32, 8468, 2)
+#elif __ia64__
+CheckTypeSize(XGravityEvent,56, 8468, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8468,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XResizeRequestEvent,28, 8470, 2)
+#elif __ia64__
+CheckTypeSize(XResizeRequestEvent,48, 8470, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8470,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XConfigureRequestEvent,56, 8472, 2)
+#elif __ia64__
+CheckTypeSize(XConfigureRequestEvent,96, 8472, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8472,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XCirculateEvent,28, 8474, 2)
+#elif __ia64__
+CheckTypeSize(XCirculateEvent,56, 8474, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8474,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XCirculateRequestEvent,28, 8476, 2)
+#elif __ia64__
+CheckTypeSize(XCirculateRequestEvent,56, 8476, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8476,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XPropertyEvent,32, 8478, 2)
+#elif __ia64__
+CheckTypeSize(XPropertyEvent,64, 8478, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8478,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XSelectionClearEvent,28, 8480, 2)
+#elif __ia64__
+CheckTypeSize(XSelectionClearEvent,56, 8480, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8480,0);
 #endif
@@ -468,18 +538,24 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8482,0);
 
 #ifdef __i386__
 CheckTypeSize(XSelectionEvent,36, 8484, 2)
+#elif __ia64__
+CheckTypeSize(XSelectionEvent,72, 8484, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8484,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XColormapEvent,32, 8486, 2)
+#elif __ia64__
+CheckTypeSize(XColormapEvent,56, 8486, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8486,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XClientMessageEvent,48, 8489, 2)
+#elif __ia64__
+CheckTypeSize(XClientMessageEvent,96, 8489, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8489,0);
 #endif
@@ -494,12 +570,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8491,0);
 
 #ifdef __i386__
 CheckTypeSize(XErrorEvent,20, 8493, 2)
+#elif __ia64__
+CheckTypeSize(XErrorEvent,40, 8493, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8493,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(XAnyEvent,20, 8495, 2)
+#elif __ia64__
+CheckTypeSize(XAnyEvent,40, 8495, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8495,0);
 #endif
@@ -522,6 +602,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8499,0);
 
 #ifdef __i386__
 CheckTypeSize(XFontProp,8, 8501, 2)
+#elif __ia64__
+CheckTypeSize(XFontProp,16, 8501, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8501,0);
 #endif

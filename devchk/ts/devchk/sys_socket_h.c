@@ -360,24 +360,32 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(struct linger,8, 6907, 2)
+#elif __ia64__
+CheckTypeSize(struct linger,8, 6907, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6907,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct cmsghdr,12, 6909, 2)
+#elif __ia64__
+CheckTypeSize(struct cmsghdr,16, 6909, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6909,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct iovec,8, 9022, 2)
+#elif __ia64__
+CheckTypeSize(struct iovec,16, 9022, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9022,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(sa_family_t,2, 6905, 2)
+#elif __ia64__
+CheckTypeSize(sa_family_t,2, 6905, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6905,0);
 #endif

@@ -31,26 +31,18 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10222,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(gregset_t,76, 10224, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10224,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct _libc_fpreg,10, 10225, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10225,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct _libc_fpstate,112, 10226, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10226,0);
 #endif
 
 #ifdef __i386__
@@ -59,20 +51,24 @@ CheckTypeSize(fpregset_t,4, 10228, 2)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10228,0);
 #endif
 
-#ifdef 1
-#elif __i386__
+#ifdef __i386__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(mcontext_t,88, 10230, 2)
+#elif __ia64__
+CheckTypeSize(mcontext_t,2656, 10230, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10230,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(ucontext_t,348, 10220, 2)
+#elif __ia64__
+CheckTypeSize(ucontext_t,2656, 10220, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10220,0);
 #endif

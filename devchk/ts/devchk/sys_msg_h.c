@@ -31,8 +31,6 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(msgqnum_t,4, 10213, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10213,0);
 #endif
 
 #ifdef __i386__
@@ -43,6 +41,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10214,0);
 
 #ifdef __i386__
 CheckTypeSize(struct msqid_ds,88, 9117, 2)
+#elif __ia64__
+CheckTypeSize(struct msqid_ds,120, 9117, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9117,0);
 #endif

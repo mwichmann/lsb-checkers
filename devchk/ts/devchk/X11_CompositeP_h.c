@@ -45,13 +45,17 @@ Msg( "Error: Constant not found: XtInheritDeleteChild\n");
 cnt++;
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+CheckTypeSize(CompositeClassPart,40, 10244, 3)
+#elif __i386__
 CheckTypeSize(CompositeClassPart,20, 10244, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+CheckTypeSize(CompositeClassRec,264, 10240, 3)
+#elif __i386__
 CheckTypeSize(CompositeClassRec,136, 10240, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10240,0);

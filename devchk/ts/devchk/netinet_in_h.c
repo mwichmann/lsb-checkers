@@ -39,6 +39,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);
 
 #ifdef __i386__
 CheckTypeSize(struct sockaddr_in,16, 9141, 2)
+#elif __ia64__
+CheckTypeSize(struct sockaddr_in,16, 9141, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 #endif

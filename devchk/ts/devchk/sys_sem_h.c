@@ -80,12 +80,16 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(struct sembuf,6, 6982, 2)
+#elif __ia64__
+CheckTypeSize(struct sembuf,6, 6982, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct semid_ds,64, 10211, 2)
+#elif __ia64__
+CheckTypeSize(struct semid_ds,88, 10211, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10211,0);
 #endif

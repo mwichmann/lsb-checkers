@@ -53,6 +53,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 
 #ifdef __i386__
 CheckTypeSize(struct itimerspec,16, 10101, 2)
+#elif __ia64__
+CheckTypeSize(struct itimerspec,32, 10101, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 #endif

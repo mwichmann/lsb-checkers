@@ -206,12 +206,16 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(struct flock,16, 10217, 2)
+#elif __ia64__
+CheckTypeSize(struct flock,32, 10217, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct flock64,24, 10218, 2)
+#elif __ia64__
+CheckTypeSize(struct flock64,32, 10218, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
 #endif

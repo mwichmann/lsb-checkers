@@ -969,12 +969,16 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(off64_t,8, 9112, 2)
+#elif __ia64__
+CheckTypeSize(off64_t,8, 9112, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9112,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(intptr_t,4, 9196, 2)
+#elif __ia64__
+CheckTypeSize(intptr_t,8, 9196, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9196,0);
 #endif
