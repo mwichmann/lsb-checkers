@@ -30,15 +30,15 @@ typedef struct rpmlead {
 #define RPMSRCPKG	0x0001
 
 #if defined(__i386__)
-#define RPMARCH	0x0100
+#define RPMARCH	0x0001
 #endif
 #if defined(__ia64__)
-#define RPMARCH	0x0900
+#define RPMARCH	0x0009
 #endif
 
-#define RPMOS	0x0100 /* Linux */
+#define RPMOS	0x0001 /* Linux */
 
-#define RPMSIGTYPE	0x0500
+#define RPMSIGTYPE	0x0005
 
 typedef struct rpmheader {
     unsigned char magic[3];
