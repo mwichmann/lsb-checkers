@@ -24,16 +24,6 @@ Msg("Checking data structures in time.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef TIMER_ABSTIME
-	CompareConstant(TIMER_ABSTIME,1,2478,architecture)
-#else
-Msg( "Error: Constant not found: TIMER_ABSTIME\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef CLOCKS_PER_SEC
 	CompareConstant(CLOCKS_PER_SEC,1000000l,2473,architecture)
 #else
@@ -48,6 +38,16 @@ cnt++;
 	CompareConstant(CLOCK_REALTIME,0,2475,architecture)
 #else
 Msg( "Error: Constant not found: CLOCK_REALTIME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef TIMER_ABSTIME
+	CompareConstant(TIMER_ABSTIME,1,2478,architecture)
+#else
+Msg( "Error: Constant not found: TIMER_ABSTIME\n");
 cnt++;
 #endif
 
