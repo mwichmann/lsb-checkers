@@ -1508,7 +1508,7 @@ CheckTypeSize(chtype,4, 8650, 10)
 #elif __powerpc64__
 CheckTypeSize(chtype,8, 8650, 9)
 #elif __s390x__
-CheckTypeSize(chtype,0, 8650, 12)
+CheckTypeSize(chtype,8, 8650, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8650,0);
 Msg("Find size of chtype (8650)\n");
@@ -1542,7 +1542,7 @@ CheckTypeSize(WINDOW,124, 8655, 10)
 #elif __powerpc64__
 CheckTypeSize(WINDOW,128, 8655, 9)
 #elif __s390x__
-CheckTypeSize(WINDOW,0, 8655, 12)
+CheckTypeSize(WINDOW,128, 8655, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8655,0);
 Msg("Find size of WINDOW (8655)\n");
@@ -1559,7 +1559,7 @@ CheckTypeSize(attr_t,4, 8656, 10)
 #elif __powerpc64__
 CheckTypeSize(attr_t,8, 8656, 9)
 #elif __s390x__
-CheckTypeSize(attr_t,0, 8656, 12)
+CheckTypeSize(attr_t,8, 8656, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8656,0);
 Msg("Find size of attr_t (8656)\n");
@@ -1576,7 +1576,7 @@ CheckTypeSize(cchar_t,24, 8658, 10)
 #elif __powerpc64__
 CheckTypeSize(cchar_t,32, 8658, 9)
 #elif __s390x__
-CheckTypeSize(cchar_t,0, 8658, 12)
+CheckTypeSize(cchar_t,32, 8658, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8658,0);
 Msg("Find size of cchar_t (8658)\n");
@@ -1647,14 +1647,17 @@ CheckOffset(struct pdat,_pad_bottom,8,9,29729)
 CheckMemberSize(struct pdat,_pad_right,2,9,29730)
 CheckOffset(struct pdat,_pad_right,10,9,29730)
 #elif __s390x__
-CheckTypeSize(struct pdat,0, 8663, 12)
-Msg("Missing member data for pdat on S390X\n");
-CheckOffset(struct pdat,_pad_y,0,12,29725)
-CheckOffset(struct pdat,_pad_x,0,12,29726)
-CheckOffset(struct pdat,_pad_top,0,12,29727)
-CheckOffset(struct pdat,_pad_left,0,12,29728)
-CheckOffset(struct pdat,_pad_bottom,0,12,29729)
-CheckOffset(struct pdat,_pad_right,0,12,29730)
+CheckTypeSize(struct pdat,12, 8663, 12)
+CheckMemberSize(struct pdat,_pad_x,2,12,29726)
+CheckOffset(struct pdat,_pad_x,2,12,29726)
+CheckMemberSize(struct pdat,_pad_top,2,12,29727)
+CheckOffset(struct pdat,_pad_top,4,12,29727)
+CheckMemberSize(struct pdat,_pad_left,2,12,29728)
+CheckOffset(struct pdat,_pad_left,6,12,29728)
+CheckMemberSize(struct pdat,_pad_bottom,2,12,29729)
+CheckOffset(struct pdat,_pad_bottom,8,12,29729)
+CheckMemberSize(struct pdat,_pad_right,2,12,29730)
+CheckOffset(struct pdat,_pad_right,10,12,29730)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
 Msg("Find size of pdat (8663)\n");
@@ -1945,36 +1948,61 @@ CheckOffset(struct _win_st,_yoffset,92,9,29732)
 CheckMemberSize(struct _win_st,_bkgrnd,32,9,34437)
 CheckOffset(struct _win_st,_bkgrnd,96,9,34437)
 #elif __s390x__
-CheckTypeSize(struct _win_st,0, 8654, 12)
-Msg("Missing member data for _win_st on S390X\n");
-CheckOffset(struct _win_st,_cury,0,12,29700)
-CheckOffset(struct _win_st,_curx,0,12,29701)
-CheckOffset(struct _win_st,_maxy,0,12,29702)
-CheckOffset(struct _win_st,_maxx,0,12,29703)
-CheckOffset(struct _win_st,_begy,0,12,29704)
-CheckOffset(struct _win_st,_begx,0,12,29705)
-CheckOffset(struct _win_st,_flags,0,12,29706)
-CheckOffset(struct _win_st,_attrs,0,12,29707)
-CheckOffset(struct _win_st,_bkgd,0,12,29708)
-CheckOffset(struct _win_st,_notimeout,0,12,29709)
-CheckOffset(struct _win_st,_clear,0,12,29710)
-CheckOffset(struct _win_st,_leaveok,0,12,29711)
-CheckOffset(struct _win_st,_scroll,0,12,29712)
-CheckOffset(struct _win_st,_idlok,0,12,29713)
-CheckOffset(struct _win_st,_idcok,0,12,29714)
-CheckOffset(struct _win_st,_immed,0,12,29715)
-CheckOffset(struct _win_st,_sync,0,12,29716)
-CheckOffset(struct _win_st,_use_keypad,0,12,29717)
-CheckOffset(struct _win_st,_delay,0,12,29718)
-CheckOffset(struct _win_st,_line,0,12,29719)
-CheckOffset(struct _win_st,_regtop,0,12,29720)
-CheckOffset(struct _win_st,_regbottom,0,12,29721)
-CheckOffset(struct _win_st,_parx,0,12,29722)
-CheckOffset(struct _win_st,_pary,0,12,29723)
-CheckOffset(struct _win_st,_parent,0,12,29724)
-CheckOffset(struct _win_st,_pad,0,12,29731)
-CheckOffset(struct _win_st,_yoffset,0,12,29732)
-CheckOffset(struct _win_st,_bkgrnd,0,12,34437)
+CheckTypeSize(struct _win_st,128, 8654, 12)
+CheckMemberSize(struct _win_st,_curx,2,12,29701)
+CheckOffset(struct _win_st,_curx,2,12,29701)
+CheckMemberSize(struct _win_st,_maxy,2,12,29702)
+CheckOffset(struct _win_st,_maxy,4,12,29702)
+CheckMemberSize(struct _win_st,_maxx,2,12,29703)
+CheckOffset(struct _win_st,_maxx,6,12,29703)
+CheckMemberSize(struct _win_st,_begy,2,12,29704)
+CheckOffset(struct _win_st,_begy,8,12,29704)
+CheckMemberSize(struct _win_st,_begx,2,12,29705)
+CheckOffset(struct _win_st,_begx,10,12,29705)
+CheckMemberSize(struct _win_st,_flags,2,12,29706)
+CheckOffset(struct _win_st,_flags,12,12,29706)
+CheckMemberSize(struct _win_st,_attrs,8,12,29707)
+CheckOffset(struct _win_st,_attrs,16,12,29707)
+CheckMemberSize(struct _win_st,_bkgd,8,12,29708)
+CheckOffset(struct _win_st,_bkgd,24,12,29708)
+CheckMemberSize(struct _win_st,_notimeout,1,12,29709)
+CheckOffset(struct _win_st,_notimeout,32,12,29709)
+CheckMemberSize(struct _win_st,_clear,1,12,29710)
+CheckOffset(struct _win_st,_clear,33,12,29710)
+CheckMemberSize(struct _win_st,_leaveok,1,12,29711)
+CheckOffset(struct _win_st,_leaveok,34,12,29711)
+CheckMemberSize(struct _win_st,_scroll,1,12,29712)
+CheckOffset(struct _win_st,_scroll,35,12,29712)
+CheckMemberSize(struct _win_st,_idlok,1,12,29713)
+CheckOffset(struct _win_st,_idlok,36,12,29713)
+CheckMemberSize(struct _win_st,_idcok,1,12,29714)
+CheckOffset(struct _win_st,_idcok,37,12,29714)
+CheckMemberSize(struct _win_st,_immed,1,12,29715)
+CheckOffset(struct _win_st,_immed,38,12,29715)
+CheckMemberSize(struct _win_st,_sync,1,12,29716)
+CheckOffset(struct _win_st,_sync,39,12,29716)
+CheckMemberSize(struct _win_st,_use_keypad,1,12,29717)
+CheckOffset(struct _win_st,_use_keypad,40,12,29717)
+CheckMemberSize(struct _win_st,_delay,4,12,29718)
+CheckOffset(struct _win_st,_delay,44,12,29718)
+CheckMemberSize(struct _win_st,_line,8,12,29719)
+CheckOffset(struct _win_st,_line,48,12,29719)
+CheckMemberSize(struct _win_st,_regtop,2,12,29720)
+CheckOffset(struct _win_st,_regtop,56,12,29720)
+CheckMemberSize(struct _win_st,_regbottom,2,12,29721)
+CheckOffset(struct _win_st,_regbottom,58,12,29721)
+CheckMemberSize(struct _win_st,_parx,4,12,29722)
+CheckOffset(struct _win_st,_parx,60,12,29722)
+CheckMemberSize(struct _win_st,_pary,4,12,29723)
+CheckOffset(struct _win_st,_pary,64,12,29723)
+CheckMemberSize(struct _win_st,_parent,8,12,29724)
+CheckOffset(struct _win_st,_parent,72,12,29724)
+CheckMemberSize(struct _win_st,_pad,12,12,29731)
+CheckOffset(struct _win_st,_pad,80,12,29731)
+CheckMemberSize(struct _win_st,_yoffset,2,12,29732)
+CheckOffset(struct _win_st,_yoffset,92,12,29732)
+CheckMemberSize(struct _win_st,_bkgrnd,32,12,34437)
+CheckOffset(struct _win_st,_bkgrnd,96,12,34437)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
 Msg("Find size of _win_st (8654)\n");

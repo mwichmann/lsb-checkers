@@ -34,7 +34,7 @@ CheckTypeSize(bool_t,4, 9890, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(bool_t,4, 9890, 10)
 #elif __s390x__
-CheckTypeSize(bool_t,0, 9890, 12)
+CheckTypeSize(bool_t,4, 9890, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9890,0);
 Msg("Find size of bool_t (9890)\n");
@@ -51,7 +51,7 @@ CheckTypeSize(enum_t,4, 9895, 6)
 #elif __powerpc64__
 CheckTypeSize(enum_t,4, 9895, 9)
 #elif __s390x__
-CheckTypeSize(enum_t,0, 9895, 12)
+CheckTypeSize(enum_t,4, 9895, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9895,0);
 Msg("Find size of enum_t (9895)\n");
@@ -68,7 +68,7 @@ CheckTypeSize(rpcvers_t,4, 9993, 6)
 #elif __powerpc64__
 CheckTypeSize(rpcvers_t,8, 9993, 9)
 #elif __s390x__
-CheckTypeSize(rpcvers_t,0, 9993, 12)
+CheckTypeSize(rpcvers_t,8, 9993, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9993,0);
 Msg("Find size of rpcvers_t (9993)\n");

@@ -114,17 +114,23 @@ CheckOffset(struct SVCXPRT,xp_p2,72,9,32250)
 CheckMemberSize(struct SVCXPRT,xp_pad,256,9,32251)
 CheckOffset(struct SVCXPRT,xp_pad,80,9,32251)
 #elif __s390x__
-CheckTypeSize(struct SVCXPRT,0, 9980, 12)
-Msg("Missing member data for SVCXPRT on S390X\n");
-CheckOffset(struct SVCXPRT,xp_sock,0,12,32225)
-CheckOffset(struct SVCXPRT,xp_port,0,12,32226)
-CheckOffset(struct SVCXPRT,xp_ops,0,12,32245)
-CheckOffset(struct SVCXPRT,xp_addrlen,0,12,32246)
-CheckOffset(struct SVCXPRT,xp_raddr,0,12,32247)
-CheckOffset(struct SVCXPRT,xp_verf,0,12,32248)
-CheckOffset(struct SVCXPRT,xp_p1,0,12,32249)
-CheckOffset(struct SVCXPRT,xp_p2,0,12,32250)
-CheckOffset(struct SVCXPRT,xp_pad,0,12,32251)
+CheckTypeSize(struct SVCXPRT,336, 9980, 12)
+CheckMemberSize(struct SVCXPRT,xp_port,2,12,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,12,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,8,12,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,12,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,12,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,16,12,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,12,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,20,12,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,24,12,32248)
+CheckOffset(struct SVCXPRT,xp_verf,40,12,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,8,12,32249)
+CheckOffset(struct SVCXPRT,xp_p1,64,12,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,8,12,32250)
+CheckOffset(struct SVCXPRT,xp_p2,72,12,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,12,32251)
+CheckOffset(struct SVCXPRT,xp_pad,80,12,32251)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9980,0);
 Msg("Find size of SVCXPRT (9980)\n");
@@ -141,7 +147,7 @@ CheckTypeSize(SVCXPRT,308, 10390, 6)
 #elif __powerpc64__
 CheckTypeSize(SVCXPRT,336, 10390, 9)
 #elif __s390x__
-CheckTypeSize(SVCXPRT,0, 10390, 12)
+CheckTypeSize(SVCXPRT,336, 10390, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10390,0);
 Msg("Find size of SVCXPRT (10390)\n");
@@ -196,14 +202,17 @@ CheckOffset(struct xp_ops,xp_freeargs,16,6,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,4,6,32244)
 CheckOffset(struct xp_ops,xp_destroy,20,6,32244)
 #elif __s390x__
-CheckTypeSize(struct xp_ops,0, 9981, 12)
-Msg("Missing member data for xp_ops on S390X\n");
-CheckOffset(struct xp_ops,xp_recv,0,12,32229)
-CheckOffset(struct xp_ops,xp_stat,0,12,32231)
-CheckOffset(struct xp_ops,xp_getargs,0,12,32235)
-CheckOffset(struct xp_ops,xp_reply,0,12,32238)
-CheckOffset(struct xp_ops,xp_freeargs,0,12,32242)
-CheckOffset(struct xp_ops,xp_destroy,0,12,32244)
+CheckTypeSize(struct xp_ops,48, 9981, 12)
+CheckMemberSize(struct xp_ops,xp_stat,8,12,32231)
+CheckOffset(struct xp_ops,xp_stat,8,12,32231)
+CheckMemberSize(struct xp_ops,xp_getargs,8,12,32235)
+CheckOffset(struct xp_ops,xp_getargs,16,12,32235)
+CheckMemberSize(struct xp_ops,xp_reply,8,12,32238)
+CheckOffset(struct xp_ops,xp_reply,24,12,32238)
+CheckMemberSize(struct xp_ops,xp_freeargs,8,12,32242)
+CheckOffset(struct xp_ops,xp_freeargs,32,12,32242)
+CheckMemberSize(struct xp_ops,xp_destroy,8,12,32244)
+CheckOffset(struct xp_ops,xp_destroy,40,12,32244)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");

@@ -147,10 +147,9 @@ CheckOffset(struct FTW,base,0,9,29758)
 CheckMemberSize(struct FTW,level,4,9,29759)
 CheckOffset(struct FTW,level,4,9,29759)
 #elif __s390x__
-CheckTypeSize(struct FTW,0, 8691, 12)
-Msg("Missing member data for FTW on S390X\n");
-CheckOffset(struct FTW,base,0,12,29758)
-CheckOffset(struct FTW,level,0,12,29759)
+CheckTypeSize(struct FTW,8, 8691, 12)
+CheckMemberSize(struct FTW,level,4,12,29759)
+CheckOffset(struct FTW,level,4,12,29759)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8691,0);
 Msg("Find size of FTW (8691)\n");
@@ -167,7 +166,7 @@ CheckTypeSize(__ftw_func_t,4, 8992, 10)
 #elif __powerpc64__
 CheckTypeSize(__ftw_func_t,8, 8992, 9)
 #elif __s390x__
-CheckTypeSize(__ftw_func_t,0, 8992, 12)
+CheckTypeSize(__ftw_func_t,8, 8992, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8992,0);
 Msg("Find size of __ftw_func_t (8992)\n");
@@ -184,7 +183,7 @@ CheckTypeSize(__ftw64_func_t,4, 8994, 10)
 #elif __powerpc64__
 CheckTypeSize(__ftw64_func_t,8, 8994, 9)
 #elif __s390x__
-CheckTypeSize(__ftw64_func_t,0, 8994, 12)
+CheckTypeSize(__ftw64_func_t,8, 8994, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8994,0);
 Msg("Find size of __ftw64_func_t (8994)\n");
@@ -201,7 +200,7 @@ CheckTypeSize(__nftw_func_t,4, 8996, 10)
 #elif __powerpc64__
 CheckTypeSize(__nftw_func_t,8, 8996, 9)
 #elif __s390x__
-CheckTypeSize(__nftw_func_t,0, 8996, 12)
+CheckTypeSize(__nftw_func_t,8, 8996, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8996,0);
 Msg("Find size of __nftw_func_t (8996)\n");
@@ -218,7 +217,7 @@ CheckTypeSize(__nftw64_func_t,4, 8998, 10)
 #elif __powerpc64__
 CheckTypeSize(__nftw64_func_t,8, 8998, 9)
 #elif __s390x__
-CheckTypeSize(__nftw64_func_t,0, 8998, 12)
+CheckTypeSize(__nftw64_func_t,8, 8998, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8998,0);
 Msg("Find size of __nftw64_func_t (8998)\n");

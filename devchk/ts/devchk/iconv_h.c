@@ -34,7 +34,7 @@ CheckTypeSize(iconv_t,4, 6895, 10)
 #elif __powerpc64__
 CheckTypeSize(iconv_t,8, 6895, 9)
 #elif __s390x__
-CheckTypeSize(iconv_t,0, 6895, 12)
+CheckTypeSize(iconv_t,8, 6895, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6895,0);
 Msg("Find size of iconv_t (6895)\n");

@@ -37,7 +37,7 @@ CheckTypeSize(XcmsFunctionSet,12, 8364, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsFunctionSet,24, 8364, 9)
 #elif __s390x__
-CheckTypeSize(XcmsFunctionSet,0, 8364, 12)
+CheckTypeSize(XcmsFunctionSet,24, 8364, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8364,0);
 Msg("Find size of XcmsFunctionSet (8364)\n");
@@ -54,7 +54,7 @@ CheckTypeSize(XcmsColorFormat,4, 8320, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsColorFormat,8, 8320, 9)
 #elif __s390x__
-CheckTypeSize(XcmsColorFormat,0, 8320, 12)
+CheckTypeSize(XcmsColorFormat,8, 8320, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8320,0);
 Msg("Find size of XcmsColorFormat (8320)\n");
@@ -71,7 +71,7 @@ CheckTypeSize(XcmsFloat,8, 8321, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsFloat,8, 8321, 9)
 #elif __s390x__
-CheckTypeSize(XcmsFloat,0, 8321, 12)
+CheckTypeSize(XcmsFloat,8, 8321, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8321,0);
 Msg("Find size of XcmsFloat (8321)\n");
@@ -88,7 +88,7 @@ CheckTypeSize(XcmsRGB,6, 8323, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsRGB,6, 8323, 9)
 #elif __s390x__
-CheckTypeSize(XcmsRGB,0, 8323, 12)
+CheckTypeSize(XcmsRGB,6, 8323, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8323,0);
 Msg("Find size of XcmsRGB (8323)\n");
@@ -105,7 +105,7 @@ CheckTypeSize(XcmsRGBi,24, 8325, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsRGBi,24, 8325, 9)
 #elif __s390x__
-CheckTypeSize(XcmsRGBi,0, 8325, 12)
+CheckTypeSize(XcmsRGBi,24, 8325, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8325,0);
 Msg("Find size of XcmsRGBi (8325)\n");
@@ -122,7 +122,7 @@ CheckTypeSize(XcmsCIEXYZ,24, 8327, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIEXYZ,24, 8327, 9)
 #elif __s390x__
-CheckTypeSize(XcmsCIEXYZ,0, 8327, 12)
+CheckTypeSize(XcmsCIEXYZ,24, 8327, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8327,0);
 Msg("Find size of XcmsCIEXYZ (8327)\n");
@@ -139,7 +139,7 @@ CheckTypeSize(XcmsCIEuvY,24, 8329, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIEuvY,24, 8329, 9)
 #elif __s390x__
-CheckTypeSize(XcmsCIEuvY,0, 8329, 12)
+CheckTypeSize(XcmsCIEuvY,24, 8329, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8329,0);
 Msg("Find size of XcmsCIEuvY (8329)\n");
@@ -156,7 +156,7 @@ CheckTypeSize(XcmsCIExyY,24, 8331, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIExyY,24, 8331, 9)
 #elif __s390x__
-CheckTypeSize(XcmsCIExyY,0, 8331, 12)
+CheckTypeSize(XcmsCIExyY,24, 8331, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8331,0);
 Msg("Find size of XcmsCIExyY (8331)\n");
@@ -173,7 +173,7 @@ CheckTypeSize(XcmsCIELab,24, 8333, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIELab,24, 8333, 9)
 #elif __s390x__
-CheckTypeSize(XcmsCIELab,0, 8333, 12)
+CheckTypeSize(XcmsCIELab,24, 8333, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8333,0);
 Msg("Find size of XcmsCIELab (8333)\n");
@@ -190,7 +190,7 @@ CheckTypeSize(XcmsCIELuv,24, 8335, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIELuv,24, 8335, 9)
 #elif __s390x__
-CheckTypeSize(XcmsCIELuv,0, 8335, 12)
+CheckTypeSize(XcmsCIELuv,24, 8335, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8335,0);
 Msg("Find size of XcmsCIELuv (8335)\n");
@@ -207,7 +207,7 @@ CheckTypeSize(XcmsTekHVC,24, 8337, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsTekHVC,24, 8337, 9)
 #elif __s390x__
-CheckTypeSize(XcmsTekHVC,0, 8337, 12)
+CheckTypeSize(XcmsTekHVC,24, 8337, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8337,0);
 Msg("Find size of XcmsTekHVC (8337)\n");
@@ -224,7 +224,7 @@ CheckTypeSize(XcmsPad,32, 8339, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsPad,32, 8339, 9)
 #elif __s390x__
-CheckTypeSize(XcmsPad,0, 8339, 12)
+CheckTypeSize(XcmsPad,32, 8339, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8339,0);
 Msg("Find size of XcmsPad (8339)\n");
@@ -241,7 +241,7 @@ CheckTypeSize(XcmsColor,40, 8342, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsColor,48, 8342, 9)
 #elif __s390x__
-CheckTypeSize(XcmsColor,0, 8342, 12)
+CheckTypeSize(XcmsColor,48, 8342, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8342,0);
 Msg("Find size of XcmsColor (8342)\n");
@@ -258,7 +258,7 @@ CheckTypeSize(XcmsPerScrnInfo,56, 8344, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsPerScrnInfo,72, 8344, 9)
 #elif __s390x__
-CheckTypeSize(XcmsPerScrnInfo,0, 8344, 12)
+CheckTypeSize(XcmsPerScrnInfo,72, 8344, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8344,0);
 Msg("Find size of XcmsPerScrnInfo (8344)\n");
@@ -275,7 +275,7 @@ CheckTypeSize(XcmsCompressionProc,4, 8856, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCompressionProc,8, 8856, 9)
 #elif __s390x__
-CheckTypeSize(XcmsCompressionProc,0, 8856, 12)
+CheckTypeSize(XcmsCompressionProc,8, 8856, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8856,0);
 Msg("Find size of XcmsCompressionProc (8856)\n");
@@ -292,7 +292,7 @@ CheckTypeSize(XcmsWhiteAdjustProc,4, 8858, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsWhiteAdjustProc,8, 8858, 9)
 #elif __s390x__
-CheckTypeSize(XcmsWhiteAdjustProc,0, 8858, 12)
+CheckTypeSize(XcmsWhiteAdjustProc,8, 8858, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8858,0);
 Msg("Find size of XcmsWhiteAdjustProc (8858)\n");
@@ -309,7 +309,7 @@ CheckTypeSize(XcmsScreenInitProc,4, 8861, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsScreenInitProc,8, 8861, 9)
 #elif __s390x__
-CheckTypeSize(XcmsScreenInitProc,0, 8861, 12)
+CheckTypeSize(XcmsScreenInitProc,8, 8861, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8861,0);
 Msg("Find size of XcmsScreenInitProc (8861)\n");
@@ -326,7 +326,7 @@ CheckTypeSize(XcmsScreenFreeProc,4, 8863, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsScreenFreeProc,8, 8863, 9)
 #elif __s390x__
-CheckTypeSize(XcmsScreenFreeProc,0, 8863, 12)
+CheckTypeSize(XcmsScreenFreeProc,8, 8863, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8863,0);
 Msg("Find size of XcmsScreenFreeProc (8863)\n");
@@ -343,7 +343,7 @@ CheckTypeSize(XcmsConversionProc,4, 8865, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsConversionProc,8, 8865, 9)
 #elif __s390x__
-CheckTypeSize(XcmsConversionProc,0, 8865, 12)
+CheckTypeSize(XcmsConversionProc,8, 8865, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8865,0);
 Msg("Find size of XcmsConversionProc (8865)\n");
@@ -360,7 +360,7 @@ CheckTypeSize(XcmsParseStringProc,4, 8869, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsParseStringProc,8, 8869, 9)
 #elif __s390x__
-CheckTypeSize(XcmsParseStringProc,0, 8869, 12)
+CheckTypeSize(XcmsParseStringProc,8, 8869, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8869,0);
 Msg("Find size of XcmsParseStringProc (8869)\n");
@@ -388,7 +388,7 @@ CheckTypeSize(XcmsCCC,4, 8853, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCCC,8, 8853, 9)
 #elif __s390x__
-CheckTypeSize(XcmsCCC,0, 8853, 12)
+CheckTypeSize(XcmsCCC,8, 8853, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8853,0);
 Msg("Find size of XcmsCCC (8853)\n");
@@ -405,7 +405,7 @@ CheckTypeSize(XcmsColorSpace,24, 8362, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsColorSpace,48, 8362, 9)
 #elif __s390x__
-CheckTypeSize(XcmsColorSpace,0, 8362, 12)
+CheckTypeSize(XcmsColorSpace,48, 8362, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8362,0);
 Msg("Find size of XcmsColorSpace (8362)\n");
@@ -422,7 +422,7 @@ CheckTypeSize(XcmsFuncListPtr,4, 8867, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsFuncListPtr,8, 8867, 9)
 #elif __s390x__
-CheckTypeSize(XcmsFuncListPtr,0, 8867, 12)
+CheckTypeSize(XcmsFuncListPtr,8, 8867, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8867,0);
 Msg("Find size of XcmsFuncListPtr (8867)\n");

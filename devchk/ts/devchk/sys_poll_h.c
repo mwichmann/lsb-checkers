@@ -114,11 +114,11 @@ CheckOffset(struct pollfd,events,4,9,34413)
 CheckMemberSize(struct pollfd,revents,2,9,34414)
 CheckOffset(struct pollfd,revents,6,9,34414)
 #elif __s390x__
-CheckTypeSize(struct pollfd,0, 9913, 12)
-Msg("Missing member data for pollfd on S390X\n");
-CheckOffset(struct pollfd,fd,0,12,34412)
-CheckOffset(struct pollfd,events,0,12,34413)
-CheckOffset(struct pollfd,revents,0,12,34414)
+CheckTypeSize(struct pollfd,8, 9913, 12)
+CheckMemberSize(struct pollfd,events,2,12,34413)
+CheckOffset(struct pollfd,events,4,12,34413)
+CheckMemberSize(struct pollfd,revents,2,12,34414)
+CheckOffset(struct pollfd,revents,6,12,34414)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
 Msg("Find size of pollfd (9913)\n");
