@@ -3,55 +3,61 @@
 #include "sections.h"
 #include "../tetj/tetj.h"
 
-void
+int
 checkDUMMY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "DUMMY SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkGNU_versym(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_versym SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkGNU_verdef(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_verdef SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkGNU_verneed(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_verneed SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkNOBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "NOBITS SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkNULL(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "NULL SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkBITS(char *secname, ElfFile *file1, Elf32_Shdr *hdr1)
 {
 caddr_t	bits1;
@@ -74,33 +80,34 @@ for(i=0; i<size; i++)
 		return;
 		}
 */
+ return 1; 
 }
 
-void
+int
 checkPROGBITS(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
-checkBITS( "PROGBITS", file1, hdr1 );
+  return checkBITS( "PROGBITS", file1, hdr1 );
 }
 
-void
+int
 checkHASH(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
-checkBITS( "HASH", file1, hdr1 );
+  return checkBITS( "HASH", file1, hdr1 );
 }
 
-void
+int
 checkSTRTAB(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
-checkBITS( "STRTAB", file1, hdr1 );
+  return checkBITS( "STRTAB", file1, hdr1 );
 }
 
-void
+int
 checkNOTE(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
-checkBITS( "NOTE", file1, hdr1 );
+  return checkBITS( "NOTE", file1, hdr1 );
 }
 
-void
+int
 checkSYMBOLS(char *secname, ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numsyms;
@@ -134,15 +141,17 @@ for(i=0;i<numsyms;i++)
 		}
 */
 	}
+ return 1; 
 }
 
-void
+int
 checkSYMTAB(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 checkSYMBOLS( "SYMTAB", file1, hdr1, journal );
+ return 1; 
 }
 
-void
+int
 checkDYNSYM(ElfFile *file, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
@@ -150,12 +159,13 @@ fprintf(stderr, "DYNSYM\n" );
 #endif /* VERBOSE */
 
 file->dynsymhdr=hdr1;
+ return 1; 
 }
 
-void
+int
 checkREL(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
-int	i, numrels;
+int	i, numrels, pass=1;
 Elf32_Rel	*rel1;
 
 #ifdef VERBOSE
@@ -171,6 +181,7 @@ if( rel1[i].field != rel2[i].field ) { \
 	fprintf( stderr, "compareREL: %s doesn't match\n", #field); \
 	fprintf( stderr, "%8.8x != ", rel1[i].field ); \
 	fprintf( stderr, "%8.8x\n", rel2[i].field ); \
+        pass = 0; \
 	}
 
 for(i=0;i<numrels;i++)
@@ -181,12 +192,13 @@ for(i=0;i<numrels;i++)
 */
 	}
 #undef comparerelfield
+ return pass; 
 }
 
-void
+int
 checkRELA(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
-int	i, numrels;
+int	i, numrels, pass = 1;
 Elf32_Rela	*rel1;
 
 #ifdef VERBOSE
@@ -202,6 +214,7 @@ if( rel1[i].field != rel2[i].field ) { \
 	fprintf( stderr, "compareRELA: %s doesn't match\n", #field); \
 	fprintf( stderr, "%8.8x != ", rel1[i].field ); \
 	fprintf( stderr, "%8.8x\n", rel2[i].field ); \
+        pass = 0; \
 	}
 
 for(i=0;i<numrels;i++)
@@ -212,47 +225,53 @@ for(i=0;i<numrels;i++)
 */
 	}
 #undef comparerelfield
+ return pass; 
 }
 
-void
+int
 checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "INIT_ARRAY SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "PREINIT_ARRAY SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "FINI_ARRAY SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
 #if defined(__ia64__)
-void
+int
 checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "IA_64_EXT SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 
-void
+int
 checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
 fprintf(stderr, "IA_64_UNWIND SECTION\n" );
 #endif /* VERBOSE */
+ return 1; 
 }
 #endif
 
@@ -315,7 +334,8 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
           fail = 1;
         }
       }
-      SectionInfo[i].func(file1, hdr1, journal);
+      if (!SectionInfo[i].func(file1, hdr1, journal)) fail = 1;
+
       tetj_result(journal, tetj_activity_count, tetj_tp_count,
                   fail ? TETJ_FAIL : TETJ_PASS);
       return;
