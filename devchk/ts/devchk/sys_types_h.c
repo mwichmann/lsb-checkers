@@ -361,6 +361,8 @@ Msg("Find size of fsid_t (9367)\n");
 
 #if __i386__
 CheckTypeSize(useconds_t,4, 9369, 2)
+#elif __powerpc64__
+CheckTypeSize(useconds_t,0, 9369, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9369,0);
 Msg("Find size of useconds_t (9369)\n");
@@ -454,6 +456,8 @@ CheckTypeSize(const int32_t,4, 10458, 11)
 CheckTypeSize(const int32_t,4, 10458, 10)
 #elif __s390x__
 CheckTypeSize(const int32_t,4, 10458, 12)
+#elif __powerpc64__
+CheckTypeSize(const int32_t,0, 10458, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10458,0);
 Msg("Find size of const int32_t (10458)\n");

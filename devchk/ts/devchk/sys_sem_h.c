@@ -139,6 +139,12 @@ CheckMemberSize(struct sembuf,sem_op,2,11,30119)
 CheckOffset(struct sembuf,sem_op,2,11,30119)
 CheckMemberSize(struct sembuf,sem_flg,2,11,30120)
 CheckOffset(struct sembuf,sem_flg,4,11,30120)
+#elif __powerpc64__
+CheckTypeSize(struct sembuf,0, 6982, 9)
+Msg("Missing member data for sembuf on PPC64\n");
+CheckOffset(struct sembuf,sem_num,0,9,30118)
+CheckOffset(struct sembuf,sem_op,0,9,30119)
+CheckOffset(struct sembuf,sem_flg,0,9,30120)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
 Msg("Find size of sembuf (6982)\n");

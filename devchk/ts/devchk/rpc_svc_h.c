@@ -263,6 +263,15 @@ CheckMemberSize(struct xp_ops,xp_freeargs,8,11,32242)
 CheckOffset(struct xp_ops,xp_freeargs,32,11,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,8,11,32244)
 CheckOffset(struct xp_ops,xp_destroy,40,11,32244)
+#elif __powerpc64__
+CheckTypeSize(struct xp_ops,0, 9981, 9)
+Msg("Missing member data for xp_ops on PPC64\n");
+CheckOffset(struct xp_ops,xp_recv,0,9,32229)
+CheckOffset(struct xp_ops,xp_stat,0,9,32231)
+CheckOffset(struct xp_ops,xp_getargs,0,9,32235)
+CheckOffset(struct xp_ops,xp_reply,0,9,32238)
+CheckOffset(struct xp_ops,xp_freeargs,0,9,32242)
+CheckOffset(struct xp_ops,xp_destroy,0,9,32244)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");
@@ -273,6 +282,8 @@ Msg("Find size of xp_ops (9981)\n");
 
 #if __i386__
 CheckTypeSize(__dispatch_fn_t,4, 9997, 2)
+#elif __powerpc64__
+CheckTypeSize(__dispatch_fn_t,0, 9997, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9997,0);
 Msg("Find size of __dispatch_fn_t (9997)\n");
@@ -290,6 +301,15 @@ CheckMemberSize(struct svc_req,rq_clntcred,4,2,32256)
 CheckOffset(struct svc_req,rq_clntcred,24,2,32256)
 CheckMemberSize(struct svc_req,rq_xprt,4,2,32257)
 CheckOffset(struct svc_req,rq_xprt,28,2,32257)
+#elif __powerpc64__
+CheckTypeSize(struct svc_req,0, 9991, 9)
+Msg("Missing member data for svc_req on PPC64\n");
+CheckOffset(struct svc_req,rq_prog,0,9,32252)
+CheckOffset(struct svc_req,rq_vers,0,9,32253)
+CheckOffset(struct svc_req,rq_proc,0,9,32254)
+CheckOffset(struct svc_req,rq_cred,0,9,32255)
+CheckOffset(struct svc_req,rq_clntcred,0,9,32256)
+CheckOffset(struct svc_req,rq_xprt,0,9,32257)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9991,0);
 Msg("Find size of svc_req (9991)\n");

@@ -130,9 +130,9 @@ CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,10,34041)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,60,10,34041)
 #elif __powerpc64__
 CheckTypeSize(struct __jmp_buf_tag,456, 6961, 9)
-CheckMemberSize(struct __jmp_buf_tag,__mask_was_saved,0,9,34040)
+CheckMemberSize(struct __jmp_buf_tag,__mask_was_saved,4,9,34040)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,320,9,34040)
-CheckMemberSize(struct __jmp_buf_tag,__saved_mask,0,9,34041)
+CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,9,34041)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,328,9,34041)
 #elif __not_def__
 CheckTypeSize(struct __jmp_buf_tag,280, 6961, 8)

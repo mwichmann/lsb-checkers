@@ -105,6 +105,8 @@ CheckTypeSize(__mbstate_t,8, 10488, 12)
 CheckTypeSize(__mbstate_t,8, 10488, 10)
 #elif __x86_64__
 CheckTypeSize(__mbstate_t,8, 10488, 11)
+#elif __powerpc64__
+CheckTypeSize(__mbstate_t,0, 10488, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10488,0);
 Msg("Find size of __mbstate_t (10488)\n");
