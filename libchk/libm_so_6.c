@@ -1,19 +1,19 @@
 #include "elfchk.h"
 struct versym libm_so_6[] = {
-#if defined(__ia64__)
-	{"acos","GLIBC_2.2"},
-#endif
 #if defined(__i386__)
 	{"acos","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"acos","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
 	{"acos","GLIBC_2.0"},
 #endif
-#if defined(__ia64__)
-	{"acosf","GLIBC_2.2"},
-#endif
 #if defined(__i386__)
 	{"acosf","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"acosf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
 	{"acosf","GLIBC_2.0"},
@@ -27,11 +27,11 @@ struct versym libm_so_6[] = {
 #if defined(__powerpc__)
 	{"acosh","GLIBC_2.0"},
 #endif
-#if defined(__ia64__)
-	{"acoshf","GLIBC_2.2"},
-#endif
 #if defined(__i386__)
 	{"acoshf","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"acoshf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
 	{"acoshf","GLIBC_2.0"},
@@ -792,11 +792,11 @@ struct versym libm_so_6[] = {
 #if defined(__powerpc__)
 	{"creal","GLIBC_2.1"},
 #endif
-#if defined(__ia64__)
-	{"crealf","GLIBC_2.2"},
-#endif
 #if defined(__i386__)
 	{"crealf","GLIBC_2.1"},
+#endif
+#if defined(__ia64__)
+	{"crealf","GLIBC_2.2"},
 #endif
 #if defined(__powerpc__)
 	{"crealf","GLIBC_2.1"},
