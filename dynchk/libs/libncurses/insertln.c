@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef insertln
+static int(*funcptr) () = 0;
 
-int insertln()
+int insertln ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insertln");
 	return funcptr();
 }
 
-int lsb_insertln()
+int lsb_insertln ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insertln");

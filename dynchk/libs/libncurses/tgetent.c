@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, const char *) = 0;
+#undef tgetent
+static int(*funcptr) (char * , const char * ) = 0;
 
-int tgetent(char * arg0, const char * arg1)
+int tgetent (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetent");
@@ -13,7 +14,7 @@ int tgetent(char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_tgetent(char * arg0, const char * arg1)
+int lsb_tgetent (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetent");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef typeahead
+static int(*funcptr) (int ) = 0;
 
-int typeahead(int arg0)
+int typeahead (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "typeahead");
@@ -12,7 +13,7 @@ int typeahead(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_typeahead(int arg0)
+int lsb_typeahead (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "typeahead");

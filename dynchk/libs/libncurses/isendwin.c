@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static bool(*funcptr)() = 0;
+#undef isendwin
+static bool(*funcptr) () = 0;
 
-bool isendwin()
+bool isendwin ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isendwin");
 	return funcptr();
 }
 
-bool lsb_isendwin()
+bool lsb_isendwin ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isendwin");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static SCREEN *(*funcptr)(SCREEN *) = 0;
+#include <curses.h>
+#undef set_term
+static SCREEN *(*funcptr) (SCREEN * ) = 0;
 
-SCREEN * set_term(SCREEN * arg0)
+SCREEN * set_term (SCREEN * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "set_term");
@@ -12,7 +14,7 @@ SCREEN * set_term(SCREEN * arg0)
 	return funcptr(arg0);
 }
 
-SCREEN * lsb_set_term(SCREEN * arg0)
+SCREEN * lsb_set_term (SCREEN * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "set_term");

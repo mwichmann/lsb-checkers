@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static void(*funcptr)(WINDOW *, bool) = 0;
+#undef idcok
+static void(*funcptr) (WINDOW * , bool ) = 0;
 
-void idcok(WINDOW * arg0, bool arg1)
+void idcok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "idcok");
@@ -14,7 +15,7 @@ void idcok(WINDOW * arg0, bool arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_idcok(WINDOW * arg0, bool arg1)
+void lsb_idcok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "idcok");

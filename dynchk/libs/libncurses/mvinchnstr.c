@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, chtype *, int) = 0;
+#include <curses.h>
+#undef mvinchnstr
+static int(*funcptr) (int , int , chtype * , int ) = 0;
 
-int mvinchnstr(int arg0, int arg1, chtype * arg2, int arg3)
+int mvinchnstr (int arg0 , int arg1 , chtype * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinchnstr");
@@ -15,7 +17,7 @@ int mvinchnstr(int arg0, int arg1, chtype * arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_mvinchnstr(int arg0, int arg1, chtype * arg2, int arg3)
+int lsb_mvinchnstr (int arg0 , int arg1 , chtype * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinchnstr");

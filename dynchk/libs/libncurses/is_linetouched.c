@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static bool(*funcptr)(WINDOW *, int) = 0;
+#include <curses.h>
+#undef is_linetouched
+static bool(*funcptr) (WINDOW * , int ) = 0;
 
-bool is_linetouched(WINDOW * arg0, int arg1)
+bool is_linetouched (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "is_linetouched");
@@ -13,7 +15,7 @@ bool is_linetouched(WINDOW * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-bool lsb_is_linetouched(WINDOW * arg0, int arg1)
+bool lsb_is_linetouched (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "is_linetouched");

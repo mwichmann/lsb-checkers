@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(WINDOW *, chtype, int) = 0;
+#undef whline
+static int(*funcptr) (WINDOW * , chtype , int ) = 0;
 
-int whline(WINDOW * arg0, chtype arg1, int arg2)
+int whline (WINDOW * arg0 , chtype arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "whline");
@@ -15,7 +16,7 @@ int whline(WINDOW * arg0, chtype arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_whline(WINDOW * arg0, chtype arg1, int arg2)
+int lsb_whline (WINDOW * arg0 , chtype arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "whline");

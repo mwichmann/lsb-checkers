@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef qiflush
+static void(*funcptr) () = 0;
 
-void qiflush()
+void qiflush ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "qiflush");
 	funcptr();
 }
 
-void lsb_qiflush()
+void lsb_qiflush ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "qiflush");

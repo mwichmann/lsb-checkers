@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, chtype *) = 0;
+#include <curses.h>
+#undef winchstr
+static int(*funcptr) (WINDOW * , chtype * ) = 0;
 
-int winchstr(WINDOW * arg0, chtype * arg1)
+int winchstr (WINDOW * arg0 , chtype * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winchstr");
@@ -13,7 +15,7 @@ int winchstr(WINDOW * arg0, chtype * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_winchstr(WINDOW * arg0, chtype * arg1)
+int lsb_winchstr (WINDOW * arg0 , chtype * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winchstr");

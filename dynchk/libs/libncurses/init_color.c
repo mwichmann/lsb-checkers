@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(short, short, short, short) = 0;
+#undef init_color
+static int(*funcptr) (short , short , short , short ) = 0;
 
-int init_color(short arg0, short arg1, short arg2, short arg3)
+int init_color (short arg0 , short arg1 , short arg2 , short arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "init_color");
@@ -15,7 +16,7 @@ int init_color(short arg0, short arg1, short arg2, short arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_init_color(short arg0, short arg1, short arg2, short arg3)
+int lsb_init_color (short arg0 , short arg1 , short arg2 , short arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "init_color");

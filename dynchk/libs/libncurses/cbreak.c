@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef cbreak
+static int(*funcptr) () = 0;
 
-int cbreak()
+int cbreak ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbreak");
 	return funcptr();
 }
 
-int lsb_cbreak()
+int lsb_cbreak ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cbreak");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static WINDOW *(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef dupwin
+static WINDOW *(*funcptr) (WINDOW * ) = 0;
 
-WINDOW * dupwin(WINDOW * arg0)
+WINDOW * dupwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dupwin");
@@ -12,7 +14,7 @@ WINDOW * dupwin(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-WINDOW * lsb_dupwin(WINDOW * arg0)
+WINDOW * lsb_dupwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dupwin");

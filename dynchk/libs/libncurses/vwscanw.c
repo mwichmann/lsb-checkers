@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #include <stdarg.h>
-static int(*funcptr)(WINDOW *, char *, va_list) = 0;
+#undef vwscanw
+static int(*funcptr) (WINDOW * , const char * , va_list ) = 0;
 
-int vwscanw(WINDOW * arg0, char * arg1, va_list arg2)
+int vwscanw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwscanw");
@@ -15,7 +17,7 @@ int vwscanw(WINDOW * arg0, char * arg1, va_list arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vwscanw(WINDOW * arg0, char * arg1, va_list arg2)
+int lsb_vwscanw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwscanw");

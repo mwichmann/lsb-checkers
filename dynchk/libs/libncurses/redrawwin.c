@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef redrawwin
+static int(*funcptr) (WINDOW * ) = 0;
 
-int redrawwin(WINDOW * arg0)
+int redrawwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "redrawwin");
@@ -12,7 +14,7 @@ int redrawwin(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_redrawwin(WINDOW * arg0)
+int lsb_redrawwin (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "redrawwin");

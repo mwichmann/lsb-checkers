@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef flushinp
+static int(*funcptr) () = 0;
 
-int flushinp()
+int flushinp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flushinp");
 	return funcptr();
 }
 
-int lsb_flushinp()
+int lsb_flushinp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flushinp");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static chtype(*funcptr)() = 0;
+#undef termattrs
+static chtype(*funcptr) () = 0;
 
-chtype termattrs()
+chtype termattrs ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "termattrs");
 	return funcptr();
 }
 
-chtype lsb_termattrs()
+chtype lsb_termattrs ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "termattrs");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int) = 0;
+#include <curses.h>
+#undef winsdelln
+static int(*funcptr) (WINDOW * , int ) = 0;
 
-int winsdelln(WINDOW * arg0, int arg1)
+int winsdelln (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsdelln");
@@ -13,7 +15,7 @@ int winsdelln(WINDOW * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_winsdelln(WINDOW * arg0, int arg1)
+int lsb_winsdelln (WINDOW * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsdelln");

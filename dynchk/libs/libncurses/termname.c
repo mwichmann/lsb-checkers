@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)() = 0;
+#undef termname
+static char *(*funcptr) () = 0;
 
-char * termname()
+char * termname ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "termname");
 	return funcptr();
 }
 
-char * lsb_termname()
+char * lsb_termname ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "termname");

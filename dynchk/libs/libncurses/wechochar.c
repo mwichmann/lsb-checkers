@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, const chtype) = 0;
+#include <curses.h>
+#undef wechochar
+static int(*funcptr) (WINDOW * , const chtype ) = 0;
 
-int wechochar(WINDOW * arg0, const chtype arg1)
+int wechochar (WINDOW * arg0 , const chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wechochar");
@@ -13,7 +15,7 @@ int wechochar(WINDOW * arg0, const chtype arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wechochar(WINDOW * arg0, const chtype arg1)
+int lsb_wechochar (WINDOW * arg0 , const chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wechochar");

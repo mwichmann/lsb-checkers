@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef attroff
+static int(*funcptr) (int ) = 0;
 
-int attroff(int arg0)
+int attroff (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attroff");
@@ -12,7 +13,7 @@ int attroff(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_attroff(int arg0)
+int lsb_attroff (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attroff");

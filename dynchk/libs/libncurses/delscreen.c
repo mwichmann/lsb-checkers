@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(SCREEN *) = 0;
+#include <curses.h>
+#undef delscreen
+static void(*funcptr) (SCREEN * ) = 0;
 
-void delscreen(SCREEN * arg0)
+void delscreen (SCREEN * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delscreen");
@@ -12,7 +14,7 @@ void delscreen(SCREEN * arg0)
 	funcptr(arg0);
 }
 
-void lsb_delscreen(SCREEN * arg0)
+void lsb_delscreen (SCREEN * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delscreen");

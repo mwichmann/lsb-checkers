@@ -3,16 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-static int(*funcptr)(chtype, chtype, chtype, chtype, chtype, chtype, chtype, chtype) = 0;
+#undef border
+static int(*funcptr) (chtype , chtype , chtype , chtype , chtype , chtype , chtype , chtype ) = 0;
 
-int border(chtype arg0, chtype arg1, chtype arg2, chtype arg3, chtype arg4, chtype arg5, chtype arg6, chtype arg7)
+int border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "border");
@@ -27,7 +21,7 @@ int border(chtype arg0, chtype arg1, chtype arg2, chtype arg3, chtype arg4, chty
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
-int lsb_border(chtype arg0, chtype arg1, chtype arg2, chtype arg3, chtype arg4, chtype arg5, chtype arg6, chtype arg7)
+int lsb_border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "border");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(short, void *) = 0;
+#undef color_set
+static int(*funcptr) (short , void * ) = 0;
 
-int color_set(short arg0, void * arg1)
+int color_set (short arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "color_set");
@@ -13,7 +14,7 @@ int color_set(short arg0, void * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_color_set(short arg0, void * arg1)
+int lsb_color_set (short arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "color_set");

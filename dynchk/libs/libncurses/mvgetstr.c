@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, char *) = 0;
+#undef mvgetstr
+static int(*funcptr) (int , int , char * ) = 0;
 
-int mvgetstr(int arg0, int arg1, char * arg2)
+int mvgetstr (int arg0 , int arg1 , char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetstr");
@@ -14,7 +15,7 @@ int mvgetstr(int arg0, int arg1, char * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mvgetstr(int arg0, int arg1, char * arg2)
+int lsb_mvgetstr (int arg0 , int arg1 , char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetstr");

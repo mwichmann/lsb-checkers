@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int) = 0;
+#undef mvgetch
+static int(*funcptr) (int , int ) = 0;
 
-int mvgetch(int arg0, int arg1)
+int mvgetch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetch");
@@ -13,7 +14,7 @@ int mvgetch(int arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_mvgetch(int arg0, int arg1)
+int lsb_mvgetch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetch");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static WINDOW *(*funcptr)(int, int) = 0;
+#undef newpad
+static WINDOW *(*funcptr) (int , int ) = 0;
 
-WINDOW * newpad(int arg0, int arg1)
+WINDOW * newpad (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newpad");
@@ -13,7 +14,7 @@ WINDOW * newpad(int arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-WINDOW * lsb_newpad(int arg0, int arg1)
+WINDOW * lsb_newpad (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newpad");

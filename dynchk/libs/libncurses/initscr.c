@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static WINDOW *(*funcptr)() = 0;
+#undef initscr
+static WINDOW *(*funcptr) () = 0;
 
-WINDOW * initscr()
+WINDOW * initscr ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initscr");
 	return funcptr();
 }
 
-WINDOW * lsb_initscr()
+WINDOW * lsb_initscr ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initscr");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(WINDOW *, int, int, chtype) = 0;
+#undef mvwinsch
+static int(*funcptr) (WINDOW * , int , int , chtype ) = 0;
 
-int mvwinsch(WINDOW * arg0, int arg1, int arg2, chtype arg3)
+int mvwinsch (WINDOW * arg0 , int arg1 , int arg2 , chtype arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinsch");
@@ -16,7 +17,7 @@ int mvwinsch(WINDOW * arg0, int arg1, int arg2, chtype arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_mvwinsch(WINDOW * arg0, int arg1, int arg2, chtype arg3)
+int lsb_mvwinsch (WINDOW * arg0 , int arg1 , int arg2 , chtype arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinsch");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(WINDOW *, int, int, int, attr_t, short, const void *) = 0;
+#undef mvwchgat
+static int(*funcptr) (WINDOW * , int , int , int , attr_t , short , const void * ) = 0;
 
-int mvwchgat(WINDOW * arg0, int arg1, int arg2, int arg3, attr_t arg4, short arg5, const void * arg6)
+int mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , short arg5 , const void * arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwchgat");
@@ -19,7 +20,7 @@ int mvwchgat(WINDOW * arg0, int arg1, int arg2, int arg3, attr_t arg4, short arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_mvwchgat(WINDOW * arg0, int arg1, int arg2, int arg3, attr_t arg4, short arg5, const void * arg6)
+int lsb_mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , short arg5 , const void * arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwchgat");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static chtype(*funcptr)(int, int) = 0;
+#undef mvinch
+static chtype(*funcptr) (int , int ) = 0;
 
-chtype mvinch(int arg0, int arg1)
+chtype mvinch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinch");
@@ -13,7 +14,7 @@ chtype mvinch(int arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-chtype lsb_mvinch(int arg0, int arg1)
+chtype lsb_mvinch (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinch");

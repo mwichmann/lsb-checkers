@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(int, int, chtype, int) = 0;
+#undef mvvline
+static int(*funcptr) (int , int , chtype , int ) = 0;
 
-int mvvline(int arg0, int arg1, chtype arg2, int arg3)
+int mvvline (int arg0 , int arg1 , chtype arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvvline");
@@ -16,7 +17,7 @@ int mvvline(int arg0, int arg1, chtype arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_mvvline(int arg0, int arg1, chtype arg2, int arg3)
+int lsb_mvvline (int arg0 , int arg1 , chtype arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvvline");

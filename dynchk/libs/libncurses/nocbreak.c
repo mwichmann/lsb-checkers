@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef nocbreak
+static int(*funcptr) () = 0;
 
-int nocbreak()
+int nocbreak ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nocbreak");
 	return funcptr();
 }
 
-int lsb_nocbreak()
+int lsb_nocbreak ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nocbreak");

@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #include <stdio.h>
-static int(*funcptr)(WINDOW *, FILE *) = 0;
+#undef putwin
+static int(*funcptr) (WINDOW * , FILE * ) = 0;
 
-int putwin(WINDOW * arg0, FILE * arg1)
+int putwin (WINDOW * arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwin");
@@ -14,7 +16,7 @@ int putwin(WINDOW * arg0, FILE * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_putwin(WINDOW * arg0, FILE * arg1)
+int lsb_putwin (WINDOW * arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwin");

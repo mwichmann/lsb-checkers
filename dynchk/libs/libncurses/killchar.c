@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char(*funcptr)() = 0;
+#undef killchar
+static char(*funcptr) () = 0;
 
-char killchar()
+char killchar ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "killchar");
 	return funcptr();
 }
 
-char lsb_killchar()
+char lsb_killchar ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "killchar");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef slk_init
+static int(*funcptr) (int ) = 0;
 
-int slk_init(int arg0)
+int slk_init (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_init");
@@ -12,7 +13,7 @@ int slk_init(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_slk_init(int arg0)
+int lsb_slk_init (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_init");

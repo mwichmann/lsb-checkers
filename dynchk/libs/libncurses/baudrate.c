@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef baudrate
+static int(*funcptr) () = 0;
 
-int baudrate()
+int baudrate ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "baudrate");
 	return funcptr();
 }
 
-int lsb_baudrate()
+int lsb_baudrate ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "baudrate");

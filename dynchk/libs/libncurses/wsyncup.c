@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef wsyncup
+static void(*funcptr) (WINDOW * ) = 0;
 
-void wsyncup(WINDOW * arg0)
+void wsyncup (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsyncup");
@@ -12,7 +14,7 @@ void wsyncup(WINDOW * arg0)
 	funcptr(arg0);
 }
 
-void lsb_wsyncup(WINDOW * arg0)
+void lsb_wsyncup (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsyncup");

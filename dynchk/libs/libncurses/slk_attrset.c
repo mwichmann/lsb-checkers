@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const chtype) = 0;
+#include <curses.h>
+#undef slk_attrset
+static int(*funcptr) (const chtype ) = 0;
 
-int slk_attrset(const chtype arg0)
+int slk_attrset (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_attrset");
@@ -12,7 +14,7 @@ int slk_attrset(const chtype arg0)
 	return funcptr(arg0);
 }
 
-int lsb_slk_attrset(const chtype arg0)
+int lsb_slk_attrset (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_attrset");

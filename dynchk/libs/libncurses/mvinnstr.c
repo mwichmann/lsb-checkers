@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, char *, int) = 0;
+#undef mvinnstr
+static int(*funcptr) (int , int , char * , int ) = 0;
 
-int mvinnstr(int arg0, int arg1, char * arg2, int arg3)
+int mvinnstr (int arg0 , int arg1 , char * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinnstr");
@@ -15,7 +16,7 @@ int mvinnstr(int arg0, int arg1, char * arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_mvinnstr(int arg0, int arg1, char * arg2, int arg3)
+int lsb_mvinnstr (int arg0 , int arg1 , char * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinnstr");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef scroll
+static int(*funcptr) (WINDOW * ) = 0;
 
-int scroll(WINDOW * arg0)
+int scroll (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scroll");
@@ -12,7 +14,7 @@ int scroll(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_scroll(WINDOW * arg0)
+int lsb_scroll (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scroll");

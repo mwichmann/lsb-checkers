@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(WINDOW *, attr_t, void *) = 0;
+#undef wattr_off
+static int(*funcptr) (WINDOW * , attr_t , void * ) = 0;
 
-int wattr_off(WINDOW * arg0, attr_t arg1, void * arg2)
+int wattr_off (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattr_off");
@@ -15,7 +16,7 @@ int wattr_off(WINDOW * arg0, attr_t arg1, void * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_wattr_off(WINDOW * arg0, attr_t arg1, void * arg2)
+int lsb_wattr_off (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattr_off");

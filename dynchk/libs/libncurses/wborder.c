@@ -3,16 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-#include <curses.h>
-static int(*funcptr)(WINDOW *, chtype, chtype, chtype, chtype, chtype, chtype, chtype, chtype) = 0;
+#undef wborder
+static int(*funcptr) (WINDOW * , chtype , chtype , chtype , chtype , chtype , chtype , chtype , chtype ) = 0;
 
-int wborder(WINDOW * arg0, chtype arg1, chtype arg2, chtype arg3, chtype arg4, chtype arg5, chtype arg6, chtype arg7, chtype arg8)
+int wborder (WINDOW * arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 , chtype arg8 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wborder");
@@ -28,7 +22,7 @@ int wborder(WINDOW * arg0, chtype arg1, chtype arg2, chtype arg3, chtype arg4, c
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-int lsb_wborder(WINDOW * arg0, chtype arg1, chtype arg2, chtype arg3, chtype arg4, chtype arg5, chtype arg6, chtype arg7, chtype arg8)
+int lsb_wborder (WINDOW * arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 , chtype arg5 , chtype arg6 , chtype arg7 , chtype arg8 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wborder");

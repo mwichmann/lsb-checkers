@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(int) = 0;
+#undef timeout
+static void(*funcptr) (int ) = 0;
 
-void timeout(int arg0)
+void timeout (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "timeout");
@@ -12,7 +13,7 @@ void timeout(int arg0)
 	funcptr(arg0);
 }
 
-void lsb_timeout(int arg0)
+void lsb_timeout (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "timeout");

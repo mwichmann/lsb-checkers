@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(attr_t *, short *, void *) = 0;
+#include <curses.h>
+#undef attr_get
+static int(*funcptr) (attr_t * , short * , void * ) = 0;
 
-int attr_get(attr_t * arg0, short * arg1, void * arg2)
+int attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_get");
@@ -14,7 +16,7 @@ int attr_get(attr_t * arg0, short * arg1, void * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_attr_get(attr_t * arg0, short * arg1, void * arg2)
+int lsb_attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_get");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *) = 0;
+#undef scr_init
+static int(*funcptr) (const char * ) = 0;
 
-int scr_init(const char * arg0)
+int scr_init (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_init");
@@ -12,7 +13,7 @@ int scr_init(const char * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_scr_init(const char * arg0)
+int lsb_scr_init (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_init");

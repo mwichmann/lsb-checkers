@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef halfdelay
+static int(*funcptr) (int ) = 0;
 
-int halfdelay(int arg0)
+int halfdelay (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "halfdelay");
@@ -12,7 +13,7 @@ int halfdelay(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_halfdelay(int arg0)
+int lsb_halfdelay (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "halfdelay");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static bool(*funcptr)(WINDOW *) = 0;
+#include <curses.h>
+#undef is_wintouched
+static bool(*funcptr) (WINDOW * ) = 0;
 
-bool is_wintouched(WINDOW * arg0)
+bool is_wintouched (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "is_wintouched");
@@ -12,7 +14,7 @@ bool is_wintouched(WINDOW * arg0)
 	return funcptr(arg0);
 }
 
-bool lsb_is_wintouched(WINDOW * arg0)
+bool lsb_is_wintouched (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "is_wintouched");

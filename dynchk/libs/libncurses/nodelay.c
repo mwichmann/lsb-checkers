@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(WINDOW *, bool) = 0;
+#undef nodelay
+static int(*funcptr) (WINDOW * , bool ) = 0;
 
-int nodelay(WINDOW * arg0, bool arg1)
+int nodelay (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nodelay");
@@ -14,7 +15,7 @@ int nodelay(WINDOW * arg0, bool arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_nodelay(WINDOW * arg0, bool arg1)
+int lsb_nodelay (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nodelay");

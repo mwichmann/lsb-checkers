@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <curses.h>
 #include <term.h>
-static int(*funcptr)(const WINDOW *, WINDOW *, int, int, int, int, int, int, int) = 0;
+#undef copywin
+static int(*funcptr) (const WINDOW * , WINDOW * , int , int , int , int , int , int , int ) = 0;
 
-int copywin(const WINDOW * arg0, WINDOW * arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8)
+int copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 , int arg7 , int arg8 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copywin");
@@ -21,7 +23,7 @@ int copywin(const WINDOW * arg0, WINDOW * arg1, int arg2, int arg3, int arg4, in
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 }
 
-int lsb_copywin(const WINDOW * arg0, WINDOW * arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8)
+int lsb_copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 , int arg7 , int arg8 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copywin");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(attr_t, short, void *) = 0;
+#undef attr_set
+static int(*funcptr) (attr_t , short , void * ) = 0;
 
-int attr_set(attr_t arg0, short arg1, void * arg2)
+int attr_set (attr_t arg0 , short arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_set");
@@ -15,7 +16,7 @@ int attr_set(attr_t arg0, short arg1, void * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_attr_set(attr_t arg0, short arg1, void * arg2)
+int lsb_attr_set (attr_t arg0 , short arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_set");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const chtype) = 0;
+#include <curses.h>
+#undef addchstr
+static int(*funcptr) (const chtype * ) = 0;
 
-int addchstr(const chtype arg0)
+int addchstr (const chtype *arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addchstr");
@@ -12,7 +14,7 @@ int addchstr(const chtype arg0)
 	return funcptr(arg0);
 }
 
-int lsb_addchstr(const chtype arg0)
+int lsb_addchstr (const chtype *arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addchstr");

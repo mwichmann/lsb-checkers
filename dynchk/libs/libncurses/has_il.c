@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static bool(*funcptr)() = 0;
+#undef has_il
+static bool(*funcptr) () = 0;
 
-bool has_il()
+bool has_il ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "has_il");
 	return funcptr();
 }
 
-bool lsb_has_il()
+bool lsb_has_il ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "has_il");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef filter
+static void(*funcptr) () = 0;
 
-void filter()
+void filter ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "filter");
 	funcptr();
 }
 
-void lsb_filter()
+void lsb_filter ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "filter");

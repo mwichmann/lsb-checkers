@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef standout
+static int(*funcptr) () = 0;
 
-int standout()
+int standout ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "standout");
 	return funcptr();
 }
 
-int lsb_standout()
+int lsb_standout ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "standout");

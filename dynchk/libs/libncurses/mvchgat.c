@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(int, int, int, attr_t, short, const void *) = 0;
+#undef mvchgat
+static int(*funcptr) (int , int , int , attr_t , short , const void * ) = 0;
 
-int mvchgat(int arg0, int arg1, int arg2, attr_t arg3, short arg4, const void * arg5)
+int mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const void * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvchgat");
@@ -18,7 +19,7 @@ int mvchgat(int arg0, int arg1, int arg2, attr_t arg3, short arg4, const void * 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_mvchgat(int arg0, int arg1, int arg2, attr_t arg3, short arg4, const void * arg5)
+int lsb_mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const void * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvchgat");

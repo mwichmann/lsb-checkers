@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, int, int *) = 0;
+#undef restartterm
+static int(*funcptr) (const char * , int , int * ) = 0;
 
-int restartterm(char * arg0, int arg1, int * arg2)
+int restartterm (const char * arg0 , int arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "restartterm");
@@ -14,7 +15,7 @@ int restartterm(char * arg0, int arg1, int * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_restartterm(char * arg0, int arg1, int * arg2)
+int lsb_restartterm (const char * arg0 , int arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "restartterm");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int, int, int, int, int, int) = 0;
+#include <curses.h>
+#undef pnoutrefresh
+static int(*funcptr) (WINDOW * , int , int , int , int , int , int ) = 0;
 
-int pnoutrefresh(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6)
+int pnoutrefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pnoutrefresh");
@@ -18,7 +20,7 @@ int pnoutrefresh(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4, int arg5
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_pnoutrefresh(WINDOW * arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6)
+int lsb_pnoutrefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , int arg5 , int arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pnoutrefresh");

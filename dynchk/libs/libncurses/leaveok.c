@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <curses.h>
-static int(*funcptr)(WINDOW *, bool) = 0;
+#undef leaveok
+static int(*funcptr) (WINDOW * , bool ) = 0;
 
-int leaveok(WINDOW * arg0, bool arg1)
+int leaveok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "leaveok");
@@ -14,7 +15,7 @@ int leaveok(WINDOW * arg0, bool arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_leaveok(WINDOW * arg0, bool arg1)
+int lsb_leaveok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "leaveok");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static chtype(*funcptr)() = 0;
+#undef inch
+static chtype(*funcptr) () = 0;
 
-chtype inch()
+chtype inch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inch");
 	return funcptr();
 }
 
-chtype lsb_inch()
+chtype lsb_inch ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inch");

@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(WINDOW *, int, int) = 0;
+#include <curses.h>
+#undef wsetscrreg
+static int(*funcptr) (WINDOW * , int , int ) = 0;
 
-int wsetscrreg(WINDOW * arg0, int arg1, int arg2)
+int wsetscrreg (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsetscrreg");
@@ -14,7 +16,7 @@ int wsetscrreg(WINDOW * arg0, int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_wsetscrreg(WINDOW * arg0, int arg1, int arg2)
+int lsb_wsetscrreg (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wsetscrreg");

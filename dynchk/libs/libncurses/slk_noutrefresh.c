@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef slk_noutrefresh
+static int(*funcptr) () = 0;
 
-int slk_noutrefresh()
+int slk_noutrefresh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_noutrefresh");
 	return funcptr();
 }
 
-int lsb_slk_noutrefresh()
+int lsb_slk_noutrefresh ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_noutrefresh");

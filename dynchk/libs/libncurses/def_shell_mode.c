@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef def_shell_mode
+static int(*funcptr) () = 0;
 
-int def_shell_mode()
+int def_shell_mode ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "def_shell_mode");
 	return funcptr();
 }
 
-int lsb_def_shell_mode()
+int lsb_def_shell_mode ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "def_shell_mode");
