@@ -8,6 +8,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
 $select = "SELECT DISTINCT * FROM DynamicEntries ";
+$select.= "WHERE DEstatus='Included' ";
 $select.= "ORDER BY DEname ";
 
 #print $select;

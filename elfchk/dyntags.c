@@ -3,6 +3,7 @@
 #include "dynamic.h"
 
 struct DynamicInfo DynamicInfo[] = {
+	{"DT_ADDRRNGHI",DT_ADDRRNGHI,checkDT_ADDRRNGHI},
 	{"DT_ADDRRNGLO",DT_ADDRRNGLO,checkDT_ADDRRNGLO},
 	{"DT_AUXILIARY",DT_AUXILIARY,checkDT_AUXILIARY},
 	{"DT_BIND_NOW",DT_BIND_NOW,checkDT_BIND_NOW},
@@ -11,7 +12,6 @@ struct DynamicInfo DynamicInfo[] = {
 	{"DT_FINI",DT_FINI,checkDT_FINI},
 	{"DT_FINI_ARRAY",DT_FINI_ARRAY,checkDT_FINI_ARRAY},
 	{"DT_FINI_ARRAYSZ",DT_FINI_ARRAYSZ,checkDT_FINI_ARRAYSZ},
-	{"DT_FLAGS_1",DT_FLAGS_1,checkDT_FLAGS_1},
 	{"DT_HASH",DT_HASH,checkDT_HASH},
 	{"DT_HIOS",DT_HIOS,checkDT_HIOS},
 	{"DT_HIPROC",DT_HIPROC,checkDT_HIPROC},
@@ -27,7 +27,6 @@ struct DynamicInfo DynamicInfo[] = {
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 	{"DT_PLTREL",DT_PLTREL,checkDT_PLTREL},
 	{"DT_PLTRELSZ",DT_PLTRELSZ,checkDT_PLTRELSZ},
-	{"DT_POSFLAG_1",DT_POSFLAG_1,checkDT_POSFLAG_1},
 	{"DT_REL",DT_REL,checkDT_REL},
 	{"DT_RELA",DT_RELA,checkDT_RELA},
 	{"DT_RELAENT",DT_RELAENT,checkDT_RELAENT},
