@@ -489,6 +489,10 @@ CheckTypeSize(ssize_t,8, 10472, 9)
 CheckTypeSize(ssize_t,8, 10785, 11)
 #endif
 
+#if __s390x__
+CheckTypeSize(ssize_t,8, 10866, 12)
+#endif
+
 #if __i386__
 CheckTypeSize(ino_t,4, 8985, 2)
 #elif __ia64__

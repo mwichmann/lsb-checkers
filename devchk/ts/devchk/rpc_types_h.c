@@ -71,6 +71,8 @@ CheckTypeSize(rpcprog_t,8, 9992, 3)
 CheckTypeSize(rpcprog_t,0, 9992, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(rpcprog_t,0, 9992, 10)
+#elif __s390x__
+CheckTypeSize(rpcprog_t,0, 9992, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9992,0);
 Msg("Find size of rpcprog_t (9992)\n");
@@ -105,6 +107,8 @@ CheckTypeSize(rpcproc_t,8, 9994, 3)
 CheckTypeSize(rpcproc_t,0, 9994, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(rpcproc_t,0, 9994, 10)
+#elif __s390x__
+CheckTypeSize(rpcproc_t,0, 9994, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9994,0);
 Msg("Find size of rpcproc_t (9994)\n");
@@ -120,6 +124,8 @@ CheckTypeSize(rpcprot_t,8, 9998, 3)
 CheckTypeSize(rpcprot_t,0, 9998, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(rpcprot_t,0, 9998, 10)
+#elif __s390x__
+CheckTypeSize(rpcprot_t,0, 9998, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9998,0);
 Msg("Find size of rpcprot_t (9998)\n");

@@ -56,6 +56,10 @@ CheckTypeSize(__jmp_buf,320, 10504, 9)
 CheckTypeSize(__jmp_buf,64, 10772, 11)
 #endif
 
+#if __s390x__
+CheckTypeSize(__jmp_buf,72, 10864, 12)
+#endif
+
 #if __ia64__
 CheckTypeSize(jmp_buf,704, 6962, 3)
 #elif __i386__

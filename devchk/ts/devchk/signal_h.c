@@ -832,7 +832,7 @@ CheckOffset(struct pt_regs,result,344,9,40601)
 #endif
 
 #if __s390x__
-CheckTypeSize(_s390_regs_common,4, 10838, 12)
+CheckTypeSize(_s390_regs_common,208, 10838, 12)
 #endif
 
 #if __i386__
@@ -845,6 +845,8 @@ CheckTypeSize(sighandler_t,8, 9374, 3)
 CheckTypeSize(sighandler_t,0, 9374, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(sighandler_t,0, 9374, 10)
+#elif __s390x__
+CheckTypeSize(sighandler_t,0, 9374, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9374,0);
 Msg("Find size of sighandler_t (9374)\n");
@@ -1124,11 +1126,11 @@ CheckTypeSize(_sigregs,272, 10834, 10)
 #endif
 
 #if __s390x__
-CheckTypeSize(_s390_fp_regs,4, 10840, 12)
+CheckTypeSize(_s390_fp_regs,136, 10840, 12)
 #endif
 
 #if __s390x__
-CheckTypeSize(_sigregs,4, 10842, 12)
+CheckTypeSize(_sigregs,344, 10842, 12)
 #endif
 
 #if __i386__
@@ -1340,11 +1342,11 @@ CheckOffset(struct sigcontext,sregs,8,10,40609)
 #endif
 
 #if __s390x__
-CheckTypeSize(struct sigcontext,100, 10818, 12)
-CheckMemberSize(struct sigcontext,oldmask,4,12,40617)
+CheckTypeSize(struct sigcontext,16, 10818, 12)
+CheckMemberSize(struct sigcontext,oldmask,8,12,40617)
 CheckOffset(struct sigcontext,oldmask,0,12,40617)
-CheckMemberSize(struct sigcontext,sregs,4,12,40618)
-CheckOffset(struct sigcontext,sregs,0,12,40618)
+CheckMemberSize(struct sigcontext,sregs,8,12,40618)
+CheckOffset(struct sigcontext,sregs,8,12,40618)
 #endif
 
 #if __powerpc64__

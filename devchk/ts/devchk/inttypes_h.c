@@ -211,6 +211,18 @@ CheckTypeSize(uintptr_t,8, 10769, 11)
 CheckTypeSize(uintmax_t,8, 10770, 11)
 #endif
 
+#if __s390x__
+CheckTypeSize(intmax_t,8, 10860, 12)
+#endif
+
+#if __s390x__
+CheckTypeSize(uintmax_t,8, 10861, 12)
+#endif
+
+#if __s390x__
+CheckTypeSize(uintptr_t,8, 10862, 12)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
