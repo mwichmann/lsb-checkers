@@ -715,6 +715,72 @@ cnt++;
 /* No test for si_timer2 */
 #endif
 
+#if __s390x__
+#ifdef __NUM_GPRS
+	CompareConstant(__NUM_GPRS,16,5141,architecture)
+#else
+Msg( "Error: Constant not found: __NUM_GPRS\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef __NUM_GPRS
+	CompareConstant(__NUM_GPRS,16,5141,architecture)
+#else
+Msg( "Error: Constant not found: __NUM_GPRS\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __NUM_GPRS (5141, int) in db\n");
+#ifdef __NUM_GPRS
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5141,%d);\n", architecture, __NUM_GPRS);
+#endif
+#endif
+#if __s390x__
+#ifdef __NUM_FPRS
+	CompareConstant(__NUM_FPRS,16,5142,architecture)
+#else
+Msg( "Error: Constant not found: __NUM_FPRS\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef __NUM_FPRS
+	CompareConstant(__NUM_FPRS,16,5142,architecture)
+#else
+Msg( "Error: Constant not found: __NUM_FPRS\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __NUM_FPRS (5142, int) in db\n");
+#ifdef __NUM_FPRS
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5142,%d);\n", architecture, __NUM_FPRS);
+#endif
+#endif
+#if __s390x__
+#ifdef __NUM_ACRS
+	CompareConstant(__NUM_ACRS,16,5143,architecture)
+#else
+Msg( "Error: Constant not found: __NUM_ACRS\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef __NUM_ACRS
+	CompareConstant(__NUM_ACRS,16,5143,architecture)
+#else
+Msg( "Error: Constant not found: __NUM_ACRS\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __NUM_ACRS (5143, int) in db\n");
+#ifdef __NUM_ACRS
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5143,%d);\n", architecture, __NUM_ACRS);
+#endif
+#endif
 #if __i386__
 CheckTypeSize(sig_atomic_t,4, 9092, 2)
 #elif __ia64__

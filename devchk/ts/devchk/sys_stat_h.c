@@ -719,6 +719,8 @@ CheckMemberSize(struct stat,st_blksize,8,12,40243)
 CheckOffset(struct stat,st_blksize,104,12,40243)
 CheckMemberSize(struct stat,st_blocks,8,12,40244)
 CheckOffset(struct stat,st_blocks,112,12,40244)
+CheckMemberSize(struct stat,__unused,24,12,40743)
+CheckOffset(struct stat,__unused,120,12,40743)
 #endif
 
 #if __s390x__
@@ -751,6 +753,8 @@ CheckMemberSize(struct stat64,st_blksize,8,12,40260)
 CheckOffset(struct stat64,st_blksize,104,12,40260)
 CheckMemberSize(struct stat64,st_blocks,8,12,40261)
 CheckOffset(struct stat64,st_blocks,112,12,40261)
+CheckMemberSize(struct stat64,__unused,24,12,40744)
+CheckOffset(struct stat64,__unused,120,12,40744)
 #endif
 
 #if __s390__ && !__s390x__
