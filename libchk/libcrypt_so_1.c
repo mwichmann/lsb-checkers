@@ -4,7 +4,7 @@ struct versym libcrypt_so_1[] = {
 	{"crypt","GLIBC_2.0"},
 #endif
 #if __ia64__
-	{"crypt","GLIBC_2.0"},
+	{"crypt","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"crypt","GLIBC_2.0"},
@@ -25,7 +25,7 @@ struct versym libcrypt_so_1[] = {
 	{"encrypt","GLIBC_2.0"},
 #endif
 #if __ia64__
-	{"encrypt","GLIBC_2.0"},
+	{"encrypt","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"encrypt","GLIBC_2.0"},
