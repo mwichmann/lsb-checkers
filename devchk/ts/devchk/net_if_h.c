@@ -205,6 +205,18 @@ Msg("Find size of ifaddr (10286)\n");
 #endif
 
 #if __i386__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10287,0);
+Msg("Find size of anon-ifa_ifu (10287)\n");
+#endif
+
+#if __i386__
 CheckTypeSize(struct ifreq,32, 10290, 2)
 CheckMemberSize(struct ifreq,ifr_ifru,16,2,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,2,34483)
@@ -235,6 +247,30 @@ CheckOffset(struct ifreq,ifr_ifru,16,11,34483)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10290,0);
 Msg("Find size of ifreq (10290)\n");
+#endif
+
+#if __i386__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10291,0);
+Msg("Find size of anon-ifr_ifrn (10291)\n");
+#endif
+
+#if __i386__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10292,0);
+Msg("Find size of anon-ifr_ifru (10292)\n");
 #endif
 
 #if __i386__
@@ -270,6 +306,18 @@ CheckOffset(struct ifconf,ifc_ifcu,8,9,34469)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10288,0);
 Msg("Find size of ifconf (10288)\n");
+#endif
+
+#if __i386__
+#elif __s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __x86_64__
+#elif __powerpc64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10289,0);
+Msg("Find size of anon-ifc_ifcu (10289)\n");
 #endif
 
 #ifdef TET_TEST

@@ -83,6 +83,66 @@ Msg("Find size of accepted_reply (10417)\n");
 #endif
 
 #if __i386__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10418,0);
+Msg("Find size of anon-accepted_reply-ru (10418)\n");
+#endif
+
+#if __i386__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10419,0);
+Msg("Find size of anon-accepted_reply-ar_vers (10419)\n");
+#endif
+
+#if __i386__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10420,0);
+Msg("Find size of anon-accepted_reply-ar_results (10420)\n");
+#endif
+
+#if __i386__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10421,0);
+Msg("Find size of anon-rejected_reply-rj_vers (10421)\n");
+#endif
+
+#if __i386__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10422,0);
+Msg("Find size of anon-rejected_reply-ru (10422)\n");
+#endif
+
+#if __i386__
 CheckTypeSize(struct rejected_reply,12, 10423, 2)
 CheckMemberSize(struct rejected_reply,rj_stat,4,2,34812)
 CheckOffset(struct rejected_reply,rj_stat,0,2,34812)
@@ -117,6 +177,18 @@ CheckOffset(struct rejected_reply,ru,8,11,34813)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
+#endif
+
+#if __i386__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10424,0);
+Msg("Find size of anon-reply_bodu-ru (10424)\n");
 #endif
 
 #if __i386__
@@ -296,6 +368,25 @@ CheckOffset(struct rpc_msg,ru,16,9,34828)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");
+#endif
+
+#if __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __i386__
+#elif __ia64__
+#endif
+
+#if __i386__
+#elif __ia64__
+#elif __s390__ && !__s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10427,0);
+Msg("Find size of anon-rpc_msg-ru (10427)\n");
 #endif
 
 #ifdef TET_TEST
