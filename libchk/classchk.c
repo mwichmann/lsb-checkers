@@ -99,8 +99,6 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 		/*
 		 * 1) First, check the Vtable info
 		 */
-		tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-											 "Checking Vtable info");
 		if (*classp->vtablename)
 		{
 			vtablep=dlsym(dlhndl,classp->vtablename);
@@ -108,6 +106,8 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 			{
 			vtablesize=0;
 			for(v=0;v<classp->numvirttab;v++) {
+				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+											 "Checking Vtable info");
 				switch( classp->vtable[v].category ) {
 				case 1:
 					vtvcalloffset = 0;
@@ -130,12 +130,12 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 					break;
 				}
+				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 				/*
 				 * Move vtablep to the next record in the vtable
 				 */
 				vtablesize += vtableinc;
 				((char *)vtablep) += vtableinc;
-				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 
 				/*
 				 * 1.1) Check the baseoffset
@@ -273,9 +273,12 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 						TETJ_REPORT_INFO("Virtual Function[%d][%d] %s (expected) "
 														 "doesn't match %s (found)\n", v,
 														 j, classp->vtable[v].virtfuncs[j], dlinfo.dli_sname);
+						test_failed = 1;
 					}
 				}
-
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, 
+										test_failed ? TETJ_FAIL : TETJ_PASS);
+				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 			}
 				/*
 				 * 1.5) Check the vtable size
@@ -297,12 +300,11 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 				}
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
-				tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-										test_failed ? TETJ_FAIL : TETJ_PASS);
-				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 			
 			} /* (vtablep) */
 			else {
+				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+											 "Checking Vtable info");
 				TETJ_REPORT_INFO("No vtable found in library for %s\n", classp->name);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
