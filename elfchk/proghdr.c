@@ -1,52 +1,98 @@
 #include <stdio.h>
 #include "proghdr.h"
 
+#define VERBOSE
+
+typedef int (*ProgHeadFcn)(ElfFile *, Elf32_Phdr *, struct tetj_handle *);
+
 typedef struct	{
 	int		type;
 	char		*name;
+	ProgHeadFcn	func;
 	} PhTypeFuncRec;
 
 PhTypeFuncRec	Headers[] = {
-	{PT_NULL,	"PT_NULL"},
-	{PT_LOAD,	"PT_LOAD"},
-	{PT_DYNAMIC,	"PT_DYNAMIC"},
-	{PT_INTERP,	"PT_INTERP"},
-	{PT_NOTE,	"PT_NOTE"},
-	{PT_SHLIB,	"PT_SHLIB"},
-	{PT_PHDR,	"PT_PHDR"},
-	{PT_NUM,		"PT_NUM"},
+	{PT_NULL,	"PT_NULL",	checkPT_NULL},
+	{PT_LOAD,	"PT_LOAD",	checkPT_LOAD},
+	{PT_DYNAMIC,	"PT_DYNAMIC",	checkPT_DYNAMIC},
+	{PT_INTERP,	"PT_INTERP",	checkPT_INTERP},
+	{PT_NOTE,	"PT_NOTE",	checkPT_NOTE},
+	{PT_SHLIB,	"PT_SHLIB",	checkPT_SHLIB},
+	{PT_PHDR,	"PT_PHDR",	checkPT_PHDR},
+	{PT_NUM,	"PT_NUM",	checkPT_NUM},
 	};
 
-void
-checkElfproghdr(int index, ElfFile *file1)
+extern char *ProgInterp;
+
+int
+checkPT_NULL(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
 {
-Elf32_Phdr *hdr1;
+return 1;
+}
 
-hdr1=&(file1->paddr[index]);
+int
+checkPT_LOAD(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+{
+return 1;
+}
 
-if( !hdr1 )
+int
+checkPT_DYNAMIC(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+{
+return 1;
+}
+
+int
+checkPT_INTERP(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+{
+if( !strcmp(file->addr+hdr->p_offset, ProgInterp ) )
+	return 1;
+fprintf(stderr,"Incorrect program interpreter: %s\n", file->addr+hdr->p_offset);
+return 0;
+}
+
+int
+checkPT_NOTE(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+{
+return 1;
+}
+
+int
+checkPT_SHLIB(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+{
+return 1;
+}
+
+int
+checkPT_PHDR(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+{
+return 1;
+}
+
+int
+checkPT_NUM(ElfFile *file, Elf32_Phdr *hdr, struct tetj_handle *journal)
+{
+return 1;
+}
+
+void
+checkElfproghdr(int index, ElfFile *file, struct tetj_handle *journal)
+{
+Elf32_Phdr *hdr;
+
+hdr=&(file->paddr[index]);
+
+if( !hdr )
 	return;
 
 #ifdef VERBOSE
 fprintf( stderr, "Header[%2d] %-12.12s\n",
-			index, Headers[hdr1->p_type].name );
+			index, Headers[hdr->p_type].name );
 #endif /* VERBOSE */
 
-#define checkproghdrfield( field, value ) \
-if( hdr1->field != value ) { \
-	fprintf( stderr, "checkElfproghdr: %s doesn't match\n", #field); \
-	fprintf( stderr, "%8.8x\n", hdr1->field ); \
-	fprintf( stderr, "%8.8x\n", value ); \
+if( !Headers[hdr->p_type].func(file,hdr,journal))
+	{
+	fprintf( stderr, "Header[%2d] %-12.12s Failed\n",
+			index, Headers[hdr->p_type].name );
 	}
-
-//compareproghdrfield( p_type, 0 )
-//compareproghdrfield( p_offset, 0 )
-//compareproghdrfield( p_vaddr, 0 )
-//compareproghdrfield( p_paddr, 0 )
-//compareproghdrfield( p_filesz, 0 )
-//compareproghdrfield( p_memsz, 0 )
-//compareproghdrfield( p_flags, 0 )
-//compareproghdrfield( p_align, 0 )
-
-#undef compareproghdrfield
 }

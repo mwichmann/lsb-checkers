@@ -1,7 +1,7 @@
 CFLAGS=-g -Wall
 
 OBJS=dynsyms.o dynamic.o dyntags.o dtneeded.o elfchk.o hdr.o proghdr.o \
-	sectinfo.o sections.o symvers.o util.o
+	sectinfo.o sections.o symvers.o util.o proginterp.o
 GENSRCS=dynsyms.c dtneeded.c sectinfo.c dyntags.c dynsyms.c.chk
 LIBS= ../tetj/libtetj.a
 LIB=libelfchk.a
