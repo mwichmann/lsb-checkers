@@ -44,6 +44,13 @@ CheckTypeSize(struct group,16, 6894, 10)
 CheckOffset(struct group,gr_passwd,4,10,29793)
 CheckOffset(struct group,gr_gid,8,10,29794)
 CheckOffset(struct group,gr_mem,12,10,29795)
+#elif __powerpc64__
+CheckTypeSize(struct group,0, 6894, 9)
+Msg("Missing member data for group on PPC64\n");
+CheckOffset(struct group,gr_name,0,9,29792)
+CheckOffset(struct group,gr_passwd,0,9,29793)
+CheckOffset(struct group,gr_gid,0,9,29794)
+CheckOffset(struct group,gr_mem,0,9,29795)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6894,0);
 Msg("Find size of group (6894)\n");

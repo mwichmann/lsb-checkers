@@ -55,6 +55,16 @@ CheckOffset(struct passwd,pw_gid,12,10,30044)
 CheckOffset(struct passwd,pw_gecos,16,10,30045)
 CheckOffset(struct passwd,pw_dir,20,10,30046)
 CheckOffset(struct passwd,pw_shell,24,10,30047)
+#elif __powerpc64__
+CheckTypeSize(struct passwd,0, 6938, 9)
+Msg("Missing member data for passwd on PPC64\n");
+CheckOffset(struct passwd,pw_name,0,9,30041)
+CheckOffset(struct passwd,pw_passwd,0,9,30042)
+CheckOffset(struct passwd,pw_uid,0,9,30043)
+CheckOffset(struct passwd,pw_gid,0,9,30044)
+CheckOffset(struct passwd,pw_gecos,0,9,30045)
+CheckOffset(struct passwd,pw_dir,0,9,30046)
+CheckOffset(struct passwd,pw_shell,0,9,30047)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6938,0);
 Msg("Find size of passwd (6938)\n");

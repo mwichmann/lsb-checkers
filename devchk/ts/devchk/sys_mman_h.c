@@ -133,7 +133,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef MCL_CURRENT
+	CompareConstant(MCL_CURRENT,8192,3519,architecture)
+#else
+Msg( "Error: Constant not found: MCL_CURRENT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,8192,3519,architecture)
 #else
@@ -151,7 +159,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef MCL_FUTURE
+	CompareConstant(MCL_FUTURE,16384,3520,architecture)
+#else
+Msg( "Error: Constant not found: MCL_FUTURE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,16384,3520,architecture)
 #else

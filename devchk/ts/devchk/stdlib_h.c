@@ -72,6 +72,8 @@ CheckTypeSize(__compar_fn_t,8, 9231, 3)
 CheckTypeSize(__compar_fn_t,4, 9231, 6)
 #elif __s390__
 CheckTypeSize(__compar_fn_t,4, 9231, 10)
+#elif __powerpc64__
+CheckTypeSize(__compar_fn_t,0, 9231, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
 Msg("Find size of __compar_fn_t (9231)\n");
@@ -85,6 +87,8 @@ CheckTypeSize(div_t,8, 6973, 3)
 CheckTypeSize(div_t,8, 6973, 6)
 #elif __s390__
 CheckTypeSize(div_t,8, 6973, 10)
+#elif __powerpc64__
+CheckTypeSize(div_t,0, 6973, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6973,0);
 Msg("Find size of div_t (6973)\n");
@@ -98,6 +102,8 @@ CheckTypeSize(ldiv_t,16, 6975, 3)
 CheckTypeSize(ldiv_t,8, 6975, 6)
 #elif __s390__
 CheckTypeSize(ldiv_t,8, 6975, 10)
+#elif __powerpc64__
+CheckTypeSize(ldiv_t,0, 6975, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
 Msg("Find size of ldiv_t (6975)\n");
@@ -111,6 +117,8 @@ CheckTypeSize(lldiv_t,16, 6897, 3)
 CheckTypeSize(lldiv_t,16, 6897, 6)
 #elif __s390__
 CheckTypeSize(lldiv_t,16, 6897, 10)
+#elif __powerpc64__
+CheckTypeSize(lldiv_t,0, 6897, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6897,0);
 Msg("Find size of lldiv_t (6897)\n");

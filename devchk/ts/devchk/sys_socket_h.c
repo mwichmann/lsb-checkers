@@ -585,6 +585,11 @@ CheckOffset(struct linger,l_linger,4,6,33675)
 #elif __s390__
 CheckTypeSize(struct linger,8, 6907, 10)
 CheckOffset(struct linger,l_linger,4,10,33675)
+#elif __powerpc64__
+CheckTypeSize(struct linger,0, 6907, 9)
+Msg("Missing member data for linger on PPC64\n");
+CheckOffset(struct linger,l_onoff,0,9,33674)
+CheckOffset(struct linger,l_linger,0,9,33675)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6907,0);
 Msg("Find size of linger (6907)\n");
@@ -606,6 +611,12 @@ CheckOffset(struct cmsghdr,cmsg_type,8,6,33687)
 CheckTypeSize(struct cmsghdr,12, 6909, 10)
 CheckOffset(struct cmsghdr,cmsg_level,4,10,33686)
 CheckOffset(struct cmsghdr,cmsg_type,8,10,33687)
+#elif __powerpc64__
+CheckTypeSize(struct cmsghdr,0, 6909, 9)
+Msg("Missing member data for cmsghdr on PPC64\n");
+CheckOffset(struct cmsghdr,cmsg_len,0,9,33685)
+CheckOffset(struct cmsghdr,cmsg_level,0,9,33686)
+CheckOffset(struct cmsghdr,cmsg_type,0,9,33687)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6909,0);
 Msg("Find size of cmsghdr (6909)\n");
@@ -623,6 +634,11 @@ CheckOffset(struct iovec,iov_len,4,6,33677)
 #elif __s390__
 CheckTypeSize(struct iovec,8, 9022, 10)
 CheckOffset(struct iovec,iov_len,4,10,33677)
+#elif __powerpc64__
+CheckTypeSize(struct iovec,0, 9022, 9)
+Msg("Missing member data for iovec on PPC64\n");
+CheckOffset(struct iovec,iov_base,0,9,33676)
+CheckOffset(struct iovec,iov_len,0,9,33677)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9022,0);
 Msg("Find size of iovec (9022)\n");
@@ -636,6 +652,8 @@ CheckTypeSize(sa_family_t,2, 6905, 3)
 CheckTypeSize(sa_family_t,2, 6905, 6)
 #elif __s390__
 CheckTypeSize(sa_family_t,2, 6905, 10)
+#elif __powerpc64__
+CheckTypeSize(sa_family_t,0, 6905, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6905,0);
 Msg("Find size of sa_family_t (6905)\n");
@@ -649,6 +667,8 @@ CheckTypeSize(socklen_t,4, 9155, 3)
 CheckTypeSize(socklen_t,4, 9155, 6)
 #elif __s390__
 CheckTypeSize(socklen_t,4, 9155, 10)
+#elif __powerpc64__
+CheckTypeSize(socklen_t,0, 9155, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9155,0);
 Msg("Find size of socklen_t (9155)\n");
@@ -666,6 +686,11 @@ CheckOffset(struct sockaddr,sa_data,2,6,33673)
 #elif __s390__
 CheckTypeSize(struct sockaddr,16, 6906, 10)
 CheckOffset(struct sockaddr,sa_data,2,10,33673)
+#elif __powerpc64__
+CheckTypeSize(struct sockaddr,0, 6906, 9)
+Msg("Missing member data for sockaddr on PPC64\n");
+CheckOffset(struct sockaddr,sa_family,0,9,33672)
+CheckOffset(struct sockaddr,sa_data,0,9,33673)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6906,0);
 Msg("Find size of sockaddr (6906)\n");
@@ -703,6 +728,16 @@ CheckOffset(struct msghdr,msg_iovlen,12,10,33681)
 CheckOffset(struct msghdr,msg_control,16,10,33682)
 CheckOffset(struct msghdr,msg_controllen,20,10,33683)
 CheckOffset(struct msghdr,msg_flags,24,10,33684)
+#elif __powerpc64__
+CheckTypeSize(struct msghdr,0, 6908, 9)
+Msg("Missing member data for msghdr on PPC64\n");
+CheckOffset(struct msghdr,msg_name,0,9,33678)
+CheckOffset(struct msghdr,msg_namelen,0,9,33679)
+CheckOffset(struct msghdr,msg_iov,0,9,33680)
+CheckOffset(struct msghdr,msg_iovlen,0,9,33681)
+CheckOffset(struct msghdr,msg_control,0,9,33682)
+CheckOffset(struct msghdr,msg_controllen,0,9,33683)
+CheckOffset(struct msghdr,msg_flags,0,9,33684)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6908,0);
 Msg("Find size of msghdr (6908)\n");

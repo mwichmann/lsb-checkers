@@ -34,6 +34,8 @@ CheckTypeSize(IceAuthFileEntry,56, 8228, 3)
 CheckTypeSize(IceAuthFileEntry,28, 8228, 6)
 #elif __s390__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 10)
+#elif __powerpc64__
+CheckTypeSize(IceAuthFileEntry,0, 8228, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8228,0);
 Msg("Find size of IceAuthFileEntry (8228)\n");
@@ -47,6 +49,8 @@ CheckTypeSize(IceAuthDataEntry,40, 8230, 3)
 CheckTypeSize(IceAuthDataEntry,20, 8230, 6)
 #elif __s390__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 10)
+#elif __powerpc64__
+CheckTypeSize(IceAuthDataEntry,0, 8230, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8230,0);
 Msg("Find size of IceAuthDataEntry (8230)\n");

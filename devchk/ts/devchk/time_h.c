@@ -101,6 +101,20 @@ CheckOffset(struct tm,tm_yday,28,10,33519)
 CheckOffset(struct tm,tm_isdst,32,10,33520)
 CheckOffset(struct tm,tm_gmtoff,36,10,33521)
 CheckOffset(struct tm,tm_zone,40,10,33522)
+#elif __powerpc64__
+CheckTypeSize(struct tm,0, 7019, 9)
+Msg("Missing member data for tm on PPC64\n");
+CheckOffset(struct tm,tm_sec,0,9,33512)
+CheckOffset(struct tm,tm_min,0,9,33513)
+CheckOffset(struct tm,tm_hour,0,9,33514)
+CheckOffset(struct tm,tm_mday,0,9,33515)
+CheckOffset(struct tm,tm_mon,0,9,33516)
+CheckOffset(struct tm,tm_year,0,9,33517)
+CheckOffset(struct tm,tm_wday,0,9,33518)
+CheckOffset(struct tm,tm_yday,0,9,33519)
+CheckOffset(struct tm,tm_isdst,0,9,33520)
+CheckOffset(struct tm,tm_gmtoff,0,9,33521)
+CheckOffset(struct tm,tm_zone,0,9,33522)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
 Msg("Find size of tm (7019)\n");
@@ -118,6 +132,11 @@ CheckOffset(struct itimerspec,it_value,8,6,33509)
 #elif __s390__
 CheckTypeSize(struct itimerspec,16, 10101, 10)
 CheckOffset(struct itimerspec,it_value,8,10,33509)
+#elif __powerpc64__
+CheckTypeSize(struct itimerspec,0, 10101, 9)
+Msg("Missing member data for itimerspec on PPC64\n");
+CheckOffset(struct itimerspec,it_interval,0,9,33508)
+CheckOffset(struct itimerspec,it_value,0,9,33509)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");

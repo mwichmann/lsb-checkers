@@ -51,6 +51,15 @@ CheckOffset(struct utsname,release,130,10,30179)
 CheckOffset(struct utsname,version,195,10,30180)
 CheckOffset(struct utsname,machine,260,10,30181)
 CheckOffset(struct utsname,domainname,325,10,34411)
+#elif __powerpc64__
+CheckTypeSize(struct utsname,0, 7013, 9)
+Msg("Missing member data for utsname on PPC64\n");
+CheckOffset(struct utsname,sysname,0,9,30177)
+CheckOffset(struct utsname,nodename,0,9,30178)
+CheckOffset(struct utsname,release,0,9,30179)
+CheckOffset(struct utsname,version,0,9,30180)
+CheckOffset(struct utsname,machine,0,9,30181)
+CheckOffset(struct utsname,domainname,0,9,34411)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7013,0);
 Msg("Find size of utsname (7013)\n");

@@ -93,7 +93,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGBUS
+	CompareConstant(SIGBUS,7,3109,architecture)
+#else
+Msg( "Error: Constant not found: SIGBUS\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGBUS
 	CompareConstant(SIGBUS,7,3109,architecture)
 #else
@@ -151,7 +159,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGUSR1
+	CompareConstant(SIGUSR1,10,3112,architecture)
+#else
+Msg( "Error: Constant not found: SIGUSR1\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGUSR1
 	CompareConstant(SIGUSR1,10,3112,architecture)
 #else
@@ -199,7 +215,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGUSR2
+	CompareConstant(SIGUSR2,12,3114,architecture)
+#else
+Msg( "Error: Constant not found: SIGUSR2\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGUSR2
 	CompareConstant(SIGUSR2,12,3114,architecture)
 #else
@@ -267,7 +291,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGSTKFLT
+	CompareConstant(SIGSTKFLT,16,3118,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKFLT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGSTKFLT
 	CompareConstant(SIGSTKFLT,16,3118,architecture)
 #else
@@ -305,7 +337,15 @@ Msg( "No definition for SIGSTKFLT (3118, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3118,%d);\n", architecture, SIGSTKFLT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGCHLD
+	CompareConstant(SIGCHLD,17,3119,architecture)
+#else
+Msg( "Error: Constant not found: SIGCHLD\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGCHLD
 	CompareConstant(SIGCHLD,17,3119,architecture)
 #else
@@ -353,7 +393,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGCONT
+	CompareConstant(SIGCONT,18,3121,architecture)
+#else
+Msg( "Error: Constant not found: SIGCONT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGCONT
 	CompareConstant(SIGCONT,18,3121,architecture)
 #else
@@ -391,7 +439,15 @@ Msg( "No definition for SIGCONT (3121, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3121,%d);\n", architecture, SIGCONT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGSTOP
+	CompareConstant(SIGSTOP,19,3122,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTOP\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGSTOP
 	CompareConstant(SIGSTOP,19,3122,architecture)
 #else
@@ -429,7 +485,15 @@ Msg( "No definition for SIGSTOP (3122, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3122,%d);\n", architecture, SIGSTOP);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGTSTP
+	CompareConstant(SIGTSTP,20,3123,architecture)
+#else
+Msg( "Error: Constant not found: SIGTSTP\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGTSTP
 	CompareConstant(SIGTSTP,20,3123,architecture)
 #else
@@ -467,7 +531,15 @@ Msg( "No definition for SIGTSTP (3123, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3123,%d);\n", architecture, SIGTSTP);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGTTIN
+	CompareConstant(SIGTTIN,21,3124,architecture)
+#else
+Msg( "Error: Constant not found: SIGTTIN\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGTTIN
 	CompareConstant(SIGTTIN,21,3124,architecture)
 #else
@@ -505,7 +577,15 @@ Msg( "No definition for SIGTTIN (3124, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3124,%d);\n", architecture, SIGTTIN);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGTTOU
+	CompareConstant(SIGTTOU,22,3125,architecture)
+#else
+Msg( "Error: Constant not found: SIGTTOU\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGTTOU
 	CompareConstant(SIGTTOU,22,3125,architecture)
 #else
@@ -543,7 +623,15 @@ Msg( "No definition for SIGTTOU (3125, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3125,%d);\n", architecture, SIGTTOU);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGURG
+	CompareConstant(SIGURG,23,3126,architecture)
+#else
+Msg( "Error: Constant not found: SIGURG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGURG
 	CompareConstant(SIGURG,23,3126,architecture)
 #else
@@ -581,7 +669,15 @@ Msg( "No definition for SIGURG (3126, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3126,%d);\n", architecture, SIGURG);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGXCPU
+	CompareConstant(SIGXCPU,24,3127,architecture)
+#else
+Msg( "Error: Constant not found: SIGXCPU\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGXCPU
 	CompareConstant(SIGXCPU,24,3127,architecture)
 #else
@@ -619,7 +715,15 @@ Msg( "No definition for SIGXCPU (3127, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3127,%d);\n", architecture, SIGXCPU);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGXFSZ
+	CompareConstant(SIGXFSZ,25,3128,architecture)
+#else
+Msg( "Error: Constant not found: SIGXFSZ\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGXFSZ
 	CompareConstant(SIGXFSZ,25,3128,architecture)
 #else
@@ -667,7 +771,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGVTALRM
+	CompareConstant(SIGVTALRM,26,3129,architecture)
+#else
+Msg( "Error: Constant not found: SIGVTALRM\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGVTALRM
 	CompareConstant(SIGVTALRM,26,3129,architecture)
 #else
@@ -759,7 +871,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGWINCH
+	CompareConstant(SIGWINCH,28,3131,architecture)
+#else
+Msg( "Error: Constant not found: SIGWINCH\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGWINCH
 	CompareConstant(SIGWINCH,28,3131,architecture)
 #else
@@ -807,7 +927,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGIO
+	CompareConstant(SIGIO,29,3132,architecture)
+#else
+Msg( "Error: Constant not found: SIGIO\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGIO
 	CompareConstant(SIGIO,29,3132,architecture)
 #else
@@ -875,7 +1003,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGPWR
+	CompareConstant(SIGPWR,30,3134,architecture)
+#else
+Msg( "Error: Constant not found: SIGPWR\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGPWR
 	CompareConstant(SIGPWR,30,3134,architecture)
 #else
@@ -923,7 +1059,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGSYS
+	CompareConstant(SIGSYS,31,3135,architecture)
+#else
+Msg( "Error: Constant not found: SIGSYS\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGSYS
 	CompareConstant(SIGSYS,31,3135,architecture)
 #else
@@ -971,7 +1115,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef SIGUNUSED
+	CompareConstant(SIGUNUSED,31,3136,architecture)
+#else
+Msg( "Error: Constant not found: SIGUNUSED\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef SIGUNUSED
 	CompareConstant(SIGUNUSED,31,3136,architecture)
 #else
@@ -1279,6 +1431,8 @@ CheckTypeSize(sig_atomic_t,4, 9092, 3)
 CheckTypeSize(sig_atomic_t,4, 9092, 6)
 #elif __s390__
 CheckTypeSize(sig_atomic_t,4, 9092, 10)
+#elif __powerpc64__
+CheckTypeSize(sig_atomic_t,0, 9092, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
@@ -1297,6 +1451,11 @@ CheckOffset(struct sigstack,ss_onstack,4,6,34195)
 #elif __s390__
 CheckTypeSize(struct sigstack,8, 9315, 10)
 CheckOffset(struct sigstack,ss_onstack,4,10,34195)
+#elif __powerpc64__
+CheckTypeSize(struct sigstack,0, 9315, 9)
+Msg("Missing member data for sigstack on PPC64\n");
+CheckOffset(struct sigstack,ss_sp,0,9,34194)
+CheckOffset(struct sigstack,ss_onstack,0,9,34195)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
 Msg("Find size of sigstack (9315)\n");
@@ -1310,6 +1469,8 @@ CheckTypeSize(__sighandler_t,8, 6966, 3)
 CheckTypeSize(__sighandler_t,4, 6966, 6)
 #elif __s390__
 CheckTypeSize(__sighandler_t,4, 6966, 10)
+#elif __powerpc64__
+CheckTypeSize(__sighandler_t,0, 6966, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
 Msg("Find size of __sighandler_t (6966)\n");
@@ -1323,6 +1484,8 @@ CheckTypeSize(sigval_t,8, 9320, 3)
 CheckTypeSize(sigval_t,4, 9320, 6)
 #elif __s390__
 CheckTypeSize(sigval_t,4, 9320, 10)
+#elif __powerpc64__
+CheckTypeSize(sigval_t,0, 9320, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
 Msg("Find size of sigval_t (9320)\n");
@@ -1332,6 +1495,7 @@ Msg("Find size of sigval_t (9320)\n");
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390__
+#elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10189,0);
 Msg("Find size of anon-_sigev_un (10189)\n");
@@ -1345,6 +1509,8 @@ CheckTypeSize(sigevent_t,64, 10190, 3)
 CheckTypeSize(sigevent_t,64, 10190, 6)
 #elif __s390__
 CheckTypeSize(sigevent_t,64, 10190, 10)
+#elif __powerpc64__
+CheckTypeSize(sigevent_t,0, 10190, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
 Msg("Find size of sigevent_t (10190)\n");
@@ -1358,6 +1524,8 @@ CheckTypeSize(siginfo_t,128, 9099, 3)
 CheckTypeSize(siginfo_t,128, 9099, 6)
 #elif __s390__
 CheckTypeSize(siginfo_t,128, 9099, 10)
+#elif __powerpc64__
+CheckTypeSize(siginfo_t,0, 9099, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
 Msg("Find size of siginfo_t (9099)\n");
@@ -1407,6 +1575,13 @@ CheckTypeSize(struct sigaction,140, 10402, 6)
 CheckOffset(struct sigaction,sa_flags,132,6,34717)
 CheckOffset(struct sigaction,sa_restorer,136,6,34718)
 CheckOffset(struct sigaction,sa_mask,4,6,34719)
+#elif __powerpc64__
+CheckTypeSize(struct sigaction,0, 10402, 9)
+Msg("Missing member data for sigaction on PPC64\n");
+CheckOffset(struct sigaction,__sigaction_handler,0,9,34716)
+CheckOffset(struct sigaction,sa_flags,0,9,34717)
+CheckOffset(struct sigaction,sa_restorer,0,9,34718)
+CheckOffset(struct sigaction,sa_mask,0,9,34719)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10402,0);
 Msg("Find size of sigaction (10402)\n");
