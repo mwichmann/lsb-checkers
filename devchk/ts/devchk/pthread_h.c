@@ -138,6 +138,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9062,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(struct _pthread_fastlock,8, 10105, 2)
+#elif __ia64__
+CheckTypeSize(struct _pthread_fastlock,0, 10105, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10105,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(pthread_t,4, 9040, 2)
 #elif __ia64__
 CheckTypeSize(pthread_t,8, 9040, 3)
@@ -183,6 +191,12 @@ CheckTypeSize(pthread_condattr_t,4, 9053, 2)
 CheckTypeSize(pthread_condattr_t,4, 9053, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9053,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(_pthread_descr,4, 9087, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9087,0);
 #endif
 
 #ifdef TET_TEST

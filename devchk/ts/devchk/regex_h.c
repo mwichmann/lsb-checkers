@@ -268,11 +268,37 @@ cnt++;
 #endif
 
 #ifdef __i386__
+CheckTypeSize(reg_syntax_t,4, 6941, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6941,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct re_pattern_buffer,32, 6944, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6944,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(regex_t,32, 6945, 2)
 #elif __ia64__
 CheckTypeSize(regex_t,64, 6945, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(regoff_t,4, 6946, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6946,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(regmatch_t,8, 6949, 2)
+#elif __ia64__
+CheckTypeSize(regmatch_t,8, 6949, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6949,0);
 #endif
 
 #ifdef TET_TEST

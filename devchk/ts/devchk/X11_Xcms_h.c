@@ -50,11 +50,71 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8321,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(XcmsRGB,6, 8323, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8323,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsRGBi,24, 8325, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8325,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsCIEXYZ,24, 8327, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8327,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsCIEuvY,24, 8329, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8329,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsCIExyY,24, 8331, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8331,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsCIELab,24, 8333, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8333,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsCIELuv,24, 8335, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8335,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsTekHVC,24, 8337, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8337,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsPad,32, 8339, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8339,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(XcmsColor,40, 8342, 2)
 #elif __ia64__
 CheckTypeSize(XcmsColor,48, 8342, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8342,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsPerScrnInfo,52, 8344, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8344,0);
 #endif
 
 #ifdef __i386__
@@ -74,6 +134,35 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8858,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(XcmsScreenInitProc,4, 8861, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8861,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsScreenFreeProc,4, 8863, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8863,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsConversionProc,4, 8865, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8865,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsParseStringProc,4, 8869, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8869,0);
+#endif
+
+#ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8852,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(XcmsCCC,4, 8853, 2)
 #elif __ia64__
 CheckTypeSize(XcmsCCC,8, 8853, 3)
@@ -87,6 +176,12 @@ CheckTypeSize(XcmsColorSpace,24, 8362, 2)
 CheckTypeSize(XcmsColorSpace,48, 8362, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8362,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(XcmsFuncListPtr,4, 8867, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8867,0);
 #endif
 
 #ifdef TET_TEST

@@ -47,6 +47,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8180,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(IcePoAuthStatus,4, 8734, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8734,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(IcePaAuthStatus,4, 8736, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8736,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(IceConnectStatus,4, 8738, 2)
 #elif __ia64__
 CheckTypeSize(IceConnectStatus,4, 8738, 3)
@@ -100,6 +112,18 @@ CheckTypeSize(IceWatchProc,4, 8749, 2)
 CheckTypeSize(IceWatchProc,8, 8749, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8749,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(IcePoProcessMsgProc,4, 8752, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8752,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(IcePaProcessMsgProc,4, 8754, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8754,0);
 #endif
 
 #ifdef __i386__
@@ -172,6 +196,11 @@ CheckTypeSize(IceIOErrorHandler,4, 8772, 2)
 CheckTypeSize(IceIOErrorHandler,8, 8772, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8772,0);
+#endif
+
+#ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7710,0);
 #endif
 
 #ifdef __i386__

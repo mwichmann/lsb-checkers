@@ -73,6 +73,22 @@ cnt++;
 #endif
 
 #ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8989,0);
+#endif
+
+#ifdef __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8990,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct FTW,8, 8691, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8691,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(__ftw_func_t,4, 8992, 2)
 #elif __ia64__
 CheckTypeSize(__ftw_func_t,8, 8992, 3)

@@ -204,6 +204,18 @@ Msg( "Error: Constant not found: F_UNLCK\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct flock,16, 10217, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct flock64,24, 10218, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

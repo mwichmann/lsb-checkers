@@ -37,6 +37,12 @@ CheckTypeSize(struct in_addr,4, 10143, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10143,0);
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct sockaddr_in,16, 9141, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

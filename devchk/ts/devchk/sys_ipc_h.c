@@ -71,6 +71,12 @@ Msg( "Error: Constant not found: IPC_STAT\n");
 cnt++;
 #endif
 
+#ifdef __i386__
+CheckTypeSize(struct ipc_perm,36, 10128, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10128,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

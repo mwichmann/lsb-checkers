@@ -214,6 +214,18 @@ cnt++;
 /* No test for S_ISBLK(m) */
 /* No test for S_ISFIFO(m) */
 /* No test for S_ISSOCK(m) */
+#ifdef __i386__
+CheckTypeSize(struct stat,88, 8693, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8693,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(struct stat64,96, 8697, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8697,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

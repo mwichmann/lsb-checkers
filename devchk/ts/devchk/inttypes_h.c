@@ -56,6 +56,36 @@ CheckTypeSize(uintmax_t,8, 9017, 3)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9017,0);
 #endif
 
+#ifdef __i386__
+CheckTypeSize(uint8_t,1, 9270, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9270,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(uint16_t,2, 9271, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9271,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(uint32_t,4, 9272, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9272,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(uintptr_t,4, 9308, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9308,0);
+#endif
+
+#ifdef __i386__
+CheckTypeSize(uint64_t,8, 10176, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10176,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

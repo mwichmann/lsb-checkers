@@ -926,6 +926,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8653,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(struct _win_st,100, 8654, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(WINDOW,100, 8655, 2)
 #elif __ia64__
 CheckTypeSize(WINDOW,152, 8655, 3)

@@ -30,6 +30,12 @@ Msg("Checking data structures in X11/Composite.h\n");
 #endif
 
 #ifdef __i386__
+CheckTypeSize(XtOrderProc,4, 10245, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10245,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(XtDoChangeProc,4, 10248, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10248,0);
