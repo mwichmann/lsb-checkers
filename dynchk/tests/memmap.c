@@ -34,8 +34,13 @@ load_memmap()
 	char rd,wr,ex;
 	int ret;
 	char buf[256];
+#ifdef NOOP
+	inmemmap=1;
+	return;
+#else
 	if(inmemmap) return;
 	inmemmap=1;
+#endif
 	/*
 	setvbuf(stdout,NULL, _IOLBF, 0);
 	printf("Entering load_memmap()\n");
