@@ -179,6 +179,30 @@ for(i=0;i<numrels;i++)
 }
 
 void
+checkINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 )
+{
+#ifdef VERBOSE
+fprintf(stderr, "INIT_ARRAY SECTION\n" );
+#endif /* VERBOSE */
+}
+
+void
+checkPREINIT_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 )
+{
+#ifdef VERBOSE
+fprintf(stderr, "PREINIT_ARRAY SECTION\n" );
+#endif /* VERBOSE */
+}
+
+void
+checkFINI_ARRAY(ElfFile *file1, Elf32_Shdr *hdr1 )
+{
+#ifdef VERBOSE
+fprintf(stderr, "FINI_ARRAY SECTION\n" );
+#endif /* VERBOSE */
+}
+
+void
 checkElfsection(int index, ElfFile *file1)
 {
 Elf32_Shdr	*hdr1;
