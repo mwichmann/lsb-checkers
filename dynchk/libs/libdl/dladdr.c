@@ -2,9 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(void *, Dl_info *) = 0;
+#include <dlfcn.h>
+#undef dladdr
+static int(*funcptr) (const void * , Dl_info * ) = 0;
 
-int dladdr(void * arg0, Dl_info * arg1)
+int dladdr (const void * arg0 , Dl_info * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dladdr");
@@ -13,7 +15,7 @@ int dladdr(void * arg0, Dl_info * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_dladdr(void * arg0, Dl_info * arg1)
+int lsb_dladdr (const void * arg0 , Dl_info * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dladdr");

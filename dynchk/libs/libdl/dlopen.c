@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void *(*funcptr)(const char *, int) = 0;
+#undef dlopen
+static void *(*funcptr) (const char * , int ) = 0;
 
-void * dlopen(const char * arg0, int arg1)
+void * dlopen (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlopen");
@@ -13,7 +14,7 @@ void * dlopen(const char * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-void * lsb_dlopen(const char * arg0, int arg1)
+void * lsb_dlopen (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlopen");
