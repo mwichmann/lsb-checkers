@@ -170,27 +170,6 @@ struct versym libpthread_so_0[] = {
 	{"pthread_attr_getguardsize","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"pthread_attr_getinheritsched","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"pthread_attr_getinheritsched","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_attr_getinheritsched","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"pthread_attr_getinheritsched","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_attr_getinheritsched","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"pthread_attr_getinheritsched","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"pthread_attr_getinheritsched","GLIBC_2.2"},
-#endif
-#if __i386__
 	{"pthread_attr_getschedparam","GLIBC_2.0"},
 #endif
 #if __ia64__
@@ -210,48 +189,6 @@ struct versym libpthread_so_0[] = {
 #endif
 #if __s390x__
 	{"pthread_attr_getschedparam","GLIBC_2.2"},
-#endif
-#if __i386__
-	{"pthread_attr_getschedpolicy","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"pthread_attr_getschedpolicy","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_attr_getschedpolicy","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"pthread_attr_getschedpolicy","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_attr_getschedpolicy","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"pthread_attr_getschedpolicy","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"pthread_attr_getschedpolicy","GLIBC_2.2"},
-#endif
-#if __i386__
-	{"pthread_attr_getscope","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"pthread_attr_getscope","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_attr_getscope","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"pthread_attr_getscope","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_attr_getscope","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"pthread_attr_getscope","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"pthread_attr_getscope","GLIBC_2.2"},
 #endif
 #if __i386__
 	{"pthread_attr_getstackaddr","GLIBC_2.1"},
@@ -359,27 +296,6 @@ struct versym libpthread_so_0[] = {
 	{"pthread_attr_setguardsize","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"pthread_attr_setinheritsched","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"pthread_attr_setinheritsched","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_attr_setinheritsched","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"pthread_attr_setinheritsched","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_attr_setinheritsched","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"pthread_attr_setinheritsched","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"pthread_attr_setinheritsched","GLIBC_2.2"},
-#endif
-#if __i386__
 	{"pthread_attr_setschedparam","GLIBC_2.0"},
 #endif
 #if __ia64__
@@ -399,48 +315,6 @@ struct versym libpthread_so_0[] = {
 #endif
 #if __s390x__
 	{"pthread_attr_setschedparam","GLIBC_2.2"},
-#endif
-#if __i386__
-	{"pthread_attr_setschedpolicy","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"pthread_attr_setschedpolicy","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_attr_setschedpolicy","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"pthread_attr_setschedpolicy","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_attr_setschedpolicy","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"pthread_attr_setschedpolicy","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"pthread_attr_setschedpolicy","GLIBC_2.2"},
-#endif
-#if __i386__
-	{"pthread_attr_setscope","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"pthread_attr_setscope","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_attr_setscope","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"pthread_attr_setscope","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_attr_setscope","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"pthread_attr_setscope","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"pthread_attr_setscope","GLIBC_2.2"},
 #endif
 #if __i386__
 	{"pthread_attr_setstackaddr","GLIBC_2.1"},
@@ -652,7 +526,27 @@ struct versym libpthread_so_0[] = {
 #if __s390x__
 	{"pthread_condattr_destroy","GLIBC_2.2"},
 #endif
+#if __i386__
 	{"pthread_condattr_getpshared","GLIBC_2.2"},
+#endif
+#if __ia64__
+	{"pthread_condattr_getpshared","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pthread_condattr_getpshared","GLIBC_2.2"},
+#endif
+#if __powerpc64__
+	{"pthread_condattr_getpshared","GLIBC_2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"pthread_condattr_getpshared","GLIBC_2.2"},
+#endif
+#if __x86_64__
+	{"pthread_condattr_getpshared","GLIBC_2.2.5"},
+#endif
+#if __s390x__
+	{"pthread_condattr_getpshared","GLIBC_2.2"},
+#endif
 #if __i386__
 	{"pthread_condattr_init","GLIBC_2.0"},
 #endif
@@ -674,7 +568,27 @@ struct versym libpthread_so_0[] = {
 #if __s390x__
 	{"pthread_condattr_init","GLIBC_2.2"},
 #endif
+#if __i386__
 	{"pthread_condattr_setpshared","GLIBC_2.2"},
+#endif
+#if __ia64__
+	{"pthread_condattr_setpshared","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pthread_condattr_setpshared","GLIBC_2.2"},
+#endif
+#if __powerpc64__
+	{"pthread_condattr_setpshared","GLIBC_2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"pthread_condattr_setpshared","GLIBC_2.2"},
+#endif
+#if __x86_64__
+	{"pthread_condattr_setpshared","GLIBC_2.2.5"},
+#endif
+#if __s390x__
+	{"pthread_condattr_setpshared","GLIBC_2.2"},
+#endif
 #if __i386__
 	{"pthread_create","GLIBC_2.1"},
 #endif
@@ -758,27 +672,6 @@ struct versym libpthread_so_0[] = {
 #endif
 #if __s390x__
 	{"pthread_exit","GLIBC_2.2"},
-#endif
-#if __i386__
-	{"pthread_getschedparam","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"pthread_getschedparam","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_getschedparam","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"pthread_getschedparam","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_getschedparam","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"pthread_getschedparam","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"pthread_getschedparam","GLIBC_2.2"},
 #endif
 #if __i386__
 	{"pthread_getspecific","GLIBC_2.0"},
@@ -1493,27 +1386,6 @@ struct versym libpthread_so_0[] = {
 #endif
 #if __s390x__
 	{"pthread_setconcurrency","GLIBC_2.2"},
-#endif
-#if __i386__
-	{"pthread_setschedparam","GLIBC_2.0"},
-#endif
-#if __ia64__
-	{"pthread_setschedparam","GLIBC_2.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"pthread_setschedparam","GLIBC_2.0"},
-#endif
-#if __powerpc64__
-	{"pthread_setschedparam","GLIBC_2.3"},
-#endif
-#if __s390__ && !__s390x__
-	{"pthread_setschedparam","GLIBC_2.0"},
-#endif
-#if __x86_64__
-	{"pthread_setschedparam","GLIBC_2.2.5"},
-#endif
-#if __s390x__
-	{"pthread_setschedparam","GLIBC_2.2"},
 #endif
 #if __i386__
 	{"pthread_setspecific","GLIBC_2.0"},
