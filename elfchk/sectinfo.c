@@ -16,7 +16,7 @@ struct SectionInfo SectionInfo[] = {
 	{".fini",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 	{".fini_array",SHT_FINI_ARRAY,SHF_ALLOC+SHF_WRITE,checkFINI_ARRAY},
 	{".gnu.version",SHT_GNU_versym,SHF_ALLOC,checkGNU_versym},
-	{".gnu.version_d",SHT_GNU_verneed,SHF_ALLOC,checkGNU_verneed},
+	{".gnu.version_d",SHT_GNU_verdef,SHF_ALLOC,checkGNU_verdef},
 	{".gnu.version_r",SHT_GNU_verneed,SHF_ALLOC,checkGNU_verneed},
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #if defined(__i386__)
