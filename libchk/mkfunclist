@@ -195,6 +195,7 @@ $select = "SELECT DISTINCT * FROM Interface,LibGroup,LGInt ";
 $select.= "LEFT JOIN ArchInt ON AIint=Iid ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
+$select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=$lid ";
@@ -220,12 +221,27 @@ for(1..$lsth->numrows) {
 		$numsyms++;
 		$lastname=$entry{'Iname'};
 		}
+	if( $entry{'ATsize'} eq "" ) { $entry{'ATsize'}=0;}
 	if( $entry{'Aid'} && $entry{'Aname'} ne 'All' ) {
 		print LIB "#if $entry{'Asymbol'}\n";
-		printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
+		printf LIB "0,\"%s\",%s,",$entry{'Vname'},$entry{'ATsize'};
+		if( $entry{'Itype'} eq "Data" ) {
+			print LIB "0";
+		} else {
+			print LIB "1";
+		}
+		printf LIB "},\n";
 		print LIB "#endif\n";
 	} else {
-		printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
+		printf LIB "0,\"%s\",%s,",$entry{'Vname'},$entry{'ATsize'};
+		if( $entry{'Itype'} eq "Data" ) {
+			print LIB "0";
+		} else {
+			print LIB "1";
+		}
+		printf LIB "},\n";
 		printf TXT $entry{'Iname'}."\n";
 		}
 }
