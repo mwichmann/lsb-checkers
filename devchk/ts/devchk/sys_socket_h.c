@@ -616,6 +616,34 @@ Msg("Find size of socklen_t (9155)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(__ss_aligntype,4, 11004, 2)
+#endif
+
+#if __ia64__
+CheckTypeSize(__ss_aligntype,8, 11005, 3)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(__ss_aligntype,4, 11006, 6)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(__ss_aligntype,8, 11008, 9)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(__ss_aligntype,4, 11009, 10)
+#endif
+
+#if __s390x__
+CheckTypeSize(__ss_aligntype,8, 11010, 12)
+#endif
+
+#if __x86_64__
+CheckTypeSize(__ss_aligntype,8, 11011, 11)
+#endif
+
+#if __i386__
 CheckTypeSize(struct sockaddr,16, 6906, 2)
 CheckMemberSize(struct sockaddr,sa_data,14,2,33673)
 CheckOffset(struct sockaddr,sa_data,2,2,33673)
@@ -646,6 +674,53 @@ CheckOffset(struct sockaddr,sa_data,2,11,33673)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6906,0);
 Msg("Find size of sockaddr (6906)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(struct sockaddr_storage,128, 9345, 2)
+CheckMemberSize(struct sockaddr_storage,__ss_align,4,2,33692)
+CheckOffset(struct sockaddr_storage,__ss_align,4,2,33692)
+CheckMemberSize(struct sockaddr_storage,__ss_padding,120,2,33693)
+CheckOffset(struct sockaddr_storage,__ss_padding,8,2,33693)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct sockaddr_storage,128, 9345, 6)
+CheckMemberSize(struct sockaddr_storage,__ss_align,4,6,33692)
+CheckOffset(struct sockaddr_storage,__ss_align,4,6,33692)
+CheckMemberSize(struct sockaddr_storage,__ss_padding,120,6,33693)
+CheckOffset(struct sockaddr_storage,__ss_padding,8,6,33693)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct sockaddr_storage,128, 9345, 10)
+CheckMemberSize(struct sockaddr_storage,__ss_align,4,10,33692)
+CheckOffset(struct sockaddr_storage,__ss_align,4,10,33692)
+CheckMemberSize(struct sockaddr_storage,__ss_padding,120,10,33693)
+CheckOffset(struct sockaddr_storage,__ss_padding,8,10,33693)
+#elif __ia64__
+CheckTypeSize(struct sockaddr_storage,132, 9345, 3)
+CheckMemberSize(struct sockaddr_storage,__ss_align,8,3,33692)
+CheckOffset(struct sockaddr_storage,__ss_align,8,3,33692)
+CheckMemberSize(struct sockaddr_storage,__ss_padding,112,3,33693)
+CheckOffset(struct sockaddr_storage,__ss_padding,16,3,33693)
+#elif __powerpc64__
+CheckTypeSize(struct sockaddr_storage,132, 9345, 9)
+CheckMemberSize(struct sockaddr_storage,__ss_align,8,9,33692)
+CheckOffset(struct sockaddr_storage,__ss_align,8,9,33692)
+CheckMemberSize(struct sockaddr_storage,__ss_padding,112,9,33693)
+CheckOffset(struct sockaddr_storage,__ss_padding,16,9,33693)
+#elif __x86_64__
+CheckTypeSize(struct sockaddr_storage,132, 9345, 11)
+CheckMemberSize(struct sockaddr_storage,__ss_align,8,11,33692)
+CheckOffset(struct sockaddr_storage,__ss_align,8,11,33692)
+CheckMemberSize(struct sockaddr_storage,__ss_padding,112,11,33693)
+CheckOffset(struct sockaddr_storage,__ss_padding,16,11,33693)
+#elif __s390x__
+CheckTypeSize(struct sockaddr_storage,132, 9345, 12)
+CheckMemberSize(struct sockaddr_storage,__ss_align,8,12,33692)
+CheckOffset(struct sockaddr_storage,__ss_align,8,12,33692)
+CheckMemberSize(struct sockaddr_storage,__ss_padding,112,12,33693)
+CheckOffset(struct sockaddr_storage,__ss_padding,16,12,33693)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9345,0);
+Msg("Find size of sockaddr_storage (9345)\n");
 #endif
 
 #if __i386__
