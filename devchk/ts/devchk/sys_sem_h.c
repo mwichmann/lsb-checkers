@@ -127,6 +127,9 @@ CheckMemberSize(struct sembuf,sem_op,0,10,30119)
 CheckOffset(struct sembuf,sem_op,2,10,30119)
 CheckMemberSize(struct sembuf,sem_flg,0,10,30120)
 CheckOffset(struct sembuf,sem_flg,4,10,30120)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
+Msg("Find size of sembuf (6982)\n");
 #endif
 
 #if __i386__

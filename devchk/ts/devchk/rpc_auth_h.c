@@ -149,15 +149,6 @@ Msg("Find size of AUTH (10391)\n");
 #endif
 
 #if __i386__
-#elif __s390__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10428,0);
-Msg("Find size of auth_ops * (10428)\n");
-#endif
-
-#if __i386__
 CheckTypeSize(struct auth_ops,20, 9897, 2)
 CheckMemberSize(struct auth_ops,ah_nextverf,4,2,32032)
 CheckOffset(struct auth_ops,ah_nextverf,0,2,32032)

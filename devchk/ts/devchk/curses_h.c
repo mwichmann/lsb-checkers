@@ -1522,9 +1522,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8650,0);
 Msg("Find size of chtype (8650)\n");
 #endif
 
-#if __i386__
-CheckTypeSize(bool,1, 8651, 2)
-#elif __ia64__
+#if __ia64__
 CheckTypeSize(bool,4, 8651, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(bool,4, 8651, 6)
@@ -1664,6 +1662,10 @@ CheckOffset(struct pdat,_pad_right,10,9,29730)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
 Msg("Find size of pdat (8663)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(bool,1, 10437, 2)
 #endif
 
 #if __i386__

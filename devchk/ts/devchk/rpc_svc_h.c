@@ -169,6 +169,9 @@ CheckMemberSize(struct xp_ops,xp_freeargs,8,3,32242)
 CheckOffset(struct xp_ops,xp_freeargs,32,3,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,8,3,32244)
 CheckOffset(struct xp_ops,xp_destroy,40,3,32244)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
+Msg("Find size of xp_ops (9981)\n");
 #endif
 
 #if __s390__

@@ -386,6 +386,9 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9053,0);
 Msg("Find size of pthread_condattr_t (9053)\n");
 #endif
 
+#if 1
+#endif
+
 #if __i386__
 CheckTypeSize(_pthread_descr,4, 9087, 2)
 #elif __ia64__
@@ -445,6 +448,9 @@ CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,2,34443)
 CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,2,34443)
 CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,2,34444)
 CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,2,34444)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10279,0);
+Msg("Find size of _pthread_rwlock_t (10279)\n");
 #endif
 
 #if __no_sym__

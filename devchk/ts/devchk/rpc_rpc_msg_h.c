@@ -23,6 +23,18 @@ int pcnt=0;
 Msg("Checking data structures in rpc/rpc_msg.h\n");
 #endif
 
+#if 1
+#endif
+
+#if 1
+#endif
+
+#if 1
+#endif
+
+#if 1
+#endif
+
 #if __i386__
 CheckTypeSize(struct accepted_reply,24, 10417, 2)
 CheckMemberSize(struct accepted_reply,ar_verf,12,2,34800)
@@ -265,6 +277,9 @@ CheckMemberSize(struct rpc_msg,rm_direction,0,10,34827)
 CheckOffset(struct rpc_msg,rm_direction,4,10,34827)
 CheckMemberSize(struct rpc_msg,ru,0,10,34828)
 CheckOffset(struct rpc_msg,ru,8,10,34828)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9984,0);
+Msg("Find size of rpc_msg (9984)\n");
 #endif
 
 #if __s390__
@@ -272,9 +287,6 @@ CheckOffset(struct rpc_msg,ru,8,10,34828)
 #elif __powerpc64__
 #elif __i386__
 #elif __ia64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9985,0);
-Msg("Find size of rpc_msg * (9985)\n");
 #endif
 
 #if __i386__
