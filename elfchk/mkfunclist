@@ -3,8 +3,8 @@
 use CGI;
 use Mysql;
 
-$Dbh = Mysql->connect(localhost) || die $Mysql::db_errstr;
-$Dbh->selectdb("Linux") || die $Dbh->errmsg();
+$Dbh = Mysql->connect($ENV{LSBDBHOST}) || die $Mysql::db_errstr;
+$Dbh->selectdb($ENV{LSBDB}) || die $Dbh->errmsg();
 
 $select = "SELECT DISTINCT Iname FROM Interface,Library,LibInt ";
 $select.= "WHERE Interface.Iid=LibInt.LIint ";
