@@ -80,6 +80,9 @@ for(1..$sth->numrows) {
 	$asym=$entry{'Asymbol'};
 	$libname =~ s/\./_/g;
 	$libname =~ s/-/_/g;
+	#$libname =~ s/\//_/g;
+	@libname = split('/',$libname);
+	$libname = pop(@libname);
 	if( $asym != "1" ) {
 		print LIBS "#if defined($asym)\n";
 		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname);\n";
