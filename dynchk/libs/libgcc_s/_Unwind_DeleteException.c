@@ -6,21 +6,21 @@
 #undef _Unwind_DeleteException
 static void(*funcptr) (struct _Unwind_Exception * ) = 0;
 
+extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 void _Unwind_DeleteException (struct _Unwind_Exception * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_DeleteException");
-	validate_Rdaddress( arg0, "_Unwind_DeleteException - arg0");
-	if(  arg0 ) {
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "_Unwind_DeleteException()");
+	validate_RWaddress( arg0, "_Unwind_DeleteException - arg0");
+		validate_NULL_TYPETYPE(  arg0, "_Unwind_DeleteException - arg0");
 	}
-	validate_NULL_TYPETYPE(  arg0, "_Unwind_DeleteException");
 	funcptr(arg0);
-}
-
-void __lsb__Unwind_DeleteException (struct _Unwind_Exception * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "_Unwind_DeleteException");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

@@ -6,17 +6,21 @@
 #undef _Unwind_RaiseException
 static _Unwind_Reason_Code(*funcptr) () = 0;
 
+extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 _Unwind_Reason_Code _Unwind_RaiseException ()
 {
+	int reset_flag = __lsb_check_params;
+	_Unwind_Reason_Code ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_RaiseException");
-	return funcptr();
-}
-
-_Unwind_Reason_Code __lsb__Unwind_RaiseException ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "_Unwind_RaiseException");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "_Unwind_RaiseException()");
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

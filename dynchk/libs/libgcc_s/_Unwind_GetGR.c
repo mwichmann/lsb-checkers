@@ -6,17 +6,21 @@
 #undef _Unwind_GetGR
 static _Unwind_Word(*funcptr) () = 0;
 
+extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 _Unwind_Word _Unwind_GetGR ()
 {
+	int reset_flag = __lsb_check_params;
+	_Unwind_Word ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetGR");
-	return funcptr();
-}
-
-_Unwind_Word __lsb__Unwind_GetGR ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetGR");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "_Unwind_GetGR()");
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,21 @@
 #undef _Unwind_Find_FDE
 static fde *(*funcptr) () = 0;
 
+extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 fde * _Unwind_Find_FDE ()
 {
+	int reset_flag = __lsb_check_params;
+	fde * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_Find_FDE");
-	return funcptr();
-}
-
-fde * __lsb__Unwind_Find_FDE ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "_Unwind_Find_FDE");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "_Unwind_Find_FDE()");
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 
