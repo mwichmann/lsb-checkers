@@ -1382,7 +1382,7 @@ CheckTypeSize(struct sigaction,140, 9097, 2)
 CheckOffset(struct sigaction,__sigaction_handler,0,2,34019)
 CheckOffset(struct sigaction,sa_flags,132,2,34020)
 CheckOffset(struct sigaction,sa_restorer,136,2,34021)
-CheckOffset(struct sigaction,sa_maskmake,4,2,34022)
+CheckOffset(struct sigaction,sa_mask,4,2,34022)
 #endif
 
 #ifdef __ia64__
