@@ -5195,6 +5195,27 @@ struct versym libc_so_6[] = {
 	{"getlogin","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
+	{"getlogin_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"getlogin_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"getlogin_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __not_def__
+	{"getlogin_r","GLIBC_2.3",0,LSB_Core,0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"getlogin_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"getlogin_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if __s390x__
+	{"getlogin_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __i386__
 	{"getnameinfo","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __ia64__
