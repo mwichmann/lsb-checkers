@@ -5,9 +5,9 @@
 #include <stddef.h>
 #include <sys/socket.h>
 #undef recvfrom
-static int(*funcptr) (int , void * , size_t , int , struct sockaddr * , socklen_t * ) = 0;
+static ssize_t(*funcptr) (int , void * , size_t , int , struct sockaddr * , socklen_t * ) = 0;
 
-int recvfrom (int arg0 , void * arg1 , size_t arg2 , int arg3 , struct sockaddr * arg4 , socklen_t * arg5 )
+ssize_t recvfrom (int arg0 , void * arg1 , size_t arg2 , int arg3 , struct sockaddr * arg4 , socklen_t * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recvfrom");
@@ -20,7 +20,7 @@ int recvfrom (int arg0 , void * arg1 , size_t arg2 , int arg3 , struct sockaddr 
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_recvfrom (int arg0 , void * arg1 , size_t arg2 , int arg3 , struct sockaddr * arg4 , socklen_t * arg5 )
+ssize_t lsb_recvfrom (int arg0 , void * arg1 , size_t arg2 , int arg3 , struct sockaddr * arg4 , socklen_t * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recvfrom");

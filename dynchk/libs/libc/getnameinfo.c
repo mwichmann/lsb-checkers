@@ -5,9 +5,9 @@
 #include <sys/socket.h>
 #include <stddef.h>
 #undef getnameinfo
-static int(*funcptr) (const struct sockaddr * , socklen_t , char * , size_t , char * , size_t , unsigned int ) = 0;
+static int(*funcptr) (const struct sockaddr * , socklen_t , char * , socklen_t , char * , socklen_t , unsigned int ) = 0;
 
-int getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , size_t arg3 , char * arg4 , size_t arg5 , unsigned int arg6 )
+int getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , socklen_t arg3 , char * arg4 , socklen_t arg5 , unsigned int arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnameinfo");
@@ -21,7 +21,7 @@ int getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , s
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
-int lsb_getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , size_t arg3 , char * arg4 , size_t arg5 , unsigned int arg6 )
+int lsb_getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , socklen_t arg3 , char * arg4 , socklen_t arg5 , unsigned int arg6 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnameinfo");

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <sys/socket.h>
 #undef sendmsg
-static int(*funcptr) (int , const struct msghdr * , int ) = 0;
+static ssize_t(*funcptr) (int , const struct msghdr * , int ) = 0;
 
-int sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
+ssize_t sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sendmsg");
@@ -16,7 +16,7 @@ int sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
+ssize_t lsb_sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sendmsg");
