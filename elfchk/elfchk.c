@@ -11,7 +11,7 @@ int	i;
 checkElfhdr(file1, isProgram, journal);
 for(i=0;i<file1->numph;i++)
 	{
-	checkElfproghdr(i, file1);
+	checkElfproghdr(i, file1, journal);
 	}
 
 for(i=0;i<file1->numsh;i++)
