@@ -14,7 +14,7 @@
 /*
  * Utility macors used by the header tests
  */
-#define CompareConstant(const,value) \
+#define CompareConstant(const,value,cid,aid) \
 	cnt++; \
 	Log("subtest %d\n", cnt); \
 	Log("Purpose: Compare Constant "#const" has value  %d\n", value); \
@@ -23,6 +23,7 @@
 		/* Msg(#const " is %f instead of expected %f\n", const, value); \
 		Msg(#const " is %g instead of expected %g\n", const, value); \
 		Msg("UPDATE Constants SET Cvalue=%d WHERE Cname='" #const "';\n", const); */ \
+		Msg("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES(%d," #cid ",%d);\n", aid, const);  \
 		HDRCHKTEST_FAIL \
 	} \
 	else { \
