@@ -1,0 +1,29 @@
+<signature>
+	<headerrec>
+		<magic>0x8e 0xad 0xe8 0x01</magic>
+		<reserved>0x00 0x00 0x00 0x00</reserved>
+		<nindex>3</nindex>
+		<hsize>22</hsize>
+	</headerrec>
+	<index>
+		<tag>SIGTAG_SIGSIZE</tag>
+		<type>INT32</type>
+		<offset>0</offset>
+		<count>1</count>
+		<data>862</data>
+	</index>
+	<index>
+		<tag>SIGTAG_MD5</tag>
+		<type>BIN</type>
+		<offset>4</offset>
+		<count>16</count>
+		<data>52427213875e29b17b15376fb8472ae4</data>
+	</index>
+	<index>
+		<tag>RPMTAG_HEADERI18NTABLE</tag>
+		<type>STRING_ARRAY</type>
+		<offset>20</offset>
+		<count>1</count>
+		<data>C</data>
+	</index>
+</signature>
