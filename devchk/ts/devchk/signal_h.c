@@ -832,7 +832,7 @@ CheckOffset(struct pt_regs,result,344,9,40601)
 #endif
 
 #if __s390x__
-CheckTypeSize(_s390_regs_common,208, 10838, 12)
+CheckTypeSize(_s390_regs_common,32, 10838, 12)
 #endif
 
 #if __i386__
@@ -846,7 +846,7 @@ CheckTypeSize(sighandler_t,4, 9374, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(sighandler_t,4, 9374, 10)
 #elif __s390x__
-CheckTypeSize(sighandler_t,0, 9374, 12)
+CheckTypeSize(sighandler_t,8, 9374, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9374,0);
 Msg("Find size of sighandler_t (9374)\n");
@@ -1126,11 +1126,11 @@ CheckTypeSize(_sigregs,32, 10834, 10)
 #endif
 
 #if __s390x__
-CheckTypeSize(_s390_fp_regs,136, 10840, 12)
+CheckTypeSize(_s390_fp_regs,16, 10840, 12)
 #endif
 
 #if __s390x__
-CheckTypeSize(_sigregs,344, 10842, 12)
+CheckTypeSize(_sigregs,48, 10842, 12)
 #endif
 
 #if __i386__
