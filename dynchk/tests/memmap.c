@@ -49,8 +49,8 @@ load_memmap()
 	map=fopen("/proc/self/maps","r");
 	while(!feof(map) ) {
 		if( nummaps == maxmaps ) {
-			mem =realloc(mem,sizeof(struct memregion)*(maxmaps+5));
-			maxmaps+=5;
+			mem =realloc(mem,sizeof(struct memregion)*(maxmaps+20));
+			maxmaps+=20;
 		}
 		curmap=&mem[nummaps++];
 		/*
