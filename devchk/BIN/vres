@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/awk -f
 # vres - calculate summary reports - version for vsx4
 #
 # Copyright 1991 UNIX System Laboratories Europe, Ltd (USLE)
