@@ -31,10 +31,6 @@ Msg("Checking data structures in X11/CompositeP.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XtInheritGeometryManager */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef XtCompositeExtensionVersion
 	CompareConstant(XtCompositeExtensionVersion,2L,4931,architecture)
 #else
@@ -45,6 +41,14 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for XtInheritGeometryManager */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtInheritInsertChild */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XtInheritDeleteChild
 	CompareConstant(XtInheritDeleteChild,((XtWidgetProc) _XtInherit),4934,architecture)
 #else
@@ -52,10 +56,6 @@ Msg( "Error: Constant not found: XtInheritDeleteChild\n");
 cnt++;
 #endif
 
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XtInheritInsertChild */
 #endif
 
 #if __ia64__
