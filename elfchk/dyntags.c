@@ -63,6 +63,12 @@ struct DynamicInfo DynamicInfo[] = {
 #if __ia64__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
 #endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
+#endif /* __powerpc64__ */
 	{"DT_RELAENT",DT_RELAENT,checkDT_RELAENT},
 	{"DT_RELASZ",DT_RELASZ,checkDT_RELASZ},
 	{"DT_RELCOUNT",DT_RELCOUNT,checkDT_RELCOUNT},
