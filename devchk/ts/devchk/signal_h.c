@@ -1029,6 +1029,16 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef NSIG
+	CompareConstant(NSIG,64,2460,architecture)
+#else
+Msg( "Error: Constant not found: NSIG\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef SV_ONSTACK
 	CompareConstant(SV_ONSTACK,(1<<0),2462,architecture)
 #else
@@ -1174,20 +1184,18 @@ CheckTypeSize(struct _fpxreg,16, 10202, 2)
 
 #ifdef __i386__
 CheckTypeSize(struct _xmmreg,16, 10203, 2)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10203,0);
-Msg("Find size of sigcontext (10203)\n");
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct sigcontext,88, 10005, 2)
-#elif __ia64__
-CheckTypeSize(struct sigcontext,2656, 10005, 3)
-#elif __powerpc__
-CheckTypeSize(struct sigcontext,32, 10005, 6)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10005,0);
-Msg("Find size of sigcontext (10005)\n");
+#endif
+
+#ifdef __ia64__
+CheckTypeSize(struct sigcontext,2656, 10299, 3)
+#endif
+
+#ifdef __powerpc__
+CheckTypeSize(struct sigcontext,32, 10300, 6)
 #endif
 
 #ifdef TET_TEST

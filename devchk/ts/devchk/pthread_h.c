@@ -28,6 +28,10 @@ Msg("Checking data structures in pthread.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+/* No test for PTHREAD_COND_INITIALIZER */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_CREATE_JOINABLE
 	CompareConstant(PTHREAD_CREATE_JOINABLE,0,1537,architecture)
 #else
@@ -179,6 +183,50 @@ Msg( "Error: Constant not found: PTHREAD_CANCELED\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_DEFAULT
+	CompareConstant(PTHREAD_MUTEX_DEFAULT,1,5002,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_DEFAULT\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_ERRORCHECK
+	CompareConstant(PTHREAD_MUTEX_ERRORCHECK,3,5003,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_ERRORCHECK\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_NORMAL
+	CompareConstant(PTHREAD_MUTEX_NORMAL,1,5004,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_NORMAL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_RECURSIVE
+	CompareConstant(PTHREAD_MUTEX_RECURSIVE,2,5005,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_RECURSIVE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
 #endif
 
 #ifdef __i386__

@@ -365,16 +365,6 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef TCOFLUSH
-	CompareConstant(TCOFLUSH,1,1908,architecture)
-#else
-Msg( "Error: Constant not found: TCOFLUSH\n");
-cnt++;
-#endif
-
-#endif
-
 #ifdef __powerpc__
 #ifdef VTDLY
 	CompareConstant(VTDLY,65536,1835,architecture)
@@ -394,10 +384,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef TCIOFLUSH
-	CompareConstant(TCIOFLUSH,2,1909,architecture)
+#ifdef TCOFLUSH
+	CompareConstant(TCOFLUSH,1,1908,architecture)
 #else
-Msg( "Error: Constant not found: TCIOFLUSH\n");
+Msg( "Error: Constant not found: TCOFLUSH\n");
 cnt++;
 #endif
 
@@ -408,6 +398,16 @@ cnt++;
 	CompareConstant(VT0,0000000,1836,architecture)
 #else
 Msg( "Error: Constant not found: VT0\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef TCIOFLUSH
+	CompareConstant(TCIOFLUSH,2,1909,architecture)
+#else
+Msg( "Error: Constant not found: TCIOFLUSH\n");
 cnt++;
 #endif
 

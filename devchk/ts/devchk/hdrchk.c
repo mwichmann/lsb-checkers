@@ -97,6 +97,7 @@ tcnt+=glob_h();
 tcnt+=grp_h();
 tcnt+=iconv_h();
 tcnt+=inttypes_h();
+tcnt+=langinfo_h();
 tcnt+=limits_h();
 tcnt+=locale_h();
 tcnt+=math_h();

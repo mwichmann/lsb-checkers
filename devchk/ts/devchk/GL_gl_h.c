@@ -334,20 +334,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GL_C3F_V3F
-	CompareConstant(GL_C3F_V3F,0x2A24,220,architecture)
+#ifdef GL_INDEX_ARRAY_TYPE
+	CompareConstant(GL_INDEX_ARRAY_TYPE,0x8085,204,architecture)
 #else
-Msg( "Error: Constant not found: GL_C3F_V3F\n");
+Msg( "Error: Constant not found: GL_INDEX_ARRAY_TYPE\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GL_INDEX_ARRAY_TYPE
-	CompareConstant(GL_INDEX_ARRAY_TYPE,0x8085,204,architecture)
+#ifdef GL_C3F_V3F
+	CompareConstant(GL_C3F_V3F,0x2A24,220,architecture)
 #else
-Msg( "Error: Constant not found: GL_INDEX_ARRAY_TYPE\n");
+Msg( "Error: Constant not found: GL_C3F_V3F\n");
 cnt++;
 #endif
 
@@ -374,16 +374,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GL_C4F_N3F_V3F
-	CompareConstant(GL_C4F_N3F_V3F,0x2A26,222,architecture)
-#else
-Msg( "Error: Constant not found: GL_C4F_N3F_V3F\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef GL_TEXTURE_COORD_ARRAY_SIZE
 	CompareConstant(GL_TEXTURE_COORD_ARRAY_SIZE,0x8088,206,architecture)
 #else
@@ -394,10 +384,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GL_T2F_V3F
-	CompareConstant(GL_T2F_V3F,0x2A27,223,architecture)
+#ifdef GL_C4F_N3F_V3F
+	CompareConstant(GL_C4F_N3F_V3F,0x2A26,222,architecture)
 #else
-Msg( "Error: Constant not found: GL_T2F_V3F\n");
+Msg( "Error: Constant not found: GL_C4F_N3F_V3F\n");
 cnt++;
 #endif
 
@@ -414,10 +404,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GL_T4F_V4F
-	CompareConstant(GL_T4F_V4F,0x2A28,224,architecture)
+#ifdef GL_T2F_V3F
+	CompareConstant(GL_T2F_V3F,0x2A27,223,architecture)
 #else
-Msg( "Error: Constant not found: GL_T4F_V4F\n");
+Msg( "Error: Constant not found: GL_T2F_V3F\n");
 cnt++;
 #endif
 
@@ -428,6 +418,16 @@ cnt++;
 	CompareConstant(GL_TEXTURE_COORD_ARRAY_STRIDE,0x808A,208,architecture)
 #else
 Msg( "Error: Constant not found: GL_TEXTURE_COORD_ARRAY_STRIDE\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef GL_T4F_V4F
+	CompareConstant(GL_T4F_V4F,0x2A28,224,architecture)
+#else
+Msg( "Error: Constant not found: GL_T4F_V4F\n");
 cnt++;
 #endif
 
@@ -534,16 +534,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GL_UNSIGNED_INT
-	CompareConstant(GL_UNSIGNED_INT,0x1405,174,architecture)
-#else
-Msg( "Error: Constant not found: GL_UNSIGNED_INT\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef GL_VERTEX_ARRAY
 	CompareConstant(GL_VERTEX_ARRAY,0x8074,190,architecture)
 #else
@@ -554,10 +544,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef GL_FLOAT
-	CompareConstant(GL_FLOAT,0x1406,175,architecture)
+#ifdef GL_UNSIGNED_INT
+	CompareConstant(GL_UNSIGNED_INT,0x1405,174,architecture)
 #else
-Msg( "Error: Constant not found: GL_FLOAT\n");
+Msg( "Error: Constant not found: GL_UNSIGNED_INT\n");
 cnt++;
 #endif
 
@@ -568,6 +558,16 @@ cnt++;
 	CompareConstant(GL_NORMAL_ARRAY,0x8075,191,architecture)
 #else
 Msg( "Error: Constant not found: GL_NORMAL_ARRAY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef GL_FLOAT
+	CompareConstant(GL_FLOAT,0x1406,175,architecture)
+#else
+Msg( "Error: Constant not found: GL_FLOAT\n");
 cnt++;
 #endif
 

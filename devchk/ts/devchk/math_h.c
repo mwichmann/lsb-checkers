@@ -24,6 +24,26 @@ Msg("Checking data structures in math.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef DOMAIN
+	CompareConstant(DOMAIN,1,1508,architecture)
+#else
+Msg( "Error: Constant not found: DOMAIN\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef SING
+	CompareConstant(SING,2,1509,architecture)
+#else
+Msg( "Error: Constant not found: SING\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef M_E
 	CompareConstant(M_E,2.7182818284590452354,1515,architecture)
 #else

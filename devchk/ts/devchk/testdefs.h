@@ -33,6 +33,7 @@ extern void glob_h();
 extern void grp_h();
 extern void iconv_h();
 extern void inttypes_h();
+extern void langinfo_h();
 extern void limits_h();
 extern void locale_h();
 extern void math_h();

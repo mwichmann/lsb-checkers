@@ -858,33 +858,6 @@ cnt++;
 Msg( "No definition for EIDRM (77) in db\n");
 #endif
 #ifdef __powerpc__
-#ifdef EADV
-	CompareConstant(EADV,68,102,architecture)
-#else
-Msg( "Error: Constant not found: EADV\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef EADV
-	CompareConstant(EADV,68,102,architecture)
-#else
-Msg( "Error: Constant not found: EADV\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef EADV
-	CompareConstant(EADV,68,102,architecture)
-#else
-Msg( "Error: Constant not found: EADV\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for EADV (102) in db\n");
-#endif
-#ifdef __powerpc__
 #ifdef ECHRNG
 	CompareConstant(ECHRNG,44,78,architecture)
 #else
@@ -910,6 +883,33 @@ cnt++;
 
 #else
 Msg( "No definition for ECHRNG (78) in db\n");
+#endif
+#ifdef __powerpc__
+#ifdef EADV
+	CompareConstant(EADV,68,102,architecture)
+#else
+Msg( "Error: Constant not found: EADV\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef EADV
+	CompareConstant(EADV,68,102,architecture)
+#else
+Msg( "Error: Constant not found: EADV\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef EADV
+	CompareConstant(EADV,68,102,architecture)
+#else
+Msg( "Error: Constant not found: EADV\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for EADV (102) in db\n");
 #endif
 #ifdef __powerpc__
 #ifdef ESRMNT
@@ -1317,33 +1317,6 @@ cnt++;
 Msg( "No definition for EREMCHG (112) in db\n");
 #endif
 #ifdef __powerpc__
-#ifdef ELIBACC
-	CompareConstant(ELIBACC,79,113,architecture)
-#else
-Msg( "Error: Constant not found: ELIBACC\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef ELIBACC
-	CompareConstant(ELIBACC,79,113,architecture)
-#else
-Msg( "Error: Constant not found: ELIBACC\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef ELIBACC
-	CompareConstant(ELIBACC,79,113,architecture)
-#else
-Msg( "Error: Constant not found: ELIBACC\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for ELIBACC (113) in db\n");
-#endif
-#ifdef __powerpc__
 #ifdef ENOANO
 	CompareConstant(ENOANO,55,89,architecture)
 #else
@@ -1369,6 +1342,33 @@ cnt++;
 
 #else
 Msg( "No definition for ENOANO (89) in db\n");
+#endif
+#ifdef __powerpc__
+#ifdef ELIBACC
+	CompareConstant(ELIBACC,79,113,architecture)
+#else
+Msg( "Error: Constant not found: ELIBACC\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef ELIBACC
+	CompareConstant(ELIBACC,79,113,architecture)
+#else
+Msg( "Error: Constant not found: ELIBACC\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef ELIBACC
+	CompareConstant(ELIBACC,79,113,architecture)
+#else
+Msg( "Error: Constant not found: ELIBACC\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for ELIBACC (113) in db\n");
 #endif
 #ifdef __powerpc__
 #ifdef ELIBBAD
@@ -1686,33 +1686,6 @@ cnt++;
 Msg( "No definition for ENODATA (95) in db\n");
 #endif
 #ifdef __powerpc__
-#ifdef ESTRPIPE
-	CompareConstant(ESTRPIPE,86,120,architecture)
-#else
-Msg( "Error: Constant not found: ESTRPIPE\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef ESTRPIPE
-	CompareConstant(ESTRPIPE,86,120,architecture)
-#else
-Msg( "Error: Constant not found: ESTRPIPE\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef ESTRPIPE
-	CompareConstant(ESTRPIPE,86,120,architecture)
-#else
-Msg( "Error: Constant not found: ESTRPIPE\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for ESTRPIPE (120) in db\n");
-#endif
-#ifdef __powerpc__
 #ifdef ETIME
 	CompareConstant(ETIME,62,96,architecture)
 #else
@@ -1738,6 +1711,33 @@ cnt++;
 
 #else
 Msg( "No definition for ETIME (96) in db\n");
+#endif
+#ifdef __powerpc__
+#ifdef ESTRPIPE
+	CompareConstant(ESTRPIPE,86,120,architecture)
+#else
+Msg( "Error: Constant not found: ESTRPIPE\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef ESTRPIPE
+	CompareConstant(ESTRPIPE,86,120,architecture)
+#else
+Msg( "Error: Constant not found: ESTRPIPE\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef ESTRPIPE
+	CompareConstant(ESTRPIPE,86,120,architecture)
+#else
+Msg( "Error: Constant not found: ESTRPIPE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for ESTRPIPE (120) in db\n");
 #endif
 #ifdef __powerpc__
 #ifdef EUSERS
@@ -1848,33 +1848,6 @@ cnt++;
 Msg( "No definition for ENONET (98) in db\n");
 #endif
 #ifdef __powerpc__
-#ifdef EDESTADDRREQ
-	CompareConstant(EDESTADDRREQ,89,123,architecture)
-#else
-Msg( "Error: Constant not found: EDESTADDRREQ\n");
-cnt++;
-#endif
-
-#elif __ia64__
-#ifdef EDESTADDRREQ
-	CompareConstant(EDESTADDRREQ,89,123,architecture)
-#else
-Msg( "Error: Constant not found: EDESTADDRREQ\n");
-cnt++;
-#endif
-
-#elif __i386__
-#ifdef EDESTADDRREQ
-	CompareConstant(EDESTADDRREQ,89,123,architecture)
-#else
-Msg( "Error: Constant not found: EDESTADDRREQ\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for EDESTADDRREQ (123) in db\n");
-#endif
-#ifdef __powerpc__
 #ifdef ENOPKG
 	CompareConstant(ENOPKG,65,99,architecture)
 #else
@@ -1900,6 +1873,33 @@ cnt++;
 
 #else
 Msg( "No definition for ENOPKG (99) in db\n");
+#endif
+#ifdef __powerpc__
+#ifdef EDESTADDRREQ
+	CompareConstant(EDESTADDRREQ,89,123,architecture)
+#else
+Msg( "Error: Constant not found: EDESTADDRREQ\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef EDESTADDRREQ
+	CompareConstant(EDESTADDRREQ,89,123,architecture)
+#else
+Msg( "Error: Constant not found: EDESTADDRREQ\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef EDESTADDRREQ
+	CompareConstant(EDESTADDRREQ,89,123,architecture)
+#else
+Msg( "Error: Constant not found: EDESTADDRREQ\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for EDESTADDRREQ (123) in db\n");
 #endif
 #ifdef __powerpc__
 #ifdef EMSGSIZE
