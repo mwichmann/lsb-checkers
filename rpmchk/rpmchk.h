@@ -153,6 +153,7 @@ extern unsigned short *filemodes;
 extern unsigned short *filedevs;
 extern unsigned int *filetimes;
 extern char *filemd5s;
+extern char *filelinktos;
 extern int *filenames;
 
 /* util.c */

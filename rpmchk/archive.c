@@ -17,7 +17,8 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal)
 {
 #define TMP_STRING_SIZE (400)
 char tmp_string[TMP_STRING_SIZE+1];
-unsigned char	md5sum[17],md5str[33],*fmd5=filemd5s;
+unsigned char	md5sum[17],md5str[33];
+unsigned char	*fmd5=filemd5s,*flinktos=filelinktos;
 gzFile	*zfile;
 RpmArchiveHeader ahdr;
 int	startoffset,endoffset;
@@ -78,7 +79,7 @@ startoffset=gztell(zfile);
 while( !gzeof(zfile) ) {
 	char	*fptr,filename[1024]; /* XXX Potential overflow!! */
 	char	num[9];
-	int	size,mode,devmaj,devmin;
+	int	size,mode,devmaj,devmin,flink;
 	time_t	ftime;
 
 	gzread(zfile, &ahdr, sizeof(ahdr) );
@@ -89,6 +90,7 @@ while( !gzeof(zfile) ) {
 	printf("Mode: %8.8s\n", ahdr.c_mode );
 	printf("Rdev: %8.8s,%8.8s\n", ahdr.c_rdevmajor,ahdr.c_rdevminor );
 	printf("mtime: %8.8s\n", ahdr.c_mtime );
+	printf("nlink: %8.8s\n", ahdr.c_nlink );
 	printf("filesize: %8.8s\n", ahdr.c_filesize );
 	printf("namesize: %8.8s\n", ahdr.c_namesize );
 */
@@ -205,6 +207,22 @@ while( !gzeof(zfile) ) {
 			}
 	}
 	fmd5+=strlen(fmd5)+1;
+
+	/*
+	 * Check the file modes against the RPMTAG_FILELINKTOS value
+	 */
+
+	memcpy(num,ahdr.c_nlink,8);
+	num[8]=0;
+	flink=strtol(num,NULL,16);
+
+	if( flink>1 && !*flinktos ) {
+		fprintf(stderr,"File link expected, but no FILELINKTOS entry\n");
+	}
+	if( flink==1 && *flinktos ) {
+		fprintf(stderr,"File link not expected, but FILELINKTOS present\n");
+	}
+	filelinktos+=strlen(filelinktos)+1;
 
 
 	/*

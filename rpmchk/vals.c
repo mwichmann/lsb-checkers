@@ -30,4 +30,5 @@ unsigned short	*filemodes;
 unsigned short	*filedevs;
 unsigned int	*filetimes;
 char	*filemd5s;
+char	*filelinktos;
 int	*filenames;

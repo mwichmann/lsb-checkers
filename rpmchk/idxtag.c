@@ -59,6 +59,7 @@ for(i=0;i<nindex;i++) {
  * These functions correspond to the header private tag values
  */
 
+#if 0
 void
 checkRpmIdxHDRIMAGE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
@@ -72,9 +73,10 @@ hcount=ntohl(hidx->count);
 fprintf(stderr,"checkRpmIdxHDRIMAGE() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
+#endif
 
 void
-checkRpmIdxHDRSIGNATURES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxHEADERSIGNATURES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		hoffset;
 RpmHdrIndex	*sigidx;
@@ -82,16 +84,16 @@ RpmHdrIndex	*sigidx;
 hoffset=ntohl(hidx->offset);
 sigidx=(RpmHdrIndex *)(file1->storeaddr+hoffset);
 
-if( ntohl(sigidx->tag) != HDRTAG_HDRSIGNATURES ) {
+if( ntohl(sigidx->tag) != RPMTAG_HEADERSIGNATURES ) {
 	fprintf(stderr,
-	"Tag value in HDRTAG_HDRSIGNATURES data is not HDRTAG_HDRSIGNATURES\n");
+	"Tag value in RPMTAG_HEADERSIGNATURES data is not RPMTAG_HEADERSIGNATURES\n");
 	}
 if( ntohl(sigidx->type) != BIN ) {
-	fprintf(stderr, "Type value in HDRTAG_HDRSIGNATURES data is not BIN\n");
+	fprintf(stderr, "Type value in RPMTAG_HEADERSIGNATURES data is not BIN\n");
 	}
 if( ntohl(sigidx->count) != sizeof(RpmHdrIndex) ) {
 	fprintf(stderr,
-     "Count value in HDRTAG_HDRSIGNATURES data is not sizeof(RpmHdrIndex)\n");
+     "Count value in RPMTAG_HEADERSIGNATURES data is not sizeof(RpmHdrIndex)\n");
 	}
 sigdata=(char *)(((char *)sigidx)+ntohl(sigidx->offset));
 
@@ -122,7 +124,7 @@ fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
 }
 
 void
-checkRpmIdxHDRIMMUTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxHEADERIMMUTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		hoffset;
 RpmHdrIndex	*imuidx;
@@ -139,24 +141,24 @@ htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
 hcount=ntohl(hidx->count);
 
-fprintf(stderr,"checkRpmIdxHDRIMMUTABLE() type=%d offset=%x count=%x\n",
+fprintf(stderr,"checkRpmIdxHEADERIMMUTABLE() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 */
 hoffset=ntohl(hidx->offset);
 imuidx=(RpmHdrIndex *)(file1->storeaddr+hoffset);
 hdrdata=(RpmHeader *)(((char *)imuidx)+ntohl(imuidx->offset));
-if( ntohl(imuidx->tag) != HDRTAG_HDRIMMUTABLE ) {
+if( ntohl(imuidx->tag) != RPMTAG_HEADERIMMUTABLE ) {
 	fprintf(stderr,
-	"Tag value in HDRTAG_HDRIMMUTABLE data is not HDRTAG_HDRIMMUTABLE\n");
+	"Tag value in RPMTAG_HEADERIMMUTABLE data is not RPMTAG_HEADERIMMUTABLE\n");
 	}
 if( ntohl(imuidx->type) != BIN ) {
-	fprintf(stderr, "Type value in HDRTAG_HDRIMMUTABLE data is not BIN\n");
+	fprintf(stderr, "Type value in RPMTAG_HEADERIMMUTABLE data is not BIN\n");
 	}
 if( ntohl(imuidx->count) != sizeof(RpmHdrIndex) ) {
 	fprintf(stderr,
-     "Count value in HDRTAG_HDRIMMUTABLE data is not sizeof(RpmHdrIndex)\n");
+     "Count value in RPMTAG_HEADERIMMUTABLE data is not sizeof(RpmHdrIndex)\n");
 	}
-fprintf(stderr,"checkRpmIdxHDRIMMUTABLE() Not yet checking contents\n");
+fprintf(stderr,"checkRpmIdxHEADERIMMUTABLE() Not yet checking contents\n");
 
 /*
 data=hdrdata;
@@ -190,7 +192,7 @@ fprintf(stderr,"checkRpmIdxHDRREGIONS() type=%d offset=%x count=%x\n",
 }
 
 void
-checkRpmIdxHDRI18NTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxHEADERI18NTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		hoffset,i;
 char		*string;
@@ -210,7 +212,7 @@ string=file1->storeaddr+hoffset;
 
 /*
 fprintf(stderr,
-	"checkRpmIdxHDRI18NTABLE() type=%d offset=%x count=%x string=%s\n",
+	"checkRpmIdxHEADERI18NTABLE() type=%d offset=%x count=%x string=%s\n",
 						htype,hoffset,hcount,string);
 */
 for(i=0;i<ntohl(hidx->count);i++) {
@@ -220,12 +222,11 @@ for(i=0;i<ntohl(hidx->count);i++) {
 	}
 }
 
-#if 0
 /*
  * These calues don't really show up as Indicies.
  */
 void
-checkRpmIdxHDRSIGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxHEADERSIGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		htag, htype, hoffset, hcount;
 int		nindex;
@@ -238,10 +239,11 @@ htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
-fprintf(stderr,"checkRpmIdxHDRSIGBASE() type=%d offset=%x count=%x\n",
+fprintf(stderr,"checkRpmIdxHEADERSIGBASE() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
+#if 0
 void
 checkRpmIdxHDRTAGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
@@ -845,6 +847,24 @@ filemd5s=(char *)(file1->storeaddr+hoffset);
 name=filemd5s;
 for(i=0;i<hcount;i++) {
 	fprintf(stderr,"File MD5: %s\n",name);
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxFILELINKTOS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filelinktos=(char *)(file1->storeaddr+hoffset);
+name=filelinktos;
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"File linkto: %s\n",name);
 	name+=strlen(name)+1;
 	}
 }
