@@ -68,7 +68,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 	unsigned long vtvcalloffset, vtbaseoffset;
 	const char *vttypeinfo;
 	fptr *vtvirtfuncs;
-  char tmp_string[TMP_STRING_SIZE+1];
+	char tmp_string[TMP_STRING_SIZE+1];
 	int test_failed;
 
 	if (classes == NULL) 
@@ -276,12 +276,9 @@ check_class_info(char *libname, struct classinfo *classes[],
 			}
 		} /* (*classp->vtablename) */
 		else {
-			TETJ_REPORT_INFO("No vtable name for %s\n",classp->name);
-			tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-			tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
-/* 			if( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) ) { */
-/* 				printf("No vtable name for %s\n",classp->name); */
-/* 			} */
+ 			if( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) ) { 
+ 				printf("No vtable name for %s\n",classp->name); 
+ 			} 
 		}
 
 		/*
@@ -535,11 +532,26 @@ check_class_info(char *libname, struct classinfo *classes[],
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 			}
 		} else { /* (rttip) */
-			char	str[256];
-			sprintf(str, "_ZTI%s", &(classp->name[2]));
-			TETJ_REPORT_INFO("No RTTI name for %s\n", str);
-			tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-			tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
+			if( strlen(classp->rttiname) != 0 ) {
+				/*
+				 * We really were expecting an RTTI symbol to be found
+				 */
+				TETJ_REPORT_INFO("Did not find expected RTTI symbol %s\n", classp->rttiname);
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
+			} else {
+				/*
+				 * We have an empty symbol name, indicating we were not expecting
+				 * to find a symbol anyway.
+				 *
+				 * Don't complain about this.
+				char	str[256];
+				sprintf(str, "_ZTI%s", &(classp->name[2]));
+				TETJ_REPORT_INFO("No RTTI name for %s\n", str);
+				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
+				 */
+			}
 		}
 	}
 
