@@ -52,12 +52,30 @@ struct SectionInfo SectionInfo[] = {
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __ia64__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
+#if defined(__i386__)
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __i386__ */
+#if defined(__i386__)
 	{".rel.data",SHT_REL,0,checkREL},
+#endif /* __i386__ */
+#if defined(__i386__)
 	{".rel.dyn",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __i386__ */
+#if defined(__i386__)
 	{".rel.got",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __i386__ */
+#if defined(__i386__)
 	{".rel.plt",SHT_REL,SHF_ALLOC,checkREL},
+#endif /* __i386__ */
+#if defined(__i386__)
 	{".rel.text",SHT_REL,0,checkREL},
+#endif /* __i386__ */
+#if defined(__ia64__)
+	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __ia64__ */
+#if defined(__ia64__)
+	{".rela.IA_64.pltoff",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __ia64__ */
 	{".rodata",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 	{".rodata1",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 #if defined(__i386__)
@@ -72,15 +90,9 @@ struct SectionInfo SectionInfo[] = {
 #if defined(__ia64__)
 	{".sdata1",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
-#if defined(__ia64__)
 	{".shstrtab",SHT_STRTAB,0,checkSTRTAB},
-#endif /* __ia64__ */
-#if defined(__ia64__)
 	{".stab",SHT_PROGBITS,0,checkPROGBITS},
-#endif /* __ia64__ */
-#if defined(__ia64__)
 	{".stabstr",SHT_STRTAB,0,checkSTRTAB},
-#endif /* __ia64__ */
 	{".strtab",SHT_STRTAB,SHF_ALLOC,checkSTRTAB},
 	{".symtab",SHT_SYMTAB,SHF_ALLOC,checkSYMTAB},
 	{".text",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
