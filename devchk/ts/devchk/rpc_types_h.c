@@ -63,6 +63,8 @@ Msg("Find size of enum_t (9895)\n");
 
 #if __i386__
 CheckTypeSize(rpcprog_t,4, 9992, 2)
+#elif __powerpc64__
+CheckTypeSize(rpcprog_t,0, 9992, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9992,0);
 Msg("Find size of rpcprog_t (9992)\n");
@@ -89,6 +91,8 @@ Msg("Find size of rpcvers_t (9993)\n");
 
 #if __i386__
 CheckTypeSize(rpcproc_t,4, 9994, 2)
+#elif __powerpc64__
+CheckTypeSize(rpcproc_t,0, 9994, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9994,0);
 Msg("Find size of rpcproc_t (9994)\n");
@@ -96,6 +100,8 @@ Msg("Find size of rpcproc_t (9994)\n");
 
 #if __i386__
 CheckTypeSize(rpcprot_t,4, 9998, 2)
+#elif __powerpc64__
+CheckTypeSize(rpcprot_t,0, 9998, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9998,0);
 Msg("Find size of rpcprot_t (9998)\n");

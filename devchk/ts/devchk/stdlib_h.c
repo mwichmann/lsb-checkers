@@ -169,6 +169,16 @@ CheckMemberSize(struct random_data,rand_sep,4,11,40032)
 CheckOffset(struct random_data,rand_sep,32,11,40032)
 CheckMemberSize(struct random_data,end_ptr,8,11,40033)
 CheckOffset(struct random_data,end_ptr,40,11,40033)
+#elif __powerpc64__
+CheckTypeSize(struct random_data,0, 10483, 9)
+Msg("Missing member data for random_data on PPC64\n");
+CheckOffset(struct random_data,fptr,0,9,40027)
+CheckOffset(struct random_data,rptr,0,9,40028)
+CheckOffset(struct random_data,state,0,9,40029)
+CheckOffset(struct random_data,rand_type,0,9,40030)
+CheckOffset(struct random_data,rand_deg,0,9,40031)
+CheckOffset(struct random_data,rand_sep,0,9,40032)
+CheckOffset(struct random_data,end_ptr,0,9,40033)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10483,0);
 Msg("Find size of random_data (10483)\n");

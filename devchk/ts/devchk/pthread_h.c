@@ -582,6 +582,16 @@ CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,11,34443)
 CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,11,34443)
 CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,11,34444)
 CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,11,34444)
+#elif __powerpc64__
+CheckTypeSize(struct _pthread_rwlock_t,0, 10279, 9)
+Msg("Missing member data for _pthread_rwlock_t on PPC64\n");
+CheckOffset(struct _pthread_rwlock_t,__rw_lock,0,9,34438)
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,0,9,34439)
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,0,9,34440)
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,0,9,34441)
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,0,9,34442)
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,0,9,34443)
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,0,9,34444)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10279,0);
 Msg("Find size of _pthread_rwlock_t (10279)\n");
@@ -593,12 +603,14 @@ Msg("Find size of _pthread_rwlock_t (10279)\n");
 #elif __ia64__
 #elif __s390__ && !__s390x__
 #elif __x86_64__
+#elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10280,0);
 Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
 #endif
 
 #if __i386__
+#elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
 Msg("Find size of const pthread_rwlockattr_t * (10811)\n");

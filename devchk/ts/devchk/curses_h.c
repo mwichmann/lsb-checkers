@@ -1538,7 +1538,7 @@ Msg("Find size of SCREEN (8653)\n");
 #if __i386__
 CheckTypeSize(WINDOW,100, 8655, 2)
 #elif __ia64__
-CheckTypeSize(WINDOW,192, 8655, 3)
+CheckTypeSize(WINDOW,128, 8655, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(WINDOW,124, 8655, 6)
 #elif __s390__ && !__s390x__
@@ -1744,7 +1744,7 @@ CheckOffset(struct _win_st,_yoffset,72,2,29732)
 CheckMemberSize(struct _win_st,_bkgrnd,24,2,34437)
 CheckOffset(struct _win_st,_bkgrnd,76,2,34437)
 #elif __ia64__
-CheckTypeSize(struct _win_st,192, 8654, 3)
+CheckTypeSize(struct _win_st,128, 8654, 3)
 CheckMemberSize(struct _win_st,_cury,2,3,29700)
 CheckOffset(struct _win_st,_cury,0,3,29700)
 CheckMemberSize(struct _win_st,_curx,2,3,29701)

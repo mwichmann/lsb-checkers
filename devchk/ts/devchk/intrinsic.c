@@ -276,12 +276,6 @@ CheckTypeSize(signed char,1,10505,1)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10505,0);
 #endif
 
-#if __powerpc64__
-CheckTypeSize(elf_greg_t,4,10825,9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10825,0);
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
