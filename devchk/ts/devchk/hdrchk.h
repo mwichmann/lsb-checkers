@@ -30,13 +30,14 @@
 	} 
 
 
-#define CheckTypeSize(type,size) \
+#define CheckTypeSize(type,size,tid,aid) \
 	cnt++; \
 	Log("subtest %d\n", cnt); \
 	Log("Purpose: Check sizeof( "#type" ) is %d\n", size); \
 	if( sizeof(type) != size ) { \
 		Msg("sizeof(" #type ") is %d instead of " #size "\n",sizeof(type)); \
-		Msg("UPDATE Type SET Tsize=%d WHERE Tname='" #type "';\n", sizeof(type)); \
+		Msg("REPLACE INTO ArchType (ATtid,ATaid,ATsize) "); \
+		Msg("VALUES (%d, %d, %d);\n", tid, aid, sizeof(type)); \
 		HDRCHKTEST_FAIL \
 	} \
 	else { \
