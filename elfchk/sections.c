@@ -145,62 +145,7 @@ Elf32_Sym	*syms1;
 fprintf(stderr, "DYNSYM\n" );
 #endif /* VERBOSE */
 
-numsyms=hdr1->sh_size/hdr1->sh_entsize;
-
-syms1=(Elf32_Sym *)((caddr_t)file->addr+hdr1->sh_offset);
-
-for(i=0;i<numsyms;i++) {
-	/* Static Symbols */
-	if( ELF32_ST_BIND(syms1[i].st_info) == STB_LOCAL ) continue;
-	/* Weak Symbols and provided by the app */
-	if( ELF32_ST_BIND(syms1[i].st_info) == STB_WEAK ) continue;
-	/* Actually provided by a section in the app */
-	if( syms1[i].st_shndx != 0 ) continue;
-	if( !(ELF32_ST_TYPE(syms1[i].st_info) == STT_OBJECT ||
-	      ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC) ) continue;
-/*
-fprintf(stderr,"%s %x %x %x\n",
-	ElfGetStringIndex(file,syms1[i].st_name,hdr1->sh_link),
-	ELF32_ST_BIND(syms1[i].st_info),
-	ELF32_ST_TYPE(syms1[i].st_info),
-	syms1[i].st_shndx
-	);
-*/
-	for( j=0; j<numDynSyms; j++ ) 
-	if( !strcmp(
-		    ElfGetStringIndex(file, syms1[i].st_name, hdr1->sh_link),
-		    DynSyms[j].name ) )
-		break;
-	if( j == numDynSyms ) {
-		fprintf( stderr, "Symbol %s used, but not part of LSB\n",
-		    ElfGetStringIndex(file, syms1[i].st_name, hdr1->sh_link) );
-		continue;
-		}
-
-	/* If the symbol is versioned, make sure the correct version is used */
-
-	/* This bit means it's internal */
-	if( !file->vers ) continue;
-
-	if( file->vers[i] & 0x8000 )
-		continue;
-
-	/* Zero means the symbol is local */
-	if( file->vers[i] == 0 )
-		continue;
-
-#ifdef DEBUG
-	printf( "Symbol %s vers %s\n",
-		ElfGetStringIndex(file,file->syms[i].st_name,
-		file->symhdr->sh_link),
-		file->versionnames[file->vers[i]]);
-#endif
-	if(strcmp(file->versionnames[file->vers[i]],DynSyms[j].vername) != 0) {
-		printf( "Symbol %s has version %s expecting %s\n",
-			ElfGetStringIndex(file,file->syms[i].st_name,file->symhdr->sh_link),
-				file->versionnames[file->vers[i]], DynSyms[j].vername);
-		}
-	} /* i */
+file->dynsymhdr=hdr1;
 }
 
 void
@@ -249,32 +194,6 @@ fprintf( stderr, "checkElfsection[%d]: %s\n", index,
 
 if( !hdr1 )
 	return;
-
-/*
-#define comparesectionfield( field ) \
-if( hdr1->field != hdr2->field ) { \
-	fprintf( stderr, "compareElfsection: %s doesn't match\n", #field); \
-	fprintf( stderr, "%8.8x != ", hdr1->field ); \
-	fprintf( stderr, "%8.8x\n", hdr2->field ); \
-	}
-
-if( strcmp(ElfGetString(file1, hdr1->sh_name),
-		ElfGetString(file2, hdr2->sh_name)) ) {
-	fprintf( stderr, "compareElfsection: sh_name doesn't match\n");
-	fprintf( stderr, "%s\n", ElfGetString(file1, hdr1->sh_name) );
-	fprintf( stderr, "%s\n", ElfGetString(file2, hdr2->sh_name) );
-	}
-
-comparesectionfield( sh_type ) 
-comparesectionfield( sh_flags ) 
-comparesectionfield( sh_addr ) 
-comparesectionfield( sh_offset ) 
-comparesectionfield( sh_size ) 
-comparesectionfield( sh_link ) 
-comparesectionfield( sh_info ) 
-comparesectionfield( sh_addralign ) 
-comparesectionfield( sh_entsize ) 
-*/
 
 for(i=0;i<numSectionInfo;i++) {
 	if( strcmp(ElfGetString(file1, hdr1->sh_name),
