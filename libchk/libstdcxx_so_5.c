@@ -97,7 +97,33 @@ struct versym libstdcxx_so_5[] = {
 #if __s390x__
 	{"_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE","CXXABI_1.2.2"},
 #endif
+#if __i386__
 	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
+#if __arm__
+	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
+#if __mc68000__
+	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
+#if __ia64__
+	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
+#if __powerpc64__
+	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
+#if __x86_64__
+	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
+#if __s390x__
+	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_","CXXABI_1.2.2"},
+#endif
 	{"_ZNK10__cxxabiv117__pbase_type_info10__do_catchEPKSt9type_infoPPvj","CXXABI_1.2.2"},
 	{"_ZNK10__cxxabiv119__pointer_type_info14__is_pointer_pEv","CXXABI_1.2.2"},
 	{"_ZNK10__cxxabiv119__pointer_type_info15__pointer_catchEPKNS_17__pbase_type_infoEPPvj","CXXABI_1.2.2"},
@@ -130,7 +156,33 @@ struct versym libstdcxx_so_5[] = {
 #if __s390x__
 	{"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE","CXXABI_1.2.2"},
 #endif
+#if __i386__
 	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __arm__
+	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __mc68000__
+	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __ia64__
+	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __powerpc64__
+	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __x86_64__
+	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __s390x__
+	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
 	{"_ZNK10__cxxabiv121__vmi_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE","CXXABI_1.2.2"},
 #if __i386__
 	{"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE","CXXABI_1.2.2"},
@@ -159,7 +211,33 @@ struct versym libstdcxx_so_5[] = {
 #if __s390x__
 	{"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE","CXXABI_1.2.2"},
 #endif
+#if __i386__
 	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __arm__
+	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __mc68000__
+	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __ia64__
+	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __powerpc64__
+	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __x86_64__
+	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
+#if __s390x__
+	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.2.2"},
+#endif
 	{"_ZNK10__cxxabiv129__pointer_to_member_type_info15__pointer_catchEPKNS_17__pbase_type_infoEPPvj","CXXABI_1.2.2"},
 	{"_ZNKSaIwE7addressERKw","GLIBCPP_3.2"},
 	{"_ZNKSaIwE7addressERw","GLIBCPP_3.2"},
@@ -5436,6 +5514,9 @@ struct versym libstdcxx_so_5[] = {
 #if __arm__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci","GLIBCPP_3.2"},
 #endif
+#if __mc68000__
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci","GLIBCPP_3.2"},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci","GLIBCPP_3.2"},
 #endif
@@ -5446,6 +5527,9 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCPP_3.2"},
 #endif
 #if __powerpc64__
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCPP_3.2"},
 #endif
 #if __s390x__
@@ -5457,16 +5541,13 @@ struct versym libstdcxx_so_5[] = {
 #if __arm__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2"},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2"},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2"},
-#endif
 #if __ia64__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl","GLIBCPP_3.2"},
 #endif
 #if __powerpc64__
+	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl","GLIBCPP_3.2"},
 #endif
 #if __s390x__
@@ -5544,6 +5625,9 @@ struct versym libstdcxx_so_5[] = {
 #if __arm__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2"},
 #endif
+#if __mc68000__
+	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2"},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2"},
 #endif
@@ -5556,6 +5640,9 @@ struct versym libstdcxx_so_5[] = {
 #if __powerpc64__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCPP_3.2"},
 #endif
+#if __x86_64__
+	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCPP_3.2"},
+#endif
 #if __s390x__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCPP_3.2"},
 #endif
@@ -5563,6 +5650,9 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi","GLIBCPP_3.2"},
 #endif
 #if __arm__
+	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi","GLIBCPP_3.2"},
+#endif
+#if __mc68000__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi","GLIBCPP_3.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -5575,6 +5665,9 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl","GLIBCPP_3.2"},
 #endif
 #if __powerpc64__
+	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl","GLIBCPP_3.2"},
 #endif
 #if __s390x__
@@ -6521,6 +6614,9 @@ struct versym libstdcxx_so_5[] = {
 #if __arm__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci","GLIBCPP_3.2"},
 #endif
+#if __mc68000__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci","GLIBCPP_3.2"},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci","GLIBCPP_3.2"},
 #endif
@@ -6531,6 +6627,9 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCPP_3.2"},
 #endif
 #if __powerpc64__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCPP_3.2"},
 #endif
 #if __s390x__
@@ -6542,6 +6641,9 @@ struct versym libstdcxx_so_5[] = {
 #if __arm__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2"},
 #endif
+#if __mc68000__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2"},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCPP_3.2"},
 #endif
@@ -6551,7 +6653,13 @@ struct versym libstdcxx_so_5[] = {
 #if __ia64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl","GLIBCPP_3.2"},
 #endif
+#if __alpha__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl","GLIBCPP_3.2"},
+#endif
 #if __powerpc64__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl","GLIBCPP_3.2"},
 #endif
 #if __s390x__
@@ -6682,19 +6790,16 @@ struct versym libstdcxx_so_5[] = {
 #if __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2"},
 #endif
-#if __arm__
-	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2"},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2"},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCPP_3.2"},
-#endif
 #if __ia64__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCPP_3.2"},
 #endif
+#if __alpha__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCPP_3.2"},
+#endif
 #if __powerpc64__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCPP_3.2"},
 #endif
 #if __s390x__
@@ -6706,6 +6811,9 @@ struct versym libstdcxx_so_5[] = {
 #if __arm__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi","GLIBCPP_3.2"},
 #endif
+#if __mc68000__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi","GLIBCPP_3.2"},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi","GLIBCPP_3.2"},
 #endif
@@ -6715,7 +6823,13 @@ struct versym libstdcxx_so_5[] = {
 #if __ia64__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl","GLIBCPP_3.2"},
 #endif
+#if __alpha__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl","GLIBCPP_3.2"},
+#endif
 #if __powerpc64__
+	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl","GLIBCPP_3.2"},
 #endif
 #if __s390x__
@@ -6767,6 +6881,9 @@ struct versym libstdcxx_so_5[] = {
 #if __arm__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEjj","GLIBCPP_3.2"},
 #endif
+#if __mc68000__
+	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEjj","GLIBCPP_3.2"},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEjj","GLIBCPP_3.2"},
 #endif
@@ -6777,6 +6894,9 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEmm","GLIBCPP_3.2"},
 #endif
 #if __powerpc64__
+	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEmm","GLIBCPP_3.2"},
+#endif
+#if __x86_64__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEmm","GLIBCPP_3.2"},
 #endif
 #if __s390x__
@@ -6822,6 +6942,9 @@ struct versym libstdcxx_so_5[] = {
 #if __arm__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj","GLIBCPP_3.2"},
 #endif
+#if __mc68000__
+	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj","GLIBCPP_3.2"},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj","GLIBCPP_3.2"},
 #endif
@@ -6829,12 +6952,6 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj","GLIBCPP_3.2"},
 #endif
 #if __ia64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm","GLIBCPP_3.2"},
-#endif
-#if __powerpc64__
-	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm","GLIBCPP_3.2"},
-#endif
-#if __s390x__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm","GLIBCPP_3.2"},
 #endif
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE17_M_stringbuf_initESt13_Ios_Openmode","GLIBCPP_3.2"},
@@ -7471,6 +7588,10 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCPP_3.2"},
 	{"_ZNSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCPP_3.2"},
 	{"_ZNSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED2Ev","GLIBCPP_3.2"},
+	{"_ZNSt21__ctype_abstract_baseIcED0Ev","GLIBCPP_3.2.4"},
+	{"_ZNSt21__ctype_abstract_baseIcED1Ev","GLIBCPP_3.2.4"},
+	{"_ZNSt21__ctype_abstract_baseIwED0Ev","GLIBCPP_3.2.4"},
+	{"_ZNSt21__ctype_abstract_baseIwED1Ev","GLIBCPP_3.2.4"},
 	{"_ZNSt21__numeric_limits_base10has_denormE","GLIBCPP_3.2"},
 	{"_ZNSt21__numeric_limits_base10is_boundedE","GLIBCPP_3.2"},
 	{"_ZNSt21__numeric_limits_base10is_integerE","GLIBCPP_3.2"},
@@ -7493,6 +7614,10 @@ struct versym libstdcxx_so_5[] = {
 	{"_ZNSt21__numeric_limits_base9is_iec559E","GLIBCPP_3.2"},
 	{"_ZNSt21__numeric_limits_base9is_moduloE","GLIBCPP_3.2"},
 	{"_ZNSt21__numeric_limits_base9is_signedE","GLIBCPP_3.2"},
+	{"_ZNSt23__codecvt_abstract_baseIcc11__mbstate_tED0Ev","GLIBCPP_3.2.4"},
+	{"_ZNSt23__codecvt_abstract_baseIcc11__mbstate_tED1Ev","GLIBCPP_3.2.4"},
+	{"_ZNSt23__codecvt_abstract_baseIwc11__mbstate_tED0Ev","GLIBCPP_3.2.4"},
+	{"_ZNSt23__codecvt_abstract_baseIwc11__mbstate_tED1Ev","GLIBCPP_3.2.4"},
 #if __i386__
 	{"_ZNSt24__default_alloc_templateILb1ELi0EE10deallocateEPvj","GLIBCPP_3.2"},
 #endif
@@ -11606,7 +11731,33 @@ const char *St10istrstream_vtable_name[] = {
 	};
 
 struct classvtable St10istrstream_vtable = {
+#if __i386__
 	100,
+#endif
+#if __ia64__
+	192,
+#endif
+#if __arm__
+	100,
+#endif
+#if __mc68000__
+	100,
+#endif
+#if __powerpc__ && !__powerpc64__
+	100,
+#endif
+#if __powerpc64__
+	192,
+#endif
+#if __s390__ && !__s390x__
+	100,
+#endif
+#if __x86_64__
+	192,
+#endif
+#if __s390x__
+	192,
+#endif
 	0,
 	"_ZTISt10istrstream",
 	St10istrstream_vtable_name,
@@ -11645,7 +11796,33 @@ const char *St10ostrstream_vtable_name[] = {
 	};
 
 struct classvtable St10ostrstream_vtable = {
+#if __i386__
 	96,
+#endif
+#if __ia64__
+	184,
+#endif
+#if __arm__
+	96,
+#endif
+#if __mc68000__
+	96,
+#endif
+#if __powerpc__ && !__powerpc64__
+	96,
+#endif
+#if __powerpc64__
+	184,
+#endif
+#if __s390__ && !__s390x__
+	96,
+#endif
+#if __x86_64__
+	184,
+#endif
+#if __s390x__
+	184,
+#endif
 	0,
 	"_ZTISt10ostrstream",
 	St10ostrstream_vtable_name,
@@ -12153,11 +12330,63 @@ const char *St13basic_filebufIcSt11char_traitsIcEE_vtable_name[] = {
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE4syncEv",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9showmanycEv",
+#if __i386__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __ia64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __arm__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __mc68000__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __x86_64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9underflowEv",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE5uflowEv",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9pbackfailEi",
+#if __i386__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __ia64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __arm__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __mc68000__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __x86_64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE8overflowEi",
 	};
 
@@ -12230,11 +12459,63 @@ const char *St13basic_filebufIwSt11char_traitsIwEE_vtable_name[] = {
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE4syncEv",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE9showmanycEv",
+#if __i386__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __ia64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __arm__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __mc68000__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __x86_64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __s390x__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE9underflowEv",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE5uflowEv",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE9pbackfailEj",
+#if __i386__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __ia64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __arm__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __mc68000__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __x86_64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __s390x__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE8overflowEj",
 	};
 
@@ -12278,7 +12559,33 @@ const char *St13basic_fstreamIcSt11char_traitsIcEE_vtable_name[] = {
 	};
 
 struct classvtable St13basic_fstreamIcSt11char_traitsIcEE_vtable = {
+#if __i386__
 	148,
+#endif
+#if __ia64__
+	264,
+#endif
+#if __arm__
+	148,
+#endif
+#if __mc68000__
+	148,
+#endif
+#if __powerpc__ && !__powerpc64__
+	148,
+#endif
+#if __powerpc64__
+	264,
+#endif
+#if __s390__ && !__s390x__
+	148,
+#endif
+#if __x86_64__
+	264,
+#endif
+#if __s390x__
+	264,
+#endif
 	0,
 	"_ZTISt13basic_fstreamIcSt11char_traitsIcEE",
 	St13basic_fstreamIcSt11char_traitsIcEE_vtable_name,
@@ -12317,7 +12624,33 @@ const char *St13basic_fstreamIwSt11char_traitsIwEE_vtable_name[] = {
 	};
 
 struct classvtable St13basic_fstreamIwSt11char_traitsIwEE_vtable = {
+#if __i386__
 	152,
+#endif
+#if __ia64__
+	264,
+#endif
+#if __arm__
+	152,
+#endif
+#if __mc68000__
+	152,
+#endif
+#if __powerpc__ && !__powerpc64__
+	152,
+#endif
+#if __powerpc64__
+	264,
+#endif
+#if __s390__ && !__s390x__
+	152,
+#endif
+#if __x86_64__
+	264,
+#endif
+#if __s390x__
+	264,
+#endif
 	0,
 	"_ZTISt13basic_fstreamIwSt11char_traitsIwEE",
 	St13basic_fstreamIwSt11char_traitsIwEE_vtable_name,
@@ -12396,7 +12729,33 @@ const char *St14basic_ifstreamIcSt11char_traitsIcEE_vtable_name[] = {
 	};
 
 struct classvtable St14basic_ifstreamIcSt11char_traitsIcEE_vtable = {
+#if __i386__
 	144,
+#endif
+#if __ia64__
+	256,
+#endif
+#if __arm__
+	144,
+#endif
+#if __mc68000__
+	144,
+#endif
+#if __powerpc__ && !__powerpc64__
+	144,
+#endif
+#if __powerpc64__
+	256,
+#endif
+#if __s390__ && !__s390x__
+	144,
+#endif
+#if __x86_64__
+	256,
+#endif
+#if __s390x__
+	256,
+#endif
 	0,
 	"_ZTISt14basic_ifstreamIcSt11char_traitsIcEE",
 	St14basic_ifstreamIcSt11char_traitsIcEE_vtable_name,
@@ -12435,7 +12794,33 @@ const char *St14basic_ifstreamIwSt11char_traitsIwEE_vtable_name[] = {
 	};
 
 struct classvtable St14basic_ifstreamIwSt11char_traitsIwEE_vtable = {
+#if __i386__
 	148,
+#endif
+#if __ia64__
+	256,
+#endif
+#if __arm__
+	148,
+#endif
+#if __mc68000__
+	148,
+#endif
+#if __powerpc__ && !__powerpc64__
+	148,
+#endif
+#if __powerpc64__
+	256,
+#endif
+#if __s390__ && !__s390x__
+	256,
+#endif
+#if __x86_64__
+	256,
+#endif
+#if __s390x__
+	256,
+#endif
 	0,
 	"_ZTISt14basic_ifstreamIwSt11char_traitsIwEE",
 	St14basic_ifstreamIwSt11char_traitsIwEE_vtable_name,
@@ -12474,7 +12859,33 @@ const char *St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name[] = {
 	};
 
 struct classvtable St14basic_ofstreamIcSt11char_traitsIcEE_vtable = {
+#if __i386__
 	140,
+#endif
+#if __ia64__
+	248,
+#endif
+#if __arm__
+	140,
+#endif
+#if __mc68000__
+	140,
+#endif
+#if __powerpc__ && !__powerpc64__
+	140,
+#endif
+#if __powerpc64__
+	248,
+#endif
+#if __s390__ && !__s390x__
+	140,
+#endif
+#if __x86_64__
+	248,
+#endif
+#if __s390x__
+	248,
+#endif
 	0,
 	"_ZTISt14basic_ofstreamIcSt11char_traitsIcEE",
 	St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name,
@@ -12513,7 +12924,33 @@ const char *St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name[] = {
 	};
 
 struct classvtable St14basic_ofstreamIwSt11char_traitsIwEE_vtable = {
+#if __i386__
 	144,
+#endif
+#if __ia64__
+	248,
+#endif
+#if __arm__
+	144,
+#endif
+#if __mc68000__
+	144,
+#endif
+#if __powerpc__ && !__powerpc64__
+	144,
+#endif
+#if __powerpc64__
+	248,
+#endif
+#if __s390__ && !__s390x__
+	144,
+#endif
+#if __x86_64__
+	248,
+#endif
+#if __s390x__
+	248,
+#endif
 	0,
 	"_ZTISt14basic_ofstreamIwSt11char_traitsIwEE",
 	St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name,
@@ -12554,7 +12991,33 @@ const char *St14codecvt_bynameIcc11__mbstate_tE_vtable_name[] = {
 	"_ZNKSt7codecvtIcc11__mbstate_tE5do_inERS0_PKcS4_RS4_PcS6_RS6_",
 	"_ZNKSt7codecvtIcc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIcc11__mbstate_tE16do_always_noconvEv",
+#if __i386__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __ia64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __arm__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __mc68000__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __powerpc64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __x86_64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __s390x__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
 	"_ZNKSt7codecvtIcc11__mbstate_tE13do_max_lengthEv",
 	};
 
@@ -12600,7 +13063,33 @@ const char *St14codecvt_bynameIwc11__mbstate_tE_vtable_name[] = {
 	"_ZNKSt7codecvtIwc11__mbstate_tE5do_inERS0_PKcS4_RS4_PwS6_RS6_",
 	"_ZNKSt7codecvtIwc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIwc11__mbstate_tE16do_always_noconvEv",
+#if __i386__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __ia64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __arm__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __mc68000__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __powerpc64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __x86_64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __s390x__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
 	"_ZNKSt7codecvtIwc11__mbstate_tE13do_max_lengthEv",
 	};
 
@@ -12766,18 +13255,122 @@ const char *St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name[] = {
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED1Ev",
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED0Ev",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
+#if __i386__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
+#endif
+#if __ia64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
+#endif
+#if __arm__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
+#endif
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE4syncEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv",
+#if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9underflowEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv",
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9pbackfailEi",
+#if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE8overflowEi",
+#if __i386__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEjj",
+#endif
+#if __ia64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEmm",
+#endif
+#if __arm__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEjj",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEjj",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEjj",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEmm",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEjj",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEmm",
+#endif
+#if __s390x__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE14_M_really_syncEmm",
+#endif
 	};
 
 struct classvtable St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable = {
@@ -12818,18 +13411,122 @@ const char *St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name[] = {
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEED1Ev",
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEED0Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
+#if __i386__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
+#endif
+#if __ia64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
+#endif
+#if __arm__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
+#endif
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE4syncEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9showmanycEv",
+#if __i386__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE9underflowEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5uflowEv",
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE9pbackfailEj",
+#if __i386__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE8overflowEj",
+#if __i386__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj",
+#endif
+#if __ia64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm",
+#endif
+#if __arm__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEjj",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm",
+#endif
+#if __s390x__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE14_M_really_syncEmm",
+#endif
 	};
 
 struct classvtable St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable = {
@@ -13486,7 +14183,33 @@ const char *St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable_name[] = {
 	};
 
 struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable = {
+#if __i386__
 	96,
+#endif
+#if __ia64__
+	184,
+#endif
+#if __arm__
+	96,
+#endif
+#if __mc68000__
+	96,
+#endif
+#if __powerpc__ && !__powerpc64__
+	96,
+#endif
+#if __powerpc64__
+	184,
+#endif
+#if __s390__ && !__s390x__
+	96,
+#endif
+#if __x86_64__
+	184,
+#endif
+#if __s390x__
+	184,
+#endif
 	0,
 	"_ZTISt18basic_stringstreamIcSt11char_traitsIcESaIcEE",
 	St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable_name,
@@ -13525,7 +14248,33 @@ const char *St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable_name[] = {
 	};
 
 struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable = {
+#if __i386__
 	100,
+#endif
+#if __ia64__
+	184,
+#endif
+#if __arm__
+	100,
+#endif
+#if __mc68000__
+	100,
+#endif
+#if __powerpc__ && !__powerpc64__
+	100,
+#endif
+#if __powerpc64__
+	184,
+#endif
+#if __s390__ && !__s390x__
+	100,
+#endif
+#if __x86_64__
+	184,
+#endif
+#if __s390x__
+	184,
+#endif
 	0,
 	"_ZTISt18basic_stringstreamIwSt11char_traitsIwESaIwEE",
 	St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable_name,
@@ -13564,7 +14313,33 @@ const char *St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name[] = {
 	};
 
 struct classvtable St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable = {
+#if __i386__
 	92,
+#endif
+#if __ia64__
+	176,
+#endif
+#if __arm__
+	92,
+#endif
+#if __mc68000__
+	92,
+#endif
+#if __powerpc__ && !__powerpc64__
+	92,
+#endif
+#if __powerpc64__
+	176,
+#endif
+#if __s390__ && !__s390x__
+	92,
+#endif
+#if __x86_64__
+	176,
+#endif
+#if __s390x__
+	176,
+#endif
 	0,
 	"_ZTISt19basic_istringstreamIcSt11char_traitsIcESaIcEE",
 	St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name,
@@ -13603,7 +14378,33 @@ const char *St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable_name[] = {
 	};
 
 struct classvtable St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable = {
+#if __i386__
 	96,
+#endif
+#if __ia64__
+	176,
+#endif
+#if __arm__
+	96,
+#endif
+#if __mc68000__
+	96,
+#endif
+#if __powerpc__ && !__powerpc64__
+	96,
+#endif
+#if __powerpc64__
+	176,
+#endif
+#if __s390__ && !__s390x__
+	96,
+#endif
+#if __x86_64__
+	176,
+#endif
+#if __s390x__
+	176,
+#endif
 	0,
 	"_ZTISt19basic_istringstreamIwSt11char_traitsIwESaIwEE",
 	St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable_name,
@@ -13642,7 +14443,33 @@ const char *St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable_name[] = {
 	};
 
 struct classvtable St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable = {
+#if __i386__
 	88,
+#endif
+#if __ia64__
+	168,
+#endif
+#if __arm__
+	88,
+#endif
+#if __mc68000__
+	88,
+#endif
+#if __powerpc__ && !__powerpc64__
+	88,
+#endif
+#if __powerpc64__
+	168,
+#endif
+#if __s390__ && !__s390x__
+	88,
+#endif
+#if __x86_64__
+	168,
+#endif
+#if __s390x__
+	168,
+#endif
 	0,
 	"_ZTISt19basic_ostringstreamIcSt11char_traitsIcESaIcEE",
 	St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable_name,
@@ -13681,7 +14508,33 @@ const char *St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable_name[] = {
 	};
 
 struct classvtable St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable = {
+#if __i386__
 	92,
+#endif
+#if __ia64__
+	168,
+#endif
+#if __arm__
+	92,
+#endif
+#if __mc68000__
+	92,
+#endif
+#if __powerpc__ && !__powerpc64__
+	92,
+#endif
+#if __powerpc64__
+	168,
+#endif
+#if __s390__ && !__s390x__
+	92,
+#endif
+#if __x86_64__
+	168,
+#endif
+#if __s390x__
+	168,
+#endif
 	0,
 	"_ZTISt19basic_ostringstreamIwSt11char_traitsIwESaIwEE",
 	St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable_name,
@@ -13824,7 +14677,33 @@ const char *St7codecvtIcc11__mbstate_tE_vtable_name[] = {
 	"_ZNKSt7codecvtIcc11__mbstate_tE5do_inERS0_PKcS4_RS4_PcS6_RS6_",
 	"_ZNKSt7codecvtIcc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIcc11__mbstate_tE16do_always_noconvEv",
+#if __i386__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __ia64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __arm__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __mc68000__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __powerpc64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __x86_64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __s390x__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
 	"_ZNKSt7codecvtIcc11__mbstate_tE13do_max_lengthEv",
 	};
 
@@ -13870,7 +14749,33 @@ const char *St7codecvtIwc11__mbstate_tE_vtable_name[] = {
 	"_ZNKSt7codecvtIwc11__mbstate_tE5do_inERS0_PKcS4_RS4_PwS6_RS6_",
 	"_ZNKSt7codecvtIwc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIwc11__mbstate_tE16do_always_noconvEv",
+#if __i386__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __ia64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __arm__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __mc68000__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __powerpc64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_j",
+#endif
+#if __x86_64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
+#if __s390x__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERKS0_PKcS5_m",
+#endif
 	"_ZNKSt7codecvtIwc11__mbstate_tE13do_max_lengthEv",
 	};
 
@@ -14330,7 +15235,33 @@ const char *St9strstream_vtable_name[] = {
 	};
 
 struct classvtable St9strstream_vtable = {
+#if __i386__
 	104,
+#endif
+#if __ia64__
+	200,
+#endif
+#if __arm__
+	104,
+#endif
+#if __mc68000__
+	104,
+#endif
+#if __powerpc__ && !__powerpc64__
+	104,
+#endif
+#if __powerpc64__
+	200,
+#endif
+#if __s390__ && !__s390x__
+	104,
+#endif
+#if __x86_64__
+	200,
+#endif
+#if __s390x__
+	200,
+#endif
 	0,
 	"_ZTISt9strstream",
 	St9strstream_vtable_name,
@@ -14369,14 +15300,66 @@ const char *Si_vtable_name[] = {
 	};
 
 struct classvtable Si_vtable = {
+#if __i386__
 	8,
+#endif
+#if __ia64__
+	16,
+#endif
+#if __arm__
+	8,
+#endif
+#if __mc68000__
+	8,
+#endif
+#if __powerpc__ && !__powerpc64__
+	8,
+#endif
+#if __powerpc64__
+	16,
+#endif
+#if __s390__ && !__s390x__
+	8,
+#endif
+#if __x86_64__
+	16,
+#endif
+#if __s390x__
+	16,
+#endif
 	0,
 	"_ZTISi",
 	Si_vtable_name,
 	};
 
 struct base_type_info Si_baseinfo[] = {
+#if __i386__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __ia64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if __arm__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __mc68000__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __powerpc64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __x86_64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if __s390x__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
 	};
 
 struct classinfo _ZSi_classinfo = {
@@ -14409,14 +15392,66 @@ const char *So_vtable_name[] = {
 	};
 
 struct classvtable So_vtable = {
+#if __i386__
 	4,
+#endif
+#if __ia64__
+	8,
+#endif
+#if __arm__
+	4,
+#endif
+#if __mc68000__
+	4,
+#endif
+#if __powerpc__ && !__powerpc64__
+	4,
+#endif
+#if __powerpc64__
+	8,
+#endif
+#if __s390__ && !__s390x__
+	4,
+#endif
+#if __x86_64__
+	8,
+#endif
+#if __s390x__
+	8,
+#endif
 	0,
 	"_ZTISo",
 	So_vtable_name,
 	};
 
 struct base_type_info So_baseinfo[] = {
+#if __i386__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __ia64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if __arm__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __mc68000__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __powerpc64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if __x86_64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if __s390x__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
 	};
 
 struct classinfo _ZSo_classinfo = {
@@ -14449,14 +15484,66 @@ const char *St13basic_istreamIwSt11char_traitsIwEE_vtable_name[] = {
 	};
 
 struct classvtable St13basic_istreamIwSt11char_traitsIwEE_vtable = {
+#if __i386__
 	8,
+#endif
+#if __ia64__
+	16,
+#endif
+#if __arm__
+	8,
+#endif
+#if __mc68000__
+	8,
+#endif
+#if __powerpc__ && !__powerpc64__
+	8,
+#endif
+#if __powerpc64__
+	16,
+#endif
+#if __s390__ && !__s390x__
+	8,
+#endif
+#if __x86_64__
+	16,
+#endif
+#if __s390x__
+	16,
+#endif
 	0,
 	"_ZTISt13basic_istreamIwSt11char_traitsIwEE",
 	St13basic_istreamIwSt11char_traitsIwEE_vtable_name,
 	};
 
 struct base_type_info St13basic_istreamIwSt11char_traitsIwEE_baseinfo[] = {
+#if __i386__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __ia64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if __arm__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __mc68000__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __powerpc64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __x86_64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if __s390x__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
 	};
 
 struct classinfo _ZSt13basic_istreamIwSt11char_traitsIwEE_classinfo = {
@@ -14489,14 +15576,66 @@ const char *St13basic_ostreamIwSt11char_traitsIwEE_vtable_name[] = {
 	};
 
 struct classvtable St13basic_ostreamIwSt11char_traitsIwEE_vtable = {
+#if __i386__
 	4,
+#endif
+#if __ia64__
+	8,
+#endif
+#if __arm__
+	4,
+#endif
+#if __mc68000__
+	4,
+#endif
+#if __powerpc__ && !__powerpc64__
+	4,
+#endif
+#if __powerpc64__
+	8,
+#endif
+#if __s390__ && !__s390x__
+	4,
+#endif
+#if __x86_64__
+	8,
+#endif
+#if __s390x__
+	8,
+#endif
 	0,
 	"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",
 	St13basic_ostreamIwSt11char_traitsIwEE_vtable_name,
 	};
 
 struct base_type_info St13basic_ostreamIwSt11char_traitsIwEE_baseinfo[] = {
+#if __i386__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __ia64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if __arm__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __mc68000__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __powerpc64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if __x86_64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if __s390x__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
 	};
 
 struct classinfo _ZSt13basic_ostreamIwSt11char_traitsIwEE_classinfo = {
@@ -14536,7 +15675,33 @@ struct classvtable St9basic_iosIcSt11char_traitsIcEE_vtable = {
 	};
 
 struct base_type_info St9basic_iosIcSt11char_traitsIcEE_baseinfo[] = {
+#if __i386__
 	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __ia64__
+	{"_ZTISt8ios_base",	2050U},
+#endif
+#if __arm__
+	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __mc68000__
+	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __powerpc64__
+	{"_ZTISt8ios_base",	2050U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __x86_64__
+	{"_ZTISt8ios_base",	2050U},
+#endif
+#if __s390x__
+	{"_ZTISt8ios_base",	2050U},
+#endif
 	};
 
 struct classinfo _ZSt9basic_iosIcSt11char_traitsIcEE_classinfo = {
@@ -14576,7 +15741,33 @@ struct classvtable St9basic_iosIwSt11char_traitsIwEE_vtable = {
 	};
 
 struct base_type_info St9basic_iosIwSt11char_traitsIwEE_baseinfo[] = {
+#if __i386__
 	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __ia64__
+	{"_ZTISt8ios_base",	2050U},
+#endif
+#if __arm__
+	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __mc68000__
+	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __powerpc64__
+	{"_ZTISt8ios_base",	2050U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTISt8ios_base",	1026U},
+#endif
+#if __x86_64__
+	{"_ZTISt8ios_base",	2050U},
+#endif
+#if __s390x__
+	{"_ZTISt8ios_base",	2050U},
+#endif
 	};
 
 struct classinfo _ZSt9basic_iosIwSt11char_traitsIwEE_classinfo = {
@@ -14609,7 +15800,33 @@ const char *Sd_vtable_name[] = {
 	};
 
 struct classvtable Sd_vtable = {
+#if __i386__
 	12,
+#endif
+#if __ia64__
+	24,
+#endif
+#if __arm__
+	12,
+#endif
+#if __mc68000__
+	12,
+#endif
+#if __powerpc__ && !__powerpc64__
+	12,
+#endif
+#if __powerpc64__
+	24,
+#endif
+#if __s390__ && !__s390x__
+	12,
+#endif
+#if __x86_64__
+	24,
+#endif
+#if __s390x__
+	24,
+#endif
 	0,
 	"_ZTISd",
 	Sd_vtable_name,
@@ -14617,7 +15834,33 @@ struct classvtable Sd_vtable = {
 
 struct base_type_info Sd_baseinfo[] = {
 	{"_ZTISi",	2U},
+#if __i386__
 	{"_ZTISo",	2050U},
+#endif
+#if __ia64__
+	{"_ZTISo",	4098U},
+#endif
+#if __arm__
+	{"_ZTISo",	2050U},
+#endif
+#if __mc68000__
+	{"_ZTISo",	2050U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTISo",	2050U},
+#endif
+#if __powerpc64__
+	{"_ZTISo",	4098U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTISo",	2050U},
+#endif
+#if __x86_64__
+	{"_ZTISo",	4098U},
+#endif
+#if __s390x__
+	{"_ZTISo",	4098U},
+#endif
 	};
 
 struct classinfo _ZSd_classinfo = {
@@ -14850,7 +16093,33 @@ const char *St14basic_iostreamIwSt11char_traitsIwEE_vtable_name[] = {
 	};
 
 struct classvtable St14basic_iostreamIwSt11char_traitsIwEE_vtable = {
+#if __i386__
 	12,
+#endif
+#if __ia64__
+	24,
+#endif
+#if __arm__
+	12,
+#endif
+#if __mc68000__
+	12,
+#endif
+#if __powerpc__ && !__powerpc64__
+	12,
+#endif
+#if __powerpc64__
+	24,
+#endif
+#if __s390__ && !__s390x__
+	12,
+#endif
+#if __x86_64__
+	24,
+#endif
+#if __s390x__
+	24,
+#endif
 	0,
 	"_ZTISt14basic_iostreamIwSt11char_traitsIwEE",
 	St14basic_iostreamIwSt11char_traitsIwEE_vtable_name,
@@ -14858,7 +16127,33 @@ struct classvtable St14basic_iostreamIwSt11char_traitsIwEE_vtable = {
 
 struct base_type_info St14basic_iostreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt13basic_istreamIwSt11char_traitsIwEE",	2U},
+#if __s390__ && !__s390x__
 	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
+#endif
+#if __powerpc64__
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	4098U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
+#endif
+#if __mc68000__
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
+#endif
+#if __arm__
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
+#endif
+#if __i386__
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
+#endif
+#if __x86_64__
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	4098U},
+#endif
+#if __s390x__
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	4098U},
+#endif
+#if __ia64__
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	4098U},
+#endif
 	};
 
 struct classinfo _ZSt14basic_iostreamIwSt11char_traitsIwEE_classinfo = {
@@ -15783,16 +17078,91 @@ const char *St15basic_streambufIcSt11char_traitsIcEE_vtable_name[] = {
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEED1Ev",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEED0Ev",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
+#if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
+#endif
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE4syncEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv",
+#if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9underflowEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9pbackfailEi",
+#if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE8overflowEi",
 	};
 
@@ -15834,16 +17204,94 @@ const char *St15basic_streambufIwSt11char_traitsIwEE_vtable_name[] = {
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEED1Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEED0Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
+#if __i386__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
+#endif
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE4syncEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9showmanycEv",
+#if __i386__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9underflowEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5uflowEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9pbackfailEj",
+#if __i386__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __arm__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __mc68000__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE8overflowEj",
 	};
 
