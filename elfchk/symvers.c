@@ -77,7 +77,7 @@ for(i=0;i<file->numdynents;i++) {
 if( file->verd )
 	for(i=0;i<file->numverdefs;i++) {
 #ifdef DEBUG
-		printf("version index %x\n", file->verd->vd_ndx);
+		printf("version def index %x\n", file->verd->vd_ndx);
 #endif
 		verdaux=(Elf_Verdaux *)((char *)file->verd+file->verd->vd_aux);
 		numverdaux=file->verd->vd_cnt;
@@ -87,7 +87,7 @@ if( file->verd )
 						file->verdhdr->sh_link);
 		for(j=0;j<numverdaux;j++) {
 #ifdef DEBUG
-			printf("version %x %x %s\n", i, verdaux->vda_name,
+			printf("version def %x %x %s\n", i, verdaux->vda_name,
 		  	ElfGetStringIndex(file,verdaux->vda_name,file->verdhdr->sh_link));
 #endif
 			verdaux=(Elf_Verdaux *)((char *)verdaux+ verdaux->vda_next);
@@ -98,7 +98,7 @@ if( file->verd )
 if( file->vern )
 	for(i=0;i<file->numverneed;i++) {
 #ifdef DEBUG
-		printf("version index %x\n", file->vern->vn_version);
+		printf("version need index %x\n", file->vern->vn_version);
 #endif
 		vernaux=(Elf_Vernaux *)((char *)file->vern+file->vern->vn_aux);
 		numvernaux=file->vern->vn_cnt;
@@ -109,7 +109,7 @@ if( file->vern )
 						file->vernhdr->sh_link);
 		for(j=0;j<numvernaux;j++) {
 #ifdef DEBUG
-			printf("version %x %x %s\n", i, vernaux->vna_other,
+			printf("version need %x %x %s\n", i, vernaux->vna_other,
 		  	ElfGetStringIndex(file,vernaux->vna_name,file->vernhdr->sh_link));
 #endif
 			file->versionnames[vernaux->vna_other]=ElfGetStringIndex(file,
