@@ -42,6 +42,7 @@ typedef	struct	{
 	int	size;
 	int	numph;
 	int	numsh;
+	Elf32_Shdr *dynsymhdr;	/* Dynamic Symbol table header */
 
 	int	numsyms;
 	Elf32_Shdr *symhdr;	/* Symbol table header */
