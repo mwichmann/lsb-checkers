@@ -43,10 +43,8 @@ CheckOffset(struct sockaddr_un,sun_path,2,3,34486)
 CheckTypeSize(struct sockaddr_un,110, 9152, 10)
 CheckOffset(struct sockaddr_un,sun_path,2,10,34486)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct sockaddr_un,0, 9152, 6)
-Msg("Missing member data for sockaddr_un on PPC32\n");
-CheckOffset(struct sockaddr_un,sun_family,0,6,34485)
-CheckOffset(struct sockaddr_un,sun_path,0,6,34486)
+CheckTypeSize(struct sockaddr_un,110, 9152, 6)
+CheckOffset(struct sockaddr_un,sun_path,2,6,34486)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9152,0);
 Msg("Find size of sockaddr_un (9152)\n");

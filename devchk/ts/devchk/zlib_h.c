@@ -316,7 +316,7 @@ CheckTypeSize(intf,4, 10168, 3)
 #elif __s390__
 CheckTypeSize(intf,4, 10168, 10)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(intf,0, 10168, 6)
+CheckTypeSize(intf,4, 10168, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10168,0);
 Msg("Find size of intf (10168)\n");
@@ -567,7 +567,7 @@ CheckTypeSize(uIntf,4, 10169, 3)
 #elif __s390__
 CheckTypeSize(uIntf,4, 10169, 10)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uIntf,0, 10169, 6)
+CheckTypeSize(uIntf,4, 10169, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10169,0);
 Msg("Find size of uIntf (10169)\n");

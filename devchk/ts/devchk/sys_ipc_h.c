@@ -132,7 +132,6 @@ CheckOffset(struct ipc_perm,cgid,16,6,34724)
 CheckOffset(struct ipc_perm,mode,20,6,34725)
 CheckOffset(struct ipc_perm,__pad1,28,6,34726)
 CheckOffset(struct ipc_perm,__seq,24,6,34727)
-CheckOffset(struct ipc_perm,__pad2,0,6,34728)
 CheckOffset(struct ipc_perm,__unused1,32,6,34729)
 CheckOffset(struct ipc_perm,__unused2,40,6,34730)
 #endif
