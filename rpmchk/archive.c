@@ -94,14 +94,13 @@ while( !gzeof(zfile) ) {
 	printf("Rdev: %8.8s,%8.8s\n", ahdr.c_rdevmajor,ahdr.c_rdevminor );
 	printf("mtime: %8.8s\n", ahdr.c_mtime );
 	printf("nlink: %8.8s\n", ahdr.c_nlink );
-	printf("filesize: %8.8s\n", ahdr.c_filesize );
+	fprintf(stderr,"filesize: %8.8s\n", ahdr.c_filesize );
 	printf("namesize: %8.8s\n", ahdr.c_namesize );
 	printf("UID: %8.8s\n", ahdr.c_uid );
 	printf("GID: %8.8s\n", ahdr.c_gid );
 	fprintf(stderr,"filesize: %8.8s\n", ahdr.c_filesize );
 	fprintf(stderr,"dev: %8.8s,%8.8s\n", ahdr.c_devmajor,ahdr.c_devminor );
 */
-	fprintf(stderr,"filesize: %8.8s\n", ahdr.c_filesize );
 
 	if( !(strncmp(ahdr.c_magic,"070701",6) == 0) ) {
         	snprintf( tmp_string, TMP_STRING_SIZE,
@@ -118,7 +117,6 @@ while( !gzeof(zfile) ) {
 	num[8]=0; /* NULL terminate the namesize */
 	size=strtol(num,NULL,16);
 	gzread(zfile, filename, size );
-	fprintf(stderr,"filename: %s\n", filename );
 	/*
 	 * Check/fix padding here - the amount of space used for the header
 	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
