@@ -97,7 +97,7 @@ fprintf(stderr,"VFUNC:%s:%d:%s\n", classp->name,j,dlinfo.dli_sname);
 	char	str[256];
 	
 	sprintf(str,"_ZTV%s",&(classp->name[2]));
-fprintf(stderr,"vtabl:%S:0:%s\n", classp->name,str);
+fprintf(stderr,"vtabl:%s:0:%s\n", classp->name,str);
 	printf("Vtable name %s not found\n",classp->vtablename);
 }
 
