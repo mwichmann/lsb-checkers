@@ -346,6 +346,13 @@ Msg("Find size of protoent (10139)\n");
 #endif
 
 #ifdef __i386__
+CheckTypeSize(struct netent,16, 10141, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10141,0);
+Msg("Find size of netent (10141)\n");
+#endif
+
+#ifdef __i386__
 CheckTypeSize(struct addrinfo,32, 10125, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10125,0);

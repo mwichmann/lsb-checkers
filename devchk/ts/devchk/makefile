@@ -25,7 +25,6 @@ OBJS = hdrchk.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
-	float_h.o \
 	fmtmsg_h.o \
 	fnmatch_h.o \
 	ftw_h.o \
@@ -46,6 +45,7 @@ OBJS = hdrchk.o \
 	pthread_h.o \
 	pwd_h.o \
 	regex_h.o \
+	rpc_rpc_h.o \
 	sched_h.o \
 	search_h.o \
 	security_pam_appl_h.o \
