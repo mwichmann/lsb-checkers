@@ -1,7 +1,7 @@
 /* 
  *
  * Copyright (c) 2002 The Free Standards Group Inc
- * Copyright (c) 2002 Stuart Anderson (anderson@freestnadards.org)
+ * Copyright (c) 2002 Stuart Anderson (anderson@freestandards.org)
  *
  */
 #include <stdio.h>
@@ -37,7 +37,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.3 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.4 $";
 
 int
 main(int argc, char *argv[])
