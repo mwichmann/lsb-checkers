@@ -8828,7 +8828,7 @@ struct versym libc_so_6[] = {
 	{"nftw","GLIBC_2.1"},
 #endif
 #if __ia64__
-	{"nftw","GLIBC_2.2.5"},
+	{"nftw","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"nftw","GLIBC_2.1"},
@@ -8849,7 +8849,7 @@ struct versym libc_so_6[] = {
 	{"nftw64","GLIBC_2.1"},
 #endif
 #if __ia64__
-	{"nftw64","GLIBC_2.2.5"},
+	{"nftw64","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"nftw64","GLIBC_2.1"},
@@ -10130,7 +10130,7 @@ struct versym libc_so_6[] = {
 	{"regexec","GLIBC_2.0"},
 #endif
 #if __ia64__
-	{"regexec","GLIBC_2.3.3"},
+	{"regexec","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"regexec","GLIBC_2.0"},
