@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <math.h>
 #undef llroundl
-static long long(*funcptr) (long double ) = 0;
+static long long int(*funcptr) (long double ) = 0;
 
 extern int __lsb_check_params;
-long long llroundl (long double arg0 )
+long long int llroundl (long double arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	long long ret_value  ;
+	long long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "llroundl", "GLIBC_2.1");
 	if(__lsb_check_params)
