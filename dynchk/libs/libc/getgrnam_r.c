@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <stddef.h>
 #include <grp.h>
+#include <stddef.h>
 #undef getgrnam_r
 static int(*funcptr) (const char * , struct group * , char * , size_t , struct group * * ) = 0;
 

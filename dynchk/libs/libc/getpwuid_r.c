@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/types.h>
 #include <pwd.h>
 #include <stddef.h>
-#include <sys/types.h>
 #undef getpwuid_r
 static int(*funcptr) (uid_t , struct passwd * , char * , size_t , struct passwd * * ) = 0;
 
