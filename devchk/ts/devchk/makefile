@@ -25,6 +25,7 @@ OBJS = hdrchk.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
+	features_h.o \
 	fmtmsg_h.o \
 	fnmatch_h.o \
 	ftw_h.o \
@@ -90,6 +91,7 @@ OBJS = hdrchk.o \
 	unistd_h.o \
 	utime_h.o \
 	utmp_h.o \
+	utmpx_h.o \
 	wchar_h.o \
 	wctype_h.o \
 	wordexp_h.o \

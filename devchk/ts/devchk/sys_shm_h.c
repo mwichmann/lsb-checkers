@@ -171,6 +171,10 @@ CheckTypeSize(shmatt_t,4, 10456, 10)
 CheckTypeSize(shmatt_t,8, 10493, 9)
 #endif
 
+#if __s390x__
+CheckTypeSize(shmatt_t,8, 10548, 12)
+#endif
+
 #if __i386__
 CheckTypeSize(struct shmid_ds,84, 9129, 2)
 CheckMemberSize(struct shmid_ds,shm_perm,36,2,33702)
@@ -309,6 +313,30 @@ CheckMemberSize(struct shmid_ds,__unused5,8,9,40078)
 CheckOffset(struct shmid_ds,__unused5,96,9,40078)
 CheckMemberSize(struct shmid_ds,__unused6,8,9,40079)
 CheckOffset(struct shmid_ds,__unused6,104,9,40079)
+#endif
+
+#if __s390x__
+CheckTypeSize(struct shmid_ds,44, 10549, 12)
+CheckMemberSize(struct shmid_ds,shm_perm,20,12,40218)
+CheckOffset(struct shmid_ds,shm_perm,0,12,40218)
+CheckMemberSize(struct shmid_ds,shm_segsz,0,12,40219)
+CheckOffset(struct shmid_ds,shm_segsz,20,12,40219)
+CheckMemberSize(struct shmid_ds,shm_atime,0,12,40220)
+CheckOffset(struct shmid_ds,shm_atime,20,12,40220)
+CheckMemberSize(struct shmid_ds,shm_dtime,0,12,40221)
+CheckOffset(struct shmid_ds,shm_dtime,20,12,40221)
+CheckMemberSize(struct shmid_ds,shm_ctime,0,12,40222)
+CheckOffset(struct shmid_ds,shm_ctime,20,12,40222)
+CheckMemberSize(struct shmid_ds,shm_cpid,0,12,40223)
+CheckOffset(struct shmid_ds,shm_cpid,20,12,40223)
+CheckMemberSize(struct shmid_ds,shm_lpid,0,12,40224)
+CheckOffset(struct shmid_ds,shm_lpid,20,12,40224)
+CheckMemberSize(struct shmid_ds,shm_nattch,8,12,40225)
+CheckOffset(struct shmid_ds,shm_nattch,20,12,40225)
+CheckMemberSize(struct shmid_ds,__unused4,8,12,40226)
+CheckOffset(struct shmid_ds,__unused4,28,12,40226)
+CheckMemberSize(struct shmid_ds,__unused5,8,12,40227)
+CheckOffset(struct shmid_ds,__unused5,36,12,40227)
 #endif
 
 #ifdef TET_TEST

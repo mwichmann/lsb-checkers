@@ -59,6 +59,14 @@ CheckTypeSize(msgqnum_t,4, 10491, 10)
 CheckTypeSize(msgqnum_t,4, 10492, 6)
 #endif
 
+#if __s390x__
+CheckTypeSize(msgqnum_t,8, 10544, 12)
+#endif
+
+#if __s390x__
+CheckTypeSize(msglen_t,8, 10545, 12)
+#endif
+
 #if __i386__
 CheckTypeSize(struct msqid_ds,88, 9117, 2)
 CheckMemberSize(struct msqid_ds,msg_perm,36,2,34276)
@@ -155,10 +163,10 @@ CheckMemberSize(struct msqid_ds,msg_rtime,0,10,34756)
 CheckOffset(struct msqid_ds,msg_rtime,44,10,34756)
 CheckMemberSize(struct msqid_ds,__unused1,0,10,34758)
 CheckOffset(struct msqid_ds,__unused1,40,10,34758)
-CheckMemberSize(struct msqid_ds,msg_ctime,0,10,34757)
-CheckOffset(struct msqid_ds,msg_ctime,52,10,34757)
 CheckMemberSize(struct msqid_ds,__unused2,0,10,34759)
 CheckOffset(struct msqid_ds,__unused2,48,10,34759)
+CheckMemberSize(struct msqid_ds,msg_ctime,0,10,34757)
+CheckOffset(struct msqid_ds,msg_ctime,52,10,34757)
 CheckMemberSize(struct msqid_ds,__unused3,0,10,34760)
 CheckOffset(struct msqid_ds,__unused3,56,10,34760)
 CheckMemberSize(struct msqid_ds,__msg_cbytes,0,10,34761)
@@ -175,6 +183,32 @@ CheckMemberSize(struct msqid_ds,__unused4,0,10,34766)
 CheckOffset(struct msqid_ds,__unused4,80,10,34766)
 CheckMemberSize(struct msqid_ds,__unused5,0,10,34767)
 CheckOffset(struct msqid_ds,__unused5,84,10,34767)
+#endif
+
+#if __s390x__
+CheckTypeSize(struct msqid_ds,60, 10546, 12)
+CheckMemberSize(struct msqid_ds,msg_perm,20,12,40201)
+CheckOffset(struct msqid_ds,msg_perm,0,12,40201)
+CheckMemberSize(struct msqid_ds,msg_stime,0,12,40202)
+CheckOffset(struct msqid_ds,msg_stime,20,12,40202)
+CheckMemberSize(struct msqid_ds,msg_rtime,0,12,40203)
+CheckOffset(struct msqid_ds,msg_rtime,20,12,40203)
+CheckMemberSize(struct msqid_ds,msg_ctime,0,12,40204)
+CheckOffset(struct msqid_ds,msg_ctime,20,12,40204)
+CheckMemberSize(struct msqid_ds,__msg_cbytes,8,12,40205)
+CheckOffset(struct msqid_ds,__msg_cbytes,20,12,40205)
+CheckMemberSize(struct msqid_ds,msg_qnum,8,12,40206)
+CheckOffset(struct msqid_ds,msg_qnum,28,12,40206)
+CheckMemberSize(struct msqid_ds,msg_qbytes,8,12,40207)
+CheckOffset(struct msqid_ds,msg_qbytes,36,12,40207)
+CheckMemberSize(struct msqid_ds,msg_lspid,0,12,40208)
+CheckOffset(struct msqid_ds,msg_lspid,44,12,40208)
+CheckMemberSize(struct msqid_ds,msg_lrpid,0,12,40209)
+CheckOffset(struct msqid_ds,msg_lrpid,44,12,40209)
+CheckMemberSize(struct msqid_ds,__unused4,8,12,40210)
+CheckOffset(struct msqid_ds,__unused4,44,12,40210)
+CheckMemberSize(struct msqid_ds,__unused5,8,12,40211)
+CheckOffset(struct msqid_ds,__unused5,52,12,40211)
 #endif
 
 #ifdef TET_TEST

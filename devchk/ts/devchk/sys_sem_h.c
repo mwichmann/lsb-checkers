@@ -230,6 +230,22 @@ CheckMemberSize(struct semid_ds,__unused4,8,9,40085)
 CheckOffset(struct semid_ds,__unused4,80,9,40085)
 #endif
 
+#if __s390x__
+CheckTypeSize(struct semid_ds,44, 10547, 12)
+CheckMemberSize(struct semid_ds,sem_perm,20,12,40212)
+CheckOffset(struct semid_ds,sem_perm,0,12,40212)
+CheckMemberSize(struct semid_ds,sem_otime,0,12,40213)
+CheckOffset(struct semid_ds,sem_otime,20,12,40213)
+CheckMemberSize(struct semid_ds,sem_ctime,0,12,40214)
+CheckOffset(struct semid_ds,sem_ctime,20,12,40214)
+CheckMemberSize(struct semid_ds,sem_nsems,8,12,40215)
+CheckOffset(struct semid_ds,sem_nsems,20,12,40215)
+CheckMemberSize(struct semid_ds,__unused3,8,12,40216)
+CheckOffset(struct semid_ds,__unused3,28,12,40216)
+CheckMemberSize(struct semid_ds,__unused4,8,12,40217)
+CheckOffset(struct semid_ds,__unused4,36,12,40217)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
