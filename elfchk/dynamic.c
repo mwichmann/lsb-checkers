@@ -530,8 +530,8 @@ checkDYNAMIC(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal )
     for(j=0;j<numDynamicInfo;j++) {
 //fprintf(stderr,"Comparing %d to %d\n", dyn1[i].d_tag, DynamicInfo[j].tag );
       if (dyn1[i].d_tag == DynamicInfo[j].tag ) {
-        //fprintf(stderr,"matched dyn tag\n" );
-        if (!DynamicInfo[i].func(file1, hdr1, dyn1, journal))
+        //fprintf(stderr,"matched dyn tag %d\n",dyn1[i].d_tag );
+        if (!DynamicInfo[j].func(file1, hdr1, &dyn1[i], journal))
         {
           pass = 0;
         };
