@@ -33,6 +33,7 @@ uint32_t *filedevs;
 uint16_t *filerdevs;
 uint32_t *fileinodes;
 uint32_t *filetimes;
+char	*oldfilenames;
 char	*filemd5s;
 char	*filelinktos;
 char	*fileusernames;
@@ -43,5 +44,6 @@ char	**basenames;
 char	**dirnames;
 int	numdirnames;
 
-int	hasPayloadFilesHavePrefix;
+int	hasPayloadFilesHavePrefix=0;
+int	hasCompressedFileNames=0;
 int	rpmchkdebug;
