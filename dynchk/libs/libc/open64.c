@@ -18,7 +18,8 @@ int open64(const char *pathname, int flags, ...)
 
 	validate_pathname(pathname, "open64" );
 	//validate_flags(flags, "open64");
-	validate_filemode(mode, "open64");
+	if( flags & O_CREAT )
+		validate_filemode(mode, "open64");
 		
 	va_end(args);
 
