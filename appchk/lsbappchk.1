@@ -3,6 +3,8 @@
 lsbappchk \- check LSB conformance of application
 .SH SYNOPSIS
 .B lsbappchk
+.RB [ \-o
+.IR outputfile ]
 .RB [ \-A ]
 .RB [ \-M
 .IR modulename ]
@@ -18,6 +20,10 @@ and the list of functions and global data used by the
 application. Warnings are produced for anything that is used, but not
 contained in the LSB specification.
 .TP
+\fB\-o \fIoutputfile\fR
+Write the journal file (see below) to \fIoutputfile\fR
+instead of to the default filename in the current directory.
+.TP
 \fB\-A
 Check the symbols found in all modules.
 .TP
@@ -25,26 +31,34 @@ Check the symbols found in all modules.
 Check only the symbols found in module \fImodulename\fR.
 .TP
 \fB\-L \fInameoflib\fR
-Specify the full path of a library which is part of the application.  This
-option can be specified as many times as needed, and will prevent lsbappchk
+Specify the full path of a shared library which is part of the application.
+This option can be specified as many times as needed, and will prevent lsbappchk
 from complaining about symbols which are provided in those shared
-libraries.
+libraries. The order of libraries specified this way is significant,
+since lsbappchk does not run the application, it cannot deduce the
+library dependency graph.
 .PP
-A journal file named journal.appchk.<appname> where appname is the
+A journal file named journal.appchk.\fIappname\fR where appname is the
 first binary specified is created. It contains a record of the test
 results. You must have write access to the current working directory
 in order to run lsbappchk successfully.
 .PP
-The lsbappchk program cannot detect all conformance problems.  In particular, itis a static test and does not actually run the application.  Lsbappchk
+The lsbappchk program cannot detect all conformance problems.  In particular,
+it is a static test and does not actually run the application.  Lsbappchk
 will not find any behaviors which show themselves only at run\-time
 (for example, anything involving the File Hierarchy Standard, or
-constants and other such items which are found in header files).
+constants and other such items which are found in header files). Lsbappchk
+will warn that it cannot determine the validity of a call to \fIioctl\fR.
+The dynamic checker should be used to test run\-time behavior.
+.SH "NOTES"
+lsbappchk is intended to be used on applications compiled in LSB mode.
+When used as an analysis tool on native applications, it will likely
+report failures, such as symbols with the wrong symbol version, which
+will vanish when the application is compiled correctly.
 .SH "AUTHORS"
 The contributors to the Linux Standard Base.
 .SH "REPORTING BUGS"
 Report bugs to <lsb-test@linuxbase.org>.
-.SH "BUGS"
-Should be able to specify where to write the journal file.
 .SH "SEE ALSO"
 Linux Standard Base specification and other documents at
 http://www.linuxbase.org/
