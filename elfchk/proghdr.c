@@ -96,8 +96,10 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 			 *
 			 * A section may have fewer capabilities than the segment, but
 			 * should not require a capability not provided by the segment
+			 *
+			 * Only check the bits we are deriving from the Program Header flags
 			 */
-			if( file->saddr[i].sh_flags&~secflags ) {
+			if( (file->saddr[i].sh_flags&(SHF_ALLOC|SHF_WRITE|SHF_EXECINSTR))&~secflags ) {
 				snprintf(tmp_string, TMP_STRING_SIZE,
 						 "Section %s flags %lx does not correspond to Segment flags %x", 
 						 ElfGetString(file, file->saddr[i].sh_name),
