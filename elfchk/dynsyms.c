@@ -17692,6 +17692,11 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"clock","GLIBC_2.2",0,LSB_Core},
 #endif
+	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core},
+	{"clock_getres","GLIBC_2.2",0,LSB_Core},
+	{"clock_gettime","GLIBC_2.2",0,LSB_Core},
+	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core},
+	{"clock_settime","GLIBC_2.2",0,LSB_Core},
 #if __i386__
 	{"clog","GLIBC_2.1",0,LSB_Core},
 #endif
@@ -33226,6 +33231,8 @@ struct versym DynSyms[] = {
 #endif
 	{"shellClassRec","",0,LSB_Graphics},
 	{"shellWidgetClass","",0,LSB_Graphics},
+	{"shm_open","GLIBC_2.2",0,LSB_Core},
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core},
 #if __i386__
 	{"shmat","GLIBC_2.0",0,LSB_Core},
 #endif
@@ -36449,6 +36456,11 @@ struct versym DynSyms[] = {
 	{"time","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"timeout","",0,LSB_Core},
+	{"timer_create","GLIBC_2.2",0,LSB_Core},
+	{"timer_delete","GLIBC_2.2",0,LSB_Core},
+	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
+	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
+	{"timer_settime","GLIBC_2.2",0,LSB_Core},
 #if __i386__
 	{"times","GLIBC_2.0",0,LSB_Core},
 #endif
