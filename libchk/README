@@ -1,0 +1,12 @@
+libchk
+------
+
+This program tests that the runtime libraries contain all of
+the interfaces with correct versions as specified by
+the LSB specification
+
+Running the run_tests program will generate a report of the system.
+
+Please send any feedback you may have to lsb-test@linuxbase.org
+--
+Last updated 2001/12/5
