@@ -1,5 +1,6 @@
 # Generated file #
 LIBOBJS = \
+	ld_lsb_ia64_so_1.o \
 	ld_lsb_so_1.o \
 	libGL_so_1.o \
 	libICE_so_6.o \
@@ -8,6 +9,7 @@ LIBOBJS = \
 	libXext_so_6.o \
 	libXt_so_6.o \
 	libc_so_6.o \
+	libc_so_6_1.o \
 	libcrypt_so_1.o \
 	libdl_so_2.o \
 	libm_so_6.o \
