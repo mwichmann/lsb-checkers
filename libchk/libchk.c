@@ -12,14 +12,12 @@ char *libpaths[] = {
 	"/usr/X11R6/lib/%s",
 	0 };
 
-check_lib(char *libname,char *entries[])
+check_lib(char *libname,struct versym entries[])
 {
 ElfFile		*file=NULL;
 Elf32_Shdr	*hdr;
-Elf32_Sym	*syms;
 char filename[128];
-int numsyms,i,j;
-
+int i,j;
 
 /* Find the library */
 
@@ -40,45 +38,65 @@ checkElfhdr(file);
 
 printf("Checking symbols in %s\n", filename );
 
-/* Open it, and start parsing ELF */
-
-for(i=0;i<file->numsh;i++) {
-	hdr=&(file->saddr[i]);
-#ifdef DEBUG
-	printf( "Checking %s\n", ElfGetString(file,hdr->sh_name));
-#endif
-	if( strcmp(ElfGetString(file,hdr->sh_name),".dynsym") == 0 ) {
-		break;
-		}
-	}
-
-if( i == file->numsh ) {
-	printf("Unable to find .dynsym section in %s\n", libname );
-	return;
-	}
-
-numsyms=hdr->sh_size/hdr->sh_entsize;
-
-syms=(Elf32_Sym *)((caddr_t)file->addr+hdr->sh_offset);
-
-for(i=0;entries[i];i++) {
+for(i=0;entries[i].name;i++) {
 	/* See if this symbol is in the dynsyn section of the library */
 
-	/* printf("Looking for %s\n", entries[i]); */
-	for(j=0;j<numsyms;j++) {
-		if( !( ELF32_ST_TYPE(syms[j].st_info) == STT_FUNC ||
-		       ELF32_ST_TYPE(syms[j].st_info) == STT_OBJECT) ) continue;
+	/* printf("Looking for %s\n", entries[i].name); */
+	for(j=0;j<file->numsyms;j++) {
+		if( !( ELF32_ST_TYPE(file->syms[j].st_info) == STT_FUNC ||
+		       ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT) )
+			continue;
 #ifdef DEBUG
-		printf("Bind=%x\n", ELF32_ST_BIND(syms[j].st_info) );
-		printf("Type=%x\n", ELF32_ST_TYPE(syms[j].st_info) );
+		printf("Bind=%x\n", ELF32_ST_BIND(file->syms[j].st_info) );
+		printf("Type=%x\n", ELF32_ST_TYPE(file->syms[j].st_info) );
 		printf("Comparing %s and %s\n", 
-			ElfGetStringIndex(file,syms[j].st_name,
-				hdr->sh_link),entries[i]);
+			ElfGetStringIndex(file,file->syms[j].st_name,
+				file->symhdr->sh_link),entries[i].name);
 #endif
-		if( strcmp(ElfGetStringIndex(file,syms[j].st_name,
-				hdr->sh_link),entries[i]) == 0 ) break;
+		if( strcmp(ElfGetStringIndex(file,file->syms[j].st_name,
+				file->symhdr->sh_link),entries[i].name) == 0 )
+			break;
 		}
-	if( j == numsyms )
-		printf("Didn't find %s in %s\n", entries[i],libname);
+	if( j == file->numsyms ) {
+		printf("Didn't find %s in %s\n", entries[i].name,libname);
+		continue;
+		}
+
+	/* Now, check to see if it has the right version associated with it */
+
+	/* This bit means it's internal */
+	if( file->vers[j] & 0x8000 )
+		continue;
+
+	/* Zero means the symbol is local */
+	if( file->vers[j] == 0 )
+		continue;
+
+	/* One means the symbol is defined & available, but not versioned */
+	if( file->vers[j] == 1 )
+		if( entries[i].vername[0] != '\000' )
+		printf("Warning!!! Found unversioned symbol %s, but expecting version %s\n",
+		ElfGetStringIndex(file,file->syms[j].st_name,file->symhdr->sh_link),
+		entries[i].vername);
+		continue;
+
+	/* This is just a sanity check, which should never be hit */
+	if( file->vers[j] > file->numverdefs ) {
+		printf("Warning!!! Found version %x, for %s which is too big\n",
+		file->vers[j],
+		ElfGetStringIndex(file,file->syms[j].st_name,file->symhdr->sh_link));
+		continue;
+	}
+
+#ifdef DEBUG
+	printf("Symbol %s vers %s\n",
+		ElfGetStringIndex(file,file->syms[j].st_name,file->symhdr->sh_link),
+		file->versionnames[file->vers[j]]);
+#endif
+	if( strcmp(file->versionnames[file->vers[j]], entries[i].vername) != 0 ) {
+		printf("%s has version %s, expecting %s\n",
+			ElfGetStringIndex(file,file->syms[j].st_name,file->symhdr->sh_link),
+			file->versionnames[file->vers[j]], entries[i].vername );
+		}
 	}
 }

@@ -3,12 +3,12 @@ include libs.mk
 
 OBJS = libchk.o libs.o $(LIBOBJS)
 
-CFLAGS=-I../elfchk
+CFLAGS=-g -I../elfchk
 
 all:: libchk
 
 libchk: $(OBJS) ../elfchk/libelfchk.a
-	cc -o libchk $(OBJS) -L../elfchk -lelfchk
+	cc $(CFLAGS) -o libchk $(OBJS) -L../elfchk -lelfchk
 
 libs.c: mkfunclist
 	./mkfunclist
