@@ -18,19 +18,19 @@ test: test.c $(LIB)
 check: dynsyms.c dynsyms.c.chk
 	diff dynsyms.c dynsyms.c.chk
 
-dynsyms.c: ./mkfunclist
+dynsyms.c:
 	./mkfunclist >dynsyms.c
 
-dynsyms.c.chk: ./mkfunclist
+dynsyms.c.chk:
 	./mkfunclist2 >dynsyms.c.chk
 
-dyntags.c: ./mkdyntags
+dyntags.c:
 	./mkdyntags >dyntags.c
 
-dtneeded.c: ./mkdtneededlist
+dtneeded.c:
 	./mkdtneededlist >dtneeded.c
 
-sectinfo.c: ./mksectinfo
+sectinfo.c:
 	./mksectinfo >sectinfo.c
 
 clean:
