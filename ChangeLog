@@ -1,0 +1,4848 @@
+2003-09-18	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libstdcxx_so_5.c
+	   Fill i the missing vtable entries
+
+2003-09-17	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libstdcxx_so_5.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   Restore the full list of libraries, now including the arch
+	   sensitive libstdcxx libs
+
+2003-09-16	Stuart Anderson <anderson@freestandards.org>
+	* libchk/classchk.c
+	   Get tetj.h from the include path, instead of reaching up and
+	   over, which may not be ther wen building cxxabichk
+
+2003-09-16	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/test_libchk
+	  appchk/makefile
+	  appchk/test_appchk
+	  libchk/makefile
+	   Adding regression tests for appchk
+
+2003-09-12	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  elfchk/elfchk.h
+	  libchk/classchk.c
+	  libchk/libchk.c
+	  libchk/libncurses_so_5.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	  libchk/libstdcxx_so_5.c
+	   Add a definition for a function pointer type, and use it in the
+	   vtable struct
+	* libchk/classchk.c
+	   1) Don't hard code an offset as 8 bytes which it is really
+	   2*pointer 2) Dereference a function pointer structure when
+	   dealing with fptrs. This    is mostly a noop on x86 ,but it
+	   needed on IA64 (and others).
+
+2003-09-10	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/tagfuncs.h
+	  rpmchk/archive.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/rpmtag.h
+	   If an old format RPM, need to keep track of where we are in the
+	   file list accross function calls
+
+2003-09-09	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/makefile
+	   remove test target as part of general clean
+
+2003-09-04	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	   Fill in values for IA64
+
+2003-09-03	Stuart Anderson <anderson@freestandards.org>
+	* libchk/makefile
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  libchk/machine_info
+	   Update PPC32 & S390 values
+
+2003-09-01	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/lsblibchk
+	  libchk/libchk.c
+	   Log file not found errors to journal file
+
+2003-08-29	Stuart Anderson <anderson@freestandards.org>
+	* libchk/makefile
+	  cxxabichk/makefile
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/makefile
+	  libchk/classchk.c
+	  libchk/dummy_link.c
+	  libchk/libchk.c
+	   Add a special buil dof libcheck that serves as a standalone
+	   libstdc++ ABI checking tool
+
+2003-08-28	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/dummy_link.c
+	   Change function we are dependent on for libpthread as one is
+	   temporarily missing on PPC64
+
+2003-08-26	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/makefile
+	  libchk/dummy_link.c
+	  libchk/libchk.c
+	  libchk/lsblibchk
+	  libchk/makefile
+	   libchk now calculates dynamically where the lsb libraries are by
+	   using ldd and a dummy LSB binary which is linked against all LSB
+	   libraries Comment out class checking code
+
+2003-08-22	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/term_h.inc
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/wctype_h.c
+	   Undo previous change. Misusing the Indirect status messes up the
+	   headers. Update values for PPC32 Provide a dummy decl of struct
+	   term so the tsts will build w/ lsbcc.
+
+2003-08-21	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/wctype_h.c
+	   Pick up recent fixes, and stop testing Types marked as indirect
+
+2003-08-21	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/classchk.c
+	   reformat a bit Add check for return value of dlopen as it can
+	   fail and dlclosing a NULL handle results in a seg-fault
+
+2003-07-23	Stuart Anderson <anderson@freestandards.org>
+	* libchk/classchk.c
+	   code cleanup and fill in a few more comments
+
+2003-07-16	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	   Fix things on S390X
+
+2003-07-16	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libchk.c
+	  appchk/symbols.c
+	   Fixes bug on ppc64 where symbols were not checked. Do a slightly
+	   more intrusive but working workaround for .symbols on ppc64
+
+2003-07-15	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libpthread_so_0.c
+	   Add _pthread_cleanup_pop & _pthread_cleanup_push
+
+2003-07-15	Marvin Heffler <heffler@us.ibm.com>
+	* rpmchk/rpmchk.h
+	   fix check for s390
+
+2003-07-14	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/term_h.c
+	   curses updates
+
+2003-07-11	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/sys_msg_h.c
+	   Fix member names on x86-64
+
+2003-07-11	Marvin Heffler <heffler@us.ibm.com>
+	* elfchk/proginterp.c
+	   fix interpreter for ppc64, s390x, and x86_64
+
+2003-07-09	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/mkfunclist
+	  elfchk/dynsyms.c
+	   Drop out C++ for 1.3.3, and pick up other recent additions
+
+2003-07-08	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libstdcxx_so_5.c
+	   Add _pthread_cleanup_pop & _pthread_cleanup_push
+
+2003-06-28	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libstdcxx_so_5.c
+	   Additional C++ classes
+
+2003-06-27	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libncurses_so_5.c
+	   Curses additionas
+
+2003-06-26	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libutil_so_1.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	  elfchk/sectinfo.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libcrypt_so_1.c
+	  libchk/libdl_so_2.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libncurses_so_5.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libstdcxx_so_5.c
+	   1) Restore PPC64 symbol to the agreed upon values for 1.3 2) Add
+	   lots of C++ interfaces 3) Add x86_64 entries
+
+2003-06-20	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	   Pick up additional curses constants
+
+2003-06-04	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libstdcxx_so_5.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	   Pick up x86_64 additionas and pthread additions
+
+2003-06-03	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/signal_h.c
+	   Sync w/ DB
+
+2003-05-30	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libpthread_so_0.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	   Updated for s390 values
+
+2003-05-22	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/wctype_h.c
+	   PPC32 & PPC64 updates
+
+2003-05-21	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libutil_so_1.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  libchk/libcrypt_so_1.c
+	  libchk/libdl_so_2.c
+	   Fill in more IA64 sizes/offsets
+
+2003-05-20	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libc_so_6_1.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_des_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_auth_h.o
+	  devchk/ts/devchk/rpc_auth_unix_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_clnt_h.o
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.o
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_svc_h.o
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_types_h.o
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/rpc_xdr_h.o
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  libchk/libc_so_6.c
+	   resync w/ DB
+
+2003-05-15	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libstdcxx_so_5.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libchk.c
+	  libchk/libs.c
+	  libchk/libs.h
+	   Pick up some RPC updates
+
+2003-04-28	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  elfchk/elfchk.h
+	  libchk/classchk.c
+	  libchk/libchk.c
+	  libchk/libstdcxx_so_5.c
+	   Add a DB format for the base_tye_info Add flags
+
+2003-04-27	Stuart Anderson <anderson@freestandards.org>
+	* libchk/classchk.c
+	  elfchk/elfchk.h
+	   Add structure defs for the different RTTI layouts
+
+2003-04-25	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/classchk.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libs.c
+	  libchk/libstdcxx_so_5.c
+	   Do more thorough checking on more data elements, and report
+	   problems Handle the 5 different RTTI layouts which may exist.
+
+2003-04-18	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/classchk.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   skip the RTTI checking we're not yet ready, and skip classes
+	   with a non-0 baseoffset also
+
+2003-04-17	Stuart Anderson <anderson@freestandards.org>
+	* libchk/classchk.c
+	   Organize the tests bit more, anmd clean up the output
+
+2003-04-16	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  elfchk/elfchk.h
+	  libchk/libstdcxx_so_5.c
+	  libchk/mkfunclist
+	   Don't use unsized arrays
+
+2003-04-16	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/classchk.c
+	   remove printf warnings by using %p to print a pointer instead of
+	   %x
+
+2003-04-15	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  elfchk/elfchk.h
+	  libchk/classchk.c
+	  libchk/ld_lsb_ia64_so_1.c
+	  libchk/ld_lsb_ppc32_so_1.c
+	  libchk/ld_lsb_ppc64_so_1.c
+	  libchk/ld_lsb_s390_so_1.c
+	  libchk/ld_lsb_s390x_so_1.c
+	  libchk/ld_lsb_so_1.c
+	  libchk/ld_lsb_x86_64_so_1.c
+	  libchk/libGL_so_1.c
+	  libchk/libICE_so_6.c
+	  libchk/libSM_so_6.c
+	  libchk/libX11_so_6.c
+	  libchk/libXext_so_6.c
+	  libchk/libXt_so_6.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libchk.c
+	  libchk/libchk.h
+	  libchk/libcrypt_so_1.c
+	  libchk/libdl_so_2.c
+	  libchk/libgcc_s_so_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libncurses_so_5.c
+	  libchk/libpam_so_0.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	  libchk/libstdcxx_so_5.c
+	  libchk/libutil_so_1.c
+	  libchk/libz_so_1.c
+	   Additional structures for class data
+
+2003-04-14	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/classchk.c
+	  libchk/makefile
+	   crude snapshot of the code to check C++ class data
+
+2003-04-02	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/hdr.c
+	   fix for ppc64
+
+2003-03-27	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libutil_so_1.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libcrypt_so_1.c
+	  libchk/libdl_so_2.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libpthread_so_0.c
+	   Set versions for x86_64 to 2.2.5
+
+2003-03-26	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libs.h
+	  elfchk/dtneeded.c
+	  elfchk/dyntags.c
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/proginterp.c
+	  elfchk/symvers.c
+	  libchk/libchk.c
+	  libchk/libs.c
+	   Hammer stuff
+
+2003-03-04	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libutil_so_1.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  libchk/libcrypt_so_1.c
+	  libchk/libdl_so_2.c
+	   resync with db
+
+2003-02-28	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/dynsyms.c
+	   Fix the symbol version of the IA64 symbols
+
+2003-02-28	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libc_so_6_1.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/features_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	  elfchk/hdr.c
+	  elfchk/sectinfo.c
+	  libchk/libc_so_6.c
+	   more header test updates for S390
+
+2003-02-26	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/features_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	   Hopefully last S390X changes
+
+2003-02-25	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/features_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/utmpx_h.inc
+	   Sync w/ DB
+
+2003-02-21	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/libgen_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	   S390X updates
+
+2003-02-18	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/net_if_h.c
+	   resync tests with DB
+
+2003-02-17	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libutil_so_1.c
+	  libchk/libcrypt_so_1.c
+	  libchk/libdl_so_2.c
+	   resync against db. Adds S390X specific library versions
+
+2003-02-14	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  rpmchk/archive.c
+	  rpmchk/idxtag.c
+	  rpmchk/rpmchk.h
+	   Don't assume that file in the archive are in the same order as
+	   specified in the RPM tags. Given the filename in the archive,
+	   now determine what the file index is, and then use that for the
+	   other comparisons.  Also, If the file is a hardlink, don't
+	   complain about some mismatches. This doesn't seem right in the
+	   case of the MD5 data, but some of the others could be
+	   understood.
+
+2003-02-14	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libchk.c
+	  appchk/check_file.c
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/sectinfo.c
+	  elfchk/sections.c
+	   Add error message to standard output as well when appchk thinks
+	   its been passed a statically linked executable
+	* elfchk/dwarf.h
+	  elfchk/dwarf.c
+	   64 bit fixes. an int is not big enough on 64 bit platforms to
+	   store addresses. Use longs instead which will be correct on both
+	   32bit and 64bit systems.
+
+2003-02-13	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/dyntags.c
+	   Adds DT_RELACOUNT dynamic entries for PPC32 and PPC64
+
+2003-02-12	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/symvers.c
+	  appchk/libraries.c
+	  appchk/symbols.c
+	  elfchk/dynamic.c
+	  elfchk/dynamic.h
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/note.c
+	  elfchk/progbits.c
+	  elfchk/progbits.h
+	  elfchk/proghdr.c
+	  elfchk/proghdr.h
+	  elfchk/sections.c
+	  elfchk/sections.h
+	   64 bit fixes for elfchk/appchk
+	* elfchk/sectinfo.c
+	  appchk/symbols.c
+	  elfchk/dyntags.c
+	  elfchk/sectinfo.c
+	   adds ugly hack for ppc64 abi to handle symbols starting with '.'
+	   which are part of the ABI.
+
+2003-02-11	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/hdr.c
+	   fixes for ppc64
+
+2003-02-10	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/progbits.c
+	  elfchk/dwarf.c
+	  elfchk/dwarf.h
+	   change way in which CFI opcode errors are reported
+
+2003-02-05	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/progbits.c
+	  elfchk/dwarf.c
+	  elfchk/dwarf.h
+	   Add handling of "eh" augmentations
+
+2003-01-31	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/dwarf.h
+	  elfchk/dwarf.c
+	   Return to first principles and reimplement the decode_*LEB128
+	   routines to avoid any GPL contaminated code.
+
+2003-01-31	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/dwarf.c
+	   Fix use of initialized variable in check_CIE Add check for zero
+	   terminating frames which we shouldn't parse Add whitespace for
+	   clarity
+
+2003-01-31	Mats Wichmann <mats.d.wichmann@intel.com>
+	* rpmchk/rpmchk.h
+	  appchk/symbols.c
+	  pkgchk/pkgchk.c
+	  rpmchk/archive.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtag.c
+	   Minor tweaks to remove compile warnings
+
+2003-01-30	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/progbits.c
+	   remove debug information from output
+
+2003-01-29	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libpthread_so_0.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	  elfchk/proginterp.c
+	  elfchk/sectinfo.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	   resync with db
+
+2003-01-07	Stuart Anderson <anderson@freestandards.org>
+	* pkginst/HeaderRec/test4b.m4
+	  pkginst/HeaderRec/Makefile
+	  pkginst/HeaderRec/assertions
+	  pkginst/HeaderRec/test1a.m4
+	  pkginst/HeaderRec/test1b1.m4
+	  pkginst/HeaderRec/test1b2.m4
+	  pkginst/HeaderRec/test3b.m4
+	   Add HeaderRec tests
+
+2002-12-30	Stuart Anderson <anderson@freestandards.org>
+	* libchk/makefile
+	  cmdchk/makefile
+	   Use CC so the compiler can be changed
+
+2002-12-18	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/archive.c
+	  pkginst/HeaderPriv/assertions
+	  pkginst/HeaderRec/assertions
+	  pkginst/HeaderSection/assertions
+	  pkginst/IndexRec/assertions
+	  pkginst/Lead/Makefile
+	  pkginst/Lead/assertions
+	  pkginst/Lead/test10a.m4
+	  pkginst/Lead/test1a.m4
+	  pkginst/Lead/test2a.m4
+	  pkginst/Lead/test2b.m4
+	  pkginst/Lead/test3b.m4
+	  pkginst/Lead/test4b.m4
+	  pkginst/Lead/test5b.m4
+	  pkginst/Lead/test6b.m4
+	  pkginst/Lead/test7b.m4
+	  pkginst/Lead/test8b.m4
+	  pkginst/Lead/test9b.m4
+	  pkginst/README
+	  pkginst/assertions
+	  pkginst/assertions.m4
+	  pkginst/good-header.xml
+	  pkginst/good-lead.xml
+	  pkginst/good-payload.xml
+	  pkginst/good-signature.xml
+	  pkginst/intro/Makefile
+	  pkginst/intro/assertions
+	  pkginst/intro/test1a.m4
+	  pkginst/intro/test1b.m4
+	  pkginst/intro/test1c.m4
+	  pkginst/intro/test1d.m4
+	  pkginst/intro/test1e.m4
+	  pkginst/intro/test2a.m4
+	  pkginst/intro/test2b.m4
+	  pkginst/intro/test2c.m4
+	  pkginst/intro/test2d.m4
+	  pkginst/intro/test2e.m4
+	  pkginst/intro/test2f.m4
+	  pkginst/intro/test2g.m4
+	  pkginst/sample.xml
+	   Initial test cases
+
+2002-12-17	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	   The spec now sez the lsb dependency is 1.3
+
+2002-12-15	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/locale_h.c
+	   Add locale_t related tests
+
+2002-12-13	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/archive.c
+	   Make sure the filename is NUL terminated, or junk from a
+	   previous file may get usedalso
+
+2002-12-12	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/idxtag.c
+	  rpmchk/hdr.c
+	   Improved debug messages
+
+2002-12-09	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/sections.c
+	  appchk/symbols.c
+	  elfchk/progbits.c
+	   We return a FIP instead of FAIL for ioctl as it may be ok and
+	   the application writer will need to confirm they are using ioctl
+	   as specified by the spec
+
+2002-12-08	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/mkfunclist
+	  libchk/ld_lsb_ppc32_so_1.c
+	  libchk/ld_lsb_s390x_so_1.c
+	  libchk/libGL_so_1.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   Adds newly required files
+
+2002-12-05	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/proghdr.c
+	   Turn off complaint about GNU_FRAME not being in the spec since
+	   it is not
+
+2002-12-04	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	   Add IA64 values for X types, and pick up other DB changes
+
+2002-12-04	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	  devchk/ts/devchk/zlib_h.c
+	   S390x updates
+
+2002-12-03	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	   The test for s390 has changed to exclude s390x. Also pick up a
+	   couple of values from PPC32
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/wctype_h.c
+	   1) Add CompareLongConstant() macro for values that are marked as
+	   being of type long 2) Add powerpc64 additions 3) Several type
+	   re-arrangements related to header fixes
+
+2002-11-26	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  cmdchk/cmdchk.c
+	  elfchk/dumpbytes.c
+	  elfchk/dwarf2.h
+	  elfchk/dynamic.c
+	  elfchk/dynamic.h
+	  elfchk/elfchk.c
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/hdr.h
+	  elfchk/note.c
+	  elfchk/progbits.c
+	  elfchk/progbits.h
+	  elfchk/proghdr.c
+	  elfchk/proghdr.h
+	  elfchk/proginterp.c
+	  elfchk/sections.c
+	  elfchk/sections.h
+	  elfchk/symvers.c
+	  elfchk/symvers.h
+	  elfchk/test.c
+	  elfchk/util.c
+	  libchk/libchk.c
+	  pkgchk/pkgchk.c
+	  rpmchk/archive.c
+	  rpmchk/check.c
+	  rpmchk/fhs.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtag.c
+	  rpmchk/lead.c
+	  rpmchk/rpmchk.c
+	  rpmchk/rpmchk.h
+	  rpmchk/test.c
+	  rpmchk/util.c
+	   Give credit where due
+	* devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	   1) Make mgsqlen_t and msgqnum_tarch specific. 2) Fill in
+	   statvfs* data for PPC32 3) Fix mbstate_t once again
+
+2002-11-25	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  cmdchk/cmdlist
+	  cmdchk/cmds.c
+	  pkgchk/pkgchk.c
+	  rpmchk/archive.c
+	  rpmchk/check.c
+	  rpmchk/fhs.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/lead.c
+	  rpmchk/mktagtbl
+	  rpmchk/rpmchk.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	  rpmchk/test.c
+	  rpmchk/util.c
+	   Sync w/ DB
+
+2002-11-22	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  rpmchk/check.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/makefile
+	  rpmchk/rpmchk.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	   Add more tag types and more additional checking of optional tags
+
+2002-11-20	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libGL_so_1.c
+	  elfchk/dwarf.c
+	  elfchk/dwarf.h
+	  elfchk/dwarf2.h
+	  elfchk/note.c
+	  elfchk/progbits.c
+	  elfchk/progbits.h
+	  elfchk/sectinfo.c
+	  elfchk/sections.c
+	   Initial code for parsing the .eh_frame_hdr data
+
+2002-11-19	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sections.c
+	  elfchk/dwarf.c
+	  elfchk/dwarf.h
+	  elfchk/dynsyms.c
+	  elfchk/elfchk.c
+	  elfchk/elfchk.h
+	  elfchk/makefile
+	  elfchk/progbits.c
+	  elfchk/progbits.h
+	  elfchk/proghdr.c
+	  elfchk/proghdr.h
+	   Put DWARF debug behinf ELFCHK_DEBUG
+
+2002-11-15	Stuart Anderson <anderson@freestandards.org>
+	* tetj/Makefile
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	   Sync w/ DB
+
+2002-11-13	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libm_so_6_1.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	   Sync w/ DB changes
+
+2002-11-12	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	   Fixes for PPC64/S390 (resync with db)
+
+2002-11-11	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libs.mk
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  libchk/libGL_so_1.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libs.c
+	  libchk/libs.h
+	   Pick up the new size_t stuff
+
+2002-11-11	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	   resync with db before changes
+
+2002-11-08	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libc_so_6_1.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  libchk/libc_so_6.c
+	   Sort the hash of constants so file get generated consistanly on
+	   different platforms
+
+2002-11-07	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/dynamic.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/zlib_h.c
+	   Fill in IA64 Size data, and purge extaneous sigaction
+	   definitions
+
+2002-11-07	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	   resync with db before I make any changes
+
+2002-11-07	Mats Wichmann <mats.d.wichmann@intel.com>
+	* elfchk/dynamic.h
+	   Add prototype for new function
+
+2002-11-06	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sectinfo.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	   Updates that correspond to 32/64 bit issue resolutions
+
+2002-11-06	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	   sync with database
+
+2002-11-04	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/netinet_udp_h.c
+	   Add new file netinet/udp.h
+
+2002-11-01	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_socket_h.inc
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	   Move some of the socket options around so they get properly
+	   found
+
+2002-11-01	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libpthread_so_0.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	   resync with PPC64 changes
+
+2002-10-31	Christopher Yeoh <cyeoh@samba.org>
+	* rpmchk/rpmchk.h
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/sectinfo.c
+	   Second lot of PPC64 header updates
+
+2002-10-30	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/ld_lsb_ppc64_so_1.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	    Add the ppc64 file
+
+2002-10-30	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/mkfunclist
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/assert_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/ulimit_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	  elfchk/mkdtneededlist
+	  elfchk/mkdyntags
+	  elfchk/mkfunclist
+	  elfchk/mkfunclist2
+	  elfchk/mksectinfo
+	  elfchk/sectinfo.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	   Changes to handle new ppc32 Asymbol definition
+
+2002-10-29	Christopher Yeoh <cyeoh@samba.org>
+	* rpmchk/rpmchk.h
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/sectinfo.c
+	  libchk/ld_lsb_x86_64_so_1.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libgcc_s_so_1.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   Update for S390
+
+2002-10-28	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/idxtag.c
+	   Comment on wether expected indecies were found or not
+
+2002-10-27	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/zlib_h.c
+	   Be much more thorough about checking struct/union member info
+	* devchk/ts/devchk/mktests
+	   1) Try to handle types that are set to arch All better. Also
+	   detects when    a type is assigne to both All and individual
+	   Archs, which is a bug 2) Do a better job of identifying missing
+	   data. If struct/union members don't	  have size/offset info,
+	   output a warning, and set these values to 0 so that	  SQL will
+	   be emitted to correct the situation.
+
+2002-10-26	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sections.c
+	  elfchk/dyntags.c
+	  elfchk/elfchk.h
+	  elfchk/mkdyntags
+	   Make the dynaic tag architecture sensitive
+
+2002-10-25	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/mktagtbl
+	  rpmchk/archive.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtbl.c
+	  rpmchk/mktaghdr
+	  rpmchk/mktagtbl
+	   Turn off debug
+	* rpmchk/idxtag.c
+	   1) SIGSIZE is unsigned 2) OS is caseinsensitive 3) Remove debug
+	   output
+
+2002-10-25	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libs.mk
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  elfchk/proginterp.c
+	  libchk/ld_lsb_s390_so_1.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	   updates for S390
+
+2002-10-23	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/testdefs.h
+	  rpmchk/archive.c
+	  rpmchk/fhs.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	   Clean up the RPC tests
+
+2002-10-21	Jim Kingdon <kingdon@panix.com>
+	* rpmchk/.cvsignore
+	  cmdchk/.cvsignore
+	  pkgchk/.cvsignore
+	   Add generated files to .cvsignore.
+
+2002-10-17	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libc_so_6_1.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/testdefs.h
+	  libchk/libc_so_6.c
+	   Add more RPC stuff
+
+2002-10-16	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/note.c
+	   Turn down the noise some
+
+2002-10-16	Jim Kingdon <kingdon@panix.com>
+	* elfchk/symvers.c
+	   Don't declare strchp implicitly.
+
+2002-10-15	Stuart Anderson <anderson@freestandards.org>
+	* pkgchk/pkgchk.c
+	  elfchk/dumpbytes.c
+	  elfchk/elfchk.h
+	  elfchk/makefile
+	  elfchk/note.c
+	  elfchk/proghdr.c
+	  elfchk/sections.c
+	  elfchk/test.c
+	  pkgchk/lsbpkgchk.1
+	   Add a dumpbytes utility routine
+
+2002-10-14	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  rpmchk/archive.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	  rpmchk/test.c
+	  rpmchk/util.c
+	   Now that Types can be SrcOnly also, we need to select Referenced
+	   or Indirect instead of just Not Excluded
+
+2002-10-13	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  rpmchk/archive.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	   At long last, recognize all fo the RPMTAGs, and validate nearly
+	   all of them.
+
+2002-10-11	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  rpmchk/archive.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	   Explicitely check for REGular files for some tests
+
+2002-10-10	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  elfchk/elfchk.h
+	  elfchk/makefile
+	  elfchk/progbits.c
+	  elfchk/progbits.h
+	  elfchk/proghdr.c
+	  elfchk/sections.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libgcc_s_so_1.c
+	  rpmchk/archive.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	  rpmchk/vals.c
+	   Set things up to start checking the contents of sections of type
+	   PROGBITS
+
+2002-10-09	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  rpmchk/archive.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/makefile
+	  rpmchk/md5.h
+	  rpmchk/md5c.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	   Add checks for
+	   RPMTAG_FILESIZES,RPMTAG_FILEMODES,RPMTAG_FILERDEVS,
+	   RPMTAG_FILEMTIMES and RPMTAG_FILEMD5S. Most of these are
+	   actually checked in the archive processing code.
+
+2002-10-08	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  cmdchk/cmds.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libgcc_s_so_1.c
+	  libchk/libncurses_so_5.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	  rpmchk/archive.c
+	  rpmchk/idxtag.c
+	  rpmchk/lead.c
+	  rpmchk/rpmchk.h
+	  rpmchk/tagfuncs.h
+	  rpmchk/util.c
+	   Add additional I18n commands
+	* elfchk/dynsyms.c
+	  devchk/ts/devchk/libintl_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  elfchk/dtneeded.c
+	   1) Add getaddrinfo constants 2) Add PAM constants
+
+2002-10-03	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/rpmchk.h
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  libchk/ld_lsb_64_so_1.c
+	  rpmchk/archive.c
+	  rpmchk/lead.c
+	   Sync in some updates
+
+2002-10-02	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libncurses_so_5.c
+	  libchk/libpam_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	  libchk/libstdcxx_so_5.c
+	   Sync in recent additions
+
+2002-10-01	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  rpmchk/archive.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/mktagtbl
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	  rpmchk/util.c
+	   Add/fill in detaisl on 7 more Tags
+	* rpmchk/vals.c
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	  rpmchk/tagfuncs.h
+	   1) Populate the SigTag table correctly 2) Check the index Type
+	   to make sure it matches 3) Completely handle HDRSIGATURE index
+	   4) Do most of the checking for a SHA1 index (checks all but the
+	   signature value)
+
+2002-09-29	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/tagfuncs.h
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/makefile
+	  rpmchk/mktaghdr
+	  rpmchk/mktagtbl
+	  rpmchk/rpmchk.h
+	  rpmchk/rpmtag.h
+	   Pull the list of RPM Index Tags from teh DB
+
+2002-09-28	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/tagfuncs.h
+	  rpmchk/idxtag.c
+	  rpmchk/rpmchk.h
+	   Recognize a couple more indices, and get ready to validate that
+	   required sections have been seen
+
+2002-09-26	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/rpmchk.h
+	  makefile
+	   Add the rpm tests and don't fail if a directory is missing
+
+2002-09-25	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/tagfuncs.h
+	  rpmchk/idxtag.c
+	  rpmchk/rpmchk.h
+	   Recognize the Private header tags, and the obsolete SIG tags
+
+2002-09-20	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pty_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/security_pam_appl_h.inc
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_vfs_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/term_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/termios_h.inc
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	   Sync in latest tests
+
+2002-09-20	Mats Wichmann <mats.d.wichmann@intel.com>
+	* tetj/tetj.py
+	  cmdchk/License.cmdchk
+	  cmdchk/cmdchk.c
+	  cmdchk/cmdchk.py
+	  cmdchk/cmdlist
+	  cmdchk/makefile
+	  cmdchk/mkcmdlist2
+	   Changed a couple of instances of libchk->cmdchk; also build
+	   cmdlist
+
+2002-09-16	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/test.c
+	  pkgchk/makefile
+	  pkgchk/pkgchk.c
+	  rpmchk/archive.c
+	  rpmchk/fhs.c
+	  rpmchk/makefile
+	  rpmchk/rpmchk.h
+	   public interface to rpm checking tool
+
+2002-09-11	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sectinfo.c
+	  appchk/symbols.c
+	  elfchk/dynsyms.c
+	  elfchk/elfchk.h
+	  elfchk/mkfunclist
+	  elfchk/mkfunclist2
+	   Add a warning for deprecated interfaces, and a warning about
+	   using ioctl()
+
+2002-08-26	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/util.c
+	  elfchk/dynamic.c
+	  elfchk/dynamic.h
+	  elfchk/elfchk.c
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/hdr.h
+	  elfchk/proghdr.c
+	  elfchk/proghdr.h
+	  elfchk/proginterp.c
+	  elfchk/sections.c
+	  elfchk/sections.h
+	  elfchk/symvers.c
+	  elfchk/symvers.h
+	  elfchk/test.c
+	   Add some long overdue copyright statements
+
+2002-08-09	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stropts_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_vfs_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmp_h.c
+	   Snapshot after checkig on an IA64 again
+
+2002-07-29	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	   resync with database
+
+2002-07-22	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/termios_h.c
+	   resync with db
+
+2002-07-17	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/makefile
+	  cmdchk/cmdchk.c
+	  cmdchk/makefile
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	  devchk/ts/devchk/zlib_h.c
+	   remove hdr.h header include as not needed
+
+2002-07-16	Christopher Yeoh <cyeoh@samba.org>
+	* cmdchk/run_tests
+	  cmdchk/License.cmdchk
+	  cmdchk/License.libchk
+	  cmdchk/cmdchk.c
+	  cmdchk/cmds.c
+	  cmdchk/machine_info
+	   Removes files no longer used Renames licence file appropriately
+
+2002-07-15	Jim Kingdon <kingdon@panix.com>
+	* libchk/makefile
+	  libchk/lsblibchk.1
+	   Add lsblibchk man page.
+
+2002-07-10	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	   Sync in additions
+
+2002-07-03	Jim Kingdon <kingdon@panix.com>
+	* elfchk/proghdr.c
+	   Include string.h (for strcmp).
+
+2002-06-28	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libc_so_6_1.c
+	  libchk/libc_so_6.c
+	   Remove stuff the has been clened o ut from the DB
+
+2002-06-28	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libchk.c
+	  elfchk/proghdr.c
+	   Record test (and failures) of program interpreter to journal
+	   file
+
+2002-06-27	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libc_so_6_1.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/termios_h.c
+	  elfchk/dynsyms.c
+	  elfchk/mkfunclist
+	  elfchk/mkfunclist2
+	  elfchk/sectinfo.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	   Add tests for new header
+
+2002-06-26	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/makefile
+	  appchk/makefile
+	   generalise install target for appchk
+
+2002-06-21	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	   Pick up new headers, and new 'sorted' ordering which should hepl
+	   reduce future diffs
+
+2002-06-20	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  devchk/ts/devchk/mktests
+	  elfchk/mkdtneededlist
+	  elfchk/mkfunclist
+	  elfchk/mkfunclist2
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	   ORDER BY Cname and ACvalue to make the results more predictable
+	   to minimize diffs everything this gets run
+	* elfchk/sectinfo.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	   1) Add some additional APIs as per Spec Authority 2) Sort some
+	   tings according to improved ordering in the mk* scripts.
+	   Hopefully	future diffs will be smaller now.
+
+2002-06-20	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/makefile
+	  appchk/appchk.c
+	  appchk/lsbappchk.1
+	  appchk/makefile
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libchk.c
+	  libchk/libs.c
+	  libchk/libs.h
+	   Adds packaging version tag to journal file
+
+2002-06-20	Jim Kingdon <kingdon@panix.com>
+	* appchk/lsbappchk.1
+	   Remove comment which just says "add description here" - a relic
+	   of old cut and paste authorship.
+
+2002-06-19	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libs.h
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libncurses_so_5.c
+	  libchk/libs.c
+	   Fix the symbol version on recently added interfaces
+
+2002-06-19	Jim Kingdon <kingdon@panix.com>
+	* appchk/makefile
+	  appchk/lsbappchk.1
+	   add appchk man page
+
+2002-06-17	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/proghdr.c
+	   Remove verbose setting
+
+2002-06-16	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/vals.c
+	  rpmchk/idxtag.c
+	  rpmchk/makefile
+	  rpmchk/rpmchk.h
+	  rpmchk/tagfuncs.h
+	   Start actually checking the values of a few things
+
+2002-06-14	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libncurses_so_5.c
+	  cmdchk/cmds.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/testdefs.h
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/sectinfo.c
+	  libchk/libGL_so_1.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	   Add *_initd
+
+2002-06-11	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/util.c
+	  rpmchk/archive.c
+	  rpmchk/hdr.c
+	  rpmchk/idxtag.c
+	  rpmchk/makefile
+	  rpmchk/rpmchk.c
+	  rpmchk/rpmchk.h
+	  rpmchk/tagfuncs.h
+	   Lots of re-arranging. This should reflect the correct structure
+	   of an RPM file now. Still just a skelaton though
+
+2002-06-10	Stuart Anderson <anderson@freestandards.org>
+	* rpmchk/util.c
+	  rpmchk/hdr.c
+	  rpmchk/lead.c
+	  rpmchk/makefile
+	  rpmchk/rpmchk.c
+	  rpmchk/rpmchk.h
+	  rpmchk/test.c
+	   Initial try at validating and RPM file format. So far, this
+	   barely scratches the surface, but has a lot of analagies with
+	   the Elf checking code.
+
+2002-06-07	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/proghdr.c
+	   Handle Program Header types better
+
+2002-06-05	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libc_so_6_1.c
+	  elfchk/elfchk.c
+	  libchk/libc_so_6.c
+	   Need to pass journal to checkElfproghdr()
+
+2002-06-05	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/proginterp.c
+	   Fix typo
+
+2002-06-03	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/proginterp.c
+	  elfchk/makefile
+	  elfchk/proghdr.c
+	  elfchk/proghdr.h
+	   It seems that the Program Intepreter no longer shows up in the
+	   list of DT_NEEDEDs, os we need to check the Program HEader stuff
+	   more closely, and actually compare PT_INTER with the program
+	   intepreter for the architecture.
+
+2002-05-31	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libs.h
+	  cmdchk/cmds.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/testdefs.h
+	  elfchk/dtneeded.c
+	  elfchk/dynamic.c
+	  elfchk/dynamic.h
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	  elfchk/mkdyntags
+	  libchk/libX11_so_6.c
+	  libchk/libXt_so_6.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	   Sync in additional 1.2 changes
+
+2002-05-30	Stuart Anderson <anderson@freestandards.org>
+	* makefile
+	   Add the cmdchk directory
+
+2002-05-27	Stuart Anderson <anderson@freestandards.org>
+	* cmdchk/run_tests
+	  cmdchk/Artistic
+	  cmdchk/License.libchk
+	  cmdchk/README
+	  cmdchk/cmdchk.c
+	  cmdchk/cmds.c
+	  cmdchk/machine_info
+	  cmdchk/makefile
+	  cmdchk/mkcmdlist
+	   A new test that scans the system to find the LSB commands. This
+	   is similar to libchk. The TET ification of the tests needs to be
+	   looked over.
+
+2002-05-22	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/dynamic.c
+	   A very embarrasing bug that was causing the DT_NEEDED records to
+	   never get checked. Thsi used to work, so I'm not sure when it
+	   got broken. lsbappchk will now complain a lot more than it used
+	   to
+
+2002-05-17	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libs.h
+	  appchk/appchk.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/hdr.c
+	  elfchk/sectinfo.c
+	  libchk/libs.c
+	   Fixes endiannes bug
+
+2002-05-16	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/assert_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/float_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/ulimit_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	   resync devchk with db. Constant checking now arch aware
+
+2002-05-15	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/poll_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_select_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	   Current set of tests
+
+2002-05-08	Jim Kingdon <kingdon@panix.com>
+	* libchk/libchk.c
+	  appchk/.cvsignore
+	  devchk/ts/devchk/.cvsignore
+	  elfchk/.cvsignore
+	  libchk/.cvsignore
+	   add .cvsignore files
+
+2002-05-03	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/mktests
+	   Don't tr to take the offset of a bitfield - it won't work 8-)
+
+2002-05-03	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/dynsyms.c
+	  elfchk/dtneeded.c
+	   Resync with database
+
+2002-04-30	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libs.h
+	  devchk/ts/devchk/mktests
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libs.c
+	   Use	so that it can be overruled on the command line
+
+2002-04-29	Christopher Yeoh <cyeoh@samba.org>
+	* tetj/tetj.h
+	  appchk/appchk.c
+	  appchk/check_file.c
+	  appchk/symbols.c
+	  elfchk/dynsyms.c
+	  elfchk/hdr.c
+	  elfchk/mkfunclist
+	  elfchk/sections.c
+	  libchk/libchk.c
+	  tetj/tetj.c
+	   Adds support for 'IC Start' and 'IC End' markers in the journal
+	   file
+
+2002-04-25	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libs.h
+	  devchk/ts/devchk/ucontext_h.c
+	  elfchk/dynsyms.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	   fpregset_T isn't on IA64
+
+2002-04-24	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	   Avoid dups caused by the architecture sensitive library name
+	   data
+
+2002-04-22	Mats Wichmann <mats.d.wichmann@intel.com>
+	* devchk/ts/devchk/hdrchk.h
+	  devchk/tetexec.cfg
+	   Fix chopped first line (TET_OUTPUT_CAPTURE)
+
+2002-04-18	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   Changes to handle architecture sensitive symbol versions
+
+2002-04-17	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/wordexp_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/aio_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	   Identify a few IA32 only types, and add real checks for IA64
+
+2002-04-16	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libpthread_so_0.c
+	  elfchk/dtneeded.c
+	  elfchk/dynamic.c
+	  elfchk/dynamic.h
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	   Pick up new interfaces
+
+2002-04-15	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.inc
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_Composite_h.inc
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.inc
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_Constraint_h.inc
+	  devchk/ts/devchk/X11_Core_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.inc
+	  devchk/ts/devchk/X11_Object_h.c
+	  devchk/ts/devchk/X11_Object_h.inc
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/float_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	   Add more X11 headers, and pick up other fixes and improvments
+
+2002-04-11	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sectinfo.c
+	   Get rid of the extraneous .got that belonged to no architecture
+
+2002-03-29	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/termios_h.c
+	   Changes corresponding to DB fixes
+
+2002-03-29	Mats Wichmann <mats.d.wichmann@intel.com>
+	* elfchk/mksectinfo
+	  elfchk/mkdtneededlist
+	  elfchk/mkdyntags
+	  elfchk/mkfunclist
+	  elfchk/mkfunclist2
+	   Add comment to generated files to show they are generated files
+
+2002-03-28	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/elfchk.h
+	  appchk/appchk.c
+	  elfchk/dynamic.c
+	   Don't flag errors when a shared library is needed by a binary
+	   not LSB required but is supplied on the command by the -L flag
+
+2002-03-27	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/aio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	   Check a lot more type info
+	* devchk/ts/devchk/mktests
+	   1) A lot of the parameters are actuall pointers to types, so we
+	   need to    dereference then to get the actual types that we
+	   should be checking. 2) Add arch & tmis parameters to CheckOffset
+	   so that more useful SQL messages    can be generated. 3) Need to
+	   add some more Defines in order to see enough of the headers for 
+	     the tests to compile properly.
+
+2002-03-27	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/sections.h
+	  elfchk/dynamic.c
+	  elfchk/dynamic.h
+	  elfchk/proghdr.c
+	  elfchk/sections.c
+	  elfchk/sections.h
+	   Adds logging of check of Dynamic Tags and infrastructure for
+	   general logging in the dynamic sections
+
+2002-03-25	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  elfchk/dtneeded.c
+	  elfchk/mkdtneededlist
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libm_so_6_1.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	  libchk/mkfunclist
+	   Split the Library table into Library and ArchLib, analagous to
+	   how other tables have been done. This allows the library runname
+	   to be architecture sensitvie. Scripts and the resulting output C
+	   code should now correctly reflect the right library names.
+
+2002-03-24	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ulimit_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  elfchk/mkdtneededlist
+	  elfchk/sectinfo.c
+	  elfchk/sections.c
+	  elfchk/sections.h
+	  libchk/libc_so_6.c
+	  libchk/libm_so_6_1.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   Update headers to match latest data
+
+2002-03-22	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/dtneeded.c
+	   Add libm for IA64, and make libutil & librt for All archs
+
+2002-03-21	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sections.h
+	  elfchk/sectinfo.c
+	  elfchk/sections.c
+	   Fix .gnu.version_d to be of type SHT_GNU_verdef, and add the
+	   corresponding stub function
+
+2002-03-21	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libchk.c
+	  appchk/check_file.c
+	  appchk/libraries.c
+	   Changes error of not being able to find file from controller
+	   error to simple failure
+
+2002-03-21	Mats Wichmann <mats.d.wichmann@intel.com>
+	* makefile
+	    Build tetj also
+
+2002-03-20	Christopher Yeoh <cyeoh@samba.org>
+	* tetj/Makefile
+	  appchk/appchk.c
+	  appchk/check_file.c
+	  elfchk/elfchk.c
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/hdr.h
+	  elfchk/makefile
+	  elfchk/sections.c
+	  elfchk/sections.h
+	  elfchk/test.c
+	  libchk/libchk.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/makefile
+	  libchk/mkfunclist
+	   adds more reporting to journal
+
+2002-03-19	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/mktests
+	  devchk/ts/devchk/hdrchk.h
+	   Handle string type constants
+
+2002-03-19	Christopher Yeoh <cyeoh@samba.org>
+	* tetj/tetj.h
+	  appchk/appchk.c
+	  appchk/check_file.c
+	  appchk/check_file.h
+	  appchk/libraries.c
+	  appchk/libraries.h
+	  appchk/makefile
+	  appchk/symbols.c
+	  appchk/symbols.h
+	  tetj/Makefile
+	  tetj/tetj.c
+	   Rework of appchk  - adds tet journal logging output	- handles
+	   multiple binaries  - general cleanup
+
+2002-03-15	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/mkdtneededlist
+	  elfchk/dtneeded.c
+	   Make the list of libraries architecture sensitive
+
+2002-03-14	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sectinfo.c
+	  elfchk/mksectinfo
+	   Check the architecture, and ifdef things that only apply to a
+	   single architecture. This allows the same source to build
+	   correctly on different architectures.
+
+2002-03-14	Mats Wichmann <mats.d.wichmann@intel.com>
+	* elfchk/sections.h
+	  elfchk/hdr.c
+	  elfchk/sections.c
+	   Update e_flags value for ia64
+
+2002-01-07	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libchk.c
+	   Fix for check_lib when given absolute path to library (don't do
+	   search)
+
+2001-12-20	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libs.c
+	  devchk/ts/devchk/signal_h.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  libchk/libX11_so_6.c
+	  libchk/libXt_so_6.c
+	  libchk/libc_so_6.c
+	   'Final' 1.1 data
+
+2001-12-19	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/ld_lsb_ia64_so_1.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	  libchk/mkfunclist
+	   An improvment over the architecture senesitivity just committed.
+	   This method produces the source for all architectures, and
+	   correctly compiles in only the libs appropriate for the arch on
+	   which the test is being built.
+
+2001-12-18	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libutil_so_1.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/stdarg_h.c
+	  devchk/ts/devchk/stu.c
+	  devchk/ts/devchk/termios_h.c
+	  elfchk/dynsyms.c
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/sectinfo.c
+	  libchk/libX11_so_6.c
+	  libchk/libXext_so_6.c
+	  libchk/libXt_so_6.c
+	  libchk/libc_so_6.c
+	  libchk/libncurses_so_5.c
+	  libchk/libpthread_so_0.c
+	  libchk/librt_so_1.c
+	  libchk/libs.c
+	   NEw snapshot after cleaning up left over loose ends
+
+2001-12-18	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/sectinfo.c
+	   Puts SHF_ALLOC attribute back in rel.dyn section
+
+2001-12-17	Stuart Anderson <anderson@freestandards.org>
+	* makefile
+	  appchk/makefile
+	  devchk/ts/devchk/makefile
+	   Add distclean
+
+2001-12-13	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/arpa_inet_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ulimit_h.c
+	  devchk/ts/devchk/unistd_h.c
+	   IA64 changes to last set of changes
+
+2001-12-11	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/aio_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_select_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/wchar_h.c
+	   Synchronise with latest db dump Turns constant missing warnings
+	   into errors
+
+2001-12-07	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/sectinfo.c
+	   Adds SHF_ALLOC attribute to .rel.dyn section. Its meant to be
+	   optional, but all the binaries seem to have it.
+
+2001-12-06	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/mkfunclist
+	  appchk/appchk.c
+	  appchk/libraries.c
+	  appchk/libraries.h
+	  appchk/makefile
+	  appchk/symbols.c
+	  appchk/symbols.h
+	  elfchk/elfchk.c
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/hdr.h
+	  elfchk/makefile
+	  elfchk/proghdr.c
+	  elfchk/proghdr.h
+	  elfchk/sections.c
+	  elfchk/sections.h
+	  elfchk/symvers.c
+	  elfchk/symvers.h
+	  elfchk/test.c
+	  libchk/libchk.c
+	  libchk/libs.c
+	  libchk/mkfunclist
+	   Fixes elfchk to handle checking elf header for programs &
+	   libraries (instead of assuming its a program) General code
+	   cleanup
+
+2001-12-05	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_XKBlib_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xresource_h.c
+	  devchk/ts/devchk/X11_extensions_XKBgeom_h.c
+	  devchk/ts/devchk/X11_extensions_Xdbe_h.c
+	  devchk/ts/devchk/assert_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/endian_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdarg_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_select_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_uio_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/wchar_h.c
+	   New snapshot of improved header data
+
+2001-12-05	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/run_tests
+	  libchk/Artistic
+	  libchk/License.libchk
+	  libchk/README
+	  libchk/machine_info
+	   Updates to prepare for packaging
+
+2001-11-26	Stuart Anderson <anderson@freestandards.org>
+	* libchk/librt_so_1.c
+	  devchk/ts/devchk/X11_IntrinsicP_h.c
+	  devchk/ts/devchk/X11_StringDefs_h.c
+	  devchk/ts/devchk/X11_XKBlib_h.c
+	  devchk/ts/devchk/X11_Xresource_h.c
+	  devchk/ts/devchk/X11_Xresource_h.inc
+	  devchk/ts/devchk/X11_extensions_XKBgeom_h.c
+	  devchk/ts/devchk/X11_extensions_XShm_h.c
+	  devchk/ts/devchk/X11_extensions_Xdbe_h.c
+	  devchk/ts/devchk/X11_extensions_shape_h.c
+	  devchk/ts/devchk/assert_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/stu.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  libchk/libXext_so_6.c
+	  libchk/libc_so_6.c
+	   Updates from recent data improvments
+
+2001-11-20	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sections.h
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_Shell_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_XKBgeom_h.inc
+	  devchk/ts/devchk/X11_extensions_Xdbe_h.inc
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/aio_h.c
+	  devchk/ts/devchk/complex_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_io_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timex_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/zlib_h.c
+	  elfchk/dynsyms.c
+	  elfchk/sectinfo.c
+	  elfchk/sections.c
+	   Snapshot of pre 1.1 data
+
+2001-11-19	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/mktests
+	  devchk/ts/devchk/hdrchk.h
+	   ndle the Constant value being in a seperate table, and improve
+	   the SQL that gets output when an adjustment needs to be made.
+
+2001-10-31	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libchk.c
+	   search LSB paths first for libraries
+
+2001-10-26	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/hdr.c
+	   Actually check the contents of the Elf_Hdr structure
+
+2001-10-10	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/mktests
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/mktests
+	   int architecture is potentially referenced in the tests, so we
+	   need to extern it do it is known.
+
+2001-10-03	Stuart Anderson <anderson@freestandards.org>
+	* devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/makefile
+	   For evaluation: Add tests to check the constants in dlfcn.h &
+	   errno.h
+	* devchk/ts/devchk/mktests
+	   1) Only include constants if they are marked as included (ie
+	   Yes) 2) Check Ctype against 'int' instead of I 3) Handle the
+	   situation where there are constants, but no Types. Don't	
+	   output the catchall #else for the Type tests 4) Attempt to
+	   eliminate "random" reordering of the Type Tests by specifying   
+	   ATaid as a secondary sorting key
+
+2001-08-27	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/symvers.c
+	  appchk/appchk.c
+	   Stop appchk from segfaulting on statically linked executables.
+	   Print error message instead
+
+2001-08-03	Christopher Yeoh <cyeoh@samba.org>
+	* elfchk/makefile
+	   Adds distclean target which separates removal of database
+	   generated files from clean target.
+
+2001-07-30	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/makefile
+	  libchk/libchk.c
+	  libchk/makefile
+	   Add more version information printed
+
+2001-07-11	Christopher Yeoh <cyeoh@samba.org>
+	* libchk/libchk.c
+	   Rework of file. Fixes two bugs - not checking versions of
+	   'hidden' symbols - only search the first occurrence of the
+	   symbol instead of all.
+
+2001-06-29	Stuart Anderson <anderson@freestandards.org>
+	* makefile
+	  appchk/makefile
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/makefile
+	  elfchk/dynsyms.c
+	  elfchk/sectinfo.c
+	  libchk/libc_so_6.c
+	  libchk/libpthread_so_0.c
+	  libchk/librt_so_1.c
+	   Make sure the target directory exists
+
+2001-06-29	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/ts/devchk/mktests
+	  devchk/Artistic
+	  devchk/BIN/vres
+	  devchk/License.devchk
+	  devchk/README
+	  devchk/ts/devchk/mktests
+	   sprinkle with license and copyright information
+
+2001-06-20	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libc_so_6.c
+	  elfchk/dynsyms.c
+	   Fix lldiv_T and add setgroups()
+
+2001-06-18	Christopher Yeoh <cyeoh@samba.org>
+	* devchk/zlib_h.c
+	  devchk/BIN/vres
+	  devchk/GL_gl_h.c
+	  devchk/GL_glx_h.c
+	  devchk/GL_glx_h.inc
+	  devchk/README
+	  devchk/Setup
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_ICE_ICEutil_h.c
+	  devchk/X11_ICE_ICEutil_h.inc
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_SM_SMlib_h.inc
+	  devchk/X11_X_h.c
+	  devchk/X11_Xauth_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xcms_h.inc
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xlib_h.inc
+	  devchk/X11_Xutil_h.c
+	  devchk/X11_Xutil_h.inc
+	  devchk/X11_extensions_dpms_h.c
+	  devchk/X11_extensions_security_h.c
+	  devchk/X11_extensions_security_h.inc
+	  devchk/X11_extensions_sync_h.c
+	  devchk/X11_extensions_sync_h.inc
+	  devchk/aio_h.c
+	  devchk/arpa_inet_h.c
+	  devchk/assert_h.c
+	  devchk/cpio_h.c
+	  devchk/crypt_h.c
+	  devchk/ctype_h.c
+	  devchk/curses_h.c
+	  devchk/curses_h.inc
+	  devchk/dirent_h.c
+	  devchk/dirent_h.inc
+	  devchk/dlfcn_h.c
+	  devchk/elf_h.c
+	  devchk/errno_h.c
+	  devchk/fcntl_h.c
+	  devchk/float_h.c
+	  devchk/fnmatch_h.c
+	  devchk/ftw_h.c
+	  devchk/ftw_h.inc
+	  devchk/glob_h.c
+	  devchk/grp_h.c
+	  devchk/hdrchk.c
+	  devchk/hdrchk.h
+	  devchk/iconv_h.c
+	  devchk/intrinsic.c
+	  devchk/inttypes_h.c
+	  devchk/inttypes_h.inc
+	  devchk/iso646_h.c
+	  devchk/langinfo_h.c
+	  devchk/libgen_h.c
+	  devchk/limits_h.c
+	  devchk/locale_h.c
+	  devchk/makefile
+	  devchk/malloc_h.c
+	  devchk/math_h.c
+	  devchk/mktests
+	  devchk/monetary_h.c
+	  devchk/mqueue_h.c
+	  devchk/netdb_h.c
+	  devchk/nl_types_h.c
+	  devchk/poll_h.c
+	  devchk/profile
+	  devchk/pthread_h.c
+	  devchk/pwd_h.c
+	  devchk/re_comp_h.c
+	  devchk/regex_h.c
+	  devchk/regexp_h.c
+	  devchk/sched_h.c
+	  devchk/search_h.c
+	  devchk/search_h.inc
+	  devchk/semaphore_h.c
+	  devchk/setjmp_h.c
+	  devchk/setjmp_h.inc
+	  devchk/signal_h.c
+	  devchk/stdarg_h.c
+	  devchk/stddef_h.c
+	  devchk/stdio_h.c
+	  devchk/stdlib_h.c
+	  devchk/stdlib_h.inc
+	  devchk/string_h.c
+	  devchk/strings_h.c
+	  devchk/stropts_h.c
+	  devchk/sys_ipc_h.c
+	  devchk/sys_mman_h.c
+	  devchk/sys_mmap_h.c
+	  devchk/sys_msg_h.c
+	  devchk/sys_resource_h.c
+	  devchk/sys_sem_h.c
+	  devchk/sys_shm_h.c
+	  devchk/sys_socket_h.c
+	  devchk/sys_stat_h.c
+	  devchk/sys_time_h.c
+	  devchk/sys_timeb_h.c
+	  devchk/sys_times_h.c
+	  devchk/sys_types_h.c
+	  devchk/sys_types_h.inc
+	  devchk/sys_uio_h.c
+	  devchk/sys_utsname_h.c
+	  devchk/sys_wait_h.c
+	  devchk/sys_wait_h.inc
+	  devchk/syslog_h.c
+	  devchk/tar_h.c
+	  devchk/termios_h.c
+	  devchk/tet_scen
+	  devchk/tetbuild.cfg
+	  devchk/tetclean.cfg
+	  devchk/tetexec.cfg
+	  devchk/time_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/GL_glx_h.inc
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.inc
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.inc
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xcms_h.inc
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xlib_h.inc
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_Xutil_h.inc
+	  devchk/ts/devchk/X11_extensions_dpms_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.inc
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.inc
+	  devchk/ts/devchk/aio_h.c
+	  devchk/ts/devchk/assert_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/crypt_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/curses_h.inc
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dirent_h.inc
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/float_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/ftw_h.inc
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/inttypes_h.inc
+	  devchk/ts/devchk/iso646_h.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/malloc_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/monetary_h.c
+	  devchk/ts/devchk/mqueue_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/regexp_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/search_h.inc
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/setjmp_h.inc
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/stdlib_h.inc
+	  devchk/ts/devchk/string_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_mmap_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_types_h.inc
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/sys_wait_h.inc
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ulimit_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wctype_h.inc
+	  devchk/ts/devchk/wordexp_h.c
+	  devchk/ulimit_h.c
+	  devchk/unistd_h.c
+	  devchk/utime_h.c
+	  devchk/wchar_h.c
+	  devchk/wctype_h.c
+	  devchk/wctype_h.inc
+	  devchk/wordexp_h.c
+	   Adds TET'ified version of devchk for Jill Jones
+	   (jill.jones@compaq.com) Moves devchk test files to take into
+	   account new required directory structure
+
+2001-05-22	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libchk.c
+	   Found by Jill Jones:  I think the problem is in
+	   lsb/src/tests/libchk/libchk.c.  The "if" statements at lines 77
+	   and 78 don't have any braces associated with them, so the
+	   "continue" at line 82 will always be executed every time through
+	   the loop, and the symbol versions check later in the loop will
+	   never be executed.
+
+2001-05-09	Stuart Anderson <anderson@freestandards.org>
+	* appchk/symbols.c
+	   Missed a path. If the symbol is provided by a private library,
+	   then just continue to the next symbol.
+
+2001-05-04	Stuart Anderson <anderson@freestandards.org>
+	* devchk/wctype_h.inc
+	  devchk/GL_glx_h.c
+	  devchk/GL_glx_h.inc
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_ICE_ICEutil_h.inc
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_SM_SMlib_h.inc
+	  devchk/X11_X_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xcms_h.inc
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xlib_h.inc
+	  devchk/X11_Xutil_h.c
+	  devchk/X11_Xutil_h.inc
+	  devchk/X11_extensions_security_h.c
+	  devchk/X11_extensions_security_h.inc
+	  devchk/X11_extensions_sync_h.c
+	  devchk/X11_extensions_sync_h.inc
+	  devchk/curses_h.c
+	  devchk/curses_h.inc
+	  devchk/ftw_h.c
+	  devchk/ftw_h.inc
+	  devchk/hdrchk.c
+	  devchk/inttypes_h.c
+	  devchk/inttypes_h.inc
+	  devchk/makefile
+	  devchk/mktests
+	  devchk/search_h.c
+	  devchk/search_h.inc
+	  devchk/setjmp_h.c
+	  devchk/setjmp_h.inc
+	  devchk/signal_h.c
+	  devchk/stdlib_h.c
+	  devchk/stdlib_h.inc
+	  devchk/sys_socket_h.c
+	  devchk/sys_types_h.c
+	  devchk/sys_types_h.inc
+	  devchk/sys_wait_h.c
+	  devchk/sys_wait_h.inc
+	  devchk/time_h.c
+	  devchk/wchar_h.c
+	  devchk/wctype_h.c
+	   0.8.2 version of the tests, and explicite includes so that the
+	   generated headers work also.
+	* libchk/libc_so_6.c
+	  devchk/X11_Xauth_h.c
+	  elfchk/dynsyms.c
+	   add Xauth because it contains needed types
+
+2001-05-01	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libncurses_so_5.c
+	  devchk/GL_gl_h.c
+	  devchk/GL_glx_h.c
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_X_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xutil_h.c
+	  devchk/X11_extensions_security_h.c
+	  devchk/X11_extensions_sync_h.c
+	  devchk/curses_h.c
+	  devchk/ftw_h.c
+	  devchk/hdrchk.c
+	  devchk/makefile
+	  devchk/nl_types_h.c
+	  devchk/search_h.c
+	  devchk/stdlib_h.c
+	  devchk/sys_types_h.c
+	  devchk/sys_wait_h.c
+	  devchk/time_h.c
+	  devchk/unistd_h.c
+	  devchk/wctype_h.c
+	  elfchk/dynsyms.c
+	  libchk/libc_so_6.c
+	   v0.8.1
+
+2001-04-30	Stuart Anderson <anderson@freestandards.org>
+	* devchk/mktests
+	   skip over 'anon' type functionpointer decls
+
+2001-04-27	Stuart Anderson <anderson@freestandards.org>
+	* devchk/wctype_h.c
+	  devchk/GL_gl_h.c
+	  devchk/GL_glx_h.c
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xutil_h.c
+	  devchk/X11_extensions_security_h.c
+	  devchk/X11_extensions_sync_h.c
+	  devchk/curses_h.c
+	  devchk/ftw_h.c
+	  devchk/iconv_h.c
+	  devchk/intrinsic.c
+	  devchk/inttypes_h.c
+	  devchk/mktests
+	  devchk/nl_types_h.c
+	  devchk/regex_h.c
+	  devchk/search_h.c
+	  devchk/setjmp_h.c
+	  devchk/signal_h.c
+	  devchk/stdlib_h.c
+	  devchk/sys_socket_h.c
+	  devchk/sys_wait_h.c
+	  devchk/time_h.c
+	  devchk/unistd_h.c
+	   v0.8 data that is architecture sensitive
+
+2001-04-26	Stuart Anderson <anderson@freestandards.org>
+	* libchk/librt_so_1.c
+	  devchk/GL_gl_h.c
+	  devchk/GL_glx_h.c
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xutil_h.c
+	  devchk/X11_extensions_security_h.c
+	  devchk/X11_extensions_sync_h.c
+	  devchk/curses_h.c
+	  devchk/ftw_h.c
+	  devchk/hdrchk.c
+	  devchk/hdrchk.h
+	  devchk/iconv_h.c
+	  devchk/intrinsic.c
+	  devchk/inttypes_h.c
+	  devchk/makefile
+	  devchk/mktests
+	  devchk/nl_types_h.c
+	  devchk/regex_h.c
+	  devchk/search_h.c
+	  devchk/setjmp_h.c
+	  devchk/signal_h.c
+	  devchk/stdlib_h.c
+	  devchk/sys_socket_h.c
+	  devchk/sys_wait_h.c
+	  devchk/time_h.c
+	  devchk/unistd_h.c
+	  devchk/wctype_h.c
+	  elfchk/dynsyms.c
+	  elfchk/sectinfo.c
+	  libchk/libc_so_6.c
+	  libchk/libdl_so_2.c
+	   Initial work to make this test architecture sensitive Pull size
+	   data from ArchType table instead of the Type Table Add a new
+	   file, intrinsic.c, which tests the size of the builtin C types
+	   Adjust the SQL statments to update the new ArchType table
+
+2001-04-25	Stuart Anderson <anderson@freestandards.org>
+	* makefile
+	  appchk/appchk.c
+	  appchk/makefile
+	  libchk/libchk.c
+	  libchk/makefile
+	   Get LSBVERSION from spec/lsbversion, and pass it around the tree
+	   so that the various tools & packages can have that information.
+
+2001-04-24	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sections.c
+	  appchk/libraries.c
+	  appchk/symbols.c
+	   Actually check the symbols, and only add symbols that are
+	   provided by this library
+
+2001-04-23	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/symvers.c
+	  appchk/appchk.c
+	  appchk/libraries.c
+	  appchk/makefile
+	  appchk/symbols.c
+	  elfchk/elfchk.h
+	  elfchk/sections.c
+	   Handle private libraries. Use -L to specify the path for a
+	   private library. Use getopt to process options now. New files
+	   for managing private libraries and the symbol tables from them. 
+	   This is a rough start. There are still several things that need
+	   to be done.
+
+2001-04-12	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libz_so_1.c
+	  elfchk/dynsyms.c
+	  elfchk/sections.c
+	  libchk/libX11_so_6.c
+	  libchk/libXext_so_6.c
+	  libchk/libc_so_6.c
+	  libchk/libncurses_so_5.c
+	   v0.7.6
+
+2001-04-04	Stuart Anderson <anderson@freestandards.org>
+	* devchk/wctype_h.c
+	  devchk/GL_gl_h.c
+	  devchk/GL_glx_h.c
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xutil_h.c
+	  devchk/X11_Xutil_h.inc
+	  devchk/X11_extensions_dpms_h.c
+	  devchk/X11_extensions_security_h.c
+	  devchk/X11_extensions_security_h.inc
+	  devchk/X11_extensions_sync_h.c
+	  devchk/X11_extensions_sync_h.inc
+	  devchk/curses_h.c
+	  devchk/ftw_h.c
+	  devchk/hdrchk.c
+	  devchk/iconv_h.c
+	  devchk/inttypes_h.c
+	  devchk/makefile
+	  devchk/mktests
+	  devchk/nl_types_h.c
+	  devchk/regex_h.c
+	  devchk/search_h.c
+	  devchk/setjmp_h.c
+	  devchk/signal_h.c
+	  devchk/stdlib_h.c
+	  devchk/sys_socket_h.c
+	  devchk/sys_types_h.c
+	  devchk/sys_wait_h.c
+	  devchk/time_h.c
+	  devchk/unistd_h.c
+	   Snapshot that should build better on other platforms, also picks
+	   up some new headers, and other changes that are "in-prograss".
+
+2001-03-29	Stuart Anderson <anderson@freestandards.org>
+	* libchk/makefile
+	  elfchk/makefile
+	   Remove the dependencies on the scripts. This makes it easier to
+	   checkout & build this code wihtout having the DB running.
+
+2001-03-26	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libc_so_6.c
+	  devchk/GL_gl_h.c
+	  devchk/GL_glx_h.c
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_ICE_ICEutil_h.c
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xutil_h.c
+	  devchk/curses_h.c
+	  devchk/curses_h.inc
+	  devchk/dirent_h.c
+	  devchk/ftw_h.c
+	  devchk/glob_h.c
+	  devchk/grp_h.c
+	  devchk/hdrchk.c
+	  devchk/iconv_h.c
+	  devchk/inttypes_h.c
+	  devchk/locale_h.c
+	  devchk/makefile
+	  devchk/nl_types_h.c
+	  devchk/pwd_h.c
+	  devchk/regex_h.c
+	  devchk/search_h.c
+	  devchk/semaphore_h.c
+	  devchk/setjmp_h.c
+	  devchk/signal_h.c
+	  devchk/stdio_h.c
+	  devchk/stdlib_h.c
+	  devchk/sys_socket_h.c
+	  devchk/sys_types_h.c
+	  devchk/sys_wait_h.c
+	  devchk/time_h.c
+	  devchk/wchar_h.c
+	  devchk/wctype_h.c
+	  devchk/wordexp_h.c
+	  elfchk/dynsyms.c
+	  libchk/libX11_so_6.c
+	  libchk/libXt_so_6.c
+	   V0.7.1
+
+2001-03-25	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sections.c
+	   Typo
+
+2001-03-22	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libutil_so_1.c
+	  elfchk/dynsyms.c
+	  libchk/libX11_so_6.c
+	  libchk/libXext_so_6.c
+	  libchk/libXt_so_6.c
+	  libchk/libc_so_6.c
+	   v0.7
+
+2001-03-15	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libncurses_so_5.c
+	  elfchk/dynsyms.c
+	  libchk/libc_so_6.c
+	  libchk/libm_so_6.c
+	   Changes corresponding to v0.6.3
+
+2001-03-13	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/symvers.c
+	  elfchk/sections.c
+	   Process the Verneed records, and check the symbol version an
+	   application needs.
+
+2001-03-12	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  elfchk/dynsyms.c
+	  elfchk/elfchk.h
+	  elfchk/hdr.c
+	  elfchk/makefile
+	  elfchk/mkfunclist
+	  elfchk/mkfunclist2
+	  elfchk/sections.c
+	  elfchk/symvers.c
+	  libchk/ld_lsb_so_1.c
+	  libchk/libGL_so_1.c
+	  libchk/libICE_so_6.c
+	  libchk/libSM_so_6.c
+	  libchk/libX11_so_6.c
+	  libchk/libXext_so_6.c
+	  libchk/libXt_so_6.c
+	  libchk/libc_so_6.c
+	  libchk/libchk.c
+	  libchk/libcrypt_so_1.c
+	  libchk/libdl_so_2.c
+	  libchk/libm_so_6.c
+	  libchk/libncurses_so_5.c
+	  libchk/libpthread_so_0.c
+	  libchk/librt_so_1.c
+	  libchk/libutil_so_1.c
+	  libchk/libz_so_1.c
+	  libchk/makefile
+	   Don't just check symbol names, but also check the symbol version
+	   as well. util.c contains code for deciphering the sections that
+	   contain this info. The tables generated now contain name &
+	   version for each entry.
+
+2001-03-08	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libz_so_1.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/hdr.c
+	  libchk/libGL_so_1.c
+	  libchk/libGL_so_1_2.c
+	  libchk/libc_so_6.c
+	  libchk/libm_so_6.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   v0.6
+
+2001-03-07	Theodore Ts'o <tytso@mit.edu>
+	* elfchk/mksectinfo
+	  elfchk/makefile
+	  elfchk/mkfunclist2
+	   Add a "make check" target which uses mkfunclist2 to generate
+	   dynsyms.c a different way, and to error out if they are
+	   different.
+
+2001-03-06	Stuart Anderson <anderson@freestandards.org>
+	* libchk/makefile
+	  elfchk/dtneeded.c
+	  elfchk/dynamic.c
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	  elfchk/elfchk.h
+	  elfchk/mkdtneededlist
+	  elfchk/mkdyntags
+	  elfchk/mkfunclist
+	  elfchk/mksectinfo
+	  elfchk/sectinfo.c
+	  elfchk/sections.c
+	  elfchk/test.c
+	  elfchk/util.c
+	   Make sure file ends with a newline
+
+2001-03-05	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libs.mk
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  libchk/libc_so_6.c
+	  libchk/libs.c
+	  libchk/libs.h
+	   Remove libdb
+
+2001-03-02	Stuart Anderson <anderson@freestandards.org>
+	* libchk/librt_so_1.c
+	  devchk/GL_glx_h.c
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_X_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xutil_h.c
+	  devchk/aio_h.c
+	  devchk/ctype_h.c
+	  devchk/curses_h.c
+	  devchk/glob_h.c
+	  devchk/hdrchk.c
+	  devchk/inttypes_h.c
+	  devchk/langinfo_h.c
+	  devchk/makefile
+	  devchk/malloc_h.c
+	  devchk/math_h.c
+	  devchk/mktests
+	  devchk/nl_types_h.c
+	  devchk/pthread_h.c
+	  devchk/regex_h.c
+	  devchk/search_h.c
+	  devchk/semaphore_h.c
+	  devchk/setjmp_h.c
+	  devchk/signal_h.c
+	  devchk/stdlib_h.c
+	  devchk/sys_msg_h.c
+	  devchk/sys_sem_h.c
+	  devchk/sys_socket_h.c
+	  devchk/sys_times_h.c
+	  devchk/sys_types_h.c
+	  devchk/sys_utsname_h.c
+	  devchk/time_h.c
+	  devchk/ulimit_h.c
+	  devchk/utime_h.c
+	  libchk/libGL_so_1_1.c
+	  libchk/libGL_so_1_2.c
+	  libchk/libncurses_so_4.c
+	  libchk/libncurses_so_5.c
+	   Only include types that are referenced by an included interface
+
+2001-03-01	Stuart Anderson <anderson@freestandards.org>
+	* libchk/libz_so_1.c
+	  devchk/curses_h.c
+	  devchk/hdrchk.c
+	  devchk/makefile
+	  devchk/mktests
+	  devchk/regex_h.c
+	  devchk/sys_types_h.c
+	  devchk/unistd_h.c
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/elfchk.h
+	  libchk/libX11_so_6.c
+	  libchk/libc_so_6.c
+	  libchk/libm_so_6.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   Fix the lib versions on GL & ncurses Updated interfaces lists
+	   for 0.5.2+
+
+2001-02-26	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sections.c
+	   Fix false positives
+
+2001-02-25	Stuart Anderson <anderson@freestandards.org>
+	* makefile
+	  appchk/makefile
+	  devchk/makefile
+	  devchk/mktests
+	  elfchk/dynsyms.c
+	  elfchk/makefile
+	  libchk/libc_so_6.c
+	  libchk/libm_so_6.c
+	  libchk/libncurses_so_4.c
+	   Add an install target
+
+2001-02-12	Stuart Anderson <anderson@freestandards.org>
+	* libchk/mkfunclist
+	  libchk/ld_lsb_so_1.c
+	  libchk/libGL_so_1_1.c
+	  libchk/libICE_so_6.c
+	  libchk/libSM_so_6.c
+	  libchk/libX11_so_6.c
+	  libchk/libXext_so_6.c
+	  libchk/libXt_so_6.c
+	  libchk/libc_so_6.c
+	  libchk/libchk.c
+	  libchk/libcrypt_so_1.c
+	  libchk/libdb_so_3.c
+	  libchk/libdl_so_2.c
+	  libchk/libm_so_6.c
+	  libchk/libncurses_so_4.c
+	  libchk/libpthread_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	  libchk/libutil_so_1.c
+	  libchk/libz_so_1.c
+	  libchk/makefile
+	   New tool for testing the libs on a system to see if they contain
+	   the right stuff
+
+2001-02-08	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/dynsyms.c
+	   Add aio, I18n, and Stdio I/O stuff
+
+2001-02-07	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/sectinfo.c
+	  devchk/makefile
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/dyntags.c
+	  elfchk/elfchk.h
+	  elfchk/makefile
+	  elfchk/mkdtneededlist
+	  elfchk/mkfunclist
+	   Add an 'all' target
+
+2001-01-03	Stuart Anderson <anderson@freestandards.org>
+	* devchk/zlib_h.c
+	  devchk/GL_gl_h.c
+	  devchk/GL_glx_h.c
+	  devchk/X11_ICE_ICElib_h.c
+	  devchk/X11_ICE_ICEutil_h.c
+	  devchk/X11_ICE_ICEutil_h.inc
+	  devchk/X11_SM_SMlib_h.c
+	  devchk/X11_Xcms_h.c
+	  devchk/X11_Xcms_h.inc
+	  devchk/X11_Xlib_h.c
+	  devchk/X11_Xlib_h.inc
+	  devchk/aio_h.c
+	  devchk/arpa_inet_h.c
+	  devchk/assert_h.c
+	  devchk/cpio_h.c
+	  devchk/crypt_h.c
+	  devchk/ctype_h.c
+	  devchk/curses_h.c
+	  devchk/dirent_h.c
+	  devchk/dirent_h.inc
+	  devchk/dlfcn_h.c
+	  devchk/elf_h.c
+	  devchk/errno_h.c
+	  devchk/fcntl_h.c
+	  devchk/float_h.c
+	  devchk/fnmatch_h.c
+	  devchk/ftw_h.c
+	  devchk/glob_h.c
+	  devchk/grp_h.c
+	  devchk/hdrchk.c
+	  devchk/hdrchk.h
+	  devchk/iconv_h.c
+	  devchk/inttypes_h.c
+	  devchk/iso646_h.c
+	  devchk/langinfo_h.c
+	  devchk/limits_h.c
+	  devchk/locale_h.c
+	  devchk/makefile
+	  devchk/malloc_h.c
+	  devchk/math_h.c
+	  devchk/mqueue_h.c
+	  devchk/nl_types_h.c
+	  devchk/pthread_h.c
+	  devchk/pwd_h.c
+	  devchk/regex_h.c
+	  devchk/search_h.c
+	  devchk/semaphore_h.c
+	  devchk/setjmp_h.c
+	  devchk/signal_h.c
+	  devchk/stdio_h.c
+	  devchk/stdlib_h.c
+	  devchk/sys_ipc_h.c
+	  devchk/sys_mman_h.c
+	  devchk/sys_mmap_h.c
+	  devchk/sys_msg_h.c
+	  devchk/sys_resource_h.c
+	  devchk/sys_sem_h.c
+	  devchk/sys_shm_h.c
+	  devchk/sys_socket_h.c
+	  devchk/sys_times_h.c
+	  devchk/sys_types_h.c
+	  devchk/sys_utsname_h.c
+	  devchk/sys_wait_h.c
+	  devchk/tar_h.c
+	  devchk/termios_h.c
+	  devchk/time_h.c
+	  devchk/ulimit_h.c
+	  devchk/unistd_h.c
+	  devchk/utime_h.c
+	  devchk/wchar_h.c
+	  devchk/wctype_h.c
+	  devchk/wordexp_h.c
+	   Sync in a version of the tests
+	* devchk/mktests
+	   1) include a file.inc if present to allow per header special
+	   handling 2) skip over anon structs 3) skip over bitfields
+
+2000-11-17	Stuart Anderson <anderson@freestandards.org>
+	* devchk/mktests
+	   Change to match new table names
+
+2000-05-30	Stuart Anderson <anderson@freestandards.org>
+	* elfchk/mksectinfo
+	  elfchk/makefile
+	  elfchk/mkdtneededlist
+	  elfchk/mkdyntags
+	  elfchk/mkfunclist
+	   BE explicite about looking for scripts in the local directory
+
+2000-05-23	npetreley
+	* elfchk/mksectinfo
+	  elfchk/mkdtneededlist
+	  elfchk/mkdyntags
+	  elfchk/mkfunclist
+	   Using env for lsbdb
+
+2000-04-21	Stuart Anderson <anderson@freestandards.org>
+	* makefile
+	  .cvsignore
+	  appchk/appchk.c
+	  appchk/makefile
+	  devchk/assert_h.c
+	  devchk/cpio_h.c
+	  devchk/ctype_h.c
+	  devchk/dirent_h.c
+	  devchk/elf_h.c
+	  devchk/errno_h.c
+	  devchk/fcntl_h.c
+	  devchk/float_h.c
+	  devchk/fnmatch_h.c
+	  devchk/ftw_h.c
+	  devchk/glob_h.c
+	  devchk/grp_h.c
+	  devchk/hdrchk
+	  devchk/hdrchk.c
+	  devchk/hdrchk.h
+	  devchk/iconv_h.c
+	  devchk/langinfo_h.c
+	  devchk/libgen_h.c
+	  devchk/limits_h.c
+	  devchk/locale_h.c
+	  devchk/makefile
+	  devchk/math_h.c
+	  devchk/mktests
+	  devchk/monetary_h.c
+	  devchk/netdb_h.c
+	  devchk/nl_types_h.c
+	  devchk/poll_h.c
+	  devchk/pthread_h.c
+	  devchk/pwd_h.c
+	  devchk/re_comp_h.c
+	  devchk/regexp_h.c
+	  devchk/sched_h.c
+	  devchk/search_h.c
+	  devchk/setjmp_h.c
+	  devchk/signal_h.c
+	  devchk/stdarg_h.c
+	  devchk/stddef_h.c
+	  devchk/stdio_h.c
+	  devchk/stdlib_h.c
+	  devchk/string_h.c
+	  devchk/strings_h.c
+	  devchk/stropts_h.c
+	  devchk/sys_ipc_h.c
+	  devchk/sys_mman_h.c
+	  devchk/sys_msg_h.c
+	  devchk/sys_resource_h.c
+	  devchk/sys_sem_h.c
+	  devchk/sys_shm_h.c
+	  devchk/sys_socket_h.c
+	  devchk/sys_stat_h.c
+	  devchk/sys_time_h.c
+	  devchk/sys_timeb_h.c
+	  devchk/sys_times_h.c
+	  devchk/sys_types_h.c
+	  devchk/sys_uio_h.c
+	  devchk/sys_utsname_h.c
+	  devchk/sys_wait_h.c
+	  devchk/syslog_h.c
+	  devchk/tar_h.c
+	  devchk/termios_h.c
+	  devchk/time_h.c
+	  devchk/ulimit_h.c
+	  devchk/unistd_h.c
+	  devchk/utime_h.c
+	  devchk/wchar_h.c
+	  devchk/wctype_h.c
+	  elfchk/dynamic.c
+	  elfchk/dynamic.h
+	  elfchk/elfchk.c
+	  elfchk/elfchk.h
+	  elfchk/genit
+	  elfchk/hdr.c
+	  elfchk/makefile
+	  elfchk/mkdtneededlist
+	  elfchk/mkdyntags
+	  elfchk/mkfunclist
+	  elfchk/mksectinfo
+	  elfchk/proghdr.c
+	  elfchk/sections.c
+	  elfchk/sections.h
+	  elfchk/test
+	  elfchk/test.c
+	  elfchk/util.c
+	  makefile
+	   branches:  1.1.1; Initial revision
+
+1065499071
