@@ -2597,7 +2597,7 @@ struct versym libm_so_6_1[] = {
 	{"feclearexcept","GLIBC_2.3",0,"LSB-Core",0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"feclearexcept","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"feclearexcept","GLIBC_2.1",0,"LSB-Core",0,1},
 #endif
 #if __x86_64__
 	{"feclearexcept","GLIBC_2.2.5",0,"LSB-Core",0,1},
@@ -2723,7 +2723,7 @@ struct versym libm_so_6_1[] = {
 	{"fesetenv","GLIBC_2.3",0,"LSB-Core",0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fesetenv","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetenv","GLIBC_2.1",0,"LSB-Core",0,1},
 #endif
 #if __x86_64__
 	{"fesetenv","GLIBC_2.2.5",0,"LSB-Core",0,1},
@@ -2744,7 +2744,7 @@ struct versym libm_so_6_1[] = {
 	{"fesetexceptflag","GLIBC_2.3",0,"LSB-Core",0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"fesetexceptflag","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"fesetexceptflag","GLIBC_2.1",0,"LSB-Core",0,1},
 #endif
 #if __x86_64__
 	{"fesetexceptflag","GLIBC_2.2.5",0,"LSB-Core",0,1},
