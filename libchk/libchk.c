@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.28 $
+ * This is $Revision: 1.29 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.29  2003/10/27 15:07:26  anderson
+ * libchk should now check the class data also
+ *
  * Revision 1.28  2003/09/12 11:41:59  anderson
  * Allow a single argument which specifies the lib to check when in cxxabichk mode
  *
@@ -126,7 +129,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.28 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.29 $";
 
 extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
 
@@ -406,9 +409,7 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
 
 /*   printf("Checking Class Information in %s\n", filename ); */
 
-#ifdef _CXXABICHK_
   check_class_info(filename,classes,journal);
-#endif
 }
 
 /* Generated function by mkfunclist */
