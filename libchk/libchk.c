@@ -6,9 +6,13 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.11 $
+ * This is $Revision: 1.12 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.12  2002/03/21 01:24:18  cyeoh
+ * Adds test for existance of library instead of reporting a controller error
+ * Adds logging of file size and md5sum of each library
+ *
  * Revision 1.11  2002/03/20 06:50:47  cyeoh
  * adds more reporting to journal
  *
@@ -39,6 +43,7 @@
 #include <stdio.h>
 #include <libgen.h>
 #include <string.h>
+#include <sys/stat.h>
 #include "elfchk.h"
 #include "hdr.h"
 #include "../tetj/tetj.h"
@@ -53,7 +58,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.11 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.12 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -170,6 +175,9 @@ check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
   char filename[PATH_MAX+1];
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
+  char tmp_string2[TMP_STRING_SIZE+1];
+  struct stat stat_info;
+  FILE *md5_proc;
   int i;
 
   if (libname[0]!='/')
@@ -195,19 +203,62 @@ check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
     }
   }
 
+  tetj_activity_count++;
+  tetj_testcase_start(journal, tetj_activity_count, libname, "");
+  tetj_tp_count = 0;
+
+  tetj_tp_count++;
+  snprintf(tmp_string, TMP_STRING_SIZE, "Looking for library %s",
+           libname);
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
+
   if(file==NULL) 
   {
     snprintf(tmp_string, TMP_STRING_SIZE, "Unable to find library %s",
              libname);
     printf("%s\n", tmp_string);
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    return;
+  }
+  else
+  {
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+  }
+
+  /* Log file size */
+  if (stat(filename, &stat_info)==-1)
+  {
+    snprintf(tmp_string, TMP_STRING_SIZE, "Could not stat file %s", 
+             filename);
+    perror(tmp_string);
     tetj_add_controller_error(journal, tmp_string);
     return;
   }
+  snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                     tmp_string);
 
-  tetj_activity_count++;
-  tetj_testcase_start(journal, tetj_activity_count, libname, "");
-  tetj_tp_count = 0;
+  /* md5sum of binary */
+  snprintf(tmp_string, TMP_STRING_SIZE, "md5sum %s", filename);
+  md5_proc = popen(tmp_string, "r");
+  i=0;
+  while (i<32 && !feof(md5_proc))
+  {
+    i += fread(tmp_string+i, 1, 32-i, md5_proc);
+  }
+  if (pclose(md5_proc)==-1)
+  {
+    tetj_add_controller_error(journal, "Failed to calculate md5sum of binary");
+  }
+  else
+  {
+    tmp_string[32] = 0;
+    snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                       tmp_string2);
+  }
 
+  /* Check elf header contents */
   checkElfhdr(file, 0, journal);
 
   printf("Checking symbols in %s\n", filename );
