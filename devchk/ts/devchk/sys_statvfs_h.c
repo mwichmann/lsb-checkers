@@ -38,22 +38,6 @@ CheckOffset(struct statvfs,__f_unused,36,2,34527)
 CheckOffset(struct statvfs,f_flag,40,2,34528)
 CheckOffset(struct statvfs,f_namemax,44,2,34529)
 CheckOffset(struct statvfs,__f_spare,48,2,34530)
-#elif __ia64__
-CheckTypeSize(struct statvfs,112, 10323, 3)
-Msg("Missing member data for statvfs on IA64\n");
-CheckOffset(struct statvfs,f_bsize,0,3,34518)
-CheckOffset(struct statvfs,f_frsize,0,3,34519)
-CheckOffset(struct statvfs,f_blocks,0,3,34520)
-CheckOffset(struct statvfs,f_bfree,0,3,34521)
-CheckOffset(struct statvfs,f_bavail,0,3,34522)
-CheckOffset(struct statvfs,f_files,0,3,34523)
-CheckOffset(struct statvfs,f_ffree,0,3,34524)
-CheckOffset(struct statvfs,f_favail,0,3,34525)
-CheckOffset(struct statvfs,f_fsid,0,3,34526)
-CheckOffset(struct statvfs,__f_unused,0,3,34527)
-CheckOffset(struct statvfs,f_flag,0,3,34528)
-CheckOffset(struct statvfs,f_namemax,0,3,34529)
-CheckOffset(struct statvfs,__f_spare,0,3,34530)
 #elif __s390__
 CheckTypeSize(struct statvfs,72, 10323, 10)
 Msg("Missing member data for statvfs on S390\n");
@@ -70,9 +54,6 @@ CheckOffset(struct statvfs,__f_unused,0,10,34527)
 CheckOffset(struct statvfs,f_flag,0,10,34528)
 CheckOffset(struct statvfs,f_namemax,0,10,34529)
 CheckOffset(struct statvfs,__f_spare,0,10,34530)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10323,0);
-Msg("Find size of statvfs (10323)\n");
 #endif
 
 #ifdef __i386__
@@ -90,22 +71,6 @@ CheckOffset(struct statvfs64,__f_unused,60,2,34541)
 CheckOffset(struct statvfs64,f_flag,64,2,34542)
 CheckOffset(struct statvfs64,f_namemax,68,2,34543)
 CheckOffset(struct statvfs64,__f_spare,72,2,34544)
-#elif __ia64__
-CheckTypeSize(struct statvfs64,112, 10325, 3)
-Msg("Missing member data for statvfs64 on IA64\n");
-CheckOffset(struct statvfs64,f_bsize,0,3,34532)
-CheckOffset(struct statvfs64,f_frsize,0,3,34533)
-CheckOffset(struct statvfs64,f_blocks,0,3,34534)
-CheckOffset(struct statvfs64,f_bfree,0,3,34535)
-CheckOffset(struct statvfs64,f_bavail,0,3,34536)
-CheckOffset(struct statvfs64,f_files,0,3,34537)
-CheckOffset(struct statvfs64,f_ffree,0,3,34538)
-CheckOffset(struct statvfs64,f_favail,0,3,34539)
-CheckOffset(struct statvfs64,f_fsid,0,3,34540)
-CheckOffset(struct statvfs64,__f_unused,0,3,34541)
-CheckOffset(struct statvfs64,f_flag,0,3,34542)
-CheckOffset(struct statvfs64,f_namemax,0,3,34543)
-CheckOffset(struct statvfs64,__f_spare,0,3,34544)
 #elif __s390__
 CheckTypeSize(struct statvfs64,96, 10325, 10)
 Msg("Missing member data for statvfs64 on S390\n");
@@ -122,9 +87,38 @@ CheckOffset(struct statvfs64,__f_unused,0,10,34541)
 CheckOffset(struct statvfs64,f_flag,0,10,34542)
 CheckOffset(struct statvfs64,f_namemax,0,10,34543)
 CheckOffset(struct statvfs64,__f_spare,0,10,34544)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10325,0);
-Msg("Find size of statvfs64 (10325)\n");
+#endif
+
+#ifdef __ia64__
+CheckTypeSize(struct statvfs,112, 10399, 3)
+CheckOffset(struct statvfs,f_bsize,0,3,34688)
+CheckOffset(struct statvfs,f_frsize,8,3,34689)
+CheckOffset(struct statvfs,f_blocks,16,3,34690)
+CheckOffset(struct statvfs,f_bfree,24,3,34691)
+CheckOffset(struct statvfs,f_bavail,32,3,34692)
+CheckOffset(struct statvfs,f_files,40,3,34693)
+CheckOffset(struct statvfs,f_ffree,48,3,34694)
+CheckOffset(struct statvfs,f_favail,56,3,34695)
+CheckOffset(struct statvfs,f_fsid,64,3,34696)
+CheckOffset(struct statvfs,f_flag,72,3,34697)
+CheckOffset(struct statvfs,f_namemax,80,3,34698)
+CheckOffset(struct statvfs,__f_spare,88,3,34699)
+#endif
+
+#ifdef __ia64__
+CheckTypeSize(struct statvfs64,112, 10400, 3)
+CheckOffset(struct statvfs64,f_bsize,0,3,34700)
+CheckOffset(struct statvfs64,f_frsize,8,3,34701)
+CheckOffset(struct statvfs64,f_blocks,16,3,34702)
+CheckOffset(struct statvfs64,f_bfree,24,3,34703)
+CheckOffset(struct statvfs64,f_bavail,32,3,34704)
+CheckOffset(struct statvfs64,f_files,40,3,34705)
+CheckOffset(struct statvfs64,f_ffree,48,3,34706)
+CheckOffset(struct statvfs64,f_favail,56,3,34707)
+CheckOffset(struct statvfs64,f_fsid,64,3,34708)
+CheckOffset(struct statvfs64,f_flag,72,3,34709)
+CheckOffset(struct statvfs64,f_namemax,80,3,34710)
+CheckOffset(struct statvfs64,__f_spare,88,3,34711)
 #endif
 
 #ifdef TET_TEST

@@ -164,9 +164,7 @@ CheckOffset(struct exit_status,e_termination,0,6,34453)
 CheckOffset(struct exit_status,e_exit,0,6,34454)
 #elif __ia64__
 CheckTypeSize(struct exit_status,4, 10282, 3)
-Msg("Missing member data for exit_status on IA64\n");
-CheckOffset(struct exit_status,e_termination,0,3,34453)
-CheckOffset(struct exit_status,e_exit,0,3,34454)
+CheckOffset(struct exit_status,e_exit,2,3,34454)
 #elif __s390__
 CheckTypeSize(struct exit_status,4, 10282, 10)
 Msg("Missing member data for exit_status on S390\n");
@@ -190,10 +188,8 @@ CheckOffset(struct lastlog,ll_line,0,6,34461)
 CheckOffset(struct lastlog,ll_host,0,6,34462)
 #elif __ia64__
 CheckTypeSize(struct lastlog,296, 10285, 3)
-Msg("Missing member data for lastlog on IA64\n");
-CheckOffset(struct lastlog,ll_time,0,3,34460)
-CheckOffset(struct lastlog,ll_line,0,3,34461)
-CheckOffset(struct lastlog,ll_host,0,3,34462)
+CheckOffset(struct lastlog,ll_line,8,3,34461)
+CheckOffset(struct lastlog,ll_host,40,3,34462)
 #elif __s390__
 CheckTypeSize(struct lastlog,292, 10285, 10)
 Msg("Missing member data for lastlog on S390\n");
@@ -234,18 +230,16 @@ CheckOffset(struct utmp,ut_addr_v6,0,6,34458)
 CheckOffset(struct utmp,__unused,0,6,34459)
 #elif __ia64__
 CheckTypeSize(struct utmp,400, 10281, 3)
-Msg("Missing member data for utmp on IA64\n");
-CheckOffset(struct utmp,ut_type,0,3,34447)
-CheckOffset(struct utmp,ut_pid,0,3,34448)
-CheckOffset(struct utmp,ut_line,0,3,34449)
-CheckOffset(struct utmp,ut_id,0,3,34450)
-CheckOffset(struct utmp,ut_user,0,3,34451)
-CheckOffset(struct utmp,ut_host,0,3,34452)
-CheckOffset(struct utmp,ut_exit,0,3,34455)
-CheckOffset(struct utmp,ut_session,0,3,34456)
-CheckOffset(struct utmp,ut_tv,0,3,34457)
-CheckOffset(struct utmp,ut_addr_v6,0,3,34458)
-CheckOffset(struct utmp,__unused,0,3,34459)
+CheckOffset(struct utmp,ut_pid,4,3,34448)
+CheckOffset(struct utmp,ut_line,8,3,34449)
+CheckOffset(struct utmp,ut_id,40,3,34450)
+CheckOffset(struct utmp,ut_user,44,3,34451)
+CheckOffset(struct utmp,ut_host,76,3,34452)
+CheckOffset(struct utmp,ut_exit,332,3,34455)
+CheckOffset(struct utmp,ut_session,336,3,34456)
+CheckOffset(struct utmp,ut_tv,344,3,34457)
+CheckOffset(struct utmp,ut_addr_v6,360,3,34458)
+CheckOffset(struct utmp,__unused,376,3,34459)
 #elif __s390__
 CheckTypeSize(struct utmp,384, 10281, 10)
 Msg("Missing member data for utmp on S390\n");

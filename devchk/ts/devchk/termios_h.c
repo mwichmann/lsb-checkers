@@ -1612,11 +1612,9 @@ CheckOffset(struct winsize,ws_xpixel,4,2,34489)
 CheckOffset(struct winsize,ws_ypixel,6,2,34490)
 #elif __ia64__
 CheckTypeSize(struct winsize,8, 10301, 3)
-Msg("Missing member data for winsize on IA64\n");
-CheckOffset(struct winsize,ws_row,0,3,34487)
-CheckOffset(struct winsize,ws_col,0,3,34488)
-CheckOffset(struct winsize,ws_xpixel,0,3,34489)
-CheckOffset(struct winsize,ws_ypixel,0,3,34490)
+CheckOffset(struct winsize,ws_col,2,3,34488)
+CheckOffset(struct winsize,ws_xpixel,4,3,34489)
+CheckOffset(struct winsize,ws_ypixel,6,3,34490)
 #elif __powerpc__
 CheckTypeSize(struct winsize,8, 10301, 6)
 Msg("Missing member data for winsize on PPC32\n");
@@ -1687,15 +1685,13 @@ CheckOffset(struct termios,c_ispeed,52,2,34274)
 CheckOffset(struct termios,c_ospeed,56,2,34275)
 #elif __ia64__
 CheckTypeSize(struct termios,60, 9187, 3)
-Msg("Missing member data for termios on IA64\n");
-CheckOffset(struct termios,c_iflag,0,3,34268)
-CheckOffset(struct termios,c_oflag,0,3,34269)
-CheckOffset(struct termios,c_cflag,0,3,34270)
-CheckOffset(struct termios,c_lflag,0,3,34271)
-CheckOffset(struct termios,c_line,0,3,34272)
-CheckOffset(struct termios,c_cc,0,3,34273)
-CheckOffset(struct termios,c_ispeed,0,3,34274)
-CheckOffset(struct termios,c_ospeed,0,3,34275)
+CheckOffset(struct termios,c_oflag,4,3,34269)
+CheckOffset(struct termios,c_cflag,8,3,34270)
+CheckOffset(struct termios,c_lflag,12,3,34271)
+CheckOffset(struct termios,c_line,16,3,34272)
+CheckOffset(struct termios,c_cc,17,3,34273)
+CheckOffset(struct termios,c_ispeed,52,3,34274)
+CheckOffset(struct termios,c_ospeed,56,3,34275)
 #elif __powerpc__
 CheckTypeSize(struct termios,60, 9187, 6)
 Msg("Missing member data for termios on PPC32\n");

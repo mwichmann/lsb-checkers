@@ -193,6 +193,7 @@ cnt++;
 
 #ifdef __i386__
 #elif __s390__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9916,0);
 Msg("Find size of clnt_stat (9916)\n");
@@ -214,6 +215,13 @@ CheckOffset(struct clnt_ops,cl_geterr,0,10,32106)
 CheckOffset(struct clnt_ops,cl_freeres,0,10,32107)
 CheckOffset(struct clnt_ops,cl_destroy,0,10,32108)
 CheckOffset(struct clnt_ops,cl_control,0,10,32109)
+#elif __ia64__
+CheckTypeSize(struct clnt_ops,48, 9922, 3)
+CheckOffset(struct clnt_ops,cl_abort,8,3,32105)
+CheckOffset(struct clnt_ops,cl_geterr,16,3,32106)
+CheckOffset(struct clnt_ops,cl_freeres,24,3,32107)
+CheckOffset(struct clnt_ops,cl_destroy,32,3,32108)
+CheckOffset(struct clnt_ops,cl_control,40,3,32109)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9922,0);
 Msg("Find size of clnt_ops (9922)\n");
@@ -229,6 +237,10 @@ Msg("Missing member data for CLIENT on S390\n");
 CheckOffset(struct CLIENT,cl_auth,0,10,32103)
 CheckOffset(struct CLIENT,cl_ops,0,10,32110)
 CheckOffset(struct CLIENT,cl_private,0,10,32111)
+#elif __ia64__
+CheckTypeSize(struct CLIENT,24, 9921, 3)
+CheckOffset(struct CLIENT,cl_ops,8,3,32110)
+CheckOffset(struct CLIENT,cl_private,16,3,32111)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9921,0);
 Msg("Find size of CLIENT (9921)\n");
@@ -238,6 +250,8 @@ Msg("Find size of CLIENT (9921)\n");
 CheckTypeSize(CLIENT,12, 10389, 2)
 #elif __s390__
 CheckTypeSize(CLIENT,12, 10389, 10)
+#elif __ia64__
+CheckTypeSize(CLIENT,24, 10389, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10389,0);
 Msg("Find size of CLIENT (10389)\n");

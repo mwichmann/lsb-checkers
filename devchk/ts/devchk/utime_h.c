@@ -29,9 +29,7 @@ CheckOffset(struct utimbuf,actime,0,2,30205)
 CheckOffset(struct utimbuf,modtime,4,2,30206)
 #elif __ia64__
 CheckTypeSize(struct utimbuf,16, 7023, 3)
-Msg("Missing member data for utimbuf on IA64\n");
-CheckOffset(struct utimbuf,actime,0,3,30205)
-CheckOffset(struct utimbuf,modtime,0,3,30206)
+CheckOffset(struct utimbuf,modtime,8,3,30206)
 #elif __powerpc__
 CheckTypeSize(struct utimbuf,8, 7023, 6)
 Msg("Missing member data for utimbuf on PPC32\n");

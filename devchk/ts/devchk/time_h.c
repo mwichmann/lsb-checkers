@@ -67,18 +67,16 @@ CheckOffset(struct tm,tm_gmtoff,36,2,33521)
 CheckOffset(struct tm,tm_zone,40,2,33522)
 #elif __ia64__
 CheckTypeSize(struct tm,56, 7019, 3)
-Msg("Missing member data for tm on IA64\n");
-CheckOffset(struct tm,tm_sec,0,3,33512)
-CheckOffset(struct tm,tm_min,0,3,33513)
-CheckOffset(struct tm,tm_hour,0,3,33514)
-CheckOffset(struct tm,tm_mday,0,3,33515)
-CheckOffset(struct tm,tm_mon,0,3,33516)
-CheckOffset(struct tm,tm_year,0,3,33517)
-CheckOffset(struct tm,tm_wday,0,3,33518)
-CheckOffset(struct tm,tm_yday,0,3,33519)
-CheckOffset(struct tm,tm_isdst,0,3,33520)
-CheckOffset(struct tm,tm_gmtoff,0,3,33521)
-CheckOffset(struct tm,tm_zone,0,3,33522)
+CheckOffset(struct tm,tm_min,4,3,33513)
+CheckOffset(struct tm,tm_hour,8,3,33514)
+CheckOffset(struct tm,tm_mday,12,3,33515)
+CheckOffset(struct tm,tm_mon,16,3,33516)
+CheckOffset(struct tm,tm_year,20,3,33517)
+CheckOffset(struct tm,tm_wday,24,3,33518)
+CheckOffset(struct tm,tm_yday,28,3,33519)
+CheckOffset(struct tm,tm_isdst,32,3,33520)
+CheckOffset(struct tm,tm_gmtoff,40,3,33521)
+CheckOffset(struct tm,tm_zone,48,3,33522)
 #elif __powerpc__
 CheckTypeSize(struct tm,44, 7019, 6)
 Msg("Missing member data for tm on PPC32\n");
@@ -117,9 +115,7 @@ CheckTypeSize(struct itimerspec,16, 10101, 2)
 CheckOffset(struct itimerspec,it_value,8,2,33509)
 #elif __ia64__
 CheckTypeSize(struct itimerspec,32, 10101, 3)
-Msg("Missing member data for itimerspec on IA64\n");
-CheckOffset(struct itimerspec,it_interval,0,3,33508)
-CheckOffset(struct itimerspec,it_value,0,3,33509)
+CheckOffset(struct itimerspec,it_value,16,3,33509)
 #elif __powerpc__
 CheckTypeSize(struct itimerspec,16, 10101, 6)
 Msg("Missing member data for itimerspec on PPC32\n");

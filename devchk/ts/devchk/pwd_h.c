@@ -33,14 +33,12 @@ CheckOffset(struct passwd,pw_dir,20,2,30046)
 CheckOffset(struct passwd,pw_shell,24,2,30047)
 #elif __ia64__
 CheckTypeSize(struct passwd,48, 6938, 3)
-Msg("Missing member data for passwd on IA64\n");
-CheckOffset(struct passwd,pw_name,0,3,30041)
-CheckOffset(struct passwd,pw_passwd,0,3,30042)
-CheckOffset(struct passwd,pw_uid,0,3,30043)
-CheckOffset(struct passwd,pw_gid,0,3,30044)
-CheckOffset(struct passwd,pw_gecos,0,3,30045)
-CheckOffset(struct passwd,pw_dir,0,3,30046)
-CheckOffset(struct passwd,pw_shell,0,3,30047)
+CheckOffset(struct passwd,pw_passwd,8,3,30042)
+CheckOffset(struct passwd,pw_uid,16,3,30043)
+CheckOffset(struct passwd,pw_gid,20,3,30044)
+CheckOffset(struct passwd,pw_gecos,24,3,30045)
+CheckOffset(struct passwd,pw_dir,32,3,30046)
+CheckOffset(struct passwd,pw_shell,40,3,30047)
 #elif __powerpc__
 CheckTypeSize(struct passwd,28, 6938, 6)
 Msg("Missing member data for passwd on PPC32\n");

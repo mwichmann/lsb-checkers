@@ -58,9 +58,7 @@ CheckTypeSize(struct timezone,8, 9855, 2)
 CheckOffset(struct timezone,tz_dsttime,4,2,33507)
 #elif __ia64__
 CheckTypeSize(struct timezone,8, 9855, 3)
-Msg("Missing member data for timezone on IA64\n");
-CheckOffset(struct timezone,tz_minuteswest,0,3,33506)
-CheckOffset(struct timezone,tz_dsttime,0,3,33507)
+CheckOffset(struct timezone,tz_dsttime,4,3,33507)
 #elif __powerpc__
 CheckTypeSize(struct timezone,8, 9855, 6)
 Msg("Missing member data for timezone on PPC32\n");
@@ -81,9 +79,7 @@ CheckTypeSize(struct itimerval,16, 9861, 2)
 CheckOffset(struct itimerval,it_value,8,2,33511)
 #elif __ia64__
 CheckTypeSize(struct itimerval,32, 9861, 3)
-Msg("Missing member data for itimerval on IA64\n");
-CheckOffset(struct itimerval,it_interval,0,3,33510)
-CheckOffset(struct itimerval,it_value,0,3,33511)
+CheckOffset(struct itimerval,it_value,16,3,33511)
 #elif __powerpc__
 CheckTypeSize(struct itimerval,16, 9861, 6)
 Msg("Missing member data for itimerval on PPC32\n");
@@ -104,9 +100,7 @@ CheckTypeSize(struct timespec,8, 7018, 2)
 CheckOffset(struct timespec,tv_nsec,4,2,33503)
 #elif __ia64__
 CheckTypeSize(struct timespec,16, 7018, 3)
-Msg("Missing member data for timespec on IA64\n");
-CheckOffset(struct timespec,tv_sec,0,3,33502)
-CheckOffset(struct timespec,tv_nsec,0,3,33503)
+CheckOffset(struct timespec,tv_nsec,8,3,33503)
 #elif __powerpc__
 CheckTypeSize(struct timespec,8, 7018, 6)
 Msg("Missing member data for timespec on PPC32\n");
@@ -127,9 +121,7 @@ CheckTypeSize(struct timeval,8, 9858, 2)
 CheckOffset(struct timeval,tv_usec,4,2,33505)
 #elif __ia64__
 CheckTypeSize(struct timeval,16, 9858, 3)
-Msg("Missing member data for timeval on IA64\n");
-CheckOffset(struct timeval,tv_sec,0,3,33504)
-CheckOffset(struct timeval,tv_usec,0,3,33505)
+CheckOffset(struct timeval,tv_usec,8,3,33505)
 #elif __powerpc__
 CheckTypeSize(struct timeval,8, 9858, 6)
 Msg("Missing member data for timeval on PPC32\n");

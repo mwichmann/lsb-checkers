@@ -157,11 +157,9 @@ CheckOffset(struct ifaddr,ifa_ifp,0,6,34496)
 CheckOffset(struct ifaddr,ifa_next,0,6,34497)
 #elif __ia64__
 CheckTypeSize(struct ifaddr,48, 10286, 3)
-Msg("Missing member data for ifaddr on IA64\n");
-CheckOffset(struct ifaddr,ifa_addr,0,3,34463)
-CheckOffset(struct ifaddr,ifa_ifu,0,3,34466)
-CheckOffset(struct ifaddr,ifa_ifp,0,3,34496)
-CheckOffset(struct ifaddr,ifa_next,0,3,34497)
+CheckOffset(struct ifaddr,ifa_ifu,16,3,34466)
+CheckOffset(struct ifaddr,ifa_ifp,32,3,34496)
+CheckOffset(struct ifaddr,ifa_next,40,3,34497)
 #elif __s390__
 CheckTypeSize(struct ifaddr,40, 10286, 10)
 Msg("Missing member data for ifaddr on S390\n");
@@ -193,9 +191,7 @@ CheckOffset(struct ifreq,ifr_ifrn,0,6,34471)
 CheckOffset(struct ifreq,ifr_ifru,0,6,34483)
 #elif __ia64__
 CheckTypeSize(struct ifreq,40, 10290, 3)
-Msg("Missing member data for ifreq on IA64\n");
-CheckOffset(struct ifreq,ifr_ifrn,0,3,34471)
-CheckOffset(struct ifreq,ifr_ifru,0,3,34483)
+CheckOffset(struct ifreq,ifr_ifru,16,3,34483)
 #elif __s390__
 CheckTypeSize(struct ifreq,32, 10290, 10)
 Msg("Missing member data for ifreq on S390\n");
@@ -230,9 +226,7 @@ CheckOffset(struct ifconf,ifc_len,0,2,34467)
 CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
 #elif __ia64__
 CheckTypeSize(struct ifconf,16, 10288, 3)
-Msg("Missing member data for ifconf on IA64\n");
-CheckOffset(struct ifconf,ifc_len,0,3,34467)
-CheckOffset(struct ifconf,ifc_ifcu,0,3,34469)
+CheckOffset(struct ifconf,ifc_ifcu,8,3,34469)
 #endif
 
 #ifdef __no_sym__

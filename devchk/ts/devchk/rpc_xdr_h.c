@@ -25,6 +25,7 @@ Msg("Checking data structures in rpc/xdr.h\n");
 
 #ifdef __i386__
 #elif __s390__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9933,0);
 Msg("Find size of xdr_op (9933)\n");
@@ -46,6 +47,13 @@ CheckOffset(struct XDR,x_public,0,10,32194)
 CheckOffset(struct XDR,x_private,0,10,32195)
 CheckOffset(struct XDR,x_base,0,10,32196)
 CheckOffset(struct XDR,x_handy,0,10,32197)
+#elif __ia64__
+CheckTypeSize(struct XDR,48, 9934, 3)
+CheckOffset(struct XDR,x_ops,8,3,32193)
+CheckOffset(struct XDR,x_public,16,3,32194)
+CheckOffset(struct XDR,x_private,24,3,32195)
+CheckOffset(struct XDR,x_base,32,3,32196)
+CheckOffset(struct XDR,x_handy,40,3,32197)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9934,0);
 Msg("Find size of XDR (9934)\n");
@@ -75,6 +83,17 @@ CheckOffset(struct xdr_ops,x_inline,0,10,32184)
 CheckOffset(struct xdr_ops,x_destroy,0,10,32186)
 CheckOffset(struct xdr_ops,x_getint32,0,10,32189)
 CheckOffset(struct xdr_ops,x_putint32,0,10,32192)
+#elif __ia64__
+CheckTypeSize(struct xdr_ops,80, 9935, 3)
+CheckOffset(struct xdr_ops,x_putlong,8,3,32168)
+CheckOffset(struct xdr_ops,x_getbytes,16,3,32172)
+CheckOffset(struct xdr_ops,x_putbytes,24,3,32176)
+CheckOffset(struct xdr_ops,x_getpostn,32,3,32178)
+CheckOffset(struct xdr_ops,x_setpostn,40,3,32181)
+CheckOffset(struct xdr_ops,x_inline,48,3,32184)
+CheckOffset(struct xdr_ops,x_destroy,56,3,32186)
+CheckOffset(struct xdr_ops,x_getint32,64,3,32189)
+CheckOffset(struct xdr_ops,x_putint32,72,3,32192)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9935,0);
 Msg("Find size of xdr_ops (9935)\n");

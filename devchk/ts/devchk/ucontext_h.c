@@ -72,7 +72,7 @@ CheckTypeSize(greg_t,4, 10222, 2)
 #endif
 
 #ifdef __i386__
-CheckTypeSize(gregset_t,76, 10224, 2)
+CheckTypeSize(gregset_t,19, 10224, 2)
 #endif
 
 #ifdef __i386__

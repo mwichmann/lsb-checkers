@@ -38,9 +38,7 @@ CheckTypeSize(struct sockaddr_un,110, 9152, 2)
 CheckOffset(struct sockaddr_un,sun_path,2,2,34486)
 #elif __ia64__
 CheckTypeSize(struct sockaddr_un,110, 9152, 3)
-Msg("Missing member data for sockaddr_un on IA64\n");
-CheckOffset(struct sockaddr_un,sun_family,0,3,34485)
-CheckOffset(struct sockaddr_un,sun_path,0,3,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,3,34486)
 #elif __s390__
 CheckTypeSize(struct sockaddr_un,110, 9152, 10)
 Msg("Missing member data for sockaddr_un on S390\n");

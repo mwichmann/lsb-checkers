@@ -95,10 +95,8 @@ CheckOffset(struct pollfd,events,0,6,34413)
 CheckOffset(struct pollfd,revents,0,6,34414)
 #elif __ia64__
 CheckTypeSize(struct pollfd,8, 9913, 3)
-Msg("Missing member data for pollfd on IA64\n");
-CheckOffset(struct pollfd,fd,0,3,34412)
-CheckOffset(struct pollfd,events,0,3,34413)
-CheckOffset(struct pollfd,revents,0,3,34414)
+CheckOffset(struct pollfd,events,4,3,34413)
+CheckOffset(struct pollfd,revents,6,3,34414)
 #elif __s390__
 CheckTypeSize(struct pollfd,8, 9913, 10)
 Msg("Missing member data for pollfd on S390\n");
