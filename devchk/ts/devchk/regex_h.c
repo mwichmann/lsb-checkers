@@ -190,6 +190,48 @@ Msg( "Warning: Constant not found: RE_SYNTAX_POSIX_EXTENDED\n");
 Msg( "Warning: Constant not found: RE_SYNTAX_POSIX_MINIMAL_EXTENDED\n");
 #endif
 
+#ifdef REG_EXTENDED
+	CompareConstant(REG_EXTENDED,1)
+#else
+Msg( "Warning: Constant not found: REG_EXTENDED\n");
+#endif
+
+#ifdef REG_ICASE
+	CompareConstant(REG_ICASE,(REG_EXTENDED<<1))
+#else
+Msg( "Warning: Constant not found: REG_ICASE\n");
+#endif
+
+#ifdef REG_NEWLINE
+	CompareConstant(REG_NEWLINE,(REG_ICASE<<1))
+#else
+Msg( "Warning: Constant not found: REG_NEWLINE\n");
+#endif
+
+#ifdef REG_NOSUB
+	CompareConstant(REG_NOSUB,(REG_NEWLINE<<1))
+#else
+Msg( "Warning: Constant not found: REG_NOSUB\n");
+#endif
+
+#ifdef REG_NOTBOL
+	CompareConstant(REG_NOTBOL,1)
+#else
+Msg( "Warning: Constant not found: REG_NOTBOL\n");
+#endif
+
+#ifdef REG_NOTEOL
+	CompareConstant(REG_NOTEOL,(1<<1))
+#else
+Msg( "Warning: Constant not found: REG_NOTEOL\n");
+#endif
+
+#ifdef REG_NOMATCH
+	CompareConstant(REG_NOMATCH,-1)
+#else
+Msg( "Warning: Constant not found: REG_NOMATCH\n");
+#endif
+
 #ifdef __i386__
 CheckTypeSize(regmatch_t,8, 6949, 2)
 #elif __ia64__

@@ -15,16 +15,23 @@ OBJS = hdrchk.o \
 	X11_extensions_security_h.o \
 	X11_extensions_sync_h.o \
 	aio_h.o \
+	assert_h.o \
+	cpio_h.o \
 	curses_h.o \
 	dirent_h.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
+	fnmatch_h.o \
 	ftw_h.o \
 	glob_h.o \
 	iconv_h.o \
 	inttypes_h.o \
+	limits_h.o \
+	locale_h.o \
+	math_h.o \
 	nl_types_h.o \
+	pthread_h.o \
 	regex_h.o \
 	rpc_xdr_h.o \
 	search_h.o \
@@ -33,10 +40,13 @@ OBJS = hdrchk.o \
 	signal_h.o \
 	stdio_h.o \
 	stdlib_h.o \
+	sys_ipc_h.o \
 	sys_socket_h.o \
+	sys_stat_h.o \
 	sys_time_h.o \
 	sys_types_h.o \
 	sys_wait_h.o \
+	termios_h.o \
 	time_h.o \
 	unistd_h.o \
 	wchar_h.o \
