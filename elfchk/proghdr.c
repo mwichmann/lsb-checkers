@@ -99,9 +99,9 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 			 */
 			if( file->saddr[i].sh_flags&~secflags ) {
 				snprintf(tmp_string, TMP_STRING_SIZE,
-								 "Section %s flags %x does not correspond to Segment flags %x", 
-								 ElfGetString(file, file->saddr[i].sh_name),
-								 file->saddr[i].sh_flags, hdr->p_flags );
+						 "Section %s flags %lx does not correspond to Segment flags %x", 
+						 ElfGetString(file, file->saddr[i].sh_name),
+						 (u_long)file->saddr[i].sh_flags, hdr->p_flags );
 				tetj_testcase_info(journal, tetj_activity_count,
 													 tetj_tp_count, 0, 0, 0, tmp_string);
 				fprintf(stderr, "%s\n", tmp_string);
@@ -345,8 +345,8 @@ checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   /* Header flags should be in the set PF_X|PF_W|PF_R */
   if( hdr->p_filesz & ~(PF_X|PF_W|PF_R) )
   {
-    snprintf(tmp_string, TMP_STRING_SIZE, "Unexpected flags %x",
-					hdr->p_filesz & ~(PF_X|PF_W|PF_R));
+    snprintf(tmp_string, TMP_STRING_SIZE, "Unexpected flags %lx",
+				(u_long)hdr->p_filesz & ~(PF_X|PF_W|PF_R));
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
