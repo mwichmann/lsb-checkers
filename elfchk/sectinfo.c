@@ -60,6 +60,9 @@ struct SectionInfo SectionInfo[] = {
 	{".line",SHT_PROGBITS,0,checkPROGBITS},
 	{".note",SHT_NOTE,0,checkNOTE},
 	{".note.ABI-tag",SHT_NOTE,SHF_ALLOC,checkNOTE},
+#if __powerpc64__
+	{".opd",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __powerpc64__ */
 #if __i386__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __i386__ */
@@ -106,6 +109,9 @@ struct SectionInfo SectionInfo[] = {
 #if __s390__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __s390__ */
+#if __powerpc64__
+	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __powerpc64__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.got",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -121,6 +127,9 @@ struct SectionInfo SectionInfo[] = {
 #if __s390__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __s390__ */
+#if __powerpc64__
+	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
+#endif /* __powerpc64__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -146,6 +155,9 @@ struct SectionInfo SectionInfo[] = {
 	{".text",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #if __powerpc64__
 	{".toc",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+#endif /* __powerpc64__ */
+#if __powerpc64__
+	{".toc1",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 #endif /* __powerpc64__ */
 #if __powerpc64__
 	{".tocbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
