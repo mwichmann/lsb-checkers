@@ -2946,6 +2946,27 @@ struct versym libc_so_6[] = {
 	{"endgrent","GLIBC_2.2",0,"LSB-Core",1,1},
 #endif
 #if __i386__
+	{"endnetent","GLIBC_2.0",0,"LSB-Core",1,1},
+#endif
+#if __ia64__
+	{"endnetent","GLIBC_2.2",0,"LSB-Core",1,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"endnetent","GLIBC_2.0",0,"LSB-Core",1,1},
+#endif
+#if __powerpc64__
+	{"endnetent","GLIBC_2.3",0,"LSB-Core",1,1},
+#endif
+#if __s390__ && !__s390x__
+	{"endnetent","GLIBC_2.0",0,"LSB-Core",1,1},
+#endif
+#if __x86_64__
+	{"endnetent","GLIBC_2.2.5",0,"LSB-Core",1,1},
+#endif
+#if __s390x__
+	{"endnetent","GLIBC_2.2",0,"LSB-Core",1,1},
+#endif
+#if __i386__
 	{"endprotoent","GLIBC_2.0",0,"LSB-Core",1,1},
 #endif
 #if __ia64__
@@ -5275,6 +5296,27 @@ struct versym libc_so_6[] = {
 #endif
 #if __s390x__
 	{"getnameinfo","GLIBC_2.2",0,"LSB-Core",4,1},
+#endif
+#if __i386__
+	{"getnetbyaddr","GLIBC_2.0",0,"LSB-Core",0,1},
+#endif
+#if __ia64__
+	{"getnetbyaddr","GLIBC_2.2",0,"LSB-Core",0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"getnetbyaddr","GLIBC_2.0",0,"LSB-Core",0,1},
+#endif
+#if __powerpc64__
+	{"getnetbyaddr","GLIBC_2.3",0,"LSB-Core",0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"getnetbyaddr","GLIBC_2.0",0,"LSB-Core",0,1},
+#endif
+#if __x86_64__
+	{"getnetbyaddr","GLIBC_2.2.5",0,"LSB-Core",0,1},
+#endif
+#if __s390x__
+	{"getnetbyaddr","GLIBC_2.2",0,"LSB-Core",0,1},
 #endif
 #if __i386__
 	{"getopt","GLIBC_2.0",0,"LSB-Core",4,1},
@@ -10882,6 +10924,27 @@ struct versym libc_so_6[] = {
 #endif
 #if __s390x__
 	{"setlogmask","GLIBC_2.2",0,"LSB-Core",4,1},
+#endif
+#if __i386__
+	{"setnetent","GLIBC_2.0",0,"LSB-Core",1,1},
+#endif
+#if __ia64__
+	{"setnetent","GLIBC_2.2",0,"LSB-Core",1,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"setnetent","GLIBC_2.0",0,"LSB-Core",1,1},
+#endif
+#if __powerpc64__
+	{"setnetent","GLIBC_2.3",0,"LSB-Core",1,1},
+#endif
+#if __s390__ && !__s390x__
+	{"setnetent","GLIBC_2.0",0,"LSB-Core",1,1},
+#endif
+#if __x86_64__
+	{"setnetent","GLIBC_2.2.5",0,"LSB-Core",1,1},
+#endif
+#if __s390x__
+	{"setnetent","GLIBC_2.2",0,"LSB-Core",1,1},
 #endif
 #if __i386__
 	{"setpgid","GLIBC_2.0",0,"LSB-Core",4,1},
