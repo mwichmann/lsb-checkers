@@ -176,6 +176,7 @@ tcnt+=wctype_h();
 tcnt+=wordexp_h();
 tcnt+=zlib_h();
 tcnt+=intrinsic();
+tcnt+=cxx();
 printf("Total Tests: %d\n", tcnt );
 }
 #endif

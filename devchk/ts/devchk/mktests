@@ -536,6 +536,113 @@ print TESTS "}\n";
 close(TEST);
 
 #
+# Dump out the C++ types (Class types)
+#
+open(TESTS,"|c++filt |c++filt >cxx.C") || die "Can't open cxx.c for writing";
+
+#Get Types
+$select = "SELECT DISTINCT * FROM Type ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+$select.= "LEFT JOIN Architecture ON Aid=ATaid ";
+$select.= "WHERE Ttype='Class' ";
+$select.= "ORDER BY Tname,ATaid";
+$tth = $Dbh->query($select) || die $Dbh->errmsg();
+if( $tth->numrows == 0 ) {
+	print TESTS "/*\n * No values in $Hname\n */\n";
+	close(TESTS);
+	return;
+	}
+
+print MAKEFILE "\\\n\tcxx.o ";
+print HARNESS "tcnt+=cxx();\n";
+
+
+print TESTS "/*\n * Test of intrinsic types\n */\n";
+print TESTS "#include <fstream>\n";
+print TESTS "#include <ios>\n";
+print TESTS "#include <istream>\n";
+print TESTS "#include <iterator>\n";
+print TESTS "#include <limits>\n";
+print TESTS "#include <locale>\n";
+print TESTS "#include <numeric>\n";
+print TESTS "#include <stdexcept>\n";
+print TESTS "#include <string>\n";
+print TESTS "#include <sstream>\n";
+print TESTS "#include <valarray>\n";
+print TESTS "#include <vector>\n";
+print TESTS "#include <backward/strstream>\n";
+print TESTS "#include <ext/stdio_filebuf.h>\n";
+print TESTS "#include <cxxabi.h>\n";
+print TESTS "#include \"hdrchk.h\"\n";
+print TESTS "\n\n\n";
+print TESTS "extern \"C\" {\n";
+print TESTS "#ifdef TET_TEST\n";
+print TESTS "void cxx();\n";
+print TESTS "#else\n";
+print TESTS "int cxx();\n";
+print TESTS "#endif\n";
+print TESTS "}\n\n";
+print TESTS "#ifdef TET_TEST\n";
+print TESTS "void cxx()\n{\n";
+print TESTS "#else\n";
+print TESTS "int cxx()\n{\n";
+print TESTS "#endif\n";
+print TESTS "int cnt=0;\n";
+print TESTS "#ifdef TET_TEST\n";
+print TESTS "int pcnt=0;\n";
+print TESTS "#endif\n\n";
+
+$lastid=0;
+for(1..$tth->numrows) {
+	%tentry=$tth->fetchhash;
+	# Do this before we reset the value, so we can re-use the values
+	# from the last time through the loop if we need them
+	if( $tentry{'Tid'} != $lastid ) {
+		if( $lastid != 0 ) {
+			# We have output at least one type, and now we need to
+			# put a catch-all else clause
+
+			print TESTS "#else\n";
+			print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+			print TESTS "#endif\n\n";
+		}
+		if( !$tentry{'Asymbol'} ) {
+			$tentry{'Asymbol'} = '0';
+			}
+		print TESTS "#if $tentry{'Asymbol'}\n";
+		$lastid=$tentry{'Tid'};
+	} else {
+		print TESTS "#elif $tentry{'Asymbol'}\n";
+	}
+	$Tid=$tentry{'Tid'};
+	$ATsize=$tentry{'ATsize'};
+	$Aid=$tentry{'Aid'};
+	$Tname=$tentry{'Tname'};
+	# Unmangled types have commas, which confuse the preprocessor 
+	print TESTS "#define TYPE _Z"."$Tname\n";
+	print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid)\n";
+	print TESTS "#undef TYPE\n";
+}
+print TESTS "#else\n";
+print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+print TESTS "#endif\n\n";
+
+print TESTS "#ifdef TET_TEST\n";
+print TESTS "if (pcnt == cnt )\n";
+print TESTS "\ttet_result(TET_PASS);\n";
+print TESTS "else\n";
+print TESTS "\ttet_result(TET_FAIL);\n";
+print TESTS "return;\n";	
+print TESTS "#else\n";
+print TESTS "printf(\"%d c++ types\\n\",cnt);\n";
+print TESTS "return cnt;\n";
+print TESTS "#endif\n\n";
+print TESTS "}\n";
+close(TEST);
+
+#
 # Finish up and close the files
 #
 print MAKEFILE "\n\n";
@@ -548,6 +655,7 @@ print MAKEFILE "EXTRALIBS =\n";
 print MAKEFILE "endif\n\n";
 
 print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include \n\n";
+print MAKEFILE "CXXFLAGS = \$\(CFLAGS)\n\n";
 
 
 print MAKEFILE "ifdef TET_ROOT\n";
@@ -556,7 +664,7 @@ print MAKEFILE "endif\n\n";
 
 print MAKEFILE "all: hdrchk\n\n";
 print MAKEFILE "hdrchk: \$\(OBJS)\n";
-print MAKEFILE "\t\$(CC) -o hdrchk \$\(OBJS) \$\(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses\n";
+print MAKEFILE "\t\$(CXX) -o hdrchk \$\(OBJS) \$\(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses\n";
 print MAKEFILE "\n";
 print MAKEFILE "hdrchk.o: hdrchk.c\n";
 print MAKEFILE "\t\$(CC) \$\(CFLAGS) -g -c hdrchk.c\n";
