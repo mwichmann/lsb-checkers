@@ -174,7 +174,7 @@ struct versym libncurses_so_5[] = {
 	{"scrollok",""},
 	{"set_term",""},
 	{"setscrreg",""},
-	{"setupterm","GLIBC_2.0"},
+	{"setupterm",""},
 	{"slk_attr_set",""},
 	{"slk_attroff",""},
 	{"slk_attron",""},

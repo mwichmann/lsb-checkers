@@ -183,7 +183,15 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"__getpgid","GLIBC_2.0"},
 #endif
+#if defined(__i386__)
 	{"__h_errno_location","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"__h_errno_location","GLIBC_2.2"},
+#endif
+#if defined(__powerpc__)
+	{"__h_errno_location","GLIBC_2.0"},
+#endif
 #if defined(__i386__)
 	{"__libc_current_sigrtmax","GLIBC_2.1"},
 #endif
@@ -2371,7 +2379,12 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"getpwnam","GLIBC_2.0"},
 #endif
+#if defined(__powerpc__)
 	{"getpwnam_r","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
+	{"getpwnam_r","GLIBC_2.1.2"},
+#endif
 #if defined(__i386__)
 	{"getpwuid","GLIBC_2.0"},
 #endif
@@ -4556,7 +4569,6 @@ struct versym libc_so_6_1[] = {
 #if defined(__powerpc__)
 	{"setcontext","GLIBC_2.0"},
 #endif
-	{"setdomainname",""},
 #if defined(__ia64__)
 	{"setdomainname","GLIBC_2.2"},
 #endif
