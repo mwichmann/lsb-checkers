@@ -145,9 +145,6 @@ struct versym libm_so_6[] = {
 #if __ia64__
 	{"__signbitl","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
-#if __s390__ && !__s390x__
-	{"__signbitl","GLIBC_2.2",0,"LSB-Core",4,1},
-#endif
 #if __x86_64__
 	{"__signbitl","GLIBC_2.2.5",0,"LSB-Core",4,1},
 #endif
@@ -2555,7 +2552,7 @@ struct versym libm_so_6[] = {
 	{"exp2","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"exp2","GLIBC_2.0",0,"LSB-Core",8,1},
+	{"exp2","GLIBC_2.1",0,"LSB-Core",8,1},
 #endif
 #if __powerpc64__
 	{"exp2","GLIBC_2.3",0,"LSB-Core",8,1},
@@ -2576,7 +2573,7 @@ struct versym libm_so_6[] = {
 	{"exp2f","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"exp2f","GLIBC_2.0",0,"LSB-Core",4,1},
+	{"exp2f","GLIBC_2.1",0,"LSB-Core",4,1},
 #endif
 #if __powerpc64__
 	{"exp2f","GLIBC_2.3",0,"LSB-Core",4,1},
@@ -2596,20 +2593,8 @@ struct versym libm_so_6[] = {
 #if __ia64__
 	{"exp2l","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"exp2l","GLIBC_2.0",0,"LSB-Core",8,1},
-#endif
-#if __powerpc64__
-	{"exp2l","GLIBC_2.3",0,"LSB-Core",8,1},
-#endif
-#if __s390__ && !__s390x__
-	{"exp2l","GLIBC_2.0",0,"LSB-Core",8,1},
-#endif
 #if __x86_64__
 	{"exp2l","GLIBC_2.2.5",0,"LSB-Core",16,1},
-#endif
-#if __s390x__
-	{"exp2l","GLIBC_2.2",0,"LSB-Core",8,1},
 #endif
 #if __i386__
 	{"expf","GLIBC_2.0",0,"LSB-Core",4,1},
