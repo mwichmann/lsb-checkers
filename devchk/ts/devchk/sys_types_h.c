@@ -324,11 +324,21 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10209,0);
 Msg("Find size of clockid_t (10209)\n");
 #endif
 
-#if __no_sym__
-CheckTypeSize(const int32_t,, 10458, )
-#endif
-
-#if __no_sym__
+#if __i386__
+CheckTypeSize(const int32_t,4, 10458, 2)
+#elif __ia64__
+CheckTypeSize(const int32_t,4, 10458, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const int32_t,4, 10458, 6)
+#elif __x86_64__
+CheckTypeSize(const int32_t,4, 10458, 11)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const int32_t,4, 10458, 10)
+#elif __s390x__
+CheckTypeSize(const int32_t,4, 10458, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10458,0);
+Msg("Find size of const int32_t (10458)\n");
 #endif
 
 #if __powerpc__ && !__powerpc64__

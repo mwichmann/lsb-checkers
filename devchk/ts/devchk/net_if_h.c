@@ -262,7 +262,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10288,0);
 Msg("Find size of ifconf (10288)\n");
 #endif
 
-#if __no_sym__
+#if __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10289,0);
+Msg("Find size of anon-ifc_ifcu (10289)\n");
 #endif
 
 #ifdef TET_TEST

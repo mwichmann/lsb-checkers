@@ -33,35 +33,38 @@ Msg("Checking data structures in setjmp.h\n");
 #endif
 
 #if __i386__
-CheckArrayTypeSize(__jmp_buf,4,6, 9089, 2)
+CheckTypeSize(__jmp_buf,24, 9089, 2)
 #endif
 
 #if __ia64__
-CheckArrayTypeSize(__jmp_buf,8,70, 10409, 3)
+CheckTypeSize(__jmp_buf,560, 10409, 3)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckArrayTypeSize(__jmp_buf,4,58, 10410, 6)
+CheckTypeSize(__jmp_buf,232, 10410, 6)
 #endif
 
 #if __s390__ && !__s390x__
-CheckArrayTypeSize(__jmp_buf,4,14, 10411, 10)
+CheckTypeSize(__jmp_buf,56, 10411, 10)
 #endif
 
 #if __powerpc64__
-CheckArrayTypeSize(__jmp_buf,8,40, 10504, 9)
+CheckTypeSize(__jmp_buf,320, 10504, 9)
 #endif
 
 #if __ia64__
-CheckArrayTypeSize(jmp_buf,1,704, 6962, 3)
+CheckTypeSize(jmp_buf,704, 6962, 3)
 #elif __i386__
-CheckArrayTypeSize(jmp_buf,1,156, 6962, 2)
+CheckTypeSize(jmp_buf,156, 6962, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckArrayTypeSize(jmp_buf,1,188, 6962, 6)
+CheckTypeSize(jmp_buf,364, 6962, 6)
 #elif __powerpc64__
-CheckArrayTypeSize(jmp_buf,1,456, 6962, 9)
-#elif 1
-CheckArrayTypeSize(jmp_buf,1,1, 6962, 1)
+CheckTypeSize(jmp_buf,456, 6962, 9)
+#elif __not_def__
+CheckTypeSize(jmp_buf,1, 6962, 8)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
+Msg("Find size of jmp_buf (6962)\n");
 #endif
 
 #if __i386__
