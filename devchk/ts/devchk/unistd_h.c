@@ -1433,6 +1433,16 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PAGE_SIZE
+	CompareConstant(_SC_PAGE_SIZE,30,5148,architecture)
+#else
+Msg( "Error: Constant not found: _SC_PAGE_SIZE\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(off64_t,8, 9112, 2)
 #elif __ia64__
