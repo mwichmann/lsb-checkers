@@ -23,7 +23,15 @@ int pcnt=0;
 Msg("Checking data structures in ucontext.h\n");
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef NGREG
+	CompareConstant(NGREG,48,4929,architecture)
+#else
+Msg( "Error: Constant not found: NGREG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef NGREG
 	CompareConstant(NGREG,48,4929,architecture)
 #else
@@ -128,7 +136,7 @@ CheckTypeSize(greg_t,4, 10222, 2)
 #endif
 
 #if __x86_64__
-CheckTypeSize(greg_t,4, 10794, 11)
+CheckTypeSize(greg_t,8, 10794, 11)
 #endif
 
 #if __i386__
@@ -136,7 +144,7 @@ CheckTypeSize(gregset_t,76, 10224, 2)
 #endif
 
 #if __x86_64__
-CheckTypeSize(gregset_t,92, 10796, 11)
+CheckTypeSize(gregset_t,184, 10796, 11)
 #endif
 
 #if __i386__
@@ -192,7 +200,7 @@ CheckTypeSize(fpregset_t,136, 10586, 10)
 #endif
 
 #if __x86_64__
-CheckTypeSize(struct _libc_fpstate,112, 10801, 11)
+CheckTypeSize(struct _libc_fpstate,512, 10801, 11)
 CheckMemberSize(struct _libc_fpstate,cwd,2,11,40471)
 CheckOffset(struct _libc_fpstate,cwd,0,11,40471)
 CheckMemberSize(struct _libc_fpstate,swd,2,11,40472)
@@ -206,15 +214,15 @@ CheckOffset(struct _libc_fpstate,rip,8,11,40475)
 CheckMemberSize(struct _libc_fpstate,rdp,8,11,40476)
 CheckOffset(struct _libc_fpstate,rdp,16,11,40476)
 CheckMemberSize(struct _libc_fpstate,mxcsr,4,11,40477)
-CheckOffset(struct _libc_fpstate,mxcsr,32,11,40477)
+CheckOffset(struct _libc_fpstate,mxcsr,24,11,40477)
 CheckMemberSize(struct _libc_fpstate,mxcr_mask,4,11,40478)
-CheckOffset(struct _libc_fpstate,mxcr_mask,36,11,40478)
-CheckMemberSize(struct _libc_fpstate,_st,4,11,40479)
-CheckOffset(struct _libc_fpstate,_st,0,11,40479)
-CheckMemberSize(struct _libc_fpstate,_xmm,4,11,40480)
-CheckOffset(struct _libc_fpstate,_xmm,0,11,40480)
-CheckMemberSize(struct _libc_fpstate,padding,4,11,40481)
-CheckOffset(struct _libc_fpstate,padding,0,11,40481)
+CheckOffset(struct _libc_fpstate,mxcr_mask,28,11,40478)
+CheckMemberSize(struct _libc_fpstate,_st,128,11,40479)
+CheckOffset(struct _libc_fpstate,_st,32,11,40479)
+CheckMemberSize(struct _libc_fpstate,_xmm,256,11,40480)
+CheckOffset(struct _libc_fpstate,_xmm,160,11,40480)
+CheckMemberSize(struct _libc_fpstate,padding,96,11,40481)
+CheckOffset(struct _libc_fpstate,padding,416,11,40481)
 #endif
 
 #if __x86_64__
@@ -254,7 +262,7 @@ CheckTypeSize(mcontext_t,272, 10588, 10)
 #endif
 
 #if __x86_64__
-CheckTypeSize(mcontext_t,88, 10798, 11)
+CheckTypeSize(mcontext_t,256, 10798, 11)
 #endif
 
 #if __i386__
@@ -348,23 +356,23 @@ CheckOffset(struct _libc_xmmreg,element,0,11,40470)
 #endif
 
 #if __x86_64__
-CheckTypeSize(struct ucontext,4, 10803, 11)
-CheckMemberSize(struct ucontext,uc_flags,4,11,40484)
+CheckTypeSize(struct ucontext,936, 10803, 11)
+CheckMemberSize(struct ucontext,uc_flags,8,11,40484)
 CheckOffset(struct ucontext,uc_flags,0,11,40484)
-CheckMemberSize(struct ucontext,uc_link,4,11,40485)
-CheckOffset(struct ucontext,uc_link,0,11,40485)
-CheckMemberSize(struct ucontext,uc_stack,4,11,40486)
-CheckOffset(struct ucontext,uc_stack,0,11,40486)
-CheckMemberSize(struct ucontext,uc_mcontext,4,11,40487)
-CheckOffset(struct ucontext,uc_mcontext,0,11,40487)
-CheckMemberSize(struct ucontext,uc_sigmask,4,11,40488)
-CheckOffset(struct ucontext,uc_sigmask,0,11,40488)
-CheckMemberSize(struct ucontext,__fpregs_mem,4,11,40489)
-CheckOffset(struct ucontext,__fpregs_mem,0,11,40489)
+CheckMemberSize(struct ucontext,uc_link,8,11,40485)
+CheckOffset(struct ucontext,uc_link,8,11,40485)
+CheckMemberSize(struct ucontext,uc_stack,24,11,40486)
+CheckOffset(struct ucontext,uc_stack,16,11,40486)
+CheckMemberSize(struct ucontext,uc_mcontext,256,11,40487)
+CheckOffset(struct ucontext,uc_mcontext,40,11,40487)
+CheckMemberSize(struct ucontext,uc_sigmask,128,11,40488)
+CheckOffset(struct ucontext,uc_sigmask,296,11,40488)
+CheckMemberSize(struct ucontext,__fpregs_mem,512,11,40489)
+CheckOffset(struct ucontext,__fpregs_mem,424,11,40489)
 #endif
 
 #if __x86_64__
-CheckTypeSize(ucontext_t,4, 10804, 11)
+CheckTypeSize(ucontext_t,936, 10804, 11)
 #endif
 
 #ifdef TET_TEST

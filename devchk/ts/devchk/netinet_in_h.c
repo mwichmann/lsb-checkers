@@ -276,6 +276,15 @@ CheckOffset(struct ip_mreq,imr_interface,4,12,33769)
 CheckTypeSize(struct ip_mreq,8, 10146, 3)
 CheckMemberSize(struct ip_mreq,imr_interface,4,3,33769)
 CheckOffset(struct ip_mreq,imr_interface,4,3,33769)
+#elif __powerpc64__
+CheckTypeSize(struct ip_mreq,0, 10146, 9)
+Msg("Missing member data for ip_mreq on PPC64\n");
+CheckOffset(struct ip_mreq,imr_multiaddr,0,9,33768)
+CheckOffset(struct ip_mreq,imr_interface,0,9,33769)
+#elif __x86_64__
+CheckTypeSize(struct ip_mreq,8, 10146, 11)
+CheckMemberSize(struct ip_mreq,imr_interface,4,11,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,11,33769)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10146,0);
 Msg("Find size of ip_mreq (10146)\n");

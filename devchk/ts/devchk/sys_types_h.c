@@ -352,6 +352,8 @@ CheckTypeSize(useconds_t,4, 9369, 6)
 CheckTypeSize(useconds_t,4, 9369, 10)
 #elif __s390x__
 CheckTypeSize(useconds_t,4, 9369, 12)
+#elif __x86_64__
+CheckTypeSize(useconds_t,4, 9369, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9369,0);
 Msg("Find size of useconds_t (9369)\n");
@@ -616,25 +618,6 @@ CheckTypeSize(caddr_t,8, 9258, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9258,0);
 Msg("Find size of caddr_t (9258)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(ushort,2, 9264, 2)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ushort,2, 9264, 6)
-#elif __ia64__
-CheckTypeSize(ushort,2, 9264, 3)
-#elif __s390__ && !__s390x__
-CheckTypeSize(ushort,2, 9264, 10)
-#elif __powerpc64__
-CheckTypeSize(ushort,2, 9264, 9)
-#elif __s390x__
-CheckTypeSize(ushort,2, 9264, 12)
-#elif __x86_64__
-CheckTypeSize(ushort,2, 9264, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9264,0);
-Msg("Find size of ushort (9264)\n");
 #endif
 
 #if __i386__
