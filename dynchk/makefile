@@ -1,9 +1,10 @@
 WRAPPER_LIBS = \
 	libs/libc/libc.o \
-	libs/libdl/libdl.o \
 	libs/libpam/libpam.o \
-	libs/libncurses/libncurses.o
-
+	libs/libncurses/libncurses.o \
+	libs/libz/libz.o \
+	libs/libm/libm.o \
+	libs/libpthread/libpthread.o
 
 TEST_LIB = tests/tests.o
 
