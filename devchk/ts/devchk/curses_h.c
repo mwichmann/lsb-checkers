@@ -2356,6 +2356,10 @@ CheckTypeSize(bool,1, 10440, 9)
 CheckTypeSize(bool,1, 10441, 10)
 #endif
 
+#if __s390x__
+CheckTypeSize(bool,4, 10859, 12)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

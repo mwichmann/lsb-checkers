@@ -257,6 +257,13 @@ CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,2,40621)
 CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,2,40621)
 CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,2,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,12,2,40622)
+#elif __s390x__
+CheckTypeSize(struct _pthread_cleanup_buffer,0, 6931, 12)
+Msg("Missing member data for _pthread_cleanup_buffer on S390X\n");
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,12,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,0,12,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,0,12,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,0,12,40622)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6931,0);
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
@@ -641,6 +648,7 @@ Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
 #elif __powerpc64__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
 Msg("Find size of const pthread_rwlockattr_t * (10811)\n");

@@ -108,6 +108,10 @@ CheckTypeSize(ptrdiff_t,8, 10783, 11)
 CheckTypeSize(size_t,8, 10784, 11)
 #endif
 
+#if __s390x__
+CheckTypeSize(ptrdiff_t,8, 10865, 12)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
