@@ -20,7 +20,7 @@ int __xstat64 (int arg0 , const char * arg1 , struct stat64 * arg2 )
 	__lsb_output(5-__lsb_check_params, "__xstat64()");
 		validate_NULL_TYPETYPE(  arg0, "__xstat64 - arg0");
 	validate_Rdaddress( arg1, "__xstat64 - arg1");
-		validate_NULL_TYPETYPE(  arg1, "__xstat64 - arg1");
+		validate_pathname(  arg1, "__xstat64 - arg1");
 	validate_RWaddress( arg2, "__xstat64 - arg2");
 		validate_NULL_TYPETYPE(  arg2, "__xstat64 - arg2");
 	}
