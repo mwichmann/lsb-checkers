@@ -720,5 +720,4 @@ struct versym libX11_so_6[] = {
 	{"XwcTextListToTextProperty",""},
 	{"XwcTextPerCharExtents",""},
 	{"XwcTextPropertyToTextList",""},
-	{"shellWidgetClass",""},
 	{0,0}};
