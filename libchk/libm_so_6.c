@@ -5467,6 +5467,9 @@ struct versym libm_so_6[] = {
 #if __ia64__
 	{"sqrtl","GLIBC_2.2"},
 #endif
+#if __powerpc__ && !__powerpc64__
+	{"sqrtl","GLIBC_2.0"},
+#endif
 #if __powerpc64__
 	{"sqrtl","GLIBC_2.3"},
 #endif

@@ -17,7 +17,7 @@ struct versym libpthread_so_0[] = {
 	{"_pthread_cleanup_pop","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"_pthread_cleanup_pop","GLIBC_2.0"},
+	{"_pthread_cleanup_pop","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"_pthread_cleanup_pop","GLIBC_2.2"},
@@ -51,6 +51,9 @@ struct versym libpthread_so_0[] = {
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"pthread_atfork","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"pthread_atfork","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_atfork","GLIBC_2.0"},
