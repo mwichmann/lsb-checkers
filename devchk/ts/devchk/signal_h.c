@@ -1114,16 +1114,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef SA_NOCLDWAIT
-	CompareConstant(SA_NOCLDWAIT,0x00000002,3140,architecture)
-#else
-Msg( "Error: Constant not found: SA_NOCLDWAIT\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 /* No test for si_int */
 #endif
 

@@ -31,6 +31,14 @@ Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef TIOCNOTTY
+	CompareConstant(TIOCNOTTY,0x5422,4627,architecture)
+#else
+Msg( "Error: Constant not found: TIOCNOTTY\n");
+cnt++;
+#endif
+
 #elif __i386__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,0x5422,4627,architecture)

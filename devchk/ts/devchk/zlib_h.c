@@ -537,15 +537,12 @@ CheckTypeSize(struct internal_state,4, 9874, 2)
 CheckOffset(struct internal_state,dummy,0,2,34081)
 #elif __powerpc__
 CheckTypeSize(struct internal_state,4, 9874, 6)
-Msg("Missing member data for internal_state on PPC32\n");
 CheckOffset(struct internal_state,dummy,0,6,34081)
 #elif __ia64__
 CheckTypeSize(struct internal_state,4, 9874, 3)
-Msg("Missing member data for internal_state on IA64\n");
 CheckOffset(struct internal_state,dummy,0,3,34081)
 #elif __s390__
 CheckTypeSize(struct internal_state,4, 9874, 10)
-Msg("Missing member data for internal_state on S390\n");
 CheckOffset(struct internal_state,dummy,0,10,34081)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9874,0);

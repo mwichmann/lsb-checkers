@@ -35,8 +35,6 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(msgqnum_t,4, 10213, 2)
-#elif __ia64__
-CheckTypeSize(msgqnum_t,8, 10213, 3)
 #elif __powerpc64__
 CheckTypeSize(msgqnum_t,8, 10213, 9)
 #elif __s390__
@@ -56,8 +54,6 @@ CheckTypeSize(msglen_t,4, 10214, 2)
 CheckTypeSize(msglen_t,4, 10214, 6)
 #elif __s390__
 CheckTypeSize(msglen_t,4, 10214, 10)
-#elif __ia64__
-CheckTypeSize(msglen_t,8, 10214, 3)
 #endif
 
 #ifdef __i386__
