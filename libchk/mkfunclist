@@ -21,12 +21,15 @@ my($select,%entry);
 
 if( $Iid eq "" ) {return "";}
 
+if( $intname[$Iid] ) { return $intname[$Iid]; }
+
 #print STDERR "Looking for Iname for $Iid\n";
 
 $select = "SELECT Iname FROM Interface ";
 $select.= "WHERE Iid=$Iid";
 $isth = $Dbh->query($select) || die $Dbh->errmsg();
 %entry=$isth->fetchhash;
+$intname[$Iid] = $entry{'Iname'};
 return $entry{'Iname'};
 }
 
@@ -37,6 +40,12 @@ my($select,%entry);
 
 $classbase=$$class{'CIname'};
 $classbase=~s/_Z//;
+
+if( $seenclass{$classbase} ) {
+	die "Already seen $classbase\n";
+	}
+$seenclass{$classbase}=1;
+		
 #
 # Output array of BaseTypes entries
 #
@@ -73,6 +82,7 @@ print $LIB "\t};\n\n";
 $vtablename=$classbase."_vtable";
 
 $select = "SELECT * FROM Vtable ";
+$select.= "LEFT JOIN Architecture ON Aid=VTarch ";
 $select.= "WHERE VTcid=".$$class{'CIid'}." ";
 $select.= "ORDER BY VTpos";
 
@@ -81,12 +91,23 @@ $select.= "ORDER BY VTpos";
 print $LIB "const char *".$vtablename."_name[] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 $numvtablefuns=0;
-for(1..$$class{'CInumvfunc'}) {
+for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
-	print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
-	$numvtablefuns++;
+	if( $entry{'Aname'} eq "All" ) {
+		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
+	} else {
+		print $LIB "#if ".$entry{'Asymbol'}."\n";
+		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
+		print $LIB "#endif\n";
+	}
+	$numvtablefuns=$entry{'VTpos'}+1;
 }
 print $LIB "\t};\n\n";
+
+if( $$class{'CInumvfunc'} != $numvtablefuns ) {
+	print STDERR "Wrong NumVfuncs for ".$$class{'CIname'}." ";
+	print STDERR $$class{'CInumvfunc'}." vs $numvtablefuns\n";
+	}
 
 #
 # Output classvtable here.
@@ -178,13 +199,13 @@ $select.= "LEFT JOIN Library ON LibGroup.LGLIB=Library.Lid ";
 $select.= "WHERE Library.Lid=$lid ";
 #$select.= "AND CIname LIKE '_ZSd'";
 
-#print $select;
+#print $select."\n";
 
 $lsth = $Dbh->query($select) || die $Dbh->errmsg();
 $classinfos="";
 for(1..$lsth->numrows) {
 	%entry=$lsth->fetchhash;
-	#print $entry{'CIname'}."\n";
+	#print $_.":".$entry{'CIname'}."\n";
 	mkclassinfo(LIB,\%entry);
 	$classinfos.=$classinfo."\t&".$entry{'CIname'}."_classinfo,\n";
 }
@@ -230,7 +251,7 @@ $select.= "AND Aname!='None' ";
 #$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid DESC ";
 
-#print $select;
+#print "$select\n";
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
@@ -265,8 +286,9 @@ for(1..$sth->numrows) {
 	if( !$seenit{$libname} ) {
 		print MAKE "\t$libname.o \\\n";
 		$seenit{$libname}=1;
+		print "Making $libname\n";
+		mklibsyms($libname,$entry{'Lid'});
 		}
-	mklibsyms($libname,$entry{'Lid'});
 }
 
 print LIBS "}\n";
