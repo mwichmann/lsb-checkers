@@ -23,28 +23,28 @@ struct versym {
 struct classtypeinfo_mem {
 	void	*basevtable;
 	char	*name;
-	void	*basetypeinfo[];
+	void	*basetypeinfo[0];
 	};
 
 //DB format
 struct classtypeinfo {
 	char	*basevtable;
 	char	*name;
-	char	*basetypeinfo[];
+	char	**basetypeinfo;
 	};
 
 //In memory format
 struct classvtable_mem {
 	int	baseoffset;
 	char	*typeinfo;
-	void	*virtfuncs[];
+	void	*virtfuncs[0];
 	};
 
 //DB format
 struct classvtable {
 	int	baseoffset;
 	char	*typeinfo;
-	char	*virtfuncs[];
+	char	**virtfuncs;
 	};
 
 // No in memory format for this one
