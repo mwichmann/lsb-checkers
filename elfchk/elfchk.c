@@ -4,11 +4,11 @@
 #include "sections.h"
 
 void
-checkElf(ElfFile *file1, int isProgram)
+checkElf(ElfFile *file1, int isProgram, struct tetj_handle *journal)
 {
 int	i;
 
-checkElfhdr(file1, isProgram);
+checkElfhdr(file1, isProgram, journal);
 for(i=0;i<file1->numph;i++)
 	{
 	checkElfproghdr(i, file1);
@@ -16,6 +16,6 @@ for(i=0;i<file1->numph;i++)
 
 for(i=0;i<file1->numsh;i++)
 	{
-	checkElfsection(i, file1);
+	checkElfsection(i, file1, journal);
 	}
 }

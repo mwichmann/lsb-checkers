@@ -3,6 +3,7 @@ CFLAGS=-g -Wall
 OBJS=dynsyms.o dynamic.o dyntags.o dtneeded.o elfchk.o hdr.o proghdr.o \
 	sectinfo.o sections.o symvers.o util.o
 GENSRCS=dynsyms.c dtneeded.c sectinfo.c dyntags.c dynsyms.c.chk
+LIBS= ../tetj/libtetj.a
 LIB=libelfchk.a
 
 all: $(LIB) test
@@ -12,8 +13,8 @@ install:
 $(LIB): $(OBJS)
 	rm -f $(LIB);ar clq $(LIB) $(OBJS)
 
-test: test.c $(LIB)
-	cc -o test $(CFLAGS) test.c $(LIB)
+test: test.c $(LIB) $(LIBS)
+	cc -o test $(CFLAGS) test.c $(LIB) $(LIBS)
 
 check: dynsyms.c dynsyms.c.chk
 	diff dynsyms.c dynsyms.c.chk

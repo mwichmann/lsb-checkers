@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "sections.h"
+#include "../tetj/tetj.h"
 
 void
 checkDUMMY(ElfFile *file1, Elf32_Shdr *hdr1 )
@@ -216,48 +217,74 @@ fprintf(stderr, "IA_64_UNWIND SECTION\n" );
 #endif
 
 void
-checkElfsection(int index, ElfFile *file1)
+checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
 {
-Elf32_Shdr	*hdr1;
-int	i;
-
-hdr1=&(file1->saddr[index]);
-if ( index == 0 ) return; /* A dummy section */
-
+  Elf32_Shdr	*hdr1;
+  int	i;
+  int fail = 0;
+#define TMP_STRING_SIZE (200)
+  char tmp_string[TMP_STRING_SIZE+1];
+  
+  hdr1=&(file1->saddr[index]);
+  if ( index == 0 ) return; /* A dummy section */
+  
 #ifdef VERBOSE
-fprintf( stderr, "checkElfsection[%d]: %s\n", index,
-				ElfGetString(file1, hdr1->sh_name));
+  fprintf( stderr, "checkElfsection[%d]: %s\n", index,
+           ElfGetString(file1, hdr1->sh_name));
 #endif /* VERBOSE */
+  
+  if( !hdr1 )
+    return;
+  
+  tetj_tp_count++;
+  snprintf(tmp_string, TMP_STRING_SIZE, "Check Elf Section %s", 
+           ElfGetString(file1, hdr1->sh_name));
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
-if( !hdr1 )
-	return;
-
-for(i=0;i<numSectionInfo;i++) {
-	if( strcmp(ElfGetString(file1, hdr1->sh_name),
-			SectionInfo[i].name ) == 0 ) {
+  for(i=0;i<numSectionInfo;i++)
+  {
+    if( strcmp(ElfGetString(file1, hdr1->sh_name),
+               SectionInfo[i].name ) == 0 ) 
+    {
 #ifdef VERBOSE
-		fprintf( stderr, "Section[%2d] %-12.12s %s\n",
-			index, SectionInfo[i].name,
-			ElfGetString(file1, hdr1->sh_name) );
+      fprintf( stderr, "Section[%2d] %-12.12s %s\n",
+               index, SectionInfo[i].name,
+               ElfGetString(file1, hdr1->sh_name) );
 #endif /* VERBOSE */
-		if( hdr1->sh_type != SectionInfo[i].type ) {
-			fprintf(stderr,"Section %s: sh_type is wrong. ",
-						SectionInfo[i].name );
-			fprintf(stderr,"  expecting %x, got %x\n",
-					SectionInfo[i].type, hdr1->sh_type );
-		}
-		if( hdr1->sh_flags != SectionInfo[i].attributes )
-		  if( hdr1->sh_flags|SHF_ALLOC != SectionInfo[i].attributes ) {
-			fprintf(stderr,"Section %s: sh_flags is wrong. ",
-						SectionInfo[i].name );
-			fprintf(stderr,"  expecting %x, got %x\n",
-				SectionInfo[i].attributes, hdr1->sh_flags );
-		}
-		SectionInfo[i].func(file1, hdr1);
-		return;
-		}
-	}
-fprintf( stderr, "section %s is not in the LSB\n",
-					ElfGetString(file1, hdr1->sh_name));
-return;
+      if( hdr1->sh_type != SectionInfo[i].type ) 
+      {
+        snprintf(tmp_string, TMP_STRING_SIZE,
+                 "Section %s: sh_type is wrong. Expecting %x, got %x",
+                 SectionInfo[i].name, SectionInfo[i].type, hdr1->sh_type);
+        fprintf(stderr, "%s\n", tmp_string);
+        tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                           0, 0, 0, tmp_string);
+        fail = 1;
+      }
+      if( hdr1->sh_flags != SectionInfo[i].attributes )
+      {
+        if( hdr1->sh_flags|SHF_ALLOC != SectionInfo[i].attributes ) 
+        {
+          snprintf(tmp_string, TMP_STRING_SIZE,
+                   "Section %s: sh_flags is wrong. expecting %x, got %x",
+                   SectionInfo[i].name, SectionInfo[i].attributes, 
+                   hdr1->sh_flags);
+          fprintf(stderr, "%s\n", tmp_string);
+          tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                             0, 0, 0, tmp_string);
+          fail = 1;
+        }
+      }
+      SectionInfo[i].func(file1, hdr1);
+      tetj_result(journal, tetj_activity_count, tetj_tp_count,
+                  fail ? TETJ_FAIL : TETJ_PASS);
+      return;
+    }
+  }
+  snprintf(tmp_string, TMP_STRING_SIZE, "section %s is not in the LSB",
+           ElfGetString(file1, hdr1->sh_name));
+  fprintf(stderr, "%s\n", tmp_string);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count,
+              TETJ_FAIL);
+  return;
 }
