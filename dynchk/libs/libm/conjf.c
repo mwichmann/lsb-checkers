@@ -10,7 +10,7 @@ float complex conjf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conjf");
-	validate_NULL_TYPETYPE(  arg0, "conjf");
+	validate_NULL_TYPETYPE(  arg0, "conjf - arg0");
 	return funcptr(arg0);
 }
 

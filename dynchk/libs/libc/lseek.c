@@ -11,9 +11,9 @@ off_t lseek (int arg0 , off_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lseek");
-	validate_NULL_TYPETYPE(  arg0, "lseek");
-	validate_NULL_TYPETYPE(  arg1, "lseek");
-	validate_NULL_TYPETYPE(  arg2, "lseek");
+	validate_NULL_TYPETYPE(  arg0, "lseek - arg0");
+	validate_NULL_TYPETYPE(  arg1, "lseek - arg1");
+	validate_NULL_TYPETYPE(  arg2, "lseek - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

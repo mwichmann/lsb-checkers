@@ -10,8 +10,8 @@ int tgetflag (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetflag");
-	validate_Rdaddress( arg0, "tgetflag");
-	validate_NULL_TYPETYPE(  arg0, "tgetflag");
+	validate_Rdaddress( arg0, "tgetflag - arg0");
+	validate_NULL_TYPETYPE(  arg0, "tgetflag - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,10 +10,10 @@ char * realpath (const char * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "realpath");
-	validate_Rdaddress( arg0, "realpath");
-	validate_NULL_TYPETYPE(  arg0, "realpath");
-	validate_Rdaddress( arg1, "realpath");
-	validate_NULL_TYPETYPE(  arg1, "realpath");
+	validate_Rdaddress( arg0, "realpath - arg0");
+	validate_NULL_TYPETYPE(  arg0, "realpath - arg0");
+	validate_Rdaddress( arg1, "realpath - arg1");
+	validate_NULL_TYPETYPE(  arg1, "realpath - arg1");
 	return funcptr(arg0, arg1);
 }
 

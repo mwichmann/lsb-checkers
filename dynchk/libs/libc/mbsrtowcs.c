@@ -12,14 +12,14 @@ size_t mbsrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , mbstate_t
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbsrtowcs");
-	validate_Rdaddress( arg0, "mbsrtowcs");
-	validate_NULL_TYPETYPE(  arg0, "mbsrtowcs");
-	validate_Rdaddress( arg1, "mbsrtowcs");
-	validate_Rdaddress(* arg1, "mbsrtowcs");
-	validate_NULL_TYPETYPE(  arg1, "mbsrtowcs");
-	validate_NULL_TYPETYPE(  arg2, "mbsrtowcs");
-	validate_Rdaddress( arg3, "mbsrtowcs");
-	validate_NULL_TYPETYPE(  arg3, "mbsrtowcs");
+	validate_Rdaddress( arg0, "mbsrtowcs - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mbsrtowcs - arg0");
+	validate_Rdaddress( arg1, "mbsrtowcs - arg1");
+	validate_Rdaddress(* arg1, "mbsrtowcs - arg1");
+	validate_NULL_TYPETYPE(  arg1, "mbsrtowcs - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mbsrtowcs - arg2");
+	validate_Rdaddress( arg3, "mbsrtowcs - arg3");
+	validate_NULL_TYPETYPE(  arg3, "mbsrtowcs - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

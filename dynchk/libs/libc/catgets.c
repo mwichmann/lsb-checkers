@@ -10,11 +10,11 @@ char * catgets (nl_catd arg0 , int arg1 , int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catgets");
-	validate_NULL_TYPETYPE(  arg0, "catgets");
-	validate_NULL_TYPETYPE(  arg1, "catgets");
-	validate_NULL_TYPETYPE(  arg2, "catgets");
-	validate_Rdaddress( arg3, "catgets");
-	validate_NULL_TYPETYPE(  arg3, "catgets");
+	validate_NULL_TYPETYPE(  arg0, "catgets - arg0");
+	validate_NULL_TYPETYPE(  arg1, "catgets - arg1");
+	validate_NULL_TYPETYPE(  arg2, "catgets - arg2");
+	validate_Rdaddress( arg3, "catgets - arg3");
+	validate_NULL_TYPETYPE(  arg3, "catgets - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

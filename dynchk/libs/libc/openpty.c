@@ -11,16 +11,16 @@ int openpty (int * arg0 , int * arg1 , char * arg2 , struct termios * arg3 , str
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openpty");
-	validate_Rdaddress( arg0, "openpty");
-	validate_NULL_TYPETYPE(  arg0, "openpty");
-	validate_Rdaddress( arg1, "openpty");
-	validate_NULL_TYPETYPE(  arg1, "openpty");
-	validate_Rdaddress( arg2, "openpty");
-	validate_NULL_TYPETYPE(  arg2, "openpty");
-	validate_Rdaddress( arg3, "openpty");
-	validate_NULL_TYPETYPE(  arg3, "openpty");
-	validate_Rdaddress( arg4, "openpty");
-	validate_NULL_TYPETYPE(  arg4, "openpty");
+	validate_Rdaddress( arg0, "openpty - arg0");
+	validate_NULL_TYPETYPE(  arg0, "openpty - arg0");
+	validate_Rdaddress( arg1, "openpty - arg1");
+	validate_NULL_TYPETYPE(  arg1, "openpty - arg1");
+	validate_Rdaddress( arg2, "openpty - arg2");
+	validate_NULL_TYPETYPE(  arg2, "openpty - arg2");
+	validate_Rdaddress( arg3, "openpty - arg3");
+	validate_NULL_TYPETYPE(  arg3, "openpty - arg3");
+	validate_Rdaddress( arg4, "openpty - arg4");
+	validate_NULL_TYPETYPE(  arg4, "openpty - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

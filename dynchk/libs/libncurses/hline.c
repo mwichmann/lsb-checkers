@@ -10,8 +10,8 @@ int hline (chtype arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hline");
-	validate_NULL_TYPETYPE(  arg0, "hline");
-	validate_NULL_TYPETYPE(  arg1, "hline");
+	validate_NULL_TYPETYPE(  arg0, "hline - arg0");
+	validate_NULL_TYPETYPE(  arg1, "hline - arg1");
 	return funcptr(arg0, arg1);
 }
 

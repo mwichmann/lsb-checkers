@@ -10,7 +10,7 @@ void exit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "exit");
-	validate_NULL_TYPETYPE(  arg0, "exit");
+	validate_NULL_TYPETYPE(  arg0, "exit - arg0");
 	funcptr(arg0);
 }
 

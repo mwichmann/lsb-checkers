@@ -10,8 +10,8 @@ void svcerr_noprog (SVCXPRT * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_noprog");
-	validate_Rdaddress( arg0, "svcerr_noprog");
-	validate_NULL_TYPETYPE(  arg0, "svcerr_noprog");
+	validate_Rdaddress( arg0, "svcerr_noprog - arg0");
+	validate_NULL_TYPETYPE(  arg0, "svcerr_noprog - arg0");
 	funcptr(arg0);
 }
 

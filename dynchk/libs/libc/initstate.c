@@ -11,10 +11,10 @@ char * initstate (unsigned int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initstate");
-	validate_NULL_TYPETYPE(  arg0, "initstate");
-	validate_Rdaddress( arg1, "initstate");
-	validate_NULL_TYPETYPE(  arg1, "initstate");
-	validate_NULL_TYPETYPE(  arg2, "initstate");
+	validate_NULL_TYPETYPE(  arg0, "initstate - arg0");
+	validate_Rdaddress( arg1, "initstate - arg1");
+	validate_NULL_TYPETYPE(  arg1, "initstate - arg1");
+	validate_NULL_TYPETYPE(  arg2, "initstate - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

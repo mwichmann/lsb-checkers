@@ -10,11 +10,11 @@ int pair_content (short arg0 , short * arg1 , short * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pair_content");
-	validate_NULL_TYPETYPE(  arg0, "pair_content");
-	validate_Rdaddress( arg1, "pair_content");
-	validate_NULL_TYPETYPE(  arg1, "pair_content");
-	validate_Rdaddress( arg2, "pair_content");
-	validate_NULL_TYPETYPE(  arg2, "pair_content");
+	validate_NULL_TYPETYPE(  arg0, "pair_content - arg0");
+	validate_Rdaddress( arg1, "pair_content - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pair_content - arg1");
+	validate_Rdaddress( arg2, "pair_content - arg2");
+	validate_NULL_TYPETYPE(  arg2, "pair_content - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,9 +10,9 @@ int meta (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "meta");
-	validate_Rdaddress( arg0, "meta");
-	validate_NULL_TYPETYPE(  arg0, "meta");
-	validate_NULL_TYPETYPE(  arg1, "meta");
+	validate_Rdaddress( arg0, "meta - arg0");
+	validate_NULL_TYPETYPE(  arg0, "meta - arg0");
+	validate_NULL_TYPETYPE(  arg1, "meta - arg1");
 	return funcptr(arg0, arg1);
 }
 

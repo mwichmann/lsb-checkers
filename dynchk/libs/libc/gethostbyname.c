@@ -10,8 +10,8 @@ struct hostent * gethostbyname (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyname");
-	validate_Rdaddress( arg0, "gethostbyname");
-	validate_NULL_TYPETYPE(  arg0, "gethostbyname");
+	validate_Rdaddress( arg0, "gethostbyname - arg0");
+	validate_NULL_TYPETYPE(  arg0, "gethostbyname - arg0");
 	return funcptr(arg0);
 }
 

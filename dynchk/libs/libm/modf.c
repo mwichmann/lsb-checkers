@@ -10,9 +10,9 @@ double modf (double arg0 , double * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "modf");
-	validate_NULL_TYPETYPE(  arg0, "modf");
-	validate_Rdaddress( arg1, "modf");
-	validate_NULL_TYPETYPE(  arg1, "modf");
+	validate_NULL_TYPETYPE(  arg0, "modf - arg0");
+	validate_Rdaddress( arg1, "modf - arg1");
+	validate_NULL_TYPETYPE(  arg1, "modf - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ char * l64a (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "l64a");
-	validate_NULL_TYPETYPE(  arg0, "l64a");
+	validate_NULL_TYPETYPE(  arg0, "l64a - arg0");
 	return funcptr(arg0);
 }
 

@@ -11,10 +11,10 @@ int pthread_rwlock_timedwrlock (pthread_rwlock_t * arg0 , const struct timespec 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_timedwrlock");
-	validate_Rdaddress( arg0, "pthread_rwlock_timedwrlock");
-	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_timedwrlock");
-	validate_Rdaddress( arg1, "pthread_rwlock_timedwrlock");
-	validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_timedwrlock");
+	validate_Rdaddress( arg0, "pthread_rwlock_timedwrlock - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_timedwrlock - arg0");
+	validate_Rdaddress( arg1, "pthread_rwlock_timedwrlock - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_timedwrlock - arg1");
 	return funcptr(arg0, arg1);
 }
 

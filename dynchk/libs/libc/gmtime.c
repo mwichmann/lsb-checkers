@@ -11,8 +11,8 @@ struct tm * gmtime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gmtime");
-	validate_Rdaddress( arg0, "gmtime");
-	validate_NULL_TYPETYPE(  arg0, "gmtime");
+	validate_Rdaddress( arg0, "gmtime - arg0");
+	validate_NULL_TYPETYPE(  arg0, "gmtime - arg0");
 	return funcptr(arg0);
 }
 

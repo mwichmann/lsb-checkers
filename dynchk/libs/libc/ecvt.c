@@ -10,12 +10,12 @@ char * ecvt (double arg0 , int arg1 , int * arg2 , int * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ecvt");
-	validate_NULL_TYPETYPE(  arg0, "ecvt");
-	validate_NULL_TYPETYPE(  arg1, "ecvt");
-	validate_Rdaddress( arg2, "ecvt");
-	validate_NULL_TYPETYPE(  arg2, "ecvt");
-	validate_Rdaddress( arg3, "ecvt");
-	validate_NULL_TYPETYPE(  arg3, "ecvt");
+	validate_NULL_TYPETYPE(  arg0, "ecvt - arg0");
+	validate_NULL_TYPETYPE(  arg1, "ecvt - arg1");
+	validate_Rdaddress( arg2, "ecvt - arg2");
+	validate_NULL_TYPETYPE(  arg2, "ecvt - arg2");
+	validate_Rdaddress( arg3, "ecvt - arg3");
+	validate_NULL_TYPETYPE(  arg3, "ecvt - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

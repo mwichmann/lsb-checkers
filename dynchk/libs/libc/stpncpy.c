@@ -11,11 +11,11 @@ char * stpncpy (char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "stpncpy");
-	validate_Rdaddress( arg0, "stpncpy");
-	validate_NULL_TYPETYPE(  arg0, "stpncpy");
-	validate_Rdaddress( arg1, "stpncpy");
-	validate_NULL_TYPETYPE(  arg1, "stpncpy");
-	validate_NULL_TYPETYPE(  arg2, "stpncpy");
+	validate_Rdaddress( arg0, "stpncpy - arg0");
+	validate_NULL_TYPETYPE(  arg0, "stpncpy - arg0");
+	validate_Rdaddress( arg1, "stpncpy - arg1");
+	validate_NULL_TYPETYPE(  arg1, "stpncpy - arg1");
+	validate_NULL_TYPETYPE(  arg2, "stpncpy - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,11 +10,11 @@ int getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutent_r");
-	validate_Rdaddress( arg0, "getutent_r");
-	validate_NULL_TYPETYPE(  arg0, "getutent_r");
-	validate_Rdaddress( arg1, "getutent_r");
-	validate_Rdaddress(* arg1, "getutent_r");
-	validate_NULL_TYPETYPE(  arg1, "getutent_r");
+	validate_Rdaddress( arg0, "getutent_r - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getutent_r - arg0");
+	validate_Rdaddress( arg1, "getutent_r - arg1");
+	validate_Rdaddress(* arg1, "getutent_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "getutent_r - arg1");
 	return funcptr(arg0, arg1);
 }
 

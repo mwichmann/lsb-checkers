@@ -10,7 +10,7 @@ int unlockpt (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unlockpt");
-	validate_NULL_TYPETYPE(  arg0, "unlockpt");
+	validate_NULL_TYPETYPE(  arg0, "unlockpt - arg0");
 	return funcptr(arg0);
 }
 

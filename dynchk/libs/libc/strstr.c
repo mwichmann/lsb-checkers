@@ -10,10 +10,10 @@ char * strstr (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strstr");
-	validate_Rdaddress( arg0, "strstr");
-	validate_NULL_TYPETYPE(  arg0, "strstr");
-	validate_Rdaddress( arg1, "strstr");
-	validate_NULL_TYPETYPE(  arg1, "strstr");
+	validate_Rdaddress( arg0, "strstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strstr - arg0");
+	validate_Rdaddress( arg1, "strstr - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strstr - arg1");
 	return funcptr(arg0, arg1);
 }
 

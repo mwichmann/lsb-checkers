@@ -11,11 +11,11 @@ char * strncat (char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strncat");
-	validate_Rdaddress( arg0, "strncat");
-	validate_NULL_TYPETYPE(  arg0, "strncat");
-	validate_Rdaddress( arg1, "strncat");
-	validate_NULL_TYPETYPE(  arg1, "strncat");
-	validate_NULL_TYPETYPE(  arg2, "strncat");
+	validate_Rdaddress( arg0, "strncat - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strncat - arg0");
+	validate_Rdaddress( arg1, "strncat - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strncat - arg1");
+	validate_NULL_TYPETYPE(  arg2, "strncat - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,9 +10,9 @@ const char * gzerror (gzFile arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzerror");
-	validate_NULL_TYPETYPE(  arg0, "gzerror");
-	validate_Rdaddress( arg1, "gzerror");
-	validate_NULL_TYPETYPE(  arg1, "gzerror");
+	validate_NULL_TYPETYPE(  arg0, "gzerror - arg0");
+	validate_Rdaddress( arg1, "gzerror - arg1");
+	validate_NULL_TYPETYPE(  arg1, "gzerror - arg1");
 	return funcptr(arg0, arg1);
 }
 

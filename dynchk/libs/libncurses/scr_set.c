@@ -10,8 +10,8 @@ int scr_set (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_set");
-	validate_Rdaddress( arg0, "scr_set");
-	validate_NULL_TYPETYPE(  arg0, "scr_set");
+	validate_Rdaddress( arg0, "scr_set - arg0");
+	validate_NULL_TYPETYPE(  arg0, "scr_set - arg0");
 	return funcptr(arg0);
 }
 

@@ -11,15 +11,15 @@ void xdrrec_create (XDR * arg0 , u_int arg1 , u_int arg2 , caddr_t arg3 , int(* 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrrec_create");
-	validate_Rdaddress( arg0, "xdrrec_create");
-	validate_NULL_TYPETYPE(  arg0, "xdrrec_create");
-	validate_NULL_TYPETYPE(  arg1, "xdrrec_create");
-	validate_NULL_TYPETYPE(  arg2, "xdrrec_create");
-	validate_NULL_TYPETYPE(  arg3, "xdrrec_create");
-validate_Rdaddress( arg4, "xdrrec_create");
-	validate_NULL_TYPETYPE(  arg4, "xdrrec_create");
-validate_Rdaddress( arg5, "xdrrec_create");
-	validate_NULL_TYPETYPE(  arg5, "xdrrec_create");
+	validate_Rdaddress( arg0, "xdrrec_create - arg0");
+	validate_NULL_TYPETYPE(  arg0, "xdrrec_create - arg0");
+	validate_NULL_TYPETYPE(  arg1, "xdrrec_create - arg1");
+	validate_NULL_TYPETYPE(  arg2, "xdrrec_create - arg2");
+	validate_NULL_TYPETYPE(  arg3, "xdrrec_create - arg3");
+validate_Rdaddress( arg4, "xdrrec_create - arg4");
+	validate_NULL_TYPETYPE(  arg4, "xdrrec_create - arg4");
+validate_Rdaddress( arg5, "xdrrec_create - arg5");
+	validate_NULL_TYPETYPE(  arg5, "xdrrec_create - arg5");
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 

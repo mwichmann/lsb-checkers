@@ -10,7 +10,7 @@ long double complex ccoshl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccoshl");
-	validate_NULL_TYPETYPE(  arg0, "ccoshl");
+	validate_NULL_TYPETYPE(  arg0, "ccoshl - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ void clearerr (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clearerr");
-	validate_Rdaddress( arg0, "clearerr");
-	validate_NULL_TYPETYPE(  arg0, "clearerr");
+	validate_Rdaddress( arg0, "clearerr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "clearerr - arg0");
 	funcptr(arg0);
 }
 

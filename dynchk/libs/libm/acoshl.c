@@ -10,7 +10,7 @@ long double acoshl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acoshl");
-	validate_NULL_TYPETYPE(  arg0, "acoshl");
+	validate_NULL_TYPETYPE(  arg0, "acoshl - arg0");
 	return funcptr(arg0);
 }
 

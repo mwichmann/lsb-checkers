@@ -11,12 +11,12 @@ long wcstol (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstol");
-	validate_Rdaddress( arg0, "wcstol");
-	validate_NULL_TYPETYPE(  arg0, "wcstol");
-	validate_Rdaddress( arg1, "wcstol");
-	validate_Rdaddress(* arg1, "wcstol");
-	validate_NULL_TYPETYPE(  arg1, "wcstol");
-	validate_NULL_TYPETYPE(  arg2, "wcstol");
+	validate_Rdaddress( arg0, "wcstol - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcstol - arg0");
+	validate_Rdaddress( arg1, "wcstol - arg1");
+	validate_Rdaddress(* arg1, "wcstol - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcstol - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wcstol - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

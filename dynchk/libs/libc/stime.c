@@ -11,8 +11,8 @@ int stime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "stime");
-	validate_Rdaddress( arg0, "stime");
-	validate_NULL_TYPETYPE(  arg0, "stime");
+	validate_Rdaddress( arg0, "stime - arg0");
+	validate_NULL_TYPETYPE(  arg0, "stime - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,11 +10,11 @@ int wtouchln (WINDOW * arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wtouchln");
-	validate_Rdaddress( arg0, "wtouchln");
-	validate_NULL_TYPETYPE(  arg0, "wtouchln");
-	validate_NULL_TYPETYPE(  arg1, "wtouchln");
-	validate_NULL_TYPETYPE(  arg2, "wtouchln");
-	validate_NULL_TYPETYPE(  arg3, "wtouchln");
+	validate_Rdaddress( arg0, "wtouchln - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wtouchln - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wtouchln - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wtouchln - arg2");
+	validate_NULL_TYPETYPE(  arg3, "wtouchln - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

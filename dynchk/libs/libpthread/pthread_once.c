@@ -10,10 +10,10 @@ int pthread_once (pthread_once_t * arg0 , void(* arg1 )(void))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_once");
-	validate_Rdaddress( arg0, "pthread_once");
-	validate_NULL_TYPETYPE(  arg0, "pthread_once");
-validate_Rdaddress( arg1, "pthread_once");
-	validate_NULL_TYPETYPE(  arg1, "pthread_once");
+	validate_Rdaddress( arg0, "pthread_once - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_once - arg0");
+validate_Rdaddress( arg1, "pthread_once - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_once - arg1");
 	return funcptr(arg0, arg1);
 }
 

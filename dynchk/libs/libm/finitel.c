@@ -10,7 +10,7 @@ int finitel (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finitel");
-	validate_NULL_TYPETYPE(  arg0, "finitel");
+	validate_NULL_TYPETYPE(  arg0, "finitel - arg0");
 	return funcptr(arg0);
 }
 

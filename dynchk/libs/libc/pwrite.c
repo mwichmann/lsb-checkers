@@ -12,11 +12,11 @@ ssize_t pwrite (int arg0 , const void * arg1 , size_t arg2 , off_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pwrite");
-	validate_NULL_TYPETYPE(  arg0, "pwrite");
-	validate_Rdaddress( arg1, "pwrite");
-	validate_NULL_TYPETYPE(  arg1, "pwrite");
-	validate_NULL_TYPETYPE(  arg2, "pwrite");
-	validate_NULL_TYPETYPE(  arg3, "pwrite");
+	validate_NULL_TYPETYPE(  arg0, "pwrite - arg0");
+	validate_Rdaddress( arg1, "pwrite - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pwrite - arg1");
+	validate_NULL_TYPETYPE(  arg2, "pwrite - arg2");
+	validate_NULL_TYPETYPE(  arg3, "pwrite - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

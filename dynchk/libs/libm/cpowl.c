@@ -10,8 +10,8 @@ long double complex cpowl (long double complex arg0 , long double complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpowl");
-	validate_NULL_TYPETYPE(  arg0, "cpowl");
-	validate_NULL_TYPETYPE(  arg1, "cpowl");
+	validate_NULL_TYPETYPE(  arg0, "cpowl - arg0");
+	validate_NULL_TYPETYPE(  arg1, "cpowl - arg1");
 	return funcptr(arg0, arg1);
 }
 

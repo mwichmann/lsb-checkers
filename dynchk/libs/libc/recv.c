@@ -11,11 +11,11 @@ ssize_t recv (int arg0 , void * arg1 , size_t arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recv");
-	validate_NULL_TYPETYPE(  arg0, "recv");
-	validate_Rdaddress( arg1, "recv");
-	validate_NULL_TYPETYPE(  arg1, "recv");
-	validate_NULL_TYPETYPE(  arg2, "recv");
-	validate_NULL_TYPETYPE(  arg3, "recv");
+	validate_NULL_TYPETYPE(  arg0, "recv - arg0");
+	validate_Rdaddress( arg1, "recv - arg1");
+	validate_NULL_TYPETYPE(  arg1, "recv - arg1");
+	validate_NULL_TYPETYPE(  arg2, "recv - arg2");
+	validate_NULL_TYPETYPE(  arg3, "recv - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -10,8 +10,8 @@ float scalbnf (float arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scalbnf");
-	validate_NULL_TYPETYPE(  arg0, "scalbnf");
-	validate_NULL_TYPETYPE(  arg1, "scalbnf");
+	validate_NULL_TYPETYPE(  arg0, "scalbnf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "scalbnf - arg1");
 	return funcptr(arg0, arg1);
 }
 

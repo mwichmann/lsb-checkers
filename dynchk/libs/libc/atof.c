@@ -10,8 +10,8 @@ double atof (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atof");
-	validate_Rdaddress( arg0, "atof");
-	validate_NULL_TYPETYPE(  arg0, "atof");
+	validate_Rdaddress( arg0, "atof - arg0");
+	validate_NULL_TYPETYPE(  arg0, "atof - arg0");
 	return funcptr(arg0);
 }
 

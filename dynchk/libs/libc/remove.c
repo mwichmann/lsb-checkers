@@ -10,8 +10,8 @@ int remove (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remove");
-	validate_Rdaddress( arg0, "remove");
-	validate_NULL_TYPETYPE(  arg0, "remove");
+	validate_Rdaddress( arg0, "remove - arg0");
+	validate_NULL_TYPETYPE(  arg0, "remove - arg0");
 	return funcptr(arg0);
 }
 

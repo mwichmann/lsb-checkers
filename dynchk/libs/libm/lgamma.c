@@ -10,7 +10,7 @@ double lgamma (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgamma");
-	validate_NULL_TYPETYPE(  arg0, "lgamma");
+	validate_NULL_TYPETYPE(  arg0, "lgamma - arg0");
 	return funcptr(arg0);
 }
 

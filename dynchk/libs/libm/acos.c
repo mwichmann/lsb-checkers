@@ -10,7 +10,7 @@ double acos (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acos");
-	validate_NULL_TYPETYPE(  arg0, "acos");
+	validate_NULL_TYPETYPE(  arg0, "acos - arg0");
 	return funcptr(arg0);
 }
 

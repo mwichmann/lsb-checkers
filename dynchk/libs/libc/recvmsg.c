@@ -10,10 +10,10 @@ ssize_t recvmsg (int arg0 , struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recvmsg");
-	validate_NULL_TYPETYPE(  arg0, "recvmsg");
-	validate_Rdaddress( arg1, "recvmsg");
-	validate_NULL_TYPETYPE(  arg1, "recvmsg");
-	validate_NULL_TYPETYPE(  arg2, "recvmsg");
+	validate_NULL_TYPETYPE(  arg0, "recvmsg - arg0");
+	validate_Rdaddress( arg1, "recvmsg - arg1");
+	validate_NULL_TYPETYPE(  arg1, "recvmsg - arg1");
+	validate_NULL_TYPETYPE(  arg2, "recvmsg - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

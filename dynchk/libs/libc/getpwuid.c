@@ -11,7 +11,7 @@ struct passwd * getpwuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwuid");
-	validate_NULL_TYPETYPE(  arg0, "getpwuid");
+	validate_NULL_TYPETYPE(  arg0, "getpwuid - arg0");
 	return funcptr(arg0);
 }
 

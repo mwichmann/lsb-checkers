@@ -10,9 +10,9 @@ int mvaddch (int arg0 , int arg1 , const chtype arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvaddch");
-	validate_NULL_TYPETYPE(  arg0, "mvaddch");
-	validate_NULL_TYPETYPE(  arg1, "mvaddch");
-	validate_NULL_TYPETYPE(  arg2, "mvaddch");
+	validate_NULL_TYPETYPE(  arg0, "mvaddch - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvaddch - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvaddch - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

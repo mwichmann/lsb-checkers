@@ -10,8 +10,8 @@ float atan2f (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atan2f");
-	validate_NULL_TYPETYPE(  arg0, "atan2f");
-	validate_NULL_TYPETYPE(  arg1, "atan2f");
+	validate_NULL_TYPETYPE(  arg0, "atan2f - arg0");
+	validate_NULL_TYPETYPE(  arg1, "atan2f - arg1");
 	return funcptr(arg0, arg1);
 }
 

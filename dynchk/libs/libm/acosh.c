@@ -10,7 +10,7 @@ double acosh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "acosh");
-	validate_NULL_TYPETYPE(  arg0, "acosh");
+	validate_NULL_TYPETYPE(  arg0, "acosh - arg0");
 	return funcptr(arg0);
 }
 

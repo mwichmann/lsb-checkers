@@ -10,7 +10,7 @@ float complex ctanhf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctanhf");
-	validate_NULL_TYPETYPE(  arg0, "ctanhf");
+	validate_NULL_TYPETYPE(  arg0, "ctanhf - arg0");
 	return funcptr(arg0);
 }
 

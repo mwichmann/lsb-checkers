@@ -10,8 +10,8 @@ int sigreturn (struct sigcontext * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigreturn");
-	validate_Rdaddress( arg0, "sigreturn");
-	validate_NULL_TYPETYPE(  arg0, "sigreturn");
+	validate_Rdaddress( arg0, "sigreturn - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sigreturn - arg0");
 	return funcptr(arg0);
 }
 

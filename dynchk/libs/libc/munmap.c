@@ -11,9 +11,9 @@ int munmap (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "munmap");
-	validate_Rdaddress( arg0, "munmap");
-	validate_NULL_TYPETYPE(  arg0, "munmap");
-	validate_NULL_TYPETYPE(  arg1, "munmap");
+	validate_Rdaddress( arg0, "munmap - arg0");
+	validate_NULL_TYPETYPE(  arg0, "munmap - arg0");
+	validate_NULL_TYPETYPE(  arg1, "munmap - arg1");
 	return funcptr(arg0, arg1);
 }
 

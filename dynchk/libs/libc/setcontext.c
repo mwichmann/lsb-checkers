@@ -10,8 +10,8 @@ int setcontext (const struct ucontext * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setcontext");
-	validate_Rdaddress( arg0, "setcontext");
-	validate_NULL_TYPETYPE(  arg0, "setcontext");
+	validate_Rdaddress( arg0, "setcontext - arg0");
+	validate_NULL_TYPETYPE(  arg0, "setcontext - arg0");
 	return funcptr(arg0);
 }
 

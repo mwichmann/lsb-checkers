@@ -10,10 +10,10 @@ int inflateInit_ (z_streamp arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateInit_");
-	validate_NULL_TYPETYPE(  arg0, "inflateInit_");
-	validate_Rdaddress( arg1, "inflateInit_");
-	validate_NULL_TYPETYPE(  arg1, "inflateInit_");
-	validate_NULL_TYPETYPE(  arg2, "inflateInit_");
+	validate_NULL_TYPETYPE(  arg0, "inflateInit_ - arg0");
+	validate_Rdaddress( arg1, "inflateInit_ - arg1");
+	validate_NULL_TYPETYPE(  arg1, "inflateInit_ - arg1");
+	validate_NULL_TYPETYPE(  arg2, "inflateInit_ - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

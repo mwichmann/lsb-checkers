@@ -10,11 +10,11 @@ double strtod (const char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtod");
-	validate_Rdaddress( arg0, "strtod");
-	validate_NULL_TYPETYPE(  arg0, "strtod");
-	validate_Rdaddress( arg1, "strtod");
-	validate_Rdaddress(* arg1, "strtod");
-	validate_NULL_TYPETYPE(  arg1, "strtod");
+	validate_Rdaddress( arg0, "strtod - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strtod - arg0");
+	validate_Rdaddress( arg1, "strtod - arg1");
+	validate_Rdaddress(* arg1, "strtod - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strtod - arg1");
 	return funcptr(arg0, arg1);
 }
 

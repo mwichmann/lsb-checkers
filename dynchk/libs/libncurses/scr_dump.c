@@ -10,8 +10,8 @@ int scr_dump (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_dump");
-	validate_Rdaddress( arg0, "scr_dump");
-	validate_NULL_TYPETYPE(  arg0, "scr_dump");
+	validate_Rdaddress( arg0, "scr_dump - arg0");
+	validate_NULL_TYPETYPE(  arg0, "scr_dump - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ long double ldexpl (long double arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexpl");
-	validate_NULL_TYPETYPE(  arg0, "ldexpl");
-	validate_NULL_TYPETYPE(  arg1, "ldexpl");
+	validate_NULL_TYPETYPE(  arg0, "ldexpl - arg0");
+	validate_NULL_TYPETYPE(  arg1, "ldexpl - arg1");
 	return funcptr(arg0, arg1);
 }
 

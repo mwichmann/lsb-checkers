@@ -10,8 +10,8 @@ float fdimf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdimf");
-	validate_NULL_TYPETYPE(  arg0, "fdimf");
-	validate_NULL_TYPETYPE(  arg1, "fdimf");
+	validate_NULL_TYPETYPE(  arg0, "fdimf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fdimf - arg1");
 	return funcptr(arg0, arg1);
 }
 

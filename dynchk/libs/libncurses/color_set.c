@@ -10,9 +10,9 @@ int color_set (short arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "color_set");
-	validate_NULL_TYPETYPE(  arg0, "color_set");
-	validate_Rdaddress( arg1, "color_set");
-	validate_NULL_TYPETYPE(  arg1, "color_set");
+	validate_NULL_TYPETYPE(  arg0, "color_set - arg0");
+	validate_Rdaddress( arg1, "color_set - arg1");
+	validate_NULL_TYPETYPE(  arg1, "color_set - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,10 +10,10 @@ int sem_init (sem_t * arg0 , int arg1 , unsigned int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sem_init");
-	validate_Rdaddress( arg0, "sem_init");
-	validate_NULL_TYPETYPE(  arg0, "sem_init");
-	validate_NULL_TYPETYPE(  arg1, "sem_init");
-	validate_NULL_TYPETYPE(  arg2, "sem_init");
+	validate_Rdaddress( arg0, "sem_init - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sem_init - arg0");
+	validate_NULL_TYPETYPE(  arg1, "sem_init - arg1");
+	validate_NULL_TYPETYPE(  arg2, "sem_init - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

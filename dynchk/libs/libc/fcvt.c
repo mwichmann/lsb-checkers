@@ -10,12 +10,12 @@ char * fcvt (double arg0 , int arg1 , int * arg2 , int * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fcvt");
-	validate_NULL_TYPETYPE(  arg0, "fcvt");
-	validate_NULL_TYPETYPE(  arg1, "fcvt");
-	validate_Rdaddress( arg2, "fcvt");
-	validate_NULL_TYPETYPE(  arg2, "fcvt");
-	validate_Rdaddress( arg3, "fcvt");
-	validate_NULL_TYPETYPE(  arg3, "fcvt");
+	validate_NULL_TYPETYPE(  arg0, "fcvt - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fcvt - arg1");
+	validate_Rdaddress( arg2, "fcvt - arg2");
+	validate_NULL_TYPETYPE(  arg2, "fcvt - arg2");
+	validate_Rdaddress( arg3, "fcvt - arg3");
+	validate_NULL_TYPETYPE(  arg3, "fcvt - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

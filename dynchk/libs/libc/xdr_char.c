@@ -10,10 +10,10 @@ bool_t xdr_char (XDR * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_char");
-	validate_Rdaddress( arg0, "xdr_char");
-	validate_NULL_TYPETYPE(  arg0, "xdr_char");
-	validate_Rdaddress( arg1, "xdr_char");
-	validate_NULL_TYPETYPE(  arg1, "xdr_char");
+	validate_Rdaddress( arg0, "xdr_char - arg0");
+	validate_NULL_TYPETYPE(  arg0, "xdr_char - arg0");
+	validate_Rdaddress( arg1, "xdr_char - arg1");
+	validate_NULL_TYPETYPE(  arg1, "xdr_char - arg1");
 	return funcptr(arg0, arg1);
 }
 

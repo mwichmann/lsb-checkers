@@ -10,10 +10,10 @@ char * asctime_r (const struct tm * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asctime_r");
-	validate_Rdaddress( arg0, "asctime_r");
-	validate_NULL_TYPETYPE(  arg0, "asctime_r");
-	validate_Rdaddress( arg1, "asctime_r");
-	validate_NULL_TYPETYPE(  arg1, "asctime_r");
+	validate_Rdaddress( arg0, "asctime_r - arg0");
+	validate_NULL_TYPETYPE(  arg0, "asctime_r - arg0");
+	validate_Rdaddress( arg1, "asctime_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "asctime_r - arg1");
 	return funcptr(arg0, arg1);
 }
 

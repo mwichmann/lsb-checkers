@@ -10,8 +10,8 @@ SCREEN * set_term (SCREEN * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "set_term");
-	validate_Rdaddress( arg0, "set_term");
-	validate_NULL_TYPETYPE(  arg0, "set_term");
+	validate_Rdaddress( arg0, "set_term - arg0");
+	validate_NULL_TYPETYPE(  arg0, "set_term - arg0");
 	return funcptr(arg0);
 }
 

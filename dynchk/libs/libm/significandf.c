@@ -10,7 +10,7 @@ float significandf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "significandf");
-	validate_NULL_TYPETYPE(  arg0, "significandf");
+	validate_NULL_TYPETYPE(  arg0, "significandf - arg0");
 	return funcptr(arg0);
 }
 

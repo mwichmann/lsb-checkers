@@ -10,7 +10,7 @@ double complex cacosh (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cacosh");
-	validate_NULL_TYPETYPE(  arg0, "cacosh");
+	validate_NULL_TYPETYPE(  arg0, "cacosh - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,9 +10,9 @@ char * index (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "index");
-	validate_Rdaddress( arg0, "index");
-	validate_NULL_TYPETYPE(  arg0, "index");
-	validate_NULL_TYPETYPE(  arg1, "index");
+	validate_Rdaddress( arg0, "index - arg0");
+	validate_NULL_TYPETYPE(  arg0, "index - arg0");
+	validate_NULL_TYPETYPE(  arg1, "index - arg1");
 	return funcptr(arg0, arg1);
 }
 

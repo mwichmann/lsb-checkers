@@ -11,11 +11,11 @@ int vsprintf (char * arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vsprintf");
-	validate_Rdaddress( arg0, "vsprintf");
-	validate_NULL_TYPETYPE(  arg0, "vsprintf");
-	validate_Rdaddress( arg1, "vsprintf");
-	validate_NULL_TYPETYPE(  arg1, "vsprintf");
-	validate_NULL_TYPETYPE(  arg2, "vsprintf");
+	validate_Rdaddress( arg0, "vsprintf - arg0");
+	validate_NULL_TYPETYPE(  arg0, "vsprintf - arg0");
+	validate_Rdaddress( arg1, "vsprintf - arg1");
+	validate_NULL_TYPETYPE(  arg1, "vsprintf - arg1");
+	validate_NULL_TYPETYPE(  arg2, "vsprintf - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

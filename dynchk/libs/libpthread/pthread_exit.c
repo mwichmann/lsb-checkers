@@ -10,8 +10,8 @@ void pthread_exit (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_exit");
-	validate_Rdaddress( arg0, "pthread_exit");
-	validate_NULL_TYPETYPE(  arg0, "pthread_exit");
+	validate_Rdaddress( arg0, "pthread_exit - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_exit - arg0");
 	funcptr(arg0);
 }
 

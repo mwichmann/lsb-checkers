@@ -10,10 +10,10 @@ int fputs (const char * arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputs");
-	validate_Rdaddress( arg0, "fputs");
-	validate_NULL_TYPETYPE(  arg0, "fputs");
-	validate_Rdaddress( arg1, "fputs");
-	validate_NULL_TYPETYPE(  arg1, "fputs");
+	validate_Rdaddress( arg0, "fputs - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fputs - arg0");
+	validate_Rdaddress( arg1, "fputs - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fputs - arg1");
 	return funcptr(arg0, arg1);
 }
 

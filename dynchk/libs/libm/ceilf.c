@@ -10,7 +10,7 @@ float ceilf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ceilf");
-	validate_NULL_TYPETYPE(  arg0, "ceilf");
+	validate_NULL_TYPETYPE(  arg0, "ceilf - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,13 +10,13 @@ int mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const v
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvchgat");
-	validate_NULL_TYPETYPE(  arg0, "mvchgat");
-	validate_NULL_TYPETYPE(  arg1, "mvchgat");
-	validate_NULL_TYPETYPE(  arg2, "mvchgat");
-	validate_NULL_TYPETYPE(  arg3, "mvchgat");
-	validate_NULL_TYPETYPE(  arg4, "mvchgat");
-	validate_Rdaddress( arg5, "mvchgat");
-	validate_NULL_TYPETYPE(  arg5, "mvchgat");
+	validate_NULL_TYPETYPE(  arg0, "mvchgat - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvchgat - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvchgat - arg2");
+	validate_NULL_TYPETYPE(  arg3, "mvchgat - arg3");
+	validate_NULL_TYPETYPE(  arg4, "mvchgat - arg4");
+	validate_Rdaddress( arg5, "mvchgat - arg5");
+	validate_NULL_TYPETYPE(  arg5, "mvchgat - arg5");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 

@@ -10,7 +10,7 @@ int login_tty (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "login_tty");
-	validate_NULL_TYPETYPE(  arg0, "login_tty");
+	validate_NULL_TYPETYPE(  arg0, "login_tty - arg0");
 	return funcptr(arg0);
 }
 

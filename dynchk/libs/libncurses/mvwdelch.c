@@ -10,10 +10,10 @@ int mvwdelch (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwdelch");
-	validate_Rdaddress( arg0, "mvwdelch");
-	validate_NULL_TYPETYPE(  arg0, "mvwdelch");
-	validate_NULL_TYPETYPE(  arg1, "mvwdelch");
-	validate_NULL_TYPETYPE(  arg2, "mvwdelch");
+	validate_Rdaddress( arg0, "mvwdelch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mvwdelch - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvwdelch - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvwdelch - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

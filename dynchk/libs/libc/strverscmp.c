@@ -10,10 +10,10 @@ int strverscmp (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strverscmp");
-	validate_Rdaddress( arg0, "strverscmp");
-	validate_NULL_TYPETYPE(  arg0, "strverscmp");
-	validate_Rdaddress( arg1, "strverscmp");
-	validate_NULL_TYPETYPE(  arg1, "strverscmp");
+	validate_Rdaddress( arg0, "strverscmp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strverscmp - arg0");
+	validate_Rdaddress( arg1, "strverscmp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strverscmp - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,8 +10,8 @@ int inchstr (chtype * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inchstr");
-	validate_Rdaddress( arg0, "inchstr");
-	validate_NULL_TYPETYPE(  arg0, "inchstr");
+	validate_Rdaddress( arg0, "inchstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "inchstr - arg0");
 	return funcptr(arg0);
 }
 

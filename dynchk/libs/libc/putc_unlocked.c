@@ -10,9 +10,9 @@ int putc_unlocked (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putc_unlocked");
-	validate_NULL_TYPETYPE(  arg0, "putc_unlocked");
-	validate_Rdaddress( arg1, "putc_unlocked");
-	validate_NULL_TYPETYPE(  arg1, "putc_unlocked");
+	validate_NULL_TYPETYPE(  arg0, "putc_unlocked - arg0");
+	validate_Rdaddress( arg1, "putc_unlocked - arg1");
+	validate_NULL_TYPETYPE(  arg1, "putc_unlocked - arg1");
 	return funcptr(arg0, arg1);
 }
 

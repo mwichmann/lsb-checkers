@@ -12,10 +12,10 @@ int fputws (const wchar_t * arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputws");
-	validate_Rdaddress( arg0, "fputws");
-	validate_NULL_TYPETYPE(  arg0, "fputws");
-	validate_Rdaddress( arg1, "fputws");
-	validate_NULL_TYPETYPE(  arg1, "fputws");
+	validate_Rdaddress( arg0, "fputws - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fputws - arg0");
+	validate_Rdaddress( arg1, "fputws - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fputws - arg1");
 	return funcptr(arg0, arg1);
 }
 

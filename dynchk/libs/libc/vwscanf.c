@@ -12,9 +12,9 @@ int vwscanf (const wchar_t * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwscanf");
-	validate_Rdaddress( arg0, "vwscanf");
-	validate_NULL_TYPETYPE(  arg0, "vwscanf");
-	validate_NULL_TYPETYPE(  arg1, "vwscanf");
+	validate_Rdaddress( arg0, "vwscanf - arg0");
+	validate_NULL_TYPETYPE(  arg0, "vwscanf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "vwscanf - arg1");
 	return funcptr(arg0, arg1);
 }
 

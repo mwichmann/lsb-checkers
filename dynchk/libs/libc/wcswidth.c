@@ -11,9 +11,9 @@ int wcswidth (const wchar_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcswidth");
-	validate_Rdaddress( arg0, "wcswidth");
-	validate_NULL_TYPETYPE(  arg0, "wcswidth");
-	validate_NULL_TYPETYPE(  arg1, "wcswidth");
+	validate_Rdaddress( arg0, "wcswidth - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcswidth - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wcswidth - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ double creal (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creal");
-	validate_NULL_TYPETYPE(  arg0, "creal");
+	validate_NULL_TYPETYPE(  arg0, "creal - arg0");
 	return funcptr(arg0);
 }
 

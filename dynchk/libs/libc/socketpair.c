@@ -10,10 +10,10 @@ int socketpair (int arg0 , int arg1 , int arg2 , int arg3 [2])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "socketpair");
-	validate_NULL_TYPETYPE(  arg0, "socketpair");
-	validate_NULL_TYPETYPE(  arg1, "socketpair");
-	validate_NULL_TYPETYPE(  arg2, "socketpair");
-	validate_NULL_TYPETYPE(  arg3, "socketpair");
+	validate_NULL_TYPETYPE(  arg0, "socketpair - arg0");
+	validate_NULL_TYPETYPE(  arg1, "socketpair - arg1");
+	validate_NULL_TYPETYPE(  arg2, "socketpair - arg2");
+	validate_NULL_TYPETYPE(  arg3, "socketpair - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

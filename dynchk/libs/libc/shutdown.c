@@ -10,8 +10,8 @@ int shutdown (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shutdown");
-	validate_NULL_TYPETYPE(  arg0, "shutdown");
-	validate_NULL_TYPETYPE(  arg1, "shutdown");
+	validate_NULL_TYPETYPE(  arg0, "shutdown - arg0");
+	validate_NULL_TYPETYPE(  arg1, "shutdown - arg1");
 	return funcptr(arg0, arg1);
 }
 

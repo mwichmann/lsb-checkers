@@ -10,7 +10,7 @@ double complex conj (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "conj");
-	validate_NULL_TYPETYPE(  arg0, "conj");
+	validate_NULL_TYPETYPE(  arg0, "conj - arg0");
 	return funcptr(arg0);
 }
 

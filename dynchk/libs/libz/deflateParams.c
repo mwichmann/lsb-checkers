@@ -10,9 +10,9 @@ int deflateParams (z_streamp arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateParams");
-	validate_NULL_TYPETYPE(  arg0, "deflateParams");
-	validate_NULL_TYPETYPE(  arg1, "deflateParams");
-	validate_NULL_TYPETYPE(  arg2, "deflateParams");
+	validate_NULL_TYPETYPE(  arg0, "deflateParams - arg0");
+	validate_NULL_TYPETYPE(  arg1, "deflateParams - arg1");
+	validate_NULL_TYPETYPE(  arg2, "deflateParams - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

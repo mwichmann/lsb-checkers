@@ -10,7 +10,7 @@ long double complex cprojl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cprojl");
-	validate_NULL_TYPETYPE(  arg0, "cprojl");
+	validate_NULL_TYPETYPE(  arg0, "cprojl - arg0");
 	return funcptr(arg0);
 }
 

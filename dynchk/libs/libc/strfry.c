@@ -10,8 +10,8 @@ char * strfry (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strfry");
-	validate_Rdaddress( arg0, "strfry");
-	validate_NULL_TYPETYPE(  arg0, "strfry");
+	validate_Rdaddress( arg0, "strfry - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strfry - arg0");
 	return funcptr(arg0);
 }
 

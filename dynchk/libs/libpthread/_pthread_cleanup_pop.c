@@ -10,9 +10,9 @@ void _pthread_cleanup_pop (struct _pthread_cleanup_buffer * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_pthread_cleanup_pop");
-	validate_Rdaddress( arg0, "_pthread_cleanup_pop");
-	validate_RWaddress(  arg0, "_pthread_cleanup_pop");
-	validate_NULL_TYPETYPE(  arg1, "_pthread_cleanup_pop");
+	validate_Rdaddress( arg0, "_pthread_cleanup_pop - arg0");
+	validate_RWaddress(  arg0, "_pthread_cleanup_pop - arg0");
+	validate_NULL_TYPETYPE(  arg1, "_pthread_cleanup_pop - arg1");
 	funcptr(arg0, arg1);
 }
 

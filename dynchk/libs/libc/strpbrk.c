@@ -10,10 +10,10 @@ char * strpbrk (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strpbrk");
-	validate_Rdaddress( arg0, "strpbrk");
-	validate_NULL_TYPETYPE(  arg0, "strpbrk");
-	validate_Rdaddress( arg1, "strpbrk");
-	validate_NULL_TYPETYPE(  arg1, "strpbrk");
+	validate_Rdaddress( arg0, "strpbrk - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strpbrk - arg0");
+	validate_Rdaddress( arg1, "strpbrk - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strpbrk - arg1");
 	return funcptr(arg0, arg1);
 }
 

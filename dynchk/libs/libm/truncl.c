@@ -10,7 +10,7 @@ long double truncl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncl");
-	validate_NULL_TYPETYPE(  arg0, "truncl");
+	validate_NULL_TYPETYPE(  arg0, "truncl - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ unsigned short * seed48 (unsigned short arg0 [3])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seed48");
-	validate_NULL_TYPETYPE(  arg0, "seed48");
+	validate_NULL_TYPETYPE(  arg0, "seed48 - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ int isascii (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isascii");
-	validate_NULL_TYPETYPE(  arg0, "isascii");
+	validate_NULL_TYPETYPE(  arg0, "isascii - arg0");
 	return funcptr(arg0);
 }
 

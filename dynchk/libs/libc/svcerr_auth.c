@@ -11,9 +11,9 @@ void svcerr_auth (SVCXPRT * arg0 , enum auth_stat arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_auth");
-	validate_Rdaddress( arg0, "svcerr_auth");
-	validate_NULL_TYPETYPE(  arg0, "svcerr_auth");
-	validate_NULL_TYPETYPE(  arg1, "svcerr_auth");
+	validate_Rdaddress( arg0, "svcerr_auth - arg0");
+	validate_NULL_TYPETYPE(  arg0, "svcerr_auth - arg0");
+	validate_NULL_TYPETYPE(  arg1, "svcerr_auth - arg1");
 	funcptr(arg0, arg1);
 }
 

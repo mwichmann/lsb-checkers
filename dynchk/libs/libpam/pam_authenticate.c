@@ -10,9 +10,9 @@ int pam_authenticate (pam_handle_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_authenticate");
-	validate_Rdaddress( arg0, "pam_authenticate");
-	validate_NULL_TYPETYPE(  arg0, "pam_authenticate");
-	validate_NULL_TYPETYPE(  arg1, "pam_authenticate");
+	validate_Rdaddress( arg0, "pam_authenticate - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pam_authenticate - arg0");
+	validate_NULL_TYPETYPE(  arg1, "pam_authenticate - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -11,9 +11,9 @@ int vscanf (const char * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vscanf");
-	validate_Rdaddress( arg0, "vscanf");
-	validate_NULL_TYPETYPE(  arg0, "vscanf");
-	validate_NULL_TYPETYPE(  arg1, "vscanf");
+	validate_Rdaddress( arg0, "vscanf - arg0");
+	validate_NULL_TYPETYPE(  arg0, "vscanf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "vscanf - arg1");
 	return funcptr(arg0, arg1);
 }
 

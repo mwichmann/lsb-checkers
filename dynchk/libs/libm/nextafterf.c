@@ -10,8 +10,8 @@ float nextafterf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nextafterf");
-	validate_NULL_TYPETYPE(  arg0, "nextafterf");
-	validate_NULL_TYPETYPE(  arg1, "nextafterf");
+	validate_NULL_TYPETYPE(  arg0, "nextafterf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "nextafterf - arg1");
 	return funcptr(arg0, arg1);
 }
 

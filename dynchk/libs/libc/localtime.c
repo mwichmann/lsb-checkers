@@ -11,8 +11,8 @@ struct tm * localtime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "localtime");
-	validate_Rdaddress( arg0, "localtime");
-	validate_NULL_TYPETYPE(  arg0, "localtime");
+	validate_Rdaddress( arg0, "localtime - arg0");
+	validate_NULL_TYPETYPE(  arg0, "localtime - arg0");
 	return funcptr(arg0);
 }
 

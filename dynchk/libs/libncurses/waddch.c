@@ -10,9 +10,9 @@ int waddch (WINDOW * arg0 , const chtype arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waddch");
-	validate_Rdaddress( arg0, "waddch");
-	validate_NULL_TYPETYPE(  arg0, "waddch");
-	validate_NULL_TYPETYPE(  arg1, "waddch");
+	validate_Rdaddress( arg0, "waddch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "waddch - arg0");
+	validate_NULL_TYPETYPE(  arg1, "waddch - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,8 +10,8 @@ int siginterrupt (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siginterrupt");
-	validate_NULL_TYPETYPE(  arg0, "siginterrupt");
-	validate_NULL_TYPETYPE(  arg1, "siginterrupt");
+	validate_NULL_TYPETYPE(  arg0, "siginterrupt - arg0");
+	validate_NULL_TYPETYPE(  arg1, "siginterrupt - arg1");
 	return funcptr(arg0, arg1);
 }
 

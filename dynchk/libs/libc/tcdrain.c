@@ -10,7 +10,7 @@ int tcdrain (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcdrain");
-	validate_NULL_TYPETYPE(  arg0, "tcdrain");
+	validate_NULL_TYPETYPE(  arg0, "tcdrain - arg0");
 	return funcptr(arg0);
 }
 

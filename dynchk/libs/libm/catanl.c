@@ -10,7 +10,7 @@ long double complex catanl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catanl");
-	validate_NULL_TYPETYPE(  arg0, "catanl");
+	validate_NULL_TYPETYPE(  arg0, "catanl - arg0");
 	return funcptr(arg0);
 }
 

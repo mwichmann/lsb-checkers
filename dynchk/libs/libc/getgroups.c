@@ -11,8 +11,8 @@ int getgroups (int arg0 , gid_t arg1 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgroups");
-	validate_NULL_TYPETYPE(  arg0, "getgroups");
-	validate_NULL_TYPETYPE(  arg1, "getgroups");
+	validate_NULL_TYPETYPE(  arg0, "getgroups - arg0");
+	validate_NULL_TYPETYPE(  arg1, "getgroups - arg1");
 	return funcptr(arg0, arg1);
 }
 

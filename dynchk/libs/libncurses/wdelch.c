@@ -10,8 +10,8 @@ int wdelch (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wdelch");
-	validate_Rdaddress( arg0, "wdelch");
-	validate_NULL_TYPETYPE(  arg0, "wdelch");
+	validate_Rdaddress( arg0, "wdelch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wdelch - arg0");
 	return funcptr(arg0);
 }
 

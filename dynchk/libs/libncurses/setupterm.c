@@ -10,11 +10,11 @@ int setupterm (char * arg0 , int arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setupterm");
-	validate_Rdaddress( arg0, "setupterm");
-	validate_NULL_TYPETYPE(  arg0, "setupterm");
-	validate_NULL_TYPETYPE(  arg1, "setupterm");
-	validate_Rdaddress( arg2, "setupterm");
-	validate_NULL_TYPETYPE(  arg2, "setupterm");
+	validate_Rdaddress( arg0, "setupterm - arg0");
+	validate_NULL_TYPETYPE(  arg0, "setupterm - arg0");
+	validate_NULL_TYPETYPE(  arg1, "setupterm - arg1");
+	validate_Rdaddress( arg2, "setupterm - arg2");
+	validate_NULL_TYPETYPE(  arg2, "setupterm - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

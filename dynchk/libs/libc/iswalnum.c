@@ -10,7 +10,7 @@ int iswalnum (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswalnum");
-	validate_NULL_TYPETYPE(  arg0, "iswalnum");
+	validate_NULL_TYPETYPE(  arg0, "iswalnum - arg0");
 	return funcptr(arg0);
 }
 

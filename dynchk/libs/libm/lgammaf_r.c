@@ -10,9 +10,9 @@ float lgammaf_r (float arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgammaf_r");
-	validate_NULL_TYPETYPE(  arg0, "lgammaf_r");
-	validate_Rdaddress( arg1, "lgammaf_r");
-	validate_NULL_TYPETYPE(  arg1, "lgammaf_r");
+	validate_NULL_TYPETYPE(  arg0, "lgammaf_r - arg0");
+	validate_Rdaddress( arg1, "lgammaf_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "lgammaf_r - arg1");
 	return funcptr(arg0, arg1);
 }
 

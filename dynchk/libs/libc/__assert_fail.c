@@ -10,13 +10,13 @@ void __assert_fail (const char * arg0 , const char * arg1 , unsigned int arg2 , 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__assert_fail");
-	validate_Rdaddress( arg0, "__assert_fail");
-	validate_NULL_TYPETYPE(  arg0, "__assert_fail");
-	validate_Rdaddress( arg1, "__assert_fail");
-	validate_NULL_TYPETYPE(  arg1, "__assert_fail");
-	validate_NULL_TYPETYPE(  arg2, "__assert_fail");
-	validate_Rdaddress( arg3, "__assert_fail");
-	validate_NULL_TYPETYPE(  arg3, "__assert_fail");
+	validate_Rdaddress( arg0, "__assert_fail - arg0");
+	validate_NULL_TYPETYPE(  arg0, "__assert_fail - arg0");
+	validate_Rdaddress( arg1, "__assert_fail - arg1");
+	validate_NULL_TYPETYPE(  arg1, "__assert_fail - arg1");
+	validate_NULL_TYPETYPE(  arg2, "__assert_fail - arg2");
+	validate_Rdaddress( arg3, "__assert_fail - arg3");
+	validate_NULL_TYPETYPE(  arg3, "__assert_fail - arg3");
 	funcptr(arg0, arg1, arg2, arg3);
 }
 

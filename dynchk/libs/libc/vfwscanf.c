@@ -13,11 +13,11 @@ int vfwscanf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfwscanf");
-	validate_Rdaddress( arg0, "vfwscanf");
-	validate_NULL_TYPETYPE(  arg0, "vfwscanf");
-	validate_Rdaddress( arg1, "vfwscanf");
-	validate_NULL_TYPETYPE(  arg1, "vfwscanf");
-	validate_NULL_TYPETYPE(  arg2, "vfwscanf");
+	validate_Rdaddress( arg0, "vfwscanf - arg0");
+	validate_NULL_TYPETYPE(  arg0, "vfwscanf - arg0");
+	validate_Rdaddress( arg1, "vfwscanf - arg1");
+	validate_NULL_TYPETYPE(  arg1, "vfwscanf - arg1");
+	validate_NULL_TYPETYPE(  arg2, "vfwscanf - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,12 +10,12 @@ float __strtof_internal (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtof_internal");
-	validate_Rdaddress( arg0, "__strtof_internal");
-	validate_NULL_TYPETYPE(  arg0, "__strtof_internal");
-	validate_Rdaddress( arg1, "__strtof_internal");
-	validate_Rdaddress(* arg1, "__strtof_internal");
-	validate_RWaddress(  arg1, "__strtof_internal");
-	validate_NULL_TYPETYPE(  arg2, "__strtof_internal");
+	validate_Rdaddress( arg0, "__strtof_internal - arg0");
+	validate_NULL_TYPETYPE(  arg0, "__strtof_internal - arg0");
+	validate_Rdaddress( arg1, "__strtof_internal - arg1");
+	validate_Rdaddress(* arg1, "__strtof_internal - arg1");
+	validate_RWaddress(  arg1, "__strtof_internal - arg1");
+	validate_NULL_TYPETYPE(  arg2, "__strtof_internal - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

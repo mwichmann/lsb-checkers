@@ -10,10 +10,10 @@ int fgetpos (FILE * arg0 , fpos_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetpos");
-	validate_Rdaddress( arg0, "fgetpos");
-	validate_NULL_TYPETYPE(  arg0, "fgetpos");
-	validate_Rdaddress( arg1, "fgetpos");
-	validate_NULL_TYPETYPE(  arg1, "fgetpos");
+	validate_Rdaddress( arg0, "fgetpos - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fgetpos - arg0");
+	validate_Rdaddress( arg1, "fgetpos - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fgetpos - arg1");
 	return funcptr(arg0, arg1);
 }
 

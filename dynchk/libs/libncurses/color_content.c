@@ -10,13 +10,13 @@ int color_content (short arg0 , short * arg1 , short * arg2 , short * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "color_content");
-	validate_NULL_TYPETYPE(  arg0, "color_content");
-	validate_Rdaddress( arg1, "color_content");
-	validate_NULL_TYPETYPE(  arg1, "color_content");
-	validate_Rdaddress( arg2, "color_content");
-	validate_NULL_TYPETYPE(  arg2, "color_content");
-	validate_Rdaddress( arg3, "color_content");
-	validate_NULL_TYPETYPE(  arg3, "color_content");
+	validate_NULL_TYPETYPE(  arg0, "color_content - arg0");
+	validate_Rdaddress( arg1, "color_content - arg1");
+	validate_NULL_TYPETYPE(  arg1, "color_content - arg1");
+	validate_Rdaddress( arg2, "color_content - arg2");
+	validate_NULL_TYPETYPE(  arg2, "color_content - arg2");
+	validate_Rdaddress( arg3, "color_content - arg3");
+	validate_NULL_TYPETYPE(  arg3, "color_content - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

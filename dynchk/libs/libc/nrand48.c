@@ -10,7 +10,7 @@ long nrand48 (unsigned short arg0 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nrand48");
-	validate_NULL_TYPETYPE(  arg0, "nrand48");
+	validate_NULL_TYPETYPE(  arg0, "nrand48 - arg0");
 	return funcptr(arg0);
 }
 

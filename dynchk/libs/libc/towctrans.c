@@ -10,8 +10,8 @@ wint_t towctrans (wint_t arg0 , wctrans_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towctrans");
-	validate_NULL_TYPETYPE(  arg0, "towctrans");
-	validate_NULL_TYPETYPE(  arg1, "towctrans");
+	validate_NULL_TYPETYPE(  arg0, "towctrans - arg0");
+	validate_NULL_TYPETYPE(  arg1, "towctrans - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -12,14 +12,14 @@ void * lsearch (const void * arg0 , void * arg1 , size_t * arg2 , size_t arg3 , 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lsearch");
-	validate_Rdaddress( arg0, "lsearch");
-	validate_NULL_TYPETYPE(  arg0, "lsearch");
-	validate_Rdaddress( arg1, "lsearch");
-	validate_NULL_TYPETYPE(  arg1, "lsearch");
-	validate_Rdaddress( arg2, "lsearch");
-	validate_NULL_TYPETYPE(  arg2, "lsearch");
-	validate_NULL_TYPETYPE(  arg3, "lsearch");
-	validate_NULL_TYPETYPE(  arg4, "lsearch");
+	validate_Rdaddress( arg0, "lsearch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "lsearch - arg0");
+	validate_Rdaddress( arg1, "lsearch - arg1");
+	validate_NULL_TYPETYPE(  arg1, "lsearch - arg1");
+	validate_Rdaddress( arg2, "lsearch - arg2");
+	validate_NULL_TYPETYPE(  arg2, "lsearch - arg2");
+	validate_NULL_TYPETYPE(  arg3, "lsearch - arg3");
+	validate_NULL_TYPETYPE(  arg4, "lsearch - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

@@ -11,12 +11,12 @@ SCREEN * newterm (char * arg0 , FILE * arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newterm");
-	validate_Rdaddress( arg0, "newterm");
-	validate_NULL_TYPETYPE(  arg0, "newterm");
-	validate_Rdaddress( arg1, "newterm");
-	validate_NULL_TYPETYPE(  arg1, "newterm");
-	validate_Rdaddress( arg2, "newterm");
-	validate_NULL_TYPETYPE(  arg2, "newterm");
+	validate_Rdaddress( arg0, "newterm - arg0");
+	validate_NULL_TYPETYPE(  arg0, "newterm - arg0");
+	validate_Rdaddress( arg1, "newterm - arg1");
+	validate_NULL_TYPETYPE(  arg1, "newterm - arg1");
+	validate_Rdaddress( arg2, "newterm - arg2");
+	validate_NULL_TYPETYPE(  arg2, "newterm - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

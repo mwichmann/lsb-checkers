@@ -10,11 +10,11 @@ int setenv (const char * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setenv");
-	validate_Rdaddress( arg0, "setenv");
-	validate_NULL_TYPETYPE(  arg0, "setenv");
-	validate_Rdaddress( arg1, "setenv");
-	validate_NULL_TYPETYPE(  arg1, "setenv");
-	validate_NULL_TYPETYPE(  arg2, "setenv");
+	validate_Rdaddress( arg0, "setenv - arg0");
+	validate_NULL_TYPETYPE(  arg0, "setenv - arg0");
+	validate_Rdaddress( arg1, "setenv - arg1");
+	validate_NULL_TYPETYPE(  arg1, "setenv - arg1");
+	validate_NULL_TYPETYPE(  arg2, "setenv - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

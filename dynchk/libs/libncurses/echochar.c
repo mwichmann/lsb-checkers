@@ -10,7 +10,7 @@ int echochar (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "echochar");
-	validate_NULL_TYPETYPE(  arg0, "echochar");
+	validate_NULL_TYPETYPE(  arg0, "echochar - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,9 +10,9 @@ int notimeout (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "notimeout");
-	validate_Rdaddress( arg0, "notimeout");
-	validate_NULL_TYPETYPE(  arg0, "notimeout");
-	validate_NULL_TYPETYPE(  arg1, "notimeout");
+	validate_Rdaddress( arg0, "notimeout - arg0");
+	validate_NULL_TYPETYPE(  arg0, "notimeout - arg0");
+	validate_NULL_TYPETYPE(  arg1, "notimeout - arg1");
 	return funcptr(arg0, arg1);
 }
 

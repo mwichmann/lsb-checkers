@@ -11,12 +11,12 @@ bool_t svc_register (SVCXPRT * arg0 , rpcprog_t arg1 , rpcvers_t arg2 , __dispat
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_register");
-	validate_Rdaddress( arg0, "svc_register");
-	validate_NULL_TYPETYPE(  arg0, "svc_register");
-	validate_NULL_TYPETYPE(  arg1, "svc_register");
-	validate_NULL_TYPETYPE(  arg2, "svc_register");
-	validate_NULL_TYPETYPE(  arg3, "svc_register");
-	validate_NULL_TYPETYPE(  arg4, "svc_register");
+	validate_Rdaddress( arg0, "svc_register - arg0");
+	validate_NULL_TYPETYPE(  arg0, "svc_register - arg0");
+	validate_NULL_TYPETYPE(  arg1, "svc_register - arg1");
+	validate_NULL_TYPETYPE(  arg2, "svc_register - arg2");
+	validate_NULL_TYPETYPE(  arg3, "svc_register - arg3");
+	validate_NULL_TYPETYPE(  arg4, "svc_register - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

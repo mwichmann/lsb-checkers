@@ -10,8 +10,8 @@ struct dirent * readdir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readdir");
-	validate_Rdaddress( arg0, "readdir");
-	validate_NULL_TYPETYPE(  arg0, "readdir");
+	validate_Rdaddress( arg0, "readdir - arg0");
+	validate_NULL_TYPETYPE(  arg0, "readdir - arg0");
 	return funcptr(arg0);
 }
 

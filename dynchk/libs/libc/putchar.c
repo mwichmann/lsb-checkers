@@ -10,7 +10,7 @@ int putchar (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putchar");
-	validate_NULL_TYPETYPE(  arg0, "putchar");
+	validate_NULL_TYPETYPE(  arg0, "putchar - arg0");
 	return funcptr(arg0);
 }
 

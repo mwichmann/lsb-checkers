@@ -10,10 +10,10 @@ int fgetpos64 (FILE * arg0 , fpos64_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetpos64");
-	validate_Rdaddress( arg0, "fgetpos64");
-	validate_NULL_TYPETYPE(  arg0, "fgetpos64");
-	validate_Rdaddress( arg1, "fgetpos64");
-	validate_NULL_TYPETYPE(  arg1, "fgetpos64");
+	validate_Rdaddress( arg0, "fgetpos64 - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fgetpos64 - arg0");
+	validate_Rdaddress( arg1, "fgetpos64 - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fgetpos64 - arg1");
 	return funcptr(arg0, arg1);
 }
 

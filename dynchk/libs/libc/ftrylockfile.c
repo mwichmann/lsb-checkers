@@ -10,8 +10,8 @@ int ftrylockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftrylockfile");
-	validate_Rdaddress( arg0, "ftrylockfile");
-	validate_NULL_TYPETYPE(  arg0, "ftrylockfile");
+	validate_Rdaddress( arg0, "ftrylockfile - arg0");
+	validate_NULL_TYPETYPE(  arg0, "ftrylockfile - arg0");
 	return funcptr(arg0);
 }
 

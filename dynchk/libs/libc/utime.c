@@ -10,10 +10,10 @@ int utime (const char * arg0 , const struct utimbuf * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "utime");
-	validate_Rdaddress( arg0, "utime");
-	validate_NULL_TYPETYPE(  arg0, "utime");
-	validate_Rdaddress( arg1, "utime");
-	validate_NULL_TYPETYPE(  arg1, "utime");
+	validate_Rdaddress( arg0, "utime - arg0");
+	validate_NULL_TYPETYPE(  arg0, "utime - arg0");
+	validate_Rdaddress( arg1, "utime - arg1");
+	validate_NULL_TYPETYPE(  arg1, "utime - arg1");
 	return funcptr(arg0, arg1);
 }
 

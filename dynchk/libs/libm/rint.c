@@ -10,7 +10,7 @@ double rint (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rint");
-	validate_NULL_TYPETYPE(  arg0, "rint");
+	validate_NULL_TYPETYPE(  arg0, "rint - arg0");
 	return funcptr(arg0);
 }
 

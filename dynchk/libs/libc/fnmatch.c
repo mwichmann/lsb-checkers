@@ -10,11 +10,11 @@ int fnmatch (const char * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fnmatch");
-	validate_Rdaddress( arg0, "fnmatch");
-	validate_NULL_TYPETYPE(  arg0, "fnmatch");
-	validate_Rdaddress( arg1, "fnmatch");
-	validate_NULL_TYPETYPE(  arg1, "fnmatch");
-	validate_NULL_TYPETYPE(  arg2, "fnmatch");
+	validate_Rdaddress( arg0, "fnmatch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fnmatch - arg0");
+	validate_Rdaddress( arg1, "fnmatch - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fnmatch - arg1");
+	validate_NULL_TYPETYPE(  arg2, "fnmatch - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

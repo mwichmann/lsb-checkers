@@ -10,16 +10,16 @@ int getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , s
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnameinfo");
-	validate_Rdaddress( arg0, "getnameinfo");
-	validate_NULL_TYPETYPE(  arg0, "getnameinfo");
-	validate_NULL_TYPETYPE(  arg1, "getnameinfo");
-	validate_Rdaddress( arg2, "getnameinfo");
-	validate_NULL_TYPETYPE(  arg2, "getnameinfo");
-	validate_NULL_TYPETYPE(  arg3, "getnameinfo");
-	validate_Rdaddress( arg4, "getnameinfo");
-	validate_NULL_TYPETYPE(  arg4, "getnameinfo");
-	validate_NULL_TYPETYPE(  arg5, "getnameinfo");
-	validate_NULL_TYPETYPE(  arg6, "getnameinfo");
+	validate_Rdaddress( arg0, "getnameinfo - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getnameinfo - arg0");
+	validate_NULL_TYPETYPE(  arg1, "getnameinfo - arg1");
+	validate_Rdaddress( arg2, "getnameinfo - arg2");
+	validate_NULL_TYPETYPE(  arg2, "getnameinfo - arg2");
+	validate_NULL_TYPETYPE(  arg3, "getnameinfo - arg3");
+	validate_Rdaddress( arg4, "getnameinfo - arg4");
+	validate_NULL_TYPETYPE(  arg4, "getnameinfo - arg4");
+	validate_NULL_TYPETYPE(  arg5, "getnameinfo - arg5");
+	validate_NULL_TYPETYPE(  arg6, "getnameinfo - arg6");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 

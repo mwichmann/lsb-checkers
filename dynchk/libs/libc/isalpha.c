@@ -10,7 +10,7 @@ int isalpha (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isalpha");
-	validate_NULL_TYPETYPE(  arg0, "isalpha");
+	validate_NULL_TYPETYPE(  arg0, "isalpha - arg0");
 	return funcptr(arg0);
 }
 

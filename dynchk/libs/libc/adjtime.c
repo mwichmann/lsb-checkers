@@ -10,10 +10,10 @@ int adjtime (const struct timeval * arg0 , struct timeval * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adjtime");
-	validate_Rdaddress( arg0, "adjtime");
-	validate_NULL_TYPETYPE(  arg0, "adjtime");
-	validate_Rdaddress( arg1, "adjtime");
-	validate_NULL_TYPETYPE(  arg1, "adjtime");
+	validate_Rdaddress( arg0, "adjtime - arg0");
+	validate_NULL_TYPETYPE(  arg0, "adjtime - arg0");
+	validate_Rdaddress( arg1, "adjtime - arg1");
+	validate_NULL_TYPETYPE(  arg1, "adjtime - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ long double nearbyintl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nearbyintl");
-	validate_NULL_TYPETYPE(  arg0, "nearbyintl");
+	validate_NULL_TYPETYPE(  arg0, "nearbyintl - arg0");
 	return funcptr(arg0);
 }
 

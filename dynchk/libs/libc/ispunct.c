@@ -10,7 +10,7 @@ int ispunct (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ispunct");
-	validate_NULL_TYPETYPE(  arg0, "ispunct");
+	validate_NULL_TYPETYPE(  arg0, "ispunct - arg0");
 	return funcptr(arg0);
 }
 

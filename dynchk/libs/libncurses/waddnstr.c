@@ -10,11 +10,11 @@ int waddnstr (WINDOW * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waddnstr");
-	validate_Rdaddress( arg0, "waddnstr");
-	validate_NULL_TYPETYPE(  arg0, "waddnstr");
-	validate_Rdaddress( arg1, "waddnstr");
-	validate_NULL_TYPETYPE(  arg1, "waddnstr");
-	validate_NULL_TYPETYPE(  arg2, "waddnstr");
+	validate_Rdaddress( arg0, "waddnstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "waddnstr - arg0");
+	validate_Rdaddress( arg1, "waddnstr - arg1");
+	validate_NULL_TYPETYPE(  arg1, "waddnstr - arg1");
+	validate_NULL_TYPETYPE(  arg2, "waddnstr - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

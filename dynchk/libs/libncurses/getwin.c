@@ -11,8 +11,8 @@ WINDOW * getwin (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwin");
-	validate_Rdaddress( arg0, "getwin");
-	validate_NULL_TYPETYPE(  arg0, "getwin");
+	validate_Rdaddress( arg0, "getwin - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getwin - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ double complex cpow (double complex arg0 , double complex arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cpow");
-	validate_NULL_TYPETYPE(  arg0, "cpow");
-	validate_NULL_TYPETYPE(  arg1, "cpow");
+	validate_NULL_TYPETYPE(  arg0, "cpow - arg0");
+	validate_NULL_TYPETYPE(  arg1, "cpow - arg1");
 	return funcptr(arg0, arg1);
 }
 

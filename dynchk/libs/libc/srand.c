@@ -10,7 +10,7 @@ void srand (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srand");
-	validate_NULL_TYPETYPE(  arg0, "srand");
+	validate_NULL_TYPETYPE(  arg0, "srand - arg0");
 	funcptr(arg0);
 }
 

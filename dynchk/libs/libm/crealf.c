@@ -10,7 +10,7 @@ float crealf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "crealf");
-	validate_NULL_TYPETYPE(  arg0, "crealf");
+	validate_NULL_TYPETYPE(  arg0, "crealf - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ float logf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "logf");
-	validate_NULL_TYPETYPE(  arg0, "logf");
+	validate_NULL_TYPETYPE(  arg0, "logf - arg0");
 	return funcptr(arg0);
 }
 

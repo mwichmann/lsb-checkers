@@ -10,7 +10,7 @@ int ungetch (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetch");
-	validate_NULL_TYPETYPE(  arg0, "ungetch");
+	validate_NULL_TYPETYPE(  arg0, "ungetch - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,10 +10,10 @@ int wredrawln (WINDOW * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wredrawln");
-	validate_Rdaddress( arg0, "wredrawln");
-	validate_NULL_TYPETYPE(  arg0, "wredrawln");
-	validate_NULL_TYPETYPE(  arg1, "wredrawln");
-	validate_NULL_TYPETYPE(  arg2, "wredrawln");
+	validate_Rdaddress( arg0, "wredrawln - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wredrawln - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wredrawln - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wredrawln - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

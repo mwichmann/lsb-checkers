@@ -10,7 +10,7 @@ double cabs (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cabs");
-	validate_NULL_TYPETYPE(  arg0, "cabs");
+	validate_NULL_TYPETYPE(  arg0, "cabs - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,9 +10,9 @@ int socket (int arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "socket");
-	validate_NULL_TYPETYPE(  arg0, "socket");
-	validate_NULL_TYPETYPE(  arg1, "socket");
-	validate_NULL_TYPETYPE(  arg2, "socket");
+	validate_NULL_TYPETYPE(  arg0, "socket - arg0");
+	validate_NULL_TYPETYPE(  arg1, "socket - arg1");
+	validate_NULL_TYPETYPE(  arg2, "socket - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

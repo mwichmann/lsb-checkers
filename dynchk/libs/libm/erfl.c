@@ -10,7 +10,7 @@ long double erfl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erfl");
-	validate_NULL_TYPETYPE(  arg0, "erfl");
+	validate_NULL_TYPETYPE(  arg0, "erfl - arg0");
 	return funcptr(arg0);
 }
 

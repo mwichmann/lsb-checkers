@@ -10,12 +10,12 @@ void logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "logwtmp");
-	validate_Rdaddress( arg0, "logwtmp");
-	validate_NULL_TYPETYPE(  arg0, "logwtmp");
-	validate_Rdaddress( arg1, "logwtmp");
-	validate_NULL_TYPETYPE(  arg1, "logwtmp");
-	validate_Rdaddress( arg2, "logwtmp");
-	validate_NULL_TYPETYPE(  arg2, "logwtmp");
+	validate_Rdaddress( arg0, "logwtmp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "logwtmp - arg0");
+	validate_Rdaddress( arg1, "logwtmp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "logwtmp - arg1");
+	validate_Rdaddress( arg2, "logwtmp - arg2");
+	validate_NULL_TYPETYPE(  arg2, "logwtmp - arg2");
 	funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ float lgammaf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgammaf");
-	validate_NULL_TYPETYPE(  arg0, "lgammaf");
+	validate_NULL_TYPETYPE(  arg0, "lgammaf - arg0");
 	return funcptr(arg0);
 }
 

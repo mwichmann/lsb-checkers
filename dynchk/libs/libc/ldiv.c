@@ -10,8 +10,8 @@ ldiv_t ldiv (long arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldiv");
-	validate_NULL_TYPETYPE(  arg0, "ldiv");
-	validate_NULL_TYPETYPE(  arg1, "ldiv");
+	validate_NULL_TYPETYPE(  arg0, "ldiv - arg0");
+	validate_NULL_TYPETYPE(  arg1, "ldiv - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -12,12 +12,12 @@ int vsnprintf (char * arg0 , size_t arg1 , const char * arg2 , va_list arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vsnprintf");
-	validate_Rdaddress( arg0, "vsnprintf");
-	validate_NULL_TYPETYPE(  arg0, "vsnprintf");
-	validate_NULL_TYPETYPE(  arg1, "vsnprintf");
-	validate_Rdaddress( arg2, "vsnprintf");
-	validate_NULL_TYPETYPE(  arg2, "vsnprintf");
-	validate_NULL_TYPETYPE(  arg3, "vsnprintf");
+	validate_Rdaddress( arg0, "vsnprintf - arg0");
+	validate_NULL_TYPETYPE(  arg0, "vsnprintf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "vsnprintf - arg1");
+	validate_Rdaddress( arg2, "vsnprintf - arg2");
+	validate_NULL_TYPETYPE(  arg2, "vsnprintf - arg2");
+	validate_NULL_TYPETYPE(  arg3, "vsnprintf - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

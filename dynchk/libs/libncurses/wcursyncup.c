@@ -10,8 +10,8 @@ void wcursyncup (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcursyncup");
-	validate_Rdaddress( arg0, "wcursyncup");
-	validate_NULL_TYPETYPE(  arg0, "wcursyncup");
+	validate_Rdaddress( arg0, "wcursyncup - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcursyncup - arg0");
 	funcptr(arg0);
 }
 

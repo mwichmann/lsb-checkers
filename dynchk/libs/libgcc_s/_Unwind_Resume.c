@@ -2,16 +2,18 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#include <unwind.h>
+#undef _Unwind_Resume
+static void(*funcptr) () = 0;
 
-void _Unwind_Resume()
+void _Unwind_Resume ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_Resume");
 	funcptr();
 }
 
-void __lsb__Unwind_Resume()
+void __lsb__Unwind_Resume ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_Resume");

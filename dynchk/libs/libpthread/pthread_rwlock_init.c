@@ -10,10 +10,10 @@ int pthread_rwlock_init (pthread_rwlock_t * arg0 , const pthread_rwlockattr_t * 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_init");
-	validate_Rdaddress( arg0, "pthread_rwlock_init");
-	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_init");
-	validate_Rdaddress( arg1, "pthread_rwlock_init");
-	validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_init");
+	validate_Rdaddress( arg0, "pthread_rwlock_init - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_init - arg0");
+	validate_Rdaddress( arg1, "pthread_rwlock_init - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_init - arg1");
 	return funcptr(arg0, arg1);
 }
 

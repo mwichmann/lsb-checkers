@@ -10,7 +10,7 @@ int slk_attrset (const chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_attrset");
-	validate_NULL_TYPETYPE(  arg0, "slk_attrset");
+	validate_NULL_TYPETYPE(  arg0, "slk_attrset - arg0");
 	return funcptr(arg0);
 }
 

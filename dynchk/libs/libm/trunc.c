@@ -10,7 +10,7 @@ double trunc (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "trunc");
-	validate_NULL_TYPETYPE(  arg0, "trunc");
+	validate_NULL_TYPETYPE(  arg0, "trunc - arg0");
 	return funcptr(arg0);
 }
 

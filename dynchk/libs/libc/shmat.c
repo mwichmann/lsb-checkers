@@ -10,10 +10,10 @@ void * shmat (int arg0 , const void * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmat");
-	validate_NULL_TYPETYPE(  arg0, "shmat");
-	validate_Rdaddress( arg1, "shmat");
-	validate_NULL_TYPETYPE(  arg1, "shmat");
-	validate_NULL_TYPETYPE(  arg2, "shmat");
+	validate_NULL_TYPETYPE(  arg0, "shmat - arg0");
+	validate_Rdaddress( arg1, "shmat - arg1");
+	validate_NULL_TYPETYPE(  arg1, "shmat - arg1");
+	validate_NULL_TYPETYPE(  arg2, "shmat - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ int ilogb (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ilogb");
-	validate_NULL_TYPETYPE(  arg0, "ilogb");
+	validate_NULL_TYPETYPE(  arg0, "ilogb - arg0");
 	return funcptr(arg0);
 }
 

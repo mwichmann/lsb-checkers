@@ -10,8 +10,8 @@ void svcerr_weakauth (SVCXPRT * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_weakauth");
-	validate_Rdaddress( arg0, "svcerr_weakauth");
-	validate_NULL_TYPETYPE(  arg0, "svcerr_weakauth");
+	validate_Rdaddress( arg0, "svcerr_weakauth - arg0");
+	validate_NULL_TYPETYPE(  arg0, "svcerr_weakauth - arg0");
 	funcptr(arg0);
 }
 

@@ -11,12 +11,12 @@ int sigtimedwait (const sigset_t * arg0 , siginfo_t * arg1 , const struct timesp
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigtimedwait");
-	validate_Rdaddress( arg0, "sigtimedwait");
-	validate_NULL_TYPETYPE(  arg0, "sigtimedwait");
-	validate_Rdaddress( arg1, "sigtimedwait");
-	validate_NULL_TYPETYPE(  arg1, "sigtimedwait");
-	validate_Rdaddress( arg2, "sigtimedwait");
-	validate_NULL_TYPETYPE(  arg2, "sigtimedwait");
+	validate_Rdaddress( arg0, "sigtimedwait - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sigtimedwait - arg0");
+	validate_Rdaddress( arg1, "sigtimedwait - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sigtimedwait - arg1");
+	validate_Rdaddress( arg2, "sigtimedwait - arg2");
+	validate_NULL_TYPETYPE(  arg2, "sigtimedwait - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

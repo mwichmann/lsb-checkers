@@ -10,14 +10,14 @@ char * dcngettext (const char * arg0 , const char * arg1 , const char * arg2 , u
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dcngettext");
-	validate_Rdaddress( arg0, "dcngettext");
-	validate_NULL_TYPETYPE(  arg0, "dcngettext");
-	validate_Rdaddress( arg1, "dcngettext");
-	validate_NULL_TYPETYPE(  arg1, "dcngettext");
-	validate_Rdaddress( arg2, "dcngettext");
-	validate_NULL_TYPETYPE(  arg2, "dcngettext");
-	validate_NULL_TYPETYPE(  arg3, "dcngettext");
-	validate_NULL_TYPETYPE(  arg4, "dcngettext");
+	validate_Rdaddress( arg0, "dcngettext - arg0");
+	validate_NULL_TYPETYPE(  arg0, "dcngettext - arg0");
+	validate_Rdaddress( arg1, "dcngettext - arg1");
+	validate_NULL_TYPETYPE(  arg1, "dcngettext - arg1");
+	validate_Rdaddress( arg2, "dcngettext - arg2");
+	validate_NULL_TYPETYPE(  arg2, "dcngettext - arg2");
+	validate_NULL_TYPETYPE(  arg3, "dcngettext - arg3");
+	validate_NULL_TYPETYPE(  arg4, "dcngettext - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

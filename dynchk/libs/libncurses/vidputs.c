@@ -10,9 +10,9 @@ int vidputs (chtype arg0 , int(* arg1 )(int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidputs");
-	validate_NULL_TYPETYPE(  arg0, "vidputs");
-validate_Rdaddress( arg1, "vidputs");
-	validate_NULL_TYPETYPE(  arg1, "vidputs");
+	validate_NULL_TYPETYPE(  arg0, "vidputs - arg0");
+validate_Rdaddress( arg1, "vidputs - arg1");
+	validate_NULL_TYPETYPE(  arg1, "vidputs - arg1");
 	return funcptr(arg0, arg1);
 }
 

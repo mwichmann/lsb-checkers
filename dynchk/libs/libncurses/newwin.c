@@ -10,10 +10,10 @@ WINDOW * newwin (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newwin");
-	validate_NULL_TYPETYPE(  arg0, "newwin");
-	validate_NULL_TYPETYPE(  arg1, "newwin");
-	validate_NULL_TYPETYPE(  arg2, "newwin");
-	validate_NULL_TYPETYPE(  arg3, "newwin");
+	validate_NULL_TYPETYPE(  arg0, "newwin - arg0");
+	validate_NULL_TYPETYPE(  arg1, "newwin - arg1");
+	validate_NULL_TYPETYPE(  arg2, "newwin - arg2");
+	validate_NULL_TYPETYPE(  arg3, "newwin - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

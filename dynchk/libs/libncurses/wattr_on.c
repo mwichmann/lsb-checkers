@@ -10,11 +10,11 @@ int wattr_on (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattr_on");
-	validate_Rdaddress( arg0, "wattr_on");
-	validate_NULL_TYPETYPE(  arg0, "wattr_on");
-	validate_NULL_TYPETYPE(  arg1, "wattr_on");
-	validate_Rdaddress( arg2, "wattr_on");
-	validate_NULL_TYPETYPE(  arg2, "wattr_on");
+	validate_Rdaddress( arg0, "wattr_on - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wattr_on - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wattr_on - arg1");
+	validate_Rdaddress( arg2, "wattr_on - arg2");
+	validate_NULL_TYPETYPE(  arg2, "wattr_on - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

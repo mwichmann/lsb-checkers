@@ -10,7 +10,7 @@ void * pthread_getspecific (pthread_key_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_getspecific");
-	validate_NULL_TYPETYPE(  arg0, "pthread_getspecific");
+	validate_NULL_TYPETYPE(  arg0, "pthread_getspecific - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,8 +10,8 @@ int rmdir (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rmdir");
-	validate_Rdaddress( arg0, "rmdir");
-	validate_NULL_TYPETYPE(  arg0, "rmdir");
+	validate_Rdaddress( arg0, "rmdir - arg0");
+	validate_NULL_TYPETYPE(  arg0, "rmdir - arg0");
 	return funcptr(arg0);
 }
 

@@ -5,16 +5,17 @@
 #undef dlopen
 static void *(*funcptr) (const char * , int ) = 0;
 
-#if 0
 void * dlopen (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlopen");
-	validate_NULL_TYPETYPE(arg0, "dlopen");
-	validate_NULL_TYPETYPE(arg1, "dlopen");
+	validate_Rdaddress( arg0, "dlopen - arg0");
+	if(  arg0 ) {
+	}
+	validate_NULL_TYPETYPE(  arg0, "dlopen");
+	validate_NULL_TYPETYPE(  arg1, "dlopen");
 	return funcptr(arg0, arg1);
 }
-#endif
 
 void * __lsb_dlopen (const char * arg0 , int arg1 )
 {

@@ -10,7 +10,7 @@ int pthread_detach (pthread_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_detach");
-	validate_NULL_TYPETYPE(  arg0, "pthread_detach");
+	validate_NULL_TYPETYPE(  arg0, "pthread_detach - arg0");
 	return funcptr(arg0);
 }
 

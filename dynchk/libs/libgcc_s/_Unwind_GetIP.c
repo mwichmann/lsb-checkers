@@ -2,16 +2,18 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static _Unwind_Ptr(*funcptr)() = 0;
+#include <unwind.h>
+#undef _Unwind_GetIP
+static _Unwind_Ptr(*funcptr) () = 0;
 
-_Unwind_Ptr _Unwind_GetIP()
+_Unwind_Ptr _Unwind_GetIP ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetIP");
 	return funcptr();
 }
 
-_Unwind_Ptr __lsb__Unwind_GetIP()
+_Unwind_Ptr __lsb__Unwind_GetIP ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_Unwind_GetIP");

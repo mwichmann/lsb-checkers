@@ -12,9 +12,9 @@ int setgroups (size_t arg0 , const gid_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgroups");
-	validate_NULL_TYPETYPE(  arg0, "setgroups");
-	validate_Rdaddress( arg1, "setgroups");
-	validate_NULL_TYPETYPE(  arg1, "setgroups");
+	validate_NULL_TYPETYPE(  arg0, "setgroups - arg0");
+	validate_Rdaddress( arg1, "setgroups - arg1");
+	validate_NULL_TYPETYPE(  arg1, "setgroups - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,8 +10,8 @@ void svcerr_systemerr (SVCXPRT * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_systemerr");
-	validate_Rdaddress( arg0, "svcerr_systemerr");
-	validate_NULL_TYPETYPE(  arg0, "svcerr_systemerr");
+	validate_Rdaddress( arg0, "svcerr_systemerr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "svcerr_systemerr - arg0");
 	funcptr(arg0);
 }
 

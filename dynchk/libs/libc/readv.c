@@ -11,10 +11,10 @@ ssize_t readv (int arg0 , const struct iovec * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readv");
-	validate_NULL_TYPETYPE(  arg0, "readv");
-	validate_Rdaddress( arg1, "readv");
-	validate_NULL_TYPETYPE(  arg1, "readv");
-	validate_NULL_TYPETYPE(  arg2, "readv");
+	validate_NULL_TYPETYPE(  arg0, "readv - arg0");
+	validate_Rdaddress( arg1, "readv - arg1");
+	validate_NULL_TYPETYPE(  arg1, "readv - arg1");
+	validate_NULL_TYPETYPE(  arg2, "readv - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

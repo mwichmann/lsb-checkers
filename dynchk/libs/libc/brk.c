@@ -10,8 +10,8 @@ int brk (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "brk");
-	validate_Rdaddress( arg0, "brk");
-	validate_NULL_TYPETYPE(  arg0, "brk");
+	validate_Rdaddress( arg0, "brk - arg0");
+	validate_NULL_TYPETYPE(  arg0, "brk - arg0");
 	return funcptr(arg0);
 }
 

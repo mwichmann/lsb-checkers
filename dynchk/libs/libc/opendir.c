@@ -10,8 +10,8 @@ DIR * opendir (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "opendir");
-	validate_Rdaddress( arg0, "opendir");
-	validate_NULL_TYPETYPE(  arg0, "opendir");
+	validate_Rdaddress( arg0, "opendir - arg0");
+	validate_NULL_TYPETYPE(  arg0, "opendir - arg0");
 	return funcptr(arg0);
 }
 

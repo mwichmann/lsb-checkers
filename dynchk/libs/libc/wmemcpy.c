@@ -11,11 +11,11 @@ wchar_t * wmemcpy (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmemcpy");
-	validate_Rdaddress( arg0, "wmemcpy");
-	validate_NULL_TYPETYPE(  arg0, "wmemcpy");
-	validate_Rdaddress( arg1, "wmemcpy");
-	validate_NULL_TYPETYPE(  arg1, "wmemcpy");
-	validate_NULL_TYPETYPE(  arg2, "wmemcpy");
+	validate_Rdaddress( arg0, "wmemcpy - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wmemcpy - arg0");
+	validate_Rdaddress( arg1, "wmemcpy - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wmemcpy - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wmemcpy - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ float j0f (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j0f");
-	validate_NULL_TYPETYPE(  arg0, "j0f");
+	validate_NULL_TYPETYPE(  arg0, "j0f - arg0");
 	return funcptr(arg0);
 }
 

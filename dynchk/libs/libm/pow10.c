@@ -10,7 +10,7 @@ double pow10 (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pow10");
-	validate_NULL_TYPETYPE(  arg0, "pow10");
+	validate_NULL_TYPETYPE(  arg0, "pow10 - arg0");
 	return funcptr(arg0);
 }
 

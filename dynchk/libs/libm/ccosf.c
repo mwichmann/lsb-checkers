@@ -10,7 +10,7 @@ float complex ccosf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccosf");
-	validate_NULL_TYPETYPE(  arg0, "ccosf");
+	validate_NULL_TYPETYPE(  arg0, "ccosf - arg0");
 	return funcptr(arg0);
 }
 

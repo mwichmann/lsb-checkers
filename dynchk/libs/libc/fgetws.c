@@ -12,11 +12,11 @@ wchar_t * fgetws (wchar_t * arg0 , int arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetws");
-	validate_Rdaddress( arg0, "fgetws");
-	validate_NULL_TYPETYPE(  arg0, "fgetws");
-	validate_NULL_TYPETYPE(  arg1, "fgetws");
-	validate_Rdaddress( arg2, "fgetws");
-	validate_NULL_TYPETYPE(  arg2, "fgetws");
+	validate_Rdaddress( arg0, "fgetws - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fgetws - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fgetws - arg1");
+	validate_Rdaddress( arg2, "fgetws - arg2");
+	validate_NULL_TYPETYPE(  arg2, "fgetws - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

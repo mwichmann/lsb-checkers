@@ -11,8 +11,8 @@ int mbsinit (const mbstate_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbsinit");
-	validate_Rdaddress( arg0, "mbsinit");
-	validate_NULL_TYPETYPE(  arg0, "mbsinit");
+	validate_Rdaddress( arg0, "mbsinit - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mbsinit - arg0");
 	return funcptr(arg0);
 }
 

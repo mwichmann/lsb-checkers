@@ -10,9 +10,9 @@ int getitimer (__itimer_which_t arg0 , struct itimerval * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getitimer");
-	validate_NULL_TYPETYPE(  arg0, "getitimer");
-	validate_Rdaddress( arg1, "getitimer");
-	validate_NULL_TYPETYPE(  arg1, "getitimer");
+	validate_NULL_TYPETYPE(  arg0, "getitimer - arg0");
+	validate_Rdaddress( arg1, "getitimer - arg1");
+	validate_NULL_TYPETYPE(  arg1, "getitimer - arg1");
 	return funcptr(arg0, arg1);
 }
 

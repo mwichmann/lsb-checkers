@@ -10,8 +10,8 @@ int scr_restore (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_restore");
-	validate_Rdaddress( arg0, "scr_restore");
-	validate_NULL_TYPETYPE(  arg0, "scr_restore");
+	validate_Rdaddress( arg0, "scr_restore - arg0");
+	validate_NULL_TYPETYPE(  arg0, "scr_restore - arg0");
 	return funcptr(arg0);
 }
 

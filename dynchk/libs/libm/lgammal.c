@@ -10,7 +10,7 @@ long double lgammal (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgammal");
-	validate_NULL_TYPETYPE(  arg0, "lgammal");
+	validate_NULL_TYPETYPE(  arg0, "lgammal - arg0");
 	return funcptr(arg0);
 }
 

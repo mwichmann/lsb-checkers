@@ -10,7 +10,7 @@ float complex catanf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catanf");
-	validate_NULL_TYPETYPE(  arg0, "catanf");
+	validate_NULL_TYPETYPE(  arg0, "catanf - arg0");
 	return funcptr(arg0);
 }
 

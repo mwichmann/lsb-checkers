@@ -10,7 +10,7 @@ int finitef (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "finitef");
-	validate_NULL_TYPETYPE(  arg0, "finitef");
+	validate_NULL_TYPETYPE(  arg0, "finitef - arg0");
 	return funcptr(arg0);
 }
 

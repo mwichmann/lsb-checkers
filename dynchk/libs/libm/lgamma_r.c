@@ -10,9 +10,9 @@ double lgamma_r (double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lgamma_r");
-	validate_NULL_TYPETYPE(  arg0, "lgamma_r");
-	validate_Rdaddress( arg1, "lgamma_r");
-	validate_NULL_TYPETYPE(  arg1, "lgamma_r");
+	validate_NULL_TYPETYPE(  arg0, "lgamma_r - arg0");
+	validate_Rdaddress( arg1, "lgamma_r - arg1");
+	validate_NULL_TYPETYPE(  arg1, "lgamma_r - arg1");
 	return funcptr(arg0, arg1);
 }
 

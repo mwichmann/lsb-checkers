@@ -11,11 +11,11 @@ float wcstof (const wchar_t * arg0 , wchar_t * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstof");
-	validate_Rdaddress( arg0, "wcstof");
-	validate_NULL_TYPETYPE(  arg0, "wcstof");
-	validate_Rdaddress( arg1, "wcstof");
-	validate_Rdaddress(* arg1, "wcstof");
-	validate_NULL_TYPETYPE(  arg1, "wcstof");
+	validate_Rdaddress( arg0, "wcstof - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcstof - arg0");
+	validate_Rdaddress( arg1, "wcstof - arg1");
+	validate_Rdaddress(* arg1, "wcstof - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcstof - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -13,11 +13,11 @@ int vfwprintf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfwprintf");
-	validate_Rdaddress( arg0, "vfwprintf");
-	validate_NULL_TYPETYPE(  arg0, "vfwprintf");
-	validate_Rdaddress( arg1, "vfwprintf");
-	validate_NULL_TYPETYPE(  arg1, "vfwprintf");
-	validate_NULL_TYPETYPE(  arg2, "vfwprintf");
+	validate_Rdaddress( arg0, "vfwprintf - arg0");
+	validate_NULL_TYPETYPE(  arg0, "vfwprintf - arg0");
+	validate_Rdaddress( arg1, "vfwprintf - arg1");
+	validate_NULL_TYPETYPE(  arg1, "vfwprintf - arg1");
+	validate_NULL_TYPETYPE(  arg2, "vfwprintf - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,8 +10,8 @@ int werase (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "werase");
-	validate_Rdaddress( arg0, "werase");
-	validate_NULL_TYPETYPE(  arg0, "werase");
+	validate_Rdaddress( arg0, "werase - arg0");
+	validate_NULL_TYPETYPE(  arg0, "werase - arg0");
 	return funcptr(arg0);
 }
 

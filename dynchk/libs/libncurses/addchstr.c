@@ -10,8 +10,8 @@ int addchstr (const chtype * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "addchstr");
-	validate_Rdaddress( arg0, "addchstr");
-	validate_NULL_TYPETYPE(  arg0, "addchstr");
+	validate_Rdaddress( arg0, "addchstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "addchstr - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,9 +10,9 @@ int gzwrite (gzFile arg0 , voidpc arg1 , unsigned int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzwrite");
-	validate_NULL_TYPETYPE(  arg0, "gzwrite");
-	validate_NULL_TYPETYPE(  arg1, "gzwrite");
-	validate_NULL_TYPETYPE(  arg2, "gzwrite");
+	validate_NULL_TYPETYPE(  arg0, "gzwrite - arg0");
+	validate_NULL_TYPETYPE(  arg1, "gzwrite - arg1");
+	validate_NULL_TYPETYPE(  arg2, "gzwrite - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

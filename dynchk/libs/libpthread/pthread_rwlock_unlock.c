@@ -10,8 +10,8 @@ int pthread_rwlock_unlock (pthread_rwlock_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_unlock");
-	validate_Rdaddress( arg0, "pthread_rwlock_unlock");
-	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_unlock");
+	validate_Rdaddress( arg0, "pthread_rwlock_unlock - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_unlock - arg0");
 	return funcptr(arg0);
 }
 

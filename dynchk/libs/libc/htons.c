@@ -11,7 +11,7 @@ uint16_t htons (uint16_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htons");
-	validate_NULL_TYPETYPE(  arg0, "htons");
+	validate_NULL_TYPETYPE(  arg0, "htons - arg0");
 	return funcptr(arg0);
 }
 

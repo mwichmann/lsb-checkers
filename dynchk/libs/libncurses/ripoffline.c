@@ -10,9 +10,9 @@ int ripoffline (int arg0 , int(* arg1 )(WINDOW *, int))
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ripoffline");
-	validate_NULL_TYPETYPE(  arg0, "ripoffline");
-validate_Rdaddress( arg1, "ripoffline");
-	validate_NULL_TYPETYPE(  arg1, "ripoffline");
+	validate_NULL_TYPETYPE(  arg0, "ripoffline - arg0");
+validate_Rdaddress( arg1, "ripoffline - arg1");
+	validate_NULL_TYPETYPE(  arg1, "ripoffline - arg1");
 	return funcptr(arg0, arg1);
 }
 

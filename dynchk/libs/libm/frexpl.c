@@ -10,9 +10,9 @@ long double frexpl (long double arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexpl");
-	validate_NULL_TYPETYPE(  arg0, "frexpl");
-	validate_Rdaddress( arg1, "frexpl");
-	validate_NULL_TYPETYPE(  arg1, "frexpl");
+	validate_NULL_TYPETYPE(  arg0, "frexpl - arg0");
+	validate_Rdaddress( arg1, "frexpl - arg1");
+	validate_NULL_TYPETYPE(  arg1, "frexpl - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -11,10 +11,10 @@ int wcscmp (const wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcscmp");
-	validate_Rdaddress( arg0, "wcscmp");
-	validate_NULL_TYPETYPE(  arg0, "wcscmp");
-	validate_Rdaddress( arg1, "wcscmp");
-	validate_NULL_TYPETYPE(  arg1, "wcscmp");
+	validate_Rdaddress( arg0, "wcscmp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcscmp - arg0");
+	validate_Rdaddress( arg1, "wcscmp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcscmp - arg1");
 	return funcptr(arg0, arg1);
 }
 

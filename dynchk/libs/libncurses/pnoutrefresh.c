@@ -10,14 +10,14 @@ int pnoutrefresh (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 , in
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pnoutrefresh");
-	validate_Rdaddress( arg0, "pnoutrefresh");
-	validate_NULL_TYPETYPE(  arg0, "pnoutrefresh");
-	validate_NULL_TYPETYPE(  arg1, "pnoutrefresh");
-	validate_NULL_TYPETYPE(  arg2, "pnoutrefresh");
-	validate_NULL_TYPETYPE(  arg3, "pnoutrefresh");
-	validate_NULL_TYPETYPE(  arg4, "pnoutrefresh");
-	validate_NULL_TYPETYPE(  arg5, "pnoutrefresh");
-	validate_NULL_TYPETYPE(  arg6, "pnoutrefresh");
+	validate_Rdaddress( arg0, "pnoutrefresh - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pnoutrefresh - arg0");
+	validate_NULL_TYPETYPE(  arg1, "pnoutrefresh - arg1");
+	validate_NULL_TYPETYPE(  arg2, "pnoutrefresh - arg2");
+	validate_NULL_TYPETYPE(  arg3, "pnoutrefresh - arg3");
+	validate_NULL_TYPETYPE(  arg4, "pnoutrefresh - arg4");
+	validate_NULL_TYPETYPE(  arg5, "pnoutrefresh - arg5");
+	validate_NULL_TYPETYPE(  arg6, "pnoutrefresh - arg6");
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 

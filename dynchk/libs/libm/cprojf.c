@@ -10,7 +10,7 @@ float complex cprojf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cprojf");
-	validate_NULL_TYPETYPE(  arg0, "cprojf");
+	validate_NULL_TYPETYPE(  arg0, "cprojf - arg0");
 	return funcptr(arg0);
 }
 

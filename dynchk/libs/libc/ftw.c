@@ -10,10 +10,10 @@ int ftw (const char * arg0 , __ftw_func_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftw");
-	validate_Rdaddress( arg0, "ftw");
-	validate_NULL_TYPETYPE(  arg0, "ftw");
-	validate_NULL_TYPETYPE(  arg1, "ftw");
-	validate_NULL_TYPETYPE(  arg2, "ftw");
+	validate_Rdaddress( arg0, "ftw - arg0");
+	validate_NULL_TYPETYPE(  arg0, "ftw - arg0");
+	validate_NULL_TYPETYPE(  arg1, "ftw - arg1");
+	validate_NULL_TYPETYPE(  arg2, "ftw - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

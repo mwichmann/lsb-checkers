@@ -10,8 +10,8 @@ int wstandend (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wstandend");
-	validate_Rdaddress( arg0, "wstandend");
-	validate_NULL_TYPETYPE(  arg0, "wstandend");
+	validate_Rdaddress( arg0, "wstandend - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wstandend - arg0");
 	return funcptr(arg0);
 }
 

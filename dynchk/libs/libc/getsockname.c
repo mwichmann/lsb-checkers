@@ -10,11 +10,11 @@ int getsockname (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsockname");
-	validate_filedescriptor(  arg0, "getsockname");
-	validate_Rdaddress( arg1, "getsockname");
-	validate_RWaddress(  arg1, "getsockname");
-	validate_Rdaddress( arg2, "getsockname");
-	validate_RWaddress(  arg2, "getsockname");
+	validate_filedescriptor(  arg0, "getsockname - arg0");
+	validate_Rdaddress( arg1, "getsockname - arg1");
+	validate_RWaddress(  arg1, "getsockname - arg1");
+	validate_Rdaddress( arg2, "getsockname - arg2");
+	validate_RWaddress(  arg2, "getsockname - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

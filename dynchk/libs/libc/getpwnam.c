@@ -10,8 +10,8 @@ struct passwd * getpwnam (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwnam");
-	validate_Rdaddress( arg0, "getpwnam");
-	validate_NULL_TYPETYPE(  arg0, "getpwnam");
+	validate_Rdaddress( arg0, "getpwnam - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getpwnam - arg0");
 	return funcptr(arg0);
 }
 

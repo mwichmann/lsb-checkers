@@ -10,10 +10,10 @@ int mvinstr (int arg0 , int arg1 , char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinstr");
-	validate_NULL_TYPETYPE(  arg0, "mvinstr");
-	validate_NULL_TYPETYPE(  arg1, "mvinstr");
-	validate_Rdaddress( arg2, "mvinstr");
-	validate_NULL_TYPETYPE(  arg2, "mvinstr");
+	validate_NULL_TYPETYPE(  arg0, "mvinstr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvinstr - arg1");
+	validate_Rdaddress( arg2, "mvinstr - arg2");
+	validate_NULL_TYPETYPE(  arg2, "mvinstr - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

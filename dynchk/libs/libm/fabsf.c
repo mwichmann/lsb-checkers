@@ -10,7 +10,7 @@ float fabsf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fabsf");
-	validate_NULL_TYPETYPE(  arg0, "fabsf");
+	validate_NULL_TYPETYPE(  arg0, "fabsf - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,14 +10,14 @@ int getsubopt (char * * arg0 , char *const  * arg1 , char * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsubopt");
-	validate_Rdaddress( arg0, "getsubopt");
-	validate_Rdaddress(* arg0, "getsubopt");
-	validate_NULL_TYPETYPE(  arg0, "getsubopt");
-	validate_Rdaddress( arg1, "getsubopt");
-	validate_NULL_TYPETYPE(  arg1, "getsubopt");
-	validate_Rdaddress( arg2, "getsubopt");
-	validate_Rdaddress(* arg2, "getsubopt");
-	validate_NULL_TYPETYPE(  arg2, "getsubopt");
+	validate_Rdaddress( arg0, "getsubopt - arg0");
+	validate_Rdaddress(* arg0, "getsubopt - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getsubopt - arg0");
+	validate_Rdaddress( arg1, "getsubopt - arg1");
+	validate_NULL_TYPETYPE(  arg1, "getsubopt - arg1");
+	validate_Rdaddress( arg2, "getsubopt - arg2");
+	validate_Rdaddress(* arg2, "getsubopt - arg2");
+	validate_NULL_TYPETYPE(  arg2, "getsubopt - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

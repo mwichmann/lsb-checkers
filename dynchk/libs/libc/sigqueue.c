@@ -11,9 +11,9 @@ int sigqueue (pid_t arg0 , int arg1 , const union sigval arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigqueue");
-	validate_NULL_TYPETYPE(  arg0, "sigqueue");
-	validate_NULL_TYPETYPE(  arg1, "sigqueue");
-	validate_NULL_TYPETYPE(  arg2, "sigqueue");
+	validate_NULL_TYPETYPE(  arg0, "sigqueue - arg0");
+	validate_NULL_TYPETYPE(  arg1, "sigqueue - arg1");
+	validate_NULL_TYPETYPE(  arg2, "sigqueue - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

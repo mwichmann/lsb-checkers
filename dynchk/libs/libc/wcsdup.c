@@ -11,8 +11,8 @@ wchar_t * wcsdup (const wchar_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsdup");
-	validate_Rdaddress( arg0, "wcsdup");
-	validate_NULL_TYPETYPE(  arg0, "wcsdup");
+	validate_Rdaddress( arg0, "wcsdup - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcsdup - arg0");
 	return funcptr(arg0);
 }
 

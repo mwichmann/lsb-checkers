@@ -11,9 +11,9 @@ void bzero (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bzero");
-	validate_Rdaddress( arg0, "bzero");
-	validate_NULL_TYPETYPE(  arg0, "bzero");
-	validate_NULL_TYPETYPE(  arg1, "bzero");
+	validate_Rdaddress( arg0, "bzero - arg0");
+	validate_NULL_TYPETYPE(  arg0, "bzero - arg0");
+	validate_NULL_TYPETYPE(  arg1, "bzero - arg1");
 	funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ int gzeof (gzFile arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzeof");
-	validate_NULL_TYPETYPE(  arg0, "gzeof");
+	validate_NULL_TYPETYPE(  arg0, "gzeof - arg0");
 	return funcptr(arg0);
 }
 

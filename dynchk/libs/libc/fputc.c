@@ -10,9 +10,9 @@ int fputc (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputc");
-	validate_NULL_TYPETYPE(  arg0, "fputc");
-	validate_Rdaddress( arg1, "fputc");
-	validate_NULL_TYPETYPE(  arg1, "fputc");
+	validate_NULL_TYPETYPE(  arg0, "fputc - arg0");
+	validate_Rdaddress( arg1, "fputc - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fputc - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -11,13 +11,13 @@ void * bsearch (const void * arg0 , const void * arg1 , size_t arg2 , size_t arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bsearch");
-	validate_Rdaddress( arg0, "bsearch");
-	validate_NULL_TYPETYPE(  arg0, "bsearch");
-	validate_Rdaddress( arg1, "bsearch");
-	validate_NULL_TYPETYPE(  arg1, "bsearch");
-	validate_NULL_TYPETYPE(  arg2, "bsearch");
-	validate_NULL_TYPETYPE(  arg3, "bsearch");
-	validate_NULL_TYPETYPE(  arg4, "bsearch");
+	validate_Rdaddress( arg0, "bsearch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "bsearch - arg0");
+	validate_Rdaddress( arg1, "bsearch - arg1");
+	validate_NULL_TYPETYPE(  arg1, "bsearch - arg1");
+	validate_NULL_TYPETYPE(  arg2, "bsearch - arg2");
+	validate_NULL_TYPETYPE(  arg3, "bsearch - arg3");
+	validate_NULL_TYPETYPE(  arg4, "bsearch - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 

@@ -10,7 +10,7 @@ double j0 (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "j0");
-	validate_NULL_TYPETYPE(  arg0, "j0");
+	validate_NULL_TYPETYPE(  arg0, "j0 - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ long double tanl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tanl");
-	validate_NULL_TYPETYPE(  arg0, "tanl");
+	validate_NULL_TYPETYPE(  arg0, "tanl - arg0");
 	return funcptr(arg0);
 }
 

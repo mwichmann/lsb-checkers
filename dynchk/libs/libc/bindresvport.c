@@ -10,9 +10,9 @@ int bindresvport (int arg0 , struct sockaddr_in * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bindresvport");
-	validate_NULL_TYPETYPE(  arg0, "bindresvport");
-	validate_Rdaddress( arg1, "bindresvport");
-	validate_NULL_TYPETYPE(  arg1, "bindresvport");
+	validate_NULL_TYPETYPE(  arg0, "bindresvport - arg0");
+	validate_Rdaddress( arg1, "bindresvport - arg1");
+	validate_NULL_TYPETYPE(  arg1, "bindresvport - arg1");
 	return funcptr(arg0, arg1);
 }
 

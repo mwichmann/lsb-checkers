@@ -10,7 +10,7 @@ float cimagf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cimagf");
-	validate_NULL_TYPETYPE(  arg0, "cimagf");
+	validate_NULL_TYPETYPE(  arg0, "cimagf - arg0");
 	return funcptr(arg0);
 }
 

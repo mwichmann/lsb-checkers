@@ -10,7 +10,7 @@ long double creall (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creall");
-	validate_NULL_TYPETYPE(  arg0, "creall");
+	validate_NULL_TYPETYPE(  arg0, "creall - arg0");
 	return funcptr(arg0);
 }
 

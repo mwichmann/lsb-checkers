@@ -10,10 +10,10 @@ FILE * fopen (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fopen");
-	validate_Rdaddress( arg0, "fopen");
-	validate_NULL_TYPETYPE(  arg0, "fopen");
-	validate_Rdaddress( arg1, "fopen");
-	validate_NULL_TYPETYPE(  arg1, "fopen");
+	validate_Rdaddress( arg0, "fopen - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fopen - arg0");
+	validate_Rdaddress( arg1, "fopen - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fopen - arg1");
 	return funcptr(arg0, arg1);
 }
 

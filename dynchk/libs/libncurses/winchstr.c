@@ -10,10 +10,10 @@ int winchstr (WINDOW * arg0 , chtype * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winchstr");
-	validate_Rdaddress( arg0, "winchstr");
-	validate_NULL_TYPETYPE(  arg0, "winchstr");
-	validate_Rdaddress( arg1, "winchstr");
-	validate_NULL_TYPETYPE(  arg1, "winchstr");
+	validate_Rdaddress( arg0, "winchstr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "winchstr - arg0");
+	validate_Rdaddress( arg1, "winchstr - arg1");
+	validate_NULL_TYPETYPE(  arg1, "winchstr - arg1");
 	return funcptr(arg0, arg1);
 }
 

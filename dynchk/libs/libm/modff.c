@@ -10,9 +10,9 @@ float modff (float arg0 , float * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "modff");
-	validate_NULL_TYPETYPE(  arg0, "modff");
-	validate_Rdaddress( arg1, "modff");
-	validate_NULL_TYPETYPE(  arg1, "modff");
+	validate_NULL_TYPETYPE(  arg0, "modff - arg0");
+	validate_Rdaddress( arg1, "modff - arg1");
+	validate_NULL_TYPETYPE(  arg1, "modff - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,9 +10,9 @@ FILE * fdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdopen");
-	validate_NULL_TYPETYPE(  arg0, "fdopen");
-	validate_Rdaddress( arg1, "fdopen");
-	validate_NULL_TYPETYPE(  arg1, "fdopen");
+	validate_NULL_TYPETYPE(  arg0, "fdopen - arg0");
+	validate_Rdaddress( arg1, "fdopen - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fdopen - arg1");
 	return funcptr(arg0, arg1);
 }
 

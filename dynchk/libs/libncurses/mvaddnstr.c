@@ -10,11 +10,11 @@ int mvaddnstr (int arg0 , int arg1 , const char * arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvaddnstr");
-	validate_NULL_TYPETYPE(  arg0, "mvaddnstr");
-	validate_NULL_TYPETYPE(  arg1, "mvaddnstr");
-	validate_Rdaddress( arg2, "mvaddnstr");
-	validate_NULL_TYPETYPE(  arg2, "mvaddnstr");
-	validate_NULL_TYPETYPE(  arg3, "mvaddnstr");
+	validate_NULL_TYPETYPE(  arg0, "mvaddnstr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvaddnstr - arg1");
+	validate_Rdaddress( arg2, "mvaddnstr - arg2");
+	validate_NULL_TYPETYPE(  arg2, "mvaddnstr - arg2");
+	validate_NULL_TYPETYPE(  arg3, "mvaddnstr - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 

@@ -12,9 +12,9 @@ int sched_rr_get_interval (pid_t arg0 , struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_rr_get_interval");
-	validate_NULL_TYPETYPE(  arg0, "sched_rr_get_interval");
-	validate_Rdaddress( arg1, "sched_rr_get_interval");
-	validate_NULL_TYPETYPE(  arg1, "sched_rr_get_interval");
+	validate_NULL_TYPETYPE(  arg0, "sched_rr_get_interval - arg0");
+	validate_Rdaddress( arg1, "sched_rr_get_interval - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sched_rr_get_interval - arg1");
 	return funcptr(arg0, arg1);
 }
 

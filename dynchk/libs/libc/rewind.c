@@ -10,8 +10,8 @@ void rewind (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rewind");
-	validate_Rdaddress( arg0, "rewind");
-	validate_NULL_TYPETYPE(  arg0, "rewind");
+	validate_Rdaddress( arg0, "rewind - arg0");
+	validate_NULL_TYPETYPE(  arg0, "rewind - arg0");
 	funcptr(arg0);
 }
 

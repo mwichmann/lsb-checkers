@@ -10,7 +10,7 @@ float cargf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cargf");
-	validate_NULL_TYPETYPE(  arg0, "cargf");
+	validate_NULL_TYPETYPE(  arg0, "cargf - arg0");
 	return funcptr(arg0);
 }
 

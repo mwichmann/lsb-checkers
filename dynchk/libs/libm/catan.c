@@ -10,7 +10,7 @@ double complex catan (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catan");
-	validate_NULL_TYPETYPE(  arg0, "catan");
+	validate_NULL_TYPETYPE(  arg0, "catan - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ const char * gai_strerror (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gai_strerror");
-	validate_NULL_TYPETYPE(  arg0, "gai_strerror");
+	validate_NULL_TYPETYPE(  arg0, "gai_strerror - arg0");
 	return funcptr(arg0);
 }
 

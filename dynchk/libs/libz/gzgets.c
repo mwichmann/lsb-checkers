@@ -10,10 +10,10 @@ char * gzgets (gzFile arg0 , char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzgets");
-	validate_NULL_TYPETYPE(  arg0, "gzgets");
-	validate_Rdaddress( arg1, "gzgets");
-	validate_NULL_TYPETYPE(  arg1, "gzgets");
-	validate_NULL_TYPETYPE(  arg2, "gzgets");
+	validate_NULL_TYPETYPE(  arg0, "gzgets - arg0");
+	validate_Rdaddress( arg1, "gzgets - arg1");
+	validate_NULL_TYPETYPE(  arg1, "gzgets - arg1");
+	validate_NULL_TYPETYPE(  arg2, "gzgets - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

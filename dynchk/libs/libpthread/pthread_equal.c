@@ -10,8 +10,8 @@ int pthread_equal (pthread_t arg0 , pthread_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_equal");
-	validate_NULL_TYPETYPE(  arg0, "pthread_equal");
-	validate_NULL_TYPETYPE(  arg1, "pthread_equal");
+	validate_NULL_TYPETYPE(  arg0, "pthread_equal - arg0");
+	validate_NULL_TYPETYPE(  arg1, "pthread_equal - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,9 +10,9 @@ int ungetc (int arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetc");
-	validate_NULL_TYPETYPE(  arg0, "ungetc");
-	validate_Rdaddress( arg1, "ungetc");
-	validate_NULL_TYPETYPE(  arg1, "ungetc");
+	validate_NULL_TYPETYPE(  arg0, "ungetc - arg0");
+	validate_Rdaddress( arg1, "ungetc - arg1");
+	validate_NULL_TYPETYPE(  arg1, "ungetc - arg1");
 	return funcptr(arg0, arg1);
 }
 

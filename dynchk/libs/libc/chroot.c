@@ -10,8 +10,8 @@ int chroot (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chroot");
-	validate_Rdaddress( arg0, "chroot");
-	validate_NULL_TYPETYPE(  arg0, "chroot");
+	validate_Rdaddress( arg0, "chroot - arg0");
+	validate_NULL_TYPETYPE(  arg0, "chroot - arg0");
 	return funcptr(arg0);
 }
 

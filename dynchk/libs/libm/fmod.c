@@ -10,8 +10,8 @@ double fmod (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmod");
-	validate_NULL_TYPETYPE(  arg0, "fmod");
-	validate_NULL_TYPETYPE(  arg1, "fmod");
+	validate_NULL_TYPETYPE(  arg0, "fmod - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fmod - arg1");
 	return funcptr(arg0, arg1);
 }
 

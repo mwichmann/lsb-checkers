@@ -11,7 +11,7 @@ int hcreate (size_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hcreate");
-	validate_NULL_TYPETYPE(  arg0, "hcreate");
+	validate_NULL_TYPETYPE(  arg0, "hcreate - arg0");
 	return funcptr(arg0);
 }
 

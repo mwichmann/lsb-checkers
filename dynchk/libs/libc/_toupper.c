@@ -10,7 +10,7 @@ int _toupper (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_toupper");
-	validate_NULL_TYPETYPE(  arg0, "_toupper");
+	validate_NULL_TYPETYPE(  arg0, "_toupper - arg0");
 	return funcptr(arg0);
 }
 

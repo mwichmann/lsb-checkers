@@ -10,12 +10,12 @@ int sigandset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigandset");
-	validate_Rdaddress( arg0, "sigandset");
-	validate_NULL_TYPETYPE(  arg0, "sigandset");
-	validate_Rdaddress( arg1, "sigandset");
-	validate_NULL_TYPETYPE(  arg1, "sigandset");
-	validate_Rdaddress( arg2, "sigandset");
-	validate_NULL_TYPETYPE(  arg2, "sigandset");
+	validate_Rdaddress( arg0, "sigandset - arg0");
+	validate_NULL_TYPETYPE(  arg0, "sigandset - arg0");
+	validate_Rdaddress( arg1, "sigandset - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sigandset - arg1");
+	validate_Rdaddress( arg2, "sigandset - arg2");
+	validate_NULL_TYPETYPE(  arg2, "sigandset - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,7 +10,7 @@ double sinh (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sinh");
-	validate_NULL_TYPETYPE(  arg0, "sinh");
+	validate_NULL_TYPETYPE(  arg0, "sinh - arg0");
 	return funcptr(arg0);
 }
 

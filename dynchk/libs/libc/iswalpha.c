@@ -10,7 +10,7 @@ int iswalpha (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswalpha");
-	validate_NULL_TYPETYPE(  arg0, "iswalpha");
+	validate_NULL_TYPETYPE(  arg0, "iswalpha - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,10 +10,10 @@ long double remquol (long double arg0 , long double arg1 , int * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remquol");
-	validate_NULL_TYPETYPE(  arg0, "remquol");
-	validate_NULL_TYPETYPE(  arg1, "remquol");
-	validate_Rdaddress( arg2, "remquol");
-	validate_NULL_TYPETYPE(  arg2, "remquol");
+	validate_NULL_TYPETYPE(  arg0, "remquol - arg0");
+	validate_NULL_TYPETYPE(  arg1, "remquol - arg1");
+	validate_Rdaddress( arg2, "remquol - arg2");
+	validate_NULL_TYPETYPE(  arg2, "remquol - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

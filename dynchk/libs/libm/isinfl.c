@@ -10,7 +10,7 @@ int isinfl (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isinfl");
-	validate_NULL_TYPETYPE(  arg0, "isinfl");
+	validate_NULL_TYPETYPE(  arg0, "isinfl - arg0");
 	return funcptr(arg0);
 }
 

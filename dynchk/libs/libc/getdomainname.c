@@ -11,9 +11,9 @@ int getdomainname (char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getdomainname");
-	validate_Rdaddress( arg0, "getdomainname");
-	validate_NULL_TYPETYPE(  arg0, "getdomainname");
-	validate_NULL_TYPETYPE(  arg1, "getdomainname");
+	validate_Rdaddress( arg0, "getdomainname - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getdomainname - arg0");
+	validate_NULL_TYPETYPE(  arg1, "getdomainname - arg1");
 	return funcptr(arg0, arg1);
 }
 

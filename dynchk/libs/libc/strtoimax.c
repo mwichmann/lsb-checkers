@@ -10,12 +10,12 @@ intmax_t strtoimax (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoimax");
-	validate_Rdaddress( arg0, "strtoimax");
-	validate_NULL_TYPETYPE(  arg0, "strtoimax");
-	validate_Rdaddress( arg1, "strtoimax");
-	validate_Rdaddress(* arg1, "strtoimax");
-	validate_NULL_TYPETYPE(  arg1, "strtoimax");
-	validate_NULL_TYPETYPE(  arg2, "strtoimax");
+	validate_Rdaddress( arg0, "strtoimax - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strtoimax - arg0");
+	validate_Rdaddress( arg1, "strtoimax - arg1");
+	validate_Rdaddress(* arg1, "strtoimax - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strtoimax - arg1");
+	validate_NULL_TYPETYPE(  arg2, "strtoimax - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

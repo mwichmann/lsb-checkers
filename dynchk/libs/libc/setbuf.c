@@ -10,10 +10,10 @@ void setbuf (FILE * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuf");
-	validate_Rdaddress( arg0, "setbuf");
-	validate_NULL_TYPETYPE(  arg0, "setbuf");
-	validate_Rdaddress( arg1, "setbuf");
-	validate_NULL_TYPETYPE(  arg1, "setbuf");
+	validate_Rdaddress( arg0, "setbuf - arg0");
+	validate_NULL_TYPETYPE(  arg0, "setbuf - arg0");
+	validate_Rdaddress( arg1, "setbuf - arg1");
+	validate_NULL_TYPETYPE(  arg1, "setbuf - arg1");
 	funcptr(arg0, arg1);
 }
 

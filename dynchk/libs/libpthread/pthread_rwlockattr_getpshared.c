@@ -10,10 +10,10 @@ int pthread_rwlockattr_getpshared (const pthread_rwlockattr_t * arg0 , int * arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_rwlockattr_getpshared");
-	validate_Rdaddress( arg0, "pthread_rwlockattr_getpshared");
-	validate_NULL_TYPETYPE(  arg0, "pthread_rwlockattr_getpshared");
-	validate_Rdaddress( arg1, "pthread_rwlockattr_getpshared");
-	validate_NULL_TYPETYPE(  arg1, "pthread_rwlockattr_getpshared");
+	validate_Rdaddress( arg0, "pthread_rwlockattr_getpshared - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_rwlockattr_getpshared - arg0");
+	validate_Rdaddress( arg1, "pthread_rwlockattr_getpshared - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_rwlockattr_getpshared - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -11,9 +11,9 @@ int sched_setparam (pid_t arg0 , const struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setparam");
-	validate_NULL_TYPETYPE(  arg0, "sched_setparam");
-	validate_Rdaddress( arg1, "sched_setparam");
-	validate_NULL_TYPETYPE(  arg1, "sched_setparam");
+	validate_NULL_TYPETYPE(  arg0, "sched_setparam - arg0");
+	validate_Rdaddress( arg1, "sched_setparam - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sched_setparam - arg1");
 	return funcptr(arg0, arg1);
 }
 

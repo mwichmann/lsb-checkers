@@ -10,7 +10,7 @@ int sethostid (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sethostid");
-	validate_NULL_TYPETYPE(  arg0, "sethostid");
+	validate_NULL_TYPETYPE(  arg0, "sethostid - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,7 +10,7 @@ int isnanf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isnanf");
-	validate_NULL_TYPETYPE(  arg0, "isnanf");
+	validate_NULL_TYPETYPE(  arg0, "isnanf - arg0");
 	return funcptr(arg0);
 }
 

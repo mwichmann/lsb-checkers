@@ -10,7 +10,7 @@ int delay_output (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "delay_output");
-	validate_NULL_TYPETYPE(  arg0, "delay_output");
+	validate_NULL_TYPETYPE(  arg0, "delay_output - arg0");
 	return funcptr(arg0);
 }
 

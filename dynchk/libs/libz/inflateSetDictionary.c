@@ -10,10 +10,10 @@ int inflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSetDictionary");
-	validate_NULL_TYPETYPE(  arg0, "inflateSetDictionary");
-	validate_Rdaddress( arg1, "inflateSetDictionary");
-	validate_NULL_TYPETYPE(  arg1, "inflateSetDictionary");
-	validate_NULL_TYPETYPE(  arg2, "inflateSetDictionary");
+	validate_NULL_TYPETYPE(  arg0, "inflateSetDictionary - arg0");
+	validate_Rdaddress( arg1, "inflateSetDictionary - arg1");
+	validate_NULL_TYPETYPE(  arg1, "inflateSetDictionary - arg1");
+	validate_NULL_TYPETYPE(  arg2, "inflateSetDictionary - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

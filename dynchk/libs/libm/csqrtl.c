@@ -10,7 +10,7 @@ long double complex csqrtl (long double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csqrtl");
-	validate_NULL_TYPETYPE(  arg0, "csqrtl");
+	validate_NULL_TYPETYPE(  arg0, "csqrtl - arg0");
 	return funcptr(arg0);
 }
 

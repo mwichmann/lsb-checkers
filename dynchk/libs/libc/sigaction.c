@@ -10,11 +10,11 @@ int sigaction (int arg0 , const struct sigaction * arg1 , struct sigaction * arg
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigaction");
-	validate_NULL_TYPETYPE(  arg0, "sigaction");
-	validate_Rdaddress( arg1, "sigaction");
-	validate_NULL_TYPETYPE(  arg1, "sigaction");
-	validate_Rdaddress( arg2, "sigaction");
-	validate_NULL_TYPETYPE(  arg2, "sigaction");
+	validate_NULL_TYPETYPE(  arg0, "sigaction - arg0");
+	validate_Rdaddress( arg1, "sigaction - arg1");
+	validate_NULL_TYPETYPE(  arg1, "sigaction - arg1");
+	validate_Rdaddress( arg2, "sigaction - arg2");
+	validate_NULL_TYPETYPE(  arg2, "sigaction - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

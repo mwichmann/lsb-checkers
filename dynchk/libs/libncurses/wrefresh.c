@@ -10,8 +10,8 @@ int wrefresh (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wrefresh");
-	validate_Rdaddress( arg0, "wrefresh");
-	validate_NULL_TYPETYPE(  arg0, "wrefresh");
+	validate_Rdaddress( arg0, "wrefresh - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wrefresh - arg0");
 	return funcptr(arg0);
 }
 

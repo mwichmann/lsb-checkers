@@ -10,9 +10,9 @@ int cfsetspeed (struct termios * arg0 , speed_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfsetspeed");
-	validate_Rdaddress( arg0, "cfsetspeed");
-	validate_NULL_TYPETYPE(  arg0, "cfsetspeed");
-	validate_NULL_TYPETYPE(  arg1, "cfsetspeed");
+	validate_Rdaddress( arg0, "cfsetspeed - arg0");
+	validate_NULL_TYPETYPE(  arg0, "cfsetspeed - arg0");
+	validate_NULL_TYPETYPE(  arg1, "cfsetspeed - arg1");
 	return funcptr(arg0, arg1);
 }
 

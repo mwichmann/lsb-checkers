@@ -10,7 +10,7 @@ int attron (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attron");
-	validate_NULL_TYPETYPE(  arg0, "attron");
+	validate_NULL_TYPETYPE(  arg0, "attron - arg0");
 	return funcptr(arg0);
 }
 

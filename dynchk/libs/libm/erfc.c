@@ -10,7 +10,7 @@ double erfc (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erfc");
-	validate_NULL_TYPETYPE(  arg0, "erfc");
+	validate_NULL_TYPETYPE(  arg0, "erfc - arg0");
 	return funcptr(arg0);
 }
 

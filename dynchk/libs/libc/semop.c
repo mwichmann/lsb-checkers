@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <stddef.h>
 #include <sys/sem.h>
+#include <stddef.h>
 #undef semop
 static int(*funcptr) (int , struct sembuf * , size_t ) = 0;
 
@@ -11,10 +11,10 @@ int semop (int arg0 , struct sembuf * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "semop");
-	validate_NULL_TYPETYPE(  arg0, "semop");
-	validate_Rdaddress( arg1, "semop");
-	validate_NULL_TYPETYPE(  arg1, "semop");
-	validate_NULL_TYPETYPE(  arg2, "semop");
+	validate_NULL_TYPETYPE(  arg0, "semop - arg0");
+	validate_Rdaddress( arg1, "semop - arg1");
+	validate_NULL_TYPETYPE(  arg1, "semop - arg1");
+	validate_NULL_TYPETYPE(  arg2, "semop - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

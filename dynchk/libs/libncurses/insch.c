@@ -10,7 +10,7 @@ int insch (chtype arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insch");
-	validate_NULL_TYPETYPE(  arg0, "insch");
+	validate_NULL_TYPETYPE(  arg0, "insch - arg0");
 	return funcptr(arg0);
 }
 

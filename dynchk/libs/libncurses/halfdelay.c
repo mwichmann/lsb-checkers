@@ -10,7 +10,7 @@ int halfdelay (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "halfdelay");
-	validate_NULL_TYPETYPE(  arg0, "halfdelay");
+	validate_NULL_TYPETYPE(  arg0, "halfdelay - arg0");
 	return funcptr(arg0);
 }
 

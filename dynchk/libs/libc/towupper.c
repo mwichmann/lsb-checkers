@@ -10,7 +10,7 @@ wint_t towupper (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towupper");
-	validate_NULL_TYPETYPE(  arg0, "towupper");
+	validate_NULL_TYPETYPE(  arg0, "towupper - arg0");
 	return funcptr(arg0);
 }
 

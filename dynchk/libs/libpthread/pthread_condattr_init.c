@@ -10,8 +10,8 @@ int pthread_condattr_init (pthread_condattr_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_condattr_init");
-	validate_Rdaddress( arg0, "pthread_condattr_init");
-	validate_NULL_TYPETYPE(  arg0, "pthread_condattr_init");
+	validate_Rdaddress( arg0, "pthread_condattr_init - arg0");
+	validate_NULL_TYPETYPE(  arg0, "pthread_condattr_init - arg0");
 	return funcptr(arg0);
 }
 

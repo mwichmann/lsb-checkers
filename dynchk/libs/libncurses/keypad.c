@@ -10,9 +10,9 @@ int keypad (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keypad");
-	validate_Rdaddress( arg0, "keypad");
-	validate_NULL_TYPETYPE(  arg0, "keypad");
-	validate_NULL_TYPETYPE(  arg1, "keypad");
+	validate_Rdaddress( arg0, "keypad - arg0");
+	validate_NULL_TYPETYPE(  arg0, "keypad - arg0");
+	validate_NULL_TYPETYPE(  arg1, "keypad - arg1");
 	return funcptr(arg0, arg1);
 }
 

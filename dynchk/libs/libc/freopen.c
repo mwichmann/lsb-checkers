@@ -10,12 +10,12 @@ FILE * freopen (const char * arg0 , const char * arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freopen");
-	validate_Rdaddress( arg0, "freopen");
-	validate_NULL_TYPETYPE(  arg0, "freopen");
-	validate_Rdaddress( arg1, "freopen");
-	validate_NULL_TYPETYPE(  arg1, "freopen");
-	validate_Rdaddress( arg2, "freopen");
-	validate_NULL_TYPETYPE(  arg2, "freopen");
+	validate_Rdaddress( arg0, "freopen - arg0");
+	validate_NULL_TYPETYPE(  arg0, "freopen - arg0");
+	validate_Rdaddress( arg1, "freopen - arg1");
+	validate_NULL_TYPETYPE(  arg1, "freopen - arg1");
+	validate_Rdaddress( arg2, "freopen - arg2");
+	validate_NULL_TYPETYPE(  arg2, "freopen - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

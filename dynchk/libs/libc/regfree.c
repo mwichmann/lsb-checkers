@@ -10,8 +10,8 @@ void regfree (regex_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regfree");
-	validate_Rdaddress( arg0, "regfree");
-	validate_NULL_TYPETYPE(  arg0, "regfree");
+	validate_Rdaddress( arg0, "regfree - arg0");
+	validate_NULL_TYPETYPE(  arg0, "regfree - arg0");
 	funcptr(arg0);
 }
 

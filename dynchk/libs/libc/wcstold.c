@@ -11,11 +11,11 @@ long double wcstold (const wchar_t * arg0 , wchar_t * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstold");
-	validate_Rdaddress( arg0, "wcstold");
-	validate_NULL_TYPETYPE(  arg0, "wcstold");
-	validate_Rdaddress( arg1, "wcstold");
-	validate_Rdaddress(* arg1, "wcstold");
-	validate_NULL_TYPETYPE(  arg1, "wcstold");
+	validate_Rdaddress( arg0, "wcstold - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcstold - arg0");
+	validate_Rdaddress( arg1, "wcstold - arg1");
+	validate_Rdaddress(* arg1, "wcstold - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcstold - arg1");
 	return funcptr(arg0, arg1);
 }
 

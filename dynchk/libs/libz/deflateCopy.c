@@ -10,8 +10,8 @@ int deflateCopy (z_streamp arg0 , z_streamp arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateCopy");
-	validate_NULL_TYPETYPE(  arg0, "deflateCopy");
-	validate_NULL_TYPETYPE(  arg1, "deflateCopy");
+	validate_NULL_TYPETYPE(  arg0, "deflateCopy - arg0");
+	validate_NULL_TYPETYPE(  arg1, "deflateCopy - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ double cimag (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cimag");
-	validate_NULL_TYPETYPE(  arg0, "cimag");
+	validate_NULL_TYPETYPE(  arg0, "cimag - arg0");
 	return funcptr(arg0);
 }
 

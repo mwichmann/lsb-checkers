@@ -10,9 +10,9 @@ int attr_off (attr_t arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_off");
-	validate_NULL_TYPETYPE(  arg0, "attr_off");
-	validate_Rdaddress( arg1, "attr_off");
-	validate_NULL_TYPETYPE(  arg1, "attr_off");
+	validate_NULL_TYPETYPE(  arg0, "attr_off - arg0");
+	validate_Rdaddress( arg1, "attr_off - arg1");
+	validate_NULL_TYPETYPE(  arg1, "attr_off - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -11,12 +11,12 @@ unsigned long long wcstoull (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoull");
-	validate_Rdaddress( arg0, "wcstoull");
-	validate_NULL_TYPETYPE(  arg0, "wcstoull");
-	validate_Rdaddress( arg1, "wcstoull");
-	validate_Rdaddress(* arg1, "wcstoull");
-	validate_NULL_TYPETYPE(  arg1, "wcstoull");
-	validate_NULL_TYPETYPE(  arg2, "wcstoull");
+	validate_Rdaddress( arg0, "wcstoull - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcstoull - arg0");
+	validate_Rdaddress( arg1, "wcstoull - arg1");
+	validate_Rdaddress(* arg1, "wcstoull - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcstoull - arg1");
+	validate_NULL_TYPETYPE(  arg2, "wcstoull - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

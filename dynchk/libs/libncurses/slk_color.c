@@ -10,7 +10,7 @@ int slk_color (short arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_color");
-	validate_NULL_TYPETYPE(  arg0, "slk_color");
+	validate_NULL_TYPETYPE(  arg0, "slk_color - arg0");
 	return funcptr(arg0);
 }
 

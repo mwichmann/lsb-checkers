@@ -10,7 +10,7 @@ double complex cproj (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cproj");
-	validate_NULL_TYPETYPE(  arg0, "cproj");
+	validate_NULL_TYPETYPE(  arg0, "cproj - arg0");
 	return funcptr(arg0);
 }
 

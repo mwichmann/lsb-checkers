@@ -10,8 +10,8 @@ int tcflush (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcflush");
-	validate_NULL_TYPETYPE(  arg0, "tcflush");
-	validate_NULL_TYPETYPE(  arg1, "tcflush");
+	validate_NULL_TYPETYPE(  arg0, "tcflush - arg0");
+	validate_NULL_TYPETYPE(  arg1, "tcflush - arg1");
 	return funcptr(arg0, arg1);
 }
 

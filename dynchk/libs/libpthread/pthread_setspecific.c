@@ -10,9 +10,9 @@ int pthread_setspecific (pthread_key_t arg0 , const void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_setspecific");
-	validate_NULL_TYPETYPE(  arg0, "pthread_setspecific");
-	validate_Rdaddress( arg1, "pthread_setspecific");
-	validate_NULL_TYPETYPE(  arg1, "pthread_setspecific");
+	validate_NULL_TYPETYPE(  arg0, "pthread_setspecific - arg0");
+	validate_Rdaddress( arg1, "pthread_setspecific - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_setspecific - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ long long llrintf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llrintf");
-	validate_NULL_TYPETYPE(  arg0, "llrintf");
+	validate_NULL_TYPETYPE(  arg0, "llrintf - arg0");
 	return funcptr(arg0);
 }
 

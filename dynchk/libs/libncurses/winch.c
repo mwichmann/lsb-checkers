@@ -10,8 +10,8 @@ chtype winch (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winch");
-	validate_Rdaddress( arg0, "winch");
-	validate_NULL_TYPETYPE(  arg0, "winch");
+	validate_Rdaddress( arg0, "winch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "winch - arg0");
 	return funcptr(arg0);
 }
 

@@ -11,9 +11,9 @@ wchar_t * wcschr (const wchar_t * arg0 , wchar_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcschr");
-	validate_Rdaddress( arg0, "wcschr");
-	validate_NULL_TYPETYPE(  arg0, "wcschr");
-	validate_NULL_TYPETYPE(  arg1, "wcschr");
+	validate_Rdaddress( arg0, "wcschr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcschr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "wcschr - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,9 +10,9 @@ int clearok (WINDOW * arg0 , bool arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clearok");
-	validate_Rdaddress( arg0, "clearok");
-	validate_NULL_TYPETYPE(  arg0, "clearok");
-	validate_NULL_TYPETYPE(  arg1, "clearok");
+	validate_Rdaddress( arg0, "clearok - arg0");
+	validate_NULL_TYPETYPE(  arg0, "clearok - arg0");
+	validate_NULL_TYPETYPE(  arg1, "clearok - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,10 +10,10 @@ int strcasecmp (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcasecmp");
-	validate_Rdaddress( arg0, "strcasecmp");
-	validate_NULL_TYPETYPE(  arg0, "strcasecmp");
-	validate_Rdaddress( arg1, "strcasecmp");
-	validate_NULL_TYPETYPE(  arg1, "strcasecmp");
+	validate_Rdaddress( arg0, "strcasecmp - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strcasecmp - arg0");
+	validate_Rdaddress( arg1, "strcasecmp - arg1");
+	validate_NULL_TYPETYPE(  arg1, "strcasecmp - arg1");
 	return funcptr(arg0, arg1);
 }
 

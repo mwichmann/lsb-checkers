@@ -11,10 +11,10 @@ void svcerr_progvers (SVCXPRT * arg0 , rpcvers_t arg1 , rpcvers_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_progvers");
-	validate_Rdaddress( arg0, "svcerr_progvers");
-	validate_NULL_TYPETYPE(  arg0, "svcerr_progvers");
-	validate_NULL_TYPETYPE(  arg1, "svcerr_progvers");
-	validate_NULL_TYPETYPE(  arg2, "svcerr_progvers");
+	validate_Rdaddress( arg0, "svcerr_progvers - arg0");
+	validate_NULL_TYPETYPE(  arg0, "svcerr_progvers - arg0");
+	validate_NULL_TYPETYPE(  arg1, "svcerr_progvers - arg1");
+	validate_NULL_TYPETYPE(  arg2, "svcerr_progvers - arg2");
 	funcptr(arg0, arg1, arg2);
 }
 

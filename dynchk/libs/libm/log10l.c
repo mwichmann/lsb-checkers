@@ -10,7 +10,7 @@ long double log10l (long double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "log10l");
-	validate_NULL_TYPETYPE(  arg0, "log10l");
+	validate_NULL_TYPETYPE(  arg0, "log10l - arg0");
 	return funcptr(arg0);
 }
 

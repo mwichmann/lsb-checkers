@@ -10,10 +10,10 @@ int fsetpos (FILE * arg0 , const fpos_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos");
-	validate_Rdaddress( arg0, "fsetpos");
-	validate_NULL_TYPETYPE(  arg0, "fsetpos");
-	validate_Rdaddress( arg1, "fsetpos");
-	validate_NULL_TYPETYPE(  arg1, "fsetpos");
+	validate_Rdaddress( arg0, "fsetpos - arg0");
+	validate_NULL_TYPETYPE(  arg0, "fsetpos - arg0");
+	validate_Rdaddress( arg1, "fsetpos - arg1");
+	validate_NULL_TYPETYPE(  arg1, "fsetpos - arg1");
 	return funcptr(arg0, arg1);
 }
 

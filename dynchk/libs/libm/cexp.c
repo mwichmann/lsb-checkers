@@ -10,7 +10,7 @@ double complex cexp (double complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cexp");
-	validate_NULL_TYPETYPE(  arg0, "cexp");
+	validate_NULL_TYPETYPE(  arg0, "cexp - arg0");
 	return funcptr(arg0);
 }
 

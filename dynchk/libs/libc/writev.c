@@ -11,10 +11,10 @@ ssize_t writev (int arg0 , const struct iovec * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "writev");
-	validate_NULL_TYPETYPE(  arg0, "writev");
-	validate_Rdaddress( arg1, "writev");
-	validate_NULL_TYPETYPE(  arg1, "writev");
-	validate_NULL_TYPETYPE(  arg2, "writev");
+	validate_NULL_TYPETYPE(  arg0, "writev - arg0");
+	validate_Rdaddress( arg1, "writev - arg1");
+	validate_NULL_TYPETYPE(  arg1, "writev - arg1");
+	validate_NULL_TYPETYPE(  arg2, "writev - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

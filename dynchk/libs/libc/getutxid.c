@@ -10,8 +10,8 @@ struct utmpx * getutxid (const struct utmpx * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutxid");
-	validate_Rdaddress( arg0, "getutxid");
-	validate_NULL_TYPETYPE(  arg0, "getutxid");
+	validate_Rdaddress( arg0, "getutxid - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getutxid - arg0");
 	return funcptr(arg0);
 }
 

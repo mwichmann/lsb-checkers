@@ -10,7 +10,7 @@ char * strsignal (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsignal");
-	validate_NULL_TYPETYPE(  arg0, "strsignal");
+	validate_NULL_TYPETYPE(  arg0, "strsignal - arg0");
 	return funcptr(arg0);
 }
 

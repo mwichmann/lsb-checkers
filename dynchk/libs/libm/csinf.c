@@ -10,7 +10,7 @@ float complex csinf (float complex arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "csinf");
-	validate_NULL_TYPETYPE(  arg0, "csinf");
+	validate_NULL_TYPETYPE(  arg0, "csinf - arg0");
 	return funcptr(arg0);
 }
 

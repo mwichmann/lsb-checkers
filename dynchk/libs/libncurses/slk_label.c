@@ -10,7 +10,7 @@ char * slk_label (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_label");
-	validate_NULL_TYPETYPE(  arg0, "slk_label");
+	validate_NULL_TYPETYPE(  arg0, "slk_label - arg0");
 	return funcptr(arg0);
 }
 

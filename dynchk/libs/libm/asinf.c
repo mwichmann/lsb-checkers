@@ -10,7 +10,7 @@ float asinf (float arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asinf");
-	validate_NULL_TYPETYPE(  arg0, "asinf");
+	validate_NULL_TYPETYPE(  arg0, "asinf - arg0");
 	return funcptr(arg0);
 }
 

@@ -10,11 +10,11 @@ int pthread_sigmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_sigmask");
-	validate_NULL_TYPETYPE(  arg0, "pthread_sigmask");
-	validate_Rdaddress( arg1, "pthread_sigmask");
-	validate_NULL_TYPETYPE(  arg1, "pthread_sigmask");
-	validate_Rdaddress( arg2, "pthread_sigmask");
-	validate_NULL_TYPETYPE(  arg2, "pthread_sigmask");
+	validate_NULL_TYPETYPE(  arg0, "pthread_sigmask - arg0");
+	validate_Rdaddress( arg1, "pthread_sigmask - arg1");
+	validate_NULL_TYPETYPE(  arg1, "pthread_sigmask - arg1");
+	validate_Rdaddress( arg2, "pthread_sigmask - arg2");
+	validate_NULL_TYPETYPE(  arg2, "pthread_sigmask - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

@@ -10,8 +10,8 @@ float fmaxf (float arg0 , float arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmaxf");
-	validate_NULL_TYPETYPE(  arg0, "fmaxf");
-	validate_NULL_TYPETYPE(  arg1, "fmaxf");
+	validate_NULL_TYPETYPE(  arg0, "fmaxf - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fmaxf - arg1");
 	return funcptr(arg0, arg1);
 }
 

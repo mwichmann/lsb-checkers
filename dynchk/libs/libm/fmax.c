@@ -10,8 +10,8 @@ double fmax (double arg0 , double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmax");
-	validate_NULL_TYPETYPE(  arg0, "fmax");
-	validate_NULL_TYPETYPE(  arg1, "fmax");
+	validate_NULL_TYPETYPE(  arg0, "fmax - arg0");
+	validate_NULL_TYPETYPE(  arg1, "fmax - arg1");
 	return funcptr(arg0, arg1);
 }
 

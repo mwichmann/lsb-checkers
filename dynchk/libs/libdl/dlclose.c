@@ -5,15 +5,16 @@
 #undef dlclose
 static int(*funcptr) (void * ) = 0;
 
-#if 0
 int dlclose (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlclose");
-	validate_NULL_TYPETYPE(arg0, "dlclose");
+	validate_Rdaddress( arg0, "dlclose - arg0");
+	if(  arg0 ) {
+	}
+	validate_NULL_TYPETYPE(  arg0, "dlclose");
 	return funcptr(arg0);
 }
-#endif
 
 int __lsb_dlclose (void * arg0 )
 {

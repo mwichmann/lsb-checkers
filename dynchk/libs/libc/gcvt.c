@@ -10,10 +10,10 @@ char * gcvt (double arg0 , int arg1 , char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gcvt");
-	validate_NULL_TYPETYPE(  arg0, "gcvt");
-	validate_NULL_TYPETYPE(  arg1, "gcvt");
-	validate_Rdaddress( arg2, "gcvt");
-	validate_NULL_TYPETYPE(  arg2, "gcvt");
+	validate_NULL_TYPETYPE(  arg0, "gcvt - arg0");
+	validate_NULL_TYPETYPE(  arg1, "gcvt - arg1");
+	validate_Rdaddress( arg2, "gcvt - arg2");
+	validate_NULL_TYPETYPE(  arg2, "gcvt - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

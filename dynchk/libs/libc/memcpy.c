@@ -11,11 +11,11 @@ void * memcpy (void * arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memcpy");
-	validate_Rdaddress( arg0, "memcpy");
-	validate_NULL_TYPETYPE(  arg0, "memcpy");
-	validate_Rdaddress( arg1, "memcpy");
-	validate_NULL_TYPETYPE(  arg1, "memcpy");
-	validate_NULL_TYPETYPE(  arg2, "memcpy");
+	validate_Rdaddress( arg0, "memcpy - arg0");
+	validate_NULL_TYPETYPE(  arg0, "memcpy - arg0");
+	validate_Rdaddress( arg1, "memcpy - arg1");
+	validate_NULL_TYPETYPE(  arg1, "memcpy - arg1");
+	validate_NULL_TYPETYPE(  arg2, "memcpy - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

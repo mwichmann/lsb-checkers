@@ -10,9 +10,9 @@ char * strrchr (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strrchr");
-	validate_Rdaddress( arg0, "strrchr");
-	validate_NULL_TYPETYPE(  arg0, "strrchr");
-	validate_NULL_TYPETYPE(  arg1, "strrchr");
+	validate_Rdaddress( arg0, "strrchr - arg0");
+	validate_NULL_TYPETYPE(  arg0, "strrchr - arg0");
+	validate_NULL_TYPETYPE(  arg1, "strrchr - arg1");
 	return funcptr(arg0, arg1);
 }
 

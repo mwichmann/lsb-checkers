@@ -10,7 +10,7 @@ double expm1 (double arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "expm1");
-	validate_NULL_TYPETYPE(  arg0, "expm1");
+	validate_NULL_TYPETYPE(  arg0, "expm1 - arg0");
 	return funcptr(arg0);
 }
 

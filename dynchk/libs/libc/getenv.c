@@ -10,8 +10,8 @@ char * getenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getenv");
-	validate_Rdaddress( arg0, "getenv");
-	validate_NULL_TYPETYPE(  arg0, "getenv");
+	validate_Rdaddress( arg0, "getenv - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getenv - arg0");
 	return funcptr(arg0);
 }
 

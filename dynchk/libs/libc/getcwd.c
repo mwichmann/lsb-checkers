@@ -11,9 +11,9 @@ char * getcwd (char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getcwd");
-	validate_Rdaddress( arg0, "getcwd");
-	validate_NULL_TYPETYPE(  arg0, "getcwd");
-	validate_NULL_TYPETYPE(  arg1, "getcwd");
+	validate_Rdaddress( arg0, "getcwd - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getcwd - arg0");
+	validate_NULL_TYPETYPE(  arg1, "getcwd - arg1");
 	return funcptr(arg0, arg1);
 }
 

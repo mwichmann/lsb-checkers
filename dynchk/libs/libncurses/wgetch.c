@@ -10,8 +10,8 @@ int wgetch (WINDOW * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wgetch");
-	validate_Rdaddress( arg0, "wgetch");
-	validate_NULL_TYPETYPE(  arg0, "wgetch");
+	validate_Rdaddress( arg0, "wgetch - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wgetch - arg0");
 	return funcptr(arg0);
 }
 

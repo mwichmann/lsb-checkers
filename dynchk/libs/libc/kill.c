@@ -11,8 +11,8 @@ int kill (pid_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "kill");
-	validate_NULL_TYPETYPE(  arg0, "kill");
-	validate_NULL_TYPETYPE(  arg1, "kill");
+	validate_NULL_TYPETYPE(  arg0, "kill - arg0");
+	validate_NULL_TYPETYPE(  arg1, "kill - arg1");
 	return funcptr(arg0, arg1);
 }
 

@@ -10,7 +10,7 @@ int pthread_setconcurrency (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_setconcurrency");
-	validate_NULL_TYPETYPE(  arg0, "pthread_setconcurrency");
+	validate_NULL_TYPETYPE(  arg0, "pthread_setconcurrency - arg0");
 	return funcptr(arg0);
 }
 

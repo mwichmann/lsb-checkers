@@ -10,8 +10,8 @@ long double remainderl (long double arg0 , long double arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remainderl");
-	validate_NULL_TYPETYPE(  arg0, "remainderl");
-	validate_NULL_TYPETYPE(  arg1, "remainderl");
+	validate_NULL_TYPETYPE(  arg0, "remainderl - arg0");
+	validate_NULL_TYPETYPE(  arg1, "remainderl - arg1");
 	return funcptr(arg0, arg1);
 }
 

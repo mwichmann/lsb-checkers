@@ -10,7 +10,7 @@ int isprint (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isprint");
-	validate_NULL_TYPETYPE(  arg0, "isprint");
+	validate_NULL_TYPETYPE(  arg0, "isprint - arg0");
 	return funcptr(arg0);
 }
 

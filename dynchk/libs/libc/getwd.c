@@ -10,8 +10,8 @@ char * getwd (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwd");
-	validate_Rdaddress( arg0, "getwd");
-	validate_NULL_TYPETYPE(  arg0, "getwd");
+	validate_Rdaddress( arg0, "getwd - arg0");
+	validate_NULL_TYPETYPE(  arg0, "getwd - arg0");
 	return funcptr(arg0);
 }
 

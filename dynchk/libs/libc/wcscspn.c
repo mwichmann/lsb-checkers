@@ -11,10 +11,10 @@ size_t wcscspn (const wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcscspn");
-	validate_Rdaddress( arg0, "wcscspn");
-	validate_NULL_TYPETYPE(  arg0, "wcscspn");
-	validate_Rdaddress( arg1, "wcscspn");
-	validate_NULL_TYPETYPE(  arg1, "wcscspn");
+	validate_Rdaddress( arg0, "wcscspn - arg0");
+	validate_NULL_TYPETYPE(  arg0, "wcscspn - arg0");
+	validate_Rdaddress( arg1, "wcscspn - arg1");
+	validate_NULL_TYPETYPE(  arg1, "wcscspn - arg1");
 	return funcptr(arg0, arg1);
 }
 

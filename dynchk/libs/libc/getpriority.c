@@ -11,8 +11,8 @@ int getpriority (__priority_which_t arg0 , id_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpriority");
-	validate_NULL_TYPETYPE(  arg0, "getpriority");
-	validate_NULL_TYPETYPE(  arg1, "getpriority");
+	validate_NULL_TYPETYPE(  arg0, "getpriority - arg0");
+	validate_NULL_TYPETYPE(  arg1, "getpriority - arg1");
 	return funcptr(arg0, arg1);
 }
 

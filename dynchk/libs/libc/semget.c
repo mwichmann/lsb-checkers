@@ -11,9 +11,9 @@ int semget (key_t arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "semget");
-	validate_NULL_TYPETYPE(  arg0, "semget");
-	validate_NULL_TYPETYPE(  arg1, "semget");
-	validate_NULL_TYPETYPE(  arg2, "semget");
+	validate_NULL_TYPETYPE(  arg0, "semget - arg0");
+	validate_NULL_TYPETYPE(  arg1, "semget - arg1");
+	validate_NULL_TYPETYPE(  arg2, "semget - arg2");
 	return funcptr(arg0, arg1, arg2);
 }
 

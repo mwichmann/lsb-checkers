@@ -10,12 +10,12 @@ int mvwvline (WINDOW * arg0 , int arg1 , int arg2 , chtype arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwvline");
-	validate_Rdaddress( arg0, "mvwvline");
-	validate_NULL_TYPETYPE(  arg0, "mvwvline");
-	validate_NULL_TYPETYPE(  arg1, "mvwvline");
-	validate_NULL_TYPETYPE(  arg2, "mvwvline");
-	validate_NULL_TYPETYPE(  arg3, "mvwvline");
-	validate_NULL_TYPETYPE(  arg4, "mvwvline");
+	validate_Rdaddress( arg0, "mvwvline - arg0");
+	validate_NULL_TYPETYPE(  arg0, "mvwvline - arg0");
+	validate_NULL_TYPETYPE(  arg1, "mvwvline - arg1");
+	validate_NULL_TYPETYPE(  arg2, "mvwvline - arg2");
+	validate_NULL_TYPETYPE(  arg3, "mvwvline - arg3");
+	validate_NULL_TYPETYPE(  arg4, "mvwvline - arg4");
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
