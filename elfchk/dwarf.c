@@ -41,7 +41,7 @@ int check_CFI(unsigned char *ptr,int length)
 int	numused,used=0;
 int	tmp;
 
-/* XXXSTU - Need to check the values read in eah record */
+/* XXXSTU - Need to check the values read in each record */
 
 
 /*
@@ -114,11 +114,8 @@ switch( *ptr ) {
 		tmp=read_leb128(ptr,&numused,0);ptr+=numused;used+=numused;
 		break;
 	default:
-		if( elfchk_debug&DEBUG_DWARF_CONTENTS) {
-			fprintf(stderr,
-				"********** Unexpected CFI opcode %x **\n",
+		fprintf(stderr, "********** Unexpected CFI opcode %x **\n",
 				*ptr);
-			}
 	}
 
 return used;
