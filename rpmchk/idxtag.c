@@ -4,99 +4,6 @@
 #include "tagfuncs.h"
 #include "../tetj/tetj.h"
 
-/*
- * This table contains entries for the Signature tags.
- */
-RpmIdxTagFuncRec	SigTags[] = {
-	{HDRTAG_IMAGE,	"HDRTAG_IMAGE",		checkRpmIdxHDRIMAGE,		Optional, NotSeen},
-	{HDRTAG_SIGNATURES, "HDRTAG_SIGNATURES", checkRpmIdxHDRSIGNATURES,	Optional, NotSeen},
-	{HDRTAG_IMMUTABLE, "HDRTAG_IMMUTABLE",	checkRpmIdxHDRIMMUTABLE,	Optional, NotSeen},
-	{HDRTAG_REGIONS, "HDRTAG_REGIONS",	checkRpmIdxHDRREGIONS,		Optional, NotSeen},
-	{HDRTAG_I18NTABLE, "HDRTAG_I18NTABLE",	checkRpmIdxHDRI18NTABLE,	Optional, NotSeen},
-	{HDRTAG_SIGBASE, "HDRTAG_SIGBASE",	checkRpmIdxHDRSIGBASE,		Optional, NotSeen},
-	{HDRTAG_TAGBASE, "HDRTAG_TAGBASE",	checkRpmIdxHDRTAGBASE,		Optional, NotSeen},
-	{SIGTAG_SIZE,	"SIGTAG_SIZE",		checkRpmIdxSIGSIZE,		Optional, NotSeen},
-	{SIGOLDTAG_SIZE, "SIGTAG_SIZE",		checkRpmIdxSIGSIZE,		Optional, NotSeen},
-	{SIGTAG_LEMD5_1,"SIGTAG_LEMD5_1",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{SIGTAG_PGP,	"SIGTAG_PGP",		checkRpmIdxSIGPGP,		Optional, NotSeen},
-	{SIGOLDTAG_PGP,	"SIGTAG_PGP",		checkRpmIdxSIGPGP,		Optional, NotSeen},
-	{SIGTAG_LEMD5_2,"SIGTAG_LEMD5_2",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{SIGTAG_MD5,	"SIGTAG_MD5",		checkRpmIdxSIGMD5,		Optional, NotSeen},
-	{SIGOLDTAG_GPG,	"SIGTAG_GPG",		checkRpmIdxSIGGPG,		Optional, NotSeen},
-	{SIGOLDTAG_PGP5, "SIGTAG_PGP5",		checkRpmIdxSIGPGP5,		Optional, NotSeen},
-	{SIGOLDTAG_SHA1HEADER, "SIGTAG_SHA1HEADER", checkRpmIdxSIGSHA1HEADER,	Optional, NotSeen},
-	{SIGOLDTAG_MD5,	"SIGTAG_MD5",		checkRpmIdxSIGMD5,		Optional, NotSeen},
-	};
-
-int numSigIdxTags = sizeof(SigTags)/sizeof(RpmIdxTagFuncRec);
-
-/*
- * This table contains entries for the normal RPM tags.
- */
-RpmIdxTagFuncRec	HdrTags[] = {
-	{HDRTAG_IMAGE,	"HDRTAG_IMAGE",		checkRpmIdxHDRIMAGE,		Optional, NotSeen},
-	{HDRTAG_SIGNATURES, "HDRTAG_SIGNATURES", checkRpmIdxHDRSIGNATURES,	Optional, NotSeen},
-	{HDRTAG_IMMUTABLE, "HDRTAG_IMMUTABLE",	checkRpmIdxHDRIMMUTABLE,	Optional, NotSeen},
-	{HDRTAG_REGIONS, "HDRTAG_REGIONS",	checkRpmIdxHDRREGIONS,		Optional, NotSeen},
-	{HDRTAG_I18NTABLE, "HDRTAG_I18NTABLE",	checkRpmIdxHDRI18NTABLE,	Optional, NotSeen},
-	{HDRTAG_SIGBASE, "HDRTAG_SIGBASE",	checkRpmIdxHDRSIGBASE,		Optional, NotSeen},
-	{HDRTAG_TAGBASE, "HDRTAG_TAGBASE",	checkRpmIdxHDRTAGBASE,		Optional, NotSeen},
-	{RPMTAG_NAME,	"RPMTAG_NAME",		checkRpmIdxNAME,		Optional, NotSeen},
-	{RPMTAG_VERSION, "RPMTAG_VERSION",	checkRpmIdxVERSION,		Optional, NotSeen},
-	{RPMTAG_RELEASE, "RPMTAG_RELEASE",	checkRpmIdxRELEASE,		Optional, NotSeen},
-	{RPMTAG_SERIAL,	"RPMTAG_SERIAL",	checkRpmIdxSERIAL,		Optional, NotSeen},
-	{RPMTAG_SUMMARY, "RPMTAG_SUMMARY",	checkRpmIdxSUMMARY,		Optional, NotSeen},
-	{RPMTAG_DESCRIPTION, "RPMTAG_DESCRIPTION",	checkRpmIdxDESCRIPTION,	Optional, NotSeen},
-	{RPMTAG_BUILDTIME, "RPMTAG_BUILDTIME",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_BUILDHOST, "RPMTAG_BUILDHOST",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_INSTALLTIME, "RPMTAG_INSTALLTIME",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_SIZE,	"RPMTAG_SIZE",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_DISTRIBUTION, "RPMTAG_DISTRIBUTION",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_VENDOR, "RPMTAG_VENDOR",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_GIF,	"RPMTAG_GIF",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_XPM,	"RPMTAG_XPM",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_LICENSE, "RPMTAG_LICENSE",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_PACKAGER, "RPMTAG_PACKAGER",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_GROUP,	"RPMTAG_GROUP",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_CHANGELOG, "RPMTAG_CHANGELOG",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_SOURCE, "RPMTAG_SOURCE",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_PATCH,	"RPMTAG_PATCH",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_URL,	"RPMTAG_URL",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_OS,	"RPMTAG_OS",		checkRpmIdxOS,			Optional, NotSeen},
-	{RPMTAG_ARCH,	"RPMTAG_ARCH",		checkRpmIdxARCH,		Optional, NotSeen},
-	{RPMTAG_PREIN,	"RPMTAG_PREIN",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_POSTIN,	"RPMTAG_POSTIN",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_PREUN,	"RPMTAG_PREUN",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_POSTUN, "RPMTAG_POSTUN",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_OLDFILENAMES, "RPMTAG_OLDFILENAMES",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_FILESIZES, "RPMTAG_FILESIZES",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_FILESTATES, "RPMTAG_FILESTATES",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_FILEMODES, "RPMTAG_FILEMODES",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_FILEUIDS, "RPMTAG_FILEUIDS",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_FILEGIDS, "RPMTAG_FILEGIDS",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_FILERDEVS, "RPMTAG_FILERDEVS",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_FILEMTIMES, "RPMTAG_FILEMTIMES",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_FILEMD5S, "RPMTAG_FILEMD5S",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_FILELINKTOS, "RPMTAG_FILELINKTOS",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_FILEFLAGS, "RPMTAG_FILEFLAGS",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_ROOT,	"RPMTAG_ROOT",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_FILEUSERNAME, "RPMTAG_FILEUSERNAME",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_FILEGROUPNAME, "RPMTAG_FILEGROUPNAME",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_EXCLUDE, "RPMTAG_EXCLUDE",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_EXCLUSIVE, "RPMTAG_EXCLUSIVE",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_ICON,	"RPMTAG_ICON",		checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_SOURCRPM, "RPMTAG_SOURCRPM",	checkRpmIdxUNKNOWN,		Optional, NotSeen},
-	{RPMTAG_FILEVERIFYFLAGS, "RPMTAG_FILEVERIFYFLAGS",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_ARCHIVESIZE, "RPMTAG_ARCHIVESIZE",	checkRpmIdxUNKNOWN,	Optional, NotSeen},
-	{RPMTAG_PROVIDENAME, "RPMTAG_PROVIDENAME",	checkRpmIdxPROVIDNAME,	Optional, NotSeen},
-	{RPMTAG_REQUIREFLAGS, "RPMTAG_REQUIREFLAGS",	checkRpmIdxREQUIREFLAGS,	Optional, NotSeen},
-	{RPMTAG_REQUIRENAME, "RPMTAG_REQUIRENAME",	checkRpmIdxREQUIRENAME,	Optional, NotSeen},
-	{RPMTAG_REQUIREVERSION, "RPMTAG_REQUIREVERSION",	checkRpmIdxREQUIREVERSION,	Optional, NotSeen},
-	{RPMTAG_PAYLOADFORMAT, "RPMTAG_PAYLOADFORMAT",	checkRpmIdxPAYLOADFORMAT,	Optional, NotSeen},
-	{RPMTAG_PAYLOADCOMPRESSOR, "RPMTAG_PAYLOADCOMPRESSOR",	checkRpmIdxPAYLOADCOMPRESSOR,	Optional, NotSeen},
-	};
-
-int numHdrIdxTags = sizeof(HdrTags)/sizeof(RpmIdxTagFuncRec);
 
 void
 checkRpmIdx(RpmFile *file1, RpmHdrIndex *hidx, RpmIdxTagFuncRec Tags[],
@@ -118,6 +25,7 @@ for(i=0;i<nindex;i++) {
 	for(j=0;j<numtags;j++)
 		if( Tags[j].tag == tag ) {
 			Tags[j].status=Seen;
+			/* Check the expected type here */
 			Tags[j].func(file1, &hidx[i], journal);
 			break;
 			}
@@ -560,7 +468,7 @@ if( strcmp(name,architecture) != 0 ) {
 }
 
 void
-checkRpmIdxPROVIDNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+checkRpmIdxPROVIDENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	htag, htype, hoffset, hcount;
 char	*name;
@@ -570,7 +478,7 @@ htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
-fprintf(stderr,"checkRpmIdxPROVIDNAME() type=%d offset=%x count=%x %s\n",
+fprintf(stderr,"checkRpmIdxPROVIDENAME() type=%d offset=%x count=%x %s\n",
 						htype,hoffset,hcount,name);
 }
 
