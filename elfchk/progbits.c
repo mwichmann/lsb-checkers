@@ -55,7 +55,7 @@ if( elfchk_debug&DEBUG_SECTION_CONTENTS )
  * We should loop over this until the entire section has been used up, but
  * the GNU tools seem to reduce things to a single CIE record.
  */
-check_CIE((caddr_t)(file1->addr)+hdr1->sh_offset,hdr1->sh_size);
+check_CFInformation((caddr_t)(file1->addr)+hdr1->sh_offset);
 
 return 1;
 }
