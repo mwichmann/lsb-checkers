@@ -285,7 +285,7 @@ CheckTypeSize(__dispatch_fn_t,4, 9997, 2)
 #elif __powerpc64__
 CheckTypeSize(__dispatch_fn_t,0, 9997, 9)
 #elif __ia64__
-CheckTypeSize(__dispatch_fn_t,0, 9997, 3)
+CheckTypeSize(__dispatch_fn_t,8, 9997, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9997,0);
 Msg("Find size of __dispatch_fn_t (9997)\n");
@@ -313,14 +313,17 @@ CheckOffset(struct svc_req,rq_cred,0,9,32255)
 CheckOffset(struct svc_req,rq_clntcred,0,9,32256)
 CheckOffset(struct svc_req,rq_xprt,0,9,32257)
 #elif __ia64__
-CheckTypeSize(struct svc_req,0, 9991, 3)
-Msg("Missing member data for svc_req on IA64\n");
-CheckOffset(struct svc_req,rq_prog,0,3,32252)
-CheckOffset(struct svc_req,rq_vers,0,3,32253)
-CheckOffset(struct svc_req,rq_proc,0,3,32254)
-CheckOffset(struct svc_req,rq_cred,0,3,32255)
-CheckOffset(struct svc_req,rq_clntcred,0,3,32256)
-CheckOffset(struct svc_req,rq_xprt,0,3,32257)
+CheckTypeSize(struct svc_req,64, 9991, 3)
+CheckMemberSize(struct svc_req,rq_vers,8,3,32253)
+CheckOffset(struct svc_req,rq_vers,8,3,32253)
+CheckMemberSize(struct svc_req,rq_proc,8,3,32254)
+CheckOffset(struct svc_req,rq_proc,16,3,32254)
+CheckMemberSize(struct svc_req,rq_cred,24,3,32255)
+CheckOffset(struct svc_req,rq_cred,24,3,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,8,3,32256)
+CheckOffset(struct svc_req,rq_clntcred,48,3,32256)
+CheckMemberSize(struct svc_req,rq_xprt,8,3,32257)
+CheckOffset(struct svc_req,rq_xprt,56,3,32257)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9991,0);
 Msg("Find size of svc_req (9991)\n");
