@@ -103,7 +103,7 @@ check_cmd("pr","/usr/bin/pr",journal);
 check_cmd("printf","/usr/bin/printf",journal);
 check_cmd("ps","/bin/ps",journal);
 check_cmd("pwd","/bin/pwd",journal);
-check_cmd("remove_initd","/sbin/remove_initd",journal);
+check_cmd("remove_initd","/usr/lib/lsb/remove_initd",journal);
 check_cmd("renice","/usr/bin/renice",journal);
 check_cmd("rm","/bin/rm",journal);
 check_cmd("rmdir","/bin/rmdir",journal);
