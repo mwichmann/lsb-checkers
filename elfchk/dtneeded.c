@@ -3,9 +3,6 @@ char *DtNeeded[] = {
 #if __ia64__
 	"/lib/ld-lsb-ia64.so.1",
 #endif /* __ia64__ */
-#if __powerpc64__
-	"/lib/ld-lsb-ppc64.so.1",
-#endif /* __powerpc64__ */
 #if __s390__
 	"/lib/ld-lsb-s390.so.1",
 #endif /* __s390__ */
@@ -18,6 +15,9 @@ char *DtNeeded[] = {
 #if __powerpc__ && !__powerpc64__
 	"/lib/ld-lsb.so.1",
 #endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"/lib64/ld-lsb-ppc64.so.1",
+#endif /* __powerpc64__ */
 #if __i386__
 	"libc.so.6",
 #endif /* __i386__ */
