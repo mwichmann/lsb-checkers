@@ -421,8 +421,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		} else { /* (rttip) */
 			char	str[256];
 			sprintf(str, "_ZTI%s", &(classp->name[2]));
-			printf("No RTTI name for %s ", str);
-			printf("(looking for %s)\n", classp->rttiname);
+			printf("No RTTI name for %s\n", str);
 		}
 	}
 
