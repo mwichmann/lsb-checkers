@@ -35,7 +35,7 @@ CheckMemberSize(struct utimbuf,modtime,8,3,30206)
 CheckOffset(struct utimbuf,modtime,8,3,30206)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct utimbuf,8, 7023, 6)
-CheckMemberSize(struct utimbuf,modtime,0,6,30206)
+CheckMemberSize(struct utimbuf,modtime,4,6,30206)
 CheckOffset(struct utimbuf,modtime,4,6,30206)
 #elif __s390__
 CheckTypeSize(struct utimbuf,8, 7023, 10)

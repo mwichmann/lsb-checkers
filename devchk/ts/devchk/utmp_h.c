@@ -24,80 +24,10 @@ Msg("Checking data structures in utmp.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef EMPTY
-	CompareConstant(EMPTY,0,4963,architecture)
-#else
-Msg( "Error: Constant not found: EMPTY\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LOGIN_PROCESS
-	CompareConstant(LOGIN_PROCESS,6,4969,architecture)
-#else
-Msg( "Error: Constant not found: LOGIN_PROCESS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef ACCOUNTING
-	CompareConstant(ACCOUNTING,9,4972,architecture)
-#else
-Msg( "Error: Constant not found: ACCOUNTING\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef BOOT_TIME
-	CompareConstant(BOOT_TIME,2,4965,architecture)
-#else
-Msg( "Error: Constant not found: BOOT_TIME\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef RUN_LVL
-	CompareConstant(RUN_LVL,1,4964,architecture)
-#else
-Msg( "Error: Constant not found: RUN_LVL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef INIT_PROCESS
-	CompareConstant(INIT_PROCESS,5,4968,architecture)
-#else
-Msg( "Error: Constant not found: INIT_PROCESS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef UT_LINESIZE
 	CompareConstant(UT_LINESIZE,32,4960,architecture)
 #else
 Msg( "Error: Constant not found: UT_LINESIZE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef OLD_TIME
-	CompareConstant(OLD_TIME,4,4967,architecture)
-#else
-Msg( "Error: Constant not found: OLD_TIME\n");
 cnt++;
 #endif
 
@@ -114,20 +44,40 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef DEAD_PROCESS
-	CompareConstant(DEAD_PROCESS,8,4971,architecture)
+#ifdef UT_HOSTSIZE
+	CompareConstant(UT_HOSTSIZE,256,4962,architecture)
 #else
-Msg( "Error: Constant not found: DEAD_PROCESS\n");
+Msg( "Error: Constant not found: UT_HOSTSIZE\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef USER_PROCESS
-	CompareConstant(USER_PROCESS,7,4970,architecture)
+#ifdef EMPTY
+	CompareConstant(EMPTY,0,4963,architecture)
 #else
-Msg( "Error: Constant not found: USER_PROCESS\n");
+Msg( "Error: Constant not found: EMPTY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RUN_LVL
+	CompareConstant(RUN_LVL,1,4964,architecture)
+#else
+Msg( "Error: Constant not found: RUN_LVL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BOOT_TIME
+	CompareConstant(BOOT_TIME,2,4965,architecture)
+#else
+Msg( "Error: Constant not found: BOOT_TIME\n");
 cnt++;
 #endif
 
@@ -144,10 +94,60 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef UT_HOSTSIZE
-	CompareConstant(UT_HOSTSIZE,256,4962,architecture)
+#ifdef OLD_TIME
+	CompareConstant(OLD_TIME,4,4967,architecture)
 #else
-Msg( "Error: Constant not found: UT_HOSTSIZE\n");
+Msg( "Error: Constant not found: OLD_TIME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef INIT_PROCESS
+	CompareConstant(INIT_PROCESS,5,4968,architecture)
+#else
+Msg( "Error: Constant not found: INIT_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LOGIN_PROCESS
+	CompareConstant(LOGIN_PROCESS,6,4969,architecture)
+#else
+Msg( "Error: Constant not found: LOGIN_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef USER_PROCESS
+	CompareConstant(USER_PROCESS,7,4970,architecture)
+#else
+Msg( "Error: Constant not found: USER_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DEAD_PROCESS
+	CompareConstant(DEAD_PROCESS,8,4971,architecture)
+#else
+Msg( "Error: Constant not found: DEAD_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ACCOUNTING
+	CompareConstant(ACCOUNTING,9,4972,architecture)
+#else
+Msg( "Error: Constant not found: ACCOUNTING\n");
 cnt++;
 #endif
 
@@ -161,7 +161,7 @@ CheckMemberSize(struct exit_status,e_exit,2,2,34454)
 CheckOffset(struct exit_status,e_exit,2,2,34454)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct exit_status,4, 10282, 6)
-CheckMemberSize(struct exit_status,e_exit,0,6,34454)
+CheckMemberSize(struct exit_status,e_exit,2,6,34454)
 CheckOffset(struct exit_status,e_exit,2,6,34454)
 #elif __ia64__
 CheckTypeSize(struct exit_status,4, 10282, 3)
@@ -190,9 +190,9 @@ CheckMemberSize(struct lastlog,ll_host,256,2,34462)
 CheckOffset(struct lastlog,ll_host,36,2,34462)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct lastlog,292, 10285, 6)
-CheckMemberSize(struct lastlog,ll_line,0,6,34461)
+CheckMemberSize(struct lastlog,ll_line,32,6,34461)
 CheckOffset(struct lastlog,ll_line,4,6,34461)
-CheckMemberSize(struct lastlog,ll_host,0,6,34462)
+CheckMemberSize(struct lastlog,ll_host,256,6,34462)
 CheckOffset(struct lastlog,ll_host,36,6,34462)
 #elif __ia64__
 CheckTypeSize(struct lastlog,296, 10285, 3)
@@ -243,25 +243,25 @@ CheckMemberSize(struct utmp,__unused,20,2,34459)
 CheckOffset(struct utmp,__unused,364,2,34459)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct utmp,384, 10281, 6)
-CheckMemberSize(struct utmp,ut_pid,0,6,34448)
+CheckMemberSize(struct utmp,ut_pid,4,6,34448)
 CheckOffset(struct utmp,ut_pid,4,6,34448)
-CheckMemberSize(struct utmp,ut_line,0,6,34449)
+CheckMemberSize(struct utmp,ut_line,32,6,34449)
 CheckOffset(struct utmp,ut_line,8,6,34449)
-CheckMemberSize(struct utmp,ut_id,0,6,34450)
+CheckMemberSize(struct utmp,ut_id,4,6,34450)
 CheckOffset(struct utmp,ut_id,40,6,34450)
-CheckMemberSize(struct utmp,ut_user,0,6,34451)
+CheckMemberSize(struct utmp,ut_user,32,6,34451)
 CheckOffset(struct utmp,ut_user,44,6,34451)
-CheckMemberSize(struct utmp,ut_host,0,6,34452)
+CheckMemberSize(struct utmp,ut_host,256,6,34452)
 CheckOffset(struct utmp,ut_host,76,6,34452)
-CheckMemberSize(struct utmp,ut_exit,0,6,34455)
+CheckMemberSize(struct utmp,ut_exit,4,6,34455)
 CheckOffset(struct utmp,ut_exit,332,6,34455)
-CheckMemberSize(struct utmp,ut_session,0,6,34456)
+CheckMemberSize(struct utmp,ut_session,4,6,34456)
 CheckOffset(struct utmp,ut_session,336,6,34456)
-CheckMemberSize(struct utmp,ut_tv,0,6,34457)
+CheckMemberSize(struct utmp,ut_tv,8,6,34457)
 CheckOffset(struct utmp,ut_tv,340,6,34457)
-CheckMemberSize(struct utmp,ut_addr_v6,0,6,34458)
+CheckMemberSize(struct utmp,ut_addr_v6,16,6,34458)
 CheckOffset(struct utmp,ut_addr_v6,348,6,34458)
-CheckMemberSize(struct utmp,__unused,0,6,34459)
+CheckMemberSize(struct utmp,__unused,20,6,34459)
 CheckOffset(struct utmp,__unused,364,6,34459)
 #elif __ia64__
 CheckTypeSize(struct utmp,400, 10281, 3)

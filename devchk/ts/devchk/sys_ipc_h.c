@@ -24,20 +24,10 @@ Msg("Checking data structures in sys/ipc.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IPC_SET
-	CompareConstant(IPC_SET,1,3450,architecture)
+#ifdef IPC_PRIVATE
+	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
 #else
-Msg( "Error: Constant not found: IPC_SET\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IPC_EXCL
-	CompareConstant(IPC_EXCL,00002000,3447,architecture)
-#else
-Msg( "Error: Constant not found: IPC_EXCL\n");
+Msg( "Error: Constant not found: IPC_PRIVATE\n");
 cnt++;
 #endif
 
@@ -54,6 +44,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef IPC_EXCL
+	CompareConstant(IPC_EXCL,00002000,3447,architecture)
+#else
+Msg( "Error: Constant not found: IPC_EXCL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef IPC_NOWAIT
 	CompareConstant(IPC_NOWAIT,00004000,3448,architecture)
 #else
@@ -64,20 +64,20 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IPC_PRIVATE
-	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
+#ifdef IPC_RMID
+	CompareConstant(IPC_RMID,0,3449,architecture)
 #else
-Msg( "Error: Constant not found: IPC_PRIVATE\n");
+Msg( "Error: Constant not found: IPC_RMID\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IPC_RMID
-	CompareConstant(IPC_RMID,0,3449,architecture)
+#ifdef IPC_SET
+	CompareConstant(IPC_SET,1,3450,architecture)
 #else
-Msg( "Error: Constant not found: IPC_RMID\n");
+Msg( "Error: Constant not found: IPC_SET\n");
 cnt++;
 #endif
 
@@ -147,23 +147,23 @@ CheckOffset(struct ipc_perm,__unused2,40,3,34653)
 CheckTypeSize(struct ipc_perm,48, 10403, 6)
 CheckMemberSize(struct ipc_perm,__key,4,6,34720)
 CheckOffset(struct ipc_perm,__key,0,6,34720)
-CheckMemberSize(struct ipc_perm,uid,0,6,34721)
+CheckMemberSize(struct ipc_perm,uid,4,6,34721)
 CheckOffset(struct ipc_perm,uid,4,6,34721)
-CheckMemberSize(struct ipc_perm,gid,0,6,34723)
+CheckMemberSize(struct ipc_perm,gid,4,6,34723)
 CheckOffset(struct ipc_perm,gid,8,6,34723)
-CheckMemberSize(struct ipc_perm,cuid,0,6,34722)
+CheckMemberSize(struct ipc_perm,cuid,4,6,34722)
 CheckOffset(struct ipc_perm,cuid,12,6,34722)
-CheckMemberSize(struct ipc_perm,cgid,0,6,34724)
+CheckMemberSize(struct ipc_perm,cgid,4,6,34724)
 CheckOffset(struct ipc_perm,cgid,16,6,34724)
-CheckMemberSize(struct ipc_perm,mode,0,6,34725)
+CheckMemberSize(struct ipc_perm,mode,4,6,34725)
 CheckOffset(struct ipc_perm,mode,20,6,34725)
-CheckMemberSize(struct ipc_perm,__pad1,0,6,34726)
+CheckMemberSize(struct ipc_perm,__pad1,4,6,34726)
 CheckOffset(struct ipc_perm,__pad1,28,6,34726)
-CheckMemberSize(struct ipc_perm,__seq,0,6,34727)
+CheckMemberSize(struct ipc_perm,__seq,4,6,34727)
 CheckOffset(struct ipc_perm,__seq,24,6,34727)
-CheckMemberSize(struct ipc_perm,__unused1,0,6,34729)
+CheckMemberSize(struct ipc_perm,__unused1,8,6,34729)
 CheckOffset(struct ipc_perm,__unused1,32,6,34729)
-CheckMemberSize(struct ipc_perm,__unused2,0,6,34730)
+CheckMemberSize(struct ipc_perm,__unused2,8,6,34730)
 CheckOffset(struct ipc_perm,__unused2,40,6,34730)
 #endif
 
