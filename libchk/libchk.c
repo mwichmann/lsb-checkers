@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.45 $
+ * This is $Revision: 1.46 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.46  2004/08/12 18:55:31  mats
+ * warning cleanups
+ *
  * Revision 1.45  2004/08/10 17:37:46  anderson
  * rerror is -1, not 2
  *
@@ -186,7 +189,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.45 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.46 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -381,13 +384,13 @@ check_size(ElfFile *file, struct versym *entry)
 		return 0;
 	}
 	if( file->syms[j].st_size != entry->size ) {
-			fprintf(stderr, "size for %s doesn't match %d vs %d\n",
-							symbol_name, file->syms[j].st_size, entry->size );
+			fprintf(stderr, "size for %s doesn't match %ld vs %d\n",
+						symbol_name, (u_long)file->syms[j].st_size, entry->size );
 			return -1;
 	} else {
 #ifdef DEBUG
-			fprintf(stderr, "size for %s does match %d vs %d\n",
-							symbol_name, file->syms[j].st_size, entry->size );
+			fprintf(stderr, "size for %s does match %ld vs %d\n",
+						symbol_name, (u_long)file->syms[j].st_size, entry->size );
 #endif
 			return 1;
 	}
