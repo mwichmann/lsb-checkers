@@ -49,8 +49,8 @@ checkPROGBITS_eh_frame(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journ
 {
         int error;
         if( elfchk_debug&DEBUG_SECTION_CONTENTS )
-                fprintf(stderr,"checking .eh_frame %x bytes at %x\n",
-                        hdr1->sh_size, hdr1->sh_offset);
+                fprintf(stderr,"checking .eh_frame %lx bytes at %lx\n",
+                        (u_long)hdr1->sh_size, (u_long)hdr1->sh_offset);
 
         /*
          * We should loop over this until the entire section has been used up,
@@ -75,11 +75,12 @@ checkPROGBITS_eh_frame_hdr(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *j
 EHFRMHDRImage	*frmhdrimg;
 EHFRMHDR	frmhdr;
 unsigned char	*ptr;
-unsigned int	i,numused,tmp;
+unsigned int	i,numused;
+void 		*tmp;
 
 if( elfchk_debug&DEBUG_SECTION_CONTENTS )
-	fprintf(stderr,"checking .eh_frame_hdr %x bytes at %x\n",
-				hdr1->sh_size, hdr1->sh_offset);
+	fprintf(stderr,"checking .eh_frame_hdr %lx bytes at %lx\n",
+		(u_long)hdr1->sh_size, (u_long)hdr1->sh_offset);
 
 frmhdrimg=(EHFRMHDRImage *)((caddr_t)(file1->addr)+hdr1->sh_offset);
 if (elfchk_debug & DEBUG_SECTION_CONTENTS)
@@ -92,7 +93,7 @@ frmhdr.table_enc=frmhdrimg->table_enc;
 ptr=(unsigned char *)frmhdrimg+sizeof(EHFRMHDRImage);
 frmhdr.eh_frame_ptr=read_FDE_encoded(ptr,frmhdr.eh_frame_ptr_enc,&numused);
 ptr+=numused;
-frmhdr.fde_count=(int)read_FDE_encoded(ptr,frmhdr.fde_count_enc,&numused);
+frmhdr.fde_count=(long)read_FDE_encoded(ptr,frmhdr.fde_count_enc,&numused);
 ptr+=numused;
 
 if (elfchk_debug & DEBUG_SECTION_CONTENTS) {
@@ -100,9 +101,9 @@ if (elfchk_debug & DEBUG_SECTION_CONTENTS) {
 	fprintf(stderr,"eh_frame_ptr_enc: 0x%2.2x\n", frmhdr.eh_frame_ptr_enc);
 	fprintf(stderr,"fde_count_enc: 0x%2.2x\n", frmhdr.fde_count_enc);
 	fprintf(stderr,"table_enc: 0x%2.2x\n", frmhdr.table_enc);
-	fprintf(stderr,"eh_frame_ptr: %x\n",(int)frmhdr.eh_frame_ptr);
+	fprintf(stderr,"eh_frame_ptr: %lx\n",(u_long)frmhdr.eh_frame_ptr);
 	if( frmhdr.fde_count_enc != DW_EH_PE_omit ) {
-		fprintf(stderr,"fde_count: %x\n",frmhdr.fde_count);
+		fprintf(stderr,"fde_count: %lx\n",frmhdr.fde_count);
 		}
 	}
 
@@ -112,14 +113,14 @@ if (elfchk_debug & DEBUG_SECTION_CONTENTS)
         dumpbytes(ptr,hdr1->sh_size-(ptr-(unsigned char *)frmhdrimg));
 
 for(i=0;i<frmhdr.fde_count;i++) {
-	tmp=(int)read_FDE_encoded(ptr,frmhdr.table_enc,&numused);
+	tmp=read_FDE_encoded(ptr,frmhdr.table_enc,&numused);
 	ptr+=numused;
         if (elfchk_debug & DEBUG_SECTION_CONTENTS)
-                fprintf(stderr,"[%2.2x] Initial_location: %x\t", i, tmp);
-	tmp=(int)read_FDE_encoded(ptr,frmhdr.table_enc,&numused);
+                fprintf(stderr,"[%2.2x] Initial_location: %lx\t", i, (u_long)tmp);
+	tmp=read_FDE_encoded(ptr,frmhdr.table_enc,&numused);
 	ptr+=numused;
         if (elfchk_debug & DEBUG_SECTION_CONTENTS)
-                fprintf(stderr,"address: %x\n", tmp);
+                fprintf(stderr,"address: %lx\n", (u_long)tmp);
 	}
 
 return 1;

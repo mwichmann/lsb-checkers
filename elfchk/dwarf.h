@@ -52,7 +52,7 @@ typedef struct EHFRMHDR {
 	unsigned char	fde_count_enc;
 	unsigned char	table_enc;
 	void		*eh_frame_ptr;
-	int		fde_count;
+	long		fde_count;
 	} EHFRMHDR;
 
 /* DWARF Call Frame Instruction - Taken from DWARF v2.0.0 */

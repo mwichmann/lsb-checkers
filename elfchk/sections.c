@@ -303,14 +303,14 @@ void
 dumpsection(Elf_Shdr *hdr)
 {
 fprintf(stderr,"sh_type %x\n", hdr->sh_type );
-fprintf(stderr,"sh_flags %x\n", hdr->sh_flags );
-fprintf(stderr,"sh_addr %x\n", hdr->sh_addr );
-fprintf(stderr,"sh_offset %x\n", hdr->sh_offset );
-fprintf(stderr,"sh_size %x\n", hdr->sh_size );
+fprintf(stderr,"sh_flags %lx\n", (u_long)hdr->sh_flags );
+fprintf(stderr,"sh_addr %lx\n", (u_long)hdr->sh_addr );
+fprintf(stderr,"sh_offset %lx\n", (u_long)hdr->sh_offset );
+fprintf(stderr,"sh_size %lx\n", (u_long)hdr->sh_size );
 fprintf(stderr,"sh_link %x\n", hdr->sh_link );
 fprintf(stderr,"sh_info %x\n", hdr->sh_info );
-fprintf(stderr,"sh_addralign %x\n", hdr->sh_addralign );
-fprintf(stderr,"sh_entsize %x\n", hdr->sh_entsize );
+fprintf(stderr,"sh_addralign %lx\n", (u_long)hdr->sh_addralign );
+fprintf(stderr,"sh_entsize %lx\n", (u_long)hdr->sh_entsize );
 return;
 }
 
@@ -364,9 +364,9 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
         if( (hdr1->sh_flags|SHF_ALLOC) != SectionInfo[i].attributes ) 
         {
           snprintf(tmp_string, TMP_STRING_SIZE,
-                   "Section %s: sh_flags is wrong. expecting %x, got %x",
+                   "Section %s: sh_flags is wrong. expecting %x, got %lx",
                    SectionInfo[i].name, SectionInfo[i].attributes, 
-                   hdr1->sh_flags);
+                   (u_long)hdr1->sh_flags);
           fprintf(stderr, "%s\n", tmp_string);
           tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                              0, 0, 0, tmp_string);
