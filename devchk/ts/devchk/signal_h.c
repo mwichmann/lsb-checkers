@@ -444,6 +444,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SA_NOCLDWAIT
+	CompareConstant(SA_NOCLDWAIT,0x00000002,3140,architecture)
+#else
+Msg( "Error: Constant not found: SA_NOCLDWAIT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SA_SIGINFO
 	CompareConstant(SA_SIGINFO,0x00000004,3141,architecture)
 #else
@@ -518,6 +528,62 @@ cnt++;
 	CompareConstant(SA_ONESHOT,SA_RESETHAND,3149,architecture)
 #else
 Msg( "Error: Constant not found: SA_ONESHOT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SS_ONSTACK
+	CompareConstant(SS_ONSTACK,1,3150,architecture)
+#else
+Msg( "Error: Constant not found: SS_ONSTACK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SS_DISABLE
+	CompareConstant(SS_DISABLE,2,3151,architecture)
+#else
+Msg( "Error: Constant not found: SS_DISABLE\n");
+cnt++;
+#endif
+
+#endif
+
+#if __i386__
+#ifdef MINSIGSTKSZ
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+#else
+Msg( "Error: Constant not found: MINSIGSTKSZ\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
+#ifdef MINSIGSTKSZ
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+#else
+Msg( "Error: Constant not found: MINSIGSTKSZ\n");
+cnt++;
+#endif
+
+#endif
+
+#if __i386__
+#ifdef SIGSTKSZ
+	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKSZ\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
+#ifdef SIGSTKSZ
+	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
@@ -781,6 +847,46 @@ Msg( "No definition for __NUM_ACRS (5143, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5143,%d);\n", architecture, __NUM_ACRS);
 #endif
 #endif
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_ASYNCNL
+	CompareConstant(SI_ASYNCNL,-60,5144,architecture)
+#else
+Msg( "Error: Constant not found: SI_ASYNCNL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_TKILL
+	CompareConstant(SI_TKILL,-6,5145,architecture)
+#else
+Msg( "Error: Constant not found: SI_TKILL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_SIGIO
+	CompareConstant(SI_SIGIO,-5,5146,architecture)
+#else
+Msg( "Error: Constant not found: SI_SIGIO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SI_KERNEL
+	CompareConstant(SI_KERNEL,0x80,5147,architecture)
+#else
+Msg( "Error: Constant not found: SI_KERNEL\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(sig_atomic_t,4, 9092, 2)
 #elif __ia64__
@@ -798,25 +904,6 @@ CheckTypeSize(sig_atomic_t,4, 9092, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(stack_t,12, 9314, 2)
-#elif __ia64__
-CheckTypeSize(stack_t,24, 9314, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(stack_t,12, 9314, 6)
-#elif __s390x__
-CheckTypeSize(stack_t,24, 9314, 12)
-#elif __s390__ && !__s390x__
-CheckTypeSize(stack_t,12, 9314, 10)
-#elif __x86_64__
-CheckTypeSize(stack_t,24, 9314, 11)
-#elif __powerpc64__
-CheckTypeSize(stack_t,24, 9314, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
-Msg("Find size of stack_t (9314)\n");
 #endif
 
 #if __i386__
@@ -1082,6 +1169,25 @@ CheckMemberSize(struct sigaction,sa_flags,4,11,40381)
 CheckOffset(struct sigaction,sa_flags,136,11,40381)
 CheckMemberSize(struct sigaction,sa_restorer,8,11,40382)
 CheckOffset(struct sigaction,sa_restorer,144,11,40382)
+#endif
+
+#if __i386__
+CheckTypeSize(stack_t,12, 9314, 2)
+#elif __ia64__
+CheckTypeSize(stack_t,24, 9314, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(stack_t,12, 9314, 6)
+#elif __s390x__
+CheckTypeSize(stack_t,24, 9314, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(stack_t,12, 9314, 10)
+#elif __x86_64__
+CheckTypeSize(stack_t,24, 9314, 11)
+#elif __powerpc64__
+CheckTypeSize(stack_t,24, 9314, 9)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
+Msg("Find size of stack_t (9314)\n");
 #endif
 
 #if __i386__
