@@ -43,10 +43,14 @@ CheckTypeSize(struct _libc_fpreg,10, 10225, 2)
 
 #ifdef __i386__
 CheckTypeSize(struct _libc_fpstate,112, 10226, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10226,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(fpregset_t,4, 10228, 2)
+#elif __ia64__
+CheckTypeSize(fpregset_t,4, 10228, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10228,0);
 #endif
