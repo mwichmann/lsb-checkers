@@ -335,7 +335,7 @@ CheckMemberSize(struct servent,s_port,4,6,33735)
 CheckOffset(struct servent,s_port,8,6,33735)
 CheckMemberSize(struct servent,s_proto,4,6,33736)
 CheckOffset(struct servent,s_proto,12,6,33736)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct servent,16, 10134, 10)
 CheckMemberSize(struct servent,s_aliases,0,10,33734)
 CheckOffset(struct servent,s_aliases,4,10,33734)
@@ -386,7 +386,7 @@ CheckMemberSize(struct hostent,h_length,4,6,33740)
 CheckOffset(struct hostent,h_length,12,6,33740)
 CheckMemberSize(struct hostent,h_addr_list,4,6,33741)
 CheckOffset(struct hostent,h_addr_list,16,6,33741)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct hostent,20, 10136, 10)
 CheckMemberSize(struct hostent,h_aliases,0,10,33738)
 CheckOffset(struct hostent,h_aliases,4,10,33738)
@@ -425,7 +425,7 @@ CheckMemberSize(struct protoent,p_aliases,8,3,33743)
 CheckOffset(struct protoent,p_aliases,8,3,33743)
 CheckMemberSize(struct protoent,p_proto,4,3,33744)
 CheckOffset(struct protoent,p_proto,16,3,33744)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct protoent,12, 10139, 10)
 CheckMemberSize(struct protoent,p_aliases,0,10,33743)
 CheckOffset(struct protoent,p_aliases,4,10,33743)
@@ -464,7 +464,7 @@ CheckMemberSize(struct netent,n_addrtype,4,2,33747)
 CheckOffset(struct netent,n_addrtype,8,2,33747)
 CheckMemberSize(struct netent,n_net,4,2,33748)
 CheckOffset(struct netent,n_net,12,2,33748)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct netent,16, 10141, 10)
 CheckMemberSize(struct netent,n_aliases,0,10,33746)
 CheckOffset(struct netent,n_aliases,4,10,33746)
@@ -525,7 +525,7 @@ CheckMemberSize(struct addrinfo,ai_canonname,4,2,33700)
 CheckOffset(struct addrinfo,ai_canonname,24,2,33700)
 CheckMemberSize(struct addrinfo,ai_next,4,2,33701)
 CheckOffset(struct addrinfo,ai_next,28,2,33701)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct addrinfo,32, 10125, 10)
 CheckMemberSize(struct addrinfo,ai_family,0,10,33695)
 CheckOffset(struct addrinfo,ai_family,4,10,33695)

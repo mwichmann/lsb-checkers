@@ -1197,7 +1197,7 @@ Msg( "Error: Constant not found: EDEADLOCK\n");
 cnt++;
 #endif
 
-#elif __s390__
+#elif __s390__ && !__s390x__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,EDEADLK,92,architecture)
 #else

@@ -31,7 +31,7 @@ CheckTypeSize(DIR,0, 10175, 3)
 CheckTypeSize(DIR,0, 10175, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(DIR,0, 10175, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(DIR,0, 10175, 10)
 #elif __powerpc64__
 CheckTypeSize(DIR,0, 10175, 9)
@@ -68,7 +68,7 @@ CheckMemberSize(struct dirent,d_type,1,6,34410)
 CheckOffset(struct dirent,d_type,10,6,34410)
 CheckMemberSize(struct dirent,d_name,256,6,34180)
 CheckOffset(struct dirent,d_name,11,6,34180)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct dirent,268, 10178, 10)
 CheckMemberSize(struct dirent,d_off,0,10,34178)
 CheckOffset(struct dirent,d_off,4,10,34178)
@@ -129,7 +129,7 @@ CheckMemberSize(struct dirent64,d_type,1,6,34184)
 CheckOffset(struct dirent64,d_type,18,6,34184)
 CheckMemberSize(struct dirent64,d_name,256,6,34185)
 CheckOffset(struct dirent64,d_name,19,6,34185)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct dirent64,280, 10179, 10)
 CheckMemberSize(struct dirent64,d_ino,8,10,34181)
 CheckOffset(struct dirent64,d_ino,0,10,34181)

@@ -35,7 +35,7 @@ CheckTypeSize(XSecurityAuthorization,4, 8596, 2)
 CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSecurityAuthorization,4, 8596, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSecurityAuthorization,4, 8596, 10)
 #elif __powerpc64__
 CheckTypeSize(XSecurityAuthorization,8, 8596, 9)
@@ -50,7 +50,7 @@ CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2)
 CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 10)
 #elif __powerpc64__
 CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 9)

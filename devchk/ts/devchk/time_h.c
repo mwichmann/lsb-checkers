@@ -119,7 +119,7 @@ CheckMemberSize(struct tm,tm_gmtoff,4,6,33521)
 CheckOffset(struct tm,tm_gmtoff,36,6,33521)
 CheckMemberSize(struct tm,tm_zone,4,6,33522)
 CheckOffset(struct tm,tm_zone,40,6,33522)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct tm,44, 7019, 10)
 CheckMemberSize(struct tm,tm_min,0,10,33513)
 CheckOffset(struct tm,tm_min,4,10,33513)
@@ -180,7 +180,7 @@ CheckOffset(struct itimerspec,it_value,16,3,33509)
 CheckTypeSize(struct itimerspec,16, 10101, 6)
 CheckMemberSize(struct itimerspec,it_value,8,6,33509)
 CheckOffset(struct itimerspec,it_value,8,6,33509)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct itimerspec,16, 10101, 10)
 CheckMemberSize(struct itimerspec,it_value,0,10,33509)
 CheckOffset(struct itimerspec,it_value,8,10,33509)

@@ -49,7 +49,7 @@ CheckTypeSize(sem_t,16, 6960, 2)
 CheckTypeSize(sem_t,32, 6960, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sem_t,16, 6960, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(sem_t,16, 6960, 10)
 #elif __powerpc64__
 CheckTypeSize(sem_t,32, 6960, 9)

@@ -167,7 +167,7 @@ CheckOffset(struct exit_status,e_exit,2,6,34454)
 CheckTypeSize(struct exit_status,4, 10282, 3)
 CheckMemberSize(struct exit_status,e_exit,2,3,34454)
 CheckOffset(struct exit_status,e_exit,2,3,34454)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct exit_status,4, 10282, 10)
 CheckMemberSize(struct exit_status,e_exit,0,10,34454)
 CheckOffset(struct exit_status,e_exit,2,10,34454)
@@ -200,7 +200,7 @@ CheckMemberSize(struct lastlog,ll_line,32,3,34461)
 CheckOffset(struct lastlog,ll_line,8,3,34461)
 CheckMemberSize(struct lastlog,ll_host,256,3,34462)
 CheckOffset(struct lastlog,ll_host,40,3,34462)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct lastlog,292, 10285, 10)
 CheckMemberSize(struct lastlog,ll_line,0,10,34461)
 CheckOffset(struct lastlog,ll_line,4,10,34461)
@@ -285,7 +285,7 @@ CheckMemberSize(struct utmp,ut_addr_v6,16,3,34458)
 CheckOffset(struct utmp,ut_addr_v6,360,3,34458)
 CheckMemberSize(struct utmp,__unused,20,3,34459)
 CheckOffset(struct utmp,__unused,376,3,34459)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct utmp,384, 10281, 10)
 CheckMemberSize(struct utmp,ut_pid,0,10,34448)
 CheckOffset(struct utmp,ut_pid,4,10,34448)

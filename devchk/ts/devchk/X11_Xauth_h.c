@@ -29,7 +29,7 @@ CheckTypeSize(Xauth,32, 8961, 2)
 CheckTypeSize(Xauth,64, 8961, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(Xauth,32, 8961, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(Xauth,32, 8961, 10)
 #elif __powerpc64__
 CheckTypeSize(Xauth,64, 8961, 9)

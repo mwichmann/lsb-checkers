@@ -32,7 +32,7 @@ CheckTypeSize(IceAuthFileEntry,28, 8228, 2)
 CheckTypeSize(IceAuthFileEntry,56, 8228, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 10)
 #elif __powerpc64__
 CheckTypeSize(IceAuthFileEntry,56, 8228, 9)
@@ -47,7 +47,7 @@ CheckTypeSize(IceAuthDataEntry,20, 8230, 2)
 CheckTypeSize(IceAuthDataEntry,40, 8230, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 10)
 #elif __powerpc64__
 CheckTypeSize(IceAuthDataEntry,40, 8230, 9)

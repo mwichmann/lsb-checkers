@@ -70,7 +70,7 @@ CheckTypeSize(__compar_fn_t,4, 9231, 2)
 CheckTypeSize(__compar_fn_t,8, 9231, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__compar_fn_t,4, 9231, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(__compar_fn_t,4, 9231, 10)
 #elif __powerpc64__
 CheckTypeSize(__compar_fn_t,8, 9231, 9)
@@ -134,7 +134,7 @@ CheckTypeSize(div_t,8, 6973, 2)
 CheckTypeSize(div_t,8, 6973, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(div_t,8, 6973, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(div_t,8, 6973, 10)
 #elif __powerpc64__
 CheckTypeSize(div_t,8, 6973, 9)
@@ -149,7 +149,7 @@ CheckTypeSize(ldiv_t,8, 6975, 2)
 CheckTypeSize(ldiv_t,16, 6975, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ldiv_t,8, 6975, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ldiv_t,8, 6975, 10)
 #elif __powerpc64__
 CheckTypeSize(ldiv_t,16, 6975, 9)
@@ -164,7 +164,7 @@ CheckTypeSize(lldiv_t,16, 6897, 2)
 CheckTypeSize(lldiv_t,16, 6897, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(lldiv_t,16, 6897, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(lldiv_t,16, 6897, 10)
 #elif __powerpc64__
 CheckTypeSize(lldiv_t,16, 6897, 9)

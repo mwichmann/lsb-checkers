@@ -97,7 +97,7 @@ cnt++;
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8989,0);
@@ -107,7 +107,7 @@ Msg("Find size of anon-ftw.h-13 (8989)\n");
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8990,0);
@@ -132,7 +132,7 @@ CheckMemberSize(struct FTW,base,4,6,29758)
 CheckOffset(struct FTW,base,0,6,29758)
 CheckMemberSize(struct FTW,level,4,6,29759)
 CheckOffset(struct FTW,level,4,6,29759)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct FTW,8, 8691, 10)
 CheckMemberSize(struct FTW,base,4,10,29758)
 CheckOffset(struct FTW,base,0,10,29758)
@@ -155,7 +155,7 @@ CheckTypeSize(__ftw_func_t,4, 8992, 2)
 CheckTypeSize(__ftw_func_t,8, 8992, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__ftw_func_t,4, 8992, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(__ftw_func_t,4, 8992, 10)
 #elif __powerpc64__
 CheckTypeSize(__ftw_func_t,8, 8992, 9)
@@ -170,7 +170,7 @@ CheckTypeSize(__ftw64_func_t,4, 8994, 2)
 CheckTypeSize(__ftw64_func_t,8, 8994, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__ftw64_func_t,4, 8994, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(__ftw64_func_t,4, 8994, 10)
 #elif __powerpc64__
 CheckTypeSize(__ftw64_func_t,8, 8994, 9)
@@ -185,7 +185,7 @@ CheckTypeSize(__nftw_func_t,4, 8996, 2)
 CheckTypeSize(__nftw_func_t,8, 8996, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__nftw_func_t,4, 8996, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(__nftw_func_t,4, 8996, 10)
 #elif __powerpc64__
 CheckTypeSize(__nftw_func_t,8, 8996, 9)
@@ -200,7 +200,7 @@ CheckTypeSize(__nftw64_func_t,4, 8998, 2)
 CheckTypeSize(__nftw64_func_t,8, 8998, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__nftw64_func_t,4, 8998, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(__nftw64_func_t,4, 8998, 10)
 #elif __powerpc64__
 CheckTypeSize(__nftw64_func_t,8, 8998, 9)

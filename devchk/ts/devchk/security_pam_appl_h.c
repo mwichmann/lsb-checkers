@@ -486,7 +486,7 @@ CheckMemberSize(struct pam_conv,conv,4,2,34588)
 CheckOffset(struct pam_conv,conv,0,2,34588)
 CheckMemberSize(struct pam_conv,appdata_ptr,4,2,34589)
 CheckOffset(struct pam_conv,appdata_ptr,4,2,34589)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct pam_conv,8, 10352, 10)
 CheckMemberSize(struct pam_conv,appdata_ptr,0,10,34589)
 CheckOffset(struct pam_conv,appdata_ptr,4,10,34589)
@@ -509,7 +509,7 @@ Msg("Find size of pam_conv (10352)\n");
 
 #if __i386__
 CheckTypeSize(pam_handle_t,4, 10354, 2)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pam_handle_t,4, 10354, 10)
 #elif __ia64__
 CheckTypeSize(pam_handle_t,4, 10354, 3)
@@ -528,7 +528,7 @@ CheckMemberSize(struct pam_message,msg_style,4,2,34584)
 CheckOffset(struct pam_message,msg_style,0,2,34584)
 CheckMemberSize(struct pam_message,msg,4,2,34585)
 CheckOffset(struct pam_message,msg,4,2,34585)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct pam_message,8, 10356, 10)
 CheckMemberSize(struct pam_message,msg,0,10,34585)
 CheckOffset(struct pam_message,msg,4,10,34585)
@@ -555,7 +555,7 @@ CheckMemberSize(struct pam_response,resp,4,2,34586)
 CheckOffset(struct pam_response,resp,0,2,34586)
 CheckMemberSize(struct pam_response,resp_retcode,4,2,34587)
 CheckOffset(struct pam_response,resp_retcode,4,2,34587)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct pam_response,8, 10358, 10)
 CheckMemberSize(struct pam_response,resp_retcode,0,10,34587)
 CheckOffset(struct pam_response,resp_retcode,4,10,34587)

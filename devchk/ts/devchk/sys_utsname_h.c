@@ -59,7 +59,7 @@ CheckMemberSize(struct utsname,machine,65,6,30181)
 CheckOffset(struct utsname,machine,260,6,30181)
 CheckMemberSize(struct utsname,domainname,65,6,34411)
 CheckOffset(struct utsname,domainname,325,6,34411)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct utsname,390, 7013, 10)
 CheckMemberSize(struct utsname,nodename,0,10,30178)
 CheckOffset(struct utsname,nodename,65,10,30178)

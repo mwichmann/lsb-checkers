@@ -49,7 +49,7 @@ CheckTypeSize(nl_catd,4, 6923, 2)
 CheckTypeSize(nl_catd,8, 6923, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(nl_catd,4, 6923, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(nl_catd,4, 6923, 10)
 #elif __powerpc64__
 CheckTypeSize(nl_catd,8, 6923, 9)
@@ -64,7 +64,7 @@ CheckTypeSize(nl_item,4, 6924, 2)
 CheckTypeSize(nl_item,4, 6924, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(nl_item,4, 6924, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(nl_item,4, 6924, 10)
 #elif __powerpc64__
 CheckTypeSize(nl_item,4, 6924, 9)

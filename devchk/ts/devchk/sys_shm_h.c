@@ -33,7 +33,7 @@ Msg("Checking data structures in sys/shm.h\n");
 /* No test for SHMLBA */
 #elif __x86_64__
 /* No test for SHMLBA */
-#elif __s390__
+#elif __s390__ && !__s390x__
 /* No test for SHMLBA */
 #else
 Msg( "No definition for SHMLBA (1681, Unknown) in db\n");
@@ -119,7 +119,7 @@ CheckTypeSize(shmatt_t,4, 10212, 2)
 CheckTypeSize(shmatt_t,4, 10443, 6)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(shmatt_t,4, 10456, 10)
 #endif
 
@@ -213,7 +213,7 @@ CheckMemberSize(struct shmid_ds,__unused6,4,6,40013)
 CheckOffset(struct shmid_ds,__unused6,96,6,40013)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(struct shmid_ds,84, 10457, 10)
 CheckMemberSize(struct shmid_ds,shm_perm,36,10,40014)
 CheckOffset(struct shmid_ds,shm_perm,0,10,40014)

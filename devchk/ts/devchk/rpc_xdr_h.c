@@ -24,7 +24,7 @@ Msg("Checking data structures in rpc/xdr.h\n");
 #endif
 
 #if __i386__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
@@ -47,7 +47,7 @@ CheckMemberSize(struct XDR,x_base,4,2,32196)
 CheckOffset(struct XDR,x_base,16,2,32196)
 CheckMemberSize(struct XDR,x_handy,4,2,32197)
 CheckOffset(struct XDR,x_handy,20,2,32197)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct XDR,24, 9934, 10)
 CheckMemberSize(struct XDR,x_ops,0,10,32193)
 CheckOffset(struct XDR,x_ops,4,10,32193)
@@ -106,7 +106,7 @@ Msg("Find size of XDR (9934)\n");
 CheckTypeSize(XDR,24, 10412, 2)
 #elif __ia64__
 CheckTypeSize(XDR,48, 10412, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XDR,24, 10412, 10)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XDR,24, 10412, 6)
@@ -121,7 +121,7 @@ Msg("Find size of XDR (10412)\n");
 CheckTypeSize(xdrproc_t,4, 9948, 2)
 #elif __ia64__
 CheckTypeSize(xdrproc_t,8, 9948, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(xdrproc_t,4, 9948, 10)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(xdrproc_t,4, 9948, 6)
@@ -154,7 +154,7 @@ CheckMemberSize(struct xdr_ops,x_getint32,4,2,32189)
 CheckOffset(struct xdr_ops,x_getint32,32,2,32189)
 CheckMemberSize(struct xdr_ops,x_putint32,4,2,32192)
 CheckOffset(struct xdr_ops,x_putint32,36,2,32192)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct xdr_ops,40, 9935, 10)
 CheckMemberSize(struct xdr_ops,x_putlong,0,10,32168)
 CheckOffset(struct xdr_ops,x_putlong,4,10,32168)
@@ -257,7 +257,7 @@ CheckOffset(struct xdr_discrim,proc,4,6,32199)
 CheckTypeSize(struct xdr_discrim,16, 9949, 9)
 CheckMemberSize(struct xdr_discrim,proc,8,9,32199)
 CheckOffset(struct xdr_discrim,proc,8,9,32199)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct xdr_discrim,8, 9949, 10)
 CheckMemberSize(struct xdr_discrim,proc,0,10,32199)
 CheckOffset(struct xdr_discrim,proc,4,10,32199)

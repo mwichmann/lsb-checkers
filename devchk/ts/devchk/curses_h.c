@@ -1503,7 +1503,7 @@ CheckTypeSize(chtype,4, 8650, 2)
 CheckTypeSize(chtype,8, 8650, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(chtype,4, 8650, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(chtype,4, 8650, 10)
 #elif __powerpc64__
 CheckTypeSize(chtype,8, 8650, 9)
@@ -1518,7 +1518,7 @@ CheckTypeSize(SCREEN,0, 8653, 2)
 CheckTypeSize(SCREEN,0, 8653, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SCREEN,0, 8653, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SCREEN,0, 8653, 10)
 #elif __powerpc64__
 CheckTypeSize(SCREEN,0, 8653, 9)
@@ -1533,7 +1533,7 @@ CheckTypeSize(WINDOW,100, 8655, 2)
 CheckTypeSize(WINDOW,192, 8655, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(WINDOW,124, 8655, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(WINDOW,124, 8655, 10)
 #elif __powerpc64__
 CheckTypeSize(WINDOW,128, 8655, 9)
@@ -1548,7 +1548,7 @@ CheckTypeSize(attr_t,4, 8656, 2)
 CheckTypeSize(attr_t,8, 8656, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(attr_t,4, 8656, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(attr_t,4, 8656, 10)
 #elif __powerpc64__
 CheckTypeSize(attr_t,8, 8656, 9)
@@ -1563,7 +1563,7 @@ CheckTypeSize(cchar_t,24, 8658, 2)
 CheckTypeSize(cchar_t,24, 8658, 6)
 #elif __ia64__
 CheckTypeSize(cchar_t,32, 8658, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(cchar_t,24, 8658, 10)
 #elif __powerpc64__
 CheckTypeSize(cchar_t,32, 8658, 9)
@@ -1612,7 +1612,7 @@ CheckMemberSize(struct pdat,_pad_bottom,2,3,29729)
 CheckOffset(struct pdat,_pad_bottom,8,3,29729)
 CheckMemberSize(struct pdat,_pad_right,2,3,29730)
 CheckOffset(struct pdat,_pad_right,10,3,29730)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct pdat,12, 8663, 10)
 CheckMemberSize(struct pdat,_pad_x,0,10,29726)
 CheckOffset(struct pdat,_pad_x,2,10,29726)
@@ -1813,7 +1813,7 @@ CheckMemberSize(struct _win_st,_yoffset,2,6,29732)
 CheckOffset(struct _win_st,_yoffset,96,6,29732)
 CheckMemberSize(struct _win_st,_bkgrnd,24,6,34437)
 CheckOffset(struct _win_st,_bkgrnd,100,6,34437)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct _win_st,124, 8654, 10)
 CheckMemberSize(struct _win_st,_curx,0,10,29701)
 CheckOffset(struct _win_st,_curx,2,10,29701)
@@ -1946,7 +1946,7 @@ CheckTypeSize(bool,8, 10439, 3)
 CheckTypeSize(bool,1, 10440, 9)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(bool,4, 10441, 10)
 #endif
 

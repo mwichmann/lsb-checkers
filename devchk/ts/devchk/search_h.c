@@ -31,7 +31,7 @@ CheckTypeSize(ENTRY,8, 6953, 2)
 CheckTypeSize(ENTRY,16, 6953, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ENTRY,8, 6953, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ENTRY,8, 6953, 10)
 #elif __powerpc64__
 CheckTypeSize(ENTRY,16, 6953, 9)
@@ -46,7 +46,7 @@ CheckTypeSize(ACTION,4, 9081, 2)
 CheckTypeSize(ACTION,4, 9081, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ACTION,4, 9081, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ACTION,4, 9081, 10)
 #elif __powerpc64__
 CheckTypeSize(ACTION,4, 9081, 9)
@@ -61,7 +61,7 @@ CheckTypeSize(VISIT,4, 9085, 2)
 CheckTypeSize(VISIT,4, 9085, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(VISIT,4, 9085, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(VISIT,4, 9085, 10)
 #elif __powerpc64__
 CheckTypeSize(VISIT,4, 9085, 9)
@@ -76,7 +76,7 @@ CheckTypeSize(__action_fn_t,4, 6956, 2)
 CheckTypeSize(__action_fn_t,8, 6956, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__action_fn_t,4, 6956, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(__action_fn_t,4, 6956, 10)
 #elif __powerpc64__
 CheckTypeSize(__action_fn_t,8, 6956, 9)

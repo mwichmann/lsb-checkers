@@ -242,7 +242,7 @@ cnt++;
 #if __i386__
 #elif __powerpc__ && !__powerpc64__
 #elif __ia64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9056,0);
@@ -255,7 +255,7 @@ CheckTypeSize(pthread_key_t,4, 9059, 2)
 CheckTypeSize(pthread_key_t,4, 9059, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_key_t,4, 9059, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_key_t,4, 9059, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_key_t,4, 9059, 9)
@@ -270,7 +270,7 @@ CheckTypeSize(pthread_once_t,4, 9062, 2)
 CheckTypeSize(pthread_once_t,4, 9062, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_once_t,4, 9062, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_once_t,4, 9062, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_once_t,4, 9062, 9)
@@ -285,7 +285,7 @@ CheckTypeSize(pthread_t,4, 9040, 2)
 CheckTypeSize(pthread_t,8, 9040, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_t,4, 9040, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_t,4, 9040, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_t,8, 9040, 9)
@@ -308,7 +308,7 @@ CheckOffset(struct _pthread_fastlock,__spinlock,8,3,34427)
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 6)
 CheckMemberSize(struct _pthread_fastlock,__spinlock,4,6,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,6,34427)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 10)
 CheckMemberSize(struct _pthread_fastlock,__spinlock,0,10,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427)
@@ -327,7 +327,7 @@ CheckTypeSize(pthread_mutex_t,24, 9047, 2)
 CheckTypeSize(pthread_mutex_t,40, 9047, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_mutex_t,24, 9047, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_mutex_t,24, 9047, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_mutex_t,40, 9047, 9)
@@ -342,7 +342,7 @@ CheckTypeSize(pthread_mutexattr_t,4, 9049, 2)
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 9)
@@ -357,7 +357,7 @@ CheckTypeSize(pthread_attr_t,36, 9042, 2)
 CheckTypeSize(pthread_attr_t,56, 9042, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_attr_t,36, 9042, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_attr_t,36, 9042, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_attr_t,56, 9042, 9)
@@ -372,7 +372,7 @@ CheckTypeSize(pthread_cond_t,12, 9051, 2)
 CheckTypeSize(pthread_cond_t,24, 9051, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_cond_t,12, 9051, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_cond_t,12, 9051, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_cond_t,24, 9051, 9)
@@ -387,7 +387,7 @@ CheckTypeSize(pthread_condattr_t,4, 9053, 2)
 CheckTypeSize(pthread_condattr_t,4, 9053, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_condattr_t,4, 9053, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_condattr_t,4, 9053, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_condattr_t,4, 9053, 9)
@@ -405,7 +405,7 @@ CheckTypeSize(_pthread_descr,4, 9087, 2)
 CheckTypeSize(_pthread_descr,8, 9087, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(_pthread_descr,4, 9087, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(_pthread_descr,4, 9087, 10)
 #elif __powerpc64__
 CheckTypeSize(_pthread_descr,8, 9087, 9)
@@ -420,7 +420,7 @@ CheckTypeSize(pthread_rwlock_t,32, 9055, 2)
 CheckTypeSize(pthread_rwlock_t,32, 9055, 6)
 #elif __ia64__
 CheckTypeSize(pthread_rwlock_t,56, 9055, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_rwlock_t,32, 9055, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_rwlock_t,56, 9055, 9)
@@ -435,7 +435,7 @@ CheckTypeSize(pthread_rwlockattr_t,8, 9057, 2)
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 6)
 #elif __ia64__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 10)
 #elif __powerpc64__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 9)

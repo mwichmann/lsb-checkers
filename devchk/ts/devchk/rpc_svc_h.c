@@ -41,7 +41,7 @@ CheckMemberSize(struct SVCXPRT,xp_p2,4,2,32250)
 CheckOffset(struct SVCXPRT,xp_p2,48,2,32250)
 CheckMemberSize(struct SVCXPRT,xp_pad,256,2,32251)
 CheckOffset(struct SVCXPRT,xp_pad,52,2,32251)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct SVCXPRT,308, 9980, 10)
 CheckMemberSize(struct SVCXPRT,xp_port,0,10,32226)
 CheckOffset(struct SVCXPRT,xp_port,4,10,32226)
@@ -120,7 +120,7 @@ Msg("Find size of SVCXPRT (9980)\n");
 
 #if __i386__
 CheckTypeSize(SVCXPRT,308, 10390, 2)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SVCXPRT,308, 10390, 10)
 #elif __ia64__
 CheckTypeSize(SVCXPRT,336, 10390, 3)
@@ -145,7 +145,7 @@ CheckMemberSize(struct xp_ops,xp_freeargs,4,2,32242)
 CheckOffset(struct xp_ops,xp_freeargs,16,2,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,4,2,32244)
 CheckOffset(struct xp_ops,xp_destroy,20,2,32244)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct xp_ops,24, 9981, 10)
 CheckMemberSize(struct xp_ops,xp_stat,0,10,32231)
 CheckOffset(struct xp_ops,xp_stat,4,10,32231)
@@ -186,7 +186,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 #endif
 
 #ifdef TET_TEST

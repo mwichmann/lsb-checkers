@@ -46,7 +46,7 @@ CheckTypeSize(ConstraintPart,8, 10250, 3)
 CheckTypeSize(ConstraintPart,4, 10250, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ConstraintPart,4, 10250, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ConstraintPart,4, 10250, 10)
 #elif __powerpc64__
 CheckTypeSize(ConstraintPart,8, 10250, 9)
@@ -61,7 +61,7 @@ CheckTypeSize(ConstraintClassPart,48, 10252, 3)
 CheckTypeSize(ConstraintClassPart,28, 10252, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ConstraintClassPart,28, 10252, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ConstraintClassPart,28, 10252, 10)
 #elif __powerpc64__
 CheckTypeSize(ConstraintClassPart,48, 10252, 9)
@@ -76,7 +76,7 @@ CheckTypeSize(ConstraintClassRec,312, 10258, 3)
 CheckTypeSize(ConstraintClassRec,164, 10258, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ConstraintClassRec,164, 10258, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ConstraintClassRec,164, 10258, 10)
 #elif __powerpc64__
 CheckTypeSize(ConstraintClassRec,312, 10258, 9)

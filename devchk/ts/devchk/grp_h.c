@@ -49,7 +49,7 @@ CheckMemberSize(struct group,gr_gid,4,6,29794)
 CheckOffset(struct group,gr_gid,8,6,29794)
 CheckMemberSize(struct group,gr_mem,4,6,29795)
 CheckOffset(struct group,gr_mem,12,6,29795)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct group,16, 6894, 10)
 CheckMemberSize(struct group,gr_passwd,0,10,29793)
 CheckOffset(struct group,gr_passwd,4,10,29793)

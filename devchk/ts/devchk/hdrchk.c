@@ -33,12 +33,16 @@ int architecture=8;
 int architecture=9;
 #define __found_arch__
 #endif
-#if __s390__
+#if __s390__ && !__s390x__
 int architecture=10;
 #define __found_arch__
 #endif
 #if __x86_64__
 int architecture=11;
+#define __found_arch__
+#endif
+#if __s390x__
+int architecture=12;
 #define __found_arch__
 #endif
 #ifndef __found_arch__

@@ -167,7 +167,7 @@ CheckMemberSize(struct sockaddr_in,sin_addr,4,6,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,6,33778)
 CheckMemberSize(struct sockaddr_in,sin_zero,8,6,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,6,33779)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct sockaddr_in,16, 9141, 10)
 CheckMemberSize(struct sockaddr_in,sin_port,0,10,33777)
 CheckOffset(struct sockaddr_in,sin_port,2,10,33777)

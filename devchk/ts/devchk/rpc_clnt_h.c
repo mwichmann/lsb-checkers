@@ -184,7 +184,7 @@ cnt++;
 #endif
 
 #if __i386__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
@@ -201,7 +201,7 @@ CheckOffset(struct rpc_err,ru,4,2,32102)
 CheckTypeSize(struct rpc_err,24, 9917, 3)
 CheckMemberSize(struct rpc_err,ru,16,3,32102)
 CheckOffset(struct rpc_err,ru,8,3,32102)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct rpc_err,12, 9917, 10)
 CheckMemberSize(struct rpc_err,ru,0,10,32102)
 CheckOffset(struct rpc_err,ru,4,10,32102)
@@ -230,7 +230,7 @@ CheckMemberSize(struct clnt_ops,cl_destroy,4,2,32108)
 CheckOffset(struct clnt_ops,cl_destroy,16,2,32108)
 CheckMemberSize(struct clnt_ops,cl_control,4,2,32109)
 CheckOffset(struct clnt_ops,cl_control,20,2,32109)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct clnt_ops,24, 9922, 10)
 CheckMemberSize(struct clnt_ops,cl_abort,0,10,32105)
 CheckOffset(struct clnt_ops,cl_abort,4,10,32105)
@@ -289,7 +289,7 @@ CheckMemberSize(struct CLIENT,cl_ops,4,2,32110)
 CheckOffset(struct CLIENT,cl_ops,4,2,32110)
 CheckMemberSize(struct CLIENT,cl_private,4,2,32111)
 CheckOffset(struct CLIENT,cl_private,8,2,32111)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct CLIENT,12, 9921, 10)
 CheckMemberSize(struct CLIENT,cl_ops,0,10,32110)
 CheckOffset(struct CLIENT,cl_ops,4,10,32110)
@@ -320,7 +320,7 @@ Msg("Find size of CLIENT (9921)\n");
 
 #if __i386__
 CheckTypeSize(CLIENT,12, 10389, 2)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(CLIENT,12, 10389, 10)
 #elif __ia64__
 CheckTypeSize(CLIENT,24, 10389, 3)

@@ -299,7 +299,7 @@ CheckMemberSize(struct lconv,int_p_sign_posn,1,6,34435)
 CheckOffset(struct lconv,int_p_sign_posn,52,6,34435)
 CheckMemberSize(struct lconv,int_n_sign_posn,1,6,34436)
 CheckOffset(struct lconv,int_n_sign_posn,53,6,34436)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct lconv,56, 6919, 10)
 CheckMemberSize(struct lconv,thousands_sep,0,10,29981)
 CheckOffset(struct lconv,thousands_sep,4,10,29981)

@@ -33,7 +33,7 @@ CheckTypeSize(XSyncSystemCounter,16, 8615, 2)
 CheckTypeSize(XSyncSystemCounter,24, 8615, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncSystemCounter,16, 8615, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncSystemCounter,16, 8615, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncSystemCounter,24, 8615, 9)
@@ -48,7 +48,7 @@ CheckTypeSize(XSyncTrigger,20, 8617, 2)
 CheckTypeSize(XSyncTrigger,24, 8617, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncTrigger,20, 8617, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncTrigger,20, 8617, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncTrigger,24, 8617, 9)
@@ -63,7 +63,7 @@ CheckTypeSize(XSyncWaitCondition,28, 8619, 2)
 CheckTypeSize(XSyncWaitCondition,32, 8619, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncWaitCondition,28, 8619, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncWaitCondition,28, 8619, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncWaitCondition,32, 8619, 9)
@@ -78,7 +78,7 @@ CheckTypeSize(XSyncAlarmAttributes,36, 8621, 2)
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncAlarmAttributes,36, 8621, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncAlarmAttributes,36, 8621, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 9)
@@ -93,7 +93,7 @@ CheckTypeSize(XSyncCounter,4, 8609, 2)
 CheckTypeSize(XSyncCounter,8, 8609, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncCounter,4, 8609, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncCounter,4, 8609, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncCounter,8, 8609, 9)
@@ -108,7 +108,7 @@ CheckTypeSize(XSyncAlarm,4, 8610, 2)
 CheckTypeSize(XSyncAlarm,8, 8610, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncAlarm,4, 8610, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncAlarm,4, 8610, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncAlarm,8, 8610, 9)
@@ -123,7 +123,7 @@ CheckTypeSize(XSyncValue,8, 8612, 2)
 CheckTypeSize(XSyncValue,8, 8612, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncValue,8, 8612, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncValue,8, 8612, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncValue,8, 8612, 9)
@@ -138,7 +138,7 @@ CheckTypeSize(XSyncValueType,4, 8964, 2)
 CheckTypeSize(XSyncValueType,4, 8964, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncValueType,4, 8964, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncValueType,4, 8964, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncValueType,4, 8964, 9)
@@ -153,7 +153,7 @@ CheckTypeSize(XSyncTestType,4, 8966, 2)
 CheckTypeSize(XSyncTestType,4, 8966, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncTestType,4, 8966, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncTestType,4, 8966, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncTestType,4, 8966, 9)
@@ -168,7 +168,7 @@ CheckTypeSize(XSyncAlarmState,4, 8968, 2)
 CheckTypeSize(XSyncAlarmState,4, 8968, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSyncAlarmState,4, 8968, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSyncAlarmState,4, 8968, 10)
 #elif __powerpc64__
 CheckTypeSize(XSyncAlarmState,4, 8968, 9)

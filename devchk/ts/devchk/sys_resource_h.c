@@ -169,7 +169,7 @@ CheckTypeSize(rlim_t,4, 10210, 2)
 CheckTypeSize(rlim_t,8, 10210, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rlim_t,4, 10210, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(rlim_t,4, 10210, 10)
 #elif __powerpc64__
 CheckTypeSize(rlim_t,8, 10210, 9)
@@ -184,7 +184,7 @@ CheckTypeSize(rlim64_t,8, 10273, 2)
 CheckTypeSize(rlim64_t,8, 10273, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rlim64_t,8, 10273, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(rlim64_t,8, 10273, 10)
 #elif __powerpc64__
 CheckTypeSize(rlim64_t,8, 10273, 9)
@@ -209,7 +209,7 @@ CheckOffset(struct rlimit,rlim_max,8,3,34263)
 CheckTypeSize(struct rlimit,8, 9120, 6)
 CheckMemberSize(struct rlimit,rlim_max,4,6,34263)
 CheckOffset(struct rlimit,rlim_max,4,6,34263)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct rlimit,8, 9120, 10)
 CheckMemberSize(struct rlimit,rlim_max,0,10,34263)
 CheckOffset(struct rlimit,rlim_max,4,10,34263)
@@ -236,7 +236,7 @@ CheckOffset(struct rlimit64,rlim_max,8,3,34267)
 CheckTypeSize(struct rlimit64,16, 9122, 6)
 CheckMemberSize(struct rlimit64,rlim_max,8,6,34267)
 CheckOffset(struct rlimit64,rlim_max,8,6,34267)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct rlimit64,16, 9122, 10)
 CheckMemberSize(struct rlimit64,rlim_max,0,10,34267)
 CheckOffset(struct rlimit64,rlim_max,8,10,34267)
@@ -349,7 +349,7 @@ CheckMemberSize(struct rusage,ru_nvcsw,4,6,34260)
 CheckOffset(struct rusage,ru_nvcsw,64,6,34260)
 CheckMemberSize(struct rusage,ru_nivcsw,4,6,34261)
 CheckOffset(struct rusage,ru_nivcsw,68,6,34261)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct rusage,72, 9125, 10)
 CheckMemberSize(struct rusage,ru_stime,0,10,34247)
 CheckOffset(struct rusage,ru_stime,8,10,34247)

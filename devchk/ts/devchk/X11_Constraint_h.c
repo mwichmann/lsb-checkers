@@ -36,7 +36,7 @@ CheckTypeSize(ConstraintWidgetClass,8, 10260, 3)
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 10)
 #elif __powerpc64__
 CheckTypeSize(ConstraintWidgetClass,8, 10260, 9)

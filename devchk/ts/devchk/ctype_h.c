@@ -26,7 +26,7 @@ Msg("Checking data structures in ctype.h\n");
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8976,0);

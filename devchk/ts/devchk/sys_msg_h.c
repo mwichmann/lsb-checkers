@@ -47,11 +47,11 @@ CheckTypeSize(msglen_t,4, 10214, 2)
 CheckTypeSize(msglen_t,4, 10489, 6)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(msglen_t,4, 10490, 10)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(msgqnum_t,4, 10491, 10)
 #endif
 
@@ -145,7 +145,7 @@ CheckMemberSize(struct msqid_ds,msg_lrpid,4,6,34753)
 CheckOffset(struct msqid_ds,msg_lrpid,88,6,34753)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(struct msqid_ds,88, 10406, 10)
 CheckMemberSize(struct msqid_ds,msg_perm,48,10,34754)
 CheckOffset(struct msqid_ds,msg_perm,0,10,34754)

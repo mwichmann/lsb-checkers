@@ -659,7 +659,7 @@ CheckTypeSize(GLenum,4, 8143, 2)
 CheckTypeSize(GLenum,4, 8143, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLenum,4, 8143, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLenum,4, 8143, 10)
 #elif __powerpc64__
 CheckTypeSize(GLenum,4, 8143, 9)
@@ -674,7 +674,7 @@ CheckTypeSize(GLboolean,1, 8144, 2)
 CheckTypeSize(GLboolean,1, 8144, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLboolean,1, 8144, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLboolean,1, 8144, 10)
 #elif __powerpc64__
 CheckTypeSize(GLboolean,1, 8144, 9)
@@ -689,7 +689,7 @@ CheckTypeSize(GLbitfield,4, 8145, 2)
 CheckTypeSize(GLbitfield,4, 8145, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLbitfield,4, 8145, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLbitfield,4, 8145, 10)
 #elif __powerpc64__
 CheckTypeSize(GLbitfield,4, 8145, 9)
@@ -704,7 +704,7 @@ CheckTypeSize(GLvoid,1, 8146, 3)
 CheckTypeSize(GLvoid,1, 8146, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLvoid,1, 8146, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLvoid,1, 8146, 10)
 #elif __powerpc64__
 CheckTypeSize(GLvoid,1, 8146, 9)
@@ -719,7 +719,7 @@ CheckTypeSize(GLbyte,1, 8147, 2)
 CheckTypeSize(GLbyte,1, 8147, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLbyte,1, 8147, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLbyte,1, 8147, 10)
 #elif __powerpc64__
 CheckTypeSize(GLbyte,1, 8147, 9)
@@ -734,7 +734,7 @@ CheckTypeSize(GLshort,2, 8148, 2)
 CheckTypeSize(GLshort,2, 8148, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLshort,2, 8148, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLshort,2, 8148, 10)
 #elif __powerpc64__
 CheckTypeSize(GLshort,2, 8148, 9)
@@ -749,7 +749,7 @@ CheckTypeSize(GLint,4, 8149, 2)
 CheckTypeSize(GLint,4, 8149, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLint,4, 8149, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLint,4, 8149, 10)
 #elif __powerpc64__
 CheckTypeSize(GLint,4, 8149, 9)
@@ -764,7 +764,7 @@ CheckTypeSize(GLubyte,1, 8150, 2)
 CheckTypeSize(GLubyte,1, 8150, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLubyte,1, 8150, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLubyte,1, 8150, 10)
 #elif __powerpc64__
 CheckTypeSize(GLubyte,1, 8150, 9)
@@ -779,7 +779,7 @@ CheckTypeSize(GLushort,2, 8151, 2)
 CheckTypeSize(GLushort,2, 8151, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLushort,2, 8151, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLushort,2, 8151, 10)
 #elif __powerpc64__
 CheckTypeSize(GLushort,2, 8151, 9)
@@ -794,7 +794,7 @@ CheckTypeSize(GLuint,4, 8152, 2)
 CheckTypeSize(GLuint,4, 8152, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLuint,4, 8152, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLuint,4, 8152, 10)
 #elif __powerpc64__
 CheckTypeSize(GLuint,4, 8152, 9)
@@ -809,7 +809,7 @@ CheckTypeSize(GLsizei,4, 8153, 2)
 CheckTypeSize(GLsizei,4, 8153, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLsizei,4, 8153, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLsizei,4, 8153, 10)
 #elif __powerpc64__
 CheckTypeSize(GLsizei,4, 8153, 9)
@@ -824,7 +824,7 @@ CheckTypeSize(GLfloat,4, 8154, 2)
 CheckTypeSize(GLfloat,4, 8154, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLfloat,4, 8154, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLfloat,4, 8154, 10)
 #elif __powerpc64__
 CheckTypeSize(GLfloat,4, 8154, 9)
@@ -839,7 +839,7 @@ CheckTypeSize(GLclampf,4, 8155, 2)
 CheckTypeSize(GLclampf,4, 8155, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLclampf,4, 8155, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLclampf,4, 8155, 10)
 #elif __powerpc64__
 CheckTypeSize(GLclampf,4, 8155, 9)
@@ -854,7 +854,7 @@ CheckTypeSize(GLdouble,8, 8156, 2)
 CheckTypeSize(GLdouble,8, 8156, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLdouble,8, 8156, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLdouble,8, 8156, 10)
 #elif __powerpc64__
 CheckTypeSize(GLdouble,8, 8156, 9)
@@ -869,7 +869,7 @@ CheckTypeSize(GLclampd,8, 8157, 2)
 CheckTypeSize(GLclampd,8, 8157, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(GLclampd,8, 8157, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(GLclampd,8, 8157, 10)
 #elif __powerpc64__
 CheckTypeSize(GLclampd,8, 8157, 9)
