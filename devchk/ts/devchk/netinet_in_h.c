@@ -337,65 +337,16 @@ CheckOffset(struct ip_mreq,imr_interface,4,1,33769)
 CheckTypeSize(in_port_t,2, 10888, 1)
 #endif
 
-#if __i386__
-CheckTypeSize(struct sockaddr_in,16, 9141, 2)
-CheckMemberSize(struct sockaddr_in,sin_port,2,2,33777)
-CheckOffset(struct sockaddr_in,sin_port,2,2,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,4,2,33778)
-CheckOffset(struct sockaddr_in,sin_addr,4,2,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,8,2,33779)
-CheckOffset(struct sockaddr_in,sin_zero,8,2,33779)
-#elif __ia64__
-CheckTypeSize(struct sockaddr_in,16, 9141, 3)
-CheckMemberSize(struct sockaddr_in,sin_port,2,3,33777)
-CheckOffset(struct sockaddr_in,sin_port,2,3,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,4,3,33778)
-CheckOffset(struct sockaddr_in,sin_addr,4,3,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,8,3,33779)
-CheckOffset(struct sockaddr_in,sin_zero,8,3,33779)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct sockaddr_in,16, 9141, 6)
-CheckMemberSize(struct sockaddr_in,sin_port,2,6,33777)
-CheckOffset(struct sockaddr_in,sin_port,2,6,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,4,6,33778)
-CheckOffset(struct sockaddr_in,sin_addr,4,6,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,8,6,33779)
-CheckOffset(struct sockaddr_in,sin_zero,8,6,33779)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct sockaddr_in,16, 9141, 10)
-CheckMemberSize(struct sockaddr_in,sin_port,2,10,33777)
-CheckOffset(struct sockaddr_in,sin_port,2,10,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,4,10,33778)
-CheckOffset(struct sockaddr_in,sin_addr,4,10,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,8,10,33779)
-CheckOffset(struct sockaddr_in,sin_zero,8,10,33779)
-#elif __powerpc64__
-CheckTypeSize(struct sockaddr_in,16, 9141, 9)
-CheckMemberSize(struct sockaddr_in,sin_port,2,9,33777)
-CheckOffset(struct sockaddr_in,sin_port,2,9,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,4,9,33778)
-CheckOffset(struct sockaddr_in,sin_addr,4,9,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,8,9,33779)
-CheckOffset(struct sockaddr_in,sin_zero,8,9,33779)
-#elif __s390x__
-CheckTypeSize(struct sockaddr_in,16, 9141, 12)
-CheckMemberSize(struct sockaddr_in,sin_port,2,12,33777)
-CheckOffset(struct sockaddr_in,sin_port,2,12,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,4,12,33778)
-CheckOffset(struct sockaddr_in,sin_addr,4,12,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,8,12,33779)
-CheckOffset(struct sockaddr_in,sin_zero,8,12,33779)
-#elif __x86_64__
-CheckTypeSize(struct sockaddr_in,16, 9141, 11)
-CheckMemberSize(struct sockaddr_in,sin_port,2,11,33777)
-CheckOffset(struct sockaddr_in,sin_port,2,11,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,4,11,33778)
-CheckOffset(struct sockaddr_in,sin_addr,4,11,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,8,11,33779)
-CheckOffset(struct sockaddr_in,sin_zero,8,11,33779)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
-Msg("Find size of sockaddr_in (9141)\n");
+#if 1
+CheckTypeSize(struct sockaddr_in,16, 9141, 1)
+CheckMemberSize(struct sockaddr_in,sin_family,2,1,33776)
+CheckOffset(struct sockaddr_in,sin_family,0,1,33776)
+CheckMemberSize(struct sockaddr_in,sin_port,2,1,33777)
+CheckOffset(struct sockaddr_in,sin_port,2,1,33777)
+CheckMemberSize(struct sockaddr_in,sin_addr,4,1,33778)
+CheckOffset(struct sockaddr_in,sin_addr,4,1,33778)
+CheckMemberSize(struct sockaddr_in,sin_zero,8,1,33779)
+CheckOffset(struct sockaddr_in,sin_zero,8,1,33779)
 #endif
 
 #if 1
