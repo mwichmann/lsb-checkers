@@ -1296,6 +1296,21 @@ struct versym libc_so_6[] = {
 #if __i386__
 	{"atoll","GLIBC_2.0"},
 #endif
+#if __ia64__
+	{"atoll","GLIBC_2.0"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"atoll","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"atoll","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"atoll","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"atoll","GLIBC_2.0"},
+#endif
 #if __i386__
 	{"authnone_create","GLIBC_2.0"},
 #endif
@@ -10758,6 +10773,21 @@ struct versym libc_so_6[] = {
 #if __i386__
 	{"vfscanf","GLIBC_2.0"},
 #endif
+#if __ia64__
+	{"vfscanf","GLIBC_2.0"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"vfscanf","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"vfscanf","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"vfscanf","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"vfscanf","GLIBC_2.0"},
+#endif
 #if __i386__
 	{"vfwprintf","GLIBC_2.2"},
 #endif
@@ -10806,6 +10836,21 @@ struct versym libc_so_6[] = {
 #if __i386__
 	{"vscanf","GLIBC_2.0"},
 #endif
+#if __ia64__
+	{"vscanf","GLIBC_2.0"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"vscanf","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"vscanf","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"vscanf","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"vscanf","GLIBC_2.0"},
+#endif
 #if __i386__
 	{"vsnprintf","GLIBC_2.0"},
 #endif
@@ -10837,6 +10882,21 @@ struct versym libc_so_6[] = {
 	{"vsprintf","GLIBC_2.0"},
 #endif
 #if __i386__
+	{"vsscanf","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"vsscanf","GLIBC_2.0"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"vsscanf","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"vsscanf","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"vsscanf","GLIBC_2.0"},
+#endif
+#if __x86_64__
 	{"vsscanf","GLIBC_2.0"},
 #endif
 #if __i386__
