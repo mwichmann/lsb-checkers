@@ -1356,22 +1356,6 @@ CheckMemberSize(struct sigcontext,sregs,8,12,40618)
 CheckOffset(struct sigcontext,sregs,8,12,40618)
 #endif
 
-#if __powerpc64__
-CheckTypeSize(elf_greg_t,8, 10825, 9)
-#endif
-
-#if __powerpc64__
-CheckTypeSize(elf_fpreg_t,8, 10828, 9)
-#endif
-
-#if __powerpc64__
-CheckTypeSize(elf_gregset_t,512, 10827, 9)
-#endif
-
-#if __powerpc64__
-CheckTypeSize(elf_fpregset_t,264, 10830, 9)
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
