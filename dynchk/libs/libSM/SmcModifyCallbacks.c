@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <X11/SM/SMlib.h>
 #undef SmcModifyCallbacks
-static void(*funcptr) (SmcConn , unsigned long , SmcCallbacks * ) = 0;
+static void(*funcptr) (SmcConn , unsigned long int , SmcCallbacks * ) = 0;
 
 extern int __lsb_check_params;
-void SmcModifyCallbacks (SmcConn arg0 , unsigned long arg1 , SmcCallbacks * arg2 )
+void SmcModifyCallbacks (SmcConn arg0 , unsigned long int arg1 , SmcCallbacks * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
