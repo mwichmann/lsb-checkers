@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(pid_t, int) = 0;
+#undef killpg
+static int(*funcptr) (pid_t , int ) = 0;
 
-int killpg(pid_t arg0, int arg1)
+int killpg (pid_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "killpg");
@@ -14,7 +15,7 @@ int killpg(pid_t arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_killpg(pid_t arg0, int arg1)
+int lsb_killpg (pid_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "killpg");

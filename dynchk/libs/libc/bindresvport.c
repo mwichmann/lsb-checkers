@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, struct sockaddr_in *) = 0;
+#undef bindresvport
+static int(*funcptr) (int , struct sockaddr_in * ) = 0;
 
-int bindresvport(int arg0, struct sockaddr_in * arg1)
+int bindresvport (int arg0 , struct sockaddr_in * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bindresvport");
@@ -13,7 +14,7 @@ int bindresvport(int arg0, struct sockaddr_in * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_bindresvport(int arg0, struct sockaddr_in * arg1)
+int lsb_bindresvport (int arg0 , struct sockaddr_in * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bindresvport");

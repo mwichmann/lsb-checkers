@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef mlockall
+static int(*funcptr) (int ) = 0;
 
-int mlockall(int arg0)
+int mlockall (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlockall");
@@ -12,7 +13,7 @@ int mlockall(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_mlockall(int arg0)
+int lsb_mlockall (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlockall");

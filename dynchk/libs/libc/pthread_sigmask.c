@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, const sigset_t *, sigset_t *) = 0;
+#undef pthread_sigmask
+static int(*funcptr) (int , const sigset_t * , sigset_t * ) = 0;
 
-int pthread_sigmask(int arg0, const sigset_t * arg1, sigset_t * arg2)
+int pthread_sigmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_sigmask");
@@ -14,7 +15,7 @@ int pthread_sigmask(int arg0, const sigset_t * arg1, sigset_t * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_pthread_sigmask(int arg0, const sigset_t * arg1, sigset_t * arg2)
+int lsb_pthread_sigmask (int arg0 , const sigset_t * arg1 , sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_sigmask");

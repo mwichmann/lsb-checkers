@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static size_t(*funcptr)(const char *, const char *) = 0;
+#undef strspn
+static size_t(*funcptr) (const char * , const char * ) = 0;
 
-size_t strspn(const char * arg0, const char * arg1)
+size_t strspn (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strspn");
@@ -13,7 +14,7 @@ size_t strspn(const char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-size_t lsb_strspn(const char * arg0, const char * arg1)
+size_t lsb_strspn (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strspn");

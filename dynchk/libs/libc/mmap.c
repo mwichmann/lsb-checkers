@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <sys/types.h>
-static void *(*funcptr)(void *, size_t, int, int, int, off_t) = 0;
+#undef mmap
+static void *(*funcptr) (void * , size_t , int , int , int , off_t ) = 0;
 
-void * mmap(void * arg0, size_t arg1, int arg2, int arg3, int arg4, off_t arg5)
+void * mmap (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off_t arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mmap");
@@ -19,7 +20,7 @@ void * mmap(void * arg0, size_t arg1, int arg2, int arg3, int arg4, off_t arg5)
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void * lsb_mmap(void * arg0, size_t arg1, int arg2, int arg3, int arg4, off_t arg5)
+void * lsb_mmap (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off_t arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mmap");

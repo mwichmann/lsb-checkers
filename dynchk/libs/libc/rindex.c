@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const char *, int) = 0;
+#undef rindex
+static char *(*funcptr) (const char * , int ) = 0;
 
-char * rindex(const char * arg0, int arg1)
+char * rindex (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rindex");
@@ -13,7 +14,7 @@ char * rindex(const char * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_rindex(const char * arg0, int arg1)
+char * lsb_rindex (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rindex");

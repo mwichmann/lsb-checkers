@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void *(*funcptr)(ptrdiff_t) = 0;
+#undef sbrk
+static void *(*funcptr) (ptrdiff_t ) = 0;
 
-void * sbrk(ptrdiff_t arg0)
+void * sbrk (ptrdiff_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sbrk");
@@ -13,7 +14,7 @@ void * sbrk(ptrdiff_t arg0)
 	return funcptr(arg0);
 }
 
-void * lsb_sbrk(ptrdiff_t arg0)
+void * lsb_sbrk (ptrdiff_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sbrk");

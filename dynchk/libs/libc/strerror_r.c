@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static char *(*funcptr)(int, char *, size_t) = 0;
+#undef strerror_r
+static char *(*funcptr) (int , char * , size_t ) = 0;
 
-char * strerror_r(int arg0, char * arg1, size_t arg2)
+char * strerror_r (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strerror_r");
@@ -15,7 +16,7 @@ char * strerror_r(int arg0, char * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_strerror_r(int arg0, char * arg1, size_t arg2)
+char * lsb_strerror_r (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strerror_r");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static void(*funcptr)(FILE *) = 0;
+#undef flockfile
+static void(*funcptr) (FILE * ) = 0;
 
-void flockfile(FILE * arg0)
+void flockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flockfile");
@@ -13,7 +14,7 @@ void flockfile(FILE * arg0)
 	funcptr(arg0);
 }
 
-void lsb_flockfile(FILE * arg0)
+void lsb_flockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "flockfile");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(pid_t, int, const union sigval) = 0;
+#undef sigqueue
+static int(*funcptr) (pid_t , int , const union sigval ) = 0;
 
-int sigqueue(pid_t arg0, int arg1, const union sigval arg2)
+int sigqueue (pid_t arg0 , int arg1 , const union sigval arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigqueue");
@@ -15,7 +16,7 @@ int sigqueue(pid_t arg0, int arg1, const union sigval arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sigqueue(pid_t arg0, int arg1, const union sigval arg2)
+int lsb_sigqueue (pid_t arg0 , int arg1 , const union sigval arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigqueue");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static wchar_t *(*funcptr)(wchar_t *, int, FILE *) = 0;
+#undef fgetws
+static wchar_t *(*funcptr) (wchar_t * , int , FILE * ) = 0;
 
-wchar_t * fgetws(wchar_t * arg0, int arg1, FILE * arg2)
+wchar_t * fgetws (wchar_t * arg0 , int arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetws");
@@ -15,7 +16,7 @@ wchar_t * fgetws(wchar_t * arg0, int arg1, FILE * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-wchar_t * lsb_fgetws(wchar_t * arg0, int arg1, FILE * arg2)
+wchar_t * lsb_fgetws (wchar_t * arg0 , int arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetws");

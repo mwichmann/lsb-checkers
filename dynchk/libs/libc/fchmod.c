@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(int, mode_t) = 0;
+#undef fchmod
+static int(*funcptr) (int , mode_t ) = 0;
 
-int fchmod(int arg0, mode_t arg1)
+int fchmod (int arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchmod");
@@ -14,7 +15,7 @@ int fchmod(int arg0, mode_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fchmod(int arg0, mode_t arg1)
+int lsb_fchmod (int arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchmod");

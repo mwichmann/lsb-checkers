@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <signal.h>
-static sighandler_t(*funcptr)(int, sighandler_t) = 0;
+#undef sigset
+static sighandler_t(*funcptr) (int , sighandler_t ) = 0;
 
-sighandler_t sigset(int arg0, sighandler_t arg1)
+sighandler_t sigset (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigset");
@@ -14,7 +15,7 @@ sighandler_t sigset(int arg0, sighandler_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-sighandler_t lsb_sigset(int arg0, sighandler_t arg1)
+sighandler_t lsb_sigset (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigset");

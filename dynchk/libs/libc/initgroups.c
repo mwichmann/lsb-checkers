@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(const char *, gid_t) = 0;
+#undef initgroups
+static int(*funcptr) (const char * , gid_t ) = 0;
 
-int initgroups(const char * arg0, gid_t arg1)
+int initgroups (const char * arg0 , gid_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initgroups");
@@ -14,7 +15,7 @@ int initgroups(const char * arg0, gid_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_initgroups(const char * arg0, gid_t arg1)
+int lsb_initgroups (const char * arg0 , gid_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initgroups");

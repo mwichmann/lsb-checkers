@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(regex_t *, const char *, int) = 0;
+#undef regcomp
+static int(*funcptr) (regex_t * , const char * , int ) = 0;
 
-int regcomp(regex_t * arg0, const char * arg1, int arg2)
+int regcomp (regex_t * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regcomp");
@@ -14,7 +15,7 @@ int regcomp(regex_t * arg0, const char * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_regcomp(regex_t * arg0, const char * arg1, int arg2)
+int lsb_regcomp (regex_t * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regcomp");

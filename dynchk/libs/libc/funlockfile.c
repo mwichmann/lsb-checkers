@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static void(*funcptr)(FILE *) = 0;
+#undef funlockfile
+static void(*funcptr) (FILE * ) = 0;
 
-void funlockfile(FILE * arg0)
+void funlockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "funlockfile");
@@ -13,7 +14,7 @@ void funlockfile(FILE * arg0)
 	funcptr(arg0);
 }
 
-void lsb_funlockfile(FILE * arg0)
+void lsb_funlockfile (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "funlockfile");

@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <wctype.h>
 #include <wctype.h>
-static wint_t(*funcptr)(wint_t, wctrans_t) = 0;
+#undef towctrans
+static wint_t(*funcptr) (wint_t , wctrans_t ) = 0;
 
-wint_t towctrans(wint_t arg0, wctrans_t arg1)
+wint_t towctrans (wint_t arg0 , wctrans_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towctrans");
@@ -15,7 +16,7 @@ wint_t towctrans(wint_t arg0, wctrans_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-wint_t lsb_towctrans(wint_t arg0, wctrans_t arg1)
+wint_t lsb_towctrans (wint_t arg0 , wctrans_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towctrans");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static wctype_t(*funcptr)(const char *) = 0;
+#undef wctype
+static wctype_t(*funcptr) (const char * ) = 0;
 
-wctype_t wctype(const char * arg0)
+wctype_t wctype (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctype");
@@ -12,7 +13,7 @@ wctype_t wctype(const char * arg0)
 	return funcptr(arg0);
 }
 
-wctype_t lsb_wctype(const char * arg0)
+wctype_t lsb_wctype (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctype");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(const char *, char * *, int) = 0;
+#undef __strtof_internal
+static float(*funcptr) (const char * , char * * , int ) = 0;
 
-float __strtof_internal(const char * arg0, char * * arg1, int arg2)
+float __strtof_internal (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtof_internal");
@@ -14,7 +15,7 @@ float __strtof_internal(const char * arg0, char * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-float lsb___strtof_internal(const char * arg0, char * * arg1, int arg2)
+float lsb___strtof_internal (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtof_internal");

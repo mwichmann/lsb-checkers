@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static SVCXPRT *(*funcptr)(int) = 0;
+#undef svcudp_create
+static SVCXPRT *(*funcptr) (int ) = 0;
 
-SVCXPRT * svcudp_create(int arg0)
+SVCXPRT * svcudp_create (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcudp_create");
@@ -12,7 +13,7 @@ SVCXPRT * svcudp_create(int arg0)
 	return funcptr(arg0);
 }
 
-SVCXPRT * lsb_svcudp_create(int arg0)
+SVCXPRT * lsb_svcudp_create (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcudp_create");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef sched_get_priority_max
+static int(*funcptr) (int ) = 0;
 
-int sched_get_priority_max(int arg0)
+int sched_get_priority_max (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_get_priority_max");
@@ -12,7 +13,7 @@ int sched_get_priority_max(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sched_get_priority_max(int arg0)
+int lsb_sched_get_priority_max (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_get_priority_max");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(sigset_t *, siginfo_t *, struct timespec *) = 0;
+#undef sigtimedwait
+static int(*funcptr) (sigset_t * , siginfo_t * , struct timespec * ) = 0;
 
-int sigtimedwait(sigset_t * arg0, siginfo_t * arg1, struct timespec * arg2)
+int sigtimedwait (sigset_t * arg0 , siginfo_t * arg1 , struct timespec * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigtimedwait");
@@ -14,7 +15,7 @@ int sigtimedwait(sigset_t * arg0, siginfo_t * arg1, struct timespec * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sigtimedwait(sigset_t * arg0, siginfo_t * arg1, struct timespec * arg2)
+int lsb_sigtimedwait (sigset_t * arg0 , siginfo_t * arg1 , struct timespec * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigtimedwait");

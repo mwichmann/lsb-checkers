@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(long) = 0;
+#undef srand48
+static void(*funcptr) (long ) = 0;
 
-void srand48(long arg0)
+void srand48 (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srand48");
@@ -12,7 +13,7 @@ void srand48(long arg0)
 	funcptr(arg0);
 }
 
-void lsb_srand48(long arg0)
+void lsb_srand48 (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srand48");

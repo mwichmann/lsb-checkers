@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(sigset_t *, int) = 0;
+#undef sigdelset
+static int(*funcptr) (sigset_t * , int ) = 0;
 
-int sigdelset(sigset_t * arg0, int arg1)
+int sigdelset (sigset_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigdelset");
@@ -13,7 +14,7 @@ int sigdelset(sigset_t * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sigdelset(sigset_t * arg0, int arg1)
+int lsb_sigdelset (sigset_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigdelset");

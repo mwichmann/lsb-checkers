@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int *(*funcptr)() = 0;
+#undef __errno_location
+static int *(*funcptr) () = 0;
 
-int * __errno_location()
+int * __errno_location ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__errno_location");
 	return funcptr();
 }
 
-int * lsb___errno_location()
+int * lsb___errno_location ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__errno_location");

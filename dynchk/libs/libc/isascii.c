@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef isascii
+static int(*funcptr) (int ) = 0;
 
-int isascii(int arg0)
+int isascii (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isascii");
@@ -12,7 +13,7 @@ int isascii(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_isascii(int arg0)
+int lsb_isascii (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isascii");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef fsync
+static int(*funcptr) (int ) = 0;
 
-int fsync(int arg0)
+int fsync (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsync");
@@ -12,7 +13,7 @@ int fsync(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_fsync(int arg0)
+int lsb_fsync (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsync");

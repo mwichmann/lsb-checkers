@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(char *, size_t) = 0;
+#undef mblen
+static int(*funcptr) (const char * , size_t ) = 0;
 
-int mblen(char * arg0, size_t arg1)
+int mblen (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mblen");
@@ -14,7 +15,7 @@ int mblen(char * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_mblen(char * arg0, size_t arg1)
+int lsb_mblen (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mblen");

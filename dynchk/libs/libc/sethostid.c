@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(long) = 0;
+#undef sethostid
+static int(*funcptr) (long ) = 0;
 
-int sethostid(long arg0)
+int sethostid (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sethostid");
@@ -12,7 +13,7 @@ int sethostid(long arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sethostid(long arg0)
+int lsb_sethostid (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sethostid");

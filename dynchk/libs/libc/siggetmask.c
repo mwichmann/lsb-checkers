@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef siggetmask
+static int(*funcptr) () = 0;
 
-int siggetmask()
+int siggetmask ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siggetmask");
 	return funcptr();
 }
 
-int lsb_siggetmask()
+int lsb_siggetmask ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siggetmask");

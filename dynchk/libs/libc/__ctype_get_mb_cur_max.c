@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static size_t(*funcptr)() = 0;
+#undef __ctype_get_mb_cur_max
+static size_t(*funcptr) () = 0;
 
-size_t __ctype_get_mb_cur_max()
+size_t __ctype_get_mb_cur_max ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_get_mb_cur_max");
 	return funcptr();
 }
 
-size_t lsb___ctype_get_mb_cur_max()
+size_t lsb___ctype_get_mb_cur_max ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_get_mb_cur_max");

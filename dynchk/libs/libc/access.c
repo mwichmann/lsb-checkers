@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *, int) = 0;
+#undef access
+static int(*funcptr) (const char * , int ) = 0;
 
-int access(const char * arg0, int arg1)
+int access (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "access");
@@ -13,7 +14,7 @@ int access(const char * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_access(const char * arg0, int arg1)
+int lsb_access (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "access");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, struct msqid_ds *) = 0;
+#undef msgctl
+static int(*funcptr) (int , int , struct msqid_ds * ) = 0;
 
-int msgctl(int arg0, int arg1, struct msqid_ds * arg2)
+int msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgctl");
@@ -14,7 +15,7 @@ int msgctl(int arg0, int arg1, struct msqid_ds * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_msgctl(int arg0, int arg1, struct msqid_ds * arg2)
+int lsb_msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgctl");

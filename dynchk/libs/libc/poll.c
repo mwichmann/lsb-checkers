@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct pollfd *, unsigned int, int) = 0;
+#undef poll
+static int(*funcptr) (struct pollfd * , unsigned int , int ) = 0;
 
-int poll(struct pollfd * arg0, unsigned int arg1, int arg2)
+int poll (struct pollfd * arg0 , unsigned int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "poll");
@@ -14,7 +15,7 @@ int poll(struct pollfd * arg0, unsigned int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_poll(struct pollfd * arg0, unsigned int arg1, int arg2)
+int lsb_poll (struct pollfd * arg0 , unsigned int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "poll");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef endgrent
+static void(*funcptr) () = 0;
 
-void endgrent()
+void endgrent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endgrent");
 	funcptr();
 }
 
-void lsb_endgrent()
+void lsb_endgrent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endgrent");

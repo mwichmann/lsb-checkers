@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(unsigned short) = 0;
+#undef lcong48
+static void(*funcptr) (unsigned short [7]) = 0;
 
-void lcong48(unsigned short arg0)
+void lcong48 (unsigned short arg0 [7])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lcong48");
@@ -12,7 +13,7 @@ void lcong48(unsigned short arg0)
 	funcptr(arg0);
 }
 
-void lsb_lcong48(unsigned short arg0)
+void lsb_lcong48 (unsigned short arg0 [7])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lcong48");

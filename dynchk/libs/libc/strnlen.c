@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static size_t(*funcptr)(const char *, size_t) = 0;
+#undef strnlen
+static size_t(*funcptr) (const char * , size_t ) = 0;
 
-size_t strnlen(const char * arg0, size_t arg1)
+size_t strnlen (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strnlen");
@@ -14,7 +15,7 @@ size_t strnlen(const char * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-size_t lsb_strnlen(const char * arg0, size_t arg1)
+size_t lsb_strnlen (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strnlen");

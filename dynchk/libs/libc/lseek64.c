@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static loff_t(*funcptr)(int, loff_t, int) = 0;
+#undef lseek64
+static loff_t(*funcptr) (int , loff_t , int ) = 0;
 
-loff_t lseek64(int arg0, loff_t arg1, int arg2)
+loff_t lseek64 (int arg0 , loff_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lseek64");
@@ -15,7 +16,7 @@ loff_t lseek64(int arg0, loff_t arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-loff_t lsb_lseek64(int arg0, loff_t arg1, int arg2)
+loff_t lsb_lseek64 (int arg0 , loff_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lseek64");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef sighold
+static int(*funcptr) (int ) = 0;
 
-int sighold(int arg0)
+int sighold (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sighold");
@@ -12,7 +13,7 @@ int sighold(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sighold(int arg0)
+int lsb_sighold (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sighold");

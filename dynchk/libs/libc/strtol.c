@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(const char *, char * *, int) = 0;
+#undef strtol
+static long(*funcptr) (const char * , char * * , int ) = 0;
 
-long strtol(const char * arg0, char * * arg1, int arg2)
+long strtol (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtol");
@@ -14,7 +15,7 @@ long strtol(const char * arg0, char * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-long lsb_strtol(const char * arg0, char * * arg1, int arg2)
+long lsb_strtol (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtol");

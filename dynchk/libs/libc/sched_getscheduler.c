@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(pid_t) = 0;
+#undef sched_getscheduler
+static int(*funcptr) (pid_t ) = 0;
 
-int sched_getscheduler(pid_t arg0)
+int sched_getscheduler (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_getscheduler");
@@ -13,7 +14,7 @@ int sched_getscheduler(pid_t arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sched_getscheduler(pid_t arg0)
+int lsb_sched_getscheduler (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_getscheduler");

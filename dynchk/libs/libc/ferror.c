@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(FILE *) = 0;
+#undef ferror
+static int(*funcptr) (FILE * ) = 0;
 
-int ferror(FILE * arg0)
+int ferror (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ferror");
@@ -13,7 +14,7 @@ int ferror(FILE * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_ferror(FILE * arg0)
+int lsb_ferror (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ferror");

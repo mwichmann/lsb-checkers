@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(pid_t, struct sched_param *) = 0;
+#undef sched_setparam
+static int(*funcptr) (pid_t , struct sched_param * ) = 0;
 
-int sched_setparam(pid_t arg0, struct sched_param * arg1)
+int sched_setparam (pid_t arg0 , struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setparam");
@@ -14,7 +15,7 @@ int sched_setparam(pid_t arg0, struct sched_param * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sched_setparam(pid_t arg0, struct sched_param * arg1)
+int lsb_sched_setparam (pid_t arg0 , struct sched_param * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setparam");

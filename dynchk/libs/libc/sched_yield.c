@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef sched_yield
+static int(*funcptr) () = 0;
 
-int sched_yield()
+int sched_yield ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_yield");
 	return funcptr();
 }
 
-int lsb_sched_yield()
+int lsb_sched_yield ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_yield");

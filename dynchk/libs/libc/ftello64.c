@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static loff_t(*funcptr)(FILE *) = 0;
+#undef ftello64
+static loff_t(*funcptr) (FILE * ) = 0;
 
-loff_t ftello64(FILE * arg0)
+loff_t ftello64 (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftello64");
@@ -13,7 +14,7 @@ loff_t ftello64(FILE * arg0)
 	return funcptr(arg0);
 }
 
-loff_t lsb_ftello64(FILE * arg0)
+loff_t lsb_ftello64 (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftello64");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static div_t(*funcptr)(int, int) = 0;
+#undef div
+static div_t(*funcptr) (int , int ) = 0;
 
-div_t div(int arg0, int arg1)
+div_t div (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "div");
@@ -13,7 +14,7 @@ div_t div(int arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-div_t lsb_div(int arg0, int arg1)
+div_t lsb_div (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "div");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef sigpause
+static int(*funcptr) (int ) = 0;
 
-int sigpause(int arg0)
+int sigpause (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigpause");
@@ -12,7 +13,7 @@ int sigpause(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sigpause(int arg0)
+int lsb_sigpause (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigpause");

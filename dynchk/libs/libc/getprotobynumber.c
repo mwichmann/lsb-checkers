@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct protoent *(*funcptr)(int) = 0;
+#undef getprotobynumber
+static struct protoent *(*funcptr) (int ) = 0;
 
-struct protoent * getprotobynumber(int arg0)
+struct protoent * getprotobynumber (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotobynumber");
@@ -12,7 +13,7 @@ struct protoent * getprotobynumber(int arg0)
 	return funcptr(arg0);
 }
 
-struct protoent * lsb_getprotobynumber(int arg0)
+struct protoent * lsb_getprotobynumber (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotobynumber");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(unsigned long) = 0;
+#undef usleep
+static int(*funcptr) (useconds_t ) = 0;
 
-void usleep(unsigned long arg0)
+int usleep (useconds_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "usleep");
@@ -12,7 +13,7 @@ void usleep(unsigned long arg0)
 	funcptr(arg0);
 }
 
-void lsb_usleep(unsigned long arg0)
+int lsb_usleep (useconds_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "usleep");

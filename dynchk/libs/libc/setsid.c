@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static pid_t(*funcptr)() = 0;
+#undef setsid
+static pid_t(*funcptr) () = 0;
 
-pid_t setsid()
+pid_t setsid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setsid");
 	return funcptr();
 }
 
-pid_t lsb_setsid()
+pid_t lsb_setsid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setsid");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(unsigned short) = 0;
+#undef nrand48
+static long(*funcptr) (unsigned short [3]) = 0;
 
-long nrand48(unsigned short arg0)
+long nrand48 (unsigned short arg0 [3])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nrand48");
@@ -12,7 +13,7 @@ long nrand48(unsigned short arg0)
 	return funcptr(arg0);
 }
 
-long lsb_nrand48(unsigned short arg0)
+long lsb_nrand48 (unsigned short arg0 [3])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nrand48");

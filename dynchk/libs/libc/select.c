@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, fd_set *, fd_set *, fd_set *, struct timeval *) = 0;
+#undef select
+static int(*funcptr) (int , fd_set * , fd_set * , fd_set * , struct timeval * ) = 0;
 
-int select(int arg0, fd_set * arg1, fd_set * arg2, fd_set * arg3, struct timeval * arg4)
+int select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct timeval * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "select");
@@ -16,7 +17,7 @@ int select(int arg0, fd_set * arg1, fd_set * arg2, fd_set * arg3, struct timeval
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_select(int arg0, fd_set * arg1, fd_set * arg2, fd_set * arg3, struct timeval * arg4)
+int lsb_select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct timeval * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "select");

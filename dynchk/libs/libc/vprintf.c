@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdarg.h>
-static int(*funcptr)(const char *, va_list) = 0;
+#undef vprintf
+static int(*funcptr) (const char * , va_list ) = 0;
 
-int vprintf(const char * arg0, va_list arg1)
+int vprintf (const char * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vprintf");
@@ -14,7 +15,7 @@ int vprintf(const char * arg0, va_list arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_vprintf(const char * arg0, va_list arg1)
+int lsb_vprintf (const char * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vprintf");

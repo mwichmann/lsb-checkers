@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long long(*funcptr)(const char *, char * *, int) = 0;
+#undef strtoq
+static long long(*funcptr) (const char * , char * * , int ) = 0;
 
-long long strtoq(const char * arg0, char * * arg1, int arg2)
+long long strtoq (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoq");
@@ -14,7 +15,7 @@ long long strtoq(const char * arg0, char * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-long long lsb_strtoq(const char * arg0, char * * arg1, int arg2)
+long long lsb_strtoq (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoq");

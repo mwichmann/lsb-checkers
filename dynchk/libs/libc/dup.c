@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef dup
+static int(*funcptr) (int ) = 0;
 
-int dup(int arg0)
+int dup (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dup");
@@ -12,7 +13,7 @@ int dup(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_dup(int arg0)
+int lsb_dup (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dup");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static FILE *(*funcptr)(const char *, const char *, FILE *) = 0;
+#undef freopen64
+static FILE *(*funcptr) (const char * , const char * , FILE * ) = 0;
 
-FILE * freopen64(const char * arg0, const char * arg1, FILE * arg2)
+FILE * freopen64 (const char * arg0 , const char * arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freopen64");
@@ -15,7 +16,7 @@ FILE * freopen64(const char * arg0, const char * arg1, FILE * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-FILE * lsb_freopen64(const char * arg0, const char * arg1, FILE * arg2)
+FILE * lsb_freopen64 (const char * arg0 , const char * arg1 , FILE * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freopen64");

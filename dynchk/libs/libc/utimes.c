@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, struct timeval *) = 0;
+#undef utimes
+static int(*funcptr) (char * , struct timeval * ) = 0;
 
-int utimes(char * arg0, struct timeval * arg1)
+int utimes (char * arg0 , struct timeval * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "utimes");
@@ -13,7 +14,7 @@ int utimes(char * arg0, struct timeval * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_utimes(char * arg0, struct timeval * arg1)
+int lsb_utimes (char * arg0 , struct timeval * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "utimes");

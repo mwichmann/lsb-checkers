@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct servent *(*funcptr)(int, const char *) = 0;
+#undef getservbyport
+static struct servent *(*funcptr) (int , const char * ) = 0;
 
-struct servent * getservbyport(int arg0, const char * arg1)
+struct servent * getservbyport (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getservbyport");
@@ -13,7 +14,7 @@ struct servent * getservbyport(int arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-struct servent * lsb_getservbyport(int arg0, const char * arg1)
+struct servent * lsb_getservbyport (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getservbyport");

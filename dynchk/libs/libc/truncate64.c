@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <unistd.h>
-static int(*funcptr)(const char *, off64_t) = 0;
+#undef truncate64
+static int(*funcptr) (const char * , off64_t ) = 0;
 
-int truncate64(const char * arg0, off64_t arg1)
+int truncate64 (const char * arg0 , off64_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncate64");
@@ -14,7 +15,7 @@ int truncate64(const char * arg0, off64_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_truncate64(const char * arg0, off64_t arg1)
+int lsb_truncate64 (const char * arg0 , off64_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncate64");

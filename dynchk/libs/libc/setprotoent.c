@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(int) = 0;
+#undef setprotoent
+static void(*funcptr) (int ) = 0;
 
-void setprotoent(int arg0)
+void setprotoent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setprotoent");
@@ -12,7 +13,7 @@ void setprotoent(int arg0)
 	funcptr(arg0);
 }
 
-void lsb_setprotoent(int arg0)
+void lsb_setprotoent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setprotoent");

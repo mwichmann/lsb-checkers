@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *, struct statvfs *) = 0;
+#undef statvfs
+static int(*funcptr) (const char * , struct statvfs * ) = 0;
 
-int statvfs(const char * arg0, struct statvfs * arg1)
+int statvfs (const char * arg0 , struct statvfs * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "statvfs");
@@ -13,7 +14,7 @@ int statvfs(const char * arg0, struct statvfs * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_statvfs(const char * arg0, struct statvfs * arg1)
+int lsb_statvfs (const char * arg0 , struct statvfs * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "statvfs");

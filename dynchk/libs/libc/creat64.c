@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(const char *, mode_t) = 0;
+#undef creat64
+static int(*funcptr) (const char * , mode_t ) = 0;
 
-int creat64(const char * arg0, mode_t arg1)
+int creat64 (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creat64");
@@ -14,7 +15,7 @@ int creat64(const char * arg0, mode_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_creat64(const char * arg0, mode_t arg1)
+int lsb_creat64 (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "creat64");

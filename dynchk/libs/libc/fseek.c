@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(FILE *, long, int) = 0;
+#undef fseek
+static int(*funcptr) (FILE * , long , int ) = 0;
 
-int fseek(FILE * arg0, long arg1, int arg2)
+int fseek (FILE * arg0 , long arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseek");
@@ -15,7 +16,7 @@ int fseek(FILE * arg0, long arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_fseek(FILE * arg0, long arg1, int arg2)
+int lsb_fseek (FILE * arg0 , long arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseek");

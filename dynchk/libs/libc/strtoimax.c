@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static intmax_t(*funcptr)(char *, char * *, int) = 0;
+#undef strtoimax
+static intmax_t(*funcptr) (const char * , char * * , int ) = 0;
 
-intmax_t strtoimax(char * arg0, char * * arg1, int arg2)
+intmax_t strtoimax (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoimax");
@@ -14,7 +15,7 @@ intmax_t strtoimax(char * arg0, char * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-intmax_t lsb_strtoimax(char * arg0, char * * arg1, int arg2)
+intmax_t lsb_strtoimax (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoimax");

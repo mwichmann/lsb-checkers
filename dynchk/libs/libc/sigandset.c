@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <signal.h>
 #include <signal.h>
-static int(*funcptr)(sigset_t *, const sigset_t *, const sigset_t *) = 0;
+#undef sigandset
+static int(*funcptr) (sigset_t * , const sigset_t * , const sigset_t * ) = 0;
 
-int sigandset(sigset_t * arg0, const sigset_t * arg1, const sigset_t * arg2)
+int sigandset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigandset");
@@ -16,7 +17,7 @@ int sigandset(sigset_t * arg0, const sigset_t * arg1, const sigset_t * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sigandset(sigset_t * arg0, const sigset_t * arg1, const sigset_t * arg2)
+int lsb_sigandset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigandset");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef rand
+static int(*funcptr) () = 0;
 
-int rand()
+int rand ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rand");
 	return funcptr();
 }
 
-int lsb_rand()
+int lsb_rand ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rand");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static DIR *(*funcptr)(const char *) = 0;
+#undef opendir
+static DIR *(*funcptr) (const char * ) = 0;
 
-DIR * opendir(const char * arg0)
+DIR * opendir (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "opendir");
@@ -12,7 +13,7 @@ DIR * opendir(const char * arg0)
 	return funcptr(arg0);
 }
 
-DIR * lsb_opendir(const char * arg0)
+DIR * lsb_opendir (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "opendir");

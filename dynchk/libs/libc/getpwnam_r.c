@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(const char *, struct passwd *, char *, size_t, struct passwd * *) = 0;
+#undef getpwnam_r
+static int(*funcptr) (const char * , struct passwd * , char * , size_t , struct passwd * * ) = 0;
 
-int getpwnam_r(const char * arg0, struct passwd * arg1, char * arg2, size_t arg3, struct passwd * * arg4)
+int getpwnam_r (const char * arg0 , struct passwd * arg1 , char * arg2 , size_t arg3 , struct passwd * * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwnam_r");
@@ -17,7 +18,7 @@ int getpwnam_r(const char * arg0, struct passwd * arg1, char * arg2, size_t arg3
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_getpwnam_r(const char * arg0, struct passwd * arg1, char * arg2, size_t arg3, struct passwd * * arg4)
+int lsb_getpwnam_r (const char * arg0 , struct passwd * arg1 , char * arg2 , size_t arg3 , struct passwd * * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwnam_r");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdlib.h>
-static int(*funcptr)(struct random_data *, int32_t *) = 0;
+#undef random_r
+static int(*funcptr) (struct random_data * , int32_t * ) = 0;
 
-int random_r(struct random_data * arg0, int32_t * arg1)
+int random_r (struct random_data * arg0 , int32_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "random_r");
@@ -14,7 +15,7 @@ int random_r(struct random_data * arg0, int32_t * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_random_r(struct random_data * arg0, int32_t * arg1)
+int lsb_random_r (struct random_data * arg0 , int32_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "random_r");

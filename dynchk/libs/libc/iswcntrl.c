@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <wctype.h>
-static int(*funcptr)(wint_t) = 0;
+#undef iswcntrl
+static int(*funcptr) (wint_t ) = 0;
 
-int iswcntrl(wint_t arg0)
+int iswcntrl (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswcntrl");
@@ -13,7 +14,7 @@ int iswcntrl(wint_t arg0)
 	return funcptr(arg0);
 }
 
-int lsb_iswcntrl(wint_t arg0)
+int lsb_iswcntrl (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswcntrl");

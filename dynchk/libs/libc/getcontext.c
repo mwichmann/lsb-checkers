@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(ucontext_t *) = 0;
+#undef getcontext
+static int(*funcptr) (ucontext_t * ) = 0;
 
-int getcontext(ucontext_t * arg0)
+int getcontext (ucontext_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getcontext");
@@ -12,7 +13,7 @@ int getcontext(ucontext_t * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_getcontext(ucontext_t * arg0)
+int lsb_getcontext (ucontext_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getcontext");

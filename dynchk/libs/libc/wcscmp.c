@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const wchar_t *, wchar_t *) = 0;
+#undef wcscmp
+static int(*funcptr) (const wchar_t * , wchar_t * ) = 0;
 
-int wcscmp(const wchar_t * arg0, wchar_t * arg1)
+int wcscmp (const wchar_t * arg0 , wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcscmp");
@@ -13,7 +14,7 @@ int wcscmp(const wchar_t * arg0, wchar_t * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wcscmp(const wchar_t * arg0, wchar_t * arg1)
+int lsb_wcscmp (const wchar_t * arg0 , wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcscmp");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, const struct termios *) = 0;
+#undef tcsetattr
+static int(*funcptr) (int , int , const struct termios * ) = 0;
 
-int tcsetattr(int arg0, int arg1, const struct termios * arg2)
+int tcsetattr (int arg0 , int arg1 , const struct termios * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcsetattr");
@@ -14,7 +15,7 @@ int tcsetattr(int arg0, int arg1, const struct termios * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_tcsetattr(int arg0, int arg1, const struct termios * arg2)
+int lsb_tcsetattr (int arg0 , int arg1 , const struct termios * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcsetattr");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(char *, const char *) = 0;
+#undef __stpcpy
+static char *(*funcptr) (char * , const char * ) = 0;
 
-char * __stpcpy(char * arg0, const char * arg1)
+char * __stpcpy (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__stpcpy");
@@ -13,7 +14,7 @@ char * __stpcpy(char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb___stpcpy(char * arg0, const char * arg1)
+char * lsb___stpcpy (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__stpcpy");

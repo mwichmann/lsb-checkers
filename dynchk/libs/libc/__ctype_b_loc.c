@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static const unsigned short * *(*funcptr)() = 0;
+#undef __ctype_b_loc
+static const unsigned short * *(*funcptr) () = 0;
 
-const unsigned short * * __ctype_b_loc()
+const unsigned short * * __ctype_b_loc ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_b_loc");
 	return funcptr();
 }
 
-const unsigned short * * lsb___ctype_b_loc()
+const unsigned short * * lsb___ctype_b_loc ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_b_loc");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static mode_t(*funcptr)(mode_t) = 0;
+#undef umask
+static mode_t(*funcptr) (mode_t ) = 0;
 
-mode_t umask(mode_t arg0)
+mode_t umask (mode_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "umask");
@@ -13,7 +14,7 @@ mode_t umask(mode_t arg0)
 	return funcptr(arg0);
 }
 
-mode_t lsb_umask(mode_t arg0)
+mode_t lsb_umask (mode_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "umask");

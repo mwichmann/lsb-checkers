@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static FILE *(*funcptr)(char *, char *) = 0;
+#undef popen
+static FILE *(*funcptr) (const char * , const char * ) = 0;
 
-FILE * popen(char * arg0, char * arg1)
+FILE * popen (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "popen");
@@ -13,7 +14,7 @@ FILE * popen(char * arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-FILE * lsb_popen(char * arg0, char * arg1)
+FILE * lsb_popen (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "popen");

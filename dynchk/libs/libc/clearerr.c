@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static void(*funcptr)(FILE *) = 0;
+#undef clearerr
+static void(*funcptr) (FILE * ) = 0;
 
-void clearerr(FILE * arg0)
+void clearerr (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clearerr");
@@ -13,7 +14,7 @@ void clearerr(FILE * arg0)
 	funcptr(arg0);
 }
 
-void lsb_clearerr(FILE * arg0)
+void lsb_clearerr (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clearerr");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef pause
+static int(*funcptr) () = 0;
 
-int pause()
+int pause ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pause");
 	return funcptr();
 }
 
-int lsb_pause()
+int lsb_pause ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pause");

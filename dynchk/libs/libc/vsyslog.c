@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdarg.h>
-static void(*funcptr)(int, const char *, va_list) = 0;
+#undef vsyslog
+static void(*funcptr) (int , const char * , va_list ) = 0;
 
-void vsyslog(int arg0, const char * arg1, va_list arg2)
+void vsyslog (int arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vsyslog");
@@ -15,7 +16,7 @@ void vsyslog(int arg0, const char * arg1, va_list arg2)
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_vsyslog(int arg0, const char * arg1, va_list arg2)
+void lsb_vsyslog (int arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vsyslog");

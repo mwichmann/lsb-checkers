@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(DIR *, long) = 0;
+#undef seekdir
+static void(*funcptr) (DIR * , long ) = 0;
 
-void seekdir(DIR * arg0, long arg1)
+void seekdir (DIR * arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seekdir");
@@ -13,7 +14,7 @@ void seekdir(DIR * arg0, long arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_seekdir(DIR * arg0, long arg1)
+void lsb_seekdir (DIR * arg0 , long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seekdir");

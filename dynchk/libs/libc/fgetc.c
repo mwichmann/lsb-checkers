@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(FILE *) = 0;
+#undef fgetc
+static int(*funcptr) (FILE * ) = 0;
 
-int fgetc(FILE * arg0)
+int fgetc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetc");
@@ -13,7 +14,7 @@ int fgetc(FILE * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_fgetc(FILE * arg0)
+int lsb_fgetc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetc");

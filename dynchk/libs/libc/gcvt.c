@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(double, int, char *) = 0;
+#undef gcvt
+static char *(*funcptr) (double , int , char * ) = 0;
 
-char * gcvt(double arg0, int arg1, char * arg2)
+char * gcvt (double arg0 , int arg1 , char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gcvt");
@@ -14,7 +15,7 @@ char * gcvt(double arg0, int arg1, char * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_gcvt(double arg0, int arg1, char * arg2)
+char * lsb_gcvt (double arg0 , int arg1 , char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gcvt");

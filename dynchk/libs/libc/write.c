@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static ssize_t(*funcptr)(int, const void *, size_t) = 0;
+#undef write
+static ssize_t(*funcptr) (int , const void * , size_t ) = 0;
 
-ssize_t write(int arg0, const void * arg1, size_t arg2)
+ssize_t write (int arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "write");
@@ -15,7 +16,7 @@ ssize_t write(int arg0, const void * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-ssize_t lsb_write(int arg0, const void * arg1, size_t arg2)
+ssize_t lsb_write (int arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "write");

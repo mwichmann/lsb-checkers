@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <inttypes.h>
-static intmax_t(*funcptr)(intmax_t) = 0;
+#undef imaxabs
+static intmax_t(*funcptr) (intmax_t ) = 0;
 
-intmax_t imaxabs(intmax_t arg0)
+intmax_t imaxabs (intmax_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "imaxabs");
@@ -13,7 +14,7 @@ intmax_t imaxabs(intmax_t arg0)
 	return funcptr(arg0);
 }
 
-intmax_t lsb_imaxabs(intmax_t arg0)
+intmax_t lsb_imaxabs (intmax_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "imaxabs");

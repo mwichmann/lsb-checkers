@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/socket.h>
-static int(*funcptr)(int, const struct sockaddr *, socklen_t) = 0;
+#undef connect
+static int(*funcptr) (int , const struct sockaddr * , socklen_t ) = 0;
 
-int connect(int arg0, const struct sockaddr * arg1, socklen_t arg2)
+int connect (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "connect");
@@ -15,7 +16,7 @@ int connect(int arg0, const struct sockaddr * arg1, socklen_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_connect(int arg0, const struct sockaddr * arg1, socklen_t arg2)
+int lsb_connect (int arg0 , const struct sockaddr * arg1 , socklen_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "connect");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static pid_t(*funcptr)(int *, int, struct rusage *) = 0;
+#undef wait3
+static pid_t(*funcptr) (int * , int , struct rusage * ) = 0;
 
-pid_t wait3(int * arg0, int arg1, struct rusage * arg2)
+pid_t wait3 (int * arg0 , int arg1 , struct rusage * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wait3");
@@ -14,7 +15,7 @@ pid_t wait3(int * arg0, int arg1, struct rusage * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-pid_t lsb_wait3(int * arg0, int arg1, struct rusage * arg2)
+pid_t lsb_wait3 (int * arg0 , int arg1 , struct rusage * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wait3");

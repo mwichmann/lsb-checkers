@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(int, const FILE *) = 0;
+#undef putc
+static int(*funcptr) (int , const FILE * ) = 0;
 
-int putc(int arg0, const FILE * arg1)
+int putc (int arg0 , const FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putc");
@@ -14,7 +15,7 @@ int putc(int arg0, const FILE * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_putc(int arg0, const FILE * arg1)
+int lsb_putc (int arg0 , const FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putc");

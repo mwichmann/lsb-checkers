@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int) = 0;
+#undef shutdown
+static int(*funcptr) (int , int ) = 0;
 
-int shutdown(int arg0, int arg1)
+int shutdown (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shutdown");
@@ -13,7 +14,7 @@ int shutdown(int arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_shutdown(int arg0, int arg1)
+int lsb_shutdown (int arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shutdown");

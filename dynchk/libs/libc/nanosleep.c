@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct timespec *, struct timespec *) = 0;
+#undef nanosleep
+static int(*funcptr) (struct timespec * , struct timespec * ) = 0;
 
-int nanosleep(struct timespec * arg0, struct timespec * arg1)
+int nanosleep (const struct timespec * arg0 , struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanosleep");
@@ -13,7 +14,7 @@ int nanosleep(struct timespec * arg0, struct timespec * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_nanosleep(struct timespec * arg0, struct timespec * arg1)
+int lsb_nanosleep (const struct timespec * arg0 , struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanosleep");

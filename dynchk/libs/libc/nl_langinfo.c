@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <nl_types.h>
-static char *(*funcptr)(nl_item) = 0;
+#undef nl_langinfo
+static char *(*funcptr) (nl_item ) = 0;
 
-char * nl_langinfo(nl_item arg0)
+char * nl_langinfo (nl_item arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nl_langinfo");
@@ -13,7 +14,7 @@ char * nl_langinfo(nl_item arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_nl_langinfo(nl_item arg0)
+char * lsb_nl_langinfo (nl_item arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nl_langinfo");

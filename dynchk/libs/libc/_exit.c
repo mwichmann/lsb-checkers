@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(int) = 0;
+#undef _exit
+static void(*funcptr) (int ) = 0;
 
-void _exit(int arg0)
+void _exit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_exit");
@@ -12,7 +13,7 @@ void _exit(int arg0)
 	funcptr(arg0);
 }
 
-void lsb__exit(int arg0)
+void lsb__exit (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_exit");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct passwd *(*funcptr)(const char *) = 0;
+#undef getpwnam
+static struct passwd *(*funcptr) (const char * ) = 0;
 
-struct passwd * getpwnam(const char * arg0)
+struct passwd * getpwnam (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwnam");
@@ -12,7 +13,7 @@ struct passwd * getpwnam(const char * arg0)
 	return funcptr(arg0);
 }
 
-struct passwd * lsb_getpwnam(const char * arg0)
+struct passwd * lsb_getpwnam (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwnam");

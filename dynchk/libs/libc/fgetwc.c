@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static wint_t(*funcptr)(FILE *) = 0;
+#undef fgetwc
+static wint_t(*funcptr) (FILE * ) = 0;
 
-wint_t fgetwc(FILE * arg0)
+wint_t fgetwc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetwc");
@@ -13,7 +14,7 @@ wint_t fgetwc(FILE * arg0)
 	return funcptr(arg0);
 }
 
-wint_t lsb_fgetwc(FILE * arg0)
+wint_t lsb_fgetwc (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fgetwc");

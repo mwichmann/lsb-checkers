@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void *(*funcptr)(unsigned int, void *, size_t) = 0;
+#undef initstate
+static void *(*funcptr) (unsigned int , void * , size_t ) = 0;
 
-void * initstate(unsigned int arg0, void * arg1, size_t arg2)
+void * initstate (unsigned int arg0 , void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initstate");
@@ -15,7 +16,7 @@ void * initstate(unsigned int arg0, void * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_initstate(unsigned int arg0, void * arg1, size_t arg2)
+void * lsb_initstate (unsigned int arg0 , void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "initstate");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const char *) = 0;
+#undef getenv
+static char *(*funcptr) (const char * ) = 0;
 
-char * getenv(const char * arg0)
+char * getenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getenv");
@@ -12,7 +13,7 @@ char * getenv(const char * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_getenv(const char * arg0)
+char * lsb_getenv (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getenv");

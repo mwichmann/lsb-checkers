@@ -5,9 +5,10 @@
 #include <stddef.h>
 #include <stddef.h>
 #include <stdlib.h>
-static void(*funcptr)(void *, size_t, size_t, const __compar_fn_t) = 0;
+#undef qsort
+static void(*funcptr) (void * , size_t , size_t , const __compar_fn_t ) = 0;
 
-void qsort(void * arg0, size_t arg1, size_t arg2, const __compar_fn_t arg3)
+void qsort (void * arg0 , size_t arg1 , size_t arg2 , const __compar_fn_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "qsort");
@@ -18,7 +19,7 @@ void qsort(void * arg0, size_t arg1, size_t arg2, const __compar_fn_t arg3)
 	funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_qsort(void * arg0, size_t arg1, size_t arg2, const __compar_fn_t arg3)
+void lsb_qsort (void * arg0 , size_t arg1 , size_t arg2 , const __compar_fn_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "qsort");

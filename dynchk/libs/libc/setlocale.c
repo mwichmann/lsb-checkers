@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(int, const char *) = 0;
+#undef setlocale
+static char *(*funcptr) (int , const char * ) = 0;
 
-char * setlocale(int arg0, const char * arg1)
+char * setlocale (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setlocale");
@@ -13,7 +14,7 @@ char * setlocale(int arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_setlocale(int arg0, const char * arg1)
+char * lsb_setlocale (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setlocale");

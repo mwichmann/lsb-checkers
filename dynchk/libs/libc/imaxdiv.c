@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <inttypes.h>
 #include <inttypes.h>
-static imaxdiv_t(*funcptr)(intmax_t, intmax_t) = 0;
+#undef imaxdiv
+static imaxdiv_t(*funcptr) (intmax_t , intmax_t ) = 0;
 
-imaxdiv_t imaxdiv(intmax_t arg0, intmax_t arg1)
+imaxdiv_t imaxdiv (intmax_t arg0 , intmax_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "imaxdiv");
@@ -15,7 +16,7 @@ imaxdiv_t imaxdiv(intmax_t arg0, intmax_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-imaxdiv_t lsb_imaxdiv(intmax_t arg0, intmax_t arg1)
+imaxdiv_t lsb_imaxdiv (intmax_t arg0 , intmax_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "imaxdiv");

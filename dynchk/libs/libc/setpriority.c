@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, int) = 0;
+#undef setpriority
+static int(*funcptr) (__priority_which_t , id_t , int ) = 0;
 
-int setpriority(int arg0, int arg1, int arg2)
+int setpriority (__priority_which_t arg0 , id_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpriority");
@@ -14,7 +15,7 @@ int setpriority(int arg0, int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_setpriority(int arg0, int arg1, int arg2)
+int lsb_setpriority (__priority_which_t arg0 , id_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpriority");

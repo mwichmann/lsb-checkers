@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static pid_t(*funcptr)() = 0;
+#undef vfork
+static pid_t(*funcptr) () = 0;
 
-pid_t vfork()
+pid_t vfork ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfork");
 	return funcptr();
 }
 
-pid_t lsb_vfork()
+pid_t lsb_vfork ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfork");

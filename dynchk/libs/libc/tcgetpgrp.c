@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static pid_t(*funcptr)(int) = 0;
+#undef tcgetpgrp
+static pid_t(*funcptr) (int ) = 0;
 
-pid_t tcgetpgrp(int arg0)
+pid_t tcgetpgrp (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcgetpgrp");
@@ -12,7 +13,7 @@ pid_t tcgetpgrp(int arg0)
 	return funcptr(arg0);
 }
 
-pid_t lsb_tcgetpgrp(int arg0)
+pid_t lsb_tcgetpgrp (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcgetpgrp");

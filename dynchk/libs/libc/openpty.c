@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int *, int *, char *, struct termios *, struct winsize *) = 0;
+#undef openpty
+static int(*funcptr) (int * , int * , char * , struct termios * , struct winsize * ) = 0;
 
-int openpty(int * arg0, int * arg1, char * arg2, struct termios * arg3, struct winsize * arg4)
+int openpty (int * arg0 , int * arg1 , char * arg2 , struct termios * arg3 , struct winsize * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openpty");
@@ -16,7 +17,7 @@ int openpty(int * arg0, int * arg1, char * arg2, struct termios * arg3, struct w
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_openpty(int * arg0, int * arg1, char * arg2, struct termios * arg3, struct winsize * arg4)
+int lsb_openpty (int * arg0 , int * arg1 , char * arg2 , struct termios * arg3 , struct winsize * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openpty");

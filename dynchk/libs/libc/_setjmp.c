@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <setjmp.h>
-static int(*funcptr)(jmp_buf) = 0;
+#undef _setjmp
+static int(*funcptr) (jmp_buf ) = 0;
 
-int _setjmp(jmp_buf arg0)
+int _setjmp (jmp_buf arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_setjmp");
@@ -13,7 +14,7 @@ int _setjmp(jmp_buf arg0)
 	return funcptr(arg0);
 }
 
-int lsb__setjmp(jmp_buf arg0)
+int lsb__setjmp (jmp_buf arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_setjmp");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct utmpx *(*funcptr)() = 0;
+#undef getutxent
+static struct utmpx *(*funcptr) () = 0;
 
-struct utmpx * getutxent()
+struct utmpx * getutxent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutxent");
 	return funcptr();
 }
 
-struct utmpx * lsb_getutxent()
+struct utmpx * lsb_getutxent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getutxent");

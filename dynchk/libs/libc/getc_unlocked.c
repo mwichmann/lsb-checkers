@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(FILE *) = 0;
+#undef getc_unlocked
+static int(*funcptr) (FILE * ) = 0;
 
-int getc_unlocked(FILE * arg0)
+int getc_unlocked (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getc_unlocked");
@@ -13,7 +14,7 @@ int getc_unlocked(FILE * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_getc_unlocked(FILE * arg0)
+int lsb_getc_unlocked (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getc_unlocked");

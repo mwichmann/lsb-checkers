@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static wint_t(*funcptr)(int) = 0;
+#undef btowc
+static wint_t(*funcptr) (int ) = 0;
 
-wint_t btowc(int arg0)
+wint_t btowc (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "btowc");
@@ -12,7 +13,7 @@ wint_t btowc(int arg0)
 	return funcptr(arg0);
 }
 
-wint_t lsb_btowc(int arg0)
+wint_t lsb_btowc (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "btowc");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static pid_t(*funcptr)(pid_t) = 0;
+#undef __getpgid
+static pid_t(*funcptr) (pid_t ) = 0;
 
-pid_t __getpgid(pid_t arg0)
+pid_t __getpgid (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__getpgid");
@@ -13,7 +14,7 @@ pid_t __getpgid(pid_t arg0)
 	return funcptr(arg0);
 }
 
-pid_t lsb___getpgid(pid_t arg0)
+pid_t lsb___getpgid (pid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__getpgid");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const wchar_t *, const wchar_t *) = 0;
+#undef wprintf
+static int(*funcptr) (const wchar_t * , const wchar_t * ) = 0;
 
-int wprintf(const wchar_t * arg0, const wchar_t * arg1)
+int wprintf (const wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wprintf");
@@ -13,7 +14,7 @@ int wprintf(const wchar_t * arg0, const wchar_t * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wprintf(const wchar_t * arg0, const wchar_t * arg1)
+int lsb_wprintf (const wchar_t * arg0 , const wchar_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wprintf");

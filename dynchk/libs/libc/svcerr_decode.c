@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(SVCXPRT *) = 0;
+#undef svcerr_decode
+static void(*funcptr) (SVCXPRT * ) = 0;
 
-void svcerr_decode(SVCXPRT * arg0)
+void svcerr_decode (SVCXPRT * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_decode");
@@ -12,7 +13,7 @@ void svcerr_decode(SVCXPRT * arg0)
 	funcptr(arg0);
 }
 
-void lsb_svcerr_decode(SVCXPRT * arg0)
+void lsb_svcerr_decode (SVCXPRT * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_decode");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct sigcontext *) = 0;
+#undef sigreturn
+static int(*funcptr) (struct sigcontext * ) = 0;
 
-int sigreturn(struct sigcontext * arg0)
+int sigreturn (struct sigcontext * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigreturn");
@@ -12,7 +13,7 @@ int sigreturn(struct sigcontext * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sigreturn(struct sigcontext * arg0)
+int lsb_sigreturn (struct sigcontext * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigreturn");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static void(*funcptr)(FILE *, char *) = 0;
+#undef setbuf
+static void(*funcptr) (FILE * , char * ) = 0;
 
-void setbuf(FILE * arg0, char * arg1)
+void setbuf (FILE * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuf");
@@ -14,7 +15,7 @@ void setbuf(FILE * arg0, char * arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_setbuf(FILE * arg0, char * arg1)
+void lsb_setbuf (FILE * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuf");

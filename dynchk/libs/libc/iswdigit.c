@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <wctype.h>
-static int(*funcptr)(wint_t) = 0;
+#undef iswdigit
+static int(*funcptr) (wint_t ) = 0;
 
-int iswdigit(wint_t arg0)
+int iswdigit (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswdigit");
@@ -13,7 +14,7 @@ int iswdigit(wint_t arg0)
 	return funcptr(arg0);
 }
 
-int lsb_iswdigit(wint_t arg0)
+int lsb_iswdigit (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswdigit");

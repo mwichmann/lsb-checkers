@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, struct stat *) = 0;
+#undef __fxstat
+static int(*funcptr) (int , int , struct stat * ) = 0;
 
-int __fxstat(int arg0, int arg1, struct stat * arg2)
+int __fxstat (int arg0 , int arg1 , struct stat * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__fxstat");
@@ -14,7 +15,7 @@ int __fxstat(int arg0, int arg1, struct stat * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb___fxstat(int arg0, int arg1, struct stat * arg2)
+int lsb___fxstat (int arg0 , int arg1 , struct stat * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__fxstat");

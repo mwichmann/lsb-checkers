@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <rpc/types.h>
 #include <rpc/types.h>
-static void(*funcptr)(SVCXPRT *, rpcvers_t, rpcvers_t) = 0;
+#undef svcerr_progvers
+static void(*funcptr) (SVCXPRT * , rpcvers_t , rpcvers_t ) = 0;
 
-void svcerr_progvers(SVCXPRT * arg0, rpcvers_t arg1, rpcvers_t arg2)
+void svcerr_progvers (SVCXPRT * arg0 , rpcvers_t arg1 , rpcvers_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_progvers");
@@ -16,7 +17,7 @@ void svcerr_progvers(SVCXPRT * arg0, rpcvers_t arg1, rpcvers_t arg2)
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_svcerr_progvers(SVCXPRT * arg0, rpcvers_t arg1, rpcvers_t arg2)
+void lsb_svcerr_progvers (SVCXPRT * arg0 , rpcvers_t arg1 , rpcvers_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_progvers");

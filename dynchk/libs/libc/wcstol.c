@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(const wchar_t *, wchar_t * *, int) = 0;
+#undef wcstol
+static long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
-long wcstol(const wchar_t * arg0, wchar_t * * arg1, int arg2)
+long wcstol (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstol");
@@ -14,7 +15,7 @@ long wcstol(const wchar_t * arg0, wchar_t * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-long lsb_wcstol(const wchar_t * arg0, wchar_t * * arg1, int arg2)
+long lsb_wcstol (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstol");

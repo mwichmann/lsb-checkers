@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(const char *, const char *, const char *) = 0;
+#undef logwtmp
+static void(*funcptr) (const char * , const char * , const char * ) = 0;
 
-void logwtmp(const char * arg0, const char * arg1, const char * arg2)
+void logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "logwtmp");
@@ -14,7 +15,7 @@ void logwtmp(const char * arg0, const char * arg1, const char * arg2)
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_logwtmp(const char * arg0, const char * arg1, const char * arg2)
+void lsb_logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "logwtmp");

@@ -5,9 +5,10 @@
 #include <sys/types.h>
 #include <sys/types.h>
 #include <rpc/xdr.h>
-static void(*funcptr)(struct XDR *, caddr_t, u_int, enum xdr_op) = 0;
+#undef xdrmem_create
+static void(*funcptr) (struct XDR * , caddr_t , u_int , enum xdr_op ) = 0;
 
-void xdrmem_create(struct XDR * arg0, caddr_t arg1, u_int arg2, enum xdr_op arg3)
+void xdrmem_create (struct XDR * arg0 , caddr_t arg1 , u_int arg2 , enum xdr_op arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrmem_create");
@@ -18,7 +19,7 @@ void xdrmem_create(struct XDR * arg0, caddr_t arg1, u_int arg2, enum xdr_op arg3
 	funcptr(arg0, arg1, arg2, arg3);
 }
 
-void lsb_xdrmem_create(struct XDR * arg0, caddr_t arg1, u_int arg2, enum xdr_op arg3)
+void lsb_xdrmem_create (struct XDR * arg0 , caddr_t arg1 , u_int arg2 , enum xdr_op arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrmem_create");

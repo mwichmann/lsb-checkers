@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static char *(*funcptr)(char *, size_t) = 0;
+#undef getcwd
+static char *(*funcptr) (char * , size_t ) = 0;
 
-char * getcwd(char * arg0, size_t arg1)
+char * getcwd (char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getcwd");
@@ -14,7 +15,7 @@ char * getcwd(char * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_getcwd(char * arg0, size_t arg1)
+char * lsb_getcwd (char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getcwd");

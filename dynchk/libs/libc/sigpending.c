@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(sigset_t *) = 0;
+#undef sigpending
+static int(*funcptr) (sigset_t * ) = 0;
 
-int sigpending(sigset_t * arg0)
+int sigpending (sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigpending");
@@ -12,7 +13,7 @@ int sigpending(sigset_t * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_sigpending(sigset_t * arg0)
+int lsb_sigpending (sigset_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigpending");

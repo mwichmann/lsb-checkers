@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stddef.h>
-static size_t(*funcptr)(wchar_t *, const char * *, size_t, size_t, mbstate_t *) = 0;
+#undef mbsnrtowcs
+static size_t(*funcptr) (wchar_t * , const char * * , size_t , size_t , mbstate_t * ) = 0;
 
-size_t mbsnrtowcs(wchar_t * arg0, const char * * arg1, size_t arg2, size_t arg3, mbstate_t * arg4)
+size_t mbsnrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , size_t arg3 , mbstate_t * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbsnrtowcs");
@@ -18,7 +19,7 @@ size_t mbsnrtowcs(wchar_t * arg0, const char * * arg1, size_t arg2, size_t arg3,
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-size_t lsb_mbsnrtowcs(wchar_t * arg0, const char * * arg1, size_t arg2, size_t arg3, mbstate_t * arg4)
+size_t lsb_mbsnrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , size_t arg3 , mbstate_t * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbsnrtowcs");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <rpc/xdr.h>
-static void(*funcptr)(xdrproc_t, char *) = 0;
+#undef xdr_free
+static void(*funcptr) (xdrproc_t , char * ) = 0;
 
-void xdr_free(xdrproc_t arg0, char * arg1)
+void xdr_free (xdrproc_t arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_free");
@@ -14,7 +15,7 @@ void xdr_free(xdrproc_t arg0, char * arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_xdr_free(xdrproc_t arg0, char * arg1)
+void lsb_xdr_free (xdrproc_t arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_free");

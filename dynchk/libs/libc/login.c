@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(const struct utmp *) = 0;
+#undef login
+static void(*funcptr) (const struct utmp * ) = 0;
 
-void login(const struct utmp * arg0)
+void login (const struct utmp * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "login");
@@ -12,7 +13,7 @@ void login(const struct utmp * arg0)
 	funcptr(arg0);
 }
 
-void lsb_login(const struct utmp * arg0)
+void lsb_login (const struct utmp * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "login");

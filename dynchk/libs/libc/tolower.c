@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef tolower
+static int(*funcptr) (int ) = 0;
 
-int tolower(int arg0)
+int tolower (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tolower");
@@ -12,7 +13,7 @@ int tolower(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_tolower(int arg0)
+int lsb_tolower (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tolower");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef raise
+static int(*funcptr) (int ) = 0;
 
-int raise(int arg0)
+int raise (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "raise");
@@ -12,7 +13,7 @@ int raise(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_raise(int arg0)
+int lsb_raise (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "raise");

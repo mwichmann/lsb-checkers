@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(FILE *) = 0;
+#undef feof
+static int(*funcptr) (FILE * ) = 0;
 
-int feof(FILE * arg0)
+int feof (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "feof");
@@ -13,7 +14,7 @@ int feof(FILE * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_feof(FILE * arg0)
+int lsb_feof (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "feof");

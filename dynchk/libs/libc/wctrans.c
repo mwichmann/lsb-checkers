@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static wctrans_t(*funcptr)(const char *) = 0;
+#undef wctrans
+static wctrans_t(*funcptr) (const char * ) = 0;
 
-wctrans_t wctrans(const char * arg0)
+wctrans_t wctrans (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctrans");
@@ -12,7 +13,7 @@ wctrans_t wctrans(const char * arg0)
 	return funcptr(arg0);
 }
 
-wctrans_t lsb_wctrans(const char * arg0)
+wctrans_t lsb_wctrans (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctrans");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(DIR *) = 0;
+#undef rewinddir
+static void(*funcptr) (DIR * ) = 0;
 
-void rewinddir(DIR * arg0)
+void rewinddir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rewinddir");
@@ -12,7 +13,7 @@ void rewinddir(DIR * arg0)
 	funcptr(arg0);
 }
 
-void lsb_rewinddir(DIR * arg0)
+void lsb_rewinddir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rewinddir");

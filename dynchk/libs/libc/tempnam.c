@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const char *, const char *) = 0;
+#undef tempnam
+static char *(*funcptr) (const char * , const char * ) = 0;
 
-char * tempnam(const char * arg0, const char * arg1)
+char * tempnam (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tempnam");
@@ -13,7 +14,7 @@ char * tempnam(const char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_tempnam(const char * arg0, const char * arg1)
+char * lsb_tempnam (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tempnam");

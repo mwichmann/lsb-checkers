@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct hostent *(*funcptr)(const char *) = 0;
+#undef gethostbyname
+static struct hostent *(*funcptr) (const char * ) = 0;
 
-struct hostent * gethostbyname(const char * arg0)
+struct hostent * gethostbyname (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyname");
@@ -12,7 +13,7 @@ struct hostent * gethostbyname(const char * arg0)
 	return funcptr(arg0);
 }
 
-struct hostent * lsb_gethostbyname(const char * arg0)
+struct hostent * lsb_gethostbyname (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyname");

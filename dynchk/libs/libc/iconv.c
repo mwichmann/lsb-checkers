@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <iconv.h>
-static size_t(*funcptr)(iconv_t, char * *, size_t *, char * *, size_t *) = 0;
+#undef iconv
+static size_t(*funcptr) (iconv_t , char * * , size_t * , char * * , size_t * ) = 0;
 
-size_t iconv(iconv_t arg0, char * * arg1, size_t * arg2, char * * arg3, size_t * arg4)
+size_t iconv (iconv_t arg0 , char * * arg1 , size_t * arg2 , char * * arg3 , size_t * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iconv");
@@ -17,7 +18,7 @@ size_t iconv(iconv_t arg0, char * * arg1, size_t * arg2, char * * arg3, size_t *
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-size_t lsb_iconv(iconv_t arg0, char * * arg1, size_t * arg2, char * * arg3, size_t * arg4)
+size_t lsb_iconv (iconv_t arg0 , char * * arg1 , size_t * arg2 , char * * arg3 , size_t * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iconv");

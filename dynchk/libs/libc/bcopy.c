@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void(*funcptr)(const void *, void *, size_t) = 0;
+#undef bcopy
+static void(*funcptr) (const void * , void * , size_t ) = 0;
 
-void bcopy(const void * arg0, void * arg1, size_t arg2)
+void bcopy (const void * arg0 , void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bcopy");
@@ -15,7 +16,7 @@ void bcopy(const void * arg0, void * arg1, size_t arg2)
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_bcopy(const void * arg0, void * arg1, size_t arg2)
+void lsb_bcopy (const void * arg0 , void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bcopy");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef setpgrp
+static int(*funcptr) () = 0;
 
-int setpgrp()
+int setpgrp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpgrp");
 	return funcptr();
 }
 
-int lsb_setpgrp()
+int lsb_setpgrp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpgrp");

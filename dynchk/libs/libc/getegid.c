@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static gid_t(*funcptr)() = 0;
+#undef getegid
+static gid_t(*funcptr) () = 0;
 
-gid_t getegid()
+gid_t getegid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getegid");
 	return funcptr();
 }
 
-gid_t lsb_getegid()
+gid_t lsb_getegid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getegid");

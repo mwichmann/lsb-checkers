@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static wint_t(*funcptr)() = 0;
+#undef getwchar
+static wint_t(*funcptr) () = 0;
 
-wint_t getwchar()
+wint_t getwchar ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwchar");
 	return funcptr();
 }
 
-wint_t lsb_getwchar()
+wint_t lsb_getwchar ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwchar");

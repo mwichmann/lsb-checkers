@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, struct rlimit *) = 0;
+#undef setrlimit
+static int(*funcptr) (__rlimit_resource_t , const struct rlimit * ) = 0;
 
-int setrlimit(int arg0, struct rlimit * arg1)
+int setrlimit (__rlimit_resource_t arg0 , const struct rlimit * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setrlimit");
@@ -13,7 +14,7 @@ int setrlimit(int arg0, struct rlimit * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_setrlimit(int arg0, struct rlimit * arg1)
+int lsb_setrlimit (__rlimit_resource_t arg0 , const struct rlimit * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setrlimit");

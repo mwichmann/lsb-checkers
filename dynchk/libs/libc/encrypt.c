@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(char *, int) = 0;
+#undef encrypt
+static void(*funcptr) (char * , int ) = 0;
 
-void encrypt(char * arg0, int arg1)
+void encrypt (char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "encrypt");
@@ -13,7 +14,7 @@ void encrypt(char * arg0, int arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_encrypt(char * arg0, int arg1)
+void lsb_encrypt (char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "encrypt");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int *, char *, struct termios *, struct winsize *) = 0;
+#undef forkpty
+static int(*funcptr) (int * , char * , struct termios * , struct winsize * ) = 0;
 
-int forkpty(int * arg0, char * arg1, struct termios * arg2, struct winsize * arg3)
+int forkpty (int * arg0 , char * arg1 , struct termios * arg2 , struct winsize * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "forkpty");
@@ -15,7 +16,7 @@ int forkpty(int * arg0, char * arg1, struct termios * arg2, struct winsize * arg
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_forkpty(int * arg0, char * arg1, struct termios * arg2, struct winsize * arg3)
+int lsb_forkpty (int * arg0 , char * arg1 , struct termios * arg2 , struct winsize * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "forkpty");

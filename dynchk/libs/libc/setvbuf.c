@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <stddef.h>
-static int(*funcptr)(FILE *, char *, int, size_t) = 0;
+#undef setvbuf
+static int(*funcptr) (FILE * , char * , int , size_t ) = 0;
 
-int setvbuf(FILE * arg0, char * arg1, int arg2, size_t arg3)
+int setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setvbuf");
@@ -17,7 +18,7 @@ int setvbuf(FILE * arg0, char * arg1, int arg2, size_t arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_setvbuf(FILE * arg0, char * arg1, int arg2, size_t arg3)
+int lsb_setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setvbuf");

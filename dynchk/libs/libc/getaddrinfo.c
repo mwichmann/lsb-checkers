@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *, const char *, const struct addrinfo *, struct addrinfo * *) = 0;
+#undef getaddrinfo
+static int(*funcptr) (const char * , const char * , const struct addrinfo * , struct addrinfo * * ) = 0;
 
-int getaddrinfo(const char * arg0, const char * arg1, const struct addrinfo * arg2, struct addrinfo * * arg3)
+int getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo * arg2 , struct addrinfo * * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getaddrinfo");
@@ -15,7 +16,7 @@ int getaddrinfo(const char * arg0, const char * arg1, const struct addrinfo * ar
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_getaddrinfo(const char * arg0, const char * arg1, const struct addrinfo * arg2, struct addrinfo * * arg3)
+int lsb_getaddrinfo (const char * arg0 , const char * arg1 , const struct addrinfo * arg2 , struct addrinfo * * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getaddrinfo");

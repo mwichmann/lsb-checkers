@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static float(*funcptr)(wchar_t *, wchar_t * *, int) = 0;
+#undef __wcstof_internal
+static float(*funcptr) (wchar_t * , wchar_t * * , int ) = 0;
 
-float __wcstof_internal(wchar_t * arg0, wchar_t * * arg1, int arg2)
+float __wcstof_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstof_internal");
@@ -14,7 +15,7 @@ float __wcstof_internal(wchar_t * arg0, wchar_t * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-float lsb___wcstof_internal(wchar_t * arg0, wchar_t * * arg1, int arg2)
+float lsb___wcstof_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstof_internal");

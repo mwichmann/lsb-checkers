@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static bool_t(*funcptr)(struct XDR *, enum_t *) = 0;
+#undef xdr_enum
+static bool_t(*funcptr) (struct XDR * , enum_t * ) = 0;
 
-bool_t xdr_enum(struct XDR * arg0, enum_t * arg1)
+bool_t xdr_enum (struct XDR * arg0 , enum_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_enum");
@@ -13,7 +14,7 @@ bool_t xdr_enum(struct XDR * arg0, enum_t * arg1)
 	return funcptr(arg0, arg1);
 }
 
-bool_t lsb_xdr_enum(struct XDR * arg0, enum_t * arg1)
+bool_t lsb_xdr_enum (struct XDR * arg0 , enum_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_enum");

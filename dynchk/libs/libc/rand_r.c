@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(unsigned int *) = 0;
+#undef rand_r
+static int(*funcptr) (unsigned int * ) = 0;
 
-int rand_r(unsigned int * arg0)
+int rand_r (unsigned int * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rand_r");
@@ -12,7 +13,7 @@ int rand_r(unsigned int * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_rand_r(unsigned int * arg0)
+int lsb_rand_r (unsigned int * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "rand_r");

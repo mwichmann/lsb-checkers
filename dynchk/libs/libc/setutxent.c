@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef setutxent
+static void(*funcptr) () = 0;
 
-void setutxent()
+void setutxent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setutxent");
 	funcptr();
 }
 
-void lsb_setutxent()
+void lsb_setutxent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setutxent");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef sync
+static void(*funcptr) () = 0;
 
-int sync()
+void sync ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sync");
 	return funcptr();
 }
 
-int lsb_sync()
+void lsb_sync ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sync");

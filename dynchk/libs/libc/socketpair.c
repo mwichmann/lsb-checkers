@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, int, int) = 0;
+#undef socketpair
+static int(*funcptr) (int , int , int , int [2]) = 0;
 
-int socketpair(int arg0, int arg1, int arg2, int arg3)
+int socketpair (int arg0 , int arg1 , int arg2 , int arg3 [2])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "socketpair");
@@ -15,7 +16,7 @@ int socketpair(int arg0, int arg1, int arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_socketpair(int arg0, int arg1, int arg2, int arg3)
+int lsb_socketpair (int arg0 , int arg1 , int arg2 , int arg3 [2])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "socketpair");

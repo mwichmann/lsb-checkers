@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(size_t, gid_t *) = 0;
+#undef setgroups
+static int(*funcptr) (size_t , const gid_t * ) = 0;
 
-int setgroups(size_t arg0, gid_t * arg1)
+int setgroups (size_t arg0 , const gid_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgroups");
@@ -14,7 +15,7 @@ int setgroups(size_t arg0, gid_t * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_setgroups(size_t arg0, gid_t * arg1)
+int lsb_setgroups (size_t arg0 , const gid_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgroups");

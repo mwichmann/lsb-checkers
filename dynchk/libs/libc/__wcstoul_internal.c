@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static unsigned long(*funcptr)(wchar_t *, wchar_t * *, int, int) = 0;
+#undef __wcstoul_internal
+static unsigned long(*funcptr) (wchar_t * , wchar_t * * , int , int ) = 0;
 
-unsigned long __wcstoul_internal(wchar_t * arg0, wchar_t * * arg1, int arg2, int arg3)
+unsigned long __wcstoul_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstoul_internal");
@@ -15,7 +16,7 @@ unsigned long __wcstoul_internal(wchar_t * arg0, wchar_t * * arg1, int arg2, int
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-unsigned long lsb___wcstoul_internal(wchar_t * arg0, wchar_t * * arg1, int arg2, int arg3)
+unsigned long lsb___wcstoul_internal (wchar_t * arg0 , wchar_t * * arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstoul_internal");

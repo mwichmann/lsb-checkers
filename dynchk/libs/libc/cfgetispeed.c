@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static speed_t(*funcptr)(const struct termios *) = 0;
+#undef cfgetispeed
+static speed_t(*funcptr) (const struct termios * ) = 0;
 
-speed_t cfgetispeed(const struct termios * arg0)
+speed_t cfgetispeed (const struct termios * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfgetispeed");
@@ -12,7 +13,7 @@ speed_t cfgetispeed(const struct termios * arg0)
 	return funcptr(arg0);
 }
 
-speed_t lsb_cfgetispeed(const struct termios * arg0)
+speed_t lsb_cfgetispeed (const struct termios * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfgetispeed");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(int, off_t) = 0;
+#undef ftruncate
+static int(*funcptr) (int , off_t ) = 0;
 
-int ftruncate(int arg0, off_t arg1)
+int ftruncate (int arg0 , off_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftruncate");
@@ -14,7 +15,7 @@ int ftruncate(int arg0, off_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_ftruncate(int arg0, off_t arg1)
+int lsb_ftruncate (int arg0 , off_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftruncate");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(const wchar_t *, wchar_t * *) = 0;
+#undef wcstod
+static double(*funcptr) (const wchar_t * , wchar_t * * ) = 0;
 
-double wcstod(const wchar_t * arg0, wchar_t * * arg1)
+double wcstod (const wchar_t * arg0 , wchar_t * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstod");
@@ -13,7 +14,7 @@ double wcstod(const wchar_t * arg0, wchar_t * * arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_wcstod(const wchar_t * arg0, wchar_t * * arg1)
+double lsb_wcstod (const wchar_t * arg0 , wchar_t * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstod");

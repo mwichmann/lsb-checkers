@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(ucontext_t *const ) = 0;
+#undef setcontext
+static int(*funcptr) (const  ucontext_t *) = 0;
 
-int setcontext(ucontext_t *const  arg0)
+int setcontext (const ucontext_t *arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setcontext");
@@ -12,7 +13,7 @@ int setcontext(ucontext_t *const  arg0)
 	return funcptr(arg0);
 }
 
-int lsb_setcontext(ucontext_t *const  arg0)
+int lsb_setcontext (const  ucontext_t *arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setcontext");

@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <sys/types.h>
 #include <sys/types.h>
-static int(*funcptr)(int, uid_t, gid_t) = 0;
+#undef fchown
+static int(*funcptr) (int , uid_t , gid_t ) = 0;
 
-int fchown(int arg0, uid_t arg1, gid_t arg2)
+int fchown (int arg0 , uid_t arg1 , gid_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchown");
@@ -16,7 +17,7 @@ int fchown(int arg0, uid_t arg1, gid_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_fchown(int arg0, uid_t arg1, gid_t arg2)
+int lsb_fchown (int arg0 , uid_t arg1 , gid_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchown");

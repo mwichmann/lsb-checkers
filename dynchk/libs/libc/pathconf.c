@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(const char *, int) = 0;
+#undef pathconf
+static long(*funcptr) (const char * , int ) = 0;
 
-long pathconf(const char * arg0, int arg1)
+long pathconf (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pathconf");
@@ -13,7 +14,7 @@ long pathconf(const char * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-long lsb_pathconf(const char * arg0, int arg1)
+long lsb_pathconf (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pathconf");

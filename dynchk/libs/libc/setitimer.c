@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, struct itimerval *, struct itimerval *) = 0;
+#undef setitimer
+static int(*funcptr) (int , struct itimerval * , struct itimerval * ) = 0;
 
-int setitimer(int arg0, struct itimerval * arg1, struct itimerval * arg2)
+int setitimer (int arg0 , struct itimerval * arg1 , struct itimerval * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setitimer");
@@ -14,7 +15,7 @@ int setitimer(int arg0, struct itimerval * arg1, struct itimerval * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_setitimer(int arg0, struct itimerval * arg1, struct itimerval * arg2)
+int lsb_setitimer (int arg0 , struct itimerval * arg1 , struct itimerval * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setitimer");

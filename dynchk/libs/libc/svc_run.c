@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef svc_run
+static void(*funcptr) () = 0;
 
-void svc_run()
+void svc_run ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_run");
 	funcptr();
 }
 
-void lsb_svc_run()
+void lsb_svc_run ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_run");

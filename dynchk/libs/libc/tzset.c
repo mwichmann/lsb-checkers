@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef tzset
+static void(*funcptr) () = 0;
 
-void tzset()
+void tzset ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tzset");
 	funcptr();
 }
 
-void lsb_tzset()
+void lsb_tzset ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tzset");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static bool_t(*funcptr)(struct XDR *, char * *) = 0;
+#undef xdr_wrapstring
+static bool_t(*funcptr) (struct XDR * , char * * ) = 0;
 
-bool_t xdr_wrapstring(struct XDR * arg0, char * * arg1)
+bool_t xdr_wrapstring (struct XDR * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_wrapstring");
@@ -13,7 +14,7 @@ bool_t xdr_wrapstring(struct XDR * arg0, char * * arg1)
 	return funcptr(arg0, arg1);
 }
 
-bool_t lsb_xdr_wrapstring(struct XDR * arg0, char * * arg1)
+bool_t lsb_xdr_wrapstring (struct XDR * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_wrapstring");

@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <sys/types.h>
-static ssize_t(*funcptr)(int, void *, size_t, off_t) = 0;
+#undef pread
+static ssize_t(*funcptr) (int , void * , size_t , off_t ) = 0;
 
-ssize_t pread(int arg0, void * arg1, size_t arg2, off_t arg3)
+ssize_t pread (int arg0 , void * arg1 , size_t arg2 , off_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pread");
@@ -17,7 +18,7 @@ ssize_t pread(int arg0, void * arg1, size_t arg2, off_t arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-ssize_t lsb_pread(int arg0, void * arg1, size_t arg2, off_t arg3)
+ssize_t lsb_pread (int arg0 , void * arg1 , size_t arg2 , off_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pread");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static const int32_t * *(*funcptr)() = 0;
+#undef __ctype_toupper_loc
+static const int32_t * *(*funcptr) () = 0;
 
-const int32_t * * __ctype_toupper_loc()
+const int32_t * * __ctype_toupper_loc ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_toupper_loc");
 	return funcptr();
 }
 
-const int32_t * * lsb___ctype_toupper_loc()
+const int32_t * * lsb___ctype_toupper_loc ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_toupper_loc");

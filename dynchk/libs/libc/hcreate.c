@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(size_t) = 0;
+#undef hcreate
+static int(*funcptr) (size_t ) = 0;
 
-int hcreate(size_t arg0)
+int hcreate (size_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hcreate");
@@ -13,7 +14,7 @@ int hcreate(size_t arg0)
 	return funcptr(arg0);
 }
 
-int lsb_hcreate(size_t arg0)
+int lsb_hcreate (size_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hcreate");

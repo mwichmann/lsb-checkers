@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static FILE *(*funcptr)() = 0;
+#undef tmpfile
+static FILE *(*funcptr) () = 0;
 
-FILE * tmpfile()
+FILE * tmpfile ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tmpfile");
 	return funcptr();
 }
 
-FILE * lsb_tmpfile()
+FILE * lsb_tmpfile ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tmpfile");

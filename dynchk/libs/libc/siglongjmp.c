@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <setjmp.h>
-static void(*funcptr)(sigjmp_buf, int) = 0;
+#undef siglongjmp
+static void(*funcptr) (sigjmp_buf , int ) = 0;
 
-void siglongjmp(sigjmp_buf arg0, int arg1)
+void siglongjmp (sigjmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siglongjmp");
@@ -14,7 +15,7 @@ void siglongjmp(sigjmp_buf arg0, int arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_siglongjmp(sigjmp_buf arg0, int arg1)
+void lsb_siglongjmp (sigjmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siglongjmp");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef unlockpt
+static int(*funcptr) (int ) = 0;
 
-int unlockpt(int arg0)
+int unlockpt (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unlockpt");
@@ -12,7 +13,7 @@ int unlockpt(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_unlockpt(int arg0)
+int lsb_unlockpt (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "unlockpt");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(ucontext_t *, ucontext_t *) = 0;
+#undef swapcontext
+static int(*funcptr) (ucontext_t * , const ucontext_t * ) = 0;
 
-int swapcontext(ucontext_t * arg0, ucontext_t * arg1)
+int swapcontext (ucontext_t * arg0 , const ucontext_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swapcontext");
@@ -13,7 +14,7 @@ int swapcontext(ucontext_t * arg0, ucontext_t * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_swapcontext(ucontext_t * arg0, ucontext_t * arg1)
+int lsb_swapcontext (ucontext_t * arg0 , const ucontext_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swapcontext");

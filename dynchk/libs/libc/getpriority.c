@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <sys/resource.h>
 #include <sys/types.h>
-static int(*funcptr)(enum __priority_which, id_t) = 0;
+#undef getpriority
+static int(*funcptr) (enum __priority_which , id_t ) = 0;
 
-int getpriority(enum __priority_which arg0, id_t arg1)
+int getpriority (enum __priority_which arg0 , id_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpriority");
@@ -15,7 +16,7 @@ int getpriority(enum __priority_which arg0, id_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_getpriority(enum __priority_which arg0, id_t arg1)
+int lsb_getpriority (enum __priority_which arg0 , id_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpriority");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(const wchar_t *, size_t) = 0;
+#undef wcswidth
+static int(*funcptr) (const wchar_t * , size_t ) = 0;
 
-int wcswidth(const wchar_t * arg0, size_t arg1)
+int wcswidth (const wchar_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcswidth");
@@ -14,7 +15,7 @@ int wcswidth(const wchar_t * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wcswidth(const wchar_t * arg0, size_t arg1)
+int lsb_wcswidth (const wchar_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcswidth");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static char *(*funcptr)(char *, const char *, size_t) = 0;
+#undef strncat
+static char *(*funcptr) (char * , const char * , size_t ) = 0;
 
-char * strncat(char * arg0, const char * arg1, size_t arg2)
+char * strncat (char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strncat");
@@ -15,7 +16,7 @@ char * strncat(char * arg0, const char * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_strncat(char * arg0, const char * arg1, size_t arg2)
+char * lsb_strncat (char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strncat");

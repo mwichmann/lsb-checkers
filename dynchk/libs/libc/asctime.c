@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const struct tm *) = 0;
+#undef asctime
+static char *(*funcptr) (const struct tm * ) = 0;
 
-char * asctime(const struct tm * arg0)
+char * asctime (const struct tm * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asctime");
@@ -12,7 +13,7 @@ char * asctime(const struct tm * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_asctime(const struct tm * arg0)
+char * lsb_asctime (const struct tm * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "asctime");

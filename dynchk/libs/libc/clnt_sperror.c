@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(struct CLIENT *, const char *) = 0;
+#undef clnt_sperror
+static char *(*funcptr) (struct CLIENT * , const char * ) = 0;
 
-char * clnt_sperror(struct CLIENT * arg0, const char * arg1)
+char * clnt_sperror (struct CLIENT * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_sperror");
@@ -13,7 +14,7 @@ char * clnt_sperror(struct CLIENT * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_clnt_sperror(struct CLIENT * arg0, const char * arg1)
+char * lsb_clnt_sperror (struct CLIENT * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_sperror");

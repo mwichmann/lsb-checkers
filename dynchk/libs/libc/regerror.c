@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static size_t(*funcptr)(int, regex_t *, char *, size_t) = 0;
+#undef regerror
+static size_t(*funcptr) (int , regex_t * , char * , size_t ) = 0;
 
-size_t regerror(int arg0, regex_t * arg1, char * arg2, size_t arg3)
+size_t regerror (int arg0 , regex_t * arg1 , char * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regerror");
@@ -16,7 +17,7 @@ size_t regerror(int arg0, regex_t * arg1, char * arg2, size_t arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-size_t lsb_regerror(int arg0, regex_t * arg1, char * arg2, size_t arg3)
+size_t lsb_regerror (int arg0 , regex_t * arg1 , char * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regerror");

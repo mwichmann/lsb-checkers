@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stddef.h>
-static wchar_t *(*funcptr)(wchar_t *, wchar_t, size_t) = 0;
+#undef wmemset
+static wchar_t *(*funcptr) (wchar_t * , wchar_t , size_t ) = 0;
 
-wchar_t * wmemset(wchar_t * arg0, wchar_t arg1, size_t arg2)
+wchar_t * wmemset (wchar_t * arg0 , wchar_t arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmemset");
@@ -16,7 +17,7 @@ wchar_t * wmemset(wchar_t * arg0, wchar_t arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-wchar_t * lsb_wmemset(wchar_t * arg0, wchar_t arg1, size_t arg2)
+wchar_t * lsb_wmemset (wchar_t * arg0 , wchar_t arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wmemset");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(const char *, off_t) = 0;
+#undef truncate
+static int(*funcptr) (const char * , off_t ) = 0;
 
-int truncate(const char * arg0, off_t arg1)
+int truncate (const char * arg0 , off_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncate");
@@ -14,7 +15,7 @@ int truncate(const char * arg0, off_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_truncate(const char * arg0, off_t arg1)
+int lsb_truncate (const char * arg0 , off_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "truncate");

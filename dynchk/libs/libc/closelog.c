@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef closelog
+static void(*funcptr) () = 0;
 
-void closelog()
+void closelog ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "closelog");
 	funcptr();
 }
 
-void lsb_closelog()
+void lsb_closelog ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "closelog");

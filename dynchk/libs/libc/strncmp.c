@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(const char *, const char *, size_t) = 0;
+#undef strncmp
+static int(*funcptr) (const char * , const char * , size_t ) = 0;
 
-int strncmp(const char * arg0, const char * arg1, size_t arg2)
+int strncmp (const char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strncmp");
@@ -15,7 +16,7 @@ int strncmp(const char * arg0, const char * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_strncmp(const char * arg0, const char * arg1, size_t arg2)
+int lsb_strncmp (const char * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strncmp");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(long) = 0;
+#undef l64a
+static char *(*funcptr) (long ) = 0;
 
-char * l64a(long arg0)
+char * l64a (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "l64a");
@@ -12,7 +13,7 @@ char * l64a(long arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_l64a(long arg0)
+char * lsb_l64a (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "l64a");

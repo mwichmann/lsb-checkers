@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(int, void *, size_t, long, int) = 0;
+#undef msgrcv
+static int(*funcptr) (int , void * , size_t , long , int ) = 0;
 
-int msgrcv(int arg0, void * arg1, size_t arg2, long arg3, int arg4)
+int msgrcv (int arg0 , void * arg1 , size_t arg2 , long arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgrcv");
@@ -17,7 +18,7 @@ int msgrcv(int arg0, void * arg1, size_t arg2, long arg3, int arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_msgrcv(int arg0, void * arg1, size_t arg2, long arg3, int arg4)
+int lsb_msgrcv (int arg0 , void * arg1 , size_t arg2 , long arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgrcv");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct utsname *) = 0;
+#undef uname
+static int(*funcptr) (struct utsname * ) = 0;
 
-int uname(struct utsname * arg0)
+int uname (struct utsname * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "uname");
@@ -12,7 +13,7 @@ int uname(struct utsname * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_uname(struct utsname * arg0)
+int lsb_uname (struct utsname * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "uname");

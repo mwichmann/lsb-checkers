@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct sigstack *, struct sigstack *) = 0;
+#undef sigstack
+static int(*funcptr) (struct sigstack * , struct sigstack * ) = 0;
 
-int sigstack(struct sigstack * arg0, struct sigstack * arg1)
+int sigstack (struct sigstack * arg0 , struct sigstack * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigstack");
@@ -13,7 +14,7 @@ int sigstack(struct sigstack * arg0, struct sigstack * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sigstack(struct sigstack * arg0, struct sigstack * arg1)
+int lsb_sigstack (struct sigstack * arg0 , struct sigstack * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigstack");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(long) = 0;
+#undef labs
+static long(*funcptr) (long ) = 0;
 
-long labs(long arg0)
+long labs (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "labs");
@@ -12,7 +13,7 @@ long labs(long arg0)
 	return funcptr(arg0);
 }
 
-long lsb_labs(long arg0)
+long lsb_labs (long arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "labs");

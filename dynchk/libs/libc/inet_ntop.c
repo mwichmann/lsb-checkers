@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static char *(*funcptr)(int, void *, char *, size_t) = 0;
+#undef inet_ntop
+static char *(*funcptr) (int , void * , char * , size_t ) = 0;
 
-char * inet_ntop(int arg0, void * arg1, char * arg2, size_t arg3)
+char * inet_ntop (int arg0 , void * arg1 , char * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntop");
@@ -16,7 +17,7 @@ char * inet_ntop(int arg0, void * arg1, char * arg2, size_t arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-char * lsb_inet_ntop(int arg0, void * arg1, char * arg2, size_t arg3)
+char * lsb_inet_ntop (int arg0 , void * arg1 , char * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntop");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(const char *, char * *) = 0;
+#undef strtod
+static double(*funcptr) (const char * , char * * ) = 0;
 
-double strtod(const char * arg0, char * * arg1)
+double strtod (const char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtod");
@@ -13,7 +14,7 @@ double strtod(const char * arg0, char * * arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_strtod(const char * arg0, char * * arg1)
+double lsb_strtod (const char * arg0 , char * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtod");

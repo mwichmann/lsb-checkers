@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(fd_set *) = 0;
+#undef svc_getreqset
+static void(*funcptr) (fd_set * ) = 0;
 
-void svc_getreqset(fd_set * arg0)
+void svc_getreqset (fd_set * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_getreqset");
@@ -12,7 +13,7 @@ void svc_getreqset(fd_set * arg0)
 	funcptr(arg0);
 }
 
-void lsb_svc_getreqset(fd_set * arg0)
+void lsb_svc_getreqset (fd_set * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_getreqset");

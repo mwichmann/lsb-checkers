@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef hdestroy
+static void(*funcptr) () = 0;
 
-void hdestroy()
+void hdestroy ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hdestroy");
 	funcptr();
 }
 
-void lsb_hdestroy()
+void lsb_hdestroy ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hdestroy");

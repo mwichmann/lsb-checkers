@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(wchar_t *, char *, size_t) = 0;
+#undef mbtowc
+static int(*funcptr) (wchar_t * , const char * , size_t ) = 0;
 
-int mbtowc(wchar_t * arg0, char * arg1, size_t arg2)
+int mbtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbtowc");
@@ -15,7 +16,7 @@ int mbtowc(wchar_t * arg0, char * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mbtowc(wchar_t * arg0, char * arg1, size_t arg2)
+int lsb_mbtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbtowc");

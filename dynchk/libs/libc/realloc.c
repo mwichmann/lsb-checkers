@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void *(*funcptr)(void *, size_t) = 0;
+#undef realloc
+static void *(*funcptr) (void * , size_t ) = 0;
 
-void * realloc(void * arg0, size_t arg1)
+void * realloc (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "realloc");
@@ -14,7 +15,7 @@ void * realloc(void * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-void * lsb_realloc(void * arg0, size_t arg1)
+void * lsb_realloc (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "realloc");

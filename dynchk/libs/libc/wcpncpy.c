@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static wchar_t *(*funcptr)(wchar_t *, const wchar_t *, size_t) = 0;
+#undef wcpncpy
+static wchar_t *(*funcptr) (wchar_t * , const wchar_t * , size_t ) = 0;
 
-wchar_t * wcpncpy(wchar_t * arg0, const wchar_t * arg1, size_t arg2)
+wchar_t * wcpncpy (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcpncpy");
@@ -15,7 +16,7 @@ wchar_t * wcpncpy(wchar_t * arg0, const wchar_t * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-wchar_t * lsb_wcpncpy(wchar_t * arg0, const wchar_t * arg1, size_t arg2)
+wchar_t * lsb_wcpncpy (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcpncpy");

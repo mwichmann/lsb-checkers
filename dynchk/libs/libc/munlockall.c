@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef munlockall
+static int(*funcptr) () = 0;
 
-int munlockall()
+int munlockall ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "munlockall");
 	return funcptr();
 }
 
-int lsb_munlockall()
+int lsb_munlockall ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "munlockall");

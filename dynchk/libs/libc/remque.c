@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(void *) = 0;
+#undef remque
+static void(*funcptr) (void * ) = 0;
 
-void remque(void * arg0)
+void remque (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remque");
@@ -12,7 +13,7 @@ void remque(void * arg0)
 	funcptr(arg0);
 }
 
-void lsb_remque(void * arg0)
+void lsb_remque (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remque");

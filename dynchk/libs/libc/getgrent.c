@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct group *(*funcptr)() = 0;
+#undef getgrent
+static struct group *(*funcptr) () = 0;
 
-struct group * getgrent()
+struct group * getgrent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrent");
 	return funcptr();
 }
 
-struct group * lsb_getgrent()
+struct group * lsb_getgrent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrent");
