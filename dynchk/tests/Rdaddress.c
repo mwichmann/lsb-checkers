@@ -9,6 +9,7 @@ int validate_Rdaddress(const void *address, const char *name)
 		__lsb_fprintf(stderr,
 				"Parameter %p to %s is not a valid Rd address\n",
 				address, name );
+		return 1;
 		__lsb_abort();
 	}
 	return 0;
