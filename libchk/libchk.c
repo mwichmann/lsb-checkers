@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.51 $
+ * This is $Revision: 1.52 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.52  2004/12/14 16:33:28  mats
+ * fiddle with reporting of extra versions
+ *
  * Revision 1.51  2004/12/13 22:07:32  mats
  * Improve information if expected symbol version is not in library
  *
@@ -198,7 +201,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.51 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.52 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -213,19 +216,19 @@ int libchk_debug=LIBCHK_DEBUG_CXXHUSH;
 char *module = NULL;
 
 
-/* common code to print the version of a symbol in the library */
+/* dump info on extra versions in library (maintainer mode) */
 void
-vers_symbol(ElfFile * file, int index, int vers, char *vername)
+extra_vers(ElfFile * file, int index, int vers, char *vername)
 {
 
-    printf("    %s has version %s, expecting ",
+    printf("    %s also has version %s ",
 	   ElfGetStringIndex(file, file->syms[index].st_name,
 			     file->symhdr->sh_link),
 	   file->versionnames[vers]);
     if (strlen(vername) > 0)
-	printf("%s\n", vername);
+	printf("(db %s)\n", vername);
     else
-	printf("unversioned\n");
+	printf("(db unversioned)\n");
 }
 
 
@@ -324,10 +327,10 @@ check_symbol(ElfFile *file, struct versym *entry)
       if( file->numverdefs == 2 ) {
 	  /* The library only has a single version, which is the default */
 	  if( strcmp(file->versionnames[2], entry->vername) != 0 ) {
-              printf("    Version %s did not match only available version %s!\n",
-			      entry->vername, file->versionnames[2]);
-              if( libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS) )
-	          vers_symbol(file, j, vers, entry->vername);
+              printf("    Warning!!! Did not find version tag %s in library!\n",
+                     entry->vername);
+              if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+                  printf("    only available version is %s\n", file->versionnames[2]);
 	      return 0;
             }
 	  i=2; 
@@ -350,11 +353,10 @@ check_symbol(ElfFile *file, struct versym *entry)
           /* Check to make sure we found the version at all */
           if( i > file->numverdefs )
           {
-            printf("Warning!!! Did not find version %s in library!\n",
+            printf("    Warning!!! Did not find version tag %s in library!\n",
                    entry->vername);
             if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
-	      vers_symbol(file, j, vers, entry->vername);
-
+	      printf("    available version is %s\n", file->versionnames[vers]);
 	    return 0;
           }
       }
@@ -363,15 +365,15 @@ check_symbol(ElfFile *file, struct versym *entry)
       if (vers == i)
 	foundit=1;
 
-      /* If the version in the libary is greater, then warn, if in
-         maintainer mode */
+      /* If the version in the libary is greater (newer) then warn if
+         in maintainer mode */
       if (vers > i && (libchk_debug&LIBCHK_DEBUG_NEWVERS))
-          vers_symbol(file, j, vers, entry->vername);
+          extra_vers(file, j, vers, entry->vername);
 
-      /* If the version in the library is less than (older), only warn if
+      /* If the version in the library is less (older) then warn if
          in maintainer mode. */
       if (vers < i && (libchk_debug&LIBCHK_DEBUG_OLDVERS))
-          vers_symbol(file, j, vers, entry->vername);
+          extra_vers(file, j, vers, entry->vername);
     }
   }
 
