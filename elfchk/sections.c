@@ -298,6 +298,21 @@ fprintf(stderr, "IA_64_UNWIND SECTION\n" );
 #endif
 
 void
+dumpsection(Elf32_Shdr *hdr)
+{
+fprintf(stderr,"sh_type %x\n", hdr->sh_type );
+fprintf(stderr,"sh_flags %x\n", hdr->sh_flags );
+fprintf(stderr,"sh_addr %x\n", hdr->sh_addr );
+fprintf(stderr,"sh_offset %x\n", hdr->sh_offset );
+fprintf(stderr,"sh_size %x\n", hdr->sh_size );
+fprintf(stderr,"sh_link %x\n", hdr->sh_link );
+fprintf(stderr,"sh_info %x\n", hdr->sh_info );
+fprintf(stderr,"sh_addralign %x\n", hdr->sh_addralign );
+fprintf(stderr,"sh_entsize %x\n", hdr->sh_entsize );
+return;
+}
+
+void
 checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
 {
   Elf32_Shdr	*hdr1;
