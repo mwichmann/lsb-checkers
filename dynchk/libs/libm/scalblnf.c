@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <math.h>
 #undef scalblnf
-static float(*funcptr) (float , long ) = 0;
+static float(*funcptr) (float , long int ) = 0;
 
 extern int __lsb_check_params;
-float scalblnf (float arg0 , long arg1 )
+float scalblnf (float arg0 , long int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
