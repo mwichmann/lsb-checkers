@@ -1,7 +1,7 @@
 CFLAGS=-g -Wall
 OBJS=tetj.o
 
-LIB=libelfchk.a
+LIB=libtetj.a
 
 all: $(LIB) 
 
