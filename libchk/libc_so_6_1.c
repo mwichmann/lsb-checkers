@@ -12059,7 +12059,6 @@ struct versym libc_so_6_1[] = {
 #if __s390x__
 	{"snprintf","GLIBC_2.2",0,"LSB-Core",4,1},
 #endif
-	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",0,1},
 #if __i386__
 	{"sockatmark","GLIBC_2.2.4",0,"LSB-Core",4,1},
 #endif
