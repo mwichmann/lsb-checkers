@@ -3,10 +3,13 @@
 #include <stdio.h>
 #include <unistd.h>
 
-static int(*funcptr)(int, int, const void *) = 0;
+static int(*funcptr)(int, unsigned long, ...) = 0;
 
-int ioctl(int fd, int request, const void *arg)
+int ioctl(int fd, unsigned long request, ...)
 {
+	va_list arg;
+	va_start(arg, request);
+
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ioctl");
 
@@ -17,8 +20,11 @@ int ioctl(int fd, int request, const void *arg)
 	return funcptr(fd, request, arg);
 }
 
-int lsb_ioctl(int fd, int flags, int request, const void *arg)
+int lsb_ioctl(int fd, unsigned long request, ...)
 {
+	va_list arg;
+	va_start(arg, request);
+
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ioctl");
 
