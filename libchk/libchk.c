@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.26 $
+ * This is $Revision: 1.27 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.27  2003/09/01 05:38:31  cyeoh
+ * Log file not found errors to journal file
+ *
  * Revision 1.26  2003/08/29 13:40:54  anderson
  * Work around other recent fixes that I didn't have onthe airplane 8-). Specify the full path to libstdc__.so.5 to keeps things standalong for cxxabichk
  *
@@ -120,7 +123,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.26 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.27 $";
 
 extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
 
@@ -322,7 +325,8 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
   {
     snprintf(tmp_string, TMP_STRING_SIZE, "Unable to find library %s",
              libname);
-    printf("%s\n", tmp_string);
+    fprintf(stderr, "%s\n", tmp_string);
+		tetj_add_controller_error(journal, tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     return;
