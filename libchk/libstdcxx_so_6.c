@@ -13573,7 +13573,7 @@ struct classtypeinfo N10__cxxabiv116__enum_type_infoE_typeinfo = {
 	N10__cxxabiv116__enum_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv116__enum_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv116__enum_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv116__enum_type_infoD1Ev",
 	"_ZN10__cxxabiv116__enum_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -13582,12 +13582,16 @@ const char *N10__cxxabiv116__enum_type_infoE_vtable_name[] = {
 	"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
 	};
 
-struct classvtable N10__cxxabiv116__enum_type_infoE_vtable = {
+struct classvtable N10__cxxabiv116__enum_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	6,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv116__enum_type_infoE",
-	N10__cxxabiv116__enum_type_infoE_vtable_name,
-	};
+	N10__cxxabiv116__enum_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv116__enum_type_infoE_baseinfo[] = {
 	};
@@ -13597,13 +13601,12 @@ struct classinfo _ZN10__cxxabiv116__enum_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv116__enum_type_infoE",
 	"_ZTIN10__cxxabiv116__enum_type_infoE",
 	"_ZTISt9type_info",
-	6,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv116__enum_type_infoE_typeinfo,
-	&N10__cxxabiv116__enum_type_infoE_vtable,
+	N10__cxxabiv116__enum_type_infoE_vtable,
 	N10__cxxabiv116__enum_type_infoE_baseinfo,
 	};
 
@@ -13616,7 +13619,7 @@ struct classtypeinfo N10__cxxabiv117__array_type_infoE_typeinfo = {
 	N10__cxxabiv117__array_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv117__array_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv117__array_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv117__array_type_infoD1Ev",
 	"_ZN10__cxxabiv117__array_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -13625,12 +13628,16 @@ const char *N10__cxxabiv117__array_type_infoE_vtable_name[] = {
 	"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
 	};
 
-struct classvtable N10__cxxabiv117__array_type_infoE_vtable = {
+struct classvtable N10__cxxabiv117__array_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	6,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv117__array_type_infoE",
-	N10__cxxabiv117__array_type_infoE_vtable_name,
-	};
+	N10__cxxabiv117__array_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv117__array_type_infoE_baseinfo[] = {
 	};
@@ -13640,13 +13647,12 @@ struct classinfo _ZN10__cxxabiv117__array_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv117__array_type_infoE",
 	"_ZTIN10__cxxabiv117__array_type_infoE",
 	"_ZTISt9type_info",
-	6,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv117__array_type_infoE_typeinfo,
-	&N10__cxxabiv117__array_type_infoE_vtable,
+	N10__cxxabiv117__array_type_infoE_vtable,
 	N10__cxxabiv117__array_type_infoE_baseinfo,
 	};
 
@@ -13659,7 +13665,7 @@ struct classtypeinfo N10__cxxabiv117__class_type_infoE_typeinfo = {
 	N10__cxxabiv117__class_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv117__class_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv117__class_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv117__class_type_infoD1Ev",
 	"_ZN10__cxxabiv117__class_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -13711,12 +13717,16 @@ const char *N10__cxxabiv117__class_type_infoE_vtable_name[] = {
 #endif
 	};
 
-struct classvtable N10__cxxabiv117__class_type_infoE_vtable = {
+struct classvtable N10__cxxabiv117__class_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv117__class_type_infoE",
-	N10__cxxabiv117__class_type_infoE_vtable_name,
-	};
+	N10__cxxabiv117__class_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv117__class_type_infoE_baseinfo[] = {
 	};
@@ -13726,13 +13736,12 @@ struct classinfo _ZN10__cxxabiv117__class_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTIN10__cxxabiv117__class_type_infoE",
 	"_ZTISt9type_info",
-	9,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv117__class_type_infoE_typeinfo,
-	&N10__cxxabiv117__class_type_infoE_vtable,
+	N10__cxxabiv117__class_type_infoE_vtable,
 	N10__cxxabiv117__class_type_infoE_baseinfo,
 	};
 
@@ -13745,7 +13754,7 @@ struct classtypeinfo N10__cxxabiv117__pbase_type_infoE_typeinfo = {
 	N10__cxxabiv117__pbase_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv117__pbase_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv117__pbase_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv117__pbase_type_infoD1Ev",
 	"_ZN10__cxxabiv117__pbase_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -13755,12 +13764,16 @@ const char *N10__cxxabiv117__pbase_type_infoE_vtable_name[] = {
 	"_ZNK10__cxxabiv117__pbase_type_info15__pointer_catchEPKS0_PPvj",
 	};
 
-struct classvtable N10__cxxabiv117__pbase_type_infoE_vtable = {
+struct classvtable N10__cxxabiv117__pbase_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	7,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv117__pbase_type_infoE",
-	N10__cxxabiv117__pbase_type_infoE_vtable_name,
-	};
+	N10__cxxabiv117__pbase_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv117__pbase_type_infoE_baseinfo[] = {
 	};
@@ -13770,13 +13783,12 @@ struct classinfo _ZN10__cxxabiv117__pbase_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv117__pbase_type_infoE",
 	"_ZTIN10__cxxabiv117__pbase_type_infoE",
 	"_ZTISt9type_info",
-	7,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv117__pbase_type_infoE_typeinfo,
-	&N10__cxxabiv117__pbase_type_infoE_vtable,
+	N10__cxxabiv117__pbase_type_infoE_vtable,
 	N10__cxxabiv117__pbase_type_infoE_baseinfo,
 	};
 
@@ -13789,7 +13801,7 @@ struct classtypeinfo N10__cxxabiv119__pointer_type_infoE_typeinfo = {
 	N10__cxxabiv119__pointer_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv119__pointer_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv119__pointer_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv119__pointer_type_infoD1Ev",
 	"_ZN10__cxxabiv119__pointer_type_infoD0Ev",
 	"_ZNK10__cxxabiv119__pointer_type_info14__is_pointer_pEv",
@@ -13799,12 +13811,16 @@ const char *N10__cxxabiv119__pointer_type_infoE_vtable_name[] = {
 	"_ZNK10__cxxabiv119__pointer_type_info15__pointer_catchEPKNS_17__pbase_type_infoEPPvj",
 	};
 
-struct classvtable N10__cxxabiv119__pointer_type_infoE_vtable = {
+struct classvtable N10__cxxabiv119__pointer_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	7,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv119__pointer_type_infoE",
-	N10__cxxabiv119__pointer_type_infoE_vtable_name,
-	};
+	N10__cxxabiv119__pointer_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv119__pointer_type_infoE_baseinfo[] = {
 	};
@@ -13814,13 +13830,12 @@ struct classinfo _ZN10__cxxabiv119__pointer_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv119__pointer_type_infoE",
 	"_ZTIN10__cxxabiv119__pointer_type_infoE",
 	"_ZTIN10__cxxabiv117__pbase_type_infoE",
-	7,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv119__pointer_type_infoE_typeinfo,
-	&N10__cxxabiv119__pointer_type_infoE_vtable,
+	N10__cxxabiv119__pointer_type_infoE_vtable,
 	N10__cxxabiv119__pointer_type_infoE_baseinfo,
 	};
 
@@ -13833,7 +13848,7 @@ struct classtypeinfo N10__cxxabiv120__function_type_infoE_typeinfo = {
 	N10__cxxabiv120__function_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv120__function_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv120__function_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv120__function_type_infoD1Ev",
 	"_ZN10__cxxabiv120__function_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -13842,12 +13857,16 @@ const char *N10__cxxabiv120__function_type_infoE_vtable_name[] = {
 	"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
 	};
 
-struct classvtable N10__cxxabiv120__function_type_infoE_vtable = {
+struct classvtable N10__cxxabiv120__function_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	6,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv120__function_type_infoE",
-	N10__cxxabiv120__function_type_infoE_vtable_name,
-	};
+	N10__cxxabiv120__function_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv120__function_type_infoE_baseinfo[] = {
 	};
@@ -13857,13 +13876,12 @@ struct classinfo _ZN10__cxxabiv120__function_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv120__function_type_infoE",
 	"_ZTIN10__cxxabiv120__function_type_infoE",
 	"_ZTISt9type_info",
-	6,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv120__function_type_infoE_typeinfo,
-	&N10__cxxabiv120__function_type_infoE_vtable,
+	N10__cxxabiv120__function_type_infoE_vtable,
 	N10__cxxabiv120__function_type_infoE_baseinfo,
 	};
 
@@ -13876,7 +13894,7 @@ struct classtypeinfo N10__cxxabiv120__si_class_type_infoE_typeinfo = {
 	N10__cxxabiv120__si_class_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv120__si_class_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv120__si_class_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv120__si_class_type_infoD1Ev",
 	"_ZN10__cxxabiv120__si_class_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -13887,17 +13905,17 @@ const char *N10__cxxabiv120__si_class_type_infoE_vtable_name[] = {
 #if __i386__
 	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
 #if __ia64__
 	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
 #if __powerpc64__
 	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
@@ -13905,20 +13923,20 @@ const char *N10__cxxabiv120__si_class_type_infoE_vtable_name[] = {
 #if __s390x__
 	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
-#if __ia64__
-	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
-#endif
 #if __i386__
 	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
+#endif
+#if __ia64__
+	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
 #endif
-#if __s390__ && !__s390x__
-	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
-#endif
 #if __powerpc64__
 	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
@@ -13928,12 +13946,16 @@ const char *N10__cxxabiv120__si_class_type_infoE_vtable_name[] = {
 #endif
 	};
 
-struct classvtable N10__cxxabiv120__si_class_type_infoE_vtable = {
+struct classvtable N10__cxxabiv120__si_class_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv120__si_class_type_infoE",
-	N10__cxxabiv120__si_class_type_infoE_vtable_name,
-	};
+	N10__cxxabiv120__si_class_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv120__si_class_type_infoE_baseinfo[] = {
 	};
@@ -13943,13 +13965,12 @@ struct classinfo _ZN10__cxxabiv120__si_class_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTIN10__cxxabiv120__si_class_type_infoE",
 	"_ZTIN10__cxxabiv117__class_type_infoE",
-	9,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv120__si_class_type_infoE_typeinfo,
-	&N10__cxxabiv120__si_class_type_infoE_vtable,
+	N10__cxxabiv120__si_class_type_infoE_vtable,
 	N10__cxxabiv120__si_class_type_infoE_baseinfo,
 	};
 
@@ -13962,7 +13983,7 @@ struct classtypeinfo N10__cxxabiv121__vmi_class_type_infoE_typeinfo = {
 	N10__cxxabiv121__vmi_class_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv121__vmi_class_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv121__vmi_class_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv121__vmi_class_type_infoD1Ev",
 	"_ZN10__cxxabiv121__vmi_class_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -13973,17 +13994,17 @@ const char *N10__cxxabiv121__vmi_class_type_infoE_vtable_name[] = {
 #if __i386__
 	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
 #if __ia64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
 #if __powerpc64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
@@ -13991,20 +14012,20 @@ const char *N10__cxxabiv121__vmi_class_type_infoE_vtable_name[] = {
 #if __s390x__
 	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
-#if __ia64__
-	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
-#endif
 #if __i386__
 	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
+#endif
+#if __ia64__
+	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
 #endif
-#if __s390__ && !__s390x__
-	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
-#endif
 #if __powerpc64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
@@ -14014,12 +14035,16 @@ const char *N10__cxxabiv121__vmi_class_type_infoE_vtable_name[] = {
 #endif
 	};
 
-struct classvtable N10__cxxabiv121__vmi_class_type_infoE_vtable = {
+struct classvtable N10__cxxabiv121__vmi_class_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv121__vmi_class_type_infoE",
-	N10__cxxabiv121__vmi_class_type_infoE_vtable_name,
-	};
+	N10__cxxabiv121__vmi_class_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv121__vmi_class_type_infoE_baseinfo[] = {
 	};
@@ -14029,13 +14054,12 @@ struct classinfo _ZN10__cxxabiv121__vmi_class_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTIN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTIN10__cxxabiv117__class_type_infoE",
-	9,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv121__vmi_class_type_infoE_typeinfo,
-	&N10__cxxabiv121__vmi_class_type_infoE_vtable,
+	N10__cxxabiv121__vmi_class_type_infoE_vtable,
 	N10__cxxabiv121__vmi_class_type_infoE_baseinfo,
 	};
 
@@ -14048,7 +14072,7 @@ struct classtypeinfo N10__cxxabiv123__fundamental_type_infoE_typeinfo = {
 	N10__cxxabiv123__fundamental_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv123__fundamental_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv123__fundamental_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv123__fundamental_type_infoD1Ev",
 	"_ZN10__cxxabiv123__fundamental_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -14057,12 +14081,16 @@ const char *N10__cxxabiv123__fundamental_type_infoE_vtable_name[] = {
 	"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
 	};
 
-struct classvtable N10__cxxabiv123__fundamental_type_infoE_vtable = {
+struct classvtable N10__cxxabiv123__fundamental_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	6,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv123__fundamental_type_infoE",
-	N10__cxxabiv123__fundamental_type_infoE_vtable_name,
-	};
+	N10__cxxabiv123__fundamental_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv123__fundamental_type_infoE_baseinfo[] = {
 	};
@@ -14072,13 +14100,12 @@ struct classinfo _ZN10__cxxabiv123__fundamental_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv123__fundamental_type_infoE",
 	"_ZTIN10__cxxabiv123__fundamental_type_infoE",
 	"_ZTISt9type_info",
-	6,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv123__fundamental_type_infoE_typeinfo,
-	&N10__cxxabiv123__fundamental_type_infoE_vtable,
+	N10__cxxabiv123__fundamental_type_infoE_vtable,
 	N10__cxxabiv123__fundamental_type_infoE_baseinfo,
 	};
 
@@ -14091,7 +14118,7 @@ struct classtypeinfo N10__cxxabiv129__pointer_to_member_type_infoE_typeinfo = {
 	N10__cxxabiv129__pointer_to_member_type_infoE_typeinfo_name,
 	};
 
-const char *N10__cxxabiv129__pointer_to_member_type_infoE_vtable_name[] = {
+const char *N10__cxxabiv129__pointer_to_member_type_infoE_vtable_name_0 [] = {
 	"_ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev",
 	"_ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -14101,12 +14128,16 @@ const char *N10__cxxabiv129__pointer_to_member_type_infoE_vtable_name[] = {
 	"_ZNK10__cxxabiv129__pointer_to_member_type_info15__pointer_catchEPKNS_17__pbase_type_infoEPPvj",
 	};
 
-struct classvtable N10__cxxabiv129__pointer_to_member_type_infoE_vtable = {
+struct classvtable N10__cxxabiv129__pointer_to_member_type_infoE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	7,	/* Number of Vfuncs */
 	"_ZTIN10__cxxabiv129__pointer_to_member_type_infoE",
-	N10__cxxabiv129__pointer_to_member_type_infoE_vtable_name,
-	};
+	N10__cxxabiv129__pointer_to_member_type_infoE_vtable_name_0,
+	},
+};
 
 struct base_type_info N10__cxxabiv129__pointer_to_member_type_infoE_baseinfo[] = {
 	};
@@ -14116,13 +14147,12 @@ struct classinfo _ZN10__cxxabiv129__pointer_to_member_type_infoE_classinfo = {
 	"_ZTVN10__cxxabiv129__pointer_to_member_type_infoE",
 	"_ZTIN10__cxxabiv129__pointer_to_member_type_infoE",
 	"_ZTIN10__cxxabiv117__pbase_type_infoE",
-	7,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N10__cxxabiv129__pointer_to_member_type_infoE_typeinfo,
-	&N10__cxxabiv129__pointer_to_member_type_infoE_vtable,
+	N10__cxxabiv129__pointer_to_member_type_infoE_vtable,
 	N10__cxxabiv129__pointer_to_member_type_infoE_baseinfo,
 	};
 
@@ -14135,24 +14165,24 @@ struct classtypeinfo N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_typeinfo =
 	N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"",
 	"",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE5imbueERKSt6locale",
 #if __i386__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
-#endif
 #if __ia64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
+#endif
 #if __powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
 #endif
 #if __x86_64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
@@ -14166,12 +14196,16 @@ const char *N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name[] = {
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9showmanycEv",
 	};
 
-struct classvtable N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable = {
+struct classvtable N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	8,	/* Number of Vfuncs */
 	"_ZTIN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE",
-	N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name,
-	};
+	N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_baseinfo[] = {
 	};
@@ -14181,13 +14215,12 @@ struct classinfo _ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_classinfo = 
 	"",
 	"_ZTIN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE",
 	"_ZTISt13basic_filebufIcSt11char_traitsIcEE",
-	8,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_typeinfo,
-	&N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable,
+	N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable,
 	N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -14200,24 +14233,24 @@ struct classtypeinfo N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_typeinfo =
 	N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"",
 	"",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE5imbueERKSt6locale",
 #if __i386__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
-#endif
 #if __ia64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
+#endif
 #if __powerpc64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
 #endif
 #if __x86_64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl",
@@ -14231,12 +14264,16 @@ const char *N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name[] = {
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE9showmanycEv",
 	};
 
-struct classvtable N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable = {
+struct classvtable N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	8,	/* Number of Vfuncs */
 	"_ZTIN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE",
-	N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name,
-	};
+	N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_baseinfo[] = {
 	};
@@ -14246,13 +14283,12 @@ struct classinfo _ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_classinfo = 
 	"",
 	"_ZTIN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE",
 	"_ZTISt13basic_filebufIwSt11char_traitsIwEE",
-	8,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_typeinfo,
-	&N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable,
+	N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable,
 	N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -14265,18 +14301,22 @@ struct classtypeinfo NSt8ios_base7failureE_typeinfo = {
 	NSt8ios_base7failureE_typeinfo_name,
 	};
 
-const char *NSt8ios_base7failureE_vtable_name[] = {
+const char *NSt8ios_base7failureE_vtable_name_0 [] = {
 	"_ZNSt8ios_base7failureD1Ev",
 	"_ZNSt8ios_base7failureD0Ev",
 	"_ZNKSt8ios_base7failure4whatEv",
 	};
 
-struct classvtable NSt8ios_base7failureE_vtable = {
+struct classvtable NSt8ios_base7failureE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTINSt8ios_base7failureE",
-	NSt8ios_base7failureE_vtable_name,
-	};
+	NSt8ios_base7failureE_vtable_name_0,
+	},
+};
 
 struct base_type_info NSt8ios_base7failureE_baseinfo[] = {
 	};
@@ -14286,13 +14326,12 @@ struct classinfo _ZNSt8ios_base7failureE_classinfo = {
 	"_ZTVNSt8ios_base7failureE",
 	"_ZTINSt8ios_base7failureE",
 	"_ZTISt9exception",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&NSt8ios_base7failureE_typeinfo,
-	&NSt8ios_base7failureE_vtable,
+	NSt8ios_base7failureE_vtable,
 	NSt8ios_base7failureE_baseinfo,
 	};
 
@@ -14305,18 +14344,22 @@ struct classtypeinfo St10bad_typeid_typeinfo = {
 	St10bad_typeid_typeinfo_name,
 	};
 
-const char *St10bad_typeid_vtable_name[] = {
+const char *St10bad_typeid_vtable_name_0 [] = {
 	"_ZNSt10bad_typeidD1Ev",
 	"_ZNSt10bad_typeidD0Ev",
 	"_ZNKSt9exception4whatEv",
 	};
 
-struct classvtable St10bad_typeid_vtable = {
+struct classvtable St10bad_typeid_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt10bad_typeid",
-	St10bad_typeid_vtable_name,
-	};
+	St10bad_typeid_vtable_name_0,
+	},
+};
 
 struct base_type_info St10bad_typeid_baseinfo[] = {
 	};
@@ -14326,13 +14369,12 @@ struct classinfo _ZSt10bad_typeid_classinfo = {
 	"_ZTVSt10bad_typeid",
 	"_ZTISt10bad_typeid",
 	"_ZTISt9exception",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St10bad_typeid_typeinfo,
-	&St10bad_typeid_vtable,
+	St10bad_typeid_vtable,
 	St10bad_typeid_baseinfo,
 	};
 
@@ -14345,43 +14387,102 @@ struct classtypeinfo St10istrstream_typeinfo = {
 	St10istrstream_typeinfo_name,
 	};
 
-const char *St10istrstream_vtable_name[] = {
+const char *St10istrstream_vtable_name_0 [] = {
 	"_ZNSt10istrstreamD1Ev",
 	"_ZNSt10istrstreamD0Ev",
 	};
 
-struct classvtable St10istrstream_vtable = {
+const char *St10istrstream_vtable_name_1 [] = {
+	"_ZNSt10istrstreamD1Ev",
+	"_ZNSt10istrstreamD0Ev",
+	};
+
+struct classvtable St10istrstream_vtable [2] = {
+	{
 #if __i386__
 	52,
+	0,
 #endif
 #if __ia64__
 	192,
+	0,
 #endif
 #if __arm__
 	52,
+	0,
 #endif
 #if __mc68000__
 	52,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	52,
+	0,
 #endif
 #if __powerpc64__
 	192,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	52,
+	0,
 #endif
 #if __x86_64__
 	192,
+	0,
 #endif
 #if __s390x__
 	192,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt10istrstream",
-	St10istrstream_vtable_name,
-	};
+	St10istrstream_vtable_name_0,
+	},
+	{
+#if __i386__
+	-52,
+	-52,
+#endif
+#if __ia64__
+	-52,
+	-52,
+#endif
+#if __arm__
+	-52,
+	-52,
+#endif
+#if __mc68000__
+	-52,
+	-52,
+#endif
+#if __powerpc__ && !__powerpc64__
+	-52,
+	-52,
+#endif
+#if __powerpc64__
+	-52,
+	-52,
+#endif
+#if __s390__ && !__s390x__
+	-52,
+	-52,
+#endif
+#if __x86_64__
+	-52,
+	-52,
+#endif
+#if __s390x__
+	-52,
+	-52,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTISt10istrstream",
+	St10istrstream_vtable_name_1,
+	},
+};
 
 struct base_type_info St10istrstream_baseinfo[] = {
 	};
@@ -14389,15 +14490,14 @@ struct base_type_info St10istrstream_baseinfo[] = {
 struct classinfo _ZSt10istrstream_classinfo = {
 	"_ZSt10istrstream",
 	"_ZTVSt10istrstream",
-	"_ZTISt10istrstream",
+	"",
 	"_ZTISi",
 	2,
 	0,
 	0,
 	0U,
-	2,
 	&St10istrstream_typeinfo,
-	&St10istrstream_vtable,
+	St10istrstream_vtable,
 	St10istrstream_baseinfo,
 	};
 
@@ -14410,43 +14510,142 @@ struct classtypeinfo St10ostrstream_typeinfo = {
 	St10ostrstream_typeinfo_name,
 	};
 
-const char *St10ostrstream_vtable_name[] = {
+const char *St10ostrstream_vtable_name_0 [] = {
 	"_ZNSt10ostrstreamD1Ev",
 	"_ZNSt10ostrstreamD0Ev",
 	};
 
-struct classvtable St10ostrstream_vtable = {
+const char *St10ostrstream_vtable_name_1 [] = {
 #if __i386__
-	96,
+	"_ZTv0_n12_NSt10ostrstreamD1Ev",
+#endif
+#if __ia64__
+	"_ZTv0_n24_NSt10ostrstreamD1Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSt10ostrstreamD1Ev",
+#endif
+#if __powerpc64__
+	"_ZTv0_n24_NSt10ostrstreamD1Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt10ostrstreamD1Ev",
+#endif
+#if __x86_64__
+	"_ZTv0_n24_NSt10ostrstreamD1Ev",
+#endif
+#if __s390x__
+	"_ZTv0_n24_NSt10istrstreamD1Ev",
+#endif
+#if __i386__
+	"_ZTv0_n12_NSt10ostrstreamD0Ev",
+#endif
+#if __ia64__
+	"_ZTv0_n24_NSt10ostrstreamD0Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSt10ostrstreamD0Ev",
+#endif
+#if __powerpc64__
+	"_ZTv0_n24_NSt10ostrstreamD0Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt10ostrstreamD0Ev",
+#endif
+#if __x86_64__
+	"_ZTv0_n24_NSt10ostrstreamD0Ev",
+#endif
+#if __s390x__
+	"_ZTv0_n24_NSt10ostrstreamD0Ev",
+#endif
+	};
+
+struct classvtable St10ostrstream_vtable [2] = {
+	{
+#if __i386__
+	48,
+	0,
 #endif
 #if __ia64__
 	184,
+	0,
 #endif
 #if __arm__
-	96,
+	48,
+	0,
 #endif
 #if __mc68000__
-	96,
+	48,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
-	96,
+	48,
+	0,
 #endif
 #if __powerpc64__
-	184,
+	148,
+	0,
 #endif
 #if __s390__ && !__s390x__
-	96,
+	48,
+	0,
 #endif
 #if __x86_64__
 	184,
+	0,
 #endif
 #if __s390x__
 	184,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt10ostrstream",
-	St10ostrstream_vtable_name,
-	};
+	St10ostrstream_vtable_name_0,
+	},
+	{
+#if __i386__
+	-48,
+	-48,
+#endif
+#if __ia64__
+	-48,
+	-48,
+#endif
+#if __arm__
+	-48,
+	-48,
+#endif
+#if __mc68000__
+	-48,
+	-48,
+#endif
+#if __powerpc__ && !__powerpc64__
+	-48,
+	-48,
+#endif
+#if __powerpc64__
+	-48,
+	-48,
+#endif
+#if __s390__ && !__s390x__
+	-48,
+	-48,
+#endif
+#if __x86_64__
+	-48,
+	-48,
+#endif
+#if __s390x__
+	-48,
+	-48,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTISt10ostrstream",
+	St10ostrstream_vtable_name_1,
+	},
+};
 
 struct base_type_info St10ostrstream_baseinfo[] = {
 	};
@@ -14454,15 +14653,14 @@ struct base_type_info St10ostrstream_baseinfo[] = {
 struct classinfo _ZSt10ostrstream_classinfo = {
 	"_ZSt10ostrstream",
 	"_ZTVSt10ostrstream",
-	"_ZTISt10ostrstream",
+	"",
 	"_ZTISo",
 	2,
 	0,
 	0,
 	0U,
-	2,
 	&St10ostrstream_typeinfo,
-	&St10ostrstream_vtable,
+	St10ostrstream_vtable,
 	St10ostrstream_baseinfo,
 	};
 
@@ -14475,18 +14673,22 @@ struct classtypeinfo St11logic_error_typeinfo = {
 	St11logic_error_typeinfo_name,
 	};
 
-const char *St11logic_error_vtable_name[] = {
+const char *St11logic_error_vtable_name_0 [] = {
 	"_ZNSt11logic_errorD1Ev",
 	"_ZNSt11logic_errorD0Ev",
 	"_ZNKSt11logic_error4whatEv",
 	};
 
-struct classvtable St11logic_error_vtable = {
+struct classvtable St11logic_error_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt11logic_error",
-	St11logic_error_vtable_name,
-	};
+	St11logic_error_vtable_name_0,
+	},
+};
 
 struct base_type_info St11logic_error_baseinfo[] = {
 	};
@@ -14496,13 +14698,12 @@ struct classinfo _ZSt11logic_error_classinfo = {
 	"_ZTVSt11logic_error",
 	"_ZTISt11logic_error",
 	"_ZTISt9exception",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St11logic_error_typeinfo,
-	&St11logic_error_vtable,
+	St11logic_error_vtable,
 	St11logic_error_baseinfo,
 	};
 
@@ -14515,18 +14716,22 @@ struct classtypeinfo St11range_error_typeinfo = {
 	St11range_error_typeinfo_name,
 	};
 
-const char *St11range_error_vtable_name[] = {
+const char *St11range_error_vtable_name_0 [] = {
 	"_ZNSt11range_errorD1Ev",
 	"_ZNSt11range_errorD0Ev",
 	"_ZNKSt13runtime_error4whatEv",
 	};
 
-struct classvtable St11range_error_vtable = {
+struct classvtable St11range_error_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt11range_error",
-	St11range_error_vtable_name,
-	};
+	St11range_error_vtable_name_0,
+	},
+};
 
 struct base_type_info St11range_error_baseinfo[] = {
 	};
@@ -14536,13 +14741,12 @@ struct classinfo _ZSt11range_error_classinfo = {
 	"_ZTVSt11range_error",
 	"_ZTISt11range_error",
 	"_ZTISt13runtime_error",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St11range_error_typeinfo,
-	&St11range_error_vtable,
+	St11range_error_vtable,
 	St11range_error_baseinfo,
 	};
 
@@ -14555,17 +14759,21 @@ struct classtypeinfo St11__timepunctIcE_typeinfo = {
 	St11__timepunctIcE_typeinfo_name,
 	};
 
-const char *St11__timepunctIcE_vtable_name[] = {
+const char *St11__timepunctIcE_vtable_name_0 [] = {
 	"_ZNSt11__timepunctIcED1Ev",
 	"_ZNSt11__timepunctIcED0Ev",
 	};
 
-struct classvtable St11__timepunctIcE_vtable = {
+struct classvtable St11__timepunctIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt11__timepunctIcE",
-	St11__timepunctIcE_vtable_name,
-	};
+	St11__timepunctIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St11__timepunctIcE_baseinfo[] = {
 	};
@@ -14575,13 +14783,12 @@ struct classinfo _ZSt11__timepunctIcE_classinfo = {
 	"_ZTVSt11__timepunctIcE",
 	"_ZTISt11__timepunctIcE",
 	"_ZTINSt6locale5facetE",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St11__timepunctIcE_typeinfo,
-	&St11__timepunctIcE_vtable,
+	St11__timepunctIcE_vtable,
 	St11__timepunctIcE_baseinfo,
 	};
 
@@ -14594,17 +14801,21 @@ struct classtypeinfo St11__timepunctIwE_typeinfo = {
 	St11__timepunctIwE_typeinfo_name,
 	};
 
-const char *St11__timepunctIwE_vtable_name[] = {
+const char *St11__timepunctIwE_vtable_name_0 [] = {
 	"_ZNSt11__timepunctIwED1Ev",
 	"_ZNSt11__timepunctIwED0Ev",
 	};
 
-struct classvtable St11__timepunctIwE_vtable = {
+struct classvtable St11__timepunctIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt11__timepunctIwE",
-	St11__timepunctIwE_vtable_name,
-	};
+	St11__timepunctIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St11__timepunctIwE_baseinfo[] = {
 	};
@@ -14614,13 +14825,12 @@ struct classinfo _ZSt11__timepunctIwE_classinfo = {
 	"_ZTVSt11__timepunctIwE",
 	"_ZTISt11__timepunctIwE",
 	"_ZTINSt6locale5facetE",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St11__timepunctIwE_typeinfo,
-	&St11__timepunctIwE_vtable,
+	St11__timepunctIwE_vtable,
 	St11__timepunctIwE_baseinfo,
 	};
 
@@ -14633,7 +14843,7 @@ struct classtypeinfo St12ctype_bynameIcE_typeinfo = {
 	St12ctype_bynameIcE_typeinfo_name,
 	};
 
-const char *St12ctype_bynameIcE_vtable_name[] = {
+const char *St12ctype_bynameIcE_vtable_name_0 [] = {
 	"_ZNSt12ctype_bynameIcED1Ev",
 	"_ZNSt12ctype_bynameIcED0Ev",
 	"_ZNKSt5ctypeIcE10do_toupperEc",
@@ -14646,12 +14856,16 @@ const char *St12ctype_bynameIcE_vtable_name[] = {
 	"_ZNKSt5ctypeIcE9do_narrowEPKcS2_cPc",
 	};
 
-struct classvtable St12ctype_bynameIcE_vtable = {
+struct classvtable St12ctype_bynameIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	10,	/* Number of Vfuncs */
 	"_ZTISt12ctype_bynameIcE",
-	St12ctype_bynameIcE_vtable_name,
-	};
+	St12ctype_bynameIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St12ctype_bynameIcE_baseinfo[] = {
 	};
@@ -14661,13 +14875,12 @@ struct classinfo _ZSt12ctype_bynameIcE_classinfo = {
 	"_ZTVSt12ctype_bynameIcE",
 	"_ZTISt12ctype_bynameIcE",
 	"_ZTISt5ctypeIcE",
-	10,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St12ctype_bynameIcE_typeinfo,
-	&St12ctype_bynameIcE_vtable,
+	St12ctype_bynameIcE_vtable,
 	St12ctype_bynameIcE_baseinfo,
 	};
 
@@ -14680,18 +14893,22 @@ struct classtypeinfo St12domain_error_typeinfo = {
 	St12domain_error_typeinfo_name,
 	};
 
-const char *St12domain_error_vtable_name[] = {
+const char *St12domain_error_vtable_name_0 [] = {
 	"_ZNSt12domain_errorD1Ev",
 	"_ZNSt12domain_errorD0Ev",
 	"_ZNKSt11logic_error4whatEv",
 	};
 
-struct classvtable St12domain_error_vtable = {
+struct classvtable St12domain_error_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt12domain_error",
-	St12domain_error_vtable_name,
-	};
+	St12domain_error_vtable_name_0,
+	},
+};
 
 struct base_type_info St12domain_error_baseinfo[] = {
 	};
@@ -14701,13 +14918,12 @@ struct classinfo _ZSt12domain_error_classinfo = {
 	"_ZTVSt12domain_error",
 	"_ZTISt12domain_error",
 	"_ZTISt11logic_error",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St12domain_error_typeinfo,
-	&St12domain_error_vtable,
+	St12domain_error_vtable,
 	St12domain_error_baseinfo,
 	};
 
@@ -14720,18 +14936,22 @@ struct classtypeinfo St12length_error_typeinfo = {
 	St12length_error_typeinfo_name,
 	};
 
-const char *St12length_error_vtable_name[] = {
+const char *St12length_error_vtable_name_0 [] = {
 	"_ZNSt12length_errorD1Ev",
 	"_ZNSt12length_errorD0Ev",
 	"_ZNKSt11logic_error4whatEv",
 	};
 
-struct classvtable St12length_error_vtable = {
+struct classvtable St12length_error_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt12length_error",
-	St12length_error_vtable_name,
-	};
+	St12length_error_vtable_name_0,
+	},
+};
 
 struct base_type_info St12length_error_baseinfo[] = {
 	};
@@ -14741,13 +14961,12 @@ struct classinfo _ZSt12length_error_classinfo = {
 	"_ZTVSt12length_error",
 	"_ZTISt12length_error",
 	"_ZTISt11logic_error",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St12length_error_typeinfo,
-	&St12length_error_vtable,
+	St12length_error_vtable,
 	St12length_error_baseinfo,
 	};
 
@@ -14760,18 +14979,22 @@ struct classtypeinfo St12out_of_range_typeinfo = {
 	St12out_of_range_typeinfo_name,
 	};
 
-const char *St12out_of_range_vtable_name[] = {
+const char *St12out_of_range_vtable_name_0 [] = {
 	"_ZNSt12out_of_rangeD1Ev",
 	"_ZNSt12out_of_rangeD0Ev",
 	"_ZNKSt11logic_error4whatEv",
 	};
 
-struct classvtable St12out_of_range_vtable = {
+struct classvtable St12out_of_range_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt12out_of_range",
-	St12out_of_range_vtable_name,
-	};
+	St12out_of_range_vtable_name_0,
+	},
+};
 
 struct base_type_info St12out_of_range_baseinfo[] = {
 	};
@@ -14781,13 +15004,12 @@ struct classinfo _ZSt12out_of_range_classinfo = {
 	"_ZTVSt12out_of_range",
 	"_ZTISt12out_of_range",
 	"_ZTISt11logic_error",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St12out_of_range_typeinfo,
-	&St12out_of_range_vtable,
+	St12out_of_range_vtable,
 	St12out_of_range_baseinfo,
 	};
 
@@ -14800,51 +15022,51 @@ struct classtypeinfo St12strstreambuf_typeinfo = {
 	St12strstreambuf_typeinfo_name,
 	};
 
-const char *St12strstreambuf_vtable_name[] = {
+const char *St12strstreambuf_vtable_name_0 [] = {
 	"_ZNSt12strstreambufD1Ev",
 	"_ZNSt12strstreambufD0Ev",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
 #if __i386__
 	"_ZNSt12strstreambuf6setbufEPci",
 #endif
+#if __ia64__
+	"_ZNSt12strstreambuf6setbufEPcl",
+#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt12strstreambuf6setbufEPci",
+#endif
+#if __powerpc64__
+	"_ZNSt12strstreambuf6setbufEPcl",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt12strstreambuf6setbufEPci",
 #endif
-#if __ia64__
-	"_ZNSt12strstreambuf6setbufEPcl",
-#endif
-#if __powerpc64__
-	"_ZNSt12strstreambuf6setbufEPcl",
-#endif
 #if __x86_64__
 	"_ZNSt12strstreambuf6setbufEPcl",
 #endif
 #if __s390x__
 	"_ZNSt12strstreambuf6setbufEPcl",
-#endif
-#if __s390x__
-	"_ZNSt12strstreambuf7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __powerpc64__
-	"_ZNSt12strstreambuf7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __ia64__
-	"_ZNSt12strstreambuf7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __x86_64__
-	"_ZNSt12strstreambuf7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __i386__
 	"_ZNSt12strstreambuf7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
+#if __ia64__
+	"_ZNSt12strstreambuf7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt12strstreambuf7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
+#if __powerpc64__
+	"_ZNSt12strstreambuf7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
 #if __s390__ && !__s390x__
 	"_ZNSt12strstreambuf7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __x86_64__
+	"_ZNSt12strstreambuf7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __s390x__
+	"_ZNSt12strstreambuf7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 	"_ZNSt12strstreambuf7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE4syncEv",
@@ -14852,17 +15074,17 @@ const char *St12strstreambuf_vtable_name[] = {
 #if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
-#endif
 #if __ia64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
 #if __powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
 #if __x86_64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
@@ -14876,17 +15098,17 @@ const char *St12strstreambuf_vtable_name[] = {
 #if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
-#endif
 #if __ia64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
 #if __powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
 #endif
 #if __x86_64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
@@ -14897,12 +15119,16 @@ const char *St12strstreambuf_vtable_name[] = {
 	"_ZNSt12strstreambuf8overflowEi",
 	};
 
-struct classvtable St12strstreambuf_vtable = {
+struct classvtable St12strstreambuf_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt12strstreambuf",
-	St12strstreambuf_vtable_name,
-	};
+	St12strstreambuf_vtable_name_0,
+	},
+};
 
 struct base_type_info St12strstreambuf_baseinfo[] = {
 	};
@@ -14912,13 +15138,12 @@ struct classinfo _ZSt12strstreambuf_classinfo = {
 	"_ZTVSt12strstreambuf",
 	"_ZTISt12strstreambuf",
 	"_ZTISt15basic_streambufIcSt11char_traitsIcEE",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St12strstreambuf_typeinfo,
-	&St12strstreambuf_vtable,
+	St12strstreambuf_vtable,
 	St12strstreambuf_baseinfo,
 	};
 
@@ -14931,18 +15156,22 @@ struct classtypeinfo St13bad_exception_typeinfo = {
 	St13bad_exception_typeinfo_name,
 	};
 
-const char *St13bad_exception_vtable_name[] = {
+const char *St13bad_exception_vtable_name_0 [] = {
 	"_ZNSt13bad_exceptionD1Ev",
 	"_ZNSt13bad_exceptionD0Ev",
 	"_ZNKSt9exception4whatEv",
 	};
 
-struct classvtable St13bad_exception_vtable = {
+struct classvtable St13bad_exception_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt13bad_exception",
-	St13bad_exception_vtable_name,
-	};
+	St13bad_exception_vtable_name_0,
+	},
+};
 
 struct base_type_info St13bad_exception_baseinfo[] = {
 	};
@@ -14952,13 +15181,12 @@ struct classinfo _ZSt13bad_exception_classinfo = {
 	"_ZTVSt13bad_exception",
 	"_ZTISt13bad_exception",
 	"_ZTISt9exception",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St13bad_exception_typeinfo,
-	&St13bad_exception_vtable,
+	St13bad_exception_vtable,
 	St13bad_exception_baseinfo,
 	};
 
@@ -14971,75 +15199,75 @@ struct classtypeinfo St13basic_filebufIcSt11char_traitsIcEE_typeinfo = {
 	St13basic_filebufIcSt11char_traitsIcEE_typeinfo_name,
 	};
 
-const char *St13basic_filebufIcSt11char_traitsIcEE_vtable_name[] = {
+const char *St13basic_filebufIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEED1Ev",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEED0Ev",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE5imbueERKSt6locale",
 #if __i386__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
 #endif
-#if __ia64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
 #endif
-#if __powerpc64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
-#endif
 #if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
+#endif
+#if __ia64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
+#endif
+#if __powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
 #if __x86_64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
 #if __s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
+#endif
+#if __ia64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __x86_64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __i386__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __ia64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __powerpc64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __x86_64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
 #if __s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE4syncEv",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9showmanycEv",
-#if __i386__
+#if __powerpc__ && !__powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
 #if __ia64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __i386__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
 #if __powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
 #if __x86_64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if __s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9underflowEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv",
@@ -15059,21 +15287,25 @@ const char *St13basic_filebufIcSt11char_traitsIcEE_vtable_name[] = {
 #if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
 #endif
-#if __x86_64__
+#if __s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
-#if __s390x__
+#if __x86_64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE8overflowEi",
 	};
 
-struct classvtable St13basic_filebufIcSt11char_traitsIcEE_vtable = {
+struct classvtable St13basic_filebufIcSt11char_traitsIcEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt13basic_filebufIcSt11char_traitsIcEE",
-	St13basic_filebufIcSt11char_traitsIcEE_vtable_name,
-	};
+	St13basic_filebufIcSt11char_traitsIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St13basic_filebufIcSt11char_traitsIcEE_baseinfo[] = {
 	};
@@ -15083,13 +15315,12 @@ struct classinfo _ZSt13basic_filebufIcSt11char_traitsIcEE_classinfo = {
 	"_ZTVSt13basic_filebufIcSt11char_traitsIcEE",
 	"_ZTISt13basic_filebufIcSt11char_traitsIcEE",
 	"_ZTISt15basic_streambufIcSt11char_traitsIcEE",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St13basic_filebufIcSt11char_traitsIcEE_typeinfo,
-	&St13basic_filebufIcSt11char_traitsIcEE_vtable,
+	St13basic_filebufIcSt11char_traitsIcEE_vtable,
 	St13basic_filebufIcSt11char_traitsIcEE_baseinfo,
 	};
 
@@ -15102,7 +15333,7 @@ struct classtypeinfo St13basic_filebufIwSt11char_traitsIwEE_typeinfo = {
 	St13basic_filebufIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St13basic_filebufIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St13basic_filebufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEED1Ev",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEED0Ev",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE5imbueERKSt6locale",
@@ -15199,12 +15430,16 @@ const char *St13basic_filebufIwSt11char_traitsIwEE_vtable_name[] = {
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE8overflowEj",
 	};
 
-struct classvtable St13basic_filebufIwSt11char_traitsIwEE_vtable = {
+struct classvtable St13basic_filebufIwSt11char_traitsIwEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt13basic_filebufIwSt11char_traitsIwEE",
-	St13basic_filebufIwSt11char_traitsIwEE_vtable_name,
-	};
+	St13basic_filebufIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St13basic_filebufIwSt11char_traitsIwEE_baseinfo[] = {
 	};
@@ -15214,13 +15449,12 @@ struct classinfo _ZSt13basic_filebufIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt13basic_filebufIwSt11char_traitsIwEE",
 	"_ZTISt13basic_filebufIwSt11char_traitsIwEE",
 	"_ZTISt15basic_streambufIwSt11char_traitsIwEE",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St13basic_filebufIwSt11char_traitsIwEE_typeinfo,
-	&St13basic_filebufIwSt11char_traitsIwEE_vtable,
+	St13basic_filebufIwSt11char_traitsIwEE_vtable,
 	St13basic_filebufIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -15233,43 +15467,55 @@ struct classtypeinfo St13basic_fstreamIcSt11char_traitsIcEE_typeinfo = {
 	St13basic_fstreamIcSt11char_traitsIcEE_typeinfo_name,
 	};
 
-const char *St13basic_fstreamIcSt11char_traitsIcEE_vtable_name[] = {
+const char *St13basic_fstreamIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	"_ZNSt13basic_fstreamIcSt11char_traitsIcEED1Ev",
 	"_ZNSt13basic_fstreamIcSt11char_traitsIcEED0Ev",
 	};
 
-struct classvtable St13basic_fstreamIcSt11char_traitsIcEE_vtable = {
+struct classvtable St13basic_fstreamIcSt11char_traitsIcEE_vtable [1] = {
+	{
 #if __i386__
 	148,
+	0,
 #endif
 #if __ia64__
 	264,
+	0,
 #endif
 #if __arm__
 	148,
+	0,
 #endif
 #if __mc68000__
 	148,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	148,
+	0,
 #endif
 #if __powerpc64__
 	264,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	148,
+	0,
 #endif
 #if __x86_64__
 	264,
+	0,
 #endif
 #if __s390x__
 	264,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt13basic_fstreamIcSt11char_traitsIcEE",
-	St13basic_fstreamIcSt11char_traitsIcEE_vtable_name,
-	};
+	St13basic_fstreamIcSt11char_traitsIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St13basic_fstreamIcSt11char_traitsIcEE_baseinfo[] = {
 	};
@@ -15279,13 +15525,12 @@ struct classinfo _ZSt13basic_fstreamIcSt11char_traitsIcEE_classinfo = {
 	"_ZTVSt13basic_fstreamIcSt11char_traitsIcEE",
 	"_ZTISt13basic_fstreamIcSt11char_traitsIcEE",
 	"_ZTISd",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St13basic_fstreamIcSt11char_traitsIcEE_typeinfo,
-	&St13basic_fstreamIcSt11char_traitsIcEE_vtable,
+	St13basic_fstreamIcSt11char_traitsIcEE_vtable,
 	St13basic_fstreamIcSt11char_traitsIcEE_baseinfo,
 	};
 
@@ -15298,43 +15543,55 @@ struct classtypeinfo St13basic_fstreamIwSt11char_traitsIwEE_typeinfo = {
 	St13basic_fstreamIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St13basic_fstreamIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St13basic_fstreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt13basic_fstreamIwSt11char_traitsIwEED1Ev",
 	"_ZNSt13basic_fstreamIwSt11char_traitsIwEED0Ev",
 	};
 
-struct classvtable St13basic_fstreamIwSt11char_traitsIwEE_vtable = {
+struct classvtable St13basic_fstreamIwSt11char_traitsIwEE_vtable [1] = {
+	{
 #if __i386__
 	152,
+	0,
 #endif
 #if __ia64__
 	264,
+	0,
 #endif
 #if __arm__
 	152,
+	0,
 #endif
 #if __mc68000__
 	152,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	152,
+	0,
 #endif
 #if __powerpc64__
 	264,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	152,
+	0,
 #endif
 #if __x86_64__
 	264,
+	0,
 #endif
 #if __s390x__
 	264,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt13basic_fstreamIwSt11char_traitsIwEE",
-	St13basic_fstreamIwSt11char_traitsIwEE_vtable_name,
-	};
+	St13basic_fstreamIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St13basic_fstreamIwSt11char_traitsIwEE_baseinfo[] = {
 	};
@@ -15344,13 +15601,12 @@ struct classinfo _ZSt13basic_fstreamIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt13basic_fstreamIwSt11char_traitsIwEE",
 	"_ZTISt13basic_fstreamIwSt11char_traitsIwEE",
 	"_ZTISt14basic_iostreamIwSt11char_traitsIwEE",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St13basic_fstreamIwSt11char_traitsIwEE_typeinfo,
-	&St13basic_fstreamIwSt11char_traitsIwEE_vtable,
+	St13basic_fstreamIwSt11char_traitsIwEE_vtable,
 	St13basic_fstreamIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -15363,18 +15619,22 @@ struct classtypeinfo St13runtime_error_typeinfo = {
 	St13runtime_error_typeinfo_name,
 	};
 
-const char *St13runtime_error_vtable_name[] = {
+const char *St13runtime_error_vtable_name_0 [] = {
 	"_ZNSt13runtime_errorD1Ev",
 	"_ZNSt13runtime_errorD0Ev",
 	"_ZNKSt13runtime_error4whatEv",
 	};
 
-struct classvtable St13runtime_error_vtable = {
+struct classvtable St13runtime_error_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt13runtime_error",
-	St13runtime_error_vtable_name,
-	};
+	St13runtime_error_vtable_name_0,
+	},
+};
 
 struct base_type_info St13runtime_error_baseinfo[] = {
 	};
@@ -15384,13 +15644,12 @@ struct classinfo _ZSt13runtime_error_classinfo = {
 	"_ZTVSt13runtime_error",
 	"_ZTISt13runtime_error",
 	"_ZTISt9exception",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St13runtime_error_typeinfo,
-	&St13runtime_error_vtable,
+	St13runtime_error_vtable,
 	St13runtime_error_baseinfo,
 	};
 
@@ -15403,43 +15662,55 @@ struct classtypeinfo St14basic_ifstreamIcSt11char_traitsIcEE_typeinfo = {
 	St14basic_ifstreamIcSt11char_traitsIcEE_typeinfo_name,
 	};
 
-const char *St14basic_ifstreamIcSt11char_traitsIcEE_vtable_name[] = {
+const char *St14basic_ifstreamIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev",
 	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEED0Ev",
 	};
 
-struct classvtable St14basic_ifstreamIcSt11char_traitsIcEE_vtable = {
+struct classvtable St14basic_ifstreamIcSt11char_traitsIcEE_vtable [1] = {
+	{
 #if __i386__
 	144,
+	0,
 #endif
 #if __ia64__
 	256,
+	0,
 #endif
 #if __arm__
 	144,
+	0,
 #endif
 #if __mc68000__
 	144,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	144,
+	0,
 #endif
 #if __powerpc64__
 	256,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	144,
+	0,
 #endif
 #if __x86_64__
 	256,
+	0,
 #endif
 #if __s390x__
 	256,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt14basic_ifstreamIcSt11char_traitsIcEE",
-	St14basic_ifstreamIcSt11char_traitsIcEE_vtable_name,
-	};
+	St14basic_ifstreamIcSt11char_traitsIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14basic_ifstreamIcSt11char_traitsIcEE_baseinfo[] = {
 	};
@@ -15449,13 +15720,12 @@ struct classinfo _ZSt14basic_ifstreamIcSt11char_traitsIcEE_classinfo = {
 	"_ZTVSt14basic_ifstreamIcSt11char_traitsIcEE",
 	"_ZTISt14basic_ifstreamIcSt11char_traitsIcEE",
 	"_ZTISi",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St14basic_ifstreamIcSt11char_traitsIcEE_typeinfo,
-	&St14basic_ifstreamIcSt11char_traitsIcEE_vtable,
+	St14basic_ifstreamIcSt11char_traitsIcEE_vtable,
 	St14basic_ifstreamIcSt11char_traitsIcEE_baseinfo,
 	};
 
@@ -15468,43 +15738,55 @@ struct classtypeinfo St14basic_ifstreamIwSt11char_traitsIwEE_typeinfo = {
 	St14basic_ifstreamIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St14basic_ifstreamIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St14basic_ifstreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt14basic_ifstreamIwSt11char_traitsIwEED1Ev",
 	"_ZNSt14basic_ifstreamIwSt11char_traitsIwEED0Ev",
 	};
 
-struct classvtable St14basic_ifstreamIwSt11char_traitsIwEE_vtable = {
+struct classvtable St14basic_ifstreamIwSt11char_traitsIwEE_vtable [1] = {
+	{
 #if __i386__
 	148,
+	0,
 #endif
 #if __ia64__
 	256,
+	0,
 #endif
 #if __arm__
 	148,
+	0,
 #endif
 #if __mc68000__
 	148,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	148,
+	0,
 #endif
 #if __powerpc64__
 	256,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	148,
+	0,
 #endif
 #if __x86_64__
 	256,
+	0,
 #endif
 #if __s390x__
 	256,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt14basic_ifstreamIwSt11char_traitsIwEE",
-	St14basic_ifstreamIwSt11char_traitsIwEE_vtable_name,
-	};
+	St14basic_ifstreamIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14basic_ifstreamIwSt11char_traitsIwEE_baseinfo[] = {
 	};
@@ -15514,13 +15796,12 @@ struct classinfo _ZSt14basic_ifstreamIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt14basic_ifstreamIwSt11char_traitsIwEE",
 	"_ZTISt14basic_ifstreamIwSt11char_traitsIwEE",
 	"_ZTISt13basic_istreamIwSt11char_traitsIwEE",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St14basic_ifstreamIwSt11char_traitsIwEE_typeinfo,
-	&St14basic_ifstreamIwSt11char_traitsIwEE_vtable,
+	St14basic_ifstreamIwSt11char_traitsIwEE_vtable,
 	St14basic_ifstreamIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -15533,43 +15814,55 @@ struct classtypeinfo St14basic_ofstreamIcSt11char_traitsIcEE_typeinfo = {
 	St14basic_ofstreamIcSt11char_traitsIcEE_typeinfo_name,
 	};
 
-const char *St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name[] = {
+const char *St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	"_ZNSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
 	"_ZNSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
 	};
 
-struct classvtable St14basic_ofstreamIcSt11char_traitsIcEE_vtable = {
+struct classvtable St14basic_ofstreamIcSt11char_traitsIcEE_vtable [1] = {
+	{
 #if __i386__
 	140,
+	0,
 #endif
 #if __ia64__
 	248,
+	0,
 #endif
 #if __arm__
 	140,
+	0,
 #endif
 #if __mc68000__
 	140,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	140,
+	0,
 #endif
 #if __powerpc64__
 	248,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	140,
+	0,
 #endif
 #if __x86_64__
 	248,
+	0,
 #endif
 #if __s390x__
 	248,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt14basic_ofstreamIcSt11char_traitsIcEE",
-	St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name,
-	};
+	St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14basic_ofstreamIcSt11char_traitsIcEE_baseinfo[] = {
 	};
@@ -15579,13 +15872,12 @@ struct classinfo _ZSt14basic_ofstreamIcSt11char_traitsIcEE_classinfo = {
 	"_ZTVSt14basic_ofstreamIcSt11char_traitsIcEE",
 	"_ZTISt14basic_ofstreamIcSt11char_traitsIcEE",
 	"_ZTISo",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St14basic_ofstreamIcSt11char_traitsIcEE_typeinfo,
-	&St14basic_ofstreamIcSt11char_traitsIcEE_vtable,
+	St14basic_ofstreamIcSt11char_traitsIcEE_vtable,
 	St14basic_ofstreamIcSt11char_traitsIcEE_baseinfo,
 	};
 
@@ -15598,43 +15890,55 @@ struct classtypeinfo St14basic_ofstreamIwSt11char_traitsIwEE_typeinfo = {
 	St14basic_ofstreamIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
 	"_ZNSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
 	};
 
-struct classvtable St14basic_ofstreamIwSt11char_traitsIwEE_vtable = {
+struct classvtable St14basic_ofstreamIwSt11char_traitsIwEE_vtable [1] = {
+	{
 #if __i386__
 	144,
+	0,
 #endif
 #if __ia64__
 	248,
+	0,
 #endif
 #if __arm__
 	144,
+	0,
 #endif
 #if __mc68000__
 	144,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	144,
+	0,
 #endif
 #if __powerpc64__
 	248,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	144,
+	0,
 #endif
 #if __x86_64__
 	248,
+	0,
 #endif
 #if __s390x__
 	248,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt14basic_ofstreamIwSt11char_traitsIwEE",
-	St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name,
-	};
+	St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14basic_ofstreamIwSt11char_traitsIwEE_baseinfo[] = {
 	};
@@ -15644,13 +15948,12 @@ struct classinfo _ZSt14basic_ofstreamIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt14basic_ofstreamIwSt11char_traitsIwEE",
 	"_ZTISt14basic_ofstreamIwSt11char_traitsIwEE",
 	"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St14basic_ofstreamIwSt11char_traitsIwEE_typeinfo,
-	&St14basic_ofstreamIwSt11char_traitsIwEE_vtable,
+	St14basic_ofstreamIwSt11char_traitsIwEE_vtable,
 	St14basic_ofstreamIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -15663,7 +15966,7 @@ struct classtypeinfo St14codecvt_bynameIcc11__mbstate_tE_typeinfo = {
 	St14codecvt_bynameIcc11__mbstate_tE_typeinfo_name,
 	};
 
-const char *St14codecvt_bynameIcc11__mbstate_tE_vtable_name[] = {
+const char *St14codecvt_bynameIcc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNSt14codecvt_bynameIcc11__mbstate_tED1Ev",
 	"_ZNSt14codecvt_bynameIcc11__mbstate_tED0Ev",
 	"_ZNKSt7codecvtIcc11__mbstate_tE6do_outERS0_PKcS4_RS4_PcS6_RS6_",
@@ -15695,12 +15998,16 @@ const char *St14codecvt_bynameIcc11__mbstate_tE_vtable_name[] = {
 	"_ZNKSt7codecvtIcc11__mbstate_tE13do_max_lengthEv",
 	};
 
-struct classvtable St14codecvt_bynameIcc11__mbstate_tE_vtable = {
+struct classvtable St14codecvt_bynameIcc11__mbstate_tE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTISt14codecvt_bynameIcc11__mbstate_tE",
-	St14codecvt_bynameIcc11__mbstate_tE_vtable_name,
-	};
+	St14codecvt_bynameIcc11__mbstate_tE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14codecvt_bynameIcc11__mbstate_tE_baseinfo[] = {
 	};
@@ -15710,13 +16017,12 @@ struct classinfo _ZSt14codecvt_bynameIcc11__mbstate_tE_classinfo = {
 	"_ZTVSt14codecvt_bynameIcc11__mbstate_tE",
 	"_ZTISt14codecvt_bynameIcc11__mbstate_tE",
 	"_ZTISt7codecvtIcc11__mbstate_tE",
-	9,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St14codecvt_bynameIcc11__mbstate_tE_typeinfo,
-	&St14codecvt_bynameIcc11__mbstate_tE_vtable,
+	St14codecvt_bynameIcc11__mbstate_tE_vtable,
 	St14codecvt_bynameIcc11__mbstate_tE_baseinfo,
 	};
 
@@ -15729,7 +16035,7 @@ struct classtypeinfo St14codecvt_bynameIwc11__mbstate_tE_typeinfo = {
 	St14codecvt_bynameIwc11__mbstate_tE_typeinfo_name,
 	};
 
-const char *St14codecvt_bynameIwc11__mbstate_tE_vtable_name[] = {
+const char *St14codecvt_bynameIwc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNSt14codecvt_bynameIwc11__mbstate_tED1Ev",
 	"_ZNSt14codecvt_bynameIwc11__mbstate_tED0Ev",
 	"_ZNKSt7codecvtIwc11__mbstate_tE6do_outERS0_PKwS4_RS4_PcS6_RS6_",
@@ -15761,12 +16067,16 @@ const char *St14codecvt_bynameIwc11__mbstate_tE_vtable_name[] = {
 	"_ZNKSt7codecvtIwc11__mbstate_tE13do_max_lengthEv",
 	};
 
-struct classvtable St14codecvt_bynameIwc11__mbstate_tE_vtable = {
+struct classvtable St14codecvt_bynameIwc11__mbstate_tE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTISt14codecvt_bynameIwc11__mbstate_tE",
-	St14codecvt_bynameIwc11__mbstate_tE_vtable_name,
-	};
+	St14codecvt_bynameIwc11__mbstate_tE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14codecvt_bynameIwc11__mbstate_tE_baseinfo[] = {
 	};
@@ -15776,13 +16086,12 @@ struct classinfo _ZSt14codecvt_bynameIwc11__mbstate_tE_classinfo = {
 	"_ZTVSt14codecvt_bynameIwc11__mbstate_tE",
 	"_ZTISt14codecvt_bynameIwc11__mbstate_tE",
 	"_ZTISt7codecvtIwc11__mbstate_tE",
-	9,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St14codecvt_bynameIwc11__mbstate_tE_typeinfo,
-	&St14codecvt_bynameIwc11__mbstate_tE_vtable,
+	St14codecvt_bynameIwc11__mbstate_tE_vtable,
 	St14codecvt_bynameIwc11__mbstate_tE_baseinfo,
 	};
 
@@ -15795,7 +16104,7 @@ struct classtypeinfo St14collate_bynameIcE_typeinfo = {
 	St14collate_bynameIcE_typeinfo_name,
 	};
 
-const char *St14collate_bynameIcE_vtable_name[] = {
+const char *St14collate_bynameIcE_vtable_name_0 [] = {
 	"_ZNSt14collate_bynameIcED1Ev",
 	"_ZNSt14collate_bynameIcED0Ev",
 	"_ZNKSt7collateIcE10do_compareEPKcS2_S2_S2_",
@@ -15803,12 +16112,16 @@ const char *St14collate_bynameIcE_vtable_name[] = {
 	"_ZNKSt7collateIcE7do_hashEPKcS2_",
 	};
 
-struct classvtable St14collate_bynameIcE_vtable = {
+struct classvtable St14collate_bynameIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	5,	/* Number of Vfuncs */
 	"_ZTISt14collate_bynameIcE",
-	St14collate_bynameIcE_vtable_name,
-	};
+	St14collate_bynameIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14collate_bynameIcE_baseinfo[] = {
 	};
@@ -15818,13 +16131,12 @@ struct classinfo _ZSt14collate_bynameIcE_classinfo = {
 	"_ZTVSt14collate_bynameIcE",
 	"_ZTISt14collate_bynameIcE",
 	"_ZTISt7collateIcE",
-	5,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St14collate_bynameIcE_typeinfo,
-	&St14collate_bynameIcE_vtable,
+	St14collate_bynameIcE_vtable,
 	St14collate_bynameIcE_baseinfo,
 	};
 
@@ -15837,7 +16149,7 @@ struct classtypeinfo St14collate_bynameIwE_typeinfo = {
 	St14collate_bynameIwE_typeinfo_name,
 	};
 
-const char *St14collate_bynameIwE_vtable_name[] = {
+const char *St14collate_bynameIwE_vtable_name_0 [] = {
 	"_ZNSt14collate_bynameIwED1Ev",
 	"_ZNSt14collate_bynameIwED0Ev",
 	"_ZNKSt7collateIwE10do_compareEPKwS2_S2_S2_",
@@ -15845,12 +16157,16 @@ const char *St14collate_bynameIwE_vtable_name[] = {
 	"_ZNKSt7collateIwE7do_hashEPKwS2_",
 	};
 
-struct classvtable St14collate_bynameIwE_vtable = {
+struct classvtable St14collate_bynameIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	5,	/* Number of Vfuncs */
 	"_ZTISt14collate_bynameIwE",
-	St14collate_bynameIwE_vtable_name,
-	};
+	St14collate_bynameIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14collate_bynameIwE_baseinfo[] = {
 	};
@@ -15860,13 +16176,12 @@ struct classinfo _ZSt14collate_bynameIwE_classinfo = {
 	"_ZTVSt14collate_bynameIwE",
 	"_ZTISt14collate_bynameIwE",
 	"_ZTISt7collateIwE",
-	5,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St14collate_bynameIwE_typeinfo,
-	&St14collate_bynameIwE_vtable,
+	St14collate_bynameIwE_vtable,
 	St14collate_bynameIwE_baseinfo,
 	};
 
@@ -15879,18 +16194,22 @@ struct classtypeinfo St14overflow_error_typeinfo = {
 	St14overflow_error_typeinfo_name,
 	};
 
-const char *St14overflow_error_vtable_name[] = {
+const char *St14overflow_error_vtable_name_0 [] = {
 	"_ZNSt14overflow_errorD1Ev",
 	"_ZNSt14overflow_errorD0Ev",
 	"_ZNKSt13runtime_error4whatEv",
 	};
 
-struct classvtable St14overflow_error_vtable = {
+struct classvtable St14overflow_error_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt14overflow_error",
-	St14overflow_error_vtable_name,
-	};
+	St14overflow_error_vtable_name_0,
+	},
+};
 
 struct base_type_info St14overflow_error_baseinfo[] = {
 	};
@@ -15900,13 +16219,12 @@ struct classinfo _ZSt14overflow_error_classinfo = {
 	"_ZTVSt14overflow_error",
 	"_ZTISt14overflow_error",
 	"_ZTISt13runtime_error",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St14overflow_error_typeinfo,
-	&St14overflow_error_vtable,
+	St14overflow_error_vtable,
 	St14overflow_error_baseinfo,
 	};
 
@@ -15919,7 +16237,7 @@ struct classtypeinfo St15basic_stringbufIcSt11char_traitsIcESaIcEE_typeinfo = {
 	St15basic_stringbufIcSt11char_traitsIcESaIcEE_typeinfo_name,
 	};
 
-const char *St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name[] = {
+const char *St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name_0 [] = {
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED1Ev",
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEED0Ev",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
@@ -16016,12 +16334,16 @@ const char *St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name[] = {
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE8overflowEi",
 	};
 
-struct classvtable St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable = {
+struct classvtable St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt15basic_stringbufIcSt11char_traitsIcESaIcEE",
-	St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name,
-	};
+	St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15basic_stringbufIcSt11char_traitsIcESaIcEE_baseinfo[] = {
 	};
@@ -16031,13 +16353,12 @@ struct classinfo _ZSt15basic_stringbufIcSt11char_traitsIcESaIcEE_classinfo = {
 	"_ZTVSt15basic_stringbufIcSt11char_traitsIcESaIcEE",
 	"_ZTISt15basic_stringbufIcSt11char_traitsIcESaIcEE",
 	"_ZTISt15basic_streambufIcSt11char_traitsIcEE",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15basic_stringbufIcSt11char_traitsIcESaIcEE_typeinfo,
-	&St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable,
+	St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable,
 	St15basic_stringbufIcSt11char_traitsIcESaIcEE_baseinfo,
 	};
 
@@ -16050,7 +16371,7 @@ struct classtypeinfo St15basic_stringbufIwSt11char_traitsIwESaIwEE_typeinfo = {
 	St15basic_stringbufIwSt11char_traitsIwESaIwEE_typeinfo_name,
 	};
 
-const char *St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name[] = {
+const char *St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name_0 [] = {
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEED1Ev",
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEED0Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
@@ -16147,12 +16468,16 @@ const char *St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name[] = {
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE8overflowEj",
 	};
 
-struct classvtable St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable = {
+struct classvtable St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt15basic_stringbufIwSt11char_traitsIwESaIwEE",
-	St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name,
-	};
+	St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15basic_stringbufIwSt11char_traitsIwESaIwEE_baseinfo[] = {
 	};
@@ -16162,13 +16487,12 @@ struct classinfo _ZSt15basic_stringbufIwSt11char_traitsIwESaIwEE_classinfo = {
 	"_ZTVSt15basic_stringbufIwSt11char_traitsIwESaIwEE",
 	"_ZTISt15basic_stringbufIwSt11char_traitsIwESaIwEE",
 	"_ZTISt15basic_streambufIwSt11char_traitsIwEE",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15basic_stringbufIwSt11char_traitsIwESaIwEE_typeinfo,
-	&St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable,
+	St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable,
 	St15basic_stringbufIwSt11char_traitsIwESaIwEE_baseinfo,
 	};
 
@@ -16181,7 +16505,7 @@ struct classtypeinfo St15messages_bynameIcE_typeinfo = {
 	St15messages_bynameIcE_typeinfo_name,
 	};
 
-const char *St15messages_bynameIcE_vtable_name[] = {
+const char *St15messages_bynameIcE_vtable_name_0 [] = {
 	"_ZNSt15messages_bynameIcED1Ev",
 	"_ZNSt15messages_bynameIcED0Ev",
 	"_ZNKSt8messagesIcE7do_openERKSsRKSt6locale",
@@ -16189,12 +16513,16 @@ const char *St15messages_bynameIcE_vtable_name[] = {
 	"_ZNKSt8messagesIcE8do_closeEi",
 	};
 
-struct classvtable St15messages_bynameIcE_vtable = {
+struct classvtable St15messages_bynameIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	5,	/* Number of Vfuncs */
 	"_ZTISt15messages_bynameIcE",
-	St15messages_bynameIcE_vtable_name,
-	};
+	St15messages_bynameIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15messages_bynameIcE_baseinfo[] = {
 	};
@@ -16204,13 +16532,12 @@ struct classinfo _ZSt15messages_bynameIcE_classinfo = {
 	"_ZTVSt15messages_bynameIcE",
 	"_ZTISt15messages_bynameIcE",
 	"_ZTISt8messagesIcE",
-	5,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15messages_bynameIcE_typeinfo,
-	&St15messages_bynameIcE_vtable,
+	St15messages_bynameIcE_vtable,
 	St15messages_bynameIcE_baseinfo,
 	};
 
@@ -16223,7 +16550,7 @@ struct classtypeinfo St15messages_bynameIwE_typeinfo = {
 	St15messages_bynameIwE_typeinfo_name,
 	};
 
-const char *St15messages_bynameIwE_vtable_name[] = {
+const char *St15messages_bynameIwE_vtable_name_0 [] = {
 	"_ZNSt15messages_bynameIwED1Ev",
 	"_ZNSt15messages_bynameIwED0Ev",
 	"_ZNKSt8messagesIwE7do_openERKSsRKSt6locale",
@@ -16231,12 +16558,16 @@ const char *St15messages_bynameIwE_vtable_name[] = {
 	"_ZNKSt8messagesIwE8do_closeEi",
 	};
 
-struct classvtable St15messages_bynameIwE_vtable = {
+struct classvtable St15messages_bynameIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	5,	/* Number of Vfuncs */
 	"_ZTISt15messages_bynameIwE",
-	St15messages_bynameIwE_vtable_name,
-	};
+	St15messages_bynameIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15messages_bynameIwE_baseinfo[] = {
 	};
@@ -16246,13 +16577,12 @@ struct classinfo _ZSt15messages_bynameIwE_classinfo = {
 	"_ZTVSt15messages_bynameIwE",
 	"_ZTISt15messages_bynameIwE",
 	"_ZTISt8messagesIwE",
-	5,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15messages_bynameIwE_typeinfo,
-	&St15messages_bynameIwE_vtable,
+	St15messages_bynameIwE_vtable,
 	St15messages_bynameIwE_baseinfo,
 	};
 
@@ -16265,7 +16595,7 @@ struct classtypeinfo St15numpunct_bynameIcE_typeinfo = {
 	St15numpunct_bynameIcE_typeinfo_name,
 	};
 
-const char *St15numpunct_bynameIcE_vtable_name[] = {
+const char *St15numpunct_bynameIcE_vtable_name_0 [] = {
 	"_ZNSt15numpunct_bynameIcED1Ev",
 	"_ZNSt15numpunct_bynameIcED0Ev",
 	"_ZNKSt8numpunctIcE16do_decimal_pointEv",
@@ -16275,12 +16605,16 @@ const char *St15numpunct_bynameIcE_vtable_name[] = {
 	"_ZNKSt8numpunctIcE12do_falsenameEv",
 	};
 
-struct classvtable St15numpunct_bynameIcE_vtable = {
+struct classvtable St15numpunct_bynameIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	7,	/* Number of Vfuncs */
 	"_ZTISt15numpunct_bynameIcE",
-	St15numpunct_bynameIcE_vtable_name,
-	};
+	St15numpunct_bynameIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15numpunct_bynameIcE_baseinfo[] = {
 	};
@@ -16290,13 +16624,12 @@ struct classinfo _ZSt15numpunct_bynameIcE_classinfo = {
 	"_ZTVSt15numpunct_bynameIcE",
 	"_ZTISt15numpunct_bynameIcE",
 	"_ZTISt8numpunctIcE",
-	7,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15numpunct_bynameIcE_typeinfo,
-	&St15numpunct_bynameIcE_vtable,
+	St15numpunct_bynameIcE_vtable,
 	St15numpunct_bynameIcE_baseinfo,
 	};
 
@@ -16309,7 +16642,7 @@ struct classtypeinfo St15numpunct_bynameIwE_typeinfo = {
 	St15numpunct_bynameIwE_typeinfo_name,
 	};
 
-const char *St15numpunct_bynameIwE_vtable_name[] = {
+const char *St15numpunct_bynameIwE_vtable_name_0 [] = {
 	"_ZNSt15numpunct_bynameIwED1Ev",
 	"_ZNSt15numpunct_bynameIwED0Ev",
 	"_ZNKSt8numpunctIwE16do_decimal_pointEv",
@@ -16319,12 +16652,16 @@ const char *St15numpunct_bynameIwE_vtable_name[] = {
 	"_ZNKSt8numpunctIwE12do_falsenameEv",
 	};
 
-struct classvtable St15numpunct_bynameIwE_vtable = {
+struct classvtable St15numpunct_bynameIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	7,	/* Number of Vfuncs */
 	"_ZTISt15numpunct_bynameIwE",
-	St15numpunct_bynameIwE_vtable_name,
-	};
+	St15numpunct_bynameIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15numpunct_bynameIwE_baseinfo[] = {
 	};
@@ -16334,13 +16671,12 @@ struct classinfo _ZSt15numpunct_bynameIwE_classinfo = {
 	"_ZTVSt15numpunct_bynameIwE",
 	"_ZTISt15numpunct_bynameIwE",
 	"_ZTISt8numpunctIwE",
-	7,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15numpunct_bynameIwE_typeinfo,
-	&St15numpunct_bynameIwE_vtable,
+	St15numpunct_bynameIwE_vtable,
 	St15numpunct_bynameIwE_baseinfo,
 	};
 
@@ -16353,7 +16689,7 @@ struct classtypeinfo St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_trai
 	St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"_ZNSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev",
 	"_ZNSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev",
 	"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE13do_date_orderEv",
@@ -16364,12 +16700,16 @@ const char *St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_v
 	"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE11do_get_yearES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm",
 	};
 
-struct classvtable St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable = {
+struct classvtable St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	8,	/* Number of Vfuncs */
 	"_ZTISt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
-	St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name,
-	};
+	St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
 	};
@@ -16379,13 +16719,12 @@ struct classinfo _ZSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traits
 	"_ZTVSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
-	8,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
-	&St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
+	St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
 	St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -16398,7 +16737,7 @@ struct classtypeinfo St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_trai
 	St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"_ZNSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev",
 	"_ZNSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev",
 	"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE13do_date_orderEv",
@@ -16409,12 +16748,16 @@ const char *St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_v
 	"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE11do_get_yearES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm",
 	};
 
-struct classvtable St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable = {
+struct classvtable St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	8,	/* Number of Vfuncs */
 	"_ZTISt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
-	St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name,
-	};
+	St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
 	};
@@ -16424,13 +16767,12 @@ struct classinfo _ZSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traits
 	"_ZTVSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
-	8,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
-	&St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
+	St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -16443,18 +16785,22 @@ struct classtypeinfo St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_trai
 	St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"_ZNSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev",
 	"_ZNSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev",
 	"_ZNKSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecPK2tmcc",
 	};
 
-struct classvtable St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable = {
+struct classvtable St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
-	St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name,
-	};
+	St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
 	};
@@ -16464,13 +16810,12 @@ struct classinfo _ZSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traits
 	"_ZTVSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
-	&St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
+	St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
 	St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -16483,18 +16828,22 @@ struct classtypeinfo St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_trai
 	St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"_ZNSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev",
 	"_ZNSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev",
 	"_ZNKSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_RSt8ios_basewPK2tmcc",
 	};
 
-struct classvtable St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable = {
+struct classvtable St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
-	St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name,
-	};
+	St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
 	};
@@ -16504,13 +16853,12 @@ struct classinfo _ZSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traits
 	"_ZTVSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
-	&St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
+	St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -16523,18 +16871,22 @@ struct classtypeinfo St15underflow_error_typeinfo = {
 	St15underflow_error_typeinfo_name,
 	};
 
-const char *St15underflow_error_vtable_name[] = {
+const char *St15underflow_error_vtable_name_0 [] = {
 	"_ZNSt15underflow_errorD1Ev",
 	"_ZNSt15underflow_errorD0Ev",
 	"_ZNKSt13runtime_error4whatEv",
 	};
 
-struct classvtable St15underflow_error_vtable = {
+struct classvtable St15underflow_error_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt15underflow_error",
-	St15underflow_error_vtable_name,
-	};
+	St15underflow_error_vtable_name_0,
+	},
+};
 
 struct base_type_info St15underflow_error_baseinfo[] = {
 	};
@@ -16544,13 +16896,12 @@ struct classinfo _ZSt15underflow_error_classinfo = {
 	"_ZTVSt15underflow_error",
 	"_ZTISt15underflow_error",
 	"_ZTISt13runtime_error",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15underflow_error_typeinfo,
-	&St15underflow_error_vtable,
+	St15underflow_error_vtable,
 	St15underflow_error_baseinfo,
 	};
 
@@ -16563,18 +16914,22 @@ struct classtypeinfo St16invalid_argument_typeinfo = {
 	St16invalid_argument_typeinfo_name,
 	};
 
-const char *St16invalid_argument_vtable_name[] = {
+const char *St16invalid_argument_vtable_name_0 [] = {
 	"_ZNSt16invalid_argumentD1Ev",
 	"_ZNSt16invalid_argumentD0Ev",
 	"_ZNKSt11logic_error4whatEv",
 	};
 
-struct classvtable St16invalid_argument_vtable = {
+struct classvtable St16invalid_argument_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt16invalid_argument",
-	St16invalid_argument_vtable_name,
-	};
+	St16invalid_argument_vtable_name_0,
+	},
+};
 
 struct base_type_info St16invalid_argument_baseinfo[] = {
 	};
@@ -16584,13 +16939,12 @@ struct classinfo _ZSt16invalid_argument_classinfo = {
 	"_ZTVSt16invalid_argument",
 	"_ZTISt16invalid_argument",
 	"_ZTISt11logic_error",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St16invalid_argument_typeinfo,
-	&St16invalid_argument_vtable,
+	St16invalid_argument_vtable,
 	St16invalid_argument_baseinfo,
 	};
 
@@ -16603,7 +16957,7 @@ struct classtypeinfo St17moneypunct_bynameIcLb0EE_typeinfo = {
 	St17moneypunct_bynameIcLb0EE_typeinfo_name,
 	};
 
-const char *St17moneypunct_bynameIcLb0EE_vtable_name[] = {
+const char *St17moneypunct_bynameIcLb0EE_vtable_name_0 [] = {
 	"_ZNSt17moneypunct_bynameIcLb0EED1Ev",
 	"_ZNSt17moneypunct_bynameIcLb0EED0Ev",
 	"_ZNKSt10moneypunctIcLb0EE16do_decimal_pointEv",
@@ -16617,12 +16971,16 @@ const char *St17moneypunct_bynameIcLb0EE_vtable_name[] = {
 	"_ZNKSt10moneypunctIcLb0EE13do_neg_formatEv",
 	};
 
-struct classvtable St17moneypunct_bynameIcLb0EE_vtable = {
+struct classvtable St17moneypunct_bynameIcLb0EE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	11,	/* Number of Vfuncs */
 	"_ZTISt17moneypunct_bynameIcLb0EE",
-	St17moneypunct_bynameIcLb0EE_vtable_name,
-	};
+	St17moneypunct_bynameIcLb0EE_vtable_name_0,
+	},
+};
 
 struct base_type_info St17moneypunct_bynameIcLb0EE_baseinfo[] = {
 	};
@@ -16632,13 +16990,12 @@ struct classinfo _ZSt17moneypunct_bynameIcLb0EE_classinfo = {
 	"_ZTVSt17moneypunct_bynameIcLb0EE",
 	"_ZTISt17moneypunct_bynameIcLb0EE",
 	"_ZTISt10moneypunctIcLb0EE",
-	11,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St17moneypunct_bynameIcLb0EE_typeinfo,
-	&St17moneypunct_bynameIcLb0EE_vtable,
+	St17moneypunct_bynameIcLb0EE_vtable,
 	St17moneypunct_bynameIcLb0EE_baseinfo,
 	};
 
@@ -16651,7 +17008,7 @@ struct classtypeinfo St17moneypunct_bynameIcLb1EE_typeinfo = {
 	St17moneypunct_bynameIcLb1EE_typeinfo_name,
 	};
 
-const char *St17moneypunct_bynameIcLb1EE_vtable_name[] = {
+const char *St17moneypunct_bynameIcLb1EE_vtable_name_0 [] = {
 	"_ZNSt17moneypunct_bynameIcLb1EED1Ev",
 	"_ZNSt17moneypunct_bynameIcLb1EED0Ev",
 	"_ZNKSt10moneypunctIcLb1EE16do_decimal_pointEv",
@@ -16665,12 +17022,16 @@ const char *St17moneypunct_bynameIcLb1EE_vtable_name[] = {
 	"_ZNKSt10moneypunctIcLb1EE13do_neg_formatEv",
 	};
 
-struct classvtable St17moneypunct_bynameIcLb1EE_vtable = {
+struct classvtable St17moneypunct_bynameIcLb1EE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	11,	/* Number of Vfuncs */
 	"_ZTISt17moneypunct_bynameIcLb1EE",
-	St17moneypunct_bynameIcLb1EE_vtable_name,
-	};
+	St17moneypunct_bynameIcLb1EE_vtable_name_0,
+	},
+};
 
 struct base_type_info St17moneypunct_bynameIcLb1EE_baseinfo[] = {
 	};
@@ -16680,13 +17041,12 @@ struct classinfo _ZSt17moneypunct_bynameIcLb1EE_classinfo = {
 	"_ZTVSt17moneypunct_bynameIcLb1EE",
 	"_ZTISt17moneypunct_bynameIcLb1EE",
 	"_ZTISt10moneypunctIcLb1EE",
-	11,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St17moneypunct_bynameIcLb1EE_typeinfo,
-	&St17moneypunct_bynameIcLb1EE_vtable,
+	St17moneypunct_bynameIcLb1EE_vtable,
 	St17moneypunct_bynameIcLb1EE_baseinfo,
 	};
 
@@ -16699,7 +17059,7 @@ struct classtypeinfo St17moneypunct_bynameIwLb0EE_typeinfo = {
 	St17moneypunct_bynameIwLb0EE_typeinfo_name,
 	};
 
-const char *St17moneypunct_bynameIwLb0EE_vtable_name[] = {
+const char *St17moneypunct_bynameIwLb0EE_vtable_name_0 [] = {
 	"_ZNSt17moneypunct_bynameIwLb0EED1Ev",
 	"_ZNSt17moneypunct_bynameIwLb0EED0Ev",
 	"_ZNKSt10moneypunctIwLb0EE16do_decimal_pointEv",
@@ -16713,12 +17073,16 @@ const char *St17moneypunct_bynameIwLb0EE_vtable_name[] = {
 	"_ZNKSt10moneypunctIwLb0EE13do_neg_formatEv",
 	};
 
-struct classvtable St17moneypunct_bynameIwLb0EE_vtable = {
+struct classvtable St17moneypunct_bynameIwLb0EE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	11,	/* Number of Vfuncs */
 	"_ZTISt17moneypunct_bynameIwLb0EE",
-	St17moneypunct_bynameIwLb0EE_vtable_name,
-	};
+	St17moneypunct_bynameIwLb0EE_vtable_name_0,
+	},
+};
 
 struct base_type_info St17moneypunct_bynameIwLb0EE_baseinfo[] = {
 	};
@@ -16728,13 +17092,12 @@ struct classinfo _ZSt17moneypunct_bynameIwLb0EE_classinfo = {
 	"_ZTVSt17moneypunct_bynameIwLb0EE",
 	"_ZTISt17moneypunct_bynameIwLb0EE",
 	"_ZTISt10moneypunctIwLb0EE",
-	11,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St17moneypunct_bynameIwLb0EE_typeinfo,
-	&St17moneypunct_bynameIwLb0EE_vtable,
+	St17moneypunct_bynameIwLb0EE_vtable,
 	St17moneypunct_bynameIwLb0EE_baseinfo,
 	};
 
@@ -16747,7 +17110,7 @@ struct classtypeinfo St17moneypunct_bynameIwLb1EE_typeinfo = {
 	St17moneypunct_bynameIwLb1EE_typeinfo_name,
 	};
 
-const char *St17moneypunct_bynameIwLb1EE_vtable_name[] = {
+const char *St17moneypunct_bynameIwLb1EE_vtable_name_0 [] = {
 	"_ZNSt17moneypunct_bynameIwLb1EED1Ev",
 	"_ZNSt17moneypunct_bynameIwLb1EED0Ev",
 	"_ZNKSt10moneypunctIwLb1EE16do_decimal_pointEv",
@@ -16761,12 +17124,16 @@ const char *St17moneypunct_bynameIwLb1EE_vtable_name[] = {
 	"_ZNKSt10moneypunctIwLb1EE13do_neg_formatEv",
 	};
 
-struct classvtable St17moneypunct_bynameIwLb1EE_vtable = {
+struct classvtable St17moneypunct_bynameIwLb1EE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	11,	/* Number of Vfuncs */
 	"_ZTISt17moneypunct_bynameIwLb1EE",
-	St17moneypunct_bynameIwLb1EE_vtable_name,
-	};
+	St17moneypunct_bynameIwLb1EE_vtable_name_0,
+	},
+};
 
 struct base_type_info St17moneypunct_bynameIwLb1EE_baseinfo[] = {
 	};
@@ -16776,13 +17143,12 @@ struct classinfo _ZSt17moneypunct_bynameIwLb1EE_classinfo = {
 	"_ZTVSt17moneypunct_bynameIwLb1EE",
 	"_ZTISt17moneypunct_bynameIwLb1EE",
 	"_ZTISt10moneypunctIwLb1EE",
-	11,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St17moneypunct_bynameIwLb1EE_typeinfo,
-	&St17moneypunct_bynameIwLb1EE_vtable,
+	St17moneypunct_bynameIwLb1EE_vtable,
 	St17moneypunct_bynameIwLb1EE_baseinfo,
 	};
 
@@ -16795,43 +17161,55 @@ struct classtypeinfo St18basic_stringstreamIcSt11char_traitsIcESaIcEE_typeinfo =
 	St18basic_stringstreamIcSt11char_traitsIcESaIcEE_typeinfo_name,
 	};
 
-const char *St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable_name[] = {
+const char *St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable_name_0 [] = {
 	"_ZNSt18basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev",
 	"_ZNSt18basic_stringstreamIcSt11char_traitsIcESaIcEED0Ev",
 	};
 
-struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable = {
+struct classvtable St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [1] = {
+	{
 #if __i386__
 	96,
+	0,
 #endif
 #if __ia64__
 	184,
+	0,
 #endif
 #if __arm__
 	96,
+	0,
 #endif
 #if __mc68000__
 	96,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	96,
+	0,
 #endif
 #if __powerpc64__
 	184,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	96,
+	0,
 #endif
 #if __x86_64__
 	184,
+	0,
 #endif
 #if __s390x__
 	184,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt18basic_stringstreamIcSt11char_traitsIcESaIcEE",
-	St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable_name,
-	};
+	St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St18basic_stringstreamIcSt11char_traitsIcESaIcEE_baseinfo[] = {
 	};
@@ -16841,13 +17219,12 @@ struct classinfo _ZSt18basic_stringstreamIcSt11char_traitsIcESaIcEE_classinfo = 
 	"_ZTVSt18basic_stringstreamIcSt11char_traitsIcESaIcEE",
 	"_ZTISt18basic_stringstreamIcSt11char_traitsIcESaIcEE",
 	"_ZTISd",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St18basic_stringstreamIcSt11char_traitsIcESaIcEE_typeinfo,
-	&St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable,
+	St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable,
 	St18basic_stringstreamIcSt11char_traitsIcESaIcEE_baseinfo,
 	};
 
@@ -16860,43 +17237,55 @@ struct classtypeinfo St18basic_stringstreamIwSt11char_traitsIwESaIwEE_typeinfo =
 	St18basic_stringstreamIwSt11char_traitsIwESaIwEE_typeinfo_name,
 	};
 
-const char *St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable_name[] = {
+const char *St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable_name_0 [] = {
 	"_ZNSt18basic_stringstreamIwSt11char_traitsIwESaIwEED1Ev",
 	"_ZNSt18basic_stringstreamIwSt11char_traitsIwESaIwEED0Ev",
 	};
 
-struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable = {
+struct classvtable St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [1] = {
+	{
 #if __i386__
 	100,
+	0,
 #endif
 #if __ia64__
 	184,
+	0,
 #endif
 #if __arm__
 	100,
+	0,
 #endif
 #if __mc68000__
 	100,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	100,
+	0,
 #endif
 #if __powerpc64__
 	184,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	100,
+	0,
 #endif
 #if __x86_64__
 	184,
+	0,
 #endif
 #if __s390x__
 	184,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt18basic_stringstreamIwSt11char_traitsIwESaIwEE",
-	St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable_name,
-	};
+	St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St18basic_stringstreamIwSt11char_traitsIwESaIwEE_baseinfo[] = {
 	};
@@ -16906,13 +17295,12 @@ struct classinfo _ZSt18basic_stringstreamIwSt11char_traitsIwESaIwEE_classinfo = 
 	"_ZTVSt18basic_stringstreamIwSt11char_traitsIwESaIwEE",
 	"_ZTISt18basic_stringstreamIwSt11char_traitsIwESaIwEE",
 	"_ZTISt14basic_iostreamIwSt11char_traitsIwEE",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St18basic_stringstreamIwSt11char_traitsIwESaIwEE_typeinfo,
-	&St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable,
+	St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable,
 	St18basic_stringstreamIwSt11char_traitsIwESaIwEE_baseinfo,
 	};
 
@@ -16925,43 +17313,55 @@ struct classtypeinfo St19basic_istringstreamIcSt11char_traitsIcESaIcEE_typeinfo 
 	St19basic_istringstreamIcSt11char_traitsIcESaIcEE_typeinfo_name,
 	};
 
-const char *St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name[] = {
+const char *St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name_0 [] = {
 	"_ZNSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
 	"_ZNSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
 	};
 
-struct classvtable St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable = {
+struct classvtable St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable [1] = {
+	{
 #if __i386__
 	92,
+	0,
 #endif
 #if __ia64__
 	176,
+	0,
 #endif
 #if __arm__
 	92,
+	0,
 #endif
 #if __mc68000__
 	92,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	92,
+	0,
 #endif
 #if __powerpc64__
 	176,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	92,
+	0,
 #endif
 #if __x86_64__
 	176,
+	0,
 #endif
 #if __s390x__
 	176,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt19basic_istringstreamIcSt11char_traitsIcESaIcEE",
-	St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name,
-	};
+	St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St19basic_istringstreamIcSt11char_traitsIcESaIcEE_baseinfo[] = {
 	};
@@ -16971,13 +17371,12 @@ struct classinfo _ZSt19basic_istringstreamIcSt11char_traitsIcESaIcEE_classinfo =
 	"_ZTVSt19basic_istringstreamIcSt11char_traitsIcESaIcEE",
 	"_ZTISt19basic_istringstreamIcSt11char_traitsIcESaIcEE",
 	"_ZTISi",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St19basic_istringstreamIcSt11char_traitsIcESaIcEE_typeinfo,
-	&St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable,
+	St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable,
 	St19basic_istringstreamIcSt11char_traitsIcESaIcEE_baseinfo,
 	};
 
@@ -16990,43 +17389,55 @@ struct classtypeinfo St19basic_istringstreamIwSt11char_traitsIwESaIwEE_typeinfo 
 	St19basic_istringstreamIwSt11char_traitsIwESaIwEE_typeinfo_name,
 	};
 
-const char *St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable_name[] = {
+const char *St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable_name_0 [] = {
 	"_ZNSt19basic_istringstreamIwSt11char_traitsIwESaIwEED1Ev",
 	"_ZNSt19basic_istringstreamIwSt11char_traitsIwESaIwEED0Ev",
 	};
 
-struct classvtable St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable = {
+struct classvtable St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable [1] = {
+	{
 #if __i386__
 	96,
+	0,
 #endif
 #if __ia64__
 	176,
+	0,
 #endif
 #if __arm__
 	96,
+	0,
 #endif
 #if __mc68000__
 	96,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	96,
+	0,
 #endif
 #if __powerpc64__
 	176,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	96,
+	0,
 #endif
 #if __x86_64__
 	176,
+	0,
 #endif
 #if __s390x__
 	176,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt19basic_istringstreamIwSt11char_traitsIwESaIwEE",
-	St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable_name,
-	};
+	St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St19basic_istringstreamIwSt11char_traitsIwESaIwEE_baseinfo[] = {
 	};
@@ -17036,13 +17447,12 @@ struct classinfo _ZSt19basic_istringstreamIwSt11char_traitsIwESaIwEE_classinfo =
 	"_ZTVSt19basic_istringstreamIwSt11char_traitsIwESaIwEE",
 	"_ZTISt19basic_istringstreamIwSt11char_traitsIwESaIwEE",
 	"_ZTISt13basic_istreamIwSt11char_traitsIwEE",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St19basic_istringstreamIwSt11char_traitsIwESaIwEE_typeinfo,
-	&St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable,
+	St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable,
 	St19basic_istringstreamIwSt11char_traitsIwESaIwEE_baseinfo,
 	};
 
@@ -17055,43 +17465,55 @@ struct classtypeinfo St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_typeinfo 
 	St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_typeinfo_name,
 	};
 
-const char *St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable_name[] = {
+const char *St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable_name_0 [] = {
 	"_ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev",
 	"_ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED0Ev",
 	};
 
-struct classvtable St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable = {
+struct classvtable St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable [1] = {
+	{
 #if __i386__
 	88,
+	0,
 #endif
 #if __ia64__
 	168,
+	0,
 #endif
 #if __arm__
 	88,
+	0,
 #endif
 #if __mc68000__
 	88,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	88,
+	0,
 #endif
 #if __powerpc64__
 	168,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	88,
+	0,
 #endif
 #if __x86_64__
 	168,
+	0,
 #endif
 #if __s390x__
 	168,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt19basic_ostringstreamIcSt11char_traitsIcESaIcEE",
-	St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable_name,
-	};
+	St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_baseinfo[] = {
 	};
@@ -17101,13 +17523,12 @@ struct classinfo _ZSt19basic_ostringstreamIcSt11char_traitsIcESaIcEE_classinfo =
 	"_ZTVSt19basic_ostringstreamIcSt11char_traitsIcESaIcEE",
 	"_ZTISt19basic_ostringstreamIcSt11char_traitsIcESaIcEE",
 	"_ZTISo",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_typeinfo,
-	&St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable,
+	St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable,
 	St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_baseinfo,
 	};
 
@@ -17120,43 +17541,55 @@ struct classtypeinfo St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_typeinfo 
 	St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_typeinfo_name,
 	};
 
-const char *St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable_name[] = {
+const char *St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable_name_0 [] = {
 	"_ZNSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED1Ev",
 	"_ZNSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED0Ev",
 	};
 
-struct classvtable St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable = {
+struct classvtable St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable [1] = {
+	{
 #if __i386__
 	92,
+	0,
 #endif
 #if __ia64__
 	168,
+	0,
 #endif
 #if __arm__
 	92,
+	0,
 #endif
 #if __mc68000__
 	92,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	92,
+	0,
 #endif
 #if __powerpc64__
 	168,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	92,
+	0,
 #endif
 #if __x86_64__
 	168,
+	0,
 #endif
 #if __s390x__
 	168,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt19basic_ostringstreamIwSt11char_traitsIwESaIwEE",
-	St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable_name,
-	};
+	St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_baseinfo[] = {
 	};
@@ -17166,13 +17599,12 @@ struct classinfo _ZSt19basic_ostringstreamIwSt11char_traitsIwESaIwEE_classinfo =
 	"_ZTVSt19basic_ostringstreamIwSt11char_traitsIwESaIwEE",
 	"_ZTISt19basic_ostringstreamIwSt11char_traitsIwESaIwEE",
 	"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_typeinfo,
-	&St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable,
+	St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable,
 	St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_baseinfo,
 	};
 
@@ -17185,13 +17617,9 @@ struct classtypeinfo St5ctypeIcE_typeinfo = {
 	St5ctypeIcE_typeinfo_name,
 	};
 
-const char *St5ctypeIcE_vtable_name[] = {
+const char *St5ctypeIcE_vtable_name_0 [] = {
 	"_ZNSt5ctypeIcED1Ev",
 	"_ZNSt5ctypeIcED0Ev",
-	"",
-	"",
-	"",
-	"",
 	"_ZNKSt5ctypeIcE10do_toupperEc",
 	"_ZNKSt5ctypeIcE10do_toupperEPcPKc",
 	"_ZNKSt5ctypeIcE10do_tolowerEc",
@@ -17202,12 +17630,16 @@ const char *St5ctypeIcE_vtable_name[] = {
 	"_ZNKSt5ctypeIcE9do_narrowEPKcS2_cPc",
 	};
 
-struct classvtable St5ctypeIcE_vtable = {
+struct classvtable St5ctypeIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	10,	/* Number of Vfuncs */
 	"_ZTISt5ctypeIcE",
-	St5ctypeIcE_vtable_name,
-	};
+	St5ctypeIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St5ctypeIcE_baseinfo[] = {
 	};
@@ -17217,13 +17649,12 @@ struct classinfo _ZSt5ctypeIcE_classinfo = {
 	"_ZTVSt5ctypeIcE",
 	"_ZTISt5ctypeIcE",
 	"_ZTISt21__ctype_abstract_baseIcE",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St5ctypeIcE_typeinfo,
-	&St5ctypeIcE_vtable,
+	St5ctypeIcE_vtable,
 	St5ctypeIcE_baseinfo,
 	};
 
@@ -17236,7 +17667,7 @@ struct classtypeinfo St5ctypeIwE_typeinfo = {
 	St5ctypeIwE_typeinfo_name,
 	};
 
-const char *St5ctypeIwE_vtable_name[] = {
+const char *St5ctypeIwE_vtable_name_0 [] = {
 	"_ZNSt5ctypeIwED1Ev",
 	"_ZNSt5ctypeIwED0Ev",
 	"_ZNKSt5ctypeIwE5do_isEtw",
@@ -17253,12 +17684,16 @@ const char *St5ctypeIwE_vtable_name[] = {
 	"_ZNKSt5ctypeIwE9do_narrowEPKwS2_cPc",
 	};
 
-struct classvtable St5ctypeIwE_vtable = {
+struct classvtable St5ctypeIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt5ctypeIwE",
-	St5ctypeIwE_vtable_name,
-	};
+	St5ctypeIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St5ctypeIwE_baseinfo[] = {
 	};
@@ -17268,13 +17703,12 @@ struct classinfo _ZSt5ctypeIwE_classinfo = {
 	"_ZTVSt5ctypeIwE",
 	"_ZTISt5ctypeIwE",
 	"_ZTISt21__ctype_abstract_baseIwE",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St5ctypeIwE_typeinfo,
-	&St5ctypeIwE_vtable,
+	St5ctypeIwE_vtable,
 	St5ctypeIwE_baseinfo,
 	};
 
@@ -17287,7 +17721,7 @@ struct classtypeinfo St7codecvtIcc11__mbstate_tE_typeinfo = {
 	St7codecvtIcc11__mbstate_tE_typeinfo_name,
 	};
 
-const char *St7codecvtIcc11__mbstate_tE_vtable_name[] = {
+const char *St7codecvtIcc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNSt7codecvtIcc11__mbstate_tED1Ev",
 	"_ZNSt7codecvtIcc11__mbstate_tED0Ev",
 	"_ZNKSt7codecvtIcc11__mbstate_tE6do_outERS0_PKcS4_RS4_PcS6_RS6_",
@@ -17296,35 +17730,39 @@ const char *St7codecvtIcc11__mbstate_tE_vtable_name[] = {
 	"_ZNKSt7codecvtIcc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIcc11__mbstate_tE16do_always_noconvEv",
 #if __s390x__
-	"",
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __i386__
-	"",
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
 #if __ia64__
-	"",
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __powerpc__ && !__powerpc64__
-	"",
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
 #if __powerpc64__
-	"",
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __s390__ && !__s390x__
-	"",
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __x86_64__
-	"",
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 	"_ZNKSt7codecvtIcc11__mbstate_tE13do_max_lengthEv",
 	};
 
-struct classvtable St7codecvtIcc11__mbstate_tE_vtable = {
+struct classvtable St7codecvtIcc11__mbstate_tE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTISt7codecvtIcc11__mbstate_tE",
-	St7codecvtIcc11__mbstate_tE_vtable_name,
-	};
+	St7codecvtIcc11__mbstate_tE_vtable_name_0,
+	},
+};
 
 struct base_type_info St7codecvtIcc11__mbstate_tE_baseinfo[] = {
 	};
@@ -17334,13 +17772,12 @@ struct classinfo _ZSt7codecvtIcc11__mbstate_tE_classinfo = {
 	"_ZTVSt7codecvtIcc11__mbstate_tE",
 	"_ZTISt7codecvtIcc11__mbstate_tE",
 	"_ZTISt23__codecvt_abstract_baseIcc11__mbstate_tE",
-	9,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St7codecvtIcc11__mbstate_tE_typeinfo,
-	&St7codecvtIcc11__mbstate_tE_vtable,
+	St7codecvtIcc11__mbstate_tE_vtable,
 	St7codecvtIcc11__mbstate_tE_baseinfo,
 	};
 
@@ -17353,7 +17790,7 @@ struct classtypeinfo St7codecvtIwc11__mbstate_tE_typeinfo = {
 	St7codecvtIwc11__mbstate_tE_typeinfo_name,
 	};
 
-const char *St7codecvtIwc11__mbstate_tE_vtable_name[] = {
+const char *St7codecvtIwc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNSt7codecvtIwc11__mbstate_tED1Ev",
 	"_ZNSt7codecvtIwc11__mbstate_tED0Ev",
 	"_ZNKSt7codecvtIwc11__mbstate_tE6do_outERS0_PKwS4_RS4_PcS6_RS6_",
@@ -17362,35 +17799,39 @@ const char *St7codecvtIwc11__mbstate_tE_vtable_name[] = {
 	"_ZNKSt7codecvtIwc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIwc11__mbstate_tE16do_always_noconvEv",
 #if __i386__
-	"",
-#endif
-#if __ia64__
-	"",
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
 #if __powerpc__ && !__powerpc64__
-	"",
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j",
+#endif
+#if __ia64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __powerpc64__
-	"",
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __s390__ && !__s390x__
-	"",
-#endif
-#if __x86_64__
-	"",
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __s390x__
-	"",
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
+#endif
+#if __x86_64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 	"_ZNKSt7codecvtIwc11__mbstate_tE13do_max_lengthEv",
 	};
 
-struct classvtable St7codecvtIwc11__mbstate_tE_vtable = {
+struct classvtable St7codecvtIwc11__mbstate_tE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTISt7codecvtIwc11__mbstate_tE",
-	St7codecvtIwc11__mbstate_tE_vtable_name,
-	};
+	St7codecvtIwc11__mbstate_tE_vtable_name_0,
+	},
+};
 
 struct base_type_info St7codecvtIwc11__mbstate_tE_baseinfo[] = {
 	};
@@ -17400,13 +17841,12 @@ struct classinfo _ZSt7codecvtIwc11__mbstate_tE_classinfo = {
 	"_ZTVSt7codecvtIwc11__mbstate_tE",
 	"_ZTISt7codecvtIwc11__mbstate_tE",
 	"_ZTISt23__codecvt_abstract_baseIwc11__mbstate_tE",
-	9,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St7codecvtIwc11__mbstate_tE_typeinfo,
-	&St7codecvtIwc11__mbstate_tE_vtable,
+	St7codecvtIwc11__mbstate_tE_vtable,
 	St7codecvtIwc11__mbstate_tE_baseinfo,
 	};
 
@@ -17419,7 +17859,7 @@ struct classtypeinfo St7collateIcE_typeinfo = {
 	St7collateIcE_typeinfo_name,
 	};
 
-const char *St7collateIcE_vtable_name[] = {
+const char *St7collateIcE_vtable_name_0 [] = {
 	"_ZNSt7collateIcED1Ev",
 	"_ZNSt7collateIcED0Ev",
 	"_ZNKSt7collateIcE10do_compareEPKcS2_S2_S2_",
@@ -17427,12 +17867,16 @@ const char *St7collateIcE_vtable_name[] = {
 	"_ZNKSt7collateIcE7do_hashEPKcS2_",
 	};
 
-struct classvtable St7collateIcE_vtable = {
+struct classvtable St7collateIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	5,	/* Number of Vfuncs */
 	"_ZTISt7collateIcE",
-	St7collateIcE_vtable_name,
-	};
+	St7collateIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St7collateIcE_baseinfo[] = {
 	};
@@ -17442,13 +17886,12 @@ struct classinfo _ZSt7collateIcE_classinfo = {
 	"_ZTVSt7collateIcE",
 	"_ZTISt7collateIcE",
 	"_ZTINSt6locale5facetE",
-	5,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St7collateIcE_typeinfo,
-	&St7collateIcE_vtable,
+	St7collateIcE_vtable,
 	St7collateIcE_baseinfo,
 	};
 
@@ -17461,7 +17904,7 @@ struct classtypeinfo St7collateIwE_typeinfo = {
 	St7collateIwE_typeinfo_name,
 	};
 
-const char *St7collateIwE_vtable_name[] = {
+const char *St7collateIwE_vtable_name_0 [] = {
 	"_ZNSt7collateIwED1Ev",
 	"_ZNSt7collateIwED0Ev",
 	"_ZNKSt7collateIwE10do_compareEPKwS2_S2_S2_",
@@ -17469,12 +17912,16 @@ const char *St7collateIwE_vtable_name[] = {
 	"_ZNKSt7collateIwE7do_hashEPKwS2_",
 	};
 
-struct classvtable St7collateIwE_vtable = {
+struct classvtable St7collateIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	5,	/* Number of Vfuncs */
 	"_ZTISt7collateIwE",
-	St7collateIwE_vtable_name,
-	};
+	St7collateIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St7collateIwE_baseinfo[] = {
 	};
@@ -17484,13 +17931,12 @@ struct classinfo _ZSt7collateIwE_classinfo = {
 	"_ZTVSt7collateIwE",
 	"_ZTISt7collateIwE",
 	"_ZTINSt6locale5facetE",
-	5,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St7collateIwE_typeinfo,
-	&St7collateIwE_vtable,
+	St7collateIwE_vtable,
 	St7collateIwE_baseinfo,
 	};
 
@@ -17503,18 +17949,22 @@ struct classtypeinfo St8bad_cast_typeinfo = {
 	St8bad_cast_typeinfo_name,
 	};
 
-const char *St8bad_cast_vtable_name[] = {
+const char *St8bad_cast_vtable_name_0 [] = {
 	"_ZNSt8bad_castD1Ev",
 	"_ZNSt8bad_castD0Ev",
 	"_ZNKSt9exception4whatEv",
 	};
 
-struct classvtable St8bad_cast_vtable = {
+struct classvtable St8bad_cast_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt8bad_cast",
-	St8bad_cast_vtable_name,
-	};
+	St8bad_cast_vtable_name_0,
+	},
+};
 
 struct base_type_info St8bad_cast_baseinfo[] = {
 	};
@@ -17524,13 +17974,12 @@ struct classinfo _ZSt8bad_cast_classinfo = {
 	"_ZTVSt8bad_cast",
 	"_ZTISt8bad_cast",
 	"_ZTISt9exception",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St8bad_cast_typeinfo,
-	&St8bad_cast_vtable,
+	St8bad_cast_vtable,
 	St8bad_cast_baseinfo,
 	};
 
@@ -17543,7 +17992,7 @@ struct classtypeinfo St8numpunctIcE_typeinfo = {
 	St8numpunctIcE_typeinfo_name,
 	};
 
-const char *St8numpunctIcE_vtable_name[] = {
+const char *St8numpunctIcE_vtable_name_0 [] = {
 	"_ZNSt8numpunctIcED1Ev",
 	"_ZNSt8numpunctIcED0Ev",
 	"_ZNKSt8numpunctIcE16do_decimal_pointEv",
@@ -17553,12 +18002,16 @@ const char *St8numpunctIcE_vtable_name[] = {
 	"_ZNKSt8numpunctIcE12do_falsenameEv",
 	};
 
-struct classvtable St8numpunctIcE_vtable = {
+struct classvtable St8numpunctIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	7,	/* Number of Vfuncs */
 	"_ZTISt8numpunctIcE",
-	St8numpunctIcE_vtable_name,
-	};
+	St8numpunctIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St8numpunctIcE_baseinfo[] = {
 	};
@@ -17568,13 +18021,12 @@ struct classinfo _ZSt8numpunctIcE_classinfo = {
 	"_ZTVSt8numpunctIcE",
 	"_ZTISt8numpunctIcE",
 	"_ZTINSt6locale5facetE",
-	7,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St8numpunctIcE_typeinfo,
-	&St8numpunctIcE_vtable,
+	St8numpunctIcE_vtable,
 	St8numpunctIcE_baseinfo,
 	};
 
@@ -17587,7 +18039,7 @@ struct classtypeinfo St8numpunctIwE_typeinfo = {
 	St8numpunctIwE_typeinfo_name,
 	};
 
-const char *St8numpunctIwE_vtable_name[] = {
+const char *St8numpunctIwE_vtable_name_0 [] = {
 	"_ZNSt8numpunctIwED1Ev",
 	"_ZNSt8numpunctIwED0Ev",
 	"_ZNKSt8numpunctIwE16do_decimal_pointEv",
@@ -17597,12 +18049,16 @@ const char *St8numpunctIwE_vtable_name[] = {
 	"_ZNKSt8numpunctIwE12do_falsenameEv",
 	};
 
-struct classvtable St8numpunctIwE_vtable = {
+struct classvtable St8numpunctIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	7,	/* Number of Vfuncs */
 	"_ZTISt8numpunctIwE",
-	St8numpunctIwE_vtable_name,
-	};
+	St8numpunctIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St8numpunctIwE_baseinfo[] = {
 	};
@@ -17612,13 +18068,12 @@ struct classinfo _ZSt8numpunctIwE_classinfo = {
 	"_ZTVSt8numpunctIwE",
 	"_ZTISt8numpunctIwE",
 	"_ZTINSt6locale5facetE",
-	7,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St8numpunctIwE_typeinfo,
-	&St8numpunctIwE_vtable,
+	St8numpunctIwE_vtable,
 	St8numpunctIwE_baseinfo,
 	};
 
@@ -17631,18 +18086,22 @@ struct classtypeinfo St9bad_alloc_typeinfo = {
 	St9bad_alloc_typeinfo_name,
 	};
 
-const char *St9bad_alloc_vtable_name[] = {
+const char *St9bad_alloc_vtable_name_0 [] = {
 	"_ZNSt9bad_allocD1Ev",
 	"_ZNSt9bad_allocD0Ev",
 	"_ZNKSt9exception4whatEv",
 	};
 
-struct classvtable St9bad_alloc_vtable = {
+struct classvtable St9bad_alloc_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt9bad_alloc",
-	St9bad_alloc_vtable_name,
-	};
+	St9bad_alloc_vtable_name_0,
+	},
+};
 
 struct base_type_info St9bad_alloc_baseinfo[] = {
 	};
@@ -17652,13 +18111,12 @@ struct classinfo _ZSt9bad_alloc_classinfo = {
 	"_ZTVSt9bad_alloc",
 	"_ZTISt9bad_alloc",
 	"_ZTISt9exception",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St9bad_alloc_typeinfo,
-	&St9bad_alloc_vtable,
+	St9bad_alloc_vtable,
 	St9bad_alloc_baseinfo,
 	};
 
@@ -17671,19 +18129,23 @@ struct classtypeinfo St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
 	St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"_ZNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev",
 	"_ZNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev",
 	"_ZNKSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES3_S3_bRSt8ios_baseRSt12_Ios_IostateRe",
 	"_ZNKSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES3_S3_bRSt8ios_baseRSt12_Ios_IostateRSs",
 	};
 
-struct classvtable St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable = {
+struct classvtable St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	4,	/* Number of Vfuncs */
 	"_ZTISt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
-	St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name,
-	};
+	St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
 	};
@@ -17693,13 +18155,12 @@ struct classinfo _ZSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_c
 	"_ZTVSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTINSt6locale5facetE",
-	4,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
-	&St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
+	St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
 	St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -17712,19 +18173,23 @@ struct classtypeinfo St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 	St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"_ZNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev",
 	"_ZNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev",
 	"_ZNKSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_bRSt8ios_baseRSt12_Ios_IostateRe",
 	"_ZNKSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_bRSt8ios_baseRSt12_Ios_IostateRSbIwS2_SaIwEE",
 	};
 
-struct classvtable St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable = {
+struct classvtable St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	4,	/* Number of Vfuncs */
 	"_ZTISt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
-	St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name,
-	};
+	St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
 	};
@@ -17734,13 +18199,12 @@ struct classinfo _ZSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_c
 	"_ZTVSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTINSt6locale5facetE",
-	4,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
-	&St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
+	St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -17753,19 +18217,23 @@ struct classtypeinfo St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 	St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"_ZNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev",
 	"_ZNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev",
 	"_ZNKSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_bRSt8ios_basece",
 	"_ZNKSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_bRSt8ios_basecRKSs",
 	};
 
-struct classvtable St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable = {
+struct classvtable St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	4,	/* Number of Vfuncs */
 	"_ZTISt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
-	St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name,
-	};
+	St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
 	};
@@ -17775,13 +18243,12 @@ struct classinfo _ZSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_c
 	"_ZTVSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTINSt6locale5facetE",
-	4,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
-	&St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
+	St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
 	St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -17794,19 +18261,23 @@ struct classtypeinfo St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 	St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"_ZNSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev",
 	"_ZNSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev",
 	"_ZNKSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_bRSt8ios_basewe",
 	"_ZNKSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_bRSt8ios_basewRKSbIwS2_SaIwEE",
 	};
 
-struct classvtable St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable = {
+struct classvtable St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	4,	/* Number of Vfuncs */
 	"_ZTISt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
-	St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name,
-	};
+	St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
 	};
@@ -17816,13 +18287,12 @@ struct classinfo _ZSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_c
 	"_ZTVSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTINSt6locale5facetE",
-	4,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
-	&St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
+	St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -17835,43 +18305,55 @@ struct classtypeinfo St9strstream_typeinfo = {
 	St9strstream_typeinfo_name,
 	};
 
-const char *St9strstream_vtable_name[] = {
+const char *St9strstream_vtable_name_0 [] = {
 	"_ZNSt9strstreamD1Ev",
 	"_ZNSt9strstreamD0Ev",
 	};
 
-struct classvtable St9strstream_vtable = {
+struct classvtable St9strstream_vtable [1] = {
+	{
 #if __i386__
 	104,
+	0,
 #endif
 #if __ia64__
 	200,
+	0,
 #endif
 #if __arm__
 	104,
+	0,
 #endif
 #if __mc68000__
 	104,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	104,
+	0,
 #endif
 #if __powerpc64__
 	200,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	104,
+	0,
 #endif
 #if __x86_64__
 	200,
+	0,
 #endif
 #if __s390x__
 	200,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt9strstream",
-	St9strstream_vtable_name,
-	};
+	St9strstream_vtable_name_0,
+	},
+};
 
 struct base_type_info St9strstream_baseinfo[] = {
 	};
@@ -17881,13 +18363,12 @@ struct classinfo _ZSt9strstream_classinfo = {
 	"_ZTVSt9strstream",
 	"_ZTISt9strstream",
 	"_ZTISd",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	2,
 	&St9strstream_typeinfo,
-	&St9strstream_vtable,
+	St9strstream_vtable,
 	St9strstream_baseinfo,
 	};
 
@@ -17900,43 +18381,55 @@ struct classtypeinfo Si_typeinfo = {
 	Si_typeinfo_name,
 	};
 
-const char *Si_vtable_name[] = {
+const char *Si_vtable_name_0 [] = {
 	"_ZNSiD1Ev",
 	"_ZNSiD0Ev",
 	};
 
-struct classvtable Si_vtable = {
+struct classvtable Si_vtable [1] = {
+	{
 #if __i386__
 	8,
+	0,
 #endif
 #if __ia64__
 	16,
+	0,
 #endif
 #if __arm__
 	8,
+	0,
 #endif
 #if __mc68000__
 	8,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	8,
+	0,
 #endif
 #if __powerpc64__
 	16,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	8,
+	0,
 #endif
 #if __x86_64__
 	16,
+	0,
 #endif
 #if __s390x__
 	16,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISi",
-	Si_vtable_name,
-	};
+	Si_vtable_name_0,
+	},
+};
 
 struct base_type_info Si_baseinfo[] = {
 #if __i386__
@@ -17973,13 +18466,12 @@ struct classinfo _ZSi_classinfo = {
 	"_ZTVSi",
 	"_ZTISi",
 	"_ZTISt9basic_iosIcSt11char_traitsIcEE",
-	2,
+	1,
 	0,
 	1,
 	8U,
-	2,
 	&Si_typeinfo,
-	&Si_vtable,
+	Si_vtable,
 	Si_baseinfo,
 	};
 
@@ -17992,43 +18484,55 @@ struct classtypeinfo So_typeinfo = {
 	So_typeinfo_name,
 	};
 
-const char *So_vtable_name[] = {
+const char *So_vtable_name_0 [] = {
 	"_ZNSoD1Ev",
 	"_ZNSoD0Ev",
 	};
 
-struct classvtable So_vtable = {
+struct classvtable So_vtable [1] = {
+	{
 #if __i386__
 	4,
+	0,
 #endif
 #if __ia64__
 	8,
+	0,
 #endif
 #if __arm__
 	4,
+	0,
 #endif
 #if __mc68000__
 	4,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	4,
+	0,
 #endif
 #if __powerpc64__
 	8,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	4,
+	0,
 #endif
 #if __x86_64__
 	8,
+	0,
 #endif
 #if __s390x__
 	8,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISo",
-	So_vtable_name,
-	};
+	So_vtable_name_0,
+	},
+};
 
 struct base_type_info So_baseinfo[] = {
 #if __i386__
@@ -18065,13 +18569,12 @@ struct classinfo _ZSo_classinfo = {
 	"_ZTVSo",
 	"_ZTISo",
 	"_ZTISt9basic_iosIcSt11char_traitsIcEE",
-	2,
+	1,
 	0,
 	1,
 	8U,
-	2,
 	&So_typeinfo,
-	&So_vtable,
+	So_vtable,
 	So_baseinfo,
 	};
 
@@ -18084,43 +18587,55 @@ struct classtypeinfo St13basic_istreamIwSt11char_traitsIwEE_typeinfo = {
 	St13basic_istreamIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St13basic_istreamIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St13basic_istreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt13basic_istreamIwSt11char_traitsIwEED1Ev",
 	"_ZNSt13basic_istreamIwSt11char_traitsIwEED0Ev",
 	};
 
-struct classvtable St13basic_istreamIwSt11char_traitsIwEE_vtable = {
+struct classvtable St13basic_istreamIwSt11char_traitsIwEE_vtable [1] = {
+	{
 #if __i386__
 	8,
+	0,
 #endif
 #if __ia64__
 	16,
+	0,
 #endif
 #if __arm__
 	8,
+	0,
 #endif
 #if __mc68000__
 	8,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	8,
+	0,
 #endif
 #if __powerpc64__
 	16,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	8,
+	0,
 #endif
 #if __x86_64__
 	16,
+	0,
 #endif
 #if __s390x__
 	16,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt13basic_istreamIwSt11char_traitsIwEE",
-	St13basic_istreamIwSt11char_traitsIwEE_vtable_name,
-	};
+	St13basic_istreamIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St13basic_istreamIwSt11char_traitsIwEE_baseinfo[] = {
 #if __i386__
@@ -18157,13 +18672,12 @@ struct classinfo _ZSt13basic_istreamIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt13basic_istreamIwSt11char_traitsIwEE",
 	"_ZTISt13basic_istreamIwSt11char_traitsIwEE",
 	"_ZTISt13basic_istreamIwSt11char_traitsIwEE",
-	2,
+	1,
 	0,
 	1,
 	8U,
-	2,
 	&St13basic_istreamIwSt11char_traitsIwEE_typeinfo,
-	&St13basic_istreamIwSt11char_traitsIwEE_vtable,
+	St13basic_istreamIwSt11char_traitsIwEE_vtable,
 	St13basic_istreamIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -18176,43 +18690,55 @@ struct classtypeinfo St13basic_ostreamIwSt11char_traitsIwEE_typeinfo = {
 	St13basic_ostreamIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St13basic_ostreamIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St13basic_ostreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
 	"_ZNSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
 	};
 
-struct classvtable St13basic_ostreamIwSt11char_traitsIwEE_vtable = {
+struct classvtable St13basic_ostreamIwSt11char_traitsIwEE_vtable [1] = {
+	{
 #if __i386__
 	4,
+	0,
 #endif
 #if __ia64__
 	8,
+	0,
 #endif
 #if __arm__
 	4,
+	0,
 #endif
 #if __mc68000__
 	4,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	4,
+	0,
 #endif
 #if __powerpc64__
 	8,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	4,
+	0,
 #endif
 #if __x86_64__
 	8,
+	0,
 #endif
 #if __s390x__
 	8,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",
-	St13basic_ostreamIwSt11char_traitsIwEE_vtable_name,
-	};
+	St13basic_ostreamIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St13basic_ostreamIwSt11char_traitsIwEE_baseinfo[] = {
 #if __i386__
@@ -18249,13 +18775,12 @@ struct classinfo _ZSt13basic_ostreamIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt13basic_ostreamIwSt11char_traitsIwEE",
 	"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",
 	"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",
-	2,
+	1,
 	0,
 	1,
 	8U,
-	2,
 	&St13basic_ostreamIwSt11char_traitsIwEE_typeinfo,
-	&St13basic_ostreamIwSt11char_traitsIwEE_vtable,
+	St13basic_ostreamIwSt11char_traitsIwEE_vtable,
 	St13basic_ostreamIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -18268,17 +18793,21 @@ struct classtypeinfo St9basic_iosIcSt11char_traitsIcEE_typeinfo = {
 	St9basic_iosIcSt11char_traitsIcEE_typeinfo_name,
 	};
 
-const char *St9basic_iosIcSt11char_traitsIcEE_vtable_name[] = {
+const char *St9basic_iosIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	"_ZNSt9basic_iosIcSt11char_traitsIcEED1Ev",
 	"_ZNSt9basic_iosIcSt11char_traitsIcEED0Ev",
 	};
 
-struct classvtable St9basic_iosIcSt11char_traitsIcEE_vtable = {
+struct classvtable St9basic_iosIcSt11char_traitsIcEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt9basic_iosIcSt11char_traitsIcEE",
-	St9basic_iosIcSt11char_traitsIcEE_vtable_name,
-	};
+	St9basic_iosIcSt11char_traitsIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St9basic_iosIcSt11char_traitsIcEE_baseinfo[] = {
 #if __i386__
@@ -18315,13 +18844,12 @@ struct classinfo _ZSt9basic_iosIcSt11char_traitsIcEE_classinfo = {
 	"_ZTVSt9basic_iosIcSt11char_traitsIcEE",
 	"_ZTISt9basic_iosIcSt11char_traitsIcEE",
 	"",
-	2,
+	1,
 	0,
 	1,
 	8U,
-	1,
 	&St9basic_iosIcSt11char_traitsIcEE_typeinfo,
-	&St9basic_iosIcSt11char_traitsIcEE_vtable,
+	St9basic_iosIcSt11char_traitsIcEE_vtable,
 	St9basic_iosIcSt11char_traitsIcEE_baseinfo,
 	};
 
@@ -18334,17 +18862,21 @@ struct classtypeinfo St9basic_iosIwSt11char_traitsIwEE_typeinfo = {
 	St9basic_iosIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St9basic_iosIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St9basic_iosIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt9basic_iosIwSt11char_traitsIwEED1Ev",
 	"_ZNSt9basic_iosIwSt11char_traitsIwEED0Ev",
 	};
 
-struct classvtable St9basic_iosIwSt11char_traitsIwEE_vtable = {
+struct classvtable St9basic_iosIwSt11char_traitsIwEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt9basic_iosIwSt11char_traitsIwEE",
-	St9basic_iosIwSt11char_traitsIwEE_vtable_name,
-	};
+	St9basic_iosIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St9basic_iosIwSt11char_traitsIwEE_baseinfo[] = {
 #if __i386__
@@ -18381,13 +18913,12 @@ struct classinfo _ZSt9basic_iosIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt9basic_iosIwSt11char_traitsIwEE",
 	"_ZTISt9basic_iosIwSt11char_traitsIwEE",
 	"",
-	2,
+	1,
 	0,
 	1,
 	8U,
-	1,
 	&St9basic_iosIwSt11char_traitsIwEE_typeinfo,
-	&St9basic_iosIwSt11char_traitsIwEE_vtable,
+	St9basic_iosIwSt11char_traitsIwEE_vtable,
 	St9basic_iosIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -18400,43 +18931,55 @@ struct classtypeinfo Sd_typeinfo = {
 	Sd_typeinfo_name,
 	};
 
-const char *Sd_vtable_name[] = {
+const char *Sd_vtable_name_0 [] = {
 	"_ZNSdD1Ev",
 	"_ZNSdD0Ev",
 	};
 
-struct classvtable Sd_vtable = {
+struct classvtable Sd_vtable [1] = {
+	{
 #if __i386__
 	12,
+	0,
 #endif
 #if __ia64__
 	24,
+	0,
 #endif
 #if __arm__
 	12,
+	0,
 #endif
 #if __mc68000__
 	12,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	12,
+	0,
 #endif
 #if __powerpc64__
 	24,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	12,
+	0,
 #endif
 #if __x86_64__
 	24,
+	0,
 #endif
 #if __s390x__
 	24,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISd",
-	Sd_vtable_name,
-	};
+	Sd_vtable_name_0,
+	},
+};
 
 struct base_type_info Sd_baseinfo[] = {
 	{"_ZTISi",	2U},
@@ -18474,13 +19017,12 @@ struct classinfo _ZSd_classinfo = {
 	"_ZTVSd",
 	"_ZTISd",
 	"",
-	2,
+	1,
 	0,
 	2,
 	11U,
-	2,
 	&Sd_typeinfo,
-	&Sd_vtable,
+	Sd_vtable,
 	Sd_baseinfo,
 	};
 
@@ -18493,7 +19035,7 @@ struct classtypeinfo St10moneypunctIcLb0EE_typeinfo = {
 	St10moneypunctIcLb0EE_typeinfo_name,
 	};
 
-const char *St10moneypunctIcLb0EE_vtable_name[] = {
+const char *St10moneypunctIcLb0EE_vtable_name_0 [] = {
 	"_ZNSt10moneypunctIcLb0EED1Ev",
 	"_ZNSt10moneypunctIcLb0EED0Ev",
 	"_ZNKSt10moneypunctIcLb0EE16do_decimal_pointEv",
@@ -18507,12 +19049,16 @@ const char *St10moneypunctIcLb0EE_vtable_name[] = {
 	"_ZNKSt10moneypunctIcLb0EE13do_neg_formatEv",
 	};
 
-struct classvtable St10moneypunctIcLb0EE_vtable = {
+struct classvtable St10moneypunctIcLb0EE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	11,	/* Number of Vfuncs */
 	"_ZTISt10moneypunctIcLb0EE",
-	St10moneypunctIcLb0EE_vtable_name,
-	};
+	St10moneypunctIcLb0EE_vtable_name_0,
+	},
+};
 
 struct base_type_info St10moneypunctIcLb0EE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -18524,13 +19070,12 @@ struct classinfo _ZSt10moneypunctIcLb0EE_classinfo = {
 	"_ZTVSt10moneypunctIcLb0EE",
 	"_ZTISt10moneypunctIcLb0EE",
 	"",
-	11,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St10moneypunctIcLb0EE_typeinfo,
-	&St10moneypunctIcLb0EE_vtable,
+	St10moneypunctIcLb0EE_vtable,
 	St10moneypunctIcLb0EE_baseinfo,
 	};
 
@@ -18543,7 +19088,7 @@ struct classtypeinfo St10moneypunctIcLb1EE_typeinfo = {
 	St10moneypunctIcLb1EE_typeinfo_name,
 	};
 
-const char *St10moneypunctIcLb1EE_vtable_name[] = {
+const char *St10moneypunctIcLb1EE_vtable_name_0 [] = {
 	"_ZNSt10moneypunctIcLb1EED1Ev",
 	"_ZNSt10moneypunctIcLb1EED0Ev",
 	"_ZNKSt10moneypunctIcLb1EE16do_decimal_pointEv",
@@ -18557,12 +19102,16 @@ const char *St10moneypunctIcLb1EE_vtable_name[] = {
 	"_ZNKSt10moneypunctIcLb1EE13do_neg_formatEv",
 	};
 
-struct classvtable St10moneypunctIcLb1EE_vtable = {
+struct classvtable St10moneypunctIcLb1EE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	11,	/* Number of Vfuncs */
 	"_ZTISt10moneypunctIcLb1EE",
-	St10moneypunctIcLb1EE_vtable_name,
-	};
+	St10moneypunctIcLb1EE_vtable_name_0,
+	},
+};
 
 struct base_type_info St10moneypunctIcLb1EE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -18574,13 +19123,12 @@ struct classinfo _ZSt10moneypunctIcLb1EE_classinfo = {
 	"_ZTVSt10moneypunctIcLb1EE",
 	"_ZTISt10moneypunctIcLb1EE",
 	"",
-	11,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St10moneypunctIcLb1EE_typeinfo,
-	&St10moneypunctIcLb1EE_vtable,
+	St10moneypunctIcLb1EE_vtable,
 	St10moneypunctIcLb1EE_baseinfo,
 	};
 
@@ -18593,7 +19141,7 @@ struct classtypeinfo St10moneypunctIwLb0EE_typeinfo = {
 	St10moneypunctIwLb0EE_typeinfo_name,
 	};
 
-const char *St10moneypunctIwLb0EE_vtable_name[] = {
+const char *St10moneypunctIwLb0EE_vtable_name_0 [] = {
 	"_ZNSt10moneypunctIwLb0EED1Ev",
 	"_ZNSt10moneypunctIwLb0EED0Ev",
 	"_ZNKSt10moneypunctIwLb0EE16do_decimal_pointEv",
@@ -18607,12 +19155,16 @@ const char *St10moneypunctIwLb0EE_vtable_name[] = {
 	"_ZNKSt10moneypunctIwLb0EE13do_neg_formatEv",
 	};
 
-struct classvtable St10moneypunctIwLb0EE_vtable = {
+struct classvtable St10moneypunctIwLb0EE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	11,	/* Number of Vfuncs */
 	"_ZTISt10moneypunctIwLb0EE",
-	St10moneypunctIwLb0EE_vtable_name,
-	};
+	St10moneypunctIwLb0EE_vtable_name_0,
+	},
+};
 
 struct base_type_info St10moneypunctIwLb0EE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -18624,13 +19176,12 @@ struct classinfo _ZSt10moneypunctIwLb0EE_classinfo = {
 	"_ZTVSt10moneypunctIwLb0EE",
 	"_ZTISt10moneypunctIwLb0EE",
 	"_ZTISt10moneypunctIwLb0EE",
-	11,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St10moneypunctIwLb0EE_typeinfo,
-	&St10moneypunctIwLb0EE_vtable,
+	St10moneypunctIwLb0EE_vtable,
 	St10moneypunctIwLb0EE_baseinfo,
 	};
 
@@ -18643,7 +19194,7 @@ struct classtypeinfo St10moneypunctIwLb1EE_typeinfo = {
 	St10moneypunctIwLb1EE_typeinfo_name,
 	};
 
-const char *St10moneypunctIwLb1EE_vtable_name[] = {
+const char *St10moneypunctIwLb1EE_vtable_name_0 [] = {
 	"_ZNSt10moneypunctIwLb1EED1Ev",
 	"_ZNSt10moneypunctIwLb1EED0Ev",
 	"_ZNKSt10moneypunctIwLb1EE16do_decimal_pointEv",
@@ -18657,12 +19208,16 @@ const char *St10moneypunctIwLb1EE_vtable_name[] = {
 	"_ZNKSt10moneypunctIwLb1EE13do_neg_formatEv",
 	};
 
-struct classvtable St10moneypunctIwLb1EE_vtable = {
+struct classvtable St10moneypunctIwLb1EE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	11,	/* Number of Vfuncs */
 	"_ZTISt10moneypunctIwLb1EE",
-	St10moneypunctIwLb1EE_vtable_name,
-	};
+	St10moneypunctIwLb1EE_vtable_name_0,
+	},
+};
 
 struct base_type_info St10moneypunctIwLb1EE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -18674,13 +19229,12 @@ struct classinfo _ZSt10moneypunctIwLb1EE_classinfo = {
 	"_ZTVSt10moneypunctIwLb1EE",
 	"_ZTISt10moneypunctIwLb1EE",
 	"_ZTISt10moneypunctIwLb1EE",
-	11,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St10moneypunctIwLb1EE_typeinfo,
-	&St10moneypunctIwLb1EE_vtable,
+	St10moneypunctIwLb1EE_vtable,
 	St10moneypunctIwLb1EE_baseinfo,
 	};
 
@@ -18693,43 +19247,55 @@ struct classtypeinfo St14basic_iostreamIwSt11char_traitsIwEE_typeinfo = {
 	St14basic_iostreamIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St14basic_iostreamIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St14basic_iostreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt14basic_iostreamIwSt11char_traitsIwEED1Ev",
 	"_ZNSt14basic_iostreamIwSt11char_traitsIwEED0Ev",
 	};
 
-struct classvtable St14basic_iostreamIwSt11char_traitsIwEE_vtable = {
+struct classvtable St14basic_iostreamIwSt11char_traitsIwEE_vtable [1] = {
+	{
 #if __i386__
 	12,
+	0,
 #endif
 #if __ia64__
 	24,
+	0,
 #endif
 #if __arm__
 	12,
+	0,
 #endif
 #if __mc68000__
 	12,
+	0,
 #endif
 #if __powerpc__ && !__powerpc64__
 	12,
+	0,
 #endif
 #if __powerpc64__
 	24,
+	0,
 #endif
 #if __s390__ && !__s390x__
 	12,
+	0,
 #endif
 #if __x86_64__
 	24,
+	0,
 #endif
 #if __s390x__
 	24,
-#endif
 	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTISt14basic_iostreamIwSt11char_traitsIwEE",
-	St14basic_iostreamIwSt11char_traitsIwEE_vtable_name,
-	};
+	St14basic_iostreamIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St14basic_iostreamIwSt11char_traitsIwEE_baseinfo[] = {
 	{"_ZTISt13basic_istreamIwSt11char_traitsIwEE",	2U},
@@ -18767,13 +19333,12 @@ struct classinfo _ZSt14basic_iostreamIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt14basic_iostreamIwSt11char_traitsIwEE",
 	"_ZTISt14basic_iostreamIwSt11char_traitsIwEE",
 	"",
-	2,
+	1,
 	0,
 	2,
 	11U,
-	2,
 	&St14basic_iostreamIwSt11char_traitsIwEE_typeinfo,
-	&St14basic_iostreamIwSt11char_traitsIwEE_vtable,
+	St14basic_iostreamIwSt11char_traitsIwEE_vtable,
 	St14basic_iostreamIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -18786,7 +19351,7 @@ struct classtypeinfo St21__ctype_abstract_baseIcE_typeinfo = {
 	St21__ctype_abstract_baseIcE_typeinfo_name,
 	};
 
-const char *St21__ctype_abstract_baseIcE_vtable_name[] = {
+const char *St21__ctype_abstract_baseIcE_vtable_name_0 [] = {
 	"",
 	"",
 	"__cxa_pure_virtual",
@@ -18803,12 +19368,16 @@ const char *St21__ctype_abstract_baseIcE_vtable_name[] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable St21__ctype_abstract_baseIcE_vtable = {
+struct classvtable St21__ctype_abstract_baseIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt21__ctype_abstract_baseIcE",
-	St21__ctype_abstract_baseIcE_vtable_name,
-	};
+	St21__ctype_abstract_baseIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St21__ctype_abstract_baseIcE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -18820,13 +19389,12 @@ struct classinfo _ZSt21__ctype_abstract_baseIcE_classinfo = {
 	"_ZTVSt21__ctype_abstract_baseIcE",
 	"_ZTISt21__ctype_abstract_baseIcE",
 	"",
-	14,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St21__ctype_abstract_baseIcE_typeinfo,
-	&St21__ctype_abstract_baseIcE_vtable,
+	St21__ctype_abstract_baseIcE_vtable,
 	St21__ctype_abstract_baseIcE_baseinfo,
 	};
 
@@ -18839,7 +19407,7 @@ struct classtypeinfo St21__ctype_abstract_baseIwE_typeinfo = {
 	St21__ctype_abstract_baseIwE_typeinfo_name,
 	};
 
-const char *St21__ctype_abstract_baseIwE_vtable_name[] = {
+const char *St21__ctype_abstract_baseIwE_vtable_name_0 [] = {
 	"",
 	"",
 	"__cxa_pure_virtual",
@@ -18856,12 +19424,16 @@ const char *St21__ctype_abstract_baseIwE_vtable_name[] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable St21__ctype_abstract_baseIwE_vtable = {
+struct classvtable St21__ctype_abstract_baseIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt21__ctype_abstract_baseIwE",
-	St21__ctype_abstract_baseIwE_vtable_name,
-	};
+	St21__ctype_abstract_baseIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St21__ctype_abstract_baseIwE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -18873,13 +19445,12 @@ struct classinfo _ZSt21__ctype_abstract_baseIwE_classinfo = {
 	"_ZTVSt21__ctype_abstract_baseIwE",
 	"_ZTISt21__ctype_abstract_baseIwE",
 	"",
-	14,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St21__ctype_abstract_baseIwE_typeinfo,
-	&St21__ctype_abstract_baseIwE_vtable,
+	St21__ctype_abstract_baseIwE_vtable,
 	St21__ctype_abstract_baseIwE_baseinfo,
 	};
 
@@ -18892,7 +19463,7 @@ struct classtypeinfo St23__codecvt_abstract_baseIcc11__mbstate_tE_typeinfo = {
 	St23__codecvt_abstract_baseIcc11__mbstate_tE_typeinfo_name,
 	};
 
-const char *St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable_name[] = {
+const char *St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable_name_0 [] = {
 	"",
 	"",
 	"__cxa_pure_virtual",
@@ -18904,12 +19475,16 @@ const char *St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable_name[] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable = {
+struct classvtable St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTISt23__codecvt_abstract_baseIcc11__mbstate_tE",
-	St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable_name,
-	};
+	St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable_name_0,
+	},
+};
 
 struct base_type_info St23__codecvt_abstract_baseIcc11__mbstate_tE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -18921,13 +19496,12 @@ struct classinfo _ZSt23__codecvt_abstract_baseIcc11__mbstate_tE_classinfo = {
 	"_ZTVSt23__codecvt_abstract_baseIcc11__mbstate_tE",
 	"_ZTISt23__codecvt_abstract_baseIcc11__mbstate_tE",
 	"",
-	9,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St23__codecvt_abstract_baseIcc11__mbstate_tE_typeinfo,
-	&St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable,
+	St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable,
 	St23__codecvt_abstract_baseIcc11__mbstate_tE_baseinfo,
 	};
 
@@ -18940,7 +19514,7 @@ struct classtypeinfo St23__codecvt_abstract_baseIwc11__mbstate_tE_typeinfo = {
 	St23__codecvt_abstract_baseIwc11__mbstate_tE_typeinfo_name,
 	};
 
-const char *St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable_name[] = {
+const char *St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable_name_0 [] = {
 	"",
 	"",
 	"__cxa_pure_virtual",
@@ -18952,12 +19526,16 @@ const char *St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable_name[] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable = {
+struct classvtable St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
 	"_ZTISt23__codecvt_abstract_baseIwc11__mbstate_tE",
-	St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable_name,
-	};
+	St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable_name_0,
+	},
+};
 
 struct base_type_info St23__codecvt_abstract_baseIwc11__mbstate_tE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -18969,13 +19547,12 @@ struct classinfo _ZSt23__codecvt_abstract_baseIwc11__mbstate_tE_classinfo = {
 	"_ZTVSt23__codecvt_abstract_baseIwc11__mbstate_tE",
 	"_ZTISt23__codecvt_abstract_baseIwc11__mbstate_tE",
 	"",
-	9,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St23__codecvt_abstract_baseIwc11__mbstate_tE_typeinfo,
-	&St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable,
+	St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable,
 	St23__codecvt_abstract_baseIwc11__mbstate_tE_baseinfo,
 	};
 
@@ -18988,7 +19565,7 @@ struct classtypeinfo St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_t
 	St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"_ZNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev",
 	"_ZNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev",
 	"_ZNKSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRb",
@@ -19004,12 +19581,16 @@ const char *St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_nam
 	"_ZNKSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRPv",
 	};
 
-struct classvtable St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable = {
+struct classvtable St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	13,	/* Number of Vfuncs */
 	"_ZTISt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
-	St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name,
-	};
+	St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19021,13 +19602,12 @@ struct classinfo _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_cla
 	"_ZTVSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"",
-	13,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
-	&St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
+	St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
 	St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -19040,7 +19620,7 @@ struct classtypeinfo St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_t
 	St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"_ZNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev",
 	"_ZNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev",
 	"_ZNKSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRb",
@@ -19056,12 +19636,16 @@ const char *St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_nam
 	"_ZNKSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRPv",
 	};
 
-struct classvtable St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable = {
+struct classvtable St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	13,	/* Number of Vfuncs */
 	"_ZTISt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
-	St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name,
-	};
+	St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19073,13 +19657,12 @@ struct classinfo _ZSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_cla
 	"_ZTVSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"",
-	13,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
-	&St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
+	St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -19092,7 +19675,7 @@ struct classtypeinfo St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_t
 	St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"_ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev",
 	"_ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev",
 	"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecb",
@@ -19105,12 +19688,16 @@ const char *St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_nam
 	"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecPKv",
 	};
 
-struct classvtable St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable = {
+struct classvtable St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	10,	/* Number of Vfuncs */
 	"_ZTISt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
-	St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name,
-	};
+	St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19122,13 +19709,12 @@ struct classinfo _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_cla
 	"_ZTVSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"",
-	10,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
-	&St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
+	St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
 	St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -19141,7 +19727,7 @@ struct classtypeinfo St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_t
 	St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"_ZNSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev",
 	"_ZNSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev",
 	"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_RSt8ios_basewb",
@@ -19154,12 +19740,16 @@ const char *St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_nam
 	"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_RSt8ios_basewPKv",
 	};
 
-struct classvtable St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable = {
+struct classvtable St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	10,	/* Number of Vfuncs */
 	"_ZTISt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
-	St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name,
-	};
+	St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19171,13 +19761,12 @@ struct classinfo _ZSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_cla
 	"_ZTVSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"",
-	10,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
-	&St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
+	St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -19190,7 +19779,7 @@ struct classtypeinfo St8messagesIcE_typeinfo = {
 	St8messagesIcE_typeinfo_name,
 	};
 
-const char *St8messagesIcE_vtable_name[] = {
+const char *St8messagesIcE_vtable_name_0 [] = {
 	"_ZNSt8messagesIcED1Ev",
 	"_ZNSt8messagesIcED0Ev",
 	"_ZNKSt8messagesIcE7do_openERKSsRKSt6locale",
@@ -19198,12 +19787,16 @@ const char *St8messagesIcE_vtable_name[] = {
 	"_ZNKSt8messagesIcE8do_closeEi",
 	};
 
-struct classvtable St8messagesIcE_vtable = {
+struct classvtable St8messagesIcE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	5,	/* Number of Vfuncs */
 	"_ZTISt8messagesIcE",
-	St8messagesIcE_vtable_name,
-	};
+	St8messagesIcE_vtable_name_0,
+	},
+};
 
 struct base_type_info St8messagesIcE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19215,13 +19808,12 @@ struct classinfo _ZSt8messagesIcE_classinfo = {
 	"_ZTVSt8messagesIcE",
 	"_ZTISt8messagesIcE",
 	"",
-	5,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St8messagesIcE_typeinfo,
-	&St8messagesIcE_vtable,
+	St8messagesIcE_vtable,
 	St8messagesIcE_baseinfo,
 	};
 
@@ -19234,7 +19826,7 @@ struct classtypeinfo St8messagesIwE_typeinfo = {
 	St8messagesIwE_typeinfo_name,
 	};
 
-const char *St8messagesIwE_vtable_name[] = {
+const char *St8messagesIwE_vtable_name_0 [] = {
 	"_ZNSt8messagesIwED1Ev",
 	"_ZNSt8messagesIwED0Ev",
 	"_ZNKSt8messagesIwE7do_openERKSsRKSt6locale",
@@ -19242,12 +19834,16 @@ const char *St8messagesIwE_vtable_name[] = {
 	"_ZNKSt8messagesIwE8do_closeEi",
 	};
 
-struct classvtable St8messagesIwE_vtable = {
+struct classvtable St8messagesIwE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	5,	/* Number of Vfuncs */
 	"_ZTISt8messagesIwE",
-	St8messagesIwE_vtable_name,
-	};
+	St8messagesIwE_vtable_name_0,
+	},
+};
 
 struct base_type_info St8messagesIwE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19259,13 +19855,12 @@ struct classinfo _ZSt8messagesIwE_classinfo = {
 	"_ZTVSt8messagesIwE",
 	"_ZTISt8messagesIwE",
 	"",
-	5,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St8messagesIwE_typeinfo,
-	&St8messagesIwE_vtable,
+	St8messagesIwE_vtable,
 	St8messagesIwE_baseinfo,
 	};
 
@@ -19278,7 +19873,7 @@ struct classtypeinfo St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_
 	St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"_ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev",
 	"_ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev",
 	"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE13do_date_orderEv",
@@ -19289,12 +19884,16 @@ const char *St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_na
 	"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE11do_get_yearES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm",
 	};
 
-struct classvtable St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable = {
+struct classvtable St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	8,	/* Number of Vfuncs */
 	"_ZTISt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
-	St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name,
-	};
+	St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19306,13 +19905,12 @@ struct classinfo _ZSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_cl
 	"_ZTVSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"",
-	8,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
-	&St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
+	St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
 	St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -19325,7 +19923,7 @@ struct classtypeinfo St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_
 	St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"_ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev",
 	"_ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev",
 	"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE13do_date_orderEv",
@@ -19336,12 +19934,16 @@ const char *St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_na
 	"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE11do_get_yearES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm",
 	};
 
-struct classvtable St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable = {
+struct classvtable St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	8,	/* Number of Vfuncs */
 	"_ZTISt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
-	St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name,
-	};
+	St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19353,13 +19955,12 @@ struct classinfo _ZSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_cl
 	"_ZTVSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"",
-	8,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
-	&St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
+	St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -19372,18 +19973,22 @@ struct classtypeinfo St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_
 	St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo_name,
 	};
 
-const char *St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name[] = {
+const char *St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0 [] = {
 	"_ZNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev",
 	"_ZNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev",
 	"_ZNKSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecPK2tmcc",
 	};
 
-struct classvtable St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable = {
+struct classvtable St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
-	St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name,
-	};
+	St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19395,13 +20000,12 @@ struct classinfo _ZSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_cl
 	"_ZTVSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"",
-	3,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
-	&St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
+	St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
 	St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo,
 	};
 
@@ -19414,18 +20018,22 @@ struct classtypeinfo St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_
 	St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo_name,
 	};
 
-const char *St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name[] = {
+const char *St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0 [] = {
 	"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev",
 	"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev",
 	"_ZNKSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_RSt8ios_basewPK2tmcc",
 	};
 
-struct classvtable St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable = {
+struct classvtable St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
-	St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name,
-	};
+	St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
 	{"_ZTINSt6locale5facetE",	2U},
@@ -19437,13 +20045,12 @@ struct classinfo _ZSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_cl
 	"_ZTVSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"",
-	3,
+	1,
 	0,
 	2,
 	8U,
-	1,
 	&St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
-	&St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
+	St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
 	St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo,
 	};
 
@@ -19456,17 +20063,21 @@ struct classtypeinfo NSt6locale5facetE_typeinfo = {
 	NSt6locale5facetE_typeinfo_name,
 	};
 
-const char *NSt6locale5facetE_vtable_name[] = {
+const char *NSt6locale5facetE_vtable_name_0 [] = {
 	"_ZNSt6locale5facetD1Ev",
 	"_ZNSt6locale5facetD0Ev",
 	};
 
-struct classvtable NSt6locale5facetE_vtable = {
+struct classvtable NSt6locale5facetE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
 	"_ZTINSt6locale5facetE",
-	NSt6locale5facetE_vtable_name,
-	};
+	NSt6locale5facetE_vtable_name_0,
+	},
+};
 
 struct base_type_info NSt6locale5facetE_baseinfo[] = {
 	};
@@ -19476,13 +20087,12 @@ struct classinfo _ZNSt6locale5facetE_classinfo = {
 	"_ZTVNSt6locale5facetE",
 	"_ZTINSt6locale5facetE",
 	"",
-	2,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&NSt6locale5facetE_typeinfo,
-	&NSt6locale5facetE_vtable,
+	NSt6locale5facetE_vtable,
 	NSt6locale5facetE_baseinfo,
 	};
 
@@ -19495,15 +20105,19 @@ struct classtypeinfo St10ctype_base_typeinfo = {
 	St10ctype_base_typeinfo_name,
 	};
 
-const char *St10ctype_base_vtable_name[] = {
+const char *St10ctype_base_vtable_name_0 [] = {
 	};
 
-struct classvtable St10ctype_base_vtable = {
+struct classvtable St10ctype_base_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"_ZTISt10ctype_base",
-	St10ctype_base_vtable_name,
-	};
+	St10ctype_base_vtable_name_0,
+	},
+};
 
 struct base_type_info St10ctype_base_baseinfo[] = {
 	};
@@ -19513,13 +20127,12 @@ struct classinfo _ZSt10ctype_base_classinfo = {
 	"",
 	"_ZTISt10ctype_base",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St10ctype_base_typeinfo,
-	&St10ctype_base_vtable,
+	St10ctype_base_vtable,
 	St10ctype_base_baseinfo,
 	};
 
@@ -19532,15 +20145,19 @@ struct classtypeinfo St10money_base_typeinfo = {
 	St10money_base_typeinfo_name,
 	};
 
-const char *St10money_base_vtable_name[] = {
+const char *St10money_base_vtable_name_0 [] = {
 	};
 
-struct classvtable St10money_base_vtable = {
+struct classvtable St10money_base_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"_ZTISt10money_base",
-	St10money_base_vtable_name,
-	};
+	St10money_base_vtable_name_0,
+	},
+};
 
 struct base_type_info St10money_base_baseinfo[] = {
 	};
@@ -19550,13 +20167,12 @@ struct classinfo _ZSt10money_base_classinfo = {
 	"",
 	"_ZTISt10money_base",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St10money_base_typeinfo,
-	&St10money_base_vtable,
+	St10money_base_vtable,
 	St10money_base_baseinfo,
 	};
 
@@ -19569,15 +20185,19 @@ struct classtypeinfo St10__num_base_typeinfo = {
 	St10__num_base_typeinfo_name,
 	};
 
-const char *St10__num_base_vtable_name[] = {
+const char *St10__num_base_vtable_name_0 [] = {
 	};
 
-struct classvtable St10__num_base_vtable = {
+struct classvtable St10__num_base_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"",
-	St10__num_base_vtable_name,
-	};
+	St10__num_base_vtable_name_0,
+	},
+};
 
 struct base_type_info St10__num_base_baseinfo[] = {
 	};
@@ -19587,13 +20207,12 @@ struct classinfo _ZSt10__num_base_classinfo = {
 	"",
 	"",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St10__num_base_typeinfo,
-	&St10__num_base_vtable,
+	St10__num_base_vtable,
 	St10__num_base_baseinfo,
 	};
 
@@ -19606,15 +20225,19 @@ struct classtypeinfo St12codecvt_base_typeinfo = {
 	St12codecvt_base_typeinfo_name,
 	};
 
-const char *St12codecvt_base_vtable_name[] = {
+const char *St12codecvt_base_vtable_name_0 [] = {
 	};
 
-struct classvtable St12codecvt_base_vtable = {
+struct classvtable St12codecvt_base_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"_ZTISt12codecvt_base",
-	St12codecvt_base_vtable_name,
-	};
+	St12codecvt_base_vtable_name_0,
+	},
+};
 
 struct base_type_info St12codecvt_base_baseinfo[] = {
 	};
@@ -19624,13 +20247,12 @@ struct classinfo _ZSt12codecvt_base_classinfo = {
 	"",
 	"_ZTISt12codecvt_base",
 	"_ZTISt12codecvt_base",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St12codecvt_base_typeinfo,
-	&St12codecvt_base_vtable,
+	St12codecvt_base_vtable,
 	St12codecvt_base_baseinfo,
 	};
 
@@ -19643,15 +20265,19 @@ struct classtypeinfo St13messages_base_typeinfo = {
 	St13messages_base_typeinfo_name,
 	};
 
-const char *St13messages_base_vtable_name[] = {
+const char *St13messages_base_vtable_name_0 [] = {
 	};
 
-struct classvtable St13messages_base_vtable = {
+struct classvtable St13messages_base_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"_ZTISt13messages_base",
-	St13messages_base_vtable_name,
-	};
+	St13messages_base_vtable_name_0,
+	},
+};
 
 struct base_type_info St13messages_base_baseinfo[] = {
 	};
@@ -19661,13 +20287,12 @@ struct classinfo _ZSt13messages_base_classinfo = {
 	"",
 	"_ZTISt13messages_base",
 	"_ZTISt13messages_base",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St13messages_base_typeinfo,
-	&St13messages_base_vtable,
+	St13messages_base_vtable,
 	St13messages_base_baseinfo,
 	};
 
@@ -19680,7 +20305,7 @@ struct classtypeinfo St15basic_streambufIcSt11char_traitsIcEE_typeinfo = {
 	St15basic_streambufIcSt11char_traitsIcEE_typeinfo_name,
 	};
 
-const char *St15basic_streambufIcSt11char_traitsIcEE_vtable_name[] = {
+const char *St15basic_streambufIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEED1Ev",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEED0Ev",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
@@ -19705,22 +20330,22 @@ const char *St15basic_streambufIcSt11char_traitsIcEE_vtable_name[] = {
 #if __s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
-#if __i386__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __ia64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __powerpc64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#if __i386__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __x86_64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __s390x__
@@ -19729,16 +20354,13 @@ const char *St15basic_streambufIcSt11char_traitsIcEE_vtable_name[] = {
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE4syncEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv",
+#if __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
 #if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
 #if __ia64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
-#endif
-#if __powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if __s390__ && !__s390x__
@@ -19749,6 +20371,9 @@ const char *St15basic_streambufIcSt11char_traitsIcEE_vtable_name[] = {
 #endif
 #if __s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9underflowEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv",
@@ -19777,12 +20402,16 @@ const char *St15basic_streambufIcSt11char_traitsIcEE_vtable_name[] = {
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE8overflowEi",
 	};
 
-struct classvtable St15basic_streambufIcSt11char_traitsIcEE_vtable = {
+struct classvtable St15basic_streambufIcSt11char_traitsIcEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt15basic_streambufIcSt11char_traitsIcEE",
-	St15basic_streambufIcSt11char_traitsIcEE_vtable_name,
-	};
+	St15basic_streambufIcSt11char_traitsIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15basic_streambufIcSt11char_traitsIcEE_baseinfo[] = {
 	};
@@ -19792,13 +20421,12 @@ struct classinfo _ZSt15basic_streambufIcSt11char_traitsIcEE_classinfo = {
 	"_ZTVSt15basic_streambufIcSt11char_traitsIcEE",
 	"_ZTISt15basic_streambufIcSt11char_traitsIcEE",
 	"",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15basic_streambufIcSt11char_traitsIcEE_typeinfo,
-	&St15basic_streambufIcSt11char_traitsIcEE_vtable,
+	St15basic_streambufIcSt11char_traitsIcEE_vtable,
 	St15basic_streambufIcSt11char_traitsIcEE_baseinfo,
 	};
 
@@ -19811,7 +20439,7 @@ struct classtypeinfo St15basic_streambufIwSt11char_traitsIwEE_typeinfo = {
 	St15basic_streambufIwSt11char_traitsIwEE_typeinfo_name,
 	};
 
-const char *St15basic_streambufIwSt11char_traitsIwEE_vtable_name[] = {
+const char *St15basic_streambufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEED1Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEED0Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
@@ -19908,12 +20536,16 @@ const char *St15basic_streambufIwSt11char_traitsIwEE_vtable_name[] = {
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE8overflowEj",
 	};
 
-struct classvtable St15basic_streambufIwSt11char_traitsIwEE_vtable = {
+struct classvtable St15basic_streambufIwSt11char_traitsIwEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
 	"_ZTISt15basic_streambufIwSt11char_traitsIwEE",
-	St15basic_streambufIwSt11char_traitsIwEE_vtable_name,
-	};
+	St15basic_streambufIwSt11char_traitsIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info St15basic_streambufIwSt11char_traitsIwEE_baseinfo[] = {
 	};
@@ -19923,13 +20555,12 @@ struct classinfo _ZSt15basic_streambufIwSt11char_traitsIwEE_classinfo = {
 	"_ZTVSt15basic_streambufIwSt11char_traitsIwEE",
 	"_ZTISt15basic_streambufIwSt11char_traitsIwEE",
 	"",
-	14,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St15basic_streambufIwSt11char_traitsIwEE_typeinfo,
-	&St15basic_streambufIwSt11char_traitsIwEE_vtable,
+	St15basic_streambufIwSt11char_traitsIwEE_vtable,
 	St15basic_streambufIwSt11char_traitsIwEE_baseinfo,
 	};
 
@@ -19942,15 +20573,19 @@ struct classtypeinfo St8ios_base_typeinfo = {
 	St8ios_base_typeinfo_name,
 	};
 
-const char *St8ios_base_vtable_name[] = {
+const char *St8ios_base_vtable_name_0 [] = {
 	};
 
-struct classvtable St8ios_base_vtable = {
+struct classvtable St8ios_base_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"_ZTISt8ios_base",
-	St8ios_base_vtable_name,
-	};
+	St8ios_base_vtable_name_0,
+	},
+};
 
 struct base_type_info St8ios_base_baseinfo[] = {
 	};
@@ -19960,13 +20595,12 @@ struct classinfo _ZSt8ios_base_classinfo = {
 	"",
 	"_ZTISt8ios_base",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St8ios_base_typeinfo,
-	&St8ios_base_vtable,
+	St8ios_base_vtable,
 	St8ios_base_baseinfo,
 	};
 
@@ -19979,18 +20613,22 @@ struct classtypeinfo St9exception_typeinfo = {
 	St9exception_typeinfo_name,
 	};
 
-const char *St9exception_vtable_name[] = {
+const char *St9exception_vtable_name_0 [] = {
 	"_ZNSt9exceptionD1Ev",
 	"_ZNSt9exceptionD0Ev",
 	"_ZNKSt9exception4whatEv",
 	};
 
-struct classvtable St9exception_vtable = {
+struct classvtable St9exception_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	3,	/* Number of Vfuncs */
 	"_ZTISt9exception",
-	St9exception_vtable_name,
-	};
+	St9exception_vtable_name_0,
+	},
+};
 
 struct base_type_info St9exception_baseinfo[] = {
 	};
@@ -20000,13 +20638,12 @@ struct classinfo _ZSt9exception_classinfo = {
 	"_ZTVSt9exception",
 	"_ZTISt9exception",
 	"",
-	3,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St9exception_typeinfo,
-	&St9exception_vtable,
+	St9exception_vtable,
 	St9exception_baseinfo,
 	};
 
@@ -20019,15 +20656,19 @@ struct classtypeinfo St9time_base_typeinfo = {
 	St9time_base_typeinfo_name,
 	};
 
-const char *St9time_base_vtable_name[] = {
+const char *St9time_base_vtable_name_0 [] = {
 	};
 
-struct classvtable St9time_base_vtable = {
+struct classvtable St9time_base_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"_ZTISt9time_base",
-	St9time_base_vtable_name,
-	};
+	St9time_base_vtable_name_0,
+	},
+};
 
 struct base_type_info St9time_base_baseinfo[] = {
 	};
@@ -20037,13 +20678,12 @@ struct classinfo _ZSt9time_base_classinfo = {
 	"",
 	"_ZTISt9time_base",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St9time_base_typeinfo,
-	&St9time_base_vtable,
+	St9time_base_vtable,
 	St9time_base_baseinfo,
 	};
 
@@ -20056,7 +20696,7 @@ struct classtypeinfo St9type_info_typeinfo = {
 	St9type_info_typeinfo_name,
 	};
 
-const char *St9type_info_vtable_name[] = {
+const char *St9type_info_vtable_name_0 [] = {
 	"_ZNSt9type_infoD1Ev",
 	"_ZNSt9type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
@@ -20065,12 +20705,16 @@ const char *St9type_info_vtable_name[] = {
 	"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
 	};
 
-struct classvtable St9type_info_vtable = {
+struct classvtable St9type_info_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	6,	/* Number of Vfuncs */
 	"_ZTISt9type_info",
-	St9type_info_vtable_name,
-	};
+	St9type_info_vtable_name_0,
+	},
+};
 
 struct base_type_info St9type_info_baseinfo[] = {
 	};
@@ -20080,13 +20724,12 @@ struct classinfo _ZSt9type_info_classinfo = {
 	"_ZTVSt9type_info",
 	"_ZTISt9type_info",
 	"",
-	6,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&St9type_info_typeinfo,
-	&St9type_info_vtable,
+	St9type_info_vtable,
 	St9type_info_baseinfo,
 	};
 
@@ -20099,15 +20742,19 @@ struct classtypeinfo NSt8valarrayIjEE_typeinfo = {
 	NSt8valarrayIjEE_typeinfo_name,
 	};
 
-const char *NSt8valarrayIjEE_vtable_name[] = {
+const char *NSt8valarrayIjEE_vtable_name_0 [] = {
 	};
 
-struct classvtable NSt8valarrayIjEE_vtable = {
+struct classvtable NSt8valarrayIjEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"",
-	NSt8valarrayIjEE_vtable_name,
-	};
+	NSt8valarrayIjEE_vtable_name_0,
+	},
+};
 
 struct base_type_info NSt8valarrayIjEE_baseinfo[] = {
 	};
@@ -20117,13 +20764,12 @@ struct classinfo _ZNSt8valarrayIjEE_classinfo = {
 	"",
 	"",
 	"_ZTIN10__cxxabiv117__class_type_infoE",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&NSt8valarrayIjEE_typeinfo,
-	&NSt8valarrayIjEE_vtable,
+	NSt8valarrayIjEE_vtable,
 	NSt8valarrayIjEE_baseinfo,
 	};
 
@@ -20136,15 +20782,19 @@ struct classtypeinfo NSaIcEE_typeinfo = {
 	NSaIcEE_typeinfo_name,
 	};
 
-const char *NSaIcEE_vtable_name[] = {
+const char *NSaIcEE_vtable_name_0 [] = {
 	};
 
-struct classvtable NSaIcEE_vtable = {
+struct classvtable NSaIcEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"",
-	NSaIcEE_vtable_name,
-	};
+	NSaIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info NSaIcEE_baseinfo[] = {
 	};
@@ -20154,13 +20804,12 @@ struct classinfo _ZNSaIcEE_classinfo = {
 	"",
 	"",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&NSaIcEE_typeinfo,
-	&NSaIcEE_vtable,
+	NSaIcEE_vtable,
 	NSaIcEE_baseinfo,
 	};
 
@@ -20173,15 +20822,19 @@ struct classtypeinfo NSaIwEE_typeinfo = {
 	NSaIwEE_typeinfo_name,
 	};
 
-const char *NSaIwEE_vtable_name[] = {
+const char *NSaIwEE_vtable_name_0 [] = {
 	};
 
-struct classvtable NSaIwEE_vtable = {
+struct classvtable NSaIwEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"",
-	NSaIwEE_vtable_name,
-	};
+	NSaIwEE_vtable_name_0,
+	},
+};
 
 struct base_type_info NSaIwEE_baseinfo[] = {
 	};
@@ -20191,13 +20844,12 @@ struct classinfo _ZNSaIwEE_classinfo = {
 	"",
 	"",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&NSaIwEE_typeinfo,
-	&NSaIwEE_vtable,
+	NSaIwEE_vtable,
 	NSaIwEE_baseinfo,
 	};
 
@@ -20210,15 +20862,19 @@ struct classtypeinfo NSt12__basic_fileIcEE_typeinfo = {
 	NSt12__basic_fileIcEE_typeinfo_name,
 	};
 
-const char *NSt12__basic_fileIcEE_vtable_name[] = {
+const char *NSt12__basic_fileIcEE_vtable_name_0 [] = {
 	};
 
-struct classvtable NSt12__basic_fileIcEE_vtable = {
+struct classvtable NSt12__basic_fileIcEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"",
-	NSt12__basic_fileIcEE_vtable_name,
-	};
+	NSt12__basic_fileIcEE_vtable_name_0,
+	},
+};
 
 struct base_type_info NSt12__basic_fileIcEE_baseinfo[] = {
 	};
@@ -20228,13 +20884,12 @@ struct classinfo _ZNSt12__basic_fileIcEE_classinfo = {
 	"",
 	"",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&NSt12__basic_fileIcEE_typeinfo,
-	&NSt12__basic_fileIcEE_vtable,
+	NSt12__basic_fileIcEE_vtable,
 	NSt12__basic_fileIcEE_baseinfo,
 	};
 
@@ -20247,15 +20902,19 @@ struct classtypeinfo NSt24__default_alloc_templateILb1ELi0EEE_typeinfo = {
 	NSt24__default_alloc_templateILb1ELi0EEE_typeinfo_name,
 	};
 
-const char *NSt24__default_alloc_templateILb1ELi0EEE_vtable_name[] = {
+const char *NSt24__default_alloc_templateILb1ELi0EEE_vtable_name_0 [] = {
 	};
 
-struct classvtable NSt24__default_alloc_templateILb1ELi0EEE_vtable = {
+struct classvtable NSt24__default_alloc_templateILb1ELi0EEE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"",
-	NSt24__default_alloc_templateILb1ELi0EEE_vtable_name,
-	};
+	NSt24__default_alloc_templateILb1ELi0EEE_vtable_name_0,
+	},
+};
 
 struct base_type_info NSt24__default_alloc_templateILb1ELi0EEE_baseinfo[] = {
 	};
@@ -20265,13 +20924,12 @@ struct classinfo _ZNSt24__default_alloc_templateILb1ELi0EEE_classinfo = {
 	"",
 	"",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&NSt24__default_alloc_templateILb1ELi0EEE_typeinfo,
-	&NSt24__default_alloc_templateILb1ELi0EEE_vtable,
+	NSt24__default_alloc_templateILb1ELi0EEE_vtable,
 	NSt24__default_alloc_templateILb1ELi0EEE_baseinfo,
 	};
 
@@ -20284,15 +20942,19 @@ struct classtypeinfo NSt6gsliceE_typeinfo = {
 	NSt6gsliceE_typeinfo_name,
 	};
 
-const char *NSt6gsliceE_vtable_name[] = {
+const char *NSt6gsliceE_vtable_name_0 [] = {
 	};
 
-struct classvtable NSt6gsliceE_vtable = {
+struct classvtable NSt6gsliceE_vtable [1] = {
+	{
 	0,
 	0,
+	1,	/* Vtable category */
+	0,	/* Number of Vfuncs */
 	"",
-	NSt6gsliceE_vtable_name,
-	};
+	NSt6gsliceE_vtable_name_0,
+	},
+};
 
 struct base_type_info NSt6gsliceE_baseinfo[] = {
 	};
@@ -20302,13 +20964,12 @@ struct classinfo _ZNSt6gsliceE_classinfo = {
 	"",
 	"",
 	"",
-	0,
+	1,
 	0,
 	0,
 	0U,
-	1,
 	&NSt6gsliceE_typeinfo,
-	&NSt6gsliceE_vtable,
+	NSt6gsliceE_vtable,
 	NSt6gsliceE_baseinfo,
 	};
 

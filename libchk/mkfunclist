@@ -76,6 +76,7 @@ print $LIB "\t\"_ZTS".$classbase."\",\n";
 print $LIB "\t".$typeinfoname."_name,\n";
 print $LIB "\t};\n\n";
 
+foreach my $pos ( 0..$$class{'CInumvtab'}-1) {
 #
 # Output array of Vtable entries
 #
@@ -85,11 +86,12 @@ $select = "SELECT Vtable.*,Architecture.*,Interface.Iid,Interface.Iarch,Interfac
 $select.= "LEFT JOIN Architecture ON Aid=VTarch ";
 $select.= "LEFT JOIN Interface ON Iid=VTviid ";
 $select.= "WHERE VTcid=".$$class{'CIid'}." ";
+$select.= "AND VTvtpos=$pos ";
 $select.= "ORDER BY VTpos";
 
 #print $select;
 
-print $LIB "const char *".$vtablename."_name[] = {\n";
+print $LIB "const char *".$vtablename."_name_$pos [] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 $numvtablefuns=0;
 for(1..$vsth->numrows) {
@@ -113,17 +115,26 @@ if( $$class{'CInumvfunc'} != $numvtablefuns ) {
 	print STDERR "Wrong NumVfuncs for ".$$class{'CIname'}." ";
 	print STDERR $$class{'CInumvfunc'}." vs $numvtablefuns\n";
 	}
+} # $$class{'CInumvtab'}
 
 #
 # Output classvtable here.
 #
-print $LIB "struct classvtable $vtablename = {\n";
+print $LIB "struct classvtable $vtablename [".$$class{'CInumvtab'}."] = {\n";
+
+foreach my $pos ( 0..$$class{'CInumvtab'}-1) {
+print $LIB "\t{\n";
 
 #vcall offset are architecture sensitive
-$select = "SELECT * FROM ArchClass ";
+$select = "SELECT * FROM ClassVtab ";
+$select.= "LEFT JOIN ArchClass ON CVpos=ACpos AND CVcid=ACcid ";
 $select.= "LEFT JOIN Architecture ON Aid=ACaid ";
 $select.= "WHERE ACcid=".$$class{'CIid'}." ";
+$select.= "AND CVpos=$pos ";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
+die "Not ClassVtabs for ".$$class{'CIid'}."\n" if( $vsth->numrows == 0 );
+$category=0;
+$rttiid=0;
 for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
 	if( $entry{'Aname'} eq "All" ) {
@@ -131,17 +142,25 @@ for(1..$vsth->numrows) {
 			printf STDERR "vcall offset for All, but more than one entry: ".$$class{'CIname'}."\n";
 		}
 		print $LIB "\t".$entry{'ACvoffset'}.",\n";
+		print $LIB "\t".$entry{'ACbaseoffset'}.",\n";
 	} else {
 		print $LIB "#if ".$entry{'Asymbol'}."\n";
 		print $LIB "\t".$entry{'ACvoffset'}.",\n";
+		print $LIB "\t".$entry{'ACbaseoffset'}.",\n";
 		print $LIB "#endif\n";
 	}
+	$category=$entry{'CVclass'};
+	$rttiid=$entry{'CVrtti'};
 }
 
-print $LIB "\t".$$class{'CIbaseoffset'}.",\n";
-print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\n";
-print $LIB "\t".$vtablename."_name,\n";
-print $LIB "\t};\n\n";
+print $LIB "\t".$category.",\t/* Vtable category */\n";
+print $LIB "\t".$numvtablefuns.",\t/* Number of Vfuncs */\n";
+print $LIB "\t\"".getinterfacename($rttiid)."\",\n";
+print $LIB "\t".$vtablename."_name_$pos,\n";
+print $LIB "\t},\n";
+
+} # $$class{'CInumvtab'}
+print $LIB "};\n\n";
 
 #
 # Output base info type here.
@@ -156,7 +175,7 @@ $select.= "ORDER BY VBTpos";
 #print $select;
 
 print $LIB "struct base_type_info ".$baseinfoname."[] = {\n";
-$vsth = $Dbh->query($select) || die $Dbh->errmsg();
+$vsth = $Dbh->query($select) || die $Dbh->errmsg()."$select\n";
 for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
 	if( $entry{'Aname'} eq "All" ) {
@@ -176,13 +195,12 @@ print $LIB "\t\"".$$class{'CIname'}."\",\n";
 print $LIB "\t\"".getinterfacename($$class{'CIvtable'})."\",\n";
 print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\n";
 print $LIB "\t\"".getinterfacename($$class{'CIbase'})."\",\n";
-print $LIB "\t$numvtablefuns,\n";
+print $LIB "\t".$$class{'CInumvtab'}.",\n";
 print $LIB "\t$numtypeinfofuns,\n";
 print $LIB "\t".$$class{'CInumvmitypes'}.",\n";
 print $LIB "\t".$$class{'CIflags'}."U,\n";
-print $LIB "\t".$$class{'CIvtclass'}.",\n";
 print $LIB "\t&$typeinfoname,\n";
-print $LIB "\t&$vtablename,\n";
+print $LIB "\t$vtablename,\n";
 print $LIB "\t$baseinfoname,\n";
 print $LIB "\t};\n\n";
 }

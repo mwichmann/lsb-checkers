@@ -7,25 +7,25 @@
 
 struct modlib modlibs [] = { 
 #if __ia64__
-	{"LSB-Core","/lib/ld-lsb-ia64.so.2",ld_lsb_ia64_so_2,ld_lsb_ia64_so_2_classinfo},
+	{"LSB-Core","/lib/ld-lsb-ia64.so.3",ld_lsb_ia64_so_3,ld_lsb_ia64_so_3_classinfo},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"LSB-Core","/lib/ld-lsb-ppc32.so.2",ld_lsb_ppc32_so_2,ld_lsb_ppc32_so_2_classinfo},
+	{"LSB-Core","/lib/ld-lsb-ppc32.so.3",ld_lsb_ppc32_so_3,ld_lsb_ppc32_so_3_classinfo},
 #endif
 #if __s390__ && !__s390x__
-	{"LSB-Core","/lib/ld-lsb-s390.so.2",ld_lsb_s390_so_2,ld_lsb_s390_so_2_classinfo},
+	{"LSB-Core","/lib/ld-lsb-s390.so.3",ld_lsb_s390_so_3,ld_lsb_s390_so_3_classinfo},
 #endif
 #if __i386__
-	{"LSB-Core","/lib/ld-lsb.so.2",ld_lsb_so_2,ld_lsb_so_2_classinfo},
+	{"LSB-Core","/lib/ld-lsb.so.3",ld_lsb_so_3,ld_lsb_so_3_classinfo},
 #endif
 #if __powerpc64__
-	{"LSB-Core","/lib64/ld-lsb-ppc64.so.2",ld_lsb_ppc64_so_2,ld_lsb_ppc64_so_2_classinfo},
+	{"LSB-Core","/lib64/ld-lsb-ppc64.so.3",ld_lsb_ppc64_so_3,ld_lsb_ppc64_so_3_classinfo},
 #endif
 #if __s390x__
-	{"LSB-Core","/lib64/ld-lsb-s390x.so.2",ld_lsb_s390x_so_2,ld_lsb_s390x_so_2_classinfo},
+	{"LSB-Core","/lib64/ld-lsb-s390x.so.3",ld_lsb_s390x_so_3,ld_lsb_s390x_so_3_classinfo},
 #endif
 #if __x86_64__
-	{"LSB-Core","/lib64/ld-lsb-x86-64.so.2",ld_lsb_x86_64_so_2,ld_lsb_x86_64_so_2_classinfo},
+	{"LSB-Core","/lib64/ld-lsb-x86-64.so.3",ld_lsb_x86_64_so_3,ld_lsb_x86_64_so_3_classinfo},
 #endif
 #if __s390x__
 	{"LSB-Core","libc.so.6",libc_so_6,libc_so_6_classinfo},

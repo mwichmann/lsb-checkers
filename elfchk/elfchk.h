@@ -101,6 +101,8 @@ union classvtable_mem {
 struct classvtable {
 	unsigned long	vcalloffset;
 	unsigned long	baseoffset;
+	unsigned int	category;
+	unsigned int	numvfuncs;
 	const char	*typeinfo;
 	const char	**virtfuncs;
 	};
@@ -111,11 +113,10 @@ struct classinfo {
 	char	*vtablename;
 	char	*rttiname;
 	char	*basename;
-	int	numvirtfuncs;
+	int	numvirttab;
 	int	numbaseinfo;
 	int	numvmitypes;
 	int	flags;
-	int	vtcategory;
 	struct classtypeinfo *typeinfo;
 	struct classvtable *vtable;
 	struct base_type_info *btinfo;

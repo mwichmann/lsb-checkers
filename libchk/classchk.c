@@ -55,7 +55,7 @@ return (void *)fptr;
 int
 check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], struct tetj_handle *journal)
 {
-	int	i,j;
+	int	i,j,v;
 	Dl_info	dlinfo;
 	void	*dlhndl;
 	void	*symp;
@@ -66,7 +66,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 	unsigned long vtvcalloffset, vtbaseoffset;
 	const char *vttypeinfo;
 	fptr *vtvirtfuncs;
-	int vtablesize,fndvtabsize;
+	int vtableinc,vtablesize,fndvtabsize;
 	char tmp_string[TMP_STRING_SIZE+1];
 	int test_failed;
 
@@ -106,13 +106,16 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 			vtablep=dlsym(dlhndl,classp->vtablename);
 			if (vtablep)
 			{
-				switch( classp->vtcategory ) {
+			vtablesize=0;
+			if( classp->numvirttab > 1 ) fprintf(stderr,"Multiple vtables!!\n");
+			for(v=0;v<classp->numvirttab;v++) {
+				switch( classp->vtable[v].category ) {
 				case 1:
 					vtvcalloffset = 0;
 					vtbaseoffset  = vtablep->cat1.baseoffset;
 					vttypeinfo    = vtablep->cat1.typeinfo;
 					vtvirtfuncs   = vtablep->cat1.virtfuncs;
-					vtablesize    = sizeof(struct cat1vtable_mem)+(classp->numvirtfuncs*sizeof( void *));
+					vtableinc     = sizeof(struct cat1vtable_mem)+(classp->vtable[v].numvfuncs*sizeof( void *));
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 					break;
 				case 2:
@@ -120,14 +123,19 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					vtbaseoffset  = vtablep->cat2.baseoffset;
 					vttypeinfo    = vtablep->cat2.typeinfo;
 					vtvirtfuncs   = vtablep->cat2.virtfuncs;
-					vtablesize    = sizeof(struct cat2vtable_mem)+(classp->numvirtfuncs*sizeof( void *));
+					vtableinc     = sizeof(struct cat2vtable_mem)+(classp->vtable[v].numvfuncs*sizeof( void *));
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 					break;
 				default:
-					TETJ_REPORT_INFO("Unhandled VT category %d", classp->vtcategory);
+					TETJ_REPORT_INFO("Unhandled VT category %d", classp->vtable[v].category);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 					break;
 				}
+				/*
+				 * Move vtablep to the next record in the vtable
+				 */
+				vtablesize += vtableinc;
+				((char *)vtablep) += vtableinc;
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 
 				/*
@@ -135,11 +143,11 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				 */
 				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 													 "Checking baseoffset");
-				if (vtbaseoffset != classp->vtable->baseoffset) 
+				if (vtbaseoffset != classp->vtable[v].baseoffset) 
 				{
 					TETJ_REPORT_INFO("Vtable baseoffset %ld (expected) doesn't match %ld "
 													 "(found) BASEO:%s:0:%ld\n",						 
-													 classp->vtable->baseoffset, vtbaseoffset, 
+													 classp->vtable[v].baseoffset, vtbaseoffset, 
 													 classp->name,vtbaseoffset);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 				}
@@ -154,11 +162,11 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				 */
 				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 													 "Checking vcalloffset");
-				if (vtvcalloffset != classp->vtable->vcalloffset) 
+				if (vtvcalloffset != classp->vtable[v].vcalloffset) 
 				{
 					TETJ_REPORT_INFO("Vtable vcalloffset %ld (expected) doesn't match %ld "
 													 "(found) BASEVO:%s:0:%ld\n",
-													 classp->vtable->vcalloffset, vtvcalloffset,
+													 classp->vtable[v].vcalloffset, vtvcalloffset,
 													 classp->name,vtvcalloffset);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 				}
@@ -183,10 +191,10 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					test_failed = 1;
 				}
 	
-				if (strcmp(classp->vtable->typeinfo,dlinfo.dli_sname)) 
+				if (strcmp(classp->vtable[v].typeinfo,dlinfo.dli_sname)) 
 				{
 					TETJ_REPORT_INFO("RTTI Name %s (expected) doesn't match %s (found)\n",
-													 classp->vtable->typeinfo,dlinfo.dli_sname);
+													 classp->vtable[v].typeinfo,dlinfo.dli_sname);
 					test_failed = 1;
 				}
 
@@ -200,10 +208,10 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 													 "Checking virtual function pointers");
 				test_failed = 0;
-				for (j=0;j<classp->numvirtfuncs;j++) 
+				for (j=0;j<classp->vtable[v].numvfuncs;j++) 
 				{
 					/*
-						printf("checking vtable[%d] %s\n", j, classp->vtable->virtfuncs[j]);
+						printf("checking vtable[%d] %s\n", j, classp->vtable[v].virtfuncs[j]);
 					*/
 					/*
 					 * Look up the name of the symbol associated with the funcptr
@@ -212,7 +220,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					if( !dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo) ) {
 						TETJ_REPORT_INFO("Did not find symbol name for Virtual table entry "
 														 "[%d] expecting %s\n",
-														 j, classp->vtable->virtfuncs[j] );
+														 j, classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
 
@@ -222,7 +230,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					if ( !dlinfo.dli_saddr & !(libchk_debug&LIBCHK_DEBUG_CXXHUSH)) {
 						TETJ_REPORT_INFO("Did not find symbol addr for Virtual table entry "
 														 "[%d] expecting %s\n",
-														 j, classp->vtable->virtfuncs[j] );
+														 j, classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
 
@@ -237,7 +245,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 							printf("Uhoh2. Not an exact match %p %p\n",
 										 dlinfo.dli_saddr, fptr2ptr(vtvirtfuncs[j]));
 							printf("Uhoh2. Not an exact match %s %s\n",
-										 dlinfo.dli_sname, classp->vtable->virtfuncs[j]);
+										 dlinfo.dli_sname, classp->vtable[v].virtfuncs[j]);
 						}
 						TETJ_REPORT_INFO("Symbol addressfound for Virtual table entry [%d] "
 														 "%p (found) doesn't match %p (expected).\n",
@@ -251,7 +259,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					if ( !dlinfo.dli_sname & !(libchk_debug&LIBCHK_DEBUG_CXXHUSH)) {
 						TETJ_REPORT_INFO("Did not find symbol name for Virtual table entry "
 														 "[%d] expecting %s\n",
-														 j, classp->vtable->virtfuncs[j] );
+														 j, classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
 
@@ -259,16 +267,17 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					 * 1.4.4) Check to see if the symbol name found matches what we
 					 * are expecting to find
 					 */
-					if (((classp->vtable->virtfuncs[j] && dlinfo.dli_sname) &&
-							 strcmp(classp->vtable->virtfuncs[j], dlinfo.dli_sname)) ||
-							(dlinfo.dli_sname && !classp->vtable->virtfuncs[j])) 
+					if (((classp->vtable[v].virtfuncs[j] && dlinfo.dli_sname) &&
+							 strcmp(classp->vtable[v].virtfuncs[j], dlinfo.dli_sname)) ||
+							(dlinfo.dli_sname && !classp->vtable[v].virtfuncs[j])) 
 					{
 						TETJ_REPORT_INFO("Virtual Function[%d] %s (expected) "
 														 "doesn't match %s (found)\n",
-														 j, classp->vtable->virtfuncs[j], dlinfo.dli_sname);
+														 j, classp->vtable[v].virtfuncs[j], dlinfo.dli_sname);
 					}
 				}
 
+			}
 				/*
 				 * 1.5) Check the vtable size
 				 */
@@ -278,8 +287,8 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 													 "Checking vtable size");
 				if( vtablesize != fndvtabsize )
 				{
-					TETJ_REPORT_INFO("Vtable size %ld (expected) doesn't match %ld "
-													 "(found) VTSIZE:%s:0:%ld\n",
+					TETJ_REPORT_INFO("Vtable size %d (expected) doesn't match %d "
+													 "(found) VTSIZE:%s:0:%d\n",
 													 vtablesize, fndvtabsize,
 													 classp->name,vtablesize);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
