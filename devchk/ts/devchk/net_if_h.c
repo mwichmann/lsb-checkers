@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "net/if.h"
 
 
@@ -22,115 +23,163 @@ int pcnt=0;
 Msg("Checking data structures in net/if.h\n");
 #endif
 
-#ifdef IF_NAMESIZE
-	CompareConstant(IF_NAMESIZE,16)
-#else
-Msg( "Error: Constant not found: IF_NAMESIZE\n");
-cnt++;
-#endif
-
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_UP
-	CompareConstant(IFF_UP,0x01)
+	CompareConstant(IFF_UP,0x01,4976,architecture)
 #else
 Msg( "Error: Constant not found: IFF_UP\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_BROADCAST
-	CompareConstant(IFF_BROADCAST,0x02)
+	CompareConstant(IFF_BROADCAST,0x02,4977,architecture)
 #else
 Msg( "Error: Constant not found: IFF_BROADCAST\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_DEBUG
-	CompareConstant(IFF_DEBUG,0x04)
+	CompareConstant(IFF_DEBUG,0x04,4978,architecture)
 #else
 Msg( "Error: Constant not found: IFF_DEBUG\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_LOOPBACK
-	CompareConstant(IFF_LOOPBACK,0x08)
+	CompareConstant(IFF_LOOPBACK,0x08,4979,architecture)
 #else
 Msg( "Error: Constant not found: IFF_LOOPBACK\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_POINTOPOINT
-	CompareConstant(IFF_POINTOPOINT,0x10)
+	CompareConstant(IFF_POINTOPOINT,0x10,4980,architecture)
 #else
 Msg( "Error: Constant not found: IFF_POINTOPOINT\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_NOTRAILERS
-	CompareConstant(IFF_NOTRAILERS,0x20)
+	CompareConstant(IFF_NOTRAILERS,0x20,4981,architecture)
 #else
 Msg( "Error: Constant not found: IFF_NOTRAILERS\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_RUNNING
-	CompareConstant(IFF_RUNNING,0x40)
+	CompareConstant(IFF_RUNNING,0x40,4982,architecture)
 #else
 Msg( "Error: Constant not found: IFF_RUNNING\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_NOARP
-	CompareConstant(IFF_NOARP,0x80)
+	CompareConstant(IFF_NOARP,0x80,4983,architecture)
 #else
 Msg( "Error: Constant not found: IFF_NOARP\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_PROMISC
-	CompareConstant(IFF_PROMISC,0x100)
+	CompareConstant(IFF_PROMISC,0x100,4984,architecture)
 #else
 Msg( "Error: Constant not found: IFF_PROMISC\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFF_MULTICAST
-	CompareConstant(IFF_MULTICAST,0x1000)
+	CompareConstant(IFF_MULTICAST,0x1000,4985,architecture)
 #else
 Msg( "Error: Constant not found: IFF_MULTICAST\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef IFNAMSIZ
-	CompareConstant(IFNAMSIZ,IF_NAMESIZE)
+	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture)
 #else
 Msg( "Error: Constant not found: IFNAMSIZ\n");
 cnt++;
 #endif
 
-#ifdef __i386__
-CheckTypeSize(struct ifaddr,40, 10286, 2)
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef IF_NAMESIZE
+	CompareConstant(IF_NAMESIZE,16,4989,architecture)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10286,0);
+Msg( "Error: Constant not found: IF_NAMESIZE\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef __i386__
+CheckTypeSize(struct ifaddr,40, 10286, 2)
+#elif __powerpc__
+CheckTypeSize(struct ifaddr,40, 10286, 6)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10286,0);
+Msg("Find size of anon-ifa_ifu (10286)\n");
+#endif
+
+#ifdef __i386__
+#elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10287,0);
+Msg("Find size of ifreq (10287)\n");
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct ifreq,32, 10290, 2)
+#elif __powerpc__
+CheckTypeSize(struct ifreq,32, 10290, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10290,0);
+Msg("Find size of anon-ifr_ifrn (10290)\n");
 #endif
 
 #ifdef __i386__
+#elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10291,0);
+Msg("Find size of anon-ifr_ifru (10291)\n");
 #endif
 
 #ifdef __i386__
+#elif __powerpc__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10292,0);
+Msg("Find size of ifconf (10292)\n");
 #endif
 
 #ifdef __i386__

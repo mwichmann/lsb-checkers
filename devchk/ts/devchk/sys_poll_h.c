@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#define _LSB_DEFAULT_ARCH 1
 #include "sys/poll.h"
 
 
@@ -22,52 +23,73 @@ int pcnt=0;
 Msg("Checking data structures in sys/poll.h\n");
 #endif
 
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef POLLIN
-	CompareConstant(POLLIN,0x0001)
+	CompareConstant(POLLIN,0x0001,4948,architecture)
 #else
 Msg( "Error: Constant not found: POLLIN\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef POLLPRI
-	CompareConstant(POLLPRI,0x0002)
+	CompareConstant(POLLPRI,0x0002,4949,architecture)
 #else
 Msg( "Error: Constant not found: POLLPRI\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef POLLOUT
-	CompareConstant(POLLOUT,0x0004)
+	CompareConstant(POLLOUT,0x0004,4950,architecture)
 #else
 Msg( "Error: Constant not found: POLLOUT\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef POLLERR
-	CompareConstant(POLLERR,0x0008)
+	CompareConstant(POLLERR,0x0008,4951,architecture)
 #else
 Msg( "Error: Constant not found: POLLERR\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef POLLHUP
-	CompareConstant(POLLHUP,0x0010)
+	CompareConstant(POLLHUP,0x0010,4952,architecture)
 #else
 Msg( "Error: Constant not found: POLLHUP\n");
 cnt++;
 #endif
 
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef POLLNVAL
-	CompareConstant(POLLNVAL,0x0020)
+	CompareConstant(POLLNVAL,0x0020,4953,architecture)
 #else
 Msg( "Error: Constant not found: POLLNVAL\n");
 cnt++;
 #endif
 
+#endif
+
 #ifdef __i386__
 CheckTypeSize(struct pollfd,8, 9913, 2)
+#elif __powerpc__
+CheckTypeSize(struct pollfd,8, 9913, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
+Msg("Find size of pollfd (9913)\n");
 #endif
 
 #ifdef TET_TEST
