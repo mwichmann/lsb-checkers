@@ -76,14 +76,27 @@ struct classtypeinfo {
 	};
 
 //In memory format
-struct classvtable_mem {
+struct cat1vtable_mem {
 	unsigned long	baseoffset;
 	const char	*typeinfo;
 	fptr		virtfuncs[0];
 	};
 
+struct cat2vtable_mem {
+	unsigned long	vcalloffset;
+	unsigned long	baseoffset;
+	const char	*typeinfo;
+	fptr		virtfuncs[0];
+	};
+
+union classvtable_mem {
+	struct cat1vtable_mem cat1;
+	struct cat2vtable_mem cat2;
+};
+
 //DB format
 struct classvtable {
+	unsigned long	vcalloffset;
 	unsigned long	baseoffset;
 	const char	*typeinfo;
 	const char	**virtfuncs;
@@ -99,6 +112,7 @@ struct classinfo {
 	int	numbaseinfo;
 	int	numvmitypes;
 	int	flags;
+	int	vtcategory;
 	struct classtypeinfo *typeinfo;
 	struct classvtable *vtable;
 	struct base_type_info *btinfo;
