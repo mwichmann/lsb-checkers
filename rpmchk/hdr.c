@@ -56,6 +56,8 @@ hdr=(RpmHeader *)file1->nexthdr;
 hindex=(RpmHdrIndex *)(hdr+1);
 nindex=ntohl(hdr->nindex);
 file1->storeaddr=(((char *)hdr)+sizeof(RpmHeader)+(nindex*sizeof(RpmHdrIndex)));
+file1->header=(RpmHeader *)((char *)file1->storeaddr+
+		ntohl(hindex->offset)+ntohl(hindex->count));
 
 fprintf(stderr,"Signature has %d indicies with %x bytes of store at %x\n",
 			nindex, ntohl(hdr->hsize),file1->storeaddr);
