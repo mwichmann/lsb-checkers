@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@metrolink.com)
  *
- * This is $Revision: 1.4 $
+ * This is $Revision: 1.5 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.5  2002/07/17 07:20:18  cyeoh
+ * remove hdr.h header include as not needed
+ *
  * Revision 1.4  2002/07/17 07:19:20  cyeoh
  * remove elfchk header include as not needed
  *
@@ -30,7 +33,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-#include "hdr.h"
 #include "../tetj/tetj.h"
 
 char *binpaths[] = {
@@ -43,7 +45,7 @@ char *binpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) cmdchk_revision = "$Revision: 1.4 $";
+static const char * __attribute((unused)) cmdchk_revision = "$Revision: 1.5 $";
 
 
 void
