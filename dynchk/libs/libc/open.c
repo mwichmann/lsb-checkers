@@ -5,14 +5,22 @@
 
 static int(*funcptr)(const char *, int, mode_t) = 0;
 
-int open(const char *pathname, int flags, mode_t mode)
+int open(const char *pathname, int flags, ...)
 {
+	va_list args;
+	mode_t mode;
+
+	va_start(args, flags);
+	va_copy(args,mode);
+
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "open");
 
 	validate_pathname(pathname, "open");
 	//validate_flags
 	validate_filemode(mode, "open");
+
+	va_end(args);
 	
 	return funcptr(pathname, flags, mode);
 }
