@@ -32,5 +32,5 @@ for(1..$sth->numrows) {
 	}
 }
 print "\t};\n\n";
-print "int numSectionInfo = sizeof(SectionInfo)/sizeof(struct SectionInfo);";
+print "int numSectionInfo = sizeof(SectionInfo)/sizeof(struct SectionInfo);\n";
 
