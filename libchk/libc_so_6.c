@@ -8127,7 +8127,9 @@ struct versym libc_so_6[] = {
 #if defined(__s390__)
 	{"tcsetpgrp","GLIBC_2.0"},
 #endif
-	{"tdelete",""},
+#if defined(__ia64__)
+	{"tdelete","GLIBC_2.2"},
+#endif
 #if defined(__i386__)
 	{"telldir","GLIBC_2.0"},
 #endif
