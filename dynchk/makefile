@@ -1,5 +1,7 @@
 WRAPPER_LIBS = \
 	libs/libc/libc.o \
+	libs/libdl/libdl.o \
+	libs/libpam/libpam.o \
 	libs/libncurses/libncurses.o
 
 TEST_LIB = tests/tests.o
