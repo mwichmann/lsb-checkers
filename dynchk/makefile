@@ -1,4 +1,7 @@
-WRAPPER_LIBS = libs/libc/libc.o
+WRAPPER_LIBS = \
+	libs/libc/libc.o \
+	libs/libncurses/libncurses.o
+
 TEST_LIB = tests/tests.o
 
 all: liblsbdynchk.so
