@@ -26,7 +26,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.10 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.11 $";
 
 int
 main(int argc, char *argv[])
@@ -83,6 +83,10 @@ main(int argc, char *argv[])
     perror("Could not open journal file");
     exit(1);
   }
+
+  /* Log version number for lsbapp package */
+  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbappchk " LSBAPPCHK_VERSION);
+  tetj_add_config(journal, tmp_string);
 
   /* Log extra libraries to look for symbols in */
   tetj_add_config(journal, extra_libraries);
