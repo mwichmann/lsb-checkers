@@ -51,8 +51,10 @@ struct base_type_info_mem {
 	};
 
 typedef enum {
-	__virtual_mask = 0x1,
-	__public_mask = 0x2
+	_base_virtual_mask = 0x1,
+	_base_public_mask = 0x2,
+	_base_all_mask = 0x3,
+	_base_offset_shift = 8
 	} offset_flags;
 
 struct base_type_info {
@@ -61,8 +63,9 @@ struct base_type_info {
 	};
 
 typedef enum {
-	__non_diamond_repeat_mask = 0x1,
-	__diamond_shaped_mask = 0x2
+	_vmi_non_diamond_repeat_mask = 0x1,
+	_vmi_diamond_shaped_mask = 0x2,
+	_vmi_all_mask = 0x03
 	} vmi_flags;
 
 struct vmi_classtypeinfo_mem {
@@ -74,11 +77,12 @@ struct vmi_classtypeinfo_mem {
 	};
 
 typedef enum {
-	__const_mask = 0x1,
-	__volatile_mask = 0x2,
-	__restrict_mask = 0x4,
-	__incomplete_mask = 0x8,
-	__incomplete_Class_mask = 0x10
+	_pbase_const_mask = 0x1,
+	_pbase_volatile_mask = 0x2,
+	_pbase_restrict_mask = 0x4,
+	_pbase_incomplete_mask = 0x8,
+	_pbase_incomplete_class_mask = 0x10,
+	_pbase_all_mask = 0x1f
 	} pbase_flags;
 
 struct pbasetypeinfo_mem {
