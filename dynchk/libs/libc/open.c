@@ -25,8 +25,7 @@ int open(const char *pathname, int flags, ...)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-        	__lsb_output(5-reset_flag, "open()");
-		printf("frotz\n");
+        	__lsb_output(4, "open()");
 
 		validate_pathname_flags(pathname, flags, "open");
 		//validate_flags
