@@ -1,29 +1,15 @@
-cxxabichk will complain about several symbol which are not found. These
-symbols are in the library, but have not been exported by the gnu linker-map
-in CVS. This patch will expose the needed interface. Note that the actual
-symbol version use in this patch is open for discussion. This patch is needed
-for both gcc 3.2 & gcc 3.3. There is a similar, but different patch needed for
-gcc 3.4.
+cxxabichk is currently tuned to minimize output. In particular, it won't
+complain about functions in vtable which is can't resolve to a name. Set
+LIBCHK_DEBUG=0 to see these.
 
-Index: libstdc++-v3/config/linker-map.gnu
-===================================================================
-RCS file: /cvsroot/gcc/gcc/libstdc++-v3/config/linker-map.gnu,v
-retrieving revision 1.25.2.9
-diff -r1.25.2.9 linker-map.gnu
-397a398,404
-> GLIBCPP_3.2.4 {
->     # std::__ctype_abstract_base*
->     _ZNSt21__ctype_abstract_base*;
->     # std::__codecvt_abstract_base*
->     _ZNSt23__codecvt_abstract_base*;
-> } GLIBCPP_3.2.3;
-> 
-465a473,479
-> 
-> CXXABI_1.2.2 {
->     _ZN10__cxxabiv1*;
->     _ZNK10__cxxabiv1*;
->     _ZN9__gnu_cxx*;
-> } CXXABI_1.2.1;
-> 
+/*
+ * Maintainers can get additional detail by setting the environment variable
+ * LIBCHK_DEBUG to these values
+ */
+
+   #define LIBCHK_DEBUG_NEWVERS            0x0001
+   #define LIBCHK_DEBUG_OLDVERS            0x0002
+   #define LIBCHK_DEBUG_CLASSDETAILS       0x0004
+   #define LIBCHK_DEBUG_CXXHUSH            0x0008
+
 
