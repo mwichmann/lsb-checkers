@@ -114,7 +114,7 @@ my $get_funcptr_declaration_q = $dbh->prepare(
 
 my $header_q = $dbh->prepare(
 'select Hname from Header, HeaderGroup, Type where
-Tstatus != "Excluded" and Theadergroup = HGid and HGheader=Hid GROUP BY Hname')
+Tstatus != "Excluded" and Theadergroup = HGid and HGheader=Hid and Hstd ="Yes" GROUP BY Hname')
 	or die "Couldn't prepare header query: ".DBI->errstr;
 
 ################################################################################
