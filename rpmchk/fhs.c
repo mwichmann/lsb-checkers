@@ -22,7 +22,10 @@ char tmp_string[TMP_STRING_SIZE+1];
 /* Check the RpmHeader magic value */
 tetj_tp_count++;
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check filename");
-if( strncmp(filename,"/opt",4) != 0 ) {
+if( (strncmp(filename,"opt",3) != 0) &&
+    (strncmp(filename,"etc/opt",7) != 0) &&
+    (strncmp(filename,"var/opt",7) != 0)
+     ) {
         snprintf( tmp_string, TMP_STRING_SIZE,
     "checkRpmArchiveFilename: file %s not placed under /opt\n", filename );
         fprintf(stderr, "%s\n", tmp_string);
