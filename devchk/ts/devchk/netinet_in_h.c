@@ -177,11 +177,11 @@ CheckMemberSize(struct sockaddr_in,sin_zero,0,10,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,10,33779)
 #elif __powerpc64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 9)
-CheckMemberSize(struct sockaddr_in,sin_port,0,9,33777)
+CheckMemberSize(struct sockaddr_in,sin_port,2,9,33777)
 CheckOffset(struct sockaddr_in,sin_port,2,9,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,0,9,33778)
+CheckMemberSize(struct sockaddr_in,sin_addr,4,9,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,9,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,0,9,33779)
+CheckMemberSize(struct sockaddr_in,sin_zero,8,9,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,9,33779)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);

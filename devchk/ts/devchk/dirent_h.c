@@ -80,13 +80,13 @@ CheckMemberSize(struct dirent,d_name,0,10,34180)
 CheckOffset(struct dirent,d_name,11,10,34180)
 #elif __powerpc64__
 CheckTypeSize(struct dirent,280, 10178, 9)
-CheckMemberSize(struct dirent,d_off,0,9,34178)
+CheckMemberSize(struct dirent,d_off,8,9,34178)
 CheckOffset(struct dirent,d_off,8,9,34178)
-CheckMemberSize(struct dirent,d_reclen,0,9,34179)
+CheckMemberSize(struct dirent,d_reclen,2,9,34179)
 CheckOffset(struct dirent,d_reclen,16,9,34179)
-CheckMemberSize(struct dirent,d_type,0,9,34410)
+CheckMemberSize(struct dirent,d_type,1,9,34410)
 CheckOffset(struct dirent,d_type,18,9,34410)
-CheckMemberSize(struct dirent,d_name,0,9,34180)
+CheckMemberSize(struct dirent,d_name,256,9,34180)
 CheckOffset(struct dirent,d_name,19,9,34180)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);

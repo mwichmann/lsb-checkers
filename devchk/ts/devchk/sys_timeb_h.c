@@ -57,11 +57,11 @@ CheckMemberSize(struct timeb,dstflag,0,10,34301)
 CheckOffset(struct timeb,dstflag,8,10,34301)
 #elif __powerpc64__
 CheckTypeSize(struct timeb,16, 10216, 9)
-CheckMemberSize(struct timeb,millitm,0,9,34299)
+CheckMemberSize(struct timeb,millitm,2,9,34299)
 CheckOffset(struct timeb,millitm,8,9,34299)
-CheckMemberSize(struct timeb,timezone,0,9,34300)
+CheckMemberSize(struct timeb,timezone,2,9,34300)
 CheckOffset(struct timeb,timezone,10,9,34300)
-CheckMemberSize(struct timeb,dstflag,0,9,34301)
+CheckMemberSize(struct timeb,dstflag,2,9,34301)
 CheckOffset(struct timeb,dstflag,12,9,34301)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10216,0);

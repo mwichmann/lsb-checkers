@@ -57,11 +57,11 @@ CheckMemberSize(struct tms,tms_cstime,0,10,30171)
 CheckOffset(struct tms,tms_cstime,12,10,30171)
 #elif __powerpc64__
 CheckTypeSize(struct tms,32, 6990, 9)
-CheckMemberSize(struct tms,tms_stime,0,9,30169)
+CheckMemberSize(struct tms,tms_stime,8,9,30169)
 CheckOffset(struct tms,tms_stime,8,9,30169)
-CheckMemberSize(struct tms,tms_cutime,0,9,30170)
+CheckMemberSize(struct tms,tms_cutime,8,9,30170)
 CheckOffset(struct tms,tms_cutime,16,9,30170)
-CheckMemberSize(struct tms,tms_cstime,0,9,30171)
+CheckMemberSize(struct tms,tms_cstime,8,9,30171)
 CheckOffset(struct tms,tms_cstime,24,9,30171)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6990,0);

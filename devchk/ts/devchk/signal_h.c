@@ -750,7 +750,7 @@ CheckMemberSize(struct sigstack,ss_onstack,0,10,34195)
 CheckOffset(struct sigstack,ss_onstack,4,10,34195)
 #elif __powerpc64__
 CheckTypeSize(struct sigstack,16, 9315, 9)
-CheckMemberSize(struct sigstack,ss_onstack,0,9,34195)
+CheckMemberSize(struct sigstack,ss_onstack,4,9,34195)
 CheckOffset(struct sigstack,ss_onstack,8,9,34195)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);

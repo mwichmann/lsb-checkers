@@ -61,9 +61,9 @@ CheckMemberSize(struct accepted_reply,ru,8,6,34830)
 CheckOffset(struct accepted_reply,ru,16,6,34830)
 #elif __powerpc64__
 CheckTypeSize(struct accepted_reply,48, 10417, 9)
-CheckMemberSize(struct accepted_reply,ar_stat,0,9,34801)
+CheckMemberSize(struct accepted_reply,ar_stat,4,9,34801)
 CheckOffset(struct accepted_reply,ar_stat,24,9,34801)
-CheckMemberSize(struct accepted_reply,ru,0,9,34830)
+CheckMemberSize(struct accepted_reply,ru,16,9,34830)
 CheckOffset(struct accepted_reply,ru,32,9,34830)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10417,0);
@@ -142,7 +142,7 @@ CheckMemberSize(struct rejected_reply,ru,8,6,34813)
 CheckOffset(struct rejected_reply,ru,4,6,34813)
 #elif __powerpc64__
 CheckTypeSize(struct rejected_reply,24, 10423, 9)
-CheckMemberSize(struct rejected_reply,ru,0,9,34813)
+CheckMemberSize(struct rejected_reply,ru,16,9,34813)
 CheckOffset(struct rejected_reply,ru,8,9,34813)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10423,0);
@@ -181,7 +181,7 @@ CheckMemberSize(struct reply_body,ru,24,6,34817)
 CheckOffset(struct reply_body,ru,4,6,34817)
 #elif __powerpc64__
 CheckTypeSize(struct reply_body,56, 10425, 9)
-CheckMemberSize(struct reply_body,ru,0,9,34817)
+CheckMemberSize(struct reply_body,ru,48,9,34817)
 CheckOffset(struct reply_body,ru,8,9,34817)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10425,0);
@@ -240,15 +240,15 @@ CheckMemberSize(struct call_body,cb_verf,12,6,34823)
 CheckOffset(struct call_body,cb_verf,28,6,34823)
 #elif __powerpc64__
 CheckTypeSize(struct call_body,80, 10426, 9)
-CheckMemberSize(struct call_body,cb_prog,0,9,34819)
+CheckMemberSize(struct call_body,cb_prog,8,9,34819)
 CheckOffset(struct call_body,cb_prog,8,9,34819)
-CheckMemberSize(struct call_body,cb_vers,0,9,34820)
+CheckMemberSize(struct call_body,cb_vers,8,9,34820)
 CheckOffset(struct call_body,cb_vers,16,9,34820)
-CheckMemberSize(struct call_body,cb_proc,0,9,34821)
+CheckMemberSize(struct call_body,cb_proc,8,9,34821)
 CheckOffset(struct call_body,cb_proc,24,9,34821)
-CheckMemberSize(struct call_body,cb_cred,0,9,34822)
+CheckMemberSize(struct call_body,cb_cred,24,9,34822)
 CheckOffset(struct call_body,cb_cred,32,9,34822)
-CheckMemberSize(struct call_body,cb_verf,0,9,34823)
+CheckMemberSize(struct call_body,cb_verf,24,9,34823)
 CheckOffset(struct call_body,cb_verf,56,9,34823)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10426,0);

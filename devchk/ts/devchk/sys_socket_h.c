@@ -562,7 +562,7 @@ CheckMemberSize(struct linger,l_linger,0,10,33675)
 CheckOffset(struct linger,l_linger,4,10,33675)
 #elif __powerpc64__
 CheckTypeSize(struct linger,8, 6907, 9)
-CheckMemberSize(struct linger,l_linger,0,9,33675)
+CheckMemberSize(struct linger,l_linger,4,9,33675)
 CheckOffset(struct linger,l_linger,4,9,33675)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6907,0);
@@ -595,9 +595,9 @@ CheckMemberSize(struct cmsghdr,cmsg_type,0,10,33687)
 CheckOffset(struct cmsghdr,cmsg_type,8,10,33687)
 #elif __powerpc64__
 CheckTypeSize(struct cmsghdr,16, 6909, 9)
-CheckMemberSize(struct cmsghdr,cmsg_level,0,9,33686)
+CheckMemberSize(struct cmsghdr,cmsg_level,4,9,33686)
 CheckOffset(struct cmsghdr,cmsg_level,8,9,33686)
-CheckMemberSize(struct cmsghdr,cmsg_type,0,9,33687)
+CheckMemberSize(struct cmsghdr,cmsg_type,4,9,33687)
 CheckOffset(struct cmsghdr,cmsg_type,12,9,33687)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6909,0);
@@ -622,7 +622,7 @@ CheckMemberSize(struct iovec,iov_len,0,10,33677)
 CheckOffset(struct iovec,iov_len,4,10,33677)
 #elif __powerpc64__
 CheckTypeSize(struct iovec,16, 9022, 9)
-CheckMemberSize(struct iovec,iov_len,0,9,33677)
+CheckMemberSize(struct iovec,iov_len,8,9,33677)
 CheckOffset(struct iovec,iov_len,8,9,33677)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9022,0);
@@ -677,7 +677,7 @@ CheckMemberSize(struct sockaddr,sa_data,0,10,33673)
 CheckOffset(struct sockaddr,sa_data,2,10,33673)
 #elif __powerpc64__
 CheckTypeSize(struct sockaddr,16, 6906, 9)
-CheckMemberSize(struct sockaddr,sa_data,0,9,33673)
+CheckMemberSize(struct sockaddr,sa_data,14,9,33673)
 CheckOffset(struct sockaddr,sa_data,2,9,33673)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6906,0);
@@ -742,17 +742,17 @@ CheckMemberSize(struct msghdr,msg_flags,0,10,33684)
 CheckOffset(struct msghdr,msg_flags,24,10,33684)
 #elif __powerpc64__
 CheckTypeSize(struct msghdr,56, 6908, 9)
-CheckMemberSize(struct msghdr,msg_namelen,0,9,33679)
+CheckMemberSize(struct msghdr,msg_namelen,4,9,33679)
 CheckOffset(struct msghdr,msg_namelen,8,9,33679)
-CheckMemberSize(struct msghdr,msg_iov,0,9,33680)
+CheckMemberSize(struct msghdr,msg_iov,8,9,33680)
 CheckOffset(struct msghdr,msg_iov,16,9,33680)
-CheckMemberSize(struct msghdr,msg_iovlen,0,9,33681)
+CheckMemberSize(struct msghdr,msg_iovlen,8,9,33681)
 CheckOffset(struct msghdr,msg_iovlen,24,9,33681)
-CheckMemberSize(struct msghdr,msg_control,0,9,33682)
+CheckMemberSize(struct msghdr,msg_control,8,9,33682)
 CheckOffset(struct msghdr,msg_control,32,9,33682)
-CheckMemberSize(struct msghdr,msg_controllen,0,9,33683)
+CheckMemberSize(struct msghdr,msg_controllen,8,9,33683)
 CheckOffset(struct msghdr,msg_controllen,40,9,33683)
-CheckMemberSize(struct msghdr,msg_flags,0,9,33684)
+CheckMemberSize(struct msghdr,msg_flags,4,9,33684)
 CheckOffset(struct msghdr,msg_flags,48,9,33684)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6908,0);
