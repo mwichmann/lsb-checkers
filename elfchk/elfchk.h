@@ -135,9 +135,11 @@ struct classinfo {
 	char	*vtablename;
 	char	*rttiname;
 	char	*basename;
+	char	*vttname;
 	int	numvirttab;
 	int	numbaseinfo;
 	int	numvmitypes;
+	int	numvtt;
 	int	flags;
 	struct classtypeinfo *typeinfo;
 	struct classvtable *vtable;
