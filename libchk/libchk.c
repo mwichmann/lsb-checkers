@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.44 $
+ * This is $Revision: 1.45 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.45  2004/08/10 17:37:46  anderson
+ * rerror is -1, not 2
+ *
  * Revision 1.44  2004/08/09 13:53:13  anderson
  * Turn on checking the sizes, but don't gripe the DB sez 0 meaning the data hasn't been filled in
  *
@@ -183,7 +186,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.44 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.45 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -546,7 +549,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
       tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 	  break;
     }
-	case 2: /* Failed */
+	case -1: /* Failed */
     {
       tetj_tp_count++;
       tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
