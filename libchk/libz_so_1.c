@@ -40,5 +40,4 @@ struct versym libz_so_1[] = {
 	{"inflateSyncPoint",""},
 	{"uncompress",""},
 	{"zError",""},
-	{"zlibVersion",""},
 	{0,0}};

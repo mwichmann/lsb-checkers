@@ -171,9 +171,11 @@ fprintf(stderr,"%s %x %x %x\n",
 		    ElfGetStringIndex(file, syms1[i].st_name, hdr1->sh_link),
 		    DynSyms[j].name ) )
 		break;
-	if( j == numDynSyms )
+	if( j == numDynSyms ) {
 		fprintf( stderr, "Symbol %s used, but not part of LSB\n",
 		    ElfGetStringIndex(file, syms1[i].st_name, hdr1->sh_link) );
+		continue;
+		}
 
 	/* If the symbol is versioned, make sure the correct version is used */
 
