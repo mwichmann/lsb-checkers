@@ -17,6 +17,7 @@ struct versym {
 	char *name;
 	char *vername;
 	int   deprecated;
+	char *modname;
 	int   size;
 	};
 
