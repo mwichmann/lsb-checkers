@@ -22,16 +22,15 @@ char *DtNeeded[] = {
 #if defined(__i386__)
 	"libm.so.6",
 #endif /* __i386__ */
+#if defined(__ia64__)
+	"libm.so.6.1",
+#endif /* __ia64__ */
 	"libncurses.so.5",
 #if defined(__i386__)
 	"libpthread.so.0",
 #endif /* __i386__ */
-#if defined(__i386__)
 	"librt.so.1",
-#endif /* __i386__ */
-#if defined(__i386__)
 	"libutil.so.1",
-#endif /* __i386__ */
 	"libz.so.1",
 	};
 int numDtNeeded = sizeof(DtNeeded)/sizeof(char *);
