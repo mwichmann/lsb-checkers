@@ -116,7 +116,7 @@ tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check magic val
 if( !( file1->archive[0]==(char)0x1f
     && file1->archive[1]==(char)0x8b) ) {
         snprintf( tmp_string, TMP_STRING_SIZE,
-    "checkRpmArchive: magic isn't expected value 0x1f8b, found %x%x instead\n",
+    "checkRpmArchive: magic isn't expected value 0x1f8b, found %x%x instead",
 	     (unsigned int)file1->archive[0], (unsigned int)file1->archive[1]); 
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
@@ -133,7 +133,7 @@ tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 if( lseek(file1->fd, (file1->archive-file1->addr), SEEK_SET) < 0 ) {
         snprintf( tmp_string, TMP_STRING_SIZE,
-    "checkRpmArchive: Unable to seek to start of archive\n");
+	    "checkRpmArchive: Unable to seek to start of archive");
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 							0, 0, 0, tmp_string);
@@ -143,7 +143,7 @@ if( lseek(file1->fd, (file1->archive-file1->addr), SEEK_SET) < 0 ) {
 
 if( (zfile=gzdopen(file1->fd,"r")) == NULL ) {
         snprintf( tmp_string, TMP_STRING_SIZE,
-    "checkRpmArchive: Unable to open compressed archive\n");
+	    "checkRpmArchive: Unable to open compressed archive");
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 							0, 0, 0, tmp_string);

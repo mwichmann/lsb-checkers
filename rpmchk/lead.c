@@ -22,7 +22,7 @@ file1->laddr=rlead;
 tetj_tp_count++;
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check magic value");
 if(strncmp(rlead->magic,RPMMAG,SRPMMAG)) {
-        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmLead: magic isn't expected value RPMMAG, found %x %x %x %x instead\n", rlead->magic[0], rlead->magic[1], rlead->magic[2], rlead->magic[3]); 
+        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmLead: magic isn't expected value RPMMAG, found %x %x %x %x instead", rlead->magic[0], rlead->magic[1], rlead->magic[2], rlead->magic[3]); 
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -36,7 +36,7 @@ tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 tetj_tp_count++; \
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check header field "#member" is "#value); \
 if( rlead->member != value ) { \
-        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmLead: %s isn't expected value %s, found %x instead\n", #member, #value, rlead->member); \
+        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmLead: %s isn't expected value %s, found %x instead", #member, #value, rlead->member); \
         fprintf(stderr, "%s\n", tmp_string); \
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL); \
