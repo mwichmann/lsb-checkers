@@ -79,7 +79,6 @@ mktemp /bin/mktemp
 more /bin/more
 mount /bin/mount
 msgfmt /usr/bin/msgfmt
-msgmerge /usr/bin/msgmerge
 mv /bin/mv
 newgrp /usr/bin/newgrp
 nice /bin/nice
@@ -131,4 +130,3 @@ userdel /usr/sbin/userdel
 usermod /usr/sbin/usermod
 wc /usr/bin/wc
 xargs /usr/bin/xargs
-xgettext /usr/bin/xgettext
