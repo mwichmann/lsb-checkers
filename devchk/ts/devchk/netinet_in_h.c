@@ -325,44 +325,12 @@ CheckMemberSize(struct ipv6_mreq,ipv6mr_interface,4,1,33790)
 CheckOffset(struct ipv6_mreq,ipv6mr_interface,16,1,33790)
 #endif
 
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(struct ip_mreq,8, 10146, 6)
-Msg("Missing member data for ip_mreq on PPC32\n");
-CheckOffset(struct ip_mreq,imr_multiaddr,0,6,33768)
-CheckOffset(struct ip_mreq,imr_interface,0,6,33769)
-#elif __i386__
-CheckTypeSize(struct ip_mreq,8, 10146, 2)
-Msg("Missing member data for ip_mreq on IA32\n");
-CheckOffset(struct ip_mreq,imr_multiaddr,0,2,33768)
-CheckOffset(struct ip_mreq,imr_interface,0,2,33769)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct ip_mreq,8, 10146, 10)
-Msg("Missing member data for ip_mreq on S390\n");
-CheckOffset(struct ip_mreq,imr_multiaddr,0,10,33768)
-CheckOffset(struct ip_mreq,imr_interface,0,10,33769)
-#elif __s390x__
-CheckTypeSize(struct ip_mreq,8, 10146, 12)
-Msg("Missing member data for ip_mreq on S390X\n");
-CheckOffset(struct ip_mreq,imr_multiaddr,0,12,33768)
-CheckOffset(struct ip_mreq,imr_interface,0,12,33769)
-#elif __ia64__
-CheckTypeSize(struct ip_mreq,8, 10146, 3)
-Msg("Missing member data for ip_mreq on IA64\n");
-CheckOffset(struct ip_mreq,imr_multiaddr,0,3,33768)
-CheckOffset(struct ip_mreq,imr_interface,0,3,33769)
-#elif __powerpc64__
-CheckTypeSize(struct ip_mreq,8, 10146, 9)
-Msg("Missing member data for ip_mreq on PPC64\n");
-CheckOffset(struct ip_mreq,imr_multiaddr,0,9,33768)
-CheckOffset(struct ip_mreq,imr_interface,0,9,33769)
-#elif __x86_64__
-CheckTypeSize(struct ip_mreq,8, 10146, 11)
-Msg("Missing member data for ip_mreq on x86-64\n");
-CheckOffset(struct ip_mreq,imr_multiaddr,0,11,33768)
-CheckOffset(struct ip_mreq,imr_interface,0,11,33769)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10146,0);
-Msg("Find size of ip_mreq (10146)\n");
+#if 1
+CheckTypeSize(struct ip_mreq,8, 10146, 1)
+CheckMemberSize(struct ip_mreq,imr_multiaddr,4,1,33768)
+CheckOffset(struct ip_mreq,imr_multiaddr,0,1,33768)
+CheckMemberSize(struct ip_mreq,imr_interface,4,1,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,1,33769)
 #endif
 
 #if 1
