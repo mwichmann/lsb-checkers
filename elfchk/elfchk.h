@@ -44,26 +44,26 @@ struct si_classtypeinfo_mem {
 
 struct base_type_info_mem {
 	struct classtypeinfo_mem *base_type;
-	long	offset_flags;
+	unsigned long	offset_flags;
 	};
 
 struct base_type_info {
 	char	*base_type;
-	long	offset_flags;
+	unsigned long	offset_flags;
 	};
 
 struct vmi_classtypeinfo_mem {
 	void	*basevtable;
 	char	*name;
-	int	flags;
-	int	base_count;
+	unsigned int	flags;
+	unsigned int	base_count;
 	struct base_type_info_mem base_info[0];
 	};
 
 struct pbasetypeinfo_mem {
 	void	*basevtable;
 	char	*name;
-	int	offset_flags;
+	unsigned int	offset_flags;
 	struct classtypeinfo_mem *pointee;
 	void	*basetypeinfo[0];
 	};
