@@ -27,4 +27,6 @@ void checkRpmIdxARCH(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *jour
 void checkRpmIdxPROVIDNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 void checkRpmIdxREQUIREFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 void checkRpmIdxREQUIRENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+void checkRpmIdxPAYLOADFORMAT(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+void checkRpmIdxPAYLOADCOMPRESSOR(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 void checkRpmIdxREQUIREVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
