@@ -24,63 +24,11 @@ Msg("Checking data structures in sys/stat.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IFMT
-	CompareConstant(S_IFMT,0xf000,1683,architecture)
-#else
-Msg( "Error: Constant not found: S_IFMT\n");
-cnt++;
-#endif
-
+/* No test for S_ISFIFO(m) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IFDIR
-	CompareConstant(S_IFDIR,0x4000,1684,architecture)
-#else
-Msg( "Error: Constant not found: S_IFDIR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFCHR
-	CompareConstant(S_IFCHR,0x2000,1685,architecture)
-#else
-Msg( "Error: Constant not found: S_IFCHR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFBLK
-	CompareConstant(S_IFBLK,0x6000,1686,architecture)
-#else
-Msg( "Error: Constant not found: S_IFBLK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFREG
-	CompareConstant(S_IFREG,0x8000,1687,architecture)
-#else
-Msg( "Error: Constant not found: S_IFREG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFIFO
-	CompareConstant(S_IFIFO,0x1000,1688,architecture)
-#else
-Msg( "Error: Constant not found: S_IFIFO\n");
-cnt++;
-#endif
-
+/* No test for S_ISREG(m) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -94,70 +42,14 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IFSOCK
-	CompareConstant(S_IFSOCK,0xc000,1690,architecture)
-#else
-Msg( "Error: Constant not found: S_IFSOCK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_TYPEISMQ(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISLNK(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISREG(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISDIR(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISCHR(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISBLK(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISFIFO(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for S_ISSOCK(m) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _STAT_VER
-	CompareConstant(_STAT_VER,3,4955,architecture)
+#ifdef S_IXOTH
+	CompareConstant(S_IXOTH,(S_IXGRP>>3),1718,architecture)
 #else
-Msg( "Error: Constant not found: _STAT_VER\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_TYPEISSEM(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_TYPEISSHM(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_ISUID
-	CompareConstant(S_ISUID,0x0800,1702,architecture)
-#else
-Msg( "Error: Constant not found: S_ISUID\n");
+Msg( "Error: Constant not found: S_IXOTH\n");
 cnt++;
 #endif
 
@@ -174,20 +66,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_ISVTX
-	CompareConstant(S_ISVTX,01000,1704,architecture)
+#ifdef S_IWOTH
+	CompareConstant(S_IWOTH,(S_IWGRP>>3),1717,architecture)
 #else
-Msg( "Error: Constant not found: S_ISVTX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IRUSR
-	CompareConstant(S_IRUSR,0x0100,1705,architecture)
-#else
-Msg( "Error: Constant not found: S_IRUSR\n");
+Msg( "Error: Constant not found: S_IWOTH\n");
 cnt++;
 #endif
 
@@ -204,50 +86,20 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IXUSR
-	CompareConstant(S_IXUSR,0x0040,1707,architecture)
+#ifdef S_IFIFO
+	CompareConstant(S_IFIFO,0x1000,1688,architecture)
 #else
-Msg( "Error: Constant not found: S_IXUSR\n");
+Msg( "Error: Constant not found: S_IFIFO\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IRWXU
-	CompareConstant(S_IRWXU,(S_IREAD|S_IWRITE|S_IEXEC),1708,architecture)
+#ifdef S_ISVTX
+	CompareConstant(S_ISVTX,01000,1704,architecture)
 #else
-Msg( "Error: Constant not found: S_IRWXU\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IREAD
-	CompareConstant(S_IREAD,S_IRUSR,1709,architecture)
-#else
-Msg( "Error: Constant not found: S_IREAD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IWRITE
-	CompareConstant(S_IWRITE,S_IWUSR,1710,architecture)
-#else
-Msg( "Error: Constant not found: S_IWRITE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IEXEC
-	CompareConstant(S_IEXEC,S_IXUSR,1711,architecture)
-#else
-Msg( "Error: Constant not found: S_IEXEC\n");
+Msg( "Error: Constant not found: S_ISVTX\n");
 cnt++;
 #endif
 
@@ -264,20 +116,106 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWGRP
-	CompareConstant(S_IWGRP,(S_IWUSR>>3),1713,architecture)
+#ifdef S_IXGRP
+	CompareConstant(S_IXGRP,(S_IXUSR>>3),1714,architecture)
 #else
-Msg( "Error: Constant not found: S_IWGRP\n");
+Msg( "Error: Constant not found: S_IXGRP\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IXGRP
-	CompareConstant(S_IXGRP,(S_IXUSR>>3),1714,architecture)
+/* No test for S_TYPEISMQ(buf) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IFCHR
+	CompareConstant(S_IFCHR,0x2000,1685,architecture)
 #else
-Msg( "Error: Constant not found: S_IXGRP\n");
+Msg( "Error: Constant not found: S_IFCHR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IEXEC
+	CompareConstant(S_IEXEC,S_IXUSR,1711,architecture)
+#else
+Msg( "Error: Constant not found: S_IEXEC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IRWXU
+	CompareConstant(S_IRWXU,(S_IREAD|S_IWRITE|S_IEXEC),1708,architecture)
+#else
+Msg( "Error: Constant not found: S_IRWXU\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_TYPEISSEM(buf) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IFREG
+	CompareConstant(S_IFREG,0x8000,1687,architecture)
+#else
+Msg( "Error: Constant not found: S_IFREG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IREAD
+	CompareConstant(S_IREAD,S_IRUSR,1709,architecture)
+#else
+Msg( "Error: Constant not found: S_IREAD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISDIR(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IRUSR
+	CompareConstant(S_IRUSR,0x0100,1705,architecture)
+#else
+Msg( "Error: Constant not found: S_IRUSR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISBLK(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IFDIR
+	CompareConstant(S_IFDIR,0x4000,1684,architecture)
+#else
+Msg( "Error: Constant not found: S_IFDIR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IFSOCK
+	CompareConstant(S_IFSOCK,0xc000,1690,architecture)
+#else
+Msg( "Error: Constant not found: S_IFSOCK\n");
 cnt++;
 #endif
 
@@ -294,6 +232,78 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef S_IWRITE
+	CompareConstant(S_IWRITE,S_IWUSR,1710,architecture)
+#else
+Msg( "Error: Constant not found: S_IWRITE\n");
+cnt++;
+#endif
+
+#endif
+
+#if __powerpc64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,1,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef _STAT_VER
+	CompareConstant(_STAT_VER,3,4955,architecture)
+#else
+Msg( "Error: Constant not found: _STAT_VER\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for _STAT_VER (4955, int) in db\n");
+#ifdef _STAT_VER
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4955,%d);\n", architecture, _STAT_VER);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISLNK(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_TYPEISSHM(buf) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IROTH
 	CompareConstant(S_IROTH,(S_IRGRP>>3),1716,architecture)
 #else
@@ -304,20 +314,50 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWOTH
-	CompareConstant(S_IWOTH,(S_IWGRP>>3),1717,architecture)
+#ifdef S_IFMT
+	CompareConstant(S_IFMT,0xf000,1683,architecture)
 #else
-Msg( "Error: Constant not found: S_IWOTH\n");
+Msg( "Error: Constant not found: S_IFMT\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IXOTH
-	CompareConstant(S_IXOTH,(S_IXGRP>>3),1718,architecture)
+#ifdef S_ISUID
+	CompareConstant(S_ISUID,0x0800,1702,architecture)
 #else
-Msg( "Error: Constant not found: S_IXOTH\n");
+Msg( "Error: Constant not found: S_ISUID\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWGRP
+	CompareConstant(S_IWGRP,(S_IWUSR>>3),1713,architecture)
+#else
+Msg( "Error: Constant not found: S_IWGRP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IXUSR
+	CompareConstant(S_IXUSR,0x0040,1707,architecture)
+#else
+Msg( "Error: Constant not found: S_IXUSR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IFBLK
+	CompareConstant(S_IFBLK,0x6000,1686,architecture)
+#else
+Msg( "Error: Constant not found: S_IFBLK\n");
 cnt++;
 #endif
 
@@ -331,6 +371,10 @@ Msg( "Error: Constant not found: S_IRWXO\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISCHR(m) */
 #endif
 
 #if __i386__
@@ -486,6 +530,28 @@ CheckOffset(struct stat,st_ctime,0,6,34847)
 CheckOffset(struct stat,__unused3,0,6,34848)
 CheckOffset(struct stat,__unused4,0,6,34849)
 CheckOffset(struct stat,__unused5,0,6,34850)
+#endif
+
+#if __ia64__
+CheckTypeSize(struct stat64,144, 10436, 3)
+CheckOffset(struct stat64,st_dev,0,3,34879)
+CheckOffset(struct stat64,st_ino,8,3,34880)
+CheckOffset(struct stat64,st_nlink,16,3,34881)
+CheckOffset(struct stat64,st_mode,24,3,34882)
+CheckOffset(struct stat64,st_uid,28,3,34883)
+CheckOffset(struct stat64,st_gid,32,3,34884)
+CheckOffset(struct stat64,pad0,36,3,34885)
+CheckOffset(struct stat64,st_rdev,40,3,34886)
+CheckOffset(struct stat64,st_size,48,3,34887)
+CheckOffset(struct stat64,st_atime,56,3,34888)
+CheckOffset(struct stat64,__reserved0,64,3,34889)
+CheckOffset(struct stat64,st_mtime,72,3,34890)
+CheckOffset(struct stat64,__reserved1,80,3,34891)
+CheckOffset(struct stat64,st_ctime,88,3,34892)
+CheckOffset(struct stat64,__reserved2,96,3,34893)
+CheckOffset(struct stat64,st_blksize,104,3,34894)
+CheckOffset(struct stat64,st_blocks,112,3,34895)
+CheckOffset(struct stat64,__unused,120,3,34896)
 #endif
 
 #ifdef TET_TEST

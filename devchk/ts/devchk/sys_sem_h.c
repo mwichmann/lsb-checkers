@@ -34,6 +34,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SEM_UNDO
+	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
+#else
+Msg( "Error: Constant not found: SEM_UNDO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef GETALL
 	CompareConstant(GETALL,13,3201,architecture)
 #else
@@ -44,10 +54,20 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GETNCNT
-	CompareConstant(GETNCNT,14,3202,architecture)
+#ifdef SETALL
+	CompareConstant(SETALL,17,3205,architecture)
 #else
-Msg( "Error: Constant not found: GETNCNT\n");
+Msg( "Error: Constant not found: SETALL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GETPID
+	CompareConstant(GETPID,11,3199,architecture)
+#else
+Msg( "Error: Constant not found: GETPID\n");
 cnt++;
 #endif
 
@@ -74,30 +94,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SETALL
-	CompareConstant(SETALL,17,3205,architecture)
+#ifdef GETNCNT
+	CompareConstant(GETNCNT,14,3202,architecture)
 #else
-Msg( "Error: Constant not found: SETALL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SEM_UNDO
-	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
-#else
-Msg( "Error: Constant not found: SEM_UNDO\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GETPID
-	CompareConstant(GETPID,11,3199,architecture)
-#else
-Msg( "Error: Constant not found: GETPID\n");
+Msg( "Error: Constant not found: GETNCNT\n");
 cnt++;
 #endif
 
@@ -138,6 +138,7 @@ CheckTypeSize(struct semid_ds,88, 10396, 3)
 CheckOffset(struct semid_ds,sem_perm,0,3,34665)
 CheckOffset(struct semid_ds,sem_otime,48,3,34666)
 CheckOffset(struct semid_ds,sem_ctime,56,3,34667)
+CheckOffset(struct semid_ds,sem_nsems,88,3,34878)
 CheckOffset(struct semid_ds,__unused1,72,3,34668)
 CheckOffset(struct semid_ds,__unused2,80,3,34669)
 #endif

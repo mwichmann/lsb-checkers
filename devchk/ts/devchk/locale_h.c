@@ -24,60 +24,10 @@ Msg("Checking data structures in locale.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef LC_CTYPE
-	CompareConstant(LC_CTYPE,0,1470,architecture)
+#ifdef LC_MEASUREMENT
+	CompareConstant(LC_MEASUREMENT,11,1481,architecture)
 #else
-Msg( "Error: Constant not found: LC_CTYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_NUMERIC
-	CompareConstant(LC_NUMERIC,1,1471,architecture)
-#else
-Msg( "Error: Constant not found: LC_NUMERIC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_TIME
-	CompareConstant(LC_TIME,2,1472,architecture)
-#else
-Msg( "Error: Constant not found: LC_TIME\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_COLLATE
-	CompareConstant(LC_COLLATE,3,1473,architecture)
-#else
-Msg( "Error: Constant not found: LC_COLLATE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_MONETARY
-	CompareConstant(LC_MONETARY,4,1474,architecture)
-#else
-Msg( "Error: Constant not found: LC_MONETARY\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_MESSAGES
-	CompareConstant(LC_MESSAGES,5,1475,architecture)
-#else
-Msg( "Error: Constant not found: LC_MESSAGES\n");
+Msg( "Error: Constant not found: LC_MEASUREMENT\n");
 cnt++;
 #endif
 
@@ -94,20 +44,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef LC_PAPER
-	CompareConstant(LC_PAPER,7,1477,architecture)
+#ifdef LC_TIME
+	CompareConstant(LC_TIME,2,1472,architecture)
 #else
-Msg( "Error: Constant not found: LC_PAPER\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_NAME
-	CompareConstant(LC_NAME,8,1478,architecture)
-#else
-Msg( "Error: Constant not found: LC_NAME\n");
+Msg( "Error: Constant not found: LC_TIME\n");
 cnt++;
 #endif
 
@@ -124,20 +64,40 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef LC_TELEPHONE
-	CompareConstant(LC_TELEPHONE,10,1480,architecture)
+#ifdef LC_COLLATE
+	CompareConstant(LC_COLLATE,3,1473,architecture)
 #else
-Msg( "Error: Constant not found: LC_TELEPHONE\n");
+Msg( "Error: Constant not found: LC_COLLATE\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef LC_MEASUREMENT
-	CompareConstant(LC_MEASUREMENT,11,1481,architecture)
+#ifdef LC_NUMERIC
+	CompareConstant(LC_NUMERIC,1,1471,architecture)
 #else
-Msg( "Error: Constant not found: LC_MEASUREMENT\n");
+Msg( "Error: Constant not found: LC_NUMERIC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_NAME
+	CompareConstant(LC_NAME,8,1478,architecture)
+#else
+Msg( "Error: Constant not found: LC_NAME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_MONETARY
+	CompareConstant(LC_MONETARY,4,1474,architecture)
+#else
+Msg( "Error: Constant not found: LC_MONETARY\n");
 cnt++;
 #endif
 
@@ -148,6 +108,46 @@ cnt++;
 	CompareConstant(LC_IDENTIFICATION,12,1482,architecture)
 #else
 Msg( "Error: Constant not found: LC_IDENTIFICATION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_CTYPE
+	CompareConstant(LC_CTYPE,0,1470,architecture)
+#else
+Msg( "Error: Constant not found: LC_CTYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_MESSAGES
+	CompareConstant(LC_MESSAGES,5,1475,architecture)
+#else
+Msg( "Error: Constant not found: LC_MESSAGES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_PAPER
+	CompareConstant(LC_PAPER,7,1477,architecture)
+#else
+Msg( "Error: Constant not found: LC_PAPER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_TELEPHONE
+	CompareConstant(LC_TELEPHONE,10,1480,architecture)
+#else
+Msg( "Error: Constant not found: LC_TELEPHONE\n");
 cnt++;
 #endif
 
