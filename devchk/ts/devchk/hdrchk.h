@@ -29,6 +29,21 @@
 		HDRCHKTEST_PASS \
 	} 
 
+#define CompareStringConstant(const,value) \
+	cnt++; \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Compare String Constant "#const" has value  %s\n", value); \
+	if( strcmp(const,value) != 0 ) {\
+		Msg(#const " is %s instead of expected %s\n", const, value); \
+		/* Msg(#const " is %f instead of expected %f\n", const, value); \
+		Msg(#const " is %g instead of expected %g\n", const, value); \
+		Msg("UPDATE Constants SET Cvalue=%s WHERE Cname='" #const "';\n", const); */ \
+		HDRCHKTEST_FAIL \
+	} \
+	else { \
+		HDRCHKTEST_PASS \
+	} 
+
 
 #define CheckTypeSize(type,size,tid,aid) \
 	cnt++; \
