@@ -130,6 +130,12 @@ Msg("Missing member data for __jmp_buf_tag on None\n");
 CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,8,34039)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,0,8,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,0,8,34041)
+#elif __s390x__
+CheckTypeSize(struct __jmp_buf_tag,280, 6961, 12)
+Msg("Missing member data for __jmp_buf_tag on S390X\n");
+CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,12,34039)
+CheckOffset(struct __jmp_buf_tag,__mask_was_saved,0,12,34040)
+CheckOffset(struct __jmp_buf_tag,__saved_mask,0,12,34041)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6961,0);
 Msg("Find size of __jmp_buf_tag (6961)\n");
