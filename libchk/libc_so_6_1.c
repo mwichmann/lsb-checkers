@@ -10129,7 +10129,7 @@ struct versym libc_so_6_1[] = {
 	{"tdelete","GLIBC_2.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"tdelete","GLIBC_2.2"},
+	{"tdelete","GLIBC_2.0"},
 #endif
 #if __powerpc64__
 	{"tdelete","GLIBC_2.2.5"},
@@ -12171,7 +12171,24 @@ struct versym libc_so_6_1[] = {
 #if __s390__
 	{"xdr_u_char","GLIBC_2.0"},
 #endif
+#if __i386__
 	{"xdr_u_int","GLIBC_2.0"},
+#endif
+#if __ia64__
+	{"xdr_u_int","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"xdr_u_int","GLIBC_2.0"},
+#endif
+#if __powerpc64__
+	{"xdr_u_int","GLIBC_2.0"},
+#endif
+#if __s390__
+	{"xdr_u_int","GLIBC_2.0"},
+#endif
+#if __x86_64__
+	{"xdr_u_int","GLIBC_2.2"},
+#endif
 #if __i386__
 	{"xdr_u_long","GLIBC_2.0"},
 #endif
