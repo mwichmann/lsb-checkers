@@ -318,9 +318,9 @@ check_class_info(char *libname, struct classinfo *classes[],
 				}
 				if (btip->offset_flags != classp->btinfo[j].offset_flags) 
 				{
-					printf("VMI basetype[%d] flags %lu (found) for class %s ",
+					printf("VMI basetype[%d] flags %lx (found) for class %s ",
 									j, btip->offset_flags, classp->name );
-					printf("doesn't match %lu (expected)\n",
+					printf("doesn't match %lx (expected)\n",
 									classp->btinfo[j].offset_flags);
 				}
 			}
