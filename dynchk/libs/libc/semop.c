@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <sys/sem.h>
 #undef semop
-static int(*funcptr) (int , struct sembuf * , unsigned int ) = 0;
+static int(*funcptr) (int , struct sembuf * , size_t ) = 0;
 
-int semop (int arg0 , struct sembuf * arg1 , unsigned int arg2 )
+int semop (int arg0 , struct sembuf * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "semop");
@@ -16,7 +16,7 @@ int semop (int arg0 , struct sembuf * arg1 , unsigned int arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_semop (int arg0 , struct sembuf * arg1 , unsigned int arg2 )
+int lsb_semop (int arg0 , struct sembuf * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "semop");

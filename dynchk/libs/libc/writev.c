@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <sys/socket.h>
 #undef writev
-static int(*funcptr) (int , const struct iovec * , int ) = 0;
+static ssize_t(*funcptr) (int , const struct iovec * , int ) = 0;
 
-int writev (int arg0 , const struct iovec * arg1 , int arg2 )
+ssize_t writev (int arg0 , const struct iovec * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "writev");
@@ -16,7 +16,7 @@ int writev (int arg0 , const struct iovec * arg1 , int arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_writev (int arg0 , const struct iovec * arg1 , int arg2 )
+ssize_t lsb_writev (int arg0 , const struct iovec * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "writev");

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #undef send
-static int(*funcptr) (int , const void * , size_t , int ) = 0;
+static ssize_t(*funcptr) (int , const void * , size_t , int ) = 0;
 
-int send (int arg0 , const void * arg1 , size_t arg2 , int arg3 )
+ssize_t send (int arg0 , const void * arg1 , size_t arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "send");
@@ -17,7 +17,7 @@ int send (int arg0 , const void * arg1 , size_t arg2 , int arg3 )
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_send (int arg0 , const void * arg1 , size_t arg2 , int arg3 )
+ssize_t lsb_send (int arg0 , const void * arg1 , size_t arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "send");
