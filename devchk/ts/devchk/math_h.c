@@ -24,50 +24,10 @@ Msg("Checking data structures in math.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef DOMAIN
-	CompareConstant(DOMAIN,1,1508,architecture)
+#ifdef M_1_PI
+	CompareConstant(M_1_PI,0.31830988618379067154,1523,architecture)
 #else
-Msg( "Error: Constant not found: DOMAIN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SING
-	CompareConstant(SING,2,1509,architecture)
-#else
-Msg( "Error: Constant not found: SING\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef M_E
-	CompareConstant(M_E,2.7182818284590452354,1515,architecture)
-#else
-Msg( "Error: Constant not found: M_E\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef M_LOG2E
-	CompareConstant(M_LOG2E,1.4426950408889634074,1516,architecture)
-#else
-Msg( "Error: Constant not found: M_LOG2E\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef M_LOG10E
-	CompareConstant(M_LOG10E,0.43429448190325182765,1517,architecture)
-#else
-Msg( "Error: Constant not found: M_LOG10E\n");
+Msg( "Error: Constant not found: M_1_PI\n");
 cnt++;
 #endif
 
@@ -84,33 +44,17 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef M_LN10
-	CompareConstant(M_LN10,2.30258509299404568402,1519,architecture)
+#ifdef SING
+	CompareConstant(SING,2,1509,architecture)
 #else
-Msg( "Error: Constant not found: M_LN10\n");
+Msg( "Error: Constant not found: SING\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef M_PI
-	CompareConstant(M_PI,3.14159265358979323846,1520,architecture)
-#else
-Msg( "Error: Constant not found: M_PI\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef M_PI_2
-	CompareConstant(M_PI_2,1.57079632679489661923,1521,architecture)
-#else
-Msg( "Error: Constant not found: M_PI_2\n");
-cnt++;
-#endif
-
+/* No test for HUGE_VAL */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -118,36 +62,6 @@ cnt++;
 	CompareConstant(M_PI_4,0.78539816339744830962,1522,architecture)
 #else
 Msg( "Error: Constant not found: M_PI_4\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef M_1_PI
-	CompareConstant(M_1_PI,0.31830988618379067154,1523,architecture)
-#else
-Msg( "Error: Constant not found: M_1_PI\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef M_2_PI
-	CompareConstant(M_2_PI,0.63661977236758134308,1524,architecture)
-#else
-Msg( "Error: Constant not found: M_2_PI\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef M_2_SQRTPI
-	CompareConstant(M_2_SQRTPI,1.12837916709551257390,1525,architecture)
-#else
-Msg( "Error: Constant not found: M_2_SQRTPI\n");
 cnt++;
 #endif
 
@@ -164,6 +78,46 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef M_LOG10E
+	CompareConstant(M_LOG10E,0.43429448190325182765,1517,architecture)
+#else
+Msg( "Error: Constant not found: M_LOG10E\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef M_2_SQRTPI
+	CompareConstant(M_2_SQRTPI,1.12837916709551257390,1525,architecture)
+#else
+Msg( "Error: Constant not found: M_2_SQRTPI\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef M_LOG2E
+	CompareConstant(M_LOG2E,1.4426950408889634074,1516,architecture)
+#else
+Msg( "Error: Constant not found: M_LOG2E\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef M_PI_2
+	CompareConstant(M_PI_2,1.57079632679489661923,1521,architecture)
+#else
+Msg( "Error: Constant not found: M_PI_2\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef M_SQRT1_2
 	CompareConstant(M_SQRT1_2,0.70710678118654752440,1527,architecture)
 #else
@@ -174,7 +128,53 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for HUGE_VAL */
+#ifdef M_LN10
+	CompareConstant(M_LN10,2.30258509299404568402,1519,architecture)
+#else
+Msg( "Error: Constant not found: M_LN10\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef M_2_PI
+	CompareConstant(M_2_PI,0.63661977236758134308,1524,architecture)
+#else
+Msg( "Error: Constant not found: M_2_PI\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DOMAIN
+	CompareConstant(DOMAIN,1,1508,architecture)
+#else
+Msg( "Error: Constant not found: DOMAIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef M_PI
+	CompareConstant(M_PI,3.14159265358979323846,1520,architecture)
+#else
+Msg( "Error: Constant not found: M_PI\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef M_E
+	CompareConstant(M_E,2.7182818284590452354,1515,architecture)
+#else
+Msg( "Error: Constant not found: M_E\n");
+cnt++;
+#endif
+
 #endif
 
 #if __i386__
@@ -193,13 +193,13 @@ CheckOffset(struct exception,retval,24,2,32298)
 CheckTypeSize(struct exception,40, 10010, 3)
 CheckMemberSize(struct exception,type,4,3,32294)
 CheckOffset(struct exception,type,0,3,32294)
-CheckMemberSize(struct exception,name,0,3,32295)
+CheckMemberSize(struct exception,name,8,3,32295)
 CheckOffset(struct exception,name,8,3,32295)
-CheckMemberSize(struct exception,arg1,0,3,32296)
+CheckMemberSize(struct exception,arg1,8,3,32296)
 CheckOffset(struct exception,arg1,16,3,32296)
-CheckMemberSize(struct exception,arg2,0,3,32297)
+CheckMemberSize(struct exception,arg2,8,3,32297)
 CheckOffset(struct exception,arg2,24,3,32297)
-CheckMemberSize(struct exception,retval,0,3,32298)
+CheckMemberSize(struct exception,retval,8,3,32298)
 CheckOffset(struct exception,retval,32,3,32298)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct exception,32, 10010, 6)

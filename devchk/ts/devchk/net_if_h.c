@@ -24,10 +24,50 @@ Msg("Checking data structures in net/if.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IFF_UP
-	CompareConstant(IFF_UP,0x01,4976,architecture)
+#ifdef IFF_MULTICAST
+	CompareConstant(IFF_MULTICAST,0x1000,4985,architecture)
 #else
-Msg( "Error: Constant not found: IFF_UP\n");
+Msg( "Error: Constant not found: IFF_MULTICAST\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_POINTOPOINT
+	CompareConstant(IFF_POINTOPOINT,0x10,4980,architecture)
+#else
+Msg( "Error: Constant not found: IFF_POINTOPOINT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_RUNNING
+	CompareConstant(IFF_RUNNING,0x40,4982,architecture)
+#else
+Msg( "Error: Constant not found: IFF_RUNNING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_PROMISC
+	CompareConstant(IFF_PROMISC,0x100,4984,architecture)
+#else
+Msg( "Error: Constant not found: IFF_PROMISC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_NOARP
+	CompareConstant(IFF_NOARP,0x80,4983,architecture)
+#else
+Msg( "Error: Constant not found: IFF_NOARP\n");
 cnt++;
 #endif
 
@@ -38,6 +78,46 @@ cnt++;
 	CompareConstant(IFF_BROADCAST,0x02,4977,architecture)
 #else
 Msg( "Error: Constant not found: IFF_BROADCAST\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFNAMSIZ
+	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture)
+#else
+Msg( "Error: Constant not found: IFNAMSIZ\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_NOTRAILERS
+	CompareConstant(IFF_NOTRAILERS,0x20,4981,architecture)
+#else
+Msg( "Error: Constant not found: IFF_NOTRAILERS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IFF_UP
+	CompareConstant(IFF_UP,0x01,4976,architecture)
+#else
+Msg( "Error: Constant not found: IFF_UP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IF_NAMESIZE
+	CompareConstant(IF_NAMESIZE,16,4989,architecture)
+#else
+Msg( "Error: Constant not found: IF_NAMESIZE\n");
 cnt++;
 #endif
 
@@ -63,86 +143,6 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_POINTOPOINT
-	CompareConstant(IFF_POINTOPOINT,0x10,4980,architecture)
-#else
-Msg( "Error: Constant not found: IFF_POINTOPOINT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_NOTRAILERS
-	CompareConstant(IFF_NOTRAILERS,0x20,4981,architecture)
-#else
-Msg( "Error: Constant not found: IFF_NOTRAILERS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_RUNNING
-	CompareConstant(IFF_RUNNING,0x40,4982,architecture)
-#else
-Msg( "Error: Constant not found: IFF_RUNNING\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_NOARP
-	CompareConstant(IFF_NOARP,0x80,4983,architecture)
-#else
-Msg( "Error: Constant not found: IFF_NOARP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_PROMISC
-	CompareConstant(IFF_PROMISC,0x100,4984,architecture)
-#else
-Msg( "Error: Constant not found: IFF_PROMISC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFF_MULTICAST
-	CompareConstant(IFF_MULTICAST,0x1000,4985,architecture)
-#else
-Msg( "Error: Constant not found: IFF_MULTICAST\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IFNAMSIZ
-	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture)
-#else
-Msg( "Error: Constant not found: IFNAMSIZ\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IF_NAMESIZE
-	CompareConstant(IF_NAMESIZE,16,4989,architecture)
-#else
-Msg( "Error: Constant not found: IF_NAMESIZE\n");
-cnt++;
-#endif
-
-#endif
-
 #if __i386__
 CheckTypeSize(struct ifaddr,40, 10286, 2)
 CheckMemberSize(struct ifaddr,ifa_ifu,16,2,34466)
@@ -161,11 +161,11 @@ CheckMemberSize(struct ifaddr,ifa_next,0,6,34497)
 CheckOffset(struct ifaddr,ifa_next,36,6,34497)
 #elif __ia64__
 CheckTypeSize(struct ifaddr,48, 10286, 3)
-CheckMemberSize(struct ifaddr,ifa_ifu,0,3,34466)
+CheckMemberSize(struct ifaddr,ifa_ifu,16,3,34466)
 CheckOffset(struct ifaddr,ifa_ifu,16,3,34466)
-CheckMemberSize(struct ifaddr,ifa_ifp,0,3,34496)
+CheckMemberSize(struct ifaddr,ifa_ifp,8,3,34496)
 CheckOffset(struct ifaddr,ifa_ifp,32,3,34496)
-CheckMemberSize(struct ifaddr,ifa_next,0,3,34497)
+CheckMemberSize(struct ifaddr,ifa_next,8,3,34497)
 CheckOffset(struct ifaddr,ifa_next,40,3,34497)
 #elif __s390__
 CheckTypeSize(struct ifaddr,40, 10286, 10)
@@ -208,7 +208,7 @@ CheckMemberSize(struct ifreq,ifr_ifru,0,6,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,6,34483)
 #elif __ia64__
 CheckTypeSize(struct ifreq,40, 10290, 3)
-CheckMemberSize(struct ifreq,ifr_ifru,0,3,34483)
+CheckMemberSize(struct ifreq,ifr_ifru,24,3,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,3,34483)
 #elif __s390__
 CheckTypeSize(struct ifreq,32, 10290, 10)
@@ -251,7 +251,7 @@ CheckMemberSize(struct ifconf,ifc_ifcu,4,2,34469)
 CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
 #elif __ia64__
 CheckTypeSize(struct ifconf,16, 10288, 3)
-CheckMemberSize(struct ifconf,ifc_ifcu,0,3,34469)
+CheckMemberSize(struct ifconf,ifc_ifcu,8,3,34469)
 CheckOffset(struct ifconf,ifc_ifcu,8,3,34469)
 #endif
 

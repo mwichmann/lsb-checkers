@@ -25,6 +25,14 @@ Msg("Checking data structures in sys/types.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for FD_SET(d,set) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FD_CLR(d,set) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef FD_SETSIZE
 	CompareConstant(FD_SETSIZE,1024,4416,architecture)
 #else
@@ -36,14 +44,6 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 /* No test for FD_ZERO(fdsetp) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for FD_SET(d,set) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for FD_CLR(d,set) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
