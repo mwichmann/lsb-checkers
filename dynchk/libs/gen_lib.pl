@@ -152,19 +152,19 @@ WHERE Pint = ?
 ORDER BY Ppos'
 ) or die "Couldn't prepare write_int_header query: " . DBI->errstr;
 
-my $write_int_declaration_q1 = $dbh->prepare(
+my $write_int_declaration_q = $dbh->prepare(
 'SELECT Tname
 FROM Interface, Type
 WHERE Iid = ?
   AND Ireturn = Tid'
-) or die "Couldn't prepare write_int_declaration query 1: " . DBI->errstr;
+) or die "Couldn't prepare write_int_declaration query: " . DBI->errstr;
 
-my $write_int_declaration_q2 = $dbh->prepare(
+my $write_argument_list_q = $dbh->prepare(
 'SELECT Ppos, Pint
 FROM Parameter
 WHERE Pint = ?
 ORDER BY Ppos'
-) or die "Couldn't prepare write_int_declaration query 2: " . DBI->errstr;
+) or die "Couldn't prepare write_argument list query: " . DBI->errstr;
 
 ##############################
 # Subroutines 
@@ -243,19 +243,20 @@ sub write_int_wrapper # ($fh, $func_id, $func_name, $is_lsb)
 	print $fh "{\n\tif(!funcptr)\n";
 	print $fh "\t\tfuncptr = dlsym(RTLD_NEXT, \"" . $func_name . "\");\n";
 	
-	unless($is_lsb)
+	$write_int_wrapper_q->execute($func_id)
+		or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
+	while( my($param_pos, $param_int) = $write_int_wrapper_q->fetchrow_array() )
 	{
-		$write_int_wrapper_q->execute($func_id)
-			or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
-		while( my($param_pos, $param_int) = $write_int_wrapper_q->fetchrow_array() )
+		unless($is_lsb)
 		{
 			print $fh "\tvalidate_";
 			print $fh get_param_typetype($param_pos, $param_int);
 			print $fh "(arg" . $i . ", \"" . $func_name . "\");\n";
-			$i++;
 		}
+			$i++;
 	}
 	print $fh "\treturn funcptr(";
+	
 	while($j < $i)
 	{
 		print $fh ", " unless ($j == 0);
@@ -278,6 +279,26 @@ sub write_int_header # ($fh, $func_id)
 	{
 		print $fh "#include <" . $header . ">\n";
 	}
+	print $fh "static int(*funcptr)(";
+	write_argument_list($fh, $func_id, 0);
+	print $fh ") = 0;\n\n";
+}
+
+# write argument list for a function declaration.
+# (This is the bit in the parentheses.)
+sub write_argument_list # ($fh, $func_id, $add_arg*)
+{
+	my($fh, $func_id, $add_arg) = @_;
+	my $i = 0;
+	$write_argument_list_q->execute($func_id)
+		or die "Couldn't execute write_int_declaration query 2: " . DBI->errstr;
+	while( my($param_pos, $param_int) = $write_argument_list_q->fetchrow_array() )
+	{
+		print $fh ", " unless ($i == 0);
+		print $fh get_param_type($param_pos, $param_int);
+		print $fh " arg" . $i if ($add_arg);
+		$i ++;
+	}
 }
 
 # write function declaration for 'interface' to 'fh'
@@ -285,21 +306,14 @@ sub write_int_header # ($fh, $func_id)
 sub write_int_declaration # ($fh, $func_id, $func_name, $is_lsb)
 {
 	my($fh, $func_id, $func_name, $is_lsb) = @_;
-	$write_int_declaration_q1->execute($func_id)
+	$write_int_declaration_q->execute($func_id)
 		or die "Couldn't execute write_int_declaration query 1: " . DBI->errstr;
-	my($type) = $write_int_declaration_q1->fetchrow_array();
+	my($type) = $write_int_declaration_q->fetchrow_array();
 	print $fh $type . " ";
 	print $fh "lsb_" if($is_lsb);
 	print $fh $func_name . "(";
-	my $i = 0;
-	$write_int_declaration_q2->execute($func_id)
-		or die "Couldn't execute write_int_declaration query 2: " . DBI->errstr;
-	while( my($param_pos, $param_int) = $write_int_declaration_q2->fetchrow_array() )
-	{
-		print $fh ", " unless ($i == 0);
-		print $fh get_param_type($param_pos, $param_int) . " arg" . $i;
-		$i ++;
-	}
+	write_argument_list($fh, $func_id, 1);
+	
 	print $fh ")\n";
 }
 
