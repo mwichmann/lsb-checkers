@@ -19,7 +19,7 @@ int XCopyArea (Display * arg0 , Drawable arg1 , Drawable arg2 , GC arg3 , int ar
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCopyArea()");
-	validate_Rdaddress( arg0, "XCopyArea - arg0");
+	validate_RWaddress( arg0, "XCopyArea - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCopyArea - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCopyArea - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XCopyArea - arg2");

@@ -18,7 +18,7 @@ void XmbDrawString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg3 , i
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XmbDrawString()");
-	validate_Rdaddress( arg0, "XmbDrawString - arg0");
+	validate_RWaddress( arg0, "XmbDrawString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XmbDrawString - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XmbDrawString - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XmbDrawString - arg2");

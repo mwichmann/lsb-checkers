@@ -19,11 +19,11 @@ int XGetInputFocus (Display * arg0 , Window * arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetInputFocus()");
-	validate_Rdaddress( arg0, "XGetInputFocus - arg0");
+	validate_RWaddress( arg0, "XGetInputFocus - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetInputFocus - arg0");
-	validate_Rdaddress( arg1, "XGetInputFocus - arg1");
+	validate_RWaddress( arg1, "XGetInputFocus - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XGetInputFocus - arg1");
-	validate_Rdaddress( arg2, "XGetInputFocus - arg2");
+	validate_RWaddress( arg2, "XGetInputFocus - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetInputFocus - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

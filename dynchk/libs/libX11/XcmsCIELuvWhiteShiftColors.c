@@ -19,15 +19,15 @@ int XcmsCIELuvWhiteShiftColors (XcmsCCC arg0 , XcmsColor * arg1 , XcmsColor * ar
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsCIELuvWhiteShiftColors()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELuvWhiteShiftColors - arg0");
-	validate_Rdaddress( arg1, "XcmsCIELuvWhiteShiftColors - arg1");
+	validate_RWaddress( arg1, "XcmsCIELuvWhiteShiftColors - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELuvWhiteShiftColors - arg1");
-	validate_Rdaddress( arg2, "XcmsCIELuvWhiteShiftColors - arg2");
+	validate_RWaddress( arg2, "XcmsCIELuvWhiteShiftColors - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIELuvWhiteShiftColors - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XcmsCIELuvWhiteShiftColors - arg3");
-	validate_Rdaddress( arg4, "XcmsCIELuvWhiteShiftColors - arg4");
+	validate_RWaddress( arg4, "XcmsCIELuvWhiteShiftColors - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XcmsCIELuvWhiteShiftColors - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XcmsCIELuvWhiteShiftColors - arg5");
-	validate_Rdaddress( arg6, "XcmsCIELuvWhiteShiftColors - arg6");
+	validate_RWaddress( arg6, "XcmsCIELuvWhiteShiftColors - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XcmsCIELuvWhiteShiftColors - arg6");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

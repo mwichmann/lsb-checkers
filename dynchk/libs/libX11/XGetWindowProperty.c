@@ -19,7 +19,7 @@ int XGetWindowProperty (Display * arg0 , Window arg1 , Atom arg2 , long arg3 , l
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetWindowProperty()");
-	validate_Rdaddress( arg0, "XGetWindowProperty - arg0");
+	validate_RWaddress( arg0, "XGetWindowProperty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWindowProperty - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWindowProperty - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XGetWindowProperty - arg2");
@@ -27,16 +27,15 @@ int XGetWindowProperty (Display * arg0 , Window arg1 , Atom arg2 , long arg3 , l
 		validate_NULL_TYPETYPE(  arg4, "XGetWindowProperty - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XGetWindowProperty - arg5");
 		validate_NULL_TYPETYPE(  arg6, "XGetWindowProperty - arg6");
-	validate_Rdaddress( arg7, "XGetWindowProperty - arg7");
+	validate_RWaddress( arg7, "XGetWindowProperty - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XGetWindowProperty - arg7");
-	validate_Rdaddress( arg8, "XGetWindowProperty - arg8");
+	validate_RWaddress( arg8, "XGetWindowProperty - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XGetWindowProperty - arg8");
-	validate_Rdaddress( arg9, "XGetWindowProperty - arg9");
+	validate_RWaddress( arg9, "XGetWindowProperty - arg9");
 		validate_NULL_TYPETYPE(  arg9, "XGetWindowProperty - arg9");
-	validate_Rdaddress( arg10, "XGetWindowProperty - arg10");
+	validate_RWaddress( arg10, "XGetWindowProperty - arg10");
 		validate_NULL_TYPETYPE(  arg10, "XGetWindowProperty - arg10");
-	validate_Rdaddress( arg11, "XGetWindowProperty - arg11");
-	validate_Rdaddress(* arg11, "XGetWindowProperty - arg11");
+	validate_RWaddress( arg11, "XGetWindowProperty - arg11");
 		validate_NULL_TYPETYPE(  arg11, "XGetWindowProperty - arg11");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);

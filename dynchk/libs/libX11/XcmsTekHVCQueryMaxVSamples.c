@@ -20,7 +20,7 @@ int XcmsTekHVCQueryMaxVSamples (XcmsCCC arg0 , XcmsFloat arg1 , XcmsColor * arg2
 	__lsb_output(5-__lsb_check_params, "XcmsTekHVCQueryMaxVSamples()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsTekHVCQueryMaxVSamples - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsTekHVCQueryMaxVSamples - arg1");
-	validate_Rdaddress( arg2, "XcmsTekHVCQueryMaxVSamples - arg2");
+	validate_RWaddress( arg2, "XcmsTekHVCQueryMaxVSamples - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsTekHVCQueryMaxVSamples - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XcmsTekHVCQueryMaxVSamples - arg3");
 	}

@@ -18,7 +18,7 @@ int XQLength (Display * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XQLength()");
-	validate_Rdaddress( arg0, "XQLength - arg0");
+	validate_RWaddress( arg0, "XQLength - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XQLength - arg0");
 	}
 	ret_value = funcptr(arg0);

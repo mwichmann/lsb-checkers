@@ -19,12 +19,12 @@ XcmsCCC XcmsCreateCCC (Display * arg0 , int arg1 , Visual * arg2 , XcmsColor * a
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsCreateCCC()");
-	validate_Rdaddress( arg0, "XcmsCreateCCC - arg0");
+	validate_RWaddress( arg0, "XcmsCreateCCC - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCreateCCC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCreateCCC - arg1");
-	validate_Rdaddress( arg2, "XcmsCreateCCC - arg2");
+	validate_RWaddress( arg2, "XcmsCreateCCC - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCreateCCC - arg2");
-	validate_Rdaddress( arg3, "XcmsCreateCCC - arg3");
+	validate_RWaddress( arg3, "XcmsCreateCCC - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XcmsCreateCCC - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XcmsCreateCCC - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XcmsCreateCCC - arg5");

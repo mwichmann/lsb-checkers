@@ -3,8 +3,8 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <X11/Xlib.h>
-#include <X11/Xutil.h>
 #include <X11/X.h>
+#include <X11/Xutil.h>
 #undef XSetZoomHints
 static int(*funcptr) (Display * , Window , XSizeHints * ) = 0;
 
@@ -20,10 +20,10 @@ int XSetZoomHints (Display * arg0 , Window arg1 , XSizeHints * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetZoomHints()");
-	validate_Rdaddress( arg0, "XSetZoomHints - arg0");
+	validate_RWaddress( arg0, "XSetZoomHints - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetZoomHints - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetZoomHints - arg1");
-	validate_Rdaddress( arg2, "XSetZoomHints - arg2");
+	validate_RWaddress( arg2, "XSetZoomHints - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XSetZoomHints - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

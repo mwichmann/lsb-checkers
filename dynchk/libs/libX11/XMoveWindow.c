@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/Xlib.h>
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XMoveWindow
 static int(*funcptr) (Display * , Window , int , int ) = 0;
 
@@ -19,7 +19,7 @@ int XMoveWindow (Display * arg0 , Window arg1 , int arg2 , int arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XMoveWindow()");
-	validate_Rdaddress( arg0, "XMoveWindow - arg0");
+	validate_RWaddress( arg0, "XMoveWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XMoveWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XMoveWindow - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XMoveWindow - arg2");

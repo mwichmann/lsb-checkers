@@ -20,7 +20,7 @@ int XcmsCIELuvQueryMaxLC (XcmsCCC arg0 , XcmsFloat arg1 , XcmsColor * arg2 )
 	__lsb_output(5-__lsb_check_params, "XcmsCIELuvQueryMaxLC()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELuvQueryMaxLC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELuvQueryMaxLC - arg1");
-	validate_Rdaddress( arg2, "XcmsCIELuvQueryMaxLC - arg2");
+	validate_RWaddress( arg2, "XcmsCIELuvQueryMaxLC - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIELuvQueryMaxLC - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -20,7 +20,7 @@ int XcmsTekHVCQueryMaxVC (XcmsCCC arg0 , XcmsFloat arg1 , XcmsColor * arg2 )
 	__lsb_output(5-__lsb_check_params, "XcmsTekHVCQueryMaxVC()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsTekHVCQueryMaxVC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsTekHVCQueryMaxVC - arg1");
-	validate_Rdaddress( arg2, "XcmsTekHVCQueryMaxVC - arg2");
+	validate_RWaddress( arg2, "XcmsTekHVCQueryMaxVC - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsTekHVCQueryMaxVC - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

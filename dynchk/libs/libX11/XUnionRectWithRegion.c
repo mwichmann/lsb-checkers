@@ -19,7 +19,7 @@ int XUnionRectWithRegion (XRectangle * arg0 , Region arg1 , Region arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XUnionRectWithRegion()");
-	validate_Rdaddress( arg0, "XUnionRectWithRegion - arg0");
+	validate_RWaddress( arg0, "XUnionRectWithRegion - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XUnionRectWithRegion - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XUnionRectWithRegion - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XUnionRectWithRegion - arg2");

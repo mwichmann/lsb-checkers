@@ -19,9 +19,9 @@ int XcmsCIEuvYToTekHVC (XcmsCCC arg0 , XcmsColor * arg1 , XcmsColor * arg2 , uns
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsCIEuvYToTekHVC()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIEuvYToTekHVC - arg0");
-	validate_Rdaddress( arg1, "XcmsCIEuvYToTekHVC - arg1");
+	validate_RWaddress( arg1, "XcmsCIEuvYToTekHVC - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIEuvYToTekHVC - arg1");
-	validate_Rdaddress( arg2, "XcmsCIEuvYToTekHVC - arg2");
+	validate_RWaddress( arg2, "XcmsCIEuvYToTekHVC - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIEuvYToTekHVC - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XcmsCIEuvYToTekHVC - arg3");
 	}

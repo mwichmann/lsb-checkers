@@ -22,9 +22,9 @@ extern int __lsb_output(int, char*, ...);
 		validate_NULL_TYPETYPE(  arg0, "XkbTranslateKeyCode - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbTranslateKeyCode - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbTranslateKeyCode - arg2");
-	validate_Rdaddress( arg3, "XkbTranslateKeyCode - arg3");
+	validate_RWaddress( arg3, "XkbTranslateKeyCode - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XkbTranslateKeyCode - arg3");
-	validate_Rdaddress( arg4, "XkbTranslateKeyCode - arg4");
+	validate_RWaddress( arg4, "XkbTranslateKeyCode - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XkbTranslateKeyCode - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -19,7 +19,7 @@ int XkbSetNames (Display * arg0 , unsigned int arg1 , unsigned int arg2 , unsign
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbSetNames()");
-	validate_Rdaddress( arg0, "XkbSetNames - arg0");
+	validate_RWaddress( arg0, "XkbSetNames - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbSetNames - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbSetNames - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbSetNames - arg2");

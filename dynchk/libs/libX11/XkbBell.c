@@ -20,7 +20,7 @@ int XkbBell (Display * arg0 , Window arg1 , int arg2 , Atom arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbBell()");
-	validate_Rdaddress( arg0, "XkbBell - arg0");
+	validate_RWaddress( arg0, "XkbBell - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbBell - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbBell - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbBell - arg2");

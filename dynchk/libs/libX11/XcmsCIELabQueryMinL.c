@@ -21,7 +21,7 @@ int XcmsCIELabQueryMinL (XcmsCCC arg0 , XcmsFloat arg1 , XcmsFloat arg2 , XcmsCo
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELabQueryMinL - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELabQueryMinL - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIELabQueryMinL - arg2");
-	validate_Rdaddress( arg3, "XcmsCIELabQueryMinL - arg3");
+	validate_RWaddress( arg3, "XcmsCIELabQueryMinL - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XcmsCIELabQueryMinL - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

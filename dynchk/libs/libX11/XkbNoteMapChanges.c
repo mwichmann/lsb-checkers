@@ -18,7 +18,7 @@ void XkbNoteMapChanges ( arg0, XkbMapNotifyEvent * arg1 , unsigned int arg2 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbNoteMapChanges()");
 		validate_NULL_TYPETYPE(  arg0, "XkbNoteMapChanges - arg0");
-	validate_Rdaddress( arg1, "XkbNoteMapChanges - arg1");
+	validate_RWaddress( arg1, "XkbNoteMapChanges - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XkbNoteMapChanges - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbNoteMapChanges - arg2");
 	}

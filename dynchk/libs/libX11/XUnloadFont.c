@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/Xlib.h>
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XUnloadFont
 static int(*funcptr) (Display * , Font ) = 0;
 
@@ -19,7 +19,7 @@ int XUnloadFont (Display * arg0 , Font arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XUnloadFont()");
-	validate_Rdaddress( arg0, "XUnloadFont - arg0");
+	validate_RWaddress( arg0, "XUnloadFont - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XUnloadFont - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XUnloadFont - arg1");
 	}

@@ -18,7 +18,7 @@ int XConnectionNumber (Display * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XConnectionNumber()");
-	validate_Rdaddress( arg0, "XConnectionNumber - arg0");
+	validate_RWaddress( arg0, "XConnectionNumber - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XConnectionNumber - arg0");
 	}
 	ret_value = funcptr(arg0);

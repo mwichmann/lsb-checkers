@@ -18,9 +18,9 @@ int XAddHosts (Display * arg0 , XHostAddress * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XAddHosts()");
-	validate_Rdaddress( arg0, "XAddHosts - arg0");
+	validate_RWaddress( arg0, "XAddHosts - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAddHosts - arg0");
-	validate_Rdaddress( arg1, "XAddHosts - arg1");
+	validate_RWaddress( arg1, "XAddHosts - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XAddHosts - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XAddHosts - arg2");
 	}

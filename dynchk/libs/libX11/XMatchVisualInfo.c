@@ -19,12 +19,12 @@ int XMatchVisualInfo (Display * arg0 , int arg1 , int arg2 , int arg3 , XVisualI
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XMatchVisualInfo()");
-	validate_Rdaddress( arg0, "XMatchVisualInfo - arg0");
+	validate_RWaddress( arg0, "XMatchVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XMatchVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XMatchVisualInfo - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XMatchVisualInfo - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XMatchVisualInfo - arg3");
-	validate_Rdaddress( arg4, "XMatchVisualInfo - arg4");
+	validate_RWaddress( arg4, "XMatchVisualInfo - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XMatchVisualInfo - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

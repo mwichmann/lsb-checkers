@@ -19,12 +19,12 @@ int XParseColor (Display * arg0 , Colormap arg1 , const char * arg2 , XColor * a
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XParseColor()");
-	validate_Rdaddress( arg0, "XParseColor - arg0");
+	validate_RWaddress( arg0, "XParseColor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XParseColor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XParseColor - arg1");
 	validate_Rdaddress( arg2, "XParseColor - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XParseColor - arg2");
-	validate_Rdaddress( arg3, "XParseColor - arg3");
+	validate_RWaddress( arg3, "XParseColor - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XParseColor - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

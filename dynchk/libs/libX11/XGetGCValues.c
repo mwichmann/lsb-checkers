@@ -18,11 +18,11 @@ int XGetGCValues (Display * arg0 , GC arg1 , unsigned long arg2 , XGCValues * ar
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetGCValues()");
-	validate_Rdaddress( arg0, "XGetGCValues - arg0");
+	validate_RWaddress( arg0, "XGetGCValues - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetGCValues - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetGCValues - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XGetGCValues - arg2");
-	validate_Rdaddress( arg3, "XGetGCValues - arg3");
+	validate_RWaddress( arg3, "XGetGCValues - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XGetGCValues - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

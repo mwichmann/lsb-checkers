@@ -19,14 +19,13 @@ int Xutf8TextListToTextProperty (Display * arg0 , char * * arg1 , int arg2 , XIC
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "Xutf8TextListToTextProperty()");
-	validate_Rdaddress( arg0, "Xutf8TextListToTextProperty - arg0");
+	validate_RWaddress( arg0, "Xutf8TextListToTextProperty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "Xutf8TextListToTextProperty - arg0");
-	validate_Rdaddress( arg1, "Xutf8TextListToTextProperty - arg1");
-	validate_Rdaddress(* arg1, "Xutf8TextListToTextProperty - arg1");
+	validate_RWaddress( arg1, "Xutf8TextListToTextProperty - arg1");
 		validate_NULL_TYPETYPE(  arg1, "Xutf8TextListToTextProperty - arg1");
 		validate_NULL_TYPETYPE(  arg2, "Xutf8TextListToTextProperty - arg2");
 		validate_NULL_TYPETYPE(  arg3, "Xutf8TextListToTextProperty - arg3");
-	validate_Rdaddress( arg4, "Xutf8TextListToTextProperty - arg4");
+	validate_RWaddress( arg4, "Xutf8TextListToTextProperty - arg4");
 		validate_NULL_TYPETYPE(  arg4, "Xutf8TextListToTextProperty - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -19,13 +19,12 @@ int XGetWMColormapWindows (Display * arg0 , Window arg1 , Window * * arg2 , int 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetWMColormapWindows()");
-	validate_Rdaddress( arg0, "XGetWMColormapWindows - arg0");
+	validate_RWaddress( arg0, "XGetWMColormapWindows - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWMColormapWindows - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWMColormapWindows - arg1");
-	validate_Rdaddress( arg2, "XGetWMColormapWindows - arg2");
-	validate_Rdaddress(* arg2, "XGetWMColormapWindows - arg2");
+	validate_RWaddress( arg2, "XGetWMColormapWindows - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetWMColormapWindows - arg2");
-	validate_Rdaddress( arg3, "XGetWMColormapWindows - arg3");
+	validate_RWaddress( arg3, "XGetWMColormapWindows - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XGetWMColormapWindows - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

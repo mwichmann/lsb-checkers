@@ -19,7 +19,7 @@ XImage * XGetSubImage (Display * arg0 , Drawable arg1 , int arg2 , int arg3 , un
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetSubImage()");
-	validate_Rdaddress( arg0, "XGetSubImage - arg0");
+	validate_RWaddress( arg0, "XGetSubImage - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetSubImage - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetSubImage - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XGetSubImage - arg2");
@@ -28,7 +28,7 @@ XImage * XGetSubImage (Display * arg0 , Drawable arg1 , int arg2 , int arg3 , un
 		validate_NULL_TYPETYPE(  arg5, "XGetSubImage - arg5");
 		validate_NULL_TYPETYPE(  arg6, "XGetSubImage - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XGetSubImage - arg7");
-	validate_Rdaddress( arg8, "XGetSubImage - arg8");
+	validate_RWaddress( arg8, "XGetSubImage - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XGetSubImage - arg8");
 		validate_NULL_TYPETYPE(  arg9, "XGetSubImage - arg9");
 		validate_NULL_TYPETYPE(  arg10, "XGetSubImage - arg10");

@@ -17,12 +17,12 @@ void XrmQPutResource (XrmDatabase * arg0 , XrmBindingList arg1 , XrmQuarkList ar
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XrmQPutResource()");
-	validate_Rdaddress( arg0, "XrmQPutResource - arg0");
+	validate_RWaddress( arg0, "XrmQPutResource - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XrmQPutResource - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XrmQPutResource - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XrmQPutResource - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XrmQPutResource - arg3");
-	validate_Rdaddress( arg4, "XrmQPutResource - arg4");
+	validate_RWaddress( arg4, "XrmQPutResource - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XrmQPutResource - arg4");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

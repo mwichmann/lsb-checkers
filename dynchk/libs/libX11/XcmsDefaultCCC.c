@@ -19,7 +19,7 @@ XcmsCCC XcmsDefaultCCC (Display * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsDefaultCCC()");
-	validate_Rdaddress( arg0, "XcmsDefaultCCC - arg0");
+	validate_RWaddress( arg0, "XcmsDefaultCCC - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XcmsDefaultCCC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsDefaultCCC - arg1");
 	}

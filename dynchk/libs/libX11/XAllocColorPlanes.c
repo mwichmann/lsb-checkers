@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XAllocColorPlanes
 static int(*funcptr) (Display * , Colormap , int , unsigned long * , int , int , int , int , unsigned long * , unsigned long * , unsigned long * ) = 0;
 
@@ -19,21 +19,21 @@ int XAllocColorPlanes (Display * arg0 , Colormap arg1 , int arg2 , unsigned long
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XAllocColorPlanes()");
-	validate_Rdaddress( arg0, "XAllocColorPlanes - arg0");
+	validate_RWaddress( arg0, "XAllocColorPlanes - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAllocColorPlanes - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XAllocColorPlanes - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XAllocColorPlanes - arg2");
-	validate_Rdaddress( arg3, "XAllocColorPlanes - arg3");
+	validate_RWaddress( arg3, "XAllocColorPlanes - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XAllocColorPlanes - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XAllocColorPlanes - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XAllocColorPlanes - arg5");
 		validate_NULL_TYPETYPE(  arg6, "XAllocColorPlanes - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XAllocColorPlanes - arg7");
-	validate_Rdaddress( arg8, "XAllocColorPlanes - arg8");
+	validate_RWaddress( arg8, "XAllocColorPlanes - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XAllocColorPlanes - arg8");
-	validate_Rdaddress( arg9, "XAllocColorPlanes - arg9");
+	validate_RWaddress( arg9, "XAllocColorPlanes - arg9");
 		validate_NULL_TYPETYPE(  arg9, "XAllocColorPlanes - arg9");
-	validate_Rdaddress( arg10, "XAllocColorPlanes - arg10");
+	validate_RWaddress( arg10, "XAllocColorPlanes - arg10");
 		validate_NULL_TYPETYPE(  arg10, "XAllocColorPlanes - arg10");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);

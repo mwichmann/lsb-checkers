@@ -20,7 +20,7 @@ int XrmCombineFileDatabase (const char * arg0 , XrmDatabase * arg1 , int arg2 )
 	__lsb_output(5-__lsb_check_params, "XrmCombineFileDatabase()");
 	validate_Rdaddress( arg0, "XrmCombineFileDatabase - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XrmCombineFileDatabase - arg0");
-	validate_Rdaddress( arg1, "XrmCombineFileDatabase - arg1");
+	validate_RWaddress( arg1, "XrmCombineFileDatabase - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XrmCombineFileDatabase - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XrmCombineFileDatabase - arg2");
 	}

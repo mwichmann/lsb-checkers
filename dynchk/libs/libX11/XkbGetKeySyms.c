@@ -19,7 +19,7 @@ extern int __lsb_output(int, char*, ...);
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbGetKeySyms()");
-	validate_Rdaddress( arg0, "XkbGetKeySyms - arg0");
+	validate_RWaddress( arg0, "XkbGetKeySyms - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetKeySyms - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbGetKeySyms - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbGetKeySyms - arg2");

@@ -21,9 +21,9 @@ int XrmQGetResource (XrmDatabase arg0 , XrmNameList arg1 , XrmClassList arg2 , X
 		validate_NULL_TYPETYPE(  arg0, "XrmQGetResource - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XrmQGetResource - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XrmQGetResource - arg2");
-	validate_Rdaddress( arg3, "XrmQGetResource - arg3");
+	validate_RWaddress( arg3, "XrmQGetResource - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XrmQGetResource - arg3");
-	validate_Rdaddress( arg4, "XrmQGetResource - arg4");
+	validate_RWaddress( arg4, "XrmQGetResource - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XrmQGetResource - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

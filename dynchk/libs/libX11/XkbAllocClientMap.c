@@ -4,11 +4,11 @@
 #include <dlfcn.h>
 #include <X11/XKBlib.h>
 #undef XkbAllocClientMap
-static int(*funcptr) (XkbDescPtr, unsigned int , unsigned int ) = 0;
+static int(*funcptr) (, unsigned int , unsigned int ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XkbAllocClientMap (XkbDescPtr arg0, unsigned int arg1 , unsigned int arg2 )
+int XkbAllocClientMap ( arg0, unsigned int arg1 , unsigned int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;

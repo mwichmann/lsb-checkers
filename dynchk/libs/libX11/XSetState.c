@@ -18,7 +18,7 @@ int XSetState (Display * arg0 , GC arg1 , unsigned long arg2 , unsigned long arg
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetState()");
-	validate_Rdaddress( arg0, "XSetState - arg0");
+	validate_RWaddress( arg0, "XSetState - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetState - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetState - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSetState - arg2");

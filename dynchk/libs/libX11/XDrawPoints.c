@@ -19,11 +19,11 @@ int XDrawPoints (Display * arg0 , Drawable arg1 , GC arg2 , XPoint * arg3 , int 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XDrawPoints()");
-	validate_Rdaddress( arg0, "XDrawPoints - arg0");
+	validate_RWaddress( arg0, "XDrawPoints - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDrawPoints - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDrawPoints - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XDrawPoints - arg2");
-	validate_Rdaddress( arg3, "XDrawPoints - arg3");
+	validate_RWaddress( arg3, "XDrawPoints - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XDrawPoints - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XDrawPoints - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XDrawPoints - arg5");

@@ -19,17 +19,17 @@ int XkbSetDebuggingFlags (Display * arg0 , unsigned int arg1 , unsigned int arg2
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbSetDebuggingFlags()");
-	validate_Rdaddress( arg0, "XkbSetDebuggingFlags - arg0");
+	validate_RWaddress( arg0, "XkbSetDebuggingFlags - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbSetDebuggingFlags - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbSetDebuggingFlags - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbSetDebuggingFlags - arg2");
-	validate_Rdaddress( arg3, "XkbSetDebuggingFlags - arg3");
+	validate_RWaddress( arg3, "XkbSetDebuggingFlags - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XkbSetDebuggingFlags - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XkbSetDebuggingFlags - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XkbSetDebuggingFlags - arg5");
-	validate_Rdaddress( arg6, "XkbSetDebuggingFlags - arg6");
+	validate_RWaddress( arg6, "XkbSetDebuggingFlags - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XkbSetDebuggingFlags - arg6");
-	validate_Rdaddress( arg7, "XkbSetDebuggingFlags - arg7");
+	validate_RWaddress( arg7, "XkbSetDebuggingFlags - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XkbSetDebuggingFlags - arg7");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);

@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XGetTransientForHint
 static int(*funcptr) (Display * , Window , Window * ) = 0;
 
@@ -19,10 +19,10 @@ int XGetTransientForHint (Display * arg0 , Window arg1 , Window * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetTransientForHint()");
-	validate_Rdaddress( arg0, "XGetTransientForHint - arg0");
+	validate_RWaddress( arg0, "XGetTransientForHint - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetTransientForHint - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetTransientForHint - arg1");
-	validate_Rdaddress( arg2, "XGetTransientForHint - arg2");
+	validate_RWaddress( arg2, "XGetTransientForHint - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetTransientForHint - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -19,10 +19,10 @@ void XSetRGBColormaps (Display * arg0 , Window arg1 , XStandardColormap * arg2 ,
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetRGBColormaps()");
-	validate_Rdaddress( arg0, "XSetRGBColormaps - arg0");
+	validate_RWaddress( arg0, "XSetRGBColormaps - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetRGBColormaps - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetRGBColormaps - arg1");
-	validate_Rdaddress( arg2, "XSetRGBColormaps - arg2");
+	validate_RWaddress( arg2, "XSetRGBColormaps - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XSetRGBColormaps - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XSetRGBColormaps - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XSetRGBColormaps - arg4");

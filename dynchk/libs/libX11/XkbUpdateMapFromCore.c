@@ -23,7 +23,7 @@ extern int __lsb_output(int, char*, ...);
 		validate_NULL_TYPETYPE(  arg1, "XkbUpdateMapFromCore - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbUpdateMapFromCore - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XkbUpdateMapFromCore - arg3");
-	validate_Rdaddress( arg4, "XkbUpdateMapFromCore - arg4");
+	validate_RWaddress( arg4, "XkbUpdateMapFromCore - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XkbUpdateMapFromCore - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XkbUpdateMapFromCore - arg5");
 	}

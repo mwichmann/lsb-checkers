@@ -20,7 +20,7 @@ int XkbComputeEffectiveMap ( arg0,  arg1, unsigned char * arg2 )
 	__lsb_output(5-__lsb_check_params, "XkbComputeEffectiveMap()");
 		validate_NULL_TYPETYPE(  arg0, "XkbComputeEffectiveMap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbComputeEffectiveMap - arg1");
-	validate_Rdaddress( arg2, "XkbComputeEffectiveMap - arg2");
+	validate_RWaddress( arg2, "XkbComputeEffectiveMap - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XkbComputeEffectiveMap - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

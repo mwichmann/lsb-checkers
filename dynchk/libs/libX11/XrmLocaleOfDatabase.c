@@ -11,7 +11,7 @@ extern int __lsb_output(int, char*, ...);
 const char * XrmLocaleOfDatabase (XrmDatabase arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	char * ret_value  ;
+	const char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "XrmLocaleOfDatabase");
 	if(__lsb_check_params)

@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/Xlib.h>
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XReconfigureWMWindow
 static int(*funcptr) (Display * , Window , int , unsigned int , XWindowChanges * ) = 0;
 
@@ -19,12 +19,12 @@ int XReconfigureWMWindow (Display * arg0 , Window arg1 , int arg2 , unsigned int
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XReconfigureWMWindow()");
-	validate_Rdaddress( arg0, "XReconfigureWMWindow - arg0");
+	validate_RWaddress( arg0, "XReconfigureWMWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XReconfigureWMWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XReconfigureWMWindow - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XReconfigureWMWindow - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XReconfigureWMWindow - arg3");
-	validate_Rdaddress( arg4, "XReconfigureWMWindow - arg4");
+	validate_RWaddress( arg4, "XReconfigureWMWindow - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XReconfigureWMWindow - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

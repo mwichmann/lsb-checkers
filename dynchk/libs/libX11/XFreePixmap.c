@@ -19,7 +19,7 @@ int XFreePixmap (Display * arg0 , Pixmap arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XFreePixmap()");
-	validate_Rdaddress( arg0, "XFreePixmap - arg0");
+	validate_RWaddress( arg0, "XFreePixmap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreePixmap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFreePixmap - arg1");
 	}

@@ -19,7 +19,7 @@ Pixmap XCreatePixmap (Display * arg0 , Drawable arg1 , unsigned int arg2 , unsig
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCreatePixmap()");
-	validate_Rdaddress( arg0, "XCreatePixmap - arg0");
+	validate_RWaddress( arg0, "XCreatePixmap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreatePixmap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreatePixmap - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XCreatePixmap - arg2");

@@ -22,16 +22,16 @@ int XmbTextPerCharExtents (XFontSet arg0 , const char * arg1 , int arg2 , XRecta
 	validate_Rdaddress( arg1, "XmbTextPerCharExtents - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XmbTextPerCharExtents - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XmbTextPerCharExtents - arg2");
-	validate_Rdaddress( arg3, "XmbTextPerCharExtents - arg3");
+	validate_RWaddress( arg3, "XmbTextPerCharExtents - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XmbTextPerCharExtents - arg3");
-	validate_Rdaddress( arg4, "XmbTextPerCharExtents - arg4");
+	validate_RWaddress( arg4, "XmbTextPerCharExtents - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XmbTextPerCharExtents - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XmbTextPerCharExtents - arg5");
-	validate_Rdaddress( arg6, "XmbTextPerCharExtents - arg6");
+	validate_RWaddress( arg6, "XmbTextPerCharExtents - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XmbTextPerCharExtents - arg6");
-	validate_Rdaddress( arg7, "XmbTextPerCharExtents - arg7");
+	validate_RWaddress( arg7, "XmbTextPerCharExtents - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XmbTextPerCharExtents - arg7");
-	validate_Rdaddress( arg8, "XmbTextPerCharExtents - arg8");
+	validate_RWaddress( arg8, "XmbTextPerCharExtents - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XmbTextPerCharExtents - arg8");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);

@@ -18,7 +18,7 @@ int XSetBackground (Display * arg0 , GC arg1 , unsigned long arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSetBackground()");
-	validate_Rdaddress( arg0, "XSetBackground - arg0");
+	validate_RWaddress( arg0, "XSetBackground - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetBackground - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetBackground - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSetBackground - arg2");

@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/X.h>
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XCopyPlane
 static int(*funcptr) (Display * , Drawable , Drawable , GC , int , int , unsigned int , unsigned int , int , int , unsigned long ) = 0;
 
@@ -19,7 +19,7 @@ int XCopyPlane (Display * arg0 , Drawable arg1 , Drawable arg2 , GC arg3 , int a
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCopyPlane()");
-	validate_Rdaddress( arg0, "XCopyPlane - arg0");
+	validate_RWaddress( arg0, "XCopyPlane - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCopyPlane - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCopyPlane - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XCopyPlane - arg2");

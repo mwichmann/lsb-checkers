@@ -19,22 +19,22 @@ int XGetGeometry (Display * arg0 , Drawable arg1 , Window * arg2 , int * arg3 , 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetGeometry()");
-	validate_Rdaddress( arg0, "XGetGeometry - arg0");
+	validate_RWaddress( arg0, "XGetGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetGeometry - arg1");
-	validate_Rdaddress( arg2, "XGetGeometry - arg2");
+	validate_RWaddress( arg2, "XGetGeometry - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetGeometry - arg2");
-	validate_Rdaddress( arg3, "XGetGeometry - arg3");
+	validate_RWaddress( arg3, "XGetGeometry - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XGetGeometry - arg3");
-	validate_Rdaddress( arg4, "XGetGeometry - arg4");
+	validate_RWaddress( arg4, "XGetGeometry - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XGetGeometry - arg4");
-	validate_Rdaddress( arg5, "XGetGeometry - arg5");
+	validate_RWaddress( arg5, "XGetGeometry - arg5");
 		validate_NULL_TYPETYPE(  arg5, "XGetGeometry - arg5");
-	validate_Rdaddress( arg6, "XGetGeometry - arg6");
+	validate_RWaddress( arg6, "XGetGeometry - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XGetGeometry - arg6");
-	validate_Rdaddress( arg7, "XGetGeometry - arg7");
+	validate_RWaddress( arg7, "XGetGeometry - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XGetGeometry - arg7");
-	validate_Rdaddress( arg8, "XGetGeometry - arg8");
+	validate_RWaddress( arg8, "XGetGeometry - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XGetGeometry - arg8");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);

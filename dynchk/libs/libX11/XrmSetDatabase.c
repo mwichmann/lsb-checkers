@@ -18,7 +18,7 @@ void XrmSetDatabase (Display * arg0 , XrmDatabase arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XrmSetDatabase()");
-	validate_Rdaddress( arg0, "XrmSetDatabase - arg0");
+	validate_RWaddress( arg0, "XrmSetDatabase - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XrmSetDatabase - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XrmSetDatabase - arg1");
 	}

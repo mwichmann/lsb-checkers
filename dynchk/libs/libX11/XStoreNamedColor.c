@@ -19,7 +19,7 @@ int XStoreNamedColor (Display * arg0 , Colormap arg1 , const char * arg2 , unsig
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XStoreNamedColor()");
-	validate_Rdaddress( arg0, "XStoreNamedColor - arg0");
+	validate_RWaddress( arg0, "XStoreNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XStoreNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XStoreNamedColor - arg1");
 	validate_Rdaddress( arg2, "XStoreNamedColor - arg2");

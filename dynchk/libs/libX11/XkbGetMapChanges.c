@@ -19,7 +19,7 @@ int XkbGetMapChanges (Display * arg0 ,  arg1,  arg2)
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbGetMapChanges()");
-	validate_Rdaddress( arg0, "XkbGetMapChanges - arg0");
+	validate_RWaddress( arg0, "XkbGetMapChanges - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetMapChanges - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbGetMapChanges - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbGetMapChanges - arg2");

@@ -19,12 +19,12 @@ int XkbGetAutoRepeatRate (Display * arg0 , unsigned int arg1 , unsigned int * ar
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbGetAutoRepeatRate()");
-	validate_Rdaddress( arg0, "XkbGetAutoRepeatRate - arg0");
+	validate_RWaddress( arg0, "XkbGetAutoRepeatRate - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetAutoRepeatRate - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbGetAutoRepeatRate - arg1");
-	validate_Rdaddress( arg2, "XkbGetAutoRepeatRate - arg2");
+	validate_RWaddress( arg2, "XkbGetAutoRepeatRate - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XkbGetAutoRepeatRate - arg2");
-	validate_Rdaddress( arg3, "XkbGetAutoRepeatRate - arg3");
+	validate_RWaddress( arg3, "XkbGetAutoRepeatRate - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XkbGetAutoRepeatRate - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

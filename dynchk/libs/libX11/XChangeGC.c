@@ -18,11 +18,11 @@ int XChangeGC (Display * arg0 , GC arg1 , unsigned long arg2 , XGCValues * arg3 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XChangeGC()");
-	validate_Rdaddress( arg0, "XChangeGC - arg0");
+	validate_RWaddress( arg0, "XChangeGC - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XChangeGC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XChangeGC - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XChangeGC - arg2");
-	validate_Rdaddress( arg3, "XChangeGC - arg3");
+	validate_RWaddress( arg3, "XChangeGC - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XChangeGC - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

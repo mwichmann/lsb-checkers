@@ -19,7 +19,7 @@ int XDrawImageString (Display * arg0 , Drawable arg1 , GC arg2 , int arg3 , int 
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XDrawImageString()");
-	validate_Rdaddress( arg0, "XDrawImageString - arg0");
+	validate_RWaddress( arg0, "XDrawImageString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDrawImageString - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDrawImageString - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XDrawImageString - arg2");

@@ -18,7 +18,7 @@ int XSync (Display * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XSync()");
-	validate_Rdaddress( arg0, "XSync - arg0");
+	validate_RWaddress( arg0, "XSync - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSync - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSync - arg1");
 	}

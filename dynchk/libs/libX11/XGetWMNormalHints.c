@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <X11/Xlib.h>
-#include <X11/X.h>
 #include <X11/Xutil.h>
+#include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XGetWMNormalHints
 static int(*funcptr) (Display * , Window , XSizeHints * , long * ) = 0;
 
@@ -20,12 +20,12 @@ int XGetWMNormalHints (Display * arg0 , Window arg1 , XSizeHints * arg2 , long *
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetWMNormalHints()");
-	validate_Rdaddress( arg0, "XGetWMNormalHints - arg0");
+	validate_RWaddress( arg0, "XGetWMNormalHints - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWMNormalHints - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWMNormalHints - arg1");
-	validate_Rdaddress( arg2, "XGetWMNormalHints - arg2");
+	validate_RWaddress( arg2, "XGetWMNormalHints - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetWMNormalHints - arg2");
-	validate_Rdaddress( arg3, "XGetWMNormalHints - arg3");
+	validate_RWaddress( arg3, "XGetWMNormalHints - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XGetWMNormalHints - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

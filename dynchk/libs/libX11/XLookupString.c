@@ -3,8 +3,8 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <X11/Xlib.h>
-#include <X11/Xutil.h>
 #include <X11/X.h>
+#include <X11/Xutil.h>
 #undef XLookupString
 static int(*funcptr) (XKeyEvent * , char * , int , KeySym * , XComposeStatus * ) = 0;
 
@@ -20,14 +20,14 @@ int XLookupString (XKeyEvent * arg0 , char * arg1 , int arg2 , KeySym * arg3 , X
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XLookupString()");
-	validate_Rdaddress( arg0, "XLookupString - arg0");
+	validate_RWaddress( arg0, "XLookupString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XLookupString - arg0");
-	validate_Rdaddress( arg1, "XLookupString - arg1");
+	validate_RWaddress( arg1, "XLookupString - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XLookupString - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XLookupString - arg2");
-	validate_Rdaddress( arg3, "XLookupString - arg3");
+	validate_RWaddress( arg3, "XLookupString - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XLookupString - arg3");
-	validate_Rdaddress( arg4, "XLookupString - arg4");
+	validate_RWaddress( arg4, "XLookupString - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XLookupString - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

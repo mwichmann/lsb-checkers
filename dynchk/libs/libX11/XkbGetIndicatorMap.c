@@ -19,7 +19,7 @@ int XkbGetIndicatorMap (Display * arg0 , unsigned long arg1 ,  arg2)
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbGetIndicatorMap()");
-	validate_Rdaddress( arg0, "XkbGetIndicatorMap - arg0");
+	validate_RWaddress( arg0, "XkbGetIndicatorMap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetIndicatorMap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbGetIndicatorMap - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbGetIndicatorMap - arg2");

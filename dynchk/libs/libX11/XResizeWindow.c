@@ -19,7 +19,7 @@ int XResizeWindow (Display * arg0 , Window arg1 , unsigned int arg2 , unsigned i
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XResizeWindow()");
-	validate_Rdaddress( arg0, "XResizeWindow - arg0");
+	validate_RWaddress( arg0, "XResizeWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XResizeWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XResizeWindow - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XResizeWindow - arg2");

@@ -18,15 +18,15 @@ int XGetScreenSaver (Display * arg0 , int * arg1 , int * arg2 , int * arg3 , int
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XGetScreenSaver()");
-	validate_Rdaddress( arg0, "XGetScreenSaver - arg0");
+	validate_RWaddress( arg0, "XGetScreenSaver - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetScreenSaver - arg0");
-	validate_Rdaddress( arg1, "XGetScreenSaver - arg1");
+	validate_RWaddress( arg1, "XGetScreenSaver - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XGetScreenSaver - arg1");
-	validate_Rdaddress( arg2, "XGetScreenSaver - arg2");
+	validate_RWaddress( arg2, "XGetScreenSaver - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XGetScreenSaver - arg2");
-	validate_Rdaddress( arg3, "XGetScreenSaver - arg3");
+	validate_RWaddress( arg3, "XGetScreenSaver - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XGetScreenSaver - arg3");
-	validate_Rdaddress( arg4, "XGetScreenSaver - arg4");
+	validate_RWaddress( arg4, "XGetScreenSaver - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XGetScreenSaver - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

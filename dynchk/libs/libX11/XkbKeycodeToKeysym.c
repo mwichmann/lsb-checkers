@@ -19,7 +19,7 @@ KeySym XkbKeycodeToKeysym (Display * arg0 , unsigned int arg1 , int arg2 , int a
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XkbKeycodeToKeysym()");
-	validate_Rdaddress( arg0, "XkbKeycodeToKeysym - arg0");
+	validate_RWaddress( arg0, "XkbKeycodeToKeysym - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbKeycodeToKeysym - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbKeycodeToKeysym - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbKeycodeToKeysym - arg2");

@@ -18,7 +18,7 @@ XExtCodes * XInitExtension (Display * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XInitExtension()");
-	validate_Rdaddress( arg0, "XInitExtension - arg0");
+	validate_RWaddress( arg0, "XInitExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XInitExtension - arg0");
 	validate_Rdaddress( arg1, "XInitExtension - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XInitExtension - arg1");

@@ -19,9 +19,9 @@ int XcmsCIELabToCIEXYZ (XcmsCCC arg0 , XcmsColor * arg1 , XcmsColor * arg2 , uns
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XcmsCIELabToCIEXYZ()");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELabToCIEXYZ - arg0");
-	validate_Rdaddress( arg1, "XcmsCIELabToCIEXYZ - arg1");
+	validate_RWaddress( arg1, "XcmsCIELabToCIEXYZ - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELabToCIEXYZ - arg1");
-	validate_Rdaddress( arg2, "XcmsCIELabToCIEXYZ - arg2");
+	validate_RWaddress( arg2, "XcmsCIELabToCIEXYZ - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIELabToCIEXYZ - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XcmsCIELabToCIEXYZ - arg3");
 	}
