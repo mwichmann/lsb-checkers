@@ -359,6 +359,27 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9062,0);
 Msg("Find size of pthread_once_t (9062)\n");
 #endif
 
+#if __arm__
+CheckTypeSize(__pthread_cond_align_t,4, 10917, 4)
+#elif __i386__
+CheckTypeSize(__pthread_cond_align_t,4, 10917, 2)
+#elif __ia64__
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(__pthread_cond_align_t,4, 10917, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(__pthread_cond_align_t,4, 10917, 10)
+#elif __powerpc64__
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 9)
+#elif __s390x__
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 12)
+#elif __x86_64__
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10917,0);
+Msg("Find size of __pthread_cond_align_t (10917)\n");
+#endif
+
 #if __i386__
 CheckTypeSize(pthread_t,4, 9040, 2)
 #elif __ia64__
