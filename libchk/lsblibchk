@@ -1,0 +1,16 @@
+#!/bin/bash
+
+SELF=$0;
+
+if [ -h $SELF ]; then
+		SELF=`readlink -f $SELF`
+fi
+
+START_FROM_DIR=`dirname $SELF`
+
+# Get list of libraries
+ldd $START_FROM_DIR/dummy_link | sed -e 's/[\t ]\+/ /g'  -e 's/^ //' -e 's/=> //' | cut -f1,2 -d' ' | sed -e 's/ /\n/' > /tmp/lsblibchk.$$
+
+$START_FROM_DIR/libchk /tmp/lsblibchk.$$
+
+rm /tmp/lsblibchk.$$

@@ -6,9 +6,14 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.23 $
+ * This is $Revision: 1.24 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.24  2003/08/26 07:58:38  cyeoh
+ * libchk now calculates dynamically where the lsb libraries are by
+ * using ldd and a dummy LSB binary which is linked against all LSB libraries
+ * Comment out class checking code
+ *
  * Revision 1.23  2003/07/16 07:07:47  cyeoh
  * Workaround for .symbols for ppc64. Eeek!
  *
@@ -80,28 +85,24 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <errno.h>
 #include "elfchk.h"
 #include "libchk.h"
 #include "hdr.h"
 #include "../tetj/tetj.h"
 
-#if __powerpc64__ || __s390x__ || __x86_64__
-#define LIBNAME "/lib64" 
-#else
-#define LIBNAME "/lib" 
-#endif 
-
-char *libpaths[] = {
-	LIBNAME "/lsb/%s",
-	"/usr" LIBNAME "/lsb/%s",
-	LIBNAME "/%s",
-	"/usr" LIBNAME "/%s",
-	"/usr/X11R6" LIBNAME "/%s",
-	0 };
+#define MAX_LENGTH_STRING 80
+struct libpath 
+{
+	char library[MAX_LENGTH_STRING+1];
+	char fullpath[MAX_LENGTH_STRING+1];
+};
+static struct libpath *library_paths = NULL;
+static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.23 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.24 $";
 
 extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
 
@@ -239,18 +240,32 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
   FILE *md5_proc;
   int i;
 
+  tetj_activity_count++;
+  tetj_testcase_start(journal, tetj_activity_count, libname, "");
+  tetj_tp_count = 0;
+
+  tetj_tp_count++;
+  snprintf(tmp_string, TMP_STRING_SIZE, "Looking for library %s",
+           libname);
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
+
   if (libname[0]!='/')
   {
     /* Find the library */
-    for(i=0; libpaths[i]; i++)
-    {
-      snprintf(filename, PATH_MAX, libpaths[i], libname);
-      if (access(filename,R_OK) == 0) 
-      {
-        file=OpenElfFile(filename);
-        if(file) break;
-      }
-    }
+		for (i=0; i<library_path_count; i++)
+		{
+			if (strcmp(libname, library_paths[i].library)==0)
+			{
+				snprintf(tmp_string, TMP_STRING_SIZE, "Found match for %s as %s\n", 
+								 library_paths[i].library,
+							 library_paths[i].fullpath);
+				tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+													 0, 0, 0, tmp_string);
+				file = OpenElfFile(library_paths[i].fullpath);
+				strncpy(filename, library_paths[i].fullpath, PATH_MAX);
+				break;
+			}
+		}
   }
   else
   {
@@ -261,15 +276,6 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
       file=OpenElfFile(filename);
     }
   }
-
-  tetj_activity_count++;
-  tetj_testcase_start(journal, tetj_activity_count, libname, "");
-  tetj_tp_count = 0;
-
-  tetj_tp_count++;
-  snprintf(tmp_string, TMP_STRING_SIZE, "Looking for library %s",
-           libname);
-  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
   if(file==NULL) 
   {
@@ -350,19 +356,77 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   }
 
-  printf("Checking Class Information in %s\n", filename );
+/*   printf("Checking Class Information in %s\n", filename ); */
 
-  check_class_info(filename,classes,journal);
+/*   check_class_info(filename,classes,journal); */
 }
 
 /* Generated function by mkfunclist */
 extern void check_libs(struct tetj_handle *journal); 
+
+void init_library_table(char *filename)
+{
+	FILE *in_file;
+	char tmp_str[MAX_LENGTH_STRING+1];
+	char key[MAX_LENGTH_STRING+1];
+	int have_key = 0;
+
+
+	in_file = fopen(filename, "r");
+	if (in_file==NULL)
+	{
+		fprintf(stderr, "Attempted to open %s\n", filename);
+		perror("Unable to open file: %s");
+		exit(1);
+	}
+
+	while (fgets(tmp_str, MAX_LENGTH_STRING, in_file))
+	{
+		if (have_key)
+		{
+			if (key[0]!='/')
+			{
+				/* Have key, and now value */
+				library_path_count += 1;
+				library_paths = realloc(library_paths, 
+																library_path_count*sizeof(struct libpath));
+				if (!library_paths)
+				{
+					perror("Out of memory");
+					exit(1);
+				}
+
+				if (strlen(key)>0 && key[strlen(key)-1]=='\n') 
+					key[strlen(key)-1] = 0;
+				if (strlen(tmp_str)>0 && tmp_str[strlen(tmp_str)-1]=='\n') 
+					tmp_str[strlen(tmp_str)-1] = 0;
+
+				strcpy(library_paths[library_path_count-1].library, key);
+				strcpy(library_paths[library_path_count-1].fullpath, tmp_str);
+			}
+			have_key = 0;
+		}
+		else 
+		{
+			strcpy(key, tmp_str); 
+			have_key = 1;
+		}
+	}	
+
+}
 
 int main(int argc, char *argv[])
 {
   struct tetj_handle *journal;
   char tmp_string[TMP_STRING_SIZE+1];
   
+	if (argc!=2)
+	{
+		fprintf(stderr, 
+					 "Need to supply file containing lookup map of shared libraries\n");
+		exit(1);
+	}
+	init_library_table(argv[1]);
 
   if (tetj_start_journal("journal.libchk", &journal, "libchk")!=0)
   {

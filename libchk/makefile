@@ -6,7 +6,7 @@ OBJS = libchk.o libs.o classchk.o $(LIBOBJS)
 
 CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
-all:: libchk
+all:: libchk dummy_link
 
 libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
 	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -ldl
@@ -14,9 +14,14 @@ libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
 libs.c:
 	./mkfunclist
 
+LSB_LINKER=/lib/`ls -1L /lib | grep ld-lsb`
+
+dummy_link: dummy_link.o makefile
+	gcc -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) -L/opt/lsbdev-base/lib -lGL -lICE -lSM -lX11 -lXext -lXt -lc -lcrypt -ldl -lgcc_s -lm -lncurses -lpam -lpthread -lutil -lz dummy_link.o -o $@
+
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)
-	install libchk $(INSTALL_ROOT)/$(BINDIR)/lsblibchk
+	install libchk lsblibchk dummy_link $(INSTALL_ROOT)/$(BINDIR)/libchk
 	install -d $(INSTALL_ROOT)/$(MANDIR)/man1/
 	install lsblibchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsblibchk.1
 
@@ -25,7 +30,7 @@ distclean: clean
 	rm -f libs.h libs.c
 
 clean:
-	rm -f $(OBJS) libchk
+	rm -f $(OBJS) libchk dummy_link
 
 .PHONE: clean distclean install
 
