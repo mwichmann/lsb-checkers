@@ -3,7 +3,8 @@ WRAPPER_LIBS = \
 	libs/libpam/libpam.o \
 	libs/libncurses/libncurses.o \
 	libs/libz/libz.o \
-	libs/libm/libm.o 
+	libs/libm/libm.o \
+	libs/libX11/libX11.o 
 #	libs/libpthread/libpthread.o
 
 TEST_LIB = tests/tests.o
