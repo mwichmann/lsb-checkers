@@ -3,6 +3,9 @@
 #include "sections.h"
 
 struct SectionInfo SectionInfo[] = {
+#if __powerpc64__
+	{".branch_lt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __powerpc64__ */
 	{".bss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 	{".comment",SHT_PROGBITS,0,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
@@ -80,7 +83,7 @@ struct SectionInfo SectionInfo[] = {
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
-	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+	{".plt",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 #endif /* __powerpc64__ */
 #if __s390x__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
@@ -173,7 +176,7 @@ struct SectionInfo SectionInfo[] = {
 	{".symtab",SHT_SYMTAB,SHF_ALLOC,checkSYMTAB},
 	{".text",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #if __powerpc64__
-	{".toc",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+	{".toc",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc64__ */
 #if __powerpc64__
 	{".toc1",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
