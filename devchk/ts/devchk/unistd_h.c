@@ -183,15 +183,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_MAPPED_FILES
-	CompareConstant(_POSIX_MAPPED_FILES,200112,3528,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_MAPPED_FILES\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MAPPED_FILES
 	CompareConstant(_POSIX_MAPPED_FILES,1,3528,architecture)
 #else
@@ -221,15 +213,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_ASYNCHRONOUS_IO
-	CompareConstant(_POSIX_ASYNCHRONOUS_IO,200112,4749,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_ASYNCHRONOUS_IO\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_ASYNCHRONOUS_IO
 	CompareConstant(_POSIX_ASYNCHRONOUS_IO,1,4749,architecture)
 #else
@@ -239,15 +223,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_FSYNC
-	CompareConstant(_POSIX_FSYNC,200112,4750,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_FSYNC\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_FSYNC
 	CompareConstant(_POSIX_FSYNC,1,4750,architecture)
 #else
@@ -257,15 +233,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_MEMLOCK
-	CompareConstant(_POSIX_MEMLOCK,200112,4751,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_MEMLOCK\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMLOCK
 	CompareConstant(_POSIX_MEMLOCK,1,4751,architecture)
 #else
@@ -415,15 +383,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_MEMLOCK_RANGE
-	CompareConstant(_POSIX_MEMLOCK_RANGE,200112,4766,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_MEMLOCK_RANGE\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMLOCK_RANGE
 	CompareConstant(_POSIX_MEMLOCK_RANGE,1,4766,architecture)
 #else
@@ -433,15 +393,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_MEMORY_PROTECTION
-	CompareConstant(_POSIX_MEMORY_PROTECTION,200112,4767,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_MEMORY_PROTECTION\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMORY_PROTECTION
 	CompareConstant(_POSIX_MEMORY_PROTECTION,1,4767,architecture)
 #else
@@ -451,15 +403,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_PRIORITY_SCHEDULING
-	CompareConstant(_POSIX_PRIORITY_SCHEDULING,200112,4769,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_PRIORITY_SCHEDULING\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_PRIORITY_SCHEDULING
 	CompareConstant(_POSIX_PRIORITY_SCHEDULING,1,4769,architecture)
 #else
@@ -469,15 +413,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_REALTIME_SIGNALS
-	CompareConstant(_POSIX_REALTIME_SIGNALS,200112,4770,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_REALTIME_SIGNALS\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_REALTIME_SIGNALS
 	CompareConstant(_POSIX_REALTIME_SIGNALS,1,4770,architecture)
 #else
@@ -487,15 +423,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_SEMAPHORES
-	CompareConstant(_POSIX_SEMAPHORES,200112,4771,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_SEMAPHORES\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SEMAPHORES
 	CompareConstant(_POSIX_SEMAPHORES,1,4771,architecture)
 #else
@@ -505,15 +433,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_SHARED_MEMORY_OBJECTS
-	CompareConstant(_POSIX_SHARED_MEMORY_OBJECTS,200112,4772,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_SHARED_MEMORY_OBJECTS\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SHARED_MEMORY_OBJECTS
 	CompareConstant(_POSIX_SHARED_MEMORY_OBJECTS,1,4772,architecture)
 #else
@@ -523,15 +443,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_SYNCHRONIZED_IO
-	CompareConstant(_POSIX_SYNCHRONIZED_IO,200112,4773,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_SYNCHRONIZED_IO\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SYNCHRONIZED_IO
 	CompareConstant(_POSIX_SYNCHRONIZED_IO,1,4773,architecture)
 #else
@@ -541,15 +453,7 @@ cnt++;
 
 #endif
 
-#if __i386__
-#ifdef _POSIX_TIMERS
-	CompareConstant(_POSIX_TIMERS,200112,4774,architecture)
-#else
-Msg( "Error: Constant not found: _POSIX_TIMERS\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_TIMERS
 	CompareConstant(_POSIX_TIMERS,1,4774,architecture)
 #else
