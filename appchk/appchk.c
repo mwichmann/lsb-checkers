@@ -26,7 +26,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.11 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.12 $";
 
 int
 main(int argc, char *argv[])
@@ -40,6 +40,8 @@ main(int argc, char *argv[])
   int extra_lib_count = 0;
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
+	char journal_filename[TMP_STRING_SIZE+1];
+	int overrideJournalFilename = 0;
 
   printf("%s for LSB Specification " LSBVERSION " \n", argv[0]);
   extra_libraries = strdup("EXTRA_LIBRARIES=");
@@ -52,7 +54,7 @@ main(int argc, char *argv[])
   
   /* Parse options */
   while(1) {
-    c=getopt(argc,argv,"L:");
+    c=getopt(argc,argv,"L:o:");
     if( c == -1 )
       break;
     switch(c) {
@@ -65,23 +67,34 @@ main(int argc, char *argv[])
       extra_libraries = concat_string(extra_libraries, optarg);
       extra_libraries = concat_string(extra_libraries, " ");
       break;
+			
+		case 'o':
+			strncpy(journal_filename, optarg, TMP_STRING_SIZE);
+			overrideJournalFilename = 1;
+			break;
+
     default:
       printf ("?? getopt returned character code 0%o ??\n", c);
     }
   }
 
   if( optind >= argc ) {
-    fprintf(stderr, "usage: %s [-L libpath ] file\n", argv[0] );
+    fprintf(stderr, "usage: %s [-o outputfile ] [-L libpath ] file\n", argv[0] );
     exit(1);
   }
 
   /* Start journal logging */
-  snprintf(tmp_string, TMP_STRING_SIZE, "journal.appchk.%s", 
-           basename(argv[optind]));
-  if (tetj_start_journal(tmp_string, &journal, command_line)!=0)
-  {
-    perror("Could not open journal file");
-    exit(1);
+	
+	if (!overrideJournalFilename)
+	{
+		snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s", 
+						 basename(argv[optind]));
+	}
+	if (tetj_start_journal(journal_filename, &journal, command_line)!=0)
+	{
+		printf("Could not open journal file %s for output\n",
+					 journal_filename);
+		exit(1);
   }
 
   /* Log version number for lsbapp package */
