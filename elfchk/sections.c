@@ -17,7 +17,7 @@ checkDUMMY(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "DUMMY SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -26,7 +26,7 @@ checkGNU_versym(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_versym SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -35,7 +35,7 @@ checkGNU_verdef(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_verdef SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -44,7 +44,7 @@ checkGNU_verneed(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "checkGNU_verneed SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -53,7 +53,7 @@ checkNOBITS(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "NOBITS SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -62,7 +62,7 @@ checkNULL(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "NULL SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -88,7 +88,7 @@ for(i=0; i<size; i++)
 		return;
 		}
 */
- return 1; 
+ return 0; 
 }
 
 int
@@ -110,7 +110,7 @@ checkPROGBITS(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 fprintf(stderr, "Contents of section %s not checked.\n",
 				ElfGetString(file1, hdr1->sh_name));
 #endif
-  return 1;
+  return 0;
 }
 
 int
@@ -165,14 +165,14 @@ for(i=0;i<numsyms;i++)
 		}
 */
 	}
- return 1; 
+ return 0; 
 }
 
 int
 checkSYMTAB(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 checkSYMBOLS( "SYMTAB", file1, hdr1, journal );
- return 1; 
+ return 0; 
 }
 
 int
@@ -183,7 +183,7 @@ fprintf(stderr, "DYNSYM\n" );
 #endif /* VERBOSE */
 
 file->dynsymhdr=hdr1;
- return 1; 
+ return 0; 
 }
 
 int
@@ -258,7 +258,7 @@ checkINIT_ARRAY(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "INIT_ARRAY SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -267,7 +267,7 @@ checkPREINIT_ARRAY(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "PREINIT_ARRAY SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -276,7 +276,7 @@ checkFINI_ARRAY(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "FINI_ARRAY SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 #if defined(__ia64__)
@@ -286,7 +286,7 @@ checkIA_64_EXT(ElfFile *file1, Elf64_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "IA_64_EXT SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 
 int
@@ -295,7 +295,7 @@ checkIA_64_UNWIND(ElfFile *file1, Elf64_Shdr *hdr1, struct tetj_handle *journal)
 #ifdef VERBOSE
 fprintf(stderr, "IA_64_UNWIND SECTION\n" );
 #endif /* VERBOSE */
- return 1; 
+ return 0; 
 }
 #endif
 
@@ -373,7 +373,19 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
           fail = 1;
         }
       }
-      if (!SectionInfo[i].func(file1, hdr1, journal)) fail = 1;
+      switch (SectionInfo[i].func(file1, hdr1, journal)) {
+	      case 1: /* Pass */
+			break;
+	      case 0: /* Not checked */
+			if( elfchk_debug&DEBUG_SECTION_CONTENTS ) {
+				fprintf( stderr, "Section [%2d] %-12.12s Not checked\n",
+						i, SectionInfo[i].name );
+			}
+			break;
+	      case -1: /* Fail */
+			fail = 1;
+			break;
+      }
 
       tetj_result(journal, tetj_activity_count, tetj_tp_count,
                   fail ? TETJ_FAIL : TETJ_PASS);
