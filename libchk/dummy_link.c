@@ -10,6 +10,7 @@ extern void XtAddActions(void);
 extern void alarm(void);
 extern void crypt(void);
 extern void dlsym(void);
+extern void shm_open(void);
 extern void _Unwind_DeleteException(void);
 extern void acos(void);
 extern void addch(void);
@@ -51,6 +52,9 @@ int main()
 	
 	/* libdl */
 	dlsym();
+	
+	/* librt */
+	shm_open();
 	
 	/* libgcc_s */
 	_Unwind_DeleteException();
