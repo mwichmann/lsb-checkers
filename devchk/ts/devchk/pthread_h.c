@@ -613,7 +613,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10280,0);
 Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
 #endif
 
-#if __i386__
+#if __s390__ && !__s390x__
+#elif __i386__
 #elif __powerpc64__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__

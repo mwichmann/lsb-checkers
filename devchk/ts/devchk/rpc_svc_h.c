@@ -291,6 +291,8 @@ CheckTypeSize(__dispatch_fn_t,8, 9997, 9)
 CheckTypeSize(__dispatch_fn_t,8, 9997, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__dispatch_fn_t,0, 9997, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(__dispatch_fn_t,0, 9997, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9997,0);
 Msg("Find size of __dispatch_fn_t (9997)\n");
@@ -341,6 +343,15 @@ CheckOffset(struct svc_req,rq_proc,0,6,32254)
 CheckOffset(struct svc_req,rq_cred,0,6,32255)
 CheckOffset(struct svc_req,rq_clntcred,0,6,32256)
 CheckOffset(struct svc_req,rq_xprt,0,6,32257)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct svc_req,0, 9991, 10)
+Msg("Missing member data for svc_req on S390\n");
+CheckOffset(struct svc_req,rq_prog,0,10,32252)
+CheckOffset(struct svc_req,rq_vers,0,10,32253)
+CheckOffset(struct svc_req,rq_proc,0,10,32254)
+CheckOffset(struct svc_req,rq_cred,0,10,32255)
+CheckOffset(struct svc_req,rq_clntcred,0,10,32256)
+CheckOffset(struct svc_req,rq_xprt,0,10,32257)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9991,0);
 Msg("Find size of svc_req (9991)\n");

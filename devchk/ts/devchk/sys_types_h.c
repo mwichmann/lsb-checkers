@@ -364,9 +364,11 @@ CheckTypeSize(useconds_t,4, 9369, 2)
 #elif __powerpc64__
 CheckTypeSize(useconds_t,4, 9369, 9)
 #elif __ia64__
-CheckTypeSize(useconds_t,0, 9369, 3)
+CheckTypeSize(useconds_t,4, 9369, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(useconds_t,0, 9369, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(useconds_t,0, 9369, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9369,0);
 Msg("Find size of useconds_t (9369)\n");
