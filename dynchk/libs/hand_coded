@@ -12,3 +12,5 @@ calloc
 realloc
 free
 dlsym
+tcgetattr
+tcsetattr
