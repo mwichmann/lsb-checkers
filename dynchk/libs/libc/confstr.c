@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static size_t(*funcptr)(int, char *, size_t) = 0;
+#undef confstr
+static size_t(*funcptr) (int , char * , size_t ) = 0;
 
-size_t confstr(int arg0, char * arg1, size_t arg2)
+size_t confstr (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "confstr");
@@ -15,7 +16,7 @@ size_t confstr(int arg0, char * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-size_t lsb_confstr(int arg0, char * arg1, size_t arg2)
+size_t lsb_confstr (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "confstr");

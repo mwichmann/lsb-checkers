@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const char *, const char *, const char *, unsigned long, int) = 0;
+#undef dcngettext
+static char *(*funcptr) (const char * , const char * , const char * , unsigned long , int ) = 0;
 
-char * dcngettext(const char * arg0, const char * arg1, const char * arg2, unsigned long arg3, int arg4)
+char * dcngettext (const char * arg0 , const char * arg1 , const char * arg2 , unsigned long arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dcngettext");
@@ -16,7 +17,7 @@ char * dcngettext(const char * arg0, const char * arg1, const char * arg2, unsig
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-char * lsb_dcngettext(const char * arg0, const char * arg1, const char * arg2, unsigned long arg3, int arg4)
+char * lsb_dcngettext (const char * arg0 , const char * arg1 , const char * arg2 , unsigned long arg3 , int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dcngettext");

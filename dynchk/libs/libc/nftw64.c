@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <ftw.h>
-static int(*funcptr)(char *, __nftw64_func_t, int, int) = 0;
+#undef nftw64
+static int(*funcptr) (const char * , __nftw64_func_t , int , int ) = 0;
 
-int nftw64(char * arg0, __nftw64_func_t arg1, int arg2, int arg3)
+int nftw64 (const char * arg0 , __nftw64_func_t arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nftw64");
@@ -16,7 +17,7 @@ int nftw64(char * arg0, __nftw64_func_t arg1, int arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_nftw64(char * arg0, __nftw64_func_t arg1, int arg2, int arg3)
+int lsb_nftw64 (const char * arg0 , __nftw64_func_t arg1 , int arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nftw64");

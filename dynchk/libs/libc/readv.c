@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(int, const struct iovec *, size_t) = 0;
+#undef readv
+static int(*funcptr) (int , const struct iovec * , size_t ) = 0;
 
-int readv(int arg0, const struct iovec * arg1, size_t arg2)
+int readv (int arg0 , const struct iovec * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readv");
@@ -15,7 +16,7 @@ int readv(int arg0, const struct iovec * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_readv(int arg0, const struct iovec * arg1, size_t arg2)
+int lsb_readv (int arg0 , const struct iovec * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readv");

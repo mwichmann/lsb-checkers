@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <ftw.h>
-static int(*funcptr)(const char *, __ftw_func_t, int) = 0;
+#undef ftw
+static int(*funcptr) (const char * , __ftw_func_t , int ) = 0;
 
-int ftw(const char * arg0, __ftw_func_t arg1, int arg2)
+int ftw (const char * arg0 , __ftw_func_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftw");
@@ -15,7 +16,7 @@ int ftw(const char * arg0, __ftw_func_t arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_ftw(const char * arg0, __ftw_func_t arg1, int arg2)
+int lsb_ftw (const char * arg0 , __ftw_func_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftw");

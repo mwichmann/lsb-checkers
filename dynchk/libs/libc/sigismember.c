@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <signal.h>
-static int(*funcptr)(const sigset_t *, int) = 0;
+#undef sigismember
+static int(*funcptr) (const sigset_t * , int ) = 0;
 
-int sigismember(const sigset_t * arg0, int arg1)
+int sigismember (const sigset_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigismember");
@@ -14,7 +15,7 @@ int sigismember(const sigset_t * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sigismember(const sigset_t * arg0, int arg1)
+int lsb_sigismember (const sigset_t * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigismember");

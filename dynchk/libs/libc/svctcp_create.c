@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <sys/types.h>
 #include <sys/types.h>
-static SVCXPRT *(*funcptr)(int, u_int, u_int) = 0;
+#undef svctcp_create
+static SVCXPRT *(*funcptr) (int , u_int , u_int ) = 0;
 
-SVCXPRT * svctcp_create(int arg0, u_int arg1, u_int arg2)
+SVCXPRT * svctcp_create (int arg0 , u_int arg1 , u_int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svctcp_create");
@@ -16,7 +17,7 @@ SVCXPRT * svctcp_create(int arg0, u_int arg1, u_int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-SVCXPRT * lsb_svctcp_create(int arg0, u_int arg1, u_int arg2)
+SVCXPRT * lsb_svctcp_create (int arg0 , u_int arg1 , u_int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svctcp_create");

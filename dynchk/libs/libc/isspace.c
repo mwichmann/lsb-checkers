@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef isspace
+static int(*funcptr) (int ) = 0;
 
-int isspace(int arg0)
+int isspace (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isspace");
@@ -12,7 +13,7 @@ int isspace(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_isspace(int arg0)
+int lsb_isspace (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isspace");

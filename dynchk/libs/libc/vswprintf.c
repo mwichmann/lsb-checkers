@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stdarg.h>
-static int(*funcptr)(wchar_t *, size_t, const wchar_t *, va_list) = 0;
+#undef vswprintf
+static int(*funcptr) (wchar_t * , size_t , const wchar_t * , va_list ) = 0;
 
-int vswprintf(wchar_t * arg0, size_t arg1, const wchar_t * arg2, va_list arg3)
+int vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vswprintf");
@@ -17,7 +18,7 @@ int vswprintf(wchar_t * arg0, size_t arg1, const wchar_t * arg2, va_list arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_vswprintf(wchar_t * arg0, size_t arg1, const wchar_t * arg2, va_list arg3)
+int lsb_vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vswprintf");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <unistd.h>
-static int(*funcptr)(int, off64_t) = 0;
+#undef ftruncate64
+static int(*funcptr) (int , off64_t ) = 0;
 
-int ftruncate64(int arg0, off64_t arg1)
+int ftruncate64 (int arg0 , off64_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftruncate64");
@@ -14,7 +15,7 @@ int ftruncate64(int arg0, off64_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_ftruncate64(int arg0, off64_t arg1)
+int lsb_ftruncate64 (int arg0 , off64_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftruncate64");

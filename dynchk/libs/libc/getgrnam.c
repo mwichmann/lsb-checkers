@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct group *(*funcptr)(const char *) = 0;
+#undef getgrnam
+static struct group *(*funcptr) (const char * ) = 0;
 
-struct group * getgrnam(const char * arg0)
+struct group * getgrnam (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrnam");
@@ -12,7 +13,7 @@ struct group * getgrnam(const char * arg0)
 	return funcptr(arg0);
 }
 
-struct group * lsb_getgrnam(const char * arg0)
+struct group * lsb_getgrnam (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrnam");

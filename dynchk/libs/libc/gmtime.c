@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct tm *(*funcptr)(const time_t *) = 0;
+#undef gmtime
+static struct tm *(*funcptr) (const time_t * ) = 0;
 
-struct tm * gmtime(const time_t * arg0)
+struct tm * gmtime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gmtime");
@@ -12,7 +13,7 @@ struct tm * gmtime(const time_t * arg0)
 	return funcptr(arg0);
 }
 
-struct tm * lsb_gmtime(const time_t * arg0)
+struct tm * lsb_gmtime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gmtime");

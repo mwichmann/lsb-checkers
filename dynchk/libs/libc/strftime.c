@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static size_t(*funcptr)(char *, size_t, const char *, const struct tm *) = 0;
+#undef strftime
+static size_t(*funcptr) (char * , size_t , const char * , const struct tm * ) = 0;
 
-size_t strftime(char * arg0, size_t arg1, const char * arg2, const struct tm * arg3)
+size_t strftime (char * arg0 , size_t arg1 , const char * arg2 , const struct tm * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strftime");
@@ -16,7 +17,7 @@ size_t strftime(char * arg0, size_t arg1, const char * arg2, const struct tm * a
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-size_t lsb_strftime(char * arg0, size_t arg1, const char * arg2, const struct tm * arg3)
+size_t lsb_strftime (char * arg0 , size_t arg1 , const char * arg2 , const struct tm * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strftime");

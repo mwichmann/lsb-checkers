@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(long, const char *, int, const char *, const char *, const char *) = 0;
+#undef fmtmsg
+static int(*funcptr) (long , const char * , int , const char * , const char * , const char * ) = 0;
 
-int fmtmsg(long arg0, const char * arg1, int arg2, const char * arg3, const char * arg4, const char * arg5)
+int fmtmsg (long arg0 , const char * arg1 , int arg2 , const char * arg3 , const char * arg4 , const char * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmtmsg");
@@ -17,7 +18,7 @@ int fmtmsg(long arg0, const char * arg1, int arg2, const char * arg3, const char
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_fmtmsg(long arg0, const char * arg1, int arg2, const char * arg3, const char * arg4, const char * arg5)
+int lsb_fmtmsg (long arg0 , const char * arg1 , int arg2 , const char * arg3 , const char * arg4 , const char * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmtmsg");

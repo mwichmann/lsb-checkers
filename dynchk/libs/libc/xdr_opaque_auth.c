@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static bool_t(*funcptr)(struct XDR *, struct opaque_auth *) = 0;
+#undef xdr_opaque_auth
+static bool_t(*funcptr) (struct XDR * , struct opaque_auth * ) = 0;
 
-bool_t xdr_opaque_auth(struct XDR * arg0, struct opaque_auth * arg1)
+bool_t xdr_opaque_auth (struct XDR * arg0 , struct opaque_auth * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_opaque_auth");
@@ -13,7 +14,7 @@ bool_t xdr_opaque_auth(struct XDR * arg0, struct opaque_auth * arg1)
 	return funcptr(arg0, arg1);
 }
 
-bool_t lsb_xdr_opaque_auth(struct XDR * arg0, struct opaque_auth * arg1)
+bool_t lsb_xdr_opaque_auth (struct XDR * arg0 , struct opaque_auth * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_opaque_auth");

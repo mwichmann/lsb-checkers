@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(DIR *, struct dirent *, struct dirent * *) = 0;
+#undef readdir_r
+static int(*funcptr) (DIR * , struct dirent * , struct dirent * * ) = 0;
 
-int readdir_r(DIR * arg0, struct dirent * arg1, struct dirent * * arg2)
+int readdir_r (DIR * arg0 , struct dirent * arg1 , struct dirent * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readdir_r");
@@ -14,7 +15,7 @@ int readdir_r(DIR * arg0, struct dirent * arg1, struct dirent * * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_readdir_r(DIR * arg0, struct dirent * arg1, struct dirent * * arg2)
+int lsb_readdir_r (DIR * arg0 , struct dirent * arg1 , struct dirent * * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readdir_r");

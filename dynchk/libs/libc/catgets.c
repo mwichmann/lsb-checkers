@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <nl_types.h>
-static char *(*funcptr)(nl_catd, int, int, const char *) = 0;
+#undef catgets
+static char *(*funcptr) (nl_catd , int , int , const char * ) = 0;
 
-char * catgets(nl_catd arg0, int arg1, int arg2, const char * arg3)
+char * catgets (nl_catd arg0 , int arg1 , int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catgets");
@@ -16,7 +17,7 @@ char * catgets(nl_catd arg0, int arg1, int arg2, const char * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-char * lsb_catgets(nl_catd arg0, int arg1, int arg2, const char * arg3)
+char * lsb_catgets (nl_catd arg0 , int arg1 , int arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catgets");

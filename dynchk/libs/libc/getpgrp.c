@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static pid_t(*funcptr)() = 0;
+#undef getpgrp
+static pid_t(*funcptr) () = 0;
 
-pid_t getpgrp()
+pid_t getpgrp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpgrp");
 	return funcptr();
 }
 
-pid_t lsb_getpgrp()
+pid_t lsb_getpgrp ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpgrp");

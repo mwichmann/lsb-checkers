@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <inttypes.h>
-static uint16_t(*funcptr)(uint16_t) = 0;
+#undef htons
+static uint16_t(*funcptr) (uint16_t ) = 0;
 
-uint16_t htons(uint16_t arg0)
+uint16_t htons (uint16_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htons");
@@ -13,7 +14,7 @@ uint16_t htons(uint16_t arg0)
 	return funcptr(arg0);
 }
 
-uint16_t lsb_htons(uint16_t arg0)
+uint16_t lsb_htons (uint16_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htons");

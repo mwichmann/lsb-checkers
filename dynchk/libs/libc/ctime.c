@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const time_t *) = 0;
+#undef ctime
+static char *(*funcptr) (const time_t * ) = 0;
 
-char * ctime(const time_t * arg0)
+char * ctime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctime");
@@ -12,7 +13,7 @@ char * ctime(const time_t * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_ctime(const time_t * arg0)
+char * lsb_ctime (const time_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctime");

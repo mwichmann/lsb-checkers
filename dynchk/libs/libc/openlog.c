@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(const char *, int, int) = 0;
+#undef openlog
+static void(*funcptr) (const char * , int , int ) = 0;
 
-void openlog(const char * arg0, int arg1, int arg2)
+void openlog (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openlog");
@@ -14,7 +15,7 @@ void openlog(const char * arg0, int arg1, int arg2)
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_openlog(const char * arg0, int arg1, int arg2)
+void lsb_openlog (const char * arg0 , int arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openlog");

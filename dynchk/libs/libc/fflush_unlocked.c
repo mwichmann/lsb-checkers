@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(FILE *) = 0;
+#undef fflush_unlocked
+static int(*funcptr) (FILE * ) = 0;
 
-int fflush_unlocked(FILE * arg0)
+int fflush_unlocked (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fflush_unlocked");
@@ -13,7 +14,7 @@ int fflush_unlocked(FILE * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_fflush_unlocked(FILE * arg0)
+int lsb_fflush_unlocked (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fflush_unlocked");

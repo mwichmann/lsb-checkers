@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *) = 0;
+#undef remove
+static int(*funcptr) (const char * ) = 0;
 
-int remove(const char * arg0)
+int remove (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remove");
@@ -12,7 +13,7 @@ int remove(const char * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_remove(const char * arg0)
+int lsb_remove (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "remove");

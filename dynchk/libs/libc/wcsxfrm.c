@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static size_t(*funcptr)(wchar_t *, const wchar_t *, size_t) = 0;
+#undef wcsxfrm
+static size_t(*funcptr) (wchar_t * , const wchar_t * , size_t ) = 0;
 
-size_t wcsxfrm(wchar_t * arg0, const wchar_t * arg1, size_t arg2)
+size_t wcsxfrm (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsxfrm");
@@ -15,7 +16,7 @@ size_t wcsxfrm(wchar_t * arg0, const wchar_t * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-size_t lsb_wcsxfrm(wchar_t * arg0, const wchar_t * arg1, size_t arg2)
+size_t lsb_wcsxfrm (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsxfrm");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <wctype.h>
-static wint_t(*funcptr)(wint_t) = 0;
+#undef towlower
+static wint_t(*funcptr) (wint_t ) = 0;
 
-wint_t towlower(wint_t arg0)
+wint_t towlower (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towlower");
@@ -13,7 +14,7 @@ wint_t towlower(wint_t arg0)
 	return funcptr(arg0);
 }
 
-wint_t lsb_towlower(wint_t arg0)
+wint_t lsb_towlower (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towlower");

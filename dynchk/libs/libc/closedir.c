@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(DIR *) = 0;
+#undef closedir
+static int(*funcptr) (DIR * ) = 0;
 
-int closedir(DIR * arg0)
+int closedir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "closedir");
@@ -12,7 +13,7 @@ int closedir(DIR * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_closedir(DIR * arg0)
+int lsb_closedir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "closedir");

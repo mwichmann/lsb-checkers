@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <wctype.h>
 #include <wctype.h>
-static int(*funcptr)(wint_t, wctype_t) = 0;
+#undef iswctype
+static int(*funcptr) (wint_t , wctype_t ) = 0;
 
-int iswctype(wint_t arg0, wctype_t arg1)
+int iswctype (wint_t arg0 , wctype_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswctype");
@@ -15,7 +16,7 @@ int iswctype(wint_t arg0, wctype_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_iswctype(wint_t arg0, wctype_t arg1)
+int lsb_iswctype (wint_t arg0 , wctype_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iswctype");

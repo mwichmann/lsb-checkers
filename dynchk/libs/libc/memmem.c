@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stddef.h>
-static void *(*funcptr)(const void *, size_t, const char *, size_t) = 0;
+#undef memmem
+static void *(*funcptr) (const void * , size_t , const void * , size_t ) = 0;
 
-void * memmem(const void * arg0, size_t arg1, const char * arg2, size_t arg3)
+void * memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memmem");
@@ -17,7 +18,7 @@ void * memmem(const void * arg0, size_t arg1, const char * arg2, size_t arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void * lsb_memmem(const void * arg0, size_t arg1, const char * arg2, size_t arg3)
+void * lsb_memmem (const void * arg0 , size_t arg1 , const void * arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memmem");

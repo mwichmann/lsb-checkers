@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(wordexp_t *) = 0;
+#undef wordfree
+static void(*funcptr) (wordexp_t * ) = 0;
 
-void wordfree(wordexp_t * arg0)
+void wordfree (wordexp_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wordfree");
@@ -12,7 +13,7 @@ void wordfree(wordexp_t * arg0)
 	funcptr(arg0);
 }
 
-void lsb_wordfree(wordexp_t * arg0)
+void lsb_wordfree (wordexp_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wordfree");

@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <unistd.h>
-static void *(*funcptr)(void *, size_t, int, int, int, off64_t) = 0;
+#undef mmap64
+static void *(*funcptr) (void * , size_t , int , int , int , off64_t ) = 0;
 
-void * mmap64(void * arg0, size_t arg1, int arg2, int arg3, int arg4, off64_t arg5)
+void * mmap64 (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off64_t arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mmap64");
@@ -19,7 +20,7 @@ void * mmap64(void * arg0, size_t arg1, int arg2, int arg3, int arg4, off64_t ar
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void * lsb_mmap64(void * arg0, size_t arg1, int arg2, int arg3, int arg4, off64_t arg5)
+void * lsb_mmap64 (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off64_t arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mmap64");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *, const char *) = 0;
+#undef strcasecmp
+static int(*funcptr) (const char * , const char * ) = 0;
 
-int strcasecmp(const char * arg0, const char * arg1)
+int strcasecmp (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcasecmp");
@@ -13,7 +14,7 @@ int strcasecmp(const char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_strcasecmp(const char * arg0, const char * arg1)
+int lsb_strcasecmp (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcasecmp");

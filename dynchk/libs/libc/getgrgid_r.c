@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <sys/types.h>
 #include <stddef.h>
-static int(*funcptr)(gid_t, struct group *, char *, size_t, struct group * *) = 0;
+#undef getgrgid_r
+static int(*funcptr) (gid_t , struct group * , char * , size_t , struct group * * ) = 0;
 
-int getgrgid_r(gid_t arg0, struct group * arg1, char * arg2, size_t arg3, struct group * * arg4)
+int getgrgid_r (gid_t arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrgid_r");
@@ -18,7 +19,7 @@ int getgrgid_r(gid_t arg0, struct group * arg1, char * arg2, size_t arg3, struct
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_getgrgid_r(gid_t arg0, struct group * arg1, char * arg2, size_t arg3, struct group * * arg4)
+int lsb_getgrgid_r (gid_t arg0 , struct group * arg1 , char * arg2 , size_t arg3 , struct group * * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrgid_r");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef abort
+static void(*funcptr) () = 0;
 
-void abort()
+void abort ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "abort");
 	funcptr();
 }
 
-void lsb_abort()
+void lsb_abort ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "abort");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <nl_types.h>
-static int(*funcptr)(nl_catd) = 0;
+#undef catclose
+static int(*funcptr) (nl_catd ) = 0;
 
-int catclose(nl_catd arg0)
+int catclose (nl_catd arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catclose");
@@ -13,7 +14,7 @@ int catclose(nl_catd arg0)
 	return funcptr(arg0);
 }
 
-int lsb_catclose(nl_catd arg0)
+int lsb_catclose (nl_catd arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catclose");

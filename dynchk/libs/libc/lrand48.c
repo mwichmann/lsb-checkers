@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)() = 0;
+#undef lrand48
+static long(*funcptr) () = 0;
 
-long lrand48()
+long lrand48 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lrand48");
 	return funcptr();
 }
 
-long lsb_lrand48()
+long lsb_lrand48 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lrand48");

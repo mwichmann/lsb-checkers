@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct dirent64 *(*funcptr)(DIR *) = 0;
+#undef readdir64
+static struct dirent64 *(*funcptr) (DIR * ) = 0;
 
-struct dirent64 * readdir64(DIR * arg0)
+struct dirent64 * readdir64 (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readdir64");
@@ -12,7 +13,7 @@ struct dirent64 * readdir64(DIR * arg0)
 	return funcptr(arg0);
 }
 
-struct dirent64 * lsb_readdir64(DIR * arg0)
+struct dirent64 * lsb_readdir64 (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readdir64");

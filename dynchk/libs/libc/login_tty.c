@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef login_tty
+static int(*funcptr) (int ) = 0;
 
-int login_tty(int arg0)
+int login_tty (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "login_tty");
@@ -12,7 +13,7 @@ int login_tty(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_login_tty(int arg0)
+int lsb_login_tty (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "login_tty");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const mbstate_t *) = 0;
+#undef mbsinit
+static int(*funcptr) (const mbstate_t * ) = 0;
 
-int mbsinit(const mbstate_t * arg0)
+int mbsinit (const mbstate_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbsinit");
@@ -12,7 +13,7 @@ int mbsinit(const mbstate_t * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_mbsinit(const mbstate_t * arg0)
+int lsb_mbsinit (const mbstate_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mbsinit");

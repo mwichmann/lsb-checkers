@@ -3,17 +3,18 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <netinet/in.h>
-static char *(*funcptr)(struct in_addr) = 0;
+#undef inet_ntoa
+static char *(*funcptr) (struct in_addr ) = 0;
 
-char * inet_ntoa(struct in_addr arg0)
+char * inet_ntoa (struct in_addr arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntoa");
-	validate_struct_in_addr(arg0, "inet_ntoa");
+	validate_struct_in_addr(&arg0, "inet_ntoa");
 	return funcptr(arg0);
 }
 
-char * lsb_inet_ntoa(struct in_addr arg0)
+char * lsb_inet_ntoa (struct in_addr arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_ntoa");

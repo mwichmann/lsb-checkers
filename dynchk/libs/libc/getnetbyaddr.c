@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <inttypes.h>
-static struct netent *(*funcptr)(uint32_t, int) = 0;
+#undef getnetbyaddr
+static struct netent *(*funcptr) (uint32_t , int ) = 0;
 
-struct netent * getnetbyaddr(uint32_t arg0, int arg1)
+struct netent * getnetbyaddr (uint32_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnetbyaddr");
@@ -14,7 +15,7 @@ struct netent * getnetbyaddr(uint32_t arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-struct netent * lsb_getnetbyaddr(uint32_t arg0, int arg1)
+struct netent * lsb_getnetbyaddr (uint32_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnetbyaddr");

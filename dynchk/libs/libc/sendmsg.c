@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, const struct msghdr *, int) = 0;
+#undef sendmsg
+static int(*funcptr) (int , const struct msghdr * , int ) = 0;
 
-int sendmsg(int arg0, const struct msghdr * arg1, int arg2)
+int sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sendmsg");
@@ -14,7 +15,7 @@ int sendmsg(int arg0, const struct msghdr * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sendmsg(int arg0, const struct msghdr * arg1, int arg2)
+int lsb_sendmsg (int arg0 , const struct msghdr * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sendmsg");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *) = 0;
+#undef putenv
+static int(*funcptr) (char * ) = 0;
 
-int putenv(char * arg0)
+int putenv (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putenv");
@@ -12,7 +13,7 @@ int putenv(char * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_putenv(char * arg0)
+int lsb_putenv (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putenv");

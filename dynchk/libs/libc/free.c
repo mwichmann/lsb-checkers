@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(void *) = 0;
+#undef free
+static void(*funcptr) (void * ) = 0;
 
-void free(void * arg0)
+void free (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "free");
@@ -12,7 +13,7 @@ void free(void * arg0)
 	funcptr(arg0);
 }
 
-void lsb_free(void * arg0)
+void lsb_free (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "free");

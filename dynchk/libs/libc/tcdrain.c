@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef tcdrain
+static int(*funcptr) (int ) = 0;
 
-int tcdrain(int arg0)
+int tcdrain (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcdrain");
@@ -12,7 +13,7 @@ int tcdrain(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_tcdrain(int arg0)
+int lsb_tcdrain (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcdrain");

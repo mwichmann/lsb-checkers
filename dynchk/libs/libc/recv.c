@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(int, void *, size_t, int) = 0;
+#undef recv
+static int(*funcptr) (int , void * , size_t , int ) = 0;
 
-int recv(int arg0, void * arg1, size_t arg2, int arg3)
+int recv (int arg0 , void * arg1 , size_t arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recv");
@@ -16,7 +17,7 @@ int recv(int arg0, void * arg1, size_t arg2, int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_recv(int arg0, void * arg1, size_t arg2, int arg3)
+int lsb_recv (int arg0 , void * arg1 , size_t arg2 , int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recv");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(int) = 0;
+#undef setnetent
+static void(*funcptr) (int ) = 0;
 
-void setnetent(int arg0)
+void setnetent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setnetent");
@@ -12,7 +13,7 @@ void setnetent(int arg0)
 	funcptr(arg0);
 }
 
-void lsb_setnetent(int arg0)
+void lsb_setnetent (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setnetent");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static unsigned int(*funcptr)(unsigned int) = 0;
+#undef alarm
+static unsigned int(*funcptr) (unsigned int ) = 0;
 
-unsigned int alarm(unsigned int arg0)
+unsigned int alarm (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "alarm");
@@ -12,7 +13,7 @@ unsigned int alarm(unsigned int arg0)
 	return funcptr(arg0);
 }
 
-unsigned int lsb_alarm(unsigned int arg0)
+unsigned int lsb_alarm (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "alarm");

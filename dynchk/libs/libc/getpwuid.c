@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static struct passwd *(*funcptr)(uid_t) = 0;
+#undef getpwuid
+static struct passwd *(*funcptr) (uid_t ) = 0;
 
-struct passwd * getpwuid(uid_t arg0)
+struct passwd * getpwuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwuid");
@@ -13,7 +14,7 @@ struct passwd * getpwuid(uid_t arg0)
 	return funcptr(arg0);
 }
 
-struct passwd * lsb_getpwuid(uid_t arg0)
+struct passwd * lsb_getpwuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwuid");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <signal.h>
-static sighandler_t(*funcptr)(int, sighandler_t) = 0;
+#undef bsd_signal
+static sighandler_t(*funcptr) (int , sighandler_t ) = 0;
 
-sighandler_t bsd_signal(int arg0, sighandler_t arg1)
+sighandler_t bsd_signal (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bsd_signal");
@@ -14,7 +15,7 @@ sighandler_t bsd_signal(int arg0, sighandler_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-sighandler_t lsb_bsd_signal(int arg0, sighandler_t arg1)
+sighandler_t lsb_bsd_signal (int arg0 , sighandler_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bsd_signal");

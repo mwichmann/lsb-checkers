@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(int, const char *, mode_t, dev_t *) = 0;
+#undef __xmknod
+static int(*funcptr) (int , const char * , mode_t , dev_t * ) = 0;
 
-int __xmknod(int arg0, const char * arg1, mode_t arg2, dev_t * arg3)
+int __xmknod (int arg0 , const char * arg1 , mode_t arg2 , dev_t * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__xmknod");
@@ -16,7 +17,7 @@ int __xmknod(int arg0, const char * arg1, mode_t arg2, dev_t * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb___xmknod(int arg0, const char * arg1, mode_t arg2, dev_t * arg3)
+int lsb___xmknod (int arg0 , const char * arg1 , mode_t arg2 , dev_t * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__xmknod");

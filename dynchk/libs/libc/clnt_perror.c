@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(struct CLIENT *, const char *) = 0;
+#undef clnt_perror
+static void(*funcptr) (struct CLIENT * , const char * ) = 0;
 
-void clnt_perror(struct CLIENT * arg0, const char * arg1)
+void clnt_perror (struct CLIENT * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_perror");
@@ -13,7 +14,7 @@ void clnt_perror(struct CLIENT * arg0, const char * arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_clnt_perror(struct CLIENT * arg0, const char * arg1)
+void lsb_clnt_perror (struct CLIENT * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_perror");

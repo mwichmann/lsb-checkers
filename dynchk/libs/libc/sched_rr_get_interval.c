@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(pid_t, struct timespec *) = 0;
+#undef sched_rr_get_interval
+static int(*funcptr) (pid_t , struct timespec * ) = 0;
 
-int sched_rr_get_interval(pid_t arg0, struct timespec * arg1)
+int sched_rr_get_interval (pid_t arg0 , struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_rr_get_interval");
@@ -14,7 +15,7 @@ int sched_rr_get_interval(pid_t arg0, struct timespec * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sched_rr_get_interval(pid_t arg0, struct timespec * arg1)
+int lsb_sched_rr_get_interval (pid_t arg0 , struct timespec * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_rr_get_interval");

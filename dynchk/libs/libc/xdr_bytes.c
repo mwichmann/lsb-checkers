@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static bool_t(*funcptr)(struct XDR *, char * *, u_int *, u_int) = 0;
+#undef xdr_bytes
+static bool_t(*funcptr) (struct XDR * , char * * , u_int * , u_int ) = 0;
 
-bool_t xdr_bytes(struct XDR * arg0, char * * arg1, u_int * arg2, u_int arg3)
+bool_t xdr_bytes (struct XDR * arg0 , char * * arg1 , u_int * arg2 , u_int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_bytes");
@@ -16,7 +17,7 @@ bool_t xdr_bytes(struct XDR * arg0, char * * arg1, u_int * arg2, u_int arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-bool_t lsb_xdr_bytes(struct XDR * arg0, char * * arg1, u_int * arg2, u_int arg3)
+bool_t lsb_xdr_bytes (struct XDR * arg0 , char * * arg1 , u_int * arg2 , u_int arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_bytes");

@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <unistd.h>
-static ssize_t(*funcptr)(int, const void *, size_t, off64_t) = 0;
+#undef pwrite64
+static ssize_t(*funcptr) (int , const void * , size_t , off64_t ) = 0;
 
-ssize_t pwrite64(int arg0, const void * arg1, size_t arg2, off64_t arg3)
+ssize_t pwrite64 (int arg0 , const void * arg1 , size_t arg2 , off64_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pwrite64");
@@ -17,7 +18,7 @@ ssize_t pwrite64(int arg0, const void * arg1, size_t arg2, off64_t arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-ssize_t lsb_pwrite64(int arg0, const void * arg1, size_t arg2, off64_t arg3)
+ssize_t lsb_pwrite64 (int arg0 , const void * arg1 , size_t arg2 , off64_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pwrite64");

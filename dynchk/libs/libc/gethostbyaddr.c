@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/socket.h>
-static struct hostent *(*funcptr)(const void *, socklen_t, int) = 0;
+#undef gethostbyaddr
+static struct hostent *(*funcptr) (const void * , socklen_t , int ) = 0;
 
-struct hostent * gethostbyaddr(const void * arg0, socklen_t arg1, int arg2)
+struct hostent * gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyaddr");
@@ -15,7 +16,7 @@ struct hostent * gethostbyaddr(const void * arg0, socklen_t arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-struct hostent * lsb_gethostbyaddr(const void * arg0, socklen_t arg1, int arg2)
+struct hostent * lsb_gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyaddr");

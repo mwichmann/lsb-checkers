@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const char *) = 0;
+#undef gettext
+static char *(*funcptr) (const char * ) = 0;
 
-char * gettext(const char * arg0)
+char * gettext (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gettext");
@@ -12,7 +13,7 @@ char * gettext(const char * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_gettext(const char * arg0)
+char * lsb_gettext (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gettext");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)() = 0;
+#undef gethostid
+static long(*funcptr) () = 0;
 
-long gethostid()
+long gethostid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostid");
 	return funcptr();
 }
 
-long lsb_gethostid()
+long lsb_gethostid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostid");

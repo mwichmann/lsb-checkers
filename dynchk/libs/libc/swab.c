@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static void(*funcptr)(void *, void *, ssize_t) = 0;
+#undef swab
+static void(*funcptr) (const void * , void * , ssize_t ) = 0;
 
-void swab(void * arg0, void * arg1, ssize_t arg2)
+void swab (const void * arg0 , void * arg1 , ssize_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swab");
@@ -15,7 +16,7 @@ void swab(void * arg0, void * arg1, ssize_t arg2)
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_swab(void * arg0, void * arg1, ssize_t arg2)
+void lsb_swab (const void * arg0 , void * arg1 , ssize_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swab");

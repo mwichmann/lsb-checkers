@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(glob_t *) = 0;
+#undef globfree
+static void(*funcptr) (glob_t * ) = 0;
 
-void globfree(glob_t * arg0)
+void globfree (glob_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "globfree");
@@ -12,7 +13,7 @@ void globfree(glob_t * arg0)
 	funcptr(arg0);
 }
 
-void lsb_globfree(glob_t * arg0)
+void lsb_globfree (glob_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "globfree");

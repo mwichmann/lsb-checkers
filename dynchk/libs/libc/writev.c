@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(int, const struct iovec *, size_t) = 0;
+#undef writev
+static int(*funcptr) (int , const struct iovec * , size_t ) = 0;
 
-int writev(int arg0, const struct iovec * arg1, size_t arg2)
+int writev (int arg0 , const struct iovec * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "writev");
@@ -15,7 +16,7 @@ int writev(int arg0, const struct iovec * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_writev(int arg0, const struct iovec * arg1, size_t arg2)
+int lsb_writev (int arg0 , const struct iovec * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "writev");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void *(*funcptr)(void *, int, size_t) = 0;
+#undef memset
+static void *(*funcptr) (void * , int , size_t ) = 0;
 
-void * memset(void * arg0, int arg1, size_t arg2)
+void * memset (void * arg0 , int arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memset");
@@ -15,7 +16,7 @@ void * memset(void * arg0, int arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_memset(void * arg0, int arg1, size_t arg2)
+void * lsb_memset (void * arg0 , int arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memset");

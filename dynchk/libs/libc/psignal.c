@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(int, const char *) = 0;
+#undef psignal
+static void(*funcptr) (int , const char * ) = 0;
 
-void psignal(int arg0, const char * arg1)
+void psignal (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "psignal");
@@ -13,7 +14,7 @@ void psignal(int arg0, const char * arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_psignal(int arg0, const char * arg1)
+void lsb_psignal (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "psignal");

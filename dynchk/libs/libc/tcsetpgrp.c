@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(int, pid_t) = 0;
+#undef tcsetpgrp
+static int(*funcptr) (int , pid_t ) = 0;
 
-int tcsetpgrp(int arg0, pid_t arg1)
+int tcsetpgrp (int arg0 , pid_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcsetpgrp");
@@ -14,7 +15,7 @@ int tcsetpgrp(int arg0, pid_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_tcsetpgrp(int arg0, pid_t arg1)
+int lsb_tcsetpgrp (int arg0 , pid_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tcsetpgrp");

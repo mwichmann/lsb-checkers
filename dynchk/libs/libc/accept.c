@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, struct sockaddr *, socklen_t *) = 0;
+#undef accept
+static int(*funcptr) (int , struct sockaddr * , socklen_t * ) = 0;
 
-int accept(int arg0, struct sockaddr * arg1, socklen_t * arg2)
+int accept (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "accept");
@@ -14,7 +15,7 @@ int accept(int arg0, struct sockaddr * arg1, socklen_t * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_accept(int arg0, struct sockaddr * arg1, socklen_t * arg2)
+int lsb_accept (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "accept");

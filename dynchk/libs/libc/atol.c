@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(const char *) = 0;
+#undef atol
+static long(*funcptr) (const char * ) = 0;
 
-long atol(const char * arg0)
+long atol (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atol");
@@ -12,7 +13,7 @@ long atol(const char * arg0)
 	return funcptr(arg0);
 }
 
-long lsb_atol(const char * arg0)
+long lsb_atol (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atol");

@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <wctype.h>
 #include <stdio.h>
-static wint_t(*funcptr)(wint_t, FILE *) = 0;
+#undef ungetwc
+static wint_t(*funcptr) (wint_t , FILE * ) = 0;
 
-wint_t ungetwc(wint_t arg0, FILE * arg1)
+wint_t ungetwc (wint_t arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetwc");
@@ -15,7 +16,7 @@ wint_t ungetwc(wint_t arg0, FILE * arg1)
 	return funcptr(arg0, arg1);
 }
 
-wint_t lsb_ungetwc(wint_t arg0, FILE * arg1)
+wint_t lsb_ungetwc (wint_t arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ungetwc");

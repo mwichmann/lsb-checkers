@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(void *) = 0;
+#undef shmdt
+static int(*funcptr) (const void * ) = 0;
 
-int shmdt(void * arg0)
+int shmdt (const void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmdt");
@@ -12,7 +13,7 @@ int shmdt(void * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_shmdt(void * arg0)
+int lsb_shmdt (const void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmdt");

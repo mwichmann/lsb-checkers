@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void *(*funcptr)(void *, const void *, int, size_t) = 0;
+#undef memccpy
+static void *(*funcptr) (void * , const void * , int , size_t ) = 0;
 
-void * memccpy(void * arg0, const void * arg1, int arg2, size_t arg3)
+void * memccpy (void * arg0 , const void * arg1 , int arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memccpy");
@@ -16,7 +17,7 @@ void * memccpy(void * arg0, const void * arg1, int arg2, size_t arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-void * lsb_memccpy(void * arg0, const void * arg1, int arg2, size_t arg3)
+void * lsb_memccpy (void * arg0 , const void * arg1 , int arg2 , size_t arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memccpy");

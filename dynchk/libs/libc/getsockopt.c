@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, int, int, void *, socklen_t *) = 0;
+#undef getsockopt
+static int(*funcptr) (int , int , int , void * , socklen_t * ) = 0;
 
-int getsockopt(int arg0, int arg1, int arg2, void * arg3, socklen_t * arg4)
+int getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsockopt");
@@ -16,7 +17,7 @@ int getsockopt(int arg0, int arg1, int arg2, void * arg3, socklen_t * arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_getsockopt(int arg0, int arg1, int arg2, void * arg3, socklen_t * arg4)
+int lsb_getsockopt (int arg0 , int arg1 , int arg2 , void * arg3 , socklen_t * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getsockopt");

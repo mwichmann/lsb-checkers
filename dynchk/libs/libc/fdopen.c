@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static FILE *(*funcptr)(int, const char *) = 0;
+#undef fdopen
+static FILE *(*funcptr) (int , const char * ) = 0;
 
-FILE * fdopen(int arg0, const char * arg1)
+FILE * fdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdopen");
@@ -13,7 +14,7 @@ FILE * fdopen(int arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-FILE * lsb_fdopen(int arg0, const char * arg1)
+FILE * lsb_fdopen (int arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdopen");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(char * *, const char *) = 0;
+#undef strsep
+static char *(*funcptr) (char * * , const char * ) = 0;
 
-char * strsep(char * * arg0, const char * arg1)
+char * strsep (char * * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsep");
@@ -13,7 +14,7 @@ char * strsep(char * * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strsep(char * * arg0, const char * arg1)
+char * lsb_strsep (char * * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsep");

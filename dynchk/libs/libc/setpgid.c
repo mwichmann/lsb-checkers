@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <sys/types.h>
 #include <sys/types.h>
-static int(*funcptr)(pid_t, pid_t) = 0;
+#undef setpgid
+static int(*funcptr) (pid_t , pid_t ) = 0;
 
-int setpgid(pid_t arg0, pid_t arg1)
+int setpgid (pid_t arg0 , pid_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpgid");
@@ -15,7 +16,7 @@ int setpgid(pid_t arg0, pid_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_setpgid(pid_t arg0, pid_t arg1)
+int lsb_setpgid (pid_t arg0 , pid_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setpgid");

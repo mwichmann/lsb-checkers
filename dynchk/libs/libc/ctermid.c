@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(char *) = 0;
+#undef ctermid
+static char *(*funcptr) (char * ) = 0;
 
-char * ctermid(char * arg0)
+char * ctermid (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctermid");
@@ -12,7 +13,7 @@ char * ctermid(char * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_ctermid(char * arg0)
+char * lsb_ctermid (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ctermid");

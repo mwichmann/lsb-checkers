@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <wctype.h>
-static wint_t(*funcptr)(wint_t) = 0;
+#undef towupper
+static wint_t(*funcptr) (wint_t ) = 0;
 
-wint_t towupper(wint_t arg0)
+wint_t towupper (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towupper");
@@ -13,7 +14,7 @@ wint_t towupper(wint_t arg0)
 	return funcptr(arg0);
 }
 
-wint_t lsb_towupper(wint_t arg0)
+wint_t lsb_towupper (wint_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "towupper");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <rpc/xdr.h>
-static bool_t(*funcptr)(struct XDR *, enum_t *, char *, struct xdr_discrim *, xdrproc_t) = 0;
+#undef xdr_union
+static bool_t(*funcptr) (XDR * , enum_t * , char * , const struct xdr_discrim * , xdrproc_t ) = 0;
 
-bool_t xdr_union(struct XDR * arg0, enum_t * arg1, char * arg2, struct xdr_discrim * arg3, xdrproc_t arg4)
+bool_t xdr_union (XDR * arg0 , enum_t * arg1 , char * arg2 , const struct xdr_discrim * arg3 , xdrproc_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_union");
@@ -17,7 +18,7 @@ bool_t xdr_union(struct XDR * arg0, enum_t * arg1, char * arg2, struct xdr_discr
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-bool_t lsb_xdr_union(struct XDR * arg0, enum_t * arg1, char * arg2, struct xdr_discrim * arg3, xdrproc_t arg4)
+bool_t lsb_xdr_union (XDR * arg0 , enum_t * arg1 , char * arg2 , const struct xdr_discrim * arg3 , xdrproc_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_union");

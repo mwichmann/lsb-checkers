@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct CLIENT *(*funcptr)(const char *, const u_long, const u_long, const char *) = 0;
+#undef clnt_create
+static struct CLIENT *(*funcptr) (const char * , const u_long , const u_long , const char * ) = 0;
 
-struct CLIENT * clnt_create(const char * arg0, const u_long arg1, const u_long arg2, const char * arg3)
+struct CLIENT * clnt_create (const char * arg0 , const u_long arg1 , const u_long arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_create");
@@ -15,7 +16,7 @@ struct CLIENT * clnt_create(const char * arg0, const u_long arg1, const u_long a
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-struct CLIENT * lsb_clnt_create(const char * arg0, const u_long arg1, const u_long arg2, const char * arg3)
+struct CLIENT * lsb_clnt_create (const char * arg0 , const u_long arg1 , const u_long arg2 , const char * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_create");

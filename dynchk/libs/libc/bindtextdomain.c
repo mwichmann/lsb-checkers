@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const char *, const char *) = 0;
+#undef bindtextdomain
+static char *(*funcptr) (const char * , const char * ) = 0;
 
-char * bindtextdomain(const char * arg0, const char * arg1)
+char * bindtextdomain (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bindtextdomain");
@@ -13,7 +14,7 @@ char * bindtextdomain(const char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_bindtextdomain(const char * arg0, const char * arg1)
+char * lsb_bindtextdomain (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bindtextdomain");

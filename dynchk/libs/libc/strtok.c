@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(char *, const char *) = 0;
+#undef strtok
+static char *(*funcptr) (char * , const char * ) = 0;
 
-char * strtok(char * arg0, const char * arg1)
+char * strtok (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtok");
@@ -13,7 +14,7 @@ char * strtok(char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strtok(char * arg0, const char * arg1)
+char * lsb_strtok (char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtok");

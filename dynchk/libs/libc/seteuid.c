@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(uid_t) = 0;
+#undef seteuid
+static int(*funcptr) (uid_t ) = 0;
 
-int seteuid(uid_t arg0)
+int seteuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seteuid");
@@ -13,7 +14,7 @@ int seteuid(uid_t arg0)
 	return funcptr(arg0);
 }
 
-int lsb_seteuid(uid_t arg0)
+int lsb_seteuid (uid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seteuid");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static intmax_t(*funcptr)(wchar_t *, wchar_t * *, int) = 0;
+#undef wcstoimax
+static intmax_t(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
-intmax_t wcstoimax(wchar_t * arg0, wchar_t * * arg1, int arg2)
+intmax_t wcstoimax (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoimax");
@@ -14,7 +15,7 @@ intmax_t wcstoimax(wchar_t * arg0, wchar_t * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-intmax_t lsb_wcstoimax(wchar_t * arg0, wchar_t * * arg1, int arg2)
+intmax_t lsb_wcstoimax (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoimax");

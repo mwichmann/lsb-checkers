@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)() = 0;
+#undef __getpagesize
+static int(*funcptr) () = 0;
 
-int __getpagesize()
+int __getpagesize ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__getpagesize");
 	return funcptr();
 }
 
-int lsb___getpagesize()
+int lsb___getpagesize ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__getpagesize");

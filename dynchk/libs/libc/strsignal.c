@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(int) = 0;
+#undef strsignal
+static char *(*funcptr) (int ) = 0;
 
-char * strsignal(int arg0)
+char * strsignal (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsignal");
@@ -12,7 +13,7 @@ char * strsignal(int arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_strsignal(int arg0)
+char * lsb_strsignal (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strsignal");

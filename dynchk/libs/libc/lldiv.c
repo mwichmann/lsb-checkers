@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static lldiv_t(*funcptr)(long long, long long) = 0;
+#undef lldiv
+static lldiv_t(*funcptr) (long long , long long ) = 0;
 
-lldiv_t lldiv(long long arg0, long long arg1)
+lldiv_t lldiv (long long arg0 , long long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lldiv");
@@ -13,7 +14,7 @@ lldiv_t lldiv(long long arg0, long long arg1)
 	return funcptr(arg0, arg1);
 }
 
-lldiv_t lsb_lldiv(long long arg0, long long arg1)
+lldiv_t lsb_lldiv (long long arg0 , long long arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lldiv");

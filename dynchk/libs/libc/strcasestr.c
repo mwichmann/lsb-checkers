@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const char *, const char *) = 0;
+#undef strcasestr
+static char *(*funcptr) (const char * , const char * ) = 0;
 
-char * strcasestr(const char * arg0, const char * arg1)
+char * strcasestr (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcasestr");
@@ -13,7 +14,7 @@ char * strcasestr(const char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strcasestr(const char * arg0, const char * arg1)
+char * lsb_strcasestr (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strcasestr");

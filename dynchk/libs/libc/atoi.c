@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *) = 0;
+#undef atoi
+static int(*funcptr) (const char * ) = 0;
 
-int atoi(const char * arg0)
+int atoi (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atoi");
@@ -12,7 +13,7 @@ int atoi(const char * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_atoi(const char * arg0)
+int lsb_atoi (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "atoi");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, const char *, struct stat64 *) = 0;
+#undef __xstat64
+static int(*funcptr) (int , const char * , struct stat64 * ) = 0;
 
-int __xstat64(int arg0, const char * arg1, struct stat64 * arg2)
+int __xstat64 (int arg0 , const char * arg1 , struct stat64 * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__xstat64");
@@ -14,7 +15,7 @@ int __xstat64(int arg0, const char * arg1, struct stat64 * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb___xstat64(int arg0, const char * arg1, struct stat64 * arg2)
+int lsb___xstat64 (int arg0 , const char * arg1 , struct stat64 * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__xstat64");

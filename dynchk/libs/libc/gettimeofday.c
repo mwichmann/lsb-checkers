@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct timeval *, struct timezone *) = 0;
+#undef gettimeofday
+static int(*funcptr) (struct timeval * , struct timezone * ) = 0;
 
-int gettimeofday(struct timeval * arg0, struct timezone * arg1)
+int gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gettimeofday");
@@ -13,7 +14,7 @@ int gettimeofday(struct timeval * arg0, struct timezone * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_gettimeofday(struct timeval * arg0, struct timezone * arg1)
+int lsb_gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gettimeofday");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static struct group *(*funcptr)(gid_t) = 0;
+#undef getgrgid
+static struct group *(*funcptr) (gid_t ) = 0;
 
-struct group * getgrgid(gid_t arg0)
+struct group * getgrgid (gid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrgid");
@@ -13,7 +14,7 @@ struct group * getgrgid(gid_t arg0)
 	return funcptr(arg0);
 }
 
-struct group * lsb_getgrgid(gid_t arg0)
+struct group * lsb_getgrgid (gid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrgid");

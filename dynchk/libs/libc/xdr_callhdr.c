@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <rpc/rpc_msg.h>
-static void(*funcptr)(struct XDR *, struct rpc_msg *) = 0;
+#undef xdr_callhdr
+static bool_t(*funcptr) (XDR * , struct rpc_msg * ) = 0;
 
-void xdr_callhdr(struct XDR * arg0, struct rpc_msg * arg1)
+bool_t xdr_callhdr (XDR * arg0 , struct rpc_msg * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_callhdr");
@@ -14,7 +15,7 @@ void xdr_callhdr(struct XDR * arg0, struct rpc_msg * arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_xdr_callhdr(struct XDR * arg0, struct rpc_msg * arg1)
+bool_t lsb_xdr_callhdr (XDR * arg0 , struct rpc_msg * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_callhdr");

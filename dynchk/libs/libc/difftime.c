@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <sys/types.h>
 #include <sys/types.h>
-static double(*funcptr)(time_t, time_t) = 0;
+#undef difftime
+static double(*funcptr) (time_t , time_t ) = 0;
 
-double difftime(time_t arg0, time_t arg1)
+double difftime (time_t arg0 , time_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "difftime");
@@ -15,7 +16,7 @@ double difftime(time_t arg0, time_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-double lsb_difftime(time_t arg0, time_t arg1)
+double lsb_difftime (time_t arg0 , time_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "difftime");

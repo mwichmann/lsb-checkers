@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void *(*funcptr)(size_t) = 0;
+#undef malloc
+static void *(*funcptr) (size_t ) = 0;
 
-void * malloc(size_t arg0)
+void * malloc (size_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "malloc");
@@ -13,7 +14,7 @@ void * malloc(size_t arg0)
 	return funcptr(arg0);
 }
 
-void * lsb_malloc(size_t arg0)
+void * lsb_malloc (size_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "malloc");

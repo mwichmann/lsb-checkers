@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static clock_t(*funcptr)() = 0;
+#undef clock
+static clock_t(*funcptr) () = 0;
 
-clock_t clock()
+clock_t clock ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clock");
 	return funcptr();
 }
 
-clock_t lsb_clock()
+clock_t lsb_clock ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clock");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(char *) = 0;
+#undef cuserid
+static char *(*funcptr) (char * ) = 0;
 
-char * cuserid(char * arg0)
+char * cuserid (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cuserid");
@@ -12,7 +13,7 @@ char * cuserid(char * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_cuserid(char * arg0)
+char * lsb_cuserid (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cuserid");

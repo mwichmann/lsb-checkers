@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long double(*funcptr)(const char *, char * *, int) = 0;
+#undef __strtold_internal
+static long double(*funcptr) (const char * , char * * , int ) = 0;
 
-long double __strtold_internal(const char * arg0, char * * arg1, int arg2)
+long double __strtold_internal (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtold_internal");
@@ -14,7 +15,7 @@ long double __strtold_internal(const char * arg0, char * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-long double lsb___strtold_internal(const char * arg0, char * * arg1, int arg2)
+long double lsb___strtold_internal (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtold_internal");

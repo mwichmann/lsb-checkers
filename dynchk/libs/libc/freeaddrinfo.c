@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(struct addrinfo *) = 0;
+#undef freeaddrinfo
+static void(*funcptr) (struct addrinfo * ) = 0;
 
-void freeaddrinfo(struct addrinfo * arg0)
+void freeaddrinfo (struct addrinfo * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freeaddrinfo");
@@ -12,7 +13,7 @@ void freeaddrinfo(struct addrinfo * arg0)
 	funcptr(arg0);
 }
 
-void lsb_freeaddrinfo(struct addrinfo * arg0)
+void lsb_freeaddrinfo (struct addrinfo * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "freeaddrinfo");

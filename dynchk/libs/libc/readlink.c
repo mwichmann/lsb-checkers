@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(const char *, char *, size_t) = 0;
+#undef readlink
+static int(*funcptr) (const char * , char * , size_t ) = 0;
 
-int readlink(const char * arg0, char * arg1, size_t arg2)
+int readlink (const char * arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readlink");
@@ -15,7 +16,7 @@ int readlink(const char * arg0, char * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_readlink(const char * arg0, char * arg1, size_t arg2)
+int lsb_readlink (const char * arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "readlink");

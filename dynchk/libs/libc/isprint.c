@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef isprint
+static int(*funcptr) (int ) = 0;
 
-int isprint(int arg0)
+int isprint (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isprint");
@@ -12,7 +13,7 @@ int isprint(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_isprint(int arg0)
+int lsb_isprint (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "isprint");

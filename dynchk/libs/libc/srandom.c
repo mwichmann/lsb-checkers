@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(unsigned int) = 0;
+#undef srandom
+static void(*funcptr) (unsigned int ) = 0;
 
-void srandom(unsigned int arg0)
+void srandom (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srandom");
@@ -12,7 +13,7 @@ void srandom(unsigned int arg0)
 	funcptr(arg0);
 }
 
-void lsb_srandom(unsigned int arg0)
+void lsb_srandom (unsigned int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srandom");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(char *) = 0;
+#undef getwd
+static char *(*funcptr) (char * ) = 0;
 
-char * getwd(char * arg0)
+char * getwd (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwd");
@@ -12,7 +13,7 @@ char * getwd(char * arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_getwd(char * arg0)
+char * lsb_getwd (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwd");

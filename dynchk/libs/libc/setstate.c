@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void *(*funcptr)(void *) = 0;
+#undef setstate
+static void *(*funcptr) (void * ) = 0;
 
-void * setstate(void * arg0)
+void * setstate (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setstate");
@@ -12,7 +13,7 @@ void * setstate(void * arg0)
 	return funcptr(arg0);
 }
 
-void * lsb_setstate(void * arg0)
+void * lsb_setstate (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setstate");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(FILE *, int) = 0;
+#undef fwide
+static int(*funcptr) (FILE * , int ) = 0;
 
-int fwide(FILE * arg0, int arg1)
+int fwide (FILE * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fwide");
@@ -14,7 +15,7 @@ int fwide(FILE * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fwide(FILE * arg0, int arg1)
+int lsb_fwide (FILE * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fwide");

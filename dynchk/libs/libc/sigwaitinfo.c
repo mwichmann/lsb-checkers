@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <signal.h>
-static int(*funcptr)(const sigset_t *, siginfo_t *, const struct timespec *) = 0;
+#undef sigwaitinfo
+static int(*funcptr) (const sigset_t * , siginfo_t * , const struct timespec * ) = 0;
 
-int sigwaitinfo(const sigset_t * arg0, siginfo_t * arg1, const struct timespec * arg2)
+int sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 , const struct timespec * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwaitinfo");
@@ -15,7 +16,7 @@ int sigwaitinfo(const sigset_t * arg0, siginfo_t * arg1, const struct timespec *
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_sigwaitinfo(const sigset_t * arg0, siginfo_t * arg1, const struct timespec * arg2)
+int lsb_sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 , const struct timespec * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwaitinfo");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(int) = 0;
+#undef sysconf
+static long(*funcptr) (int ) = 0;
 
-long sysconf(int arg0)
+long sysconf (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sysconf");
@@ -12,7 +13,7 @@ long sysconf(int arg0)
 	return funcptr(arg0);
 }
 
-long lsb_sysconf(int arg0)
+long lsb_sysconf (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sysconf");

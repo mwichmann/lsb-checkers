@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int) = 0;
+#undef pipe
+static int(*funcptr) (int [2]) = 0;
 
-int pipe(int arg0)
+int pipe (int arg0 [2])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pipe");
@@ -12,7 +13,7 @@ int pipe(int arg0)
 	return funcptr(arg0);
 }
 
-int lsb_pipe(int arg0)
+int lsb_pipe (int arg0 [2])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pipe");

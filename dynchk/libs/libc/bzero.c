@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void(*funcptr)(void *, size_t) = 0;
+#undef bzero
+static void(*funcptr) (void * , size_t ) = 0;
 
-void bzero(void * arg0, size_t arg1)
+void bzero (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bzero");
@@ -14,7 +15,7 @@ void bzero(void * arg0, size_t arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_bzero(void * arg0, size_t arg1)
+void lsb_bzero (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bzero");

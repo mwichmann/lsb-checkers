@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static long(*funcptr)(DIR *) = 0;
+#undef telldir
+static long(*funcptr) (DIR * ) = 0;
 
-long telldir(DIR * arg0)
+long telldir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "telldir");
@@ -12,7 +13,7 @@ long telldir(DIR * arg0)
 	return funcptr(arg0);
 }
 
-long lsb_telldir(DIR * arg0)
+long lsb_telldir (DIR * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "telldir");

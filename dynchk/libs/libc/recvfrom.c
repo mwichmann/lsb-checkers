@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(int, void *, size_t, int, struct sockaddr *, socklen_t *) = 0;
+#undef recvfrom
+static int(*funcptr) (int , void * , size_t , int , struct sockaddr * , socklen_t * ) = 0;
 
-int recvfrom(int arg0, void * arg1, size_t arg2, int arg3, struct sockaddr * arg4, socklen_t * arg5)
+int recvfrom (int arg0 , void * arg1 , size_t arg2 , int arg3 , struct sockaddr * arg4 , socklen_t * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recvfrom");
@@ -18,7 +19,7 @@ int recvfrom(int arg0, void * arg1, size_t arg2, int arg3, struct sockaddr * arg
 	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-int lsb_recvfrom(int arg0, void * arg1, size_t arg2, int arg3, struct sockaddr * arg4, socklen_t * arg5)
+int lsb_recvfrom (int arg0 , void * arg1 , size_t arg2 , int arg3 , struct sockaddr * arg4 , socklen_t * arg5 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "recvfrom");

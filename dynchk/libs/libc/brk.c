@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(void *) = 0;
+#undef brk
+static int(*funcptr) (void * ) = 0;
 
-int brk(void * arg0)
+int brk (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "brk");
@@ -12,7 +13,7 @@ int brk(void * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_brk(void * arg0)
+int lsb_brk (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "brk");

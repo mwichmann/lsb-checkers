@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(char *, wchar_t) = 0;
+#undef wctomb
+static int(*funcptr) (char * , wchar_t ) = 0;
 
-int wctomb(char * arg0, wchar_t arg1)
+int wctomb (char * arg0 , wchar_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctomb");
@@ -14,7 +15,7 @@ int wctomb(char * arg0, wchar_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_wctomb(char * arg0, wchar_t arg1)
+int lsb_wctomb (char * arg0 , wchar_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wctomb");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(int, int, off_t) = 0;
+#undef lockf
+static int(*funcptr) (int , int , off_t ) = 0;
 
-int lockf(int arg0, int arg1, off_t arg2)
+int lockf (int arg0 , int arg1 , off_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lockf");
@@ -15,7 +16,7 @@ int lockf(int arg0, int arg1, off_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_lockf(int arg0, int arg1, off_t arg2)
+int lsb_lockf (int arg0 , int arg1 , off_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lockf");

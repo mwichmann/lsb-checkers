@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(const char *, FILE *) = 0;
+#undef fputs
+static int(*funcptr) (const char * , FILE * ) = 0;
 
-int fputs(const char * arg0, FILE * arg1)
+int fputs (const char * arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputs");
@@ -14,7 +15,7 @@ int fputs(const char * arg0, FILE * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fputs(const char * arg0, FILE * arg1)
+int lsb_fputs (const char * arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputs");

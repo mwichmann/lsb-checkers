@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct tm *(*funcptr)(const time_t *, struct tm *) = 0;
+#undef localtime_r
+static struct tm *(*funcptr) (const time_t * , struct tm * ) = 0;
 
-struct tm * localtime_r(const time_t * arg0, struct tm * arg1)
+struct tm * localtime_r (const time_t * arg0 , struct tm * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "localtime_r");
@@ -13,7 +14,7 @@ struct tm * localtime_r(const time_t * arg0, struct tm * arg1)
 	return funcptr(arg0, arg1);
 }
 
-struct tm * lsb_localtime_r(const time_t * arg0, struct tm * arg1)
+struct tm * lsb_localtime_r (const time_t * arg0 , struct tm * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "localtime_r");

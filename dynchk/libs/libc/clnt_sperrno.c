@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <rpc/clnt.h>
-static char *(*funcptr)(enum clnt_stat) = 0;
+#undef clnt_sperrno
+static char *(*funcptr) (enum clnt_stat ) = 0;
 
-char * clnt_sperrno(enum clnt_stat arg0)
+char * clnt_sperrno (enum clnt_stat arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_sperrno");
@@ -13,7 +14,7 @@ char * clnt_sperrno(enum clnt_stat arg0)
 	return funcptr(arg0);
 }
 
-char * lsb_clnt_sperrno(enum clnt_stat arg0)
+char * lsb_clnt_sperrno (enum clnt_stat arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_sperrno");

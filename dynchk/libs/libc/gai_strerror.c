@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static const char *(*funcptr)(int) = 0;
+#undef gai_strerror
+static const char *(*funcptr) (int ) = 0;
 
-const char * gai_strerror(int arg0)
+const char * gai_strerror (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gai_strerror");
@@ -12,7 +13,7 @@ const char * gai_strerror(int arg0)
 	return funcptr(arg0);
 }
 
-const char * lsb_gai_strerror(int arg0)
+const char * lsb_gai_strerror (int arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gai_strerror");

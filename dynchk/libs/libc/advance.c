@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, char *) = 0;
+#undef advance
+static int(*funcptr) (char * , char * ) = 0;
 
-int advance(char * arg0, char * arg1)
+int advance (char * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "advance");
@@ -13,7 +14,7 @@ int advance(char * arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_advance(char * arg0, char * arg1)
+int lsb_advance (char * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "advance");

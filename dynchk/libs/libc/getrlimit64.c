@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, struct rlimit64 *) = 0;
+#undef getrlimit64
+static int(*funcptr) (id_t , struct rlimit64 * ) = 0;
 
-int getrlimit64(int arg0, struct rlimit64 * arg1)
+int getrlimit64 (id_t arg0 , struct rlimit64 * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrlimit64");
@@ -13,7 +14,7 @@ int getrlimit64(int arg0, struct rlimit64 * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_getrlimit64(int arg0, struct rlimit64 * arg1)
+int lsb_getrlimit64 (id_t arg0 , struct rlimit64 * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrlimit64");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, wordexp_t *, int) = 0;
+#undef wordexp
+static int(*funcptr) (const char * , wordexp_t * , int ) = 0;
 
-int wordexp(char * arg0, wordexp_t * arg1, int arg2)
+int wordexp (const char * arg0 , wordexp_t * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wordexp");
@@ -14,7 +15,7 @@ int wordexp(char * arg0, wordexp_t * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_wordexp(char * arg0, wordexp_t * arg1, int arg2)
+int lsb_wordexp (const char * arg0 , wordexp_t * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wordexp");

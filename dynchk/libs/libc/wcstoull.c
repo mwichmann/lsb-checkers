@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static unsigned long long(*funcptr)(const wchar_t *, wchar_t * *, int) = 0;
+#undef wcstoull
+static unsigned long long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
-unsigned long long wcstoull(const wchar_t * arg0, wchar_t * * arg1, int arg2)
+unsigned long long wcstoull (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoull");
@@ -14,7 +15,7 @@ unsigned long long wcstoull(const wchar_t * arg0, wchar_t * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-unsigned long long lsb_wcstoull(const wchar_t * arg0, wchar_t * * arg1, int arg2)
+unsigned long long lsb_wcstoull (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoull");

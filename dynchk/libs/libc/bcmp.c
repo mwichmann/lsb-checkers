@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(const void *, const void *, size_t) = 0;
+#undef bcmp
+static int(*funcptr) (const void * , const void * , size_t ) = 0;
 
-int bcmp(const void * arg0, const void * arg1, size_t arg2)
+int bcmp (const void * arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bcmp");
@@ -15,7 +16,7 @@ int bcmp(const void * arg0, const void * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_bcmp(const void * arg0, const void * arg1, size_t arg2)
+int lsb_bcmp (const void * arg0 , const void * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "bcmp");

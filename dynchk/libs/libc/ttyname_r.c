@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(int, char *, size_t) = 0;
+#undef ttyname_r
+static int(*funcptr) (int , char * , size_t ) = 0;
 
-int ttyname_r(int arg0, char * arg1, size_t arg2)
+int ttyname_r (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ttyname_r");
@@ -15,7 +16,7 @@ int ttyname_r(int arg0, char * arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_ttyname_r(int arg0, char * arg1, size_t arg2)
+int lsb_ttyname_r (int arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ttyname_r");

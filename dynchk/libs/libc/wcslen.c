@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static size_t(*funcptr)(const wchar_t *) = 0;
+#undef wcslen
+static size_t(*funcptr) (const wchar_t * ) = 0;
 
-size_t wcslen(const wchar_t * arg0)
+size_t wcslen (const wchar_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcslen");
@@ -12,7 +13,7 @@ size_t wcslen(const wchar_t * arg0)
 	return funcptr(arg0);
 }
 
-size_t lsb_wcslen(const wchar_t * arg0)
+size_t lsb_wcslen (const wchar_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcslen");

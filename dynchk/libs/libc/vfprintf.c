@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <stdarg.h>
-static int(*funcptr)(FILE *, const char *, va_list) = 0;
+#undef vfprintf
+static int(*funcptr) (FILE * , const char * , va_list ) = 0;
 
-int vfprintf(FILE * arg0, const char * arg1, va_list arg2)
+int vfprintf (FILE * arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfprintf");
@@ -16,7 +17,7 @@ int vfprintf(FILE * arg0, const char * arg1, va_list arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_vfprintf(FILE * arg0, const char * arg1, va_list arg2)
+int lsb_vfprintf (FILE * arg0 , const char * arg1 , va_list arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfprintf");

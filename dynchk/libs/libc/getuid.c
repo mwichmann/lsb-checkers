@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static uid_t(*funcptr)() = 0;
+#undef getuid
+static uid_t(*funcptr) () = 0;
 
-uid_t getuid()
+uid_t getuid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getuid");
 	return funcptr();
 }
 
-uid_t lsb_getuid()
+uid_t lsb_getuid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getuid");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
-static int(*funcptr)(pthread_t, int) = 0;
+#undef pthread_kill
+static int(*funcptr) (pthread_t , int ) = 0;
 
-int pthread_kill(pthread_t arg0, int arg1)
+int pthread_kill (pthread_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_kill");
@@ -14,7 +15,7 @@ int pthread_kill(pthread_t arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_pthread_kill(pthread_t arg0, int arg1)
+int lsb_pthread_kill (pthread_t arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_kill");

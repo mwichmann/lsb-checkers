@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct servent *(*funcptr)() = 0;
+#undef getservent
+static struct servent *(*funcptr) () = 0;
 
-struct servent * getservent()
+struct servent * getservent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getservent");
 	return funcptr();
 }
 
-struct servent * lsb_getservent()
+struct servent * lsb_getservent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getservent");

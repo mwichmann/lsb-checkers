@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static FILE *(*funcptr)() = 0;
+#undef tmpfile64
+static FILE *(*funcptr) () = 0;
 
-FILE * tmpfile64()
+FILE * tmpfile64 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tmpfile64");
 	return funcptr();
 }
 
-FILE * lsb_tmpfile64()
+FILE * lsb_tmpfile64 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tmpfile64");

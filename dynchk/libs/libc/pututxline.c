@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <utmpx.h>
-static struct utmpx *(*funcptr)(const struct utmpx *) = 0;
+#undef pututxline
+static struct utmpx *(*funcptr) (const struct utmpx * ) = 0;
 
-struct utmpx * pututxline(const struct utmpx * arg0)
+struct utmpx * pututxline (const struct utmpx * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pututxline");
@@ -13,7 +14,7 @@ struct utmpx * pututxline(const struct utmpx * arg0)
 	return funcptr(arg0);
 }
 
-struct utmpx * lsb_pututxline(const struct utmpx * arg0)
+struct utmpx * lsb_pututxline (const struct utmpx * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pututxline");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(void *, void *) = 0;
+#undef insque
+static void(*funcptr) (void * , void * ) = 0;
 
-void insque(void * arg0, void * arg1)
+void insque (void * arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insque");
@@ -13,7 +14,7 @@ void insque(void * arg0, void * arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb_insque(void * arg0, void * arg1)
+void lsb_insque (void * arg0 , void * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "insque");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(glob64_t *) = 0;
+#undef globfree64
+static void(*funcptr) (glob64_t * ) = 0;
 
-void globfree64(glob64_t * arg0)
+void globfree64 (glob64_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "globfree64");
@@ -12,7 +13,7 @@ void globfree64(glob64_t * arg0)
 	funcptr(arg0);
 }
 
-void lsb_globfree64(glob64_t * arg0)
+void lsb_globfree64 (glob64_t * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "globfree64");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <inttypes.h>
-static uint32_t(*funcptr)(uint32_t) = 0;
+#undef htonl
+static uint32_t(*funcptr) (uint32_t ) = 0;
 
-uint32_t htonl(uint32_t arg0)
+uint32_t htonl (uint32_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htonl");
@@ -13,7 +14,7 @@ uint32_t htonl(uint32_t arg0)
 	return funcptr(arg0);
 }
 
-uint32_t lsb_htonl(uint32_t arg0)
+uint32_t lsb_htonl (uint32_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "htonl");

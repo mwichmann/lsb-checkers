@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static iconv_t(*funcptr)(const char *, const char *) = 0;
+#undef iconv_open
+static iconv_t(*funcptr) (const char * , const char * ) = 0;
 
-iconv_t iconv_open(const char * arg0, const char * arg1)
+iconv_t iconv_open (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iconv_open");
@@ -13,7 +14,7 @@ iconv_t iconv_open(const char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-iconv_t lsb_iconv_open(const char * arg0, const char * arg1)
+iconv_t lsb_iconv_open (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "iconv_open");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef endservent
+static void(*funcptr) () = 0;
 
-void endservent()
+void endservent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endservent");
 	funcptr();
 }
 
-void lsb_endservent()
+void lsb_endservent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endservent");

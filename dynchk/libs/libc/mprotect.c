@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(void *, size_t, int) = 0;
+#undef mprotect
+static int(*funcptr) (void * , size_t , int ) = 0;
 
-int mprotect(void * arg0, size_t arg1, int arg2)
+int mprotect (void * arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mprotect");
@@ -15,7 +16,7 @@ int mprotect(void * arg0, size_t arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_mprotect(void * arg0, size_t arg1, int arg2)
+int lsb_mprotect (void * arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mprotect");

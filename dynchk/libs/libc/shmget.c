@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(key_t, int, int) = 0;
+#undef shmget
+static int(*funcptr) (key_t , size_t , int ) = 0;
 
-int shmget(key_t arg0, int arg1, int arg2)
+int shmget (key_t arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmget");
@@ -15,7 +16,7 @@ int shmget(key_t arg0, int arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_shmget(key_t arg0, int arg1, int arg2)
+int lsb_shmget (key_t arg0 , size_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmget");

@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <stddef.h>
-static void(*funcptr)(FILE *, char *, size_t) = 0;
+#undef setbuffer
+static void(*funcptr) (FILE * , char * , size_t ) = 0;
 
-void setbuffer(FILE * arg0, char * arg1, size_t arg2)
+void setbuffer (FILE * arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuffer");
@@ -16,7 +17,7 @@ void setbuffer(FILE * arg0, char * arg1, size_t arg2)
 	funcptr(arg0, arg1, arg2);
 }
 
-void lsb_setbuffer(FILE * arg0, char * arg1, size_t arg2)
+void lsb_setbuffer (FILE * arg0 , char * arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setbuffer");

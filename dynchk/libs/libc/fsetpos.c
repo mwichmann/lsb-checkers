@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static int(*funcptr)(FILE *, fpos_t *) = 0;
+#undef fsetpos
+static int(*funcptr) (FILE * , fpos_t * ) = 0;
 
-int fsetpos(FILE * arg0, fpos_t * arg1)
+int fsetpos (FILE * arg0 , fpos_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos");
@@ -14,7 +15,7 @@ int fsetpos(FILE * arg0, fpos_t * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_fsetpos(FILE * arg0, fpos_t * arg1)
+int lsb_fsetpos (FILE * arg0 , fpos_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fsetpos");

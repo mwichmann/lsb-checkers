@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static unsigned long(*funcptr)(const char *) = 0;
+#undef inet_addr
+static unsigned long(*funcptr) (const char * ) = 0;
 
-unsigned long inet_addr(const char * arg0)
+unsigned long inet_addr (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_addr");
@@ -12,7 +13,7 @@ unsigned long inet_addr(const char * arg0)
 	return funcptr(arg0);
 }
 
-unsigned long lsb_inet_addr(const char * arg0)
+unsigned long lsb_inet_addr (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_addr");

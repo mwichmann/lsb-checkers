@@ -6,9 +6,10 @@
 #include <rpc/types.h>
 #include <rpc/svc.h>
 #include <rpc/types.h>
-static bool_t(*funcptr)(SVCXPRT *, rpcprog_t, rpcvers_t, __dispatch_fn_t, rpcprot_t) = 0;
+#undef svc_register
+static bool_t(*funcptr) (SVCXPRT * , rpcprog_t , rpcvers_t , __dispatch_fn_t , rpcprot_t ) = 0;
 
-bool_t svc_register(SVCXPRT * arg0, rpcprog_t arg1, rpcvers_t arg2, __dispatch_fn_t arg3, rpcprot_t arg4)
+bool_t svc_register (SVCXPRT * arg0 , rpcprog_t arg1 , rpcvers_t arg2 , __dispatch_fn_t arg3 , rpcprot_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_register");
@@ -20,7 +21,7 @@ bool_t svc_register(SVCXPRT * arg0, rpcprog_t arg1, rpcvers_t arg2, __dispatch_f
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-bool_t lsb_svc_register(SVCXPRT * arg0, rpcprog_t arg1, rpcvers_t arg2, __dispatch_fn_t arg3, rpcprot_t arg4)
+bool_t lsb_svc_register (SVCXPRT * arg0 , rpcprog_t arg1 , rpcvers_t arg2 , __dispatch_fn_t arg3 , rpcprot_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_register");

@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <search.h>
 #include <search.h>
-static ENTRY *(*funcptr)(ENTRY, ACTION) = 0;
+#undef hsearch
+static ENTRY *(*funcptr) (ENTRY , ACTION ) = 0;
 
-ENTRY * hsearch(ENTRY arg0, ACTION arg1)
+ENTRY * hsearch (ENTRY arg0 , ACTION arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hsearch");
@@ -15,7 +16,7 @@ ENTRY * hsearch(ENTRY arg0, ACTION arg1)
 	return funcptr(arg0, arg1);
 }
 
-ENTRY * lsb_hsearch(ENTRY arg0, ACTION arg1)
+ENTRY * lsb_hsearch (ENTRY arg0 , ACTION arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hsearch");

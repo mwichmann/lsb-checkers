@@ -5,9 +5,10 @@
 #include <stddef.h>
 #include <stddef.h>
 #include <stdio.h>
-static size_t(*funcptr)(const void *, size_t, size_t, FILE *) = 0;
+#undef fwrite
+static size_t(*funcptr) (const void * , size_t , size_t , FILE * ) = 0;
 
-size_t fwrite(const void * arg0, size_t arg1, size_t arg2, FILE * arg3)
+size_t fwrite (const void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fwrite");
@@ -18,7 +19,7 @@ size_t fwrite(const void * arg0, size_t arg1, size_t arg2, FILE * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-size_t lsb_fwrite(const void * arg0, size_t arg1, size_t arg2, FILE * arg3)
+size_t lsb_fwrite (const void * arg0 , size_t arg1 , size_t arg2 , FILE * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fwrite");

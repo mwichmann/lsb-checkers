@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct timex *) = 0;
+#undef adjtimex
+static int(*funcptr) (struct timex * ) = 0;
 
-int adjtimex(struct timex * arg0)
+int adjtimex (struct timex * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adjtimex");
@@ -12,7 +13,7 @@ int adjtimex(struct timex * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_adjtimex(struct timex * arg0)
+int lsb_adjtimex (struct timex * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adjtimex");

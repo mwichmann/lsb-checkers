@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)() = 0;
+#undef getlogin
+static char *(*funcptr) () = 0;
 
-char * getlogin()
+char * getlogin ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getlogin");
 	return funcptr();
 }
 
-char * lsb_getlogin()
+char * lsb_getlogin ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getlogin");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <unistd.h>
-static int(*funcptr)(int, int, off64_t) = 0;
+#undef lockf64
+static int(*funcptr) (int , int , off64_t ) = 0;
 
-int lockf64(int arg0, int arg1, off64_t arg2)
+int lockf64 (int arg0 , int arg1 , off64_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lockf64");
@@ -15,7 +16,7 @@ int lockf64(int arg0, int arg1, off64_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_lockf64(int arg0, int arg1, off64_t arg2)
+int lsb_lockf64 (int arg0 , int arg1 , off64_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lockf64");

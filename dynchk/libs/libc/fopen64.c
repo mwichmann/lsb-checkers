@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static FILE *(*funcptr)(const char *, const char *) = 0;
+#undef fopen64
+static FILE *(*funcptr) (const char * , const char * ) = 0;
 
-FILE * fopen64(const char * arg0, const char * arg1)
+FILE * fopen64 (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fopen64");
@@ -13,7 +14,7 @@ FILE * fopen64(const char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-FILE * lsb_fopen64(const char * arg0, const char * arg1)
+FILE * lsb_fopen64 (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fopen64");

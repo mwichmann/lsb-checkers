@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct protoent *(*funcptr)() = 0;
+#undef getprotoent
+static struct protoent *(*funcptr) () = 0;
 
-struct protoent * getprotoent()
+struct protoent * getprotoent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotoent");
 	return funcptr();
 }
 
-struct protoent * lsb_getprotoent()
+struct protoent * lsb_getprotoent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotoent");

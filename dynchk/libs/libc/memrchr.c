@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static void *(*funcptr)(const char *, int, size_t) = 0;
+#undef memrchr
+static void *(*funcptr) (const char * , int , size_t ) = 0;
 
-void * memrchr(const char * arg0, int arg1, size_t arg2)
+void * memrchr (const char * arg0 , int arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memrchr");
@@ -15,7 +16,7 @@ void * memrchr(const char * arg0, int arg1, size_t arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_memrchr(const char * arg0, int arg1, size_t arg2)
+void * lsb_memrchr (const char * arg0 , int arg1 , size_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "memrchr");

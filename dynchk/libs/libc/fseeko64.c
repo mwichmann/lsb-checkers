@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <sys/types.h>
-static int(*funcptr)(FILE *, loff_t, int) = 0;
+#undef fseeko64
+static int(*funcptr) (FILE * , loff_t , int ) = 0;
 
-int fseeko64(FILE * arg0, loff_t arg1, int arg2)
+int fseeko64 (FILE * arg0 , loff_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseeko64");
@@ -16,7 +17,7 @@ int fseeko64(FILE * arg0, loff_t arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_fseeko64(FILE * arg0, loff_t arg1, int arg2)
+int lsb_fseeko64 (FILE * arg0 , loff_t arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fseeko64");

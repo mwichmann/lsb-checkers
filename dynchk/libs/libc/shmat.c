@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void *(*funcptr)(int, void *, int) = 0;
+#undef shmat
+static void *(*funcptr) (int , const void * , int ) = 0;
 
-void * shmat(int arg0, void * arg1, int arg2)
+void * shmat (int arg0 , const void * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmat");
@@ -14,7 +15,7 @@ void * shmat(int arg0, void * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_shmat(int arg0, void * arg1, int arg2)
+void * lsb_shmat (int arg0 , const void * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "shmat");

@@ -5,9 +5,10 @@
 #include <sys/types.h>
 #include <sys/types.h>
 #include <sys/types.h>
-static void(*funcptr)(struct XDR *, u_int, u_int, caddr_t, int, int) = 0;
+#undef xdrrec_create
+static void(*funcptr) (XDR * , u_int , u_int , caddr_t , int  (*)(char *, char *,int) , int ) = 0;
 
-void xdrrec_create(struct XDR * arg0, u_int arg1, u_int arg2, caddr_t arg3, int arg4, int arg5)
+void xdrrec_create (XDR * arg0 , u_int arg1 , u_int arg2 , caddr_t arg3 , int  (*arg4 )(char *, char *,int) , int  (*arg5)(char *, char *,int) )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrrec_create");
@@ -20,7 +21,7 @@ void xdrrec_create(struct XDR * arg0, u_int arg1, u_int arg2, caddr_t arg3, int 
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 }
 
-void lsb_xdrrec_create(struct XDR * arg0, u_int arg1, u_int arg2, caddr_t arg3, int arg4, int arg5)
+void lsb_xdrrec_create (XDR * arg0 , u_int arg1 , u_int arg2 , caddr_t arg3 , int  (*arg4 )(char *, char *,int) , int  (*arg5)(char *, char *,int) )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdrrec_create");

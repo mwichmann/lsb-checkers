@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static pid_t(*funcptr)() = 0;
+#undef getppid
+static pid_t(*funcptr) () = 0;
 
-pid_t getppid()
+pid_t getppid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getppid");
 	return funcptr();
 }
 
-pid_t lsb_getppid()
+pid_t lsb_getppid ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getppid");

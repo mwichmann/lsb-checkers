@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stdio.h>
-static wint_t(*funcptr)(wchar_t, FILE *) = 0;
+#undef fputwc
+static wint_t(*funcptr) (wchar_t , FILE * ) = 0;
 
-wint_t fputwc(wchar_t arg0, FILE * arg1)
+wint_t fputwc (wchar_t arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputwc");
@@ -15,7 +16,7 @@ wint_t fputwc(wchar_t arg0, FILE * arg1)
 	return funcptr(arg0, arg1);
 }
 
-wint_t lsb_fputwc(wchar_t arg0, FILE * arg1)
+wint_t lsb_fputwc (wchar_t arg0 , FILE * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fputwc");

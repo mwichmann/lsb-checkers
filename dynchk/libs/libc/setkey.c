@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(const char *) = 0;
+#undef setkey
+static void(*funcptr) (const char * ) = 0;
 
-void setkey(const char * arg0)
+void setkey (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setkey");
@@ -12,7 +13,7 @@ void setkey(const char * arg0)
 	funcptr(arg0);
 }
 
-void lsb_setkey(const char * arg0)
+void lsb_setkey (const char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setkey");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(gid_t) = 0;
+#undef setegid
+static int(*funcptr) (gid_t ) = 0;
 
-int setegid(gid_t arg0)
+int setegid (gid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setegid");
@@ -13,7 +14,7 @@ int setegid(gid_t arg0)
 	return funcptr(arg0);
 }
 
-int lsb_setegid(gid_t arg0)
+int lsb_setegid (gid_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setegid");

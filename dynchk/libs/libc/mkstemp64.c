@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *) = 0;
+#undef mkstemp64
+static int(*funcptr) (char * ) = 0;
 
-int mkstemp64(char * arg0)
+int mkstemp64 (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mkstemp64");
@@ -12,7 +13,7 @@ int mkstemp64(char * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_mkstemp64(char * arg0)
+int lsb_mkstemp64 (char * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mkstemp64");

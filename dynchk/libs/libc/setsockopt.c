@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/socket.h>
-static int(*funcptr)(int, int, int, const void *, socklen_t) = 0;
+#undef setsockopt
+static int(*funcptr) (int , int , int , const void * , socklen_t ) = 0;
 
-int setsockopt(int arg0, int arg1, int arg2, const void * arg3, socklen_t arg4)
+int setsockopt (int arg0 , int arg1 , int arg2 , const void * arg3 , socklen_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setsockopt");
@@ -17,7 +18,7 @@ int setsockopt(int arg0, int arg1, int arg2, const void * arg3, socklen_t arg4)
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_setsockopt(int arg0, int arg1, int arg2, const void * arg3, socklen_t arg4)
+int lsb_setsockopt (int arg0 , int arg1 , int arg2 , const void * arg3 , socklen_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setsockopt");

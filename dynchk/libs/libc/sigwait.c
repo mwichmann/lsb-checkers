@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const sigset_t *, int *) = 0;
+#undef sigwait
+static int(*funcptr) (const sigset_t * , int * ) = 0;
 
-int sigwait(const sigset_t * arg0, int * arg1)
+int sigwait (const sigset_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwait");
@@ -13,7 +14,7 @@ int sigwait(const sigset_t * arg0, int * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_sigwait(const sigset_t * arg0, int * arg1)
+int lsb_sigwait (const sigset_t * arg0 , int * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sigwait");

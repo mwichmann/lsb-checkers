@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *, const char *, int) = 0;
+#undef setenv
+static int(*funcptr) (const char * , const char * , int ) = 0;
 
-int setenv(const char * arg0, const char * arg1, int arg2)
+int setenv (const char * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setenv");
@@ -14,7 +15,7 @@ int setenv(const char * arg0, const char * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_setenv(const char * arg0, const char * arg1, int arg2)
+int lsb_setenv (const char * arg0 , const char * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setenv");

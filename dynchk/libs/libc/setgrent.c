@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)() = 0;
+#undef setgrent
+static void(*funcptr) () = 0;
 
-void setgrent()
+void setgrent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgrent");
 	funcptr();
 }
 
-void lsb_setgrent()
+void lsb_setgrent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setgrent");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static char *(*funcptr)(const char *, size_t) = 0;
+#undef strndup
+static char *(*funcptr) (const char * , size_t ) = 0;
 
-char * strndup(const char * arg0, size_t arg1)
+char * strndup (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strndup");
@@ -14,7 +15,7 @@ char * strndup(const char * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-char * lsb_strndup(const char * arg0, size_t arg1)
+char * lsb_strndup (const char * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strndup");

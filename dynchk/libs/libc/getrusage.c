@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(int, struct rusage *) = 0;
+#undef getrusage
+static int(*funcptr) (int , struct rusage * ) = 0;
 
-int getrusage(int arg0, struct rusage * arg1)
+int getrusage (int arg0 , struct rusage * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrusage");
@@ -13,7 +14,7 @@ int getrusage(int arg0, struct rusage * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_getrusage(int arg0, struct rusage * arg1)
+int lsb_getrusage (int arg0 , struct rusage * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getrusage");

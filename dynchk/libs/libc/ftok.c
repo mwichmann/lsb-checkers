@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static key_t(*funcptr)(const char *, int) = 0;
+#undef ftok
+static key_t(*funcptr) (const char * , int ) = 0;
 
-key_t ftok(const char * arg0, int arg1)
+key_t ftok (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftok");
@@ -13,7 +14,7 @@ key_t ftok(const char * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-key_t lsb_ftok(const char * arg0, int arg1)
+key_t lsb_ftok (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftok");

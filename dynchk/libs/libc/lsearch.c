@@ -4,9 +4,10 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stdlib.h>
-static void *(*funcptr)(void *, void *, size_t *, size_t, __compar_fn_t) = 0;
+#undef lsearch
+static void *(*funcptr) (const void * , void * , size_t * , size_t , __compar_fn_t ) = 0;
 
-void * lsearch(void * arg0, void * arg1, size_t * arg2, size_t arg3, __compar_fn_t arg4)
+void * lsearch (const void * arg0 , void * arg1 , size_t * arg2 , size_t arg3 , __compar_fn_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lsearch");
@@ -18,7 +19,7 @@ void * lsearch(void * arg0, void * arg1, size_t * arg2, size_t arg3, __compar_fn
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-void * lsb_lsearch(void * arg0, void * arg1, size_t * arg2, size_t arg3, __compar_fn_t arg4)
+void * lsb_lsearch (const void * arg0 , void * arg1 , size_t * arg2 , size_t arg3 , __compar_fn_t arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lsearch");

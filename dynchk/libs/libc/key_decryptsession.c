@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, union des_block *) = 0;
+#undef key_decryptsession
+static int(*funcptr) (char * , union des_block * ) = 0;
 
-int key_decryptsession(char * arg0, union des_block * arg1)
+int key_decryptsession (char * arg0 , union des_block * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "key_decryptsession");
@@ -13,7 +14,7 @@ int key_decryptsession(char * arg0, union des_block * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_key_decryptsession(char * arg0, union des_block * arg1)
+int lsb_key_decryptsession (char * arg0 , union des_block * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "key_decryptsession");

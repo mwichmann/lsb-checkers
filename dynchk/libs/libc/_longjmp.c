@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <setjmp.h>
-static void(*funcptr)(jmp_buf, int) = 0;
+#undef _longjmp
+static void(*funcptr) (jmp_buf , int ) = 0;
 
-void _longjmp(jmp_buf arg0, int arg1)
+void _longjmp (jmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_longjmp");
@@ -14,7 +15,7 @@ void _longjmp(jmp_buf arg0, int arg1)
 	funcptr(arg0, arg1);
 }
 
-void lsb__longjmp(jmp_buf arg0, int arg1)
+void lsb__longjmp (jmp_buf arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "_longjmp");

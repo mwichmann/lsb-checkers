@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, char *) = 0;
+#undef step
+static int(*funcptr) (char * , char * ) = 0;
 
-int step(char * arg0, char * arg1)
+int step (char * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "step");
@@ -13,7 +14,7 @@ int step(char * arg0, char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_step(char * arg0, char * arg1)
+int lsb_step (char * arg0 , char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "step");

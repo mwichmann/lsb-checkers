@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct passwd *(*funcptr)() = 0;
+#undef getpwent
+static struct passwd *(*funcptr) () = 0;
 
-struct passwd * getpwent()
+struct passwd * getpwent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwent");
 	return funcptr();
 }
 
-struct passwd * lsb_getpwent()
+struct passwd * lsb_getpwent ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getpwent");

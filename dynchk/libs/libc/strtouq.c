@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static unsigned long long(*funcptr)(const char *, char * *, int) = 0;
+#undef strtouq
+static unsigned long long(*funcptr) (const char * , char * * , int ) = 0;
 
-unsigned long long strtouq(const char * arg0, char * * arg1, int arg2)
+unsigned long long strtouq (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtouq");
@@ -14,7 +15,7 @@ unsigned long long strtouq(const char * arg0, char * * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-unsigned long long lsb_strtouq(const char * arg0, char * * arg1, int arg2)
+unsigned long long lsb_strtouq (const char * arg0 , char * * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtouq");

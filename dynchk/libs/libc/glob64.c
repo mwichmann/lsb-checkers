@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(char *, int, int, glob64_t *) = 0;
+#undef glob64
+static int(*funcptr) (const char * , int (*)(const char *, int) , int , glob64_t * ) = 0;
 
-int glob64(char * arg0, int arg1, int arg2, glob64_t * arg3)
+int glob64 (const char * arg0 , int arg1 , int (*arg2)(const char *, int), glob64_t * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glob64");
@@ -15,7 +16,7 @@ int glob64(char * arg0, int arg1, int arg2, glob64_t * arg3)
 	return funcptr(arg0, arg1, arg2, arg3);
 }
 
-int lsb_glob64(char * arg0, int arg1, int arg2, glob64_t * arg3)
+int lsb_glob64 (const char * arg0 , int (*arg1)(const char *, int) , int arg2 , glob64_t * arg3 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glob64");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static struct lconv *(*funcptr)() = 0;
+#undef localeconv
+static struct lconv *(*funcptr) () = 0;
 
-struct lconv * localeconv()
+struct lconv * localeconv ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "localeconv");
 	return funcptr();
 }
 
-struct lconv * lsb_localeconv()
+struct lconv * lsb_localeconv ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "localeconv");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
-static long(*funcptr)(FILE *) = 0;
+#undef ftell
+static long(*funcptr) (FILE * ) = 0;
 
-long ftell(FILE * arg0)
+long ftell (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftell");
@@ -13,7 +14,7 @@ long ftell(FILE * arg0)
 	return funcptr(arg0);
 }
 
-long lsb_ftell(FILE * arg0)
+long lsb_ftell (FILE * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftell");

@@ -2,16 +2,17 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)() = 0;
+#undef drand48
+static double(*funcptr) () = 0;
 
-double drand48()
+double drand48 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "drand48");
 	return funcptr();
 }
 
-double lsb_drand48()
+double lsb_drand48 ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "drand48");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static nl_catd(*funcptr)(const char *, int) = 0;
+#undef catopen
+static nl_catd(*funcptr) (const char * , int ) = 0;
 
-nl_catd catopen(const char * arg0, int arg1)
+nl_catd catopen (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catopen");
@@ -13,7 +14,7 @@ nl_catd catopen(const char * arg0, int arg1)
 	return funcptr(arg0, arg1);
 }
 
-nl_catd lsb_catopen(const char * arg0, int arg1)
+nl_catd lsb_catopen (const char * arg0 , int arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "catopen");

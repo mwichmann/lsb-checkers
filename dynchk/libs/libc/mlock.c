@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-static int(*funcptr)(void *, size_t) = 0;
+#undef mlock
+static int(*funcptr) (void * , size_t ) = 0;
 
-int mlock(void * arg0, size_t arg1)
+int mlock (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlock");
@@ -14,7 +15,7 @@ int mlock(void * arg0, size_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_mlock(void * arg0, size_t arg1)
+int lsb_mlock (void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mlock");

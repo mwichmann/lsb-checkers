@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static int(*funcptr)(const char *, mode_t) = 0;
+#undef mkdir
+static int(*funcptr) (const char * , mode_t ) = 0;
 
-int mkdir(const char * arg0, mode_t arg1)
+int mkdir (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mkdir");
@@ -14,7 +15,7 @@ int mkdir(const char * arg0, mode_t arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_mkdir(const char * arg0, mode_t arg1)
+int lsb_mkdir (const char * arg0 , mode_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mkdir");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(const char *, const char *) = 0;
+#undef symlink
+static int(*funcptr) (const char * , const char * ) = 0;
 
-int symlink(const char * arg0, const char * arg1)
+int symlink (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "symlink");
@@ -13,7 +14,7 @@ int symlink(const char * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_symlink(const char * arg0, const char * arg1)
+int lsb_symlink (const char * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "symlink");

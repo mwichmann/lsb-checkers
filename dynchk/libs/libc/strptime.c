@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static char *(*funcptr)(const char *, const char *, struct tm *) = 0;
+#undef strptime
+static char *(*funcptr) (const char * , const char * , struct tm * ) = 0;
 
-char * strptime(const char * arg0, const char * arg1, struct tm * arg2)
+char * strptime (const char * arg0 , const char * arg1 , struct tm * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strptime");
@@ -14,7 +15,7 @@ char * strptime(const char * arg0, const char * arg1, struct tm * arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-char * lsb_strptime(const char * arg0, const char * arg1, struct tm * arg2)
+char * lsb_strptime (const char * arg0 , const char * arg1 , struct tm * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strptime");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void(*funcptr)(struct termios *) = 0;
+#undef cfmakeraw
+static void(*funcptr) (struct termios * ) = 0;
 
-void cfmakeraw(struct termios * arg0)
+void cfmakeraw (struct termios * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfmakeraw");
@@ -12,7 +13,7 @@ void cfmakeraw(struct termios * arg0)
 	funcptr(arg0);
 }
 
-void lsb_cfmakeraw(struct termios * arg0)
+void lsb_cfmakeraw (struct termios * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfmakeraw");

@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-static pid_t(*funcptr)(pid_t, int *, int) = 0;
+#undef waitpid
+static pid_t(*funcptr) (pid_t , int * , int ) = 0;
 
-pid_t waitpid(pid_t arg0, int * arg1, int arg2)
+pid_t waitpid (pid_t arg0 , int * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waitpid");
@@ -15,7 +16,7 @@ pid_t waitpid(pid_t arg0, int * arg1, int arg2)
 	return funcptr(arg0, arg1, arg2);
 }
 
-pid_t lsb_waitpid(pid_t arg0, int * arg1, int arg2)
+pid_t lsb_waitpid (pid_t arg0 , int * arg1 , int arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waitpid");

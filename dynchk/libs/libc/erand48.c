@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static double(*funcptr)(unsigned short) = 0;
+#undef erand48
+static double(*funcptr) (unsigned short [3]) = 0;
 
-double erand48(unsigned short arg0)
+double erand48 (unsigned short arg0 [3])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erand48");
@@ -12,7 +13,7 @@ double erand48(unsigned short arg0)
 	return funcptr(arg0);
 }
 
-double lsb_erand48(unsigned short arg0)
+double lsb_erand48 (unsigned short arg0 [3])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erand48");

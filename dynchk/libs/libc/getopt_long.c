@@ -3,9 +3,10 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <getopt.h>
-static int(*funcptr)(int, char *const , const char *, const struct option *, int *) = 0;
+#undef getopt_long
+static int(*funcptr) (int , char *const  , const char *[] , const struct option * , int * ) = 0;
 
-int getopt_long(int arg0, char *const  arg1, const char * arg2, const struct option * arg3, int * arg4)
+int getopt_long (int arg0 , char *const  arg1[] , const char * arg2 , const struct option * arg3 , int * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getopt_long");
@@ -17,7 +18,7 @@ int getopt_long(int arg0, char *const  arg1, const char * arg2, const struct opt
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_getopt_long(int arg0, char *const  arg1, const char * arg2, const struct option * arg3, int * arg4)
+int lsb_getopt_long (int arg0 , char *const  arg1[] , const char * arg2 , const struct option * arg3 , int * arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getopt_long");

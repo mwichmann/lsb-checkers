@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(struct timeval *, struct timeval *) = 0;
+#undef adjtime
+static int(*funcptr) (struct timeval * , struct timeval * ) = 0;
 
-int adjtime(struct timeval * arg0, struct timeval * arg1)
+int adjtime (struct timeval * arg0 , struct timeval * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adjtime");
@@ -13,7 +14,7 @@ int adjtime(struct timeval * arg0, struct timeval * arg1)
 	return funcptr(arg0, arg1);
 }
 
-int lsb_adjtime(struct timeval * arg0, struct timeval * arg1)
+int lsb_adjtime (struct timeval * arg0 , struct timeval * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adjtime");
