@@ -188,25 +188,25 @@ struct modlib modlibs [] = {
 #endif
 	{"LSB-Graphics","libSM.so.6",libSM_so_6,libSM_so_6_classinfo},
 #if __s390x__
-	{"LSB-Core","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
+	{"LSB-C++","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
 #if __x86_64__
-	{"LSB-Core","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
+	{"LSB-C++","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
 #if __s390__ && !__s390x__
-	{"LSB-Core","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
+	{"LSB-C++","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
 #if __powerpc64__
-	{"LSB-Core","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
+	{"LSB-C++","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"LSB-Core","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
+	{"LSB-C++","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
 #if __ia64__
-	{"LSB-Core","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
+	{"LSB-C++","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
 #if __i386__
-	{"LSB-Core","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
+	{"LSB-C++","libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
 #if __s390x__
 	{"LSB-Core","libutil.so.1",libutil_so_1,libutil_so_1_classinfo},
