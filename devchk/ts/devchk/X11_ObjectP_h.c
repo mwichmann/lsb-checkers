@@ -120,15 +120,12 @@ CheckTypeSize(struct _ObjectRec,28, 10262, 2)
 CheckOffset(struct _ObjectRec,object,0,2,34409)
 #elif __ia64__
 CheckTypeSize(struct _ObjectRec,48, 10262, 3)
-Msg("Missing member data for _ObjectRec on IA64\n");
 CheckOffset(struct _ObjectRec,object,0,3,34409)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectRec,28, 10262, 6)
-Msg("Missing member data for _ObjectRec on PPC32\n");
 CheckOffset(struct _ObjectRec,object,0,6,34409)
 #elif __s390__
 CheckTypeSize(struct _ObjectRec,28, 10262, 10)
-Msg("Missing member data for _ObjectRec on S390\n");
 CheckOffset(struct _ObjectRec,object,0,10,34409)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
@@ -303,15 +300,12 @@ CheckTypeSize(struct _ObjectClassRec,116, 10271, 2)
 CheckOffset(struct _ObjectClassRec,object_class,0,2,34408)
 #elif __ia64__
 CheckTypeSize(struct _ObjectClassRec,224, 10271, 3)
-Msg("Missing member data for _ObjectClassRec on IA64\n");
 CheckOffset(struct _ObjectClassRec,object_class,0,3,34408)
 #elif __powerpc__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 6)
-Msg("Missing member data for _ObjectClassRec on PPC32\n");
 CheckOffset(struct _ObjectClassRec,object_class,0,6,34408)
 #elif __s390__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 10)
-Msg("Missing member data for _ObjectClassRec on S390\n");
 CheckOffset(struct _ObjectClassRec,object_class,0,10,34408)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
