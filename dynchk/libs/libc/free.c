@@ -6,19 +6,18 @@
 static void(*funcptr) (void * ) = 0;
 
 extern void __libc_free(void * );
-
+extern int __lsb_check_params;
 void free (void * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = __libc_free;
-	validate_NULL_TYPETYPE(arg0, "free");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params = 0;
+		validate_NULL_TYPETYPE(arg0, "free");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_free (void * arg0 )
-{
-	if(!funcptr)
-		funcptr = __libc_free;
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 
