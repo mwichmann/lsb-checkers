@@ -217,6 +217,7 @@ typedef	struct	{
 	Elf_Shdr *verdhdr;	/* Version definition header */
 	Elf_Verdef	*verd; /* Array of verdef entries */
 	int	numverdefs;
+	int	baseverdef;
 
 	Elf_Shdr *vernhdr;	/* Version dependency header */
 	Elf_Verneed	*vern; /* Array of verneed entries */
