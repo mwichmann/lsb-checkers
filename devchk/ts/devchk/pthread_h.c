@@ -534,6 +534,8 @@ Msg("Find size of _pthread_rwlock_t (10279)\n");
 
 #if __i386__
 #elif __s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10280,0);
 Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
