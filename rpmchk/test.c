@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "rpmchk.h"
+#include "../fhschk/fhschk.h"
 
 void usage(char *progname)
 {
