@@ -15,7 +15,7 @@ $select.= "AND LibGroup.LGlib=Library.Lid ";
 $select.= "AND Library.Lstd='Yes' ";
 $select.= "AND Interface.Iid=ArchInt.AIint ";
 $select.= "AND Aid=AIarch ";
-$select.= "ORDER BY Iname ";
+$select.= "ORDER BY Iname,Aid ";
 
 #print $select;
 
