@@ -66,12 +66,12 @@ open(MAKE,">libs.mk");
 print MAKE "# Generated file #\n";
 print MAKE "LIBOBJS = \\\n";
 
-$select = "SELECT DISTINCT Lid,Lrunname,Asymbol,Aname FROM Library ";
-$select.= "LEFT JOIN Architecture ON Larch=Aid ";
+$select = "SELECT DISTINCT Lid,ALrunname,Asymbol,Aname FROM Library ";
+$select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
+$select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE Lstd='Yes' ";
 $select.= "AND Aname!='None' ";
-#$select.= "AND Larch IN ($Aid,$AllAid) ";
-$select.= "ORDER BY Lrunname ";
+$select.= "ORDER BY ALrunname ";
 
 #print $select;
 
@@ -79,7 +79,7 @@ $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
-	$libname=$entry{'Lrunname'};
+	$libname=$entry{'ALrunname'};
 	$asym=$entry{'Asymbol'};
 	$libname =~ s/\./_/g;
 	$libname =~ s/-/_/g;
@@ -88,13 +88,13 @@ for(1..$sth->numrows) {
 	$libname = pop(@libname);
 	if( $asym != "1" ) {
 		print LIBS "#if defined($asym)\n";
-		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname, journal);\n";
+		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname, journal);\n";
 		print LIBS "#endif\n";
 		print LIBSH "#if defined($asym)\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
 		print LIBSH "#endif\n";
 	} else {
-		print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname,journal);\n";
+		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,journal);\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
 	}
 	print MAKE "\t$libname.o \\\n";
