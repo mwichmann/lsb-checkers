@@ -10677,7 +10677,7 @@ struct classinfo _ZN10__cxxabiv116__enum_type_infoE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv116__enum_type_infoE_typeinfo,
 	&N10__cxxabiv116__enum_type_infoE_vtable,
@@ -10720,7 +10720,7 @@ struct classinfo _ZN10__cxxabiv117__array_type_infoE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv117__array_type_infoE_typeinfo,
 	&N10__cxxabiv117__array_type_infoE_vtable,
@@ -10765,7 +10765,7 @@ struct classinfo _ZN10__cxxabiv117__class_type_infoE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv117__class_type_infoE_typeinfo,
 	&N10__cxxabiv117__class_type_infoE_vtable,
@@ -10808,7 +10808,7 @@ struct classinfo _ZN10__cxxabiv117__pbase_type_infoE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv117__pbase_type_infoE_typeinfo,
 	&N10__cxxabiv117__pbase_type_infoE_vtable,
@@ -10851,7 +10851,7 @@ struct classinfo _ZN10__cxxabiv119__pointer_type_infoE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv119__pointer_type_infoE_typeinfo,
 	&N10__cxxabiv119__pointer_type_infoE_vtable,
@@ -10894,7 +10894,7 @@ struct classinfo _ZN10__cxxabiv120__function_type_infoE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv120__function_type_infoE_typeinfo,
 	&N10__cxxabiv120__function_type_infoE_vtable,
@@ -10939,7 +10939,7 @@ struct classinfo _ZN10__cxxabiv120__si_class_type_infoE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv120__si_class_type_infoE_typeinfo,
 	&N10__cxxabiv120__si_class_type_infoE_vtable,
@@ -10984,7 +10984,7 @@ struct classinfo _ZN10__cxxabiv121__vmi_class_type_infoE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv121__vmi_class_type_infoE_typeinfo,
 	&N10__cxxabiv121__vmi_class_type_infoE_vtable,
@@ -11027,7 +11027,7 @@ struct classinfo _ZN10__cxxabiv123__fundamental_type_infoE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv123__fundamental_type_infoE_typeinfo,
 	&N10__cxxabiv123__fundamental_type_infoE_vtable,
@@ -11070,7 +11070,7 @@ struct classinfo _ZN10__cxxabiv129__pointer_to_member_type_infoE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N10__cxxabiv129__pointer_to_member_type_infoE_typeinfo,
 	&N10__cxxabiv129__pointer_to_member_type_infoE_vtable,
@@ -11115,7 +11115,7 @@ struct classinfo _ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_classinfo = 
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_typeinfo,
 	&N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable,
@@ -11160,7 +11160,7 @@ struct classinfo _ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_classinfo = 
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_typeinfo,
 	&N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable,
@@ -11199,7 +11199,7 @@ struct classinfo _ZNSt8ios_base7failureE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&NSt8ios_base7failureE_typeinfo,
 	&NSt8ios_base7failureE_vtable,
@@ -11238,7 +11238,7 @@ struct classinfo _ZSt10bad_typeid_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St10bad_typeid_typeinfo,
 	&St10bad_typeid_vtable,
@@ -11277,7 +11277,7 @@ struct classinfo _ZSt10istrstream_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St10istrstream_typeinfo,
 	&St10istrstream_vtable,
@@ -11316,7 +11316,7 @@ struct classinfo _ZSt10ostrstream_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St10ostrstream_typeinfo,
 	&St10ostrstream_vtable,
@@ -11355,7 +11355,7 @@ struct classinfo _ZSt11logic_error_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St11logic_error_typeinfo,
 	&St11logic_error_vtable,
@@ -11394,7 +11394,7 @@ struct classinfo _ZSt11range_error_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St11range_error_typeinfo,
 	&St11range_error_vtable,
@@ -11433,7 +11433,7 @@ struct classinfo _ZSt11__timepunctIcE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St11__timepunctIcE_typeinfo,
 	&St11__timepunctIcE_vtable,
@@ -11472,7 +11472,7 @@ struct classinfo _ZSt11__timepunctIwE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St11__timepunctIwE_typeinfo,
 	&St11__timepunctIwE_vtable,
@@ -11517,7 +11517,7 @@ struct classinfo _ZSt12ctype_bynameIcE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St12ctype_bynameIcE_typeinfo,
 	&St12ctype_bynameIcE_vtable,
@@ -11556,7 +11556,7 @@ struct classinfo _ZSt12domain_error_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St12domain_error_typeinfo,
 	&St12domain_error_vtable,
@@ -11595,7 +11595,7 @@ struct classinfo _ZSt12length_error_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St12length_error_typeinfo,
 	&St12length_error_vtable,
@@ -11634,7 +11634,7 @@ struct classinfo _ZSt12out_of_range_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St12out_of_range_typeinfo,
 	&St12out_of_range_vtable,
@@ -11679,7 +11679,7 @@ struct classinfo _ZSt12strstreambuf_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St12strstreambuf_typeinfo,
 	&St12strstreambuf_vtable,
@@ -11718,7 +11718,7 @@ struct classinfo _ZSt13bad_exception_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St13bad_exception_typeinfo,
 	&St13bad_exception_vtable,
@@ -11763,7 +11763,7 @@ struct classinfo _ZSt13basic_filebufIcSt11char_traitsIcEE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St13basic_filebufIcSt11char_traitsIcEE_typeinfo,
 	&St13basic_filebufIcSt11char_traitsIcEE_vtable,
@@ -11808,7 +11808,7 @@ struct classinfo _ZSt13basic_filebufIwSt11char_traitsIwEE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St13basic_filebufIwSt11char_traitsIwEE_typeinfo,
 	&St13basic_filebufIwSt11char_traitsIwEE_vtable,
@@ -11847,7 +11847,7 @@ struct classinfo _ZSt13basic_fstreamIcSt11char_traitsIcEE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St13basic_fstreamIcSt11char_traitsIcEE_typeinfo,
 	&St13basic_fstreamIcSt11char_traitsIcEE_vtable,
@@ -11886,7 +11886,7 @@ struct classinfo _ZSt13basic_fstreamIwSt11char_traitsIwEE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St13basic_fstreamIwSt11char_traitsIwEE_typeinfo,
 	&St13basic_fstreamIwSt11char_traitsIwEE_vtable,
@@ -11925,7 +11925,7 @@ struct classinfo _ZSt13runtime_error_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St13runtime_error_typeinfo,
 	&St13runtime_error_vtable,
@@ -11964,7 +11964,7 @@ struct classinfo _ZSt14basic_ifstreamIcSt11char_traitsIcEE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St14basic_ifstreamIcSt11char_traitsIcEE_typeinfo,
 	&St14basic_ifstreamIcSt11char_traitsIcEE_vtable,
@@ -12003,7 +12003,7 @@ struct classinfo _ZSt14basic_ifstreamIwSt11char_traitsIwEE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St14basic_ifstreamIwSt11char_traitsIwEE_typeinfo,
 	&St14basic_ifstreamIwSt11char_traitsIwEE_vtable,
@@ -12042,7 +12042,7 @@ struct classinfo _ZSt14basic_ofstreamIcSt11char_traitsIcEE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St14basic_ofstreamIcSt11char_traitsIcEE_typeinfo,
 	&St14basic_ofstreamIcSt11char_traitsIcEE_vtable,
@@ -12081,7 +12081,7 @@ struct classinfo _ZSt14basic_ofstreamIwSt11char_traitsIwEE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St14basic_ofstreamIwSt11char_traitsIwEE_typeinfo,
 	&St14basic_ofstreamIwSt11char_traitsIwEE_vtable,
@@ -12126,7 +12126,7 @@ struct classinfo _ZSt14codecvt_bynameIcc11__mbstate_tE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St14codecvt_bynameIcc11__mbstate_tE_typeinfo,
 	&St14codecvt_bynameIcc11__mbstate_tE_vtable,
@@ -12171,7 +12171,7 @@ struct classinfo _ZSt14codecvt_bynameIwc11__mbstate_tE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St14codecvt_bynameIwc11__mbstate_tE_typeinfo,
 	&St14codecvt_bynameIwc11__mbstate_tE_vtable,
@@ -12210,7 +12210,7 @@ struct classinfo _ZSt14collate_bynameIcE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St14collate_bynameIcE_typeinfo,
 	&St14collate_bynameIcE_vtable,
@@ -12249,7 +12249,7 @@ struct classinfo _ZSt14collate_bynameIwE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St14collate_bynameIwE_typeinfo,
 	&St14collate_bynameIwE_vtable,
@@ -12288,7 +12288,7 @@ struct classinfo _ZSt14overflow_error_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St14overflow_error_typeinfo,
 	&St14overflow_error_vtable,
@@ -12333,7 +12333,7 @@ struct classinfo _ZSt15basic_stringbufIcSt11char_traitsIcESaIcEE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15basic_stringbufIcSt11char_traitsIcESaIcEE_typeinfo,
 	&St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable,
@@ -12378,7 +12378,7 @@ struct classinfo _ZSt15basic_stringbufIwSt11char_traitsIwESaIwEE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15basic_stringbufIwSt11char_traitsIwESaIwEE_typeinfo,
 	&St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable,
@@ -12417,7 +12417,7 @@ struct classinfo _ZSt15messages_bynameIcE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15messages_bynameIcE_typeinfo,
 	&St15messages_bynameIcE_vtable,
@@ -12456,7 +12456,7 @@ struct classinfo _ZSt15messages_bynameIwE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15messages_bynameIwE_typeinfo,
 	&St15messages_bynameIwE_vtable,
@@ -12499,7 +12499,7 @@ struct classinfo _ZSt15numpunct_bynameIcE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15numpunct_bynameIcE_typeinfo,
 	&St15numpunct_bynameIcE_vtable,
@@ -12542,7 +12542,7 @@ struct classinfo _ZSt15numpunct_bynameIwE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15numpunct_bynameIwE_typeinfo,
 	&St15numpunct_bynameIwE_vtable,
@@ -12587,7 +12587,7 @@ struct classinfo _ZSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traits
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
 	&St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
@@ -12632,7 +12632,7 @@ struct classinfo _ZSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traits
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
@@ -12671,7 +12671,7 @@ struct classinfo _ZSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traits
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
 	&St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
@@ -12710,7 +12710,7 @@ struct classinfo _ZSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traits
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
@@ -12749,7 +12749,7 @@ struct classinfo _ZSt15underflow_error_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15underflow_error_typeinfo,
 	&St15underflow_error_vtable,
@@ -12788,7 +12788,7 @@ struct classinfo _ZSt16invalid_argument_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St16invalid_argument_typeinfo,
 	&St16invalid_argument_vtable,
@@ -12833,7 +12833,7 @@ struct classinfo _ZSt17moneypunct_bynameIcLb0EE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St17moneypunct_bynameIcLb0EE_typeinfo,
 	&St17moneypunct_bynameIcLb0EE_vtable,
@@ -12878,7 +12878,7 @@ struct classinfo _ZSt17moneypunct_bynameIcLb1EE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St17moneypunct_bynameIcLb1EE_typeinfo,
 	&St17moneypunct_bynameIcLb1EE_vtable,
@@ -12923,7 +12923,7 @@ struct classinfo _ZSt17moneypunct_bynameIwLb0EE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St17moneypunct_bynameIwLb0EE_typeinfo,
 	&St17moneypunct_bynameIwLb0EE_vtable,
@@ -12968,7 +12968,7 @@ struct classinfo _ZSt17moneypunct_bynameIwLb1EE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St17moneypunct_bynameIwLb1EE_typeinfo,
 	&St17moneypunct_bynameIwLb1EE_vtable,
@@ -13007,7 +13007,7 @@ struct classinfo _ZSt18basic_stringstreamIcSt11char_traitsIcESaIcEE_classinfo = 
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St18basic_stringstreamIcSt11char_traitsIcESaIcEE_typeinfo,
 	&St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable,
@@ -13046,7 +13046,7 @@ struct classinfo _ZSt18basic_stringstreamIwSt11char_traitsIwESaIwEE_classinfo = 
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St18basic_stringstreamIwSt11char_traitsIwESaIwEE_typeinfo,
 	&St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable,
@@ -13085,7 +13085,7 @@ struct classinfo _ZSt19basic_istringstreamIcSt11char_traitsIcESaIcEE_classinfo =
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St19basic_istringstreamIcSt11char_traitsIcESaIcEE_typeinfo,
 	&St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable,
@@ -13124,7 +13124,7 @@ struct classinfo _ZSt19basic_istringstreamIwSt11char_traitsIwESaIwEE_classinfo =
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St19basic_istringstreamIwSt11char_traitsIwESaIwEE_typeinfo,
 	&St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable,
@@ -13163,7 +13163,7 @@ struct classinfo _ZSt19basic_ostringstreamIcSt11char_traitsIcESaIcEE_classinfo =
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_typeinfo,
 	&St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable,
@@ -13202,7 +13202,7 @@ struct classinfo _ZSt19basic_ostringstreamIwSt11char_traitsIwESaIwEE_classinfo =
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_typeinfo,
 	&St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable,
@@ -13247,7 +13247,7 @@ struct classinfo _ZSt5ctypeIcE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St5ctypeIcE_typeinfo,
 	&St5ctypeIcE_vtable,
@@ -13292,7 +13292,7 @@ struct classinfo _ZSt5ctypeIwE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St5ctypeIwE_typeinfo,
 	&St5ctypeIwE_vtable,
@@ -13337,7 +13337,7 @@ struct classinfo _ZSt7codecvtIcc11__mbstate_tE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St7codecvtIcc11__mbstate_tE_typeinfo,
 	&St7codecvtIcc11__mbstate_tE_vtable,
@@ -13382,7 +13382,7 @@ struct classinfo _ZSt7codecvtIwc11__mbstate_tE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St7codecvtIwc11__mbstate_tE_typeinfo,
 	&St7codecvtIwc11__mbstate_tE_vtable,
@@ -13421,7 +13421,7 @@ struct classinfo _ZSt7collateIcE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St7collateIcE_typeinfo,
 	&St7collateIcE_vtable,
@@ -13460,7 +13460,7 @@ struct classinfo _ZSt7collateIwE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St7collateIwE_typeinfo,
 	&St7collateIwE_vtable,
@@ -13499,7 +13499,7 @@ struct classinfo _ZSt8bad_cast_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St8bad_cast_typeinfo,
 	&St8bad_cast_vtable,
@@ -13542,7 +13542,7 @@ struct classinfo _ZSt8numpunctIcE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St8numpunctIcE_typeinfo,
 	&St8numpunctIcE_vtable,
@@ -13585,7 +13585,7 @@ struct classinfo _ZSt8numpunctIwE_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St8numpunctIwE_typeinfo,
 	&St8numpunctIwE_vtable,
@@ -13624,7 +13624,7 @@ struct classinfo _ZSt9bad_alloc_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St9bad_alloc_typeinfo,
 	&St9bad_alloc_vtable,
@@ -13663,7 +13663,7 @@ struct classinfo _ZSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_c
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
 	&St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
@@ -13702,7 +13702,7 @@ struct classinfo _ZSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_c
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
@@ -13741,7 +13741,7 @@ struct classinfo _ZSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_c
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
 	&St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
@@ -13780,7 +13780,7 @@ struct classinfo _ZSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_c
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
@@ -13819,7 +13819,7 @@ struct classinfo _ZSt9strstream_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	2,
 	&St9strstream_typeinfo,
 	&St9strstream_vtable,
@@ -13848,7 +13848,7 @@ struct classvtable Si_vtable = {
 	};
 
 struct base_type_info Si_baseinfo[] = {
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 	};
 
 struct classinfo _ZSi_classinfo = {
@@ -13859,7 +13859,7 @@ struct classinfo _ZSi_classinfo = {
 	2,
 	0,
 	1,
-	8,
+	8U,
 	2,
 	&Si_typeinfo,
 	&Si_vtable,
@@ -13888,7 +13888,7 @@ struct classvtable So_vtable = {
 	};
 
 struct base_type_info So_baseinfo[] = {
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227},
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 	};
 
 struct classinfo _ZSo_classinfo = {
@@ -13899,7 +13899,7 @@ struct classinfo _ZSo_classinfo = {
 	2,
 	0,
 	1,
-	8,
+	8U,
 	2,
 	&So_typeinfo,
 	&So_vtable,
@@ -13928,7 +13928,7 @@ struct classvtable St13basic_istreamIwSt11char_traitsIwEE_vtable = {
 	};
 
 struct base_type_info St13basic_istreamIwSt11char_traitsIwEE_baseinfo[] = {
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 	};
 
 struct classinfo _ZSt13basic_istreamIwSt11char_traitsIwEE_classinfo = {
@@ -13939,7 +13939,7 @@ struct classinfo _ZSt13basic_istreamIwSt11char_traitsIwEE_classinfo = {
 	2,
 	0,
 	1,
-	8,
+	8U,
 	2,
 	&St13basic_istreamIwSt11char_traitsIwEE_typeinfo,
 	&St13basic_istreamIwSt11char_traitsIwEE_vtable,
@@ -13968,7 +13968,7 @@ struct classvtable St13basic_ostreamIwSt11char_traitsIwEE_vtable = {
 	};
 
 struct base_type_info St13basic_ostreamIwSt11char_traitsIwEE_baseinfo[] = {
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227},
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 	};
 
 struct classinfo _ZSt13basic_ostreamIwSt11char_traitsIwEE_classinfo = {
@@ -13979,7 +13979,7 @@ struct classinfo _ZSt13basic_ostreamIwSt11char_traitsIwEE_classinfo = {
 	2,
 	0,
 	1,
-	8,
+	8U,
 	2,
 	&St13basic_ostreamIwSt11char_traitsIwEE_typeinfo,
 	&St13basic_ostreamIwSt11char_traitsIwEE_vtable,
@@ -14008,7 +14008,7 @@ struct classvtable St9basic_iosIcSt11char_traitsIcEE_vtable = {
 	};
 
 struct base_type_info St9basic_iosIcSt11char_traitsIcEE_baseinfo[] = {
-	{"_ZTISt8ios_base",	1026},
+	{"_ZTISt8ios_base",	1026U},
 	};
 
 struct classinfo _ZSt9basic_iosIcSt11char_traitsIcEE_classinfo = {
@@ -14019,7 +14019,7 @@ struct classinfo _ZSt9basic_iosIcSt11char_traitsIcEE_classinfo = {
 	2,
 	0,
 	1,
-	8,
+	8U,
 	1,
 	&St9basic_iosIcSt11char_traitsIcEE_typeinfo,
 	&St9basic_iosIcSt11char_traitsIcEE_vtable,
@@ -14048,7 +14048,7 @@ struct classvtable St9basic_iosIwSt11char_traitsIwEE_vtable = {
 	};
 
 struct base_type_info St9basic_iosIwSt11char_traitsIwEE_baseinfo[] = {
-	{"_ZTISt8ios_base",	1026},
+	{"_ZTISt8ios_base",	1026U},
 	};
 
 struct classinfo _ZSt9basic_iosIwSt11char_traitsIwEE_classinfo = {
@@ -14059,7 +14059,7 @@ struct classinfo _ZSt9basic_iosIwSt11char_traitsIwEE_classinfo = {
 	2,
 	0,
 	1,
-	8,
+	8U,
 	1,
 	&St9basic_iosIwSt11char_traitsIwEE_typeinfo,
 	&St9basic_iosIwSt11char_traitsIwEE_vtable,
@@ -14088,8 +14088,8 @@ struct classvtable Sd_vtable = {
 	};
 
 struct base_type_info Sd_baseinfo[] = {
-	{"_ZTISi",	2},
-	{"_ZTISo",	2050},
+	{"_ZTISi",	2U},
+	{"_ZTISo",	2050U},
 	};
 
 struct classinfo _ZSd_classinfo = {
@@ -14100,7 +14100,7 @@ struct classinfo _ZSd_classinfo = {
 	2,
 	0,
 	2,
-	11,
+	11U,
 	2,
 	&Sd_typeinfo,
 	&Sd_vtable,
@@ -14135,8 +14135,8 @@ struct classvtable St10moneypunctIcLb0EE_vtable = {
 	};
 
 struct base_type_info St10moneypunctIcLb0EE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10money_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10money_base",	2U},
 	};
 
 struct classinfo _ZSt10moneypunctIcLb0EE_classinfo = {
@@ -14147,7 +14147,7 @@ struct classinfo _ZSt10moneypunctIcLb0EE_classinfo = {
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St10moneypunctIcLb0EE_typeinfo,
 	&St10moneypunctIcLb0EE_vtable,
@@ -14182,8 +14182,8 @@ struct classvtable St10moneypunctIcLb1EE_vtable = {
 	};
 
 struct base_type_info St10moneypunctIcLb1EE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10money_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10money_base",	2U},
 	};
 
 struct classinfo _ZSt10moneypunctIcLb1EE_classinfo = {
@@ -14194,7 +14194,7 @@ struct classinfo _ZSt10moneypunctIcLb1EE_classinfo = {
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St10moneypunctIcLb1EE_typeinfo,
 	&St10moneypunctIcLb1EE_vtable,
@@ -14229,8 +14229,8 @@ struct classvtable St10moneypunctIwLb0EE_vtable = {
 	};
 
 struct base_type_info St10moneypunctIwLb0EE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10money_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10money_base",	2U},
 	};
 
 struct classinfo _ZSt10moneypunctIwLb0EE_classinfo = {
@@ -14241,7 +14241,7 @@ struct classinfo _ZSt10moneypunctIwLb0EE_classinfo = {
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St10moneypunctIwLb0EE_typeinfo,
 	&St10moneypunctIwLb0EE_vtable,
@@ -14276,8 +14276,8 @@ struct classvtable St10moneypunctIwLb1EE_vtable = {
 	};
 
 struct base_type_info St10moneypunctIwLb1EE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10money_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10money_base",	2U},
 	};
 
 struct classinfo _ZSt10moneypunctIwLb1EE_classinfo = {
@@ -14288,7 +14288,7 @@ struct classinfo _ZSt10moneypunctIwLb1EE_classinfo = {
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St10moneypunctIwLb1EE_typeinfo,
 	&St10moneypunctIwLb1EE_vtable,
@@ -14317,8 +14317,8 @@ struct classvtable St14basic_iostreamIwSt11char_traitsIwEE_vtable = {
 	};
 
 struct base_type_info St14basic_iostreamIwSt11char_traitsIwEE_baseinfo[] = {
-	{"_ZTISt13basic_istreamIwSt11char_traitsIwEE",	2},
-	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050},
+	{"_ZTISt13basic_istreamIwSt11char_traitsIwEE",	2U},
+	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
 	};
 
 struct classinfo _ZSt14basic_iostreamIwSt11char_traitsIwEE_classinfo = {
@@ -14329,7 +14329,7 @@ struct classinfo _ZSt14basic_iostreamIwSt11char_traitsIwEE_classinfo = {
 	2,
 	0,
 	2,
-	11,
+	11U,
 	2,
 	&St14basic_iostreamIwSt11char_traitsIwEE_typeinfo,
 	&St14basic_iostreamIwSt11char_traitsIwEE_vtable,
@@ -14364,8 +14364,8 @@ struct classvtable St21__ctype_abstract_baseIcE_vtable = {
 	};
 
 struct base_type_info St21__ctype_abstract_baseIcE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10ctype_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10ctype_base",	2U},
 	};
 
 struct classinfo _ZSt21__ctype_abstract_baseIcE_classinfo = {
@@ -14376,7 +14376,7 @@ struct classinfo _ZSt21__ctype_abstract_baseIcE_classinfo = {
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St21__ctype_abstract_baseIcE_typeinfo,
 	&St21__ctype_abstract_baseIcE_vtable,
@@ -14411,8 +14411,8 @@ struct classvtable St21__ctype_abstract_baseIwE_vtable = {
 	};
 
 struct base_type_info St21__ctype_abstract_baseIwE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10ctype_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10ctype_base",	2U},
 	};
 
 struct classinfo _ZSt21__ctype_abstract_baseIwE_classinfo = {
@@ -14423,7 +14423,7 @@ struct classinfo _ZSt21__ctype_abstract_baseIwE_classinfo = {
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St21__ctype_abstract_baseIwE_typeinfo,
 	&St21__ctype_abstract_baseIwE_vtable,
@@ -14458,8 +14458,8 @@ struct classvtable St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable = {
 	};
 
 struct base_type_info St23__codecvt_abstract_baseIcc11__mbstate_tE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt12codecvt_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt12codecvt_base",	2U},
 	};
 
 struct classinfo _ZSt23__codecvt_abstract_baseIcc11__mbstate_tE_classinfo = {
@@ -14470,7 +14470,7 @@ struct classinfo _ZSt23__codecvt_abstract_baseIcc11__mbstate_tE_classinfo = {
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St23__codecvt_abstract_baseIcc11__mbstate_tE_typeinfo,
 	&St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable,
@@ -14505,8 +14505,8 @@ struct classvtable St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable = {
 	};
 
 struct base_type_info St23__codecvt_abstract_baseIwc11__mbstate_tE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt12codecvt_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt12codecvt_base",	2U},
 	};
 
 struct classinfo _ZSt23__codecvt_abstract_baseIwc11__mbstate_tE_classinfo = {
@@ -14517,7 +14517,7 @@ struct classinfo _ZSt23__codecvt_abstract_baseIwc11__mbstate_tE_classinfo = {
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St23__codecvt_abstract_baseIwc11__mbstate_tE_typeinfo,
 	&St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable,
@@ -14552,8 +14552,8 @@ struct classvtable St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vta
 	};
 
 struct base_type_info St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10__num_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10__num_base",	2U},
 	};
 
 struct classinfo _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_classinfo = {
@@ -14564,7 +14564,7 @@ struct classinfo _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_cla
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
 	&St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
@@ -14599,8 +14599,8 @@ struct classvtable St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vta
 	};
 
 struct base_type_info St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10__num_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10__num_base",	2U},
 	};
 
 struct classinfo _ZSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_classinfo = {
@@ -14611,7 +14611,7 @@ struct classinfo _ZSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_cla
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
@@ -14646,8 +14646,8 @@ struct classvtable St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vta
 	};
 
 struct base_type_info St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10__num_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10__num_base",	2U},
 	};
 
 struct classinfo _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_classinfo = {
@@ -14658,7 +14658,7 @@ struct classinfo _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_cla
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
 	&St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
@@ -14693,8 +14693,8 @@ struct classvtable St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vta
 	};
 
 struct base_type_info St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt10__num_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt10__num_base",	2U},
 	};
 
 struct classinfo _ZSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_classinfo = {
@@ -14705,7 +14705,7 @@ struct classinfo _ZSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_cla
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
@@ -14734,8 +14734,8 @@ struct classvtable St8messagesIcE_vtable = {
 	};
 
 struct base_type_info St8messagesIcE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt13messages_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt13messages_base",	2U},
 	};
 
 struct classinfo _ZSt8messagesIcE_classinfo = {
@@ -14746,7 +14746,7 @@ struct classinfo _ZSt8messagesIcE_classinfo = {
 	2,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St8messagesIcE_typeinfo,
 	&St8messagesIcE_vtable,
@@ -14775,8 +14775,8 @@ struct classvtable St8messagesIwE_vtable = {
 	};
 
 struct base_type_info St8messagesIwE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt13messages_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt13messages_base",	2U},
 	};
 
 struct classinfo _ZSt8messagesIwE_classinfo = {
@@ -14787,7 +14787,7 @@ struct classinfo _ZSt8messagesIwE_classinfo = {
 	2,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St8messagesIwE_typeinfo,
 	&St8messagesIwE_vtable,
@@ -14822,8 +14822,8 @@ struct classvtable St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vt
 	};
 
 struct base_type_info St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt9time_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt9time_base",	2U},
 	};
 
 struct classinfo _ZSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_classinfo = {
@@ -14834,7 +14834,7 @@ struct classinfo _ZSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_cl
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
 	&St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
@@ -14869,8 +14869,8 @@ struct classvtable St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vt
 	};
 
 struct base_type_info St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt9time_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt9time_base",	2U},
 	};
 
 struct classinfo _ZSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_classinfo = {
@@ -14881,7 +14881,7 @@ struct classinfo _ZSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_cl
 	8,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
@@ -14910,8 +14910,8 @@ struct classvtable St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vt
 	};
 
 struct base_type_info St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt9time_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt9time_base",	2U},
 	};
 
 struct classinfo _ZSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_classinfo = {
@@ -14922,7 +14922,7 @@ struct classinfo _ZSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_cl
 	2,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_typeinfo,
 	&St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_vtable,
@@ -14951,8 +14951,8 @@ struct classvtable St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vt
 	};
 
 struct base_type_info St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2},
-	{"_ZTISt9time_base",	2},
+	{"_ZTINSt6locale5facetE",	2U},
+	{"_ZTISt9time_base",	2U},
 	};
 
 struct classinfo _ZSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_classinfo = {
@@ -14963,7 +14963,7 @@ struct classinfo _ZSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_cl
 	2,
 	0,
 	2,
-	8,
+	8U,
 	1,
 	&St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_typeinfo,
 	&St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_vtable,
@@ -15002,7 +15002,7 @@ struct classinfo _ZNSt6locale5facetE_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&NSt6locale5facetE_typeinfo,
 	&NSt6locale5facetE_vtable,
@@ -15039,7 +15039,7 @@ struct classinfo _ZSt10ctype_base_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St10ctype_base_typeinfo,
 	&St10ctype_base_vtable,
@@ -15076,7 +15076,7 @@ struct classinfo _ZSt10money_base_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St10money_base_typeinfo,
 	&St10money_base_vtable,
@@ -15113,7 +15113,7 @@ struct classinfo _ZSt10__num_base_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St10__num_base_typeinfo,
 	&St10__num_base_vtable,
@@ -15150,7 +15150,7 @@ struct classinfo _ZSt12codecvt_base_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St12codecvt_base_typeinfo,
 	&St12codecvt_base_vtable,
@@ -15187,7 +15187,7 @@ struct classinfo _ZSt13messages_base_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St13messages_base_typeinfo,
 	&St13messages_base_vtable,
@@ -15232,7 +15232,7 @@ struct classinfo _ZSt15basic_streambufIcSt11char_traitsIcEE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15basic_streambufIcSt11char_traitsIcEE_typeinfo,
 	&St15basic_streambufIcSt11char_traitsIcEE_vtable,
@@ -15277,7 +15277,7 @@ struct classinfo _ZSt15basic_streambufIwSt11char_traitsIwEE_classinfo = {
 	8,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St15basic_streambufIwSt11char_traitsIwEE_typeinfo,
 	&St15basic_streambufIwSt11char_traitsIwEE_vtable,
@@ -15314,7 +15314,7 @@ struct classinfo _ZSt8ios_base_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St8ios_base_typeinfo,
 	&St8ios_base_vtable,
@@ -15353,7 +15353,7 @@ struct classinfo _ZSt9exception_classinfo = {
 	2,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St9exception_typeinfo,
 	&St9exception_vtable,
@@ -15390,7 +15390,7 @@ struct classinfo _ZSt9time_base_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St9time_base_typeinfo,
 	&St9time_base_vtable,
@@ -15433,7 +15433,7 @@ struct classinfo _ZSt9type_info_classinfo = {
 	6,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&St9type_info_typeinfo,
 	&St9type_info_vtable,
@@ -15470,7 +15470,7 @@ struct classinfo _ZNSt8valarrayIjEE_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&NSt8valarrayIjEE_typeinfo,
 	&NSt8valarrayIjEE_vtable,
@@ -15507,7 +15507,7 @@ struct classinfo _ZNSaIcEE_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&NSaIcEE_typeinfo,
 	&NSaIcEE_vtable,
@@ -15544,7 +15544,7 @@ struct classinfo _ZNSaIwEE_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&NSaIwEE_typeinfo,
 	&NSaIwEE_vtable,
@@ -15581,7 +15581,7 @@ struct classinfo _ZNSt12__basic_fileIcEE_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&NSt12__basic_fileIcEE_typeinfo,
 	&NSt12__basic_fileIcEE_vtable,
@@ -15618,7 +15618,7 @@ struct classinfo _ZNSt24__default_alloc_templateILb1ELi0EEE_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&NSt24__default_alloc_templateILb1ELi0EEE_typeinfo,
 	&NSt24__default_alloc_templateILb1ELi0EEE_vtable,
@@ -15655,7 +15655,7 @@ struct classinfo _ZNSt6gsliceE_classinfo = {
 	0,
 	0,
 	0,
-	0,
+	0U,
 	1,
 	&NSt6gsliceE_typeinfo,
 	&NSt6gsliceE_vtable,
