@@ -469,7 +469,6 @@ struct versym libc_so_6[] = {
 	{"rename","GLIBC_2.0"},
 	{"rewind","GLIBC_2.0"},
 	{"rewinddir","GLIBC_2.0"},
-	{"rexecoptions","GLIBC_2.0"},
 	{"rindex","GLIBC_2.0"},
 	{"rmdir","GLIBC_2.0"},
 	{"sbrk","GLIBC_2.0"},

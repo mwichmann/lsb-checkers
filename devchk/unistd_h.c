@@ -11,11 +11,11 @@ int unistd_h()
 {
 int cnt=0;
 #ifdef __i386__
-CheckTypeSize(ssize_t,4,6993)
+CheckTypeSize(ssize_t,4,9029)
 #elif __ia64__
-CheckTypeSize(ssize_t,8,6993)
+CheckTypeSize(ssize_t,8,9029)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6993,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9029,0);
 #endif
 printf("%d tests in unistd.h\n",cnt);
 return cnt;

@@ -31,12 +31,10 @@ CheckTypeSize(ldiv_t,16,6975)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
 #endif
-#ifdef __i386__
-CheckTypeSize(__compar_fn_t,4,6978)
-#elif __ia64__
-CheckTypeSize(__compar_fn_t,8,6978)
+#ifdef 
+CheckTypeSize(__compar_fn_t,,9231)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6978,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
 #endif
 printf("%d tests in stdlib.h\n",cnt);
 return cnt;

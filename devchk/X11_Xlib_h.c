@@ -14,95 +14,105 @@ int X11_Xlib_h()
 {
 int cnt=0;
 #ifdef __i386__
-CheckTypeSize(XPointer,4,6608)
+CheckTypeSize(XPointer,4,8365)
 #elif __ia64__
-CheckTypeSize(XPointer,8,6608)
+CheckTypeSize(XPointer,8,8365)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6608,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8365,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(GC,4,6617)
+CheckTypeSize(GC,4,8375)
 #elif __ia64__
-CheckTypeSize(GC,8,6617)
+CheckTypeSize(GC,8,8375)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6617,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8375,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XEDataObject,4,6745)
+CheckTypeSize(XEDataObject,4,8511)
 #elif __ia64__
-CheckTypeSize(XEDataObject,8,6745)
+CheckTypeSize(XEDataObject,8,8511)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6745,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8511,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XOM,4,6748)
+CheckTypeSize(XOM,4,8514)
 #elif __ia64__
-CheckTypeSize(XOM,8,6748)
+CheckTypeSize(XOM,8,8514)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6748,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8514,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XOC,4,6749)
+CheckTypeSize(XOC,4,8515)
 #elif __ia64__
-CheckTypeSize(XOC,8,6749)
+CheckTypeSize(XOC,8,8515)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6749,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8515,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XFontSet,4,6750)
+CheckTypeSize(XFontSet,4,8516)
 #elif __ia64__
-CheckTypeSize(XFontSet,8,6750)
+CheckTypeSize(XFontSet,8,8516)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6750,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8516,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XIM,4,6763)
+CheckTypeSize(XIM,4,8529)
 #elif __ia64__
-CheckTypeSize(XIM,8,6763)
+CheckTypeSize(XIM,8,8529)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6763,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8529,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XIC,4,6764)
+CheckTypeSize(XIC,4,8530)
 #elif __ia64__
-CheckTypeSize(XIC,8,6764)
+CheckTypeSize(XIC,8,8530)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6764,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8530,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XIDProc,4,6767)
+CheckTypeSize(XVaNestedList,4,8540)
 #elif __ia64__
-CheckTypeSize(XIDProc,8,6767)
+CheckTypeSize(XVaNestedList,8,8540)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6767,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8540,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XVaNestedList,4,6771)
+CheckTypeSize(XIDProc,4,8902)
 #elif __ia64__
-CheckTypeSize(XVaNestedList,8,6771)
+CheckTypeSize(XIDProc,8,8902)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6771,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8902,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XErrorHandler,4,6813)
 #elif __ia64__
-CheckTypeSize(XErrorHandler,8,6813)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6813,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8919,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XIOErrorHandler,4,6814)
 #elif __ia64__
-CheckTypeSize(XIOErrorHandler,8,6814)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6814,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8920,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(XConnectionWatchProc,4,6815)
+CheckTypeSize(XErrorHandler,4,8930)
 #elif __ia64__
-CheckTypeSize(XConnectionWatchProc,8,6815)
+CheckTypeSize(XErrorHandler,8,8930)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6815,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8930,0);
+#endif
+#ifdef __i386__
+CheckTypeSize(XIOErrorHandler,4,8932)
+#elif __ia64__
+CheckTypeSize(XIOErrorHandler,8,8932)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8932,0);
+#endif
+#ifdef __i386__
+CheckTypeSize(XConnectionWatchProc,4,8956)
+#elif __ia64__
+CheckTypeSize(XConnectionWatchProc,8,8956)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8956,0);
 #endif
 printf("%d tests in X11/Xlib.h\n",cnt);
 return cnt;
