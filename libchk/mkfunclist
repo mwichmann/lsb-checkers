@@ -25,7 +25,7 @@ $select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=$lid ";
-$select.= "ORDER BY Iname ";
+$select.= "ORDER BY Iname,Aid ";
 
 #print $select;
 
@@ -79,7 +79,7 @@ $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE Lstd='Yes' ";
 $select.= "AND Aname!='None' ";
-$select.= "ORDER BY ALrunname ";
+$select.= "ORDER BY ALrunname,Aid ";
 
 #print $select;
 
