@@ -3,12 +3,15 @@
  *
  * Copyright (c) 2001 The Free Standards Group Inc.
  *
- * Stuart Anderson (anderson@metrolink.com)
+ * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.16 $
+ * This is $Revision: 1.17 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.17  2002/11/26 00:25:55  anderson
+ * Metro who???
+ *
  * Revision 1.16  2002/06/28 02:07:27  cyeoh
  * Ensure end of journal tag is added to end of journal
  *
@@ -72,7 +75,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.16 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.17 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
