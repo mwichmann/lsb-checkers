@@ -146,6 +146,7 @@ $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=$lid ";
 $select.= "AND ( Istatus='Included' OR Istatus='Deprecated' ) ";
+$select.= "AND ( IArch != 8 ) "; # 8 == None
 $select.= "ORDER BY Iname,Aid ";
 
 #print $select;
