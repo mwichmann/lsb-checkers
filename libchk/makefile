@@ -2,14 +2,14 @@ LSBLIBCHK_VERSION=unofficial
 
 include libs.mk
 
-OBJS = libchk.o libs.o $(LIBOBJS)
+OBJS = libchk.o libs.o classchk.o $(LIBOBJS)
 
 CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
 all:: libchk
 
 libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
-	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj
+	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -ldl
 
 libs.c:
 	./mkfunclist
