@@ -258,6 +258,36 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef LLONG_MAX
+	CompareConstant(LLONG_MAX,9223372036854775807LL,3062,architecture)
+#else
+Msg( "Error: Constant not found: LLONG_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LLONG_MIN
+	CompareConstant(LLONG_MIN,(-LLONG_MAX-1LL),3063,architecture)
+#else
+Msg( "Error: Constant not found: LLONG_MIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ULLONG_MAX
+	CompareConstant(ULLONG_MAX,18446744073709551615ULL,3064,architecture)
+#else
+Msg( "Error: Constant not found: ULLONG_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef __INT_MAX__
 	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
 #else
