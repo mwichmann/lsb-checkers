@@ -3836,15 +3836,6 @@ struct versym DynSyms[] = {
 	{"fdatasync","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
-	{"fdetach","GLIBC_2.1"},
-#endif
-#if defined(__ia64__)
-	{"fdetach","GLIBC_2.2"},
-#endif
-#if defined(__powerpc__)
-	{"fdetach","GLIBC_2.1"},
-#endif
-#if defined(__i386__)
 	{"fdim","GLIBC_2.1"},
 #endif
 #if defined(__ia64__)
@@ -4941,15 +4932,6 @@ struct versym DynSyms[] = {
 	{"getlogin","GLIBC_2.0"},
 #endif
 #if defined(__i386__)
-	{"getmsg","GLIBC_2.1"},
-#endif
-#if defined(__ia64__)
-	{"getmsg","GLIBC_2.2"},
-#endif
-#if defined(__powerpc__)
-	{"getmsg","GLIBC_2.1"},
-#endif
-#if defined(__i386__)
 	{"getnetbyaddr","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
@@ -5859,15 +5841,6 @@ struct versym DynSyms[] = {
 	{"gzsetparams",""},
 	{"gztell",""},
 	{"gzwrite",""},
-#if defined(__i386__)
-	{"h_errno","GLIBC_2.0"},
-#endif
-#if defined(__ia64__)
-	{"h_errno","GLIBC_2.2"},
-#endif
-#if defined(__powerpc__)
-	{"h_errno","GLIBC_2.0"},
-#endif
 	{"halfdelay",""},
 	{"has_colors",""},
 	{"has_ic",""},
@@ -9624,6 +9597,7 @@ struct versym DynSyms[] = {
 #if defined(__powerpc__)
 	{"setuid","GLIBC_2.0"},
 #endif
+	{"setupterm",""},
 #if defined(__i386__)
 	{"setutent","GLIBC_2.0"},
 #endif
