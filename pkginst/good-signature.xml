@@ -10,14 +10,14 @@
 		<type>INT32</type>
 		<offset>0</offset>
 		<count>1</count>
-		<data>862</data>
+		<data>992</data>
 	</index>
 	<index>
 		<tag>SIGTAG_MD5</tag>
 		<type>BIN</type>
 		<offset>4</offset>
 		<count>16</count>
-		<data>52427213875e29b17b15376fb8472ae4</data>
+		<data>3ff7919ecc85dfd55e8e950d5b1fdfea</data>
 	</index>
 	<index>
 		<tag>RPMTAG_HEADERI18NTABLE</tag>
