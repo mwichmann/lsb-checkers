@@ -48,6 +48,8 @@ checkhdrident( EI_MAG3, ELFMAG3 )
 checkhdrident( EI_CLASS, ELFCLASS32 )
 #elif defined( __ia64__ )
 checkhdrident( EI_CLASS, ELFCLASS64 )
+#elif defined( __powerpc__ )
+checkhdrident( EI_CLASS, ELFCLASS32 )
 #else
 fprintf(stderr, "EI_CLASS not checked!!\n");
 #endif
@@ -55,6 +57,8 @@ fprintf(stderr, "EI_CLASS not checked!!\n");
 checkhdrident( EI_DATA, ELFDATA2LSB )
 #elif defined( __ia64__ )
 checkhdrident( EI_DATA, ELFDATA2LSB )
+#elif defined( __powerpc__ )
+checkhdrident( EI_DATA, ELFDATA2MSB )
 #else
 fprintf(stderr, "EI_DATA not checked!!\n");
 #endif
@@ -98,6 +102,8 @@ else
 checkhdrfield( e_machine, EM_386 )
 #elif defined( __ia64__ )
 checkhdrfield( e_machine, EM_IA_64 )
+#elif defined( __powerpc__ )
+checkhdrfield( e_machine, EM_PPC )
 #else
 fprintf(stderr, "e_machine not checked!!\n");
 #endif
@@ -113,6 +119,8 @@ checkhdrfield( e_flags, 0 )
 #elif defined( __ia64__ )
 /* today this is correct... but some bits are RFE, may change later? */
 checkhdrfield( e_flags, 0x10 )
+#elif defined ( __powerpc__ )
+checkhdrfield( e_flags, 0 )
 #else
 fprintf(stderr, "e_flags not checked!!\n");
 #endif
