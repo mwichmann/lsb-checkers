@@ -448,6 +448,61 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6919,0);
 Msg("Find size of lconv (6919)\n");
 #endif
 
+#if __i386__
+CheckTypeSize(struct __locale_struct,116, 10531, 2)
+CheckMemberSize(struct __locale_struct,__locales,52,2,40181)
+CheckOffset(struct __locale_struct,__locales,0,2,40181)
+CheckMemberSize(struct __locale_struct,__ctype_b,4,2,40182)
+CheckOffset(struct __locale_struct,__ctype_b,52,2,40182)
+CheckMemberSize(struct __locale_struct,__ctype_tolower,4,2,40183)
+CheckOffset(struct __locale_struct,__ctype_tolower,56,2,40183)
+CheckMemberSize(struct __locale_struct,__ctype_toupper,4,2,40184)
+CheckOffset(struct __locale_struct,__ctype_toupper,60,2,40184)
+CheckMemberSize(struct __locale_struct,__names,52,2,40185)
+CheckOffset(struct __locale_struct,__names,64,2,40185)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct __locale_struct,116, 10531, 6)
+CheckMemberSize(struct __locale_struct,__locales,52,6,40181)
+CheckOffset(struct __locale_struct,__locales,0,6,40181)
+#elif __ia64__
+CheckTypeSize(struct __locale_struct,232, 10531, 3)
+CheckMemberSize(struct __locale_struct,__ctype_b,8,3,40182)
+CheckOffset(struct __locale_struct,__ctype_b,104,3,40182)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10531,0);
+Msg("Find size of __locale_struct (10531)\n");
+#endif
+
+#if __i386__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10532,0);
+Msg("Find size of __locale_struct * (10532)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(__locale_t,4, 10533, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(__locale_t,4, 10533, 6)
+#elif __ia64__
+CheckTypeSize(__locale_t,8, 10533, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10533,0);
+Msg("Find size of __locale_t (10533)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(locale_t,4, 10534, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(locale_t,4, 10534, 6)
+#elif __ia64__
+CheckTypeSize(locale_t,8, 10534, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10534,0);
+Msg("Find size of locale_t (10534)\n");
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
