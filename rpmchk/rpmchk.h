@@ -30,11 +30,23 @@ typedef struct rpmlead {
 #define RPMBINPKG	0x0000
 #define RPMSRCPKG	0x0001
 
-#if defined(__i386__)
+#if __i386__
 #define RPMARCH	0x0001
 #endif
-#if defined(__ia64__)
+#if __ia64__
 #define RPMARCH	0x0009
+#endif
+#if __powerpc__ && !__powerpc64__
+#define RPMARCH 0x0005
+#endif
+#if __powerpc64__
+#error need to find arch_canon in rpmrc.in for ppc64
+#endif
+#if __s390__
+#define RPMARCH 0x000E
+#endif
+#if __s390x__
+#define RPMARCH 0x000F
 #endif
 
 #define RPMOS	0x0001 /* Linux */
