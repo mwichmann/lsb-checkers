@@ -1403,12 +1403,10 @@ CheckOffset(struct sigaction,sa_flags,132,10,34717)
 CheckOffset(struct sigaction,sa_restorer,136,10,34718)
 CheckOffset(struct sigaction,sa_mask,4,10,34719)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct sigaction,0, 10402, 6)
-Msg("Missing member data for sigaction on PPC32\n");
-CheckOffset(struct sigaction,__sigaction_handler,0,6,34716)
-CheckOffset(struct sigaction,sa_flags,0,6,34717)
-CheckOffset(struct sigaction,sa_restorer,0,6,34718)
-CheckOffset(struct sigaction,sa_mask,0,6,34719)
+CheckTypeSize(struct sigaction,140, 10402, 6)
+CheckOffset(struct sigaction,sa_flags,132,6,34717)
+CheckOffset(struct sigaction,sa_restorer,136,6,34718)
+CheckOffset(struct sigaction,sa_mask,4,6,34719)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10402,0);
 Msg("Find size of sigaction (10402)\n");

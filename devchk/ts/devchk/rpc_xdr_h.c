@@ -56,14 +56,12 @@ CheckOffset(struct XDR,x_private,24,3,32195)
 CheckOffset(struct XDR,x_base,32,3,32196)
 CheckOffset(struct XDR,x_handy,40,3,32197)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct XDR,0, 9934, 6)
-Msg("Missing member data for XDR on PPC32\n");
-CheckOffset(struct XDR,x_op,0,6,32162)
-CheckOffset(struct XDR,x_ops,0,6,32193)
-CheckOffset(struct XDR,x_public,0,6,32194)
-CheckOffset(struct XDR,x_private,0,6,32195)
-CheckOffset(struct XDR,x_base,0,6,32196)
-CheckOffset(struct XDR,x_handy,0,6,32197)
+CheckTypeSize(struct XDR,24, 9934, 6)
+CheckOffset(struct XDR,x_ops,4,6,32193)
+CheckOffset(struct XDR,x_public,8,6,32194)
+CheckOffset(struct XDR,x_private,12,6,32195)
+CheckOffset(struct XDR,x_base,16,6,32196)
+CheckOffset(struct XDR,x_handy,20,6,32197)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9934,0);
 Msg("Find size of XDR (9934)\n");
@@ -76,7 +74,7 @@ CheckTypeSize(XDR,48, 10412, 3)
 #elif __s390__
 CheckTypeSize(XDR,24, 10412, 10)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XDR,0, 10412, 6)
+CheckTypeSize(XDR,24, 10412, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10412,0);
 Msg("Find size of XDR (10412)\n");
@@ -89,7 +87,7 @@ CheckTypeSize(xdrproc_t,8, 9948, 3)
 #elif __s390__
 CheckTypeSize(xdrproc_t,4, 9948, 10)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xdrproc_t,0, 9948, 6)
+CheckTypeSize(xdrproc_t,4, 9948, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9948,0);
 Msg("Find size of xdrproc_t (9948)\n");
@@ -131,18 +129,16 @@ CheckOffset(struct xdr_ops,x_destroy,56,3,32186)
 CheckOffset(struct xdr_ops,x_getint32,64,3,32189)
 CheckOffset(struct xdr_ops,x_putint32,72,3,32192)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct xdr_ops,0, 9935, 6)
-Msg("Missing member data for xdr_ops on PPC32\n");
-CheckOffset(struct xdr_ops,x_getlong,0,6,32165)
-CheckOffset(struct xdr_ops,x_putlong,0,6,32168)
-CheckOffset(struct xdr_ops,x_getbytes,0,6,32172)
-CheckOffset(struct xdr_ops,x_putbytes,0,6,32176)
-CheckOffset(struct xdr_ops,x_getpostn,0,6,32178)
-CheckOffset(struct xdr_ops,x_setpostn,0,6,32181)
-CheckOffset(struct xdr_ops,x_inline,0,6,32184)
-CheckOffset(struct xdr_ops,x_destroy,0,6,32186)
-CheckOffset(struct xdr_ops,x_getint32,0,6,32189)
-CheckOffset(struct xdr_ops,x_putint32,0,6,32192)
+CheckTypeSize(struct xdr_ops,40, 9935, 6)
+CheckOffset(struct xdr_ops,x_putlong,4,6,32168)
+CheckOffset(struct xdr_ops,x_getbytes,8,6,32172)
+CheckOffset(struct xdr_ops,x_putbytes,12,6,32176)
+CheckOffset(struct xdr_ops,x_getpostn,16,6,32178)
+CheckOffset(struct xdr_ops,x_setpostn,20,6,32181)
+CheckOffset(struct xdr_ops,x_inline,24,6,32184)
+CheckOffset(struct xdr_ops,x_destroy,28,6,32186)
+CheckOffset(struct xdr_ops,x_getint32,32,6,32189)
+CheckOffset(struct xdr_ops,x_putint32,36,6,32192)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9935,0);
 Msg("Find size of xdr_ops (9935)\n");
