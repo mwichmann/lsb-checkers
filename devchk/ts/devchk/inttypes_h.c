@@ -33,6 +33,8 @@ CheckTypeSize(imaxdiv_t,16, 6898, 3)
 CheckTypeSize(imaxdiv_t,16, 6898, 6)
 #elif __s390__
 CheckTypeSize(imaxdiv_t,16, 6898, 10)
+#elif __powerpc64__
+CheckTypeSize(imaxdiv_t,0, 6898, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6898,0);
 Msg("Find size of imaxdiv_t (6898)\n");
@@ -46,6 +48,8 @@ CheckTypeSize(intmax_t,8, 9016, 3)
 CheckTypeSize(intmax_t,8, 9016, 6)
 #elif __s390__
 CheckTypeSize(intmax_t,8, 9016, 10)
+#elif __powerpc64__
+CheckTypeSize(intmax_t,0, 9016, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9016,0);
 Msg("Find size of intmax_t (9016)\n");
@@ -59,6 +63,8 @@ CheckTypeSize(uintmax_t,8, 9017, 3)
 CheckTypeSize(uintmax_t,8, 9017, 6)
 #elif __s390__
 CheckTypeSize(uintmax_t,8, 9017, 10)
+#elif __powerpc64__
+CheckTypeSize(uintmax_t,0, 9017, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9017,0);
 Msg("Find size of uintmax_t (9017)\n");
@@ -72,6 +78,8 @@ CheckTypeSize(u_int,4, 9261, 6)
 CheckTypeSize(u_int,4, 9261, 3)
 #elif __s390__
 CheckTypeSize(u_int,4, 9261, 10)
+#elif __powerpc64__
+CheckTypeSize(u_int,0, 9261, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9261,0);
 Msg("Find size of u_int (9261)\n");
@@ -85,6 +93,8 @@ CheckTypeSize(uint,4, 9265, 3)
 CheckTypeSize(uint,4, 9265, 10)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(uint,4, 9265, 6)
+#elif __powerpc64__
+CheckTypeSize(uint,0, 9265, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9265,0);
 Msg("Find size of uint (9265)\n");
@@ -98,6 +108,8 @@ CheckTypeSize(uint8_t,1, 9270, 3)
 CheckTypeSize(uint8_t,1, 9270, 6)
 #elif __s390__
 CheckTypeSize(uint8_t,1, 9270, 10)
+#elif __powerpc64__
+CheckTypeSize(uint8_t,0, 9270, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9270,0);
 Msg("Find size of uint8_t (9270)\n");
@@ -111,6 +123,8 @@ CheckTypeSize(uint16_t,2, 9271, 3)
 CheckTypeSize(uint16_t,2, 9271, 6)
 #elif __s390__
 CheckTypeSize(uint16_t,2, 9271, 10)
+#elif __powerpc64__
+CheckTypeSize(uint16_t,0, 9271, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9271,0);
 Msg("Find size of uint16_t (9271)\n");
@@ -124,6 +138,8 @@ CheckTypeSize(uint32_t,4, 9272, 3)
 CheckTypeSize(uint32_t,4, 9272, 6)
 #elif __s390__
 CheckTypeSize(uint32_t,4, 9272, 10)
+#elif __powerpc64__
+CheckTypeSize(uint32_t,0, 9272, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9272,0);
 Msg("Find size of uint32_t (9272)\n");
@@ -137,6 +153,8 @@ CheckTypeSize(uintptr_t,8, 9308, 3)
 CheckTypeSize(uintptr_t,4, 9308, 6)
 #elif __s390__
 CheckTypeSize(uintptr_t,4, 9308, 10)
+#elif __powerpc64__
+CheckTypeSize(uintptr_t,0, 9308, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9308,0);
 Msg("Find size of uintptr_t (9308)\n");
@@ -150,6 +168,8 @@ CheckTypeSize(uint64_t,8, 10176, 3)
 CheckTypeSize(uint64_t,8, 10176, 6)
 #elif __s390__
 CheckTypeSize(uint64_t,8, 10176, 10)
+#elif __powerpc64__
+CheckTypeSize(uint64_t,0, 10176, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10176,0);
 Msg("Find size of uint64_t (10176)\n");

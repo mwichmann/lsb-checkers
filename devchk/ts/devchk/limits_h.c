@@ -73,7 +73,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef CHAR_MIN
+	CompareConstant(CHAR_MIN,0,8,architecture)
+#else
+Msg( "Error: Constant not found: CHAR_MIN\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,0,8,architecture)
 #else
@@ -99,7 +107,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef CHAR_MAX
+	CompareConstant(CHAR_MAX,255,9,architecture)
+#else
+Msg( "Error: Constant not found: CHAR_MAX\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,255,9,architecture)
 #else
@@ -125,7 +141,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef __INT_MAX__
+	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
+#else
+Msg( "Error: Constant not found: __INT_MAX__\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef __INT_MAX__
 	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
 #else
@@ -223,7 +247,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef LONG_MAX
+	CompareConstant(LONG_MAX,-1,16,architecture)
+#else
+Msg( "Error: Constant not found: LONG_MAX\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,2147483647L,16,architecture)
 #else
@@ -271,7 +303,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ULONG_MAX
+	CompareConstant(ULONG_MAX,-1,18,architecture)
+#else
+Msg( "Error: Constant not found: ULONG_MAX\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ULONG_MAX
 	CompareConstant(ULONG_MAX,4294967295UL,18,architecture)
 #else

@@ -43,6 +43,13 @@ CheckTypeSize(struct tms,16, 6990, 10)
 CheckOffset(struct tms,tms_stime,4,10,30169)
 CheckOffset(struct tms,tms_cutime,8,10,30170)
 CheckOffset(struct tms,tms_cstime,12,10,30171)
+#elif __powerpc64__
+CheckTypeSize(struct tms,0, 6990, 9)
+Msg("Missing member data for tms on PPC64\n");
+CheckOffset(struct tms,tms_utime,0,9,30168)
+CheckOffset(struct tms,tms_stime,0,9,30169)
+CheckOffset(struct tms,tms_cutime,0,9,30170)
+CheckOffset(struct tms,tms_cstime,0,9,30171)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6990,0);
 Msg("Find size of tms (6990)\n");

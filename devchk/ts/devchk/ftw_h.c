@@ -98,6 +98,7 @@ cnt++;
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390__
+#elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8989,0);
 Msg("Find size of anon-ftw.h-13 (8989)\n");
@@ -107,6 +108,7 @@ Msg("Find size of anon-ftw.h-13 (8989)\n");
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390__
+#elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8990,0);
 Msg("Find size of anon-ftw.h-34 (8990)\n");
@@ -128,6 +130,10 @@ CheckOffset(struct FTW,level,4,6,29759)
 CheckTypeSize(struct FTW,8, 8691, 10)
 CheckOffset(struct FTW,base,0,10,29758)
 CheckOffset(struct FTW,level,4,10,29759)
+#elif __powerpc64__
+CheckTypeSize(struct FTW,0, 8691, 9)
+CheckOffset(struct FTW,base,0,9,29758)
+CheckOffset(struct FTW,level,4,9,29759)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8691,0);
 Msg("Find size of FTW (8691)\n");
@@ -141,6 +147,8 @@ CheckTypeSize(__ftw_func_t,8, 8992, 3)
 CheckTypeSize(__ftw_func_t,4, 8992, 6)
 #elif __s390__
 CheckTypeSize(__ftw_func_t,4, 8992, 10)
+#elif __powerpc64__
+CheckTypeSize(__ftw_func_t,0, 8992, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8992,0);
 Msg("Find size of __ftw_func_t (8992)\n");
@@ -154,6 +162,8 @@ CheckTypeSize(__ftw64_func_t,8, 8994, 3)
 CheckTypeSize(__ftw64_func_t,4, 8994, 6)
 #elif __s390__
 CheckTypeSize(__ftw64_func_t,4, 8994, 10)
+#elif __powerpc64__
+CheckTypeSize(__ftw64_func_t,0, 8994, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8994,0);
 Msg("Find size of __ftw64_func_t (8994)\n");
@@ -167,6 +177,8 @@ CheckTypeSize(__nftw_func_t,8, 8996, 3)
 CheckTypeSize(__nftw_func_t,4, 8996, 6)
 #elif __s390__
 CheckTypeSize(__nftw_func_t,4, 8996, 10)
+#elif __powerpc64__
+CheckTypeSize(__nftw_func_t,0, 8996, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8996,0);
 Msg("Find size of __nftw_func_t (8996)\n");
@@ -180,6 +192,8 @@ CheckTypeSize(__nftw64_func_t,8, 8998, 3)
 CheckTypeSize(__nftw64_func_t,4, 8998, 6)
 #elif __s390__
 CheckTypeSize(__nftw64_func_t,4, 8998, 10)
+#elif __powerpc64__
+CheckTypeSize(__nftw64_func_t,0, 8998, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8998,0);
 Msg("Find size of __nftw64_func_t (8998)\n");

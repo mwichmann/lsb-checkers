@@ -23,7 +23,15 @@ int pcnt=0;
 Msg("Checking data structures in sys/ioctl.h\n");
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef FIONREAD
+	CompareConstant(FIONREAD,1074030207,4619,architecture)
+#else
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,1074030207,4619,architecture)
 #else
@@ -41,7 +49,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef TIOCNOTTY
+	CompareConstant(TIOCNOTTY,21538,4627,architecture)
+#else
+Msg( "Error: Constant not found: TIOCNOTTY\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,0x5422,4627,architecture)
 #else

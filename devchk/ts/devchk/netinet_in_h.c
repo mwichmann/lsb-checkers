@@ -146,6 +146,13 @@ CheckTypeSize(struct sockaddr_in,16, 9141, 10)
 CheckOffset(struct sockaddr_in,sin_port,2,10,33777)
 CheckOffset(struct sockaddr_in,sin_addr,4,10,33778)
 CheckOffset(struct sockaddr_in,sin_zero,8,10,33779)
+#elif __powerpc64__
+CheckTypeSize(struct sockaddr_in,0, 9141, 9)
+Msg("Missing member data for sockaddr_in on PPC64\n");
+CheckOffset(struct sockaddr_in,sin_family,0,9,33776)
+CheckOffset(struct sockaddr_in,sin_port,0,9,33777)
+CheckOffset(struct sockaddr_in,sin_addr,0,9,33778)
+CheckOffset(struct sockaddr_in,sin_zero,0,9,33779)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 Msg("Find size of sockaddr_in (9141)\n");

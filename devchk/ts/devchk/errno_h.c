@@ -577,7 +577,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EDEADLK
+	CompareConstant(EDEADLK,35,69,architecture)
+#else
+Msg( "Error: Constant not found: EDEADLK\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EDEADLK
 	CompareConstant(EDEADLK,35,69,architecture)
 #else
@@ -615,7 +623,15 @@ Msg( "No definition for EDEADLK (69, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,69,%d);\n", architecture, EDEADLK);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENAMETOOLONG
+	CompareConstant(ENAMETOOLONG,36,70,architecture)
+#else
+Msg( "Error: Constant not found: ENAMETOOLONG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENAMETOOLONG
 	CompareConstant(ENAMETOOLONG,36,70,architecture)
 #else
@@ -653,7 +669,15 @@ Msg( "No definition for ENAMETOOLONG (70, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,70,%d);\n", architecture, ENAMETOOLONG);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOLCK
+	CompareConstant(ENOLCK,37,71,architecture)
+#else
+Msg( "Error: Constant not found: ENOLCK\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOLCK
 	CompareConstant(ENOLCK,37,71,architecture)
 #else
@@ -691,7 +715,15 @@ Msg( "No definition for ENOLCK (71, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,71,%d);\n", architecture, ENOLCK);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOSYS
+	CompareConstant(ENOSYS,38,72,architecture)
+#else
+Msg( "Error: Constant not found: ENOSYS\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOSYS
 	CompareConstant(ENOSYS,38,72,architecture)
 #else
@@ -729,7 +761,15 @@ Msg( "No definition for ENOSYS (72, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,72,%d);\n", architecture, ENOSYS);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOTEMPTY
+	CompareConstant(ENOTEMPTY,39,73,architecture)
+#else
+Msg( "Error: Constant not found: ENOTEMPTY\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOTEMPTY
 	CompareConstant(ENOTEMPTY,39,73,architecture)
 #else
@@ -767,7 +807,15 @@ Msg( "No definition for ENOTEMPTY (73, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,73,%d);\n", architecture, ENOTEMPTY);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ELOOP
+	CompareConstant(ELOOP,40,74,architecture)
+#else
+Msg( "Error: Constant not found: ELOOP\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ELOOP
 	CompareConstant(ELOOP,40,74,architecture)
 #else
@@ -815,7 +863,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EREMOTE
+	CompareConstant(EREMOTE,66,100,architecture)
+#else
+Msg( "Error: Constant not found: EREMOTE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EREMOTE
 	CompareConstant(EREMOTE,66,100,architecture)
 #else
@@ -853,7 +909,15 @@ Msg( "No definition for EREMOTE (100, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,100,%d);\n", architecture, EREMOTE);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOMSG
+	CompareConstant(ENOMSG,42,76,architecture)
+#else
+Msg( "Error: Constant not found: ENOMSG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOMSG
 	CompareConstant(ENOMSG,42,76,architecture)
 #else
@@ -891,7 +955,15 @@ Msg( "No definition for ENOMSG (76, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,76,%d);\n", architecture, ENOMSG);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOLINK
+	CompareConstant(ENOLINK,67,101,architecture)
+#else
+Msg( "Error: Constant not found: ENOLINK\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOLINK
 	CompareConstant(ENOLINK,67,101,architecture)
 #else
@@ -929,7 +1001,15 @@ Msg( "No definition for ENOLINK (101, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,101,%d);\n", architecture, ENOLINK);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EIDRM
+	CompareConstant(EIDRM,43,77,architecture)
+#else
+Msg( "Error: Constant not found: EIDRM\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EIDRM
 	CompareConstant(EIDRM,43,77,architecture)
 #else
@@ -967,7 +1047,15 @@ Msg( "No definition for EIDRM (77, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,77,%d);\n", architecture, EIDRM);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ECHRNG
+	CompareConstant(ECHRNG,44,78,architecture)
+#else
+Msg( "Error: Constant not found: ECHRNG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ECHRNG
 	CompareConstant(ECHRNG,44,78,architecture)
 #else
@@ -1005,7 +1093,15 @@ Msg( "No definition for ECHRNG (78, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,78,%d);\n", architecture, ECHRNG);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EADV
+	CompareConstant(EADV,68,102,architecture)
+#else
+Msg( "Error: Constant not found: EADV\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EADV
 	CompareConstant(EADV,68,102,architecture)
 #else
@@ -1043,7 +1139,15 @@ Msg( "No definition for EADV (102, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,102,%d);\n", architecture, EADV);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ESRMNT
+	CompareConstant(ESRMNT,69,103,architecture)
+#else
+Msg( "Error: Constant not found: ESRMNT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ESRMNT
 	CompareConstant(ESRMNT,69,103,architecture)
 #else
@@ -1081,7 +1185,15 @@ Msg( "No definition for ESRMNT (103, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,103,%d);\n", architecture, ESRMNT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EL2NSYNC
+	CompareConstant(EL2NSYNC,45,79,architecture)
+#else
+Msg( "Error: Constant not found: EL2NSYNC\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EL2NSYNC
 	CompareConstant(EL2NSYNC,45,79,architecture)
 #else
@@ -1119,7 +1231,15 @@ Msg( "No definition for EL2NSYNC (79, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,79,%d);\n", architecture, EL2NSYNC);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ECOMM
+	CompareConstant(ECOMM,70,104,architecture)
+#else
+Msg( "Error: Constant not found: ECOMM\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ECOMM
 	CompareConstant(ECOMM,70,104,architecture)
 #else
@@ -1157,7 +1277,15 @@ Msg( "No definition for ECOMM (104, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,104,%d);\n", architecture, ECOMM);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EPROTO
+	CompareConstant(EPROTO,71,105,architecture)
+#else
+Msg( "Error: Constant not found: EPROTO\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EPROTO
 	CompareConstant(EPROTO,71,105,architecture)
 #else
@@ -1195,7 +1323,15 @@ Msg( "No definition for EPROTO (105, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,105,%d);\n", architecture, EPROTO);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EMULTIHOP
+	CompareConstant(EMULTIHOP,72,106,architecture)
+#else
+Msg( "Error: Constant not found: EMULTIHOP\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EMULTIHOP
 	CompareConstant(EMULTIHOP,72,106,architecture)
 #else
@@ -1233,7 +1369,15 @@ Msg( "No definition for EMULTIHOP (106, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,106,%d);\n", architecture, EMULTIHOP);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EDOTDOT
+	CompareConstant(EDOTDOT,73,107,architecture)
+#else
+Msg( "Error: Constant not found: EDOTDOT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EDOTDOT
 	CompareConstant(EDOTDOT,73,107,architecture)
 #else
@@ -1271,7 +1415,15 @@ Msg( "No definition for EDOTDOT (107, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,107,%d);\n", architecture, EDOTDOT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EBADMSG
+	CompareConstant(EBADMSG,74,108,architecture)
+#else
+Msg( "Error: Constant not found: EBADMSG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EBADMSG
 	CompareConstant(EBADMSG,74,108,architecture)
 #else
@@ -1309,7 +1461,15 @@ Msg( "No definition for EBADMSG (108, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,108,%d);\n", architecture, EBADMSG);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EOVERFLOW
+	CompareConstant(EOVERFLOW,75,109,architecture)
+#else
+Msg( "Error: Constant not found: EOVERFLOW\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EOVERFLOW
 	CompareConstant(EOVERFLOW,75,109,architecture)
 #else
@@ -1347,7 +1507,15 @@ Msg( "No definition for EOVERFLOW (109, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,109,%d);\n", architecture, EOVERFLOW);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EL3HLT
+	CompareConstant(EL3HLT,46,80,architecture)
+#else
+Msg( "Error: Constant not found: EL3HLT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EL3HLT
 	CompareConstant(EL3HLT,46,80,architecture)
 #else
@@ -1385,7 +1553,15 @@ Msg( "No definition for EL3HLT (80, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,80,%d);\n", architecture, EL3HLT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EL3RST
+	CompareConstant(EL3RST,47,81,architecture)
+#else
+Msg( "Error: Constant not found: EL3RST\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EL3RST
 	CompareConstant(EL3RST,47,81,architecture)
 #else
@@ -1423,7 +1599,15 @@ Msg( "No definition for EL3RST (81, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,81,%d);\n", architecture, EL3RST);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ELNRNG
+	CompareConstant(ELNRNG,48,82,architecture)
+#else
+Msg( "Error: Constant not found: ELNRNG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ELNRNG
 	CompareConstant(ELNRNG,48,82,architecture)
 #else
@@ -1461,7 +1645,15 @@ Msg( "No definition for ELNRNG (82, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,82,%d);\n", architecture, ELNRNG);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EUNATCH
+	CompareConstant(EUNATCH,49,83,architecture)
+#else
+Msg( "Error: Constant not found: EUNATCH\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EUNATCH
 	CompareConstant(EUNATCH,49,83,architecture)
 #else
@@ -1499,7 +1691,15 @@ Msg( "No definition for EUNATCH (83, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,83,%d);\n", architecture, EUNATCH);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOTUNIQ
+	CompareConstant(ENOTUNIQ,76,110,architecture)
+#else
+Msg( "Error: Constant not found: ENOTUNIQ\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOTUNIQ
 	CompareConstant(ENOTUNIQ,76,110,architecture)
 #else
@@ -1537,7 +1737,15 @@ Msg( "No definition for ENOTUNIQ (110, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,110,%d);\n", architecture, ENOTUNIQ);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EBADFD
+	CompareConstant(EBADFD,77,111,architecture)
+#else
+Msg( "Error: Constant not found: EBADFD\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EBADFD
 	CompareConstant(EBADFD,77,111,architecture)
 #else
@@ -1575,7 +1783,15 @@ Msg( "No definition for EBADFD (111, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,111,%d);\n", architecture, EBADFD);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EREMCHG
+	CompareConstant(EREMCHG,78,112,architecture)
+#else
+Msg( "Error: Constant not found: EREMCHG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EREMCHG
 	CompareConstant(EREMCHG,78,112,architecture)
 #else
@@ -1613,7 +1829,15 @@ Msg( "No definition for EREMCHG (112, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,112,%d);\n", architecture, EREMCHG);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOANO
+	CompareConstant(ENOANO,55,89,architecture)
+#else
+Msg( "Error: Constant not found: ENOANO\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOANO
 	CompareConstant(ENOANO,55,89,architecture)
 #else
@@ -1651,7 +1875,15 @@ Msg( "No definition for ENOANO (89, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,89,%d);\n", architecture, ENOANO);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ELIBACC
+	CompareConstant(ELIBACC,79,113,architecture)
+#else
+Msg( "Error: Constant not found: ELIBACC\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ELIBACC
 	CompareConstant(ELIBACC,79,113,architecture)
 #else
@@ -1689,7 +1921,15 @@ Msg( "No definition for ELIBACC (113, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,113,%d);\n", architecture, ELIBACC);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ELIBBAD
+	CompareConstant(ELIBBAD,80,114,architecture)
+#else
+Msg( "Error: Constant not found: ELIBBAD\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ELIBBAD
 	CompareConstant(ELIBBAD,80,114,architecture)
 #else
@@ -1727,7 +1967,15 @@ Msg( "No definition for ELIBBAD (114, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,114,%d);\n", architecture, ELIBBAD);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ELIBSCN
+	CompareConstant(ELIBSCN,81,115,architecture)
+#else
+Msg( "Error: Constant not found: ELIBSCN\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ELIBSCN
 	CompareConstant(ELIBSCN,81,115,architecture)
 #else
@@ -1765,7 +2013,15 @@ Msg( "No definition for ELIBSCN (115, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,115,%d);\n", architecture, ELIBSCN);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ELIBMAX
+	CompareConstant(ELIBMAX,82,116,architecture)
+#else
+Msg( "Error: Constant not found: ELIBMAX\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ELIBMAX
 	CompareConstant(ELIBMAX,82,116,architecture)
 #else
@@ -1803,7 +2059,15 @@ Msg( "No definition for ELIBMAX (116, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,116,%d);\n", architecture, ELIBMAX);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ELIBEXEC
+	CompareConstant(ELIBEXEC,83,117,architecture)
+#else
+Msg( "Error: Constant not found: ELIBEXEC\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ELIBEXEC
 	CompareConstant(ELIBEXEC,83,117,architecture)
 #else
@@ -1841,7 +2105,15 @@ Msg( "No definition for ELIBEXEC (117, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,117,%d);\n", architecture, ELIBEXEC);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EILSEQ
+	CompareConstant(EILSEQ,84,118,architecture)
+#else
+Msg( "Error: Constant not found: EILSEQ\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EILSEQ
 	CompareConstant(EILSEQ,84,118,architecture)
 #else
@@ -1879,7 +2151,15 @@ Msg( "No definition for EILSEQ (118, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,118,%d);\n", architecture, EILSEQ);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ERESTART
+	CompareConstant(ERESTART,85,119,architecture)
+#else
+Msg( "Error: Constant not found: ERESTART\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ERESTART
 	CompareConstant(ERESTART,85,119,architecture)
 #else
@@ -1917,7 +2197,15 @@ Msg( "No definition for ERESTART (119, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,119,%d);\n", architecture, ERESTART);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EBADRQC
+	CompareConstant(EBADRQC,56,90,architecture)
+#else
+Msg( "Error: Constant not found: EBADRQC\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EBADRQC
 	CompareConstant(EBADRQC,56,90,architecture)
 #else
@@ -1955,7 +2243,15 @@ Msg( "No definition for EBADRQC (90, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,90,%d);\n", architecture, EBADRQC);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EBADSLT
+	CompareConstant(EBADSLT,57,91,architecture)
+#else
+Msg( "Error: Constant not found: EBADSLT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EBADSLT
 	CompareConstant(EBADSLT,57,91,architecture)
 #else
@@ -1993,7 +2289,15 @@ Msg( "No definition for EBADSLT (91, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,91,%d);\n", architecture, EBADSLT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EDEADLOCK
+	CompareConstant(EDEADLOCK,58,92,architecture)
+#else
+Msg( "Error: Constant not found: EDEADLOCK\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,58,92,architecture)
 #else
@@ -2011,7 +2315,15 @@ cnt++;
 
 #endif
 
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EBFONT
+	CompareConstant(EBFONT,59,93,architecture)
+#else
+Msg( "Error: Constant not found: EBFONT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EBFONT
 	CompareConstant(EBFONT,59,93,architecture)
 #else
@@ -2049,7 +2361,15 @@ Msg( "No definition for EBFONT (93, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,93,%d);\n", architecture, EBFONT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOSTR
+	CompareConstant(ENOSTR,60,94,architecture)
+#else
+Msg( "Error: Constant not found: ENOSTR\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOSTR
 	CompareConstant(ENOSTR,60,94,architecture)
 #else
@@ -2087,7 +2407,15 @@ Msg( "No definition for ENOSTR (94, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,94,%d);\n", architecture, ENOSTR);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENODATA
+	CompareConstant(ENODATA,61,95,architecture)
+#else
+Msg( "Error: Constant not found: ENODATA\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENODATA
 	CompareConstant(ENODATA,61,95,architecture)
 #else
@@ -2125,7 +2453,15 @@ Msg( "No definition for ENODATA (95, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,95,%d);\n", architecture, ENODATA);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ETIME
+	CompareConstant(ETIME,62,96,architecture)
+#else
+Msg( "Error: Constant not found: ETIME\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ETIME
 	CompareConstant(ETIME,62,96,architecture)
 #else
@@ -2163,7 +2499,15 @@ Msg( "No definition for ETIME (96, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,96,%d);\n", architecture, ETIME);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ESTRPIPE
+	CompareConstant(ESTRPIPE,86,120,architecture)
+#else
+Msg( "Error: Constant not found: ESTRPIPE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ESTRPIPE
 	CompareConstant(ESTRPIPE,86,120,architecture)
 #else
@@ -2201,7 +2545,15 @@ Msg( "No definition for ESTRPIPE (120, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,120,%d);\n", architecture, ESTRPIPE);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EUSERS
+	CompareConstant(EUSERS,87,121,architecture)
+#else
+Msg( "Error: Constant not found: EUSERS\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EUSERS
 	CompareConstant(EUSERS,87,121,architecture)
 #else
@@ -2239,7 +2591,15 @@ Msg( "No definition for EUSERS (121, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,121,%d);\n", architecture, EUSERS);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOSR
+	CompareConstant(ENOSR,63,97,architecture)
+#else
+Msg( "Error: Constant not found: ENOSR\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOSR
 	CompareConstant(ENOSR,63,97,architecture)
 #else
@@ -2277,7 +2637,15 @@ Msg( "No definition for ENOSR (97, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,97,%d);\n", architecture, ENOSR);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOTSOCK
+	CompareConstant(ENOTSOCK,88,122,architecture)
+#else
+Msg( "Error: Constant not found: ENOTSOCK\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOTSOCK
 	CompareConstant(ENOTSOCK,88,122,architecture)
 #else
@@ -2315,7 +2683,15 @@ Msg( "No definition for ENOTSOCK (122, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,122,%d);\n", architecture, ENOTSOCK);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENONET
+	CompareConstant(ENONET,64,98,architecture)
+#else
+Msg( "Error: Constant not found: ENONET\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENONET
 	CompareConstant(ENONET,64,98,architecture)
 #else
@@ -2353,7 +2729,15 @@ Msg( "No definition for ENONET (98, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,98,%d);\n", architecture, ENONET);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOPKG
+	CompareConstant(ENOPKG,65,99,architecture)
+#else
+Msg( "Error: Constant not found: ENOPKG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOPKG
 	CompareConstant(ENOPKG,65,99,architecture)
 #else
@@ -2391,7 +2775,15 @@ Msg( "No definition for ENOPKG (99, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,99,%d);\n", architecture, ENOPKG);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EDESTADDRREQ
+	CompareConstant(EDESTADDRREQ,89,123,architecture)
+#else
+Msg( "Error: Constant not found: EDESTADDRREQ\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EDESTADDRREQ
 	CompareConstant(EDESTADDRREQ,89,123,architecture)
 #else
@@ -2429,7 +2821,15 @@ Msg( "No definition for EDESTADDRREQ (123, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,123,%d);\n", architecture, EDESTADDRREQ);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EMSGSIZE
+	CompareConstant(EMSGSIZE,90,124,architecture)
+#else
+Msg( "Error: Constant not found: EMSGSIZE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EMSGSIZE
 	CompareConstant(EMSGSIZE,90,124,architecture)
 #else
@@ -2467,7 +2867,15 @@ Msg( "No definition for EMSGSIZE (124, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,124,%d);\n", architecture, EMSGSIZE);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EPROTOTYPE
+	CompareConstant(EPROTOTYPE,91,125,architecture)
+#else
+Msg( "Error: Constant not found: EPROTOTYPE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EPROTOTYPE
 	CompareConstant(EPROTOTYPE,91,125,architecture)
 #else
@@ -2505,7 +2913,15 @@ Msg( "No definition for EPROTOTYPE (125, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,125,%d);\n", architecture, EPROTOTYPE);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ENOPROTOOPT
+	CompareConstant(ENOPROTOOPT,92,126,architecture)
+#else
+Msg( "Error: Constant not found: ENOPROTOOPT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ENOPROTOOPT
 	CompareConstant(ENOPROTOOPT,92,126,architecture)
 #else
@@ -2543,7 +2959,15 @@ Msg( "No definition for ENOPROTOOPT (126, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,126,%d);\n", architecture, ENOPROTOOPT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EPROTONOSUPPORT
+	CompareConstant(EPROTONOSUPPORT,93,127,architecture)
+#else
+Msg( "Error: Constant not found: EPROTONOSUPPORT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EPROTONOSUPPORT
 	CompareConstant(EPROTONOSUPPORT,93,127,architecture)
 #else
@@ -2581,7 +3005,15 @@ Msg( "No definition for EPROTONOSUPPORT (127, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,127,%d);\n", architecture, EPROTONOSUPPORT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef ESOCKTNOSUPPORT
+	CompareConstant(ESOCKTNOSUPPORT,94,128,architecture)
+#else
+Msg( "Error: Constant not found: ESOCKTNOSUPPORT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef ESOCKTNOSUPPORT
 	CompareConstant(ESOCKTNOSUPPORT,94,128,architecture)
 #else
@@ -2619,7 +3051,15 @@ Msg( "No definition for ESOCKTNOSUPPORT (128, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,128,%d);\n", architecture, ESOCKTNOSUPPORT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EOPNOTSUPP
+	CompareConstant(EOPNOTSUPP,95,129,architecture)
+#else
+Msg( "Error: Constant not found: EOPNOTSUPP\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EOPNOTSUPP
 	CompareConstant(EOPNOTSUPP,95,129,architecture)
 #else
@@ -2657,7 +3097,15 @@ Msg( "No definition for EOPNOTSUPP (129, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,129,%d);\n", architecture, EOPNOTSUPP);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EPFNOSUPPORT
+	CompareConstant(EPFNOSUPPORT,96,130,architecture)
+#else
+Msg( "Error: Constant not found: EPFNOSUPPORT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EPFNOSUPPORT
 	CompareConstant(EPFNOSUPPORT,96,130,architecture)
 #else
@@ -2695,7 +3143,15 @@ Msg( "No definition for EPFNOSUPPORT (130, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,130,%d);\n", architecture, EPFNOSUPPORT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EAFNOSUPPORT
+	CompareConstant(EAFNOSUPPORT,97,131,architecture)
+#else
+Msg( "Error: Constant not found: EAFNOSUPPORT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EAFNOSUPPORT
 	CompareConstant(EAFNOSUPPORT,97,131,architecture)
 #else
@@ -2733,7 +3189,15 @@ Msg( "No definition for EAFNOSUPPORT (131, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,131,%d);\n", architecture, EAFNOSUPPORT);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EADDRINUSE
+	CompareConstant(EADDRINUSE,98,132,architecture)
+#else
+Msg( "Error: Constant not found: EADDRINUSE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EADDRINUSE
 	CompareConstant(EADDRINUSE,98,132,architecture)
 #else
@@ -2771,7 +3235,15 @@ Msg( "No definition for EADDRINUSE (132, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,132,%d);\n", architecture, EADDRINUSE);
 #endif
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __powerpc64__
+#ifdef EADDRNOTAVAIL
+	CompareConstant(EADDRNOTAVAIL,99,133,architecture)
+#else
+Msg( "Error: Constant not found: EADDRNOTAVAIL\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef EADDRNOTAVAIL
 	CompareConstant(EADDRNOTAVAIL,99,133,architecture)
 #else

@@ -43,6 +43,13 @@ CheckTypeSize(struct timeb,12, 10216, 10)
 CheckOffset(struct timeb,millitm,4,10,34299)
 CheckOffset(struct timeb,timezone,6,10,34300)
 CheckOffset(struct timeb,dstflag,8,10,34301)
+#elif __powerpc64__
+CheckTypeSize(struct timeb,0, 10216, 9)
+Msg("Missing member data for timeb on PPC64\n");
+CheckOffset(struct timeb,time,0,9,34298)
+CheckOffset(struct timeb,millitm,0,9,34299)
+CheckOffset(struct timeb,timezone,0,9,34300)
+CheckOffset(struct timeb,dstflag,0,9,34301)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10216,0);
 Msg("Find size of timeb (10216)\n");

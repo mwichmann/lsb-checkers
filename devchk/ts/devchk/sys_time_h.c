@@ -65,6 +65,11 @@ CheckOffset(struct timezone,tz_dsttime,4,6,33507)
 #elif __s390__
 CheckTypeSize(struct timezone,8, 9855, 10)
 CheckOffset(struct timezone,tz_dsttime,4,10,33507)
+#elif __powerpc64__
+CheckTypeSize(struct timezone,0, 9855, 9)
+Msg("Missing member data for timezone on PPC64\n");
+CheckOffset(struct timezone,tz_minuteswest,0,9,33506)
+CheckOffset(struct timezone,tz_dsttime,0,9,33507)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9855,0);
 Msg("Find size of timezone (9855)\n");
@@ -82,6 +87,11 @@ CheckOffset(struct itimerval,it_value,8,6,33511)
 #elif __s390__
 CheckTypeSize(struct itimerval,16, 9861, 10)
 CheckOffset(struct itimerval,it_value,8,10,33511)
+#elif __powerpc64__
+CheckTypeSize(struct itimerval,0, 9861, 9)
+Msg("Missing member data for itimerval on PPC64\n");
+CheckOffset(struct itimerval,it_interval,0,9,33510)
+CheckOffset(struct itimerval,it_value,0,9,33511)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9861,0);
 Msg("Find size of itimerval (9861)\n");
@@ -99,6 +109,11 @@ CheckOffset(struct timespec,tv_nsec,4,6,33503)
 #elif __s390__
 CheckTypeSize(struct timespec,8, 7018, 10)
 CheckOffset(struct timespec,tv_nsec,4,10,33503)
+#elif __powerpc64__
+CheckTypeSize(struct timespec,0, 7018, 9)
+Msg("Missing member data for timespec on PPC64\n");
+CheckOffset(struct timespec,tv_sec,0,9,33502)
+CheckOffset(struct timespec,tv_nsec,0,9,33503)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7018,0);
 Msg("Find size of timespec (7018)\n");
@@ -116,6 +131,11 @@ CheckOffset(struct timeval,tv_usec,4,6,33505)
 #elif __s390__
 CheckTypeSize(struct timeval,8, 9858, 10)
 CheckOffset(struct timeval,tv_usec,4,10,33505)
+#elif __powerpc64__
+CheckTypeSize(struct timeval,0, 9858, 9)
+Msg("Missing member data for timeval on PPC64\n");
+CheckOffset(struct timeval,tv_sec,0,9,33504)
+CheckOffset(struct timeval,tv_usec,0,9,33505)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9858,0);
 Msg("Find size of timeval (9858)\n");

@@ -99,6 +99,12 @@ CheckOffset(struct pollfd,revents,6,3,34414)
 CheckTypeSize(struct pollfd,8, 9913, 10)
 CheckOffset(struct pollfd,events,4,10,34413)
 CheckOffset(struct pollfd,revents,6,10,34414)
+#elif __powerpc64__
+CheckTypeSize(struct pollfd,0, 9913, 9)
+Msg("Missing member data for pollfd on PPC64\n");
+CheckOffset(struct pollfd,fd,0,9,34412)
+CheckOffset(struct pollfd,events,0,9,34413)
+CheckOffset(struct pollfd,revents,0,9,34414)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
 Msg("Find size of pollfd (9913)\n");

@@ -24,6 +24,8 @@ CheckTypeSize(void,1,1,2)
 CheckTypeSize(void,1,1,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(void,1,1,6)
+#elif __powerpc64__
+CheckTypeSize(void,0,1,9)
 #elif __s390__
 CheckTypeSize(void,1,1,10)
 #else
@@ -36,6 +38,8 @@ CheckTypeSize(char,1,2,2)
 CheckTypeSize(char,1,2,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(char,1,2,6)
+#elif __powerpc64__
+CheckTypeSize(char,0,2,9)
 #elif __s390__
 CheckTypeSize(char,1,2,10)
 #else
@@ -48,6 +52,8 @@ CheckTypeSize(unsigned char,1,3,2)
 CheckTypeSize(unsigned char,1,3,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(unsigned char,1,3,6)
+#elif __powerpc64__
+CheckTypeSize(unsigned char,0,3,9)
 #elif __s390__
 CheckTypeSize(unsigned char,1,3,10)
 #else
@@ -60,6 +66,8 @@ CheckTypeSize(short,2,4,2)
 CheckTypeSize(short,2,4,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(short,2,4,6)
+#elif __powerpc64__
+CheckTypeSize(short,0,4,9)
 #elif __s390__
 CheckTypeSize(short,2,4,10)
 #else
@@ -72,6 +80,8 @@ CheckTypeSize(unsigned short,2,5,2)
 CheckTypeSize(unsigned short,2,5,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(unsigned short,2,5,6)
+#elif __powerpc64__
+CheckTypeSize(unsigned short,0,5,9)
 #elif __s390__
 CheckTypeSize(unsigned short,2,5,10)
 #else
@@ -84,6 +94,8 @@ CheckTypeSize(int,4,6,2)
 CheckTypeSize(int,4,6,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(int,4,6,6)
+#elif __powerpc64__
+CheckTypeSize(int,0,6,9)
 #elif __s390__
 CheckTypeSize(int,4,6,10)
 #else
@@ -96,6 +108,8 @@ CheckTypeSize(unsigned int,4,7,2)
 CheckTypeSize(unsigned int,4,7,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(unsigned int,4,7,6)
+#elif __powerpc64__
+CheckTypeSize(unsigned int,0,7,9)
 #elif __s390__
 CheckTypeSize(unsigned int,4,7,10)
 #else
@@ -108,6 +122,8 @@ CheckTypeSize(long,4,8,2)
 CheckTypeSize(long,8,8,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(long,4,8,6)
+#elif __powerpc64__
+CheckTypeSize(long,0,8,9)
 #elif __s390__
 CheckTypeSize(long,4,8,10)
 #else
@@ -120,6 +136,8 @@ CheckTypeSize(unsigned long,4,9,2)
 CheckTypeSize(unsigned long,8,9,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(unsigned long,4,9,6)
+#elif __powerpc64__
+CheckTypeSize(unsigned long,0,9,9)
 #elif __s390__
 CheckTypeSize(unsigned long,4,9,10)
 #else
@@ -132,6 +150,8 @@ CheckTypeSize(long long,8,10,2)
 CheckTypeSize(long long,8,10,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(long long,8,10,6)
+#elif __powerpc64__
+CheckTypeSize(long long,0,10,9)
 #elif __s390__
 CheckTypeSize(long long,8,10,10)
 #else
@@ -144,6 +164,8 @@ CheckTypeSize(unsigned long long,8,11,2)
 CheckTypeSize(unsigned long long,8,11,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(unsigned long long,8,11,6)
+#elif __powerpc64__
+CheckTypeSize(unsigned long long,0,11,9)
 #elif __s390__
 CheckTypeSize(unsigned long long,8,11,10)
 #else
@@ -156,6 +178,8 @@ CheckTypeSize(float,4,12,2)
 CheckTypeSize(float,4,12,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(float,4,12,6)
+#elif __powerpc64__
+CheckTypeSize(float,0,12,9)
 #elif __s390__
 CheckTypeSize(float,4,12,10)
 #else
@@ -168,6 +192,8 @@ CheckTypeSize(double,8,13,2)
 CheckTypeSize(double,8,13,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(double,8,13,6)
+#elif __powerpc64__
+CheckTypeSize(double,0,13,9)
 #elif __s390__
 CheckTypeSize(double,8,13,10)
 #else
@@ -180,6 +206,8 @@ CheckTypeSize(long double,12,14,2)
 CheckTypeSize(long double,16,14,3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(long double,8,14,6)
+#elif __powerpc64__
+CheckTypeSize(long double,0,14,9)
 #elif __s390__
 CheckTypeSize(long double,8,14,10)
 #else
