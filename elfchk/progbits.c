@@ -73,7 +73,8 @@ if( elfchk_debug&DEBUG_SECTION_CONTENTS )
 				hdr1->sh_size, hdr1->sh_offset);
 
 frmhdrimg=(EHFRMHDRImage *)((caddr_t)(file1->addr)+hdr1->sh_offset);
-dumpbytes((unsigned char *)frmhdrimg,hdr1->sh_size);
+if (elfchk_debug & DEBUG_SECTION_CONTENTS)
+         dumpbytes((unsigned char *)frmhdrimg,hdr1->sh_size);
 
 frmhdr.version=frmhdrimg->version;
 frmhdr.eh_frame_ptr_enc=frmhdrimg->eh_frame_ptr_enc;
@@ -85,7 +86,7 @@ ptr+=numused;
 frmhdr.fde_count=(int)read_FDE_encoded(ptr,frmhdr.fde_count_enc,&numused);
 ptr+=numused;
 
-if( 1 || elfchk_debug&DEBUG_SECTION_CONTENTS ) {
+if (elfchk_debug & DEBUG_SECTION_CONTENTS) {
 	fprintf(stderr,"version: 0x%2.2x\n", frmhdr.version);
 	fprintf(stderr,"eh_frame_ptr_enc: 0x%2.2x\n", frmhdr.eh_frame_ptr_enc);
 	fprintf(stderr,"fde_count_enc: 0x%2.2x\n", frmhdr.fde_count_enc);
@@ -98,15 +99,18 @@ if( 1 || elfchk_debug&DEBUG_SECTION_CONTENTS ) {
 
 /* Now, decode the table, if present */
 
-dumpbytes(ptr,hdr1->sh_size-(ptr-(unsigned char *)frmhdrimg));
+if (elfchk_debug & DEBUG_SECTION_CONTENTS)
+        dumpbytes(ptr,hdr1->sh_size-(ptr-(unsigned char *)frmhdrimg));
 
 for(i=0;i<frmhdr.fde_count;i++) {
 	tmp=(int)read_FDE_encoded(ptr,frmhdr.table_enc,&numused);
 	ptr+=numused;
-	fprintf(stderr,"[%2.2x] Initial_location: %x\t", i, tmp);
+        if (elfchk_debug & DEBUG_SECTION_CONTENTS)
+                fprintf(stderr,"[%2.2x] Initial_location: %x\t", i, tmp);
 	tmp=(int)read_FDE_encoded(ptr,frmhdr.table_enc,&numused);
 	ptr+=numused;
-	fprintf(stderr,"address: %x\n", tmp);
+        if (elfchk_debug & DEBUG_SECTION_CONTENTS)
+                fprintf(stderr,"address: %x\n", tmp);
 	}
 
 return 1;
