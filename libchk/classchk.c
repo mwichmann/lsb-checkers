@@ -67,9 +67,9 @@ for(i=0;classes[i]!=NULL;i++) {
 		}
 
 	rttip=dlsym(dlhndl,classp->rttiname);
-	printf("%s found at %x\n",classp->rttiname,rttip);
-	printf("\tbasevtable: %x\n", rttip->basevtable);
-	printf("\tbasevtable: %x\n", rttip->basevtable);
+	printf("%s found at %p\n",classp->rttiname,rttip);
+	printf("\tbasevtable: %p\n", rttip->basevtable);
+	printf("\tbasevtable: %p\n", rttip->basevtable);
 	dladdr(rttip->basevtable,&dlinfo);
 	printf("\tbasevtable name: %s\n", dlinfo.dli_sname);
 	printf("\tname: %s\n", rttip->name);
