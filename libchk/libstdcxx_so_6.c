@@ -13690,6 +13690,9 @@ const char *N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name_0 [] = 
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __x86_64__
@@ -16329,11 +16332,11 @@ const char *St14codecvt_bynameIcc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNKSt7codecvtIcc11__mbstate_tE5do_inERS0_PKcS4_RS4_PcS6_RS6_",
 	"_ZNKSt7codecvtIcc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIcc11__mbstate_tE16do_always_noconvEv",
-#if __i386__
-	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
-#endif
 #if __ia64__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
+#endif
+#if __i386__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
