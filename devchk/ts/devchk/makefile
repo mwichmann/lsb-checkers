@@ -45,7 +45,11 @@ OBJS = hdrchk.o \
 	pthread_h.o \
 	pwd_h.o \
 	regex_h.o \
+	rpc_auth_h.o \
+	rpc_clnt_h.o \
 	rpc_rpc_h.o \
+	rpc_svc_h.o \
+	rpc_xdr_h.o \
 	sched_h.o \
 	search_h.o \
 	security_pam_appl_h.o \
