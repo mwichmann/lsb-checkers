@@ -3,6 +3,9 @@
 lsbappchk \- check LSB conformance of application
 .SH SYNOPSIS
 .B lsbappchk
+.RB [ \-A ]
+.RB [ \-M
+.IR modulename ]
 .RB [ \-L
 .IR pathtolib ]...
 .IR appname ...
@@ -14,6 +17,12 @@ checked, as is the list of shared libraries used by the application,
 and the list of functions and global data used by the
 application. Warnings are produced for anything that is used, but not
 contained in the LSB specification.
+.TP
+\fB\-A
+Check the symbols found in all modules.
+.TP
+\fB\-M \fImodulename\fR
+Check only the symbols found in module \fImodulename\fR.
 .TP
 \fB\-L \fInameoflib\fR
 Specify the full path of a library which is part of the application.  This

@@ -8,6 +8,11 @@
 #include "check_file.h"
 #include "libraries.h"
 
+/*
+ * What module to check against. - NULL means check all
+ */
+char *module = "LSB-Core";
+
 char *
 concat_string(char *input, char *addition)
 {
@@ -26,7 +31,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.13 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.14 $";
 
 int
 main(int argc, char *argv[])
@@ -54,7 +59,7 @@ main(int argc, char *argv[])
   
   /* Parse options */
   while(1) {
-    c=getopt(argc,argv,"L:o:");
+    c=getopt(argc,argv,"L:o:M:A");
     if( c == -1 )
       break;
     switch(c) {
@@ -68,10 +73,20 @@ main(int argc, char *argv[])
       extra_libraries = concat_string(extra_libraries, " ");
       break;
 			
-		case 'o':
-			strncpy(journal_filename, optarg, TMP_STRING_SIZE);
-			overrideJournalFilename = 1;
-			break;
+    case 'M':
+      module=optarg;
+      printf("Only checking symbols in module %s\n", module);
+      break;
+
+    case 'A':
+      module=NULL;
+      printf("Checking symbols in all in module\n");
+      break;
+
+    case 'o':
+      strncpy(journal_filename, optarg, TMP_STRING_SIZE);
+      overrideJournalFilename = 1;
+      break;
 
     default:
       printf ("?? getopt returned character code 0%o ??\n", c);
@@ -79,7 +94,7 @@ main(int argc, char *argv[])
   }
 
   if( optind >= argc ) {
-    fprintf(stderr, "usage: %s [-o outputfile ] [-L libpath ] file\n", argv[0] );
+    fprintf(stderr, "usage: %s [-o outputfile ] [-A] [-M modulename ] [-L libpath ] file\n", argv[0] );
     exit(1);
   }
 
