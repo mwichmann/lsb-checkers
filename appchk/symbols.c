@@ -21,7 +21,7 @@ for(i=0;i<numsyms;i++) {
 	/* Weak Symbols and provided by the app */
 	if( ELF32_ST_BIND(syms1[i].st_info) == STB_WEAK ) continue;
 	/* Actually provided by a section in the app */
-	if( syms1[i].st_shndx != 0 ) continue;
+	if( syms1[i].st_shndx != SHN_UNDEF ) continue;
 	if( !(ELF32_ST_TYPE(syms1[i].st_info) == STT_OBJECT ||
 	      ELF32_ST_TYPE(syms1[i].st_info) == STT_FUNC) ) continue;
 /*
