@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <math.h>
 #undef llrintf
-static long long(*funcptr) (float ) = 0;
+static long long int(*funcptr) (float ) = 0;
 
 extern int __lsb_check_params;
-long long llrintf (float arg0 )
+long long int llrintf (float arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	long long ret_value  ;
+	long long int ret_value  ;
 	if(!funcptr)
 		funcptr = dlvsym(RTLD_NEXT, "llrintf", "GLIBC_2.1");
 	if(__lsb_check_params)
