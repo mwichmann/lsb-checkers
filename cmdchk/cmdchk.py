@@ -12,9 +12,12 @@ Prefix, if supplied, is a prefix to prepend to all paths
 # Python version
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.2 $
+# This is $Revision: 1.3 $
 #
 # $Log: cmdchk.py,v $
+# Revision 1.3  2003/11/18 16:44:35  mats
+# minor simplification
+#
 # Revision 1.2  2003/11/12 00:46:08  mats
 # Revision pass to make a "Journal" a class so it can hold state and
 # simplify a lot of the passing around of variables.
@@ -86,10 +89,8 @@ if not journal.journal:
     sys.stderr.write("Could not open journal file")
     sys.exit(1)
 
-tmp_string = "VSX_NAME=lsbcmdchk experimental"
-journal.add_config(tmp_string)
-tmp_string = "search prefix is [%s]" % prefix
-journal.add_config(tmp_string)
+journal.add_config("VSX_NAME=lsbcmdchk experimental")
+journal.add_config("search prefix is [%s]" % prefix)
 items = parse_cmds("cmdlist")
 for (command, cmdpath) in items:
     check_cmd(journal, command, cmdpath)
