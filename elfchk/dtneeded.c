@@ -87,6 +87,33 @@ char *DtNeeded[] = {
 	"libdl.so.2",
 #endif /* __s390x__ */
 	"libgcc_s.so.1",
+#if __i386__
+	"libgcc_s.so.1",
+#endif /* __i386__ */
+#if __ia64__
+	"libgcc_s.so.1",
+#endif /* __ia64__ */
+#if __arm__
+	"libgcc_s.so.1",
+#endif /* __arm__ */
+#if __mc68000__
+	"libgcc_s.so.1",
+#endif /* __mc68000__ */
+#if __powerpc__ && !__powerpc64__
+	"libgcc_s.so.1",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libgcc_s.so.1",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libgcc_s.so.1",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libgcc_s.so.1",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libgcc_s.so.1",
+#endif /* __s390x__ */
 	"libGL.so.1",
 	"libICE.so.6",
 #if __i386__
@@ -111,6 +138,30 @@ char *DtNeeded[] = {
 	"libm.so.6.1",
 #endif /* __ia64__ */
 	"libncurses.so.5",
+#if __i386__
+	"libncurses.so.5",
+#endif /* __i386__ */
+#if __ia64__
+	"libncurses.so.5",
+#endif /* __ia64__ */
+#if __arm__
+	"libncurses.so.5",
+#endif /* __arm__ */
+#if __powerpc__ && !__powerpc64__
+	"libncurses.so.5",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libncurses.so.5",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libncurses.so.5",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libncurses.so.5",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libncurses.so.5",
+#endif /* __s390x__ */
 	"libpam.so.0",
 #if __i386__
 	"libpthread.so.0",
@@ -157,9 +208,57 @@ char *DtNeeded[] = {
 	"libstdc++.so.5",
 #endif /* __s390x__ */
 	"libutil.so.1",
+#if __i386__
+	"libutil.so.1",
+#endif /* __i386__ */
+#if __ia64__
+	"libutil.so.1",
+#endif /* __ia64__ */
+#if __arm__
+	"libutil.so.1",
+#endif /* __arm__ */
+#if __powerpc__ && !__powerpc64__
+	"libutil.so.1",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libutil.so.1",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libutil.so.1",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libutil.so.1",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libutil.so.1",
+#endif /* __s390x__ */
 	"libX11.so.6",
 	"libXext.so.6",
 	"libXt.so.6",
 	"libz.so.1",
+#if __i386__
+	"libz.so.1",
+#endif /* __i386__ */
+#if __ia64__
+	"libz.so.1",
+#endif /* __ia64__ */
+#if __arm__
+	"libz.so.1",
+#endif /* __arm__ */
+#if __powerpc__ && !__powerpc64__
+	"libz.so.1",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libz.so.1",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libz.so.1",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libz.so.1",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libz.so.1",
+#endif /* __s390x__ */
 	};
 int numDtNeeded = sizeof(DtNeeded)/sizeof(char *);
