@@ -35,6 +35,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
              "Unable to open file %s as ELF binary\n", filename);
     fprintf(stderr, tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     return NULL;
   }
   else
@@ -72,6 +73,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
     snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
     tetj_testcase_info(journal, tetj_activity_count, 0, 0, 0, 0, tmp_string2);
   }
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
   checkElf(elffile, isProgram, journal);
   if (elffile->symhdr==NULL)
