@@ -107,9 +107,9 @@ struct SectionInfo SectionInfo[] = {
 #if defined(__ia64__)
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkNOBITS},
 #endif /* __ia64__ */
-#if defined(__powerpc__)
+#if defined(__i386__)
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
-#endif /* __powerpc__ */
+#endif /* __i386__ */
 #if defined(__ia64__)
 	{".sdata",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
@@ -120,12 +120,8 @@ struct SectionInfo SectionInfo[] = {
 	{".sdata1",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */
 	{".shstrtab",SHT_STRTAB,0,checkSTRTAB},
-#if defined(__not_def__)
 	{".stab",SHT_PROGBITS,0,checkPROGBITS},
-#endif /* __not_def__ */
-#if defined(__not_def__)
 	{".stabstr",SHT_STRTAB,0,checkSTRTAB},
-#endif /* __not_def__ */
 	{".strtab",SHT_STRTAB,SHF_ALLOC,checkSTRTAB},
 	{".symtab",SHT_SYMTAB,SHF_ALLOC,checkSYMTAB},
 	{".text",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
