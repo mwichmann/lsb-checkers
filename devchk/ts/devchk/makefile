@@ -89,3 +89,5 @@ clean:
 
 clobber:	clean
 	rm -f *.c hdrchk_tet.h testdefs.h hdrchk
+
+distclean: clobber
