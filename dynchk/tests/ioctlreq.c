@@ -5,7 +5,7 @@
 #include <net/if.h>
 #include "../libs/__lsb_funcs.h"
 
-void validate_ioctlreq(const int req, const char *name)
+int validate_ioctlreq(const int req, const char *name)
 {
 	switch(req) {
 		/* Socket related icotl()s */
@@ -19,5 +19,7 @@ void validate_ioctlreq(const int req, const char *name)
 		break;
 	default:
 		__lsb_fprintf(stderr,"Illegal ioctl() request 0x%x\n", req );
+		return 1;
 	}
+	return 0;
 }

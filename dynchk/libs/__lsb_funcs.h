@@ -13,4 +13,5 @@ void * __lsb_realloc(void * arg0, size_t arg1);
 char * __lsb_fgets (char * arg0 , int arg1 , FILE * arg2 );
 int __lsb_sscanf(const char *str, const char *format, ...);
 int __lsb_fclose (FILE * arg0 );
-
+int __lsb_fflush (FILE * arg0 );
+void __lsb_abort ();

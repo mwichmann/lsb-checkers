@@ -3,7 +3,7 @@ LIBS=libc libncurses libpam libm libz libpthread #libgcc_s libdl
 CDEFINES = -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED \
 	-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE \
 	-D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS
-CFLAGS= $(CDEFINES) -fPIC -Wall -I/usr/X11R6/include 
+CFLAGS= $(CDEFINES) -fPIC -Wall -I/usr/X11R6/include -g 
 
 all:
 	for d in $(LIBS);do (cd $$d && make all CFLAGS="$(CFLAGS)" );done

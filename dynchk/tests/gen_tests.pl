@@ -255,8 +255,8 @@ sub write_body($$$$)
 {
 	my($fh, $ref_tree, $struct_id, $depth) = @_;
 	my $typetype;
-	print $fh "{\n" if($depth == 0);
-
+	print $fh "{\nint failure = 0;\n" if($depth == 0);
+	
 	if($write_body_counter <= $depth)
 	{
 
@@ -278,20 +278,22 @@ ORDER BY TMposition'
 	{
 		# Write call to validate_* function.
 		$typetype = get_member_typetype($type, $typeform, $base_type, $typetypeid);
-
 		if($typetype eq "ANONYMOUS")
 		{
 			write_body($fh, $ref_tree.$name.".", $type_id, $depth + 1);
 		}
 		elsif($typeform eq "Struct")
 		{
-			print $fh "\tvalidate_".$typetype."( &(".$ref_tree.$name."),name );\n";
+			print $fh "\tif(validate_$typetype( &($ref_tree $name),name ))\n";
+			print $fh "\t\tfailure = 1;\n";
 		}
 		else
 		{
-			print $fh "\tvalidate_".$typetype."(".$ref_tree.$name.",name );\n";
+			print $fh "\tif(validate_$typetype($ref_tree $name,name ));\n";
+			print $fh "\t\tfailure = 1;\n";
 		}
 	}
+	print $fh "return failure;\n";
 	print $fh "}\n\n" if($depth == 0);
 }
 sub write_validate_declaration 
@@ -299,7 +301,7 @@ sub write_validate_declaration
 	my ($fh, $struct_name, $struct_id, $header_format) = @_;	
 	my($left_type, $right_type)=get_type_string($struct_id);
 	print $fh "extern " if($header_format);
-	print $fh "void validate_struct_" . $struct_name .
+	print $fh "int validate_struct_" . $struct_name .
 		"(" . $left_type.$right_type ." * input, char *name)";
 	print $fh ";" if($header_format);
 	print $fh "\n";
