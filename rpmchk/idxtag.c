@@ -741,6 +741,21 @@ if( strcmp(name,architecture) != 0 ) {
 }
 
 void
+checkRpmIdxFILESIZES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount,i;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filesizes=(int *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"Filesize: %d\n",htonl(filesizes[i]));
+	}
+}
+
+void
 checkRpmIdxPROVIDENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	htag, htype, hoffset, hcount;

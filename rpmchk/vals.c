@@ -19,5 +19,10 @@ char *validdepver = "1.2";
 char *pkgname;
 int  lsbdepidx=-1;
 
+/* Stuff that we read in one part, but need to use for validation in
+ * another part. 
+ */
 unsigned char *sigdata;
 int  archivesize;
+int	*filesizes;
+int	*filenames;
