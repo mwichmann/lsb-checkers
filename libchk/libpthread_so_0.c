@@ -44,6 +44,48 @@ struct versym libpthread_so_0[] = {
 	{"_pthread_cleanup_push","GLIBC_2.2"},
 #endif
 #if __i386__
+	{"pread","GLIBC_2.2"},
+#endif
+#if __ia64__
+	{"pread","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pread","GLIBC_2.1"},
+#endif
+#if __powerpc64__
+	{"pread","GLIBC_2.3"},
+#endif
+#if __s390__ && !__s390x__
+	{"pread","GLIBC_2.1"},
+#endif
+#if __x86_64__
+	{"pread","GLIBC_2.2.5"},
+#endif
+#if __s390x__
+	{"pread","GLIBC_2.2"},
+#endif
+#if __i386__
+	{"pread64","GLIBC_2.2"},
+#endif
+#if __ia64__
+	{"pread64","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pread64","GLIBC_2.1"},
+#endif
+#if __powerpc64__
+	{"pread64","GLIBC_2.3"},
+#endif
+#if __s390__ && !__s390x__
+	{"pread64","GLIBC_2.1"},
+#endif
+#if __x86_64__
+	{"pread64","GLIBC_2.2.5"},
+#endif
+#if __s390x__
+	{"pread64","GLIBC_2.2"},
+#endif
+#if __i386__
 	{"pthread_atfork","GLIBC_2.0"},
 #endif
 #if __ia64__
@@ -425,7 +467,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_attr_setstacksize","GLIBC_2.1"},
 #endif
 #if __ia64__
-	{"pthread_attr_setstacksize","GLIBC_2.2"},
+	{"pthread_attr_setstacksize","GLIBC_2.3.3"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"pthread_attr_setstacksize","GLIBC_2.1"},
@@ -634,7 +676,7 @@ struct versym libpthread_so_0[] = {
 #endif
 	{"pthread_condattr_setpshared","GLIBC_2.2"},
 #if __i386__
-	{"pthread_create","GLIBC_2.0"},
+	{"pthread_create","GLIBC_2.1"},
 #endif
 #if __ia64__
 	{"pthread_create","GLIBC_2.2"},
@@ -1535,6 +1577,48 @@ struct versym libpthread_so_0[] = {
 #endif
 #if __s390x__
 	{"pthread_testcancel","GLIBC_2.2"},
+#endif
+#if __i386__
+	{"pwrite","GLIBC_2.2"},
+#endif
+#if __ia64__
+	{"pwrite","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pwrite","GLIBC_2.1"},
+#endif
+#if __powerpc64__
+	{"pwrite","GLIBC_2.3"},
+#endif
+#if __s390__ && !__s390x__
+	{"pwrite","GLIBC_2.1"},
+#endif
+#if __x86_64__
+	{"pwrite","GLIBC_2.2.5"},
+#endif
+#if __s390x__
+	{"pwrite","GLIBC_2.2"},
+#endif
+#if __i386__
+	{"pwrite64","GLIBC_2.2"},
+#endif
+#if __ia64__
+	{"pwrite64","GLIBC_2.2"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pwrite64","GLIBC_2.1"},
+#endif
+#if __powerpc64__
+	{"pwrite64","GLIBC_2.3"},
+#endif
+#if __s390__ && !__s390x__
+	{"pwrite64","GLIBC_2.1"},
+#endif
+#if __x86_64__
+	{"pwrite64","GLIBC_2.2.5"},
+#endif
+#if __s390x__
+	{"pwrite64","GLIBC_2.2"},
 #endif
 #if __i386__
 	{"sem_close","GLIBC_2.1.1"},

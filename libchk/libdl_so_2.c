@@ -68,7 +68,7 @@ struct versym libdl_so_2[] = {
 	{"dlopen","GLIBC_2.1"},
 #endif
 #if __ia64__
-	{"dlopen","GLIBC_2.0"},
+	{"dlopen","GLIBC_2.1"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"dlopen","GLIBC_2.1"},

@@ -2606,7 +2606,7 @@ struct versym libm_so_6_1[] = {
 	{"feclearexcept","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"fegetenv","GLIBC_2.1"},
+	{"fegetenv","GLIBC_2.2"},
 #endif
 #if __ia64__
 	{"fegetenv","GLIBC_2.2"},
@@ -2627,7 +2627,7 @@ struct versym libm_so_6_1[] = {
 	{"fegetenv","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"fegetexceptflag","GLIBC_2.1"},
+	{"fegetexceptflag","GLIBC_2.2"},
 #endif
 #if __ia64__
 	{"fegetexceptflag","GLIBC_2.2"},
@@ -2690,7 +2690,7 @@ struct versym libm_so_6_1[] = {
 	{"feholdexcept","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"feraiseexcept","GLIBC_2.1"},
+	{"feraiseexcept","GLIBC_2.2"},
 #endif
 #if __ia64__
 	{"feraiseexcept","GLIBC_2.2"},
@@ -2795,7 +2795,7 @@ struct versym libm_so_6_1[] = {
 	{"fetestexcept","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"feupdateenv","GLIBC_2.1"},
+	{"feupdateenv","GLIBC_2.2"},
 #endif
 #if __ia64__
 	{"feupdateenv","GLIBC_2.2"},
