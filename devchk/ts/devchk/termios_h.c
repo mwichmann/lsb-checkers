@@ -5,7 +5,7 @@
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
 #include "termios.h"
-
+#include "asm/termios.h"
 
 
 #ifdef TET_TEST
@@ -1603,12 +1603,12 @@ cnt++;
 
 #endif
 
-#ifdef 1
-CheckTypeSize(struct winsize,8, 10301, 1)
-CheckOffset(struct winsize,ws_row,0,1,34487)
-CheckOffset(struct winsize,ws_col,2,1,34488)
-CheckOffset(struct winsize,ws_xpixel,4,1,34489)
-CheckOffset(struct winsize,ws_ypixel,6,1,34490)
+#ifdef __i386__
+CheckTypeSize(struct winsize,8, 10301, 2)
+#elif __ia64__
+CheckTypeSize(struct winsize,8, 10301, 3)
+#elif __powerpc__
+CheckTypeSize(struct winsize,8, 10301, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10301,0);
 Msg("Find size of winsize (10301)\n");

@@ -187,7 +187,7 @@ CheckTypeSize(struct ifconf,8, 10288, 2)
 CheckOffset(struct ifconf,ifc_len,0,2,34467)
 CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
 #elif __ia64__
-CheckTypeSize(struct ifconf,32, 10288, 3)
+CheckTypeSize(struct ifconf,16, 10288, 3)
 #endif
 
 #ifdef __no_sym__
