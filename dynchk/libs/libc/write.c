@@ -3,9 +3,10 @@
 #include <stdio.h>
 #include <unistd.h>
  
+static ssize_t(*funcptr)(int, const void *, size_t) = 0;
+
 ssize_t write(int fd, const void *buf, size_t count)
 {	
-	static ssize_t(*funcptr)(int, const void *, size_t) = 0;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "write");
 	validate_filedescriptor(fd, "write");
@@ -15,7 +16,6 @@ ssize_t write(int fd, const void *buf, size_t count)
 
 ssize_t lsb_write(int fd, const void *buf, size_t count)
 {	
-	static ssize_t(*funcptr)(int, const void *, size_t) = 0;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "write");
 	return funcptr(fd, buf, count);

@@ -3,9 +3,10 @@
 #include <stdio.h>
 #include <unistd.h>
  
+static int(*funcptr)(int) = 0;
+
 int close(int fd)
 {
-	static int(*funcptr)(int) = 0;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "close");
 	validate_filedescriptor(fd, "close");
@@ -14,7 +15,6 @@ int close(int fd)
 
 int lsb_close(int fd)
 {
-	static int(*funcptr)(int) = 0;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "close");
 	return funcptr(fd);
