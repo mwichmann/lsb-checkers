@@ -586,25 +586,27 @@ struct versym libstdcxx_so_5[] = {
 struct classtypeinfo St9type_info_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTSSt9type_info",
-	{NULL},
+	NULL,
 	};
-struct classvtable St9type_info_vtable = {
-	0,
-	"_ZTISt9type_info",
-	{
+
+char *St9type_info_vtable_name[] = {
 	"_ZNSt9type_infoD1Ev",
 	"_ZNSt9type_infoD0Ev",
 	"_ZNKSt9type_info14__is_pointer_pEv",
 	"_ZNKSt9type_info15__is_function_pEv",
 	"_ZNKSt9type_info10__do_catchEPKS_PPvj",
 	"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
-	 },
+	};
+struct classvtable St9type_info_vtable = {
+	0,
+	"_ZTISt9type_info",
+St9type_info_vtable_name,
 	};
 struct classinfo St9type_info_classinfo = {
 	"St9type_info",
 	"_ZTVSt9type_info",
 	"_ZTISt9type_info",
-	6,
+	0,
 	0,
 	&St9type_info_typeinfo,
 	&St9type_info_vtable,
@@ -613,23 +615,24 @@ struct classinfo St9type_info_classinfo = {
 struct classtypeinfo N10__cxxabiv117__class_type_infoE_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTSN10__cxxabiv117__class_type_infoE",
-	{NULL},
+	NULL,
 	};
-struct classvtable N10__cxxabiv117__class_type_infoE_vtable = {
-	0,
-	"_ZTIN10__cxxabiv117__class_type_infoE",
-	{
+char *N10__cxxabiv117__class_type_infoE_vtable_name[] = {
 	"",
 	"",
 	"_ZNKSt9type_info14__is_pointer_pEv",
 	"_ZNKSt9type_info15__is_function_pEv",
-	 },
+	};
+struct classvtable N10__cxxabiv117__class_type_infoE_vtable = {
+	0,
+	"_ZTIN10__cxxabiv117__class_type_infoE",
+N10__cxxabiv117__class_type_infoE_vtable_name,
 	};
 struct classinfo N10__cxxabiv117__class_type_infoE_classinfo = {
 	"N10__cxxabiv117__class_type_infoE",
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTIN10__cxxabiv117__class_type_infoE",
-	4,
+	0,
 	0,
 	&N10__cxxabiv117__class_type_infoE_typeinfo,
 	&N10__cxxabiv117__class_type_infoE_vtable,
@@ -640,23 +643,24 @@ struct classtypeinfo N10__cxxabiv123__fundamental_type_infoE_typeinfo = {
 	"_ZTSN10__cxxabiv123__fundamental_type_infoE",
 	{NULL},
 	};
-struct classvtable N10__cxxabiv123__fundamental_type_infoE_vtable = {
-	0,
-	"_ZTIN10__cxxabiv123__fundamental_type_infoE",
-	{
+char *N10__cxxabiv123__fundamental_type_infoE_vtable_name[] = {
 	"",
 	"",
 	"_ZNKSt9type_info14__is_pointer_pEv",
 	"_ZNKSt9type_info15__is_function_pEv",
 	"_ZNKSt9type_info10__do_catchEPKS_PPvj",
 	"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
-	 },
+	};
+struct classvtable N10__cxxabiv123__fundamental_type_infoE_vtable = {
+	0,
+	"_ZTIN10__cxxabiv123__fundamental_type_infoE",
+N10__cxxabiv123__fundamental_type_infoE_vtable_name,
 	};
 struct classinfo N10__cxxabiv123__fundamental_type_infoE_classinfo = {
 	"N10__cxxabiv123__fundamental_type_infoE",
 	"_ZTVN10__cxxabiv123__fundamental_type_infoE",
 	"_ZTIN10__cxxabiv123__fundamental_type_infoE",
-	6,
+	0,
 	0,
 	&N10__cxxabiv123__fundamental_type_infoE_typeinfo,
 	&N10__cxxabiv123__fundamental_type_infoE_vtable,
