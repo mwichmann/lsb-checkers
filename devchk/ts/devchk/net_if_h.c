@@ -283,6 +283,8 @@ Msg("Find size of ifconf (10288)\n");
 
 #if __i386__
 #elif __s390x__
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10289,0);
 Msg("Find size of anon-ifc_ifcu (10289)\n");
