@@ -123,6 +123,7 @@ while( !gzeof(zfile) ) {
 	num[8]=0; /* NULL terminate the namesize */
 	size=strtol(num,NULL,16);
 	gzread(zfile, filename, size );
+	filename[size]='\000';
 	/*
 	 * Check/fix padding here - the amount of space used for the header
 	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
