@@ -160,16 +160,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_MUTEX_TIMED_NP
-	CompareConstant(PTHREAD_MUTEX_TIMED_NP,1,4958,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_MUTEX_TIMED_NP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for __LOCK_INITIALIZER */
 #endif
 
