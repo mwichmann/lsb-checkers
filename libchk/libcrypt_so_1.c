@@ -16,7 +16,7 @@ struct versym libcrypt_so_1[] = {
 	{"crypt","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"crypt","GLIBC_2.0"},
+	{"crypt","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"crypt","GLIBC_2.2"},
@@ -37,7 +37,7 @@ struct versym libcrypt_so_1[] = {
 	{"encrypt","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"encrypt","GLIBC_2.0"},
+	{"encrypt","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"encrypt","GLIBC_2.2"},
@@ -58,7 +58,7 @@ struct versym libcrypt_so_1[] = {
 	{"setkey","GLIBC_2.0"},
 #endif
 #if __x86_64__
-	{"setkey","GLIBC_2.0"},
+	{"setkey","GLIBC_2.2.5"},
 #endif
 #if __s390x__
 	{"setkey","GLIBC_2.2"},
