@@ -8,9 +8,13 @@
  *
  * 2002/03/19 Chris Yeoh, IBM
  *
- * This is $Revision: 1.1 $
+ * This is $Revision: 1.2 $
  * 
  * $Log: tetj.c,v $
+ * Revision 1.2  2002/04/29 04:12:05  cyeoh
+ * Adds tetj_purpose_end
+ * Adds IC Start markers
+ *
  * Revision 1.1  2002/03/19 06:07:49  cyeoh
  * Adds simple interface for generating TET journals
  *
@@ -174,7 +178,19 @@ void tetj_purpose_start(struct tetj_handle *handle,
 {
   if (handle)
   {
+    fprintf(handle->journal, "400|%u %u %s|IC Start\n",
+            activity, tpnumber, get_current_time_string());
     fprintf(handle->journal, "200|%u %u %s|%s\n",
+            activity, tpnumber, get_current_time_string(), message);
+  }
+}
+
+void tetj_purpose_end(struct tetj_handle *handle,
+                      unsigned int activity, unsigned int tpnumber)
+{
+  if (handle)
+  {
+    fprintf(handle->journal, "410|%u %u %s|IC End\n",
             activity, tpnumber, get_current_time_string(), message);
   }
 }
