@@ -6,6 +6,7 @@
 #undef dladdr
 static int(*funcptr) (const void * , Dl_info * ) = 0;
 
+#if 0
 int dladdr (const void * arg0 , Dl_info * arg1 )
 {
 	if(!funcptr)
@@ -14,6 +15,7 @@ int dladdr (const void * arg0 , Dl_info * arg1 )
 	validate_NULL_TYPETYPE(arg1, "dladdr");
 	return funcptr(arg0, arg1);
 }
+#endif
 
 int lsb_dladdr (const void * arg0 , Dl_info * arg1 )
 {

@@ -5,6 +5,7 @@
 #undef dlclose
 static int(*funcptr) (void * ) = 0;
 
+#if 0
 int dlclose (void * arg0 )
 {
 	if(!funcptr)
@@ -12,6 +13,7 @@ int dlclose (void * arg0 )
 	validate_NULL_TYPETYPE(arg0, "dlclose");
 	return funcptr(arg0);
 }
+#endif
 
 int lsb_dlclose (void * arg0 )
 {

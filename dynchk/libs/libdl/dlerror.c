@@ -5,12 +5,14 @@
 #undef dlerror
 static char *(*funcptr) () = 0;
 
+#if 0
 char * dlerror ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlerror");
 	return funcptr();
 }
+#endif
 
 char * lsb_dlerror ()
 {

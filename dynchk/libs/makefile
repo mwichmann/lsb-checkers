@@ -1,4 +1,4 @@
-LIBS=libc libncurses libz libpam libm libz libpthread #libgcc_s libdl 
+LIBS=libc libncurses libpam libm libz libpthread #libgcc_s libdl 
 
 CDEFINES = -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED \
 	-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE \

@@ -7,6 +7,7 @@ static void *(*funcptr) (void * , const char * ) = 0;
 
 extern void *_dl_sym (void * , const char * );
 
+#if 0
 void * dlsym (void * arg0 , const char * arg1 )
 {
 	if(!funcptr)
@@ -15,6 +16,7 @@ void * dlsym (void * arg0 , const char * arg1 )
 	validate_NULL_TYPETYPE(arg1, "dlsym");
 	return funcptr(arg0, arg1);
 }
+#endif
 
 void * lsb_dlsym (void * arg0 , const char * arg1 )
 {
