@@ -30,6 +30,13 @@ Msg("Find size of xdr_op (9933)\n");
 #endif
 
 #ifdef __i386__
+CheckTypeSize(struct XDR,24, 9934, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9934,0);
+Msg("Find size of XDR (9934)\n");
+#endif
+
+#ifdef __i386__
 CheckTypeSize(struct xdr_ops,40, 9935, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9935,0);
