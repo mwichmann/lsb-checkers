@@ -301,12 +301,22 @@ struct versym libgcc_s_so_1[] = {
 #if __s390x__
 	{"_Unwind_RaiseException","GCC_3.0"},
 #endif
-	{"_Unwind_Resume","GCC_3.0"},
-	{"_Unwind_Resume","GCC_3.0"},
-	{"_Unwind_Resume","GCC_3.0"},
-	{"_Unwind_Resume","GCC_3.0"},
-	{"_Unwind_Resume","GCC_3.0"},
 #if __i386__
+	{"_Unwind_Resume","GCC_3.0"},
+#endif
+#if __ia64__
+	{"_Unwind_Resume","GCC_3.0"},
+#endif
+#if __arm__
+	{"_Unwind_Resume","GCC_3.0"},
+#endif
+#if __mc68000__
+	{"_Unwind_Resume","GCC_3.0"},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Unwind_Resume","GCC_3.0"},
+#endif
+#if __alpha__
 	{"_Unwind_Resume","GCC_3.0"},
 #endif
 #if __powerpc64__
