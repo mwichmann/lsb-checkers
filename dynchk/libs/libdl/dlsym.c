@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static void *(*funcptr)(void *, const char *) = 0;
+#undef dlsym
+static void *(*funcptr) (void * , const char * ) = 0;
 
-void * dlsym(void * arg0, const char * arg1)
+void * dlsym (void * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlsym");
@@ -13,7 +14,7 @@ void * dlsym(void * arg0, const char * arg1)
 	return funcptr(arg0, arg1);
 }
 
-void * lsb_dlsym(void * arg0, const char * arg1)
+void * lsb_dlsym (void * arg0 , const char * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlsym");

@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-static int(*funcptr)(void *) = 0;
+#undef dlclose
+static int(*funcptr) (void * ) = 0;
 
-int dlclose(void * arg0)
+int dlclose (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlclose");
@@ -12,7 +13,7 @@ int dlclose(void * arg0)
 	return funcptr(arg0);
 }
 
-int lsb_dlclose(void * arg0)
+int lsb_dlclose (void * arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dlclose");
