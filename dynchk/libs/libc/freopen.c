@@ -22,7 +22,7 @@ FILE * freopen (const char * arg0 , const char * arg1 , FILE * arg2 )
 		validate_NULL_TYPETYPE(  arg0, "freopen - arg0");
 	validate_Rdaddress( arg1, "freopen - arg1");
 		validate_NULL_TYPETYPE(  arg1, "freopen - arg1");
-	validate_Rdaddress( arg2, "freopen - arg2");
+	validate_RWaddress( arg2, "freopen - arg2");
 		validate_NULL_TYPETYPE(  arg2, "freopen - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

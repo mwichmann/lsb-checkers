@@ -23,7 +23,7 @@ size_t mbrlen (const char * arg0 , size_t arg1 , mbstate_t * arg2 )
 	validate_Rdaddress( arg0, "mbrlen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mbrlen - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mbrlen - arg1");
-	validate_Rdaddress( arg2, "mbrlen - arg2");
+	validate_RWaddress( arg2, "mbrlen - arg2");
 		validate_NULL_TYPETYPE(  arg2, "mbrlen - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

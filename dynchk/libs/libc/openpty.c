@@ -19,15 +19,15 @@ int openpty (int * arg0 , int * arg1 , char * arg2 , struct termios * arg3 , str
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "openpty()");
-	validate_Rdaddress( arg0, "openpty - arg0");
+	validate_RWaddress( arg0, "openpty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "openpty - arg0");
-	validate_Rdaddress( arg1, "openpty - arg1");
+	validate_RWaddress( arg1, "openpty - arg1");
 		validate_NULL_TYPETYPE(  arg1, "openpty - arg1");
-	validate_Rdaddress( arg2, "openpty - arg2");
+	validate_RWaddress( arg2, "openpty - arg2");
 		validate_NULL_TYPETYPE(  arg2, "openpty - arg2");
-	validate_Rdaddress( arg3, "openpty - arg3");
+	validate_RWaddress( arg3, "openpty - arg3");
 		validate_NULL_TYPETYPE(  arg3, "openpty - arg3");
-	validate_Rdaddress( arg4, "openpty - arg4");
+	validate_RWaddress( arg4, "openpty - arg4");
 		validate_NULL_TYPETYPE(  arg4, "openpty - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

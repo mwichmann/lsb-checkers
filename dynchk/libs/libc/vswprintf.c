@@ -20,7 +20,7 @@ int vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "vswprintf()");
-	validate_Rdaddress( arg0, "vswprintf - arg0");
+	validate_RWaddress( arg0, "vswprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vswprintf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "vswprintf - arg1");
 	validate_Rdaddress( arg2, "vswprintf - arg2");

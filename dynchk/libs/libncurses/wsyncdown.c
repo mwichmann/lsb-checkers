@@ -17,7 +17,7 @@ void wsyncdown (WINDOW * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wsyncdown()");
-	validate_Rdaddress( arg0, "wsyncdown - arg0");
+	validate_RWaddress( arg0, "wsyncdown - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wsyncdown - arg0");
 	}
 	funcptr(arg0);

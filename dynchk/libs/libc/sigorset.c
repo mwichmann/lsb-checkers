@@ -18,7 +18,7 @@ int sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "sigorset()");
-	validate_Rdaddress( arg0, "sigorset - arg0");
+	validate_RWaddress( arg0, "sigorset - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigorset - arg0");
 	validate_Rdaddress( arg1, "sigorset - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sigorset - arg1");

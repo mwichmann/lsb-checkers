@@ -20,12 +20,12 @@ size_t wcsrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , mbstate_t
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wcsrtombs()");
-	validate_Rdaddress( arg0, "wcsrtombs - arg0");
+	validate_RWaddress( arg0, "wcsrtombs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsrtombs - arg0");
-	validate_Rdaddress( arg1, "wcsrtombs - arg1");
+	validate_RWaddress( arg1, "wcsrtombs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcsrtombs - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wcsrtombs - arg2");
-	validate_Rdaddress( arg3, "wcsrtombs - arg3");
+	validate_RWaddress( arg3, "wcsrtombs - arg3");
 		validate_NULL_TYPETYPE(  arg3, "wcsrtombs - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

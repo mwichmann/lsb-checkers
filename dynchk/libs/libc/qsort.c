@@ -18,7 +18,7 @@ void qsort (void * arg0 , size_t arg1 , size_t arg2 , const __compar_fn_t arg3 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "qsort()");
-	validate_Rdaddress( arg0, "qsort - arg0");
+	validate_RWaddress( arg0, "qsort - arg0");
 		validate_NULL_TYPETYPE(  arg0, "qsort - arg0");
 		validate_NULL_TYPETYPE(  arg1, "qsort - arg1");
 		validate_NULL_TYPETYPE(  arg2, "qsort - arg2");

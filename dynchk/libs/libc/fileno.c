@@ -18,7 +18,7 @@ int fileno (FILE * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "fileno()");
-	validate_Rdaddress( arg0, "fileno - arg0");
+	validate_RWaddress( arg0, "fileno - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fileno - arg0");
 	}
 	ret_value = funcptr(arg0);

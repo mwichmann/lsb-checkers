@@ -24,7 +24,7 @@ int sigaction (int arg0 , const struct sigaction * arg1 , struct sigaction * arg
 		}
 		validate_NULL_TYPETYPE(  arg1, "sigaction - arg1");
 		if( arg2 ) {
-	validate_Rdaddress( arg2, "sigaction - arg2");
+	validate_RWaddress( arg2, "sigaction - arg2");
 		}
 		validate_NULL_TYPETYPE(  arg2, "sigaction - arg2");
 	}

@@ -19,7 +19,7 @@ int putc (int arg0 , FILE * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "putc()");
 		validate_NULL_TYPETYPE(  arg0, "putc - arg0");
-	validate_Rdaddress( arg1, "putc - arg1");
+	validate_RWaddress( arg1, "putc - arg1");
 		validate_NULL_TYPETYPE(  arg1, "putc - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

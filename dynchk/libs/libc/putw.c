@@ -19,7 +19,7 @@ int putw (int arg0 , FILE * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "putw()");
 		validate_NULL_TYPETYPE(  arg0, "putw - arg0");
-	validate_Rdaddress( arg1, "putw - arg1");
+	validate_RWaddress( arg1, "putw - arg1");
 		validate_NULL_TYPETYPE(  arg1, "putw - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

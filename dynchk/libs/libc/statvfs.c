@@ -20,7 +20,7 @@ int statvfs (const char * arg0 , struct statvfs * arg1 )
 	__lsb_output(5-__lsb_check_params, "statvfs()");
 	validate_Rdaddress( arg0, "statvfs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "statvfs - arg0");
-	validate_Rdaddress( arg1, "statvfs - arg1");
+	validate_RWaddress( arg1, "statvfs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "statvfs - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

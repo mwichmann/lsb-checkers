@@ -19,7 +19,7 @@ int vsprintf (char * arg0 , const char * arg1 , va_list arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "vsprintf()");
-	validate_Rdaddress( arg0, "vsprintf - arg0");
+	validate_RWaddress( arg0, "vsprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vsprintf - arg0");
 	validate_Rdaddress( arg1, "vsprintf - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vsprintf - arg1");

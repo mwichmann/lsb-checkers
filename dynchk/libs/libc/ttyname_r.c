@@ -20,7 +20,7 @@ int ttyname_r (int arg0 , char * arg1 , size_t arg2 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "ttyname_r()");
 		validate_NULL_TYPETYPE(  arg0, "ttyname_r - arg0");
-	validate_Rdaddress( arg1, "ttyname_r - arg1");
+	validate_RWaddress( arg1, "ttyname_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "ttyname_r - arg1");
 		validate_NULL_TYPETYPE(  arg2, "ttyname_r - arg2");
 	}

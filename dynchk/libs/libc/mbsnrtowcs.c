@@ -20,13 +20,13 @@ size_t mbsnrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , size_t a
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "mbsnrtowcs()");
-	validate_Rdaddress( arg0, "mbsnrtowcs - arg0");
+	validate_RWaddress( arg0, "mbsnrtowcs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mbsnrtowcs - arg0");
-	validate_Rdaddress( arg1, "mbsnrtowcs - arg1");
+	validate_RWaddress( arg1, "mbsnrtowcs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "mbsnrtowcs - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mbsnrtowcs - arg2");
 		validate_NULL_TYPETYPE(  arg3, "mbsnrtowcs - arg3");
-	validate_Rdaddress( arg4, "mbsnrtowcs - arg4");
+	validate_RWaddress( arg4, "mbsnrtowcs - arg4");
 		validate_NULL_TYPETYPE(  arg4, "mbsnrtowcs - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -22,7 +22,7 @@ int fputws (const wchar_t * arg0 , FILE * arg1 )
 	__lsb_output(5-__lsb_check_params, "fputws()");
 	validate_Rdaddress( arg0, "fputws - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fputws - arg0");
-	validate_Rdaddress( arg1, "fputws - arg1");
+	validate_RWaddress( arg1, "fputws - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fputws - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -20,7 +20,7 @@ int getrlimit64 (id_t arg0 , struct rlimit64 * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "getrlimit64()");
 		validate_NULL_TYPETYPE(  arg0, "getrlimit64 - arg0");
-	validate_Rdaddress( arg1, "getrlimit64 - arg1");
+	validate_RWaddress( arg1, "getrlimit64 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getrlimit64 - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

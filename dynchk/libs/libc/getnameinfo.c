@@ -21,10 +21,10 @@ int getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , s
 	validate_Rdaddress( arg0, "getnameinfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getnameinfo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "getnameinfo - arg1");
-	validate_Rdaddress( arg2, "getnameinfo - arg2");
+	validate_RWaddress( arg2, "getnameinfo - arg2");
 		validate_NULL_TYPETYPE(  arg2, "getnameinfo - arg2");
 		validate_NULL_TYPETYPE(  arg3, "getnameinfo - arg3");
-	validate_Rdaddress( arg4, "getnameinfo - arg4");
+	validate_RWaddress( arg4, "getnameinfo - arg4");
 		validate_NULL_TYPETYPE(  arg4, "getnameinfo - arg4");
 		validate_NULL_TYPETYPE(  arg5, "getnameinfo - arg5");
 		validate_NULL_TYPETYPE(  arg6, "getnameinfo - arg6");

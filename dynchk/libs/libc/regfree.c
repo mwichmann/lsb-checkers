@@ -17,7 +17,7 @@ void regfree (regex_t * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "regfree()");
-	validate_Rdaddress( arg0, "regfree - arg0");
+	validate_RWaddress( arg0, "regfree - arg0");
 		validate_NULL_TYPETYPE(  arg0, "regfree - arg0");
 	}
 	funcptr(arg0);

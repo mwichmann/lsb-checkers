@@ -18,7 +18,7 @@ int wmove (WINDOW * arg0 , int arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wmove()");
-	validate_Rdaddress( arg0, "wmove - arg0");
+	validate_RWaddress( arg0, "wmove - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wmove - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wmove - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wmove - arg2");

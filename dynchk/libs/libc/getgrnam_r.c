@@ -21,12 +21,12 @@ int getgrnam_r (const char * arg0 , struct group * arg1 , char * arg2 , size_t a
 	__lsb_output(5-__lsb_check_params, "getgrnam_r()");
 	validate_Rdaddress( arg0, "getgrnam_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getgrnam_r - arg0");
-	validate_Rdaddress( arg1, "getgrnam_r - arg1");
+	validate_RWaddress( arg1, "getgrnam_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getgrnam_r - arg1");
-	validate_Rdaddress( arg2, "getgrnam_r - arg2");
+	validate_RWaddress( arg2, "getgrnam_r - arg2");
 		validate_NULL_TYPETYPE(  arg2, "getgrnam_r - arg2");
 		validate_NULL_TYPETYPE(  arg3, "getgrnam_r - arg3");
-	validate_Rdaddress( arg4, "getgrnam_r - arg4");
+	validate_RWaddress( arg4, "getgrnam_r - arg4");
 		validate_NULL_TYPETYPE(  arg4, "getgrnam_r - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

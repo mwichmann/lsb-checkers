@@ -18,7 +18,7 @@ int whline (WINDOW * arg0 , chtype arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "whline()");
-	validate_Rdaddress( arg0, "whline - arg0");
+	validate_RWaddress( arg0, "whline - arg0");
 		validate_NULL_TYPETYPE(  arg0, "whline - arg0");
 		validate_NULL_TYPETYPE(  arg1, "whline - arg1");
 		validate_NULL_TYPETYPE(  arg2, "whline - arg2");

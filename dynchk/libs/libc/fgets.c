@@ -18,10 +18,10 @@ char * fgets (char * arg0 , int arg1 , FILE * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "fgets()");
-	validate_Rdaddress( arg0, "fgets - arg0");
+	validate_RWaddress( arg0, "fgets - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fgets - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fgets - arg1");
-	validate_Rdaddress( arg2, "fgets - arg2");
+	validate_RWaddress( arg2, "fgets - arg2");
 		validate_NULL_TYPETYPE(  arg2, "fgets - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -19,7 +19,7 @@ int color_set (short arg0 , void * arg1 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "color_set()");
 		validate_NULL_TYPETYPE(  arg0, "color_set - arg0");
-	validate_Rdaddress( arg1, "color_set - arg1");
+	validate_RWaddress( arg1, "color_set - arg1");
 		validate_NULL_TYPETYPE(  arg1, "color_set - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

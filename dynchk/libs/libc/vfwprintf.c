@@ -21,7 +21,7 @@ int vfwprintf (FILE * arg0 , const wchar_t * arg1 , va_list arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "vfwprintf()");
-	validate_Rdaddress( arg0, "vfwprintf - arg0");
+	validate_RWaddress( arg0, "vfwprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vfwprintf - arg0");
 	validate_Rdaddress( arg1, "vfwprintf - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vfwprintf - arg1");

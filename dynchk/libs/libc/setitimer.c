@@ -21,7 +21,7 @@ int setitimer (__itimer_which_t arg0 , const struct itimerval * arg1 , struct it
 		validate_NULL_TYPETYPE(  arg0, "setitimer - arg0");
 	validate_Rdaddress( arg1, "setitimer - arg1");
 		validate_NULL_TYPETYPE(  arg1, "setitimer - arg1");
-	validate_Rdaddress( arg2, "setitimer - arg2");
+	validate_RWaddress( arg2, "setitimer - arg2");
 		validate_NULL_TYPETYPE(  arg2, "setitimer - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

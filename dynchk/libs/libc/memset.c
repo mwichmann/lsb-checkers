@@ -19,7 +19,7 @@ void * memset (void * arg0 , int arg1 , size_t arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "memset()");
-	validate_Rdaddress( arg0, "memset - arg0");
+	validate_RWaddress( arg0, "memset - arg0");
 		validate_NULL_TYPETYPE(  arg0, "memset - arg0");
 		validate_NULL_TYPETYPE(  arg1, "memset - arg1");
 		validate_NULL_TYPETYPE(  arg2, "memset - arg2");

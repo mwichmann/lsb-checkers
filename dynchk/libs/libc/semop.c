@@ -20,7 +20,7 @@ int semop (int arg0 , struct sembuf * arg1 , size_t arg2 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "semop()");
 		validate_NULL_TYPETYPE(  arg0, "semop - arg0");
-	validate_Rdaddress( arg1, "semop - arg1");
+	validate_RWaddress( arg1, "semop - arg1");
 		validate_NULL_TYPETYPE(  arg1, "semop - arg1");
 		validate_NULL_TYPETYPE(  arg2, "semop - arg2");
 	}

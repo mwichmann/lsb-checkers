@@ -18,9 +18,9 @@ bool_t xdr_float (XDR * arg0 , float * arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "xdr_float()");
-	validate_Rdaddress( arg0, "xdr_float - arg0");
+	validate_RWaddress( arg0, "xdr_float - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_float - arg0");
-	validate_Rdaddress( arg1, "xdr_float - arg1");
+	validate_RWaddress( arg1, "xdr_float - arg1");
 		validate_NULL_TYPETYPE(  arg1, "xdr_float - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

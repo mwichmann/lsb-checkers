@@ -18,7 +18,7 @@ int pthread_mutex_init (pthread_mutex_t * arg0 , const pthread_mutexattr_t * arg
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "pthread_mutex_init()");
-	validate_Rdaddress( arg0, "pthread_mutex_init - arg0");
+	validate_RWaddress( arg0, "pthread_mutex_init - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_mutex_init - arg0");
 	validate_Rdaddress( arg1, "pthread_mutex_init - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_mutex_init - arg1");

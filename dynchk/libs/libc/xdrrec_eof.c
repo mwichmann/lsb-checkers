@@ -18,7 +18,7 @@ bool_t xdrrec_eof (XDR * arg0 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "xdrrec_eof()");
-	validate_Rdaddress( arg0, "xdrrec_eof - arg0");
+	validate_RWaddress( arg0, "xdrrec_eof - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdrrec_eof - arg0");
 	}
 	ret_value = funcptr(arg0);

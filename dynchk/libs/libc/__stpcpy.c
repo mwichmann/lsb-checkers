@@ -18,7 +18,7 @@ char * __stpcpy (char * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "__stpcpy()");
-	validate_Rdaddress( arg0, "__stpcpy - arg0");
+	validate_RWaddress( arg0, "__stpcpy - arg0");
 		validate_NULL_TYPETYPE(  arg0, "__stpcpy - arg0");
 	validate_Rdaddress( arg1, "__stpcpy - arg1");
 		validate_NULL_TYPETYPE(  arg1, "__stpcpy - arg1");

@@ -20,7 +20,7 @@ int pthread_attr_getdetachstate (const pthread_attr_t * arg0 , int * arg1 )
 	__lsb_output(5-__lsb_check_params, "pthread_attr_getdetachstate()");
 	validate_Rdaddress( arg0, "pthread_attr_getdetachstate - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_attr_getdetachstate - arg0");
-	validate_Rdaddress( arg1, "pthread_attr_getdetachstate - arg1");
+	validate_RWaddress( arg1, "pthread_attr_getdetachstate - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_attr_getdetachstate - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

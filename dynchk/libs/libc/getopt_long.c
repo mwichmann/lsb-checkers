@@ -25,7 +25,7 @@ int getopt_long (int arg0 , char *const  arg1 [], const char * arg2 , const stru
 	validate_Rdaddress( arg3, "getopt_long - arg3");
 		validate_NULL_TYPETYPE(  arg3, "getopt_long - arg3");
 		if( arg4 ) {
-	validate_Rdaddress( arg4, "getopt_long - arg4");
+	validate_RWaddress( arg4, "getopt_long - arg4");
 		}
 		validate_NULL_TYPETYPE(  arg4, "getopt_long - arg4");
 	}

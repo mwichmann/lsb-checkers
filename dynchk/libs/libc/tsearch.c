@@ -21,7 +21,7 @@ void * tsearch (const void * arg0 , void * * arg1 , __compar_fn_t arg2 )
 	__lsb_output(5-__lsb_check_params, "tsearch()");
 	validate_Rdaddress( arg0, "tsearch - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tsearch - arg0");
-	validate_Rdaddress( arg1, "tsearch - arg1");
+	validate_RWaddress( arg1, "tsearch - arg1");
 		validate_NULL_TYPETYPE(  arg1, "tsearch - arg1");
 		validate_NULL_TYPETYPE(  arg2, "tsearch - arg2");
 	}

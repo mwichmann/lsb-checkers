@@ -21,7 +21,7 @@ long wcstol (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 	__lsb_output(5-__lsb_check_params, "wcstol()");
 	validate_Rdaddress( arg0, "wcstol - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstol - arg0");
-	validate_Rdaddress( arg1, "wcstol - arg1");
+	validate_RWaddress( arg1, "wcstol - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcstol - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wcstol - arg2");
 	}

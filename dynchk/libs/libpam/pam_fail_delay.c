@@ -18,7 +18,7 @@ int pam_fail_delay (pam_handle_t * arg0 , unsigned int arg1 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "pam_fail_delay()");
-	validate_Rdaddress( arg0, "pam_fail_delay - arg0");
+	validate_RWaddress( arg0, "pam_fail_delay - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pam_fail_delay - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pam_fail_delay - arg1");
 	}

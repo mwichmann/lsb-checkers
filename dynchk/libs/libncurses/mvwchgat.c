@@ -18,7 +18,7 @@ int mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , sho
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "mvwchgat()");
-	validate_Rdaddress( arg0, "mvwchgat - arg0");
+	validate_RWaddress( arg0, "mvwchgat - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mvwchgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwchgat - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvwchgat - arg2");

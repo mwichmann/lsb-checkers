@@ -20,7 +20,7 @@ int wordexp (const char * arg0 , wordexp_t * arg1 , int arg2 )
 	__lsb_output(5-__lsb_check_params, "wordexp()");
 	validate_Rdaddress( arg0, "wordexp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wordexp - arg0");
-	validate_Rdaddress( arg1, "wordexp - arg1");
+	validate_RWaddress( arg1, "wordexp - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wordexp - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wordexp - arg2");
 	}

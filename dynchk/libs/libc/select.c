@@ -22,19 +22,19 @@ int select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct ti
 	__lsb_output(5-__lsb_check_params, "select()");
 		validate_NULL_TYPETYPE(  arg0, "select - arg0");
 		if( arg1 ) {
-	validate_Rdaddress( arg1, "select - arg1");
+	validate_RWaddress( arg1, "select - arg1");
 		}
 		validate_NULL_TYPETYPE(  arg1, "select - arg1");
 		if( arg2 ) {
-	validate_Rdaddress( arg2, "select - arg2");
+	validate_RWaddress( arg2, "select - arg2");
 		}
 		validate_NULL_TYPETYPE(  arg2, "select - arg2");
 		if( arg3 ) {
-	validate_Rdaddress( arg3, "select - arg3");
+	validate_RWaddress( arg3, "select - arg3");
 		}
 		validate_NULL_TYPETYPE(  arg3, "select - arg3");
 		if( arg4 ) {
-	validate_Rdaddress( arg4, "select - arg4");
+	validate_RWaddress( arg4, "select - arg4");
 		}
 		validate_NULL_TYPETYPE(  arg4, "select - arg4");
 	}

@@ -407,9 +407,17 @@ sub write_addy_checker
 	$write_addy_checker_q->execute($type_id)
 		or die "Couldn't execute write_addy_checker query: ".DBI->errstr;
 	my($basetype, $typeform) = $write_addy_checker_q->fetchrow_array();
+	$write_addy_checker_q->execute($basetype)
+		or die "Couldn't execute write_addy_checker query: ".DBI->errstr;
+	my($basetype2, $typeform2) = $write_addy_checker_q->fetchrow_array();
 	if($typeform eq "Pointer")
 	{
+		if( $typeform2 eq "Const" )
+		{
 		print $fh "\tvalidate_Rdaddress($left_name $arg_name, \"$func_name - $left_name$arg_name\");\n";
+		} else {
+		print $fh "\tvalidate_RWaddress($left_name $arg_name, \"$func_name - $left_name$arg_name\");\n";
+		}
 		# Only do this if we have a specific type to test against.
 		# Recursing on pointer to pointers doesn't work because the
 		# values may not be defined or valid after the first pointer.

@@ -22,7 +22,7 @@ char * strptime (const char * arg0 , const char * arg1 , struct tm * arg2 )
 		validate_NULL_TYPETYPE(  arg0, "strptime - arg0");
 	validate_Rdaddress( arg1, "strptime - arg1");
 		validate_NULL_TYPETYPE(  arg1, "strptime - arg1");
-	validate_Rdaddress( arg2, "strptime - arg2");
+	validate_RWaddress( arg2, "strptime - arg2");
 		validate_NULL_TYPETYPE(  arg2, "strptime - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

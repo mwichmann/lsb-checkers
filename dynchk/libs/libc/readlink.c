@@ -21,7 +21,7 @@ int readlink (const char * arg0 , char * arg1 , size_t arg2 )
 	__lsb_output(5-__lsb_check_params, "readlink()");
 	validate_Rdaddress( arg0, "readlink - arg0");
 		validate_NULL_TYPETYPE(  arg0, "readlink - arg0");
-	validate_Rdaddress( arg1, "readlink - arg1");
+	validate_RWaddress( arg1, "readlink - arg1");
 		validate_NULL_TYPETYPE(  arg1, "readlink - arg1");
 		validate_NULL_TYPETYPE(  arg2, "readlink - arg2");
 	}

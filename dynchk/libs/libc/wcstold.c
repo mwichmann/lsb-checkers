@@ -21,7 +21,7 @@ long double wcstold (const wchar_t * arg0 , wchar_t * * arg1 )
 	__lsb_output(5-__lsb_check_params, "wcstold()");
 	validate_Rdaddress( arg0, "wcstold - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstold - arg0");
-	validate_Rdaddress( arg1, "wcstold - arg1");
+	validate_RWaddress( arg1, "wcstold - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcstold - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

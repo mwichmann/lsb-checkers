@@ -20,7 +20,7 @@ long long strtoll (const char * arg0 , char * * arg1 , int arg2 )
 	__lsb_output(5-__lsb_check_params, "strtoll()");
 	validate_Rdaddress( arg0, "strtoll - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtoll - arg0");
-	validate_Rdaddress( arg1, "strtoll - arg1");
+	validate_RWaddress( arg1, "strtoll - arg1");
 		validate_NULL_TYPETYPE(  arg1, "strtoll - arg1");
 		validate_NULL_TYPETYPE(  arg2, "strtoll - arg2");
 	}

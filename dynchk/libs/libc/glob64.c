@@ -23,7 +23,7 @@ int glob64 (const char * arg0 , int arg1 , int(* arg2 )(const char *, int), glob
 		validate_NULL_TYPETYPE(  arg1, "glob64 - arg1");
 validate_Rdaddress( arg2, "glob64 - arg2");
 		validate_NULL_TYPETYPE(  arg2, "glob64 - arg2");
-	validate_Rdaddress( arg3, "glob64 - arg3");
+	validate_RWaddress( arg3, "glob64 - arg3");
 		validate_NULL_TYPETYPE(  arg3, "glob64 - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

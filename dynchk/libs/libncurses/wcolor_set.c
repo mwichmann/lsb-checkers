@@ -18,10 +18,10 @@ int wcolor_set (WINDOW * arg0 , short arg1 , void * arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "wcolor_set()");
-	validate_Rdaddress( arg0, "wcolor_set - arg0");
+	validate_RWaddress( arg0, "wcolor_set - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcolor_set - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wcolor_set - arg1");
-	validate_Rdaddress( arg2, "wcolor_set - arg2");
+	validate_RWaddress( arg2, "wcolor_set - arg2");
 		validate_NULL_TYPETYPE(  arg2, "wcolor_set - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

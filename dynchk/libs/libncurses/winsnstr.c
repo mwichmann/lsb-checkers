@@ -18,7 +18,7 @@ int winsnstr (WINDOW * arg0 , const char * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "winsnstr()");
-	validate_Rdaddress( arg0, "winsnstr - arg0");
+	validate_RWaddress( arg0, "winsnstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "winsnstr - arg0");
 	validate_Rdaddress( arg1, "winsnstr - arg1");
 		validate_NULL_TYPETYPE(  arg1, "winsnstr - arg1");
