@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.48 $
+ * This is $Revision: 1.49 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.49  2004/10/28 17:21:34  anderson
+ * Remove redundant call to check_symbol on an error path
+ *
  * Revision 1.48  2004/10/22 16:55:21  mats
  * More temporary fixes for bug #602
  *
@@ -195,7 +198,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.48 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.49 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -551,8 +554,6 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 												 0, 0, 0, tmp_string);
 
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-
-      check_symbol(file, entries+i);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     /* Check the symbol size, if it's an OBJT */
