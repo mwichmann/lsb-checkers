@@ -41,6 +41,7 @@ struct versym {
 #define DEBUG_SECTION_HEADERS	0x0004
 #define DEBUG_SECTION_CONTENTS	0x0008
 #define DEBUG_VERSION_CONTENTS	0x0010
+#define DEBUG_DRARF_CONTENTS	0x0011
 
 extern int elfchk_debug;
 

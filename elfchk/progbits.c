@@ -9,11 +9,13 @@
 #include <string.h>
 #include "elfchk.h"
 #include "progbits.h"
+#include "dwarf.h"
 #include "../tetj/tetj.h"
 
 ProgBitsFuncRec ProgbitsInfo[] = {
 	{ ".data",checkPROGBITS_data },
 	{ ".data1",checkPROGBITS_data1 },
+	{ ".eh_frame",checkPROGBITS_eh_frame },
 	{ ".interp",checkPROGBITS_interp },
 	{ ".rodata",checkPROGBITS_rodata },
 	{ ".rodata1",checkPROGBITS_rodata1 },
@@ -38,6 +40,20 @@ checkPROGBITS_data1(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journa
 /*
  * .data contains arbitrary initialized data. There is nothing to check.
  */
+return 0;
+}
+
+int
+checkPROGBITS_eh_frame(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal)
+{
+fprintf(stderr,"checking .eh_frame %x bytes at %x\n",hdr1->sh_size, hdr1->sh_offset);
+
+/*
+ * We should loop over this until the entire section has been used up, but
+ * the GNU tools seem to reduce things to a single CIE record.
+ */
+check_CIE((caddr_t)(file1->addr)+hdr1->sh_offset,hdr1->sh_size);
+
 return 0;
 }
 
@@ -91,4 +107,3 @@ checkPROGBITS_sdata1(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journ
  */
 return 0;
 }
-
