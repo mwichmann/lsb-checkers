@@ -55,7 +55,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIO_PROCESS
-	CompareConstant(PRIO_PROCESS,0,3534,architecture)
+	CompareConstant(PRIO_PROCESS,PRIO_PROCESS,3534,architecture)
 #else
 Msg( "Error: Constant not found: PRIO_PROCESS\n");
 cnt++;
@@ -65,7 +65,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIO_PGRP
-	CompareConstant(PRIO_PGRP,1,3535,architecture)
+	CompareConstant(PRIO_PGRP,PRIO_PGRP,3535,architecture)
 #else
 Msg( "Error: Constant not found: PRIO_PGRP\n");
 cnt++;
@@ -75,7 +75,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIO_USER
-	CompareConstant(PRIO_USER,2,3536,architecture)
+	CompareConstant(PRIO_USER,PRIO_USER,3536,architecture)
 #else
 Msg( "Error: Constant not found: PRIO_USER\n");
 cnt++;
@@ -219,6 +219,10 @@ CheckTypeSize(rlim64_t,8, 10273, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10273,0);
 Msg("Find size of rlim64_t (10273)\n");
+#endif
+
+#if 1
+CheckTypeSize(__rlimit_resource_t,4, 10969, 1)
 #endif
 
 #if __i386__
@@ -524,6 +528,9 @@ CheckOffset(struct rusage,ru_nivcsw,136,11,34261)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9125,0);
 Msg("Find size of rusage (9125)\n");
+#endif
+
+#if __no_sym__
 #endif
 
 #ifdef TET_TEST

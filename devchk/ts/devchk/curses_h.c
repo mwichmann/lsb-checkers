@@ -1765,6 +1765,15 @@ cnt++;
 
 #endif
 
+#if 1
+CheckTypeSize(struct ldat,4, 8659, 1)
+Msg("Missing member data for ldat on All\n");
+CheckOffset(struct ldat,text,0,1,29696)
+CheckOffset(struct ldat,firstchar,0,1,29697)
+CheckOffset(struct ldat,lastchar,0,1,29698)
+CheckOffset(struct ldat,oldindex,0,1,29699)
+#endif
+
 #if __i386__
 CheckTypeSize(chtype,4, 8650, 2)
 #elif __ia64__

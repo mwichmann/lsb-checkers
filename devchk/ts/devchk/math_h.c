@@ -227,6 +227,10 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for INFINITY */
+#endif
+
 #if __i386__
 CheckTypeSize(struct exception,32, 10010, 2)
 CheckMemberSize(struct exception,type,4,2,32294)
