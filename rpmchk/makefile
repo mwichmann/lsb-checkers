@@ -16,7 +16,7 @@ $(LIB): $(OBJS)
 	rm -f $(LIB);ar clq $(LIB) $(OBJS)
 
 test: test.c $(LIB) $(LIBS)
-	cc -o test $(CFLAGS) test.c $(LIB) $(LIBS) -lz
+	$(CC) -o test $(CFLAGS) test.c $(LIB) $(LIBS) -lz
 
 idx.o: rpmtag.h
 
