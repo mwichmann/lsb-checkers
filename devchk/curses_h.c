@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#include <stdio.h> 
+
 struct screen {
 	};
 #include "curses.h"

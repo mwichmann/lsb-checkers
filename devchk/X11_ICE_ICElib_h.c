@@ -18,20 +18,6 @@ CheckTypeSize(IcePointer,8,8180)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8180,0);
 #endif
 #ifdef __i386__
-CheckTypeSize(IceConn,4,8197)
-#elif __ia64__
-CheckTypeSize(IceConn,8,8197)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8197,0);
-#endif
-#ifdef __i386__
-CheckTypeSize(IceListenObj,4,8198)
-#elif __ia64__
-CheckTypeSize(IceListenObj,8,8198)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8198,0);
-#endif
-#ifdef __i386__
 CheckTypeSize(IceConnectStatus,4,8738)
 #elif __ia64__
 CheckTypeSize(IceConnectStatus,4,8738)
@@ -114,6 +100,20 @@ CheckTypeSize(IceIOErrorHandler,4,8772)
 CheckTypeSize(IceIOErrorHandler,8,8772)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8772,0);
+#endif
+#ifdef __i386__
+CheckTypeSize(IceConn,4,8197)
+#elif __ia64__
+CheckTypeSize(IceConn,8,8197)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8197,0);
+#endif
+#ifdef __i386__
+CheckTypeSize(IceListenObj,4,8198)
+#elif __ia64__
+CheckTypeSize(IceListenObj,8,8198)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8198,0);
 #endif
 printf("%d tests in X11/ICE/ICElib.h\n",cnt);
 return cnt;

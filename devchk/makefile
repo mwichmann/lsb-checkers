@@ -24,6 +24,7 @@ OBJS = hdrchk.o \
 	sys_wait_h.o \
 	time_h.o \
 	unistd_h.o \
+	wchar_h.o \
 	wctype_h.o \
 	intrinsic.o 
 

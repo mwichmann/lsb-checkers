@@ -66,6 +66,7 @@ tcnt+=sys_types_h();
 tcnt+=sys_wait_h();
 tcnt+=time_h();
 tcnt+=unistd_h();
+tcnt+=wchar_h();
 tcnt+=wctype_h();
 tcnt+=intrinsic();
 printf("Total Tests: %d\n", tcnt );

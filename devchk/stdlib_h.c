@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#include <wchar.h>
 #include "stdlib.h"
 
 
@@ -31,8 +32,10 @@ CheckTypeSize(ldiv_t,16,6975)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
 #endif
-#ifdef 
-CheckTypeSize(__compar_fn_t,,9231)
+#ifdef __i386__
+CheckTypeSize(__compar_fn_t,4,9231)
+#elif __ia64__
+CheckTypeSize(__compar_fn_t,0,9231)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
 #endif

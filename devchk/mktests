@@ -111,6 +111,7 @@ for(1..$cth->numrows) {
 $lastid=0;
 for(1..$tth->numrows) {
 	%tentry=$tth->fetchhash;
+	if( !$tentry{'Asymbol'} ) { $tentry{'Asymbol'}='__no_sym__'; }
 	# Do this before we reset the value, so we can re-use the values
 	# from the last time through the loop is we need them
 	if( $tentry{'Tid'} != $lastid ) {
@@ -168,16 +169,26 @@ close(TESTS);
 }
 
 
+$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER,$LSBDBPASSWD) || die $Mysql::db_errstr;
+
+$Dbh->selectdb("lsb") || die $Dbh->errmsg();
+
+if( $ARGV[0] ne "" ) {
+	$select = "SELECT DISTINCT * FROM Header ";
+	$select.= "WHERE Hstd='Yes' ";
+	$select.= "AND Hname='".$ARGV[0]."'";
+	$hth = $Dbh->query($select) || die $Dbh->errmsg();
+	%entry=$hth->fetchhash;
+	writetest($entry{'Hid'},$entry{'Hname'});
+	exit;
+	}
+
 open(HARNESS,">hdrchk.c") || die "Can't open hdrchk.c for writing";
 print HARNESS "#include <stdio.h>\n";
 print HARNESS "#include <stdarg.h>\n\n";
 open(MAKEFILE,">makefile") || die "Can't open makefile for writing";
 #print MAKEFILE "CFLAGS = -g -I../../headers\n";
 print MAKEFILE "OBJS = hdrchk.o ";
-
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER,$LSBDBPASSWD) || die $Mysql::db_errstr;
-
-$Dbh->selectdb("lsb") || die $Dbh->errmsg();
 
 $select = "SELECT DISTINCT * FROM Architecture ";
 $select.= "WHERE Aname!='All'";
@@ -227,6 +238,7 @@ $select = "SELECT DISTINCT * FROM Type ";
 $select.= "LEFT JOIN ArchType ON ATtid=Tid ";
 $select.= "LEFT JOIN Architecture ON Aid=ATaid ";
 $select.= "WHERE Ttype='Intrinsic' ";
+$select.= "AND Tname!='...' ";
 $select.= "ORDER BY Tid";
 $tth = $Dbh->query($select) || die $Dbh->errmsg();
 if( $tth->numrows == 0 ) {

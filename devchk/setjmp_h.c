@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#include <signal.h>
 #include "setjmp.h"
 
 
