@@ -11,7 +11,7 @@ $select = "SELECT DISTINCT Iname,Istatus,Vname,Asymbol,Aname FROM Interface ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
-$select.= "WHERE Istatus='Included' ";
+$select.= "WHERE Istatus='Included' OR Istatus='Deprecated'";
 $select.= "ORDER BY Iname,Aid ";
 
 #print $select;
