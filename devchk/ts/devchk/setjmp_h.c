@@ -49,7 +49,7 @@ CheckTypeSize(__jmp_buf,56, 10411, 10)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(__jmp_buf,320, 10504, 9)
+CheckTypeSize(__jmp_buf,512, 10504, 9)
 #endif
 
 #if __x86_64__
@@ -67,7 +67,7 @@ CheckTypeSize(jmp_buf,156, 6962, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(jmp_buf,592, 6962, 6)
 #elif __powerpc64__
-CheckTypeSize(jmp_buf,456, 6962, 9)
+CheckTypeSize(jmp_buf,656, 6962, 9)
 #elif __not_def__
 CheckTypeSize(jmp_buf,1, 6962, 8)
 #elif __s390x__
@@ -90,7 +90,7 @@ CheckTypeSize(sigjmp_buf,592, 6963, 6)
 #elif __s390__ && !__s390x__
 CheckTypeSize(sigjmp_buf,188, 6963, 10)
 #elif __powerpc64__
-CheckTypeSize(sigjmp_buf,456, 6963, 9)
+CheckTypeSize(sigjmp_buf,656, 6963, 9)
 #elif __s390x__
 CheckTypeSize(sigjmp_buf,280, 6963, 12)
 #elif __x86_64__
@@ -133,11 +133,13 @@ CheckOffset(struct __jmp_buf_tag,__mask_was_saved,56,10,34040)
 CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,10,34041)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,60,10,34041)
 #elif __powerpc64__
-CheckTypeSize(struct __jmp_buf_tag,456, 6961, 9)
+CheckTypeSize(struct __jmp_buf_tag,656, 6961, 9)
+CheckMemberSize(struct __jmp_buf_tag,__jmpbuf,512,9,34039)
+CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,9,34039)
 CheckMemberSize(struct __jmp_buf_tag,__mask_was_saved,4,9,34040)
-CheckOffset(struct __jmp_buf_tag,__mask_was_saved,320,9,34040)
+CheckOffset(struct __jmp_buf_tag,__mask_was_saved,512,9,34040)
 CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,9,34041)
-CheckOffset(struct __jmp_buf_tag,__saved_mask,328,9,34041)
+CheckOffset(struct __jmp_buf_tag,__saved_mask,520,9,34041)
 #elif __not_def__
 CheckTypeSize(struct __jmp_buf_tag,280, 6961, 8)
 Msg("Missing member data for __jmp_buf_tag on None\n");
@@ -146,12 +148,16 @@ CheckOffset(struct __jmp_buf_tag,__mask_was_saved,0,8,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,0,8,34041)
 #elif __s390x__
 CheckTypeSize(struct __jmp_buf_tag,280, 6961, 12)
+CheckMemberSize(struct __jmp_buf_tag,__jmpbuf,152,12,34039)
+CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,12,34039)
 CheckMemberSize(struct __jmp_buf_tag,__mask_was_saved,4,12,34040)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,144,12,34040)
 CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,12,34041)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,152,12,34041)
 #elif __x86_64__
 CheckTypeSize(struct __jmp_buf_tag,200, 6961, 11)
+CheckMemberSize(struct __jmp_buf_tag,__jmpbuf,64,11,34039)
+CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,11,34039)
 CheckMemberSize(struct __jmp_buf_tag,__mask_was_saved,4,11,34040)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,64,11,34040)
 CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,11,34041)
