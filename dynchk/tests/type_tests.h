@@ -10,7 +10,7 @@
 
 #include <dlfcn.h>  //for dlsym() in wrapper functions
 #include <sys/types.h>
-
+#include <netinet/in.h>
 #include "header_list.h"
 
 extern void validate_pathname(const char *arg, const char *name);
@@ -19,6 +19,9 @@ extern void validate_RWaddress(const void *address, const char *name);
 extern void validate_Rdaddress(const void *address, const char *name);
 extern void validate_filedescriptor(const int fd, const char *name);
 extern void validate_ioctlreq(const int req, const char *name);
+extern void validate_IPv4Address(struct in_addr *, const char *);
+extern void validate_socketfamily(sa_family_t, const char *);
+extern void validate_socketport(sa_family_t, const char *);
 
 #include "struct_tests.h"
 #endif
