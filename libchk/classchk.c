@@ -12,6 +12,23 @@
 #include "../tetj/tetj.h"
 
 /*
+ * Some architectures treat function pointers as structures which contains the
+ * address of the function, plus some adjustment value which must be taken into
+ * consideration. This is visible in the structures we are using (ie vtables),
+ * so we use this function to make the adjustment when neccessary.
+ */
+
+void *
+fptr2ptr(fptr fptr)
+{
+#if defined(__ia64__)
+return fptr.func;
+#else
+return fptr;
+#endif
+}
+
+/*
  * check_class_info() examines the data objects associated with a class. Each
  * class has several data objects associated with it, so each type of object
  * needs to be checked. A set of data structures representing each of these
@@ -102,12 +119,16 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 */
 		for (j=0;j<classp->numvirtfuncs;j++) 
 		{
+			/* Hmm... this doesn't seem to be used anywhere
 			symp=dlsym(dlhndl, classp->vtable->virtfuncs[j]);
-			dladdr(vtablep->virtfuncs[j], &dlinfo);
-			if (dlinfo.dli_saddr!=vtablep->virtfuncs[j]) 
+			*/
+			dladdr(fptr2ptr(vtablep->virtfuncs[j]), &dlinfo);
+			if (dlinfo.dli_saddr!=fptr2ptr(vtablep->virtfuncs[j])) 
 			{
 				printf("Uhoh2. Not an exact match %p %p\n",
-							 dlinfo.dli_saddr, vtablep->virtfuncs[j]);
+							 dlinfo.dli_saddr, fptr2ptr(vtablep->virtfuncs[j]));
+				printf("Uhoh2. Not an exact match %s %s\n",
+							 dlinfo.dli_sname, classp->vtable->virtfuncs[j]);
 			}
 
 			if (((classp->vtable->virtfuncs[j] && dlinfo.dli_sname) &&
@@ -140,7 +161,7 @@ check_class_info(char *libname, struct classinfo *classes[],
 		 * 2.1) Check the Vtable of the base class
 		 */
 		symp = dlsym(dlhndl, classp->typeinfo->basevtable);
-		if (symp+8 != rttip->basevtable) 
+		if (symp+(2*sizeof(long)) != rttip->basevtable) 
 		{
 			dladdr(rttip->basevtable-8, &dlinfo);
 			if (vtablep && dlinfo.dli_saddr != vtablep->typeinfo) 
