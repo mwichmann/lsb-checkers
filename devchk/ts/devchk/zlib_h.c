@@ -154,6 +154,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef Z_VERSION_ERROR
+	CompareConstant(Z_VERSION_ERROR,(-6),4226,architecture)
+#else
+Msg( "Error: Constant not found: Z_VERSION_ERROR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef Z_NO_COMPRESSION
 	CompareConstant(Z_NO_COMPRESSION,0,4227,architecture)
 #else
@@ -307,6 +317,25 @@ Msg( "Error: Constant not found: MAX_WBITS\n");
 cnt++;
 #endif
 
+#endif
+
+#if __i386__
+CheckTypeSize(charf,1, 10167, 2)
+#elif __ia64__
+CheckTypeSize(charf,1, 10167, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(charf,1, 10167, 6)
+#elif __powerpc64__
+CheckTypeSize(charf,1, 10167, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(charf,1, 10167, 10)
+#elif __s390x__
+CheckTypeSize(charf,1, 10167, 12)
+#elif __x86_64__
+CheckTypeSize(charf,1, 10167, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10167,0);
+Msg("Find size of charf (10167)\n");
 #endif
 
 #if __i386__
