@@ -12,9 +12,11 @@ long __strtol_internal (const char * arg0 , char * * arg1 , int arg2 , int arg3 
 		funcptr = dlsym(RTLD_NEXT, "__strtol_internal");
 	validate_Rdaddress( arg0, "__strtol_internal - arg0");
 	validate_NULL_TYPETYPE(  arg0, "__strtol_internal - arg0");
+	if( arg1 ) {
 	validate_Rdaddress( arg1, "__strtol_internal - arg1");
 	validate_Rdaddress(* arg1, "__strtol_internal - arg1");
-	validate_RWaddress(  arg1, "__strtol_internal - arg1");
+	}
+	validate_NULL_TYPETYPE(  arg1, "__strtol_internal - arg1");
 	validate_NULL_TYPETYPE(  arg2, "__strtol_internal - arg2");
 	validate_NULL_TYPETYPE(  arg3, "__strtol_internal - arg3");
 	return funcptr(arg0, arg1, arg2, arg3);
