@@ -214,7 +214,7 @@ checkPT_SHLIB(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
   return 0;
@@ -262,7 +262,7 @@ checkPT_TLS(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
@@ -281,7 +281,7 @@ checkPT_GNU_EH_FRAME(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
@@ -375,7 +375,7 @@ checkPT_IA_64_UNWIND(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNINITIATED);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
 return 0;
