@@ -1,5 +1,12 @@
 # Generated file #
 LIBOBJS = \
+	ld_lsb_ia64_so_2.o \
+	ld_lsb_ppc32_so_2.o \
+	ld_lsb_s390_so_2.o \
+	ld_lsb_so_2.o \
+	ld_lsb_ppc64_so_2.o \
+	ld_lsb_s390x_so_2.o \
+	ld_lsb_x86_64_so_2.o \
 	libc_so_6.o \
 	libc_so_6_1.o \
 	libcrypt_so_1.o \
