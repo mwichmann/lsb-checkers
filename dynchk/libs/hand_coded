@@ -13,3 +13,4 @@ realloc
 free
 dlsym
 pthread_mutex_lock
+__sigsetjmp
