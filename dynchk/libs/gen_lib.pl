@@ -114,12 +114,11 @@ ORDER BY Ppos'
 ) or die "Couldn't prepare has_ellipsis query: " . DBI->errstr;
 
 my $get_param_typetype_q1 = $dbh->prepare(
-'SELECT TTid, Ttype, Tname
-FROM Parameter, Type, TypeType
+'SELECT Pttid, Ttype, Tname
+FROM Parameter, Type
 WHERE Ppos = ?
   AND Pint = ?
-  AND Ptype = Tid
-  AND Pttid = TTid'
+  AND Ptype = Tid'
 ) or die "Couldn't prepare write_param_typetype query 1: " . DBI->errstr;
 
 my $get_param_typetype_q2 = $dbh->prepare(
