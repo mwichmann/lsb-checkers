@@ -93,15 +93,7 @@ cnt++;
 
 #endif
 
-#if __s390__
-#ifdef FILENAME_MAX
-	CompareConstant(FILENAME_MAX,4095,3188,architecture)
-#else
-Msg( "Error: Constant not found: FILENAME_MAX\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef FILENAME_MAX
 	CompareConstant(FILENAME_MAX,4096,3188,architecture)
 #else
