@@ -110,14 +110,6 @@ while( !gzeof(zfile) ) {
 	gzread(zfile, filename, size );
 
 	/*
-	 * Check for the end of the archive
-	 */
-	if( strcmp(filename,"TRAILER!!!") == 0 ) {
-		/* End of archive */
-		break;
-		}
-
-	/*
 	 * Check/fix padding here - the amount of space used for the header
 	 * is rounded up to the long-word (32 its), so 1-3 bytes of padding
 	 * may need to be skipped.
@@ -128,6 +120,14 @@ while( !gzeof(zfile) ) {
 	size%=4;
 	//printf("padding %d\n", size);
 	gzseek(zfile,size,SEEK_CUR);
+
+	/*
+	 * Check for the end of the archive
+	 */
+	if( strcmp(filename,"TRAILER!!!") == 0 ) {
+		/* End of archive */
+		break;
+		}
 
 	/* Skip the file contents */
 	memcpy(num,ahdr.c_filesize,8);
@@ -252,11 +252,16 @@ while( !gzeof(zfile) ) {
 endoffset=gztell(zfile);
 
 fprintf(stderr,"%d bytes in uncompressed archive\n", endoffset-startoffset);
+if( endoffset-startoffset != archivesize ) {
+		fprintf(stderr,"Archive size (%d) does ",endoffset-startoffset);
+		fprintf(stderr,"not match the value in RPMTAG_ARCHIVESIZE (%d)\n",
+							archivesize );
+	}
 fprintf(stderr,"%d bytes in archive files\n", filesizesum);
 
-if( filesizesum != archivesize ) {
+if( filesizesum != rpmtagsize ) {
 		fprintf(stderr,"Sum of file sizes (%d) does ",filesizesum);
 		fprintf(stderr,"not match the value in RPMTAG_SIZE (%d)\n",
-							archivesize );
+							rpmtagsize );
 	}
 }

@@ -148,12 +148,15 @@ extern unsigned char *sigdata;
 extern int lsbdepidx;
 extern int sigsize;
 extern int archivesize;
+extern int rpmtagsize;
 extern unsigned int *filesizes;
 extern unsigned short *filemodes;
 extern unsigned short *filedevs;
 extern unsigned int *filetimes;
 extern char *filemd5s;
 extern char *filelinktos;
+extern char *fileusernames;
+extern char *filegroupnames;
 extern int *filenames;
 
 /* util.c */

@@ -687,8 +687,8 @@ fprintf(stderr,"checkRpmIdxSIZE() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 */
 
-fprintf(stderr,"Package Size: %d. Not yet validated.\n",size);
-archivesize=size;
+fprintf(stderr,"Package Size: %d.\n",size);
+rpmtagsize=size;
 }
 
 void
@@ -870,6 +870,115 @@ for(i=0;i<hcount;i++) {
 }
 
 void
+checkRpmIdxFILEFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount,i;
+unsigned int	*fflags;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+fflags=(int *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	fflags[i]=htonl(fflags[i]);
+	fprintf(stderr,"File flags: %x\n",fflags[i]);
+	}
+}
+
+void
+checkRpmIdxFILEUSERNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+fileusernames=(char *)(file1->storeaddr+hoffset);
+name=fileusernames;
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"File username: %s\n",name);
+	name+=strlen(name)+1;
+	}
+}
+
+
+void
+checkRpmIdxFILEGROUPNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filegroupnames=(char *)(file1->storeaddr+hoffset);
+name=filegroupnames;
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"File groupname: %s\n",name);
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxSOURCERPM(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+fprintf(stderr,"RPMTAG_SOURCERPM: %s\n", name);
+}
+
+void
+checkRpmIdxFILEVERIFYFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+unsigned int	*flagp;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+flagp=(int *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	flagp[i]=htonl(flagp[i]);
+	fprintf(stderr,"File Verify Flag Flag: %x\n",flagp[i]);
+	}
+}
+
+void
+checkRpmIdxARCHIVESIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+int	*sizep,size;
+/*
+int	htag, htype, hcount;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hcount=ntohl(hidx->count);
+*/
+hoffset=ntohl(hidx->offset);
+sizep=(int *)(file1->storeaddr+hoffset);
+size=htonl(*sizep);
+/*
+fprintf(stderr,"checkRpmIdxSIZE() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+*/
+
+fprintf(stderr,"Package Size: %d. Not yet validated.\n",size);
+archivesize=size;
+}
+
+void
 checkRpmIdxPROVIDENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	htag, htype, hoffset, hcount;
@@ -887,16 +996,18 @@ fprintf(stderr,"checkRpmIdxPROVIDENAME() type=%d offset=%x count=%x %s\n",
 void
 checkRpmIdxREQUIREFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int	htag, htype, hoffset, hcount;
-int	flag;
+int	htag, htype, hoffset, hcount, i;
+int	*flagp;
 
 htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
-flag=*(file1->storeaddr+hoffset);
-fprintf(stderr,"checkRpmIdxREQUIREFLAGS() type=%d offset=%x count=%x %x\n",
-						htype,hoffset,hcount,flag);
+flagp=(int *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	flagp[i]=htonl(flagp[i]);
+	fprintf(stderr,"Required Flag: %x\n",flagp[i]);
+	}
 }
 
 void

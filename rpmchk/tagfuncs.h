@@ -33,6 +33,12 @@ void checkRpmIdxFILERDEVS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle 
 void checkRpmIdxFILEMTIMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 void checkRpmIdxFILEMD5S(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 void checkRpmIdxFILELINKTOS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+void checkRpmIdxFILEFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+void checkRpmIdxFILEUSERNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+void checkRpmIdxFILEGROUPNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+void checkRpmIdxSOURCERPM(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+void checkRpmIdxFILEVERIFYFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+void checkRpmIdxARCHIVESIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 void checkRpmIdxPROVIDENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 void checkRpmIdxREQUIREFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 void checkRpmIdxREQUIRENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
