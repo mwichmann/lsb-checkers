@@ -37,7 +37,7 @@ CheckOffset(struct utimbuf,modtime,8,3,30206)
 CheckTypeSize(struct utimbuf,8, 7023, 6)
 CheckMemberSize(struct utimbuf,modtime,4,6,30206)
 CheckOffset(struct utimbuf,modtime,4,6,30206)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct utimbuf,8, 7023, 10)
 CheckMemberSize(struct utimbuf,modtime,0,10,30206)
 CheckOffset(struct utimbuf,modtime,4,10,30206)

@@ -47,7 +47,7 @@ CheckMemberSize(struct timeb,timezone,2,6,34300)
 CheckOffset(struct timeb,timezone,6,6,34300)
 CheckMemberSize(struct timeb,dstflag,2,6,34301)
 CheckOffset(struct timeb,dstflag,8,6,34301)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct timeb,12, 10216, 10)
 CheckMemberSize(struct timeb,millitm,0,10,34299)
 CheckOffset(struct timeb,millitm,4,10,34299)

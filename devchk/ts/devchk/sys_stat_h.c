@@ -363,7 +363,7 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
-#elif __s390__
+#elif __s390__ && !__s390x__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,3,4955,architecture)
 #else
@@ -417,7 +417,7 @@ CheckMemberSize(struct stat,__unused4,4,2,33650)
 CheckOffset(struct stat,__unused4,80,2,33650)
 CheckMemberSize(struct stat,__unused5,4,2,33651)
 CheckOffset(struct stat,__unused5,84,2,33651)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct stat,88, 8693, 10)
 CheckMemberSize(struct stat,__pad1,0,10,33633)
 CheckOffset(struct stat,__pad1,8,10,33633)
@@ -497,7 +497,7 @@ CheckMemberSize(struct stat64,__unused3,4,2,33669)
 CheckOffset(struct stat64,__unused3,84,2,33669)
 CheckMemberSize(struct stat64,st_ino,8,2,33670)
 CheckOffset(struct stat64,st_ino,88,2,33670)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct stat64,104, 8697, 10)
 CheckMemberSize(struct stat64,__pad1,0,10,33653)
 CheckOffset(struct stat64,__pad1,8,10,33653)

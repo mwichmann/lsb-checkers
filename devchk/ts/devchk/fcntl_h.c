@@ -325,7 +325,7 @@ CheckMemberSize(struct flock,l_len,4,6,34305)
 CheckOffset(struct flock,l_len,8,6,34305)
 CheckMemberSize(struct flock,l_pid,4,6,34306)
 CheckOffset(struct flock,l_pid,12,6,34306)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct flock,16, 10217, 10)
 CheckMemberSize(struct flock,l_whence,0,10,34303)
 CheckOffset(struct flock,l_whence,2,10,34303)
@@ -382,7 +382,7 @@ CheckMemberSize(struct flock64,l_len,8,6,34310)
 CheckOffset(struct flock64,l_len,16,6,34310)
 CheckMemberSize(struct flock64,l_pid,4,6,34311)
 CheckOffset(struct flock64,l_pid,24,6,34311)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct flock64,32, 10218, 10)
 CheckMemberSize(struct flock64,l_whence,0,10,34308)
 CheckOffset(struct flock64,l_whence,2,10,34308)

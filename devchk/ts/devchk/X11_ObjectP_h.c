@@ -104,7 +104,7 @@ CheckMemberSize(struct _ObjectPart,destroy_callbacks,4,6,34368)
 CheckOffset(struct _ObjectPart,destroy_callbacks,20,6,34368)
 CheckMemberSize(struct _ObjectPart,constraints,4,6,34369)
 CheckOffset(struct _ObjectPart,constraints,24,6,34369)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct _ObjectPart,28, 10261, 10)
 CheckMemberSize(struct _ObjectPart,widget_class,0,10,34364)
 CheckOffset(struct _ObjectPart,widget_class,4,10,34364)
@@ -143,7 +143,7 @@ CheckTypeSize(ObjectPart,28, 10264, 2)
 CheckTypeSize(ObjectPart,48, 10264, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectPart,28, 10264, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ObjectPart,28, 10264, 10)
 #elif __powerpc64__
 CheckTypeSize(ObjectPart,48, 10264, 9)
@@ -164,7 +164,7 @@ CheckOffset(struct _ObjectRec,object,0,3,34409)
 CheckTypeSize(struct _ObjectRec,28, 10262, 6)
 CheckMemberSize(struct _ObjectRec,object,28,6,34409)
 CheckOffset(struct _ObjectRec,object,0,6,34409)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct _ObjectRec,28, 10262, 10)
 CheckMemberSize(struct _ObjectRec,object,4,10,34409)
 CheckOffset(struct _ObjectRec,object,0,10,34409)
@@ -183,7 +183,7 @@ CheckTypeSize(ObjectRec,28, 10263, 2)
 CheckTypeSize(ObjectRec,48, 10263, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectRec,28, 10263, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ObjectRec,28, 10263, 10)
 #elif __powerpc64__
 CheckTypeSize(ObjectRec,48, 10263, 9)
@@ -324,7 +324,7 @@ CheckMemberSize(struct _ObjectClassPart,obj14,4,6,34400)
 CheckOffset(struct _ObjectClassPart,obj14,108,6,34400)
 CheckMemberSize(struct _ObjectClassPart,extension,4,6,34401)
 CheckOffset(struct _ObjectClassPart,extension,112,6,34401)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct _ObjectClassPart,116, 10265, 10)
 CheckMemberSize(struct _ObjectClassPart,class_name,0,10,34371)
 CheckOffset(struct _ObjectClassPart,class_name,4,10,34371)
@@ -463,7 +463,7 @@ CheckTypeSize(ObjectClassPart,116, 10266, 2)
 CheckTypeSize(ObjectClassPart,224, 10266, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectClassPart,116, 10266, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ObjectClassPart,116, 10266, 10)
 #elif __powerpc64__
 CheckTypeSize(ObjectClassPart,224, 10266, 9)
@@ -478,7 +478,7 @@ CheckTypeSize(ObjectClassExtensionRec,24, 10268, 2)
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 10)
 #elif __powerpc64__
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 9)
@@ -493,7 +493,7 @@ CheckTypeSize(ObjectClassExtension,4, 10270, 2)
 CheckTypeSize(ObjectClassExtension,8, 10270, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectClassExtension,4, 10270, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ObjectClassExtension,4, 10270, 10)
 #elif __powerpc64__
 CheckTypeSize(ObjectClassExtension,8, 10270, 9)
@@ -514,7 +514,7 @@ CheckOffset(struct _ObjectClassRec,object_class,0,3,34408)
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 6)
 CheckMemberSize(struct _ObjectClassRec,object_class,116,6,34408)
 CheckOffset(struct _ObjectClassRec,object_class,0,6,34408)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct _ObjectClassRec,116, 10271, 10)
 CheckMemberSize(struct _ObjectClassRec,object_class,1,10,34408)
 CheckOffset(struct _ObjectClassRec,object_class,0,10,34408)
@@ -533,7 +533,7 @@ CheckTypeSize(ObjectClassRec,116, 10272, 2)
 CheckTypeSize(ObjectClassRec,224, 10272, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(ObjectClassRec,116, 10272, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(ObjectClassRec,116, 10272, 10)
 #elif __powerpc64__
 CheckTypeSize(ObjectClassRec,224, 10272, 9)
@@ -545,7 +545,7 @@ Msg("Find size of ObjectClassRec (10272)\n");
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10267,0);
@@ -555,7 +555,7 @@ Msg("Find size of anon-_ObjectClassExtensionRec (10267)\n");
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10269,0);

@@ -219,7 +219,7 @@ CheckTypeSize(glob_t,72, 9005, 3)
 CheckTypeSize(glob_t,36, 9005, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(glob_t,36, 9005, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(glob_t,36, 9005, 10)
 #elif __powerpc64__
 CheckTypeSize(glob_t,72, 9005, 9)
@@ -234,7 +234,7 @@ CheckTypeSize(glob64_t,36, 9007, 2)
 CheckTypeSize(glob64_t,72, 9007, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(glob64_t,36, 9007, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(glob64_t,36, 9007, 10)
 #elif __powerpc64__
 CheckTypeSize(glob64_t,72, 9007, 9)

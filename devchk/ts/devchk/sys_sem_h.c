@@ -121,7 +121,7 @@ CheckMemberSize(struct sembuf,sem_op,2,6,30119)
 CheckOffset(struct sembuf,sem_op,2,6,30119)
 CheckMemberSize(struct sembuf,sem_flg,2,6,30120)
 CheckOffset(struct sembuf,sem_flg,4,6,30120)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct sembuf,6, 6982, 10)
 CheckMemberSize(struct sembuf,sem_op,0,10,30119)
 CheckOffset(struct sembuf,sem_op,2,10,30119)
@@ -188,7 +188,7 @@ CheckMemberSize(struct semid_ds,__unused4,4,6,34776)
 CheckOffset(struct semid_ds,__unused4,72,6,34776)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(struct semid_ds,64, 10408, 10)
 CheckMemberSize(struct semid_ds,sem_perm,36,10,34775)
 CheckOffset(struct semid_ds,sem_perm,0,10,34775)

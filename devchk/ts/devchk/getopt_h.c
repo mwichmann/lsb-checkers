@@ -49,7 +49,7 @@ CheckMemberSize(struct option,flag,4,6,32260)
 CheckOffset(struct option,flag,8,6,32260)
 CheckMemberSize(struct option,val,4,6,32261)
 CheckOffset(struct option,val,12,6,32261)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct option,16, 10000, 10)
 CheckMemberSize(struct option,has_arg,0,10,32259)
 CheckOffset(struct option,has_arg,4,10,32259)

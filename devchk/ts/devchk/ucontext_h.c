@@ -39,7 +39,7 @@ Msg( "Error: Constant not found: NGREG\n");
 cnt++;
 #endif
 
-#elif __s390__
+#elif __s390__ && !__s390x__
 #ifdef NGREG
 	CompareConstant(NGREG,36,4929,architecture)
 #else
@@ -107,7 +107,7 @@ CheckOffset(struct _libc_fpstate,status,108,2,34324)
 
 #if __i386__
 CheckTypeSize(fpregset_t,4, 10228, 2)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(fpregset_t,136, 10228, 10)
 #endif
 

@@ -32,7 +32,7 @@ CheckTypeSize(XcmsFunctionSet,12, 8364, 2)
 CheckTypeSize(XcmsFunctionSet,24, 8364, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsFunctionSet,12, 8364, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsFunctionSet,12, 8364, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsFunctionSet,24, 8364, 9)
@@ -47,7 +47,7 @@ CheckTypeSize(XcmsColorFormat,4, 8320, 2)
 CheckTypeSize(XcmsColorFormat,8, 8320, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsColorFormat,4, 8320, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsColorFormat,4, 8320, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsColorFormat,8, 8320, 9)
@@ -62,7 +62,7 @@ CheckTypeSize(XcmsFloat,8, 8321, 2)
 CheckTypeSize(XcmsFloat,8, 8321, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsFloat,8, 8321, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsFloat,8, 8321, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsFloat,8, 8321, 9)
@@ -77,7 +77,7 @@ CheckTypeSize(XcmsRGB,6, 8323, 2)
 CheckTypeSize(XcmsRGB,6, 8323, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsRGB,6, 8323, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsRGB,6, 8323, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsRGB,6, 8323, 9)
@@ -92,7 +92,7 @@ CheckTypeSize(XcmsRGBi,24, 8325, 2)
 CheckTypeSize(XcmsRGBi,24, 8325, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsRGBi,24, 8325, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsRGBi,24, 8325, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsRGBi,24, 8325, 9)
@@ -107,7 +107,7 @@ CheckTypeSize(XcmsCIEXYZ,24, 8327, 2)
 CheckTypeSize(XcmsCIEXYZ,24, 8327, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsCIEXYZ,24, 8327, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsCIEXYZ,24, 8327, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIEXYZ,24, 8327, 9)
@@ -122,7 +122,7 @@ CheckTypeSize(XcmsCIEuvY,24, 8329, 2)
 CheckTypeSize(XcmsCIEuvY,24, 8329, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsCIEuvY,24, 8329, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsCIEuvY,24, 8329, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIEuvY,24, 8329, 9)
@@ -137,7 +137,7 @@ CheckTypeSize(XcmsCIExyY,24, 8331, 2)
 CheckTypeSize(XcmsCIExyY,24, 8331, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsCIExyY,24, 8331, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsCIExyY,24, 8331, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIExyY,24, 8331, 9)
@@ -152,7 +152,7 @@ CheckTypeSize(XcmsCIELab,24, 8333, 2)
 CheckTypeSize(XcmsCIELab,24, 8333, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsCIELab,24, 8333, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsCIELab,24, 8333, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIELab,24, 8333, 9)
@@ -167,7 +167,7 @@ CheckTypeSize(XcmsCIELuv,24, 8335, 2)
 CheckTypeSize(XcmsCIELuv,24, 8335, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsCIELuv,24, 8335, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsCIELuv,24, 8335, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCIELuv,24, 8335, 9)
@@ -182,7 +182,7 @@ CheckTypeSize(XcmsTekHVC,24, 8337, 2)
 CheckTypeSize(XcmsTekHVC,24, 8337, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsTekHVC,24, 8337, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsTekHVC,24, 8337, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsTekHVC,24, 8337, 9)
@@ -197,7 +197,7 @@ CheckTypeSize(XcmsPad,32, 8339, 2)
 CheckTypeSize(XcmsPad,32, 8339, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsPad,32, 8339, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsPad,32, 8339, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsPad,32, 8339, 9)
@@ -212,7 +212,7 @@ CheckTypeSize(XcmsColor,40, 8342, 2)
 CheckTypeSize(XcmsColor,48, 8342, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsColor,40, 8342, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsColor,40, 8342, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsColor,48, 8342, 9)
@@ -227,7 +227,7 @@ CheckTypeSize(XcmsPerScrnInfo,52, 8344, 2)
 CheckTypeSize(XcmsPerScrnInfo,72, 8344, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsPerScrnInfo,56, 8344, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsPerScrnInfo,56, 8344, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsPerScrnInfo,72, 8344, 9)
@@ -242,7 +242,7 @@ CheckTypeSize(XcmsCompressionProc,4, 8856, 2)
 CheckTypeSize(XcmsCompressionProc,8, 8856, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsCompressionProc,4, 8856, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsCompressionProc,4, 8856, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCompressionProc,8, 8856, 9)
@@ -257,7 +257,7 @@ CheckTypeSize(XcmsWhiteAdjustProc,4, 8858, 2)
 CheckTypeSize(XcmsWhiteAdjustProc,8, 8858, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsWhiteAdjustProc,4, 8858, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsWhiteAdjustProc,4, 8858, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsWhiteAdjustProc,8, 8858, 9)
@@ -272,7 +272,7 @@ CheckTypeSize(XcmsScreenInitProc,4, 8861, 2)
 CheckTypeSize(XcmsScreenInitProc,8, 8861, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsScreenInitProc,4, 8861, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsScreenInitProc,4, 8861, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsScreenInitProc,8, 8861, 9)
@@ -287,7 +287,7 @@ CheckTypeSize(XcmsScreenFreeProc,4, 8863, 2)
 CheckTypeSize(XcmsScreenFreeProc,8, 8863, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsScreenFreeProc,4, 8863, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsScreenFreeProc,4, 8863, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsScreenFreeProc,8, 8863, 9)
@@ -302,7 +302,7 @@ CheckTypeSize(XcmsConversionProc,4, 8865, 2)
 CheckTypeSize(XcmsConversionProc,8, 8865, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsConversionProc,4, 8865, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsConversionProc,4, 8865, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsConversionProc,8, 8865, 9)
@@ -317,7 +317,7 @@ CheckTypeSize(XcmsParseStringProc,4, 8869, 2)
 CheckTypeSize(XcmsParseStringProc,8, 8869, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsParseStringProc,4, 8869, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsParseStringProc,4, 8869, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsParseStringProc,8, 8869, 9)
@@ -329,7 +329,7 @@ Msg("Find size of XcmsParseStringProc (8869)\n");
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8852,0);
@@ -342,7 +342,7 @@ CheckTypeSize(XcmsCCC,4, 8853, 2)
 CheckTypeSize(XcmsCCC,8, 8853, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsCCC,4, 8853, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsCCC,4, 8853, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsCCC,8, 8853, 9)
@@ -357,7 +357,7 @@ CheckTypeSize(XcmsColorSpace,24, 8362, 2)
 CheckTypeSize(XcmsColorSpace,48, 8362, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsColorSpace,24, 8362, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsColorSpace,24, 8362, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsColorSpace,48, 8362, 9)
@@ -372,7 +372,7 @@ CheckTypeSize(XcmsFuncListPtr,4, 8867, 2)
 CheckTypeSize(XcmsFuncListPtr,8, 8867, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XcmsFuncListPtr,4, 8867, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XcmsFuncListPtr,4, 8867, 10)
 #elif __powerpc64__
 CheckTypeSize(XcmsFuncListPtr,8, 8867, 9)

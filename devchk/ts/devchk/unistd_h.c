@@ -1399,7 +1399,7 @@ CheckTypeSize(off64_t,8, 9112, 2)
 CheckTypeSize(off64_t,8, 9112, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(off64_t,8, 9112, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(off64_t,8, 9112, 10)
 #elif __powerpc64__
 CheckTypeSize(off64_t,8, 9112, 9)
@@ -1424,7 +1424,7 @@ CheckTypeSize(intptr_t,8, 10514, 9)
 CheckTypeSize(intptr_t,4, 10515, 6)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(intptr_t,4, 10516, 10)
 #endif
 

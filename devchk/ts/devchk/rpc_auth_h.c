@@ -25,7 +25,7 @@ Msg("Checking data structures in rpc/auth.h\n");
 
 #if __ia64__
 #elif __i386__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #else
@@ -41,7 +41,7 @@ CheckMemberSize(struct opaque_auth,oa_base,4,2,32027)
 CheckOffset(struct opaque_auth,oa_base,4,2,32027)
 CheckMemberSize(struct opaque_auth,oa_length,4,2,32028)
 CheckOffset(struct opaque_auth,oa_length,8,2,32028)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct opaque_auth,12, 9894, 10)
 CheckMemberSize(struct opaque_auth,oa_flavor,4,10,32026)
 CheckOffset(struct opaque_auth,oa_flavor,0,10,32026)
@@ -88,7 +88,7 @@ CheckMemberSize(struct AUTH,ah_ops,4,2,32037)
 CheckOffset(struct AUTH,ah_ops,32,2,32037)
 CheckMemberSize(struct AUTH,ah_private,4,2,32038)
 CheckOffset(struct AUTH,ah_private,36,2,32038)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct AUTH,40, 9896, 10)
 CheckMemberSize(struct AUTH,ah_verf,0,10,32030)
 CheckOffset(struct AUTH,ah_verf,12,10,32030)
@@ -135,7 +135,7 @@ Msg("Find size of AUTH (9896)\n");
 
 #if __i386__
 CheckTypeSize(AUTH,40, 10391, 2)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(AUTH,40, 10391, 10)
 #elif __ia64__
 CheckTypeSize(AUTH,72, 10391, 3)
@@ -160,7 +160,7 @@ CheckMemberSize(struct auth_ops,ah_refresh,4,2,32035)
 CheckOffset(struct auth_ops,ah_refresh,12,2,32035)
 CheckMemberSize(struct auth_ops,ah_destroy,4,2,32036)
 CheckOffset(struct auth_ops,ah_destroy,16,2,32036)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct auth_ops,20, 9897, 10)
 CheckMemberSize(struct auth_ops,ah_marshal,0,10,32033)
 CheckOffset(struct auth_ops,ah_marshal,4,10,32033)
@@ -211,7 +211,7 @@ CheckMemberSize(union des_block,key,8,2,32024)
 CheckOffset(union des_block,key,0,2,32024)
 CheckMemberSize(union des_block,c,8,2,32025)
 CheckOffset(union des_block,c,0,2,32025)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(union des_block,8, 9888, 10)
 CheckMemberSize(union des_block,key,4,10,32024)
 CheckOffset(union des_block,key,0,10,32024)

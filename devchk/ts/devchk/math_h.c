@@ -213,7 +213,7 @@ CheckMemberSize(struct exception,arg2,8,6,32297)
 CheckOffset(struct exception,arg2,16,6,32297)
 CheckMemberSize(struct exception,retval,8,6,32298)
 CheckOffset(struct exception,retval,24,6,32298)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct exception,32, 10010, 10)
 CheckMemberSize(struct exception,type,4,10,32294)
 CheckOffset(struct exception,type,0,10,32294)

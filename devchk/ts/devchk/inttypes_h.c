@@ -31,7 +31,7 @@ CheckTypeSize(imaxdiv_t,16, 6898, 2)
 CheckTypeSize(imaxdiv_t,16, 6898, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(imaxdiv_t,16, 6898, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(imaxdiv_t,16, 6898, 10)
 #elif __powerpc64__
 CheckTypeSize(imaxdiv_t,16, 6898, 9)
@@ -54,7 +54,7 @@ CheckTypeSize(u_int,4, 9261, 2)
 CheckTypeSize(u_int,4, 9261, 6)
 #elif __ia64__
 CheckTypeSize(u_int,4, 9261, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(u_int,4, 9261, 10)
 #elif __powerpc64__
 CheckTypeSize(u_int,4, 9261, 9)
@@ -67,7 +67,7 @@ Msg("Find size of u_int (9261)\n");
 CheckTypeSize(uint,4, 9265, 2)
 #elif __ia64__
 CheckTypeSize(uint,4, 9265, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uint,4, 9265, 10)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(uint,4, 9265, 6)
@@ -84,7 +84,7 @@ CheckTypeSize(uint8_t,1, 9270, 2)
 CheckTypeSize(uint8_t,1, 9270, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(uint8_t,1, 9270, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uint8_t,1, 9270, 10)
 #elif __powerpc64__
 CheckTypeSize(uint8_t,1, 9270, 9)
@@ -99,7 +99,7 @@ CheckTypeSize(uint16_t,2, 9271, 2)
 CheckTypeSize(uint16_t,2, 9271, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(uint16_t,2, 9271, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uint16_t,2, 9271, 10)
 #elif __powerpc64__
 CheckTypeSize(uint16_t,2, 9271, 9)
@@ -114,7 +114,7 @@ CheckTypeSize(uint32_t,4, 9272, 2)
 CheckTypeSize(uint32_t,4, 9272, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(uint32_t,4, 9272, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uint32_t,4, 9272, 10)
 #elif __powerpc64__
 CheckTypeSize(uint32_t,4, 9272, 9)
@@ -133,7 +133,7 @@ CheckTypeSize(uint64_t,8, 10176, 2)
 CheckTypeSize(uint64_t,8, 10176, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(uint64_t,8, 10176, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uint64_t,8, 10176, 10)
 #elif __powerpc64__
 CheckTypeSize(uint64_t,8, 10176, 9)
@@ -154,7 +154,7 @@ CheckTypeSize(intmax_t,8, 10461, 9)
 CheckTypeSize(intmax_t,8, 10462, 6)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(intmax_t,8, 10463, 10)
 #endif
 
@@ -166,7 +166,7 @@ CheckTypeSize(uintmax_t,8, 10464, 3)
 CheckTypeSize(uintmax_t,8, 10465, 9)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(uintmax_t,8, 10466, 10)
 #endif
 
@@ -179,14 +179,14 @@ CheckTypeSize(uintptr_t,8, 10506, 3)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(uintptr_t,8, 10507, 6)
+CheckTypeSize(uintptr_t,4, 10507, 6)
 #endif
 
 #if __powerpc64__
 CheckTypeSize(uintptr_t,8, 10508, 9)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(uintptr_t,4, 10509, 10)
 #endif
 

@@ -47,7 +47,7 @@ CheckMemberSize(struct accepted_reply,ar_verf,24,3,34800)
 CheckOffset(struct accepted_reply,ar_verf,0,3,34800)
 CheckMemberSize(struct accepted_reply,ar_stat,4,3,34801)
 CheckOffset(struct accepted_reply,ar_stat,24,3,34801)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct accepted_reply,24, 10417, 10)
 CheckMemberSize(struct accepted_reply,ar_stat,0,10,34801)
 CheckOffset(struct accepted_reply,ar_stat,12,10,34801)
@@ -72,7 +72,7 @@ Msg("Find size of accepted_reply (10417)\n");
 
 #if __i386__
 #elif __ia64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #else
@@ -82,7 +82,7 @@ Msg("Find size of anon-accepted_reply-ru (10418)\n");
 
 #if __i386__
 #elif __ia64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #else
@@ -92,7 +92,7 @@ Msg("Find size of anon-accepted_reply-ar_vers (10419)\n");
 
 #if __i386__
 #elif __ia64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #else
@@ -102,7 +102,7 @@ Msg("Find size of anon-accepted_reply-ar_results (10420)\n");
 
 #if __i386__
 #elif __ia64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #else
@@ -112,7 +112,7 @@ Msg("Find size of anon-rejected_reply-rj_vers (10421)\n");
 
 #if __i386__
 #elif __ia64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #else
@@ -132,7 +132,7 @@ CheckMemberSize(struct rejected_reply,rj_stat,4,3,34812)
 CheckOffset(struct rejected_reply,rj_stat,0,3,34812)
 CheckMemberSize(struct rejected_reply,ru,16,3,34813)
 CheckOffset(struct rejected_reply,ru,8,3,34813)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct rejected_reply,12, 10423, 10)
 CheckMemberSize(struct rejected_reply,ru,0,10,34813)
 CheckOffset(struct rejected_reply,ru,4,10,34813)
@@ -151,7 +151,7 @@ Msg("Find size of rejected_reply (10423)\n");
 
 #if __i386__
 #elif __ia64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #else
@@ -171,7 +171,7 @@ CheckMemberSize(struct reply_body,rp_stat,4,3,34816)
 CheckOffset(struct reply_body,rp_stat,0,3,34816)
 CheckMemberSize(struct reply_body,ru,48,3,34817)
 CheckOffset(struct reply_body,ru,8,3,34817)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct reply_body,28, 10425, 10)
 CheckMemberSize(struct reply_body,ru,0,10,34817)
 CheckOffset(struct reply_body,ru,4,10,34817)
@@ -214,7 +214,7 @@ CheckMemberSize(struct call_body,cb_cred,24,3,34822)
 CheckOffset(struct call_body,cb_cred,32,3,34822)
 CheckMemberSize(struct call_body,cb_verf,24,3,34823)
 CheckOffset(struct call_body,cb_verf,56,3,34823)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct call_body,40, 10426, 10)
 CheckMemberSize(struct call_body,cb_prog,0,10,34819)
 CheckOffset(struct call_body,cb_prog,4,10,34819)
@@ -271,7 +271,7 @@ CheckMemberSize(struct rpc_msg,rm_direction,4,3,34827)
 CheckOffset(struct rpc_msg,rm_direction,8,3,34827)
 CheckMemberSize(struct rpc_msg,ru,80,3,34828)
 CheckOffset(struct rpc_msg,ru,16,3,34828)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct rpc_msg,48, 9984, 10)
 CheckMemberSize(struct rpc_msg,rm_direction,0,10,34827)
 CheckOffset(struct rpc_msg,rm_direction,4,10,34827)
@@ -288,7 +288,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #elif __i386__
@@ -297,7 +297,7 @@ Msg("Find size of rpc_msg (9984)\n");
 
 #if __i386__
 #elif __ia64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc__ && !__powerpc64__
 #elif __powerpc64__
 #else

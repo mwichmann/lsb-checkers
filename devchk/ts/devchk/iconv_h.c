@@ -29,7 +29,7 @@ CheckTypeSize(iconv_t,4, 6895, 2)
 CheckTypeSize(iconv_t,8, 6895, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(iconv_t,4, 6895, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(iconv_t,4, 6895, 10)
 #elif __powerpc64__
 CheckTypeSize(iconv_t,8, 6895, 9)

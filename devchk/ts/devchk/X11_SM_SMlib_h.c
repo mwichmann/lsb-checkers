@@ -33,7 +33,7 @@ CheckTypeSize(SmPointer,4, 8231, 2)
 CheckTypeSize(SmPointer,8, 8231, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmPointer,4, 8231, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmPointer,4, 8231, 10)
 #elif __powerpc64__
 CheckTypeSize(SmPointer,8, 8231, 9)
@@ -48,7 +48,7 @@ CheckTypeSize(SmcConn,4, 8232, 2)
 CheckTypeSize(SmcConn,8, 8232, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcConn,4, 8232, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcConn,4, 8232, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcConn,8, 8232, 9)
@@ -63,7 +63,7 @@ CheckTypeSize(SmsConn,4, 8233, 2)
 CheckTypeSize(SmsConn,8, 8233, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmsConn,4, 8233, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmsConn,4, 8233, 10)
 #elif __powerpc64__
 CheckTypeSize(SmsConn,8, 8233, 9)
@@ -78,7 +78,7 @@ CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 8790, 2)
 CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 8790, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 8790, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 8790, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 8790, 9)
@@ -93,7 +93,7 @@ CheckTypeSize(SmcInteractProc,4, 8792, 2)
 CheckTypeSize(SmcInteractProc,8, 8792, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcInteractProc,4, 8792, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcInteractProc,4, 8792, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcInteractProc,8, 8792, 9)
@@ -108,7 +108,7 @@ CheckTypeSize(SmcDieProc,4, 8794, 2)
 CheckTypeSize(SmcDieProc,8, 8794, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcDieProc,4, 8794, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcDieProc,4, 8794, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcDieProc,8, 8794, 9)
@@ -123,7 +123,7 @@ CheckTypeSize(SmcShutdownCancelledProc,4, 8796, 2)
 CheckTypeSize(SmcShutdownCancelledProc,8, 8796, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcShutdownCancelledProc,4, 8796, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcShutdownCancelledProc,4, 8796, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcShutdownCancelledProc,8, 8796, 9)
@@ -138,7 +138,7 @@ CheckTypeSize(SmcSaveCompleteProc,4, 8798, 2)
 CheckTypeSize(SmcSaveCompleteProc,8, 8798, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcSaveCompleteProc,4, 8798, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcSaveCompleteProc,4, 8798, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcSaveCompleteProc,8, 8798, 9)
@@ -153,7 +153,7 @@ CheckTypeSize(SmcPropReplyProc,4, 8802, 2)
 CheckTypeSize(SmcPropReplyProc,8, 8802, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcPropReplyProc,4, 8802, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcPropReplyProc,4, 8802, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcPropReplyProc,8, 8802, 9)
@@ -168,7 +168,7 @@ CheckTypeSize(SmPropValue,8, 8235, 2)
 CheckTypeSize(SmPropValue,16, 8235, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmPropValue,8, 8235, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmPropValue,8, 8235, 10)
 #elif __powerpc64__
 CheckTypeSize(SmPropValue,16, 8235, 9)
@@ -183,7 +183,7 @@ CheckTypeSize(SmProp,16, 8237, 2)
 CheckTypeSize(SmProp,32, 8237, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmProp,16, 8237, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmProp,16, 8237, 10)
 #elif __powerpc64__
 CheckTypeSize(SmProp,32, 8237, 9)
@@ -198,7 +198,7 @@ CheckTypeSize(SmcCallbacks,32, 8259, 2)
 CheckTypeSize(SmcCallbacks,64, 8259, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcCallbacks,32, 8259, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcCallbacks,32, 8259, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcCallbacks,64, 8259, 9)
@@ -213,7 +213,7 @@ CheckTypeSize(SmsSetPropertiesProc,4, 8818, 2)
 CheckTypeSize(SmsSetPropertiesProc,8, 8818, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmsSetPropertiesProc,4, 8818, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmsSetPropertiesProc,4, 8818, 10)
 #elif __powerpc64__
 CheckTypeSize(SmsSetPropertiesProc,8, 8818, 9)
@@ -228,7 +228,7 @@ CheckTypeSize(SmsDeletePropertiesProc,4, 8820, 2)
 CheckTypeSize(SmsDeletePropertiesProc,8, 8820, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmsDeletePropertiesProc,4, 8820, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmsDeletePropertiesProc,4, 8820, 10)
 #elif __powerpc64__
 CheckTypeSize(SmsDeletePropertiesProc,8, 8820, 9)
@@ -243,7 +243,7 @@ CheckTypeSize(SmsGetPropertiesProc,4, 8822, 2)
 CheckTypeSize(SmsGetPropertiesProc,8, 8822, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmsGetPropertiesProc,4, 8822, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmsGetPropertiesProc,4, 8822, 10)
 #elif __powerpc64__
 CheckTypeSize(SmsGetPropertiesProc,8, 8822, 9)
@@ -258,7 +258,7 @@ CheckTypeSize(SmsCallbacks,80, 8291, 2)
 CheckTypeSize(SmsCallbacks,160, 8291, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmsCallbacks,80, 8291, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmsCallbacks,80, 8291, 10)
 #elif __powerpc64__
 CheckTypeSize(SmsCallbacks,160, 8291, 9)
@@ -273,7 +273,7 @@ CheckTypeSize(SmsNewClientProc,4, 8825, 2)
 CheckTypeSize(SmsNewClientProc,8, 8825, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmsNewClientProc,4, 8825, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmsNewClientProc,4, 8825, 10)
 #elif __powerpc64__
 CheckTypeSize(SmsNewClientProc,8, 8825, 9)
@@ -288,7 +288,7 @@ CheckTypeSize(SmcErrorHandler,4, 8827, 2)
 CheckTypeSize(SmcErrorHandler,8, 8827, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcErrorHandler,4, 8827, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcErrorHandler,4, 8827, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcErrorHandler,8, 8827, 9)
@@ -303,7 +303,7 @@ CheckTypeSize(SmsErrorHandler,4, 8829, 2)
 CheckTypeSize(SmsErrorHandler,8, 8829, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmsErrorHandler,4, 8829, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmsErrorHandler,4, 8829, 10)
 #elif __powerpc64__
 CheckTypeSize(SmsErrorHandler,8, 8829, 9)
@@ -318,7 +318,7 @@ CheckTypeSize(SmcCloseStatus,4, 8786, 2)
 CheckTypeSize(SmcCloseStatus,4, 8786, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(SmcCloseStatus,4, 8786, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(SmcCloseStatus,4, 8786, 10)
 #elif __powerpc64__
 CheckTypeSize(SmcCloseStatus,4, 8786, 9)

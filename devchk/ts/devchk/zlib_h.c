@@ -313,7 +313,7 @@ cnt++;
 CheckTypeSize(intf,4, 10168, 2)
 #elif __ia64__
 CheckTypeSize(intf,4, 10168, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(intf,4, 10168, 10)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(intf,4, 10168, 6)
@@ -326,6 +326,7 @@ Msg("Find size of intf (10168)\n");
 
 #if __ia64__
 #elif __i386__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10512,0);
 Msg("Find size of const Bytef * (10512)\n");
@@ -335,6 +336,8 @@ Msg("Find size of const Bytef * (10512)\n");
 CheckTypeSize(const uLongf,8, 10517, 3)
 #elif __i386__
 CheckTypeSize(const uLongf,4, 10517, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const uLongf,4, 10517, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10517,0);
 Msg("Find size of const uLongf (10517)\n");
@@ -342,6 +345,7 @@ Msg("Find size of const uLongf (10517)\n");
 
 #if __ia64__
 #elif __i386__
+#elif __powerpc__ && !__powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10518,0);
 Msg("Find size of const uLongf * (10518)\n");
@@ -353,7 +357,7 @@ CheckTypeSize(voidpf,4, 9868, 2)
 CheckTypeSize(voidpf,4, 9868, 6)
 #elif __ia64__
 CheckTypeSize(voidpf,8, 9868, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(voidpf,4, 9868, 10)
 #elif __powerpc64__
 CheckTypeSize(voidpf,8, 9868, 9)
@@ -368,7 +372,7 @@ CheckTypeSize(uInt,4, 9870, 2)
 CheckTypeSize(uInt,4, 9870, 6)
 #elif __ia64__
 CheckTypeSize(uInt,4, 9870, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uInt,4, 9870, 10)
 #elif __powerpc64__
 CheckTypeSize(uInt,4, 9870, 9)
@@ -383,7 +387,7 @@ CheckTypeSize(uLong,4, 9878, 2)
 CheckTypeSize(uLong,4, 9878, 6)
 #elif __ia64__
 CheckTypeSize(uLong,8, 9878, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uLong,4, 9878, 10)
 #elif __powerpc64__
 CheckTypeSize(uLong,8, 9878, 9)
@@ -398,7 +402,7 @@ CheckTypeSize(uLongf,4, 9883, 2)
 CheckTypeSize(uLongf,4, 9883, 6)
 #elif __ia64__
 CheckTypeSize(uLongf,8, 9883, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uLongf,4, 9883, 10)
 #elif __powerpc64__
 CheckTypeSize(uLongf,8, 9883, 9)
@@ -413,7 +417,7 @@ CheckTypeSize(voidp,4, 9885, 2)
 CheckTypeSize(voidp,4, 9885, 6)
 #elif __ia64__
 CheckTypeSize(voidp,8, 9885, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(voidp,4, 9885, 10)
 #elif __powerpc64__
 CheckTypeSize(voidp,8, 9885, 9)
@@ -428,7 +432,7 @@ CheckTypeSize(Byte,1, 10166, 2)
 CheckTypeSize(Byte,1, 10166, 6)
 #elif __ia64__
 CheckTypeSize(Byte,1, 10166, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(Byte,1, 10166, 10)
 #elif __powerpc64__
 CheckTypeSize(Byte,1, 10166, 9)
@@ -441,6 +445,8 @@ Msg("Find size of Byte (10166)\n");
 CheckTypeSize(z_off_t,8, 10519, 3)
 #elif __i386__
 CheckTypeSize(z_off_t,4, 10519, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(z_off_t,4, 10519, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10519,0);
 Msg("Find size of z_off_t (10519)\n");
@@ -532,7 +538,7 @@ CheckMemberSize(struct z_stream_s,adler,8,3,34079)
 CheckOffset(struct z_stream_s,adler,96,3,34079)
 CheckMemberSize(struct z_stream_s,reserved,8,3,34080)
 CheckOffset(struct z_stream_s,reserved,104,3,34080)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct z_stream_s,56, 9875, 10)
 CheckMemberSize(struct z_stream_s,avail_in,0,10,34068)
 CheckOffset(struct z_stream_s,avail_in,4,10,34068)
@@ -599,7 +605,7 @@ CheckTypeSize(z_stream,56, 9880, 2)
 CheckTypeSize(z_stream,56, 9880, 6)
 #elif __ia64__
 CheckTypeSize(z_stream,112, 9880, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(z_stream,56, 9880, 10)
 #elif __powerpc64__
 CheckTypeSize(z_stream,112, 9880, 9)
@@ -614,7 +620,7 @@ CheckTypeSize(z_streamp,4, 9882, 2)
 CheckTypeSize(z_streamp,8, 9882, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(z_streamp,4, 9882, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(z_streamp,4, 9882, 10)
 #elif __powerpc64__
 CheckTypeSize(z_streamp,8, 9882, 9)
@@ -629,7 +635,7 @@ CheckTypeSize(gzFile,4, 9886, 2)
 CheckTypeSize(gzFile,8, 9886, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(gzFile,4, 9886, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(gzFile,4, 9886, 10)
 #elif __powerpc64__
 CheckTypeSize(gzFile,8, 9886, 9)
@@ -644,7 +650,7 @@ CheckTypeSize(alloc_func,4, 9871, 2)
 CheckTypeSize(alloc_func,4, 9871, 6)
 #elif __ia64__
 CheckTypeSize(alloc_func,8, 9871, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(alloc_func,4, 9871, 10)
 #elif __powerpc64__
 CheckTypeSize(alloc_func,8, 9871, 9)
@@ -659,7 +665,7 @@ CheckTypeSize(free_func,4, 9873, 2)
 CheckTypeSize(free_func,4, 9873, 6)
 #elif __ia64__
 CheckTypeSize(free_func,8, 9873, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(free_func,4, 9873, 10)
 #elif __powerpc64__
 CheckTypeSize(free_func,8, 9873, 9)
@@ -680,7 +686,7 @@ CheckOffset(struct internal_state,dummy,0,6,34081)
 CheckTypeSize(struct internal_state,4, 9874, 3)
 CheckMemberSize(struct internal_state,dummy,4,3,34081)
 CheckOffset(struct internal_state,dummy,0,3,34081)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct internal_state,4, 9874, 10)
 CheckMemberSize(struct internal_state,dummy,4,10,34081)
 CheckOffset(struct internal_state,dummy,0,10,34081)
@@ -699,7 +705,7 @@ CheckTypeSize(Bytef,1, 9876, 2)
 CheckTypeSize(Bytef,1, 9876, 6)
 #elif __ia64__
 CheckTypeSize(Bytef,1, 9876, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(Bytef,1, 9876, 10)
 #elif __powerpc64__
 CheckTypeSize(Bytef,1, 9876, 9)
@@ -712,7 +718,7 @@ Msg("Find size of Bytef (9876)\n");
 CheckTypeSize(uIntf,4, 10169, 2)
 #elif __ia64__
 CheckTypeSize(uIntf,4, 10169, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(uIntf,4, 10169, 10)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(uIntf,4, 10169, 6)
@@ -727,6 +733,8 @@ Msg("Find size of uIntf (10169)\n");
 CheckTypeSize(const Bytef,1, 10511, 3)
 #elif __i386__
 CheckTypeSize(const Bytef,1, 10511, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const Bytef,1, 10511, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10511,0);
 Msg("Find size of const Bytef (10511)\n");

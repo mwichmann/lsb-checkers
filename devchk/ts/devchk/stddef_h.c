@@ -43,7 +43,7 @@ CheckTypeSize(wchar_t,4, 8848, 2)
 CheckTypeSize(wchar_t,4, 8848, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(wchar_t,4, 8848, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(wchar_t,4, 8848, 10)
 #elif __powerpc64__
 CheckTypeSize(wchar_t,4, 8848, 9)
@@ -79,7 +79,7 @@ CheckTypeSize(size_t,4, 10452, 6)
 CheckTypeSize(size_t,8, 10453, 9)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(size_t,4, 10454, 10)
 #endif
 
@@ -91,7 +91,7 @@ CheckTypeSize(ptrdiff_t,4, 10473, 2)
 CheckTypeSize(ptrdiff_t,4, 10474, 6)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(ptrdiff_t,4, 10475, 10)
 #endif
 

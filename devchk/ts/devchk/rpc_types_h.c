@@ -31,7 +31,7 @@ CheckTypeSize(bool_t,4, 9890, 3)
 CheckTypeSize(bool_t,4, 9890, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(bool_t,4, 9890, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(bool_t,4, 9890, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9890,0);
@@ -40,7 +40,7 @@ Msg("Find size of bool_t (9890)\n");
 
 #if __i386__
 CheckTypeSize(enum_t,4, 9895, 2)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(enum_t,4, 9895, 10)
 #elif __ia64__
 CheckTypeSize(enum_t,4, 9895, 3)
@@ -57,7 +57,7 @@ Msg("Find size of enum_t (9895)\n");
 CheckTypeSize(rpcvers_t,4, 9993, 2)
 #elif __ia64__
 CheckTypeSize(rpcvers_t,8, 9993, 3)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(rpcvers_t,4, 9993, 10)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(rpcvers_t,4, 9993, 6)

@@ -556,7 +556,7 @@ CheckOffset(struct linger,l_linger,4,3,33675)
 CheckTypeSize(struct linger,8, 6907, 6)
 CheckMemberSize(struct linger,l_linger,4,6,33675)
 CheckOffset(struct linger,l_linger,4,6,33675)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct linger,8, 6907, 10)
 CheckMemberSize(struct linger,l_linger,0,10,33675)
 CheckOffset(struct linger,l_linger,4,10,33675)
@@ -587,7 +587,7 @@ CheckMemberSize(struct cmsghdr,cmsg_level,4,6,33686)
 CheckOffset(struct cmsghdr,cmsg_level,4,6,33686)
 CheckMemberSize(struct cmsghdr,cmsg_type,4,6,33687)
 CheckOffset(struct cmsghdr,cmsg_type,8,6,33687)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct cmsghdr,12, 6909, 10)
 CheckMemberSize(struct cmsghdr,cmsg_level,0,10,33686)
 CheckOffset(struct cmsghdr,cmsg_level,4,10,33686)
@@ -616,7 +616,7 @@ CheckOffset(struct iovec,iov_len,8,3,33677)
 CheckTypeSize(struct iovec,8, 9022, 6)
 CheckMemberSize(struct iovec,iov_len,4,6,33677)
 CheckOffset(struct iovec,iov_len,4,6,33677)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct iovec,8, 9022, 10)
 CheckMemberSize(struct iovec,iov_len,0,10,33677)
 CheckOffset(struct iovec,iov_len,4,10,33677)
@@ -635,7 +635,7 @@ CheckTypeSize(sa_family_t,2, 6905, 2)
 CheckTypeSize(sa_family_t,2, 6905, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sa_family_t,2, 6905, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(sa_family_t,2, 6905, 10)
 #elif __powerpc64__
 CheckTypeSize(sa_family_t,2, 6905, 9)
@@ -650,7 +650,7 @@ CheckTypeSize(socklen_t,4, 9155, 2)
 CheckTypeSize(socklen_t,4, 9155, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(socklen_t,4, 9155, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(socklen_t,4, 9155, 10)
 #elif __powerpc64__
 CheckTypeSize(socklen_t,4, 9155, 9)
@@ -671,7 +671,7 @@ CheckOffset(struct sockaddr,sa_data,2,3,33673)
 CheckTypeSize(struct sockaddr,16, 6906, 6)
 CheckMemberSize(struct sockaddr,sa_data,14,6,33673)
 CheckOffset(struct sockaddr,sa_data,2,6,33673)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct sockaddr,16, 6906, 10)
 CheckMemberSize(struct sockaddr,sa_data,0,10,33673)
 CheckOffset(struct sockaddr,sa_data,2,10,33673)
@@ -726,7 +726,7 @@ CheckMemberSize(struct msghdr,msg_controllen,4,6,33683)
 CheckOffset(struct msghdr,msg_controllen,20,6,33683)
 CheckMemberSize(struct msghdr,msg_flags,4,6,33684)
 CheckOffset(struct msghdr,msg_flags,24,6,33684)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct msghdr,28, 6908, 10)
 CheckMemberSize(struct msghdr,msg_namelen,0,10,33679)
 CheckOffset(struct msghdr,msg_namelen,4,10,33679)

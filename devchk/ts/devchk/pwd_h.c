@@ -65,7 +65,7 @@ CheckMemberSize(struct passwd,pw_dir,4,6,30046)
 CheckOffset(struct passwd,pw_dir,20,6,30046)
 CheckMemberSize(struct passwd,pw_shell,4,6,30047)
 CheckOffset(struct passwd,pw_shell,24,6,30047)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct passwd,28, 6938, 10)
 CheckMemberSize(struct passwd,pw_passwd,0,10,30042)
 CheckOffset(struct passwd,pw_passwd,4,10,30042)

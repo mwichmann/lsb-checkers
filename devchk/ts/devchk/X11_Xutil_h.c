@@ -33,7 +33,7 @@ CheckTypeSize(XSizeHints,72, 8301, 2)
 CheckTypeSize(XSizeHints,80, 8301, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XSizeHints,72, 8301, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XSizeHints,72, 8301, 10)
 #elif __powerpc64__
 CheckTypeSize(XSizeHints,80, 8301, 9)
@@ -48,7 +48,7 @@ CheckTypeSize(XWMHints,36, 8303, 2)
 CheckTypeSize(XWMHints,56, 8303, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XWMHints,36, 8303, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XWMHints,36, 8303, 10)
 #elif __powerpc64__
 CheckTypeSize(XWMHints,56, 8303, 9)
@@ -63,7 +63,7 @@ CheckTypeSize(XTextProperty,16, 8305, 2)
 CheckTypeSize(XTextProperty,32, 8305, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XTextProperty,16, 8305, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XTextProperty,16, 8305, 10)
 #elif __powerpc64__
 CheckTypeSize(XTextProperty,32, 8305, 9)
@@ -78,7 +78,7 @@ CheckTypeSize(XIconSize,24, 8309, 2)
 CheckTypeSize(XIconSize,24, 8309, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XIconSize,24, 8309, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XIconSize,24, 8309, 10)
 #elif __powerpc64__
 CheckTypeSize(XIconSize,24, 8309, 9)
@@ -93,7 +93,7 @@ CheckTypeSize(XClassHint,8, 8311, 2)
 CheckTypeSize(XClassHint,16, 8311, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XClassHint,8, 8311, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XClassHint,8, 8311, 10)
 #elif __powerpc64__
 CheckTypeSize(XClassHint,16, 8311, 9)
@@ -108,7 +108,7 @@ CheckTypeSize(XComposeStatus,8, 8313, 2)
 CheckTypeSize(XComposeStatus,16, 8313, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XComposeStatus,8, 8313, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XComposeStatus,8, 8313, 10)
 #elif __powerpc64__
 CheckTypeSize(XComposeStatus,16, 8313, 9)
@@ -123,7 +123,7 @@ CheckTypeSize(Region,4, 8314, 2)
 CheckTypeSize(Region,8, 8314, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(Region,4, 8314, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(Region,4, 8314, 10)
 #elif __powerpc64__
 CheckTypeSize(Region,8, 8314, 9)
@@ -138,7 +138,7 @@ CheckTypeSize(XVisualInfo,40, 8316, 2)
 CheckTypeSize(XVisualInfo,64, 8316, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XVisualInfo,40, 8316, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XVisualInfo,40, 8316, 10)
 #elif __powerpc64__
 CheckTypeSize(XVisualInfo,64, 8316, 9)
@@ -153,7 +153,7 @@ CheckTypeSize(XStandardColormap,40, 8318, 2)
 CheckTypeSize(XStandardColormap,80, 8318, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XStandardColormap,40, 8318, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XStandardColormap,40, 8318, 10)
 #elif __powerpc64__
 CheckTypeSize(XStandardColormap,80, 8318, 9)
@@ -168,7 +168,7 @@ CheckTypeSize(XContext,4, 8319, 2)
 CheckTypeSize(XContext,4, 8319, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XContext,4, 8319, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XContext,4, 8319, 10)
 #elif __powerpc64__
 CheckTypeSize(XContext,4, 8319, 9)
@@ -183,7 +183,7 @@ CheckTypeSize(XICCEncodingStyle,4, 8832, 2)
 CheckTypeSize(XICCEncodingStyle,4, 8832, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(XICCEncodingStyle,4, 8832, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(XICCEncodingStyle,4, 8832, 10)
 #elif __powerpc64__
 CheckTypeSize(XICCEncodingStyle,4, 8832, 9)

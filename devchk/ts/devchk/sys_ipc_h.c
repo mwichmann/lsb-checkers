@@ -167,7 +167,7 @@ CheckMemberSize(struct ipc_perm,__unused2,8,6,34730)
 CheckOffset(struct ipc_perm,__unused2,40,6,34730)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(struct ipc_perm,36, 10404, 10)
 CheckMemberSize(struct ipc_perm,__key,4,10,34731)
 CheckOffset(struct ipc_perm,__key,0,10,34731)

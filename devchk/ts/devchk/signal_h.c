@@ -721,7 +721,7 @@ CheckTypeSize(sig_atomic_t,4, 9092, 2)
 CheckTypeSize(sig_atomic_t,4, 9092, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sig_atomic_t,4, 9092, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(sig_atomic_t,4, 9092, 10)
 #elif __powerpc64__
 CheckTypeSize(sig_atomic_t,4, 9092, 9)
@@ -744,7 +744,7 @@ CheckOffset(struct sigstack,ss_onstack,8,3,34195)
 CheckTypeSize(struct sigstack,8, 9315, 6)
 CheckMemberSize(struct sigstack,ss_onstack,4,6,34195)
 CheckOffset(struct sigstack,ss_onstack,4,6,34195)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct sigstack,8, 9315, 10)
 CheckMemberSize(struct sigstack,ss_onstack,0,10,34195)
 CheckOffset(struct sigstack,ss_onstack,4,10,34195)
@@ -766,7 +766,7 @@ CheckTypeSize(__sighandler_t,4, 6966, 2)
 CheckTypeSize(__sighandler_t,8, 6966, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(__sighandler_t,4, 6966, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(__sighandler_t,4, 6966, 10)
 #elif __powerpc64__
 CheckTypeSize(__sighandler_t,8, 6966, 9)
@@ -781,7 +781,7 @@ CheckTypeSize(sigval_t,4, 9320, 2)
 CheckTypeSize(sigval_t,8, 9320, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sigval_t,4, 9320, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(sigval_t,4, 9320, 10)
 #elif __powerpc64__
 CheckTypeSize(sigval_t,8, 9320, 9)
@@ -793,7 +793,7 @@ Msg("Find size of sigval_t (9320)\n");
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10189,0);
@@ -806,7 +806,7 @@ CheckTypeSize(sigevent_t,64, 10190, 2)
 CheckTypeSize(sigevent_t,64, 10190, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sigevent_t,64, 10190, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(sigevent_t,64, 10190, 10)
 #elif __powerpc64__
 CheckTypeSize(sigevent_t,64, 10190, 9)
@@ -821,7 +821,7 @@ CheckTypeSize(siginfo_t,128, 9099, 2)
 CheckTypeSize(siginfo_t,128, 9099, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(siginfo_t,128, 9099, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(siginfo_t,128, 9099, 10)
 #elif __powerpc64__
 CheckTypeSize(siginfo_t,128, 9099, 9)
@@ -836,7 +836,7 @@ CheckTypeSize(sigset_t,128, 10163, 2)
 CheckTypeSize(sigset_t,128, 10163, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sigset_t,128, 10163, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(sigset_t,128, 10163, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
@@ -877,7 +877,7 @@ CheckMemberSize(struct sigaction,sa_mask,128,6,34715)
 CheckOffset(struct sigaction,sa_mask,4,6,34715)
 #endif
 
-#if __s390__
+#if __s390__ && !__s390x__
 CheckTypeSize(struct sigaction,140, 10402, 10)
 CheckMemberSize(struct sigaction,__sigaction_handler,4,10,34716)
 CheckOffset(struct sigaction,__sigaction_handler,0,10,34716)

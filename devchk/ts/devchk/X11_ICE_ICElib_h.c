@@ -29,7 +29,7 @@ CheckTypeSize(IcePoVersionRec,12, 8206, 2)
 CheckTypeSize(IcePoVersionRec,16, 8206, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePoVersionRec,12, 8206, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePoVersionRec,12, 8206, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePoVersionRec,16, 8206, 9)
@@ -44,7 +44,7 @@ CheckTypeSize(IcePaVersionRec,12, 8208, 2)
 CheckTypeSize(IcePaVersionRec,16, 8208, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePaVersionRec,12, 8208, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePaVersionRec,12, 8208, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePaVersionRec,16, 8208, 9)
@@ -59,7 +59,7 @@ CheckTypeSize(IcePointer,4, 8180, 2)
 CheckTypeSize(IcePointer,8, 8180, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePointer,4, 8180, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePointer,4, 8180, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePointer,8, 8180, 9)
@@ -74,7 +74,7 @@ CheckTypeSize(IcePoAuthStatus,4, 8734, 3)
 CheckTypeSize(IcePoAuthStatus,4, 8734, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePoAuthStatus,4, 8734, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePoAuthStatus,4, 8734, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePoAuthStatus,4, 8734, 9)
@@ -89,7 +89,7 @@ CheckTypeSize(IcePaAuthStatus,4, 8736, 3)
 CheckTypeSize(IcePaAuthStatus,4, 8736, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePaAuthStatus,4, 8736, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePaAuthStatus,4, 8736, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePaAuthStatus,4, 8736, 9)
@@ -104,7 +104,7 @@ CheckTypeSize(IceConnectStatus,4, 8738, 2)
 CheckTypeSize(IceConnectStatus,4, 8738, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceConnectStatus,4, 8738, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceConnectStatus,4, 8738, 10)
 #elif __powerpc64__
 CheckTypeSize(IceConnectStatus,4, 8738, 9)
@@ -119,7 +119,7 @@ CheckTypeSize(IceProtocolSetupStatus,4, 8740, 2)
 CheckTypeSize(IceProtocolSetupStatus,4, 8740, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceProtocolSetupStatus,4, 8740, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceProtocolSetupStatus,4, 8740, 10)
 #elif __powerpc64__
 CheckTypeSize(IceProtocolSetupStatus,4, 8740, 9)
@@ -134,7 +134,7 @@ CheckTypeSize(IceAcceptStatus,4, 8742, 2)
 CheckTypeSize(IceAcceptStatus,4, 8742, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceAcceptStatus,4, 8742, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceAcceptStatus,4, 8742, 10)
 #elif __powerpc64__
 CheckTypeSize(IceAcceptStatus,4, 8742, 9)
@@ -149,7 +149,7 @@ CheckTypeSize(IceCloseStatus,4, 8744, 2)
 CheckTypeSize(IceCloseStatus,4, 8744, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceCloseStatus,4, 8744, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceCloseStatus,4, 8744, 10)
 #elif __powerpc64__
 CheckTypeSize(IceCloseStatus,4, 8744, 9)
@@ -164,7 +164,7 @@ CheckTypeSize(IceProcessMessagesStatus,4, 8746, 2)
 CheckTypeSize(IceProcessMessagesStatus,4, 8746, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceProcessMessagesStatus,4, 8746, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceProcessMessagesStatus,4, 8746, 10)
 #elif __powerpc64__
 CheckTypeSize(IceProcessMessagesStatus,4, 8746, 9)
@@ -179,7 +179,7 @@ CheckTypeSize(IceReplyWaitInfo,16, 8196, 2)
 CheckTypeSize(IceReplyWaitInfo,24, 8196, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceReplyWaitInfo,16, 8196, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceReplyWaitInfo,16, 8196, 10)
 #elif __powerpc64__
 CheckTypeSize(IceReplyWaitInfo,24, 8196, 9)
@@ -194,7 +194,7 @@ CheckTypeSize(IceWatchProc,4, 8749, 2)
 CheckTypeSize(IceWatchProc,8, 8749, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceWatchProc,4, 8749, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceWatchProc,4, 8749, 10)
 #elif __powerpc64__
 CheckTypeSize(IceWatchProc,8, 8749, 9)
@@ -209,7 +209,7 @@ CheckTypeSize(IcePoProcessMsgProc,8, 8752, 3)
 CheckTypeSize(IcePoProcessMsgProc,4, 8752, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePoProcessMsgProc,4, 8752, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePoProcessMsgProc,4, 8752, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePoProcessMsgProc,8, 8752, 9)
@@ -224,7 +224,7 @@ CheckTypeSize(IcePaProcessMsgProc,8, 8754, 3)
 CheckTypeSize(IcePaProcessMsgProc,4, 8754, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePaProcessMsgProc,4, 8754, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePaProcessMsgProc,4, 8754, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePaProcessMsgProc,8, 8754, 9)
@@ -239,7 +239,7 @@ CheckTypeSize(IcePoAuthProc,4, 8756, 2)
 CheckTypeSize(IcePoAuthProc,8, 8756, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePoAuthProc,4, 8756, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePoAuthProc,4, 8756, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePoAuthProc,8, 8756, 9)
@@ -254,7 +254,7 @@ CheckTypeSize(IcePaAuthProc,4, 8758, 2)
 CheckTypeSize(IcePaAuthProc,8, 8758, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePaAuthProc,4, 8758, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePaAuthProc,4, 8758, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePaAuthProc,8, 8758, 9)
@@ -269,7 +269,7 @@ CheckTypeSize(IceHostBasedAuthProc,4, 8760, 2)
 CheckTypeSize(IceHostBasedAuthProc,8, 8760, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceHostBasedAuthProc,4, 8760, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceHostBasedAuthProc,4, 8760, 10)
 #elif __powerpc64__
 CheckTypeSize(IceHostBasedAuthProc,8, 8760, 9)
@@ -284,7 +284,7 @@ CheckTypeSize(IceProtocolSetupProc,4, 8762, 2)
 CheckTypeSize(IceProtocolSetupProc,8, 8762, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceProtocolSetupProc,4, 8762, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceProtocolSetupProc,4, 8762, 10)
 #elif __powerpc64__
 CheckTypeSize(IceProtocolSetupProc,8, 8762, 9)
@@ -299,7 +299,7 @@ CheckTypeSize(IceProtocolActivateProc,4, 8764, 2)
 CheckTypeSize(IceProtocolActivateProc,8, 8764, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceProtocolActivateProc,4, 8764, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceProtocolActivateProc,4, 8764, 10)
 #elif __powerpc64__
 CheckTypeSize(IceProtocolActivateProc,8, 8764, 9)
@@ -314,7 +314,7 @@ CheckTypeSize(IceIOErrorProc,4, 8766, 2)
 CheckTypeSize(IceIOErrorProc,8, 8766, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceIOErrorProc,4, 8766, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceIOErrorProc,4, 8766, 10)
 #elif __powerpc64__
 CheckTypeSize(IceIOErrorProc,8, 8766, 9)
@@ -329,7 +329,7 @@ CheckTypeSize(IcePingReplyProc,4, 8768, 2)
 CheckTypeSize(IcePingReplyProc,8, 8768, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IcePingReplyProc,4, 8768, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IcePingReplyProc,4, 8768, 10)
 #elif __powerpc64__
 CheckTypeSize(IcePingReplyProc,8, 8768, 9)
@@ -344,7 +344,7 @@ CheckTypeSize(IceErrorHandler,4, 8770, 2)
 CheckTypeSize(IceErrorHandler,8, 8770, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceErrorHandler,4, 8770, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceErrorHandler,4, 8770, 10)
 #elif __powerpc64__
 CheckTypeSize(IceErrorHandler,8, 8770, 9)
@@ -359,7 +359,7 @@ CheckTypeSize(IceIOErrorHandler,4, 8772, 2)
 CheckTypeSize(IceIOErrorHandler,8, 8772, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceIOErrorHandler,4, 8772, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceIOErrorHandler,4, 8772, 10)
 #elif __powerpc64__
 CheckTypeSize(IceIOErrorHandler,8, 8772, 9)
@@ -371,7 +371,7 @@ Msg("Find size of IceIOErrorHandler (8772)\n");
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
-#elif __s390__
+#elif __s390__ && !__s390x__
 #elif __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7710,0);
@@ -384,7 +384,7 @@ CheckTypeSize(IceConn,4, 8197, 2)
 CheckTypeSize(IceConn,8, 8197, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceConn,4, 8197, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceConn,4, 8197, 10)
 #elif __powerpc64__
 CheckTypeSize(IceConn,8, 8197, 9)
@@ -399,7 +399,7 @@ CheckTypeSize(IceListenObj,4, 8198, 2)
 CheckTypeSize(IceListenObj,8, 8198, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(IceListenObj,4, 8198, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(IceListenObj,4, 8198, 10)
 #elif __powerpc64__
 CheckTypeSize(IceListenObj,8, 8198, 9)

@@ -439,7 +439,7 @@ CheckTypeSize(reg_syntax_t,4, 6941, 2)
 CheckTypeSize(reg_syntax_t,8, 6941, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(reg_syntax_t,4, 6941, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(reg_syntax_t,4, 6941, 10)
 #elif __powerpc64__
 CheckTypeSize(reg_syntax_t,8, 6941, 9)
@@ -492,7 +492,7 @@ CheckMemberSize(struct re_pattern_buffer,translate,4,6,30071)
 CheckOffset(struct re_pattern_buffer,translate,20,6,30071)
 CheckMemberSize(struct re_pattern_buffer,re_nsub,4,6,30072)
 CheckOffset(struct re_pattern_buffer,re_nsub,24,6,30072)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(struct re_pattern_buffer,32, 6944, 10)
 CheckMemberSize(struct re_pattern_buffer,allocated,0,10,30067)
 CheckOffset(struct re_pattern_buffer,allocated,4,10,30067)
@@ -531,7 +531,7 @@ CheckTypeSize(regex_t,32, 6945, 2)
 CheckTypeSize(regex_t,64, 6945, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(regex_t,32, 6945, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(regex_t,32, 6945, 10)
 #elif __powerpc64__
 CheckTypeSize(regex_t,64, 6945, 9)
@@ -546,7 +546,7 @@ CheckTypeSize(regoff_t,4, 6946, 2)
 CheckTypeSize(regoff_t,4, 6946, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(regoff_t,4, 6946, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(regoff_t,4, 6946, 10)
 #elif __powerpc64__
 CheckTypeSize(regoff_t,4, 6946, 9)
@@ -561,7 +561,7 @@ CheckTypeSize(regmatch_t,8, 6949, 2)
 CheckTypeSize(regmatch_t,8, 6949, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(regmatch_t,8, 6949, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(regmatch_t,8, 6949, 10)
 #elif __powerpc64__
 CheckTypeSize(regmatch_t,8, 6949, 9)

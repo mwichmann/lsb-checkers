@@ -88,7 +88,7 @@ CheckTypeSize(idtype_t,4, 9185, 2)
 CheckTypeSize(idtype_t,4, 9185, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(idtype_t,4, 9185, 6)
-#elif __s390__
+#elif __s390__ && !__s390x__
 CheckTypeSize(idtype_t,4, 9185, 10)
 #elif __powerpc64__
 CheckTypeSize(idtype_t,4, 9185, 9)
