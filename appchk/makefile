@@ -14,3 +14,5 @@ install:
 
 clean:
 	rm -f $(OBJS) appchk
+
+distclean: clean
