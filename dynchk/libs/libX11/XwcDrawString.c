@@ -6,11 +6,11 @@
 #include <X11/X.h>
 #include <stddef.h>
 #undef XwcDrawString
-static void(*funcptr) (Display * , Drawable , XFontSet , GC , int , int , const wchar_t * , int ) = 0;
+static void(*funcptr) (Display * , Drawable , XFontSet , GC , int , int , wchar_t * , int ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-void XwcDrawString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg3 , int arg4 , int arg5 , const wchar_t * arg6 , int arg7 )
+void XwcDrawString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg3 , int arg4 , int arg5 , wchar_t * arg6 , int arg7 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
@@ -19,14 +19,14 @@ void XwcDrawString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg3 , i
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XwcDrawString()");
-	validate_Rdaddress( arg0, "XwcDrawString - arg0");
+	validate_RWaddress( arg0, "XwcDrawString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XwcDrawString - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XwcDrawString - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XwcDrawString - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XwcDrawString - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XwcDrawString - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XwcDrawString - arg5");
-	validate_Rdaddress( arg6, "XwcDrawString - arg6");
+	validate_RWaddress( arg6, "XwcDrawString - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XwcDrawString - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XwcDrawString - arg7");
 	}

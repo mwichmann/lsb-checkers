@@ -1,11 +1,4 @@
 GEN_FUNCS = \
-gzread.o \
-gzclose.o \
-gzopen.o \
-gzdopen.o \
-gzwrite.o \
-gzflush.o \
-gzerror.o \
 adler32.o \
 compress.o \
 compress2.o \
@@ -19,15 +12,22 @@ deflateParams.o \
 deflateReset.o \
 deflateSetDictionary.o \
 get_crc_table.o \
+gzclose.o \
+gzdopen.o \
 gzeof.o \
+gzerror.o \
+gzflush.o \
 gzgetc.o \
 gzgets.o \
+gzopen.o \
 gzputc.o \
 gzputs.o \
+gzread.o \
 gzrewind.o \
 gzseek.o \
 gzsetparams.o \
 gztell.o \
+gzwrite.o \
 inflate.o \
 inflateEnd.o \
 inflateInit2_.o \

@@ -2,14 +2,14 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <stddef.h>
 #include <X11/Xlib.h>
+#include <stddef.h>
 #undef XwcTextEscapement
-static int(*funcptr) (XFontSet , const wchar_t * , int ) = 0;
+static int(*funcptr) (XFontSet , wchar_t * , int ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XwcTextEscapement (XFontSet arg0 , const wchar_t * arg1 , int arg2 )
+int XwcTextEscapement (XFontSet arg0 , wchar_t * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -20,7 +20,7 @@ int XwcTextEscapement (XFontSet arg0 , const wchar_t * arg1 , int arg2 )
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XwcTextEscapement()");
 		validate_NULL_TYPETYPE(  arg0, "XwcTextEscapement - arg0");
-	validate_Rdaddress( arg1, "XwcTextEscapement - arg1");
+	validate_RWaddress( arg1, "XwcTextEscapement - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XwcTextEscapement - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XwcTextEscapement - arg2");
 	}

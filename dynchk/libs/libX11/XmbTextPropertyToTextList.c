@@ -5,11 +5,11 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef XmbTextPropertyToTextList
-static int(*funcptr) (Display * , const XTextProperty * , char * * * , int * ) = 0;
+static int(*funcptr) (Display * , XTextProperty * , char * * * , int * ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XmbTextPropertyToTextList (Display * arg0 , const XTextProperty * arg1 , char * * * arg2 , int * arg3 )
+int XmbTextPropertyToTextList (Display * arg0 , XTextProperty * arg1 , char * * * arg2 , int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -19,15 +19,13 @@ int XmbTextPropertyToTextList (Display * arg0 , const XTextProperty * arg1 , cha
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XmbTextPropertyToTextList()");
-	validate_Rdaddress( arg0, "XmbTextPropertyToTextList - arg0");
+	validate_RWaddress( arg0, "XmbTextPropertyToTextList - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XmbTextPropertyToTextList - arg0");
-	validate_Rdaddress( arg1, "XmbTextPropertyToTextList - arg1");
+	validate_RWaddress( arg1, "XmbTextPropertyToTextList - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XmbTextPropertyToTextList - arg1");
-	validate_Rdaddress( arg2, "XmbTextPropertyToTextList - arg2");
-	validate_Rdaddress(* arg2, "XmbTextPropertyToTextList - arg2");
-	validate_Rdaddress(** arg2, "XmbTextPropertyToTextList - arg2");
+	validate_RWaddress( arg2, "XmbTextPropertyToTextList - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XmbTextPropertyToTextList - arg2");
-	validate_Rdaddress( arg3, "XmbTextPropertyToTextList - arg3");
+	validate_RWaddress( arg3, "XmbTextPropertyToTextList - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XmbTextPropertyToTextList - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -5,11 +5,11 @@
 #include <X11/Xlib.h>
 #include <stddef.h>
 #undef XwcTextPerCharExtents
-static int(*funcptr) (XFontSet , const wchar_t * , int , XRectangle * , XRectangle * , int , int * , XRectangle * , XRectangle * ) = 0;
+static int(*funcptr) (XFontSet , wchar_t * , int , XRectangle * , XRectangle * , int , int * , XRectangle * , XRectangle * ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XwcTextPerCharExtents (XFontSet arg0 , const wchar_t * arg1 , int arg2 , XRectangle * arg3 , XRectangle * arg4 , int arg5 , int * arg6 , XRectangle * arg7 , XRectangle * arg8 )
+int XwcTextPerCharExtents (XFontSet arg0 , wchar_t * arg1 , int arg2 , XRectangle * arg3 , XRectangle * arg4 , int arg5 , int * arg6 , XRectangle * arg7 , XRectangle * arg8 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -20,19 +20,19 @@ int XwcTextPerCharExtents (XFontSet arg0 , const wchar_t * arg1 , int arg2 , XRe
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XwcTextPerCharExtents()");
 		validate_NULL_TYPETYPE(  arg0, "XwcTextPerCharExtents - arg0");
-	validate_Rdaddress( arg1, "XwcTextPerCharExtents - arg1");
+	validate_RWaddress( arg1, "XwcTextPerCharExtents - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XwcTextPerCharExtents - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XwcTextPerCharExtents - arg2");
-	validate_Rdaddress( arg3, "XwcTextPerCharExtents - arg3");
+	validate_RWaddress( arg3, "XwcTextPerCharExtents - arg3");
 		validate_NULL_TYPETYPE(  arg3, "XwcTextPerCharExtents - arg3");
-	validate_Rdaddress( arg4, "XwcTextPerCharExtents - arg4");
+	validate_RWaddress( arg4, "XwcTextPerCharExtents - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XwcTextPerCharExtents - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XwcTextPerCharExtents - arg5");
-	validate_Rdaddress( arg6, "XwcTextPerCharExtents - arg6");
+	validate_RWaddress( arg6, "XwcTextPerCharExtents - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XwcTextPerCharExtents - arg6");
-	validate_Rdaddress( arg7, "XwcTextPerCharExtents - arg7");
+	validate_RWaddress( arg7, "XwcTextPerCharExtents - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XwcTextPerCharExtents - arg7");
-	validate_Rdaddress( arg8, "XwcTextPerCharExtents - arg8");
+	validate_RWaddress( arg8, "XwcTextPerCharExtents - arg8");
 		validate_NULL_TYPETYPE(  arg8, "XwcTextPerCharExtents - arg8");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);

@@ -3,12 +3,19 @@
 #include "../type_tests.h"
 #include <rpc/auth.h>
 
-void validate_struct_AUTH(struct AUTH  * input, char *name)
+int validate_struct_AUTH(struct AUTH  * input, char *name)
 {
-	validate_struct_opaque_auth( &(input->ah_cred),name );
-	validate_struct_opaque_auth( &(input->ah_verf),name );
-	validate_NULL_TYPETYPE(input->ah_key,name );
-	validate_struct_auth_ops(input->ah_ops,name );
-	validate_NULL_TYPETYPE(input->ah_private,name );
+int failure = 0;
+	if(validate_struct_opaque_auth( &(input-> ah_cred),name ))
+		failure = 1;
+	if(validate_struct_opaque_auth( &(input-> ah_verf),name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ah_key,name ));
+		failure = 1;
+	if(validate_struct_auth_ops(input-> ah_ops,name ));
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> ah_private,name ));
+		failure = 1;
+return failure;
 }
 

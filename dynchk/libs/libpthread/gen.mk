@@ -1,12 +1,19 @@
 GEN_FUNCS = \
+__register_atfork.o \
 _pthread_cleanup_pop.o \
 _pthread_cleanup_push.o \
 pthread_attr_destroy.o \
 pthread_attr_getdetachstate.o \
+pthread_attr_getguardsize.o \
 pthread_attr_getschedparam.o \
+pthread_attr_getstackaddr.o \
+pthread_attr_getstacksize.o \
 pthread_attr_init.o \
 pthread_attr_setdetachstate.o \
+pthread_attr_setguardsize.o \
 pthread_attr_setschedparam.o \
+pthread_attr_setstackaddr.o \
+pthread_attr_setstacksize.o \
 pthread_cancel.o \
 pthread_cond_broadcast.o \
 pthread_cond_destroy.o \
@@ -15,7 +22,9 @@ pthread_cond_signal.o \
 pthread_cond_timedwait.o \
 pthread_cond_wait.o \
 pthread_condattr_destroy.o \
+pthread_condattr_getpshared.o \
 pthread_condattr_init.o \
+pthread_condattr_setpshared.o \
 pthread_create.o \
 pthread_detach.o \
 pthread_equal.o \
@@ -29,11 +38,17 @@ pthread_mutex_init.o \
 pthread_mutex_trylock.o \
 pthread_mutex_unlock.o \
 pthread_mutexattr_destroy.o \
+pthread_mutexattr_getpshared.o \
+pthread_mutexattr_gettype.o \
 pthread_mutexattr_init.o \
+pthread_mutexattr_setpshared.o \
+pthread_mutexattr_settype.o \
 pthread_once.o \
 pthread_rwlock_destroy.o \
 pthread_rwlock_init.o \
 pthread_rwlock_rdlock.o \
+pthread_rwlock_timedrdlock.o \
+pthread_rwlock_timedwrlock.o \
 pthread_rwlock_tryrdlock.o \
 pthread_rwlock_trywrlock.o \
 pthread_rwlock_unlock.o \
@@ -45,6 +60,7 @@ pthread_rwlockattr_setpshared.o \
 pthread_self.o \
 pthread_setcancelstate.o \
 pthread_setcanceltype.o \
+pthread_setconcurrency.o \
 pthread_setspecific.o \
 pthread_testcancel.o \
 sem_close.o \
@@ -52,23 +68,7 @@ sem_destroy.o \
 sem_getvalue.o \
 sem_init.o \
 sem_post.o \
+sem_timedwait.o \
 sem_trywait.o \
 sem_unlink.o \
-sem_wait.o \
-pthread_attr_getguardsize.o \
-pthread_attr_setguardsize.o \
-pthread_attr_setstackaddr.o \
-pthread_attr_getstackaddr.o \
-pthread_attr_setstacksize.o \
-pthread_attr_getstacksize.o \
-pthread_mutexattr_gettype.o \
-pthread_mutexattr_settype.o \
-pthread_setconcurrency.o \
-pthread_condattr_getpshared.o \
-pthread_condattr_setpshared.o \
-pthread_mutexattr_getpshared.o \
-pthread_mutexattr_setpshared.o \
-pthread_rwlock_timedrdlock.o \
-pthread_rwlock_timedwrlock.o \
-sem_timedwait.o \
-__register_atfork.o 
+sem_wait.o 

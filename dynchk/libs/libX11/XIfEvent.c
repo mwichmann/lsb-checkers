@@ -4,11 +4,11 @@
 #include <dlfcn.h>
 #include <X11/Xlib.h>
 #undef XIfEvent
-static int(*funcptr) (Display * , XEvent * , Bool(*)(Display *,XEvent *,XPointer) , XPointer ) = 0;
+static int(*funcptr) (Display * , XEvent * , int , XPointer ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XIfEvent (Display * arg0 , XEvent * arg1 , Bool(*arg2)(Display *,XEvent *,XPointer), XPointer arg3 )
+int XIfEvent (Display * arg0 , XEvent * arg1 , int arg2 , XPointer arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -18,9 +18,9 @@ int XIfEvent (Display * arg0 , XEvent * arg1 , Bool(*arg2)(Display *,XEvent *,XP
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XIfEvent()");
-	validate_Rdaddress( arg0, "XIfEvent - arg0");
+	validate_RWaddress( arg0, "XIfEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XIfEvent - arg0");
-	validate_Rdaddress( arg1, "XIfEvent - arg1");
+	validate_RWaddress( arg1, "XIfEvent - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XIfEvent - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XIfEvent - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XIfEvent - arg3");

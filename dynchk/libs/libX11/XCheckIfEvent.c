@@ -4,11 +4,11 @@
 #include <dlfcn.h>
 #include <X11/Xlib.h>
 #undef XCheckIfEvent
-static int(*funcptr) (Display * , XEvent * , Bool (*)( Display *,XEvent *,XPointer) , XPointer ) = 0;
+static int(*funcptr) (Display * , XEvent * , struct anon-X11/Xlib.h-2379 , XPointer ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-int XCheckIfEvent (Display * arg0 , XEvent * arg1 , Bool (*arg2)( Display *,XEvent *,XPointer) , XPointer arg3 )
+int XCheckIfEvent (Display * arg0 , XEvent * arg1 , struct anon-X11/Xlib.h-2379 arg2 , XPointer arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -18,11 +18,11 @@ int XCheckIfEvent (Display * arg0 , XEvent * arg1 , Bool (*arg2)( Display *,XEve
 	{
 		__lsb_check_params=0;
 	__lsb_output(5-__lsb_check_params, "XCheckIfEvent()");
-	validate_Rdaddress( arg0, "XCheckIfEvent - arg0");
+	validate_RWaddress( arg0, "XCheckIfEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCheckIfEvent - arg0");
-	validate_Rdaddress( arg1, "XCheckIfEvent - arg1");
+	validate_RWaddress( arg1, "XCheckIfEvent - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XCheckIfEvent - arg1");
-		validate_NULL_TYPETYPE(  arg2, "XCheckIfEvent - arg2");
+		validate_struct_anon-X11/Xlib.h-2379( & arg2, "XCheckIfEvent - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XCheckIfEvent - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

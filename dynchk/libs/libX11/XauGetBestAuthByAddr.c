@@ -4,11 +4,11 @@
 #include <dlfcn.h>
 #include <X11/Xauth.h>
 #undef XauGetBestAuthByAddr
-static Xauth *(*funcptr) (unsigned int , unsigned int , const char * , unsigned int , const char * , int , char * * , const int * ) = 0;
+static Xauth *(*funcptr) (unsigned int , unsigned int , const char * , unsigned int , char * , int , char * * , int * ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-Xauth * XauGetBestAuthByAddr (unsigned int arg0 , unsigned int arg1 , const char * arg2 , unsigned int arg3 , const char * arg4 , int arg5 , char * * arg6 , const int * arg7 )
+Xauth * XauGetBestAuthByAddr (unsigned int arg0 , unsigned int arg1 , const char * arg2 , unsigned int arg3 , char * arg4 , int arg5 , char * * arg6 , int * arg7 )
 {
 	int reset_flag = __lsb_check_params;
 	Xauth * ret_value  ;
@@ -23,13 +23,12 @@ Xauth * XauGetBestAuthByAddr (unsigned int arg0 , unsigned int arg1 , const char
 	validate_Rdaddress( arg2, "XauGetBestAuthByAddr - arg2");
 		validate_NULL_TYPETYPE(  arg2, "XauGetBestAuthByAddr - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XauGetBestAuthByAddr - arg3");
-	validate_Rdaddress( arg4, "XauGetBestAuthByAddr - arg4");
+	validate_RWaddress( arg4, "XauGetBestAuthByAddr - arg4");
 		validate_NULL_TYPETYPE(  arg4, "XauGetBestAuthByAddr - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XauGetBestAuthByAddr - arg5");
-	validate_Rdaddress( arg6, "XauGetBestAuthByAddr - arg6");
-	validate_Rdaddress(* arg6, "XauGetBestAuthByAddr - arg6");
+	validate_RWaddress( arg6, "XauGetBestAuthByAddr - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XauGetBestAuthByAddr - arg6");
-	validate_Rdaddress( arg7, "XauGetBestAuthByAddr - arg7");
+	validate_RWaddress( arg7, "XauGetBestAuthByAddr - arg7");
 		validate_NULL_TYPETYPE(  arg7, "XauGetBestAuthByAddr - arg7");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
