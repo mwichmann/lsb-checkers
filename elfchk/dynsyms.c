@@ -5725,7 +5725,7 @@ struct versym DynSyms[] = {
 	{"dladdr","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"dladdr","GLIBC_2.0",0},
+	{"dladdr","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"dladdr","GLIBC_2.0",0},
@@ -5746,7 +5746,7 @@ struct versym DynSyms[] = {
 	{"dlclose","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"dlclose","GLIBC_2.0",0},
+	{"dlclose","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"dlclose","GLIBC_2.0",0},
@@ -5767,7 +5767,7 @@ struct versym DynSyms[] = {
 	{"dlerror","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"dlerror","GLIBC_2.0",0},
+	{"dlerror","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"dlerror","GLIBC_2.0",0},
@@ -5788,7 +5788,7 @@ struct versym DynSyms[] = {
 	{"dlopen","GLIBC_2.1",0},
 #endif
 #if __ia64__
-	{"dlopen","GLIBC_2.1",0},
+	{"dlopen","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"dlopen","GLIBC_2.1",0},
@@ -5809,7 +5809,7 @@ struct versym DynSyms[] = {
 	{"dlsym","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"dlsym","GLIBC_2.0",0},
+	{"dlsym","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"dlsym","GLIBC_2.0",0},
@@ -5960,7 +5960,7 @@ struct versym DynSyms[] = {
 	{"encrypt","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"encrypt","GLIBC_2.0",0},
+	{"encrypt","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"encrypt","GLIBC_2.0",0},
@@ -7658,7 +7658,7 @@ struct versym DynSyms[] = {
 	{"forkpty","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"forkpty","GLIBC_2.0",0},
+	{"forkpty","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"forkpty","GLIBC_2.0",0},
@@ -12404,7 +12404,7 @@ struct versym DynSyms[] = {
 	{"login","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"login","GLIBC_2.0",0},
+	{"login","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"login","GLIBC_2.0",0},
@@ -12425,7 +12425,7 @@ struct versym DynSyms[] = {
 	{"login_tty","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"login_tty","GLIBC_2.0",0},
+	{"login_tty","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"login_tty","GLIBC_2.0",0},
@@ -12467,7 +12467,7 @@ struct versym DynSyms[] = {
 	{"logout","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"logout","GLIBC_2.0",0},
+	{"logout","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"logout","GLIBC_2.0",0},
@@ -12488,7 +12488,7 @@ struct versym DynSyms[] = {
 	{"logwtmp","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"logwtmp","GLIBC_2.0",0},
+	{"logwtmp","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"logwtmp","GLIBC_2.0",0},
@@ -13995,7 +13995,7 @@ struct versym DynSyms[] = {
 	{"openpty","GLIBC_2.0",0},
 #endif
 #if __ia64__
-	{"openpty","GLIBC_2.0",0},
+	{"openpty","GLIBC_2.2",0},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"openpty","GLIBC_2.0",0},
