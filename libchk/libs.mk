@@ -13,6 +13,7 @@ LIBOBJS = \
 	libcrypt_so_1.o \
 	libdl_so_2.o \
 	libm_so_6.o \
+	libm_so_6_1.o \
 	libncurses_so_5.o \
 	libpthread_so_0.o \
 	librt_so_1.o \

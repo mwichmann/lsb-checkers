@@ -24,14 +24,13 @@ extern struct versym libdl_so_2[];
 #if defined(__i386__)
 extern struct versym libm_so_6[];
 #endif
+#if defined(__ia64__)
+extern struct versym libm_so_6_1[];
+#endif
 extern struct versym libncurses_so_5[];
 #if defined(__i386__)
 extern struct versym libpthread_so_0[];
 #endif
-#if defined(__i386__)
 extern struct versym librt_so_1[];
-#endif
-#if defined(__i386__)
 extern struct versym libutil_so_1[];
-#endif
 extern struct versym libz_so_1[];

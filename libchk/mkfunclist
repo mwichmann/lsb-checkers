@@ -66,9 +66,10 @@ open(MAKE,">libs.mk");
 print MAKE "# Generated file #\n";
 print MAKE "LIBOBJS = \\\n";
 
-$select = "SELECT DISTINCT Lid,Lrunname,Asymbol FROM Library ";
+$select = "SELECT DISTINCT Lid,Lrunname,Asymbol,Aname FROM Library ";
 $select.= "LEFT JOIN Architecture ON Larch=Aid ";
 $select.= "WHERE Lstd='Yes' ";
+$select.= "AND Aname!='None' ";
 #$select.= "AND Larch IN ($Aid,$AllAid) ";
 $select.= "ORDER BY Lrunname ";
 
