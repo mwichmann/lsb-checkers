@@ -43,18 +43,13 @@ $numtypeinfofuns=0;
 print $LIB "struct classtypeinfo $typeinfoname = {\n";
 print $LIB "\t\"".getinterfacename($$class{'CIbasevtable'})."\",\n";
 print $LIB "\t\"_ZTS".$$class{'CIname'}."\",\n";
-print $LIB "\t{NULL},\n";
-print $LIB "\t};\n";
+print $LIB "\tNULL,\n";
+print $LIB "\t};\n\n";
 
 #
-# Output classvtable here.
+# Output array of Vtable entries
 #
 $vtablename=$$class{'CIname'}."_vtable";
-$numvtablefuns=0;
-print $LIB "struct classvtable $vtablename = {\n";
-print $LIB "\t".$$class{'CIbaseoffset'}.",\n";
-print $LIB "\t\"_ZTI".$$class{'CIname'}."\",\n";
-print $LIB "\t{\n";
 
 $select = "SELECT * FROM Vtable ";
 $select.= "WHERE VTtid=".$$class{'CIvtable'}." ";
@@ -62,13 +57,23 @@ $select.= "ORDER BY VTpos";
 
 #print $select;
 
+print $LIB "char *".$vtablename."_name[] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
 	print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
 	$numvtablefuns++;
 }
-print $LIB "\t },\n";
+print $LIB "\t};\n\n";
+
+#
+# Output classvtable here.
+#
+$numvtablefuns=0;
+print $LIB "struct classvtable $vtablename = {\n";
+print $LIB "\t".$$class{'CIbaseoffset'}.",\n";
+print $LIB "\t\"_ZTI".$$class{'CIname'}."\",\n";
+print $LIB $vtablename."_name,\n";
 print $LIB "\t};\n";
 
 print $LIB "struct classinfo ".$$class{'CIname'}."_classinfo = {\n";
@@ -173,7 +178,7 @@ $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE Lstd='Yes' ";
 $select.= "AND Aname!='None' ";
-#$select.= "AND Lname='libstdcxx' ";
+$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid ";
 
 #print $select;
