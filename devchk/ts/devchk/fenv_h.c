@@ -543,8 +543,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef FE_ALL_EXCEPT
-	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_UNDERFLOW | FE_OVERFLOW | FE_DIVBYZERO | FE_UNNORMAL | F
-E_INVALID),5307,architecture)
+	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_UNDERFLOW | FE_OVERFLOW | FE_DIVBYZERO | FE_UNNORMAL | FE_INVALID),5307,architecture)
 #else
 Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
