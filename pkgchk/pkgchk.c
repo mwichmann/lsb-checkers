@@ -37,12 +37,12 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.4 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.5 $";
 
 int
 main(int argc, char *argv[])
 {
-  signed char	c,*ptr;
+  signed char	*ptr;
   struct tetj_handle *journal;
   char *command_line = NULL;
   int i;

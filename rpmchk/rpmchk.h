@@ -231,5 +231,7 @@ void checkRpmHdr(RpmFile *file1, struct tetj_handle *journal);
 void checkRpmSignature(RpmFile *file1, struct tetj_handle *journal);
 void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
 
+/* rpmchk.c */
+void checkRpmMetaData(RpmFile *file1, struct tetj_handle *journal);
 
 #endif /* _RPMCHK_H */
