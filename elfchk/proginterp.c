@@ -14,12 +14,18 @@ char *ProgInterp =
 #if defined(__i386__)
 	"/lib/ld-lsb.so.1";
 #endif
-#if defined(__powerpc__)
-	"/lib/ld-lsb.so.1";
+#if __powerpc__ && !__powerpc64__
+	"/lib/ld-lsb-ppc32.so.1";
+#endif
+#if __powerpc64__
+	"/lib/ld-lsb-ppc64.so.1";
 #endif
 #if defined(__ia64__)
 	"/lib/ld-lsb-ia64.so.1";
 #endif
-#if defined(__s390__)
+#if __s390__ && !__s390x__
 	"/lib/ld-lsb-s390.so.1";
+#endif
+#if __s390x__
+	"/lib/ld-lsb-s390x.so.1";
 #endif
