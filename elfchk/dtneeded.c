@@ -1,11 +1,11 @@
 /* Generated file - Do Not Edit */
 char *DtNeeded[] = {
-#if __powerpc64__
-	"/lib/ld-lsb-64.so.1",
-#endif /* __powerpc64__ */
 #if __ia64__
 	"/lib/ld-lsb-ia64.so.1",
 #endif /* __ia64__ */
+#if __powerpc64__
+	"/lib/ld-lsb-ppc64.so.1",
+#endif /* __powerpc64__ */
 #if __s390__
 	"/lib/ld-lsb-s390.so.1",
 #endif /* __s390__ */

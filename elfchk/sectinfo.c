@@ -16,6 +16,9 @@ struct SectionInfo SectionInfo[] = {
 	{".eh_frame",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".fini",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 	{".fini_array",SHT_FINI_ARRAY,SHF_ALLOC+SHF_WRITE,checkFINI_ARRAY},
+#if __powerpc64__
+	{".glink",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
+#endif /* __powerpc64__ */
 	{".gnu.version",SHT_GNU_versym,SHF_ALLOC,checkGNU_versym},
 	{".gnu.version_d",SHT_GNU_verdef,SHF_ALLOC,checkGNU_verdef},
 	{".gnu.version_r",SHT_GNU_verneed,SHF_ALLOC,checkGNU_verneed},
@@ -31,6 +34,9 @@ struct SectionInfo SectionInfo[] = {
 #if __s390__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __s390__ */
+#if __powerpc64__
+	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __powerpc64__ */
 #if __powerpc__ && !__powerpc64__
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -66,6 +72,9 @@ struct SectionInfo SectionInfo[] = {
 #if __s390__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __s390__ */
+#if __powerpc64__
+	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __powerpc64__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
 #if __i386__
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
@@ -135,6 +144,12 @@ struct SectionInfo SectionInfo[] = {
 	{".strtab",SHT_STRTAB,SHF_ALLOC,checkSTRTAB},
 	{".symtab",SHT_SYMTAB,SHF_ALLOC,checkSYMTAB},
 	{".text",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
+#if __powerpc64__
+	{".toc",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+#endif /* __powerpc64__ */
+#if __powerpc64__
+	{".tocbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+#endif /* __powerpc64__ */
 	};
 
 int numSectionInfo = sizeof(SectionInfo)/sizeof(struct SectionInfo);
