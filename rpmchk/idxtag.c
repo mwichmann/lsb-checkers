@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <time.h>
 #include "rpmchk.h"
 #include "md5.h"
@@ -315,7 +316,7 @@ htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
 hcount=ntohl(hidx->count);
 hoffset=ntohl(hidx->offset);
-md5hdr=(int *)(file1->storeaddr+hoffset);
+md5hdr=(char *)(file1->storeaddr+hoffset);
 
 /*
 fprintf(stderr,"%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x\n",
@@ -810,10 +811,10 @@ htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
-filedevs=(short *)(file1->storeaddr+hoffset);
+filerdevs=(short *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
-	filedevs[i]=htons(filedevs[i]);
-	fprintf(stderr,"Filedevs: %o\n",filedevs[i]);
+	filerdevs[i]=htons(filerdevs[i]);
+	fprintf(stderr,"Filerdevs: %x\n",filerdevs[i]);
 	}
 }
 
@@ -904,7 +905,6 @@ for(i=0;i<hcount;i++) {
 	}
 }
 
-
 void
 checkRpmIdxFILEGROUPNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
@@ -950,7 +950,7 @@ hcount=ntohl(hidx->count);
 flagp=(int *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
 	flagp[i]=htonl(flagp[i]);
-	fprintf(stderr,"File Verify Flag Flag: %x\n",flagp[i]);
+	fprintf(stderr,"File Verify Flag: %x\n",flagp[i]);
 	}
 }
 
@@ -997,7 +997,11 @@ void
 checkRpmIdxREQUIREFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	htag, htype, hoffset, hcount, i;
-int	*flagp;
+int	*flagp, flag;
+char	buf[128];
+
+#define mapbit(bit) \
+	if( flag & bit ) { flag&=~bit;strcat(buf,#bit);strcat(buf," "); }
 
 htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
@@ -1005,8 +1009,18 @@ hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 flagp=(int *)(file1->storeaddr+hoffset);
 for(i=0;i<hcount;i++) {
-	flagp[i]=htonl(flagp[i]);
-	fprintf(stderr,"Required Flag: %x\n",flagp[i]);
+	buf[0]='\000';
+	flag=htonl(flagp[i]);
+	//fprintf(stderr,"Required Flag: %x ",flag);
+	mapbit(RPMSENSE_RPMLIB);
+	mapbit(RPMSENSE_PREREQ);
+	mapbit(RPMSENSE_EQUAL);
+	mapbit(RPMSENSE_GREATER);
+	mapbit(RPMSENSE_LESS);
+	fprintf(stderr,"%s ",buf);
+	if( flag )
+		fprintf(stderr," %x",flag);
+	fprintf(stderr,"\n");
 	}
 }
 
@@ -1022,16 +1036,235 @@ hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
 for(i=0;i<hcount;i++) {
-	if( (strcmp(name,"lsb") != 0) && (strncmp(name,"rpmlib",6)!= 0) ) {
-		fprintf(stderr,"Invalid RPMTAG_REQUIRENAME: expecting \"lsb\"");
-		fprintf(stderr," but found %s\n", name );
-	} else {
-		if( strcmp(name,"lsb") == 0 ) 
-			lsbdepidx=i;
-	}
+	if( strcmp(name,"lsb") == 0 ) 
+		lsbdepidx=i;
+	if( strcmp(name,"rpmlib(PayloadFilesHavePrefix)") == 0 ) 
+		hasPayloadFilesHavePrefix=1;
 	fprintf(stderr,"Required Name: %s\n", name );
 	name+=strlen(name)+1;
 	}
+if( lsbdepidx < 0 ) 
+		fprintf(stderr,"RPMTAG_REQUIRENAME did not contain \"lsb\"\n");
+}
+
+void
+checkRpmIdxRPMVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+fprintf(stderr,"RPM version: %s\n",name);
+}
+
+void
+checkRpmIdxCHANGELOGTIME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+unsigned int	*name;
+time_t	btime;
+hoffset=ntohl(hidx->offset);
+name=(unsigned int *)(file1->storeaddr+hoffset);
+btime=htonl(*name);
+/* Check that the string is a number */
+fprintf(stderr,"Changelog time: %s",ctime(&btime));
+}
+
+void
+checkRpmIdxCHANGELOGNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filegroupnames=(char *)(file1->storeaddr+hoffset);
+name=filegroupnames;
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"Changelog name: %s\n",name);
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxCHANGELOGTEXT(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filegroupnames=(char *)(file1->storeaddr+hoffset);
+name=filegroupnames;
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"Changelog text: %s\n",name);
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxCOOKIE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+unsigned char	*name;
+
+hoffset=ntohl(hidx->offset);
+name=(char *)(file1->storeaddr+hoffset);
+/* Check that the string is a number */
+fprintf(stderr,"Cookie: %s\n",name);
+}
+
+void
+checkRpmIdxFILEDEVICES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount,i;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filedevs=(int *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	filedevs[i]=htonl(filedevs[i]);
+	fprintf(stderr,"Filedevs: %x\n",filedevs[i]);
+	}
+}
+
+void
+checkRpmIdxFILEINODES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount,i;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+fileinodes=(int *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	fileinodes[i]=htonl(fileinodes[i]);
+	fprintf(stderr,"File inode: %d\n",fileinodes[i]);
+	}
+}
+
+void
+checkRpmIdxFILELANGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+filelangs=(char *)(file1->storeaddr+hoffset);
+name=filelangs;
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"File langs: %s\n",name);
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxPROVIDEFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount, i;
+unsigned int	*flagp;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+flagp=(int *)(file1->storeaddr+hoffset);
+flagp[i]=htonl(flagp[i]);
+fprintf(stderr,"Provide Flag: %x\n",flagp[i]);
+}
+
+void
+checkRpmIdxPROVIDEVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	i,htag, htype, hoffset, hcount;
+char	*name;
+
+/*
+ * A STRING_ARRAY because it could be providing multiple things.
+ */
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+for(i=0;i<hcount;i++) {
+	fprintf(stderr,"Provide Version: %s\n", name );
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxDIRINDEXES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset, hcount, i;
+
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+dirindicies=(int *)(file1->storeaddr+hoffset);
+for(i=0;i<hcount;i++) {
+	dirindicies[i]=htonl(dirindicies[i]);
+	fprintf(stderr,"Directory Index: %x\n",dirindicies[i]);
+	}
+}
+
+void
+checkRpmIdxBASENAMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	i, hoffset, hcount;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+basenames=(char **)malloc(hcount*sizeof(char *));
+name=file1->storeaddr+hoffset;
+for(i=0;i<hcount;i++) {
+	basenames[i]=name;
+	fprintf(stderr,"Basename: %s\n", name );
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxDIRNAMES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	i, hoffset, hcount;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+numdirnames=hcount;
+dirnames=(char **)malloc(hcount*sizeof(char *));
+name=file1->storeaddr+hoffset;
+for(i=0;i<hcount;i++) {
+	dirnames[i]=name;
+	fprintf(stderr,"Dirname: %s\n", name );
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxOPTFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+name=file1->storeaddr+hoffset;
+fprintf(stderr,"Optflags: %s\n", name );
 }
 
 void
@@ -1089,4 +1322,37 @@ for(i=0;i<hcount;i++) {
 	fprintf(stderr,"Required Version: %s\n", name );
 	name+=strlen(name)+1;
 	}
+}
+
+void
+checkRpmIdxPAYLOADFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+name=file1->storeaddr+hoffset;
+fprintf(stderr,"Payload flags: %s\n", name );
+}
+
+void
+checkRpmIdxRHNPLATFORM(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+name=file1->storeaddr+hoffset;
+fprintf(stderr,"RHN platform: %s\n", name );
+}
+
+void
+checkRpmIdxPLATFORM(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset;
+char	*name;
+
+hoffset=ntohl(hidx->offset);
+name=file1->storeaddr+hoffset;
+fprintf(stderr,"Platform: %s\n", name );
 }
