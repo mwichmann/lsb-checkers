@@ -248,7 +248,7 @@ for(1..$lsth->numrows) {
 	if( $entry{'Aid'} && $entry{'Aname'} ne 'All' ) {
 		print LIB "#if $entry{'Asymbol'}\n";
 		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-		printf LIB "0,\"%s\",%s,",$entry{'Mname'},$entry{'ATsize'};
+		printf LIB "0,%s,%s,",$entry{'Mname'},$entry{'ATsize'};
 		if( $entry{'Itype'} eq "Data" ) {
 			print LIB "0";
 		} else {
@@ -258,7 +258,7 @@ for(1..$lsth->numrows) {
 		print LIB "#endif\n";
 	} else {
 		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-		printf LIB "0,\"%s\",%s,",$entry{'Mname'},$entry{'ATsize'};
+		printf LIB "0,%s,%s,",$entry{'Mname'},$entry{'ATsize'};
 		if( $entry{'Itype'} eq "Data" ) {
 			print LIB "0";
 		} else {
@@ -356,7 +356,7 @@ for(1..$sth->numrows) {
 	$libname = pop(@libname);
 	if( $asym != "1" ) {
 		print LIBS "#if $asym\n";
-		print LIBS "\t{\"$modname\",\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
+		print LIBS "\t{$modname,\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 		print LIBS "#endif\n";
 		print LIBSH "#if $asym\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
@@ -364,7 +364,7 @@ for(1..$sth->numrows) {
 		print LIBSH "#endif\n";
 	} else {
 		if( !$seenit{$libname} ) {
-			print LIBS "\t{\"$modname\",\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
+			print LIBS "\t{$modname,\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 			print LIBSH "extern struct versym ".$libname."[];\n";
 			print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
 			}

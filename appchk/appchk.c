@@ -9,9 +9,9 @@
 #include "libraries.h"
 
 /*
- * What module to check against. - NULL means check all
+ * What module to check against.
  */
-char *module = "LSB-Core";
+int modules = LSB_Core;
 
 char *
 concat_string(char *input, char *addition)
@@ -31,7 +31,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.18 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.19 $";
 
 int
 main(int argc, char *argv[])
@@ -74,12 +74,12 @@ main(int argc, char *argv[])
       break;
 			
     case 'M':
-      module=optarg;
-      printf("Only checking symbols in module %s\n", module);
+      modules|=getmoduleval(optarg);
+      printf("also checking symbols in module %s\n", optarg);
       break;
 
     case 'A':
-      module=NULL;
+      modules=LSB_All_Modules;
       printf("Checking symbols in all modules\n");
       break;
 

@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.59 $
+ * This is $Revision: 1.60 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.60  2005/03/31 16:36:52  anderson
+ * Bug 736 - make Module additive
+ *
  * Revision 1.59  2005/03/21 13:58:56  anderson
  * Make the default report new symbols for now - turn of later for final release
  *
@@ -222,7 +225,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.59 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.60 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -234,7 +237,7 @@ int libchk_debug=LIBCHK_DEBUG_CXXHUSH|LIBCHK_DEBUG_NEWVERS;
 /*
  * What module to check against. - NULL means check all
  */
-char *module = NULL;
+int module = 0;
 
 
 /* dump info on extra versions in library (maintainer mode) */
@@ -697,7 +700,7 @@ void check_libs(struct tetj_handle *journal)
 {
 	int	i=0;
 	do {
-		if( !module || (module && (strcmp(module,modlibs[i].modname)==0)) )
+		if( module&modlibs[i].modname )
 			check_lib(modlibs[i].runname, modlibs[i].symbols,
 				modlibs[i].classinfo, journal);
 	} while( modlibs[++i].modname );
@@ -773,13 +776,16 @@ int main(int argc, char *argv[])
         break;
       switch(c) {
       case 'M':
-	module=optarg;
-	printf("Only checking libraries in module %s\n", module);
+	module|=getmoduleval(optarg);
+	printf("Only checking libraries in module %s\n", optarg);
         break;
       default:
         printf ("?? getopt returned character code 0%o ??\n", c);
       }
   }
+
+  if( module == 0 )
+	  module = LSB_All_Modules;
 
 #ifndef _CXXABICHK_
 	if (argc<=optind)

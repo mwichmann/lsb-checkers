@@ -3,7 +3,7 @@
 #include "symbols.h"
 #include "libraries.h"
 
-extern char *module;
+extern int modules;
 
 int
 checksymbols(ElfFile *file, struct tetj_handle *journal)
@@ -53,7 +53,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
 
       for (j=0; j<numDynSyms; j++) 
       {
-	if( module && (strcmp(module,DynSyms[j].modname)!=0) )
+	if( !(modules&DynSyms[j].modname) )
 	  continue;
 
         if (!strcmp(symbol_name, DynSyms[j].name))
@@ -65,7 +65,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
         {
           snprintf(tmp_string, TMP_STRING_LENGTH, 
                    "Symbol %s used, but not part of %s",
-                   symbol_name,module?module:"LSB");
+                   symbol_name,getmodulename(modules));
           printf("%s\n", tmp_string);
           tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 
                              0, 0, tmp_string);

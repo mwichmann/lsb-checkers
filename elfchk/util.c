@@ -91,3 +91,31 @@ if( memcmp(efile->addr, ELFMAG, SELFMAG) ) {
 return efile;
 }
 
+char *
+getmodulename(int mod)
+{
+	static char buf[1024];
+
+	buf[0]=0; /* reset the string */
+
+	if( mod & LSB_Core )
+		strcat(buf, "LSB_Core ");
+	if( mod & LSB_Graphics )
+		strcat(buf, "LSB_Graphics ");
+	if( mod & LSB_Cpp )
+		strcat(buf, "LSB_Cpp ");
+
+	return buf[0]?buf:"Unknown Module";
+}
+
+int
+getmoduleval(char *mod)
+{
+	if( strcasecmp(mod,"LSB_Core")==0 )
+		return LSB_Core;
+	if( strcasecmp(mod,"LSB_Graphics")==0 )
+		return LSB_Graphics;
+	if( strcasecmp(mod,"LSB_Cpp")==0 )
+		return LSB_Cpp;
+	return 0;
+}
