@@ -1,10 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
+#include <libgen.h>
 #include "elfchk.h"
 #include "sections.h"
 #include "dynamic.h"
 #include "../tetj/tetj.h"
+
+static char **ExtraDtNeeded = NULL;
+static int ExtraDtNeededCount = 0;
 
 int
 checkDT_HASH(ElfFile *file1, Elf32_Shdr *hdr1, Elf32_Dyn *dyn1, struct tetj_handle *journal)
@@ -47,17 +52,36 @@ checkDT_NEEDED(ElfFile *file1, Elf32_Shdr *hdr1, Elf32_Dyn *dyn1, struct tetj_ha
   if ( j == numDtNeeded ) 
   {
     /* DT_NEEDED not found in table */
-    snprintf(tmp_string, TMP_STRING_SIZE,
-             "DT_NEEDED: %s is used, but not part of the LSB", 
-             ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link));
-    fprintf(stderr, "%s\n", tmp_string);
-    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-                       0, 0, 0, tmp_string);
-    return 0;
+    /* Check application specific list */
+    for (j=0; j<ExtraDtNeededCount; j++)
+    {
+      /* We compare basenames as we assume the application setups
+         up LD_LIBRARY_PATH's correctly for its packaged libraries */
+      if (!strcmp(basename(ElfGetStringIndex(file1,dyn1->d_un.d_val, 
+                                             hdr1->sh_link)),
+                  basename(ExtraDtNeeded[j])))
+      {
+        break;
+      }
+    }
+
+    if (j==ExtraDtNeededCount)
+    {
+      snprintf(tmp_string, TMP_STRING_SIZE,
+               "DT_NEEDED: %s is used, but not part of the LSB", 
+               ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link));
+      fprintf(stderr, "%s\n", tmp_string);
+      tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                         0, 0, 0, tmp_string);
+      return 0;
+    }
+    else
+    {
+      return 1;
+    }
   }
   else
   {
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
     return 1;
   }			
 }
@@ -517,4 +541,15 @@ checkDYNAMIC(ElfFile *file1, Elf32_Shdr *hdr1, struct tetj_handle *journal )
     }
   }
   return pass;
+}
+
+void addDTNeeded(char *filename)
+{
+  ExtraDtNeeded = realloc(ExtraDtNeeded, sizeof(char *)*++ExtraDtNeededCount);
+  if (!ExtraDtNeeded) 
+  {
+    perror("addDTNeeded");
+    abort();
+  }
+  ExtraDtNeeded[ExtraDtNeededCount-1] = strdup(filename);
 }
