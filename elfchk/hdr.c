@@ -150,7 +150,9 @@ checkhdrfield( e_flags, 0 )
 #elif defined( __ia64__ )
 /* today this is correct... but some bits are RFE, may change later? */
 checkhdrfield( e_flags, 0x10 )
-#elif defined ( __powerpc__ )
+#elif __powerpc__ && !__powerpc64__
+checkhdrfield( e_flags, 0 )
+#elif __powerpc64__
 checkhdrfield( e_flags, 0 )
 #elif __s390__ && !__s390x__
 checkhdrfield( e_flags, 0 )
