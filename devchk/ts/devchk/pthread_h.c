@@ -260,17 +260,6 @@ Msg("Find size of pthread_once_t (9062)\n");
 #endif
 
 #ifdef __i386__
-CheckTypeSize(__atomic_lock_t,4, 10276, 2)
-#elif __ia64__
-CheckTypeSize(__atomic_lock_t,4, 10276, 3)
-#elif __powerpc__
-CheckTypeSize(__atomic_lock_t,4, 10276, 6)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10276,0);
-Msg("Find size of __atomic_lock_t (10276)\n");
-#endif
-
-#ifdef __i386__
 CheckTypeSize(pthread_t,4, 9040, 2)
 #elif __ia64__
 CheckTypeSize(pthread_t,8, 9040, 3)
