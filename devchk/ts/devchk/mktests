@@ -479,6 +479,7 @@ print HARNESS "tcnt+=intrinsic();\n";
 print TESTS "/*\n * Test of intrinsic types\n */\n";
 print TESTS "#include \"hdrchk.h\"\n";
 print TESTS "#include \"sys/types.h\"\n";
+print TESTS "#include \"complex.h\"\n";
 print TESTS "\n\n\n";
 print TESTS "#ifdef TET_TEST\n";
 print TESTS "void intrinsic()\n{\n";

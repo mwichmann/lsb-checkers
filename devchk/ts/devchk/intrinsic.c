@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#include "complex.h"
 
 
 
@@ -274,6 +275,24 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14,0);
 CheckTypeSize(signed char,1,10505,1)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10505,0);
+#endif
+
+#if __i386__
+CheckTypeSize(double complex,16,10999,2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10999,0);
+#endif
+
+#if __i386__
+CheckTypeSize(long double complex,24,11000,2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11000,0);
+#endif
+
+#if __i386__
+CheckTypeSize(float complex,8,11001,2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11001,0);
 #endif
 
 #ifdef TET_TEST
