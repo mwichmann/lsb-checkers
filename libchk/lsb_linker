@@ -1,0 +1,22 @@
+#!/bin/sh
+
+case `uname -m` in
+    ia64)
+        echo /lib/ld-lsb-ia64.so.1
+        ;;
+    ppc)
+				echo /lib/ld-lsb-ppc32.so.1
+        ;;
+    ppc64)
+        echo /lib64/ld-lsb-ppc64.so.1
+        ;;
+    s390)
+        echo /lib/ld-lsb-s390.so.1
+        ;;
+    s390x)
+        echo /lib64/ld-lsb-s390x.so.1
+        ;;
+    *86)
+        echo /lib/ld-lsb.so.1
+        ;;
+esac

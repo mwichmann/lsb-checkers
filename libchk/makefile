@@ -14,7 +14,7 @@ libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
 libs.c:
 	./mkfunclist
 
-LSB_LINKER=/lib/`ls -1L /lib | grep ld-lsb`
+LSB_LINKER=`./lsb_linker`
 
 dummy_link: dummy_link.o makefile
 	g++ -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) -L/opt/lsbdev-base/lib -lGL -lICE -lSM -lX11 -lXext -lXt -lc -lcrypt -ldl -lgcc_s -lm -lncurses -lpam -lpthread -lutil -lz -lstdc++ dummy_link.o -o $@
