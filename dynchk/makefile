@@ -8,6 +8,7 @@ WRAPPER_LIBS = \
 #	libs/libpthread/libpthread.o
 
 TEST_LIB = tests/tests.o
+FHS_LIB = fhs/fhs.o
 
 all: liblsbdynchk.so lsbdynchk
 
@@ -19,8 +20,11 @@ build_libs:
 $(TEST_LIB):: 
 	cd tests && make all
 
-liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) misc/global_flag.o  misc/lsb_output.o makefile
-	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB) misc/global_flag.o misc/lsb_output.o
+$(FHS_LIB):: 
+	cd fhs && make all
+
+liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/global_flag.o  misc/lsb_output.o makefile
+	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/global_flag.o misc/lsb_output.o
 
 lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \
