@@ -45,6 +45,10 @@ int architecture=11;
 int architecture=12;
 #define __found_arch__
 #endif
+#if __m32r__
+int architecture=13;
+#define __found_arch__
+#endif
 #ifndef __found_arch__
 #error "Unable to identify architecture"
 #endif
