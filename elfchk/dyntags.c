@@ -20,6 +20,9 @@ struct DynamicInfo DynamicInfo[] = {
 	{"DT_INIT_ARRAY",DT_INIT_ARRAY,checkDT_INIT_ARRAY},
 	{"DT_INIT_ARRAYSZ",DT_INIT_ARRAYSZ,checkDT_INIT_ARRAYSZ},
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
+#if __ia64__
+	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
+#endif /* __ia64__ */
 #if __powerpc__ && !__powerpc64__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -40,6 +43,9 @@ struct DynamicInfo DynamicInfo[] = {
 #if __i386__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* __i386__ */
+#if __ia64__
+	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
+#endif /* __ia64__ */
 #if __ia64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* __ia64__ */
