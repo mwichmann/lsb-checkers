@@ -349,6 +349,14 @@ Msg( "Error: Constant not found: _RE_SYNTAX_POSIX_COMMON\n");
 cnt++;
 #endif
 
+#elif __i386__
+#ifdef _RE_SYNTAX_POSIX_COMMON
+	CompareConstant(_RE_SYNTAX_POSIX_COMMON,66244,1587,architecture)
+#else
+Msg( "Error: Constant not found: _RE_SYNTAX_POSIX_COMMON\n");
+cnt++;
+#endif
+
 #elif _LSB_DEFAULT_ARCH
 #ifdef _RE_SYNTAX_POSIX_COMMON
 	CompareConstant(_RE_SYNTAX_POSIX_COMMON,(RE_CHAR_CLASSES|RE_DOT_NEWLINE|RE_DOT_NOT_NULL|RE_INTERVALS),1587,architecture)

@@ -134,6 +134,16 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef FD_CLOEXEC
+	CompareConstant(FD_CLOEXEC,1,1197,architecture)
+#else
+Msg( "Error: Constant not found: FD_CLOEXEC\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef F_GETOWN
 	CompareConstant(F_GETOWN,9,1196,architecture)
 #else
