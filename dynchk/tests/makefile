@@ -1,5 +1,5 @@
 TEST_OBJS= \
-RWaddress.o filedescriptor.o filemode.o pathname.o
+RWaddress.o filedescriptor.o filemode.o ioctlreq.o pathname.o
 
 CFLAGS=-I../../tests -fPIC -Wall 
 

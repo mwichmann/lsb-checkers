@@ -11,6 +11,6 @@ extern void validate_pathname(const char *arg, const char *name);
 extern void validate_filemode(const mode_t arg, const char *name);
 extern void validate_RWaddress(const void *address, const char *name);
 extern void validate_filedescriptor(const int fd, const char *name);
-
+extern void validate_ioctlreq(const int req, const char *name);
 
 #endif
