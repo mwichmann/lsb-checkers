@@ -1046,12 +1046,12 @@ CheckOffset(struct sigaction,sa_restorer,136,6,34714)
 CheckTypeSize(struct sigaction,140, 10402, 10)
 CheckMemberSize(struct sigaction,__sigaction_handler,4,10,34716)
 CheckOffset(struct sigaction,__sigaction_handler,0,10,34716)
+CheckMemberSize(struct sigaction,sa_mask,128,10,34719)
+CheckOffset(struct sigaction,sa_mask,4,10,34719)
 CheckMemberSize(struct sigaction,sa_flags,4,10,34717)
 CheckOffset(struct sigaction,sa_flags,132,10,34717)
 CheckMemberSize(struct sigaction,sa_restorer,4,10,34718)
 CheckOffset(struct sigaction,sa_restorer,136,10,34718)
-CheckMemberSize(struct sigaction,sa_mask,128,10,34719)
-CheckOffset(struct sigaction,sa_mask,4,10,34719)
 #endif
 
 #if __powerpc64__
