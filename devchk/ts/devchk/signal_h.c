@@ -25,7 +25,7 @@ Msg("Checking data structures in signal.h\n");
 
 #if _LSB_DEFAULT_ARCH
 #ifdef NSIG
-	CompareConstant(NSIG,64,2460,architecture)
+	CompareConstant(NSIG,65,2460,architecture)
 #else
 Msg( "Error: Constant not found: NSIG\n");
 cnt++;
