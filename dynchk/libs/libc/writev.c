@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <stddef.h>
+#include <sys/socket.h>
 #undef writev
 static int(*funcptr) (int , const struct iovec * , int ) = 0;
 

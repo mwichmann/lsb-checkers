@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <stdio.h>
 #include <sys/types.h>
+#include <stdio.h>
 #undef fseeko64
 static int(*funcptr) (FILE * , loff_t , int ) = 0;
 

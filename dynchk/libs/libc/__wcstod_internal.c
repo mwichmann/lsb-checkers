@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stddef.h>
 #undef __wcstod_internal
 static double(*funcptr) (wchar_t * , wchar_t * * , int ) = 0;
 

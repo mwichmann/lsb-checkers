@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <netdb.h>
 #undef getaddrinfo
 static int(*funcptr) (const char * , const char * , const struct addrinfo * , struct addrinfo * * ) = 0;
 

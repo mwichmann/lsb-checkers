@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <wordexp.h>
 #undef wordexp
 static int(*funcptr) (const char * , wordexp_t * , int ) = 0;
 

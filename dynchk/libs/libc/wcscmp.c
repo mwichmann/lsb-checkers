@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stddef.h>
 #undef wcscmp
 static int(*funcptr) (const wchar_t * , wchar_t * ) = 0;
 

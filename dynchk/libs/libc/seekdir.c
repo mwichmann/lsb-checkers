@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <dirent.h>
 #undef seekdir
 static void(*funcptr) (DIR * , long ) = 0;
 

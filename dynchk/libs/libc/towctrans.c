@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <wctype.h>
-#include <wctype.h>
 #undef towctrans
 static wint_t(*funcptr) (wint_t , wctrans_t ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stddef.h>
 #include <stdio.h>
 #undef fputws
 static int(*funcptr) (const wchar_t * , FILE * ) = 0;

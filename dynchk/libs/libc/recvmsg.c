@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/socket.h>
 #undef recvmsg
 static int(*funcptr) (int , struct msghdr * , int ) = 0;
 

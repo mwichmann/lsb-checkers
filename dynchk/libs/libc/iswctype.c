@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <wctype.h>
-#include <wctype.h>
 #undef iswctype
 static int(*funcptr) (wint_t , wctype_t ) = 0;
 

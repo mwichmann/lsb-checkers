@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <time.h>
 #undef strptime
 static char *(*funcptr) (const char * , const char * , struct tm * ) = 0;
 

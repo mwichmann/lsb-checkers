@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <utmp.h>
 #undef login
 static void(*funcptr) (const struct utmp * ) = 0;
 

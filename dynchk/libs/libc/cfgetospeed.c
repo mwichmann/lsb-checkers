@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <termios.h>
 #undef cfgetospeed
 static speed_t(*funcptr) (const struct termios * ) = 0;
 

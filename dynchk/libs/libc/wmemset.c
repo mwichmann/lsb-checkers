@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-#include <stddef.h>
 #undef wmemset
 static wchar_t *(*funcptr) (wchar_t * , wchar_t , size_t ) = 0;
 

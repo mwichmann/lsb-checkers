@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <termios.h>
 #undef tcgetattr
 static int(*funcptr) (int , struct termios * ) = 0;
 

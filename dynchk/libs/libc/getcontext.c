@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <ucontext.h>
 #undef getcontext
 static int(*funcptr) (ucontext_t * ) = 0;
 

@@ -4,9 +4,9 @@
 #include <dlfcn.h>
 #include <stdlib.h>
 #undef tfind
-static void *(*funcptr) (const void * , void * const * , __compar_fn_t ) = 0;
+static void *(*funcptr) (const void * , void *const  * , __compar_fn_t ) = 0;
 
-void * tfind (const void * arg0 , void * const * arg1 , __compar_fn_t arg2 )
+void * tfind (const void * arg0 , void *const  * arg1 , __compar_fn_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tfind");
@@ -16,7 +16,7 @@ void * tfind (const void * arg0 , void * const * arg1 , __compar_fn_t arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-void * lsb_tfind (const void * arg0 , void * const * arg1 , __compar_fn_t arg2 )
+void * lsb_tfind (const void * arg0 , void *const  * arg1 , __compar_fn_t arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tfind");

@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #undef getopt
-static int(*funcptr) (int , char *const []  , const char * ) = 0;
+static int(*funcptr) (int , char *const  [], const char * ) = 0;
 
-int getopt (int arg0 , char *const  arg1[] , const char * arg2 )
+int getopt (int arg0 , char *const  arg1 [], const char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getopt");
@@ -15,7 +15,7 @@ int getopt (int arg0 , char *const  arg1[] , const char * arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_getopt (int arg0 , char *const  arg1[] , const char * arg2 )
+int lsb_getopt (int arg0 , char *const  arg1 [], const char * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getopt");

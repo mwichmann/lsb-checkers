@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
-#include <stddef.h>
 #include <stdio.h>
 #undef fwrite
 static size_t(*funcptr) (const void * , size_t , size_t , FILE * ) = 0;

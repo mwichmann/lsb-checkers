@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <regex.h>
 #include <stddef.h>
 #undef regerror
 static size_t(*funcptr) (int , const regex_t * , char * , size_t ) = 0;

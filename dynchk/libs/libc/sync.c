@@ -9,13 +9,13 @@ void sync ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sync");
-	return funcptr();
+	funcptr();
 }
 
 void lsb_sync ()
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sync");
-	return funcptr();
+	funcptr();
 }
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/resource.h>
 #undef setrlimit64
 static int(*funcptr) (__rlimit_resource_t , const struct rlimit64 * ) = 0;
 

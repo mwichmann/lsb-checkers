@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/auth.h>
 #undef key_decryptsession
 static int(*funcptr) (char * , union des_block * ) = 0;
 

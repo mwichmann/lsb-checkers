@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/clnt.h>
 #undef clnt_sperror
 static char *(*funcptr) (struct CLIENT * , const char * ) = 0;
 

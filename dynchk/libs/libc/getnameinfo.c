@@ -4,7 +4,6 @@
 #include <dlfcn.h>
 #include <sys/socket.h>
 #include <stddef.h>
-#include <stddef.h>
 #undef getnameinfo
 static int(*funcptr) (const struct sockaddr * , socklen_t , char * , size_t , char * , size_t , unsigned int ) = 0;
 

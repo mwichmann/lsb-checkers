@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <regex.h>
 #undef regcomp
 static int(*funcptr) (regex_t * , const char * , int ) = 0;
 

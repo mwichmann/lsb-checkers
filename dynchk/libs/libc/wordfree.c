@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <wordexp.h>
 #undef wordfree
 static void(*funcptr) (wordexp_t * ) = 0;
 

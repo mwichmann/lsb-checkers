@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <signal.h>
 #undef pthread_sigmask
 static int(*funcptr) (int , const sigset_t * , sigset_t * ) = 0;
 

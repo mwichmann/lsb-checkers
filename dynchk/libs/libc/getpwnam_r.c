@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <pwd.h>
 #include <stddef.h>
 #undef getpwnam_r
 static int(*funcptr) (const char * , struct passwd * , char * , size_t , struct passwd * * ) = 0;

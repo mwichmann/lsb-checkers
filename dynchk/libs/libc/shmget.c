@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <stddef.h>
 #undef shmget
 static int(*funcptr) (key_t , size_t , int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/time.h>
 #undef gettimeofday
 static int(*funcptr) (struct timeval * , struct timezone * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/svc.h>
 #include <rpc/auth.h>
 #undef svcerr_auth
 static void(*funcptr) (SVCXPRT * , enum auth_stat ) = 0;

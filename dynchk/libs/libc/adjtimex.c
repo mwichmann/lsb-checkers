@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/timex.h>
 #undef adjtimex
 static int(*funcptr) (struct timex * ) = 0;
 

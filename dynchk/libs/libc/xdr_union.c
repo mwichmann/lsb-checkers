@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <rpc/xdr.h>
+#include <rpc/types.h>
 #undef xdr_union
 static bool_t(*funcptr) (XDR * , enum_t * , char * , const struct xdr_discrim * , xdrproc_t ) = 0;
 

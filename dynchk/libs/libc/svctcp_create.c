@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
-#include <sys/types.h>
 #undef svctcp_create
 static SVCXPRT *(*funcptr) (int , u_int , u_int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/times.h>
 #undef times
 static clock_t(*funcptr) (struct tms * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stddef.h>
 #undef __wcstoul_internal
 static unsigned long(*funcptr) (wchar_t * , wchar_t * * , int , int ) = 0;
 

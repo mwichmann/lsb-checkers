@@ -2,6 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/types.h>
+#include <time.h>
 #undef localtime_r
 static struct tm *(*funcptr) (const time_t * , struct tm * ) = 0;
 

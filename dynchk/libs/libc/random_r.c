@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdlib.h>
+#include <sys/types.h>
 #undef random_r
 static int(*funcptr) (struct random_data * , int32_t * ) = 0;
 

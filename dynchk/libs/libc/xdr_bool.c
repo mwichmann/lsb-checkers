@@ -2,10 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/xdr.h>
+#include <rpc/types.h>
 #undef xdr_bool
-static bool_t(*funcptr) (struct XDR * , bool_t * ) = 0;
+static bool_t(*funcptr) (XDR * , bool_t * ) = 0;
 
-bool_t xdr_bool (struct XDR * arg0 , bool_t * arg1 )
+bool_t xdr_bool (XDR * arg0 , bool_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_bool");
@@ -14,7 +16,7 @@ bool_t xdr_bool (struct XDR * arg0 , bool_t * arg1 )
 	return funcptr(arg0, arg1);
 }
 
-bool_t lsb_xdr_bool (struct XDR * arg0 , bool_t * arg1 )
+bool_t lsb_xdr_bool (XDR * arg0 , bool_t * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_bool");

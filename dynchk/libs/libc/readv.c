@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <stddef.h>
+#include <sys/socket.h>
 #undef readv
 static ssize_t(*funcptr) (int , const struct iovec * , int ) = 0;
 

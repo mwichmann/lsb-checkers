@@ -2,11 +2,12 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <regex.h>
 #include <stddef.h>
 #undef regexec
-static int(*funcptr) (const regex_t * , const char * , size_t , regmatch_t[] , int ) = 0;
+static int(*funcptr) (const regex_t * , const char * , size_t , regmatch_t [], int ) = 0;
 
-int regexec (const regex_t * arg0 , const char * arg1 , size_t arg2 , regmatch_t arg3[] , int arg4 )
+int regexec (const regex_t * arg0 , const char * arg1 , size_t arg2 , regmatch_t arg3 [], int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regexec");
@@ -18,7 +19,7 @@ int regexec (const regex_t * arg0 , const char * arg1 , size_t arg2 , regmatch_t
 	return funcptr(arg0, arg1, arg2, arg3, arg4);
 }
 
-int lsb_regexec (const regex_t * arg0 , const char * arg1 , size_t arg2 , regmatch_t arg3[] , int arg4 )
+int lsb_regexec (const regex_t * arg0 , const char * arg1 , size_t arg2 , regmatch_t arg3 [], int arg4 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "regexec");

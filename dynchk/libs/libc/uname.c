@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/utsname.h>
 #undef uname
 static int(*funcptr) (struct utsname * ) = 0;
 

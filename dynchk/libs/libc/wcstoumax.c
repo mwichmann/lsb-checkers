@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stddef.h>
 #undef wcstoumax
 static uintmax_t(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 

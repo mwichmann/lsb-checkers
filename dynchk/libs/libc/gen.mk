@@ -459,7 +459,6 @@ access.o \
 bcmp.o \
 brk.o \
 bzero.o \
-calloc.o \
 chdir.o \
 chmod.o \
 closedir.o \
@@ -517,7 +516,6 @@ iswxdigit.o \
 kill.o \
 lchown.o \
 link.o \
-malloc.o \
 mbrlen.o \
 mbrtowc.o \
 mbsinit.o \
@@ -527,7 +525,6 @@ memccpy.o \
 mkdir.o \
 mlock.o \
 mlockall.o \
-mmap.o \
 mprotect.o \
 munlock.o \
 munlockall.o \
@@ -542,7 +539,6 @@ random.o \
 readdir.o \
 readlink.o \
 readv.o \
-realloc.o \
 regcomp.o \
 regerror.o \
 regexec.o \
