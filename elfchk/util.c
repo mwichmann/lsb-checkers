@@ -30,7 +30,7 @@ ElfGetString(ElfFile *file, int offset)
 return ElfGetStringIndex( file, offset, file->strndx );
 }
 
-ElfFile	*OpenElfFile( char *name )
+ElfFile	*OpenFile( char *name )
 {
 ElfFile	*efile;
 struct stat	stat;
@@ -69,12 +69,24 @@ if( (efile->addr=mmap(0, efile->size, PROT_READ, MAP_PRIVATE, efile->fd, 0)) == 
 	return NULL;
 	}
 
+
+return efile;
+}
+
+ElfFile	*OpenElfFile( char *name )
+{
+ElfFile	*efile;
+
+efile=OpenFile(name);
+
+if( efile == NULL )
+	return NULL;
+
 if( memcmp(efile->addr, ELFMAG, SELFMAG) ) {
 	fprintf( stderr, "file not ELF\n" );
 	close(efile->fd);
 	free(efile);
 	exit(-1);	/* Silently exit */
 	}
-
-return efile;
 }
+
