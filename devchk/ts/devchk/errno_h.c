@@ -601,6 +601,14 @@ Msg( "Error: Constant not found: EDEADLK\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EDEADLK
+	CompareConstant(EDEADLK,35,69,architecture)
+#else
+Msg( "Error: Constant not found: EDEADLK\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EDEADLK (69, int) in db\n");
 #ifdef EDEADLK
@@ -624,6 +632,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ENAMETOOLONG
+	CompareConstant(ENAMETOOLONG,36,70,architecture)
+#else
+Msg( "Error: Constant not found: ENAMETOOLONG\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ENAMETOOLONG
 	CompareConstant(ENAMETOOLONG,36,70,architecture)
 #else
@@ -661,6 +677,14 @@ Msg( "Error: Constant not found: ENOLCK\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ENOLCK
+	CompareConstant(ENOLCK,37,71,architecture)
+#else
+Msg( "Error: Constant not found: ENOLCK\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ENOLCK (71, int) in db\n");
 #ifdef ENOLCK
@@ -684,6 +708,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ENOSYS
+	CompareConstant(ENOSYS,38,72,architecture)
+#else
+Msg( "Error: Constant not found: ENOSYS\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ENOSYS
 	CompareConstant(ENOSYS,38,72,architecture)
 #else
@@ -721,6 +753,14 @@ Msg( "Error: Constant not found: ENOTEMPTY\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ENOTEMPTY
+	CompareConstant(ENOTEMPTY,39,73,architecture)
+#else
+Msg( "Error: Constant not found: ENOTEMPTY\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ENOTEMPTY (73, int) in db\n");
 #ifdef ENOTEMPTY
@@ -744,6 +784,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ELOOP
+	CompareConstant(ELOOP,40,74,architecture)
+#else
+Msg( "Error: Constant not found: ELOOP\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ELOOP
 	CompareConstant(ELOOP,40,74,architecture)
 #else
@@ -791,6 +839,14 @@ Msg( "Error: Constant not found: EREMOTE\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EREMOTE
+	CompareConstant(EREMOTE,66,100,architecture)
+#else
+Msg( "Error: Constant not found: EREMOTE\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EREMOTE (100, int) in db\n");
 #ifdef EREMOTE
@@ -814,6 +870,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ENOMSG
+	CompareConstant(ENOMSG,42,76,architecture)
+#else
+Msg( "Error: Constant not found: ENOMSG\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ENOMSG
 	CompareConstant(ENOMSG,42,76,architecture)
 #else
@@ -851,6 +915,14 @@ Msg( "Error: Constant not found: ENOLINK\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ENOLINK
+	CompareConstant(ENOLINK,67,101,architecture)
+#else
+Msg( "Error: Constant not found: ENOLINK\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ENOLINK (101, int) in db\n");
 #ifdef ENOLINK
@@ -874,6 +946,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EIDRM
+	CompareConstant(EIDRM,43,77,architecture)
+#else
+Msg( "Error: Constant not found: EIDRM\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EIDRM
 	CompareConstant(EIDRM,43,77,architecture)
 #else
@@ -911,6 +991,14 @@ Msg( "Error: Constant not found: ECHRNG\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ECHRNG
+	CompareConstant(ECHRNG,44,78,architecture)
+#else
+Msg( "Error: Constant not found: ECHRNG\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ECHRNG (78, int) in db\n");
 #ifdef ECHRNG
@@ -934,6 +1022,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EADV
+	CompareConstant(EADV,68,102,architecture)
+#else
+Msg( "Error: Constant not found: EADV\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EADV
 	CompareConstant(EADV,68,102,architecture)
 #else
@@ -971,6 +1067,14 @@ Msg( "Error: Constant not found: ESRMNT\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ESRMNT
+	CompareConstant(ESRMNT,69,103,architecture)
+#else
+Msg( "Error: Constant not found: ESRMNT\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ESRMNT (103, int) in db\n");
 #ifdef ESRMNT
@@ -994,6 +1098,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EL2NSYNC
+	CompareConstant(EL2NSYNC,45,79,architecture)
+#else
+Msg( "Error: Constant not found: EL2NSYNC\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EL2NSYNC
 	CompareConstant(EL2NSYNC,45,79,architecture)
 #else
@@ -1031,6 +1143,14 @@ Msg( "Error: Constant not found: ECOMM\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ECOMM
+	CompareConstant(ECOMM,70,104,architecture)
+#else
+Msg( "Error: Constant not found: ECOMM\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ECOMM (104, int) in db\n");
 #ifdef ECOMM
@@ -1054,6 +1174,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EPROTO
+	CompareConstant(EPROTO,71,105,architecture)
+#else
+Msg( "Error: Constant not found: EPROTO\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EPROTO
 	CompareConstant(EPROTO,71,105,architecture)
 #else
@@ -1091,6 +1219,14 @@ Msg( "Error: Constant not found: EMULTIHOP\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EMULTIHOP
+	CompareConstant(EMULTIHOP,72,106,architecture)
+#else
+Msg( "Error: Constant not found: EMULTIHOP\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EMULTIHOP (106, int) in db\n");
 #ifdef EMULTIHOP
@@ -1114,6 +1250,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EDOTDOT
+	CompareConstant(EDOTDOT,73,107,architecture)
+#else
+Msg( "Error: Constant not found: EDOTDOT\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EDOTDOT
 	CompareConstant(EDOTDOT,73,107,architecture)
 #else
@@ -1151,6 +1295,14 @@ Msg( "Error: Constant not found: EBADMSG\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EBADMSG
+	CompareConstant(EBADMSG,74,108,architecture)
+#else
+Msg( "Error: Constant not found: EBADMSG\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EBADMSG (108, int) in db\n");
 #ifdef EBADMSG
@@ -1174,6 +1326,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EOVERFLOW
+	CompareConstant(EOVERFLOW,75,109,architecture)
+#else
+Msg( "Error: Constant not found: EOVERFLOW\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EOVERFLOW
 	CompareConstant(EOVERFLOW,75,109,architecture)
 #else
@@ -1211,6 +1371,14 @@ Msg( "Error: Constant not found: EL3HLT\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EL3HLT
+	CompareConstant(EL3HLT,46,80,architecture)
+#else
+Msg( "Error: Constant not found: EL3HLT\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EL3HLT (80, int) in db\n");
 #ifdef EL3HLT
@@ -1234,6 +1402,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EL3RST
+	CompareConstant(EL3RST,47,81,architecture)
+#else
+Msg( "Error: Constant not found: EL3RST\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EL3RST
 	CompareConstant(EL3RST,47,81,architecture)
 #else
@@ -1271,6 +1447,14 @@ Msg( "Error: Constant not found: ELNRNG\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ELNRNG
+	CompareConstant(ELNRNG,48,82,architecture)
+#else
+Msg( "Error: Constant not found: ELNRNG\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ELNRNG (82, int) in db\n");
 #ifdef ELNRNG
@@ -1294,6 +1478,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EUNATCH
+	CompareConstant(EUNATCH,49,83,architecture)
+#else
+Msg( "Error: Constant not found: EUNATCH\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EUNATCH
 	CompareConstant(EUNATCH,49,83,architecture)
 #else
@@ -1331,6 +1523,14 @@ Msg( "Error: Constant not found: ENOTUNIQ\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ENOTUNIQ
+	CompareConstant(ENOTUNIQ,76,110,architecture)
+#else
+Msg( "Error: Constant not found: ENOTUNIQ\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ENOTUNIQ (110, int) in db\n");
 #ifdef ENOTUNIQ
@@ -1354,6 +1554,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EBADFD
+	CompareConstant(EBADFD,77,111,architecture)
+#else
+Msg( "Error: Constant not found: EBADFD\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EBADFD
 	CompareConstant(EBADFD,77,111,architecture)
 #else
@@ -1391,6 +1599,14 @@ Msg( "Error: Constant not found: EREMCHG\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EREMCHG
+	CompareConstant(EREMCHG,78,112,architecture)
+#else
+Msg( "Error: Constant not found: EREMCHG\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EREMCHG (112, int) in db\n");
 #ifdef EREMCHG
@@ -1414,6 +1630,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ENOANO
+	CompareConstant(ENOANO,55,89,architecture)
+#else
+Msg( "Error: Constant not found: ENOANO\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ENOANO
 	CompareConstant(ENOANO,55,89,architecture)
 #else
@@ -1451,6 +1675,14 @@ Msg( "Error: Constant not found: ELIBACC\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ELIBACC
+	CompareConstant(ELIBACC,79,113,architecture)
+#else
+Msg( "Error: Constant not found: ELIBACC\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ELIBACC (113, int) in db\n");
 #ifdef ELIBACC
@@ -1474,6 +1706,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ELIBBAD
+	CompareConstant(ELIBBAD,80,114,architecture)
+#else
+Msg( "Error: Constant not found: ELIBBAD\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ELIBBAD
 	CompareConstant(ELIBBAD,80,114,architecture)
 #else
@@ -1511,6 +1751,14 @@ Msg( "Error: Constant not found: ELIBSCN\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ELIBSCN
+	CompareConstant(ELIBSCN,81,115,architecture)
+#else
+Msg( "Error: Constant not found: ELIBSCN\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ELIBSCN (115, int) in db\n");
 #ifdef ELIBSCN
@@ -1534,6 +1782,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ELIBMAX
+	CompareConstant(ELIBMAX,82,116,architecture)
+#else
+Msg( "Error: Constant not found: ELIBMAX\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ELIBMAX
 	CompareConstant(ELIBMAX,82,116,architecture)
 #else
@@ -1571,6 +1827,14 @@ Msg( "Error: Constant not found: ELIBEXEC\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ELIBEXEC
+	CompareConstant(ELIBEXEC,83,117,architecture)
+#else
+Msg( "Error: Constant not found: ELIBEXEC\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ELIBEXEC (117, int) in db\n");
 #ifdef ELIBEXEC
@@ -1594,6 +1858,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EILSEQ
+	CompareConstant(EILSEQ,84,118,architecture)
+#else
+Msg( "Error: Constant not found: EILSEQ\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EILSEQ
 	CompareConstant(EILSEQ,84,118,architecture)
 #else
@@ -1631,6 +1903,14 @@ Msg( "Error: Constant not found: ERESTART\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ERESTART
+	CompareConstant(ERESTART,85,119,architecture)
+#else
+Msg( "Error: Constant not found: ERESTART\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ERESTART (119, int) in db\n");
 #ifdef ERESTART
@@ -1661,6 +1941,14 @@ Msg( "Error: Constant not found: EBADRQC\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EBADRQC
+	CompareConstant(EBADRQC,56,90,architecture)
+#else
+Msg( "Error: Constant not found: EBADRQC\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EBADRQC (90, int) in db\n");
 #ifdef EBADRQC
@@ -1684,6 +1972,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EBADSLT
+	CompareConstant(EBADSLT,57,91,architecture)
+#else
+Msg( "Error: Constant not found: EBADSLT\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EBADSLT
 	CompareConstant(EBADSLT,57,91,architecture)
 #else
@@ -1739,6 +2035,14 @@ Msg( "Error: Constant not found: EBFONT\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EBFONT
+	CompareConstant(EBFONT,59,93,architecture)
+#else
+Msg( "Error: Constant not found: EBFONT\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EBFONT (93, int) in db\n");
 #ifdef EBFONT
@@ -1762,6 +2066,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ENOSTR
+	CompareConstant(ENOSTR,60,94,architecture)
+#else
+Msg( "Error: Constant not found: ENOSTR\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ENOSTR
 	CompareConstant(ENOSTR,60,94,architecture)
 #else
@@ -1799,6 +2111,14 @@ Msg( "Error: Constant not found: ENODATA\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ENODATA
+	CompareConstant(ENODATA,61,95,architecture)
+#else
+Msg( "Error: Constant not found: ENODATA\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ENODATA (95, int) in db\n");
 #ifdef ENODATA
@@ -1822,6 +2142,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ETIME
+	CompareConstant(ETIME,62,96,architecture)
+#else
+Msg( "Error: Constant not found: ETIME\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ETIME
 	CompareConstant(ETIME,62,96,architecture)
 #else
@@ -1859,6 +2187,14 @@ Msg( "Error: Constant not found: ESTRPIPE\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ESTRPIPE
+	CompareConstant(ESTRPIPE,86,120,architecture)
+#else
+Msg( "Error: Constant not found: ESTRPIPE\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ESTRPIPE (120, int) in db\n");
 #ifdef ESTRPIPE
@@ -1882,6 +2218,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EUSERS
+	CompareConstant(EUSERS,87,121,architecture)
+#else
+Msg( "Error: Constant not found: EUSERS\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EUSERS
 	CompareConstant(EUSERS,87,121,architecture)
 #else
@@ -1919,6 +2263,14 @@ Msg( "Error: Constant not found: ENOSR\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ENOSR
+	CompareConstant(ENOSR,63,97,architecture)
+#else
+Msg( "Error: Constant not found: ENOSR\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ENOSR (97, int) in db\n");
 #ifdef ENOSR
@@ -1942,6 +2294,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ENOTSOCK
+	CompareConstant(ENOTSOCK,88,122,architecture)
+#else
+Msg( "Error: Constant not found: ENOTSOCK\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ENOTSOCK
 	CompareConstant(ENOTSOCK,88,122,architecture)
 #else
@@ -1979,6 +2339,14 @@ Msg( "Error: Constant not found: ENONET\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef ENONET
+	CompareConstant(ENONET,64,98,architecture)
+#else
+Msg( "Error: Constant not found: ENONET\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for ENONET (98, int) in db\n");
 #ifdef ENONET
@@ -2002,6 +2370,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ENOPKG
+	CompareConstant(ENOPKG,65,99,architecture)
+#else
+Msg( "Error: Constant not found: ENOPKG\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ENOPKG
 	CompareConstant(ENOPKG,65,99,architecture)
 #else
@@ -2039,6 +2415,14 @@ Msg( "Error: Constant not found: EDESTADDRREQ\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EDESTADDRREQ
+	CompareConstant(EDESTADDRREQ,89,123,architecture)
+#else
+Msg( "Error: Constant not found: EDESTADDRREQ\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EDESTADDRREQ (123, int) in db\n");
 #ifdef EDESTADDRREQ
@@ -2062,6 +2446,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EMSGSIZE
+	CompareConstant(EMSGSIZE,90,124,architecture)
+#else
+Msg( "Error: Constant not found: EMSGSIZE\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EMSGSIZE
 	CompareConstant(EMSGSIZE,90,124,architecture)
 #else
@@ -2099,6 +2491,14 @@ Msg( "Error: Constant not found: EPROTOTYPE\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EPROTOTYPE
+	CompareConstant(EPROTOTYPE,91,125,architecture)
+#else
+Msg( "Error: Constant not found: EPROTOTYPE\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EPROTOTYPE (125, int) in db\n");
 #ifdef EPROTOTYPE
@@ -2122,6 +2522,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ENOPROTOOPT
+	CompareConstant(ENOPROTOOPT,92,126,architecture)
+#else
+Msg( "Error: Constant not found: ENOPROTOOPT\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ENOPROTOOPT
 	CompareConstant(ENOPROTOOPT,92,126,architecture)
 #else
@@ -2159,6 +2567,14 @@ Msg( "Error: Constant not found: EPROTONOSUPPORT\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EPROTONOSUPPORT
+	CompareConstant(EPROTONOSUPPORT,93,127,architecture)
+#else
+Msg( "Error: Constant not found: EPROTONOSUPPORT\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EPROTONOSUPPORT (127, int) in db\n");
 #ifdef EPROTONOSUPPORT
@@ -2182,6 +2598,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef ESOCKTNOSUPPORT
+	CompareConstant(ESOCKTNOSUPPORT,94,128,architecture)
+#else
+Msg( "Error: Constant not found: ESOCKTNOSUPPORT\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef ESOCKTNOSUPPORT
 	CompareConstant(ESOCKTNOSUPPORT,94,128,architecture)
 #else
@@ -2219,6 +2643,14 @@ Msg( "Error: Constant not found: EOPNOTSUPP\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EOPNOTSUPP
+	CompareConstant(EOPNOTSUPP,95,129,architecture)
+#else
+Msg( "Error: Constant not found: EOPNOTSUPP\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EOPNOTSUPP (129, int) in db\n");
 #ifdef EOPNOTSUPP
@@ -2242,6 +2674,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EPFNOSUPPORT
+	CompareConstant(EPFNOSUPPORT,96,130,architecture)
+#else
+Msg( "Error: Constant not found: EPFNOSUPPORT\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EPFNOSUPPORT
 	CompareConstant(EPFNOSUPPORT,96,130,architecture)
 #else
@@ -2279,6 +2719,14 @@ Msg( "Error: Constant not found: EAFNOSUPPORT\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EAFNOSUPPORT
+	CompareConstant(EAFNOSUPPORT,97,131,architecture)
+#else
+Msg( "Error: Constant not found: EAFNOSUPPORT\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EAFNOSUPPORT (131, int) in db\n");
 #ifdef EAFNOSUPPORT
@@ -2309,6 +2757,14 @@ Msg( "Error: Constant not found: EADDRINUSE\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef EADDRINUSE
+	CompareConstant(EADDRINUSE,98,132,architecture)
+#else
+Msg( "Error: Constant not found: EADDRINUSE\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for EADDRINUSE (132, int) in db\n");
 #ifdef EADDRINUSE
@@ -2332,6 +2788,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef EADDRNOTAVAIL
+	CompareConstant(EADDRNOTAVAIL,99,133,architecture)
+#else
+Msg( "Error: Constant not found: EADDRNOTAVAIL\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef EADDRNOTAVAIL
 	CompareConstant(EADDRNOTAVAIL,99,133,architecture)
 #else

@@ -117,6 +117,14 @@ Msg( "Error: Constant not found: SIGBUS\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGBUS
+	CompareConstant(SIGBUS,7,3109,architecture)
+#else
+Msg( "Error: Constant not found: SIGBUS\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGBUS (3109, int) in db\n");
 #ifdef SIGBUS
@@ -167,6 +175,14 @@ Msg( "Error: Constant not found: SIGUSR1\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGUSR1
+	CompareConstant(SIGUSR1,10,3112,architecture)
+#else
+Msg( "Error: Constant not found: SIGUSR1\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGUSR1 (3112, int) in db\n");
 #ifdef SIGUSR1
@@ -200,6 +216,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGUSR2
+	CompareConstant(SIGUSR2,12,3114,architecture)
+#else
+Msg( "Error: Constant not found: SIGUSR2\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGUSR2
 	CompareConstant(SIGUSR2,12,3114,architecture)
 #else
@@ -267,6 +291,14 @@ Msg( "Error: Constant not found: SIGSTKFLT\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGSTKFLT
+	CompareConstant(SIGSTKFLT,16,3118,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTKFLT\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGSTKFLT (3118, int) in db\n");
 #ifdef SIGSTKFLT
@@ -290,6 +322,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGCHLD
+	CompareConstant(SIGCHLD,17,3119,architecture)
+#else
+Msg( "Error: Constant not found: SIGCHLD\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGCHLD
 	CompareConstant(SIGCHLD,17,3119,architecture)
 #else
@@ -337,6 +377,14 @@ Msg( "Error: Constant not found: SIGCONT\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGCONT
+	CompareConstant(SIGCONT,18,3121,architecture)
+#else
+Msg( "Error: Constant not found: SIGCONT\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGCONT (3121, int) in db\n");
 #ifdef SIGCONT
@@ -360,6 +408,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGSTOP
+	CompareConstant(SIGSTOP,19,3122,architecture)
+#else
+Msg( "Error: Constant not found: SIGSTOP\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGSTOP
 	CompareConstant(SIGSTOP,19,3122,architecture)
 #else
@@ -397,6 +453,14 @@ Msg( "Error: Constant not found: SIGTSTP\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGTSTP
+	CompareConstant(SIGTSTP,20,3123,architecture)
+#else
+Msg( "Error: Constant not found: SIGTSTP\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGTSTP (3123, int) in db\n");
 #ifdef SIGTSTP
@@ -420,6 +484,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGTTIN
+	CompareConstant(SIGTTIN,21,3124,architecture)
+#else
+Msg( "Error: Constant not found: SIGTTIN\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGTTIN
 	CompareConstant(SIGTTIN,21,3124,architecture)
 #else
@@ -457,6 +529,14 @@ Msg( "Error: Constant not found: SIGTTOU\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGTTOU
+	CompareConstant(SIGTTOU,22,3125,architecture)
+#else
+Msg( "Error: Constant not found: SIGTTOU\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGTTOU (3125, int) in db\n");
 #ifdef SIGTTOU
@@ -480,6 +560,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGURG
+	CompareConstant(SIGURG,23,3126,architecture)
+#else
+Msg( "Error: Constant not found: SIGURG\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGURG
 	CompareConstant(SIGURG,23,3126,architecture)
 #else
@@ -517,6 +605,14 @@ Msg( "Error: Constant not found: SIGXCPU\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGXCPU
+	CompareConstant(SIGXCPU,24,3127,architecture)
+#else
+Msg( "Error: Constant not found: SIGXCPU\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGXCPU (3127, int) in db\n");
 #ifdef SIGXCPU
@@ -540,6 +636,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGXFSZ
+	CompareConstant(SIGXFSZ,25,3128,architecture)
+#else
+Msg( "Error: Constant not found: SIGXFSZ\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGXFSZ
 	CompareConstant(SIGXFSZ,25,3128,architecture)
 #else
@@ -580,6 +684,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGVTALRM
+	CompareConstant(SIGVTALRM,26,3129,architecture)
+#else
+Msg( "Error: Constant not found: SIGVTALRM\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGVTALRM
 	CompareConstant(SIGVTALRM,26,3129,architecture)
 #else
@@ -671,6 +783,14 @@ Msg( "Error: Constant not found: SIGWINCH\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGWINCH
+	CompareConstant(SIGWINCH,28,3131,architecture)
+#else
+Msg( "Error: Constant not found: SIGWINCH\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGWINCH (3131, int) in db\n");
 #ifdef SIGWINCH
@@ -704,6 +824,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGIO
+	CompareConstant(SIGIO,29,3132,architecture)
+#else
+Msg( "Error: Constant not found: SIGIO\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGIO
 	CompareConstant(SIGIO,29,3132,architecture)
 #else
@@ -771,6 +899,14 @@ Msg( "Error: Constant not found: SIGPWR\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGPWR
+	CompareConstant(SIGPWR,30,3134,architecture)
+#else
+Msg( "Error: Constant not found: SIGPWR\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGPWR (3134, int) in db\n");
 #ifdef SIGPWR
@@ -811,6 +947,14 @@ Msg( "Error: Constant not found: SIGSYS\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef SIGSYS
+	CompareConstant(SIGSYS,31,3135,architecture)
+#else
+Msg( "Error: Constant not found: SIGSYS\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for SIGSYS (3135, int) in db\n");
 #ifdef SIGSYS
@@ -844,6 +988,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef SIGUNUSED
+	CompareConstant(SIGUNUSED,31,3136,architecture)
+#else
+Msg( "Error: Constant not found: SIGUNUSED\n");
+cnt++;
+#endif
+
+#elif __s390__
 #ifdef SIGUNUSED
 	CompareConstant(SIGUNUSED,31,3136,architecture)
 #else

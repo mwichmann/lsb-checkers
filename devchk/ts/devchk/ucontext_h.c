@@ -53,6 +53,14 @@ Msg( "Error: Constant not found: NGREG\n");
 cnt++;
 #endif
 
+#elif __s390__
+#ifdef NGREG
+	CompareConstant(NGREG,36,4929,architecture)
+#else
+Msg( "Error: Constant not found: NGREG\n");
+cnt++;
+#endif
+
 #else
 Msg( "No definition for NGREG (4929, int) in db\n");
 #ifdef NGREG
