@@ -159,9 +159,11 @@ sub writetest($$)
 				# We have output at least one type, and now we need to
 				# put a catchall else clause
 
+				if( $tentry{'Tarch'} == 1 ) {
 				print TESTS "#else\n";
 				print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 				print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+				}
 				print TESTS "#endif\n\n";
 			}
 			print TESTS "#ifdef $tentry{'Asymbol'}\n";
@@ -208,9 +210,11 @@ sub writetest($$)
 		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
 	}
 	if( $lastid != 0 ) {
-		print TESTS "#else\n";
-		print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-		print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+		if( $tentry{'Tarch'} == 1 ) {
+			print TESTS "#else\n";
+			print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+			}
 		print TESTS "#endif\n\n";
 		}
 
