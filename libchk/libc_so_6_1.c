@@ -3755,7 +3755,7 @@ struct versym libc_so_6_1[] = {
 	{"fgetpos","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"fgetpos64","GLIBC_2.1"},
+	{"fgetpos64","GLIBC_2.2"},
 #endif
 #if __ia64__
 	{"fgetpos64","GLIBC_2.2"},
@@ -5810,7 +5810,7 @@ struct versym libc_so_6_1[] = {
 	{"getrlimit","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"getrlimit64","GLIBC_2.1"},
+	{"getrlimit64","GLIBC_2.2"},
 #endif
 #if __ia64__
 	{"getrlimit64","GLIBC_2.2"},
@@ -8735,7 +8735,7 @@ struct versym libc_so_6_1[] = {
 	{"mrand48","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"msgctl","GLIBC_2.0"},
+	{"msgctl","GLIBC_2.2"},
 #endif
 #if __ia64__
 	{"msgctl","GLIBC_2.2"},
@@ -10139,25 +10139,25 @@ struct versym libc_so_6_1[] = {
 	{"realloc","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"realpath","GLIBC_2.0"},
+	{"realpath","GLIBC_2.3"},
 #endif
 #if __ia64__
-	{"realpath","GLIBC_2.2"},
+	{"realpath","GLIBC_2.3"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"realpath","GLIBC_2.0"},
+	{"realpath","GLIBC_2.3"},
 #endif
 #if __powerpc64__
-	{"realpath","GLIBC_2.2.5"},
+	{"realpath","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
-	{"realpath","GLIBC_2.0"},
+	{"realpath","GLIBC_2.3"},
 #endif
 #if __x86_64__
-	{"realpath","GLIBC_2.2.5"},
+	{"realpath","GLIBC_2.3"},
 #endif
 #if __s390x__
-	{"realpath","GLIBC_2.2"},
+	{"realpath","GLIBC_2.3"},
 #endif
 #if __i386__
 	{"recv","GLIBC_2.0"},
