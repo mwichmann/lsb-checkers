@@ -194,7 +194,23 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
+#ifdef SO_RCVLOWAT
+	CompareConstant(SO_RCVLOWAT,16,3230,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVLOWAT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef SO_RCVLOWAT
+	CompareConstant(SO_RCVLOWAT,16,3230,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVLOWAT\n");
+cnt++;
+#endif
+
+#elif __ia64__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,18,3230,architecture)
 #else
@@ -202,9 +218,61 @@ Msg( "Error: Constant not found: SO_RCVLOWAT\n");
 cnt++;
 #endif
 
+#elif __i386__
+#ifdef SO_RCVLOWAT
+	CompareConstant(SO_RCVLOWAT,18,3230,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVLOWAT\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __s390x__
+#ifdef SO_RCVLOWAT
+	CompareConstant(SO_RCVLOWAT,18,3230,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVLOWAT\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef SO_RCVLOWAT
+	CompareConstant(SO_RCVLOWAT,18,3230,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVLOWAT\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef SO_RCVLOWAT
+	CompareConstant(SO_RCVLOWAT,18,3230,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVLOWAT\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for SO_RCVLOWAT (3230, int) in db\n");
+#ifdef SO_RCVLOWAT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3230,%d);\n", architecture, SO_RCVLOWAT);
+#endif
+#endif
+#if __powerpc64__
+#ifdef SO_SNDLOWAT
+	CompareConstant(SO_SNDLOWAT,17,3231,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDLOWAT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef SO_SNDLOWAT
+	CompareConstant(SO_SNDLOWAT,17,3231,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDLOWAT\n");
+cnt++;
+#endif
+
+#elif __ia64__
 #ifdef SO_SNDLOWAT
 	CompareConstant(SO_SNDLOWAT,19,3231,architecture)
 #else
@@ -212,9 +280,61 @@ Msg( "Error: Constant not found: SO_SNDLOWAT\n");
 cnt++;
 #endif
 
+#elif __i386__
+#ifdef SO_SNDLOWAT
+	CompareConstant(SO_SNDLOWAT,19,3231,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDLOWAT\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __s390x__
+#ifdef SO_SNDLOWAT
+	CompareConstant(SO_SNDLOWAT,19,3231,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDLOWAT\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef SO_SNDLOWAT
+	CompareConstant(SO_SNDLOWAT,19,3231,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDLOWAT\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef SO_SNDLOWAT
+	CompareConstant(SO_SNDLOWAT,19,3231,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDLOWAT\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for SO_SNDLOWAT (3231, int) in db\n");
+#ifdef SO_SNDLOWAT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3231,%d);\n", architecture, SO_SNDLOWAT);
+#endif
+#endif
+#if __powerpc64__
+#ifdef SO_RCVTIMEO
+	CompareConstant(SO_RCVTIMEO,18,3232,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVTIMEO\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef SO_RCVTIMEO
+	CompareConstant(SO_RCVTIMEO,18,3232,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVTIMEO\n");
+cnt++;
+#endif
+
+#elif __ia64__
 #ifdef SO_RCVTIMEO
 	CompareConstant(SO_RCVTIMEO,20,3232,architecture)
 #else
@@ -222,9 +342,61 @@ Msg( "Error: Constant not found: SO_RCVTIMEO\n");
 cnt++;
 #endif
 
+#elif __i386__
+#ifdef SO_RCVTIMEO
+	CompareConstant(SO_RCVTIMEO,20,3232,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVTIMEO\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __s390x__
+#ifdef SO_RCVTIMEO
+	CompareConstant(SO_RCVTIMEO,20,3232,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVTIMEO\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef SO_RCVTIMEO
+	CompareConstant(SO_RCVTIMEO,20,3232,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVTIMEO\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef SO_RCVTIMEO
+	CompareConstant(SO_RCVTIMEO,20,3232,architecture)
+#else
+Msg( "Error: Constant not found: SO_RCVTIMEO\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for SO_RCVTIMEO (3232, int) in db\n");
+#ifdef SO_RCVTIMEO
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3232,%d);\n", architecture, SO_RCVTIMEO);
+#endif
+#endif
+#if __powerpc64__
+#ifdef SO_SNDTIMEO
+	CompareConstant(SO_SNDTIMEO,19,3233,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDTIMEO\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef SO_SNDTIMEO
+	CompareConstant(SO_SNDTIMEO,19,3233,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDTIMEO\n");
+cnt++;
+#endif
+
+#elif __ia64__
 #ifdef SO_SNDTIMEO
 	CompareConstant(SO_SNDTIMEO,21,3233,architecture)
 #else
@@ -232,8 +404,44 @@ Msg( "Error: Constant not found: SO_SNDTIMEO\n");
 cnt++;
 #endif
 
+#elif __i386__
+#ifdef SO_SNDTIMEO
+	CompareConstant(SO_SNDTIMEO,21,3233,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDTIMEO\n");
+cnt++;
 #endif
 
+#elif __s390x__
+#ifdef SO_SNDTIMEO
+	CompareConstant(SO_SNDTIMEO,21,3233,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDTIMEO\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef SO_SNDTIMEO
+	CompareConstant(SO_SNDTIMEO,21,3233,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDTIMEO\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef SO_SNDTIMEO
+	CompareConstant(SO_SNDTIMEO,21,3233,architecture)
+#else
+Msg( "Error: Constant not found: SO_SNDTIMEO\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for SO_SNDTIMEO (3233, int) in db\n");
+#ifdef SO_SNDTIMEO
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3233,%d);\n", architecture, SO_SNDTIMEO);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef SO_ACCEPTCONN
 	CompareConstant(SO_ACCEPTCONN,30,3243,architecture)
@@ -472,18 +680,6 @@ Msg( "Error: Constant not found: SOL_RAW\n");
 cnt++;
 #endif
 
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for CMSG_NXTHDR(mhdr, */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for CMSG_DATA(cmsg) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for CMSG_FIRSTHDR(msg) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
