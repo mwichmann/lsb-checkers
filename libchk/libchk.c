@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.50 $
+ * This is $Revision: 1.51 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.51  2004/12/13 22:07:32  mats
+ * Improve information if expected symbol version is not in library
+ *
  * Revision 1.50  2004/10/28 17:47:00  anderson
  * bug 602: Now handles missing symbols better and checks for having only a default library wide version
  *
@@ -195,7 +198,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.50 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.51 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -208,6 +211,23 @@ int libchk_debug=LIBCHK_DEBUG_CXXHUSH;
  * What module to check against. - NULL means check all
  */
 char *module = NULL;
+
+
+/* common code to print the version of a symbol in the library */
+void
+vers_symbol(ElfFile * file, int index, int vers, char *vername)
+{
+
+    printf("    %s has version %s, expecting ",
+	   ElfGetStringIndex(file, file->syms[index].st_name,
+			     file->symhdr->sh_link),
+	   file->versionnames[vers]);
+    if (strlen(vername) > 0)
+	printf("%s\n", vername);
+    else
+	printf("unversioned\n");
+}
+
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -306,6 +326,8 @@ check_symbol(ElfFile *file, struct versym *entry)
 	  if( strcmp(file->versionnames[2], entry->vername) != 0 ) {
               printf("    Version %s did not match only available version %s!\n",
 			      entry->vername, file->versionnames[2]);
+              if( libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS) )
+	          vers_symbol(file, j, vers, entry->vername);
 	      return 0;
             }
 	  i=2; 
@@ -328,10 +350,11 @@ check_symbol(ElfFile *file, struct versym *entry)
           /* Check to make sure we found the version at all */
           if( i > file->numverdefs )
           {
-            if ((libchk_debug) )
-            {
-              printf("    Did not find version %s in library!\n", entry->vername);
-            }
+            printf("Warning!!! Did not find version %s in library!\n",
+                   entry->vername);
+            if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+	      vers_symbol(file, j, vers, entry->vername);
+
 	    return 0;
           }
       }
@@ -342,36 +365,13 @@ check_symbol(ElfFile *file, struct versym *entry)
 
       /* If the version in the libary is greater, then warn, if in
          maintainer mode */
-      if (vers > i )
-      {
-        if ((libchk_debug&LIBCHK_DEBUG_NEWVERS) )
-        {
-          printf("    %s has newer version %s, expecting ",
-                 ElfGetStringIndex(file,file->syms[j].st_name,
-                                   file->symhdr->sh_link),
-                 file->versionnames[vers]);
-            printf("%s\n", entry->vername);
-	
-        }
-      }
+      if (vers > i && (libchk_debug&LIBCHK_DEBUG_NEWVERS))
+          vers_symbol(file, j, vers, entry->vername);
 
       /* If the version in the library is less than (older), only warn if
          in maintainer mode. */
-      if (vers < i )
-      {
-        if ((libchk_debug&LIBCHK_DEBUG_OLDVERS) )
-        {
-          printf("    %s has version %s, expecting ",
-                 ElfGetStringIndex(file,file->syms[j].st_name,
-                                   file->symhdr->sh_link),
-                 file->versionnames[vers]);
-          if (strlen(entry->vername)>0)
-            printf("%s\n", entry->vername);
-          else
-            printf("unversioned\n");
-
-        }
-      }
+      if (vers < i && (libchk_debug&LIBCHK_DEBUG_OLDVERS))
+          vers_symbol(file, j, vers, entry->vername);
     }
   }
 
@@ -566,7 +566,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     else
     {
       /* Failed to match */
-			snprintf(tmp_string, TMP_STRING_SIZE, "Didn't find %s (%s) in %s",
+			snprintf(tmp_string, TMP_STRING_SIZE, "Did not find %s (%s) in %s",
 							 entries[i].name,
 							 strlen(entries[i].vername)>0 ? entries[i].vername : 
 							   "(unversioned)",
@@ -601,7 +601,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
                        tmp_string);
 #if 0
       /* Failed to match */
-			snprintf(tmp_string, TMP_STRING_SIZE, "Didn't find %s (%s) in %s",
+			snprintf(tmp_string, TMP_STRING_SIZE, "Did not find %s (%s) in %s",
 							 entries[i].name,
 							 strlen(entries[i].vername)>0 ? entries[i].vername : 
 							   "(unversioned)",
