@@ -12,7 +12,7 @@ RpmIdxTagFuncRec SigTags[] = {
 {SIGTAG_MD5,	"SIGTAG_MD5",	BIN,	16,	checkRpmIdxMD5,	Required,	NotSeen},
 {SIGTAG_SHA1HEADER,	"SIGTAG_SHA1HEADER",	STRING,	1,	checkRpmIdxSHA1HEADER,	Optional,	NotSeen},
 {SIGTAG_PGP,	"SIGTAG_PGP",	BIN,	1,	checkRpmIdxPGP,	Optional,	NotSeen},
-{SIGTAG_GPG,	"SIGTAG_GPG",	BIN,	1,	checkRpmIdxGPG,	Optional,	NotSeen},
+{SIGTAG_GPG,	"SIGTAG_GPG",	BIN,	65,	checkRpmIdxGPG,	Optional,	NotSeen},
 {SIGTAG_DSAHEADER,	"SIGTAG_DSAHEADER",	BIN,	1,	checkRpmIdxDSAHEADER,	Optional,	NotSeen},
 {SIGTAG_RSAHEADER,	"SIGTAG_RSAHEADER",	BIN,	1,	checkRpmIdxRSAHEADER,	Optional,	NotSeen},
 	};
