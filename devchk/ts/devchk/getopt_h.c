@@ -25,29 +25,45 @@ Msg("Checking data structures in getopt.h\n");
 
 #if __i386__
 CheckTypeSize(struct option,16, 10000, 2)
+CheckMemberSize(struct option,name,4,2,32258)
 CheckOffset(struct option,name,0,2,32258)
+CheckMemberSize(struct option,has_arg,4,2,32259)
 CheckOffset(struct option,has_arg,4,2,32259)
+CheckMemberSize(struct option,flag,4,2,32260)
 CheckOffset(struct option,flag,8,2,32260)
+CheckMemberSize(struct option,val,4,2,32261)
 CheckOffset(struct option,val,12,2,32261)
 #elif __ia64__
 CheckTypeSize(struct option,32, 10000, 3)
+CheckMemberSize(struct option,has_arg,0,3,32259)
 CheckOffset(struct option,has_arg,8,3,32259)
+CheckMemberSize(struct option,flag,0,3,32260)
 CheckOffset(struct option,flag,16,3,32260)
+CheckMemberSize(struct option,val,0,3,32261)
 CheckOffset(struct option,val,24,3,32261)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct option,16, 10000, 6)
+CheckMemberSize(struct option,has_arg,0,6,32259)
 CheckOffset(struct option,has_arg,4,6,32259)
+CheckMemberSize(struct option,flag,0,6,32260)
 CheckOffset(struct option,flag,8,6,32260)
+CheckMemberSize(struct option,val,0,6,32261)
 CheckOffset(struct option,val,12,6,32261)
 #elif __s390__
 CheckTypeSize(struct option,16, 10000, 10)
+CheckMemberSize(struct option,has_arg,0,10,32259)
 CheckOffset(struct option,has_arg,4,10,32259)
+CheckMemberSize(struct option,flag,0,10,32260)
 CheckOffset(struct option,flag,8,10,32260)
+CheckMemberSize(struct option,val,0,10,32261)
 CheckOffset(struct option,val,12,10,32261)
 #elif __powerpc64__
 CheckTypeSize(struct option,32, 10000, 9)
+CheckMemberSize(struct option,has_arg,0,9,32259)
 CheckOffset(struct option,has_arg,8,9,32259)
+CheckMemberSize(struct option,flag,0,9,32260)
 CheckOffset(struct option,flag,16,9,32260)
+CheckMemberSize(struct option,val,0,9,32261)
 CheckOffset(struct option,val,24,9,32261)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);

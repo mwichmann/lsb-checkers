@@ -286,19 +286,25 @@ Msg("Find size of pthread_t (9040)\n");
 
 #if __i386__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 2)
+CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602)
 CheckOffset(struct _pthread_fastlock,__status,0,2,33602)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,2,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,2,34427)
 #elif __ia64__
 CheckTypeSize(struct _pthread_fastlock,16, 10105, 3)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,0,3,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,8,3,34427)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 6)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,0,6,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,6,34427)
 #elif __s390__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 10)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,0,10,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427)
 #elif __powerpc64__
 CheckTypeSize(struct _pthread_fastlock,16, 10105, 9)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,0,9,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,8,9,34427)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10105,0);
@@ -427,11 +433,17 @@ Msg("Find size of pthread_rwlockattr_t (9057)\n");
 
 #if __i386__
 CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 2)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,2,34439)
 CheckOffset(struct _pthread_rwlock_t,__rw_readers,8,2,34439)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,4,2,34440)
 CheckOffset(struct _pthread_rwlock_t,__rw_writer,12,2,34440)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,4,2,34441)
 CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,16,2,34441)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,4,2,34442)
 CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,20,2,34442)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,2,34443)
 CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,2,34443)
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,2,34444)
 CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,2,34444)
 #endif
 

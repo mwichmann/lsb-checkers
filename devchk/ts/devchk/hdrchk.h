@@ -74,6 +74,25 @@
 		HDRCHKTEST_PASS \
 	}
 
+#define CheckMemberSize(str,member,size,aid, tmid) \
+{ \
+	str foo; \
+	char *foob=(char *)&foo; \
+	char *foom=(char *)&(foo.member); \
+	cnt++; \
+	Log("subtest %d\n", cnt); \
+	Log("Purpose: Check sizeof of ( foo."#member ") is %d\n", size); \
+	if( sizeof(foo.member) != size ) { \
+		Msg("sizeof( foo."#member ") is %d instead of " #size "\n",(sizeof(foo.member))); \
+		Msg("REPLACE INTO ArchTypeMem (ATMaid,ATMtmid,ATMsize,ATMoffset) "); \
+		Msg("VALUES (%d,%d,%d,%d );\n",aid,tmid, (sizeof(foo.member)),(foom-foob)); \
+		HDRCHKTEST_FAIL \
+	} \
+	else { \
+		HDRCHKTEST_PASS \
+	} \
+}
+
 #define CheckOffset(str,member,offset,aid, tmid) \
 { \
 	str foo; \
@@ -84,8 +103,8 @@
 	Log("Purpose: Check offset of (" #member ") is %d\n", offset); \
 	if( (foom-foob) != offset ) { \
 		Msg("offset(" #member ") is %d instead of " #offset "\n",(foom-foob)); \
-		Msg("REPLACE INTO ArchTypeMem (ATMaid,ATMtmid,ATMoffset) "); \
-		Msg("VALUES (%d, %d,%d );\n",aid,tmid, (foom-foob)); \
+		Msg("REPLACE INTO ArchTypeMem (ATMaid,ATMtmid,ATMsize,ATMoffset) "); \
+		Msg("VALUES (%d,%d,%d,%d );\n",aid,tmid, (sizeof(foo.member)),(foom-foob)); \
 		HDRCHKTEST_FAIL \
 	} \
 	else { \

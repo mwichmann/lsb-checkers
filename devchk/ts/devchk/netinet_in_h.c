@@ -134,32 +134,48 @@ cnt++;
 #endif
 
 CheckTypeSize(struct in_addr,4, 10143, 1)
+CheckMemberSize(struct in_addr,s_addr,4,1,33767)
 CheckOffset(struct in_addr,s_addr,0,1,33767)
 CheckTypeSize(in_addr_t,4, 10302, 1)
 #if __i386__
 CheckTypeSize(struct sockaddr_in,16, 9141, 2)
+CheckMemberSize(struct sockaddr_in,sin_port,2,2,33777)
 CheckOffset(struct sockaddr_in,sin_port,2,2,33777)
+CheckMemberSize(struct sockaddr_in,sin_addr,4,2,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,2,33778)
+CheckMemberSize(struct sockaddr_in,sin_zero,8,2,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,2,33779)
 #elif __ia64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 3)
+CheckMemberSize(struct sockaddr_in,sin_port,0,3,33777)
 CheckOffset(struct sockaddr_in,sin_port,2,3,33777)
+CheckMemberSize(struct sockaddr_in,sin_addr,0,3,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,3,33778)
+CheckMemberSize(struct sockaddr_in,sin_zero,0,3,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,3,33779)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 6)
+CheckMemberSize(struct sockaddr_in,sin_port,0,6,33777)
 CheckOffset(struct sockaddr_in,sin_port,2,6,33777)
+CheckMemberSize(struct sockaddr_in,sin_addr,0,6,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,6,33778)
+CheckMemberSize(struct sockaddr_in,sin_zero,0,6,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,6,33779)
 #elif __s390__
 CheckTypeSize(struct sockaddr_in,16, 9141, 10)
+CheckMemberSize(struct sockaddr_in,sin_port,0,10,33777)
 CheckOffset(struct sockaddr_in,sin_port,2,10,33777)
+CheckMemberSize(struct sockaddr_in,sin_addr,0,10,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,10,33778)
+CheckMemberSize(struct sockaddr_in,sin_zero,0,10,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,10,33779)
 #elif __powerpc64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 9)
+CheckMemberSize(struct sockaddr_in,sin_port,0,9,33777)
 CheckOffset(struct sockaddr_in,sin_port,2,9,33777)
+CheckMemberSize(struct sockaddr_in,sin_addr,0,9,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,9,33778)
+CheckMemberSize(struct sockaddr_in,sin_zero,0,9,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,9,33779)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);

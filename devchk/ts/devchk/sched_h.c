@@ -54,6 +54,7 @@ cnt++;
 #endif
 
 CheckTypeSize(struct sched_param,4, 9045, 1)
+CheckMemberSize(struct sched_param,sched_priority,4,1,33571)
 CheckOffset(struct sched_param,sched_priority,0,1,33571)
 #ifdef TET_TEST
 if (pcnt == cnt )
