@@ -163,6 +163,7 @@ char *DtNeeded[] = {
 	"libncurses.so.5",
 #endif /* __s390x__ */
 	"libpam.so.0",
+	"libpthread.so.0",
 #if __i386__
 	"libpthread.so.0",
 #endif /* __i386__ */

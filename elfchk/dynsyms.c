@@ -29175,7 +29175,7 @@ struct versym DynSyms[] = {
 	{"nftw","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"nftw","GLIBC_2.2.5",0,"LSB-Core"},
+	{"nftw","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"nftw","GLIBC_2.1",0,"LSB-Core"},
@@ -29196,7 +29196,7 @@ struct versym DynSyms[] = {
 	{"nftw64","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"nftw64","GLIBC_2.2.5",0,"LSB-Core"},
+	{"nftw64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"nftw64","GLIBC_2.1",0,"LSB-Core"},
@@ -29943,13 +29943,13 @@ struct versym DynSyms[] = {
 	{"pread","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pread","GLIBC_2.1",0,"LSB-Core"},
+	{"pread","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc64__
 	{"pread","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"pread","GLIBC_2.1",0,"LSB-Core"},
+	{"pread","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __x86_64__
 	{"pread","GLIBC_2.2.5",0,"LSB-Core"},
@@ -29964,13 +29964,13 @@ struct versym DynSyms[] = {
 	{"pread64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pread64","GLIBC_2.1",0,"LSB-Core"},
+	{"pread64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc64__
 	{"pread64","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"pread64","GLIBC_2.1",0,"LSB-Core"},
+	{"pread64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __x86_64__
 	{"pread64","GLIBC_2.2.5",0,"LSB-Core"},
@@ -30421,6 +30421,12 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"pthread_attr_setstacksize","GLIBC_2.2",0,"LSB-Core"},
 #endif
+	{"pthread_barrier_destroy","",0,"LSB-Core"},
+	{"pthread_barrier_init","",0,"LSB-Core"},
+	{"pthread_barrier_wait","",0,"LSB-Core"},
+	{"pthread_barrierattr_destroy","",0,"LSB-Core"},
+	{"pthread_barrierattr_init","",0,"LSB-Core"},
+	{"pthread_barrierattr_setpshared","",0,"LSB-Core"},
 #if __i386__
 	{"pthread_cancel","GLIBC_2.0",0,"LSB-Core"},
 #endif
@@ -30599,7 +30605,7 @@ struct versym DynSyms[] = {
 	{"pthread_condattr_getpshared","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"pthread_condattr_getpshared","GLIBC_2.2",0,"LSB-Core"},
+	{"pthread_condattr_getpshared","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_condattr_getpshared","GLIBC_2.2",0,"LSB-Core"},
@@ -30641,7 +30647,7 @@ struct versym DynSyms[] = {
 	{"pthread_condattr_setpshared","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"pthread_condattr_setpshared","GLIBC_2.2",0,"LSB-Core"},
+	{"pthread_condattr_setpshared","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_condattr_setpshared","GLIBC_2.2",0,"LSB-Core"},
@@ -30736,6 +30742,7 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"pthread_exit","GLIBC_2.2",0,"LSB-Core"},
 #endif
+	{"pthread_getcpuclockid","",0,"LSB-Core"},
 #if __i386__
 	{"pthread_getschedparam","GLIBC_2.0",0,"LSB-Core"},
 #endif
@@ -31795,13 +31802,13 @@ struct versym DynSyms[] = {
 	{"pwrite","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pwrite","GLIBC_2.1",0,"LSB-Core"},
+	{"pwrite","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc64__
 	{"pwrite","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"pwrite","GLIBC_2.1",0,"LSB-Core"},
+	{"pwrite","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __x86_64__
 	{"pwrite","GLIBC_2.2.5",0,"LSB-Core"},
@@ -31816,13 +31823,13 @@ struct versym DynSyms[] = {
 	{"pwrite64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pwrite64","GLIBC_2.1",0,"LSB-Core"},
+	{"pwrite64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc64__
 	{"pwrite64","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"pwrite64","GLIBC_2.1",0,"LSB-Core"},
+	{"pwrite64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __x86_64__
 	{"pwrite64","GLIBC_2.2.5",0,"LSB-Core"},
@@ -32281,7 +32288,7 @@ struct versym DynSyms[] = {
 	{"regexec","GLIBC_2.0",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"regexec","GLIBC_2.3.3",0,"LSB-Core"},
+	{"regexec","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"regexec","GLIBC_2.0",0,"LSB-Core"},
