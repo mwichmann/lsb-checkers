@@ -85,6 +85,7 @@ mem_is_Rd(const void *ptr)
 	int i;
 
 	if( inmemmap ) return 1;
+	if( !ptr ) return 0;
 
 	for(i=0;i<nummaps;i++) {
 		/*
@@ -124,6 +125,7 @@ mem_is_RW(const void *ptr)
 	int i;
 
 	if( inmemmap ) return 1;
+	if( !ptr ) return 0;
 
 	for(i=0;i<nummaps;i++)
 		if( (unsigned long)ptr >= mem[i].start &&
