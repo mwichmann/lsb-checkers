@@ -9,7 +9,7 @@
 #include <dlfcn.h>
 #include "elfchk.h"
 #include "hdr.h"
-#include "../tetj/tetj.h"
+#include "tetj.h"
 
 /*
  * Some architectures treat function pointers as structures which contains the
