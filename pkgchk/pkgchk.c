@@ -8,6 +8,7 @@
 #include <getopt.h>
 #include <string.h>
 #include <stdlib.h>
+#include <getopt.h>
 #include <libgen.h>
 #include <limits.h>
 #include "../tetj/tetj.h"
@@ -37,11 +38,12 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.7 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.8 $";
 
 int
 main(int argc, char *argv[])
 {
+  signed char c;
   signed char	*ptr;
   struct tetj_handle *journal;
   char *command_line = NULL;
@@ -58,8 +60,21 @@ main(int argc, char *argv[])
     command_line = concat_string(command_line, " ");
   }
 
-  /* Parse args here, and allow lanananame to be set via command line option */
-  if( argc != 2 ) {
+  /* Parse options */
+  while(1) {
+      c=getopt(argc,argv,"L:");
+      if( c == -1 )
+        break;
+      switch(c) {
+      case 'L':
+	lanananame=optarg;
+        break;
+      default:
+        printf ("?? getopt returned character code 0%o ??\n", c);
+      }
+  }
+
+  if( argc<= optind) {
     fprintf(stderr, "%s: bad argument count %d\n", argv[0], argc );
     usage(argv[0]);
     }
@@ -73,8 +88,8 @@ main(int argc, char *argv[])
   if( lanananame )
 	  set_myappname(lanananame);
 
-  if( (rpmfile = OpenRpmFile(argv[1])) == NULL ) {
-    fprintf(stderr, "%s: Unable to open file %s\n", argv[0], argv[1] );
+  if( (rpmfile = OpenRpmFile(argv[optind])) == NULL ) {
+    fprintf(stderr, "%s: Unable to open file %s\n", argv[0], argv[optind] );
     usage(argv[0]);
     }
 
