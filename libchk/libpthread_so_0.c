@@ -515,7 +515,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_condattr_getpshared","GLIBC_2.2"},
 #endif
 #if __powerpc64__
-	{"pthread_condattr_getpshared","GLIBC_2.2"},
+	{"pthread_condattr_getpshared","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_condattr_getpshared","GLIBC_2.2"},
@@ -557,7 +557,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_condattr_setpshared","GLIBC_2.2"},
 #endif
 #if __powerpc64__
-	{"pthread_condattr_setpshared","GLIBC_2.2"},
+	{"pthread_condattr_setpshared","GLIBC_2.3"},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_condattr_setpshared","GLIBC_2.2"},
