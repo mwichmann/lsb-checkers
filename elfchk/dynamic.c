@@ -1,4 +1,6 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "elfchk.h"
 #include "sections.h"
 #include "dynamic.h"
