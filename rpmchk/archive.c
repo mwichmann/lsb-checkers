@@ -17,6 +17,7 @@ gzFile	*zfile;
 RpmArchiveHeader ahdr;
 int	badcpiomagic=0;
 int	startoffset,endoffset;
+int	fileindex=0;
 
 file1->archive=(caddr_t)file1->nexthdr;
 
@@ -121,6 +122,14 @@ while( !gzeof(zfile) ) {
 	num[8]=0;
 	size=strtol(num,NULL,16);
 	gzseek(zfile,size,SEEK_CUR);
+
+	/* Check the file size against the RPMTAG_FILESIZES value */
+
+	/* Directories have no size, but RPMTAG_FILESIZES sez 1024 */
+	if( size && (size != htonl(filesizes[fileindex])) ) {
+		fprintf(stderr,"Filesize (%d) for %s not that same a specified in RPMTAG_FILESIZES (%d)\n", size, filename, htonl(filesizes[fileindex]) );
+	}
+	fileindex++;
 
 	/*
 	 * Check/fix padding here - the amount of space used for the file

@@ -147,6 +147,8 @@ extern char *pkgname;
 extern unsigned char *sigdata;
 extern int lsbdepidx;
 extern int archivesize;
+extern int *filesizes;
+extern int *filenames;
 
 /* util.c */
 extern RpmFile *OpenRpmFile(char *name);
