@@ -1,7 +1,7 @@
 # Generated file #
 LIBOBJS = \
 	ld_lsb_so_1.o \
-	libGL_so_1_2.o \
+	libGL_so_1.o \
 	libICE_so_6.o \
 	libSM_so_6.o \
 	libX11_so_6.o \

@@ -1,4 +1,4 @@
-char *libGL_so_1_2[] = {
+char *libGL_so_1[] = {
 	"glAccum",
 	"glActiveTextureARB",
 	"glAlphaFunc",

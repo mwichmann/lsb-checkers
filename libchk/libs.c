@@ -4,7 +4,7 @@
 check_libs()
 {
 check_lib("ld-lsb.so.1",ld_lsb_so_1);
-check_lib("libGL.so.1.2",libGL_so_1_2);
+check_lib("libGL.so.1",libGL_so_1);
 check_lib("libICE.so.6",libICE_so_6);
 check_lib("libSM.so.6",libSM_so_6);
 check_lib("libX11.so.6",libX11_so_6);
