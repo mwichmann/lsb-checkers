@@ -306,12 +306,14 @@ check_class_info(char *libname, struct classinfo *classes[],
 				}
 				if (btip->offset_flags !=	classp->btinfo[j].offset_flags) 
 				{
-					fprintf(stderr,"BTIF:%s:%d:%ld\n",
+					fprintf(stderr,"BTIF:%s:%d:%lu\n",
 									classp->name, j, btip->offset_flags);
 				}
 			}
 			basetypes = (void **)((char *)vmi_rttip->base_info)+
 			  (vmi_rttip->base_count*sizeof(struct base_type_info_mem));
+			if( classp->numbaseinfo )
+				fprintf(stderr,"vmi_classtpye & baseinfos\n");
 		}
 		/*
 		 * abi::__pbase_type_info
