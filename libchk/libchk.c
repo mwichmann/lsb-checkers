@@ -6,9 +6,13 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.8 $
+ * This is $Revision: 1.9 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.9  2002/01/07 03:17:58  cyeoh
+ * Fix for check_lib when given absolute path to library (don't do
+ * search)
+ *
  * Revision 1.8  2001/12/06 04:21:00  cyeoh
  * Fixes elfchk to handle checking elf header for programs & libraries
  * (instead of assuming its a program)
@@ -27,6 +31,7 @@
 #include <limits.h>
 #include <stdio.h>
 #include <libgen.h>
+#include <string.h>
 #include "elfchk.h"
 #include "hdr.h"
 
@@ -40,7 +45,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.8 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.9 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -157,14 +162,26 @@ check_lib(char *libname, struct versym entries[])
   char filename[PATH_MAX+1];
   int i;
 
-  /* Find the library */
-  for(i=0; libpaths[i]; i++)
+  if (libname[0]!='/')
   {
-    snprintf(filename, PATH_MAX, libpaths[i], libname);
+    /* Find the library */
+    for(i=0; libpaths[i]; i++)
+    {
+      snprintf(filename, PATH_MAX, libpaths[i], libname);
+      if (access(filename,R_OK) == 0) 
+      {
+        file=OpenElfFile(filename);
+        if(file) break;
+      }
+    }
+  }
+  else
+  {
+    /* absolute path given so we don't do a search through the library paths */
+    strncpy(filename, libname, PATH_MAX);
     if (access(filename,R_OK) == 0) 
     {
       file=OpenElfFile(filename);
-      if(file) break;
     }
   }
 
@@ -199,7 +216,7 @@ int main(int argc, char *argv[])
 {
   printf("%s built for Specification Version " LSBVERSION "\n", 
          basename(argv[0]));
-  printf("Program Revision: 1.0\n\n");
+  printf("Program Revision: 1.1\n\n");
   check_libs();
   exit(0);
 }
