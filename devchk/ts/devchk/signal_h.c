@@ -1502,41 +1502,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
 #endif
 
-#if __i386__
-CheckTypeSize(struct sigstack,8, 9315, 2)
-CheckMemberSize(struct sigstack,ss_sp,4,2,34194)
-CheckOffset(struct sigstack,ss_sp,0,2,34194)
-CheckMemberSize(struct sigstack,ss_onstack,4,2,34195)
-CheckOffset(struct sigstack,ss_onstack,4,2,34195)
-#elif __ia64__
-CheckTypeSize(struct sigstack,16, 9315, 3)
-CheckMemberSize(struct sigstack,ss_onstack,4,3,34195)
-CheckOffset(struct sigstack,ss_onstack,8,3,34195)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct sigstack,8, 9315, 6)
-CheckMemberSize(struct sigstack,ss_onstack,4,6,34195)
-CheckOffset(struct sigstack,ss_onstack,4,6,34195)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct sigstack,8, 9315, 10)
-CheckMemberSize(struct sigstack,ss_onstack,4,10,34195)
-CheckOffset(struct sigstack,ss_onstack,4,10,34195)
-#elif __powerpc64__
-CheckTypeSize(struct sigstack,16, 9315, 9)
-CheckMemberSize(struct sigstack,ss_onstack,4,9,34195)
-CheckOffset(struct sigstack,ss_onstack,8,9,34195)
-#elif __s390x__
-CheckTypeSize(struct sigstack,16, 9315, 12)
-CheckMemberSize(struct sigstack,ss_onstack,4,12,34195)
-CheckOffset(struct sigstack,ss_onstack,8,12,34195)
-#elif __x86_64__
-CheckTypeSize(struct sigstack,16, 9315, 11)
-CheckMemberSize(struct sigstack,ss_onstack,4,11,34195)
-CheckOffset(struct sigstack,ss_onstack,8,11,34195)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
-Msg("Find size of sigstack (9315)\n");
-#endif
-
 #if __powerpc64__
 #endif
 
