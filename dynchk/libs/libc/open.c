@@ -3,9 +3,10 @@
 #include <stdio.h>
 #include <unistd.h>
 
+static int(*funcptr)(const char *, int, mode_t) = 0;
+
 int open(const char *pathname, int flags, mode_t mode)
 {
-	static int(*funcptr)(const char *, int, mode_t) = 0;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "open");
 
@@ -18,7 +19,6 @@ int open(const char *pathname, int flags, mode_t mode)
 
 int lsb_open(const char *pathname, int flags, mode_t mode)
 {
-	static int(*funcptr)(const char *, int, mode_t) = 0;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "open");
 

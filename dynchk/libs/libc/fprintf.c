@@ -21,7 +21,6 @@ int lsb_fprintf(FILE *f, const char *format, ...)
 {	
 	va_list args;
 	va_start(args, format);
-	//static int (*funcptr)(FILE *f, const char *, ...) = 0;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vfprintf");
 	return funcptr(f, format, args);
