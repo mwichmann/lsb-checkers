@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "elfchk.h"
 
 void
@@ -16,43 +17,72 @@ if( hdr1->e_shoff ) {
 	file1->numsh = hdr1->e_shnum;
 	}
 
-/*
-if( memcmp(hdr1->e_ident, hdr2->e_ident, EI_NIDENT) != 0 ) {
-	int	i;
-	fprintf(stderr, "compareElfhdr: e_ident doesn't match\n" );
-	for( i=0;i<EI_NIDENT;i++)
-		fprintf(stderr, "%2.2x ", hdr1->e_ident[i] );
-	fprintf(stderr, "\n" );
-	for( i=0;i<EI_NIDENT;i++)
-		fprintf(stderr, "%2.2x ", hdr2->e_ident[i] );
-	fprintf(stderr, "\n" );
-	}
-*/
+/* Check e_ident */
 
-/*
-#define comparehdrfield( field ) \
-if( hdr1->field != hdr2->field ) { \
-	fprintf( stderr, "compareElfhdr: %s doesn't match\n", #field); \
-	fprintf( stderr, "%8.8x\n", hdr1->field ); \
-	fprintf( stderr, "%8.8x\n", hdr2->field ); \
+#define checkhdrident( index, value ) \
+if( hdr1->e_ident[index] != value ) { \
+	fprintf( stderr, "compareElfhdr: e_ident[%s] isn't expected value %s\n", #index, #value); \
 	}
 
-comparehdrfield( e_type )
-comparehdrfield( e_machine )
-comparehdrfield( e_version )
-comparehdrfield( e_entry )
-comparehdrfield( e_phoff )
-comparehdrfield( e_shoff )
-comparehdrfield( e_flags )
-comparehdrfield( e_ehsize )
-comparehdrfield( e_phentsize )
-comparehdrfield( e_phnum )
-comparehdrfield( e_shentsize )
-comparehdrfield( e_shnum )
-comparehdrfield( e_shstrndx )
+checkhdrident( EI_MAG0, ELFMAG0 )
+checkhdrident( EI_MAG1, ELFMAG1 )
+checkhdrident( EI_MAG2, ELFMAG2 )
+checkhdrident( EI_MAG3, ELFMAG3 )
+#if defined(i386)
+checkhdrident( EI_CLASS, ELFCLASS32 )
+#elif defined( ia64 )
+checkhdrident( EI_CLASS, ELFCLASS64 )
+#else
+fprintf(stderr, "EI_CLASS not checked!!\n");
+#endif
+#if defined(i386)
+checkhdrident( EI_DATA, ELFDATA2LSB )
+#elif defined( ia64 )
+checkhdrident( EI_DATA, ELFDATA2LSB )
+#else
+fprintf(stderr, "EI_DATA not checked!!\n");
+#endif
+checkhdrident( EI_VERSION, EV_CURRENT )
+checkhdrident( EI_OSABI, ELFOSABI_SYSV )
+checkhdrident( EI_ABIVERSION, 0 )
 
-#undef comparehdrfield
-*/
+#undef checkhdrident
+
+#define checkhdrfield( member, value ) \
+if( hdr1->member != value ) { \
+	fprintf( stderr, "compareElfhdr: %s isn't expected value %s\n", #member, #value); \
+	fprintf( stderr, "\tfound %x instead\n", hdr1->member); \
+	}
+
+/* Check e_type */
+
+checkhdrfield( e_type, ET_EXEC )
+
+/* Check e_machine */
+
+#if defined(i386)
+checkhdrfield( e_machine, EM_386 )
+#elif defined( ia64 )
+checkhdrfield( e_machine, EM_IA_64 )
+#else
+fprintf(stderr, "e_machine not checked!!\n");
+#endif
+
+/* Check e_version */
+
+checkhdrfield( e_version, EV_CURRENT )
+
+/* Check e_flags */
+
+#if defined(i386)
+checkhdrfield( e_flags, 0 )
+#elif defined( ia64 )
+checkhdrfield( e_flags, 0 ) /* Need to figure this out for Linux */
+#else
+fprintf(stderr, "e_flags not checked!!\n");
+#endif
+
+#undef checkhdrfield
 
 if( hdr1->e_shstrndx != SHN_UNDEF ) {
 	file1->straddr = file1->addr+file1->saddr[hdr1->e_shstrndx].sh_offset;
