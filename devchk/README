@@ -1,0 +1,62 @@
+This is the devchk TET test suite, also known as LSB-HDR.  It
+is used for development environment certification.  This test
+suite verifies binary values in specific header files.
+
+You may build with the test suite source files that have been checked 
+into the source tree.  In most cases, this should work well.  If you 
+prefer to use these existing files, go directly to the "BUILD AND 
+EXECUTE THE TEST SUITE" section.
+
+If you prefer to create the test suite source files yourself, the 
+system you are going to use for testing will require some setup.  
+Start with the "CREATE THE TEST SUITE SOURCE FILES" section, then 
+build and execute the test suite.
+
+
+
+CREATE THE TEST SUITE SOURCE FILES
+
+   NOTE: See the README file included with each module for installation
+         instructions.
+
+1. Install MySQL on the machine.  The latest versions can be found at 
+   http://www.mysql.com or http://sourceforge.net/projects/mysql.
+
+2. Make sure the MySQL server daemon is running (process name is mysqld).
+
+3. Install the Perl DBI on the machine.  The latest version can be found at
+   http://www.perl.com/CPAN-local/modules/by-module/DBI.
+
+4. Install the Data-ShowTable modules on the machine.  The latest version 
+   can be found at http://www.perl.com/CPAN-local/modules/by-module/Data.
+
+5. Install the Msql-Mysql-modules on the machine.  The latest version can be
+   found at http://www.perl.com/CPAN-local/modules/by-module/DBD.
+
+6. Initialize the SQL database:
+
+	Check out /lsb/data/dbdump from SourceForge (http://sourceforge.net).
+
+	Comment out the "DBOPTS=...." line in the makefile.
+
+	Execute "make restore" to load a copy of the database into MySQL.
+
+7. Build the source files:
+
+	cd to the devchk test directory
+	# ./Setup
+
+
+
+BUILD AND EXECUTE THE TEST SUITE
+
+1. Set the environment variable TET_ROOT and make sure the TET bin 
+   directory is in your PATH:
+
+	# export TET_ROOT=/home/etet
+	# export PATH=$PATH:$TET_ROOT/bin
+
+2. In the devchk directory and execute the following commands:
+
+	# tcc -b
+	# tcc -e

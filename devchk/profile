@@ -1,0 +1,43 @@
+# profile for devchk test suite
+
+SUITE=devchk
+
+HOME=`pwd`
+TET_EXECUTE=$TET_ROOT/test_sets/$SUITE
+PATH=$TET_ROOT/bin:$HOME/BIN:$TET_EXECUTE/BIN:$PATH
+export TET_EXECUTE TET_ROOT PATH
+
+# useful shell functions for TET
+tccb()
+{
+tcc -b -s $HOME/scen.bld $*
+}
+
+tcce()
+{
+tcc -e -s $HOME/scen.exec $*
+}
+
+tccc()
+{
+tcc -c -s $HOME/scen.bld $*
+}
+
+jrpt()
+{
+(cd $HOME/results; vrpt -l ${1-area} -HP `/bin/ls -d 0* | tail -1`/journal | less)
+}
+
+
+# display last journal
+jl()
+{
+(cd $HOME/results; less `/bin/ls -d 0* | tail -1`/journal)
+}
+
+# summary results for last journal
+jx()
+{
+(cd $HOME/results; vres `/bin/ls -d 0* | tail -1`/journal)
+}      
+

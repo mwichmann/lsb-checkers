@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd ts/devchk
+./mktests > /dev/null 2>&1
+if [ $? -ne 0 ]
+then
+	echo "Setup: ts/devchk/mktests failed.  devchk setup incomplete."
+else
+	echo "Setup: devchk setup successful."
+fi
