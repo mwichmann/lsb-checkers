@@ -461,46 +461,46 @@ struct versym libpthread_so_0[] = {
 	{"pthread_cancel","GLIBC_2.2"},
 #endif
 #if __i386__
-	{"pthread_cond_broadcast","GLIBC_2.0"},
+	{"pthread_cond_broadcast","GLIBC_2.3.2"},
 #endif
 #if __ia64__
-	{"pthread_cond_broadcast","GLIBC_2.2"},
+	{"pthread_cond_broadcast","GLIBC_2.3.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pthread_cond_broadcast","GLIBC_2.0"},
+	{"pthread_cond_broadcast","GLIBC_2.3.2"},
 #endif
 #if __powerpc64__
-	{"pthread_cond_broadcast","GLIBC_2.3"},
+	{"pthread_cond_broadcast","GLIBC_2.3.2"},
 #endif
 #if __s390__ && !__s390x__
-	{"pthread_cond_broadcast","GLIBC_2.0"},
+	{"pthread_cond_broadcast","GLIBC_2.3.2"},
 #endif
 #if __x86_64__
-	{"pthread_cond_broadcast","GLIBC_2.2.5"},
+	{"pthread_cond_broadcast","GLIBC_2.3.2"},
 #endif
 #if __s390x__
-	{"pthread_cond_broadcast","GLIBC_2.2"},
+	{"pthread_cond_broadcast","GLIBC_2.3.2"},
 #endif
 #if __i386__
-	{"pthread_cond_destroy","GLIBC_2.0"},
+	{"pthread_cond_destroy","GLIBC_2.3.2"},
 #endif
 #if __ia64__
-	{"pthread_cond_destroy","GLIBC_2.2"},
+	{"pthread_cond_destroy","GLIBC_2.3.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pthread_cond_destroy","GLIBC_2.0"},
+	{"pthread_cond_destroy","GLIBC_2.3.2"},
 #endif
 #if __powerpc64__
-	{"pthread_cond_destroy","GLIBC_2.3"},
+	{"pthread_cond_destroy","GLIBC_2.3.2"},
 #endif
 #if __s390__ && !__s390x__
-	{"pthread_cond_destroy","GLIBC_2.0"},
+	{"pthread_cond_destroy","GLIBC_2.3.2"},
 #endif
 #if __x86_64__
-	{"pthread_cond_destroy","GLIBC_2.2.5"},
+	{"pthread_cond_destroy","GLIBC_2.3.2"},
 #endif
 #if __s390x__
-	{"pthread_cond_destroy","GLIBC_2.2"},
+	{"pthread_cond_destroy","GLIBC_2.3.2"},
 #endif
 #if __i386__
 	{"pthread_cond_init","GLIBC_2.3.2"},
@@ -512,7 +512,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_cond_init","GLIBC_2.3.2"},
 #endif
 #if __powerpc64__
-	{"pthread_cond_init","GLIBC_2.3"},
+	{"pthread_cond_init","GLIBC_2.3.2"},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_cond_init","GLIBC_2.3.2"},
@@ -524,25 +524,25 @@ struct versym libpthread_so_0[] = {
 	{"pthread_cond_init","GLIBC_2.3.2"},
 #endif
 #if __i386__
-	{"pthread_cond_signal","GLIBC_2.0"},
+	{"pthread_cond_signal","GLIBC_2.3.2"},
 #endif
 #if __ia64__
-	{"pthread_cond_signal","GLIBC_2.2"},
+	{"pthread_cond_signal","GLIBC_2.3.2"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pthread_cond_signal","GLIBC_2.0"},
+	{"pthread_cond_signal","GLIBC_2.3.2"},
 #endif
 #if __powerpc64__
-	{"pthread_cond_signal","GLIBC_2.3"},
+	{"pthread_cond_signal","GLIBC_2.3.2"},
 #endif
 #if __s390__ && !__s390x__
-	{"pthread_cond_signal","GLIBC_2.0"},
+	{"pthread_cond_signal","GLIBC_2.3.2"},
 #endif
 #if __x86_64__
-	{"pthread_cond_signal","GLIBC_2.2.5"},
+	{"pthread_cond_signal","GLIBC_2.3.2"},
 #endif
 #if __s390x__
-	{"pthread_cond_signal","GLIBC_2.2"},
+	{"pthread_cond_signal","GLIBC_2.3.2"},
 #endif
 #if __i386__
 	{"pthread_cond_timedwait","GLIBC_2.3.2"},
@@ -554,7 +554,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_cond_timedwait","GLIBC_2.3.2"},
 #endif
 #if __powerpc64__
-	{"pthread_cond_timedwait","GLIBC_2.3"},
+	{"pthread_cond_timedwait","GLIBC_2.3.2"},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_cond_timedwait","GLIBC_2.3.2"},
@@ -575,7 +575,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_cond_wait","GLIBC_2.3.2"},
 #endif
 #if __powerpc64__
-	{"pthread_cond_wait","GLIBC_2.3"},
+	{"pthread_cond_wait","GLIBC_2.3.2"},
 #endif
 #if __s390__ && !__s390x__
 	{"pthread_cond_wait","GLIBC_2.3.2"},
