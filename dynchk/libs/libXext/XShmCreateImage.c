@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/extensions/XShm.h>
 #undef XShmCreateImage
@@ -14,11 +14,11 @@ XImage * XShmCreateImage (Display * arg0 , Visual * arg1 , unsigned int arg2 , i
 	int reset_flag = __lsb_check_params;
 	XImage * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XShmCreateImage ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XShmCreateImage");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XShmCreateImage()");
+		__lsb_output(4, "XShmCreateImage()");
 		validate_RWaddress( arg0, "XShmCreateImage - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XShmCreateImage - arg0");
 		validate_RWaddress( arg1, "XShmCreateImage - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <sys/types.h>
 #include <unistd.h>
 #undef getgroups
@@ -14,7 +14,7 @@ int getgroups (int arg0 , gid_t arg1 [])
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "getgroups", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "getgroups", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmsRegisterClientReply
 static int(*funcptr) (SmsConn , char * ) = 0;
@@ -13,7 +13,7 @@ int SmsRegisterClientReply (SmsConn arg0 , char * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "SmsRegisterClientReply");
+		funcptr = lsb_dlsym(RTLD_NEXT, "SmsRegisterClientReply");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XDestroyIC
 static void(*funcptr) (XIC ) = 0;
@@ -12,11 +12,11 @@ void XDestroyIC (XIC arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XDestroyIC ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XDestroyIC");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XDestroyIC()");
+		__lsb_output(4, "XDestroyIC()");
 		validate_NULL_TYPETYPE(  arg0, "XDestroyIC - arg0");
 	}
 	funcptr(arg0);

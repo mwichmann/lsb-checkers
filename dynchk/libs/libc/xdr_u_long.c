@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <rpc/xdr.h>
 #include <sys/types.h>
 #undef xdr_u_long
@@ -14,7 +14,7 @@ bool_t xdr_u_long (XDR * arg0 , u_long * arg1 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "xdr_u_long", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "xdr_u_long", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

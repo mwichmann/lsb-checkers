@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XImageByteOrder
 static int(*funcptr) (Display * ) = 0;
@@ -13,11 +13,11 @@ int XImageByteOrder (Display * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XImageByteOrder ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XImageByteOrder");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XImageByteOrder()");
+		__lsb_output(4, "XImageByteOrder()");
 		validate_RWaddress( arg0, "XImageByteOrder - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XImageByteOrder - arg0");
 	}

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <zlib.h>
 #undef gzgets
 static char *(*funcptr) (gzFile , char * , int ) = 0;
@@ -13,7 +13,7 @@ char * gzgets (gzFile arg0 , char * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gzgets");
+		funcptr = lsb_dlsym(RTLD_NEXT, "gzgets");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XIfEvent
 static int(*funcptr) (Display * , XEvent * , int , XPointer ) = 0;
@@ -13,11 +13,11 @@ int XIfEvent (Display * arg0 , XEvent * arg1 , int arg2 , XPointer arg3 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XIfEvent ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XIfEvent");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XIfEvent()");
+		__lsb_output(4, "XIfEvent()");
 		validate_RWaddress( arg0, "XIfEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XIfEvent - arg0");
 		validate_RWaddress( arg1, "XIfEvent - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #undef XListInstalledColormaps
@@ -14,11 +14,11 @@ Colormap * XListInstalledColormaps (Display * arg0 , Window arg1 , int * arg2 )
 	int reset_flag = __lsb_check_params;
 	Colormap * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XListInstalledColormaps ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XListInstalledColormaps");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XListInstalledColormaps()");
+		__lsb_output(4, "XListInstalledColormaps()");
 		validate_RWaddress( arg0, "XListInstalledColormaps - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XListInstalledColormaps - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XListInstalledColormaps - arg1");

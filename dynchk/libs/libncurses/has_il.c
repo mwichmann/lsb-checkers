@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef has_il
 static bool(*funcptr) () = 0;
@@ -13,7 +13,7 @@ bool has_il ()
 	int reset_flag = __lsb_check_params;
 	bool ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "has_il");
+		funcptr = lsb_dlsym(RTLD_NEXT, "has_il");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

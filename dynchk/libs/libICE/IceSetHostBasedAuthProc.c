@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceSetHostBasedAuthProc
 static void(*funcptr) (IceListenObj , IceHostBasedAuthProc ) = 0;
@@ -12,11 +12,11 @@ void IceSetHostBasedAuthProc (IceListenObj arg0 , IceHostBasedAuthProc arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceSetHostBasedAuthProc ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceSetHostBasedAuthProc");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceSetHostBasedAuthProc()");
+		__lsb_output(4, "IceSetHostBasedAuthProc()");
 		validate_NULL_TYPETYPE(  arg0, "IceSetHostBasedAuthProc - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceSetHostBasedAuthProc - arg1");
 	}

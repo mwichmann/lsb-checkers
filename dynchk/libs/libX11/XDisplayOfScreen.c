@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XDisplayOfScreen
 static Display *(*funcptr) (Screen * ) = 0;
@@ -13,11 +13,11 @@ Display * XDisplayOfScreen (Screen * arg0 )
 	int reset_flag = __lsb_check_params;
 	Display * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XDisplayOfScreen ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XDisplayOfScreen");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XDisplayOfScreen()");
+		__lsb_output(4, "XDisplayOfScreen()");
 		validate_RWaddress( arg0, "XDisplayOfScreen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDisplayOfScreen - arg0");
 	}

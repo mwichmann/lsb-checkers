@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceProtocolSetup
 static IceProtocolSetupStatus(*funcptr) (IceConn , int , IcePointer , int , int * , int * , char * * , char * * , int , char * ) = 0;
@@ -13,11 +13,11 @@ IceProtocolSetupStatus IceProtocolSetup (IceConn arg0 , int arg1 , IcePointer ar
 	int reset_flag = __lsb_check_params;
 	IceProtocolSetupStatus ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceProtocolSetup ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceProtocolSetup");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceProtocolSetup()");
+		__lsb_output(4, "IceProtocolSetup()");
 		validate_NULL_TYPETYPE(  arg0, "IceProtocolSetup - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceProtocolSetup - arg1");
 		validate_NULL_TYPETYPE(  arg2, "IceProtocolSetup - arg2");

@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XRotateWindowProperties
 static int(*funcptr) (Display * , Window , Atom * , int , int ) = 0;
 
@@ -14,11 +14,11 @@ int XRotateWindowProperties (Display * arg0 , Window arg1 , Atom * arg2 , int ar
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XRotateWindowProperties ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XRotateWindowProperties");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XRotateWindowProperties()");
+		__lsb_output(4, "XRotateWindowProperties()");
 		validate_RWaddress( arg0, "XRotateWindowProperties - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XRotateWindowProperties - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XRotateWindowProperties - arg1");

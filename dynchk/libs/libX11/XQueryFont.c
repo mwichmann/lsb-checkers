@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XQueryFont
 static XFontStruct *(*funcptr) (Display * , XID ) = 0;
 
@@ -14,11 +14,11 @@ XFontStruct * XQueryFont (Display * arg0 , XID arg1 )
 	int reset_flag = __lsb_check_params;
 	XFontStruct * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XQueryFont ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XQueryFont");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XQueryFont()");
+		__lsb_output(4, "XQueryFont()");
 		validate_RWaddress( arg0, "XQueryFont - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XQueryFont - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XQueryFont - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XLockDisplay
 static void(*funcptr) (Display * ) = 0;
@@ -12,11 +12,11 @@ void XLockDisplay (Display * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XLockDisplay ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XLockDisplay");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XLockDisplay()");
+		__lsb_output(4, "XLockDisplay()");
 		validate_RWaddress( arg0, "XLockDisplay - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XLockDisplay - arg0");
 	}

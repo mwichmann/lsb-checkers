@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stddef.h>
 #include <unistd.h>
 #undef pwrite64
@@ -14,7 +14,7 @@ ssize_t pwrite64 (int arg0 , const void * arg1 , size_t arg2 , off64_t arg3 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "pwrite64", "GLIBC_2.1");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "pwrite64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

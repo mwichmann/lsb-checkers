@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef sincosl
 static void(*funcptr) (long double , long double * , long double * ) = 0;
@@ -12,7 +12,7 @@ void sincosl (long double arg0 , long double * arg1 , long double * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.1");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef unctrl
 static char *(*funcptr) (chtype ) = 0;
@@ -13,7 +13,7 @@ char * unctrl (chtype arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "unctrl");
+		funcptr = lsb_dlsym(RTLD_NEXT, "unctrl");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICEutil.h>
 #undef IceUnlockAuthFile
 static void(*funcptr) (char * ) = 0;
@@ -12,11 +12,11 @@ void IceUnlockAuthFile (char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceUnlockAuthFile ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceUnlockAuthFile");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceUnlockAuthFile()");
+		__lsb_output(4, "IceUnlockAuthFile()");
 		validate_RWaddress( arg0, "IceUnlockAuthFile - arg0");
 		validate_NULL_TYPETYPE(  arg0, "IceUnlockAuthFile - arg0");
 	}

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XRefreshKeyboardMapping
 static int(*funcptr) (XMappingEvent * ) = 0;
@@ -13,11 +13,11 @@ int XRefreshKeyboardMapping (XMappingEvent * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XRefreshKeyboardMapping ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XRefreshKeyboardMapping");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XRefreshKeyboardMapping()");
+		__lsb_output(4, "XRefreshKeyboardMapping()");
 		validate_RWaddress( arg0, "XRefreshKeyboardMapping - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XRefreshKeyboardMapping - arg0");
 	}

@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/X.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XConfigureWindow
 static int(*funcptr) (Display * , Window , unsigned int , XWindowChanges * ) = 0;
 
@@ -14,11 +14,11 @@ int XConfigureWindow (Display * arg0 , Window arg1 , unsigned int arg2 , XWindow
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XConfigureWindow ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XConfigureWindow");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XConfigureWindow()");
+		__lsb_output(4, "XConfigureWindow()");
 		validate_RWaddress( arg0, "XConfigureWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XConfigureWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XConfigureWindow - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceListenForConnections
 static int(*funcptr) (int * , IceListenObj * * , int , char * ) = 0;
@@ -13,11 +13,11 @@ int IceListenForConnections (int * arg0 , IceListenObj * * arg1 , int arg2 , cha
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceListenForConnections ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceListenForConnections");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceListenForConnections()");
+		__lsb_output(4, "IceListenForConnections()");
 		validate_RWaddress( arg0, "IceListenForConnections - arg0");
 		validate_NULL_TYPETYPE(  arg0, "IceListenForConnections - arg0");
 		validate_RWaddress( arg1, "IceListenForConnections - arg1");

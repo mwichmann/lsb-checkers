@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef use_env
 static void(*funcptr) (bool ) = 0;
@@ -12,7 +12,7 @@ void use_env (bool arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "use_env");
+		funcptr = lsb_dlsym(RTLD_NEXT, "use_env");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

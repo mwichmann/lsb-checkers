@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XQueryColor
@@ -14,11 +14,11 @@ int XQueryColor (Display * arg0 , Colormap arg1 , XColor * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XQueryColor ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XQueryColor");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XQueryColor()");
+		__lsb_output(4, "XQueryColor()");
 		validate_RWaddress( arg0, "XQueryColor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XQueryColor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XQueryColor - arg1");

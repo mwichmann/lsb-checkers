@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XConvertSelection
@@ -14,11 +14,11 @@ int XConvertSelection (Display * arg0 , Atom arg1 , Atom arg2 , Atom arg3 , Wind
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XConvertSelection ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XConvertSelection");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XConvertSelection()");
+		__lsb_output(4, "XConvertSelection()");
 		validate_RWaddress( arg0, "XConvertSelection - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XConvertSelection - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XConvertSelection - arg1");

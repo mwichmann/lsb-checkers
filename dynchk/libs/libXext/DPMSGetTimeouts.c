@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/extensions/dpms.h>
 #undef DPMSGetTimeouts
@@ -14,11 +14,11 @@ int DPMSGetTimeouts (Display * arg0 ,  * arg1,  * arg2,  * arg3)
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " DPMSGetTimeouts ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "DPMSGetTimeouts");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "DPMSGetTimeouts()");
+		__lsb_output(4, "DPMSGetTimeouts()");
 		validate_RWaddress( arg0, "DPMSGetTimeouts - arg0");
 		validate_NULL_TYPETYPE(  arg0, "DPMSGetTimeouts - arg0");
 		validate_RWaddress( arg1, "DPMSGetTimeouts - arg1");

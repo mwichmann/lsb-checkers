@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XGetPointerMapping
 static int(*funcptr) (Display * , unsigned char * , int ) = 0;
@@ -13,11 +13,11 @@ int XGetPointerMapping (Display * arg0 , unsigned char * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetPointerMapping ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetPointerMapping");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetPointerMapping()");
+		__lsb_output(4, "XGetPointerMapping()");
 		validate_RWaddress( arg0, "XGetPointerMapping - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetPointerMapping - arg0");
 		validate_RWaddress( arg1, "XGetPointerMapping - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceComposeNetworkIdList
 static char *(*funcptr) (int , IceListenObj * ) = 0;
@@ -13,11 +13,11 @@ char * IceComposeNetworkIdList (int arg0 , IceListenObj * arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceComposeNetworkIdList ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceComposeNetworkIdList");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceComposeNetworkIdList()");
+		__lsb_output(4, "IceComposeNetworkIdList()");
 		validate_NULL_TYPETYPE(  arg0, "IceComposeNetworkIdList - arg0");
 		validate_RWaddress( arg1, "IceComposeNetworkIdList - arg1");
 		validate_NULL_TYPETYPE(  arg1, "IceComposeNetworkIdList - arg1");

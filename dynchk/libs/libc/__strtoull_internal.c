@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stdlib.h>
 #undef __strtoull_internal
 static unsigned long long(*funcptr) (const char * , char * * , int , int ) = 0;
@@ -13,7 +13,7 @@ unsigned long long __strtoull_internal (const char * arg0 , char * * arg1 , int 
 	int reset_flag = __lsb_check_params;
 	unsigned long long ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "__strtoull_internal", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "__strtoull_internal", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

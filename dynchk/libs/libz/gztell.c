@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <zlib.h>
 #undef gztell
 static z_off_t(*funcptr) (gzFile ) = 0;
@@ -13,7 +13,7 @@ z_off_t gztell (gzFile arg0 )
 	int reset_flag = __lsb_check_params;
 	z_off_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gztell");
+		funcptr = lsb_dlsym(RTLD_NEXT, "gztell");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

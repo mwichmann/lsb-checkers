@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef XGetVisualInfo
@@ -14,11 +14,11 @@ XVisualInfo * XGetVisualInfo (Display * arg0 , long arg1 , XVisualInfo * arg2 , 
 	int reset_flag = __lsb_check_params;
 	XVisualInfo * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetVisualInfo ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetVisualInfo");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetVisualInfo()");
+		__lsb_output(4, "XGetVisualInfo()");
 		validate_RWaddress( arg0, "XGetVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetVisualInfo - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XFree
 static int(*funcptr) (void * ) = 0;
@@ -13,11 +13,11 @@ int XFree (void * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XFree ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XFree");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XFree()");
+		__lsb_output(4, "XFree()");
 		validate_RWaddress( arg0, "XFree - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFree - arg0");
 	}

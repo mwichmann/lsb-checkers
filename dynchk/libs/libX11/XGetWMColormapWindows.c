@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetWMColormapWindows
@@ -14,11 +14,11 @@ int XGetWMColormapWindows (Display * arg0 , Window arg1 , Window * * arg2 , int 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetWMColormapWindows ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetWMColormapWindows");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetWMColormapWindows()");
+		__lsb_output(4, "XGetWMColormapWindows()");
 		validate_RWaddress( arg0, "XGetWMColormapWindows - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWMColormapWindows - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWMColormapWindows - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #undef XFreeColors
@@ -14,11 +14,11 @@ int XFreeColors (Display * arg0 , Colormap arg1 , unsigned long * arg2 , int arg
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XFreeColors ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XFreeColors");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XFreeColors()");
+		__lsb_output(4, "XFreeColors()");
 		validate_RWaddress( arg0, "XFreeColors - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreeColors - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFreeColors - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XCopyColormapAndFree
@@ -14,11 +14,11 @@ Colormap XCopyColormapAndFree (Display * arg0 , Colormap arg1 )
 	int reset_flag = __lsb_check_params;
 	Colormap ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XCopyColormapAndFree ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XCopyColormapAndFree");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XCopyColormapAndFree()");
+		__lsb_output(4, "XCopyColormapAndFree()");
 		validate_RWaddress( arg0, "XCopyColormapAndFree - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCopyColormapAndFree - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCopyColormapAndFree - arg1");

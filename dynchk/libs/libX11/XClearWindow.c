@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XClearWindow
 static int(*funcptr) (Display * , Window ) = 0;
 
@@ -14,11 +14,11 @@ int XClearWindow (Display * arg0 , Window arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XClearWindow ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XClearWindow");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XClearWindow()");
+		__lsb_output(4, "XClearWindow()");
 		validate_RWaddress( arg0, "XClearWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XClearWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XClearWindow - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XGetDefault
 static char *(*funcptr) (Display * , const char * , const char * ) = 0;
@@ -13,11 +13,11 @@ char * XGetDefault (Display * arg0 , const char * arg1 , const char * arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetDefault ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetDefault");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetDefault()");
+		__lsb_output(4, "XGetDefault()");
 		validate_RWaddress( arg0, "XGetDefault - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetDefault - arg0");
 		validate_Rdaddress( arg1, "XGetDefault - arg1");

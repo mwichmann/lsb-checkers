@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <unistd.h>
 #include <fcntl.h>
 #undef lockf64
@@ -14,7 +14,7 @@ int lockf64 (int arg0 , int arg1 , off64_t arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "lockf64", "GLIBC_2.1");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "lockf64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

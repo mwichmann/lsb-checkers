@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #undef XCreatePixmapFromBitmapData
@@ -14,11 +14,11 @@ Pixmap XCreatePixmapFromBitmapData (Display * arg0 , Drawable arg1 , char * arg2
 	int reset_flag = __lsb_check_params;
 	Pixmap ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XCreatePixmapFromBitmapData ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XCreatePixmapFromBitmapData");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XCreatePixmapFromBitmapData()");
+		__lsb_output(4, "XCreatePixmapFromBitmapData()");
 		validate_RWaddress( arg0, "XCreatePixmapFromBitmapData - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreatePixmapFromBitmapData - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreatePixmapFromBitmapData - arg1");

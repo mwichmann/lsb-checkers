@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IcePing
 static int(*funcptr) (IceConn , IcePingReplyProc , IcePointer ) = 0;
@@ -13,11 +13,11 @@ int IcePing (IceConn arg0 , IcePingReplyProc arg1 , IcePointer arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IcePing ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IcePing");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IcePing()");
+		__lsb_output(4, "IcePing()");
 		validate_NULL_TYPETYPE(  arg0, "IcePing - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IcePing - arg1");
 		validate_NULL_TYPETYPE(  arg2, "IcePing - arg2");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #include <X11/extensions/XShm.h>
 #undef XShmGetEventBase
@@ -14,11 +14,11 @@ int XShmGetEventBase (Display * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XShmGetEventBase ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XShmGetEventBase");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XShmGetEventBase()");
+		__lsb_output(4, "XShmGetEventBase()");
 		validate_RWaddress( arg0, "XShmGetEventBase - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XShmGetEventBase - arg0");
 	}

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <net/if.h>
 #undef if_freenameindex
 static void(*funcptr) (struct if_nameindex * ) = 0;
@@ -12,7 +12,7 @@ void if_freenameindex (struct if_nameindex * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "if_freenameindex");
+		funcptr = lsb_dlsym(RTLD_NEXT, "if_freenameindex");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

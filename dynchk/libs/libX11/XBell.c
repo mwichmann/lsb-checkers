@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XBell
 static int(*funcptr) (Display * , int ) = 0;
@@ -13,11 +13,11 @@ int XBell (Display * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XBell ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XBell");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XBell()");
+		__lsb_output(4, "XBell()");
 		validate_RWaddress( arg0, "XBell - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XBell - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XBell - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceProcessMessages
 static IceProcessMessagesStatus(*funcptr) (IceConn , IceReplyWaitInfo * , int * ) = 0;
@@ -13,11 +13,11 @@ IceProcessMessagesStatus IceProcessMessages (IceConn arg0 , IceReplyWaitInfo * a
 	int reset_flag = __lsb_check_params;
 	IceProcessMessagesStatus ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceProcessMessages ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceProcessMessages");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceProcessMessages()");
+		__lsb_output(4, "IceProcessMessages()");
 		validate_NULL_TYPETYPE(  arg0, "IceProcessMessages - arg0");
 		validate_RWaddress( arg1, "IceProcessMessages - arg1");
 		validate_NULL_TYPETYPE(  arg1, "IceProcessMessages - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <arpa/inet.h>
 #undef inet_addr
 static in_addr_t(*funcptr) (const char * ) = 0;
@@ -13,7 +13,7 @@ in_addr_t inet_addr (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	in_addr_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "inet_addr", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "inet_addr", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

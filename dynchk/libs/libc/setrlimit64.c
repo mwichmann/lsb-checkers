@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <sys/resource.h>
 #undef setrlimit64
 static int(*funcptr) (__rlimit_resource_t , const struct rlimit64 * ) = 0;
@@ -13,7 +13,7 @@ int setrlimit64 (__rlimit_resource_t arg0 , const struct rlimit64 * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setrlimit64");
+		funcptr = lsb_dlsym(RTLD_NEXT, "setrlimit64");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

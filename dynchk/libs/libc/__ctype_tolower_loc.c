@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <ctype.h>
 #undef __ctype_tolower_loc
 static const int32_t * *(*funcptr) () = 0;
@@ -13,7 +13,7 @@ const int32_t * * __ctype_tolower_loc ()
 	int reset_flag = __lsb_check_params;
 	const int32_t * * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__ctype_tolower_loc");
+		funcptr = lsb_dlsym(RTLD_NEXT, "__ctype_tolower_loc");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

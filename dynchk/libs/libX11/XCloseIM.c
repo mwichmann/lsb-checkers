@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XCloseIM
 static int(*funcptr) (XIM ) = 0;
@@ -13,11 +13,11 @@ int XCloseIM (XIM arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XCloseIM ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XCloseIM");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XCloseIM()");
+		__lsb_output(4, "XCloseIM()");
 		validate_NULL_TYPETYPE(  arg0, "XCloseIM - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/X.h>
+#include <X11/Xlib.h>
 #undef XSetWindowBackgroundPixmap
 static int(*funcptr) (Display * , Window , Pixmap ) = 0;
 
@@ -14,11 +14,11 @@ int XSetWindowBackgroundPixmap (Display * arg0 , Window arg1 , Pixmap arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSetWindowBackgroundPixmap ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XSetWindowBackgroundPixmap");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSetWindowBackgroundPixmap()");
+		__lsb_output(4, "XSetWindowBackgroundPixmap()");
 		validate_RWaddress( arg0, "XSetWindowBackgroundPixmap - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetWindowBackgroundPixmap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetWindowBackgroundPixmap - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <termios.h>
 #undef tcflush
 static int(*funcptr) (int , int ) = 0;
@@ -13,7 +13,7 @@ int tcflush (int arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "tcflush", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "tcflush", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

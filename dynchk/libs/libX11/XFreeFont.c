@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XFreeFont
 static int(*funcptr) (Display * , XFontStruct * ) = 0;
@@ -13,11 +13,11 @@ int XFreeFont (Display * arg0 , XFontStruct * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XFreeFont ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XFreeFont");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XFreeFont()");
+		__lsb_output(4, "XFreeFont()");
 		validate_RWaddress( arg0, "XFreeFont - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreeFont - arg0");
 		validate_RWaddress( arg1, "XFreeFont - arg1");

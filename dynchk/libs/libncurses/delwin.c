@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef delwin
 static int(*funcptr) (WINDOW * ) = 0;
@@ -13,7 +13,7 @@ int delwin (WINDOW * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "delwin");
+		funcptr = lsb_dlsym(RTLD_NEXT, "delwin");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

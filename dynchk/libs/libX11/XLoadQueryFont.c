@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XLoadQueryFont
 static XFontStruct *(*funcptr) (Display * , const char * ) = 0;
@@ -13,11 +13,11 @@ XFontStruct * XLoadQueryFont (Display * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	XFontStruct * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XLoadQueryFont ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XLoadQueryFont");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XLoadQueryFont()");
+		__lsb_output(4, "XLoadQueryFont()");
 		validate_RWaddress( arg0, "XLoadQueryFont - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XLoadQueryFont - arg0");
 		validate_Rdaddress( arg1, "XLoadQueryFont - arg1");

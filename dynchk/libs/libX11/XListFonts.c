@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XListFonts
 static char * *(*funcptr) (Display * , const char * , int , int * ) = 0;
@@ -13,11 +13,11 @@ char * * XListFonts (Display * arg0 , const char * arg1 , int arg2 , int * arg3 
 	int reset_flag = __lsb_check_params;
 	char * * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XListFonts ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XListFonts");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XListFonts()");
+		__lsb_output(4, "XListFonts()");
 		validate_RWaddress( arg0, "XListFonts - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XListFonts - arg0");
 		validate_Rdaddress( arg1, "XListFonts - arg1");

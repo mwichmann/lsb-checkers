@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceRegisterForProtocolReply
 static int(*funcptr) (char * , char * , char * , int , IcePaVersionRec * , int , char * * , IcePaAuthProc * , IceHostBasedAuthProc , IceProtocolSetupProc , IceProtocolActivateProc , IceIOErrorProc ) = 0;
@@ -13,11 +13,11 @@ int IceRegisterForProtocolReply (char * arg0 , char * arg1 , char * arg2 , int a
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceRegisterForProtocolReply ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceRegisterForProtocolReply");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceRegisterForProtocolReply()");
+		__lsb_output(4, "IceRegisterForProtocolReply()");
 		validate_RWaddress( arg0, "IceRegisterForProtocolReply - arg0");
 		validate_NULL_TYPETYPE(  arg0, "IceRegisterForProtocolReply - arg0");
 		validate_RWaddress( arg1, "IceRegisterForProtocolReply - arg1");

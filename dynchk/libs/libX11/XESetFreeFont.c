@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XESetFreeFont
 static int(*funcptr) () = 0;
@@ -13,11 +13,11 @@ int XESetFreeFont ()
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XESetFreeFont ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XESetFreeFont");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XESetFreeFont()");
+		__lsb_output(4, "XESetFreeFont()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

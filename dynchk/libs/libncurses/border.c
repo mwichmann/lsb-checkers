@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef border
 static int(*funcptr) (chtype , chtype , chtype , chtype , chtype , chtype , chtype , chtype ) = 0;
@@ -13,7 +13,7 @@ int border (chtype arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype arg4 
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "border");
+		funcptr = lsb_dlsym(RTLD_NEXT, "border");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmsInteract
 static void(*funcptr) (SmsConn ) = 0;
@@ -12,7 +12,7 @@ void SmsInteract (SmsConn arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "SmsInteract");
+		funcptr = lsb_dlsym(RTLD_NEXT, "SmsInteract");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

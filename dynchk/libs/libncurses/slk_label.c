@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef slk_label
 static char *(*funcptr) (int ) = 0;
@@ -13,7 +13,7 @@ char * slk_label (int arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "slk_label");
+		funcptr = lsb_dlsym(RTLD_NEXT, "slk_label");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef initscr
 static WINDOW *(*funcptr) () = 0;
@@ -13,7 +13,7 @@ WINDOW * initscr ()
 	int reset_flag = __lsb_check_params;
 	WINDOW * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "initscr");
+		funcptr = lsb_dlsym(RTLD_NEXT, "initscr");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

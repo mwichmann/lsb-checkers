@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XScreenResourceString
 static char *(*funcptr) (Screen * ) = 0;
@@ -13,11 +13,11 @@ char * XScreenResourceString (Screen * arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XScreenResourceString ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XScreenResourceString");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XScreenResourceString()");
+		__lsb_output(4, "XScreenResourceString()");
 		validate_RWaddress( arg0, "XScreenResourceString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XScreenResourceString - arg0");
 	}

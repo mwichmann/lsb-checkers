@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XSetModifierMapping
 static int(*funcptr) (Display * , XModifierKeymap * ) = 0;
@@ -13,11 +13,11 @@ int XSetModifierMapping (Display * arg0 , XModifierKeymap * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSetModifierMapping ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XSetModifierMapping");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSetModifierMapping()");
+		__lsb_output(4, "XSetModifierMapping()");
 		validate_RWaddress( arg0, "XSetModifierMapping - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetModifierMapping - arg0");
 		validate_RWaddress( arg1, "XSetModifierMapping - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XGetErrorDatabaseText
 static int(*funcptr) (Display * , const char * , const char * , const char * , char * , int ) = 0;
@@ -13,11 +13,11 @@ int XGetErrorDatabaseText (Display * arg0 , const char * arg1 , const char * arg
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XGetErrorDatabaseText ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XGetErrorDatabaseText");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XGetErrorDatabaseText()");
+		__lsb_output(4, "XGetErrorDatabaseText()");
 		validate_RWaddress( arg0, "XGetErrorDatabaseText - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetErrorDatabaseText - arg0");
 		validate_Rdaddress( arg1, "XGetErrorDatabaseText - arg1");

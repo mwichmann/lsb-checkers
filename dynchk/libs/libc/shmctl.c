@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <sys/shm.h>
 #undef shmctl
 static int(*funcptr) (int , int , struct shmid_ds * ) = 0;
@@ -13,7 +13,7 @@ int shmctl (int arg0 , int arg1 , struct shmid_ds * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "shmctl", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "shmctl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

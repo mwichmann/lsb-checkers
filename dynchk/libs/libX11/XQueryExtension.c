@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XQueryExtension
 static int(*funcptr) (Display * , const char * , int * , int * , int * ) = 0;
@@ -13,11 +13,11 @@ int XQueryExtension (Display * arg0 , const char * arg1 , int * arg2 , int * arg
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XQueryExtension ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XQueryExtension");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XQueryExtension()");
+		__lsb_output(4, "XQueryExtension()");
 		validate_RWaddress( arg0, "XQueryExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XQueryExtension - arg0");
 		validate_Rdaddress( arg1, "XQueryExtension - arg1");

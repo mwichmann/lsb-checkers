@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <zlib.h>
 #undef compressBound
 static uLong(*funcptr) (uLong ) = 0;
@@ -13,7 +13,7 @@ uLong compressBound (uLong arg0 )
 	int reset_flag = __lsb_check_params;
 	uLong ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "compressBound");
+		funcptr = lsb_dlsym(RTLD_NEXT, "compressBound");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceAllocScratch
 static char *(*funcptr) (IceConn , unsigned long ) = 0;
@@ -13,11 +13,11 @@ char * IceAllocScratch (IceConn arg0 , unsigned long arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceAllocScratch ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceAllocScratch");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceAllocScratch()");
+		__lsb_output(4, "IceAllocScratch()");
 		validate_NULL_TYPETYPE(  arg0, "IceAllocScratch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceAllocScratch - arg1");
 	}

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/extensions/security.h>
 #include <X11/Xauth.h>
 #include <X11/Xlib.h>
@@ -15,11 +15,11 @@ Xauth * XSecurityGenerateAuthorization (Display * arg0 , Xauth * arg1 , unsigned
 	int reset_flag = __lsb_check_params;
 	Xauth * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSecurityGenerateAuthorization ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XSecurityGenerateAuthorization");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSecurityGenerateAuthorization()");
+		__lsb_output(4, "XSecurityGenerateAuthorization()");
 		validate_RWaddress( arg0, "XSecurityGenerateAuthorization - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSecurityGenerateAuthorization - arg0");
 		validate_RWaddress( arg1, "XSecurityGenerateAuthorization - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stdio.h>
 #undef tempnam
 static char *(*funcptr) (const char * , const char * ) = 0;
@@ -13,7 +13,7 @@ char * tempnam (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "tempnam", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "tempnam", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -3,7 +3,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef __fpclassifyl
 static int(*funcptr) (long double ) = 0;
@@ -14,7 +14,7 @@ int __fpclassifyl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__fpclassifyl");
+		funcptr = lsb_dlsym(RTLD_NEXT, "__fpclassifyl");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
@@ -32,7 +32,7 @@ int __fpclassifyl (long double arg0 )
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef __fpclassifyl
 static int(*funcptr) (long double ) = 0;
@@ -43,7 +43,7 @@ int __fpclassifyl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__fpclassifyl");
+		funcptr = lsb_dlsym(RTLD_NEXT, "__fpclassifyl");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
@@ -61,7 +61,7 @@ int __fpclassifyl (long double arg0 )
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef __fpclassifyl
 static int(*funcptr) (long double ) = 0;
@@ -72,7 +72,7 @@ int __fpclassifyl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__fpclassifyl");
+		funcptr = lsb_dlsym(RTLD_NEXT, "__fpclassifyl");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

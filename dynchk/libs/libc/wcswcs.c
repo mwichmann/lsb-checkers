@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stddef.h>
 #include <wchar.h>
 #undef wcswcs
@@ -14,7 +14,7 @@ wchar_t * wcswcs (const wchar_t * arg0 , const wchar_t * arg1 )
 	int reset_flag = __lsb_check_params;
 	wchar_t * ret_value  ;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "wcswcs", "GLIBC_2.1");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "wcswcs", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

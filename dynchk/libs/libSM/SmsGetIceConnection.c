@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/SM/SMlib.h>
 #undef SmsGetIceConnection
 static IceConn(*funcptr) (SmsConn ) = 0;
@@ -13,7 +13,7 @@ IceConn SmsGetIceConnection (SmsConn arg0 )
 	int reset_flag = __lsb_check_params;
 	IceConn ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "SmsGetIceConnection");
+		funcptr = lsb_dlsym(RTLD_NEXT, "SmsGetIceConnection");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

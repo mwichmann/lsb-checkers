@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XDisplayOfIM
 static Display *(*funcptr) (XIM ) = 0;
@@ -13,11 +13,11 @@ Display * XDisplayOfIM (XIM arg0 )
 	int reset_flag = __lsb_check_params;
 	Display * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XDisplayOfIM ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XDisplayOfIM");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XDisplayOfIM()");
+		__lsb_output(4, "XDisplayOfIM()");
 		validate_NULL_TYPETYPE(  arg0, "XDisplayOfIM - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <stddef.h>
+#include "../../misc/lsb_dlsym.h"
 #include <stdlib.h>
+#include <stddef.h>
 #undef qsort
 static void(*funcptr) (void * , size_t , size_t , const __compar_fn_t ) = 0;
 
@@ -13,7 +13,7 @@ void qsort (void * arg0 , size_t arg1 , size_t arg2 , const __compar_fn_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.0");
+		funcptr = lsb_dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

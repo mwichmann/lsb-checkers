@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/Xlib.h>
 #undef XParseGeometry
 static int(*funcptr) (const char * , int * , int * , unsigned int * , unsigned int * ) = 0;
@@ -13,11 +13,11 @@ int XParseGeometry (const char * arg0 , int * arg1 , int * arg2 , unsigned int *
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XParseGeometry ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "XParseGeometry");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XParseGeometry()");
+		__lsb_output(4, "XParseGeometry()");
 		validate_Rdaddress( arg0, "XParseGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XParseGeometry - arg0");
 		validate_RWaddress( arg1, "XParseGeometry - arg1");

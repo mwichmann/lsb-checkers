@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <math.h>
 #undef expm1l
 static long double(*funcptr) (long double ) = 0;
@@ -13,7 +13,7 @@ long double expm1l (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "expm1l");
+		funcptr = lsb_dlsym(RTLD_NEXT, "expm1l");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <X11/ICE/ICElib.h>
 #undef IceConnectionStatus
 static IceConnectStatus(*funcptr) (IceConn ) = 0;
@@ -13,11 +13,11 @@ IceConnectStatus IceConnectionStatus (IceConn arg0 )
 	int reset_flag = __lsb_check_params;
 	IceConnectStatus ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " IceConnectionStatus ");
+		funcptr = lsb_dlsym(RTLD_NEXT, "IceConnectionStatus");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "IceConnectionStatus()");
+		__lsb_output(4, "IceConnectionStatus()");
 		validate_NULL_TYPETYPE(  arg0, "IceConnectionStatus - arg0");
 	}
 	ret_value = funcptr(arg0);

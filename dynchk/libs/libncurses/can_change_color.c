@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "../../misc/lsb_dlsym.h"
 #include <curses.h>
 #undef can_change_color
 static bool(*funcptr) () = 0;
@@ -13,7 +13,7 @@ bool can_change_color ()
 	int reset_flag = __lsb_check_params;
 	bool ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "can_change_color");
+		funcptr = lsb_dlsym(RTLD_NEXT, "can_change_color");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
