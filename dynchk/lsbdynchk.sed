@@ -1,4 +1,4 @@
-#1/bin/bash
+#!/bin/bash
 while getopts f:l: opt
 do
   case $opt in
@@ -12,6 +12,7 @@ do
   esac
 done
 shift `expr $OPTIND - 1`
+
 
 export LD_PRELOAD=@LIBDIR@/liblsbdynchk.so.1
 exec $*
