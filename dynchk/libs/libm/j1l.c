@@ -13,11 +13,11 @@ long double j1l (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "j1l");
+		funcptr = dlvsym(RTLD_NEXT, "j1l", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "j1l()");
+		__lsb_output(4, "j1l()");
 		validate_NULL_TYPETYPE(  arg0, "j1l - arg0");
 	}
 	ret_value = funcptr(arg0);

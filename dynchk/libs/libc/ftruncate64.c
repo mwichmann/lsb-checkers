@@ -13,11 +13,11 @@ int ftruncate64 (int arg0 , off64_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ftruncate64");
+		funcptr = dlvsym(RTLD_NEXT, "ftruncate64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ftruncate64()");
+		__lsb_output(4, "ftruncate64()");
 		validate_NULL_TYPETYPE(  arg0, "ftruncate64 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ftruncate64 - arg1");
 	}

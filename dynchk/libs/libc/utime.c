@@ -13,11 +13,11 @@ int utime (const char * arg0 , const struct utimbuf * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "utime");
+		funcptr = dlvsym(RTLD_NEXT, "utime", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "utime()");
+		__lsb_output(4, "utime()");
 		validate_Rdaddress( arg0, "utime - arg0");
 		validate_NULL_TYPETYPE(  arg0, "utime - arg0");
 		validate_Rdaddress( arg1, "utime - arg1");

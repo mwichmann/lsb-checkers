@@ -17,7 +17,7 @@ int slk_touch ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "slk_touch()");
+		__lsb_output(4, "slk_touch()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

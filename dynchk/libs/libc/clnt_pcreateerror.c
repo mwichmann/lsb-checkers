@@ -12,11 +12,11 @@ void clnt_pcreateerror (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clnt_pcreateerror");
+		funcptr = dlvsym(RTLD_NEXT, "clnt_pcreateerror", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clnt_pcreateerror()");
+		__lsb_output(4, "clnt_pcreateerror()");
 		validate_Rdaddress( arg0, "clnt_pcreateerror - arg0");
 		validate_NULL_TYPETYPE(  arg0, "clnt_pcreateerror - arg0");
 	}

@@ -14,11 +14,11 @@ unsigned int ualarm (useconds_t arg0 , useconds_t arg1 )
 	int reset_flag = __lsb_check_params;
 	unsigned int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ualarm");
+		funcptr = dlvsym(RTLD_NEXT, "ualarm", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ualarm()");
+		__lsb_output(4, "ualarm()");
 		validate_NULL_TYPETYPE(  arg0, "ualarm - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ualarm - arg1");
 	}

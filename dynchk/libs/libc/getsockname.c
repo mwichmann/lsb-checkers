@@ -13,11 +13,11 @@ int getsockname (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getsockname");
+		funcptr = dlvsym(RTLD_NEXT, "getsockname", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getsockname()");
+		__lsb_output(4, "getsockname()");
 		validate_filedescriptor(  arg0, "getsockname - arg0");
 		validate_RWaddress( arg1, "getsockname - arg1");
 		validate_RWaddress(  arg1, "getsockname - arg1");

@@ -13,11 +13,11 @@ long double pow10l (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pow10l");
+		funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "pow10l()");
+		__lsb_output(4, "pow10l()");
 		validate_NULL_TYPETYPE(  arg0, "pow10l - arg0");
 	}
 	ret_value = funcptr(arg0);

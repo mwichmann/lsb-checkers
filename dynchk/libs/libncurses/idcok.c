@@ -16,7 +16,7 @@ void idcok (WINDOW * arg0 , bool arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "idcok()");
+		__lsb_output(4, "idcok()");
 		validate_RWaddress( arg0, "idcok - arg0");
 		validate_NULL_TYPETYPE(  arg0, "idcok - arg0");
 		validate_NULL_TYPETYPE(  arg1, "idcok - arg1");

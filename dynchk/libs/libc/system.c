@@ -13,11 +13,11 @@ int system (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "system");
+		funcptr = dlvsym(RTLD_NEXT, "system", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "system()");
+		__lsb_output(4, "system()");
 		validate_Rdaddress( arg0, "system - arg0");
 		validate_NULL_TYPETYPE(  arg0, "system - arg0");
 	}

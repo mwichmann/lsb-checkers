@@ -12,11 +12,11 @@ void seekdir (DIR * arg0 , long arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "seekdir");
+		funcptr = dlvsym(RTLD_NEXT, "seekdir", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "seekdir()");
+		__lsb_output(4, "seekdir()");
 		validate_RWaddress( arg0, "seekdir - arg0");
 		validate_NULL_TYPETYPE(  arg0, "seekdir - arg0");
 		validate_NULL_TYPETYPE(  arg1, "seekdir - arg1");

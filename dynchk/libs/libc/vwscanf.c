@@ -15,11 +15,11 @@ int vwscanf (const wchar_t * arg0 , va_list arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vwscanf");
+		funcptr = dlvsym(RTLD_NEXT, "vwscanf", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "vwscanf()");
+		__lsb_output(4, "vwscanf()");
 		validate_Rdaddress( arg0, "vwscanf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vwscanf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "vwscanf - arg1");

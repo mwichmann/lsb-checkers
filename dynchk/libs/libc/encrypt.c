@@ -12,11 +12,11 @@ void encrypt (char * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "encrypt");
+		funcptr = dlvsym(RTLD_NEXT, "encrypt", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "encrypt()");
+		__lsb_output(4, "encrypt()");
 		validate_RWaddress( arg0, "encrypt - arg0");
 		validate_NULL_TYPETYPE(  arg0, "encrypt - arg0");
 		validate_NULL_TYPETYPE(  arg1, "encrypt - arg1");

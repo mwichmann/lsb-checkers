@@ -17,7 +17,7 @@ SCREEN * set_term (SCREEN * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "set_term()");
+		__lsb_output(4, "set_term()");
 		validate_RWaddress( arg0, "set_term - arg0");
 		validate_NULL_TYPETYPE(  arg0, "set_term - arg0");
 	}

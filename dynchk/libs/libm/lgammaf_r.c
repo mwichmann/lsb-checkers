@@ -13,11 +13,11 @@ float lgammaf_r (float arg0 , int * arg1 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lgammaf_r");
+		funcptr = dlvsym(RTLD_NEXT, "lgammaf_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "lgammaf_r()");
+		__lsb_output(4, "lgammaf_r()");
 		validate_NULL_TYPETYPE(  arg0, "lgammaf_r - arg0");
 		validate_RWaddress( arg1, "lgammaf_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "lgammaf_r - arg1");

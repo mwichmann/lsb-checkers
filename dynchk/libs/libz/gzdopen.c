@@ -17,7 +17,7 @@ gzFile gzdopen (int arg0 , const char * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gzdopen()");
+		__lsb_output(4, "gzdopen()");
 		validate_NULL_TYPETYPE(  arg0, "gzdopen - arg0");
 		validate_Rdaddress( arg1, "gzdopen - arg1");
 		validate_NULL_TYPETYPE(  arg1, "gzdopen - arg1");

@@ -15,11 +15,11 @@ ssize_t pwrite (int arg0 , const void * arg1 , size_t arg2 , off_t arg3 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pwrite");
+		funcptr = dlvsym(RTLD_NEXT, "pwrite", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "pwrite()");
+		__lsb_output(4, "pwrite()");
 		validate_NULL_TYPETYPE(  arg0, "pwrite - arg0");
 		validate_Rdaddress( arg1, "pwrite - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pwrite - arg1");

@@ -17,7 +17,7 @@ char * dcngettext (const char * arg0 , const char * arg1 , const char * arg2 , u
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "dcngettext()");
+		__lsb_output(4, "dcngettext()");
 		validate_Rdaddress( arg0, "dcngettext - arg0");
 		validate_NULL_TYPETYPE(  arg0, "dcngettext - arg0");
 		validate_Rdaddress( arg1, "dcngettext - arg1");

@@ -17,7 +17,7 @@ int init_pair (short arg0 , short arg1 , short arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "init_pair()");
+		__lsb_output(4, "init_pair()");
 		validate_NULL_TYPETYPE(  arg0, "init_pair - arg0");
 		validate_NULL_TYPETYPE(  arg1, "init_pair - arg1");
 		validate_NULL_TYPETYPE(  arg2, "init_pair - arg2");

@@ -14,11 +14,11 @@ struct tm * gmtime (const time_t * arg0 )
 	int reset_flag = __lsb_check_params;
 	struct tm * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gmtime");
+		funcptr = dlvsym(RTLD_NEXT, "gmtime", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gmtime()");
+		__lsb_output(4, "gmtime()");
 		validate_Rdaddress( arg0, "gmtime - arg0");
 		validate_NULL_TYPETYPE(  arg0, "gmtime - arg0");
 	}

@@ -13,11 +13,11 @@ void * shmat (int arg0 , const void * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "shmat");
+		funcptr = dlvsym(RTLD_NEXT, "shmat", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "shmat()");
+		__lsb_output(4, "shmat()");
 		validate_NULL_TYPETYPE(  arg0, "shmat - arg0");
 		validate_Rdaddress( arg1, "shmat - arg1");
 		validate_NULL_TYPETYPE(  arg1, "shmat - arg1");

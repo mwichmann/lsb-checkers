@@ -13,11 +13,11 @@ int __getpagesize ()
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__getpagesize");
+		funcptr = dlvsym(RTLD_NEXT, "__getpagesize", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__getpagesize()");
+		__lsb_output(4, "__getpagesize()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

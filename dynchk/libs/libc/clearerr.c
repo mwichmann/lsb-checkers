@@ -12,11 +12,11 @@ void clearerr (FILE * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clearerr");
+		funcptr = dlvsym(RTLD_NEXT, "clearerr", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clearerr()");
+		__lsb_output(4, "clearerr()");
 		validate_RWaddress( arg0, "clearerr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "clearerr - arg0");
 	}

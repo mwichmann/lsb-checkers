@@ -13,11 +13,11 @@ double copysign (double arg0 , double arg1 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "copysign");
+		funcptr = dlvsym(RTLD_NEXT, "copysign", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "copysign()");
+		__lsb_output(4, "copysign()");
 		validate_NULL_TYPETYPE(  arg0, "copysign - arg0");
 		validate_NULL_TYPETYPE(  arg1, "copysign - arg1");
 	}

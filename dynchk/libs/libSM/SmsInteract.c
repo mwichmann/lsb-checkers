@@ -16,7 +16,7 @@ void SmsInteract (SmsConn arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmsInteract()");
+		__lsb_output(4, "SmsInteract()");
 		validate_NULL_TYPETYPE(  arg0, "SmsInteract - arg0");
 	}
 	funcptr(arg0);

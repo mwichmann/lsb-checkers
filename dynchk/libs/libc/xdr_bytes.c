@@ -14,11 +14,11 @@ bool_t xdr_bytes (XDR * arg0 , char * * arg1 , u_int * arg2 , u_int arg3 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_bytes");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_bytes", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdr_bytes()");
+		__lsb_output(4, "xdr_bytes()");
 		validate_RWaddress( arg0, "xdr_bytes - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_bytes - arg0");
 		validate_RWaddress( arg1, "xdr_bytes - arg1");

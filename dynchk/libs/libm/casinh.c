@@ -13,11 +13,11 @@ double complex casinh (double complex arg0 )
 	int reset_flag = __lsb_check_params;
 	double complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "casinh");
+		funcptr = dlvsym(RTLD_NEXT, "casinh", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "casinh()");
+		__lsb_output(4, "casinh()");
 		validate_NULL_TYPETYPE(  arg0, "casinh - arg0");
 	}
 	ret_value = funcptr(arg0);

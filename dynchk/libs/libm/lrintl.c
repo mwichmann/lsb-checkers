@@ -13,11 +13,11 @@ long lrintl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lrintl");
+		funcptr = dlvsym(RTLD_NEXT, "lrintl", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "lrintl()");
+		__lsb_output(4, "lrintl()");
 		validate_NULL_TYPETYPE(  arg0, "lrintl - arg0");
 	}
 	ret_value = funcptr(arg0);

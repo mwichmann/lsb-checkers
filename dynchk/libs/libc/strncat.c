@@ -14,11 +14,11 @@ char * strncat (char * arg0 , const char * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strncat");
+		funcptr = dlvsym(RTLD_NEXT, "strncat", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strncat()");
+		__lsb_output(4, "strncat()");
 		validate_RWaddress( arg0, "strncat - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strncat - arg0");
 		validate_RWaddress( arg1, "strncat - arg1");

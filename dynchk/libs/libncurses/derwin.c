@@ -17,7 +17,7 @@ WINDOW * derwin (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , int arg4 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "derwin()");
+		__lsb_output(4, "derwin()");
 		validate_RWaddress( arg0, "derwin - arg0");
 		validate_NULL_TYPETYPE(  arg0, "derwin - arg0");
 		validate_NULL_TYPETYPE(  arg1, "derwin - arg1");

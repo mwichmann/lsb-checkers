@@ -17,7 +17,7 @@ int SmcGetProperties (SmcConn arg0 , SmcPropReplyProc arg1 , SmPointer arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmcGetProperties()");
+		__lsb_output(4, "SmcGetProperties()");
 		validate_NULL_TYPETYPE(  arg0, "SmcGetProperties - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcGetProperties - arg1");
 		validate_NULL_TYPETYPE(  arg2, "SmcGetProperties - arg2");

@@ -13,11 +13,11 @@ int rename (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "rename");
+		funcptr = dlvsym(RTLD_NEXT, "rename", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "rename()");
+		__lsb_output(4, "rename()");
 		validate_Rdaddress( arg0, "rename - arg0");
 		validate_NULL_TYPETYPE(  arg0, "rename - arg0");
 		validate_Rdaddress( arg1, "rename - arg1");

@@ -17,7 +17,7 @@ int chgat (int arg0 , attr_t arg1 , short arg2 , const void * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "chgat()");
+		__lsb_output(4, "chgat()");
 		validate_NULL_TYPETYPE(  arg0, "chgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "chgat - arg1");
 		validate_NULL_TYPETYPE(  arg2, "chgat - arg2");

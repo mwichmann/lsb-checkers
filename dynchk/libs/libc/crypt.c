@@ -13,11 +13,11 @@ char * crypt (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "crypt");
+		funcptr = dlvsym(RTLD_NEXT, "crypt", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "crypt()");
+		__lsb_output(4, "crypt()");
 		validate_RWaddress( arg0, "crypt - arg0");
 		validate_NULL_TYPETYPE(  arg0, "crypt - arg0");
 		validate_RWaddress( arg1, "crypt - arg1");

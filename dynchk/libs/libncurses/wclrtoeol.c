@@ -17,7 +17,7 @@ int wclrtoeol (WINDOW * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wclrtoeol()");
+		__lsb_output(4, "wclrtoeol()");
 		validate_RWaddress( arg0, "wclrtoeol - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wclrtoeol - arg0");
 	}

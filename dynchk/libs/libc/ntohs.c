@@ -14,11 +14,11 @@ uint16_t ntohs (uint16_t arg0 )
 	int reset_flag = __lsb_check_params;
 	uint16_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ntohs");
+		funcptr = dlvsym(RTLD_NEXT, "ntohs", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ntohs()");
+		__lsb_output(4, "ntohs()");
 		validate_NULL_TYPETYPE(  arg0, "ntohs - arg0");
 	}
 	ret_value = funcptr(arg0);

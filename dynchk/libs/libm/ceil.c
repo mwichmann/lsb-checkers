@@ -13,11 +13,11 @@ double ceil (double arg0 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ceil");
+		funcptr = dlvsym(RTLD_NEXT, "ceil", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ceil()");
+		__lsb_output(4, "ceil()");
 		validate_NULL_TYPETYPE(  arg0, "ceil - arg0");
 	}
 	ret_value = funcptr(arg0);

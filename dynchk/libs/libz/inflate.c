@@ -17,7 +17,7 @@ int inflate (z_streamp arg0 , int arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "inflate()");
+		__lsb_output(4, "inflate()");
 		validate_NULL_TYPETYPE(  arg0, "inflate - arg0");
 		validate_NULL_TYPETYPE(  arg1, "inflate - arg1");
 	}

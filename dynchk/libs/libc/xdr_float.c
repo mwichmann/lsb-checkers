@@ -13,11 +13,11 @@ bool_t xdr_float (XDR * arg0 , float * arg1 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_float");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_float", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdr_float()");
+		__lsb_output(4, "xdr_float()");
 		validate_RWaddress( arg0, "xdr_float - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_float - arg0");
 		validate_RWaddress( arg1, "xdr_float - arg1");

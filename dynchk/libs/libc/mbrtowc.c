@@ -15,11 +15,11 @@ size_t mbrtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 , mbstate_t * a
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mbrtowc");
+		funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mbrtowc()");
+		__lsb_output(4, "mbrtowc()");
 		if( arg0 ) {
 		validate_RWaddress( arg0, "mbrtowc - arg0");
 		}

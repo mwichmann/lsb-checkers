@@ -13,11 +13,11 @@ char * setlocale (int arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setlocale");
+		funcptr = dlvsym(RTLD_NEXT, "setlocale", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setlocale()");
+		__lsb_output(4, "setlocale()");
 		validate_NULL_TYPETYPE(  arg0, "setlocale - arg0");
 		if( arg1 ) {
 		validate_Rdaddress( arg1, "setlocale - arg1");

@@ -17,7 +17,7 @@ int SmcInteractRequest (SmcConn arg0 , int arg1 , SmcInteractProc arg2 , SmPoint
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmcInteractRequest()");
+		__lsb_output(4, "SmcInteractRequest()");
 		validate_NULL_TYPETYPE(  arg0, "SmcInteractRequest - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcInteractRequest - arg1");
 		validate_NULL_TYPETYPE(  arg2, "SmcInteractRequest - arg2");

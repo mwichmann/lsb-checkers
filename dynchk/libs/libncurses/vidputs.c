@@ -17,7 +17,7 @@ int vidputs (chtype arg0 , int(* arg1 )(int))
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "vidputs()");
+		__lsb_output(4, "vidputs()");
 		validate_NULL_TYPETYPE(  arg0, "vidputs - arg0");
 		validate_Rdaddress( arg1, "vidputs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vidputs - arg1");

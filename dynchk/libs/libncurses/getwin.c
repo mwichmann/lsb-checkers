@@ -18,7 +18,7 @@ WINDOW * getwin (FILE * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getwin()");
+		__lsb_output(4, "getwin()");
 		validate_RWaddress( arg0, "getwin - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getwin - arg0");
 	}

@@ -14,11 +14,11 @@ uint32_t htonl (uint32_t arg0 )
 	int reset_flag = __lsb_check_params;
 	uint32_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "htonl");
+		funcptr = dlvsym(RTLD_NEXT, "htonl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "htonl()");
+		__lsb_output(4, "htonl()");
 		validate_NULL_TYPETYPE(  arg0, "htonl - arg0");
 	}
 	ret_value = funcptr(arg0);

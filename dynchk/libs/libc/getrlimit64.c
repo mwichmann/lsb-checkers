@@ -14,11 +14,11 @@ int getrlimit64 (id_t arg0 , struct rlimit64 * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getrlimit64");
+		funcptr = dlvsym(RTLD_NEXT, "getrlimit64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getrlimit64()");
+		__lsb_output(4, "getrlimit64()");
 		validate_NULL_TYPETYPE(  arg0, "getrlimit64 - arg0");
 		validate_RWaddress( arg1, "getrlimit64 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getrlimit64 - arg1");

@@ -17,7 +17,7 @@ int mvgetnstr (int arg0 , int arg1 , char * arg2 , int arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvgetnstr()");
+		__lsb_output(4, "mvgetnstr()");
 		validate_NULL_TYPETYPE(  arg0, "mvgetnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvgetnstr - arg1");
 		validate_RWaddress( arg2, "mvgetnstr - arg2");

@@ -17,7 +17,7 @@ int wclear (WINDOW * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wclear()");
+		__lsb_output(4, "wclear()");
 		validate_RWaddress( arg0, "wclear - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wclear - arg0");
 	}

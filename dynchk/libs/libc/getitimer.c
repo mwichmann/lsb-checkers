@@ -13,11 +13,11 @@ int getitimer (__itimer_which_t arg0 , struct itimerval * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getitimer");
+		funcptr = dlvsym(RTLD_NEXT, "getitimer", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getitimer()");
+		__lsb_output(4, "getitimer()");
 		validate_NULL_TYPETYPE(  arg0, "getitimer - arg0");
 		validate_RWaddress( arg1, "getitimer - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getitimer - arg1");

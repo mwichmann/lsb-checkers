@@ -13,11 +13,11 @@ int cfsetospeed (struct termios * arg0 , speed_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "cfsetospeed");
+		funcptr = dlvsym(RTLD_NEXT, "cfsetospeed", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "cfsetospeed()");
+		__lsb_output(4, "cfsetospeed()");
 		validate_RWaddress( arg0, "cfsetospeed - arg0");
 		validate_NULL_TYPETYPE(  arg0, "cfsetospeed - arg0");
 		validate_NULL_TYPETYPE(  arg1, "cfsetospeed - arg1");

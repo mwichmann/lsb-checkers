@@ -13,11 +13,11 @@ float truncf (float arg0 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "truncf");
+		funcptr = dlvsym(RTLD_NEXT, "truncf", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "truncf()");
+		__lsb_output(4, "truncf()");
 		validate_NULL_TYPETYPE(  arg0, "truncf - arg0");
 	}
 	ret_value = funcptr(arg0);

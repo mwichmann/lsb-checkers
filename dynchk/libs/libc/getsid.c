@@ -14,11 +14,11 @@ pid_t getsid (pid_t arg0 )
 	int reset_flag = __lsb_check_params;
 	pid_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getsid");
+		funcptr = dlvsym(RTLD_NEXT, "getsid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getsid()");
+		__lsb_output(4, "getsid()");
 		validate_NULL_TYPETYPE(  arg0, "getsid - arg0");
 	}
 	ret_value = funcptr(arg0);

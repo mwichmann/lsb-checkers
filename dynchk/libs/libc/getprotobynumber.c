@@ -13,11 +13,11 @@ struct protoent * getprotobynumber (int arg0 )
 	int reset_flag = __lsb_check_params;
 	struct protoent * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getprotobynumber");
+		funcptr = dlvsym(RTLD_NEXT, "getprotobynumber", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getprotobynumber()");
+		__lsb_output(4, "getprotobynumber()");
 		validate_NULL_TYPETYPE(  arg0, "getprotobynumber - arg0");
 	}
 	ret_value = funcptr(arg0);

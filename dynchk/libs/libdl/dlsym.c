@@ -10,18 +10,21 @@ extern void *_dl_sym (void * , const char * );
 #if 0
 void * dlsym (void * arg0 , const char * arg1 )
 {
+    int reset_flag = __lsb_check_params;
+    int ret_value;
 	if(!funcptr)
 		funcptr = _dl_sym;
-	validate_NULL_TYPETYPE(arg0, "dlsym");
-	validate_NULL_TYPETYPE(arg1, "dlsym");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+        {
+	    __lsb_check_params=0;
+	    __lsb_output(6, "dlsym()");
+	    validate_NULL_TYPETYPE(arg0, "dlsym");
+	    validate_NULL_TYPETYPE(arg1, "dlsym");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+        return ret_value;
 }
 #endif
 
-void * __lsb_dlsym (void * arg0 , const char * arg1 )
-{
-	if(!funcptr)
-		funcptr = _dl_sym;
-	return funcptr(arg0, arg1);
-}
 

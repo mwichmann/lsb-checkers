@@ -13,11 +13,11 @@ int ilogb (double arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ilogb");
+		funcptr = dlvsym(RTLD_NEXT, "ilogb", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ilogb()");
+		__lsb_output(4, "ilogb()");
 		validate_NULL_TYPETYPE(  arg0, "ilogb - arg0");
 	}
 	ret_value = funcptr(arg0);

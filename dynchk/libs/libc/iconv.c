@@ -14,11 +14,11 @@ size_t iconv (iconv_t arg0 , char * * arg1 , size_t * arg2 , char * * arg3 , siz
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "iconv");
+		funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "iconv()");
+		__lsb_output(4, "iconv()");
 		validate_NULL_TYPETYPE(  arg0, "iconv - arg0");
 		validate_RWaddress( arg1, "iconv - arg1");
 		validate_NULL_TYPETYPE(  arg1, "iconv - arg1");

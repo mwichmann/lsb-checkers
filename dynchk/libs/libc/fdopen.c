@@ -13,11 +13,11 @@ FILE * fdopen (int arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	FILE * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fdopen");
+		funcptr = dlvsym(RTLD_NEXT, "fdopen", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fdopen()");
+		__lsb_output(4, "fdopen()");
 		validate_NULL_TYPETYPE(  arg0, "fdopen - arg0");
 		validate_Rdaddress( arg1, "fdopen - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fdopen - arg1");

@@ -14,11 +14,11 @@ ssize_t readv (int arg0 , const struct iovec * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "readv");
+		funcptr = dlvsym(RTLD_NEXT, "readv", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "readv()");
+		__lsb_output(4, "readv()");
 		validate_NULL_TYPETYPE(  arg0, "readv - arg0");
 		validate_Rdaddress( arg1, "readv - arg1");
 		validate_NULL_TYPETYPE(  arg1, "readv - arg1");

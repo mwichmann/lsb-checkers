@@ -14,11 +14,11 @@ int sigqueue (pid_t arg0 , int arg1 , const union sigval arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigqueue");
+		funcptr = dlvsym(RTLD_NEXT, "sigqueue", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigqueue()");
+		__lsb_output(4, "sigqueue()");
 		validate_NULL_TYPETYPE(  arg0, "sigqueue - arg0");
 		validate_NULL_TYPETYPE(  arg1, "sigqueue - arg1");
 		validate_NULL_TYPETYPE(  arg2, "sigqueue - arg2");

@@ -12,11 +12,11 @@ void globfree (glob_t * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "globfree");
+		funcptr = dlvsym(RTLD_NEXT, "globfree", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "globfree()");
+		__lsb_output(4, "globfree()");
 		validate_RWaddress( arg0, "globfree - arg0");
 		validate_NULL_TYPETYPE(  arg0, "globfree - arg0");
 	}

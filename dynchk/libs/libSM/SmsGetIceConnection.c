@@ -17,7 +17,7 @@ IceConn SmsGetIceConnection (SmsConn arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmsGetIceConnection()");
+		__lsb_output(4, "SmsGetIceConnection()");
 		validate_NULL_TYPETYPE(  arg0, "SmsGetIceConnection - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -17,7 +17,7 @@ bool has_ic ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "has_ic()");
+		__lsb_output(4, "has_ic()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -21,7 +21,7 @@ int open64(const char *pathname, int flags, ...)
 	mode = va_arg(args, mode_t);
 
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "open64");
+		funcptr = dlvsym(RTLD_NEXT, "open64", "GLIBC_2.1");
 
 	if(__lsb_check_params)
 	{

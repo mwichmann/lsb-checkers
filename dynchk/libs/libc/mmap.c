@@ -15,7 +15,7 @@ void * mmap (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off_t 
 	int reset_flag = __lsb_check_params;
 
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mmap");
+		funcptr = dlvsym(RTLD_NEXT, "mmap", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

@@ -13,11 +13,11 @@ long long llabs (long long arg0 )
 	int reset_flag = __lsb_check_params;
 	long long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "llabs");
+		funcptr = dlvsym(RTLD_NEXT, "llabs", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "llabs()");
+		__lsb_output(4, "llabs()");
 		validate_NULL_TYPETYPE(  arg0, "llabs - arg0");
 	}
 	ret_value = funcptr(arg0);

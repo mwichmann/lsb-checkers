@@ -20,7 +20,7 @@ int printf(const char *format, ...)
 	va_start(args, format);
 
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vprintf");
+		funcptr = dlvsym(RTLD_NEXT, "vprintf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;

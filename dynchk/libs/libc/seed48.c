@@ -13,11 +13,11 @@ unsigned short * seed48 (unsigned short arg0 [3])
 	int reset_flag = __lsb_check_params;
 	unsigned short * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "seed48");
+		funcptr = dlvsym(RTLD_NEXT, "seed48", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "seed48()");
+		__lsb_output(4, "seed48()");
 		validate_NULL_TYPETYPE(  arg0, "seed48 - arg0");
 	}
 	ret_value = funcptr(arg0);

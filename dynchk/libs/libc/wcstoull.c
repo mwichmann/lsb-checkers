@@ -14,11 +14,11 @@ unsigned long long wcstoull (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 
 	int reset_flag = __lsb_check_params;
 	unsigned long long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcstoull");
+		funcptr = dlvsym(RTLD_NEXT, "wcstoull", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcstoull()");
+		__lsb_output(4, "wcstoull()");
 		validate_Rdaddress( arg0, "wcstoull - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstoull - arg0");
 		validate_RWaddress( arg1, "wcstoull - arg1");

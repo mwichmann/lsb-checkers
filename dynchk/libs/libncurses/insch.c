@@ -17,7 +17,7 @@ int insch (chtype arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "insch()");
+		__lsb_output(4, "insch()");
 		validate_NULL_TYPETYPE(  arg0, "insch - arg0");
 	}
 	ret_value = funcptr(arg0);

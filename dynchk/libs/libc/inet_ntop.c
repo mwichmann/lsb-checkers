@@ -18,7 +18,7 @@ const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , socklen_t a
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "inet_ntop()");
+		__lsb_output(4, "inet_ntop()");
 		validate_NULL_TYPETYPE(  arg0, "inet_ntop - arg0");
 		validate_Rdaddress( arg1, "inet_ntop - arg1");
 		validate_NULL_TYPETYPE(  arg1, "inet_ntop - arg1");

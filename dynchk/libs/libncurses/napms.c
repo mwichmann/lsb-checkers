@@ -17,7 +17,7 @@ int napms (int arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "napms()");
+		__lsb_output(4, "napms()");
 		validate_NULL_TYPETYPE(  arg0, "napms - arg0");
 	}
 	ret_value = funcptr(arg0);

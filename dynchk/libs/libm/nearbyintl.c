@@ -13,11 +13,11 @@ long double nearbyintl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nearbyintl");
+		funcptr = dlvsym(RTLD_NEXT, "nearbyintl", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "nearbyintl()");
+		__lsb_output(4, "nearbyintl()");
 		validate_NULL_TYPETYPE(  arg0, "nearbyintl - arg0");
 	}
 	ret_value = funcptr(arg0);

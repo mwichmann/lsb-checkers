@@ -17,7 +17,7 @@ int pam_authenticate (pam_handle_t * arg0 , int arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "pam_authenticate()");
+		__lsb_output(4, "pam_authenticate()");
 		validate_RWaddress( arg0, "pam_authenticate - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pam_authenticate - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pam_authenticate - arg1");

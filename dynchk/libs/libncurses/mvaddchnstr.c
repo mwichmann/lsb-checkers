@@ -17,7 +17,7 @@ int mvaddchnstr (int arg0 , int arg1 , const chtype * arg2 , int arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvaddchnstr()");
+		__lsb_output(4, "mvaddchnstr()");
 		validate_NULL_TYPETYPE(  arg0, "mvaddchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvaddchnstr - arg1");
 		validate_Rdaddress( arg2, "mvaddchnstr - arg2");

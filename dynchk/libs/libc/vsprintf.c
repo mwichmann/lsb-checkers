@@ -14,11 +14,11 @@ int vsprintf (char * arg0 , const char * arg1 , va_list arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vsprintf");
+		funcptr = dlvsym(RTLD_NEXT, "vsprintf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "vsprintf()");
+		__lsb_output(4, "vsprintf()");
 		validate_RWaddress( arg0, "vsprintf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vsprintf - arg0");
 		validate_Rdaddress( arg1, "vsprintf - arg1");

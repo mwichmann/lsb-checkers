@@ -14,11 +14,11 @@ int memcmp (const void * arg0 , const void * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "memcmp");
+		funcptr = dlvsym(RTLD_NEXT, "memcmp", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "memcmp()");
+		__lsb_output(4, "memcmp()");
 		validate_RWaddress( arg0, "memcmp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "memcmp - arg0");
 		validate_RWaddress( arg1, "memcmp - arg1");

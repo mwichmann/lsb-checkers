@@ -14,11 +14,11 @@ int posix_memalign (void * * arg0 , size_t arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "posix_memalign");
+		funcptr = dlvsym(RTLD_NEXT, "posix_memalign", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "posix_memalign()");
+		__lsb_output(4, "posix_memalign()");
 		validate_RWaddress( arg0, "posix_memalign - arg0");
 		validate_NULL_TYPETYPE(  arg0, "posix_memalign - arg0");
 		validate_NULL_TYPETYPE(  arg1, "posix_memalign - arg1");

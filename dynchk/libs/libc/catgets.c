@@ -13,11 +13,11 @@ char * catgets (nl_catd arg0 , int arg1 , int arg2 , const char * arg3 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "catgets");
+		funcptr = dlvsym(RTLD_NEXT, "catgets", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "catgets()");
+		__lsb_output(4, "catgets()");
 		validate_NULL_TYPETYPE(  arg0, "catgets - arg0");
 		validate_NULL_TYPETYPE(  arg1, "catgets - arg1");
 		validate_NULL_TYPETYPE(  arg2, "catgets - arg2");

@@ -14,11 +14,11 @@ int initgroups (const char * arg0 , gid_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "initgroups");
+		funcptr = dlvsym(RTLD_NEXT, "initgroups", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "initgroups()");
+		__lsb_output(4, "initgroups()");
 		validate_Rdaddress( arg0, "initgroups - arg0");
 		validate_NULL_TYPETYPE(  arg0, "initgroups - arg0");
 		validate_NULL_TYPETYPE(  arg1, "initgroups - arg1");

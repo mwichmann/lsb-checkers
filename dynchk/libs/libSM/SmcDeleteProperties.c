@@ -16,7 +16,7 @@ void SmcDeleteProperties (SmcConn arg0 , int arg1 , char * * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmcDeleteProperties()");
+		__lsb_output(4, "SmcDeleteProperties()");
 		validate_NULL_TYPETYPE(  arg0, "SmcDeleteProperties - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcDeleteProperties - arg1");
 		validate_RWaddress( arg2, "SmcDeleteProperties - arg2");

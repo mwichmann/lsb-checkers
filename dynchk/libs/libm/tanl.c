@@ -13,11 +13,11 @@ long double tanl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tanl");
+		funcptr = dlvsym(RTLD_NEXT, "tanl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tanl()");
+		__lsb_output(4, "tanl()");
 		validate_NULL_TYPETYPE(  arg0, "tanl - arg0");
 	}
 	ret_value = funcptr(arg0);

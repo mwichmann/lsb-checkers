@@ -13,11 +13,11 @@ char * strfry (char * arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strfry");
+		funcptr = dlvsym(RTLD_NEXT, "strfry", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strfry()");
+		__lsb_output(4, "strfry()");
 		validate_RWaddress( arg0, "strfry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strfry - arg0");
 	}

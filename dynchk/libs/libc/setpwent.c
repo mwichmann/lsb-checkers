@@ -12,11 +12,11 @@ void setpwent ()
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setpwent");
+		funcptr = dlvsym(RTLD_NEXT, "setpwent", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setpwent()");
+		__lsb_output(4, "setpwent()");
 	}
 	funcptr();
 	__lsb_check_params = reset_flag;

@@ -1,5 +1,4 @@
 fprintf
-ioctl
 open
 open64
 printf
@@ -13,6 +12,4 @@ calloc
 realloc
 free
 dlsym
-tcgetattr
-tcsetattr
 pthread_mutex_lock

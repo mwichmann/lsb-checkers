@@ -13,11 +13,11 @@ ldiv_t ldiv (long arg0 , long arg1 )
 	int reset_flag = __lsb_check_params;
 	ldiv_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ldiv");
+		funcptr = dlvsym(RTLD_NEXT, "ldiv", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ldiv()");
+		__lsb_output(4, "ldiv()");
 		validate_NULL_TYPETYPE(  arg0, "ldiv - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ldiv - arg1");
 	}

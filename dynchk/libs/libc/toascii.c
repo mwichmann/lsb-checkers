@@ -13,11 +13,11 @@ int toascii (int arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "toascii");
+		funcptr = dlvsym(RTLD_NEXT, "toascii", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "toascii()");
+		__lsb_output(4, "toascii()");
 		validate_NULL_TYPETYPE(  arg0, "toascii - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -12,11 +12,11 @@ void funlockfile (FILE * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "funlockfile");
+		funcptr = dlvsym(RTLD_NEXT, "funlockfile", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "funlockfile()");
+		__lsb_output(4, "funlockfile()");
 		validate_RWaddress( arg0, "funlockfile - arg0");
 		validate_NULL_TYPETYPE(  arg0, "funlockfile - arg0");
 	}

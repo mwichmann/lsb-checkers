@@ -17,7 +17,7 @@ int slk_set (int arg0 , const char * arg1 , int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "slk_set()");
+		__lsb_output(4, "slk_set()");
 		validate_NULL_TYPETYPE(  arg0, "slk_set - arg0");
 		validate_Rdaddress( arg1, "slk_set - arg1");
 		validate_NULL_TYPETYPE(  arg1, "slk_set - arg1");

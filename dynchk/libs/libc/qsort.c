@@ -13,11 +13,11 @@ void qsort (void * arg0 , size_t arg1 , size_t arg2 , const __compar_fn_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "qsort");
+		funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "qsort()");
+		__lsb_output(4, "qsort()");
 		validate_RWaddress( arg0, "qsort - arg0");
 		validate_NULL_TYPETYPE(  arg0, "qsort - arg0");
 		validate_NULL_TYPETYPE(  arg1, "qsort - arg1");

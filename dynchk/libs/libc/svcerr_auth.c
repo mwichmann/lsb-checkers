@@ -13,11 +13,11 @@ void svcerr_auth (SVCXPRT * arg0 , enum auth_stat arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svcerr_auth");
+		funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "svcerr_auth()");
+		__lsb_output(4, "svcerr_auth()");
 		validate_RWaddress( arg0, "svcerr_auth - arg0");
 		validate_NULL_TYPETYPE(  arg0, "svcerr_auth - arg0");
 		validate_NULL_TYPETYPE(  arg1, "svcerr_auth - arg1");

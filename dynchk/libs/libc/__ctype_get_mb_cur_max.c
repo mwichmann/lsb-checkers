@@ -13,11 +13,11 @@ size_t __ctype_get_mb_cur_max ()
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__ctype_get_mb_cur_max");
+		funcptr = dlvsym(RTLD_NEXT, "__ctype_get_mb_cur_max", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__ctype_get_mb_cur_max()");
+		__lsb_output(4, "__ctype_get_mb_cur_max()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

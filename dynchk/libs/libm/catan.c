@@ -13,11 +13,11 @@ double complex catan (double complex arg0 )
 	int reset_flag = __lsb_check_params;
 	double complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "catan");
+		funcptr = dlvsym(RTLD_NEXT, "catan", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "catan()");
+		__lsb_output(4, "catan()");
 		validate_NULL_TYPETYPE(  arg0, "catan - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -14,11 +14,11 @@ int ttyname_r (int arg0 , char * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ttyname_r");
+		funcptr = dlvsym(RTLD_NEXT, "ttyname_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ttyname_r()");
+		__lsb_output(4, "ttyname_r()");
 		validate_NULL_TYPETYPE(  arg0, "ttyname_r - arg0");
 		validate_RWaddress( arg1, "ttyname_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "ttyname_r - arg1");

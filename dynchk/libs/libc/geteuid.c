@@ -13,11 +13,11 @@ uid_t geteuid ()
 	int reset_flag = __lsb_check_params;
 	uid_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "geteuid");
+		funcptr = dlvsym(RTLD_NEXT, "geteuid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "geteuid()");
+		__lsb_output(4, "geteuid()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

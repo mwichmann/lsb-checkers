@@ -14,11 +14,11 @@ bool_t xdr_opaque (XDR * arg0 , caddr_t arg1 , u_int arg2 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_opaque");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_opaque", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdr_opaque()");
+		__lsb_output(4, "xdr_opaque()");
 		validate_RWaddress( arg0, "xdr_opaque - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_opaque - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xdr_opaque - arg1");

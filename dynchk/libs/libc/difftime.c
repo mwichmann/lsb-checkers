@@ -14,11 +14,11 @@ double difftime (time_t arg0 , time_t arg1 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "difftime");
+		funcptr = dlvsym(RTLD_NEXT, "difftime", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "difftime()");
+		__lsb_output(4, "difftime()");
 		validate_NULL_TYPETYPE(  arg0, "difftime - arg0");
 		validate_NULL_TYPETYPE(  arg1, "difftime - arg1");
 	}

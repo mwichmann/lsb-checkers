@@ -13,11 +13,11 @@ char * clnt_spcreateerror (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clnt_spcreateerror");
+		funcptr = dlvsym(RTLD_NEXT, "clnt_spcreateerror", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clnt_spcreateerror()");
+		__lsb_output(4, "clnt_spcreateerror()");
 		validate_Rdaddress( arg0, "clnt_spcreateerror - arg0");
 		validate_NULL_TYPETYPE(  arg0, "clnt_spcreateerror - arg0");
 	}

@@ -13,11 +13,11 @@ char * ecvt (double arg0 , int arg1 , int * arg2 , int * arg3 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ecvt");
+		funcptr = dlvsym(RTLD_NEXT, "ecvt", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ecvt()");
+		__lsb_output(4, "ecvt()");
 		validate_NULL_TYPETYPE(  arg0, "ecvt - arg0");
 		validate_NULL_TYPETYPE(  arg1, "ecvt - arg1");
 		validate_RWaddress( arg2, "ecvt - arg2");

@@ -13,11 +13,11 @@ float hypotf (float arg0 , float arg1 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "hypotf");
+		funcptr = dlvsym(RTLD_NEXT, "hypotf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "hypotf()");
+		__lsb_output(4, "hypotf()");
 		validate_NULL_TYPETYPE(  arg0, "hypotf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "hypotf - arg1");
 	}

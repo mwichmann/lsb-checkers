@@ -13,11 +13,11 @@ double remquo (double arg0 , double arg1 , int * arg2 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "remquo");
+		funcptr = dlvsym(RTLD_NEXT, "remquo", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "remquo()");
+		__lsb_output(4, "remquo()");
 		validate_NULL_TYPETYPE(  arg0, "remquo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "remquo - arg1");
 		validate_RWaddress( arg2, "remquo - arg2");

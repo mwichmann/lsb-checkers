@@ -13,11 +13,11 @@ pid_t setsid ()
 	int reset_flag = __lsb_check_params;
 	pid_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setsid");
+		funcptr = dlvsym(RTLD_NEXT, "setsid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setsid()");
+		__lsb_output(4, "setsid()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

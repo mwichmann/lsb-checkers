@@ -12,11 +12,11 @@ void sync ()
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sync");
+		funcptr = dlvsym(RTLD_NEXT, "sync", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sync()");
+		__lsb_output(4, "sync()");
 	}
 	funcptr();
 	__lsb_check_params = reset_flag;

@@ -14,11 +14,11 @@ wchar_t * wcsncpy (wchar_t * arg0 , const wchar_t * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	wchar_t * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcsncpy");
+		funcptr = dlvsym(RTLD_NEXT, "wcsncpy", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcsncpy()");
+		__lsb_output(4, "wcsncpy()");
 		validate_RWaddress( arg0, "wcsncpy - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsncpy - arg0");
 		validate_Rdaddress( arg1, "wcsncpy - arg1");

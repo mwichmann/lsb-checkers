@@ -14,11 +14,11 @@ long wcstol (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcstol");
+		funcptr = dlvsym(RTLD_NEXT, "wcstol", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcstol()");
+		__lsb_output(4, "wcstol()");
 		validate_Rdaddress( arg0, "wcstol - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcstol - arg0");
 		validate_RWaddress( arg1, "wcstol - arg1");

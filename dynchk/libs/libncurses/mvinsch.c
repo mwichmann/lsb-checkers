@@ -17,7 +17,7 @@ int mvinsch (int arg0 , int arg1 , chtype arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvinsch()");
+		__lsb_output(4, "mvinsch()");
 		validate_NULL_TYPETYPE(  arg0, "mvinsch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvinsch - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvinsch - arg2");

@@ -14,11 +14,11 @@ int wctob (wint_t arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wctob");
+		funcptr = dlvsym(RTLD_NEXT, "wctob", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wctob()");
+		__lsb_output(4, "wctob()");
 		validate_NULL_TYPETYPE(  arg0, "wctob - arg0");
 	}
 	ret_value = funcptr(arg0);

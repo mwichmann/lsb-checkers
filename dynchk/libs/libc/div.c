@@ -13,11 +13,11 @@ div_t div (int arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	div_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "div");
+		funcptr = dlvsym(RTLD_NEXT, "div", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "div()");
+		__lsb_output(4, "div()");
 		validate_NULL_TYPETYPE(  arg0, "div - arg0");
 		validate_NULL_TYPETYPE(  arg1, "div - arg1");
 	}

@@ -13,11 +13,11 @@ int gettimeofday (struct timeval * arg0 , struct timezone * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gettimeofday");
+		funcptr = dlvsym(RTLD_NEXT, "gettimeofday", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gettimeofday()");
+		__lsb_output(4, "gettimeofday()");
 		validate_RWaddress( arg0, "gettimeofday - arg0");
 		validate_NULL_TYPETYPE(  arg0, "gettimeofday - arg0");
 		if( arg1 ) {

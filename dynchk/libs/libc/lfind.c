@@ -15,11 +15,11 @@ void * lfind (const void * arg0 , const void * arg1 , size_t * arg2 , size_t arg
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lfind");
+		funcptr = dlvsym(RTLD_NEXT, "lfind", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "lfind()");
+		__lsb_output(4, "lfind()");
 		validate_Rdaddress( arg0, "lfind - arg0");
 		validate_NULL_TYPETYPE(  arg0, "lfind - arg0");
 		validate_Rdaddress( arg1, "lfind - arg1");

@@ -13,11 +13,11 @@ int sigrelse (int arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigrelse");
+		funcptr = dlvsym(RTLD_NEXT, "sigrelse", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigrelse()");
+		__lsb_output(4, "sigrelse()");
 		validate_NULL_TYPETYPE(  arg0, "sigrelse - arg0");
 	}
 	ret_value = funcptr(arg0);

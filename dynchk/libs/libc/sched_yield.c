@@ -13,11 +13,11 @@ int sched_yield ()
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sched_yield");
+		funcptr = dlvsym(RTLD_NEXT, "sched_yield", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sched_yield()");
+		__lsb_output(4, "sched_yield()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

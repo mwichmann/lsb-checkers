@@ -16,7 +16,7 @@ void SmsDie (SmsConn arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmsDie()");
+		__lsb_output(4, "SmsDie()");
 		validate_NULL_TYPETYPE(  arg0, "SmsDie - arg0");
 	}
 	funcptr(arg0);

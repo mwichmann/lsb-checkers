@@ -17,7 +17,7 @@ int touchwin (WINDOW * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "touchwin()");
+		__lsb_output(4, "touchwin()");
 		validate_RWaddress( arg0, "touchwin - arg0");
 		validate_NULL_TYPETYPE(  arg0, "touchwin - arg0");
 	}

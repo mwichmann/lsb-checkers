@@ -13,11 +13,11 @@ int msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "msgctl");
+		funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "msgctl()");
+		__lsb_output(4, "msgctl()");
 		validate_NULL_TYPETYPE(  arg0, "msgctl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "msgctl - arg1");
 		validate_RWaddress( arg2, "msgctl - arg2");

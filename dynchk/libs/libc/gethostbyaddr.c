@@ -14,11 +14,11 @@ struct hostent * gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	struct hostent * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gethostbyaddr");
+		funcptr = dlvsym(RTLD_NEXT, "gethostbyaddr", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gethostbyaddr()");
+		__lsb_output(4, "gethostbyaddr()");
 		validate_Rdaddress( arg0, "gethostbyaddr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "gethostbyaddr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "gethostbyaddr - arg1");

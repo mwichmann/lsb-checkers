@@ -12,11 +12,11 @@ void rewinddir (DIR * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "rewinddir");
+		funcptr = dlvsym(RTLD_NEXT, "rewinddir", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "rewinddir()");
+		__lsb_output(4, "rewinddir()");
 		validate_RWaddress( arg0, "rewinddir - arg0");
 		validate_NULL_TYPETYPE(  arg0, "rewinddir - arg0");
 	}

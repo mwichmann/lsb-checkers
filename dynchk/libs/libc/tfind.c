@@ -14,11 +14,11 @@ void * tfind (const void * arg0 , void *const  * arg1 , __compar_fn_t arg2 )
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tfind");
+		funcptr = dlvsym(RTLD_NEXT, "tfind", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tfind()");
+		__lsb_output(4, "tfind()");
 		validate_Rdaddress( arg0, "tfind - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tfind - arg0");
 		validate_Rdaddress( arg1, "tfind - arg1");

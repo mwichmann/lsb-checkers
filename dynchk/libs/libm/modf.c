@@ -13,11 +13,11 @@ double modf (double arg0 , double * arg1 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "modf");
+		funcptr = dlvsym(RTLD_NEXT, "modf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "modf()");
+		__lsb_output(4, "modf()");
 		validate_NULL_TYPETYPE(  arg0, "modf - arg0");
 		validate_RWaddress( arg1, "modf - arg1");
 		validate_NULL_TYPETYPE(  arg1, "modf - arg1");

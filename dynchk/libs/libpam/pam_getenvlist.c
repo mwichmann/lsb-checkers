@@ -17,7 +17,7 @@ char * * pam_getenvlist (pam_handle_t * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "pam_getenvlist()");
+		__lsb_output(4, "pam_getenvlist()");
 		validate_RWaddress( arg0, "pam_getenvlist - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pam_getenvlist - arg0");
 	}

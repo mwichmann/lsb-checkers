@@ -17,7 +17,7 @@ int wechochar (WINDOW * arg0 , const chtype arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wechochar()");
+		__lsb_output(4, "wechochar()");
 		validate_RWaddress( arg0, "wechochar - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wechochar - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wechochar - arg1");

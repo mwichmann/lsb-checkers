@@ -13,11 +13,11 @@ int fseek (FILE * arg0 , long arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fseek");
+		funcptr = dlvsym(RTLD_NEXT, "fseek", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fseek()");
+		__lsb_output(4, "fseek()");
 		validate_RWaddress( arg0, "fseek - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fseek - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fseek - arg1");

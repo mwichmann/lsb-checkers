@@ -13,11 +13,11 @@ double acosh (double arg0 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "acosh");
+		funcptr = dlvsym(RTLD_NEXT, "acosh", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "acosh()");
+		__lsb_output(4, "acosh()");
 		validate_NULL_TYPETYPE(  arg0, "acosh - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -13,11 +13,11 @@ long double asinl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "asinl");
+		funcptr = dlvsym(RTLD_NEXT, "asinl", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "asinl()");
+		__lsb_output(4, "asinl()");
 		validate_NULL_TYPETYPE(  arg0, "asinl - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -17,7 +17,7 @@ const char * zError (int arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "zError()");
+		__lsb_output(4, "zError()");
 		validate_NULL_TYPETYPE(  arg0, "zError - arg0");
 	}
 	ret_value = funcptr(arg0);

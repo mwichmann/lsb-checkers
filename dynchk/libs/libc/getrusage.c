@@ -13,11 +13,11 @@ int getrusage (int arg0 , struct rusage * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getrusage");
+		funcptr = dlvsym(RTLD_NEXT, "getrusage", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getrusage()");
+		__lsb_output(4, "getrusage()");
 		validate_NULL_TYPETYPE(  arg0, "getrusage - arg0");
 		validate_RWaddress( arg1, "getrusage - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getrusage - arg1");

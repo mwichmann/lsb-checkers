@@ -13,11 +13,11 @@ void setbuffer (FILE * arg0 , char * arg1 , size_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setbuffer");
+		funcptr = dlvsym(RTLD_NEXT, "setbuffer", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setbuffer()");
+		__lsb_output(4, "setbuffer()");
 		validate_RWaddress( arg0, "setbuffer - arg0");
 		validate_NULL_TYPETYPE(  arg0, "setbuffer - arg0");
 		validate_RWaddress( arg1, "setbuffer - arg1");

@@ -13,11 +13,11 @@ double complex ccosh (double complex arg0 )
 	int reset_flag = __lsb_check_params;
 	double complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ccosh");
+		funcptr = dlvsym(RTLD_NEXT, "ccosh", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ccosh()");
+		__lsb_output(4, "ccosh()");
 		validate_NULL_TYPETYPE(  arg0, "ccosh - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -15,11 +15,11 @@ size_t wcsrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , mbstate_t
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcsrtombs");
+		funcptr = dlvsym(RTLD_NEXT, "wcsrtombs", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcsrtombs()");
+		__lsb_output(4, "wcsrtombs()");
 		validate_RWaddress( arg0, "wcsrtombs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsrtombs - arg0");
 		validate_RWaddress( arg1, "wcsrtombs - arg1");

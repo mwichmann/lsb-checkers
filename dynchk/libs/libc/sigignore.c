@@ -13,11 +13,11 @@ int sigignore (int arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigignore");
+		funcptr = dlvsym(RTLD_NEXT, "sigignore", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigignore()");
+		__lsb_output(4, "sigignore()");
 		validate_NULL_TYPETYPE(  arg0, "sigignore - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -14,11 +14,11 @@ int fwide (FILE * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fwide");
+		funcptr = dlvsym(RTLD_NEXT, "fwide", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fwide()");
+		__lsb_output(4, "fwide()");
 		validate_RWaddress( arg0, "fwide - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fwide - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fwide - arg1");

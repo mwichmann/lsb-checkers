@@ -12,11 +12,11 @@ void logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "logwtmp");
+		funcptr = dlvsym(RTLD_NEXT, "logwtmp", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "logwtmp()");
+		__lsb_output(4, "logwtmp()");
 		validate_Rdaddress( arg0, "logwtmp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "logwtmp - arg0");
 		validate_Rdaddress( arg1, "logwtmp - arg1");

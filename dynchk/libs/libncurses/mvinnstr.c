@@ -17,7 +17,7 @@ int mvinnstr (int arg0 , int arg1 , char * arg2 , int arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mvinnstr()");
+		__lsb_output(4, "mvinnstr()");
 		validate_NULL_TYPETYPE(  arg0, "mvinnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvinnstr - arg1");
 		validate_RWaddress( arg2, "mvinnstr - arg2");

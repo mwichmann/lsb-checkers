@@ -13,11 +13,11 @@ struct group * getgrnam (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	struct group * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getgrnam");
+		funcptr = dlvsym(RTLD_NEXT, "getgrnam", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getgrnam()");
+		__lsb_output(4, "getgrnam()");
 		validate_RWaddress( arg0, "getgrnam - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getgrnam - arg0");
 	}

@@ -13,11 +13,11 @@ struct utmp * getutent ()
 	int reset_flag = __lsb_check_params;
 	struct utmp * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getutent");
+		funcptr = dlvsym(RTLD_NEXT, "getutent", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getutent()");
+		__lsb_output(4, "getutent()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

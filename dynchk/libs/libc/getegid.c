@@ -13,11 +13,11 @@ gid_t getegid ()
 	int reset_flag = __lsb_check_params;
 	gid_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getegid");
+		funcptr = dlvsym(RTLD_NEXT, "getegid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getegid()");
+		__lsb_output(4, "getegid()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

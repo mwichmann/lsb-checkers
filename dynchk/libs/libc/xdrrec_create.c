@@ -13,11 +13,11 @@ void xdrrec_create (XDR * arg0 , u_int arg1 , u_int arg2 , caddr_t arg3 , int(* 
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdrrec_create");
+		funcptr = dlvsym(RTLD_NEXT, "xdrrec_create", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdrrec_create()");
+		__lsb_output(4, "xdrrec_create()");
 		validate_RWaddress( arg0, "xdrrec_create - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdrrec_create - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xdrrec_create - arg1");

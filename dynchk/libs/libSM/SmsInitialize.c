@@ -18,7 +18,7 @@ int SmsInitialize (char * arg0 , char * arg1 , SmsNewClientProc arg2 , SmPointer
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "SmsInitialize()");
+		__lsb_output(4, "SmsInitialize()");
 		validate_RWaddress( arg0, "SmsInitialize - arg0");
 		validate_NULL_TYPETYPE(  arg0, "SmsInitialize - arg0");
 		validate_RWaddress( arg1, "SmsInitialize - arg1");

@@ -14,11 +14,11 @@ int setgid (gid_t arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setgid");
+		funcptr = dlvsym(RTLD_NEXT, "setgid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setgid()");
+		__lsb_output(4, "setgid()");
 		validate_NULL_TYPETYPE(  arg0, "setgid - arg0");
 	}
 	ret_value = funcptr(arg0);

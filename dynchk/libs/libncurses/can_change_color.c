@@ -17,7 +17,7 @@ bool can_change_color ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "can_change_color()");
+		__lsb_output(4, "can_change_color()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -14,11 +14,11 @@ ssize_t read (int arg0 , void * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "read");
+		funcptr = dlvsym(RTLD_NEXT, "read", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "read()");
+		__lsb_output(4, "read()");
 		validate_filedescriptor(  arg0, "read - arg0");
 		validate_RWaddress( arg1, "read - arg1");
 		validate_RWaddress(  arg1, "read - arg1");

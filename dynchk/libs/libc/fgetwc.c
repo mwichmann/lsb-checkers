@@ -14,11 +14,11 @@ wint_t fgetwc (FILE * arg0 )
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fgetwc");
+		funcptr = dlvsym(RTLD_NEXT, "fgetwc", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fgetwc()");
+		__lsb_output(4, "fgetwc()");
 		validate_RWaddress( arg0, "fgetwc - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fgetwc - arg0");
 	}

@@ -12,11 +12,11 @@ void svcerr_systemerr (SVCXPRT * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svcerr_systemerr");
+		funcptr = dlvsym(RTLD_NEXT, "svcerr_systemerr", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "svcerr_systemerr()");
+		__lsb_output(4, "svcerr_systemerr()");
 		validate_RWaddress( arg0, "svcerr_systemerr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "svcerr_systemerr - arg0");
 	}

@@ -13,11 +13,11 @@ int putw (int arg0 , FILE * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "putw");
+		funcptr = dlvsym(RTLD_NEXT, "putw", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "putw()");
+		__lsb_output(4, "putw()");
 		validate_NULL_TYPETYPE(  arg0, "putw - arg0");
 		validate_RWaddress( arg1, "putw - arg1");
 		validate_NULL_TYPETYPE(  arg1, "putw - arg1");

@@ -17,7 +17,7 @@ int wbkgd (WINDOW * arg0 , chtype arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wbkgd()");
+		__lsb_output(4, "wbkgd()");
 		validate_RWaddress( arg0, "wbkgd - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wbkgd - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wbkgd - arg1");

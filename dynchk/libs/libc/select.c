@@ -15,11 +15,11 @@ int select (int arg0 , fd_set * arg1 , fd_set * arg2 , fd_set * arg3 , struct ti
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "select");
+		funcptr = dlvsym(RTLD_NEXT, "select", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "select()");
+		__lsb_output(4, "select()");
 		validate_NULL_TYPETYPE(  arg0, "select - arg0");
 		if( arg1 ) {
 		validate_RWaddress( arg1, "select - arg1");

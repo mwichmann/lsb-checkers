@@ -13,11 +13,11 @@ double nextafter (double arg0 , double arg1 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nextafter");
+		funcptr = dlvsym(RTLD_NEXT, "nextafter", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "nextafter()");
+		__lsb_output(4, "nextafter()");
 		validate_NULL_TYPETYPE(  arg0, "nextafter - arg0");
 		validate_NULL_TYPETYPE(  arg1, "nextafter - arg1");
 	}

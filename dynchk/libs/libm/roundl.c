@@ -13,11 +13,11 @@ long double roundl (long double arg0 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "roundl");
+		funcptr = dlvsym(RTLD_NEXT, "roundl", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "roundl()");
+		__lsb_output(4, "roundl()");
 		validate_NULL_TYPETYPE(  arg0, "roundl - arg0");
 	}
 	ret_value = funcptr(arg0);

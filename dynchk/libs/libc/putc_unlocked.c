@@ -13,11 +13,11 @@ int putc_unlocked (int arg0 , FILE * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "putc_unlocked");
+		funcptr = dlvsym(RTLD_NEXT, "putc_unlocked", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "putc_unlocked()");
+		__lsb_output(4, "putc_unlocked()");
 		validate_NULL_TYPETYPE(  arg0, "putc_unlocked - arg0");
 		validate_RWaddress( arg1, "putc_unlocked - arg1");
 		validate_NULL_TYPETYPE(  arg1, "putc_unlocked - arg1");

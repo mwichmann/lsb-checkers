@@ -13,11 +13,11 @@ int fputc (int arg0 , FILE * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fputc");
+		funcptr = dlvsym(RTLD_NEXT, "fputc", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fputc()");
+		__lsb_output(4, "fputc()");
 		validate_NULL_TYPETYPE(  arg0, "fputc - arg0");
 		validate_RWaddress( arg1, "fputc - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fputc - arg1");

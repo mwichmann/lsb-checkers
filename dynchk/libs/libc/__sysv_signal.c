@@ -13,11 +13,11 @@ sighandler_t __sysv_signal (int arg0 , sighandler_t arg1 )
 	int reset_flag = __lsb_check_params;
 	sighandler_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__sysv_signal");
+		funcptr = dlvsym(RTLD_NEXT, "__sysv_signal", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__sysv_signal()");
+		__lsb_output(4, "__sysv_signal()");
 		validate_NULL_TYPETYPE(  arg0, "__sysv_signal - arg0");
 		validate_NULL_TYPETYPE(  arg1, "__sysv_signal - arg1");
 	}

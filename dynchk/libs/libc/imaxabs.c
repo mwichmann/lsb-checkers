@@ -13,11 +13,11 @@ intmax_t imaxabs (intmax_t arg0 )
 	int reset_flag = __lsb_check_params;
 	intmax_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "imaxabs");
+		funcptr = dlvsym(RTLD_NEXT, "imaxabs", "GLIBC_2.1.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "imaxabs()");
+		__lsb_output(4, "imaxabs()");
 		validate_NULL_TYPETYPE(  arg0, "imaxabs - arg0");
 	}
 	ret_value = funcptr(arg0);

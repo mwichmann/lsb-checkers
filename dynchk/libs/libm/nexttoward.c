@@ -13,11 +13,11 @@ double nexttoward (double arg0 , long double arg1 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nexttoward");
+		funcptr = dlvsym(RTLD_NEXT, "nexttoward", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "nexttoward()");
+		__lsb_output(4, "nexttoward()");
 		validate_NULL_TYPETYPE(  arg0, "nexttoward - arg0");
 		validate_NULL_TYPETYPE(  arg1, "nexttoward - arg1");
 	}

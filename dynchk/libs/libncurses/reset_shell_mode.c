@@ -17,7 +17,7 @@ int reset_shell_mode ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "reset_shell_mode()");
+		__lsb_output(4, "reset_shell_mode()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

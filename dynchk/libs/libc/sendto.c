@@ -14,11 +14,11 @@ ssize_t sendto (int arg0 , const void * arg1 , size_t arg2 , int arg3 , const st
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sendto");
+		funcptr = dlvsym(RTLD_NEXT, "sendto", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sendto()");
+		__lsb_output(4, "sendto()");
 		validate_NULL_TYPETYPE(  arg0, "sendto - arg0");
 		validate_Rdaddress( arg1, "sendto - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sendto - arg1");

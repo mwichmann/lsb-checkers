@@ -17,7 +17,7 @@ int instr (char * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "instr()");
+		__lsb_output(4, "instr()");
 		validate_RWaddress( arg0, "instr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "instr - arg0");
 	}

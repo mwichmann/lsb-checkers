@@ -16,7 +16,7 @@ int fprintf(FILE *f, const char *format, ...)
 	int reset_flag = __lsb_check_params;
 	size_t ret_value;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vfprintf");
+		funcptr = dlvsym(RTLD_NEXT, "vfprintf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params = 0;

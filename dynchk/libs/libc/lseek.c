@@ -14,11 +14,11 @@ off_t lseek (int arg0 , off_t arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	off_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lseek");
+		funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "lseek()");
+		__lsb_output(4, "lseek()");
 		validate_NULL_TYPETYPE(  arg0, "lseek - arg0");
 		validate_NULL_TYPETYPE(  arg1, "lseek - arg1");
 		validate_NULL_TYPETYPE(  arg2, "lseek - arg2");

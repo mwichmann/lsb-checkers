@@ -13,11 +13,11 @@ bool_t xdr_double (XDR * arg0 , double * arg1 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_double");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_double", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdr_double()");
+		__lsb_output(4, "xdr_double()");
 		validate_RWaddress( arg0, "xdr_double - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_double - arg0");
 		validate_RWaddress( arg1, "xdr_double - arg1");

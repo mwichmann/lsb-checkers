@@ -12,11 +12,11 @@ void setbuf (FILE * arg0 , char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setbuf");
+		funcptr = dlvsym(RTLD_NEXT, "setbuf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setbuf()");
+		__lsb_output(4, "setbuf()");
 		validate_RWaddress( arg0, "setbuf - arg0");
 		validate_NULL_TYPETYPE(  arg0, "setbuf - arg0");
 		validate_RWaddress( arg1, "setbuf - arg1");

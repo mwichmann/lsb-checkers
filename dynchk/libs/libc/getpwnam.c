@@ -13,11 +13,11 @@ struct passwd * getpwnam (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	struct passwd * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getpwnam");
+		funcptr = dlvsym(RTLD_NEXT, "getpwnam", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getpwnam()");
+		__lsb_output(4, "getpwnam()");
 		validate_RWaddress( arg0, "getpwnam - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getpwnam - arg0");
 	}

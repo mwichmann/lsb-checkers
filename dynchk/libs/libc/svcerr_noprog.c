@@ -12,11 +12,11 @@ void svcerr_noprog (SVCXPRT * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svcerr_noprog");
+		funcptr = dlvsym(RTLD_NEXT, "svcerr_noprog", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "svcerr_noprog()");
+		__lsb_output(4, "svcerr_noprog()");
 		validate_RWaddress( arg0, "svcerr_noprog - arg0");
 		validate_NULL_TYPETYPE(  arg0, "svcerr_noprog - arg0");
 	}

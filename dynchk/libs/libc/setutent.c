@@ -12,11 +12,11 @@ void setutent ()
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setutent");
+		funcptr = dlvsym(RTLD_NEXT, "setutent", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setutent()");
+		__lsb_output(4, "setutent()");
 	}
 	funcptr();
 	__lsb_check_params = reset_flag;

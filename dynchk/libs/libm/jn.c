@@ -13,11 +13,11 @@ double jn (int arg0 , double arg1 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "jn");
+		funcptr = dlvsym(RTLD_NEXT, "jn", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "jn()");
+		__lsb_output(4, "jn()");
 		validate_NULL_TYPETYPE(  arg0, "jn - arg0");
 		validate_NULL_TYPETYPE(  arg1, "jn - arg1");
 	}

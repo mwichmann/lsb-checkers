@@ -13,11 +13,11 @@ char * strpbrk (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strpbrk");
+		funcptr = dlvsym(RTLD_NEXT, "strpbrk", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strpbrk()");
+		__lsb_output(4, "strpbrk()");
 		validate_Rdaddress( arg0, "strpbrk - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strpbrk - arg0");
 		validate_Rdaddress( arg1, "strpbrk - arg1");

@@ -17,7 +17,7 @@ int compress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "compress()");
+		__lsb_output(4, "compress()");
 		validate_RWaddress( arg0, "compress - arg0");
 		validate_NULL_TYPETYPE(  arg0, "compress - arg0");
 		validate_RWaddress( arg1, "compress - arg1");

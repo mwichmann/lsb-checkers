@@ -13,11 +13,11 @@ long double dreml (long double arg0 , long double arg1 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dreml");
+		funcptr = dlvsym(RTLD_NEXT, "dreml", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "dreml()");
+		__lsb_output(4, "dreml()");
 		validate_NULL_TYPETYPE(  arg0, "dreml - arg0");
 		validate_NULL_TYPETYPE(  arg1, "dreml - arg1");
 	}

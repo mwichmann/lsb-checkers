@@ -12,11 +12,11 @@ void globfree64 (glob64_t * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "globfree64");
+		funcptr = dlvsym(RTLD_NEXT, "globfree64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "globfree64()");
+		__lsb_output(4, "globfree64()");
 		validate_RWaddress( arg0, "globfree64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "globfree64 - arg0");
 	}

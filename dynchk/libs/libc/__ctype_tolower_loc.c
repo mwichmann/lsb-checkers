@@ -17,7 +17,7 @@ const int32_t * * __ctype_tolower_loc ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__ctype_tolower_loc()");
+		__lsb_output(4, "__ctype_tolower_loc()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

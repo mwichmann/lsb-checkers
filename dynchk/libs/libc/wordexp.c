@@ -13,11 +13,11 @@ int wordexp (const char * arg0 , wordexp_t * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wordexp");
+		funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wordexp()");
+		__lsb_output(4, "wordexp()");
 		validate_Rdaddress( arg0, "wordexp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wordexp - arg0");
 		validate_RWaddress( arg1, "wordexp - arg1");

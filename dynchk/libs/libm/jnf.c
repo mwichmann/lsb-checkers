@@ -13,11 +13,11 @@ float jnf (int arg0 , float arg1 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "jnf");
+		funcptr = dlvsym(RTLD_NEXT, "jnf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "jnf()");
+		__lsb_output(4, "jnf()");
 		validate_NULL_TYPETYPE(  arg0, "jnf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "jnf - arg1");
 	}

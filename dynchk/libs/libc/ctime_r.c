@@ -14,11 +14,11 @@ char * ctime_r (const time_t * arg0 , char * arg1 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ctime_r");
+		funcptr = dlvsym(RTLD_NEXT, "ctime_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ctime_r()");
+		__lsb_output(4, "ctime_r()");
 		validate_Rdaddress( arg0, "ctime_r - arg0");
 		validate_NULL_TYPETYPE(  arg0, "ctime_r - arg0");
 		validate_RWaddress( arg1, "ctime_r - arg1");

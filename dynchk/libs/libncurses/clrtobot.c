@@ -17,7 +17,7 @@ int clrtobot ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clrtobot()");
+		__lsb_output(4, "clrtobot()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -17,7 +17,7 @@ int wgetstr (WINDOW * arg0 , char * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wgetstr()");
+		__lsb_output(4, "wgetstr()");
 		validate_RWaddress( arg0, "wgetstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wgetstr - arg0");
 		validate_RWaddress( arg1, "wgetstr - arg1");

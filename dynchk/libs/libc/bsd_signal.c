@@ -13,11 +13,11 @@ sighandler_t bsd_signal (int arg0 , sighandler_t arg1 )
 	int reset_flag = __lsb_check_params;
 	sighandler_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "bsd_signal");
+		funcptr = dlvsym(RTLD_NEXT, "bsd_signal", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "bsd_signal()");
+		__lsb_output(4, "bsd_signal()");
 		validate_NULL_TYPETYPE(  arg0, "bsd_signal - arg0");
 		validate_NULL_TYPETYPE(  arg1, "bsd_signal - arg1");
 	}

@@ -17,7 +17,7 @@ int color_content (short arg0 , short * arg1 , short * arg2 , short * arg3 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "color_content()");
+		__lsb_output(4, "color_content()");
 		validate_NULL_TYPETYPE(  arg0, "color_content - arg0");
 		validate_RWaddress( arg1, "color_content - arg1");
 		validate_NULL_TYPETYPE(  arg1, "color_content - arg1");

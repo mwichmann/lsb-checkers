@@ -13,11 +13,11 @@ int getc_unlocked (FILE * arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getc_unlocked");
+		funcptr = dlvsym(RTLD_NEXT, "getc_unlocked", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getc_unlocked()");
+		__lsb_output(4, "getc_unlocked()");
 		validate_RWaddress( arg0, "getc_unlocked - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getc_unlocked - arg0");
 	}

@@ -13,11 +13,11 @@ int getpeername (int arg0 , struct sockaddr * arg1 , socklen_t * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getpeername");
+		funcptr = dlvsym(RTLD_NEXT, "getpeername", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getpeername()");
+		__lsb_output(4, "getpeername()");
 		validate_NULL_TYPETYPE(  arg0, "getpeername - arg0");
 		validate_RWaddress( arg1, "getpeername - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getpeername - arg1");

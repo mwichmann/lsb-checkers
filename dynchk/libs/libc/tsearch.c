@@ -14,11 +14,11 @@ void * tsearch (const void * arg0 , void * * arg1 , __compar_fn_t arg2 )
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tsearch");
+		funcptr = dlvsym(RTLD_NEXT, "tsearch", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tsearch()");
+		__lsb_output(4, "tsearch()");
 		validate_Rdaddress( arg0, "tsearch - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tsearch - arg0");
 		validate_RWaddress( arg1, "tsearch - arg1");

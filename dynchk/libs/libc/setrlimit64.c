@@ -17,7 +17,7 @@ int setrlimit64 (__rlimit_resource_t arg0 , const struct rlimit64 * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "setrlimit64()");
+		__lsb_output(4, "setrlimit64()");
 		validate_NULL_TYPETYPE(  arg0, "setrlimit64 - arg0");
 		validate_Rdaddress( arg1, "setrlimit64 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "setrlimit64 - arg1");

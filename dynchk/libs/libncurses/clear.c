@@ -17,7 +17,7 @@ int clear ()
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "clear()");
+		__lsb_output(4, "clear()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

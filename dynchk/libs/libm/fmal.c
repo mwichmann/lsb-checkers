@@ -13,11 +13,11 @@ long double fmal (long double arg0 , long double arg1 , long double arg2 )
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fmal");
+		funcptr = dlvsym(RTLD_NEXT, "fmal", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fmal()");
+		__lsb_output(4, "fmal()");
 		validate_NULL_TYPETYPE(  arg0, "fmal - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fmal - arg1");
 		validate_NULL_TYPETYPE(  arg2, "fmal - arg2");

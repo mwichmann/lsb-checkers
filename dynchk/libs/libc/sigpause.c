@@ -13,11 +13,11 @@ int sigpause (int arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigpause");
+		funcptr = dlvsym(RTLD_NEXT, "sigpause", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigpause()");
+		__lsb_output(4, "sigpause()");
 		validate_NULL_TYPETYPE(  arg0, "sigpause - arg0");
 	}
 	ret_value = funcptr(arg0);

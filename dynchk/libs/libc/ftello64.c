@@ -13,11 +13,11 @@ loff_t ftello64 (FILE * arg0 )
 	int reset_flag = __lsb_check_params;
 	loff_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ftello64");
+		funcptr = dlvsym(RTLD_NEXT, "ftello64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ftello64()");
+		__lsb_output(4, "ftello64()");
 		validate_RWaddress( arg0, "ftello64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "ftello64 - arg0");
 	}

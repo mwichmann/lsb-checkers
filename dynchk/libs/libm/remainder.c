@@ -13,11 +13,11 @@ double remainder (double arg0 , double arg1 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "remainder");
+		funcptr = dlvsym(RTLD_NEXT, "remainder", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "remainder()");
+		__lsb_output(4, "remainder()");
 		validate_NULL_TYPETYPE(  arg0, "remainder - arg0");
 		validate_NULL_TYPETYPE(  arg1, "remainder - arg1");
 	}

@@ -13,11 +13,11 @@ float ceilf (float arg0 )
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ceilf");
+		funcptr = dlvsym(RTLD_NEXT, "ceilf", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "ceilf()");
+		__lsb_output(4, "ceilf()");
 		validate_NULL_TYPETYPE(  arg0, "ceilf - arg0");
 	}
 	ret_value = funcptr(arg0);

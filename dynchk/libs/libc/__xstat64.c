@@ -13,11 +13,11 @@ int __xstat64 (int arg0 , const char * arg1 , struct stat64 * arg2 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__xstat64");
+		funcptr = dlvsym(RTLD_NEXT, "__xstat64", "GLIBC_2.2");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__xstat64()");
+		__lsb_output(4, "__xstat64()");
 		validate_NULL_TYPETYPE(  arg0, "__xstat64 - arg0");
 		validate_Rdaddress( arg1, "__xstat64 - arg1");
 		validate_pathname(  arg1, "__xstat64 - arg1");

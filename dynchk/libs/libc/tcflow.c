@@ -13,11 +13,11 @@ int tcflow (int arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tcflow");
+		funcptr = dlvsym(RTLD_NEXT, "tcflow", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "tcflow()");
+		__lsb_output(4, "tcflow()");
 		validate_NULL_TYPETYPE(  arg0, "tcflow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "tcflow - arg1");
 	}

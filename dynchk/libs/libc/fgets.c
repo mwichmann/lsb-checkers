@@ -13,11 +13,11 @@ char * fgets (char * arg0 , int arg1 , FILE * arg2 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fgets");
+		funcptr = dlvsym(RTLD_NEXT, "fgets", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fgets()");
+		__lsb_output(4, "fgets()");
 		validate_RWaddress( arg0, "fgets - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fgets - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fgets - arg1");

@@ -17,7 +17,7 @@ int syncok (WINDOW * arg0 , bool arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "syncok()");
+		__lsb_output(4, "syncok()");
 		validate_RWaddress( arg0, "syncok - arg0");
 		validate_NULL_TYPETYPE(  arg0, "syncok - arg0");
 		validate_NULL_TYPETYPE(  arg1, "syncok - arg1");

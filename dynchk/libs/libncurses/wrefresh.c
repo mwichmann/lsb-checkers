@@ -17,7 +17,7 @@ int wrefresh (WINDOW * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wrefresh()");
+		__lsb_output(4, "wrefresh()");
 		validate_RWaddress( arg0, "wrefresh - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wrefresh - arg0");
 	}

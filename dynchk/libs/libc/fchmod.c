@@ -14,11 +14,11 @@ int fchmod (int arg0 , mode_t arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fchmod");
+		funcptr = dlvsym(RTLD_NEXT, "fchmod", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fchmod()");
+		__lsb_output(4, "fchmod()");
 		validate_NULL_TYPETYPE(  arg0, "fchmod - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fchmod - arg1");
 	}

@@ -18,7 +18,7 @@ int vw_scanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "vw_scanw()");
+		__lsb_output(4, "vw_scanw()");
 		validate_RWaddress( arg0, "vw_scanw - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vw_scanw - arg0");
 		validate_RWaddress( arg1, "vw_scanw - arg1");

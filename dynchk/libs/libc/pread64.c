@@ -14,11 +14,11 @@ ssize_t pread64 (int arg0 , void * arg1 , size_t arg2 , off64_t arg3 )
 	int reset_flag = __lsb_check_params;
 	ssize_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pread64");
+		funcptr = dlvsym(RTLD_NEXT, "pread64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "pread64()");
+		__lsb_output(4, "pread64()");
 		validate_NULL_TYPETYPE(  arg0, "pread64 - arg0");
 		validate_RWaddress( arg1, "pread64 - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pread64 - arg1");

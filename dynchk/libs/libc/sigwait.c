@@ -13,11 +13,11 @@ int sigwait (const sigset_t * arg0 , int * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sigwait");
+		funcptr = dlvsym(RTLD_NEXT, "sigwait", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sigwait()");
+		__lsb_output(4, "sigwait()");
 		validate_RWaddress( arg0, "sigwait - arg0");
 		validate_NULL_TYPETYPE(  arg0, "sigwait - arg0");
 		validate_RWaddress( arg1, "sigwait - arg1");

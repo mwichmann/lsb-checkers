@@ -17,7 +17,7 @@ int getstr (char * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getstr()");
+		__lsb_output(4, "getstr()");
 		validate_RWaddress( arg0, "getstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "getstr - arg0");
 	}

@@ -13,11 +13,11 @@ int * __errno_location ()
 	int reset_flag = __lsb_check_params;
 	int * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__errno_location");
+		funcptr = dlvsym(RTLD_NEXT, "__errno_location", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__errno_location()");
+		__lsb_output(4, "__errno_location()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

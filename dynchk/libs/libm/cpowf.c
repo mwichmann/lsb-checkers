@@ -13,11 +13,11 @@ float complex cpowf (float complex arg0 , float complex arg1 )
 	int reset_flag = __lsb_check_params;
 	float complex ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "cpowf");
+		funcptr = dlvsym(RTLD_NEXT, "cpowf", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "cpowf()");
+		__lsb_output(4, "cpowf()");
 		validate_NULL_TYPETYPE(  arg0, "cpowf - arg0");
 		validate_NULL_TYPETYPE(  arg1, "cpowf - arg1");
 	}

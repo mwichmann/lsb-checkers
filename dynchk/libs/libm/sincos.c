@@ -12,11 +12,11 @@ void sincos (double arg0 , double * arg1 , double * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sincos");
+		funcptr = dlvsym(RTLD_NEXT, "sincos", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "sincos()");
+		__lsb_output(4, "sincos()");
 		validate_NULL_TYPETYPE(  arg0, "sincos - arg0");
 		validate_RWaddress( arg1, "sincos - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sincos - arg1");

@@ -13,11 +13,11 @@ nl_catd catopen (const char * arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	nl_catd ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "catopen");
+		funcptr = dlvsym(RTLD_NEXT, "catopen", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "catopen()");
+		__lsb_output(4, "catopen()");
 		validate_Rdaddress( arg0, "catopen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "catopen - arg0");
 		validate_NULL_TYPETYPE(  arg1, "catopen - arg1");

@@ -15,11 +15,11 @@ int getgrgid_r (gid_t arg0 , struct group * arg1 , char * arg2 , size_t arg3 , s
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getgrgid_r");
+		funcptr = dlvsym(RTLD_NEXT, "getgrgid_r", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "getgrgid_r()");
+		__lsb_output(4, "getgrgid_r()");
 		validate_NULL_TYPETYPE(  arg0, "getgrgid_r - arg0");
 		validate_RWaddress( arg1, "getgrgid_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "getgrgid_r - arg1");

@@ -12,11 +12,11 @@ void lcong48 (unsigned short arg0 [])
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lcong48");
+		funcptr = dlvsym(RTLD_NEXT, "lcong48", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "lcong48()");
+		__lsb_output(4, "lcong48()");
 		validate_NULL_TYPETYPE(  arg0, "lcong48 - arg0");
 	}
 	funcptr(arg0);

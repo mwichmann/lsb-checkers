@@ -12,11 +12,11 @@ void _Exit (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "_Exit");
+		funcptr = dlvsym(RTLD_NEXT, "_Exit", "GLIBC_2.1.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "_Exit()");
+		__lsb_output(4, "_Exit()");
 		validate_NULL_TYPETYPE(  arg0, "_Exit - arg0");
 	}
 	funcptr(arg0);

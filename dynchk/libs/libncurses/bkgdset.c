@@ -16,7 +16,7 @@ void bkgdset (chtype arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "bkgdset()");
+		__lsb_output(4, "bkgdset()");
 		validate_NULL_TYPETYPE(  arg0, "bkgdset - arg0");
 	}
 	funcptr(arg0);

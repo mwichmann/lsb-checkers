@@ -17,7 +17,7 @@ int wdelch (WINDOW * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wdelch()");
+		__lsb_output(4, "wdelch()");
 		validate_RWaddress( arg0, "wdelch - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wdelch - arg0");
 	}

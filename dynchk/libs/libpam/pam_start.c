@@ -17,7 +17,7 @@ int pam_start (const char * arg0 , const char * arg1 , const struct pam_conv * a
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "pam_start()");
+		__lsb_output(4, "pam_start()");
 		validate_Rdaddress( arg0, "pam_start - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pam_start - arg0");
 		validate_Rdaddress( arg1, "pam_start - arg1");

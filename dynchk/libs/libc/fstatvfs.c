@@ -13,11 +13,11 @@ int fstatvfs (int arg0 , struct statvfs * arg1 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fstatvfs");
+		funcptr = dlvsym(RTLD_NEXT, "fstatvfs", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fstatvfs()");
+		__lsb_output(4, "fstatvfs()");
 		validate_NULL_TYPETYPE(  arg0, "fstatvfs - arg0");
 		validate_RWaddress( arg1, "fstatvfs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "fstatvfs - arg1");

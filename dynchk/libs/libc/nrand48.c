@@ -13,11 +13,11 @@ long nrand48 (unsigned short arg0 [])
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nrand48");
+		funcptr = dlvsym(RTLD_NEXT, "nrand48", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "nrand48()");
+		__lsb_output(4, "nrand48()");
 		validate_NULL_TYPETYPE(  arg0, "nrand48 - arg0");
 	}
 	ret_value = funcptr(arg0);

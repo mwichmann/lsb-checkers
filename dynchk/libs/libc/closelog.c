@@ -12,11 +12,11 @@ void closelog ()
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "closelog");
+		funcptr = dlvsym(RTLD_NEXT, "closelog", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "closelog()");
+		__lsb_output(4, "closelog()");
 	}
 	funcptr();
 	__lsb_check_params = reset_flag;

@@ -14,11 +14,11 @@ void * __mempcpy (void * arg0 , const void * arg1 , size_t arg2 )
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__mempcpy");
+		funcptr = dlvsym(RTLD_NEXT, "__mempcpy", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "__mempcpy()");
+		__lsb_output(4, "__mempcpy()");
 		validate_RWaddress( arg0, "__mempcpy - arg0");
 		validate_RWaddress(  arg0, "__mempcpy - arg0");
 		validate_Rdaddress( arg1, "__mempcpy - arg1");

@@ -17,7 +17,7 @@ int gzwrite (gzFile arg0 , voidpc arg1 , unsigned int arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gzwrite()");
+		__lsb_output(4, "gzwrite()");
 		validate_NULL_TYPETYPE(  arg0, "gzwrite - arg0");
 		validate_NULL_TYPETYPE(  arg1, "gzwrite - arg1");
 		validate_NULL_TYPETYPE(  arg2, "gzwrite - arg2");

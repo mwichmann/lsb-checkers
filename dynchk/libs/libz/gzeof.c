@@ -17,7 +17,7 @@ int gzeof (gzFile arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gzeof()");
+		__lsb_output(4, "gzeof()");
 		validate_NULL_TYPETYPE(  arg0, "gzeof - arg0");
 	}
 	ret_value = funcptr(arg0);

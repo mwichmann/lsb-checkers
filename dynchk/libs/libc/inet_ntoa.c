@@ -14,11 +14,11 @@ char * inet_ntoa (struct in_addr arg0 )
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "inet_ntoa");
+		funcptr = dlvsym(RTLD_NEXT, "inet_ntoa", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "inet_ntoa()");
+		__lsb_output(4, "inet_ntoa()");
 		validate_struct_in_addr( & arg0, "inet_ntoa - arg0");
 	}
 	ret_value = funcptr(arg0);

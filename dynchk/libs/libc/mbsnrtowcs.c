@@ -15,11 +15,11 @@ size_t mbsnrtowcs (wchar_t * arg0 , const char * * arg1 , size_t arg2 , size_t a
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mbsnrtowcs");
+		funcptr = dlvsym(RTLD_NEXT, "mbsnrtowcs", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "mbsnrtowcs()");
+		__lsb_output(4, "mbsnrtowcs()");
 		validate_RWaddress( arg0, "mbsnrtowcs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mbsnrtowcs - arg0");
 		validate_RWaddress( arg1, "mbsnrtowcs - arg1");

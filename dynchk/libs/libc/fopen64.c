@@ -13,11 +13,11 @@ FILE * fopen64 (const char * arg0 , const char * arg1 )
 	int reset_flag = __lsb_check_params;
 	FILE * ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fopen64");
+		funcptr = dlvsym(RTLD_NEXT, "fopen64", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "fopen64()");
+		__lsb_output(4, "fopen64()");
 		validate_Rdaddress( arg0, "fopen64 - arg0");
 		validate_NULL_TYPETYPE(  arg0, "fopen64 - arg0");
 		validate_Rdaddress( arg1, "fopen64 - arg1");

@@ -13,11 +13,11 @@ long gethostid ()
 	int reset_flag = __lsb_check_params;
 	long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gethostid");
+		funcptr = dlvsym(RTLD_NEXT, "gethostid", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "gethostid()");
+		__lsb_output(4, "gethostid()");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -14,11 +14,11 @@ size_t wcsnlen (const wchar_t * arg0 , size_t arg1 )
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcsnlen");
+		funcptr = dlvsym(RTLD_NEXT, "wcsnlen", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcsnlen()");
+		__lsb_output(4, "wcsnlen()");
 		validate_Rdaddress( arg0, "wcsnlen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsnlen - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wcsnlen - arg1");

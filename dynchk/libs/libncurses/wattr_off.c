@@ -17,7 +17,7 @@ int wattr_off (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wattr_off()");
+		__lsb_output(4, "wattr_off()");
 		validate_RWaddress( arg0, "wattr_off - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wattr_off - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wattr_off - arg1");

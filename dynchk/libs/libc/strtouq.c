@@ -13,11 +13,11 @@ unsigned long long strtouq (const char * arg0 , char * * arg1 , int arg2 )
 	int reset_flag = __lsb_check_params;
 	unsigned long long ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strtouq");
+		funcptr = dlvsym(RTLD_NEXT, "strtouq", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "strtouq()");
+		__lsb_output(4, "strtouq()");
 		validate_Rdaddress( arg0, "strtouq - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtouq - arg0");
 		validate_RWaddress( arg1, "strtouq - arg1");

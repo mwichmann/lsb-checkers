@@ -13,11 +13,11 @@ wint_t towlower (wint_t arg0 )
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "towlower");
+		funcptr = dlvsym(RTLD_NEXT, "towlower", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "towlower()");
+		__lsb_output(4, "towlower()");
 		validate_NULL_TYPETYPE(  arg0, "towlower - arg0");
 	}
 	ret_value = funcptr(arg0);

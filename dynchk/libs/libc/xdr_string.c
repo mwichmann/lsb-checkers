@@ -14,11 +14,11 @@ bool_t xdr_string (XDR * arg0 , char * * arg1 , u_int arg2 )
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_string");
+		funcptr = dlvsym(RTLD_NEXT, "xdr_string", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "xdr_string()");
+		__lsb_output(4, "xdr_string()");
 		validate_RWaddress( arg0, "xdr_string - arg0");
 		validate_NULL_TYPETYPE(  arg0, "xdr_string - arg0");
 		validate_RWaddress( arg1, "xdr_string - arg1");

@@ -14,11 +14,11 @@ int wcwidth (wchar_t arg0 )
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcwidth");
+		funcptr = dlvsym(RTLD_NEXT, "wcwidth", "GLIBC_2.0");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "wcwidth()");
+		__lsb_output(4, "wcwidth()");
 		validate_NULL_TYPETYPE(  arg0, "wcwidth - arg0");
 	}
 	ret_value = funcptr(arg0);

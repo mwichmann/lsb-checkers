@@ -13,11 +13,11 @@ double nan (const char * arg0 )
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nan");
+		funcptr = dlvsym(RTLD_NEXT, "nan", "GLIBC_2.1");
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "nan()");
+		__lsb_output(4, "nan()");
 		validate_Rdaddress( arg0, "nan - arg0");
 		validate_NULL_TYPETYPE(  arg0, "nan - arg0");
 	}
