@@ -31,12 +31,6 @@ add_library_symbols(char *libname, struct tetj_handle *journal)
   Elf32_Sym	*syms;
   int	i,numsyms;
 
-/*   if( (file=OpenElfFile(libname)) == NULL )  */
-/*   { */
-/*     fprintf(stderr,"Can't open %s\n", libname ); */
-/*     return -1; */
-/*   } */
-
   file = check_file(libname, journal, 0);
 
   if (file)
