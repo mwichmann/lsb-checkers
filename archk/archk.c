@@ -31,7 +31,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.1 $";
+static const char * __attribute((unused)) archk_revision = "$Revision: 1.2 $";
 
 int
 main(int argc, char *argv[])
@@ -100,21 +100,21 @@ main(int argc, char *argv[])
 
   /* Start journal logging */
 	
-	if (!overrideJournalFilename)
-	{
-		snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s", 
-						 basename(argv[optind]));
-	}
-	if (tetj_start_journal(journal_filename, &journal, command_line)!=0)
-	{
-		printf("Could not open journal file %s for output..exiting\n",
-					 journal_filename);
-		printf("Use -o <filename> to specify an alternate location for the journal file\n");
-		exit(1);
+  if (!overrideJournalFilename)
+  {
+	  snprintf(journal_filename, TMP_STRING_SIZE, "journal.archk.%s", 
+					   basename(argv[optind]));
+  }
+  if (tetj_start_journal(journal_filename, &journal, command_line)!=0)
+  {
+	  printf("Could not open journal file %s for output..exiting\n",
+				   journal_filename);
+	  printf("Use -o <filename> to specify an alternate location for the journal file\n");
+	  exit(1);
   }
 
-  /* Log version number for lsbapp package */
-  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbappchk " LSBAPPCHK_VERSION);
+  /* Log version number in the journal */
+  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbarchk " LSBAPPCHK_VERSION);
   tetj_add_config(journal, tmp_string);
 
   /* Log extra libraries to look for symbols in */
