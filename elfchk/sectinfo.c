@@ -16,7 +16,7 @@ struct SectionInfo SectionInfo[] = {
 	{".dynamic",SHT_DYNAMIC,SHF_ALLOC+SHF_WRITE,checkDYNAMIC},
 	{".dynstr",SHT_STRTAB,SHF_ALLOC,checkSTRTAB},
 	{".dynsym",SHT_DYNSYM,SHF_ALLOC,checkDYNSYM},
-	{".eh_frame",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+	{".eh_frame",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 	{".eh_frame_hdr",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 	{".fini",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 	{".fini_array",SHT_FINI_ARRAY,SHF_ALLOC+SHF_WRITE,checkFINI_ARRAY},
