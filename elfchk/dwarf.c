@@ -416,13 +416,13 @@ dumpbytes(ptr,length);
         ptr += 4;
         used += 4;
 
-        fdeimage.initial_location = *(int **)ptr;
-        ptr+=4;
-        used+=4;
+        fdeimage.initial_location = *(long **)ptr;
+        ptr += sizeof(long);
+        used += sizeof(long);
         
         fdeimage.address_range = *(long *)ptr;
-        ptr += 4;
-        used += 4;
+        ptr += sizeof(long);
+        used += sizeof(long);
         
 /*         fdeimage.address_range = decode_sleb128(ptr,&numused); */
 /*         ptr += numused; */
