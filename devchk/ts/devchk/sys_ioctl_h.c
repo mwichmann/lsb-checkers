@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/ioctl.h\n");
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,1074030207,4619,architecture)
 #else
@@ -41,7 +41,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,0x5422,4627,architecture)
 #else

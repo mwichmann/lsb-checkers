@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/un.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef UNIX_PATH_MAX
 	CompareConstant(UNIX_PATH_MAX,108,4992,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct sockaddr_un,110, 9152, 2)
 CheckOffset(struct sockaddr_un,sun_path,2,2,34486)
 #elif __ia64__

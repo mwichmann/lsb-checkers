@@ -23,13 +23,13 @@ int pcnt=0;
 Msg("Checking data structures in sys/shm.h\n");
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 /* No test for SHMLBA */
 #elif _LSB_DEFAULT_ARCH
 /* No test for SHMLBA */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHM_R
 	CompareConstant(SHM_R,0400,3467,architecture)
 #else
@@ -39,7 +39,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHM_W
 	CompareConstant(SHM_W,0200,3468,architecture)
 #else
@@ -49,7 +49,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHM_RDONLY
 	CompareConstant(SHM_RDONLY,010000,3469,architecture)
 #else
@@ -59,7 +59,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHM_RND
 	CompareConstant(SHM_RND,020000,3470,architecture)
 #else
@@ -69,7 +69,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHM_REMAP
 	CompareConstant(SHM_REMAP,040000,3471,architecture)
 #else
@@ -79,7 +79,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHM_LOCK
 	CompareConstant(SHM_LOCK,11,3472,architecture)
 #else
@@ -89,7 +89,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHM_UNLOCK
 	CompareConstant(SHM_UNLOCK,12,3473,architecture)
 #else
@@ -99,13 +99,13 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(shmatt_t,4, 10212, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(shmatt_t,4, 10212, 6)
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct shmid_ds,84, 9129, 2)
 CheckOffset(struct shmid_ds,shm_perm,0,2,33702)
 CheckOffset(struct shmid_ds,shm_segsz,36,2,33703)
@@ -122,7 +122,7 @@ CheckOffset(struct shmid_ds,__unused4,76,2,34264)
 CheckOffset(struct shmid_ds,__unused5,80,2,34265)
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(struct shmid_ds,112, 10336, 3)
 CheckOffset(struct shmid_ds,shm_perm,0,3,34550)
 CheckOffset(struct shmid_ds,shm_segsz,48,3,34551)
@@ -136,7 +136,7 @@ CheckOffset(struct shmid_ds,__unused1,96,3,34558)
 CheckOffset(struct shmid_ds,__unused2,104,3,34559)
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct shmid_ds,104, 10337, 6)
 Msg("Missing member data for shmid_ds on PPC32\n");
 #endif

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in assert.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for assert(expr) */
 #endif
 

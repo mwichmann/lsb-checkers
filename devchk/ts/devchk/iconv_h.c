@@ -23,11 +23,11 @@ int pcnt=0;
 Msg("Checking data structures in iconv.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(iconv_t,4, 6895, 2)
 #elif __ia64__
 CheckTypeSize(iconv_t,8, 6895, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(iconv_t,4, 6895, 6)
 #elif __s390__
 CheckTypeSize(iconv_t,4, 6895, 10)

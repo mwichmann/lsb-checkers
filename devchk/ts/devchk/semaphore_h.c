@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in semaphore.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SEM_FAILED
 	CompareConstant(SEM_FAILED,((sem_t*)0),1624,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SEM_VALUE_MAX
 	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)),1625,architecture)
 #else
@@ -43,11 +43,11 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(sem_t,16, 6960, 2)
 #elif __ia64__
 CheckTypeSize(sem_t,32, 6960, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(sem_t,16, 6960, 6)
 #elif __s390__
 CheckTypeSize(sem_t,16, 6960, 10)

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in netinet/in.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IP_TOS
 	CompareConstant(IP_TOS,1,4662,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPPROTO_IP
 	CompareConstant(IPPROTO_IP,0,4445,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPPROTO_ICMP
 	CompareConstant(IPPROTO_ICMP,1,4447,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPPROTO_IGMP
 	CompareConstant(IPPROTO_IGMP,2,4448,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPPROTO_TCP
 	CompareConstant(IPPROTO_TCP,6,4450,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPPROTO_UDP
 	CompareConstant(IPPROTO_UDP,17,4453,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IPPROTO_RAW
 	CompareConstant(IPPROTO_RAW,255,4470,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef INADDR_ANY
 	CompareConstant(INADDR_ANY,0,4489,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef INADDR_BROADCAST
 	CompareConstant(INADDR_BROADCAST,(0xffffffff),4490,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef INADDR_NONE
 	CompareConstant(INADDR_NONE,((unsigned long int) 0xffffffff),4491,architecture)
 #else
@@ -126,7 +126,7 @@ cnt++;
 CheckTypeSize(struct in_addr,4, 10143, 1)
 CheckOffset(struct in_addr,s_addr,0,1,33767)
 CheckTypeSize(in_addr_t,4, 10302, 1)
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct sockaddr_in,16, 9141, 2)
 CheckOffset(struct sockaddr_in,sin_port,2,2,33777)
 CheckOffset(struct sockaddr_in,sin_addr,4,2,33778)
@@ -136,7 +136,7 @@ CheckTypeSize(struct sockaddr_in,16, 9141, 3)
 CheckOffset(struct sockaddr_in,sin_port,2,3,33777)
 CheckOffset(struct sockaddr_in,sin_addr,4,3,33778)
 CheckOffset(struct sockaddr_in,sin_zero,8,3,33779)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 6)
 Msg("Missing member data for sockaddr_in on PPC32\n");
 CheckOffset(struct sockaddr_in,sin_family,0,6,33776)

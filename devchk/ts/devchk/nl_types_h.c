@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in nl_types.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NL_SETD
 	CompareConstant(NL_SETD,1,1531,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NL_CAT_LOCALE
 	CompareConstant(NL_CAT_LOCALE,1,1532,architecture)
 #else
@@ -43,11 +43,11 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(nl_catd,4, 6923, 2)
 #elif __ia64__
 CheckTypeSize(nl_catd,8, 6923, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(nl_catd,4, 6923, 6)
 #elif __s390__
 CheckTypeSize(nl_catd,4, 6923, 10)
@@ -56,11 +56,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6923,0);
 Msg("Find size of nl_catd (6923)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(nl_item,4, 6924, 2)
 #elif __ia64__
 CheckTypeSize(nl_item,4, 6924, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(nl_item,4, 6924, 6)
 #elif __s390__
 CheckTypeSize(nl_item,4, 6924, 10)

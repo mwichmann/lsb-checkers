@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in getopt.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct option,16, 10000, 2)
 CheckOffset(struct option,name,0,2,32258)
 CheckOffset(struct option,has_arg,4,2,32259)
@@ -34,7 +34,7 @@ CheckTypeSize(struct option,32, 10000, 3)
 CheckOffset(struct option,has_arg,8,3,32259)
 CheckOffset(struct option,flag,16,3,32260)
 CheckOffset(struct option,val,24,3,32261)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct option,16, 10000, 6)
 Msg("Missing member data for option on PPC32\n");
 CheckOffset(struct option,name,0,6,32258)

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/stat.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IFMT
 	CompareConstant(S_IFMT,0xf000,1683,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IFDIR
 	CompareConstant(S_IFDIR,0x4000,1684,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IFCHR
 	CompareConstant(S_IFCHR,0x2000,1685,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IFBLK
 	CompareConstant(S_IFBLK,0x6000,1686,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IFREG
 	CompareConstant(S_IFREG,0x8000,1687,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IFIFO
 	CompareConstant(S_IFIFO,0x1000,1688,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IFLNK
 	CompareConstant(S_IFLNK,0xa000,1689,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IFSOCK
 	CompareConstant(S_IFSOCK,0xc000,1690,architecture)
 #else
@@ -103,39 +103,39 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_TYPEISMQ(buf) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_ISLNK(m) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_ISREG(m) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_ISDIR(m) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_ISCHR(m) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_ISBLK(m) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_ISFIFO(m) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_ISSOCK(m) */
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,1,4955,architecture)
 #else
@@ -153,15 +153,15 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_TYPEISSEM(buf) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 /* No test for S_TYPEISSHM(buf) */
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_ISUID
 	CompareConstant(S_ISUID,0x0800,1702,architecture)
 #else
@@ -171,7 +171,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_ISGID
 	CompareConstant(S_ISGID,0x0400,1703,architecture)
 #else
@@ -181,7 +181,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_ISVTX
 	CompareConstant(S_ISVTX,01000,1704,architecture)
 #else
@@ -191,7 +191,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IRUSR
 	CompareConstant(S_IRUSR,0x0100,1705,architecture)
 #else
@@ -201,7 +201,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IWUSR
 	CompareConstant(S_IWUSR,0x0080,1706,architecture)
 #else
@@ -211,7 +211,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IXUSR
 	CompareConstant(S_IXUSR,0x0040,1707,architecture)
 #else
@@ -221,7 +221,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IRWXU
 	CompareConstant(S_IRWXU,(S_IREAD|S_IWRITE|S_IEXEC),1708,architecture)
 #else
@@ -231,7 +231,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IREAD
 	CompareConstant(S_IREAD,S_IRUSR,1709,architecture)
 #else
@@ -241,7 +241,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IWRITE
 	CompareConstant(S_IWRITE,S_IWUSR,1710,architecture)
 #else
@@ -251,7 +251,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IEXEC
 	CompareConstant(S_IEXEC,S_IXUSR,1711,architecture)
 #else
@@ -261,7 +261,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IRGRP
 	CompareConstant(S_IRGRP,(S_IRUSR>>3),1712,architecture)
 #else
@@ -271,7 +271,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IWGRP
 	CompareConstant(S_IWGRP,(S_IWUSR>>3),1713,architecture)
 #else
@@ -281,7 +281,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IXGRP
 	CompareConstant(S_IXGRP,(S_IXUSR>>3),1714,architecture)
 #else
@@ -291,7 +291,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IRWXG
 	CompareConstant(S_IRWXG,(S_IRWXU>>3),1715,architecture)
 #else
@@ -301,7 +301,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IROTH
 	CompareConstant(S_IROTH,(S_IRGRP>>3),1716,architecture)
 #else
@@ -311,7 +311,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IWOTH
 	CompareConstant(S_IWOTH,(S_IWGRP>>3),1717,architecture)
 #else
@@ -321,7 +321,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IXOTH
 	CompareConstant(S_IXOTH,(S_IXGRP>>3),1718,architecture)
 #else
@@ -331,7 +331,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef S_IRWXO
 	CompareConstant(S_IRWXO,(S_IRWXG>>3),1719,architecture)
 #else
@@ -341,7 +341,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct stat,88, 8693, 2)
 CheckOffset(struct stat,__pad1,8,2,33633)
 CheckOffset(struct stat,st_ino,12,2,33634)
@@ -362,7 +362,7 @@ CheckOffset(struct stat,st_ctime,72,2,33648)
 CheckOffset(struct stat,__unused3,76,2,33649)
 CheckOffset(struct stat,__unused4,80,2,33650)
 CheckOffset(struct stat,__unused5,84,2,33651)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct stat,88, 8693, 6)
 Msg("Missing member data for stat on PPC32\n");
 CheckOffset(struct stat,st_dev,0,6,33632)
@@ -408,7 +408,7 @@ CheckOffset(struct stat,__unused4,80,10,33650)
 CheckOffset(struct stat,__unused5,84,10,33651)
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct stat64,96, 8697, 2)
 CheckOffset(struct stat64,__pad1,8,2,33653)
 CheckOffset(struct stat64,__st_ino,12,2,33654)
@@ -450,7 +450,7 @@ CheckOffset(struct stat64,__unused3,92,10,33669)
 CheckOffset(struct stat64,st_ino,96,10,33670)
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(struct stat,144, 10397, 3)
 CheckOffset(struct stat,st_dev,0,3,34670)
 CheckOffset(struct stat,st_ino,8,3,34671)
@@ -472,7 +472,7 @@ CheckOffset(struct stat,st_blocks,112,3,34687)
 CheckOffset(struct stat,__unused,120,3,34686)
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct stat64,104, 10398, 6)
 Msg("Missing member data for stat64 on PPC32\n");
 #endif

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in limits.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MB_LEN_MAX
 	CompareConstant(MB_LEN_MAX,16,2,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CHAR_BIT
 	CompareConstant(CHAR_BIT,8,4,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SCHAR_MIN
 	CompareConstant(SCHAR_MIN,(-128),5,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SCHAR_MAX
 	CompareConstant(SCHAR_MAX,127,6,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef UCHAR_MAX
 	CompareConstant(UCHAR_MAX,255,7,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,0,8,architecture)
 #else
@@ -99,7 +99,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,255,9,architecture)
 #else
@@ -125,7 +125,7 @@ cnt++;
 
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 #ifdef __INT_MAX__
 	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
 #else
@@ -155,7 +155,7 @@ Msg( "No definition for __INT_MAX__ (3600, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3600,%d)\n", architecture, __INT_MAX__);
 #endif
 #endif
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHRT_MIN
 	CompareConstant(SHRT_MIN,(-32768),10,architecture)
 #else
@@ -165,7 +165,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef SHRT_MAX
 	CompareConstant(SHRT_MAX,32767,11,architecture)
 #else
@@ -175,7 +175,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef USHRT_MAX
 	CompareConstant(USHRT_MAX,65535,12,architecture)
 #else
@@ -185,7 +185,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef INT_MIN
 	CompareConstant(INT_MIN,(-INT_MAX-1),13,architecture)
 #else
@@ -195,7 +195,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef INT_MAX
 	CompareConstant(INT_MAX,2147483647,14,architecture)
 #else
@@ -205,7 +205,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef UINT_MAX
 	CompareConstant(UINT_MAX,4294967295U,15,architecture)
 #else
@@ -215,7 +215,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,2147483647L,16,architecture)
 #else
@@ -253,7 +253,7 @@ Msg( "No definition for LONG_MAX (16, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,16,%d)\n", architecture, LONG_MAX);
 #endif
 #endif
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LONG_MIN
 	CompareConstant(LONG_MIN,(-LONG_MAX-1L),17,architecture)
 #else
@@ -263,7 +263,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ULONG_MAX
 	CompareConstant(ULONG_MAX,4294967295UL,18,architecture)
 #else
@@ -301,7 +301,7 @@ Msg( "No definition for ULONG_MAX (18, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%d)\n", architecture, ULONG_MAX);
 #endif
 #endif
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef OPEN_MAX
 	CompareConstant(OPEN_MAX,256,24,architecture)
 #else
@@ -311,7 +311,7 @@ cnt++;
 
 #endif
 
-#ifdef __s390__
+#if __s390__
 #ifdef PATH_MAX
 	CompareConstant(PATH_MAX,4095,29,architecture)
 #else

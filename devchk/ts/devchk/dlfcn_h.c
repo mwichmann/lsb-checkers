@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in dlfcn.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RTLD_LAZY
 	CompareConstant(RTLD_LAZY,0x00001,1160,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RTLD_NOW
 	CompareConstant(RTLD_NOW,0x00002,1161,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RTLD_GLOBAL
 	CompareConstant(RTLD_GLOBAL,0x00100,1164,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RTLD_LOCAL
 	CompareConstant(RTLD_LOCAL,0,1165,architecture)
 #else
@@ -63,11 +63,11 @@ cnt++;
 
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(Dl_info,32, 10008, 3)
 #elif __i386__
 CheckTypeSize(Dl_info,16, 10008, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(Dl_info,16, 10008, 6)
 #elif __s390__
 CheckTypeSize(Dl_info,16, 10008, 10)

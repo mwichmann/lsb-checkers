@@ -23,13 +23,13 @@ int pcnt=0;
 Msg("Checking data structures in rpc/types.h\n");
 #endif
 
-#ifdef __powerpc64__
+#if __powerpc64__
 CheckTypeSize(bool_t,4, 9890, 9)
 #elif __ia64__
 CheckTypeSize(bool_t,4, 9890, 3)
 #elif __i386__
 CheckTypeSize(bool_t,4, 9890, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(bool_t,4, 9890, 6)
 #elif __s390__
 CheckTypeSize(bool_t,4, 9890, 10)
@@ -38,7 +38,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9890,0);
 Msg("Find size of bool_t (9890)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(enum_t,4, 9895, 2)
 #elif __s390__
 CheckTypeSize(enum_t,4, 9895, 10)
@@ -49,7 +49,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9895,0);
 Msg("Find size of enum_t (9895)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(rpcvers_t,4, 9993, 2)
 #elif __ia64__
 CheckTypeSize(rpcvers_t,8, 9993, 3)

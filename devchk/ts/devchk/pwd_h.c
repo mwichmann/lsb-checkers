@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in pwd.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct passwd,28, 6938, 2)
 CheckOffset(struct passwd,pw_passwd,4,2,30042)
 CheckOffset(struct passwd,pw_uid,8,2,30043)
@@ -39,7 +39,7 @@ CheckOffset(struct passwd,pw_gid,20,3,30044)
 CheckOffset(struct passwd,pw_gecos,24,3,30045)
 CheckOffset(struct passwd,pw_dir,32,3,30046)
 CheckOffset(struct passwd,pw_shell,40,3,30047)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct passwd,28, 6938, 6)
 Msg("Missing member data for passwd on PPC32\n");
 CheckOffset(struct passwd,pw_name,0,6,30041)

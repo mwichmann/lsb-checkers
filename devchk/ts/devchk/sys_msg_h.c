@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/msg.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MSG_NOERROR
 	CompareConstant(MSG_NOERROR,010000,3457,architecture)
 #else
@@ -33,30 +33,30 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(msgqnum_t,4, 10213, 2)
 #elif __powerpc64__
 CheckTypeSize(msgqnum_t,8, 10213, 9)
 #elif __s390__
 CheckTypeSize(msgqnum_t,4, 10213, 10)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(msgqnum_t,4, 10213, 6)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10213,0);
 Msg("Find size of msgqnum_t (10213)\n");
 #endif
 
-#ifdef __powerpc64__
+#if __powerpc64__
 CheckTypeSize(msglen_t,8, 10214, 9)
 #elif __i386__
 CheckTypeSize(msglen_t,4, 10214, 2)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(msglen_t,4, 10214, 6)
 #elif __s390__
 CheckTypeSize(msglen_t,4, 10214, 10)
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct msqid_ds,88, 9117, 2)
 CheckOffset(struct msqid_ds,msg_perm,0,2,34276)
 CheckOffset(struct msqid_ds,msg_stime,36,2,34277)
@@ -74,7 +74,7 @@ CheckOffset(struct msqid_ds,__unused4,80,2,34288)
 CheckOffset(struct msqid_ds,__unused5,84,2,34289)
 #endif
 
-#ifdef __ia64__
+#if __ia64__
 CheckTypeSize(struct msqid_ds,120, 10395, 3)
 CheckOffset(struct msqid_ds,msg_perm,0,3,34654)
 CheckOffset(struct msqid_ds,msg_stime,48,3,34655)
@@ -89,7 +89,7 @@ CheckOffset(struct msqid_ds,__unused1,104,3,34663)
 CheckOffset(struct msqid_ds,__unused2,112,3,34664)
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct msqid_ds,104, 10405, 6)
 CheckOffset(struct msqid_ds,msg_perm,0,6,34742)
 CheckOffset(struct msqid_ds,msg_stime,0,6,34743)
@@ -105,7 +105,7 @@ CheckOffset(struct msqid_ds,msg_lspid,0,6,34752)
 CheckOffset(struct msqid_ds,msg_lrpid,0,6,34753)
 #endif
 
-#ifdef __s390__
+#if __s390__
 CheckTypeSize(struct msqid_ds,88, 10406, 10)
 CheckOffset(struct msqid_ds,msg_stime,36,10,34755)
 CheckOffset(struct msqid_ds,msg_rtime,44,10,34756)

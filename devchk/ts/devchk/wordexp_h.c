@@ -23,20 +23,20 @@ int pcnt=0;
 Msg("Checking data structures in wordexp.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 #elif __ia64__
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 #elif __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9200,0);
 Msg("Find size of anon-wordexp.h-7 (9200)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(wordexp_t,12, 7029, 2)
 #elif __ia64__
 CheckTypeSize(wordexp_t,24, 7029, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(wordexp_t,12, 7029, 6)
 #elif __s390__
 CheckTypeSize(wordexp_t,12, 7029, 10)
@@ -45,9 +45,9 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7029,0);
 Msg("Find size of wordexp_t (7029)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 #elif __ia64__
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 #elif __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9201,0);

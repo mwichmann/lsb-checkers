@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in langinfo.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABDAY_1
 	CompareConstant(ABDAY_1,0x20000,1411,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABDAY_2
 	CompareConstant(ABDAY_2,0x20001,1412,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABDAY_3
 	CompareConstant(ABDAY_3,0x20002,1413,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABDAY_4
 	CompareConstant(ABDAY_4,0x20003,1414,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABDAY_5
 	CompareConstant(ABDAY_5,0x20004,1415,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABDAY_6
 	CompareConstant(ABDAY_6,0x20005,1416,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABDAY_7
 	CompareConstant(ABDAY_7,0x20006,1417,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef DAY_1
 	CompareConstant(DAY_1,0x20007,1418,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef DAY_2
 	CompareConstant(DAY_2,0x20008,1419,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef DAY_3
 	CompareConstant(DAY_3,0x20009,1420,architecture)
 #else
@@ -123,7 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef DAY_4
 	CompareConstant(DAY_4,0x2000A,1421,architecture)
 #else
@@ -133,7 +133,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef DAY_5
 	CompareConstant(DAY_5,0x2000B,1422,architecture)
 #else
@@ -143,7 +143,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef DAY_6
 	CompareConstant(DAY_6,0x2000C,1423,architecture)
 #else
@@ -153,7 +153,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef DAY_7
 	CompareConstant(DAY_7,0x2000D,1424,architecture)
 #else
@@ -163,7 +163,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_1
 	CompareConstant(ABMON_1,0x2000E,1425,architecture)
 #else
@@ -173,7 +173,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_2
 	CompareConstant(ABMON_2,0x2000F,1426,architecture)
 #else
@@ -183,7 +183,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_3
 	CompareConstant(ABMON_3,0x20010,1427,architecture)
 #else
@@ -193,7 +193,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_4
 	CompareConstant(ABMON_4,0x20011,1428,architecture)
 #else
@@ -203,7 +203,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_5
 	CompareConstant(ABMON_5,0x20012,1429,architecture)
 #else
@@ -213,7 +213,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_6
 	CompareConstant(ABMON_6,0x20013,1430,architecture)
 #else
@@ -223,7 +223,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_7
 	CompareConstant(ABMON_7,0x20014,1431,architecture)
 #else
@@ -233,7 +233,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_8
 	CompareConstant(ABMON_8,0x20015,1432,architecture)
 #else
@@ -243,7 +243,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_9
 	CompareConstant(ABMON_9,0x20016,1433,architecture)
 #else
@@ -253,7 +253,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_10
 	CompareConstant(ABMON_10,0x20017,1434,architecture)
 #else
@@ -263,7 +263,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_11
 	CompareConstant(ABMON_11,0x20018,1435,architecture)
 #else
@@ -273,7 +273,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ABMON_12
 	CompareConstant(ABMON_12,0x20019,1436,architecture)
 #else
@@ -283,7 +283,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_1
 	CompareConstant(MON_1,0x2001A,1437,architecture)
 #else
@@ -293,7 +293,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_2
 	CompareConstant(MON_2,0x2001B,1438,architecture)
 #else
@@ -303,7 +303,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_3
 	CompareConstant(MON_3,0x2001C,1439,architecture)
 #else
@@ -313,7 +313,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_4
 	CompareConstant(MON_4,0x2001D,1440,architecture)
 #else
@@ -323,7 +323,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_5
 	CompareConstant(MON_5,0x2001E,1441,architecture)
 #else
@@ -333,7 +333,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_6
 	CompareConstant(MON_6,0x2001F,1442,architecture)
 #else
@@ -343,7 +343,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_7
 	CompareConstant(MON_7,0x20020,1443,architecture)
 #else
@@ -353,7 +353,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_8
 	CompareConstant(MON_8,0x20021,1444,architecture)
 #else
@@ -363,7 +363,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_9
 	CompareConstant(MON_9,0x20022,1445,architecture)
 #else
@@ -373,7 +373,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_10
 	CompareConstant(MON_10,0x20023,1446,architecture)
 #else
@@ -383,7 +383,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_11
 	CompareConstant(MON_11,0x20024,1447,architecture)
 #else
@@ -393,7 +393,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MON_12
 	CompareConstant(MON_12,0x20025,1448,architecture)
 #else
@@ -403,7 +403,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef AM_STR
 	CompareConstant(AM_STR,0x20026,1449,architecture)
 #else
@@ -413,7 +413,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef PM_STR
 	CompareConstant(PM_STR,0x20027,1450,architecture)
 #else
@@ -423,7 +423,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef D_T_FMT
 	CompareConstant(D_T_FMT,0x20028,1451,architecture)
 #else
@@ -433,7 +433,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef D_FMT
 	CompareConstant(D_FMT,0x20029,1452,architecture)
 #else
@@ -443,7 +443,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef T_FMT
 	CompareConstant(T_FMT,0x2002A,1453,architecture)
 #else
@@ -453,7 +453,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef T_FMT_AMPM
 	CompareConstant(T_FMT_AMPM,0x2002B,1454,architecture)
 #else
@@ -463,7 +463,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ERA
 	CompareConstant(ERA,0x2002C,1455,architecture)
 #else
@@ -473,7 +473,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ERA_D_FMT
 	CompareConstant(ERA_D_FMT,0x2002E,1456,architecture)
 #else
@@ -483,7 +483,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ALT_DIGITS
 	CompareConstant(ALT_DIGITS,0x2002F,1457,architecture)
 #else
@@ -493,7 +493,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ERA_D_T_FMT
 	CompareConstant(ERA_D_T_FMT,0x20030,1458,architecture)
 #else
@@ -503,7 +503,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ERA_T_FMT
 	CompareConstant(ERA_T_FMT,0x20031,1459,architecture)
 #else
@@ -513,7 +513,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CODESET
 	CompareConstant(CODESET,14,1461,architecture)
 #else
@@ -523,7 +523,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CRNCYSTR
 	CompareConstant(CRNCYSTR,0x4000F,1462,architecture)
 #else
@@ -533,7 +533,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef RADIXCHAR
 	CompareConstant(RADIXCHAR,0x10000,1463,architecture)
 #else
@@ -543,7 +543,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef THOUSEP
 	CompareConstant(THOUSEP,0x10001,1464,architecture)
 #else
@@ -553,7 +553,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef YESEXPR
 	CompareConstant(YESEXPR,0x50000,1465,architecture)
 #else
@@ -563,7 +563,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NOEXPR
 	CompareConstant(NOEXPR,0x50001,1466,architecture)
 #else
@@ -573,7 +573,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NOSTR
 	CompareConstant(NOSTR,0x50003,5000,architecture)
 #else
@@ -583,7 +583,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef YESSTR
 	CompareConstant(YESSTR,0x50002,5001,architecture)
 #else

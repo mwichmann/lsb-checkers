@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in cpio.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IRGRP
 	CompareConstant(C_IRGRP,000040,1100,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IWGRP
 	CompareConstant(C_IWGRP,000020,1101,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IXGRP
 	CompareConstant(C_IXGRP,000010,1102,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IROTH
 	CompareConstant(C_IROTH,000004,1103,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IWOTH
 	CompareConstant(C_IWOTH,000002,1104,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IXOTH
 	CompareConstant(C_IXOTH,000001,1105,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISUID
 	CompareConstant(C_ISUID,004000,1106,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISGID
 	CompareConstant(C_ISGID,002000,1107,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISVTX
 	CompareConstant(C_ISVTX,001000,1108,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISBLK
 	CompareConstant(C_ISBLK,060000,1109,architecture)
 #else
@@ -123,7 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISCHR
 	CompareConstant(C_ISCHR,020000,1110,architecture)
 #else
@@ -133,7 +133,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISDIR
 	CompareConstant(C_ISDIR,040000,1111,architecture)
 #else
@@ -143,7 +143,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISFIFO
 	CompareConstant(C_ISFIFO,010000,1112,architecture)
 #else
@@ -153,7 +153,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISSOCK
 	CompareConstant(C_ISSOCK,0140000,1113,architecture)
 #else
@@ -163,7 +163,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISLNK
 	CompareConstant(C_ISLNK,0120000,1114,architecture)
 #else
@@ -173,7 +173,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISCTG
 	CompareConstant(C_ISCTG,0110000,1115,architecture)
 #else
@@ -183,7 +183,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_ISREG
 	CompareConstant(C_ISREG,0100000,1116,architecture)
 #else
@@ -193,7 +193,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef MAGIC
 	CompareStringConstant(MAGIC,"070707")
 #else
@@ -203,7 +203,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IRUSR
 	CompareConstant(C_IRUSR,000400,1097,architecture)
 #else
@@ -213,7 +213,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IWUSR
 	CompareConstant(C_IWUSR,000200,1098,architecture)
 #else
@@ -223,7 +223,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef C_IXUSR
 	CompareConstant(C_IXUSR,000100,1099,architecture)
 #else

@@ -23,11 +23,11 @@ int pcnt=0;
 Msg("Checking data structures in X11/Xauth.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(Xauth,32, 8961, 2)
 #elif __ia64__
 CheckTypeSize(Xauth,64, 8961, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(Xauth,32, 8961, 6)
 #elif __s390__
 CheckTypeSize(Xauth,32, 8961, 10)

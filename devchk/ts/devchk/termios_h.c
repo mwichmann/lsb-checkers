@@ -25,7 +25,7 @@ int pcnt=0;
 Msg("Checking data structures in termios.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CR0
 	CompareConstant(CR0,0000000,1820,architecture)
 #else
@@ -35,7 +35,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CR1
 	CompareConstant(CR1,4096,1821,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CR2
 	CompareConstant(CR2,8192,1822,architecture)
 #else
@@ -71,7 +71,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CR3
 	CompareConstant(CR3,12288,1823,architecture)
 #else
@@ -89,7 +89,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef TABDLY
 	CompareConstant(TABDLY,3072,1824,architecture)
 #else
@@ -107,7 +107,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TAB0
 	CompareConstant(TAB0,0000000,1825,architecture)
 #else
@@ -117,7 +117,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef TAB1
 	CompareConstant(TAB1,1024,1826,architecture)
 #else
@@ -135,7 +135,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef TAB2
 	CompareConstant(TAB2,2048,1827,architecture)
 #else
@@ -153,7 +153,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef TAB3
 	CompareConstant(TAB3,3072,1828,architecture)
 #else
@@ -171,7 +171,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef BSDLY
 	CompareConstant(BSDLY,32768,1829,architecture)
 #else
@@ -189,7 +189,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef FLUSHO
 	CompareConstant(FLUSHO,8388608,1900,architecture)
 #else
@@ -207,7 +207,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef PENDIN
 	CompareConstant(PENDIN,536870912,1901,architecture)
 #else
@@ -225,7 +225,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef IEXTEN
 	CompareConstant(IEXTEN,1024,1902,architecture)
 #else
@@ -243,7 +243,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCOOFF
 	CompareConstant(TCOOFF,0,1903,architecture)
 #else
@@ -253,7 +253,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef BS0
 	CompareConstant(BS0,0000000,1830,architecture)
 #else
@@ -263,7 +263,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCOON
 	CompareConstant(TCOON,1,1904,architecture)
 #else
@@ -273,7 +273,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef BS1
 	CompareConstant(BS1,32768,1831,architecture)
 #else
@@ -291,7 +291,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCIOFF
 	CompareConstant(TCIOFF,2,1905,architecture)
 #else
@@ -301,7 +301,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef FFDLY
 	CompareConstant(FFDLY,16384,1832,architecture)
 #else
@@ -319,7 +319,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCION
 	CompareConstant(TCION,3,1906,architecture)
 #else
@@ -329,7 +329,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef FF0
 	CompareConstant(FF0,0000000,1833,architecture)
 #else
@@ -339,7 +339,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCIFLUSH
 	CompareConstant(TCIFLUSH,0,1907,architecture)
 #else
@@ -349,7 +349,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef FF1
 	CompareConstant(FF1,16384,1834,architecture)
 #else
@@ -367,7 +367,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VTDLY
 	CompareConstant(VTDLY,65536,1835,architecture)
 #else
@@ -385,7 +385,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCOFLUSH
 	CompareConstant(TCOFLUSH,1,1908,architecture)
 #else
@@ -395,7 +395,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef VT0
 	CompareConstant(VT0,0000000,1836,architecture)
 #else
@@ -405,7 +405,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCIOFLUSH
 	CompareConstant(TCIOFLUSH,2,1909,architecture)
 #else
@@ -415,7 +415,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VT1
 	CompareConstant(VT1,65536,1837,architecture)
 #else
@@ -433,7 +433,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCSANOW
 	CompareConstant(TCSANOW,0,1910,architecture)
 #else
@@ -443,7 +443,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCSADRAIN
 	CompareConstant(TCSADRAIN,1,1911,architecture)
 #else
@@ -453,7 +453,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef TCSAFLUSH
 	CompareConstant(TCSAFLUSH,2,1912,architecture)
 #else
@@ -463,7 +463,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B0
 	CompareConstant(B0,0000000,1840,architecture)
 #else
@@ -473,7 +473,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B50
 	CompareConstant(B50,0000001,1841,architecture)
 #else
@@ -483,7 +483,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B75
 	CompareConstant(B75,0000002,1842,architecture)
 #else
@@ -493,7 +493,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B110
 	CompareConstant(B110,0000003,1843,architecture)
 #else
@@ -503,7 +503,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B134
 	CompareConstant(B134,0000004,1844,architecture)
 #else
@@ -513,7 +513,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B150
 	CompareConstant(B150,0000005,1845,architecture)
 #else
@@ -523,7 +523,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B200
 	CompareConstant(B200,0000006,1846,architecture)
 #else
@@ -533,7 +533,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B300
 	CompareConstant(B300,0000007,1847,architecture)
 #else
@@ -543,7 +543,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B600
 	CompareConstant(B600,0000010,1848,architecture)
 #else
@@ -553,7 +553,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NCCS
 	CompareConstant(NCCS,32,1776,architecture)
 #else
@@ -563,7 +563,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B1200
 	CompareConstant(B1200,0000011,1849,architecture)
 #else
@@ -573,7 +573,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef VINTR
 	CompareConstant(VINTR,0,1777,architecture)
 #else
@@ -583,7 +583,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef VQUIT
 	CompareConstant(VQUIT,1,1778,architecture)
 #else
@@ -593,7 +593,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef VERASE
 	CompareConstant(VERASE,2,1779,architecture)
 #else
@@ -603,7 +603,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B1800
 	CompareConstant(B1800,0000012,1850,architecture)
 #else
@@ -613,7 +613,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B2400
 	CompareConstant(B2400,0000013,1851,architecture)
 #else
@@ -623,7 +623,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B4800
 	CompareConstant(B4800,0000014,1852,architecture)
 #else
@@ -633,7 +633,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B9600
 	CompareConstant(B9600,0000015,1853,architecture)
 #else
@@ -643,7 +643,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef VKILL
 	CompareConstant(VKILL,3,1780,architecture)
 #else
@@ -653,7 +653,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B19200
 	CompareConstant(B19200,0000016,1854,architecture)
 #else
@@ -663,7 +663,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef VEOF
 	CompareConstant(VEOF,4,1781,architecture)
 #else
@@ -673,7 +673,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef B38400
 	CompareConstant(B38400,0000017,1855,architecture)
 #else
@@ -683,7 +683,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VTIME
 	CompareConstant(VTIME,7,1782,architecture)
 #else
@@ -701,7 +701,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VMIN
 	CompareConstant(VMIN,5,1783,architecture)
 #else
@@ -719,7 +719,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VSWTC
 	CompareConstant(VSWTC,9,1784,architecture)
 #else
@@ -737,7 +737,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CSIZE
 	CompareConstant(CSIZE,768,1858,architecture)
 #else
@@ -755,7 +755,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VSTART
 	CompareConstant(VSTART,13,1785,architecture)
 #else
@@ -773,7 +773,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CS5
 	CompareConstant(CS5,0000000,1859,architecture)
 #else
@@ -783,7 +783,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VSTOP
 	CompareConstant(VSTOP,14,1786,architecture)
 #else
@@ -801,7 +801,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VSUSP
 	CompareConstant(VSUSP,12,1787,architecture)
 #else
@@ -819,7 +819,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VEOL
 	CompareConstant(VEOL,6,1788,architecture)
 #else
@@ -837,7 +837,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VREPRINT
 	CompareConstant(VREPRINT,11,1789,architecture)
 #else
@@ -855,7 +855,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CS6
 	CompareConstant(CS6,256,1860,architecture)
 #else
@@ -873,7 +873,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CS7
 	CompareConstant(CS7,512,1861,architecture)
 #else
@@ -891,7 +891,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CS8
 	CompareConstant(CS8,768,1862,architecture)
 #else
@@ -909,7 +909,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CSTOPB
 	CompareConstant(CSTOPB,1024,1863,architecture)
 #else
@@ -927,7 +927,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VDISCARD
 	CompareConstant(VDISCARD,16,1790,architecture)
 #else
@@ -945,7 +945,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CREAD
 	CompareConstant(CREAD,2048,1864,architecture)
 #else
@@ -963,7 +963,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VWERASE
 	CompareConstant(VWERASE,10,1791,architecture)
 #else
@@ -981,7 +981,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef PARENB
 	CompareConstant(PARENB,4096,1865,architecture)
 #else
@@ -999,7 +999,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef VLNEXT
 	CompareConstant(VLNEXT,15,1792,architecture)
 #else
@@ -1009,7 +1009,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef PARODD
 	CompareConstant(PARODD,8192,1866,architecture)
 #else
@@ -1027,7 +1027,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef VEOL2
 	CompareConstant(VEOL2,8,1793,architecture)
 #else
@@ -1045,7 +1045,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef HUPCL
 	CompareConstant(HUPCL,16384,1867,architecture)
 #else
@@ -1063,7 +1063,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IGNBRK
 	CompareConstant(IGNBRK,0000001,1794,architecture)
 #else
@@ -1073,7 +1073,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CLOCAL
 	CompareConstant(CLOCAL,32768,1868,architecture)
 #else
@@ -1091,7 +1091,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef BRKINT
 	CompareConstant(BRKINT,0000002,1795,architecture)
 #else
@@ -1101,7 +1101,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IGNPAR
 	CompareConstant(IGNPAR,0000004,1796,architecture)
 #else
@@ -1111,7 +1111,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef PARMRK
 	CompareConstant(PARMRK,0000010,1797,architecture)
 #else
@@ -1121,7 +1121,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef INPCK
 	CompareConstant(INPCK,0000020,1798,architecture)
 #else
@@ -1131,7 +1131,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ISTRIP
 	CompareConstant(ISTRIP,0000040,1799,architecture)
 #else
@@ -1141,7 +1141,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ISIG
 	CompareConstant(ISIG,128,1888,architecture)
 #else
@@ -1159,7 +1159,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ICANON
 	CompareConstant(ICANON,256,1889,architecture)
 #else
@@ -1177,7 +1177,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef XCASE
 	CompareConstant(XCASE,16384,1890,architecture)
 #else
@@ -1195,7 +1195,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ECHO
 	CompareConstant(ECHO,0000010,1891,architecture)
 #else
@@ -1205,7 +1205,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ECHOE
 	CompareConstant(ECHOE,2,1892,architecture)
 #else
@@ -1223,7 +1223,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ECHOK
 	CompareConstant(ECHOK,4,1893,architecture)
 #else
@@ -1241,7 +1241,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ECHONL
 	CompareConstant(ECHONL,16,1894,architecture)
 #else
@@ -1259,7 +1259,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef NOFLSH
 	CompareConstant(NOFLSH,-2147483648,1895,architecture)
 #else
@@ -1277,7 +1277,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef TOSTOP
 	CompareConstant(TOSTOP,4194304,1896,architecture)
 #else
@@ -1295,7 +1295,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ECHOCTL
 	CompareConstant(ECHOCTL,64,1897,architecture)
 #else
@@ -1313,7 +1313,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ECHOPRT
 	CompareConstant(ECHOPRT,32,1898,architecture)
 #else
@@ -1331,7 +1331,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ECHOKE
 	CompareConstant(ECHOKE,1,1899,architecture)
 #else
@@ -1349,7 +1349,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef INLCR
 	CompareConstant(INLCR,0000100,1800,architecture)
 #else
@@ -1359,7 +1359,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IGNCR
 	CompareConstant(IGNCR,0000200,1801,architecture)
 #else
@@ -1369,7 +1369,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ICRNL
 	CompareConstant(ICRNL,0000400,1802,architecture)
 #else
@@ -1379,7 +1379,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef IUCLC
 	CompareConstant(IUCLC,4096,1803,architecture)
 #else
@@ -1397,7 +1397,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef IXON
 	CompareConstant(IXON,512,1804,architecture)
 #else
@@ -1415,7 +1415,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IXANY
 	CompareConstant(IXANY,0004000,1805,architecture)
 #else
@@ -1425,7 +1425,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef IXOFF
 	CompareConstant(IXOFF,1024,1806,architecture)
 #else
@@ -1443,7 +1443,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef IMAXBEL
 	CompareConstant(IMAXBEL,0020000,1807,architecture)
 #else
@@ -1453,7 +1453,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef OPOST
 	CompareConstant(OPOST,0000001,1808,architecture)
 #else
@@ -1463,7 +1463,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef OLCUC
 	CompareConstant(OLCUC,4,1809,architecture)
 #else
@@ -1481,7 +1481,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef ONLCR
 	CompareConstant(ONLCR,2,1810,architecture)
 #else
@@ -1499,7 +1499,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef OCRNL
 	CompareConstant(OCRNL,0000010,1811,architecture)
 #else
@@ -1509,7 +1509,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ONOCR
 	CompareConstant(ONOCR,0000020,1812,architecture)
 #else
@@ -1519,7 +1519,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef ONLRET
 	CompareConstant(ONLRET,0000040,1813,architecture)
 #else
@@ -1529,7 +1529,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef OFILL
 	CompareConstant(OFILL,0000100,1814,architecture)
 #else
@@ -1539,7 +1539,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef OFDEL
 	CompareConstant(OFDEL,0000200,1815,architecture)
 #else
@@ -1549,7 +1549,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef NLDLY
 	CompareConstant(NLDLY,768,1816,architecture)
 #else
@@ -1567,7 +1567,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NL0
 	CompareConstant(NL0,0000000,1817,architecture)
 #else
@@ -1577,7 +1577,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NL1
 	CompareConstant(NL1,0000400,1818,architecture)
 #else
@@ -1587,7 +1587,7 @@ cnt++;
 
 #endif
 
-#ifdef __powerpc__
+#if __powerpc__ && !__powerpc64__
 #ifdef CRDLY
 	CompareConstant(CRDLY,12288,1819,architecture)
 #else
@@ -1605,7 +1605,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct winsize,8, 10301, 2)
 CheckOffset(struct winsize,ws_col,2,2,34488)
 CheckOffset(struct winsize,ws_xpixel,4,2,34489)
@@ -1615,7 +1615,7 @@ CheckTypeSize(struct winsize,8, 10301, 3)
 CheckOffset(struct winsize,ws_col,2,3,34488)
 CheckOffset(struct winsize,ws_xpixel,4,3,34489)
 CheckOffset(struct winsize,ws_ypixel,6,3,34490)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct winsize,8, 10301, 6)
 Msg("Missing member data for winsize on PPC32\n");
 CheckOffset(struct winsize,ws_row,0,6,34487)
@@ -1632,11 +1632,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10301,0);
 Msg("Find size of winsize (10301)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(speed_t,4, 9186, 2)
 #elif __ia64__
 CheckTypeSize(speed_t,4, 9186, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(speed_t,4, 9186, 6)
 #elif __s390__
 CheckTypeSize(speed_t,4, 9186, 10)
@@ -1645,11 +1645,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 Msg("Find size of speed_t (9186)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(cc_t,1, 10206, 2)
 #elif __ia64__
 CheckTypeSize(cc_t,1, 10206, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(cc_t,1, 10206, 6)
 #elif __s390__
 CheckTypeSize(cc_t,1, 10206, 10)
@@ -1658,11 +1658,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
 Msg("Find size of cc_t (10206)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(tcflag_t,4, 10207, 2)
 #elif __ia64__
 CheckTypeSize(tcflag_t,4, 10207, 3)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(tcflag_t,4, 10207, 6)
 #elif __s390__
 CheckTypeSize(tcflag_t,4, 10207, 10)
@@ -1671,7 +1671,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10207,0);
 Msg("Find size of tcflag_t (10207)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct termios,60, 9187, 2)
 CheckOffset(struct termios,c_iflag,0,2,34268)
 CheckOffset(struct termios,c_oflag,4,2,34269)
@@ -1690,7 +1690,7 @@ CheckOffset(struct termios,c_line,16,3,34272)
 CheckOffset(struct termios,c_cc,17,3,34273)
 CheckOffset(struct termios,c_ispeed,52,3,34274)
 CheckOffset(struct termios,c_ospeed,56,3,34275)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct termios,60, 9187, 6)
 Msg("Missing member data for termios on PPC32\n");
 CheckOffset(struct termios,c_iflag,0,6,34268)

@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in rpc/clnt.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_RETRY_TIMEOUT
 	CompareConstant(CLSET_RETRY_TIMEOUT,4,4302,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLGET_RETRY_TIMEOUT
 	CompareConstant(CLGET_RETRY_TIMEOUT,5,4303,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef NULLPROC
 	CompareConstant(NULLPROC,((u_long)0),4310,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_TIMEOUT
 	CompareConstant(CLSET_TIMEOUT,1,4286,architecture)
 #else
@@ -63,7 +63,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLGET_TIMEOUT
 	CompareConstant(CLGET_TIMEOUT,2,4287,architecture)
 #else
@@ -73,7 +73,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLGET_SERVER_ADDR
 	CompareConstant(CLGET_SERVER_ADDR,3,4288,architecture)
 #else
@@ -83,7 +83,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLGET_FD
 	CompareConstant(CLGET_FD,6,4289,architecture)
 #else
@@ -93,7 +93,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLGET_SVC_ADDR
 	CompareConstant(CLGET_SVC_ADDR,7,4290,architecture)
 #else
@@ -103,7 +103,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_FD_CLOSE
 	CompareConstant(CLSET_FD_CLOSE,8,4291,architecture)
 #else
@@ -113,7 +113,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_FD_NCLOSE
 	CompareConstant(CLSET_FD_NCLOSE,9,4292,architecture)
 #else
@@ -123,7 +123,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLGET_XID
 	CompareConstant(CLGET_XID,10,4293,architecture)
 #else
@@ -133,7 +133,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_XID
 	CompareConstant(CLSET_XID,11,4294,architecture)
 #else
@@ -143,7 +143,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLGET_VERS
 	CompareConstant(CLGET_VERS,12,4295,architecture)
 #else
@@ -153,7 +153,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_VERS
 	CompareConstant(CLSET_VERS,13,4296,architecture)
 #else
@@ -163,7 +163,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLGET_PROG
 	CompareConstant(CLGET_PROG,14,4297,architecture)
 #else
@@ -173,7 +173,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef CLSET_PROG
 	CompareConstant(CLSET_PROG,15,4298,architecture)
 #else
@@ -183,7 +183,7 @@ cnt++;
 
 #endif
 
-#ifdef __i386__
+#if __i386__
 #elif __s390__
 #elif __ia64__
 #else
@@ -191,7 +191,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9916,0);
 Msg("Find size of clnt_stat (9916)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct rpc_err,12, 9917, 2)
 CheckOffset(struct rpc_err,ru,4,2,32102)
 #elif __ia64__
@@ -205,7 +205,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9917,0);
 Msg("Find size of rpc_err (9917)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct clnt_ops,24, 9922, 2)
 CheckOffset(struct clnt_ops,cl_abort,4,2,32105)
 CheckOffset(struct clnt_ops,cl_geterr,8,2,32106)
@@ -231,7 +231,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9922,0);
 Msg("Find size of clnt_ops (9922)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct CLIENT,12, 9921, 2)
 CheckOffset(struct CLIENT,cl_ops,4,2,32110)
 CheckOffset(struct CLIENT,cl_private,8,2,32111)
@@ -248,7 +248,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9921,0);
 Msg("Find size of CLIENT (9921)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(CLIENT,12, 10389, 2)
 #elif __s390__
 CheckTypeSize(CLIENT,12, 10389, 10)
@@ -256,7 +256,7 @@ CheckTypeSize(CLIENT,12, 10389, 10)
 CheckTypeSize(CLIENT,24, 10389, 3)
 #endif
 
-#ifdef __no_sym__
+#if __no_sym__
 #endif
 
 #ifdef TET_TEST

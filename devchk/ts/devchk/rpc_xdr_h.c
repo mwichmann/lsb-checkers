@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in rpc/xdr.h\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 #elif __s390__
 #elif __ia64__
 #else
@@ -31,7 +31,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9933,0);
 Msg("Find size of xdr_op (9933)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct XDR,24, 9934, 2)
 CheckOffset(struct XDR,x_op,0,2,32162)
 CheckOffset(struct XDR,x_ops,4,2,32193)
@@ -59,7 +59,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9934,0);
 Msg("Find size of XDR (9934)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(XDR,24, 10412, 2)
 #elif __ia64__
 CheckTypeSize(XDR,48, 10412, 3)
@@ -70,7 +70,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10412,0);
 Msg("Find size of XDR (10412)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(xdrproc_t,4, 9948, 2)
 #elif __ia64__
 CheckTypeSize(xdrproc_t,8, 9948, 3)
@@ -81,7 +81,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9948,0);
 Msg("Find size of xdrproc_t (9948)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct xdr_ops,40, 9935, 2)
 CheckOffset(struct xdr_ops,x_getlong,0,2,32165)
 CheckOffset(struct xdr_ops,x_putlong,4,2,32168)
@@ -121,13 +121,13 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9935,0);
 Msg("Find size of xdr_ops (9935)\n");
 #endif
 
-#ifdef __i386__
+#if __i386__
 CheckTypeSize(struct xdr_discrim,8, 9949, 2)
 CheckOffset(struct xdr_discrim,proc,4,2,32199)
 #elif __ia64__
 CheckTypeSize(struct xdr_discrim,16, 9949, 3)
 CheckOffset(struct xdr_discrim,proc,8,3,32199)
-#elif __powerpc__
+#elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct xdr_discrim,8, 9949, 6)
 Msg("Missing member data for xdr_discrim on PPC32\n");
 CheckOffset(struct xdr_discrim,value,0,6,32198)

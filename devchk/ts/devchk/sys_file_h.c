@@ -23,7 +23,7 @@ int pcnt=0;
 Msg("Checking data structures in sys/file.h\n");
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LOCK_SH
 	CompareConstant(LOCK_SH,1,1203,architecture)
 #else
@@ -33,7 +33,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LOCK_EX
 	CompareConstant(LOCK_EX,2,1204,architecture)
 #else
@@ -43,7 +43,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LOCK_NB
 	CompareConstant(LOCK_NB,4,1205,architecture)
 #else
@@ -53,7 +53,7 @@ cnt++;
 
 #endif
 
-#ifdef _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef LOCK_UN
 	CompareConstant(LOCK_UN,8,1206,architecture)
 #else
