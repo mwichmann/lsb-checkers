@@ -413,16 +413,12 @@ Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
-#ifdef F_SETLKW64
-	CompareConstant(F_SETLKW64,14,1194,architecture)
 #else
-Msg( "Error: Constant not found: F_SETLKW64\n");
-cnt++;
+Msg( "No definition for F_SETLKW64 (1194, int) in db\n");
+#ifdef F_SETLKW64
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1194,%d);\n", architecture, F_SETLKW64);
 #endif
-
 #endif
-
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETOWN
 	CompareConstant(F_SETOWN,8,1195,architecture)
