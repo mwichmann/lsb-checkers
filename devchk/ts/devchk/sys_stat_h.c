@@ -385,6 +385,30 @@ Msg( "No definition for _STAT_VER (4955, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4955,%d);\n", architecture, _STAT_VER);
 #endif
 #endif
+#if __powerpc__ && !__powerpc64__
+/* No test for st_atime */
+#else
+Msg( "No definition for st_atime (5132, macro) in db\n");
+#ifdef st_atime
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5132,%s);\n", architecture, st_atime);
+#endif
+#endif
+#if __powerpc__ && !__powerpc64__
+/* No test for st_mtime */
+#else
+Msg( "No definition for st_mtime (5133, macro) in db\n");
+#ifdef st_mtime
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5133,%s);\n", architecture, st_mtime);
+#endif
+#endif
+#if __powerpc__ && !__powerpc64__
+/* No test for st_ctime */
+#else
+Msg( "No definition for st_ctime (5134, macro) in db\n");
+#ifdef st_ctime
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5134,%s);\n", architecture, st_ctime);
+#endif
+#endif
 #if __i386__
 CheckTypeSize(struct stat,88, 8693, 2)
 CheckMemberSize(struct stat,st_dev,8,2,33632)
@@ -481,16 +505,10 @@ CheckMemberSize(struct stat,st_size,8,3,34678)
 CheckOffset(struct stat,st_size,48,3,34678)
 CheckMemberSize(struct stat,st_atime,8,3,34679)
 CheckOffset(struct stat,st_atime,56,3,34679)
-CheckMemberSize(struct stat,__reserved0,8,3,34680)
-CheckOffset(struct stat,__reserved0,64,3,34680)
 CheckMemberSize(struct stat,st_mtime,8,3,34681)
 CheckOffset(struct stat,st_mtime,72,3,34681)
-CheckMemberSize(struct stat,__reserved1,8,3,34683)
-CheckOffset(struct stat,__reserved1,80,3,34683)
 CheckMemberSize(struct stat,st_ctime,8,3,34682)
 CheckOffset(struct stat,st_ctime,88,3,34682)
-CheckMemberSize(struct stat,__reserved2,8,3,34684)
-CheckOffset(struct stat,__reserved2,96,3,34684)
 CheckMemberSize(struct stat,st_blksize,8,3,34685)
 CheckOffset(struct stat,st_blksize,104,3,34685)
 CheckMemberSize(struct stat,st_blocks,8,3,34687)
@@ -525,16 +543,10 @@ CheckMemberSize(struct stat64,st_blocks,8,6,34861)
 CheckOffset(struct stat64,st_blocks,64,6,34861)
 CheckMemberSize(struct stat64,st_atime,4,6,34862)
 CheckOffset(struct stat64,st_atime,72,6,34862)
-CheckMemberSize(struct stat64,st_atimensec,4,6,34863)
-CheckOffset(struct stat64,st_atimensec,76,6,34863)
 CheckMemberSize(struct stat64,st_mtime,4,6,34864)
 CheckOffset(struct stat64,st_mtime,80,6,34864)
-CheckMemberSize(struct stat64,st_mtimensec,4,6,34865)
-CheckOffset(struct stat64,st_mtimensec,84,6,34865)
 CheckMemberSize(struct stat64,st_ctime,4,6,34866)
 CheckOffset(struct stat64,st_ctime,88,6,34866)
-CheckMemberSize(struct stat64,st_ctimensec,4,6,34867)
-CheckOffset(struct stat64,st_ctimensec,92,6,34867)
 CheckMemberSize(struct stat64,__unused4,4,6,34868)
 CheckOffset(struct stat64,__unused4,96,6,34868)
 CheckMemberSize(struct stat64,__unused5,4,6,34869)
@@ -569,16 +581,10 @@ CheckMemberSize(struct stat,st_blocks,4,6,34842)
 CheckOffset(struct stat,st_blocks,52,6,34842)
 CheckMemberSize(struct stat,st_atime,4,6,34843)
 CheckOffset(struct stat,st_atime,56,6,34843)
-CheckMemberSize(struct stat,st_atimensec,4,6,34844)
-CheckOffset(struct stat,st_atimensec,60,6,34844)
 CheckMemberSize(struct stat,st_mtime,4,6,34845)
 CheckOffset(struct stat,st_mtime,64,6,34845)
-CheckMemberSize(struct stat,st_mtimensec,4,6,34846)
-CheckOffset(struct stat,st_mtimensec,68,6,34846)
 CheckMemberSize(struct stat,st_ctime,4,6,34847)
 CheckOffset(struct stat,st_ctime,72,6,34847)
-CheckMemberSize(struct stat,st_ctimensec,4,6,34848)
-CheckOffset(struct stat,st_ctimensec,76,6,34848)
 CheckMemberSize(struct stat,__unused4,4,6,34849)
 CheckOffset(struct stat,__unused4,80,6,34849)
 CheckMemberSize(struct stat,__unused5,4,6,34850)
@@ -607,16 +613,10 @@ CheckMemberSize(struct stat64,st_size,8,3,34887)
 CheckOffset(struct stat64,st_size,48,3,34887)
 CheckMemberSize(struct stat64,st_atime,8,3,34888)
 CheckOffset(struct stat64,st_atime,56,3,34888)
-CheckMemberSize(struct stat64,__reserved0,8,3,34889)
-CheckOffset(struct stat64,__reserved0,64,3,34889)
 CheckMemberSize(struct stat64,st_mtime,8,3,34890)
 CheckOffset(struct stat64,st_mtime,72,3,34890)
-CheckMemberSize(struct stat64,__reserved1,8,3,34891)
-CheckOffset(struct stat64,__reserved1,80,3,34891)
 CheckMemberSize(struct stat64,st_ctime,8,3,34892)
 CheckOffset(struct stat64,st_ctime,88,3,34892)
-CheckMemberSize(struct stat64,__reserved2,8,3,34893)
-CheckOffset(struct stat64,__reserved2,96,3,34893)
 CheckMemberSize(struct stat64,st_blksize,8,3,34894)
 CheckOffset(struct stat64,st_blksize,104,3,34894)
 CheckMemberSize(struct stat64,st_blocks,8,3,34895)
