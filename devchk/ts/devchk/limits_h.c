@@ -319,15 +319,7 @@ cnt++;
 
 #endif
 
-#if __s390__
-#ifdef PATH_MAX
-	CompareConstant(PATH_MAX,4095,29,architecture)
-#else
-Msg( "Error: Constant not found: PATH_MAX\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if _LSB_DEFAULT_ARCH
 #ifdef PATH_MAX
 	CompareConstant(PATH_MAX,4096,29,architecture)
 #else

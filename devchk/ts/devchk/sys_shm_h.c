@@ -23,10 +23,24 @@ int pcnt=0;
 Msg("Checking data structures in sys/shm.h\n");
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 /* No test for SHMLBA */
+#elif __powerpc__ && !__powerpc64__
+/* No test for SHMLBA */
+#elif __ia64__
+/* No test for SHMLBA */
+#elif __i386__
+/* No test for SHMLBA */
+#elif __x86_64__
+/* No test for SHMLBA */
+#elif __s390__
+/* No test for SHMLBA */
+#else
+Msg( "No definition for SHMLBA (1681, Unknown) in db\n");
+#ifdef SHMLBA
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1681,%s);\n", architecture, SHMLBA);
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef SHM_R
 	CompareConstant(SHM_R,0400,3467,architecture)
