@@ -179,10 +179,11 @@ void
 checkRpmIdxSIGSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int		hoffset;
-unsigned int	*value,size;
+unsigned int	size;
+unsigned int	*value;
 
 hoffset=ntohl(hidx->offset);
-value=(int *)(file1->storeaddr+hoffset);
+value=(unsigned int *)(file1->storeaddr+hoffset);
 sigsize=htonl(*value);
 size=file1->size-((char *)file1->header-file1->addr);
 
@@ -518,7 +519,7 @@ char	*name;
 
 hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
-if( strcmp(name,validos) != 0 ) {
+if( strcasecmp(name,validos) != 0 ) {
 	fprintf(stderr,"Incorrect RPMTAG_OS: expecting %s but found %s\n",
 						validos,		name);
 	}
@@ -1062,7 +1063,6 @@ for(i=0;i<hcount;i++) {
 	basenames[i]=name;
 	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
 		fprintf(stderr,"Basename: %s\n", name );
-	fprintf(stderr,"Basename: %s\n", name );
 	name+=strlen(name)+1;
 	}
 }
