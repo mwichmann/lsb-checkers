@@ -1,3 +1,5 @@
+// Maintained by hand (Stuart Anderson, Matt Elder)
+
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
@@ -23,31 +25,32 @@ void __lsb_forbid_ioctl()
 ioctlok=0;
 }
 
+extern int __lsb_check_params;
 int ioctl(int fd, unsigned long request, ...)
 {
-	va_list arg;
-	va_start(arg, request);
-
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ioctl");
-
-	if( ioctlok) {
-		validate_filedescriptor(fd, "ioctl");
-		validate_ioctlreq(request, "ioctl");
-		validate_RWaddress(arg, "ioctl");
-		}
+	int reset_flag = __lsb_check_params;
+	int ret_value;
 	
-	return funcptr(fd, request, arg);
-}
-
-int __lsb_ioctl(int fd, unsigned long request, ...)
-{
 	va_list arg;
 	va_start(arg, request);
 
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ioctl");
 
-	return funcptr(fd, request, arg);
+	if( ioctlok)
+	{
+		if(__lsb_check_params)
+		{
+			__lsb_check_params=0;
+			validate_filedescriptor(fd, "ioctl");
+			validate_ioctlreq(request, "ioctl");
+			validate_RWaddress(arg, "ioctl");
+		}
+	}
+	// else { output error message; }
+	ret_value = funcptr(fd, request, arg);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
+
 
