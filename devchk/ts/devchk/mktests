@@ -416,10 +416,10 @@ print MAKEFILE "endif\n\n";
 
 print MAKEFILE "all: hdrchk\n\n";
 print MAKEFILE "hdrchk: \$\(OBJS)\n";
-print MAKEFILE "\tcc -o hdrchk \$\(OBJS) \$\(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 \n";
+print MAKEFILE "\t\$(CC) -o hdrchk \$\(OBJS) \$\(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 \n";
 print MAKEFILE "\n";
 print MAKEFILE "hdrchk.o: hdrchk.c\n";
-print MAKEFILE "\tcc \$\(CFLAGS) -g -c hdrchk.c\n";
+print MAKEFILE "\t\$(CC) \$\(CFLAGS) -g -c hdrchk.c\n";
 print MAKEFILE "\n\n";
 print MAKEFILE "hdrchk.c:\n";
 print MAKEFILE "\t./mktests\n";
