@@ -17,7 +17,9 @@ struct versym libc_so_6[] = {
 	{"__cxa_atexit","GLIBC_2.1.3"},
 	{"__daylight","GLIBC_2.0"},
 	{"__dcgettext","GLIBC_2.0"},
+#if defined(__i386__)
 	{"__divdi3","GLIBC_2.0"},
+#endif
 	{"__environ","GLIBC_2.0"},
 	{"__errno_location","GLIBC_2.0"},
 	{"__fpending","GLIBC_2.2"},
@@ -219,7 +221,12 @@ struct versym libc_so_6[] = {
 	{"ftello","GLIBC_2.1"},
 	{"ftello64","GLIBC_2.1"},
 	{"ftime","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"ftok","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"ftok","GLIBC_2.0"},
+#endif
 	{"ftruncate","GLIBC_2.0"},
 	{"ftruncate64","GLIBC_2.1"},
 	{"ftrylockfile","GLIBC_2.0"},
@@ -323,8 +330,12 @@ struct versym libc_so_6[] = {
 	{"initstate","GLIBC_2.0"},
 	{"insque","GLIBC_2.0"},
 	{"ioctl","GLIBC_2.0"},
+#if defined(__i386__)
 	{"ioperm","GLIBC_2.0"},
+#endif
+#if defined(__i386__)
 	{"iopl","GLIBC_2.0"},
+#endif
 	{"isalnum","GLIBC_2.0"},
 	{"isalpha","GLIBC_2.0"},
 	{"isascii","GLIBC_2.0"},
@@ -414,9 +425,33 @@ struct versym libc_so_6[] = {
 	{"mmap64","GLIBC_2.1"},
 	{"mprotect","GLIBC_2.0"},
 	{"mrand48","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"msgctl","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"msgctl","GLIBC_2.0"},
+#endif
+	{"msgctl","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"msgget","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"msgget","GLIBC_2.0"},
+#endif
+	{"msgget","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"msgrcv","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"msgrcv","GLIBC_2.0"},
+#endif
+	{"msgrcv","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"msgsnd","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
+	{"msgsnd","GLIBC_2.0"},
+#endif
 	{"msgsnd","GLIBC_2.0"},
 	{"msync","GLIBC_2.0"},
 	{"munlock","GLIBC_2.0"},
@@ -507,8 +542,26 @@ struct versym libc_so_6[] = {
 	{"seed48","GLIBC_2.0"},
 	{"seekdir","GLIBC_2.0"},
 	{"select","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"semctl","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"semctl","GLIBC_2.0"},
+#endif
+	{"semctl","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"semget","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"semget","GLIBC_2.0"},
+#endif
+	{"semget","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"semop","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
+	{"semop","GLIBC_2.0"},
+#endif
 	{"semop","GLIBC_2.0"},
 	{"send","GLIBC_2.0"},
 	{"sendmsg","GLIBC_2.0"},
@@ -517,7 +570,9 @@ struct versym libc_so_6[] = {
 	{"setbuffer","GLIBC_2.0"},
 	{"setcontext","GLIBC_2.0"},
 	{"setegid","GLIBC_2.0"},
-	{"setenv",""},
+#if defined(__i386__)
+	{"setenv","GLIBC_2.0"},
+#endif
 	{"seteuid","GLIBC_2.0"},
 	{"setgid","GLIBC_2.0"},
 	{"setgrent","GLIBC_2.0"},
@@ -538,7 +593,9 @@ struct versym libc_so_6[] = {
 	{"setregid","GLIBC_2.0"},
 	{"setreuid","GLIBC_2.0"},
 	{"setrlimit","GLIBC_2.2"},
-	{"setrlimit64",""},
+#if defined(__i386__)
+	{"setrlimit64","GLIBC_2.1"},
+#endif
 	{"setservent","GLIBC_2.0"},
 	{"setsid","GLIBC_2.0"},
 	{"setsockopt","GLIBC_2.0"},
@@ -547,9 +604,32 @@ struct versym libc_so_6[] = {
 	{"setutent","GLIBC_2.0"},
 	{"setutxent","GLIBC_2.1"},
 	{"setvbuf","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"shmat","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"shmat","GLIBC_2.0"},
+#endif
+#if defined(__ia64__)
+	{"shmctl","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"shmctl","GLIBC_2.0"},
+#endif
+	{"shmctl","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"shmdt","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
 	{"shmdt","GLIBC_2.0"},
+#endif
+	{"shmdt","GLIBC_2.0"},
+#if defined(__ia64__)
+	{"shmget","GLIBC_2.2"},
+#endif
+#if defined(__i386__)
+	{"shmget","GLIBC_2.0"},
+#endif
 	{"shmget","GLIBC_2.0"},
 	{"shutdown","GLIBC_2.0"},
 	{"sigaction","GLIBC_2.0"},
@@ -700,7 +780,9 @@ struct versym libc_so_6[] = {
 	{"ungetwc","GLIBC_2.2"},
 	{"unlink","GLIBC_2.0"},
 	{"unlockpt","GLIBC_2.1"},
-	{"unsetenv",""},
+#if defined(__i386__)
+	{"unsetenv","GLIBC_2.0"},
+#endif
 	{"usleep","GLIBC_2.0"},
 	{"utime","GLIBC_2.0"},
 	{"utimes","GLIBC_2.0"},
@@ -716,7 +798,9 @@ struct versym libc_so_6[] = {
 	{"vsprintf","GLIBC_2.0"},
 	{"vswprintf","GLIBC_2.2"},
 	{"vswscanf","GLIBC_2.2"},
-	{"vsyslog",""},
+#if defined(__i386__)
+	{"vsyslog","GLIBC_2.0"},
+#endif
 	{"vwprintf","GLIBC_2.2"},
 	{"vwscanf","GLIBC_2.2"},
 	{"wait","GLIBC_2.0"},

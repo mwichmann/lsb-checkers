@@ -63,7 +63,9 @@ struct versym libpthread_so_0[] = {
 	{"pthread_self","GLIBC_2.0"},
 	{"pthread_setcancelstate","GLIBC_2.0"},
 	{"pthread_setcanceltype","GLIBC_2.0"},
-	{"pthread_setconcurrency",""},
+#if defined(__i386__)
+	{"pthread_setconcurrency","GLIBC_2.1"},
+#endif
 	{"pthread_setschedparam","GLIBC_2.0"},
 	{"pthread_setspecific","GLIBC_2.0"},
 	{"pthread_sigmask","GLIBC_2.0"},

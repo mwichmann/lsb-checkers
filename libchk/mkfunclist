@@ -18,8 +18,10 @@ sub mklibsyms($$)
 {
 local($libname,$lid)=@_;
 
-$select = "SELECT DISTINCT Iname,Vname FROM Interface,LibGroup,LGInt ";
-$select.= "LEFT JOIN Version ON Vid=Iversion ";
+$select = "SELECT DISTINCT * FROM Interface,LibGroup,LGInt ";
+$select.= "LEFT JOIN ArchInt ON AIint=Iid ";
+$select.= "LEFT JOIN Architecture ON Aid=AIarch ";
+$select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=$lid ";
@@ -34,7 +36,13 @@ print LIB "#include \"elfchk.h\"\n";
 print LIB "struct versym ".$libname."[] = {\n";
 for(1..$lsth->numrows) {
 	%entry=$lsth->fetchhash;
-	printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+	if( $entry{'Aid'} && $entry{'Aname'} ne 'All' ) {
+		print LIB "#if defined($entry{'Asymbol'})\n";
+		printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+		print LIB "#endif\n";
+	} else {
+		printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+		}
 }
 print LIB "\t{0,0}};\n";
 close(LIB);
