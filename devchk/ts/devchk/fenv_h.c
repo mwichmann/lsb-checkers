@@ -417,15 +417,7 @@ Msg( "No definition for FE_DOWNWARD (5304, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5304,%d);\n", architecture, FE_DOWNWARD);
 #endif
 #endif
-#if __mc68000__
-#ifdef FE_UPWARD
-	CompareConstant(FE_UPWARD,2,5305,architecture)
-#else
-Msg( "Error: Constant not found: FE_UPWARD\n");
-cnt++;
-#endif
-
-#elif __ia64__
+#if __ia64__
 #ifdef FE_UPWARD
 	CompareConstant(FE_UPWARD,2,5305,architecture)
 #else
@@ -533,7 +525,7 @@ Msg( "No definition for FE_TOWARDZERO (5306, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5306,%d);\n", architecture, FE_TOWARDZERO);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 #ifdef FE_ALL_EXCEPT
 	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
 #else
@@ -541,8 +533,61 @@ Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
 #endif
 
+#elif __powerpc__ && !__powerpc64__
+#ifdef FE_ALL_EXCEPT
+	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+#else
+Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
+cnt++;
 #endif
 
+#elif __ia64__
+#ifdef FE_ALL_EXCEPT
+	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_UNDERFLOW | FE_OVERFLOW | FE_DIVBYZERO | FE_UNNORMAL | F
+E_INVALID),5307,architecture)
+#else
+Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef FE_ALL_EXCEPT
+	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+#else
+Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef FE_ALL_EXCEPT
+	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+#else
+Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef FE_ALL_EXCEPT
+	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+#else
+Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef FE_ALL_EXCEPT
+	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+#else
+Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for FE_ALL_EXCEPT (5307, int) in db\n");
+#ifdef FE_ALL_EXCEPT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5307,%d);\n", architecture, FE_ALL_EXCEPT);
+#endif
+#endif
 #if __powerpc64__
 /* No test for FE_DFL_ENV */
 #elif __powerpc__ && !__powerpc64__
@@ -560,6 +605,20 @@ cnt++;
 #else
 Msg( "No definition for FE_DFL_ENV (5308, macro) in db\n");
 #ifdef FE_DFL_ENV
+#endif
+#endif
+#if __ia64__
+#ifdef FE_UNNORMAL
+	CompareConstant(FE_UNNORMAL,1UL << 1,5309,architecture)
+#else
+Msg( "Error: Constant not found: FE_UNNORMAL\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for FE_UNNORMAL (5309, int) in db\n");
+#ifdef FE_UNNORMAL
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5309,%d);\n", architecture, FE_UNNORMAL);
 #endif
 #endif
 #if __i386__

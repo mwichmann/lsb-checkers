@@ -72,6 +72,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_SCOPE_SYSTEM
+	CompareConstant(PTHREAD_SCOPE_SYSTEM,0,1541,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_SCOPE_SYSTEM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_SCOPE_PROCESS
+	CompareConstant(PTHREAD_SCOPE_PROCESS,1,1542,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_SCOPE_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_PROCESS_PRIVATE
 	CompareConstant(PTHREAD_PROCESS_PRIVATE,0,1543,architecture)
 #else

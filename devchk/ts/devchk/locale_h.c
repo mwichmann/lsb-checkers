@@ -654,6 +654,8 @@ CheckMemberSize(struct __locale_struct,__locales,52,6,40181)
 CheckOffset(struct __locale_struct,__locales,0,6,40181)
 CheckMemberSize(struct __locale_struct,__ctype_b,4,6,40182)
 CheckOffset(struct __locale_struct,__ctype_b,52,6,40182)
+CheckMemberSize(struct __locale_struct,__ctype_toupper,4,6,40184)
+CheckOffset(struct __locale_struct,__ctype_toupper,60,6,40184)
 CheckMemberSize(struct __locale_struct,__names,52,6,40652)
 CheckOffset(struct __locale_struct,__names,64,6,40652)
 #elif __ia64__

@@ -278,6 +278,36 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_THREADS_MAX
+	CompareConstant(PTHREAD_THREADS_MAX,16384,3085,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_THREADS_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_KEYS_MAX
+	CompareConstant(PTHREAD_KEYS_MAX,7,3088,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_KEYS_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_DESTRUCTOR_ITERATIONS
+	CompareConstant(PTHREAD_DESTRUCTOR_ITERATIONS,10,3089,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_DESTRUCTOR_ITERATIONS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef __INT_MAX__
 	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
 #else
@@ -312,6 +342,16 @@ cnt++;
 	CompareConstant(SSIZE_MAX,LONG_MAX,5127,architecture)
 #else
 Msg( "Error: Constant not found: SSIZE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_STACK_MIN
+	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
 #endif
 
