@@ -173,17 +173,9 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if _LSB_DEFAULT_ARCH
 #ifdef HUGE_VAL
 	CompareDoubleConstant(HUGE_VAL,0x1.0p2047,3083,architecture)
-#else
-Msg( "Error: Constant not found: HUGE_VAL\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
-#ifdef HUGE_VAL
-	CompareDoubleConstant(HUGE_VAL,0x7FF00000UL,3083,architecture)
 #else
 Msg( "Error: Constant not found: HUGE_VAL\n");
 cnt++;
@@ -215,7 +207,7 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if _LSB_DEFAULT_ARCH
 #ifdef HUGE_VALF
 	CompareFloatConstant(HUGE_VALF,0x1.0p255f,5138,architecture)
 #else
@@ -223,27 +215,11 @@ Msg( "Error: Constant not found: HUGE_VALF\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
-#ifdef HUGE_VALF
-	CompareFloatConstant(HUGE_VALF,1,5138,architecture)
-#else
-Msg( "Error: Constant not found: HUGE_VALF\n");
-cnt++;
 #endif
 
-#endif
-
-#if __i386__
+#if _LSB_DEFAULT_ARCH
 #ifdef HUGE_VALL
 	CompareLongDoubleConstant(HUGE_VALL,0x1.0p32767L,5139,architecture)
-#else
-Msg( "Error: Constant not found: HUGE_VALL\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
-#ifdef HUGE_VALL
-	CompareLongDoubleConstant(HUGE_VALL,1,5139,architecture)
 #else
 Msg( "Error: Constant not found: HUGE_VALL\n");
 cnt++;
