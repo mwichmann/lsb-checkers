@@ -5,10 +5,10 @@
 #include <dlfcn.h>
 #include <net/if.h>
 #undef if_nametoindex
-static unsigned int(*funcptr) () = 0;
+static unsigned int(*funcptr) (const char * ) = 0;
 
 extern int __lsb_check_params;
-unsigned int if_nametoindex ()
+unsigned int if_nametoindex (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	unsigned int ret_value  ;
@@ -18,8 +18,10 @@ unsigned int if_nametoindex ()
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "if_nametoindex()");
+		validate_Rdaddress( arg0, "if_nametoindex - arg0");
+		validate_NULL_TYPETYPE(  arg0, "if_nametoindex - arg0");
 	}
-	ret_value = funcptr();
+	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }

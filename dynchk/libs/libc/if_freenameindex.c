@@ -5,10 +5,10 @@
 #include <dlfcn.h>
 #include <net/if.h>
 #undef if_freenameindex
-static void(*funcptr) () = 0;
+static void(*funcptr) (struct if_nameindex * ) = 0;
 
 extern int __lsb_check_params;
-void if_freenameindex ()
+void if_freenameindex (struct if_nameindex * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	if(!funcptr)
@@ -17,8 +17,10 @@ void if_freenameindex ()
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "if_freenameindex()");
+		validate_RWaddress( arg0, "if_freenameindex - arg0");
+		validate_NULL_TYPETYPE(  arg0, "if_freenameindex - arg0");
 	}
-	funcptr();
+	funcptr(arg0);
 	__lsb_check_params = reset_flag;
 }
 

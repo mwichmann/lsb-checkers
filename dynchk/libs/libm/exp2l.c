@@ -6,10 +6,10 @@
 #include <dlfcn.h>
 #include <math.h>
 #undef exp2l
-static long double(*funcptr) () = 0;
+static long double(*funcptr) (long double ) = 0;
 
 extern int __lsb_check_params;
-long double exp2l ()
+long double exp2l (long double arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
@@ -19,8 +19,9 @@ long double exp2l ()
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "exp2l()");
+		validate_NULL_TYPETYPE(  arg0, "exp2l - arg0");
 	}
-	ret_value = funcptr();
+	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }
@@ -34,10 +35,10 @@ long double exp2l ()
 #include <dlfcn.h>
 #include <math.h>
 #undef exp2l
-static long double(*funcptr) () = 0;
+static long double(*funcptr) (long double ) = 0;
 
 extern int __lsb_check_params;
-long double exp2l ()
+long double exp2l (long double arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
@@ -47,8 +48,9 @@ long double exp2l ()
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "exp2l()");
+		validate_NULL_TYPETYPE(  arg0, "exp2l - arg0");
 	}
-	ret_value = funcptr();
+	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }
