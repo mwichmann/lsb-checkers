@@ -6,19 +6,19 @@
 #undef siglongjmp
 static void(*funcptr) (sigjmp_buf , int ) = 0;
 
+extern int __lsb_check_params;
 void siglongjmp (sigjmp_buf arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "siglongjmp");
-	validate_NULL_TYPETYPE(  arg0, "siglongjmp - arg0");
-	validate_NULL_TYPETYPE(  arg1, "siglongjmp - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "siglongjmp - arg0");
+		validate_NULL_TYPETYPE(  arg1, "siglongjmp - arg1");
+	}
 	funcptr(arg0, arg1);
-}
-
-void __lsb_siglongjmp (sigjmp_buf arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "siglongjmp");
-	funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
 }
 

@@ -6,17 +6,19 @@
 #undef drand48
 static double(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 double drand48 ()
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "drand48");
-	return funcptr();
-}
-
-double __lsb_drand48 ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "drand48");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

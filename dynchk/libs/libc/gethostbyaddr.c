@@ -7,21 +7,23 @@
 #undef gethostbyaddr
 static struct hostent *(*funcptr) (const void * , socklen_t , int ) = 0;
 
+extern int __lsb_check_params;
 struct hostent * gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	struct hostent * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gethostbyaddr");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "gethostbyaddr - arg0");
-	validate_NULL_TYPETYPE(  arg0, "gethostbyaddr - arg0");
-	validate_NULL_TYPETYPE(  arg1, "gethostbyaddr - arg1");
-	validate_NULL_TYPETYPE(  arg2, "gethostbyaddr - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-struct hostent * __lsb_gethostbyaddr (const void * arg0 , socklen_t arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gethostbyaddr");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg0, "gethostbyaddr - arg0");
+		validate_NULL_TYPETYPE(  arg1, "gethostbyaddr - arg1");
+		validate_NULL_TYPETYPE(  arg2, "gethostbyaddr - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

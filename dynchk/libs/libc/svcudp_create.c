@@ -6,18 +6,20 @@
 #undef svcudp_create
 static SVCXPRT *(*funcptr) (int ) = 0;
 
+extern int __lsb_check_params;
 SVCXPRT * svcudp_create (int arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	SVCXPRT * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcudp_create");
-	validate_NULL_TYPETYPE(  arg0, "svcudp_create - arg0");
-	return funcptr(arg0);
-}
-
-SVCXPRT * __lsb_svcudp_create (int arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svcudp_create");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "svcudp_create - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -8,20 +8,22 @@
 #undef putwc
 static wint_t(*funcptr) (wchar_t , FILE * ) = 0;
 
+extern int __lsb_check_params;
 wint_t putwc (wchar_t arg0 , FILE * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	wint_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwc");
-	validate_NULL_TYPETYPE(  arg0, "putwc - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "putwc - arg0");
 	validate_Rdaddress( arg1, "putwc - arg1");
-	validate_NULL_TYPETYPE(  arg1, "putwc - arg1");
-	return funcptr(arg0, arg1);
-}
-
-wint_t __lsb_putwc (wchar_t arg0 , FILE * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "putwc");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "putwc - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

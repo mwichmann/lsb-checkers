@@ -6,23 +6,25 @@
 #undef pam_get_item
 static int(*funcptr) (const pam_handle_t * , int , const void * * ) = 0;
 
+extern int __lsb_check_params;
 int pam_get_item (const pam_handle_t * arg0 , int arg1 , const void * * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pam_get_item");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "pam_get_item - arg0");
-	validate_NULL_TYPETYPE(  arg0, "pam_get_item - arg0");
-	validate_NULL_TYPETYPE(  arg1, "pam_get_item - arg1");
+		validate_NULL_TYPETYPE(  arg0, "pam_get_item - arg0");
+		validate_NULL_TYPETYPE(  arg1, "pam_get_item - arg1");
 	validate_Rdaddress( arg2, "pam_get_item - arg2");
 	validate_Rdaddress(* arg2, "pam_get_item - arg2");
-	validate_NULL_TYPETYPE(  arg2, "pam_get_item - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_pam_get_item (const pam_handle_t * arg0 , int arg1 , const void * * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pam_get_item");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "pam_get_item - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,19 @@
 #undef pthread_self
 static pthread_t(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 pthread_t pthread_self ()
 {
+	int reset_flag = __lsb_check_params;
+	pthread_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_self");
-	return funcptr();
-}
-
-pthread_t __lsb_pthread_self ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_self");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -7,18 +7,20 @@
 #undef setegid
 static int(*funcptr) (gid_t ) = 0;
 
+extern int __lsb_check_params;
 int setegid (gid_t arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setegid");
-	validate_NULL_TYPETYPE(  arg0, "setegid - arg0");
-	return funcptr(arg0);
-}
-
-int __lsb_setegid (gid_t arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setegid");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "setegid - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

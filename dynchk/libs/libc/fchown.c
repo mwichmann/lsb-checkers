@@ -7,20 +7,22 @@
 #undef fchown
 static int(*funcptr) (int , uid_t , gid_t ) = 0;
 
+extern int __lsb_check_params;
 int fchown (int arg0 , uid_t arg1 , gid_t arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fchown");
-	validate_NULL_TYPETYPE(  arg0, "fchown - arg0");
-	validate_NULL_TYPETYPE(  arg1, "fchown - arg1");
-	validate_NULL_TYPETYPE(  arg2, "fchown - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_fchown (int arg0 , uid_t arg1 , gid_t arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fchown");
-	return funcptr(arg0, arg1, arg2);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "fchown - arg0");
+		validate_NULL_TYPETYPE(  arg1, "fchown - arg1");
+		validate_NULL_TYPETYPE(  arg2, "fchown - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

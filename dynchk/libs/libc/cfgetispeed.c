@@ -6,19 +6,21 @@
 #undef cfgetispeed
 static speed_t(*funcptr) (const struct termios * ) = 0;
 
+extern int __lsb_check_params;
 speed_t cfgetispeed (const struct termios * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	speed_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "cfgetispeed");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "cfgetispeed - arg0");
-	validate_NULL_TYPETYPE(  arg0, "cfgetispeed - arg0");
-	return funcptr(arg0);
-}
-
-speed_t __lsb_cfgetispeed (const struct termios * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "cfgetispeed");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "cfgetispeed - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

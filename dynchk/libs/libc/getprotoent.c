@@ -6,17 +6,19 @@
 #undef getprotoent
 static struct protoent *(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 struct protoent * getprotoent ()
 {
+	int reset_flag = __lsb_check_params;
+	struct protoent * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getprotoent");
-	return funcptr();
-}
-
-struct protoent * __lsb_getprotoent ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getprotoent");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

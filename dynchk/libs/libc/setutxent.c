@@ -6,17 +6,17 @@
 #undef setutxent
 static void(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 void setutxent ()
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setutxent");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
 	funcptr();
-}
-
-void __lsb_setutxent ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setutxent");
-	funcptr();
+	__lsb_check_params = reset_flag;
 }
 

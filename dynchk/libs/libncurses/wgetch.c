@@ -6,19 +6,21 @@
 #undef wgetch
 static int(*funcptr) (WINDOW * ) = 0;
 
+extern int __lsb_check_params;
 int wgetch (WINDOW * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wgetch");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wgetch - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wgetch - arg0");
-	return funcptr(arg0);
-}
-
-int __lsb_wgetch (WINDOW * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wgetch");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "wgetch - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

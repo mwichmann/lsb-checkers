@@ -7,23 +7,25 @@
 #undef msgrcv
 static int(*funcptr) (int , void * , size_t , long , int ) = 0;
 
+extern int __lsb_check_params;
 int msgrcv (int arg0 , void * arg1 , size_t arg2 , long arg3 , int arg4 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "msgrcv");
-	validate_NULL_TYPETYPE(  arg0, "msgrcv - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "msgrcv - arg0");
 	validate_Rdaddress( arg1, "msgrcv - arg1");
-	validate_NULL_TYPETYPE(  arg1, "msgrcv - arg1");
-	validate_NULL_TYPETYPE(  arg2, "msgrcv - arg2");
-	validate_NULL_TYPETYPE(  arg3, "msgrcv - arg3");
-	validate_NULL_TYPETYPE(  arg4, "msgrcv - arg4");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
-}
-
-int __lsb_msgrcv (int arg0 , void * arg1 , size_t arg2 , long arg3 , int arg4 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "msgrcv");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
+		validate_NULL_TYPETYPE(  arg1, "msgrcv - arg1");
+		validate_NULL_TYPETYPE(  arg2, "msgrcv - arg2");
+		validate_NULL_TYPETYPE(  arg3, "msgrcv - arg3");
+		validate_NULL_TYPETYPE(  arg4, "msgrcv - arg4");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

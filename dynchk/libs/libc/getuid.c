@@ -6,17 +6,19 @@
 #undef getuid
 static uid_t(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 uid_t getuid ()
 {
+	int reset_flag = __lsb_check_params;
+	uid_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getuid");
-	return funcptr();
-}
-
-uid_t __lsb_getuid ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getuid");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,18 +6,20 @@
 #undef slk_label
 static char *(*funcptr) (int ) = 0;
 
+extern int __lsb_check_params;
 char * slk_label (int arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_label");
-	validate_NULL_TYPETYPE(  arg0, "slk_label - arg0");
-	return funcptr(arg0);
-}
-
-char * __lsb_slk_label (int arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "slk_label");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "slk_label - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

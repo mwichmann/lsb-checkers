@@ -7,25 +7,27 @@
 #undef setvbuf
 static int(*funcptr) (FILE * , char * , int , size_t ) = 0;
 
+extern int __lsb_check_params;
 int setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setvbuf");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "setvbuf - arg0");
-	validate_NULL_TYPETYPE(  arg0, "setvbuf - arg0");
-	if( arg1 ) {
+		validate_NULL_TYPETYPE(  arg0, "setvbuf - arg0");
+		if( arg1 ) {
 	validate_Rdaddress( arg1, "setvbuf - arg1");
-	validate_NULL_TYPETYPE(  arg1, "setvbuf - arg1");
+		}
+		validate_NULL_TYPETYPE(  arg1, "setvbuf - arg1");
+		validate_NULL_TYPETYPE(  arg2, "setvbuf - arg2");
+		validate_NULL_TYPETYPE(  arg3, "setvbuf - arg3");
 	}
-	validate_NULL_TYPETYPE(  arg2, "setvbuf - arg2");
-	validate_NULL_TYPETYPE(  arg3, "setvbuf - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setvbuf");
-	return funcptr(arg0, arg1, arg2, arg3);
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,19 @@
 #undef lrand48
 static long(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 long lrand48 ()
 {
+	int reset_flag = __lsb_check_params;
+	long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "lrand48");
-	return funcptr();
-}
-
-long __lsb_lrand48 ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "lrand48");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,19 @@
 #undef xdr_void
 static bool_t(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 bool_t xdr_void ()
 {
+	int reset_flag = __lsb_check_params;
+	bool_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_void");
-	return funcptr();
-}
-
-bool_t __lsb_xdr_void ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_void");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

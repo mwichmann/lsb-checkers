@@ -6,26 +6,28 @@
 #undef mvwchgat
 static int(*funcptr) (WINDOW * , int , int , int , attr_t , short , const void * ) = 0;
 
+extern int __lsb_check_params;
 int mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , short arg5 , const void * arg6 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwchgat");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "mvwchgat - arg0");
-	validate_NULL_TYPETYPE(  arg0, "mvwchgat - arg0");
-	validate_NULL_TYPETYPE(  arg1, "mvwchgat - arg1");
-	validate_NULL_TYPETYPE(  arg2, "mvwchgat - arg2");
-	validate_NULL_TYPETYPE(  arg3, "mvwchgat - arg3");
-	validate_NULL_TYPETYPE(  arg4, "mvwchgat - arg4");
-	validate_NULL_TYPETYPE(  arg5, "mvwchgat - arg5");
+		validate_NULL_TYPETYPE(  arg0, "mvwchgat - arg0");
+		validate_NULL_TYPETYPE(  arg1, "mvwchgat - arg1");
+		validate_NULL_TYPETYPE(  arg2, "mvwchgat - arg2");
+		validate_NULL_TYPETYPE(  arg3, "mvwchgat - arg3");
+		validate_NULL_TYPETYPE(  arg4, "mvwchgat - arg4");
+		validate_NULL_TYPETYPE(  arg5, "mvwchgat - arg5");
 	validate_Rdaddress( arg6, "mvwchgat - arg6");
-	validate_NULL_TYPETYPE(  arg6, "mvwchgat - arg6");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
-}
-
-int __lsb_mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , short arg5 , const void * arg6 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvwchgat");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+		validate_NULL_TYPETYPE(  arg6, "mvwchgat - arg6");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,19 @@
 #undef longjmp
 static void(*funcptr) (jmp_buf , int ) = 0;
 
+extern int __lsb_check_params;
 void longjmp (jmp_buf arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "longjmp");
-	validate_NULL_TYPETYPE(  arg0, "longjmp - arg0");
-	validate_NULL_TYPETYPE(  arg1, "longjmp - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "longjmp - arg0");
+		validate_NULL_TYPETYPE(  arg1, "longjmp - arg1");
+	}
 	funcptr(arg0, arg1);
-}
-
-void __lsb_longjmp (jmp_buf arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "longjmp");
-	funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
 }
 

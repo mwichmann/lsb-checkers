@@ -6,19 +6,21 @@
 #undef fmod
 static double(*funcptr) (double , double ) = 0;
 
+extern int __lsb_check_params;
 double fmod (double arg0 , double arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fmod");
-	validate_NULL_TYPETYPE(  arg0, "fmod - arg0");
-	validate_NULL_TYPETYPE(  arg1, "fmod - arg1");
-	return funcptr(arg0, arg1);
-}
-
-double __lsb_fmod (double arg0 , double arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fmod");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "fmod - arg0");
+		validate_NULL_TYPETYPE(  arg1, "fmod - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,21 @@
 #undef inet_addr
 static in_addr_t(*funcptr) (const char * ) = 0;
 
+extern int __lsb_check_params;
 in_addr_t inet_addr (const char * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	in_addr_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_addr");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "inet_addr - arg0");
-	validate_NULL_TYPETYPE(  arg0, "inet_addr - arg0");
-	return funcptr(arg0);
-}
-
-in_addr_t __lsb_inet_addr (const char * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "inet_addr");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "inet_addr - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

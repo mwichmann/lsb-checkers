@@ -6,17 +6,19 @@
 #undef clock
 static clock_t(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 clock_t clock ()
 {
+	int reset_flag = __lsb_check_params;
+	clock_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clock");
-	return funcptr();
-}
-
-clock_t __lsb_clock ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clock");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

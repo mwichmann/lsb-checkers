@@ -7,20 +7,22 @@
 #undef sched_getparam
 static int(*funcptr) (pid_t , struct sched_param * ) = 0;
 
+extern int __lsb_check_params;
 int sched_getparam (pid_t arg0 , struct sched_param * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_getparam");
-	validate_NULL_TYPETYPE(  arg0, "sched_getparam - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "sched_getparam - arg0");
 	validate_Rdaddress( arg1, "sched_getparam - arg1");
-	validate_NULL_TYPETYPE(  arg1, "sched_getparam - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_sched_getparam (pid_t arg0 , struct sched_param * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sched_getparam");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "sched_getparam - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

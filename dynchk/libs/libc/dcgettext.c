@@ -6,24 +6,26 @@
 #undef dcgettext
 static char *(*funcptr) (const char * , const char * , int ) = 0;
 
+extern int __lsb_check_params;
 char * dcgettext (const char * arg0 , const char * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "dcgettext");
-	if( arg0 ) {
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		if( arg0 ) {
 	validate_Rdaddress( arg0, "dcgettext - arg0");
-	}
-	validate_NULL_TYPETYPE(  arg0, "dcgettext - arg0");
+		}
+		validate_NULL_TYPETYPE(  arg0, "dcgettext - arg0");
 	validate_Rdaddress( arg1, "dcgettext - arg1");
-	validate_NULL_TYPETYPE(  arg1, "dcgettext - arg1");
-	validate_NULL_TYPETYPE(  arg2, "dcgettext - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-char * __lsb_dcgettext (const char * arg0 , const char * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dcgettext");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "dcgettext - arg1");
+		validate_NULL_TYPETYPE(  arg2, "dcgettext - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,20 +6,22 @@
 #undef nodelay
 static int(*funcptr) (WINDOW * , bool ) = 0;
 
+extern int __lsb_check_params;
 int nodelay (WINDOW * arg0 , bool arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nodelay");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "nodelay - arg0");
-	validate_NULL_TYPETYPE(  arg0, "nodelay - arg0");
-	validate_NULL_TYPETYPE(  arg1, "nodelay - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_nodelay (WINDOW * arg0 , bool arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nodelay");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg0, "nodelay - arg0");
+		validate_NULL_TYPETYPE(  arg1, "nodelay - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

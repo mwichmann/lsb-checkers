@@ -6,18 +6,18 @@
 #undef srand48
 static void(*funcptr) (long ) = 0;
 
+extern int __lsb_check_params;
 void srand48 (long arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "srand48");
-	validate_NULL_TYPETYPE(  arg0, "srand48 - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "srand48 - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_srand48 (long arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "srand48");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

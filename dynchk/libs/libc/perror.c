@@ -6,19 +6,19 @@
 #undef perror
 static void(*funcptr) (const char * ) = 0;
 
+extern int __lsb_check_params;
 void perror (const char * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "perror");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "perror - arg0");
-	validate_NULL_TYPETYPE(  arg0, "perror - arg0");
+		validate_NULL_TYPETYPE(  arg0, "perror - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_perror (const char * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "perror");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

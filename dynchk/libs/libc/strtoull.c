@@ -6,23 +6,25 @@
 #undef strtoull
 static unsigned long long(*funcptr) (const char * , char * * , int ) = 0;
 
+extern int __lsb_check_params;
 unsigned long long strtoull (const char * arg0 , char * * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	unsigned long long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoull");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "strtoull - arg0");
-	validate_NULL_TYPETYPE(  arg0, "strtoull - arg0");
+		validate_NULL_TYPETYPE(  arg0, "strtoull - arg0");
 	validate_Rdaddress( arg1, "strtoull - arg1");
 	validate_Rdaddress(* arg1, "strtoull - arg1");
-	validate_NULL_TYPETYPE(  arg1, "strtoull - arg1");
-	validate_NULL_TYPETYPE(  arg2, "strtoull - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-unsigned long long __lsb_strtoull (const char * arg0 , char * * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strtoull");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "strtoull - arg1");
+		validate_NULL_TYPETYPE(  arg2, "strtoull - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

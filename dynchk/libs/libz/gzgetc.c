@@ -6,18 +6,20 @@
 #undef gzgetc
 static int(*funcptr) (gzFile ) = 0;
 
+extern int __lsb_check_params;
 int gzgetc (gzFile arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzgetc");
-	validate_NULL_TYPETYPE(  arg0, "gzgetc - arg0");
-	return funcptr(arg0);
-}
-
-int __lsb_gzgetc (gzFile arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gzgetc");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "gzgetc - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

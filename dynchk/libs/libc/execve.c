@@ -6,21 +6,23 @@
 #undef execve
 static int(*funcptr) (const char * , char *const  [], char *const  []) = 0;
 
+extern int __lsb_check_params;
 int execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "execve");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "execve - arg0");
-	validate_NULL_TYPETYPE(  arg0, "execve - arg0");
-	validate_NULL_TYPETYPE(  arg1, "execve - arg1");
-	validate_NULL_TYPETYPE(  arg2, "execve - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_execve (const char * arg0 , char *const  arg1 [], char *const  arg2 [])
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "execve");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg0, "execve - arg0");
+		validate_NULL_TYPETYPE(  arg1, "execve - arg1");
+		validate_NULL_TYPETYPE(  arg2, "execve - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

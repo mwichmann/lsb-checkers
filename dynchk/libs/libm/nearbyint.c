@@ -6,18 +6,20 @@
 #undef nearbyint
 static double(*funcptr) (double ) = 0;
 
+extern int __lsb_check_params;
 double nearbyint (double arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nearbyint");
-	validate_NULL_TYPETYPE(  arg0, "nearbyint - arg0");
-	return funcptr(arg0);
-}
-
-double __lsb_nearbyint (double arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nearbyint");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "nearbyint - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

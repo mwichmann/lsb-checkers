@@ -6,19 +6,21 @@
 #undef jnf
 static float(*funcptr) (int , float ) = 0;
 
+extern int __lsb_check_params;
 float jnf (int arg0 , float arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	float ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jnf");
-	validate_NULL_TYPETYPE(  arg0, "jnf - arg0");
-	validate_NULL_TYPETYPE(  arg1, "jnf - arg1");
-	return funcptr(arg0, arg1);
-}
-
-float __lsb_jnf (int arg0 , float arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "jnf");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "jnf - arg0");
+		validate_NULL_TYPETYPE(  arg1, "jnf - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

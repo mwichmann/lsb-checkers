@@ -6,23 +6,25 @@
 #undef setsockopt
 static int(*funcptr) (int , int , int , const void * , socklen_t ) = 0;
 
+extern int __lsb_check_params;
 int setsockopt (int arg0 , int arg1 , int arg2 , const void * arg3 , socklen_t arg4 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setsockopt");
-	validate_NULL_TYPETYPE(  arg0, "setsockopt - arg0");
-	validate_NULL_TYPETYPE(  arg1, "setsockopt - arg1");
-	validate_NULL_TYPETYPE(  arg2, "setsockopt - arg2");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "setsockopt - arg0");
+		validate_NULL_TYPETYPE(  arg1, "setsockopt - arg1");
+		validate_NULL_TYPETYPE(  arg2, "setsockopt - arg2");
 	validate_Rdaddress( arg3, "setsockopt - arg3");
-	validate_NULL_TYPETYPE(  arg3, "setsockopt - arg3");
-	validate_NULL_TYPETYPE(  arg4, "setsockopt - arg4");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
-}
-
-int __lsb_setsockopt (int arg0 , int arg1 , int arg2 , const void * arg3 , socklen_t arg4 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setsockopt");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
+		validate_NULL_TYPETYPE(  arg3, "setsockopt - arg3");
+		validate_NULL_TYPETYPE(  arg4, "setsockopt - arg4");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

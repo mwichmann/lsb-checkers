@@ -6,23 +6,25 @@
 #undef strtoimax
 static intmax_t(*funcptr) (const char * , char * * , int ) = 0;
 
+extern int __lsb_check_params;
 intmax_t strtoimax (const char * arg0 , char * * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	intmax_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strtoimax");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "strtoimax - arg0");
-	validate_NULL_TYPETYPE(  arg0, "strtoimax - arg0");
+		validate_NULL_TYPETYPE(  arg0, "strtoimax - arg0");
 	validate_Rdaddress( arg1, "strtoimax - arg1");
 	validate_Rdaddress(* arg1, "strtoimax - arg1");
-	validate_NULL_TYPETYPE(  arg1, "strtoimax - arg1");
-	validate_NULL_TYPETYPE(  arg2, "strtoimax - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-intmax_t __lsb_strtoimax (const char * arg0 , char * * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strtoimax");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "strtoimax - arg1");
+		validate_NULL_TYPETYPE(  arg2, "strtoimax - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,19 @@
 #undef tmpfile64
 static FILE *(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 FILE * tmpfile64 ()
 {
+	int reset_flag = __lsb_check_params;
+	FILE * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tmpfile64");
-	return funcptr();
-}
-
-FILE * __lsb_tmpfile64 ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tmpfile64");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

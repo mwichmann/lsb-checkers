@@ -6,17 +6,19 @@
 #undef __ctype_toupper_loc
 static const int32_t * *(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 const int32_t * * __ctype_toupper_loc ()
 {
+	int reset_flag = __lsb_check_params;
+	const int32_t * * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__ctype_toupper_loc");
-	return funcptr();
-}
-
-const int32_t * * __lsb___ctype_toupper_loc ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__ctype_toupper_loc");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -7,21 +7,23 @@
 #undef waitpid
 static pid_t(*funcptr) (pid_t , int * , int ) = 0;
 
+extern int __lsb_check_params;
 pid_t waitpid (pid_t arg0 , int * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	pid_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waitpid");
-	validate_NULL_TYPETYPE(  arg0, "waitpid - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "waitpid - arg0");
 	validate_Rdaddress( arg1, "waitpid - arg1");
-	validate_NULL_TYPETYPE(  arg1, "waitpid - arg1");
-	validate_NULL_TYPETYPE(  arg2, "waitpid - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-pid_t __lsb_waitpid (pid_t arg0 , int * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "waitpid");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "waitpid - arg1");
+		validate_NULL_TYPETYPE(  arg2, "waitpid - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

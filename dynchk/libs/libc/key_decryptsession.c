@@ -6,21 +6,23 @@
 #undef key_decryptsession
 static int(*funcptr) (char * , union des_block * ) = 0;
 
+extern int __lsb_check_params;
 int key_decryptsession (char * arg0 , union des_block * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "key_decryptsession");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "key_decryptsession - arg0");
-	validate_NULL_TYPETYPE(  arg0, "key_decryptsession - arg0");
+		validate_NULL_TYPETYPE(  arg0, "key_decryptsession - arg0");
 	validate_Rdaddress( arg1, "key_decryptsession - arg1");
-	validate_NULL_TYPETYPE(  arg1, "key_decryptsession - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_key_decryptsession (char * arg0 , union des_block * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "key_decryptsession");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "key_decryptsession - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

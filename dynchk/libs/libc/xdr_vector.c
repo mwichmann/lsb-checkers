@@ -7,24 +7,26 @@
 #undef xdr_vector
 static bool_t(*funcptr) (XDR * , char * , u_int , u_int , xdrproc_t ) = 0;
 
+extern int __lsb_check_params;
 bool_t xdr_vector (XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_t arg4 )
 {
+	int reset_flag = __lsb_check_params;
+	bool_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xdr_vector");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "xdr_vector - arg0");
-	validate_NULL_TYPETYPE(  arg0, "xdr_vector - arg0");
+		validate_NULL_TYPETYPE(  arg0, "xdr_vector - arg0");
 	validate_Rdaddress( arg1, "xdr_vector - arg1");
-	validate_NULL_TYPETYPE(  arg1, "xdr_vector - arg1");
-	validate_NULL_TYPETYPE(  arg2, "xdr_vector - arg2");
-	validate_NULL_TYPETYPE(  arg3, "xdr_vector - arg3");
-	validate_NULL_TYPETYPE(  arg4, "xdr_vector - arg4");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
-}
-
-bool_t __lsb_xdr_vector (XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_t arg4 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xdr_vector");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
+		validate_NULL_TYPETYPE(  arg1, "xdr_vector - arg1");
+		validate_NULL_TYPETYPE(  arg2, "xdr_vector - arg2");
+		validate_NULL_TYPETYPE(  arg3, "xdr_vector - arg3");
+		validate_NULL_TYPETYPE(  arg4, "xdr_vector - arg4");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

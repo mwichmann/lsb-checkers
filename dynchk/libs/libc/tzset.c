@@ -6,17 +6,17 @@
 #undef tzset
 static void(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 void tzset ()
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tzset");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
 	funcptr();
-}
-
-void __lsb_tzset ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "tzset");
-	funcptr();
+	__lsb_check_params = reset_flag;
 }
 

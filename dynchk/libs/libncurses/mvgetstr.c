@@ -6,21 +6,23 @@
 #undef mvgetstr
 static int(*funcptr) (int , int , char * ) = 0;
 
+extern int __lsb_check_params;
 int mvgetstr (int arg0 , int arg1 , char * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvgetstr");
-	validate_NULL_TYPETYPE(  arg0, "mvgetstr - arg0");
-	validate_NULL_TYPETYPE(  arg1, "mvgetstr - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "mvgetstr - arg0");
+		validate_NULL_TYPETYPE(  arg1, "mvgetstr - arg1");
 	validate_Rdaddress( arg2, "mvgetstr - arg2");
-	validate_NULL_TYPETYPE(  arg2, "mvgetstr - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_mvgetstr (int arg0 , int arg1 , char * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvgetstr");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "mvgetstr - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

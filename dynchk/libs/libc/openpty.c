@@ -7,27 +7,29 @@
 #undef openpty
 static int(*funcptr) (int * , int * , char * , struct termios * , struct winsize * ) = 0;
 
+extern int __lsb_check_params;
 int openpty (int * arg0 , int * arg1 , char * arg2 , struct termios * arg3 , struct winsize * arg4 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "openpty");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "openpty - arg0");
-	validate_NULL_TYPETYPE(  arg0, "openpty - arg0");
+		validate_NULL_TYPETYPE(  arg0, "openpty - arg0");
 	validate_Rdaddress( arg1, "openpty - arg1");
-	validate_NULL_TYPETYPE(  arg1, "openpty - arg1");
+		validate_NULL_TYPETYPE(  arg1, "openpty - arg1");
 	validate_Rdaddress( arg2, "openpty - arg2");
-	validate_NULL_TYPETYPE(  arg2, "openpty - arg2");
+		validate_NULL_TYPETYPE(  arg2, "openpty - arg2");
 	validate_Rdaddress( arg3, "openpty - arg3");
-	validate_NULL_TYPETYPE(  arg3, "openpty - arg3");
+		validate_NULL_TYPETYPE(  arg3, "openpty - arg3");
 	validate_Rdaddress( arg4, "openpty - arg4");
-	validate_NULL_TYPETYPE(  arg4, "openpty - arg4");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
-}
-
-int __lsb_openpty (int * arg0 , int * arg1 , char * arg2 , struct termios * arg3 , struct winsize * arg4 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "openpty");
-	return funcptr(arg0, arg1, arg2, arg3, arg4);
+		validate_NULL_TYPETYPE(  arg4, "openpty - arg4");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

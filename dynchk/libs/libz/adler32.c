@@ -6,21 +6,23 @@
 #undef adler32
 static uLong(*funcptr) (uLong , const Bytef * , uInt ) = 0;
 
+extern int __lsb_check_params;
 uLong adler32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	uLong ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "adler32");
-	validate_NULL_TYPETYPE(  arg0, "adler32 - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "adler32 - arg0");
 	validate_Rdaddress( arg1, "adler32 - arg1");
-	validate_NULL_TYPETYPE(  arg1, "adler32 - arg1");
-	validate_NULL_TYPETYPE(  arg2, "adler32 - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-uLong __lsb_adler32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "adler32");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "adler32 - arg1");
+		validate_NULL_TYPETYPE(  arg2, "adler32 - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

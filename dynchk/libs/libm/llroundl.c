@@ -6,18 +6,20 @@
 #undef llroundl
 static long long(*funcptr) (long double ) = 0;
 
+extern int __lsb_check_params;
 long long llroundl (long double arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	long long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "llroundl");
-	validate_NULL_TYPETYPE(  arg0, "llroundl - arg0");
-	return funcptr(arg0);
-}
-
-long long __lsb_llroundl (long double arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "llroundl");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "llroundl - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,21 +6,23 @@
 #undef swapcontext
 static int(*funcptr) (ucontext_t * , const struct ucontext * ) = 0;
 
+extern int __lsb_check_params;
 int swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swapcontext");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "swapcontext - arg0");
-	validate_NULL_TYPETYPE(  arg0, "swapcontext - arg0");
+		validate_NULL_TYPETYPE(  arg0, "swapcontext - arg0");
 	validate_Rdaddress( arg1, "swapcontext - arg1");
-	validate_NULL_TYPETYPE(  arg1, "swapcontext - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_swapcontext (ucontext_t * arg0 , const struct ucontext * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "swapcontext");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "swapcontext - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

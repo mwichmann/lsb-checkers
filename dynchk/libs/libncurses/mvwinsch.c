@@ -6,22 +6,24 @@
 #undef mvwinsch
 static int(*funcptr) (WINDOW * , int , int , chtype ) = 0;
 
+extern int __lsb_check_params;
 int mvwinsch (WINDOW * arg0 , int arg1 , int arg2 , chtype arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinsch");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "mvwinsch - arg0");
-	validate_NULL_TYPETYPE(  arg0, "mvwinsch - arg0");
-	validate_NULL_TYPETYPE(  arg1, "mvwinsch - arg1");
-	validate_NULL_TYPETYPE(  arg2, "mvwinsch - arg2");
-	validate_NULL_TYPETYPE(  arg3, "mvwinsch - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_mvwinsch (WINDOW * arg0 , int arg1 , int arg2 , chtype arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvwinsch");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg0, "mvwinsch - arg0");
+		validate_NULL_TYPETYPE(  arg1, "mvwinsch - arg1");
+		validate_NULL_TYPETYPE(  arg2, "mvwinsch - arg2");
+		validate_NULL_TYPETYPE(  arg3, "mvwinsch - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

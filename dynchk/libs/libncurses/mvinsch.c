@@ -6,20 +6,22 @@
 #undef mvinsch
 static int(*funcptr) (int , int , chtype ) = 0;
 
+extern int __lsb_check_params;
 int mvinsch (int arg0 , int arg1 , chtype arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinsch");
-	validate_NULL_TYPETYPE(  arg0, "mvinsch - arg0");
-	validate_NULL_TYPETYPE(  arg1, "mvinsch - arg1");
-	validate_NULL_TYPETYPE(  arg2, "mvinsch - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_mvinsch (int arg0 , int arg1 , chtype arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "mvinsch");
-	return funcptr(arg0, arg1, arg2);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "mvinsch - arg0");
+		validate_NULL_TYPETYPE(  arg1, "mvinsch - arg1");
+		validate_NULL_TYPETYPE(  arg2, "mvinsch - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

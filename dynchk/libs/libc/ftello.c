@@ -6,19 +6,21 @@
 #undef ftello
 static off_t(*funcptr) (FILE * ) = 0;
 
+extern int __lsb_check_params;
 off_t ftello (FILE * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	off_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ftello");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "ftello - arg0");
-	validate_NULL_TYPETYPE(  arg0, "ftello - arg0");
-	return funcptr(arg0);
-}
-
-off_t __lsb_ftello (FILE * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ftello");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "ftello - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

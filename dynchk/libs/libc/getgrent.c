@@ -6,17 +6,19 @@
 #undef getgrent
 static struct group *(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 struct group * getgrent ()
 {
+	int reset_flag = __lsb_check_params;
+	struct group * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrent");
-	return funcptr();
-}
-
-struct group * __lsb_getgrent ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getgrent");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

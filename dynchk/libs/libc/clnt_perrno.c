@@ -6,18 +6,18 @@
 #undef clnt_perrno
 static void(*funcptr) (enum clnt_stat ) = 0;
 
+extern int __lsb_check_params;
 void clnt_perrno (enum clnt_stat arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "clnt_perrno");
-	validate_NULL_TYPETYPE(  arg0, "clnt_perrno - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "clnt_perrno - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_clnt_perrno (enum clnt_stat arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "clnt_perrno");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

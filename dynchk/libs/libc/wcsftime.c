@@ -8,24 +8,26 @@
 #undef wcsftime
 static size_t(*funcptr) (wchar_t * , size_t , const wchar_t * , const struct tm * ) = 0;
 
+extern int __lsb_check_params;
 size_t wcsftime (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , const struct tm * arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	size_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsftime");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wcsftime - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wcsftime - arg0");
-	validate_NULL_TYPETYPE(  arg1, "wcsftime - arg1");
+		validate_NULL_TYPETYPE(  arg0, "wcsftime - arg0");
+		validate_NULL_TYPETYPE(  arg1, "wcsftime - arg1");
 	validate_Rdaddress( arg2, "wcsftime - arg2");
-	validate_NULL_TYPETYPE(  arg2, "wcsftime - arg2");
+		validate_NULL_TYPETYPE(  arg2, "wcsftime - arg2");
 	validate_Rdaddress( arg3, "wcsftime - arg3");
-	validate_NULL_TYPETYPE(  arg3, "wcsftime - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-size_t __lsb_wcsftime (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , const struct tm * arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcsftime");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg3, "wcsftime - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

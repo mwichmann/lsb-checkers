@@ -6,17 +6,17 @@
 #undef svc_run
 static void(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 void svc_run ()
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svc_run");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
 	funcptr();
-}
-
-void __lsb_svc_run ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svc_run");
-	funcptr();
+	__lsb_check_params = reset_flag;
 }
 

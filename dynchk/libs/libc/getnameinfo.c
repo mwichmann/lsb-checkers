@@ -6,27 +6,29 @@
 #undef getnameinfo
 static int(*funcptr) (const struct sockaddr * , socklen_t , char * , socklen_t , char * , socklen_t , unsigned int ) = 0;
 
+extern int __lsb_check_params;
 int getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , socklen_t arg3 , char * arg4 , socklen_t arg5 , unsigned int arg6 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getnameinfo");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "getnameinfo - arg0");
-	validate_NULL_TYPETYPE(  arg0, "getnameinfo - arg0");
-	validate_NULL_TYPETYPE(  arg1, "getnameinfo - arg1");
+		validate_NULL_TYPETYPE(  arg0, "getnameinfo - arg0");
+		validate_NULL_TYPETYPE(  arg1, "getnameinfo - arg1");
 	validate_Rdaddress( arg2, "getnameinfo - arg2");
-	validate_NULL_TYPETYPE(  arg2, "getnameinfo - arg2");
-	validate_NULL_TYPETYPE(  arg3, "getnameinfo - arg3");
+		validate_NULL_TYPETYPE(  arg2, "getnameinfo - arg2");
+		validate_NULL_TYPETYPE(  arg3, "getnameinfo - arg3");
 	validate_Rdaddress( arg4, "getnameinfo - arg4");
-	validate_NULL_TYPETYPE(  arg4, "getnameinfo - arg4");
-	validate_NULL_TYPETYPE(  arg5, "getnameinfo - arg5");
-	validate_NULL_TYPETYPE(  arg6, "getnameinfo - arg6");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
-}
-
-int __lsb_getnameinfo (const struct sockaddr * arg0 , socklen_t arg1 , char * arg2 , socklen_t arg3 , char * arg4 , socklen_t arg5 , unsigned int arg6 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getnameinfo");
-	return funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+		validate_NULL_TYPETYPE(  arg4, "getnameinfo - arg4");
+		validate_NULL_TYPETYPE(  arg5, "getnameinfo - arg5");
+		validate_NULL_TYPETYPE(  arg6, "getnameinfo - arg6");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,17 +6,17 @@
 #undef hdestroy
 static void(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 void hdestroy ()
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "hdestroy");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
 	funcptr();
-}
-
-void __lsb_hdestroy ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "hdestroy");
-	funcptr();
+	__lsb_check_params = reset_flag;
 }
 

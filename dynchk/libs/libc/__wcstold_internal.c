@@ -7,23 +7,25 @@
 #undef __wcstold_internal
 static long double(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
+extern int __lsb_check_params;
 long double __wcstold_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	long double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__wcstold_internal");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "__wcstold_internal - arg0");
-	validate_NULL_TYPETYPE(  arg0, "__wcstold_internal - arg0");
+		validate_NULL_TYPETYPE(  arg0, "__wcstold_internal - arg0");
 	validate_Rdaddress( arg1, "__wcstold_internal - arg1");
 	validate_Rdaddress(* arg1, "__wcstold_internal - arg1");
-	validate_NULL_TYPETYPE(  arg1, "__wcstold_internal - arg1");
-	validate_NULL_TYPETYPE(  arg2, "__wcstold_internal - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-long double __lsb___wcstold_internal (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__wcstold_internal");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "__wcstold_internal - arg1");
+		validate_NULL_TYPETYPE(  arg2, "__wcstold_internal - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

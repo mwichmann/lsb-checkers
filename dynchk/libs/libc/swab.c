@@ -7,22 +7,22 @@
 #undef swab
 static void(*funcptr) (const void * , void * , ssize_t ) = 0;
 
+extern int __lsb_check_params;
 void swab (const void * arg0 , void * arg1 , ssize_t arg2 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "swab");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "swab - arg0");
-	validate_NULL_TYPETYPE(  arg0, "swab - arg0");
+		validate_NULL_TYPETYPE(  arg0, "swab - arg0");
 	validate_Rdaddress( arg1, "swab - arg1");
-	validate_NULL_TYPETYPE(  arg1, "swab - arg1");
-	validate_NULL_TYPETYPE(  arg2, "swab - arg2");
+		validate_NULL_TYPETYPE(  arg1, "swab - arg1");
+		validate_NULL_TYPETYPE(  arg2, "swab - arg2");
+	}
 	funcptr(arg0, arg1, arg2);
-}
-
-void __lsb_swab (const void * arg0 , void * arg1 , ssize_t arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "swab");
-	funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
 }
 

@@ -3,7 +3,6 @@
 #include <sys/ioctl.h>
 #include <sys/socket.h>
 #include <net/if.h>
-#include "../libs/__lsb_funcs.h"
 
 int validate_ioctlreq(const int req, const char *name)
 {
@@ -18,7 +17,7 @@ int validate_ioctlreq(const int req, const char *name)
 	case FIONREAD:
 		break;
 	default:
-		__lsb_fprintf(stderr,"Illegal ioctl() request 0x%x\n", req );
+		fprintf(stderr,"Illegal ioctl() request 0x%x\n", req );
 		return 1;
 	}
 	return 0;

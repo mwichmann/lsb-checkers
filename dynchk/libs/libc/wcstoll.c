@@ -7,23 +7,25 @@
 #undef wcstoll
 static long long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 
+extern int __lsb_check_params;
 long long wcstoll (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	long long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstoll");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wcstoll - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wcstoll - arg0");
+		validate_NULL_TYPETYPE(  arg0, "wcstoll - arg0");
 	validate_Rdaddress( arg1, "wcstoll - arg1");
 	validate_Rdaddress(* arg1, "wcstoll - arg1");
-	validate_NULL_TYPETYPE(  arg1, "wcstoll - arg1");
-	validate_NULL_TYPETYPE(  arg2, "wcstoll - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-long long __lsb_wcstoll (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wcstoll");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "wcstoll - arg1");
+		validate_NULL_TYPETYPE(  arg2, "wcstoll - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

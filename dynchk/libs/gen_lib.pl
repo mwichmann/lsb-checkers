@@ -15,6 +15,7 @@ my($DBPass) = $LSBDBPASSWD;
 my($DBHost) = $LSBDBHOST;
 my($arch_number) = 2;
 my($generate_gen_file) = 1;
+my($be_quiet) = 0;
 ##############################
 # Option handlers
 ##############################
@@ -22,7 +23,7 @@ my($generate_gen_file) = 1;
 my (%options);
 my($interface_WHERE_add); my($interface_FROM_add);
 
-getopts('hwd:u:p:o:l:g:a:i:', \%options);
+getopts('hwqd:u:p:o:l:g:a:i:', \%options);
 
 if (exists($options{'h'}))
 {
@@ -32,15 +33,16 @@ Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
  [-l lib1,lib2,lib3,...] [-g libgroup1,libgroup2,libgroup3,...]
     -h           Display this help message
     -w           Generate library without changing gen_funcs files.
-	-d db_name   Database name
+    -q           Quiet.  Do not show progress dots or ending message.
+    -d db_name   Database name
     -u username  Name of user for db access
     -p password  Password for db access
     -o hostname  Hostname for DB
-	-a arch      Target Architecture
-	-i interface Comma-delimited list of interfaces
+    -a arch      Target Architecture
+    -i interface Comma-delimited list of interfaces
     -l l1,l2,... Comma-delimited list of libraries
     -g g1,g2,... Comma-delimited list of libgroups
-	
+    
 
 	do not use -i with -l or -g. 
          
@@ -71,6 +73,7 @@ $DBHost = $options{'o'} if exists($options{'o'});
 $DBName = $options{'d'} if exists($options{'d'});
 $arch_number = $options{'a'} if exists($options{'a'});
 $generate_gen_file = 0 if exists($options{'w'});
+$be_quiet = 1 if exists($options{'q'});
 
 if($arch_number == 8 or $arch_number < 2 or $arch_number > 12)
 {  die "Invalid architecture number.  Read $0 -h\n"; }
@@ -424,7 +427,7 @@ sub write_int_wrapper
 
 	print $fh "{\n";
 	print $fh "\tint reset_flag = __lsb_check_params;\n";
-	print $fh "\t$func_left_type ret_value $func_right_type;\n";
+	print $fh "\t$func_left_type ret_value $func_right_type;\n" unless($func_left_type eq "void");
 
 	print $fh "\tif(!funcptr)\n";
 	print $fh "\t\tfuncptr = dlsym(RTLD_NEXT, \"" . $func_name . "\");\n";
@@ -432,8 +435,8 @@ sub write_int_wrapper
 	$write_int_wrapper_q->execute($func_id)
 		or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
 
-	print $fh "\tif(check_parms)\n\t{\n";
-	print $fh "\t\tcheck_params=0;\n";
+	print $fh "\tif(__lsb_check_params)\n\t{\n";
+	print $fh "\t\t__lsb_check_params=0;\n";
 
 	VALCALL: while( my($param_pos, $param_int, $param_null) = $write_int_wrapper_q->fetchrow_array() )
 	{
@@ -472,7 +475,7 @@ sub write_int_wrapper
 		$j++;
 	}
 	print $fh ");\n";
-	print $fh "\tcheck_params = reset_flag;\n";
+	print $fh "\t__lsb_check_params = reset_flag;\n";
 	print $fh "\treturn ret_value;\n" unless($func_left_type eq "void");
 	print $fh "}\n\n";
 }
@@ -644,15 +647,18 @@ FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fet
 	write_int_header($interface_file, $left_type_string, $right_type_string, $func_name, $func_id);
 	write_int_declaration($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
 	write_int_wrapper($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
-	write_int_declaration($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
-	write_int_wrapper($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
+	#write_int_declaration($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
+	#write_int_wrapper($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
 	
 	close($interface_file);
 
 	$progress ++;
-	print "." if ($progress % 50 == 0);
+	
+	unless($be_quiet)
+	{	print "." if ($progress % 50 == 0); }
 }
 	
 close($ell_file);
+	
 close($lsb_h_file);
-print "Done generating libraries!\a\n";
+print "Done generating libraries!\a\n" unless($be_quiet);

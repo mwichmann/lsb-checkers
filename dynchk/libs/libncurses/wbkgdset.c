@@ -6,20 +6,20 @@
 #undef wbkgdset
 static void(*funcptr) (WINDOW * , chtype ) = 0;
 
+extern int __lsb_check_params;
 void wbkgdset (WINDOW * arg0 , chtype arg1 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wbkgdset");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "wbkgdset - arg0");
-	validate_NULL_TYPETYPE(  arg0, "wbkgdset - arg0");
-	validate_NULL_TYPETYPE(  arg1, "wbkgdset - arg1");
+		validate_NULL_TYPETYPE(  arg0, "wbkgdset - arg0");
+		validate_NULL_TYPETYPE(  arg1, "wbkgdset - arg1");
+	}
 	funcptr(arg0, arg1);
-}
-
-void __lsb_wbkgdset (WINDOW * arg0 , chtype arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "wbkgdset");
-	funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
 }
 

@@ -6,20 +6,22 @@
 #undef pathconf
 static long(*funcptr) (const char * , int ) = 0;
 
+extern int __lsb_check_params;
 long pathconf (const char * arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pathconf");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "pathconf - arg0");
-	validate_NULL_TYPETYPE(  arg0, "pathconf - arg0");
-	validate_NULL_TYPETYPE(  arg1, "pathconf - arg1");
-	return funcptr(arg0, arg1);
-}
-
-long __lsb_pathconf (const char * arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pathconf");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg0, "pathconf - arg0");
+		validate_NULL_TYPETYPE(  arg1, "pathconf - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

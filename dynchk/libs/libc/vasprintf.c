@@ -7,23 +7,25 @@
 #undef vasprintf
 static int(*funcptr) (char * * , const char * , va_list ) = 0;
 
+extern int __lsb_check_params;
 int vasprintf (char * * arg0 , const char * arg1 , va_list arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vasprintf");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "vasprintf - arg0");
 	validate_Rdaddress(* arg0, "vasprintf - arg0");
-	validate_NULL_TYPETYPE(  arg0, "vasprintf - arg0");
+		validate_NULL_TYPETYPE(  arg0, "vasprintf - arg0");
 	validate_Rdaddress( arg1, "vasprintf - arg1");
-	validate_NULL_TYPETYPE(  arg1, "vasprintf - arg1");
-	validate_NULL_TYPETYPE(  arg2, "vasprintf - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_vasprintf (char * * arg0 , const char * arg1 , va_list arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vasprintf");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg1, "vasprintf - arg1");
+		validate_NULL_TYPETYPE(  arg2, "vasprintf - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

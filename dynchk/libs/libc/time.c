@@ -7,19 +7,21 @@
 #undef time
 static time_t(*funcptr) (time_t * ) = 0;
 
+extern int __lsb_check_params;
 time_t time (time_t * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	time_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "time");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "time - arg0");
-	validate_NULL_TYPETYPE(  arg0, "time - arg0");
-	return funcptr(arg0);
-}
-
-time_t __lsb_time (time_t * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "time");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "time - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

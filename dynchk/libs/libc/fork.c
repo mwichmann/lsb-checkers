@@ -6,17 +6,19 @@
 #undef fork
 static pid_t(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 pid_t fork ()
 {
+	int reset_flag = __lsb_check_params;
+	pid_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fork");
-	return funcptr();
-}
-
-pid_t __lsb_fork ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fork");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

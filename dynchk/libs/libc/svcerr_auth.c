@@ -7,20 +7,20 @@
 #undef svcerr_auth
 static void(*funcptr) (SVCXPRT * , enum auth_stat ) = 0;
 
+extern int __lsb_check_params;
 void svcerr_auth (SVCXPRT * arg0 , enum auth_stat arg1 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "svcerr_auth");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "svcerr_auth - arg0");
-	validate_NULL_TYPETYPE(  arg0, "svcerr_auth - arg0");
-	validate_NULL_TYPETYPE(  arg1, "svcerr_auth - arg1");
+		validate_NULL_TYPETYPE(  arg0, "svcerr_auth - arg0");
+		validate_NULL_TYPETYPE(  arg1, "svcerr_auth - arg1");
+	}
 	funcptr(arg0, arg1);
-}
-
-void __lsb_svcerr_auth (SVCXPRT * arg0 , enum auth_stat arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "svcerr_auth");
-	funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
 }
 

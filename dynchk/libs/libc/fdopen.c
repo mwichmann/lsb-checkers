@@ -6,20 +6,22 @@
 #undef fdopen
 static FILE *(*funcptr) (int , const char * ) = 0;
 
+extern int __lsb_check_params;
 FILE * fdopen (int arg0 , const char * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	FILE * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "fdopen");
-	validate_NULL_TYPETYPE(  arg0, "fdopen - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "fdopen - arg0");
 	validate_Rdaddress( arg1, "fdopen - arg1");
-	validate_NULL_TYPETYPE(  arg1, "fdopen - arg1");
-	return funcptr(arg0, arg1);
-}
-
-FILE * __lsb_fdopen (int arg0 , const char * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "fdopen");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "fdopen - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,21 @@
 #undef winch
 static chtype(*funcptr) (WINDOW * ) = 0;
 
+extern int __lsb_check_params;
 chtype winch (WINDOW * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	chtype ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winch");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "winch - arg0");
-	validate_NULL_TYPETYPE(  arg0, "winch - arg0");
-	return funcptr(arg0);
-}
-
-chtype __lsb_winch (WINDOW * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "winch");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "winch - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

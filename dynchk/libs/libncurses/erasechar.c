@@ -6,17 +6,19 @@
 #undef erasechar
 static char(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 char erasechar ()
 {
+	int reset_flag = __lsb_check_params;
+	char ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "erasechar");
-	return funcptr();
-}
-
-char __lsb_erasechar ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "erasechar");
-	return funcptr();
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
+	ret_value = funcptr();
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

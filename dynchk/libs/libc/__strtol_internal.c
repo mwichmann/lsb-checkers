@@ -6,26 +6,28 @@
 #undef __strtol_internal
 static long(*funcptr) (const char * , char * * , int , int ) = 0;
 
+extern int __lsb_check_params;
 long __strtol_internal (const char * arg0 , char * * arg1 , int arg2 , int arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	long ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "__strtol_internal");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "__strtol_internal - arg0");
-	validate_NULL_TYPETYPE(  arg0, "__strtol_internal - arg0");
-	if( arg1 ) {
+		validate_NULL_TYPETYPE(  arg0, "__strtol_internal - arg0");
+		if( arg1 ) {
 	validate_Rdaddress( arg1, "__strtol_internal - arg1");
 	validate_Rdaddress(* arg1, "__strtol_internal - arg1");
+		}
+		validate_NULL_TYPETYPE(  arg1, "__strtol_internal - arg1");
+		validate_NULL_TYPETYPE(  arg2, "__strtol_internal - arg2");
+		validate_NULL_TYPETYPE(  arg3, "__strtol_internal - arg3");
 	}
-	validate_NULL_TYPETYPE(  arg1, "__strtol_internal - arg1");
-	validate_NULL_TYPETYPE(  arg2, "__strtol_internal - arg2");
-	validate_NULL_TYPETYPE(  arg3, "__strtol_internal - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-long __lsb___strtol_internal (const char * arg0 , char * * arg1 , int arg2 , int arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__strtol_internal");
-	return funcptr(arg0, arg1, arg2, arg3);
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

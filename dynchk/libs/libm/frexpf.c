@@ -6,20 +6,22 @@
 #undef frexpf
 static float(*funcptr) (float , int * ) = 0;
 
+extern int __lsb_check_params;
 float frexpf (float arg0 , int * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	float ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "frexpf");
-	validate_NULL_TYPETYPE(  arg0, "frexpf - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "frexpf - arg0");
 	validate_Rdaddress( arg1, "frexpf - arg1");
-	validate_NULL_TYPETYPE(  arg1, "frexpf - arg1");
-	return funcptr(arg0, arg1);
-}
-
-float __lsb_frexpf (float arg0 , int * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "frexpf");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "frexpf - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

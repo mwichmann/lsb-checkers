@@ -6,22 +6,24 @@
 #undef inet_pton
 static int(*funcptr) (int , const char * , void * ) = 0;
 
+extern int __lsb_check_params;
 int inet_pton (int arg0 , const char * arg1 , void * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_pton");
-	validate_NULL_TYPETYPE(  arg0, "inet_pton - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "inet_pton - arg0");
 	validate_Rdaddress( arg1, "inet_pton - arg1");
-	validate_NULL_TYPETYPE(  arg1, "inet_pton - arg1");
+		validate_NULL_TYPETYPE(  arg1, "inet_pton - arg1");
 	validate_Rdaddress( arg2, "inet_pton - arg2");
-	validate_NULL_TYPETYPE(  arg2, "inet_pton - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_inet_pton (int arg0 , const char * arg1 , void * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "inet_pton");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "inet_pton - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

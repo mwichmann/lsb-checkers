@@ -6,17 +6,17 @@
 #undef endutent
 static void(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 void endutent ()
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "endutent");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
 	funcptr();
-}
-
-void __lsb_endutent ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "endutent");
-	funcptr();
+	__lsb_check_params = reset_flag;
 }
 

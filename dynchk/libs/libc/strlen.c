@@ -6,19 +6,21 @@
 #undef strlen
 static size_t(*funcptr) (const char * ) = 0;
 
+extern int __lsb_check_params;
 size_t strlen (const char * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	size_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strlen");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "strlen - arg0");
-	validate_NULL_TYPETYPE(  arg0, "strlen - arg0");
-	return funcptr(arg0);
-}
-
-size_t __lsb_strlen (const char * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strlen");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "strlen - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

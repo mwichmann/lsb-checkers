@@ -6,19 +6,19 @@
 #undef globfree
 static void(*funcptr) (glob_t * ) = 0;
 
+extern int __lsb_check_params;
 void globfree (glob_t * arg0 )
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "globfree");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "globfree - arg0");
-	validate_NULL_TYPETYPE(  arg0, "globfree - arg0");
+		validate_NULL_TYPETYPE(  arg0, "globfree - arg0");
+	}
 	funcptr(arg0);
-}
-
-void __lsb_globfree (glob_t * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "globfree");
-	funcptr(arg0);
+	__lsb_check_params = reset_flag;
 }
 

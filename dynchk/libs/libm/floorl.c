@@ -6,18 +6,20 @@
 #undef floorl
 static long double(*funcptr) (long double ) = 0;
 
+extern int __lsb_check_params;
 long double floorl (long double arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	long double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "floorl");
-	validate_NULL_TYPETYPE(  arg0, "floorl - arg0");
-	return funcptr(arg0);
-}
-
-long double __lsb_floorl (long double arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "floorl");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "floorl - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

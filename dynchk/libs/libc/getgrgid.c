@@ -7,18 +7,20 @@
 #undef getgrgid
 static struct group *(*funcptr) (gid_t ) = 0;
 
+extern int __lsb_check_params;
 struct group * getgrgid (gid_t arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	struct group * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getgrgid");
-	validate_NULL_TYPETYPE(  arg0, "getgrgid - arg0");
-	return funcptr(arg0);
-}
-
-struct group * __lsb_getgrgid (gid_t arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getgrgid");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "getgrgid - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,21 @@
 #undef pow
 static double(*funcptr) (double , double ) = 0;
 
+extern int __lsb_check_params;
 double pow (double arg0 , double arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pow");
-	validate_NULL_TYPETYPE(  arg0, "pow - arg0");
-	validate_NULL_TYPETYPE(  arg1, "pow - arg1");
-	return funcptr(arg0, arg1);
-}
-
-double __lsb_pow (double arg0 , double arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pow");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "pow - arg0");
+		validate_NULL_TYPETYPE(  arg1, "pow - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

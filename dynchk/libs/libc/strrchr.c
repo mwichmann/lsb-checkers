@@ -6,20 +6,22 @@
 #undef strrchr
 static char *(*funcptr) (const char * , int ) = 0;
 
+extern int __lsb_check_params;
 char * strrchr (const char * arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "strrchr");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "strrchr - arg0");
-	validate_NULL_TYPETYPE(  arg0, "strrchr - arg0");
-	validate_NULL_TYPETYPE(  arg1, "strrchr - arg1");
-	return funcptr(arg0, arg1);
-}
-
-char * __lsb_strrchr (const char * arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "strrchr");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg0, "strrchr - arg0");
+		validate_NULL_TYPETYPE(  arg1, "strrchr - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

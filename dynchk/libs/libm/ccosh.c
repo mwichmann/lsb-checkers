@@ -6,18 +6,20 @@
 #undef ccosh
 static double complex(*funcptr) (double complex ) = 0;
 
+extern int __lsb_check_params;
 double complex ccosh (double complex arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	double complex ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ccosh");
-	validate_NULL_TYPETYPE(  arg0, "ccosh - arg0");
-	return funcptr(arg0);
-}
-
-double complex __lsb_ccosh (double complex arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ccosh");
-	return funcptr(arg0);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "ccosh - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,19 +6,21 @@
 #undef newpad
 static WINDOW *(*funcptr) (int , int ) = 0;
 
+extern int __lsb_check_params;
 WINDOW * newpad (int arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	WINDOW * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newpad");
-	validate_NULL_TYPETYPE(  arg0, "newpad - arg0");
-	validate_NULL_TYPETYPE(  arg1, "newpad - arg1");
-	return funcptr(arg0, arg1);
-}
-
-WINDOW * __lsb_newpad (int arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "newpad");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "newpad - arg0");
+		validate_NULL_TYPETYPE(  arg1, "newpad - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

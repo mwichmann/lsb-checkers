@@ -6,19 +6,21 @@
 #undef ldexp
 static double(*funcptr) (double , int ) = 0;
 
+extern int __lsb_check_params;
 double ldexp (double arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexp");
-	validate_NULL_TYPETYPE(  arg0, "ldexp - arg0");
-	validate_NULL_TYPETYPE(  arg1, "ldexp - arg1");
-	return funcptr(arg0, arg1);
-}
-
-double __lsb_ldexp (double arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ldexp");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "ldexp - arg0");
+		validate_NULL_TYPETYPE(  arg1, "ldexp - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

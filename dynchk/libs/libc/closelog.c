@@ -6,17 +6,17 @@
 #undef closelog
 static void(*funcptr) () = 0;
 
+extern int __lsb_check_params;
 void closelog ()
 {
+	int reset_flag = __lsb_check_params;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "closelog");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+	}
 	funcptr();
-}
-
-void __lsb_closelog ()
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "closelog");
-	funcptr();
+	__lsb_check_params = reset_flag;
 }
 

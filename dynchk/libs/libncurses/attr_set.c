@@ -6,21 +6,23 @@
 #undef attr_set
 static int(*funcptr) (attr_t , short , void * ) = 0;
 
+extern int __lsb_check_params;
 int attr_set (attr_t arg0 , short arg1 , void * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_set");
-	validate_NULL_TYPETYPE(  arg0, "attr_set - arg0");
-	validate_NULL_TYPETYPE(  arg1, "attr_set - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "attr_set - arg0");
+		validate_NULL_TYPETYPE(  arg1, "attr_set - arg1");
 	validate_Rdaddress( arg2, "attr_set - arg2");
-	validate_NULL_TYPETYPE(  arg2, "attr_set - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_attr_set (attr_t arg0 , short arg1 , void * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "attr_set");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "attr_set - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

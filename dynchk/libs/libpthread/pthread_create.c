@@ -6,25 +6,27 @@
 #undef pthread_create
 static int(*funcptr) (pthread_t * , const pthread_attr_t * , void *(* )(void *), void * ) = 0;
 
+extern int __lsb_check_params;
 int pthread_create (pthread_t * arg0 , const pthread_attr_t * arg1 , void *(* arg2 )(void *), void * arg3 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "pthread_create");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "pthread_create - arg0");
-	validate_NULL_TYPETYPE(  arg0, "pthread_create - arg0");
+		validate_NULL_TYPETYPE(  arg0, "pthread_create - arg0");
 	validate_Rdaddress( arg1, "pthread_create - arg1");
-	validate_NULL_TYPETYPE(  arg1, "pthread_create - arg1");
+		validate_NULL_TYPETYPE(  arg1, "pthread_create - arg1");
 validate_Rdaddress( arg2, "pthread_create - arg2");
-	validate_NULL_TYPETYPE(  arg2, "pthread_create - arg2");
+		validate_NULL_TYPETYPE(  arg2, "pthread_create - arg2");
 	validate_Rdaddress( arg3, "pthread_create - arg3");
-	validate_NULL_TYPETYPE(  arg3, "pthread_create - arg3");
-	return funcptr(arg0, arg1, arg2, arg3);
-}
-
-int __lsb_pthread_create (pthread_t * arg0 , const pthread_attr_t * arg1 , void *(* arg2 )(void *), void * arg3 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_create");
-	return funcptr(arg0, arg1, arg2, arg3);
+		validate_NULL_TYPETYPE(  arg3, "pthread_create - arg3");
+	}
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -6,20 +6,22 @@
 #undef putw
 static int(*funcptr) (int , FILE * ) = 0;
 
+extern int __lsb_check_params;
 int putw (int arg0 , FILE * arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putw");
-	validate_NULL_TYPETYPE(  arg0, "putw - arg0");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "putw - arg0");
 	validate_Rdaddress( arg1, "putw - arg1");
-	validate_NULL_TYPETYPE(  arg1, "putw - arg1");
-	return funcptr(arg0, arg1);
-}
-
-int __lsb_putw (int arg0 , FILE * arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "putw");
-	return funcptr(arg0, arg1);
+		validate_NULL_TYPETYPE(  arg1, "putw - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

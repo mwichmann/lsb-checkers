@@ -6,19 +6,21 @@
 #undef ldexpf
 static float(*funcptr) (float , int ) = 0;
 
+extern int __lsb_check_params;
 float ldexpf (float arg0 , int arg1 )
 {
+	int reset_flag = __lsb_check_params;
+	float ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "ldexpf");
-	validate_NULL_TYPETYPE(  arg0, "ldexpf - arg0");
-	validate_NULL_TYPETYPE(  arg1, "ldexpf - arg1");
-	return funcptr(arg0, arg1);
-}
-
-float __lsb_ldexpf (float arg0 , int arg1 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "ldexpf");
-	return funcptr(arg0, arg1);
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "ldexpf - arg0");
+		validate_NULL_TYPETYPE(  arg1, "ldexpf - arg1");
+	}
+	ret_value = funcptr(arg0, arg1);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

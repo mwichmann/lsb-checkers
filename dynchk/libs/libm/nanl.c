@@ -6,19 +6,21 @@
 #undef nanl
 static long double(*funcptr) (const char * ) = 0;
 
+extern int __lsb_check_params;
 long double nanl (const char * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	long double ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "nanl");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "nanl - arg0");
-	validate_NULL_TYPETYPE(  arg0, "nanl - arg0");
-	return funcptr(arg0);
-}
-
-long double __lsb_nanl (const char * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "nanl");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "nanl - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

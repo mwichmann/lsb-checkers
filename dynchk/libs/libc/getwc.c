@@ -7,19 +7,21 @@
 #undef getwc
 static wint_t(*funcptr) (FILE * ) = 0;
 
+extern int __lsb_check_params;
 wint_t getwc (FILE * arg0 )
 {
+	int reset_flag = __lsb_check_params;
+	wint_t ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "getwc");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
 	validate_Rdaddress( arg0, "getwc - arg0");
-	validate_NULL_TYPETYPE(  arg0, "getwc - arg0");
-	return funcptr(arg0);
-}
-
-wint_t __lsb_getwc (FILE * arg0 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getwc");
-	return funcptr(arg0);
+		validate_NULL_TYPETYPE(  arg0, "getwc - arg0");
+	}
+	ret_value = funcptr(arg0);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

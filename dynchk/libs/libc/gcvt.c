@@ -6,21 +6,23 @@
 #undef gcvt
 static char *(*funcptr) (double , int , char * ) = 0;
 
+extern int __lsb_check_params;
 char * gcvt (double arg0 , int arg1 , char * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gcvt");
-	validate_NULL_TYPETYPE(  arg0, "gcvt - arg0");
-	validate_NULL_TYPETYPE(  arg1, "gcvt - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "gcvt - arg0");
+		validate_NULL_TYPETYPE(  arg1, "gcvt - arg1");
 	validate_Rdaddress( arg2, "gcvt - arg2");
-	validate_NULL_TYPETYPE(  arg2, "gcvt - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-char * __lsb_gcvt (double arg0 , int arg1 , char * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "gcvt");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "gcvt - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

@@ -4,13 +4,13 @@ WRAPPER_LIBS = \
 	libs/libncurses/libncurses.o \
 	libs/libz/libz.o \
 	libs/libm/libm.o 
+#	libs/libpthread/libpthread.o
 
 TEST_LIB = tests/tests.o
 
 all: liblsbdynchk.so lsbdynchk
 
 $(WRAPPER_LIBS): build_libs
-	
 
 build_libs:
 	cd libs && make all
@@ -18,8 +18,8 @@ build_libs:
 $(TEST_LIB)::
 	cd tests && make all
 
-liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) makefile
-	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB)
+liblsbdynchk.so: $(WRAPPER_LIBS) $(TEST_LIB) global_flag.o makefile
+	ld -shared -soname liblsbdynchk.so.1 -o liblsbdynchk.so.1 -ldl -lc $(WRAPPER_LIBS) $(TEST_LIB) global_flag.o
 
 lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \

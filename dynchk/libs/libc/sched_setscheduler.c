@@ -7,21 +7,23 @@
 #undef sched_setscheduler
 static int(*funcptr) (pid_t , int , const struct sched_param * ) = 0;
 
+extern int __lsb_check_params;
 int sched_setscheduler (pid_t arg0 , int arg1 , const struct sched_param * arg2 )
 {
+	int reset_flag = __lsb_check_params;
+	int ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "sched_setscheduler");
-	validate_NULL_TYPETYPE(  arg0, "sched_setscheduler - arg0");
-	validate_NULL_TYPETYPE(  arg1, "sched_setscheduler - arg1");
+	if(__lsb_check_params)
+	{
+		__lsb_check_params=0;
+		validate_NULL_TYPETYPE(  arg0, "sched_setscheduler - arg0");
+		validate_NULL_TYPETYPE(  arg1, "sched_setscheduler - arg1");
 	validate_Rdaddress( arg2, "sched_setscheduler - arg2");
-	validate_NULL_TYPETYPE(  arg2, "sched_setscheduler - arg2");
-	return funcptr(arg0, arg1, arg2);
-}
-
-int __lsb_sched_setscheduler (pid_t arg0 , int arg1 , const struct sched_param * arg2 )
-{
-	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "sched_setscheduler");
-	return funcptr(arg0, arg1, arg2);
+		validate_NULL_TYPETYPE(  arg2, "sched_setscheduler - arg2");
+	}
+	ret_value = funcptr(arg0, arg1, arg2);
+	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 
