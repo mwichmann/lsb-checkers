@@ -53,6 +53,7 @@
 #include <sys/utsname.h>
 #include <sys/wait.h>
 #include <term.h>
+#include <pty.h>
 #include <termios.h>
 #include <time.h>
 #include <ucontext.h>
