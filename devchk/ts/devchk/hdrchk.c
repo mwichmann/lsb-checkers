@@ -119,6 +119,7 @@ tcnt+=math_h();
 tcnt+=net_if_h();
 tcnt+=netdb_h();
 tcnt+=netinet_in_h();
+tcnt+=netinet_ip_h();
 tcnt+=netinet_tcp_h();
 tcnt+=netinet_udp_h();
 tcnt+=nl_types_h();
