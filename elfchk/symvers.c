@@ -51,11 +51,9 @@ file->numdynents=file->dynhdr->sh_size/file->dynhdr->sh_entsize;
 for(i=0;i<file->numdynents;i++) {
 	if( file->dyns[i].d_tag == DT_VERDEFNUM ) {
 		file->numverdefs = file->dyns[i].d_un.d_val;
-		break;
 		}
 	if( file->dyns[i].d_tag == DT_VERNEEDNUM ) {
 		file->numverneed = file->dyns[i].d_un.d_val;
-		break;
 		}
 	}
 
