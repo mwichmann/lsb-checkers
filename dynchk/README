@@ -1,0 +1,15 @@
+Installation:
+	make
+	make install (as root) - places liblsbdynchk.so.1 in /usr/lib/
+	make clean (if you like)
+
+Usage:
+	(from the dynchk directory)
+	./lsbdynchk `command'
+
+Problems:
+
+In tests/type_tests.c, the validate* functions are almost all stubs.
+Those that aren't explicitly marked (stub) are probably wrong anyway.
+I don't know exactly what each validate function should check.  So,
+we're just going to make _lots_ and _lots_ of output.
