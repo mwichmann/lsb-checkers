@@ -214,6 +214,12 @@ CheckTypeSize(long double,8,14,10)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14,0);
 #endif
 
+#if 1
+CheckTypeSize(signed char,1,10505,1)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10505,0);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

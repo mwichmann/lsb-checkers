@@ -52,6 +52,13 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8848,0);
 Msg("Find size of wchar_t (8848)\n");
 #endif
 
+#if __no_sym__
+CheckTypeSize(size_t,, 8969, )
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8969,0);
+Msg("Find size of size_t (8969)\n");
+#endif
+
 #if __i386__
 CheckTypeSize(ptrdiff_t,4, 9027, 2)
 #endif

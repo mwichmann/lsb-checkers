@@ -324,6 +324,29 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10168,0);
 Msg("Find size of intf (10168)\n");
 #endif
 
+#if __ia64__
+#elif __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10512,0);
+Msg("Find size of const Bytef * (10512)\n");
+#endif
+
+#if __ia64__
+CheckTypeSize(const uLongf,8, 10517, 3)
+#elif __i386__
+CheckTypeSize(const uLongf,4, 10517, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10517,0);
+Msg("Find size of const uLongf (10517)\n");
+#endif
+
+#if __ia64__
+#elif __i386__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10518,0);
+Msg("Find size of const uLongf * (10518)\n");
+#endif
+
 #if __i386__
 CheckTypeSize(voidpf,4, 9868, 2)
 #elif __powerpc__ && !__powerpc64__
@@ -412,6 +435,15 @@ CheckTypeSize(Byte,1, 10166, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10166,0);
 Msg("Find size of Byte (10166)\n");
+#endif
+
+#if __ia64__
+CheckTypeSize(z_off_t,8, 10519, 3)
+#elif __i386__
+CheckTypeSize(z_off_t,4, 10519, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10519,0);
+Msg("Find size of z_off_t (10519)\n");
 #endif
 
 #if __i386__
@@ -689,6 +721,15 @@ CheckTypeSize(uIntf,4, 10169, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10169,0);
 Msg("Find size of uIntf (10169)\n");
+#endif
+
+#if __ia64__
+CheckTypeSize(const Bytef,1, 10511, 3)
+#elif __i386__
+CheckTypeSize(const Bytef,1, 10511, 2)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10511,0);
+Msg("Find size of const Bytef (10511)\n");
 #endif
 
 #ifdef TET_TEST

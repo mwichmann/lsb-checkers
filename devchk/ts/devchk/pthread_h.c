@@ -229,6 +229,16 @@ cnt++;
 /* No test for PTHREAD_RWLOCK_INITIALIZER */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_RWLOCK_DEFAULT_NP
+	CompareConstant(PTHREAD_RWLOCK_DEFAULT_NP,2,5096,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_RWLOCK_DEFAULT_NP\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 #elif __powerpc__ && !__powerpc64__
 #elif __ia64__

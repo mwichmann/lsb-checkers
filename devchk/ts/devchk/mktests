@@ -168,6 +168,13 @@ sub writetest($$)
 			print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                         print TESTS "cnt++;\n";
 			print TESTS "#endif\n\n";
+		} elsif( $centry{'Ctype'} eq 'long' ) {
+			print TESTS "#ifdef $centry{'Cname'}\n";
+			print TESTS "\tCompareLongConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture)\n";
+			print TESTS "#else\n";
+			print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
+                        print TESTS "cnt++;\n";
+			print TESTS "#endif\n\n";
 		} elsif( $centry{'Ctype'} eq 'string' ) {
 			print TESTS "#ifdef $centry{'Cname'}\n";
 			print TESTS "\tCompareStringConstant($centry{'Cname'},\"".$centry{'ACvalue'}."\")\n";

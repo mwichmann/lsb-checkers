@@ -193,6 +193,30 @@ CheckMemberSize(struct ipc_perm,__unused2,0,10,34741)
 CheckOffset(struct ipc_perm,__unused2,32,10,34741)
 #endif
 
+#if __powerpc64__
+CheckTypeSize(struct ipc_perm,48, 10494, 9)
+CheckMemberSize(struct ipc_perm,__key,4,9,40060)
+CheckOffset(struct ipc_perm,__key,0,9,40060)
+CheckMemberSize(struct ipc_perm,uid,4,9,40061)
+CheckOffset(struct ipc_perm,uid,4,9,40061)
+CheckMemberSize(struct ipc_perm,gid,4,9,40062)
+CheckOffset(struct ipc_perm,gid,8,9,40062)
+CheckMemberSize(struct ipc_perm,cuid,4,9,40063)
+CheckOffset(struct ipc_perm,cuid,12,9,40063)
+CheckMemberSize(struct ipc_perm,cgid,4,9,40064)
+CheckOffset(struct ipc_perm,cgid,16,9,40064)
+CheckMemberSize(struct ipc_perm,mode,4,9,40065)
+CheckOffset(struct ipc_perm,mode,20,9,40065)
+CheckMemberSize(struct ipc_perm,__seq,4,9,40066)
+CheckOffset(struct ipc_perm,__seq,24,9,40066)
+CheckMemberSize(struct ipc_perm,__pad1,4,9,40067)
+CheckOffset(struct ipc_perm,__pad1,28,9,40067)
+CheckMemberSize(struct ipc_perm,__unused1,8,9,40068)
+CheckOffset(struct ipc_perm,__unused1,32,9,40068)
+CheckMemberSize(struct ipc_perm,__unused2,8,9,40069)
+CheckOffset(struct ipc_perm,__unused2,40,9,40069)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
