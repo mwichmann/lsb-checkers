@@ -34,6 +34,36 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef PRIO_PROCESS
+	CompareConstant(PRIO_PROCESS,0,3534,architecture)
+#else
+Msg( "Error: Constant not found: PRIO_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PRIO_PGRP
+	CompareConstant(PRIO_PGRP,1,3535,architecture)
+#else
+Msg( "Error: Constant not found: PRIO_PGRP\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef PRIO_USER
+	CompareConstant(PRIO_USER,2,3536,architecture)
+#else
+Msg( "Error: Constant not found: PRIO_USER\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_CPU
 	CompareConstant(RLIMIT_CPU,0,3537,architecture)
 #else
