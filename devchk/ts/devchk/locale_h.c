@@ -497,7 +497,7 @@ Msg("Find size of lconv (6919)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct __locale_struct,64, 10531, 2)
+CheckTypeSize(struct __locale_struct,116, 10531, 2)
 CheckMemberSize(struct __locale_struct,__locales,52,2,40181)
 CheckOffset(struct __locale_struct,__locales,0,2,40181)
 CheckMemberSize(struct __locale_struct,__ctype_b,4,2,40182)
@@ -507,7 +507,7 @@ CheckOffset(struct __locale_struct,__ctype_tolower,56,2,40183)
 CheckMemberSize(struct __locale_struct,__ctype_toupper,4,2,40184)
 CheckOffset(struct __locale_struct,__ctype_toupper,60,2,40184)
 CheckMemberSize(struct __locale_struct,__names,52,2,40652)
-CheckOffset(struct __locale_struct,__names,0,2,40652)
+CheckOffset(struct __locale_struct,__names,64,2,40652)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct __locale_struct,116, 10531, 6)
 CheckMemberSize(struct __locale_struct,__locales,52,6,40181)
