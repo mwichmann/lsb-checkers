@@ -55,8 +55,10 @@ checkhdrident( EI_MAG3, ELFMAG3 )
 checkhdrident( EI_CLASS, ELFCLASS32 )
 #elif defined( __ia64__ )
 checkhdrident( EI_CLASS, ELFCLASS64 )
-#elif defined( __powerpc__ )
+#elif  __powerpc__ && !__powerpc64__
 checkhdrident( EI_CLASS, ELFCLASS32 )
+#elif __powerpc64__
+checkhdrident( EI_CLASS, ELFCLASS64 )
 #else
 fprintf(stderr, "EI_CLASS not checked!!\n");
 #endif
@@ -64,7 +66,9 @@ fprintf(stderr, "EI_CLASS not checked!!\n");
 checkhdrident( EI_DATA, ELFDATA2LSB )
 #elif defined( __ia64__ )
 checkhdrident( EI_DATA, ELFDATA2LSB )
-#elif defined( __powerpc__ )
+#elif  __powerpc__ && !__powerpc64__
+checkhdrident( EI_DATA, ELFDATA2MSB )
+#elif __powerpc64__
 checkhdrident( EI_DATA, ELFDATA2MSB )
 #else
 fprintf(stderr, "EI_DATA not checked!!\n");
@@ -109,8 +113,10 @@ else
 checkhdrfield( e_machine, EM_386 )
 #elif defined( __ia64__ )
 checkhdrfield( e_machine, EM_IA_64 )
-#elif defined( __powerpc__ )
+#elif __powerpc__ && !__powerpc64__
 checkhdrfield( e_machine, EM_PPC )
+#elif __powerpc64__
+checkhdrfield( e_machine, EM_PPC64 )
 #else
 fprintf(stderr, "e_machine not checked!!\n");
 #endif
