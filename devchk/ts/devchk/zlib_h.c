@@ -282,7 +282,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for deflateInit2(strm,level, method, windowBits, memLevel, stratgey) */
+/* No test for deflateInit2(strm,level,method,windowBits,memLevel,strategy) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -326,49 +326,6 @@ CheckTypeSize(intf,4, 10168, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10168,0);
 Msg("Find size of intf (10168)\n");
-#endif
-
-#if __ia64__
-#elif __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __powerpc64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10512,0);
-Msg("Find size of const Bytef * (10512)\n");
-#endif
-
-#if __ia64__
-CheckTypeSize(const uLongf,8, 10517, 3)
-#elif __i386__
-CheckTypeSize(const uLongf,4, 10517, 2)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const uLongf,4, 10517, 6)
-#elif __s390x__
-CheckTypeSize(const uLongf,8, 10517, 12)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const uLongf,4, 10517, 10)
-#elif __x86_64__
-CheckTypeSize(const uLongf,8, 10517, 11)
-#elif __powerpc64__
-CheckTypeSize(const uLongf,8, 10517, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10517,0);
-Msg("Find size of const uLongf (10517)\n");
-#endif
-
-#if __ia64__
-#elif __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __powerpc64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10518,0);
-Msg("Find size of const uLongf * (10518)\n");
 #endif
 
 #if __i386__
@@ -871,25 +828,6 @@ CheckTypeSize(uIntf,4, 10169, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10169,0);
 Msg("Find size of uIntf (10169)\n");
-#endif
-
-#if __ia64__
-CheckTypeSize(const Bytef,1, 10511, 3)
-#elif __i386__
-CheckTypeSize(const Bytef,1, 10511, 2)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const Bytef,1, 10511, 6)
-#elif __s390x__
-CheckTypeSize(const Bytef,1, 10511, 12)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const Bytef,1, 10511, 10)
-#elif __x86_64__
-CheckTypeSize(const Bytef,1, 10511, 11)
-#elif __powerpc64__
-CheckTypeSize(const Bytef,1, 10511, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10511,0);
-Msg("Find size of const Bytef (10511)\n");
 #endif
 
 #ifdef TET_TEST

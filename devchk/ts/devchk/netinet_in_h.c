@@ -133,6 +133,56 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef IP_MULTICAST_IF
+	CompareConstant(IP_MULTICAST_IF,32,4681,architecture)
+#else
+Msg( "Error: Constant not found: IP_MULTICAST_IF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IP_MULTICAST_TTL
+	CompareConstant(IP_MULTICAST_TTL,33,4682,architecture)
+#else
+Msg( "Error: Constant not found: IP_MULTICAST_TTL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IP_MULTICAST_LOOP
+	CompareConstant(IP_MULTICAST_LOOP,34,4683,architecture)
+#else
+Msg( "Error: Constant not found: IP_MULTICAST_LOOP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IP_ADD_MEMBERSHIP
+	CompareConstant(IP_ADD_MEMBERSHIP,35,4684,architecture)
+#else
+Msg( "Error: Constant not found: IP_ADD_MEMBERSHIP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IP_DROP_MEMBERSHIP
+	CompareConstant(IP_DROP_MEMBERSHIP,36,4685,architecture)
+#else
+Msg( "Error: Constant not found: IP_DROP_MEMBERSHIP\n");
+cnt++;
+#endif
+
+#endif
+
 #if 1
 CheckTypeSize(struct in_addr,4, 10143, 1)
 CheckMemberSize(struct in_addr,s_addr,4,1,33767)
@@ -202,6 +252,17 @@ CheckOffset(struct sockaddr_in,sin_zero,8,11,33779)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9141,0);
 Msg("Find size of sockaddr_in (9141)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(struct ip_mreq,8, 10146, 2)
+CheckMemberSize(struct ip_mreq,imr_multiaddr,4,2,33768)
+CheckOffset(struct ip_mreq,imr_multiaddr,0,2,33768)
+CheckMemberSize(struct ip_mreq,imr_interface,4,2,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,2,33769)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10146,0);
+Msg("Find size of ip_mreq (10146)\n");
 #endif
 
 #ifdef TET_TEST

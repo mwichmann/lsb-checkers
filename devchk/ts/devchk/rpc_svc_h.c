@@ -280,9 +280,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");
 #endif
 
-#if __s390__ && !__s390x__
-#endif
-
 #if __i386__
 CheckTypeSize(__dispatch_fn_t,4, 9997, 2)
 #elif __powerpc64__

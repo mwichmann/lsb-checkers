@@ -81,18 +81,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9199,0);
 Msg("Find size of wctrans_t (9199)\n");
 #endif
 
-#if __powerpc64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __i386__
-#elif __s390x__
-#elif __x86_64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9234,0);
-Msg("Find size of anon-__mbstate_t (9234)\n");
-#endif
-
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(__mbstate_t,8, 10488, 6)
 #elif __i386__

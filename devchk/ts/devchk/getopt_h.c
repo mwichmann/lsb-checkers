@@ -33,6 +33,26 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef required_argument
+	CompareConstant(required_argument,1,4379,architecture)
+#else
+Msg( "Error: Constant not found: required_argument\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef optional_argument
+	CompareConstant(optional_argument,2,4380,architecture)
+#else
+Msg( "Error: Constant not found: optional_argument\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(struct option,16, 10000, 2)
 CheckMemberSize(struct option,name,4,2,32258)
