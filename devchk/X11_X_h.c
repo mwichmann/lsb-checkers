@@ -3,7 +3,6 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
-#include <X11/X.h>
 #include "X11/X.h"
 
 

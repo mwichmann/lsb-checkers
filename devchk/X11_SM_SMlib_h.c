@@ -3,6 +3,10 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#include <wchar.h>
+#include <X11/X.h>
+#include <X11/Xlib.h>
+#include <X11/ICE/ICElib.h>
 #include "X11/SM/SMlib.h"
 
 
@@ -30,13 +34,6 @@ CheckTypeSize(SmsConn,4,8233)
 CheckTypeSize(SmsConn,8,8233)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8233,0);
-#endif
-#ifdef __i386__
-CheckTypeSize(SmcCloseStatus,4,8786)
-#elif __ia64__
-CheckTypeSize(SmcCloseStatus,4,8786)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8786,0);
 #endif
 #ifdef __i386__
 CheckTypeSize(SmcSaveYourselfPhase2Proc,4,8790)
@@ -79,6 +76,13 @@ CheckTypeSize(SmsErrorHandler,4,8829)
 CheckTypeSize(SmsErrorHandler,8,8829)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8829,0);
+#endif
+#ifdef __i386__
+CheckTypeSize(SmcCloseStatus,4,8786)
+#elif __ia64__
+CheckTypeSize(SmcCloseStatus,4,8786)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8786,0);
 #endif
 printf("%d tests in X11/SM/SMlib.h\n",cnt);
 return cnt;

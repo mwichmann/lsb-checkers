@@ -3,6 +3,10 @@
  */
 #include "hdrchk.h"
 #include "sys/types.h"
+#include <stdio.h>
+#include <wchar.h>
+#include <X11/X.h>
+#include <X11/Xauth.h>
 #include <X11/Xlib.h>
 
 #include "X11/extensions/security.h"
