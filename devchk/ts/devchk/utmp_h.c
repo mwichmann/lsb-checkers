@@ -200,7 +200,7 @@ CheckOffset(struct lastlog,ll_host,36,2,34462)
 
 #if __ia64__
 CheckTypeSize(struct lastlog,296, 10950, 3)
-CheckMemberSize(struct lastlog,ll_time,4,3,40749)
+CheckMemberSize(struct lastlog,ll_time,8,3,40749)
 CheckOffset(struct lastlog,ll_time,0,3,40749)
 CheckMemberSize(struct lastlog,ll_line,32,3,40755)
 CheckOffset(struct lastlog,ll_line,8,3,40755)
@@ -250,7 +250,7 @@ CheckOffset(struct lastlog,ll_host,36,11,40765)
 
 #if __s390x__
 CheckTypeSize(struct lastlog,296, 10955, 12)
-CheckMemberSize(struct lastlog,ll_time,4,12,40754)
+CheckMemberSize(struct lastlog,ll_time,8,12,40754)
 CheckOffset(struct lastlog,ll_time,0,12,40754)
 CheckMemberSize(struct lastlog,ll_line,32,12,40760)
 CheckOffset(struct lastlog,ll_line,8,12,40760)
