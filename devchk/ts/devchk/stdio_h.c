@@ -24,10 +24,20 @@ Msg("Checking data structures in stdio.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef P_tmpdir
-	CompareStringConstant(P_tmpdir,"/tmp")
+#ifdef _IOFBF
+	CompareConstant(_IOFBF,0,1631,architecture)
 #else
-Msg( "Error: Constant not found: P_tmpdir\n");
+Msg( "Error: Constant not found: _IOFBF\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef _IOLBF
+	CompareConstant(_IOLBF,1,1632,architecture)
+#else
+Msg( "Error: Constant not found: _IOLBF\n");
 cnt++;
 #endif
 
@@ -54,30 +64,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef P_tmpdir
+	CompareStringConstant(P_tmpdir,"/tmp")
+#else
+Msg( "Error: Constant not found: P_tmpdir\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef EOF
 	CompareConstant(EOF,(-1),3183,architecture)
 #else
 Msg( "Error: Constant not found: EOF\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef FOPEN_MAX
-	CompareConstant(FOPEN_MAX,16,3189,architecture)
-#else
-Msg( "Error: Constant not found: FOPEN_MAX\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef _IOLBF
-	CompareConstant(_IOLBF,1,1632,architecture)
-#else
-Msg( "Error: Constant not found: _IOLBF\n");
 cnt++;
 #endif
 
@@ -94,26 +94,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef L_cuserid
-	CompareConstant(L_cuserid,9,3191,architecture)
-#else
-Msg( "Error: Constant not found: L_cuserid\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef _IOFBF
-	CompareConstant(_IOFBF,0,1631,architecture)
-#else
-Msg( "Error: Constant not found: _IOFBF\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 #ifdef FILENAME_MAX
 	CompareConstant(FILENAME_MAX,4096,3188,architecture)
 #else
@@ -124,10 +104,30 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef FOPEN_MAX
+	CompareConstant(FOPEN_MAX,16,3189,architecture)
+#else
+Msg( "Error: Constant not found: FOPEN_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef L_ctermid
 	CompareConstant(L_ctermid,9,3190,architecture)
 #else
 Msg( "Error: Constant not found: L_ctermid\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef L_cuserid
+	CompareConstant(L_cuserid,9,3191,architecture)
+#else
+Msg( "Error: Constant not found: L_cuserid\n");
 cnt++;
 #endif
 

@@ -33,6 +33,10 @@ int architecture=8;
 int architecture=9;
 #define __found_arch__
 #endif
+#ifdef __s390__
+int architecture=10;
+#define __found_arch__
+#endif
 #ifndef __found_arch__
 #error "Unable to identify architecture"
 #endif
