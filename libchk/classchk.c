@@ -145,8 +145,8 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 													 "Checking baseoffset");
 				if (vtbaseoffset != classp->vtable[v].baseoffset) 
 				{
-					TETJ_REPORT_INFO("Vtable baseoffset %ld (expected) doesn't match %ld "
-													 "(found) BASEO:%s:0:%ld\n",						 
+					TETJ_REPORT_INFO("Vtable[%d] baseoffset %ld (expected) doesn't match %ld "
+													 "(found) BASEO:%s:0:%ld\n", v,
 													 classp->vtable[v].baseoffset, vtbaseoffset, 
 													 classp->name,vtbaseoffset);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -164,8 +164,8 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 													 "Checking vcalloffset");
 				if (vtvcalloffset != classp->vtable[v].vcalloffset) 
 				{
-					TETJ_REPORT_INFO("Vtable vcalloffset %ld (expected) doesn't match %ld "
-													 "(found) BASEVO:%s:0:%ld\n",
+					TETJ_REPORT_INFO("Vtable[%d] vcalloffset %ld (expected) doesn't match %ld "
+													 "(found) BASEVO:%s:0:%ld\n", v,
 													 classp->vtable[v].vcalloffset, vtvcalloffset,
 													 classp->name,vtvcalloffset);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -271,8 +271,8 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 							 strcmp(classp->vtable[v].virtfuncs[j], dlinfo.dli_sname)) ||
 							(dlinfo.dli_sname && !classp->vtable[v].virtfuncs[j])) 
 					{
-						TETJ_REPORT_INFO("Virtual Function[%d] %s (expected) "
-														 "doesn't match %s (found)\n",
+						TETJ_REPORT_INFO("Virtual Function[%d][%d] %s (expected) "
+														 "doesn't match %s (found)\n", v,
 														 j, classp->vtable[v].virtfuncs[j], dlinfo.dli_sname);
 					}
 				}
@@ -287,8 +287,8 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 													 "Checking vtable size");
 				if( vtablesize != fndvtabsize )
 				{
-					TETJ_REPORT_INFO("Vtable size %d (expected) doesn't match %d "
-													 "(found) VTSIZE:%s:0:%d\n",
+					TETJ_REPORT_INFO("Vtable[%d] size %d (expected) doesn't match %d "
+													 "(found) VTSIZE:%s:0:%d\n", v,
 													 vtablesize, fndvtabsize,
 													 classp->name,vtablesize);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
