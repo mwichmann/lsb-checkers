@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@metrolink.com)
  *
- * This is $Revision: 1.2 $
+ * This is $Revision: 1.3 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.3  2002/07/17 04:58:30  cyeoh
+ * Adds version tag to journal file
+ *
  * Revision 1.2  2002/07/16 08:31:54  cyeoh
  * Renames journal file to journal.lsbcmdchk
  * Removes /usr/local/bin/ from search path as runtimes shouldn't
@@ -38,7 +41,7 @@ char *binpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) cmdchk_revision = "$Revision: 1.2 $";
+static const char * __attribute((unused)) cmdchk_revision = "$Revision: 1.3 $";
 
 
 void
@@ -97,12 +100,16 @@ extern void check_cmds(struct tetj_handle *journal);
 int main(int argc, char *argv[])
 {
   struct tetj_handle *journal;
+  char tmp_string[TMP_STRING_SIZE+1];
   
   if (tetj_start_journal("journal.lsbcmdchk", &journal, "lsbcmdchk")!=0)
   {
     perror("Could not open journal file");
     exit(1);
   }
+
+  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbcmdchk " LSBCMDCHK_VERSION);
+  tetj_add_config(journal, tmp_string);
 
   check_cmds(journal);
   exit(0);
