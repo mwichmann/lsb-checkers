@@ -11,6 +11,8 @@ appchk: $(OBJS) $(LIB)
 install:
 	install -d $$LSBHOME/src/build/usr/bin
 	install appchk $$LSBHOME/src/build/usr/bin/lsbappchk
+	install -d $$LSBHOME/src/build/usr/share/man/man1
+	install lsbappchk.1 $$LSBHOME/src/build/usr/share/man/man1/lsbappchk.1
 
 clean:
 	rm -f $(OBJS) appchk

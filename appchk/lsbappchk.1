@@ -1,0 +1,34 @@
+.TH lsbappchk "1" "" "lsbappchk (LSB)" LSB
+.SH NAME
+lsbappchk \- check LSB conformance of application
+.SH SYNOPSIS
+.B lsbappchk
+[\f-L \fIpathtolib\fR]... [\fIappname\fR]...
+.SH DESCRIPTION
+.\" Add any additional description here
+.PP
+Measure an application executable's conformance to the Linux Standard
+Base (LSB) specification. The object format of the application is
+checked, as is the list of shared libraries used by the application,
+and the list of functions and global data used by the
+application. Warnings are produced for anything that is used, but not
+contained in the LSB specification.
+.TP
+\fB\-L \fIpathtolib\fR
+Specify libraries which are part of the application.  This option can
+be specified as many times as needed, and will prevent lsbappchk from
+complaining about symbols which are provided in those shared
+libraries.
+.PP
+Lsbappchk cannot detect all conformance problems.  In particular, it
+is a static test and does not actually run the application.  Lsbappchk
+will not find any behaviors which show themselves only at run\-time
+(for example, anything involving the File Hierarchy Standard, or
+constants and other such items which are found in header files).
+.SH "AUTHORS"
+The contributors to the Linux Standard Base.
+.SH "REPORTING BUGS"
+Report bugs to <lsb-test@linuxbase.org>.
+.SH "SEE ALSO"
+Linux Standard Base specification and other documents at
+http://www.linuxbase.org/
