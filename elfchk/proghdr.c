@@ -7,6 +7,7 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
 #include "elfchk.h"
 #include "proghdr.h"
 #include "../tetj/tetj.h"
@@ -58,6 +59,9 @@ return 0;
 int
 checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
+#define TMP_STRING_SIZE (PATH_MAX+60)
+  char tmp_string[TMP_STRING_SIZE+1];
+	
   tetj_tp_count++;
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
@@ -70,10 +74,13 @@ checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     return 1;
   }
 
+  snprintf(tmp_string, TMP_STRING_SIZE, "Incorrect program interpreter: %s", 
+          file->addr+hdr->p_offset);
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+										 0, 0, 0, tmp_string);
+	fprintf(stderr, "%s\n", tmp_string);
   tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-  fprintf(stderr,"Incorrect program interpreter: %s\n", 
-          file->addr+hdr->p_offset);
   return -1;
 }
 

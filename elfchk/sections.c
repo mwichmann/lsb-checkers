@@ -385,6 +385,8 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
   	snprintf(tmp_string, TMP_STRING_SIZE, "section %s is not in the LSB",
            ElfGetString(file1, hdr1->sh_name));
   	fprintf(stderr, "%s\n", tmp_string);
+		tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+											 0, 0, 0, tmp_string);
   	tetj_result(journal, tetj_activity_count, tetj_tp_count,
               	TETJ_FAIL);
   	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
@@ -393,9 +395,11 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
            ElfGetString(file1, hdr1->sh_name));
 	if( elfchk_debug&DEBUG_SECTION_HEADERS )
   		fprintf(stderr, "%s\n", tmp_string);
-  	tetj_result(journal, tetj_activity_count, tetj_tp_count,
-              	TETJ_WARNING);
-  	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+										 0, 0, 0, tmp_string);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count,
+							TETJ_WARNING);
+	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   }
   return;
 }

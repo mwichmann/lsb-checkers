@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.31 $
+ * This is $Revision: 1.32 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.32  2003/10/31 00:05:15  cyeoh
+ * Adds error message logging to journal file
+ *
  * Revision 1.31  2003/10/28 21:38:25  mats
  * printf format fixes
  *
@@ -137,7 +140,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.31 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.32 $";
 
 /* Some debugging bits which are useful to maintainers,
  * but probably not others
@@ -407,11 +410,17 @@ check_lib(char *libname, struct versym entries[], struct classinfo classes[], st
     else
     {
       /* Failed to match */
+			snprintf(tmp_string, TMP_STRING_SIZE, "Didn't find %s (%s) in %s",
+							 entries[i].name,
+							 strlen(entries[i].vername)>0 ? entries[i].vername : 
+							   "(unversioned)",
+							 libname);
+			printf("%s\n", tmp_string);
+			tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+												 0, 0, 0, tmp_string);
+
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-      printf("  Didn't find %s ", entries[i].name);
-      if (strlen(entries[i].vername)>0) printf("(%s)", entries[i].vername);
-      else printf("(unversioned)");
-      printf(" in %s\n", libname);
+
       check_symbol(file, entries+i, 1);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
