@@ -9,7 +9,8 @@ sub mklibsyms($$)
 {
 local($libname,$lid)=@_;
 
-$select = "SELECT DISTINCT Iname FROM Interface,Library,LibGroup,LGInt ";
+$select = "SELECT DISTINCT Iname,Vname FROM Interface,LibGroup,LGInt ";
+$select.= "LEFT JOIN Version ON Vid=Iversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
 $select.= "AND LibGroup.LGlib=$lid ";
@@ -20,12 +21,13 @@ $select.= "ORDER BY Iname ";
 $lsth = $Dbh->query($select) || die $Dbh->errmsg();
 
 open(LIB,">$libname.c");
-print LIB "char *".$libname."[] = {\n";
+print LIB "#include \"elfchk.h\"\n";
+print LIB "struct versym ".$libname."[] = {\n";
 for(1..$lsth->numrows) {
 	%entry=$lsth->fetchhash;
-	printf LIB "\t\"%s\",\n",$entry{'Iname'};
+	printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
 }
-print LIB "\t0,};\n";
+print LIB "\t{0,0}};\n";
 close(LIB);
 }
 
