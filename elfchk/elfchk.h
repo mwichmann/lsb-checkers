@@ -55,10 +55,15 @@ struct base_type_info {
 	unsigned long	offset_flags;
 	};
 
+typedef enum {
+	__non_diamond_repeat_mask = 0x1,
+	__diamond_shaped_mask = 0x2
+	} vmi_flags;
+
 struct vmi_classtypeinfo_mem {
 	void	*basevtable;
 	char	*name;
-	unsigned int	flags;
+	vmi_flags	flags;
 	unsigned int	base_count;
 	struct base_type_info_mem base_info[0];
 	};
