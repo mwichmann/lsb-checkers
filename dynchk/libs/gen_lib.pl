@@ -166,7 +166,7 @@ my $get_param_typeid_q = $dbh->prepare(
 	or die "Couldn't prepare get_param_typeid query: " . DBI->errstr;
 
 my $write_int_wrapper_q = $dbh->prepare(
-'SELECT Ppos, Pint FROM Parameter WHERE Pint = ? ORDER BY Ppos')
+'SELECT Ppos, Pint, Pnull FROM Parameter WHERE Pint = ? ORDER BY Ppos')
 	or die "Couldn't prepare write_int_wrapper query: " . DBI->errstr;
 
 my $write_int_header_q = $dbh->prepare(
@@ -428,7 +428,7 @@ sub write_int_wrapper
 	
 	$write_int_wrapper_q->execute($func_id)
 		or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
-	VALCALL: while( my($param_pos, $param_int) = $write_int_wrapper_q->fetchrow_array() )
+	VALCALL: while( my($param_pos, $param_int, $param_null) = $write_int_wrapper_q->fetchrow_array() )
 	{
 		$get_param_typeid_q->execute($param_pos, $param_int)
 			or die "Couldn't execute get_param_typeid query: " . DBI->errstr;
@@ -439,7 +439,13 @@ sub write_int_wrapper
 		unless($is_lsb)
 		{
 			my($typetype, $dereference) = get_param_typetype($param_pos, $param_int);
+			if( $param_null eq 'Y' ) {
+				print $fh "\tif( arg$i ) {\n";
+			}
 			write_addy_checker($fh, $typeid, "arg$i", "", $func_name);
+			if( $param_null eq 'Y' ) {
+				print $fh "\t}\n";
+			}
 
 			print $fh "\tvalidate_$typetype( $dereference arg$i, \"$func_name\");\n";
 		}
