@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.13 $
+ * This is $Revision: 1.14 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.14  2002/05/08 21:57:04  kingdon
+ * Include stdlib.h (for exit()).
+ *
  * Revision 1.13  2002/04/29 04:39:06  cyeoh
  * Adds support for 'IC Start' and 'IC End' markers in
  * the journal file
@@ -47,6 +50,7 @@
 #include <stdio.h>
 #include <libgen.h>
 #include <string.h>
+#include <stdlib.h>
 #include <sys/stat.h>
 #include "elfchk.h"
 #include "hdr.h"
@@ -62,7 +66,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.13 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.14 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
