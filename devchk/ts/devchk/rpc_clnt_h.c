@@ -198,10 +198,8 @@ CheckOffset(struct rpc_err,ru,4,2,32102)
 CheckTypeSize(struct rpc_err,24, 9917, 3)
 CheckOffset(struct rpc_err,ru,8,3,32102)
 #elif __s390__
-CheckTypeSize(struct rpc_err,0, 9917, 10)
-Msg("Missing member data for rpc_err on S390\n");
-CheckOffset(struct rpc_err,re_status,0,10,32093)
-CheckOffset(struct rpc_err,ru,0,10,32102)
+CheckTypeSize(struct rpc_err,12, 9917, 10)
+CheckOffset(struct rpc_err,ru,4,10,32102)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9917,0);
 Msg("Find size of rpc_err (9917)\n");

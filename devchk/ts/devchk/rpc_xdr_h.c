@@ -64,7 +64,7 @@ CheckTypeSize(XDR,24, 10412, 2)
 #elif __ia64__
 CheckTypeSize(XDR,48, 10412, 3)
 #elif __s390__
-CheckTypeSize(XDR,0, 10412, 10)
+CheckTypeSize(XDR,24, 10412, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10412,0);
 Msg("Find size of XDR (10412)\n");
@@ -75,7 +75,7 @@ CheckTypeSize(xdrproc_t,4, 9948, 2)
 #elif __ia64__
 CheckTypeSize(xdrproc_t,8, 9948, 3)
 #elif __s390__
-CheckTypeSize(xdrproc_t,0, 9948, 10)
+CheckTypeSize(xdrproc_t,4, 9948, 10)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9948,0);
 Msg("Find size of xdrproc_t (9948)\n");

@@ -32,11 +32,9 @@ CheckTypeSize(struct accepted_reply,48, 10417, 3)
 CheckOffset(struct accepted_reply,ar_verf,0,3,34800)
 CheckOffset(struct accepted_reply,ar_stat,24,3,34801)
 #elif __s390__
-CheckTypeSize(struct accepted_reply,0, 10417, 10)
-Msg("Missing member data for accepted_reply on S390\n");
-CheckOffset(struct accepted_reply,ar_verf,0,10,34800)
-CheckOffset(struct accepted_reply,ar_stat,0,10,34801)
-CheckOffset(struct accepted_reply,ru,0,10,34830)
+CheckTypeSize(struct accepted_reply,24, 10417, 10)
+CheckOffset(struct accepted_reply,ar_stat,12,10,34801)
+CheckOffset(struct accepted_reply,ru,16,10,34830)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10417,0);
 Msg("Find size of accepted_reply (10417)\n");
@@ -91,10 +89,8 @@ CheckTypeSize(struct rejected_reply,24, 10423, 3)
 CheckOffset(struct rejected_reply,rj_stat,0,3,34812)
 CheckOffset(struct rejected_reply,ru,8,3,34813)
 #elif __s390__
-CheckTypeSize(struct rejected_reply,0, 10423, 10)
-Msg("Missing member data for rejected_reply on S390\n");
-CheckOffset(struct rejected_reply,rj_stat,0,10,34812)
-CheckOffset(struct rejected_reply,ru,0,10,34813)
+CheckTypeSize(struct rejected_reply,12, 10423, 10)
+CheckOffset(struct rejected_reply,ru,4,10,34813)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
@@ -117,10 +113,8 @@ CheckTypeSize(struct reply_body,56, 10425, 3)
 CheckOffset(struct reply_body,rp_stat,0,3,34816)
 CheckOffset(struct reply_body,ru,8,3,34817)
 #elif __s390__
-CheckTypeSize(struct reply_body,0, 10425, 10)
-Msg("Missing member data for reply_body on S390\n");
-CheckOffset(struct reply_body,rp_stat,0,10,34816)
-CheckOffset(struct reply_body,ru,0,10,34817)
+CheckTypeSize(struct reply_body,28, 10425, 10)
+CheckOffset(struct reply_body,ru,4,10,34817)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10425,0);
 Msg("Find size of reply_body (10425)\n");
@@ -142,14 +136,12 @@ CheckOffset(struct call_body,cb_proc,24,3,34821)
 CheckOffset(struct call_body,cb_cred,32,3,34822)
 CheckOffset(struct call_body,cb_verf,56,3,34823)
 #elif __s390__
-CheckTypeSize(struct call_body,0, 10426, 10)
-Msg("Missing member data for call_body on S390\n");
-CheckOffset(struct call_body,cb_rpcvers,0,10,34818)
-CheckOffset(struct call_body,cb_prog,0,10,34819)
-CheckOffset(struct call_body,cb_vers,0,10,34820)
-CheckOffset(struct call_body,cb_proc,0,10,34821)
-CheckOffset(struct call_body,cb_cred,0,10,34822)
-CheckOffset(struct call_body,cb_verf,0,10,34823)
+CheckTypeSize(struct call_body,40, 10426, 10)
+CheckOffset(struct call_body,cb_prog,4,10,34819)
+CheckOffset(struct call_body,cb_vers,8,10,34820)
+CheckOffset(struct call_body,cb_proc,12,10,34821)
+CheckOffset(struct call_body,cb_cred,16,10,34822)
+CheckOffset(struct call_body,cb_verf,28,10,34823)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10426,0);
 Msg("Find size of call_body (10426)\n");
@@ -166,14 +158,12 @@ CheckOffset(struct rpc_msg,rm_xid,0,3,34826)
 CheckOffset(struct rpc_msg,rm_direction,8,3,34827)
 CheckOffset(struct rpc_msg,ru,16,3,34828)
 #elif __s390__
-CheckTypeSize(struct rpc_msg,0, 9984, 10)
-Msg("Missing member data for rpc_msg on S390\n");
-CheckOffset(struct rpc_msg,rm_xid,0,10,34826)
-CheckOffset(struct rpc_msg,rm_direction,0,10,34827)
-CheckOffset(struct rpc_msg,ru,0,10,34828)
+CheckTypeSize(struct rpc_msg,48, 9984, 10)
+CheckOffset(struct rpc_msg,rm_direction,4,10,34827)
+CheckOffset(struct rpc_msg,ru,8,10,34828)
 #endif
 
-#ifdef __no_sym__
+#ifdef __s390__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9985,0);
 Msg("Find size of rpc_msg * (9985)\n");
