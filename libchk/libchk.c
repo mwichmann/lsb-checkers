@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.10 $
+ * This is $Revision: 1.11 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.11  2002/03/20 06:50:47  cyeoh
+ * adds more reporting to journal
+ *
  * Revision 1.10  2002/03/20 04:37:38  cyeoh
  * Adds tet journal reporting
  * General cleanup
@@ -50,7 +53,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.10 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.11 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -205,7 +208,7 @@ check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
   tetj_testcase_start(journal, tetj_activity_count, libname, "");
   tetj_tp_count = 0;
 
-  checkElfhdr(file, 0);
+  checkElfhdr(file, 0, journal);
 
   printf("Checking symbols in %s\n", filename );
 

@@ -65,7 +65,7 @@ ElfFile * check_file(char *filename, struct tetj_handle *journal,
     return NULL;
   }
 
-  checkElf(elffile, isProgram);
+  checkElf(elffile, isProgram, journal);
   if (elffile->symhdr==NULL)
   {
     strncpy(tmp_string, 
