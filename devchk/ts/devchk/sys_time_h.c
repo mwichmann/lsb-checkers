@@ -120,23 +120,6 @@ Msg("Find size of itimerval (9861)\n");
 #endif
 
 #if __x86_64__
-CheckTypeSize(struct timeval32,8, 10946, 11)
-CheckMemberSize(struct timeval32,tv_sec,4,11,40739)
-CheckOffset(struct timeval32,tv_sec,0,11,40739)
-CheckMemberSize(struct timeval32,tv_usec,4,11,40740)
-CheckOffset(struct timeval32,tv_usec,4,11,40740)
-#endif
-
-#if __ia64__
-CheckTypeSize(__time32_t,4, 10932, 3)
-#endif
-
-#if __powerpc64__
-CheckTypeSize(__time32_t,4, 10941, 9)
-#endif
-
-#if __x86_64__
-CheckTypeSize(__time32_t,4, 10942, 11)
 #endif
 
 #if __i386__
@@ -206,19 +189,9 @@ Msg("Find size of timeval (9858)\n");
 #endif
 
 #if __ia64__
-CheckTypeSize(struct timeval32,8, 10934, 3)
-CheckMemberSize(struct timeval32,tv_sec,4,3,40671)
-CheckOffset(struct timeval32,tv_sec,0,3,40671)
-CheckMemberSize(struct timeval32,tv_usec,4,3,40672)
-CheckOffset(struct timeval32,tv_usec,4,3,40672)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(struct timeval32,8, 10943, 9)
-CheckMemberSize(struct timeval32,tv_sec,4,9,40741)
-CheckOffset(struct timeval32,tv_sec,0,9,40741)
-CheckMemberSize(struct timeval32,tv_usec,4,9,40742)
-CheckOffset(struct timeval32,tv_usec,4,9,40742)
 #endif
 
 #ifdef TET_TEST

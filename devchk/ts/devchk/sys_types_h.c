@@ -478,18 +478,6 @@ CheckTypeSize(int64_t,8, 10871, 6)
 CheckTypeSize(int64_t,8, 10872, 10)
 #endif
 
-#if __ia64__
-CheckTypeSize(__suseconds32_t,4, 10933, 3)
-#endif
-
-#if __powerpc64__
-CheckTypeSize(__suseconds32_t,4, 10944, 9)
-#endif
-
-#if __x86_64__
-CheckTypeSize(__suseconds32_t,4, 10945, 11)
-#endif
-
 #if __i386__
 CheckTypeSize(ssize_t,4, 9029, 2)
 #endif
