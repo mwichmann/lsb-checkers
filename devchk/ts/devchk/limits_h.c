@@ -214,7 +214,7 @@ cnt++;
 #else
 Msg( "No definition for ULONG_MAX (18, long) in db\n");
 #ifdef ULONG_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%s);\n", architecture, ULONG_MAX);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,18,%ld);\n", architecture, ULONG_MAX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
