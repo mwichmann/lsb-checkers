@@ -60,3 +60,5 @@
 		HDRCHKTEST_PASS \
 	} \
 }
+
+extern int architecture;
