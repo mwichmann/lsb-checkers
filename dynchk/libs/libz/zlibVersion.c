@@ -5,13 +5,13 @@
 #include <dlfcn.h>
 #include <zlib.h>
 #undef zlibVersion
-static char *(*funcptr) () = 0;
+static const char *(*funcptr) () = 0;
 
 extern int __lsb_check_params;
-char * zlibVersion ()
+const char * zlibVersion ()
 {
 	int reset_flag = __lsb_check_params;
-	char * ret_value  ;
+	const char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "zlibVersion");
 	if(__lsb_check_params)
