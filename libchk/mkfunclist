@@ -1,0 +1,69 @@
+#!/usr/bin/perl
+
+use CGI;
+use Mysql;
+
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+sub mklibsyms($$)
+{
+local($libname,$lid)=@_;
+
+$select = "SELECT DISTINCT Iname FROM Interface,Library,LibGroup,LGInt ";
+$select.= "WHERE Interface.Iid=LGInt.LGIint ";
+$select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
+$select.= "AND LibGroup.LGlib=$lid ";
+$select.= "ORDER BY Iname ";
+
+#print $select;
+
+$lsth = $Dbh->query($select) || die $Dbh->errmsg();
+
+open(LIB,">$libname.c");
+print LIB "char *".$libname."[] = {\n";
+for(1..$lsth->numrows) {
+	%entry=$lsth->fetchhash;
+	printf LIB "\t\"%s\",\n",$entry{'Iname'};
+}
+print LIB "\t0,};\n";
+close(LIB);
+}
+
+
+$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+
+open(LIBS,">libs.c");
+print LIBS "/* Generated file */\n";
+print LIBS "#include \"libs.h\"\n\n";
+print LIBS "check_libs()\n{\n";
+
+open(LIBSH,">libs.h");
+print LIBSH "/* Generated file */\n";
+
+open(MAKE,">libs.mk");
+print MAKE "# Generated file #\n";
+print MAKE "LIBOBJS = \\\n";
+
+$select = "SELECT DISTINCT Lid,Lrunname FROM Library ";
+$select.= "WHERE Library.Lstd='Yes' ";
+$select.= "ORDER BY Lrunname ";
+
+#print $select;
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	$libname=$entry{'Lrunname'};
+	$libname =~ s/\./_/g;
+	$libname =~ s/-/_/g;
+	print LIBS "check_lib(\"".$entry{'Lrunname'}."\",$libname);\n";
+	print LIBSH "extern char *".$libname."[];\n";
+	print MAKE "\t$libname.o \\\n";
+	mklibsyms($libname,$entry{'Lid'});
+}
+
+print LIBS "}\n";
+close(LIBS);
+close(LIBH);
+close(MAKE);
