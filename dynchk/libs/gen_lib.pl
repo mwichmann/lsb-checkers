@@ -1,5 +1,15 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl -w 
+ 
+#Author: Matt Elder
 
+#I should refactor this.  Better design: For each interface, all the
+#relevant data gets read once into some sane interface object, and
+#*then* that object's data is written to file.  This renders redundant
+#data checks obsolete, and makes the whole thing much easier to read.
+#For example, I can pass just one data reference to functions, rather
+#than pass multiple (randomly sorted, randomly named) arguments.
+
+#something fishy with get_type_info_q: some queries are returning nulls.
 use strict;
 use DBI;
 use Getopt::Std;
@@ -21,7 +31,7 @@ my($be_quiet) = 0;
 ##############################
 
 my (%options);
-my($interface_WHERE_add); my($interface_FROM_add);
+my($int_WHERE_add); my($int_FROM_add);
 
 getopts('hwqd:u:p:o:l:g:a:i:', \%options);
 
@@ -82,37 +92,37 @@ if($arch_number == 8 or $arch_number < 2 or $arch_number > 12)
 ### Parse Lib and LibGroup options - turn comma-list into query conditions.
 if (exists($options{'l'}) && exists($options{'g'}))
 {
-	$interface_FROM_add = ", LGInt, LibGroup\n";
-	$interface_WHERE_add = "\nAND LGIint = Iid\nAND LGIlibg = LGid\n";
-	$interface_WHERE_add .= 'AND (Lname = "'
+	$int_FROM_add = ", LGInt, LibGroup\n";
+	$int_WHERE_add = "\nAND LGIint = Iid\nAND LGIlibg = LGid\n";
+	$int_WHERE_add .= 'AND (Lname = "'
 		. join( '" OR Lname = "', split(/,/, $options{'l'}) ) . '"'
 		. ' OR LGname = "' . join( '" OR LGname = "', split(/,/, $options{'g'}) ) . '")' . "\n";
 }
 elsif (exists($options{'l'}))
 {
-	$interface_FROM_add = "\n";
-	$interface_WHERE_add = "\n" . 'AND (Lname = "'
+	$int_FROM_add = "\n";
+	$int_WHERE_add = "\n" . 'AND (Lname = "'
 		. join( '" OR Lname = "', split(/,/, $options{'l'}) ) . "\")\n ";
 
 }
 elsif(exists($options{'g'}))
 {
-	$interface_FROM_add = ", LGInt, LibGroup\n";
-	$interface_WHERE_add = "\nAND LGIint = Iid\nAND LGIlibg = LGid\n";
-	$interface_WHERE_add .= 'AND ( LGname = "'
+	$int_FROM_add = ", LGInt, LibGroup\n";
+	$int_WHERE_add = "\nAND LGIint = Iid\nAND LGIlibg = LGid\n";
+	$int_WHERE_add .= 'AND ( LGname = "'
 		. join( '" OR LGname = "', split(/,/, $options{'g'}) ) . '")' . "\n";
 }
 else
 {
-	$interface_FROM_add = "\n";
-	$interface_WHERE_add = "\n";
+	$int_FROM_add = "\n";
+	$int_WHERE_add = "\n";
 }
 
 if(exists($options{'i'} ) )
 {
 	if(exists($options{'l'}) or exists($options{'g'}))
 	{	die "Don't use -i with -l or -g.  See $0 -h\n"; }
-	$interface_WHERE_add .= 'AND ( Iname ="'
+	$int_WHERE_add .= 'AND ( Iname ="'
 		.join('"OR Iname = "', split(/,/, $options{'i'}) ) . '")' . "\n";
 }
 
@@ -124,20 +134,30 @@ if(exists($options{'i'} ) )
 my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
 	or die "Couldn't connect to database: " . DBI->errstr;
 
-my $interface_q = $dbh->prepare(
-'SELECT Iid, Iname, Lname, Ireturn
-FROM Interface, Header, Library' . $interface_FROM_add .
-'WHERE Itype = "Function"
+my $int_q = $dbh->prepare(
+'SELECT Iid, Ireturn, Asymbol
+FROM Interface, Architecture
+WHERE Iname = ?
+  AND Aid = Iarch 
+GROUP BY Iid ORDER BY Iarch'
+) or die "Couldn't prepare int query: " . DBI ->errstr;
+
+my $int_name_q = $dbh->prepare(
+'SELECT Iname, Lname
+FROM Interface, Header, Library' . $int_FROM_add .
+'WHERE Itype = "Function" 
    AND Istatus = "Included"
    AND Iheader = Hid
-   AND Hlib = Lid
-   AND (Iarch = 1 OR IArch = '.$arch_number.') ' . $interface_WHERE_add .
-"GROUP BY Iid" ## This removes duplicate entries.
-) or die "Couldn't prepare interface query: " . DBI ->errstr;
+   AND Hlib = Lid'
+  . $int_WHERE_add .
+'Group by Iname'
+) or die "Couldn't prepare int_name query: ".DBI->errstr;
+
 my $has_ellipsis_q = $dbh->prepare(
 'SELECT Tname
-FROM Parameter, Type
-WHERE Pint = ?
+FROM Parameter, Type, Interface
+WHERE Iname = ?
+  AND Pint = Iid
   AND Ptype = Tid
 ORDER BY Ppos'
 ) or die "Couldn't prepare has_ellipsis query: " . DBI->errstr;
@@ -240,10 +260,10 @@ sub contains # ($first_arg, $other_args ... )
 }
 
 # true if 'interface' has a parameter with ellipses
-sub has_ellipsis # ($func_id)               
+sub has_ellipsis # ($func_name)               
 {
-	my($func_id) = @_;
-	$has_ellipsis_q->execute($func_id);
+	my($func_name) = @_;
+	$has_ellipsis_q->execute($func_name);
 	while ( my($type) = $has_ellipsis_q->fetchrow_array() )
 	{
 		return 1 if($type) eq "...";
@@ -266,6 +286,9 @@ sub get_type_string($$$)
 		or die "Couldn't execute type_info query: " . DBI->errstr;
 	my ($name, $form, $basetype) = $get_type_info_q->fetchrow_array();
 	$get_type_info_q->finish();
+
+	print "empties on Type $type_id; Param number $param_pos in Interface $param_int\n"
+		unless($name ne "" and $form ne "" and $basetype ne "");
 
 	$name =~ s/fptr-//;
 
@@ -565,7 +588,7 @@ sub write_argument_list # ($fh, $func_id, $add_arg)
 			print $fh ", " unless($i == 0);
 			print $fh $l_type;
 			print $fh " arg" . $i if ($add_arg);
-			print $fh $r_type;
+			print $fh $r_type if($r_type);
 			$i ++;
 		}
 	}
@@ -584,6 +607,22 @@ sub write_int_declaration
 	print $fh ")\n";
 }
 
+sub write_arch_macro
+{
+    my($fh, $arch_name) = @_;
+    if($arch_name =~ /^(\w+)\s*&&.*!\s*(\w+)/) 
+	#If the architecture name _actually_ specifies that one token
+	#is declared and a second isn't ( <word> && !<word> ), then...
+    {
+	print $fh "defined($1) && !defined($2)";
+    }
+    else
+	#The architecture name is just a normal name
+    {
+	print $fh "defined($arch_name)";
+    }
+}
+    
 # add 'interface' to the gen.mk file in the correct library's directory
 my(@libs_seen);
 sub add_to_gen_mk # ($func_name, $lib_name)
@@ -594,19 +633,20 @@ sub add_to_gen_mk # ($func_name, $lib_name)
 	{
 		$libs_seen[@libs_seen] = $func_lib;
 		$gen_fh = IO::Handle->new();
-		open($gen_fh, "> " . $func_lib . "/gen.mk" );
+		open($gen_fh, "> " . $func_lib . "/gen.mk" )
+			or die "Can't open $func_lib/gen.mk: $!";
 		print $gen_fh "GEN_FUNCS = \\\n";
 		print $gen_fh $func_name . ".o ";
 		close $gen_fh;
 	}
 	else
 	{
-		open($gen_fh, ">> " . $func_lib . "/gen.mk");
+		open($gen_fh, ">> " . $func_lib . "/gen.mk")
+			or die "Can't open $func_lib/gen.mk: $!";
 		print $gen_fh "\\\n".$func_name.".o ";
 		close $gen_fh;
 	}
 }
-
 ##############################
 # Main section
 ##############################
@@ -619,11 +659,11 @@ open($ell_file, ">ellipsis_funcs")
 my $lsb_h_file = IO::Handle->new();
 open($lsb_h_file, ">all_lsb_funcs.h")
 	or die "Can't open the output file all_lsb_funcs.h: $!";
-my $interface_file = IO::Handle->new();
+my $int_file = IO::Handle->new();
 
 # Write .c files for interface wrappers
 my $progress = 1;
-$interface_q->execute or die "Couldn't execute interface query: " . DBI->errstr;
+$int_name_q->execute or die "Couldn't execute interface query: " . DBI->errstr;
 
 $| = 1;
 
@@ -632,10 +672,11 @@ open(DNG_FILE, "hand_coded")
 	or die "Can't open input file hand_coded: $!";
 my @do_not_generate = <DNG_FILE>;
 close DNG_FILE;
-FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fetchrow_array())
+
+FUNC: while(my ($func_name, $func_lib) = $int_name_q->fetchrow_array())
 {
 	# Skip interface if it has an ellipsis type - it must be hand-coded.
-	if(has_ellipsis($func_id))
+	if(has_ellipsis($func_name))
 	{
 		print $ell_file $func_name . "\n";
 		next FUNC;
@@ -644,31 +685,45 @@ FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fet
 	{
 		next FUNC;
 	}
-	my ($left_type_string, $right_type_string) = get_type_string($func_type, -1, 0);
-	
 	# Add interface to correct gen.mk file
 	add_to_gen_mk($func_name, $func_lib) if($generate_gen_file);
-
-	# Add interface to the __lsb_* function header
-	write_int_declaration($lsb_h_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
-
 	# Create interface's .c file
-	open($interface_file, ">" . $func_lib . "/" . $func_name . '.c')
-		or die "Can't open output: $!";
+	open($int_file, ">" . $func_lib . "/" . $func_name . '.c')
+	    or die "Can't open output: $!";
 
-	# Write interface's .c file
-	write_int_header($interface_file, $left_type_string, $right_type_string, $func_name, $func_id);
-	write_int_declaration($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
-	write_int_wrapper($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
-	#write_int_declaration($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
-	#write_int_wrapper($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
+	$int_q->execute($func_name) or die "Can't execute int query: ".DBI->errstr;
+	while(my ($func_id, $func_type, $func_arch) = $int_q->fetchrow_array())
+	{
+	    my ($left_type_string, $right_type_string) = get_type_string($func_type, -1, 0);
+	    
+	    # Add interface to the __lsb_* function header
+	    write_int_declaration($lsb_h_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
+	    
+	    # Open conditional architecture magic
+	    unless($func_arch eq "1")
+	    {
+		print $int_file "#if "; write_arch_macro($int_file, $func_arch); print $int_file "\n";
+	    }
+		    
+	    # Write interface's .c file
+	    write_int_header($int_file, $left_type_string, $right_type_string, $func_name, $func_id);
+	    write_int_declaration($int_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
+	    write_int_wrapper($int_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
+
+	    unless($func_arch eq "1")
+	    {
+		print $int_file "#endif /*"; write_arch_macro($int_file, $func_arch); print $int_file "*/\n";
+	    }
+	    
+	}
 	
-	close($interface_file);
-
 	$progress ++;
-	
+	    
 	unless($be_quiet)
-	{	print "." if ($progress % 50 == 0); }
+	{  print "." if ($progress % 50 == 0); }
+
+	close($int_file);
+
 }
 	
 close($ell_file);
