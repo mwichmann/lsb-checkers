@@ -1294,6 +1294,9 @@ struct versym libc_so_6_1[] = {
 	{"atol","GLIBC_2.0"},
 #endif
 #if __i386__
+	{"atoll","GLIBC_2.0"},
+#endif
+#if __i386__
 	{"authnone_create","GLIBC_2.0"},
 #endif
 #if __ia64__
@@ -10753,6 +10756,9 @@ struct versym libc_so_6_1[] = {
 	{"vfprintf","GLIBC_2.0"},
 #endif
 #if __i386__
+	{"vfscanf","GLIBC_2.0"},
+#endif
+#if __i386__
 	{"vfwprintf","GLIBC_2.2"},
 #endif
 #if __ia64__
@@ -10798,6 +10804,9 @@ struct versym libc_so_6_1[] = {
 	{"vprintf","GLIBC_2.0"},
 #endif
 #if __i386__
+	{"vscanf","GLIBC_2.0"},
+#endif
+#if __i386__
 	{"vsnprintf","GLIBC_2.0"},
 #endif
 #if __ia64__
@@ -10826,6 +10835,9 @@ struct versym libc_so_6_1[] = {
 #endif
 #if __s390__
 	{"vsprintf","GLIBC_2.0"},
+#endif
+#if __i386__
+	{"vsscanf","GLIBC_2.0"},
 #endif
 #if __i386__
 	{"vswprintf","GLIBC_2.2"},

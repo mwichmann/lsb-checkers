@@ -434,6 +434,7 @@ struct versym libGL_so_1[] = {
 	{"glXGetCurrentDrawable",""},
 	{"glXGetCurrentReadDrawable",""},
 	{"glXGetFBConfigAttrib",""},
+	{"glXGetProcAddressARB",""},
 	{"glXGetSelectedEvent",""},
 	{"glXGetVisualFromFBConfig",""},
 	{"glXImportContextEXT",""},

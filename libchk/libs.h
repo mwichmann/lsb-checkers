@@ -4,9 +4,6 @@
 #if __ia64__
 extern struct versym ld_lsb_ia64_so_1[];
 #endif
-#if __powerpc64__
-extern struct versym ld_lsb_ppc64_so_1[];
-#endif
 #if __s390__
 extern struct versym ld_lsb_s390_so_1[];
 #endif
@@ -18,6 +15,9 @@ extern struct versym ld_lsb_so_1[];
 #endif
 #if __powerpc__ && !__powerpc64__
 extern struct versym ld_lsb_so_1[];
+#endif
+#if __powerpc64__
+extern struct versym ld_lsb_ppc64_so_1[];
 #endif
 #if __i386__
 extern struct versym libc_so_6[];
