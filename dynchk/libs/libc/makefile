@@ -1,5 +1,9 @@
-FUNCS= \
-close.o fprintf.o ioctl.o mmap.o open.o open64.o printf.o read.o write.o
+HAND_FUNCS= \
+fprintf.o ioctl.o open.o open64.o printf.o 
+
+include gen.mk
+
+FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
 CFLAGS=-I../../tests -fPIC -Wall 
 
