@@ -7,6 +7,7 @@ LIBOBJS = \
 	libc_so_6_1.o \
 	libcrypt_so_1.o \
 	libdl_so_2.o \
+	libgcc_s_so_1.o \
 	libGL_so_1.o \
 	libICE_so_6.o \
 	libm_so_6.o \
