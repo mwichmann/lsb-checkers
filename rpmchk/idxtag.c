@@ -8,9 +8,24 @@
  * This table contains entries for the Signature tags.
  */
 RpmIdxTagFuncRec	SigTags[] = {
+	{HDRTAG_IMAGE,	"HDRTAG_IMAGE",		checkRpmIdxHDRIMAGE},
+	{HDRTAG_SIGNATURES, "HDRTAG_SIGNATURES", checkRpmIdxHDRSIGNATURES},
+	{HDRTAG_IMMUTABLE, "HDRTAG_IMMUTABLE",	checkRpmIdxHDRIMMUTABLE},
+	{HDRTAG_REGIONS, "HDRTAG_REGIONS",	checkRpmIdxHDRREGIONS},
+	{HDRTAG_I18NTABLE, "HDRTAG_I18NTABLE",	checkRpmIdxHDRI18NTABLE},
+	{HDRTAG_SIGBASE, "HDRTAG_SIGBASE",	checkRpmIdxHDRSIGBASE},
+	{HDRTAG_TAGBASE, "HDRTAG_TAGBASE",	checkRpmIdxHDRTAGBASE},
 	{SIGTAG_SIZE,	"SIGTAG_SIZE",		checkRpmIdxSIGSIZE},
+	{SIGOLDTAG_SIZE,	"SIGTAG_SIZE",		checkRpmIdxSIGSIZE},
+	{SIGTAG_LEMD5_1,"SIGTAG_LEMD5_1",	checkRpmIdxUNKNOWN},
+	{SIGTAG_PGP,	"SIGTAG_PGP",		checkRpmIdxSIGPGP},
+	{SIGOLDTAG_PGP,	"SIGTAG_PGP",		checkRpmIdxSIGPGP},
+	{SIGTAG_LEMD5_2,"SIGTAG_LEMD5_2",	checkRpmIdxUNKNOWN},
 	{SIGTAG_MD5,	"SIGTAG_MD5",		checkRpmIdxSIGMD5},
-	{SIGTAG_PGP,	"SIGTAG_PGP",		checkRpmIdxSIGPGP}
+	{SIGOLDTAG_GPG,	"SIGTAG_GPG",		checkRpmIdxSIGGPG},
+	{SIGOLDTAG_PGP5, "SIGTAG_PGP5",		checkRpmIdxSIGPGP5},
+	{SIGOLDTAG_SHA1HEADER, "SIGTAG_SHA1HEADER", checkRpmIdxSIGSHA1HEADER},
+	{SIGOLDTAG_MD5,	"SIGTAG_MD5",		checkRpmIdxSIGMD5},
 	};
 
 int numSigIdxTags = sizeof(SigTags)/sizeof(RpmIdxTagFuncRec);
@@ -19,32 +34,39 @@ int numSigIdxTags = sizeof(SigTags)/sizeof(RpmIdxTagFuncRec);
  * This table contains entries for the normal RPM tags.
  */
 RpmIdxTagFuncRec	HdrTags[] = {
+	{HDRTAG_IMAGE,	"HDRTAG_IMAGE",		checkRpmIdxHDRIMAGE},
+	{HDRTAG_SIGNATURES, "HDRTAG_SIGNATURES", checkRpmIdxHDRSIGNATURES},
+	{HDRTAG_IMMUTABLE, "HDRTAG_IMMUTABLE",	checkRpmIdxHDRIMMUTABLE},
+	{HDRTAG_REGIONS, "HDRTAG_REGIONS",	checkRpmIdxHDRREGIONS},
+	{HDRTAG_I18NTABLE, "HDRTAG_I18NTABLE",	checkRpmIdxHDRI18NTABLE},
+	{HDRTAG_SIGBASE, "HDRTAG_SIGBASE",	checkRpmIdxHDRSIGBASE},
+	{HDRTAG_TAGBASE, "HDRTAG_TAGBASE",	checkRpmIdxHDRTAGBASE},
 	{RPMTAG_NAME,	"RPMTAG_NAME",		checkRpmIdxNAME},
 	{RPMTAG_VERSION, "RPMTAG_VERSION",	checkRpmIdxVERSION},
 	{RPMTAG_RELEASE, "RPMTAG_RELEASE",	checkRpmIdxRELEASE},
 	{RPMTAG_SERIAL,	"RPMTAG_SERIAL",	checkRpmIdxSERIAL},
 	{RPMTAG_SUMMARY, "RPMTAG_SUMMARY",	checkRpmIdxSUMMARY},
-	{RPMTAG_DESCRIPTION, "RPMTAG_DESCRIPTION",	checkRpmIdxUNKNOWN},
+	{RPMTAG_DESCRIPTION, "RPMTAG_DESCRIPTION",	checkRpmIdxDESCRIPTION},
 	{RPMTAG_BUILDTIME, "RPMTAG_BUILDTIME",	checkRpmIdxUNKNOWN},
 	{RPMTAG_BUILDHOST, "RPMTAG_BUILDHOST",	checkRpmIdxUNKNOWN},
 	{RPMTAG_INSTALLTIME, "RPMTAG_INSTALLTIME",	checkRpmIdxUNKNOWN},
-	{RPMTAG_SIZE, "RPMTAG_SIZE",	checkRpmIdxUNKNOWN},
+	{RPMTAG_SIZE,	"RPMTAG_SIZE",		checkRpmIdxUNKNOWN},
 	{RPMTAG_DISTRIBUTION, "RPMTAG_DISTRIBUTION",	checkRpmIdxUNKNOWN},
 	{RPMTAG_VENDOR, "RPMTAG_VENDOR",	checkRpmIdxUNKNOWN},
-	{RPMTAG_GIF, "RPMTAG_GIF",	checkRpmIdxUNKNOWN},
-	{RPMTAG_XPM, "RPMTAG_XPM",	checkRpmIdxUNKNOWN},
+	{RPMTAG_GIF,	"RPMTAG_GIF",		checkRpmIdxUNKNOWN},
+	{RPMTAG_XPM,	"RPMTAG_XPM",		checkRpmIdxUNKNOWN},
 	{RPMTAG_LICENSE, "RPMTAG_LICENSE",	checkRpmIdxUNKNOWN},
 	{RPMTAG_PACKAGER, "RPMTAG_PACKAGER",	checkRpmIdxUNKNOWN},
-	{RPMTAG_GROUP, "RPMTAG_GROUP",	checkRpmIdxUNKNOWN},
+	{RPMTAG_GROUP,	"RPMTAG_GROUP",		checkRpmIdxUNKNOWN},
 	{RPMTAG_CHANGELOG, "RPMTAG_CHANGELOG",	checkRpmIdxUNKNOWN},
 	{RPMTAG_SOURCE, "RPMTAG_SOURCE",	checkRpmIdxUNKNOWN},
-	{RPMTAG_PATCH, "RPMTAG_PATCH",	checkRpmIdxUNKNOWN},
-	{RPMTAG_URL, "RPMTAG_URL",	checkRpmIdxUNKNOWN},
-	{RPMTAG_OS, "RPMTAG_OS",	checkRpmIdxOS},
-	{RPMTAG_ARCH, "RPMTAG_ARCH",	checkRpmIdxARCH},
-	{RPMTAG_PREIN, "RPMTAG_PREIN",	checkRpmIdxUNKNOWN},
-	{RPMTAG_POSTIN, "RPMTAG_POSTIN",	checkRpmIdxUNKNOWN},
-	{RPMTAG_PREUN, "RPMTAG_PREUN",	checkRpmIdxUNKNOWN},
+	{RPMTAG_PATCH,	"RPMTAG_PATCH",		checkRpmIdxUNKNOWN},
+	{RPMTAG_URL,	"RPMTAG_URL",		checkRpmIdxUNKNOWN},
+	{RPMTAG_OS,	"RPMTAG_OS",		checkRpmIdxOS},
+	{RPMTAG_ARCH,	"RPMTAG_ARCH",		checkRpmIdxARCH},
+	{RPMTAG_PREIN,	"RPMTAG_PREIN",		checkRpmIdxUNKNOWN},
+	{RPMTAG_POSTIN,	"RPMTAG_POSTIN",	checkRpmIdxUNKNOWN},
+	{RPMTAG_PREUN,	"RPMTAG_PREUN",		checkRpmIdxUNKNOWN},
 	{RPMTAG_POSTUN, "RPMTAG_POSTUN",	checkRpmIdxUNKNOWN},
 	{RPMTAG_OLDFILENAMES, "RPMTAG_OLDFILENAMES",	checkRpmIdxUNKNOWN},
 	{RPMTAG_FILESIZES, "RPMTAG_FILESIZES",	checkRpmIdxUNKNOWN},
@@ -57,12 +79,12 @@ RpmIdxTagFuncRec	HdrTags[] = {
 	{RPMTAG_FILEMD5S, "RPMTAG_FILEMD5S",	checkRpmIdxUNKNOWN},
 	{RPMTAG_FILELINKTOS, "RPMTAG_FILELINKTOS",	checkRpmIdxUNKNOWN},
 	{RPMTAG_FILEFLAGS, "RPMTAG_FILEFLAGS",	checkRpmIdxUNKNOWN},
-	{RPMTAG_ROOT, "RPMTAG_ROOT",	checkRpmIdxUNKNOWN},
+	{RPMTAG_ROOT,	"RPMTAG_ROOT",		checkRpmIdxUNKNOWN},
 	{RPMTAG_FILEUSERNAME, "RPMTAG_FILEUSERNAME",	checkRpmIdxUNKNOWN},
 	{RPMTAG_FILEGROUPNAME, "RPMTAG_FILEGROUPNAME",	checkRpmIdxUNKNOWN},
 	{RPMTAG_EXCLUDE, "RPMTAG_EXCLUDE",	checkRpmIdxUNKNOWN},
 	{RPMTAG_EXCLUSIVE, "RPMTAG_EXCLUSIVE",	checkRpmIdxUNKNOWN},
-	{RPMTAG_ICON, "RPMTAG_ICON",	checkRpmIdxUNKNOWN},
+	{RPMTAG_ICON,	"RPMTAG_ICON",		checkRpmIdxUNKNOWN},
 	{RPMTAG_SOURCRPM, "RPMTAG_SOURCRPM",	checkRpmIdxUNKNOWN},
 	{RPMTAG_FILEVERIFYFLAGS, "RPMTAG_FILEVERIFYFLAGS",	checkRpmIdxUNKNOWN},
 	{RPMTAG_ARCHIVESIZE, "RPMTAG_ARCHIVESIZE",	checkRpmIdxUNKNOWN},
@@ -89,10 +111,10 @@ htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
-fprintf(stderr,"checkRpmIdx() type=%d offset=%x count=%x\n",
-						htype,hoffset,hcount);
+fprintf(stderr,"checkRpmIdx() tag=%d type=%d offset=%x count=%x\n",
+					htag, htype,hoffset,hcount);
 
-for(i=1;i<nindex;i++) {
+for(i=0;i<nindex;i++) {
 	tag=ntohl(hidx[i].tag);
 	for(j=0;j<numtags;j++)
 		if( Tags[j].tag == tag ) {
@@ -102,6 +124,136 @@ for(i=1;i<nindex;i++) {
 	if( j == numtags )
 		checkRpmIdxUNKNOWN(file1, &hidx[i], journal);
 	}
+}
+
+/*
+ * These functions correspond to the header private tag values
+ */
+
+void
+checkRpmIdxHDRIMAGE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxHDRIMAGE() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxHDRSIGNATURES(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxHDRSIGNATURES() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxHDRIMMUTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxHDRIMMUTABLE() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxHDRREGIONS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxHDRREGIONS() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxHDRI18NTABLE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxHDRI18NTABLE() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxHDRSIGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxHDRSIGBASE() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxHDRTAGBASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxHDRTAGBASE() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
 }
 
 /*
@@ -141,6 +293,60 @@ hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 
 fprintf(stderr,"checkRpmIdxSIGMD5() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxSIGGPG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxSIGGPG() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxSIGPGP5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxSIGPGP5() type=%d offset=%x count=%x\n",
+						htype,hoffset,hcount);
+}
+
+void
+checkRpmIdxSIGSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int		htag, htype, hoffset, hcount;
+int		nindex;
+RpmHeader	*hdr;
+
+hdr=(RpmHeader *)file1->nexthdr;
+nindex=ntohl(hdr->nindex);
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+
+fprintf(stderr,"checkRpmIdxSIGSHA1HEADER() type=%d offset=%x count=%x\n",
 						htype,hoffset,hcount);
 }
 
@@ -203,16 +409,23 @@ fprintf(stderr,"checkRpmIdxIMMUTABLE() type=%d offset=%x count=%x\n",
 void
 checkRpmIdxUNKNOWN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-int		htag, htype, hoffset, hcount;
+int	htag, htype, hoffset, hcount;
+char	*data=(char *)hidx;
 
 htag=ntohl(hidx->tag);
 htype=ntohl(hidx->type);
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
-/*
-fprintf(stderr,"checkRpmIdxUNKNOWN() tag=%d type=%d offset=%x count=%x\n",
-						htag,htype,hoffset,hcount);
-*/
+fprintf(stderr,"checkRpmIdxUNKNOWN() tag=%d (%x) type=%d offset=%x count=%x\n",
+					htag,htag,htype,hoffset,hcount);
+fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
+				data[0], data[1], data[2], data[3]);
+fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
+				data[4], data[5], data[6], data[7]);
+fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
+				data[8], data[9], data[10], data[11]);
+fprintf(stderr,"%2.2x %2.2x %2.2x %2.2x\n",
+				data[12], data[13], data[14], data[15]);
 }
 
 void
@@ -285,6 +498,21 @@ hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
 fprintf(stderr,"checkRpmIdxSUMMARY() type=%d offset=%x count=%x %s\n",
+						htype,hoffset,hcount,name);
+}
+
+void
+checkRpmIdxDESCRIPTION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+fprintf(stderr,"checkRpmIdxDESCRIPTION() type=%d offset=%x count=%x %s\n",
 						htype,hoffset,hcount,name);
 }
 

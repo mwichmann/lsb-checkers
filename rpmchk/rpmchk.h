@@ -72,19 +72,35 @@ typedef enum {
  * may be used.
  */
 typedef enum {
-	SIGTAG_SIZE = 1000,
-	SIGTAG_MD5 = 1001,
-	SIGTAG_PGP = 1002
+	HDRTAG_IMAGE	= 61,
+	HDRTAG_SIGNATURES = 62,
+	HDRTAG_IMMUTABLE= 63,
+	HDRTAG_REGIONS	= 64,
+	HDRTAG_I18NTABLE= 100,
+	HDRTAG_SIGBASE	= 256, /* obsolete SIGTAGS start at 1000 now */
+	HDRTAG_TAGBASE	= 1000,
+	} HdrPrivIndexTag;
+
+typedef enum {
+	/* These are the old, obsolete values */
+	SIGOLDTAG_SIZE	= 257,
+	SIGOLDTAG_LEMD5_1	= 258,
+	SIGOLDTAG_PGP	= 259,
+	SIGOLDTAG_LEMD5_2	= 260,
+	SIGOLDTAG_MD5	= 261,
+	SIGOLDTAG_GPG	= 262,
+	SIGOLDTAG_PGP5	= 263,
+	SIGOLDTAG_BADSHA1HEADER	= 264,
+	SIGOLDTAG_SHA1HEADER	= 265,
+	/* These are the current values */
+	SIGTAG_SIZE	= 1000,
+	SIGTAG_LEMD5_1	= 1001,
+	SIGTAG_PGP	= 1002,
+	SIGTAG_LEMD5_2	= 1003,
+	SIGTAG_MD5	= 1004
 	} SigIndexTag;
 
 typedef enum {
-	RPMTAG_IMAGE = 61,
-	RPMTAG_SIGNATURES = 62,
-	RPMTAG_IMMUTABLE = 63,
-	RPMTAG_REGIONS = 64,
-	RPMTAG_I18NTABLE = 100,
-	RPMTAG_SIGBASE	= 256,
-
 	RPMTAG_NAME	= 1000,
 	RPMTAG_VERSION	= 1001,
 	RPMTAG_RELEASE	= 1002,
@@ -213,4 +229,14 @@ extern void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
 
 /* fhs.c */
 extern void checkRpmArchiveFilename(char *filename, struct tetj_handle *journal);
+
+/* archive.c */
+void checkRpmArchive(RpmFile *file1, struct tetj_handle *journal);
+
+/* hdr.c */
+void checkRpmHdr(RpmFile *file1, struct tetj_handle *journal);
+void checkRpmSignature(RpmFile *file1, struct tetj_handle *journal);
+void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
+
+
 #endif /* _RPMCHK_H */
