@@ -3,18 +3,18 @@
 #include "../type_tests.h"
 #include <utmpx.h>
 
-void validate_struct_utmpx(struct utmpx * input)
+void validate_struct_utmpx(struct utmpx  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ut_type);
-	validate_NULL_TYPETYPE(input->ut_pid);
-	validate_NULL_TYPETYPE(input->ut_line);
-	validate_NULL_TYPETYPE(input->ut_id);
-	validate_NULL_TYPETYPE(input->ut_user);
-	validate_NULL_TYPETYPE(input->ut_host);
-	validate_struct_exit_status( &(input->ut_exit) );
-	validate_NULL_TYPETYPE(input->ut_session);
-	validate_struct_timeval( &(input->ut_tv) );
-	validate_NULL_TYPETYPE(input->ut_addr_v6);
-	validate_NULL_TYPETYPE(input->__unused);
+	validate_NULL_TYPETYPE(input->ut_type,name );
+	validate_NULL_TYPETYPE(input->ut_pid,name );
+	validate_NULL_TYPETYPE(input->ut_line,name );
+	validate_NULL_TYPETYPE(input->ut_id,name );
+	validate_NULL_TYPETYPE(input->ut_user,name );
+	validate_NULL_TYPETYPE(input->ut_host,name );
+	validate_struct_exit_status( &(input->ut_exit),name );
+	validate_NULL_TYPETYPE(input->ut_session,name );
+	validate_struct_timeval( &(input->ut_tv),name );
+	validate_NULL_TYPETYPE(input->ut_addr_v6,name );
+	validate_NULL_TYPETYPE(input->__unused,name );
 }
 

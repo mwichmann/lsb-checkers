@@ -3,10 +3,10 @@
 #include "../type_tests.h"
 #include <rpc/auth.h>
 
-void validate_struct_opaque_auth(struct opaque_auth * input)
+void validate_struct_opaque_auth(struct opaque_auth  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->oa_flavor);
-	validate_NULL_TYPETYPE(input->oa_base);
-	validate_NULL_TYPETYPE(input->oa_length);
+	validate_NULL_TYPETYPE(input->oa_flavor,name );
+	validate_NULL_TYPETYPE(input->oa_base,name );
+	validate_NULL_TYPETYPE(input->oa_length,name );
 }
 

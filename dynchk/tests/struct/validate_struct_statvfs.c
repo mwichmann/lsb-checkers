@@ -3,20 +3,20 @@
 #include "../type_tests.h"
 #include <sys/statvfs.h>
 
-void validate_struct_statvfs(struct statvfs * input)
+void validate_struct_statvfs(struct statvfs  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->f_bsize);
-	validate_NULL_TYPETYPE(input->f_frsize);
-	validate_NULL_TYPETYPE(input->f_blocks);
-	validate_NULL_TYPETYPE(input->f_bfree);
-	validate_NULL_TYPETYPE(input->f_bavail);
-	validate_NULL_TYPETYPE(input->f_files);
-	validate_NULL_TYPETYPE(input->f_ffree);
-	validate_NULL_TYPETYPE(input->f_favail);
-	validate_NULL_TYPETYPE(input->f_fsid);
-	validate_NULL_TYPETYPE(input->__f_unused);
-	validate_NULL_TYPETYPE(input->f_flag);
-	validate_NULL_TYPETYPE(input->f_namemax);
-	validate_NULL_TYPETYPE(input->__f_spare);
+	validate_NULL_TYPETYPE(input->f_bsize,name );
+	validate_NULL_TYPETYPE(input->f_frsize,name );
+	validate_NULL_TYPETYPE(input->f_blocks,name );
+	validate_NULL_TYPETYPE(input->f_bfree,name );
+	validate_NULL_TYPETYPE(input->f_bavail,name );
+	validate_NULL_TYPETYPE(input->f_files,name );
+	validate_NULL_TYPETYPE(input->f_ffree,name );
+	validate_NULL_TYPETYPE(input->f_favail,name );
+	validate_NULL_TYPETYPE(input->f_fsid,name );
+	validate_NULL_TYPETYPE(input->__f_unused,name );
+	validate_NULL_TYPETYPE(input->f_flag,name );
+	validate_NULL_TYPETYPE(input->f_namemax,name );
+	validate_NULL_TYPETYPE(input->__f_spare,name );
 }
 

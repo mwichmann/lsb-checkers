@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <security/pam_appl.h>
 
-void validate_struct_pam_conv(struct pam_conv * input)
+void validate_struct_pam_conv(struct pam_conv  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->conv);
-	validate_NULL_TYPETYPE(input->appdata_ptr);
+	validate_NULL_TYPETYPE(input->conv,name );
+	validate_NULL_TYPETYPE(input->appdata_ptr,name );
 }
 

@@ -3,12 +3,12 @@
 #include "../type_tests.h"
 #include <fcntl.h>
 
-void validate_struct_flock64(struct flock64 * input)
+void validate_struct_flock64(struct flock64  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->l_type);
-	validate_NULL_TYPETYPE(input->l_whence);
-	validate_NULL_TYPETYPE(input->l_start);
-	validate_NULL_TYPETYPE(input->l_len);
-	validate_NULL_TYPETYPE(input->l_pid);
+	validate_NULL_TYPETYPE(input->l_type,name );
+	validate_NULL_TYPETYPE(input->l_whence,name );
+	validate_NULL_TYPETYPE(input->l_start,name );
+	validate_NULL_TYPETYPE(input->l_len,name );
+	validate_NULL_TYPETYPE(input->l_pid,name );
 }
 

@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <signal.h>
 
-void validate_struct_sigstack(struct sigstack * input)
+void validate_struct_sigstack(struct sigstack  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ss_sp);
-	validate_NULL_TYPETYPE(input->ss_onstack);
+	validate_NULL_TYPETYPE(input->ss_sp,name );
+	validate_NULL_TYPETYPE(input->ss_onstack,name );
 }
 

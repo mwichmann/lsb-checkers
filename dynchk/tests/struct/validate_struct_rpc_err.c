@@ -3,14 +3,14 @@
 #include "../type_tests.h"
 #include <rpc/clnt.h>
 
-void validate_struct_rpc_err(struct rpc_err * input)
+void validate_struct_rpc_err(struct rpc_err  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->re_status);
-	validate_NULL_TYPETYPE(input->ru.RE_errno);
-	validate_NULL_TYPETYPE(input->ru.RE_why);
-	validate_NULL_TYPETYPE(input->ru.RE_vers.low);
-	validate_NULL_TYPETYPE(input->ru.RE_vers.high);
-	validate_NULL_TYPETYPE(input->ru.RE_lb.s1);
-	validate_NULL_TYPETYPE(input->ru.RE_lb.s2);
+	validate_NULL_TYPETYPE(input->re_status,name );
+	validate_NULL_TYPETYPE(input->ru.RE_errno,name );
+	validate_NULL_TYPETYPE(input->ru.RE_why,name );
+	validate_NULL_TYPETYPE(input->ru.RE_vers.low,name );
+	validate_NULL_TYPETYPE(input->ru.RE_vers.high,name );
+	validate_NULL_TYPETYPE(input->ru.RE_lb.s1,name );
+	validate_NULL_TYPETYPE(input->ru.RE_lb.s2,name );
 }
 

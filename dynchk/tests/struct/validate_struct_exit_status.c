@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <utmp.h>
 
-void validate_struct_exit_status(struct exit_status * input)
+void validate_struct_exit_status(struct exit_status  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->e_termination);
-	validate_NULL_TYPETYPE(input->e_exit);
+	validate_NULL_TYPETYPE(input->e_termination,name );
+	validate_NULL_TYPETYPE(input->e_exit,name );
 }
 

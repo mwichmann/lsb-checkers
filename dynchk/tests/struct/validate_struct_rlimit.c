@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <sys/resource.h>
 
-void validate_struct_rlimit(struct rlimit * input)
+void validate_struct_rlimit(struct rlimit  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->rlim_cur);
-	validate_NULL_TYPETYPE(input->rlim_max);
+	validate_NULL_TYPETYPE(input->rlim_cur,name );
+	validate_NULL_TYPETYPE(input->rlim_max,name );
 }
 

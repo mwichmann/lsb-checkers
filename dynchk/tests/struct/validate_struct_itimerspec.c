@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <time.h>
 
-void validate_struct_itimerspec(struct itimerspec * input)
+void validate_struct_itimerspec(struct itimerspec  * input, char *name)
 {
-	validate_struct_timespec( &(input->it_interval) );
-	validate_struct_timespec( &(input->it_value) );
+	validate_struct_timespec( &(input->it_interval),name );
+	validate_struct_timespec( &(input->it_value),name );
 }
 

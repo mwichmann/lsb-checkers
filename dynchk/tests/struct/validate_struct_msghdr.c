@@ -3,14 +3,14 @@
 #include "../type_tests.h"
 #include <sys/socket.h>
 
-void validate_struct_msghdr(struct msghdr * input)
+void validate_struct_msghdr(struct msghdr  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->msg_name);
-	validate_NULL_TYPETYPE(input->msg_namelen);
-	validate_struct_iovec(input->msg_iov);
-	validate_NULL_TYPETYPE(input->msg_iovlen);
-	validate_NULL_TYPETYPE(input->msg_control);
-	validate_NULL_TYPETYPE(input->msg_controllen);
-	validate_NULL_TYPETYPE(input->msg_flags);
+	validate_NULL_TYPETYPE(input->msg_name,name );
+	validate_NULL_TYPETYPE(input->msg_namelen,name );
+	validate_struct_iovec(input->msg_iov,name );
+	validate_NULL_TYPETYPE(input->msg_iovlen,name );
+	validate_NULL_TYPETYPE(input->msg_control,name );
+	validate_NULL_TYPETYPE(input->msg_controllen,name );
+	validate_NULL_TYPETYPE(input->msg_flags,name );
 }
 

@@ -3,13 +3,13 @@
 #include "../type_tests.h"
 #include <curses.h>
 
-void validate_struct_pdat(struct pdat * input)
+void validate_struct_pdat(struct pdat  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->_pad_y);
-	validate_NULL_TYPETYPE(input->_pad_x);
-	validate_NULL_TYPETYPE(input->_pad_top);
-	validate_NULL_TYPETYPE(input->_pad_left);
-	validate_NULL_TYPETYPE(input->_pad_bottom);
-	validate_NULL_TYPETYPE(input->_pad_right);
+	validate_NULL_TYPETYPE(input->_pad_y,name );
+	validate_NULL_TYPETYPE(input->_pad_x,name );
+	validate_NULL_TYPETYPE(input->_pad_top,name );
+	validate_NULL_TYPETYPE(input->_pad_left,name );
+	validate_NULL_TYPETYPE(input->_pad_bottom,name );
+	validate_NULL_TYPETYPE(input->_pad_right,name );
 }
 

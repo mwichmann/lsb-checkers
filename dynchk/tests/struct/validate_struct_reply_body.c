@@ -3,10 +3,10 @@
 #include "../type_tests.h"
 #include <rpc/rpc_msg.h>
 
-void validate_struct_reply_body(struct reply_body * input)
+void validate_struct_reply_body(struct reply_body  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->rp_stat);
-	validate_struct_accepted_reply( &(input->ru.RP_ar) );
-	validate_struct_rejected_reply( &(input->ru.RP_dr) );
+	validate_NULL_TYPETYPE(input->rp_stat,name );
+	validate_struct_accepted_reply( &(input->ru.RP_ar),name );
+	validate_struct_rejected_reply( &(input->ru.RP_dr),name );
 }
 

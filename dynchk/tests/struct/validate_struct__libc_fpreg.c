@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <ucontext.h>
 
-void validate_struct__libc_fpreg(struct _libc_fpreg * input)
+void validate_struct__libc_fpreg(struct _libc_fpreg  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->significand);
-	validate_NULL_TYPETYPE(input->exponent);
+	validate_NULL_TYPETYPE(input->significand,name );
+	validate_NULL_TYPETYPE(input->exponent,name );
 }
 

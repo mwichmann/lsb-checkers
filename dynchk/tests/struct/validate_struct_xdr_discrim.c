@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <rpc/xdr.h>
 
-void validate_struct_xdr_discrim(struct xdr_discrim * input)
+void validate_struct_xdr_discrim(struct xdr_discrim  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->value);
-	validate_NULL_TYPETYPE(input->proc);
+	validate_NULL_TYPETYPE(input->value,name );
+	validate_NULL_TYPETYPE(input->proc,name );
 }
 

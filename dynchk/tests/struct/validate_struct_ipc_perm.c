@@ -3,18 +3,18 @@
 #include "../type_tests.h"
 #include <sys/ipc.h>
 
-void validate_struct_ipc_perm(struct ipc_perm * input)
+void validate_struct_ipc_perm(struct ipc_perm  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->__key);
-	validate_NULL_TYPETYPE(input->uid);
-	validate_NULL_TYPETYPE(input->gid);
-	validate_NULL_TYPETYPE(input->cuid);
-	validate_NULL_TYPETYPE(input->cgid);
-	validate_NULL_TYPETYPE(input->mode);
-	validate_NULL_TYPETYPE(input->__pad1);
-	validate_NULL_TYPETYPE(input->__seq);
-	validate_NULL_TYPETYPE(input->__pad2);
-	validate_NULL_TYPETYPE(input->__unused1);
-	validate_NULL_TYPETYPE(input->__unused2);
+	validate_NULL_TYPETYPE(input->__key,name );
+	validate_NULL_TYPETYPE(input->uid,name );
+	validate_NULL_TYPETYPE(input->gid,name );
+	validate_NULL_TYPETYPE(input->cuid,name );
+	validate_NULL_TYPETYPE(input->cgid,name );
+	validate_NULL_TYPETYPE(input->mode,name );
+	validate_NULL_TYPETYPE(input->__pad1,name );
+	validate_NULL_TYPETYPE(input->__seq,name );
+	validate_NULL_TYPETYPE(input->__pad2,name );
+	validate_NULL_TYPETYPE(input->__unused1,name );
+	validate_NULL_TYPETYPE(input->__unused2,name );
 }
 

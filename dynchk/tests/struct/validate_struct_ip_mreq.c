@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <netinet/in.h>
 
-void validate_struct_ip_mreq(struct ip_mreq * input)
+void validate_struct_ip_mreq(struct ip_mreq  * input, char *name)
 {
-	validate_struct_in_addr( &(input->imr_multiaddr) );
-	validate_struct_in_addr( &(input->imr_interface) );
+	validate_struct_in_addr( &(input->imr_multiaddr),name );
+	validate_struct_in_addr( &(input->imr_interface),name );
 }
 

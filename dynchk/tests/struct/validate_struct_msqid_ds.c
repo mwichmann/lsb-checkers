@@ -3,21 +3,21 @@
 #include "../type_tests.h"
 #include <sys/msg.h>
 
-void validate_struct_msqid_ds(struct msqid_ds * input)
+void validate_struct_msqid_ds(struct msqid_ds  * input, char *name)
 {
-	validate_struct_ipc_perm( &(input->msg_perm) );
-	validate_NULL_TYPETYPE(input->msg_stime);
-	validate_NULL_TYPETYPE(input->__unused1);
-	validate_NULL_TYPETYPE(input->msg_rtime);
-	validate_NULL_TYPETYPE(input->__unused2);
-	validate_NULL_TYPETYPE(input->msg_ctime);
-	validate_NULL_TYPETYPE(input->__unused3);
-	validate_NULL_TYPETYPE(input->__msg_cbytes);
-	validate_NULL_TYPETYPE(input->msg_qnum);
-	validate_NULL_TYPETYPE(input->msg_qbytes);
-	validate_NULL_TYPETYPE(input->msg_lspid);
-	validate_NULL_TYPETYPE(input->msg_lrpid);
-	validate_NULL_TYPETYPE(input->__unused4);
-	validate_NULL_TYPETYPE(input->__unused5);
+	validate_struct_ipc_perm( &(input->msg_perm),name );
+	validate_NULL_TYPETYPE(input->msg_stime,name );
+	validate_NULL_TYPETYPE(input->__unused1,name );
+	validate_NULL_TYPETYPE(input->msg_rtime,name );
+	validate_NULL_TYPETYPE(input->__unused2,name );
+	validate_NULL_TYPETYPE(input->msg_ctime,name );
+	validate_NULL_TYPETYPE(input->__unused3,name );
+	validate_NULL_TYPETYPE(input->__msg_cbytes,name );
+	validate_NULL_TYPETYPE(input->msg_qnum,name );
+	validate_NULL_TYPETYPE(input->msg_qbytes,name );
+	validate_NULL_TYPETYPE(input->msg_lspid,name );
+	validate_NULL_TYPETYPE(input->msg_lrpid,name );
+	validate_NULL_TYPETYPE(input->__unused4,name );
+	validate_NULL_TYPETYPE(input->__unused5,name );
 }
 

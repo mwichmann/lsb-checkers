@@ -3,23 +3,23 @@
 #include "../type_tests.h"
 #include <sys/resource.h>
 
-void validate_struct_rusage(struct rusage * input)
+void validate_struct_rusage(struct rusage  * input, char *name)
 {
-	validate_struct_timeval( &(input->ru_utime) );
-	validate_struct_timeval( &(input->ru_stime) );
-	validate_NULL_TYPETYPE(input->ru_maxrss);
-	validate_NULL_TYPETYPE(input->ru_ixrss);
-	validate_NULL_TYPETYPE(input->ru_idrss);
-	validate_NULL_TYPETYPE(input->ru_isrss);
-	validate_NULL_TYPETYPE(input->ru_minflt);
-	validate_NULL_TYPETYPE(input->ru_majflt);
-	validate_NULL_TYPETYPE(input->ru_nswap);
-	validate_NULL_TYPETYPE(input->ru_inblock);
-	validate_NULL_TYPETYPE(input->ru_oublock);
-	validate_NULL_TYPETYPE(input->ru_msgsnd);
-	validate_NULL_TYPETYPE(input->ru_msgrcv);
-	validate_NULL_TYPETYPE(input->ru_nsignals);
-	validate_NULL_TYPETYPE(input->ru_nvcsw);
-	validate_NULL_TYPETYPE(input->ru_nivcsw);
+	validate_struct_timeval( &(input->ru_utime),name );
+	validate_struct_timeval( &(input->ru_stime),name );
+	validate_NULL_TYPETYPE(input->ru_maxrss,name );
+	validate_NULL_TYPETYPE(input->ru_ixrss,name );
+	validate_NULL_TYPETYPE(input->ru_idrss,name );
+	validate_NULL_TYPETYPE(input->ru_isrss,name );
+	validate_NULL_TYPETYPE(input->ru_minflt,name );
+	validate_NULL_TYPETYPE(input->ru_majflt,name );
+	validate_NULL_TYPETYPE(input->ru_nswap,name );
+	validate_NULL_TYPETYPE(input->ru_inblock,name );
+	validate_NULL_TYPETYPE(input->ru_oublock,name );
+	validate_NULL_TYPETYPE(input->ru_msgsnd,name );
+	validate_NULL_TYPETYPE(input->ru_msgrcv,name );
+	validate_NULL_TYPETYPE(input->ru_nsignals,name );
+	validate_NULL_TYPETYPE(input->ru_nvcsw,name );
+	validate_NULL_TYPETYPE(input->ru_nivcsw,name );
 }
 

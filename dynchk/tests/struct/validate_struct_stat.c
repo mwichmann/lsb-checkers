@@ -3,24 +3,24 @@
 #include "../type_tests.h"
 #include <sys/stat.h>
 
-void validate_struct_stat(struct stat * input)
+void validate_struct_stat(struct stat  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->st_dev);
-	validate_NULL_TYPETYPE(input->__pad1);
-	validate_NULL_TYPETYPE(input->st_ino);
-	validate_NULL_TYPETYPE(input->st_mode);
-	validate_NULL_TYPETYPE(input->st_nlink);
-	validate_NULL_TYPETYPE(input->st_uid);
-	validate_NULL_TYPETYPE(input->st_gid);
-	validate_NULL_TYPETYPE(input->st_rdev);
-	validate_NULL_TYPETYPE(input->__pad2);
-	validate_NULL_TYPETYPE(input->st_size);
-	validate_NULL_TYPETYPE(input->st_blksize);
-	validate_NULL_TYPETYPE(input->st_blocks);
-	validate_struct_timespec( &(input->st_atim) );
-	validate_struct_timespec( &(input->st_mtim) );
-	validate_struct_timespec( &(input->st_ctim) );
-	validate_NULL_TYPETYPE(input->__unused4);
-	validate_NULL_TYPETYPE(input->__unused5);
+	validate_NULL_TYPETYPE(input->st_dev,name );
+	validate_NULL_TYPETYPE(input->__pad1,name );
+	validate_NULL_TYPETYPE(input->st_ino,name );
+	validate_NULL_TYPETYPE(input->st_mode,name );
+	validate_NULL_TYPETYPE(input->st_nlink,name );
+	validate_NULL_TYPETYPE(input->st_uid,name );
+	validate_NULL_TYPETYPE(input->st_gid,name );
+	validate_NULL_TYPETYPE(input->st_rdev,name );
+	validate_NULL_TYPETYPE(input->__pad2,name );
+	validate_NULL_TYPETYPE(input->st_size,name );
+	validate_NULL_TYPETYPE(input->st_blksize,name );
+	validate_NULL_TYPETYPE(input->st_blocks,name );
+	validate_struct_timespec( &(input->st_atim),name );
+	validate_struct_timespec( &(input->st_mtim),name );
+	validate_struct_timespec( &(input->st_ctim),name );
+	validate_NULL_TYPETYPE(input->__unused4,name );
+	validate_NULL_TYPETYPE(input->__unused5,name );
 }
 

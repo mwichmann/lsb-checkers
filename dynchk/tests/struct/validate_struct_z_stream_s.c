@@ -3,21 +3,21 @@
 #include "../type_tests.h"
 #include <zlib.h>
 
-void validate_struct_z_stream_s(struct z_stream_s * input)
+void validate_struct_z_stream_s(struct z_stream_s  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->next_in);
-	validate_NULL_TYPETYPE(input->avail_in);
-	validate_NULL_TYPETYPE(input->total_in);
-	validate_NULL_TYPETYPE(input->next_out);
-	validate_NULL_TYPETYPE(input->avail_out);
-	validate_NULL_TYPETYPE(input->total_out);
-	validate_NULL_TYPETYPE(input->msg);
-	validate_struct_internal_state(input->state);
-	validate_NULL_TYPETYPE(input->zalloc);
-	validate_NULL_TYPETYPE(input->zfree);
-	validate_NULL_TYPETYPE(input->opaque);
-	validate_NULL_TYPETYPE(input->data_type);
-	validate_NULL_TYPETYPE(input->adler);
-	validate_NULL_TYPETYPE(input->reserved);
+	validate_NULL_TYPETYPE(input->next_in,name );
+	validate_NULL_TYPETYPE(input->avail_in,name );
+	validate_NULL_TYPETYPE(input->total_in,name );
+	validate_NULL_TYPETYPE(input->next_out,name );
+	validate_NULL_TYPETYPE(input->avail_out,name );
+	validate_NULL_TYPETYPE(input->total_out,name );
+	validate_NULL_TYPETYPE(input->msg,name );
+	validate_struct_internal_state(input->state,name );
+	validate_NULL_TYPETYPE(input->zalloc,name );
+	validate_NULL_TYPETYPE(input->zfree,name );
+	validate_NULL_TYPETYPE(input->opaque,name );
+	validate_NULL_TYPETYPE(input->data_type,name );
+	validate_NULL_TYPETYPE(input->adler,name );
+	validate_NULL_TYPETYPE(input->reserved,name );
 }
 

@@ -3,13 +3,13 @@
 #include "../type_tests.h"
 #include <rpc/svc.h>
 
-void validate_struct_xp_ops(struct xp_ops * input)
+void validate_struct_xp_ops(struct xp_ops  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->xp_recv);
-	validate_NULL_TYPETYPE(input->xp_stat);
-	validate_NULL_TYPETYPE(input->xp_getargs);
-	validate_NULL_TYPETYPE(input->xp_reply);
-	validate_NULL_TYPETYPE(input->xp_freeargs);
-	validate_NULL_TYPETYPE(input->xp_destroy);
+	validate_NULL_TYPETYPE(input->xp_recv,name );
+	validate_NULL_TYPETYPE(input->xp_stat,name );
+	validate_NULL_TYPETYPE(input->xp_getargs,name );
+	validate_NULL_TYPETYPE(input->xp_reply,name );
+	validate_NULL_TYPETYPE(input->xp_freeargs,name );
+	validate_NULL_TYPETYPE(input->xp_destroy,name );
 }
 

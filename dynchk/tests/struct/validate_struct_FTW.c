@@ -3,9 +3,9 @@
 #include "../type_tests.h"
 #include <ftw.h>
 
-void validate_struct_FTW(struct FTW * input)
+void validate_struct_FTW(struct FTW  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->base);
-	validate_NULL_TYPETYPE(input->level);
+	validate_NULL_TYPETYPE(input->base,name );
+	validate_NULL_TYPETYPE(input->level,name );
 }
 

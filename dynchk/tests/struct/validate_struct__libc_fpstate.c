@@ -3,16 +3,16 @@
 #include "../type_tests.h"
 #include <ucontext.h>
 
-void validate_struct__libc_fpstate(struct _libc_fpstate * input)
+void validate_struct__libc_fpstate(struct _libc_fpstate  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->cw);
-	validate_NULL_TYPETYPE(input->sw);
-	validate_NULL_TYPETYPE(input->tag);
-	validate_NULL_TYPETYPE(input->ipoff);
-	validate_NULL_TYPETYPE(input->cssel);
-	validate_NULL_TYPETYPE(input->dataoff);
-	validate_NULL_TYPETYPE(input->datasel);
-	validate_NULL_TYPETYPE(input->_st);
-	validate_NULL_TYPETYPE(input->status);
+	validate_NULL_TYPETYPE(input->cw,name );
+	validate_NULL_TYPETYPE(input->sw,name );
+	validate_NULL_TYPETYPE(input->tag,name );
+	validate_NULL_TYPETYPE(input->ipoff,name );
+	validate_NULL_TYPETYPE(input->cssel,name );
+	validate_NULL_TYPETYPE(input->dataoff,name );
+	validate_NULL_TYPETYPE(input->datasel,name );
+	validate_NULL_TYPETYPE(input->_st,name );
+	validate_NULL_TYPETYPE(input->status,name );
 }
 

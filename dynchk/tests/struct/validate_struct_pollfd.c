@@ -3,10 +3,10 @@
 #include "../type_tests.h"
 #include <sys/poll.h>
 
-void validate_struct_pollfd(struct pollfd * input)
+void validate_struct_pollfd(struct pollfd  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->fd);
-	validate_NULL_TYPETYPE(input->events);
-	validate_NULL_TYPETYPE(input->revents);
+	validate_NULL_TYPETYPE(input->fd,name );
+	validate_NULL_TYPETYPE(input->events,name );
+	validate_NULL_TYPETYPE(input->revents,name );
 }
 

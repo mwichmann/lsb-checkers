@@ -3,14 +3,14 @@
 #include "../type_tests.h"
 #include <pthread.h>
 
-void validate_struct__pthread_rwlock_t(struct _pthread_rwlock_t * input)
+void validate_struct__pthread_rwlock_t(struct _pthread_rwlock_t  * input, char *name)
 {
-	validate_struct__pthread_fastlock( &(input->__rw_lock) );
-	validate_NULL_TYPETYPE(input->__rw_readers);
-	validate_NULL_TYPETYPE(input->__rw_writer);
-	validate_NULL_TYPETYPE(input->__rw_read_waiting);
-	validate_NULL_TYPETYPE(input->__rw_write_waiting);
-	validate_NULL_TYPETYPE(input->__rw_kind);
-	validate_NULL_TYPETYPE(input->__rw_pshared);
+	validate_struct__pthread_fastlock( &(input->__rw_lock),name );
+	validate_NULL_TYPETYPE(input->__rw_readers,name );
+	validate_NULL_TYPETYPE(input->__rw_writer,name );
+	validate_NULL_TYPETYPE(input->__rw_read_waiting,name );
+	validate_NULL_TYPETYPE(input->__rw_write_waiting,name );
+	validate_NULL_TYPETYPE(input->__rw_kind,name );
+	validate_NULL_TYPETYPE(input->__rw_pshared,name );
 }
 

@@ -3,12 +3,12 @@
 #include "../type_tests.h"
 #include <signal.h>
 
-void validate_struct_sigaction(struct sigaction * input)
+void validate_struct_sigaction(struct sigaction  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->__sigaction_handler._sa_handler);
-	validate_NULL_TYPETYPE(input->__sigaction_handler._sa_sigaction);
-	validate_NULL_TYPETYPE(input->sa_mask);
-	validate_NULL_TYPETYPE(input->sa_flags);
-	validate_NULL_TYPETYPE(input->sa_restorer);
+	validate_NULL_TYPETYPE(input->__sigaction_handler._sa_handler,name );
+	validate_NULL_TYPETYPE(input->__sigaction_handler._sa_sigaction,name );
+	validate_NULL_TYPETYPE(input->sa_mask,name );
+	validate_NULL_TYPETYPE(input->sa_flags,name );
+	validate_NULL_TYPETYPE(input->sa_restorer,name );
 }
 

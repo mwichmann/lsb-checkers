@@ -3,14 +3,14 @@
 #include "../type_tests.h"
 #include <stdlib.h>
 
-void validate_struct_random_data(struct random_data * input)
+void validate_struct_random_data(struct random_data  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->fptr);
-	validate_NULL_TYPETYPE(input->rptr);
-	validate_NULL_TYPETYPE(input->state);
-	validate_NULL_TYPETYPE(input->rand_type);
-	validate_NULL_TYPETYPE(input->rand_deg);
-	validate_NULL_TYPETYPE(input->rand_sep);
-	validate_NULL_TYPETYPE(input->end_ptr);
+	validate_NULL_TYPETYPE(input->fptr,name );
+	validate_NULL_TYPETYPE(input->rptr,name );
+	validate_NULL_TYPETYPE(input->state,name );
+	validate_NULL_TYPETYPE(input->rand_type,name );
+	validate_NULL_TYPETYPE(input->rand_deg,name );
+	validate_NULL_TYPETYPE(input->rand_sep,name );
+	validate_NULL_TYPETYPE(input->end_ptr,name );
 }
 

@@ -3,10 +3,10 @@
 #include "../type_tests.h"
 #include <utmp.h>
 
-void validate_struct_lastlog(struct lastlog * input)
+void validate_struct_lastlog(struct lastlog  * input, char *name)
 {
-	validate_NULL_TYPETYPE(input->ll_time);
-	validate_NULL_TYPETYPE(input->ll_line);
-	validate_NULL_TYPETYPE(input->ll_host);
+	validate_NULL_TYPETYPE(input->ll_time,name );
+	validate_NULL_TYPETYPE(input->ll_line,name );
+	validate_NULL_TYPETYPE(input->ll_host,name );
 }
 
