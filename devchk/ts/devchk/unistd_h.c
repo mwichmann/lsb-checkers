@@ -234,16 +234,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _XOPEN_REALTIME
-	CompareConstant(_XOPEN_REALTIME,1,4752,architecture)
-#else
-Msg( "Error: Constant not found: _XOPEN_REALTIME\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef _PC_ASYNC_IO
 	CompareConstant(_PC_ASYNC_IO,10,4753,architecture)
 #else
