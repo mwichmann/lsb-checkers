@@ -8,7 +8,7 @@ LIB=libelfchk.a
 all: $(LIB) test
 
 $(LIB): $(OBJS)
-	rm $(LIB);ar clq $(LIB) $(OBJS)
+	rm -f $(LIB);ar clq $(LIB) $(OBJS)
 
 test: test.c $(LIB)
 	cc -o test $(CFLAGS) test.c $(LIB)
