@@ -695,7 +695,7 @@ filemd5s=(char *)(file1->storeaddr+hoffset);
 name=filemd5s;
 for(i=0;i<hcount;i++) {
 	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
-		fprintf(stderr,"File MD5: %s\n",name);
+		fprintf(stderr,"File MD5[%3.3d]: %s\n",i,name);
 	name+=strlen(name)+1;
 	}
 }
@@ -712,7 +712,7 @@ filelinktos=(char *)(file1->storeaddr+hoffset);
 name=filelinktos;
 for(i=0;i<hcount;i++) {
 	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
-		fprintf(stderr,"File linkto: %s\n",name);
+		fprintf(stderr,"File linkto[%3.3d]: %s\n", i, name);
 	name+=strlen(name)+1;
 	}
 }
@@ -1153,6 +1153,7 @@ int	hoffset, hcount, i;
 
 hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
+numdirindicies=hcount;
 dirindicies=(int *)(file1->storeaddr+hoffset);
 hasNewFilenames++;
 for(i=0;i<hcount;i++) {
@@ -1176,7 +1177,7 @@ hasNewFilenames++;
 for(i=0;i<hcount;i++) {
 	basenames[i]=name;
 	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
-		fprintf(stderr,"Basename: %s\n", name );
+		fprintf(stderr,"Basename[%3.3d]: %s\n", i, name );
 	name+=strlen(name)+1;
 	}
 }

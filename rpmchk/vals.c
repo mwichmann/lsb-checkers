@@ -49,6 +49,7 @@ uint32_t	*dirindicies;
 char	**basenames;
 char	**dirnames;
 int	numdirnames;
+int	numdirindicies;
 
 int	hasPayloadFilesHavePrefix=0;
 int	hasCompressedFileNames=0;
