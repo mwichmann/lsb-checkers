@@ -16149,10 +16149,10 @@ struct versym DynSyms[] = {
 	{"_setjmp","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"_sys_errlist","GLIBC_2.1",0,"LSB-Core"},
+	{"_sys_errlist","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"_sys_errlist","GLIBC_2.2",0,"LSB-Core"},
+	{"_sys_errlist","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_sys_errlist","GLIBC_2.1",0,"LSB-Core"},
@@ -16164,16 +16164,16 @@ struct versym DynSyms[] = {
 	{"_sys_errlist","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"_sys_errlist","GLIBC_2.2.5",0,"LSB-Core"},
+	{"_sys_errlist","GLIBC_2.3",0,"LSB-Core"},
 #endif
 #if __s390x__
 	{"_sys_errlist","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"_sys_siglist","GLIBC_2.1",0,"LSB-Core"},
+	{"_sys_siglist","GLIBC_2.3.3",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"_sys_siglist","GLIBC_2.2",0,"LSB-Core"},
+	{"_sys_siglist","GLIBC_2.3.3",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_sys_siglist","GLIBC_2.1",0,"LSB-Core"},
@@ -16185,7 +16185,7 @@ struct versym DynSyms[] = {
 	{"_sys_siglist","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"_sys_siglist","GLIBC_2.2.5",0,"LSB-Core"},
+	{"_sys_siglist","GLIBC_2.3.3",0,"LSB-Core"},
 #endif
 #if __s390x__
 	{"_sys_siglist","GLIBC_2.2",0,"LSB-Core"},
@@ -16534,25 +16534,25 @@ struct versym DynSyms[] = {
 #endif
 	{"adler32","",0,"LSB-Core"},
 #if __i386__
-	{"advance","GLIBC_2.0",0,"LSB-Core"},
+	{"advance","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __ia64__
-	{"advance","GLIBC_2.2",0,"LSB-Core"},
+	{"advance","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"advance","GLIBC_2.0",0,"LSB-Core"},
+	{"advance","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"advance","GLIBC_2.3",0,"LSB-Core"},
+	{"advance","GLIBC_2.3",1,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"advance","GLIBC_2.0",0,"LSB-Core"},
+	{"advance","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"advance","GLIBC_2.2.5",0,"LSB-Core"},
+	{"advance","GLIBC_2.2.5",1,"LSB-Core"},
 #endif
 #if __s390x__
-	{"advance","GLIBC_2.2",0,"LSB-Core"},
+	{"advance","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __i386__
 	{"alarm","GLIBC_2.0",0,"LSB-Core"},
@@ -20096,7 +20096,7 @@ struct versym DynSyms[] = {
 	{"dlopen","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"dlopen","GLIBC_2.0",0,"LSB-Core"},
+	{"dlopen","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"dlopen","GLIBC_2.1",0,"LSB-Core"},
@@ -21234,7 +21234,7 @@ struct versym DynSyms[] = {
 	{"feclearexcept","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"fegetenv","GLIBC_2.1",0,"LSB-Core"},
+	{"fegetenv","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"fegetenv","GLIBC_2.2",0,"LSB-Core"},
@@ -21255,7 +21255,7 @@ struct versym DynSyms[] = {
 	{"fegetenv","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"fegetexceptflag","GLIBC_2.1",0,"LSB-Core"},
+	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"fegetexceptflag","GLIBC_2.2",0,"LSB-Core"},
@@ -21339,7 +21339,7 @@ struct versym DynSyms[] = {
 	{"feof","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"feraiseexcept","GLIBC_2.1",0,"LSB-Core"},
+	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"feraiseexcept","GLIBC_2.2",0,"LSB-Core"},
@@ -21465,7 +21465,7 @@ struct versym DynSyms[] = {
 	{"fetestexcept","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"feupdateenv","GLIBC_2.1",0,"LSB-Core"},
+	{"feupdateenv","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"feupdateenv","GLIBC_2.2",0,"LSB-Core"},
@@ -21570,7 +21570,7 @@ struct versym DynSyms[] = {
 	{"fgetc","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"fgetpos","GLIBC_2.0",0,"LSB-Core"},
+	{"fgetpos","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"fgetpos","GLIBC_2.2",0,"LSB-Core"},
@@ -22644,7 +22644,7 @@ struct versym DynSyms[] = {
 	{"fseeko64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"fsetpos","GLIBC_2.0",0,"LSB-Core"},
+	{"fsetpos","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"fsetpos","GLIBC_2.2",0,"LSB-Core"},
@@ -22665,7 +22665,7 @@ struct versym DynSyms[] = {
 	{"fsetpos","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"fsetpos64","GLIBC_2.1",0,"LSB-Core"},
+	{"fsetpos64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"fsetpos64","GLIBC_2.2",0,"LSB-Core"},
@@ -23508,7 +23508,7 @@ struct versym DynSyms[] = {
 	{"getgrgid","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"getgrgid_r","GLIBC_2.0",0,"LSB-Core"},
+	{"getgrgid_r","GLIBC_2.1.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"getgrgid_r","GLIBC_2.2",0,"LSB-Core"},
@@ -24160,7 +24160,7 @@ struct versym DynSyms[] = {
 	{"getpwuid","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"getpwuid_r","GLIBC_2.0",0,"LSB-Core"},
+	{"getpwuid_r","GLIBC_2.1.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"getpwuid_r","GLIBC_2.2",0,"LSB-Core"},
@@ -25116,7 +25116,7 @@ struct versym DynSyms[] = {
 	{"glob","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"glob64","GLIBC_2.1",0,"LSB-Core"},
+	{"glob64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"glob64","GLIBC_2.2",0,"LSB-Core"},
@@ -27312,49 +27312,49 @@ struct versym DynSyms[] = {
 	{"llroundl","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"loc1","GLIBC_2.0",0,"LSB-Core"},
+	{"loc1","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __ia64__
-	{"loc1","GLIBC_2.2",0,"LSB-Core"},
+	{"loc1","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"loc1","GLIBC_2.0",0,"LSB-Core"},
+	{"loc1","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"loc1","GLIBC_2.3",0,"LSB-Core"},
+	{"loc1","GLIBC_2.3",1,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"loc1","GLIBC_2.0",0,"LSB-Core"},
+	{"loc1","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"loc1","GLIBC_2.2.5",0,"LSB-Core"},
+	{"loc1","GLIBC_2.2.5",1,"LSB-Core"},
 #endif
 #if __s390x__
-	{"loc1","GLIBC_2.2",0,"LSB-Core"},
+	{"loc1","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __i386__
-	{"loc2","GLIBC_2.0",0,"LSB-Core"},
+	{"loc2","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __ia64__
-	{"loc2","GLIBC_2.2",0,"LSB-Core"},
+	{"loc2","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"loc2","GLIBC_2.0",0,"LSB-Core"},
+	{"loc2","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"loc2","GLIBC_2.3",0,"LSB-Core"},
+	{"loc2","GLIBC_2.3",1,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"loc2","GLIBC_2.0",0,"LSB-Core"},
+	{"loc2","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"loc2","GLIBC_2.2.5",0,"LSB-Core"},
+	{"loc2","GLIBC_2.2.5",1,"LSB-Core"},
 #endif
 #if __s390x__
-	{"loc2","GLIBC_2.2",0,"LSB-Core"},
+	{"loc2","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __i386__
-	{"localeconv","GLIBC_2.0",0,"LSB-Core"},
+	{"localeconv","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"localeconv","GLIBC_2.2",0,"LSB-Core"},
@@ -27459,25 +27459,25 @@ struct versym DynSyms[] = {
 	{"lockf64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"locs","GLIBC_2.0",0,"LSB-Core"},
+	{"locs","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __ia64__
-	{"locs","GLIBC_2.2",0,"LSB-Core"},
+	{"locs","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"locs","GLIBC_2.0",0,"LSB-Core"},
+	{"locs","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"locs","GLIBC_2.3",0,"LSB-Core"},
+	{"locs","GLIBC_2.3",1,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"locs","GLIBC_2.0",0,"LSB-Core"},
+	{"locs","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"locs","GLIBC_2.2.5",0,"LSB-Core"},
+	{"locs","GLIBC_2.2.5",1,"LSB-Core"},
 #endif
 #if __s390x__
-	{"locs","GLIBC_2.2",0,"LSB-Core"},
+	{"locs","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __i386__
 	{"log","GLIBC_2.0",0,"LSB-Core"},
@@ -29175,7 +29175,7 @@ struct versym DynSyms[] = {
 	{"nftw","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"nftw","GLIBC_2.2",0,"LSB-Core"},
+	{"nftw","GLIBC_2.2.5",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"nftw","GLIBC_2.1",0,"LSB-Core"},
@@ -29187,7 +29187,7 @@ struct versym DynSyms[] = {
 	{"nftw","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"nftw","GLIBC_2.2.5",0,"LSB-Core"},
+	{"nftw","GLIBC_2.3.3",0,"LSB-Core"},
 #endif
 #if __s390x__
 	{"nftw","GLIBC_2.2",0,"LSB-Core"},
@@ -29196,7 +29196,7 @@ struct versym DynSyms[] = {
 	{"nftw64","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"nftw64","GLIBC_2.2",0,"LSB-Core"},
+	{"nftw64","GLIBC_2.2.5",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"nftw64","GLIBC_2.1",0,"LSB-Core"},
@@ -29208,7 +29208,7 @@ struct versym DynSyms[] = {
 	{"nftw64","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"nftw64","GLIBC_2.2.5",0,"LSB-Core"},
+	{"nftw64","GLIBC_2.3.3",0,"LSB-Core"},
 #endif
 #if __s390x__
 	{"nftw64","GLIBC_2.2",0,"LSB-Core"},
@@ -29937,7 +29937,7 @@ struct versym DynSyms[] = {
 	{"powl","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"pread","GLIBC_2.1",0,"LSB-Core"},
+	{"pread","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"pread","GLIBC_2.2",0,"LSB-Core"},
@@ -29958,7 +29958,7 @@ struct versym DynSyms[] = {
 	{"pread","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"pread64","GLIBC_2.1",0,"LSB-Core"},
+	{"pread64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"pread64","GLIBC_2.2",0,"LSB-Core"},
@@ -30404,7 +30404,7 @@ struct versym DynSyms[] = {
 	{"pthread_attr_setstacksize","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"pthread_attr_setstacksize","GLIBC_2.2",0,"LSB-Core"},
+	{"pthread_attr_setstacksize","GLIBC_2.3.3",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"pthread_attr_setstacksize","GLIBC_2.1",0,"LSB-Core"},
@@ -30613,7 +30613,7 @@ struct versym DynSyms[] = {
 #endif
 	{"pthread_condattr_setpshared","GLIBC_2.2",0,"LSB-Core"},
 #if __i386__
-	{"pthread_create","GLIBC_2.0",0,"LSB-Core"},
+	{"pthread_create","GLIBC_2.1",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"pthread_create","GLIBC_2.2",0,"LSB-Core"},
@@ -31749,7 +31749,7 @@ struct versym DynSyms[] = {
 #endif
 	{"putwin","",0,"LSB-Core"},
 #if __i386__
-	{"pwrite","GLIBC_2.1",0,"LSB-Core"},
+	{"pwrite","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"pwrite","GLIBC_2.2",0,"LSB-Core"},
@@ -31770,7 +31770,7 @@ struct versym DynSyms[] = {
 	{"pwrite","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"pwrite64","GLIBC_2.1",0,"LSB-Core"},
+	{"pwrite64","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"pwrite64","GLIBC_2.2",0,"LSB-Core"},
@@ -31919,46 +31919,46 @@ struct versym DynSyms[] = {
 #endif
 	{"raw","",0,"LSB-Core"},
 #if __i386__
-	{"re_comp","GLIBC_2.0",0,"LSB-Core"},
+	{"re_comp","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __ia64__
-	{"re_comp","GLIBC_2.2",0,"LSB-Core"},
+	{"re_comp","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"re_comp","GLIBC_2.0",0,"LSB-Core"},
+	{"re_comp","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"re_comp","GLIBC_2.3",0,"LSB-Core"},
+	{"re_comp","GLIBC_2.3",1,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"re_comp","GLIBC_2.0",0,"LSB-Core"},
+	{"re_comp","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"re_comp","GLIBC_2.2.5",0,"LSB-Core"},
+	{"re_comp","GLIBC_2.2.5",1,"LSB-Core"},
 #endif
 #if __s390x__
-	{"re_comp","GLIBC_2.2",0,"LSB-Core"},
+	{"re_comp","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __i386__
-	{"re_exec","GLIBC_2.0",0,"LSB-Core"},
+	{"re_exec","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __ia64__
-	{"re_exec","GLIBC_2.2",0,"LSB-Core"},
+	{"re_exec","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"re_exec","GLIBC_2.0",0,"LSB-Core"},
+	{"re_exec","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"re_exec","GLIBC_2.3",0,"LSB-Core"},
+	{"re_exec","GLIBC_2.3",1,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"re_exec","GLIBC_2.0",0,"LSB-Core"},
+	{"re_exec","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"re_exec","GLIBC_2.2.5",0,"LSB-Core"},
+	{"re_exec","GLIBC_2.2.5",1,"LSB-Core"},
 #endif
 #if __s390x__
-	{"re_exec","GLIBC_2.2",0,"LSB-Core"},
+	{"re_exec","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __i386__
 	{"read","GLIBC_2.0",0,"LSB-Core"},
@@ -32241,7 +32241,7 @@ struct versym DynSyms[] = {
 	{"regexec","GLIBC_2.0",0,"LSB-Core"},
 #endif
 #if __ia64__
-	{"regexec","GLIBC_2.2",0,"LSB-Core"},
+	{"regexec","GLIBC_2.3.3",0,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"regexec","GLIBC_2.0",0,"LSB-Core"},
@@ -33365,7 +33365,7 @@ struct versym DynSyms[] = {
 	{"sem_wait","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __i386__
-	{"semctl","GLIBC_2.0",0,"LSB-Core"},
+	{"semctl","GLIBC_2.2",0,"LSB-Core"},
 #endif
 #if __ia64__
 	{"semctl","GLIBC_2.2",0,"LSB-Core"},
@@ -35574,25 +35574,25 @@ struct versym DynSyms[] = {
 #endif
 	{"stdscr","",0,"LSB-Core"},
 #if __i386__
-	{"step","GLIBC_2.0",0,"LSB-Core"},
+	{"step","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __ia64__
-	{"step","GLIBC_2.2",0,"LSB-Core"},
+	{"step","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"step","GLIBC_2.0",0,"LSB-Core"},
+	{"step","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __powerpc64__
-	{"step","GLIBC_2.3",0,"LSB-Core"},
+	{"step","GLIBC_2.3",1,"LSB-Core"},
 #endif
 #if __s390__ && !__s390x__
-	{"step","GLIBC_2.0",0,"LSB-Core"},
+	{"step","GLIBC_2.0",1,"LSB-Core"},
 #endif
 #if __x86_64__
-	{"step","GLIBC_2.2.5",0,"LSB-Core"},
+	{"step","GLIBC_2.2.5",1,"LSB-Core"},
 #endif
 #if __s390x__
-	{"step","GLIBC_2.2",0,"LSB-Core"},
+	{"step","GLIBC_2.2",1,"LSB-Core"},
 #endif
 #if __i386__
 	{"stime","GLIBC_2.0",0,"LSB-Core"},
