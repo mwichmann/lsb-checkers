@@ -24,10 +24,10 @@ Msg("Checking data structures in dlfcn.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef RTLD_LOCAL
-	CompareConstant(RTLD_LOCAL,0,1165,architecture)
+#ifdef RTLD_LAZY
+	CompareConstant(RTLD_LAZY,0x00001,1160,architecture)
 #else
-Msg( "Error: Constant not found: RTLD_LOCAL\n");
+Msg( "Error: Constant not found: RTLD_LAZY\n");
 cnt++;
 #endif
 
@@ -44,20 +44,20 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef RTLD_LAZY
-	CompareConstant(RTLD_LAZY,0x00001,1160,architecture)
+#ifdef RTLD_GLOBAL
+	CompareConstant(RTLD_GLOBAL,0x00100,1164,architecture)
 #else
-Msg( "Error: Constant not found: RTLD_LAZY\n");
+Msg( "Error: Constant not found: RTLD_GLOBAL\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef RTLD_GLOBAL
-	CompareConstant(RTLD_GLOBAL,0x00100,1164,architecture)
+#ifdef RTLD_LOCAL
+	CompareConstant(RTLD_LOCAL,0,1165,architecture)
 #else
-Msg( "Error: Constant not found: RTLD_GLOBAL\n");
+Msg( "Error: Constant not found: RTLD_LOCAL\n");
 cnt++;
 #endif
 

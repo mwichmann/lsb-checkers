@@ -24,6 +24,60 @@ Msg("Checking data structures in sys/ioctl.h\n");
 #endif
 
 #if __powerpc64__
+#ifdef FIONREAD
+	CompareConstant(FIONREAD,1074030207,4619,architecture)
+#else
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef FIONREAD
+	CompareConstant(FIONREAD,1074030207,4619,architecture)
+#else
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef FIONREAD
+	CompareConstant(FIONREAD,0x541B,4619,architecture)
+#else
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef FIONREAD
+	CompareConstant(FIONREAD,0x541B,4619,architecture)
+#else
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef FIONREAD
+	CompareConstant(FIONREAD,0x541B,4619,architecture)
+#else
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
+#endif
+
+#elif __s390__
+#ifdef FIONREAD
+	CompareConstant(FIONREAD,0x541B,4619,architecture)
+#else
+Msg( "Error: Constant not found: FIONREAD\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for FIONREAD (4619, int) in db\n");
+#ifdef FIONREAD
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4619,%d);\n", architecture, FIONREAD);
+#endif
+#endif
+#if __powerpc64__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,21538,4627,architecture)
 #else
@@ -69,32 +123,6 @@ Msg( "No definition for TIOCNOTTY (4627, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4627,%d);\n", architecture, TIOCNOTTY);
 #endif
 #endif
-#if __powerpc64__
-#ifdef FIONREAD
-	CompareConstant(FIONREAD,1074030207,4619,architecture)
-#else
-Msg( "Error: Constant not found: FIONREAD\n");
-cnt++;
-#endif
-
-#elif __powerpc__ && !__powerpc64__
-#ifdef FIONREAD
-	CompareConstant(FIONREAD,1074030207,4619,architecture)
-#else
-Msg( "Error: Constant not found: FIONREAD\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
-#ifdef FIONREAD
-	CompareConstant(FIONREAD,0x541B,4619,architecture)
-#else
-Msg( "Error: Constant not found: FIONREAD\n");
-cnt++;
-#endif
-
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

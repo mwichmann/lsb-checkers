@@ -24,49 +24,7 @@ Msg("Checking data structures in sys/shm.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SHM_REMAP
-	CompareConstant(SHM_REMAP,040000,3471,architecture)
-#else
-Msg( "Error: Constant not found: SHM_REMAP\n");
-cnt++;
-#endif
-
-#endif
-
-#if __ia64__
 /* No test for SHMLBA */
-#elif _LSB_DEFAULT_ARCH
-/* No test for SHMLBA */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SHM_LOCK
-	CompareConstant(SHM_LOCK,11,3472,architecture)
-#else
-Msg( "Error: Constant not found: SHM_LOCK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SHM_UNLOCK
-	CompareConstant(SHM_UNLOCK,12,3473,architecture)
-#else
-Msg( "Error: Constant not found: SHM_UNLOCK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SHM_RND
-	CompareConstant(SHM_RND,020000,3470,architecture)
-#else
-Msg( "Error: Constant not found: SHM_RND\n");
-cnt++;
-#endif
-
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -94,6 +52,46 @@ cnt++;
 	CompareConstant(SHM_RDONLY,010000,3469,architecture)
 #else
 Msg( "Error: Constant not found: SHM_RDONLY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SHM_RND
+	CompareConstant(SHM_RND,020000,3470,architecture)
+#else
+Msg( "Error: Constant not found: SHM_RND\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SHM_REMAP
+	CompareConstant(SHM_REMAP,040000,3471,architecture)
+#else
+Msg( "Error: Constant not found: SHM_REMAP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SHM_LOCK
+	CompareConstant(SHM_LOCK,11,3472,architecture)
+#else
+Msg( "Error: Constant not found: SHM_LOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SHM_UNLOCK
+	CompareConstant(SHM_UNLOCK,12,3473,architecture)
+#else
+Msg( "Error: Constant not found: SHM_UNLOCK\n");
 cnt++;
 #endif
 

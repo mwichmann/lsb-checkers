@@ -24,67 +24,7 @@ Msg("Checking data structures in pthread.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PTHREAD_RWLOCK_INITIALIZER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCEL_DISABLE
-	CompareConstant(PTHREAD_CANCEL_DISABLE,1,1547,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCEL_DISABLE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_PROCESS_PRIVATE
-	CompareConstant(PTHREAD_PROCESS_PRIVATE,0,1543,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_PROCESS_PRIVATE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_MUTEX_DEFAULT
-	CompareConstant(PTHREAD_MUTEX_DEFAULT,1,5002,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_MUTEX_DEFAULT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCELED
-	CompareConstant(PTHREAD_CANCELED,((void*)-1),1550,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCELED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCEL_ENABLE
-	CompareConstant(PTHREAD_CANCEL_ENABLE,0,1546,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCEL_ENABLE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CREATE_JOINABLE
-	CompareConstant(PTHREAD_CREATE_JOINABLE,0,1537,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CREATE_JOINABLE\n");
-cnt++;
-#endif
-
+/* No test for PTHREAD_MUTEX_INITIALIZER */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -92,118 +32,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_MUTEX_ERRORCHECK
-	CompareConstant(PTHREAD_MUTEX_ERRORCHECK,3,5003,architecture)
+#ifdef PTHREAD_CREATE_JOINABLE
+	CompareConstant(PTHREAD_CREATE_JOINABLE,0,1537,architecture)
 #else
-Msg( "Error: Constant not found: PTHREAD_MUTEX_ERRORCHECK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_SCOPE_PROCESS
-	CompareConstant(PTHREAD_SCOPE_PROCESS,1,1542,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_SCOPE_PROCESS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_INHERIT_SCHED
-	CompareConstant(PTHREAD_INHERIT_SCHED,0,1539,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_INHERIT_SCHED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_MUTEX_NORMAL
-	CompareConstant(PTHREAD_MUTEX_NORMAL,1,5004,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_MUTEX_NORMAL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_SCOPE_SYSTEM
-	CompareConstant(PTHREAD_SCOPE_SYSTEM,0,1541,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_SCOPE_SYSTEM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_ONCE_INIT
-	CompareConstant(PTHREAD_ONCE_INIT,0,1545,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_ONCE_INIT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCEL_ASYNCHRONOUS
-	CompareConstant(PTHREAD_CANCEL_ASYNCHRONOUS,1,1549,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCEL_ASYNCHRONOUS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for PTHREAD_MUTEX_INITIALIZER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_CANCEL_DEFERRED
-	CompareConstant(PTHREAD_CANCEL_DEFERRED,0,1548,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_CANCEL_DEFERRED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_EXPLICIT_SCHED
-	CompareConstant(PTHREAD_EXPLICIT_SCHED,1,1540,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_EXPLICIT_SCHED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for __LOCK_INITIALIZER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_MUTEX_RECURSIVE
-	CompareConstant(PTHREAD_MUTEX_RECURSIVE,2,5005,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_MUTEX_RECURSIVE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_PROCESS_SHARED
-	CompareConstant(PTHREAD_PROCESS_SHARED,1,1544,architecture)
-#else
-Msg( "Error: Constant not found: PTHREAD_PROCESS_SHARED\n");
+Msg( "Error: Constant not found: PTHREAD_CREATE_JOINABLE\n");
 cnt++;
 #endif
 
@@ -220,6 +52,46 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_INHERIT_SCHED
+	CompareConstant(PTHREAD_INHERIT_SCHED,0,1539,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_INHERIT_SCHED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_EXPLICIT_SCHED
+	CompareConstant(PTHREAD_EXPLICIT_SCHED,1,1540,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_EXPLICIT_SCHED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_SCOPE_SYSTEM
+	CompareConstant(PTHREAD_SCOPE_SYSTEM,0,1541,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_SCOPE_SYSTEM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_SCOPE_PROCESS
+	CompareConstant(PTHREAD_SCOPE_PROCESS,1,1542,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_SCOPE_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_MUTEX_TIMED_NP
 	CompareConstant(PTHREAD_MUTEX_TIMED_NP,1,4958,architecture)
 #else
@@ -227,6 +99,134 @@ Msg( "Error: Constant not found: PTHREAD_MUTEX_TIMED_NP\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_PROCESS_PRIVATE
+	CompareConstant(PTHREAD_PROCESS_PRIVATE,0,1543,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_PROCESS_PRIVATE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __LOCK_INITIALIZER */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_PROCESS_SHARED
+	CompareConstant(PTHREAD_PROCESS_SHARED,1,1544,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_PROCESS_SHARED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_ONCE_INIT
+	CompareConstant(PTHREAD_ONCE_INIT,0,1545,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_ONCE_INIT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CANCEL_ENABLE
+	CompareConstant(PTHREAD_CANCEL_ENABLE,0,1546,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CANCEL_ENABLE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CANCEL_DISABLE
+	CompareConstant(PTHREAD_CANCEL_DISABLE,1,1547,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CANCEL_DISABLE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CANCEL_DEFERRED
+	CompareConstant(PTHREAD_CANCEL_DEFERRED,0,1548,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CANCEL_DEFERRED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CANCEL_ASYNCHRONOUS
+	CompareConstant(PTHREAD_CANCEL_ASYNCHRONOUS,1,1549,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CANCEL_ASYNCHRONOUS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_CANCELED
+	CompareConstant(PTHREAD_CANCELED,((void*)-1),1550,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_CANCELED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_DEFAULT
+	CompareConstant(PTHREAD_MUTEX_DEFAULT,1,5002,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_DEFAULT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_ERRORCHECK
+	CompareConstant(PTHREAD_MUTEX_ERRORCHECK,3,5003,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_ERRORCHECK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_NORMAL
+	CompareConstant(PTHREAD_MUTEX_NORMAL,1,5004,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_NORMAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PTHREAD_MUTEX_RECURSIVE
+	CompareConstant(PTHREAD_MUTEX_RECURSIVE,2,5005,architecture)
+#else
+Msg( "Error: Constant not found: PTHREAD_MUTEX_RECURSIVE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
 #endif
 
 #if __i386__
