@@ -161,8 +161,8 @@ CheckOffset(struct _libc_vrstate,__pad,0,9,40861)
 
 #if __powerpc64__
 CheckTypeSize(struct _libc_vscr,4, 11034, 9)
-CheckMemberSize(struct _libc_vscr,_pad,12,9,40857)
-CheckOffset(struct _libc_vscr,_pad,0,9,40857)
+CheckMemberSize(struct _libc_vscr,__pad,12,9,40857)
+CheckOffset(struct _libc_vscr,__pad,0,9,40857)
 CheckMemberSize(struct _libc_vscr,vscr_word,4,9,40858)
 CheckOffset(struct _libc_vscr,vscr_word,12,9,40858)
 #endif
