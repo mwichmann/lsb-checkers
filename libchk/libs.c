@@ -9,7 +9,10 @@ void check_libs(struct tetj_handle *journal)
 #if __ia64__
 check_lib("/lib/ld-lsb-ia64.so.1",ld_lsb_ia64_so_1, journal);
 #endif
-#if __s390__
+#if __powerpc__ && !__powerpc64__
+check_lib("/lib/ld-lsb-ppc32.so.1",ld_lsb_ppc32_so_1, journal);
+#endif
+#if __s390__ && !__s390x__
 check_lib("/lib/ld-lsb-s390.so.1",ld_lsb_s390_so_1, journal);
 #endif
 #if __x86_64__
@@ -18,11 +21,11 @@ check_lib("/lib/ld-lsb-x86_64.so.1",ld_lsb_x86_64_so_1, journal);
 #if __i386__
 check_lib("/lib/ld-lsb.so.1",ld_lsb_so_1, journal);
 #endif
-#if __powerpc__ && !__powerpc64__
-check_lib("/lib/ld-lsb.so.1",ld_lsb_so_1, journal);
-#endif
 #if __powerpc64__
 check_lib("/lib64/ld-lsb-ppc64.so.1",ld_lsb_ppc64_so_1, journal);
+#endif
+#if __s390x__
+check_lib("/lib64/ld-lsb-s390x.so.1",ld_lsb_s390x_so_1, journal);
 #endif
 #if __i386__
 check_lib("libc.so.6",libc_so_6, journal);
@@ -33,7 +36,10 @@ check_lib("libc.so.6",libc_so_6, journal);
 #if __powerpc64__
 check_lib("libc.so.6",libc_so_6, journal);
 #endif
-#if __s390__
+#if __s390__ && !__s390x__
+check_lib("libc.so.6",libc_so_6, journal);
+#endif
+#if __s390x__
 check_lib("libc.so.6",libc_so_6, journal);
 #endif
 #if __ia64__
@@ -52,7 +58,10 @@ check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #if __powerpc64__
 check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #endif
-#if __s390__
+#if __s390__ && !__s390x__
+check_lib("libcrypt.so.1",libcrypt_so_1, journal);
+#endif
+#if __s390x__
 check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #endif
 check_lib("libdl.so.2",libdl_so_2,journal);
@@ -68,7 +77,10 @@ check_lib("libdl.so.2",libdl_so_2, journal);
 #if __powerpc64__
 check_lib("libdl.so.2",libdl_so_2, journal);
 #endif
-#if __s390__
+#if __s390__ && !__s390x__
+check_lib("libdl.so.2",libdl_so_2, journal);
+#endif
+#if __s390x__
 check_lib("libdl.so.2",libdl_so_2, journal);
 #endif
 check_lib("libgcc_s.so.1",libgcc_s_so_1,journal);
@@ -83,7 +95,10 @@ check_lib("libm.so.6",libm_so_6, journal);
 #if __powerpc64__
 check_lib("libm.so.6",libm_so_6, journal);
 #endif
-#if __s390__
+#if __s390__ && !__s390x__
+check_lib("libm.so.6",libm_so_6, journal);
+#endif
+#if __s390x__
 check_lib("libm.so.6",libm_so_6, journal);
 #endif
 #if __ia64__
@@ -104,11 +119,13 @@ check_lib("libpthread.so.0",libpthread_so_0, journal);
 #if __powerpc64__
 check_lib("libpthread.so.0",libpthread_so_0, journal);
 #endif
-#if __s390__
+#if __s390__ && !__s390x__
+check_lib("libpthread.so.0",libpthread_so_0, journal);
+#endif
+#if __s390x__
 check_lib("libpthread.so.0",libpthread_so_0, journal);
 #endif
 check_lib("libSM.so.6",libSM_so_6,journal);
-check_lib("libstdc++.so.5",libstdcxx_so_5,journal);
 check_lib("libutil.so.1",libutil_so_1,journal);
 check_lib("libX11.so.6",libX11_so_6,journal);
 check_lib("libXext.so.6",libXext_so_6,journal);
