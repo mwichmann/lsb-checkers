@@ -107,7 +107,7 @@ dumpbytes(ptr,8);
 
         switch( opcode ) { 
 	/*
-	 * These are described in Dward 2.0.0 - Section 6.4.2
+	 * These are described in Dwarf 2.0.0 - Section 6.4.2
 	 */
 	case DW_CFA_advance_loc:
 		if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
