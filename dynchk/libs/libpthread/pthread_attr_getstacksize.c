@@ -3,8 +3,8 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
-#include <pthread.h>
 #include <stddef.h>
+#include <pthread.h>
 #undef pthread_attr_getstacksize
 static int(*funcptr) (const pthread_attr_t * , size_t * ) = 0;
 

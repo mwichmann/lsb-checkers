@@ -3,8 +3,8 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include <dlfcn.h>
-#include <stdlib.h>
 #include <stddef.h>
+#include <stdlib.h>
 #undef qsort
 static void(*funcptr) (void * , size_t , size_t , const __compar_fn_t ) = 0;
 
