@@ -2,14 +2,14 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <stddef.h>
+#include <sys/socket.h>
 #include <arpa/inet.h>
 #undef inet_ntop
-static const char *(*funcptr) (int , const void * , char * , size_t ) = 0;
+static const char *(*funcptr) (int , const void * , char * , socklen_t ) = 0;
 
 extern int __lsb_check_params;
 extern int __lsb_output(int, char*, ...);
-const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , size_t arg3 )
+const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , socklen_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	const char * ret_value  ;
