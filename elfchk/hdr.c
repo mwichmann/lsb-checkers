@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "hdr.h"
 #include "symvers.h"
-#include "../tetj/tetj.h"
+#include "tetj.h"
 
 void
 checkElfhdr(ElfFile *file1, int isProgram, struct tetj_handle *journal)
