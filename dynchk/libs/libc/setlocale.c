@@ -11,7 +11,9 @@ char * setlocale (int arg0 , const char * arg1 )
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "setlocale");
 	validate_NULL_TYPETYPE(  arg0, "setlocale - arg0");
+	if( arg1 ) {
 	validate_Rdaddress( arg1, "setlocale - arg1");
+	}
 	validate_NULL_TYPETYPE(  arg1, "setlocale - arg1");
 	return funcptr(arg0, arg1);
 }
