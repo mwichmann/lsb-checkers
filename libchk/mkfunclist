@@ -225,7 +225,7 @@ $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE Lstd='Yes' ";
 $select.= "AND Aname!='None' ";
 #$select.= "AND Lname='libstdcxx' ";
-$select.= "ORDER BY ALrunname,Aid ";
+$select.= "ORDER BY ALrunname,Aid DESC ";
 
 #print $select;
 
@@ -253,9 +253,11 @@ for(1..$sth->numrows) {
 		print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
 		print LIBSH "#endif\n";
 	} else {
-		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo,journal);\n";
-		print LIBSH "extern struct versym ".$libname."[];\n";
-		print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
+		if( !$seenit{$libname} ) {
+			print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo,journal);\n";
+			print LIBSH "extern struct versym ".$libname."[];\n";
+			print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
+			}
 	}
 	if( !$seenit{$libname} ) {
 		print MAKE "\t$libname.o \\\n";
