@@ -3359,7 +3359,6 @@ struct versym libc_so_6[] = {
 #if defined(__powerpc__)
 	{"lseek64","GLIBC_2.1"},
 #endif
-	{"lstat",""},
 #if defined(__i386__)
 	{"makecontext","GLIBC_2.1"},
 #endif
@@ -4016,15 +4015,6 @@ struct versym libc_so_6[] = {
 #endif
 #if defined(__powerpc__)
 	{"putenv","GLIBC_2.0"},
-#endif
-#if defined(__i386__)
-	{"putmsg","GLIBC_2.1"},
-#endif
-#if defined(__ia64__)
-	{"putmsg","GLIBC_2.2"},
-#endif
-#if defined(__powerpc__)
-	{"putmsg","GLIBC_2.1"},
 #endif
 #if defined(__i386__)
 	{"puts","GLIBC_2.0"},
