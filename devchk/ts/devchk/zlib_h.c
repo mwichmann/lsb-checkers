@@ -24,50 +24,10 @@ Msg("Checking data structures in zlib.h\n");
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_NEED_DICT
-	CompareConstant(Z_NEED_DICT,2,4220,architecture)
+#ifdef Z_NO_COMPRESSION
+	CompareConstant(Z_NO_COMPRESSION,0,4227,architecture)
 #else
-Msg( "Error: Constant not found: Z_NEED_DICT\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef MAX_WBITS
-	CompareConstant(MAX_WBITS,15,5022,architecture)
-#else
-Msg( "Error: Constant not found: MAX_WBITS\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_ERRNO
-	CompareConstant(Z_ERRNO,(-1),4221,architecture)
-#else
-Msg( "Error: Constant not found: Z_ERRNO\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_STREAM_ERROR
-	CompareConstant(Z_STREAM_ERROR,(-2),4222,architecture)
-#else
-Msg( "Error: Constant not found: Z_STREAM_ERROR\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_DATA_ERROR
-	CompareConstant(Z_DATA_ERROR,(-3),4223,architecture)
-#else
-Msg( "Error: Constant not found: Z_DATA_ERROR\n");
+Msg( "Error: Constant not found: Z_NO_COMPRESSION\n");
 cnt++;
 #endif
 
@@ -84,110 +44,20 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_BUF_ERROR
-	CompareConstant(Z_BUF_ERROR,(-5),4225,architecture)
+#ifdef Z_FULL_FLUSH
+	CompareConstant(Z_FULL_FLUSH,3,4216,architecture)
 #else
-Msg( "Error: Constant not found: Z_BUF_ERROR\n");
+Msg( "Error: Constant not found: Z_FULL_FLUSH\n");
 cnt++;
 #endif
 
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_NO_COMPRESSION
-	CompareConstant(Z_NO_COMPRESSION,0,4227,architecture)
+#ifdef Z_NEED_DICT
+	CompareConstant(Z_NEED_DICT,2,4220,architecture)
 #else
-Msg( "Error: Constant not found: Z_NO_COMPRESSION\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_BEST_SPEED
-	CompareConstant(Z_BEST_SPEED,1,4228,architecture)
-#else
-Msg( "Error: Constant not found: Z_BEST_SPEED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_BEST_COMPRESSION
-	CompareConstant(Z_BEST_COMPRESSION,9,4229,architecture)
-#else
-Msg( "Error: Constant not found: Z_BEST_COMPRESSION\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_DEFAULT_COMPRESSION
-	CompareConstant(Z_DEFAULT_COMPRESSION,(-1),4230,architecture)
-#else
-Msg( "Error: Constant not found: Z_DEFAULT_COMPRESSION\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_FILTERED
-	CompareConstant(Z_FILTERED,1,4231,architecture)
-#else
-Msg( "Error: Constant not found: Z_FILTERED\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_HUFFMAN_ONLY
-	CompareConstant(Z_HUFFMAN_ONLY,2,4232,architecture)
-#else
-Msg( "Error: Constant not found: Z_HUFFMAN_ONLY\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_DEFAULT_STRATEGY
-	CompareConstant(Z_DEFAULT_STRATEGY,0,4233,architecture)
-#else
-Msg( "Error: Constant not found: Z_DEFAULT_STRATEGY\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_BINARY
-	CompareConstant(Z_BINARY,0,4234,architecture)
-#else
-Msg( "Error: Constant not found: Z_BINARY\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_ASCII
-	CompareConstant(Z_ASCII,1,4235,architecture)
-#else
-Msg( "Error: Constant not found: Z_ASCII\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_UNKNOWN
-	CompareConstant(Z_UNKNOWN,2,4236,architecture)
-#else
-Msg( "Error: Constant not found: Z_UNKNOWN\n");
+Msg( "Error: Constant not found: Z_NEED_DICT\n");
 cnt++;
 #endif
 
@@ -204,20 +74,6 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_NULL
-	CompareConstant(Z_NULL,0,4238,architecture)
-#else
-Msg( "Error: Constant not found: Z_NULL\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-/* No test for deflateInit(strm,level) */
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
 /* No test for inflateInit(strm) */
 #endif
 
@@ -226,7 +82,13 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-/* No test for inflateInit2(strm,windowBits) */
+#ifdef Z_HUFFMAN_ONLY
+	CompareConstant(Z_HUFFMAN_ONLY,2,4232,architecture)
+#else
+Msg( "Error: Constant not found: Z_HUFFMAN_ONLY\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
@@ -240,30 +102,10 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_PARTIAL_FLUSH
-	CompareConstant(Z_PARTIAL_FLUSH,1,4214,architecture)
+#ifdef Z_DEFAULT_COMPRESSION
+	CompareConstant(Z_DEFAULT_COMPRESSION,(-1),4230,architecture)
 #else
-Msg( "Error: Constant not found: Z_PARTIAL_FLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_SYNC_FLUSH
-	CompareConstant(Z_SYNC_FLUSH,2,4215,architecture)
-#else
-Msg( "Error: Constant not found: Z_SYNC_FLUSH\n");
-cnt++;
-#endif
-
-#endif
-
-#ifdef _LSB_DEFAULT_ARCH
-#ifdef Z_FULL_FLUSH
-	CompareConstant(Z_FULL_FLUSH,3,4216,architecture)
-#else
-Msg( "Error: Constant not found: Z_FULL_FLUSH\n");
+Msg( "Error: Constant not found: Z_DEFAULT_COMPRESSION\n");
 cnt++;
 #endif
 
@@ -280,10 +122,134 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_DATA_ERROR
+	CompareConstant(Z_DATA_ERROR,(-3),4223,architecture)
+#else
+Msg( "Error: Constant not found: Z_DATA_ERROR\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_PARTIAL_FLUSH
+	CompareConstant(Z_PARTIAL_FLUSH,1,4214,architecture)
+#else
+Msg( "Error: Constant not found: Z_PARTIAL_FLUSH\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_UNKNOWN
+	CompareConstant(Z_UNKNOWN,2,4236,architecture)
+#else
+Msg( "Error: Constant not found: Z_UNKNOWN\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+/* No test for deflateInit(strm,level) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
 #ifdef Z_OK
 	CompareConstant(Z_OK,0,4218,architecture)
 #else
 Msg( "Error: Constant not found: Z_OK\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_BINARY
+	CompareConstant(Z_BINARY,0,4234,architecture)
+#else
+Msg( "Error: Constant not found: Z_BINARY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_STREAM_ERROR
+	CompareConstant(Z_STREAM_ERROR,(-2),4222,architecture)
+#else
+Msg( "Error: Constant not found: Z_STREAM_ERROR\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef MAX_MEM_LEVEL
+	CompareConstant(MAX_MEM_LEVEL,9,5021,architecture)
+#else
+Msg( "Error: Constant not found: MAX_MEM_LEVEL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_ASCII
+	CompareConstant(Z_ASCII,1,4235,architecture)
+#else
+Msg( "Error: Constant not found: Z_ASCII\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_BEST_COMPRESSION
+	CompareConstant(Z_BEST_COMPRESSION,9,4229,architecture)
+#else
+Msg( "Error: Constant not found: Z_BEST_COMPRESSION\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_DEFAULT_STRATEGY
+	CompareConstant(Z_DEFAULT_STRATEGY,0,4233,architecture)
+#else
+Msg( "Error: Constant not found: Z_DEFAULT_STRATEGY\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_NULL
+	CompareConstant(Z_NULL,0,4238,architecture)
+#else
+Msg( "Error: Constant not found: Z_NULL\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_SYNC_FLUSH
+	CompareConstant(Z_SYNC_FLUSH,2,4215,architecture)
+#else
+Msg( "Error: Constant not found: Z_SYNC_FLUSH\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef MAX_WBITS
+	CompareConstant(MAX_WBITS,15,5022,architecture)
+#else
+Msg( "Error: Constant not found: MAX_WBITS\n");
 cnt++;
 #endif
 
@@ -300,10 +266,44 @@ cnt++;
 #endif
 
 #ifdef _LSB_DEFAULT_ARCH
-#ifdef MAX_MEM_LEVEL
-	CompareConstant(MAX_MEM_LEVEL,9,5021,architecture)
+/* No test for inflateInit2(strm,windowBits) */
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_BEST_SPEED
+	CompareConstant(Z_BEST_SPEED,1,4228,architecture)
 #else
-Msg( "Error: Constant not found: MAX_MEM_LEVEL\n");
+Msg( "Error: Constant not found: Z_BEST_SPEED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_FILTERED
+	CompareConstant(Z_FILTERED,1,4231,architecture)
+#else
+Msg( "Error: Constant not found: Z_FILTERED\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_ERRNO
+	CompareConstant(Z_ERRNO,(-1),4221,architecture)
+#else
+Msg( "Error: Constant not found: Z_ERRNO\n");
+cnt++;
+#endif
+
+#endif
+
+#ifdef _LSB_DEFAULT_ARCH
+#ifdef Z_BUF_ERROR
+	CompareConstant(Z_BUF_ERROR,(-5),4225,architecture)
+#else
+Msg( "Error: Constant not found: Z_BUF_ERROR\n");
 cnt++;
 #endif
 
@@ -400,12 +400,70 @@ Msg("Find size of Byte (10166)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct z_stream_s,56, 9875, 2)
+CheckOffset(struct z_stream_s,avail_in,4,2,34068)
+CheckOffset(struct z_stream_s,total_in,8,2,34069)
+CheckOffset(struct z_stream_s,next_out,12,2,34070)
+CheckOffset(struct z_stream_s,avail_out,16,2,34071)
+CheckOffset(struct z_stream_s,total_out,20,2,34072)
+CheckOffset(struct z_stream_s,msg,24,2,34073)
+CheckOffset(struct z_stream_s,state,28,2,34074)
+CheckOffset(struct z_stream_s,zalloc,32,2,34075)
+CheckOffset(struct z_stream_s,zfree,36,2,34076)
+CheckOffset(struct z_stream_s,opaque,40,2,34077)
+CheckOffset(struct z_stream_s,data_type,44,2,34078)
+CheckOffset(struct z_stream_s,adler,48,2,34079)
+CheckOffset(struct z_stream_s,reserved,52,2,34080)
 #elif __powerpc__
 CheckTypeSize(struct z_stream_s,56, 9875, 6)
+Msg("Missing member data for z_stream_s on PPC32\n");
+CheckOffset(struct z_stream_s,next_in,0,6,34067)
+CheckOffset(struct z_stream_s,avail_in,0,6,34068)
+CheckOffset(struct z_stream_s,total_in,0,6,34069)
+CheckOffset(struct z_stream_s,next_out,0,6,34070)
+CheckOffset(struct z_stream_s,avail_out,0,6,34071)
+CheckOffset(struct z_stream_s,total_out,0,6,34072)
+CheckOffset(struct z_stream_s,msg,0,6,34073)
+CheckOffset(struct z_stream_s,state,0,6,34074)
+CheckOffset(struct z_stream_s,zalloc,0,6,34075)
+CheckOffset(struct z_stream_s,zfree,0,6,34076)
+CheckOffset(struct z_stream_s,opaque,0,6,34077)
+CheckOffset(struct z_stream_s,data_type,0,6,34078)
+CheckOffset(struct z_stream_s,adler,0,6,34079)
+CheckOffset(struct z_stream_s,reserved,0,6,34080)
 #elif __ia64__
 CheckTypeSize(struct z_stream_s,112, 9875, 3)
+Msg("Missing member data for z_stream_s on IA64\n");
+CheckOffset(struct z_stream_s,next_in,0,3,34067)
+CheckOffset(struct z_stream_s,avail_in,0,3,34068)
+CheckOffset(struct z_stream_s,total_in,0,3,34069)
+CheckOffset(struct z_stream_s,next_out,0,3,34070)
+CheckOffset(struct z_stream_s,avail_out,0,3,34071)
+CheckOffset(struct z_stream_s,total_out,0,3,34072)
+CheckOffset(struct z_stream_s,msg,0,3,34073)
+CheckOffset(struct z_stream_s,state,0,3,34074)
+CheckOffset(struct z_stream_s,zalloc,0,3,34075)
+CheckOffset(struct z_stream_s,zfree,0,3,34076)
+CheckOffset(struct z_stream_s,opaque,0,3,34077)
+CheckOffset(struct z_stream_s,data_type,0,3,34078)
+CheckOffset(struct z_stream_s,adler,0,3,34079)
+CheckOffset(struct z_stream_s,reserved,0,3,34080)
 #elif __s390__
 CheckTypeSize(struct z_stream_s,56, 9875, 10)
+Msg("Missing member data for z_stream_s on S390\n");
+CheckOffset(struct z_stream_s,next_in,0,10,34067)
+CheckOffset(struct z_stream_s,avail_in,0,10,34068)
+CheckOffset(struct z_stream_s,total_in,0,10,34069)
+CheckOffset(struct z_stream_s,next_out,0,10,34070)
+CheckOffset(struct z_stream_s,avail_out,0,10,34071)
+CheckOffset(struct z_stream_s,total_out,0,10,34072)
+CheckOffset(struct z_stream_s,msg,0,10,34073)
+CheckOffset(struct z_stream_s,state,0,10,34074)
+CheckOffset(struct z_stream_s,zalloc,0,10,34075)
+CheckOffset(struct z_stream_s,zfree,0,10,34076)
+CheckOffset(struct z_stream_s,opaque,0,10,34077)
+CheckOffset(struct z_stream_s,data_type,0,10,34078)
+CheckOffset(struct z_stream_s,adler,0,10,34079)
+CheckOffset(struct z_stream_s,reserved,0,10,34080)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9875,0);
 Msg("Find size of z_stream_s (9875)\n");
@@ -478,12 +536,19 @@ Msg("Find size of free_func (9873)\n");
 
 #ifdef __i386__
 CheckTypeSize(struct internal_state,4, 9874, 2)
+CheckOffset(struct internal_state,dummy,0,2,34081)
 #elif __powerpc__
 CheckTypeSize(struct internal_state,4, 9874, 6)
+Msg("Missing member data for internal_state on PPC32\n");
+CheckOffset(struct internal_state,dummy,0,6,34081)
 #elif __ia64__
 CheckTypeSize(struct internal_state,4, 9874, 3)
+Msg("Missing member data for internal_state on IA64\n");
+CheckOffset(struct internal_state,dummy,0,3,34081)
 #elif __s390__
 CheckTypeSize(struct internal_state,4, 9874, 10)
+Msg("Missing member data for internal_state on S390\n");
+CheckOffset(struct internal_state,dummy,0,10,34081)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9874,0);
 Msg("Find size of internal_state (9874)\n");

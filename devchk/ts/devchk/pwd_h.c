@@ -25,12 +25,42 @@ Msg("Checking data structures in pwd.h\n");
 
 #ifdef __i386__
 CheckTypeSize(struct passwd,28, 6938, 2)
+CheckOffset(struct passwd,pw_passwd,4,2,30042)
+CheckOffset(struct passwd,pw_uid,8,2,30043)
+CheckOffset(struct passwd,pw_gid,12,2,30044)
+CheckOffset(struct passwd,pw_gecos,16,2,30045)
+CheckOffset(struct passwd,pw_dir,20,2,30046)
+CheckOffset(struct passwd,pw_shell,24,2,30047)
 #elif __ia64__
 CheckTypeSize(struct passwd,48, 6938, 3)
+Msg("Missing member data for passwd on IA64\n");
+CheckOffset(struct passwd,pw_name,0,3,30041)
+CheckOffset(struct passwd,pw_passwd,0,3,30042)
+CheckOffset(struct passwd,pw_uid,0,3,30043)
+CheckOffset(struct passwd,pw_gid,0,3,30044)
+CheckOffset(struct passwd,pw_gecos,0,3,30045)
+CheckOffset(struct passwd,pw_dir,0,3,30046)
+CheckOffset(struct passwd,pw_shell,0,3,30047)
 #elif __powerpc__
 CheckTypeSize(struct passwd,28, 6938, 6)
+Msg("Missing member data for passwd on PPC32\n");
+CheckOffset(struct passwd,pw_name,0,6,30041)
+CheckOffset(struct passwd,pw_passwd,0,6,30042)
+CheckOffset(struct passwd,pw_uid,0,6,30043)
+CheckOffset(struct passwd,pw_gid,0,6,30044)
+CheckOffset(struct passwd,pw_gecos,0,6,30045)
+CheckOffset(struct passwd,pw_dir,0,6,30046)
+CheckOffset(struct passwd,pw_shell,0,6,30047)
 #elif __s390__
 CheckTypeSize(struct passwd,28, 6938, 10)
+Msg("Missing member data for passwd on S390\n");
+CheckOffset(struct passwd,pw_name,0,10,30041)
+CheckOffset(struct passwd,pw_passwd,0,10,30042)
+CheckOffset(struct passwd,pw_uid,0,10,30043)
+CheckOffset(struct passwd,pw_gid,0,10,30044)
+CheckOffset(struct passwd,pw_gecos,0,10,30045)
+CheckOffset(struct passwd,pw_dir,0,10,30046)
+CheckOffset(struct passwd,pw_shell,0,10,30047)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6938,0);
 Msg("Find size of passwd (6938)\n");

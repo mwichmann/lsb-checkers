@@ -23,20 +23,6 @@ int pcnt=0;
 Msg("Checking data structures in ucontext.h\n");
 #endif
 
-#ifdef __ia64__
-#ifdef _SC_GR0_OFFSET
-	CompareConstant(_SC_GR0_OFFSET,(((char *) &((struct sigcontext *) 0)->sc_gr[0]) - (char *) 0),5031,architecture)
-#else
-Msg( "Error: Constant not found: _SC_GR0_OFFSET\n");
-cnt++;
-#endif
-
-#else
-Msg( "No definition for _SC_GR0_OFFSET (5031, int) in db\n");
-#ifdef _SC_GR0_OFFSET
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5031,%d)\n", architecture, _SC_GR0_OFFSET);
-#endif
-#endif
 #ifdef __powerpc__
 #ifdef NGREG
 	CompareConstant(NGREG,48,4929,architecture)
@@ -67,12 +53,26 @@ Msg( "No definition for NGREG (4929, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4929,%d)\n", architecture, NGREG);
 #endif
 #endif
+#ifdef __ia64__
+#ifdef _SC_GR0_OFFSET
+	CompareConstant(_SC_GR0_OFFSET,(((char *) &((struct sigcontext *) 0)->sc_gr[0]) - (char *) 0),5031,architecture)
+#else
+Msg( "Error: Constant not found: _SC_GR0_OFFSET\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for _SC_GR0_OFFSET (5031, int) in db\n");
+#ifdef _SC_GR0_OFFSET
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5031,%d)\n", architecture, _SC_GR0_OFFSET);
+#endif
+#endif
 #ifdef __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
 #endif
 
 #ifdef __i386__
-CheckTypeSize(gregset_t,19, 10224, 2)
+CheckTypeSize(gregset_t,76, 10224, 2)
 #endif
 
 #ifdef __i386__

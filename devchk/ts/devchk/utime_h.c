@@ -29,10 +29,19 @@ CheckOffset(struct utimbuf,actime,0,2,30205)
 CheckOffset(struct utimbuf,modtime,4,2,30206)
 #elif __ia64__
 CheckTypeSize(struct utimbuf,16, 7023, 3)
+Msg("Missing member data for utimbuf on IA64\n");
+CheckOffset(struct utimbuf,actime,0,3,30205)
+CheckOffset(struct utimbuf,modtime,0,3,30206)
 #elif __powerpc__
 CheckTypeSize(struct utimbuf,8, 7023, 6)
+Msg("Missing member data for utimbuf on PPC32\n");
+CheckOffset(struct utimbuf,actime,0,6,30205)
+CheckOffset(struct utimbuf,modtime,0,6,30206)
 #elif __s390__
 CheckTypeSize(struct utimbuf,8, 7023, 10)
+Msg("Missing member data for utimbuf on S390\n");
+CheckOffset(struct utimbuf,actime,0,10,30205)
+CheckOffset(struct utimbuf,modtime,0,10,30206)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7023,0);
 Msg("Find size of utimbuf (7023)\n");
