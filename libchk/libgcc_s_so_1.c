@@ -34,9 +34,6 @@ struct versym libgcc_s_so_1[] = {
 #if __i386__
 	{"_Unwind_Find_FDE","GCC_3.0"},
 #endif
-#if __ia64__
-	{"_Unwind_Find_FDE","GCC_3.0"},
-#endif
 #if __arm__
 	{"_Unwind_Find_FDE","GCC_3.0"},
 #endif
@@ -92,9 +89,6 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_ForcedUnwind","GCC_3.0"},
 #endif
 #if __i386__
-	{"_Unwind_GetDataRelBase","GCC_3.0"},
-#endif
-#if __ia64__
 	{"_Unwind_GetDataRelBase","GCC_3.0"},
 #endif
 #if __arm__
@@ -242,9 +236,6 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_GetRegionStart","GCC_3.0"},
 #endif
 #if __i386__
-	{"_Unwind_GetTextRelBase","GCC_3.0"},
-#endif
-#if __ia64__
 	{"_Unwind_GetTextRelBase","GCC_3.0"},
 #endif
 #if __arm__
