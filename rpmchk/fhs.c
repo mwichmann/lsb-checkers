@@ -31,7 +31,7 @@ tetj_tp_count++;
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check filename");
 if( !is_fhs_installable(filename) ) {
         snprintf( tmp_string, TMP_STRING_SIZE,
-    "checkRpmArchiveFilename: file %s not FHS compliant\n", filename );
+	    "checkRpmArchiveFilename: file %s not FHS compliant", filename );
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 							0, 0, 0, tmp_string);

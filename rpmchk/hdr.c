@@ -29,7 +29,7 @@ fprintf(stderr,"checkRpmHdr() hdr=%x\n", hdr );
 tetj_tp_count++;
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check magic value");
 if(strncmp(hdr->magic,RPMHDRMAG,SRPMHDRMAG)) {
-        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmHeader: magic isn't expected value RPMHDRMAG, found %x %x %x instead\n", hdr->magic[0], hdr->magic[1], hdr->magic[2]); 
+        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmHeader: magic isn't expected value RPMHDRMAG, found %x %x %x instead", hdr->magic[0], hdr->magic[1], hdr->magic[2]); 
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -42,7 +42,7 @@ tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 tetj_tp_count++;
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check magic value");
 if(hdr->version != RPMHDRVER ) {
-        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmHeader: magic isn't expected value RPMHDRMAG, found %x %x %x instead\n", hdr->magic[0], hdr->magic[1], hdr->magic[2]); 
+        snprintf( tmp_string, TMP_STRING_SIZE, "compareRpmHeader: magic isn't expected value RPMHDRMAG, found %x %x %x instead", hdr->magic[0], hdr->magic[1], hdr->magic[2]); 
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
