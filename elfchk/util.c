@@ -103,7 +103,7 @@ getmodulename(int mod)
 	if( mod & LSB_Graphics )
 		strcat(buf, "LSB_Graphics ");
 	if( mod & LSB_Cpp )
-		strcat(buf, "LSB_Cpp ");
+		strcat(buf, "LSB_C++ ");
 
 	return buf[0]?buf:"Unknown Module";
 }
@@ -111,10 +111,20 @@ getmodulename(int mod)
 int
 getmoduleval(char *mod)
 {
+	if( strcasecmp(mod,"LSB-Core")==0 )
+		return LSB_Core;
 	if( strcasecmp(mod,"LSB_Core")==0 )
 		return LSB_Core;
+	if( strcasecmp(mod,"LSB-Graphics")==0 )
+		return LSB_Graphics;
 	if( strcasecmp(mod,"LSB_Graphics")==0 )
 		return LSB_Graphics;
+	if( strcasecmp(mod,"LSB-C++")==0 )
+		return LSB_Cpp;
+	if( strcasecmp(mod,"LSB_C++")==0 )
+		return LSB_Cpp;
+	if( strcasecmp(mod,"LSB-Cpp")==0 )
+		return LSB_Cpp;
 	if( strcasecmp(mod,"LSB_Cpp")==0 )
 		return LSB_Cpp;
 	return 0;
