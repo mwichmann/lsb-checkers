@@ -4,6 +4,8 @@ __fxstat.o \
 __fxstat64.o \
 __getpagesize.o \
 __getpgid.o \
+__libc_current_sigrtmax.o \
+__libc_current_sigrtmin.o \
 __lxstat.o \
 __lxstat64.o \
 __mempcpy.o \
