@@ -1,10 +1,17 @@
 #include <stdio.h>
 #include <sys/types.h>
+#include <unistd.h>
 
 void validate_filedescriptor(const int fd, const char *name)
 {
-	if(fd > -1)  //Ought to be something about MAXFD.  I have no clue where that can be found.
-		lsb_fprintf(stderr, "lsbdynchk: %s: File descriptor %x is a parameter (stub)\n", name, fd);
-	else if(fd < 0)
-		lsb_fprintf(stderr, "lsbdynchk: %s: File descriptor %x is less than zero.\n", name, fd);
+	if(fd >= lsb_sysconf(_SC_OPEN_MAX))
+	{
+		lsb_fprintf(stderr, "lsbdynchk: %s: File descriptor %x is too high.\n",
+					name);
+		lsb_fprintf(stderr,"\t%x is the highest value this system allows.\n",
+					fd, lsb_sysconf(_SC_OPEN_MAX) );
+	}
+	else if(fd<0)
+		lsb_fprintf(stderr, "lsbdynchk: %s: File descriptor %x is negative, and thus invalid.\n", name, fd);
+
 }
