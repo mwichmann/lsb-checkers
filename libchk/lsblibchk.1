@@ -1,0 +1,38 @@
+.TH lsblibchk "1" "" "lsblibchk (LSB)" LSB
+.SH NAME
+lsblibchk \- check LSB libraries
+.SH SYNOPSIS
+.B lsblibchk
+.SH DESCRIPTION
+.PP
+Check whether the run\-time system libraries for the current system
+appear to conform to the Linux Standard Base (LSB).  Lsblibchk checks
+the object format, whether all of the required libraries are present,
+whether the libraries contain all interfaces required by the LSB, and
+whether the interfaces have the symbol versions required by the LSB.
+Lsblibchk prints warnings for any problems.
+.PP
+Lsblibchk writes a journal file named journal.libchk. It contains a
+record of the test results. You must have write access to the current
+working directory.
+.PP
+The lsblibchk program cannot detect all conformance problems.  In
+particular, it is a static test and does not actually call the
+functions in the libraries.  Lsblibchk will not find any behaviors
+which show themselves only at run\-time (for example, whether system
+libraries use the File Hierarchy Standard correctly, or what system
+functions do with various parameters which LSB applications are
+entitled to pass to them).
+.SH "AUTHORS"
+The contributors to the Linux Standard Base.
+.SH "REPORTING BUGS"
+Report bugs to <lsb-test@linuxbase.org>.
+.SH "BUGS"
+Should be able to specify where to write the journal file.
+.PP
+In the future, lsblibchk may be enhanced to have an option to check
+development libraries (that is, those used to create an application,
+not to run one).
+.SH "SEE ALSO"
+Linux Standard Base specification and other documents at
+http://www.linuxbase.org/
