@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.53 $
+ * This is $Revision: 1.54 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.54  2004/12/14 23:05:10  mats
+ * fix up the "other versions" message again
+ *
  * Revision 1.53  2004/12/14 16:46:52  mats
  * remove spurious blank lines in journal after library match
  *
@@ -204,7 +207,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.53 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.54 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -221,13 +224,13 @@ char *module = NULL;
 
 /* dump info on extra versions in library (maintainer mode) */
 void
-extra_vers(ElfFile * file, int index, int vers, char *vername)
+extra_vers(ElfFile * file, int index, int vers, char *msg, char *vername)
 {
 
-    printf("    %s also has version %s ",
+    printf("    %s has %s version %s ",
 	   ElfGetStringIndex(file, file->syms[index].st_name,
 			     file->symhdr->sh_link),
-	   file->versionnames[vers]);
+	   msg, file->versionnames[vers]);
     if (strlen(vername) > 0)
 	printf("(db %s)\n", vername);
     else
@@ -371,12 +374,12 @@ check_symbol(ElfFile *file, struct versym *entry)
       /* If the version in the libary is greater (newer) then warn if
          in maintainer mode */
       if (vers > i && (libchk_debug&LIBCHK_DEBUG_NEWVERS))
-          extra_vers(file, j, vers, entry->vername);
+          extra_vers(file, j, vers, "newer", entry->vername);
 
       /* If the version in the library is less (older) then warn if
          in maintainer mode. */
       if (vers < i && (libchk_debug&LIBCHK_DEBUG_OLDVERS))
-          extra_vers(file, j, vers, entry->vername);
+          extra_vers(file, j, vers, "older", entry->vername);
     }
   }
 
