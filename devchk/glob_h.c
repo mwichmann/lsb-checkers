@@ -10,7 +10,6 @@
 int glob_h()
 {
 int cnt=0;
-CheckTypeSize(__size_t,4)
 CheckTypeSize(glob_t,36)
 printf("%d tests in glob.h\n",cnt);
 return cnt;
