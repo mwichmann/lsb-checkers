@@ -31,14 +31,14 @@ checkhdrident( EI_MAG2, ELFMAG2 )
 checkhdrident( EI_MAG3, ELFMAG3 )
 #if defined(i386)
 checkhdrident( EI_CLASS, ELFCLASS32 )
-#elif defined( ia64 )
+#elif defined( __ia64__ )
 checkhdrident( EI_CLASS, ELFCLASS64 )
 #else
 fprintf(stderr, "EI_CLASS not checked!!\n");
 #endif
 #if defined(i386)
 checkhdrident( EI_DATA, ELFDATA2LSB )
-#elif defined( ia64 )
+#elif defined( __ia64__ )
 checkhdrident( EI_DATA, ELFDATA2LSB )
 #else
 fprintf(stderr, "EI_DATA not checked!!\n");
@@ -70,7 +70,7 @@ else
 
 #if defined(i386)
 checkhdrfield( e_machine, EM_386 )
-#elif defined( ia64 )
+#elif defined( __ia64__ )
 checkhdrfield( e_machine, EM_IA_64 )
 #else
 fprintf(stderr, "e_machine not checked!!\n");
@@ -84,7 +84,7 @@ checkhdrfield( e_version, EV_CURRENT )
 
 #if defined(i386)
 checkhdrfield( e_flags, 0 )
-#elif defined( ia64 )
+#elif defined( __ia64__ )
 checkhdrfield( e_flags, 0 ) /* Need to figure this out for Linux */
 #else
 fprintf(stderr, "e_flags not checked!!\n");

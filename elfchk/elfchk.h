@@ -10,7 +10,7 @@ struct versym {
 	};
 
 #if defined(__alpha) || defined(__alpha__) || \
-    defined(__ia64__) || defined(ia64)
+    defined(__ia64__)
 #define Elf32_Ehdr Elf64_Ehdr
 #define Elf32_Shdr Elf64_Shdr
 #define Elf32_Phdr Elf64_Phdr
