@@ -9,10 +9,10 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 sub
 dumpenum($$)
 {
-local($ttype,$tname)=@_;
+local($condition,$tname)=@_;
 
 $select = "SELECT DISTINCT * FROM RpmTag ";
-$select.= "WHERE Rgroup='".$ttype."' ";
+$select.= "WHERE ".$condition." ";
 $select.= "ORDER BY Rtag ";
 
 #print "$select\n";
@@ -30,7 +30,7 @@ printf "\t} %s;\n\n", $tname;
 
 print "/* Generated file - Do Not Edit */\n\n";
 
-dumpenum("Private","HdrPrivIndexTag");
-dumpenum("Signature","SigIndexTag");
-dumpenum("Header","RpmIndexTag");
+dumpenum("Rgroup='Private'","HdrPrivIndexTag");
+dumpenum("Rgroup='Signature'","SigIndexTag");
+dumpenum("Rgroup!='Private' AND Rgroup!='Signature' AND Rgroup!='Ignore'","RpmIndexTag");
 
