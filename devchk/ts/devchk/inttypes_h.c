@@ -37,6 +37,8 @@ CheckTypeSize(imaxdiv_t,16, 6898, 10)
 CheckTypeSize(imaxdiv_t,16, 6898, 9)
 #elif __s390x__
 CheckTypeSize(imaxdiv_t,16, 6898, 12)
+#elif __x86_64__
+CheckTypeSize(imaxdiv_t,16, 6898, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6898,0);
 Msg("Find size of imaxdiv_t (6898)\n");
@@ -62,6 +64,8 @@ CheckTypeSize(uint,4, 9265, 6)
 CheckTypeSize(uint,4, 9265, 9)
 #elif __s390x__
 CheckTypeSize(uint,4, 9265, 12)
+#elif __x86_64__
+CheckTypeSize(uint,4, 9265, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9265,0);
 Msg("Find size of uint (9265)\n");
@@ -79,6 +83,8 @@ CheckTypeSize(uint8_t,1, 9270, 10)
 CheckTypeSize(uint8_t,1, 9270, 9)
 #elif __s390x__
 CheckTypeSize(uint8_t,1, 9270, 12)
+#elif __x86_64__
+CheckTypeSize(uint8_t,1, 9270, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9270,0);
 Msg("Find size of uint8_t (9270)\n");
@@ -96,6 +102,8 @@ CheckTypeSize(uint16_t,2, 9271, 10)
 CheckTypeSize(uint16_t,2, 9271, 9)
 #elif __s390x__
 CheckTypeSize(uint16_t,2, 9271, 12)
+#elif __x86_64__
+CheckTypeSize(uint16_t,2, 9271, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9271,0);
 Msg("Find size of uint16_t (9271)\n");
@@ -113,6 +121,8 @@ CheckTypeSize(uint32_t,4, 9272, 10)
 CheckTypeSize(uint32_t,4, 9272, 9)
 #elif __s390x__
 CheckTypeSize(uint32_t,4, 9272, 12)
+#elif __x86_64__
+CheckTypeSize(uint32_t,4, 9272, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9272,0);
 Msg("Find size of uint32_t (9272)\n");
@@ -134,6 +144,8 @@ CheckTypeSize(uint64_t,8, 10176, 10)
 CheckTypeSize(uint64_t,8, 10176, 9)
 #elif __s390x__
 CheckTypeSize(uint64_t,8, 10176, 12)
+#elif __x86_64__
+CheckTypeSize(uint64_t,8, 10176, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10176,0);
 Msg("Find size of uint64_t (10176)\n");
@@ -185,6 +197,18 @@ CheckTypeSize(uintptr_t,8, 10508, 9)
 
 #if __s390__ && !__s390x__
 CheckTypeSize(uintptr_t,4, 10509, 10)
+#endif
+
+#if __x86_64__
+CheckTypeSize(intmax_t,8, 10768, 11)
+#endif
+
+#if __x86_64__
+CheckTypeSize(uintptr_t,8, 10769, 11)
+#endif
+
+#if __x86_64__
+CheckTypeSize(uintmax_t,8, 10770, 11)
 #endif
 
 #ifdef TET_TEST

@@ -49,6 +49,10 @@ CheckOffset(struct utimbuf,modtime,8,9,30206)
 CheckTypeSize(struct utimbuf,16, 7023, 12)
 CheckMemberSize(struct utimbuf,modtime,8,12,30206)
 CheckOffset(struct utimbuf,modtime,8,12,30206)
+#elif __x86_64__
+CheckTypeSize(struct utimbuf,16, 7023, 11)
+CheckMemberSize(struct utimbuf,modtime,8,11,30206)
+CheckOffset(struct utimbuf,modtime,8,11,30206)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7023,0);
 Msg("Find size of utimbuf (7023)\n");

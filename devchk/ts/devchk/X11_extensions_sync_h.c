@@ -39,6 +39,8 @@ CheckTypeSize(XSyncSystemCounter,16, 8615, 10)
 CheckTypeSize(XSyncSystemCounter,24, 8615, 9)
 #elif __s390x__
 CheckTypeSize(XSyncSystemCounter,24, 8615, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncSystemCounter,24, 8615, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8615,0);
 Msg("Find size of XSyncSystemCounter (8615)\n");
@@ -56,6 +58,8 @@ CheckTypeSize(XSyncTrigger,20, 8617, 10)
 CheckTypeSize(XSyncTrigger,24, 8617, 9)
 #elif __s390x__
 CheckTypeSize(XSyncTrigger,24, 8617, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncTrigger,24, 8617, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8617,0);
 Msg("Find size of XSyncTrigger (8617)\n");
@@ -73,6 +77,8 @@ CheckTypeSize(XSyncWaitCondition,28, 8619, 10)
 CheckTypeSize(XSyncWaitCondition,32, 8619, 9)
 #elif __s390x__
 CheckTypeSize(XSyncWaitCondition,32, 8619, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncWaitCondition,32, 8619, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8619,0);
 Msg("Find size of XSyncWaitCondition (8619)\n");
@@ -90,6 +96,8 @@ CheckTypeSize(XSyncAlarmAttributes,36, 8621, 10)
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 9)
 #elif __s390x__
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncAlarmAttributes,40, 8621, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8621,0);
 Msg("Find size of XSyncAlarmAttributes (8621)\n");
@@ -107,6 +115,8 @@ CheckTypeSize(XSyncCounter,4, 8609, 10)
 CheckTypeSize(XSyncCounter,8, 8609, 9)
 #elif __s390x__
 CheckTypeSize(XSyncCounter,8, 8609, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncCounter,8, 8609, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8609,0);
 Msg("Find size of XSyncCounter (8609)\n");
@@ -124,6 +134,8 @@ CheckTypeSize(XSyncAlarm,4, 8610, 10)
 CheckTypeSize(XSyncAlarm,8, 8610, 9)
 #elif __s390x__
 CheckTypeSize(XSyncAlarm,8, 8610, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncAlarm,8, 8610, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8610,0);
 Msg("Find size of XSyncAlarm (8610)\n");
@@ -141,6 +153,8 @@ CheckTypeSize(XSyncValue,8, 8612, 10)
 CheckTypeSize(XSyncValue,8, 8612, 9)
 #elif __s390x__
 CheckTypeSize(XSyncValue,8, 8612, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncValue,8, 8612, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8612,0);
 Msg("Find size of XSyncValue (8612)\n");
@@ -158,6 +172,8 @@ CheckTypeSize(XSyncValueType,4, 8964, 10)
 CheckTypeSize(XSyncValueType,4, 8964, 9)
 #elif __s390x__
 CheckTypeSize(XSyncValueType,4, 8964, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncValueType,4, 8964, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8964,0);
 Msg("Find size of XSyncValueType (8964)\n");
@@ -175,6 +191,8 @@ CheckTypeSize(XSyncTestType,4, 8966, 10)
 CheckTypeSize(XSyncTestType,4, 8966, 9)
 #elif __s390x__
 CheckTypeSize(XSyncTestType,4, 8966, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncTestType,4, 8966, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8966,0);
 Msg("Find size of XSyncTestType (8966)\n");
@@ -192,6 +210,8 @@ CheckTypeSize(XSyncAlarmState,4, 8968, 10)
 CheckTypeSize(XSyncAlarmState,4, 8968, 9)
 #elif __s390x__
 CheckTypeSize(XSyncAlarmState,4, 8968, 12)
+#elif __x86_64__
+CheckTypeSize(XSyncAlarmState,4, 8968, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8968,0);
 Msg("Find size of XSyncAlarmState (8968)\n");

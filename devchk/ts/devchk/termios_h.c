@@ -4073,6 +4073,14 @@ CheckMemberSize(struct winsize,ws_xpixel,2,12,34489)
 CheckOffset(struct winsize,ws_xpixel,4,12,34489)
 CheckMemberSize(struct winsize,ws_ypixel,2,12,34490)
 CheckOffset(struct winsize,ws_ypixel,6,12,34490)
+#elif __x86_64__
+CheckTypeSize(struct winsize,8, 10301, 11)
+CheckMemberSize(struct winsize,ws_col,2,11,34488)
+CheckOffset(struct winsize,ws_col,2,11,34488)
+CheckMemberSize(struct winsize,ws_xpixel,2,11,34489)
+CheckOffset(struct winsize,ws_xpixel,4,11,34489)
+CheckMemberSize(struct winsize,ws_ypixel,2,11,34490)
+CheckOffset(struct winsize,ws_ypixel,6,11,34490)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10301,0);
 Msg("Find size of winsize (10301)\n");
@@ -4090,6 +4098,8 @@ CheckTypeSize(speed_t,4, 9186, 10)
 CheckTypeSize(speed_t,4, 9186, 9)
 #elif __s390x__
 CheckTypeSize(speed_t,4, 9186, 12)
+#elif __x86_64__
+CheckTypeSize(speed_t,4, 9186, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 Msg("Find size of speed_t (9186)\n");
@@ -4107,6 +4117,8 @@ CheckTypeSize(cc_t,1, 10206, 10)
 CheckTypeSize(cc_t,1, 10206, 9)
 #elif __s390x__
 CheckTypeSize(cc_t,1, 10206, 12)
+#elif __x86_64__
+CheckTypeSize(cc_t,1, 10206, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
 Msg("Find size of cc_t (10206)\n");
@@ -4124,6 +4136,8 @@ CheckTypeSize(tcflag_t,4, 10207, 10)
 CheckTypeSize(tcflag_t,4, 10207, 9)
 #elif __s390x__
 CheckTypeSize(tcflag_t,4, 10207, 12)
+#elif __x86_64__
+CheckTypeSize(tcflag_t,4, 10207, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10207,0);
 Msg("Find size of tcflag_t (10207)\n");
@@ -4227,6 +4241,22 @@ CheckMemberSize(struct termios,c_ispeed,4,12,34274)
 CheckOffset(struct termios,c_ispeed,52,12,34274)
 CheckMemberSize(struct termios,c_ospeed,4,12,34275)
 CheckOffset(struct termios,c_ospeed,56,12,34275)
+#elif __x86_64__
+CheckTypeSize(struct termios,60, 9187, 11)
+CheckMemberSize(struct termios,c_oflag,4,11,34269)
+CheckOffset(struct termios,c_oflag,4,11,34269)
+CheckMemberSize(struct termios,c_cflag,4,11,34270)
+CheckOffset(struct termios,c_cflag,8,11,34270)
+CheckMemberSize(struct termios,c_lflag,4,11,34271)
+CheckOffset(struct termios,c_lflag,12,11,34271)
+CheckMemberSize(struct termios,c_line,1,11,34272)
+CheckOffset(struct termios,c_line,16,11,34272)
+CheckMemberSize(struct termios,c_cc,32,11,34273)
+CheckOffset(struct termios,c_cc,17,11,34273)
+CheckMemberSize(struct termios,c_ispeed,4,11,34274)
+CheckOffset(struct termios,c_ispeed,52,11,34274)
+CheckMemberSize(struct termios,c_ospeed,4,11,34275)
+CheckOffset(struct termios,c_ospeed,56,11,34275)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9187,0);
 Msg("Find size of termios (9187)\n");

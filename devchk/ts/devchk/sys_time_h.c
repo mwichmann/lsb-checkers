@@ -77,6 +77,10 @@ CheckOffset(struct timezone,tz_dsttime,4,9,33507)
 CheckTypeSize(struct timezone,8, 9855, 12)
 CheckMemberSize(struct timezone,tz_dsttime,4,12,33507)
 CheckOffset(struct timezone,tz_dsttime,4,12,33507)
+#elif __x86_64__
+CheckTypeSize(struct timezone,8, 9855, 11)
+CheckMemberSize(struct timezone,tz_dsttime,4,11,33507)
+CheckOffset(struct timezone,tz_dsttime,4,11,33507)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9855,0);
 Msg("Find size of timezone (9855)\n");
@@ -106,6 +110,10 @@ CheckOffset(struct itimerval,it_value,16,9,33511)
 CheckTypeSize(struct itimerval,32, 9861, 12)
 CheckMemberSize(struct itimerval,it_value,16,12,33511)
 CheckOffset(struct itimerval,it_value,16,12,33511)
+#elif __x86_64__
+CheckTypeSize(struct itimerval,32, 9861, 11)
+CheckMemberSize(struct itimerval,it_value,16,11,33511)
+CheckOffset(struct itimerval,it_value,16,11,33511)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9861,0);
 Msg("Find size of itimerval (9861)\n");
@@ -135,6 +143,10 @@ CheckOffset(struct timespec,tv_nsec,8,9,33503)
 CheckTypeSize(struct timespec,16, 7018, 12)
 CheckMemberSize(struct timespec,tv_nsec,8,12,33503)
 CheckOffset(struct timespec,tv_nsec,8,12,33503)
+#elif __x86_64__
+CheckTypeSize(struct timespec,16, 7018, 11)
+CheckMemberSize(struct timespec,tv_nsec,8,11,33503)
+CheckOffset(struct timespec,tv_nsec,8,11,33503)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7018,0);
 Msg("Find size of timespec (7018)\n");
@@ -164,6 +176,10 @@ CheckOffset(struct timeval,tv_usec,8,9,33505)
 CheckTypeSize(struct timeval,16, 9858, 12)
 CheckMemberSize(struct timeval,tv_usec,8,12,33505)
 CheckOffset(struct timeval,tv_usec,8,12,33505)
+#elif __x86_64__
+CheckTypeSize(struct timeval,16, 9858, 11)
+CheckMemberSize(struct timeval,tv_usec,8,11,33505)
+CheckOffset(struct timeval,tv_usec,8,11,33505)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9858,0);
 Msg("Find size of timeval (9858)\n");

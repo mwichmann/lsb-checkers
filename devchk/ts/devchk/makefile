@@ -25,7 +25,6 @@ OBJS = hdrchk.o \
 	dlfcn_h.o \
 	errno_h.o \
 	fcntl_h.o \
-	features_h.o \
 	fmtmsg_h.o \
 	fnmatch_h.o \
 	ftw_h.o \
@@ -115,7 +114,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L/usr/X11R6/lib -lXt -lX11 
+	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c

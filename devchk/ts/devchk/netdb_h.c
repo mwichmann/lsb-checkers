@@ -359,6 +359,14 @@ CheckMemberSize(struct servent,s_port,4,12,33735)
 CheckOffset(struct servent,s_port,16,12,33735)
 CheckMemberSize(struct servent,s_proto,8,12,33736)
 CheckOffset(struct servent,s_proto,24,12,33736)
+#elif __x86_64__
+CheckTypeSize(struct servent,32, 10134, 11)
+CheckMemberSize(struct servent,s_aliases,8,11,33734)
+CheckOffset(struct servent,s_aliases,8,11,33734)
+CheckMemberSize(struct servent,s_port,4,11,33735)
+CheckOffset(struct servent,s_port,16,11,33735)
+CheckMemberSize(struct servent,s_proto,8,11,33736)
+CheckOffset(struct servent,s_proto,24,11,33736)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10134,0);
 Msg("Find size of servent (10134)\n");
@@ -424,6 +432,16 @@ CheckMemberSize(struct hostent,h_length,4,12,33740)
 CheckOffset(struct hostent,h_length,20,12,33740)
 CheckMemberSize(struct hostent,h_addr_list,8,12,33741)
 CheckOffset(struct hostent,h_addr_list,24,12,33741)
+#elif __x86_64__
+CheckTypeSize(struct hostent,32, 10136, 11)
+CheckMemberSize(struct hostent,h_aliases,8,11,33738)
+CheckOffset(struct hostent,h_aliases,8,11,33738)
+CheckMemberSize(struct hostent,h_addrtype,4,11,33739)
+CheckOffset(struct hostent,h_addrtype,16,11,33739)
+CheckMemberSize(struct hostent,h_length,4,11,33740)
+CheckOffset(struct hostent,h_length,20,11,33740)
+CheckMemberSize(struct hostent,h_addr_list,8,11,33741)
+CheckOffset(struct hostent,h_addr_list,24,11,33741)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10136,0);
 Msg("Find size of hostent (10136)\n");
@@ -467,6 +485,12 @@ CheckMemberSize(struct protoent,p_aliases,8,12,33743)
 CheckOffset(struct protoent,p_aliases,8,12,33743)
 CheckMemberSize(struct protoent,p_proto,4,12,33744)
 CheckOffset(struct protoent,p_proto,16,12,33744)
+#elif __x86_64__
+CheckTypeSize(struct protoent,24, 10139, 11)
+CheckMemberSize(struct protoent,p_aliases,8,11,33743)
+CheckOffset(struct protoent,p_aliases,8,11,33743)
+CheckMemberSize(struct protoent,p_proto,4,11,33744)
+CheckOffset(struct protoent,p_proto,16,11,33744)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10139,0);
 Msg("Find size of protoent (10139)\n");
@@ -520,6 +544,14 @@ CheckMemberSize(struct netent,n_addrtype,4,12,33747)
 CheckOffset(struct netent,n_addrtype,16,12,33747)
 CheckMemberSize(struct netent,n_net,4,12,33748)
 CheckOffset(struct netent,n_net,20,12,33748)
+#elif __x86_64__
+CheckTypeSize(struct netent,24, 10141, 11)
+CheckMemberSize(struct netent,n_aliases,8,11,33746)
+CheckOffset(struct netent,n_aliases,8,11,33746)
+CheckMemberSize(struct netent,n_addrtype,4,11,33747)
+CheckOffset(struct netent,n_addrtype,16,11,33747)
+CheckMemberSize(struct netent,n_net,4,11,33748)
+CheckOffset(struct netent,n_net,20,11,33748)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10141,0);
 Msg("Find size of netent (10141)\n");
@@ -621,6 +653,22 @@ CheckMemberSize(struct addrinfo,ai_canonname,8,12,33700)
 CheckOffset(struct addrinfo,ai_canonname,32,12,33700)
 CheckMemberSize(struct addrinfo,ai_next,8,12,33701)
 CheckOffset(struct addrinfo,ai_next,40,12,33701)
+#elif __x86_64__
+CheckTypeSize(struct addrinfo,48, 10125, 11)
+CheckMemberSize(struct addrinfo,ai_family,4,11,33695)
+CheckOffset(struct addrinfo,ai_family,4,11,33695)
+CheckMemberSize(struct addrinfo,ai_socktype,4,11,33696)
+CheckOffset(struct addrinfo,ai_socktype,8,11,33696)
+CheckMemberSize(struct addrinfo,ai_protocol,4,11,33697)
+CheckOffset(struct addrinfo,ai_protocol,12,11,33697)
+CheckMemberSize(struct addrinfo,ai_addrlen,4,11,33698)
+CheckOffset(struct addrinfo,ai_addrlen,16,11,33698)
+CheckMemberSize(struct addrinfo,ai_addr,8,11,33699)
+CheckOffset(struct addrinfo,ai_addr,24,11,33699)
+CheckMemberSize(struct addrinfo,ai_canonname,8,11,33700)
+CheckOffset(struct addrinfo,ai_canonname,32,11,33700)
+CheckMemberSize(struct addrinfo,ai_next,8,11,33701)
+CheckOffset(struct addrinfo,ai_next,40,11,33701)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10125,0);
 Msg("Find size of addrinfo (10125)\n");

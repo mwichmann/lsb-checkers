@@ -47,6 +47,14 @@ Msg( "Error: Constant not found: NGREG\n");
 cnt++;
 #endif
 
+#elif __x86_64__
+#ifdef NGREG
+	CompareConstant(NGREG,23,4929,architecture)
+#else
+Msg( "Error: Constant not found: NGREG\n");
+cnt++;
+#endif
+
 #elif __s390__ && !__s390x__
 #ifdef NGREG
 	CompareConstant(NGREG,36,4929,architecture)
@@ -105,12 +113,62 @@ CheckMemberSize(struct pt_regs,result,4,6,40178)
 CheckOffset(struct pt_regs,result,172,6,40178)
 #endif
 
+#if __x86_64__
+CheckTypeSize(struct _libc_fpxreg,16, 10799, 11)
+CheckMemberSize(struct _libc_fpxreg,significand,8,11,40467)
+CheckOffset(struct _libc_fpxreg,significand,0,11,40467)
+CheckMemberSize(struct _libc_fpxreg,exponent,2,11,40468)
+CheckOffset(struct _libc_fpxreg,exponent,8,11,40468)
+CheckMemberSize(struct _libc_fpxreg,padding,6,11,40469)
+CheckOffset(struct _libc_fpxreg,padding,10,11,40469)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(struct pt_regs,176, 10823, 9)
+CheckMemberSize(struct pt_regs,gpr,128,9,40589)
+CheckOffset(struct pt_regs,gpr,0,9,40589)
+CheckMemberSize(struct pt_regs,nip,4,9,40590)
+CheckOffset(struct pt_regs,nip,0,9,40590)
+CheckMemberSize(struct pt_regs,msr,4,9,40591)
+CheckOffset(struct pt_regs,msr,0,9,40591)
+CheckMemberSize(struct pt_regs,orig_gpr3,4,9,40592)
+CheckOffset(struct pt_regs,orig_gpr3,0,9,40592)
+CheckMemberSize(struct pt_regs,link,4,9,40594)
+CheckOffset(struct pt_regs,link,0,9,40594)
+CheckMemberSize(struct pt_regs,xer,4,9,40595)
+CheckOffset(struct pt_regs,xer,0,9,40595)
+CheckMemberSize(struct pt_regs,ccr,4,9,40596)
+CheckOffset(struct pt_regs,ccr,0,9,40596)
+CheckMemberSize(struct pt_regs,mq,4,9,40597)
+CheckOffset(struct pt_regs,mq,0,9,40597)
+CheckMemberSize(struct pt_regs,trap,4,9,40598)
+CheckOffset(struct pt_regs,trap,0,9,40598)
+CheckMemberSize(struct pt_regs,dar,4,9,40599)
+CheckOffset(struct pt_regs,dar,0,9,40599)
+CheckMemberSize(struct pt_regs,dsisr,4,9,40600)
+CheckOffset(struct pt_regs,dsisr,0,9,40600)
+CheckMemberSize(struct pt_regs,result,4,9,40601)
+CheckOffset(struct pt_regs,result,0,9,40601)
+#endif
+
 #if __i386__
 CheckTypeSize(greg_t,4, 10222, 2)
 #endif
 
+#if __x86_64__
+CheckTypeSize(greg_t,4, 10794, 11)
+#endif
+
 #if __i386__
 CheckTypeSize(gregset_t,76, 10224, 2)
+#endif
+
+#if __x86_64__
+CheckTypeSize(gregset_t,92, 10796, 11)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(elf_gregset_t,180, 10827, 9)
 #endif
 
 #if __i386__
@@ -165,11 +223,46 @@ CheckTypeSize(fpregset_t,136, 10569, 12)
 CheckTypeSize(fpregset_t,136, 10586, 10)
 #endif
 
+#if __x86_64__
+CheckTypeSize(struct _libc_fpstate,112, 10801, 11)
+CheckMemberSize(struct _libc_fpstate,cwd,2,11,40471)
+CheckOffset(struct _libc_fpstate,cwd,0,11,40471)
+CheckMemberSize(struct _libc_fpstate,swd,2,11,40472)
+CheckOffset(struct _libc_fpstate,swd,2,11,40472)
+CheckMemberSize(struct _libc_fpstate,ftw,2,11,40473)
+CheckOffset(struct _libc_fpstate,ftw,4,11,40473)
+CheckMemberSize(struct _libc_fpstate,fop,2,11,40474)
+CheckOffset(struct _libc_fpstate,fop,6,11,40474)
+CheckMemberSize(struct _libc_fpstate,rip,8,11,40475)
+CheckOffset(struct _libc_fpstate,rip,8,11,40475)
+CheckMemberSize(struct _libc_fpstate,rdp,8,11,40476)
+CheckOffset(struct _libc_fpstate,rdp,16,11,40476)
+CheckMemberSize(struct _libc_fpstate,mxcsr,4,11,40477)
+CheckOffset(struct _libc_fpstate,mxcsr,32,11,40477)
+CheckMemberSize(struct _libc_fpstate,mxcr_mask,4,11,40478)
+CheckOffset(struct _libc_fpstate,mxcr_mask,36,11,40478)
+CheckMemberSize(struct _libc_fpstate,_st,4,11,40479)
+CheckOffset(struct _libc_fpstate,_st,0,11,40479)
+CheckMemberSize(struct _libc_fpstate,_xmm,4,11,40480)
+CheckOffset(struct _libc_fpstate,_xmm,0,11,40480)
+CheckMemberSize(struct _libc_fpstate,padding,4,11,40481)
+CheckOffset(struct _libc_fpstate,padding,0,11,40481)
+#endif
+
+#if __x86_64__
+CheckTypeSize(fpregset_t,8, 10802, 11)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(elf_fpregset_t,264, 10830, 9)
+#endif
+
 #if __i386__
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390x__
 #elif __s390__ && !__s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
 Msg("Find size of anon-mcontext (10229)\n");
@@ -193,6 +286,10 @@ CheckTypeSize(mcontext_t,344, 10573, 12)
 
 #if __s390__ && !__s390x__
 CheckTypeSize(mcontext_t,272, 10588, 10)
+#endif
+
+#if __x86_64__
+CheckTypeSize(mcontext_t,88, 10798, 11)
 #endif
 
 #if __i386__
@@ -279,12 +376,38 @@ CheckOffset(struct ucontext,uc_sigmask,296,10,40375)
 CheckTypeSize(ucontext_t,424, 10590, 10)
 #endif
 
+#if __x86_64__
+CheckTypeSize(struct _libc_xmmreg,16, 10800, 11)
+CheckMemberSize(struct _libc_xmmreg,element,16,11,40470)
+CheckOffset(struct _libc_xmmreg,element,0,11,40470)
+#endif
+
+#if __x86_64__
+CheckTypeSize(struct ucontext,4, 10803, 11)
+CheckMemberSize(struct ucontext,uc_flags,4,11,40484)
+CheckOffset(struct ucontext,uc_flags,0,11,40484)
+CheckMemberSize(struct ucontext,uc_link,4,11,40485)
+CheckOffset(struct ucontext,uc_link,0,11,40485)
+CheckMemberSize(struct ucontext,uc_stack,4,11,40486)
+CheckOffset(struct ucontext,uc_stack,0,11,40486)
+CheckMemberSize(struct ucontext,uc_mcontext,4,11,40487)
+CheckOffset(struct ucontext,uc_mcontext,0,11,40487)
+CheckMemberSize(struct ucontext,uc_sigmask,4,11,40488)
+CheckOffset(struct ucontext,uc_sigmask,0,11,40488)
+CheckMemberSize(struct ucontext,__fpregs_mem,4,11,40489)
+CheckOffset(struct ucontext,__fpregs_mem,0,11,40489)
+#endif
+
+#if __x86_64__
+CheckTypeSize(ucontext_t,4, 10804, 11)
+#endif
+
 #if __s390x__
-CheckTypeSize(__psw_t,16, 10571, 12)
+CheckTypeSize(_psw_t,16, 10571, 12)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(__psw_t,8, 10581, 10)
+CheckTypeSize(_psw_t,8, 10581, 10)
 #endif
 
 #ifdef TET_TEST

@@ -39,6 +39,8 @@ CheckTypeSize(XSizeHints,72, 8301, 10)
 CheckTypeSize(XSizeHints,80, 8301, 9)
 #elif __s390x__
 CheckTypeSize(XSizeHints,80, 8301, 12)
+#elif __x86_64__
+CheckTypeSize(XSizeHints,80, 8301, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8301,0);
 Msg("Find size of XSizeHints (8301)\n");
@@ -56,6 +58,8 @@ CheckTypeSize(XWMHints,36, 8303, 10)
 CheckTypeSize(XWMHints,56, 8303, 9)
 #elif __s390x__
 CheckTypeSize(XWMHints,56, 8303, 12)
+#elif __x86_64__
+CheckTypeSize(XWMHints,56, 8303, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8303,0);
 Msg("Find size of XWMHints (8303)\n");
@@ -73,6 +77,8 @@ CheckTypeSize(XTextProperty,16, 8305, 10)
 CheckTypeSize(XTextProperty,32, 8305, 9)
 #elif __s390x__
 CheckTypeSize(XTextProperty,32, 8305, 12)
+#elif __x86_64__
+CheckTypeSize(XTextProperty,32, 8305, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8305,0);
 Msg("Find size of XTextProperty (8305)\n");
@@ -90,6 +96,8 @@ CheckTypeSize(XIconSize,24, 8309, 10)
 CheckTypeSize(XIconSize,24, 8309, 9)
 #elif __s390x__
 CheckTypeSize(XIconSize,24, 8309, 12)
+#elif __x86_64__
+CheckTypeSize(XIconSize,24, 8309, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8309,0);
 Msg("Find size of XIconSize (8309)\n");
@@ -107,6 +115,8 @@ CheckTypeSize(XClassHint,8, 8311, 10)
 CheckTypeSize(XClassHint,16, 8311, 9)
 #elif __s390x__
 CheckTypeSize(XClassHint,16, 8311, 12)
+#elif __x86_64__
+CheckTypeSize(XClassHint,16, 8311, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8311,0);
 Msg("Find size of XClassHint (8311)\n");
@@ -124,6 +134,8 @@ CheckTypeSize(XComposeStatus,8, 8313, 10)
 CheckTypeSize(XComposeStatus,16, 8313, 9)
 #elif __s390x__
 CheckTypeSize(XComposeStatus,16, 8313, 12)
+#elif __x86_64__
+CheckTypeSize(XComposeStatus,16, 8313, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8313,0);
 Msg("Find size of XComposeStatus (8313)\n");
@@ -141,6 +153,8 @@ CheckTypeSize(Region,4, 8314, 10)
 CheckTypeSize(Region,8, 8314, 9)
 #elif __s390x__
 CheckTypeSize(Region,8, 8314, 12)
+#elif __x86_64__
+CheckTypeSize(Region,8, 8314, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8314,0);
 Msg("Find size of Region (8314)\n");
@@ -158,6 +172,8 @@ CheckTypeSize(XVisualInfo,40, 8316, 10)
 CheckTypeSize(XVisualInfo,64, 8316, 9)
 #elif __s390x__
 CheckTypeSize(XVisualInfo,64, 8316, 12)
+#elif __x86_64__
+CheckTypeSize(XVisualInfo,64, 8316, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8316,0);
 Msg("Find size of XVisualInfo (8316)\n");
@@ -175,6 +191,8 @@ CheckTypeSize(XStandardColormap,40, 8318, 10)
 CheckTypeSize(XStandardColormap,80, 8318, 9)
 #elif __s390x__
 CheckTypeSize(XStandardColormap,80, 8318, 12)
+#elif __x86_64__
+CheckTypeSize(XStandardColormap,80, 8318, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8318,0);
 Msg("Find size of XStandardColormap (8318)\n");
@@ -192,6 +210,8 @@ CheckTypeSize(XContext,4, 8319, 10)
 CheckTypeSize(XContext,4, 8319, 9)
 #elif __s390x__
 CheckTypeSize(XContext,4, 8319, 12)
+#elif __x86_64__
+CheckTypeSize(XContext,4, 8319, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8319,0);
 Msg("Find size of XContext (8319)\n");
@@ -209,6 +229,8 @@ CheckTypeSize(XICCEncodingStyle,4, 8832, 10)
 CheckTypeSize(XICCEncodingStyle,4, 8832, 9)
 #elif __s390x__
 CheckTypeSize(XICCEncodingStyle,4, 8832, 12)
+#elif __x86_64__
+CheckTypeSize(XICCEncodingStyle,4, 8832, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8832,0);
 Msg("Find size of XICCEncodingStyle (8832)\n");

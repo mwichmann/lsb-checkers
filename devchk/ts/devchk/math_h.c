@@ -177,6 +177,10 @@ cnt++;
 /* No test for HUGE_VAL */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for NAN */
+#endif
+
 #if __i386__
 CheckTypeSize(struct exception,32, 10010, 2)
 CheckMemberSize(struct exception,type,4,2,32294)
@@ -247,6 +251,16 @@ CheckMemberSize(struct exception,arg2,8,12,32297)
 CheckOffset(struct exception,arg2,24,12,32297)
 CheckMemberSize(struct exception,retval,8,12,32298)
 CheckOffset(struct exception,retval,32,12,32298)
+#elif __x86_64__
+CheckTypeSize(struct exception,40, 10010, 11)
+CheckMemberSize(struct exception,name,8,11,32295)
+CheckOffset(struct exception,name,8,11,32295)
+CheckMemberSize(struct exception,arg1,8,11,32296)
+CheckOffset(struct exception,arg1,16,11,32296)
+CheckMemberSize(struct exception,arg2,8,11,32297)
+CheckOffset(struct exception,arg2,24,11,32297)
+CheckMemberSize(struct exception,retval,8,11,32298)
+CheckOffset(struct exception,retval,32,11,32298)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10010,0);
 Msg("Find size of exception (10010)\n");

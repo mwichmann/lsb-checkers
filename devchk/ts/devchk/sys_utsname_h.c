@@ -23,6 +23,16 @@ int pcnt=0;
 Msg("Checking data structures in sys/utsname.h\n");
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef SYS_NMLN
+	CompareConstant(SYS_NMLN,65,1728,architecture)
+#else
+Msg( "Error: Constant not found: SYS_NMLN\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(struct utsname,390, 7013, 2)
 CheckMemberSize(struct utsname,nodename,65,2,30178)
@@ -95,6 +105,18 @@ CheckMemberSize(struct utsname,machine,65,12,30181)
 CheckOffset(struct utsname,machine,260,12,30181)
 CheckMemberSize(struct utsname,domainname,65,12,34411)
 CheckOffset(struct utsname,domainname,325,12,34411)
+#elif __x86_64__
+CheckTypeSize(struct utsname,390, 7013, 11)
+CheckMemberSize(struct utsname,nodename,65,11,30178)
+CheckOffset(struct utsname,nodename,65,11,30178)
+CheckMemberSize(struct utsname,release,65,11,30179)
+CheckOffset(struct utsname,release,130,11,30179)
+CheckMemberSize(struct utsname,version,65,11,30180)
+CheckOffset(struct utsname,version,195,11,30180)
+CheckMemberSize(struct utsname,machine,65,11,30181)
+CheckOffset(struct utsname,machine,260,11,30181)
+CheckMemberSize(struct utsname,domainname,65,11,34411)
+CheckOffset(struct utsname,domainname,325,11,34411)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7013,0);
 Msg("Find size of utsname (7013)\n");

@@ -506,6 +506,10 @@ CheckOffset(struct pam_conv,appdata_ptr,8,9,34589)
 CheckTypeSize(struct pam_conv,16, 10352, 12)
 CheckMemberSize(struct pam_conv,appdata_ptr,8,12,34589)
 CheckOffset(struct pam_conv,appdata_ptr,8,12,34589)
+#elif __x86_64__
+CheckTypeSize(struct pam_conv,16, 10352, 11)
+CheckMemberSize(struct pam_conv,appdata_ptr,8,11,34589)
+CheckOffset(struct pam_conv,appdata_ptr,8,11,34589)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10352,0);
 Msg("Find size of pam_conv (10352)\n");
@@ -523,6 +527,8 @@ CheckTypeSize(pam_handle_t,4, 10354, 6)
 CheckTypeSize(pam_handle_t,4, 10354, 9)
 #elif __s390x__
 CheckTypeSize(pam_handle_t,4, 10354, 12)
+#elif __x86_64__
+CheckTypeSize(pam_handle_t,4, 10354, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10354,0);
 Msg("Find size of pam_handle_t (10354)\n");
@@ -554,6 +560,10 @@ CheckOffset(struct pam_message,msg,8,9,34585)
 CheckTypeSize(struct pam_message,16, 10356, 12)
 CheckMemberSize(struct pam_message,msg,8,12,34585)
 CheckOffset(struct pam_message,msg,8,12,34585)
+#elif __x86_64__
+CheckTypeSize(struct pam_message,16, 10356, 11)
+CheckMemberSize(struct pam_message,msg,8,11,34585)
+CheckOffset(struct pam_message,msg,8,11,34585)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10356,0);
 Msg("Find size of pam_message (10356)\n");
@@ -589,6 +599,10 @@ CheckOffset(struct pam_response,resp_retcode,8,9,34587)
 CheckTypeSize(struct pam_response,16, 10358, 12)
 CheckMemberSize(struct pam_response,resp_retcode,4,12,34587)
 CheckOffset(struct pam_response,resp_retcode,8,12,34587)
+#elif __x86_64__
+CheckTypeSize(struct pam_response,16, 10358, 11)
+CheckMemberSize(struct pam_response,resp_retcode,4,11,34587)
+CheckOffset(struct pam_response,resp_retcode,8,11,34587)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10358,0);
 Msg("Find size of pam_response (10358)\n");

@@ -100,7 +100,6 @@ tcnt+=dirent_h();
 tcnt+=dlfcn_h();
 tcnt+=errno_h();
 tcnt+=fcntl_h();
-tcnt+=features_h();
 tcnt+=fmtmsg_h();
 tcnt+=fnmatch_h();
 tcnt+=ftw_h();

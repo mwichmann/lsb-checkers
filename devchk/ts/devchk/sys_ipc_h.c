@@ -241,6 +241,22 @@ CheckMemberSize(struct ipc_perm,__unused2,8,12,40200)
 CheckOffset(struct ipc_perm,__unused2,40,12,40200)
 #endif
 
+#if __x86_64__
+CheckTypeSize(struct ipc_perm,48, 10787, 11)
+Msg("Missing member data for ipc_perm on x86-64\n");
+CheckOffset(struct ipc_perm,__key,0,11,40426)
+CheckOffset(struct ipc_perm,uid,0,11,40427)
+CheckOffset(struct ipc_perm,gid,0,11,40428)
+CheckOffset(struct ipc_perm,cuid,0,11,40429)
+CheckOffset(struct ipc_perm,cgid,0,11,40430)
+CheckOffset(struct ipc_perm,mode,0,11,40431)
+CheckOffset(struct ipc_perm,__pad1,0,11,40432)
+CheckOffset(struct ipc_perm,__seq,0,11,40433)
+CheckOffset(struct ipc_perm,__pad2,0,11,40434)
+CheckOffset(struct ipc_perm,__unused1,0,11,40435)
+CheckOffset(struct ipc_perm,__unused2,0,11,40436)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

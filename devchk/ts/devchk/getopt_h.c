@@ -23,6 +23,16 @@ int pcnt=0;
 Msg("Checking data structures in getopt.h\n");
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef no_argument
+	CompareConstant(no_argument,0,4378,architecture)
+#else
+Msg( "Error: Constant not found: no_argument\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(struct option,16, 10000, 2)
 CheckMemberSize(struct option,name,4,2,32258)
@@ -73,6 +83,14 @@ CheckMemberSize(struct option,flag,8,12,32260)
 CheckOffset(struct option,flag,16,12,32260)
 CheckMemberSize(struct option,val,4,12,32261)
 CheckOffset(struct option,val,24,12,32261)
+#elif __x86_64__
+CheckTypeSize(struct option,32, 10000, 11)
+CheckMemberSize(struct option,has_arg,4,11,32259)
+CheckOffset(struct option,has_arg,8,11,32259)
+CheckMemberSize(struct option,flag,8,11,32260)
+CheckOffset(struct option,flag,16,11,32260)
+CheckMemberSize(struct option,val,4,11,32261)
+CheckOffset(struct option,val,24,11,32261)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);
 Msg("Find size of option (10000)\n");

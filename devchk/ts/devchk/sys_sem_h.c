@@ -133,6 +133,12 @@ CheckMemberSize(struct sembuf,sem_op,2,12,30119)
 CheckOffset(struct sembuf,sem_op,2,12,30119)
 CheckMemberSize(struct sembuf,sem_flg,2,12,30120)
 CheckOffset(struct sembuf,sem_flg,4,12,30120)
+#elif __x86_64__
+CheckTypeSize(struct sembuf,6, 6982, 11)
+CheckMemberSize(struct sembuf,sem_op,2,11,30119)
+CheckOffset(struct sembuf,sem_op,2,11,30119)
+CheckMemberSize(struct sembuf,sem_flg,2,11,30120)
+CheckOffset(struct sembuf,sem_flg,4,11,30120)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
 Msg("Find size of sembuf (6982)\n");
@@ -244,6 +250,26 @@ CheckMemberSize(struct semid_ds,__unused3,8,12,40216)
 CheckOffset(struct semid_ds,__unused3,72,12,40216)
 CheckMemberSize(struct semid_ds,__unused4,8,12,40217)
 CheckOffset(struct semid_ds,__unused4,80,12,40217)
+#endif
+
+#if __x86_64__
+CheckTypeSize(struct semid_ds,64, 10791, 11)
+CheckMemberSize(struct semid_ds,sem_perm,4,11,40448)
+CheckOffset(struct semid_ds,sem_perm,0,11,40448)
+CheckMemberSize(struct semid_ds,sem_otime,4,11,40449)
+CheckOffset(struct semid_ds,sem_otime,0,11,40449)
+CheckMemberSize(struct semid_ds,__unused1,4,11,40450)
+CheckOffset(struct semid_ds,__unused1,0,11,40450)
+CheckMemberSize(struct semid_ds,sem_ctime,4,11,40451)
+CheckOffset(struct semid_ds,sem_ctime,0,11,40451)
+CheckMemberSize(struct semid_ds,__unused2,4,11,40452)
+CheckOffset(struct semid_ds,__unused2,0,11,40452)
+CheckMemberSize(struct semid_ds,sem_nsems,4,11,40453)
+CheckOffset(struct semid_ds,sem_nsems,0,11,40453)
+CheckMemberSize(struct semid_ds,__unused3,4,11,40454)
+CheckOffset(struct semid_ds,__unused3,0,11,40454)
+CheckMemberSize(struct semid_ds,__unused4,4,11,40455)
+CheckOffset(struct semid_ds,__unused4,0,11,40455)
 #endif
 
 #ifdef TET_TEST

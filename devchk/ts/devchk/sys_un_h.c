@@ -57,6 +57,10 @@ CheckOffset(struct sockaddr_un,sun_path,2,9,34486)
 CheckTypeSize(struct sockaddr_un,110, 9152, 12)
 CheckMemberSize(struct sockaddr_un,sun_path,108,12,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,12,34486)
+#elif __x86_64__
+CheckTypeSize(struct sockaddr_un,110, 9152, 11)
+CheckMemberSize(struct sockaddr_un,sun_path,108,11,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,11,34486)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9152,0);
 Msg("Find size of sockaddr_un (9152)\n");

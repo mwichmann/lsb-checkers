@@ -555,7 +555,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_DFL
-	CompareConstant(SIG_DFL,((__sighandler_t)0),3157,architecture)
+	CompareConstant(SIG_DFL,((sighandler_t)0),3157,architecture)
 #else
 Msg( "Error: Constant not found: SIG_DFL\n");
 cnt++;
@@ -565,7 +565,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_IGN
-	CompareConstant(SIG_IGN,((__sighandler_t)1),3158,architecture)
+	CompareConstant(SIG_IGN,((sighandler_t)1),3158,architecture)
 #else
 Msg( "Error: Constant not found: SIG_IGN\n");
 cnt++;
@@ -575,7 +575,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_ERR
-	CompareConstant(SIG_ERR,((__sighandler_t)-1),3159,architecture)
+	CompareConstant(SIG_ERR,((sighandler_t)-1),3159,architecture)
 #else
 Msg( "Error: Constant not found: SIG_ERR\n");
 cnt++;
@@ -727,6 +727,8 @@ CheckTypeSize(sig_atomic_t,4, 9092, 10)
 CheckTypeSize(sig_atomic_t,4, 9092, 9)
 #elif __s390x__
 CheckTypeSize(sig_atomic_t,4, 9092, 12)
+#elif __x86_64__
+CheckTypeSize(sig_atomic_t,4, 9092, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
@@ -758,6 +760,10 @@ CheckOffset(struct sigstack,ss_onstack,8,9,34195)
 CheckTypeSize(struct sigstack,16, 9315, 12)
 CheckMemberSize(struct sigstack,ss_onstack,4,12,34195)
 CheckOffset(struct sigstack,ss_onstack,8,12,34195)
+#elif __x86_64__
+CheckTypeSize(struct sigstack,16, 9315, 11)
+CheckMemberSize(struct sigstack,ss_onstack,4,11,34195)
+CheckOffset(struct sigstack,ss_onstack,8,11,34195)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
 Msg("Find size of sigstack (9315)\n");
@@ -766,21 +772,22 @@ Msg("Find size of sigstack (9315)\n");
 #if __powerpc64__
 #endif
 
+#if __s390__ && !__s390x__
+CheckTypeSize(_s390_regs_common,4, 10821, 10)
+#endif
+
+#if __no_sym__
+#endif
+
+#if __no_sym__
+CheckTypeSize(_s390_regs_common,4, 10838, )
+#endif
+
 #if __i386__
-CheckTypeSize(__sighandler_t,4, 6966, 2)
-#elif __ia64__
-CheckTypeSize(__sighandler_t,8, 6966, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__sighandler_t,4, 6966, 6)
-#elif __s390__ && !__s390x__
-CheckTypeSize(__sighandler_t,4, 6966, 10)
-#elif __powerpc64__
-CheckTypeSize(__sighandler_t,8, 6966, 9)
-#elif __s390x__
-CheckTypeSize(__sighandler_t,8, 6966, 12)
+CheckTypeSize(sighandler_t,4, 9374, 2)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6966,0);
-Msg("Find size of __sighandler_t (6966)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9374,0);
+Msg("Find size of sighandler_t (9374)\n");
 #endif
 
 #if __i386__
@@ -795,6 +802,8 @@ CheckTypeSize(sigval_t,4, 9320, 10)
 CheckTypeSize(sigval_t,8, 9320, 9)
 #elif __s390x__
 CheckTypeSize(sigval_t,8, 9320, 12)
+#elif __x86_64__
+CheckTypeSize(sigval_t,8, 9320, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
 Msg("Find size of sigval_t (9320)\n");
@@ -806,6 +815,7 @@ Msg("Find size of sigval_t (9320)\n");
 #elif __s390__ && !__s390x__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10189,0);
 Msg("Find size of anon-_sigev_un (10189)\n");
@@ -823,6 +833,8 @@ CheckTypeSize(sigevent_t,64, 10190, 10)
 CheckTypeSize(sigevent_t,64, 10190, 9)
 #elif __s390x__
 CheckTypeSize(sigevent_t,64, 10190, 12)
+#elif __x86_64__
+CheckTypeSize(sigevent_t,64, 10190, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
 Msg("Find size of sigevent_t (10190)\n");
@@ -840,6 +852,8 @@ CheckTypeSize(siginfo_t,128, 9099, 10)
 CheckTypeSize(siginfo_t,128, 9099, 9)
 #elif __s390x__
 CheckTypeSize(siginfo_t,128, 9099, 12)
+#elif __x86_64__
+CheckTypeSize(siginfo_t,128, 9099, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
 Msg("Find size of siginfo_t (9099)\n");
@@ -855,6 +869,8 @@ CheckTypeSize(sigset_t,128, 10163, 6)
 CheckTypeSize(sigset_t,128, 10163, 10)
 #elif __s390x__
 CheckTypeSize(sigset_t,128, 10163, 12)
+#elif __x86_64__
+CheckTypeSize(sigset_t,128, 10163, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
 Msg("Find size of sigset_t (10163)\n");
@@ -926,6 +942,15 @@ CheckMemberSize(struct sigaction,sa_mask,128,12,40313)
 CheckOffset(struct sigaction,sa_mask,24,12,40313)
 #endif
 
+#if __x86_64__
+CheckTypeSize(struct sigaction,152, 10773, 11)
+Msg("Missing member data for sigaction on x86-64\n");
+CheckOffset(struct sigaction,__sigaction_handler,0,11,40379)
+CheckOffset(struct sigaction,sa_mask,0,11,40380)
+CheckOffset(struct sigaction,sa_flags,0,11,40381)
+CheckOffset(struct sigaction,sa_restorer,0,11,40382)
+#endif
+
 #if __i386__
 CheckTypeSize(stack_t,12, 9314, 2)
 #elif __ia64__
@@ -936,6 +961,8 @@ CheckTypeSize(stack_t,12, 9314, 6)
 CheckTypeSize(stack_t,24, 9314, 12)
 #elif __s390__ && !__s390x__
 CheckTypeSize(stack_t,12, 9314, 10)
+#elif __x86_64__
+CheckTypeSize(stack_t,24, 9314, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
 Msg("Find size of stack_t (9314)\n");
@@ -975,6 +1002,32 @@ CheckMemberSize(struct _fpstate,padding,224,2,34245)
 CheckOffset(struct _fpstate,padding,400,2,34245)
 #endif
 
+#if __x86_64__
+CheckTypeSize(struct _fpstate,624, 10779, 11)
+CheckMemberSize(struct _fpstate,cwd,2,11,40387)
+CheckOffset(struct _fpstate,cwd,0,11,40387)
+CheckMemberSize(struct _fpstate,swd,2,11,40388)
+CheckOffset(struct _fpstate,swd,2,11,40388)
+CheckMemberSize(struct _fpstate,ftw,2,11,40389)
+CheckOffset(struct _fpstate,ftw,4,11,40389)
+CheckMemberSize(struct _fpstate,fop,2,11,40390)
+CheckOffset(struct _fpstate,fop,6,11,40390)
+CheckMemberSize(struct _fpstate,rip,8,11,40391)
+CheckOffset(struct _fpstate,rip,8,11,40391)
+CheckMemberSize(struct _fpstate,rdp,8,11,40392)
+CheckOffset(struct _fpstate,rdp,16,11,40392)
+CheckMemberSize(struct _fpstate,mxcsr,4,11,40393)
+CheckOffset(struct _fpstate,mxcsr,24,11,40393)
+CheckMemberSize(struct _fpstate,mxcr_mask,4,11,40394)
+CheckOffset(struct _fpstate,mxcr_mask,28,11,40394)
+CheckMemberSize(struct _fpstate,_st,1,11,40395)
+CheckOffset(struct _fpstate,_st,0,11,40395)
+CheckMemberSize(struct _fpstate,_xmm,1,11,40396)
+CheckOffset(struct _fpstate,_xmm,0,11,40396)
+CheckMemberSize(struct _fpstate,padding,96,11,40397)
+CheckOffset(struct _fpstate,padding,0,11,40397)
+#endif
+
 #if __i386__
 CheckTypeSize(struct _fpreg,10, 10199, 2)
 CheckMemberSize(struct _fpreg,exponent,2,2,34228)
@@ -999,6 +1052,38 @@ CheckOffset(struct _xmmreg,element,0,2,34242)
 CheckTypeSize(struct ia64_fpreg,16, 10338, 3)
 CheckMemberSize(struct ia64_fpreg,u,16,3,34581)
 CheckOffset(struct ia64_fpreg,u,0,3,34581)
+#endif
+
+#if __x86_64__
+CheckTypeSize(struct _fpxreg,16, 10776, 11)
+CheckMemberSize(struct _fpxreg,significand,8,11,40383)
+CheckOffset(struct _fpxreg,significand,0,11,40383)
+CheckMemberSize(struct _fpxreg,exponent,2,11,40384)
+CheckOffset(struct _fpxreg,exponent,8,11,40384)
+CheckMemberSize(struct _fpxreg,padding,6,11,40385)
+CheckOffset(struct _fpxreg,padding,10,11,40385)
+#endif
+
+#if __x86_64__
+CheckTypeSize(struct _xmmreg,16, 10778, 11)
+CheckMemberSize(struct _xmmreg,element,16,11,40386)
+CheckOffset(struct _xmmreg,element,0,11,40386)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(_s390_fp_regs,4, 10832, 10)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(_sigregs,4, 10834, 10)
+#endif
+
+#if __s390x__
+CheckTypeSize(_s390_fp_regs,4, 10840, 12)
+#endif
+
+#if __s390x__
+CheckTypeSize(_sigregs,4, 10842, 12)
 #endif
 
 #if __i386__
@@ -1121,6 +1206,104 @@ CheckMemberSize(struct sigcontext,oldmask,4,6,40164)
 CheckOffset(struct sigcontext,oldmask,24,6,40164)
 CheckMemberSize(struct sigcontext,regs,4,6,40165)
 CheckOffset(struct sigcontext,regs,28,6,40165)
+#endif
+
+#if __x86_64__
+CheckTypeSize(struct sigcontext,265, 10782, 11)
+CheckMemberSize(struct sigcontext,r8,8,11,40398)
+CheckOffset(struct sigcontext,r8,0,11,40398)
+CheckMemberSize(struct sigcontext,r9,8,11,40399)
+CheckOffset(struct sigcontext,r9,8,11,40399)
+CheckMemberSize(struct sigcontext,r10,8,11,40400)
+CheckOffset(struct sigcontext,r10,0,11,40400)
+CheckMemberSize(struct sigcontext,r11,8,11,40401)
+CheckOffset(struct sigcontext,r11,0,11,40401)
+CheckMemberSize(struct sigcontext,r12,8,11,40402)
+CheckOffset(struct sigcontext,r12,0,11,40402)
+CheckMemberSize(struct sigcontext,r13,8,11,40403)
+CheckOffset(struct sigcontext,r13,0,11,40403)
+CheckMemberSize(struct sigcontext,r14,8,11,40404)
+CheckOffset(struct sigcontext,r14,0,11,40404)
+CheckMemberSize(struct sigcontext,r15,8,11,40405)
+CheckOffset(struct sigcontext,r15,0,11,40405)
+CheckMemberSize(struct sigcontext,rdi,8,11,40406)
+CheckOffset(struct sigcontext,rdi,0,11,40406)
+CheckMemberSize(struct sigcontext,rsi,8,11,40407)
+CheckOffset(struct sigcontext,rsi,0,11,40407)
+CheckMemberSize(struct sigcontext,rbp,8,11,40408)
+CheckOffset(struct sigcontext,rbp,0,11,40408)
+CheckMemberSize(struct sigcontext,rbx,8,11,40409)
+CheckOffset(struct sigcontext,rbx,0,11,40409)
+CheckMemberSize(struct sigcontext,rdx,8,11,40410)
+CheckOffset(struct sigcontext,rdx,0,11,40410)
+CheckMemberSize(struct sigcontext,rax,8,11,40411)
+CheckOffset(struct sigcontext,rax,0,11,40411)
+CheckMemberSize(struct sigcontext,rcx,8,11,40412)
+CheckOffset(struct sigcontext,rcx,0,11,40412)
+CheckMemberSize(struct sigcontext,rsp,8,11,40413)
+CheckOffset(struct sigcontext,rsp,0,11,40413)
+CheckMemberSize(struct sigcontext,rip,8,11,40414)
+CheckOffset(struct sigcontext,rip,0,11,40414)
+CheckMemberSize(struct sigcontext,eflags,8,11,40415)
+CheckOffset(struct sigcontext,eflags,0,11,40415)
+CheckMemberSize(struct sigcontext,cs,2,11,40416)
+CheckOffset(struct sigcontext,cs,0,11,40416)
+CheckMemberSize(struct sigcontext,gs,2,11,40417)
+CheckOffset(struct sigcontext,gs,0,11,40417)
+CheckMemberSize(struct sigcontext,fs,2,11,40418)
+CheckOffset(struct sigcontext,fs,0,11,40418)
+CheckMemberSize(struct sigcontext,__pad0,2,11,40419)
+CheckOffset(struct sigcontext,__pad0,0,11,40419)
+CheckMemberSize(struct sigcontext,err,8,11,40420)
+CheckOffset(struct sigcontext,err,0,11,40420)
+CheckMemberSize(struct sigcontext,trapno,8,11,40421)
+CheckOffset(struct sigcontext,trapno,0,11,40421)
+CheckMemberSize(struct sigcontext,oldmask,8,11,40422)
+CheckOffset(struct sigcontext,oldmask,0,11,40422)
+CheckMemberSize(struct sigcontext,cr2,8,11,40423)
+CheckOffset(struct sigcontext,cr2,0,11,40423)
+CheckMemberSize(struct sigcontext,fpstate,8,11,40424)
+CheckOffset(struct sigcontext,fpstate,0,11,40424)
+CheckMemberSize(struct sigcontext,__reserved1,64,11,40425)
+CheckOffset(struct sigcontext,__reserved1,0,11,40425)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(struct sigcontext_struct,100, 10816, 9)
+CheckMemberSize(struct sigcontext_struct,_unused,16,9,40580)
+CheckOffset(struct sigcontext_struct,_unused,0,9,40580)
+CheckMemberSize(struct sigcontext_struct,signal,4,9,40581)
+CheckOffset(struct sigcontext_struct,signal,0,9,40581)
+CheckMemberSize(struct sigcontext_struct,handler,4,9,40582)
+CheckOffset(struct sigcontext_struct,handler,0,9,40582)
+CheckMemberSize(struct sigcontext_struct,oldmask,4,9,40583)
+CheckOffset(struct sigcontext_struct,oldmask,0,9,40583)
+CheckMemberSize(struct sigcontext_struct,regs,4,9,40584)
+CheckOffset(struct sigcontext_struct,regs,0,9,40584)
+CheckMemberSize(struct sigcontext_struct,gp_regs,4,9,40602)
+CheckOffset(struct sigcontext_struct,gp_regs,0,9,40602)
+CheckMemberSize(struct sigcontext_struct,fp_regs,4,9,40603)
+CheckOffset(struct sigcontext_struct,fp_regs,0,9,40603)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(struct sigcontext,100, 10817, 10)
+CheckMemberSize(struct sigcontext,oldmask,8,10,40608)
+CheckOffset(struct sigcontext,oldmask,0,10,40608)
+CheckMemberSize(struct sigcontext,sregs,4,10,40609)
+CheckOffset(struct sigcontext,sregs,8,10,40609)
+#endif
+
+#if __s390x__
+CheckTypeSize(struct sigcontext,100, 10818, 12)
+CheckMemberSize(struct sigcontext,oldmask,4,12,40617)
+CheckOffset(struct sigcontext,oldmask,0,12,40617)
+CheckMemberSize(struct sigcontext,sregs,4,12,40618)
+CheckOffset(struct sigcontext,sregs,0,12,40618)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(elf_greg_t,4, 10825, 9)
 #endif
 
 #ifdef TET_TEST

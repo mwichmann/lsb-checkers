@@ -146,6 +146,20 @@ CheckMemberSize(struct _ObjectPart,destroy_callbacks,8,12,34368)
 CheckOffset(struct _ObjectPart,destroy_callbacks,32,12,34368)
 CheckMemberSize(struct _ObjectPart,constraints,8,12,34369)
 CheckOffset(struct _ObjectPart,constraints,40,12,34369)
+#elif __x86_64__
+CheckTypeSize(struct _ObjectPart,48, 10261, 11)
+CheckMemberSize(struct _ObjectPart,widget_class,8,11,34364)
+CheckOffset(struct _ObjectPart,widget_class,8,11,34364)
+CheckMemberSize(struct _ObjectPart,parent,8,11,34365)
+CheckOffset(struct _ObjectPart,parent,16,11,34365)
+CheckMemberSize(struct _ObjectPart,xrm_name,4,11,34366)
+CheckOffset(struct _ObjectPart,xrm_name,24,11,34366)
+CheckMemberSize(struct _ObjectPart,being_destroyed,1,11,34367)
+CheckOffset(struct _ObjectPart,being_destroyed,28,11,34367)
+CheckMemberSize(struct _ObjectPart,destroy_callbacks,8,11,34368)
+CheckOffset(struct _ObjectPart,destroy_callbacks,32,11,34368)
+CheckMemberSize(struct _ObjectPart,constraints,8,11,34369)
+CheckOffset(struct _ObjectPart,constraints,40,11,34369)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10261,0);
 Msg("Find size of _ObjectPart (10261)\n");
@@ -163,6 +177,8 @@ CheckTypeSize(ObjectPart,28, 10264, 10)
 CheckTypeSize(ObjectPart,48, 10264, 9)
 #elif __s390x__
 CheckTypeSize(ObjectPart,48, 10264, 12)
+#elif __x86_64__
+CheckTypeSize(ObjectPart,48, 10264, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10264,0);
 Msg("Find size of ObjectPart (10264)\n");
@@ -192,6 +208,10 @@ CheckOffset(struct _ObjectRec,object,0,9,34409)
 CheckTypeSize(struct _ObjectRec,48, 10262, 12)
 Msg("Missing member data for _ObjectRec on S390X\n");
 CheckOffset(struct _ObjectRec,object,0,12,34409)
+#elif __x86_64__
+CheckTypeSize(struct _ObjectRec,48, 10262, 11)
+Msg("Missing member data for _ObjectRec on x86-64\n");
+CheckOffset(struct _ObjectRec,object,0,11,34409)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10262,0);
 Msg("Find size of _ObjectRec (10262)\n");
@@ -209,6 +229,8 @@ CheckTypeSize(ObjectRec,28, 10263, 10)
 CheckTypeSize(ObjectRec,48, 10263, 9)
 #elif __s390x__
 CheckTypeSize(ObjectRec,48, 10263, 12)
+#elif __x86_64__
+CheckTypeSize(ObjectRec,48, 10263, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10263,0);
 Msg("Find size of ObjectRec (10263)\n");
@@ -538,6 +560,70 @@ CheckMemberSize(struct _ObjectClassPart,obj14,8,12,34400)
 CheckOffset(struct _ObjectClassPart,obj14,208,12,34400)
 CheckMemberSize(struct _ObjectClassPart,extension,8,12,34401)
 CheckOffset(struct _ObjectClassPart,extension,216,12,34401)
+#elif __x86_64__
+CheckTypeSize(struct _ObjectClassPart,224, 10265, 11)
+CheckMemberSize(struct _ObjectClassPart,class_name,8,11,34371)
+CheckOffset(struct _ObjectClassPart,class_name,8,11,34371)
+CheckMemberSize(struct _ObjectClassPart,widget_size,4,11,34372)
+CheckOffset(struct _ObjectClassPart,widget_size,16,11,34372)
+CheckMemberSize(struct _ObjectClassPart,class_initialize,8,11,34373)
+CheckOffset(struct _ObjectClassPart,class_initialize,24,11,34373)
+CheckMemberSize(struct _ObjectClassPart,class_part_initialize,8,11,34374)
+CheckOffset(struct _ObjectClassPart,class_part_initialize,32,11,34374)
+CheckMemberSize(struct _ObjectClassPart,class_inited,1,11,34375)
+CheckOffset(struct _ObjectClassPart,class_inited,40,11,34375)
+CheckMemberSize(struct _ObjectClassPart,initialize,8,11,34376)
+CheckOffset(struct _ObjectClassPart,initialize,48,11,34376)
+CheckMemberSize(struct _ObjectClassPart,initialize_hook,8,11,34377)
+CheckOffset(struct _ObjectClassPart,initialize_hook,56,11,34377)
+CheckMemberSize(struct _ObjectClassPart,obj1,8,11,34378)
+CheckOffset(struct _ObjectClassPart,obj1,64,11,34378)
+CheckMemberSize(struct _ObjectClassPart,obj2,8,11,34379)
+CheckOffset(struct _ObjectClassPart,obj2,72,11,34379)
+CheckMemberSize(struct _ObjectClassPart,obj3,4,11,34380)
+CheckOffset(struct _ObjectClassPart,obj3,80,11,34380)
+CheckMemberSize(struct _ObjectClassPart,resources,8,11,34381)
+CheckOffset(struct _ObjectClassPart,resources,88,11,34381)
+CheckMemberSize(struct _ObjectClassPart,num_resources,4,11,34382)
+CheckOffset(struct _ObjectClassPart,num_resources,96,11,34382)
+CheckMemberSize(struct _ObjectClassPart,xrm_class,4,11,34383)
+CheckOffset(struct _ObjectClassPart,xrm_class,100,11,34383)
+CheckMemberSize(struct _ObjectClassPart,obj4,1,11,34384)
+CheckOffset(struct _ObjectClassPart,obj4,104,11,34384)
+CheckMemberSize(struct _ObjectClassPart,obj5,1,11,34385)
+CheckOffset(struct _ObjectClassPart,obj5,105,11,34385)
+CheckMemberSize(struct _ObjectClassPart,obj6,1,11,34386)
+CheckOffset(struct _ObjectClassPart,obj6,106,11,34386)
+CheckMemberSize(struct _ObjectClassPart,obj7,1,11,34387)
+CheckOffset(struct _ObjectClassPart,obj7,107,11,34387)
+CheckMemberSize(struct _ObjectClassPart,destroy,8,11,34388)
+CheckOffset(struct _ObjectClassPart,destroy,112,11,34388)
+CheckMemberSize(struct _ObjectClassPart,obj8,8,11,34389)
+CheckOffset(struct _ObjectClassPart,obj8,120,11,34389)
+CheckMemberSize(struct _ObjectClassPart,obj9,8,11,34390)
+CheckOffset(struct _ObjectClassPart,obj9,128,11,34390)
+CheckMemberSize(struct _ObjectClassPart,set_values,8,11,34391)
+CheckOffset(struct _ObjectClassPart,set_values,136,11,34391)
+CheckMemberSize(struct _ObjectClassPart,set_values_hook,8,11,34392)
+CheckOffset(struct _ObjectClassPart,set_values_hook,144,11,34392)
+CheckMemberSize(struct _ObjectClassPart,obj10,8,11,34393)
+CheckOffset(struct _ObjectClassPart,obj10,152,11,34393)
+CheckMemberSize(struct _ObjectClassPart,get_values_hook,8,11,34394)
+CheckOffset(struct _ObjectClassPart,get_values_hook,160,11,34394)
+CheckMemberSize(struct _ObjectClassPart,obj11,8,11,34395)
+CheckOffset(struct _ObjectClassPart,obj11,168,11,34395)
+CheckMemberSize(struct _ObjectClassPart,version,8,11,34396)
+CheckOffset(struct _ObjectClassPart,version,176,11,34396)
+CheckMemberSize(struct _ObjectClassPart,callback_private,8,11,34397)
+CheckOffset(struct _ObjectClassPart,callback_private,184,11,34397)
+CheckMemberSize(struct _ObjectClassPart,obj12,8,11,34398)
+CheckOffset(struct _ObjectClassPart,obj12,192,11,34398)
+CheckMemberSize(struct _ObjectClassPart,obj13,8,11,34399)
+CheckOffset(struct _ObjectClassPart,obj13,200,11,34399)
+CheckMemberSize(struct _ObjectClassPart,obj14,8,11,34400)
+CheckOffset(struct _ObjectClassPart,obj14,208,11,34400)
+CheckMemberSize(struct _ObjectClassPart,extension,8,11,34401)
+CheckOffset(struct _ObjectClassPart,extension,216,11,34401)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10265,0);
 Msg("Find size of _ObjectClassPart (10265)\n");
@@ -555,6 +641,8 @@ CheckTypeSize(ObjectClassPart,116, 10266, 10)
 CheckTypeSize(ObjectClassPart,224, 10266, 9)
 #elif __s390x__
 CheckTypeSize(ObjectClassPart,224, 10266, 12)
+#elif __x86_64__
+CheckTypeSize(ObjectClassPart,224, 10266, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10266,0);
 Msg("Find size of ObjectClassPart (10266)\n");
@@ -572,6 +660,8 @@ CheckTypeSize(ObjectClassExtensionRec,24, 10268, 10)
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 9)
 #elif __s390x__
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 12)
+#elif __x86_64__
+CheckTypeSize(ObjectClassExtensionRec,48, 10268, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10268,0);
 Msg("Find size of ObjectClassExtensionRec (10268)\n");
@@ -589,6 +679,8 @@ CheckTypeSize(ObjectClassExtension,4, 10270, 10)
 CheckTypeSize(ObjectClassExtension,8, 10270, 9)
 #elif __s390x__
 CheckTypeSize(ObjectClassExtension,8, 10270, 12)
+#elif __x86_64__
+CheckTypeSize(ObjectClassExtension,8, 10270, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10270,0);
 Msg("Find size of ObjectClassExtension (10270)\n");
@@ -618,6 +710,10 @@ CheckOffset(struct _ObjectClassRec,object_class,0,9,34408)
 CheckTypeSize(struct _ObjectClassRec,224, 10271, 12)
 Msg("Missing member data for _ObjectClassRec on S390X\n");
 CheckOffset(struct _ObjectClassRec,object_class,0,12,34408)
+#elif __x86_64__
+CheckTypeSize(struct _ObjectClassRec,224, 10271, 11)
+Msg("Missing member data for _ObjectClassRec on x86-64\n");
+CheckOffset(struct _ObjectClassRec,object_class,0,11,34408)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10271,0);
 Msg("Find size of _ObjectClassRec (10271)\n");
@@ -635,6 +731,8 @@ CheckTypeSize(ObjectClassRec,116, 10272, 10)
 CheckTypeSize(ObjectClassRec,224, 10272, 9)
 #elif __s390x__
 CheckTypeSize(ObjectClassRec,224, 10272, 12)
+#elif __x86_64__
+CheckTypeSize(ObjectClassRec,224, 10272, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10272,0);
 Msg("Find size of ObjectClassRec (10272)\n");
@@ -646,6 +744,7 @@ Msg("Find size of ObjectClassRec (10272)\n");
 #elif __s390__ && !__s390x__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10267,0);
 Msg("Find size of anon-_ObjectClassExtensionRec (10267)\n");
@@ -657,6 +756,7 @@ Msg("Find size of anon-_ObjectClassExtensionRec (10267)\n");
 #elif __s390__ && !__s390x__
 #elif __powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10269,0);
 Msg("Find size of _ObjectClassExtensionRec * (10269)\n");

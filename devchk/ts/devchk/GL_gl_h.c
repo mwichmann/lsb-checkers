@@ -665,6 +665,8 @@ CheckTypeSize(GLenum,4, 8143, 10)
 CheckTypeSize(GLenum,4, 8143, 9)
 #elif __s390x__
 CheckTypeSize(GLenum,4, 8143, 12)
+#elif __x86_64__
+CheckTypeSize(GLenum,4, 8143, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8143,0);
 Msg("Find size of GLenum (8143)\n");
@@ -682,6 +684,8 @@ CheckTypeSize(GLboolean,1, 8144, 10)
 CheckTypeSize(GLboolean,1, 8144, 9)
 #elif __s390x__
 CheckTypeSize(GLboolean,1, 8144, 12)
+#elif __x86_64__
+CheckTypeSize(GLboolean,1, 8144, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8144,0);
 Msg("Find size of GLboolean (8144)\n");
@@ -699,6 +703,8 @@ CheckTypeSize(GLbitfield,4, 8145, 10)
 CheckTypeSize(GLbitfield,4, 8145, 9)
 #elif __s390x__
 CheckTypeSize(GLbitfield,4, 8145, 12)
+#elif __x86_64__
+CheckTypeSize(GLbitfield,4, 8145, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8145,0);
 Msg("Find size of GLbitfield (8145)\n");
@@ -716,6 +722,8 @@ CheckTypeSize(GLvoid,1, 8146, 10)
 CheckTypeSize(GLvoid,1, 8146, 9)
 #elif __s390x__
 CheckTypeSize(GLvoid,1, 8146, 12)
+#elif __x86_64__
+CheckTypeSize(GLvoid,1, 8146, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8146,0);
 Msg("Find size of GLvoid (8146)\n");
@@ -733,6 +741,8 @@ CheckTypeSize(GLbyte,1, 8147, 10)
 CheckTypeSize(GLbyte,1, 8147, 9)
 #elif __s390x__
 CheckTypeSize(GLbyte,1, 8147, 12)
+#elif __x86_64__
+CheckTypeSize(GLbyte,1, 8147, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8147,0);
 Msg("Find size of GLbyte (8147)\n");
@@ -750,6 +760,8 @@ CheckTypeSize(GLshort,2, 8148, 10)
 CheckTypeSize(GLshort,2, 8148, 9)
 #elif __s390x__
 CheckTypeSize(GLshort,2, 8148, 12)
+#elif __x86_64__
+CheckTypeSize(GLshort,2, 8148, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8148,0);
 Msg("Find size of GLshort (8148)\n");
@@ -767,6 +779,8 @@ CheckTypeSize(GLint,4, 8149, 10)
 CheckTypeSize(GLint,4, 8149, 9)
 #elif __s390x__
 CheckTypeSize(GLint,4, 8149, 12)
+#elif __x86_64__
+CheckTypeSize(GLint,4, 8149, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8149,0);
 Msg("Find size of GLint (8149)\n");
@@ -784,6 +798,8 @@ CheckTypeSize(GLubyte,1, 8150, 10)
 CheckTypeSize(GLubyte,1, 8150, 9)
 #elif __s390x__
 CheckTypeSize(GLubyte,1, 8150, 12)
+#elif __x86_64__
+CheckTypeSize(GLubyte,1, 8150, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8150,0);
 Msg("Find size of GLubyte (8150)\n");
@@ -801,6 +817,8 @@ CheckTypeSize(GLushort,2, 8151, 10)
 CheckTypeSize(GLushort,2, 8151, 9)
 #elif __s390x__
 CheckTypeSize(GLushort,2, 8151, 12)
+#elif __x86_64__
+CheckTypeSize(GLushort,2, 8151, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8151,0);
 Msg("Find size of GLushort (8151)\n");
@@ -818,6 +836,8 @@ CheckTypeSize(GLuint,4, 8152, 10)
 CheckTypeSize(GLuint,4, 8152, 9)
 #elif __s390x__
 CheckTypeSize(GLuint,4, 8152, 12)
+#elif __x86_64__
+CheckTypeSize(GLuint,4, 8152, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8152,0);
 Msg("Find size of GLuint (8152)\n");
@@ -835,6 +855,8 @@ CheckTypeSize(GLsizei,4, 8153, 10)
 CheckTypeSize(GLsizei,4, 8153, 9)
 #elif __s390x__
 CheckTypeSize(GLsizei,4, 8153, 12)
+#elif __x86_64__
+CheckTypeSize(GLsizei,4, 8153, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8153,0);
 Msg("Find size of GLsizei (8153)\n");
@@ -852,6 +874,8 @@ CheckTypeSize(GLfloat,4, 8154, 10)
 CheckTypeSize(GLfloat,4, 8154, 9)
 #elif __s390x__
 CheckTypeSize(GLfloat,4, 8154, 12)
+#elif __x86_64__
+CheckTypeSize(GLfloat,4, 8154, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8154,0);
 Msg("Find size of GLfloat (8154)\n");
@@ -869,6 +893,8 @@ CheckTypeSize(GLclampf,4, 8155, 10)
 CheckTypeSize(GLclampf,4, 8155, 9)
 #elif __s390x__
 CheckTypeSize(GLclampf,4, 8155, 12)
+#elif __x86_64__
+CheckTypeSize(GLclampf,4, 8155, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8155,0);
 Msg("Find size of GLclampf (8155)\n");
@@ -886,6 +912,8 @@ CheckTypeSize(GLdouble,8, 8156, 10)
 CheckTypeSize(GLdouble,8, 8156, 9)
 #elif __s390x__
 CheckTypeSize(GLdouble,8, 8156, 12)
+#elif __x86_64__
+CheckTypeSize(GLdouble,8, 8156, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8156,0);
 Msg("Find size of GLdouble (8156)\n");
@@ -903,6 +931,8 @@ CheckTypeSize(GLclampd,8, 8157, 10)
 CheckTypeSize(GLclampd,8, 8157, 9)
 #elif __s390x__
 CheckTypeSize(GLclampd,8, 8157, 12)
+#elif __x86_64__
+CheckTypeSize(GLclampd,8, 8157, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8157,0);
 Msg("Find size of GLclampd (8157)\n");

@@ -107,6 +107,20 @@ CheckMemberSize(struct passwd,pw_dir,8,12,30046)
 CheckOffset(struct passwd,pw_dir,32,12,30046)
 CheckMemberSize(struct passwd,pw_shell,8,12,30047)
 CheckOffset(struct passwd,pw_shell,40,12,30047)
+#elif __x86_64__
+CheckTypeSize(struct passwd,48, 6938, 11)
+CheckMemberSize(struct passwd,pw_passwd,8,11,30042)
+CheckOffset(struct passwd,pw_passwd,8,11,30042)
+CheckMemberSize(struct passwd,pw_uid,4,11,30043)
+CheckOffset(struct passwd,pw_uid,16,11,30043)
+CheckMemberSize(struct passwd,pw_gid,4,11,30044)
+CheckOffset(struct passwd,pw_gid,20,11,30044)
+CheckMemberSize(struct passwd,pw_gecos,8,11,30045)
+CheckOffset(struct passwd,pw_gecos,24,11,30045)
+CheckMemberSize(struct passwd,pw_dir,8,11,30046)
+CheckOffset(struct passwd,pw_dir,32,11,30046)
+CheckMemberSize(struct passwd,pw_shell,8,11,30047)
+CheckOffset(struct passwd,pw_shell,40,11,30047)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6938,0);
 Msg("Find size of passwd (6938)\n");
