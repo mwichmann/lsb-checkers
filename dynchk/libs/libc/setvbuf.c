@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <stddef.h>
 #include <stdio.h>
+#include <stddef.h>
 #undef setvbuf
 static int(*funcptr) (FILE * , char * , int , size_t ) = 0;
 

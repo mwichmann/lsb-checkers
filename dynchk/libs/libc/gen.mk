@@ -89,6 +89,11 @@ clnt_spcreateerror.o \
 clnt_sperrno.o \
 clnt_sperror.o \
 clock.o \
+clock_getcpuclockid.o \
+clock_getres.o \
+clock_gettime.o \
+clock_nanosleep.o \
+clock_settime.o \
 close.o \
 closedir.o \
 closelog.o \
@@ -486,6 +491,8 @@ setuid.o \
 setutent.o \
 setutxent.o \
 setvbuf.o \
+shm_open.o \
+shm_unlink.o \
 shmat.o \
 shmctl.o \
 shmdt.o \
@@ -603,6 +610,11 @@ tempnam.o \
 textdomain.o \
 tfind.o \
 time.o \
+timer_create.o \
+timer_delete.o \
+timer_getoverrun.o \
+timer_gettime.o \
+timer_settime.o \
 times.o \
 tmpfile.o \
 tmpfile64.o \

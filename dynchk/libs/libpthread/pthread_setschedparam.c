@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <pthread.h>
 #include <sched.h>
+#include <pthread.h>
 #undef pthread_setschedparam
 static int(*funcptr) (pthread_t , int , const struct sched_param * ) = 0;
 
