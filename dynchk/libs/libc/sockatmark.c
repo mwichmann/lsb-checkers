@@ -5,10 +5,10 @@
 #include <dlfcn.h>
 #include <sys/socket.h>
 #undef sockatmark
-static int(*funcptr) () = 0;
+static int(*funcptr) (int ) = 0;
 
 extern int __lsb_check_params;
-int sockatmark ()
+int sockatmark (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -18,8 +18,9 @@ int sockatmark ()
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "sockatmark()");
+		validate_NULL_TYPETYPE(  arg0, "sockatmark - arg0");
 	}
-	ret_value = funcptr();
+	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }
