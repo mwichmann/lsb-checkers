@@ -192,7 +192,7 @@ sub writetest($$)
 			$select = "SELECT DISTINCT * FROM TypeMember ";
 			$select.= "LEFT JOIN ArchTypeMem ON ATMtmid=TMid ";
 			$select.= "WHERE TMmemberof=$Tid ";
-			$select.= "AND TMbitfiled='No' ";
+			$select.= "AND TMbitfield = 0 ";
 			$select.= "AND ATMaid=$Aid ";
 			$select.= "ORDER BY TMposition ";
 			$mth = $Dbh->query($select) || die $Dbh->errmsg();
