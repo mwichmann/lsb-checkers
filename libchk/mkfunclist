@@ -14,6 +14,74 @@ die;
 # Uncomment to trace SQL statments
 #$trace=1;
 
+sub getinterfacename($)
+{
+local($Iid)=@_;
+my($select,%entry);
+
+if( $Iid eq "" ) {return "";}
+
+#print STDERR "Looking for Iname for $Iid\n";
+
+$select = "SELECT Iname FROM Interface ";
+$select.= "WHERE Iid=$Iid";
+$isth = $Dbh->query($select) || die $Dbh->errmsg();
+%entry=$isth->fetchhash;
+return $entry{'Iname'};
+}
+
+sub mkclassinfo($$)
+{
+local($LIB,$class)=@_;
+my($select,%entry);
+
+#
+# Output typeinfo here.
+#
+$typeinfoname=$$class{'CIname'}."_typeinfo";
+$numtypeinfofuns=0;
+print $LIB "struct classtypeinfo $typeinfoname = {\n";
+print $LIB "\t\"".getinterfacename($$class{'CIbasevtable'})."\",\n";
+print $LIB "\t\"_ZTS".$$class{'CIname'}."\",\n";
+print $LIB "\t{NULL},\n";
+print $LIB "\t};\n";
+
+#
+# Output classvtable here.
+#
+$vtablename=$$class{'CIname'}."_vtable";
+$numvtablefuns=0;
+print $LIB "struct classvtable $vtablename = {\n";
+print $LIB "\t".$$class{'CIbaseoffset'}.",\n";
+print $LIB "\t\"_ZTI".$$class{'CIname'}."\",\n";
+print $LIB "\t{\n";
+
+$select = "SELECT * FROM Vtable ";
+$select.= "WHERE VTtid=".$$class{'CIvtable'}." ";
+$select.= "ORDER BY VTpos";
+
+#print $select;
+
+$vsth = $Dbh->query($select) || die $Dbh->errmsg();
+for(1..$vsth->numrows) {
+	%entry=$vsth->fetchhash;
+	print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
+	$numvtablefuns++;
+}
+print $LIB "\t },\n";
+print $LIB "\t};\n";
+
+print $LIB "struct classinfo ".$$class{'CIname'}."_classinfo = {\n";
+print $LIB "\t\"".$$class{'CIname'}."\",\n";
+print $LIB "\t\"_ZTV".$$class{'CIname'}."\",\n";
+print $LIB "\t\"_ZTI".$$class{'CIname'}."\",\n";
+print $LIB "\t$numtypeinfofuns,\n";
+print $LIB "\t$numvtablefuns,\n";
+print $LIB "\t&$typeinfoname,\n";
+print $LIB "\t&$vtablename,\n";
+print $LIB "\t};\n\n";
+}
+
 sub mklibsyms($$)
 {
 local($libname,$lid)=@_;
@@ -33,6 +101,7 @@ $select.= "ORDER BY Iname,Aid ";
 $lsth = $Dbh->query($select) || die $Dbh->errmsg();
 
 open(LIB,">$libname.c");
+print LIB "#include <stdlib.h>\n";
 print LIB "#include \"elfchk.h\"\n";
 print LIB "struct versym ".$libname."[] = {\n";
 for(1..$lsth->numrows) {
@@ -45,7 +114,30 @@ for(1..$lsth->numrows) {
 		printf LIB "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
 		}
 }
-print LIB "\t{0,0}};\n";
+print LIB "\t{0,0}};\n\n";
+
+#
+# Now, look for class data that me be present
+#
+$select = "SELECT DISTINCT * FROM ClassInfo ";
+$select.= "LEFT JOIN LibGroup ON LibGroup.LGid=CIlibg ";
+$select.= "LEFT JOIN Library ON LibGroup.LGLIB=Library.Lid ";
+$select.= "WHERE Library.Lid=$lid ";
+
+#print $select;
+
+$lsth = $Dbh->query($select) || die $Dbh->errmsg();
+$classinfos="";
+for(1..$lsth->numrows) {
+	%entry=$lsth->fetchhash;
+	print $entry{'CIname'}."\n";
+	mkclassinfo(LIB,\%entry);
+	$classinfos.=$classinfo."\t&".$entry{'CIname'}."_classinfo,\n";
+}
+
+print LIB "struct classinfo *libstdcxx_so_5_classinfo[] = {\n";
+print LIB $classinfos."\n\tNULL\t};\n";
+
 close(LIB);
 }
 
@@ -61,9 +153,10 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 
 open(LIBS,">libs.c");
 print LIBS "/* Generated file */\n";
-print LIBS "#include \"libs.h\"\n\n";
+print LIBS "#include <unistd.h>\n";
+print LIBS "#include \"libs.h\"\n";
+print LIBS "#include \"libchk.h\"\n\n";
 print LIBS "#include \"../tetj/tetj.h\"\n\n";
-print LIBS "extern void check_lib(char *libname, struct versym entries[], struct tetj_handle *journal);\n";
 
 print LIBS "void check_libs(struct tetj_handle *journal)\n{\n";
 
@@ -80,6 +173,7 @@ $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE Lstd='Yes' ";
 $select.= "AND Aname!='None' ";
+$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid ";
 
 #print $select;
@@ -101,14 +195,16 @@ for(1..$sth->numrows) {
 	$libname = pop(@libname);
 	if( $asym != "1" ) {
 		print LIBS "#if $asym\n";
-		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname, journal);\n";
+		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo,journal);\n";
 		print LIBS "#endif\n";
 		print LIBSH "#if $asym\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
+		print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
 		print LIBSH "#endif\n";
 	} else {
-		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,journal);\n";
+		print LIBS "check_lib(\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo,journal);\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
+		print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
 	}
 	if( !$seenit{$libname} ) {
 		print MAKE "\t$libname.o \\\n";
@@ -121,3 +217,4 @@ print LIBS "}\n";
 close(LIBS);
 close(LIBH);
 close(MAKE);
+
