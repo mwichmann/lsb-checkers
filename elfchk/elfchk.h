@@ -17,6 +17,7 @@ struct versym {
 	char *name;
 	char *vername;
 	int   deprecated;
+	int   size;
 	};
 
 #if defined(__ia64__)
