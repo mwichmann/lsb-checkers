@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "elfchk.h"
 #include "proghdr.h"
 #include "../tetj/tetj.h"
