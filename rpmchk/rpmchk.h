@@ -32,6 +32,9 @@ typedef struct rpmlead {
 #if defined(__i386__)
 #define RPMARCH	0x0100
 #endif
+#if defined(__ia64__)
+#define RPMARCH	0x0900
+#endif
 
 #define RPMOS	0x0100 /* Linux */
 
