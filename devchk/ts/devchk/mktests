@@ -530,7 +530,7 @@ print MAKEFILE "endif\n\n";
 
 print MAKEFILE "all: hdrchk\n\n";
 print MAKEFILE "hdrchk: \$\(OBJS)\n";
-print MAKEFILE "\t\$(CC) -o hdrchk \$\(OBJS) \$\(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 \n";
+print MAKEFILE "\t\$(CC) -o hdrchk \$\(OBJS) \$\(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses\n";
 print MAKEFILE "\n";
 print MAKEFILE "hdrchk.o: hdrchk.c\n";
 print MAKEFILE "\t\$(CC) \$\(CFLAGS) -g -c hdrchk.c\n";

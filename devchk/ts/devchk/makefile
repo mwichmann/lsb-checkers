@@ -114,7 +114,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 
+	$(CC) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c
