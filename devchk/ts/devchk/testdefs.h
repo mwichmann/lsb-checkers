@@ -40,6 +40,7 @@ extern void net_if_h();
 extern void netdb_h();
 extern void netinet_in_h();
 extern void netinet_tcp_h();
+extern void netinet_udp_h();
 extern void nl_types_h();
 extern void pthread_h();
 extern void pwd_h();

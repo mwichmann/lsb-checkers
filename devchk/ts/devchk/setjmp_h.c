@@ -25,11 +25,11 @@ Msg("Checking data structures in setjmp.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for sigsetjmp(a,b) */
+/* No test for setjmp(env) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for setjmp(env) */
+/* No test for sigsetjmp(a,b) */
 #endif
 
 #if __i386__
@@ -63,6 +63,8 @@ CheckArrayTypeSize(jmp_buf,1,156, 6962, 2)
 CheckArrayTypeSize(jmp_buf,1,188, 6962, 6)
 #elif __powerpc64__
 CheckArrayTypeSize(jmp_buf,1,456, 6962, 9)
+#elif 1
+CheckArrayTypeSize(jmp_buf,1,1, 6962, 1)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6962,0);
 Msg("Find size of jmp_buf (6962)\n");
@@ -88,16 +90,25 @@ CheckTypeSize(struct __jmp_buf_tag,156, 6961, 2)
 CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,2,34039)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,24,2,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,28,2,34041)
+#elif 1
+CheckTypeSize(struct __jmp_buf_tag,1, 6961, 1)
+Msg("Missing member data for __jmp_buf_tag on All\n");
+CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,1,34039)
+CheckOffset(struct __jmp_buf_tag,__mask_was_saved,0,1,34040)
+CheckOffset(struct __jmp_buf_tag,__saved_mask,0,1,34041)
 #elif __ia64__
 CheckTypeSize(struct __jmp_buf_tag,704, 6961, 3)
+CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,3,34039)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,560,3,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,568,3,34041)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct __jmp_buf_tag,364, 6961, 6)
+CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,6,34039)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,232,6,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,236,6,34041)
 #elif __s390__
 CheckTypeSize(struct __jmp_buf_tag,188, 6961, 10)
+CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,10,34039)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,56,10,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,60,10,34041)
 #elif __powerpc64__
