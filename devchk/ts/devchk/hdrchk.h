@@ -66,7 +66,7 @@
 	char *foom=(char *)&(foo.member); \
 	cnt++; \
 	Log("subtest %d\n", cnt); \
-	Log("Purpose: Check offset of (\" #member \") is %d\n", offset); \
+	Log("Purpose: Check offset of (" #member ") is %d\n", offset); \
 	if( (foom-foob) != offset ) { \
 		Msg("offset(" #member ") is %d instead of " #offset "\n",(foom-foob)); \
 		Msg("REPLACE INTO ArchTypeMem (ATMaid,ATMtmid,ATMoffset) "); \
