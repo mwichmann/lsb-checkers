@@ -30,7 +30,7 @@ distclean: clean
 	rm -f libs.h libs.c
 
 clean:
-	rm -f $(OBJS) libchk dummy_link
+	rm -f $(OBJS) libchk dummy_link dummy_link.o
 
 .PHONE: clean distclean install
 
