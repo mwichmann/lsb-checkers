@@ -28,6 +28,9 @@ struct SectionInfo SectionInfo[] = {
 #if defined(__powerpc__)
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __powerpc__ */
+#if defined(__s390__)
+	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __s390__ */
 #if defined(__powerpc__)
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc__ */
@@ -47,6 +50,7 @@ struct SectionInfo SectionInfo[] = {
 	{".init",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 	{".init_array",SHT_INIT_ARRAY, SHF_ALLOC+SHF_WRITE,checkINIT_ARRAY},
 	{".interp",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
+	{".jcr",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".line",SHT_PROGBITS,0,checkPROGBITS},
 	{".note",SHT_NOTE,0,checkNOTE},
 	{".note.ABI-tag",SHT_NOTE,SHF_ALLOC,checkNOTE},
@@ -59,6 +63,9 @@ struct SectionInfo SectionInfo[] = {
 #if defined(__powerpc__)
 	{".plt",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_EXECINSTR,checkNOBITS},
 #endif /* __powerpc__ */
+#if defined(__s390__)
+	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
+#endif /* __s390__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
 #if defined(__i386__)
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
