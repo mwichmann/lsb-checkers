@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.56 $
+ * This is $Revision: 1.57 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.57  2005/02/23 22:50:41  anderson
+ * missed a change inside #if DEBUG
+ *
  * Revision 1.56  2005/02/22 22:29:03  anderson
  * Update for v6 libstdc++ when building as cxxabichk
  *
@@ -213,7 +216,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.56 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.57 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -474,7 +477,7 @@ get_size(ElfFile *file, char *symname)
     printf("Type=%x\n", ELF32_ST_TYPE(file->syms[j].st_info) );
     printf("Comparing %s and %s\n", 
            ElfGetStringIndex(file,file->syms[j].st_name,
-                             file->symhdr->sh_link),entry->name);
+                             file->symhdr->sh_link),symname);
 #endif
     symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
 				    file->symhdr->sh_link);
