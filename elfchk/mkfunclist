@@ -7,14 +7,15 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Vname,Asymbol,Aname FROM Interface,Library,LibGroup,LGInt,ArchInt,Architecture ";
-$select.= "LEFT JOIN Version ON Vid=AIversion ";
+$select = "SELECT DISTINCT Iname,Vname,Asymbol,Aname FROM Interface ";
+$select.= "LEFT JOIN LGInt ON Iid=LGIint ";
+$select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
+$select.= "LEFT JOIN Library ON Lid=LGlib ";
+$select.= "LEFT OUTER JOIN ArchInt ON Iid=AIint ";
+$select.= "LEFT OUTER JOIN Architecture ON Aid=AIarch ";
+$select.= "LEFT OUTER JOIN Version ON Vid=AIversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
-$select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
-$select.= "AND LibGroup.LGlib=Library.Lid ";
 $select.= "AND Library.Lstd='Yes' ";
-$select.= "AND Interface.Iid=ArchInt.AIint ";
-$select.= "AND Aid=AIarch ";
 $select.= "ORDER BY Iname,Aid ";
 
 #print $select;
@@ -26,12 +27,12 @@ print "#include \"elfchk.h\"\n";
 print "struct versym DynSyms[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
-        if ($entry{'Aname'} ne "All")
+        if ($entry{'Aname'} && $entry{'Aname'} ne "All")
         {
           print "#if defined($entry{'Asymbol'})\n";
         }
 	printf "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
-        if ($entry{'Aname'} ne "All")
+        if ($entry{'Aname'} && $entry{'Aname'} ne "All")
         {
           print "#endif\n";
         }
