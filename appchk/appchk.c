@@ -26,12 +26,12 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.9 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.10 $";
 
 int
 main(int argc, char *argv[])
 {
-  char	c;
+  signed char	c;
   struct tetj_handle *journal;
   char *command_line = NULL;
   int i;
