@@ -5307,7 +5307,6 @@ struct versym libc_so_6[] = {
 #if defined(__powerpc__)
 	{"statvfs","GLIBC_2.1"},
 #endif
-	{"statvfs64",""},
 #if defined(__i386__)
 	{"statvfs64","GLIBC_2.0"},
 #endif
