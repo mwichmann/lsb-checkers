@@ -33,16 +33,18 @@ if( (file=OpenElfFile(libname)) == NULL ) {
 	}
 
 checkElf(file);
-/*
-Do this after everythign has been loaded
 checksymbols(file);
-*/
 
 numsyms=file->dynsymhdr->sh_size/file->dynsymhdr->sh_entsize;
 syms=(Elf32_Sym *)((caddr_t)file->addr+file->dynsymhdr->sh_offset);
 for(i=0;i<numsyms;i++) {
 	/* Static Symbols */
         if( ELF32_ST_BIND(syms[i].st_info) == STB_LOCAL ) continue;
+
+	/* Skip over symbol references (ie unresolved) */
+	if( syms[i].st_shndx == SHN_UNDEF || 
+		(syms[i].st_shndx >= SHN_LORESERVE &&
+		 syms[i].st_shndx <= SHN_HIRESERVE) ) continue;
 
 /*
 fprintf(stderr,"%s %x %x %x\n",
@@ -52,14 +54,9 @@ fprintf(stderr,"%s %x %x %x\n",
         syms[i].st_shndx
         );
 */
-if(  ElfGetStringIndex(file,syms[i].st_name,file->dynsymhdr->sh_link) == NULL )
-{
-fprintf(stderr,"Symbol is NULL\n");
-	exit();
-}
 
-	add_symbol(
-		ElfGetStringIndex(file,syms[i].st_name,file->dynsymhdr->sh_link));
+	add_symbol( ElfGetStringIndex(file,syms[i].st_name,
+					file->dynsymhdr->sh_link));
 	}
 
 return 0;
