@@ -11,4 +11,4 @@ libncurses.o : $(FUNCS)
 
 
 clean:
-	rm -f $(FUNCS)
+	rm -f $(FUNCS) libncurses.o
