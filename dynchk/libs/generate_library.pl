@@ -1,7 +1,8 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 
-use DBI;
 use strict;
+use DBI;
+use Getopt::Std;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
@@ -16,19 +17,95 @@ sub contains
 	return ($count > 0);
 }
 
+### Get command-line options
+my(%options);
+
+my($DBName) = $LSBDB;
+my($DBUser) = $LSBUSER;
+my($DBPass) = $LSBDBPASSWD;
+my($DBHost) = $LSBDBHOST;
+my($interface_WHERE_add); my($interface_FROM_add);
+
+getopts('d:u:p:o:hl:g:', \%options);
+
+### Handle simple options
+if (exists($options{'h'}))
+{
+  print STDERR <<"EOM"
+$0: generate interface wrapper functions for the dynchk library.
+Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
+ [-l lib1,lib2,lib3,...] [-g libgroup1,libgroup2,libgroup3,...]
+    -h           Display this help
+    -d db_name   Database name
+    -u username  Name of user for db access
+    -p password  Password for db access
+    -o hostname  Hostname for DB
+    -l l1,l2,... Comma-delimited list of libraries
+    -g g1,g2,... Comma-delimited list of libgroups
+         
+    If -l or -g are specified, every interface wrapper in
+	the listed libraries or libgroups will be generated.  
+	Without either, all interface wrappers will be generated.
+	
+    Examples:
+    $0 -g "System Calls","X Windows System Interface"
+    $0 -l libc,libX11
+    $0 -l libm -g Curses,"String Functions"
+EOM
+    ;
+  exit(1);
+}
+
+$DBUser = $options{'u'} if exists($options{'u'});
+$DBPass = $options{'p'} if exists($options{'p'});
+$DBHost = $options{'o'} if exists($options{'o'});
+$DBName = $options{'d'} if exists($options{'d'});
+
+### Parse Lib and LibGroup options - turn comma-list into query conditions.
+if (exists($options{'l'}) && exists($options{'g'}))
+{
+	$interface_FROM_add = ", LGInt, LibGroup\n";
+	$interface_WHERE_add = "\nAND LGIint = Iid\nAND LGIlibg = LGid\n";
+	$interface_WHERE_add .= 'AND (Lname = "'
+		. join( '" OR Lname = "', split(/,/, $options{'l'}) ) . '"'
+		. ' OR LGname = "' . join( '" OR LGname = "', split(/,/, $options{'g'}) ) . '")' . "\n";
+}
+elsif (exists($options{'l'}))
+{
+	$interface_FROM_add = "\n";
+	$interface_WHERE_add = "\n" . 'AND (Lname = "'
+		. join( '" OR Lname = "', split(/,/, $options{'l'}) ) . "\")\n ";
+
+}
+elsif(exists($options{'g'}))
+{
+	$interface_FROM_add = ", LGInt, LibGroup\n";
+	$interface_WHERE_add = "\nAND LGIint = Iid\nAND LGIlibg = LGid\n";
+	$interface_WHERE_add .= 'AND ( LGname = "'
+		. join( '" OR LGname = "', split(/,/, $options{'g'}) ) . '")' . "\n";
+}
+else
+{
+	$interface_FROM_add = "\n";
+	$interface_WHERE_add = "\n";
+}
+
+### Setup queries to the LSB Database.
 
 my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
 	or die "Couldn't connect to database: " . DBI->errstr;
+
 my $interface_q = $dbh->prepare(
 'SELECT Iname, Tname, Iid, Lname
-FROM Interface, Type, Header, Library
-WHERE   
+FROM Interface, Type, Header, Library' . $interface_FROM_add .
+'WHERE   
 Itype = "Function"
 AND Istatus = "Included"       
 AND Tid = Ireturn
 AND Iheader = Hid
 AND Hlib = Lid
-AND Iarch <= 2'
+AND Iarch <= 2 ' . $interface_WHERE_add .
+"GROUP BY Iid" ## This removes duplicate entries.
 )
 	or die "Couldn't prepare interface query: " . DBI->errstr;
 
@@ -59,12 +136,16 @@ $interface_q->execute or die "Couldn't execute interface query: " . DBI->errstr;
 my @arg_typetype;
 my @arg_type;
 
+### Open output files
+
 open(ELLFILE, ">ellipsis_funcs")
 	or die "Can't open the output file ellipsis_funcs: $!";
 open(NOTTFILE, ">no_typetype_funcs")
 	or die "Can't open the output file no_typetype_funcs: $!";
 open(ZEROPARAMFILE, ">no_param_funcs")
 	or die "Can't open the output file no_param_funcs: $!";	
+
+### Execute database queries and create <interface>.c files.
 
 FUNC: while(my ($func_name, $func_return, $func_id, $func_lib) = $interface_q->fetchrow_array())
 {
@@ -76,6 +157,7 @@ FUNC: while(my ($func_name, $func_return, $func_id, $func_lib) = $interface_q->f
 	my $has_parameter = 0;
 	my @header_set;
 	my $h_next = 0;
+
 	#get information about parameters
 	while( my($type, $typetypeid) = $parameter_q->fetchrow_array())
 	{
@@ -208,6 +290,8 @@ FUNC: while(my ($func_name, $func_return, $func_id, $func_lib) = $interface_q->f
 	print OUTFILE ");\n}\n";
 	close OUTFILE;
 }
+
+### Clean up
 
 $interface_q->finish;
 $parameter_q->finish;
