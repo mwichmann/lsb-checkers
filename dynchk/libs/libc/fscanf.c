@@ -19,7 +19,7 @@ int fscanf(FILE *f, const char *format, ...)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params = 0;
-		__lsb_output(5-__lsb_check_params, "setkey()");
+		__lsb_output(5-__lsb_check_params, "fscanf()");
 	}
 	ret_value = funcptr(f, format, args);
 	__lsb_check_params = reset_flag;

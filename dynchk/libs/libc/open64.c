@@ -25,7 +25,7 @@ int open64(const char *pathname, int flags, ...)
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-        	__lsb_output(5-__lsb_check_params, "setkey()");
+        	__lsb_output(5-__lsb_check_params, "open64()");
 		validate_pathname(pathname, "open64" );
 		//validate_flags(flags, "open64");
 		if( flags & O_CREAT )
