@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
-#include <term.h>
 #include <curses.h>
+#include <term.h>
 #undef overwrite
 static int(*funcptr) (const WINDOW * , WINDOW * ) = 0;
 

@@ -7,6 +7,7 @@
 static int(*funcptr) (pthread_t , void * * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int pthread_join (pthread_t arg0 , void * * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,9 +17,9 @@ int pthread_join (pthread_t arg0 , void * * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "pthread_join()");
 		validate_NULL_TYPETYPE(  arg0, "pthread_join - arg0");
 	validate_Rdaddress( arg1, "pthread_join - arg1");
-	validate_Rdaddress(* arg1, "pthread_join - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_join - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

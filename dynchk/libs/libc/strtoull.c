@@ -21,7 +21,6 @@ unsigned long long strtoull (const char * arg0 , char * * arg1 , int arg2 )
 	validate_Rdaddress( arg0, "strtoull - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtoull - arg0");
 	validate_Rdaddress( arg1, "strtoull - arg1");
-	validate_Rdaddress(* arg1, "strtoull - arg1");
 		validate_NULL_TYPETYPE(  arg1, "strtoull - arg1");
 		validate_NULL_TYPETYPE(  arg2, "strtoull - arg2");
 	}

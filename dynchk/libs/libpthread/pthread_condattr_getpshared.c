@@ -7,6 +7,7 @@
 static int(*funcptr) (const pthread_condattr_t * , int * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int pthread_condattr_getpshared (const pthread_condattr_t * arg0 , int * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int pthread_condattr_getpshared (const pthread_condattr_t * arg0 , int * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "pthread_condattr_getpshared()");
 	validate_Rdaddress( arg0, "pthread_condattr_getpshared - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_condattr_getpshared - arg0");
 	validate_Rdaddress( arg1, "pthread_condattr_getpshared - arg1");

@@ -23,7 +23,6 @@ int readdir_r (DIR * arg0 , struct dirent * arg1 , struct dirent * * arg2 )
 	validate_Rdaddress( arg1, "readdir_r - arg1");
 		validate_NULL_TYPETYPE(  arg1, "readdir_r - arg1");
 	validate_Rdaddress( arg2, "readdir_r - arg2");
-	validate_Rdaddress(* arg2, "readdir_r - arg2");
 		validate_NULL_TYPETYPE(  arg2, "readdir_r - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

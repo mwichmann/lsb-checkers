@@ -27,7 +27,6 @@ int getgrgid_r (gid_t arg0 , struct group * arg1 , char * arg2 , size_t arg3 , s
 		validate_NULL_TYPETYPE(  arg2, "getgrgid_r - arg2");
 		validate_NULL_TYPETYPE(  arg3, "getgrgid_r - arg3");
 	validate_Rdaddress( arg4, "getgrgid_r - arg4");
-	validate_Rdaddress(* arg4, "getgrgid_r - arg4");
 		validate_NULL_TYPETYPE(  arg4, "getgrgid_r - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

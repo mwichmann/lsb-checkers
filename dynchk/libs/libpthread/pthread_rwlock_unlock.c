@@ -7,6 +7,7 @@
 static int(*funcptr) (pthread_rwlock_t * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int pthread_rwlock_unlock (pthread_rwlock_t * arg0 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,6 +17,7 @@ int pthread_rwlock_unlock (pthread_rwlock_t * arg0 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "pthread_rwlock_unlock()");
 	validate_Rdaddress( arg0, "pthread_rwlock_unlock - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_unlock - arg0");
 	}

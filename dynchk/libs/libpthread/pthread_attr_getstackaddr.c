@@ -7,6 +7,7 @@
 static int(*funcptr) (const pthread_attr_t * , void * * ) = 0;
 
 extern int __lsb_check_params;
+extern int __lsb_output(int, char*, ...);
 int pthread_attr_getstackaddr (const pthread_attr_t * arg0 , void * * arg1 )
 {
 	int reset_flag = __lsb_check_params;
@@ -16,10 +17,10 @@ int pthread_attr_getstackaddr (const pthread_attr_t * arg0 , void * * arg1 )
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
+	__lsb_output(5-__lsb_check_params, "pthread_attr_getstackaddr()");
 	validate_Rdaddress( arg0, "pthread_attr_getstackaddr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pthread_attr_getstackaddr - arg0");
 	validate_Rdaddress( arg1, "pthread_attr_getstackaddr - arg1");
-	validate_Rdaddress(* arg1, "pthread_attr_getstackaddr - arg1");
 		validate_NULL_TYPETYPE(  arg1, "pthread_attr_getstackaddr - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

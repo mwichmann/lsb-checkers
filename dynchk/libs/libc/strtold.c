@@ -21,7 +21,6 @@ long double strtold (const char * arg0 , char * * arg1 )
 	validate_Rdaddress( arg0, "strtold - arg0");
 		validate_NULL_TYPETYPE(  arg0, "strtold - arg0");
 	validate_Rdaddress( arg1, "strtold - arg1");
-	validate_Rdaddress(* arg1, "strtold - arg1");
 		validate_NULL_TYPETYPE(  arg1, "strtold - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

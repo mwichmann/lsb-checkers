@@ -23,7 +23,6 @@ size_t wcsrtombs (char * arg0 , const wchar_t * * arg1 , size_t arg2 , mbstate_t
 	validate_Rdaddress( arg0, "wcsrtombs - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wcsrtombs - arg0");
 	validate_Rdaddress( arg1, "wcsrtombs - arg1");
-	validate_Rdaddress(* arg1, "wcsrtombs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "wcsrtombs - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wcsrtombs - arg2");
 	validate_Rdaddress( arg3, "wcsrtombs - arg3");
