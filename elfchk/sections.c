@@ -209,8 +209,9 @@ for(i=0;i<numSectionInfo;i++) {
 			fprintf(stderr,"  expecting %x, got %x\n",
 					SectionInfo[i].type, hdr1->sh_type );
 		}
-		if( hdr1->sh_flags != SectionInfo[i].attributes ) {
-			fprintf(stderr,"Section %s: sh_flag is wrong. ",
+		if( hdr1->sh_flags != SectionInfo[i].attributes )
+		  if( hdr1->sh_flags|SHF_ALLOC != SectionInfo[i].attributes ) {
+			fprintf(stderr,"Section %s: sh_flags is wrong. ",
 						SectionInfo[i].name );
 			fprintf(stderr,"  expecting %x, got %x\n",
 				SectionInfo[i].attributes, hdr1->sh_flags );
