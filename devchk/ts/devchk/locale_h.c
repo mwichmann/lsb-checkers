@@ -730,6 +730,25 @@ Msg("Find size of __locale_struct * (10532)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(__locale_t,4, 10533, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(__locale_t,4, 10533, 6)
+#elif __ia64__
+CheckTypeSize(__locale_t,8, 10533, 3)
+#elif __s390x__
+CheckTypeSize(__locale_t,8, 10533, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(__locale_t,4, 10533, 10)
+#elif __x86_64__
+CheckTypeSize(__locale_t,8, 10533, 11)
+#elif __powerpc64__
+CheckTypeSize(__locale_t,8, 10533, 9)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10533,0);
+Msg("Find size of __locale_t (10533)\n");
+#endif
+
+#if __i386__
 CheckTypeSize(locale_t,4, 10534, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(locale_t,4, 10534, 6)
