@@ -1,7 +1,18 @@
 #include <stdio.h>
 #include <sys/types.h>
+#include <sys/ioctl.h>
+#include <sys/socket.h>
+#include <net/if.h>
 
-void validate_ioctlreq(const int arg, const char *name)
+void validate_ioctlreq(const int req, const char *name)
 {
-	lsb_fprintf(stderr, "lsbdynchk: %s: %x is a parameter.(stub)\n", name, arg);
+	switch(req) {
+	case SIOCGIFCONF:
+	case SIOCGIFFLAGS:
+	case SIOCGIFADDR:
+	case SIOCGIFNETMASK:
+		break;
+	default:
+		lsb_fprintf(stderr,"Illegal ioctl() request 0x%x\n", req );
+	}
 }
