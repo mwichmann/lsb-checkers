@@ -169,6 +169,18 @@ CheckMemberSize(struct xp_ops,xp_freeargs,8,3,32242)
 CheckOffset(struct xp_ops,xp_freeargs,32,3,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,8,3,32244)
 CheckOffset(struct xp_ops,xp_destroy,40,3,32244)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct xp_ops,24, 9981, 6)
+CheckMemberSize(struct xp_ops,xp_stat,4,6,32231)
+CheckOffset(struct xp_ops,xp_stat,4,6,32231)
+CheckMemberSize(struct xp_ops,xp_getargs,4,6,32235)
+CheckOffset(struct xp_ops,xp_getargs,8,6,32235)
+CheckMemberSize(struct xp_ops,xp_reply,4,6,32238)
+CheckOffset(struct xp_ops,xp_reply,12,6,32238)
+CheckMemberSize(struct xp_ops,xp_freeargs,4,6,32242)
+CheckOffset(struct xp_ops,xp_freeargs,16,6,32242)
+CheckMemberSize(struct xp_ops,xp_destroy,4,6,32244)
+CheckOffset(struct xp_ops,xp_destroy,20,6,32244)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");

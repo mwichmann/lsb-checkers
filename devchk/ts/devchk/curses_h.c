@@ -1497,16 +1497,6 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
-#ifdef TRACE_MAXIMUM
-	CompareConstant(TRACE_MAXIMUM,0xffff,2951,architecture)
-#else
-Msg( "Error: Constant not found: TRACE_MAXIMUM\n");
-cnt++;
-#endif
-
-#endif
-
 #if __i386__
 CheckTypeSize(chtype,4, 8650, 2)
 #elif __ia64__
@@ -1540,7 +1530,7 @@ Msg("Find size of SCREEN (8653)\n");
 #if __i386__
 CheckTypeSize(WINDOW,100, 8655, 2)
 #elif __ia64__
-CheckTypeSize(WINDOW,152, 8655, 3)
+CheckTypeSize(WINDOW,192, 8655, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(WINDOW,124, 8655, 6)
 #elif __s390__
@@ -1710,7 +1700,7 @@ CheckOffset(struct _win_st,_yoffset,72,2,29732)
 CheckMemberSize(struct _win_st,_bkgrnd,24,2,34437)
 CheckOffset(struct _win_st,_bkgrnd,76,2,34437)
 #elif __ia64__
-CheckTypeSize(struct _win_st,152, 8654, 3)
+CheckTypeSize(struct _win_st,192, 8654, 3)
 CheckMemberSize(struct _win_st,_cury,2,3,29700)
 CheckOffset(struct _win_st,_cury,0,3,29700)
 CheckMemberSize(struct _win_st,_curx,2,3,29701)
@@ -1729,44 +1719,44 @@ CheckMemberSize(struct _win_st,_attrs,8,3,29707)
 CheckOffset(struct _win_st,_attrs,16,3,29707)
 CheckMemberSize(struct _win_st,_bkgd,8,3,29708)
 CheckOffset(struct _win_st,_bkgd,24,3,29708)
-CheckMemberSize(struct _win_st,_notimeout,4,3,29709)
+CheckMemberSize(struct _win_st,_notimeout,8,3,29709)
 CheckOffset(struct _win_st,_notimeout,32,3,29709)
-CheckMemberSize(struct _win_st,_clear,4,3,29710)
-CheckOffset(struct _win_st,_clear,36,3,29710)
-CheckMemberSize(struct _win_st,_leaveok,4,3,29711)
-CheckOffset(struct _win_st,_leaveok,40,3,29711)
-CheckMemberSize(struct _win_st,_scroll,4,3,29712)
-CheckOffset(struct _win_st,_scroll,44,3,29712)
-CheckMemberSize(struct _win_st,_idlok,4,3,29713)
-CheckOffset(struct _win_st,_idlok,48,3,29713)
-CheckMemberSize(struct _win_st,_idcok,4,3,29714)
-CheckOffset(struct _win_st,_idcok,52,3,29714)
-CheckMemberSize(struct _win_st,_immed,4,3,29715)
-CheckOffset(struct _win_st,_immed,56,3,29715)
-CheckMemberSize(struct _win_st,_sync,4,3,29716)
-CheckOffset(struct _win_st,_sync,60,3,29716)
-CheckMemberSize(struct _win_st,_use_keypad,4,3,29717)
-CheckOffset(struct _win_st,_use_keypad,64,3,29717)
+CheckMemberSize(struct _win_st,_clear,8,3,29710)
+CheckOffset(struct _win_st,_clear,40,3,29710)
+CheckMemberSize(struct _win_st,_leaveok,8,3,29711)
+CheckOffset(struct _win_st,_leaveok,48,3,29711)
+CheckMemberSize(struct _win_st,_scroll,8,3,29712)
+CheckOffset(struct _win_st,_scroll,56,3,29712)
+CheckMemberSize(struct _win_st,_idlok,8,3,29713)
+CheckOffset(struct _win_st,_idlok,64,3,29713)
+CheckMemberSize(struct _win_st,_idcok,8,3,29714)
+CheckOffset(struct _win_st,_idcok,72,3,29714)
+CheckMemberSize(struct _win_st,_immed,8,3,29715)
+CheckOffset(struct _win_st,_immed,80,3,29715)
+CheckMemberSize(struct _win_st,_sync,8,3,29716)
+CheckOffset(struct _win_st,_sync,88,3,29716)
+CheckMemberSize(struct _win_st,_use_keypad,8,3,29717)
+CheckOffset(struct _win_st,_use_keypad,96,3,29717)
 CheckMemberSize(struct _win_st,_delay,4,3,29718)
-CheckOffset(struct _win_st,_delay,68,3,29718)
+CheckOffset(struct _win_st,_delay,104,3,29718)
 CheckMemberSize(struct _win_st,_line,8,3,29719)
-CheckOffset(struct _win_st,_line,72,3,29719)
+CheckOffset(struct _win_st,_line,112,3,29719)
 CheckMemberSize(struct _win_st,_regtop,2,3,29720)
-CheckOffset(struct _win_st,_regtop,80,3,29720)
+CheckOffset(struct _win_st,_regtop,120,3,29720)
 CheckMemberSize(struct _win_st,_regbottom,2,3,29721)
-CheckOffset(struct _win_st,_regbottom,82,3,29721)
+CheckOffset(struct _win_st,_regbottom,122,3,29721)
 CheckMemberSize(struct _win_st,_parx,4,3,29722)
-CheckOffset(struct _win_st,_parx,84,3,29722)
+CheckOffset(struct _win_st,_parx,124,3,29722)
 CheckMemberSize(struct _win_st,_pary,4,3,29723)
-CheckOffset(struct _win_st,_pary,88,3,29723)
+CheckOffset(struct _win_st,_pary,128,3,29723)
 CheckMemberSize(struct _win_st,_parent,8,3,29724)
-CheckOffset(struct _win_st,_parent,96,3,29724)
+CheckOffset(struct _win_st,_parent,136,3,29724)
 CheckMemberSize(struct _win_st,_pad,12,3,29731)
-CheckOffset(struct _win_st,_pad,104,3,29731)
+CheckOffset(struct _win_st,_pad,144,3,29731)
 CheckMemberSize(struct _win_st,_yoffset,2,3,29732)
-CheckOffset(struct _win_st,_yoffset,116,3,29732)
+CheckOffset(struct _win_st,_yoffset,156,3,29732)
 CheckMemberSize(struct _win_st,_bkgrnd,32,3,34437)
-CheckOffset(struct _win_st,_bkgrnd,120,3,34437)
+CheckOffset(struct _win_st,_bkgrnd,160,3,34437)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _win_st,124, 8654, 6)
 CheckMemberSize(struct _win_st,_curx,2,6,29701)
@@ -1949,7 +1939,7 @@ CheckTypeSize(bool,4, 10438, 6)
 #endif
 
 #if __ia64__
-CheckTypeSize(bool,4, 10439, 3)
+CheckTypeSize(bool,8, 10439, 3)
 #endif
 
 #if __powerpc64__
