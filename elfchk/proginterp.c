@@ -12,23 +12,23 @@
 
 char *ProgInterp = 
 #if defined(__i386__)
-	"/lib/ld-lsb.so.1";
+	"/lib/ld-lsb.so.2";
 #endif
 #if __powerpc__ && !__powerpc64__
-	"/lib/ld-lsb-ppc32.so.1";
+	"/lib/ld-lsb-ppc32.so.2";
 #endif
 #if __powerpc64__
-	"/lib64/ld-lsb-ppc64.so.1";
+	"/lib64/ld-lsb-ppc64.so.2";
 #endif
 #if defined(__ia64__)
-	"/lib/ld-lsb-ia64.so.1";
+	"/lib/ld-lsb-ia64.so.2";
 #endif
 #if __s390__ && !__s390x__
-	"/lib/ld-lsb-s390.so.1";
+	"/lib/ld-lsb-s390.so.2";
 #endif
 #if __s390x__
-	"/lib64/ld-lsb-s390x.so.1";
+	"/lib64/ld-lsb-s390x.so.2";
 #endif
 #if __x86_64__
-	"/lib64/ld-lsb-x86-64.so.1";
+	"/lib64/ld-lsb-x86-64.so.2";
 #endif
