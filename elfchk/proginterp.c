@@ -7,7 +7,7 @@ char *ProgInterp =
 #if defined(__i386__)
 	"/lib/ld-lsb.so.1";
 #endif
-#if defined(__pwerpc__)
+#if defined(__powerpc__)
 	"/lib/ld-lsb.so.1";
 #endif
 #if defined(__ia64__)
