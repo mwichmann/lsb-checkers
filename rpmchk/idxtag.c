@@ -831,20 +831,6 @@ fprintf(stderr,"checkRpmIdxPROVIDENAME() type=%d offset=%x count=%x %s\n",
 }
 
 void
-checkRpmIdxPREREQ(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
-{
-int	htag, htype, hoffset, hcount;
-char	*name;
-
-htag=ntohl(hidx->tag);
-htype=ntohl(hidx->type);
-hoffset=ntohl(hidx->offset);
-hcount=ntohl(hidx->count);
-name=file1->storeaddr+hoffset;
-fprintf(stderr,"checkRpmIdxPREREQ() type=%d offset=%x count=%x %s\n",
-						htype,hoffset,hcount,name);
-}
-void
 checkRpmIdxOBSOLETENAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
 int	htag, htype, hoffset, hcount;
@@ -856,6 +842,21 @@ hoffset=ntohl(hidx->offset);
 hcount=ntohl(hidx->count);
 name=file1->storeaddr+hoffset;
 fprintf(stderr,"checkRpmIdxOBSOLETENAME() type=%d offset=%x count=%x %s\n",
+						htype,hoffset,hcount,name);
+}
+
+void
+checkRpmIdxCONFLICTNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	htag, htype, hoffset, hcount;
+char	*name;
+
+htag=ntohl(hidx->tag);
+htype=ntohl(hidx->type);
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+fprintf(stderr,"checkRpmIdxCONFLICTNAME() type=%d offset=%x count=%x %s\n",
 						htype,hoffset,hcount,name);
 }
 
@@ -888,10 +889,10 @@ for(i=0;i<hcount;i++) {
 	mapbit(RPMSENSE_EQUAL);
 	mapbit(RPMSENSE_GREATER);
 	mapbit(RPMSENSE_LESS);
-	fprintf(stderr,"%s ",buf);
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"%s\n",buf);
 	if( flag )
-		fprintf(stderr," %x",flag);
-	fprintf(stderr,"\n");
+		fprintf(stderr,"Unexpected REQUIREFLAGS bit: %x\n",flag);
 	}
 }
 
@@ -911,7 +912,8 @@ for(i=0;i<hcount;i++) {
 		hasPayloadFilesHavePrefix=1;
 	if( strcmp(name,"rpmlib(CompressedFileNames)") == 0 ) 
 		hasCompressedFileNames=1;
-	fprintf(stderr,"Required Name: %s\n", name );
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Required Name: %s\n", name );
 	name+=strlen(name)+1;
 	}
 
@@ -1283,7 +1285,7 @@ hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
 if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
 	fprintf(stderr,"RHN platform: %s\n", name );
-fprintf(stderr,"RHN platform not checked: %s\n", name );
+/* Opaque data, don't check */
 }
 
 void
@@ -1296,5 +1298,116 @@ hoffset=ntohl(hidx->offset);
 name=file1->storeaddr+hoffset;
 if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
 	fprintf(stderr,"Platform: %s\n", name );
-fprintf(stderr,"Platform not checked: %s\n", name );
+/* Opaque data, don't check */
 }
+
+void
+checkRpmIdxOBSOLETEFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset, hcount, i;
+uint32_t *flagp, flag;
+char	buf[128];
+
+#define mapbit(bit) \
+	if( flag & bit ) { flag&=~bit;strcat(buf,#bit);strcat(buf," "); }
+
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+flagp=(uint32_t *)(file1->storeaddr+hoffset);
+
+/* This should move to a seperate function for use by multiple tags */
+for(i=0;i<hcount;i++) {
+	buf[0]='\000';
+	flag=htonl(flagp[i]);
+	//fprintf(stderr,"Required Flag: %x ",flag);
+	mapbit(RPMSENSE_RPMLIB);
+	mapbit(RPMSENSE_SCRIPT_POSTUN);
+	mapbit(RPMSENSE_SCRIPT_PREUN);
+	mapbit(RPMSENSE_SCRIPT_POST);
+	mapbit(RPMSENSE_SCRIPT_PRE);
+	mapbit(RPMSENSE_INTERP);
+	mapbit(RPMSENSE_PREREQ);
+	mapbit(RPMSENSE_EQUAL);
+	mapbit(RPMSENSE_GREATER);
+	mapbit(RPMSENSE_LESS);
+	fprintf(stderr,"%s ",buf);
+	if( flag )
+		fprintf(stderr," %x",flag);
+	fprintf(stderr,"\n");
+	}
+}
+
+void
+checkRpmIdxCONFLICTFLAGS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	hoffset, hcount, i;
+uint32_t *flagp, flag;
+char	buf[128];
+
+#define mapbit(bit) \
+	if( flag & bit ) { flag&=~bit;strcat(buf,#bit);strcat(buf," "); }
+
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+flagp=(uint32_t *)(file1->storeaddr+hoffset);
+
+/* This should move to a seperate function for use by multiple tags */
+for(i=0;i<hcount;i++) {
+	buf[0]='\000';
+	flag=htonl(flagp[i]);
+	//fprintf(stderr,"Required Flag: %x ",flag);
+	mapbit(RPMSENSE_RPMLIB);
+	mapbit(RPMSENSE_SCRIPT_POSTUN);
+	mapbit(RPMSENSE_SCRIPT_PREUN);
+	mapbit(RPMSENSE_SCRIPT_POST);
+	mapbit(RPMSENSE_SCRIPT_PRE);
+	mapbit(RPMSENSE_INTERP);
+	mapbit(RPMSENSE_PREREQ);
+	mapbit(RPMSENSE_EQUAL);
+	mapbit(RPMSENSE_GREATER);
+	mapbit(RPMSENSE_LESS);
+	fprintf(stderr,"%s ",buf);
+	if( flag )
+		fprintf(stderr," %x",flag);
+	fprintf(stderr,"\n");
+	}
+}
+
+void
+checkRpmIdxOBSOLETEVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	i, hoffset, hcount;
+char	*name;
+
+/*
+ * A STRING_ARRAY because it could be providing multiple things.
+ */
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+for(i=0;i<hcount;i++) {
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Provide Version: %s\n", name );
+	name+=strlen(name)+1;
+	}
+}
+
+void
+checkRpmIdxCONFLICTVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
+{
+int	i, hoffset, hcount;
+char	*name;
+
+/*
+ * A STRING_ARRAY because it could be providing multiple things.
+ */
+hoffset=ntohl(hidx->offset);
+hcount=ntohl(hidx->count);
+name=file1->storeaddr+hoffset;
+for(i=0;i<hcount;i++) {
+	if( rpmchkdebug&DEBUG_TRACE_CONTENTS )
+		fprintf(stderr,"Provide Version: %s\n", name );
+	name+=strlen(name)+1;
+	}
+}
+
