@@ -31,7 +31,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.16 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.17 $";
 
 int
 main(int argc, char *argv[])
@@ -135,14 +135,14 @@ main(int argc, char *argv[])
   /* Check all extra libs */
   for (i=0; i<extra_lib_count; i++)
   { 
-    check_lib(extra_lib_list[i], journal, 0);
+    check_lib(extra_lib_list[i], journal, ELF_IS_DSO);
   }
 
   /* Check binary */
   for (i=optind; i<argc; i++)
   {
     printf("Checking binary %s\n", argv[i]);
-    check_file(argv[i], journal, 1);
+    check_file(argv[i], journal, ELF_IS_EXEC);
   }
 
   tetj_close_journal(journal);

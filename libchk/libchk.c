@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.57 $
+ * This is $Revision: 1.58 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.58  2005/03/01 19:09:15  anderson
+ * bug #513 - make isProgram be tri-state to support prog, libs & objs
+ *
  * Revision 1.57  2005/02/23 22:50:41  anderson
  * missed a change inside #if DEBUG
  *
@@ -216,7 +219,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.57 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.58 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -601,7 +604,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
   /* Check elf header contents */
-  checkElfhdr(file, 0, journal);
+  checkElfhdr(file, ELF_IS_DSO, journal);
 
 #ifdef dEBUG
   for(i=1;file->versionnames[i];i++)

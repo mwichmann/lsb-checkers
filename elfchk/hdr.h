@@ -10,9 +10,15 @@
 
 #include "elfchk.h"
 
+typedef enum {
+	ELF_IS_EXEC = 0x1,
+	ELF_IS_DSO = 0x2,
+	ELF_IS_OBJ = 0x4
+	} Elf_type;
+
 /* Check elf header
    If its not a program its considered to be shared library */
-extern void checkElfhdr(ElfFile *file1, int isProgram, 
+extern void checkElfhdr(ElfFile *file1, Elf_type expect, 
                         struct tetj_handle *journal);
 
 #endif /* _ELF_HDR_H */
