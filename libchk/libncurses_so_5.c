@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libncurses_so_5[] = {
 	{"COLS",""},
@@ -276,3 +277,7 @@ struct versym libncurses_so_5[] = {
 	{"wtouchln",""},
 	{"wvline",""},
 	{0,0}};
+
+struct classinfo *libncurses_so_5_classinfo[] = {
+
+	NULL	};

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libm_so_6_1[] = {
 #if __i386__
@@ -5917,3 +5918,7 @@ struct versym libm_so_6_1[] = {
 	{"ynl","GLIBC_2.2"},
 #endif
 	{0,0}};
+
+struct classinfo *libm_so_6_1_classinfo[] = {
+
+	NULL	};

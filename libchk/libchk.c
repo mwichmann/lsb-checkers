@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.19 $
+ * This is $Revision: 1.20 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.20  2003/04/15 20:30:45  anderson
+ * Add the class data structures
+ *
  * Revision 1.19  2003/03/26 22:21:16  anderson
  * Add x86_64 support
  *
@@ -69,6 +72,7 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 #include "elfchk.h"
+#include "libchk.h"
 #include "hdr.h"
 #include "../tetj/tetj.h"
 
@@ -88,7 +92,10 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.19 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.20 $";
+
+extern int check_class_info(char *libname, struct classinfo classes[], struct tetj_handle *journal);
+
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -199,7 +206,7 @@ check_symbol(ElfFile *file, struct versym *entry, int print_warnings)
 
 
 void
-check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
+check_lib(char *libname, struct versym entries[], struct classinfo classes[], struct tetj_handle *journal)
 {
   ElfFile *file = NULL;
   char filename[PATH_MAX+1];
@@ -320,6 +327,10 @@ check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   }
+
+  printf("Checking Class Information in %s\n", filename );
+
+  check_class_info(filename,classes,journal);
 }
 
 /* Generated function by mkfunclist */

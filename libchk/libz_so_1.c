@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libz_so_1[] = {
 	{"adler32",""},
@@ -41,3 +42,7 @@ struct versym libz_so_1[] = {
 	{"uncompress",""},
 	{"zError",""},
 	{0,0}};
+
+struct classinfo *libz_so_1_classinfo[] = {
+
+	NULL	};

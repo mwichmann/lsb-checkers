@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libgcc_s_so_1[] = {
 	{"_Unwind_DeleteException","GCC_3.0"},
@@ -14,3 +15,7 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_SetGR","GCC_3.0"},
 	{"_Unwind_SetIP","GCC_3.0"},
 	{0,0}};
+
+struct classinfo *libgcc_s_so_1_classinfo[] = {
+
+	NULL	};

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libGL_so_1[] = {
 	{"glAccum",""},
@@ -451,3 +452,7 @@ struct versym libGL_so_1[] = {
 	{"glXWaitGL",""},
 	{"glXWaitX",""},
 	{0,0}};
+
+struct classinfo *libGL_so_1_classinfo[] = {
+
+	NULL	};

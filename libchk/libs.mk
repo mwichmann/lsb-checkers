@@ -20,6 +20,7 @@ LIBOBJS = \
 	libpam_so_0.o \
 	libpthread_so_0.o \
 	libSM_so_6.o \
+	libstdcxx_so_5.o \
 	libutil_so_1.o \
 	libX11_so_6.o \
 	libXext_so_6.o \

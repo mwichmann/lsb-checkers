@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libpthread_so_0[] = {
 #if __i386__
@@ -1681,3 +1682,7 @@ struct versym libpthread_so_0[] = {
 	{"sem_wait","GLIBC_2.2"},
 #endif
 	{0,0}};
+
+struct classinfo *libpthread_so_0_classinfo[] = {
+
+	NULL	};

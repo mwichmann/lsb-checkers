@@ -14,12 +14,13 @@
 int
 check_class_info(char *libname,struct classinfo *classes[], struct tetj_handle *journal)
 {
-int	i;
+int	i,j;
 Dl_info	dlinfo;
 void	*dlhndl;
 void	*symp;
-struct classtypeinfo	*rttip;
-struct classvtable	*vtablep;
+struct classtypeinfo_mem *rttip;
+struct classvtable_mem	*vtablep;
+struct classinfo	*classp;
 
 if( classes == NULL ) {
 	return 0;
@@ -31,16 +32,42 @@ dlhndl=dlopen(libname,RTLD_LAZY);
 
 
 for(i=0;classes[i]!=NULL;i++) {
-	printf("Checking class %s\n", classes[i]->name );
-	vtablep=dlsym(dlhndl,classes[i]->vtablename);
-	printf("%s found at %x\n",classes[i]->vtablename,vtablep);
-	printf("\tbaseoffset: %x\n", vtablep->baseoffset);
-	printf("\tRTTI ptr: %x\n", vtablep->typeinfo);
-	dladdr(vtablep->typeinfo,&dlinfo);
-	printf("\tRTTI name: %s\n", dlinfo.dli_sname);
+	classp=classes[i];
+	printf("Checking class %s\n", classp->name );
 
-	rttip=dlsym(dlhndl,classes[i]->rttiname);
-	printf("%s found at %x\n",classes[i]->rttiname,rttip);
+	vtablep=dlsym(dlhndl,classp->vtablename);
+	/*
+	printf("%s found at %x\n",classp->vtablename,vtablep);
+	printf("\tbaseoffset: %x\n", vtablep->baseoffset);
+	*/
+	if( vtablep->baseoffset != classp->vtable->baseoffset ) {
+			printf("Vtable baseoffset %d (expected) doesn't match %d (found)\n", classp->vtable->baseoffset,vtablep->baseoffset );
+		}
+	dladdr(vtablep->typeinfo,&dlinfo);
+	/*
+	printf("\tRTTI ptr: %x\n", vtablep->typeinfo);
+	printf("\tRTTI name: %s\n", dlinfo.dli_sname);
+	*/
+	if( strcmp(classp->vtable->typeinfo,dlinfo.dli_sname) ) {
+		printf("RTTI Name %s (expected) doesn't match %s (found)\n", classp->vtable->typeinfo,dlinfo.dli_sname );
+			}
+	for(j=0;j<classp->numvirtfuncs;j++) {
+		symp=dlsym(dlhndl,classp->vtable->virtfuncs[j]);
+		dladdr(vtablep->virtfuncs[j],&dlinfo);
+		/*
+		printf("\tVfunc: %s\n", classp->vtable->virtfuncs[j]);
+		printf("\tVfunc addr: %x\n", symp );
+		printf("\tVfunc addr: %x\n", vtablep->virtfuncs[j] );
+		printf("\tVfunc name: %s\n", dlinfo.dli_sname);
+		*/
+		if( (classp->vtable->virtfuncs[j] && dlinfo.dli_sname) &&
+		   strcmp(classp->vtable->virtfuncs[j],dlinfo.dli_sname) ) {
+			printf("Virtual Function %s (expected) doesn't match %s (found)\n", classp->vtable->virtfuncs[j],dlinfo.dli_sname );
+			}
+		}
+
+	rttip=dlsym(dlhndl,classp->rttiname);
+	printf("%s found at %x\n",classp->rttiname,rttip);
 	printf("\tbasevtable: %x\n", rttip->basevtable);
 	printf("\tbasevtable: %x\n", rttip->basevtable);
 	dladdr(rttip->basevtable,&dlinfo);

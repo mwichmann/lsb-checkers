@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libSM_so_6[] = {
 	{"SmFreeProperty",""},
@@ -38,3 +39,7 @@ struct versym libSM_so_6[] = {
 	{"SmsSetErrorHandler",""},
 	{"SmsShutdownCancelled",""},
 	{0,0}};
+
+struct classinfo *libSM_so_6_classinfo[] = {
+
+	NULL	};

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "elfchk.h"
 struct versym libpam_so_0[] = {
 	{"pam_acct_mgmt",""},
@@ -14,3 +15,7 @@ struct versym libpam_so_0[] = {
 	{"pam_start",""},
 	{"pam_strerror",""},
 	{0,0}};
+
+struct classinfo *libpam_so_0_classinfo[] = {
+
+	NULL	};
