@@ -1,4 +1,4 @@
-#include "elfchk.h"
+#include "proghdr.h"
 
 typedef struct	{
 	int		type;
@@ -6,14 +6,14 @@ typedef struct	{
 	} PhTypeFuncRec;
 
 PhTypeFuncRec	Headers[] = {
-	PT_NULL,	"PT_NULL",
-	PT_LOAD,	"PT_LOAD",
-	PT_DYNAMIC,	"PT_DYNAMIC",
-	PT_INTERP,	"PT_INTERP",
-	PT_NOTE,	"PT_NOTE",
-	PT_SHLIB,	"PT_SHLIB",
-	PT_PHDR,	"PT_PHDR",
-	PT_NUM,		"PT_NUM",
+	{PT_NULL,	"PT_NULL"},
+	{PT_LOAD,	"PT_LOAD"},
+	{PT_DYNAMIC,	"PT_DYNAMIC"},
+	{PT_INTERP,	"PT_INTERP"},
+	{PT_NOTE,	"PT_NOTE"},
+	{PT_SHLIB,	"PT_SHLIB"},
+	{PT_PHDR,	"PT_PHDR"},
+	{PT_NUM,		"PT_NUM"},
 	};
 
 void

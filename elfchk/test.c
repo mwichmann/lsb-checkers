@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "elfchk.h"
 
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 ElfFile	*elffile;
 
@@ -11,7 +11,7 @@ if( (elffile = OpenElfFile("./test")) == NULL ) {
 	exit(2);
 	}
 
-checkElf(elffile);
+checkElf(elffile, 1);
 /*
 check_intepreter(elffile);
 check_DT_NEEDED(elffile);

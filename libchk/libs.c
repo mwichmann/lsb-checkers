@@ -1,7 +1,8 @@
 /* Generated file */
 #include "libs.h"
 
-check_libs()
+extern void check_lib(const char *libname, struct versym entries[]);
+void check_libs()
 {
 check_lib("ld-lsb.so.1",ld_lsb_so_1);
 check_lib("libGL.so.1",libGL_so_1);

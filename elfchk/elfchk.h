@@ -1,8 +1,8 @@
+#ifndef _ELFCHK_H
+#define _ELFCHK_H
+
 #include <sys/types.h>
 #include <elf.h>
-/*
-#include "../../include/elf.h"
-*/
 
 struct versym {
 	char *name;
@@ -72,3 +72,6 @@ typedef	struct	{
 extern char *ElfGetStringIndex(ElfFile *file, int offset, int index);
 extern char *ElfGetString(ElfFile *file, int offset);
 extern ElfFile *OpenElfFile(char *name);
+extern void checkElf(ElfFile *file1, int isProgram);
+
+#endif /* _ELFCHK_H */

@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include "elfchk.h"
+#include "hdr.h"
+#include "symvers.h"
 
 void
-checkElfhdr(ElfFile *file1)
+checkElfhdr(ElfFile *file1, int isProgram)
 {
 Elf32_Ehdr *hdr1;
 
@@ -56,7 +57,14 @@ if( hdr1->member != value ) { \
 
 /* Check e_type */
 
-checkhdrfield( e_type, ET_EXEC )
+if (isProgram)
+{
+  checkhdrfield( e_type, ET_EXEC )
+}
+else
+{
+  checkhdrfield( e_type, ET_DYN )
+}
 
 /* Check e_machine */
 
