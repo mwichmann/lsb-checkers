@@ -35,14 +35,21 @@ for(i=0;classes[i]!=NULL;i++) {
 	classp=classes[i];
 	printf("Checking class %s\n", classp->name );
 
-	vtablep=dlsym(dlhndl,classp->vtablename);
 	/*
-	printf("%s found at %x\n",classp->vtablename,vtablep);
-	printf("\tbaseoffset: %x\n", vtablep->baseoffset);
-	*/
+	 * First, check the Vtable info
+	 */
+	vtablep=dlsym(dlhndl,classp->vtablename);
+
+	/*
+	 * Check the baseoffset
+	 */
 	if( vtablep->baseoffset != classp->vtable->baseoffset ) {
-			printf("Vtable baseoffset %d (expected) doesn't match %d (found)\n", classp->vtable->baseoffset,vtablep->baseoffset );
+		printf("Vtable baseoffset %d (expected) doesn't match %d (found)\n", classp->vtable->baseoffset,vtablep->baseoffset );
 		}
+
+	/*
+	 * Check the pointer to the RTTI
+	 */
 	dladdr(vtablep->typeinfo,&dlinfo);
 	/*
 	printf("\tRTTI ptr: %x\n", vtablep->typeinfo);
@@ -51,6 +58,10 @@ for(i=0;classes[i]!=NULL;i++) {
 	if( strcmp(classp->vtable->typeinfo,dlinfo.dli_sname) ) {
 		printf("RTTI Name %s (expected) doesn't match %s (found)\n", classp->vtable->typeinfo,dlinfo.dli_sname );
 			}
+
+	/*
+	 * Check the virtual function pointers
+	 */
 	for(j=0;j<classp->numvirtfuncs;j++) {
 		symp=dlsym(dlhndl,classp->vtable->virtfuncs[j]);
 		dladdr(vtablep->virtfuncs[j],&dlinfo);
@@ -66,13 +77,45 @@ for(i=0;classes[i]!=NULL;i++) {
 			}
 		}
 
+	/*
+	 * Second, check the RTTI info
+	 */
 	rttip=dlsym(dlhndl,classp->rttiname);
+
+	/*
+	 * Check the Vtable of the base class
+	 */
+	symp=dlsym(dlhndl,classp->typeinfo->basevtable);
+	if( symp+8 != rttip->basevtable ) {
+		printf("Base vtype %p (expected) doesn't match %p (found)\n",
+			symp, rttip->basevtable );
+		}
+
+	/*
+	 * Check the Name string for the type
+	 */
+	if( strcmp(classp->name,rttip->name) ) {
+		printf("Class name %s (found) doesn't match %s (expected)\n",
+			    rttip->name,		classp->name );
+		}
+
+	/*
+	 * Check the base types info
+	 */
+	for(j=0;j<classp->numbaseinfo;j++) {
+		symp=dlsym(dlhndl,classp->typeinfo->basetypeinfo[j]);
+		dladdr(rttip->basetypeinfo[j],&dlinfo);
+		if( symp != rttip->basetypeinfo[j] ) {
+			printf("Basetype %p (expected) doesn't match %p (found)\n", symp, rttip->basetypeinfo[j]);
+			}
+		}
+/*
 	printf("%s found at %p\n",classp->rttiname,rttip);
-	printf("\tbasevtable: %p\n", rttip->basevtable);
 	printf("\tbasevtable: %p\n", rttip->basevtable);
 	dladdr(rttip->basevtable,&dlinfo);
 	printf("\tbasevtable name: %s\n", dlinfo.dli_sname);
 	printf("\tname: %s\n", rttip->name);
+*/
 	}
 
 dlclose(dlhndl);
