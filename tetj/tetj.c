@@ -8,9 +8,13 @@
  *
  * 2002/03/19 Chris Yeoh, IBM
  *
- * This is $Revision: 1.2 $
+ * This is $Revision: 1.3 $
  * 
  * $Log: tetj.c,v $
+ * Revision 1.3  2002/04/29 04:39:06  cyeoh
+ * Adds support for 'IC Start' and 'IC End' markers in
+ * the journal file
+ *
  * Revision 1.2  2002/04/29 04:12:05  cyeoh
  * Adds tetj_purpose_end
  * Adds IC Start markers
@@ -191,7 +195,7 @@ void tetj_purpose_end(struct tetj_handle *handle,
   if (handle)
   {
     fprintf(handle->journal, "410|%u %u %s|IC End\n",
-            activity, tpnumber, get_current_time_string(), message);
+            activity, tpnumber, get_current_time_string());
   }
 }
 

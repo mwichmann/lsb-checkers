@@ -338,6 +338,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
 
       tetj_result(journal, tetj_activity_count, tetj_tp_count,
                   fail ? TETJ_FAIL : TETJ_PASS);
+      tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
       return;
     }
   }
@@ -346,5 +347,6 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
   fprintf(stderr, "%s\n", tmp_string);
   tetj_result(journal, tetj_activity_count, tetj_tp_count,
               TETJ_FAIL);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   return;
 }

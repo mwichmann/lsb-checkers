@@ -6,9 +6,13 @@
  * Stuart Anderson (anderson@metrolink.com)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.12 $
+ * This is $Revision: 1.13 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.13  2002/04/29 04:39:06  cyeoh
+ * Adds support for 'IC Start' and 'IC End' markers in
+ * the journal file
+ *
  * Revision 1.12  2002/03/21 01:24:18  cyeoh
  * Adds test for existance of library instead of reporting a controller error
  * Adds logging of file size and md5sum of each library
@@ -58,7 +62,7 @@ char *libpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.12 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.13 $";
 
 /* Returns 1 on match, 0 otherwise */
 int
@@ -218,6 +222,7 @@ check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
              libname);
     printf("%s\n", tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     return;
   }
   else
@@ -258,6 +263,8 @@ check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
                        tmp_string2);
   }
 
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
   /* Check elf header contents */
   checkElfhdr(file, 0, journal);
 
@@ -285,6 +292,7 @@ check_lib(char *libname, struct versym entries[], struct tetj_handle *journal)
       printf(" in %s\n", libname);
       check_symbol(file, entries+i, 1);
     }
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   }
 }
 

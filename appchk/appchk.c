@@ -26,7 +26,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.8 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.9 $";
 
 int
 main(int argc, char *argv[])
@@ -41,7 +41,7 @@ main(int argc, char *argv[])
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
 
-  printf("%s " LSBVERSION "\n", argv[0]);
+  printf("%s for LSB Specification " LSBVERSION " \n", argv[0]);
   extra_libraries = strdup("EXTRA_LIBRARIES=");
 
   for (i=0; i<argc; i++)

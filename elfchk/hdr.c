@@ -37,6 +37,7 @@ else \
 { \
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); \
 } \
+tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
 }
 
 checkhdrident( EI_MAG0, ELFMAG0 )
@@ -77,6 +78,7 @@ else \
 { \
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); \
 } \
+tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
 	}
 
 /* Check e_type */
