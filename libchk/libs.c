@@ -18,13 +18,13 @@ check_lib("libc.so.6",libc_so_6, journal);
 #if defined(__ia64__)
 check_lib("libc.so.6.1",libc_so_6_1, journal);
 #endif
+check_lib("libcrypt.so.1",libcrypt_so_1,journal);
 #if defined(__ia64__)
 check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #endif
 #if defined(__i386__)
 check_lib("libcrypt.so.1",libcrypt_so_1, journal);
 #endif
-check_lib("libcrypt.so.1",libcrypt_so_1,journal);
 check_lib("libdl.so.2",libdl_so_2,journal);
 #if defined(__ia64__)
 check_lib("libdl.so.2",libdl_so_2, journal);

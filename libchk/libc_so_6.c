@@ -1,7 +1,7 @@
 #include "elfchk.h"
 struct versym libc_so_6[] = {
 #if defined(__i386__)
-	{"_Exit","GLIBC_2.2"},
+	{"_Exit","GLIBC_2.1.1"},
 #endif
 #if defined(__ia64__)
 	{"_Exit","GLIBC_2.2"},
@@ -865,7 +865,7 @@ struct versym libc_so_6[] = {
 	{"ecvt","GLIBC_2.2"},
 #endif
 #if defined(__i386__)
-	{"endgrent","GLIBC_2.2"},
+	{"endgrent","GLIBC_2.0"},
 #endif
 #if defined(__ia64__)
 	{"endgrent","GLIBC_2.2"},
