@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sys/socket.h>
 #undef socketpair
 static int(*funcptr) (int , int , int , int [2]) = 0;
 

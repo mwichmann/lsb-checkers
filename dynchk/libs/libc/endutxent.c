@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <utmpx.h>
 #undef endutxent
 static void(*funcptr) () = 0;
 

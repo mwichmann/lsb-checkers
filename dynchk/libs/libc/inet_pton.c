@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <arpa/inet.h>
 #undef inet_pton
-static int(*funcptr) (int , char * , void * ) = 0;
+static int(*funcptr) (int , const char * , void * ) = 0;
 
-int inet_pton (int arg0 , char * arg1 , void * arg2 )
+int inet_pton (int arg0 , const char * arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_pton");
@@ -15,7 +16,7 @@ int inet_pton (int arg0 , char * arg1 , void * arg2 )
 	return funcptr(arg0, arg1, arg2);
 }
 
-int lsb_inet_pton (int arg0 , char * arg1 , void * arg2 )
+int lsb_inet_pton (int arg0 , const char * arg1 , void * arg2 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inet_pton");

@@ -3,10 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef putwchar
-static wchar_t(*funcptr) (wchar_t ) = 0;
+static wint_t(*funcptr) (wchar_t ) = 0;
 
-wchar_t putwchar (wchar_t arg0 )
+wint_t putwchar (wchar_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwchar");
@@ -14,7 +15,7 @@ wchar_t putwchar (wchar_t arg0 )
 	return funcptr(arg0);
 }
 
-wchar_t lsb_putwchar (wchar_t arg0 )
+wint_t lsb_putwchar (wchar_t arg0 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "putwchar");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <wctype.h>
 #undef wctype
 static wctype_t(*funcptr) (const char * ) = 0;
 

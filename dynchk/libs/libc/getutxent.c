@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <utmpx.h>
 #undef getutxent
 static struct utmpx *(*funcptr) () = 0;
 

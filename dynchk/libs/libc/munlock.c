@@ -3,10 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <sys/mman.h>
 #undef munlock
-static int(*funcptr) (void * , size_t ) = 0;
+static int(*funcptr) (const void * , size_t ) = 0;
 
-int munlock (void * arg0 , size_t arg1 )
+int munlock (const void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "munlock");
@@ -15,7 +16,7 @@ int munlock (void * arg0 , size_t arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_munlock (void * arg0 , size_t arg1 )
+int lsb_munlock (const void * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "munlock");

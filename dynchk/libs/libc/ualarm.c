@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <unistd.h>
 #undef ualarm
 static unsigned int(*funcptr) (useconds_t , useconds_t ) = 0;
 

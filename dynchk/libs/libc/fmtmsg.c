@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <fmtmsg.h>
 #undef fmtmsg
 static int(*funcptr) (long , const char * , int , const char * , const char * , const char * ) = 0;
 

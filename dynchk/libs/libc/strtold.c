@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef strtold
 static long double(*funcptr) (const char * , char * * ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <string.h>
 #undef strnlen
 static size_t(*funcptr) (const char * , size_t ) = 0;
 

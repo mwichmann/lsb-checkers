@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <wctype.h>
 #include <stdio.h>
+#include <wchar.h>
 #undef ungetwc
 static wint_t(*funcptr) (wint_t , FILE * ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/socket.h>
+#include <sys/uio.h>
 #undef writev
 static ssize_t(*funcptr) (int , const struct iovec * , int ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <math.h>
+#include <stdlib.h>
 #undef getloadavg
 static int(*funcptr) (double [], int ) = 0;
 

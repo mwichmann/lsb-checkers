@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <sched.h>
 #undef sched_yield
 static int(*funcptr) () = 0;
 

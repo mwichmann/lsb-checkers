@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <time.h>
 #undef ctime_r
 static char *(*funcptr) (const time_t * , char * ) = 0;
 

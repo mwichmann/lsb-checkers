@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <nl_types.h>
+#include <langinfo.h>
 #undef nl_langinfo
 static char *(*funcptr) (nl_item ) = 0;
 

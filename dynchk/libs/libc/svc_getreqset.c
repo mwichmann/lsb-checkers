@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <rpc/svc.h>
 #undef svc_getreqset
 static void(*funcptr) (fd_set * ) = 0;
 

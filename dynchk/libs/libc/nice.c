@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef nice
 static int(*funcptr) (int ) = 0;
 

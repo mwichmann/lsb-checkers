@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <wchar.h>
 #undef putwc
 static wint_t(*funcptr) (wchar_t , FILE * ) = 0;
 

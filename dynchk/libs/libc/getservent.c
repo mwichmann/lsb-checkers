@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <netdb.h>
 #undef getservent
 static struct servent *(*funcptr) () = 0;
 

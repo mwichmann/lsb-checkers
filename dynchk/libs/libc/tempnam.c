@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdio.h>
 #undef tempnam
 static char *(*funcptr) (const char * , const char * ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <unistd.h>
 #undef readlink
 static int(*funcptr) (const char * , char * , size_t ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <netdb.h>
 #undef __h_errno_location
 static int *(*funcptr) () = 0;
 

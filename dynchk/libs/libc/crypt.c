@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef crypt
 static char *(*funcptr) (const char * , const char * ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef fpathconf
 static long(*funcptr) (int , int ) = 0;
 

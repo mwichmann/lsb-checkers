@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef setkey
 static void(*funcptr) (const char * ) = 0;
 

@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <time.h>
+#include <wchar.h>
 #undef wcsftime
 static size_t(*funcptr) (wchar_t * , size_t , const wchar_t * , const struct tm * ) = 0;
 

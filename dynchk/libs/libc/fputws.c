@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <wchar.h>
 #undef fputws
 static int(*funcptr) (const wchar_t * , FILE * ) = 0;
 

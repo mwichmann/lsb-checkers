@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <string.h>
 #undef strsignal
 static char *(*funcptr) (int ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <unistd.h>
 #undef lseek64
 static loff_t(*funcptr) (int , loff_t , int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef _Exit
 static void(*funcptr) (int ) = 0;
 

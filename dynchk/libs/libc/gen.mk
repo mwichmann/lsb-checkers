@@ -341,7 +341,6 @@ tcflush.o \
 tcgetpgrp.o \
 tcgetsid.o \
 tcsendbreak.o \
-tcsetattr.o \
 tcsetpgrp.o \
 telldir.o \
 tempnam.o \
@@ -586,10 +585,8 @@ strtoull.o \
 strtouq.o \
 symlink.o \
 sysconf.o \
-tcgetattr.o \
 times.o \
 tzset.o \
-ulimit.o \
 umask.o \
 ungetc.o \
 unlink.o \
@@ -735,7 +732,6 @@ vswscanf.o \
 vwprintf.o \
 vwscanf.o \
 wcsftime.o \
-wprintf.o \
 __ctype_b_loc.o \
 __ctype_toupper_loc.o \
 __ctype_tolower_loc.o 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <unistd.h>
 #undef read
 static ssize_t(*funcptr) (int , void * , size_t ) = 0;
 

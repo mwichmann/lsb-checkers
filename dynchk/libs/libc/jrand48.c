@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef jrand48
-static long(*funcptr) (unsigned short [3]) = 0;
+static long(*funcptr) (unsigned short []) = 0;
 
-long jrand48 (unsigned short arg0 [3])
+long jrand48 (unsigned short arg0 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jrand48");
@@ -13,7 +14,7 @@ long jrand48 (unsigned short arg0 [3])
 	return funcptr(arg0);
 }
 
-long lsb_jrand48 (unsigned short arg0 [3])
+long lsb_jrand48 (unsigned short arg0 [])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "jrand48");

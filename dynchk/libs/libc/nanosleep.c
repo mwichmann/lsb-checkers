@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/time.h>
+#include <time.h>
 #undef nanosleep
 static int(*funcptr) (const struct timespec * , struct timespec * ) = 0;
 

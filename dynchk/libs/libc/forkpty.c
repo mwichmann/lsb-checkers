@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <termios.h>
 #include <pty.h>
 #undef forkpty
 static int(*funcptr) (int * , char * , struct termios * , struct winsize * ) = 0;

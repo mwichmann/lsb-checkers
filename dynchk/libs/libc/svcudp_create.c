@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <rpc/svc.h>
 #undef svcudp_create
 static SVCXPRT *(*funcptr) (int ) = 0;
 

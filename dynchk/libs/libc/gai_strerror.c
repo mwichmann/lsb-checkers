@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <netdb.h>
 #undef gai_strerror
 static const char *(*funcptr) (int ) = 0;
 

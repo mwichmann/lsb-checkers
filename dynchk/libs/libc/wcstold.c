@@ -3,23 +3,23 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef wcstold
-static long double(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
+static long double(*funcptr) (const wchar_t * , wchar_t * * ) = 0;
 
-long double wcstold (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+long double wcstold (const wchar_t * arg0 , wchar_t * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstold");
 	validate_NULL_TYPETYPE(arg0, "wcstold");
 	validate_NULL_TYPETYPE(arg1, "wcstold");
-	validate_NULL_TYPETYPE(arg2, "wcstold");
-	return funcptr(arg0, arg1, arg2);
+	return funcptr(arg0, arg1);
 }
 
-long double lsb_wcstold (const wchar_t * arg0 , wchar_t * * arg1 , int arg2 )
+long double lsb_wcstold (const wchar_t * arg0 , wchar_t * * arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcstold");
-	return funcptr(arg0, arg1, arg2);
+	return funcptr(arg0, arg1);
 }
 

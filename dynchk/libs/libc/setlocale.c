@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <locale.h>
 #undef setlocale
 static char *(*funcptr) (int , const char * ) = 0;
 

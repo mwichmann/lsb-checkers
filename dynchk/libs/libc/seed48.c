@@ -2,10 +2,11 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef seed48
-static unsigned short *(*funcptr) (unsigned short[3] ) = 0;
+static unsigned short *(*funcptr) (unsigned short [3]) = 0;
 
-unsigned short * seed48 (unsigned short arg0[3] )
+unsigned short * seed48 (unsigned short arg0 [3])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seed48");
@@ -13,7 +14,7 @@ unsigned short * seed48 (unsigned short arg0[3] )
 	return funcptr(arg0);
 }
 
-unsigned short * lsb_seed48 (unsigned short arg0[3] )
+unsigned short * lsb_seed48 (unsigned short arg0 [3])
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "seed48");

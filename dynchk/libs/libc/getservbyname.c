@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <netdb.h>
 #undef getservbyname
 static struct servent *(*funcptr) (const char * , const char * ) = 0;
 

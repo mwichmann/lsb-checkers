@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <nl_types.h>
 #undef catopen
 static nl_catd(*funcptr) (const char * , int ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <signal.h>
 #undef killpg
 static int(*funcptr) (pid_t , int ) = 0;
 

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <termios.h>
 #undef tcgetsid
 static pid_t(*funcptr) (int ) = 0;
 

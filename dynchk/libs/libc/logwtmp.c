@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <utmp.h>
 #undef logwtmp
 static void(*funcptr) (const char * , const char * , const char * ) = 0;
 

@@ -3,10 +3,11 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef wcsnlen
-static size_t(*funcptr) (wchar_t * , size_t ) = 0;
+static size_t(*funcptr) (const wchar_t * , size_t ) = 0;
 
-size_t wcsnlen (wchar_t * arg0 , size_t arg1 )
+size_t wcsnlen (const wchar_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsnlen");
@@ -15,7 +16,7 @@ size_t wcsnlen (wchar_t * arg0 , size_t arg1 )
 	return funcptr(arg0, arg1);
 }
 
-size_t lsb_wcsnlen (wchar_t * arg0 , size_t arg1 )
+size_t lsb_wcsnlen (const wchar_t * arg0 , size_t arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wcsnlen");

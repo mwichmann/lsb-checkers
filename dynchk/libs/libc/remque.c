@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <search.h>
 #undef remque
 static void(*funcptr) (void * ) = 0;
 

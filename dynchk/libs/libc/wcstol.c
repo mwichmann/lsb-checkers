@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef wcstol
 static long(*funcptr) (const wchar_t * , wchar_t * * , int ) = 0;
 

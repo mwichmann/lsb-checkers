@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <ctype.h>
 #undef __ctype_b_loc
 static const unsigned short * *(*funcptr) () = 0;
 

@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <sys/types.h>
+#include <grp.h>
 #undef setgroups
 static int(*funcptr) (size_t , const gid_t * ) = 0;
 

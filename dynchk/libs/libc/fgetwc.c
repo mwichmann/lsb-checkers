@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdio.h>
+#include <wchar.h>
 #undef fgetwc
 static wint_t(*funcptr) (FILE * ) = 0;
 

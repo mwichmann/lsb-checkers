@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stdarg.h>
+#include <stdio.h>
 #undef vsscanf
 static int(*funcptr) (const char * , const char * , va_list ) = 0;
 

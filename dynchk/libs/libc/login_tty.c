@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <utmp.h>
 #undef login_tty
 static int(*funcptr) (int ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <inttypes.h>
+#include <netinet/in.h>
 #undef htons
 static uint16_t(*funcptr) (uint16_t ) = 0;
 

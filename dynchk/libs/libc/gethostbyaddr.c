@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/socket.h>
+#include <netdb.h>
 #undef gethostbyaddr
 static struct hostent *(*funcptr) (const void * , socklen_t , int ) = 0;
 

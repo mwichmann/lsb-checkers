@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef mkstemp64
 static int(*funcptr) (char * ) = 0;
 

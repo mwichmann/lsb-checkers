@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef lldiv
 static lldiv_t(*funcptr) (long long , long long ) = 0;
 

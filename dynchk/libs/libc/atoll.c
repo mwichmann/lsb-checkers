@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef atoll
 static long long(*funcptr) (const char * ) = 0;
 

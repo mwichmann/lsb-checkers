@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <unistd.h>
 #undef tcsetpgrp
 static int(*funcptr) (int , pid_t ) = 0;
 

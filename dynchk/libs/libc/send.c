@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <sys/socket.h>
 #undef send
 static ssize_t(*funcptr) (int , const void * , size_t , int ) = 0;
 

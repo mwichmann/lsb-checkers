@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <stdlib.h>
 #undef wcstombs
 static size_t(*funcptr) (char * , const wchar_t * , size_t ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <search.h>
 #undef hcreate
 static int(*funcptr) (size_t ) = 0;
 

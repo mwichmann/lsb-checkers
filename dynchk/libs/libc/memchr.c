@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <string.h>
 #undef memchr
 static void *(*funcptr) (const void * , int , size_t ) = 0;
 

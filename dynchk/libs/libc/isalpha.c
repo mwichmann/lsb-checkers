@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <ctype.h>
 #undef isalpha
 static int(*funcptr) (int ) = 0;
 

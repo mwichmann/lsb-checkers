@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <sys/types.h>
+#include <unistd.h>
 #undef pwrite
 static ssize_t(*funcptr) (int , const void * , size_t , off_t ) = 0;
 

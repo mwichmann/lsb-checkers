@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <string.h>
 #undef strcmp
 static int(*funcptr) (const char * , const char * ) = 0;
 

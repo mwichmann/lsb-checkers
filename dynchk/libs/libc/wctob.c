@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <wctype.h>
+#include <wchar.h>
 #undef wctob
 static int(*funcptr) (wint_t ) = 0;
 

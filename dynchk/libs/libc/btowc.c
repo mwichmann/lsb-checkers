@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <wchar.h>
 #undef btowc
 static wint_t(*funcptr) (int ) = 0;
 

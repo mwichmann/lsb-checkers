@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <libintl.h>
 #undef bind_textdomain_codeset
 static char *(*funcptr) (const char * , const char * ) = 0;
 

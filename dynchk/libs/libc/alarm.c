@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef alarm
 static unsigned int(*funcptr) (unsigned int ) = 0;
 

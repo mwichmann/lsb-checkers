@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <unistd.h>
 #undef cuserid
 static char *(*funcptr) (char * ) = 0;
 

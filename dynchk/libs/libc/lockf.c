@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <unistd.h>
 #undef lockf
 static int(*funcptr) (int , int , off_t ) = 0;
 

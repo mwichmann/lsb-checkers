@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <string.h>
 #undef memcpy
 static void *(*funcptr) (void * , const void * , size_t ) = 0;
 

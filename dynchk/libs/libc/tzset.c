@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <time.h>
 #undef tzset
 static void(*funcptr) () = 0;
 

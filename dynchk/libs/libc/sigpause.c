@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <signal.h>
 #undef sigpause
 static int(*funcptr) (int ) = 0;
 

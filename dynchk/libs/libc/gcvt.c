@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef gcvt
 static char *(*funcptr) (double , int , char * ) = 0;
 

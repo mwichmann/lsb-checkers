@@ -4,10 +4,11 @@
 #include <dlfcn.h>
 #include <stddef.h>
 #include <stdarg.h>
+#include <wchar.h>
 #undef vwscanf
-static int(*funcptr) (const wchar_t * , va_list ) = 0;
+static int(*funcptr) (wchar_t * , va_list ) = 0;
 
-int vwscanf (const wchar_t * arg0 , va_list arg1 )
+int vwscanf (wchar_t * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwscanf");
@@ -16,7 +17,7 @@ int vwscanf (const wchar_t * arg0 , va_list arg1 )
 	return funcptr(arg0, arg1);
 }
 
-int lsb_vwscanf (const wchar_t * arg0 , va_list arg1 )
+int lsb_vwscanf (wchar_t * arg0 , va_list arg1 )
 {
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwscanf");

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <unistd.h>
 #undef getgroups
 static int(*funcptr) (int , gid_t []) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <time.h>
 #undef time
 static time_t(*funcptr) (time_t * ) = 0;
 

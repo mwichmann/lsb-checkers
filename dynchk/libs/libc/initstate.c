@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <stdlib.h>
 #undef initstate
 static char *(*funcptr) (unsigned int , char * , size_t ) = 0;
 

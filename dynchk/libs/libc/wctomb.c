@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <stdlib.h>
 #undef wctomb
 static int(*funcptr) (char * , wchar_t ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 #undef waitpid
 static pid_t(*funcptr) (pid_t , int * , int ) = 0;
 

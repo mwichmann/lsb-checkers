@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <stdlib.h>
 #undef __ctype_get_mb_cur_max
 static size_t(*funcptr) () = 0;
 

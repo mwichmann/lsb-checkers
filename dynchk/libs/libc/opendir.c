@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
+#include <dirent.h>
 #undef opendir
 static DIR *(*funcptr) (const char * ) = 0;
 

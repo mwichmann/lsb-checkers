@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <string.h>
 #undef memset
 static void *(*funcptr) (void * , int , size_t ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <pthread.h>
+#include <signal.h>
 #undef pthread_kill
 static int(*funcptr) (pthread_t , int ) = 0;
 

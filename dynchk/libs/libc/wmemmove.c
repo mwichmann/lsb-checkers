@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include <dlfcn.h>
 #include <stddef.h>
+#include <wchar.h>
 #undef wmemmove
 static wchar_t *(*funcptr) (wchar_t * , const wchar_t * , size_t ) = 0;
 
