@@ -77,4 +77,6 @@ extern ElfFile *OpenElfFile(char *name);
 extern void checkElf(ElfFile *file1, int isProgram, 
                      struct tetj_handle *journal);
 
+/* Add non LSB libraries to list which are ok to be in the DT_NEEDED section */
+extern void addDTNeeded (char *filename);
 #endif /* _ELFCHK_H */
