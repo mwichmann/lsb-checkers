@@ -1493,25 +1493,25 @@ struct versym libm_so_6_1[] = {
 	{"clog","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
-	{"clog10","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog10","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __ia64__
-	{"clog10","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clog10","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"clog10","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog10","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __powerpc64__
-	{"clog10","GLIBC_2.3",0,"LSB-Core",0,1},
+	{"clog10","GLIBC_2.3",0,"LSB-Core",16,1},
 #endif
 #if __s390__ && !__s390x__
-	{"clog10","GLIBC_2.1",0,"LSB-Core",0,1},
+	{"clog10","GLIBC_2.1",0,"LSB-Core",16,1},
 #endif
 #if __x86_64__
-	{"clog10","GLIBC_2.2.5",0,"LSB-Core",0,1},
+	{"clog10","GLIBC_2.2.5",0,"LSB-Core",16,1},
 #endif
 #if __s390x__
-	{"clog10","GLIBC_2.2",0,"LSB-Core",0,1},
+	{"clog10","GLIBC_2.2",0,"LSB-Core",16,1},
 #endif
 #if __i386__
 	{"clog10f","GLIBC_2.1",0,"LSB-Core",8,1},
