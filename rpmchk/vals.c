@@ -18,3 +18,5 @@ char *validdepver = "1.2";
 
 char *pkgname;
 int  lsbdepidx=-1;
+
+char *sigdata;

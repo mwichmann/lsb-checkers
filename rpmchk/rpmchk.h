@@ -142,6 +142,7 @@ extern char *architecture;
 extern char *validos;
 extern char *validdepver;
 extern char *pkgname;
+extern char *sigdata;
 extern int lsbdepidx;
 
 /* util.c */
