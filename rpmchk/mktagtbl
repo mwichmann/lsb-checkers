@@ -39,7 +39,7 @@ print "/* Generated file - Do Not Edit */\n\n";
 print "#include \"rpmchk.h\"\n";
 print "#include \"tagfuncs.h\"\n\n";
 
-dumptable("Private","SigTags");
+dumptable("Signature","SigTags");
 print "\nint numSigIdxTags = sizeof(SigTags)/sizeof(RpmIdxTagFuncRec);\n\n";
 dumptable("Header","HdrTags");
 print "int numHdrIdxTags = sizeof(HdrTags)/sizeof(RpmIdxTagFuncRec);\n";
