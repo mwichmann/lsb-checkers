@@ -243,18 +243,48 @@ cnt++;
 /* No test for isfinite(x) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 /* No test for fpclassify(x) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for fpclassify(x) */
+#elif __ia64__
+/* No test for fpclassify(x) */
+#elif __i386__
+/* No test for fpclassify(x) */
+#elif __s390x__
+/* No test for fpclassify(x) */
+#elif __x86_64__
+/* No test for fpclassify(x) */
+#elif __s390__ && !__s390x__
+/* No test for fpclassify(x) */
+#else
+Msg( "No definition for fpclassify(x) (5248, macro) in db\n");
+#ifdef fpclassify(x)
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for isnormal(x) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 /* No test for signbit(x) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for signbit(x) */
+#elif __ia64__
+/* No test for signbit(x) */
+#elif __i386__
+/* No test for signbit(x) */
+#elif __s390x__
+/* No test for signbit(x) */
+#elif __x86_64__
+/* No test for signbit(x) */
+#elif __s390__ && !__s390x__
+/* No test for signbit(x) */
+#else
+Msg( "No definition for signbit(x) (5250, macro) in db\n");
+#ifdef signbit(x)
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for isgreater(x,y) */
 #endif
