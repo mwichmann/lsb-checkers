@@ -22,6 +22,20 @@ int pcnt=0;
 Msg("Checking data structures in signal.h\n");
 #endif
 
+#ifdef SIGRTMIN
+	CompareConstant(SIGRTMIN,(__libc_current_sigrtmin ()))
+#else
+Msg( "Error: Constant not found: SIGRTMIN\n");
+cnt++;
+#endif
+
+#ifdef SIGRTMAX
+	CompareConstant(SIGRTMAX,(__libc_current_sigrtmax ()))
+#else
+Msg( "Error: Constant not found: SIGRTMAX\n");
+cnt++;
+#endif
+
 #ifdef SIGHUP
 	CompareConstant(SIGHUP,1)
 #else
@@ -257,13 +271,6 @@ cnt++;
 	CompareConstant(SIGUNUSED,31)
 #else
 Msg( "Error: Constant not found: SIGUNUSED\n");
-cnt++;
-#endif
-
-#ifdef SIGRTMIN
-	CompareConstant(SIGRTMIN,32)
-#else
-Msg( "Error: Constant not found: SIGRTMIN\n");
 cnt++;
 #endif
 

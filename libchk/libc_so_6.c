@@ -1,6 +1,9 @@
 #include "elfchk.h"
 struct versym libc_so_6[] = {
 	{"_Exit","GLIBC_2.1.1"},
+	{"_IO_2_1_stderr_","GLIBC_2.1"},
+	{"_IO_2_1_stdin_","GLIBC_2.1"},
+	{"_IO_2_1_stdout_","GLIBC_2.1"},
 	{"_IO_feof","GLIBC_2.0"},
 	{"_IO_getc","GLIBC_2.0"},
 	{"_IO_putc","GLIBC_2.0"},

@@ -5,10 +5,10 @@ extern void check_lib(char *libname, struct versym entries[]);
 void check_libs()
 {
 #if defined(__ia64__)
-check_lib("ld-lsb-ia64.so.1",ld_lsb_ia64_so_1);
+check_lib("/lib/ld-lsb-ia64.so.1",ld_lsb_ia64_so_1);
 #endif
 #if defined(__i386__)
-check_lib("ld-lsb.so.1",ld_lsb_so_1);
+check_lib("/lib/ld-lsb.so.1",ld_lsb_so_1);
 #endif
 check_lib("libGL.so.1",libGL_so_1);
 check_lib("libICE.so.6",libICE_so_6);
