@@ -18,7 +18,7 @@ $select.= "LEFT OUTER JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT OUTER JOIN Version ON Vid=AIversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
 $select.= "AND Library.Lstd='Yes' ";
-$select.= "ORDER BY Iname,Aid ";
+$select.= "ORDER BY Iname,Aid,Vid ";
 
 #print $select;
 

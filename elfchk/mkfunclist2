@@ -18,7 +18,7 @@ $select.= "LEFT JOIN ModLib ON MLlid=Lid ";
 $select.= "LEFT JOIN Module ON Mid=MLmid ";
 $select.= "WHERE ( Istatus='Included' OR Istatus='Deprecated' )";
 $select.= "AND Mid!=0 ";
-$select.= "ORDER BY Iname,Aid ";
+$select.= "ORDER BY Iname,Aid,Vid ";
 
 #print $select;
 
