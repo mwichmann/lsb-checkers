@@ -20,9 +20,11 @@ double __strtod_internal (const char * arg0 , char * * arg1 , int arg2 )
 	__lsb_output(5-__lsb_check_params, "__strtod_internal()");
 	validate_Rdaddress( arg0, "__strtod_internal - arg0");
 		validate_NULL_TYPETYPE(  arg0, "__strtod_internal - arg0");
+		if( arg1 ) {
 	validate_Rdaddress( arg1, "__strtod_internal - arg1");
 	validate_Rdaddress(* arg1, "__strtod_internal - arg1");
-		validate_RWaddress(  arg1, "__strtod_internal - arg1");
+		}
+		validate_NULL_TYPETYPE(  arg1, "__strtod_internal - arg1");
 		validate_NULL_TYPETYPE(  arg2, "__strtod_internal - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
