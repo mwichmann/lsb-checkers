@@ -7,7 +7,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Vname,Asymbol,Aname FROM Interface ";
+$select = "SELECT DISTINCT Iname,Istatus,Vname,Asymbol,Aname FROM Interface ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
@@ -27,7 +27,13 @@ for(1..$sth->numrows) {
         {
           print "#if defined($entry{'Asymbol'})\n";
         }
-	printf "\t{\"%s\",\"%s\"},\n",$entry{'Iname'},$entry{'Vname'};
+	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
+	if( $entry{'Istatus'} eq 'Deprecated' ) {
+		printf "1";
+	} else {
+		printf "0";
+	}
+	printf "},\n";
         if ($entry{'Aname'} && $entry{'Aname'} ne "All")
         {
           print "#endif\n";
