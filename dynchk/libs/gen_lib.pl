@@ -137,14 +137,20 @@ my $write_int_wrapper_q = $dbh->prepare(
 	or die "Couldn't prepare write_int_wrapper query: " . DBI->errstr;
 
 my $write_int_header_q = $dbh->prepare(
-'SELECT Hname
-FROM  Parameter, Type, HeaderGroup, Header
+'SELECT Theadergroup, Tid
+FROM  Parameter, Type
 WHERE Pint = ?
-  AND Ptype = Tid
-  AND Theadergroup = HGid
-  AND HGheader = Hid
-ORDER BY Ppos'
+  AND Ptype = Tid'
 ) or die "Couldn't prepare write_int_header query: " . DBI->errstr;
+
+my $basetype_header_q = $dbh->prepare(
+'Select Theadergroup, Tbasetype from Type where Tid = ?')
+	or die "Couldn't prepare basetype_header query: ".DBI->errstr;
+
+my $header_name_q = $dbh->prepare(
+'Select Hname from HeaderGroup, Header
+Where ? = HGid and HGheader = Hid')
+	or die "Couldn't prepare header_name query: ".DBI->errstr;
 
 my $write_int_declaration_q = $dbh->prepare(
 'SELECT Tname FROM Interface, Type WHERE Iid = ? AND Ireturn = Tid')
@@ -248,8 +254,9 @@ sub get_type_string($)
 	}
 	elsif($form eq "Array")
 	{
+		($pre_type,$post_type) = get_type_string($basetype);
 		$post_type .= "[". $array_index ."]";
-		return (get_type_string($basetype), " "); 
+		return ($post_type, $post_type); 
 	}
 	elsif($form eq "FuncPtr")
 	{
@@ -274,7 +281,7 @@ sub get_funcptr_declaration($)
 		$output.=", " if ($i>0);
 		($left,$right)=get_type_string($type_id);
 		$output.=$left;
-		print "Unexpected post-name type in get_funcptr_declaration: ".$right if($right ne "");
+		print "Unexpected post-name type in get_funcptr_declaration: ".$left if($right ne "");
 	}
 	$get_funcptr_declaration_q->finish;
 	$output.=")";
@@ -293,13 +300,13 @@ sub get_param_typetype # ($param_pos, $param_int)
 	{
 		$get_param_typetype_q2->execute($typetypeid);
 		my($typetype) = $get_param_typetype_q2->fetchrow_array();
-		return $typetype;
+		return ($typetype, "");
 	}
    
-	return "struct_".$type if($typeform eq "Struct");
-	return "union_".$type if($typeform eq "Union");
+	return ("struct_".$type,"&") if($typeform eq "Struct");
+	return ("union_".$type,"&") if($typeform eq "Union");
 	# Should I handle ($typeform eq "Pointer") ?
-	return "NULL_TYPETYPE";
+	return ("NULL_TYPETYPE","");
 }
 
 # returns valid type-string of a parameter
@@ -337,8 +344,9 @@ sub write_int_wrapper
 
 		unless($is_lsb)
 		{
-			print $fh "\tvalidate_".get_param_typetype($param_pos, $param_int);
-			print $fh "(arg" . $i . ", \"" . $func_name . "\");\n";
+			my($typetype, $dereference) = get_param_typetype($param_pos, $param_int);
+			print $fh "\tvalidate_".$typetype.
+				"(" . $dereference . "arg" . $i . ", \"" . $func_name . "\");\n";
 		}
 		$i++;
 	}
@@ -355,6 +363,7 @@ sub write_int_wrapper
 	print $fh ");\n}\n\n";
 }
 
+
 # write generation comments and needed headers for 'interface' to 'fh'
 sub write_int_header 
 {
@@ -364,9 +373,26 @@ sub write_int_header
 	print $fh "#include <dlfcn.h>\n";
 	$write_int_header_q->execute($func_id)
 		or die "Couldn't execute write_int_header query: " . DBI->errstr;
-	while(my($header) = $write_int_header_q->fetchrow_array() )
+	my(@headers_found);
+	while(my($header_group_id, $base_type) = $write_int_header_q->fetchrow_array() )
 	{
-		print $fh "#include <" . $header . ">\n";
+		while($header_group_id == 0 and $base_type != 0)
+		{
+			$basetype_header_q->execute($base_type)
+				or die "Couldn't execute basetype_header query: ".DBI->errstr;
+			($header_group_id,$base_type) = $basetype_header_q->fetchrow_array();
+		}
+		if($header_group_id != 0)
+		{
+			$header_name_q->execute($header_group_id);
+			my($header) = $header_name_q->fetchrow_array();
+			$header_name_q->finish;
+			if(!contains($header, @headers_found) )
+			{
+				$headers_found[@headers_found]=$header;
+				print $fh "#include <" . $header . ">\n";
+			}
+		}
 	}
 	print $fh "#undef ".$func_name."\n";
 	print $fh "static ". $left_type ."(*funcptr)".$right_type."(";
@@ -457,7 +483,6 @@ open(DNG_FILE, "hand_coded")
 	or die "Can't open input file hand_coded: $!";
 my @do_not_generate = <DNG_FILE>;
 close DNG_FILE;
-
 FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fetchrow_array())
 {
 	# Skip interface if it has an ellipsis type - it must be hand-coded.
@@ -466,7 +491,7 @@ FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fet
 		print $ell_file $func_name . "\n";
 		next FUNC;
 	}
-	if(contains($func_name, @do_not_generate))
+	if(contains($func_name."\n", @do_not_generate))
 	{
 		next FUNC;
 	}
@@ -483,7 +508,6 @@ FUNC: while(my ($func_id, $func_name, $func_lib, $func_type) = $interface_q->fet
 		or die "Can't open output: $!";
 
 	# Write interface's .c file
-
 	write_int_header($interface_file, $left_type_string, $right_type_string, $func_name, $func_id);
 	write_int_declaration($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
 	write_int_wrapper($interface_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
