@@ -141,6 +141,17 @@ fabsl.o \
 fdim.o \
 fdimf.o \
 fdiml.o \
+feclearexcept.o \
+fegetenv.o \
+fegetexceptflag.o \
+fegetround.o \
+feholdexcept.o \
+feraiseexcept.o \
+fesetenv.o \
+fesetexceptflag.o \
+fesetround.o \
+fetestexcept.o \
+feupdateenv.o \
 finite.o \
 finitef.o \
 finitel.o \
