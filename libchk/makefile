@@ -25,6 +25,9 @@ install:
 	install -d $(INSTALL_ROOT)/$(MANDIR)/man1/
 	install lsblibchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsblibchk.1
 
+test: libchk dummy_link
+	./test_libchk
+
 # Distclean means will need database to rebuild
 distclean: clean
 	rm -f libs.h libs.c
@@ -32,5 +35,5 @@ distclean: clean
 clean:
 	rm -f $(OBJS) libchk dummy_link dummy_link.o
 
-.PHONE: clean distclean install
+.PHONY: clean distclean install test
 

@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Regression tests for libchk
+
+# Copyright (C) 2001 The Free Standards Group Inc.
+# Chris Yeoh <cyeoh@au1.ibm.com>
+
+# Try runing lsblibchk 
+
+printf "Running lsblibchk..."
+./lsblibchk > /dev/null 2>&1
+
+if [ $? -ne 0 ]; then
+		echo "lsblibchk failed to run properly"
+		exit 1
+else
+		# Check journal file terminated properly
+		# We can't really expect that all of the tests pass
+		# as we may build on systems which are not lsb compliant
+		# themselves
+		# Check that the journal file is complete (it has an end marker)
+		LAST_CODE=`tail -1 journal.libchk | cut -f1 -d'|'`
+		if [ "$LAST_CODE" -ne "900" ]; then
+				echo Journal file is incomplete
+				exit 1
+		else
+				rm -f $JOURNAL_FILE
+				echo OK
+    fi
+fi
+
+echo 
+echo All tests succeeded
+
+exit 0
