@@ -49,5 +49,5 @@ clean:
 distclean: clean
 	rm -f $(SRCS) journal.*
 
-.PHONE: clean distclean install
+.PHONY: clean distclean install
 
