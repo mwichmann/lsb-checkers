@@ -77,7 +77,8 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 
 	for(i=0;i<file->numsh;i++) {
 		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
-				(file->saddr[i].sh_addr <= hdr->p_vaddr+hdr->p_memsz) ) {
+				(file->saddr[i].sh_addr <= hdr->p_vaddr+hdr->p_memsz) &&
+				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
 			/* Section appears to belong to this segment */
 
 			/* See if section extends past this end of this segment */
