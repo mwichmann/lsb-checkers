@@ -113,8 +113,10 @@ cnt++;
 
 #if __i386__
 CheckTypeSize(shmatt_t,4, 10212, 2)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(shmatt_t,4, 10212, 6)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(shmatt_t,4, 10443, 6)
 #endif
 
 #if __i386__
@@ -173,7 +175,34 @@ CheckOffset(struct shmid_ds,__unused2,104,3,34559)
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct shmid_ds,104, 10337, 6)
-Msg("Missing member data for shmid_ds on PPC32\n");
+CheckMemberSize(struct shmid_ds,shm_perm,48,6,40000)
+CheckOffset(struct shmid_ds,shm_perm,0,6,40000)
+CheckMemberSize(struct shmid_ds,__unused1,4,6,40001)
+CheckOffset(struct shmid_ds,__unused1,48,6,40001)
+CheckMemberSize(struct shmid_ds,shm_atime,4,6,40005)
+CheckOffset(struct shmid_ds,shm_atime,52,6,40005)
+CheckMemberSize(struct shmid_ds,__unused2,4,6,40002)
+CheckOffset(struct shmid_ds,__unused2,60,6,40002)
+CheckMemberSize(struct shmid_ds,shm_dtime,4,6,40006)
+CheckOffset(struct shmid_ds,shm_dtime,64,6,40006)
+CheckMemberSize(struct shmid_ds,__unused3,4,6,40003)
+CheckOffset(struct shmid_ds,__unused3,68,6,40003)
+CheckMemberSize(struct shmid_ds,shm_ctime,4,6,40007)
+CheckOffset(struct shmid_ds,shm_ctime,72,6,40007)
+CheckMemberSize(struct shmid_ds,__unused4,4,6,40004)
+CheckOffset(struct shmid_ds,__unused4,76,6,40004)
+CheckMemberSize(struct shmid_ds,shm_segz,4,6,40008)
+CheckOffset(struct shmid_ds,shm_segz,80,6,40008)
+CheckMemberSize(struct shmid_ds,shm_cpid,4,6,40009)
+CheckOffset(struct shmid_ds,shm_cpid,84,6,40009)
+CheckMemberSize(struct shmid_ds,shm_lpid,4,6,40010)
+CheckOffset(struct shmid_ds,shm_lpid,88,6,40010)
+CheckMemberSize(struct shmid_ds,shm_nattch,4,6,40011)
+CheckOffset(struct shmid_ds,shm_nattch,92,6,40011)
+CheckMemberSize(struct shmid_ds,__unused5,4,6,40012)
+CheckOffset(struct shmid_ds,__unused5,96,6,40012)
+CheckMemberSize(struct shmid_ds,__unused6,4,6,40013)
+CheckOffset(struct shmid_ds,__unused6,100,6,40013)
 #endif
 
 #ifdef TET_TEST
