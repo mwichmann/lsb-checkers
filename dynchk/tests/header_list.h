@@ -11,7 +11,6 @@
 #include <grp.h>
 #include <iconv.h>
 #include <inttypes.h>
-#include <iosfwd>
 #include <locale.h>
 #include <math.h>
 #include <net/if.h>
