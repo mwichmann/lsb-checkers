@@ -24,40 +24,10 @@ Msg("Checking data structures in netinet/in.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IPPROTO_UDP
-	CompareConstant(IPPROTO_UDP,17,4453,architecture)
-#else
-Msg( "Error: Constant not found: IPPROTO_UDP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef IP_TOS
 	CompareConstant(IP_TOS,1,4662,architecture)
 #else
 Msg( "Error: Constant not found: IP_TOS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IPPROTO_RAW
-	CompareConstant(IPPROTO_RAW,255,4470,architecture)
-#else
-Msg( "Error: Constant not found: IPPROTO_RAW\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef SOL_IP
-	CompareConstant(SOL_IP,0,3330,architecture)
-#else
-Msg( "Error: Constant not found: SOL_IP\n");
 cnt++;
 #endif
 
@@ -84,6 +54,46 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_IGMP
+	CompareConstant(IPPROTO_IGMP,2,4448,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_IGMP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_TCP
+	CompareConstant(IPPROTO_TCP,6,4450,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_TCP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_UDP
+	CompareConstant(IPPROTO_UDP,17,4453,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_UDP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPPROTO_RAW
+	CompareConstant(IPPROTO_RAW,255,4470,architecture)
+#else
+Msg( "Error: Constant not found: IPPROTO_RAW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef INADDR_ANY
 	CompareConstant(INADDR_ANY,0,4489,architecture)
 #else
@@ -104,16 +114,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IPPROTO_IGMP
-	CompareConstant(IPPROTO_IGMP,2,4448,architecture)
-#else
-Msg( "Error: Constant not found: IPPROTO_IGMP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef INADDR_NONE
 	CompareConstant(INADDR_NONE,((unsigned long int) 0xffffffff),4491,architecture)
 #else
@@ -124,10 +124,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IPPROTO_TCP
-	CompareConstant(IPPROTO_TCP,6,4450,architecture)
+#ifdef SOL_IP
+	CompareConstant(SOL_IP,0,3330,architecture)
 #else
-Msg( "Error: Constant not found: IPPROTO_TCP\n");
+Msg( "Error: Constant not found: SOL_IP\n");
 cnt++;
 #endif
 
@@ -155,11 +155,11 @@ CheckMemberSize(struct sockaddr_in,sin_zero,8,3,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,3,33779)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sockaddr_in,16, 9141, 6)
-CheckMemberSize(struct sockaddr_in,sin_port,0,6,33777)
+CheckMemberSize(struct sockaddr_in,sin_port,2,6,33777)
 CheckOffset(struct sockaddr_in,sin_port,2,6,33777)
-CheckMemberSize(struct sockaddr_in,sin_addr,0,6,33778)
+CheckMemberSize(struct sockaddr_in,sin_addr,4,6,33778)
 CheckOffset(struct sockaddr_in,sin_addr,4,6,33778)
-CheckMemberSize(struct sockaddr_in,sin_zero,0,6,33779)
+CheckMemberSize(struct sockaddr_in,sin_zero,8,6,33779)
 CheckOffset(struct sockaddr_in,sin_zero,8,6,33779)
 #elif __s390__
 CheckTypeSize(struct sockaddr_in,16, 9141, 10)

@@ -24,50 +24,10 @@ Msg("Checking data structures in locale.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef LC_MEASUREMENT
-	CompareConstant(LC_MEASUREMENT,11,1481,architecture)
+#ifdef LC_CTYPE
+	CompareConstant(LC_CTYPE,0,1470,architecture)
 #else
-Msg( "Error: Constant not found: LC_MEASUREMENT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_ALL
-	CompareConstant(LC_ALL,6,1476,architecture)
-#else
-Msg( "Error: Constant not found: LC_ALL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_TIME
-	CompareConstant(LC_TIME,2,1472,architecture)
-#else
-Msg( "Error: Constant not found: LC_TIME\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_ADDRESS
-	CompareConstant(LC_ADDRESS,9,1479,architecture)
-#else
-Msg( "Error: Constant not found: LC_ADDRESS\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_COLLATE
-	CompareConstant(LC_COLLATE,3,1473,architecture)
-#else
-Msg( "Error: Constant not found: LC_COLLATE\n");
+Msg( "Error: Constant not found: LC_CTYPE\n");
 cnt++;
 #endif
 
@@ -84,10 +44,20 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef LC_NAME
-	CompareConstant(LC_NAME,8,1478,architecture)
+#ifdef LC_TIME
+	CompareConstant(LC_TIME,2,1472,architecture)
 #else
-Msg( "Error: Constant not found: LC_NAME\n");
+Msg( "Error: Constant not found: LC_TIME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_COLLATE
+	CompareConstant(LC_COLLATE,3,1473,architecture)
+#else
+Msg( "Error: Constant not found: LC_COLLATE\n");
 cnt++;
 #endif
 
@@ -104,30 +74,20 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef LC_IDENTIFICATION
-	CompareConstant(LC_IDENTIFICATION,12,1482,architecture)
-#else
-Msg( "Error: Constant not found: LC_IDENTIFICATION\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef LC_CTYPE
-	CompareConstant(LC_CTYPE,0,1470,architecture)
-#else
-Msg( "Error: Constant not found: LC_CTYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef LC_MESSAGES
 	CompareConstant(LC_MESSAGES,5,1475,architecture)
 #else
 Msg( "Error: Constant not found: LC_MESSAGES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_ALL
+	CompareConstant(LC_ALL,6,1476,architecture)
+#else
+Msg( "Error: Constant not found: LC_ALL\n");
 cnt++;
 #endif
 
@@ -144,10 +104,50 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef LC_NAME
+	CompareConstant(LC_NAME,8,1478,architecture)
+#else
+Msg( "Error: Constant not found: LC_NAME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_ADDRESS
+	CompareConstant(LC_ADDRESS,9,1479,architecture)
+#else
+Msg( "Error: Constant not found: LC_ADDRESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef LC_TELEPHONE
 	CompareConstant(LC_TELEPHONE,10,1480,architecture)
 #else
 Msg( "Error: Constant not found: LC_TELEPHONE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_MEASUREMENT
+	CompareConstant(LC_MEASUREMENT,11,1481,architecture)
+#else
+Msg( "Error: Constant not found: LC_MEASUREMENT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LC_IDENTIFICATION
+	CompareConstant(LC_IDENTIFICATION,12,1482,architecture)
+#else
+Msg( "Error: Constant not found: LC_IDENTIFICATION\n");
 cnt++;
 #endif
 
@@ -253,51 +253,51 @@ CheckMemberSize(struct lconv,int_n_sign_posn,1,3,34436)
 CheckOffset(struct lconv,int_n_sign_posn,93,3,34436)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct lconv,56, 6919, 6)
-CheckMemberSize(struct lconv,thousands_sep,0,6,29981)
+CheckMemberSize(struct lconv,thousands_sep,4,6,29981)
 CheckOffset(struct lconv,thousands_sep,4,6,29981)
-CheckMemberSize(struct lconv,grouping,0,6,29982)
+CheckMemberSize(struct lconv,grouping,4,6,29982)
 CheckOffset(struct lconv,grouping,8,6,29982)
-CheckMemberSize(struct lconv,int_curr_symbol,0,6,29983)
+CheckMemberSize(struct lconv,int_curr_symbol,4,6,29983)
 CheckOffset(struct lconv,int_curr_symbol,12,6,29983)
-CheckMemberSize(struct lconv,currency_symbol,0,6,29984)
+CheckMemberSize(struct lconv,currency_symbol,4,6,29984)
 CheckOffset(struct lconv,currency_symbol,16,6,29984)
-CheckMemberSize(struct lconv,mon_decimal_point,0,6,29985)
+CheckMemberSize(struct lconv,mon_decimal_point,4,6,29985)
 CheckOffset(struct lconv,mon_decimal_point,20,6,29985)
-CheckMemberSize(struct lconv,mon_thousands_sep,0,6,29986)
+CheckMemberSize(struct lconv,mon_thousands_sep,4,6,29986)
 CheckOffset(struct lconv,mon_thousands_sep,24,6,29986)
-CheckMemberSize(struct lconv,mon_grouping,0,6,29987)
+CheckMemberSize(struct lconv,mon_grouping,4,6,29987)
 CheckOffset(struct lconv,mon_grouping,28,6,29987)
-CheckMemberSize(struct lconv,positive_sign,0,6,29988)
+CheckMemberSize(struct lconv,positive_sign,4,6,29988)
 CheckOffset(struct lconv,positive_sign,32,6,29988)
-CheckMemberSize(struct lconv,negative_sign,0,6,29989)
+CheckMemberSize(struct lconv,negative_sign,4,6,29989)
 CheckOffset(struct lconv,negative_sign,36,6,29989)
-CheckMemberSize(struct lconv,int_frac_digits,0,6,29990)
+CheckMemberSize(struct lconv,int_frac_digits,1,6,29990)
 CheckOffset(struct lconv,int_frac_digits,40,6,29990)
-CheckMemberSize(struct lconv,frac_digits,0,6,29991)
+CheckMemberSize(struct lconv,frac_digits,1,6,29991)
 CheckOffset(struct lconv,frac_digits,41,6,29991)
-CheckMemberSize(struct lconv,p_cs_precedes,0,6,29992)
+CheckMemberSize(struct lconv,p_cs_precedes,1,6,29992)
 CheckOffset(struct lconv,p_cs_precedes,42,6,29992)
-CheckMemberSize(struct lconv,p_sep_by_space,0,6,29993)
+CheckMemberSize(struct lconv,p_sep_by_space,1,6,29993)
 CheckOffset(struct lconv,p_sep_by_space,43,6,29993)
-CheckMemberSize(struct lconv,n_cs_precedes,0,6,29994)
+CheckMemberSize(struct lconv,n_cs_precedes,1,6,29994)
 CheckOffset(struct lconv,n_cs_precedes,44,6,29994)
-CheckMemberSize(struct lconv,n_sep_by_space,0,6,29995)
+CheckMemberSize(struct lconv,n_sep_by_space,1,6,29995)
 CheckOffset(struct lconv,n_sep_by_space,45,6,29995)
-CheckMemberSize(struct lconv,p_sign_posn,0,6,29996)
+CheckMemberSize(struct lconv,p_sign_posn,1,6,29996)
 CheckOffset(struct lconv,p_sign_posn,46,6,29996)
-CheckMemberSize(struct lconv,n_sign_posn,0,6,29997)
+CheckMemberSize(struct lconv,n_sign_posn,1,6,29997)
 CheckOffset(struct lconv,n_sign_posn,47,6,29997)
-CheckMemberSize(struct lconv,int_p_cs_precedes,0,6,34431)
+CheckMemberSize(struct lconv,int_p_cs_precedes,1,6,34431)
 CheckOffset(struct lconv,int_p_cs_precedes,48,6,34431)
-CheckMemberSize(struct lconv,int_p_sep_by_space,0,6,34432)
+CheckMemberSize(struct lconv,int_p_sep_by_space,1,6,34432)
 CheckOffset(struct lconv,int_p_sep_by_space,49,6,34432)
-CheckMemberSize(struct lconv,int_n_cs_precedes,0,6,34433)
+CheckMemberSize(struct lconv,int_n_cs_precedes,1,6,34433)
 CheckOffset(struct lconv,int_n_cs_precedes,50,6,34433)
-CheckMemberSize(struct lconv,int_n_sep_by_space,0,6,34434)
+CheckMemberSize(struct lconv,int_n_sep_by_space,1,6,34434)
 CheckOffset(struct lconv,int_n_sep_by_space,51,6,34434)
-CheckMemberSize(struct lconv,int_p_sign_posn,0,6,34435)
+CheckMemberSize(struct lconv,int_p_sign_posn,1,6,34435)
 CheckOffset(struct lconv,int_p_sign_posn,52,6,34435)
-CheckMemberSize(struct lconv,int_n_sign_posn,0,6,34436)
+CheckMemberSize(struct lconv,int_n_sign_posn,1,6,34436)
 CheckOffset(struct lconv,int_n_sign_posn,53,6,34436)
 #elif __s390__
 CheckTypeSize(struct lconv,56, 6919, 10)

@@ -25,20 +25,20 @@ Msg("Checking data structures in stdlib.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef EXIT_FAILURE
-	CompareConstant(EXIT_FAILURE,1,1648,architecture)
+#ifdef RAND_MAX
+	CompareConstant(RAND_MAX,2147483647,1647,architecture)
 #else
-Msg( "Error: Constant not found: EXIT_FAILURE\n");
+Msg( "Error: Constant not found: RAND_MAX\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef MB_CUR_MAX
-	CompareConstant(MB_CUR_MAX,(__ctype_get_mb_cur_max()),1650,architecture)
+#ifdef EXIT_FAILURE
+	CompareConstant(EXIT_FAILURE,1,1648,architecture)
 #else
-Msg( "Error: Constant not found: MB_CUR_MAX\n");
+Msg( "Error: Constant not found: EXIT_FAILURE\n");
 cnt++;
 #endif
 
@@ -55,10 +55,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef RAND_MAX
-	CompareConstant(RAND_MAX,2147483647,1647,architecture)
+#ifdef MB_CUR_MAX
+	CompareConstant(MB_CUR_MAX,(__ctype_get_mb_cur_max()),1650,architecture)
 #else
-Msg( "Error: Constant not found: RAND_MAX\n");
+Msg( "Error: Constant not found: MB_CUR_MAX\n");
 cnt++;
 #endif
 

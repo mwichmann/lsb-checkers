@@ -34,16 +34,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SEM_UNDO
-	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
-#else
-Msg( "Error: Constant not found: SEM_UNDO\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef GETALL
 	CompareConstant(GETALL,13,3201,architecture)
 #else
@@ -54,20 +44,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SETALL
-	CompareConstant(SETALL,17,3205,architecture)
+#ifdef GETNCNT
+	CompareConstant(GETNCNT,14,3202,architecture)
 #else
-Msg( "Error: Constant not found: SETALL\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GETPID
-	CompareConstant(GETPID,11,3199,architecture)
-#else
-Msg( "Error: Constant not found: GETPID\n");
+Msg( "Error: Constant not found: GETNCNT\n");
 cnt++;
 #endif
 
@@ -94,10 +74,30 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GETNCNT
-	CompareConstant(GETNCNT,14,3202,architecture)
+#ifdef SETALL
+	CompareConstant(SETALL,17,3205,architecture)
 #else
-Msg( "Error: Constant not found: GETNCNT\n");
+Msg( "Error: Constant not found: SETALL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SEM_UNDO
+	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
+#else
+Msg( "Error: Constant not found: SEM_UNDO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GETPID
+	CompareConstant(GETPID,11,3199,architecture)
+#else
+Msg( "Error: Constant not found: GETPID\n");
 cnt++;
 #endif
 
@@ -117,9 +117,9 @@ CheckMemberSize(struct sembuf,sem_flg,2,3,30120)
 CheckOffset(struct sembuf,sem_flg,4,3,30120)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct sembuf,6, 6982, 6)
-CheckMemberSize(struct sembuf,sem_op,0,6,30119)
+CheckMemberSize(struct sembuf,sem_op,2,6,30119)
 CheckOffset(struct sembuf,sem_op,2,6,30119)
-CheckMemberSize(struct sembuf,sem_flg,0,6,30120)
+CheckMemberSize(struct sembuf,sem_flg,2,6,30120)
 CheckOffset(struct sembuf,sem_flg,4,6,30120)
 #elif __s390__
 CheckTypeSize(struct sembuf,6, 6982, 10)
@@ -167,21 +167,21 @@ CheckOffset(struct semid_ds,__unused2,80,3,34669)
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct semid_ds,80, 10407, 6)
-CheckMemberSize(struct semid_ds,sem_perm,36,6,34768)
+CheckMemberSize(struct semid_ds,sem_perm,48,6,34768)
 CheckOffset(struct semid_ds,sem_perm,0,6,34768)
-CheckMemberSize(struct semid_ds,sem_otime,0,6,34769)
+CheckMemberSize(struct semid_ds,sem_otime,4,6,34769)
 CheckOffset(struct semid_ds,sem_otime,52,6,34769)
-CheckMemberSize(struct semid_ds,__unused1,0,6,34770)
+CheckMemberSize(struct semid_ds,__unused1,4,6,34770)
 CheckOffset(struct semid_ds,__unused1,48,6,34770)
-CheckMemberSize(struct semid_ds,sem_ctime,0,6,34771)
+CheckMemberSize(struct semid_ds,sem_ctime,4,6,34771)
 CheckOffset(struct semid_ds,sem_ctime,60,6,34771)
-CheckMemberSize(struct semid_ds,__unused2,0,6,34772)
+CheckMemberSize(struct semid_ds,__unused2,4,6,34772)
 CheckOffset(struct semid_ds,__unused2,56,6,34772)
-CheckMemberSize(struct semid_ds,sem_nsems,0,6,34773)
+CheckMemberSize(struct semid_ds,sem_nsems,4,6,34773)
 CheckOffset(struct semid_ds,sem_nsems,64,6,34773)
-CheckMemberSize(struct semid_ds,__unused3,0,6,34774)
+CheckMemberSize(struct semid_ds,__unused3,4,6,34774)
 CheckOffset(struct semid_ds,__unused3,68,6,34774)
-CheckMemberSize(struct semid_ds,__unused4,0,6,34776)
+CheckMemberSize(struct semid_ds,__unused4,4,6,34776)
 CheckOffset(struct semid_ds,__unused4,72,6,34776)
 #endif
 

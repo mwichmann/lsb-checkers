@@ -24,62 +24,50 @@ Msg("Checking data structures in sys/stat.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for S_ISFIFO(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISREG(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFLNK
-	CompareConstant(S_IFLNK,0xa000,1689,architecture)
+#ifdef S_IFMT
+	CompareConstant(S_IFMT,0xf000,1683,architecture)
 #else
-Msg( "Error: Constant not found: S_IFLNK\n");
+Msg( "Error: Constant not found: S_IFMT\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for S_ISSOCK(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IXOTH
-	CompareConstant(S_IXOTH,(S_IXGRP>>3),1718,architecture)
+#ifdef S_IFDIR
+	CompareConstant(S_IFDIR,0x4000,1684,architecture)
 #else
-Msg( "Error: Constant not found: S_IXOTH\n");
+Msg( "Error: Constant not found: S_IFDIR\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_ISGID
-	CompareConstant(S_ISGID,0x0400,1703,architecture)
+#ifdef S_IFCHR
+	CompareConstant(S_IFCHR,0x2000,1685,architecture)
 #else
-Msg( "Error: Constant not found: S_ISGID\n");
+Msg( "Error: Constant not found: S_IFCHR\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWOTH
-	CompareConstant(S_IWOTH,(S_IWGRP>>3),1717,architecture)
+#ifdef S_IFBLK
+	CompareConstant(S_IFBLK,0x6000,1686,architecture)
 #else
-Msg( "Error: Constant not found: S_IWOTH\n");
+Msg( "Error: Constant not found: S_IFBLK\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWUSR
-	CompareConstant(S_IWUSR,0x0080,1706,architecture)
+#ifdef S_IFREG
+	CompareConstant(S_IFREG,0x8000,1687,architecture)
 #else
-Msg( "Error: Constant not found: S_IWUSR\n");
+Msg( "Error: Constant not found: S_IFREG\n");
 cnt++;
 #endif
 
@@ -96,116 +84,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_ISVTX
-	CompareConstant(S_ISVTX,01000,1704,architecture)
+#ifdef S_IFLNK
+	CompareConstant(S_IFLNK,0xa000,1689,architecture)
 #else
-Msg( "Error: Constant not found: S_ISVTX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IRGRP
-	CompareConstant(S_IRGRP,(S_IRUSR>>3),1712,architecture)
-#else
-Msg( "Error: Constant not found: S_IRGRP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IXGRP
-	CompareConstant(S_IXGRP,(S_IXUSR>>3),1714,architecture)
-#else
-Msg( "Error: Constant not found: S_IXGRP\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_TYPEISMQ(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFCHR
-	CompareConstant(S_IFCHR,0x2000,1685,architecture)
-#else
-Msg( "Error: Constant not found: S_IFCHR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IEXEC
-	CompareConstant(S_IEXEC,S_IXUSR,1711,architecture)
-#else
-Msg( "Error: Constant not found: S_IEXEC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IRWXU
-	CompareConstant(S_IRWXU,(S_IREAD|S_IWRITE|S_IEXEC),1708,architecture)
-#else
-Msg( "Error: Constant not found: S_IRWXU\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_TYPEISSEM(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFREG
-	CompareConstant(S_IFREG,0x8000,1687,architecture)
-#else
-Msg( "Error: Constant not found: S_IFREG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IREAD
-	CompareConstant(S_IREAD,S_IRUSR,1709,architecture)
-#else
-Msg( "Error: Constant not found: S_IREAD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISDIR(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IRUSR
-	CompareConstant(S_IRUSR,0x0100,1705,architecture)
-#else
-Msg( "Error: Constant not found: S_IRUSR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISBLK(m) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFDIR
-	CompareConstant(S_IFDIR,0x4000,1684,architecture)
-#else
-Msg( "Error: Constant not found: S_IFDIR\n");
+Msg( "Error: Constant not found: S_IFLNK\n");
 cnt++;
 #endif
 
@@ -222,23 +104,35 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IRWXG
-	CompareConstant(S_IRWXG,(S_IRWXU>>3),1715,architecture)
-#else
-Msg( "Error: Constant not found: S_IRWXG\n");
-cnt++;
-#endif
-
+/* No test for S_TYPEISMQ(buf) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWRITE
-	CompareConstant(S_IWRITE,S_IWUSR,1710,architecture)
-#else
-Msg( "Error: Constant not found: S_IWRITE\n");
-cnt++;
+/* No test for S_ISLNK(m) */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISREG(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISDIR(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISCHR(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISBLK(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISFIFO(m) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for S_ISSOCK(m) */
 #endif
 
 #if __powerpc64__
@@ -296,31 +190,11 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4955,%d);\n", arch
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-/* No test for S_ISLNK(m) */
+/* No test for S_TYPEISSEM(buf) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
 /* No test for S_TYPEISSHM(buf) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IROTH
-	CompareConstant(S_IROTH,(S_IRGRP>>3),1716,architecture)
-#else
-Msg( "Error: Constant not found: S_IROTH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef S_IFMT
-	CompareConstant(S_IFMT,0xf000,1683,architecture)
-#else
-Msg( "Error: Constant not found: S_IFMT\n");
-cnt++;
-#endif
-
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -334,10 +208,40 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IWGRP
-	CompareConstant(S_IWGRP,(S_IWUSR>>3),1713,architecture)
+#ifdef S_ISGID
+	CompareConstant(S_ISGID,0x0400,1703,architecture)
 #else
-Msg( "Error: Constant not found: S_IWGRP\n");
+Msg( "Error: Constant not found: S_ISGID\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_ISVTX
+	CompareConstant(S_ISVTX,01000,1704,architecture)
+#else
+Msg( "Error: Constant not found: S_ISVTX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IRUSR
+	CompareConstant(S_IRUSR,0x0100,1705,architecture)
+#else
+Msg( "Error: Constant not found: S_IRUSR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWUSR
+	CompareConstant(S_IWUSR,0x0080,1706,architecture)
+#else
+Msg( "Error: Constant not found: S_IWUSR\n");
 cnt++;
 #endif
 
@@ -354,10 +258,110 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef S_IFBLK
-	CompareConstant(S_IFBLK,0x6000,1686,architecture)
+#ifdef S_IRWXU
+	CompareConstant(S_IRWXU,(S_IREAD|S_IWRITE|S_IEXEC),1708,architecture)
 #else
-Msg( "Error: Constant not found: S_IFBLK\n");
+Msg( "Error: Constant not found: S_IRWXU\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IREAD
+	CompareConstant(S_IREAD,S_IRUSR,1709,architecture)
+#else
+Msg( "Error: Constant not found: S_IREAD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWRITE
+	CompareConstant(S_IWRITE,S_IWUSR,1710,architecture)
+#else
+Msg( "Error: Constant not found: S_IWRITE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IEXEC
+	CompareConstant(S_IEXEC,S_IXUSR,1711,architecture)
+#else
+Msg( "Error: Constant not found: S_IEXEC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IRGRP
+	CompareConstant(S_IRGRP,(S_IRUSR>>3),1712,architecture)
+#else
+Msg( "Error: Constant not found: S_IRGRP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWGRP
+	CompareConstant(S_IWGRP,(S_IWUSR>>3),1713,architecture)
+#else
+Msg( "Error: Constant not found: S_IWGRP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IXGRP
+	CompareConstant(S_IXGRP,(S_IXUSR>>3),1714,architecture)
+#else
+Msg( "Error: Constant not found: S_IXGRP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IRWXG
+	CompareConstant(S_IRWXG,(S_IRWXU>>3),1715,architecture)
+#else
+Msg( "Error: Constant not found: S_IRWXG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IROTH
+	CompareConstant(S_IROTH,(S_IRGRP>>3),1716,architecture)
+#else
+Msg( "Error: Constant not found: S_IROTH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IWOTH
+	CompareConstant(S_IWOTH,(S_IWGRP>>3),1717,architecture)
+#else
+Msg( "Error: Constant not found: S_IWOTH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef S_IXOTH
+	CompareConstant(S_IXOTH,(S_IXGRP>>3),1718,architecture)
+#else
+Msg( "Error: Constant not found: S_IXOTH\n");
 cnt++;
 #endif
 
@@ -371,10 +375,6 @@ Msg( "Error: Constant not found: S_IRWXO\n");
 cnt++;
 #endif
 
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for S_ISCHR(m) */
 #endif
 
 #if __i386__
@@ -579,88 +579,88 @@ CheckOffset(struct stat,__unused,120,3,34686)
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct stat64,104, 10398, 6)
-CheckMemberSize(struct stat64,st_dev,4,6,34851)
+CheckMemberSize(struct stat64,st_dev,8,6,34851)
 CheckOffset(struct stat64,st_dev,0,6,34851)
 CheckMemberSize(struct stat64,st_ino,8,6,34852)
-CheckOffset(struct stat64,st_ino,0,6,34852)
+CheckOffset(struct stat64,st_ino,8,6,34852)
 CheckMemberSize(struct stat64,st_mode,4,6,34853)
-CheckOffset(struct stat64,st_mode,0,6,34853)
+CheckOffset(struct stat64,st_mode,16,6,34853)
 CheckMemberSize(struct stat64,st_nlink,4,6,34854)
-CheckOffset(struct stat64,st_nlink,0,6,34854)
+CheckOffset(struct stat64,st_nlink,20,6,34854)
 CheckMemberSize(struct stat64,st_uid,4,6,34855)
-CheckOffset(struct stat64,st_uid,0,6,34855)
+CheckOffset(struct stat64,st_uid,24,6,34855)
 CheckMemberSize(struct stat64,st_gid,4,6,34856)
-CheckOffset(struct stat64,st_gid,0,6,34856)
-CheckMemberSize(struct stat64,st_rdev,4,6,34857)
-CheckOffset(struct stat64,st_rdev,0,6,34857)
-CheckMemberSize(struct stat64,__pad2,4,6,34858)
-CheckOffset(struct stat64,__pad2,0,6,34858)
-CheckMemberSize(struct stat64,st_size,4,6,34859)
-CheckOffset(struct stat64,st_size,0,6,34859)
+CheckOffset(struct stat64,st_gid,28,6,34856)
+CheckMemberSize(struct stat64,st_rdev,8,6,34857)
+CheckOffset(struct stat64,st_rdev,32,6,34857)
+CheckMemberSize(struct stat64,__pad2,2,6,34858)
+CheckOffset(struct stat64,__pad2,40,6,34858)
+CheckMemberSize(struct stat64,st_size,8,6,34859)
+CheckOffset(struct stat64,st_size,48,6,34859)
 CheckMemberSize(struct stat64,st_blksize,4,6,34860)
-CheckOffset(struct stat64,st_blksize,0,6,34860)
-CheckMemberSize(struct stat64,st_blocks,4,6,34861)
-CheckOffset(struct stat64,st_blocks,0,6,34861)
+CheckOffset(struct stat64,st_blksize,56,6,34860)
+CheckMemberSize(struct stat64,st_blocks,8,6,34861)
+CheckOffset(struct stat64,st_blocks,64,6,34861)
 CheckMemberSize(struct stat64,st_atime,4,6,34862)
-CheckOffset(struct stat64,st_atime,0,6,34862)
+CheckOffset(struct stat64,st_atime,72,6,34862)
 CheckMemberSize(struct stat64,__unused1,4,6,34863)
-CheckOffset(struct stat64,__unused1,0,6,34863)
+CheckOffset(struct stat64,__unused1,76,6,34863)
 CheckMemberSize(struct stat64,st_mtime,4,6,34864)
-CheckOffset(struct stat64,st_mtime,0,6,34864)
+CheckOffset(struct stat64,st_mtime,80,6,34864)
 CheckMemberSize(struct stat64,__unused2,4,6,34865)
-CheckOffset(struct stat64,__unused2,0,6,34865)
+CheckOffset(struct stat64,__unused2,84,6,34865)
 CheckMemberSize(struct stat64,st_ctime,4,6,34866)
-CheckOffset(struct stat64,st_ctime,0,6,34866)
+CheckOffset(struct stat64,st_ctime,88,6,34866)
 CheckMemberSize(struct stat64,__unused3,4,6,34867)
-CheckOffset(struct stat64,__unused3,0,6,34867)
+CheckOffset(struct stat64,__unused3,92,6,34867)
 CheckMemberSize(struct stat64,__unused4,4,6,34868)
-CheckOffset(struct stat64,__unused4,0,6,34868)
+CheckOffset(struct stat64,__unused4,96,6,34868)
 CheckMemberSize(struct stat64,__unused5,4,6,34869)
-CheckOffset(struct stat64,__unused5,0,6,34869)
+CheckOffset(struct stat64,__unused5,100,6,34869)
 #endif
 
 #if __powerpc__ && !__powerpc64__
 CheckTypeSize(struct stat,88, 10432, 6)
-CheckMemberSize(struct stat,st_dev,4,6,34831)
+CheckMemberSize(struct stat,st_dev,8,6,34831)
 CheckOffset(struct stat,st_dev,0,6,34831)
 CheckMemberSize(struct stat,__pad1,2,6,34832)
-CheckOffset(struct stat,__pad1,0,6,34832)
+CheckOffset(struct stat,__pad1,8,6,34832)
 CheckMemberSize(struct stat,st_ino,4,6,34833)
-CheckOffset(struct stat,st_ino,0,6,34833)
+CheckOffset(struct stat,st_ino,12,6,34833)
 CheckMemberSize(struct stat,st_mode,4,6,34834)
-CheckOffset(struct stat,st_mode,0,6,34834)
+CheckOffset(struct stat,st_mode,16,6,34834)
 CheckMemberSize(struct stat,st_nlink,4,6,34835)
-CheckOffset(struct stat,st_nlink,0,6,34835)
+CheckOffset(struct stat,st_nlink,20,6,34835)
 CheckMemberSize(struct stat,st_uid,4,6,34836)
-CheckOffset(struct stat,st_uid,0,6,34836)
+CheckOffset(struct stat,st_uid,24,6,34836)
 CheckMemberSize(struct stat,st_gid,4,6,34837)
-CheckOffset(struct stat,st_gid,0,6,34837)
-CheckMemberSize(struct stat,st_rdev,4,6,34838)
-CheckOffset(struct stat,st_rdev,0,6,34838)
-CheckMemberSize(struct stat,__pad2,4,6,34839)
-CheckOffset(struct stat,__pad2,0,6,34839)
+CheckOffset(struct stat,st_gid,28,6,34837)
+CheckMemberSize(struct stat,st_rdev,8,6,34838)
+CheckOffset(struct stat,st_rdev,32,6,34838)
+CheckMemberSize(struct stat,__pad2,2,6,34839)
+CheckOffset(struct stat,__pad2,40,6,34839)
 CheckMemberSize(struct stat,st_size,4,6,34840)
-CheckOffset(struct stat,st_size,0,6,34840)
+CheckOffset(struct stat,st_size,44,6,34840)
 CheckMemberSize(struct stat,st_blksize,4,6,34841)
-CheckOffset(struct stat,st_blksize,0,6,34841)
+CheckOffset(struct stat,st_blksize,48,6,34841)
 CheckMemberSize(struct stat,st_blocks,4,6,34842)
-CheckOffset(struct stat,st_blocks,0,6,34842)
+CheckOffset(struct stat,st_blocks,52,6,34842)
 CheckMemberSize(struct stat,st_atime,4,6,34843)
-CheckOffset(struct stat,st_atime,0,6,34843)
+CheckOffset(struct stat,st_atime,56,6,34843)
 CheckMemberSize(struct stat,__unused1,4,6,34844)
-CheckOffset(struct stat,__unused1,0,6,34844)
+CheckOffset(struct stat,__unused1,60,6,34844)
 CheckMemberSize(struct stat,st_mtime,4,6,34845)
-CheckOffset(struct stat,st_mtime,0,6,34845)
+CheckOffset(struct stat,st_mtime,64,6,34845)
 CheckMemberSize(struct stat,__unused2,4,6,34846)
-CheckOffset(struct stat,__unused2,0,6,34846)
+CheckOffset(struct stat,__unused2,68,6,34846)
 CheckMemberSize(struct stat,st_ctime,4,6,34847)
-CheckOffset(struct stat,st_ctime,0,6,34847)
+CheckOffset(struct stat,st_ctime,72,6,34847)
 CheckMemberSize(struct stat,__unused3,4,6,34848)
-CheckOffset(struct stat,__unused3,0,6,34848)
+CheckOffset(struct stat,__unused3,76,6,34848)
 CheckMemberSize(struct stat,__unused4,4,6,34849)
-CheckOffset(struct stat,__unused4,0,6,34849)
+CheckOffset(struct stat,__unused4,80,6,34849)
 CheckMemberSize(struct stat,__unused5,4,6,34850)
-CheckOffset(struct stat,__unused5,0,6,34850)
+CheckOffset(struct stat,__unused5,84,6,34850)
 #endif
 
 #if __ia64__

@@ -24,16 +24,6 @@ Msg("Checking data structures in time.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef TIMER_ABSTIME
-	CompareConstant(TIMER_ABSTIME,1,2478,architecture)
-#else
-Msg( "Error: Constant not found: TIMER_ABSTIME\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef CLOCKS_PER_SEC
 	CompareConstant(CLOCKS_PER_SEC,1000000l,2473,architecture)
 #else
@@ -48,6 +38,16 @@ cnt++;
 	CompareConstant(CLOCK_REALTIME,0,2475,architecture)
 #else
 Msg( "Error: Constant not found: CLOCK_REALTIME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef TIMER_ABSTIME
+	CompareConstant(TIMER_ABSTIME,1,2478,architecture)
+#else
+Msg( "Error: Constant not found: TIMER_ABSTIME\n");
 cnt++;
 #endif
 
@@ -99,25 +99,25 @@ CheckMemberSize(struct tm,tm_zone,8,3,33522)
 CheckOffset(struct tm,tm_zone,48,3,33522)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct tm,44, 7019, 6)
-CheckMemberSize(struct tm,tm_min,0,6,33513)
+CheckMemberSize(struct tm,tm_min,4,6,33513)
 CheckOffset(struct tm,tm_min,4,6,33513)
-CheckMemberSize(struct tm,tm_hour,0,6,33514)
+CheckMemberSize(struct tm,tm_hour,4,6,33514)
 CheckOffset(struct tm,tm_hour,8,6,33514)
-CheckMemberSize(struct tm,tm_mday,0,6,33515)
+CheckMemberSize(struct tm,tm_mday,4,6,33515)
 CheckOffset(struct tm,tm_mday,12,6,33515)
-CheckMemberSize(struct tm,tm_mon,0,6,33516)
+CheckMemberSize(struct tm,tm_mon,4,6,33516)
 CheckOffset(struct tm,tm_mon,16,6,33516)
-CheckMemberSize(struct tm,tm_year,0,6,33517)
+CheckMemberSize(struct tm,tm_year,4,6,33517)
 CheckOffset(struct tm,tm_year,20,6,33517)
-CheckMemberSize(struct tm,tm_wday,0,6,33518)
+CheckMemberSize(struct tm,tm_wday,4,6,33518)
 CheckOffset(struct tm,tm_wday,24,6,33518)
-CheckMemberSize(struct tm,tm_yday,0,6,33519)
+CheckMemberSize(struct tm,tm_yday,4,6,33519)
 CheckOffset(struct tm,tm_yday,28,6,33519)
-CheckMemberSize(struct tm,tm_isdst,0,6,33520)
+CheckMemberSize(struct tm,tm_isdst,4,6,33520)
 CheckOffset(struct tm,tm_isdst,32,6,33520)
-CheckMemberSize(struct tm,tm_gmtoff,0,6,33521)
+CheckMemberSize(struct tm,tm_gmtoff,4,6,33521)
 CheckOffset(struct tm,tm_gmtoff,36,6,33521)
-CheckMemberSize(struct tm,tm_zone,0,6,33522)
+CheckMemberSize(struct tm,tm_zone,4,6,33522)
 CheckOffset(struct tm,tm_zone,40,6,33522)
 #elif __s390__
 CheckTypeSize(struct tm,44, 7019, 10)
@@ -178,7 +178,7 @@ CheckMemberSize(struct itimerspec,it_value,16,3,33509)
 CheckOffset(struct itimerspec,it_value,16,3,33509)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct itimerspec,16, 10101, 6)
-CheckMemberSize(struct itimerspec,it_value,0,6,33509)
+CheckMemberSize(struct itimerspec,it_value,8,6,33509)
 CheckOffset(struct itimerspec,it_value,8,6,33509)
 #elif __s390__
 CheckTypeSize(struct itimerspec,16, 10101, 10)
