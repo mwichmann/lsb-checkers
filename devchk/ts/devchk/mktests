@@ -86,10 +86,11 @@ sub writetest($$)
 	$select.= "LEFT JOIN Architecture ON Aid=ATaid ";
 	$select.= "WHERE HGheader=$Hid ";
 	$select.= "AND Theadergroup=HGid ";
-	$select.= "AND Tid IN ($typelist) ";
+	#$select.= "AND Tid IN ($typelist) ";
 	$select.= "AND Tstatus != 'Excluded'";
 	$select.= "ORDER BY Theadergroup,Tid ";
 	$tth = $Dbh->query($select) || die $Dbh->errmsg();
+
 	if( $cth->numrows == 0 && $tth->numrows == 0 ) {
 		print TESTS "/*\n * No values in $Hname\n */\n";
 		close(TESTS);
@@ -175,6 +176,9 @@ sub writetest($$)
 		$Asymbol=$tentry{'Asymbol'};
 		if( $Tname=~/anon/ ) { next; };
 		if( $Tname=~/fptr/ ) { next; };
+		# switch( $tentry{'Ttype'}
+		#case Struct:
+		#case Union:
 		if( $tentry{'Ttype'} eq 'Struct' || $tentry{'Ttype'} eq 'Union' ) {
 			if( $tentry{'Ttype'} eq 'Struct' ) {
 				$type="struct";
@@ -194,9 +198,14 @@ sub writetest($$)
 				%mentry=$mth->fetchhash;
 				print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMoffset'},$Aid,$mentry{'TMid'})\n";
 			}
-		} else {
-			print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+			next;
 		}
+		#case Pointer:
+		if( $tentry{'Ttype'} eq 'Pointer' ) {
+			next;
+			}
+		# Default case
+		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
 	}
 	if( $lastid != 0 ) {
 		print TESTS "#else\n";
