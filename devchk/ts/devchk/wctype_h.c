@@ -79,6 +79,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9234,0);
 Msg("Find size of anon-__mbstate_t (9234)\n");
 #endif
 
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(__mbstate_t,8, 10488, 6)
+#elif __i386__
+CheckTypeSize(__mbstate_t,8, 10488, 2)
+#elif __ia64__
+CheckTypeSize(__mbstate_t,8, 10488, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10488,0);
+Msg("Find size of __mbstate_t (10488)\n");
+#endif
+
 #if __i386__
 CheckTypeSize(mbstate_t,8, 9235, 2)
 #elif __ia64__
@@ -92,17 +103,6 @@ CheckTypeSize(mbstate_t,8, 9235, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9235,0);
 Msg("Find size of mbstate_t (9235)\n");
-#endif
-
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(__mbstate_t,8, 10488, 6)
-#elif __i386__
-CheckTypeSize(__mbstate_t,8, 10488, 2)
-#elif __ia64__
-CheckTypeSize(__mbstate_t,8, 10488, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10488,0);
-Msg("Find size of __mbstate_t (10488)\n");
 #endif
 
 #ifdef TET_TEST

@@ -757,6 +757,9 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9315,0);
 Msg("Find size of sigstack (9315)\n");
 #endif
 
+#if __powerpc64__
+#endif
+
 #if __i386__
 CheckTypeSize(__sighandler_t,4, 6966, 2)
 #elif __ia64__
@@ -884,6 +887,18 @@ CheckMemberSize(struct sigaction,sa_restorer,0,10,34718)
 CheckOffset(struct sigaction,sa_restorer,136,10,34718)
 CheckMemberSize(struct sigaction,sa_mask,0,10,34719)
 CheckOffset(struct sigaction,sa_mask,4,10,34719)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(struct sigaction,12, 10502, 9)
+CheckMemberSize(struct sigaction,__sigaction_handler,8,9,40152)
+CheckOffset(struct sigaction,__sigaction_handler,0,9,40152)
+CheckMemberSize(struct sigaction,sa_mask,0,9,40153)
+CheckOffset(struct sigaction,sa_mask,8,9,40153)
+CheckMemberSize(struct sigaction,sa_flags,4,9,40154)
+CheckOffset(struct sigaction,sa_flags,8,9,40154)
+CheckMemberSize(struct sigaction,sa_restorer,0,9,40155)
+CheckOffset(struct sigaction,sa_restorer,12,9,40155)
 #endif
 
 #if __i386__

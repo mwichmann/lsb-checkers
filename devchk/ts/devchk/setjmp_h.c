@@ -48,6 +48,10 @@ CheckArrayTypeSize(__jmp_buf,4,58, 10410, 6)
 CheckArrayTypeSize(__jmp_buf,4,14, 10411, 10)
 #endif
 
+#if __powerpc64__
+CheckArrayTypeSize(__jmp_buf,8,40, 10504, 9)
+#endif
+
 #if __ia64__
 CheckArrayTypeSize(jmp_buf,1,704, 6962, 3)
 #elif __i386__

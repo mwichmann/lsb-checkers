@@ -1410,17 +1410,22 @@ Msg("Find size of off64_t (9112)\n");
 
 #if __i386__
 CheckTypeSize(intptr_t,4, 9196, 2)
-#elif __ia64__
-CheckTypeSize(intptr_t,8, 9196, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(intptr_t,4, 9196, 6)
-#elif __s390__
-CheckTypeSize(intptr_t,4, 9196, 10)
-#elif __powerpc64__
-CheckTypeSize(intptr_t,8, 9196, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9196,0);
-Msg("Find size of intptr_t (9196)\n");
+#endif
+
+#if __ia64__
+CheckTypeSize(intptr_t,8, 10513, 3)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(intptr_t,8, 10514, 9)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(intptr_t,4, 10515, 6)
+#endif
+
+#if __s390__
+CheckTypeSize(intptr_t,4, 10516, 10)
 #endif
 
 #ifdef TET_TEST
