@@ -279,18 +279,48 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10505,0);
 
 #if __i386__
 CheckTypeSize(double complex,16,10999,2)
+#elif __ia64__
+CheckTypeSize(double complex,0,10999,3)
+#elif __powerpc64__
+CheckTypeSize(double complex,0,10999,9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(double complex,0,10999,10)
+#elif __x86_64__
+CheckTypeSize(double complex,0,10999,11)
+#elif __s390x__
+CheckTypeSize(double complex,0,10999,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10999,0);
 #endif
 
 #if __i386__
 CheckTypeSize(long double complex,24,11000,2)
+#elif __ia64__
+CheckTypeSize(long double complex,0,11000,3)
+#elif __powerpc64__
+CheckTypeSize(long double complex,0,11000,9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(long double complex,0,11000,10)
+#elif __x86_64__
+CheckTypeSize(long double complex,0,11000,11)
+#elif __s390x__
+CheckTypeSize(long double complex,0,11000,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11000,0);
 #endif
 
 #if __i386__
 CheckTypeSize(float complex,8,11001,2)
+#elif __ia64__
+CheckTypeSize(float complex,0,11001,3)
+#elif __powerpc64__
+CheckTypeSize(float complex,0,11001,9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(float complex,0,11001,10)
+#elif __x86_64__
+CheckTypeSize(float complex,0,11001,11)
+#elif __s390x__
+CheckTypeSize(float complex,0,11001,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11001,0);
 #endif
