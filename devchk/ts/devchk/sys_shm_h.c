@@ -24,21 +24,57 @@ Msg("Checking data structures in sys/shm.h\n");
 #endif
 
 #if __powerpc64__
-/* No test for SHMLBA */
-#elif __powerpc__ && !__powerpc64__
-/* No test for SHMLBA */
-#elif __ia64__
-/* No test for SHMLBA */
-#elif __i386__
-/* No test for SHMLBA */
-#elif __x86_64__
-/* No test for SHMLBA */
-#elif __s390__ && !__s390x__
-/* No test for SHMLBA */
-#else
-Msg( "No definition for SHMLBA (1681, Unknown) in db\n");
 #ifdef SHMLBA
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1681,%s);\n", architecture, SHMLBA);
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+#else
+Msg( "Error: Constant not found: SHMLBA\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef SHMLBA
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+#else
+Msg( "Error: Constant not found: SHMLBA\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef SHMLBA
+	CompareConstant(SHMLBA,(1024*1024),1681,architecture)
+#else
+Msg( "Error: Constant not found: SHMLBA\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef SHMLBA
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+#else
+Msg( "Error: Constant not found: SHMLBA\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef SHMLBA
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+#else
+Msg( "Error: Constant not found: SHMLBA\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef SHMLBA
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+#else
+Msg( "Error: Constant not found: SHMLBA\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for SHMLBA (1681, int) in db\n");
+#ifdef SHMLBA
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1681,%d);\n", architecture, SHMLBA);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
