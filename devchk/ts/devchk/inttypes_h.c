@@ -53,25 +53,6 @@ CheckTypeSize(uintmax_t,8, 9017, 6)
 #endif
 
 #if __i386__
-CheckTypeSize(uint,4, 9265, 2)
-#elif __ia64__
-CheckTypeSize(uint,4, 9265, 3)
-#elif __s390__ && !__s390x__
-CheckTypeSize(uint,4, 9265, 10)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint,4, 9265, 6)
-#elif __powerpc64__
-CheckTypeSize(uint,4, 9265, 9)
-#elif __s390x__
-CheckTypeSize(uint,4, 9265, 12)
-#elif __x86_64__
-CheckTypeSize(uint,4, 9265, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9265,0);
-Msg("Find size of uint (9265)\n");
-#endif
-
-#if __i386__
 CheckTypeSize(uint8_t,1, 9270, 2)
 #elif __ia64__
 CheckTypeSize(uint8_t,1, 9270, 3)

@@ -289,6 +289,21 @@ CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,3,40621)
 CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,3,40621)
 CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,3,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,24,3,40622)
+#elif __powerpc64__
+CheckTypeSize(struct _pthread_cleanup_buffer,0, 6931, 9)
+Msg("Missing member data for _pthread_cleanup_buffer on PPC64\n");
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,9,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,0,9,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,0,9,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,0,9,40622)
+#elif __x86_64__
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 11)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,11,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,11,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,11,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,11,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,11,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,11,40622)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6931,0);
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
@@ -436,6 +451,26 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9049,0);
 Msg("Find size of pthread_mutexattr_t (9049)\n");
 #endif
 
+#if __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9050,0);
+Msg("Find size of pthread_mutexattr_t * (9050)\n");
+#endif
+
+#if __x86_64__
+CheckTypeSize(const pthread_mutexattr_t,0, 10881, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10881,0);
+Msg("Find size of const pthread_mutexattr_t (10881)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10882,0);
+Msg("Find size of const pthread_mutexattr_t * (10882)\n");
+#endif
+
 #if __i386__
 CheckTypeSize(pthread_attr_t,36, 9042, 2)
 #elif __ia64__
@@ -468,7 +503,7 @@ CheckTypeSize(pthread_cond_t,24, 9051, 9)
 #elif __s390x__
 CheckTypeSize(pthread_cond_t,24, 9051, 12)
 #elif __x86_64__
-CheckTypeSize(pthread_cond_t,24, 9051, 11)
+CheckTypeSize(pthread_cond_t,48, 9051, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9051,0);
 Msg("Find size of pthread_cond_t (9051)\n");
@@ -674,6 +709,7 @@ Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
 #elif __ia64__
 #elif __powerpc__ && !__powerpc64__
 #elif __s390x__
+#elif __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
 Msg("Find size of const pthread_rwlockattr_t * (10811)\n");

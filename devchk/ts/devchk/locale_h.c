@@ -531,7 +531,7 @@ CheckOffset(struct __locale_struct,__ctype_tolower,56,10,40183)
 CheckMemberSize(struct __locale_struct,__ctype_toupper,4,10,40184)
 CheckOffset(struct __locale_struct,__ctype_toupper,60,10,40184)
 #elif __x86_64__
-CheckTypeSize(struct __locale_struct,128, 10531, 11)
+CheckTypeSize(struct __locale_struct,232, 10531, 11)
 CheckMemberSize(struct __locale_struct,__ctype_b,8,11,40182)
 CheckOffset(struct __locale_struct,__ctype_b,104,11,40182)
 CheckMemberSize(struct __locale_struct,__ctype_tolower,8,11,40183)
