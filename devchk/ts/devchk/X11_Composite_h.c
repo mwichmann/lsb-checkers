@@ -29,13 +29,17 @@ int pcnt=0;
 Msg("Checking data structures in X11/Composite.h\n");
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+CheckTypeSize(XtOrderProc,8, 10245, 3)
+#elif __i386__
 CheckTypeSize(XtOrderProc,4, 10245, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10245,0);
 #endif
 
-#ifdef __i386__
+#ifdef __ia64__
+CheckTypeSize(XtDoChangeProc,8, 10248, 3)
+#elif __i386__
 CheckTypeSize(XtDoChangeProc,4, 10248, 2)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10248,0);

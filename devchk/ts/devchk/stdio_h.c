@@ -117,6 +117,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9108,0);
 
 #ifdef __i386__
 CheckTypeSize(fpos64_t,16, 9109, 2)
+#elif __ia64__
+CheckTypeSize(fpos64_t,16, 9109, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9109,0);
 #endif

@@ -927,6 +927,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8653,0);
 
 #ifdef __i386__
 CheckTypeSize(struct _win_st,100, 8654, 2)
+#elif __ia64__
+CheckTypeSize(struct _win_st,152, 8654, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
 #endif

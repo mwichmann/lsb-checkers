@@ -28,6 +28,8 @@ CheckOffset(struct option,name,0,2,32258)
 CheckOffset(struct option,has_arg,4,2,32259)
 CheckOffset(struct option,flag,8,2,32260)
 CheckOffset(struct option,val,12,2,32261)
+#elif __ia64__
+CheckTypeSize(struct option,32, 10000, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);
 #endif

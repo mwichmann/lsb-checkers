@@ -23,6 +23,7 @@ Msg("Checking data structures in ctype.h\n");
 #endif
 
 #ifdef __i386__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8976,0);
 #endif

@@ -24,6 +24,8 @@ Msg("Checking data structures in sys/timeb.h\n");
 
 #ifdef __i386__
 CheckTypeSize(struct timeb,12, 10216, 2)
+#elif __ia64__
+CheckTypeSize(struct timeb,16, 10216, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10216,0);
 #endif

@@ -24,12 +24,16 @@ Msg("Checking data structures in X11/Intrinsic.h\n");
 
 #ifdef __i386__
 CheckTypeSize(WidgetClass,4, 9583, 2)
+#elif __ia64__
+CheckTypeSize(WidgetClass,8, 9583, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9583,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(Cardinal,4, 9608, 2)
+#elif __ia64__
+CheckTypeSize(Cardinal,4, 9608, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9608,0);
 #endif

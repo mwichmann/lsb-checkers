@@ -23,6 +23,7 @@ Msg("Checking data structures in wordexp.h\n");
 #endif
 
 #ifdef __i386__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9200,0);
 #endif
@@ -36,6 +37,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7029,0);
 #endif
 
 #ifdef __i386__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9201,0);
 #endif

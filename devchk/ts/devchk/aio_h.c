@@ -79,16 +79,19 @@ cnt++;
 #endif
 
 #ifdef __i386__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8973,0);
 #endif
 
 #ifdef __i386__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8974,0);
 #endif
 
 #ifdef __i386__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8975,0);
 #endif

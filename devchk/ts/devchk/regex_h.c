@@ -269,12 +269,16 @@ cnt++;
 
 #ifdef __i386__
 CheckTypeSize(reg_syntax_t,4, 6941, 2)
+#elif __ia64__
+CheckTypeSize(reg_syntax_t,8, 6941, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6941,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct re_pattern_buffer,32, 6944, 2)
+#elif __ia64__
+CheckTypeSize(struct re_pattern_buffer,64, 6944, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6944,0);
 #endif
@@ -289,6 +293,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
 
 #ifdef __i386__
 CheckTypeSize(regoff_t,4, 6946, 2)
+#elif __ia64__
+CheckTypeSize(regoff_t,4, 6946, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6946,0);
 #endif

@@ -25,6 +25,8 @@ Msg("Checking data structures in sys/types.h\n");
 
 #ifdef __i386__
 CheckTypeSize(int64_t,8, 6998, 2)
+#elif __ia64__
+CheckTypeSize(int64_t,8, 6998, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6998,0);
 #endif
@@ -39,6 +41,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9029,0);
 
 #ifdef __i386__
 CheckTypeSize(uid_t,4, 9069, 2)
+#elif __ia64__
+CheckTypeSize(uid_t,4, 9069, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9069,0);
 #endif
@@ -69,24 +73,32 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9116,0);
 
 #ifdef __i386__
 CheckTypeSize(id_t,4, 9169, 2)
+#elif __ia64__
+CheckTypeSize(id_t,4, 9169, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9169,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(suseconds_t,4, 9249, 2)
+#elif __ia64__
+CheckTypeSize(suseconds_t,8, 9249, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9249,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(fd_mask,4, 10131, 2)
+#elif __ia64__
+CheckTypeSize(fd_mask,8, 10131, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10131,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(timer_t,4, 10208, 2)
+#elif __ia64__
+CheckTypeSize(timer_t,4, 10208, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10208,0);
 #endif
@@ -94,25 +106,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10208,0);
 #ifdef __i386__
 CheckTypeSize(clockid_t,4, 10209, 2)
 #elif __ia64__
-CheckTypeSize(clockid_t,8, 10209, 3)
+CheckTypeSize(clockid_t,4, 10209, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10209,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(ino_t,4, 8985, 2)
+#elif __ia64__
+CheckTypeSize(ino_t,8, 8985, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8985,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(gid_t,4, 9012, 2)
+#elif __ia64__
+CheckTypeSize(gid_t,4, 9012, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9012,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(dev_t,8, 9159, 2)
+#elif __ia64__
+CheckTypeSize(dev_t,8, 9159, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9159,0);
 #endif
@@ -127,6 +145,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9160,0);
 
 #ifdef __i386__
 CheckTypeSize(nlink_t,4, 9162, 2)
+#elif __ia64__
+CheckTypeSize(nlink_t,8, 9162, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9162,0);
 #endif

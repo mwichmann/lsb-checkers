@@ -32,6 +32,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7024,0);
 #endif
 
 #ifdef __i386__
+CheckTypeSize(wint_t,4, 8980, 2)
+#elif __ia64__
+CheckTypeSize(wint_t,4, 8980, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8980,0);
+#endif
+
+#ifdef __i386__
 CheckTypeSize(wctrans_t,4, 9199, 2)
 #elif __ia64__
 CheckTypeSize(wctrans_t,8, 9199, 3)

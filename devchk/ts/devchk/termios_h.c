@@ -830,18 +830,24 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
 
 #ifdef __i386__
 CheckTypeSize(cc_t,1, 10206, 2)
+#elif __ia64__
+CheckTypeSize(cc_t,1, 10206, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(tcflag_t,4, 10207, 2)
+#elif __ia64__
+CheckTypeSize(tcflag_t,4, 10207, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10207,0);
 #endif
 
 #ifdef __i386__
 CheckTypeSize(struct termios,60, 9187, 2)
+#elif __ia64__
+CheckTypeSize(struct termios,60, 9187, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9187,0);
 #endif
