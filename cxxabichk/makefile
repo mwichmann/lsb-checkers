@@ -1,6 +1,6 @@
 
-OBJS = libchk.o classchk.o libstdcxx_so_5.o tetj.o util.o hdr.o symvers.o
-SRCS = classchk.c elfchk.h hdr.h libchk.c libchk.h libstdcxx_so_5.c \
+OBJS = libchk.o classchk.o libstdcxx_so_6.o tetj.o util.o hdr.o symvers.o
+SRCS = classchk.c elfchk.h hdr.h libchk.c libchk.h libstdcxx_so_6.c \
 	tetj.c tetj.h util.c hdr.c symvers.c symvers.h
 
 CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -D_CXXABICHK_ -Wall
@@ -25,8 +25,8 @@ libchk.c: elfchk.h tetj.h
 classchk.c: elfchk.h
 	cp ../libchk/classchk.c .
 	
-libstdcxx_so_5.c:
-	cp ../libchk/libstdcxx_so_5.c .
+libstdcxx_so_6.c:
+	cp ../libchk/libstdcxx_so_6.c .
 	
 tetj.c: tetj.h
 	cp ../tetj/tetj.c .

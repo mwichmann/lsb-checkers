@@ -186,28 +186,7 @@ char *DtNeeded[] = {
 	"libpthread.so.0",
 #endif /* __s390x__ */
 	"libSM.so.6",
-	"libstdc++.so.5",
-#if __i386__
-	"libstdc++.so.5",
-#endif /* __i386__ */
-#if __ia64__
-	"libstdc++.so.5",
-#endif /* __ia64__ */
-#if __powerpc__ && !__powerpc64__
-	"libstdc++.so.5",
-#endif /* __powerpc__ && !__powerpc64__ */
-#if __powerpc64__
-	"libstdc++.so.5",
-#endif /* __powerpc64__ */
-#if __s390__ && !__s390x__
-	"libstdc++.so.5",
-#endif /* __s390__ && !__s390x__ */
-#if __x86_64__
-	"libstdc++.so.5",
-#endif /* __x86_64__ */
-#if __s390x__
-	"libstdc++.so.5",
-#endif /* __s390x__ */
+	"libstdc++.so.6",
 #if __i386__
 	"libstdc++.so.6",
 #endif /* __i386__ */

@@ -53,7 +53,7 @@ return (void *)fptr;
 
   
 int
-check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle *journal)
+check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], struct tetj_handle *journal)
 {
 	int	i,j;
 	Dl_info	dlinfo;
@@ -66,6 +66,7 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 	unsigned long vtvcalloffset, vtbaseoffset;
 	const char *vttypeinfo;
 	fptr *vtvirtfuncs;
+	int vtablesize,fndvtabsize;
 	char tmp_string[TMP_STRING_SIZE+1];
 	int test_failed;
 
@@ -111,6 +112,7 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 					vtbaseoffset  = vtablep->cat1.baseoffset;
 					vttypeinfo    = vtablep->cat1.typeinfo;
 					vtvirtfuncs   = vtablep->cat1.virtfuncs;
+					vtablesize    = sizeof(struct cat1vtable_mem)+(classp->numvirtfuncs*sizeof( void *));
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 					break;
 				case 2:
@@ -118,6 +120,7 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 					vtbaseoffset  = vtablep->cat2.baseoffset;
 					vttypeinfo    = vtablep->cat2.typeinfo;
 					vtvirtfuncs   = vtablep->cat2.virtfuncs;
+					vtablesize    = sizeof(struct cat2vtable_mem)+(classp->numvirtfuncs*sizeof( void *));
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 					break;
 				default:
@@ -265,6 +268,27 @@ check_class_info(char *libname, struct classinfo *classes[], struct tetj_handle 
 														 j, classp->vtable->virtfuncs[j], dlinfo.dli_sname);
 					}
 				}
+
+				/*
+				 * 1.5) Check the vtable size
+				 */
+
+				fndvtabsize = get_size(file, classp->vtablename);
+				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+													 "Checking vtable size");
+				if( vtablesize != fndvtabsize )
+				{
+					TETJ_REPORT_INFO("Vtable size %ld (expected) doesn't match %ld "
+													 "(found) VTSIZE:%s:0:%ld\n",
+													 vtablesize, fndvtabsize,
+													 classp->name,vtablesize);
+					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+				}
+				else
+				{
+					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+				}
+				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, 
 										test_failed ? TETJ_FAIL : TETJ_PASS);
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);

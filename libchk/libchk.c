@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.54 $
+ * This is $Revision: 1.55 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.55  2005/02/01 05:38:46  anderson
+ * Upgrade libstdc++ to the v6 abi
+ *
  * Revision 1.54  2004/12/14 23:05:10  mats
  * fix up the "other versions" message again
  *
@@ -207,7 +210,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.54 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.55 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -448,6 +451,51 @@ check_size(ElfFile *file, struct versym *entry)
   return 0;
 }
 
+/* Returns the size associated with a symbol */
+int
+get_size(ElfFile *file, char *symname)
+{
+  int j;
+  char *symbol_name;
+  /* See if this symbol is in the dynsyn section of the library */
+
+  /* printf("Looking for %s\n", entry->name); */
+  for (j=0; j<file->numsyms; j++) 
+  {
+    if ( !(ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT) )
+    {
+      continue;
+    }
+#ifdef DEBUG
+    printf("Bind=%x\n", ELF32_ST_BIND(file->syms[j].st_info) );
+    printf("Type=%x\n", ELF32_ST_TYPE(file->syms[j].st_info) );
+    printf("Comparing %s and %s\n", 
+           ElfGetStringIndex(file,file->syms[j].st_name,
+                             file->symhdr->sh_link),entry->name);
+#endif
+    symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
+				    file->symhdr->sh_link);
+#if __powerpc64__
+    /* On PPC64 systems the real text for functions is stored in a symbol
+       of the same name, but prepended with a '.'. Since in the LSB DB
+       we store the names of the functions without a '.' we need this horrible
+       horrible hack so libchk can match against the correct symbols */
+    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) 
+    {
+	symbol_name++;
+    }
+#endif
+    if (strcmp(symbol_name,symname) == 0)
+    {
+	    return file->syms[j].st_size;
+
+    }
+  }
+
+  /* Did not find exact match for symbol */
+  return 0;
+}
+
 
 void
 check_lib(char *libname, struct versym *entries, struct classinfo *classes, struct tetj_handle *journal)
@@ -626,7 +674,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 
 /*   printf("Checking Class Information in %s\n", filename ); */
 
-  check_class_info(filename,classes,journal);
+  check_class_info(file,filename,classes,journal);
 
 	tetj_testcase_end(journal, tetj_activity_count, libname, "");
 
