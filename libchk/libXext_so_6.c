@@ -77,6 +77,9 @@ struct versym libXext_so_6[] = {
 	{"XdbeGetVisualInfo","",0,LSB_Graphics,0,1},
 	{"XdbeQueryExtension","",0,LSB_Graphics,0,1},
 	{"XdbeSwapBuffers","",0,LSB_Graphics,0,1},
+	{"XeviGetVisualInfo","",0,LSB_Graphics,0,1},
+	{"XeviQueryExtension","",0,LSB_Graphics,0,1},
+	{"XeviQueryVersion","",0,LSB_Graphics,0,1},
 	{0,0}};
 
 struct classinfo *libXext_so_6_classinfo[] = {
