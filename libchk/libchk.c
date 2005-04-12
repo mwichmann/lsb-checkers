@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.60 $
+ * This is $Revision: 1.61 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.61  2005/04/11 22:56:50  anderson
+ * bug - 816 don't return immediately so we can see all of the available versions
+ *
  * Revision 1.60  2005/03/31 16:36:52  anderson
  * Bug 736 - make Module additive
  *
@@ -225,7 +228,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.60 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.61 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -381,7 +384,6 @@ check_symbol(ElfFile *file, struct versym *entry)
                    entry->vername);
             if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
 	      printf("    available version is %s\n", file->versionnames[vers]);
-	    return 0;
           }
       }
 
@@ -389,7 +391,7 @@ check_symbol(ElfFile *file, struct versym *entry)
       if (vers == i)
 	foundit=1;
 
-      /* If the version in the libary is greater (newer) then warn if
+      /* If the version in the library is greater (newer) then warn if
          in maintainer mode */
       if (vers > i && (libchk_debug&LIBCHK_DEBUG_NEWVERS))
           extra_vers(file, j, vers, "newer", entry->vername);
