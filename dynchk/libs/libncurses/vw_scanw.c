@@ -2,13 +2,13 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <curses.h>
 #include <stdarg.h>
+#include <curses.h>
 #undef vw_scanw
-static int(*funcptr) (WINDOW * , char * , va_list ) = 0;
+static int(*funcptr) (WINDOW * , const char * , va_list ) = 0;
 
 extern int __lsb_check_params;
-int vw_scanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
+int vw_scanw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -20,7 +20,7 @@ int vw_scanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 		__lsb_output(4, "vw_scanw()");
 		validate_RWaddress( arg0, "vw_scanw - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vw_scanw - arg0");
-		validate_RWaddress( arg1, "vw_scanw - arg1");
+		validate_Rdaddress( arg1, "vw_scanw - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vw_scanw - arg1");
 		validate_NULL_TYPETYPE(  arg2, "vw_scanw - arg2");
 	}

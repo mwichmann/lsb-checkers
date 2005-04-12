@@ -5,10 +5,10 @@
 #include <curses.h>
 #include <stdarg.h>
 #undef vwscanw
-static int(*funcptr) (WINDOW * , char * , va_list ) = 0;
+static int(*funcptr) (WINDOW * , const char * , va_list ) = 0;
 
 extern int __lsb_check_params;
-int vwscanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
+int vwscanw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -20,7 +20,7 @@ int vwscanw (WINDOW * arg0 , char * arg1 , va_list arg2 )
 		__lsb_output(4, "vwscanw()");
 		validate_RWaddress( arg0, "vwscanw - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vwscanw - arg0");
-		validate_RWaddress( arg1, "vwscanw - arg1");
+		validate_Rdaddress( arg1, "vwscanw - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vwscanw - arg1");
 		validate_NULL_TYPETYPE(  arg2, "vwscanw - arg2");
 	}

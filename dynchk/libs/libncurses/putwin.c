@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <curses.h>
 #include <stdio.h>
+#include <curses.h>
 #undef putwin
 static int(*funcptr) (WINDOW * , FILE * ) = 0;
 

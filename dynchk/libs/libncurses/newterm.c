@@ -5,10 +5,10 @@
 #include <stdio.h>
 #include <curses.h>
 #undef newterm
-static SCREEN *(*funcptr) (char * , FILE * , FILE * ) = 0;
+static SCREEN *(*funcptr) (const char * , FILE * , FILE * ) = 0;
 
 extern int __lsb_check_params;
-SCREEN * newterm (char * arg0 , FILE * arg1 , FILE * arg2 )
+SCREEN * newterm (const char * arg0 , FILE * arg1 , FILE * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	SCREEN * ret_value  ;
@@ -18,7 +18,7 @@ SCREEN * newterm (char * arg0 , FILE * arg1 , FILE * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "newterm()");
-		validate_RWaddress( arg0, "newterm - arg0");
+		validate_Rdaddress( arg0, "newterm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "newterm - arg0");
 		validate_RWaddress( arg1, "newterm - arg1");
 		validate_NULL_TYPETYPE(  arg1, "newterm - arg1");
