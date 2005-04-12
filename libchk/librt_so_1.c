@@ -106,8 +106,48 @@ struct versym librt_so_1[] = {
 #if __s390x__
 	{"clock_settime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-	{"shm_open","GLIBC_2.2",0,LSB_Core,0,1},
-	{"shm_unlink","GLIBC_2.2",0,LSB_Core,0,1},
+#if __i386__
+	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc64__
+	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"shm_open","GLIBC_2.2.4",0,LSB_Core,4,1},
+#endif
+#if __s390x__
+	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __i386__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc64__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"shm_unlink","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if __s390x__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
 #if __i386__
 	{"timer_create","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
