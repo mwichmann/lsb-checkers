@@ -55,6 +55,14 @@ Msg( "Error: Constant not found: FE_INVALID\n");
 cnt++;
 #endif
 
+#elif __s390x__
+#ifdef FE_INVALID
+	CompareConstant(FE_INVALID,0x80,5298,architecture)
+#else
+Msg( "Error: Constant not found: FE_INVALID\n");
+cnt++;
+#endif
+
 #elif __x86_64__
 #ifdef FE_INVALID
 	CompareConstant(FE_INVALID,0x01,5298,architecture)
@@ -104,6 +112,14 @@ cnt++;
 #elif __i386__
 #ifdef FE_DIVBYZERO
 	CompareConstant(FE_DIVBYZERO,0x04,5299,architecture)
+#else
+Msg( "Error: Constant not found: FE_DIVBYZERO\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef FE_DIVBYZERO
+	CompareConstant(FE_DIVBYZERO,0x40,5299,architecture)
 #else
 Msg( "Error: Constant not found: FE_DIVBYZERO\n");
 cnt++;
@@ -163,6 +179,14 @@ Msg( "Error: Constant not found: FE_OVERFLOW\n");
 cnt++;
 #endif
 
+#elif __s390x__
+#ifdef FE_OVERFLOW
+	CompareConstant(FE_OVERFLOW,0x20,5300,architecture)
+#else
+Msg( "Error: Constant not found: FE_OVERFLOW\n");
+cnt++;
+#endif
+
 #elif __x86_64__
 #ifdef FE_OVERFLOW
 	CompareConstant(FE_OVERFLOW,0x08,5300,architecture)
@@ -210,6 +234,14 @@ cnt++;
 #endif
 
 #elif __i386__
+#ifdef FE_UNDERFLOW
+	CompareConstant(FE_UNDERFLOW,0x10,5301,architecture)
+#else
+Msg( "Error: Constant not found: FE_UNDERFLOW\n");
+cnt++;
+#endif
+
+#elif __s390x__
 #ifdef FE_UNDERFLOW
 	CompareConstant(FE_UNDERFLOW,0x10,5301,architecture)
 #else
@@ -266,6 +298,14 @@ cnt++;
 #elif __i386__
 #ifdef FE_INEXACT
 	CompareConstant(FE_INEXACT,0x20,5302,architecture)
+#else
+Msg( "Error: Constant not found: FE_INEXACT\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef FE_INEXACT
+	CompareConstant(FE_INEXACT,0x08,5302,architecture)
 #else
 Msg( "Error: Constant not found: FE_INEXACT\n");
 cnt++;
