@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include <curses.h>
 #undef keyname
-static char *(*funcptr) (int ) = 0;
+static const char *(*funcptr) (int ) = 0;
 
 extern int __lsb_check_params;
-char * keyname (int arg0 )
+const char * keyname (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	char * ret_value  ;
+	const char * ret_value  ;
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keyname");
 	if(__lsb_check_params)

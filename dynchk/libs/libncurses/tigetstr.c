@@ -4,10 +4,10 @@
 #include "../../misc/lsb_output.h"
 #include <term.h>
 #undef tigetstr
-static char *(*funcptr) (char * ) = 0;
+static char *(*funcptr) (const char * ) = 0;
 
 extern int __lsb_check_params;
-char * tigetstr (char * arg0 )
+char * tigetstr (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
@@ -17,7 +17,7 @@ char * tigetstr (char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "tigetstr()");
-		validate_RWaddress( arg0, "tigetstr - arg0");
+		validate_Rdaddress( arg0, "tigetstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tigetstr - arg0");
 	}
 	ret_value = funcptr(arg0);
