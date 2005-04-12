@@ -349,7 +349,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef PTHREAD_STACK_MIN
-	CompareConstant(PTHREAD_STACK_MIN,196608,5310,architecture)
+	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
@@ -381,7 +381,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef PTHREAD_STACK_MIN
-	CompareConstant(PTHREAD_STACK_MIN,196608,5310,architecture)
+	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
@@ -389,7 +389,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef PTHREAD_STACK_MIN
-	CompareConstant(PTHREAD_STACK_MIN,196608,5310,architecture)
+	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
@@ -403,16 +403,12 @@ Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
-#ifdef PTHREAD_STACK_MIN
-	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture)
 #else
-Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
-cnt++;
+Msg( "No definition for PTHREAD_STACK_MIN (5310, int) in db\n");
+#ifdef PTHREAD_STACK_MIN
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5310,%d);\n", architecture, PTHREAD_STACK_MIN);
 #endif
-
 #endif
-
 #if _LSB_DEFAULT_ARCH
 #ifdef SCHAR_MAX
 	CompareConstant(SCHAR_MAX,127,6,architecture)

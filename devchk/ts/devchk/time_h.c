@@ -255,6 +255,25 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");
 #endif
 
+#if __no_sym__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11061,0);
+Msg("Find size of timer_t * (11061)\n");
+#endif
+
+#if __no_sym__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11062,0);
+Msg("Find size of itimerspec * (11062)\n");
+#endif
+
+#if __no_sym__
+CheckTypeSize(const itimerspec,, 11063, )
+#endif
+
+#if __no_sym__
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
