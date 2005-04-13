@@ -704,11 +704,11 @@ CheckTypeSize(fenv_t,8, 11042, 3)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(fenv_t,4, 11044, 10)
+CheckTypeSize(fenv_t,8, 11044, 10)
 #endif
 
 #if __s390x__
-CheckTypeSize(fenv_t,4, 11045, 12)
+CheckTypeSize(fenv_t,16, 11045, 12)
 #endif
 
 #if __i386__
@@ -720,6 +720,9 @@ CheckTypeSize(fenv_t,32, 11056, 11)
 #endif
 
 #if __x86_64__
+#endif
+
+#if __s390__ && !__s390x__
 #endif
 
 #ifdef TET_TEST
