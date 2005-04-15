@@ -703,6 +703,9 @@ struct versym DynSyms[] = {
 	{"XdbeGetVisualInfo","",0,LSB_Graphics},
 	{"XdbeQueryExtension","",0,LSB_Graphics},
 	{"XdbeSwapBuffers","",0,LSB_Graphics},
+	{"XeviGetVisualInfo","",0,LSB_Graphics},
+	{"XeviQueryExtension","",0,LSB_Graphics},
+	{"XeviQueryVersion","",0,LSB_Graphics},
 	{"XkbAllocClientMap","",0,LSB_Graphics},
 	{"XkbAllocCompatMap","",0,LSB_Graphics},
 	{"XkbAllocControls","",0,LSB_Graphics},
@@ -4114,18 +4117,6 @@ struct versym DynSyms[] = {
 	{"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt9type_info14__is_pointer_pEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt9type_info15__is_function_pEv","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIcEC1ERKS_","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIcEC1Ev","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIcEC2ERKS_","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIcEC2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIwEC1ERKS_","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIwEC1Ev","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIwEC2ERKS_","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIwEC2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIwED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
-	{"_ZNSaIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_Alloc_hiderC1EPwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_M_leak_hardEv","GLIBCXX_3.4",0,LSB_Cpp},
@@ -10386,6 +10377,136 @@ struct versym DynSyms[] = {
 	{"_ZNSt6locale3allE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt6locale4noneE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt6locale4timeE","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt6locale5_Impl16_M_install_facetEPKNS_2idEPKNS_5facetE","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt6locale5_Impl16_M_replace_facetEPKS0_PKNS_2idE","GLIBCXX_3.4",0,LSB_Cpp},
+#if __i386__
+	{"_ZNSt6locale5_ImplC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC1ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC1ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC2ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC2ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
+	{"_ZNSt6locale5_ImplD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt6locale5_ImplD2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt6locale5ctypeE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt6locale5facet15_S_get_c_localeEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt6locale5facet17_S_clone_c_localeERP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp},
@@ -17703,11 +17824,111 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"clock","GLIBC_2.2",0,LSB_Core},
 #endif
+#if __i386__
 	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"clock_getcpuclockid","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"clock_getcpuclockid","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"clock_getres","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"clock_getres","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"clock_getres","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"clock_getres","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"clock_getres","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"clock_getres","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"clock_getres","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"clock_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"clock_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"clock_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"clock_gettime","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"clock_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"clock_gettime","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"clock_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"clock_nanosleep","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"clock_nanosleep","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"clock_settime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"clock_settime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"clock_settime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"clock_settime","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"clock_settime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"clock_settime","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"clock_settime","GLIBC_2.2",0,LSB_Core},
+#endif
 #if __i386__
 	{"clog","GLIBC_2.1",0,LSB_Core},
 #endif
@@ -33263,8 +33484,48 @@ struct versym DynSyms[] = {
 #endif
 	{"shellClassRec","",0,LSB_Graphics},
 	{"shellWidgetClass","",0,LSB_Graphics},
+#if __i386__
 	{"shm_open","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"shm_open","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"shm_open","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"shm_open","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"shm_open","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"shm_open","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"shm_open","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"shm_unlink","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"shm_unlink","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"shm_unlink","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"shm_unlink","GLIBC_2.2",0,LSB_Core},
+#endif
 #if __i386__
 	{"shmat","GLIBC_2.0",0,LSB_Core},
 #endif
@@ -36488,11 +36749,111 @@ struct versym DynSyms[] = {
 	{"time","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"timeout","",0,LSB_Core},
+#if __i386__
 	{"timer_create","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"timer_create","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"timer_create","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"timer_create","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"timer_create","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"timer_create","GLIBC_2.3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"timer_create","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"timer_delete","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"timer_delete","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"timer_delete","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"timer_delete","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"timer_delete","GLIBC_2.3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"timer_delete","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"timer_getoverrun","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core},
+#endif
+#if __i386__
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"timer_gettime","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core},
+#endif
+#if __i386__
 	{"timer_settime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"timer_settime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"timer_settime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"timer_settime","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"timer_settime","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"timer_settime","GLIBC_2.3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"timer_settime","GLIBC_2.2",0,LSB_Core},
+#endif
 #if __i386__
 	{"times","GLIBC_2.0",0,LSB_Core},
 #endif
