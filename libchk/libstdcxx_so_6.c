@@ -2439,18 +2439,6 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt9type_info14__is_pointer_pEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt9type_info15__is_function_pEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIcEC1ERKS_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIcEC1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIcEC2ERKS_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIcEC2Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIwEC1ERKS_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIwEC1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIwEC2ERKS_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIwEC2Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIwED1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
-	{"_ZNSaIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_Alloc_hiderC1EPwRKS1_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwRKS1_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_M_leak_hardEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -8711,6 +8699,136 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt6locale3allE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt6locale4noneE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt6locale4timeE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+	{"_ZNSt6locale5_Impl16_M_install_facetEPKNS_2idEPKNS_5facetE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt6locale5_Impl16_M_replace_facetEPKS0_PKNS_2idE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if __i386__
+	{"_ZNSt6locale5_ImplC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC1ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC1ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC1Ej","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC1Ej","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC2ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC2ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __i386__
+	{"_ZNSt6locale5_ImplC2Ej","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZNSt6locale5_ImplC2Ej","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __ia64__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc64__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __x86_64__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if __s390x__
+	{"_ZNSt6locale5_ImplC2Em","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+	{"_ZNSt6locale5_ImplD1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt6locale5_ImplD2Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt6locale5ctypeE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt6locale5facet15_S_get_c_localeEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt6locale5facet17_S_clone_c_localeERP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -21834,48 +21952,6 @@ struct classinfo _ZNSt12__basic_fileIcEE_classinfo = {
 	NSt12__basic_fileIcEE_baseinfo,
 	};
 
-char *NSt24__default_alloc_templateILb1ELi0EEE_typeinfo_name[] = {
-	};
-
-struct classtypeinfo NSt24__default_alloc_templateILb1ELi0EEE_typeinfo = {
-	"",
-	"_ZTSNSt24__default_alloc_templateILb1ELi0EEE",
-	NSt24__default_alloc_templateILb1ELi0EEE_typeinfo_name,
-	};
-
-const char *NSt24__default_alloc_templateILb1ELi0EEE_vtable_name_0 [] = {
-	};
-
-struct classvtable NSt24__default_alloc_templateILb1ELi0EEE_vtable [1] = {
-	{
-	0,
-	0,
-	1,	/* Vtable category */
-	0,	/* Number of Vfuncs */
-	"",
-	NSt24__default_alloc_templateILb1ELi0EEE_vtable_name_0,
-	},
-};
-
-struct base_type_info NSt24__default_alloc_templateILb1ELi0EEE_baseinfo[] = {
-	};
-
-struct classinfo _ZNSt24__default_alloc_templateILb1ELi0EEE_classinfo = {
-	"_ZNSt24__default_alloc_templateILb1ELi0EEE",
-	"",
-	"",	/* RTTI */
-	"",
-	"_ZTTNSt24__default_alloc_templateILb1ELi0EEE",	/* VTT */
-	1,
-	0,
-	0,
-	0,	/* numVTT */
-	0U,
-	&NSt24__default_alloc_templateILb1ELi0EEE_typeinfo,
-	NSt24__default_alloc_templateILb1ELi0EEE_vtable,
-	NSt24__default_alloc_templateILb1ELi0EEE_baseinfo,
-	};
-
 char *NSt6gsliceE_typeinfo_name[] = {
 	};
 
@@ -22031,7 +22107,6 @@ struct classinfo *libstdcxx_so_6_classinfo[] = {
 	&_ZNSaIcEE_classinfo,
 	&_ZNSaIwEE_classinfo,
 	&_ZNSt12__basic_fileIcEE_classinfo,
-	&_ZNSt24__default_alloc_templateILb1ELi0EEE_classinfo,
 	&_ZNSt6gsliceE_classinfo,
 
 	NULL	};
