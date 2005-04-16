@@ -8981,6 +8981,11 @@ struct versym DynSyms[] = {
 	{"_ZNSt14overflow_errorC2ERKSs","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14overflow_errorD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14overflow_errorD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt15_List_node_base4hookEPS_","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt15_List_node_base4swapERS_S0_","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt15_List_node_base6unhookEv","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt15_List_node_base7reverseEv","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt15_List_node_base8transferEPS_S0_","GLIBCXX_3.4",0,LSB_Cpp},
 #if __ia64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE10pubseekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
@@ -9897,6 +9902,8 @@ struct versym DynSyms[] = {
 	{"_ZNSt16invalid_argumentC2ERKSs","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt16invalid_argumentD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt16invalid_argumentD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt17__timepunct_cacheIcE12_S_timezonesE","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZNSt17__timepunct_cacheIwE12_S_timezonesE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17moneypunct_bynameIcLb0EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
 #if __i386__
 	{"_ZNSt17moneypunct_bynameIcLb0EEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
