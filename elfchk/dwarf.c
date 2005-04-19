@@ -75,12 +75,33 @@ decode_sleb128 (data, length_return)
   return result;
 }
 
+int encoded_ptr_size (int encoding) {
+   int size = 0;
+   switch (encoding & 0x7) {
+      case 0: 
+	       size = sizeof(void*);
+		   break;
+      case DW_EH_PE_udata2: 
+	       size = 2; 
+		   break;
+      case DW_EH_PE_udata4: 
+	       size = 4; 
+		   break;
+      case DW_EH_PE_udata8:
+	       size = 8; 
+		   break;
+      default:	
+	       break;
+   }
+   
+   return size;
+}
 
-
-int check_CFI(unsigned char *ptr, int *error)
+int check_CFI(unsigned char *ptr, int *error, int ptr_encoding)
 {
         int	numused,used=0;
         int	tmp;
+		long tmpaddr;
         int     opcode;
         unsigned char     rawop;
 /* XXXSTU - Need to check the values read in each record */
@@ -147,9 +168,15 @@ dumpbytes(ptr,8);
                 }
 
 		/* Operand 1 - address */
-		tmp = *(int *)(ptr);
-                ptr += sizeof(int);
-                used += sizeof(int);
+		if (ptr_encoding) {
+		 tmpaddr = (long)read_FDE_encoded(ptr, ptr_encoding, &numused);
+		 ptr += numused;
+		 used += numused;
+		} else {
+            tmp = *(long *)(ptr);
+            ptr += sizeof(long);
+            used += sizeof(long);
+		}
 		break;
 
 	case DW_CFA_advance_loc1:
@@ -444,20 +471,29 @@ int check_FDE(CIEFrame *cie_list, unsigned char *ptr,  int *error)
 		CIEFrame *cie = 0;
         unsigned char *offsetptr;
         unsigned char *endptr;
+		unsigned long length;
         void *fdeimage_ptr;
 
         fdeimage_ptr = &fdeimage;
 
         memset(fdeimage_ptr,0,sizeof(FDEFrameHeader));
-        fdeimage.length = *(int *)ptr;
-        ptr += 4;
-        used += 4;
+
+	    length = *(unsigned int *)ptr;
+		ptr += 4;
+		used +=4;
+
+		if (length == 0xffffffff) {
+		   length = *(unsigned long long *)ptr;
+		   ptr += 8;
+		   used += 8;
+		}
+
+		fdeimage.length = length;
         endptr = ptr + fdeimage.length;
 /*
 fprintf(stderr,"FDE found at %p\n", ptr );
 dumpbytes(ptr,fdeimage.length);
 */
-
 
         if (fdeimage.length==0)
         {
@@ -465,7 +501,7 @@ dumpbytes(ptr,fdeimage.length);
                 return 0;
         }
 
-        fdeimage.CIE_pointer = *(int *)ptr;
+        fdeimage.CIE_pointer = *(unsigned int *)ptr;
 		offsetptr = ptr;
         ptr += 4;
         used += 4;
@@ -476,21 +512,24 @@ dumpbytes(ptr,fdeimage.length);
 		}
 
         if (cie) {
-		   /* XXX use  cie->fde_encoding to retrieve initial_loc and addr_range pointers */
+		   int numused;
+
+		   if (cie->fde_encoding) {
+		    /* encoded value may be relative, depending on encoding bits 0x70 */
+		    fdeimage.initial_location = read_FDE_encoded(ptr, cie->fde_encoding, &numused);
+			ptr += numused;
+			used += numused;
+		   } else {
+             fdeimage.initial_location = *(long **)ptr; 
+             ptr += sizeof(long);
+             used += sizeof(long);
+		   }
 		} else {
             fprintf(stderr,"FDE contains invalid CIE pointer %lx\n", 
 			                (unsigned long)fdeimage.CIE_pointer);
 		}
-
-	/*
-	 * These really depend on the FDE encoding as specified in
-	 * the CIE Augmentation data
-	 */
-        fdeimage.initial_location = *(long **)ptr;
-        ptr += sizeof(long);
-        used += sizeof(long);
         
-/*        fdeimage.address_range = decode_uleb128(ptr,&numused); */
+        /* address_range is always specified as an absolute value */
         fdeimage.address_range = (long)(*ptr);
         ptr += sizeof(long);
         used += sizeof(long);
@@ -507,7 +546,7 @@ dumpbytes(ptr,fdeimage.length);
 
         if(elfchk_debug & DEBUG_DWARF_CONTENTS) {
 		        int i;
-                fprintf(stderr,"length: %x\n", fdeimage.length);
+                fprintf(stderr,"length: %lx\n", fdeimage.length);
                 fprintf(stderr,"CIE_pointer: %x\n", fdeimage.CIE_pointer);
                 fprintf(stderr,"initial_location: %p\n", 
                         fdeimage.initial_location);
@@ -524,7 +563,7 @@ dumpbytes(ptr,fdeimage.length);
         }
 
         while(ptr<endptr)
-                ptr += check_CFI(ptr, error);
+                ptr += check_CFI(ptr, error, cie->fde_encoding);
 
         return fdeimage.length + 4; /* length+sizeof(length) */
 }
@@ -581,6 +620,7 @@ int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
         CIEFrameImage *frameimg;
         CIEFrame *frame;
         unsigned char *start = ptr;
+        unsigned long length;
         unsigned char *cfi_start;
         int numused;
 
@@ -591,23 +631,42 @@ int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
 		frame->next = *cie_list;
 		*cie_list = frame;
 		frame->cie_start_addr = ptr;
-		
+	/* Frameimg will not hold good if first 4 bytes are 0xffffffff */
+	/*
         frameimg = (CIEFrameImage *)ptr;
         frame->length = frameimg->length;
         frame->cie = frameimg->cie;
         frame->version = frameimg->version;
         frame->augmentation = frameimg->augmentation;
+     */
+	    length = *(unsigned int *)ptr;
+		ptr += 4;
+
+		if (length == 0xffffffff) {
+		   length = *(unsigned long long *)ptr;
+		   ptr += 8;
+		}
+		
+		frame->length = length;
+
+		frame->cie = *(unsigned int *)ptr;
+		ptr += 4;
+
+		frame->version = *(unsigned int *)ptr;
+		ptr++;
+
+        frame->augmentation = ptr;
 
         if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
                 fprintf(stderr,"CIE address: %08lx \n ", (unsigned long)(frame->cie_start_addr));
-                fprintf(stderr,"length: %x\n", frame->length);
+                fprintf(stderr,"length: %lx\n", frame->length);
                 fprintf(stderr,"cie: %x\n", frame->cie);
                 fprintf(stderr,"ver: %x\n", frame->version);
                 fprintf(stderr,"aug: %s\n", frame->augmentation);
 	}
 
-        ptr = (unsigned char *)(frameimg->augmentation)
-                + strlen(frameimg->augmentation) + 1;
+        ptr = (unsigned char *)(frame->augmentation)
+                + strlen(frame->augmentation) + 1;
 
         if (strcmp(frame->augmentation, "eh")==0)
         {
@@ -643,16 +702,22 @@ int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
                 }
                 cfi_start = ptr + frame->augmentation_len;
 
-                /* Get the info related with 'P', 'L' and/or 'R' */
+                /* Skip 'z'; get the info related with 'P', 'L' and/or 'R' */
 				for (aug_char=1; aug_char < strlen(frame->augmentation); aug_char++)
 				{
 
 				   switch (frame->augmentation[aug_char]) {
 				      case 'P':
                           frame->per_encoding = *ptr++;
-						  /* XXX - get the per routine according to the encoding */
-                          frame->personality_routine = *(unsigned char **)ptr;
-                          ptr += sizeof(unsigned char *);
+						  /* get the per routine according to the encoding */
+						  if (frame->per_encoding) {
+                             frame->personality_routine = 
+							       read_FDE_encoded(ptr, frame->per_encoding, &numused);
+						     ptr += numused;
+						  } else {
+                             frame->personality_routine = *(unsigned char **)ptr;
+                             ptr += sizeof(unsigned char *);
+						  }
 						  break;
 					  case 'L':
 						  frame->lsda_encoding = *ptr++;
@@ -669,10 +734,19 @@ int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
 				}
 
                 if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+				     if (frame->per_encoding) {
                         fprintf(stderr,"per encoding: %x\n", frame->per_encoding);
                         fprintf(stderr,"per routine: %p\n", 
                                 frame->personality_routine);
-                }
+					 }
+				     if (frame->lsda_encoding) {
+                        fprintf(stderr,"lsda encoding: %x\n", frame->lsda_encoding);
+					 }
+				     if (frame->fde_encoding) {
+                        fprintf(stderr,"fde encoding: %x\n", frame->fde_encoding);
+					 }
+                 }
+
                 /* We use the offset from the augmentation
                    to ignore any other information in the augmentation */
                 ptr = cfi_start;
@@ -680,14 +754,15 @@ int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
 
 
         /* Get the CFIs */
+/*
         if (elfchk_debug&DEBUG_DWARF_CONTENTS) {
                 fprintf(stderr,"%x bytes of CFI\n", 
                         (int)(ptr - (unsigned char *)frameimg));
 	}
+*/
 
-        while ( (ptr - (unsigned char *)frameimg) < 
-                frameimg->length + sizeof(int) ) {
-                ptr += check_CFI(ptr, error);
+        while ( (ptr - start) < frame->length + sizeof(int) ) {
+                ptr += check_CFI(ptr, error,/* ptr_encoding */ 0);
 	}
 
         return ptr - start;
@@ -698,6 +773,7 @@ read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused)
 {
         void *tmp;
 
+        *numused = 0;
         if (encoding == DW_EH_PE_omit) 
         {
                 *numused = 0;
@@ -705,33 +781,33 @@ read_FDE_encoded(unsigned char *ptr, unsigned char encoding, int *numused)
 	}
 
         switch (encoding & 0x0f) {
-	case DW_EH_PE_uleb128:
+	case DW_EH_PE_uleb128: /* 0x01 */
 		tmp = (void *) decode_uleb128(ptr,numused);
 		return tmp;
-	case DW_EH_PE_udata2:
+	case DW_EH_PE_udata2: /* 0x02 */
 		tmp = (void *)(long)(*(unsigned short *)ptr);
 		*numused = 2;
 		return tmp;
-	case DW_EH_PE_udata4:
+	case DW_EH_PE_udata4: /* 0x03 */
 		tmp = (void *)(long)(*(unsigned int *)ptr);
 		*numused = 4;
 		return tmp;
-	case DW_EH_PE_udata8:
+	case DW_EH_PE_udata8: /* 0x04 */
 		tmp = (void *)(long)(*(unsigned long long *)ptr);
 		*numused = 8;
 		return tmp;
-	case DW_EH_PE_sleb128:
+	case DW_EH_PE_sleb128: /* 0x09 */
 		tmp = (void *)decode_sleb128(ptr,numused);
 		return tmp;
-	case DW_EH_PE_sdata2:
+	case DW_EH_PE_sdata2: /* 0x0A */
 		tmp = (void *)(long)(*(short *)ptr);
 		*numused = 2;
 		return tmp;
-	case DW_EH_PE_sdata4:
+	case DW_EH_PE_sdata4: /* 0x0B */
 		tmp = (void *)(long)(*(int *)ptr);
 		*numused = 4;
 		return tmp;
-	case DW_EH_PE_sdata8:
+	case DW_EH_PE_sdata8: /* 0x0C */
 		tmp = (void *)(long)(*(long long *)ptr);
 		*numused = 8;
 		return tmp;
