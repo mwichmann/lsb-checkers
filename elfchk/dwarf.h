@@ -20,7 +20,7 @@ typedef struct CIEFrameImage {
 typedef struct CIEFrame {
     struct CIEFrame *next;
 	unsigned char *cie_start_addr;
-	Elf32_Word	length;
+	unsigned long	length;
 	Elf32_Word	cie;
 	char		version;
 	char		per_encoding;
@@ -36,7 +36,7 @@ typedef struct CIEFrame {
 	} CIEFrame;
 
 typedef struct FDEFrameHeader {
-	Elf32_Word	length;
+	unsigned long	length;
 	Elf32_Word	CIE_pointer;
 	long		*initial_location;
 	long		address_range;
@@ -121,7 +121,7 @@ typedef struct EHFRMHDR {
 
 /* dwarf.c */
 extern unsigned long int read_leb128(unsigned char *data, int *length_return, int sign);
-extern int check_CFI(unsigned char *ptr, int *error);
+extern int check_CFI(unsigned char *ptr, int *error, int ptr_encoding);
 extern int check_FDE(CIEFrame *cie_list, unsigned char *ptr, int *error);
 extern int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error);
 extern int check_CFInformation(unsigned char *ptr, int *error);
