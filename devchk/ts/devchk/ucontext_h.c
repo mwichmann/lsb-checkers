@@ -148,19 +148,19 @@ CheckTypeSize(vrregset_t,528, 10909, 6)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(struct _libc_vrstate,4, 11032, 9)
+CheckTypeSize(struct _libc_vrstate,544, 11032, 9)
 CheckMemberSize(struct _libc_vrstate,vrregs,512,9,40856)
 CheckOffset(struct _libc_vrstate,vrregs,0,9,40856)
-CheckMemberSize(struct _libc_vrstate,vscr,4,9,40859)
-CheckOffset(struct _libc_vrstate,vscr,0,9,40859)
+CheckMemberSize(struct _libc_vrstate,vscr,16,9,40859)
+CheckOffset(struct _libc_vrstate,vscr,512,9,40859)
 CheckMemberSize(struct _libc_vrstate,vrsave,4,9,40860)
-CheckOffset(struct _libc_vrstate,vrsave,0,9,40860)
-CheckMemberSize(struct _libc_vrstate,__pad,4,9,40861)
-CheckOffset(struct _libc_vrstate,__pad,0,9,40861)
+CheckOffset(struct _libc_vrstate,vrsave,528,9,40860)
+CheckMemberSize(struct _libc_vrstate,__pad,12,9,40861)
+CheckOffset(struct _libc_vrstate,__pad,532,9,40861)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(struct _libc_vscr,4, 11034, 9)
+CheckTypeSize(struct _libc_vscr,16, 11034, 9)
 CheckMemberSize(struct _libc_vscr,__pad,12,9,40857)
 CheckOffset(struct _libc_vscr,__pad,0,9,40857)
 CheckMemberSize(struct _libc_vscr,vscr_word,4,9,40858)
@@ -168,11 +168,11 @@ CheckOffset(struct _libc_vscr,vscr_word,12,9,40858)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(vscr_t,4, 11035, 9)
+CheckTypeSize(vscr_t,16, 11035, 9)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(vrregset_t,4, 11036, 9)
+CheckTypeSize(vrregset_t,544, 11036, 9)
 #endif
 
 #if __i386__
@@ -300,7 +300,7 @@ CheckTypeSize(fpregset_t,272, 10907, 6)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(fpregset_t,4, 11031, 9)
+CheckTypeSize(fpregset_t,264, 11031, 9)
 #endif
 
 #if __i386__
@@ -310,9 +310,6 @@ CheckTypeSize(fpregset_t,4, 11031, 9)
 #elif __s390__ && !__s390x__
 #elif __x86_64__
 #elif __powerpc64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10229,0);
-Msg("Find size of anon-mcontext (10229)\n");
 #endif
 
 #if __i386__
