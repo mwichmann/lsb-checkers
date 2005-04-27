@@ -1257,13 +1257,13 @@ struct versym libc_so_6[] = {
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_sys_siglist","GLIBC_2.1",0,LSB_Core,0,1},
+	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},
 #endif
 #if __x86_64__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},
 #endif
 #if __s390x__
-	{"_sys_siglist","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},
 #endif
 #if __i386__
 	{"_tolower","GLIBC_2.0",0,LSB_Core,4,1},
@@ -8598,46 +8598,46 @@ struct versym libc_so_6[] = {
 #endif
 	{"newlocale","GLIBC_2.3",0,LSB_Core,0,1},
 #if __i386__
-	{"nftw","GLIBC_2.1",0,LSB_Core,4,1},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"nftw","GLIBC_2.2",0,LSB_Core,4,1},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"nftw","GLIBC_2.1",0,LSB_Core,4,1},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"nftw","GLIBC_2.1",0,LSB_Core,4,1},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
-	{"nftw","GLIBC_2.2.5",0,LSB_Core,4,1},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390x__
-	{"nftw","GLIBC_2.2",0,LSB_Core,4,1},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __i386__
-	{"nftw64","GLIBC_2.1",0,LSB_Core,4,1},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"nftw64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"nftw64","GLIBC_2.1",0,LSB_Core,4,1},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"nftw64","GLIBC_2.1",0,LSB_Core,4,1},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
-	{"nftw64","GLIBC_2.2.5",0,LSB_Core,4,1},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390x__
-	{"nftw64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __i386__
 	{"ngettext","GLIBC_2.2",0,LSB_Core,4,1},
@@ -9837,25 +9837,25 @@ struct versym libc_so_6[] = {
 	{"regerror","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if __i386__
-	{"regexec","GLIBC_2.0",0,LSB_Core,4,1},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"regexec","GLIBC_2.2",0,LSB_Core,4,1},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"regexec","GLIBC_2.0",0,LSB_Core,4,1},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"regexec","GLIBC_2.0",0,LSB_Core,4,1},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
-	{"regexec","GLIBC_2.2.5",0,LSB_Core,4,1},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __s390x__
-	{"regexec","GLIBC_2.2",0,LSB_Core,4,1},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __i386__
 	{"regfree","GLIBC_2.0",0,LSB_Core,1,1},
