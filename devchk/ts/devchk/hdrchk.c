@@ -94,6 +94,7 @@ tcnt+=X11_Xauth_h();
 tcnt+=X11_Xcms_h();
 tcnt+=X11_Xlib_h();
 tcnt+=X11_Xutil_h();
+tcnt+=X11_extensions_XEVI_h();
 tcnt+=X11_extensions_security_h();
 tcnt+=X11_extensions_sync_h();
 tcnt+=complex_h();

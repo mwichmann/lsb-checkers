@@ -14,6 +14,7 @@ extern void X11_Xauth_h();
 extern void X11_Xcms_h();
 extern void X11_Xlib_h();
 extern void X11_Xutil_h();
+extern void X11_extensions_XEVI_h();
 extern void X11_extensions_security_h();
 extern void X11_extensions_sync_h();
 extern void complex_h();
