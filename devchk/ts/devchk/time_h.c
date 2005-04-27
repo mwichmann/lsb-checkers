@@ -255,23 +255,44 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");
 #endif
 
-#if __no_sym__
+#if __i386__
+#elif __ia64__
+#elif __powerpc64__
+#elif __powerpc__ && !__powerpc64__
+#elif __s390__ && !__s390x__
+#elif __x86_64__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11061,0);
 Msg("Find size of timer_t * (11061)\n");
 #endif
 
-#if __no_sym__
+#if __i386__
+#elif __ia64__
+#elif __powerpc64__
+#elif __powerpc__ && !__powerpc64__
+#elif __s390__ && !__s390x__
+#elif __x86_64__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11062,0);
 Msg("Find size of itimerspec * (11062)\n");
 #endif
 
-#if __no_sym__
-CheckTypeSize(const itimerspec,, 11063, )
+#if 1
+CheckTypeSize(const struct itimerspec,16, 11063, 1)
 #endif
 
-#if __no_sym__
+#if __i386__
+#elif __ia64__
+#elif __powerpc64__
+#elif __powerpc__ && !__powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif __x86_64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11064,0);
+Msg("Find size of const struct itimerspec * (11064)\n");
 #endif
 
 #ifdef TET_TEST
