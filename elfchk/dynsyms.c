@@ -15361,13 +15361,13 @@ struct versym DynSyms[] = {
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"_sys_siglist","GLIBC_2.1",0,LSB_Core},
+	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __x86_64__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390x__
-	{"_sys_siglist","GLIBC_2.2",0,LSB_Core},
+	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __i386__
 	{"_tolower","GLIBC_2.0",0,LSB_Core},
@@ -28512,46 +28512,46 @@ struct versym DynSyms[] = {
 	{"nexttowardl","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
-	{"nftw","GLIBC_2.1",0,LSB_Core},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __ia64__
-	{"nftw","GLIBC_2.2",0,LSB_Core},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"nftw","GLIBC_2.1",0,LSB_Core},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"nftw","GLIBC_2.1",0,LSB_Core},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __x86_64__
-	{"nftw","GLIBC_2.2.5",0,LSB_Core},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390x__
-	{"nftw","GLIBC_2.2",0,LSB_Core},
+	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __i386__
-	{"nftw64","GLIBC_2.1",0,LSB_Core},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __ia64__
-	{"nftw64","GLIBC_2.2",0,LSB_Core},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"nftw64","GLIBC_2.1",0,LSB_Core},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"nftw64","GLIBC_2.1",0,LSB_Core},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __x86_64__
-	{"nftw64","GLIBC_2.2.5",0,LSB_Core},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390x__
-	{"nftw64","GLIBC_2.2",0,LSB_Core},
+	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __i386__
 	{"ngettext","GLIBC_2.2",0,LSB_Core},
@@ -31580,25 +31580,25 @@ struct versym DynSyms[] = {
 	{"regerror","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
-	{"regexec","GLIBC_2.0",0,LSB_Core},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __ia64__
-	{"regexec","GLIBC_2.2",0,LSB_Core},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"regexec","GLIBC_2.0",0,LSB_Core},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"regexec","GLIBC_2.0",0,LSB_Core},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __x86_64__
-	{"regexec","GLIBC_2.2.5",0,LSB_Core},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __s390x__
-	{"regexec","GLIBC_2.2",0,LSB_Core},
+	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __i386__
 	{"regfree","GLIBC_2.0",0,LSB_Core},
