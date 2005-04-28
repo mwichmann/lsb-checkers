@@ -58,6 +58,27 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZN9__gnu_cxx12__atomic_addEPVii","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZN9__gnu_cxx17__pool_alloc_base12_M_get_mutexEv","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
 #if __i386__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEj","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEj","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEj","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
+#endif
+#if __ia64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
+#endif
+#if __powerpc64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
+#endif
+#if __x86_64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
+#endif
+#if __s390x__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
+#endif
+#if __i386__
 	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEj","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
