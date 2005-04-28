@@ -279,8 +279,23 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11062,0);
 Msg("Find size of itimerspec * (11062)\n");
 #endif
 
-#if 1
-CheckTypeSize(const struct itimerspec,32, 11063, 1)
+#if __i386__
+CheckTypeSize(const struct itimerspec,16, 11063, 2)
+#elif __ia64__
+CheckTypeSize(const struct itimerspec,32, 11063, 3)
+#elif __powerpc64__
+CheckTypeSize(const struct itimerspec,32, 11063, 9)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const struct itimerspec,16, 11063, 6)
+#elif __x86_64__
+CheckTypeSize(const struct itimerspec,32, 11063, 11)
+#elif __s390x__
+CheckTypeSize(const struct itimerspec,32, 11063, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const struct itimerspec,16, 11063, 10)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11063,0);
+Msg("Find size of const struct itimerspec (11063)\n");
 #endif
 
 #if __i386__
