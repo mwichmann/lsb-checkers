@@ -148,7 +148,7 @@ CheckOffset(struct __jmp_buf_tag,__mask_was_saved,0,8,34040)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,0,8,34041)
 #elif __s390x__
 CheckTypeSize(struct __jmp_buf_tag,280, 6961, 12)
-CheckMemberSize(struct __jmp_buf_tag,__jmpbuf,152,12,34039)
+CheckMemberSize(struct __jmp_buf_tag,__jmpbuf,144,12,34039)
 CheckOffset(struct __jmp_buf_tag,__jmpbuf,0,12,34039)
 CheckMemberSize(struct __jmp_buf_tag,__mask_was_saved,4,12,34040)
 CheckOffset(struct __jmp_buf_tag,__mask_was_saved,144,12,34040)

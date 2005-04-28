@@ -280,7 +280,7 @@ Msg("Find size of itimerspec * (11062)\n");
 #endif
 
 #if 1
-CheckTypeSize(const struct itimerspec,16, 11063, 1)
+CheckTypeSize(const struct itimerspec,32, 11063, 1)
 #endif
 
 #if __i386__
