@@ -1734,7 +1734,52 @@ struct versym DynSyms[] = {
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZN10__cxxabiv129__pointer_to_member_type_infoD2Ev","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZN9__gnu_cxx12__atomic_addEPVii","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZN9__gnu_cxx17__pool_alloc_base12_M_get_mutexEv","GLIBCXX_3.4.2",0,LSB_Cpp},
+#if __i386__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEj","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEj","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEj","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __ia64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __powerpc64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __x86_64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __s390x__
+	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __i386__
+	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEj","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEj","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEj","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __ia64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEm","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __powerpc64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEm","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __x86_64__
+	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEm","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
+#if __s390x__
+	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEm","GLIBCXX_3.4.2",0,LSB_Cpp},
+#endif
 	{"_ZN9__gnu_cxx18__exchange_and_addEPVii","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEE4fileEv","GLIBCXX_3.4.2",0,LSB_Cpp},
+	{"_ZN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEE4fileEv","GLIBCXX_3.4.2",0,LSB_Cpp},
 	{"_ZN9__gnu_cxx27__verbose_terminate_handlerEv","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE","CXXABI_1.3",0,LSB_Cpp},
@@ -7110,9 +7155,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt11range_errorD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt11range_errorD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12__basic_fileIcE2fdEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if __powerpc64__
 	{"_ZNSt12__basic_fileIcE4fileEv","GLIBCXX_3.4.1",0,LSB_Cpp},
-#endif
 	{"_ZNSt12__basic_fileIcE4openEPKcSt13_Ios_Openmodei","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12__basic_fileIcE4syncEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12__basic_fileIcE5closeEv","GLIBCXX_3.4",0,LSB_Cpp},
