@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.8 $
+ * This is $Revision: 1.9 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.9  2005/04/28 21:38:18  mats
+ * bug 849: improve quality of cmdchk journal
+ *
  * Revision 1.8  2005/03/15 16:45:27  mats
  * Respin from DB; check only for execute permission (some cmds are not
  * readable for non-root); adjust testcase counter to start at 0 per convention
@@ -57,7 +60,7 @@ char *binpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.8 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.9 $";
 
 
 void check_cmd(char *cmdname, char *cmdpath, struct tetj_handle *journal)
@@ -97,7 +100,8 @@ void check_cmd(char *cmdname, char *cmdpath, struct tetj_handle *journal)
 	    ;
 	}
     }
-    tetj_activity_count++;
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    tetj_testcase_end(journal, tetj_activity_count++, cmdname, "");
 }
 
 /* Generated function by mkfunclist */
@@ -118,5 +122,6 @@ int main(int argc, char *argv[])
     tetj_add_config(journal, tmp_string);
 
     check_cmds(journal);
+    tetj_close_journal(journal);
     exit(0);
 }
