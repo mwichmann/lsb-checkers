@@ -7,6 +7,7 @@ extern void SmFreeProperty(void);
 extern void XActivateScreenSaver(void);
 extern void DPMSCapable(void);
 extern void XtAddActions(void);
+extern void XCloseDevice(void);
 extern void alarm(void);
 extern void crypt(void);
 extern void dlsym(void);
@@ -43,6 +44,9 @@ int main()
 
 	/* libXt */
 	XtAddActions();
+
+	/* libXi */
+	XCloseDevice();
 
 	/* libc */
 	alarm();
