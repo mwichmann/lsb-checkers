@@ -639,22 +639,22 @@ struct versym libc_so_6[] = {
 	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core,4,1},
+	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core,4,1},
+	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core,4,1},
+	{"__sigsetjmp","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"__sigsetjmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if __s390x__
-	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core,4,1},
+	{"__sigsetjmp","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if __i386__
 	{"__stpcpy","GLIBC_2.0",0,LSB_Core,4,1},
@@ -1167,7 +1167,7 @@ struct versym libc_so_6[] = {
 	{"_longjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_longjmp","GLIBC_2.0",0,LSB_Core,1,1},
+	{"_longjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
 #endif
 #if __powerpc64__
 	{"_longjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
@@ -1209,7 +1209,7 @@ struct versym libc_so_6[] = {
 	{"_setjmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_setjmp","GLIBC_2.0",0,LSB_Core,4,1},
+	{"_setjmp","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"_setjmp","GLIBC_2.3.4",0,LSB_Core,4,1},
@@ -1242,7 +1242,7 @@ struct versym libc_so_6[] = {
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core,0,0},
 #endif
 #if __s390x__
-	{"_sys_errlist","GLIBC_2.2",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.3",0,LSB_Core,0,0},
 #endif
 #if __i386__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},
@@ -4739,7 +4739,7 @@ struct versym libc_so_6[] = {
 	{"getcontext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"getcontext","GLIBC_2.3.3",0,LSB_Core,4,1},
+	{"getcontext","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"getcontext","GLIBC_2.3.4",0,LSB_Core,4,1},
@@ -4997,7 +4997,7 @@ struct versym libc_so_6[] = {
 	{"getgrnam_r","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"getgrnam_r","GLIBC_2.0",0,LSB_Core,4,1},
+	{"getgrnam_r","GLIBC_2.1.2",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"getgrnam_r","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -7679,7 +7679,7 @@ struct versym libc_so_6[] = {
 	{"longjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"longjmp","GLIBC_2.0",0,LSB_Core,1,1},
+	{"longjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
 #endif
 #if __powerpc64__
 	{"longjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
@@ -7784,7 +7784,7 @@ struct versym libc_so_6[] = {
 	{"makecontext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"makecontext","GLIBC_2.3.3",0,LSB_Core,4,1},
+	{"makecontext","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"makecontext","GLIBC_2.3",0,LSB_Core,4,1},
@@ -10473,7 +10473,7 @@ struct versym libc_so_6[] = {
 	{"setcontext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"setcontext","GLIBC_2.3.3",0,LSB_Core,4,1},
+	{"setcontext","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"setcontext","GLIBC_2.3.4",0,LSB_Core,4,1},
@@ -11418,7 +11418,7 @@ struct versym libc_so_6[] = {
 	{"siglongjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"siglongjmp","GLIBC_2.0",0,LSB_Core,1,1},
+	{"siglongjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
 #endif
 #if __powerpc64__
 	{"siglongjmp","GLIBC_2.3.4",0,LSB_Core,1,1},

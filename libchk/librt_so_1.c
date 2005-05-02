@@ -158,7 +158,7 @@ struct versym librt_so_1[] = {
 	{"timer_create","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"timer_create","GLIBC_2.3",0,LSB_Core,4,1},
+	{"timer_create","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_create","GLIBC_2.2",0,LSB_Core,4,1},
@@ -167,7 +167,7 @@ struct versym librt_so_1[] = {
 	{"timer_create","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390x__
-	{"timer_create","GLIBC_2.2",0,LSB_Core,4,1},
+	{"timer_create","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __i386__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core,4,1},
@@ -179,7 +179,7 @@ struct versym librt_so_1[] = {
 	{"timer_delete","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"timer_delete","GLIBC_2.3",0,LSB_Core,4,1},
+	{"timer_delete","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core,4,1},
@@ -188,7 +188,7 @@ struct versym librt_so_1[] = {
 	{"timer_delete","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390x__
-	{"timer_delete","GLIBC_2.2",0,LSB_Core,4,1},
+	{"timer_delete","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __i386__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core,4,1},
@@ -200,7 +200,7 @@ struct versym librt_so_1[] = {
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"timer_getoverrun","GLIBC_2.3",0,LSB_Core,4,1},
+	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core,4,1},
@@ -221,7 +221,7 @@ struct versym librt_so_1[] = {
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"timer_gettime","GLIBC_2.3",0,LSB_Core,4,1},
+	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core,4,1},
@@ -242,7 +242,7 @@ struct versym librt_so_1[] = {
 	{"timer_settime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"timer_settime","GLIBC_2.3",0,LSB_Core,4,1},
+	{"timer_settime","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_settime","GLIBC_2.2",0,LSB_Core,4,1},

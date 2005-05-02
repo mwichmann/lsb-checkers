@@ -12207,6 +12207,8 @@ struct versym DynSyms[] = {
 	{"_ZTIN10__cxxabiv129__pointer_to_member_type_infoE","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZTIN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTIN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZTIN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZTIN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTINSt6locale5facetE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTINSt8ios_base7failureE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTIPKa","CXXABI_1.3",0,LSB_Cpp},
@@ -12370,6 +12372,8 @@ struct versym DynSyms[] = {
 	{"_ZTSN10__cxxabiv129__pointer_to_member_type_infoE","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZTSN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTSN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZTSN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZTSN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTSNSt6locale5facetE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTSNSt8ios_base7failureE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTSPKa","CXXABI_1.3",0,LSB_Cpp},
@@ -12549,6 +12553,8 @@ struct versym DynSyms[] = {
 	{"_ZTVN10__cxxabiv121__vmi_class_type_infoE","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZTVN10__cxxabiv123__fundamental_type_infoE","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZTVN10__cxxabiv129__pointer_to_member_type_infoE","CXXABI_1.3",0,LSB_Cpp},
+	{"_ZTVN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,LSB_Cpp},
+	{"_ZTVN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTVNSt6locale5facetE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTVNSt8ios_base7failureE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTVSd","GLIBCXX_3.4",0,LSB_Cpp},
@@ -14449,22 +14455,22 @@ struct versym DynSyms[] = {
 	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if __ia64__
-	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core},
+	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core},
+	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core},
+	{"__sigsetjmp","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __x86_64__
 	{"__sigsetjmp","GLIBC_2.2.5",0,LSB_Core},
 #endif
 #if __s390x__
-	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core},
+	{"__sigsetjmp","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __i386__
 	{"__stpcpy","GLIBC_2.0",0,LSB_Core},
@@ -14977,7 +14983,7 @@ struct versym DynSyms[] = {
 	{"_longjmp","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_longjmp","GLIBC_2.0",0,LSB_Core},
+	{"_longjmp","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"_longjmp","GLIBC_2.3.4",0,LSB_Core},
@@ -15061,7 +15067,7 @@ struct versym DynSyms[] = {
 	{"_setjmp","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_setjmp","GLIBC_2.0",0,LSB_Core},
+	{"_setjmp","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"_setjmp","GLIBC_2.3.4",0,LSB_Core},
@@ -15094,7 +15100,7 @@ struct versym DynSyms[] = {
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __s390x__
-	{"_sys_errlist","GLIBC_2.2",0,LSB_Core},
+	{"_sys_errlist","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __i386__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core},
@@ -22349,7 +22355,7 @@ struct versym DynSyms[] = {
 	{"getcontext","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"getcontext","GLIBC_2.3.3",0,LSB_Core},
+	{"getcontext","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"getcontext","GLIBC_2.3.4",0,LSB_Core},
@@ -22607,7 +22613,7 @@ struct versym DynSyms[] = {
 	{"getgrnam_r","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"getgrnam_r","GLIBC_2.0",0,LSB_Core},
+	{"getgrnam_r","GLIBC_2.1.2",0,LSB_Core},
 #endif
 #if __x86_64__
 	{"getgrnam_r","GLIBC_2.2.5",0,LSB_Core},
@@ -26825,7 +26831,7 @@ struct versym DynSyms[] = {
 	{"longjmp","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"longjmp","GLIBC_2.0",0,LSB_Core},
+	{"longjmp","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"longjmp","GLIBC_2.3.4",0,LSB_Core},
@@ -27057,7 +27063,7 @@ struct versym DynSyms[] = {
 	{"makecontext","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"makecontext","GLIBC_2.3.3",0,LSB_Core},
+	{"makecontext","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"makecontext","GLIBC_2.3",0,LSB_Core},
@@ -32633,7 +32639,7 @@ struct versym DynSyms[] = {
 	{"setcontext","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"setcontext","GLIBC_2.3.3",0,LSB_Core},
+	{"setcontext","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"setcontext","GLIBC_2.3.4",0,LSB_Core},
@@ -33645,7 +33651,7 @@ struct versym DynSyms[] = {
 	{"siglongjmp","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"siglongjmp","GLIBC_2.0",0,LSB_Core},
+	{"siglongjmp","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"siglongjmp","GLIBC_2.3.4",0,LSB_Core},
@@ -36514,7 +36520,7 @@ struct versym DynSyms[] = {
 	{"timer_create","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc64__
-	{"timer_create","GLIBC_2.3",0,LSB_Core},
+	{"timer_create","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_create","GLIBC_2.2",0,LSB_Core},
@@ -36523,7 +36529,7 @@ struct versym DynSyms[] = {
 	{"timer_create","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390x__
-	{"timer_create","GLIBC_2.2",0,LSB_Core},
+	{"timer_create","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __i386__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core},
@@ -36535,7 +36541,7 @@ struct versym DynSyms[] = {
 	{"timer_delete","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc64__
-	{"timer_delete","GLIBC_2.3",0,LSB_Core},
+	{"timer_delete","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core},
@@ -36544,7 +36550,7 @@ struct versym DynSyms[] = {
 	{"timer_delete","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390x__
-	{"timer_delete","GLIBC_2.2",0,LSB_Core},
+	{"timer_delete","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __i386__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
@@ -36556,7 +36562,7 @@ struct versym DynSyms[] = {
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc64__
-	{"timer_getoverrun","GLIBC_2.3",0,LSB_Core},
+	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
@@ -36577,7 +36583,7 @@ struct versym DynSyms[] = {
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc64__
-	{"timer_gettime","GLIBC_2.3",0,LSB_Core},
+	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
@@ -36598,7 +36604,7 @@ struct versym DynSyms[] = {
 	{"timer_settime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc64__
-	{"timer_settime","GLIBC_2.3",0,LSB_Core},
+	{"timer_settime","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
 	{"timer_settime","GLIBC_2.2",0,LSB_Core},
