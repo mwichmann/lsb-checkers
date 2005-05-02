@@ -311,6 +311,8 @@ extern struct versym libX11_so_6[];
 extern struct classinfo libX11_so_6_classinfo[];
 extern struct versym libXext_so_6[];
 extern struct classinfo libXext_so_6_classinfo[];
+extern struct versym libXi_so_6[];
+extern struct classinfo libXi_so_6_classinfo[];
 extern struct versym libXt_so_6[];
 extern struct classinfo libXt_so_6_classinfo[];
 #if __s390x__

@@ -25,5 +25,6 @@ LIBOBJS = \
 	libutil_so_1.o \
 	libX11_so_6.o \
 	libXext_so_6.o \
+	libXi_so_6.o \
 	libXt_so_6.o \
 	libz_so_1.o \
