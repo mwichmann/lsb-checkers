@@ -235,6 +235,7 @@ struct modlib modlibs [] = {
 #endif
 	{LSB_Graphics,"libX11.so.6",libX11_so_6,libX11_so_6_classinfo},
 	{LSB_Graphics,"libXext.so.6",libXext_so_6,libXext_so_6_classinfo},
+	{LSB_Graphics,"libXi.so.6",libXi_so_6,libXi_so_6_classinfo},
 	{LSB_Graphics,"libXt.so.6",libXt_so_6,libXt_so_6_classinfo},
 #if __s390x__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo},
