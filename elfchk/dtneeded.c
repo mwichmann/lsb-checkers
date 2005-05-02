@@ -21,6 +21,7 @@ char *DtNeeded[] = {
 #if __x86_64__
 	"/lib64/ld-lsb-x86-64.so.3",
 #endif /* __x86_64__ */
+	"ibXi.so.6",
 #if __i386__
 	"libc.so.6",
 #endif /* __i386__ */
