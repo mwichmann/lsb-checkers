@@ -118,7 +118,7 @@ struct versym DynSyms[] = {
 	{"XAllocSizeHints","",0,LSB_Graphics},
 	{"XAllocStandardColormap","",0,LSB_Graphics},
 	{"XAllocWMHints","",0,LSB_Graphics},
-	{"XAllowDeviceEvents","",0,},
+	{"XAllowDeviceEvents","",0,LSB_Graphics},
 	{"XAllowEvents","",0,LSB_Graphics},
 	{"XAutoRepeatOff","",0,LSB_Graphics},
 	{"XAutoRepeatOn","",0,LSB_Graphics},
@@ -131,16 +131,16 @@ struct versym DynSyms[] = {
 	{"XBlackPixelOfScreen","",0,LSB_Graphics},
 	{"XCellsOfScreen","",0,LSB_Graphics},
 	{"XChangeActivePointerGrab","",0,LSB_Graphics},
-	{"XChangeDeviceControl","",0,},
-	{"XChangeDeviceDontPropagateList","",0,},
-	{"XChangeDeviceKeyMapping","",0,},
-	{"XChangeFeedbackControl","",0,},
+	{"XChangeDeviceControl","",0,LSB_Graphics},
+	{"XChangeDeviceDontPropagateList","",0,LSB_Graphics},
+	{"XChangeDeviceKeyMapping","",0,LSB_Graphics},
+	{"XChangeFeedbackControl","",0,LSB_Graphics},
 	{"XChangeGC","",0,LSB_Graphics},
 	{"XChangeKeyboardControl","",0,LSB_Graphics},
-	{"XChangeKeyboardDevice","",0,},
+	{"XChangeKeyboardDevice","",0,LSB_Graphics},
 	{"XChangeKeyboardMapping","",0,LSB_Graphics},
 	{"XChangePointerControl","",0,LSB_Graphics},
-	{"XChangePointerDevice","",0,},
+	{"XChangePointerDevice","",0,LSB_Graphics},
 	{"XChangeProperty","",0,LSB_Graphics},
 	{"XChangeSaveSet","",0,LSB_Graphics},
 	{"XChangeWindowAttributes","",0,LSB_Graphics},
@@ -155,7 +155,7 @@ struct versym DynSyms[] = {
 	{"XClearArea","",0,LSB_Graphics},
 	{"XClearWindow","",0,LSB_Graphics},
 	{"XClipBox","",0,LSB_Graphics},
-	{"XCloseDevice","",0,},
+	{"XCloseDevice","",0,LSB_Graphics},
 	{"XCloseDisplay","",0,LSB_Graphics},
 	{"XCloseIM","",0,LSB_Graphics},
 	{"XCloseOM","",0,LSB_Graphics},
@@ -206,7 +206,7 @@ struct versym DynSyms[] = {
 	{"XDestroyRegion","",0,LSB_Graphics},
 	{"XDestroySubwindows","",0,LSB_Graphics},
 	{"XDestroyWindow","",0,LSB_Graphics},
-	{"XDeviceBell","",0,},
+	{"XDeviceBell","",0,LSB_Graphics},
 	{"XDirectionalDependentDrawing","",0,LSB_Graphics},
 	{"XDisableAccessControl","",0,LSB_Graphics},
 	{"XDisplayCells","",0,LSB_Graphics},
@@ -280,12 +280,12 @@ struct versym DynSyms[] = {
 	{"XFreeColormap","",0,LSB_Graphics},
 	{"XFreeColors","",0,LSB_Graphics},
 	{"XFreeCursor","",0,LSB_Graphics},
-	{"XFreeDeviceControl","",0,},
-	{"XFreeDeviceList","",0,},
-	{"XFreeDeviceMotionEvents","",0,},
-	{"XFreeDeviceState","",0,},
+	{"XFreeDeviceControl","",0,LSB_Graphics},
+	{"XFreeDeviceList","",0,LSB_Graphics},
+	{"XFreeDeviceMotionEvents","",0,LSB_Graphics},
+	{"XFreeDeviceState","",0,LSB_Graphics},
 	{"XFreeExtensionList","",0,LSB_Graphics},
-	{"XFreeFeedbackList","",0,},
+	{"XFreeFeedbackList","",0,LSB_Graphics},
 	{"XFreeFont","",0,LSB_Graphics},
 	{"XFreeFontInfo","",0,LSB_Graphics},
 	{"XFreeFontNames","",0,LSB_Graphics},
@@ -302,17 +302,17 @@ struct versym DynSyms[] = {
 	{"XGetClassHint","",0,LSB_Graphics},
 	{"XGetCommand","",0,LSB_Graphics},
 	{"XGetDefault","",0,LSB_Graphics},
-	{"XGetDeviceButtonMapping","",0,},
-	{"XGetDeviceControl","",0,},
-	{"XGetDeviceDontPropagateList","",0,},
-	{"XGetDeviceFocus","",0,},
-	{"XGetDeviceKeyMapping","",0,},
-	{"XGetDeviceModifierMapping","",0,},
-	{"XGetDeviceMotionEvents","",0,},
+	{"XGetDeviceButtonMapping","",0,LSB_Graphics},
+	{"XGetDeviceControl","",0,LSB_Graphics},
+	{"XGetDeviceDontPropagateList","",0,LSB_Graphics},
+	{"XGetDeviceFocus","",0,LSB_Graphics},
+	{"XGetDeviceKeyMapping","",0,LSB_Graphics},
+	{"XGetDeviceModifierMapping","",0,LSB_Graphics},
+	{"XGetDeviceMotionEvents","",0,LSB_Graphics},
 	{"XGetErrorDatabaseText","",0,LSB_Graphics},
 	{"XGetErrorText","",0,LSB_Graphics},
-	{"XGetExtensionVersion","",0,},
-	{"XGetFeedbackControl","",0,},
+	{"XGetExtensionVersion","",0,LSB_Graphics},
+	{"XGetFeedbackControl","",0,LSB_Graphics},
 	{"XGetFontPath","",0,LSB_Graphics},
 	{"XGetFontProperty","",0,LSB_Graphics},
 	{"XGetGCValues","",0,LSB_Graphics},
@@ -335,7 +335,7 @@ struct versym DynSyms[] = {
 	{"XGetPointerMapping","",0,LSB_Graphics},
 	{"XGetRGBColormaps","",0,LSB_Graphics},
 	{"XGetScreenSaver","",0,LSB_Graphics},
-	{"XGetSelectedExtensionEvents","",0,},
+	{"XGetSelectedExtensionEvents","",0,LSB_Graphics},
 	{"XGetSelectionOwner","",0,LSB_Graphics},
 	{"XGetSizeHints","",0,LSB_Graphics},
 	{"XGetStandardColormap","",0,LSB_Graphics},
@@ -355,9 +355,9 @@ struct versym DynSyms[] = {
 	{"XGetWindowProperty","",0,LSB_Graphics},
 	{"XGetZoomHints","",0,LSB_Graphics},
 	{"XGrabButton","",0,LSB_Graphics},
-	{"XGrabDevice","",0,},
-	{"XGrabDeviceButton","",0,},
-	{"XGrabDeviceKey","",0,},
+	{"XGrabDevice","",0,LSB_Graphics},
+	{"XGrabDeviceButton","",0,LSB_Graphics},
+	{"XGrabDeviceKey","",0,LSB_Graphics},
 	{"XGrabKey","",0,LSB_Graphics},
 	{"XGrabKeyboard","",0,LSB_Graphics},
 	{"XGrabPointer","",0,LSB_Graphics},
@@ -371,7 +371,7 @@ struct versym DynSyms[] = {
 	{"XInitExtension","",0,LSB_Graphics},
 	{"XInitImage","",0,LSB_Graphics},
 	{"XInitThreads","",0,LSB_Graphics},
-	{"XInput_find_display","",0,},
+	{"XInput_find_display","",0,LSB_Graphics},
 	{"XInsertModifiermapEntry","",0,LSB_Graphics},
 	{"XInstallColormap","",0,LSB_Graphics},
 	{"XInternAtom","",0,LSB_Graphics},
@@ -388,7 +388,7 @@ struct versym DynSyms[] = {
 	{"XListFonts","",0,LSB_Graphics},
 	{"XListFontsWithInfo","",0,LSB_Graphics},
 	{"XListHosts","",0,LSB_Graphics},
-	{"XListInputDevices","",0,},
+	{"XListInputDevices","",0,LSB_Graphics},
 	{"XListInstalledColormaps","",0,LSB_Graphics},
 	{"XListPixmapFormats","",0,LSB_Graphics},
 	{"XListProperties","",0,LSB_Graphics},
@@ -418,7 +418,7 @@ struct versym DynSyms[] = {
 	{"XNoOp","",0,LSB_Graphics},
 	{"XOMOfOC","",0,LSB_Graphics},
 	{"XOffsetRegion","",0,LSB_Graphics},
-	{"XOpenDevice","",0,},
+	{"XOpenDevice","",0,LSB_Graphics},
 	{"XOpenDisplay","",0,LSB_Graphics},
 	{"XOpenIM","",0,LSB_Graphics},
 	{"XOpenOM","",0,LSB_Graphics},
@@ -443,7 +443,7 @@ struct versym DynSyms[] = {
 	{"XQueryBestTile","",0,LSB_Graphics},
 	{"XQueryColor","",0,LSB_Graphics},
 	{"XQueryColors","",0,LSB_Graphics},
-	{"XQueryDeviceState","",0,},
+	{"XQueryDeviceState","",0,LSB_Graphics},
 	{"XQueryExtension","",0,LSB_Graphics},
 	{"XQueryFont","",0,LSB_Graphics},
 	{"XQueryKeymap","",0,LSB_Graphics},
@@ -483,10 +483,10 @@ struct versym DynSyms[] = {
 	{"XSecurityGenerateAuthorization","",0,LSB_Graphics},
 	{"XSecurityQueryExtension","",0,LSB_Graphics},
 	{"XSecurityRevokeAuthorization","",0,LSB_Graphics},
-	{"XSelectExtensionEvent","",0,},
+	{"XSelectExtensionEvent","",0,LSB_Graphics},
 	{"XSelectInput","",0,LSB_Graphics},
 	{"XSendEvent","",0,LSB_Graphics},
-	{"XSendExtensionEvent","",0,},
+	{"XSendExtensionEvent","",0,LSB_Graphics},
 	{"XServerVendor","",0,LSB_Graphics},
 	{"XSetAccessControl","",0,LSB_Graphics},
 	{"XSetAfterFunction","",0,LSB_Graphics},
@@ -500,11 +500,11 @@ struct versym DynSyms[] = {
 	{"XSetCloseDownMode","",0,LSB_Graphics},
 	{"XSetCommand","",0,LSB_Graphics},
 	{"XSetDashes","",0,LSB_Graphics},
-	{"XSetDeviceButtonMapping","",0,},
-	{"XSetDeviceFocus","",0,},
-	{"XSetDeviceMode","",0,},
-	{"XSetDeviceModifierMapping","",0,},
-	{"XSetDeviceValuators","",0,},
+	{"XSetDeviceButtonMapping","",0,LSB_Graphics},
+	{"XSetDeviceFocus","",0,LSB_Graphics},
+	{"XSetDeviceMode","",0,LSB_Graphics},
+	{"XSetDeviceModifierMapping","",0,LSB_Graphics},
+	{"XSetDeviceValuators","",0,LSB_Graphics},
 	{"XSetErrorHandler","",0,LSB_Graphics},
 	{"XSetFillRule","",0,LSB_Graphics},
 	{"XSetFillStyle","",0,LSB_Graphics},
@@ -633,9 +633,9 @@ struct versym DynSyms[] = {
 	{"XTranslateCoordinates","",0,LSB_Graphics},
 	{"XUndefineCursor","",0,LSB_Graphics},
 	{"XUngrabButton","",0,LSB_Graphics},
-	{"XUngrabDevice","",0,},
-	{"XUngrabDeviceButton","",0,},
-	{"XUngrabDeviceKey","",0,},
+	{"XUngrabDevice","",0,LSB_Graphics},
+	{"XUngrabDeviceButton","",0,LSB_Graphics},
+	{"XUngrabDeviceKey","",0,LSB_Graphics},
 	{"XUngrabKey","",0,LSB_Graphics},
 	{"XUngrabKeyboard","",0,LSB_Graphics},
 	{"XUngrabPointer","",0,LSB_Graphics},
@@ -14496,7 +14496,7 @@ struct versym DynSyms[] = {
 	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if __ia64__
-	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core},
+	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core},
@@ -14505,13 +14505,13 @@ struct versym DynSyms[] = {
 	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"__sigsetjmp","GLIBC_2.3",0,LSB_Core},
+	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if __x86_64__
 	{"__sigsetjmp","GLIBC_2.2.5",0,LSB_Core},
 #endif
 #if __s390x__
-	{"__sigsetjmp","GLIBC_2.3",0,LSB_Core},
+	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if __i386__
 	{"__stpcpy","GLIBC_2.0",0,LSB_Core},
@@ -15135,7 +15135,7 @@ struct versym DynSyms[] = {
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"_sys_errlist","GLIBC_2.1",0,LSB_Core},
+	{"_sys_errlist","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __x86_64__
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core},
@@ -35874,7 +35874,7 @@ struct versym DynSyms[] = {
 	{"swapcontext","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"swapcontext","GLIBC_2.3.3",0,LSB_Core},
+	{"swapcontext","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"swapcontext","GLIBC_2.3.4",0,LSB_Core},
@@ -36555,7 +36555,7 @@ struct versym DynSyms[] = {
 	{"timer_create","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __ia64__
-	{"timer_create","GLIBC_2.2",0,LSB_Core},
+	{"timer_create","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"timer_create","GLIBC_2.2",0,LSB_Core},
@@ -36576,7 +36576,7 @@ struct versym DynSyms[] = {
 	{"timer_delete","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __ia64__
-	{"timer_delete","GLIBC_2.2",0,LSB_Core},
+	{"timer_delete","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core},
@@ -36597,7 +36597,7 @@ struct versym DynSyms[] = {
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __ia64__
-	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
+	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
@@ -36618,7 +36618,7 @@ struct versym DynSyms[] = {
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __ia64__
-	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
+	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
@@ -36639,7 +36639,7 @@ struct versym DynSyms[] = {
 	{"timer_settime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __ia64__
-	{"timer_settime","GLIBC_2.2",0,LSB_Core},
+	{"timer_settime","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"timer_settime","GLIBC_2.2",0,LSB_Core},
@@ -36654,7 +36654,7 @@ struct versym DynSyms[] = {
 	{"timer_settime","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __s390x__
-	{"timer_settime","GLIBC_2.2",0,LSB_Core},
+	{"timer_settime","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if __i386__
 	{"times","GLIBC_2.0",0,LSB_Core},
