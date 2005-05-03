@@ -639,7 +639,7 @@ struct versym libc_so_6[] = {
 	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core,4,1},
+	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core,4,1},
@@ -648,13 +648,13 @@ struct versym libc_so_6[] = {
 	{"__sigsetjmp","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"__sigsetjmp","GLIBC_2.3",0,LSB_Core,4,1},
+	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"__sigsetjmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if __s390x__
-	{"__sigsetjmp","GLIBC_2.3",0,LSB_Core,4,1},
+	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __i386__
 	{"__stpcpy","GLIBC_2.0",0,LSB_Core,4,1},
