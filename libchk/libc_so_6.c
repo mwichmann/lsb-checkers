@@ -1236,7 +1236,7 @@ struct versym libc_so_6[] = {
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core,0,0},
 #endif
 #if __s390__ && !__s390x__
-	{"_sys_errlist","GLIBC_2.1",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.3",0,LSB_Core,0,0},
 #endif
 #if __x86_64__
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core,0,0},
@@ -13245,7 +13245,7 @@ struct versym libc_so_6[] = {
 	{"swapcontext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"swapcontext","GLIBC_2.3.3",0,LSB_Core,4,1},
+	{"swapcontext","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"swapcontext","GLIBC_2.3.4",0,LSB_Core,4,1},
