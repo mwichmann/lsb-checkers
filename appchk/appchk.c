@@ -31,12 +31,13 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) appchk_revision = "$Revision: 1.19 $";
+static const char * __attribute((unused)) appchk_revision = "$Revision: 1.20 $";
 
 int
 main(int argc, char *argv[])
 {
   signed char	c;
+  ElfFile *elffile;
   struct tetj_handle *journal;
   char *command_line = NULL;
   int i;
@@ -45,8 +46,8 @@ main(int argc, char *argv[])
   int extra_lib_count = 0;
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
-	char journal_filename[TMP_STRING_SIZE+1];
-	int overrideJournalFilename = 0;
+  char journal_filename[TMP_STRING_SIZE+1];
+  int overrideJournalFilename = 0;
 
   printf("%s for LSB Specification " LSBVERSION " \n", argv[0]);
   extra_libraries = strdup("EXTRA_LIBRARIES=");
@@ -129,20 +130,29 @@ main(int argc, char *argv[])
   /* Add symbols from extra libs to list */
   for (i=0; i<extra_lib_count; i++)
   {
-    add_library_symbols(extra_lib_list[i], journal);
+    elffile = OpenElfFile(extra_lib_list[i]);
+    check_file(elffile, journal, ELF_IS_DSO);
+    add_library_symbols(elffile, journal);
+    CloseElfFile(elffile);
   }
 
   /* Check all extra libs */
   for (i=0; i<extra_lib_count; i++)
   { 
-    check_lib(extra_lib_list[i], journal, ELF_IS_DSO);
+    elffile = OpenElfFile(extra_lib_list[i]);
+    check_lib(elffile, journal, ELF_IS_DSO);
+    CloseElfFile(elffile);
   }
 
   /* Check binary */
   for (i=optind; i<argc; i++)
   {
     printf("Checking binary %s\n", argv[i]);
-    check_file(argv[i], journal, ELF_IS_EXEC);
+
+    elffile = OpenElfFile(argv[i]);
+    check_file(elffile, journal, ELF_IS_EXEC);
+    checksymbols(elffile, journal);
+    CloseElfFile(elffile);
   }
 
   tetj_close_journal(journal);
