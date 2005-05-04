@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.9 $
+ * This is $Revision: 1.10 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.10  2005/05/04 00:08:29  mats
+ * A little more journal-file format cleanup to make tools happier
+ *
  * Revision 1.9  2005/04/28 21:38:18  mats
  * bug 849: improve quality of cmdchk journal
  *
@@ -60,7 +63,7 @@ char *binpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.9 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.10 $";
 
 
 void check_cmd(char *cmdname, char *cmdpath, struct tetj_handle *journal)
@@ -70,8 +73,8 @@ void check_cmd(char *cmdname, char *cmdpath, struct tetj_handle *journal)
     char tmp_string[TMP_STRING_SIZE + 1];
     int i;
 
-    tetj_testcase_start(journal, tetj_activity_count, cmdname, "");
     tetj_tp_count = 1;
+    tetj_testcase_start(journal, tetj_activity_count, cmdname, "");
     snprintf(tmp_string, TMP_STRING_SIZE, "Looking for command %s", cmdname);
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
@@ -101,7 +104,7 @@ void check_cmd(char *cmdname, char *cmdpath, struct tetj_handle *journal)
 	}
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-    tetj_testcase_end(journal, tetj_activity_count++, cmdname, "");
+    tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 }
 
 /* Generated function by mkfunclist */
