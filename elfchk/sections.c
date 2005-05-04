@@ -344,6 +344,9 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
     if( strcmp(ElfGetString(file1, hdr1->sh_name),
                SectionInfo[i].name ) == 0 ) 
     {
+    /*
+     * We recognize the section. Process it here.
+     */
 #ifdef VERBOSE
       fprintf( stderr, "Section[%2d] %-12.12s %s\n",
                index, SectionInfo[i].name,
@@ -393,6 +396,53 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
       return;
     }
   }
+  /*
+   * We didn't recognize the section by name. Let's try to process it based on
+   * the section type.
+   */
+  for(i=0;i<numSectionType;i++)
+  {
+    if( SectionType[i].type == hdr1->sh_type ) {
+    /*
+     * We recognize the section type. Process it here.
+     */
+#ifdef VERBOSE
+      fprintf( stderr, "Section[%2d] %-12.12s %s\n",
+               index, SectionType[i].name,
+               ElfGetString(file1, hdr1->sh_name) );
+#endif /* VERBOSE */
+      snprintf(tmp_string, TMP_STRING_SIZE,
+                   "Section %s: Not recognized by name. Checking as type %s",
+				   ElfGetString(file1, hdr1->sh_name),
+				   SectionType[i].name);
+      fprintf(stderr, "%s\n", tmp_string);
+      tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                             0, 0, 0, tmp_string);
+
+      switch (SectionType[i].func(file1, hdr1, journal)) {
+	      case 1: /* Pass */
+			break;
+	      case 0: /* Not checked */
+			if( elfchk_debug&DEBUG_SECTION_CONTENTS ) {
+				fprintf( stderr, "Section [%2d] %-12.12s Not checked\n",
+						i, ElfGetString(file1, hdr1->sh_name));
+			}
+			break;
+	      case -1: /* Fail */
+			fail = 1;
+			break;
+      }
+
+      tetj_result(journal, tetj_activity_count, tetj_tp_count,
+                  fail ? TETJ_FAIL : TETJ_PASS);
+      tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+      return;
+    }
+  }
+
+  /*
+   * We don't know how to deal with this section. 
+   */
   if( hdr1->sh_flags &SHF_ALLOC ) {
   	snprintf(tmp_string, TMP_STRING_SIZE, "section %s is not in the LSB",
            ElfGetString(file1, hdr1->sh_name));

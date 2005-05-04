@@ -45,7 +45,15 @@ struct SectionInfo {
 	SectionFcn	func;
 	};
 
+struct SectionType {
+	char		*name;
+	int		type;
+	SectionFcn	func;
+	};
+
 extern	struct SectionInfo SectionInfo[];
 extern	int numSectionInfo;
+extern	struct SectionType SectionType[];
+extern	int numSectionType;
 
 #endif /* _ELF_SECTIONS_H */
