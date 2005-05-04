@@ -25,13 +25,10 @@ add_symbol(char *symname)
 }
 
 int
-add_library_symbols(char *libname, struct tetj_handle *journal)
+add_library_symbols(ElfFile *file, struct tetj_handle *journal)
 {
-  ElfFile	*file;
   Elf_Sym	*syms;
   int	i,numsyms;
-
-  file = check_file(libname, journal, 0);
 
   if (file)
   {

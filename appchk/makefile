@@ -2,7 +2,7 @@ LSBAPPCHK_VERSION=unofficial
 CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBAPPCHK_VERSION=\"$(LSBAPPCHK_VERSION)\" -Wall
 
 OBJS=appchk.o libraries.o symbols.o check_file.o
-LIB=../elfchk/libelfchk.a ../tetj/libtetj.a
+LIB=../rpmchk/librpmchk.a ../elfchk/libelfchk.a ../tetj/libtetj.a
 
 all: appchk
 
