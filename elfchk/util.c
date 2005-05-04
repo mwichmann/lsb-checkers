@@ -69,9 +69,9 @@ if( (efile->addr=mmap(0, efile->size, PROT_READ, MAP_PRIVATE, efile->fd, 0)) == 
 	return NULL;
 	}
 
-
 return efile;
 }
+
 
 ElfFile	*OpenElfFile( char *name )
 {
@@ -90,6 +90,16 @@ if( memcmp(efile->addr, ELFMAG, SELFMAG) ) {
 	}
 return efile;
 }
+
+
+void CloseElfFile (ElfFile *efile)
+{
+    if (efile != NULL) {
+	close(efile->fd);
+	free(efile);
+    }
+}
+
 
 char *
 getmodulename(int mod)
