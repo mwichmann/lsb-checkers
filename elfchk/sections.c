@@ -402,7 +402,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
    */
   for(i=0;i<numSectionType;i++)
   {
-    if( SectionType[i].type == hdr1->sh_type ) {
+    if( SectionType[i].type == hdr1->sh_type && hdr1->sh_flags &SHF_ALLOC ) {
     /*
      * We recognize the section type. Process it here.
      */
