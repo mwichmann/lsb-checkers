@@ -35,7 +35,7 @@ $(FHS_LIB)::
 	cd fhs && make all
 
 liblsbdynchk.so: $(WRAPPER_LIBS) $(FHS_LIB) $(TEST_LIB) misc/global_flag.o misc/lsb_output.o makefile liblsbdynchk.Version
-	gcc -shared -Wl,--version-script -Wl,liblsbdynchk.Version -Wl,-soname -Wl,liblsbdynchk.so.1 -o liblsbdynchk.so.1 $(REAL_LIBS) $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/lsb_output.o misc/global_flag.o
+	$(CC) -shared -Wl,--version-script -Wl,liblsbdynchk.Version -Wl,-soname -Wl,liblsbdynchk.so.1 -o liblsbdynchk.so.1 $(REAL_LIBS) $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/lsb_output.o misc/global_flag.o
 
 lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \
@@ -65,10 +65,9 @@ distclean: clean
 
 clean:
 	for d in libs tests;do (cd $$d && make clean);done
-	rm -f *~ liblsbdynchk.so.1
+	rm -f *~ misc/global_flag.o misc/lsb_output.o liblsbdynchk.so.1
 
 .PHONY: all install
 
 misc/global_flag.o: misc/global_flag.c
 misc/lsb_output.o: misc/lsb_output.c
-misc/startmain.o: misc/startmain.c
