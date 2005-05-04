@@ -9,6 +9,7 @@ struct SectionInfo SectionInfo[] = {
 	{".bss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 	{".comment",SHT_PROGBITS,0,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#if 0
 	{".data",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data1",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".debug",SHT_PROGBITS,0,checkPROGBITS},
@@ -240,6 +241,7 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc64__
 	{".tocbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 #endif /* __powerpc64__ */
+#endif
 	};
 
 int numSectionInfo = sizeof(SectionInfo)/sizeof(struct SectionInfo);

@@ -1,0 +1,43 @@
+#!/usr/bin/perl
+
+use CGI;
+use Mysql;
+
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+
+$select = "SELECT DISTINCT * FROM SectionTypes ";
+$select.= "LEFT JOIN Architecture ON Aid=STarch ";
+$select.= "WHERE Aid != 0 ";
+$select.= "ORDER BY STname ";
+
+#print "$select\n";
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+print "/* Generated file - Do Not Edit */\n";
+print "#include \"elfchk.h\"\n";
+print "#include \"sections.h\"\n\n";
+
+print "struct SectionType SectionType[] = {\n";
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	if( $entry{'Aname'} ne "All" ) {
+		print "#if ".$entry{'Asymbol'}."\n";
+	}
+	printf "\t{\"%s\",",$entry{'STname'};
+	printf "%s,",$entry{'STname'};
+	@typename=split('_',$entry{'STname'},2);
+	if( @typename[1] ) {
+		printf "check%s},\n",@typename[1];
+	} else {
+		printf "checkDUMMY},\n";
+	}
+	if( $entry{'Aname'} ne "All" ) {
+		print "#endif /* ".$entry{'Asymbol'}." */\n";
+	}
+}
+print "\t};\n\n";
+print "int numSectionType = sizeof(SectionType)/sizeof(struct SectionType);\n";
+

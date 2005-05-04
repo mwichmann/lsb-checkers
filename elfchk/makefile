@@ -2,8 +2,8 @@ CFLAGS=-g -Wall -I../tetj
 
 OBJS=dynsyms.o dynamic.o dyntags.o dtneeded.o elfchk.o hdr.o proghdr.o \
 	sectinfo.o sections.o symvers.o util.o proginterp.o progbits.o \
-	note.o dumpbytes.o dwarf.o
-GENSRCS=dynsyms.c dtneeded.c sectinfo.c dyntags.c dynsyms.c.chk
+	note.o dumpbytes.o dwarf.o secttype.o
+GENSRCS=dynsyms.c dtneeded.c sectinfo.c secttype.c dyntags.c dynsyms.c.chk
 LIBS= ../tetj/libtetj.a
 LIB=libelfchk.a
 
@@ -34,6 +34,9 @@ dtneeded.c:
 
 sectinfo.c:
 	./mksectinfo >sectinfo.c
+
+secttype.c:
+	./mksecttype >secttype.c
 
 clean:
 	rm -f $(OBJS) $(LIB) test
