@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.62 $
+ * This is $Revision: 1.63 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.63  2005/05/04 17:12:15  mats
+ * Bug 861: log module information to journal
+ *
  * Revision 1.62  2005/05/04 00:11:50  mats
  * Adapt to corrected tetj_testcase_end routine
  *
@@ -231,7 +234,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.62 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.63 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -819,7 +822,13 @@ int main(int argc, char *argv[])
   check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.6",
 		  libstdcxx_so_6,libstdcxx_so_6_classinfo,journal);
 #else
-  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
+  snprintf(tmp_string, TMP_STRING_SIZE, 
+	   "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
+  tetj_add_config(journal, tmp_string);
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
+  tetj_add_config(journal, tmp_string);
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
+	   getmodulename(module));
   tetj_add_config(journal, tmp_string);
 
   check_libs(journal);
