@@ -14511,7 +14511,7 @@ struct versym DynSyms[] = {
 	{"__sigsetjmp","GLIBC_2.2.5",0,LSB_Core},
 #endif
 #if __s390x__
-	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core},
+	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
 	{"__stpcpy","GLIBC_2.0",0,LSB_Core},
