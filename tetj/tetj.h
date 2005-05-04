@@ -11,9 +11,13 @@
  *
  * 2002/03/19 Chris Yeoh, IBM
  *
- * This is $Revision: 1.2 $
+ * This is $Revision: 1.3 $
  * 
  * $Log: tetj.h,v $
+ * Revision 1.3  2005/05/04 00:07:03  mats
+ * Some formatting cleanup to make tet journal tools happier on this
+ * emulated journal stuff
+ *
  * Revision 1.2  2002/04/29 03:54:50  cyeoh
  * Adds function to add end marker for test purposes
  * Adds IC start markers
@@ -61,7 +65,7 @@ void tetj_testcase_start(struct tetj_handle *handle,
 
 /* test case end */
 void tetj_testcase_end(struct tetj_handle *handle, 
-                       unsigned int activity, char *testcase, char *message);
+                       unsigned int activity, unsigned int status, char *message);
 
 /* test purpose start */
 void tetj_purpose_start(struct tetj_handle *handle,

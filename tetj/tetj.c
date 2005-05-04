@@ -8,9 +8,13 @@
  *
  * 2002/03/19 Chris Yeoh, IBM
  *
- * This is $Revision: 1.3 $
+ * This is $Revision: 1.4 $
  * 
  * $Log: tetj.c,v $
+ * Revision 1.4  2005/05/04 00:07:03  mats
+ * Some formatting cleanup to make tet journal tools happier on this
+ * emulated journal stuff
+ *
  * Revision 1.3  2002/04/29 04:39:06  cyeoh
  * Adds support for 'IC Start' and 'IC End' markers in
  * the journal file
@@ -160,19 +164,20 @@ void tetj_testcase_start(struct tetj_handle *handle,
 {
   if (handle)
   {
-    fprintf(handle->journal, "10|%u %s %s|%s\n",
+    fprintf(handle->journal, "10|%u %s %s|TC Start %s\n",
             activity, testcase, get_current_time_string(), message);
+    fprintf(handle->journal, "15|%u tetj-1.0 1|TCM Start %s\n", activity, message);
   }
 }
 
 void tetj_testcase_end(struct tetj_handle *handle, 
-                       unsigned int activity, char *testcase, 
+                       unsigned int activity, unsigned int status,
                        char *message)
 {
   if (handle)
   {
-    fprintf(handle->journal, "80|%u %s %s|%s\n",
-            activity, testcase, get_current_time_string(), message);
+    fprintf(handle->journal, "80|%u %u %s|TC End %s\n",
+            activity, status, get_current_time_string(), message);
   }
 }
 
