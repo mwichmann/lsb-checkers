@@ -11,9 +11,13 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.6 $
+# This is $Revision: 1.7 $
 #
 # $Log: tetj.py,v $
+# Revision 1.7  2005/05/04 00:07:03  mats
+# Some formatting cleanup to make tet journal tools happier on this
+# emulated journal stuff
+#
 # Revision 1.6  2004/10/31 14:49:52  mats
 # Add convenience methods like result_pass() so user doesn't need to fiddle
 # with result code macros
@@ -117,10 +121,11 @@ class Journal:
 	    self.journal.append(", %s\n" % message)
 	else:
 	    self.journal.append("\n")
+	self.journal.append("15|%u tetj-py-1.0 1|TCM Start\n")
 
     def testcase_end(self, message=None):
-	self.journal.append("80|%u %s %s|TC End" %
-	    (self.activity, self.testcase, get_current_time_string()))
+	self.journal.append("80|%u 0 %s|TC End" %
+	    (self.activity, get_current_time_string()))
 	if message: 
 	    self.journal.append(", %s\n" % message)
 	else:
