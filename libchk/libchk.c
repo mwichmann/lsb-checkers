@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.61 $
+ * This is $Revision: 1.62 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.62  2005/05/04 00:11:50  mats
+ * Adapt to corrected tetj_testcase_end routine
+ *
  * Revision 1.61  2005/04/11 22:56:50  anderson
  * bug - 816 don't return immediately so we can see all of the available versions
  *
@@ -228,7 +231,7 @@ static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.61 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.62 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -693,7 +696,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 
   check_class_info(file,filename,classes,journal);
 
-	tetj_testcase_end(journal, tetj_activity_count, libname, "");
+	tetj_testcase_end(journal, tetj_activity_count, 0, "");
 
 }
 
