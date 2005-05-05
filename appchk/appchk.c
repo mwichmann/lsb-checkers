@@ -27,7 +27,7 @@ char *concat_string(char *input, char *addition)
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.21 $";
+    "$Revision: 1.22 $";
 
 
 int main(int argc, char *argv[])
@@ -146,10 +146,24 @@ int main(int argc, char *argv[])
     /* Check binary */
     for (i = optind; i < argc; i++) {
 	printf("Checking binary %s\n", argv[i]);
+	tetj_testcase_start(journal, tetj_activity_count, argv[i], "");
+	tetj_tp_count = 0;
+	snprintf(tmp_string, TMP_STRING_SIZE, "Opening binary %s", argv[i]);
+	tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
+		       	   tmp_string);
 
 	elffile = OpenElfFile(argv[i]);
+	if (elffile == NULL) {
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+	    tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	    continue;
+	}
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 	check_file(elffile, journal, ELF_IS_EXEC);
 	checksymbols(elffile, journal);
+	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
 
