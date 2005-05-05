@@ -14,12 +14,6 @@ struct SectionType SectionType[] = {
 	{"SHT_IA_64_EXT",SHT_IA_64_EXT,checkIA_64_EXT},
 #endif /* __ia64__ */
 #if __ia64__
-	{"SHT_IA_64_LOPSREG",SHT_IA_64_LOPSREG,checkIA_64_LOPSREG},
-#endif /* __ia64__ */
-#if __ia64__
-	{"SHT_IA_64_PRIORITY_INIT",SHT_IA_64_PRIORITY_INIT,checkIA_64_PRIORITY_INIT},
-#endif /* __ia64__ */
-#if __ia64__
 	{"SHT_IA_64_UNWIND",SHT_IA_64_UNWIND,checkIA_64_UNWIND},
 #endif /* __ia64__ */
 	{"SHT_INIT_ARRAY",SHT_INIT_ARRAY,checkINIT_ARRAY},
