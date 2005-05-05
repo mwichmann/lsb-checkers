@@ -6,7 +6,7 @@ GENSRCS=rpmtag.h idxtbl.c
 LIBS= ../tetj/libtetj.a ../fhschk/libfhschk.a
 LIB=librpmchk.a
 
-all: $(LIB) test
+all: $(LIB)
 
 install:
 
