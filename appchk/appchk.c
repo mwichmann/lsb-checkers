@@ -27,7 +27,7 @@ char *concat_string(char *input, char *addition)
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.22 $";
+    "$Revision: 1.23 $";
 
 
 int main(int argc, char *argv[])
@@ -131,15 +131,22 @@ int main(int argc, char *argv[])
     /* Add symbols from extra libs to list */
     for (i = 0; i < extra_lib_count; i++) {
 	elffile = OpenElfFile(extra_lib_list[i]);
+	tetj_testcase_start(journal, tetj_activity_count, extra_lib_list[i],"");
+	tetj_tp_count = 0;
 	check_file(elffile, journal, ELF_IS_DSO);
 	add_library_symbols(elffile, journal);
+	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
 
     /* Check all extra libs */
     for (i = 0; i < extra_lib_count; i++) {
 	elffile = OpenElfFile(extra_lib_list[i]);
+	snprintf(tmp_string, TMP_STRING_SIZE, "%s-pass2", extra_lib_list[i]);
+	tetj_testcase_start(journal, tetj_activity_count, tmp_string,"");
+	tetj_tp_count = 0;
 	check_lib(elffile, journal, ELF_IS_DSO);
+	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
 
@@ -148,25 +155,23 @@ int main(int argc, char *argv[])
 	printf("Checking binary %s\n", argv[i]);
 	tetj_testcase_start(journal, tetj_activity_count, argv[i], "");
 	tetj_tp_count = 0;
-	snprintf(tmp_string, TMP_STRING_SIZE, "Opening binary %s", argv[i]);
-	tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
-		       	   tmp_string);
 
 	elffile = OpenElfFile(argv[i]);
 	if (elffile == NULL) {
+	    /* make a dummy container if it failed to open */
+	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening binary %s", argv[i]);
+	    tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
+			       tmp_string);
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 	    tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	    continue;
 	}
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 	check_file(elffile, journal, ELF_IS_EXEC);
 	checksymbols(elffile, journal);
 	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
-
     tetj_close_journal(journal);
     exit(0);
 }
