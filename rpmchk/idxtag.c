@@ -831,9 +831,7 @@ checkRpmIdxFILEFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 	fflags[i] = htonl(fflags[i]);
 	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	    fprintf(stderr, "File flags: %x\n", fflags[i]);
-/*XXXSTU
 	fprintf(stderr,"File flags not checked: %x\n",fflags[i]);
-*/
     }
 }
 
@@ -900,9 +898,7 @@ checkRpmIdxFILEVERIFYFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 	flagp[i] = htonl(flagp[i]);
 	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	    fprintf(stderr, "File Verify Flag: %x\n", flagp[i]);
-/*XXXSTU
 	fprintf(stderr,"File Verify Flag not checked: %x\n",flagp[i]);
-*/
     }
 }
 
