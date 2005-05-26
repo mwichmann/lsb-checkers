@@ -23,6 +23,16 @@ int pcnt=0;
 Msg("Checking data structures in sys/ioctl.h\n");
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef TIOCGWINSZ
+	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture)
+#else
+Msg( "Error: Constant not found: TIOCGWINSZ\n");
+cnt++;
+#endif
+
+#endif
+
 #if __powerpc64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,1074030207,4619,architecture)

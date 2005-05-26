@@ -126,7 +126,6 @@ tcnt+=netinet_tcp_h();
 tcnt+=netinet_udp_h();
 tcnt+=nl_types_h();
 tcnt+=pthread_h();
-tcnt+=pty_h();
 tcnt+=pwd_h();
 tcnt+=regex_h();
 tcnt+=rpc_auth_h();
