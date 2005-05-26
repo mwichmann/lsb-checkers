@@ -47,7 +47,6 @@ OBJS = hdrchk.o \
 	netinet_udp_h.o \
 	nl_types_h.o \
 	pthread_h.o \
-	pty_h.o \
 	pwd_h.o \
 	regex_h.o \
 	rpc_auth_h.o \
