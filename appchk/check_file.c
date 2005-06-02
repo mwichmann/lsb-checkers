@@ -26,11 +26,12 @@ void check_file(ElfFile *elffile, struct tetj_handle *journal,
   /* Log binary file size */
   tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
 		     "check file details");
-  if (fstat(elffile->fd, &stat_info)==-1)
-  {
+  if (fstat(elffile->fd, &stat_info)==-1) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Could not stat file");
     perror(tmp_string);
-    tetj_add_controller_error(journal, tmp_string);
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
+		       tmp_string);
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     return;
   }
@@ -68,7 +69,6 @@ void check_file(ElfFile *elffile, struct tetj_handle *journal,
 void check_lib(ElfFile *elffile, struct tetj_handle *journal, Elf_type fileType)
 {
   int i;
-  char tmp_string[TMP_STRING_SIZE+1];
   Elf_Shdr	*hdr1;
 
   /* Check all headers in extra lib */
