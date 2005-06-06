@@ -1,13 +1,17 @@
 LSBAPPCHK_VERSION=unofficial
-CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBAPPCHK_VERSION=\"$(LSBAPPCHK_VERSION)\" -Wall
+CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBAPPCHK_VERSION=\"$(LSBAPPCHK_VERSION)\" -Wall -I../elfchk
 
-OBJS=appchk.o libraries.o symbols.o check_file.o
-LIB=../rpmchk/librpmchk.a ../elfchk/libelfchk.a ../tetj/libtetj.a
+OBJS=libraries.o symbols.o check_file.o
+LIBS=../rpmchk/librpmchk.a ../elfchk/libelfchk.a ../tetj/libtetj.a
+LIB=libappchk.a
 
-all: appchk
+all: $(LIB) appchk
 
-appchk: $(OBJS) $(LIB)
-	$(CC) $(CFLAGS) -o appchk $(OBJS) $(LIB)
+$(LIB): $(OBJS)
+	rm -f $(LIB); ar clq $(LIB) $(OBJS)
+
+appchk: appchk.c $(OBJS) $(LIBS)
+	$(CC) $(CFLAGS) -o appchk appchk.c $(OBJS) $(LIBS)
 
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)

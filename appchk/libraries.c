@@ -15,7 +15,7 @@ add_symbol(char *symname)
   if(symtable==NULL)
     symtable=malloc(tablesize*sizeof(char *));
 
-  symtable[tableents++]=symname;
+  symtable[tableents++]=strdup(symname);
 
   if(tableents >= tablesize ) 
   {

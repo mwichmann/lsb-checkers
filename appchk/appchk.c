@@ -9,7 +9,6 @@
 #include "libraries.h"
 #include "symbols.h"
 
-int modules = LSB_Core;		/* default module list to check */
 
 char *concat_string(char *input, char *addition)
 {
@@ -27,7 +26,7 @@ char *concat_string(char *input, char *addition)
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.24 $";
+    "$Revision: 1.25 $";
 
 
 int main(int argc, char *argv[])
@@ -44,6 +43,7 @@ int main(int argc, char *argv[])
     char tmp_string[TMP_STRING_SIZE + 1];
     char journal_filename[TMP_STRING_SIZE + 1];
     int overrideJournalFilename = 0;
+    int modules = LSB_Core;		/* default module list to check */
 
     extra_libraries = strdup("EXTRA_LIBRARIES=");
 
@@ -134,7 +134,7 @@ int main(int argc, char *argv[])
 	tetj_testcase_start(journal, tetj_activity_count, extra_lib_list[i],"");
 	tetj_tp_count = 0;
 	check_file(elffile, journal, ELF_IS_DSO);
-	add_library_symbols(elffile, journal);
+	add_library_symbols(elffile, journal, modules);
 	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
@@ -145,7 +145,7 @@ int main(int argc, char *argv[])
 	snprintf(tmp_string, TMP_STRING_SIZE, "%s-pass2", extra_lib_list[i]);
 	tetj_testcase_start(journal, tetj_activity_count, tmp_string,"");
 	tetj_tp_count = 0;
-	check_lib(elffile, journal, ELF_IS_DSO);
+	check_lib(elffile, journal, ELF_IS_DSO, modules);
 	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
@@ -172,7 +172,7 @@ int main(int argc, char *argv[])
 	    continue;
 	}
 	check_file(elffile, journal, ELF_IS_EXEC);
-	checksymbols(elffile, journal);
+	checksymbols(elffile, journal, modules);
 	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }

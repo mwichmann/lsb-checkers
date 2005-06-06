@@ -4,6 +4,6 @@
 #include "../tetj/tetj.h"
 
 extern int symbolinlibrary(char *symname, struct tetj_handle *journal);
-extern int add_library_symbols(ElfFile *elffile, struct tetj_handle *journal);
+extern int add_library_symbols(ElfFile *elffile, struct tetj_handle *journal, int modules);
 
 #endif /* __APPCHK_LIBRARIES_H */

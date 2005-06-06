@@ -13,7 +13,7 @@
 
 MD5_CTX md5ctx;
 
-void check_file(ElfFile *elffile, struct tetj_handle *journal,
+int check_file(ElfFile *elffile, struct tetj_handle *journal,
                 Elf_type fileType)
 {
 #define TMP_STRING_SIZE (PATH_MAX+20)
@@ -22,6 +22,7 @@ void check_file(ElfFile *elffile, struct tetj_handle *journal,
   unsigned char md5sum[16];
   struct stat stat_info;
   int i;
+  int elfType = ELF_UNKNOWN;
   
   /* Log binary file size */
   tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
@@ -33,7 +34,7 @@ void check_file(ElfFile *elffile, struct tetj_handle *journal,
 		       tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-    return;
+    return elfType;
   }
   snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
@@ -52,7 +53,7 @@ void check_file(ElfFile *elffile, struct tetj_handle *journal,
   tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-  checkElf(elffile, fileType, journal);
+  elfType = checkElf(elffile, fileType, journal);
   /* FIXME
   if (elffile->symhdr==NULL)
   {
@@ -63,10 +64,10 @@ void check_file(ElfFile *elffile, struct tetj_handle *journal,
     fprintf(stderr, tmp_string);
   }
   */
-  return;
+  return elfType;
 }
 
-void check_lib(ElfFile *elffile, struct tetj_handle *journal, Elf_type fileType)
+void check_lib(ElfFile *elffile, struct tetj_handle *journal, Elf_type fileType, int modules)
 {
   int i;
   Elf_Shdr	*hdr1;
@@ -87,7 +88,7 @@ void check_lib(ElfFile *elffile, struct tetj_handle *journal, Elf_type fileType)
   }
 
   /* Check dynamic symbols needed by extra lib */
-  checksymbols(elffile, journal);
+  checksymbols(elffile, journal, modules);
 
   return;
 }

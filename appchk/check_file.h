@@ -6,7 +6,7 @@
 #include "../elfchk/hdr.h"
 #include "../elfchk/proghdr.h"
 
-void check_file(ElfFile *elffile, struct tetj_handle *journal, Elf_type isLib);
-void check_lib(ElfFile *elffile, struct tetj_handle *journal, Elf_type isLib);
+int check_file(ElfFile *elffile, struct tetj_handle *journal, Elf_type isLib);
+void check_lib(ElfFile *elffile, struct tetj_handle *journal, Elf_type isLib, int modules);
 
 #endif /* __CHECK_FILE_H */

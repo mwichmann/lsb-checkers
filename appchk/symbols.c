@@ -2,11 +2,12 @@
 #include <string.h>
 #include "symbols.h"
 #include "libraries.h"
+#include "elfchk.h"
 
-extern int modules;
+/* extern int modules; */
 
 int
-checksymbols(ElfFile *file, struct tetj_handle *journal)
+checksymbols(ElfFile *file, struct tetj_handle *journal, int modules)
 {
   int	i, j, numsyms;
   Elf_Sym	*syms1;
@@ -66,7 +67,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
           snprintf(tmp_string, TMP_STRING_LENGTH, 
                    "Symbol %s used, but not part of %s",
                    symbol_name,getmodulename(modules));
-          printf("%s\n", tmp_string);
+          fprintf(stderr, "%s\n", tmp_string);
           tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 
                              0, 0, tmp_string);
           tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
