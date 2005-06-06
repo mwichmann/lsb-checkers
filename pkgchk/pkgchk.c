@@ -13,11 +13,12 @@
 #include <limits.h>
 #include "../tetj/tetj.h"
 #include "../fhschk/fhschk.h"
+#include "../elfchk/elfchk.h"
 #include "rpmchk.h"
 
 void usage(char *progname)
 {
-  fprintf(stderr,"Usage: %s rpmname\n",progname);
+  fprintf(stderr,"Usage: %s [-L lanananame] [-t [-A] [-M module]] rpmname\n",progname);
   exit(1);
 }
 
@@ -39,7 +40,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.10 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.11 $";
 
 int
 main(int argc, char *argv[])
@@ -52,6 +53,8 @@ main(int argc, char *argv[])
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
   RpmFile *rpmfile;
+  int check_app=0;
+  int modules = LSB_Core;
 
   printf("%s for LSB Specification " LSBVERSION " \n", argv[0]);
 
@@ -63,12 +66,21 @@ main(int argc, char *argv[])
 
   /* Parse options */
   while(1) {
-      c=getopt(argc,argv,"L:");
+      c=getopt(argc,argv,"L:tM:A");
       if( c == -1 )
         break;
       switch(c) {
       case 'L':
-	lanananame=optarg;
+        lanananame=optarg;
+        break;
+      case 't':
+        check_app=1;
+        break;
+      case 'M':
+        modules|=getmoduleval(optarg);
+        break;
+      case 'A':
+        modules=LSB_All_Modules;
         break;
       default:
         printf ("?? getopt returned character code 0%o ??\n", c);
@@ -107,7 +119,7 @@ main(int argc, char *argv[])
   snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbpkgchk " LSBPKGCHK_VERSION);
   tetj_add_config(journal, tmp_string);
   tetj_testcase_start(journal, tetj_activity_count, argv[1], "");
-  checkRpm(rpmfile, journal);
+  checkRpm(rpmfile, journal, check_app, modules);
   tetj_testcase_end(journal, tetj_activity_count, 0, "");
   tetj_close_journal(journal);
   exit(0);
