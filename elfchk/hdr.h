@@ -11,6 +11,7 @@
 #include "elfchk.h"
 
 typedef enum {
+    ELF_UNKNOWN = 0x0,
 	ELF_IS_EXEC = 0x1,
 	ELF_IS_DSO = 0x2,
 	ELF_IS_OBJ = 0x4
@@ -18,7 +19,8 @@ typedef enum {
 
 /* Check elf header
    If its not a program its considered to be shared library */
-extern void checkElfhdr(ElfFile *file1, Elf_type expect, 
+/* If ELF type is unknown, the function will return the type of file */
+extern int checkElfhdr(ElfFile *file1, Elf_type expect, 
                         struct tetj_handle *journal);
 
 #endif /* _ELF_HDR_H */
