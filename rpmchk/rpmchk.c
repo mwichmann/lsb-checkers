@@ -7,7 +7,7 @@
 #include "rpmchk.h"
 
 void
-checkRpm(RpmFile *file1, struct tetj_handle *journal)
+checkRpm(RpmFile *file1, struct tetj_handle *journal, int check_app, int modules)
 {
 
 checkRpmLead(file1, journal);
@@ -19,5 +19,5 @@ file1->nexthdr=file1->signature;
 checkRpmSignature(file1, journal);
 checkRpmHeader(file1, journal);
 checkRpmMetaData(file1, journal);
-checkRpmArchive(file1, journal);
+checkRpmArchive(file1, journal, check_app, modules);
 }
