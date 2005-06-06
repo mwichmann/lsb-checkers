@@ -5,7 +5,6 @@
 #include <sys/types.h>
 #include <signal.h>
 #include <time.h>
-#include <sys/time.h>
 #undef timer_create
 static int(*funcptr) (clockid_t , struct sigevent * , timer_t * ) = 0;
 

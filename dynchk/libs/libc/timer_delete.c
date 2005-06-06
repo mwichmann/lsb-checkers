@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include <sys/types.h>
-#include <sys/time.h>
+#include <time.h>
 #undef timer_delete
 static int(*funcptr) (timer_t ) = 0;
 

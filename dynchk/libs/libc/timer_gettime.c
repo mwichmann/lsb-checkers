@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include <sys/types.h>
 #include <time.h>
-#include <sys/time.h>
 #undef timer_gettime
 static int(*funcptr) (timer_t , struct itimerspec * ) = 0;
 
