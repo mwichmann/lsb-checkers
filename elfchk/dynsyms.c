@@ -1335,6 +1335,27 @@ struct versym DynSyms[] = {
 	{"_IO_puts","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
+	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
+#endif
+#if __ia64__
+	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
+#endif
+#if __i386__
 	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
 #endif
 #if __ia64__
@@ -1365,6 +1386,27 @@ struct versym DynSyms[] = {
 	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
 #endif
 #if __i386__
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
+#endif
+#if __ia64__
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
+#endif
+#if __i386__
 	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core},
 #endif
 #if __arm__
@@ -1422,6 +1464,27 @@ struct versym DynSyms[] = {
 	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core},
 #endif
 #if __i386__
+	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
+#endif
+#if __ia64__
+	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
+#endif
+#if __i386__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
 #endif
 #if __arm__
@@ -1654,6 +1717,27 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_Unwind_Resume","GCC_3.0",0,LSB_Core},
+#endif
+#if __i386__
+	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
+#endif
+#if __ia64__
+	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
 #endif
 #if __i386__
 	{"_Unwind_SetGR","GCC_3.0",0,LSB_Core},
