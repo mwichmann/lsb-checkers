@@ -239,7 +239,7 @@ extern int  hasNewFilenames;
 
 /* util.c */
 extern RpmFile *OpenRpmFile(char *name);
-extern void checkRpm(RpmFile *file1, struct tetj_handle *journal);
+extern void checkRpm(RpmFile *file1, struct tetj_handle *journal, int check_app, int modules);
 extern void checkRpmLead(RpmFile *file1, struct tetj_handle *journal);
 extern void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
 
@@ -247,7 +247,7 @@ extern void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
 extern void checkRpmArchiveFilename(char *filename, struct tetj_handle *journal);
 
 /* archive.c */
-void checkRpmArchive(RpmFile *file1, struct tetj_handle *journal);
+void checkRpmArchive(RpmFile *file1, struct tetj_handle *journal, int check_app, int modules);
 
 /* hdr.c */
 void checkRpmHdr(RpmFile *file1, struct tetj_handle *journal);

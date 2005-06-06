@@ -3,7 +3,7 @@ CFLAGS=-g -Wall -DLSBVERSION=\"3.0\"
 OBJS=archive.o hdr.o idxtag.o lead.o rpmchk.o util.o vals.o fhs.o idxtbl.o \
 	md5c.o check.o dependencies.o
 GENSRCS=rpmtag.h idxtbl.c
-LIBS= ../tetj/libtetj.a ../fhschk/libfhschk.a
+LIBS= ../tetj/libtetj.a ../elfchk/libelfchk.a ../appchk/libappchk.a ../fhschk/libfhschk.a
 LIB=librpmchk.a
 
 all: $(LIB)
