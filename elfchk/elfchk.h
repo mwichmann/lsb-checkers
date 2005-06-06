@@ -266,7 +266,7 @@ extern char *ElfGetString(ElfFile *file, int offset);
 extern ElfFile *OpenElfFile(char *name);
 void CloseElfFile(ElfFile *efile);
 extern ElfFile *OpenFile(char *name);
-extern void checkElf(ElfFile *file1, int isProgram, 
+extern int checkElf(ElfFile *file1, int isProgram, 
                      struct tetj_handle *journal);
 extern char *getmodulename(int mod);
 extern int getmoduleval(char *mod);
@@ -279,4 +279,5 @@ extern void dumpbytes(unsigned char *ptr, int size);
 
 /* Add non LSB libraries to list which are ok to be in the DT_NEEDED section */
 extern void addDTNeeded (char *filename);
+
 #endif /* _ELFCHK_H */

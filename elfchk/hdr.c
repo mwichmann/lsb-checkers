@@ -10,12 +10,13 @@
 #include "symvers.h"
 #include "tetj.h"
 
-void
+int
 checkElfhdr(ElfFile *file1, Elf_type expect, struct tetj_handle *journal)
 {
 #define TMP_STRING_SIZE (400)
   char tmp_string[TMP_STRING_SIZE+1];
 Elf_Ehdr *hdr1;
+int elf_type = ELF_UNKNOWN;
 
 hdr1=(Elf_Ehdr *)file1->addr;
 
@@ -109,8 +110,10 @@ tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
 	}
 
 /* Check e_type */
-
+elf_type = hdr1->e_type;
 switch( expect ) {
+    case ELF_UNKNOWN:
+        break;
 	case ELF_IS_EXEC:
 		checkhdrfield( e_type, ET_EXEC )
 		break;
@@ -175,4 +178,5 @@ if( hdr1->e_shstrndx != SHN_UNDEF ) {
 file1->strndx = hdr1->e_shstrndx;
 
 getSymbolVersionInfo(file1);
+return elf_type;
 }
