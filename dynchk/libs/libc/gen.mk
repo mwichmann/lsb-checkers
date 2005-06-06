@@ -218,6 +218,7 @@ gethostname.o \
 getitimer.o \
 getloadavg.o \
 getlogin.o \
+getlogin_r.o \
 getnameinfo.o \
 getopt.o \
 getopt_long.o \

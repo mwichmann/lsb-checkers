@@ -2,8 +2,8 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <stddef.h>
 #include <stdio.h>
+#include <stddef.h>
 #undef fwrite
 static size_t(*funcptr) (const void * , size_t , size_t , FILE * ) = 0;
 

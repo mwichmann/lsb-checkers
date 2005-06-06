@@ -19,7 +19,6 @@
 #include <netinet/in.h>
 #include <nl_types.h>
 #include <pthread.h>
-#include <pty.h>
 #include <pwd.h>
 #include <regex.h>
 #include <rpc/auth.h>
