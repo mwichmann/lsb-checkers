@@ -1,8 +1,8 @@
 LSBPKGCHK_VERSION=unofficial
-CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBPKGCHK_VERSION=\"$(LSBPKGCHK_VERSION)\" -Wall -I../rpmchk
+CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBPKGCHK_VERSION=\"$(LSBPKGCHK_VERSION)\" -Wall -I../rpmchk -I../elfchk
 
 OBJS=pkgchk.o
-LIB=../rpmchk/librpmchk.a ../tetj/libtetj.a ../fhschk/libfhschk.a
+LIB=../rpmchk/librpmchk.a ../appchk/libappchk.a ../elfchk/libelfchk.a ../tetj/libtetj.a ../fhschk/libfhschk.a
 
 all: pkgchk
 
