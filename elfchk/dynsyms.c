@@ -1467,7 +1467,7 @@ struct versym DynSyms[] = {
 	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
 #endif
 #if __ia64__
-	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
+	{"_Unwind_GetBSP","GCC_3.3.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
