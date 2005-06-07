@@ -31,7 +31,8 @@ add_archive_symbols(char *libname, struct tetj_handle *journal)
   Elf_Sym	*syms;
   int	i,numsyms,strtab;
 
-  file = open_archive(libname, journal, 0);
+  if (file = open_archive(libname, journal, 0) == NULL)
+     return -1;
 
   if (file)
   {
@@ -53,14 +54,13 @@ add_archive_symbols(char *libname, struct tetj_handle *journal)
 #endif
         for(i=0;i<numsyms;i++) 
         {
-/*
-  fprintf(stderr,"%s %x %x %x\n",
-  ElfGetStringIndex(file,syms[i].st_name,strtab),
-  ELF32_ST_BIND(syms[i].st_info),
-  ELF32_ST_TYPE(syms[i].st_info),
-  syms[i].st_shndx
-  );
-*/
+           /*
+           fprintf(stderr,"%s %x %x %x\n",
+                   ElfGetStringIndex(file,syms[i].st_name,strtab),
+                   ELF32_ST_BIND(syms[i].st_info),
+                   ELF32_ST_TYPE(syms[i].st_info),
+                   syms[i].st_shndx);
+           */
           /* Static Symbols */
           if( ELF32_ST_BIND(syms[i].st_info) == STB_LOCAL ) continue;
           
@@ -70,8 +70,7 @@ add_archive_symbols(char *libname, struct tetj_handle *journal)
                syms[i].st_shndx <= SHN_HIRESERVE &&
                syms[i].st_shndx != SHN_COMMON) ) continue;
       
-          add_symbol( ElfGetStringIndex(file,syms[i].st_name,
-                                      strtab));
+          add_symbol( ElfGetStringIndex(file,syms[i].st_name, strtab));
         }
     }
   }

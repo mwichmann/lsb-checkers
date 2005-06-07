@@ -9,30 +9,34 @@
 #include <string.h>
 #include "check_archive.h"
 #include "symbols.h"
+#include "../rpmchk/md5.h"
 #include "ar.h"
+
+MD5_CTX md5ctx;
 
 static unsigned int membersize=0;
 
-ElfFile * open_archive(char *filename, struct tetj_handle *journal,
-                int isProgram)
+ElfFile *
+open_archive(char *filename, struct tetj_handle *journal, int isProgram)
 {
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
   char tmp_string2[TMP_STRING_SIZE+1];
   struct stat stat_info;
-  FILE *md5_proc;
+  unsigned char md5sum[16];
   int i;
-  ElfFile	*elffile;
+  ElfFile *elffile;
   
   tetj_tp_count = 0;
   if (isProgram)
+    /* main_ prefix is so tjreport doesn't grumble about dup symbols */
     snprintf(tmp_string, TMP_STRING_SIZE, "main_%s", filename);
   else
     snprintf(tmp_string, TMP_STRING_SIZE, "%s", filename);
   tetj_testcase_start(journal, ++tetj_activity_count, tmp_string, "");
 
   tetj_tp_count++;
-  snprintf(tmp_string, TMP_STRING_SIZE, "Looking for file %s", filename);
+  snprintf(tmp_string, TMP_STRING_SIZE, "check file %s details", filename);
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
   /* Open ELF file for analysis */
@@ -43,11 +47,7 @@ ElfFile * open_archive(char *filename, struct tetj_handle *journal,
     fprintf(stderr, tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-    exit(1);
-  }
-  else
-  {
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+    return NULL;
   }
 
   elffile->araddr=elffile->addr;
@@ -56,45 +56,43 @@ ElfFile * open_archive(char *filename, struct tetj_handle *journal,
   /* Log binary file size */
   if (stat(filename, &stat_info)==-1)
   {
-    snprintf(tmp_string, TMP_STRING_SIZE, "Could not stat file %s", 
-             filename);
+    snprintf(tmp_string, TMP_STRING_SIZE, "Could not stat file %s", filename);
     perror(tmp_string);
-    tetj_add_controller_error(journal, tmp_string);
-    exit(1);
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
+		       tmp_string);
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    return NULL;
   }
   snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
 
   /* md5sum of binary */
-  snprintf(tmp_string, TMP_STRING_SIZE, "md5sum %s", filename);
-  md5_proc = popen(tmp_string, "r");
-  i=0;
-  while (i<32 && !feof(md5_proc))
-  {
-    i += fread(tmp_string+i, 1, 32-i, md5_proc);
+  MD5Init(&md5ctx);
+  MD5Update(&md5ctx, elffile->addr, elffile->size);
+  MD5Final(md5sum, &md5ctx);
+  for (i = 0; i < 16; i++) {
+	  sprintf(&(tmp_string[i*2]),"%2.2x", md5sum[i]);
   }
-  if (pclose(md5_proc)==-1)
-  {
-    tetj_add_controller_error(journal, "Failed to calculate md5sum of binary");
-  }
-  else
-  {
-    tmp_string[32] = 0;
-    snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
-    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string2);
-  }
-  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
+  tmp_string[32] = 0;
+  snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string2);
 
   if (strncmp((const char *)elffile->addr, ARMAG, SARMAG) != 0) {
         snprintf(tmp_string, TMP_STRING_SIZE, 
              "File %s is not an archive\n", filename);
         fprintf(stderr, tmp_string);
+        tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
+		           0, 0, 0, tmp_string);
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
         tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-	exit(1);
+	return NULL;
   }
   elffile->addr+=SARMAG;
 
+  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   return elffile;
 }
 
@@ -169,21 +167,18 @@ void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
   Elf_Ehdr	*phdr;
 
   /* Open ELF file for analysis */
-  if( (elffile = open_archive(filename, journal, isProgram)) == NULL ) 
-  {
+  if( (elffile = open_archive(filename, journal, isProgram)) == NULL ) {
     snprintf(tmp_string, TMP_STRING_SIZE, 
              "Unable to open file %s as ELF binary\n", filename);
     fprintf(stderr, tmp_string);
-    exit(1);
+    return;
   }
 
-  if (elffile) 
-  {
+  if (elffile) {
     while(next_member(elffile, journal) ) {
       /* Search through program headers for the one with the dynamic
          symbols in it. */
-      for(i=0;i<elffile->numsh;i++)
-      {
+      for(i=0;i<elffile->numsh;i++) {
         hdr1=&(elffile->saddr[i]);
 	phdr=(Elf_Ehdr *)elffile->addr;
 #if 0
@@ -192,8 +187,7 @@ void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
 				   phdr->e_shstrndx));
 #endif
     
-        if(hdr1->sh_type == SHT_SYMTAB)
-        {
+        if(hdr1->sh_type == SHT_SYMTAB) {
           elffile->dynsymhdr=hdr1;
         }
       }
@@ -201,6 +195,4 @@ void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
       checksymbols(elffile, journal);
     }
   }
-
-
 }
