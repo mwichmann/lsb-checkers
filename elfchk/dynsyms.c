@@ -1485,6 +1485,27 @@ struct versym DynSyms[] = {
 	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
 #endif
 #if __i386__
+	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
+#endif
+#if __ia64__
+	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
+#endif
+#if __s390x__
+	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
+#endif
+#if __i386__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
 #endif
 #if __arm__
