@@ -23,7 +23,7 @@ test: appchk
 	./test_appchk
 
 clean:
-	rm -f $(OBJS) appchk
+	rm -f $(OBJS) appchk $(LIB)
 
 distclean: clean
 
