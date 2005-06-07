@@ -15,7 +15,6 @@
 #include <cpio.h>
 #include <libgen.h>
 #include "rpmchk.h"
-#include "archive.h"
 #include "md5.h"
 #include "tagfuncs.h"
 #include "../tetj/tetj.h"
