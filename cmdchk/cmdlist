@@ -71,7 +71,6 @@ lp /usr/bin/lp
 lpr /usr/bin/lpr
 ls /bin/ls
 lsb_release /bin/lsb_release
-lsbinstall /usr/lib/lsb/lsbinstall
 m4 /usr/bin/m4
 mailx /usr/bin/mailx
 make /usr/bin/make
