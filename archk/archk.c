@@ -31,7 +31,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char * __attribute((unused)) archk_revision = "$Revision: 1.5 $";
+static const char * __attribute((unused)) archk_revision = "$Revision: 1.6 $";
 
 int
 main(int argc, char *argv[])
@@ -45,14 +45,13 @@ main(int argc, char *argv[])
   int extra_lib_count = 0;
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
-	char journal_filename[TMP_STRING_SIZE+1];
-	int overrideJournalFilename = 0;
+  char journal_filename[TMP_STRING_SIZE+1];
+  int overrideJournalFilename = 0;
 
   printf("%s for LSB Specification " LSBVERSION " \n", argv[0]);
   extra_libraries = strdup("EXTRA_LIBRARIES=");
 
-  for (i=0; i<argc; i++)
-  {
+  for (i=0; i<argc; i++) {
     command_line = concat_string(command_line, argv[i]);
     command_line = concat_string(command_line, " ");
   }
@@ -99,18 +98,15 @@ main(int argc, char *argv[])
   }
 
   /* Start journal logging */
-	
-  if (!overrideJournalFilename)
-  {
-	  snprintf(journal_filename, TMP_STRING_SIZE, "journal.archk.%s", 
-					   basename(argv[optind]));
+  if (!overrideJournalFilename) {
+    snprintf(journal_filename, TMP_STRING_SIZE, "journal.archk.%s",
+       	     basename(argv[optind]));
   }
-  if (tetj_start_journal(journal_filename, &journal, command_line)!=0)
-  {
-	  printf("Could not open journal file %s for output..exiting\n",
-				   journal_filename);
-	  printf("Use -o <filename> to specify an alternate location for the journal file\n");
-	  exit(1);
+  if (tetj_start_journal(journal_filename, &journal, command_line) != 0) {
+    printf("Could not open journal file %s for output..exiting\n", 
+	   journal_filename);
+    printf("Use -o <filename> to specify an alternate location for the journal file\n");
+    exit(1);
   }
 
   /* Log version info in the journal */
@@ -118,8 +114,7 @@ main(int argc, char *argv[])
   tetj_add_config(journal, tmp_string);
   snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
   tetj_add_config(journal, tmp_string);
-  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
-	     getmodulename(modules));
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s", getmodulename(modules));
   tetj_add_config(journal, tmp_string);
 
   /* Log extra libraries to look for symbols in */
@@ -131,19 +126,20 @@ main(int argc, char *argv[])
     addDTNeeded(extra_lib_list[i]);
 
   /* Add symbols from extra libs to list */
-  for (i=0; i<extra_lib_count; i++)
+  for (i=0; i<extra_lib_count; i++) {
+    /*XXX should check return code? */
     add_archive_symbols(extra_lib_list[i], journal);
+  }
 
   /* Check all extra libs */
-  for (i=0; i<extra_lib_count; i++)
-  {
+  for (i=0; i<extra_lib_count; i++) {
     check_lib(extra_lib_list[i], journal, 0);
   }
 
   /* Check binary */
-  for (i=optind; i<argc; i++)
-  {
+  for (i=optind; i<argc; i++) {
     printf("Checking archive %s\n", argv[i]);
+    /*XXX should check return code? */
     add_archive_symbols(argv[i], journal);
     check_lib(argv[i], journal, 1);
   }
