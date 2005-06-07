@@ -104,7 +104,7 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if __ia64__
-	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core,0,1},
+	{"_Unwind_GetBSP","GCC_3.3.2",0,LSB_Core,0,1},
 #endif
 #if __i386__
 	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core,0,1},
