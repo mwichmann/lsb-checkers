@@ -3,7 +3,13 @@
 lsbpkgchk \- check LSB conformance of a package
 .SH SYNOPSIS
 .B lsbpkgchk
-[\f-L \fIpathtolib\fR]... [\fIappname\fR]...
+.RB [ \-L
+.IR pathtolib ]...
+.RB [ \-t 
+.RB [ \-A ]
+.RB [ \-M
+.IR modulename ] ]
+.I appname
 .SH DESCRIPTION
 .PP
 Measure a package's conformance to the Linux Standard
@@ -13,6 +19,20 @@ contained in the LSB specification.
 .TP
 \fB\-L \fILANANANAME\fR
 Specify the LANANA registered name to be used when evaluating pathnames.
+.TP
+\fB\-t
+Check the LSB conformance of the executable files in the archive payload of the 
+package. All shared libraries present in the package are assumed to be a part of
+the application, and hence lsbpkgchk does not complain about symbols in executable
+files which are provided in those shared libraries.
+.TP
+\fB\-A
+Check the symbols found in all modules.
+.TP
+\fB\-M \fImodulename\fR
+Check only the symbols found in module \fImodulename\fR.
+The default module name is LSB-Core. Other choices are
+LSB-Graphics and LSB-C++.
 .PP
 A journal file named journal.pkgchk is created. It contains a record of the
 test results. You must have write access to the current working directory
