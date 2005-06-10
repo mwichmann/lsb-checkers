@@ -8,9 +8,13 @@
  *
  * 2002/03/19 Chris Yeoh, IBM
  *
- * This is $Revision: 1.4 $
+ * This is $Revision: 1.5 $
  * 
  * $Log: tetj.c,v $
+ * Revision 1.5  2005/06/10 18:17:20  mats
+ * Add support for 40 (config end) and 70 (scenario info) lines.
+ * Update README to reflect what's supported and what isn't.
+ *
  * Revision 1.4  2005/05/04 00:07:03  mats
  * Some formatting cleanup to make tet journal tools happier on this
  * emulated journal stuff
@@ -147,6 +151,22 @@ void tetj_add_config(struct tetj_handle *handle, char *message)
   if (handle)
   {
     fprintf(handle->journal, "30||%s\n", message);
+  }
+}
+
+void tetj_config_end(struct tetj_handle *handle)
+{
+  if (handle)
+  {
+    fprintf(handle->journal, "40||Config End\n");
+  }
+}
+
+void tetj_scenario_info(struct tetj_handle *handle, char *message)
+{
+  if (handle)
+  {
+    fprintf(handle->journal, "70||%s\n", message);
   }
 }
 
