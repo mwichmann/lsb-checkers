@@ -1,6 +1,6 @@
 LSBCMDCHK_VERSION=unofficial
 
-OBJS = cmdchk.o cmds.o
+OBJS = cmdchk.o 
 
 CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBCMDCHK_VERSION)\" -Wall
 
@@ -9,8 +9,10 @@ all:: cmdchk cmdlist
 cmdchk: $(OBJS) ../tetj/libtetj.a
 	$(CC) $(CFLAGS) -o cmdchk $(OBJS) ../tetj/libtetj.a
 
-cmds.c:
+cmds.h:
 	./mkcmdlist
+
+cmdchk.o: cmds.h
 
 cmdlist:
 	./mkcmdlist2

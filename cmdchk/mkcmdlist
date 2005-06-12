@@ -24,12 +24,12 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 # 3) Get the list of cmds
 #
 
-open(CMDS,">cmds.c");
-print CMDS "/* Generated file */\n";
-print CMDS "#include \"../tetj/tetj.h\"\n\n";
-print CMDS "extern void check_cmd(char *cmd, char *cmdpath, struct tetj_handle *journal);\n";
-
-print CMDS "void check_cmds(struct tetj_handle *journal)\n{\n";
+open(CMDS,">cmds.h");
+print CMDS "/* Generated file */\n\n";
+print CMDS "struct cmds {\n";
+print CMDS "\tchar *cmdname;\n";
+print CMDS "\tchar *cmdpath;\n";
+print CMDS "} cmdlist[] = {\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
 $select.= "WHERE Cstatus='Included' ";
@@ -41,9 +41,8 @@ $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
-	$cmdname=$entry{'Cname'};
-	print CMDS "check_cmd(\"$cmdname\",\"".$entry{'Cpath'}."\",journal);\n";
+	print CMDS "	{\"$entry{'Cname'}\", \"$entry{'Cpath'}\"},\n";
 }
 
-print CMDS "}\n";
+print CMDS "};\n";
 close(CMDS);
