@@ -11,9 +11,12 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.8 $
+# This is $Revision: 1.9 $
 #
 # $Log: tetj.py,v $
+# Revision 1.9  2005/06/12 16:04:34  mats
+# Fix 15 line
+#
 # Revision 1.8  2005/06/10 18:17:20  mats
 # Add support for 40 (config end) and 70 (scenario info) lines.
 # Update README to reflect what's supported and what isn't.
@@ -131,7 +134,7 @@ class Journal:
 	    self.journal.append(", %s\n" % message)
 	else:
 	    self.journal.append("\n")
-	self.journal.append("15|%u tetj-py-1.0 1|TCM Start\n")
+	self.journal.append("15|%u tetj-py-1.0 1|TCM Start\n" % self.activity)
 
     def testcase_end(self, message=None):
 	self.journal.append("80|%u 0 %s|TC End" %
