@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.10 $
+ * This is $Revision: 1.11 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.11  2005/06/12 16:06:32  mats
+ * Revamp cmdchk for counting testcases easily; emit test count to journal
+ *
  * Revision 1.10  2005/05/04 00:08:29  mats
  * A little more journal-file format cleanup to make tools happier
  *
@@ -50,6 +53,7 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 #include "../tetj/tetj.h"
+#include "cmds.h"
 
 char *binpaths[] = {
     "/bin/%s",
@@ -63,10 +67,10 @@ char *binpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.10 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.11 $";
 
 
-void check_cmd(char *cmdname, char *cmdpath, struct tetj_handle *journal)
+void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
     char filename[PATH_MAX + 1];
 #define TMP_STRING_SIZE (PATH_MAX+20)
@@ -74,31 +78,31 @@ void check_cmd(char *cmdname, char *cmdpath, struct tetj_handle *journal)
     int i;
 
     tetj_tp_count = 1;
-    tetj_testcase_start(journal, tetj_activity_count, cmdname, "");
-    snprintf(tmp_string, TMP_STRING_SIZE, "Looking for command %s", cmdname);
+    tetj_testcase_start(journal, tetj_activity_count, cp->cmdname, "");
+    snprintf(tmp_string, TMP_STRING_SIZE, "Looking for command %s", cp->cmdname);
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
-    if (cmdname[0] != '/') {
+    if (cp->cmdname[0] != '/') {
 	/* Find the command */
 	for (i = 0; binpaths[i]; i++) {
-	    snprintf(filename, PATH_MAX, binpaths[i], cmdname);
+	    snprintf(filename, PATH_MAX, binpaths[i], cp->cmdname);
 	    if (access(filename, X_OK) == 0) {
 		tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 #ifdef VERBOSE
-		fprintf(stderr, "Found %s as %s\n", cmdname, filename);
+		fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
 #endif
 		break;
 	    }
 
 	}
 	if (!binpaths[i]) {
-	    fprintf(stderr, "Couldn't find %s\n", cmdname);
+	    fprintf(stderr, "Couldn't find %s\n", cp->cmdname);
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 	}
     } else {
 	/* Presently, this path will never get taken */
 	/* absolute path given so we don't do a search through the bin paths */
-	strncpy(filename, cmdname, PATH_MAX);
+	strncpy(filename, cp->cmdname, PATH_MAX);
 	if (access(filename, R_OK | X_OK) == 0) {
 	    ;
 	}
@@ -107,13 +111,11 @@ void check_cmd(char *cmdname, char *cmdpath, struct tetj_handle *journal)
     tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 }
 
-/* Generated function by mkfunclist */
-extern void check_cmds(struct tetj_handle *journal);
-
 int main(int argc, char *argv[])
 {
     struct tetj_handle *journal;
     char tmp_string[TMP_STRING_SIZE + 1];
+    int i, j;
 
     if (tetj_start_journal("journal.lsbcmdchk", &journal, "lsbcmdchk") != 0) {
 	perror("Could not open journal file");
@@ -123,8 +125,14 @@ int main(int argc, char *argv[])
     snprintf(tmp_string, TMP_STRING_SIZE,
 	     "VSX_NAME=lsbcmdchk " LSBCMDCHK_VERSION);
     tetj_add_config(journal, tmp_string);
+    tetj_config_end(journal);
 
-    check_cmds(journal);
+    j = sizeof(cmdlist)/sizeof(struct cmds);
+    snprintf(tmp_string, TMP_STRING_SIZE, "\"total tests in cmdchk %d\"", j);
+    tetj_scenario_info(journal, tmp_string);
+
+    for (i=0; i < j; i++)
+	check_cmd(&cmdlist[i], journal);
     tetj_close_journal(journal);
     exit(0);
 }

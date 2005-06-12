@@ -12,9 +12,12 @@ Prefix, if supplied, is a prefix to prepend to all paths
 # Python version
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.6 $
+# This is $Revision: 1.7 $
 #
 # $Log: cmdchk.py,v $
+# Revision 1.7  2005/06/12 16:06:32  mats
+# Revamp cmdchk for counting testcases easily; emit test count to journal
+#
 # Revision 1.6  2004/10/31 14:51:29  mats
 # Use new convenience methods for results
 #
@@ -131,7 +134,10 @@ if not journal.journal:
 
 journal.add_config("VSX_NAME=lsbcmdchk experimental")
 journal.add_config("search prefix is [%s]" % prefix)
+journal.config_end()
 database = parse_cmds("cmdlist")
+print "commands:", len(database.cmds)
+journal.scenario_info("\"total tests in cmdchk %d\"" % len(database.cmds))
 for command in database.cmds:
     check_cmd(journal, command)
 check_extras(journal, database)
