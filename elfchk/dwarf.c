@@ -668,11 +668,6 @@ int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
         ptr = (unsigned char *)(frame->augmentation)
                 + strlen(frame->augmentation) + 1;
 
-        if (strcmp(frame->augmentation, "eh")==0)
-        {
-                ptr += sizeof(long);
-        }
-
         frame->code_alignment_factor = decode_uleb128(ptr, &numused);
         ptr += numused;
 
