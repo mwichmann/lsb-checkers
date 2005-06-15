@@ -10,7 +10,7 @@ struct SectionInfo SectionInfo[] = {
 	{".comment",SHT_PROGBITS,0,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
-	{".data.rel.ro",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
+	{".data.rel.ro",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data1",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".debug",SHT_PROGBITS,0,checkPROGBITS},
 	{".dtors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
@@ -51,7 +51,7 @@ struct SectionInfo SectionInfo[] = {
 #if __m32r__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __m32r__ */
-	{".got.plt",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
+	{".got.plt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #if __powerpc__ && !__powerpc64__
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
