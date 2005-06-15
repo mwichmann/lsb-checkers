@@ -27,6 +27,10 @@ typedef struct	{
 #warning "PT_GNU_STACK not found in elf.h - time to update your system"
 #define PT_GNU_STACK    0x6474e551 
 #endif
+#ifndef PT_GNU_RELRO
+#warning "PT_GNU_RELRO not found in elf.h - time to update your system"
+#define PT_GNU_RELRO    0x6474e552 
+#endif
 
 PhTypeFuncRec	Headers[] = {
 	{PT_NULL,	"PT_NULL",	checkPT_NULL},
@@ -42,6 +46,7 @@ PhTypeFuncRec	Headers[] = {
 #if __ia64__
 	{PT_IA_64_UNWIND,"PT_IA_64_UNWIND",checkPT_IA_64_UNWIND},
 #endif
+	{PT_GNU_RELRO,	"PT_GNU_RELRO",	checkPT_GNU_RELRO},
 	};
 
 static int numProgHeaders=sizeof(Headers)/sizeof(PhTypeFuncRec);
@@ -511,6 +516,12 @@ checkPT_IA_64_UNWIND(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 return 0;
 }
 #endif
+
+int
+checkPT_GNU_RELRO(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+{
+return checkPT_LOAD( file, hdr, journal );
+}
 
 void
 checkElfproghdr(int index, ElfFile *file, struct tetj_handle *journal)
