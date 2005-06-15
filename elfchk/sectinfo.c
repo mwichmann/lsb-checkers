@@ -51,6 +51,7 @@ struct SectionInfo SectionInfo[] = {
 #if __m32r__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __m32r__ */
+	{".got.plt",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 #if __powerpc__ && !__powerpc64__
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
