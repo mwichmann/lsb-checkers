@@ -14,6 +14,7 @@
 
 ProgBitsFuncRec ProgbitsInfo[] = {
 	{ ".data",checkPROGBITS_data },
+	{ ".data.rel.ro",checkPROGBITS_data },
 	{ ".data1",checkPROGBITS_data1 },
 	{ ".eh_frame",checkPROGBITS_eh_frame },
 	{ ".eh_frame_hdr",checkPROGBITS_eh_frame_hdr },

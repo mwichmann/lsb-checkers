@@ -10,6 +10,7 @@ struct SectionInfo SectionInfo[] = {
 	{".comment",SHT_PROGBITS,0,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+	{".data.rel.ro",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 	{".data1",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".debug",SHT_PROGBITS,0,checkPROGBITS},
 	{".dtors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
