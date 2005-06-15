@@ -26,7 +26,7 @@ char *concat_string(char *input, char *addition)
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.25 $";
+    "$Revision: 1.26 $";
 
 
 int main(int argc, char *argv[])
@@ -99,8 +99,18 @@ int main(int argc, char *argv[])
 
     /* Start journal logging */
     if (!overrideJournalFilename) {
-	snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
-		 basename(argv[optind]));
+		if (optind >= argc && extra_lib_count) {
+		    /* No binary supplied on command line */
+		    if (extra_lib_count == 1) {
+		       snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
+					basename(extra_lib_list[0]));
+		    } else {
+		       snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.DSO");
+		    }
+		} else {
+			snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
+			 basename(argv[optind]));
+		}
     }
     if (tetj_start_journal(journal_filename, &journal, command_line) != 0) {
 	printf("Could not open journal file %s for output..exiting\n",
@@ -130,9 +140,25 @@ int main(int argc, char *argv[])
 
     /* Add symbols from extra libs to list */
     for (i = 0; i < extra_lib_count; i++) {
-	elffile = OpenElfFile(extra_lib_list[i]);
 	tetj_testcase_start(journal, tetj_activity_count, extra_lib_list[i],"");
 	tetj_tp_count = 0;
+	elffile = OpenElfFile(extra_lib_list[i]);
+	if (elffile == NULL) {
+	    /* make a dummy container if it failed to open */
+	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
+	                                          extra_lib_list[i]);
+	    tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
+			       tmp_string);
+	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
+	                                           extra_lib_list[i]);
+	    perror(tmp_string);
+	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
+		               0, 0, 0, tmp_string);
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+	    tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	    continue;
+	}
 	check_file(elffile, journal, ELF_IS_DSO);
 	add_library_symbols(elffile, journal, modules);
 	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
@@ -141,10 +167,27 @@ int main(int argc, char *argv[])
 
     /* Check all extra libs */
     for (i = 0; i < extra_lib_count; i++) {
-	elffile = OpenElfFile(extra_lib_list[i]);
 	snprintf(tmp_string, TMP_STRING_SIZE, "%s-pass2", extra_lib_list[i]);
 	tetj_testcase_start(journal, tetj_activity_count, tmp_string,"");
 	tetj_tp_count = 0;
+
+	elffile = OpenElfFile(extra_lib_list[i]);
+	if (elffile == NULL) {
+	    /* make a dummy container if it failed to open */
+	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
+	                                           extra_lib_list[i]);
+	    tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
+			       tmp_string);
+	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
+	                                           extra_lib_list[i]);
+	    perror(tmp_string);
+	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
+		               0, 0, 0, tmp_string);
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+	    tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	    continue;
+	}
 	check_lib(elffile, journal, ELF_IS_DSO, modules);
 	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
