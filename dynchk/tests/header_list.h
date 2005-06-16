@@ -36,6 +36,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/ioctl.h>
 #include <sys/ipc.h>
 #include <sys/msg.h>
 #include <sys/poll.h>

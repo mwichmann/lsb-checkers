@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include <termios.h>
+#include <sys/ioctl.h>
 #include <pty.h>
 #undef forkpty
 static int(*funcptr) (int * , char * , struct termios * , struct winsize * ) = 0;
