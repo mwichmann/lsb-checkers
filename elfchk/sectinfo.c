@@ -21,6 +21,7 @@ struct SectionInfo SectionInfo[] = {
 	{".eh_frame_hdr",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 	{".fini",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 	{".fini_array",SHT_FINI_ARRAY,SHF_ALLOC+SHF_WRITE,checkFINI_ARRAY},
+	{".gcc_except_table",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 #if __powerpc64__
 	{".glink",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __powerpc64__ */
