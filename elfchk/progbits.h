@@ -13,6 +13,7 @@ int checkPROGBITS_data(ElfFile *, Elf_Shdr *, struct tetj_handle *);
 int checkPROGBITS_data1(ElfFile *, Elf_Shdr *, struct tetj_handle *);
 int checkPROGBITS_eh_frame(ElfFile *, Elf_Shdr *, struct tetj_handle *);
 int checkPROGBITS_eh_frame_hdr(ElfFile *, Elf_Shdr *, struct tetj_handle *);
+int checkPROGBITS_gcc_except_table(ElfFile *, Elf_Shdr *, struct tetj_handle *);
 int checkPROGBITS_interp(ElfFile *, Elf_Shdr *, struct tetj_handle *);
 int checkPROGBITS_rodata(ElfFile *, Elf_Shdr *, struct tetj_handle *);
 int checkPROGBITS_rodata1(ElfFile *, Elf_Shdr *, struct tetj_handle *);

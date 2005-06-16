@@ -18,6 +18,7 @@ ProgBitsFuncRec ProgbitsInfo[] = {
 	{ ".data1",checkPROGBITS_data1 },
 	{ ".eh_frame",checkPROGBITS_eh_frame },
 	{ ".eh_frame_hdr",checkPROGBITS_eh_frame_hdr },
+	{ ".gcc_except_table",checkPROGBITS_gcc_except_table },
 	{ ".interp",checkPROGBITS_interp },
 	{ ".rodata",checkPROGBITS_rodata },
 	{ ".rodata1",checkPROGBITS_rodata1 },
@@ -124,6 +125,15 @@ for(i=0;i<frmhdr.fde_count;i++) {
                 fprintf(stderr,"address: %lx\n", (u_long)tmp);
 	}
 
+return 1;
+}
+
+int
+checkPROGBITS_gcc_except_table(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
+{
+/*
+ * .gcc_except_table contains arbitrary initialized data. There is nothing to check.
+ */
 return 1;
 }
 
