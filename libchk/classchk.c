@@ -272,7 +272,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					 * for the funcptr that was used for the lookup.
 					 */
 					if( dlinfo.dli_saddr &&
-							(fptr2ptr(dlinfo.dli_saddr)!=fptr2ptr(vtvirtfuncs[j])) ) 
+							(fptr2ptr(*((fptr*)dlinfo.dli_saddr))!=fptr2ptr(vtvirtfuncs[j])) ) 
 					{
 						if( (!libchk_debug&LIBCHK_DEBUG_CXXHUSH) ) {
 							printf("Uhoh2. Not an exact match %p %p\n",
