@@ -225,7 +225,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					memset(&dlinfo,0,sizeof(dlinfo));
 					if( !dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo) ) {
 						fprintf(stderr,"Class %s\n", classp->name );
-						TETJ_REPORT_INFO("Did not find symbol for Virtual table entry "
+						TETJ_REPORT_INFO("Error looking for symbol for Virtual table entry "
 														 "[%d][%d](%p) expecting %s\n",
 														 v, j, fptr2ptr(vtvirtfuncs[j]),
 														 classp->vtable[v].virtfuncs[j] );
@@ -272,7 +272,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					 * for the funcptr that was used for the lookup.
 					 */
 					if( dlinfo.dli_saddr &&
-							(dlinfo.dli_saddr!=fptr2ptr(vtvirtfuncs[j])) ) 
+							(fptr2ptr(dlinfo.dli_saddr)!=fptr2ptr(vtvirtfuncs[j])) ) 
 					{
 						if( (!libchk_debug&LIBCHK_DEBUG_CXXHUSH) ) {
 							printf("Uhoh2. Not an exact match %p %p\n",
