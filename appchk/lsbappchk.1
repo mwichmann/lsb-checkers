@@ -7,7 +7,7 @@ lsbappchk \- check LSB conformance of application
 .IR outputfile ]
 .RB [ \-A ]
 .RB [ \-M
-.IR modulename ]
+.IR modulename ]...
 .RB [ \-L
 .IR pathtolib ]...
 .I appname
@@ -45,9 +45,9 @@ since
 does not actually run the application, it cannot deduce the
 library dependency graph.
 .PP
-A journal file is created named 
-.BI journal.appchk. appname , 
-where 
+A journal file is named 
+.BI journal.appchk. appname
+is created, where 
 .I appname
 is the binary specified on the command line. It contains a record of
 the test results in a format that can be submitted for LSB Certification.
