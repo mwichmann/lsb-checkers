@@ -1,6 +1,6 @@
 .TH lsbappchk "1" "" "lsbappchk (LSB)" LSB
 .SH NAME
-lsbappchk \- check LSB conformance of application
+lsbappchk \- check LSB conformance of application or shared library
 .SH SYNOPSIS
 .B lsbappchk
 .RB [ \-o
@@ -11,14 +11,28 @@ lsbappchk \- check LSB conformance of application
 .RB [ \-L
 .IR pathtolib ]...
 .I appname
+.br
+.B lsbappchk
+.RB [ \-o
+.IR outputfile ]
+.RB [ \-A ]
+.RB [ \-M
+.IR modulename ]...
+.B \-L
+.I pathtolib
 .SH DESCRIPTION
 .PP
-Measure an application executable's conformance to the Linux Standard
+In the first form,
+measure an application executable's conformance to the Linux Standard
 Base (LSB) specification. The object format of the application is
 checked, as is the list of shared libraries used by the application,
 and the list of functions and global data used by the
 application. Warnings are produced for anything that is referenced
 but not contained in the LSB specification. 
+.PP
+In the second form, a shared library is examined without considering
+an application that may be linked with it, useful for shared libraries
+that may be development targets on their own.
 .IR lsbappchk 's
 view of valid libraries and interfaces can be expanded.
 .TP
@@ -44,8 +58,11 @@ since
 .I lsbappchk
 does not actually run the application, it cannot deduce the
 library dependency graph.
+.br
+This option may also be used if a shared library needs to be
+checked standalone.
 .PP
-A journal file is named 
+A journal file named 
 .BI journal.appchk. appname
 is created, where 
 .I appname
