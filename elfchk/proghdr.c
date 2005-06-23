@@ -401,6 +401,7 @@ checkPT_GNU_EH_FRAME(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   for(i=0;i<file->numsh;i++) {
 		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
 				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
+				(file->saddr[i].sh_size != 0) &&
 				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
 			/* Section appears to belong to this segment */
 			if( strcmp(ElfGetString(file,file->saddr[i].sh_name), ".eh_frame_hdr") != 0 ) {

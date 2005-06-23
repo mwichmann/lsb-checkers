@@ -180,3 +180,16 @@ file1->strndx = hdr1->e_shstrndx;
 getSymbolVersionInfo(file1);
 return elf_type;
 }
+
+int getElfType (ElfFile *file1)
+{
+   int elf_type = ELF_UNKNOWN;
+   Elf_Ehdr *hdr1;
+
+   if (file1)
+      hdr1=(Elf_Ehdr *)file1->addr;
+   if (hdr1)
+      elf_type = hdr1->e_type;
+
+   return elf_type;
+}
