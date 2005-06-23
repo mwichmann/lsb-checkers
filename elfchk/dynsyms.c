@@ -26748,19 +26748,19 @@ struct versym DynSyms[] = {
 	{"lseek","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
-	{"lseek64","GLIBC_2.1",0,LSB_Core},
+	{"lseek64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __ia64__
 	{"lseek64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"lseek64","GLIBC_2.1",0,LSB_Core},
+	{"lseek64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"lseek64","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"lseek64","GLIBC_2.1",0,LSB_Core},
+	{"lseek64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __x86_64__
 	{"lseek64","GLIBC_2.2.5",0,LSB_Core},
@@ -28177,19 +28177,19 @@ struct versym DynSyms[] = {
 	{"open","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
-	{"open64","GLIBC_2.1",0,LSB_Core},
+	{"open64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __ia64__
 	{"open64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"open64","GLIBC_2.1",0,LSB_Core},
+	{"open64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __powerpc64__
 	{"open64","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
-	{"open64","GLIBC_2.1",0,LSB_Core},
+	{"open64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __x86_64__
 	{"open64","GLIBC_2.2.5",0,LSB_Core},
