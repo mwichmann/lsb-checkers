@@ -22,5 +22,6 @@ typedef enum {
 /* If ELF type is unknown, the function will return the type of file */
 extern int checkElfhdr(ElfFile *file1, Elf_type expect, 
                         struct tetj_handle *journal);
-
+/* Return the ELF type of the file */
+extern int getElfType(ElfFile *file1);
 #endif /* _ELF_HDR_H */
