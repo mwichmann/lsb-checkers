@@ -50,13 +50,13 @@ struct versym libpthread_so_0[] = {
 	{"lseek64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"lseek64","GLIBC_2.1",0,LSB_Core,8,1},
+	{"lseek64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __powerpc64__
 	{"lseek64","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"lseek64","GLIBC_2.1",0,LSB_Core,8,1},
+	{"lseek64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __x86_64__
 	{"lseek64","GLIBC_2.2.5",0,LSB_Core,8,1},
@@ -65,19 +65,19 @@ struct versym libpthread_so_0[] = {
 	{"lseek64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
-	{"open64","GLIBC_2.1",0,LSB_Core,4,1},
+	{"open64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __ia64__
 	{"open64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"open64","GLIBC_2.1",0,LSB_Core,4,1},
+	{"open64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"open64","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"open64","GLIBC_2.1",0,LSB_Core,4,1},
+	{"open64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"open64","GLIBC_2.2.5",0,LSB_Core,4,1},
