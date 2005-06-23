@@ -546,11 +546,11 @@ for(i=0;i<numProgHeaders;i++){
 			break;
 		case 0: /* Not checked */
 			if( elfchk_debug&DEBUG_PROGRAM_HEADERS )
-			fprintf( stderr, "Header[%2d] %-12.12s Not checked\n",
+			fprintf( stderr, "Header[%2d] %-15.15s Not checked\n",
 				index, Headers[i].name );
 			break;
 		case -1: /* Fail */
-			fprintf( stderr, "Header[%2d] %-12.12s Failed\n",
+			fprintf( stderr, "Header[%2d] %-15.15s Failed\n",
 				index, Headers[i].name );
 			break;
 			}
