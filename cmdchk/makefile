@@ -23,7 +23,7 @@ install:
 
 # Distclean means will need database to rebuild
 distclean: clean
-	rm -f cmds.c cmdlist
+	rm -f cmds.h cmdlist
 
 clean:
 	rm -f $(OBJS) cmdchk
