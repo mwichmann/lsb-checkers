@@ -457,7 +457,23 @@ Msg( "No definition for FE_DOWNWARD (5304, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5304,%d);\n", architecture, FE_DOWNWARD);
 #endif
 #endif
-#if __ia64__
+#if __powerpc64__
+#ifdef FE_UPWARD
+	CompareConstant(FE_UPWARD,2,5305,architecture)
+#else
+Msg( "Error: Constant not found: FE_UPWARD\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef FE_UPWARD
+	CompareConstant(FE_UPWARD,2,5305,architecture)
+#else
+Msg( "Error: Constant not found: FE_UPWARD\n");
+cnt++;
+#endif
+
+#elif __ia64__
 #ifdef FE_UPWARD
 	CompareConstant(FE_UPWARD,2,5305,architecture)
 #else
