@@ -197,7 +197,7 @@ struct SectionInfo SectionInfo[] = {
 	{".rodata",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 	{".rodata1",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 #if __ia64__
-	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
+	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkNOBITS},
 #endif /* __ia64__ */
 #if __powerpc__ && !__powerpc64__
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
