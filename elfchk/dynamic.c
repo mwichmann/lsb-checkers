@@ -64,9 +64,9 @@ checkDT_NEEDED(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle
     {
       /* We compare basenames as we assume the application setups
          up LD_LIBRARY_PATH's correctly for its packaged libraries */
-      if (!strcmp(basename(ElfGetStringIndex(file1,dyn1->d_un.d_val, 
-                                             hdr1->sh_link)),
-                  basename(ExtraDtNeeded[j])))
+      if (!strncmp(basename(ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link)),
+                   basename(ExtraDtNeeded[j]),
+                  strlen(basename(ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link)))) )
       {
         break;
       }
