@@ -342,6 +342,7 @@ while( !gzeof(zfile) ) {
     int cur_offset = 0;
     int isFileELF = 0;
     int elf_type;
+	Elf_Shdr* hdr1;
 
     if (check_app) {
        cur_offset = gztell(zfile);
@@ -364,25 +365,36 @@ while( !gzeof(zfile) ) {
 			    fprintf (stderr, "\ncheckRpmArchive: Inflating file %s size %d ...\n",filename, elfFile->size); 
                 gzread(zfile, uncompFile, elfFile->size);
                 elfFile->addr = uncompFile;
-                snprintf(tmp_string, TMP_STRING_SIZE,
-                         "File %s is ELF. Checking ELF contents ...", filename); 
-                fprintf(stderr, "%s\n", tmp_string); 
-                tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-							0, 0, 0, tmp_string);
-
-                elf_type = checkElf(elfFile, ELF_UNKNOWN, journal); 
-
-                if (elf_type == ET_DYN) {
-                   snprintf(tmp_string, TMP_STRING_SIZE,
-                         "ELF file %s is DSO. Adding library symbols...", filename); 
-                   fprintf(stderr, "%s\n", tmp_string);			   
-                   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-							0, 0, 0, tmp_string);
-
-				   /* If file is a DSO, include those symbols while verifying executable symbols */
-				   add_library_symbols(elfFile, journal, modules);
-                } 
+				elf_type = getElfType(elfFile);
 				if ((elf_type == ET_EXEC) || (elf_type == ET_DYN)) {
+                   snprintf(tmp_string, TMP_STRING_SIZE,
+                            "File %s is ELF", filename); 
+                   fprintf(stderr, "%s\n", tmp_string); 
+                   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+				   			0, 0, 0, tmp_string);
+
+/*                   elf_type = checkElf(elfFile, ELF_UNKNOWN, journal);  */
+
+                   if (elf_type == ET_DYN) {
+                      snprintf(tmp_string, TMP_STRING_SIZE,
+                            "ELF file %s is DSO. Adding library symbols...", filename); 
+                      fprintf(stderr, "%s\n", tmp_string);			   
+                      tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+			   				0, 0, 0, tmp_string);
+
+			     	   /* If file is a DSO, include those symbols while verifying executable symbols */
+                      addDTNeeded(filename);
+
+                      checkElfhdr(elfFile, elf_type, journal);
+                      /* Search through program headers for the one with the dynamic symbols in it. */
+                      for(i=0;i<elfFile->numph;i++)
+                      {
+                        hdr1=&(elfFile->saddr[i]);
+                        if(hdr1->sh_type == SHT_DYNSYM)
+                            elfFile->dynsymhdr=hdr1;
+                      }
+			   	      add_library_symbols(elfFile, journal, modules);
+                   } 
                    /*
 				    * Store the filename, file offset and file size for executables 
 				    * These files will be verified for compliance once all DSO symbols have been 
@@ -402,9 +414,9 @@ while( !gzeof(zfile) ) {
 				   elfFiles[numArchiveElfInfo -1]->filetype = elf_type;
 				   elfFiles[numArchiveElfInfo -1]->filename = strdup(filename);
 
-				   } /* if ET_EXEC */
-	               if (uncompFile) free(uncompFile);
-	               if (elfFile) free(elfFile);
+				} /* if ET_EXEC || ET_DYN */
+	            if (uncompFile) free(uncompFile);
+	            if (elfFile) free(elfFile);
                 /* Seek back to the beginning of file offset */      
                 gzseek (zfile, cur_offset, SEEK_SET);
              } else {
@@ -531,7 +543,7 @@ if( filesizesum != rpmtagsize ) {
                 gzread(zfile, execFile, elfFile->size);
                 elfFile->addr = execFile;
                 snprintf(tmp_string, TMP_STRING_SIZE,
-                    "Checking symbols for file %s ...", elfFiles[i]->filename); 
+                    "Checking ELF file %s ...", elfFiles[i]->filename); 
                 fprintf(stderr, "%s\n", tmp_string); 
                 tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 							0, 0, 0, tmp_string);
@@ -540,6 +552,7 @@ if( filesizesum != rpmtagsize ) {
                    checkElf(elfFile, ELF_IS_EXEC, journal); 
                    checksymbols(elfFile, journal, modules); 
 				} else if (elfFiles[i]->filetype == ET_DYN) {
+                   checkElf(elfFile, ELF_IS_DSO, journal); 
 				   check_lib(elfFile, journal, ELF_IS_DSO, modules);
 				}
              } else {
