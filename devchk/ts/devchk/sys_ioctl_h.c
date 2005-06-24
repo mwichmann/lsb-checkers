@@ -23,7 +23,23 @@ int pcnt=0;
 Msg("Checking data structures in sys/ioctl.h\n");
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
+#ifdef TIOCGWINSZ
+	CompareConstant(TIOCGWINSZ,0x40087468,4611,architecture)
+#else
+Msg( "Error: Constant not found: TIOCGWINSZ\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef TIOCGWINSZ
+	CompareConstant(TIOCGWINSZ,0x40087468,4611,architecture)
+#else
+Msg( "Error: Constant not found: TIOCGWINSZ\n");
+cnt++;
+#endif
+
+#elif __ia64__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture)
 #else
@@ -31,8 +47,44 @@ Msg( "Error: Constant not found: TIOCGWINSZ\n");
 cnt++;
 #endif
 
+#elif __i386__
+#ifdef TIOCGWINSZ
+	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture)
+#else
+Msg( "Error: Constant not found: TIOCGWINSZ\n");
+cnt++;
 #endif
 
+#elif __s390x__
+#ifdef TIOCGWINSZ
+	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture)
+#else
+Msg( "Error: Constant not found: TIOCGWINSZ\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef TIOCGWINSZ
+	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture)
+#else
+Msg( "Error: Constant not found: TIOCGWINSZ\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef TIOCGWINSZ
+	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture)
+#else
+Msg( "Error: Constant not found: TIOCGWINSZ\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for TIOCGWINSZ (4611, int) in db\n");
+#ifdef TIOCGWINSZ
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4611,%d);\n", architecture, TIOCGWINSZ);
+#endif
+#endif
 #if __powerpc64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,1074030207,4619,architecture)
