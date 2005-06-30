@@ -20,12 +20,22 @@
  */
 
 void *
-fptr2ptr(fptr fptr)
+fptr2ptr(fptr *fptr)
 {
 #if defined(__ia64__)
-return fptr.func;
+return fptr->func;
 #else
 return (void *)fptr;
+#endif
+}
+
+void *
+fptr2ptrp(fptr *fptr)
+{
+#if defined(__ia64__)
+return fptr->func;
+#else
+return (void *)*fptr;
 #endif
 }
 
@@ -223,11 +233,11 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					 * found in the vtable.
 					 */
 					memset(&dlinfo,0,sizeof(dlinfo));
-					if( !dladdr(fptr2ptr(vtvirtfuncs[j]), &dlinfo) ) {
+					if( !dladdr(fptr2ptrp(&vtvirtfuncs[j]), &dlinfo) ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Error looking for symbol for Virtual table entry "
 														 "[%d][%d](%p) expecting %s\n",
-														 v, j, fptr2ptr(vtvirtfuncs[j]),
+														 v, j, fptr2ptrp(&vtvirtfuncs[j]),
 														 classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
@@ -235,12 +245,12 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 #ifdef DEBUG
 					if( classp->vtable[v].virtfuncs[j][0] ) {
 						symp = dlsym(dlhndl, classp->vtable[v].virtfuncs[j]);
-						if ( symp != fptr2ptr(vtvirtfuncs[j]) ) {
+						if ( symp != fptr2ptrp(&vtvirtfuncs[j]) ) {
 							Dl_info	dlinfo2;
 							int s;
 							for(s=0;s<12;s++) {
 								memset(&dlinfo2,0,sizeof(dlinfo2));
-								dladdr(fptr2ptr(vtvirtfuncs[s]), &dlinfo2);
+								dladdr(fptr2ptrp(&vtvirtfuncs[s]), &dlinfo2);
 								fprintf(stderr,"vtable[%d] %p %s\n", s, vtvirtfuncs[s], dlinfo2.dli_sname );
 							}
 							memset(&dlinfo2,0,sizeof(dlinfo2));
@@ -250,7 +260,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 														 "[%d][%d] %s is not expected\n", v, j, 
 														 classp->vtable[v].virtfuncs[j]);
 							fprintf(stderr,"%p doesn't match %p which appears to be %s %p\n", 
-											symp, fptr2ptr(vtvirtfuncs[j]), dlinfo2.dli_sname, dlinfo2.dli_saddr);
+											symp, fptr2ptrp(&vtvirtfuncs[j]), dlinfo2.dli_sname, dlinfo2.dli_saddr);
 						test_failed = 1;
 						}
 					}
@@ -272,18 +282,19 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					 * for the funcptr that was used for the lookup.
 					 */
 					if( dlinfo.dli_saddr &&
-							(fptr2ptr(*((fptr*)dlinfo.dli_saddr))!=fptr2ptr(vtvirtfuncs[j])) ) 
+							(fptr2ptr(((fptr *)dlinfo.dli_saddr))!=fptr2ptrp(&vtvirtfuncs[j])) ) 
 					{
 						if( (!libchk_debug&LIBCHK_DEBUG_CXXHUSH) ) {
 							printf("Uhoh2. Not an exact match %p %p\n",
-										 dlinfo.dli_saddr, fptr2ptr(vtvirtfuncs[j]));
+										 dlinfo.dli_saddr, fptr2ptrp(&vtvirtfuncs[j]));
 							printf("Uhoh2. Not an exact match %s %s\n",
 										 dlinfo.dli_sname, classp->vtable[v].virtfuncs[j]);
 						}
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Symbol address found for Virtual table entry [%d][%d] "
 														 "%p (found) doesn't match %p (expected).\n",
-														 v, j, dlinfo.dli_saddr, fptr2ptr(vtvirtfuncs[j]));
+														 v, j, fptr2ptr(((fptr *)dlinfo.dli_saddr)),
+														 fptr2ptrp(&vtvirtfuncs[j]));
 						test_failed = 1;
 					}
 
