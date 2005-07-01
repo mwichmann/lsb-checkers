@@ -687,6 +687,8 @@ checkRpmIdxOS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
         fprintf(stderr, "%s\n", tmp_string);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     } else {
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	       	0, 0, 0, name);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); 
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
@@ -712,6 +714,10 @@ checkRpmIdxARCH(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
         fprintf(stderr, "%s\n", tmp_string);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     } else {
+	if (strcmp(name, "noarch") == 0)
+	    is_noarch = 1;
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	       	0, 0, 0, name);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); 
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
