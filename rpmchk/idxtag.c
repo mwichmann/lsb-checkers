@@ -1403,19 +1403,32 @@ checkRpmIdxPAYLOADFORMAT(RpmFile * file1, RpmHdrIndex * hidx,
 {
     int htag, htype, hoffset, hcount;
     char *name;
+    char tmp_string[TMP_STRING_SIZE+1];
 
+    tetj_tp_count++;
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		       "Check payload format");
     htag = ntohl(hidx->tag);
     htype = ntohl(hidx->type);
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
     name = file1->storeaddr + hoffset;
-    if (strcmp(name, "cpio") != 0) {
-	fprintf(stderr,
-		"Invalid RPMTAG_PAYLOADFORMAT: expecting \"cpio\"");
-	fprintf(stderr, " but found %s\n", name);
-    }
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Payload format: %s\n", name);
+    if (strcmp(name, "cpio") != 0) {
+        snprintf (tmp_string, TMP_STRING_SIZE,
+	          "Invalid RPMTAG_PAYLOADFORMAT: expecting cpio but found %s",
+	          name);
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	       	           0, 0, 0, tmp_string);
+        fprintf(stderr, "%s\n", tmp_string);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    } else {
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	       	0, 0, 0, name);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); 
+    }
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
 }
 
 void
@@ -1424,19 +1437,32 @@ checkRpmIdxPAYLOADCOMPRESSOR(RpmFile * file1, RpmHdrIndex * hidx,
 {
     int htag, htype, hoffset, hcount;
     char *name;
+    char tmp_string[TMP_STRING_SIZE+1];
 
+    tetj_tp_count++;
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		       "Check payload compressor");
     htag = ntohl(hidx->tag);
     htype = ntohl(hidx->type);
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
     name = file1->storeaddr + hoffset;
-    if (strcmp(name, "gzip") != 0) {
-	fprintf(stderr,
-		"Invalid RPMTAG_PAYLOADCOMPRESSOR: expecting \"gzip\"");
-	fprintf(stderr, " but found %s\n", name);
-    }
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Payload compressor: %s\n", name);
+    if (strcmp(name, "gzip") != 0) {
+        snprintf (tmp_string, TMP_STRING_SIZE,
+	       "Invalid RPMTAG_PAYLOADCOMPRESSOR: expecting gzip but found %s",
+		  name);
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	       	0, 0, 0, tmp_string);
+        fprintf(stderr, "%s\n", tmp_string);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    } else {
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	       	           0, 0, 0, name);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); 
+    }
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
 }
 
 void
