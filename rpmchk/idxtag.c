@@ -642,8 +642,7 @@ checkRpmIdxLICENSE(RpmFile * file1, RpmHdrIndex * hidx,
 }
 
 void
-checkRpmIdxGROUP(RpmFile * file1, RpmHdrIndex * hidx,
-		 struct tetj_handle *journal)
+checkRpmIdxGROUP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
     int hoffset;
     char *name;
@@ -656,8 +655,7 @@ checkRpmIdxGROUP(RpmFile * file1, RpmHdrIndex * hidx,
 }
 
 void
-checkRpmIdxURL(RpmFile * file1, RpmHdrIndex * hidx,
-		struct tetj_handle *journal)
+checkRpmIdxURL(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
     int hoffset;
     char *name;
@@ -670,23 +668,32 @@ checkRpmIdxURL(RpmFile * file1, RpmHdrIndex * hidx,
 }
 
 void
-checkRpmIdxOS(RpmFile * file1, RpmHdrIndex * hidx,
-	      struct tetj_handle *journal)
+checkRpmIdxOS(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
     int hoffset;
     char *name;
+    char tmp_string[TMP_STRING_SIZE+1];
 
+    tetj_tp_count++;
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check OS");
     hoffset = ntohl(hidx->offset);
     name = file1->storeaddr + hoffset;
     if (strcasecmp(name, validos) != 0) {
-	fprintf(stderr, "Incorrect RPMTAG_OS: expecting %s but found %s\n",
-		validos, name);
+        snprintf (tmp_string, TMP_STRING_SIZE,
+	          "Incorrect RPMTAG_OS: expecting %s but found %s",
+		  validos, name);
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	       	0, 0, 0, tmp_string);
+        fprintf(stderr, "%s\n", tmp_string);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    } else {
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); 
     }
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
 }
 
 void
-checkRpmIdxARCH(RpmFile * file1, RpmHdrIndex * hidx,
-		struct tetj_handle *journal)
+checkRpmIdxARCH(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
     int hoffset;
     char *name;
@@ -696,7 +703,6 @@ checkRpmIdxARCH(RpmFile * file1, RpmHdrIndex * hidx,
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check architecture");
     hoffset = ntohl(hidx->offset);
     name = file1->storeaddr + hoffset;
-    /* if (strcmp(name, architecture) != 0) { */
     if (strcmp(name, architecture) != 0 && strcmp(name, "noarch") != 0) {
         snprintf (tmp_string, TMP_STRING_SIZE,
 	          "Incorrect RPMTAG_ARCH: expecting %s or noarch but found %s",
