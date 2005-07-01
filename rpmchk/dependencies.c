@@ -11,53 +11,78 @@
 #include "rpmchk.h"
 #include "../tetj/tetj.h"
 
-void
-check_dependencies(struct tetj_handle *journal)
+void check_dependencies(struct tetj_handle *journal)
 {
-	int i,d;
-	char *name,*vername;
+    int i, d;
+    char *name, *vername;
+    int fail = 0;
+#define TMP_STRING_SIZE (400)
+    char tmp_string[TMP_STRING_SIZE + 1];
 
-	if (numrequirename != numrequireversion ) {
-		fprintf(stderr, "check_dependencies() different number of REQUIRENAME %d & REQUIREVERSION %d\n",
-				numrequirename, numrequireversion );
+    tetj_tp_count++;
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check dependencies");
+    if (numrequirename != numrequireversion) {
+	snprintf(tmp_string, TMP_STRING_SIZE,
+"check_dependencies() different number of REQUIRENAME %d & REQUIREVERSION %d",
+		 numrequirename, numrequireversion);
+	fprintf(stderr, "%s\n", tmp_string);
+	fail++;
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+			   0, 0, 0, tmp_string);
+    }
+
+    name = requirename;
+    vername = requireversion;
+    for (i = 0; i < numrequirename; i++) {
+	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
+	    fprintf(stderr, "Required Name: %s\n", name);
+	if (strcmp(name, "rpmlib(PayloadFilesHavePrefix)") == 0)
+	    hasPayloadFilesHavePrefix = 1;
+	if (strcmp(name, "rpmlib(CompressedFileNames)") == 0)
+	    hasCompressedFileNames = 1;
+
+	for (d = 0; d < numdeps; d++) {
+	    if (strcmp(name, validdeps[d].reqname) == 0) {
+		/* found a match */
+		if (strcmp(vername, validdeps[d].reqversion) == 0) {
+		    /* the version matches */
+		    validdeps[d].seenit = 1;
+		    if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
+			fprintf(stderr, "matched Name: %s\n", name);
+		    break;
+		} else {
+		    snprintf(tmp_string, TMP_STRING_SIZE,
+			    "Version for %s: %s doesn't match expected %s",
+			    name, vername, validdeps[d].reqversion);
+		    fprintf(stderr, "%s\n", tmp_string);
+		    fail++;
+		    tetj_testcase_info(journal, tetj_activity_count,
+			               tetj_tp_count, 0, 0, 0, tmp_string);
+		}
+	    }
 	}
-
-	name = requirename;
-	vername = requireversion;
-	for(i = 0; i < numrequirename; i++ ) {
-	       if (1 && (rpmchkdebug & DEBUG_TRACE_CONTENTS) )
-	                   fprintf(stderr, "Required Name: %s\n", name);
-               if (strcmp(name, "rpmlib(PayloadFilesHavePrefix)") == 0)
-	                   hasPayloadFilesHavePrefix = 1;
-               if (strcmp(name, "rpmlib(CompressedFileNames)") == 0)
-	                   hasCompressedFileNames = 1;
-
-	       for(d = 0; d < numdeps; d++ ) {
-		       if(strcmp(name,validdeps[d].reqname) == 0 ) {
-			       /* found a match */
-			       if( strcmp(vername,validdeps[d].reqversion) == 0 ) {
-				       /* the version matches */
-				       validdeps[d].seenit = 1;
-					if (1 && (rpmchkdebug & DEBUG_TRACE_CONTENTS) )
-	                   			fprintf(stderr, "matched Name: %s\n", name);
-				       break;
-			       } else {
-				       fprintf(stderr,"Version for %s: %s doesn't match expected %s\n",
-						       name, vername, validdeps[d].reqversion );
-			       }
-		       } 
-	       }
-	       if( d == numdeps ) {
-			fprintf(stderr, "Unexpected dependency %s\n", name );
-	       }
-	       name += strlen(name) + 1;
-	       vername += strlen(vername) + 1;
+	if (d == numdeps) {
+	    snprintf(tmp_string, TMP_STRING_SIZE,
+		     "Unexpected dependency %s", name);
+	    fprintf(stderr, "%s\n", tmp_string);
+	    fail++;
+	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+		               0, 0, 0, tmp_string);
 	}
-	for( d = 0 ; d < numdeps; d++ ) {
-		if( validdeps[d].isrequired && !validdeps[d].seenit )
-			fprintf(stderr,"Didn't see expected dependency %s: %s\n",
-					validdeps[d].reqname,validdeps[d].reqversion);
-	}
+	name += strlen(name) + 1;
+	vername += strlen(vername) + 1;
+    }
+    for (d = 0; d < numdeps; d++) {
+	if (validdeps[d].isrequired && !validdeps[d].seenit)
+	    fprintf(stderr, "Didn't see expected dependency %s: %s\n",
+		    validdeps[d].reqname, validdeps[d].reqversion);
+    }
 
-	return;
+    if (fail)
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    else
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
+    return;
 }
