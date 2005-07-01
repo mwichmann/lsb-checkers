@@ -16,6 +16,8 @@
 
 MD5_CTX md5ctx;
 
+#define TMP_STRING_SIZE (400)
+
 void
 checkRpmIdx(RpmFile * file1, RpmHdrIndex * hidx, RpmIdxTagFuncRec Tags[],
 	    int numtags, struct tetj_handle *journal)
@@ -688,14 +690,25 @@ checkRpmIdxARCH(RpmFile * file1, RpmHdrIndex * hidx,
 {
     int hoffset;
     char *name;
+    char tmp_string[TMP_STRING_SIZE+1];
 
+    tetj_tp_count++;
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check architecture");
     hoffset = ntohl(hidx->offset);
     name = file1->storeaddr + hoffset;
-    if (strcmp(name, architecture) != 0) {
-	fprintf(stderr,
-		"Incorrect RPMTAG_ARCH: expecting %s but found %s\n",
-		architecture, name);
+    /* if (strcmp(name, architecture) != 0) { */
+    if (strcmp(name, architecture) != 0 && strcmp(name, "noarch") != 0) {
+        snprintf (tmp_string, TMP_STRING_SIZE,
+	          "Incorrect RPMTAG_ARCH: expecting %s or noarch but found %s",
+		  architecture, name);
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+	       	0, 0, 0, tmp_string);
+        fprintf(stderr, "%s\n", tmp_string);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    } else {
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS); 
     }
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
 }
 
 void
