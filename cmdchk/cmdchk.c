@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.11 $
+ * This is $Revision: 1.12 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.12  2005/07/01 16:02:08  mats
+ * Try stat if access fails.  Bug 1032.
+ *
  * Revision 1.11  2005/06/12 16:06:32  mats
  * Revamp cmdchk for counting testcases easily; emit test count to journal
  *
@@ -67,7 +70,7 @@ char *binpaths[] = {
 
 /* Real CVS revision number so we can strings it from
    the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.11 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.12 $";
 
 
 void check_cmd(struct cmds *cp, struct tetj_handle *journal)
@@ -75,6 +78,7 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
     char filename[PATH_MAX + 1];
 #define TMP_STRING_SIZE (PATH_MAX+20)
     char tmp_string[TMP_STRING_SIZE + 1];
+    struct stat stbuf;
     int i;
 
     tetj_tp_count = 1;
@@ -82,30 +86,34 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
     snprintf(tmp_string, TMP_STRING_SIZE, "Looking for command %s", cp->cmdname);
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
-    if (cp->cmdname[0] != '/') {
-	/* Find the command */
-	for (i = 0; binpaths[i]; i++) {
-	    snprintf(filename, PATH_MAX, binpaths[i], cp->cmdname);
-	    if (access(filename, X_OK) == 0) {
-		tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+    /*
+     * TODO: LSB bug 1006 - once command paths are cleaned out in DB,
+     * if cp->cmdpath is non-NULL, check it explicitly in preference
+     * to searching for cp->cmdname in binpaths
+     */
+
+    /* Find the command */
+    for (i = 0; binpaths[i]; i++) {
+	snprintf(filename, PATH_MAX, binpaths[i], cp->cmdname);
+	if (access(filename, X_OK) == 0) {
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 #ifdef VERBOSE
-		fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
+	    fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
 #endif
+	    break;
+	}
+
+	if (stat(filename, &stbuf) == 0) {
+	    if (stbuf.st_mode & S_IXUSR) {
+		tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+		printf("Second-chance for %s worked\n", filename);
 		break;
 	    }
-
 	}
-	if (!binpaths[i]) {
-	    fprintf(stderr, "Couldn't find %s\n", cp->cmdname);
-	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-	}
-    } else {
-	/* Presently, this path will never get taken */
-	/* absolute path given so we don't do a search through the bin paths */
-	strncpy(filename, cp->cmdname, PATH_MAX);
-	if (access(filename, R_OK | X_OK) == 0) {
-	    ;
-	}
+    }
+    if (!binpaths[i]) {
+	fprintf(stderr, "Couldn't find %s\n", cp->cmdname);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     tetj_testcase_end(journal, tetj_activity_count++, 0, "");
