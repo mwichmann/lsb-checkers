@@ -61,6 +61,7 @@ void check_dependencies(struct tetj_handle *journal)
 		}
 	    }
 	}
+
 	if (d == numdeps) {
 	    snprintf(tmp_string, TMP_STRING_SIZE,
 		     "Unexpected dependency %s", name);
@@ -72,10 +73,44 @@ void check_dependencies(struct tetj_handle *journal)
 	name += strlen(name) + 1;
 	vername += strlen(vername) + 1;
     }
-    for (d = 0; d < numdeps; d++) {
-	if (validdeps[d].isrequired && !validdeps[d].seenit)
-	    fprintf(stderr, "Didn't see expected dependency %s: %s\n",
-		    validdeps[d].reqname, validdeps[d].reqversion);
+
+    /* this is kind of convoluted - probably an easier way.
+     * if we found by earlier examination that we're a noarch pkg,
+     * then the standard "required" dependencies are the noarch ones,
+     * not the arch-specific ones. Step through a *different* array,
+     * repeating the check for "allowed" dependencies above
+     */
+    if (is_noarch) {
+	for (d = 0; d < numnoarchdeps; d++) {
+	    if (strcmp(name, noarchdeps[d].reqname) == 0) {
+		if (strcmp(vername, noarchdeps[d].reqversion) == 0) {
+		    noarchdeps[d].seenit = 1;
+		}
+	    }
+	}
+	for (d = 0; d < numnoarchdeps; d++) {
+	    if (noarchdeps[d].isrequired && !noarchdeps[d].seenit) {
+		snprintf(tmp_string, TMP_STRING_SIZE,
+			 "Didn't see required dependency %s=%s",
+			 noarchdeps[d].reqname, noarchdeps[d].reqversion);
+		fprintf(stderr, "%s\n", tmp_string);
+		fail++;
+		tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+				   0, 0, 0, tmp_string);
+	    }
+	}
+    } else {
+	for (d = 0; d < numdeps; d++) {
+	    if (validdeps[d].isrequired && !validdeps[d].seenit) {
+		snprintf(tmp_string, TMP_STRING_SIZE,
+			 "Didn't see expected dependency %s=%s",
+			 validdeps[d].reqname, validdeps[d].reqversion);
+		fprintf(stderr, "%s\n", tmp_string);
+		fail++;
+		tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+				   0, 0, 0, tmp_string);
+	    }
+	}
     }
 
     if (fail)

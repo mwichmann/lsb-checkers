@@ -32,6 +32,8 @@ char *validos = "linux";
 
 char *lanananame = NULL;
 
+int is_noarch = 0;
+
 RpmRequireRec validdeps[] = {
 	{"rpmlib(VersionedDependencies)","3.0.3-1", 0, 0 },
 	{"rpmlib(PayloadFilesHavePrefix)","4.0-1", 0, 0 },
@@ -61,9 +63,14 @@ RpmRequireRec validdeps[] = {
 	{"lsb-core-s390x",LSBVERSION, 0, 1 },
 	{"lsb-graphics-s390x",LSBVERSION, 0, 0 },
 #endif
-	};
-
+};
 int numdeps = sizeof(validdeps)/sizeof(RpmRequireRec);
+
+RpmRequireRec noarchdeps[] = {
+	{"lsb-core-noarch",LSBVERSION, 0, 1 },
+	{"lsb-graphics-noarch",LSBVERSION, 0, 0 },
+};
+int numnoarchdeps = sizeof(noarchdeps)/sizeof(RpmRequireRec);
 
 char *pkgname;
 int  lsbdepidx=-1;
