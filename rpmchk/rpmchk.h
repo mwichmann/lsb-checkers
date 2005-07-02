@@ -261,6 +261,6 @@ void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
 void checkRpmMetaData(RpmFile *file1, struct tetj_handle *journal);
 
 /* dependencies.c */
-extern void check_dependencies(struct tetj_handle *journal);
+extern int check_dependencies(struct tetj_handle *journal);
 
 #endif /* _RPMCHK_H */
