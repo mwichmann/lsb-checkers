@@ -27,7 +27,9 @@ void checkRpmArchiveFilename(char *filename, struct tetj_handle *journal)
 
     /* Check the RpmHeader magic value */
     tetj_tp_count++;
-    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check filename");
+    snprintf(tmp_string, TMP_STRING_SIZE,
+	     "Check payload filename %s", filename);
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
     if (!is_fhs_installable(filename)) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
 		 "checkRpmArchiveFilename: file %s not FHS compliant",
