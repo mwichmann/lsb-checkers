@@ -133,7 +133,7 @@ typedef	struct	{
 
 /* RPM Index things */
 
-typedef void (*IdxTagFunc)(RpmFile *, RpmHdrIndex *, struct tetj_handle *);
+typedef int (*IdxTagFunc)(RpmFile *, RpmHdrIndex *, struct tetj_handle *);
 
 typedef enum { Required, Optional, Deprecated, Obsoleted, Reserved, Informational  } RpmIdxReqd ;
 
