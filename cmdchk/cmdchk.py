@@ -3,18 +3,22 @@
 Test for presence of LSB required commands
 Commands are stored in the file cmdlist
 
-Usage: cmdchk [prefix]
+Usage: cmdchk [options]
 Prefix, if supplied, is a prefix to prepend to all paths
 '''
 
-# (C) Copyright 2002, 2003 The Free Standards Group, Inc.
+# (C) Copyright 2002-2005 The Free Standards Group
 #
 # Python version
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.7 $
+# This is $Revision: 1.8 $
 #
 # $Log: cmdchk.py,v $
+# Revision 1.8  2005/07/02 14:11:47  mats
+# Add option parsing; use stat for second-chance check; check-extras
+# is now activated by command-line option, not default
+#
 # Revision 1.7  2005/06/12 16:06:32  mats
 # Revamp cmdchk for counting testcases easily; emit test count to journal
 #
@@ -36,61 +40,63 @@ Prefix, if supplied, is a prefix to prepend to all paths
 # Added Python version of cmdchk.  This is an experiment to further test out
 # the Python tetj, it's not proposed to add to the lsbcmdchk pkg at this time
 #
-#
 
-import os, sys
-from os import R_OK, X_OK
+import os, sys, stat
+from stat import ST_MODE, S_IXUSR
+from optparse import OptionParser
 import tetj
-
-binpaths = [
-        "/bin",
-        "/sbin",
-        "/usr/bin",
-        "/usr/sbin",
-        "/usr/X11R6/bin",
-	"/usr/lib/lsb"		# is this okay to search?
-]
-
-prefix = ""
 
 class Path:
     def __init__(self, name):
-	self.name = name
+        self.name = name
     
     def dump(self, tag):
-	sys.stderr.write("%s from %s:\n" % (tag, self.name))
-	for cmd in self.cmds:
-	    sys.stderr.write("   %s\n" % cmd)
+        sys.stderr.write("%s from %s:\n" % (tag, self.name))
+        for cmd in self.cmds:
+            sys.stderr.write("   %s\n" % cmd)
 
 
-def check_cmd(journal, cmdname):
+def check_cmd(journal, command):
     """check if a command name is found in any of the binpaths"""
+    (cmdname, cmdpath) = command
     journal.testcase_start(cmdname)
-    tmp_string = "Looking for command %s" % cmdname
-    journal.purpose_start(tmp_string)
+    journal.purpose_start("Looking for command %s" % cmdname)
 
     # Check each of the directories in binpaths for the command
-    for path in binpaths:
-	if prefix:
-	    path = prefix + path
-	filename = path + os.sep + cmdname
-	if os.access(filename,R_OK|X_OK):
-	    journal.result_pass()
-	    break
 
-	if os.path.exists(filename):
-	    # it exists but access() failed: issue a FIP
-	    # (probably need to be running as root)
-	    sys.stderr.write("Couldn't access %s\n" % cmdname)
-	    tmp_string = "File found cannot be accessed: " + filename
-	    journal.testcase_info(0, 1, 1, tmp_string)
-	    journal.result_fip()
-	    break
+    # TODO: LSB bug 1006 - once command paths are cleaned out in DB,
+    # if cmdpath is set is set, use it in preference to searching for
+    # the cmdname name in binpaths
+    # basically, this becomes:
+    ##if cmdpath == "None":
+    # ... below chunk ...
+    ##else:
+    ##    # check for the required absolute path */
+    ##    if opts.prefix:
+    ##        path = opts.prefix + cmdpath
+    ##    if os.access(cmdpath, os.X_OK):
+    ##        journal.result_pass()
+    ##    else:
+    ##        sys.stderr.write("Couldn't find %s\n" % cmdpath)
+    ##        journal.result_fail()
+    for path in binpaths:
+        if opts.prefix:
+            path = opts.prefix + path
+        filename = path + os.sep + cmdname
+        if os.access(filename, os.X_OK):
+            journal.result_pass()
+            break
+
+        if os.path.exists(filename):
+            stbuf = os.stat(filename)
+            if stbuf[ST_MODE] & S_IXUSR:
+                journal.result_pass()
+                break
 
     else: 
         # fallthrough: not found at all
-	sys.stderr.write("Couldn't find %s\n" % cmdname)
-	journal.result_fail()
+        sys.stderr.write("Couldn't find %s\n" % cmdname)
+        journal.result_fail()
 
     journal.purpose_end()
     journal.testcase_end()
@@ -100,16 +106,17 @@ def check_extras(journal, database):
     """collect all the commands in binpaths. Strike them off if they match
     ones in the command list from the LSB database. Report the extras."""
     for path in binpaths:
-	if prefix:
-	    path = prefix + path
-	location = Path(path)
-	location.cmds = os.listdir(path)
+        if opts.prefix:
+            path = opts.prefix + path
+        location = Path(path)
+        location.cmds = os.listdir(path)
         ## location.dump("DEBUG: initial list")
-	for command in location.cmds[:]:	# examine a copy
-	    if command in database.cmds:
-		location.cmds.remove(command)	# so we can remove from orig
-	if len(location.cmds):
-	    location.dump("Extra commands")
+        #XXX buggy: misses the fullpath ones, and doesn't work with prefix
+        for command in location.cmds[:]:        # examine a copy
+            if command in database.cmds:
+                location.cmds.remove(command)   # so we can remove from orig
+        if len(location.cmds):
+            location.dump("Extra commands")
 
 
 def parse_cmds(cmdfile):
@@ -118,28 +125,47 @@ def parse_cmds(cmdfile):
     cmds = []
     for line in open(cmdfile).readlines():
         if line[0] == '#': continue
-        cmds.append(line.split()[0])	# two elements per line
+        cmds.append(line.split())       # two elements per line
     database.cmds = cmds
     ## database.dump("DEBUG: initial list")
     return database
 
 
-if len(sys.argv) > 1:
-    prefix = sys.argv[1]
+## main
+if __name__ == '__main__':
 
-journal = tetj.Journal("journal.lsbcmdchk", "lsbcmdchk")
-if not journal.journal:
-    sys.stderr.write("Could not open journal file")
-    sys.exit(1)
+    # initialize option parsing
+    usage="usage: %prog [options]"
+    parser = OptionParser(usage)
+    parser.add_option("-e", "--extras",
+                      action="store_true", dest="extras", default=False,
+                      help="check for extra files in target directories")
+    parser.add_option("-p", "--prefix", action="store", dest="prefix",
+                      help="prefix to prepend to all paths")
+    (opts, args) = parser.parse_args()
+    if len(args):
+        parser.error("incorrect number of arguments")
 
-journal.add_config("VSX_NAME=lsbcmdchk experimental")
-journal.add_config("search prefix is [%s]" % prefix)
-journal.config_end()
-database = parse_cmds("cmdlist")
-print "commands:", len(database.cmds)
-journal.scenario_info("\"total tests in cmdchk %d\"" % len(database.cmds))
-for command in database.cmds:
-    check_cmd(journal, command)
-check_extras(journal, database)
-journal.close()
-sys.exit(0)
+    # setup journal file for certification
+    journal = tetj.Journal("journal.lsbcmdchk", "lsbcmdchk")
+    if not journal.journal:
+        sys.stderr.write("Could not open journal file")
+        sys.exit(1)
+    journal.add_config("VSX_NAME=lsbcmdchk")
+    journal.add_config("search prefix is [%s]" % opts.prefix)
+    journal.config_end()
+
+    # Look in POSIX-standard path, but also add paths for sysadmin utilities
+    binpaths = os.confstr('CS_PATH').split(os.pathsep)
+    binpaths = binpaths + '/sbin:/usr/sbin'.split(os.pathsep)
+    # XXX until bug 1006 work is done
+    binpaths = binpaths + ['/usr/lib/lsb']
+
+    database = parse_cmds("cmdlist")
+    journal.scenario_info("\"total tests in cmdchk %d\"" % len(database.cmds))
+    for command in database.cmds:
+        check_cmd(journal, command)
+    if opts.extras:
+        check_extras(journal, database)
+    journal.close()
+    sys.exit(0)
