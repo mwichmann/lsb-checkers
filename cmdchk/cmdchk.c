@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.12 $
+ * This is $Revision: 1.13 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.13  2005/07/02 15:16:15  mats
+ * First cut at adding standard option-handling code for checkers
+ *
  * Revision 1.12  2005/07/01 16:02:08  mats
  * Try stat if access fails.  Bug 1032.
  *
@@ -55,6 +58,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <getopt.h>
 #include "../tetj/tetj.h"
 #include "cmds.h"
 
@@ -68,12 +72,11 @@ char *binpaths[] = {
     0
 };
 
-/* Real CVS revision number so we can strings it from
-   the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.12 $";
+/* Real CVS revision number so we can strings it from the binary if necessary */
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.13 $";
 
-
-void check_cmd(struct cmds *cp, struct tetj_handle *journal)
+void
+check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
     char filename[PATH_MAX + 1];
 #define TMP_STRING_SIZE (PATH_MAX+20)
@@ -106,7 +109,6 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 	if (stat(filename, &stbuf) == 0) {
 	    if (stbuf.st_mode & S_IXUSR) {
 		tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-		printf("Second-chance for %s worked\n", filename);
 		break;
 	    }
 	}
@@ -119,11 +121,57 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
     tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 }
 
-int main(int argc, char *argv[])
+void
+usage(char *progname)
+{
+  printf("usage: %s [options]\n%s%s%s%s", progname,
+         "  -h, --help         show this help message and exit\n",
+         "  -v, --version      show version and LSB version\n",
+         "  -p PREFIX, --prefix=PREFIX\n",
+         "                     prefix to append to all paths\n");
+}
+
+int
+main(int argc, char *argv[])
 {
     struct tetj_handle *journal;
     char tmp_string[TMP_STRING_SIZE + 1];
     int i, j;
+    int option_index = 0;
+    
+    while (1) {
+	int c;
+	static struct option long_options[] = {
+	    {"help",     no_argument,        NULL, 'h'},
+	    {"version",  no_argument,        NULL, 'v'},
+	    {"prefix",   required_argument,  NULL, 'p'},
+	    {0, 0, 0, 0}
+	};
+
+	c = getopt_long (argc, argv, "hvp:", long_options, &option_index);
+	if (c == -1)
+	    break;
+	switch (c) {
+	    case 'h':
+		usage(argv[0]);
+		exit (0);
+	    case 'v':
+		printf("%s %s for LSB Specification %s\n", argv[0],
+		       LSBCMDCHK_VERSION, LSBVERSION);
+		break;
+	    case 'p':
+		/* printf ("option p with value %s\n", optarg); */
+		printf("-p, --prefix not implemented, ignoring\n");
+		break;
+	    default:
+		usage(argv[0]);
+		exit (0);
+	}
+	if (optind < argc) {
+	    usage(argv[0]);
+	    exit (0);
+	}
+    }
 
     if (tetj_start_journal("journal.lsbcmdchk", &journal, "lsbcmdchk") != 0) {
 	perror("Could not open journal file");
@@ -131,7 +179,8 @@ int main(int argc, char *argv[])
     }
 
     snprintf(tmp_string, TMP_STRING_SIZE,
-	     "VSX_NAME=lsbcmdchk " LSBCMDCHK_VERSION);
+	     "VSX_NAME=lsbcmdchk %s for LSB Specification %s",
+	     LSBCMDCHK_VERSION, LSBVERSION);
     tetj_add_config(journal, tmp_string);
     tetj_config_end(journal);
 
