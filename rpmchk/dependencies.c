@@ -11,7 +11,8 @@
 #include "rpmchk.h"
 #include "../tetj/tetj.h"
 
-void check_dependencies(struct tetj_handle *journal)
+int
+check_dependencies(struct tetj_handle *journal)
 {
     int i, d;
     char *name, *vername;
@@ -19,8 +20,6 @@ void check_dependencies(struct tetj_handle *journal)
 #define TMP_STRING_SIZE (400)
     char tmp_string[TMP_STRING_SIZE + 1];
 
-    tetj_tp_count++;
-    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check dependencies");
     if (numrequirename != numrequireversion) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
 "check_dependencies() different number of REQUIRENAME %d & REQUIREVERSION %d",
@@ -113,11 +112,5 @@ void check_dependencies(struct tetj_handle *journal)
 	}
     }
 
-    if (fail)
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    else
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-
-    return;
+    return fail;
 }
