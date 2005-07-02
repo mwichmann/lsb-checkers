@@ -5,9 +5,13 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.13 $
+ * This is $Revision: 1.14 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.14  2005/07/02 19:12:48  mats
+ * Building more prototype "standard argument handling" for checkers,
+ * ultimately towards addressing bug 735.
+ *
  * Revision 1.13  2005/07/02 15:16:15  mats
  * First cut at adding standard option-handling code for checkers
  *
@@ -73,7 +77,7 @@ char *binpaths[] = {
 };
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.13 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.14 $";
 
 void
 check_cmd(struct cmds *cp, struct tetj_handle *journal)
@@ -124,9 +128,12 @@ check_cmd(struct cmds *cp, struct tetj_handle *journal)
 void
 usage(char *progname)
 {
-  printf("usage: %s [options]\n%s%s%s%s", progname,
+  printf("usage: %s [options]\n%s%s%s%s%s%s%s", progname,
          "  -h, --help         show this help message and exit\n",
          "  -v, --version      show version and LSB version\n",
+         "  -n, --nojournal    do not write a journal file\n",
+         "  -j JOURNAL, --version=JOURNAL\n",
+         "	               use JOURNAL as file/path for journal file\n",
          "  -p PREFIX, --prefix=PREFIX\n",
          "                     prefix to append to all paths\n");
 }
@@ -136,19 +143,24 @@ main(int argc, char *argv[])
 {
     struct tetj_handle *journal;
     char tmp_string[TMP_STRING_SIZE + 1];
+    char journal_filename[TMP_STRING_SIZE + 1];
     int i, j;
     int option_index = 0;
-    
+
+    snprintf(journal_filename, TMP_STRING_SIZE, "journal.lsbcmdchk");
+
     while (1) {
 	int c;
 	static struct option long_options[] = {
 	    {"help",     no_argument,        NULL, 'h'},
 	    {"version",  no_argument,        NULL, 'v'},
+	    {"nojournal",no_argument,        NULL, 'n'},
+	    {"journal",  required_argument,  NULL, 'j'},
 	    {"prefix",   required_argument,  NULL, 'p'},
 	    {0, 0, 0, 0}
 	};
 
-	c = getopt_long (argc, argv, "hvp:", long_options, &option_index);
+	c = getopt_long (argc, argv, "hvnj:p:", long_options, &option_index);
 	if (c == -1)
 	    break;
 	switch (c) {
@@ -158,6 +170,12 @@ main(int argc, char *argv[])
 	    case 'v':
 		printf("%s %s for LSB Specification %s\n", argv[0],
 		       LSBCMDCHK_VERSION, LSBVERSION);
+		break;
+	    case 'n':
+		snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
+		break;
+	    case 'j':
+		snprintf(journal_filename, TMP_STRING_SIZE, optarg);
 		break;
 	    case 'p':
 		/* printf ("option p with value %s\n", optarg); */
@@ -173,8 +191,10 @@ main(int argc, char *argv[])
 	}
     }
 
-    if (tetj_start_journal("journal.lsbcmdchk", &journal, "lsbcmdchk") != 0) {
-	perror("Could not open journal file");
+    if (tetj_start_journal(journal_filename, &journal, "lsbcmdchk") != 0) {
+	snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
+		 journal_filename);
+	perror(tmp_string);
 	exit(1);
     }
 
