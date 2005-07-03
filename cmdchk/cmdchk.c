@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.14 $
+ * This is $Revision: 1.15 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.15  2005/07/03 00:02:33  mats
+ * Add "prefix" handling for pointing at an alternate root
+ *
  * Revision 1.14  2005/07/02 19:12:48  mats
  * Building more prototype "standard argument handling" for checkers,
  * ultimately towards addressing bug 735.
@@ -67,23 +70,25 @@
 #include "cmds.h"
 
 char *binpaths[] = {
-    "/bin/%s",
-    "/sbin/%s",
-    "/usr/bin/%s",
-    "/usr/sbin/%s",
-    "/usr/X11R6/bin/%s",
-    "/usr/lib/lsb/%s",		/* install_initd, remove_initd */
+    "/bin/",
+    "/sbin/",
+    "/usr/bin/",
+    "/usr/sbin/",
+    "/usr/X11R6/bin/",
+    "/usr/lib/lsb/",		/* install_initd, remove_initd */
     0
 };
 
+#define TMP_STRING_SIZE (PATH_MAX+20)
+char prefix[TMP_STRING_SIZE + 1];
+
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.14 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.15 $";
 
 void
 check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
     char filename[PATH_MAX + 1];
-#define TMP_STRING_SIZE (PATH_MAX+20)
     char tmp_string[TMP_STRING_SIZE + 1];
     struct stat stbuf;
     int i;
@@ -101,7 +106,10 @@ check_cmd(struct cmds *cp, struct tetj_handle *journal)
 
     /* Find the command */
     for (i = 0; binpaths[i]; i++) {
-	snprintf(filename, PATH_MAX, binpaths[i], cp->cmdname);
+	if (prefix)
+	    snprintf(filename, PATH_MAX, "%s%s%s", prefix, binpaths[i], cp->cmdname);
+	else
+	    snprintf(filename, PATH_MAX, "%s%s", binpaths[i], cp->cmdname);
 	if (access(filename, X_OK) == 0) {
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 #ifdef VERBOSE
@@ -113,6 +121,9 @@ check_cmd(struct cmds *cp, struct tetj_handle *journal)
 	if (stat(filename, &stbuf) == 0) {
 	    if (stbuf.st_mode & S_IXUSR) {
 		tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+#ifdef VERBOSE
+		fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
+#endif
 		break;
 	    }
 	}
@@ -178,8 +189,7 @@ main(int argc, char *argv[])
 		snprintf(journal_filename, TMP_STRING_SIZE, optarg);
 		break;
 	    case 'p':
-		/* printf ("option p with value %s\n", optarg); */
-		printf("-p, --prefix not implemented, ignoring\n");
+		strcpy(prefix, optarg);
 		break;
 	    default:
 		usage(argv[0]);
