@@ -20,6 +20,8 @@ cmdlist:
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)
 	install cmdchk $(INSTALL_ROOT)$(BINDIR)/lsbcmdchk
+	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
+	install lsbcmdchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbcmdchk.1
 
 # Distclean means will need database to rebuild
 distclean: clean
