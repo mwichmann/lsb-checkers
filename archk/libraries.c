@@ -31,7 +31,7 @@ add_archive_symbols(char *libname, struct tetj_handle *journal)
   Elf_Sym	*syms;
   int	i,numsyms,strtab;
 
-  if (file = open_archive(libname, journal, 0) == NULL)
+  if ((file = open_archive(libname, journal, 0)) == NULL)
      return -1;
 
   if (file)

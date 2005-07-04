@@ -3,14 +3,15 @@
 lsbarchk \- check LSB conformance of static archive
 .SH SYNOPSIS
 .B lsbarchk
-.RB [ \-o
-.IR outputfile ]
-.RB [ \-A ]
+.RB [ \-hvnA ]
 .RB [ \-M
-.IR modulename ]
+.IR MODULE ]
 .RB [ \-L
-.IR pathtolib "] ..."
-.I libname
+.IR LIB "]..."
+.RB [ \-j
+.IR JOURNAL ]
+.RI [ long-options ]
+.I archive
 .SH DESCRIPTION
 .PP
 Measure a static archive's suitability for inclusion in an LSB
@@ -20,19 +21,26 @@ Since some unresolved external references may be intentional,
 .I lsbarchk
 can be instructed to look at additional libraries for such references.
 .TP
-\fB\-o \fIoutputfile\fR
-Write the journal file (see below) to \fIoutputfile\fR
-instead of to the default filename in the current directory.
+\fB\-h\fR, \fB--help\fR
+Print a help message and exit.
+.TP
+\fB\-v\fR, \fB--version\fR
+Output the program version and LSB version to standard output.
+The version and LSB version are always logged to the journal
+file irrespective of this option.
+.TP
+\fB\-n\fR, \fB--nojournal\fR
+Do not create a journal file.
 .TP
 \fB\-A
 Check the symbols found in all modules.
 .TP
-\fB\-M \fImodulename\fR
-Check only the symbols found in module \fImodulename\fR.
+\fB\-M \fIMODULE\fR, \fB--module\fR=\fIMODULE\fR
+Also check the symbols found in \fIMODULE\fR.
 The default module name is LSB-Core. Other choices are
-LSB-Graphics and LSB-C++.
+LSB-Graphics and LSB-C++ (module names are not case-sensitive).
 .TP
-\fB\-L \fInameoflib\fR
+\fB\-L \fILIB\fR
 Specify the full pathname of a library which will be part of the application.
 This option can be specified as many times as needed, and will prevent 
 .I lsbarchk
@@ -42,9 +50,13 @@ Note that by using -L, you are predicting libraries which will be
 specified at link time; if 
 .I lsbarchk
 is thus convinced not to report on certain issues,
-and then the libraries are NOT used at link time,
-IR lsbarchk 's
+and those libraries are not used at link time,
+.IR lsbarchk 's
 answers are not very useful!
+.TP
+\fB\-j \fIJOURNAL\fR, \fB--journal\fR=\fIJOURNAL\fR
+Write the journal file to \fIJOURNAL\fR
+instead of to the default filename in the current directory.
 .PP
 A journal file is created named 
 .BI journal.archk. libname ,
@@ -57,8 +69,9 @@ used for LSB Certification (e.g.
 You must have write access to the current working directory
 in order to run 
 .I lsbarchk
-successfully, or use the \fI-o\fR option to
+successfully, or use the \fB\-j\fR option to
 specify an alternate location for the journal.
+The journal file can be omitted by the use of the \fB\-n\fP option.
 .SH "NOTES"
 .I lsbarchk 
 is a predictive tool.  It can identify some problems which are
