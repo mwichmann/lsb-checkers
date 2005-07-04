@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.15 $
+ * This is $Revision: 1.16 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.16  2005/07/04 14:07:29  mats
+ * Split journal config entry into two lines to match other tools
+ *
  * Revision 1.15  2005/07/03 00:02:33  mats
  * Add "prefix" handling for pointing at an alternate root
  *
@@ -83,7 +86,7 @@ char *binpaths[] = {
 char prefix[TMP_STRING_SIZE + 1];
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.15 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.16 $";
 
 void
 check_cmd(struct cmds *cp, struct tetj_handle *journal)
@@ -195,22 +198,23 @@ main(int argc, char *argv[])
 		usage(argv[0]);
 		exit (0);
 	}
-	if (optind < argc) {
-	    usage(argv[0]);
-	    exit (0);
-	}
+    }
+    if (optind < argc) {
+	usage(argv[0]);
+	exit (0);
     }
 
     if (tetj_start_journal(journal_filename, &journal, "lsbcmdchk") != 0) {
 	snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
 		 journal_filename);
 	perror(tmp_string);
+	fprintf(stderr, "Use -j <filename> to specify an alternate location for the journal file\n");
 	exit(1);
     }
 
-    snprintf(tmp_string, TMP_STRING_SIZE,
-	     "VSX_NAME=lsbcmdchk %s for LSB Specification %s",
-	     LSBCMDCHK_VERSION, LSBVERSION);
+    snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbcmdchk " LSBCMDCHK_VERSION);
+    tetj_add_config(journal, tmp_string);
+    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
     tetj_add_config(journal, tmp_string);
     tetj_config_end(journal);
 
