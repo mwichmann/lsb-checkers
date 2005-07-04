@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.64 $
+ * This is $Revision: 1.65 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.65  2005/07/04 16:41:32  mats
+ * Use the common argument handling
+ *
  * Revision 1.64  2005/06/02 13:58:11  mats
  * Improve error journaling on serious failures - complete the test
  * but emit info lines on the problem (bug 971)
@@ -236,9 +239,8 @@ struct libpath
 static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
-/* Real CVS revision number so we can strings it from
-   the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.64 $";
+/* Real CVS revision number so we can strings it from the binary if necessary */
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.65 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -762,75 +764,105 @@ void init_library_table(char *filename)
 
 }
 
-int main(int argc, char *argv[])
+void
+usage(char *progname)
 {
-  signed char c;
+  printf("usage: %s [options] library_map\n%s%s%s%s%s%s%s", progname,
+"  -h, --help                     show this help message and exit\n",
+"  -v, --version                  show version and LSB version\n",
+"  -n, --nojournal                do not write a journal file\n",
+"  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n",
+"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
+"\n",
+"  If not called as lsblibchk, must supply a \"library_map\"\n");
+}
+
+int
+main(int argc, char *argv[])
+{
   struct tetj_handle *journal;
   char *ptr,tmp_string[TMP_STRING_SIZE+1];
+  char journal_filename[TMP_STRING_SIZE+1];
+  int option_index = 0;
   
-  if( (ptr=getenv("LIBCHK_DEBUG")) != NULL ) {
-	  libchk_debug=strtod(ptr,NULL);
+  if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
+    libchk_debug = strtod(ptr,NULL);
   }
+  snprintf(journal_filename, TMP_STRING_SIZE, "journal.libchk");
 
-  /* Parse options */
-  while(1) {
-      c=getopt(argc,argv,"M:");
-      if( c == -1 )
-        break;
-      switch(c) {
+  while (1) {
+    int c;
+    static struct option long_options[] = {
+      {"help",     no_argument,        NULL, 'h'},
+      {"version",  no_argument,        NULL, 'v'},
+      {"nojournal",no_argument,        NULL, 'n'},
+      {"module",   required_argument,  NULL, 'M'},
+      {"journal",  required_argument,  NULL, 'j'},
+      {0, 0, 0, 0}
+    };
+
+    c = getopt_long (argc, argv, "hvnM:j:", long_options, &option_index);
+    if (c == -1)
+      break;
+    switch (c) {
+      case 'h':
+	usage(argv[0]);
+	exit (0);
+      case 'v':
+	printf("%s %s for LSB Specification %s\n", argv[0],
+	       LSBLIBCHK_VERSION, LSBVERSION);
+	break;
+      case 'n':
+	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
+	break;
       case 'M':
-	module|=getmoduleval(optarg);
+	module |= getmoduleval(optarg);
 	printf("Only checking libraries in module %s\n", optarg);
-        break;
+	break;
+      case 'j':
+	snprintf(journal_filename, TMP_STRING_SIZE, optarg);
+	break;
       default:
-        printf ("?? getopt returned character code 0%o ??\n", c);
-      }
+	usage(argv[0]);
+	exit (0);
+    }
   }
-
-  if( module == 0 )
-	  module = LSB_All_Modules;
-
 #ifndef _CXXABICHK_
-	if (argc<=optind)
-	{
-		fprintf(stderr, 
-					 "Need to supply file containing lookup map of shared libraries\n");
-		exit(1);
-	}
-	init_library_table(argv[optind]);
+  if (optind >= argc) {
+    usage(argv[0]);
+    exit (0);
+  }
+  init_library_table(argv[optind]);
 #endif
 
+  if (module == 0)
+    module = LSB_All_Modules;
 
-
-  if (tetj_start_journal("journal.libchk", &journal, "libchk")!=0)
-  {
-    perror("Could not open journal file");
+  if (tetj_start_journal(journal_filename, &journal, "libchk") != 0) {
+    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
+	     journal_filename);
+    perror(tmp_string);
+    fprintf(stderr, "Use -j <filename> to specify an alternate location for the journal file\n");
     exit(1);
   }
 
-
 #ifdef _CXXABICHK_
   snprintf(tmp_string, TMP_STRING_SIZE, "C++ ABI Checker" );
-
   tetj_add_config(journal, tmp_string);
-
   check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.6",
 		  libstdcxx_so_6,libstdcxx_so_6_classinfo,journal);
 #else
-  snprintf(tmp_string, TMP_STRING_SIZE, 
-	   "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
+  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
   tetj_add_config(journal, tmp_string);
   snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
   tetj_add_config(journal, tmp_string);
-  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
-	   getmodulename(module));
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s", getmodulename(module));
   tetj_add_config(journal, tmp_string);
 
   check_libs(journal);
 #endif
 
   tetj_close_journal(journal);
-
   exit(0);
 }
   

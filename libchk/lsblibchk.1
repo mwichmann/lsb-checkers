@@ -3,31 +3,78 @@
 lsblibchk \- check LSB libraries
 .SH SYNOPSIS
 .B lsblibchk
+.RB [ \-hvn ]
 .RB [ \-M
-.IR modulename ]
+.IR MODULE ]
+.RB [ \-j
+.IR JOURNAL ]
+[long-options]
 .SH DESCRIPTION
 .PP
 Check whether the run\-time system libraries for the current system
-appear to conform to the Linux Standard Base (LSB).  Lsblibchk checks
+appear to conform to the Linux Standard Base (LSB).  
+.I lsblibchk
+checks
 the object format, whether all of the required libraries are present,
 whether the libraries contain all interfaces required by the LSB, and
 whether the interfaces have the symbol versions required by the LSB.
-Lsblibchk prints warnings for any problems.
+.I lsblibchk
+prints warnings for any problems.
 .TP
-\fB\-M \fImodulename\fR
-Check only the libraries found in module \fImodulename\fR.
+\fB\-h\fR, \fB--help\fR
+Print a help message and exit.
+.TP
+\fB\-v\fR, \fB--version\fR
+Output the program version and LSB version to standard output.
+The version and LSB version are always logged to the journal
+file irrespective of this option.
+.TP
+\fB\-n\fR, \fB--nojournal\fR
+Do not create a journal file.
+.TP
+\fB\-M \fIMODULE\fR, \fB--module\fR=\fIMODULE\fR
+Check only the libraries found in \fIMODULE\fR.
+.TP
+\fB\-j \fIJOURNAL\fR, \fB--journal\fR=\fIJOURNAL\fR
+Write the journal file to \fIJOURNAL\fR
+instead of to the default filename in the current directory.
 .PP
-Lsblibchk writes a journal file named journal.libchk. It contains a
-record of the test results. You must have write access to the current
-working directory.
+A journal file is created with a default name of
+.BR journal.libchk .
+It contains a record of the test results in a format that
+can be processed by the same tools used for LSB Certification.
+You must have write access to the current working directory
+in order to run 
+.I lsblibchk
+successfully, or use the \fB\-j\fR option to
+specify an alternate location for the journal. The
+journal file can be omitted by the use of the \fB\-n\fP option.
 .PP
-The lsblibchk program cannot detect all conformance problems.  In
+The 
+.I lsblibchk
+program cannot detect all conformance problems.  In
 particular, it is a static test and does not actually call the
-functions in the libraries.  Lsblibchk will not find any behaviors
-which show themselves only at run\-time (for example, whether system
-libraries use the File Hierarchy Standard correctly, or what system
+functions in the libraries.  
+.I lsblibchk
+will not find any behaviors
+which show themselves only at run\-time, such as whether system
+libraries use the Filesystem Hierarchy Standard correctly, or what system
 functions do with various parameters which LSB applications are
-entitled to pass to them).
+entitled to pass to them.
+.PP
+.I lsblibchk
+is actually a wrapper around the program
+.IR libchk ,
+which requires a command-line argument pointing to a library map
+showing where to find the libraries to test. This map is generated
+on the fly by
+.IR lsblibchk ,
+using the
+.I ldd
+command.  It is possible to hand-craft the map and pass it 
+directly to 
+.I libchk
+but such use is not valid for LSB Certification.
 .SH "AUTHORS"
 The contributors to the Linux Standard Base.
 .SH "REPORTING BUGS"
@@ -37,8 +84,6 @@ report bugs at http://bugs.linuxbase.org or email to
 from your distribution, report bugs back to the
 distribution in the normal way.
 .SH "BUGS"
-Should be able to specify where to write the journal file.
-.PP
 In the future, lsblibchk may be enhanced to have an option to check
 development libraries (that is, those used to create an application,
 not to run one).
