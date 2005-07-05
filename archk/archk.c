@@ -17,25 +17,22 @@ char *
 concat_string(char *input, char *addition)
 {
   char *tmp;
-  if (input)
-  {
+  if (input) {
     tmp = realloc(input, strlen(input)+strlen(addition)+1);
     if (!tmp) abort();
     return strcat(tmp, addition);
-  }
-  else
-  {
+  } else {
     return strdup(addition);
   }
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) archk_revision = "$Revision: 1.7 $";
+static const char * __attribute((unused)) archk_revision = "$Revision: 1.8 $";
 
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] archive\n%s%s%s%s%s%s%s", progname,
+  printf("usage: %s [options] archive ...\n%s%s%s%s%s%s%s", progname,
 "  -h, --help                     show this help message and exit\n",
 "  -v, --version                  show version and LSB version\n",
 "  -n, --nojournal                do not write a journal file\n",
@@ -121,7 +118,7 @@ main(int argc, char *argv[])
   }
   if (optind >= argc) {
     usage(argv[0]);
-    exit (0);
+    exit (1);
   }
 
   /* Start journal logging */

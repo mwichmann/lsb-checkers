@@ -5,9 +5,13 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.16 $
+ * This is $Revision: 1.17 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.17  2005/07/05 12:47:34  mats
+ * One more cleanup pass: make sure unexpected number of arguments
+ * exits with an error code.
+ *
  * Revision 1.16  2005/07/04 14:07:29  mats
  * Split journal config entry into two lines to match other tools
  *
@@ -86,7 +90,7 @@ char *binpaths[] = {
 char prefix[TMP_STRING_SIZE + 1];
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.16 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.17 $";
 
 void
 check_cmd(struct cmds *cp, struct tetj_handle *journal)
@@ -142,14 +146,12 @@ check_cmd(struct cmds *cp, struct tetj_handle *journal)
 void
 usage(char *progname)
 {
-  printf("usage: %s [options]\n%s%s%s%s%s%s%s", progname,
-         "  -h, --help         show this help message and exit\n",
-         "  -v, --version      show version and LSB version\n",
-         "  -n, --nojournal    do not write a journal file\n",
-         "  -j JOURNAL, --version=JOURNAL\n",
-         "	               use JOURNAL as file/path for journal file\n",
-         "  -p PREFIX, --prefix=PREFIX\n",
-         "                     prefix to append to all paths\n");
+  printf("usage: %s [options]\n%s%s%s%s%s", progname,
+"  -h, --help                     show this help message and exit\n",
+"  -v, --version                  show version and LSB version\n",
+"  -n, --nojournal                do not write a journal file\n",
+"  -j JOURNAL, --version=JOURNAL  use JOURNAL as file/path for journal file\n",
+"  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n");
 }
 
 int
@@ -199,9 +201,9 @@ main(int argc, char *argv[])
 		exit (0);
 	}
     }
-    if (optind < argc) {
+    if (optind != argc) {
 	usage(argv[0]);
-	exit (0);
+	exit (1);
     }
 
     if (tetj_start_journal(journal_filename, &journal, "lsbcmdchk") != 0) {

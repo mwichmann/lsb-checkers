@@ -6,9 +6,13 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.65 $
+ * This is $Revision: 1.66 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.66  2005/07/05 12:47:35  mats
+ * One more cleanup pass: make sure unexpected number of arguments
+ * exits with an error code.
+ *
  * Revision 1.65  2005/07/04 16:41:32  mats
  * Use the common argument handling
  *
@@ -240,7 +244,7 @@ static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.65 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.66 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -767,14 +771,12 @@ void init_library_table(char *filename)
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] library_map\n%s%s%s%s%s%s%s", progname,
+  printf("usage: %s [options] library_map\n%s%s%s%s%s", progname,
 "  -h, --help                     show this help message and exit\n",
 "  -v, --version                  show version and LSB version\n",
 "  -n, --nojournal                do not write a journal file\n",
 "  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n",
-"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
-"\n",
-"  If not called as lsblibchk, must supply a \"library_map\"\n");
+"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n");
 }
 
 int
@@ -828,9 +830,10 @@ main(int argc, char *argv[])
     }
   }
 #ifndef _CXXABICHK_
-  if (optind >= argc) {
+  if (optind != (argc - 1)) {
+    printf("missing argument: if not called as lsblibchk, must supply a \"library_map\"\n");
     usage(argv[0]);
-    exit (0);
+    exit (1);
   }
   init_library_table(argv[optind]);
 #endif

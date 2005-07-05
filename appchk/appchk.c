@@ -26,12 +26,12 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.28 $";
+    "$Revision: 1.29 $";
 
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] appname\n%s%s%s%s%s%s%s", progname,
+  printf("usage: %s [options] appname ...\n%s%s%s%s%s%s%s", progname,
 "  -h, --help                     show this help message and exit\n",
 "  -v, --version                  show version and LSB version\n",
 "  -n, --nojournal                do not write a journal file\n",
