@@ -48,7 +48,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.14 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.15 $";
 
 int
 main(int argc, char *argv[])
@@ -122,7 +122,7 @@ main(int argc, char *argv[])
   }
   if (optind >= argc) {
     usage(argv[0]);
-    exit (0);
+    exit (1);
   }
 
   if ((ptr = getenv("RPMCHK_DEBUG")) != NULL) {

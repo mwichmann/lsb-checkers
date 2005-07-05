@@ -89,6 +89,14 @@ successfully, or use the \fB-o\fR option to
 specify an alternate location for the journal.
 The journal file can be omitted by the use of the \fB\-n\fP option.
 .PP
+If there are several related binaries in a package build,
+.I lsbappchk
+may be called with multiple names on the command line,
+producing a single journal file, or it may be called
+multiple times to produce individual journal files.
+In the former case, the default journal name will include
+the name of the first binary specified.
+.PP
 The 
 .I lsbappchk
 program cannot detect all conformance problems.  In particular,
