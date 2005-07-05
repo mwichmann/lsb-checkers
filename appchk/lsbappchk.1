@@ -3,20 +3,23 @@
 lsbappchk \- check LSB conformance of application or shared library
 .SH SYNOPSIS
 .B lsbappchk
-.RB [ \-o
-.IR outputfile ]
-.RB [ \-A ]
+.RB [ \-hvnA ]
 .RB [ \-M
-.IR modulename ]...
+.IR MODULE ]...
 .RB [ \-L
-.IR pathtolib ]...
+.IR LIB ]...
+.RB [ \-j
+.IR JOURNAL ]
+.RI [ long-options ]
 .I appname
 .br
 .B lsbappchk
-.RB [ \-o
-.IR outputfile ]
-.RB [ \-A ]
+.RB [ \-hvnA ]
 .RB [ \-M
+.IR MODULE ]...
+.RB [ \-j
+.IR JOURNAL ]
+.RI [ long-options ]
 .IR modulename ]...
 .B \-L
 .I pathtolib
@@ -36,19 +39,26 @@ that may be development targets on their own.
 .IR lsbappchk 's
 view of valid libraries and interfaces can be expanded.
 .TP
-\fB\-o \fIoutputfile\fR
-Write the journal file (see below) to \fIoutputfile\fR
-instead of to the default filename in the current directory.
+\fB\-h\fR, \fB--help\fR
+Print a help message and exit.
+.TP
+\fB\-v\fR, \fB--version\fR
+Output the program version and LSB version to standard output.
+The version and LSB version are always logged to the journal
+file irrespective of this option.
+.TP
+\fB\-n\fR, \fB--nojournal\fR
+Do not create a journal file.
 .TP
 \fB\-A
 Check the symbols found in all modules.
 .TP
-\fB\-M \fImodulename\fR
-Also check the symbols found in module \fImodulename\fR.
+\fB\-M \fIMODULE\fR, \fB--module\fR=\fIMODULE\fR
+Also check the symbols found in \fIMODULE\fR.
 The default module name is LSB-Core. Other choices are
 LSB-Graphics and LSB-C++ (module names are not case-sensitive).
 .TP
-\fB\-L \fInameoflib\fR
+\fB\-L \fILIB\fR
 Specify the full pathname of a shared library which is part of the application.
 This option can be specified as many times as needed, and will prevent 
 .I lsbappchk
@@ -61,6 +71,10 @@ library dependency graph.
 .br
 This option may also be used if a shared library needs to be
 checked standalone.
+.TP
+\fB\-j \fIJOURNAL\fR, \fB--journal\fR=\fIJOURNAL\fR
+Write the journal file to \fIJOURNAL\fR
+instead of to the default filename in the current directory.
 .PP
 A journal file named 
 .BI journal.appchk. appname
@@ -71,8 +85,9 @@ the test results in a format that can be submitted for LSB Certification.
 You must have write access to the current working directory
 in order to run 
 .I lsbappchk
-successfully, or use the \fI-o\fR option to
+successfully, or use the \fB-o\fR option to
 specify an alternate location for the journal.
+The journal file can be omitted by the use of the \fB\-n\fP option.
 .PP
 The 
 .I lsbappchk

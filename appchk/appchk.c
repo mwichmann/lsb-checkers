@@ -10,10 +10,11 @@
 #include "symbols.h"
 
 
-char *concat_string(char *input, char *addition)
+char *
+concat_string(char *input, char *addition)
 {
     char *tmp;
-    if (input) {
+    if (input) { 
 	tmp = realloc(input, strlen(input) + strlen(addition) + 1);
 	if (!tmp)
 	    abort();
@@ -23,15 +24,26 @@ char *concat_string(char *input, char *addition)
     }
 }
 
-/* Real CVS revision number so we can strings it from
-   the binary if necessary */
+/* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.27 $";
+    "$Revision: 1.28 $";
 
-
-int main(int argc, char *argv[])
+void
+usage(char *progname)
 {
-    signed char c;
+  printf("usage: %s [options] appname\n%s%s%s%s%s%s%s", progname,
+"  -h, --help                     show this help message and exit\n",
+"  -v, --version                  show version and LSB version\n",
+"  -n, --nojournal                do not write a journal file\n",
+"  -A                             check the symbols in all aailable modules\n",
+"  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n",
+"  -L LIB                         add LIB to list of checked libraries\n",
+"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n");
+}
+
+int
+main(int argc, char *argv[])
+{
     ElfFile *elffile;
     struct tetj_handle *journal;
     char *command_line = NULL;
@@ -44,6 +56,7 @@ int main(int argc, char *argv[])
     char journal_filename[TMP_STRING_SIZE + 1];
     int overrideJournalFilename = 0;
     int modules = LSB_Core;		/* default module list to check */
+    int option_index = 0;
 
     extra_libraries = strdup("EXTRA_LIBRARIES=");
 
@@ -52,71 +65,83 @@ int main(int argc, char *argv[])
 	command_line = concat_string(command_line, " ");
     }
 
-    /* Parse options */
     while (1) {
-	c = getopt(argc, argv, "L:o:M:A");
-	if (c == -1)
-	    break;
-	switch (c) {
-	case 'L':
-	    printf("Adding symbols for library %s\n", optarg);
-	    extra_lib_count++;
-	    extra_lib_list = realloc(extra_lib_list,
-				     sizeof(char *) * extra_lib_count);
-	    extra_lib_list[extra_lib_count - 1] = strdup(optarg);
-	    extra_libraries = concat_string(extra_libraries, optarg);
-	    extra_libraries = concat_string(extra_libraries, " ");
-	    break;
+	int c;
+	static struct option long_options[] = {
+	    {"help",     no_argument,        NULL, 'h'},
+	    {"version",  no_argument,        NULL, 'v'},
+	    {"nojournal",no_argument,        NULL, 'n'},
+	    {"module",   required_argument,  NULL, 'M'},
+	    {"journal",  required_argument,  NULL, 'j'},
+	    {0, 0, 0, 0}
+      };
 
-	case 'M':
-	    modules |= getmoduleval(optarg);
-	    printf("also checking symbols in module %s\n", optarg);
-	    break;
-
-	case 'A':
-	    modules = LSB_All_Modules;
-	    printf("Checking symbols in all modules\n");
-	    break;
-
-	case 'o':
-	    strncpy(journal_filename, optarg, TMP_STRING_SIZE);
-	    overrideJournalFilename = 1;
-	    break;
-
-	default:
-	    printf("?? getopt returned character code 0%o ??\n", c);
+      c = getopt_long (argc, argv, "hvnAM:L:j:", long_options, &option_index);
+      if (c == -1)
+	  break;
+      switch (c) {
+	  case 'h':
+	      usage(argv[0]);
+	      exit (0);
+	  case 'v':
+	      printf("%s %s for LSB Specification %s\n", argv[0],
+		     LSBAPPCHK_VERSION, LSBVERSION);
+	      break;
+	  case 'n':
+	      snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
+	      overrideJournalFilename = 1;
+	      break;
+	  case 'A':
+	      modules = LSB_All_Modules;
+	      printf("Checking symbols in all modules\n");
+	      break;
+	  case 'M':
+	      modules |= getmoduleval(optarg);
+	      printf("also checking symbols in module %s\n", optarg);
+	      break;
+	  case 'L':
+	      printf("Adding symbols for library %s\n", optarg);
+	      extra_lib_count++;
+	      extra_lib_list = realloc(extra_lib_list, 
+				       sizeof(char *)*extra_lib_count);
+	      extra_lib_list[extra_lib_count-1] = strdup(optarg);
+	      extra_libraries = concat_string(extra_libraries, optarg);
+	      extra_libraries = concat_string(extra_libraries, " ");
+	      break;
+	  case 'j':
+	      snprintf(journal_filename, TMP_STRING_SIZE, optarg);
+	      overrideJournalFilename = 1;
+	      break;
+	  default:
+	      usage(argv[0]);
+	      exit (0);
 	}
     }
-
     if (optind >= argc && !extra_lib_count) {
-	fprintf(stderr,
-		"usage: %s [-o outputfile ] [-A] [-M modulename]... [-L pathtolib]... appname\n",
-		argv[0]);
-	exit(1);
+	usage(argv[0]);
+	exit (1);
     }
-
-    printf("%s for LSB Specification " LSBVERSION " \n", argv[0]);
 
     /* Start journal logging */
     if (!overrideJournalFilename) {
-		if (optind >= argc && extra_lib_count) {
-		    /* No binary supplied on command line */
-		    if (extra_lib_count == 1) {
-		       snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
-					basename(extra_lib_list[0]));
-		    } else {
-		       snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.DSO");
-		    }
-		} else {
-			snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
-			 basename(argv[optind]));
-		}
+	if (optind >= argc && extra_lib_count) {
+	    /* No binary supplied on command line */
+	    if (extra_lib_count == 1) {
+		snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
+			 basename(extra_lib_list[0]));
+	    } else {
+	       snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.DSO");
+	    }
+	} else {
+	    snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
+	     basename(argv[optind]));
+	}
     }
     if (tetj_start_journal(journal_filename, &journal, command_line) != 0) {
-	printf("Could not open journal file %s for output..exiting\n",
-	       journal_filename);
-	printf
-	    ("Use -o <filename> to specify an alternate location for the journal file\n");
+	snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
+		 journal_filename);
+	perror(tmp_string);
+	printf("Use -j JOURNAL to specify an alternate location for the journal file\n");
 	exit(1);
     }
 
