@@ -63,15 +63,18 @@ A journal file is created named
 where 
 .I libname
 is the library specified on the command line. It contains a record of
-the test results in a format that can be processed by the same tools
-used for LSB Certification (e.g. 
-.IR tjreport ).
+the test results in a format that can be submitted for LSB Certification.
 You must have write access to the current working directory
 in order to run 
 .I lsbarchk
 successfully, or use the \fB\-j\fR option to
 specify an alternate location for the journal.
 The journal file can be omitted by the use of the \fB\-n\fP option.
+Journal files may be examined with the
+.I tjreport
+tool, available from the LSB project as part of the
+.B lsb-tet3-lite
+package.
 .SH "NOTES"
 .I lsbarchk 
 is a predictive tool.  It can identify some problems which are
