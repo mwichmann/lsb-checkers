@@ -20,9 +20,8 @@ lsbappchk \- check LSB conformance of application or shared library
 .RB [ \-j
 .IR JOURNAL ]
 .RI [ long-options ]
-.IR modulename ]...
 .B \-L
-.I pathtolib
+.I LIB
 .SH DESCRIPTION
 .PP
 In the first form,
@@ -32,12 +31,13 @@ checked, as is the list of shared libraries used by the application,
 and the list of functions and global data used by the
 application. Warnings are produced for anything that is referenced
 but not contained in the LSB specification. 
-.PP
-In the second form, a shared library is examined without considering
-an application that may be linked with it, useful for shared libraries
-that may be development targets on their own.
 .IR lsbappchk 's
 view of valid libraries and interfaces can be expanded.
+.PP
+In the second form, a shared library is examined individually,
+rather than in the context of a binary linked with it.
+This is useful for shared libraries that may be development targets
+on their own.
 .TP
 \fB\-h\fR, \fB--help\fR
 Print a help message and exit.
