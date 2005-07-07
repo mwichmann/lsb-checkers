@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.17 $
+ * This is $Revision: 1.18 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.18  2005/07/06 22:33:31  mats
+ * Add invocation command line to cmdchk journal (bug 1041)
+ *
  * Revision 1.17  2005/07/05 12:47:34  mats
  * One more cleanup pass: make sure unexpected number of arguments
  * exits with an error code.
@@ -90,7 +93,7 @@ char *binpaths[] = {
 char prefix[TMP_STRING_SIZE + 1];
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.17 $";
+static const char *__attribute((unused)) cmdchk_revision = "$Revision: 1.18 $";
 
 void
 check_cmd(struct cmds *cp, struct tetj_handle *journal)
@@ -143,6 +146,20 @@ check_cmd(struct cmds *cp, struct tetj_handle *journal)
     tetj_testcase_end(journal, tetj_activity_count++, 0, "");
 }
 
+char *
+concat_string(char *input, char *addition)
+{
+    char *tmp;
+    if (input) { 
+	tmp = realloc(input, strlen(input) + strlen(addition) + 1);
+	if (!tmp)
+	    abort();
+	return strcat(tmp, addition);
+    } else {
+	return strdup(addition);
+    }
+}
+
 void
 usage(char *progname)
 {
@@ -158,12 +175,17 @@ int
 main(int argc, char *argv[])
 {
     struct tetj_handle *journal;
+    char *command_line = NULL;
     char tmp_string[TMP_STRING_SIZE + 1];
     char journal_filename[TMP_STRING_SIZE + 1];
     int i, j;
     int option_index = 0;
 
     snprintf(journal_filename, TMP_STRING_SIZE, "journal.lsbcmdchk");
+    for (i = 0; i < argc; i++) {
+	command_line = concat_string(command_line, argv[i]);
+	command_line = concat_string(command_line, " ");
+    }
 
     while (1) {
 	int c;
@@ -206,7 +228,7 @@ main(int argc, char *argv[])
 	exit (1);
     }
 
-    if (tetj_start_journal(journal_filename, &journal, "lsbcmdchk") != 0) {
+    if (tetj_start_journal(journal_filename, &journal, command_line) != 0) {
 	snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
 		 journal_filename);
 	perror(tmp_string);
