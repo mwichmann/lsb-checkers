@@ -52,6 +52,12 @@ load_memmap()
 		nummaps=0;
 	}
 	map=fopen("/proc/self/maps","r");
+	if(!map) {
+	    printf("Failed to open /proc/self/maps: is /proc mounted?\n");
+	    printf("Aborting.\n");
+	    exit(1);
+	}
+
 	while(!feof(map) ) {
 		if( nummaps == maxmaps ) {
 			mem =realloc(mem,sizeof(struct memregion)*(maxmaps+20));
