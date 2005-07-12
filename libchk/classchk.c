@@ -160,7 +160,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				if (vtbaseoffset != classp->vtable[v].baseoffset) 
 				{
 					TETJ_REPORT_INFO("Vtable[%d] baseoffset %ld (expected) doesn't match %ld "
-													 "(found) BASEO:%s:0:%ld\n", v,
+													 "(found) BASEO:%s:0:%ld", v,
 													 classp->vtable[v].baseoffset, vtbaseoffset, 
 													 classp->name,vtbaseoffset);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -179,7 +179,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				if (vtvcalloffset != classp->vtable[v].vcalloffset) 
 				{
 					TETJ_REPORT_INFO("Vtable[%d] vcalloffset %ld (expected) doesn't match %ld "
-													 "(found) BASEVO:%s:0:%ld\n", v,
+													 "(found) BASEVO:%s:0:%ld", v,
 													 classp->vtable[v].vcalloffset, vtvcalloffset,
 													 classp->name,vtvcalloffset);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -200,7 +200,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				if ( (libchk_debug&LIBCHK_DEBUG_CLASSDETAILS) &&
 						 dlinfo.dli_saddr != vttypeinfo) 
 				{
-					TETJ_REPORT_INFO("Uhoh1. Not an exact match %p %p\n",
+					TETJ_REPORT_INFO("Uhoh1. Not an exact match %p %p",
 													 dlinfo.dli_saddr, vttypeinfo);
 					test_failed = 1;
 				}
@@ -208,7 +208,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				if (strcmp(classp->vtable[v].typeinfo,dlinfo.dli_sname)) 
 				{
 					fprintf(stderr,"Class %s\n", classp->name );
-					TETJ_REPORT_INFO("RTTI Name %s (expected) doesn't match %s (found)\n",
+					TETJ_REPORT_INFO("RTTI Name %s (expected) doesn't match %s (found)",
 													 classp->vtable[v].typeinfo,dlinfo.dli_sname);
 					test_failed = 1;
 				}
@@ -236,7 +236,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					if( !dladdr(fptr2ptrp(&vtvirtfuncs[j]), &dlinfo) ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Error looking for symbol for Virtual table entry "
-														 "[%d][%d](%p) expecting %s\n",
+														 "[%d][%d](%p) expecting %s",
 														 v, j, fptr2ptrp(&vtvirtfuncs[j]),
 														 classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
@@ -257,7 +257,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 							dladdr(symp, &dlinfo2);
 							fprintf(stderr,"Class %s\n", classp->name );
 							TETJ_REPORT_INFO("Symbol address for Virtual table entry "
-														 "[%d][%d] %s is not expected\n", v, j, 
+														 "[%d][%d] %s is not expected", v, j, 
 														 classp->vtable[v].virtfuncs[j]);
 							fprintf(stderr,"%p doesn't match %p which appears to be %s %p\n", 
 											symp, fptr2ptrp(&vtvirtfuncs[j]), dlinfo2.dli_sname, dlinfo2.dli_saddr);
@@ -272,7 +272,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					if ( !dlinfo.dli_saddr && classp->vtable[v].virtfuncs[j][0] ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Did not find symbol addr for Virtual table entry "
-														 "[%d][%d] expecting %s\n", v,
+														 "[%d][%d] expecting %s", v,
 														 j, classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
@@ -292,7 +292,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 						}
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Symbol address found for Virtual table entry [%d][%d] "
-														 "%p (found) doesn't match %p (expected).\n",
+														 "%p (found) doesn't match %p (expected)",
 														 v, j, fptr2ptr(((fptr *)dlinfo.dli_saddr)),
 														 fptr2ptrp(&vtvirtfuncs[j]));
 						test_failed = 1;
@@ -304,7 +304,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					if ( !dlinfo.dli_sname && classp->vtable[v].virtfuncs[j][0] ) {
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Did not find symbol name for Virtual table entry "
-														 "[%d][%d] expecting %s\n", v,
+														 "[%d][%d] expecting %s", v,
 														 j, classp->vtable[v].virtfuncs[j] );
 						test_failed = 1;
 					}
@@ -319,7 +319,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					{
 						fprintf(stderr,"Class %s\n", classp->name );
 						TETJ_REPORT_INFO("Virtual Function[%d][%d] %s (expected) "
-														 "doesn't match %s (found)\n", v,
+														 "doesn't match %s (found)", v,
 														 j, classp->vtable[v].virtfuncs[j], dlinfo.dli_sname);
 						test_failed = 1;
 					}
@@ -339,7 +339,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				{
 					fprintf(stderr,"Class %s\n", classp->name );
 					TETJ_REPORT_INFO("Vtable[%d] size %d (expected) doesn't match %d "
-													 "(found) VTSIZE:%s:0:%d\n", v,
+													 "(found) VTSIZE:%s:0:%d", v,
 													 vtablesize, fndvtabsize,
 													 classp->name,vtablesize);
 					tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -354,7 +354,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 			else {
 				tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 											 "Checking Vtable info");
-				TETJ_REPORT_INFO("No vtable found in library for %s\n", classp->name);
+				TETJ_REPORT_INFO("No vtable found in library for %s", classp->name);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 			}
@@ -392,7 +392,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				{
 					printf("Uhoh3. Not an exact match\n");
 				}
-				TETJ_REPORT_INFO("Base vtype %p (expected) doesn't match %p %s (found)\n",
+				TETJ_REPORT_INFO("Base vtype %p (expected) doesn't match %p %s (found)",
 												 symp, rttip->basevtable, dlinfo.dli_sname);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 			}
@@ -413,7 +413,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 												 "Check name string for type");
 			if (strcmp(&(classp->name[2]),rttip->name)) 
 			{
-				TETJ_REPORT_INFO("Class name %s (found) doesn't match %s (expected)\n",
+				TETJ_REPORT_INFO("Class name %s (found) doesn't match %s (expected)",
 												 rttip->name,	classp->name);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 			}
@@ -477,9 +477,8 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				dladdr(si_rttip->basetype, &dlinfo);
 				if (symp != si_rttip->basetype)
 				{
-					TETJ_REPORT_INFO(
-						"Base type %p (expected) doesn't match %p %s (found)\n",
-						symp, si_rttip->basetype, dlinfo.dli_sname);
+					TETJ_REPORT_INFO("Base type %p (expected) doesn't match %p %s (found)",
+													 symp, si_rttip->basetype, dlinfo.dli_sname);
 					test_failed = 1;
 				}
 				basetypes = si_rttip->basetypeinfo;
@@ -570,19 +569,19 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				symp = dlsym(dlhndl,classp->basename);
 				dladdr(p_rttip->pointee, &dlinfo);
 				if (symp != p_rttip->pointee) {
-					TETJ_REPORT_INFO("Base type %p (expected) doesn't match %p %s (found)\n",
+					TETJ_REPORT_INFO("Base type %p (expected) doesn't match %p %s (found)",
 													 symp, p_rttip->pointee, dlinfo.dli_sname);
 					test_failed = 1;
 				}
 				if (p_rttip->offset_flags&(~_pbase_all_mask)) {
 					TETJ_REPORT_INFO("pointer offset flags %x (found) for class %s "
-													 "not a legal value\n",
+													 "not a legal value",
 													 p_rttip->offset_flags, classp->name);
 					test_failed = 1;
 				}
 				if (p_rttip->offset_flags != classp->flags) {
 					TETJ_REPORT_INFO("pointer offset flags %x (found) for class %s "
-													 "doesn't match %x (expected)\n",
+													 "doesn't match %x (expected)",
 													 p_rttip->offset_flags, classp->name, classp->flags);
 					test_failed = 1;
 				}
@@ -624,8 +623,8 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 					}
 					if (symp != basetypes[j])
 					{
-						TETJ_REPORT_INFO("Basetype[%d] %p (expected) doesn't match %p (found)\n", j, 
-														 symp, basetypes[j]);
+						TETJ_REPORT_INFO("Basetype[%d] %p (expected) doesn't match %p (found)", 
+						j, symp, basetypes[j]);
 						test_failed = 1;
 					}
 				}
@@ -638,7 +637,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				/*
 				 * We really were expecting an RTTI symbol to be found
 				 */
-				TETJ_REPORT_INFO("Did not find expected RTTI symbol %s\n", classp->rttiname);
+				TETJ_REPORT_INFO("Did not find expected RTTI symbol %s", classp->rttiname);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 			} else {
@@ -649,7 +648,7 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 				 * Don't complain about this.
 				char	str[256];
 				sprintf(str, "_ZTI%s", &(classp->name[2]));
-				TETJ_REPORT_INFO("No RTTI name for %s\n", str);
+				TETJ_REPORT_INFO("No RTTI name for %s", str);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 				tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 				 */
@@ -668,11 +667,11 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 			/* VTT info exists */
 			if( classp->numvtt ) {
 				/* and we were expecting it */
-				TETJ_LOG_INFO("Found VTT for %s\n", classp->name);
+				TETJ_LOG_INFO("Found VTT for %s", classp->name);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 			} else {
 				/* and we were NOT expecting it */
-				TETJ_REPORT_INFO("Found unexpected VTT for %s\n", classp->name);
+				TETJ_REPORT_INFO("Found unexpected VTT for %s", classp->name);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 			}
 			tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
@@ -682,10 +681,10 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 											 "Checking vtt size");
 			fndvttsize = get_size(file, classp->vttname);
 			if( fndvttsize == (classp->numvtt*sizeof( void *)) ) {
-				TETJ_LOG_INFO( "VTT Size matched for %s.\n", classp->vttname );
+				TETJ_LOG_INFO( "VTT Size matched for %s", classp->vttname );
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 			} else {
-				TETJ_REPORT_INFO( "VTT Size mismatch for %s. Expecting %d, found %d\n",
+				TETJ_REPORT_INFO( "VTT Size mismatch for %s. Expecting %d, found %d",
 								classp->vttname, (classp->numvtt*sizeof( void *)), fndvttsize);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 			}
@@ -694,11 +693,11 @@ check_class_info(ElfFile *file, char *libname, struct classinfo *classes[], stru
 			/* VTT info does NOT exists */
 			if( classp->numvtt ) {
 				/* and we were expecting it */
-				TETJ_REPORT_INFO("Did not find expected VTT for %s\n", classp->name);
+				TETJ_REPORT_INFO("Did not find expected VTT for %s", classp->name);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 			} else {
 				/* and we were NOT expecting it */
-				TETJ_LOG_INFO("Did not find unexpected VTT for %s\n", classp->name);
+				TETJ_LOG_INFO("Did not find unexpected VTT for %s", classp->name);
 				tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
 			}
 			tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
