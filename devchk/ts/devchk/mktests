@@ -65,7 +65,7 @@ sub writetest($$)
 	$typelist=join ',', keys(%type);
 
 	$fname=$Hname;
-	$fname =~ tr/\/./__/;
+	$fname =~ tr/\/.-/__/;
 	$filename = $fname.".c";
 	$objname = $fname.".o";
 
