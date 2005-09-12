@@ -118,8 +118,9 @@ check_class_info(ElfFile * file, char *libname,
       if (vtablep) {
 	vtablesize = 0;
 	for (v = 0; v < classp->numvirttab; v++) {
+	  snprintf(tmp_string, TMP_STRING_SIZE, "%s vtable info", classp->name);
 	  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			     "Checking Vtable info");
+			     tmp_string);
 	  switch (classp->vtable[v].category) {
 	  case 1:
 	    vtvcalloffset = 0;
@@ -157,8 +158,9 @@ check_class_info(ElfFile * file, char *libname,
 	  /*
 	   * 1.1) Check the baseoffset
 	   */
+	  snprintf(tmp_string, TMP_STRING_SIZE, "%s baseoffset", classp->name);
 	  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			     "Checking baseoffset");
+			     tmp_string);
 	  if (vtbaseoffset != classp->vtable[v].baseoffset) {
 	    TETJ_REPORT_INFO
 		("Vtable[%d] baseoffset %ld (expected) doesn't match %ld "
@@ -173,8 +175,9 @@ check_class_info(ElfFile * file, char *libname,
 	  /*
 	   * 1.2) Check the vcalloffset
 	   */
+	  snprintf(tmp_string, TMP_STRING_SIZE, "%s vcalloffset", classp->name);
 	  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			     "Checking vcalloffset");
+			     tmp_string);
 	  if (vtvcalloffset != classp->vtable[v].vcalloffset) {
 	    TETJ_REPORT_INFO
 		("Vtable[%d] vcalloffset %ld (expected) doesn't match %ld "
@@ -190,8 +193,9 @@ check_class_info(ElfFile * file, char *libname,
 	  /*
 	   * 1.3) Check the pointer to the RTTI, both by value and by name
 	   */
+	  snprintf(tmp_string, TMP_STRING_SIZE, "%s rtti name", classp->name);
 	  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			     "Checking rtti value");
+			     tmp_string);
 	  test_failed = 0;
 	  dladdr(vttypeinfo, &dlinfo);
 	  if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
@@ -216,8 +220,10 @@ check_class_info(ElfFile * file, char *libname,
 	  /*
 	   * 1.4) Check the virtual function pointers
 	   */
+	  snprintf(tmp_string, TMP_STRING_SIZE, "%s virtual function pointers",
+		   classp->name);
 	  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			     "Checking virtual function pointers");
+			     tmp_string);
 	  test_failed = 0;
 	  for (j = 0; j < classp->vtable[v].numvfuncs; j++) {
 /*	    printf("checking vtable[%d] %s\n", j, classp->vtable[v].virtfuncs[j]); */
@@ -329,10 +335,10 @@ check_class_info(ElfFile * file, char *libname,
 	/*
 	 * 1.5) Check the vtable size
 	 */
-
 	fndvtabsize = get_size(file, classp->vtablename);
+	snprintf(tmp_string, TMP_STRING_SIZE, "%s vtable size", classp->name);
 	tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			   "Checking vtable size");
+			   tmp_string);
 	if (vtablesize != fndvtabsize) {
 	  fprintf(stderr, "Class %s\n", classp->name);
 	  TETJ_REPORT_INFO
@@ -347,8 +353,9 @@ check_class_info(ElfFile * file, char *libname,
 
       } /* (vtablep) */
       else {
+	snprintf(tmp_string, TMP_STRING_SIZE, "%s vtable info", classp->name);
 	tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			   "Checking Vtable info");
+			   tmp_string);
 	TETJ_REPORT_INFO("No vtable found in library for %s", classp->name);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
@@ -363,8 +370,9 @@ check_class_info(ElfFile * file, char *libname,
     /*
      * 2) Second, check the RTTI info
      */
+    snprintf(tmp_string, TMP_STRING_SIZE, "%s rtti info", classp->name);
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-		       "Checking rtti info");
+		       tmp_string);
     rttip = dlsym(dlhndl, classp->rttiname);
 
     if (rttip) {
@@ -375,8 +383,10 @@ check_class_info(ElfFile * file, char *libname,
       /*
        * 2.1) Check the Vtable of the base class
        */
+      snprintf(tmp_string, TMP_STRING_SIZE, "%s vtable of base class",
+	       classp->name);
       tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			 "Checking vtable of base class");
+		         tmp_string);
       symp = dlsym(dlhndl, classp->typeinfo->basevtable);
       if (symp + (2 * sizeof(long)) != rttip->basevtable) {
 	dladdr(rttip->basevtable - 8, &dlinfo);
@@ -400,8 +410,10 @@ check_class_info(ElfFile * file, char *libname,
        * We store the class name as _Zfoo, so we need to
        * skip the _Z when comparing against the name is the object.
        */
+      snprintf(tmp_string, TMP_STRING_SIZE, "%s name string for type",
+	       classp->name);
       tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			 "Check name string for type");
+			 tmp_string);
       if (strcmp(&(classp->name[2]), rttip->name)) {
 	TETJ_REPORT_INFO
 	    ("Class name %s (found) doesn't match %s (expected)",
@@ -419,9 +431,10 @@ check_class_info(ElfFile * file, char *libname,
        * different RTTI layout. Here we have to identify each one, and
        * check the fields that are unique to each one.
        */
-
+      snprintf(tmp_string, TMP_STRING_SIZE, "%s remaining rtti fields",
+	       classp->name);
       tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			 "Check remaining rtti fields");
+			 tmp_string);
       test_failed = 0;
       basetypes = NULL;
       /*
@@ -580,8 +593,10 @@ check_class_info(ElfFile * file, char *libname,
       /*
        * Check the base types info
        */
+      snprintf(tmp_string, TMP_STRING_SIZE, "%s basetypes existence",
+	       classp->name);
       tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			 "Check basetypes existance");
+			 tmp_string);
       if (classp->numbaseinfo && !basetypes) {
 	TETJ_REPORT_INFO("Aigghhh no basetypes!!");
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -591,8 +606,9 @@ check_class_info(ElfFile * file, char *libname,
 	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 
 	test_failed = 0;
+	snprintf(tmp_string, TMP_STRING_SIZE, "%s base type info",classp->name);
 	tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			   "Check base type info");
+			   tmp_string);
 	for (j = 0; j < classp->numbaseinfo; j++) {
 	  symp = dlsym(dlhndl, classp->typeinfo->basetypeinfo[j]);
 	  dladdr(basetypes[j] - 8, &dlinfo);
@@ -639,8 +655,9 @@ check_class_info(ElfFile * file, char *libname,
     /*
      * 3) Third, check the VTT info
      */
+    snprintf(tmp_string, TMP_STRING_SIZE, "%s vtt existence", classp->name);
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-		       "Checking for vtt existance");
+		       tmp_string);
     vttp = dlsym(dlhndl, classp->vttname);
 
     if (vttp) {
@@ -657,8 +674,9 @@ check_class_info(ElfFile * file, char *libname,
       tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 
       /* 3.1 Check the VTT size */
+      snprintf(tmp_string, TMP_STRING_SIZE, "%s vtt size", classp->name);
       tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-			 "Checking vtt size");
+			 tmp_string);
       fndvttsize = get_size(file, classp->vttname);
       if (fndvttsize == (classp->numvtt * sizeof(void *))) {
 	TETJ_LOG_INFO("VTT Size matched for %s", classp->vttname);
