@@ -12,9 +12,13 @@ Prefix, if supplied, is a prefix to prepend to all paths
 # Python version
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.9 $
+# This is $Revision: 1.10 $
 #
 # $Log: cmdchk.py,v $
+# Revision 1.10  2005/09/29 13:05:53  mats
+# Bug 1006: python version: match db changes to clean command paths
+# except where required by the spec
+#
 # Revision 1.9  2005/07/02 23:33:31  mats
 # catch up to C version (new "standard" checker options)
 #
@@ -70,40 +74,35 @@ def check_cmd(journal, command):
     journal.purpose_start("Looking for command %s" % cmdname)
 
     # Check each of the directories in binpaths for the command
-
-    # TODO: LSB bug 1006 - once command paths are cleaned out in DB,
     # if cmdpath is set is set, use it in preference to searching for
     # the cmdname name in binpaths
-    # basically, this becomes:
-    ##if cmdpath == "None":
-    # ... below chunk ...
-    ##else:
-    ##    # check for the required absolute path */
-    ##    if opts.prefix:
-    ##        path = opts.prefix + cmdpath
-    ##    if os.access(cmdpath, os.X_OK):
-    ##        journal.result_pass()
-    ##    else:
-    ##        sys.stderr.write("Couldn't find %s\n" % cmdpath)
-    ##        journal.result_fail()
-    for path in binpaths:
+
+    if cmdpath == "None":
+	for path in binpaths:
+	    if opts.prefix:
+		path = opts.prefix + path
+	    filename = path + os.sep + cmdname
+	    if os.access(filename, os.X_OK):
+		journal.result_pass()
+		break
+	    if os.path.exists(filename):
+		stbuf = os.stat(filename)
+		if stbuf[ST_MODE] & S_IXUSR:
+		    journal.result_pass()
+		    break
+	else: 
+	    # fallthrough: not found at all
+	    sys.stderr.write("Couldn't find %s\n" % cmdname)
+	    journal.result_fail()
+    else:
+        # check for the required absolute path */
         if opts.prefix:
-            path = opts.prefix + path
-        filename = path + os.sep + cmdname
-        if os.access(filename, os.X_OK):
+            path = opts.prefix + cmdpath
+        if os.access(cmdpath, os.X_OK):
             journal.result_pass()
-            break
-
-        if os.path.exists(filename):
-            stbuf = os.stat(filename)
-            if stbuf[ST_MODE] & S_IXUSR:
-                journal.result_pass()
-                break
-
-    else: 
-        # fallthrough: not found at all
-        sys.stderr.write("Couldn't find %s\n" % cmdname)
-        journal.result_fail()
+        else:
+            sys.stderr.write("Couldn't find %s\n" % cmdpath)
+            journal.result_fail()
 
     journal.purpose_end()
     journal.testcase_end()

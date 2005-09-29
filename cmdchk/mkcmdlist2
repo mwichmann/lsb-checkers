@@ -39,6 +39,11 @@ $sth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
 	$cmdname=$entry{'Cname'};
-	print CMDS "$cmdname ".$entry{'Cpath'}."\n";
+	if ($entry{'Cpath'} eq "") {
+	    $cmdpath='None';
+	} else {
+	    $cmdpath=$entry{'Cpath'};
+	}
+	print CMDS "$cmdname $cmdpath\n";
 }
 close(CMDS);
