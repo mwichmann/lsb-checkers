@@ -56,7 +56,7 @@ hostname /bin/hostname
 iconv None
 id None
 install None
-install_initd None
+install_initd /usr/lib/lsb/install_initd
 ipcrm None
 ipcs None
 join None
@@ -99,7 +99,7 @@ pr None
 printf None
 ps /bin/ps
 pwd /bin/pwd
-remove_initd None
+remove_initd /usr/lib/lsb/remove_initd
 renice None
 rm /bin/rm
 rmdir /bin/rmdir
