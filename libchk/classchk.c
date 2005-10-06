@@ -70,7 +70,7 @@ check_class_info(ElfFile * file, char *libname,
 		 struct classinfo *classes[], struct tetj_handle *journal)
 {
   int i, j, v;
-  Dl_info dlinfo;
+  Dl_info dlainfo;
   void *dlhndl;
   void *symp;
   void **basetypes;
@@ -197,19 +197,19 @@ check_class_info(ElfFile * file, char *libname,
 	  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 			     tmp_string);
 	  test_failed = 0;
-	  dladdr(vttypeinfo, &dlinfo);
+	  dladdr(vttypeinfo, &dlainfo);
 	  if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
-	      dlinfo.dli_saddr != vttypeinfo) {
+	      dlainfo.dli_saddr != vttypeinfo) {
 	    TETJ_REPORT_INFO("Uhoh1. Not an exact match %p %p",
-			     dlinfo.dli_saddr, vttypeinfo);
+			     dlainfo.dli_saddr, vttypeinfo);
 	    test_failed = 1;
 	  }
 
-	  if (strcmp(classp->vtable[v].typeinfo, dlinfo.dli_sname)) {
+	  if (strcmp(classp->vtable[v].typeinfo, dlainfo.dli_sname)) {
 	    fprintf(stderr, "Class %s\n", classp->name);
 	    TETJ_REPORT_INFO
 		("RTTI Name %s (expected) doesn't match %s (found)",
-		 classp->vtable[v].typeinfo, dlinfo.dli_sname);
+		 classp->vtable[v].typeinfo, dlainfo.dli_sname);
 	    test_failed = 1;
 	  }
 
@@ -231,8 +231,8 @@ check_class_info(ElfFile * file, char *libname,
 	     * Look up the name of the symbol associated with the funcptr
 	     * found in the vtable.
 	     */
-	    memset(&dlinfo, 0, sizeof(dlinfo));
-	    if (!dladdr(fptr2ptrp(&vtvirtfuncs[j]), &dlinfo)) {
+	    memset(&dlainfo, 0, sizeof(dlinfo));
+	    if (!dladdr(fptr2ptrp(&vtvirtfuncs[j]), &dlainfo)) {
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO
 		  ("Error looking for symbol for Virtual table entry "
@@ -244,16 +244,16 @@ check_class_info(ElfFile * file, char *libname,
 	    if (classp->vtable[v].virtfuncs[j][0]) {
 	      symp = dlsym(dlhndl, classp->vtable[v].virtfuncs[j]);
 	      if (symp != fptr2ptrp(&vtvirtfuncs[j])) {
-		Dl_info dlinfo2;
+		Dl_info dlainfo2;
 		int s;
 		for (s = 0; s < 12; s++) {
-		  memset(&dlinfo2, 0, sizeof(dlinfo2));
-		  dladdr(fptr2ptrp(&vtvirtfuncs[s]), &dlinfo2);
+		  memset(&dlainfo2, 0, sizeof(dlinfo2));
+		  dladdr(fptr2ptrp(&vtvirtfuncs[s]), &dlainfo2);
 		  fprintf(stderr, "vtable[%d] %p %s\n", s, vtvirtfuncs[s],
-			  dlinfo2.dli_sname);
+			  dlainfo2.dli_sname);
 		}
-		memset(&dlinfo2, 0, sizeof(dlinfo2));
-		dladdr(symp, &dlinfo2);
+		memset(&dlainfo2, 0, sizeof(dlinfo2));
+		dladdr(symp, &dlainfo2);
 		fprintf(stderr, "Class %s\n", classp->name);
 		TETJ_REPORT_INFO("Symbol address for Virtual table entry "
 				 "[%d][%d] %s is not expected", v, j,
@@ -261,7 +261,7 @@ check_class_info(ElfFile * file, char *libname,
 		fprintf(stderr,
 			"%p doesn't match %p which appears to be %s %p\n",
 			symp, fptr2ptrp(&vtvirtfuncs[j]),
-			dlinfo2.dli_sname, dlinfo2.dli_saddr);
+			dlainfo2.dli_sname, dlinfo2.dli_saddr);
 		test_failed = 1;
 	      }
 	    }
@@ -270,7 +270,7 @@ check_class_info(ElfFile * file, char *libname,
 	    /*
 	     * 1.4.1) Make sure we found a named symbol at all.
 	     */
-	    if (!dlinfo.dli_saddr && classp->vtable[v].virtfuncs[j][0]) {
+	    if (!dlainfo.dli_saddr && classp->vtable[v].virtfuncs[j][0]) {
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO
 		  ("Did not find symbol addr for Virtual table entry "
@@ -283,20 +283,20 @@ check_class_info(ElfFile * file, char *libname,
 	     * 1.4.2) Check to see if the symbol found is an exact match 
 	     * for the funcptr that was used for the lookup.
 	     */
-	    if (dlinfo.dli_saddr &&
-		(fptr2ptr(((fptr *) dlinfo.dli_saddr)) !=
+	    if (dlainfo.dli_saddr &&
+		(fptr2ptr(((fptr *) dlainfo.dli_saddr)) !=
 		 fptr2ptrp(&vtvirtfuncs[j]))) {
 	      if ((!libchk_debug & LIBCHK_DEBUG_CXXHUSH)) {
 		printf("Uhoh2. Not an exact match %p %p\n",
-		       dlinfo.dli_saddr, fptr2ptrp(&vtvirtfuncs[j]));
+		       dlainfo.dli_saddr, fptr2ptrp(&vtvirtfuncs[j]));
 		printf("Uhoh2. Not an exact match %s %s\n",
-		       dlinfo.dli_sname, classp->vtable[v].virtfuncs[j]);
+		       dlainfo.dli_sname, classp->vtable[v].virtfuncs[j]);
 	      }
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO
 		  ("Symbol address found for Virtual table entry [%d][%d] "
 		   "%p (found) doesn't match %p (expected)", v, j,
-		   fptr2ptr(((fptr *) dlinfo.dli_saddr)),
+		   fptr2ptr(((fptr *) dlainfo.dli_saddr)),
 		   fptr2ptrp(&vtvirtfuncs[j]));
 	      test_failed = 1;
 	    }
@@ -304,7 +304,7 @@ check_class_info(ElfFile * file, char *libname,
 	    /*
 	     * 1.4.3) Make sure we found a named symbol at all.
 	     */
-	    if (!dlinfo.dli_sname && classp->vtable[v].virtfuncs[j][0]) {
+	    if (!dlainfo.dli_sname && classp->vtable[v].virtfuncs[j][0]) {
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO
 		  ("Did not find symbol name for Virtual table entry "
@@ -317,14 +317,14 @@ check_class_info(ElfFile * file, char *libname,
 	     * 1.4.4) Check to see if the symbol name found matches what we
 	     * are expecting to find
 	     */
-	    if (((classp->vtable[v].virtfuncs[j] && dlinfo.dli_sname) &&
-		 strcmp(classp->vtable[v].virtfuncs[j], dlinfo.dli_sname))
-		|| (dlinfo.dli_sname && !classp->vtable[v].virtfuncs[j])) {
+	    if (((classp->vtable[v].virtfuncs[j] && dlainfo.dli_sname) &&
+		 strcmp(classp->vtable[v].virtfuncs[j], dlainfo.dli_sname))
+		|| (dlainfo.dli_sname && !classp->vtable[v].virtfuncs[j])) {
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO("Virtual Function[%d][%d] %s (expected) "
 			       "doesn't match %s (found)", v,
 			       j, classp->vtable[v].virtfuncs[j],
-			       dlinfo.dli_sname);
+			       dlainfo.dli_sname);
 	      test_failed = 1;
 	    }
 	  }
@@ -389,14 +389,14 @@ check_class_info(ElfFile * file, char *libname,
 		         tmp_string);
       symp = dlsym(dlhndl, classp->typeinfo->basevtable);
       if (symp + (2 * sizeof(long)) != rttip->basevtable) {
-	dladdr(rttip->basevtable - 8, &dlinfo);
+	dladdr(rttip->basevtable - 8, &dlainfo);
 	if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
-	    (vtablep && dlinfo.dli_saddr != vttypeinfo)) {
+	    (vtablep && dlainfo.dli_saddr != vttypeinfo)) {
 	  printf("Uhoh3. Not an exact match\n");
 	}
 	TETJ_REPORT_INFO
 	    ("Base vtype %p (expected) doesn't match %p %s (found)", symp,
-	     rttip->basevtable, dlinfo.dli_sname);
+	     rttip->basevtable, dlainfo.dli_sname);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
       } else {
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
@@ -473,11 +473,11 @@ check_class_info(ElfFile * file, char *libname,
 	 * Check the basename.
 	 */
 	symp = dlsym(dlhndl, classp->basename);
-	dladdr(si_rttip->basetype, &dlinfo);
+	dladdr(si_rttip->basetype, &dlainfo);
 	if (symp != si_rttip->basetype) {
 	  TETJ_REPORT_INFO
 	      ("Base type %p (expected) doesn't match %p %s (found)", symp,
-	       si_rttip->basetype, dlinfo.dli_sname);
+	       si_rttip->basetype, dlainfo.dli_sname);
 	  test_failed = 1;
 	}
 	basetypes = si_rttip->basetypeinfo;
@@ -518,7 +518,7 @@ check_class_info(ElfFile * file, char *libname,
 	}
 	for (j = 0; j < classp->numvmitypes; j++) {
 	  btip = &(vmi_rttip->base_info[j]);
-	  dladdr(btip->base_type, &dlinfo);
+	  dladdr(btip->base_type, &dlainfo);
 	  symp = dlsym(dlhndl, classp->btinfo[j].base_type);
 	  if (symp != btip->base_type) {
 	    TETJ_REPORT_INFO
@@ -563,11 +563,11 @@ check_class_info(ElfFile * file, char *libname,
 	 * Check the basename.
 	 */
 	symp = dlsym(dlhndl, classp->basename);
-	dladdr(p_rttip->pointee, &dlinfo);
+	dladdr(p_rttip->pointee, &dlainfo);
 	if (symp != p_rttip->pointee) {
 	  TETJ_REPORT_INFO
 	      ("Base type %p (expected) doesn't match %p %s (found)", symp,
-	       p_rttip->pointee, dlinfo.dli_sname);
+	       p_rttip->pointee, dlainfo.dli_sname);
 	  test_failed = 1;
 	}
 	if (p_rttip->offset_flags & (~_pbase_all_mask)) {
@@ -611,11 +611,11 @@ check_class_info(ElfFile * file, char *libname,
 			   tmp_string);
 	for (j = 0; j < classp->numbaseinfo; j++) {
 	  symp = dlsym(dlhndl, classp->typeinfo->basetypeinfo[j]);
-	  dladdr(basetypes[j] - 8, &dlinfo);
+	  dladdr(basetypes[j] - 8, &dlainfo);
 	  if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
-	      dlinfo.dli_saddr + 8 != basetypes[j]) {
+	      dlainfo.dli_saddr + 8 != basetypes[j]) {
 	    printf("Uhoh4. Not an exact match %p %p\n",
-		   dlinfo.dli_saddr, basetypes[j]);
+		   dlainfo.dli_saddr, basetypes[j]);
 	  }
 	  if (symp != basetypes[j]) {
 	    TETJ_REPORT_INFO
