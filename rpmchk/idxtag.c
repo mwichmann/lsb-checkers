@@ -408,7 +408,7 @@ checkRpmIdxPGP(RpmFile * file1, RpmHdrIndex * hidx,
 }
 
 int
-checkRpmIdxSHA1HEADER(RpmFile * file1, RpmHdrIndex * hidx,
+checkRpmIdxSHA1(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
     int hoffset;
@@ -419,12 +419,12 @@ checkRpmIdxSHA1HEADER(RpmFile * file1, RpmHdrIndex * hidx,
     shadata = file1->storeaddr + hoffset;
 
     fprintf(stderr,
-	    "checkRpmIdxSHA1HEADER() Not yet checking SHA1 contents\n");
+	    "checkRpmIdxSHA1() Not yet checking SHA1 contents\n");
     return fail;
 }
 
 int
-checkRpmIdxDSAHEADER(RpmFile * file1, RpmHdrIndex * hidx,
+checkRpmIdxDSA(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
     int hoffset;
@@ -435,12 +435,12 @@ checkRpmIdxDSAHEADER(RpmFile * file1, RpmHdrIndex * hidx,
     dsadata = file1->storeaddr + hoffset;
 
     fprintf(stderr,
-	    "checkRpmIdxDSAHEADER() Not yet checking DSA contents\n");
+	    "checkRpmIdxDSA() Not yet checking DSA contents\n");
     return fail;
 }
 
 int
-checkRpmIdxRSAHEADER(RpmFile * file1, RpmHdrIndex * hidx,
+checkRpmIdxRSA(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
     int hoffset;
@@ -451,7 +451,7 @@ checkRpmIdxRSAHEADER(RpmFile * file1, RpmHdrIndex * hidx,
     rsadata = file1->storeaddr + hoffset;
 
     fprintf(stderr,
-	    "checkRpmIdxRSAHEADER() Not yet checking RSA contents\n");
+	    "checkRpmIdxRSA() Not yet checking RSA contents\n");
     return fail;
 }
 
@@ -720,6 +720,22 @@ checkRpmIdxVENDOR(RpmFile * file1, RpmHdrIndex * hidx,
 
     if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	fprintf(stderr, "Package Vendor: %s.\n", name);
+    return fail;
+}
+
+int
+checkRpmIdxPACKAGER(RpmFile * file1, RpmHdrIndex * hidx,
+		struct tetj_handle *journal)
+{
+    int hoffset;
+    char *name;
+    int fail = TETJ_PASS;
+
+    hoffset = ntohl(hidx->offset);
+    name = file1->storeaddr + hoffset;
+
+    if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
+	fprintf(stderr, "Packager: %s.\n", name);
     return fail;
 }
 
