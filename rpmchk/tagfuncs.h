@@ -10,9 +10,9 @@ extern int checkRpmIdxMD5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle 
 extern int checkRpmIdxGPG(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxPGP5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxPGP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
-extern int checkRpmIdxSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
-extern int checkRpmIdxDSAHEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
-extern int checkRpmIdxRSAHEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern int checkRpmIdxSHA1(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern int checkRpmIdxDSA(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern int checkRpmIdxRSA(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxNAME(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxVERSION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxRELEASE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
@@ -23,6 +23,7 @@ extern int checkRpmIdxBUILDHOST(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_h
 extern int checkRpmIdxSIZE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxDISTRIBUTION(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxVENDOR(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern int checkRpmIdxPACKAGER(RpmFile * file1, RpmHdrIndex * hidx, struct tetj_handle *journal);
 extern int checkRpmIdxLICENSE(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxGROUP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxURL(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
