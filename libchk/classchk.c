@@ -231,7 +231,7 @@ check_class_info(ElfFile * file, char *libname,
 	     * Look up the name of the symbol associated with the funcptr
 	     * found in the vtable.
 	     */
-	    memset(&dlainfo, 0, sizeof(dlinfo));
+	    memset(&dlainfo, 0, sizeof(dlainfo));
 	    if (!dladdr(fptr2ptrp(&vtvirtfuncs[j]), &dlainfo)) {
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO
@@ -247,12 +247,12 @@ check_class_info(ElfFile * file, char *libname,
 		Dl_info dlainfo2;
 		int s;
 		for (s = 0; s < 12; s++) {
-		  memset(&dlainfo2, 0, sizeof(dlinfo2));
+		  memset(&dlainfo2, 0, sizeof(dlainfo2));
 		  dladdr(fptr2ptrp(&vtvirtfuncs[s]), &dlainfo2);
 		  fprintf(stderr, "vtable[%d] %p %s\n", s, vtvirtfuncs[s],
 			  dlainfo2.dli_sname);
 		}
-		memset(&dlainfo2, 0, sizeof(dlinfo2));
+		memset(&dlainfo2, 0, sizeof(dlainfo2));
 		dladdr(symp, &dlainfo2);
 		fprintf(stderr, "Class %s\n", classp->name);
 		TETJ_REPORT_INFO("Symbol address for Virtual table entry "
@@ -261,7 +261,7 @@ check_class_info(ElfFile * file, char *libname,
 		fprintf(stderr,
 			"%p doesn't match %p which appears to be %s %p\n",
 			symp, fptr2ptrp(&vtvirtfuncs[j]),
-			dlainfo2.dli_sname, dlinfo2.dli_saddr);
+			dlainfo2.dli_sname, dlainfo2.dli_saddr);
 		test_failed = 1;
 	      }
 	    }
