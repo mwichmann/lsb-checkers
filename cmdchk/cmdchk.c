@@ -5,12 +5,13 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.19 $
+ * This is $Revision: 1.20 $
  *
  * $Log: cmdchk.c,v $
- * Revision 1.19  2005/10/20 12:57:48  pradosh
- * This commit contains only ndentation using "indent -kr -sob"
- * There are NO code changes
+ * Revision 1.20  2005/10/20 13:10:50  pradosh
+ * - Fixed Bug #1006
+ * - Minor code cleanups
+ * - Improved error handling
  *
  * Revision 1.18  2005/07/06 22:33:31  mats
  * Add invocation command line to cmdchk journal (bug 1041)
@@ -90,7 +91,6 @@ char *binpaths[] = {
     "/usr/sbin/",
     "/usr/X11R6/bin/",
     "/usr/lib/lsb/",		/* install_initd, remove_initd */
-    0
 };
 
 #define TMP_STRING_SIZE (PATH_MAX+20)
@@ -98,7 +98,7 @@ char prefix[TMP_STRING_SIZE + 1];
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) cmdchk_revision =
-    "$Revision: 1.19 $";
+    "$Revision: 1.20 $";
 
 void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
@@ -106,7 +106,9 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
     char tmp_string[TMP_STRING_SIZE + 1];
     struct stat stbuf;
     int i;
+    int err_flag;
 
+    err_flag = 0;
     tetj_tp_count = 1;
     tetj_testcase_start(journal, tetj_activity_count, cp->cmdname, "");
     snprintf(tmp_string, TMP_STRING_SIZE, "Looking for command %s",
@@ -114,30 +116,41 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 		       tmp_string);
 
-    /*
-     * TODO: LSB bug 1006 - once command paths are cleaned out in DB,
-     * if cp->cmdpath is non-NULL, check it explicitly in preference
-     * to searching for cp->cmdname in binpaths
-     */
-
-    /* Find the command */
-    for (i = 0; binpaths[i]; i++) {
+   if (cp->cmdpath != "") {
 	if (prefix)
-	    snprintf(filename, PATH_MAX, "%s%s%s", prefix, binpaths[i],
-		     cp->cmdname);
+	    snprintf(filename, PATH_MAX, "%s%s", prefix, cp->cmdpath);
 	else
-	    snprintf(filename, PATH_MAX, "%s%s", binpaths[i], cp->cmdname);
+	    snprintf(filename, PATH_MAX, "%s", cp->cmdpath);
 	if (access(filename, X_OK) == 0) {
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count,
 			TETJ_PASS);
 #ifdef VERBOSE
 	    fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
 #endif
-	    break;
+	} else if (stat(filename, &stbuf) == 0) {
+	    if (stbuf.st_mode & S_IXUSR) {
+		tetj_result(journal, tetj_activity_count, tetj_tp_count,
+			    TETJ_PASS);
+#ifdef VERBOSE
+		fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
+#endif
+	    } else {
+		err_flag = 1;
+	    }
+	} else {
+	    err_flag = 2;
 	}
 
-	if (stat(filename, &stbuf) == 0) {
-	    if (stbuf.st_mode & S_IXUSR) {
+    } else {
+	/* Find the command */
+	for (i = 0; binpaths[i]; i++) {
+	    if (prefix)
+		snprintf(filename, PATH_MAX, "%s%s%s", prefix, binpaths[i],
+			 cp->cmdname);
+	    else
+		snprintf(filename, PATH_MAX, "%s%s", binpaths[i],
+			 cp->cmdname);
+	    if (access(filename, X_OK) == 0) {
 		tetj_result(journal, tetj_activity_count, tetj_tp_count,
 			    TETJ_PASS);
 #ifdef VERBOSE
@@ -145,10 +158,30 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 #endif
 		break;
 	    }
+
+	    if (stat(filename, &stbuf) == 0) {
+		if (stbuf.st_mode & S_IXUSR) {
+		    tetj_result(journal, tetj_activity_count,
+				tetj_tp_count, TETJ_PASS);
+#ifdef VERBOSE
+		    fprintf(stderr, "Found %s as %s\n", cp->cmdname,
+			    filename);
+#endif
+		    break;
+		} else {
+		    err_flag = 1;
+		    break;
+		}
+	    }
 	}
     }
-    if (!binpaths[i]) {
+    if (!binpaths[i] || err_flag == 2) {
 	fprintf(stderr, "Couldn't find %s\n", cp->cmdname);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count,
+		    TETJ_FAIL);
+    } else if (err_flag == 1) {
+	fprintf(stderr, "Cannot access file or Permission denied for %s at %s\n",
+		cp->cmdname, filename);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count,
 		    TETJ_FAIL);
     }
