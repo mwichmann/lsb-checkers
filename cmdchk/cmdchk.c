@@ -5,9 +5,12 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.20 $
+ * This is $Revision: 1.21 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.21  2005/10/25 18:20:50  nick
+ * fixes for bug 1006.
+ *
  * Revision 1.20  2005/10/20 13:10:50  pradosh
  * - Fixed Bug #1006
  * - Minor code cleanups
@@ -91,6 +94,7 @@ char *binpaths[] = {
     "/usr/sbin/",
     "/usr/X11R6/bin/",
     "/usr/lib/lsb/",		/* install_initd, remove_initd */
+    0
 };
 
 #define TMP_STRING_SIZE (PATH_MAX+20)
@@ -98,7 +102,7 @@ char prefix[TMP_STRING_SIZE + 1];
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) cmdchk_revision =
-    "$Revision: 1.20 $";
+    "$Revision: 1.21 $";
 
 void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
@@ -116,7 +120,7 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 		       tmp_string);
 
-   if (cp->cmdpath != "") {
+   if (cp->cmdpath && *(cp->cmdpath)) {
 	if (prefix)
 	    snprintf(filename, PATH_MAX, "%s%s", prefix, cp->cmdpath);
 	else
@@ -125,14 +129,14 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count,
 			TETJ_PASS);
 #ifdef VERBOSE
-	    fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
+	    fprintf(stderr, "Found %s (%s) as %s\n", cp->cmdpath, cp->cmdname, filename);
 #endif
 	} else if (stat(filename, &stbuf) == 0) {
 	    if (stbuf.st_mode & S_IXUSR) {
 		tetj_result(journal, tetj_activity_count, tetj_tp_count,
 			    TETJ_PASS);
 #ifdef VERBOSE
-		fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
+		fprintf(stderr, "Found priv cmd %s (%s) as %s\n", cp->cmdpath, cp->cmdname, filename);
 #endif
 	    } else {
 		err_flag = 1;
@@ -156,6 +160,7 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 #ifdef VERBOSE
 		fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
 #endif
+	        err_flag = 0;
 		break;
 	    }
 
@@ -167,20 +172,22 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 		    fprintf(stderr, "Found %s as %s\n", cp->cmdname,
 			    filename);
 #endif
+		    err_flag = 0;
 		    break;
 		} else {
 		    err_flag = 1;
 		    break;
 		}
 	    }
+	    err_flag = 2;
 	}
     }
-    if (!binpaths[i] || err_flag == 2) {
+    if (err_flag == 2) {
 	fprintf(stderr, "Couldn't find %s\n", cp->cmdname);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count,
 		    TETJ_FAIL);
     } else if (err_flag == 1) {
-	fprintf(stderr, "Cannot access file or Permission denied for %s at %s\n",
+	fprintf(stderr, "Permission denied for %s at %s\n",
 		cp->cmdname, filename);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count,
 		    TETJ_FAIL);
