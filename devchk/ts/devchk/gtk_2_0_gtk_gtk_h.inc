@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 struct _GtkSettingsPropertyValue { };
 struct _GtkRcContext { };
@@ -74,3 +73,9 @@ struct _GtkTextMarkBody { };
 struct _GtkTextPixbuf { };
 struct _GtkTextChildBody { };
 struct _GtkComboBoxPrivate { };
+struct _GtkAccelMapClass { };
+struct _GtkFileChooserDialogPrivate { };
+struct _GtkAlignmentPrivate { };
+struct _GtkFileChooserWidgetPrivate { };
+struct _GtkCellRendererProgressPrivate { };
+struct _GtkToolbarPrivate { };
