@@ -320,6 +320,23 @@ sub writetest($$)
 		}
 		#case Pointer:
 		if( $tentry{'Ttype'} eq 'Pointer' ) {
+			# need to get the basetype first
+			$tselect = "SELECT * FROM Type ";
+			$tselect.= "LEFT JOIN ArchType ON ATtid=Tid ";
+			$tselect.= "LEFT JOIN Architecture ON Aid=ATaid ";
+			$tselect.= "WHERE Tid=".$tentry{'Tbasetype'};
+			$ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
+			%ttentry=$ttth->fetchhash;
+			my $typeName;
+			if( $ttentry{'Ttype'} eq 'Struct' ) {
+				$typeName = "struct ".$Tname;
+				print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid)\n";
+			} elsif ($ttentry{'Ttype'} eq 'Union' ) {
+				$typeName = "union ".$Tname;
+				print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid)\n";
+			} elsif ($ttentry{'Ttype'} eq 'Typedef' ) {
+				print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+			}
 			next;
 			}
 		#case Enum:
@@ -337,14 +354,14 @@ sub writetest($$)
 			%ttentry=$ttth->fetchhash;
 			if( $ttentry{'Ttype'} eq 'Array' ) {
 				#print TESTS "CheckArrayTypeSize($Tname,".$ttentry{'ATsize'}.",$ATsize, $Tid, $Aid)\n";
-				print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+                #	print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
 			} else {
 				print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
 			}
 			next;
 			}
 		# Default case
-		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n" if $tentry{'Ttype'} ne 'Array';
 	}
 	if( $lastid != 0 ) {
 		if( $tentry{'Tarch'} == 1 && $lastaid != 1 ) {
