@@ -746,6 +746,13 @@ int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
                    to ignore any other information in the augmentation */
                 ptr = cfi_start;
         }
+		else if (strlen(frame->augmentation) != 0)
+		{ /* We ignore the remaining CIE and FDE information as we don't
+				  know how it may be structured */
+            fprintf(stderr,"CIE contains unexpected augmentation string %s\n", frame->augmentation);
+			*error = 1;
+			return -1;
+		}
 
 
         /* Get the CFIs */
