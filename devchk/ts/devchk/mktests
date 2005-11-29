@@ -12,6 +12,136 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 # counter used to calculate test number
 $cnt=0;
 
+sub
+    displaytyperef($)
+{
+    local ($param) = @_;
+    local(%select,$sth,%type);
+
+    if( $$param{'Pconst'} eq "Y" ) {
+	print TESTS "const ";
+    }
+	
+	if( $$param{'Ttype'} eq "Volatile" ||
+		$$param{'Ttype'} eq "Intrinsic" ||
+		$$param{'Ttype'} eq "Literal"
+		) {
+	print TESTS $$param{'Tname'};
+	return;
+    }
+
+
+    if( $$param{'Ttype'} eq "Const" ) {
+	$select = "SELECT * FROM Type WHERE Tid=".$$param{'Tbasetype'};
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+	%type=$sth->fetchhash;
+	if( $type{'Ttype'} eq "Pointer" ) {
+	    displaytyperef(\%type);
+	    print TESTS "const ";
+	} else {
+	    print TESTS "const ";
+	    displaytyperef(\%type);
+	}
+	return;
+    }
+
+    if( $$param{'Ttype'} eq "Pointer" ) {
+	$select = "SELECT * FROM Type WHERE Tid=".$$param{'Tbasetype'};
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+	%type=$sth->fetchhash;
+	displaytyperef(\%type);
+	print TESTS " *";
+	return;
+    }
+	if($$param{Tname} =~ "anon"){
+			$$param{Tname}="";
+	}
+
+    if( $$param{'Ttype'} eq "Struct" ) {
+	print TESTS "struct ".$$param{'Tname'};
+	return;
+    }
+
+    if( $$param{'Ttype'} eq "Typedef" ) {
+	print TESTS $$param{'Tname'};
+	return;
+    }
+
+    if( $$param{'Ttype'} eq "Union" ) {
+	print TESTS "union ".$$param{'Tname'};
+	return;
+    }
+
+    if( $$param{'Ttype'} eq "Enum" ) {
+	print TESTS "enum ".$$param{'Tname'};
+	return;
+    }
+
+    if( $$param{'Ttype'} eq "Array" ) {
+	$basetype=$$param{'Tbasetype'};
+	$tselect="SELECT * FROM Type WHERE Tid=$basetype";
+	$tth = $Dbh->query($tselect) || die $Dbh->errmsg();
+	%type=$tth->fetchhash;
+	if( !$nameonly ) {
+	    #$nameonly=1;
+	    displaytyperef(\%type);
+	    #$nameonly=0;
+	} else {
+	    displaytyperef(\%type);
+	}
+	return;
+    }
+
+    if( $$param{'Ttype'} eq "FuncPtr" ) {
+	$select = "SELECT * FROM Type WHERE Tid=".$$param{'Tbasetype'};
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+	%type=$sth->fetchhash;
+	$Tid=$$param{'Tid'};
+	displaytyperef(\%type);
+	print TESTS "(*";
+	if( $$param{'Tname'} =~ "fptr" ) {
+		    $$param{'Tname'} =~ s/fptr-//;
+	}
+	print TESTS $$param{'Tname'};
+	print TESTS ")";
+
+	print TESTS "(";
+
+	$tmselect="SELECT * FROM TypeMember";
+	$tmselect.=" WHERE TMmemberof=$Tid";
+	$tmselect.=" GROUP BY TMid";
+	$tmselect.=" ORDER BY TMposition";
+	$tmh = $Dbh->query($tmselect) || die $Dbh->errmsg();
+	if($tmh->numrows == 0) {
+	    print TESTS "void";
+	}
+	for(1..$tmh->numrows) {
+	    %tmentry=$tmh->fetchhash;
+	    $TMtypeid=$tmentry{'TMtypeid'};
+	    $tselect="SELECT * FROM Type";
+		$tselect.=" LEFT JOIN ArchType ON ATaid=Tarch AND ATtid=Tid";
+		$tselect.=" WHERE Tid=$TMtypeid";
+	    $th = $Dbh->query($tselect) || die $Dbh->errmsg();
+	    %entry=$th->fetchhash;
+	    #$nameonly=1;
+		displaytyperef(\%entry);
+	    #print TESTS $tmentry{'TMname'};
+	    if( $entry{'Ttype'} eq 'Array' ) {
+		print TESTS "[".$entry{'ATsize'}."]";
+	    }
+	    if( $_ != $tmh->numrows ) {
+		print TESTS ",";
+	    }
+	    #$nameonly=0;
+	}
+
+	print TESTS ")\n";
+	return;
+    }
+
+    print TESTS $$param{'Ttype'};
+}
+
 sub writetest($$)
 {
 	local($Hid,$Hname)=@_;
@@ -123,10 +253,12 @@ sub writetest($$)
 	print TESTS "int $fname()\n{\n";
 	print TESTS "#endif\n\n";
 	print TESTS "int cnt=0;\n\n";
-	print TESTS "#ifdef TET_TEST\n";
 	print TESTS "int pcnt=0;\n";
+	print TESTS "#ifdef TET_TEST\n";
+	#print TESTS "int pcnt=0;\n";
 	print TESTS "Msg(\"Checking data structures in $Hname\\n\");\n";
 	print TESTS "#endif\n\n";
+	print TESTS "printf(\"Checking data structures in $Hname\\n\");\n";
 
 	my(%constHash);
 	for (1..$cth->numrows)
@@ -272,7 +404,7 @@ sub writetest($$)
 		$Aid=$tentry{'Aid'};
 		$Asymbol=$tentry{'Asymbol'};
 		$Aname=$tentry{'Aname'};
-		if( $Tname=~/anon/ ) { next; };
+		if( $Tname=~/anon/ && $tentry{'Ttype'} ne 'Enum') { next; };
 		if( $Tname=~/fptr/ ) { next; };
 		# switch( $tentry{'Ttype'}
 		#case Struct:
@@ -341,8 +473,26 @@ sub writetest($$)
 			}
 		#case Enum:
 		if( $tentry{'Ttype'} eq 'Enum' ) {
-			next;
+			$tmselect = "SELECT * FROM TypeMember ";
+			$tmselect.= "WHERE TMmemberof=".$tentry{'Tid'};
+			$tmselect.= " ORDER BY TMposition";
+			$tmh = $Dbh->query($tmselect) || die $Dbh->errmsg();
+			for(1..$tmh->numrows){
+				%tmentry=$tmh->fetchhash;
+				if($tmentry{'TMarray'} ne ''){
+					$lastvalue="$tmentry{'TMarray'}";
+					print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$tmentry{'TMarray'});\n";
+				}else{
+					if($_ == 1 ){
+					 	$lastvalue="0";
+					}else {
+						$lastvalue="(".$lastvalue.") + 1";
+					}
+					print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$lastvalue);\n";
+				}
 			}
+			next;
+		}
 		#case Typedef:
 		if( $tentry{'Ttype'} eq 'Typedef' ) {
 			# Need to check for Array, and adjust the size value accordingly
@@ -372,7 +522,68 @@ sub writetest($$)
 			}
 		print TESTS "#endif\n\n";
 		}
+	# Interface testing
+	# 
+	my $GlX11 = 0;
+#	print $Hname;
+	if ($Hname =~ /GL\// || $Hname =~ /X11\//) {
+	#	print "Found GL or X11 header\n";
+		$GlX11 = 1;
+	}
+	if ($GlX11 == 0) { # ignore GL and X11 interfaces
+		$select = "SELECT * FROM Interface ";
+		$select.= "LEFT JOIN Header ON Iheader=Hid ";
+		$select.= "LEFT JOIN Type ON Ireturn=Tid ";
+		$select.= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=Iarch ";
+		$select.= "LEFT JOIN Architecture ON Iarch=Aid ";
+		$select.= "WHERE ( Istatus='Included' OR Istatus='SrcOnly' )";
+		$select.= "AND Hid=$Hid";
+		$sth = $Dbh->query($select) || die $Dbh->errmsg();
 
+		for(1..$sth->numrows) {
+			%entry=$sth->fetchhash;
+			if( $entry{'Itype'} eq "Function" ) {
+					if( $entry{'Ttype'} eq 'FuncPtr' ) {
+					    print STDERR "Skipping a global function pointer!!\n";
+					next;
+					}
+					if( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
+					    print TESTS "#if $entry{'Asymbol'}\n";
+					    print TESTS "/* $entry{'Aname'} */\n";
+					}
+					print TESTS "extern ";
+					displaytyperef(\%entry);
+					print TESTS " $entry{'Iname'}_db(";
+					$select = "SELECT Tid,Tname,Ttype,Tbasetype,Parsize,Pconst FROM Type,Parameter ";
+					$select.= "WHERE Pint=".$entry{'Iid'}." AND Ptype=Tid ";
+					$select.= "ORDER BY  Ppos";
+					$sth2 = $Dbh->query($select) || die $Dbh->errmsg();
+					if( $sth2->numrows ) {
+					    for(1..$sth2->numrows) {
+							%entry2=$sth2->fetchhash;
+							#print TESTS ", ";
+							displaytyperef(\%entry2);
+							if( $entry2{'Ttype'} eq "Array" ) {
+							    print TESTS "[";
+							    if( $entry2{'Parsize'} != 0 ) {
+									print TESTS "$entry2{'Parsize'}";
+							    }
+							    print TESTS "]";
+							}
+							if( $_ != $sth2->numrows){ print TESTS ", ";	}
+					    }
+					} else {
+					print TESTS "void";
+					}
+					print TESTS ");\n";
+					print TESTS "CheckInterfacedef($entry{'Iname'},$entry{'Iname'}_db);\n";
+					if( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
+					    print TESTS "#endif\n";
+					}
+			}
+		}
+	}
+#
 	print TESTS "#ifdef TET_TEST\n";
 	print TESTS "if (pcnt == cnt )\n";
 	print TESTS "\ttet_result(TET_PASS);\n";
@@ -380,7 +591,8 @@ sub writetest($$)
 	print TESTS "\ttet_result(TET_FAIL);\n";
 	print TESTS "return;\n";	
 	print TESTS "#else\n";
-	print TESTS "printf(\"%d tests in $Hname\\n\",cnt);\n";
+	print TESTS "printf(\"%d tests passed out of %d tests in $Hname\\n\\n\",pcnt,cnt);\n";
+#	print TESTS "printf(\"%d tests in $Hname\\n\",cnt);\n";
 	print TESTS "return cnt;\n";
 	print TESTS "#endif\n\n";
 	print TESTS "}\n";
@@ -503,9 +715,11 @@ print TESTS "#else\n";
 print TESTS "int intrinsic()\n{\n";
 print TESTS "#endif\n";
 print TESTS "int cnt=0;\n";
-print TESTS "#ifdef TET_TEST\n";
 print TESTS "int pcnt=0;\n";
+print TESTS "#ifdef TET_TEST\n";
+#print TESTS "int pcnt=0;\n";
 print TESTS "#endif\n\n";
+print TESTS "printf(\"Checking Intrinsic types\\n\");\n";
 
 $lastid=0;
 for(1..$tth->numrows) {
@@ -545,7 +759,8 @@ print TESTS "else\n";
 print TESTS "\ttet_result(TET_FAIL);\n";
 print TESTS "return;\n";	
 print TESTS "#else\n";
-print TESTS "printf(\"%d intrinsic types\\n\",cnt);\n";
+print TESTS "printf(\"%d tests passed out of %d tests intrinsic types\\n\\n\",pcnt,cnt);\n";
+#print TESTS "printf(\"%d intrinsic types\\n\",cnt);\n";
 print TESTS "return cnt;\n";
 print TESTS "#endif\n\n";
 print TESTS "}\n";
@@ -604,9 +819,11 @@ print TESTS "#else\n";
 print TESTS "int cxx()\n{\n";
 print TESTS "#endif\n";
 print TESTS "int cnt=0;\n";
-print TESTS "#ifdef TET_TEST\n";
 print TESTS "int pcnt=0;\n";
+print TESTS "#ifdef TET_TEST\n";
+#print TESTS "int pcnt=0;\n";
 print TESTS "#endif\n\n";
+print TESTS "printf(\"Checking C++ types\\n\");\n";
 
 $lastid=0;
 for(1..$tth->numrows) {
@@ -652,7 +869,8 @@ print TESTS "else\n";
 print TESTS "\ttet_result(TET_FAIL);\n";
 print TESTS "return;\n";	
 print TESTS "#else\n";
-print TESTS "printf(\"%d c++ types\\n\",cnt);\n";
+print TESTS "printf(\"%d tests passed out of %d tests in C++ types\\n\\n\",pcnt,cnt);\n";
+#print TESTS "printf(\"%d c++ types\\n\",cnt);\n";
 print TESTS "return cnt;\n";
 print TESTS "#endif\n\n";
 print TESTS "}\n";
