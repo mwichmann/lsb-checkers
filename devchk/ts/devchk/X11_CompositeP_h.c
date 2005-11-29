@@ -25,11 +25,12 @@ int X11_CompositeP_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in X11/CompositeP.h\n");
 #endif
 
+printf("Checking data structures in X11/CompositeP.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XtCompositeExtensionVersion
 	CompareConstant(XtCompositeExtensionVersion,2L,4931,architecture)
@@ -103,7 +104,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in X11/CompositeP.h\n",cnt);
+printf("%d tests passed out of %d tests in X11/CompositeP.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

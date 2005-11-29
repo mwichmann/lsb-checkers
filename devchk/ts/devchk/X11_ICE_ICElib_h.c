@@ -18,11 +18,12 @@ int X11_ICE_ICElib_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in X11/ICE/ICElib.h\n");
 #endif
 
+printf("Checking data structures in X11/ICE/ICElib.h\n");
 #if __i386__
 CheckTypeSize(IcePoVersionRec,12, 8206, 2)
 #elif __ia64__
@@ -461,12 +462,19 @@ Msg("Find size of IceIOErrorHandler (8772)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(struct _IceListenObj *,4, 7710, 2)
 #elif __ia64__
+CheckTypeSize(struct _IceListenObj *,0, 7710, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _IceListenObj *,4, 7710, 6)
 #elif __s390__ && !__s390x__
+CheckTypeSize(struct _IceListenObj *,0, 7710, 10)
 #elif __powerpc64__
+CheckTypeSize(struct _IceListenObj *,0, 7710, 9)
 #elif __s390x__
+CheckTypeSize(struct _IceListenObj *,0, 7710, 12)
 #elif __x86_64__
+CheckTypeSize(struct _IceListenObj *,0, 7710, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7710,0);
 Msg("Find size of _IceListenObj * (7710)\n");
@@ -517,7 +525,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in X11/ICE/ICElib.h\n",cnt);
+printf("%d tests passed out of %d tests in X11/ICE/ICElib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

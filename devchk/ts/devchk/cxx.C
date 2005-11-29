@@ -36,10 +36,11 @@ int cxx()
 {
 #endif
 int cnt=0;
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 #endif
 
+printf("Checking C++ types\n");
 #if __i386__
 #define TYPE __cxxabiv1::__enum_type_info
 CheckTypeSize(TYPE,8,10708,2)
@@ -3791,7 +3792,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d c++ types\n",cnt);
+printf("%d tests passed out of %d tests in C++ types\n\n",pcnt,cnt);
 return cnt;
 #endif
 

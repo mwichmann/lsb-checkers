@@ -25,11 +25,12 @@ int X11_ObjectP_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in X11/ObjectP.h\n");
 #endif
 
+printf("Checking data structures in X11/ObjectP.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XtObjectExtensionVersion
 	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
@@ -751,12 +752,19 @@ Msg("Find size of anon-_ObjectClassExtensionRec (10267)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(struct _ObjectClassExtensionRec *,4, 10269, 2)
 #elif __ia64__
+CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _ObjectClassExtensionRec *,4, 10269, 6)
 #elif __s390__ && !__s390x__
+CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 10)
 #elif __powerpc64__
+CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 9)
 #elif __s390x__
+CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 12)
 #elif __x86_64__
+CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10269,0);
 Msg("Find size of _ObjectClassExtensionRec * (10269)\n");
@@ -769,7 +777,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in X11/ObjectP.h\n",cnt);
+printf("%d tests passed out of %d tests in X11/ObjectP.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 
