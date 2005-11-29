@@ -18,11 +18,12 @@ int X11_Intrinsic_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in X11/Intrinsic.h\n");
 #endif
 
+printf("Checking data structures in X11/Intrinsic.h\n");
 #if __i386__
 CheckTypeSize(Widget,4, 9578, 2)
 #elif __ia64__
@@ -467,7 +468,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in X11/Intrinsic.h\n",cnt);
+printf("%d tests passed out of %d tests in X11/Intrinsic.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 
