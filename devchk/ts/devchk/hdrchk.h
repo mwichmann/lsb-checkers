@@ -12,7 +12,7 @@ extern "C"
 #define HDRCHKTEST_PASS pcnt++;
 #define HDRCHKTEST_FAIL  /* no increment of pcnt */
 #else
-#define HDRCHKTEST_PASS
+#define HDRCHKTEST_PASS pcnt++;
 #define HDRCHKTEST_FAIL
 int Msg(char *f, ...);
 int Log(char *f, ...);
@@ -152,6 +152,27 @@ int Log(char *f, ...);
 	else { \
 		HDRCHKTEST_PASS \
 	} \
+}
+
+#define CheckEnum(enumnm,enumname,enumvalue) \
+{ \
+	cnt++; \
+	if(enumname != enumvalue ) { \
+		Msg( "%s enumerator has value %d instead of expected %d\n",enumnm,enumvalue,enumname); \
+			HDRCHKTEST_FAIL \
+	} \
+	else { \
+		HDRCHKTEST_PASS \
+	} \
+}	
+
+#define CheckInterfacedef(funcname,dbfunc) \
+{ \
+			typedef typeof(dbfunc) dbt; \
+			typedef typeof(funcname) st; \
+		        dbt * test2;  \
+			st * test3; \
+		        test2=test3; \
 }
 
 extern int architecture;
