@@ -1,3 +1,132 @@
+2005-11-30	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/jpeglib_h.inc
+	   for JPEG lib
+
+2005-11-29	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/wchar_h.inc
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/cxx.C
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/png_h.inc
+	  devchk/ts/devchk/pthread_h.inc
+	  devchk/ts/devchk/stdio_h.inc
+	  devchk/ts/devchk/sys_socket_h.inc
+	  devchk/ts/devchk/syslog_h.inc
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/unistd_h.inc
+	   changes for inteface testing, modified files due to enum tests
+	   etc...
+
+2005-11-22	Rita Gupta <rita.gupta_at_intel.com>
+	* elfchk/dwarf.c
+	   ignoring the CIE and FDE data if unexpected augmentation string
+	   encountered
+
+2005-11-19	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/mktests
+	   removed tests for arrays as handling has changed Added tests for
+	   Pointer to struct, union or typedef.
+
+2005-11-09	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/pango_1_0_pango_pangoxft_h.inc
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.inc
+	  devchk/ts/devchk/glib_2_0_glib_h.inc
+	  devchk/ts/devchk/glib_2_0_glib_object_h.inc
+	  devchk/ts/devchk/glib_2_0_gmodule_h.inc
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.inc
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.inc
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.inc
+	   updates for GTK inc files
+
+2005-10-25	Nick Stoughton <nick_at_usenix.org>
+	* cmdchk/cmdchk.c
+	   fixes for bug 1006.
+
+2005-10-20	Pradosh Adoni <pradosh.adoni_at_codito.com>
+	* cmdchk/cmdchk.c
+	   - Fixed Bug #1006 - Minor code cleanups - Improved error
+	   handling
+
+2005-10-10	Marvin Heffler <heffler_at_us.ibm.com>
+	* libchk/classchk.c
+	   fix a few instances where dlinfo did not get replaced by dlainfo
+
+2005-10-07	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* rpmchk/tagfuncs.h
+	  rpmchk/idxtag.c
+	  rpmchk/idxtbl.c
+	  rpmchk/rpmtag.h
+	   Updates to match db changes (bug 1044) - new function, changed
+	   names
+
+2005-10-06	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/classchk.c
+	   Rename dlinfo to dlainfo to avoid confusion with libc-internal
+	   dlinfo function
+
+2005-10-03	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/pango_1_0_pango_pangoxft_h.inc
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.inc
+	  devchk/ts/devchk/glib_2_0_glib_h.inc
+	  devchk/ts/devchk/glib_2_0_glib_object_h.inc
+	  devchk/ts/devchk/glib_2_0_gmodule_h.inc
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.inc
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.inc
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.inc
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.inc
+	   GTK in LSB desktop
+
+2005-09-30	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* cmdchk/cmds.h
+	  cmdchk/cmdlist
+	   Regen: missed part of bug 1006, *initd commands should have had
+	   full path
+
+2005-09-29	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* cmdchk/mkcmdlist2
+	  cmdchk/cmdchk.py
+	  cmdchk/cmdlist
+	  cmdchk/cmds.h
+	   Bug 1006: python version: match db changes to clean command
+	   paths except where required by the spec
+
+2005-09-12	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/classchk.c
+	   Add class name to journal entries for vtable checking
+
+2005-09-09	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/classchk.c
+	   no-functionality-change reformat (use indent of 2 instead of
+	   tabstop of 2)
+
+2005-08-30	Nilesh Jain <nilesh.jain_at_intel.com>
+	* devchk/ts/devchk/mktests
+	   Added support to replace - with _ while creating func name
+
+2005-07-29	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* ChangeLog
+	   This should be up to date for the 3.0 release
+
 2005-07-12	Mats Wichmann <mats.d.wichmann_at_intel.com>
 	* libchk/classchk.c
 	   Fix journal prints: strings shouldn't end with \n
@@ -34032,4 +34161,4 @@
 	  makefile
 	   branches:  1.1.1; Initial revision
 
-1122651334
+1133367390
