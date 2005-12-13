@@ -1,0 +1,181 @@
+.TH tetj "3" "" "tetj (LSB)" LSB
+.SH NAME
+tetj \- TET emulation toolkit
+.SH DESCRIPTION
+.PP
+The
+.I tetj
+library provides a simple toolkit to generate a 
+.I journal
+file in the format produced by 
+.IR TET , 
+the Test Environment Toolkit.
+Many LSB Certification tests are written to use
+TETware-lite as a test harness, and thus certification
+depends on results being available in this format.
+For tests which do not use the TET framework,
+tetj is one way to generate a compatible journal
+which can be analyzed by existing tools.
+.PP
+Each line in a journal file consists of three fields
+separated by | characters.  The first field contains
+a number which indicates the type of the journal line.
+The second field contains information depending on the
+type of the journal line.
+The third field generally contains some kind of message text. 
+.I tetj
+provides functions to generate the most common journal
+line types, and can easily be extended to generate
+additional ones.
+.PP
+The general structure of the journal file is some initial
+setup information, followed by structured information in
+begin/end pairs, wrapping other begin/end pairs which
+contain result and informational messages.
+.SH SYNOPSIS
+.nf
+.B #include "tetj.h"
+
+.B cc files libtetj.a
+.fi
+.PP
+Programs should initialize use of the library by calling
+.I tetj_start_journal
+with a filename for the journal; a 
+.B tetj_handle 
+pointer, for which the function will allocate storage space
+and fill in the pointer; and the command line the test was called
+with.  The command line and some collected
+system information will be recorded at the start of the
+journal file, which will thus have two lines in it on
+return.  The handle to the journal must be kept by the test suite
+and passed to all of the other library routines as the first argument.
+.PP
+A journal file is completed by a call to 
+.IR tetj_close_journal ,
+which writes ending information and closes the journal file;
+this call is mandatory as the journal will be considered
+invalid if the ending information is absent.
+.PP
+Any configuration information describing parameters
+that affect the execution of the test is recorded with
+one or more calls to the 
+.I tetj_add_config
+function; the end of this block of header information
+is signalled with a call to the
+.I tetj_config_end
+function.
+.PP
+If the test program knows how many tests will be executed,
+this information should be recorded with an optional call to the
+.I tetj_scenario_info
+function, the format of the 
+.B message 
+argument is (including quotes), assuming test "foo" and a count
+of "27":
+.nf
+\fB"total tests in foo 27"\fR
+.fi
+.PP
+The remaining contents of the journal file is made up of
+information about tests executed during the test run.
+Tests can be single or dual level; the top level is
+the "test case", the second level is the "test purpose".
+There may be one or more test cases, which are set up
+and terminated by calls to
+.I tetj_testcase_start
+and
+.IR tetj_testcase_end ,
+and each test case may have one or more test purposes,
+which are set up and terminated by calls to
+.I tetj_purpose_start
+and
+.IR tetj_purpose_end .
+Each test purpose must record a result; the journal
+is considered invalid if it is lacking any expected
+result code. These are recorded by a call to
+.IR tetj_result .
+The result code is selected from the predefined
+values in the 
+.B testcase_results
+enum, these codes have specific meanings and should
+not be altered (see tetj.h).
+If it would be helpful to record more information about
+a test, perhaps the reason why a failure is being
+reported, this can be done with one or more calls to
+.IR tetj_testcase_info .
+.PP
+During the execution of the test suite, the code
+is responsible for keeping track of two counters,
+.B tetj_activity_count
+and
+.BR tetj_tp_count ,
+both of which are declared and initialized in
+.IR tetj.h .
+.B tetj_activity_count
+should be incremented for each new testcase while
+.B tetj_tp_count 
+should be reset for each new testcase and incremented
+for each test purpose. 
+.B tetj_activity_count 
+is passed to each function that takes an "activity" and 
+.B tetj_tp_count 
+to each function that takes "tpnumber" argument.
+The intent is that each test purpose be uniquely identified
+by a pair of serial numbers; the journal will be considered
+invalid if this is not true.
+.PP
+The 
+.B testcase
+name passed to
+.I tetj_testcase_start
+is required to be unique across the entire journal.
+When tests are executed using the TET toolkit,
+these testcase names map to entries in the scenario
+file, thus the reporting tools consider a journal
+invalid if the testcase names are not unique.
+.PP
+.nf
+struct tetj_handle;
+extern int tetj_activity_count;
+extern int tetj_tp_count;
+enum testcase_results { ... };
+
+int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
+                       char *command_run);
+int tetj_close_journal(struct tetj_handle *handle);
+void tetj_add_config(struct tetj_handle *handle, char *message);
+void tetj_config_end(struct tetj_handle *handle);
+void tetj_scenario_info(struct tetj_handle *handle, char *message);
+void tetj_add_controller_error(struct tetj_handle *handle,
+                               char *message);
+void tetj_testcase_start(struct tetj_handle *handle,
+                         unsigned int activity, char *testcase,
+                         char *message);
+void tetj_testcase_end(struct tetj_handle *handle,
+                       unsigned int activity, unsigned int status,
+                       char *message);
+void tetj_purpose_start(struct tetj_handle *handle,
+                        unsigned int activity, unsigned int tpnumber,
+                        char *message);
+void tetj_purpose_end(struct tetj_handle *handle, unsigned int activity,
+                      unsigned int tpnumber);
+void tetj_result(struct tetj_handle *handle, unsigned int activity,
+                 unsigned int tpnumber, enum testcase_results result);
+void tetj_testcase_info(struct tetj_handle *handle,
+                        unsigned int activity, unsigned int tpnumber,
+                        unsigned int context, unsigned int block,
+                        unsigned int sequence, char *message);
+.fi
+
+.SH "AUTHORS"
+The contributors to the Linux Standard Base.
+.SH "REPORTING BUGS"
+If you obtained this checker from the LSB ftp site,
+report bugs at http://bugs.linuxbase.org or email to
+<lsb-test@freestandards.org>.  If you obtained this
+from your distribution, report bugs back to the
+distribution in the normal way.
+.SH "SEE ALSO"
+Linux Standard Base specification and other documents at
+http://www.linuxbase.org/
