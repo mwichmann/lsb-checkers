@@ -45,11 +45,13 @@ main() {
 
     tetj_add_config(journal, "VSX_NAME=tetjtest unofficial");
     tetj_config_end(journal);
+    tetj_scenario_info(journal, "\"total tests in tetjtest 24\"");
 
     tetj_testcase_start(journal, tetj_activity_count, "foo", "");
     tetj_tp_count = 1;
     for (tp = teststuff_data; tp->data != NULL; tp++) {
-      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tp->data);
+      snprintf(tmp_string, TMP_STRING_SIZE, "TP Start, %s", tp->data);
+      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
       tetj_result(journal, tetj_activity_count, tetj_tp_count, tp->resultcode);
       tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
     }
@@ -58,7 +60,8 @@ main() {
     tetj_testcase_start(journal, tetj_activity_count, "bar", "");
     tetj_tp_count = 1;
     for (tp = teststuff_data; tp->data != NULL; tp++) {
-      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tp->data);
+      snprintf(tmp_string, TMP_STRING_SIZE, "TP Start, %s", tp->data);
+      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
       tetj_result(journal, tetj_activity_count, tetj_tp_count, tp->resultcode);
       tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
     }
