@@ -1,6 +1,6 @@
 .TH tetj "3" "" "tetj (LSB)" LSB
 .SH NAME
-tetj \- TET emulation toolkit
+tetj \- TET journal emulation toolkit
 .SH DESCRIPTION
 .PP
 The
@@ -14,24 +14,24 @@ Many LSB Certification tests are written to use
 TETware-lite as a test harness, and thus certification
 depends on results being available in this format.
 For tests which do not use the TET framework,
-tetj is one way to generate a compatible journal
+tetj is a way to generate a compatible journal
 which can be analyzed by existing tools.
 .PP
+The general structure of the journal file is some initial
+setup information, followed by structured information in
+begin/end pairs, wrapping other begin/end pairs which
+contain result and informational messages.
 Each line in a journal file consists of three fields
 separated by | characters.  The first field contains
 a number which indicates the type of the journal line.
 The second field contains information depending on the
 type of the journal line.
 The third field generally contains some kind of message text. 
+.PP
 .I tetj
 provides functions to generate the most common journal
 line types, and can easily be extended to generate
-additional ones.
-.PP
-The general structure of the journal file is some initial
-setup information, followed by structured information in
-begin/end pairs, wrapping other begin/end pairs which
-contain result and informational messages.
+additional line types if required.
 .SH SYNOPSIS
 .nf
 .B #include "tetj.h"
@@ -39,9 +39,9 @@ contain result and informational messages.
 .B cc files libtetj.a
 .fi
 .PP
-Programs should initialize use of the library by calling
+Programs should initialize use of the library by calling the
 .I tetj_start_journal
-with a filename for the journal; a 
+function with: a filename for the journal; a 
 .B tetj_handle 
 pointer, for which the function will allocate storage space
 and fill in the pointer; and the command line the test was called
@@ -62,17 +62,17 @@ that affect the execution of the test is recorded with
 one or more calls to the 
 .I tetj_add_config
 function; the end of this block of header information
-is signalled with a call to the
+is signaled with a call to the
 .I tetj_config_end
 function.
 .PP
-If the test program knows how many tests will be executed,
+If the test suite knows how many tests will be executed,
 this information should be recorded with an optional call to the
 .I tetj_scenario_info
 function, the format of the 
 .B message 
-argument is (including quotes), assuming test "foo" and a count
-of "27":
+argument is, assuming test "foo" and a count
+of "27" (the quotes are required):
 .nf
 \fB"total tests in foo 27"\fR
 .fi
@@ -99,24 +99,27 @@ The result code is selected from the predefined
 values in the 
 .B testcase_results
 enum, these codes have specific meanings and should
-not be altered (see tetj.h).
+not be altered (see 
+.IR tetj.h ).
 If it would be helpful to record more information about
 a test, perhaps the reason why a failure is being
 reported, this can be done with one or more calls to
-.IR tetj_testcase_info .
+.IR tetj_testcase_info ,
+which should precede the
+.I tetj_result
+call.
 .PP
-During the execution of the test suite, the code
-is responsible for keeping track of two counters,
+The test suite is responsible for keeping track of two counters,
 .B tetj_activity_count
 and
 .BR tetj_tp_count ,
 both of which are declared and initialized in
 .IR tetj.h .
 .B tetj_activity_count
-should be incremented for each new testcase while
+(starts at 0) should be incremented for each new testcase while
 .B tetj_tp_count 
-should be reset for each new testcase and incremented
-for each test purpose. 
+should be reset for each new testcase (starts at 1) 
+and incremented for each test purpose. 
 .B tetj_activity_count 
 is passed to each function that takes an "activity" and 
 .B tetj_tp_count 
@@ -124,6 +127,9 @@ to each function that takes a "tpnumber" argument.
 The intent is that each test purpose be uniquely identified
 by a pair of serial numbers; the journal will be considered
 invalid if this is not true.
+Note: since these are global variables, it seems strange
+that they must be explicitly passed - perhaps a future
+enhancement may remove this requirement.
 .PP
 The 
 .B testcase
@@ -171,11 +177,11 @@ void tetj_testcase_info(struct tetj_handle *handle,
 .SH "AUTHORS"
 The contributors to the Linux Standard Base.
 .SH "REPORTING BUGS"
-If you obtained this checker from the LSB ftp site,
+If you obtained this library from the LSB ftp site,
 report bugs at http://bugs.linuxbase.org or email to
 <lsb-test@freestandards.org>.  If you obtained this
-from your distribution, report bugs back to the
-distribution in the normal way.
+from your distribution vendor, report bugs back to the
+vendor in the normal way.
 .SH "SEE ALSO"
 Linux Standard Base specification and other documents at
 http://www.linuxbase.org/
