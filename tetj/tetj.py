@@ -11,41 +11,8 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.9 $
+# This is $Revision: 1.10 $
 #
-# $Log: tetj.py,v $
-# Revision 1.9  2005/06/12 16:04:34  mats
-# Fix 15 line
-#
-# Revision 1.8  2005/06/10 18:17:20  mats
-# Add support for 40 (config end) and 70 (scenario info) lines.
-# Update README to reflect what's supported and what isn't.
-#
-# Revision 1.7  2005/05/04 00:07:03  mats
-# Some formatting cleanup to make tet journal tools happier on this
-# emulated journal stuff
-#
-# Revision 1.6  2004/10/31 14:49:52  mats
-# Add convenience methods like result_pass() so user doesn't need to fiddle
-# with result code macros
-#
-# Revision 1.5  2004/02/12 22:20:01  mats
-# old change that never got checked in: journal lines are buffered,
-# and the write is done at the end.  Makes it easier to change
-# output locations if it's ever needed.
-#
-# Revision 1.4  2003/11/12 17:19:48  mats
-# Fix the format of the test case start line
-#
-# Revision 1.3  2003/11/12 17:17:12  mats
-# Add in missing field for 400/410 lines (for now, just hardcode it as '1')
-#
-# Revision 1.2  2003/11/12 00:46:08  mats
-# Revision pass to make a "Journal" a class so it can hold state and
-# simplify a lot of the passing around of variables.
-#
-# Revision 1.1  2002/09/20 15:12:24  mwichmann
-# Initial converted version.  Includes a self-test harness.
 #
 #
 import sys, os, pwd, time
@@ -83,137 +50,141 @@ def get_current_time_string():
     return time.strftime("%H:%M:%S")
 
 class Journal:
+    tetj_vers = "tetj.py-1.0"
+
     def __init__(self, pathname, command_run):
-	"""starts a new journal file"""
-	try:
-	    self.journalfile = open(pathname, 'w')
-	except IOerror:
-	    raise
-	self.journal = []
-	self.activity = -1	# count will start at 0
-	self.testcase = 0
+        """starts a new journal file"""
+        try:
+            self.journalfile = open(pathname, 'w')
+        except IOerror:
+            raise
+        self.journal = []
+        self.activity = -1	# count will start at 0
+        self.testcase = 0
 
-	(sysname, nodename, release, version, machine) = os.uname()
-	datetime = time.strftime("%H:%M:%S %Y%m%d")
-	uid = os.getuid();
-	try:
-	    pwent = pwd.getpwuid(uid);
-	except KeyError:
-	    pwent = ""
+        (sysname, nodename, release, version, machine) = os.uname()
+        datetime = time.strftime("%H:%M:%S %Y%m%d")
+        uid = os.getuid();
+        try:
+            pwent = pwd.getpwuid(uid);
+        except KeyError:
+            pwent = "Unknown"
   
-	self.journal.append("0|lsb-0.2 %s|User: %s (%i) TCC Start, Command line: %s\n" %
-	      (datetime, pwent[0], uid, command_run))
+        tmpl = "0|%s %s|User: %s (%i) TCC Start, Command line: %s\n"
+        self.journal.append(tmpl % (self.tetj_vers, datetime, pwent[0],
+		                    uid, command_run))
 
-	self.journal.append("5|%s %s %s %s %s|System Information\n" %
-	      (sysname, nodename, release, version, machine))
+        tmpl= "5|%s %s %s %s %s|System Information\n"
+        self.journal.append(tmpl % (sysname, nodename, release, version,
+		                    machine))
 
     def close(self):
-	"""closes a journal file and finishes all processing"""
-	self.journal.append("900|%s|TCC End\n" % get_current_time_string())
-	self.journalfile.writelines(self.journal)
-	self.journalfile.close()
+        """closes a journal file and finishes all processing"""
+        self.journal.append("900|%s|TCC End\n" % get_current_time_string())
+        self.journalfile.writelines(self.journal)
+        self.journalfile.close()
 
     def add_config(self, message):
-	self.journal.append("30||%s\n" % message)
+        self.journal.append("30||%s\n" % message)
 
     def config_end(self):
-	self.journal.append("40||Config End\n")
+        self.journal.append("40||Config End\n")
 
     def scenario_info(self, message):
-	self.journal.append("70||%s\n" % message)
+        self.journal.append("70||%s\n" % message)
 
     def add_controller_error(self, message):
-	self.journal.append("50||%s\n" % message)
+        self.journal.append("50||%s\n" % message)
 
     def testcase_start(self, testpath, message=None):
-	self.activity += 1
-	self.testcase = 0
-	self.journal.append("10|%u %s %s|TC Start" %
-	    (self.activity, testpath, get_current_time_string()))
-	if message: 
-	    self.journal.append(", %s\n" % message)
-	else:
-	    self.journal.append("\n")
-	self.journal.append("15|%u tetj-py-1.0 1|TCM Start\n" % self.activity)
+        self.activity += 1
+        self.testcase = 0
+        self.journal.append("10|%u %s %s|TC Start" %
+            (self.activity, testpath, get_current_time_string()))
+        if message: 
+            self.journal.append(", %s\n" % message)
+        else:
+            self.journal.append("\n")
+        self.journal.append("15|%u %s 1|TCM Start\n" % (self.activity, self.tetj_vers))
 
     def testcase_end(self, message=None):
-	self.journal.append("80|%u 0 %s|TC End" %
-	    (self.activity, get_current_time_string()))
-	if message: 
-	    self.journal.append(", %s\n" % message)
-	else:
-	    self.journal.append("\n")
+        self.journal.append("80|%u 0 %s|TC End" %
+            (self.activity, get_current_time_string()))
+        if message: 
+            self.journal.append(", %s\n" % message)
+        else:
+            self.journal.append("\n")
 
     def purpose_start(self, message=None):
-	# This is a shortcut.  It assumes that every invocable component
-	# has a single test purpose, instead of potentially multiple ones.
-	# The wrapping should be: 400 (200 220) (200 220) ... 410
-	# Instead we make the call purpose_start mean 400 200,
-	# and predict the tp count within that ic as (hardwired) 1
-	self.testcase += 1
-	self.journal.append("400|%u %u 1 %s|IC Start\n" %
-	    (self.activity, self.testcase, get_current_time_string()))
-	self.journal.append("200|%u %u %s|TP Start" %
-	    (self.activity, self.testcase, get_current_time_string()))
-	if message: 
-	    self.journal.append(", %s\n" % message)
-	else:
-	    self.journal.append("\n")
+        # This is a shortcut.  It assumes that every invocable component
+        # has a single test purpose, instead of potentially multiple ones.
+        # The wrapping should be: 400 (200 220) (200 220) ... 410
+        # Instead we make the call purpose_start mean 400 200,
+        # and predict the tp count within that ic as (hardwired) 1
+        self.testcase += 1
+        self.journal.append("400|%u %u 1 %s|IC Start\n" %
+            (self.activity, self.testcase, get_current_time_string()))
+        self.journal.append("200|%u %u %s|TP Start" %
+            (self.activity, self.testcase, get_current_time_string()))
+        if message: 
+            self.journal.append(", %s\n" % message)
+        else:
+            self.journal.append("\n")
 
     def purpose_end(self):
-	# see note above: the hardwired '1' shouldn't be
-	self.journal.append("410|%u %u 1 %s|IC End\n" %
-	    (self.activity, self.testcase, get_current_time_string()))
+        # see note above: the hardwired '1' shouldn't be
+        self.journal.append("410|%u %u 1 %s|IC End\n" %
+            (self.activity, self.testcase, get_current_time_string()))
 
     def result(self, result):
-	code = result_codes.get(result, "UNKNOWN")
-	self.journal.append("220|%u %u %i %s|%s\n" %
-	    (self.activity, self.testcase, result,
-	     get_current_time_string(), code))
+        code = result_codes.get(result, "UNKNOWN")
+        self.journal.append("220|%u %u %i %s|%s\n" %
+            (self.activity, self.testcase, result,
+             get_current_time_string(), code))
 
     def testcase_info(self, context, block, sequence, message):
-	self.journal.append("520|%u %u %u %u %u|%s\n" %
-	    (self.activity,self.testcase,context,block,sequence,message))
+        self.journal.append("520|%u %u %u %u %u|%s\n" %
+            (self.activity,self.testcase,context,block,sequence,message))
 
     # add convenience methods for results
     def result_pass(self):
-	self.result(TETJ_PASS)
+        self.result(TETJ_PASS)
 
     def result_fail(self):
-	self.result(TETJ_FAIL)
+        self.result(TETJ_FAIL)
 
     def result_unresolved(self):
-	self.result(TETJ_UNRESOLVED)
+        self.result(TETJ_UNRESOLVED)
 
     def result_notinuse(self):
-	self.result(TETJ_NOTINUSE)
+        self.result(TETJ_NOTINUSE)
 
     def result_unsupported(self):
-	self.result(TETJ_UNSUPPORTED)
+        self.result(TETJ_UNSUPPORTED)
 
     def result_untested(self):
-	self.result(TETJ_UNTESTED)
+        self.result(TETJ_UNTESTED)
 
     def result_uninitiated(self):
-	self.result(TETJ_UNINITIATED)
+        self.result(TETJ_UNINITIATED)
 
     def result_notinuse(self):
-	self.result(TETJ_NOTINUSE)
+        self.result(TETJ_NOTINUSE)
 
     def result_unreported(self):
-	self.result(TETJ_UNREPORTED)
+        self.result(TETJ_UNREPORTED)
 
     def result_warning(self):
-	self.result(TETJ_WARNING)
+        self.result(TETJ_WARNING)
 
     def result_fip(self):
-	self.result(TETJ_FIP)
+        self.result(TETJ_FIP)
 
     def result_notimp(self):
-	self.result(TETJ_NOTIMP)
+        self.result(TETJ_NOTIMP)
 
     def result_unapprove(self):
-	self.result(TETJ_UNAPPROVE)
+        self.result(TETJ_UNAPPROVE)
 
 
 
@@ -236,24 +207,30 @@ def _test():
         "alabaster": TETJ_UNAPPROVE
     }
     try:
-	journal = Journal("journal.tetjtest", "tetjtest")
+        journal = Journal("journal.tetjtest", "tetjtest")
     except:
-	print "Cannot create journal.tetjtest"
-	sys.exit(1)
+        print "Cannot create journal.tetjtest"
+        sys.exit(1)
     print "tetj.py: writing journal to journal.tetjtest"
+
     journal.add_config("VSX_NAME=tetjtest unofficial")
+    journal.config_end()
+    journal.scenario_info("\"total tests in tetjtest 24\"")
+
     journal.testcase_start("foo")
     for (purpose, tpresult) in teststuff.items():
         journal.purpose_start(purpose)
         journal.result(tpresult)
         journal.purpose_end()
     journal.testcase_end("foo")
+
     journal.testcase_start("bar")
     for (purpose, tpresult) in teststuff.items():
         journal.purpose_start(purpose)
         journal.result(tpresult)
         journal.purpose_end()
     journal.testcase_end("bar")
+
     journal.close()
 
 if __name__ == "__main__":

@@ -8,9 +8,13 @@
  *
  * 2002/03/19 Chris Yeoh, IBM
  *
- * This is $Revision: 1.5 $
+ * This is $Revision: 1.6 $
  * 
  * $Log: tetj.c,v $
+ * Revision 1.6  2005/12/15 15:07:05  mats
+ * Assorted cleanups: tetjtest and python self test pretty much match now
+ * in journal format (python selftest presents tests in different order)
+ *
  * Revision 1.5  2005/06/10 18:17:20  mats
  * Add support for 40 (config end) and 70 (scenario info) lines.
  * Update README to reflect what's supported and what isn't.
@@ -52,6 +56,7 @@ struct tetj_handle
 
 int tetj_activity_count = 0;
 int tetj_tp_count = 0;
+char *tetj_vers = "tetj-1.0";
 
 static char *get_current_time_string()
 {
@@ -107,13 +112,11 @@ int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
 
   *handle = malloc(sizeof(struct tetj_handle));
 
-  if ( ((*handle)->journal = fopen(pathname, "w")) == NULL )
-  {
+  if ( ((*handle)->journal = fopen(pathname, "w")) == NULL ) {
     return errno;
   }
   
-  if (uname(&uname_info)!=0)
-  {
+  if (uname(&uname_info)!=0) {
     return errno;
   }    
 
@@ -123,8 +126,8 @@ int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
   pwent = getpwuid(uid);
   
   fprintf((*handle)->journal, 
-          "0|lsb-0.1 %s|User: %s (%i) TCC Start, Command line: %s\n",
-          datetime, pwent ? pwent->pw_name : "", uid, command_run);
+          "0|%s %s|User: %s (%i) TCC Start, Command line: %s\n",
+          tetj_vers, datetime, pwent ? pwent->pw_name : "", uid, command_run);
 
   fprintf((*handle)->journal, "5|%s %s %s %s %s|System Information\n",
           uname_info.sysname, uname_info.nodename, uname_info.release,
@@ -135,45 +138,38 @@ int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
 
 int tetj_close_journal(struct tetj_handle *handle)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "900|%s|TCC End\n", get_current_time_string());
     return fclose(handle->journal);
-  }
-  else
-  {
+  } else {
     return 0;
   }
 }
 
 void tetj_add_config(struct tetj_handle *handle, char *message)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "30||%s\n", message);
   }
 }
 
 void tetj_config_end(struct tetj_handle *handle)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "40||Config End\n");
   }
 }
 
 void tetj_scenario_info(struct tetj_handle *handle, char *message)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "70||%s\n", message);
   }
 }
 
 void tetj_add_controller_error(struct tetj_handle *handle, char *message)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "50||%s\n", message);
   }
 }
@@ -182,11 +178,11 @@ void tetj_testcase_start(struct tetj_handle *handle,
                          unsigned int activity, char *testcase, 
                          char *message)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "10|%u %s %s|TC Start %s\n",
             activity, testcase, get_current_time_string(), message);
-    fprintf(handle->journal, "15|%u tetj-1.0 1|TCM Start %s\n", activity, message);
+    fprintf(handle->journal, "15|%u %s 1|TCM Start %s\n", activity, 
+	    tetj_vers, message);
   }
 }
 
@@ -194,8 +190,7 @@ void tetj_testcase_end(struct tetj_handle *handle,
                        unsigned int activity, unsigned int status,
                        char *message)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "80|%u %u %s|TC End %s\n",
             activity, status, get_current_time_string(), message);
   }
@@ -205,9 +200,8 @@ void tetj_purpose_start(struct tetj_handle *handle,
                         unsigned int activity, unsigned int tpnumber, 
                         char *message)
 {
-  if (handle)
-  {
-    fprintf(handle->journal, "400|%u %u %s|IC Start\n",
+  if (handle) {
+    fprintf(handle->journal, "400|%u %u 1 %s|IC Start\n",
             activity, tpnumber, get_current_time_string());
     fprintf(handle->journal, "200|%u %u %s|%s\n",
             activity, tpnumber, get_current_time_string(), message);
@@ -217,9 +211,8 @@ void tetj_purpose_start(struct tetj_handle *handle,
 void tetj_purpose_end(struct tetj_handle *handle,
                       unsigned int activity, unsigned int tpnumber)
 {
-  if (handle)
-  {
-    fprintf(handle->journal, "410|%u %u %s|IC End\n",
+  if (handle) {
+    fprintf(handle->journal, "410|%u %u 1 %s|IC End\n",
             activity, tpnumber, get_current_time_string());
   }
 }
@@ -228,8 +221,7 @@ void tetj_result(struct tetj_handle *handle,
                  unsigned int activity, unsigned int tpnumber, 
                  enum testcase_results result)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "220|%u %u %i %s|%s\n",
             activity, tpnumber, result, get_current_time_string(),
             get_result_string(result));
@@ -241,8 +233,7 @@ void tetj_testcase_info(struct tetj_handle *handle,
                         unsigned int context, unsigned int block,
                         unsigned int sequence, char *message)
 {
-  if (handle)
-  {
+  if (handle) {
     fprintf(handle->journal, "520|%u %u %u %u %u|%s\n",
             activity, tpnumber, context, block, sequence, message);
   }
