@@ -71,7 +71,7 @@ checkRpmIdx(RpmFile * file1, RpmHdrIndex * hidx, RpmIdxTagFuncRec Tags[],
 		    fprintf(stderr, "Found index %s offset=%d count=%d\n",
 			    Tags[j].name, offset, count);
 		rv = Tags[j].func(file1, &hidx[i], journal);
-		if (rv != TETJ_FAIL) {
+		if (rv != TETJ_PASS) {
 		    if (fail == TETJ_PASS) fail = rv;
 		}
 		tetj_result(journal, tetj_activity_count, tetj_tp_count, fail);
@@ -1667,7 +1667,7 @@ checkRpmIdxREQUIREVERSION(RpmFile * file1, RpmHdrIndex * hidx,
     numrequireversion = hcount;
     requireversion = name;
     if( requirename && requireversion )
-	    check_dependencies(journal);
+	    fail = check_dependencies(journal);
     return fail;
 }
 
