@@ -502,12 +502,12 @@ sub writetest($$)
 			$tselect.= "WHERE Tid=".$tentry{'Tbasetype'};
 			$ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
 			%ttentry=$ttth->fetchhash;
-			if( $ttentry{'Ttype'} eq 'Array' ) {
+			#if( $ttentry{'Ttype'} eq 'Array' ) {
 				#print TESTS "CheckArrayTypeSize($Tname,".$ttentry{'ATsize'}.",$ATsize, $Tid, $Aid)\n";
                 #	print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
-			} else {
-				print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
-			}
+			#} else {
+			print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+			#}
 			next;
 			}
 		# case Const
