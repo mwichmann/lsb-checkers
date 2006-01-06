@@ -36,6 +36,9 @@ env None
 expand None
 expr None
 false /bin/false
+fc-cache None
+fc-list None
+fc-match None
 fgrep None
 file None
 find None
