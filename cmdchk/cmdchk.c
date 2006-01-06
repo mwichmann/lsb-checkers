@@ -5,7 +5,77 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.22 $
+ * This is $Revision: 1.23 $
+ *
+ * $Log: cmdchk.c,v $
+ * Revision 1.23  2006/01/06 17:59:45  nick
+ * use correct architecture name in journal
+ *
+ * Revision 1.21  2005/10/25 18:20:50  nick
+ * fixes for bug 1006.
+ *
+ * Revision 1.20  2005/10/20 13:10:50  pradosh
+ * - Fixed Bug #1006
+ * - Minor code cleanups
+ * - Improved error handling
+ *
+ * Revision 1.18  2005/07/06 22:33:31  mats
+ * Add invocation command line to cmdchk journal (bug 1041)
+ *
+ * Revision 1.17  2005/07/05 12:47:34  mats
+ * One more cleanup pass: make sure unexpected number of arguments
+ * exits with an error code.
+ *
+ * Revision 1.16  2005/07/04 14:07:29  mats
+ * Split journal config entry into two lines to match other tools
+ *
+ * Revision 1.15  2005/07/03 00:02:33  mats
+ * Add "prefix" handling for pointing at an alternate root
+ *
+ * Revision 1.14  2005/07/02 19:12:48  mats
+ * Building more prototype "standard argument handling" for checkers,
+ * ultimately towards addressing bug 735.
+ *
+ * Revision 1.13  2005/07/02 15:16:15  mats
+ * First cut at adding standard option-handling code for checkers
+ *
+ * Revision 1.12  2005/07/01 16:02:08  mats
+ * Try stat if access fails.  Bug 1032.
+ *
+ * Revision 1.11  2005/06/12 16:06:32  mats
+ * Revamp cmdchk for counting testcases easily; emit test count to journal
+ *
+ * Revision 1.10  2005/05/04 00:08:29  mats
+ * A little more journal-file format cleanup to make tools happier
+ *
+ * Revision 1.9  2005/04/28 21:38:18  mats
+ * bug 849: improve quality of cmdchk journal
+ *
+ * Revision 1.8  2005/03/15 16:45:27  mats
+ * Respin from DB; check only for execute permission (some cmds are not
+ * readable for non-root); adjust testcase counter to start at 0 per convention
+ *
+ * Revision 1.7  2002/11/26 00:25:29  anderson
+ * Give credit where due
+ *
+ * Revision 1.6  2002/09/20 15:57:03  mwichmann
+ * Changed a couple of instances of libchk->cmdchk; also build cmdlist
+ *
+ * Revision 1.5  2002/07/17 07:20:18  cyeoh
+ * remove hdr.h header include as not needed
+ *
+ * Revision 1.4  2002/07/17 07:19:20  cyeoh
+ * remove elfchk header include as not needed
+ *
+ * Revision 1.3  2002/07/17 04:58:30  cyeoh
+ * Adds version tag to journal file
+ *
+ * Revision 1.2  2002/07/16 08:31:54  cyeoh
+ * Renames journal file to journal.lsbcmdchk
+ * Removes /usr/local/bin/ from search path as runtimes shouldn't
+ * be placing binaries here.
+ * Removal of dead code
+ *
  *
  */
 
@@ -16,6 +86,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <sys/utsname.h>
 #include <getopt.h>
 #include "../tetj/tetj.h"
 #include "cmds.h"
@@ -35,7 +106,7 @@ char prefix[TMP_STRING_SIZE + 1];
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) cmdchk_revision =
-    "$Revision: 1.22 $";
+    "$Revision: 1.23 $";
 
 void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
@@ -160,6 +231,7 @@ int main(int argc, char *argv[])
     char journal_filename[TMP_STRING_SIZE + 1];
     int i, j;
     int option_index = 0;
+    struct utsname unameb;
 
     snprintf(journal_filename, TMP_STRING_SIZE, "journal.lsbcmdchk");
     for (i = 0; i < argc; i++) {
@@ -218,10 +290,17 @@ int main(int argc, char *argv[])
 	exit(1);
     }
 
+    /*
+     * determine the architecture ... new jornal standard requires this in the
+     * VSX_NAME line in order to handle waiver files correctly
+     */
+    if (uname(&unameb) < 0)
+	strncpy(unameb.machine, "noarch", sizeof(unameb.machine));
     snprintf(tmp_string, TMP_STRING_SIZE,
-	     "VSX_NAME=lsbcmdchk %s (noarch)", LSBCMDCHK_VERSION);
+	     "VSX_NAME=lsbcmdchk %s (%s)", LSBCMDCHK_VERSION,
+	     unameb.machine);
     tetj_add_config(journal, tmp_string);
-    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
+    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
     tetj_add_config(journal, tmp_string);
     tetj_config_end(journal);
 
