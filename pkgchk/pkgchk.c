@@ -48,7 +48,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.15 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.16 $";
 
 int
 main(int argc, char *argv[])
@@ -154,7 +154,7 @@ main(int argc, char *argv[])
   }
 
   /* Log version info in the journal */
-  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lspkgchk " LSBPKGCHK_VERSION);
+  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbpkgchk " LSBPKGCHK_VERSION);
   tetj_add_config(journal, tmp_string);
   snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
   tetj_add_config(journal, tmp_string);
