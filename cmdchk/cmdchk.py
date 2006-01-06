@@ -7,45 +7,12 @@ Usage: cmdchk [options]
 Prefix, if supplied, is a prefix to prepend to all paths
 '''
 
-# (C) Copyright 2002-2005 The Free Standards Group
+# (C) Copyright 2002-2006 The Free Standards Group
 #
 # Python version
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.10 $
-#
-# $Log: cmdchk.py,v $
-# Revision 1.10  2005/09/29 13:05:53  mats
-# Bug 1006: python version: match db changes to clean command paths
-# except where required by the spec
-#
-# Revision 1.9  2005/07/02 23:33:31  mats
-# catch up to C version (new "standard" checker options)
-#
-# Revision 1.8  2005/07/02 14:11:47  mats
-# Add option parsing; use stat for second-chance check; check-extras
-# is now activated by command-line option, not default
-#
-# Revision 1.7  2005/06/12 16:06:32  mats
-# Revamp cmdchk for counting testcases easily; emit test count to journal
-#
-# Revision 1.6  2004/10/31 14:51:29  mats
-# Use new convenience methods for results
-#
-# Revision 1.5  2004/01/29 23:43:12  mats
-# Fix up the report-extras code. Can't remove elements from the same
-# list you're stepping through, so step through a temporary copy.
-#
-# Revision 1.3  2003/11/18 16:44:35  mats
-# minor simplification
-#
-# Revision 1.2  2003/11/12 00:46:08  mats
-# Revision pass to make a "Journal" a class so it can hold state and
-# simplify a lot of the passing around of variables.
-#
-# Revision 1.1  2002/09/20 15:52:48  mwichmann
-# Added Python version of cmdchk.  This is an experiment to further test out
-# the Python tetj, it's not proposed to add to the lsbcmdchk pkg at this time
+# This is $Revision: 1.11 $
 #
 
 import os, sys, stat
@@ -174,8 +141,8 @@ if __name__ == '__main__':
     if not journal.journal:
         sys.stderr.write("Could not open journal file")
         sys.exit(1)
-    journal.add_config("VSX_NAME=lsbcmdchk %s for LSB Specification %s" % \
-		       (LSBCMDCHK_VERSION, LSBVERSION))
+    journal.add_config("VSX_NAME=lsbcmdchk %s (noarch)" % LSBCMDCHK_VERSION)
+    journal.add_config("LSB_VERSION=%s" % LSBVERSION))
     journal.add_config("search prefix is [%s]" % opts.prefix)
     journal.config_end()
 
