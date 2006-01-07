@@ -12,7 +12,7 @@ Prefix, if supplied, is a prefix to prepend to all paths
 # Python version
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.11 $
+# This is $Revision: 1.12 $
 #
 
 import os, sys, stat
@@ -21,7 +21,7 @@ from optparse import OptionParser
 import tetj
 
 # these are phony, can't fill in these the normal way
-LSBCMDCHK_VERSION = "3.0unofficial (python)"
+LSBCMDCHK_VERSION = "3.0unofficial"
 LSBVERSION = "3.0"
 
 class Path:
@@ -38,13 +38,13 @@ def check_cmd(journal, command):
     """check if a command name is found in any of the binpaths"""
     (cmdname, cmdpath) = command
     journal.testcase_start(cmdname)
-    journal.purpose_start("Looking for command %s" % cmdname)
 
     # Check each of the directories in binpaths for the command
     # if cmdpath is set is set, use it in preference to searching for
     # the cmdname name in binpaths
 
     if cmdpath == "None":
+        journal.purpose_start("Looking for command %s" % cmdname)
 	for path in binpaths:
 	    if opts.prefix:
 		path = opts.prefix + path
@@ -63,10 +63,15 @@ def check_cmd(journal, command):
 	    journal.result_fail()
     else:
         # check for the required absolute path */
+        journal.purpose_start("Looking for command %s" % cmdpath)
         if opts.prefix:
             path = opts.prefix + cmdpath
         if os.access(cmdpath, os.X_OK):
             journal.result_pass()
+        elif os.path.exists(cmdpath):
+	    stbuf = os.stat(cmdpath)
+	    if stbuf[ST_MODE] & S_IXUSR:
+	        journal.result_pass()
         else:
             sys.stderr.write("Couldn't find %s\n" % cmdpath)
             journal.result_fail()
@@ -134,23 +139,21 @@ if __name__ == '__main__':
     if opts.journal:
 	journal_file = opts.journal
     if opts.version:
-	print "lsbcmdchk %s for LSB Specification %s" % \
+	print "lsbcmdchk.py %s for LSB Specification %s" % \
 	      (LSBCMDCHK_VERSION, LSBVERSION)
 
-    journal = tetj.Journal(journal_file, "lsbcmdchk")
+    journal = tetj.Journal(journal_file, "lsbcmdchk.py")
     if not journal.journal:
         sys.stderr.write("Could not open journal file")
         sys.exit(1)
-    journal.add_config("VSX_NAME=lsbcmdchk %s (noarch)" % LSBCMDCHK_VERSION)
-    journal.add_config("LSB_VERSION=%s" % LSBVERSION))
+    journal.add_config("VSX_NAME=lsbcmdchk.py %s (%s)" % (LSBCMDCHK_VERSION, journal.machine))
+    journal.add_config("LSB_VERSION=%s" % LSBVERSION)
     journal.add_config("search prefix is [%s]" % opts.prefix)
     journal.config_end()
 
     # Look in POSIX-standard path, but also add paths for sysadmin utilities
     binpaths = os.confstr('CS_PATH').split(os.pathsep)
     binpaths = binpaths + ['/sbin', '/usr/sbin']
-    # XXX until bug 1006 work is done
-    binpaths = binpaths + ['/usr/lib/lsb']
 
     database = parse_cmds("cmdlist")
     journal.scenario_info("\"total tests in cmdchk %d\"" % len(database.cmds))
