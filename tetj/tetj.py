@@ -11,7 +11,7 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation
 #
-# This is $Revision: 1.10 $
+# This is $Revision: 1.11 $
 #
 #
 #
@@ -63,6 +63,7 @@ class Journal:
         self.testcase = 0
 
         (sysname, nodename, release, version, machine) = os.uname()
+	self.machine = machine		# in case the test needs it
         datetime = time.strftime("%H:%M:%S %Y%m%d")
         uid = os.getuid();
         try:
@@ -213,7 +214,7 @@ def _test():
         sys.exit(1)
     print "tetj.py: writing journal to journal.tetjtest"
 
-    journal.add_config("VSX_NAME=tetjtest unofficial")
+    journal.add_config("VSX_NAME=lsb-tetjtest.py 0.1 (%s)" % journal.machine)
     journal.config_end()
     journal.scenario_info("\"total tests in tetjtest 24\"")
 
