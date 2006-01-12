@@ -29,7 +29,7 @@ usage(char *progname)
 "  -L LANANANME, --lanana=LANANANAME\n",
 "                                 use LANANAME as package or provider name\n",
 "  -t                             check LSB conformance of payload files\n",
-"  -A                             check the symbols in all aailable modules\n",
+"  -A                             check the symbols in all available modules\n",
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n",
 "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n");
 }
@@ -48,7 +48,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.16 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.17 $";
 
 int
 main(int argc, char *argv[])
