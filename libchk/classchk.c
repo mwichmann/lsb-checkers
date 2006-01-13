@@ -395,8 +395,8 @@ check_class_info(ElfFile * file, char *libname,
 	  printf("Uhoh3. Not an exact match\n");
 	}
 	TETJ_REPORT_INFO
-	    ("Base vtype %p (expected) doesn't match %p %s (found)", symp,
-	     rttip->basevtable, dlainfo.dli_sname);
+	    ("Base vtype for %p %s (expected) doesn't match %p %s (found)", symp,
+	     classp->typeinfo->basevtable, rttip->basevtable, dlainfo.dli_sname);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
       } else {
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
@@ -619,8 +619,8 @@ check_class_info(ElfFile * file, char *libname,
 	  }
 	  if (symp != basetypes[j]) {
 	    TETJ_REPORT_INFO
-		("Basetype[%d] %p (expected) doesn't match %p (found)", j,
-		 symp, basetypes[j]);
+		("Basetype[%d] %p (%s) (expected) doesn't match %p (%s) (found)", j,
+		 symp, classp->typeinfo->basetypeinfo[j], basetypes[j], dlainfo.dli_sname);
 	    test_failed = 1;
 	  }
 	}
