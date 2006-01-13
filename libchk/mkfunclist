@@ -49,7 +49,7 @@ $seenclass{$classbase}=1;
 #
 # Output array of BaseTypes entries
 #
-$typeinfoname=$classbase."_typeinfo";
+$typeinfoname="_".$classbase."_typeinfo";
 
 $select = "SELECT * FROM BaseTypes ";
 $select.= "WHERE BTcid=".$$class{'CIid'}." ";
@@ -80,7 +80,7 @@ foreach my $pos ( 0..$$class{'CInumvtab'}-1) {
 #
 # Output array of Vtable entries
 #
-$vtablename=$classbase."_vtable";
+$vtablename="_".$classbase."_vtable";
 
 $select = "SELECT Vtable.*,Architecture.*,Interface.Iid,Interface.Iarch,Interface.Iname FROM Vtable ";
 $select.= "LEFT JOIN Architecture ON Aid=VTarch ";
@@ -89,7 +89,7 @@ $select.= "WHERE VTcid=".$$class{'CIid'}." ";
 $select.= "AND VTvtpos=$pos ";
 $select.= "ORDER BY VTpos";
 
-#print $select;
+#print $select . "\n";
 
 print $LIB "const char *".$vtablename."_name_$pos [] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
@@ -166,7 +166,7 @@ print $LIB "};\n\n";
 #
 # Output base info type here.
 #
-$baseinfoname=$classbase."_baseinfo";
+$baseinfoname="_".$classbase."_baseinfo";
 
 $select = "SELECT * FROM VMIBaseTypes ";
 $select.= "LEFT JOIN Architecture ON Aid=VBTaid ";
@@ -279,6 +279,7 @@ $select = "SELECT DISTINCT * FROM ClassInfo ";
 $select.= "LEFT JOIN LibGroup ON LibGroup.LGid=CIlibg ";
 $select.= "LEFT JOIN Library ON LibGroup.LGLIB=Library.Lid ";
 $select.= "WHERE Library.Lid=$lid ";
+$select.= "AND CInumvtab > 0";
 #$select.= "AND CIname LIKE '_ZSd'";
 
 #print $select."\n";
