@@ -43,7 +43,8 @@ main() {
     }
     printf("tetjtest: writing journal to %s\n", journal_filename);
 
-    tetj_add_config(journal, "VSX_NAME=tetjtest unofficial");
+    snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=tetjtest 0.1 (%s)", tetj_arch);
+    tetj_add_config(journal, tmp_string);
     tetj_config_end(journal);
     tetj_scenario_info(journal, "\"total tests in tetjtest 24\"");
 

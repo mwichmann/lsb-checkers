@@ -11,9 +11,12 @@
  *
  * 2002/03/19 Chris Yeoh, IBM
  *
- * This is $Revision: 1.4 $
+ * This is $Revision: 1.5 $
  * 
  * $Log: tetj.h,v $
+ * Revision 1.5  2006/01/14 14:09:33  mats
+ * Provide support for VSX_NAME standard (bug 986)
+ *
  * Revision 1.4  2005/06/10 18:17:20  mats
  * Add support for 40 (config end) and 70 (scenario info) lines.
  * Update README to reflect what's supported and what isn't.
@@ -99,5 +102,6 @@ void tetj_testcase_info(struct tetj_handle *handle,
 
 extern int tetj_activity_count;
 extern int tetj_tp_count;
+extern char *tetj_arch;
 
 #endif
