@@ -3,10 +3,11 @@
 lsbpkgchk \- check LSB conformance of a package
 .SH SYNOPSIS
 .B lsbpkgchk
-.RB [ \-hvnA ]
+.RB [ \-hvnAt ]
 .RB [ \-L
 .IR LANANANAME ]
-.RB [ \-t 
+.RB [ \-T
+.IR PRODUCT ]
 .RB [ \-M
 .IR MODULE "]... ]"
 .RB [ \-j
@@ -41,8 +42,9 @@ of the package. All shared libraries present in the package are assumed to
 be a part of the application, hence lsbpkgchk does not complain about
 symbols in executable files which are provided in those shared libraries.
 .TP
-\fB\-A
-Check the symbols found in all modules.
+\fB\-T \fI[core|desktop]\fR, \fB--lsb-product \fI[core|desktop]\fR
+Specify the lsb spec/product to load modules for- 3.0, and 3.1,
+respectively.
 .TP
 \fB\-M \fImodulename\fR
 Also check the symbols found in module \fImodulename\fR.
