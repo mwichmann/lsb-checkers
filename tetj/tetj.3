@@ -131,6 +131,25 @@ Note: since these are global variables, it seems strange
 that they must be explicitly passed - perhaps a future
 enhancement may remove this requirement.
 .PP
+As a convenience, an additional global variable
+.B tetj_arch
+records the machine architecture. 
+This information is captured during the execution of
+.I tetj_start_journal
+and saved, since it is needed by test programs which
+are to be used for LSB certification in constructing
+a configuration information line.  The standard format
+for this line, which is written with a call to
+.IR tetj_add_config ,
+is:
+
+	30||VSX_NAME=\fItestid\fR \fIversion\fR (\fIarch\fR)
+
+When a line of this format is detected, the report generator
+.B tjreport
+will attempt to obtain an official waiver file matching
+the (testid, version, arch) triple.
+.PP
 The 
 .B testcase
 name passed to
@@ -145,6 +164,7 @@ invalid if the testcase names are not unique.
 struct tetj_handle;
 extern int tetj_activity_count;
 extern int tetj_tp_count;
+extern char *tetj_arch;
 enum testcase_results { ... };
 
 int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
@@ -183,6 +203,8 @@ report bugs at http://bugs.linuxbase.org or email to
 from your distribution vendor, report bugs back to the
 vendor in the normal way.
 .SH "SEE ALSO"
+tjreport(1)
+.br
 Linux Standard Base specification and other documents at
 http://www.linuxbase.org/
 .PP

@@ -8,9 +8,12 @@
  *
  * 2002/03/19 Chris Yeoh, IBM
  *
- * This is $Revision: 1.6 $
+ * This is $Revision: 1.7 $
  * 
  * $Log: tetj.c,v $
+ * Revision 1.7  2006/01/14 14:09:33  mats
+ * Provide support for VSX_NAME standard (bug 986)
+ *
  * Revision 1.6  2005/12/15 15:07:05  mats
  * Assorted cleanups: tetjtest and python self test pretty much match now
  * in journal format (python selftest presents tests in different order)
@@ -57,6 +60,7 @@ struct tetj_handle
 int tetj_activity_count = 0;
 int tetj_tp_count = 0;
 char *tetj_vers = "tetj-1.0";
+char *tetj_arch = "(noarch)";
 
 static char *get_current_time_string()
 {
@@ -104,7 +108,7 @@ static char *get_result_string(enum testcase_results result)
 int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
                        char *command_run)
 {
-  struct utsname uname_info;
+  static struct utsname uname_info;
   char datetime[20];
   time_t current_time;
   uid_t uid;
@@ -119,6 +123,7 @@ int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
   if (uname(&uname_info)!=0) {
     return errno;
   }    
+  tetj_arch = uname_info.machine;
 
   current_time = time(NULL);
   strftime(datetime, 20, "%H:%M:%S %Y%m%d", localtime(&current_time));
