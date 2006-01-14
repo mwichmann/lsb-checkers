@@ -6,9 +6,13 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.66 $
+ * This is $Revision: 1.67 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.67  2006/01/13 21:19:02  ferringb
+ * Added
+ * -T core support for specifying the product.
+ *
  * Revision 1.66  2005/07/05 12:47:35  mats
  * One more cleanup pass: make sure unexpected number of arguments
  * exits with an error code.
@@ -244,7 +248,7 @@ static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.66 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.67 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -771,12 +775,15 @@ void init_library_table(char *filename)
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] library_map\n%s%s%s%s%s", progname,
-"  -h, --help                     show this help message and exit\n",
-"  -v, --version                  show version and LSB version\n",
-"  -n, --nojournal                do not write a journal file\n",
-"  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n",
-"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n");
+  printf("usage: %s [options] library_map\n"
+"  -h, --help                     show this help message and exit\n"
+"  -v, --version                  show version and LSB version\n"
+"  -n, --nojournal                do not write a journal file\n"
+"  -T, --lsb-product=[core|desktop]\n"
+"                                 target product to load modules for\n"
+"  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n"
+"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
+progname);
 }
 
 int
@@ -787,6 +794,19 @@ main(int argc, char *argv[])
   char journal_filename[TMP_STRING_SIZE+1];
   int option_index = 0;
   
+  char *s = getenv("LSB_PRODUCT");
+  if(s) {
+    if(strcasecmp(s, "core") == 0)
+      module = LSB_Core | LSB_Graphics | LSB_Cpp;
+    else if(strcasecmp(s, "desktop") == 0 || strcasecmp(s, "all") == 0)
+      module = LSB_All_Modules;
+    else {
+      printf("warning: env var LSB_PRODUCT specifies an invalid product, ignoring it.\n");
+      module = LSB_Core | LSB_Graphics | LSB_Cpp;;
+    }
+  } else
+    module = LSB_Core | LSB_Graphics | LSB_Cpp;
+
   if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
     libchk_debug = strtod(ptr,NULL);
   }
@@ -799,11 +819,12 @@ main(int argc, char *argv[])
       {"version",  no_argument,        NULL, 'v'},
       {"nojournal",no_argument,        NULL, 'n'},
       {"module",   required_argument,  NULL, 'M'},
+      {"lsb-product",   required_argument,  NULL, 'T'},
       {"journal",  required_argument,  NULL, 'j'},
       {0, 0, 0, 0}
     };
 
-    c = getopt_long (argc, argv, "hvnM:j:", long_options, &option_index);
+    c = getopt_long (argc, argv, "hvnM:j:T:", long_options, &option_index);
     if (c == -1)
       break;
     switch (c) {
@@ -816,6 +837,17 @@ main(int argc, char *argv[])
 	break;
       case 'n':
 	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
+	break;
+      case 'T':
+	if(strcasecmp(optarg, "core") == 0)
+	  module |= LSB_Core | LSB_Graphics | LSB_Cpp;
+	else if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
+	  module |= LSB_All_Modules;
+	else {
+	  printf("product '%s' is not valid!\n", optarg);
+	  usage(argv[0]);
+	  exit(1);
+	}
 	break;
       case 'M':
 	module |= getmoduleval(optarg);
@@ -838,8 +870,6 @@ main(int argc, char *argv[])
   init_library_table(argv[optind]);
 #endif
 
-  if (module == 0)
-    module = LSB_All_Modules;
 
   if (tetj_start_journal(journal_filename, &journal, "libchk") != 0) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
