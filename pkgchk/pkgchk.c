@@ -13,25 +13,26 @@
 #include <limits.h>
 #include "../tetj/tetj.h"
 #include "../fhschk/fhschk.h"
-#include "../elfchk/elfchk.h"
+#include "elfchk.h"
 #include "rpmchk.h"
 
 /* modules to check against.  */
-int modules = LSB_Core;
+int modules = LSB_Core | LSB_Graphics | LSB_Cpp;
 
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] pkgname\n%s%s%s%s%s%s%s%s%s", progname,
-"  -h, --help                     show this help message and exit\n",
-"  -v, --version                  show version and LSB version\n",
-"  -n, --nojournal                do not write a journal file\n",
-"  -L LANANANME, --lanana=LANANANAME\n",
-"                                 use LANANAME as package or provider name\n",
-"  -t                             check LSB conformance of payload files\n",
-"  -A                             check the symbols in all available modules\n",
-"  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n",
-"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n");
+  printf("usage: %s [options] pkgname\n"
+"  -h, --help                     show this help message and exit\n"
+"  -v, --version                  show version and LSB version\n"
+"  -n, --nojournal                do not write a journal file\n"
+"  -L LANANANME, --lanana=LANANANAME\n"
+"                                 use LANANAME as package or provider name\n"
+"  -t                             check LSB conformance of payload files\n"
+"  -T [core|desktop], --lsb-product [core|desktop]\n"
+"                                 target either core or desktop spec for tests\n" 
+"  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
+"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n", progname);
 }
 
 char *
@@ -48,7 +49,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.17 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.18 $";
 
 int
 main(int argc, char *argv[])
@@ -64,10 +65,19 @@ main(int argc, char *argv[])
   int check_app = 0;
   int overrideJournalFilename = 0;
   int option_index = 0;
+  char *p;
 
   for (i=0; i<argc; i++) {
     command_line = concat_string(command_line, argv[i]);
     command_line = concat_string(command_line, " ");
+  }
+
+  if(NULL != (p = getenv("LSB_PRODUCT"))) {
+    if(strcasecmp(p, "desktop") == 0 || strcasecmp(p, "all") == 0)
+      modules = LSB_All_Modules;
+    else if(strcasecmp(p, "core") != 0) {
+      fprintf(stderr, "warning: LSB_PRODUCT target '%s' is invalid, resetting to core\n", p);
+    }
   }
 
   while (1) {
@@ -79,10 +89,11 @@ main(int argc, char *argv[])
       {"lanana",   required_argument,  NULL, 'L'},
       {"module",   required_argument,  NULL, 'M'},
       {"journal",  required_argument,  NULL, 'j'},
+      {"lsb-product", required_argument, NULL, 'T'},
       {0, 0, 0, 0}
     };
 
-    c = getopt_long (argc, argv, "hvnL:tAM:j:", long_options, &option_index);
+    c = getopt_long (argc, argv, "hvnL:tT:M:j:", long_options, &option_index);
     if (c == -1)
       break;
     switch (c) {
@@ -103,9 +114,15 @@ main(int argc, char *argv[])
       case 't':
         check_app = 1;
         break;
-      case 'A':
-	modules = LSB_All_Modules;
-	printf("Checking symbols in all modules\n");
+      case 'T':
+	if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
+	    modules = LSB_All_Modules;
+	else if (strcasecmp(optarg, "core") != 1) {
+	    fprintf(stderr, "error: product must be either core or desktop\n");
+	    usage(argv[0]);
+	    exit(EXIT_FAILURE);
+	} else
+	    modules = LSB_Core | LSB_Graphics | LSB_Cpp;
 	break;
       case 'M':
 	modules |= getmoduleval(optarg);
