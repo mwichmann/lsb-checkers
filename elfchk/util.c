@@ -14,6 +14,7 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include "elfchk.h"
+#include "modules.h"
 
 char *
 ElfGetStringIndex(ElfFile *file, int offset, int index)
@@ -100,42 +101,37 @@ void CloseElfFile (ElfFile *efile)
     }
 }
 
-
 char *
 getmodulename(int mod)
 {
-	static char buf[1024];
-
-	buf[0]=0; /* reset the string */
-
-	if( mod & LSB_Core )
-		strcat(buf, "LSB_Core ");
-	if( mod & LSB_Graphics )
-		strcat(buf, "LSB_Graphics ");
-	if( mod & LSB_Cpp )
-		strcat(buf, "LSB_C++ ");
-
-	return buf[0]?buf:"Unknown Module";
+	struct lsb_module *m = LSB_Modules;
+	while(m->name) {
+		if(mod == m->flag)
+			return m->name;
+		m++;
+	}
+	return "Unknown Module";
 }
 
 int
 getmoduleval(char *mod)
 {
-	if( strcasecmp(mod,"LSB-Core")==0 )
-		return LSB_Core;
-	if( strcasecmp(mod,"LSB_Core")==0 )
-		return LSB_Core;
-	if( strcasecmp(mod,"LSB-Graphics")==0 )
-		return LSB_Graphics;
-	if( strcasecmp(mod,"LSB_Graphics")==0 )
-		return LSB_Graphics;
-	if( strcasecmp(mod,"LSB-C++")==0 )
-		return LSB_Cpp;
-	if( strcasecmp(mod,"LSB_C++")==0 )
-		return LSB_Cpp;
-	if( strcasecmp(mod,"LSB-Cpp")==0 )
-		return LSB_Cpp;
-	if( strcasecmp(mod,"LSB_Cpp")==0 )
-		return LSB_Cpp;
-	return 0;
+	struct lsb_module *m = LSB_Modules;
+	int flag = 0;
+	char *p = strdup(mod);
+	if(p == NULL) {
+		fprintf(stderr, "Unable to alloc needed memory\n");
+		return 0;
+	}
+
+	while(NULL != (p = index(p, '-')))
+		*p = '_';
+
+	while(m->name && 0 == flag) {
+		if(strcasecmp(mod, m->name) == 0)
+			flag = m->flag;
+		m++;
+	}
+	free(p);
+	return flag;
 }

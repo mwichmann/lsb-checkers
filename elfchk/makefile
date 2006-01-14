@@ -2,8 +2,8 @@ CFLAGS=-g -Wall -I../tetj
 
 OBJS=dynsyms.o dynamic.o dyntags.o dtneeded.o elfchk.o hdr.o proghdr.o \
 	sectinfo.o sections.o symvers.o util.o proginterp.o progbits.o \
-	note.o dumpbytes.o dwarf.o secttype.o
-GENSRCS=dynsyms.c dtneeded.c sectinfo.c secttype.c dyntags.c dynsyms.c.chk
+	note.o dumpbytes.o dwarf.o secttype.o modules.o
+GENSRCS=dynsyms.c dtneeded.c sectinfo.c secttype.c dyntags.c dynsyms.c.chk modules.h modules.c
 LIBS= ../tetj/libtetj.a
 LIB=libelfchk.a
 
@@ -20,7 +20,7 @@ test: test.c $(LIB) $(LIBS)
 check: dynsyms.c dynsyms.c.chk
 	diff dynsyms.c dynsyms.c.chk
 
-dynsyms.c:
+dynsyms.c: modules.h modules.c mkfunclist
 	./mkfunclist >dynsyms.c
 
 dynsyms.c.chk:
@@ -43,3 +43,6 @@ clean:
 
 distclean: clean
 	rm -f $(GENSRCS)
+
+modules.c modules.h: dump_modules
+	./dump_modules

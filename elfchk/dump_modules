@@ -1,0 +1,59 @@
+#!/usr/bin/perl
+use strict;
+use Mysql;
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+my $dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+
+my $sth = $dbh->query("SELECT Mname FROM Module ORDER BY Mname");
+my $flag = 1;
+my @defines;
+open(my $fd, ">modules.h");
+
+print $fd q(/* GENERATED FILE, DO NOT MODIFY */
+#ifndef MODULE_HEADER
+#define MODULE_HEADER 1
+#include <stdlib.h>
+
+struct lsb_module {
+	char *name;
+	unsigned int flag;
+};
+
+extern struct lsb_module LSB_Modules[];
+
+);
+my $count = 0;
+for(1..$sth->numrows) {
+	my $row = $sth->fetchrow;
+	$row=~s/-/_/g;
+	my $name;
+	if(lc(substr($row, 0, 4)) == "lsb_") {
+		$name = "LSB_".ucfirst(substr($row,4));
+	} else {
+		$name = $row;
+	}
+	printf $fd "#define $name\t0x%x\n", $flag;
+	push(@defines, $row, $name);
+	$flag <<= 1;
+	$count++;
+}
+$count = (2 ** ($count + 8 - ($count % 8))) - 1;
+printf $fd  "#define LSB_All_Modules 0x%x\n\n#endif\n", $count;
+close($fd);
+open($fd, ">modules.c");
+
+print $fd q(/* GENERATED FILE, DO NOT MODIFY */
+#include "modules.h"
+
+struct lsb_module LSB_Modules[] = {
+);
+
+while (@defines) {
+	my $name = pop(@defines);
+	my $row = pop(@defines);
+	print $fd "\t{\"$row\",\t$name},\n";
+}
+print $fd q(	{NULL, 0},
+};
+);
+close($fd);
