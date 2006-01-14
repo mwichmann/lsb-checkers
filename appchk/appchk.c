@@ -26,19 +26,21 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.29 $";
+    "$Revision: 1.30 $";
 
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] appname ...\n%s%s%s%s%s%s%s", progname,
-"  -h, --help                     show this help message and exit\n",
-"  -v, --version                  show version and LSB version\n",
-"  -n, --nojournal                do not write a journal file\n",
-"  -A                             check the symbols in all aailable modules\n",
-"  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n",
-"  -L LIB                         add LIB to list of checked libraries\n",
-"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n");
+  printf("usage: %s [options] appname ...\n"
+"  -h, --help                     show this help message and exit\n"
+"  -v, --version                  show version and LSB version\n"
+"  -n, --nojournal                do not write a journal file\n"
+"  -T, --lsb-product=[core|desktop]\n"
+"                                 target product to load modules for\n"
+"  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
+"  -L LIB                         add LIB to list of checked libraries\n"
+"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
+progname);
 }
 
 int
@@ -55,8 +57,22 @@ main(int argc, char *argv[])
     char tmp_string[TMP_STRING_SIZE + 1];
     char journal_filename[TMP_STRING_SIZE + 1];
     int overrideJournalFilename = 0;
-    int modules = LSB_Core;		/* default module list to check */
+    int modules = 0;
     int option_index = 0;
+
+
+    char *s = getenv("LSB_PRODUCT");
+    if(s) {
+        if(strcasecmp(s, "core") == 0)
+            modules = LSB_Core | LSB_Graphics | LSB_Cpp;
+        else if(strcasecmp(s, "desktop") == 0 || strcasecmp(s, "all") == 0)
+            modules = LSB_All_Modules;
+        else {
+            printf("warning: env var LSB_PRODUCT specifies an invalid product, ignoring it.\n");
+            modules = LSB_Core | LSB_Graphics | LSB_Cpp;
+        }
+    } else
+        modules = LSB_Core | LSB_Graphics | LSB_Cpp;
 
     extra_libraries = strdup("EXTRA_LIBRARIES=");
 
@@ -73,10 +89,11 @@ main(int argc, char *argv[])
 	    {"nojournal",no_argument,        NULL, 'n'},
 	    {"module",   required_argument,  NULL, 'M'},
 	    {"journal",  required_argument,  NULL, 'j'},
+	    {"lsb-product", required_argument,  NULL, 'T'},
 	    {0, 0, 0, 0}
       };
 
-      c = getopt_long (argc, argv, "hvnAM:L:j:", long_options, &option_index);
+      c = getopt_long (argc, argv, "hvnAM:L:j:T:", long_options, &option_index);
       if (c == -1)
 	  break;
       switch (c) {
@@ -91,9 +108,16 @@ main(int argc, char *argv[])
 	      snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
 	      overrideJournalFilename = 1;
 	      break;
-	  case 'A':
-	      modules = LSB_All_Modules;
-	      printf("Checking symbols in all modules\n");
+	   case 'T':
+	      if(strcasecmp(optarg, "core") == 0)
+		modules = LSB_Core | LSB_Graphics | LSB_Cpp;
+	      else if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
+		modules = LSB_All_Modules;
+	      else {
+		printf("product '%s' is not valid!\n", optarg);
+		usage(argv[0]);
+		exit(1);
+	      }
 	      break;
 	  case 'M':
 	      modules |= getmoduleval(optarg);
