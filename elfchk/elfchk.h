@@ -200,15 +200,10 @@ extern int elfchk_debug;
 /*
  * Constants use to indicate LSB Modules. This should match what's in
  * the Modules table of the SLB database.
+ * Generated directly from db.
  */
-#define LSB_Core		0x01
-#define LSB_Graphics		0x02
-#define LSB_Cpp			0x04
-#define LSB_Toolkit_Gtk		0x08
-#define LSB_Toolkit_Qt		0x10
-#define LSB_Graphics_Ext	0x20
-#define LSB_XML			0x40
-#define LSB_All_Modules		0xFF
+
+#include "modules.h"
 
 /*
  * External tables that are generated from the DB.
