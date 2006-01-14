@@ -5,9 +5,13 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.23 $
+ * This is $Revision: 1.24 $
  *
  * $Log: cmdchk.c,v $
+ * Revision 1.24  2006/01/13 21:29:31  ferringb
+ * Added
+ * cmdchk -T [core|desktop] support
+ *
  * Revision 1.23  2006/01/06 17:59:45  nick
  * use correct architecture name in journal
  *
@@ -91,6 +95,7 @@
 #include "../tetj/tetj.h"
 #include "cmds.h"
 
+/* due to code conventions, you _must_ include the trailing / */
 char *binpaths[] = {
     "/bin/",
     "/sbin/",
@@ -106,7 +111,7 @@ char prefix[TMP_STRING_SIZE + 1];
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) cmdchk_revision =
-    "$Revision: 1.23 $";
+    "$Revision: 1.24 $";
 
 void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
@@ -215,12 +220,15 @@ char *concat_string(char *input, char *addition)
 
 void usage(char *progname)
 {
-    printf("usage: %s [options]\n%s%s%s%s%s", progname,
-	   "  -h, --help                     show this help message and exit\n",
-	   "  -v, --version                  show version and LSB version\n",
-	   "  -n, --nojournal                do not write a journal file\n",
-	   "  -j JOURNAL, --version=JOURNAL  use JOURNAL as file/path for journal file\n",
-	   "  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n");
+    printf("usage: %s [options]\n"
+	   "  -h, --help                     show this help message and exit\n"
+	   "  -v, --version                  show version and LSB version\n"
+	   "  -n, --nojournal                do not write a journal file\n"
+	   "  -j JOURNAL, --version=JOURNAL  use JOURNAL as file/path for journal file\n"
+	   "  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n"
+	   "  -T [core|desktop], --lsb-product [core|desktop]\n"
+	   "                                 Lsb product/spec to target\n",
+    progname);
 }
 
 int main(int argc, char *argv[])
@@ -231,7 +239,19 @@ int main(int argc, char *argv[])
     char journal_filename[TMP_STRING_SIZE + 1];
     int i, j;
     int option_index = 0;
+    int desktop_mode = 0;
+    char *p;
     struct utsname unameb;
+
+    if(NULL != (p = getenv("LSB_PRODUCT"))) {
+	if(strcasecmp(p, "desktop") == 0 || strcasecmp(p, "all") == 0)
+	    desktop_mode = 1;
+	else if (strcasecmp(p, "core") != 0) {
+	    fprintf(stderr, "warning: LSB_PRODUCT was set to '%s', "
+		"must be one of [core|desktop]- reverting to core.\n", p);
+	}
+    }
+
 
     snprintf(journal_filename, TMP_STRING_SIZE, "journal.lsbcmdchk");
     for (i = 0; i < argc; i++) {
@@ -247,10 +267,11 @@ int main(int argc, char *argv[])
 	    {"nojournal", no_argument, NULL, 'n'},
 	    {"journal", required_argument, NULL, 'j'},
 	    {"prefix", required_argument, NULL, 'p'},
+	    {"lsb-product", required_argument, NULL, 'T'},
 	    {0, 0, 0, 0}
 	};
 
-	c = getopt_long(argc, argv, "hvnj:p:", long_options,
+	c = getopt_long(argc, argv, "hvnj:p:T:", long_options,
 			&option_index);
 	if (c == -1)
 	    break;
@@ -271,9 +292,18 @@ int main(int argc, char *argv[])
 	case 'p':
 	    strcpy(prefix, optarg);
 	    break;
+	case 'T':
+	    if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0) 
+		desktop_mode = 1;
+	    else if (strcasecmp(optarg, "core") != 0) {
+		fprintf(stderr, "--lsb-product arg must be one of [core|desktop]\n");
+		usage(argv[0]);
+		exit(1);
+	    }
+	    break;
 	default:
 	    usage(argv[0]);
-	    exit(0);
+	    exit(1);
 	}
     }
     if (optind != argc) {
@@ -304,13 +334,20 @@ int main(int argc, char *argv[])
     tetj_add_config(journal, tmp_string);
     tetj_config_end(journal);
 
-    j = sizeof(cmdlist) / sizeof(struct cmds);
+    j = sizeof(core_cmdlist) / sizeof(struct cmds);
+    if(desktop_mode)
+	j += sizeof(desktop_cmdlist) / sizeof(struct cmds);
+
     snprintf(tmp_string, TMP_STRING_SIZE, "\"total tests in cmdchk %d\"",
 	     j);
     tetj_scenario_info(journal, tmp_string);
 
-    for (i = 0; i < j; i++)
-	check_cmd(&cmdlist[i], journal);
+    for (i = 0; i < sizeof(core_cmdlist) / sizeof(struct cmds); i++)
+	check_cmd(core_cmdlist + i, journal);
+    if(desktop_mode) {
+	for(i=0; i < sizeof(desktop_cmdlist) / sizeof(struct cmds); i++)
+	   check_cmd(desktop_cmdlist + i, journal);
+    }
     tetj_close_journal(journal);
     exit(0);
 }

@@ -29,7 +29,7 @@ print CMDS "/* Generated file */\n\n";
 print CMDS "struct cmds {\n";
 print CMDS "\tchar *cmdname;\n";
 print CMDS "\tchar *cmdpath;\n";
-print CMDS "} cmdlist[] = {\n";
+print CMDS "};\nstruct cmds core_cmdlist[] = {\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
 $select.= "WHERE Cstatus='Included' ";
@@ -41,8 +41,22 @@ $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
+	# hack.  DB needs to be updated to specify what cmd belongs to which module/spec.
+	# so we add an explicit check to skip desktop extensions- all cmds starting with fc-
+	if(substr($entry{'Cname'},0,3) == "fc-") {
+		next;
+	}
 	print CMDS "	{\"$entry{'Cname'}\", \"$entry{'Cpath'}\"},\n";
 }
 
-print CMDS "};\n";
+# hack.  DB needs to be updated to know which belongs to which spec.
+print CMDS q(};
+
+struct cmds desktop_cmdlist[] = {
+	{"fc-cache", ""},
+	{"fc-list", ""},
+	{"fc-match", ""},
+};
+);
+
 close(CMDS);
