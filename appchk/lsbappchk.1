@@ -3,7 +3,9 @@
 lsbappchk \- check LSB conformance of application or shared library
 .SH SYNOPSIS
 .B lsbappchk
-.RB [ \-hvnA ]
+.RB [ \-hvn ]
+.RB [ \-T
+.IR PRODUCT ]
 .RB [ \-M
 .IR MODULE ]...
 .RB [ \-L
@@ -14,7 +16,9 @@ lsbappchk \- check LSB conformance of application or shared library
 .I appname
 .br
 .B lsbappchk
-.RB [ \-hvnA ]
+.RB [ \-hvn ]
+.RB [ \-T
+.IR PRODUCT ]
 .RB [ \-M
 .IR MODULE ]...
 .RB [ \-j
@@ -50,8 +54,9 @@ file irrespective of this option.
 \fB\-n\fR, \fB--nojournal\fR
 Do not create a journal file.
 .TP
-\fB\-A
-Check the symbols found in all modules.
+\fB\-T \fI[core|desktop]\fR, \fB--lsb-product \fI[core|desktop\fR
+Specify the lsb spec/product to load modules for- 3.0, and 3.1,
+respectively.
 .TP
 \fB\-M \fIMODULE\fR, \fB--module\fR=\fIMODULE\fR
 Also check the symbols found in \fIMODULE\fR.
