@@ -1,3 +1,159 @@
+2006-01-14	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* tetj/tetjtest.c
+	  tetj/tetj.3
+	  tetj/tetj.c
+	  tetj/tetj.h
+	   Provide support for VSX_NAME standard (bug 986)
+
+2006-01-14	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.inc
+	  devchk/ts/devchk/fontconfig_fcfreetype_h.inc
+	   new files
+
+2006-01-13	Brian Harring <brianx.d.harring_at_intel.com>
+	* pkgchk/pkgchk.c
+	  appchk/appchk.c
+	  appchk/lsbappchk.1
+	  cmdchk/cmdchk.c
+	  cmdchk/lsbcmdchk.1
+	  cmdchk/mkcmdlist
+	  cxxabichk/makefile
+	  elfchk/dump_modules
+	  elfchk/elfchk.h
+	  elfchk/makefile
+	  elfchk/util.c
+	  libchk/libchk.c
+	  libchk/lsblibchk.1
+	  pkgchk/lsbpkgchk.1
+	    enable appchk -T core support.
+
+2006-01-13	Harald Fernengel <harald_at_trolltech.com>
+	* libchk/mkfunclist
+	  libchk/classchk.c
+	   make it more verbose
+
+2006-01-11	Brian Harring <brianx.d.harring_at_intel.com>
+	* pkgchk/pkgchk.c
+	   typo in usage- s:aaiable:available:
+
+2006-01-11	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.inc
+	   adding *Class type as opaque
+
+2006-01-07	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* elfchk/elfchk.h
+	   Correct illegal macro usage: can't have '-' in a macro name,
+	   change to '_'.
+
+2006-01-06	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* tetj/tetj.py
+	  cmdchk/cmdchk.c
+	  cmdchk/cmdchk.py
+	  pkgchk/pkgchk.c
+	   cleanup '30' lines and drop $Log: ChangeLog,v $
+	   cleanup '30' lines and drop Revision 1.4  2006/01/16 16:23:43  mats
+	   cleanup '30' lines and drop sync
+	   cleanup '30' lines and drop (see ChangeLog instead)
+
+2006-01-06	Nick Stoughton <nick_at_usenix.org>
+	* cmdchk/cmdchk.c
+	   use correct architecture name in journal
+
+2006-01-06	Shrikant Gangoda <shrikant.gangoda_at_codito.com>
+	* cmdchk/cmds.h
+	  cmdchk/cmdlist
+	   Added fontconfig commands (fc-cache, fc-list, fc-match) to the
+	   list.
+
+2006-01-05	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/gtk_2_0_gdk_gdk_h.inc
+	   opaque type updates
+
+2005-12-23	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/fontconfig_fontconfig_h.inc
+	   adding fontconfig inc file
+
+2005-12-23	Shrikant Gangoda <shrikant.gangoda_at_codito.com>
+	* devchk/ts/devchk/mktests
+	   Commented few line since test case for Arrays is handeled by
+	   CheckTypeSize macro.
+
+2005-12-17	Todd Fujinaka <todd.fujinaka_at_intel.com>
+	* devchk/ts/devchk/libxml2_libxml_xmlIO_h.inc
+	   Add opaque _xmlValidState struct.
+
+2005-12-17	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* elfchk/elfchk.h
+	   desktop modules added
+
+2005-12-16	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/libxml2_libxml_globals_h.inc
+	   undefs to hide effect of LIBXML_THREAD_ENABLED macro
+
+2005-12-15	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* tetj/tetjtest.c
+	  rpmchk/idxtag.c
+	  tetj/tetj.3
+	  tetj/tetj.c
+	  tetj/tetj.py
+	   fix bug 1108 - report fail if header check function fails
+
+2005-12-15	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/mktests
+	   generate tests for Const types only if the basetype is typedef
+	   and pointer
+
+2005-12-14	Todd Fujinaka <todd.fujinaka_at_intel.com>
+	* devchk/ts/devchk/mktests
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.inc
+	  devchk/ts/devchk/libxml2_libxml_HTMLtree_h.inc
+	  devchk/ts/devchk/libxml2_libxml_SAX2_h.inc
+	  devchk/ts/devchk/libxml2_libxml_c14n_h.inc
+	  devchk/ts/devchk/libxml2_libxml_catalog_h.inc
+	  devchk/ts/devchk/libxml2_libxml_debugXML_h.inc
+	  devchk/ts/devchk/libxml2_libxml_dict_h.inc
+	  devchk/ts/devchk/libxml2_libxml_encoding_h.inc
+	  devchk/ts/devchk/libxml2_libxml_entities_h.inc
+	  devchk/ts/devchk/libxml2_libxml_globals_h.inc
+	  devchk/ts/devchk/libxml2_libxml_hash_h.inc
+	  devchk/ts/devchk/libxml2_libxml_list_h.inc
+	  devchk/ts/devchk/libxml2_libxml_parserInternals_h.inc
+	  devchk/ts/devchk/libxml2_libxml_parser_h.inc
+	  devchk/ts/devchk/libxml2_libxml_pattern_h.inc
+	  devchk/ts/devchk/libxml2_libxml_relaxng_h.inc
+	  devchk/ts/devchk/libxml2_libxml_schematron_h.inc
+	  devchk/ts/devchk/libxml2_libxml_threads_h.inc
+	  devchk/ts/devchk/libxml2_libxml_tree_h.inc
+	  devchk/ts/devchk/libxml2_libxml_uri_h.inc
+	  devchk/ts/devchk/libxml2_libxml_valid_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xinclude_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlIO_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlautomata_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlerror_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlmemory_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlmodule_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlreader_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlregexp_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlsave_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlwriter_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xpathInternals_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xpointer_h.inc
+	   Initial commit of libxml2.
+
+2005-12-13	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* tetj/tetjtest.c
+	  tetj/Makefile
+	  tetj/tetj.3
+	   Add an example tetj-using program, to match the one in the
+	   tetj.py selftest
+
+2005-11-30	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* makefile
+	   adding archk to the list of directories
+
 2005-11-30	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
 	* devchk/ts/devchk/jpeglib_h.inc
 	   for JPEG lib
@@ -34161,4 +34317,4 @@
 	  makefile
 	   branches:  1.1.1; Initial revision
 
-1133367390
+1137417372
