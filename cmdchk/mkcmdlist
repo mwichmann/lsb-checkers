@@ -32,7 +32,8 @@ print CMDS "\tchar *cmdpath;\n";
 print CMDS "};\nstruct cmds core_cmdlist[] = {\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
-$select.= "WHERE Cstatus='Included' ";
+$select.= "LEFT JOIN ModCmd ON MCcid=Cid "; 
+$select.= "WHERE Cstatus='Included' AND MCmid=1 ";
 $select.= "ORDER BY Cname ";
 
 #print $select;
@@ -41,22 +42,23 @@ $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
-	# hack.  DB needs to be updated to specify what cmd belongs to which module/spec.
-	# so we add an explicit check to skip desktop extensions- all cmds starting with fc-
-	if(substr($entry{'Cname'},0,3) == "fc-") {
-		next;
-	}
 	print CMDS "	{\"$entry{'Cname'}\", \"$entry{'Cpath'}\"},\n";
 }
+print CMDS "};\n\nstruct cmds desktop_cmdlist[] = {\n";
 
-# hack.  DB needs to be updated to know which belongs to which spec.
-print CMDS q(};
+$select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
+$select.= "LEFT JOIN ModCmd ON MCcid=Cid "; 
+$select.= "WHERE Cstatus='Included' AND MCmid=5 ";
+$select.= "ORDER BY Cname ";
 
-struct cmds desktop_cmdlist[] = {
-	{"fc-cache", ""},
-	{"fc-list", ""},
-	{"fc-match", ""},
-};
-);
+#print $select;
+
+$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+for(1..$sth->numrows) {
+	%entry=$sth->fetchhash;
+	print CMDS "	{\"$entry{'Cname'}\", \"$entry{'Cpath'}\"},\n";
+}
+print CMDS "};";
 
 close(CMDS);
