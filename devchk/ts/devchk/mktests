@@ -13,9 +13,9 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 $cnt=0;
 
 sub
-    displaytyperef($)
+    displaytyperef($$)
 {
-    local ($param) = @_;
+    local ($param, $enableConst) = @_;
     local(%select,$sth,%type);
 
     if( $$param{'Pconst'} eq "Y" ) {
@@ -36,11 +36,11 @@ sub
 	$sth = $Dbh->query($select) || die $Dbh->errmsg();
 	%type=$sth->fetchhash;
 	if( $type{'Ttype'} eq "Pointer" ) {
-	    displaytyperef(\%type);
-	    print TESTS "const ";
+	    displaytyperef(\%type, $enableConst);
+	    print TESTS "const " if $enableConst;
 	} else {
-	    print TESTS "const ";
-	    displaytyperef(\%type);
+	    print TESTS "const " if $enableConst;
+	    displaytyperef(\%type, $enableConst);
 	}
 	return;
     }
@@ -49,7 +49,7 @@ sub
 	$select = "SELECT * FROM Type WHERE Tid=".$$param{'Tbasetype'};
 	$sth = $Dbh->query($select) || die $Dbh->errmsg();
 	%type=$sth->fetchhash;
-	displaytyperef(\%type);
+	displaytyperef(\%type, $enableConst);
 	print TESTS " *";
 	return;
     }
@@ -84,10 +84,10 @@ sub
 	%type=$tth->fetchhash;
 	if( !$nameonly ) {
 	    #$nameonly=1;
-	    displaytyperef(\%type);
+	    displaytyperef(\%type, $enableConst);
 	    #$nameonly=0;
 	} else {
-	    displaytyperef(\%type);
+	    displaytyperef(\%type, $enableConst);
 	}
 	return;
     }
@@ -97,7 +97,7 @@ sub
 	$sth = $Dbh->query($select) || die $Dbh->errmsg();
 	%type=$sth->fetchhash;
 	$Tid=$$param{'Tid'};
-	displaytyperef(\%type);
+	displaytyperef(\%type, $enableConst);
 	print TESTS "(*";
 	if( $$param{'Tname'} =~ "fptr" ) {
 		    $$param{'Tname'} =~ s/fptr-//;
@@ -124,7 +124,7 @@ sub
 	    $th = $Dbh->query($tselect) || die $Dbh->errmsg();
 	    %entry=$th->fetchhash;
 	    #$nameonly=1;
-		displaytyperef(\%entry);
+		displaytyperef(\%entry, $enableConst);
 	    #print TESTS $tmentry{'TMname'};
 	    if( $entry{'Ttype'} eq 'Array' ) {
 		print TESTS "[".$entry{'ATsize'}."]";
@@ -568,7 +568,7 @@ sub writetest($$)
 					    print TESTS "/* $entry{'Aname'} */\n";
 					}
 					print TESTS "extern ";
-					displaytyperef(\%entry);
+					displaytyperef(\%entry, 1);
 					print TESTS " $entry{'Iname'}_db(";
 					$select = "SELECT Tid,Tname,Ttype,Tbasetype,Parsize,Pconst FROM Type,Parameter ";
 					$select.= "WHERE Pint=".$entry{'Iid'}." AND Ptype=Tid ";
@@ -578,7 +578,7 @@ sub writetest($$)
 					    for(1..$sth2->numrows) {
 							%entry2=$sth2->fetchhash;
 							#print TESTS ", ";
-							displaytyperef(\%entry2);
+							displaytyperef(\%entry2, 1);
 							if( $entry2{'Ttype'} eq "Array" ) {
 							    print TESTS "[";
 							    if( $entry2{'Parsize'} != 0 ) {
@@ -596,7 +596,21 @@ sub writetest($$)
 					if( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
 					    print TESTS "#endif\n";
 					}
-			}
+			} #elsif( $entry{'Itype'} eq "Data" ) {
+			#	print TESTS "extern ";
+			#	displaytyperef(\%entry, 0);
+			#	print TESTS " $entry{'Iname'}_db";
+ 			#       if( $entry{'Ttype'} eq "Array" ) {
+ 			#           print  TESTS "[";
+ 			#           if( $entry{'ATsize'} != 0 ) {
+ 			#               print TESTS  $entry{'ATsize'};
+ 			#           }
+ 			#           print TESTS  "]";
+ 			#       }
+ 			#       print TESTS  " ;\n";
+			#	print TESTS "CheckGlobalVar($entry{'Iname'}_db, $entry{'Iname'});\n";
+ 			#}
+
 		}
 	}
 #
@@ -904,7 +918,7 @@ print MAKEFILE "else\n";
 print MAKEFILE "EXTRALIBS =\n";
 print MAKEFILE "endif\n\n";
 
-print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/include/libxml2\n\n";
+print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig\n\n";
 print MAKEFILE "CXXFLAGS = \$\(CFLAGS)\n\n";
 
 
