@@ -20,7 +20,7 @@ test: test.c $(LIB) $(LIBS)
 check: dynsyms.c dynsyms.c.chk
 	diff dynsyms.c dynsyms.c.chk
 
-dynsyms.c: modules.h modules.c mkfunclist
+dynsyms.c:
 	./mkfunclist >dynsyms.c
 
 dynsyms.c.chk:
