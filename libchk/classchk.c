@@ -236,8 +236,8 @@ check_class_info(ElfFile * file, char *libname,
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO
 		  ("Error looking for symbol for Virtual table entry "
-		   "[%d][%d](%p) expecting %s", v, j,
-		   fptr2ptrp(&vtvirtfuncs[j]), classp->vtable[v].virtfuncs[j]);
+		   "[%d][%d](%p) expecting %s, got %s", v, j,
+		   fptr2ptrp(&vtvirtfuncs[j]), classp->vtable[v].virtfuncs[j], dlainfo.dli_sname);
 	      test_failed = 1;
 	    }
 #ifdef DEBUG
@@ -476,7 +476,7 @@ check_class_info(ElfFile * file, char *libname,
 	dladdr(si_rttip->basetype, &dlainfo);
 	if (symp != si_rttip->basetype) {
 	  TETJ_REPORT_INFO
-	      ("Base type %p (expected) doesn't match %p %s (found)", symp,
+	      ("Base type %p %s (expected) doesn't match %p %s (found)", symp, classp->basename,
 	       si_rttip->basetype, dlainfo.dli_sname);
 	  test_failed = 1;
 	}
@@ -566,7 +566,7 @@ check_class_info(ElfFile * file, char *libname,
 	dladdr(p_rttip->pointee, &dlainfo);
 	if (symp != p_rttip->pointee) {
 	  TETJ_REPORT_INFO
-	      ("Base type %p (expected) doesn't match %p %s (found)", symp,
+	      ("Base type %p %s (expected) doesn't match %p %s (found)", symp, classp->basename,
 	       p_rttip->pointee, dlainfo.dli_sname);
 	  test_failed = 1;
 	}
