@@ -3,7 +3,8 @@
 struct cmds {
 	char *cmdname;
 	char *cmdpath;
-} cmdlist[] = {
+};
+struct cmds core_cmdlist[] = {
 	{"[", ""},
 	{"ar", ""},
 	{"at", ""},
@@ -40,9 +41,6 @@ struct cmds {
 	{"expand", ""},
 	{"expr", ""},
 	{"false", "/bin/false"},
-	{"fc-cache", ""},
-	{"fc-list", ""},
-	{"fc-match", ""},
 	{"fgrep", ""},
 	{"file", ""},
 	{"find", ""},
@@ -141,3 +139,10 @@ struct cmds {
 	{"wc", ""},
 	{"xargs", ""},
 };
+
+struct cmds desktop_cmdlist[] = {
+	{"fc-cache", ""},
+	{"fc-list", ""},
+	{"fc-match", ""},
+};
+
