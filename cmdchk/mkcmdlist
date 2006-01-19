@@ -48,7 +48,7 @@ print CMDS "};\n\nstruct cmds desktop_cmdlist[] = {\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
 $select.= "LEFT JOIN ModCmd ON MCcid=Cid "; 
-$select.= "WHERE Cstatus='Included' AND MCmid=5 ";
+$select.= "WHERE Cstatus='Included' AND MCmid=6 ";
 $select.= "ORDER BY Cname ";
 
 #print $select;
