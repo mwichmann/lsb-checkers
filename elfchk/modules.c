@@ -9,5 +9,6 @@ struct lsb_module LSB_Modules[] = {
 	{"LSB_Graphics",	LSB_Graphics},
 	{"LSB_Cpp",	LSB_Cpp},
 	{"LSB_Core",	LSB_Core},
+	{"LSB_All_Modules",	LSB_All_Modules},
 	{NULL, 0},
 };
