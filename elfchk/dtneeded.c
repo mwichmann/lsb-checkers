@@ -21,6 +21,7 @@ char *DtNeeded[] = {
 #if __x86_64__
 	"/lib64/ld-lsb-x86-64.so.3",
 #endif /* __x86_64__ */
+	"libatk-1.0.so.0",
 #if __i386__
 	"libc.so.6",
 #endif /* __i386__ */
@@ -86,6 +87,7 @@ char *DtNeeded[] = {
 #if __s390x__
 	"libdl.so.2",
 #endif /* __s390x__ */
+	"libfontconfig.so.1",
 	"libgcc_s.so.1",
 #if __i386__
 	"libgcc_s.so.1",
@@ -114,8 +116,17 @@ char *DtNeeded[] = {
 #if __s390x__
 	"libgcc_s.so.1",
 #endif /* __s390x__ */
+	"libgdk-x11-2.0.so.0",
+	"libgdk_pixbuf-2.0.so.0",
+	"libgdk_pixbuf_xlib-2.0.so",
 	"libGL.so.1",
+	"libglib-2.0.so.0",
+	"libgmodule-2.0.so.0",
+	"libgobject-2.0.so.0",
+	"libgthread-2.0.so.0",
+	"libgtk-x11-2.0.so.0",
 	"libICE.so.6",
+	"libjpeg.so.62",
 #if __i386__
 	"libm.so.6",
 #endif /* __i386__ */
@@ -163,6 +174,10 @@ char *DtNeeded[] = {
 	"libncurses.so.5",
 #endif /* __s390x__ */
 	"libpam.so.0",
+	"libpango-1.0.so.0",
+	"libpangoft2-1.0.so.0",
+	"libpangoxft-1.0.so.0",
+	"libpng12.so.0",
 	"libpthread.so.0",
 #if __i386__
 	"libpthread.so.0",
@@ -185,6 +200,13 @@ char *DtNeeded[] = {
 #if __s390x__
 	"libpthread.so.0",
 #endif /* __s390x__ */
+	"libQtCore.so.4",
+	"libQtGui.so.4",
+	"libQtNetwork.so.4",
+	"libQtOpenGL.so.4",
+	"libQtSql.so.4",
+	"libQtSvg.so.4",
+	"libQtXml.so.4",
 	"librt.so.1",
 	"libSM.so.6",
 	"libstdc++.so.6",
@@ -237,6 +259,7 @@ char *DtNeeded[] = {
 	"libX11.so.6",
 	"libXext.so.6",
 	"libXi.so.6",
+	"libxml2.so.2",
 	"libXt.so.6",
 	"libz.so.1",
 #if __i386__
