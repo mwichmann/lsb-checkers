@@ -53,6 +53,7 @@ while (@defines) {
 	my $row = pop(@defines);
 	print $fd "\t{\"$row\",\t$name},\n";
 }
+print $fd "\t{\"LSB_All_Modules\",\tLSB_All_Modules},\n";
 print $fd q(	{NULL, 0},
 };
 );
