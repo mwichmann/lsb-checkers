@@ -1,3 +1,81 @@
+2006-01-19	Shrikant Gangoda <shrikant.gangoda_at_codito.com>
+	* cmdchk/mkcmdlist
+	   Updating the mysql query for generating struct desktop_cmdlist
+	   from MCmid=5 to 6.
+
+2006-01-18	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/png_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_enum_types_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.c
+	  devchk/ts/devchk/fontconfig_fcfreetype_h.c
+	  devchk/ts/devchk/fontconfig_fcprivate_h.c
+	  devchk/ts/devchk/fontconfig_fontconfig_h.c
+	  devchk/ts/devchk/glib_2_0_glib_gprintf_h.c
+	  devchk/ts/devchk/glib_2_0_glib_gstdio_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_object_h.c
+	  devchk/ts/devchk/glib_2_0_gmodule_h.c
+	  devchk/ts/devchk/glib_2_0_gobject_gvaluecollector_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdkkeysyms_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdkx_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixdata_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h.c
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.c
+	  devchk/ts/devchk/jpeglib_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLtree_h.c
+	  devchk/ts/devchk/libxml2_libxml_SAX2_h.c
+	  devchk/ts/devchk/libxml2_libxml_c14n_h.c
+	  devchk/ts/devchk/libxml2_libxml_catalog_h.c
+	  devchk/ts/devchk/libxml2_libxml_debugXML_h.c
+	  devchk/ts/devchk/libxml2_libxml_dict_h.c
+	  devchk/ts/devchk/libxml2_libxml_encoding_h.c
+	  devchk/ts/devchk/libxml2_libxml_entities_h.c
+	  devchk/ts/devchk/libxml2_libxml_globals_h.c
+	  devchk/ts/devchk/libxml2_libxml_hash_h.c
+	  devchk/ts/devchk/libxml2_libxml_list_h.c
+	  devchk/ts/devchk/libxml2_libxml_parserInternals_h.c
+	  devchk/ts/devchk/libxml2_libxml_parser_h.c
+	  devchk/ts/devchk/libxml2_libxml_pattern_h.c
+	  devchk/ts/devchk/libxml2_libxml_relaxng_h.c
+	  devchk/ts/devchk/libxml2_libxml_schematron_h.c
+	  devchk/ts/devchk/libxml2_libxml_threads_h.c
+	  devchk/ts/devchk/libxml2_libxml_tree_h.c
+	  devchk/ts/devchk/libxml2_libxml_uri_h.c
+	  devchk/ts/devchk/libxml2_libxml_valid_h.c
+	  devchk/ts/devchk/libxml2_libxml_xinclude_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlIO_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlautomata_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlerror_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlexports_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmemory_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmodule_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlreader_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlregexp_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlsave_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlstring_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlversion_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlwriter_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpathInternals_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpointer_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_utils_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoxft_h.c
+	   desktop related files
+
+2006-01-17	Marvin Heffler <heffler_at_us.ibm.com>
+	* devchk/ts/devchk/stdio_h.inc
+	   add include of sys/cdefs.h so stdio_h.c will compile with lsbcc
+
 2006-01-17	Harald Fernengel <harald_at_trolltech.com>
 	* libchk/classchk.c
 	   make it more verbose
@@ -73,6 +151,9 @@
 	  cmdchk/cmdchk.py
 	  pkgchk/pkgchk.c
 	   cleanup '30' lines and drop $Log: ChangeLog,v $
+	   cleanup '30' lines and drop Revision 1.6  2006/01/23 21:54:28  mats
+	   cleanup '30' lines and drop sync latest changes
+	   cleanup '30' lines and drop
 	   cleanup '30' lines and drop Revision 1.5  2006/01/17 20:44:13  mats
 	   cleanup '30' lines and drop resync
 	   cleanup '30' lines and drop
@@ -34342,4 +34423,4 @@
 	  makefile
 	   branches:  1.1.1; Initial revision
 
-1137529400
+1138052747
