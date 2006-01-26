@@ -93,7 +93,6 @@ $select.= "ORDER BY VTpos";
 
 print $LIB "const char *".$vtablename."_name_$pos [] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
-$numvtablefuns=0;
 for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
 	if( $entry{'VTarch'} != $entry{'Iarch'} ) {
@@ -107,15 +106,9 @@ for(1..$vsth->numrows) {
 		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
 		print $LIB "#endif\n";
 	}
-	$numvtablefuns=$entry{'VTpos'}+1;
 }
 print $LIB "\t};\n\n";
 
-# This should be compared w/ CVnumvtfuncs instead
-#if( $$class{'CInumvfunc'} != $numvtablefuns ) {
-#	print STDERR "Wrong NumVfuncs for ".$$class{'CIname'}." ";
-#	print STDERR $$class{'CInumvfunc'}." vs $numvtablefuns\n";
-#	}
 } # $$class{'CInumvtab'}
 
 #
@@ -155,7 +148,7 @@ for(1..$vsth->numrows) {
 }
 
 print $LIB "\t".$category.",\t/* Vtable category */\n";
-print $LIB "\t".$numvtablefuns.",\t/* Number of Vfuncs */\n";
+print $LIB "\t".$entry{'CVnumvtfuncs'}.",\t/* Number of Vfuncs */\n";
 print $LIB "\t\"".getinterfacename($rttiid)."\",\n";
 print $LIB "\t".$vtablename."_name_$pos,\n";
 print $LIB "\t},\n";
