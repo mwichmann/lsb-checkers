@@ -446,8 +446,8 @@ check_class_info(ElfFile * file, char *libname,
 	 * No additional fields to check
 	 */
 	basetypes = rttip->basetypeinfo;
-/* 	if( classp->numbaseinfo ) */
-/* 	  fprintf(stderr,"fundamental_type_info & baseinfos\n"); */
+/*	if( classp->numbaseinfo ) */
+/*	  fprintf(stderr,"fundamental_type_info & baseinfos\n"); */
       }
       /*
        * abi::__class_type_info
@@ -458,8 +458,8 @@ check_class_info(ElfFile * file, char *libname,
 	 * No additional fields to check
 	 */
 	basetypes = rttip->basetypeinfo;
-/* 	if( classp->numbaseinfo ) */
-/* 	  fprintf(stderr,"class_type_info & baseinfos\n"); */
+/*	if( classp->numbaseinfo ) */
+/*	  fprintf(stderr,"class_type_info & baseinfos\n"); */
       }
       /*
        * abi::__si_class_type_info
@@ -480,9 +480,9 @@ check_class_info(ElfFile * file, char *libname,
 	       si_rttip->basetype, dlainfo.dli_sname);
 	  test_failed = 1;
 	}
-	basetypes = si_rttip->basetypeinfo;
-/* 	if( classp->numbaseinfo ) */
-/* 	  fprintf(stderr,"si_class_type_info & baseinfos\n"); */
+	basetypes = rttip->basetypeinfo;
+/*	if( classp->numbaseinfo ) */
+/*	  fprintf(stderr,"si_class_type_info & baseinfos\n"); */
       }
       /*
        * abi::__vmi_class_type_info
@@ -545,8 +545,8 @@ check_class_info(ElfFile * file, char *libname,
 	}
 	basetypes = (void **) ((char *) vmi_rttip->base_info) +
 	    (vmi_rttip->base_count * sizeof(struct base_type_info_mem));
-/* 	if( classp->numbaseinfo ) */
-/* 	  fprintf(stderr,"vmi_classtpye & baseinfos\n"); */
+/*	if( classp->numbaseinfo ) */
+/*	  fprintf(stderr,"vmi_classtpye & baseinfos\n"); */
       }
       /*
        * abi::__pbase_type_info
@@ -583,8 +583,8 @@ check_class_info(ElfFile * file, char *libname,
 	  test_failed = 1;
 	}
 	basetypes = ((struct pbasetypeinfo_mem *) rttip)->basetypeinfo;
-/* 	if( classp->numbaseinfo ) */
-/* 	  fprintf(stderr,"pbase_type_info & baseinfos\n"); */
+/*	if( classp->numbaseinfo ) */
+/*	  fprintf(stderr,"pbase_type_info & baseinfos\n"); */
       }
       tetj_result(journal, tetj_activity_count, tetj_tp_count,
 		  test_failed ? TETJ_FAIL : TETJ_PASS);
