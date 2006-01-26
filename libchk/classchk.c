@@ -267,6 +267,9 @@ check_class_info(ElfFile * file, char *libname,
 	    }
 #endif
 
+#if 0
+            /* This code produces false positives, please read bug 1173 */
+
 	    /*
 	     * 1.4.1) Make sure we found a named symbol at all.
 	     */
@@ -278,9 +281,10 @@ check_class_info(ElfFile * file, char *libname,
 		   classp->vtable[v].virtfuncs[j]);
 	      test_failed = 1;
 	    }
+#endif
 
 	    /*
-	     * 1.4.2) Check to see if the symbol found is an exact match 
+	     * 1.4.2) Check to see if the symbol found is an exact match
 	     * for the funcptr that was used for the lookup.
 	     */
 	    if (dlainfo.dli_saddr &&
@@ -301,6 +305,8 @@ check_class_info(ElfFile * file, char *libname,
 	      test_failed = 1;
 	    }
 
+#if 0
+            /* This code produces false positives, please read bug 1173 */
 	    /*
 	     * 1.4.3) Make sure we found a named symbol at all.
 	     */
@@ -312,6 +318,7 @@ check_class_info(ElfFile * file, char *libname,
 		   classp->vtable[v].virtfuncs[j]);
 	      test_failed = 1;
 	    }
+#endif
 
 	    /*
 	     * 1.4.4) Check to see if the symbol name found matches what we
