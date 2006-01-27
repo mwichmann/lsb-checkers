@@ -2315,11 +2315,111 @@ struct classvtable _18QXmlDefaultHandler_vtable [6] = {
 
 struct base_type_info _18QXmlDefaultHandler_baseinfo[] = {
 	{"_ZTI18QXmlContentHandler",	2U},
+#if __i386__
 	{"_ZTI16QXmlErrorHandler",	1026U},
+#endif
+#if __ia64__
+	{"_ZTI16QXmlErrorHandler",	2050U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTI16QXmlErrorHandler",	1026U},
+#endif
+#if __powerpc64__
+	{"_ZTI16QXmlErrorHandler",	2050U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTI16QXmlErrorHandler",	1026U},
+#endif
+#if __x86_64__
+	{"_ZTI16QXmlErrorHandler",	2050U},
+#endif
+#if __s390x__
+	{"_ZTI16QXmlErrorHandler",	2050U},
+#endif
+#if __i386__
 	{"_ZTI14QXmlDTDHandler",	2050U},
+#endif
+#if __ia64__
+	{"_ZTI14QXmlDTDHandler",	4098U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTI14QXmlDTDHandler",	2050U},
+#endif
+#if __powerpc64__
+	{"_ZTI14QXmlDTDHandler",	4098U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTI14QXmlDTDHandler",	2050U},
+#endif
+#if __x86_64__
+	{"_ZTI14QXmlDTDHandler",	4098U},
+#endif
+#if __s390x__
+	{"_ZTI14QXmlDTDHandler",	4098U},
+#endif
+#if __i386__
 	{"_ZTI18QXmlEntityResolver",	3074U},
+#endif
+#if __ia64__
+	{"_ZTI18QXmlEntityResolver",	6146U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTI18QXmlEntityResolver",	3074U},
+#endif
+#if __powerpc64__
+	{"_ZTI18QXmlEntityResolver",	6146U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTI18QXmlEntityResolver",	3074U},
+#endif
+#if __x86_64__
+	{"_ZTI18QXmlEntityResolver",	6146U},
+#endif
+#if __s390x__
+	{"_ZTI18QXmlEntityResolver",	6146U},
+#endif
+#if __i386__
 	{"_ZTI18QXmlLexicalHandler",	4098U},
+#endif
+#if __ia64__
+	{"_ZTI18QXmlLexicalHandler",	8194U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTI18QXmlLexicalHandler",	4098U},
+#endif
+#if __powerpc64__
+	{"_ZTI18QXmlLexicalHandler",	8194U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTI18QXmlLexicalHandler",	4098U},
+#endif
+#if __x86_64__
+	{"_ZTI18QXmlLexicalHandler",	8194U},
+#endif
+#if __s390x__
+	{"_ZTI18QXmlLexicalHandler",	8194U},
+#endif
+#if __i386__
 	{"_ZTI15QXmlDeclHandler",	5122U},
+#endif
+#if __ia64__
+	{"_ZTI15QXmlDeclHandler",	10242U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTI15QXmlDeclHandler",	5122U},
+#endif
+#if __powerpc64__
+	{"_ZTI15QXmlDeclHandler",	10242U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTI15QXmlDeclHandler",	5122U},
+#endif
+#if __x86_64__
+	{"_ZTI15QXmlDeclHandler",	10242U},
+#endif
+#if __s390x__
+	{"_ZTI15QXmlDeclHandler",	10242U},
+#endif
 	};
 
 struct classinfo _Z18QXmlDefaultHandler_classinfo = {

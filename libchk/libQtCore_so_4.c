@@ -3,14 +3,14 @@
 struct versym libQtCore_so_4[] = {
 	{"_Z10forcepointR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z10noshowbaseR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
-#if __i386__
-	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt,4,1},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt,1,1},
+	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt,1,1},
+	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
+#endif
+#if __i386__
+	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if __ia64__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
@@ -1099,7 +1099,9 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QString7sprintfEPKcz","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString8fromUtf8EPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString8truncateEi","",0,LSB_Toolkit_Qt,0,1},
+#if __i386__
 	{"_ZN7QString8vsprintfEPKcPc","",0,LSB_Toolkit_Qt,0,1},
+#endif
 	{"_ZN7QString9fromAsciiEPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString9fromUtf16EPKti","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QStringC1E5QChar","",0,LSB_Toolkit_Qt,0,1},
@@ -2104,7 +2106,6 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTI15QSocketNotifier","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QCoreApplication","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QIODevicePrivate","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTI16QSettingsPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QTextCodecPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,0},
@@ -2151,7 +2152,6 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTV15QSocketNotifier","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QCoreApplication","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QIODevicePrivate","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTV16QSettingsPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QTextCodecPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,0},
@@ -3391,8 +3391,34 @@ struct classvtable _16QTextCodecPlugin_vtable [2] = {
 	_16QTextCodecPlugin_vtable_name_0,
 	},
 	{
+#if __i386__
 	0,
 	-8,
+#endif
+#if __ia64__
+	0,
+	-16,
+#endif
+#if __powerpc__ && !__powerpc64__
+	0,
+	-8,
+#endif
+#if __powerpc64__
+	0,
+	-16,
+#endif
+#if __s390__ && !__s390x__
+	0,
+	-8,
+#endif
+#if __x86_64__
+	0,
+	-16,
+#endif
+#if __s390x__
+	0,
+	-16,
+#endif
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI16QTextCodecPlugin",
@@ -3402,7 +3428,27 @@ struct classvtable _16QTextCodecPlugin_vtable [2] = {
 
 struct base_type_info _16QTextCodecPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
+#if __i386__
 	{"_ZTI26QTextCodecFactoryInterface",	2050U},
+#endif
+#if __ia64__
+	{"_ZTI26QTextCodecFactoryInterface",	4098U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTI26QTextCodecFactoryInterface",	2050U},
+#endif
+#if __powerpc64__
+	{"_ZTI26QTextCodecFactoryInterface",	4098U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTI26QTextCodecFactoryInterface",	2050U},
+#endif
+#if __x86_64__
+	{"_ZTI26QTextCodecFactoryInterface",	4098U},
+#endif
+#if __s390x__
+	{"_ZTI26QTextCodecFactoryInterface",	4098U},
+#endif
 	};
 
 struct classinfo _Z16QTextCodecPlugin_classinfo = {
