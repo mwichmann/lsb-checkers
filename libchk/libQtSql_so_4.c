@@ -679,7 +679,27 @@ struct classvtable _16QSqlDriverPlugin_vtable [2] = {
 
 struct base_type_info _16QSqlDriverPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
+#if __i386__
 	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
+#endif
+#if __ia64__
+	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
+#endif
+#if __powerpc64__
+	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
+#endif
+#if __x86_64__
+	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
+#endif
+#if __s390x__
+	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
+#endif
 	};
 
 struct classinfo _Z16QSqlDriverPlugin_classinfo = {
