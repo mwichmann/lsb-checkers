@@ -201,12 +201,159 @@ char *DtNeeded[] = {
 	"libpthread.so.0",
 #endif /* __s390x__ */
 	"libQtCore.so.4",
+#if __i386__
+	"libQtCore.so.4",
+#endif /* __i386__ */
+#if __ia64__
+	"libQtCore.so.4",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libQtCore.so.4",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libQtCore.so.4",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libQtCore.so.4",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libQtCore.so.4",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libQtCore.so.4",
+#endif /* __s390x__ */
 	"libQtGui.so.4",
+#if __i386__
+	"libQtGui.so.4",
+#endif /* __i386__ */
+#if __ia64__
+	"libQtGui.so.4",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libQtGui.so.4",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libQtGui.so.4",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libQtGui.so.4",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libQtGui.so.4",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libQtGui.so.4",
+#endif /* __s390x__ */
 	"libQtNetwork.so.4",
+#if __i386__
+	"libQtNetwork.so.4",
+#endif /* __i386__ */
+#if __ia64__
+	"libQtNetwork.so.4",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libQtNetwork.so.4",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libQtNetwork.so.4",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libQtNetwork.so.4",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libQtNetwork.so.4",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libQtNetwork.so.4",
+#endif /* __s390x__ */
 	"libQtOpenGL.so.4",
+#if __i386__
+	"libQtOpenGL.so.4",
+#endif /* __i386__ */
+#if __ia64__
+	"libQtOpenGL.so.4",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libQtOpenGL.so.4",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libQtOpenGL.so.4",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libQtOpenGL.so.4",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libQtOpenGL.so.4",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libQtOpenGL.so.4",
+#endif /* __s390x__ */
 	"libQtSql.so.4",
+#if __i386__
+	"libQtSql.so.4",
+#endif /* __i386__ */
+#if __ia64__
+	"libQtSql.so.4",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libQtSql.so.4",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libQtSql.so.4",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libQtSql.so.4",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libQtSql.so.4",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libQtSql.so.4",
+#endif /* __s390x__ */
 	"libQtSvg.so.4",
+#if __i386__
+	"libQtSvg.so.4",
+#endif /* __i386__ */
+#if __ia64__
+	"libQtSvg.so.4",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libQtSvg.so.4",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libQtSvg.so.4",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libQtSvg.so.4",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libQtSvg.so.4",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libQtSvg.so.4",
+#endif /* __s390x__ */
 	"libQtXml.so.4",
+#if __i386__
+	"libQtXml.so.4",
+#endif /* __i386__ */
+#if __ia64__
+	"libQtXml.so.4",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libQtXml.so.4",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libQtXml.so.4",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libQtXml.so.4",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libQtXml.so.4",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libQtXml.so.4",
+#endif /* __s390x__ */
 	"librt.so.1",
 	"libSM.so.6",
 	"libstdc++.so.6",
