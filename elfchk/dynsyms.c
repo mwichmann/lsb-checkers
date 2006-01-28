@@ -1990,8 +1990,26 @@ struct versym DynSyms[] = {
 	{"_Z10forcepointR11QTextStream","",0,LSB_Toolkit_Qt},
 	{"_Z10noshowbaseR11QTextStream","",0,LSB_Toolkit_Qt},
 	{"_Z10qDrawArrowP8QPainterN2Qt9ArrowTypeENS1_8GUIStyleEbiiiiRK8QPaletteb","",0,LSB_Toolkit_Qt},
+#if __powerpc__ && !__powerpc64__
+	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390__ && !__s390x__
+	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt},
+#endif
 #if __i386__
 	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt},
+#endif
+#if __ia64__
+	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc64__
+	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt},
+#endif
+#if __x86_64__
+	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390x__
+	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt},
 #endif
 	{"_Z10scientificR11QTextStream","",0,LSB_Toolkit_Qt},
 	{"_Z11noforcesignR11QTextStream","",0,LSB_Toolkit_Qt},
@@ -2065,8 +2083,44 @@ struct versym DynSyms[] = {
 #if __i386__
 	{"_Z7qMallocj","",0,LSB_Toolkit_Qt},
 #endif
+#if __powerpc__ && !__powerpc64__
+	{"_Z7qMallocj","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390__ && !__s390x__
+	{"_Z7qMallocj","",0,LSB_Toolkit_Qt},
+#endif
+#if __ia64__
+	{"_Z7qMallocm","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc64__
+	{"_Z7qMallocm","",0,LSB_Toolkit_Qt},
+#endif
+#if __x86_64__
+	{"_Z7qMallocm","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390x__
+	{"_Z7qMallocm","",0,LSB_Toolkit_Qt},
+#endif
 #if __i386__
 	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390__ && !__s390x__
+	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt},
+#endif
+#if __ia64__
+	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc64__
+	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt},
+#endif
+#if __x86_64__
+	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390x__
+	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt},
 #endif
 	{"_Z7qgetenvPKc","",0,LSB_Toolkit_Qt},
 	{"_Z7qstrcmpPKcS0_","",0,LSB_Toolkit_Qt},
@@ -2076,8 +2130,44 @@ struct versym DynSyms[] = {
 #if __i386__
 	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt},
 #endif
+#if __powerpc__ && !__powerpc64__
+	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390__ && !__s390x__
+	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt},
+#endif
+#if __ia64__
+	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc64__
+	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt},
+#endif
+#if __x86_64__
+	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390x__
+	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt},
+#endif
 #if __i386__
 	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390__ && !__s390x__
+	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt},
+#endif
+#if __ia64__
+	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc64__
+	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt},
+#endif
+#if __x86_64__
+	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390x__
+	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt},
 #endif
 	{"_Z8qVersionv","",0,LSB_Toolkit_Qt},
 	{"_Z8qWarningPKcz","",0,LSB_Toolkit_Qt},
@@ -2092,6 +2182,24 @@ struct versym DynSyms[] = {
 	{"_Z9qItemRectP8QPainterN2Qt8GUIStyleEiiiiibPK7QPixmapRK7QStringi","",0,LSB_Toolkit_Qt},
 #if __i386__
 	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390__ && !__s390x__
+	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt},
+#endif
+#if __ia64__
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt},
+#endif
+#if __powerpc64__
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt},
+#endif
+#if __x86_64__
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt},
+#endif
+#if __s390x__
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt},
 #endif
 	{"_Z9qstrnicmpPKcS0_j","",0,LSB_Toolkit_Qt},
 	{"_Z9qt_assertPKcS0_i","",0,LSB_Toolkit_Qt},
@@ -4847,6 +4955,7 @@ struct versym DynSyms[] = {
 	{"_ZN15QLinearGradientC2ERK7QPointFS2_","",0,LSB_Toolkit_Qt},
 	{"_ZN15QLinearGradientC2Edddd","",0,LSB_Toolkit_Qt},
 	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt},
+	{"_ZN15QListWidgetItem18setBackgroundColorERK6QColor","",0,LSB_Toolkit_Qt},
 	{"_ZN15QListWidgetItem4readER11QDataStream","",0,LSB_Toolkit_Qt},
 	{"_ZN15QListWidgetItem7setDataEiRK8QVariant","",0,LSB_Toolkit_Qt},
 	{"_ZN15QListWidgetItemC1EP11QListWidgeti","",0,LSB_Toolkit_Qt},
@@ -7178,7 +7287,9 @@ struct versym DynSyms[] = {
 	{"_ZN7QString7sprintfEPKcz","",0,LSB_Toolkit_Qt},
 	{"_ZN7QString8fromUtf8EPKci","",0,LSB_Toolkit_Qt},
 	{"_ZN7QString8truncateEi","",0,LSB_Toolkit_Qt},
+#if __i386__
 	{"_ZN7QString8vsprintfEPKcPc","",0,LSB_Toolkit_Qt},
+#endif
 	{"_ZN7QString9fromAsciiEPKci","",0,LSB_Toolkit_Qt},
 	{"_ZN7QString9fromUtf16EPKti","",0,LSB_Toolkit_Qt},
 	{"_ZN7QStringC1E5QChar","",0,LSB_Toolkit_Qt},
@@ -9714,6 +9825,7 @@ struct versym DynSyms[] = {
 	{"_ZNK12QPaintDevice16x11DefaultVisualEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPaintDevice18x11DefaultColormapEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE","",0,LSB_Toolkit_Qt},
+	{"_ZNK12QPaintDevice7devTypeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPaintDevice8x11CellsEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPaintDevice8x11DepthEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPaintDevice9x11ScreenEv","",0,LSB_Toolkit_Qt},
@@ -21934,7 +22046,6 @@ struct versym DynSyms[] = {
 	{"_ZTI16QIODevicePrivate","",0,LSB_Toolkit_Qt},
 	{"_ZTI16QPageSetupDialog","",0,LSB_Toolkit_Qt},
 	{"_ZTI16QRegExpValidator","",0,LSB_Toolkit_Qt},
-	{"_ZTI16QSettingsPrivate","",0,LSB_Toolkit_Qt},
 	{"_ZTI16QSqlCachedResult","",0,LSB_Toolkit_Qt},
 	{"_ZTI16QSqlDriverPlugin","",0,LSB_Toolkit_Qt},
 	{"_ZTI16QStringListModel","",0,LSB_Toolkit_Qt},
@@ -21975,8 +22086,6 @@ struct versym DynSyms[] = {
 	{"_ZTI19QHttpResponseHeader","",0,LSB_Toolkit_Qt},
 	{"_ZTI19QInputContextPlugin","",0,LSB_Toolkit_Qt},
 	{"_ZTI19QItemSelectionModel","",0,LSB_Toolkit_Qt},
-	{"_ZTI19QNativeSocketEngine","",0,LSB_Toolkit_Qt},
-	{"_ZTI19QSocks5SocketEngine","",0,LSB_Toolkit_Qt},
 	{"_ZTI19QTextDocumentLayout","",0,LSB_Toolkit_Qt},
 	{"_ZTI19QToolBarChangeEvent","",0,LSB_Toolkit_Qt},
 	{"_ZTI20QAbstractPrintDialog","",0,LSB_Toolkit_Qt},
@@ -21984,12 +22093,10 @@ struct versym DynSyms[] = {
 	{"_ZTI20QEventDispatcherUNIX","",0,LSB_Toolkit_Qt},
 	{"_ZTI20QMenubarUpdatedEvent","",0,LSB_Toolkit_Qt},
 	{"_ZTI20QPictureFormatPlugin","",0,LSB_Toolkit_Qt},
-	{"_ZTI20QSocketEngineHandler","",0,LSB_Toolkit_Qt},
 	{"_ZTI20QTextFrameLayoutData","",0,LSB_Toolkit_Qt},
 	{"_ZTI20QTextObjectInterface","",0,LSB_Toolkit_Qt},
 	{"_ZTI20QWidgetResizeHandler","",0,LSB_Toolkit_Qt},
 	{"_ZTI21QAbstractItemDelegate","",0,LSB_Toolkit_Qt},
-	{"_ZTI21QAbstractSocketEngine","",0,LSB_Toolkit_Qt},
 	{"_ZTI21QObjectCleanupHandler","",0,LSB_Toolkit_Qt},
 	{"_ZTI21QSortFilterProxyModel","",0,LSB_Toolkit_Qt},
 	{"_ZTI22QAccessibleApplication","",0,LSB_Toolkit_Qt},
@@ -22003,9 +22110,7 @@ struct versym DynSyms[] = {
 	{"_ZTI24QAbstractItemViewPrivate","",0,LSB_Toolkit_Qt},
 	{"_ZTI24QAbstractPageSetupDialog","",0,LSB_Toolkit_Qt},
 	{"_ZTI24QSqlRelationalTableModel","",0,LSB_Toolkit_Qt},
-	{"_ZTI25QAbstractItemModelPrivate","",0,LSB_Toolkit_Qt},
 	{"_ZTI26QAbstractFileEngineHandler","",0,LSB_Toolkit_Qt},
-	{"_ZTI26QSocks5SocketEngineHandler","",0,LSB_Toolkit_Qt},
 	{"_ZTI26QSqlDriverFactoryInterface","",0,LSB_Toolkit_Qt},
 	{"_ZTI26QTextCodecFactoryInterface","",0,LSB_Toolkit_Qt},
 	{"_ZTI27QAbstractTextDocumentLayout","",0,LSB_Toolkit_Qt},
@@ -22572,7 +22677,6 @@ struct versym DynSyms[] = {
 	{"_ZTV16QIODevicePrivate","",0,LSB_Toolkit_Qt},
 	{"_ZTV16QPageSetupDialog","",0,LSB_Toolkit_Qt},
 	{"_ZTV16QRegExpValidator","",0,LSB_Toolkit_Qt},
-	{"_ZTV16QSettingsPrivate","",0,LSB_Toolkit_Qt},
 	{"_ZTV16QSqlCachedResult","",0,LSB_Toolkit_Qt},
 	{"_ZTV16QSqlDriverPlugin","",0,LSB_Toolkit_Qt},
 	{"_ZTV16QStringListModel","",0,LSB_Toolkit_Qt},
@@ -22613,8 +22717,6 @@ struct versym DynSyms[] = {
 	{"_ZTV19QHttpResponseHeader","",0,LSB_Toolkit_Qt},
 	{"_ZTV19QInputContextPlugin","",0,LSB_Toolkit_Qt},
 	{"_ZTV19QItemSelectionModel","",0,LSB_Toolkit_Qt},
-	{"_ZTV19QNativeSocketEngine","",0,LSB_Toolkit_Qt},
-	{"_ZTV19QSocks5SocketEngine","",0,LSB_Toolkit_Qt},
 	{"_ZTV19QTextDocumentLayout","",0,LSB_Toolkit_Qt},
 	{"_ZTV19QToolBarChangeEvent","",0,LSB_Toolkit_Qt},
 	{"_ZTV20QAbstractPrintDialog","",0,LSB_Toolkit_Qt},
@@ -22622,12 +22724,10 @@ struct versym DynSyms[] = {
 	{"_ZTV20QEventDispatcherUNIX","",0,LSB_Toolkit_Qt},
 	{"_ZTV20QMenubarUpdatedEvent","",0,LSB_Toolkit_Qt},
 	{"_ZTV20QPictureFormatPlugin","",0,LSB_Toolkit_Qt},
-	{"_ZTV20QSocketEngineHandler","",0,LSB_Toolkit_Qt},
 	{"_ZTV20QTextFrameLayoutData","",0,LSB_Toolkit_Qt},
 	{"_ZTV20QTextObjectInterface","",0,LSB_Toolkit_Qt},
 	{"_ZTV20QWidgetResizeHandler","",0,LSB_Toolkit_Qt},
 	{"_ZTV21QAbstractItemDelegate","",0,LSB_Toolkit_Qt},
-	{"_ZTV21QAbstractSocketEngine","",0,LSB_Toolkit_Qt},
 	{"_ZTV21QObjectCleanupHandler","",0,LSB_Toolkit_Qt},
 	{"_ZTV21QSortFilterProxyModel","",0,LSB_Toolkit_Qt},
 	{"_ZTV22QAccessibleApplication","",0,LSB_Toolkit_Qt},
@@ -22641,9 +22741,7 @@ struct versym DynSyms[] = {
 	{"_ZTV24QAbstractItemViewPrivate","",0,LSB_Toolkit_Qt},
 	{"_ZTV24QAbstractPageSetupDialog","",0,LSB_Toolkit_Qt},
 	{"_ZTV24QSqlRelationalTableModel","",0,LSB_Toolkit_Qt},
-	{"_ZTV25QAbstractItemModelPrivate","",0,LSB_Toolkit_Qt},
 	{"_ZTV26QAbstractFileEngineHandler","",0,LSB_Toolkit_Qt},
-	{"_ZTV26QSocks5SocketEngineHandler","",0,LSB_Toolkit_Qt},
 	{"_ZTV26QSqlDriverFactoryInterface","",0,LSB_Toolkit_Qt},
 	{"_ZTV26QTextCodecFactoryInterface","",0,LSB_Toolkit_Qt},
 	{"_ZTV27QAbstractTextDocumentLayout","",0,LSB_Toolkit_Qt},
@@ -60620,6 +60718,7 @@ struct versym DynSyms[] = {
 	{"xmlOutputBufferClose","",0,LSB_XML},
 	{"xmlOutputBufferCreateFd","",0,LSB_XML},
 	{"xmlOutputBufferCreateFile","",0,LSB_XML},
+	{"xmlOutputBufferCreateFilename","",0,LSB_XML},
 	{"xmlOutputBufferCreateFilenameDefault","",0,LSB_XML},
 	{"xmlOutputBufferCreateIO","",0,LSB_XML},
 	{"xmlOutputBufferFlush","",0,LSB_XML},
@@ -61245,6 +61344,8 @@ struct versym DynSyms[] = {
 	{"xmlXPathLocalNameFunction","",0,LSB_XML},
 	{"xmlXPathModValues","",0,LSB_XML},
 	{"xmlXPathMultValues","",0,LSB_XML},
+	{"xmlXPathNAN","",0,LSB_XML},
+	{"xmlXPathNINF","",0,LSB_XML},
 	{"xmlXPathNamespaceURIFunction","",0,LSB_XML},
 	{"xmlXPathNewBoolean","",0,LSB_XML},
 	{"xmlXPathNewCString","",0,LSB_XML},
@@ -61289,6 +61390,7 @@ struct versym DynSyms[] = {
 	{"xmlXPathNumberFunction","",0,LSB_XML},
 	{"xmlXPathObjectCopy","",0,LSB_XML},
 	{"xmlXPathOrderDocElems","",0,LSB_XML},
+	{"xmlXPathPINF","",0,LSB_XML},
 	{"xmlXPathParseNCName","",0,LSB_XML},
 	{"xmlXPathParseName","",0,LSB_XML},
 	{"xmlXPathPopBoolean","",0,LSB_XML},
