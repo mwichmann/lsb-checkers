@@ -26,7 +26,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.30 $";
+    "$Revision: 1.31 $";
 
 void
 usage(char *progname)
@@ -169,11 +169,14 @@ main(int argc, char *argv[])
 	exit(1);
     }
 
-    /* Log version number for lsbapp package */
+    /*
+     * new journal standard requires arch in the
+     * VSX_NAME line in order to fetch waiver files correctly
+     */
     snprintf(tmp_string, TMP_STRING_SIZE,
-	     "VSX_NAME=lsbappchk " LSBAPPCHK_VERSION);
+	     "VSX_NAME=lsbappchk %s (%s)", LSBAPPCHK_VERSION, tetj_arch);
     tetj_add_config(journal, tmp_string);
-    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
+    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s" LSBVERSION);
     tetj_add_config(journal, tmp_string);
     snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
 	     getmodulename(modules));
