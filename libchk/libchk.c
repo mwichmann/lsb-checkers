@@ -6,9 +6,14 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.67 $
+ * This is $Revision: 1.68 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.68  2006/01/31 01:49:05  mats
+ * Changes for bug 986.  The underlying files have changed a bit since
+ * the patches were submitted, hopefully these changes were still
+ * applied correctly.
+ *
  * Revision 1.67  2006/01/13 21:19:02  ferringb
  * Added
  * -T core support for specifying the product.
@@ -248,7 +253,7 @@ static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.67 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.68 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -885,9 +890,14 @@ main(int argc, char *argv[])
   check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.6",
 		  libstdcxx_so_6,libstdcxx_so_6_classinfo,journal);
 #else
-  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsblibchk " LSBLIBCHK_VERSION);
+  /*
+   * new journal standard requires arch in the
+   * VSX_NAME line in order to fetch waiver files correctly
+   */
+  snprintf(tmp_string, TMP_STRING_SIZE,
+	   "VSX_NAME=lsblibchk %s (%s)", LSBLIBCHK_VERSION, tetj_arch);
   tetj_add_config(journal, tmp_string);
-  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
   tetj_add_config(journal, tmp_string);
   snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s", getmodulename(module));
   tetj_add_config(journal, tmp_string);

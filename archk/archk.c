@@ -27,7 +27,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) archk_revision = "$Revision: 1.8 $";
+static const char * __attribute((unused)) archk_revision = "$Revision: 1.9 $";
 
 void
 usage(char *progname)
@@ -134,10 +134,14 @@ main(int argc, char *argv[])
     exit(1);
   }
 
-  /* Log version info in the journal */
-  snprintf(tmp_string, TMP_STRING_SIZE, "VSX_NAME=lsbarchk " LSBARCHK_VERSION);
+  /*
+   * new journal standard requires arch in the
+   * VSX_NAME line in order to fetch waiver files correctly
+   */
+  snprintf(tmp_string, TMP_STRING_SIZE,
+	   "VSX_NAME=lsbarchk %s (%s)", LSBARCHK_VERSION, tetj_arch);
   tetj_add_config(journal, tmp_string);
-  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION= " LSBVERSION);
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
   tetj_add_config(journal, tmp_string);
   snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s", getmodulename(modules));
   tetj_add_config(journal, tmp_string);
