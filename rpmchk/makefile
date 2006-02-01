@@ -1,4 +1,4 @@
-CFLAGS=-g -Wall -DLSBVERSION=\"3.0\"
+CFLAGS=-g -Wall -DLSBVERSION=\"$$LSBVERSION\"
 
 OBJS=archive.o hdr.o idxtag.o lead.o rpmchk.o util.o vals.o fhs.o idxtbl.o \
 	md5c.o check.o dependencies.o
