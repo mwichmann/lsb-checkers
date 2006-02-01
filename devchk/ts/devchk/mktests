@@ -708,7 +708,9 @@ $select.= "ORDER BY Hname ";
 $hth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$hth->numrows) {
 	%entry=$hth->fetchhash;
-	writetest($entry{'Hid'},$entry{'Hname'});
+	if ($entry{'Hid'} <=228 || $entry{'Hid'} > 487) { 
+		writetest($entry{'Hid'},$entry{'Hname'});
+	}
 }
 
 #
@@ -756,6 +758,9 @@ for(1..$tth->numrows) {
 	%tentry=$tth->fetchhash;
 	# Do this before we reset the value, so we can re-use the values
 	# from the last time through the loop if we need them
+	if ($tentry{'Tname'} eq 'bool') {
+		$lastid = 0;
+	}
 	if( $tentry{'Tid'} != $lastid ) {
 		if( $lastid != 0 ) {
 			# We have output at least one type, and now we need to
@@ -766,8 +771,8 @@ for(1..$tth->numrows) {
 			print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
 			print TESTS "#endif\n\n";
 		}
-		print TESTS "#if $tentry{'Asymbol'}\n";
-		$lastid=$tentry{'Tid'};
+		print TESTS "#if $tentry{'Asymbol'}\n" if $tentry{'Tname'} ne 'bool';
+		$lastid=$tentry{'Tid'} if $tentry{'Tname'} ne 'bool';
 	} else {
 		print TESTS "#elif $tentry{'Asymbol'}\n";
 	}
@@ -775,7 +780,7 @@ for(1..$tth->numrows) {
 	$ATsize=$tentry{'ATsize'};
 	$Aid=$tentry{'Aid'};
 	$Tname=$tentry{'Tname'};
-	print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid)\n";
+	print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid)\n" if $tentry{'Tname'} ne 'bool';
 }
 print TESTS "#else\n";
 print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
@@ -805,7 +810,7 @@ open(TESTS,"|c++filt |c++filt >cxx.C") || die "Can't open cxx.c for writing";
 $select = "SELECT DISTINCT * FROM Type ";
 $select.= "LEFT JOIN ArchType ON ATtid=Tid ";
 $select.= "LEFT JOIN Architecture ON Aid=ATaid ";
-$select.= "WHERE Ttype='Class' ";
+$select.= "WHERE Ttype='Class' AND TheaderGroup<669 ";
 $select.= "ORDER BY Tname,ATaid";
 $tth = $Dbh->query($select) || die $Dbh->errmsg();
 if( $tth->numrows == 0 ) {
