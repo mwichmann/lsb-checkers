@@ -26,7 +26,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.31 $";
+    "$Revision: 1.32 $";
 
 void
 usage(char *progname)
@@ -176,7 +176,7 @@ main(int argc, char *argv[])
     snprintf(tmp_string, TMP_STRING_SIZE,
 	     "VSX_NAME=lsbappchk %s (%s)", LSBAPPCHK_VERSION, tetj_arch);
     tetj_add_config(journal, tmp_string);
-    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s" LSBVERSION);
+    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
     tetj_add_config(journal, tmp_string);
     snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
 	     getmodulename(modules));
