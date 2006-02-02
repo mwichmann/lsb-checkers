@@ -7,7 +7,7 @@ GENSRCS=dynsyms.c dtneeded.c sectinfo.c secttype.c dyntags.c dynsyms.c.chk modul
 LIBS= ../tetj/libtetj.a
 LIB=libelfchk.a
 
-all: $(LIB) test
+all: modules.c $(LIB) test
 
 install:
 
