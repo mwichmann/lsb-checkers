@@ -1,5 +1,3 @@
-struct FT_FaceRec_ { };
-struct FT_Bitmap_ { };
 struct _PangoFT2FontMap { };
 struct _PangoFcFont { };
 struct _PangoFontMap { };
