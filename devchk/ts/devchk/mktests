@@ -202,21 +202,21 @@ sub writetest($$)
 	print "Writing tests for $Hname to $filename\n";
 
 	#Get Constants
-	$select = "SELECT DISTINCT * FROM Constant,HeaderGroup ";
+	$select = "SELECT DISTINCT * FROM Constant ";
+	$select.= "INNER JOIN HeaderGroup on CHeadgroup=HGid ";
 	$select.= "LEFT JOIN ArchConst ON ACcid=Cid ";
 	$select.= "LEFT JOIN Architecture ON Aid=ACaid ";
 	$select.= "WHERE HGheader=$Hid ";
 	$select.= "AND Cstd='Yes' ";
-	$select.= "AND Cheadgroup=HGid ";
 	$select.= "ORDER BY Cheadgroup,Cname,ACvalue ";
 	$cth = $Dbh->query($select) || die $Dbh->errmsg();
 
 	#Get Types
-	$select = "SELECT DISTINCT * FROM Type,HeaderGroup ";
+	$select = "SELECT DISTINCT * FROM Type ";
+	$select.= "INNER JOIN HeaderGroup ON Theadergroup=HGid ";
 	$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
 	$select.= "LEFT JOIN Architecture ON Aid=ATaid ";
 	$select.= "WHERE HGheader=$Hid ";
-	$select.= "AND Theadergroup=HGid ";
 	#$select.= "AND Tid IN ($typelist) ";
 	$select.= "AND (Tstatus = 'Referenced' OR Tstatus = 'Indirect' OR Tstatus='Conly')";
 	$select.= "ORDER BY Theadergroup,Tid ";
