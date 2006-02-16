@@ -1,3 +1,112 @@
+2006-02-14	Nick Stoughton <nick_at_usenix.org>
+	* devchk/ts/devchk/mktests
+	   tidied up sql to work around MySQL 5.x bug with joins
+
+2006-02-13	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/png_h.inc
+	   removing the file as not needed anymore
+
+2006-02-11	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/pango_1_0_pango_pangoxft_h.inc
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.inc
+	  devchk/ts/devchk/glib_2_0_glib_h.inc
+	  devchk/ts/devchk/glib_2_0_glib_object_h.inc
+	  devchk/ts/devchk/glib_2_0_gmodule_h.inc
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.inc
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.inc
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.inc
+	   making sure all depricated symbols are hidden from devchk;
+	   removed some depricated symbols from DB
+
+2006-02-09	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/pango_1_0_pango_pangoxft_h.inc
+	  devchk/ts/devchk/fontconfig_fcfreetype_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.inc
+	   not necessary to have empty decl as these are not really an
+	   opaque types
+
+2006-02-02	Nilesh Jain <nilesh.jain_at_intel.com>
+	* elfchk/makefile
+	   edit the rule, because in case of fresh build it will spin for
+	   dump_module file
+
+2006-02-01	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* pkgchk/pkgchk.c
+	   Bug 1189: typo
+
+2006-01-31	Marvin Heffler <heffler_at_us.ibm.com>
+	* rpmchk/makefile
+	   change to avoid hard coding lsb version; have it get LSBVERSION
+	   like the other checkers
+
+2006-01-31	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* pkgchk/pkgchk.c
+	  appchk/appchk.c
+	  archk/archk.c
+	  cmdchk/cmdchk.c
+	  libchk/libchk.c
+	   fix missing comma
+
+2006-01-31	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/mktests
+	   disable test generation for all Qt symbols and types
+
+2006-01-28	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* elfchk/dynsyms.c
+	  elfchk/dtneeded.c
+	   updates after latest Qt and XML changes
+
+2006-01-26	Harald Fernengel <harald_at_trolltech.com>
+	* libchk/mkfunclist
+	  libchk/classchk.c
+	   disabled 1.4.1 and 1.4.3, please read bugreport 1173 for details
+
+2006-01-26	Nilesh Jain <nilesh.jain_at_intel.com>
+	* libchk/makefile
+	  libchk/dummy_link.c
+	  libchk/libQtCore_so_4.c
+	  libchk/libQtGui_so_4.c
+	  libchk/libQtNetwork_so_4.c
+	  libchk/libQtOpenGL_so_4.c
+	  libchk/libQtSql_so_4.c
+	  libchk/libQtSvg_so_4.c
+	  libchk/libQtXml_so_4.c
+	  libchk/libatk_1_0_so_0.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libfontconfig_so_1.c
+	  libchk/libgdk_pixbuf_2_0_so_0.c
+	  libchk/libgdk_pixbuf_xlib_2_0_so.c
+	  libchk/libgdk_x11_2_0_so_0.c
+	  libchk/libglib_2_0_so_0.c
+	  libchk/libgmodule_2_0_so_0.c
+	  libchk/libgobject_2_0_so_0.c
+	  libchk/libgthread_2_0_so_0.c
+	  libchk/libgtk_x11_2_0_so_0.c
+	  libchk/libjpeg_so_62.c
+	  libchk/libpango_1_0_so_0.c
+	  libchk/libpangoft2_1_0_so_0.c
+	  libchk/libpangoxft_1_0_so_0.c
+	  libchk/libpng12_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	  libchk/libstdcxx_so_6.c
+	  libchk/libxml2_so_2.c
+	   Modified lsbchk for LSB desktop releaes 3.1
+
+2006-01-24	Marvin Heffler <heffler_at_us.ibm.com>
+	* elfchk/modules.h
+	  elfchk/dtneeded.c
+	  elfchk/dump_modules
+	  elfchk/dynsyms.c
+	  elfchk/modules.c
+	   sync with latest DB changes
+
 2006-01-19	Shrikant Gangoda <shrikant.gangoda_at_codito.com>
 	* cmdchk/mkcmdlist
 	   Updating the mysql query for generating struct desktop_cmdlist
@@ -151,6 +260,9 @@
 	  cmdchk/cmdchk.py
 	  pkgchk/pkgchk.c
 	   cleanup '30' lines and drop $Log: ChangeLog,v $
+	   cleanup '30' lines and drop Revision 1.7  2006/02/16 00:18:42  mats
+	   cleanup '30' lines and drop resync
+	   cleanup '30' lines and drop
 	   cleanup '30' lines and drop Revision 1.6  2006/01/23 21:54:28  mats
 	   cleanup '30' lines and drop sync latest changes
 	   cleanup '30' lines and drop
@@ -34423,4 +34535,4 @@
 	  makefile
 	   branches:  1.1.1; Initial revision
 
-1138052747
+1140048223
