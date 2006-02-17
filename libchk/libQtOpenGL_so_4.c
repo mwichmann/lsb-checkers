@@ -545,7 +545,7 @@ struct classtypeinfo _14QGLPixelBuffer_typeinfo = {
 const char *_14QGLPixelBuffer_vtable_name_0 [] = {
 	"_ZN14QGLPixelBufferD1Ev",
 	"_ZN14QGLPixelBufferD0Ev",
-	"_ZNK14QGLPixelBuffer7devTypeEv",
+	"__cxa_pure_virtual",
 	"_ZNK14QGLPixelBuffer11paintEngineEv",
 	"_ZNK14QGLPixelBuffer6metricEN12QPaintDevice17PaintDeviceMetricE",
 	};

@@ -6432,6 +6432,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI23QWindowStateChangeEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI24QAbstractItemViewPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI24QAbstractPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI25QAbstractItemModelPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI27QAbstractTextDocumentLayout","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI27QAccessibleFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI27QIconEngineFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
@@ -6636,6 +6637,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV23QWindowStateChangeEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QAbstractItemViewPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QAbstractPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV25QAbstractItemModelPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV27QAbstractTextDocumentLayout","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV27QAccessibleFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV27QIconEngineFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
@@ -11844,34 +11846,8 @@ struct classvtable _10QDropEvent_vtable [2] = {
 	_10QDropEvent_vtable_name_0,
 	},
 	{
-#if __i386__
 	0,
 	-12,
-#endif
-#if __ia64__
-	0,
-	-24,
-#endif
-#if __powerpc__ && !__powerpc64__
-	0,
-	-12,
-#endif
-#if __powerpc64__
-	0,
-	-24,
-#endif
-#if __s390__ && !__s390x__
-	0,
-	-12,
-#endif
-#if __x86_64__
-	0,
-	-24,
-#endif
-#if __s390x__
-	0,
-	-24,
-#endif
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QDropEvent",
@@ -11881,27 +11857,7 @@ struct classvtable _10QDropEvent_vtable [2] = {
 
 struct base_type_info _10QDropEvent_baseinfo[] = {
 	{"_ZTI6QEvent",	2U},
-#if __i386__
 	{"_ZTI11QMimeSource",	3074U},
-#endif
-#if __ia64__
-	{"_ZTI11QMimeSource",	6146U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI11QMimeSource",	3074U},
-#endif
-#if __powerpc64__
-	{"_ZTI11QMimeSource",	6146U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI11QMimeSource",	3074U},
-#endif
-#if __x86_64__
-	{"_ZTI11QMimeSource",	6146U},
-#endif
-#if __s390x__
-	{"_ZTI11QMimeSource",	6146U},
-#endif
 	};
 
 struct classinfo _Z10QDropEvent_classinfo = {
@@ -13077,7 +13033,7 @@ struct classtypeinfo _12QPaintDevice_typeinfo = {
 const char *_12QPaintDevice_vtable_name_0 [] = {
 	"_ZN12QPaintDeviceD1Ev",
 	"_ZN12QPaintDeviceD0Ev",
-	"_ZNK12QPaintDevice7devTypeEv",
+	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE",
 	};
@@ -13333,27 +13289,7 @@ struct classvtable _7QWidget_vtable [2] = {
 
 struct base_type_info _7QWidget_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI12QPaintDevice",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI12QPaintDevice",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI12QPaintDevice",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI12QPaintDevice",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI12QPaintDevice",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI12QPaintDevice",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI12QPaintDevice",	4098U},
-#endif
 	};
 
 struct classinfo _Z7QWidget_classinfo = {
@@ -17080,27 +17016,7 @@ struct classvtable _14QImageIOPlugin_vtable [2] = {
 
 struct base_type_info _14QImageIOPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI31QImageIOHandlerFactoryInterface",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI31QImageIOHandlerFactoryInterface",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI31QImageIOHandlerFactoryInterface",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI31QImageIOHandlerFactoryInterface",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI31QImageIOHandlerFactoryInterface",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI31QImageIOHandlerFactoryInterface",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI31QImageIOHandlerFactoryInterface",	4098U},
-#endif
 	};
 
 struct classinfo _Z14QImageIOPlugin_classinfo = {
@@ -17390,27 +17306,7 @@ struct classvtable _17QIconEnginePlugin_vtable [2] = {
 
 struct base_type_info _17QIconEnginePlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI27QIconEngineFactoryInterface",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI27QIconEngineFactoryInterface",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI27QIconEngineFactoryInterface",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI27QIconEngineFactoryInterface",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI27QIconEngineFactoryInterface",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI27QIconEngineFactoryInterface",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI27QIconEngineFactoryInterface",	4098U},
-#endif
 	};
 
 struct classinfo _Z17QIconEnginePlugin_classinfo = {
@@ -17739,27 +17635,7 @@ struct classvtable _20QPictureFormatPlugin_vtable [2] = {
 
 struct base_type_info _20QPictureFormatPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI23QPictureFormatInterface",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI23QPictureFormatInterface",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI23QPictureFormatInterface",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI23QPictureFormatInterface",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI23QPictureFormatInterface",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI23QPictureFormatInterface",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI23QPictureFormatInterface",	4098U},
-#endif
 	};
 
 struct classinfo _Z20QPictureFormatPlugin_classinfo = {
@@ -20709,7 +20585,7 @@ const char *_15QListWidgetItem_vtable_name_0 [] = {
 	"_ZN15QListWidgetItemD1Ev",
 	"_ZN15QListWidgetItemD0Ev",
 	"_ZNK15QListWidgetItem5cloneEv",
-	"_ZN15QListWidgetItem18setBackgroundColorERK6QColor",
+	"__cxa_pure_virtual",
 	"_ZNK15QListWidgetItem4dataEi",
 	"_ZN15QListWidgetItem7setDataEiRK8QVariant",
 	"_ZNK15QListWidgetItemltERKS_",
@@ -23294,27 +23170,7 @@ struct classvtable _23QAccessibleBridgePlugin_vtable [2] = {
 
 struct base_type_info _23QAccessibleBridgePlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI33QAccessibleBridgeFactoryInterface",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI33QAccessibleBridgeFactoryInterface",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI33QAccessibleBridgeFactoryInterface",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI33QAccessibleBridgeFactoryInterface",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI33QAccessibleBridgeFactoryInterface",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI33QAccessibleBridgeFactoryInterface",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI33QAccessibleBridgeFactoryInterface",	4098U},
-#endif
 	};
 
 struct classinfo _Z23QAccessibleBridgePlugin_classinfo = {
@@ -23741,27 +23597,7 @@ struct classvtable _17QAccessiblePlugin_vtable [2] = {
 
 struct base_type_info _17QAccessiblePlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI27QAccessibleFactoryInterface",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI27QAccessibleFactoryInterface",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI27QAccessibleFactoryInterface",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI27QAccessibleFactoryInterface",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI27QAccessibleFactoryInterface",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI27QAccessibleFactoryInterface",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI27QAccessibleFactoryInterface",	4098U},
-#endif
 	};
 
 struct classinfo _Z17QAccessiblePlugin_classinfo = {
@@ -24533,27 +24369,7 @@ struct classvtable _7QLayout_vtable [2] = {
 
 struct base_type_info _7QLayout_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI11QLayoutItem",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI11QLayoutItem",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI11QLayoutItem",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI11QLayoutItem",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI11QLayoutItem",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI11QLayoutItem",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI11QLayoutItem",	4098U},
-#endif
 	};
 
 struct classinfo _Z7QLayout_classinfo = {
@@ -27189,27 +27005,7 @@ struct classvtable _12QStylePlugin_vtable [2] = {
 
 struct base_type_info _12QStylePlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI22QStyleFactoryInterface",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI22QStyleFactoryInterface",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI22QStyleFactoryInterface",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI22QStyleFactoryInterface",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI22QStyleFactoryInterface",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI22QStyleFactoryInterface",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI22QStyleFactoryInterface",	4098U},
-#endif
 	};
 
 struct classinfo _Z12QStylePlugin_classinfo = {
@@ -27632,27 +27428,7 @@ struct classvtable _19QInputContextPlugin_vtable [2] = {
 
 struct base_type_info _19QInputContextPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
 	{"_ZTI29QInputContextFactoryInterface",	2050U},
-#endif
-#if __ia64__
-	{"_ZTI29QInputContextFactoryInterface",	4098U},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZTI29QInputContextFactoryInterface",	2050U},
-#endif
-#if __powerpc64__
-	{"_ZTI29QInputContextFactoryInterface",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI29QInputContextFactoryInterface",	2050U},
-#endif
-#if __x86_64__
-	{"_ZTI29QInputContextFactoryInterface",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI29QInputContextFactoryInterface",	4098U},
-#endif
 	};
 
 struct classinfo _Z19QInputContextPlugin_classinfo = {
