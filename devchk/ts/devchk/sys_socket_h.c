@@ -5,6 +5,7 @@
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
 #include <sys/ioctl.h>
+#include <netdb.h>
 #include "sys/socket.h"
 
 
@@ -19,11 +20,12 @@ int sys_socket_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/socket.h\n");
 #endif
 
+printf("Checking data structures in sys/socket.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SHUT_RD
 	CompareConstant(SHUT_RD,0,2466,architecture)
@@ -717,6 +719,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFCONF
+	CompareConstant(SIOCGIFCONF,0x8912,3382,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFCONF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SIOCGIFFLAGS
 	CompareConstant(SIOCGIFFLAGS,0x8913,3383,architecture)
 #else
@@ -1122,6 +1134,44 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6908,0);
 Msg("Find size of msghdr (6908)\n");
 #endif
 
+extern int bind_db(int, const struct sockaddr *, socklen_t);
+CheckInterfacedef(bind,bind_db);
+extern int getnameinfo_db(const struct sockaddr *, socklen_t, char *, socklen_t, char *, socklen_t, unsigned int);
+CheckInterfacedef(getnameinfo,getnameinfo_db);
+extern int getsockname_db(int, struct sockaddr *, socklen_t *);
+CheckInterfacedef(getsockname,getsockname_db);
+extern int listen_db(int, int);
+CheckInterfacedef(listen,listen_db);
+extern int setsockopt_db(int, int, int, const void *, socklen_t);
+CheckInterfacedef(setsockopt,setsockopt_db);
+extern int accept_db(int, struct sockaddr *, socklen_t *);
+CheckInterfacedef(accept,accept_db);
+extern int connect_db(int, const struct sockaddr *, socklen_t);
+CheckInterfacedef(connect,connect_db);
+extern ssize_t recv_db(int, void *, size_t, int);
+CheckInterfacedef(recv,recv_db);
+extern ssize_t recvfrom_db(int, void *, size_t, int, struct sockaddr *, socklen_t *);
+CheckInterfacedef(recvfrom,recvfrom_db);
+extern ssize_t recvmsg_db(int, struct msghdr *, int);
+CheckInterfacedef(recvmsg,recvmsg_db);
+extern ssize_t send_db(int, const void *, size_t, int);
+CheckInterfacedef(send,send_db);
+extern ssize_t sendmsg_db(int, const struct msghdr *, int);
+CheckInterfacedef(sendmsg,sendmsg_db);
+extern ssize_t sendto_db(int, const void *, size_t, int, const struct sockaddr *, socklen_t);
+CheckInterfacedef(sendto,sendto_db);
+extern int getpeername_db(int, struct sockaddr *, socklen_t *);
+CheckInterfacedef(getpeername,getpeername_db);
+extern int getsockopt_db(int, int, int, void *, socklen_t *);
+CheckInterfacedef(getsockopt,getsockopt_db);
+extern int shutdown_db(int, int);
+CheckInterfacedef(shutdown,shutdown_db);
+extern int socket_db(int, int, int);
+CheckInterfacedef(socket,socket_db);
+extern int socketpair_db(int, int, int, int[2]);
+CheckInterfacedef(socketpair,socketpair_db);
+extern int sockatmark_db(int);
+CheckInterfacedef(sockatmark,sockatmark_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -1129,7 +1179,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/socket.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/socket.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

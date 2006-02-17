@@ -18,11 +18,12 @@ int getopt_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in getopt.h\n");
 #endif
 
+printf("Checking data structures in getopt.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef no_argument
 	CompareConstant(no_argument,0,4378,architecture)
@@ -116,6 +117,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);
 Msg("Find size of option (10000)\n");
 #endif
 
+extern int getopt_long_db(int, char *const [], const char *, const struct option *, int *);
+CheckInterfacedef(getopt_long,getopt_long_db);
+extern int getopt_long_only_db(int, char *const [], const char *, const struct option *, int *);
+CheckInterfacedef(getopt_long_only,getopt_long_only_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -123,7 +128,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in getopt.h\n",cnt);
+printf("%d tests passed out of %d tests in getopt.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

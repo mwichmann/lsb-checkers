@@ -31,6 +31,8 @@ printf("Checking data structures in libxml2/libxml/xmlreader.h\n");
 CheckTypeSize(xmlTextReader,0, 15059, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextReader,0, 15059, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextReader,0, 15059, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15059,0);
 Msg("Find size of xmlTextReader (15059)\n");
@@ -40,6 +42,8 @@ Msg("Find size of xmlTextReader (15059)\n");
 CheckTypeSize(xmlTextReader *,4, 15060, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextReader *,8, 15060, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextReader *,8, 15060, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15060,0);
 Msg("Find size of xmlTextReader * (15060)\n");
@@ -49,6 +53,8 @@ Msg("Find size of xmlTextReader * (15060)\n");
 CheckTypeSize(xmlTextReaderPtr,4, 15061, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextReaderPtr,8, 15061, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextReaderPtr,8, 15061, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15061,0);
 Msg("Find size of xmlTextReaderPtr (15061)\n");
@@ -64,6 +70,11 @@ CheckEnum("XML_PARSER_SEVERITY_VALIDITY_WARNING",XML_PARSER_SEVERITY_VALIDITY_WA
 CheckEnum("XML_PARSER_SEVERITY_VALIDITY_ERROR",XML_PARSER_SEVERITY_VALIDITY_ERROR,2);
 CheckEnum("XML_PARSER_SEVERITY_WARNING",XML_PARSER_SEVERITY_WARNING,3);
 CheckEnum("XML_PARSER_SEVERITY_ERROR",XML_PARSER_SEVERITY_ERROR,4);
+#elif __ia64__
+CheckEnum("XML_PARSER_SEVERITY_VALIDITY_WARNING",XML_PARSER_SEVERITY_VALIDITY_WARNING,1);
+CheckEnum("XML_PARSER_SEVERITY_VALIDITY_ERROR",XML_PARSER_SEVERITY_VALIDITY_ERROR,2);
+CheckEnum("XML_PARSER_SEVERITY_WARNING",XML_PARSER_SEVERITY_WARNING,3);
+CheckEnum("XML_PARSER_SEVERITY_ERROR",XML_PARSER_SEVERITY_ERROR,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15062,0);
 Msg("Find size of anon-libxml2/libxml/xmlreader.h-238 (15062)\n");
@@ -73,6 +84,8 @@ Msg("Find size of anon-libxml2/libxml/xmlreader.h-238 (15062)\n");
 CheckTypeSize(xmlParserSeverities,4, 15063, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserSeverities,4, 15063, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserSeverities,4, 15063, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15063,0);
 Msg("Find size of xmlParserSeverities (15063)\n");
@@ -82,6 +95,8 @@ Msg("Find size of xmlParserSeverities (15063)\n");
 CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15064,0);
 Msg("Find size of xmlTextReaderLocatorPtr (15064)\n");
@@ -89,6 +104,7 @@ Msg("Find size of xmlTextReaderLocatorPtr (15064)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15065,0);
 Msg("Find size of fptr_xmlreader_140 (15065)\n");
@@ -98,6 +114,8 @@ Msg("Find size of fptr_xmlreader_140 (15065)\n");
 CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15066,0);
 Msg("Find size of xmlTextReaderErrorFunc (15066)\n");
@@ -107,6 +125,8 @@ Msg("Find size of xmlTextReaderErrorFunc (15066)\n");
 CheckTypeSize(xmlTextReaderErrorFunc *,4, 15067, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15067,0);
 Msg("Find size of xmlTextReaderErrorFunc * (15067)\n");
@@ -122,6 +142,11 @@ CheckEnum("XML_PARSER_LOADDTD",XML_PARSER_LOADDTD,1);
 CheckEnum("XML_PARSER_DEFAULTATTRS",XML_PARSER_DEFAULTATTRS,2);
 CheckEnum("XML_PARSER_VALIDATE",XML_PARSER_VALIDATE,3);
 CheckEnum("XML_PARSER_SUBST_ENTITIES",XML_PARSER_SUBST_ENTITIES,4);
+#elif __ia64__
+CheckEnum("XML_PARSER_LOADDTD",XML_PARSER_LOADDTD,1);
+CheckEnum("XML_PARSER_DEFAULTATTRS",XML_PARSER_DEFAULTATTRS,2);
+CheckEnum("XML_PARSER_VALIDATE",XML_PARSER_VALIDATE,3);
+CheckEnum("XML_PARSER_SUBST_ENTITIES",XML_PARSER_SUBST_ENTITIES,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15119,0);
 Msg("Find size of anonymous-xmlreader.h.types-0 (15119)\n");
@@ -131,6 +156,8 @@ Msg("Find size of anonymous-xmlreader.h.types-0 (15119)\n");
 CheckTypeSize(xmlParserProperties,4, 15120, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserProperties,4, 15120, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserProperties,4, 15120, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15120,0);
 Msg("Find size of xmlParserProperties (15120)\n");
@@ -174,6 +201,25 @@ CheckEnum("XML_READER_TYPE_SIGNIFICANT_WHITESPACE",XML_READER_TYPE_SIGNIFICANT_W
 CheckEnum("XML_READER_TYPE_END_ELEMENT",XML_READER_TYPE_END_ELEMENT,15);
 CheckEnum("XML_READER_TYPE_END_ENTITY",XML_READER_TYPE_END_ENTITY,16);
 CheckEnum("XML_READER_TYPE_XML_DECLARATION",XML_READER_TYPE_XML_DECLARATION,17);
+#elif __ia64__
+CheckEnum("XML_READER_TYPE_NONE",XML_READER_TYPE_NONE,0);
+CheckEnum("XML_READER_TYPE_ELEMENT",XML_READER_TYPE_ELEMENT,1);
+CheckEnum("XML_READER_TYPE_ATTRIBUTE",XML_READER_TYPE_ATTRIBUTE,2);
+CheckEnum("XML_READER_TYPE_TEXT",XML_READER_TYPE_TEXT,3);
+CheckEnum("XML_READER_TYPE_CDATA",XML_READER_TYPE_CDATA,4);
+CheckEnum("XML_READER_TYPE_ENTITY_REFERENCE",XML_READER_TYPE_ENTITY_REFERENCE,5);
+CheckEnum("XML_READER_TYPE_ENTITY",XML_READER_TYPE_ENTITY,6);
+CheckEnum("XML_READER_TYPE_PROCESSING_INSTRUCTION",XML_READER_TYPE_PROCESSING_INSTRUCTION,7);
+CheckEnum("XML_READER_TYPE_COMMENT",XML_READER_TYPE_COMMENT,8);
+CheckEnum("XML_READER_TYPE_DOCUMENT",XML_READER_TYPE_DOCUMENT,9);
+CheckEnum("XML_READER_TYPE_DOCUMENT_TYPE",XML_READER_TYPE_DOCUMENT_TYPE,10);
+CheckEnum("XML_READER_TYPE_DOCUMENT_FRAGMENT",XML_READER_TYPE_DOCUMENT_FRAGMENT,11);
+CheckEnum("XML_READER_TYPE_NOTATION",XML_READER_TYPE_NOTATION,12);
+CheckEnum("XML_READER_TYPE_WHITESPACE",XML_READER_TYPE_WHITESPACE,13);
+CheckEnum("XML_READER_TYPE_SIGNIFICANT_WHITESPACE",XML_READER_TYPE_SIGNIFICANT_WHITESPACE,14);
+CheckEnum("XML_READER_TYPE_END_ELEMENT",XML_READER_TYPE_END_ELEMENT,15);
+CheckEnum("XML_READER_TYPE_END_ENTITY",XML_READER_TYPE_END_ENTITY,16);
+CheckEnum("XML_READER_TYPE_XML_DECLARATION",XML_READER_TYPE_XML_DECLARATION,17);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15121,0);
 Msg("Find size of anonymous-xmlreader.h.types-2 (15121)\n");
@@ -183,6 +229,8 @@ Msg("Find size of anonymous-xmlreader.h.types-2 (15121)\n");
 CheckTypeSize(xmlReaderTypes,4, 15122, 2)
 #elif __x86_64__
 CheckTypeSize(xmlReaderTypes,4, 15122, 11)
+#elif __ia64__
+CheckTypeSize(xmlReaderTypes,4, 15122, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15122,0);
 Msg("Find size of xmlReaderTypes (15122)\n");
@@ -202,6 +250,13 @@ CheckEnum("XML_TEXTREADER_MODE_ERROR",XML_TEXTREADER_MODE_ERROR,2);
 CheckEnum("XML_TEXTREADER_MODE_EOF",XML_TEXTREADER_MODE_EOF,3);
 CheckEnum("XML_TEXTREADER_MODE_CLOSED",XML_TEXTREADER_MODE_CLOSED,4);
 CheckEnum("XML_TEXTREADER_MODE_READING",XML_TEXTREADER_MODE_READING,5);
+#elif __ia64__
+CheckEnum("XML_TEXTREADER_MODE_INITIAL",XML_TEXTREADER_MODE_INITIAL,0);
+CheckEnum("XML_TEXTREADER_MODE_INTERACTIVE",XML_TEXTREADER_MODE_INTERACTIVE,1);
+CheckEnum("XML_TEXTREADER_MODE_ERROR",XML_TEXTREADER_MODE_ERROR,2);
+CheckEnum("XML_TEXTREADER_MODE_EOF",XML_TEXTREADER_MODE_EOF,3);
+CheckEnum("XML_TEXTREADER_MODE_CLOSED",XML_TEXTREADER_MODE_CLOSED,4);
+CheckEnum("XML_TEXTREADER_MODE_READING",XML_TEXTREADER_MODE_READING,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15123,0);
 Msg("Find size of anonymous-xmlreader.h.types-4 (15123)\n");
@@ -211,6 +266,8 @@ Msg("Find size of anonymous-xmlreader.h.types-4 (15123)\n");
 CheckTypeSize(xmlTextReaderMode,4, 15124, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextReaderMode,4, 15124, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextReaderMode,4, 15124, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15124,0);
 Msg("Find size of xmlTextReaderMode (15124)\n");

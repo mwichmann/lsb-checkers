@@ -82,6 +82,14 @@ CheckMemberSize(struct _xmlBuffer,size,4,11,47757)
 CheckOffset(struct _xmlBuffer,size,12,11,47757)
 CheckMemberSize(struct _xmlBuffer,alloc,4,11,47761)
 CheckOffset(struct _xmlBuffer,alloc,16,11,47761)
+#elif __ia64__
+CheckTypeSize(struct _xmlBuffer,24, 14581, 3)
+CheckMemberSize(struct _xmlBuffer,use,4,3,47756)
+CheckOffset(struct _xmlBuffer,use,8,3,47756)
+CheckMemberSize(struct _xmlBuffer,size,4,3,47757)
+CheckOffset(struct _xmlBuffer,size,12,3,47757)
+CheckMemberSize(struct _xmlBuffer,alloc,4,3,47761)
+CheckOffset(struct _xmlBuffer,alloc,16,3,47761)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14581,0);
 Msg("Find size of _xmlBuffer (14581)\n");
@@ -95,6 +103,10 @@ CheckEnum("XML_BUFFER_ALLOC_IMMUTABLE",XML_BUFFER_ALLOC_IMMUTABLE,2);
 CheckEnum("XML_BUFFER_ALLOC_DOUBLEIT",XML_BUFFER_ALLOC_DOUBLEIT,0);
 CheckEnum("XML_BUFFER_ALLOC_EXACT",XML_BUFFER_ALLOC_EXACT,1);
 CheckEnum("XML_BUFFER_ALLOC_IMMUTABLE",XML_BUFFER_ALLOC_IMMUTABLE,2);
+#elif __ia64__
+CheckEnum("XML_BUFFER_ALLOC_DOUBLEIT",XML_BUFFER_ALLOC_DOUBLEIT,0);
+CheckEnum("XML_BUFFER_ALLOC_EXACT",XML_BUFFER_ALLOC_EXACT,1);
+CheckEnum("XML_BUFFER_ALLOC_IMMUTABLE",XML_BUFFER_ALLOC_IMMUTABLE,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14582,0);
 Msg("Find size of anon-libxml2/libxml/tree.h-55 (14582)\n");
@@ -104,6 +116,8 @@ Msg("Find size of anon-libxml2/libxml/tree.h-55 (14582)\n");
 CheckTypeSize(xmlBufferAllocationScheme,4, 14583, 2)
 #elif __x86_64__
 CheckTypeSize(xmlBufferAllocationScheme,4, 14583, 11)
+#elif __ia64__
+CheckTypeSize(xmlBufferAllocationScheme,4, 14583, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14583,0);
 Msg("Find size of xmlBufferAllocationScheme (14583)\n");
@@ -113,6 +127,8 @@ Msg("Find size of xmlBufferAllocationScheme (14583)\n");
 CheckTypeSize(xmlBuffer,16, 14584, 2)
 #elif __x86_64__
 CheckTypeSize(xmlBuffer,24, 14584, 11)
+#elif __ia64__
+CheckTypeSize(xmlBuffer,24, 14584, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14584,0);
 Msg("Find size of xmlBuffer (14584)\n");
@@ -122,6 +138,8 @@ Msg("Find size of xmlBuffer (14584)\n");
 CheckTypeSize(xmlBuffer *,4, 14585, 2)
 #elif __x86_64__
 CheckTypeSize(xmlBuffer *,8, 14585, 11)
+#elif __ia64__
+CheckTypeSize(xmlBuffer *,8, 14585, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14585,0);
 Msg("Find size of xmlBuffer * (14585)\n");
@@ -131,6 +149,8 @@ Msg("Find size of xmlBuffer * (14585)\n");
 CheckTypeSize(xmlBufferPtr,4, 14586, 2)
 #elif __x86_64__
 CheckTypeSize(xmlBufferPtr,8, 14586, 11)
+#elif __ia64__
+CheckTypeSize(xmlBufferPtr,8, 14586, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14586,0);
 Msg("Find size of xmlBufferPtr (14586)\n");
@@ -140,6 +160,8 @@ Msg("Find size of xmlBufferPtr (14586)\n");
 CheckTypeSize(const xmlBufferPtr,4, 14587, 2)
 #elif __x86_64__
 CheckTypeSize(const xmlBufferPtr,8, 14587, 11)
+#elif __ia64__
+CheckTypeSize(const xmlBufferPtr,8, 14587, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14587,0);
 Msg("Find size of const xmlBufferPtr (14587)\n");
@@ -209,6 +231,38 @@ CheckMemberSize(struct _xmlNode,line,2,11,47862)
 CheckOffset(struct _xmlNode,line,112,11,47862)
 CheckMemberSize(struct _xmlNode,extra,2,11,47863)
 CheckOffset(struct _xmlNode,extra,114,11,47863)
+#elif __ia64__
+CheckTypeSize(struct _xmlNode,120, 14588, 3)
+CheckMemberSize(struct _xmlNode,type,4,3,47784)
+CheckOffset(struct _xmlNode,type,8,3,47784)
+CheckMemberSize(struct _xmlNode,name,8,3,47785)
+CheckOffset(struct _xmlNode,name,16,3,47785)
+CheckMemberSize(struct _xmlNode,children,8,3,47786)
+CheckOffset(struct _xmlNode,children,24,3,47786)
+CheckMemberSize(struct _xmlNode,last,8,3,47787)
+CheckOffset(struct _xmlNode,last,32,3,47787)
+CheckMemberSize(struct _xmlNode,parent,8,3,47788)
+CheckOffset(struct _xmlNode,parent,40,3,47788)
+CheckMemberSize(struct _xmlNode,next,8,3,47789)
+CheckOffset(struct _xmlNode,next,48,3,47789)
+CheckMemberSize(struct _xmlNode,prev,8,3,47790)
+CheckOffset(struct _xmlNode,prev,56,3,47790)
+CheckMemberSize(struct _xmlNode,doc,8,3,47834)
+CheckOffset(struct _xmlNode,doc,64,3,47834)
+CheckMemberSize(struct _xmlNode,ns,8,3,47835)
+CheckOffset(struct _xmlNode,ns,72,3,47835)
+CheckMemberSize(struct _xmlNode,content,8,3,47836)
+CheckOffset(struct _xmlNode,content,80,3,47836)
+CheckMemberSize(struct _xmlNode,properties,8,3,47859)
+CheckOffset(struct _xmlNode,properties,88,3,47859)
+CheckMemberSize(struct _xmlNode,nsDef,8,3,47860)
+CheckOffset(struct _xmlNode,nsDef,96,3,47860)
+CheckMemberSize(struct _xmlNode,psvi,8,3,47861)
+CheckOffset(struct _xmlNode,psvi,104,3,47861)
+CheckMemberSize(struct _xmlNode,line,2,3,47862)
+CheckOffset(struct _xmlNode,line,112,3,47862)
+CheckMemberSize(struct _xmlNode,extra,2,3,47863)
+CheckOffset(struct _xmlNode,extra,114,3,47863)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14588,0);
 Msg("Find size of _xmlNode (14588)\n");
@@ -258,6 +312,28 @@ CheckEnum("XML_NAMESPACE_DECL",XML_NAMESPACE_DECL,18);
 CheckEnum("XML_XINCLUDE_START",XML_XINCLUDE_START,19);
 CheckEnum("XML_XINCLUDE_END",XML_XINCLUDE_END,20);
 CheckEnum("XML_DOCB_DOCUMENT_NODE",XML_DOCB_DOCUMENT_NODE,21);
+#elif __ia64__
+CheckEnum("XML_ELEMENT_NODE",XML_ELEMENT_NODE,1);
+CheckEnum("XML_ATTRIBUTE_NODE",XML_ATTRIBUTE_NODE,2);
+CheckEnum("XML_TEXT_NODE",XML_TEXT_NODE,3);
+CheckEnum("XML_CDATA_SECTION_NODE",XML_CDATA_SECTION_NODE,4);
+CheckEnum("XML_ENTITY_REF_NODE",XML_ENTITY_REF_NODE,5);
+CheckEnum("XML_ENTITY_NODE",XML_ENTITY_NODE,6);
+CheckEnum("XML_PI_NODE",XML_PI_NODE,7);
+CheckEnum("XML_COMMENT_NODE",XML_COMMENT_NODE,8);
+CheckEnum("XML_DOCUMENT_NODE",XML_DOCUMENT_NODE,9);
+CheckEnum("XML_DOCUMENT_TYPE_NODE",XML_DOCUMENT_TYPE_NODE,10);
+CheckEnum("XML_DOCUMENT_FRAG_NODE",XML_DOCUMENT_FRAG_NODE,11);
+CheckEnum("XML_NOTATION_NODE",XML_NOTATION_NODE,12);
+CheckEnum("XML_HTML_DOCUMENT_NODE",XML_HTML_DOCUMENT_NODE,13);
+CheckEnum("XML_DTD_NODE",XML_DTD_NODE,14);
+CheckEnum("XML_ELEMENT_DECL",XML_ELEMENT_DECL,15);
+CheckEnum("XML_ATTRIBUTE_DECL",XML_ATTRIBUTE_DECL,16);
+CheckEnum("XML_ENTITY_DECL",XML_ENTITY_DECL,17);
+CheckEnum("XML_NAMESPACE_DECL",XML_NAMESPACE_DECL,18);
+CheckEnum("XML_XINCLUDE_START",XML_XINCLUDE_START,19);
+CheckEnum("XML_XINCLUDE_END",XML_XINCLUDE_END,20);
+CheckEnum("XML_DOCB_DOCUMENT_NODE",XML_DOCB_DOCUMENT_NODE,21);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14589,0);
 Msg("Find size of anon-libxml2/libxml/tree.h-56 (14589)\n");
@@ -267,6 +343,8 @@ Msg("Find size of anon-libxml2/libxml/tree.h-56 (14589)\n");
 CheckTypeSize(xmlElementType,4, 14590, 2)
 #elif __x86_64__
 CheckTypeSize(xmlElementType,4, 14590, 11)
+#elif __ia64__
+CheckTypeSize(xmlElementType,4, 14590, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14590,0);
 Msg("Find size of xmlElementType (14590)\n");
@@ -276,6 +354,8 @@ Msg("Find size of xmlElementType (14590)\n");
 CheckTypeSize(struct _xmlNode *,4, 14591, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlNode *,8, 14591, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlNode *,8, 14591, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14591,0);
 Msg("Find size of _xmlNode * (14591)\n");
@@ -369,6 +449,50 @@ CheckMemberSize(struct _xmlDoc,dict,8,11,47832)
 CheckOffset(struct _xmlDoc,dict,152,11,47832)
 CheckMemberSize(struct _xmlDoc,psvi,8,11,47833)
 CheckOffset(struct _xmlDoc,psvi,160,11,47833)
+#elif __ia64__
+CheckTypeSize(struct _xmlDoc,168, 14592, 3)
+CheckMemberSize(struct _xmlDoc,type,4,3,47792)
+CheckOffset(struct _xmlDoc,type,8,3,47792)
+CheckMemberSize(struct _xmlDoc,name,8,3,47793)
+CheckOffset(struct _xmlDoc,name,16,3,47793)
+CheckMemberSize(struct _xmlDoc,children,8,3,47794)
+CheckOffset(struct _xmlDoc,children,24,3,47794)
+CheckMemberSize(struct _xmlDoc,last,8,3,47795)
+CheckOffset(struct _xmlDoc,last,32,3,47795)
+CheckMemberSize(struct _xmlDoc,parent,8,3,47796)
+CheckOffset(struct _xmlDoc,parent,40,3,47796)
+CheckMemberSize(struct _xmlDoc,next,8,3,47797)
+CheckOffset(struct _xmlDoc,next,48,3,47797)
+CheckMemberSize(struct _xmlDoc,prev,8,3,47798)
+CheckOffset(struct _xmlDoc,prev,56,3,47798)
+CheckMemberSize(struct _xmlDoc,doc,8,3,47799)
+CheckOffset(struct _xmlDoc,doc,64,3,47799)
+CheckMemberSize(struct _xmlDoc,compression,4,3,47800)
+CheckOffset(struct _xmlDoc,compression,72,3,47800)
+CheckMemberSize(struct _xmlDoc,standalone,4,3,47801)
+CheckOffset(struct _xmlDoc,standalone,76,3,47801)
+CheckMemberSize(struct _xmlDoc,intSubset,8,3,47818)
+CheckOffset(struct _xmlDoc,intSubset,80,3,47818)
+CheckMemberSize(struct _xmlDoc,extSubset,8,3,47819)
+CheckOffset(struct _xmlDoc,extSubset,88,3,47819)
+CheckMemberSize(struct _xmlDoc,oldNs,8,3,47825)
+CheckOffset(struct _xmlDoc,oldNs,96,3,47825)
+CheckMemberSize(struct _xmlDoc,version,8,3,47826)
+CheckOffset(struct _xmlDoc,version,104,3,47826)
+CheckMemberSize(struct _xmlDoc,encoding,8,3,47827)
+CheckOffset(struct _xmlDoc,encoding,112,3,47827)
+CheckMemberSize(struct _xmlDoc,ids,8,3,47828)
+CheckOffset(struct _xmlDoc,ids,120,3,47828)
+CheckMemberSize(struct _xmlDoc,refs,8,3,47829)
+CheckOffset(struct _xmlDoc,refs,128,3,47829)
+CheckMemberSize(struct _xmlDoc,URL,8,3,47830)
+CheckOffset(struct _xmlDoc,URL,136,3,47830)
+CheckMemberSize(struct _xmlDoc,charset,4,3,47831)
+CheckOffset(struct _xmlDoc,charset,144,3,47831)
+CheckMemberSize(struct _xmlDoc,dict,8,3,47832)
+CheckOffset(struct _xmlDoc,dict,152,3,47832)
+CheckMemberSize(struct _xmlDoc,psvi,8,3,47833)
+CheckOffset(struct _xmlDoc,psvi,160,3,47833)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14592,0);
 Msg("Find size of _xmlDoc (14592)\n");
@@ -378,6 +502,8 @@ Msg("Find size of _xmlDoc (14592)\n");
 CheckTypeSize(struct _xmlDoc *,4, 14593, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlDoc *,8, 14593, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlDoc *,8, 14593, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14593,0);
 Msg("Find size of _xmlDoc * (14593)\n");
@@ -447,6 +573,38 @@ CheckMemberSize(struct _xmlDtd,SystemID,8,11,47816)
 CheckOffset(struct _xmlDtd,SystemID,112,11,47816)
 CheckMemberSize(struct _xmlDtd,pentities,8,11,47817)
 CheckOffset(struct _xmlDtd,pentities,120,11,47817)
+#elif __ia64__
+CheckTypeSize(struct _xmlDtd,128, 14594, 3)
+CheckMemberSize(struct _xmlDtd,type,4,3,47803)
+CheckOffset(struct _xmlDtd,type,8,3,47803)
+CheckMemberSize(struct _xmlDtd,name,8,3,47804)
+CheckOffset(struct _xmlDtd,name,16,3,47804)
+CheckMemberSize(struct _xmlDtd,children,8,3,47805)
+CheckOffset(struct _xmlDtd,children,24,3,47805)
+CheckMemberSize(struct _xmlDtd,last,8,3,47806)
+CheckOffset(struct _xmlDtd,last,32,3,47806)
+CheckMemberSize(struct _xmlDtd,parent,8,3,47807)
+CheckOffset(struct _xmlDtd,parent,40,3,47807)
+CheckMemberSize(struct _xmlDtd,next,8,3,47808)
+CheckOffset(struct _xmlDtd,next,48,3,47808)
+CheckMemberSize(struct _xmlDtd,prev,8,3,47809)
+CheckOffset(struct _xmlDtd,prev,56,3,47809)
+CheckMemberSize(struct _xmlDtd,doc,8,3,47810)
+CheckOffset(struct _xmlDtd,doc,64,3,47810)
+CheckMemberSize(struct _xmlDtd,notations,8,3,47811)
+CheckOffset(struct _xmlDtd,notations,72,3,47811)
+CheckMemberSize(struct _xmlDtd,elements,8,3,47812)
+CheckOffset(struct _xmlDtd,elements,80,3,47812)
+CheckMemberSize(struct _xmlDtd,attributes,8,3,47813)
+CheckOffset(struct _xmlDtd,attributes,88,3,47813)
+CheckMemberSize(struct _xmlDtd,entities,8,3,47814)
+CheckOffset(struct _xmlDtd,entities,96,3,47814)
+CheckMemberSize(struct _xmlDtd,ExternalID,8,3,47815)
+CheckOffset(struct _xmlDtd,ExternalID,104,3,47815)
+CheckMemberSize(struct _xmlDtd,SystemID,8,3,47816)
+CheckOffset(struct _xmlDtd,SystemID,112,3,47816)
+CheckMemberSize(struct _xmlDtd,pentities,8,3,47817)
+CheckOffset(struct _xmlDtd,pentities,120,3,47817)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14594,0);
 Msg("Find size of _xmlDtd (14594)\n");
@@ -456,6 +614,8 @@ Msg("Find size of _xmlDtd (14594)\n");
 CheckTypeSize(struct _xmlDtd *,4, 14595, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlDtd *,8, 14595, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlDtd *,8, 14595, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14595,0);
 Msg("Find size of _xmlDtd * (14595)\n");
@@ -481,6 +641,16 @@ CheckMemberSize(struct _xmlNs,prefix,8,11,47823)
 CheckOffset(struct _xmlNs,prefix,24,11,47823)
 CheckMemberSize(struct _xmlNs,_private,8,11,47824)
 CheckOffset(struct _xmlNs,_private,32,11,47824)
+#elif __ia64__
+CheckTypeSize(struct _xmlNs,40, 14596, 3)
+CheckMemberSize(struct _xmlNs,type,4,3,47821)
+CheckOffset(struct _xmlNs,type,8,3,47821)
+CheckMemberSize(struct _xmlNs,href,8,3,47822)
+CheckOffset(struct _xmlNs,href,16,3,47822)
+CheckMemberSize(struct _xmlNs,prefix,8,3,47823)
+CheckOffset(struct _xmlNs,prefix,24,3,47823)
+CheckMemberSize(struct _xmlNs,_private,8,3,47824)
+CheckOffset(struct _xmlNs,_private,32,3,47824)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14596,0);
 Msg("Find size of _xmlNs (14596)\n");
@@ -490,6 +660,8 @@ Msg("Find size of _xmlNs (14596)\n");
 CheckTypeSize(struct _xmlNs *,4, 14597, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlNs *,8, 14597, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlNs *,8, 14597, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14597,0);
 Msg("Find size of _xmlNs * (14597)\n");
@@ -499,6 +671,8 @@ Msg("Find size of _xmlNs * (14597)\n");
 CheckTypeSize(xmlNsType,4, 14598, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNsType,4, 14598, 11)
+#elif __ia64__
+CheckTypeSize(xmlNsType,4, 14598, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14598,0);
 Msg("Find size of xmlNsType (14598)\n");
@@ -510,6 +684,9 @@ Msg("Missing member data for _xmlDict on IA32\n");
 #elif __x86_64__
 CheckTypeSize(struct _xmlDict,0, 14599, 11)
 Msg("Missing member data for _xmlDict on x86-64\n");
+#elif __ia64__
+CheckTypeSize(struct _xmlDict,0, 14599, 3)
+Msg("Missing member data for _xmlDict on IA64\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14599,0);
 Msg("Find size of _xmlDict (14599)\n");
@@ -519,6 +696,8 @@ Msg("Find size of _xmlDict (14599)\n");
 CheckTypeSize(struct _xmlDict *,4, 14600, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlDict *,8, 14600, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlDict *,8, 14600, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14600,0);
 Msg("Find size of _xmlDict * (14600)\n");
@@ -528,6 +707,8 @@ Msg("Find size of _xmlDict * (14600)\n");
 CheckTypeSize(xmlNs,20, 14601, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNs,40, 14601, 11)
+#elif __ia64__
+CheckTypeSize(xmlNs,40, 14601, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14601,0);
 Msg("Find size of xmlNs (14601)\n");
@@ -537,6 +718,8 @@ Msg("Find size of xmlNs (14601)\n");
 CheckTypeSize(xmlNs *,4, 14602, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNs *,8, 14602, 11)
+#elif __ia64__
+CheckTypeSize(xmlNs *,8, 14602, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14602,0);
 Msg("Find size of xmlNs * (14602)\n");
@@ -590,6 +773,30 @@ CheckMemberSize(struct _xmlAttr,atype,4,11,47857)
 CheckOffset(struct _xmlAttr,atype,80,11,47857)
 CheckMemberSize(struct _xmlAttr,psvi,8,11,47858)
 CheckOffset(struct _xmlAttr,psvi,88,11,47858)
+#elif __ia64__
+CheckTypeSize(struct _xmlAttr,96, 14603, 3)
+CheckMemberSize(struct _xmlAttr,type,4,3,47838)
+CheckOffset(struct _xmlAttr,type,8,3,47838)
+CheckMemberSize(struct _xmlAttr,name,8,3,47839)
+CheckOffset(struct _xmlAttr,name,16,3,47839)
+CheckMemberSize(struct _xmlAttr,children,8,3,47840)
+CheckOffset(struct _xmlAttr,children,24,3,47840)
+CheckMemberSize(struct _xmlAttr,last,8,3,47841)
+CheckOffset(struct _xmlAttr,last,32,3,47841)
+CheckMemberSize(struct _xmlAttr,parent,8,3,47842)
+CheckOffset(struct _xmlAttr,parent,40,3,47842)
+CheckMemberSize(struct _xmlAttr,next,8,3,47843)
+CheckOffset(struct _xmlAttr,next,48,3,47843)
+CheckMemberSize(struct _xmlAttr,prev,8,3,47844)
+CheckOffset(struct _xmlAttr,prev,56,3,47844)
+CheckMemberSize(struct _xmlAttr,doc,8,3,47845)
+CheckOffset(struct _xmlAttr,doc,64,3,47845)
+CheckMemberSize(struct _xmlAttr,ns,8,3,47846)
+CheckOffset(struct _xmlAttr,ns,72,3,47846)
+CheckMemberSize(struct _xmlAttr,atype,4,3,47857)
+CheckOffset(struct _xmlAttr,atype,80,3,47857)
+CheckMemberSize(struct _xmlAttr,psvi,8,3,47858)
+CheckOffset(struct _xmlAttr,psvi,88,3,47858)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14603,0);
 Msg("Find size of _xmlAttr (14603)\n");
@@ -599,6 +806,8 @@ Msg("Find size of _xmlAttr (14603)\n");
 CheckTypeSize(struct _xmlAttr *,4, 14604, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlAttr *,8, 14604, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlAttr *,8, 14604, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14604,0);
 Msg("Find size of _xmlAttr * (14604)\n");
@@ -626,6 +835,17 @@ CheckEnum("XML_ATTRIBUTE_NMTOKEN",XML_ATTRIBUTE_NMTOKEN,7);
 CheckEnum("XML_ATTRIBUTE_NMTOKENS",XML_ATTRIBUTE_NMTOKENS,8);
 CheckEnum("XML_ATTRIBUTE_ENUMERATION",XML_ATTRIBUTE_ENUMERATION,9);
 CheckEnum("XML_ATTRIBUTE_NOTATION",XML_ATTRIBUTE_NOTATION,10);
+#elif __ia64__
+CheckEnum("XML_ATTRIBUTE_CDATA",XML_ATTRIBUTE_CDATA,1);
+CheckEnum("XML_ATTRIBUTE_ID",XML_ATTRIBUTE_ID,2);
+CheckEnum("XML_ATTRIBUTE_IDREF",XML_ATTRIBUTE_IDREF,3);
+CheckEnum("XML_ATTRIBUTE_IDREFS",XML_ATTRIBUTE_IDREFS,4);
+CheckEnum("XML_ATTRIBUTE_ENTITY",XML_ATTRIBUTE_ENTITY,5);
+CheckEnum("XML_ATTRIBUTE_ENTITIES",XML_ATTRIBUTE_ENTITIES,6);
+CheckEnum("XML_ATTRIBUTE_NMTOKEN",XML_ATTRIBUTE_NMTOKEN,7);
+CheckEnum("XML_ATTRIBUTE_NMTOKENS",XML_ATTRIBUTE_NMTOKENS,8);
+CheckEnum("XML_ATTRIBUTE_ENUMERATION",XML_ATTRIBUTE_ENUMERATION,9);
+CheckEnum("XML_ATTRIBUTE_NOTATION",XML_ATTRIBUTE_NOTATION,10);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14605,0);
 Msg("Find size of anon-libxml2/libxml/tree.h-57 (14605)\n");
@@ -635,6 +855,8 @@ Msg("Find size of anon-libxml2/libxml/tree.h-57 (14605)\n");
 CheckTypeSize(xmlAttributeType,4, 14606, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAttributeType,4, 14606, 11)
+#elif __ia64__
+CheckTypeSize(xmlAttributeType,4, 14606, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14606,0);
 Msg("Find size of xmlAttributeType (14606)\n");
@@ -644,6 +866,8 @@ Msg("Find size of xmlAttributeType (14606)\n");
 CheckTypeSize(xmlNode,60, 14607, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNode,120, 14607, 11)
+#elif __ia64__
+CheckTypeSize(xmlNode,120, 14607, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14607,0);
 Msg("Find size of xmlNode (14607)\n");
@@ -653,6 +877,8 @@ Msg("Find size of xmlNode (14607)\n");
 CheckTypeSize(xmlNode *,4, 14608, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNode *,8, 14608, 11)
+#elif __ia64__
+CheckTypeSize(xmlNode *,8, 14608, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14608,0);
 Msg("Find size of xmlNode * (14608)\n");
@@ -662,6 +888,8 @@ Msg("Find size of xmlNode * (14608)\n");
 CheckTypeSize(xmlNodePtr,4, 14609, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNodePtr,8, 14609, 11)
+#elif __ia64__
+CheckTypeSize(xmlNodePtr,8, 14609, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14609,0);
 Msg("Find size of xmlNodePtr (14609)\n");
@@ -671,6 +899,8 @@ Msg("Find size of xmlNodePtr (14609)\n");
 CheckTypeSize(xmlDoc,88, 14610, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDoc,168, 14610, 11)
+#elif __ia64__
+CheckTypeSize(xmlDoc,168, 14610, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14610,0);
 Msg("Find size of xmlDoc (14610)\n");
@@ -680,6 +910,8 @@ Msg("Find size of xmlDoc (14610)\n");
 CheckTypeSize(xmlDoc *,4, 14611, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDoc *,8, 14611, 11)
+#elif __ia64__
+CheckTypeSize(xmlDoc *,8, 14611, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14611,0);
 Msg("Find size of xmlDoc * (14611)\n");
@@ -689,6 +921,8 @@ Msg("Find size of xmlDoc * (14611)\n");
 CheckTypeSize(xmlDocPtr,4, 14612, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDocPtr,8, 14612, 11)
+#elif __ia64__
+CheckTypeSize(xmlDocPtr,8, 14612, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14612,0);
 Msg("Find size of xmlDocPtr (14612)\n");
@@ -698,6 +932,8 @@ Msg("Find size of xmlDocPtr (14612)\n");
 CheckTypeSize(xmlNsPtr,4, 14613, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNsPtr,8, 14613, 11)
+#elif __ia64__
+CheckTypeSize(xmlNsPtr,8, 14613, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14613,0);
 Msg("Find size of xmlNsPtr (14613)\n");
@@ -705,6 +941,7 @@ Msg("Find size of xmlNsPtr (14613)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14614,0);
 Msg("Find size of xmlChar * * (14614)\n");
@@ -714,6 +951,8 @@ Msg("Find size of xmlChar * * (14614)\n");
 CheckTypeSize(xmlDtd,64, 14615, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDtd,128, 14615, 11)
+#elif __ia64__
+CheckTypeSize(xmlDtd,128, 14615, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14615,0);
 Msg("Find size of xmlDtd (14615)\n");
@@ -723,6 +962,8 @@ Msg("Find size of xmlDtd (14615)\n");
 CheckTypeSize(xmlDtd *,4, 14616, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDtd *,8, 14616, 11)
+#elif __ia64__
+CheckTypeSize(xmlDtd *,8, 14616, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14616,0);
 Msg("Find size of xmlDtd * (14616)\n");
@@ -732,6 +973,8 @@ Msg("Find size of xmlDtd * (14616)\n");
 CheckTypeSize(xmlDtdPtr,4, 14617, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDtdPtr,8, 14617, 11)
+#elif __ia64__
+CheckTypeSize(xmlDtdPtr,8, 14617, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14617,0);
 Msg("Find size of xmlDtdPtr (14617)\n");
@@ -745,6 +988,10 @@ CheckOffset(struct _xmlDOMWrapCtxt,_private,0,2,47864)
 CheckTypeSize(struct _xmlDOMWrapCtxt,8, 14618, 11)
 Msg("Missing member data for _xmlDOMWrapCtxt on x86-64\n");
 CheckOffset(struct _xmlDOMWrapCtxt,_private,0,11,47864)
+#elif __ia64__
+CheckTypeSize(struct _xmlDOMWrapCtxt,8, 14618, 3)
+Msg("Missing member data for _xmlDOMWrapCtxt on IA64\n");
+CheckOffset(struct _xmlDOMWrapCtxt,_private,0,3,47864)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14618,0);
 Msg("Find size of _xmlDOMWrapCtxt (14618)\n");
@@ -754,6 +1001,8 @@ Msg("Find size of _xmlDOMWrapCtxt (14618)\n");
 CheckTypeSize(xmlDOMWrapCtxt,4, 14619, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDOMWrapCtxt,8, 14619, 11)
+#elif __ia64__
+CheckTypeSize(xmlDOMWrapCtxt,8, 14619, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14619,0);
 Msg("Find size of xmlDOMWrapCtxt (14619)\n");
@@ -763,6 +1012,8 @@ Msg("Find size of xmlDOMWrapCtxt (14619)\n");
 CheckTypeSize(xmlDOMWrapCtxt *,4, 14620, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDOMWrapCtxt *,8, 14620, 11)
+#elif __ia64__
+CheckTypeSize(xmlDOMWrapCtxt *,8, 14620, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14620,0);
 Msg("Find size of xmlDOMWrapCtxt * (14620)\n");
@@ -772,6 +1023,8 @@ Msg("Find size of xmlDOMWrapCtxt * (14620)\n");
 CheckTypeSize(xmlDOMWrapCtxtPtr,4, 14621, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDOMWrapCtxtPtr,8, 14621, 11)
+#elif __ia64__
+CheckTypeSize(xmlDOMWrapCtxtPtr,8, 14621, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14621,0);
 Msg("Find size of xmlDOMWrapCtxtPtr (14621)\n");
@@ -781,6 +1034,8 @@ Msg("Find size of xmlDOMWrapCtxtPtr (14621)\n");
 CheckTypeSize(const xmlNodePtr,4, 14622, 2)
 #elif __x86_64__
 CheckTypeSize(const xmlNodePtr,8, 14622, 11)
+#elif __ia64__
+CheckTypeSize(const xmlNodePtr,8, 14622, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14622,0);
 Msg("Find size of const xmlNodePtr (14622)\n");
@@ -790,6 +1045,8 @@ Msg("Find size of const xmlNodePtr (14622)\n");
 CheckTypeSize(xmlAttr,48, 14623, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAttr,96, 14623, 11)
+#elif __ia64__
+CheckTypeSize(xmlAttr,96, 14623, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14623,0);
 Msg("Find size of xmlAttr (14623)\n");
@@ -799,6 +1056,8 @@ Msg("Find size of xmlAttr (14623)\n");
 CheckTypeSize(xmlAttr *,4, 14624, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAttr *,8, 14624, 11)
+#elif __ia64__
+CheckTypeSize(xmlAttr *,8, 14624, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14624,0);
 Msg("Find size of xmlAttr * (14624)\n");
@@ -808,6 +1067,8 @@ Msg("Find size of xmlAttr * (14624)\n");
 CheckTypeSize(xmlAttrPtr,4, 14625, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAttrPtr,8, 14625, 11)
+#elif __ia64__
+CheckTypeSize(xmlAttrPtr,8, 14625, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14625,0);
 Msg("Find size of xmlAttrPtr (14625)\n");
@@ -845,6 +1106,22 @@ CheckMemberSize(struct _xmlOutputBuffer,written,4,11,47884)
 CheckOffset(struct _xmlOutputBuffer,written,48,11,47884)
 CheckMemberSize(struct _xmlOutputBuffer,error,4,11,47885)
 CheckOffset(struct _xmlOutputBuffer,error,52,11,47885)
+#elif __ia64__
+CheckTypeSize(struct _xmlOutputBuffer,56, 14626, 3)
+CheckMemberSize(struct _xmlOutputBuffer,writecallback,8,3,47869)
+CheckOffset(struct _xmlOutputBuffer,writecallback,8,3,47869)
+CheckMemberSize(struct _xmlOutputBuffer,closecallback,8,3,47871)
+CheckOffset(struct _xmlOutputBuffer,closecallback,16,3,47871)
+CheckMemberSize(struct _xmlOutputBuffer,encoder,8,3,47881)
+CheckOffset(struct _xmlOutputBuffer,encoder,24,3,47881)
+CheckMemberSize(struct _xmlOutputBuffer,buffer,8,3,47882)
+CheckOffset(struct _xmlOutputBuffer,buffer,32,3,47882)
+CheckMemberSize(struct _xmlOutputBuffer,conv,8,3,47883)
+CheckOffset(struct _xmlOutputBuffer,conv,40,3,47883)
+CheckMemberSize(struct _xmlOutputBuffer,written,4,3,47884)
+CheckOffset(struct _xmlOutputBuffer,written,48,3,47884)
+CheckMemberSize(struct _xmlOutputBuffer,error,4,3,47885)
+CheckOffset(struct _xmlOutputBuffer,error,52,3,47885)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14626,0);
 Msg("Find size of _xmlOutputBuffer (14626)\n");
@@ -852,6 +1129,7 @@ Msg("Find size of _xmlOutputBuffer (14626)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14627,0);
 Msg("Find size of fptr_tree_244 (14627)\n");
@@ -861,6 +1139,8 @@ Msg("Find size of fptr_tree_244 (14627)\n");
 CheckTypeSize(xmlOutputWriteCallback,4, 14628, 2)
 #elif __x86_64__
 CheckTypeSize(xmlOutputWriteCallback,8, 14628, 11)
+#elif __ia64__
+CheckTypeSize(xmlOutputWriteCallback,8, 14628, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14628,0);
 Msg("Find size of xmlOutputWriteCallback (14628)\n");
@@ -868,6 +1148,7 @@ Msg("Find size of xmlOutputWriteCallback (14628)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14629,0);
 Msg("Find size of fptr_tree_142 (14629)\n");
@@ -877,6 +1158,8 @@ Msg("Find size of fptr_tree_142 (14629)\n");
 CheckTypeSize(xmlOutputCloseCallback,4, 14630, 2)
 #elif __x86_64__
 CheckTypeSize(xmlOutputCloseCallback,8, 14630, 11)
+#elif __ia64__
+CheckTypeSize(xmlOutputCloseCallback,8, 14630, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14630,0);
 Msg("Find size of xmlOutputCloseCallback (14630)\n");
@@ -902,6 +1185,16 @@ CheckMemberSize(struct _xmlCharEncodingHandler,iconv_in,8,11,47879)
 CheckOffset(struct _xmlCharEncodingHandler,iconv_in,24,11,47879)
 CheckMemberSize(struct _xmlCharEncodingHandler,iconv_out,8,11,47880)
 CheckOffset(struct _xmlCharEncodingHandler,iconv_out,32,11,47880)
+#elif __ia64__
+CheckTypeSize(struct _xmlCharEncodingHandler,40, 14631, 3)
+CheckMemberSize(struct _xmlCharEncodingHandler,input,8,3,47877)
+CheckOffset(struct _xmlCharEncodingHandler,input,8,3,47877)
+CheckMemberSize(struct _xmlCharEncodingHandler,output,8,3,47878)
+CheckOffset(struct _xmlCharEncodingHandler,output,16,3,47878)
+CheckMemberSize(struct _xmlCharEncodingHandler,iconv_in,8,3,47879)
+CheckOffset(struct _xmlCharEncodingHandler,iconv_in,24,3,47879)
+CheckMemberSize(struct _xmlCharEncodingHandler,iconv_out,8,3,47880)
+CheckOffset(struct _xmlCharEncodingHandler,iconv_out,32,3,47880)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14631,0);
 Msg("Find size of _xmlCharEncodingHandler (14631)\n");
@@ -909,6 +1202,7 @@ Msg("Find size of _xmlCharEncodingHandler (14631)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14632,0);
 Msg("Find size of fptr_tree_333 (14632)\n");
@@ -918,6 +1212,8 @@ Msg("Find size of fptr_tree_333 (14632)\n");
 CheckTypeSize(xmlCharEncodingInputFunc,4, 14633, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCharEncodingInputFunc,8, 14633, 11)
+#elif __ia64__
+CheckTypeSize(xmlCharEncodingInputFunc,8, 14633, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14633,0);
 Msg("Find size of xmlCharEncodingInputFunc (14633)\n");
@@ -927,6 +1223,8 @@ Msg("Find size of xmlCharEncodingInputFunc (14633)\n");
 CheckTypeSize(xmlCharEncodingOutputFunc,4, 14634, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCharEncodingOutputFunc,8, 14634, 11)
+#elif __ia64__
+CheckTypeSize(xmlCharEncodingOutputFunc,8, 14634, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14634,0);
 Msg("Find size of xmlCharEncodingOutputFunc (14634)\n");
@@ -936,6 +1234,8 @@ Msg("Find size of xmlCharEncodingOutputFunc (14634)\n");
 CheckTypeSize(xmlCharEncodingHandler,20, 14635, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCharEncodingHandler,40, 14635, 11)
+#elif __ia64__
+CheckTypeSize(xmlCharEncodingHandler,40, 14635, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14635,0);
 Msg("Find size of xmlCharEncodingHandler (14635)\n");
@@ -945,6 +1245,8 @@ Msg("Find size of xmlCharEncodingHandler (14635)\n");
 CheckTypeSize(xmlCharEncodingHandler *,4, 14636, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCharEncodingHandler *,8, 14636, 11)
+#elif __ia64__
+CheckTypeSize(xmlCharEncodingHandler *,8, 14636, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14636,0);
 Msg("Find size of xmlCharEncodingHandler * (14636)\n");
@@ -954,6 +1256,8 @@ Msg("Find size of xmlCharEncodingHandler * (14636)\n");
 CheckTypeSize(xmlCharEncodingHandlerPtr,4, 14637, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCharEncodingHandlerPtr,8, 14637, 11)
+#elif __ia64__
+CheckTypeSize(xmlCharEncodingHandlerPtr,8, 14637, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14637,0);
 Msg("Find size of xmlCharEncodingHandlerPtr (14637)\n");
@@ -963,6 +1267,8 @@ Msg("Find size of xmlCharEncodingHandlerPtr (14637)\n");
 CheckTypeSize(xmlOutputBuffer,32, 14638, 2)
 #elif __x86_64__
 CheckTypeSize(xmlOutputBuffer,56, 14638, 11)
+#elif __ia64__
+CheckTypeSize(xmlOutputBuffer,56, 14638, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14638,0);
 Msg("Find size of xmlOutputBuffer (14638)\n");
@@ -972,6 +1278,8 @@ Msg("Find size of xmlOutputBuffer (14638)\n");
 CheckTypeSize(xmlOutputBuffer *,4, 14639, 2)
 #elif __x86_64__
 CheckTypeSize(xmlOutputBuffer *,8, 14639, 11)
+#elif __ia64__
+CheckTypeSize(xmlOutputBuffer *,8, 14639, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14639,0);
 Msg("Find size of xmlOutputBuffer * (14639)\n");
@@ -981,6 +1289,8 @@ Msg("Find size of xmlOutputBuffer * (14639)\n");
 CheckTypeSize(xmlOutputBufferPtr,4, 14640, 2)
 #elif __x86_64__
 CheckTypeSize(xmlOutputBufferPtr,8, 14640, 11)
+#elif __ia64__
+CheckTypeSize(xmlOutputBufferPtr,8, 14640, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14640,0);
 Msg("Find size of xmlOutputBufferPtr (14640)\n");
@@ -990,6 +1300,8 @@ Msg("Find size of xmlOutputBufferPtr (14640)\n");
 CheckTypeSize(xmlNsPtr *,4, 14641, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNsPtr *,8, 14641, 11)
+#elif __ia64__
+CheckTypeSize(xmlNsPtr *,8, 14641, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14641,0);
 Msg("Find size of xmlNsPtr * (14641)\n");

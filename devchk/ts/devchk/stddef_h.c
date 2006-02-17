@@ -18,11 +18,12 @@ int stddef_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in stddef.h\n");
 #endif
 
+printf("Checking data structures in stddef.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NULL
 	CompareConstant(NULL,(0L),906,architecture)
@@ -119,7 +120,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in stddef.h\n",cnt);
+printf("%d tests passed out of %d tests in stddef.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

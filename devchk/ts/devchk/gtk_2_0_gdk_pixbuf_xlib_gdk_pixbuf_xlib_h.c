@@ -26,6 +26,7 @@ Msg("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
 printf("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12659,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-14 (12659)\n");
@@ -39,6 +40,10 @@ CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
 CheckEnum("XLIB_RGB_DITHER_NONE",XLIB_RGB_DITHER_NONE,0);
 CheckEnum("XLIB_RGB_DITHER_NORMAL",XLIB_RGB_DITHER_NORMAL,1);
 CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
+#elif __ia64__
+CheckEnum("XLIB_RGB_DITHER_NONE",XLIB_RGB_DITHER_NONE,0);
+CheckEnum("XLIB_RGB_DITHER_NORMAL",XLIB_RGB_DITHER_NORMAL,1);
+CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12660,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-6 (12660)\n");
@@ -48,6 +53,8 @@ Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-6 (12660)\n");
 CheckTypeSize(XlibRgbDither,4, 12661, 2)
 #elif __x86_64__
 CheckTypeSize(XlibRgbDither,4, 12661, 11)
+#elif __ia64__
+CheckTypeSize(XlibRgbDither,4, 12661, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12661,0);
 Msg("Find size of XlibRgbDither (12661)\n");
@@ -55,6 +62,7 @@ Msg("Find size of XlibRgbDither (12661)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12662,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-19 (12662)\n");
@@ -68,6 +76,10 @@ CheckOffset(struct _XlibRgbCmap,lut,1024,2,43400)
 CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 11)
 CheckMemberSize(struct _XlibRgbCmap,lut,256,11,43400)
 CheckOffset(struct _XlibRgbCmap,lut,1024,11,43400)
+#elif __ia64__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 3)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,3,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,3,43400)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12663,0);
 Msg("Find size of _XlibRgbCmap (12663)\n");
@@ -83,6 +95,8 @@ Msg("Find size of _XlibRgbCmap (12663)\n");
 CheckTypeSize(XlibRgbCmap,1280, 12666, 2)
 #elif __x86_64__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 11)
+#elif __ia64__
+CheckTypeSize(XlibRgbCmap,1280, 12666, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12666,0);
 Msg("Find size of XlibRgbCmap (12666)\n");
@@ -92,6 +106,8 @@ Msg("Find size of XlibRgbCmap (12666)\n");
 CheckTypeSize(XlibRgbCmap *,4, 12667, 2)
 #elif __x86_64__
 CheckTypeSize(XlibRgbCmap *,8, 12667, 11)
+#elif __ia64__
+CheckTypeSize(XlibRgbCmap *,8, 12667, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12667,0);
 Msg("Find size of XlibRgbCmap * (12667)\n");
@@ -99,6 +115,7 @@ Msg("Find size of XlibRgbCmap * (12667)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12668,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-15 (12668)\n");
@@ -106,6 +123,7 @@ Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-15 (12668)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12669,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-16 (12669)\n");
@@ -115,6 +133,8 @@ Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-16 (12669)\n");
 CheckTypeSize(guint32 *,4, 12670, 2)
 #elif __x86_64__
 CheckTypeSize(guint32 *,8, 12670, 11)
+#elif __ia64__
+CheckTypeSize(guint32 *,8, 12670, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12670,0);
 Msg("Find size of guint32 * (12670)\n");
@@ -124,6 +144,9 @@ Msg("Find size of guint32 * (12670)\n");
 CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
 CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
 #elif __x86_64__
+CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
+CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
+#elif __ia64__
 CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
 CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
 #else

@@ -18,11 +18,12 @@ int netinet_in_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in netinet/in.h\n");
 #endif
 
+printf("Checking data structures in netinet/in.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SOL_IP
 	CompareConstant(SOL_IP,0,3330,architecture)
@@ -383,6 +384,8 @@ CheckMemberSize(struct sockaddr_in6,sin6_scope_id,4,1,33788)
 CheckOffset(struct sockaddr_in6,sin6_scope_id,24,1,33788)
 #endif
 
+extern int bindresvport_db(int, struct sockaddr_in *);
+CheckInterfacedef(bindresvport,bindresvport_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -390,7 +393,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in netinet/in.h\n",cnt);
+printf("%d tests passed out of %d tests in netinet/in.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

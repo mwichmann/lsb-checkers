@@ -18,11 +18,12 @@ int limits_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in limits.h\n");
 #endif
 
+printf("Checking data structures in limits.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SHRT_MIN
 	CompareConstant(SHRT_MIN,(-32768),10,architecture)
@@ -560,7 +561,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in limits.h\n",cnt);
+printf("%d tests passed out of %d tests in limits.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

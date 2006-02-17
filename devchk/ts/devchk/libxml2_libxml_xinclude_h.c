@@ -70,6 +70,8 @@ printf("Checking data structures in libxml2/libxml/xinclude.h\n");
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 2)
 #elif __x86_64__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 11)
+#elif __ia64__
+CheckTypeSize(xmlXIncludeCtxt,0, 14671, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14671,0);
 Msg("Find size of xmlXIncludeCtxt (14671)\n");
@@ -79,6 +81,8 @@ Msg("Find size of xmlXIncludeCtxt (14671)\n");
 CheckTypeSize(xmlXIncludeCtxt *,4, 14672, 2)
 #elif __x86_64__
 CheckTypeSize(xmlXIncludeCtxt *,8, 14672, 11)
+#elif __ia64__
+CheckTypeSize(xmlXIncludeCtxt *,8, 14672, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14672,0);
 Msg("Find size of xmlXIncludeCtxt * (14672)\n");
@@ -88,6 +92,8 @@ Msg("Find size of xmlXIncludeCtxt * (14672)\n");
 CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 2)
 #elif __x86_64__
 CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 11)
+#elif __ia64__
+CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14673,0);
 Msg("Find size of xmlXIncludeCtxtPtr (14673)\n");

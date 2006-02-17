@@ -18,11 +18,12 @@ int utmp_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in utmp.h\n");
 #endif
 
+printf("Checking data structures in utmp.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef UT_LINESIZE
 	CompareConstant(UT_LINESIZE,32,4960,architecture)
@@ -440,6 +441,24 @@ CheckMemberSize(struct utmp,__unused,20,12,40683)
 CheckOffset(struct utmp,__unused,376,12,40683)
 #endif
 
+extern void endutent_db(void);
+CheckInterfacedef(endutent,endutent_db);
+extern struct utmp * getutent_db(void);
+CheckInterfacedef(getutent,getutent_db);
+extern void setutent_db(void);
+CheckInterfacedef(setutent,setutent_db);
+extern int getutent_r_db(struct utmp *, struct utmp * *);
+CheckInterfacedef(getutent_r,getutent_r_db);
+extern int utmpname_db(const char *);
+CheckInterfacedef(utmpname,utmpname_db);
+extern int login_tty_db(int);
+CheckInterfacedef(login_tty,login_tty_db);
+extern void login_db(const struct utmp *);
+CheckInterfacedef(login,login_db);
+extern int logout_db(const char *);
+CheckInterfacedef(logout,logout_db);
+extern void logwtmp_db(const char *, const char *, const char *);
+CheckInterfacedef(logwtmp,logwtmp_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -447,7 +466,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in utmp.h\n",cnt);
+printf("%d tests passed out of %d tests in utmp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

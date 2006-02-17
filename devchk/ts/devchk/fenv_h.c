@@ -18,11 +18,12 @@ int fenv_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in fenv.h\n");
 #endif
 
+printf("Checking data structures in fenv.h\n");
 #if __powerpc64__
 #ifdef FE_INVALID
 	CompareConstant(FE_INVALID,(1 << (31 - 2)),5298,architecture)
@@ -583,7 +584,8 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5306,%d);\n", arch
 #endif
 #if __powerpc64__
 #ifdef FE_ALL_EXCEPT
-	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+	CompareConstant(FE_ALL_EXCEPT,\
+	(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
 #else
 Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
@@ -591,7 +593,8 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef FE_ALL_EXCEPT
-	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+	CompareConstant(FE_ALL_EXCEPT,\
+	(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
 #else
 Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
@@ -599,7 +602,8 @@ cnt++;
 
 #elif __ia64__
 #ifdef FE_ALL_EXCEPT
-	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_UNDERFLOW | FE_OVERFLOW | FE_DIVBYZERO | FE_UNNORMAL | FE_INVALID),5307,architecture)
+	CompareConstant(FE_ALL_EXCEPT,\
+	(FE_INEXACT | FE_UNDERFLOW | FE_OVERFLOW | FE_DIVBYZERO | FE_UNNORMAL | FE_INVALID),5307,architecture)
 #else
 Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
@@ -607,7 +611,8 @@ cnt++;
 
 #elif __i386__
 #ifdef FE_ALL_EXCEPT
-	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+	CompareConstant(FE_ALL_EXCEPT,\
+	(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
 #else
 Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
@@ -615,7 +620,8 @@ cnt++;
 
 #elif __s390x__
 #ifdef FE_ALL_EXCEPT
-	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+	CompareConstant(FE_ALL_EXCEPT,\
+	(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
 #else
 Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
@@ -623,7 +629,8 @@ cnt++;
 
 #elif __x86_64__
 #ifdef FE_ALL_EXCEPT
-	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+	CompareConstant(FE_ALL_EXCEPT,\
+	(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
 #else
 Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
@@ -631,7 +638,8 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef FE_ALL_EXCEPT
-	CompareConstant(FE_ALL_EXCEPT,(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
+	CompareConstant(FE_ALL_EXCEPT,\
+	(FE_INEXACT | FE_DIVBYZERO | FE_UNDERFLOW | FE_OVERFLOW | FE_INVALID),5307,architecture)
 #else
 Msg( "Error: Constant not found: FE_ALL_EXCEPT\n");
 cnt++;
@@ -741,6 +749,28 @@ CheckTypeSize(fenv_t,32, 11056, 11)
 #if __s390__ && !__s390x__
 #endif
 
+extern int feclearexcept_db(int);
+CheckInterfacedef(feclearexcept,feclearexcept_db);
+extern int fegetenv_db(fenv_t *);
+CheckInterfacedef(fegetenv,fegetenv_db);
+extern int fegetexceptflag_db(fexcept_t *, int);
+CheckInterfacedef(fegetexceptflag,fegetexceptflag_db);
+extern int fegetround_db(void);
+CheckInterfacedef(fegetround,fegetround_db);
+extern int feholdexcept_db(fenv_t *);
+CheckInterfacedef(feholdexcept,feholdexcept_db);
+extern int feraiseexcept_db(int);
+CheckInterfacedef(feraiseexcept,feraiseexcept_db);
+extern int fesetenv_db(const fenv_t *);
+CheckInterfacedef(fesetenv,fesetenv_db);
+extern int fesetexceptflag_db(const fexcept_t *, int);
+CheckInterfacedef(fesetexceptflag,fesetexceptflag_db);
+extern int fesetround_db(int);
+CheckInterfacedef(fesetround,fesetround_db);
+extern int fetestexcept_db(int);
+CheckInterfacedef(fetestexcept,fetestexcept_db);
+extern int feupdateenv_db(const fenv_t *);
+CheckInterfacedef(feupdateenv,feupdateenv_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -748,7 +778,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in fenv.h\n",cnt);
+printf("%d tests passed out of %d tests in fenv.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

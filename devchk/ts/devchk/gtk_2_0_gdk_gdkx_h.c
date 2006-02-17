@@ -200,8 +200,6 @@ extern Display * gdk_x11_cursor_get_xdisplay_db(GdkCursor *);
 CheckInterfacedef(gdk_x11_cursor_get_xdisplay,gdk_x11_cursor_get_xdisplay_db);
 extern void gdk_x11_display_grab_db(GdkDisplay *);
 CheckInterfacedef(gdk_x11_display_grab,gdk_x11_display_grab_db);
-extern guint32 gdk_x11_display_get_user_time_libgtk_only_db(GdkDisplay *);
-CheckInterfacedef(gdk_x11_display_get_user_time_libgtk_only,gdk_x11_display_get_user_time_libgtk_only_db);
 extern Display * gdk_x11_image_get_xdisplay_db(GdkImage *);
 CheckInterfacedef(gdk_x11_image_get_xdisplay,gdk_x11_image_get_xdisplay_db);
 extern Display * gdk_x11_get_default_xdisplay_db(void);

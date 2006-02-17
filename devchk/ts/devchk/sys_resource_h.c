@@ -18,11 +18,12 @@ int sys_resource_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/resource.h\n");
 #endif
 
+printf("Checking data structures in sys/resource.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef RUSAGE_SELF
 	CompareConstant(RUSAGE_SELF,0,3529,architecture)
@@ -531,12 +532,29 @@ Msg("Find size of rusage (9125)\n");
 #endif
 
 #if 1
+CheckEnum("PRIO_PROCESS",PRIO_PROCESS,0);
+CheckEnum("PRIO_PGRP",PRIO_PGRP,1);
+CheckEnum("PRIO_USER",PRIO_USER,2);
 #endif
 
 #if 1
 CheckTypeSize(__priority_which_t,4, 10994, 1)
 #endif
 
+extern int getpriority_db(__priority_which_t, id_t);
+CheckInterfacedef(getpriority,getpriority_db);
+extern int getrlimit64_db(id_t, struct rlimit64 *);
+CheckInterfacedef(getrlimit64,getrlimit64_db);
+extern int setpriority_db(__priority_which_t, id_t, int);
+CheckInterfacedef(setpriority,setpriority_db);
+extern int setrlimit_db(__rlimit_resource_t, const struct rlimit *);
+CheckInterfacedef(setrlimit,setrlimit_db);
+extern int setrlimit64_db(__rlimit_resource_t, const struct rlimit64 *);
+CheckInterfacedef(setrlimit64,setrlimit64_db);
+extern int getrlimit_db(__rlimit_resource_t, struct rlimit *);
+CheckInterfacedef(getrlimit,getrlimit_db);
+extern int getrusage_db(int, struct rusage *);
+CheckInterfacedef(getrusage,getrusage_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -544,7 +562,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/resource.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/resource.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

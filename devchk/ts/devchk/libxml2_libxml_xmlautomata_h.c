@@ -31,6 +31,8 @@ printf("Checking data structures in libxml2/libxml/xmlautomata.h\n");
 CheckTypeSize(xmlAutomataState,0, 14709, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAutomataState,0, 14709, 11)
+#elif __ia64__
+CheckTypeSize(xmlAutomataState,0, 14709, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14709,0);
 Msg("Find size of xmlAutomataState (14709)\n");
@@ -40,6 +42,8 @@ Msg("Find size of xmlAutomataState (14709)\n");
 CheckTypeSize(xmlAutomataState *,4, 14710, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAutomataState *,8, 14710, 11)
+#elif __ia64__
+CheckTypeSize(xmlAutomataState *,8, 14710, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14710,0);
 Msg("Find size of xmlAutomataState * (14710)\n");
@@ -49,6 +53,8 @@ Msg("Find size of xmlAutomataState * (14710)\n");
 CheckTypeSize(xmlAutomataStatePtr,4, 14711, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 11)
+#elif __ia64__
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14711,0);
 Msg("Find size of xmlAutomataStatePtr (14711)\n");
@@ -58,6 +64,8 @@ Msg("Find size of xmlAutomataStatePtr (14711)\n");
 CheckTypeSize(xmlAutomata,0, 14713, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAutomata,0, 14713, 11)
+#elif __ia64__
+CheckTypeSize(xmlAutomata,0, 14713, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14713,0);
 Msg("Find size of xmlAutomata (14713)\n");
@@ -67,6 +75,8 @@ Msg("Find size of xmlAutomata (14713)\n");
 CheckTypeSize(xmlAutomata *,4, 14714, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAutomata *,8, 14714, 11)
+#elif __ia64__
+CheckTypeSize(xmlAutomata *,8, 14714, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14714,0);
 Msg("Find size of xmlAutomata * (14714)\n");
@@ -76,6 +86,8 @@ Msg("Find size of xmlAutomata * (14714)\n");
 CheckTypeSize(xmlAutomataPtr,4, 14715, 2)
 #elif __x86_64__
 CheckTypeSize(xmlAutomataPtr,8, 14715, 11)
+#elif __ia64__
+CheckTypeSize(xmlAutomataPtr,8, 14715, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14715,0);
 Msg("Find size of xmlAutomataPtr (14715)\n");

@@ -18,11 +18,12 @@ int sys_times_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/times.h\n");
 #endif
 
+printf("Checking data structures in sys/times.h\n");
 #if __i386__
 CheckTypeSize(struct tms,16, 6990, 2)
 CheckMemberSize(struct tms,tms_stime,4,2,30169)
@@ -84,6 +85,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6990,0);
 Msg("Find size of tms (6990)\n");
 #endif
 
+extern clock_t times_db(struct tms *);
+CheckInterfacedef(times,times_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -91,7 +94,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/times.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/times.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

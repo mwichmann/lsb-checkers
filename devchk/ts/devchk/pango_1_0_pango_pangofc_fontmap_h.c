@@ -4,6 +4,12 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
+#define PANGO_DISABLE_DEPRECATED
+
 struct _PangoFcFontMap { };
 struct _PangoFcFontMapClass { };
 #include "pango-1.0/pango/pangofc-fontmap.h"
@@ -42,6 +48,8 @@ printf("Checking data structures in pango-1.0/pango/pangofc-fontmap.h\n");
 CheckTypeSize(PangoFcFontMap,0, 12604, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcFontMap,0, 12604, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcFontMap,0, 12604, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12604,0);
 Msg("Find size of PangoFcFontMap (12604)\n");
@@ -51,6 +59,8 @@ Msg("Find size of PangoFcFontMap (12604)\n");
 CheckTypeSize(PangoFcFontMap *,4, 12605, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcFontMap *,8, 12605, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcFontMap *,8, 12605, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12605,0);
 Msg("Find size of PangoFcFontMap * (12605)\n");
@@ -58,6 +68,7 @@ Msg("Find size of PangoFcFontMap * (12605)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12606,0);
 Msg("Find size of fptr_pangofc-fontmap_3 (12606)\n");
@@ -67,6 +78,8 @@ Msg("Find size of fptr_pangofc-fontmap_3 (12606)\n");
 CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12607,0);
 Msg("Find size of PangoFcDecoderFindFunc (12607)\n");
@@ -76,6 +89,8 @@ Msg("Find size of PangoFcDecoderFindFunc (12607)\n");
 CheckTypeSize(PangoFcFontMapClass,0, 12609, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcFontMapClass,0, 12609, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcFontMapClass,0, 12609, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12609,0);
 Msg("Find size of PangoFcFontMapClass (12609)\n");

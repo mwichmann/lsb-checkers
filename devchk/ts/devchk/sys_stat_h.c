@@ -18,11 +18,12 @@ int sys_stat_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/stat.h\n");
 #endif
 
+printf("Checking data structures in sys/stat.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef S_IFMT
 	CompareConstant(S_IFMT,0xf000,1683,architecture)
@@ -899,6 +900,40 @@ CheckMemberSize(struct stat64,st_ino,8,10,40568)
 CheckOffset(struct stat64,st_ino,96,10,40568)
 #endif
 
+extern int __fxstat_db(int, int, struct stat *);
+CheckInterfacedef(__fxstat,__fxstat_db);
+extern int __fxstat64_db(int, int, struct stat64 *);
+CheckInterfacedef(__fxstat64,__fxstat64_db);
+extern int __lxstat_db(int, const char *, struct stat *);
+CheckInterfacedef(__lxstat,__lxstat_db);
+extern int __lxstat64_db(int, const char *, struct stat64 *);
+CheckInterfacedef(__lxstat64,__lxstat64_db);
+extern int __xmknod_db(int, const char *, mode_t, dev_t *);
+CheckInterfacedef(__xmknod,__xmknod_db);
+extern int __xstat_db(int, const char *, struct stat *);
+CheckInterfacedef(__xstat,__xstat_db);
+extern int __xstat64_db(int, const char *, struct stat64 *);
+CheckInterfacedef(__xstat64,__xstat64_db);
+extern int mkfifo_db(const char *, mode_t);
+CheckInterfacedef(mkfifo,mkfifo_db);
+extern int chmod_db(const char *, mode_t);
+CheckInterfacedef(chmod,chmod_db);
+extern int fchmod_db(int, mode_t);
+CheckInterfacedef(fchmod,fchmod_db);
+extern mode_t umask_db(mode_t);
+CheckInterfacedef(umask,umask_db);
+extern int stat_db(const char *, struct stat *);
+CheckInterfacedef(stat,stat_db);
+extern int fstat_db(int, struct stat *);
+CheckInterfacedef(fstat,fstat_db);
+extern int lstat_db(const char *, struct stat *);
+CheckInterfacedef(lstat,lstat_db);
+extern int stat64_db(const char *, struct stat64 *);
+CheckInterfacedef(stat64,stat64_db);
+extern int fstat64_db(int, struct stat64 *);
+CheckInterfacedef(fstat64,fstat64_db);
+extern int lstat64_db(const char *, struct stat64 *);
+CheckInterfacedef(lstat64,lstat64_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -906,7 +941,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/stat.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/stat.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -4,6 +4,11 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
+
 #include <glibconfig.h>
 
 struct _GStringChunk { };
@@ -319,11 +324,34 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 /* No test for G_GINT64_CONSTANT(val) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for G_GINT64_CONSTANT(val) */
+#elif __ia64__
+/* No test for G_GINT64_CONSTANT(val) */
+#elif __i386__
+/* No test for G_GINT64_CONSTANT(val) */
+#elif __s390x__
+/* No test for G_GINT64_CONSTANT(val) */
+#elif __x86_64__
+/* No test for G_GINT64_CONSTANT(val) */
+#elif __s390__ && !__s390x__
+/* No test for G_GINT64_CONSTANT(val) */
+#else
+Msg( "No definition for G_GINT64_CONSTANT(val) (5839, Unknown) in db\n");
+#ifdef G_GINT64_CONSTANT(val)
+#endif
+#endif
+#if __powerpc64__
+#ifdef G_GINT64_MODIFIER
+	CompareStringConstant(G_GINT64_MODIFIER,"l")
+#else
+Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __powerpc__ && !__powerpc64__
 #ifdef G_GINT64_MODIFIER
 	CompareStringConstant(G_GINT64_MODIFIER,"ll")
 #else
@@ -331,9 +359,61 @@ Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef G_GINT64_MODIFIER
+	CompareStringConstant(G_GINT64_MODIFIER,"l")
+#else
+Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __i386__
+#ifdef G_GINT64_MODIFIER
+	CompareStringConstant(G_GINT64_MODIFIER,"ll")
+#else
+Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef G_GINT64_MODIFIER
+	CompareStringConstant(G_GINT64_MODIFIER,"l")
+#else
+Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef G_GINT64_MODIFIER
+	CompareStringConstant(G_GINT64_MODIFIER,"l")
+#else
+Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef G_GINT64_MODIFIER
+	CompareStringConstant(G_GINT64_MODIFIER,"ll")
+#else
+Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_GINT64_MODIFIER (5840, string) in db\n");
+#ifdef G_GINT64_MODIFIER
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5840,%s);\n", architecture, G_GINT64_MODIFIER);
+#endif
+#endif
+#if __powerpc64__
+#ifdef G_GINT64_FORMAT
+	CompareStringConstant(G_GINT64_FORMAT,"li")
+#else
+Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef G_GINT64_FORMAT
 	CompareStringConstant(G_GINT64_FORMAT,"lli")
 #else
@@ -341,9 +421,61 @@ Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef G_GINT64_FORMAT
+	CompareStringConstant(G_GINT64_FORMAT,"li")
+#else
+Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __i386__
+#ifdef G_GINT64_FORMAT
+	CompareStringConstant(G_GINT64_FORMAT,"lli")
+#else
+Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef G_GINT64_FORMAT
+	CompareStringConstant(G_GINT64_FORMAT,"li")
+#else
+Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef G_GINT64_FORMAT
+	CompareStringConstant(G_GINT64_FORMAT,"li")
+#else
+Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef G_GINT64_FORMAT
+	CompareStringConstant(G_GINT64_FORMAT,"lli")
+#else
+Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_GINT64_FORMAT (5841, string) in db\n");
+#ifdef G_GINT64_FORMAT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5841,%s);\n", architecture, G_GINT64_FORMAT);
+#endif
+#endif
+#if __powerpc64__
+#ifdef G_GUINT64_FORMAT
+	CompareStringConstant(G_GUINT64_FORMAT,"lu")
+#else
+Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef G_GUINT64_FORMAT
 	CompareStringConstant(G_GUINT64_FORMAT,"llu")
 #else
@@ -351,9 +483,61 @@ Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef G_GUINT64_FORMAT
+	CompareStringConstant(G_GUINT64_FORMAT,"lu")
+#else
+Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __i386__
+#ifdef G_GUINT64_FORMAT
+	CompareStringConstant(G_GUINT64_FORMAT,"llu")
+#else
+Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef G_GUINT64_FORMAT
+	CompareStringConstant(G_GUINT64_FORMAT,"lu")
+#else
+Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef G_GUINT64_FORMAT
+	CompareStringConstant(G_GUINT64_FORMAT,"lu")
+#else
+Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef G_GUINT64_FORMAT
+	CompareStringConstant(G_GUINT64_FORMAT,"llu")
+#else
+Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_GUINT64_FORMAT (5842, string) in db\n");
+#ifdef G_GUINT64_FORMAT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5842,%s);\n", architecture, G_GUINT64_FORMAT);
+#endif
+#endif
+#if __powerpc64__
+#ifdef GLIB_SIZEOF_VOID_P
+	CompareConstant(GLIB_SIZEOF_VOID_P,8,5843,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef GLIB_SIZEOF_VOID_P
 	CompareConstant(GLIB_SIZEOF_VOID_P,4,5843,architecture)
 #else
@@ -361,9 +545,61 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef GLIB_SIZEOF_VOID_P
+	CompareConstant(GLIB_SIZEOF_VOID_P,8,5843,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __i386__
+#ifdef GLIB_SIZEOF_VOID_P
+	CompareConstant(GLIB_SIZEOF_VOID_P,4,5843,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef GLIB_SIZEOF_VOID_P
+	CompareConstant(GLIB_SIZEOF_VOID_P,8,5843,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef GLIB_SIZEOF_VOID_P
+	CompareConstant(GLIB_SIZEOF_VOID_P,8,5843,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef GLIB_SIZEOF_VOID_P
+	CompareConstant(GLIB_SIZEOF_VOID_P,4,5843,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for GLIB_SIZEOF_VOID_P (5843, int) in db\n");
+#ifdef GLIB_SIZEOF_VOID_P
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5843,%d);\n", architecture, GLIB_SIZEOF_VOID_P);
+#endif
+#endif
+#if __powerpc64__
+#ifdef GLIB_SIZEOF_LONG
+	CompareConstant(GLIB_SIZEOF_LONG,8,5844,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef GLIB_SIZEOF_LONG
 	CompareConstant(GLIB_SIZEOF_LONG,4,5844,architecture)
 #else
@@ -371,9 +607,61 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef GLIB_SIZEOF_LONG
+	CompareConstant(GLIB_SIZEOF_LONG,8,5844,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __i386__
+#ifdef GLIB_SIZEOF_LONG
+	CompareConstant(GLIB_SIZEOF_LONG,4,5844,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef GLIB_SIZEOF_LONG
+	CompareConstant(GLIB_SIZEOF_LONG,8,5844,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef GLIB_SIZEOF_LONG
+	CompareConstant(GLIB_SIZEOF_LONG,8,5844,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef GLIB_SIZEOF_LONG
+	CompareConstant(GLIB_SIZEOF_LONG,4,5844,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for GLIB_SIZEOF_LONG (5844, int) in db\n");
+#ifdef GLIB_SIZEOF_LONG
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5844,%d);\n", architecture, GLIB_SIZEOF_LONG);
+#endif
+#endif
+#if __powerpc64__
+#ifdef GLIB_SIZEOF_SIZE_T
+	CompareConstant(GLIB_SIZEOF_SIZE_T,8,5845,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef GLIB_SIZEOF_SIZE_T
 	CompareConstant(GLIB_SIZEOF_SIZE_T,4,5845,architecture)
 #else
@@ -381,8 +669,52 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef GLIB_SIZEOF_SIZE_T
+	CompareConstant(GLIB_SIZEOF_SIZE_T,8,5845,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
+cnt++;
 #endif
 
+#elif __i386__
+#ifdef GLIB_SIZEOF_SIZE_T
+	CompareConstant(GLIB_SIZEOF_SIZE_T,4,5845,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef GLIB_SIZEOF_SIZE_T
+	CompareConstant(GLIB_SIZEOF_SIZE_T,8,5845,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef GLIB_SIZEOF_SIZE_T
+	CompareConstant(GLIB_SIZEOF_SIZE_T,8,5845,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef GLIB_SIZEOF_SIZE_T
+	CompareConstant(GLIB_SIZEOF_SIZE_T,4,5845,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for GLIB_SIZEOF_SIZE_T (5845, int) in db\n");
+#ifdef GLIB_SIZEOF_SIZE_T
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5845,%d);\n", architecture, GLIB_SIZEOF_SIZE_T);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"")
@@ -413,26 +745,101 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 /* No test for G_MAXSIZE */
+#elif __powerpc__ && !__powerpc64__
+/* No test for G_MAXSIZE */
+#elif __ia64__
+/* No test for G_MAXSIZE */
+#elif __i386__
+/* No test for G_MAXSIZE */
+#elif __s390x__
+/* No test for G_MAXSIZE */
+#elif __x86_64__
+/* No test for G_MAXSIZE */
+#elif __s390__ && !__s390x__
+/* No test for G_MAXSIZE */
+#else
+Msg( "No definition for G_MAXSIZE (5849, Unknown) in db\n");
+#ifdef G_MAXSIZE
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if __powerpc64__
 /* No test for GPOINTER_TO_INT(p) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for GPOINTER_TO_INT(p) */
+#elif __ia64__
+/* No test for GPOINTER_TO_INT(p) */
+#elif __i386__
+/* No test for GPOINTER_TO_INT(p) */
+#elif __s390x__
+/* No test for GPOINTER_TO_INT(p) */
+#elif __x86_64__
+/* No test for GPOINTER_TO_INT(p) */
+#elif __s390__ && !__s390x__
+/* No test for GPOINTER_TO_INT(p) */
+#else
+Msg( "No definition for GPOINTER_TO_INT(p) (5850, Unknown) in db\n");
+#ifdef GPOINTER_TO_INT(p)
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if __powerpc64__
 /* No test for GPOINTER_TO_UINT(p) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for GPOINTER_TO_UINT(p) */
+#elif __ia64__
+/* No test for GPOINTER_TO_UINT(p) */
+#elif __i386__
+/* No test for GPOINTER_TO_UINT(p) */
+#elif __s390x__
+/* No test for GPOINTER_TO_UINT(p) */
+#elif __x86_64__
+/* No test for GPOINTER_TO_UINT(p) */
+#elif __s390__ && !__s390x__
+/* No test for GPOINTER_TO_UINT(p) */
+#else
+Msg( "No definition for GPOINTER_TO_UINT(p) (5851, Unknown) in db\n");
+#ifdef GPOINTER_TO_UINT(p)
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if __powerpc64__
 /* No test for GINT_TO_POINTER(i) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for GINT_TO_POINTER(i) */
+#elif __ia64__
+/* No test for GINT_TO_POINTER(i) */
+#elif __i386__
+/* No test for GINT_TO_POINTER(i) */
+#elif __s390x__
+/* No test for GINT_TO_POINTER(i) */
+#elif __x86_64__
+/* No test for GINT_TO_POINTER(i) */
+#elif __s390__ && !__s390x__
+/* No test for GINT_TO_POINTER(i) */
+#else
+Msg( "No definition for GINT_TO_POINTER(i) (5852, Unknown) in db\n");
+#ifdef GINT_TO_POINTER(i)
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if __powerpc64__
 /* No test for GUINT_TO_POINTER(u) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for GUINT_TO_POINTER(u) */
+#elif __ia64__
+/* No test for GUINT_TO_POINTER(u) */
+#elif __i386__
+/* No test for GUINT_TO_POINTER(u) */
+#elif __s390x__
+/* No test for GUINT_TO_POINTER(u) */
+#elif __x86_64__
+/* No test for GUINT_TO_POINTER(u) */
+#elif __s390__ && !__s390x__
+/* No test for GUINT_TO_POINTER(u) */
+#else
+Msg( "No definition for GUINT_TO_POINTER(u) (5853, Unknown) in db\n");
+#ifdef GUINT_TO_POINTER(u)
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for g_ATEXIT(proc) */
 #endif
@@ -571,10 +978,25 @@ cnt++;
 /* No test for G_THREADS_IMPL_POSIX */
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 /* No test for G_STATIC_MUTEX_INIT */
+#elif __powerpc__ && !__powerpc64__
+/* No test for G_STATIC_MUTEX_INIT */
+#elif __ia64__
+/* No test for G_STATIC_MUTEX_INIT */
+#elif __i386__
+/* No test for G_STATIC_MUTEX_INIT */
+#elif __s390x__
+/* No test for G_STATIC_MUTEX_INIT */
+#elif __x86_64__
+/* No test for G_STATIC_MUTEX_INIT */
+#elif __s390__ && !__s390x__
+/* No test for G_STATIC_MUTEX_INIT */
+#else
+Msg( "No definition for G_STATIC_MUTEX_INIT (5872, Unknown) in db\n");
+#ifdef G_STATIC_MUTEX_INIT
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for g_static_mutex_get_mutex(mutex) */
 #endif
@@ -627,22 +1049,82 @@ cnt++;
 /* No test for GUINT64_TO_BE(val) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 /* No test for GLONG_TO_LE(val) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for GLONG_TO_LE(val) */
+#elif __ia64__
+/* No test for GLONG_TO_LE(val) */
+#elif __i386__
+/* No test for GLONG_TO_LE(val) */
+#elif __s390x__
+/* No test for GLONG_TO_LE(val) */
+#elif __x86_64__
+/* No test for GLONG_TO_LE(val) */
+#elif __s390__ && !__s390x__
+/* No test for GLONG_TO_LE(val) */
+#else
+Msg( "No definition for GLONG_TO_LE(val) (5886, Unknown) in db\n");
+#ifdef GLONG_TO_LE(val)
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if __powerpc64__
 /* No test for GULONG_TO_LE(val) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for GULONG_TO_LE(val) */
+#elif __ia64__
+/* No test for GULONG_TO_LE(val) */
+#elif __i386__
+/* No test for GULONG_TO_LE(val) */
+#elif __s390x__
+/* No test for GULONG_TO_LE(val) */
+#elif __x86_64__
+/* No test for GULONG_TO_LE(val) */
+#elif __s390__ && !__s390x__
+/* No test for GULONG_TO_LE(val) */
+#else
+Msg( "No definition for GULONG_TO_LE(val) (5887, Unknown) in db\n");
+#ifdef GULONG_TO_LE(val)
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if __powerpc64__
 /* No test for GLONG_TO_BE(val) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for GLONG_TO_BE(val) */
+#elif __ia64__
+/* No test for GLONG_TO_BE(val) */
+#elif __i386__
+/* No test for GLONG_TO_BE(val) */
+#elif __s390x__
+/* No test for GLONG_TO_BE(val) */
+#elif __x86_64__
+/* No test for GLONG_TO_BE(val) */
+#elif __s390__ && !__s390x__
+/* No test for GLONG_TO_BE(val) */
+#else
+Msg( "No definition for GLONG_TO_BE(val) (5888, Unknown) in db\n");
+#ifdef GLONG_TO_BE(val)
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if __powerpc64__
 /* No test for GULONG_TO_BE(val) */
+#elif __powerpc__ && !__powerpc64__
+/* No test for GULONG_TO_BE(val) */
+#elif __ia64__
+/* No test for GULONG_TO_BE(val) */
+#elif __i386__
+/* No test for GULONG_TO_BE(val) */
+#elif __s390x__
+/* No test for GULONG_TO_BE(val) */
+#elif __x86_64__
+/* No test for GULONG_TO_BE(val) */
+#elif __s390__ && !__s390x__
+/* No test for GULONG_TO_BE(val) */
+#else
+Msg( "No definition for GULONG_TO_BE(val) (5889, Unknown) in db\n");
+#ifdef GULONG_TO_BE(val)
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for GINT_TO_LE(val) */
 #endif
@@ -1737,10 +2219,174 @@ cnt++;
 
 #endif
 
+#if __powerpc64__
+#ifdef G_VA_COPY_AS_ARRAY
+	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture)
+#else
+Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef G_VA_COPY_AS_ARRAY
+	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture)
+#else
+Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef G_VA_COPY_AS_ARRAY
+	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture)
+#else
+Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef G_VA_COPY_AS_ARRAY
+	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture)
+#else
+Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_VA_COPY_AS_ARRAY (9488, int) in db\n");
+#ifdef G_VA_COPY_AS_ARRAY
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,9488,%d);\n", architecture, G_VA_COPY_AS_ARRAY);
+#endif
+#endif
+#if __powerpc64__
+#ifdef GLIB_LSB_PADDING_SIZE
+	CompareConstant(GLIB_LSB_PADDING_SIZE,40,9489,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef GLIB_LSB_PADDING_SIZE
+	CompareConstant(GLIB_LSB_PADDING_SIZE,24,9489,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef GLIB_LSB_PADDING_SIZE
+	CompareConstant(GLIB_LSB_PADDING_SIZE,40,9489,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef GLIB_LSB_PADDING_SIZE
+	CompareConstant(GLIB_LSB_PADDING_SIZE,24,9489,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef GLIB_LSB_PADDING_SIZE
+	CompareConstant(GLIB_LSB_PADDING_SIZE,40,9489,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef GLIB_LSB_PADDING_SIZE
+	CompareConstant(GLIB_LSB_PADDING_SIZE,40,9489,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef GLIB_LSB_PADDING_SIZE
+	CompareConstant(GLIB_LSB_PADDING_SIZE,24,9489,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for GLIB_LSB_PADDING_SIZE (9489, int) in db\n");
+#ifdef GLIB_LSB_PADDING_SIZE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,9489,%d);\n", architecture, GLIB_LSB_PADDING_SIZE);
+#endif
+#endif
+#if __powerpc64__
+#ifdef GLIB_LSB_DATA_SIZE
+	CompareConstant(GLIB_LSB_DATA_SIZE,8,9490,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
+#ifdef GLIB_LSB_DATA_SIZE
+	CompareConstant(GLIB_LSB_DATA_SIZE,4,9490,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
+cnt++;
+#endif
+
+#elif __ia64__
+#ifdef GLIB_LSB_DATA_SIZE
+	CompareConstant(GLIB_LSB_DATA_SIZE,8,9490,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
+cnt++;
+#endif
+
+#elif __i386__
+#ifdef GLIB_LSB_DATA_SIZE
+	CompareConstant(GLIB_LSB_DATA_SIZE,4,9490,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef GLIB_LSB_DATA_SIZE
+	CompareConstant(GLIB_LSB_DATA_SIZE,8,9490,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef GLIB_LSB_DATA_SIZE
+	CompareConstant(GLIB_LSB_DATA_SIZE,8,9490,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef GLIB_LSB_DATA_SIZE
+	CompareConstant(GLIB_LSB_DATA_SIZE,4,9490,architecture)
+#else
+Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for GLIB_LSB_DATA_SIZE (9490, int) in db\n");
+#ifdef GLIB_LSB_DATA_SIZE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,9490,%d);\n", architecture, GLIB_LSB_DATA_SIZE);
+#endif
+#endif
 #if __i386__
 CheckTypeSize(guint16,2, 11396, 2)
 #elif __x86_64__
 CheckTypeSize(guint16,2, 11396, 11)
+#elif __ia64__
+CheckTypeSize(guint16,2, 11396, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11396,0);
 Msg("Find size of guint16 (11396)\n");
@@ -1750,6 +2396,8 @@ Msg("Find size of guint16 (11396)\n");
 CheckTypeSize(const guint16,2, 11397, 2)
 #elif __x86_64__
 CheckTypeSize(const guint16,2, 11397, 11)
+#elif __ia64__
+CheckTypeSize(const guint16,2, 11397, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11397,0);
 Msg("Find size of const guint16 (11397)\n");
@@ -1757,6 +2405,7 @@ Msg("Find size of const guint16 (11397)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11398,0);
 Msg("Find size of const guint16 * (11398)\n");
@@ -1766,6 +2415,8 @@ Msg("Find size of const guint16 * (11398)\n");
 CheckTypeSize(const const guint16 *,4, 11399, 2)
 #elif __x86_64__
 CheckTypeSize(const const guint16 *,8, 11399, 11)
+#elif __ia64__
+CheckTypeSize(const const guint16 *,8, 11399, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11399,0);
 Msg("Find size of const const guint16 * (11399)\n");
@@ -1775,6 +2426,8 @@ Msg("Find size of const const guint16 * (11399)\n");
 CheckTypeSize(gint,4, 11400, 2)
 #elif __x86_64__
 CheckTypeSize(gint,4, 11400, 11)
+#elif __ia64__
+CheckTypeSize(gint,4, 11400, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11400,0);
 Msg("Find size of gint (11400)\n");
@@ -1784,6 +2437,8 @@ Msg("Find size of gint (11400)\n");
 CheckTypeSize(gboolean,4, 11401, 2)
 #elif __x86_64__
 CheckTypeSize(gboolean,4, 11401, 11)
+#elif __ia64__
+CheckTypeSize(gboolean,4, 11401, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11401,0);
 Msg("Find size of gboolean (11401)\n");
@@ -1793,6 +2448,8 @@ Msg("Find size of gboolean (11401)\n");
 CheckTypeSize(guint,4, 11402, 2)
 #elif __x86_64__
 CheckTypeSize(guint,4, 11402, 11)
+#elif __ia64__
+CheckTypeSize(guint,4, 11402, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11402,0);
 Msg("Find size of guint (11402)\n");
@@ -1814,6 +2471,14 @@ CheckMemberSize(struct _GThread,joinable,4,11,41305)
 CheckOffset(struct _GThread,joinable,16,11,41305)
 CheckMemberSize(struct _GThread,priority,4,11,41310)
 CheckOffset(struct _GThread,priority,20,11,41310)
+#elif __ia64__
+CheckTypeSize(struct _GThread,24, 11403, 3)
+CheckMemberSize(struct _GThread,data,8,3,41304)
+CheckOffset(struct _GThread,data,8,3,41304)
+CheckMemberSize(struct _GThread,joinable,4,3,41305)
+CheckOffset(struct _GThread,joinable,16,3,41305)
+CheckMemberSize(struct _GThread,priority,4,3,41310)
+CheckOffset(struct _GThread,priority,20,3,41310)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11403,0);
 Msg("Find size of _GThread (11403)\n");
@@ -1823,6 +2488,8 @@ Msg("Find size of _GThread (11403)\n");
 CheckTypeSize(gpointer,4, 11404, 2)
 #elif __x86_64__
 CheckTypeSize(gpointer,8, 11404, 11)
+#elif __ia64__
+CheckTypeSize(gpointer,8, 11404, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11404,0);
 Msg("Find size of gpointer (11404)\n");
@@ -1830,6 +2497,7 @@ Msg("Find size of gpointer (11404)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11405,0);
 Msg("Find size of fptr_glib_6 (11405)\n");
@@ -1839,6 +2507,8 @@ Msg("Find size of fptr_glib_6 (11405)\n");
 CheckTypeSize(GThreadFunc,4, 11406, 2)
 #elif __x86_64__
 CheckTypeSize(GThreadFunc,8, 11406, 11)
+#elif __ia64__
+CheckTypeSize(GThreadFunc,8, 11406, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11406,0);
 Msg("Find size of GThreadFunc (11406)\n");
@@ -1854,6 +2524,11 @@ CheckEnum("G_THREAD_PRIORITY_LOW",G_THREAD_PRIORITY_LOW,0);
 CheckEnum("G_THREAD_PRIORITY_NORMAL",G_THREAD_PRIORITY_NORMAL,1);
 CheckEnum("G_THREAD_PRIORITY_HIGH",G_THREAD_PRIORITY_HIGH,2);
 CheckEnum("G_THREAD_PRIORITY_URGENT",G_THREAD_PRIORITY_URGENT,3);
+#elif __ia64__
+CheckEnum("G_THREAD_PRIORITY_LOW",G_THREAD_PRIORITY_LOW,0);
+CheckEnum("G_THREAD_PRIORITY_NORMAL",G_THREAD_PRIORITY_NORMAL,1);
+CheckEnum("G_THREAD_PRIORITY_HIGH",G_THREAD_PRIORITY_HIGH,2);
+CheckEnum("G_THREAD_PRIORITY_URGENT",G_THREAD_PRIORITY_URGENT,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11407,0);
 Msg("Find size of anon-glib-2.0/glib.h-72 (11407)\n");
@@ -1863,6 +2538,8 @@ Msg("Find size of anon-glib-2.0/glib.h-72 (11407)\n");
 CheckTypeSize(GThreadPriority,4, 11408, 2)
 #elif __x86_64__
 CheckTypeSize(GThreadPriority,4, 11408, 11)
+#elif __ia64__
+CheckTypeSize(GThreadPriority,4, 11408, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11408,0);
 Msg("Find size of GThreadPriority (11408)\n");
@@ -1872,6 +2549,8 @@ Msg("Find size of GThreadPriority (11408)\n");
 CheckTypeSize(GThread,16, 11409, 2)
 #elif __x86_64__
 CheckTypeSize(GThread,24, 11409, 11)
+#elif __ia64__
+CheckTypeSize(GThread,24, 11409, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11409,0);
 Msg("Find size of GThread (11409)\n");
@@ -1881,6 +2560,8 @@ Msg("Find size of GThread (11409)\n");
 CheckTypeSize(GThread *,4, 11410, 2)
 #elif __x86_64__
 CheckTypeSize(GThread *,8, 11410, 11)
+#elif __ia64__
+CheckTypeSize(GThread *,8, 11410, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11410,0);
 Msg("Find size of GThread * (11410)\n");
@@ -1898,6 +2579,12 @@ CheckMemberSize(struct _GError,code,4,11,41312)
 CheckOffset(struct _GError,code,4,11,41312)
 CheckMemberSize(struct _GError,message,8,11,41313)
 CheckOffset(struct _GError,message,8,11,41313)
+#elif __ia64__
+CheckTypeSize(struct _GError,16, 11411, 3)
+CheckMemberSize(struct _GError,code,4,3,41312)
+CheckOffset(struct _GError,code,4,3,41312)
+CheckMemberSize(struct _GError,message,8,3,41313)
+CheckOffset(struct _GError,message,8,3,41313)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11411,0);
 Msg("Find size of _GError (11411)\n");
@@ -1907,6 +2594,8 @@ Msg("Find size of _GError (11411)\n");
 CheckTypeSize(guint32,4, 11412, 2)
 #elif __x86_64__
 CheckTypeSize(guint32,4, 11412, 11)
+#elif __ia64__
+CheckTypeSize(guint32,4, 11412, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11412,0);
 Msg("Find size of guint32 (11412)\n");
@@ -1916,6 +2605,8 @@ Msg("Find size of guint32 (11412)\n");
 CheckTypeSize(GQuark,4, 11413, 2)
 #elif __x86_64__
 CheckTypeSize(GQuark,4, 11413, 11)
+#elif __ia64__
+CheckTypeSize(GQuark,4, 11413, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11413,0);
 Msg("Find size of GQuark (11413)\n");
@@ -1925,6 +2616,8 @@ Msg("Find size of GQuark (11413)\n");
 CheckTypeSize(gchar,1, 11414, 2)
 #elif __x86_64__
 CheckTypeSize(gchar,1, 11414, 11)
+#elif __ia64__
+CheckTypeSize(gchar,1, 11414, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11414,0);
 Msg("Find size of gchar (11414)\n");
@@ -1934,6 +2627,8 @@ Msg("Find size of gchar (11414)\n");
 CheckTypeSize(gchar *,4, 11415, 2)
 #elif __x86_64__
 CheckTypeSize(gchar *,8, 11415, 11)
+#elif __ia64__
+CheckTypeSize(gchar *,8, 11415, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11415,0);
 Msg("Find size of gchar * (11415)\n");
@@ -1943,6 +2638,8 @@ Msg("Find size of gchar * (11415)\n");
 CheckTypeSize(GError,12, 11416, 2)
 #elif __x86_64__
 CheckTypeSize(GError,16, 11416, 11)
+#elif __ia64__
+CheckTypeSize(GError,16, 11416, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11416,0);
 Msg("Find size of GError (11416)\n");
@@ -1952,6 +2649,8 @@ Msg("Find size of GError (11416)\n");
 CheckTypeSize(GError *,4, 11417, 2)
 #elif __x86_64__
 CheckTypeSize(GError *,8, 11417, 11)
+#elif __ia64__
+CheckTypeSize(GError *,8, 11417, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11417,0);
 Msg("Find size of GError * (11417)\n");
@@ -1961,6 +2660,8 @@ Msg("Find size of GError * (11417)\n");
 CheckTypeSize(const GError,12, 11418, 2)
 #elif __x86_64__
 CheckTypeSize(const GError,16, 11418, 11)
+#elif __ia64__
+CheckTypeSize(const GError,16, 11418, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11418,0);
 Msg("Find size of const GError (11418)\n");
@@ -1968,6 +2669,7 @@ Msg("Find size of const GError (11418)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11419,0);
 Msg("Find size of const GError * (11419)\n");
@@ -1977,6 +2679,8 @@ Msg("Find size of const GError * (11419)\n");
 CheckTypeSize(const gchar,1, 11420, 2)
 #elif __x86_64__
 CheckTypeSize(const gchar,1, 11420, 11)
+#elif __ia64__
+CheckTypeSize(const gchar,1, 11420, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11420,0);
 Msg("Find size of const gchar (11420)\n");
@@ -1984,6 +2688,7 @@ Msg("Find size of const gchar (11420)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11421,0);
 Msg("Find size of const gchar * (11421)\n");
@@ -1991,6 +2696,7 @@ Msg("Find size of const gchar * (11421)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11422,0);
 Msg("Find size of fptr_glib_92 (11422)\n");
@@ -2000,6 +2706,8 @@ Msg("Find size of fptr_glib_92 (11422)\n");
 CheckTypeSize(GPrintFunc,4, 11423, 2)
 #elif __x86_64__
 CheckTypeSize(GPrintFunc,8, 11423, 11)
+#elif __ia64__
+CheckTypeSize(GPrintFunc,8, 11423, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11423,0);
 Msg("Find size of GPrintFunc (11423)\n");
@@ -2009,6 +2717,8 @@ Msg("Find size of GPrintFunc (11423)\n");
 CheckTypeSize(GMemChunk,0, 11425, 2)
 #elif __x86_64__
 CheckTypeSize(GMemChunk,0, 11425, 11)
+#elif __ia64__
+CheckTypeSize(GMemChunk,0, 11425, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11425,0);
 Msg("Find size of GMemChunk (11425)\n");
@@ -2018,6 +2728,8 @@ Msg("Find size of GMemChunk (11425)\n");
 CheckTypeSize(GMemChunk *,4, 11426, 2)
 #elif __x86_64__
 CheckTypeSize(GMemChunk *,8, 11426, 11)
+#elif __ia64__
+CheckTypeSize(GMemChunk *,8, 11426, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11426,0);
 Msg("Find size of GMemChunk * (11426)\n");
@@ -2027,6 +2739,8 @@ Msg("Find size of GMemChunk * (11426)\n");
 CheckTypeSize(gulong,4, 11427, 2)
 #elif __x86_64__
 CheckTypeSize(gulong,8, 11427, 11)
+#elif __ia64__
+CheckTypeSize(gulong,8, 11427, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11427,0);
 Msg("Find size of gulong (11427)\n");
@@ -2044,6 +2758,12 @@ CheckMemberSize(struct _GList,next,8,11,41316)
 CheckOffset(struct _GList,next,8,11,41316)
 CheckMemberSize(struct _GList,prev,8,11,41317)
 CheckOffset(struct _GList,prev,16,11,41317)
+#elif __ia64__
+CheckTypeSize(struct _GList,24, 11428, 3)
+CheckMemberSize(struct _GList,next,8,3,41316)
+CheckOffset(struct _GList,next,8,3,41316)
+CheckMemberSize(struct _GList,prev,8,3,41317)
+CheckOffset(struct _GList,prev,16,3,41317)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11428,0);
 Msg("Find size of _GList (11428)\n");
@@ -2053,6 +2773,8 @@ Msg("Find size of _GList (11428)\n");
 CheckTypeSize(GList,12, 11429, 2)
 #elif __x86_64__
 CheckTypeSize(GList,24, 11429, 11)
+#elif __ia64__
+CheckTypeSize(GList,24, 11429, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11429,0);
 Msg("Find size of GList (11429)\n");
@@ -2062,6 +2784,8 @@ Msg("Find size of GList (11429)\n");
 CheckTypeSize(GList *,4, 11430, 2)
 #elif __x86_64__
 CheckTypeSize(GList *,8, 11430, 11)
+#elif __ia64__
+CheckTypeSize(GList *,8, 11430, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11430,0);
 Msg("Find size of GList * (11430)\n");
@@ -2071,6 +2795,8 @@ Msg("Find size of GList * (11430)\n");
 CheckTypeSize(GMainLoop,0, 11432, 2)
 #elif __x86_64__
 CheckTypeSize(GMainLoop,0, 11432, 11)
+#elif __ia64__
+CheckTypeSize(GMainLoop,0, 11432, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11432,0);
 Msg("Find size of GMainLoop (11432)\n");
@@ -2080,6 +2806,8 @@ Msg("Find size of GMainLoop (11432)\n");
 CheckTypeSize(GMainLoop *,4, 11433, 2)
 #elif __x86_64__
 CheckTypeSize(GMainLoop *,8, 11433, 11)
+#elif __ia64__
+CheckTypeSize(GMainLoop *,8, 11433, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11433,0);
 Msg("Find size of GMainLoop * (11433)\n");
@@ -2105,6 +2833,16 @@ CheckMemberSize(struct _GHookList,finalize_hook,8,11,41334)
 CheckOffset(struct _GHookList,finalize_hook,32,11,41334)
 CheckMemberSize(struct _GHookList,dummy,16,11,41335)
 CheckOffset(struct _GHookList,dummy,40,11,41335)
+#elif __ia64__
+CheckTypeSize(struct _GHookList,56, 11434, 3)
+CheckMemberSize(struct _GHookList,hooks,8,3,41330)
+CheckOffset(struct _GHookList,hooks,16,3,41330)
+CheckMemberSize(struct _GHookList,hook_memchunk,8,3,41331)
+CheckOffset(struct _GHookList,hook_memchunk,24,3,41331)
+CheckMemberSize(struct _GHookList,finalize_hook,8,3,41334)
+CheckOffset(struct _GHookList,finalize_hook,32,3,41334)
+CheckMemberSize(struct _GHookList,dummy,16,3,41335)
+CheckOffset(struct _GHookList,dummy,40,3,41335)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11434,0);
 Msg("Find size of _GHookList (11434)\n");
@@ -2142,6 +2880,22 @@ CheckMemberSize(struct _GHook,func,8,11,41327)
 CheckOffset(struct _GHook,func,48,11,41327)
 CheckMemberSize(struct _GHook,destroy,8,11,41329)
 CheckOffset(struct _GHook,destroy,56,11,41329)
+#elif __ia64__
+CheckTypeSize(struct _GHook,64, 11435, 3)
+CheckMemberSize(struct _GHook,next,8,3,41322)
+CheckOffset(struct _GHook,next,8,3,41322)
+CheckMemberSize(struct _GHook,prev,8,3,41323)
+CheckOffset(struct _GHook,prev,16,3,41323)
+CheckMemberSize(struct _GHook,ref_count,4,3,41324)
+CheckOffset(struct _GHook,ref_count,24,3,41324)
+CheckMemberSize(struct _GHook,hook_id,8,3,41325)
+CheckOffset(struct _GHook,hook_id,32,3,41325)
+CheckMemberSize(struct _GHook,flags,4,3,41326)
+CheckOffset(struct _GHook,flags,40,3,41326)
+CheckMemberSize(struct _GHook,func,8,3,41327)
+CheckOffset(struct _GHook,func,48,3,41327)
+CheckMemberSize(struct _GHook,destroy,8,3,41329)
+CheckOffset(struct _GHook,destroy,56,3,41329)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11435,0);
 Msg("Find size of _GHook (11435)\n");
@@ -2151,6 +2905,8 @@ Msg("Find size of _GHook (11435)\n");
 CheckTypeSize(GHook,32, 11436, 2)
 #elif __x86_64__
 CheckTypeSize(GHook,64, 11436, 11)
+#elif __ia64__
+CheckTypeSize(GHook,64, 11436, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11436,0);
 Msg("Find size of GHook (11436)\n");
@@ -2160,6 +2916,8 @@ Msg("Find size of GHook (11436)\n");
 CheckTypeSize(GHook *,4, 11437, 2)
 #elif __x86_64__
 CheckTypeSize(GHook *,8, 11437, 11)
+#elif __ia64__
+CheckTypeSize(GHook *,8, 11437, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11437,0);
 Msg("Find size of GHook * (11437)\n");
@@ -2167,6 +2925,7 @@ Msg("Find size of GHook * (11437)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11438,0);
 Msg("Find size of fptr_glib_390 (11438)\n");
@@ -2176,6 +2935,8 @@ Msg("Find size of fptr_glib_390 (11438)\n");
 CheckTypeSize(GDestroyNotify,4, 11439, 2)
 #elif __x86_64__
 CheckTypeSize(GDestroyNotify,8, 11439, 11)
+#elif __ia64__
+CheckTypeSize(GDestroyNotify,8, 11439, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11439,0);
 Msg("Find size of GDestroyNotify (11439)\n");
@@ -2185,6 +2946,8 @@ Msg("Find size of GDestroyNotify (11439)\n");
 CheckTypeSize(GHookList,28, 11440, 2)
 #elif __x86_64__
 CheckTypeSize(GHookList,56, 11440, 11)
+#elif __ia64__
+CheckTypeSize(GHookList,56, 11440, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11440,0);
 Msg("Find size of GHookList (11440)\n");
@@ -2194,6 +2957,8 @@ Msg("Find size of GHookList (11440)\n");
 CheckTypeSize(GHookList *,4, 11441, 2)
 #elif __x86_64__
 CheckTypeSize(GHookList *,8, 11441, 11)
+#elif __ia64__
+CheckTypeSize(GHookList *,8, 11441, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11441,0);
 Msg("Find size of GHookList * (11441)\n");
@@ -2201,6 +2966,7 @@ Msg("Find size of GHookList * (11441)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11442,0);
 Msg("Find size of fptr_glib_232 (11442)\n");
@@ -2210,6 +2976,8 @@ Msg("Find size of fptr_glib_232 (11442)\n");
 CheckTypeSize(GHookFinalizeFunc,4, 11443, 2)
 #elif __x86_64__
 CheckTypeSize(GHookFinalizeFunc,8, 11443, 11)
+#elif __ia64__
+CheckTypeSize(GHookFinalizeFunc,8, 11443, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11443,0);
 Msg("Find size of GHookFinalizeFunc (11443)\n");
@@ -2220,6 +2988,7 @@ Msg("Find size of GHookFinalizeFunc (11443)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11445,0);
 Msg("Find size of const gchar * * (11445)\n");
@@ -2227,6 +2996,7 @@ Msg("Find size of const gchar * * (11445)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11446,0);
 Msg("Find size of const gchar * * * (11446)\n");
@@ -2244,6 +3014,12 @@ CheckMemberSize(struct _GQueue,tail,8,11,41337)
 CheckOffset(struct _GQueue,tail,8,11,41337)
 CheckMemberSize(struct _GQueue,length,4,11,41338)
 CheckOffset(struct _GQueue,length,16,11,41338)
+#elif __ia64__
+CheckTypeSize(struct _GQueue,24, 11447, 3)
+CheckMemberSize(struct _GQueue,tail,8,3,41337)
+CheckOffset(struct _GQueue,tail,8,3,41337)
+CheckMemberSize(struct _GQueue,length,4,3,41338)
+CheckOffset(struct _GQueue,length,16,3,41338)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11447,0);
 Msg("Find size of _GQueue (11447)\n");
@@ -2253,6 +3029,8 @@ Msg("Find size of _GQueue (11447)\n");
 CheckTypeSize(GQueue,12, 11448, 2)
 #elif __x86_64__
 CheckTypeSize(GQueue,24, 11448, 11)
+#elif __ia64__
+CheckTypeSize(GQueue,24, 11448, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11448,0);
 Msg("Find size of GQueue (11448)\n");
@@ -2262,6 +3040,8 @@ Msg("Find size of GQueue (11448)\n");
 CheckTypeSize(GQueue *,4, 11449, 2)
 #elif __x86_64__
 CheckTypeSize(GQueue *,8, 11449, 11)
+#elif __ia64__
+CheckTypeSize(GQueue *,8, 11449, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11449,0);
 Msg("Find size of GQueue * (11449)\n");
@@ -2275,6 +3055,10 @@ CheckOffset(struct _GSList,next,4,2,41340)
 CheckTypeSize(struct _GSList,16, 11450, 11)
 CheckMemberSize(struct _GSList,next,8,11,41340)
 CheckOffset(struct _GSList,next,8,11,41340)
+#elif __ia64__
+CheckTypeSize(struct _GSList,16, 11450, 3)
+CheckMemberSize(struct _GSList,next,8,3,41340)
+CheckOffset(struct _GSList,next,8,3,41340)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11450,0);
 Msg("Find size of _GSList (11450)\n");
@@ -2284,6 +3068,8 @@ Msg("Find size of _GSList (11450)\n");
 CheckTypeSize(GSList,8, 11451, 2)
 #elif __x86_64__
 CheckTypeSize(GSList,16, 11451, 11)
+#elif __ia64__
+CheckTypeSize(GSList,16, 11451, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11451,0);
 Msg("Find size of GSList (11451)\n");
@@ -2293,6 +3079,8 @@ Msg("Find size of GSList (11451)\n");
 CheckTypeSize(GSList *,4, 11452, 2)
 #elif __x86_64__
 CheckTypeSize(GSList *,8, 11452, 11)
+#elif __ia64__
+CheckTypeSize(GSList *,8, 11452, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11452,0);
 Msg("Find size of GSList * (11452)\n");
@@ -2305,11 +3093,17 @@ CheckOffset(struct _GString,len,4,2,41342)
 CheckMemberSize(struct _GString,allocated_len,4,2,41343)
 CheckOffset(struct _GString,allocated_len,8,2,41343)
 #elif __x86_64__
-CheckTypeSize(struct _GString,16, 11453, 11)
-CheckMemberSize(struct _GString,len,4,11,41342)
+CheckTypeSize(struct _GString,24, 11453, 11)
+CheckMemberSize(struct _GString,len,8,11,41342)
 CheckOffset(struct _GString,len,8,11,41342)
-CheckMemberSize(struct _GString,allocated_len,4,11,41343)
-CheckOffset(struct _GString,allocated_len,12,11,41343)
+CheckMemberSize(struct _GString,allocated_len,8,11,41343)
+CheckOffset(struct _GString,allocated_len,16,11,41343)
+#elif __ia64__
+CheckTypeSize(struct _GString,24, 11453, 3)
+CheckMemberSize(struct _GString,len,8,3,41342)
+CheckOffset(struct _GString,len,8,3,41342)
+CheckMemberSize(struct _GString,allocated_len,8,3,41343)
+CheckOffset(struct _GString,allocated_len,16,3,41343)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11453,0);
 Msg("Find size of _GString (11453)\n");
@@ -2317,17 +3111,14 @@ Msg("Find size of _GString (11453)\n");
 
 #if __i386__
 CheckTypeSize(gsize,4, 11454, 2)
-#elif __x86_64__
-CheckTypeSize(gsize,4, 11454, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11454,0);
-Msg("Find size of gsize (11454)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(GString,12, 11455, 2)
 #elif __x86_64__
-CheckTypeSize(GString,16, 11455, 11)
+CheckTypeSize(GString,24, 11455, 11)
+#elif __ia64__
+CheckTypeSize(GString,24, 11455, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11455,0);
 Msg("Find size of GString (11455)\n");
@@ -2337,6 +3128,8 @@ Msg("Find size of GString (11455)\n");
 CheckTypeSize(GString *,4, 11456, 2)
 #elif __x86_64__
 CheckTypeSize(GString *,8, 11456, 11)
+#elif __ia64__
+CheckTypeSize(GString *,8, 11456, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11456,0);
 Msg("Find size of GString * (11456)\n");
@@ -2350,6 +3143,10 @@ CheckOffset(struct _GPtrArray,len,4,2,41345)
 CheckTypeSize(struct _GPtrArray,16, 11457, 11)
 CheckMemberSize(struct _GPtrArray,len,4,11,41345)
 CheckOffset(struct _GPtrArray,len,8,11,41345)
+#elif __ia64__
+CheckTypeSize(struct _GPtrArray,16, 11457, 3)
+CheckMemberSize(struct _GPtrArray,len,4,3,41345)
+CheckOffset(struct _GPtrArray,len,8,3,41345)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11457,0);
 Msg("Find size of _GPtrArray (11457)\n");
@@ -2359,6 +3156,8 @@ Msg("Find size of _GPtrArray (11457)\n");
 CheckTypeSize(gpointer *,4, 11458, 2)
 #elif __x86_64__
 CheckTypeSize(gpointer *,8, 11458, 11)
+#elif __ia64__
+CheckTypeSize(gpointer *,8, 11458, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11458,0);
 Msg("Find size of gpointer * (11458)\n");
@@ -2368,6 +3167,8 @@ Msg("Find size of gpointer * (11458)\n");
 CheckTypeSize(GPtrArray,8, 11459, 2)
 #elif __x86_64__
 CheckTypeSize(GPtrArray,16, 11459, 11)
+#elif __ia64__
+CheckTypeSize(GPtrArray,16, 11459, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11459,0);
 Msg("Find size of GPtrArray (11459)\n");
@@ -2377,6 +3178,8 @@ Msg("Find size of GPtrArray (11459)\n");
 CheckTypeSize(GPtrArray *,4, 11460, 2)
 #elif __x86_64__
 CheckTypeSize(GPtrArray *,8, 11460, 11)
+#elif __ia64__
+CheckTypeSize(GPtrArray *,8, 11460, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11460,0);
 Msg("Find size of GPtrArray * (11460)\n");
@@ -2386,6 +3189,8 @@ Msg("Find size of GPtrArray * (11460)\n");
 CheckTypeSize(GRand,0, 11462, 2)
 #elif __x86_64__
 CheckTypeSize(GRand,0, 11462, 11)
+#elif __ia64__
+CheckTypeSize(GRand,0, 11462, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11462,0);
 Msg("Find size of GRand (11462)\n");
@@ -2395,6 +3200,8 @@ Msg("Find size of GRand (11462)\n");
 CheckTypeSize(GRand *,4, 11463, 2)
 #elif __x86_64__
 CheckTypeSize(GRand *,8, 11463, 11)
+#elif __ia64__
+CheckTypeSize(GRand *,8, 11463, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11463,0);
 Msg("Find size of GRand * (11463)\n");
@@ -2404,6 +3211,8 @@ Msg("Find size of GRand * (11463)\n");
 CheckTypeSize(const guint32,4, 11464, 2)
 #elif __x86_64__
 CheckTypeSize(const guint32,4, 11464, 11)
+#elif __ia64__
+CheckTypeSize(const guint32,4, 11464, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11464,0);
 Msg("Find size of const guint32 (11464)\n");
@@ -2411,6 +3220,7 @@ Msg("Find size of const guint32 (11464)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11465,0);
 Msg("Find size of const guint32 * (11465)\n");
@@ -2420,6 +3230,8 @@ Msg("Find size of const guint32 * (11465)\n");
 CheckTypeSize(GDir,0, 11467, 2)
 #elif __x86_64__
 CheckTypeSize(GDir,0, 11467, 11)
+#elif __ia64__
+CheckTypeSize(GDir,0, 11467, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11467,0);
 Msg("Find size of GDir (11467)\n");
@@ -2429,6 +3241,8 @@ Msg("Find size of GDir (11467)\n");
 CheckTypeSize(GDir *,4, 11468, 2)
 #elif __x86_64__
 CheckTypeSize(GDir *,8, 11468, 11)
+#elif __ia64__
+CheckTypeSize(GDir *,8, 11468, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11468,0);
 Msg("Find size of GDir * (11468)\n");
@@ -2438,6 +3252,8 @@ Msg("Find size of GDir * (11468)\n");
 CheckTypeSize(const const gchar *,4, 11469, 2)
 #elif __x86_64__
 CheckTypeSize(const const gchar *,8, 11469, 11)
+#elif __ia64__
+CheckTypeSize(const const gchar *,8, 11469, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11469,0);
 Msg("Find size of const const gchar * (11469)\n");
@@ -2445,6 +3261,7 @@ Msg("Find size of const const gchar * (11469)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11470,0);
 Msg("Find size of const const gchar * * (11470)\n");
@@ -2454,6 +3271,8 @@ Msg("Find size of const const gchar * * (11470)\n");
 CheckTypeSize(GRelation,0, 11472, 2)
 #elif __x86_64__
 CheckTypeSize(GRelation,0, 11472, 11)
+#elif __ia64__
+CheckTypeSize(GRelation,0, 11472, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11472,0);
 Msg("Find size of GRelation (11472)\n");
@@ -2463,6 +3282,8 @@ Msg("Find size of GRelation (11472)\n");
 CheckTypeSize(GRelation *,4, 11473, 2)
 #elif __x86_64__
 CheckTypeSize(GRelation *,8, 11473, 11)
+#elif __ia64__
+CheckTypeSize(GRelation *,8, 11473, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11473,0);
 Msg("Find size of GRelation * (11473)\n");
@@ -2472,6 +3293,8 @@ Msg("Find size of GRelation * (11473)\n");
 CheckTypeSize(GOptionContext,0, 11475, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionContext,0, 11475, 11)
+#elif __ia64__
+CheckTypeSize(GOptionContext,0, 11475, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11475,0);
 Msg("Find size of GOptionContext (11475)\n");
@@ -2481,6 +3304,8 @@ Msg("Find size of GOptionContext (11475)\n");
 CheckTypeSize(GOptionContext *,4, 11476, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionContext *,8, 11476, 11)
+#elif __ia64__
+CheckTypeSize(GOptionContext *,8, 11476, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11476,0);
 Msg("Find size of GOptionContext * (11476)\n");
@@ -2490,6 +3315,8 @@ Msg("Find size of GOptionContext * (11476)\n");
 CheckTypeSize(GKeyFile,0, 11478, 2)
 #elif __x86_64__
 CheckTypeSize(GKeyFile,0, 11478, 11)
+#elif __ia64__
+CheckTypeSize(GKeyFile,0, 11478, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11478,0);
 Msg("Find size of GKeyFile (11478)\n");
@@ -2499,22 +3326,16 @@ Msg("Find size of GKeyFile (11478)\n");
 CheckTypeSize(GKeyFile *,4, 11479, 2)
 #elif __x86_64__
 CheckTypeSize(GKeyFile *,8, 11479, 11)
+#elif __ia64__
+CheckTypeSize(GKeyFile *,8, 11479, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11479,0);
 Msg("Find size of GKeyFile * (11479)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(gsize *,4, 11480, 2)
 #elif __x86_64__
-CheckTypeSize(gsize *,8, 11480, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11480,0);
-Msg("Find size of gsize * (11480)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11481,0);
 Msg("Find size of GError * * (11481)\n");
@@ -2524,6 +3345,8 @@ Msg("Find size of GError * * (11481)\n");
 CheckTypeSize(GPatternSpec,0, 11483, 2)
 #elif __x86_64__
 CheckTypeSize(GPatternSpec,0, 11483, 11)
+#elif __ia64__
+CheckTypeSize(GPatternSpec,0, 11483, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11483,0);
 Msg("Find size of GPatternSpec (11483)\n");
@@ -2533,6 +3356,8 @@ Msg("Find size of GPatternSpec (11483)\n");
 CheckTypeSize(GPatternSpec *,4, 11484, 2)
 #elif __x86_64__
 CheckTypeSize(GPatternSpec *,8, 11484, 11)
+#elif __ia64__
+CheckTypeSize(GPatternSpec *,8, 11484, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11484,0);
 Msg("Find size of GPatternSpec * (11484)\n");
@@ -2540,6 +3365,7 @@ Msg("Find size of GPatternSpec * (11484)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11485,0);
 Msg("Find size of gchar * * (11485)\n");
@@ -2549,6 +3375,8 @@ Msg("Find size of gchar * * (11485)\n");
 CheckTypeSize(gunichar,4, 11486, 2)
 #elif __x86_64__
 CheckTypeSize(gunichar,4, 11486, 11)
+#elif __ia64__
+CheckTypeSize(gunichar,4, 11486, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11486,0);
 Msg("Find size of gunichar (11486)\n");
@@ -2574,6 +3402,16 @@ CheckMemberSize(struct _GCompletion,cache,8,11,41350)
 CheckOffset(struct _GCompletion,cache,24,11,41350)
 CheckMemberSize(struct _GCompletion,strncmp_func,8,11,41354)
 CheckOffset(struct _GCompletion,strncmp_func,32,11,41354)
+#elif __ia64__
+CheckTypeSize(struct _GCompletion,40, 11487, 3)
+CheckMemberSize(struct _GCompletion,func,8,3,41348)
+CheckOffset(struct _GCompletion,func,8,3,41348)
+CheckMemberSize(struct _GCompletion,prefix,8,3,41349)
+CheckOffset(struct _GCompletion,prefix,16,3,41349)
+CheckMemberSize(struct _GCompletion,cache,8,3,41350)
+CheckOffset(struct _GCompletion,cache,24,3,41350)
+CheckMemberSize(struct _GCompletion,strncmp_func,8,3,41354)
+CheckOffset(struct _GCompletion,strncmp_func,32,3,41354)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11487,0);
 Msg("Find size of _GCompletion (11487)\n");
@@ -2581,6 +3419,7 @@ Msg("Find size of _GCompletion (11487)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11488,0);
 Msg("Find size of fptr_glib_171 (11488)\n");
@@ -2590,6 +3429,8 @@ Msg("Find size of fptr_glib_171 (11488)\n");
 CheckTypeSize(GCompletionFunc,4, 11489, 2)
 #elif __x86_64__
 CheckTypeSize(GCompletionFunc,8, 11489, 11)
+#elif __ia64__
+CheckTypeSize(GCompletionFunc,8, 11489, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11489,0);
 Msg("Find size of GCompletionFunc (11489)\n");
@@ -2597,6 +3438,7 @@ Msg("Find size of GCompletionFunc (11489)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11490,0);
 Msg("Find size of fptr_glib_268 (11490)\n");
@@ -2606,6 +3448,8 @@ Msg("Find size of fptr_glib_268 (11490)\n");
 CheckTypeSize(GCompletionStrncmpFunc,4, 11491, 2)
 #elif __x86_64__
 CheckTypeSize(GCompletionStrncmpFunc,8, 11491, 11)
+#elif __ia64__
+CheckTypeSize(GCompletionStrncmpFunc,8, 11491, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11491,0);
 Msg("Find size of GCompletionStrncmpFunc (11491)\n");
@@ -2615,6 +3459,8 @@ Msg("Find size of GCompletionStrncmpFunc (11491)\n");
 CheckTypeSize(GCompletion,20, 11492, 2)
 #elif __x86_64__
 CheckTypeSize(GCompletion,40, 11492, 11)
+#elif __ia64__
+CheckTypeSize(GCompletion,40, 11492, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11492,0);
 Msg("Find size of GCompletion (11492)\n");
@@ -2624,6 +3470,8 @@ Msg("Find size of GCompletion (11492)\n");
 CheckTypeSize(GCompletion *,4, 11493, 2)
 #elif __x86_64__
 CheckTypeSize(GCompletion *,8, 11493, 11)
+#elif __ia64__
+CheckTypeSize(GCompletion *,8, 11493, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11493,0);
 Msg("Find size of GCompletion * (11493)\n");
@@ -2633,6 +3481,8 @@ Msg("Find size of GCompletion * (11493)\n");
 CheckTypeSize(GTimer,0, 11495, 2)
 #elif __x86_64__
 CheckTypeSize(GTimer,0, 11495, 11)
+#elif __ia64__
+CheckTypeSize(GTimer,0, 11495, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11495,0);
 Msg("Find size of GTimer (11495)\n");
@@ -2642,6 +3492,8 @@ Msg("Find size of GTimer (11495)\n");
 CheckTypeSize(GTimer *,4, 11496, 2)
 #elif __x86_64__
 CheckTypeSize(GTimer *,8, 11496, 11)
+#elif __ia64__
+CheckTypeSize(GTimer *,8, 11496, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11496,0);
 Msg("Find size of GTimer * (11496)\n");
@@ -2651,6 +3503,8 @@ Msg("Find size of GTimer * (11496)\n");
 CheckTypeSize(GHashTable,0, 11498, 2)
 #elif __x86_64__
 CheckTypeSize(GHashTable,0, 11498, 11)
+#elif __ia64__
+CheckTypeSize(GHashTable,0, 11498, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11498,0);
 Msg("Find size of GHashTable (11498)\n");
@@ -2660,6 +3514,8 @@ Msg("Find size of GHashTable (11498)\n");
 CheckTypeSize(GHashTable *,4, 11499, 2)
 #elif __x86_64__
 CheckTypeSize(GHashTable *,8, 11499, 11)
+#elif __ia64__
+CheckTypeSize(GHashTable *,8, 11499, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11499,0);
 Msg("Find size of GHashTable * (11499)\n");
@@ -2669,6 +3525,8 @@ Msg("Find size of GHashTable * (11499)\n");
 CheckTypeSize(gconstpointer,4, 11500, 2)
 #elif __x86_64__
 CheckTypeSize(gconstpointer,8, 11500, 11)
+#elif __ia64__
+CheckTypeSize(gconstpointer,8, 11500, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11500,0);
 Msg("Find size of gconstpointer (11500)\n");
@@ -2676,6 +3534,7 @@ Msg("Find size of gconstpointer (11500)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11501,0);
 Msg("Find size of fptr_glib_179 (11501)\n");
@@ -2685,6 +3544,8 @@ Msg("Find size of fptr_glib_179 (11501)\n");
 CheckTypeSize(GHashFunc,4, 11502, 2)
 #elif __x86_64__
 CheckTypeSize(GHashFunc,8, 11502, 11)
+#elif __ia64__
+CheckTypeSize(GHashFunc,8, 11502, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11502,0);
 Msg("Find size of GHashFunc (11502)\n");
@@ -2692,6 +3553,7 @@ Msg("Find size of GHashFunc (11502)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11503,0);
 Msg("Find size of fptr_glib_344 (11503)\n");
@@ -2701,6 +3563,8 @@ Msg("Find size of fptr_glib_344 (11503)\n");
 CheckTypeSize(GEqualFunc,4, 11504, 2)
 #elif __x86_64__
 CheckTypeSize(GEqualFunc,8, 11504, 11)
+#elif __ia64__
+CheckTypeSize(GEqualFunc,8, 11504, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11504,0);
 Msg("Find size of GEqualFunc (11504)\n");
@@ -2713,11 +3577,17 @@ CheckOffset(struct _GStaticRecMutex,depth,28,2,41365)
 CheckMemberSize(struct _GStaticRecMutex,owner,8,2,41370)
 CheckOffset(struct _GStaticRecMutex,owner,32,2,41370)
 #elif __x86_64__
-CheckTypeSize(struct _GStaticRecMutex,48, 11505, 11)
+CheckTypeSize(struct _GStaticRecMutex,64, 11505, 11)
 CheckMemberSize(struct _GStaticRecMutex,depth,4,11,41365)
-CheckOffset(struct _GStaticRecMutex,depth,32,11,41365)
+CheckOffset(struct _GStaticRecMutex,depth,48,11,41365)
 CheckMemberSize(struct _GStaticRecMutex,owner,8,11,41370)
-CheckOffset(struct _GStaticRecMutex,owner,40,11,41370)
+CheckOffset(struct _GStaticRecMutex,owner,56,11,41370)
+#elif __ia64__
+CheckTypeSize(struct _GStaticRecMutex,64, 11505, 3)
+CheckMemberSize(struct _GStaticRecMutex,depth,4,3,41365)
+CheckOffset(struct _GStaticRecMutex,depth,48,3,41365)
+CheckMemberSize(struct _GStaticRecMutex,owner,8,3,41370)
+CheckOffset(struct _GStaticRecMutex,owner,56,3,41370)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11505,0);
 Msg("Find size of _GStaticRecMutex (11505)\n");
@@ -2728,9 +3598,13 @@ CheckTypeSize(struct _GStaticMutex,28, 11506, 2)
 CheckMemberSize(struct _GStaticMutex,static_mutex,24,2,41363)
 CheckOffset(struct _GStaticMutex,static_mutex,4,2,41363)
 #elif __x86_64__
-CheckTypeSize(struct _GStaticMutex,32, 11506, 11)
-CheckMemberSize(struct _GStaticMutex,static_mutex,24,11,41363)
+CheckTypeSize(struct _GStaticMutex,48, 11506, 11)
+CheckMemberSize(struct _GStaticMutex,static_mutex,40,11,41363)
 CheckOffset(struct _GStaticMutex,static_mutex,8,11,41363)
+#elif __ia64__
+CheckTypeSize(struct _GStaticMutex,48, 11506, 3)
+CheckMemberSize(struct _GStaticMutex,static_mutex,40,3,41363)
+CheckOffset(struct _GStaticMutex,static_mutex,8,3,41363)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11506,0);
 Msg("Find size of _GStaticMutex (11506)\n");
@@ -2740,6 +3614,8 @@ Msg("Find size of _GStaticMutex (11506)\n");
 CheckTypeSize(struct _GMutex *,4, 11508, 2)
 #elif __x86_64__
 CheckTypeSize(struct _GMutex *,8, 11508, 11)
+#elif __ia64__
+CheckTypeSize(struct _GMutex *,8, 11508, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11508,0);
 Msg("Find size of _GMutex * (11508)\n");
@@ -2750,6 +3626,7 @@ Msg("Find size of _GMutex * (11508)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11510,0);
 Msg("Find size of anon-glib-2.0/glib.h-71 (11510)\n");
@@ -2758,7 +3635,9 @@ Msg("Find size of anon-glib-2.0/glib.h-71 (11510)\n");
 #if __i386__
 CheckTypeSize(GStaticMutex,28, 11511, 2)
 #elif __x86_64__
-CheckTypeSize(GStaticMutex,32, 11511, 11)
+CheckTypeSize(GStaticMutex,48, 11511, 11)
+#elif __ia64__
+CheckTypeSize(GStaticMutex,48, 11511, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11511,0);
 Msg("Find size of GStaticMutex (11511)\n");
@@ -2778,6 +3657,13 @@ CheckOffset(union _GSystemThread,data,0,11,41366)
 CheckOffset(union _GSystemThread,dummy_double,0,11,41367)
 CheckOffset(union _GSystemThread,dummy_pointer,0,11,41368)
 CheckOffset(union _GSystemThread,dummy_long,0,11,41369)
+#elif __ia64__
+CheckTypeSize(union _GSystemThread,8, 11512, 3)
+Msg("Missing member data for _GSystemThread on IA64\n");
+CheckOffset(union _GSystemThread,data,0,3,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,3,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,3,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,3,41369)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11512,0);
 Msg("Find size of _GSystemThread (11512)\n");
@@ -2787,6 +3673,8 @@ Msg("Find size of _GSystemThread (11512)\n");
 CheckTypeSize(GSystemThread,8, 11513, 2)
 #elif __x86_64__
 CheckTypeSize(GSystemThread,8, 11513, 11)
+#elif __ia64__
+CheckTypeSize(GSystemThread,8, 11513, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11513,0);
 Msg("Find size of GSystemThread (11513)\n");
@@ -2795,7 +3683,9 @@ Msg("Find size of GSystemThread (11513)\n");
 #if __i386__
 CheckTypeSize(GStaticRecMutex,40, 11514, 2)
 #elif __x86_64__
-CheckTypeSize(GStaticRecMutex,48, 11514, 11)
+CheckTypeSize(GStaticRecMutex,64, 11514, 11)
+#elif __ia64__
+CheckTypeSize(GStaticRecMutex,64, 11514, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11514,0);
 Msg("Find size of GStaticRecMutex (11514)\n");
@@ -2805,6 +3695,8 @@ Msg("Find size of GStaticRecMutex (11514)\n");
 CheckTypeSize(GStaticRecMutex *,4, 11515, 2)
 #elif __x86_64__
 CheckTypeSize(GStaticRecMutex *,8, 11515, 11)
+#elif __ia64__
+CheckTypeSize(GStaticRecMutex *,8, 11515, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11515,0);
 Msg("Find size of GStaticRecMutex * (11515)\n");
@@ -2814,6 +3706,8 @@ Msg("Find size of GStaticRecMutex * (11515)\n");
 CheckTypeSize(gint *,4, 11516, 2)
 #elif __x86_64__
 CheckTypeSize(gint *,8, 11516, 11)
+#elif __ia64__
+CheckTypeSize(gint *,8, 11516, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11516,0);
 Msg("Find size of gint * (11516)\n");
@@ -2823,6 +3717,8 @@ Msg("Find size of gint * (11516)\n");
 CheckTypeSize(GMarkupParseContext,0, 11518, 2)
 #elif __x86_64__
 CheckTypeSize(GMarkupParseContext,0, 11518, 11)
+#elif __ia64__
+CheckTypeSize(GMarkupParseContext,0, 11518, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11518,0);
 Msg("Find size of GMarkupParseContext (11518)\n");
@@ -2832,24 +3728,19 @@ Msg("Find size of GMarkupParseContext (11518)\n");
 CheckTypeSize(GMarkupParseContext *,4, 11519, 2)
 #elif __x86_64__
 CheckTypeSize(GMarkupParseContext *,8, 11519, 11)
+#elif __ia64__
+CheckTypeSize(GMarkupParseContext *,8, 11519, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11519,0);
 Msg("Find size of GMarkupParseContext * (11519)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(gssize,4, 11520, 2)
-#elif __x86_64__
-CheckTypeSize(gssize,4, 11520, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11520,0);
-Msg("Find size of gssize (11520)\n");
-#endif
-
-#if __i386__
 CheckTypeSize(GData,0, 11522, 2)
 #elif __x86_64__
 CheckTypeSize(GData,0, 11522, 11)
+#elif __ia64__
+CheckTypeSize(GData,0, 11522, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11522,0);
 Msg("Find size of GData (11522)\n");
@@ -2859,6 +3750,8 @@ Msg("Find size of GData (11522)\n");
 CheckTypeSize(GData *,4, 11523, 2)
 #elif __x86_64__
 CheckTypeSize(GData *,8, 11523, 11)
+#elif __ia64__
+CheckTypeSize(GData *,8, 11523, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11523,0);
 Msg("Find size of GData * (11523)\n");
@@ -2866,6 +3759,7 @@ Msg("Find size of GData * (11523)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11524,0);
 Msg("Find size of GData * * (11524)\n");
@@ -2881,6 +3775,11 @@ CheckEnum("G_IO_STATUS_ERROR",G_IO_STATUS_ERROR,0);
 CheckEnum("G_IO_STATUS_NORMAL",G_IO_STATUS_NORMAL,1);
 CheckEnum("G_IO_STATUS_EOF",G_IO_STATUS_EOF,2);
 CheckEnum("G_IO_STATUS_AGAIN",G_IO_STATUS_AGAIN,3);
+#elif __ia64__
+CheckEnum("G_IO_STATUS_ERROR",G_IO_STATUS_ERROR,0);
+CheckEnum("G_IO_STATUS_NORMAL",G_IO_STATUS_NORMAL,1);
+CheckEnum("G_IO_STATUS_EOF",G_IO_STATUS_EOF,2);
+CheckEnum("G_IO_STATUS_AGAIN",G_IO_STATUS_AGAIN,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11525,0);
 Msg("Find size of anon-glib-2.0/glib.h-23 (11525)\n");
@@ -2890,6 +3789,8 @@ Msg("Find size of anon-glib-2.0/glib.h-23 (11525)\n");
 CheckTypeSize(GIOStatus,4, 11526, 2)
 #elif __x86_64__
 CheckTypeSize(GIOStatus,4, 11526, 11)
+#elif __ia64__
+CheckTypeSize(GIOStatus,4, 11526, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11526,0);
 Msg("Find size of GIOStatus (11526)\n");
@@ -2924,7 +3825,7 @@ CheckOffset(struct _GIOChannel,reserved1,52,2,41475)
 CheckMemberSize(struct _GIOChannel,reserved2,4,2,41476)
 CheckOffset(struct _GIOChannel,reserved2,56,2,41476)
 #elif __x86_64__
-CheckTypeSize(struct _GIOChannel,104, 11527, 11)
+CheckTypeSize(struct _GIOChannel,112, 11527, 11)
 CheckMemberSize(struct _GIOChannel,funcs,8,11,41458)
 CheckOffset(struct _GIOChannel,funcs,8,11,41458)
 CheckMemberSize(struct _GIOChannel,encoding,8,11,41459)
@@ -2937,20 +3838,48 @@ CheckMemberSize(struct _GIOChannel,line_term,8,11,41462)
 CheckOffset(struct _GIOChannel,line_term,40,11,41462)
 CheckMemberSize(struct _GIOChannel,line_term_len,4,11,41463)
 CheckOffset(struct _GIOChannel,line_term_len,48,11,41463)
-CheckMemberSize(struct _GIOChannel,buf_size,4,11,41464)
-CheckOffset(struct _GIOChannel,buf_size,52,11,41464)
+CheckMemberSize(struct _GIOChannel,buf_size,8,11,41464)
+CheckOffset(struct _GIOChannel,buf_size,56,11,41464)
 CheckMemberSize(struct _GIOChannel,read_buf,8,11,41465)
-CheckOffset(struct _GIOChannel,read_buf,56,11,41465)
+CheckOffset(struct _GIOChannel,read_buf,64,11,41465)
 CheckMemberSize(struct _GIOChannel,encoded_read_buf,8,11,41466)
-CheckOffset(struct _GIOChannel,encoded_read_buf,64,11,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,72,11,41466)
 CheckMemberSize(struct _GIOChannel,write_buf,8,11,41467)
-CheckOffset(struct _GIOChannel,write_buf,72,11,41467)
+CheckOffset(struct _GIOChannel,write_buf,80,11,41467)
 CheckMemberSize(struct _GIOChannel,partial_write_buf,6,11,41468)
-CheckOffset(struct _GIOChannel,partial_write_buf,80,11,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,88,11,41468)
 CheckMemberSize(struct _GIOChannel,reserved1,8,11,41475)
-CheckOffset(struct _GIOChannel,reserved1,88,11,41475)
+CheckOffset(struct _GIOChannel,reserved1,96,11,41475)
 CheckMemberSize(struct _GIOChannel,reserved2,8,11,41476)
-CheckOffset(struct _GIOChannel,reserved2,96,11,41476)
+CheckOffset(struct _GIOChannel,reserved2,104,11,41476)
+#elif __ia64__
+CheckTypeSize(struct _GIOChannel,112, 11527, 3)
+CheckMemberSize(struct _GIOChannel,funcs,8,3,41458)
+CheckOffset(struct _GIOChannel,funcs,8,3,41458)
+CheckMemberSize(struct _GIOChannel,encoding,8,3,41459)
+CheckOffset(struct _GIOChannel,encoding,16,3,41459)
+CheckMemberSize(struct _GIOChannel,read_cd,8,3,41460)
+CheckOffset(struct _GIOChannel,read_cd,24,3,41460)
+CheckMemberSize(struct _GIOChannel,write_cd,8,3,41461)
+CheckOffset(struct _GIOChannel,write_cd,32,3,41461)
+CheckMemberSize(struct _GIOChannel,line_term,8,3,41462)
+CheckOffset(struct _GIOChannel,line_term,40,3,41462)
+CheckMemberSize(struct _GIOChannel,line_term_len,4,3,41463)
+CheckOffset(struct _GIOChannel,line_term_len,48,3,41463)
+CheckMemberSize(struct _GIOChannel,buf_size,8,3,41464)
+CheckOffset(struct _GIOChannel,buf_size,56,3,41464)
+CheckMemberSize(struct _GIOChannel,read_buf,8,3,41465)
+CheckOffset(struct _GIOChannel,read_buf,64,3,41465)
+CheckMemberSize(struct _GIOChannel,encoded_read_buf,8,3,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,72,3,41466)
+CheckMemberSize(struct _GIOChannel,write_buf,8,3,41467)
+CheckOffset(struct _GIOChannel,write_buf,80,3,41467)
+CheckMemberSize(struct _GIOChannel,partial_write_buf,6,3,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,88,3,41468)
+CheckMemberSize(struct _GIOChannel,reserved1,8,3,41475)
+CheckOffset(struct _GIOChannel,reserved1,96,3,41475)
+CheckMemberSize(struct _GIOChannel,reserved2,8,3,41476)
+CheckOffset(struct _GIOChannel,reserved2,104,3,41476)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11527,0);
 Msg("Find size of _GIOChannel (11527)\n");
@@ -2988,6 +3917,22 @@ CheckMemberSize(struct _GIOFuncs,io_set_flags,8,11,41455)
 CheckOffset(struct _GIOFuncs,io_set_flags,48,11,41455)
 CheckMemberSize(struct _GIOFuncs,io_get_flags,8,11,41457)
 CheckOffset(struct _GIOFuncs,io_get_flags,56,11,41457)
+#elif __ia64__
+CheckTypeSize(struct _GIOFuncs,64, 11528, 3)
+CheckMemberSize(struct _GIOFuncs,io_write,8,3,41387)
+CheckOffset(struct _GIOFuncs,io_write,8,3,41387)
+CheckMemberSize(struct _GIOFuncs,io_seek,8,3,41395)
+CheckOffset(struct _GIOFuncs,io_seek,16,3,41395)
+CheckMemberSize(struct _GIOFuncs,io_close,8,3,41398)
+CheckOffset(struct _GIOFuncs,io_close,24,3,41398)
+CheckMemberSize(struct _GIOFuncs,io_create_watch,8,3,41441)
+CheckOffset(struct _GIOFuncs,io_create_watch,32,3,41441)
+CheckMemberSize(struct _GIOFuncs,io_free,8,3,41443)
+CheckOffset(struct _GIOFuncs,io_free,40,3,41443)
+CheckMemberSize(struct _GIOFuncs,io_set_flags,8,3,41455)
+CheckOffset(struct _GIOFuncs,io_set_flags,48,3,41455)
+CheckMemberSize(struct _GIOFuncs,io_get_flags,8,3,41457)
+CheckOffset(struct _GIOFuncs,io_get_flags,56,3,41457)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11528,0);
 Msg("Find size of _GIOFuncs (11528)\n");
@@ -2996,7 +3941,9 @@ Msg("Find size of _GIOFuncs (11528)\n");
 #if __i386__
 CheckTypeSize(GIOChannel,60, 11529, 2)
 #elif __x86_64__
-CheckTypeSize(GIOChannel,104, 11529, 11)
+CheckTypeSize(GIOChannel,112, 11529, 11)
+#elif __ia64__
+CheckTypeSize(GIOChannel,112, 11529, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11529,0);
 Msg("Find size of GIOChannel (11529)\n");
@@ -3006,6 +3953,8 @@ Msg("Find size of GIOChannel (11529)\n");
 CheckTypeSize(GIOChannel *,4, 11530, 2)
 #elif __x86_64__
 CheckTypeSize(GIOChannel *,8, 11530, 11)
+#elif __ia64__
+CheckTypeSize(GIOChannel *,8, 11530, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11530,0);
 Msg("Find size of GIOChannel * (11530)\n");
@@ -3013,6 +3962,7 @@ Msg("Find size of GIOChannel * (11530)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11531,0);
 Msg("Find size of fptr_glib_129 (11531)\n");
@@ -3020,18 +3970,10 @@ Msg("Find size of fptr_glib_129 (11531)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11532,0);
 Msg("Find size of fptr_glib_158 (11532)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(gint64,8, 11533, 2)
-#elif __x86_64__
-CheckTypeSize(gint64,8, 11533, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11533,0);
-Msg("Find size of gint64 (11533)\n");
 #endif
 
 #if __i386__
@@ -3039,6 +3981,10 @@ CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
 CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
 CheckEnum("G_SEEK_END",G_SEEK_END,2);
 #elif __x86_64__
+CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
+CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
+CheckEnum("G_SEEK_END",G_SEEK_END,2);
+#elif __ia64__
 CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
 CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
 CheckEnum("G_SEEK_END",G_SEEK_END,2);
@@ -3051,6 +3997,8 @@ Msg("Find size of anon-glib-2.0/glib.h-24 (11534)\n");
 CheckTypeSize(GSeekType,4, 11535, 2)
 #elif __x86_64__
 CheckTypeSize(GSeekType,4, 11535, 11)
+#elif __ia64__
+CheckTypeSize(GSeekType,4, 11535, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11535,0);
 Msg("Find size of GSeekType (11535)\n");
@@ -3058,6 +4006,7 @@ Msg("Find size of GSeekType (11535)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11536,0);
 Msg("Find size of fptr_glib_174 (11536)\n");
@@ -3065,6 +4014,7 @@ Msg("Find size of fptr_glib_174 (11536)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11537,0);
 Msg("Find size of fptr_glib_322 (11537)\n");
@@ -3122,6 +4072,32 @@ CheckMemberSize(struct _GSource,reserved1,8,11,41431)
 CheckOffset(struct _GSource,reserved1,80,11,41431)
 CheckMemberSize(struct _GSource,reserved2,8,11,41432)
 CheckOffset(struct _GSource,reserved2,88,11,41432)
+#elif __ia64__
+CheckTypeSize(struct _GSource,96, 11538, 3)
+CheckMemberSize(struct _GSource,callback_funcs,8,3,41408)
+CheckOffset(struct _GSource,callback_funcs,8,3,41408)
+CheckMemberSize(struct _GSource,source_funcs,8,3,41422)
+CheckOffset(struct _GSource,source_funcs,16,3,41422)
+CheckMemberSize(struct _GSource,ref_count,4,3,41423)
+CheckOffset(struct _GSource,ref_count,24,3,41423)
+CheckMemberSize(struct _GSource,context,8,3,41424)
+CheckOffset(struct _GSource,context,32,3,41424)
+CheckMemberSize(struct _GSource,priority,4,3,41425)
+CheckOffset(struct _GSource,priority,40,3,41425)
+CheckMemberSize(struct _GSource,flags,4,3,41426)
+CheckOffset(struct _GSource,flags,44,3,41426)
+CheckMemberSize(struct _GSource,source_id,4,3,41427)
+CheckOffset(struct _GSource,source_id,48,3,41427)
+CheckMemberSize(struct _GSource,poll_fds,8,3,41428)
+CheckOffset(struct _GSource,poll_fds,56,3,41428)
+CheckMemberSize(struct _GSource,prev,8,3,41429)
+CheckOffset(struct _GSource,prev,64,3,41429)
+CheckMemberSize(struct _GSource,next,8,3,41430)
+CheckOffset(struct _GSource,next,72,3,41430)
+CheckMemberSize(struct _GSource,reserved1,8,3,41431)
+CheckOffset(struct _GSource,reserved1,80,3,41431)
+CheckMemberSize(struct _GSource,reserved2,8,3,41432)
+CheckOffset(struct _GSource,reserved2,88,3,41432)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11538,0);
 Msg("Find size of _GSource (11538)\n");
@@ -3139,6 +4115,12 @@ CheckMemberSize(struct _GSourceCallbackFuncs,unref,8,11,41401)
 CheckOffset(struct _GSourceCallbackFuncs,unref,8,11,41401)
 CheckMemberSize(struct _GSourceCallbackFuncs,get,8,11,41407)
 CheckOffset(struct _GSourceCallbackFuncs,get,16,11,41407)
+#elif __ia64__
+CheckTypeSize(struct _GSourceCallbackFuncs,24, 11539, 3)
+CheckMemberSize(struct _GSourceCallbackFuncs,unref,8,3,41401)
+CheckOffset(struct _GSourceCallbackFuncs,unref,8,3,41401)
+CheckMemberSize(struct _GSourceCallbackFuncs,get,8,3,41407)
+CheckOffset(struct _GSourceCallbackFuncs,get,16,3,41407)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11539,0);
 Msg("Find size of _GSourceCallbackFuncs (11539)\n");
@@ -3148,6 +4130,8 @@ Msg("Find size of _GSourceCallbackFuncs (11539)\n");
 CheckTypeSize(GSource,52, 11540, 2)
 #elif __x86_64__
 CheckTypeSize(GSource,96, 11540, 11)
+#elif __ia64__
+CheckTypeSize(GSource,96, 11540, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11540,0);
 Msg("Find size of GSource (11540)\n");
@@ -3157,6 +4141,8 @@ Msg("Find size of GSource (11540)\n");
 CheckTypeSize(GSource *,4, 11541, 2)
 #elif __x86_64__
 CheckTypeSize(GSource *,8, 11541, 11)
+#elif __ia64__
+CheckTypeSize(GSource *,8, 11541, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11541,0);
 Msg("Find size of GSource * (11541)\n");
@@ -3164,6 +4150,7 @@ Msg("Find size of GSource * (11541)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11542,0);
 Msg("Find size of fptr_glib_260 (11542)\n");
@@ -3173,6 +4160,8 @@ Msg("Find size of fptr_glib_260 (11542)\n");
 CheckTypeSize(GSourceFunc,4, 11543, 2)
 #elif __x86_64__
 CheckTypeSize(GSourceFunc,8, 11543, 11)
+#elif __ia64__
+CheckTypeSize(GSourceFunc,8, 11543, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11543,0);
 Msg("Find size of GSourceFunc (11543)\n");
@@ -3182,6 +4171,8 @@ Msg("Find size of GSourceFunc (11543)\n");
 CheckTypeSize(GSourceFunc *,4, 11544, 2)
 #elif __x86_64__
 CheckTypeSize(GSourceFunc *,8, 11544, 11)
+#elif __ia64__
+CheckTypeSize(GSourceFunc *,8, 11544, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11544,0);
 Msg("Find size of GSourceFunc * (11544)\n");
@@ -3189,6 +4180,7 @@ Msg("Find size of GSourceFunc * (11544)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11545,0);
 Msg("Find size of fptr_glib_408 (11545)\n");
@@ -3198,6 +4190,8 @@ Msg("Find size of fptr_glib_408 (11545)\n");
 CheckTypeSize(GSourceCallbackFuncs,12, 11546, 2)
 #elif __x86_64__
 CheckTypeSize(GSourceCallbackFuncs,24, 11546, 11)
+#elif __ia64__
+CheckTypeSize(GSourceCallbackFuncs,24, 11546, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11546,0);
 Msg("Find size of GSourceCallbackFuncs (11546)\n");
@@ -3207,6 +4201,8 @@ Msg("Find size of GSourceCallbackFuncs (11546)\n");
 CheckTypeSize(GSourceCallbackFuncs *,4, 11547, 2)
 #elif __x86_64__
 CheckTypeSize(GSourceCallbackFuncs *,8, 11547, 11)
+#elif __ia64__
+CheckTypeSize(GSourceCallbackFuncs *,8, 11547, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11547,0);
 Msg("Find size of GSourceCallbackFuncs * (11547)\n");
@@ -3236,6 +4232,18 @@ CheckMemberSize(struct _GSourceFuncs,closure_callback,8,11,41420)
 CheckOffset(struct _GSourceFuncs,closure_callback,32,11,41420)
 CheckMemberSize(struct _GSourceFuncs,closure_marshal,8,11,41421)
 CheckOffset(struct _GSourceFuncs,closure_marshal,40,11,41421)
+#elif __ia64__
+CheckTypeSize(struct _GSourceFuncs,48, 11548, 3)
+CheckMemberSize(struct _GSourceFuncs,check,8,3,41413)
+CheckOffset(struct _GSourceFuncs,check,8,3,41413)
+CheckMemberSize(struct _GSourceFuncs,dispatch,8,3,41417)
+CheckOffset(struct _GSourceFuncs,dispatch,16,3,41417)
+CheckMemberSize(struct _GSourceFuncs,finalize,8,3,41419)
+CheckOffset(struct _GSourceFuncs,finalize,24,3,41419)
+CheckMemberSize(struct _GSourceFuncs,closure_callback,8,3,41420)
+CheckOffset(struct _GSourceFuncs,closure_callback,32,3,41420)
+CheckMemberSize(struct _GSourceFuncs,closure_marshal,8,3,41421)
+CheckOffset(struct _GSourceFuncs,closure_marshal,40,3,41421)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11548,0);
 Msg("Find size of _GSourceFuncs (11548)\n");
@@ -3243,6 +4251,7 @@ Msg("Find size of _GSourceFuncs (11548)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11549,0);
 Msg("Find size of fptr_glib_164 (11549)\n");
@@ -3250,6 +4259,7 @@ Msg("Find size of fptr_glib_164 (11549)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11550,0);
 Msg("Find size of fptr_glib_52 (11550)\n");
@@ -3257,6 +4267,7 @@ Msg("Find size of fptr_glib_52 (11550)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11551,0);
 Msg("Find size of fptr_glib_25 (11551)\n");
@@ -3264,6 +4275,7 @@ Msg("Find size of fptr_glib_25 (11551)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11552,0);
 Msg("Find size of fptr_glib_418 (11552)\n");
@@ -3273,6 +4285,8 @@ Msg("Find size of fptr_glib_418 (11552)\n");
 CheckTypeSize(GSourceDummyMarshal,4, 11553, 2)
 #elif __x86_64__
 CheckTypeSize(GSourceDummyMarshal,8, 11553, 11)
+#elif __ia64__
+CheckTypeSize(GSourceDummyMarshal,8, 11553, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11553,0);
 Msg("Find size of GSourceDummyMarshal (11553)\n");
@@ -3282,6 +4296,8 @@ Msg("Find size of GSourceDummyMarshal (11553)\n");
 CheckTypeSize(GSourceFuncs,24, 11554, 2)
 #elif __x86_64__
 CheckTypeSize(GSourceFuncs,48, 11554, 11)
+#elif __ia64__
+CheckTypeSize(GSourceFuncs,48, 11554, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11554,0);
 Msg("Find size of GSourceFuncs (11554)\n");
@@ -3291,6 +4307,8 @@ Msg("Find size of GSourceFuncs (11554)\n");
 CheckTypeSize(GSourceFuncs *,4, 11555, 2)
 #elif __x86_64__
 CheckTypeSize(GSourceFuncs *,8, 11555, 11)
+#elif __ia64__
+CheckTypeSize(GSourceFuncs *,8, 11555, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11555,0);
 Msg("Find size of GSourceFuncs * (11555)\n");
@@ -3300,6 +4318,8 @@ Msg("Find size of GSourceFuncs * (11555)\n");
 CheckTypeSize(GMainContext,0, 11557, 2)
 #elif __x86_64__
 CheckTypeSize(GMainContext,0, 11557, 11)
+#elif __ia64__
+CheckTypeSize(GMainContext,0, 11557, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11557,0);
 Msg("Find size of GMainContext (11557)\n");
@@ -3309,6 +4329,8 @@ Msg("Find size of GMainContext (11557)\n");
 CheckTypeSize(GMainContext *,4, 11558, 2)
 #elif __x86_64__
 CheckTypeSize(GMainContext *,8, 11558, 11)
+#elif __ia64__
+CheckTypeSize(GMainContext *,8, 11558, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11558,0);
 Msg("Find size of GMainContext * (11558)\n");
@@ -3328,6 +4350,13 @@ CheckEnum("G_IO_PRI",G_IO_PRI,2);
 CheckEnum("G_IO_ERR",G_IO_ERR,8);
 CheckEnum("G_IO_HUP",G_IO_HUP,16);
 CheckEnum("G_IO_NVAL",G_IO_NVAL,32);
+#elif __ia64__
+CheckEnum("G_IO_IN",G_IO_IN,1);
+CheckEnum("G_IO_OUT",G_IO_OUT,4);
+CheckEnum("G_IO_PRI",G_IO_PRI,2);
+CheckEnum("G_IO_ERR",G_IO_ERR,8);
+CheckEnum("G_IO_HUP",G_IO_HUP,16);
+CheckEnum("G_IO_NVAL",G_IO_NVAL,32);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11559,0);
 Msg("Find size of anon-glib-2.0/glib.h-25 (11559)\n");
@@ -3337,6 +4366,8 @@ Msg("Find size of anon-glib-2.0/glib.h-25 (11559)\n");
 CheckTypeSize(GIOCondition,4, 11560, 2)
 #elif __x86_64__
 CheckTypeSize(GIOCondition,4, 11560, 11)
+#elif __ia64__
+CheckTypeSize(GIOCondition,4, 11560, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11560,0);
 Msg("Find size of GIOCondition (11560)\n");
@@ -3344,6 +4375,7 @@ Msg("Find size of GIOCondition (11560)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11561,0);
 Msg("Find size of fptr_glib_18 (11561)\n");
@@ -3351,6 +4383,7 @@ Msg("Find size of fptr_glib_18 (11561)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11562,0);
 Msg("Find size of fptr_glib_423 (11562)\n");
@@ -3374,6 +4407,15 @@ CheckEnum("G_IO_FLAG_IS_SEEKABLE",G_IO_FLAG_IS_SEEKABLE,16);
 CheckEnum("G_IO_FLAG_MASK",G_IO_FLAG_MASK,31);
 CheckEnum("G_IO_FLAG_GET_MASK",G_IO_FLAG_GET_MASK,31);
 CheckEnum("G_IO_FLAG_SET_MASK",G_IO_FLAG_SET_MASK,3);
+#elif __ia64__
+CheckEnum("G_IO_FLAG_APPEND",G_IO_FLAG_APPEND,1);
+CheckEnum("G_IO_FLAG_NONBLOCK",G_IO_FLAG_NONBLOCK,2);
+CheckEnum("G_IO_FLAG_IS_READABLE",G_IO_FLAG_IS_READABLE,4);
+CheckEnum("G_IO_FLAG_IS_WRITEABLE",G_IO_FLAG_IS_WRITEABLE,8);
+CheckEnum("G_IO_FLAG_IS_SEEKABLE",G_IO_FLAG_IS_SEEKABLE,16);
+CheckEnum("G_IO_FLAG_MASK",G_IO_FLAG_MASK,31);
+CheckEnum("G_IO_FLAG_GET_MASK",G_IO_FLAG_GET_MASK,31);
+CheckEnum("G_IO_FLAG_SET_MASK",G_IO_FLAG_SET_MASK,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11563,0);
 Msg("Find size of anon-glib-2.0/glib.h-26 (11563)\n");
@@ -3383,6 +4425,8 @@ Msg("Find size of anon-glib-2.0/glib.h-26 (11563)\n");
 CheckTypeSize(GIOFlags,4, 11564, 2)
 #elif __x86_64__
 CheckTypeSize(GIOFlags,4, 11564, 11)
+#elif __ia64__
+CheckTypeSize(GIOFlags,4, 11564, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11564,0);
 Msg("Find size of GIOFlags (11564)\n");
@@ -3390,6 +4434,7 @@ Msg("Find size of GIOFlags (11564)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11565,0);
 Msg("Find size of fptr_glib_47 (11565)\n");
@@ -3397,6 +4442,7 @@ Msg("Find size of fptr_glib_47 (11565)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11566,0);
 Msg("Find size of fptr_glib_298 (11566)\n");
@@ -3406,6 +4452,8 @@ Msg("Find size of fptr_glib_298 (11566)\n");
 CheckTypeSize(GIOFuncs,32, 11567, 2)
 #elif __x86_64__
 CheckTypeSize(GIOFuncs,64, 11567, 11)
+#elif __ia64__
+CheckTypeSize(GIOFuncs,64, 11567, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11567,0);
 Msg("Find size of GIOFuncs (11567)\n");
@@ -3415,6 +4463,8 @@ Msg("Find size of GIOFuncs (11567)\n");
 CheckTypeSize(GIOFuncs *,4, 11568, 2)
 #elif __x86_64__
 CheckTypeSize(GIOFuncs *,8, 11568, 11)
+#elif __ia64__
+CheckTypeSize(GIOFuncs *,8, 11568, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11568,0);
 Msg("Find size of GIOFuncs * (11568)\n");
@@ -3424,6 +4474,8 @@ Msg("Find size of GIOFuncs * (11568)\n");
 CheckTypeSize(struct _GIConv *,4, 11570, 2)
 #elif __x86_64__
 CheckTypeSize(struct _GIConv *,8, 11570, 11)
+#elif __ia64__
+CheckTypeSize(struct _GIConv *,8, 11570, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11570,0);
 Msg("Find size of _GIConv * (11570)\n");
@@ -3433,6 +4485,8 @@ Msg("Find size of _GIConv * (11570)\n");
 CheckTypeSize(GIConv,4, 11571, 2)
 #elif __x86_64__
 CheckTypeSize(GIConv,8, 11571, 11)
+#elif __ia64__
+CheckTypeSize(GIConv,8, 11571, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11571,0);
 Msg("Find size of GIConv (11571)\n");
@@ -3445,6 +4499,8 @@ Msg("Find size of GIConv (11571)\n");
 CheckTypeSize(GOptionGroup,0, 11574, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionGroup,0, 11574, 11)
+#elif __ia64__
+CheckTypeSize(GOptionGroup,0, 11574, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11574,0);
 Msg("Find size of GOptionGroup (11574)\n");
@@ -3454,6 +4510,8 @@ Msg("Find size of GOptionGroup (11574)\n");
 CheckTypeSize(GOptionGroup *,4, 11575, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionGroup *,8, 11575, 11)
+#elif __ia64__
+CheckTypeSize(GOptionGroup *,8, 11575, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11575,0);
 Msg("Find size of GOptionGroup * (11575)\n");
@@ -3475,6 +4533,14 @@ CheckEnum("G_SPAWN_STDOUT_TO_DEV_NULL",G_SPAWN_STDOUT_TO_DEV_NULL,8);
 CheckEnum("G_SPAWN_STDERR_TO_DEV_NULL",G_SPAWN_STDERR_TO_DEV_NULL,16);
 CheckEnum("G_SPAWN_CHILD_INHERITS_STDIN",G_SPAWN_CHILD_INHERITS_STDIN,32);
 CheckEnum("G_SPAWN_FILE_AND_ARGV_ZERO",G_SPAWN_FILE_AND_ARGV_ZERO,64);
+#elif __ia64__
+CheckEnum("G_SPAWN_LEAVE_DESCRIPTORS_OPEN",G_SPAWN_LEAVE_DESCRIPTORS_OPEN,1);
+CheckEnum("G_SPAWN_DO_NOT_REAP_CHILD",G_SPAWN_DO_NOT_REAP_CHILD,2);
+CheckEnum("G_SPAWN_SEARCH_PATH",G_SPAWN_SEARCH_PATH,4);
+CheckEnum("G_SPAWN_STDOUT_TO_DEV_NULL",G_SPAWN_STDOUT_TO_DEV_NULL,8);
+CheckEnum("G_SPAWN_STDERR_TO_DEV_NULL",G_SPAWN_STDERR_TO_DEV_NULL,16);
+CheckEnum("G_SPAWN_CHILD_INHERITS_STDIN",G_SPAWN_CHILD_INHERITS_STDIN,32);
+CheckEnum("G_SPAWN_FILE_AND_ARGV_ZERO",G_SPAWN_FILE_AND_ARGV_ZERO,64);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11576,0);
 Msg("Find size of anon-glib-2.0/glib.h-96 (11576)\n");
@@ -3484,6 +4550,8 @@ Msg("Find size of anon-glib-2.0/glib.h-96 (11576)\n");
 CheckTypeSize(GSpawnFlags,4, 11577, 2)
 #elif __x86_64__
 CheckTypeSize(GSpawnFlags,4, 11577, 11)
+#elif __ia64__
+CheckTypeSize(GSpawnFlags,4, 11577, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11577,0);
 Msg("Find size of GSpawnFlags (11577)\n");
@@ -3493,6 +4561,8 @@ Msg("Find size of GSpawnFlags (11577)\n");
 CheckTypeSize(GSpawnChildSetupFunc,4, 11578, 2)
 #elif __x86_64__
 CheckTypeSize(GSpawnChildSetupFunc,8, 11578, 11)
+#elif __ia64__
+CheckTypeSize(GSpawnChildSetupFunc,8, 11578, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11578,0);
 Msg("Find size of GSpawnChildSetupFunc (11578)\n");
@@ -3502,6 +4572,8 @@ Msg("Find size of GSpawnChildSetupFunc (11578)\n");
 CheckTypeSize(GPid,4, 11579, 2)
 #elif __x86_64__
 CheckTypeSize(GPid,4, 11579, 11)
+#elif __ia64__
+CheckTypeSize(GPid,4, 11579, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11579,0);
 Msg("Find size of GPid (11579)\n");
@@ -3511,6 +4583,8 @@ Msg("Find size of GPid (11579)\n");
 CheckTypeSize(GPid *,4, 11580, 2)
 #elif __x86_64__
 CheckTypeSize(GPid *,8, 11580, 11)
+#elif __ia64__
+CheckTypeSize(GPid *,8, 11580, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11580,0);
 Msg("Find size of GPid * (11580)\n");
@@ -3528,6 +4602,12 @@ CheckMemberSize(struct _GThreadPool,user_data,8,11,41487)
 CheckOffset(struct _GThreadPool,user_data,8,11,41487)
 CheckMemberSize(struct _GThreadPool,exclusive,4,11,41488)
 CheckOffset(struct _GThreadPool,exclusive,16,11,41488)
+#elif __ia64__
+CheckTypeSize(struct _GThreadPool,24, 11581, 3)
+CheckMemberSize(struct _GThreadPool,user_data,8,3,41487)
+CheckOffset(struct _GThreadPool,user_data,8,3,41487)
+CheckMemberSize(struct _GThreadPool,exclusive,4,3,41488)
+CheckOffset(struct _GThreadPool,exclusive,16,3,41488)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11581,0);
 Msg("Find size of _GThreadPool (11581)\n");
@@ -3535,6 +4615,7 @@ Msg("Find size of _GThreadPool (11581)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11582,0);
 Msg("Find size of fptr_glib_288 (11582)\n");
@@ -3544,6 +4625,8 @@ Msg("Find size of fptr_glib_288 (11582)\n");
 CheckTypeSize(GFunc,4, 11583, 2)
 #elif __x86_64__
 CheckTypeSize(GFunc,8, 11583, 11)
+#elif __ia64__
+CheckTypeSize(GFunc,8, 11583, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11583,0);
 Msg("Find size of GFunc (11583)\n");
@@ -3553,6 +4636,8 @@ Msg("Find size of GFunc (11583)\n");
 CheckTypeSize(GThreadPool,12, 11584, 2)
 #elif __x86_64__
 CheckTypeSize(GThreadPool,24, 11584, 11)
+#elif __ia64__
+CheckTypeSize(GThreadPool,24, 11584, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11584,0);
 Msg("Find size of GThreadPool (11584)\n");
@@ -3562,6 +4647,8 @@ Msg("Find size of GThreadPool (11584)\n");
 CheckTypeSize(GThreadPool *,4, 11585, 2)
 #elif __x86_64__
 CheckTypeSize(GThreadPool *,8, 11585, 11)
+#elif __ia64__
+CheckTypeSize(GThreadPool *,8, 11585, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11585,0);
 Msg("Find size of GThreadPool * (11585)\n");
@@ -3573,6 +4660,9 @@ Msg("Missing member data for _GDate on IA32\n");
 #elif __x86_64__
 CheckTypeSize(struct _GDate,8, 11586, 11)
 Msg("Missing member data for _GDate on x86-64\n");
+#elif __ia64__
+CheckTypeSize(struct _GDate,8, 11586, 3)
+Msg("Missing member data for _GDate on IA64\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11586,0);
 Msg("Find size of _GDate (11586)\n");
@@ -3582,6 +4672,8 @@ Msg("Find size of _GDate (11586)\n");
 CheckTypeSize(GDate,8, 11587, 2)
 #elif __x86_64__
 CheckTypeSize(GDate,8, 11587, 11)
+#elif __ia64__
+CheckTypeSize(GDate,8, 11587, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11587,0);
 Msg("Find size of GDate (11587)\n");
@@ -3591,6 +4683,8 @@ Msg("Find size of GDate (11587)\n");
 CheckTypeSize(GDate *,4, 11588, 2)
 #elif __x86_64__
 CheckTypeSize(GDate *,8, 11588, 11)
+#elif __ia64__
+CheckTypeSize(GDate *,8, 11588, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11588,0);
 Msg("Find size of GDate * (11588)\n");
@@ -3624,6 +4718,20 @@ CheckEnum("G_DATE_SEPTEMBER",G_DATE_SEPTEMBER,9);
 CheckEnum("G_DATE_OCTOBER",G_DATE_OCTOBER,10);
 CheckEnum("G_DATE_NOVEMBER",G_DATE_NOVEMBER,11);
 CheckEnum("G_DATE_DECEMBER",G_DATE_DECEMBER,12);
+#elif __ia64__
+CheckEnum("G_DATE_BAD_MONTH",G_DATE_BAD_MONTH,0);
+CheckEnum("G_DATE_JANUARY",G_DATE_JANUARY,1);
+CheckEnum("G_DATE_FEBRUARY",G_DATE_FEBRUARY,2);
+CheckEnum("G_DATE_MARCH",G_DATE_MARCH,3);
+CheckEnum("G_DATE_APRIL",G_DATE_APRIL,4);
+CheckEnum("G_DATE_MAY",G_DATE_MAY,5);
+CheckEnum("G_DATE_JUNE",G_DATE_JUNE,6);
+CheckEnum("G_DATE_JULY",G_DATE_JULY,7);
+CheckEnum("G_DATE_AUGUST",G_DATE_AUGUST,8);
+CheckEnum("G_DATE_SEPTEMBER",G_DATE_SEPTEMBER,9);
+CheckEnum("G_DATE_OCTOBER",G_DATE_OCTOBER,10);
+CheckEnum("G_DATE_NOVEMBER",G_DATE_NOVEMBER,11);
+CheckEnum("G_DATE_DECEMBER",G_DATE_DECEMBER,12);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11589,0);
 Msg("Find size of anon-glib-2.0/glib.h-15 (11589)\n");
@@ -3633,6 +4741,8 @@ Msg("Find size of anon-glib-2.0/glib.h-15 (11589)\n");
 CheckTypeSize(GDateMonth,4, 11590, 2)
 #elif __x86_64__
 CheckTypeSize(GDateMonth,4, 11590, 11)
+#elif __ia64__
+CheckTypeSize(GDateMonth,4, 11590, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11590,0);
 Msg("Find size of GDateMonth (11590)\n");
@@ -3642,6 +4752,8 @@ Msg("Find size of GDateMonth (11590)\n");
 CheckTypeSize(GAsyncQueue,0, 11592, 2)
 #elif __x86_64__
 CheckTypeSize(GAsyncQueue,0, 11592, 11)
+#elif __ia64__
+CheckTypeSize(GAsyncQueue,0, 11592, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11592,0);
 Msg("Find size of GAsyncQueue (11592)\n");
@@ -3651,6 +4763,8 @@ Msg("Find size of GAsyncQueue (11592)\n");
 CheckTypeSize(GAsyncQueue *,4, 11593, 2)
 #elif __x86_64__
 CheckTypeSize(GAsyncQueue *,8, 11593, 11)
+#elif __ia64__
+CheckTypeSize(GAsyncQueue *,8, 11593, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11593,0);
 Msg("Find size of GAsyncQueue * (11593)\n");
@@ -3668,6 +4782,12 @@ CheckMemberSize(struct _GPollFD,events,2,11,41509)
 CheckOffset(struct _GPollFD,events,4,11,41509)
 CheckMemberSize(struct _GPollFD,revents,2,11,41510)
 CheckOffset(struct _GPollFD,revents,6,11,41510)
+#elif __ia64__
+CheckTypeSize(struct _GPollFD,8, 11594, 3)
+CheckMemberSize(struct _GPollFD,events,2,3,41509)
+CheckOffset(struct _GPollFD,events,4,3,41509)
+CheckMemberSize(struct _GPollFD,revents,2,3,41510)
+CheckOffset(struct _GPollFD,revents,6,3,41510)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11594,0);
 Msg("Find size of _GPollFD (11594)\n");
@@ -3677,6 +4797,8 @@ Msg("Find size of _GPollFD (11594)\n");
 CheckTypeSize(gushort,2, 11595, 2)
 #elif __x86_64__
 CheckTypeSize(gushort,2, 11595, 11)
+#elif __ia64__
+CheckTypeSize(gushort,2, 11595, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11595,0);
 Msg("Find size of gushort (11595)\n");
@@ -3686,6 +4808,8 @@ Msg("Find size of gushort (11595)\n");
 CheckTypeSize(GPollFD,8, 11596, 2)
 #elif __x86_64__
 CheckTypeSize(GPollFD,8, 11596, 11)
+#elif __ia64__
+CheckTypeSize(GPollFD,8, 11596, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11596,0);
 Msg("Find size of GPollFD (11596)\n");
@@ -3695,6 +4819,8 @@ Msg("Find size of GPollFD (11596)\n");
 CheckTypeSize(GPollFD *,4, 11597, 2)
 #elif __x86_64__
 CheckTypeSize(GPollFD *,8, 11597, 11)
+#elif __ia64__
+CheckTypeSize(GPollFD *,8, 11597, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11597,0);
 Msg("Find size of GPollFD * (11597)\n");
@@ -3704,6 +4830,8 @@ Msg("Find size of GPollFD * (11597)\n");
 CheckTypeSize(gdouble,8, 11598, 2)
 #elif __x86_64__
 CheckTypeSize(gdouble,8, 11598, 11)
+#elif __ia64__
+CheckTypeSize(gdouble,8, 11598, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11598,0);
 Msg("Find size of gdouble (11598)\n");
@@ -3713,6 +4841,8 @@ Msg("Find size of gdouble (11598)\n");
 CheckTypeSize(GTree,0, 11600, 2)
 #elif __x86_64__
 CheckTypeSize(GTree,0, 11600, 11)
+#elif __ia64__
+CheckTypeSize(GTree,0, 11600, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11600,0);
 Msg("Find size of GTree (11600)\n");
@@ -3722,6 +4852,8 @@ Msg("Find size of GTree (11600)\n");
 CheckTypeSize(GTree *,4, 11601, 2)
 #elif __x86_64__
 CheckTypeSize(GTree *,8, 11601, 11)
+#elif __ia64__
+CheckTypeSize(GTree *,8, 11601, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11601,0);
 Msg("Find size of GTree * (11601)\n");
@@ -3729,6 +4861,7 @@ Msg("Find size of GTree * (11601)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11602,0);
 Msg("Find size of fptr_glib_384 (11602)\n");
@@ -3738,6 +4871,8 @@ Msg("Find size of fptr_glib_384 (11602)\n");
 CheckTypeSize(GCompareDataFunc,4, 11603, 2)
 #elif __x86_64__
 CheckTypeSize(GCompareDataFunc,8, 11603, 11)
+#elif __ia64__
+CheckTypeSize(GCompareDataFunc,8, 11603, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11603,0);
 Msg("Find size of GCompareDataFunc (11603)\n");
@@ -3747,6 +4882,8 @@ Msg("Find size of GCompareDataFunc (11603)\n");
 CheckTypeSize(guint8,1, 11604, 2)
 #elif __x86_64__
 CheckTypeSize(guint8,1, 11604, 11)
+#elif __ia64__
+CheckTypeSize(guint8,1, 11604, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11604,0);
 Msg("Find size of guint8 (11604)\n");
@@ -3756,6 +4893,8 @@ Msg("Find size of guint8 (11604)\n");
 CheckTypeSize(GDateYear,2, 11605, 2)
 #elif __x86_64__
 CheckTypeSize(GDateYear,2, 11605, 11)
+#elif __ia64__
+CheckTypeSize(GDateYear,2, 11605, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11605,0);
 Msg("Find size of GDateYear (11605)\n");
@@ -3765,6 +4904,8 @@ Msg("Find size of GDateYear (11605)\n");
 CheckTypeSize(GCache,0, 11607, 2)
 #elif __x86_64__
 CheckTypeSize(GCache,0, 11607, 11)
+#elif __ia64__
+CheckTypeSize(GCache,0, 11607, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11607,0);
 Msg("Find size of GCache (11607)\n");
@@ -3774,6 +4915,8 @@ Msg("Find size of GCache (11607)\n");
 CheckTypeSize(GCache *,4, 11608, 2)
 #elif __x86_64__
 CheckTypeSize(GCache *,8, 11608, 11)
+#elif __ia64__
+CheckTypeSize(GCache *,8, 11608, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11608,0);
 Msg("Find size of GCache * (11608)\n");
@@ -3781,6 +4924,7 @@ Msg("Find size of GCache * (11608)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11609,0);
 Msg("Find size of fptr_glib_7 (11609)\n");
@@ -3790,6 +4934,8 @@ Msg("Find size of fptr_glib_7 (11609)\n");
 CheckTypeSize(GHFunc,4, 11610, 2)
 #elif __x86_64__
 CheckTypeSize(GHFunc,8, 11610, 11)
+#elif __ia64__
+CheckTypeSize(GHFunc,8, 11610, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11610,0);
 Msg("Find size of GHFunc (11610)\n");
@@ -3799,6 +4945,8 @@ Msg("Find size of GHFunc (11610)\n");
 CheckTypeSize(const GDate,8, 11611, 2)
 #elif __x86_64__
 CheckTypeSize(const GDate,8, 11611, 11)
+#elif __ia64__
+CheckTypeSize(const GDate,8, 11611, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11611,0);
 Msg("Find size of const GDate (11611)\n");
@@ -3806,6 +4954,7 @@ Msg("Find size of const GDate (11611)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11612,0);
 Msg("Find size of const GDate * (11612)\n");
@@ -3895,6 +5044,48 @@ CheckMemberSize(struct _GScanner,scope_id,4,11,41599)
 CheckOffset(struct _GScanner,scope_id,128,11,41599)
 CheckMemberSize(struct _GScanner,msg_handler,8,11,41603)
 CheckOffset(struct _GScanner,msg_handler,136,11,41603)
+#elif __ia64__
+CheckTypeSize(struct _GScanner,144, 11613, 3)
+CheckMemberSize(struct _GScanner,max_parse_errors,4,3,41518)
+CheckOffset(struct _GScanner,max_parse_errors,8,3,41518)
+CheckMemberSize(struct _GScanner,parse_errors,4,3,41519)
+CheckOffset(struct _GScanner,parse_errors,12,3,41519)
+CheckMemberSize(struct _GScanner,input_name,8,3,41520)
+CheckOffset(struct _GScanner,input_name,16,3,41520)
+CheckMemberSize(struct _GScanner,qdata,8,3,41521)
+CheckOffset(struct _GScanner,qdata,24,3,41521)
+CheckMemberSize(struct _GScanner,config,8,3,41549)
+CheckOffset(struct _GScanner,config,32,3,41549)
+CheckMemberSize(struct _GScanner,token,4,3,41574)
+CheckOffset(struct _GScanner,token,40,3,41574)
+CheckMemberSize(struct _GScanner,value,8,3,41587)
+CheckOffset(struct _GScanner,value,48,3,41587)
+CheckMemberSize(struct _GScanner,line,4,3,41588)
+CheckOffset(struct _GScanner,line,56,3,41588)
+CheckMemberSize(struct _GScanner,position,4,3,41589)
+CheckOffset(struct _GScanner,position,60,3,41589)
+CheckMemberSize(struct _GScanner,next_token,4,3,41590)
+CheckOffset(struct _GScanner,next_token,64,3,41590)
+CheckMemberSize(struct _GScanner,next_value,8,3,41591)
+CheckOffset(struct _GScanner,next_value,72,3,41591)
+CheckMemberSize(struct _GScanner,next_line,4,3,41592)
+CheckOffset(struct _GScanner,next_line,80,3,41592)
+CheckMemberSize(struct _GScanner,next_position,4,3,41593)
+CheckOffset(struct _GScanner,next_position,84,3,41593)
+CheckMemberSize(struct _GScanner,symbol_table,8,3,41594)
+CheckOffset(struct _GScanner,symbol_table,88,3,41594)
+CheckMemberSize(struct _GScanner,input_fd,4,3,41595)
+CheckOffset(struct _GScanner,input_fd,96,3,41595)
+CheckMemberSize(struct _GScanner,text,8,3,41596)
+CheckOffset(struct _GScanner,text,104,3,41596)
+CheckMemberSize(struct _GScanner,text_end,8,3,41597)
+CheckOffset(struct _GScanner,text_end,112,3,41597)
+CheckMemberSize(struct _GScanner,buffer,8,3,41598)
+CheckOffset(struct _GScanner,buffer,120,3,41598)
+CheckMemberSize(struct _GScanner,scope_id,4,3,41599)
+CheckOffset(struct _GScanner,scope_id,128,3,41599)
+CheckMemberSize(struct _GScanner,msg_handler,8,3,41603)
+CheckOffset(struct _GScanner,msg_handler,136,3,41603)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11613,0);
 Msg("Find size of _GScanner (11613)\n");
@@ -3920,6 +5111,16 @@ CheckMemberSize(struct _GScannerConfig,cpair_comment_single,8,11,41525)
 CheckOffset(struct _GScannerConfig,cpair_comment_single,24,11,41525)
 CheckMemberSize(struct _GScannerConfig,padding_dummy,4,11,41548)
 CheckOffset(struct _GScannerConfig,padding_dummy,36,11,41548)
+#elif __ia64__
+CheckTypeSize(struct _GScannerConfig,40, 11614, 3)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_first,8,3,41523)
+CheckOffset(struct _GScannerConfig,cset_identifier_first,8,3,41523)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_nth,8,3,41524)
+CheckOffset(struct _GScannerConfig,cset_identifier_nth,16,3,41524)
+CheckMemberSize(struct _GScannerConfig,cpair_comment_single,8,3,41525)
+CheckOffset(struct _GScannerConfig,cpair_comment_single,24,3,41525)
+CheckMemberSize(struct _GScannerConfig,padding_dummy,4,3,41548)
+CheckOffset(struct _GScannerConfig,padding_dummy,36,3,41548)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11614,0);
 Msg("Find size of _GScannerConfig (11614)\n");
@@ -3929,6 +5130,8 @@ Msg("Find size of _GScannerConfig (11614)\n");
 CheckTypeSize(GScannerConfig,24, 11615, 2)
 #elif __x86_64__
 CheckTypeSize(GScannerConfig,40, 11615, 11)
+#elif __ia64__
+CheckTypeSize(GScannerConfig,40, 11615, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11615,0);
 Msg("Find size of GScannerConfig (11615)\n");
@@ -3938,6 +5141,8 @@ Msg("Find size of GScannerConfig (11615)\n");
 CheckTypeSize(GScannerConfig *,4, 11616, 2)
 #elif __x86_64__
 CheckTypeSize(GScannerConfig *,8, 11616, 11)
+#elif __ia64__
+CheckTypeSize(GScannerConfig *,8, 11616, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11616,0);
 Msg("Find size of GScannerConfig * (11616)\n");
@@ -3993,6 +5198,31 @@ CheckEnum("G_TOKEN_IDENTIFIER_NULL",G_TOKEN_IDENTIFIER_NULL,267);
 CheckEnum("G_TOKEN_COMMENT_SINGLE",G_TOKEN_COMMENT_SINGLE,268);
 CheckEnum("G_TOKEN_COMMENT_MULTI",G_TOKEN_COMMENT_MULTI,269);
 CheckEnum("G_TOKEN_LAST",G_TOKEN_LAST,270);
+#elif __ia64__
+CheckEnum("G_TOKEN_EOF",G_TOKEN_EOF,0);
+CheckEnum("G_TOKEN_LEFT_PAREN",G_TOKEN_LEFT_PAREN,40);
+CheckEnum("G_TOKEN_RIGHT_PAREN",G_TOKEN_RIGHT_PAREN,41);
+CheckEnum("G_TOKEN_LEFT_CURLY",G_TOKEN_LEFT_CURLY,123);
+CheckEnum("G_TOKEN_RIGHT_CURLY",G_TOKEN_RIGHT_CURLY,125);
+CheckEnum("G_TOKEN_LEFT_BRACE",G_TOKEN_LEFT_BRACE,91);
+CheckEnum("G_TOKEN_RIGHT_BRACE",G_TOKEN_RIGHT_BRACE,93);
+CheckEnum("G_TOKEN_EQUAL_SIGN",G_TOKEN_EQUAL_SIGN,61);
+CheckEnum("G_TOKEN_COMMA",G_TOKEN_COMMA,44);
+CheckEnum("G_TOKEN_NONE",G_TOKEN_NONE,256);
+CheckEnum("G_TOKEN_ERROR",G_TOKEN_ERROR,257);
+CheckEnum("G_TOKEN_CHAR",G_TOKEN_CHAR,258);
+CheckEnum("G_TOKEN_BINARY",G_TOKEN_BINARY,259);
+CheckEnum("G_TOKEN_OCTAL",G_TOKEN_OCTAL,260);
+CheckEnum("G_TOKEN_INT",G_TOKEN_INT,261);
+CheckEnum("G_TOKEN_HEX",G_TOKEN_HEX,262);
+CheckEnum("G_TOKEN_FLOAT",G_TOKEN_FLOAT,263);
+CheckEnum("G_TOKEN_STRING",G_TOKEN_STRING,264);
+CheckEnum("G_TOKEN_SYMBOL",G_TOKEN_SYMBOL,265);
+CheckEnum("G_TOKEN_IDENTIFIER",G_TOKEN_IDENTIFIER,266);
+CheckEnum("G_TOKEN_IDENTIFIER_NULL",G_TOKEN_IDENTIFIER_NULL,267);
+CheckEnum("G_TOKEN_COMMENT_SINGLE",G_TOKEN_COMMENT_SINGLE,268);
+CheckEnum("G_TOKEN_COMMENT_MULTI",G_TOKEN_COMMENT_MULTI,269);
+CheckEnum("G_TOKEN_LAST",G_TOKEN_LAST,270);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11617,0);
 Msg("Find size of anon-glib-2.0/glib.h-66 (11617)\n");
@@ -4002,6 +5232,8 @@ Msg("Find size of anon-glib-2.0/glib.h-66 (11617)\n");
 CheckTypeSize(GTokenType,4, 11618, 2)
 #elif __x86_64__
 CheckTypeSize(GTokenType,4, 11618, 11)
+#elif __ia64__
+CheckTypeSize(GTokenType,4, 11618, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11618,0);
 Msg("Find size of GTokenType (11618)\n");
@@ -4037,24 +5269,32 @@ CheckOffset(union _GTokenValue,v_string,0,11,41583)
 CheckOffset(union _GTokenValue,v_comment,0,11,41584)
 CheckOffset(union _GTokenValue,v_char,0,11,41585)
 CheckOffset(union _GTokenValue,v_error,0,11,41586)
+#elif __ia64__
+CheckTypeSize(union _GTokenValue,8, 11619, 3)
+Msg("Missing member data for _GTokenValue on IA64\n");
+CheckOffset(union _GTokenValue,v_symbol,0,3,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,3,41576)
+CheckOffset(union _GTokenValue,v_binary,0,3,41577)
+CheckOffset(union _GTokenValue,v_octal,0,3,41578)
+CheckOffset(union _GTokenValue,v_int,0,3,41579)
+CheckOffset(union _GTokenValue,v_int64,0,3,41580)
+CheckOffset(union _GTokenValue,v_float,0,3,41581)
+CheckOffset(union _GTokenValue,v_hex,0,3,41582)
+CheckOffset(union _GTokenValue,v_string,0,3,41583)
+CheckOffset(union _GTokenValue,v_comment,0,3,41584)
+CheckOffset(union _GTokenValue,v_char,0,3,41585)
+CheckOffset(union _GTokenValue,v_error,0,3,41586)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11619,0);
 Msg("Find size of _GTokenValue (11619)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(guint64,8, 11621, 2)
-#elif __x86_64__
-CheckTypeSize(guint64,8, 11621, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11621,0);
-Msg("Find size of guint64 (11621)\n");
-#endif
-
-#if __i386__
 CheckTypeSize(guchar,1, 11622, 2)
 #elif __x86_64__
 CheckTypeSize(guchar,1, 11622, 11)
+#elif __ia64__
+CheckTypeSize(guchar,1, 11622, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11622,0);
 Msg("Find size of guchar (11622)\n");
@@ -4064,6 +5304,8 @@ Msg("Find size of guchar (11622)\n");
 CheckTypeSize(GTokenValue,8, 11623, 2)
 #elif __x86_64__
 CheckTypeSize(GTokenValue,8, 11623, 11)
+#elif __ia64__
+CheckTypeSize(GTokenValue,8, 11623, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11623,0);
 Msg("Find size of GTokenValue (11623)\n");
@@ -4073,6 +5315,8 @@ Msg("Find size of GTokenValue (11623)\n");
 CheckTypeSize(GScanner,92, 11624, 2)
 #elif __x86_64__
 CheckTypeSize(GScanner,144, 11624, 11)
+#elif __ia64__
+CheckTypeSize(GScanner,144, 11624, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11624,0);
 Msg("Find size of GScanner (11624)\n");
@@ -4082,6 +5326,8 @@ Msg("Find size of GScanner (11624)\n");
 CheckTypeSize(GScanner *,4, 11625, 2)
 #elif __x86_64__
 CheckTypeSize(GScanner *,8, 11625, 11)
+#elif __ia64__
+CheckTypeSize(GScanner *,8, 11625, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11625,0);
 Msg("Find size of GScanner * (11625)\n");
@@ -4089,6 +5335,7 @@ Msg("Find size of GScanner * (11625)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11626,0);
 Msg("Find size of fptr_glib_80 (11626)\n");
@@ -4098,6 +5345,8 @@ Msg("Find size of fptr_glib_80 (11626)\n");
 CheckTypeSize(GScannerMsgFunc,4, 11627, 2)
 #elif __x86_64__
 CheckTypeSize(GScannerMsgFunc,8, 11627, 11)
+#elif __ia64__
+CheckTypeSize(GScannerMsgFunc,8, 11627, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11627,0);
 Msg("Find size of GScannerMsgFunc (11627)\n");
@@ -4111,6 +5360,10 @@ CheckOffset(struct _GByteArray,len,4,2,41605)
 CheckTypeSize(struct _GByteArray,16, 11628, 11)
 CheckMemberSize(struct _GByteArray,len,4,11,41605)
 CheckOffset(struct _GByteArray,len,8,11,41605)
+#elif __ia64__
+CheckTypeSize(struct _GByteArray,16, 11628, 3)
+CheckMemberSize(struct _GByteArray,len,4,3,41605)
+CheckOffset(struct _GByteArray,len,8,3,41605)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11628,0);
 Msg("Find size of _GByteArray (11628)\n");
@@ -4120,6 +5373,8 @@ Msg("Find size of _GByteArray (11628)\n");
 CheckTypeSize(guint8 *,4, 11629, 2)
 #elif __x86_64__
 CheckTypeSize(guint8 *,8, 11629, 11)
+#elif __ia64__
+CheckTypeSize(guint8 *,8, 11629, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11629,0);
 Msg("Find size of guint8 * (11629)\n");
@@ -4129,6 +5384,8 @@ Msg("Find size of guint8 * (11629)\n");
 CheckTypeSize(GByteArray,8, 11630, 2)
 #elif __x86_64__
 CheckTypeSize(GByteArray,16, 11630, 11)
+#elif __ia64__
+CheckTypeSize(GByteArray,16, 11630, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11630,0);
 Msg("Find size of GByteArray (11630)\n");
@@ -4138,6 +5395,8 @@ Msg("Find size of GByteArray (11630)\n");
 CheckTypeSize(GByteArray *,4, 11631, 2)
 #elif __x86_64__
 CheckTypeSize(GByteArray *,8, 11631, 11)
+#elif __ia64__
+CheckTypeSize(GByteArray *,8, 11631, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11631,0);
 Msg("Find size of GByteArray * (11631)\n");
@@ -4151,6 +5410,10 @@ CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
 CheckEnum("G_KEY_FILE_NONE",G_KEY_FILE_NONE,0);
 CheckEnum("G_KEY_FILE_KEEP_COMMENTS",G_KEY_FILE_KEEP_COMMENTS,1);
 CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
+#elif __ia64__
+CheckEnum("G_KEY_FILE_NONE",G_KEY_FILE_NONE,0);
+CheckEnum("G_KEY_FILE_KEEP_COMMENTS",G_KEY_FILE_KEEP_COMMENTS,1);
+CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11632,0);
 Msg("Find size of anon-glib-2.0/glib.h-27 (11632)\n");
@@ -4160,6 +5423,8 @@ Msg("Find size of anon-glib-2.0/glib.h-27 (11632)\n");
 CheckTypeSize(GKeyFileFlags,4, 11633, 2)
 #elif __x86_64__
 CheckTypeSize(GKeyFileFlags,4, 11633, 11)
+#elif __ia64__
+CheckTypeSize(GKeyFileFlags,4, 11633, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11633,0);
 Msg("Find size of GKeyFileFlags (11633)\n");
@@ -4173,6 +5438,10 @@ CheckOffset(struct _GTrashStack,next,0,2,41609)
 CheckTypeSize(struct _GTrashStack,8, 11634, 11)
 Msg("Missing member data for _GTrashStack on x86-64\n");
 CheckOffset(struct _GTrashStack,next,0,11,41609)
+#elif __ia64__
+CheckTypeSize(struct _GTrashStack,8, 11634, 3)
+Msg("Missing member data for _GTrashStack on IA64\n");
+CheckOffset(struct _GTrashStack,next,0,3,41609)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11634,0);
 Msg("Find size of _GTrashStack (11634)\n");
@@ -4182,6 +5451,8 @@ Msg("Find size of _GTrashStack (11634)\n");
 CheckTypeSize(GTrashStack,4, 11635, 2)
 #elif __x86_64__
 CheckTypeSize(GTrashStack,8, 11635, 11)
+#elif __ia64__
+CheckTypeSize(GTrashStack,8, 11635, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11635,0);
 Msg("Find size of GTrashStack (11635)\n");
@@ -4191,6 +5462,8 @@ Msg("Find size of GTrashStack (11635)\n");
 CheckTypeSize(GTrashStack *,4, 11636, 2)
 #elif __x86_64__
 CheckTypeSize(GTrashStack *,8, 11636, 11)
+#elif __ia64__
+CheckTypeSize(GTrashStack *,8, 11636, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11636,0);
 Msg("Find size of GTrashStack * (11636)\n");
@@ -4198,6 +5471,7 @@ Msg("Find size of GTrashStack * (11636)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11637,0);
 Msg("Find size of GTrashStack * * (11637)\n");
@@ -4207,6 +5481,8 @@ Msg("Find size of GTrashStack * * (11637)\n");
 CheckTypeSize(gunichar2,2, 11638, 2)
 #elif __x86_64__
 CheckTypeSize(gunichar2,2, 11638, 11)
+#elif __ia64__
+CheckTypeSize(gunichar2,2, 11638, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11638,0);
 Msg("Find size of gunichar2 (11638)\n");
@@ -4216,6 +5492,8 @@ Msg("Find size of gunichar2 (11638)\n");
 CheckTypeSize(gunichar2 *,4, 11639, 2)
 #elif __x86_64__
 CheckTypeSize(gunichar2 *,8, 11639, 11)
+#elif __ia64__
+CheckTypeSize(gunichar2 *,8, 11639, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11639,0);
 Msg("Find size of gunichar2 * (11639)\n");
@@ -4225,6 +5503,8 @@ Msg("Find size of gunichar2 * (11639)\n");
 CheckTypeSize(const gunichar,4, 11640, 2)
 #elif __x86_64__
 CheckTypeSize(const gunichar,4, 11640, 11)
+#elif __ia64__
+CheckTypeSize(const gunichar,4, 11640, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11640,0);
 Msg("Find size of const gunichar (11640)\n");
@@ -4232,6 +5512,7 @@ Msg("Find size of const gunichar (11640)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11641,0);
 Msg("Find size of const gunichar * (11641)\n");
@@ -4241,6 +5522,8 @@ Msg("Find size of const gunichar * (11641)\n");
 CheckTypeSize(glong,4, 11642, 2)
 #elif __x86_64__
 CheckTypeSize(glong,8, 11642, 11)
+#elif __ia64__
+CheckTypeSize(glong,8, 11642, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11642,0);
 Msg("Find size of glong (11642)\n");
@@ -4250,6 +5533,8 @@ Msg("Find size of glong (11642)\n");
 CheckTypeSize(glong *,4, 11643, 2)
 #elif __x86_64__
 CheckTypeSize(glong *,8, 11643, 11)
+#elif __ia64__
+CheckTypeSize(glong *,8, 11643, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11643,0);
 Msg("Find size of glong * (11643)\n");
@@ -4263,6 +5548,10 @@ CheckOffset(struct _GArray,len,4,2,41611)
 CheckTypeSize(struct _GArray,16, 11644, 11)
 CheckMemberSize(struct _GArray,len,4,11,41611)
 CheckOffset(struct _GArray,len,8,11,41611)
+#elif __ia64__
+CheckTypeSize(struct _GArray,16, 11644, 3)
+CheckMemberSize(struct _GArray,len,4,3,41611)
+CheckOffset(struct _GArray,len,8,3,41611)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11644,0);
 Msg("Find size of _GArray (11644)\n");
@@ -4272,6 +5561,8 @@ Msg("Find size of _GArray (11644)\n");
 CheckTypeSize(GArray,8, 11645, 2)
 #elif __x86_64__
 CheckTypeSize(GArray,16, 11645, 11)
+#elif __ia64__
+CheckTypeSize(GArray,16, 11645, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11645,0);
 Msg("Find size of GArray (11645)\n");
@@ -4281,6 +5572,8 @@ Msg("Find size of GArray (11645)\n");
 CheckTypeSize(GArray *,4, 11646, 2)
 #elif __x86_64__
 CheckTypeSize(GArray *,8, 11646, 11)
+#elif __ia64__
+CheckTypeSize(GArray *,8, 11646, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11646,0);
 Msg("Find size of GArray * (11646)\n");
@@ -4306,6 +5599,16 @@ CheckMemberSize(struct _GNode,parent,8,11,41615)
 CheckOffset(struct _GNode,parent,24,11,41615)
 CheckMemberSize(struct _GNode,children,8,11,41616)
 CheckOffset(struct _GNode,children,32,11,41616)
+#elif __ia64__
+CheckTypeSize(struct _GNode,40, 11647, 3)
+CheckMemberSize(struct _GNode,next,8,3,41613)
+CheckOffset(struct _GNode,next,8,3,41613)
+CheckMemberSize(struct _GNode,prev,8,3,41614)
+CheckOffset(struct _GNode,prev,16,3,41614)
+CheckMemberSize(struct _GNode,parent,8,3,41615)
+CheckOffset(struct _GNode,parent,24,3,41615)
+CheckMemberSize(struct _GNode,children,8,3,41616)
+CheckOffset(struct _GNode,children,32,3,41616)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11647,0);
 Msg("Find size of _GNode (11647)\n");
@@ -4315,6 +5618,8 @@ Msg("Find size of _GNode (11647)\n");
 CheckTypeSize(GNode,20, 11648, 2)
 #elif __x86_64__
 CheckTypeSize(GNode,40, 11648, 11)
+#elif __ia64__
+CheckTypeSize(GNode,40, 11648, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11648,0);
 Msg("Find size of GNode (11648)\n");
@@ -4324,6 +5629,8 @@ Msg("Find size of GNode (11648)\n");
 CheckTypeSize(GNode *,4, 11649, 2)
 #elif __x86_64__
 CheckTypeSize(GNode *,8, 11649, 11)
+#elif __ia64__
+CheckTypeSize(GNode *,8, 11649, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11649,0);
 Msg("Find size of GNode * (11649)\n");
@@ -4331,6 +5638,7 @@ Msg("Find size of GNode * (11649)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11650,0);
 Msg("Find size of fptr_glib_177 (11650)\n");
@@ -4340,6 +5648,8 @@ Msg("Find size of fptr_glib_177 (11650)\n");
 CheckTypeSize(GHRFunc,4, 11651, 2)
 #elif __x86_64__
 CheckTypeSize(GHRFunc,8, 11651, 11)
+#elif __ia64__
+CheckTypeSize(GHRFunc,8, 11651, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11651,0);
 Msg("Find size of GHRFunc (11651)\n");
@@ -4347,6 +5657,7 @@ Msg("Find size of GHRFunc (11651)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11652,0);
 Msg("Find size of fptr_glib_136 (11652)\n");
@@ -4356,6 +5667,8 @@ Msg("Find size of fptr_glib_136 (11652)\n");
 CheckTypeSize(GCompareFunc,4, 11653, 2)
 #elif __x86_64__
 CheckTypeSize(GCompareFunc,8, 11653, 11)
+#elif __ia64__
+CheckTypeSize(GCompareFunc,8, 11653, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11653,0);
 Msg("Find size of GCompareFunc (11653)\n");
@@ -4365,6 +5678,8 @@ Msg("Find size of GCompareFunc (11653)\n");
 CheckTypeSize(gint32,4, 11654, 2)
 #elif __x86_64__
 CheckTypeSize(gint32,4, 11654, 11)
+#elif __ia64__
+CheckTypeSize(gint32,4, 11654, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11654,0);
 Msg("Find size of gint32 (11654)\n");
@@ -4374,6 +5689,8 @@ Msg("Find size of gint32 (11654)\n");
 CheckTypeSize(GTime,4, 11655, 2)
 #elif __x86_64__
 CheckTypeSize(GTime,4, 11655, 11)
+#elif __ia64__
+CheckTypeSize(GTime,4, 11655, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11655,0);
 Msg("Find size of GTime (11655)\n");
@@ -4381,6 +5698,7 @@ Msg("Find size of GTime (11655)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11656,0);
 Msg("Find size of fptr_glib_272 (11656)\n");
@@ -4390,6 +5708,8 @@ Msg("Find size of fptr_glib_272 (11656)\n");
 CheckTypeSize(GPollFunc,4, 11657, 2)
 #elif __x86_64__
 CheckTypeSize(GPollFunc,8, 11657, 11)
+#elif __ia64__
+CheckTypeSize(GPollFunc,8, 11657, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11657,0);
 Msg("Find size of GPollFunc (11657)\n");
@@ -4399,6 +5719,8 @@ Msg("Find size of GPollFunc (11657)\n");
 CheckTypeSize(gulong *,4, 11658, 2)
 #elif __x86_64__
 CheckTypeSize(gulong *,8, 11658, 11)
+#elif __ia64__
+CheckTypeSize(gulong *,8, 11658, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11658,0);
 Msg("Find size of gulong * (11658)\n");
@@ -4408,6 +5730,8 @@ Msg("Find size of gulong * (11658)\n");
 CheckTypeSize(GDateDay,1, 11659, 2)
 #elif __x86_64__
 CheckTypeSize(GDateDay,1, 11659, 11)
+#elif __ia64__
+CheckTypeSize(GDateDay,1, 11659, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11659,0);
 Msg("Find size of GDateDay (11659)\n");
@@ -4477,6 +5801,38 @@ CheckEnum("G_UNICODE_BREAK_AMBIGUOUS",G_UNICODE_BREAK_AMBIGUOUS,27);
 CheckEnum("G_UNICODE_BREAK_UNKNOWN",G_UNICODE_BREAK_UNKNOWN,28);
 CheckEnum("G_UNICODE_BREAK_NEXT_LINE",G_UNICODE_BREAK_NEXT_LINE,29);
 CheckEnum("G_UNICODE_BREAK_WORD_JOINER",G_UNICODE_BREAK_WORD_JOINER,30);
+#elif __ia64__
+CheckEnum("G_UNICODE_BREAK_MANDATORY",G_UNICODE_BREAK_MANDATORY,0);
+CheckEnum("G_UNICODE_BREAK_CARRIAGE_RETURN",G_UNICODE_BREAK_CARRIAGE_RETURN,1);
+CheckEnum("G_UNICODE_BREAK_LINE_FEED",G_UNICODE_BREAK_LINE_FEED,2);
+CheckEnum("G_UNICODE_BREAK_COMBINING_MARK",G_UNICODE_BREAK_COMBINING_MARK,3);
+CheckEnum("G_UNICODE_BREAK_SURROGATE",G_UNICODE_BREAK_SURROGATE,4);
+CheckEnum("G_UNICODE_BREAK_ZERO_WIDTH_SPACE",G_UNICODE_BREAK_ZERO_WIDTH_SPACE,5);
+CheckEnum("G_UNICODE_BREAK_INSEPARABLE",G_UNICODE_BREAK_INSEPARABLE,6);
+CheckEnum("G_UNICODE_BREAK_NON_BREAKING_GLUE",G_UNICODE_BREAK_NON_BREAKING_GLUE,7);
+CheckEnum("G_UNICODE_BREAK_CONTINGENT",G_UNICODE_BREAK_CONTINGENT,8);
+CheckEnum("G_UNICODE_BREAK_SPACE",G_UNICODE_BREAK_SPACE,9);
+CheckEnum("G_UNICODE_BREAK_AFTER",G_UNICODE_BREAK_AFTER,10);
+CheckEnum("G_UNICODE_BREAK_BEFORE",G_UNICODE_BREAK_BEFORE,11);
+CheckEnum("G_UNICODE_BREAK_BEFORE_AND_AFTER",G_UNICODE_BREAK_BEFORE_AND_AFTER,12);
+CheckEnum("G_UNICODE_BREAK_HYPHEN",G_UNICODE_BREAK_HYPHEN,13);
+CheckEnum("G_UNICODE_BREAK_NON_STARTER",G_UNICODE_BREAK_NON_STARTER,14);
+CheckEnum("G_UNICODE_BREAK_OPEN_PUNCTUATION",G_UNICODE_BREAK_OPEN_PUNCTUATION,15);
+CheckEnum("G_UNICODE_BREAK_CLOSE_PUNCTUATION",G_UNICODE_BREAK_CLOSE_PUNCTUATION,16);
+CheckEnum("G_UNICODE_BREAK_QUOTATION",G_UNICODE_BREAK_QUOTATION,17);
+CheckEnum("G_UNICODE_BREAK_EXCLAMATION",G_UNICODE_BREAK_EXCLAMATION,18);
+CheckEnum("G_UNICODE_BREAK_IDEOGRAPHIC",G_UNICODE_BREAK_IDEOGRAPHIC,19);
+CheckEnum("G_UNICODE_BREAK_NUMERIC",G_UNICODE_BREAK_NUMERIC,20);
+CheckEnum("G_UNICODE_BREAK_INFIX_SEPARATOR",G_UNICODE_BREAK_INFIX_SEPARATOR,21);
+CheckEnum("G_UNICODE_BREAK_SYMBOL",G_UNICODE_BREAK_SYMBOL,22);
+CheckEnum("G_UNICODE_BREAK_ALPHABETIC",G_UNICODE_BREAK_ALPHABETIC,23);
+CheckEnum("G_UNICODE_BREAK_PREFIX",G_UNICODE_BREAK_PREFIX,24);
+CheckEnum("G_UNICODE_BREAK_POSTFIX",G_UNICODE_BREAK_POSTFIX,25);
+CheckEnum("G_UNICODE_BREAK_COMPLEX_CONTEXT",G_UNICODE_BREAK_COMPLEX_CONTEXT,26);
+CheckEnum("G_UNICODE_BREAK_AMBIGUOUS",G_UNICODE_BREAK_AMBIGUOUS,27);
+CheckEnum("G_UNICODE_BREAK_UNKNOWN",G_UNICODE_BREAK_UNKNOWN,28);
+CheckEnum("G_UNICODE_BREAK_NEXT_LINE",G_UNICODE_BREAK_NEXT_LINE,29);
+CheckEnum("G_UNICODE_BREAK_WORD_JOINER",G_UNICODE_BREAK_WORD_JOINER,30);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11660,0);
 Msg("Find size of anon-glib-2.0/glib.h-85 (11660)\n");
@@ -4486,6 +5842,8 @@ Msg("Find size of anon-glib-2.0/glib.h-85 (11660)\n");
 CheckTypeSize(GUnicodeBreakType,4, 11661, 2)
 #elif __x86_64__
 CheckTypeSize(GUnicodeBreakType,4, 11661, 11)
+#elif __ia64__
+CheckTypeSize(GUnicodeBreakType,4, 11661, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11661,0);
 Msg("Find size of GUnicodeBreakType (11661)\n");
@@ -4495,6 +5853,8 @@ Msg("Find size of GUnicodeBreakType (11661)\n");
 CheckTypeSize(GStringChunk,0, 11663, 2)
 #elif __x86_64__
 CheckTypeSize(GStringChunk,0, 11663, 11)
+#elif __ia64__
+CheckTypeSize(GStringChunk,0, 11663, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11663,0);
 Msg("Find size of GStringChunk (11663)\n");
@@ -4504,6 +5864,8 @@ Msg("Find size of GStringChunk (11663)\n");
 CheckTypeSize(GStringChunk *,4, 11664, 2)
 #elif __x86_64__
 CheckTypeSize(GStringChunk *,8, 11664, 11)
+#elif __ia64__
+CheckTypeSize(GStringChunk *,8, 11664, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11664,0);
 Msg("Find size of GStringChunk * (11664)\n");
@@ -4524,19 +5886,33 @@ CheckOffset(struct _GStaticRWLock,want_to_read,44,2,41661)
 CheckMemberSize(struct _GStaticRWLock,want_to_write,4,2,41662)
 CheckOffset(struct _GStaticRWLock,want_to_write,48,2,41662)
 #elif __x86_64__
-CheckTypeSize(struct _GStaticRWLock,64, 11665, 11)
+CheckTypeSize(struct _GStaticRWLock,80, 11665, 11)
 CheckMemberSize(struct _GStaticRWLock,read_cond,8,11,41657)
-CheckOffset(struct _GStaticRWLock,read_cond,32,11,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,48,11,41657)
 CheckMemberSize(struct _GStaticRWLock,write_cond,8,11,41658)
-CheckOffset(struct _GStaticRWLock,write_cond,40,11,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,56,11,41658)
 CheckMemberSize(struct _GStaticRWLock,read_counter,4,11,41659)
-CheckOffset(struct _GStaticRWLock,read_counter,48,11,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,64,11,41659)
 CheckMemberSize(struct _GStaticRWLock,have_writer,4,11,41660)
-CheckOffset(struct _GStaticRWLock,have_writer,52,11,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,68,11,41660)
 CheckMemberSize(struct _GStaticRWLock,want_to_read,4,11,41661)
-CheckOffset(struct _GStaticRWLock,want_to_read,56,11,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,72,11,41661)
 CheckMemberSize(struct _GStaticRWLock,want_to_write,4,11,41662)
-CheckOffset(struct _GStaticRWLock,want_to_write,60,11,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,76,11,41662)
+#elif __ia64__
+CheckTypeSize(struct _GStaticRWLock,80, 11665, 3)
+CheckMemberSize(struct _GStaticRWLock,read_cond,8,3,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,48,3,41657)
+CheckMemberSize(struct _GStaticRWLock,write_cond,8,3,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,56,3,41658)
+CheckMemberSize(struct _GStaticRWLock,read_counter,4,3,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,64,3,41659)
+CheckMemberSize(struct _GStaticRWLock,have_writer,4,3,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,68,3,41660)
+CheckMemberSize(struct _GStaticRWLock,want_to_read,4,3,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,72,3,41661)
+CheckMemberSize(struct _GStaticRWLock,want_to_write,4,3,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,76,3,41662)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11665,0);
 Msg("Find size of _GStaticRWLock (11665)\n");
@@ -4546,6 +5922,8 @@ Msg("Find size of _GStaticRWLock (11665)\n");
 CheckTypeSize(GCond,0, 11667, 2)
 #elif __x86_64__
 CheckTypeSize(GCond,0, 11667, 11)
+#elif __ia64__
+CheckTypeSize(GCond,0, 11667, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11667,0);
 Msg("Find size of GCond (11667)\n");
@@ -4555,6 +5933,8 @@ Msg("Find size of GCond (11667)\n");
 CheckTypeSize(GCond *,4, 11668, 2)
 #elif __x86_64__
 CheckTypeSize(GCond *,8, 11668, 11)
+#elif __ia64__
+CheckTypeSize(GCond *,8, 11668, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11668,0);
 Msg("Find size of GCond * (11668)\n");
@@ -4563,7 +5943,9 @@ Msg("Find size of GCond * (11668)\n");
 #if __i386__
 CheckTypeSize(GStaticRWLock,52, 11669, 2)
 #elif __x86_64__
-CheckTypeSize(GStaticRWLock,64, 11669, 11)
+CheckTypeSize(GStaticRWLock,80, 11669, 11)
+#elif __ia64__
+CheckTypeSize(GStaticRWLock,80, 11669, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11669,0);
 Msg("Find size of GStaticRWLock (11669)\n");
@@ -4573,6 +5955,8 @@ Msg("Find size of GStaticRWLock (11669)\n");
 CheckTypeSize(GStaticRWLock *,4, 11670, 2)
 #elif __x86_64__
 CheckTypeSize(GStaticRWLock *,8, 11670, 11)
+#elif __ia64__
+CheckTypeSize(GStaticRWLock *,8, 11670, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11670,0);
 Msg("Find size of GStaticRWLock * (11670)\n");
@@ -4580,6 +5964,7 @@ Msg("Find size of GStaticRWLock * (11670)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11671,0);
 Msg("Find size of fptr_glib_14 (11671)\n");
@@ -4589,6 +5974,8 @@ Msg("Find size of fptr_glib_14 (11671)\n");
 CheckTypeSize(GChildWatchFunc,4, 11672, 2)
 #elif __x86_64__
 CheckTypeSize(GChildWatchFunc,8, 11672, 11)
+#elif __ia64__
+CheckTypeSize(GChildWatchFunc,8, 11672, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11672,0);
 Msg("Find size of GChildWatchFunc (11672)\n");
@@ -4598,6 +5985,8 @@ Msg("Find size of GChildWatchFunc (11672)\n");
 CheckTypeSize(gunichar *,4, 11673, 2)
 #elif __x86_64__
 CheckTypeSize(gunichar *,8, 11673, 11)
+#elif __ia64__
+CheckTypeSize(gunichar *,8, 11673, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11673,0);
 Msg("Find size of gunichar * (11673)\n");
@@ -4611,6 +6000,10 @@ CheckOffset(struct _GTimeVal,tv_usec,4,2,41667)
 CheckTypeSize(struct _GTimeVal,16, 11674, 11)
 CheckMemberSize(struct _GTimeVal,tv_usec,8,11,41667)
 CheckOffset(struct _GTimeVal,tv_usec,8,11,41667)
+#elif __ia64__
+CheckTypeSize(struct _GTimeVal,16, 11674, 3)
+CheckMemberSize(struct _GTimeVal,tv_usec,8,3,41667)
+CheckOffset(struct _GTimeVal,tv_usec,8,3,41667)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11674,0);
 Msg("Find size of _GTimeVal (11674)\n");
@@ -4620,6 +6013,8 @@ Msg("Find size of _GTimeVal (11674)\n");
 CheckTypeSize(GTimeVal,8, 11675, 2)
 #elif __x86_64__
 CheckTypeSize(GTimeVal,16, 11675, 11)
+#elif __ia64__
+CheckTypeSize(GTimeVal,16, 11675, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11675,0);
 Msg("Find size of GTimeVal (11675)\n");
@@ -4629,6 +6024,8 @@ Msg("Find size of GTimeVal (11675)\n");
 CheckTypeSize(GTimeVal *,4, 11676, 2)
 #elif __x86_64__
 CheckTypeSize(GTimeVal *,8, 11676, 11)
+#elif __ia64__
+CheckTypeSize(GTimeVal *,8, 11676, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11676,0);
 Msg("Find size of GTimeVal * (11676)\n");
@@ -4654,6 +6051,16 @@ CheckEnum("G_LOG_LEVEL_MESSAGE",G_LOG_LEVEL_MESSAGE,32);
 CheckEnum("G_LOG_LEVEL_INFO",G_LOG_LEVEL_INFO,64);
 CheckEnum("G_LOG_LEVEL_DEBUG",G_LOG_LEVEL_DEBUG,128);
 CheckEnum("G_LOG_LEVEL_MASK",G_LOG_LEVEL_MASK,-4);
+#elif __ia64__
+CheckEnum("G_LOG_FLAG_RECURSION",G_LOG_FLAG_RECURSION,1);
+CheckEnum("G_LOG_FLAG_FATAL",G_LOG_FLAG_FATAL,2);
+CheckEnum("G_LOG_LEVEL_ERROR",G_LOG_LEVEL_ERROR,4);
+CheckEnum("G_LOG_LEVEL_CRITICAL",G_LOG_LEVEL_CRITICAL,8);
+CheckEnum("G_LOG_LEVEL_WARNING",G_LOG_LEVEL_WARNING,16);
+CheckEnum("G_LOG_LEVEL_MESSAGE",G_LOG_LEVEL_MESSAGE,32);
+CheckEnum("G_LOG_LEVEL_INFO",G_LOG_LEVEL_INFO,64);
+CheckEnum("G_LOG_LEVEL_DEBUG",G_LOG_LEVEL_DEBUG,128);
+CheckEnum("G_LOG_LEVEL_MASK",G_LOG_LEVEL_MASK,-4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11677,0);
 Msg("Find size of anon-glib-2.0/glib.h-49 (11677)\n");
@@ -4663,6 +6070,8 @@ Msg("Find size of anon-glib-2.0/glib.h-49 (11677)\n");
 CheckTypeSize(GLogLevelFlags,4, 11678, 2)
 #elif __x86_64__
 CheckTypeSize(GLogLevelFlags,4, 11678, 11)
+#elif __ia64__
+CheckTypeSize(GLogLevelFlags,4, 11678, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11678,0);
 Msg("Find size of GLogLevelFlags (11678)\n");
@@ -4672,6 +6081,8 @@ Msg("Find size of GLogLevelFlags (11678)\n");
 CheckTypeSize(const guint,4, 11679, 2)
 #elif __x86_64__
 CheckTypeSize(const guint,4, 11679, 11)
+#elif __ia64__
+CheckTypeSize(const guint,4, 11679, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11679,0);
 Msg("Find size of const guint (11679)\n");
@@ -4695,6 +6106,15 @@ CheckEnum("G_DATE_THURSDAY",G_DATE_THURSDAY,4);
 CheckEnum("G_DATE_FRIDAY",G_DATE_FRIDAY,5);
 CheckEnum("G_DATE_SATURDAY",G_DATE_SATURDAY,6);
 CheckEnum("G_DATE_SUNDAY",G_DATE_SUNDAY,7);
+#elif __ia64__
+CheckEnum("G_DATE_BAD_WEEKDAY",G_DATE_BAD_WEEKDAY,0);
+CheckEnum("G_DATE_MONDAY",G_DATE_MONDAY,1);
+CheckEnum("G_DATE_TUESDAY",G_DATE_TUESDAY,2);
+CheckEnum("G_DATE_WEDNESDAY",G_DATE_WEDNESDAY,3);
+CheckEnum("G_DATE_THURSDAY",G_DATE_THURSDAY,4);
+CheckEnum("G_DATE_FRIDAY",G_DATE_FRIDAY,5);
+CheckEnum("G_DATE_SATURDAY",G_DATE_SATURDAY,6);
+CheckEnum("G_DATE_SUNDAY",G_DATE_SUNDAY,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11680,0);
 Msg("Find size of anon-glib-2.0/glib.h-14 (11680)\n");
@@ -4704,6 +6124,8 @@ Msg("Find size of anon-glib-2.0/glib.h-14 (11680)\n");
 CheckTypeSize(GDateWeekday,4, 11681, 2)
 #elif __x86_64__
 CheckTypeSize(GDateWeekday,4, 11681, 11)
+#elif __ia64__
+CheckTypeSize(GDateWeekday,4, 11681, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11681,0);
 Msg("Find size of GDateWeekday (11681)\n");
@@ -4719,6 +6141,11 @@ CheckEnum("G_IN_ORDER",G_IN_ORDER,0);
 CheckEnum("G_PRE_ORDER",G_PRE_ORDER,1);
 CheckEnum("G_POST_ORDER",G_POST_ORDER,2);
 CheckEnum("G_LEVEL_ORDER",G_LEVEL_ORDER,3);
+#elif __ia64__
+CheckEnum("G_IN_ORDER",G_IN_ORDER,0);
+CheckEnum("G_PRE_ORDER",G_PRE_ORDER,1);
+CheckEnum("G_POST_ORDER",G_POST_ORDER,2);
+CheckEnum("G_LEVEL_ORDER",G_LEVEL_ORDER,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11682,0);
 Msg("Find size of anon-glib-2.0/glib.h-53 (11682)\n");
@@ -4728,6 +6155,8 @@ Msg("Find size of anon-glib-2.0/glib.h-53 (11682)\n");
 CheckTypeSize(GTraverseType,4, 11683, 2)
 #elif __x86_64__
 CheckTypeSize(GTraverseType,4, 11683, 11)
+#elif __ia64__
+CheckTypeSize(GTraverseType,4, 11683, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11683,0);
 Msg("Find size of GTraverseType (11683)\n");
@@ -4747,6 +6176,13 @@ CheckEnum("G_TRAVERSE_ALL",G_TRAVERSE_ALL,3);
 CheckEnum("G_TRAVERSE_MASK",G_TRAVERSE_MASK,3);
 CheckEnum("G_TRAVERSE_LEAFS",G_TRAVERSE_LEAFS,1);
 CheckEnum("G_TRAVERSE_NON_LEAFS",G_TRAVERSE_NON_LEAFS,2);
+#elif __ia64__
+CheckEnum("G_TRAVERSE_LEAVES",G_TRAVERSE_LEAVES,1);
+CheckEnum("G_TRAVERSE_NON_LEAVES",G_TRAVERSE_NON_LEAVES,2);
+CheckEnum("G_TRAVERSE_ALL",G_TRAVERSE_ALL,3);
+CheckEnum("G_TRAVERSE_MASK",G_TRAVERSE_MASK,3);
+CheckEnum("G_TRAVERSE_LEAFS",G_TRAVERSE_LEAFS,1);
+CheckEnum("G_TRAVERSE_NON_LEAFS",G_TRAVERSE_NON_LEAFS,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11684,0);
 Msg("Find size of anon-glib-2.0/glib.h-52 (11684)\n");
@@ -4756,6 +6192,8 @@ Msg("Find size of anon-glib-2.0/glib.h-52 (11684)\n");
 CheckTypeSize(GTraverseFlags,4, 11685, 2)
 #elif __x86_64__
 CheckTypeSize(GTraverseFlags,4, 11685, 11)
+#elif __ia64__
+CheckTypeSize(GTraverseFlags,4, 11685, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11685,0);
 Msg("Find size of GTraverseFlags (11685)\n");
@@ -4781,6 +6219,16 @@ CheckMemberSize(struct _GMarkupParser,passthrough,8,11,41713)
 CheckOffset(struct _GMarkupParser,passthrough,24,11,41713)
 CheckMemberSize(struct _GMarkupParser,error,8,11,41717)
 CheckOffset(struct _GMarkupParser,error,32,11,41717)
+#elif __ia64__
+CheckTypeSize(struct _GMarkupParser,40, 11686, 3)
+CheckMemberSize(struct _GMarkupParser,end_element,8,3,41706)
+CheckOffset(struct _GMarkupParser,end_element,8,3,41706)
+CheckMemberSize(struct _GMarkupParser,text,8,3,41712)
+CheckOffset(struct _GMarkupParser,text,16,3,41712)
+CheckMemberSize(struct _GMarkupParser,passthrough,8,3,41713)
+CheckOffset(struct _GMarkupParser,passthrough,24,3,41713)
+CheckMemberSize(struct _GMarkupParser,error,8,3,41717)
+CheckOffset(struct _GMarkupParser,error,32,3,41717)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11686,0);
 Msg("Find size of _GMarkupParser (11686)\n");
@@ -4788,6 +6236,7 @@ Msg("Find size of _GMarkupParser (11686)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11687,0);
 Msg("Find size of fptr_glib_46 (11687)\n");
@@ -4795,6 +6244,7 @@ Msg("Find size of fptr_glib_46 (11687)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11688,0);
 Msg("Find size of fptr_glib_22 (11688)\n");
@@ -4802,6 +6252,7 @@ Msg("Find size of fptr_glib_22 (11688)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11689,0);
 Msg("Find size of fptr_glib_118 (11689)\n");
@@ -4809,6 +6260,7 @@ Msg("Find size of fptr_glib_118 (11689)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11690,0);
 Msg("Find size of fptr_glib_77 (11690)\n");
@@ -4818,6 +6270,8 @@ Msg("Find size of fptr_glib_77 (11690)\n");
 CheckTypeSize(GMarkupParser,20, 11691, 2)
 #elif __x86_64__
 CheckTypeSize(GMarkupParser,40, 11691, 11)
+#elif __ia64__
+CheckTypeSize(GMarkupParser,40, 11691, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11691,0);
 Msg("Find size of GMarkupParser (11691)\n");
@@ -4827,6 +6281,8 @@ Msg("Find size of GMarkupParser (11691)\n");
 CheckTypeSize(const GMarkupParser,20, 11692, 2)
 #elif __x86_64__
 CheckTypeSize(const GMarkupParser,40, 11692, 11)
+#elif __ia64__
+CheckTypeSize(const GMarkupParser,40, 11692, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11692,0);
 Msg("Find size of const GMarkupParser (11692)\n");
@@ -4834,6 +6290,7 @@ Msg("Find size of const GMarkupParser (11692)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11693,0);
 Msg("Find size of const GMarkupParser * (11693)\n");
@@ -4842,6 +6299,8 @@ Msg("Find size of const GMarkupParser * (11693)\n");
 #if __i386__
 CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
 #elif __x86_64__
+CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
+#elif __ia64__
 CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11694,0);
@@ -4852,6 +6311,8 @@ Msg("Find size of anon-glib-2.0/glib.h-42 (11694)\n");
 CheckTypeSize(GMarkupParseFlags,4, 11695, 2)
 #elif __x86_64__
 CheckTypeSize(GMarkupParseFlags,4, 11695, 11)
+#elif __ia64__
+CheckTypeSize(GMarkupParseFlags,4, 11695, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11695,0);
 Msg("Find size of GMarkupParseFlags (11695)\n");
@@ -4859,6 +6320,7 @@ Msg("Find size of GMarkupParseFlags (11695)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11696,0);
 Msg("Find size of fptr_glib_222 (11696)\n");
@@ -4868,6 +6330,8 @@ Msg("Find size of fptr_glib_222 (11696)\n");
 CheckTypeSize(GHookCheckMarshaller,4, 11697, 2)
 #elif __x86_64__
 CheckTypeSize(GHookCheckMarshaller,8, 11697, 11)
+#elif __ia64__
+CheckTypeSize(GHookCheckMarshaller,8, 11697, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11697,0);
 Msg("Find size of GHookCheckMarshaller (11697)\n");
@@ -4877,6 +6341,8 @@ Msg("Find size of GHookCheckMarshaller (11697)\n");
 CheckTypeSize(GStaticMutex *,4, 11698, 2)
 #elif __x86_64__
 CheckTypeSize(GStaticMutex *,8, 11698, 11)
+#elif __ia64__
+CheckTypeSize(GStaticMutex *,8, 11698, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11698,0);
 Msg("Find size of GStaticMutex * (11698)\n");
@@ -4884,6 +6350,7 @@ Msg("Find size of GStaticMutex * (11698)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11699,0);
 Msg("Find size of fptr_glib_419 (11699)\n");
@@ -4893,6 +6360,8 @@ Msg("Find size of fptr_glib_419 (11699)\n");
 CheckTypeSize(GNodeTraverseFunc,4, 11700, 2)
 #elif __x86_64__
 CheckTypeSize(GNodeTraverseFunc,8, 11700, 11)
+#elif __ia64__
+CheckTypeSize(GNodeTraverseFunc,8, 11700, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11700,0);
 Msg("Find size of GNodeTraverseFunc (11700)\n");
@@ -4916,6 +6385,15 @@ CheckEnum("G_NORMALIZE_ALL",G_NORMALIZE_ALL,2);
 CheckEnum("G_NORMALIZE_NFKD",G_NORMALIZE_NFKD,2);
 CheckEnum("G_NORMALIZE_ALL_COMPOSE",G_NORMALIZE_ALL_COMPOSE,3);
 CheckEnum("G_NORMALIZE_NFKC",G_NORMALIZE_NFKC,3);
+#elif __ia64__
+CheckEnum("G_NORMALIZE_DEFAULT",G_NORMALIZE_DEFAULT,0);
+CheckEnum("G_NORMALIZE_NFD",G_NORMALIZE_NFD,0);
+CheckEnum("G_NORMALIZE_DEFAULT_COMPOSE",G_NORMALIZE_DEFAULT_COMPOSE,1);
+CheckEnum("G_NORMALIZE_NFC",G_NORMALIZE_NFC,1);
+CheckEnum("G_NORMALIZE_ALL",G_NORMALIZE_ALL,2);
+CheckEnum("G_NORMALIZE_NFKD",G_NORMALIZE_NFKD,2);
+CheckEnum("G_NORMALIZE_ALL_COMPOSE",G_NORMALIZE_ALL_COMPOSE,3);
+CheckEnum("G_NORMALIZE_NFKC",G_NORMALIZE_NFKC,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11701,0);
 Msg("Find size of anon-glib-2.0/glib.h-86 (11701)\n");
@@ -4925,6 +6403,8 @@ Msg("Find size of anon-glib-2.0/glib.h-86 (11701)\n");
 CheckTypeSize(GNormalizeMode,4, 11702, 2)
 #elif __x86_64__
 CheckTypeSize(GNormalizeMode,4, 11702, 11)
+#elif __ia64__
+CheckTypeSize(GNormalizeMode,4, 11702, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11702,0);
 Msg("Find size of GNormalizeMode (11702)\n");
@@ -4934,6 +6414,8 @@ Msg("Find size of GNormalizeMode (11702)\n");
 CheckTypeSize(GMutex,0, 11703, 2)
 #elif __x86_64__
 CheckTypeSize(GMutex,0, 11703, 11)
+#elif __ia64__
+CheckTypeSize(GMutex,0, 11703, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11703,0);
 Msg("Find size of GMutex (11703)\n");
@@ -4943,6 +6425,8 @@ Msg("Find size of GMutex (11703)\n");
 CheckTypeSize(GMutex *,4, 11704, 2)
 #elif __x86_64__
 CheckTypeSize(GMutex *,8, 11704, 11)
+#elif __ia64__
+CheckTypeSize(GMutex *,8, 11704, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11704,0);
 Msg("Find size of GMutex * (11704)\n");
@@ -4950,6 +6434,7 @@ Msg("Find size of GMutex * (11704)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11705,0);
 Msg("Find size of GMutex * * (11705)\n");
@@ -4963,6 +6448,10 @@ CheckOffset(struct _GStaticPrivate,index,0,2,41731)
 CheckTypeSize(struct _GStaticPrivate,4, 11706, 11)
 Msg("Missing member data for _GStaticPrivate on x86-64\n");
 CheckOffset(struct _GStaticPrivate,index,0,11,41731)
+#elif __ia64__
+CheckTypeSize(struct _GStaticPrivate,4, 11706, 3)
+Msg("Missing member data for _GStaticPrivate on IA64\n");
+CheckOffset(struct _GStaticPrivate,index,0,3,41731)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11706,0);
 Msg("Find size of _GStaticPrivate (11706)\n");
@@ -4972,6 +6461,8 @@ Msg("Find size of _GStaticPrivate (11706)\n");
 CheckTypeSize(GStaticPrivate,4, 11707, 2)
 #elif __x86_64__
 CheckTypeSize(GStaticPrivate,4, 11707, 11)
+#elif __ia64__
+CheckTypeSize(GStaticPrivate,4, 11707, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11707,0);
 Msg("Find size of GStaticPrivate (11707)\n");
@@ -4981,6 +6472,8 @@ Msg("Find size of GStaticPrivate (11707)\n");
 CheckTypeSize(GStaticPrivate *,4, 11708, 2)
 #elif __x86_64__
 CheckTypeSize(GStaticPrivate *,8, 11708, 11)
+#elif __ia64__
+CheckTypeSize(GStaticPrivate *,8, 11708, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11708,0);
 Msg("Find size of GStaticPrivate * (11708)\n");
@@ -5038,6 +6531,32 @@ CheckEnum("G_FILE_ERROR_IO",G_FILE_ERROR_IO,21);
 CheckEnum("G_FILE_ERROR_PERM",G_FILE_ERROR_PERM,22);
 CheckEnum("G_FILE_ERROR_NOSYS",G_FILE_ERROR_NOSYS,23);
 CheckEnum("G_FILE_ERROR_FAILED",G_FILE_ERROR_FAILED,24);
+#elif __ia64__
+CheckEnum("G_FILE_ERROR_EXIST",G_FILE_ERROR_EXIST,0);
+CheckEnum("G_FILE_ERROR_ISDIR",G_FILE_ERROR_ISDIR,1);
+CheckEnum("G_FILE_ERROR_ACCES",G_FILE_ERROR_ACCES,2);
+CheckEnum("G_FILE_ERROR_NAMETOOLONG",G_FILE_ERROR_NAMETOOLONG,3);
+CheckEnum("G_FILE_ERROR_NOENT",G_FILE_ERROR_NOENT,4);
+CheckEnum("G_FILE_ERROR_NOTDIR",G_FILE_ERROR_NOTDIR,5);
+CheckEnum("G_FILE_ERROR_NXIO",G_FILE_ERROR_NXIO,6);
+CheckEnum("G_FILE_ERROR_NODEV",G_FILE_ERROR_NODEV,7);
+CheckEnum("G_FILE_ERROR_ROFS",G_FILE_ERROR_ROFS,8);
+CheckEnum("G_FILE_ERROR_TXTBSY",G_FILE_ERROR_TXTBSY,9);
+CheckEnum("G_FILE_ERROR_FAULT",G_FILE_ERROR_FAULT,10);
+CheckEnum("G_FILE_ERROR_LOOP",G_FILE_ERROR_LOOP,11);
+CheckEnum("G_FILE_ERROR_NOSPC",G_FILE_ERROR_NOSPC,12);
+CheckEnum("G_FILE_ERROR_NOMEM",G_FILE_ERROR_NOMEM,13);
+CheckEnum("G_FILE_ERROR_MFILE",G_FILE_ERROR_MFILE,14);
+CheckEnum("G_FILE_ERROR_NFILE",G_FILE_ERROR_NFILE,15);
+CheckEnum("G_FILE_ERROR_BADF",G_FILE_ERROR_BADF,16);
+CheckEnum("G_FILE_ERROR_INVAL",G_FILE_ERROR_INVAL,17);
+CheckEnum("G_FILE_ERROR_PIPE",G_FILE_ERROR_PIPE,18);
+CheckEnum("G_FILE_ERROR_AGAIN",G_FILE_ERROR_AGAIN,19);
+CheckEnum("G_FILE_ERROR_INTR",G_FILE_ERROR_INTR,20);
+CheckEnum("G_FILE_ERROR_IO",G_FILE_ERROR_IO,21);
+CheckEnum("G_FILE_ERROR_PERM",G_FILE_ERROR_PERM,22);
+CheckEnum("G_FILE_ERROR_NOSYS",G_FILE_ERROR_NOSYS,23);
+CheckEnum("G_FILE_ERROR_FAILED",G_FILE_ERROR_FAILED,24);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11709,0);
 Msg("Find size of anon-glib-2.0/glib.h-17 (11709)\n");
@@ -5047,6 +6566,8 @@ Msg("Find size of anon-glib-2.0/glib.h-17 (11709)\n");
 CheckTypeSize(GFileError,4, 11710, 2)
 #elif __x86_64__
 CheckTypeSize(GFileError,4, 11710, 11)
+#elif __ia64__
+CheckTypeSize(GFileError,4, 11710, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11710,0);
 Msg("Find size of GFileError (11710)\n");
@@ -5054,6 +6575,7 @@ Msg("Find size of GFileError (11710)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11711,0);
 Msg("Find size of fptr_glib_97 (11711)\n");
@@ -5063,6 +6585,8 @@ Msg("Find size of fptr_glib_97 (11711)\n");
 CheckTypeSize(GDataForeachFunc,4, 11712, 2)
 #elif __x86_64__
 CheckTypeSize(GDataForeachFunc,8, 11712, 11)
+#elif __ia64__
+CheckTypeSize(GDataForeachFunc,8, 11712, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11712,0);
 Msg("Find size of GDataForeachFunc (11712)\n");
@@ -5092,6 +6616,18 @@ CheckMemberSize(struct _GMemVTable,try_malloc,8,11,41769)
 CheckOffset(struct _GMemVTable,try_malloc,32,11,41769)
 CheckMemberSize(struct _GMemVTable,try_realloc,8,11,41770)
 CheckOffset(struct _GMemVTable,try_realloc,40,11,41770)
+#elif __ia64__
+CheckTypeSize(struct _GMemVTable,48, 11713, 3)
+CheckMemberSize(struct _GMemVTable,realloc,8,3,41764)
+CheckOffset(struct _GMemVTable,realloc,8,3,41764)
+CheckMemberSize(struct _GMemVTable,free,8,3,41765)
+CheckOffset(struct _GMemVTable,free,16,3,41765)
+CheckMemberSize(struct _GMemVTable,calloc,8,3,41768)
+CheckOffset(struct _GMemVTable,calloc,24,3,41768)
+CheckMemberSize(struct _GMemVTable,try_malloc,8,3,41769)
+CheckOffset(struct _GMemVTable,try_malloc,32,3,41769)
+CheckMemberSize(struct _GMemVTable,try_realloc,8,3,41770)
+CheckOffset(struct _GMemVTable,try_realloc,40,3,41770)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11713,0);
 Msg("Find size of _GMemVTable (11713)\n");
@@ -5099,6 +6635,7 @@ Msg("Find size of _GMemVTable (11713)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11714,0);
 Msg("Find size of fptr_glib_389 (11714)\n");
@@ -5106,6 +6643,7 @@ Msg("Find size of fptr_glib_389 (11714)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11715,0);
 Msg("Find size of fptr_glib_249 (11715)\n");
@@ -5113,6 +6651,7 @@ Msg("Find size of fptr_glib_249 (11715)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11716,0);
 Msg("Find size of fptr_glib_425 (11716)\n");
@@ -5122,6 +6661,8 @@ Msg("Find size of fptr_glib_425 (11716)\n");
 CheckTypeSize(GMemVTable,24, 11717, 2)
 #elif __x86_64__
 CheckTypeSize(GMemVTable,48, 11717, 11)
+#elif __ia64__
+CheckTypeSize(GMemVTable,48, 11717, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11717,0);
 Msg("Find size of GMemVTable (11717)\n");
@@ -5131,6 +6672,8 @@ Msg("Find size of GMemVTable (11717)\n");
 CheckTypeSize(GMemVTable *,4, 11718, 2)
 #elif __x86_64__
 CheckTypeSize(GMemVTable *,8, 11718, 11)
+#elif __ia64__
+CheckTypeSize(GMemVTable *,8, 11718, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11718,0);
 Msg("Find size of GMemVTable * (11718)\n");
@@ -5164,6 +6707,20 @@ CheckMemberSize(struct _GOptionEntry,description,8,11,41783)
 CheckOffset(struct _GOptionEntry,description,32,11,41783)
 CheckMemberSize(struct _GOptionEntry,arg_description,8,11,41784)
 CheckOffset(struct _GOptionEntry,arg_description,40,11,41784)
+#elif __ia64__
+CheckTypeSize(struct _GOptionEntry,48, 11719, 3)
+CheckMemberSize(struct _GOptionEntry,short_name,1,3,41772)
+CheckOffset(struct _GOptionEntry,short_name,8,3,41772)
+CheckMemberSize(struct _GOptionEntry,flags,4,3,41773)
+CheckOffset(struct _GOptionEntry,flags,12,3,41773)
+CheckMemberSize(struct _GOptionEntry,arg,4,3,41781)
+CheckOffset(struct _GOptionEntry,arg,16,3,41781)
+CheckMemberSize(struct _GOptionEntry,arg_data,8,3,41782)
+CheckOffset(struct _GOptionEntry,arg_data,24,3,41782)
+CheckMemberSize(struct _GOptionEntry,description,8,3,41783)
+CheckOffset(struct _GOptionEntry,description,32,3,41783)
+CheckMemberSize(struct _GOptionEntry,arg_description,8,3,41784)
+CheckOffset(struct _GOptionEntry,arg_description,40,3,41784)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11719,0);
 Msg("Find size of _GOptionEntry (11719)\n");
@@ -5185,6 +6742,14 @@ CheckEnum("G_OPTION_ARG_CALLBACK",G_OPTION_ARG_CALLBACK,3);
 CheckEnum("G_OPTION_ARG_FILENAME",G_OPTION_ARG_FILENAME,4);
 CheckEnum("G_OPTION_ARG_STRING_ARRAY",G_OPTION_ARG_STRING_ARRAY,5);
 CheckEnum("G_OPTION_ARG_FILENAME_ARRAY",G_OPTION_ARG_FILENAME_ARRAY,6);
+#elif __ia64__
+CheckEnum("G_OPTION_ARG_NONE",G_OPTION_ARG_NONE,0);
+CheckEnum("G_OPTION_ARG_STRING",G_OPTION_ARG_STRING,1);
+CheckEnum("G_OPTION_ARG_INT",G_OPTION_ARG_INT,2);
+CheckEnum("G_OPTION_ARG_CALLBACK",G_OPTION_ARG_CALLBACK,3);
+CheckEnum("G_OPTION_ARG_FILENAME",G_OPTION_ARG_FILENAME,4);
+CheckEnum("G_OPTION_ARG_STRING_ARRAY",G_OPTION_ARG_STRING_ARRAY,5);
+CheckEnum("G_OPTION_ARG_FILENAME_ARRAY",G_OPTION_ARG_FILENAME_ARRAY,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11720,0);
 Msg("Find size of anon-glib-2.0/glib.h-54 (11720)\n");
@@ -5194,6 +6759,8 @@ Msg("Find size of anon-glib-2.0/glib.h-54 (11720)\n");
 CheckTypeSize(GOptionArg,4, 11721, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionArg,4, 11721, 11)
+#elif __ia64__
+CheckTypeSize(GOptionArg,4, 11721, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11721,0);
 Msg("Find size of GOptionArg (11721)\n");
@@ -5203,6 +6770,8 @@ Msg("Find size of GOptionArg (11721)\n");
 CheckTypeSize(GOptionEntry,28, 11722, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionEntry,48, 11722, 11)
+#elif __ia64__
+CheckTypeSize(GOptionEntry,48, 11722, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11722,0);
 Msg("Find size of GOptionEntry (11722)\n");
@@ -5212,6 +6781,8 @@ Msg("Find size of GOptionEntry (11722)\n");
 CheckTypeSize(const GOptionEntry,28, 11723, 2)
 #elif __x86_64__
 CheckTypeSize(const GOptionEntry,48, 11723, 11)
+#elif __ia64__
+CheckTypeSize(const GOptionEntry,48, 11723, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11723,0);
 Msg("Find size of const GOptionEntry (11723)\n");
@@ -5219,6 +6790,7 @@ Msg("Find size of const GOptionEntry (11723)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11724,0);
 Msg("Find size of const GOptionEntry * (11724)\n");
@@ -5286,6 +6858,37 @@ CheckEnum("G_UNICODE_OTHER_SYMBOL",G_UNICODE_OTHER_SYMBOL,26);
 CheckEnum("G_UNICODE_LINE_SEPARATOR",G_UNICODE_LINE_SEPARATOR,27);
 CheckEnum("G_UNICODE_PARAGRAPH_SEPARATOR",G_UNICODE_PARAGRAPH_SEPARATOR,28);
 CheckEnum("G_UNICODE_SPACE_SEPARATOR",G_UNICODE_SPACE_SEPARATOR,29);
+#elif __ia64__
+CheckEnum("G_UNICODE_CONTROL",G_UNICODE_CONTROL,0);
+CheckEnum("G_UNICODE_FORMAT",G_UNICODE_FORMAT,1);
+CheckEnum("G_UNICODE_UNASSIGNED",G_UNICODE_UNASSIGNED,2);
+CheckEnum("G_UNICODE_PRIVATE_USE",G_UNICODE_PRIVATE_USE,3);
+CheckEnum("G_UNICODE_SURROGATE",G_UNICODE_SURROGATE,4);
+CheckEnum("G_UNICODE_LOWERCASE_LETTER",G_UNICODE_LOWERCASE_LETTER,5);
+CheckEnum("G_UNICODE_MODIFIER_LETTER",G_UNICODE_MODIFIER_LETTER,6);
+CheckEnum("G_UNICODE_OTHER_LETTER",G_UNICODE_OTHER_LETTER,7);
+CheckEnum("G_UNICODE_TITLECASE_LETTER",G_UNICODE_TITLECASE_LETTER,8);
+CheckEnum("G_UNICODE_UPPERCASE_LETTER",G_UNICODE_UPPERCASE_LETTER,9);
+CheckEnum("G_UNICODE_COMBINING_MARK",G_UNICODE_COMBINING_MARK,10);
+CheckEnum("G_UNICODE_ENCLOSING_MARK",G_UNICODE_ENCLOSING_MARK,11);
+CheckEnum("G_UNICODE_NON_SPACING_MARK",G_UNICODE_NON_SPACING_MARK,12);
+CheckEnum("G_UNICODE_DECIMAL_NUMBER",G_UNICODE_DECIMAL_NUMBER,13);
+CheckEnum("G_UNICODE_LETTER_NUMBER",G_UNICODE_LETTER_NUMBER,14);
+CheckEnum("G_UNICODE_OTHER_NUMBER",G_UNICODE_OTHER_NUMBER,15);
+CheckEnum("G_UNICODE_CONNECT_PUNCTUATION",G_UNICODE_CONNECT_PUNCTUATION,16);
+CheckEnum("G_UNICODE_DASH_PUNCTUATION",G_UNICODE_DASH_PUNCTUATION,17);
+CheckEnum("G_UNICODE_CLOSE_PUNCTUATION",G_UNICODE_CLOSE_PUNCTUATION,18);
+CheckEnum("G_UNICODE_FINAL_PUNCTUATION",G_UNICODE_FINAL_PUNCTUATION,19);
+CheckEnum("G_UNICODE_INITIAL_PUNCTUATION",G_UNICODE_INITIAL_PUNCTUATION,20);
+CheckEnum("G_UNICODE_OTHER_PUNCTUATION",G_UNICODE_OTHER_PUNCTUATION,21);
+CheckEnum("G_UNICODE_OPEN_PUNCTUATION",G_UNICODE_OPEN_PUNCTUATION,22);
+CheckEnum("G_UNICODE_CURRENCY_SYMBOL",G_UNICODE_CURRENCY_SYMBOL,23);
+CheckEnum("G_UNICODE_MODIFIER_SYMBOL",G_UNICODE_MODIFIER_SYMBOL,24);
+CheckEnum("G_UNICODE_MATH_SYMBOL",G_UNICODE_MATH_SYMBOL,25);
+CheckEnum("G_UNICODE_OTHER_SYMBOL",G_UNICODE_OTHER_SYMBOL,26);
+CheckEnum("G_UNICODE_LINE_SEPARATOR",G_UNICODE_LINE_SEPARATOR,27);
+CheckEnum("G_UNICODE_PARAGRAPH_SEPARATOR",G_UNICODE_PARAGRAPH_SEPARATOR,28);
+CheckEnum("G_UNICODE_SPACE_SEPARATOR",G_UNICODE_SPACE_SEPARATOR,29);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11725,0);
 Msg("Find size of anon-glib-2.0/glib.h-79 (11725)\n");
@@ -5295,6 +6898,8 @@ Msg("Find size of anon-glib-2.0/glib.h-79 (11725)\n");
 CheckTypeSize(GUnicodeType,4, 11726, 2)
 #elif __x86_64__
 CheckTypeSize(GUnicodeType,4, 11726, 11)
+#elif __ia64__
+CheckTypeSize(GUnicodeType,4, 11726, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11726,0);
 Msg("Find size of GUnicodeType (11726)\n");
@@ -5302,6 +6907,7 @@ Msg("Find size of GUnicodeType (11726)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11727,0);
 Msg("Find size of fptr_glib_204 (11727)\n");
@@ -5311,6 +6917,8 @@ Msg("Find size of fptr_glib_204 (11727)\n");
 CheckTypeSize(GLogFunc,4, 11728, 2)
 #elif __x86_64__
 CheckTypeSize(GLogFunc,8, 11728, 11)
+#elif __ia64__
+CheckTypeSize(GLogFunc,8, 11728, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11728,0);
 Msg("Find size of GLogFunc (11728)\n");
@@ -5320,6 +6928,8 @@ Msg("Find size of GLogFunc (11728)\n");
 CheckTypeSize(GAllocator,0, 11730, 2)
 #elif __x86_64__
 CheckTypeSize(GAllocator,0, 11730, 11)
+#elif __ia64__
+CheckTypeSize(GAllocator,0, 11730, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11730,0);
 Msg("Find size of GAllocator (11730)\n");
@@ -5329,6 +6939,8 @@ Msg("Find size of GAllocator (11730)\n");
 CheckTypeSize(GAllocator *,4, 11731, 2)
 #elif __x86_64__
 CheckTypeSize(GAllocator *,8, 11731, 11)
+#elif __ia64__
+CheckTypeSize(GAllocator *,8, 11731, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11731,0);
 Msg("Find size of GAllocator * (11731)\n");
@@ -5336,6 +6948,7 @@ Msg("Find size of GAllocator * (11731)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11732,0);
 Msg("Find size of fptr_glib_62 (11732)\n");
@@ -5345,6 +6958,8 @@ Msg("Find size of fptr_glib_62 (11732)\n");
 CheckTypeSize(GTranslateFunc,4, 11733, 2)
 #elif __x86_64__
 CheckTypeSize(GTranslateFunc,8, 11733, 11)
+#elif __ia64__
+CheckTypeSize(GTranslateFunc,8, 11733, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11733,0);
 Msg("Find size of GTranslateFunc (11733)\n");
@@ -5354,6 +6969,8 @@ Msg("Find size of GTranslateFunc (11733)\n");
 CheckTypeSize(const gunichar2,2, 11734, 2)
 #elif __x86_64__
 CheckTypeSize(const gunichar2,2, 11734, 11)
+#elif __ia64__
+CheckTypeSize(const gunichar2,2, 11734, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11734,0);
 Msg("Find size of const gunichar2 (11734)\n");
@@ -5361,6 +6978,7 @@ Msg("Find size of const gunichar2 (11734)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11735,0);
 Msg("Find size of const gunichar2 * (11735)\n");
@@ -5368,6 +6986,7 @@ Msg("Find size of const gunichar2 * (11735)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11736,0);
 Msg("Find size of fptr_glib_2 (11736)\n");
@@ -5377,6 +6996,8 @@ Msg("Find size of fptr_glib_2 (11736)\n");
 CheckTypeSize(GOptionParseFunc,4, 11737, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionParseFunc,8, 11737, 11)
+#elif __ia64__
+CheckTypeSize(GOptionParseFunc,8, 11737, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11737,0);
 Msg("Find size of GOptionParseFunc (11737)\n");
@@ -5386,6 +7007,8 @@ Msg("Find size of GOptionParseFunc (11737)\n");
 CheckTypeSize(GVoidFunc,4, 11738, 2)
 #elif __x86_64__
 CheckTypeSize(GVoidFunc,8, 11738, 11)
+#elif __ia64__
+CheckTypeSize(GVoidFunc,8, 11738, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11738,0);
 Msg("Find size of GVoidFunc (11738)\n");
@@ -5395,6 +7018,8 @@ Msg("Find size of GVoidFunc (11738)\n");
 CheckTypeSize(GHookFindFunc,4, 11739, 2)
 #elif __x86_64__
 CheckTypeSize(GHookFindFunc,8, 11739, 11)
+#elif __ia64__
+CheckTypeSize(GHookFindFunc,8, 11739, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11739,0);
 Msg("Find size of GHookFindFunc (11739)\n");
@@ -5403,7 +7028,9 @@ Msg("Find size of GHookFindFunc (11739)\n");
 #if __i386__
 CheckTypeSize(const GString,12, 11740, 2)
 #elif __x86_64__
-CheckTypeSize(const GString,16, 11740, 11)
+CheckTypeSize(const GString,24, 11740, 11)
+#elif __ia64__
+CheckTypeSize(const GString,24, 11740, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11740,0);
 Msg("Find size of const GString (11740)\n");
@@ -5411,6 +7038,7 @@ Msg("Find size of const GString (11740)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11741,0);
 Msg("Find size of const GString * (11741)\n");
@@ -5424,6 +7052,10 @@ CheckOffset(struct _GTuples,len,0,2,41825)
 CheckTypeSize(struct _GTuples,4, 11742, 11)
 Msg("Missing member data for _GTuples on x86-64\n");
 CheckOffset(struct _GTuples,len,0,11,41825)
+#elif __ia64__
+CheckTypeSize(struct _GTuples,4, 11742, 3)
+Msg("Missing member data for _GTuples on IA64\n");
+CheckOffset(struct _GTuples,len,0,3,41825)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11742,0);
 Msg("Find size of _GTuples (11742)\n");
@@ -5433,6 +7065,8 @@ Msg("Find size of _GTuples (11742)\n");
 CheckTypeSize(GTuples,4, 11743, 2)
 #elif __x86_64__
 CheckTypeSize(GTuples,4, 11743, 11)
+#elif __ia64__
+CheckTypeSize(GTuples,4, 11743, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11743,0);
 Msg("Find size of GTuples (11743)\n");
@@ -5442,6 +7076,8 @@ Msg("Find size of GTuples (11743)\n");
 CheckTypeSize(GTuples *,4, 11744, 2)
 #elif __x86_64__
 CheckTypeSize(GTuples *,8, 11744, 11)
+#elif __ia64__
+CheckTypeSize(GTuples *,8, 11744, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11744,0);
 Msg("Find size of GTuples * (11744)\n");
@@ -5449,6 +7085,7 @@ Msg("Find size of GTuples * (11744)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11745,0);
 Msg("Find size of fptr_glib_126 (11745)\n");
@@ -5458,6 +7095,8 @@ Msg("Find size of fptr_glib_126 (11745)\n");
 CheckTypeSize(GCopyFunc,4, 11746, 2)
 #elif __x86_64__
 CheckTypeSize(GCopyFunc,8, 11746, 11)
+#elif __ia64__
+CheckTypeSize(GCopyFunc,8, 11746, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11746,0);
 Msg("Find size of GCopyFunc (11746)\n");
@@ -5465,6 +7104,7 @@ Msg("Find size of GCopyFunc (11746)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11747,0);
 Msg("Find size of fptr_glib_0 (11747)\n");
@@ -5474,6 +7114,8 @@ Msg("Find size of fptr_glib_0 (11747)\n");
 CheckTypeSize(GOptionErrorFunc,4, 11748, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionErrorFunc,8, 11748, 11)
+#elif __ia64__
+CheckTypeSize(GOptionErrorFunc,8, 11748, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11748,0);
 Msg("Find size of GOptionErrorFunc (11748)\n");
@@ -5483,6 +7125,8 @@ Msg("Find size of GOptionErrorFunc (11748)\n");
 CheckTypeSize(GCacheNewFunc,4, 11749, 2)
 #elif __x86_64__
 CheckTypeSize(GCacheNewFunc,8, 11749, 11)
+#elif __ia64__
+CheckTypeSize(GCacheNewFunc,8, 11749, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11749,0);
 Msg("Find size of GCacheNewFunc (11749)\n");
@@ -5492,6 +7136,8 @@ Msg("Find size of GCacheNewFunc (11749)\n");
 CheckTypeSize(GCacheDestroyFunc,4, 11750, 2)
 #elif __x86_64__
 CheckTypeSize(GCacheDestroyFunc,8, 11750, 11)
+#elif __ia64__
+CheckTypeSize(GCacheDestroyFunc,8, 11750, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11750,0);
 Msg("Find size of GCacheDestroyFunc (11750)\n");
@@ -5501,6 +7147,8 @@ Msg("Find size of GCacheDestroyFunc (11750)\n");
 CheckTypeSize(GCacheDupFunc,4, 11751, 2)
 #elif __x86_64__
 CheckTypeSize(GCacheDupFunc,8, 11751, 11)
+#elif __ia64__
+CheckTypeSize(GCacheDupFunc,8, 11751, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11751,0);
 Msg("Find size of GCacheDupFunc (11751)\n");
@@ -5518,6 +7166,12 @@ CheckEnum("G_FILE_TEST_IS_SYMLINK",G_FILE_TEST_IS_SYMLINK,2);
 CheckEnum("G_FILE_TEST_IS_DIR",G_FILE_TEST_IS_DIR,4);
 CheckEnum("G_FILE_TEST_IS_EXECUTABLE",G_FILE_TEST_IS_EXECUTABLE,8);
 CheckEnum("G_FILE_TEST_EXISTS",G_FILE_TEST_EXISTS,16);
+#elif __ia64__
+CheckEnum("G_FILE_TEST_IS_REGULAR",G_FILE_TEST_IS_REGULAR,1);
+CheckEnum("G_FILE_TEST_IS_SYMLINK",G_FILE_TEST_IS_SYMLINK,2);
+CheckEnum("G_FILE_TEST_IS_DIR",G_FILE_TEST_IS_DIR,4);
+CheckEnum("G_FILE_TEST_IS_EXECUTABLE",G_FILE_TEST_IS_EXECUTABLE,8);
+CheckEnum("G_FILE_TEST_EXISTS",G_FILE_TEST_EXISTS,16);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11752,0);
 Msg("Find size of anon-glib-2.0/glib.h-18 (11752)\n");
@@ -5527,6 +7181,8 @@ Msg("Find size of anon-glib-2.0/glib.h-18 (11752)\n");
 CheckTypeSize(GFileTest,4, 11753, 2)
 #elif __x86_64__
 CheckTypeSize(GFileTest,4, 11753, 11)
+#elif __ia64__
+CheckTypeSize(GFileTest,4, 11753, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11753,0);
 Msg("Find size of GFileTest (11753)\n");
@@ -5540,6 +7196,10 @@ CheckOffset(struct _GOnce,retval,4,2,41841)
 CheckTypeSize(struct _GOnce,16, 11754, 11)
 CheckMemberSize(struct _GOnce,retval,8,11,41841)
 CheckOffset(struct _GOnce,retval,8,11,41841)
+#elif __ia64__
+CheckTypeSize(struct _GOnce,16, 11754, 3)
+CheckMemberSize(struct _GOnce,retval,8,3,41841)
+CheckOffset(struct _GOnce,retval,8,3,41841)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11754,0);
 Msg("Find size of _GOnce (11754)\n");
@@ -5553,6 +7213,10 @@ CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
 CheckEnum("G_ONCE_STATUS_NOTCALLED",G_ONCE_STATUS_NOTCALLED,0);
 CheckEnum("G_ONCE_STATUS_PROGRESS",G_ONCE_STATUS_PROGRESS,1);
 CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
+#elif __ia64__
+CheckEnum("G_ONCE_STATUS_NOTCALLED",G_ONCE_STATUS_NOTCALLED,0);
+CheckEnum("G_ONCE_STATUS_PROGRESS",G_ONCE_STATUS_PROGRESS,1);
+CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11755,0);
 Msg("Find size of anon-glib-2.0/glib.h-73 (11755)\n");
@@ -5562,6 +7226,8 @@ Msg("Find size of anon-glib-2.0/glib.h-73 (11755)\n");
 CheckTypeSize(GOnceStatus,4, 11756, 2)
 #elif __x86_64__
 CheckTypeSize(GOnceStatus,4, 11756, 11)
+#elif __ia64__
+CheckTypeSize(GOnceStatus,4, 11756, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11756,0);
 Msg("Find size of GOnceStatus (11756)\n");
@@ -5571,6 +7237,8 @@ Msg("Find size of GOnceStatus (11756)\n");
 CheckTypeSize(volatile GOnceStatus,4, 11757, 2)
 #elif __x86_64__
 CheckTypeSize(volatile GOnceStatus,4, 11757, 11)
+#elif __ia64__
+CheckTypeSize(volatile GOnceStatus,4, 11757, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11757,0);
 Msg("Find size of volatile GOnceStatus (11757)\n");
@@ -5580,6 +7248,8 @@ Msg("Find size of volatile GOnceStatus (11757)\n");
 CheckTypeSize(volatile gpointer,4, 11758, 2)
 #elif __x86_64__
 CheckTypeSize(volatile gpointer,8, 11758, 11)
+#elif __ia64__
+CheckTypeSize(volatile gpointer,8, 11758, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11758,0);
 Msg("Find size of volatile gpointer (11758)\n");
@@ -5589,6 +7259,8 @@ Msg("Find size of volatile gpointer (11758)\n");
 CheckTypeSize(GOnce,8, 11759, 2)
 #elif __x86_64__
 CheckTypeSize(GOnce,16, 11759, 11)
+#elif __ia64__
+CheckTypeSize(GOnce,16, 11759, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11759,0);
 Msg("Find size of GOnce (11759)\n");
@@ -5598,6 +7270,8 @@ Msg("Find size of GOnce (11759)\n");
 CheckTypeSize(GOnce *,4, 11760, 2)
 #elif __x86_64__
 CheckTypeSize(GOnce *,8, 11760, 11)
+#elif __ia64__
+CheckTypeSize(GOnce *,8, 11760, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11760,0);
 Msg("Find size of GOnce * (11760)\n");
@@ -5607,6 +7281,8 @@ Msg("Find size of GOnce * (11760)\n");
 CheckTypeSize(const GScannerConfig,24, 11761, 2)
 #elif __x86_64__
 CheckTypeSize(const GScannerConfig,40, 11761, 11)
+#elif __ia64__
+CheckTypeSize(const GScannerConfig,40, 11761, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11761,0);
 Msg("Find size of const GScannerConfig (11761)\n");
@@ -5614,6 +7290,7 @@ Msg("Find size of const GScannerConfig (11761)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11762,0);
 Msg("Find size of const GScannerConfig * (11762)\n");
@@ -5623,6 +7300,8 @@ Msg("Find size of const GScannerConfig * (11762)\n");
 CheckTypeSize(gboolean *,4, 11763, 2)
 #elif __x86_64__
 CheckTypeSize(gboolean *,8, 11763, 11)
+#elif __ia64__
+CheckTypeSize(gboolean *,8, 11763, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11763,0);
 Msg("Find size of gboolean * (11763)\n");
@@ -5632,6 +7311,8 @@ Msg("Find size of gboolean * (11763)\n");
 CheckTypeSize(const guint8,1, 11764, 2)
 #elif __x86_64__
 CheckTypeSize(const guint8,1, 11764, 11)
+#elif __ia64__
+CheckTypeSize(const guint8,1, 11764, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11764,0);
 Msg("Find size of const guint8 (11764)\n");
@@ -5639,6 +7320,7 @@ Msg("Find size of const guint8 (11764)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11765,0);
 Msg("Find size of const guint8 * (11765)\n");
@@ -5646,6 +7328,7 @@ Msg("Find size of const guint8 * (11765)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11766,0);
 Msg("Find size of gchar * * * (11766)\n");
@@ -5655,6 +7338,8 @@ Msg("Find size of gchar * * * (11766)\n");
 CheckTypeSize(GTraverseFunc,4, 11767, 2)
 #elif __x86_64__
 CheckTypeSize(GTraverseFunc,8, 11767, 11)
+#elif __ia64__
+CheckTypeSize(GTraverseFunc,8, 11767, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11767,0);
 Msg("Find size of GTraverseFunc (11767)\n");
@@ -5662,6 +7347,7 @@ Msg("Find size of GTraverseFunc (11767)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11768,0);
 Msg("Find size of fptr_glib_302 (11768)\n");
@@ -5671,6 +7357,8 @@ Msg("Find size of fptr_glib_302 (11768)\n");
 CheckTypeSize(GHookCompareFunc,4, 11769, 2)
 #elif __x86_64__
 CheckTypeSize(GHookCompareFunc,8, 11769, 11)
+#elif __ia64__
+CheckTypeSize(GHookCompareFunc,8, 11769, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11769,0);
 Msg("Find size of GHookCompareFunc (11769)\n");
@@ -5678,6 +7366,7 @@ Msg("Find size of GHookCompareFunc (11769)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11770,0);
 Msg("Find size of fptr_glib_244 (11770)\n");
@@ -5687,6 +7376,8 @@ Msg("Find size of fptr_glib_244 (11770)\n");
 CheckTypeSize(GNodeForeachFunc,4, 11771, 2)
 #elif __x86_64__
 CheckTypeSize(GNodeForeachFunc,8, 11771, 11)
+#elif __ia64__
+CheckTypeSize(GNodeForeachFunc,8, 11771, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11771,0);
 Msg("Find size of GNodeForeachFunc (11771)\n");
@@ -5700,6 +7391,10 @@ CheckOffset(struct _GDebugKey,value,4,2,41847)
 CheckTypeSize(struct _GDebugKey,16, 11772, 11)
 CheckMemberSize(struct _GDebugKey,value,4,11,41847)
 CheckOffset(struct _GDebugKey,value,8,11,41847)
+#elif __ia64__
+CheckTypeSize(struct _GDebugKey,16, 11772, 3)
+CheckMemberSize(struct _GDebugKey,value,4,3,41847)
+CheckOffset(struct _GDebugKey,value,8,3,41847)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11772,0);
 Msg("Find size of _GDebugKey (11772)\n");
@@ -5709,6 +7404,8 @@ Msg("Find size of _GDebugKey (11772)\n");
 CheckTypeSize(GDebugKey,8, 11773, 2)
 #elif __x86_64__
 CheckTypeSize(GDebugKey,16, 11773, 11)
+#elif __ia64__
+CheckTypeSize(GDebugKey,16, 11773, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11773,0);
 Msg("Find size of GDebugKey (11773)\n");
@@ -5718,6 +7415,8 @@ Msg("Find size of GDebugKey (11773)\n");
 CheckTypeSize(const GDebugKey,8, 11774, 2)
 #elif __x86_64__
 CheckTypeSize(const GDebugKey,16, 11774, 11)
+#elif __ia64__
+CheckTypeSize(const GDebugKey,16, 11774, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11774,0);
 Msg("Find size of const GDebugKey (11774)\n");
@@ -5725,6 +7424,7 @@ Msg("Find size of const GDebugKey (11774)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11775,0);
 Msg("Find size of const GDebugKey * (11775)\n");
@@ -5814,6 +7514,48 @@ CheckMemberSize(struct _GThreadFunctions,thread_self,8,11,41889)
 CheckOffset(struct _GThreadFunctions,thread_self,152,11,41889)
 CheckMemberSize(struct _GThreadFunctions,thread_equal,8,11,41892)
 CheckOffset(struct _GThreadFunctions,thread_equal,160,11,41892)
+#elif __ia64__
+CheckTypeSize(struct _GThreadFunctions,168, 11776, 3)
+CheckMemberSize(struct _GThreadFunctions,mutex_lock,8,3,41850)
+CheckOffset(struct _GThreadFunctions,mutex_lock,8,3,41850)
+CheckMemberSize(struct _GThreadFunctions,mutex_trylock,8,3,41852)
+CheckOffset(struct _GThreadFunctions,mutex_trylock,16,3,41852)
+CheckMemberSize(struct _GThreadFunctions,mutex_unlock,8,3,41853)
+CheckOffset(struct _GThreadFunctions,mutex_unlock,24,3,41853)
+CheckMemberSize(struct _GThreadFunctions,mutex_free,8,3,41854)
+CheckOffset(struct _GThreadFunctions,mutex_free,32,3,41854)
+CheckMemberSize(struct _GThreadFunctions,cond_new,8,3,41855)
+CheckOffset(struct _GThreadFunctions,cond_new,40,3,41855)
+CheckMemberSize(struct _GThreadFunctions,cond_signal,8,3,41857)
+CheckOffset(struct _GThreadFunctions,cond_signal,48,3,41857)
+CheckMemberSize(struct _GThreadFunctions,cond_broadcast,8,3,41858)
+CheckOffset(struct _GThreadFunctions,cond_broadcast,56,3,41858)
+CheckMemberSize(struct _GThreadFunctions,cond_wait,8,3,41861)
+CheckOffset(struct _GThreadFunctions,cond_wait,64,3,41861)
+CheckMemberSize(struct _GThreadFunctions,cond_timed_wait,8,3,41865)
+CheckOffset(struct _GThreadFunctions,cond_timed_wait,72,3,41865)
+CheckMemberSize(struct _GThreadFunctions,cond_free,8,3,41866)
+CheckOffset(struct _GThreadFunctions,cond_free,80,3,41866)
+CheckMemberSize(struct _GThreadFunctions,private_new,8,3,41868)
+CheckOffset(struct _GThreadFunctions,private_new,88,3,41868)
+CheckMemberSize(struct _GThreadFunctions,private_get,8,3,41870)
+CheckOffset(struct _GThreadFunctions,private_get,96,3,41870)
+CheckMemberSize(struct _GThreadFunctions,private_set,8,3,41873)
+CheckOffset(struct _GThreadFunctions,private_set,104,3,41873)
+CheckMemberSize(struct _GThreadFunctions,thread_create,8,3,41882)
+CheckOffset(struct _GThreadFunctions,thread_create,112,3,41882)
+CheckMemberSize(struct _GThreadFunctions,thread_yield,8,3,41883)
+CheckOffset(struct _GThreadFunctions,thread_yield,120,3,41883)
+CheckMemberSize(struct _GThreadFunctions,thread_join,8,3,41884)
+CheckOffset(struct _GThreadFunctions,thread_join,128,3,41884)
+CheckMemberSize(struct _GThreadFunctions,thread_exit,8,3,41885)
+CheckOffset(struct _GThreadFunctions,thread_exit,136,3,41885)
+CheckMemberSize(struct _GThreadFunctions,thread_set_priority,8,3,41888)
+CheckOffset(struct _GThreadFunctions,thread_set_priority,144,3,41888)
+CheckMemberSize(struct _GThreadFunctions,thread_self,8,3,41889)
+CheckOffset(struct _GThreadFunctions,thread_self,152,3,41889)
+CheckMemberSize(struct _GThreadFunctions,thread_equal,8,3,41892)
+CheckOffset(struct _GThreadFunctions,thread_equal,160,3,41892)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11776,0);
 Msg("Find size of _GThreadFunctions (11776)\n");
@@ -5821,6 +7563,7 @@ Msg("Find size of _GThreadFunctions (11776)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11777,0);
 Msg("Find size of fptr_glib_287 (11777)\n");
@@ -5828,6 +7571,7 @@ Msg("Find size of fptr_glib_287 (11777)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11778,0);
 Msg("Find size of fptr_glib_284 (11778)\n");
@@ -5835,6 +7579,7 @@ Msg("Find size of fptr_glib_284 (11778)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11779,0);
 Msg("Find size of fptr_glib_194 (11779)\n");
@@ -5842,6 +7587,7 @@ Msg("Find size of fptr_glib_194 (11779)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11780,0);
 Msg("Find size of fptr_glib_93 (11780)\n");
@@ -5849,6 +7595,7 @@ Msg("Find size of fptr_glib_93 (11780)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11781,0);
 Msg("Find size of fptr_glib_364 (11781)\n");
@@ -5856,6 +7603,7 @@ Msg("Find size of fptr_glib_364 (11781)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11782,0);
 Msg("Find size of fptr_glib_353 (11782)\n");
@@ -5863,6 +7611,7 @@ Msg("Find size of fptr_glib_353 (11782)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11783,0);
 Msg("Find size of fptr_glib_214 (11783)\n");
@@ -5872,6 +7621,8 @@ Msg("Find size of fptr_glib_214 (11783)\n");
 CheckTypeSize(GPrivate,0, 11785, 2)
 #elif __x86_64__
 CheckTypeSize(GPrivate,0, 11785, 11)
+#elif __ia64__
+CheckTypeSize(GPrivate,0, 11785, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11785,0);
 Msg("Find size of GPrivate (11785)\n");
@@ -5881,6 +7632,8 @@ Msg("Find size of GPrivate (11785)\n");
 CheckTypeSize(GPrivate *,4, 11786, 2)
 #elif __x86_64__
 CheckTypeSize(GPrivate *,8, 11786, 11)
+#elif __ia64__
+CheckTypeSize(GPrivate *,8, 11786, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11786,0);
 Msg("Find size of GPrivate * (11786)\n");
@@ -5888,6 +7641,7 @@ Msg("Find size of GPrivate * (11786)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11787,0);
 Msg("Find size of fptr_glib_304 (11787)\n");
@@ -5895,6 +7649,7 @@ Msg("Find size of fptr_glib_304 (11787)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11788,0);
 Msg("Find size of fptr_glib_293 (11788)\n");
@@ -5902,6 +7657,7 @@ Msg("Find size of fptr_glib_293 (11788)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11789,0);
 Msg("Find size of fptr_glib_26 (11789)\n");
@@ -5909,6 +7665,7 @@ Msg("Find size of fptr_glib_26 (11789)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11790,0);
 Msg("Find size of fptr_glib_94 (11790)\n");
@@ -5916,6 +7673,7 @@ Msg("Find size of fptr_glib_94 (11790)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11791,0);
 Msg("Find size of fptr_glib_73 (11791)\n");
@@ -5923,6 +7681,7 @@ Msg("Find size of fptr_glib_73 (11791)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11792,0);
 Msg("Find size of fptr_glib_245 (11792)\n");
@@ -5932,6 +7691,8 @@ Msg("Find size of fptr_glib_245 (11792)\n");
 CheckTypeSize(GThreadFunctions,84, 11793, 2)
 #elif __x86_64__
 CheckTypeSize(GThreadFunctions,168, 11793, 11)
+#elif __ia64__
+CheckTypeSize(GThreadFunctions,168, 11793, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11793,0);
 Msg("Find size of GThreadFunctions (11793)\n");
@@ -5939,6 +7700,7 @@ Msg("Find size of GThreadFunctions (11793)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11794,0);
 Msg("Find size of fptr_glib_11 (11794)\n");
@@ -5948,6 +7710,8 @@ Msg("Find size of fptr_glib_11 (11794)\n");
 CheckTypeSize(GHookMarshaller,4, 11795, 2)
 #elif __x86_64__
 CheckTypeSize(GHookMarshaller,8, 11795, 11)
+#elif __ia64__
+CheckTypeSize(GHookMarshaller,8, 11795, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11795,0);
 Msg("Find size of GHookMarshaller (11795)\n");
@@ -5973,6 +7737,16 @@ CheckEnum("G_IO_CHANNEL_ERROR_NXIO",G_IO_CHANNEL_ERROR_NXIO,5);
 CheckEnum("G_IO_CHANNEL_ERROR_OVERFLOW",G_IO_CHANNEL_ERROR_OVERFLOW,6);
 CheckEnum("G_IO_CHANNEL_ERROR_PIPE",G_IO_CHANNEL_ERROR_PIPE,7);
 CheckEnum("G_IO_CHANNEL_ERROR_FAILED",G_IO_CHANNEL_ERROR_FAILED,8);
+#elif __ia64__
+CheckEnum("G_IO_CHANNEL_ERROR_FBIG",G_IO_CHANNEL_ERROR_FBIG,0);
+CheckEnum("G_IO_CHANNEL_ERROR_INVAL",G_IO_CHANNEL_ERROR_INVAL,1);
+CheckEnum("G_IO_CHANNEL_ERROR_IO",G_IO_CHANNEL_ERROR_IO,2);
+CheckEnum("G_IO_CHANNEL_ERROR_ISDIR",G_IO_CHANNEL_ERROR_ISDIR,3);
+CheckEnum("G_IO_CHANNEL_ERROR_NOSPC",G_IO_CHANNEL_ERROR_NOSPC,4);
+CheckEnum("G_IO_CHANNEL_ERROR_NXIO",G_IO_CHANNEL_ERROR_NXIO,5);
+CheckEnum("G_IO_CHANNEL_ERROR_OVERFLOW",G_IO_CHANNEL_ERROR_OVERFLOW,6);
+CheckEnum("G_IO_CHANNEL_ERROR_PIPE",G_IO_CHANNEL_ERROR_PIPE,7);
+CheckEnum("G_IO_CHANNEL_ERROR_FAILED",G_IO_CHANNEL_ERROR_FAILED,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11796,0);
 Msg("Find size of anon-glib-2.0/glib.h-22 (11796)\n");
@@ -5982,6 +7756,8 @@ Msg("Find size of anon-glib-2.0/glib.h-22 (11796)\n");
 CheckTypeSize(GIOChannelError,4, 11797, 2)
 #elif __x86_64__
 CheckTypeSize(GIOChannelError,4, 11797, 11)
+#elif __ia64__
+CheckTypeSize(GIOChannelError,4, 11797, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11797,0);
 Msg("Find size of GIOChannelError (11797)\n");
@@ -5989,6 +7765,7 @@ Msg("Find size of GIOChannelError (11797)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11798,0);
 Msg("Find size of fptr_glib_416 (11798)\n");
@@ -5998,6 +7775,8 @@ Msg("Find size of fptr_glib_416 (11798)\n");
 CheckTypeSize(GIOFunc,4, 11799, 2)
 #elif __x86_64__
 CheckTypeSize(GIOFunc,8, 11799, 11)
+#elif __ia64__
+CheckTypeSize(GIOFunc,8, 11799, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11799,0);
 Msg("Find size of GIOFunc (11799)\n");
@@ -6007,6 +7786,8 @@ Msg("Find size of GIOFunc (11799)\n");
 CheckTypeSize(GFreeFunc,4, 11800, 2)
 #elif __x86_64__
 CheckTypeSize(GFreeFunc,8, 11800, 11)
+#elif __ia64__
+CheckTypeSize(GFreeFunc,8, 11800, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11800,0);
 Msg("Find size of GFreeFunc (11800)\n");
@@ -6016,6 +7797,8 @@ Msg("Find size of GFreeFunc (11800)\n");
 CheckTypeSize(GHookCheckFunc,4, 11801, 2)
 #elif __x86_64__
 CheckTypeSize(GHookCheckFunc,8, 11801, 11)
+#elif __ia64__
+CheckTypeSize(GHookCheckFunc,8, 11801, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11801,0);
 Msg("Find size of GHookCheckFunc (11801)\n");
@@ -6025,6 +7808,8 @@ Msg("Find size of GHookCheckFunc (11801)\n");
 CheckTypeSize(GHookFunc,4, 11802, 2)
 #elif __x86_64__
 CheckTypeSize(GHookFunc,8, 11802, 11)
+#elif __ia64__
+CheckTypeSize(GHookFunc,8, 11802, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11802,0);
 Msg("Find size of GHookFunc (11802)\n");
@@ -6034,6 +7819,8 @@ Msg("Find size of GHookFunc (11802)\n");
 CheckTypeSize(gint16,2, 11803, 2)
 #elif __x86_64__
 CheckTypeSize(gint16,2, 11803, 11)
+#elif __ia64__
+CheckTypeSize(gint16,2, 11803, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11803,0);
 Msg("Find size of gint16 (11803)\n");
@@ -6047,6 +7834,10 @@ CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
 CheckEnum("G_DATE_DAY",G_DATE_DAY,0);
 CheckEnum("G_DATE_MONTH",G_DATE_MONTH,1);
 CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
+#elif __ia64__
+CheckEnum("G_DATE_DAY",G_DATE_DAY,0);
+CheckEnum("G_DATE_MONTH",G_DATE_MONTH,1);
+CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11804,0);
 Msg("Find size of anon-glib-2.0/glib.h-13 (11804)\n");
@@ -6056,6 +7847,8 @@ Msg("Find size of anon-glib-2.0/glib.h-13 (11804)\n");
 CheckTypeSize(GDateDMY,4, 11805, 2)
 #elif __x86_64__
 CheckTypeSize(GDateDMY,4, 11805, 11)
+#elif __ia64__
+CheckTypeSize(GDateDMY,4, 11805, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11805,0);
 Msg("Find size of GDateDMY (11805)\n");
@@ -6065,6 +7858,8 @@ Msg("Find size of GDateDMY (11805)\n");
 CheckTypeSize(gint8,1, 11806, 2)
 #elif __x86_64__
 CheckTypeSize(gint8,1, 11806, 11)
+#elif __ia64__
+CheckTypeSize(gint8,1, 11806, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11806,0);
 Msg("Find size of gint8 (11806)\n");
@@ -6084,6 +7879,13 @@ CheckEnum("G_MARKUP_ERROR_PARSE",G_MARKUP_ERROR_PARSE,2);
 CheckEnum("G_MARKUP_ERROR_UNKNOWN_ELEMENT",G_MARKUP_ERROR_UNKNOWN_ELEMENT,3);
 CheckEnum("G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE",G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,4);
 CheckEnum("G_MARKUP_ERROR_INVALID_CONTENT",G_MARKUP_ERROR_INVALID_CONTENT,5);
+#elif __ia64__
+CheckEnum("G_MARKUP_ERROR_BAD_UTF8",G_MARKUP_ERROR_BAD_UTF8,0);
+CheckEnum("G_MARKUP_ERROR_EMPTY",G_MARKUP_ERROR_EMPTY,1);
+CheckEnum("G_MARKUP_ERROR_PARSE",G_MARKUP_ERROR_PARSE,2);
+CheckEnum("G_MARKUP_ERROR_UNKNOWN_ELEMENT",G_MARKUP_ERROR_UNKNOWN_ELEMENT,3);
+CheckEnum("G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE",G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,4);
+CheckEnum("G_MARKUP_ERROR_INVALID_CONTENT",G_MARKUP_ERROR_INVALID_CONTENT,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11807,0);
 Msg("Find size of anon-glib-2.0/glib.h-41 (11807)\n");
@@ -6093,6 +7895,8 @@ Msg("Find size of anon-glib-2.0/glib.h-41 (11807)\n");
 CheckTypeSize(GMarkupError,4, 11808, 2)
 #elif __x86_64__
 CheckTypeSize(GMarkupError,4, 11808, 11)
+#elif __ia64__
+CheckTypeSize(GMarkupError,4, 11808, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11808,0);
 Msg("Find size of GMarkupError (11808)\n");
@@ -6108,6 +7912,11 @@ CheckEnum("G_IO_ERROR_NONE",G_IO_ERROR_NONE,0);
 CheckEnum("G_IO_ERROR_AGAIN",G_IO_ERROR_AGAIN,1);
 CheckEnum("G_IO_ERROR_INVAL",G_IO_ERROR_INVAL,2);
 CheckEnum("G_IO_ERROR_UNKNOWN",G_IO_ERROR_UNKNOWN,3);
+#elif __ia64__
+CheckEnum("G_IO_ERROR_NONE",G_IO_ERROR_NONE,0);
+CheckEnum("G_IO_ERROR_AGAIN",G_IO_ERROR_AGAIN,1);
+CheckEnum("G_IO_ERROR_INVAL",G_IO_ERROR_INVAL,2);
+CheckEnum("G_IO_ERROR_UNKNOWN",G_IO_ERROR_UNKNOWN,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11809,0);
 Msg("Find size of anon-glib-2.0/glib.h-21 (11809)\n");
@@ -6117,6 +7926,8 @@ Msg("Find size of anon-glib-2.0/glib.h-21 (11809)\n");
 CheckTypeSize(GIOError,4, 11810, 2)
 #elif __x86_64__
 CheckTypeSize(GIOError,4, 11810, 11)
+#elif __ia64__
+CheckTypeSize(GIOError,4, 11810, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11810,0);
 Msg("Find size of GIOError (11810)\n");
@@ -6124,6 +7935,7 @@ Msg("Find size of GIOError (11810)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11811,0);
 Msg("Find size of fptr_anonymous-glib.h.types-0 (11811)\n");
@@ -6143,6 +7955,10 @@ CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
 CheckEnum("G_OPTION_FLAG_HIDDEN",G_OPTION_FLAG_HIDDEN,1 << 0);
 CheckEnum("G_OPTION_FLAG_IN_MAIN",G_OPTION_FLAG_IN_MAIN,1 << 1);
 CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
+#elif __ia64__
+CheckEnum("G_OPTION_FLAG_HIDDEN",G_OPTION_FLAG_HIDDEN,1 << 0);
+CheckEnum("G_OPTION_FLAG_IN_MAIN",G_OPTION_FLAG_IN_MAIN,1 << 1);
+CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11813,0);
 Msg("Find size of anonymous-glib.h.types-2 (11813)\n");
@@ -6152,6 +7968,8 @@ Msg("Find size of anonymous-glib.h.types-2 (11813)\n");
 CheckTypeSize(GOptionFlags,4, 11814, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionFlags,4, 11814, 11)
+#elif __ia64__
+CheckTypeSize(GOptionFlags,4, 11814, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11814,0);
 Msg("Find size of GOptionFlags (11814)\n");
@@ -6171,6 +7989,13 @@ CheckEnum("G_CONVERT_ERROR_FAILED",G_CONVERT_ERROR_FAILED,((0) + 1) + 1);
 CheckEnum("G_CONVERT_ERROR_PARTIAL_INPUT",G_CONVERT_ERROR_PARTIAL_INPUT,(((0) + 1) + 1) + 1);
 CheckEnum("G_CONVERT_ERROR_BAD_URI",G_CONVERT_ERROR_BAD_URI,((((0) + 1) + 1) + 1) + 1);
 CheckEnum("G_CONVERT_ERROR_NOT_ABSOLUTE_PATH",G_CONVERT_ERROR_NOT_ABSOLUTE_PATH,(((((0) + 1) + 1) + 1) + 1) + 1);
+#elif __ia64__
+CheckEnum("G_CONVERT_ERROR_NO_CONVERSION",G_CONVERT_ERROR_NO_CONVERSION,0);
+CheckEnum("G_CONVERT_ERROR_ILLEGAL_SEQUENCE",G_CONVERT_ERROR_ILLEGAL_SEQUENCE,(0) + 1);
+CheckEnum("G_CONVERT_ERROR_FAILED",G_CONVERT_ERROR_FAILED,((0) + 1) + 1);
+CheckEnum("G_CONVERT_ERROR_PARTIAL_INPUT",G_CONVERT_ERROR_PARTIAL_INPUT,(((0) + 1) + 1) + 1);
+CheckEnum("G_CONVERT_ERROR_BAD_URI",G_CONVERT_ERROR_BAD_URI,((((0) + 1) + 1) + 1) + 1);
+CheckEnum("G_CONVERT_ERROR_NOT_ABSOLUTE_PATH",G_CONVERT_ERROR_NOT_ABSOLUTE_PATH,(((((0) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11815,0);
 Msg("Find size of anonymous-glib.h.types-5 (11815)\n");
@@ -6180,6 +8005,8 @@ Msg("Find size of anonymous-glib.h.types-5 (11815)\n");
 CheckTypeSize(GConvertError,4, 11816, 2)
 #elif __x86_64__
 CheckTypeSize(GConvertError,4, 11816, 11)
+#elif __ia64__
+CheckTypeSize(GConvertError,4, 11816, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11816,0);
 Msg("Find size of GConvertError (11816)\n");
@@ -6203,6 +8030,15 @@ CheckEnum("G_ERR_NON_DIGIT_IN_CONST",G_ERR_NON_DIGIT_IN_CONST,((((0) + 1) + 1) +
 CheckEnum("G_ERR_DIGIT_RADIX",G_ERR_DIGIT_RADIX,(((((0) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("G_ERR_FLOAT_RADIX",G_ERR_FLOAT_RADIX,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("G_ERR_FLOAT_MALFORMED",G_ERR_FLOAT_MALFORMED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+#elif __ia64__
+CheckEnum("G_ERR_UNKNOWN",G_ERR_UNKNOWN,0);
+CheckEnum("G_ERR_UNEXP_EOF",G_ERR_UNEXP_EOF,(0) + 1);
+CheckEnum("G_ERR_UNEXP_EOF_IN_STRING",G_ERR_UNEXP_EOF_IN_STRING,((0) + 1) + 1);
+CheckEnum("G_ERR_UNEXP_EOF_IN_COMMENT",G_ERR_UNEXP_EOF_IN_COMMENT,(((0) + 1) + 1) + 1);
+CheckEnum("G_ERR_NON_DIGIT_IN_CONST",G_ERR_NON_DIGIT_IN_CONST,((((0) + 1) + 1) + 1) + 1);
+CheckEnum("G_ERR_DIGIT_RADIX",G_ERR_DIGIT_RADIX,(((((0) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_ERR_FLOAT_RADIX",G_ERR_FLOAT_RADIX,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_ERR_FLOAT_MALFORMED",G_ERR_FLOAT_MALFORMED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11817,0);
 Msg("Find size of anonymous-glib.h.types-7 (11817)\n");
@@ -6212,6 +8048,8 @@ Msg("Find size of anonymous-glib.h.types-7 (11817)\n");
 CheckTypeSize(GErrorType,4, 11818, 2)
 #elif __x86_64__
 CheckTypeSize(GErrorType,4, 11818, 11)
+#elif __ia64__
+CheckTypeSize(GErrorType,4, 11818, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11818,0);
 Msg("Find size of GErrorType (11818)\n");
@@ -6231,6 +8069,13 @@ CheckEnum("G_KEY_FILE_ERROR_NOT_FOUND",G_KEY_FILE_ERROR_NOT_FOUND,((0) + 1) + 1)
 CheckEnum("G_KEY_FILE_ERROR_KEY_NOT_FOUND",G_KEY_FILE_ERROR_KEY_NOT_FOUND,(((0) + 1) + 1) + 1);
 CheckEnum("G_KEY_FILE_ERROR_GROUP_NOT_FOUND",G_KEY_FILE_ERROR_GROUP_NOT_FOUND,((((0) + 1) + 1) + 1) + 1);
 CheckEnum("G_KEY_FILE_ERROR_INVALID_VALUE",G_KEY_FILE_ERROR_INVALID_VALUE,(((((0) + 1) + 1) + 1) + 1) + 1);
+#elif __ia64__
+CheckEnum("G_KEY_FILE_ERROR_UNKNOWN_ENCODING",G_KEY_FILE_ERROR_UNKNOWN_ENCODING,0);
+CheckEnum("G_KEY_FILE_ERROR_PARSE",G_KEY_FILE_ERROR_PARSE,(0) + 1);
+CheckEnum("G_KEY_FILE_ERROR_NOT_FOUND",G_KEY_FILE_ERROR_NOT_FOUND,((0) + 1) + 1);
+CheckEnum("G_KEY_FILE_ERROR_KEY_NOT_FOUND",G_KEY_FILE_ERROR_KEY_NOT_FOUND,(((0) + 1) + 1) + 1);
+CheckEnum("G_KEY_FILE_ERROR_GROUP_NOT_FOUND",G_KEY_FILE_ERROR_GROUP_NOT_FOUND,((((0) + 1) + 1) + 1) + 1);
+CheckEnum("G_KEY_FILE_ERROR_INVALID_VALUE",G_KEY_FILE_ERROR_INVALID_VALUE,(((((0) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11819,0);
 Msg("Find size of anonymous-glib.h.types-9 (11819)\n");
@@ -6240,6 +8085,8 @@ Msg("Find size of anonymous-glib.h.types-9 (11819)\n");
 CheckTypeSize(GKeyFileError,4, 11820, 2)
 #elif __x86_64__
 CheckTypeSize(GKeyFileError,4, 11820, 11)
+#elif __ia64__
+CheckTypeSize(GKeyFileError,4, 11820, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11820,0);
 Msg("Find size of GKeyFileError (11820)\n");
@@ -6287,6 +8134,27 @@ CheckEnum("G_SPAWN_ERROR_INVAL",G_SPAWN_ERROR_INVAL,((((((((((((((((0) + 1) + 1)
 CheckEnum("G_SPAWN_ERROR_ISDIR",G_SPAWN_ERROR_ISDIR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("G_SPAWN_ERROR_LIBBAD",G_SPAWN_ERROR_LIBBAD,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("G_SPAWN_ERROR_FAILED",G_SPAWN_ERROR_FAILED,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+#elif __ia64__
+CheckEnum("G_SPAWN_ERROR_FORK",G_SPAWN_ERROR_FORK,0);
+CheckEnum("G_SPAWN_ERROR_READ",G_SPAWN_ERROR_READ,(0) + 1);
+CheckEnum("G_SPAWN_ERROR_CHDIR",G_SPAWN_ERROR_CHDIR,((0) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_ACCES",G_SPAWN_ERROR_ACCES,(((0) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_PERM",G_SPAWN_ERROR_PERM,((((0) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_2BIG",G_SPAWN_ERROR_2BIG,(((((0) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_NOEXEC",G_SPAWN_ERROR_NOEXEC,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_NAMETOOLONG",G_SPAWN_ERROR_NAMETOOLONG,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_NOENT",G_SPAWN_ERROR_NOENT,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_NOMEM",G_SPAWN_ERROR_NOMEM,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_NOTDIR",G_SPAWN_ERROR_NOTDIR,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_LOOP",G_SPAWN_ERROR_LOOP,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_TXTBUSY",G_SPAWN_ERROR_TXTBUSY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_IO",G_SPAWN_ERROR_IO,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_NFILE",G_SPAWN_ERROR_NFILE,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_MFILE",G_SPAWN_ERROR_MFILE,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_INVAL",G_SPAWN_ERROR_INVAL,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_ISDIR",G_SPAWN_ERROR_ISDIR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_LIBBAD",G_SPAWN_ERROR_LIBBAD,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("G_SPAWN_ERROR_FAILED",G_SPAWN_ERROR_FAILED,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11821,0);
 Msg("Find size of anonymous-glib.h.types-11 (11821)\n");
@@ -6296,6 +8164,8 @@ Msg("Find size of anonymous-glib.h.types-11 (11821)\n");
 CheckTypeSize(GSpawnError,4, 11822, 2)
 #elif __x86_64__
 CheckTypeSize(GSpawnError,4, 11822, 11)
+#elif __ia64__
+CheckTypeSize(GSpawnError,4, 11822, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11822,0);
 Msg("Find size of GSpawnError (11822)\n");
@@ -6309,6 +8179,10 @@ CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
 CheckEnum("G_HOOK_FLAG_ACTIVE",G_HOOK_FLAG_ACTIVE,1 << 0);
 CheckEnum("G_HOOK_FLAG_IN_CALL",G_HOOK_FLAG_IN_CALL,1 << 1);
 CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
+#elif __ia64__
+CheckEnum("G_HOOK_FLAG_ACTIVE",G_HOOK_FLAG_ACTIVE,1 << 0);
+CheckEnum("G_HOOK_FLAG_IN_CALL",G_HOOK_FLAG_IN_CALL,1 << 1);
+CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11823,0);
 Msg("Find size of anonymous-glib.h.types-13 (11823)\n");
@@ -6318,6 +8192,8 @@ Msg("Find size of anonymous-glib.h.types-13 (11823)\n");
 CheckTypeSize(GHookFlagMask,4, 11824, 2)
 #elif __x86_64__
 CheckTypeSize(GHookFlagMask,4, 11824, 11)
+#elif __ia64__
+CheckTypeSize(GHookFlagMask,4, 11824, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11824,0);
 Msg("Find size of GHookFlagMask (11824)\n");
@@ -6326,6 +8202,8 @@ Msg("Find size of GHookFlagMask (11824)\n");
 #if __i386__
 CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
 #elif __x86_64__
+CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
+#elif __ia64__
 CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11825,0);
@@ -6336,6 +8214,8 @@ Msg("Find size of anonymous-glib.h.types-15 (11825)\n");
 CheckTypeSize(GThreadError,4, 11826, 2)
 #elif __x86_64__
 CheckTypeSize(GThreadError,4, 11826, 11)
+#elif __ia64__
+CheckTypeSize(GThreadError,4, 11826, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11826,0);
 Msg("Find size of GThreadError (11826)\n");
@@ -6349,6 +8229,10 @@ CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
 CheckEnum("G_OPTION_ERROR_UNKNOWN_OPTION",G_OPTION_ERROR_UNKNOWN_OPTION,0);
 CheckEnum("G_OPTION_ERROR_BAD_VALUE",G_OPTION_ERROR_BAD_VALUE,(0) + 1);
 CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
+#elif __ia64__
+CheckEnum("G_OPTION_ERROR_UNKNOWN_OPTION",G_OPTION_ERROR_UNKNOWN_OPTION,0);
+CheckEnum("G_OPTION_ERROR_BAD_VALUE",G_OPTION_ERROR_BAD_VALUE,(0) + 1);
+CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11827,0);
 Msg("Find size of anonymous-glib.h.types-17 (11827)\n");
@@ -6358,6 +8242,8 @@ Msg("Find size of anonymous-glib.h.types-17 (11827)\n");
 CheckTypeSize(GOptionError,4, 11828, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionError,4, 11828, 11)
+#elif __ia64__
+CheckTypeSize(GOptionError,4, 11828, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11828,0);
 Msg("Find size of GOptionError (11828)\n");
@@ -6387,6 +8273,18 @@ CheckEnum("G_ASCII_PUNCT",G_ASCII_PUNCT,1 << 7);
 CheckEnum("G_ASCII_SPACE",G_ASCII_SPACE,1 << 8);
 CheckEnum("G_ASCII_UPPER",G_ASCII_UPPER,1 << 9);
 CheckEnum("G_ASCII_XDIGIT",G_ASCII_XDIGIT,1 << 10);
+#elif __ia64__
+CheckEnum("G_ASCII_ALNUM",G_ASCII_ALNUM,1 << 0);
+CheckEnum("G_ASCII_ALPHA",G_ASCII_ALPHA,1 << 1);
+CheckEnum("G_ASCII_CNTRL",G_ASCII_CNTRL,1 << 2);
+CheckEnum("G_ASCII_DIGIT",G_ASCII_DIGIT,1 << 3);
+CheckEnum("G_ASCII_GRAPH",G_ASCII_GRAPH,1 << 4);
+CheckEnum("G_ASCII_LOWER",G_ASCII_LOWER,1 << 5);
+CheckEnum("G_ASCII_PRINT",G_ASCII_PRINT,1 << 6);
+CheckEnum("G_ASCII_PUNCT",G_ASCII_PUNCT,1 << 7);
+CheckEnum("G_ASCII_SPACE",G_ASCII_SPACE,1 << 8);
+CheckEnum("G_ASCII_UPPER",G_ASCII_UPPER,1 << 9);
+CheckEnum("G_ASCII_XDIGIT",G_ASCII_XDIGIT,1 << 10);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11829,0);
 Msg("Find size of anonymous-glib.h.types-19 (11829)\n");
@@ -6396,6 +8294,8 @@ Msg("Find size of anonymous-glib.h.types-19 (11829)\n");
 CheckTypeSize(GAsciiType,4, 11830, 2)
 #elif __x86_64__
 CheckTypeSize(GAsciiType,4, 11830, 11)
+#elif __ia64__
+CheckTypeSize(GAsciiType,4, 11830, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11830,0);
 Msg("Find size of GAsciiType (11830)\n");
@@ -6409,6 +8309,10 @@ CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);
 CheckEnum("G_SHELL_ERROR_BAD_QUOTING",G_SHELL_ERROR_BAD_QUOTING,0);
 CheckEnum("G_SHELL_ERROR_EMPTY_STRING",G_SHELL_ERROR_EMPTY_STRING,(0) + 1);
 CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);
+#elif __ia64__
+CheckEnum("G_SHELL_ERROR_BAD_QUOTING",G_SHELL_ERROR_BAD_QUOTING,0);
+CheckEnum("G_SHELL_ERROR_EMPTY_STRING",G_SHELL_ERROR_EMPTY_STRING,(0) + 1);
+CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11831,0);
 Msg("Find size of anonymous-glib.h.types-21 (11831)\n");
@@ -6418,6 +8322,8 @@ Msg("Find size of anonymous-glib.h.types-21 (11831)\n");
 CheckTypeSize(GShellError,4, 11832, 2)
 #elif __x86_64__
 CheckTypeSize(GShellError,4, 11832, 11)
+#elif __ia64__
+CheckTypeSize(GShellError,4, 11832, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11832,0);
 Msg("Find size of GShellError (11832)\n");
@@ -6427,9 +8333,130 @@ Msg("Find size of GShellError (11832)\n");
 CheckTypeSize(GThreadFunctions *,4, 12074, 2)
 #elif __x86_64__
 CheckTypeSize(GThreadFunctions *,8, 12074, 11)
+#elif __ia64__
+CheckTypeSize(GThreadFunctions *,8, 12074, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12074,0);
 Msg("Find size of GThreadFunctions * (12074)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(gsize *,4, 11480, 2)
+#elif __x86_64__
+CheckTypeSize(gsize *,8, 11480, 11)
+#elif __ia64__
+CheckTypeSize(gsize *,8, 11480, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11480,0);
+Msg("Find size of gsize * (11480)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(gssize,4, 11520, 2)
+#endif
+
+#if __i386__
+CheckTypeSize(gint64,8, 11533, 2)
+#endif
+
+#if __i386__
+CheckTypeSize(guint64,8, 11621, 2)
+#endif
+
+#if __ia64__
+CheckTypeSize(gint64,8, 16221, 3)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(gint64,0, 16222, 6)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(gint64,0, 16223, 9)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(gint64,0, 16224, 10)
+#endif
+
+#if __x86_64__
+CheckTypeSize(gint64,8, 16225, 11)
+#endif
+
+#if __s390x__
+CheckTypeSize(gint64,0, 16226, 12)
+#endif
+
+#if __ia64__
+CheckTypeSize(guint64,8, 16227, 3)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(guint64,0, 16228, 6)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(guint64,0, 16229, 9)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(guint64,0, 16230, 10)
+#endif
+
+#if __x86_64__
+CheckTypeSize(guint64,8, 16231, 11)
+#endif
+
+#if __s390x__
+CheckTypeSize(guint64,0, 16232, 12)
+#endif
+
+#if __ia64__
+CheckTypeSize(gssize,8, 16233, 3)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(gssize,0, 16234, 6)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(gssize,0, 16235, 9)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(gssize,0, 16236, 10)
+#endif
+
+#if __x86_64__
+CheckTypeSize(gssize,8, 16237, 11)
+#endif
+
+#if __s390x__
+CheckTypeSize(gssize,0, 16238, 12)
+#endif
+
+#if __ia64__
+CheckTypeSize(gsize,8, 16239, 3)
+#endif
+
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(gsize,0, 16240, 6)
+#endif
+
+#if __powerpc64__
+CheckTypeSize(gsize,0, 16241, 9)
+#endif
+
+#if __s390__ && !__s390x__
+CheckTypeSize(gsize,0, 16242, 10)
+#endif
+
+#if __x86_64__
+CheckTypeSize(gsize,8, 16243, 11)
+#endif
+
+#if __s390x__
+CheckTypeSize(gsize,0, 16244, 12)
 #endif
 
 extern gboolean g_source_remove_db(guint);

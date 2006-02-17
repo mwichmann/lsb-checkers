@@ -35,6 +35,8 @@ printf("Checking data structures in libxml2/libxml/xmlschemas.h\n");
 CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15027,0);
 Msg("Find size of xmlSchemaValidCtxt (15027)\n");
@@ -44,6 +46,8 @@ Msg("Find size of xmlSchemaValidCtxt (15027)\n");
 CheckTypeSize(xmlSchemaValidCtxt *,4, 15028, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaValidCtxt *,8, 15028, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaValidCtxt *,8, 15028, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15028,0);
 Msg("Find size of xmlSchemaValidCtxt * (15028)\n");
@@ -53,6 +57,8 @@ Msg("Find size of xmlSchemaValidCtxt * (15028)\n");
 CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15029,0);
 Msg("Find size of xmlSchemaValidCtxtPtr (15029)\n");
@@ -62,6 +68,8 @@ Msg("Find size of xmlSchemaValidCtxtPtr (15029)\n");
 CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15031,0);
 Msg("Find size of xmlSchemaSAXPlugStruct (15031)\n");
@@ -71,6 +79,8 @@ Msg("Find size of xmlSchemaSAXPlugStruct (15031)\n");
 CheckTypeSize(xmlSchemaSAXPlugStruct *,4, 15032, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaSAXPlugStruct *,8, 15032, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaSAXPlugStruct *,8, 15032, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15032,0);
 Msg("Find size of xmlSchemaSAXPlugStruct * (15032)\n");
@@ -80,6 +90,8 @@ Msg("Find size of xmlSchemaSAXPlugStruct * (15032)\n");
 CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15033,0);
 Msg("Find size of xmlSchemaSAXPlugPtr (15033)\n");
@@ -89,6 +101,8 @@ Msg("Find size of xmlSchemaSAXPlugPtr (15033)\n");
 CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15035,0);
 Msg("Find size of xmlSchemaParserCtxt (15035)\n");
@@ -98,6 +112,8 @@ Msg("Find size of xmlSchemaParserCtxt (15035)\n");
 CheckTypeSize(xmlSchemaParserCtxt *,4, 15036, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaParserCtxt *,8, 15036, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaParserCtxt *,8, 15036, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15036,0);
 Msg("Find size of xmlSchemaParserCtxt * (15036)\n");
@@ -107,6 +123,8 @@ Msg("Find size of xmlSchemaParserCtxt * (15036)\n");
 CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15037,0);
 Msg("Find size of xmlSchemaParserCtxtPtr (15037)\n");
@@ -116,6 +134,8 @@ Msg("Find size of xmlSchemaParserCtxtPtr (15037)\n");
 CheckTypeSize(xmlSAXHandlerPtr *,4, 15038, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSAXHandlerPtr *,8, 15038, 11)
+#elif __ia64__
+CheckTypeSize(xmlSAXHandlerPtr *,8, 15038, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15038,0);
 Msg("Find size of xmlSAXHandlerPtr * (15038)\n");
@@ -125,6 +145,8 @@ Msg("Find size of xmlSAXHandlerPtr * (15038)\n");
 CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15039,0);
 Msg("Find size of xmlSchemaValidityErrorFunc (15039)\n");
@@ -134,6 +156,8 @@ Msg("Find size of xmlSchemaValidityErrorFunc (15039)\n");
 CheckTypeSize(xmlSchemaValidityErrorFunc *,4, 15040, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaValidityErrorFunc *,8, 15040, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaValidityErrorFunc *,8, 15040, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15040,0);
 Msg("Find size of xmlSchemaValidityErrorFunc * (15040)\n");
@@ -143,6 +167,8 @@ Msg("Find size of xmlSchemaValidityErrorFunc * (15040)\n");
 CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15041,0);
 Msg("Find size of xmlSchemaValidityWarningFunc (15041)\n");
@@ -152,6 +178,8 @@ Msg("Find size of xmlSchemaValidityWarningFunc (15041)\n");
 CheckTypeSize(xmlSchemaValidityWarningFunc *,4, 15042, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaValidityWarningFunc *,8, 15042, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaValidityWarningFunc *,8, 15042, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15042,0);
 Msg("Find size of xmlSchemaValidityWarningFunc * (15042)\n");
@@ -161,6 +189,8 @@ Msg("Find size of xmlSchemaValidityWarningFunc * (15042)\n");
 CheckTypeSize(xmlSchema,84, 15044, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchema,160, 15044, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchema,160, 15044, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15044,0);
 Msg("Find size of xmlSchema (15044)\n");
@@ -170,6 +200,8 @@ Msg("Find size of xmlSchema (15044)\n");
 CheckTypeSize(xmlSchema *,4, 15045, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchema *,8, 15045, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchema *,8, 15045, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15045,0);
 Msg("Find size of xmlSchema * (15045)\n");
@@ -179,6 +211,8 @@ Msg("Find size of xmlSchema * (15045)\n");
 CheckTypeSize(xmlSchemaPtr,4, 15046, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaPtr,8, 15046, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaPtr,8, 15046, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15046,0);
 Msg("Find size of xmlSchemaPtr (15046)\n");
@@ -187,6 +221,8 @@ Msg("Find size of xmlSchemaPtr (15046)\n");
 #if __i386__
 CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
 #elif __x86_64__
+CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
+#elif __ia64__
 CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15117,0);
@@ -197,6 +233,8 @@ Msg("Find size of anonymous-xmlschemas.h.types-0 (15117)\n");
 CheckTypeSize(xmlSchemaValidOption,4, 15118, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSchemaValidOption,4, 15118, 11)
+#elif __ia64__
+CheckTypeSize(xmlSchemaValidOption,4, 15118, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15118,0);
 Msg("Find size of xmlSchemaValidOption (15118)\n");

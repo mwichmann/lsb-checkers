@@ -98,6 +98,42 @@ CheckMemberSize(struct _xmlEntity,URI,8,11,48708)
 CheckOffset(struct _xmlEntity,URI,120,11,48708)
 CheckMemberSize(struct _xmlEntity,owner,4,11,48709)
 CheckOffset(struct _xmlEntity,owner,128,11,48709)
+#elif __ia64__
+CheckTypeSize(struct _xmlEntity,136, 14716, 3)
+CheckMemberSize(struct _xmlEntity,type,4,3,48687)
+CheckOffset(struct _xmlEntity,type,8,3,48687)
+CheckMemberSize(struct _xmlEntity,name,8,3,48688)
+CheckOffset(struct _xmlEntity,name,16,3,48688)
+CheckMemberSize(struct _xmlEntity,children,8,3,48689)
+CheckOffset(struct _xmlEntity,children,24,3,48689)
+CheckMemberSize(struct _xmlEntity,last,8,3,48690)
+CheckOffset(struct _xmlEntity,last,32,3,48690)
+CheckMemberSize(struct _xmlEntity,parent,8,3,48691)
+CheckOffset(struct _xmlEntity,parent,40,3,48691)
+CheckMemberSize(struct _xmlEntity,next,8,3,48692)
+CheckOffset(struct _xmlEntity,next,48,3,48692)
+CheckMemberSize(struct _xmlEntity,prev,8,3,48693)
+CheckOffset(struct _xmlEntity,prev,56,3,48693)
+CheckMemberSize(struct _xmlEntity,doc,8,3,48694)
+CheckOffset(struct _xmlEntity,doc,64,3,48694)
+CheckMemberSize(struct _xmlEntity,orig,8,3,48695)
+CheckOffset(struct _xmlEntity,orig,72,3,48695)
+CheckMemberSize(struct _xmlEntity,content,8,3,48696)
+CheckOffset(struct _xmlEntity,content,80,3,48696)
+CheckMemberSize(struct _xmlEntity,length,4,3,48697)
+CheckOffset(struct _xmlEntity,length,88,3,48697)
+CheckMemberSize(struct _xmlEntity,etype,4,3,48704)
+CheckOffset(struct _xmlEntity,etype,92,3,48704)
+CheckMemberSize(struct _xmlEntity,ExternalID,8,3,48705)
+CheckOffset(struct _xmlEntity,ExternalID,96,3,48705)
+CheckMemberSize(struct _xmlEntity,SystemID,8,3,48706)
+CheckOffset(struct _xmlEntity,SystemID,104,3,48706)
+CheckMemberSize(struct _xmlEntity,nexte,8,3,48707)
+CheckOffset(struct _xmlEntity,nexte,112,3,48707)
+CheckMemberSize(struct _xmlEntity,URI,8,3,48708)
+CheckOffset(struct _xmlEntity,URI,120,3,48708)
+CheckMemberSize(struct _xmlEntity,owner,4,3,48709)
+CheckOffset(struct _xmlEntity,owner,128,3,48709)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14716,0);
 Msg("Find size of _xmlEntity (14716)\n");
@@ -117,6 +153,13 @@ CheckEnum("XML_EXTERNAL_GENERAL_UNPARSED_ENTITY",XML_EXTERNAL_GENERAL_UNPARSED_E
 CheckEnum("XML_INTERNAL_PARAMETER_ENTITY",XML_INTERNAL_PARAMETER_ENTITY,4);
 CheckEnum("XML_EXTERNAL_PARAMETER_ENTITY",XML_EXTERNAL_PARAMETER_ENTITY,5);
 CheckEnum("XML_INTERNAL_PREDEFINED_ENTITY",XML_INTERNAL_PREDEFINED_ENTITY,6);
+#elif __ia64__
+CheckEnum("XML_INTERNAL_GENERAL_ENTITY",XML_INTERNAL_GENERAL_ENTITY,1);
+CheckEnum("XML_EXTERNAL_GENERAL_PARSED_ENTITY",XML_EXTERNAL_GENERAL_PARSED_ENTITY,2);
+CheckEnum("XML_EXTERNAL_GENERAL_UNPARSED_ENTITY",XML_EXTERNAL_GENERAL_UNPARSED_ENTITY,3);
+CheckEnum("XML_INTERNAL_PARAMETER_ENTITY",XML_INTERNAL_PARAMETER_ENTITY,4);
+CheckEnum("XML_EXTERNAL_PARAMETER_ENTITY",XML_EXTERNAL_PARAMETER_ENTITY,5);
+CheckEnum("XML_INTERNAL_PREDEFINED_ENTITY",XML_INTERNAL_PREDEFINED_ENTITY,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14717,0);
 Msg("Find size of anon-libxml2/libxml/entities.h-10 (14717)\n");
@@ -126,6 +169,8 @@ Msg("Find size of anon-libxml2/libxml/entities.h-10 (14717)\n");
 CheckTypeSize(xmlEntityType,4, 14718, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEntityType,4, 14718, 11)
+#elif __ia64__
+CheckTypeSize(xmlEntityType,4, 14718, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14718,0);
 Msg("Find size of xmlEntityType (14718)\n");
@@ -135,6 +180,8 @@ Msg("Find size of xmlEntityType (14718)\n");
 CheckTypeSize(struct _xmlEntity *,4, 14719, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlEntity *,8, 14719, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlEntity *,8, 14719, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14719,0);
 Msg("Find size of _xmlEntity * (14719)\n");
@@ -144,6 +191,8 @@ Msg("Find size of _xmlEntity * (14719)\n");
 CheckTypeSize(xmlEntity,72, 14720, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEntity,136, 14720, 11)
+#elif __ia64__
+CheckTypeSize(xmlEntity,136, 14720, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14720,0);
 Msg("Find size of xmlEntity (14720)\n");
@@ -153,6 +202,8 @@ Msg("Find size of xmlEntity (14720)\n");
 CheckTypeSize(xmlEntity *,4, 14721, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEntity *,8, 14721, 11)
+#elif __ia64__
+CheckTypeSize(xmlEntity *,8, 14721, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14721,0);
 Msg("Find size of xmlEntity * (14721)\n");
@@ -162,6 +213,8 @@ Msg("Find size of xmlEntity * (14721)\n");
 CheckTypeSize(xmlEntityPtr,4, 14722, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEntityPtr,8, 14722, 11)
+#elif __ia64__
+CheckTypeSize(xmlEntityPtr,8, 14722, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14722,0);
 Msg("Find size of xmlEntityPtr (14722)\n");
@@ -173,6 +226,9 @@ Msg("Missing member data for _xmlHashTable on IA32\n");
 #elif __x86_64__
 CheckTypeSize(struct _xmlHashTable,0, 14723, 11)
 Msg("Missing member data for _xmlHashTable on x86-64\n");
+#elif __ia64__
+CheckTypeSize(struct _xmlHashTable,0, 14723, 3)
+Msg("Missing member data for _xmlHashTable on IA64\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14723,0);
 Msg("Find size of _xmlHashTable (14723)\n");
@@ -182,6 +238,8 @@ Msg("Find size of _xmlHashTable (14723)\n");
 CheckTypeSize(xmlEntitiesTable,0, 14724, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEntitiesTable,0, 14724, 11)
+#elif __ia64__
+CheckTypeSize(xmlEntitiesTable,0, 14724, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14724,0);
 Msg("Find size of xmlEntitiesTable (14724)\n");
@@ -191,6 +249,8 @@ Msg("Find size of xmlEntitiesTable (14724)\n");
 CheckTypeSize(xmlEntitiesTable *,4, 14725, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEntitiesTable *,8, 14725, 11)
+#elif __ia64__
+CheckTypeSize(xmlEntitiesTable *,8, 14725, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14725,0);
 Msg("Find size of xmlEntitiesTable * (14725)\n");
@@ -200,6 +260,8 @@ Msg("Find size of xmlEntitiesTable * (14725)\n");
 CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 11)
+#elif __ia64__
+CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14726,0);
 Msg("Find size of xmlEntitiesTablePtr (14726)\n");

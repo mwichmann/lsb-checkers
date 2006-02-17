@@ -32,6 +32,8 @@ printf("Checking data structures in libxml2/libxml/xmlstring.h\n");
 CheckTypeSize(xmlChar,1, 14547, 2)
 #elif __x86_64__
 CheckTypeSize(xmlChar,1, 14547, 11)
+#elif __ia64__
+CheckTypeSize(xmlChar,1, 14547, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14547,0);
 Msg("Find size of xmlChar (14547)\n");
@@ -41,6 +43,8 @@ Msg("Find size of xmlChar (14547)\n");
 CheckTypeSize(const xmlChar,1, 14548, 2)
 #elif __x86_64__
 CheckTypeSize(const xmlChar,1, 14548, 11)
+#elif __ia64__
+CheckTypeSize(const xmlChar,1, 14548, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14548,0);
 Msg("Find size of const xmlChar (14548)\n");
@@ -48,6 +52,7 @@ Msg("Find size of const xmlChar (14548)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14549,0);
 Msg("Find size of const xmlChar * (14549)\n");
@@ -57,6 +62,8 @@ Msg("Find size of const xmlChar * (14549)\n");
 CheckTypeSize(xmlChar *,4, 14550, 2)
 #elif __x86_64__
 CheckTypeSize(xmlChar *,8, 14550, 11)
+#elif __ia64__
+CheckTypeSize(xmlChar *,8, 14550, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14550,0);
 Msg("Find size of xmlChar * (14550)\n");

@@ -37,6 +37,12 @@ CheckMemberSize(struct _xmlLocationSet,locMax,4,11,49080)
 CheckOffset(struct _xmlLocationSet,locMax,4,11,49080)
 CheckMemberSize(struct _xmlLocationSet,locTab,8,11,49081)
 CheckOffset(struct _xmlLocationSet,locTab,8,11,49081)
+#elif __ia64__
+CheckTypeSize(struct _xmlLocationSet,16, 14910, 3)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,3,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,3,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,8,3,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,3,49081)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14910,0);
 Msg("Find size of _xmlLocationSet (14910)\n");
@@ -46,6 +52,8 @@ Msg("Find size of _xmlLocationSet (14910)\n");
 CheckTypeSize(xmlLocationSet,12, 14911, 2)
 #elif __x86_64__
 CheckTypeSize(xmlLocationSet,16, 14911, 11)
+#elif __ia64__
+CheckTypeSize(xmlLocationSet,16, 14911, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14911,0);
 Msg("Find size of xmlLocationSet (14911)\n");
@@ -55,6 +63,8 @@ Msg("Find size of xmlLocationSet (14911)\n");
 CheckTypeSize(xmlLocationSet *,4, 14912, 2)
 #elif __x86_64__
 CheckTypeSize(xmlLocationSet *,8, 14912, 11)
+#elif __ia64__
+CheckTypeSize(xmlLocationSet *,8, 14912, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14912,0);
 Msg("Find size of xmlLocationSet * (14912)\n");
@@ -64,6 +74,8 @@ Msg("Find size of xmlLocationSet * (14912)\n");
 CheckTypeSize(xmlLocationSetPtr,4, 14913, 2)
 #elif __x86_64__
 CheckTypeSize(xmlLocationSetPtr,8, 14913, 11)
+#elif __ia64__
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14913,0);
 Msg("Find size of xmlLocationSetPtr (14913)\n");

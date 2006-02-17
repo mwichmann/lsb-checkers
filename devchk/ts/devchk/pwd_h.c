@@ -18,11 +18,12 @@ int pwd_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in pwd.h\n");
 #endif
 
+printf("Checking data structures in pwd.h\n");
 #if __i386__
 CheckTypeSize(struct passwd,28, 6938, 2)
 CheckMemberSize(struct passwd,pw_passwd,4,2,30042)
@@ -126,6 +127,20 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6938,0);
 Msg("Find size of passwd (6938)\n");
 #endif
 
+extern void endpwent_db(void);
+CheckInterfacedef(endpwent,endpwent_db);
+extern struct passwd * getpwent_db(void);
+CheckInterfacedef(getpwent,getpwent_db);
+extern struct passwd * getpwnam_db(const char *);
+CheckInterfacedef(getpwnam,getpwnam_db);
+extern struct passwd * getpwuid_db(uid_t);
+CheckInterfacedef(getpwuid,getpwuid_db);
+extern void setpwent_db(void);
+CheckInterfacedef(setpwent,setpwent_db);
+extern int getpwnam_r_db(const char *, struct passwd *, char *, size_t, struct passwd * *);
+CheckInterfacedef(getpwnam_r,getpwnam_r_db);
+extern int getpwuid_r_db(uid_t, struct passwd *, char *, size_t, struct passwd * *);
+CheckInterfacedef(getpwuid_r,getpwuid_r_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -133,7 +148,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in pwd.h\n",cnt);
+printf("%d tests passed out of %d tests in pwd.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

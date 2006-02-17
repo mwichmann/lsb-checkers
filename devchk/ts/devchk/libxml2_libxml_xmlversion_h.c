@@ -198,6 +198,10 @@ cnt++;
 /* No test for ATTRIBUTE_UNUSED */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for LIBXML_THREAD_ENABLED */
+#endif
+
 extern void xmlCheckVersion_db(int);
 CheckInterfacedef(xmlCheckVersion,xmlCheckVersion_db);
 #ifdef TET_TEST

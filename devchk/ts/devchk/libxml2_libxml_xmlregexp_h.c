@@ -32,6 +32,8 @@ printf("Checking data structures in libxml2/libxml/xmlregexp.h\n");
 CheckTypeSize(xmlRegexp,0, 14690, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRegexp,0, 14690, 11)
+#elif __ia64__
+CheckTypeSize(xmlRegexp,0, 14690, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14690,0);
 Msg("Find size of xmlRegexp (14690)\n");
@@ -41,6 +43,8 @@ Msg("Find size of xmlRegexp (14690)\n");
 CheckTypeSize(xmlRegexp *,4, 14691, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRegexp *,8, 14691, 11)
+#elif __ia64__
+CheckTypeSize(xmlRegexp *,8, 14691, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14691,0);
 Msg("Find size of xmlRegexp * (14691)\n");
@@ -50,6 +54,8 @@ Msg("Find size of xmlRegexp * (14691)\n");
 CheckTypeSize(xmlRegexpPtr,4, 14692, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRegexpPtr,8, 14692, 11)
+#elif __ia64__
+CheckTypeSize(xmlRegexpPtr,8, 14692, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14692,0);
 Msg("Find size of xmlRegexpPtr (14692)\n");
@@ -59,6 +65,8 @@ Msg("Find size of xmlRegexpPtr (14692)\n");
 CheckTypeSize(xmlRegExecCtxt,0, 14694, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRegExecCtxt,0, 14694, 11)
+#elif __ia64__
+CheckTypeSize(xmlRegExecCtxt,0, 14694, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14694,0);
 Msg("Find size of xmlRegExecCtxt (14694)\n");
@@ -68,6 +76,8 @@ Msg("Find size of xmlRegExecCtxt (14694)\n");
 CheckTypeSize(xmlRegExecCtxt *,4, 14695, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRegExecCtxt *,8, 14695, 11)
+#elif __ia64__
+CheckTypeSize(xmlRegExecCtxt *,8, 14695, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14695,0);
 Msg("Find size of xmlRegExecCtxt * (14695)\n");
@@ -77,6 +87,8 @@ Msg("Find size of xmlRegExecCtxt * (14695)\n");
 CheckTypeSize(xmlRegExecCtxtPtr,4, 14696, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRegExecCtxtPtr,8, 14696, 11)
+#elif __ia64__
+CheckTypeSize(xmlRegExecCtxtPtr,8, 14696, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14696,0);
 Msg("Find size of xmlRegExecCtxtPtr (14696)\n");
@@ -86,6 +98,8 @@ Msg("Find size of xmlRegExecCtxtPtr (14696)\n");
 CheckTypeSize(xmlExpNode,0, 14698, 2)
 #elif __x86_64__
 CheckTypeSize(xmlExpNode,0, 14698, 11)
+#elif __ia64__
+CheckTypeSize(xmlExpNode,0, 14698, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14698,0);
 Msg("Find size of xmlExpNode (14698)\n");
@@ -95,6 +109,8 @@ Msg("Find size of xmlExpNode (14698)\n");
 CheckTypeSize(xmlExpNode *,4, 14699, 2)
 #elif __x86_64__
 CheckTypeSize(xmlExpNode *,8, 14699, 11)
+#elif __ia64__
+CheckTypeSize(xmlExpNode *,8, 14699, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14699,0);
 Msg("Find size of xmlExpNode * (14699)\n");
@@ -104,6 +120,8 @@ Msg("Find size of xmlExpNode * (14699)\n");
 CheckTypeSize(xmlExpNodePtr,4, 14700, 2)
 #elif __x86_64__
 CheckTypeSize(xmlExpNodePtr,8, 14700, 11)
+#elif __ia64__
+CheckTypeSize(xmlExpNodePtr,8, 14700, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14700,0);
 Msg("Find size of xmlExpNodePtr (14700)\n");
@@ -111,6 +129,7 @@ Msg("Find size of xmlExpNodePtr (14700)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14701,0);
 Msg("Find size of fptr_xmlregexp_366 (14701)\n");
@@ -120,6 +139,8 @@ Msg("Find size of fptr_xmlregexp_366 (14701)\n");
 CheckTypeSize(xmlRegExecCallbacks,4, 14702, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRegExecCallbacks,8, 14702, 11)
+#elif __ia64__
+CheckTypeSize(xmlRegExecCallbacks,8, 14702, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14702,0);
 Msg("Find size of xmlRegExecCallbacks (14702)\n");
@@ -129,6 +150,8 @@ Msg("Find size of xmlRegExecCallbacks (14702)\n");
 CheckTypeSize(xmlExpCtxt,0, 14704, 2)
 #elif __x86_64__
 CheckTypeSize(xmlExpCtxt,0, 14704, 11)
+#elif __ia64__
+CheckTypeSize(xmlExpCtxt,0, 14704, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14704,0);
 Msg("Find size of xmlExpCtxt (14704)\n");
@@ -138,6 +161,8 @@ Msg("Find size of xmlExpCtxt (14704)\n");
 CheckTypeSize(xmlExpCtxt *,4, 14705, 2)
 #elif __x86_64__
 CheckTypeSize(xmlExpCtxt *,8, 14705, 11)
+#elif __ia64__
+CheckTypeSize(xmlExpCtxt *,8, 14705, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14705,0);
 Msg("Find size of xmlExpCtxt * (14705)\n");
@@ -147,6 +172,8 @@ Msg("Find size of xmlExpCtxt * (14705)\n");
 CheckTypeSize(xmlExpCtxtPtr,4, 14706, 2)
 #elif __x86_64__
 CheckTypeSize(xmlExpCtxtPtr,8, 14706, 11)
+#elif __ia64__
+CheckTypeSize(xmlExpCtxtPtr,8, 14706, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14706,0);
 Msg("Find size of xmlExpCtxtPtr (14706)\n");
@@ -154,6 +181,7 @@ Msg("Find size of xmlExpCtxtPtr (14706)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14707,0);
 Msg("Find size of const xmlChar * * (14707)\n");
@@ -173,6 +201,13 @@ CheckEnum("XML_EXP_ATOM",XML_EXP_ATOM,2);
 CheckEnum("XML_EXP_SEQ",XML_EXP_SEQ,3);
 CheckEnum("XML_EXP_OR",XML_EXP_OR,4);
 CheckEnum("XML_EXP_COUNT",XML_EXP_COUNT,5);
+#elif __ia64__
+CheckEnum("XML_EXP_EMPTY",XML_EXP_EMPTY,0);
+CheckEnum("XML_EXP_FORBID",XML_EXP_FORBID,1);
+CheckEnum("XML_EXP_ATOM",XML_EXP_ATOM,2);
+CheckEnum("XML_EXP_SEQ",XML_EXP_SEQ,3);
+CheckEnum("XML_EXP_OR",XML_EXP_OR,4);
+CheckEnum("XML_EXP_COUNT",XML_EXP_COUNT,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15085,0);
 Msg("Find size of anonymous-xmlregexp.h.types-0 (15085)\n");
@@ -182,6 +217,8 @@ Msg("Find size of anonymous-xmlregexp.h.types-0 (15085)\n");
 CheckTypeSize(xmlExpNodeType,4, 15086, 2)
 #elif __x86_64__
 CheckTypeSize(xmlExpNodeType,4, 15086, 11)
+#elif __ia64__
+CheckTypeSize(xmlExpNodeType,4, 15086, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15086,0);
 Msg("Find size of xmlExpNodeType (15086)\n");

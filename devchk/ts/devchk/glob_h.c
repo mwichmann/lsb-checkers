@@ -18,11 +18,12 @@ int glob_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in glob.h\n");
 #endif
 
+printf("Checking data structures in glob.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef GLOB_ERR
 	CompareConstant(GLOB_ERR,(1<<0),853,architecture)
@@ -251,6 +252,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9007,0);
 Msg("Find size of glob64_t (9007)\n");
 #endif
 
+extern int glob_db(const char *, int, int(*__errfunc)(const char *,int)
+, glob_t *);
+CheckInterfacedef(glob,glob_db);
+extern int glob64_db(const char *, int, int(*__errfunc)(const char *,int)
+, glob64_t *);
+CheckInterfacedef(glob64,glob64_db);
+extern void globfree_db(glob_t *);
+CheckInterfacedef(globfree,globfree_db);
+extern void globfree64_db(glob64_t *);
+CheckInterfacedef(globfree64,globfree64_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -258,7 +269,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in glob.h\n",cnt);
+printf("%d tests passed out of %d tests in glob.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

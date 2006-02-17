@@ -18,11 +18,12 @@ int sys_shm_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/shm.h\n");
 #endif
 
+printf("Checking data structures in sys/shm.h\n");
 #if __powerpc64__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
@@ -367,6 +368,16 @@ CheckMemberSize(struct shmid_ds,__unused5,8,11,40748)
 CheckOffset(struct shmid_ds,__unused5,104,11,40748)
 #endif
 
+extern int __getpagesize_db(void);
+CheckInterfacedef(__getpagesize,__getpagesize_db);
+extern void * shmat_db(int, const void *, int);
+CheckInterfacedef(shmat,shmat_db);
+extern int shmctl_db(int, int, struct shmid_ds *);
+CheckInterfacedef(shmctl,shmctl_db);
+extern int shmdt_db(const void *);
+CheckInterfacedef(shmdt,shmdt_db);
+extern int shmget_db(key_t, size_t, int);
+CheckInterfacedef(shmget,shmget_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -374,7 +385,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/shm.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/shm.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

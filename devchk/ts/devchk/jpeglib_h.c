@@ -763,6 +763,182 @@ CheckMemberSize(struct jpeg_decompress_struct,cconvert,8,11,41222)
 CheckOffset(struct jpeg_decompress_struct,cconvert,616,11,41222)
 CheckMemberSize(struct jpeg_decompress_struct,cquantize,8,11,41223)
 CheckOffset(struct jpeg_decompress_struct,cquantize,624,11,41223)
+#elif __ia64__
+CheckTypeSize(struct jpeg_decompress_struct,632, 11249, 3)
+CheckMemberSize(struct jpeg_decompress_struct,mem,8,3,41081)
+CheckOffset(struct jpeg_decompress_struct,mem,8,3,41081)
+CheckMemberSize(struct jpeg_decompress_struct,progress,8,3,41082)
+CheckOffset(struct jpeg_decompress_struct,progress,16,3,41082)
+CheckMemberSize(struct jpeg_decompress_struct,client_data,8,3,41083)
+CheckOffset(struct jpeg_decompress_struct,client_data,24,3,41083)
+CheckMemberSize(struct jpeg_decompress_struct,is_decompressor,4,3,41084)
+CheckOffset(struct jpeg_decompress_struct,is_decompressor,32,3,41084)
+CheckMemberSize(struct jpeg_decompress_struct,global_state,4,3,41085)
+CheckOffset(struct jpeg_decompress_struct,global_state,36,3,41085)
+CheckMemberSize(struct jpeg_decompress_struct,src,8,3,41099)
+CheckOffset(struct jpeg_decompress_struct,src,40,3,41099)
+CheckMemberSize(struct jpeg_decompress_struct,image_width,4,3,41100)
+CheckOffset(struct jpeg_decompress_struct,image_width,48,3,41100)
+CheckMemberSize(struct jpeg_decompress_struct,image_height,4,3,41101)
+CheckOffset(struct jpeg_decompress_struct,image_height,52,3,41101)
+CheckMemberSize(struct jpeg_decompress_struct,num_components,4,3,41102)
+CheckOffset(struct jpeg_decompress_struct,num_components,56,3,41102)
+CheckMemberSize(struct jpeg_decompress_struct,jpeg_color_space,4,3,41109)
+CheckOffset(struct jpeg_decompress_struct,jpeg_color_space,60,3,41109)
+CheckMemberSize(struct jpeg_decompress_struct,out_color_space,4,3,41110)
+CheckOffset(struct jpeg_decompress_struct,out_color_space,64,3,41110)
+CheckMemberSize(struct jpeg_decompress_struct,scale_num,4,3,41111)
+CheckOffset(struct jpeg_decompress_struct,scale_num,68,3,41111)
+CheckMemberSize(struct jpeg_decompress_struct,scale_denom,4,3,41112)
+CheckOffset(struct jpeg_decompress_struct,scale_denom,72,3,41112)
+CheckMemberSize(struct jpeg_decompress_struct,output_gamma,8,3,41113)
+CheckOffset(struct jpeg_decompress_struct,output_gamma,80,3,41113)
+CheckMemberSize(struct jpeg_decompress_struct,buffered_image,4,3,41114)
+CheckOffset(struct jpeg_decompress_struct,buffered_image,88,3,41114)
+CheckMemberSize(struct jpeg_decompress_struct,raw_data_out,4,3,41115)
+CheckOffset(struct jpeg_decompress_struct,raw_data_out,92,3,41115)
+CheckMemberSize(struct jpeg_decompress_struct,dct_method,4,3,41119)
+CheckOffset(struct jpeg_decompress_struct,dct_method,96,3,41119)
+CheckMemberSize(struct jpeg_decompress_struct,do_fancy_upsampling,4,3,41120)
+CheckOffset(struct jpeg_decompress_struct,do_fancy_upsampling,100,3,41120)
+CheckMemberSize(struct jpeg_decompress_struct,do_block_smoothing,4,3,41121)
+CheckOffset(struct jpeg_decompress_struct,do_block_smoothing,104,3,41121)
+CheckMemberSize(struct jpeg_decompress_struct,quantize_colors,4,3,41122)
+CheckOffset(struct jpeg_decompress_struct,quantize_colors,108,3,41122)
+CheckMemberSize(struct jpeg_decompress_struct,dither_mode,4,3,41126)
+CheckOffset(struct jpeg_decompress_struct,dither_mode,112,3,41126)
+CheckMemberSize(struct jpeg_decompress_struct,two_pass_quantize,4,3,41127)
+CheckOffset(struct jpeg_decompress_struct,two_pass_quantize,116,3,41127)
+CheckMemberSize(struct jpeg_decompress_struct,desired_number_of_colors,4,3,41128)
+CheckOffset(struct jpeg_decompress_struct,desired_number_of_colors,120,3,41128)
+CheckMemberSize(struct jpeg_decompress_struct,enable_1pass_quant,4,3,41129)
+CheckOffset(struct jpeg_decompress_struct,enable_1pass_quant,124,3,41129)
+CheckMemberSize(struct jpeg_decompress_struct,enable_external_quant,4,3,41130)
+CheckOffset(struct jpeg_decompress_struct,enable_external_quant,128,3,41130)
+CheckMemberSize(struct jpeg_decompress_struct,enable_2pass_quant,4,3,41131)
+CheckOffset(struct jpeg_decompress_struct,enable_2pass_quant,132,3,41131)
+CheckMemberSize(struct jpeg_decompress_struct,output_width,4,3,41132)
+CheckOffset(struct jpeg_decompress_struct,output_width,136,3,41132)
+CheckMemberSize(struct jpeg_decompress_struct,output_height,4,3,41133)
+CheckOffset(struct jpeg_decompress_struct,output_height,140,3,41133)
+CheckMemberSize(struct jpeg_decompress_struct,out_color_components,4,3,41134)
+CheckOffset(struct jpeg_decompress_struct,out_color_components,144,3,41134)
+CheckMemberSize(struct jpeg_decompress_struct,output_components,4,3,41135)
+CheckOffset(struct jpeg_decompress_struct,output_components,148,3,41135)
+CheckMemberSize(struct jpeg_decompress_struct,rec_outbuf_height,4,3,41136)
+CheckOffset(struct jpeg_decompress_struct,rec_outbuf_height,152,3,41136)
+CheckMemberSize(struct jpeg_decompress_struct,actual_number_of_colors,4,3,41137)
+CheckOffset(struct jpeg_decompress_struct,actual_number_of_colors,156,3,41137)
+CheckMemberSize(struct jpeg_decompress_struct,colormap,8,3,41138)
+CheckOffset(struct jpeg_decompress_struct,colormap,160,3,41138)
+CheckMemberSize(struct jpeg_decompress_struct,output_scanline,4,3,41139)
+CheckOffset(struct jpeg_decompress_struct,output_scanline,168,3,41139)
+CheckMemberSize(struct jpeg_decompress_struct,input_scan_number,4,3,41140)
+CheckOffset(struct jpeg_decompress_struct,input_scan_number,172,3,41140)
+CheckMemberSize(struct jpeg_decompress_struct,input_iMCU_row,4,3,41141)
+CheckOffset(struct jpeg_decompress_struct,input_iMCU_row,176,3,41141)
+CheckMemberSize(struct jpeg_decompress_struct,output_scan_number,4,3,41142)
+CheckOffset(struct jpeg_decompress_struct,output_scan_number,180,3,41142)
+CheckMemberSize(struct jpeg_decompress_struct,output_iMCU_row,4,3,41143)
+CheckOffset(struct jpeg_decompress_struct,output_iMCU_row,184,3,41143)
+CheckMemberSize(struct jpeg_decompress_struct,coef_bits,8,3,41144)
+CheckOffset(struct jpeg_decompress_struct,coef_bits,192,3,41144)
+CheckMemberSize(struct jpeg_decompress_struct,quant_tbl_ptrs,32,3,41147)
+CheckOffset(struct jpeg_decompress_struct,quant_tbl_ptrs,200,3,41147)
+CheckMemberSize(struct jpeg_decompress_struct,dc_huff_tbl_ptrs,32,3,41151)
+CheckOffset(struct jpeg_decompress_struct,dc_huff_tbl_ptrs,232,3,41151)
+CheckMemberSize(struct jpeg_decompress_struct,ac_huff_tbl_ptrs,32,3,41152)
+CheckOffset(struct jpeg_decompress_struct,ac_huff_tbl_ptrs,264,3,41152)
+CheckMemberSize(struct jpeg_decompress_struct,data_precision,4,3,41153)
+CheckOffset(struct jpeg_decompress_struct,data_precision,296,3,41153)
+CheckMemberSize(struct jpeg_decompress_struct,comp_info,8,3,41175)
+CheckOffset(struct jpeg_decompress_struct,comp_info,304,3,41175)
+CheckMemberSize(struct jpeg_decompress_struct,progressive_mode,4,3,41176)
+CheckOffset(struct jpeg_decompress_struct,progressive_mode,312,3,41176)
+CheckMemberSize(struct jpeg_decompress_struct,arith_code,4,3,41177)
+CheckOffset(struct jpeg_decompress_struct,arith_code,316,3,41177)
+CheckMemberSize(struct jpeg_decompress_struct,arith_dc_L,16,3,41178)
+CheckOffset(struct jpeg_decompress_struct,arith_dc_L,320,3,41178)
+CheckMemberSize(struct jpeg_decompress_struct,arith_dc_U,16,3,41179)
+CheckOffset(struct jpeg_decompress_struct,arith_dc_U,336,3,41179)
+CheckMemberSize(struct jpeg_decompress_struct,arith_ac_K,16,3,41180)
+CheckOffset(struct jpeg_decompress_struct,arith_ac_K,352,3,41180)
+CheckMemberSize(struct jpeg_decompress_struct,restart_interval,4,3,41181)
+CheckOffset(struct jpeg_decompress_struct,restart_interval,368,3,41181)
+CheckMemberSize(struct jpeg_decompress_struct,saw_JFIF_marker,4,3,41182)
+CheckOffset(struct jpeg_decompress_struct,saw_JFIF_marker,372,3,41182)
+CheckMemberSize(struct jpeg_decompress_struct,JFIF_major_version,1,3,41183)
+CheckOffset(struct jpeg_decompress_struct,JFIF_major_version,376,3,41183)
+CheckMemberSize(struct jpeg_decompress_struct,JFIF_minor_version,1,3,41184)
+CheckOffset(struct jpeg_decompress_struct,JFIF_minor_version,377,3,41184)
+CheckMemberSize(struct jpeg_decompress_struct,density_unit,1,3,41185)
+CheckOffset(struct jpeg_decompress_struct,density_unit,378,3,41185)
+CheckMemberSize(struct jpeg_decompress_struct,X_density,2,3,41186)
+CheckOffset(struct jpeg_decompress_struct,X_density,380,3,41186)
+CheckMemberSize(struct jpeg_decompress_struct,Y_density,2,3,41187)
+CheckOffset(struct jpeg_decompress_struct,Y_density,382,3,41187)
+CheckMemberSize(struct jpeg_decompress_struct,saw_Adobe_marker,4,3,41188)
+CheckOffset(struct jpeg_decompress_struct,saw_Adobe_marker,384,3,41188)
+CheckMemberSize(struct jpeg_decompress_struct,Adobe_transform,1,3,41189)
+CheckOffset(struct jpeg_decompress_struct,Adobe_transform,388,3,41189)
+CheckMemberSize(struct jpeg_decompress_struct,CCIR601_sampling,4,3,41190)
+CheckOffset(struct jpeg_decompress_struct,CCIR601_sampling,392,3,41190)
+CheckMemberSize(struct jpeg_decompress_struct,marker_list,8,3,41196)
+CheckOffset(struct jpeg_decompress_struct,marker_list,400,3,41196)
+CheckMemberSize(struct jpeg_decompress_struct,max_h_samp_factor,4,3,41197)
+CheckOffset(struct jpeg_decompress_struct,max_h_samp_factor,408,3,41197)
+CheckMemberSize(struct jpeg_decompress_struct,max_v_samp_factor,4,3,41198)
+CheckOffset(struct jpeg_decompress_struct,max_v_samp_factor,412,3,41198)
+CheckMemberSize(struct jpeg_decompress_struct,min_DCT_scaled_size,4,3,41199)
+CheckOffset(struct jpeg_decompress_struct,min_DCT_scaled_size,416,3,41199)
+CheckMemberSize(struct jpeg_decompress_struct,total_iMCU_rows,4,3,41200)
+CheckOffset(struct jpeg_decompress_struct,total_iMCU_rows,420,3,41200)
+CheckMemberSize(struct jpeg_decompress_struct,sample_range_limit,8,3,41201)
+CheckOffset(struct jpeg_decompress_struct,sample_range_limit,424,3,41201)
+CheckMemberSize(struct jpeg_decompress_struct,comps_in_scan,4,3,41202)
+CheckOffset(struct jpeg_decompress_struct,comps_in_scan,432,3,41202)
+CheckMemberSize(struct jpeg_decompress_struct,cur_comp_info,32,3,41203)
+CheckOffset(struct jpeg_decompress_struct,cur_comp_info,440,3,41203)
+CheckMemberSize(struct jpeg_decompress_struct,MCUs_per_row,4,3,41204)
+CheckOffset(struct jpeg_decompress_struct,MCUs_per_row,472,3,41204)
+CheckMemberSize(struct jpeg_decompress_struct,MCU_rows_in_scan,4,3,41205)
+CheckOffset(struct jpeg_decompress_struct,MCU_rows_in_scan,476,3,41205)
+CheckMemberSize(struct jpeg_decompress_struct,blocks_in_MCU,4,3,41206)
+CheckOffset(struct jpeg_decompress_struct,blocks_in_MCU,480,3,41206)
+CheckMemberSize(struct jpeg_decompress_struct,MCU_membership,40,3,41207)
+CheckOffset(struct jpeg_decompress_struct,MCU_membership,484,3,41207)
+CheckMemberSize(struct jpeg_decompress_struct,Ss,4,3,41208)
+CheckOffset(struct jpeg_decompress_struct,Ss,524,3,41208)
+CheckMemberSize(struct jpeg_decompress_struct,Se,4,3,41209)
+CheckOffset(struct jpeg_decompress_struct,Se,528,3,41209)
+CheckMemberSize(struct jpeg_decompress_struct,Ah,4,3,41210)
+CheckOffset(struct jpeg_decompress_struct,Ah,532,3,41210)
+CheckMemberSize(struct jpeg_decompress_struct,Al,4,3,41211)
+CheckOffset(struct jpeg_decompress_struct,Al,536,3,41211)
+CheckMemberSize(struct jpeg_decompress_struct,unread_marker,4,3,41212)
+CheckOffset(struct jpeg_decompress_struct,unread_marker,540,3,41212)
+CheckMemberSize(struct jpeg_decompress_struct,master,8,3,41213)
+CheckOffset(struct jpeg_decompress_struct,master,544,3,41213)
+CheckMemberSize(struct jpeg_decompress_struct,main,8,3,41214)
+CheckOffset(struct jpeg_decompress_struct,main,552,3,41214)
+CheckMemberSize(struct jpeg_decompress_struct,coef,8,3,41215)
+CheckOffset(struct jpeg_decompress_struct,coef,560,3,41215)
+CheckMemberSize(struct jpeg_decompress_struct,post,8,3,41216)
+CheckOffset(struct jpeg_decompress_struct,post,568,3,41216)
+CheckMemberSize(struct jpeg_decompress_struct,inputctl,8,3,41217)
+CheckOffset(struct jpeg_decompress_struct,inputctl,576,3,41217)
+CheckMemberSize(struct jpeg_decompress_struct,marker,8,3,41218)
+CheckOffset(struct jpeg_decompress_struct,marker,584,3,41218)
+CheckMemberSize(struct jpeg_decompress_struct,entropy,8,3,41219)
+CheckOffset(struct jpeg_decompress_struct,entropy,592,3,41219)
+CheckMemberSize(struct jpeg_decompress_struct,idct,8,3,41220)
+CheckOffset(struct jpeg_decompress_struct,idct,600,3,41220)
+CheckMemberSize(struct jpeg_decompress_struct,upsample,8,3,41221)
+CheckOffset(struct jpeg_decompress_struct,upsample,608,3,41221)
+CheckMemberSize(struct jpeg_decompress_struct,cconvert,8,3,41222)
+CheckOffset(struct jpeg_decompress_struct,cconvert,616,3,41222)
+CheckMemberSize(struct jpeg_decompress_struct,cquantize,8,3,41223)
+CheckOffset(struct jpeg_decompress_struct,cquantize,624,3,41223)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11249,0);
 Msg("Find size of jpeg_decompress_struct (11249)\n");
@@ -824,6 +1000,34 @@ CheckMemberSize(struct jpeg_error_mgr,first_addon_message,4,11,41078)
 CheckOffset(struct jpeg_error_mgr,first_addon_message,160,11,41078)
 CheckMemberSize(struct jpeg_error_mgr,last_addon_message,4,11,41079)
 CheckOffset(struct jpeg_error_mgr,last_addon_message,164,11,41079)
+#elif __ia64__
+CheckTypeSize(struct jpeg_error_mgr,168, 11250, 3)
+CheckMemberSize(struct jpeg_error_mgr,emit_message,8,3,41063)
+CheckOffset(struct jpeg_error_mgr,emit_message,8,3,41063)
+CheckMemberSize(struct jpeg_error_mgr,output_message,8,3,41064)
+CheckOffset(struct jpeg_error_mgr,output_message,16,3,41064)
+CheckMemberSize(struct jpeg_error_mgr,format_message,8,3,41067)
+CheckOffset(struct jpeg_error_mgr,format_message,24,3,41067)
+CheckMemberSize(struct jpeg_error_mgr,reset_error_mgr,8,3,41068)
+CheckOffset(struct jpeg_error_mgr,reset_error_mgr,32,3,41068)
+CheckMemberSize(struct jpeg_error_mgr,msg_code,4,3,41069)
+CheckOffset(struct jpeg_error_mgr,msg_code,40,3,41069)
+CheckMemberSize(struct jpeg_error_mgr,msg_parm,80,3,41072)
+CheckOffset(struct jpeg_error_mgr,msg_parm,44,3,41072)
+CheckMemberSize(struct jpeg_error_mgr,trace_level,4,3,41073)
+CheckOffset(struct jpeg_error_mgr,trace_level,124,3,41073)
+CheckMemberSize(struct jpeg_error_mgr,num_warnings,8,3,41074)
+CheckOffset(struct jpeg_error_mgr,num_warnings,128,3,41074)
+CheckMemberSize(struct jpeg_error_mgr,jpeg_message_table,8,3,41075)
+CheckOffset(struct jpeg_error_mgr,jpeg_message_table,136,3,41075)
+CheckMemberSize(struct jpeg_error_mgr,last_jpeg_message,4,3,41076)
+CheckOffset(struct jpeg_error_mgr,last_jpeg_message,144,3,41076)
+CheckMemberSize(struct jpeg_error_mgr,addon_message_table,8,3,41077)
+CheckOffset(struct jpeg_error_mgr,addon_message_table,152,3,41077)
+CheckMemberSize(struct jpeg_error_mgr,first_addon_message,4,3,41078)
+CheckOffset(struct jpeg_error_mgr,first_addon_message,160,3,41078)
+CheckMemberSize(struct jpeg_error_mgr,last_addon_message,4,3,41079)
+CheckOffset(struct jpeg_error_mgr,last_addon_message,164,3,41079)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11250,0);
 Msg("Find size of jpeg_error_mgr (11250)\n");
@@ -853,6 +1057,18 @@ CheckMemberSize(struct jpeg_common_struct,is_decompressor,4,11,41060)
 CheckOffset(struct jpeg_common_struct,is_decompressor,32,11,41060)
 CheckMemberSize(struct jpeg_common_struct,global_state,4,11,41061)
 CheckOffset(struct jpeg_common_struct,global_state,36,11,41061)
+#elif __ia64__
+CheckTypeSize(struct jpeg_common_struct,40, 11251, 3)
+CheckMemberSize(struct jpeg_common_struct,mem,8,3,41052)
+CheckOffset(struct jpeg_common_struct,mem,8,3,41052)
+CheckMemberSize(struct jpeg_common_struct,progress,8,3,41058)
+CheckOffset(struct jpeg_common_struct,progress,16,3,41058)
+CheckMemberSize(struct jpeg_common_struct,client_data,8,3,41059)
+CheckOffset(struct jpeg_common_struct,client_data,24,3,41059)
+CheckMemberSize(struct jpeg_common_struct,is_decompressor,4,3,41060)
+CheckOffset(struct jpeg_common_struct,is_decompressor,32,3,41060)
+CheckMemberSize(struct jpeg_common_struct,global_state,4,3,41061)
+CheckOffset(struct jpeg_common_struct,global_state,36,3,41061)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11251,0);
 Msg("Find size of jpeg_common_struct (11251)\n");
@@ -862,6 +1078,8 @@ Msg("Find size of jpeg_common_struct (11251)\n");
 CheckTypeSize(struct jpeg_error_mgr *,4, 11252, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_error_mgr *,8, 11252, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_error_mgr *,8, 11252, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11252,0);
 Msg("Find size of jpeg_error_mgr * (11252)\n");
@@ -919,6 +1137,32 @@ CheckMemberSize(struct jpeg_memory_mgr,max_memory_to_use,8,11,41050)
 CheckOffset(struct jpeg_memory_mgr,max_memory_to_use,88,11,41050)
 CheckMemberSize(struct jpeg_memory_mgr,max_alloc_chunk,8,11,41051)
 CheckOffset(struct jpeg_memory_mgr,max_alloc_chunk,96,11,41051)
+#elif __ia64__
+CheckTypeSize(struct jpeg_memory_mgr,104, 11253, 3)
+CheckMemberSize(struct jpeg_memory_mgr,alloc_large,8,3,41007)
+CheckOffset(struct jpeg_memory_mgr,alloc_large,8,3,41007)
+CheckMemberSize(struct jpeg_memory_mgr,alloc_sarray,8,3,41012)
+CheckOffset(struct jpeg_memory_mgr,alloc_sarray,16,3,41012)
+CheckMemberSize(struct jpeg_memory_mgr,alloc_barray,8,3,41017)
+CheckOffset(struct jpeg_memory_mgr,alloc_barray,24,3,41017)
+CheckMemberSize(struct jpeg_memory_mgr,request_virt_sarray,8,3,41024)
+CheckOffset(struct jpeg_memory_mgr,request_virt_sarray,32,3,41024)
+CheckMemberSize(struct jpeg_memory_mgr,request_virt_barray,8,3,41031)
+CheckOffset(struct jpeg_memory_mgr,request_virt_barray,40,3,41031)
+CheckMemberSize(struct jpeg_memory_mgr,realize_virt_arrays,8,3,41033)
+CheckOffset(struct jpeg_memory_mgr,realize_virt_arrays,48,3,41033)
+CheckMemberSize(struct jpeg_memory_mgr,access_virt_sarray,8,3,41039)
+CheckOffset(struct jpeg_memory_mgr,access_virt_sarray,56,3,41039)
+CheckMemberSize(struct jpeg_memory_mgr,access_virt_barray,8,3,41045)
+CheckOffset(struct jpeg_memory_mgr,access_virt_barray,64,3,41045)
+CheckMemberSize(struct jpeg_memory_mgr,free_pool,8,3,41048)
+CheckOffset(struct jpeg_memory_mgr,free_pool,72,3,41048)
+CheckMemberSize(struct jpeg_memory_mgr,self_destruct,8,3,41049)
+CheckOffset(struct jpeg_memory_mgr,self_destruct,80,3,41049)
+CheckMemberSize(struct jpeg_memory_mgr,max_memory_to_use,8,3,41050)
+CheckOffset(struct jpeg_memory_mgr,max_memory_to_use,88,3,41050)
+CheckMemberSize(struct jpeg_memory_mgr,max_alloc_chunk,8,3,41051)
+CheckOffset(struct jpeg_memory_mgr,max_alloc_chunk,96,3,41051)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11253,0);
 Msg("Find size of jpeg_memory_mgr (11253)\n");
@@ -928,6 +1172,8 @@ Msg("Find size of jpeg_memory_mgr (11253)\n");
 CheckTypeSize(struct jpeg_common_struct *,4, 11254, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_common_struct *,8, 11254, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_common_struct *,8, 11254, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11254,0);
 Msg("Find size of jpeg_common_struct * (11254)\n");
@@ -937,6 +1183,8 @@ Msg("Find size of jpeg_common_struct * (11254)\n");
 CheckTypeSize(j_common_ptr,4, 11255, 2)
 #elif __x86_64__
 CheckTypeSize(j_common_ptr,8, 11255, 11)
+#elif __ia64__
+CheckTypeSize(j_common_ptr,8, 11255, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11255,0);
 Msg("Find size of j_common_ptr (11255)\n");
@@ -944,6 +1192,7 @@ Msg("Find size of j_common_ptr (11255)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11256,0);
 Msg("Find size of fptr_jpeglib_528 (11256)\n");
@@ -953,6 +1202,8 @@ Msg("Find size of fptr_jpeglib_528 (11256)\n");
 CheckTypeSize(JSAMPLE,1, 11257, 2)
 #elif __x86_64__
 CheckTypeSize(JSAMPLE,1, 11257, 11)
+#elif __ia64__
+CheckTypeSize(JSAMPLE,1, 11257, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11257,0);
 Msg("Find size of JSAMPLE (11257)\n");
@@ -962,6 +1213,8 @@ Msg("Find size of JSAMPLE (11257)\n");
 CheckTypeSize(JSAMPLE *,4, 11258, 2)
 #elif __x86_64__
 CheckTypeSize(JSAMPLE *,8, 11258, 11)
+#elif __ia64__
+CheckTypeSize(JSAMPLE *,8, 11258, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11258,0);
 Msg("Find size of JSAMPLE * (11258)\n");
@@ -971,6 +1224,8 @@ Msg("Find size of JSAMPLE * (11258)\n");
 CheckTypeSize(JSAMPROW,4, 11259, 2)
 #elif __x86_64__
 CheckTypeSize(JSAMPROW,8, 11259, 11)
+#elif __ia64__
+CheckTypeSize(JSAMPROW,8, 11259, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11259,0);
 Msg("Find size of JSAMPROW (11259)\n");
@@ -980,6 +1235,8 @@ Msg("Find size of JSAMPROW (11259)\n");
 CheckTypeSize(JSAMPROW *,4, 11260, 2)
 #elif __x86_64__
 CheckTypeSize(JSAMPROW *,8, 11260, 11)
+#elif __ia64__
+CheckTypeSize(JSAMPROW *,8, 11260, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11260,0);
 Msg("Find size of JSAMPROW * (11260)\n");
@@ -989,6 +1246,8 @@ Msg("Find size of JSAMPROW * (11260)\n");
 CheckTypeSize(JSAMPARRAY,4, 11261, 2)
 #elif __x86_64__
 CheckTypeSize(JSAMPARRAY,8, 11261, 11)
+#elif __ia64__
+CheckTypeSize(JSAMPARRAY,8, 11261, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11261,0);
 Msg("Find size of JSAMPARRAY (11261)\n");
@@ -998,6 +1257,8 @@ Msg("Find size of JSAMPARRAY (11261)\n");
 CheckTypeSize(JDIMENSION,4, 11262, 2)
 #elif __x86_64__
 CheckTypeSize(JDIMENSION,4, 11262, 11)
+#elif __ia64__
+CheckTypeSize(JDIMENSION,4, 11262, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11262,0);
 Msg("Find size of JDIMENSION (11262)\n");
@@ -1005,6 +1266,7 @@ Msg("Find size of JDIMENSION (11262)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11263,0);
 Msg("Find size of fptr_jpeglib_409 (11263)\n");
@@ -1014,6 +1276,8 @@ Msg("Find size of fptr_jpeglib_409 (11263)\n");
 CheckTypeSize(JCOEF,2, 11265, 2)
 #elif __x86_64__
 CheckTypeSize(JCOEF,2, 11265, 11)
+#elif __ia64__
+CheckTypeSize(JCOEF,2, 11265, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11265,0);
 Msg("Find size of JCOEF (11265)\n");
@@ -1026,6 +1290,8 @@ Msg("Find size of JCOEF (11265)\n");
 CheckTypeSize(JBLOCK,128, 11267, 2)
 #elif __x86_64__
 CheckTypeSize(JBLOCK,128, 11267, 11)
+#elif __ia64__
+CheckTypeSize(JBLOCK,128, 11267, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11267,0);
 Msg("Find size of JBLOCK (11267)\n");
@@ -1035,6 +1301,8 @@ Msg("Find size of JBLOCK (11267)\n");
 CheckTypeSize(JBLOCK *,4, 11268, 2)
 #elif __x86_64__
 CheckTypeSize(JBLOCK *,8, 11268, 11)
+#elif __ia64__
+CheckTypeSize(JBLOCK *,8, 11268, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11268,0);
 Msg("Find size of JBLOCK * (11268)\n");
@@ -1044,6 +1312,8 @@ Msg("Find size of JBLOCK * (11268)\n");
 CheckTypeSize(JBLOCKROW,4, 11269, 2)
 #elif __x86_64__
 CheckTypeSize(JBLOCKROW,8, 11269, 11)
+#elif __ia64__
+CheckTypeSize(JBLOCKROW,8, 11269, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11269,0);
 Msg("Find size of JBLOCKROW (11269)\n");
@@ -1053,6 +1323,8 @@ Msg("Find size of JBLOCKROW (11269)\n");
 CheckTypeSize(JBLOCKROW *,4, 11270, 2)
 #elif __x86_64__
 CheckTypeSize(JBLOCKROW *,8, 11270, 11)
+#elif __ia64__
+CheckTypeSize(JBLOCKROW *,8, 11270, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11270,0);
 Msg("Find size of JBLOCKROW * (11270)\n");
@@ -1062,6 +1334,8 @@ Msg("Find size of JBLOCKROW * (11270)\n");
 CheckTypeSize(JBLOCKARRAY,4, 11271, 2)
 #elif __x86_64__
 CheckTypeSize(JBLOCKARRAY,8, 11271, 11)
+#elif __ia64__
+CheckTypeSize(JBLOCKARRAY,8, 11271, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11271,0);
 Msg("Find size of JBLOCKARRAY (11271)\n");
@@ -1069,6 +1343,7 @@ Msg("Find size of JBLOCKARRAY (11271)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11272,0);
 Msg("Find size of fptr_jpeglib_500 (11272)\n");
@@ -1078,6 +1353,8 @@ Msg("Find size of fptr_jpeglib_500 (11272)\n");
 CheckTypeSize(struct jvirt_sarray_control *,4, 11274, 2)
 #elif __x86_64__
 CheckTypeSize(struct jvirt_sarray_control *,8, 11274, 11)
+#elif __ia64__
+CheckTypeSize(struct jvirt_sarray_control *,8, 11274, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11274,0);
 Msg("Find size of jvirt_sarray_control * (11274)\n");
@@ -1087,6 +1364,8 @@ Msg("Find size of jvirt_sarray_control * (11274)\n");
 CheckTypeSize(jvirt_sarray_ptr,4, 11275, 2)
 #elif __x86_64__
 CheckTypeSize(jvirt_sarray_ptr,8, 11275, 11)
+#elif __ia64__
+CheckTypeSize(jvirt_sarray_ptr,8, 11275, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11275,0);
 Msg("Find size of jvirt_sarray_ptr (11275)\n");
@@ -1096,6 +1375,8 @@ Msg("Find size of jvirt_sarray_ptr (11275)\n");
 CheckTypeSize(boolean,4, 11276, 2)
 #elif __x86_64__
 CheckTypeSize(boolean,4, 11276, 11)
+#elif __ia64__
+CheckTypeSize(boolean,4, 11276, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11276,0);
 Msg("Find size of boolean (11276)\n");
@@ -1103,6 +1384,7 @@ Msg("Find size of boolean (11276)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11277,0);
 Msg("Find size of fptr_jpeglib_750 (11277)\n");
@@ -1112,6 +1394,8 @@ Msg("Find size of fptr_jpeglib_750 (11277)\n");
 CheckTypeSize(struct jvirt_barray_control *,4, 11279, 2)
 #elif __x86_64__
 CheckTypeSize(struct jvirt_barray_control *,8, 11279, 11)
+#elif __ia64__
+CheckTypeSize(struct jvirt_barray_control *,8, 11279, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11279,0);
 Msg("Find size of jvirt_barray_control * (11279)\n");
@@ -1121,6 +1405,8 @@ Msg("Find size of jvirt_barray_control * (11279)\n");
 CheckTypeSize(jvirt_barray_ptr,4, 11280, 2)
 #elif __x86_64__
 CheckTypeSize(jvirt_barray_ptr,8, 11280, 11)
+#elif __ia64__
+CheckTypeSize(jvirt_barray_ptr,8, 11280, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11280,0);
 Msg("Find size of jvirt_barray_ptr (11280)\n");
@@ -1128,6 +1414,7 @@ Msg("Find size of jvirt_barray_ptr (11280)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11281,0);
 Msg("Find size of fptr_jpeglib_810 (11281)\n");
@@ -1135,6 +1422,7 @@ Msg("Find size of fptr_jpeglib_810 (11281)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11282,0);
 Msg("Find size of fptr_jpeglib_84 (11282)\n");
@@ -1142,6 +1430,7 @@ Msg("Find size of fptr_jpeglib_84 (11282)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11283,0);
 Msg("Find size of fptr_jpeglib_533 (11283)\n");
@@ -1149,6 +1438,7 @@ Msg("Find size of fptr_jpeglib_533 (11283)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11284,0);
 Msg("Find size of fptr_jpeglib_833 (11284)\n");
@@ -1156,6 +1446,7 @@ Msg("Find size of fptr_jpeglib_833 (11284)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11285,0);
 Msg("Find size of fptr_jpeglib_926 (11285)\n");
@@ -1165,6 +1456,8 @@ Msg("Find size of fptr_jpeglib_926 (11285)\n");
 CheckTypeSize(struct jpeg_memory_mgr *,4, 11286, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_memory_mgr *,8, 11286, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_memory_mgr *,8, 11286, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11286,0);
 Msg("Find size of jpeg_memory_mgr * (11286)\n");
@@ -1190,6 +1483,16 @@ CheckMemberSize(struct jpeg_progress_mgr,completed_passes,4,11,41056)
 CheckOffset(struct jpeg_progress_mgr,completed_passes,24,11,41056)
 CheckMemberSize(struct jpeg_progress_mgr,total_passes,4,11,41057)
 CheckOffset(struct jpeg_progress_mgr,total_passes,28,11,41057)
+#elif __ia64__
+CheckTypeSize(struct jpeg_progress_mgr,32, 11287, 3)
+CheckMemberSize(struct jpeg_progress_mgr,pass_counter,8,3,41054)
+CheckOffset(struct jpeg_progress_mgr,pass_counter,8,3,41054)
+CheckMemberSize(struct jpeg_progress_mgr,pass_limit,8,3,41055)
+CheckOffset(struct jpeg_progress_mgr,pass_limit,16,3,41055)
+CheckMemberSize(struct jpeg_progress_mgr,completed_passes,4,3,41056)
+CheckOffset(struct jpeg_progress_mgr,completed_passes,24,3,41056)
+CheckMemberSize(struct jpeg_progress_mgr,total_passes,4,3,41057)
+CheckOffset(struct jpeg_progress_mgr,total_passes,28,3,41057)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11287,0);
 Msg("Find size of jpeg_progress_mgr (11287)\n");
@@ -1199,6 +1502,8 @@ Msg("Find size of jpeg_progress_mgr (11287)\n");
 CheckTypeSize(struct jpeg_progress_mgr *,4, 11288, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_progress_mgr *,8, 11288, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_progress_mgr *,8, 11288, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11288,0);
 Msg("Find size of jpeg_progress_mgr * (11288)\n");
@@ -1206,6 +1511,7 @@ Msg("Find size of jpeg_progress_mgr * (11288)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11289,0);
 Msg("Find size of fptr_jpeglib_343 (11289)\n");
@@ -1219,6 +1525,7 @@ Msg("Find size of fptr_jpeglib_343 (11289)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11292,0);
 Msg("Find size of anon-jpeglib.h-202 (11292)\n");
@@ -1228,6 +1535,8 @@ Msg("Find size of anon-jpeglib.h-202 (11292)\n");
 CheckTypeSize(const const char *,4, 11293, 2)
 #elif __x86_64__
 CheckTypeSize(const const char *,8, 11293, 11)
+#elif __ia64__
+CheckTypeSize(const const char *,8, 11293, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11293,0);
 Msg("Find size of const const char * (11293)\n");
@@ -1235,6 +1544,7 @@ Msg("Find size of const const char * (11293)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11294,0);
 Msg("Find size of const const char * * (11294)\n");
@@ -1268,6 +1578,20 @@ CheckMemberSize(struct jpeg_source_mgr,resync_to_restart,8,11,41097)
 CheckOffset(struct jpeg_source_mgr,resync_to_restart,40,11,41097)
 CheckMemberSize(struct jpeg_source_mgr,term_source,8,11,41098)
 CheckOffset(struct jpeg_source_mgr,term_source,48,11,41098)
+#elif __ia64__
+CheckTypeSize(struct jpeg_source_mgr,56, 11295, 3)
+CheckMemberSize(struct jpeg_source_mgr,bytes_in_buffer,8,3,41087)
+CheckOffset(struct jpeg_source_mgr,bytes_in_buffer,8,3,41087)
+CheckMemberSize(struct jpeg_source_mgr,init_source,8,3,41089)
+CheckOffset(struct jpeg_source_mgr,init_source,16,3,41089)
+CheckMemberSize(struct jpeg_source_mgr,fill_input_buffer,8,3,41091)
+CheckOffset(struct jpeg_source_mgr,fill_input_buffer,24,3,41091)
+CheckMemberSize(struct jpeg_source_mgr,skip_input_data,8,3,41094)
+CheckOffset(struct jpeg_source_mgr,skip_input_data,32,3,41094)
+CheckMemberSize(struct jpeg_source_mgr,resync_to_restart,8,3,41097)
+CheckOffset(struct jpeg_source_mgr,resync_to_restart,40,3,41097)
+CheckMemberSize(struct jpeg_source_mgr,term_source,8,3,41098)
+CheckOffset(struct jpeg_source_mgr,term_source,48,3,41098)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11295,0);
 Msg("Find size of jpeg_source_mgr (11295)\n");
@@ -1277,6 +1601,8 @@ Msg("Find size of jpeg_source_mgr (11295)\n");
 CheckTypeSize(JOCTET,1, 11296, 2)
 #elif __x86_64__
 CheckTypeSize(JOCTET,1, 11296, 11)
+#elif __ia64__
+CheckTypeSize(JOCTET,1, 11296, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11296,0);
 Msg("Find size of JOCTET (11296)\n");
@@ -1286,6 +1612,8 @@ Msg("Find size of JOCTET (11296)\n");
 CheckTypeSize(const JOCTET,1, 11297, 2)
 #elif __x86_64__
 CheckTypeSize(const JOCTET,1, 11297, 11)
+#elif __ia64__
+CheckTypeSize(const JOCTET,1, 11297, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11297,0);
 Msg("Find size of const JOCTET (11297)\n");
@@ -1293,6 +1621,7 @@ Msg("Find size of const JOCTET (11297)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11298,0);
 Msg("Find size of const JOCTET * (11298)\n");
@@ -1302,6 +1631,8 @@ Msg("Find size of const JOCTET * (11298)\n");
 CheckTypeSize(struct jpeg_decompress_struct *,4, 11299, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_decompress_struct *,8, 11299, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_decompress_struct *,8, 11299, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11299,0);
 Msg("Find size of jpeg_decompress_struct * (11299)\n");
@@ -1311,6 +1642,8 @@ Msg("Find size of jpeg_decompress_struct * (11299)\n");
 CheckTypeSize(j_decompress_ptr,4, 11300, 2)
 #elif __x86_64__
 CheckTypeSize(j_decompress_ptr,8, 11300, 11)
+#elif __ia64__
+CheckTypeSize(j_decompress_ptr,8, 11300, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11300,0);
 Msg("Find size of j_decompress_ptr (11300)\n");
@@ -1318,6 +1651,7 @@ Msg("Find size of j_decompress_ptr (11300)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11301,0);
 Msg("Find size of fptr_jpeglib_94 (11301)\n");
@@ -1325,6 +1659,7 @@ Msg("Find size of fptr_jpeglib_94 (11301)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11302,0);
 Msg("Find size of fptr_jpeglib_477 (11302)\n");
@@ -1332,6 +1667,7 @@ Msg("Find size of fptr_jpeglib_477 (11302)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11303,0);
 Msg("Find size of fptr_jpeglib_445 (11303)\n");
@@ -1339,6 +1675,7 @@ Msg("Find size of fptr_jpeglib_445 (11303)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11304,0);
 Msg("Find size of fptr_jpeglib_390 (11304)\n");
@@ -1348,6 +1685,8 @@ Msg("Find size of fptr_jpeglib_390 (11304)\n");
 CheckTypeSize(struct jpeg_source_mgr *,4, 11305, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_source_mgr *,8, 11305, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_source_mgr *,8, 11305, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11305,0);
 Msg("Find size of jpeg_source_mgr * (11305)\n");
@@ -1367,6 +1706,13 @@ CheckEnum("JCS_RGB",JCS_RGB,2);
 CheckEnum("JCS_YCbCr",JCS_YCbCr,3);
 CheckEnum("JCS_CMYK",JCS_CMYK,4);
 CheckEnum("JCS_YCCK",JCS_YCCK,5);
+#elif __ia64__
+CheckEnum("JCS_UNKNOWN",JCS_UNKNOWN,0);
+CheckEnum("JCS_GRAYSCALE",JCS_GRAYSCALE,1);
+CheckEnum("JCS_RGB",JCS_RGB,2);
+CheckEnum("JCS_YCbCr",JCS_YCbCr,3);
+CheckEnum("JCS_CMYK",JCS_CMYK,4);
+CheckEnum("JCS_YCCK",JCS_YCCK,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11306,0);
 Msg("Find size of anon-jpeglib.h-199 (11306)\n");
@@ -1376,6 +1722,8 @@ Msg("Find size of anon-jpeglib.h-199 (11306)\n");
 CheckTypeSize(J_COLOR_SPACE,4, 11307, 2)
 #elif __x86_64__
 CheckTypeSize(J_COLOR_SPACE,4, 11307, 11)
+#elif __ia64__
+CheckTypeSize(J_COLOR_SPACE,4, 11307, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11307,0);
 Msg("Find size of J_COLOR_SPACE (11307)\n");
@@ -1389,6 +1737,10 @@ CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
 CheckEnum("JDCT_ISLOW",JDCT_ISLOW,0);
 CheckEnum("JDCT_IFAST",JDCT_IFAST,1);
 CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
+#elif __ia64__
+CheckEnum("JDCT_ISLOW",JDCT_ISLOW,0);
+CheckEnum("JDCT_IFAST",JDCT_IFAST,1);
+CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11308,0);
 Msg("Find size of anon-jpeglib.h-200 (11308)\n");
@@ -1398,6 +1750,8 @@ Msg("Find size of anon-jpeglib.h-200 (11308)\n");
 CheckTypeSize(J_DCT_METHOD,4, 11309, 2)
 #elif __x86_64__
 CheckTypeSize(J_DCT_METHOD,4, 11309, 11)
+#elif __ia64__
+CheckTypeSize(J_DCT_METHOD,4, 11309, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11309,0);
 Msg("Find size of J_DCT_METHOD (11309)\n");
@@ -1411,6 +1765,10 @@ CheckEnum("JDITHER_FS",JDITHER_FS,2);
 CheckEnum("JDITHER_NONE",JDITHER_NONE,0);
 CheckEnum("JDITHER_ORDERED",JDITHER_ORDERED,1);
 CheckEnum("JDITHER_FS",JDITHER_FS,2);
+#elif __ia64__
+CheckEnum("JDITHER_NONE",JDITHER_NONE,0);
+CheckEnum("JDITHER_ORDERED",JDITHER_ORDERED,1);
+CheckEnum("JDITHER_FS",JDITHER_FS,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11310,0);
 Msg("Find size of anon-jpeglib.h-201 (11310)\n");
@@ -1420,6 +1778,8 @@ Msg("Find size of anon-jpeglib.h-201 (11310)\n");
 CheckTypeSize(J_DITHER_MODE,4, 11311, 2)
 #elif __x86_64__
 CheckTypeSize(J_DITHER_MODE,4, 11311, 11)
+#elif __ia64__
+CheckTypeSize(J_DITHER_MODE,4, 11311, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11311,0);
 Msg("Find size of J_DITHER_MODE (11311)\n");
@@ -1430,6 +1790,7 @@ Msg("Find size of J_DITHER_MODE (11311)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11313,0);
 Msg("Find size of int[64] * (11313)\n");
@@ -1439,6 +1800,8 @@ Msg("Find size of int[64] * (11313)\n");
 CheckTypeSize(UINT16,2, 11314, 2)
 #elif __x86_64__
 CheckTypeSize(UINT16,2, 11314, 11)
+#elif __ia64__
+CheckTypeSize(UINT16,2, 11314, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11314,0);
 Msg("Find size of UINT16 (11314)\n");
@@ -1449,6 +1812,7 @@ Msg("Find size of UINT16 (11314)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11316,0);
 Msg("Find size of anon-jpeglib.h-196 (11316)\n");
@@ -1458,6 +1822,8 @@ Msg("Find size of anon-jpeglib.h-196 (11316)\n");
 CheckTypeSize(JQUANT_TBL,132, 11317, 2)
 #elif __x86_64__
 CheckTypeSize(JQUANT_TBL,132, 11317, 11)
+#elif __ia64__
+CheckTypeSize(JQUANT_TBL,132, 11317, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11317,0);
 Msg("Find size of JQUANT_TBL (11317)\n");
@@ -1467,6 +1833,8 @@ Msg("Find size of JQUANT_TBL (11317)\n");
 CheckTypeSize(JQUANT_TBL *,4, 11318, 2)
 #elif __x86_64__
 CheckTypeSize(JQUANT_TBL *,8, 11318, 11)
+#elif __ia64__
+CheckTypeSize(JQUANT_TBL *,8, 11318, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11318,0);
 Msg("Find size of JQUANT_TBL * (11318)\n");
@@ -1479,6 +1847,8 @@ Msg("Find size of JQUANT_TBL * (11318)\n");
 CheckTypeSize(UINT8,1, 11320, 2)
 #elif __x86_64__
 CheckTypeSize(UINT8,1, 11320, 11)
+#elif __ia64__
+CheckTypeSize(UINT8,1, 11320, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11320,0);
 Msg("Find size of UINT8 (11320)\n");
@@ -1492,6 +1862,7 @@ Msg("Find size of UINT8 (11320)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11323,0);
 Msg("Find size of anon-jpeglib.h-197 (11323)\n");
@@ -1501,6 +1872,8 @@ Msg("Find size of anon-jpeglib.h-197 (11323)\n");
 CheckTypeSize(JHUFF_TBL,280, 11324, 2)
 #elif __x86_64__
 CheckTypeSize(JHUFF_TBL,280, 11324, 11)
+#elif __ia64__
+CheckTypeSize(JHUFF_TBL,280, 11324, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11324,0);
 Msg("Find size of JHUFF_TBL (11324)\n");
@@ -1510,6 +1883,8 @@ Msg("Find size of JHUFF_TBL (11324)\n");
 CheckTypeSize(JHUFF_TBL *,4, 11325, 2)
 #elif __x86_64__
 CheckTypeSize(JHUFF_TBL *,8, 11325, 11)
+#elif __ia64__
+CheckTypeSize(JHUFF_TBL *,8, 11325, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11325,0);
 Msg("Find size of JHUFF_TBL * (11325)\n");
@@ -1520,6 +1895,7 @@ Msg("Find size of JHUFF_TBL * (11325)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11327,0);
 Msg("Find size of anon-jpeglib.h-198 (11327)\n");
@@ -1529,6 +1905,8 @@ Msg("Find size of anon-jpeglib.h-198 (11327)\n");
 CheckTypeSize(jpeg_component_info,84, 11328, 2)
 #elif __x86_64__
 CheckTypeSize(jpeg_component_info,96, 11328, 11)
+#elif __ia64__
+CheckTypeSize(jpeg_component_info,96, 11328, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11328,0);
 Msg("Find size of jpeg_component_info (11328)\n");
@@ -1538,6 +1916,8 @@ Msg("Find size of jpeg_component_info (11328)\n");
 CheckTypeSize(jpeg_component_info *,4, 11329, 2)
 #elif __x86_64__
 CheckTypeSize(jpeg_component_info *,8, 11329, 11)
+#elif __ia64__
+CheckTypeSize(jpeg_component_info *,8, 11329, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11329,0);
 Msg("Find size of jpeg_component_info * (11329)\n");
@@ -1566,6 +1946,16 @@ CheckMemberSize(struct jpeg_marker_struct,data_length,4,11,41194)
 CheckOffset(struct jpeg_marker_struct,data_length,16,11,41194)
 CheckMemberSize(struct jpeg_marker_struct,data,8,11,41195)
 CheckOffset(struct jpeg_marker_struct,data,24,11,41195)
+#elif __ia64__
+CheckTypeSize(struct jpeg_marker_struct,32, 11331, 3)
+CheckMemberSize(struct jpeg_marker_struct,marker,1,3,41192)
+CheckOffset(struct jpeg_marker_struct,marker,8,3,41192)
+CheckMemberSize(struct jpeg_marker_struct,original_length,4,3,41193)
+CheckOffset(struct jpeg_marker_struct,original_length,12,3,41193)
+CheckMemberSize(struct jpeg_marker_struct,data_length,4,3,41194)
+CheckOffset(struct jpeg_marker_struct,data_length,16,3,41194)
+CheckMemberSize(struct jpeg_marker_struct,data,8,3,41195)
+CheckOffset(struct jpeg_marker_struct,data,24,3,41195)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11331,0);
 Msg("Find size of jpeg_marker_struct (11331)\n");
@@ -1575,6 +1965,8 @@ Msg("Find size of jpeg_marker_struct (11331)\n");
 CheckTypeSize(struct jpeg_marker_struct *,4, 11332, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_marker_struct *,8, 11332, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_marker_struct *,8, 11332, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11332,0);
 Msg("Find size of jpeg_marker_struct * (11332)\n");
@@ -1584,6 +1976,8 @@ Msg("Find size of jpeg_marker_struct * (11332)\n");
 CheckTypeSize(jpeg_saved_marker_ptr,4, 11333, 2)
 #elif __x86_64__
 CheckTypeSize(jpeg_saved_marker_ptr,8, 11333, 11)
+#elif __ia64__
+CheckTypeSize(jpeg_saved_marker_ptr,8, 11333, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11333,0);
 Msg("Find size of jpeg_saved_marker_ptr (11333)\n");
@@ -1593,6 +1987,8 @@ Msg("Find size of jpeg_saved_marker_ptr (11333)\n");
 CheckTypeSize(JOCTET *,4, 11334, 2)
 #elif __x86_64__
 CheckTypeSize(JOCTET *,8, 11334, 11)
+#elif __ia64__
+CheckTypeSize(JOCTET *,8, 11334, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11334,0);
 Msg("Find size of JOCTET * (11334)\n");
@@ -1608,6 +2004,8 @@ Msg("Find size of JOCTET * (11334)\n");
 CheckTypeSize(struct jpeg_decomp_master *,4, 11338, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_decomp_master *,8, 11338, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_decomp_master *,8, 11338, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11338,0);
 Msg("Find size of jpeg_decomp_master * (11338)\n");
@@ -1617,6 +2015,8 @@ Msg("Find size of jpeg_decomp_master * (11338)\n");
 CheckTypeSize(struct jpeg_d_main_controller *,4, 11340, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_d_main_controller *,8, 11340, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_d_main_controller *,8, 11340, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11340,0);
 Msg("Find size of jpeg_d_main_controller * (11340)\n");
@@ -1626,6 +2026,8 @@ Msg("Find size of jpeg_d_main_controller * (11340)\n");
 CheckTypeSize(struct jpeg_d_coef_controller *,4, 11342, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_d_coef_controller *,8, 11342, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_d_coef_controller *,8, 11342, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11342,0);
 Msg("Find size of jpeg_d_coef_controller * (11342)\n");
@@ -1635,6 +2037,8 @@ Msg("Find size of jpeg_d_coef_controller * (11342)\n");
 CheckTypeSize(struct jpeg_d_post_controller *,4, 11344, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_d_post_controller *,8, 11344, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_d_post_controller *,8, 11344, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11344,0);
 Msg("Find size of jpeg_d_post_controller * (11344)\n");
@@ -1644,6 +2048,8 @@ Msg("Find size of jpeg_d_post_controller * (11344)\n");
 CheckTypeSize(struct jpeg_input_controller *,4, 11346, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_input_controller *,8, 11346, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_input_controller *,8, 11346, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11346,0);
 Msg("Find size of jpeg_input_controller * (11346)\n");
@@ -1653,6 +2059,8 @@ Msg("Find size of jpeg_input_controller * (11346)\n");
 CheckTypeSize(struct jpeg_marker_reader *,4, 11348, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_marker_reader *,8, 11348, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_marker_reader *,8, 11348, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11348,0);
 Msg("Find size of jpeg_marker_reader * (11348)\n");
@@ -1662,6 +2070,8 @@ Msg("Find size of jpeg_marker_reader * (11348)\n");
 CheckTypeSize(struct jpeg_entropy_decoder *,4, 11350, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_entropy_decoder *,8, 11350, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_entropy_decoder *,8, 11350, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11350,0);
 Msg("Find size of jpeg_entropy_decoder * (11350)\n");
@@ -1671,6 +2081,8 @@ Msg("Find size of jpeg_entropy_decoder * (11350)\n");
 CheckTypeSize(struct jpeg_inverse_dct *,4, 11352, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_inverse_dct *,8, 11352, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_inverse_dct *,8, 11352, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11352,0);
 Msg("Find size of jpeg_inverse_dct * (11352)\n");
@@ -1680,6 +2092,8 @@ Msg("Find size of jpeg_inverse_dct * (11352)\n");
 CheckTypeSize(struct jpeg_upsampler *,4, 11354, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_upsampler *,8, 11354, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_upsampler *,8, 11354, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11354,0);
 Msg("Find size of jpeg_upsampler * (11354)\n");
@@ -1689,6 +2103,8 @@ Msg("Find size of jpeg_upsampler * (11354)\n");
 CheckTypeSize(struct jpeg_color_deconverter *,4, 11356, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_color_deconverter *,8, 11356, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_color_deconverter *,8, 11356, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11356,0);
 Msg("Find size of jpeg_color_deconverter * (11356)\n");
@@ -1698,6 +2114,8 @@ Msg("Find size of jpeg_color_deconverter * (11356)\n");
 CheckTypeSize(struct jpeg_color_quantizer *,4, 11358, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_color_quantizer *,8, 11358, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_color_quantizer *,8, 11358, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11358,0);
 Msg("Find size of jpeg_color_quantizer * (11358)\n");
@@ -1963,6 +2381,136 @@ CheckMemberSize(struct jpeg_compress_struct,script_space,8,11,41300)
 CheckOffset(struct jpeg_compress_struct,script_space,504,11,41300)
 CheckMemberSize(struct jpeg_compress_struct,script_space_size,4,11,41301)
 CheckOffset(struct jpeg_compress_struct,script_space_size,512,11,41301)
+#elif __ia64__
+CheckTypeSize(struct jpeg_compress_struct,520, 11359, 3)
+CheckMemberSize(struct jpeg_compress_struct,mem,8,3,41225)
+CheckOffset(struct jpeg_compress_struct,mem,8,3,41225)
+CheckMemberSize(struct jpeg_compress_struct,progress,8,3,41226)
+CheckOffset(struct jpeg_compress_struct,progress,16,3,41226)
+CheckMemberSize(struct jpeg_compress_struct,client_data,8,3,41227)
+CheckOffset(struct jpeg_compress_struct,client_data,24,3,41227)
+CheckMemberSize(struct jpeg_compress_struct,is_decompressor,4,3,41228)
+CheckOffset(struct jpeg_compress_struct,is_decompressor,32,3,41228)
+CheckMemberSize(struct jpeg_compress_struct,global_state,4,3,41229)
+CheckOffset(struct jpeg_compress_struct,global_state,36,3,41229)
+CheckMemberSize(struct jpeg_compress_struct,dest,8,3,41237)
+CheckOffset(struct jpeg_compress_struct,dest,40,3,41237)
+CheckMemberSize(struct jpeg_compress_struct,image_width,4,3,41238)
+CheckOffset(struct jpeg_compress_struct,image_width,48,3,41238)
+CheckMemberSize(struct jpeg_compress_struct,image_height,4,3,41239)
+CheckOffset(struct jpeg_compress_struct,image_height,52,3,41239)
+CheckMemberSize(struct jpeg_compress_struct,input_components,4,3,41240)
+CheckOffset(struct jpeg_compress_struct,input_components,56,3,41240)
+CheckMemberSize(struct jpeg_compress_struct,in_color_space,4,3,41241)
+CheckOffset(struct jpeg_compress_struct,in_color_space,60,3,41241)
+CheckMemberSize(struct jpeg_compress_struct,input_gamma,8,3,41242)
+CheckOffset(struct jpeg_compress_struct,input_gamma,64,3,41242)
+CheckMemberSize(struct jpeg_compress_struct,data_precision,4,3,41243)
+CheckOffset(struct jpeg_compress_struct,data_precision,72,3,41243)
+CheckMemberSize(struct jpeg_compress_struct,num_components,4,3,41244)
+CheckOffset(struct jpeg_compress_struct,num_components,76,3,41244)
+CheckMemberSize(struct jpeg_compress_struct,jpeg_color_space,4,3,41245)
+CheckOffset(struct jpeg_compress_struct,jpeg_color_space,80,3,41245)
+CheckMemberSize(struct jpeg_compress_struct,comp_info,8,3,41246)
+CheckOffset(struct jpeg_compress_struct,comp_info,88,3,41246)
+CheckMemberSize(struct jpeg_compress_struct,quant_tbl_ptrs,32,3,41247)
+CheckOffset(struct jpeg_compress_struct,quant_tbl_ptrs,96,3,41247)
+CheckMemberSize(struct jpeg_compress_struct,dc_huff_tbl_ptrs,32,3,41248)
+CheckOffset(struct jpeg_compress_struct,dc_huff_tbl_ptrs,128,3,41248)
+CheckMemberSize(struct jpeg_compress_struct,ac_huff_tbl_ptrs,32,3,41249)
+CheckOffset(struct jpeg_compress_struct,ac_huff_tbl_ptrs,160,3,41249)
+CheckMemberSize(struct jpeg_compress_struct,arith_dc_L,16,3,41250)
+CheckOffset(struct jpeg_compress_struct,arith_dc_L,192,3,41250)
+CheckMemberSize(struct jpeg_compress_struct,arith_dc_U,16,3,41251)
+CheckOffset(struct jpeg_compress_struct,arith_dc_U,208,3,41251)
+CheckMemberSize(struct jpeg_compress_struct,arith_ac_K,16,3,41252)
+CheckOffset(struct jpeg_compress_struct,arith_ac_K,224,3,41252)
+CheckMemberSize(struct jpeg_compress_struct,num_scans,4,3,41253)
+CheckOffset(struct jpeg_compress_struct,num_scans,240,3,41253)
+CheckMemberSize(struct jpeg_compress_struct,scan_info,8,3,41260)
+CheckOffset(struct jpeg_compress_struct,scan_info,248,3,41260)
+CheckMemberSize(struct jpeg_compress_struct,raw_data_in,4,3,41261)
+CheckOffset(struct jpeg_compress_struct,raw_data_in,256,3,41261)
+CheckMemberSize(struct jpeg_compress_struct,arith_code,4,3,41262)
+CheckOffset(struct jpeg_compress_struct,arith_code,260,3,41262)
+CheckMemberSize(struct jpeg_compress_struct,optimize_coding,4,3,41263)
+CheckOffset(struct jpeg_compress_struct,optimize_coding,264,3,41263)
+CheckMemberSize(struct jpeg_compress_struct,CCIR601_sampling,4,3,41264)
+CheckOffset(struct jpeg_compress_struct,CCIR601_sampling,268,3,41264)
+CheckMemberSize(struct jpeg_compress_struct,smoothing_factor,4,3,41265)
+CheckOffset(struct jpeg_compress_struct,smoothing_factor,272,3,41265)
+CheckMemberSize(struct jpeg_compress_struct,dct_method,4,3,41266)
+CheckOffset(struct jpeg_compress_struct,dct_method,276,3,41266)
+CheckMemberSize(struct jpeg_compress_struct,restart_interval,4,3,41267)
+CheckOffset(struct jpeg_compress_struct,restart_interval,280,3,41267)
+CheckMemberSize(struct jpeg_compress_struct,restart_in_rows,4,3,41268)
+CheckOffset(struct jpeg_compress_struct,restart_in_rows,284,3,41268)
+CheckMemberSize(struct jpeg_compress_struct,write_JFIF_header,4,3,41269)
+CheckOffset(struct jpeg_compress_struct,write_JFIF_header,288,3,41269)
+CheckMemberSize(struct jpeg_compress_struct,JFIF_major_version,1,3,41270)
+CheckOffset(struct jpeg_compress_struct,JFIF_major_version,292,3,41270)
+CheckMemberSize(struct jpeg_compress_struct,JFIF_minor_version,1,3,41271)
+CheckOffset(struct jpeg_compress_struct,JFIF_minor_version,293,3,41271)
+CheckMemberSize(struct jpeg_compress_struct,density_unit,1,3,41272)
+CheckOffset(struct jpeg_compress_struct,density_unit,294,3,41272)
+CheckMemberSize(struct jpeg_compress_struct,X_density,2,3,41273)
+CheckOffset(struct jpeg_compress_struct,X_density,296,3,41273)
+CheckMemberSize(struct jpeg_compress_struct,Y_density,2,3,41274)
+CheckOffset(struct jpeg_compress_struct,Y_density,298,3,41274)
+CheckMemberSize(struct jpeg_compress_struct,write_Adobe_marker,4,3,41275)
+CheckOffset(struct jpeg_compress_struct,write_Adobe_marker,300,3,41275)
+CheckMemberSize(struct jpeg_compress_struct,next_scanline,4,3,41276)
+CheckOffset(struct jpeg_compress_struct,next_scanline,304,3,41276)
+CheckMemberSize(struct jpeg_compress_struct,progressive_mode,4,3,41277)
+CheckOffset(struct jpeg_compress_struct,progressive_mode,308,3,41277)
+CheckMemberSize(struct jpeg_compress_struct,max_h_samp_factor,4,3,41278)
+CheckOffset(struct jpeg_compress_struct,max_h_samp_factor,312,3,41278)
+CheckMemberSize(struct jpeg_compress_struct,max_v_samp_factor,4,3,41279)
+CheckOffset(struct jpeg_compress_struct,max_v_samp_factor,316,3,41279)
+CheckMemberSize(struct jpeg_compress_struct,total_iMCU_rows,4,3,41280)
+CheckOffset(struct jpeg_compress_struct,total_iMCU_rows,320,3,41280)
+CheckMemberSize(struct jpeg_compress_struct,comps_in_scan,4,3,41281)
+CheckOffset(struct jpeg_compress_struct,comps_in_scan,324,3,41281)
+CheckMemberSize(struct jpeg_compress_struct,cur_comp_info,32,3,41282)
+CheckOffset(struct jpeg_compress_struct,cur_comp_info,328,3,41282)
+CheckMemberSize(struct jpeg_compress_struct,MCUs_per_row,4,3,41283)
+CheckOffset(struct jpeg_compress_struct,MCUs_per_row,360,3,41283)
+CheckMemberSize(struct jpeg_compress_struct,MCU_rows_in_scan,4,3,41284)
+CheckOffset(struct jpeg_compress_struct,MCU_rows_in_scan,364,3,41284)
+CheckMemberSize(struct jpeg_compress_struct,blocks_in_MCU,4,3,41285)
+CheckOffset(struct jpeg_compress_struct,blocks_in_MCU,368,3,41285)
+CheckMemberSize(struct jpeg_compress_struct,MCU_membership,40,3,41286)
+CheckOffset(struct jpeg_compress_struct,MCU_membership,372,3,41286)
+CheckMemberSize(struct jpeg_compress_struct,Ss,4,3,41287)
+CheckOffset(struct jpeg_compress_struct,Ss,412,3,41287)
+CheckMemberSize(struct jpeg_compress_struct,Se,4,3,41288)
+CheckOffset(struct jpeg_compress_struct,Se,416,3,41288)
+CheckMemberSize(struct jpeg_compress_struct,Ah,4,3,41289)
+CheckOffset(struct jpeg_compress_struct,Ah,420,3,41289)
+CheckMemberSize(struct jpeg_compress_struct,Al,4,3,41290)
+CheckOffset(struct jpeg_compress_struct,Al,424,3,41290)
+CheckMemberSize(struct jpeg_compress_struct,master,8,3,41291)
+CheckOffset(struct jpeg_compress_struct,master,432,3,41291)
+CheckMemberSize(struct jpeg_compress_struct,main,8,3,41292)
+CheckOffset(struct jpeg_compress_struct,main,440,3,41292)
+CheckMemberSize(struct jpeg_compress_struct,prep,8,3,41293)
+CheckOffset(struct jpeg_compress_struct,prep,448,3,41293)
+CheckMemberSize(struct jpeg_compress_struct,coef,8,3,41294)
+CheckOffset(struct jpeg_compress_struct,coef,456,3,41294)
+CheckMemberSize(struct jpeg_compress_struct,marker,8,3,41295)
+CheckOffset(struct jpeg_compress_struct,marker,464,3,41295)
+CheckMemberSize(struct jpeg_compress_struct,cconvert,8,3,41296)
+CheckOffset(struct jpeg_compress_struct,cconvert,472,3,41296)
+CheckMemberSize(struct jpeg_compress_struct,downsample,8,3,41297)
+CheckOffset(struct jpeg_compress_struct,downsample,480,3,41297)
+CheckMemberSize(struct jpeg_compress_struct,fdct,8,3,41298)
+CheckOffset(struct jpeg_compress_struct,fdct,488,3,41298)
+CheckMemberSize(struct jpeg_compress_struct,entropy,8,3,41299)
+CheckOffset(struct jpeg_compress_struct,entropy,496,3,41299)
+CheckMemberSize(struct jpeg_compress_struct,script_space,8,3,41300)
+CheckOffset(struct jpeg_compress_struct,script_space,504,3,41300)
+CheckMemberSize(struct jpeg_compress_struct,script_space_size,4,3,41301)
+CheckOffset(struct jpeg_compress_struct,script_space_size,512,3,41301)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11359,0);
 Msg("Find size of jpeg_compress_struct (11359)\n");
@@ -1988,6 +2536,16 @@ CheckMemberSize(struct jpeg_destination_mgr,empty_output_buffer,8,11,41235)
 CheckOffset(struct jpeg_destination_mgr,empty_output_buffer,24,11,41235)
 CheckMemberSize(struct jpeg_destination_mgr,term_destination,8,11,41236)
 CheckOffset(struct jpeg_destination_mgr,term_destination,32,11,41236)
+#elif __ia64__
+CheckTypeSize(struct jpeg_destination_mgr,40, 11360, 3)
+CheckMemberSize(struct jpeg_destination_mgr,free_in_buffer,8,3,41231)
+CheckOffset(struct jpeg_destination_mgr,free_in_buffer,8,3,41231)
+CheckMemberSize(struct jpeg_destination_mgr,init_destination,8,3,41233)
+CheckOffset(struct jpeg_destination_mgr,init_destination,16,3,41233)
+CheckMemberSize(struct jpeg_destination_mgr,empty_output_buffer,8,3,41235)
+CheckOffset(struct jpeg_destination_mgr,empty_output_buffer,24,3,41235)
+CheckMemberSize(struct jpeg_destination_mgr,term_destination,8,3,41236)
+CheckOffset(struct jpeg_destination_mgr,term_destination,32,3,41236)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11360,0);
 Msg("Find size of jpeg_destination_mgr (11360)\n");
@@ -1997,6 +2555,8 @@ Msg("Find size of jpeg_destination_mgr (11360)\n");
 CheckTypeSize(struct jpeg_compress_struct *,4, 11361, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_compress_struct *,8, 11361, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_compress_struct *,8, 11361, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11361,0);
 Msg("Find size of jpeg_compress_struct * (11361)\n");
@@ -2006,6 +2566,8 @@ Msg("Find size of jpeg_compress_struct * (11361)\n");
 CheckTypeSize(j_compress_ptr,4, 11362, 2)
 #elif __x86_64__
 CheckTypeSize(j_compress_ptr,8, 11362, 11)
+#elif __ia64__
+CheckTypeSize(j_compress_ptr,8, 11362, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11362,0);
 Msg("Find size of j_compress_ptr (11362)\n");
@@ -2013,6 +2575,7 @@ Msg("Find size of j_compress_ptr (11362)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11363,0);
 Msg("Find size of fptr_jpeglib_804 (11363)\n");
@@ -2020,6 +2583,7 @@ Msg("Find size of fptr_jpeglib_804 (11363)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11364,0);
 Msg("Find size of fptr_jpeglib_230 (11364)\n");
@@ -2029,6 +2593,8 @@ Msg("Find size of fptr_jpeglib_230 (11364)\n");
 CheckTypeSize(struct jpeg_destination_mgr *,4, 11365, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_destination_mgr *,8, 11365, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_destination_mgr *,8, 11365, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11365,0);
 Msg("Find size of jpeg_destination_mgr * (11365)\n");
@@ -2039,6 +2605,7 @@ Msg("Find size of jpeg_destination_mgr * (11365)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11367,0);
 Msg("Find size of anon-jpeglib.h-29 (11367)\n");
@@ -2048,6 +2615,8 @@ Msg("Find size of anon-jpeglib.h-29 (11367)\n");
 CheckTypeSize(jpeg_scan_info,36, 11368, 2)
 #elif __x86_64__
 CheckTypeSize(jpeg_scan_info,36, 11368, 11)
+#elif __ia64__
+CheckTypeSize(jpeg_scan_info,36, 11368, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11368,0);
 Msg("Find size of jpeg_scan_info (11368)\n");
@@ -2057,6 +2626,8 @@ Msg("Find size of jpeg_scan_info (11368)\n");
 CheckTypeSize(const jpeg_scan_info,36, 11369, 2)
 #elif __x86_64__
 CheckTypeSize(const jpeg_scan_info,36, 11369, 11)
+#elif __ia64__
+CheckTypeSize(const jpeg_scan_info,36, 11369, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11369,0);
 Msg("Find size of const jpeg_scan_info (11369)\n");
@@ -2064,6 +2635,7 @@ Msg("Find size of const jpeg_scan_info (11369)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11370,0);
 Msg("Find size of const jpeg_scan_info * (11370)\n");
@@ -2073,6 +2645,8 @@ Msg("Find size of const jpeg_scan_info * (11370)\n");
 CheckTypeSize(struct jpeg_comp_master *,4, 11372, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_comp_master *,8, 11372, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_comp_master *,8, 11372, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11372,0);
 Msg("Find size of jpeg_comp_master * (11372)\n");
@@ -2082,6 +2656,8 @@ Msg("Find size of jpeg_comp_master * (11372)\n");
 CheckTypeSize(struct jpeg_c_main_controller *,4, 11374, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_c_main_controller *,8, 11374, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_c_main_controller *,8, 11374, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11374,0);
 Msg("Find size of jpeg_c_main_controller * (11374)\n");
@@ -2091,6 +2667,8 @@ Msg("Find size of jpeg_c_main_controller * (11374)\n");
 CheckTypeSize(struct jpeg_c_prep_controller *,4, 11376, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_c_prep_controller *,8, 11376, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_c_prep_controller *,8, 11376, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11376,0);
 Msg("Find size of jpeg_c_prep_controller * (11376)\n");
@@ -2100,6 +2678,8 @@ Msg("Find size of jpeg_c_prep_controller * (11376)\n");
 CheckTypeSize(struct jpeg_c_coef_controller *,4, 11378, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_c_coef_controller *,8, 11378, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_c_coef_controller *,8, 11378, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11378,0);
 Msg("Find size of jpeg_c_coef_controller * (11378)\n");
@@ -2109,6 +2689,8 @@ Msg("Find size of jpeg_c_coef_controller * (11378)\n");
 CheckTypeSize(struct jpeg_marker_writer *,4, 11380, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_marker_writer *,8, 11380, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_marker_writer *,8, 11380, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11380,0);
 Msg("Find size of jpeg_marker_writer * (11380)\n");
@@ -2118,6 +2700,8 @@ Msg("Find size of jpeg_marker_writer * (11380)\n");
 CheckTypeSize(struct jpeg_color_converter *,4, 11382, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_color_converter *,8, 11382, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_color_converter *,8, 11382, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11382,0);
 Msg("Find size of jpeg_color_converter * (11382)\n");
@@ -2127,6 +2711,8 @@ Msg("Find size of jpeg_color_converter * (11382)\n");
 CheckTypeSize(struct jpeg_downsampler *,4, 11384, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_downsampler *,8, 11384, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_downsampler *,8, 11384, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11384,0);
 Msg("Find size of jpeg_downsampler * (11384)\n");
@@ -2136,6 +2722,8 @@ Msg("Find size of jpeg_downsampler * (11384)\n");
 CheckTypeSize(struct jpeg_forward_dct *,4, 11386, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_forward_dct *,8, 11386, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_forward_dct *,8, 11386, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11386,0);
 Msg("Find size of jpeg_forward_dct * (11386)\n");
@@ -2145,6 +2733,8 @@ Msg("Find size of jpeg_forward_dct * (11386)\n");
 CheckTypeSize(struct jpeg_entropy_encoder *,4, 11388, 2)
 #elif __x86_64__
 CheckTypeSize(struct jpeg_entropy_encoder *,8, 11388, 11)
+#elif __ia64__
+CheckTypeSize(struct jpeg_entropy_encoder *,8, 11388, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11388,0);
 Msg("Find size of jpeg_entropy_encoder * (11388)\n");
@@ -2154,6 +2744,8 @@ Msg("Find size of jpeg_entropy_encoder * (11388)\n");
 CheckTypeSize(jpeg_scan_info *,4, 11389, 2)
 #elif __x86_64__
 CheckTypeSize(jpeg_scan_info *,8, 11389, 11)
+#elif __ia64__
+CheckTypeSize(jpeg_scan_info *,8, 11389, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11389,0);
 Msg("Find size of jpeg_scan_info * (11389)\n");
@@ -2163,6 +2755,8 @@ Msg("Find size of jpeg_scan_info * (11389)\n");
 CheckTypeSize(jvirt_barray_ptr *,4, 11390, 2)
 #elif __x86_64__
 CheckTypeSize(jvirt_barray_ptr *,8, 11390, 11)
+#elif __ia64__
+CheckTypeSize(jvirt_barray_ptr *,8, 11390, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11390,0);
 Msg("Find size of jvirt_barray_ptr * (11390)\n");
@@ -2172,6 +2766,8 @@ Msg("Find size of jvirt_barray_ptr * (11390)\n");
 CheckTypeSize(JSAMPARRAY *,4, 11391, 2)
 #elif __x86_64__
 CheckTypeSize(JSAMPARRAY *,8, 11391, 11)
+#elif __ia64__
+CheckTypeSize(JSAMPARRAY *,8, 11391, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11391,0);
 Msg("Find size of JSAMPARRAY * (11391)\n");
@@ -2181,6 +2777,8 @@ Msg("Find size of JSAMPARRAY * (11391)\n");
 CheckTypeSize(JSAMPIMAGE,4, 11392, 2)
 #elif __x86_64__
 CheckTypeSize(JSAMPIMAGE,8, 11392, 11)
+#elif __ia64__
+CheckTypeSize(JSAMPIMAGE,8, 11392, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11392,0);
 Msg("Find size of JSAMPIMAGE (11392)\n");
@@ -2190,6 +2788,8 @@ Msg("Find size of JSAMPIMAGE (11392)\n");
 CheckTypeSize(jpeg_marker_parser_method,4, 11393, 2)
 #elif __x86_64__
 CheckTypeSize(jpeg_marker_parser_method,8, 11393, 11)
+#elif __ia64__
+CheckTypeSize(jpeg_marker_parser_method,8, 11393, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11393,0);
 Msg("Find size of jpeg_marker_parser_method (11393)\n");
@@ -2197,6 +2797,7 @@ Msg("Find size of jpeg_marker_parser_method (11393)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11394,0);
 Msg("Find size of const unsigned int (11394)\n");
@@ -2204,6 +2805,7 @@ Msg("Find size of const unsigned int (11394)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11395,0);
 Msg("Find size of const unsigned int * (11395)\n");

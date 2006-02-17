@@ -25,11 +25,12 @@ int security_pam_appl_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in security/pam_appl.h\n");
 #endif
 
+printf("Checking data structures in security/pam_appl.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef PAM_SERVICE
 	CompareConstant(PAM_SERVICE,1,5032,architecture)
@@ -608,6 +609,32 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10358,0);
 Msg("Find size of pam_response (10358)\n");
 #endif
 
+extern int pam_set_item_db(pam_handle_t *, int, const void *);
+CheckInterfacedef(pam_set_item,pam_set_item_db);
+extern int pam_get_item_db(const pam_handle_t *, int, const void * *);
+CheckInterfacedef(pam_get_item,pam_get_item_db);
+extern const char * pam_strerror_db(pam_handle_t *, int);
+CheckInterfacedef(pam_strerror,pam_strerror_db);
+extern char * * pam_getenvlist_db(pam_handle_t *);
+CheckInterfacedef(pam_getenvlist,pam_getenvlist_db);
+extern int pam_fail_delay_db(pam_handle_t *, unsigned int);
+CheckInterfacedef(pam_fail_delay,pam_fail_delay_db);
+extern int pam_start_db(const char *, const char *, const struct pam_conv *, pam_handle_t * *);
+CheckInterfacedef(pam_start,pam_start_db);
+extern int pam_end_db(pam_handle_t *, int);
+CheckInterfacedef(pam_end,pam_end_db);
+extern int pam_authenticate_db(pam_handle_t *, int);
+CheckInterfacedef(pam_authenticate,pam_authenticate_db);
+extern int pam_setcred_db(pam_handle_t *, int);
+CheckInterfacedef(pam_setcred,pam_setcred_db);
+extern int pam_acct_mgmt_db(pam_handle_t *, int);
+CheckInterfacedef(pam_acct_mgmt,pam_acct_mgmt_db);
+extern int pam_open_session_db(pam_handle_t *, int);
+CheckInterfacedef(pam_open_session,pam_open_session_db);
+extern int pam_close_session_db(pam_handle_t *, int);
+CheckInterfacedef(pam_close_session,pam_close_session_db);
+extern int pam_chauthtok_db(pam_handle_t *, int);
+CheckInterfacedef(pam_chauthtok,pam_chauthtok_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -615,7 +642,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in security/pam_appl.h\n",cnt);
+printf("%d tests passed out of %d tests in security/pam_appl.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

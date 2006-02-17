@@ -18,11 +18,12 @@ int sys_poll_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/poll.h\n");
 #endif
 
+printf("Checking data structures in sys/poll.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef POLLIN
 	CompareConstant(POLLIN,0x0001,4948,architecture)
@@ -156,7 +157,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/poll.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/poll.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

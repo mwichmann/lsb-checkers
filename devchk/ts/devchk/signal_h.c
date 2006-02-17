@@ -18,11 +18,12 @@ int signal_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in signal.h\n");
 #endif
 
+printf("Checking data structures in signal.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NSIG
 	CompareConstant(NSIG,65,2460,architecture)
@@ -2089,6 +2090,76 @@ CheckMemberSize(struct sigcontext,sregs,8,12,40618)
 CheckOffset(struct sigcontext,sregs,8,12,40618)
 #endif
 
+extern int __libc_current_sigrtmax_db(void);
+CheckInterfacedef(__libc_current_sigrtmax,__libc_current_sigrtmax_db);
+extern int __libc_current_sigrtmin_db(void);
+CheckInterfacedef(__libc_current_sigrtmin,__libc_current_sigrtmin_db);
+extern sighandler_t __sysv_signal_db(int, sighandler_t);
+CheckInterfacedef(__sysv_signal,__sysv_signal_db);
+extern int killpg_db(pid_t, int);
+CheckInterfacedef(killpg,killpg_db);
+extern void psignal_db(int, const char *);
+CheckInterfacedef(psignal,psignal_db);
+extern int raise_db(int);
+CheckInterfacedef(raise,raise_db);
+extern int sigaddset_db(sigset_t *, int);
+CheckInterfacedef(sigaddset,sigaddset_db);
+extern int sigandset_db(sigset_t *, const sigset_t *, const sigset_t *);
+CheckInterfacedef(sigandset,sigandset_db);
+extern int sigdelset_db(sigset_t *, int);
+CheckInterfacedef(sigdelset,sigdelset_db);
+extern int sigemptyset_db(sigset_t *);
+CheckInterfacedef(sigemptyset,sigemptyset_db);
+extern int sigfillset_db(sigset_t *);
+CheckInterfacedef(sigfillset,sigfillset_db);
+extern int sighold_db(int);
+CheckInterfacedef(sighold,sighold_db);
+extern int sigignore_db(int);
+CheckInterfacedef(sigignore,sigignore_db);
+extern int siginterrupt_db(int, int);
+CheckInterfacedef(siginterrupt,siginterrupt_db);
+extern int sigisemptyset_db(const sigset_t *);
+CheckInterfacedef(sigisemptyset,sigisemptyset_db);
+extern int sigismember_db(const sigset_t *, int);
+CheckInterfacedef(sigismember,sigismember_db);
+extern int sigorset_db(sigset_t *, const sigset_t *, const sigset_t *);
+CheckInterfacedef(sigorset,sigorset_db);
+extern int sigpending_db(sigset_t *);
+CheckInterfacedef(sigpending,sigpending_db);
+extern int sigrelse_db(int);
+CheckInterfacedef(sigrelse,sigrelse_db);
+extern sighandler_t sigset_db(int, sighandler_t);
+CheckInterfacedef(sigset,sigset_db);
+extern int pthread_kill_db(pthread_t, int);
+CheckInterfacedef(pthread_kill,pthread_kill_db);
+extern int pthread_sigmask_db(int, const sigset_t *, sigset_t *);
+CheckInterfacedef(pthread_sigmask,pthread_sigmask_db);
+extern int sigaction_db(int, const struct sigaction *, struct sigaction *);
+CheckInterfacedef(sigaction,sigaction_db);
+extern int sigwait_db(const sigset_t *, int *);
+CheckInterfacedef(sigwait,sigwait_db);
+extern int kill_db(pid_t, int);
+CheckInterfacedef(kill,kill_db);
+extern int sigaltstack_db(const struct sigaltstack *, struct sigaltstack *);
+CheckInterfacedef(sigaltstack,sigaltstack_db);
+extern sighandler_t signal_db(int, sighandler_t);
+CheckInterfacedef(signal,signal_db);
+extern int sigpause_db(int);
+CheckInterfacedef(sigpause,sigpause_db);
+extern int sigprocmask_db(int, const sigset_t *, sigset_t *);
+CheckInterfacedef(sigprocmask,sigprocmask_db);
+extern int sigreturn_db(struct sigcontext *);
+CheckInterfacedef(sigreturn,sigreturn_db);
+extern int sigsuspend_db(const sigset_t *);
+CheckInterfacedef(sigsuspend,sigsuspend_db);
+extern int sigqueue_db(pid_t, int, const union sigval);
+CheckInterfacedef(sigqueue,sigqueue_db);
+extern int sigwaitinfo_db(const sigset_t *, siginfo_t *);
+CheckInterfacedef(sigwaitinfo,sigwaitinfo_db);
+extern int sigtimedwait_db(const sigset_t *, siginfo_t *, const struct timespec *);
+CheckInterfacedef(sigtimedwait,sigtimedwait_db);
+extern sighandler_t bsd_signal_db(int, sighandler_t);
+CheckInterfacedef(bsd_signal,bsd_signal_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -2096,7 +2167,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in signal.h\n",cnt);
+printf("%d tests passed out of %d tests in signal.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

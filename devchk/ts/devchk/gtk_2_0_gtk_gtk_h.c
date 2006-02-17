@@ -4,6 +4,19 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
+#define PANGO_DISABLE_DEPRECATED
+#define GTK_DISABLE_DEPRECATED
+#define GDK_DISABLE_DEPRECATED
+#define GDK_PIXBUF_DISABLE_DEPRECATED
+#undef GTK_FILE_SYSTEM_ENABLE_UNSUPPORTED
+#undef GTK_TEXT_USE_INTERNAL_UNSUPPORTED_API
+#undef GTK_COMPILATION
+#undef GDK_COMPILATION
+#undef GTK_MENU_INTERNALS
 
 struct _GtkSettingsPropertyValue { };
 struct _GtkRcContext { };
@@ -85,6 +98,7 @@ struct _GtkAlignmentPrivate { };
 struct _GtkFileChooserWidgetPrivate { };
 struct _GtkCellRendererProgressPrivate { };
 struct _GtkToolbarPrivate { };
+struct _GtkArg { };
 #include "gtk-2.0/gtk/gtk.h"
 
 
@@ -1355,170 +1369,6 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 /* No test for GTK_BUTTON_GET_CLASS(obj) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_BOOL__NONE */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_BOOL__POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_BOOL__POINTER_POINTER_INT_INT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_BOOL__POINTER_INT_INT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_BOOL__POINTER_INT_INT_UINT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_BOOL__POINTER_STRING_STRING_POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__BOOLEAN */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__BOOL */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__BOXED */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__BOXED */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__ENUM */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__ENUM */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__ENUM_FLOAT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__ENUM_FLOAT_BOOL */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__INT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__INT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__INT_INT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__INT_INT_POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__VOID */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__NONE */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__OBJECT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__OBJECT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_INT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_POINTER_POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_STRING_STRING */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_UINT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_UINT_ENUM */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_POINTER_UINT_UINT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_INT_INT_POINTER_UINT_UINT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__POINTER_UINT_UINT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__STRING */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__STRING */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__STRING_INT_POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_VOID__UINT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__UINT */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__UINT_POINTER_UINT_ENUM_ENUM_POINTER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__UINT_POINTER_UINT_UINT_ENUM */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for gtk_marshal_NONE__UINT_STRING */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -3212,30 +3062,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_TYPE_LIST_ITEM */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_LIST_ITEM(obj) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_LIST_ITEM_CLASS(klass) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_IS_LIST_ITEM(obj) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_IS_LIST_ITEM_CLASS(klass) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_LIST_ITEM_GET_CLASS(obj) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for GTK_TYPE_LIST */
 #endif
 
@@ -3481,30 +3307,6 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 /* No test for GTK_PLUG_GET_CLASS(obj) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_TYPE_PROGRESS */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_PROGRESS(obj) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_PROGRESS_CLASS(klass) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_IS_PROGRESS(obj) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_IS_PROGRESS_CLASS(klass) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GTK_PROGRESS_GET_CLASS(obj) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -5257,6 +5059,8 @@ cnt++;
 CheckTypeSize(GtkIconSet,0, 13041, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconSet,0, 13041, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconSet,0, 13041, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13041,0);
 Msg("Find size of GtkIconSet (13041)\n");
@@ -5266,6 +5070,8 @@ Msg("Find size of GtkIconSet (13041)\n");
 CheckTypeSize(GtkIconSet *,4, 13042, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconSet *,8, 13042, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconSet *,8, 13042, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13042,0);
 Msg("Find size of GtkIconSet * (13042)\n");
@@ -5311,6 +5117,26 @@ CheckMemberSize(struct _GtkWidget,window,8,11,44456)
 CheckOffset(struct _GtkWidget,window,80,11,44456)
 CheckMemberSize(struct _GtkWidget,parent,8,11,44457)
 CheckOffset(struct _GtkWidget,parent,88,11,44457)
+#elif __ia64__
+CheckTypeSize(struct _GtkWidget,96, 13043, 3)
+CheckMemberSize(struct _GtkWidget,private_flags,2,3,44394)
+CheckOffset(struct _GtkWidget,private_flags,32,3,44394)
+CheckMemberSize(struct _GtkWidget,state,1,3,44395)
+CheckOffset(struct _GtkWidget,state,34,3,44395)
+CheckMemberSize(struct _GtkWidget,saved_state,1,3,44396)
+CheckOffset(struct _GtkWidget,saved_state,35,3,44396)
+CheckMemberSize(struct _GtkWidget,name,8,3,44397)
+CheckOffset(struct _GtkWidget,name,40,3,44397)
+CheckMemberSize(struct _GtkWidget,style,8,3,44451)
+CheckOffset(struct _GtkWidget,style,48,3,44451)
+CheckMemberSize(struct _GtkWidget,requisition,8,3,44454)
+CheckOffset(struct _GtkWidget,requisition,56,3,44454)
+CheckMemberSize(struct _GtkWidget,allocation,16,3,44455)
+CheckOffset(struct _GtkWidget,allocation,64,3,44455)
+CheckMemberSize(struct _GtkWidget,window,8,3,44456)
+CheckOffset(struct _GtkWidget,window,80,3,44456)
+CheckMemberSize(struct _GtkWidget,parent,8,3,44457)
+CheckOffset(struct _GtkWidget,parent,88,3,44457)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13043,0);
 Msg("Find size of _GtkWidget (13043)\n");
@@ -5324,6 +5150,10 @@ CheckOffset(struct _GtkObject,flags,12,2,44392)
 CheckTypeSize(struct _GtkObject,32, 13044, 11)
 CheckMemberSize(struct _GtkObject,flags,4,11,44392)
 CheckOffset(struct _GtkObject,flags,24,11,44392)
+#elif __ia64__
+CheckTypeSize(struct _GtkObject,32, 13044, 3)
+CheckMemberSize(struct _GtkObject,flags,4,3,44392)
+CheckOffset(struct _GtkObject,flags,24,3,44392)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13044,0);
 Msg("Find size of _GtkObject (13044)\n");
@@ -5333,6 +5163,8 @@ Msg("Find size of _GtkObject (13044)\n");
 CheckTypeSize(GtkObject,16, 13045, 2)
 #elif __x86_64__
 CheckTypeSize(GtkObject,32, 13045, 11)
+#elif __ia64__
+CheckTypeSize(GtkObject,32, 13045, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13045,0);
 Msg("Find size of GtkObject (13045)\n");
@@ -5474,6 +5306,74 @@ CheckMemberSize(struct _GtkStyle,property_cache,8,11,44449)
 CheckOffset(struct _GtkStyle,property_cache,968,11,44449)
 CheckMemberSize(struct _GtkStyle,icon_factories,8,11,44450)
 CheckOffset(struct _GtkStyle,icon_factories,976,11,44450)
+#elif __ia64__
+CheckTypeSize(struct _GtkStyle,984, 13046, 3)
+CheckMemberSize(struct _GtkStyle,fg,60,3,44399)
+CheckOffset(struct _GtkStyle,fg,24,3,44399)
+CheckMemberSize(struct _GtkStyle,bg,60,3,44400)
+CheckOffset(struct _GtkStyle,bg,84,3,44400)
+CheckMemberSize(struct _GtkStyle,light,60,3,44401)
+CheckOffset(struct _GtkStyle,light,144,3,44401)
+CheckMemberSize(struct _GtkStyle,dark,60,3,44402)
+CheckOffset(struct _GtkStyle,dark,204,3,44402)
+CheckMemberSize(struct _GtkStyle,mid,60,3,44403)
+CheckOffset(struct _GtkStyle,mid,264,3,44403)
+CheckMemberSize(struct _GtkStyle,text,60,3,44404)
+CheckOffset(struct _GtkStyle,text,324,3,44404)
+CheckMemberSize(struct _GtkStyle,base,60,3,44405)
+CheckOffset(struct _GtkStyle,base,384,3,44405)
+CheckMemberSize(struct _GtkStyle,text_aa,60,3,44406)
+CheckOffset(struct _GtkStyle,text_aa,444,3,44406)
+CheckMemberSize(struct _GtkStyle,black,12,3,44407)
+CheckOffset(struct _GtkStyle,black,504,3,44407)
+CheckMemberSize(struct _GtkStyle,white,12,3,44408)
+CheckOffset(struct _GtkStyle,white,516,3,44408)
+CheckMemberSize(struct _GtkStyle,font_desc,8,3,44409)
+CheckOffset(struct _GtkStyle,font_desc,528,3,44409)
+CheckMemberSize(struct _GtkStyle,xthickness,4,3,44410)
+CheckOffset(struct _GtkStyle,xthickness,536,3,44410)
+CheckMemberSize(struct _GtkStyle,ythickness,4,3,44411)
+CheckOffset(struct _GtkStyle,ythickness,540,3,44411)
+CheckMemberSize(struct _GtkStyle,fg_gc,40,3,44412)
+CheckOffset(struct _GtkStyle,fg_gc,544,3,44412)
+CheckMemberSize(struct _GtkStyle,bg_gc,40,3,44413)
+CheckOffset(struct _GtkStyle,bg_gc,584,3,44413)
+CheckMemberSize(struct _GtkStyle,light_gc,40,3,44414)
+CheckOffset(struct _GtkStyle,light_gc,624,3,44414)
+CheckMemberSize(struct _GtkStyle,dark_gc,40,3,44415)
+CheckOffset(struct _GtkStyle,dark_gc,664,3,44415)
+CheckMemberSize(struct _GtkStyle,mid_gc,40,3,44416)
+CheckOffset(struct _GtkStyle,mid_gc,704,3,44416)
+CheckMemberSize(struct _GtkStyle,text_gc,40,3,44417)
+CheckOffset(struct _GtkStyle,text_gc,744,3,44417)
+CheckMemberSize(struct _GtkStyle,base_gc,40,3,44418)
+CheckOffset(struct _GtkStyle,base_gc,784,3,44418)
+CheckMemberSize(struct _GtkStyle,text_aa_gc,40,3,44419)
+CheckOffset(struct _GtkStyle,text_aa_gc,824,3,44419)
+CheckMemberSize(struct _GtkStyle,black_gc,8,3,44420)
+CheckOffset(struct _GtkStyle,black_gc,864,3,44420)
+CheckMemberSize(struct _GtkStyle,white_gc,8,3,44421)
+CheckOffset(struct _GtkStyle,white_gc,872,3,44421)
+CheckMemberSize(struct _GtkStyle,bg_pixmap,40,3,44422)
+CheckOffset(struct _GtkStyle,bg_pixmap,880,3,44422)
+CheckMemberSize(struct _GtkStyle,attach_count,4,3,44423)
+CheckOffset(struct _GtkStyle,attach_count,920,3,44423)
+CheckMemberSize(struct _GtkStyle,depth,4,3,44424)
+CheckOffset(struct _GtkStyle,depth,924,3,44424)
+CheckMemberSize(struct _GtkStyle,colormap,8,3,44425)
+CheckOffset(struct _GtkStyle,colormap,928,3,44425)
+CheckMemberSize(struct _GtkStyle,private_font,8,3,44426)
+CheckOffset(struct _GtkStyle,private_font,936,3,44426)
+CheckMemberSize(struct _GtkStyle,private_font_desc,8,3,44427)
+CheckOffset(struct _GtkStyle,private_font_desc,944,3,44427)
+CheckMemberSize(struct _GtkStyle,rc_style,8,3,44447)
+CheckOffset(struct _GtkStyle,rc_style,952,3,44447)
+CheckMemberSize(struct _GtkStyle,styles,8,3,44448)
+CheckOffset(struct _GtkStyle,styles,960,3,44448)
+CheckMemberSize(struct _GtkStyle,property_cache,8,3,44449)
+CheckOffset(struct _GtkStyle,property_cache,968,3,44449)
+CheckMemberSize(struct _GtkStyle,icon_factories,8,3,44450)
+CheckOffset(struct _GtkStyle,icon_factories,976,3,44450)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13046,0);
 Msg("Find size of _GtkStyle (13046)\n");
@@ -5544,6 +5444,34 @@ CheckMemberSize(struct _GtkRcStyle,rc_style_lists,8,11,44444)
 CheckOffset(struct _GtkRcStyle,rc_style_lists,360,11,44444)
 CheckMemberSize(struct _GtkRcStyle,icon_factories,8,11,44445)
 CheckOffset(struct _GtkRcStyle,icon_factories,368,11,44445)
+#elif __ia64__
+CheckTypeSize(struct _GtkRcStyle,384, 13050, 3)
+CheckMemberSize(struct _GtkRcStyle,name,8,3,44429)
+CheckOffset(struct _GtkRcStyle,name,24,3,44429)
+CheckMemberSize(struct _GtkRcStyle,bg_pixmap_name,40,3,44430)
+CheckOffset(struct _GtkRcStyle,bg_pixmap_name,32,3,44430)
+CheckMemberSize(struct _GtkRcStyle,font_desc,8,3,44431)
+CheckOffset(struct _GtkRcStyle,font_desc,72,3,44431)
+CheckMemberSize(struct _GtkRcStyle,color_flags,20,3,44436)
+CheckOffset(struct _GtkRcStyle,color_flags,80,3,44436)
+CheckMemberSize(struct _GtkRcStyle,fg,60,3,44437)
+CheckOffset(struct _GtkRcStyle,fg,100,3,44437)
+CheckMemberSize(struct _GtkRcStyle,bg,60,3,44438)
+CheckOffset(struct _GtkRcStyle,bg,160,3,44438)
+CheckMemberSize(struct _GtkRcStyle,text,60,3,44439)
+CheckOffset(struct _GtkRcStyle,text,220,3,44439)
+CheckMemberSize(struct _GtkRcStyle,base,60,3,44440)
+CheckOffset(struct _GtkRcStyle,base,280,3,44440)
+CheckMemberSize(struct _GtkRcStyle,xthickness,4,3,44441)
+CheckOffset(struct _GtkRcStyle,xthickness,340,3,44441)
+CheckMemberSize(struct _GtkRcStyle,ythickness,4,3,44442)
+CheckOffset(struct _GtkRcStyle,ythickness,344,3,44442)
+CheckMemberSize(struct _GtkRcStyle,rc_properties,8,3,44443)
+CheckOffset(struct _GtkRcStyle,rc_properties,352,3,44443)
+CheckMemberSize(struct _GtkRcStyle,rc_style_lists,8,3,44444)
+CheckOffset(struct _GtkRcStyle,rc_style_lists,360,3,44444)
+CheckMemberSize(struct _GtkRcStyle,icon_factories,8,3,44445)
+CheckOffset(struct _GtkRcStyle,icon_factories,368,3,44445)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13050,0);
 Msg("Find size of _GtkRcStyle (13050)\n");
@@ -5562,6 +5490,11 @@ CheckEnum("GTK_RC_FG",GTK_RC_FG,1);
 CheckEnum("GTK_RC_BG",GTK_RC_BG,2);
 CheckEnum("GTK_RC_TEXT",GTK_RC_TEXT,4);
 CheckEnum("GTK_RC_BASE",GTK_RC_BASE,8);
+#elif __ia64__
+CheckEnum("GTK_RC_FG",GTK_RC_FG,1);
+CheckEnum("GTK_RC_BG",GTK_RC_BG,2);
+CheckEnum("GTK_RC_TEXT",GTK_RC_TEXT,4);
+CheckEnum("GTK_RC_BASE",GTK_RC_BASE,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13052,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4431 (13052)\n");
@@ -5571,6 +5504,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4431 (13052)\n");
 CheckTypeSize(GtkRcFlags,4, 13053, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcFlags,4, 13053, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcFlags,4, 13053, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13053,0);
 Msg("Find size of GtkRcFlags (13053)\n");
@@ -5583,6 +5518,8 @@ Msg("Find size of GtkRcFlags (13053)\n");
 CheckTypeSize(GtkRcStyle,324, 13055, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcStyle,384, 13055, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcStyle,384, 13055, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13055,0);
 Msg("Find size of GtkRcStyle (13055)\n");
@@ -5592,6 +5529,8 @@ Msg("Find size of GtkRcStyle (13055)\n");
 CheckTypeSize(GtkRcStyle *,4, 13056, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcStyle *,8, 13056, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcStyle *,8, 13056, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13056,0);
 Msg("Find size of GtkRcStyle * (13056)\n");
@@ -5601,6 +5540,8 @@ Msg("Find size of GtkRcStyle * (13056)\n");
 CheckTypeSize(GtkStyle,752, 13057, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStyle,984, 13057, 11)
+#elif __ia64__
+CheckTypeSize(GtkStyle,984, 13057, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13057,0);
 Msg("Find size of GtkStyle (13057)\n");
@@ -5610,6 +5551,8 @@ Msg("Find size of GtkStyle (13057)\n");
 CheckTypeSize(GtkStyle *,4, 13058, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStyle *,8, 13058, 11)
+#elif __ia64__
+CheckTypeSize(GtkStyle *,8, 13058, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13058,0);
 Msg("Find size of GtkStyle * (13058)\n");
@@ -5623,6 +5566,10 @@ CheckOffset(struct _GtkRequisition,height,4,2,44453)
 CheckTypeSize(struct _GtkRequisition,8, 13059, 11)
 CheckMemberSize(struct _GtkRequisition,height,4,11,44453)
 CheckOffset(struct _GtkRequisition,height,4,11,44453)
+#elif __ia64__
+CheckTypeSize(struct _GtkRequisition,8, 13059, 3)
+CheckMemberSize(struct _GtkRequisition,height,4,3,44453)
+CheckOffset(struct _GtkRequisition,height,4,3,44453)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13059,0);
 Msg("Find size of _GtkRequisition (13059)\n");
@@ -5632,6 +5579,8 @@ Msg("Find size of _GtkRequisition (13059)\n");
 CheckTypeSize(GtkRequisition,8, 13060, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRequisition,8, 13060, 11)
+#elif __ia64__
+CheckTypeSize(GtkRequisition,8, 13060, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13060,0);
 Msg("Find size of GtkRequisition (13060)\n");
@@ -5641,6 +5590,8 @@ Msg("Find size of GtkRequisition (13060)\n");
 CheckTypeSize(GtkAllocation,16, 13061, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAllocation,16, 13061, 11)
+#elif __ia64__
+CheckTypeSize(GtkAllocation,16, 13061, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13061,0);
 Msg("Find size of GtkAllocation (13061)\n");
@@ -5650,6 +5601,8 @@ Msg("Find size of GtkAllocation (13061)\n");
 CheckTypeSize(GtkWidget,60, 13062, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWidget,96, 13062, 11)
+#elif __ia64__
+CheckTypeSize(GtkWidget,96, 13062, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13062,0);
 Msg("Find size of GtkWidget (13062)\n");
@@ -5659,6 +5612,8 @@ Msg("Find size of GtkWidget (13062)\n");
 CheckTypeSize(GtkWidget *,4, 13063, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWidget *,8, 13063, 11)
+#elif __ia64__
+CheckTypeSize(GtkWidget *,8, 13063, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13063,0);
 Msg("Find size of GtkWidget * (13063)\n");
@@ -5700,6 +5655,24 @@ CheckMemberSize(struct _GtkProgressBar,activity_blocks,4,11,44487)
 CheckOffset(struct _GtkProgressBar,activity_blocks,160,11,44487)
 CheckMemberSize(struct _GtkProgressBar,pulse_fraction,8,11,44488)
 CheckOffset(struct _GtkProgressBar,pulse_fraction,168,11,44488)
+#elif __ia64__
+CheckTypeSize(struct _GtkProgressBar,184, 13064, 3)
+CheckMemberSize(struct _GtkProgressBar,bar_style,4,3,44477)
+CheckOffset(struct _GtkProgressBar,bar_style,136,3,44477)
+CheckMemberSize(struct _GtkProgressBar,orientation,4,3,44482)
+CheckOffset(struct _GtkProgressBar,orientation,140,3,44482)
+CheckMemberSize(struct _GtkProgressBar,blocks,4,3,44483)
+CheckOffset(struct _GtkProgressBar,blocks,144,3,44483)
+CheckMemberSize(struct _GtkProgressBar,in_block,4,3,44484)
+CheckOffset(struct _GtkProgressBar,in_block,148,3,44484)
+CheckMemberSize(struct _GtkProgressBar,activity_pos,4,3,44485)
+CheckOffset(struct _GtkProgressBar,activity_pos,152,3,44485)
+CheckMemberSize(struct _GtkProgressBar,activity_step,4,3,44486)
+CheckOffset(struct _GtkProgressBar,activity_step,156,3,44486)
+CheckMemberSize(struct _GtkProgressBar,activity_blocks,4,3,44487)
+CheckOffset(struct _GtkProgressBar,activity_blocks,160,3,44487)
+CheckMemberSize(struct _GtkProgressBar,pulse_fraction,8,3,44488)
+CheckOffset(struct _GtkProgressBar,pulse_fraction,168,3,44488)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13064,0);
 Msg("Find size of _GtkProgressBar (13064)\n");
@@ -5729,6 +5702,18 @@ CheckMemberSize(struct _GtkProgress,x_align,4,11,44469)
 CheckOffset(struct _GtkProgress,x_align,120,11,44469)
 CheckMemberSize(struct _GtkProgress,y_align,4,11,44470)
 CheckOffset(struct _GtkProgress,y_align,124,11,44470)
+#elif __ia64__
+CheckTypeSize(struct _GtkProgress,136, 13065, 3)
+CheckMemberSize(struct _GtkProgress,adjustment,8,3,44466)
+CheckOffset(struct _GtkProgress,adjustment,96,3,44466)
+CheckMemberSize(struct _GtkProgress,offscreen_pixmap,8,3,44467)
+CheckOffset(struct _GtkProgress,offscreen_pixmap,104,3,44467)
+CheckMemberSize(struct _GtkProgress,format,8,3,44468)
+CheckOffset(struct _GtkProgress,format,112,3,44468)
+CheckMemberSize(struct _GtkProgress,x_align,4,3,44469)
+CheckOffset(struct _GtkProgress,x_align,120,3,44469)
+CheckMemberSize(struct _GtkProgress,y_align,4,3,44470)
+CheckOffset(struct _GtkProgress,y_align,124,3,44470)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13065,0);
 Msg("Find size of _GtkProgress (13065)\n");
@@ -5762,6 +5747,20 @@ CheckMemberSize(struct _GtkAdjustment,page_increment,8,11,44464)
 CheckOffset(struct _GtkAdjustment,page_increment,64,11,44464)
 CheckMemberSize(struct _GtkAdjustment,page_size,8,11,44465)
 CheckOffset(struct _GtkAdjustment,page_size,72,11,44465)
+#elif __ia64__
+CheckTypeSize(struct _GtkAdjustment,80, 13066, 3)
+CheckMemberSize(struct _GtkAdjustment,lower,8,3,44460)
+CheckOffset(struct _GtkAdjustment,lower,32,3,44460)
+CheckMemberSize(struct _GtkAdjustment,upper,8,3,44461)
+CheckOffset(struct _GtkAdjustment,upper,40,3,44461)
+CheckMemberSize(struct _GtkAdjustment,value,8,3,44462)
+CheckOffset(struct _GtkAdjustment,value,48,3,44462)
+CheckMemberSize(struct _GtkAdjustment,step_increment,8,3,44463)
+CheckOffset(struct _GtkAdjustment,step_increment,56,3,44463)
+CheckMemberSize(struct _GtkAdjustment,page_increment,8,3,44464)
+CheckOffset(struct _GtkAdjustment,page_increment,64,3,44464)
+CheckMemberSize(struct _GtkAdjustment,page_size,8,3,44465)
+CheckOffset(struct _GtkAdjustment,page_size,72,3,44465)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13066,0);
 Msg("Find size of _GtkAdjustment (13066)\n");
@@ -5771,6 +5770,8 @@ Msg("Find size of _GtkAdjustment (13066)\n");
 CheckTypeSize(GtkAdjustment,64, 13067, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAdjustment,80, 13067, 11)
+#elif __ia64__
+CheckTypeSize(GtkAdjustment,80, 13067, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13067,0);
 Msg("Find size of GtkAdjustment (13067)\n");
@@ -5780,6 +5781,8 @@ Msg("Find size of GtkAdjustment (13067)\n");
 CheckTypeSize(GtkAdjustment *,4, 13068, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAdjustment *,8, 13068, 11)
+#elif __ia64__
+CheckTypeSize(GtkAdjustment *,8, 13068, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13068,0);
 Msg("Find size of GtkAdjustment * (13068)\n");
@@ -5789,6 +5792,8 @@ Msg("Find size of GtkAdjustment * (13068)\n");
 CheckTypeSize(GtkProgress,84, 13069, 2)
 #elif __x86_64__
 CheckTypeSize(GtkProgress,136, 13069, 11)
+#elif __ia64__
+CheckTypeSize(GtkProgress,136, 13069, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13069,0);
 Msg("Find size of GtkProgress (13069)\n");
@@ -5800,6 +5805,9 @@ CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
 #elif __x86_64__
 CheckEnum("GTK_PROGRESS_CONTINUOUS",GTK_PROGRESS_CONTINUOUS,0);
 CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
+#elif __ia64__
+CheckEnum("GTK_PROGRESS_CONTINUOUS",GTK_PROGRESS_CONTINUOUS,0);
+CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13070,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2924 (13070)\n");
@@ -5809,6 +5817,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2924 (13070)\n");
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 2)
 #elif __x86_64__
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 11)
+#elif __ia64__
+CheckTypeSize(GtkProgressBarStyle,4, 13071, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13071,0);
 Msg("Find size of GtkProgressBarStyle (13071)\n");
@@ -5824,6 +5834,11 @@ CheckEnum("GTK_PROGRESS_LEFT_TO_RIGHT",GTK_PROGRESS_LEFT_TO_RIGHT,0);
 CheckEnum("GTK_PROGRESS_RIGHT_TO_LEFT",GTK_PROGRESS_RIGHT_TO_LEFT,1);
 CheckEnum("GTK_PROGRESS_BOTTOM_TO_TOP",GTK_PROGRESS_BOTTOM_TO_TOP,2);
 CheckEnum("GTK_PROGRESS_TOP_TO_BOTTOM",GTK_PROGRESS_TOP_TO_BOTTOM,3);
+#elif __ia64__
+CheckEnum("GTK_PROGRESS_LEFT_TO_RIGHT",GTK_PROGRESS_LEFT_TO_RIGHT,0);
+CheckEnum("GTK_PROGRESS_RIGHT_TO_LEFT",GTK_PROGRESS_RIGHT_TO_LEFT,1);
+CheckEnum("GTK_PROGRESS_BOTTOM_TO_TOP",GTK_PROGRESS_BOTTOM_TO_TOP,2);
+CheckEnum("GTK_PROGRESS_TOP_TO_BOTTOM",GTK_PROGRESS_TOP_TO_BOTTOM,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13072,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2925 (13072)\n");
@@ -5833,6 +5848,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2925 (13072)\n");
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 2)
 #elif __x86_64__
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 11)
+#elif __ia64__
+CheckTypeSize(GtkProgressBarOrientation,4, 13073, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13073,0);
 Msg("Find size of GtkProgressBarOrientation (13073)\n");
@@ -5842,6 +5859,8 @@ Msg("Find size of GtkProgressBarOrientation (13073)\n");
 CheckTypeSize(GtkProgressBar,124, 13074, 2)
 #elif __x86_64__
 CheckTypeSize(GtkProgressBar,184, 13074, 11)
+#elif __ia64__
+CheckTypeSize(GtkProgressBar,184, 13074, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13074,0);
 Msg("Find size of GtkProgressBar (13074)\n");
@@ -5851,6 +5870,8 @@ Msg("Find size of GtkProgressBar (13074)\n");
 CheckTypeSize(GtkProgressBar *,4, 13075, 2)
 #elif __x86_64__
 CheckTypeSize(GtkProgressBar *,8, 13075, 11)
+#elif __ia64__
+CheckTypeSize(GtkProgressBar *,8, 13075, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13075,0);
 Msg("Find size of GtkProgressBar * (13075)\n");
@@ -5884,6 +5905,20 @@ CheckMemberSize(struct _GtkTextBuffer,log_attr_cache,8,11,44501)
 CheckOffset(struct _GtkTextBuffer,log_attr_cache,56,11,44501)
 CheckMemberSize(struct _GtkTextBuffer,user_action_count,4,11,44502)
 CheckOffset(struct _GtkTextBuffer,user_action_count,64,11,44502)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextBuffer,72, 13076, 3)
+CheckMemberSize(struct _GtkTextBuffer,tag_table,8,3,44497)
+CheckOffset(struct _GtkTextBuffer,tag_table,24,3,44497)
+CheckMemberSize(struct _GtkTextBuffer,btree,8,3,44498)
+CheckOffset(struct _GtkTextBuffer,btree,32,3,44498)
+CheckMemberSize(struct _GtkTextBuffer,clipboard_contents_buffers,8,3,44499)
+CheckOffset(struct _GtkTextBuffer,clipboard_contents_buffers,40,3,44499)
+CheckMemberSize(struct _GtkTextBuffer,selection_clipboards,8,3,44500)
+CheckOffset(struct _GtkTextBuffer,selection_clipboards,48,3,44500)
+CheckMemberSize(struct _GtkTextBuffer,log_attr_cache,8,3,44501)
+CheckOffset(struct _GtkTextBuffer,log_attr_cache,56,3,44501)
+CheckMemberSize(struct _GtkTextBuffer,user_action_count,4,3,44502)
+CheckOffset(struct _GtkTextBuffer,user_action_count,64,3,44502)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13076,0);
 Msg("Find size of _GtkTextBuffer (13076)\n");
@@ -5909,6 +5944,16 @@ CheckMemberSize(struct _GtkTextTagTable,anon_count,4,11,44495)
 CheckOffset(struct _GtkTextTagTable,anon_count,40,11,44495)
 CheckMemberSize(struct _GtkTextTagTable,buffers,8,11,44496)
 CheckOffset(struct _GtkTextTagTable,buffers,48,11,44496)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextTagTable,56, 13077, 3)
+CheckMemberSize(struct _GtkTextTagTable,hash,8,3,44493)
+CheckOffset(struct _GtkTextTagTable,hash,24,3,44493)
+CheckMemberSize(struct _GtkTextTagTable,anonymous,8,3,44494)
+CheckOffset(struct _GtkTextTagTable,anonymous,32,3,44494)
+CheckMemberSize(struct _GtkTextTagTable,anon_count,4,3,44495)
+CheckOffset(struct _GtkTextTagTable,anon_count,40,3,44495)
+CheckMemberSize(struct _GtkTextTagTable,buffers,8,3,44496)
+CheckOffset(struct _GtkTextTagTable,buffers,48,3,44496)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13077,0);
 Msg("Find size of _GtkTextTagTable (13077)\n");
@@ -5918,6 +5963,8 @@ Msg("Find size of _GtkTextTagTable (13077)\n");
 CheckTypeSize(GtkTextTagTable,28, 13078, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextTagTable,56, 13078, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextTagTable,56, 13078, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13078,0);
 Msg("Find size of GtkTextTagTable (13078)\n");
@@ -5927,6 +5974,8 @@ Msg("Find size of GtkTextTagTable (13078)\n");
 CheckTypeSize(GtkTextTagTable *,4, 13079, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextTagTable *,8, 13079, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextTagTable *,8, 13079, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13079,0);
 Msg("Find size of GtkTextTagTable * (13079)\n");
@@ -5936,6 +5985,8 @@ Msg("Find size of GtkTextTagTable * (13079)\n");
 CheckTypeSize(GtkTextBTree,0, 13081, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextBTree,0, 13081, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextBTree,0, 13081, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13081,0);
 Msg("Find size of GtkTextBTree (13081)\n");
@@ -5945,6 +5996,8 @@ Msg("Find size of GtkTextBTree (13081)\n");
 CheckTypeSize(GtkTextBTree *,4, 13082, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextBTree *,8, 13082, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextBTree *,8, 13082, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13082,0);
 Msg("Find size of GtkTextBTree * (13082)\n");
@@ -5954,6 +6007,8 @@ Msg("Find size of GtkTextBTree * (13082)\n");
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextLogAttrCache,0, 13084, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13084,0);
 Msg("Find size of GtkTextLogAttrCache (13084)\n");
@@ -5963,6 +6018,8 @@ Msg("Find size of GtkTextLogAttrCache (13084)\n");
 CheckTypeSize(GtkTextLogAttrCache *,4, 13085, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextLogAttrCache *,8, 13085, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextLogAttrCache *,8, 13085, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13085,0);
 Msg("Find size of GtkTextLogAttrCache * (13085)\n");
@@ -5972,6 +6029,8 @@ Msg("Find size of GtkTextLogAttrCache * (13085)\n");
 CheckTypeSize(GtkTextBuffer,40, 13086, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextBuffer,72, 13086, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextBuffer,72, 13086, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13086,0);
 Msg("Find size of GtkTextBuffer (13086)\n");
@@ -5981,6 +6040,8 @@ Msg("Find size of GtkTextBuffer (13086)\n");
 CheckTypeSize(GtkTextBuffer *,4, 13087, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextBuffer *,8, 13087, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextBuffer *,8, 13087, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13087,0);
 Msg("Find size of GtkTextBuffer * (13087)\n");
@@ -6042,6 +6103,34 @@ CheckMemberSize(struct _GtkTextIter,dummy13,4,11,44516)
 CheckOffset(struct _GtkTextIter,dummy13,64,11,44516)
 CheckMemberSize(struct _GtkTextIter,dummy14,8,11,44517)
 CheckOffset(struct _GtkTextIter,dummy14,72,11,44517)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextIter,80, 13088, 3)
+CheckMemberSize(struct _GtkTextIter,dummy2,8,3,44505)
+CheckOffset(struct _GtkTextIter,dummy2,8,3,44505)
+CheckMemberSize(struct _GtkTextIter,dummy3,4,3,44506)
+CheckOffset(struct _GtkTextIter,dummy3,16,3,44506)
+CheckMemberSize(struct _GtkTextIter,dummy4,4,3,44507)
+CheckOffset(struct _GtkTextIter,dummy4,20,3,44507)
+CheckMemberSize(struct _GtkTextIter,dummy5,4,3,44508)
+CheckOffset(struct _GtkTextIter,dummy5,24,3,44508)
+CheckMemberSize(struct _GtkTextIter,dummy6,4,3,44509)
+CheckOffset(struct _GtkTextIter,dummy6,28,3,44509)
+CheckMemberSize(struct _GtkTextIter,dummy7,4,3,44510)
+CheckOffset(struct _GtkTextIter,dummy7,32,3,44510)
+CheckMemberSize(struct _GtkTextIter,dummy8,4,3,44511)
+CheckOffset(struct _GtkTextIter,dummy8,36,3,44511)
+CheckMemberSize(struct _GtkTextIter,dummy9,8,3,44512)
+CheckOffset(struct _GtkTextIter,dummy9,40,3,44512)
+CheckMemberSize(struct _GtkTextIter,dummy10,8,3,44513)
+CheckOffset(struct _GtkTextIter,dummy10,48,3,44513)
+CheckMemberSize(struct _GtkTextIter,dummy11,4,3,44514)
+CheckOffset(struct _GtkTextIter,dummy11,56,3,44514)
+CheckMemberSize(struct _GtkTextIter,dummy12,4,3,44515)
+CheckOffset(struct _GtkTextIter,dummy12,60,3,44515)
+CheckMemberSize(struct _GtkTextIter,dummy13,4,3,44516)
+CheckOffset(struct _GtkTextIter,dummy13,64,3,44516)
+CheckMemberSize(struct _GtkTextIter,dummy14,8,3,44517)
+CheckOffset(struct _GtkTextIter,dummy14,72,3,44517)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13088,0);
 Msg("Find size of _GtkTextIter (13088)\n");
@@ -6051,6 +6140,8 @@ Msg("Find size of _GtkTextIter (13088)\n");
 CheckTypeSize(GtkTextIter,56, 13089, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextIter,80, 13089, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextIter,80, 13089, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13089,0);
 Msg("Find size of GtkTextIter (13089)\n");
@@ -6060,6 +6151,8 @@ Msg("Find size of GtkTextIter (13089)\n");
 CheckTypeSize(GtkTextIter *,4, 13090, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextIter *,8, 13090, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextIter *,8, 13090, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13090,0);
 Msg("Find size of GtkTextIter * (13090)\n");
@@ -6069,6 +6162,8 @@ Msg("Find size of GtkTextIter * (13090)\n");
 CheckTypeSize(GtkType,4, 13091, 2)
 #elif __x86_64__
 CheckTypeSize(GtkType,8, 13091, 11)
+#elif __ia64__
+CheckTypeSize(GtkType,8, 13091, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13091,0);
 Msg("Find size of GtkType (13091)\n");
@@ -6082,6 +6177,10 @@ CheckOffset(struct _GtkComboBox,priv,72,2,44528)
 CheckTypeSize(struct _GtkComboBox,128, 13092, 11)
 CheckMemberSize(struct _GtkComboBox,priv,8,11,44528)
 CheckOffset(struct _GtkComboBox,priv,120,11,44528)
+#elif __ia64__
+CheckTypeSize(struct _GtkComboBox,128, 13092, 3)
+CheckMemberSize(struct _GtkComboBox,priv,8,3,44528)
+CheckOffset(struct _GtkComboBox,priv,120,3,44528)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13092,0);
 Msg("Find size of _GtkComboBox (13092)\n");
@@ -6095,6 +6194,10 @@ CheckOffset(struct _GtkBin,child,68,2,44526)
 CheckTypeSize(struct _GtkBin,120, 13093, 11)
 CheckMemberSize(struct _GtkBin,child,8,11,44526)
 CheckOffset(struct _GtkBin,child,112,11,44526)
+#elif __ia64__
+CheckTypeSize(struct _GtkBin,120, 13093, 3)
+CheckMemberSize(struct _GtkBin,child,8,3,44526)
+CheckOffset(struct _GtkBin,child,112,3,44526)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13093,0);
 Msg("Find size of _GtkBin (13093)\n");
@@ -6108,6 +6211,10 @@ CheckOffset(struct _GtkContainer,focus_child,60,2,44519)
 CheckTypeSize(struct _GtkContainer,112, 13094, 11)
 CheckMemberSize(struct _GtkContainer,focus_child,8,11,44519)
 CheckOffset(struct _GtkContainer,focus_child,96,11,44519)
+#elif __ia64__
+CheckTypeSize(struct _GtkContainer,112, 13094, 3)
+CheckMemberSize(struct _GtkContainer,focus_child,8,3,44519)
+CheckOffset(struct _GtkContainer,focus_child,96,3,44519)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13094,0);
 Msg("Find size of _GtkContainer (13094)\n");
@@ -6117,6 +6224,8 @@ Msg("Find size of _GtkContainer (13094)\n");
 CheckTypeSize(GtkContainer,68, 13095, 2)
 #elif __x86_64__
 CheckTypeSize(GtkContainer,112, 13095, 11)
+#elif __ia64__
+CheckTypeSize(GtkContainer,112, 13095, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13095,0);
 Msg("Find size of GtkContainer (13095)\n");
@@ -6126,6 +6235,8 @@ Msg("Find size of GtkContainer (13095)\n");
 CheckTypeSize(GtkBin,72, 13096, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBin,120, 13096, 11)
+#elif __ia64__
+CheckTypeSize(GtkBin,120, 13096, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13096,0);
 Msg("Find size of GtkBin (13096)\n");
@@ -6135,6 +6246,8 @@ Msg("Find size of GtkBin (13096)\n");
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBoxPrivate,0, 13098, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13098,0);
 Msg("Find size of GtkComboBoxPrivate (13098)\n");
@@ -6144,6 +6257,8 @@ Msg("Find size of GtkComboBoxPrivate (13098)\n");
 CheckTypeSize(GtkComboBoxPrivate *,4, 13099, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBoxPrivate *,8, 13099, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBoxPrivate *,8, 13099, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13099,0);
 Msg("Find size of GtkComboBoxPrivate * (13099)\n");
@@ -6153,6 +6268,8 @@ Msg("Find size of GtkComboBoxPrivate * (13099)\n");
 CheckTypeSize(GtkComboBox,76, 13100, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBox,128, 13100, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBox,128, 13100, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13100,0);
 Msg("Find size of GtkComboBox (13100)\n");
@@ -6162,6 +6279,8 @@ Msg("Find size of GtkComboBox (13100)\n");
 CheckTypeSize(GtkComboBox *,4, 13101, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBox *,8, 13101, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBox *,8, 13101, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13101,0);
 Msg("Find size of GtkComboBox * (13101)\n");
@@ -6187,6 +6306,16 @@ CheckMemberSize(struct _GtkMisc,xpad,2,11,44532)
 CheckOffset(struct _GtkMisc,xpad,104,11,44532)
 CheckMemberSize(struct _GtkMisc,ypad,2,11,44533)
 CheckOffset(struct _GtkMisc,ypad,106,11,44533)
+#elif __ia64__
+CheckTypeSize(struct _GtkMisc,112, 13102, 3)
+CheckMemberSize(struct _GtkMisc,xalign,4,3,44530)
+CheckOffset(struct _GtkMisc,xalign,96,3,44530)
+CheckMemberSize(struct _GtkMisc,yalign,4,3,44531)
+CheckOffset(struct _GtkMisc,yalign,100,3,44531)
+CheckMemberSize(struct _GtkMisc,xpad,2,3,44532)
+CheckOffset(struct _GtkMisc,xpad,104,3,44532)
+CheckMemberSize(struct _GtkMisc,ypad,2,3,44533)
+CheckOffset(struct _GtkMisc,ypad,106,3,44533)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13102,0);
 Msg("Find size of _GtkMisc (13102)\n");
@@ -6196,6 +6325,8 @@ Msg("Find size of _GtkMisc (13102)\n");
 CheckTypeSize(GtkMisc,72, 13103, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMisc,112, 13103, 11)
+#elif __ia64__
+CheckTypeSize(GtkMisc,112, 13103, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13103,0);
 Msg("Find size of GtkMisc (13103)\n");
@@ -6205,6 +6336,8 @@ Msg("Find size of GtkMisc (13103)\n");
 CheckTypeSize(GtkMisc *,4, 13104, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMisc *,8, 13104, 11)
+#elif __ia64__
+CheckTypeSize(GtkMisc *,8, 13104, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13104,0);
 Msg("Find size of GtkMisc * (13104)\n");
@@ -6242,6 +6375,22 @@ CheckMemberSize(struct _GtkStatusbar,seq_message_id,4,11,44545)
 CheckOffset(struct _GtkStatusbar,seq_message_id,164,11,44545)
 CheckMemberSize(struct _GtkStatusbar,grip_window,8,11,44546)
 CheckOffset(struct _GtkStatusbar,grip_window,168,11,44546)
+#elif __ia64__
+CheckTypeSize(struct _GtkStatusbar,184, 13105, 3)
+CheckMemberSize(struct _GtkStatusbar,frame,8,3,44540)
+CheckOffset(struct _GtkStatusbar,frame,128,3,44540)
+CheckMemberSize(struct _GtkStatusbar,label,8,3,44541)
+CheckOffset(struct _GtkStatusbar,label,136,3,44541)
+CheckMemberSize(struct _GtkStatusbar,messages,8,3,44542)
+CheckOffset(struct _GtkStatusbar,messages,144,3,44542)
+CheckMemberSize(struct _GtkStatusbar,keys,8,3,44543)
+CheckOffset(struct _GtkStatusbar,keys,152,3,44543)
+CheckMemberSize(struct _GtkStatusbar,seq_context_id,4,3,44544)
+CheckOffset(struct _GtkStatusbar,seq_context_id,160,3,44544)
+CheckMemberSize(struct _GtkStatusbar,seq_message_id,4,3,44545)
+CheckOffset(struct _GtkStatusbar,seq_message_id,164,3,44545)
+CheckMemberSize(struct _GtkStatusbar,grip_window,8,3,44546)
+CheckOffset(struct _GtkStatusbar,grip_window,168,3,44546)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13105,0);
 Msg("Find size of _GtkStatusbar (13105)\n");
@@ -6255,6 +6404,10 @@ CheckOffset(struct _GtkHBox,box,0,2,44538)
 CheckTypeSize(struct _GtkHBox,128, 13106, 11)
 Msg("Missing member data for _GtkHBox on x86-64\n");
 CheckOffset(struct _GtkHBox,box,0,11,44538)
+#elif __ia64__
+CheckTypeSize(struct _GtkHBox,128, 13106, 3)
+Msg("Missing member data for _GtkHBox on IA64\n");
+CheckOffset(struct _GtkHBox,box,0,3,44538)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13106,0);
 Msg("Find size of _GtkHBox (13106)\n");
@@ -6272,6 +6425,12 @@ CheckMemberSize(struct _GtkBox,children,8,11,44535)
 CheckOffset(struct _GtkBox,children,112,11,44535)
 CheckMemberSize(struct _GtkBox,spacing,2,11,44536)
 CheckOffset(struct _GtkBox,spacing,120,11,44536)
+#elif __ia64__
+CheckTypeSize(struct _GtkBox,128, 13107, 3)
+CheckMemberSize(struct _GtkBox,children,8,3,44535)
+CheckOffset(struct _GtkBox,children,112,3,44535)
+CheckMemberSize(struct _GtkBox,spacing,2,3,44536)
+CheckOffset(struct _GtkBox,spacing,120,3,44536)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13107,0);
 Msg("Find size of _GtkBox (13107)\n");
@@ -6281,6 +6440,8 @@ Msg("Find size of _GtkBox (13107)\n");
 CheckTypeSize(GtkBox,76, 13108, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBox,128, 13108, 11)
+#elif __ia64__
+CheckTypeSize(GtkBox,128, 13108, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13108,0);
 Msg("Find size of GtkBox (13108)\n");
@@ -6290,6 +6451,8 @@ Msg("Find size of GtkBox (13108)\n");
 CheckTypeSize(GtkHBox,76, 13109, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHBox,128, 13109, 11)
+#elif __ia64__
+CheckTypeSize(GtkHBox,128, 13109, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13109,0);
 Msg("Find size of GtkHBox (13109)\n");
@@ -6299,6 +6462,8 @@ Msg("Find size of GtkHBox (13109)\n");
 CheckTypeSize(GtkStatusbar,108, 13110, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStatusbar,184, 13110, 11)
+#elif __ia64__
+CheckTypeSize(GtkStatusbar,184, 13110, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13110,0);
 Msg("Find size of GtkStatusbar (13110)\n");
@@ -6308,6 +6473,8 @@ Msg("Find size of GtkStatusbar (13110)\n");
 CheckTypeSize(GtkStatusbar *,4, 13111, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStatusbar *,8, 13111, 11)
+#elif __ia64__
+CheckTypeSize(GtkStatusbar *,8, 13111, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13111,0);
 Msg("Find size of GtkStatusbar * (13111)\n");
@@ -6321,6 +6488,10 @@ CheckOffset(struct _GtkTargetList,ref_count,4,2,44549)
 CheckTypeSize(struct _GtkTargetList,16, 13112, 11)
 CheckMemberSize(struct _GtkTargetList,ref_count,4,11,44549)
 CheckOffset(struct _GtkTargetList,ref_count,8,11,44549)
+#elif __ia64__
+CheckTypeSize(struct _GtkTargetList,16, 13112, 3)
+CheckMemberSize(struct _GtkTargetList,ref_count,4,3,44549)
+CheckOffset(struct _GtkTargetList,ref_count,8,3,44549)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13112,0);
 Msg("Find size of _GtkTargetList (13112)\n");
@@ -6330,6 +6501,8 @@ Msg("Find size of _GtkTargetList (13112)\n");
 CheckTypeSize(GtkTargetList,8, 13113, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTargetList,16, 13113, 11)
+#elif __ia64__
+CheckTypeSize(GtkTargetList,16, 13113, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13113,0);
 Msg("Find size of GtkTargetList (13113)\n");
@@ -6339,6 +6512,8 @@ Msg("Find size of GtkTargetList (13113)\n");
 CheckTypeSize(GtkTargetList *,4, 13114, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTargetList *,8, 13114, 11)
+#elif __ia64__
+CheckTypeSize(GtkTargetList *,8, 13114, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13114,0);
 Msg("Find size of GtkTargetList * (13114)\n");
@@ -6420,6 +6595,44 @@ CheckMemberSize(struct _GtkWindow,mnemonic_modifier,4,11,44589)
 CheckOffset(struct _GtkWindow,mnemonic_modifier,228,11,44589)
 CheckMemberSize(struct _GtkWindow,screen,8,11,44590)
 CheckOffset(struct _GtkWindow,screen,232,11,44590)
+#elif __ia64__
+CheckTypeSize(struct _GtkWindow,240, 13115, 3)
+CheckMemberSize(struct _GtkWindow,title,8,3,44551)
+CheckOffset(struct _GtkWindow,title,120,3,44551)
+CheckMemberSize(struct _GtkWindow,wmclass_name,8,3,44552)
+CheckOffset(struct _GtkWindow,wmclass_name,128,3,44552)
+CheckMemberSize(struct _GtkWindow,wmclass_class,8,3,44553)
+CheckOffset(struct _GtkWindow,wmclass_class,136,3,44553)
+CheckMemberSize(struct _GtkWindow,wm_role,8,3,44554)
+CheckOffset(struct _GtkWindow,wm_role,144,3,44554)
+CheckMemberSize(struct _GtkWindow,focus_widget,8,3,44555)
+CheckOffset(struct _GtkWindow,focus_widget,152,3,44555)
+CheckMemberSize(struct _GtkWindow,default_widget,8,3,44556)
+CheckOffset(struct _GtkWindow,default_widget,160,3,44556)
+CheckMemberSize(struct _GtkWindow,transient_parent,8,3,44557)
+CheckOffset(struct _GtkWindow,transient_parent,168,3,44557)
+CheckMemberSize(struct _GtkWindow,geometry_info,8,3,44558)
+CheckOffset(struct _GtkWindow,geometry_info,176,3,44558)
+CheckMemberSize(struct _GtkWindow,frame,8,3,44559)
+CheckOffset(struct _GtkWindow,frame,184,3,44559)
+CheckMemberSize(struct _GtkWindow,group,8,3,44562)
+CheckOffset(struct _GtkWindow,group,192,3,44562)
+CheckMemberSize(struct _GtkWindow,configure_request_count,2,3,44563)
+CheckOffset(struct _GtkWindow,configure_request_count,200,3,44563)
+CheckMemberSize(struct _GtkWindow,frame_left,4,3,44584)
+CheckOffset(struct _GtkWindow,frame_left,208,3,44584)
+CheckMemberSize(struct _GtkWindow,frame_top,4,3,44585)
+CheckOffset(struct _GtkWindow,frame_top,212,3,44585)
+CheckMemberSize(struct _GtkWindow,frame_right,4,3,44586)
+CheckOffset(struct _GtkWindow,frame_right,216,3,44586)
+CheckMemberSize(struct _GtkWindow,frame_bottom,4,3,44587)
+CheckOffset(struct _GtkWindow,frame_bottom,220,3,44587)
+CheckMemberSize(struct _GtkWindow,keys_changed_handler,4,3,44588)
+CheckOffset(struct _GtkWindow,keys_changed_handler,224,3,44588)
+CheckMemberSize(struct _GtkWindow,mnemonic_modifier,4,3,44589)
+CheckOffset(struct _GtkWindow,mnemonic_modifier,228,3,44589)
+CheckMemberSize(struct _GtkWindow,screen,8,3,44590)
+CheckOffset(struct _GtkWindow,screen,232,3,44590)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13115,0);
 Msg("Find size of _GtkWindow (13115)\n");
@@ -6429,6 +6642,8 @@ Msg("Find size of _GtkWindow (13115)\n");
 CheckTypeSize(GtkWindow,148, 13116, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindow,240, 13116, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindow,240, 13116, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13116,0);
 Msg("Find size of GtkWindow (13116)\n");
@@ -6438,6 +6653,8 @@ Msg("Find size of GtkWindow (13116)\n");
 CheckTypeSize(GtkWindow *,4, 13117, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindow *,8, 13117, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindow *,8, 13117, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13117,0);
 Msg("Find size of GtkWindow * (13117)\n");
@@ -6447,6 +6664,8 @@ Msg("Find size of GtkWindow * (13117)\n");
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13119,0);
 Msg("Find size of GtkWindowGeometryInfo (13119)\n");
@@ -6456,6 +6675,8 @@ Msg("Find size of GtkWindowGeometryInfo (13119)\n");
 CheckTypeSize(GtkWindowGeometryInfo *,4, 13120, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowGeometryInfo *,8, 13120, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowGeometryInfo *,8, 13120, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13120,0);
 Msg("Find size of GtkWindowGeometryInfo * (13120)\n");
@@ -6469,6 +6690,10 @@ CheckOffset(struct _GtkWindowGroup,grabs,12,2,44561)
 CheckTypeSize(struct _GtkWindowGroup,32, 13121, 11)
 CheckMemberSize(struct _GtkWindowGroup,grabs,8,11,44561)
 CheckOffset(struct _GtkWindowGroup,grabs,24,11,44561)
+#elif __ia64__
+CheckTypeSize(struct _GtkWindowGroup,32, 13121, 3)
+CheckMemberSize(struct _GtkWindowGroup,grabs,8,3,44561)
+CheckOffset(struct _GtkWindowGroup,grabs,24,3,44561)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13121,0);
 Msg("Find size of _GtkWindowGroup (13121)\n");
@@ -6478,6 +6703,8 @@ Msg("Find size of _GtkWindowGroup (13121)\n");
 CheckTypeSize(GtkWindowGroup,16, 13122, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowGroup,32, 13122, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowGroup,32, 13122, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13122,0);
 Msg("Find size of GtkWindowGroup (13122)\n");
@@ -6487,6 +6714,8 @@ Msg("Find size of GtkWindowGroup (13122)\n");
 CheckTypeSize(GtkWindowGroup *,4, 13123, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowGroup *,8, 13123, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowGroup *,8, 13123, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13123,0);
 Msg("Find size of GtkWindowGroup * (13123)\n");
@@ -6504,6 +6733,12 @@ CheckEnum("GTK_STATE_ACTIVE",GTK_STATE_ACTIVE,1);
 CheckEnum("GTK_STATE_PRELIGHT",GTK_STATE_PRELIGHT,2);
 CheckEnum("GTK_STATE_SELECTED",GTK_STATE_SELECTED,3);
 CheckEnum("GTK_STATE_INSENSITIVE",GTK_STATE_INSENSITIVE,4);
+#elif __ia64__
+CheckEnum("GTK_STATE_NORMAL",GTK_STATE_NORMAL,0);
+CheckEnum("GTK_STATE_ACTIVE",GTK_STATE_ACTIVE,1);
+CheckEnum("GTK_STATE_PRELIGHT",GTK_STATE_PRELIGHT,2);
+CheckEnum("GTK_STATE_SELECTED",GTK_STATE_SELECTED,3);
+CheckEnum("GTK_STATE_INSENSITIVE",GTK_STATE_INSENSITIVE,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13124,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4427 (13124)\n");
@@ -6513,6 +6748,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4427 (13124)\n");
 CheckTypeSize(GtkStateType,4, 13125, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStateType,4, 13125, 11)
+#elif __ia64__
+CheckTypeSize(GtkStateType,4, 13125, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13125,0);
 Msg("Find size of GtkStateType (13125)\n");
@@ -6522,6 +6759,8 @@ Msg("Find size of GtkStateType (13125)\n");
 CheckTypeSize(GtkTreeRowReference,0, 13127, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeRowReference,0, 13127, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13127,0);
 Msg("Find size of GtkTreeRowReference (13127)\n");
@@ -6531,6 +6770,8 @@ Msg("Find size of GtkTreeRowReference (13127)\n");
 CheckTypeSize(GtkTreeRowReference *,4, 13128, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeRowReference *,8, 13128, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeRowReference *,8, 13128, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13128,0);
 Msg("Find size of GtkTreeRowReference * (13128)\n");
@@ -6542,6 +6783,9 @@ CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
 #elif __x86_64__
 CheckEnum("GTK_TREE_MODEL_ITERS_PERSIST",GTK_TREE_MODEL_ITERS_PERSIST,1);
 CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
+#elif __ia64__
+CheckEnum("GTK_TREE_MODEL_ITERS_PERSIST",GTK_TREE_MODEL_ITERS_PERSIST,1);
+CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13129,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4019 (13129)\n");
@@ -6551,6 +6795,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4019 (13129)\n");
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelFlags,4, 13130, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13130,0);
 Msg("Find size of GtkTreeModelFlags (13130)\n");
@@ -6560,6 +6806,8 @@ Msg("Find size of GtkTreeModelFlags (13130)\n");
 CheckTypeSize(GtkTreeModel,0, 13132, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModel,0, 13132, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModel,0, 13132, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13132,0);
 Msg("Find size of GtkTreeModel (13132)\n");
@@ -6569,6 +6817,8 @@ Msg("Find size of GtkTreeModel (13132)\n");
 CheckTypeSize(GtkTreeModel *,4, 13133, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModel *,8, 13133, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModel *,8, 13133, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13133,0);
 Msg("Find size of GtkTreeModel * (13133)\n");
@@ -6586,6 +6836,12 @@ CheckMemberSize(struct _GtkTargetEntry,flags,4,11,44599)
 CheckOffset(struct _GtkTargetEntry,flags,8,11,44599)
 CheckMemberSize(struct _GtkTargetEntry,info,4,11,44600)
 CheckOffset(struct _GtkTargetEntry,info,12,11,44600)
+#elif __ia64__
+CheckTypeSize(struct _GtkTargetEntry,16, 13134, 3)
+CheckMemberSize(struct _GtkTargetEntry,flags,4,3,44599)
+CheckOffset(struct _GtkTargetEntry,flags,8,3,44599)
+CheckMemberSize(struct _GtkTargetEntry,info,4,3,44600)
+CheckOffset(struct _GtkTargetEntry,info,12,3,44600)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13134,0);
 Msg("Find size of _GtkTargetEntry (13134)\n");
@@ -6595,6 +6851,8 @@ Msg("Find size of _GtkTargetEntry (13134)\n");
 CheckTypeSize(GtkTargetEntry,12, 13135, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTargetEntry,16, 13135, 11)
+#elif __ia64__
+CheckTypeSize(GtkTargetEntry,16, 13135, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13135,0);
 Msg("Find size of GtkTargetEntry (13135)\n");
@@ -6604,6 +6862,8 @@ Msg("Find size of GtkTargetEntry (13135)\n");
 CheckTypeSize(const GtkTargetEntry,12, 13136, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkTargetEntry,16, 13136, 11)
+#elif __ia64__
+CheckTypeSize(const GtkTargetEntry,16, 13136, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13136,0);
 Msg("Find size of const GtkTargetEntry (13136)\n");
@@ -6611,6 +6871,7 @@ Msg("Find size of const GtkTargetEntry (13136)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13137,0);
 Msg("Find size of const GtkTargetEntry * (13137)\n");
@@ -6716,6 +6977,56 @@ CheckMemberSize(struct _GtkEntry,invisible_char,4,11,44641)
 CheckOffset(struct _GtkEntry,invisible_char,200,11,44641)
 CheckMemberSize(struct _GtkEntry,width_chars,4,11,44642)
 CheckOffset(struct _GtkEntry,width_chars,204,11,44642)
+#elif __ia64__
+CheckTypeSize(struct _GtkEntry,208, 13138, 3)
+CheckMemberSize(struct _GtkEntry,text,8,3,44602)
+CheckOffset(struct _GtkEntry,text,96,3,44602)
+CheckMemberSize(struct _GtkEntry,text_length,2,3,44607)
+CheckOffset(struct _GtkEntry,text_length,106,3,44607)
+CheckMemberSize(struct _GtkEntry,text_max_length,2,3,44608)
+CheckOffset(struct _GtkEntry,text_max_length,108,3,44608)
+CheckMemberSize(struct _GtkEntry,text_area,8,3,44609)
+CheckOffset(struct _GtkEntry,text_area,112,3,44609)
+CheckMemberSize(struct _GtkEntry,im_context,8,3,44611)
+CheckOffset(struct _GtkEntry,im_context,120,3,44611)
+CheckMemberSize(struct _GtkEntry,popup_menu,8,3,44612)
+CheckOffset(struct _GtkEntry,popup_menu,128,3,44612)
+CheckMemberSize(struct _GtkEntry,current_pos,4,3,44613)
+CheckOffset(struct _GtkEntry,current_pos,136,3,44613)
+CheckMemberSize(struct _GtkEntry,selection_bound,4,3,44614)
+CheckOffset(struct _GtkEntry,selection_bound,140,3,44614)
+CheckMemberSize(struct _GtkEntry,cached_layout,8,3,44615)
+CheckOffset(struct _GtkEntry,cached_layout,144,3,44615)
+CheckMemberSize(struct _GtkEntry,button,4,3,44628)
+CheckOffset(struct _GtkEntry,button,156,3,44628)
+CheckMemberSize(struct _GtkEntry,blink_timeout,4,3,44629)
+CheckOffset(struct _GtkEntry,blink_timeout,160,3,44629)
+CheckMemberSize(struct _GtkEntry,recompute_idle,4,3,44630)
+CheckOffset(struct _GtkEntry,recompute_idle,164,3,44630)
+CheckMemberSize(struct _GtkEntry,scroll_offset,4,3,44631)
+CheckOffset(struct _GtkEntry,scroll_offset,168,3,44631)
+CheckMemberSize(struct _GtkEntry,ascent,4,3,44632)
+CheckOffset(struct _GtkEntry,ascent,172,3,44632)
+CheckMemberSize(struct _GtkEntry,descent,4,3,44633)
+CheckOffset(struct _GtkEntry,descent,176,3,44633)
+CheckMemberSize(struct _GtkEntry,text_size,2,3,44634)
+CheckOffset(struct _GtkEntry,text_size,180,3,44634)
+CheckMemberSize(struct _GtkEntry,n_bytes,2,3,44635)
+CheckOffset(struct _GtkEntry,n_bytes,182,3,44635)
+CheckMemberSize(struct _GtkEntry,preedit_length,2,3,44636)
+CheckOffset(struct _GtkEntry,preedit_length,184,3,44636)
+CheckMemberSize(struct _GtkEntry,preedit_cursor,2,3,44637)
+CheckOffset(struct _GtkEntry,preedit_cursor,186,3,44637)
+CheckMemberSize(struct _GtkEntry,dnd_position,4,3,44638)
+CheckOffset(struct _GtkEntry,dnd_position,188,3,44638)
+CheckMemberSize(struct _GtkEntry,drag_start_x,4,3,44639)
+CheckOffset(struct _GtkEntry,drag_start_x,192,3,44639)
+CheckMemberSize(struct _GtkEntry,drag_start_y,4,3,44640)
+CheckOffset(struct _GtkEntry,drag_start_y,196,3,44640)
+CheckMemberSize(struct _GtkEntry,invisible_char,4,3,44641)
+CheckOffset(struct _GtkEntry,invisible_char,200,3,44641)
+CheckMemberSize(struct _GtkEntry,width_chars,4,3,44642)
+CheckOffset(struct _GtkEntry,width_chars,204,3,44642)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13138,0);
 Msg("Find size of _GtkEntry (13138)\n");
@@ -6729,6 +7040,10 @@ CheckOffset(struct _GtkIMContext,parent_instance,0,2,44610)
 CheckTypeSize(struct _GtkIMContext,24, 13139, 11)
 Msg("Missing member data for _GtkIMContext on x86-64\n");
 CheckOffset(struct _GtkIMContext,parent_instance,0,11,44610)
+#elif __ia64__
+CheckTypeSize(struct _GtkIMContext,24, 13139, 3)
+Msg("Missing member data for _GtkIMContext on IA64\n");
+CheckOffset(struct _GtkIMContext,parent_instance,0,3,44610)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13139,0);
 Msg("Find size of _GtkIMContext (13139)\n");
@@ -6738,6 +7053,8 @@ Msg("Find size of _GtkIMContext (13139)\n");
 CheckTypeSize(GtkIMContext,12, 13140, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMContext,24, 13140, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMContext,24, 13140, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13140,0);
 Msg("Find size of GtkIMContext (13140)\n");
@@ -6747,6 +7064,8 @@ Msg("Find size of GtkIMContext (13140)\n");
 CheckTypeSize(GtkIMContext *,4, 13141, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMContext *,8, 13141, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMContext *,8, 13141, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13141,0);
 Msg("Find size of GtkIMContext * (13141)\n");
@@ -6756,6 +7075,8 @@ Msg("Find size of GtkIMContext * (13141)\n");
 CheckTypeSize(GtkEntry,152, 13142, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntry,208, 13142, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntry,208, 13142, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13142,0);
 Msg("Find size of GtkEntry (13142)\n");
@@ -6765,6 +7086,8 @@ Msg("Find size of GtkEntry (13142)\n");
 CheckTypeSize(GtkEntry *,4, 13143, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntry *,8, 13143, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntry *,8, 13143, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13143,0);
 Msg("Find size of GtkEntry * (13143)\n");
@@ -6774,6 +7097,8 @@ Msg("Find size of GtkEntry * (13143)\n");
 CheckTypeSize(GtkRequisition *,4, 13144, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRequisition *,8, 13144, 11)
+#elif __ia64__
+CheckTypeSize(GtkRequisition *,8, 13144, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13144,0);
 Msg("Find size of GtkRequisition * (13144)\n");
@@ -6783,6 +7108,8 @@ Msg("Find size of GtkRequisition * (13144)\n");
 CheckTypeSize(const GtkRequisition,8, 13145, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkRequisition,8, 13145, 11)
+#elif __ia64__
+CheckTypeSize(const GtkRequisition,8, 13145, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13145,0);
 Msg("Find size of const GtkRequisition (13145)\n");
@@ -6790,6 +7117,7 @@ Msg("Find size of const GtkRequisition (13145)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13146,0);
 Msg("Find size of const GtkRequisition * (13146)\n");
@@ -6803,6 +7131,10 @@ CheckOffset(struct _GtkComboBoxEntry,priv,76,2,44644)
 CheckTypeSize(struct _GtkComboBoxEntry,136, 13147, 11)
 CheckMemberSize(struct _GtkComboBoxEntry,priv,8,11,44644)
 CheckOffset(struct _GtkComboBoxEntry,priv,128,11,44644)
+#elif __ia64__
+CheckTypeSize(struct _GtkComboBoxEntry,136, 13147, 3)
+CheckMemberSize(struct _GtkComboBoxEntry,priv,8,3,44644)
+CheckOffset(struct _GtkComboBoxEntry,priv,128,3,44644)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13147,0);
 Msg("Find size of _GtkComboBoxEntry (13147)\n");
@@ -6812,6 +7144,8 @@ Msg("Find size of _GtkComboBoxEntry (13147)\n");
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13149,0);
 Msg("Find size of GtkComboBoxEntryPrivate (13149)\n");
@@ -6821,6 +7155,8 @@ Msg("Find size of GtkComboBoxEntryPrivate (13149)\n");
 CheckTypeSize(GtkComboBoxEntryPrivate *,4, 13150, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBoxEntryPrivate *,8, 13150, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBoxEntryPrivate *,8, 13150, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13150,0);
 Msg("Find size of GtkComboBoxEntryPrivate * (13150)\n");
@@ -6830,6 +7166,8 @@ Msg("Find size of GtkComboBoxEntryPrivate * (13150)\n");
 CheckTypeSize(GtkComboBoxEntry,80, 13151, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBoxEntry,136, 13151, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBoxEntry,136, 13151, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13151,0);
 Msg("Find size of GtkComboBoxEntry (13151)\n");
@@ -6839,6 +7177,8 @@ Msg("Find size of GtkComboBoxEntry (13151)\n");
 CheckTypeSize(GtkComboBoxEntry *,4, 13152, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBoxEntry *,8, 13152, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBoxEntry *,8, 13152, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13152,0);
 Msg("Find size of GtkComboBoxEntry * (13152)\n");
@@ -6888,6 +7228,28 @@ CheckMemberSize(struct _GtkLayout,scroll_y,4,11,44654)
 CheckOffset(struct _GtkLayout,scroll_y,160,11,44654)
 CheckMemberSize(struct _GtkLayout,freeze_count,4,11,44655)
 CheckOffset(struct _GtkLayout,freeze_count,164,11,44655)
+#elif __ia64__
+CheckTypeSize(struct _GtkLayout,168, 13153, 3)
+CheckMemberSize(struct _GtkLayout,children,8,3,44646)
+CheckOffset(struct _GtkLayout,children,112,3,44646)
+CheckMemberSize(struct _GtkLayout,width,4,3,44647)
+CheckOffset(struct _GtkLayout,width,120,3,44647)
+CheckMemberSize(struct _GtkLayout,height,4,3,44648)
+CheckOffset(struct _GtkLayout,height,124,3,44648)
+CheckMemberSize(struct _GtkLayout,hadjustment,8,3,44649)
+CheckOffset(struct _GtkLayout,hadjustment,128,3,44649)
+CheckMemberSize(struct _GtkLayout,vadjustment,8,3,44650)
+CheckOffset(struct _GtkLayout,vadjustment,136,3,44650)
+CheckMemberSize(struct _GtkLayout,bin_window,8,3,44651)
+CheckOffset(struct _GtkLayout,bin_window,144,3,44651)
+CheckMemberSize(struct _GtkLayout,visibility,4,3,44652)
+CheckOffset(struct _GtkLayout,visibility,152,3,44652)
+CheckMemberSize(struct _GtkLayout,scroll_x,4,3,44653)
+CheckOffset(struct _GtkLayout,scroll_x,156,3,44653)
+CheckMemberSize(struct _GtkLayout,scroll_y,4,3,44654)
+CheckOffset(struct _GtkLayout,scroll_y,160,3,44654)
+CheckMemberSize(struct _GtkLayout,freeze_count,4,3,44655)
+CheckOffset(struct _GtkLayout,freeze_count,164,3,44655)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13153,0);
 Msg("Find size of _GtkLayout (13153)\n");
@@ -6897,6 +7259,8 @@ Msg("Find size of _GtkLayout (13153)\n");
 CheckTypeSize(GtkLayout,108, 13154, 2)
 #elif __x86_64__
 CheckTypeSize(GtkLayout,168, 13154, 11)
+#elif __ia64__
+CheckTypeSize(GtkLayout,168, 13154, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13154,0);
 Msg("Find size of GtkLayout (13154)\n");
@@ -6906,6 +7270,8 @@ Msg("Find size of GtkLayout (13154)\n");
 CheckTypeSize(GtkLayout *,4, 13155, 2)
 #elif __x86_64__
 CheckTypeSize(GtkLayout *,8, 13155, 11)
+#elif __ia64__
+CheckTypeSize(GtkLayout *,8, 13155, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13155,0);
 Msg("Find size of GtkLayout * (13155)\n");
@@ -6959,6 +7325,30 @@ CheckMemberSize(struct _GtkTreeStore,default_sort_data,8,11,44676)
 CheckOffset(struct _GtkTreeStore,default_sort_data,88,11,44676)
 CheckMemberSize(struct _GtkTreeStore,default_sort_destroy,8,11,44677)
 CheckOffset(struct _GtkTreeStore,default_sort_destroy,96,11,44677)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeStore,112, 13156, 3)
+CheckMemberSize(struct _GtkTreeStore,stamp,4,3,44657)
+CheckOffset(struct _GtkTreeStore,stamp,24,3,44657)
+CheckMemberSize(struct _GtkTreeStore,root,8,3,44658)
+CheckOffset(struct _GtkTreeStore,root,32,3,44658)
+CheckMemberSize(struct _GtkTreeStore,last,8,3,44659)
+CheckOffset(struct _GtkTreeStore,last,40,3,44659)
+CheckMemberSize(struct _GtkTreeStore,n_columns,4,3,44660)
+CheckOffset(struct _GtkTreeStore,n_columns,48,3,44660)
+CheckMemberSize(struct _GtkTreeStore,sort_column_id,4,3,44661)
+CheckOffset(struct _GtkTreeStore,sort_column_id,52,3,44661)
+CheckMemberSize(struct _GtkTreeStore,sort_list,8,3,44662)
+CheckOffset(struct _GtkTreeStore,sort_list,56,3,44662)
+CheckMemberSize(struct _GtkTreeStore,order,4,3,44665)
+CheckOffset(struct _GtkTreeStore,order,64,3,44665)
+CheckMemberSize(struct _GtkTreeStore,column_headers,8,3,44666)
+CheckOffset(struct _GtkTreeStore,column_headers,72,3,44666)
+CheckMemberSize(struct _GtkTreeStore,default_sort_func,8,3,44675)
+CheckOffset(struct _GtkTreeStore,default_sort_func,80,3,44675)
+CheckMemberSize(struct _GtkTreeStore,default_sort_data,8,3,44676)
+CheckOffset(struct _GtkTreeStore,default_sort_data,88,3,44676)
+CheckMemberSize(struct _GtkTreeStore,default_sort_destroy,8,3,44677)
+CheckOffset(struct _GtkTreeStore,default_sort_destroy,96,3,44677)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13156,0);
 Msg("Find size of _GtkTreeStore (13156)\n");
@@ -6970,6 +7360,9 @@ CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
 #elif __x86_64__
 CheckEnum("GTK_SORT_ASCENDING",GTK_SORT_ASCENDING,0);
 CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
+#elif __ia64__
+CheckEnum("GTK_SORT_ASCENDING",GTK_SORT_ASCENDING,0);
+CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13157,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4055 (13157)\n");
@@ -6979,6 +7372,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4055 (13157)\n");
 CheckTypeSize(GtkSortType,4, 13158, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSortType,4, 13158, 11)
+#elif __ia64__
+CheckTypeSize(GtkSortType,4, 13158, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13158,0);
 Msg("Find size of GtkSortType (13158)\n");
@@ -7000,6 +7395,14 @@ CheckMemberSize(struct _GtkTreeIter,user_data2,8,11,44669)
 CheckOffset(struct _GtkTreeIter,user_data2,16,11,44669)
 CheckMemberSize(struct _GtkTreeIter,user_data3,8,11,44670)
 CheckOffset(struct _GtkTreeIter,user_data3,24,11,44670)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeIter,32, 13159, 3)
+CheckMemberSize(struct _GtkTreeIter,user_data,8,3,44668)
+CheckOffset(struct _GtkTreeIter,user_data,8,3,44668)
+CheckMemberSize(struct _GtkTreeIter,user_data2,8,3,44669)
+CheckOffset(struct _GtkTreeIter,user_data2,16,3,44669)
+CheckMemberSize(struct _GtkTreeIter,user_data3,8,3,44670)
+CheckOffset(struct _GtkTreeIter,user_data3,24,3,44670)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13159,0);
 Msg("Find size of _GtkTreeIter (13159)\n");
@@ -7009,6 +7412,8 @@ Msg("Find size of _GtkTreeIter (13159)\n");
 CheckTypeSize(GtkTreeIter,16, 13160, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeIter,32, 13160, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeIter,32, 13160, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13160,0);
 Msg("Find size of GtkTreeIter (13160)\n");
@@ -7018,6 +7423,8 @@ Msg("Find size of GtkTreeIter (13160)\n");
 CheckTypeSize(GtkTreeIter *,4, 13161, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeIter *,8, 13161, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeIter *,8, 13161, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13161,0);
 Msg("Find size of GtkTreeIter * (13161)\n");
@@ -7025,6 +7432,7 @@ Msg("Find size of GtkTreeIter * (13161)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13162,0);
 Msg("Find size of fptr_gtk_5742 (13162)\n");
@@ -7034,6 +7442,8 @@ Msg("Find size of fptr_gtk_5742 (13162)\n");
 CheckTypeSize(GtkTreeIterCompareFunc,4, 13163, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeIterCompareFunc,8, 13163, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeIterCompareFunc,8, 13163, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13163,0);
 Msg("Find size of GtkTreeIterCompareFunc (13163)\n");
@@ -7043,6 +7453,8 @@ Msg("Find size of GtkTreeIterCompareFunc (13163)\n");
 CheckTypeSize(GtkDestroyNotify,4, 13164, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDestroyNotify,8, 13164, 11)
+#elif __ia64__
+CheckTypeSize(GtkDestroyNotify,8, 13164, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13164,0);
 Msg("Find size of GtkDestroyNotify (13164)\n");
@@ -7052,6 +7464,8 @@ Msg("Find size of GtkDestroyNotify (13164)\n");
 CheckTypeSize(GtkTreeStore,60, 13165, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeStore,112, 13165, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeStore,112, 13165, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13165,0);
 Msg("Find size of GtkTreeStore (13165)\n");
@@ -7061,6 +7475,8 @@ Msg("Find size of GtkTreeStore (13165)\n");
 CheckTypeSize(GtkTreeStore *,4, 13166, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeStore *,8, 13166, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeStore *,8, 13166, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13166,0);
 Msg("Find size of GtkTreeStore * (13166)\n");
@@ -7074,6 +7490,10 @@ CheckOffset(struct _GtkAboutDialog,private_data,160,2,44684)
 CheckTypeSize(struct _GtkAboutDialog,272, 13167, 11)
 CheckMemberSize(struct _GtkAboutDialog,private_data,8,11,44684)
 CheckOffset(struct _GtkAboutDialog,private_data,264,11,44684)
+#elif __ia64__
+CheckTypeSize(struct _GtkAboutDialog,272, 13167, 3)
+CheckMemberSize(struct _GtkAboutDialog,private_data,8,3,44684)
+CheckOffset(struct _GtkAboutDialog,private_data,264,3,44684)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13167,0);
 Msg("Find size of _GtkAboutDialog (13167)\n");
@@ -7095,6 +7515,14 @@ CheckMemberSize(struct _GtkDialog,action_area,8,11,44681)
 CheckOffset(struct _GtkDialog,action_area,248,11,44681)
 CheckMemberSize(struct _GtkDialog,separator,8,11,44682)
 CheckOffset(struct _GtkDialog,separator,256,11,44682)
+#elif __ia64__
+CheckTypeSize(struct _GtkDialog,264, 13168, 3)
+CheckMemberSize(struct _GtkDialog,vbox,8,3,44680)
+CheckOffset(struct _GtkDialog,vbox,240,3,44680)
+CheckMemberSize(struct _GtkDialog,action_area,8,3,44681)
+CheckOffset(struct _GtkDialog,action_area,248,3,44681)
+CheckMemberSize(struct _GtkDialog,separator,8,3,44682)
+CheckOffset(struct _GtkDialog,separator,256,3,44682)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13168,0);
 Msg("Find size of _GtkDialog (13168)\n");
@@ -7104,6 +7532,8 @@ Msg("Find size of _GtkDialog (13168)\n");
 CheckTypeSize(GtkDialog,160, 13169, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDialog,264, 13169, 11)
+#elif __ia64__
+CheckTypeSize(GtkDialog,264, 13169, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13169,0);
 Msg("Find size of GtkDialog (13169)\n");
@@ -7113,6 +7543,8 @@ Msg("Find size of GtkDialog (13169)\n");
 CheckTypeSize(GtkAboutDialog,164, 13170, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAboutDialog,272, 13170, 11)
+#elif __ia64__
+CheckTypeSize(GtkAboutDialog,272, 13170, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13170,0);
 Msg("Find size of GtkAboutDialog (13170)\n");
@@ -7122,6 +7554,8 @@ Msg("Find size of GtkAboutDialog (13170)\n");
 CheckTypeSize(GtkAboutDialog *,4, 13171, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAboutDialog *,8, 13171, 11)
+#elif __ia64__
+CheckTypeSize(GtkAboutDialog *,8, 13171, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13171,0);
 Msg("Find size of GtkAboutDialog * (13171)\n");
@@ -7129,6 +7563,7 @@ Msg("Find size of GtkAboutDialog * (13171)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13172,0);
 Msg("Find size of fptr_gtk_5063 (13172)\n");
@@ -7138,6 +7573,8 @@ Msg("Find size of fptr_gtk_5063 (13172)\n");
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,4, 13173, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,8, 13173, 11)
+#elif __ia64__
+CheckTypeSize(GtkAboutDialogActivateLinkFunc,8, 13173, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13173,0);
 Msg("Find size of GtkAboutDialogActivateLinkFunc (13173)\n");
@@ -7147,6 +7584,8 @@ Msg("Find size of GtkAboutDialogActivateLinkFunc (13173)\n");
 CheckTypeSize(GtkTreeSortable,0, 13175, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeSortable,0, 13175, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeSortable,0, 13175, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13175,0);
 Msg("Find size of GtkTreeSortable (13175)\n");
@@ -7156,6 +7595,8 @@ Msg("Find size of GtkTreeSortable (13175)\n");
 CheckTypeSize(GtkTreeSortable *,4, 13176, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeSortable *,8, 13176, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeSortable *,8, 13176, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13176,0);
 Msg("Find size of GtkTreeSortable * (13176)\n");
@@ -7165,6 +7606,8 @@ Msg("Find size of GtkTreeSortable * (13176)\n");
 CheckTypeSize(GtkSortType *,4, 13177, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSortType *,8, 13177, 11)
+#elif __ia64__
+CheckTypeSize(GtkSortType *,8, 13177, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13177,0);
 Msg("Find size of GtkSortType * (13177)\n");
@@ -7230,6 +7673,36 @@ CheckMemberSize(struct _GtkRange,update_timeout_id,4,11,44716)
 CheckOffset(struct _GtkRange,update_timeout_id,176,11,44716)
 CheckMemberSize(struct _GtkRange,event_window,8,11,44717)
 CheckOffset(struct _GtkRange,event_window,184,11,44717)
+#elif __ia64__
+CheckTypeSize(struct _GtkRange,192, 13178, 3)
+CheckMemberSize(struct _GtkRange,adjustment,8,3,44689)
+CheckOffset(struct _GtkRange,adjustment,96,3,44689)
+CheckMemberSize(struct _GtkRange,update_policy,4,3,44693)
+CheckOffset(struct _GtkRange,update_policy,104,3,44693)
+CheckMemberSize(struct _GtkRange,min_slider_size,4,3,44702)
+CheckOffset(struct _GtkRange,min_slider_size,112,3,44702)
+CheckMemberSize(struct _GtkRange,orientation,4,3,44705)
+CheckOffset(struct _GtkRange,orientation,116,3,44705)
+CheckMemberSize(struct _GtkRange,range_rect,16,3,44706)
+CheckOffset(struct _GtkRange,range_rect,120,3,44706)
+CheckMemberSize(struct _GtkRange,slider_start,4,3,44707)
+CheckOffset(struct _GtkRange,slider_start,136,3,44707)
+CheckMemberSize(struct _GtkRange,slider_end,4,3,44708)
+CheckOffset(struct _GtkRange,slider_end,140,3,44708)
+CheckMemberSize(struct _GtkRange,round_digits,4,3,44709)
+CheckOffset(struct _GtkRange,round_digits,144,3,44709)
+CheckMemberSize(struct _GtkRange,layout,8,3,44712)
+CheckOffset(struct _GtkRange,layout,152,3,44712)
+CheckMemberSize(struct _GtkRange,timer,8,3,44713)
+CheckOffset(struct _GtkRange,timer,160,3,44713)
+CheckMemberSize(struct _GtkRange,slide_initial_slider_position,4,3,44714)
+CheckOffset(struct _GtkRange,slide_initial_slider_position,168,3,44714)
+CheckMemberSize(struct _GtkRange,slide_initial_coordinate,4,3,44715)
+CheckOffset(struct _GtkRange,slide_initial_coordinate,172,3,44715)
+CheckMemberSize(struct _GtkRange,update_timeout_id,4,3,44716)
+CheckOffset(struct _GtkRange,update_timeout_id,176,3,44716)
+CheckMemberSize(struct _GtkRange,event_window,8,3,44717)
+CheckOffset(struct _GtkRange,event_window,184,3,44717)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13178,0);
 Msg("Find size of _GtkRange (13178)\n");
@@ -7243,6 +7716,10 @@ CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
 CheckEnum("GTK_UPDATE_CONTINUOUS",GTK_UPDATE_CONTINUOUS,0);
 CheckEnum("GTK_UPDATE_DISCONTINUOUS",GTK_UPDATE_DISCONTINUOUS,1);
 CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
+#elif __ia64__
+CheckEnum("GTK_UPDATE_CONTINUOUS",GTK_UPDATE_CONTINUOUS,0);
+CheckEnum("GTK_UPDATE_DISCONTINUOUS",GTK_UPDATE_DISCONTINUOUS,1);
+CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13179,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3050 (13179)\n");
@@ -7252,6 +7729,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3050 (13179)\n");
 CheckTypeSize(GtkUpdateType,4, 13180, 2)
 #elif __x86_64__
 CheckTypeSize(GtkUpdateType,4, 13180, 11)
+#elif __ia64__
+CheckTypeSize(GtkUpdateType,4, 13180, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13180,0);
 Msg("Find size of GtkUpdateType (13180)\n");
@@ -7263,6 +7742,9 @@ CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
 #elif __x86_64__
 CheckEnum("GTK_ORIENTATION_HORIZONTAL",GTK_ORIENTATION_HORIZONTAL,0);
 CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
+#elif __ia64__
+CheckEnum("GTK_ORIENTATION_HORIZONTAL",GTK_ORIENTATION_HORIZONTAL,0);
+CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13181,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3046 (13181)\n");
@@ -7272,6 +7754,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3046 (13181)\n");
 CheckTypeSize(GtkOrientation,4, 13182, 2)
 #elif __x86_64__
 CheckTypeSize(GtkOrientation,4, 13182, 11)
+#elif __ia64__
+CheckTypeSize(GtkOrientation,4, 13182, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13182,0);
 Msg("Find size of GtkOrientation (13182)\n");
@@ -7281,6 +7765,8 @@ Msg("Find size of GtkOrientation (13182)\n");
 CheckTypeSize(GtkRangeLayout,0, 13184, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRangeLayout,0, 13184, 11)
+#elif __ia64__
+CheckTypeSize(GtkRangeLayout,0, 13184, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13184,0);
 Msg("Find size of GtkRangeLayout (13184)\n");
@@ -7290,6 +7776,8 @@ Msg("Find size of GtkRangeLayout (13184)\n");
 CheckTypeSize(GtkRangeLayout *,4, 13185, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRangeLayout *,8, 13185, 11)
+#elif __ia64__
+CheckTypeSize(GtkRangeLayout *,8, 13185, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13185,0);
 Msg("Find size of GtkRangeLayout * (13185)\n");
@@ -7299,6 +7787,8 @@ Msg("Find size of GtkRangeLayout * (13185)\n");
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 11)
+#elif __ia64__
+CheckTypeSize(GtkRangeStepTimer,0, 13187, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13187,0);
 Msg("Find size of GtkRangeStepTimer (13187)\n");
@@ -7308,6 +7798,8 @@ Msg("Find size of GtkRangeStepTimer (13187)\n");
 CheckTypeSize(GtkRangeStepTimer *,4, 13188, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRangeStepTimer *,8, 13188, 11)
+#elif __ia64__
+CheckTypeSize(GtkRangeStepTimer *,8, 13188, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13188,0);
 Msg("Find size of GtkRangeStepTimer * (13188)\n");
@@ -7317,6 +7809,8 @@ Msg("Find size of GtkRangeStepTimer * (13188)\n");
 CheckTypeSize(GtkRange,136, 13189, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRange,192, 13189, 11)
+#elif __ia64__
+CheckTypeSize(GtkRange,192, 13189, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13189,0);
 Msg("Find size of GtkRange (13189)\n");
@@ -7326,6 +7820,8 @@ Msg("Find size of GtkRange (13189)\n");
 CheckTypeSize(GtkRange *,4, 13190, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRange *,8, 13190, 11)
+#elif __ia64__
+CheckTypeSize(GtkRange *,8, 13190, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13190,0);
 Msg("Find size of GtkRange * (13190)\n");
@@ -7335,6 +7831,8 @@ Msg("Find size of GtkRange * (13190)\n");
 CheckTypeSize(GdkEventKey *,4, 13191, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventKey *,8, 13191, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventKey *,8, 13191, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13191,0);
 Msg("Find size of GdkEventKey * (13191)\n");
@@ -7344,6 +7842,8 @@ Msg("Find size of GdkEventKey * (13191)\n");
 CheckTypeSize(GtkDialog *,4, 13192, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDialog *,8, 13192, 11)
+#elif __ia64__
+CheckTypeSize(GtkDialog *,8, 13192, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13192,0);
 Msg("Find size of GtkDialog * (13192)\n");
@@ -7389,6 +7889,26 @@ CheckMemberSize(struct _GtkSocket,accel_group,8,11,44744)
 CheckOffset(struct _GtkSocket,accel_group,144,11,44744)
 CheckMemberSize(struct _GtkSocket,toplevel,8,11,44745)
 CheckOffset(struct _GtkSocket,toplevel,152,11,44745)
+#elif __ia64__
+CheckTypeSize(struct _GtkSocket,160, 13193, 3)
+CheckMemberSize(struct _GtkSocket,request_width,2,3,44719)
+CheckOffset(struct _GtkSocket,request_width,112,3,44719)
+CheckMemberSize(struct _GtkSocket,request_height,2,3,44720)
+CheckOffset(struct _GtkSocket,request_height,114,3,44720)
+CheckMemberSize(struct _GtkSocket,current_width,2,3,44721)
+CheckOffset(struct _GtkSocket,current_width,116,3,44721)
+CheckMemberSize(struct _GtkSocket,current_height,2,3,44722)
+CheckOffset(struct _GtkSocket,current_height,118,3,44722)
+CheckMemberSize(struct _GtkSocket,plug_window,8,3,44723)
+CheckOffset(struct _GtkSocket,plug_window,120,3,44723)
+CheckMemberSize(struct _GtkSocket,plug_widget,8,3,44724)
+CheckOffset(struct _GtkSocket,plug_widget,128,3,44724)
+CheckMemberSize(struct _GtkSocket,xembed_version,2,3,44725)
+CheckOffset(struct _GtkSocket,xembed_version,136,3,44725)
+CheckMemberSize(struct _GtkSocket,accel_group,8,3,44744)
+CheckOffset(struct _GtkSocket,accel_group,144,3,44744)
+CheckMemberSize(struct _GtkSocket,toplevel,8,3,44745)
+CheckOffset(struct _GtkSocket,toplevel,152,3,44745)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13193,0);
 Msg("Find size of _GtkSocket (13193)\n");
@@ -7418,6 +7938,18 @@ CheckMemberSize(struct _GtkAccelGroup,n_accels,4,11,44736)
 CheckOffset(struct _GtkAccelGroup,n_accels,40,11,44736)
 CheckMemberSize(struct _GtkAccelGroup,priv_accels,8,11,44743)
 CheckOffset(struct _GtkAccelGroup,priv_accels,48,11,44743)
+#elif __ia64__
+CheckTypeSize(struct _GtkAccelGroup,56, 13194, 3)
+CheckMemberSize(struct _GtkAccelGroup,lock_count,4,3,44733)
+CheckOffset(struct _GtkAccelGroup,lock_count,24,3,44733)
+CheckMemberSize(struct _GtkAccelGroup,modifier_mask,4,3,44734)
+CheckOffset(struct _GtkAccelGroup,modifier_mask,28,3,44734)
+CheckMemberSize(struct _GtkAccelGroup,acceleratables,8,3,44735)
+CheckOffset(struct _GtkAccelGroup,acceleratables,32,3,44735)
+CheckMemberSize(struct _GtkAccelGroup,n_accels,4,3,44736)
+CheckOffset(struct _GtkAccelGroup,n_accels,40,3,44736)
+CheckMemberSize(struct _GtkAccelGroup,priv_accels,8,3,44743)
+CheckOffset(struct _GtkAccelGroup,priv_accels,48,3,44743)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13194,0);
 Msg("Find size of _GtkAccelGroup (13194)\n");
@@ -7435,6 +7967,12 @@ CheckMemberSize(struct _GtkAccelGroupEntry,closure,8,11,44741)
 CheckOffset(struct _GtkAccelGroupEntry,closure,16,11,44741)
 CheckMemberSize(struct _GtkAccelGroupEntry,accel_path_quark,4,11,44742)
 CheckOffset(struct _GtkAccelGroupEntry,accel_path_quark,24,11,44742)
+#elif __ia64__
+CheckTypeSize(struct _GtkAccelGroupEntry,32, 13195, 3)
+CheckMemberSize(struct _GtkAccelGroupEntry,closure,8,3,44741)
+CheckOffset(struct _GtkAccelGroupEntry,closure,16,3,44741)
+CheckMemberSize(struct _GtkAccelGroupEntry,accel_path_quark,4,3,44742)
+CheckOffset(struct _GtkAccelGroupEntry,accel_path_quark,24,3,44742)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13195,0);
 Msg("Find size of _GtkAccelGroupEntry (13195)\n");
@@ -7448,6 +7986,10 @@ CheckOffset(struct _GtkAccelKey,accel_mods,4,2,44738)
 CheckTypeSize(struct _GtkAccelKey,12, 13196, 11)
 CheckMemberSize(struct _GtkAccelKey,accel_mods,4,11,44738)
 CheckOffset(struct _GtkAccelKey,accel_mods,4,11,44738)
+#elif __ia64__
+CheckTypeSize(struct _GtkAccelKey,12, 13196, 3)
+CheckMemberSize(struct _GtkAccelKey,accel_mods,4,3,44738)
+CheckOffset(struct _GtkAccelKey,accel_mods,4,3,44738)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13196,0);
 Msg("Find size of _GtkAccelKey (13196)\n");
@@ -7457,6 +7999,8 @@ Msg("Find size of _GtkAccelKey (13196)\n");
 CheckTypeSize(GtkAccelKey,12, 13197, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelKey,12, 13197, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelKey,12, 13197, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13197,0);
 Msg("Find size of GtkAccelKey (13197)\n");
@@ -7466,6 +8010,8 @@ Msg("Find size of GtkAccelKey (13197)\n");
 CheckTypeSize(GtkAccelGroupEntry,20, 13198, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelGroupEntry,32, 13198, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelGroupEntry,32, 13198, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13198,0);
 Msg("Find size of GtkAccelGroupEntry (13198)\n");
@@ -7475,6 +8021,8 @@ Msg("Find size of GtkAccelGroupEntry (13198)\n");
 CheckTypeSize(GtkAccelGroupEntry *,4, 13199, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelGroupEntry *,8, 13199, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelGroupEntry *,8, 13199, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13199,0);
 Msg("Find size of GtkAccelGroupEntry * (13199)\n");
@@ -7484,6 +8032,8 @@ Msg("Find size of GtkAccelGroupEntry * (13199)\n");
 CheckTypeSize(GtkAccelGroup,32, 13200, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelGroup,56, 13200, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelGroup,56, 13200, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13200,0);
 Msg("Find size of GtkAccelGroup (13200)\n");
@@ -7493,6 +8043,8 @@ Msg("Find size of GtkAccelGroup (13200)\n");
 CheckTypeSize(GtkAccelGroup *,4, 13201, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelGroup *,8, 13201, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelGroup *,8, 13201, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13201,0);
 Msg("Find size of GtkAccelGroup * (13201)\n");
@@ -7502,6 +8054,8 @@ Msg("Find size of GtkAccelGroup * (13201)\n");
 CheckTypeSize(GtkSocket,96, 13202, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSocket,160, 13202, 11)
+#elif __ia64__
+CheckTypeSize(GtkSocket,160, 13202, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13202,0);
 Msg("Find size of GtkSocket (13202)\n");
@@ -7511,6 +8065,8 @@ Msg("Find size of GtkSocket (13202)\n");
 CheckTypeSize(GtkSocket *,4, 13203, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSocket *,8, 13203, 11)
+#elif __ia64__
+CheckTypeSize(GtkSocket *,8, 13203, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13203,0);
 Msg("Find size of GtkSocket * (13203)\n");
@@ -7624,6 +8180,60 @@ CheckMemberSize(struct _GtkTreeViewColumn,sort_column_id,4,11,44774)
 CheckOffset(struct _GtkTreeViewColumn,sort_column_id,168,11,44774)
 CheckMemberSize(struct _GtkTreeViewColumn,sort_order,4,11,44775)
 CheckOffset(struct _GtkTreeViewColumn,sort_order,172,11,44775)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeViewColumn,184, 13204, 3)
+CheckMemberSize(struct _GtkTreeViewColumn,tree_view,8,3,44747)
+CheckOffset(struct _GtkTreeViewColumn,tree_view,32,3,44747)
+CheckMemberSize(struct _GtkTreeViewColumn,button,8,3,44748)
+CheckOffset(struct _GtkTreeViewColumn,button,40,3,44748)
+CheckMemberSize(struct _GtkTreeViewColumn,child,8,3,44749)
+CheckOffset(struct _GtkTreeViewColumn,child,48,3,44749)
+CheckMemberSize(struct _GtkTreeViewColumn,arrow,8,3,44750)
+CheckOffset(struct _GtkTreeViewColumn,arrow,56,3,44750)
+CheckMemberSize(struct _GtkTreeViewColumn,alignment,8,3,44751)
+CheckOffset(struct _GtkTreeViewColumn,alignment,64,3,44751)
+CheckMemberSize(struct _GtkTreeViewColumn,window,8,3,44752)
+CheckOffset(struct _GtkTreeViewColumn,window,72,3,44752)
+CheckMemberSize(struct _GtkTreeViewColumn,editable_widget,8,3,44753)
+CheckOffset(struct _GtkTreeViewColumn,editable_widget,80,3,44753)
+CheckMemberSize(struct _GtkTreeViewColumn,xalign,4,3,44754)
+CheckOffset(struct _GtkTreeViewColumn,xalign,88,3,44754)
+CheckMemberSize(struct _GtkTreeViewColumn,property_changed_signal,4,3,44755)
+CheckOffset(struct _GtkTreeViewColumn,property_changed_signal,92,3,44755)
+CheckMemberSize(struct _GtkTreeViewColumn,spacing,4,3,44756)
+CheckOffset(struct _GtkTreeViewColumn,spacing,96,3,44756)
+CheckMemberSize(struct _GtkTreeViewColumn,column_type,4,3,44760)
+CheckOffset(struct _GtkTreeViewColumn,column_type,100,3,44760)
+CheckMemberSize(struct _GtkTreeViewColumn,requested_width,4,3,44761)
+CheckOffset(struct _GtkTreeViewColumn,requested_width,104,3,44761)
+CheckMemberSize(struct _GtkTreeViewColumn,button_request,4,3,44762)
+CheckOffset(struct _GtkTreeViewColumn,button_request,108,3,44762)
+CheckMemberSize(struct _GtkTreeViewColumn,resized_width,4,3,44763)
+CheckOffset(struct _GtkTreeViewColumn,resized_width,112,3,44763)
+CheckMemberSize(struct _GtkTreeViewColumn,width,4,3,44764)
+CheckOffset(struct _GtkTreeViewColumn,width,116,3,44764)
+CheckMemberSize(struct _GtkTreeViewColumn,fixed_width,4,3,44765)
+CheckOffset(struct _GtkTreeViewColumn,fixed_width,120,3,44765)
+CheckMemberSize(struct _GtkTreeViewColumn,min_width,4,3,44766)
+CheckOffset(struct _GtkTreeViewColumn,min_width,124,3,44766)
+CheckMemberSize(struct _GtkTreeViewColumn,max_width,4,3,44767)
+CheckOffset(struct _GtkTreeViewColumn,max_width,128,3,44767)
+CheckMemberSize(struct _GtkTreeViewColumn,drag_x,4,3,44768)
+CheckOffset(struct _GtkTreeViewColumn,drag_x,132,3,44768)
+CheckMemberSize(struct _GtkTreeViewColumn,drag_y,4,3,44769)
+CheckOffset(struct _GtkTreeViewColumn,drag_y,136,3,44769)
+CheckMemberSize(struct _GtkTreeViewColumn,title,8,3,44770)
+CheckOffset(struct _GtkTreeViewColumn,title,144,3,44770)
+CheckMemberSize(struct _GtkTreeViewColumn,cell_list,8,3,44771)
+CheckOffset(struct _GtkTreeViewColumn,cell_list,152,3,44771)
+CheckMemberSize(struct _GtkTreeViewColumn,sort_clicked_signal,4,3,44772)
+CheckOffset(struct _GtkTreeViewColumn,sort_clicked_signal,160,3,44772)
+CheckMemberSize(struct _GtkTreeViewColumn,sort_column_changed_signal,4,3,44773)
+CheckOffset(struct _GtkTreeViewColumn,sort_column_changed_signal,164,3,44773)
+CheckMemberSize(struct _GtkTreeViewColumn,sort_column_id,4,3,44774)
+CheckOffset(struct _GtkTreeViewColumn,sort_column_id,168,3,44774)
+CheckMemberSize(struct _GtkTreeViewColumn,sort_order,4,3,44775)
+CheckOffset(struct _GtkTreeViewColumn,sort_order,172,3,44775)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13204,0);
 Msg("Find size of _GtkTreeViewColumn (13204)\n");
@@ -7633,6 +8243,8 @@ Msg("Find size of _GtkTreeViewColumn (13204)\n");
 CheckTypeSize(GtkCellEditable,0, 13206, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellEditable,0, 13206, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellEditable,0, 13206, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13206,0);
 Msg("Find size of GtkCellEditable (13206)\n");
@@ -7642,6 +8254,8 @@ Msg("Find size of GtkCellEditable (13206)\n");
 CheckTypeSize(GtkCellEditable *,4, 13207, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellEditable *,8, 13207, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellEditable *,8, 13207, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13207,0);
 Msg("Find size of GtkCellEditable * (13207)\n");
@@ -7655,6 +8269,10 @@ CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
 CheckEnum("GTK_TREE_VIEW_COLUMN_GROW_ONLY",GTK_TREE_VIEW_COLUMN_GROW_ONLY,0);
 CheckEnum("GTK_TREE_VIEW_COLUMN_AUTOSIZE",GTK_TREE_VIEW_COLUMN_AUTOSIZE,1);
 CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
+#elif __ia64__
+CheckEnum("GTK_TREE_VIEW_COLUMN_GROW_ONLY",GTK_TREE_VIEW_COLUMN_GROW_ONLY,0);
+CheckEnum("GTK_TREE_VIEW_COLUMN_AUTOSIZE",GTK_TREE_VIEW_COLUMN_AUTOSIZE,1);
+CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13208,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4142 (13208)\n");
@@ -7664,6 +8282,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4142 (13208)\n");
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13209,0);
 Msg("Find size of GtkTreeViewColumnSizing (13209)\n");
@@ -7673,6 +8293,8 @@ Msg("Find size of GtkTreeViewColumnSizing (13209)\n");
 CheckTypeSize(GtkTreeViewColumn,124, 13210, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewColumn,184, 13210, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewColumn,184, 13210, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13210,0);
 Msg("Find size of GtkTreeViewColumn (13210)\n");
@@ -7682,6 +8304,8 @@ Msg("Find size of GtkTreeViewColumn (13210)\n");
 CheckTypeSize(GtkTreeViewColumn *,4, 13211, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewColumn *,8, 13211, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewColumn *,8, 13211, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13211,0);
 Msg("Find size of GtkTreeViewColumn * (13211)\n");
@@ -7715,6 +8339,20 @@ CheckMemberSize(struct _GtkCellRenderer,xpad,2,11,44790)
 CheckOffset(struct _GtkCellRenderer,xpad,48,11,44790)
 CheckMemberSize(struct _GtkCellRenderer,ypad,2,11,44791)
 CheckOffset(struct _GtkCellRenderer,ypad,50,11,44791)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRenderer,56, 13212, 3)
+CheckMemberSize(struct _GtkCellRenderer,xalign,4,3,44786)
+CheckOffset(struct _GtkCellRenderer,xalign,32,3,44786)
+CheckMemberSize(struct _GtkCellRenderer,yalign,4,3,44787)
+CheckOffset(struct _GtkCellRenderer,yalign,36,3,44787)
+CheckMemberSize(struct _GtkCellRenderer,width,4,3,44788)
+CheckOffset(struct _GtkCellRenderer,width,40,3,44788)
+CheckMemberSize(struct _GtkCellRenderer,height,4,3,44789)
+CheckOffset(struct _GtkCellRenderer,height,44,3,44789)
+CheckMemberSize(struct _GtkCellRenderer,xpad,2,3,44790)
+CheckOffset(struct _GtkCellRenderer,xpad,48,3,44790)
+CheckMemberSize(struct _GtkCellRenderer,ypad,2,3,44791)
+CheckOffset(struct _GtkCellRenderer,ypad,50,3,44791)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13212,0);
 Msg("Find size of _GtkCellRenderer (13212)\n");
@@ -7724,6 +8362,8 @@ Msg("Find size of _GtkCellRenderer (13212)\n");
 CheckTypeSize(GtkCellRenderer,40, 13213, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRenderer,56, 13213, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRenderer,56, 13213, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13213,0);
 Msg("Find size of GtkCellRenderer (13213)\n");
@@ -7733,6 +8373,8 @@ Msg("Find size of GtkCellRenderer (13213)\n");
 CheckTypeSize(GtkCellRenderer *,4, 13214, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRenderer *,8, 13214, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRenderer *,8, 13214, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13214,0);
 Msg("Find size of GtkCellRenderer * (13214)\n");
@@ -7750,6 +8392,12 @@ CheckEnum("GTK_BUTTONBOX_SPREAD",GTK_BUTTONBOX_SPREAD,1);
 CheckEnum("GTK_BUTTONBOX_EDGE",GTK_BUTTONBOX_EDGE,2);
 CheckEnum("GTK_BUTTONBOX_START",GTK_BUTTONBOX_START,3);
 CheckEnum("GTK_BUTTONBOX_END",GTK_BUTTONBOX_END,4);
+#elif __ia64__
+CheckEnum("GTK_BUTTONBOX_DEFAULT_STYLE",GTK_BUTTONBOX_DEFAULT_STYLE,0);
+CheckEnum("GTK_BUTTONBOX_SPREAD",GTK_BUTTONBOX_SPREAD,1);
+CheckEnum("GTK_BUTTONBOX_EDGE",GTK_BUTTONBOX_EDGE,2);
+CheckEnum("GTK_BUTTONBOX_START",GTK_BUTTONBOX_START,3);
+CheckEnum("GTK_BUTTONBOX_END",GTK_BUTTONBOX_END,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13215,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-236 (13215)\n");
@@ -7759,6 +8407,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-236 (13215)\n");
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 2)
 #elif __x86_64__
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 11)
+#elif __ia64__
+CheckTypeSize(GtkButtonBoxStyle,4, 13216, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13216,0);
 Msg("Find size of GtkButtonBoxStyle (13216)\n");
@@ -7788,6 +8438,18 @@ CheckMemberSize(struct _GtkButtonBox,child_ipad_y,4,11,44808)
 CheckOffset(struct _GtkButtonBox,child_ipad_y,140,11,44808)
 CheckMemberSize(struct _GtkButtonBox,layout_style,4,11,44809)
 CheckOffset(struct _GtkButtonBox,layout_style,144,11,44809)
+#elif __ia64__
+CheckTypeSize(struct _GtkButtonBox,152, 13217, 3)
+CheckMemberSize(struct _GtkButtonBox,child_min_width,4,3,44805)
+CheckOffset(struct _GtkButtonBox,child_min_width,128,3,44805)
+CheckMemberSize(struct _GtkButtonBox,child_min_height,4,3,44806)
+CheckOffset(struct _GtkButtonBox,child_min_height,132,3,44806)
+CheckMemberSize(struct _GtkButtonBox,child_ipad_x,4,3,44807)
+CheckOffset(struct _GtkButtonBox,child_ipad_x,136,3,44807)
+CheckMemberSize(struct _GtkButtonBox,child_ipad_y,4,3,44808)
+CheckOffset(struct _GtkButtonBox,child_ipad_y,140,3,44808)
+CheckMemberSize(struct _GtkButtonBox,layout_style,4,3,44809)
+CheckOffset(struct _GtkButtonBox,layout_style,144,3,44809)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13217,0);
 Msg("Find size of _GtkButtonBox (13217)\n");
@@ -7797,6 +8459,8 @@ Msg("Find size of _GtkButtonBox (13217)\n");
 CheckTypeSize(GtkButtonBox,96, 13218, 2)
 #elif __x86_64__
 CheckTypeSize(GtkButtonBox,152, 13218, 11)
+#elif __ia64__
+CheckTypeSize(GtkButtonBox,152, 13218, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13218,0);
 Msg("Find size of GtkButtonBox (13218)\n");
@@ -7806,6 +8470,8 @@ Msg("Find size of GtkButtonBox (13218)\n");
 CheckTypeSize(GtkButtonBox *,4, 13219, 2)
 #elif __x86_64__
 CheckTypeSize(GtkButtonBox *,8, 13219, 11)
+#elif __ia64__
+CheckTypeSize(GtkButtonBox *,8, 13219, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13219,0);
 Msg("Find size of GtkButtonBox * (13219)\n");
@@ -7819,6 +8485,10 @@ CheckOffset(struct _GtkToggleAction,private_data,16,2,44813)
 CheckTypeSize(struct _GtkToggleAction,40, 13220, 11)
 CheckMemberSize(struct _GtkToggleAction,private_data,8,11,44813)
 CheckOffset(struct _GtkToggleAction,private_data,32,11,44813)
+#elif __ia64__
+CheckTypeSize(struct _GtkToggleAction,40, 13220, 3)
+CheckMemberSize(struct _GtkToggleAction,private_data,8,3,44813)
+CheckOffset(struct _GtkToggleAction,private_data,32,3,44813)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13220,0);
 Msg("Find size of _GtkToggleAction (13220)\n");
@@ -7832,6 +8502,10 @@ CheckOffset(struct _GtkAction,private_data,12,2,44811)
 CheckTypeSize(struct _GtkAction,32, 13221, 11)
 CheckMemberSize(struct _GtkAction,private_data,8,11,44811)
 CheckOffset(struct _GtkAction,private_data,24,11,44811)
+#elif __ia64__
+CheckTypeSize(struct _GtkAction,32, 13221, 3)
+CheckMemberSize(struct _GtkAction,private_data,8,3,44811)
+CheckOffset(struct _GtkAction,private_data,24,3,44811)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13221,0);
 Msg("Find size of _GtkAction (13221)\n");
@@ -7841,6 +8515,8 @@ Msg("Find size of _GtkAction (13221)\n");
 CheckTypeSize(GtkActionPrivate,0, 13223, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionPrivate,0, 13223, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionPrivate,0, 13223, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13223,0);
 Msg("Find size of GtkActionPrivate (13223)\n");
@@ -7850,6 +8526,8 @@ Msg("Find size of GtkActionPrivate (13223)\n");
 CheckTypeSize(GtkActionPrivate *,4, 13224, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionPrivate *,8, 13224, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionPrivate *,8, 13224, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13224,0);
 Msg("Find size of GtkActionPrivate * (13224)\n");
@@ -7859,6 +8537,8 @@ Msg("Find size of GtkActionPrivate * (13224)\n");
 CheckTypeSize(GtkAction,16, 13225, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAction,32, 13225, 11)
+#elif __ia64__
+CheckTypeSize(GtkAction,32, 13225, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13225,0);
 Msg("Find size of GtkAction (13225)\n");
@@ -7868,6 +8548,8 @@ Msg("Find size of GtkAction (13225)\n");
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleActionPrivate,0, 13227, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13227,0);
 Msg("Find size of GtkToggleActionPrivate (13227)\n");
@@ -7877,6 +8559,8 @@ Msg("Find size of GtkToggleActionPrivate (13227)\n");
 CheckTypeSize(GtkToggleActionPrivate *,4, 13228, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleActionPrivate *,8, 13228, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleActionPrivate *,8, 13228, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13228,0);
 Msg("Find size of GtkToggleActionPrivate * (13228)\n");
@@ -7886,6 +8570,8 @@ Msg("Find size of GtkToggleActionPrivate * (13228)\n");
 CheckTypeSize(GtkToggleAction,20, 13229, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleAction,40, 13229, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleAction,40, 13229, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13229,0);
 Msg("Find size of GtkToggleAction (13229)\n");
@@ -7895,6 +8581,8 @@ Msg("Find size of GtkToggleAction (13229)\n");
 CheckTypeSize(GtkToggleAction *,4, 13230, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleAction *,8, 13230, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleAction *,8, 13230, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13230,0);
 Msg("Find size of GtkToggleAction * (13230)\n");
@@ -7904,6 +8592,8 @@ Msg("Find size of GtkToggleAction * (13230)\n");
 CheckTypeSize(const GtkTextIter,56, 13231, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkTextIter,80, 13231, 11)
+#elif __ia64__
+CheckTypeSize(const GtkTextIter,80, 13231, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13231,0);
 Msg("Find size of const GtkTextIter (13231)\n");
@@ -7911,6 +8601,7 @@ Msg("Find size of const GtkTextIter (13231)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13232,0);
 Msg("Find size of const GtkTextIter * (13232)\n");
@@ -7936,6 +8627,16 @@ CheckMemberSize(struct _GtkTextTag,priority,4,11,44817)
 CheckOffset(struct _GtkTextTag,priority,40,11,44817)
 CheckMemberSize(struct _GtkTextTag,values,8,11,44868)
 CheckOffset(struct _GtkTextTag,values,48,11,44868)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextTag,64, 13233, 3)
+CheckMemberSize(struct _GtkTextTag,table,8,3,44815)
+CheckOffset(struct _GtkTextTag,table,24,3,44815)
+CheckMemberSize(struct _GtkTextTag,name,8,3,44816)
+CheckOffset(struct _GtkTextTag,name,32,3,44816)
+CheckMemberSize(struct _GtkTextTag,priority,4,3,44817)
+CheckOffset(struct _GtkTextTag,priority,40,3,44817)
+CheckMemberSize(struct _GtkTextTag,values,8,3,44868)
+CheckOffset(struct _GtkTextTag,values,48,3,44868)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13233,0);
 Msg("Find size of _GtkTextTag (13233)\n");
@@ -8005,6 +8706,36 @@ CheckMemberSize(struct _GtkTextAttributes,language,8,11,44858)
 CheckOffset(struct _GtkTextAttributes,language,136,11,44858)
 CheckMemberSize(struct _GtkTextAttributes,padding1,8,11,44859)
 CheckOffset(struct _GtkTextAttributes,padding1,144,11,44859)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextAttributes,160, 13234, 3)
+CheckMemberSize(struct _GtkTextAttributes,appearance,64,3,44834)
+CheckOffset(struct _GtkTextAttributes,appearance,8,3,44834)
+CheckMemberSize(struct _GtkTextAttributes,justification,4,3,44839)
+CheckOffset(struct _GtkTextAttributes,justification,72,3,44839)
+CheckMemberSize(struct _GtkTextAttributes,direction,4,3,44843)
+CheckOffset(struct _GtkTextAttributes,direction,76,3,44843)
+CheckMemberSize(struct _GtkTextAttributes,font,8,3,44844)
+CheckOffset(struct _GtkTextAttributes,font,80,3,44844)
+CheckMemberSize(struct _GtkTextAttributes,font_scale,8,3,44845)
+CheckOffset(struct _GtkTextAttributes,font_scale,88,3,44845)
+CheckMemberSize(struct _GtkTextAttributes,left_margin,4,3,44846)
+CheckOffset(struct _GtkTextAttributes,left_margin,96,3,44846)
+CheckMemberSize(struct _GtkTextAttributes,indent,4,3,44847)
+CheckOffset(struct _GtkTextAttributes,indent,100,3,44847)
+CheckMemberSize(struct _GtkTextAttributes,right_margin,4,3,44848)
+CheckOffset(struct _GtkTextAttributes,right_margin,104,3,44848)
+CheckMemberSize(struct _GtkTextAttributes,pixels_above_lines,4,3,44849)
+CheckOffset(struct _GtkTextAttributes,pixels_above_lines,108,3,44849)
+CheckMemberSize(struct _GtkTextAttributes,pixels_below_lines,4,3,44850)
+CheckOffset(struct _GtkTextAttributes,pixels_below_lines,112,3,44850)
+CheckMemberSize(struct _GtkTextAttributes,pixels_inside_wrap,4,3,44851)
+CheckOffset(struct _GtkTextAttributes,pixels_inside_wrap,116,3,44851)
+CheckMemberSize(struct _GtkTextAttributes,tabs,8,3,44852)
+CheckOffset(struct _GtkTextAttributes,tabs,120,3,44852)
+CheckMemberSize(struct _GtkTextAttributes,wrap_mode,4,3,44857)
+CheckOffset(struct _GtkTextAttributes,wrap_mode,128,3,44857)
+CheckMemberSize(struct _GtkTextAttributes,language,8,3,44858)
+CheckOffset(struct _GtkTextAttributes,language,136,3,44858)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13234,0);
 Msg("Find size of _GtkTextAttributes (13234)\n");
@@ -8034,6 +8765,18 @@ CheckMemberSize(struct _GtkTextAppearance,rise,4,11,44823)
 CheckOffset(struct _GtkTextAppearance,rise,40,11,44823)
 CheckMemberSize(struct _GtkTextAppearance,padding1,8,11,44824)
 CheckOffset(struct _GtkTextAppearance,padding1,48,11,44824)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextAppearance,64, 13235, 3)
+CheckMemberSize(struct _GtkTextAppearance,fg_color,12,3,44820)
+CheckOffset(struct _GtkTextAppearance,fg_color,12,3,44820)
+CheckMemberSize(struct _GtkTextAppearance,bg_stipple,8,3,44821)
+CheckOffset(struct _GtkTextAppearance,bg_stipple,24,3,44821)
+CheckMemberSize(struct _GtkTextAppearance,fg_stipple,8,3,44822)
+CheckOffset(struct _GtkTextAppearance,fg_stipple,32,3,44822)
+CheckMemberSize(struct _GtkTextAppearance,rise,4,3,44823)
+CheckOffset(struct _GtkTextAppearance,rise,40,3,44823)
+CheckMemberSize(struct _GtkTextAppearance,padding1,8,3,44824)
+CheckOffset(struct _GtkTextAppearance,padding1,48,3,44824)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13235,0);
 Msg("Find size of _GtkTextAppearance (13235)\n");
@@ -8043,6 +8786,8 @@ Msg("Find size of _GtkTextAppearance (13235)\n");
 CheckTypeSize(GtkTextAppearance,44, 13236, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextAppearance,64, 13236, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextAppearance,64, 13236, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13236,0);
 Msg("Find size of GtkTextAppearance (13236)\n");
@@ -8058,6 +8803,11 @@ CheckEnum("GTK_JUSTIFY_LEFT",GTK_JUSTIFY_LEFT,0);
 CheckEnum("GTK_JUSTIFY_RIGHT",GTK_JUSTIFY_RIGHT,1);
 CheckEnum("GTK_JUSTIFY_CENTER",GTK_JUSTIFY_CENTER,2);
 CheckEnum("GTK_JUSTIFY_FILL",GTK_JUSTIFY_FILL,3);
+#elif __ia64__
+CheckEnum("GTK_JUSTIFY_LEFT",GTK_JUSTIFY_LEFT,0);
+CheckEnum("GTK_JUSTIFY_RIGHT",GTK_JUSTIFY_RIGHT,1);
+CheckEnum("GTK_JUSTIFY_CENTER",GTK_JUSTIFY_CENTER,2);
+CheckEnum("GTK_JUSTIFY_FILL",GTK_JUSTIFY_FILL,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13237,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3600 (13237)\n");
@@ -8067,6 +8817,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3600 (13237)\n");
 CheckTypeSize(GtkJustification,4, 13238, 2)
 #elif __x86_64__
 CheckTypeSize(GtkJustification,4, 13238, 11)
+#elif __ia64__
+CheckTypeSize(GtkJustification,4, 13238, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13238,0);
 Msg("Find size of GtkJustification (13238)\n");
@@ -8080,6 +8832,10 @@ CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
 CheckEnum("GTK_TEXT_DIR_NONE",GTK_TEXT_DIR_NONE,0);
 CheckEnum("GTK_TEXT_DIR_LTR",GTK_TEXT_DIR_LTR,1);
 CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
+#elif __ia64__
+CheckEnum("GTK_TEXT_DIR_NONE",GTK_TEXT_DIR_NONE,0);
+CheckEnum("GTK_TEXT_DIR_LTR",GTK_TEXT_DIR_LTR,1);
+CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13239,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3599 (13239)\n");
@@ -8089,6 +8845,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3599 (13239)\n");
 CheckTypeSize(GtkTextDirection,4, 13240, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextDirection,4, 13240, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextDirection,4, 13240, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13240,0);
 Msg("Find size of GtkTextDirection (13240)\n");
@@ -8104,6 +8862,11 @@ CheckEnum("GTK_WRAP_NONE",GTK_WRAP_NONE,0);
 CheckEnum("GTK_WRAP_CHAR",GTK_WRAP_CHAR,1);
 CheckEnum("GTK_WRAP_WORD",GTK_WRAP_WORD,2);
 CheckEnum("GTK_WRAP_WORD_CHAR",GTK_WRAP_WORD_CHAR,3);
+#elif __ia64__
+CheckEnum("GTK_WRAP_NONE",GTK_WRAP_NONE,0);
+CheckEnum("GTK_WRAP_CHAR",GTK_WRAP_CHAR,1);
+CheckEnum("GTK_WRAP_WORD",GTK_WRAP_WORD,2);
+CheckEnum("GTK_WRAP_WORD_CHAR",GTK_WRAP_WORD_CHAR,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13241,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3601 (13241)\n");
@@ -8113,6 +8876,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3601 (13241)\n");
 CheckTypeSize(GtkWrapMode,4, 13242, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWrapMode,4, 13242, 11)
+#elif __ia64__
+CheckTypeSize(GtkWrapMode,4, 13242, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13242,0);
 Msg("Find size of GtkWrapMode (13242)\n");
@@ -8122,6 +8887,8 @@ Msg("Find size of GtkWrapMode (13242)\n");
 CheckTypeSize(GtkTextAttributes,112, 13243, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextAttributes,160, 13243, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextAttributes,160, 13243, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13243,0);
 Msg("Find size of GtkTextAttributes (13243)\n");
@@ -8131,6 +8898,8 @@ Msg("Find size of GtkTextAttributes (13243)\n");
 CheckTypeSize(GtkTextAttributes *,4, 13244, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextAttributes *,8, 13244, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextAttributes *,8, 13244, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13244,0);
 Msg("Find size of GtkTextAttributes * (13244)\n");
@@ -8140,6 +8909,8 @@ Msg("Find size of GtkTextAttributes * (13244)\n");
 CheckTypeSize(GtkTextTag,32, 13245, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextTag,64, 13245, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextTag,64, 13245, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13245,0);
 Msg("Find size of GtkTextTag (13245)\n");
@@ -8149,6 +8920,8 @@ Msg("Find size of GtkTextTag (13245)\n");
 CheckTypeSize(GtkTextTag *,4, 13246, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextTag *,8, 13246, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextTag *,8, 13246, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13246,0);
 Msg("Find size of GtkTextTag * (13246)\n");
@@ -8158,6 +8931,8 @@ Msg("Find size of GtkTextTag * (13246)\n");
 CheckTypeSize(GtkFileFilter,0, 13248, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileFilter,0, 13248, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileFilter,0, 13248, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13248,0);
 Msg("Find size of GtkFileFilter (13248)\n");
@@ -8167,6 +8942,8 @@ Msg("Find size of GtkFileFilter (13248)\n");
 CheckTypeSize(GtkFileFilter *,4, 13249, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileFilter *,8, 13249, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileFilter *,8, 13249, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13249,0);
 Msg("Find size of GtkFileFilter * (13249)\n");
@@ -8192,6 +8969,16 @@ CheckMemberSize(struct _GtkFileFilterInfo,display_name,8,11,44900)
 CheckOffset(struct _GtkFileFilterInfo,display_name,24,11,44900)
 CheckMemberSize(struct _GtkFileFilterInfo,mime_type,8,11,44901)
 CheckOffset(struct _GtkFileFilterInfo,mime_type,32,11,44901)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileFilterInfo,40, 13250, 3)
+CheckMemberSize(struct _GtkFileFilterInfo,filename,8,3,44898)
+CheckOffset(struct _GtkFileFilterInfo,filename,8,3,44898)
+CheckMemberSize(struct _GtkFileFilterInfo,uri,8,3,44899)
+CheckOffset(struct _GtkFileFilterInfo,uri,16,3,44899)
+CheckMemberSize(struct _GtkFileFilterInfo,display_name,8,3,44900)
+CheckOffset(struct _GtkFileFilterInfo,display_name,24,3,44900)
+CheckMemberSize(struct _GtkFileFilterInfo,mime_type,8,3,44901)
+CheckOffset(struct _GtkFileFilterInfo,mime_type,32,3,44901)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13250,0);
 Msg("Find size of _GtkFileFilterInfo (13250)\n");
@@ -8207,6 +8994,11 @@ CheckEnum("GTK_FILE_FILTER_FILENAME",GTK_FILE_FILTER_FILENAME,1);
 CheckEnum("GTK_FILE_FILTER_URI",GTK_FILE_FILTER_URI,2);
 CheckEnum("GTK_FILE_FILTER_DISPLAY_NAME",GTK_FILE_FILTER_DISPLAY_NAME,4);
 CheckEnum("GTK_FILE_FILTER_MIME_TYPE",GTK_FILE_FILTER_MIME_TYPE,8);
+#elif __ia64__
+CheckEnum("GTK_FILE_FILTER_FILENAME",GTK_FILE_FILTER_FILENAME,1);
+CheckEnum("GTK_FILE_FILTER_URI",GTK_FILE_FILTER_URI,2);
+CheckEnum("GTK_FILE_FILTER_DISPLAY_NAME",GTK_FILE_FILTER_DISPLAY_NAME,4);
+CheckEnum("GTK_FILE_FILTER_MIME_TYPE",GTK_FILE_FILTER_MIME_TYPE,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13251,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1418 (13251)\n");
@@ -8216,6 +9008,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1418 (13251)\n");
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileFilterFlags,4, 13252, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13252,0);
 Msg("Find size of GtkFileFilterFlags (13252)\n");
@@ -8225,6 +9019,8 @@ Msg("Find size of GtkFileFilterFlags (13252)\n");
 CheckTypeSize(GtkFileFilterInfo,20, 13253, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileFilterInfo,40, 13253, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileFilterInfo,40, 13253, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13253,0);
 Msg("Find size of GtkFileFilterInfo (13253)\n");
@@ -8234,6 +9030,8 @@ Msg("Find size of GtkFileFilterInfo (13253)\n");
 CheckTypeSize(const GtkFileFilterInfo,20, 13254, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkFileFilterInfo,40, 13254, 11)
+#elif __ia64__
+CheckTypeSize(const GtkFileFilterInfo,40, 13254, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13254,0);
 Msg("Find size of const GtkFileFilterInfo (13254)\n");
@@ -8241,6 +9039,7 @@ Msg("Find size of const GtkFileFilterInfo (13254)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13255,0);
 Msg("Find size of const GtkFileFilterInfo * (13255)\n");
@@ -8250,6 +9049,8 @@ Msg("Find size of const GtkFileFilterInfo * (13255)\n");
 CheckTypeSize(GtkIconSource,0, 13257, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconSource,0, 13257, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconSource,0, 13257, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13257,0);
 Msg("Find size of GtkIconSource (13257)\n");
@@ -8259,6 +9060,8 @@ Msg("Find size of GtkIconSource (13257)\n");
 CheckTypeSize(const GtkIconSource,0, 13258, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkIconSource,0, 13258, 11)
+#elif __ia64__
+CheckTypeSize(const GtkIconSource,0, 13258, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13258,0);
 Msg("Find size of const GtkIconSource (13258)\n");
@@ -8266,6 +9069,7 @@ Msg("Find size of const GtkIconSource (13258)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13259,0);
 Msg("Find size of const GtkIconSource * (13259)\n");
@@ -8279,6 +9083,10 @@ CheckOffset(struct _GtkToolButton,priv,76,2,44905)
 CheckTypeSize(struct _GtkToolButton,136, 13260, 11)
 CheckMemberSize(struct _GtkToolButton,priv,8,11,44905)
 CheckOffset(struct _GtkToolButton,priv,128,11,44905)
+#elif __ia64__
+CheckTypeSize(struct _GtkToolButton,136, 13260, 3)
+CheckMemberSize(struct _GtkToolButton,priv,8,3,44905)
+CheckOffset(struct _GtkToolButton,priv,128,3,44905)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13260,0);
 Msg("Find size of _GtkToolButton (13260)\n");
@@ -8292,6 +9100,10 @@ CheckOffset(struct _GtkToolItem,priv,72,2,44903)
 CheckTypeSize(struct _GtkToolItem,128, 13261, 11)
 CheckMemberSize(struct _GtkToolItem,priv,8,11,44903)
 CheckOffset(struct _GtkToolItem,priv,120,11,44903)
+#elif __ia64__
+CheckTypeSize(struct _GtkToolItem,128, 13261, 3)
+CheckMemberSize(struct _GtkToolItem,priv,8,3,44903)
+CheckOffset(struct _GtkToolItem,priv,120,3,44903)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13261,0);
 Msg("Find size of _GtkToolItem (13261)\n");
@@ -8301,6 +9113,8 @@ Msg("Find size of _GtkToolItem (13261)\n");
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolItemPrivate,0, 13263, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13263,0);
 Msg("Find size of GtkToolItemPrivate (13263)\n");
@@ -8310,6 +9124,8 @@ Msg("Find size of GtkToolItemPrivate (13263)\n");
 CheckTypeSize(GtkToolItemPrivate *,4, 13264, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolItemPrivate *,8, 13264, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolItemPrivate *,8, 13264, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13264,0);
 Msg("Find size of GtkToolItemPrivate * (13264)\n");
@@ -8319,6 +9135,8 @@ Msg("Find size of GtkToolItemPrivate * (13264)\n");
 CheckTypeSize(GtkToolItem,76, 13265, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolItem,128, 13265, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolItem,128, 13265, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13265,0);
 Msg("Find size of GtkToolItem (13265)\n");
@@ -8328,6 +9146,8 @@ Msg("Find size of GtkToolItem (13265)\n");
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolButtonPrivate,0, 13267, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13267,0);
 Msg("Find size of GtkToolButtonPrivate (13267)\n");
@@ -8337,6 +9157,8 @@ Msg("Find size of GtkToolButtonPrivate (13267)\n");
 CheckTypeSize(GtkToolButtonPrivate *,4, 13268, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolButtonPrivate *,8, 13268, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolButtonPrivate *,8, 13268, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13268,0);
 Msg("Find size of GtkToolButtonPrivate * (13268)\n");
@@ -8346,6 +9168,8 @@ Msg("Find size of GtkToolButtonPrivate * (13268)\n");
 CheckTypeSize(GtkToolButton,80, 13269, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolButton,136, 13269, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolButton,136, 13269, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13269,0);
 Msg("Find size of GtkToolButton (13269)\n");
@@ -8355,6 +9179,8 @@ Msg("Find size of GtkToolButton (13269)\n");
 CheckTypeSize(GtkToolButton *,4, 13270, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolButton *,8, 13270, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolButton *,8, 13270, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13270,0);
 Msg("Find size of GtkToolButton * (13270)\n");
@@ -8368,6 +9194,10 @@ CheckOffset(struct _GtkIconView,priv,68,2,44907)
 CheckTypeSize(struct _GtkIconView,120, 13271, 11)
 CheckMemberSize(struct _GtkIconView,priv,8,11,44907)
 CheckOffset(struct _GtkIconView,priv,112,11,44907)
+#elif __ia64__
+CheckTypeSize(struct _GtkIconView,120, 13271, 3)
+CheckMemberSize(struct _GtkIconView,priv,8,3,44907)
+CheckOffset(struct _GtkIconView,priv,112,3,44907)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13271,0);
 Msg("Find size of _GtkIconView (13271)\n");
@@ -8377,6 +9207,8 @@ Msg("Find size of _GtkIconView (13271)\n");
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconViewPrivate,0, 13273, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13273,0);
 Msg("Find size of GtkIconViewPrivate (13273)\n");
@@ -8386,6 +9218,8 @@ Msg("Find size of GtkIconViewPrivate (13273)\n");
 CheckTypeSize(GtkIconViewPrivate *,4, 13274, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconViewPrivate *,8, 13274, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconViewPrivate *,8, 13274, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13274,0);
 Msg("Find size of GtkIconViewPrivate * (13274)\n");
@@ -8395,6 +9229,8 @@ Msg("Find size of GtkIconViewPrivate * (13274)\n");
 CheckTypeSize(GtkIconView,72, 13275, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconView,120, 13275, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconView,120, 13275, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13275,0);
 Msg("Find size of GtkIconView (13275)\n");
@@ -8404,6 +9240,8 @@ Msg("Find size of GtkIconView (13275)\n");
 CheckTypeSize(GtkIconView *,4, 13276, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconView *,8, 13276, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconView *,8, 13276, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13276,0);
 Msg("Find size of GtkIconView * (13276)\n");
@@ -8449,6 +9287,26 @@ CheckMemberSize(struct _GtkLabel,mnemonic_window,8,11,44921)
 CheckOffset(struct _GtkLabel,mnemonic_window,168,11,44921)
 CheckMemberSize(struct _GtkLabel,select_info,8,11,44922)
 CheckOffset(struct _GtkLabel,select_info,176,11,44922)
+#elif __ia64__
+CheckTypeSize(struct _GtkLabel,184, 13277, 3)
+CheckMemberSize(struct _GtkLabel,label,8,3,44909)
+CheckOffset(struct _GtkLabel,label,112,3,44909)
+CheckMemberSize(struct _GtkLabel,mnemonic_keyval,4,3,44915)
+CheckOffset(struct _GtkLabel,mnemonic_keyval,124,3,44915)
+CheckMemberSize(struct _GtkLabel,text,8,3,44916)
+CheckOffset(struct _GtkLabel,text,128,3,44916)
+CheckMemberSize(struct _GtkLabel,attrs,8,3,44917)
+CheckOffset(struct _GtkLabel,attrs,136,3,44917)
+CheckMemberSize(struct _GtkLabel,effective_attrs,8,3,44918)
+CheckOffset(struct _GtkLabel,effective_attrs,144,3,44918)
+CheckMemberSize(struct _GtkLabel,layout,8,3,44919)
+CheckOffset(struct _GtkLabel,layout,152,3,44919)
+CheckMemberSize(struct _GtkLabel,mnemonic_widget,8,3,44920)
+CheckOffset(struct _GtkLabel,mnemonic_widget,160,3,44920)
+CheckMemberSize(struct _GtkLabel,mnemonic_window,8,3,44921)
+CheckOffset(struct _GtkLabel,mnemonic_window,168,3,44921)
+CheckMemberSize(struct _GtkLabel,select_info,8,3,44922)
+CheckOffset(struct _GtkLabel,select_info,176,3,44922)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13277,0);
 Msg("Find size of _GtkLabel (13277)\n");
@@ -8458,6 +9316,8 @@ Msg("Find size of _GtkLabel (13277)\n");
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 2)
 #elif __x86_64__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 11)
+#elif __ia64__
+CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13279,0);
 Msg("Find size of GtkLabelSelectionInfo (13279)\n");
@@ -8467,6 +9327,8 @@ Msg("Find size of GtkLabelSelectionInfo (13279)\n");
 CheckTypeSize(GtkLabelSelectionInfo *,4, 13280, 2)
 #elif __x86_64__
 CheckTypeSize(GtkLabelSelectionInfo *,8, 13280, 11)
+#elif __ia64__
+CheckTypeSize(GtkLabelSelectionInfo *,8, 13280, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13280,0);
 Msg("Find size of GtkLabelSelectionInfo * (13280)\n");
@@ -8476,6 +9338,8 @@ Msg("Find size of GtkLabelSelectionInfo * (13280)\n");
 CheckTypeSize(GtkLabel,112, 13281, 2)
 #elif __x86_64__
 CheckTypeSize(GtkLabel,184, 13281, 11)
+#elif __ia64__
+CheckTypeSize(GtkLabel,184, 13281, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13281,0);
 Msg("Find size of GtkLabel (13281)\n");
@@ -8485,6 +9349,8 @@ Msg("Find size of GtkLabel (13281)\n");
 CheckTypeSize(GtkLabel *,4, 13282, 2)
 #elif __x86_64__
 CheckTypeSize(GtkLabel *,8, 13282, 11)
+#elif __ia64__
+CheckTypeSize(GtkLabel *,8, 13282, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13282,0);
 Msg("Find size of GtkLabel * (13282)\n");
@@ -8494,6 +9360,8 @@ Msg("Find size of GtkLabel * (13282)\n");
 CheckTypeSize(GtkContainer *,4, 13283, 2)
 #elif __x86_64__
 CheckTypeSize(GtkContainer *,8, 13283, 11)
+#elif __ia64__
+CheckTypeSize(GtkContainer *,8, 13283, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13283,0);
 Msg("Find size of GtkContainer * (13283)\n");
@@ -8519,6 +9387,16 @@ CheckMemberSize(struct _GtkSettings,rc_context,8,11,44926)
 CheckOffset(struct _GtkSettings,rc_context,40,11,44926)
 CheckMemberSize(struct _GtkSettings,screen,8,11,44927)
 CheckOffset(struct _GtkSettings,screen,48,11,44927)
+#elif __ia64__
+CheckTypeSize(struct _GtkSettings,56, 13284, 3)
+CheckMemberSize(struct _GtkSettings,queued_settings,8,3,44924)
+CheckOffset(struct _GtkSettings,queued_settings,24,3,44924)
+CheckMemberSize(struct _GtkSettings,property_values,8,3,44925)
+CheckOffset(struct _GtkSettings,property_values,32,3,44925)
+CheckMemberSize(struct _GtkSettings,rc_context,8,3,44926)
+CheckOffset(struct _GtkSettings,rc_context,40,3,44926)
+CheckMemberSize(struct _GtkSettings,screen,8,3,44927)
+CheckOffset(struct _GtkSettings,screen,48,3,44927)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13284,0);
 Msg("Find size of _GtkSettings (13284)\n");
@@ -8528,6 +9406,8 @@ Msg("Find size of _GtkSettings (13284)\n");
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 11)
+#elif __ia64__
+CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13286,0);
 Msg("Find size of GtkSettingsPropertyValue (13286)\n");
@@ -8537,6 +9417,8 @@ Msg("Find size of GtkSettingsPropertyValue (13286)\n");
 CheckTypeSize(GtkSettingsPropertyValue *,4, 13287, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSettingsPropertyValue *,8, 13287, 11)
+#elif __ia64__
+CheckTypeSize(GtkSettingsPropertyValue *,8, 13287, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13287,0);
 Msg("Find size of GtkSettingsPropertyValue * (13287)\n");
@@ -8546,6 +9428,8 @@ Msg("Find size of GtkSettingsPropertyValue * (13287)\n");
 CheckTypeSize(GtkRcContext,0, 13289, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcContext,0, 13289, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcContext,0, 13289, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13289,0);
 Msg("Find size of GtkRcContext (13289)\n");
@@ -8555,6 +9439,8 @@ Msg("Find size of GtkRcContext (13289)\n");
 CheckTypeSize(GtkRcContext *,4, 13290, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcContext *,8, 13290, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcContext *,8, 13290, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13290,0);
 Msg("Find size of GtkRcContext * (13290)\n");
@@ -8564,6 +9450,8 @@ Msg("Find size of GtkRcContext * (13290)\n");
 CheckTypeSize(GtkSettings,28, 13291, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSettings,56, 13291, 11)
+#elif __ia64__
+CheckTypeSize(GtkSettings,56, 13291, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13291,0);
 Msg("Find size of GtkSettings (13291)\n");
@@ -8573,6 +9461,8 @@ Msg("Find size of GtkSettings (13291)\n");
 CheckTypeSize(GtkSettings *,4, 13292, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSettings *,8, 13292, 11)
+#elif __ia64__
+CheckTypeSize(GtkSettings *,8, 13292, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13292,0);
 Msg("Find size of GtkSettings * (13292)\n");
@@ -8586,6 +9476,10 @@ CheckOffset(struct _GtkUIManager,private_data,12,2,44929)
 CheckTypeSize(struct _GtkUIManager,32, 13293, 11)
 CheckMemberSize(struct _GtkUIManager,private_data,8,11,44929)
 CheckOffset(struct _GtkUIManager,private_data,24,11,44929)
+#elif __ia64__
+CheckTypeSize(struct _GtkUIManager,32, 13293, 3)
+CheckMemberSize(struct _GtkUIManager,private_data,8,3,44929)
+CheckOffset(struct _GtkUIManager,private_data,24,3,44929)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13293,0);
 Msg("Find size of _GtkUIManager (13293)\n");
@@ -8595,6 +9489,8 @@ Msg("Find size of _GtkUIManager (13293)\n");
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 2)
 #elif __x86_64__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 11)
+#elif __ia64__
+CheckTypeSize(GtkUIManagerPrivate,0, 13295, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13295,0);
 Msg("Find size of GtkUIManagerPrivate (13295)\n");
@@ -8604,6 +9500,8 @@ Msg("Find size of GtkUIManagerPrivate (13295)\n");
 CheckTypeSize(GtkUIManagerPrivate *,4, 13296, 2)
 #elif __x86_64__
 CheckTypeSize(GtkUIManagerPrivate *,8, 13296, 11)
+#elif __ia64__
+CheckTypeSize(GtkUIManagerPrivate *,8, 13296, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13296,0);
 Msg("Find size of GtkUIManagerPrivate * (13296)\n");
@@ -8613,6 +9511,8 @@ Msg("Find size of GtkUIManagerPrivate * (13296)\n");
 CheckTypeSize(GtkUIManager,16, 13297, 2)
 #elif __x86_64__
 CheckTypeSize(GtkUIManager,32, 13297, 11)
+#elif __ia64__
+CheckTypeSize(GtkUIManager,32, 13297, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13297,0);
 Msg("Find size of GtkUIManager (13297)\n");
@@ -8622,6 +9522,8 @@ Msg("Find size of GtkUIManager (13297)\n");
 CheckTypeSize(GtkUIManager *,4, 13298, 2)
 #elif __x86_64__
 CheckTypeSize(GtkUIManager *,8, 13298, 11)
+#elif __ia64__
+CheckTypeSize(GtkUIManager *,8, 13298, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13298,0);
 Msg("Find size of GtkUIManager * (13298)\n");
@@ -8635,6 +9537,10 @@ CheckOffset(struct _GtkRadioMenuItem,group,100,2,44949)
 CheckTypeSize(struct _GtkRadioMenuItem,176, 13299, 11)
 CheckMemberSize(struct _GtkRadioMenuItem,group,8,11,44949)
 CheckOffset(struct _GtkRadioMenuItem,group,168,11,44949)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioMenuItem,176, 13299, 3)
+CheckMemberSize(struct _GtkRadioMenuItem,group,8,3,44949)
+CheckOffset(struct _GtkRadioMenuItem,group,168,3,44949)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13299,0);
 Msg("Find size of _GtkRadioMenuItem (13299)\n");
@@ -8648,6 +9554,10 @@ CheckOffset(struct _GtkCheckMenuItem,menu_item,0,2,44943)
 CheckTypeSize(struct _GtkCheckMenuItem,168, 13300, 11)
 Msg("Missing member data for _GtkCheckMenuItem on x86-64\n");
 CheckOffset(struct _GtkCheckMenuItem,menu_item,0,11,44943)
+#elif __ia64__
+CheckTypeSize(struct _GtkCheckMenuItem,168, 13300, 3)
+Msg("Missing member data for _GtkCheckMenuItem on IA64\n");
+CheckOffset(struct _GtkCheckMenuItem,menu_item,0,3,44943)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13300,0);
 Msg("Find size of _GtkCheckMenuItem (13300)\n");
@@ -8681,6 +9591,20 @@ CheckMemberSize(struct _GtkMenuItem,accel_path,8,11,44936)
 CheckOffset(struct _GtkMenuItem,accel_path,144,11,44936)
 CheckMemberSize(struct _GtkMenuItem,timer,4,11,44942)
 CheckOffset(struct _GtkMenuItem,timer,156,11,44942)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuItem,160, 13301, 3)
+CheckMemberSize(struct _GtkMenuItem,submenu,8,3,44932)
+CheckOffset(struct _GtkMenuItem,submenu,120,3,44932)
+CheckMemberSize(struct _GtkMenuItem,event_window,8,3,44933)
+CheckOffset(struct _GtkMenuItem,event_window,128,3,44933)
+CheckMemberSize(struct _GtkMenuItem,toggle_size,2,3,44934)
+CheckOffset(struct _GtkMenuItem,toggle_size,136,3,44934)
+CheckMemberSize(struct _GtkMenuItem,accelerator_width,2,3,44935)
+CheckOffset(struct _GtkMenuItem,accelerator_width,138,3,44935)
+CheckMemberSize(struct _GtkMenuItem,accel_path,8,3,44936)
+CheckOffset(struct _GtkMenuItem,accel_path,144,3,44936)
+CheckMemberSize(struct _GtkMenuItem,timer,4,3,44942)
+CheckOffset(struct _GtkMenuItem,timer,156,3,44942)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13301,0);
 Msg("Find size of _GtkMenuItem (13301)\n");
@@ -8694,6 +9618,10 @@ CheckOffset(struct _GtkItem,bin,0,2,44930)
 CheckTypeSize(struct _GtkItem,120, 13302, 11)
 Msg("Missing member data for _GtkItem on x86-64\n");
 CheckOffset(struct _GtkItem,bin,0,11,44930)
+#elif __ia64__
+CheckTypeSize(struct _GtkItem,120, 13302, 3)
+Msg("Missing member data for _GtkItem on IA64\n");
+CheckOffset(struct _GtkItem,bin,0,3,44930)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13302,0);
 Msg("Find size of _GtkItem (13302)\n");
@@ -8703,6 +9631,8 @@ Msg("Find size of _GtkItem (13302)\n");
 CheckTypeSize(GtkItem,72, 13303, 2)
 #elif __x86_64__
 CheckTypeSize(GtkItem,120, 13303, 11)
+#elif __ia64__
+CheckTypeSize(GtkItem,120, 13303, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13303,0);
 Msg("Find size of GtkItem (13303)\n");
@@ -8712,6 +9642,8 @@ Msg("Find size of GtkItem (13303)\n");
 CheckTypeSize(GtkMenuItem,96, 13304, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuItem,160, 13304, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuItem,160, 13304, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13304,0);
 Msg("Find size of GtkMenuItem (13304)\n");
@@ -8721,6 +9653,8 @@ Msg("Find size of GtkMenuItem (13304)\n");
 CheckTypeSize(GtkCheckMenuItem,100, 13305, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCheckMenuItem,168, 13305, 11)
+#elif __ia64__
+CheckTypeSize(GtkCheckMenuItem,168, 13305, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13305,0);
 Msg("Find size of GtkCheckMenuItem (13305)\n");
@@ -8730,6 +9664,8 @@ Msg("Find size of GtkCheckMenuItem (13305)\n");
 CheckTypeSize(GtkRadioMenuItem,104, 13306, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioMenuItem,176, 13306, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioMenuItem,176, 13306, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13306,0);
 Msg("Find size of GtkRadioMenuItem (13306)\n");
@@ -8739,6 +9675,8 @@ Msg("Find size of GtkRadioMenuItem (13306)\n");
 CheckTypeSize(GtkRadioMenuItem *,4, 13307, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioMenuItem *,8, 13307, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioMenuItem *,8, 13307, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13307,0);
 Msg("Find size of GtkRadioMenuItem * (13307)\n");
@@ -8752,6 +9690,10 @@ CheckOffset(struct _GtkCellView,priv,60,2,44951)
 CheckTypeSize(struct _GtkCellView,104, 13308, 11)
 CheckMemberSize(struct _GtkCellView,priv,8,11,44951)
 CheckOffset(struct _GtkCellView,priv,96,11,44951)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellView,104, 13308, 3)
+CheckMemberSize(struct _GtkCellView,priv,8,3,44951)
+CheckOffset(struct _GtkCellView,priv,96,3,44951)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13308,0);
 Msg("Find size of _GtkCellView (13308)\n");
@@ -8761,6 +9703,8 @@ Msg("Find size of _GtkCellView (13308)\n");
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellViewPrivate,0, 13310, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13310,0);
 Msg("Find size of GtkCellViewPrivate (13310)\n");
@@ -8770,6 +9714,8 @@ Msg("Find size of GtkCellViewPrivate (13310)\n");
 CheckTypeSize(GtkCellViewPrivate *,4, 13311, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellViewPrivate *,8, 13311, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellViewPrivate *,8, 13311, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13311,0);
 Msg("Find size of GtkCellViewPrivate * (13311)\n");
@@ -8779,6 +9725,8 @@ Msg("Find size of GtkCellViewPrivate * (13311)\n");
 CheckTypeSize(GtkCellView,64, 13312, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellView,104, 13312, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellView,104, 13312, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13312,0);
 Msg("Find size of GtkCellView (13312)\n");
@@ -8788,6 +9736,8 @@ Msg("Find size of GtkCellView (13312)\n");
 CheckTypeSize(GtkCellView *,4, 13313, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellView *,8, 13313, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellView *,8, 13313, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13313,0);
 Msg("Find size of GtkCellView * (13313)\n");
@@ -8821,6 +9771,20 @@ CheckMemberSize(struct _GtkSelectionData,length,4,11,44957)
 CheckOffset(struct _GtkSelectionData,length,40,11,44957)
 CheckMemberSize(struct _GtkSelectionData,display,8,11,44958)
 CheckOffset(struct _GtkSelectionData,display,48,11,44958)
+#elif __ia64__
+CheckTypeSize(struct _GtkSelectionData,56, 13314, 3)
+CheckMemberSize(struct _GtkSelectionData,target,8,3,44953)
+CheckOffset(struct _GtkSelectionData,target,8,3,44953)
+CheckMemberSize(struct _GtkSelectionData,type,8,3,44954)
+CheckOffset(struct _GtkSelectionData,type,16,3,44954)
+CheckMemberSize(struct _GtkSelectionData,format,4,3,44955)
+CheckOffset(struct _GtkSelectionData,format,24,3,44955)
+CheckMemberSize(struct _GtkSelectionData,data,8,3,44956)
+CheckOffset(struct _GtkSelectionData,data,32,3,44956)
+CheckMemberSize(struct _GtkSelectionData,length,4,3,44957)
+CheckOffset(struct _GtkSelectionData,length,40,3,44957)
+CheckMemberSize(struct _GtkSelectionData,display,8,3,44958)
+CheckOffset(struct _GtkSelectionData,display,48,3,44958)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13314,0);
 Msg("Find size of _GtkSelectionData (13314)\n");
@@ -8830,6 +9794,8 @@ Msg("Find size of _GtkSelectionData (13314)\n");
 CheckTypeSize(GtkSelectionData,28, 13315, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSelectionData,56, 13315, 11)
+#elif __ia64__
+CheckTypeSize(GtkSelectionData,56, 13315, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13315,0);
 Msg("Find size of GtkSelectionData (13315)\n");
@@ -8839,6 +9805,8 @@ Msg("Find size of GtkSelectionData (13315)\n");
 CheckTypeSize(GtkSelectionData *,4, 13316, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSelectionData *,8, 13316, 11)
+#elif __ia64__
+CheckTypeSize(GtkSelectionData *,8, 13316, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13316,0);
 Msg("Find size of GtkSelectionData * (13316)\n");
@@ -8848,6 +9816,8 @@ Msg("Find size of GtkSelectionData * (13316)\n");
 CheckTypeSize(GtkFileChooser,0, 13318, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooser,0, 13318, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooser,0, 13318, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13318,0);
 Msg("Find size of GtkFileChooser (13318)\n");
@@ -8857,6 +9827,8 @@ Msg("Find size of GtkFileChooser (13318)\n");
 CheckTypeSize(GtkFileChooser *,4, 13319, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooser *,8, 13319, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooser *,8, 13319, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13319,0);
 Msg("Find size of GtkFileChooser * (13319)\n");
@@ -8922,6 +9894,36 @@ CheckMemberSize(struct _GtkCurve,num_ctlpoints,4,11,44977)
 CheckOffset(struct _GtkCurve,num_ctlpoints,168,11,44977)
 CheckMemberSize(struct _GtkCurve,ctlpoint,8,11,44978)
 CheckOffset(struct _GtkCurve,ctlpoint,176,11,44978)
+#elif __ia64__
+CheckTypeSize(struct _GtkCurve,184, 13320, 3)
+CheckMemberSize(struct _GtkCurve,cursor_type,4,3,44962)
+CheckOffset(struct _GtkCurve,cursor_type,104,3,44962)
+CheckMemberSize(struct _GtkCurve,min_x,4,3,44963)
+CheckOffset(struct _GtkCurve,min_x,108,3,44963)
+CheckMemberSize(struct _GtkCurve,max_x,4,3,44964)
+CheckOffset(struct _GtkCurve,max_x,112,3,44964)
+CheckMemberSize(struct _GtkCurve,min_y,4,3,44965)
+CheckOffset(struct _GtkCurve,min_y,116,3,44965)
+CheckMemberSize(struct _GtkCurve,max_y,4,3,44966)
+CheckOffset(struct _GtkCurve,max_y,120,3,44966)
+CheckMemberSize(struct _GtkCurve,pixmap,8,3,44967)
+CheckOffset(struct _GtkCurve,pixmap,128,3,44967)
+CheckMemberSize(struct _GtkCurve,curve_type,4,3,44971)
+CheckOffset(struct _GtkCurve,curve_type,136,3,44971)
+CheckMemberSize(struct _GtkCurve,height,4,3,44972)
+CheckOffset(struct _GtkCurve,height,140,3,44972)
+CheckMemberSize(struct _GtkCurve,grab_point,4,3,44973)
+CheckOffset(struct _GtkCurve,grab_point,144,3,44973)
+CheckMemberSize(struct _GtkCurve,last,4,3,44974)
+CheckOffset(struct _GtkCurve,last,148,3,44974)
+CheckMemberSize(struct _GtkCurve,num_points,4,3,44975)
+CheckOffset(struct _GtkCurve,num_points,152,3,44975)
+CheckMemberSize(struct _GtkCurve,point,8,3,44976)
+CheckOffset(struct _GtkCurve,point,160,3,44976)
+CheckMemberSize(struct _GtkCurve,num_ctlpoints,4,3,44977)
+CheckOffset(struct _GtkCurve,num_ctlpoints,168,3,44977)
+CheckMemberSize(struct _GtkCurve,ctlpoint,8,3,44978)
+CheckOffset(struct _GtkCurve,ctlpoint,176,3,44978)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13320,0);
 Msg("Find size of _GtkCurve (13320)\n");
@@ -8935,6 +9937,10 @@ CheckOffset(struct _GtkDrawingArea,draw_data,60,2,44960)
 CheckTypeSize(struct _GtkDrawingArea,104, 13321, 11)
 CheckMemberSize(struct _GtkDrawingArea,draw_data,8,11,44960)
 CheckOffset(struct _GtkDrawingArea,draw_data,96,11,44960)
+#elif __ia64__
+CheckTypeSize(struct _GtkDrawingArea,104, 13321, 3)
+CheckMemberSize(struct _GtkDrawingArea,draw_data,8,3,44960)
+CheckOffset(struct _GtkDrawingArea,draw_data,96,3,44960)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13321,0);
 Msg("Find size of _GtkDrawingArea (13321)\n");
@@ -8944,6 +9950,8 @@ Msg("Find size of _GtkDrawingArea (13321)\n");
 CheckTypeSize(GtkDrawingArea,64, 13322, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDrawingArea,104, 13322, 11)
+#elif __ia64__
+CheckTypeSize(GtkDrawingArea,104, 13322, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13322,0);
 Msg("Find size of GtkDrawingArea (13322)\n");
@@ -8957,6 +9965,10 @@ CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
 CheckEnum("GTK_CURVE_TYPE_LINEAR",GTK_CURVE_TYPE_LINEAR,0);
 CheckEnum("GTK_CURVE_TYPE_SPLINE",GTK_CURVE_TYPE_SPLINE,1);
 CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
+#elif __ia64__
+CheckEnum("GTK_CURVE_TYPE_LINEAR",GTK_CURVE_TYPE_LINEAR,0);
+CheckEnum("GTK_CURVE_TYPE_SPLINE",GTK_CURVE_TYPE_SPLINE,1);
+CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13323,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1013 (13323)\n");
@@ -8966,6 +9978,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1013 (13323)\n");
 CheckTypeSize(GtkCurveType,4, 13324, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCurveType,4, 13324, 11)
+#elif __ia64__
+CheckTypeSize(GtkCurveType,4, 13324, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13324,0);
 Msg("Find size of GtkCurveType (13324)\n");
@@ -8976,6 +9990,7 @@ Msg("Find size of GtkCurveType (13324)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13326,0);
 Msg("Find size of gfloat[2] * (13326)\n");
@@ -8985,6 +10000,8 @@ Msg("Find size of gfloat[2] * (13326)\n");
 CheckTypeSize(GtkCurve,120, 13327, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCurve,184, 13327, 11)
+#elif __ia64__
+CheckTypeSize(GtkCurve,184, 13327, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13327,0);
 Msg("Find size of GtkCurve (13327)\n");
@@ -8994,6 +10011,8 @@ Msg("Find size of GtkCurve (13327)\n");
 CheckTypeSize(GtkCurve *,4, 13328, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCurve *,8, 13328, 11)
+#elif __ia64__
+CheckTypeSize(GtkCurve *,8, 13328, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13328,0);
 Msg("Find size of GtkCurve * (13328)\n");
@@ -9039,6 +10058,26 @@ CheckMemberSize(struct _GtkNotebook,tab_hborder,2,11,44987)
 CheckOffset(struct _GtkNotebook,tab_hborder,164,11,44987)
 CheckMemberSize(struct _GtkNotebook,tab_vborder,2,11,44988)
 CheckOffset(struct _GtkNotebook,tab_vborder,166,11,44988)
+#elif __ia64__
+CheckTypeSize(struct _GtkNotebook,176, 13329, 3)
+CheckMemberSize(struct _GtkNotebook,cur_page,8,3,44980)
+CheckOffset(struct _GtkNotebook,cur_page,112,3,44980)
+CheckMemberSize(struct _GtkNotebook,children,8,3,44981)
+CheckOffset(struct _GtkNotebook,children,120,3,44981)
+CheckMemberSize(struct _GtkNotebook,first_tab,8,3,44982)
+CheckOffset(struct _GtkNotebook,first_tab,128,3,44982)
+CheckMemberSize(struct _GtkNotebook,focus_tab,8,3,44983)
+CheckOffset(struct _GtkNotebook,focus_tab,136,3,44983)
+CheckMemberSize(struct _GtkNotebook,menu,8,3,44984)
+CheckOffset(struct _GtkNotebook,menu,144,3,44984)
+CheckMemberSize(struct _GtkNotebook,event_window,8,3,44985)
+CheckOffset(struct _GtkNotebook,event_window,152,3,44985)
+CheckMemberSize(struct _GtkNotebook,timer,4,3,44986)
+CheckOffset(struct _GtkNotebook,timer,160,3,44986)
+CheckMemberSize(struct _GtkNotebook,tab_hborder,2,3,44987)
+CheckOffset(struct _GtkNotebook,tab_hborder,164,3,44987)
+CheckMemberSize(struct _GtkNotebook,tab_vborder,2,3,44988)
+CheckOffset(struct _GtkNotebook,tab_vborder,166,3,44988)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13329,0);
 Msg("Find size of _GtkNotebook (13329)\n");
@@ -9048,6 +10087,8 @@ Msg("Find size of _GtkNotebook (13329)\n");
 CheckTypeSize(GtkNotebookPage,0, 13331, 2)
 #elif __x86_64__
 CheckTypeSize(GtkNotebookPage,0, 13331, 11)
+#elif __ia64__
+CheckTypeSize(GtkNotebookPage,0, 13331, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13331,0);
 Msg("Find size of GtkNotebookPage (13331)\n");
@@ -9057,6 +10098,8 @@ Msg("Find size of GtkNotebookPage (13331)\n");
 CheckTypeSize(GtkNotebookPage *,4, 13332, 2)
 #elif __x86_64__
 CheckTypeSize(GtkNotebookPage *,8, 13332, 11)
+#elif __ia64__
+CheckTypeSize(GtkNotebookPage *,8, 13332, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13332,0);
 Msg("Find size of GtkNotebookPage * (13332)\n");
@@ -9066,6 +10109,8 @@ Msg("Find size of GtkNotebookPage * (13332)\n");
 CheckTypeSize(GtkNotebook,104, 13333, 2)
 #elif __x86_64__
 CheckTypeSize(GtkNotebook,176, 13333, 11)
+#elif __ia64__
+CheckTypeSize(GtkNotebook,176, 13333, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13333,0);
 Msg("Find size of GtkNotebook (13333)\n");
@@ -9075,6 +10120,8 @@ Msg("Find size of GtkNotebook (13333)\n");
 CheckTypeSize(GtkNotebook *,4, 13334, 2)
 #elif __x86_64__
 CheckTypeSize(GtkNotebook *,8, 13334, 11)
+#elif __ia64__
+CheckTypeSize(GtkNotebook *,8, 13334, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13334,0);
 Msg("Find size of GtkNotebook * (13334)\n");
@@ -9088,6 +10135,10 @@ CheckOffset(struct _GtkIconFactory,icons,12,2,45006)
 CheckTypeSize(struct _GtkIconFactory,32, 13335, 11)
 CheckMemberSize(struct _GtkIconFactory,icons,8,11,45006)
 CheckOffset(struct _GtkIconFactory,icons,24,11,45006)
+#elif __ia64__
+CheckTypeSize(struct _GtkIconFactory,32, 13335, 3)
+CheckMemberSize(struct _GtkIconFactory,icons,8,3,45006)
+CheckOffset(struct _GtkIconFactory,icons,24,3,45006)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13335,0);
 Msg("Find size of _GtkIconFactory (13335)\n");
@@ -9097,6 +10148,8 @@ Msg("Find size of _GtkIconFactory (13335)\n");
 CheckTypeSize(GtkIconFactory,16, 13336, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconFactory,32, 13336, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconFactory,32, 13336, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13336,0);
 Msg("Find size of GtkIconFactory (13336)\n");
@@ -9106,6 +10159,8 @@ Msg("Find size of GtkIconFactory (13336)\n");
 CheckTypeSize(GtkIconFactory *,4, 13337, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconFactory *,8, 13337, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconFactory *,8, 13337, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13337,0);
 Msg("Find size of GtkIconFactory * (13337)\n");
@@ -9115,6 +10170,8 @@ Msg("Find size of GtkIconFactory * (13337)\n");
 CheckTypeSize(GtkAllocation *,4, 13338, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAllocation *,8, 13338, 11)
+#elif __ia64__
+CheckTypeSize(GtkAllocation *,8, 13338, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13338,0);
 Msg("Find size of GtkAllocation * (13338)\n");
@@ -9124,6 +10181,8 @@ Msg("Find size of GtkAllocation * (13338)\n");
 CheckTypeSize(GtkToolItem *,4, 13339, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolItem *,8, 13339, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolItem *,8, 13339, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13339,0);
 Msg("Find size of GtkToolItem * (13339)\n");
@@ -9137,6 +10196,10 @@ CheckOffset(struct _GtkRadioAction,private_data,20,2,45008)
 CheckTypeSize(struct _GtkRadioAction,48, 13340, 11)
 CheckMemberSize(struct _GtkRadioAction,private_data,8,11,45008)
 CheckOffset(struct _GtkRadioAction,private_data,40,11,45008)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioAction,48, 13340, 3)
+CheckMemberSize(struct _GtkRadioAction,private_data,8,3,45008)
+CheckOffset(struct _GtkRadioAction,private_data,40,3,45008)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13340,0);
 Msg("Find size of _GtkRadioAction (13340)\n");
@@ -9146,6 +10209,8 @@ Msg("Find size of _GtkRadioAction (13340)\n");
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioActionPrivate,0, 13342, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13342,0);
 Msg("Find size of GtkRadioActionPrivate (13342)\n");
@@ -9155,6 +10220,8 @@ Msg("Find size of GtkRadioActionPrivate (13342)\n");
 CheckTypeSize(GtkRadioActionPrivate *,4, 13343, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioActionPrivate *,8, 13343, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioActionPrivate *,8, 13343, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13343,0);
 Msg("Find size of GtkRadioActionPrivate * (13343)\n");
@@ -9164,6 +10231,8 @@ Msg("Find size of GtkRadioActionPrivate * (13343)\n");
 CheckTypeSize(GtkRadioAction,24, 13344, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioAction,48, 13344, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioAction,48, 13344, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13344,0);
 Msg("Find size of GtkRadioAction (13344)\n");
@@ -9173,6 +10242,8 @@ Msg("Find size of GtkRadioAction (13344)\n");
 CheckTypeSize(GtkRadioAction *,4, 13345, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioAction *,8, 13345, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioAction *,8, 13345, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13345,0);
 Msg("Find size of GtkRadioAction * (13345)\n");
@@ -9186,6 +10257,10 @@ CheckOffset(struct _GtkTextMark,segment,12,2,45010)
 CheckTypeSize(struct _GtkTextMark,32, 13346, 11)
 CheckMemberSize(struct _GtkTextMark,segment,8,11,45010)
 CheckOffset(struct _GtkTextMark,segment,24,11,45010)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextMark,32, 13346, 3)
+CheckMemberSize(struct _GtkTextMark,segment,8,3,45010)
+CheckOffset(struct _GtkTextMark,segment,24,3,45010)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13346,0);
 Msg("Find size of _GtkTextMark (13346)\n");
@@ -9195,6 +10270,8 @@ Msg("Find size of _GtkTextMark (13346)\n");
 CheckTypeSize(GtkTextMark,16, 13347, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextMark,32, 13347, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextMark,32, 13347, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13347,0);
 Msg("Find size of GtkTextMark (13347)\n");
@@ -9204,6 +10281,8 @@ Msg("Find size of GtkTextMark (13347)\n");
 CheckTypeSize(GtkTextMark *,4, 13348, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextMark *,8, 13348, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextMark *,8, 13348, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13348,0);
 Msg("Find size of GtkTextMark * (13348)\n");
@@ -9213,6 +10292,8 @@ Msg("Find size of GtkTextMark * (13348)\n");
 CheckTypeSize(GtkBox *,4, 13349, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBox *,8, 13349, 11)
+#elif __ia64__
+CheckTypeSize(GtkBox *,8, 13349, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13349,0);
 Msg("Find size of GtkBox * (13349)\n");
@@ -9224,6 +10305,9 @@ CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
 #elif __x86_64__
 CheckEnum("GTK_PACK_START",GTK_PACK_START,0);
 CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
+#elif __ia64__
+CheckEnum("GTK_PACK_START",GTK_PACK_START,0);
+CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13350,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-316 (13350)\n");
@@ -9233,6 +10317,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-316 (13350)\n");
 CheckTypeSize(GtkPackType,4, 13351, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPackType,4, 13351, 11)
+#elif __ia64__
+CheckTypeSize(GtkPackType,4, 13351, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13351,0);
 Msg("Find size of GtkPackType (13351)\n");
@@ -9246,6 +10332,10 @@ CheckOffset(struct _GtkColorSelection,private_data,76,2,45015)
 CheckTypeSize(struct _GtkColorSelection,136, 13352, 11)
 CheckMemberSize(struct _GtkColorSelection,private_data,8,11,45015)
 CheckOffset(struct _GtkColorSelection,private_data,128,11,45015)
+#elif __ia64__
+CheckTypeSize(struct _GtkColorSelection,136, 13352, 3)
+CheckMemberSize(struct _GtkColorSelection,private_data,8,3,45015)
+CheckOffset(struct _GtkColorSelection,private_data,128,3,45015)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13352,0);
 Msg("Find size of _GtkColorSelection (13352)\n");
@@ -9259,6 +10349,10 @@ CheckOffset(struct _GtkVBox,box,0,2,45013)
 CheckTypeSize(struct _GtkVBox,128, 13353, 11)
 Msg("Missing member data for _GtkVBox on x86-64\n");
 CheckOffset(struct _GtkVBox,box,0,11,45013)
+#elif __ia64__
+CheckTypeSize(struct _GtkVBox,128, 13353, 3)
+Msg("Missing member data for _GtkVBox on IA64\n");
+CheckOffset(struct _GtkVBox,box,0,3,45013)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13353,0);
 Msg("Find size of _GtkVBox (13353)\n");
@@ -9268,6 +10362,8 @@ Msg("Find size of _GtkVBox (13353)\n");
 CheckTypeSize(GtkVBox,76, 13354, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVBox,128, 13354, 11)
+#elif __ia64__
+CheckTypeSize(GtkVBox,128, 13354, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13354,0);
 Msg("Find size of GtkVBox (13354)\n");
@@ -9277,6 +10373,8 @@ Msg("Find size of GtkVBox (13354)\n");
 CheckTypeSize(GtkColorSelection,80, 13355, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorSelection,136, 13355, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorSelection,136, 13355, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13355,0);
 Msg("Find size of GtkColorSelection (13355)\n");
@@ -9286,6 +10384,8 @@ Msg("Find size of GtkColorSelection (13355)\n");
 CheckTypeSize(GtkColorSelection *,4, 13356, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorSelection *,8, 13356, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorSelection *,8, 13356, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13356,0);
 Msg("Find size of GtkColorSelection * (13356)\n");
@@ -9387,6 +10487,52 @@ CheckMemberSize(struct _GtkCalendar,_gtk_reserved3,8,11,45043)
 CheckOffset(struct _GtkCalendar,_gtk_reserved3,1056,11,45043)
 CheckMemberSize(struct _GtkCalendar,_gtk_reserved4,8,11,45044)
 CheckOffset(struct _GtkCalendar,_gtk_reserved4,1064,11,45044)
+#elif __ia64__
+CheckTypeSize(struct _GtkCalendar,1072, 13357, 3)
+CheckMemberSize(struct _GtkCalendar,header_style,8,3,45017)
+CheckOffset(struct _GtkCalendar,header_style,96,3,45017)
+CheckMemberSize(struct _GtkCalendar,label_style,8,3,45018)
+CheckOffset(struct _GtkCalendar,label_style,104,3,45018)
+CheckMemberSize(struct _GtkCalendar,month,4,3,45019)
+CheckOffset(struct _GtkCalendar,month,112,3,45019)
+CheckMemberSize(struct _GtkCalendar,year,4,3,45020)
+CheckOffset(struct _GtkCalendar,year,116,3,45020)
+CheckMemberSize(struct _GtkCalendar,selected_day,4,3,45021)
+CheckOffset(struct _GtkCalendar,selected_day,120,3,45021)
+CheckMemberSize(struct _GtkCalendar,day_month,168,3,45022)
+CheckOffset(struct _GtkCalendar,day_month,124,3,45022)
+CheckMemberSize(struct _GtkCalendar,day,168,3,45023)
+CheckOffset(struct _GtkCalendar,day,292,3,45023)
+CheckMemberSize(struct _GtkCalendar,num_marked_dates,4,3,45024)
+CheckOffset(struct _GtkCalendar,num_marked_dates,460,3,45024)
+CheckMemberSize(struct _GtkCalendar,marked_date,124,3,45025)
+CheckOffset(struct _GtkCalendar,marked_date,464,3,45025)
+CheckMemberSize(struct _GtkCalendar,display_flags,4,3,45031)
+CheckOffset(struct _GtkCalendar,display_flags,588,3,45031)
+CheckMemberSize(struct _GtkCalendar,marked_date_color,372,3,45032)
+CheckOffset(struct _GtkCalendar,marked_date_color,592,3,45032)
+CheckMemberSize(struct _GtkCalendar,gc,8,3,45033)
+CheckOffset(struct _GtkCalendar,gc,968,3,45033)
+CheckMemberSize(struct _GtkCalendar,xor_gc,8,3,45034)
+CheckOffset(struct _GtkCalendar,xor_gc,976,3,45034)
+CheckMemberSize(struct _GtkCalendar,focus_row,4,3,45035)
+CheckOffset(struct _GtkCalendar,focus_row,984,3,45035)
+CheckMemberSize(struct _GtkCalendar,focus_col,4,3,45036)
+CheckOffset(struct _GtkCalendar,focus_col,988,3,45036)
+CheckMemberSize(struct _GtkCalendar,highlight_row,4,3,45037)
+CheckOffset(struct _GtkCalendar,highlight_row,992,3,45037)
+CheckMemberSize(struct _GtkCalendar,highlight_col,4,3,45038)
+CheckOffset(struct _GtkCalendar,highlight_col,996,3,45038)
+CheckMemberSize(struct _GtkCalendar,grow_space,32,3,45040)
+CheckOffset(struct _GtkCalendar,grow_space,1008,3,45040)
+CheckMemberSize(struct _GtkCalendar,_gtk_reserved1,8,3,45041)
+CheckOffset(struct _GtkCalendar,_gtk_reserved1,1040,3,45041)
+CheckMemberSize(struct _GtkCalendar,_gtk_reserved2,8,3,45042)
+CheckOffset(struct _GtkCalendar,_gtk_reserved2,1048,3,45042)
+CheckMemberSize(struct _GtkCalendar,_gtk_reserved3,8,3,45043)
+CheckOffset(struct _GtkCalendar,_gtk_reserved3,1056,3,45043)
+CheckMemberSize(struct _GtkCalendar,_gtk_reserved4,8,3,45044)
+CheckOffset(struct _GtkCalendar,_gtk_reserved4,1064,3,45044)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13357,0);
 Msg("Find size of _GtkCalendar (13357)\n");
@@ -9410,6 +10556,12 @@ CheckEnum("GTK_CALENDAR_SHOW_DAY_NAMES",GTK_CALENDAR_SHOW_DAY_NAMES,2);
 CheckEnum("GTK_CALENDAR_NO_MONTH_CHANGE",GTK_CALENDAR_NO_MONTH_CHANGE,4);
 CheckEnum("GTK_CALENDAR_SHOW_WEEK_NUMBERS",GTK_CALENDAR_SHOW_WEEK_NUMBERS,8);
 CheckEnum("GTK_CALENDAR_WEEK_START_MONDAY",GTK_CALENDAR_WEEK_START_MONDAY,16);
+#elif __ia64__
+CheckEnum("GTK_CALENDAR_SHOW_HEADING",GTK_CALENDAR_SHOW_HEADING,1);
+CheckEnum("GTK_CALENDAR_SHOW_DAY_NAMES",GTK_CALENDAR_SHOW_DAY_NAMES,2);
+CheckEnum("GTK_CALENDAR_NO_MONTH_CHANGE",GTK_CALENDAR_NO_MONTH_CHANGE,4);
+CheckEnum("GTK_CALENDAR_SHOW_WEEK_NUMBERS",GTK_CALENDAR_SHOW_WEEK_NUMBERS,8);
+CheckEnum("GTK_CALENDAR_WEEK_START_MONDAY",GTK_CALENDAR_WEEK_START_MONDAY,16);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13360,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-396 (13360)\n");
@@ -9419,6 +10571,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-396 (13360)\n");
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 11)
+#elif __ia64__
+CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13361,0);
 Msg("Find size of GtkCalendarDisplayOptions (13361)\n");
@@ -9434,6 +10588,8 @@ Msg("Find size of GtkCalendarDisplayOptions (13361)\n");
 CheckTypeSize(GtkCalendar,996, 13364, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCalendar,1072, 13364, 11)
+#elif __ia64__
+CheckTypeSize(GtkCalendar,1072, 13364, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13364,0);
 Msg("Find size of GtkCalendar (13364)\n");
@@ -9443,6 +10599,8 @@ Msg("Find size of GtkCalendar (13364)\n");
 CheckTypeSize(GtkCalendar *,4, 13365, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCalendar *,8, 13365, 11)
+#elif __ia64__
+CheckTypeSize(GtkCalendar *,8, 13365, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13365,0);
 Msg("Find size of GtkCalendar * (13365)\n");
@@ -9452,6 +10610,8 @@ Msg("Find size of GtkCalendar * (13365)\n");
 CheckTypeSize(GtkIconInfo,0, 13367, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconInfo,0, 13367, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconInfo,0, 13367, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13367,0);
 Msg("Find size of GtkIconInfo (13367)\n");
@@ -9461,6 +10621,8 @@ Msg("Find size of GtkIconInfo (13367)\n");
 CheckTypeSize(GtkIconInfo *,4, 13368, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconInfo *,8, 13368, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconInfo *,8, 13368, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13368,0);
 Msg("Find size of GtkIconInfo * (13368)\n");
@@ -9470,6 +10632,8 @@ Msg("Find size of GtkIconInfo * (13368)\n");
 CheckTypeSize(GtkTreePath,0, 13370, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreePath,0, 13370, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreePath,0, 13370, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13370,0);
 Msg("Find size of GtkTreePath (13370)\n");
@@ -9479,6 +10643,8 @@ Msg("Find size of GtkTreePath (13370)\n");
 CheckTypeSize(GtkTreePath *,4, 13371, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreePath *,8, 13371, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreePath *,8, 13371, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13371,0);
 Msg("Find size of GtkTreePath * (13371)\n");
@@ -9488,6 +10654,8 @@ Msg("Find size of GtkTreePath * (13371)\n");
 CheckTypeSize(GtkTreeDragSource,0, 13373, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeDragSource,0, 13373, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13373,0);
 Msg("Find size of GtkTreeDragSource (13373)\n");
@@ -9497,6 +10665,8 @@ Msg("Find size of GtkTreeDragSource (13373)\n");
 CheckTypeSize(GtkTreeDragSource *,4, 13374, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeDragSource *,8, 13374, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeDragSource *,8, 13374, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13374,0);
 Msg("Find size of GtkTreeDragSource * (13374)\n");
@@ -9534,6 +10704,22 @@ CheckMemberSize(struct _GtkTable,column_spacing,2,11,45059)
 CheckOffset(struct _GtkTable,column_spacing,140,11,45059)
 CheckMemberSize(struct _GtkTable,row_spacing,2,11,45060)
 CheckOffset(struct _GtkTable,row_spacing,142,11,45060)
+#elif __ia64__
+CheckTypeSize(struct _GtkTable,152, 13375, 3)
+CheckMemberSize(struct _GtkTable,children,8,3,45046)
+CheckOffset(struct _GtkTable,children,112,3,45046)
+CheckMemberSize(struct _GtkTable,rows,8,3,45055)
+CheckOffset(struct _GtkTable,rows,120,3,45055)
+CheckMemberSize(struct _GtkTable,cols,8,3,45056)
+CheckOffset(struct _GtkTable,cols,128,3,45056)
+CheckMemberSize(struct _GtkTable,nrows,2,3,45057)
+CheckOffset(struct _GtkTable,nrows,136,3,45057)
+CheckMemberSize(struct _GtkTable,ncols,2,3,45058)
+CheckOffset(struct _GtkTable,ncols,138,3,45058)
+CheckMemberSize(struct _GtkTable,column_spacing,2,3,45059)
+CheckOffset(struct _GtkTable,column_spacing,140,3,45059)
+CheckMemberSize(struct _GtkTable,row_spacing,2,3,45060)
+CheckOffset(struct _GtkTable,row_spacing,142,3,45060)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13375,0);
 Msg("Find size of _GtkTable (13375)\n");
@@ -9551,6 +10737,12 @@ CheckMemberSize(struct _GtkTableRowCol,allocation,2,11,45048)
 CheckOffset(struct _GtkTableRowCol,allocation,2,11,45048)
 CheckMemberSize(struct _GtkTableRowCol,spacing,2,11,45049)
 CheckOffset(struct _GtkTableRowCol,spacing,4,11,45049)
+#elif __ia64__
+CheckTypeSize(struct _GtkTableRowCol,8, 13376, 3)
+CheckMemberSize(struct _GtkTableRowCol,allocation,2,3,45048)
+CheckOffset(struct _GtkTableRowCol,allocation,2,3,45048)
+CheckMemberSize(struct _GtkTableRowCol,spacing,2,3,45049)
+CheckOffset(struct _GtkTableRowCol,spacing,4,3,45049)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13376,0);
 Msg("Find size of _GtkTableRowCol (13376)\n");
@@ -9560,6 +10752,8 @@ Msg("Find size of _GtkTableRowCol (13376)\n");
 CheckTypeSize(GtkTableRowCol,8, 13377, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTableRowCol,8, 13377, 11)
+#elif __ia64__
+CheckTypeSize(GtkTableRowCol,8, 13377, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13377,0);
 Msg("Find size of GtkTableRowCol (13377)\n");
@@ -9569,6 +10763,8 @@ Msg("Find size of GtkTableRowCol (13377)\n");
 CheckTypeSize(GtkTableRowCol *,4, 13378, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTableRowCol *,8, 13378, 11)
+#elif __ia64__
+CheckTypeSize(GtkTableRowCol *,8, 13378, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13378,0);
 Msg("Find size of GtkTableRowCol * (13378)\n");
@@ -9578,6 +10774,8 @@ Msg("Find size of GtkTableRowCol * (13378)\n");
 CheckTypeSize(GtkTable,92, 13379, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTable,152, 13379, 11)
+#elif __ia64__
+CheckTypeSize(GtkTable,152, 13379, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13379,0);
 Msg("Find size of GtkTable (13379)\n");
@@ -9587,6 +10785,8 @@ Msg("Find size of GtkTable (13379)\n");
 CheckTypeSize(GtkTable *,4, 13380, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTable *,8, 13380, 11)
+#elif __ia64__
+CheckTypeSize(GtkTable *,8, 13380, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13380,0);
 Msg("Find size of GtkTable * (13380)\n");
@@ -9596,6 +10796,8 @@ Msg("Find size of GtkTable * (13380)\n");
 CheckTypeSize(GtkFunction,4, 13381, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFunction,8, 13381, 11)
+#elif __ia64__
+CheckTypeSize(GtkFunction,8, 13381, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13381,0);
 Msg("Find size of GtkFunction (13381)\n");
@@ -9605,55 +10807,30 @@ Msg("Find size of GtkFunction (13381)\n");
 CheckTypeSize(GtkObject *,4, 13382, 2)
 #elif __x86_64__
 CheckTypeSize(GtkObject *,8, 13382, 11)
+#elif __ia64__
+CheckTypeSize(GtkObject *,8, 13382, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13382,0);
 Msg("Find size of GtkObject * (13382)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GtkArg,16, 13383, 2)
-CheckMemberSize(struct _GtkArg,name,4,2,45063)
-CheckOffset(struct _GtkArg,name,4,2,45063)
-CheckMemberSize(struct _GtkArg,d,8,2,45079)
-CheckOffset(struct _GtkArg,d,8,2,45079)
-#elif __x86_64__
-CheckTypeSize(struct _GtkArg,32, 13383, 11)
-CheckMemberSize(struct _GtkArg,name,8,11,45063)
-CheckOffset(struct _GtkArg,name,8,11,45063)
-CheckMemberSize(struct _GtkArg,d,16,11,45079)
-CheckOffset(struct _GtkArg,d,16,11,45079)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13383,0);
-Msg("Find size of _GtkArg (13383)\n");
-#endif
-
-#if __i386__
 CheckTypeSize(GtkSignalFunc,4, 13384, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSignalFunc,8, 13384, 11)
+#elif __ia64__
+CheckTypeSize(GtkSignalFunc,8, 13384, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13384,0);
 Msg("Find size of GtkSignalFunc (13384)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(GtkArg,0, 13387, 2)
 #elif __x86_64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13385,0);
-Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2376 (13385)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13386,0);
-Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2377 (13386)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GtkArg,16, 13387, 2)
-#elif __x86_64__
-CheckTypeSize(GtkArg,32, 13387, 11)
+CheckTypeSize(GtkArg,0, 13387, 11)
+#elif __ia64__
+CheckTypeSize(GtkArg,0, 13387, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13387,0);
 Msg("Find size of GtkArg (13387)\n");
@@ -9663,6 +10840,8 @@ Msg("Find size of GtkArg (13387)\n");
 CheckTypeSize(GtkArg *,4, 13388, 2)
 #elif __x86_64__
 CheckTypeSize(GtkArg *,8, 13388, 11)
+#elif __ia64__
+CheckTypeSize(GtkArg *,8, 13388, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13388,0);
 Msg("Find size of GtkArg * (13388)\n");
@@ -9670,6 +10849,7 @@ Msg("Find size of GtkArg * (13388)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13389,0);
 Msg("Find size of fptr_gtk_6201 (13389)\n");
@@ -9679,6 +10859,8 @@ Msg("Find size of fptr_gtk_6201 (13389)\n");
 CheckTypeSize(GtkCallbackMarshal,4, 13390, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCallbackMarshal,8, 13390, 11)
+#elif __ia64__
+CheckTypeSize(GtkCallbackMarshal,8, 13390, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13390,0);
 Msg("Find size of GtkCallbackMarshal (13390)\n");
@@ -9688,6 +10870,8 @@ Msg("Find size of GtkCallbackMarshal (13390)\n");
 CheckTypeSize(GtkAction *,4, 13391, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAction *,8, 13391, 11)
+#elif __ia64__
+CheckTypeSize(GtkAction *,8, 13391, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13391,0);
 Msg("Find size of GtkAction * (13391)\n");
@@ -9777,6 +10961,48 @@ CheckMemberSize(struct _GtkMenu,navigation_region,8,11,45120)
 CheckOffset(struct _GtkMenu,navigation_region,280,11,45120)
 CheckMemberSize(struct _GtkMenu,navigation_timeout,4,11,45121)
 CheckOffset(struct _GtkMenu,navigation_timeout,288,11,45121)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenu,296, 13392, 3)
+CheckMemberSize(struct _GtkMenu,parent_menu_item,8,3,45097)
+CheckOffset(struct _GtkMenu,parent_menu_item,152,3,45097)
+CheckMemberSize(struct _GtkMenu,old_active_menu_item,8,3,45098)
+CheckOffset(struct _GtkMenu,old_active_menu_item,160,3,45098)
+CheckMemberSize(struct _GtkMenu,accel_group,8,3,45099)
+CheckOffset(struct _GtkMenu,accel_group,168,3,45099)
+CheckMemberSize(struct _GtkMenu,accel_path,8,3,45100)
+CheckOffset(struct _GtkMenu,accel_path,176,3,45100)
+CheckMemberSize(struct _GtkMenu,position_func,8,3,45106)
+CheckOffset(struct _GtkMenu,position_func,184,3,45106)
+CheckMemberSize(struct _GtkMenu,position_func_data,8,3,45107)
+CheckOffset(struct _GtkMenu,position_func_data,192,3,45107)
+CheckMemberSize(struct _GtkMenu,toggle_size,4,3,45108)
+CheckOffset(struct _GtkMenu,toggle_size,200,3,45108)
+CheckMemberSize(struct _GtkMenu,toplevel,8,3,45109)
+CheckOffset(struct _GtkMenu,toplevel,208,3,45109)
+CheckMemberSize(struct _GtkMenu,tearoff_window,8,3,45110)
+CheckOffset(struct _GtkMenu,tearoff_window,216,3,45110)
+CheckMemberSize(struct _GtkMenu,tearoff_hbox,8,3,45111)
+CheckOffset(struct _GtkMenu,tearoff_hbox,224,3,45111)
+CheckMemberSize(struct _GtkMenu,tearoff_scrollbar,8,3,45112)
+CheckOffset(struct _GtkMenu,tearoff_scrollbar,232,3,45112)
+CheckMemberSize(struct _GtkMenu,tearoff_adjustment,8,3,45113)
+CheckOffset(struct _GtkMenu,tearoff_adjustment,240,3,45113)
+CheckMemberSize(struct _GtkMenu,view_window,8,3,45114)
+CheckOffset(struct _GtkMenu,view_window,248,3,45114)
+CheckMemberSize(struct _GtkMenu,bin_window,8,3,45115)
+CheckOffset(struct _GtkMenu,bin_window,256,3,45115)
+CheckMemberSize(struct _GtkMenu,scroll_offset,4,3,45116)
+CheckOffset(struct _GtkMenu,scroll_offset,264,3,45116)
+CheckMemberSize(struct _GtkMenu,saved_scroll_offset,4,3,45117)
+CheckOffset(struct _GtkMenu,saved_scroll_offset,268,3,45117)
+CheckMemberSize(struct _GtkMenu,scroll_step,4,3,45118)
+CheckOffset(struct _GtkMenu,scroll_step,272,3,45118)
+CheckMemberSize(struct _GtkMenu,timeout_id,4,3,45119)
+CheckOffset(struct _GtkMenu,timeout_id,276,3,45119)
+CheckMemberSize(struct _GtkMenu,navigation_region,8,3,45120)
+CheckOffset(struct _GtkMenu,navigation_region,280,3,45120)
+CheckMemberSize(struct _GtkMenu,navigation_timeout,4,3,45121)
+CheckOffset(struct _GtkMenu,navigation_timeout,288,3,45121)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13392,0);
 Msg("Find size of _GtkMenu (13392)\n");
@@ -9806,6 +11032,18 @@ CheckMemberSize(struct _GtkMenuShell,button,4,11,45088)
 CheckOffset(struct _GtkMenuShell,button,136,11,45088)
 CheckMemberSize(struct _GtkMenuShell,activate_time,4,11,45089)
 CheckOffset(struct _GtkMenuShell,activate_time,140,11,45089)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuShell,152, 13393, 3)
+CheckMemberSize(struct _GtkMenuShell,children,8,3,45085)
+CheckOffset(struct _GtkMenuShell,children,112,3,45085)
+CheckMemberSize(struct _GtkMenuShell,active_menu_item,8,3,45086)
+CheckOffset(struct _GtkMenuShell,active_menu_item,120,3,45086)
+CheckMemberSize(struct _GtkMenuShell,parent_menu_shell,8,3,45087)
+CheckOffset(struct _GtkMenuShell,parent_menu_shell,128,3,45087)
+CheckMemberSize(struct _GtkMenuShell,button,4,3,45088)
+CheckOffset(struct _GtkMenuShell,button,136,3,45088)
+CheckMemberSize(struct _GtkMenuShell,activate_time,4,3,45089)
+CheckOffset(struct _GtkMenuShell,activate_time,140,3,45089)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13393,0);
 Msg("Find size of _GtkMenuShell (13393)\n");
@@ -9815,6 +11053,8 @@ Msg("Find size of _GtkMenuShell (13393)\n");
 CheckTypeSize(GtkMenuShell,92, 13394, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuShell,152, 13394, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuShell,152, 13394, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13394,0);
 Msg("Find size of GtkMenuShell (13394)\n");
@@ -9824,6 +11064,8 @@ Msg("Find size of GtkMenuShell (13394)\n");
 CheckTypeSize(GtkMenu,176, 13395, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenu,296, 13395, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenu,296, 13395, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13395,0);
 Msg("Find size of GtkMenu (13395)\n");
@@ -9833,6 +11075,8 @@ Msg("Find size of GtkMenu (13395)\n");
 CheckTypeSize(GtkMenu *,4, 13396, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenu *,8, 13396, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenu *,8, 13396, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13396,0);
 Msg("Find size of GtkMenu * (13396)\n");
@@ -9840,6 +11084,7 @@ Msg("Find size of GtkMenu * (13396)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13397,0);
 Msg("Find size of fptr_gtk_2302 (13397)\n");
@@ -9849,6 +11094,8 @@ Msg("Find size of fptr_gtk_2302 (13397)\n");
 CheckTypeSize(GtkMenuPositionFunc,4, 13398, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuPositionFunc,8, 13398, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuPositionFunc,8, 13398, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13398,0);
 Msg("Find size of GtkMenuPositionFunc (13398)\n");
@@ -9862,6 +11109,10 @@ CheckOffset(struct _GtkToggleButton,button,0,2,45143)
 CheckTypeSize(struct _GtkToggleButton,152, 13399, 11)
 Msg("Missing member data for _GtkToggleButton on x86-64\n");
 CheckOffset(struct _GtkToggleButton,button,0,11,45143)
+#elif __ia64__
+CheckTypeSize(struct _GtkToggleButton,152, 13399, 3)
+Msg("Missing member data for _GtkToggleButton on IA64\n");
+CheckOffset(struct _GtkToggleButton,button,0,3,45143)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13399,0);
 Msg("Find size of _GtkToggleButton (13399)\n");
@@ -9883,6 +11134,14 @@ CheckMemberSize(struct _GtkButton,label_text,8,11,45132)
 CheckOffset(struct _GtkButton,label_text,128,11,45132)
 CheckMemberSize(struct _GtkButton,activate_timeout,4,11,45133)
 CheckOffset(struct _GtkButton,activate_timeout,136,11,45133)
+#elif __ia64__
+CheckTypeSize(struct _GtkButton,144, 13400, 3)
+CheckMemberSize(struct _GtkButton,event_window,8,3,45131)
+CheckOffset(struct _GtkButton,event_window,120,3,45131)
+CheckMemberSize(struct _GtkButton,label_text,8,3,45132)
+CheckOffset(struct _GtkButton,label_text,128,3,45132)
+CheckMemberSize(struct _GtkButton,activate_timeout,4,3,45133)
+CheckOffset(struct _GtkButton,activate_timeout,136,3,45133)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13400,0);
 Msg("Find size of _GtkButton (13400)\n");
@@ -9892,6 +11151,8 @@ Msg("Find size of _GtkButton (13400)\n");
 CheckTypeSize(GtkButton,88, 13401, 2)
 #elif __x86_64__
 CheckTypeSize(GtkButton,144, 13401, 11)
+#elif __ia64__
+CheckTypeSize(GtkButton,144, 13401, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13401,0);
 Msg("Find size of GtkButton (13401)\n");
@@ -9901,6 +11162,8 @@ Msg("Find size of GtkButton (13401)\n");
 CheckTypeSize(GtkToggleButton,92, 13402, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleButton,152, 13402, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleButton,152, 13402, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13402,0);
 Msg("Find size of GtkToggleButton (13402)\n");
@@ -9910,6 +11173,8 @@ Msg("Find size of GtkToggleButton (13402)\n");
 CheckTypeSize(GtkToggleButton *,4, 13403, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleButton *,8, 13403, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleButton *,8, 13403, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13403,0);
 Msg("Find size of GtkToggleButton * (13403)\n");
@@ -9923,6 +11188,10 @@ CheckOffset(struct _GtkIconTheme,priv,12,2,45148)
 CheckTypeSize(struct _GtkIconTheme,32, 13404, 11)
 CheckMemberSize(struct _GtkIconTheme,priv,8,11,45148)
 CheckOffset(struct _GtkIconTheme,priv,24,11,45148)
+#elif __ia64__
+CheckTypeSize(struct _GtkIconTheme,32, 13404, 3)
+CheckMemberSize(struct _GtkIconTheme,priv,8,3,45148)
+CheckOffset(struct _GtkIconTheme,priv,24,3,45148)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13404,0);
 Msg("Find size of _GtkIconTheme (13404)\n");
@@ -9932,6 +11201,8 @@ Msg("Find size of _GtkIconTheme (13404)\n");
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconThemePrivate,0, 13406, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13406,0);
 Msg("Find size of GtkIconThemePrivate (13406)\n");
@@ -9941,6 +11212,8 @@ Msg("Find size of GtkIconThemePrivate (13406)\n");
 CheckTypeSize(GtkIconThemePrivate *,4, 13407, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconThemePrivate *,8, 13407, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconThemePrivate *,8, 13407, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13407,0);
 Msg("Find size of GtkIconThemePrivate * (13407)\n");
@@ -9950,6 +11223,8 @@ Msg("Find size of GtkIconThemePrivate * (13407)\n");
 CheckTypeSize(GtkIconTheme,16, 13408, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconTheme,32, 13408, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconTheme,32, 13408, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13408,0);
 Msg("Find size of GtkIconTheme (13408)\n");
@@ -9959,6 +11234,8 @@ Msg("Find size of GtkIconTheme (13408)\n");
 CheckTypeSize(GtkIconTheme *,4, 13409, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconTheme *,8, 13409, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconTheme *,8, 13409, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13409,0);
 Msg("Find size of GtkIconTheme * (13409)\n");
@@ -9974,6 +11251,11 @@ CheckEnum("GTK_ARROW_UP",GTK_ARROW_UP,0);
 CheckEnum("GTK_ARROW_DOWN",GTK_ARROW_DOWN,1);
 CheckEnum("GTK_ARROW_LEFT",GTK_ARROW_LEFT,2);
 CheckEnum("GTK_ARROW_RIGHT",GTK_ARROW_RIGHT,3);
+#elif __ia64__
+CheckEnum("GTK_ARROW_UP",GTK_ARROW_UP,0);
+CheckEnum("GTK_ARROW_DOWN",GTK_ARROW_DOWN,1);
+CheckEnum("GTK_ARROW_LEFT",GTK_ARROW_LEFT,2);
+CheckEnum("GTK_ARROW_RIGHT",GTK_ARROW_RIGHT,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13410,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-176 (13410)\n");
@@ -9983,6 +11265,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-176 (13410)\n");
 CheckTypeSize(GtkArrowType,4, 13411, 2)
 #elif __x86_64__
 CheckTypeSize(GtkArrowType,4, 13411, 11)
+#elif __ia64__
+CheckTypeSize(GtkArrowType,4, 13411, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13411,0);
 Msg("Find size of GtkArrowType (13411)\n");
@@ -10000,6 +11284,12 @@ CheckEnum("GTK_SHADOW_IN",GTK_SHADOW_IN,1);
 CheckEnum("GTK_SHADOW_OUT",GTK_SHADOW_OUT,2);
 CheckEnum("GTK_SHADOW_ETCHED_IN",GTK_SHADOW_ETCHED_IN,3);
 CheckEnum("GTK_SHADOW_ETCHED_OUT",GTK_SHADOW_ETCHED_OUT,4);
+#elif __ia64__
+CheckEnum("GTK_SHADOW_NONE",GTK_SHADOW_NONE,0);
+CheckEnum("GTK_SHADOW_IN",GTK_SHADOW_IN,1);
+CheckEnum("GTK_SHADOW_OUT",GTK_SHADOW_OUT,2);
+CheckEnum("GTK_SHADOW_ETCHED_IN",GTK_SHADOW_ETCHED_IN,3);
+CheckEnum("GTK_SHADOW_ETCHED_OUT",GTK_SHADOW_ETCHED_OUT,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13412,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-179 (13412)\n");
@@ -10009,6 +11299,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-179 (13412)\n");
 CheckTypeSize(GtkShadowType,4, 13413, 2)
 #elif __x86_64__
 CheckTypeSize(GtkShadowType,4, 13413, 11)
+#elif __ia64__
+CheckTypeSize(GtkShadowType,4, 13413, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13413,0);
 Msg("Find size of GtkShadowType (13413)\n");
@@ -10174,6 +11466,86 @@ CheckMemberSize(struct _GtkTextView,pending_scroll,8,11,45204)
 CheckOffset(struct _GtkTextView,pending_scroll,336,11,45204)
 CheckMemberSize(struct _GtkTextView,pending_place_cursor_button,4,11,45205)
 CheckOffset(struct _GtkTextView,pending_place_cursor_button,344,11,45205)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextView,352, 13414, 3)
+CheckMemberSize(struct _GtkTextView,layout,8,3,45159)
+CheckOffset(struct _GtkTextView,layout,112,3,45159)
+CheckMemberSize(struct _GtkTextView,buffer,8,3,45160)
+CheckOffset(struct _GtkTextView,buffer,120,3,45160)
+CheckMemberSize(struct _GtkTextView,selection_drag_handler,4,3,45161)
+CheckOffset(struct _GtkTextView,selection_drag_handler,128,3,45161)
+CheckMemberSize(struct _GtkTextView,scroll_timeout,4,3,45162)
+CheckOffset(struct _GtkTextView,scroll_timeout,132,3,45162)
+CheckMemberSize(struct _GtkTextView,pixels_above_lines,4,3,45163)
+CheckOffset(struct _GtkTextView,pixels_above_lines,136,3,45163)
+CheckMemberSize(struct _GtkTextView,pixels_below_lines,4,3,45164)
+CheckOffset(struct _GtkTextView,pixels_below_lines,140,3,45164)
+CheckMemberSize(struct _GtkTextView,pixels_inside_wrap,4,3,45165)
+CheckOffset(struct _GtkTextView,pixels_inside_wrap,144,3,45165)
+CheckMemberSize(struct _GtkTextView,wrap_mode,4,3,45166)
+CheckOffset(struct _GtkTextView,wrap_mode,148,3,45166)
+CheckMemberSize(struct _GtkTextView,justify,4,3,45167)
+CheckOffset(struct _GtkTextView,justify,152,3,45167)
+CheckMemberSize(struct _GtkTextView,left_margin,4,3,45168)
+CheckOffset(struct _GtkTextView,left_margin,156,3,45168)
+CheckMemberSize(struct _GtkTextView,right_margin,4,3,45169)
+CheckOffset(struct _GtkTextView,right_margin,160,3,45169)
+CheckMemberSize(struct _GtkTextView,indent,4,3,45170)
+CheckOffset(struct _GtkTextView,indent,164,3,45170)
+CheckMemberSize(struct _GtkTextView,tabs,8,3,45171)
+CheckOffset(struct _GtkTextView,tabs,168,3,45171)
+CheckMemberSize(struct _GtkTextView,text_window,8,3,45180)
+CheckOffset(struct _GtkTextView,text_window,184,3,45180)
+CheckMemberSize(struct _GtkTextView,left_window,8,3,45181)
+CheckOffset(struct _GtkTextView,left_window,192,3,45181)
+CheckMemberSize(struct _GtkTextView,right_window,8,3,45182)
+CheckOffset(struct _GtkTextView,right_window,200,3,45182)
+CheckMemberSize(struct _GtkTextView,top_window,8,3,45183)
+CheckOffset(struct _GtkTextView,top_window,208,3,45183)
+CheckMemberSize(struct _GtkTextView,bottom_window,8,3,45184)
+CheckOffset(struct _GtkTextView,bottom_window,216,3,45184)
+CheckMemberSize(struct _GtkTextView,hadjustment,8,3,45185)
+CheckOffset(struct _GtkTextView,hadjustment,224,3,45185)
+CheckMemberSize(struct _GtkTextView,vadjustment,8,3,45186)
+CheckOffset(struct _GtkTextView,vadjustment,232,3,45186)
+CheckMemberSize(struct _GtkTextView,xoffset,4,3,45187)
+CheckOffset(struct _GtkTextView,xoffset,240,3,45187)
+CheckMemberSize(struct _GtkTextView,yoffset,4,3,45188)
+CheckOffset(struct _GtkTextView,yoffset,244,3,45188)
+CheckMemberSize(struct _GtkTextView,width,4,3,45189)
+CheckOffset(struct _GtkTextView,width,248,3,45189)
+CheckMemberSize(struct _GtkTextView,height,4,3,45190)
+CheckOffset(struct _GtkTextView,height,252,3,45190)
+CheckMemberSize(struct _GtkTextView,virtual_cursor_x,4,3,45191)
+CheckOffset(struct _GtkTextView,virtual_cursor_x,256,3,45191)
+CheckMemberSize(struct _GtkTextView,virtual_cursor_y,4,3,45192)
+CheckOffset(struct _GtkTextView,virtual_cursor_y,260,3,45192)
+CheckMemberSize(struct _GtkTextView,first_para_mark,8,3,45193)
+CheckOffset(struct _GtkTextView,first_para_mark,264,3,45193)
+CheckMemberSize(struct _GtkTextView,first_para_pixels,4,3,45194)
+CheckOffset(struct _GtkTextView,first_para_pixels,272,3,45194)
+CheckMemberSize(struct _GtkTextView,dnd_mark,8,3,45195)
+CheckOffset(struct _GtkTextView,dnd_mark,280,3,45195)
+CheckMemberSize(struct _GtkTextView,blink_timeout,4,3,45196)
+CheckOffset(struct _GtkTextView,blink_timeout,288,3,45196)
+CheckMemberSize(struct _GtkTextView,first_validate_idle,4,3,45197)
+CheckOffset(struct _GtkTextView,first_validate_idle,292,3,45197)
+CheckMemberSize(struct _GtkTextView,incremental_validate_idle,4,3,45198)
+CheckOffset(struct _GtkTextView,incremental_validate_idle,296,3,45198)
+CheckMemberSize(struct _GtkTextView,im_context,8,3,45199)
+CheckOffset(struct _GtkTextView,im_context,304,3,45199)
+CheckMemberSize(struct _GtkTextView,popup_menu,8,3,45200)
+CheckOffset(struct _GtkTextView,popup_menu,312,3,45200)
+CheckMemberSize(struct _GtkTextView,drag_start_x,4,3,45201)
+CheckOffset(struct _GtkTextView,drag_start_x,320,3,45201)
+CheckMemberSize(struct _GtkTextView,drag_start_y,4,3,45202)
+CheckOffset(struct _GtkTextView,drag_start_y,324,3,45202)
+CheckMemberSize(struct _GtkTextView,children,8,3,45203)
+CheckOffset(struct _GtkTextView,children,328,3,45203)
+CheckMemberSize(struct _GtkTextView,pending_scroll,8,3,45204)
+CheckOffset(struct _GtkTextView,pending_scroll,336,3,45204)
+CheckMemberSize(struct _GtkTextView,pending_place_cursor_button,4,3,45205)
+CheckOffset(struct _GtkTextView,pending_place_cursor_button,344,3,45205)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13414,0);
 Msg("Find size of _GtkTextView (13414)\n");
@@ -10183,6 +11555,8 @@ Msg("Find size of _GtkTextView (13414)\n");
 CheckTypeSize(struct _GtkTextLayout *,4, 13416, 2)
 #elif __x86_64__
 CheckTypeSize(struct _GtkTextLayout *,8, 13416, 11)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextLayout *,8, 13416, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13416,0);
 Msg("Find size of _GtkTextLayout * (13416)\n");
@@ -10192,6 +11566,8 @@ Msg("Find size of _GtkTextLayout * (13416)\n");
 CheckTypeSize(GtkTextWindow,0, 13418, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextWindow,0, 13418, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextWindow,0, 13418, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13418,0);
 Msg("Find size of GtkTextWindow (13418)\n");
@@ -10201,6 +11577,8 @@ Msg("Find size of GtkTextWindow (13418)\n");
 CheckTypeSize(GtkTextWindow *,4, 13419, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextWindow *,8, 13419, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextWindow *,8, 13419, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13419,0);
 Msg("Find size of GtkTextWindow * (13419)\n");
@@ -10210,6 +11588,8 @@ Msg("Find size of GtkTextWindow * (13419)\n");
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextPendingScroll,0, 13421, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13421,0);
 Msg("Find size of GtkTextPendingScroll (13421)\n");
@@ -10219,6 +11599,8 @@ Msg("Find size of GtkTextPendingScroll (13421)\n");
 CheckTypeSize(GtkTextPendingScroll *,4, 13422, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextPendingScroll *,8, 13422, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextPendingScroll *,8, 13422, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13422,0);
 Msg("Find size of GtkTextPendingScroll * (13422)\n");
@@ -10228,6 +11610,8 @@ Msg("Find size of GtkTextPendingScroll * (13422)\n");
 CheckTypeSize(GtkTextView,228, 13423, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextView,352, 13423, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextView,352, 13423, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13423,0);
 Msg("Find size of GtkTextView (13423)\n");
@@ -10237,6 +11621,8 @@ Msg("Find size of GtkTextView (13423)\n");
 CheckTypeSize(GtkTextView *,4, 13424, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextView *,8, 13424, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextView *,8, 13424, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13424,0);
 Msg("Find size of GtkTextView * (13424)\n");
@@ -10258,6 +11644,14 @@ CheckEnum("GTK_TEXT_WINDOW_LEFT",GTK_TEXT_WINDOW_LEFT,3);
 CheckEnum("GTK_TEXT_WINDOW_RIGHT",GTK_TEXT_WINDOW_RIGHT,4);
 CheckEnum("GTK_TEXT_WINDOW_TOP",GTK_TEXT_WINDOW_TOP,5);
 CheckEnum("GTK_TEXT_WINDOW_BOTTOM",GTK_TEXT_WINDOW_BOTTOM,6);
+#elif __ia64__
+CheckEnum("GTK_TEXT_WINDOW_PRIVATE",GTK_TEXT_WINDOW_PRIVATE,0);
+CheckEnum("GTK_TEXT_WINDOW_WIDGET",GTK_TEXT_WINDOW_WIDGET,1);
+CheckEnum("GTK_TEXT_WINDOW_TEXT",GTK_TEXT_WINDOW_TEXT,2);
+CheckEnum("GTK_TEXT_WINDOW_LEFT",GTK_TEXT_WINDOW_LEFT,3);
+CheckEnum("GTK_TEXT_WINDOW_RIGHT",GTK_TEXT_WINDOW_RIGHT,4);
+CheckEnum("GTK_TEXT_WINDOW_TOP",GTK_TEXT_WINDOW_TOP,5);
+CheckEnum("GTK_TEXT_WINDOW_BOTTOM",GTK_TEXT_WINDOW_BOTTOM,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13425,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3700 (13425)\n");
@@ -10267,6 +11661,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3700 (13425)\n");
 CheckTypeSize(GtkTextWindowType,4, 13426, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextWindowType,4, 13426, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextWindowType,4, 13426, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13426,0);
 Msg("Find size of GtkTextWindowType (13426)\n");
@@ -10560,6 +11956,148 @@ CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved6,8,11,45392)
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved6,704,11,45392)
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved7,8,11,45393)
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved7,712,11,45393)
+#elif __ia64__
+CheckTypeSize(struct _GtkWidgetClass,720, 13427, 3)
+CheckMemberSize(struct _GtkWidgetClass,activate_signal,4,3,45222)
+CheckOffset(struct _GtkWidgetClass,activate_signal,160,3,45222)
+CheckMemberSize(struct _GtkWidgetClass,set_scroll_adjustments_signal,4,3,45223)
+CheckOffset(struct _GtkWidgetClass,set_scroll_adjustments_signal,164,3,45223)
+CheckMemberSize(struct _GtkWidgetClass,dispatch_child_properties_changed,8,3,45227)
+CheckOffset(struct _GtkWidgetClass,dispatch_child_properties_changed,168,3,45227)
+CheckMemberSize(struct _GtkWidgetClass,show,8,3,45229)
+CheckOffset(struct _GtkWidgetClass,show,176,3,45229)
+CheckMemberSize(struct _GtkWidgetClass,show_all,8,3,45230)
+CheckOffset(struct _GtkWidgetClass,show_all,184,3,45230)
+CheckMemberSize(struct _GtkWidgetClass,hide,8,3,45231)
+CheckOffset(struct _GtkWidgetClass,hide,192,3,45231)
+CheckMemberSize(struct _GtkWidgetClass,hide_all,8,3,45232)
+CheckOffset(struct _GtkWidgetClass,hide_all,200,3,45232)
+CheckMemberSize(struct _GtkWidgetClass,map,8,3,45233)
+CheckOffset(struct _GtkWidgetClass,map,208,3,45233)
+CheckMemberSize(struct _GtkWidgetClass,unmap,8,3,45234)
+CheckOffset(struct _GtkWidgetClass,unmap,216,3,45234)
+CheckMemberSize(struct _GtkWidgetClass,realize,8,3,45235)
+CheckOffset(struct _GtkWidgetClass,realize,224,3,45235)
+CheckMemberSize(struct _GtkWidgetClass,unrealize,8,3,45236)
+CheckOffset(struct _GtkWidgetClass,unrealize,232,3,45236)
+CheckMemberSize(struct _GtkWidgetClass,size_request,8,3,45239)
+CheckOffset(struct _GtkWidgetClass,size_request,240,3,45239)
+CheckMemberSize(struct _GtkWidgetClass,size_allocate,8,3,45242)
+CheckOffset(struct _GtkWidgetClass,size_allocate,248,3,45242)
+CheckMemberSize(struct _GtkWidgetClass,state_changed,8,3,45245)
+CheckOffset(struct _GtkWidgetClass,state_changed,256,3,45245)
+CheckMemberSize(struct _GtkWidgetClass,parent_set,8,3,45248)
+CheckOffset(struct _GtkWidgetClass,parent_set,264,3,45248)
+CheckMemberSize(struct _GtkWidgetClass,hierarchy_changed,8,3,45249)
+CheckOffset(struct _GtkWidgetClass,hierarchy_changed,272,3,45249)
+CheckMemberSize(struct _GtkWidgetClass,style_set,8,3,45252)
+CheckOffset(struct _GtkWidgetClass,style_set,280,3,45252)
+CheckMemberSize(struct _GtkWidgetClass,direction_changed,8,3,45255)
+CheckOffset(struct _GtkWidgetClass,direction_changed,288,3,45255)
+CheckMemberSize(struct _GtkWidgetClass,grab_notify,8,3,45258)
+CheckOffset(struct _GtkWidgetClass,grab_notify,296,3,45258)
+CheckMemberSize(struct _GtkWidgetClass,child_notify,8,3,45261)
+CheckOffset(struct _GtkWidgetClass,child_notify,304,3,45261)
+CheckMemberSize(struct _GtkWidgetClass,mnemonic_activate,8,3,45264)
+CheckOffset(struct _GtkWidgetClass,mnemonic_activate,312,3,45264)
+CheckMemberSize(struct _GtkWidgetClass,grab_focus,8,3,45265)
+CheckOffset(struct _GtkWidgetClass,grab_focus,320,3,45265)
+CheckMemberSize(struct _GtkWidgetClass,focus,8,3,45274)
+CheckOffset(struct _GtkWidgetClass,focus,328,3,45274)
+CheckMemberSize(struct _GtkWidgetClass,event,8,3,45277)
+CheckOffset(struct _GtkWidgetClass,event,336,3,45277)
+CheckMemberSize(struct _GtkWidgetClass,button_press_event,8,3,45280)
+CheckOffset(struct _GtkWidgetClass,button_press_event,344,3,45280)
+CheckMemberSize(struct _GtkWidgetClass,button_release_event,8,3,45281)
+CheckOffset(struct _GtkWidgetClass,button_release_event,352,3,45281)
+CheckMemberSize(struct _GtkWidgetClass,scroll_event,8,3,45284)
+CheckOffset(struct _GtkWidgetClass,scroll_event,360,3,45284)
+CheckMemberSize(struct _GtkWidgetClass,motion_notify_event,8,3,45287)
+CheckOffset(struct _GtkWidgetClass,motion_notify_event,368,3,45287)
+CheckMemberSize(struct _GtkWidgetClass,delete_event,8,3,45290)
+CheckOffset(struct _GtkWidgetClass,delete_event,376,3,45290)
+CheckMemberSize(struct _GtkWidgetClass,destroy_event,8,3,45291)
+CheckOffset(struct _GtkWidgetClass,destroy_event,384,3,45291)
+CheckMemberSize(struct _GtkWidgetClass,expose_event,8,3,45294)
+CheckOffset(struct _GtkWidgetClass,expose_event,392,3,45294)
+CheckMemberSize(struct _GtkWidgetClass,key_press_event,8,3,45297)
+CheckOffset(struct _GtkWidgetClass,key_press_event,400,3,45297)
+CheckMemberSize(struct _GtkWidgetClass,key_release_event,8,3,45298)
+CheckOffset(struct _GtkWidgetClass,key_release_event,408,3,45298)
+CheckMemberSize(struct _GtkWidgetClass,enter_notify_event,8,3,45301)
+CheckOffset(struct _GtkWidgetClass,enter_notify_event,416,3,45301)
+CheckMemberSize(struct _GtkWidgetClass,leave_notify_event,8,3,45302)
+CheckOffset(struct _GtkWidgetClass,leave_notify_event,424,3,45302)
+CheckMemberSize(struct _GtkWidgetClass,configure_event,8,3,45305)
+CheckOffset(struct _GtkWidgetClass,configure_event,432,3,45305)
+CheckMemberSize(struct _GtkWidgetClass,focus_in_event,8,3,45308)
+CheckOffset(struct _GtkWidgetClass,focus_in_event,440,3,45308)
+CheckMemberSize(struct _GtkWidgetClass,focus_out_event,8,3,45309)
+CheckOffset(struct _GtkWidgetClass,focus_out_event,448,3,45309)
+CheckMemberSize(struct _GtkWidgetClass,map_event,8,3,45310)
+CheckOffset(struct _GtkWidgetClass,map_event,456,3,45310)
+CheckMemberSize(struct _GtkWidgetClass,unmap_event,8,3,45311)
+CheckOffset(struct _GtkWidgetClass,unmap_event,464,3,45311)
+CheckMemberSize(struct _GtkWidgetClass,property_notify_event,8,3,45314)
+CheckOffset(struct _GtkWidgetClass,property_notify_event,472,3,45314)
+CheckMemberSize(struct _GtkWidgetClass,selection_clear_event,8,3,45317)
+CheckOffset(struct _GtkWidgetClass,selection_clear_event,480,3,45317)
+CheckMemberSize(struct _GtkWidgetClass,selection_request_event,8,3,45318)
+CheckOffset(struct _GtkWidgetClass,selection_request_event,488,3,45318)
+CheckMemberSize(struct _GtkWidgetClass,selection_notify_event,8,3,45319)
+CheckOffset(struct _GtkWidgetClass,selection_notify_event,496,3,45319)
+CheckMemberSize(struct _GtkWidgetClass,proximity_in_event,8,3,45322)
+CheckOffset(struct _GtkWidgetClass,proximity_in_event,504,3,45322)
+CheckMemberSize(struct _GtkWidgetClass,proximity_out_event,8,3,45323)
+CheckOffset(struct _GtkWidgetClass,proximity_out_event,512,3,45323)
+CheckMemberSize(struct _GtkWidgetClass,visibility_notify_event,8,3,45326)
+CheckOffset(struct _GtkWidgetClass,visibility_notify_event,520,3,45326)
+CheckMemberSize(struct _GtkWidgetClass,client_event,8,3,45329)
+CheckOffset(struct _GtkWidgetClass,client_event,528,3,45329)
+CheckMemberSize(struct _GtkWidgetClass,no_expose_event,8,3,45330)
+CheckOffset(struct _GtkWidgetClass,no_expose_event,536,3,45330)
+CheckMemberSize(struct _GtkWidgetClass,window_state_event,8,3,45333)
+CheckOffset(struct _GtkWidgetClass,window_state_event,544,3,45333)
+CheckMemberSize(struct _GtkWidgetClass,selection_get,8,3,45338)
+CheckOffset(struct _GtkWidgetClass,selection_get,552,3,45338)
+CheckMemberSize(struct _GtkWidgetClass,selection_received,8,3,45342)
+CheckOffset(struct _GtkWidgetClass,selection_received,560,3,45342)
+CheckMemberSize(struct _GtkWidgetClass,drag_begin,8,3,45345)
+CheckOffset(struct _GtkWidgetClass,drag_begin,568,3,45345)
+CheckMemberSize(struct _GtkWidgetClass,drag_end,8,3,45346)
+CheckOffset(struct _GtkWidgetClass,drag_end,576,3,45346)
+CheckMemberSize(struct _GtkWidgetClass,drag_data_get,8,3,45352)
+CheckOffset(struct _GtkWidgetClass,drag_data_get,584,3,45352)
+CheckMemberSize(struct _GtkWidgetClass,drag_data_delete,8,3,45353)
+CheckOffset(struct _GtkWidgetClass,drag_data_delete,592,3,45353)
+CheckMemberSize(struct _GtkWidgetClass,drag_leave,8,3,45357)
+CheckOffset(struct _GtkWidgetClass,drag_leave,600,3,45357)
+CheckMemberSize(struct _GtkWidgetClass,drag_motion,8,3,45363)
+CheckOffset(struct _GtkWidgetClass,drag_motion,608,3,45363)
+CheckMemberSize(struct _GtkWidgetClass,drag_drop,8,3,45364)
+CheckOffset(struct _GtkWidgetClass,drag_drop,616,3,45364)
+CheckMemberSize(struct _GtkWidgetClass,drag_data_received,8,3,45372)
+CheckOffset(struct _GtkWidgetClass,drag_data_received,624,3,45372)
+CheckMemberSize(struct _GtkWidgetClass,popup_menu,8,3,45374)
+CheckOffset(struct _GtkWidgetClass,popup_menu,632,3,45374)
+CheckMemberSize(struct _GtkWidgetClass,show_help,8,3,45379)
+CheckOffset(struct _GtkWidgetClass,show_help,640,3,45379)
+CheckMemberSize(struct _GtkWidgetClass,get_accessible,8,3,45381)
+CheckOffset(struct _GtkWidgetClass,get_accessible,648,3,45381)
+CheckMemberSize(struct _GtkWidgetClass,screen_changed,8,3,45384)
+CheckOffset(struct _GtkWidgetClass,screen_changed,656,3,45384)
+CheckMemberSize(struct _GtkWidgetClass,can_activate_accel,8,3,45387)
+CheckOffset(struct _GtkWidgetClass,can_activate_accel,664,3,45387)
+CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved3,8,3,45389)
+CheckOffset(struct _GtkWidgetClass,_gtk_reserved3,680,3,45389)
+CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved4,8,3,45390)
+CheckOffset(struct _GtkWidgetClass,_gtk_reserved4,688,3,45390)
+CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved5,8,3,45391)
+CheckOffset(struct _GtkWidgetClass,_gtk_reserved5,696,3,45391)
+CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved6,8,3,45392)
+CheckOffset(struct _GtkWidgetClass,_gtk_reserved6,704,3,45392)
+CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved7,8,3,45393)
+CheckOffset(struct _GtkWidgetClass,_gtk_reserved7,712,3,45393)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13427,0);
 Msg("Find size of _GtkWidgetClass (13427)\n");
@@ -10581,6 +12119,14 @@ CheckMemberSize(struct _GtkObjectClass,get_arg,8,11,45218)
 CheckOffset(struct _GtkObjectClass,get_arg,144,11,45218)
 CheckMemberSize(struct _GtkObjectClass,destroy,8,11,45220)
 CheckOffset(struct _GtkObjectClass,destroy,152,11,45220)
+#elif __ia64__
+CheckTypeSize(struct _GtkObjectClass,160, 13428, 3)
+CheckMemberSize(struct _GtkObjectClass,set_arg,8,3,45217)
+CheckOffset(struct _GtkObjectClass,set_arg,136,3,45217)
+CheckMemberSize(struct _GtkObjectClass,get_arg,8,3,45218)
+CheckOffset(struct _GtkObjectClass,get_arg,144,3,45218)
+CheckMemberSize(struct _GtkObjectClass,destroy,8,3,45220)
+CheckOffset(struct _GtkObjectClass,destroy,152,3,45220)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13428,0);
 Msg("Find size of _GtkObjectClass (13428)\n");
@@ -10588,6 +12134,7 @@ Msg("Find size of _GtkObjectClass (13428)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13429,0);
 Msg("Find size of fptr_gtk_3447 (13429)\n");
@@ -10595,6 +12142,7 @@ Msg("Find size of fptr_gtk_3447 (13429)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13430,0);
 Msg("Find size of fptr_gtk_46 (13430)\n");
@@ -10604,6 +12152,8 @@ Msg("Find size of fptr_gtk_46 (13430)\n");
 CheckTypeSize(GtkObjectClass,80, 13431, 2)
 #elif __x86_64__
 CheckTypeSize(GtkObjectClass,160, 13431, 11)
+#elif __ia64__
+CheckTypeSize(GtkObjectClass,160, 13431, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13431,0);
 Msg("Find size of GtkObjectClass (13431)\n");
@@ -10611,6 +12161,7 @@ Msg("Find size of GtkObjectClass (13431)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13432,0);
 Msg("Find size of fptr_gtk_530 (13432)\n");
@@ -10618,6 +12169,7 @@ Msg("Find size of fptr_gtk_530 (13432)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13433,0);
 Msg("Find size of fptr_gtk_1128 (13433)\n");
@@ -10625,6 +12177,7 @@ Msg("Find size of fptr_gtk_1128 (13433)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13434,0);
 Msg("Find size of fptr_gtk_603 (13434)\n");
@@ -10632,6 +12185,7 @@ Msg("Find size of fptr_gtk_603 (13434)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13435,0);
 Msg("Find size of fptr_gtk_5420 (13435)\n");
@@ -10639,6 +12193,7 @@ Msg("Find size of fptr_gtk_5420 (13435)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13436,0);
 Msg("Find size of fptr_gtk_6872 (13436)\n");
@@ -10646,6 +12201,7 @@ Msg("Find size of fptr_gtk_6872 (13436)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13437,0);
 Msg("Find size of fptr_gtk_5008 (13437)\n");
@@ -10653,6 +12209,7 @@ Msg("Find size of fptr_gtk_5008 (13437)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13438,0);
 Msg("Find size of fptr_gtk_1019 (13438)\n");
@@ -10660,6 +12217,7 @@ Msg("Find size of fptr_gtk_1019 (13438)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13439,0);
 Msg("Find size of fptr_gtk_4240 (13439)\n");
@@ -10667,6 +12225,7 @@ Msg("Find size of fptr_gtk_4240 (13439)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13440,0);
 Msg("Find size of fptr_gtk_2788 (13440)\n");
@@ -10674,6 +12233,7 @@ Msg("Find size of fptr_gtk_2788 (13440)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13441,0);
 Msg("Find size of fptr_gtk_4861 (13441)\n");
@@ -10681,6 +12241,7 @@ Msg("Find size of fptr_gtk_4861 (13441)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13442,0);
 Msg("Find size of fptr_gtk_2353 (13442)\n");
@@ -10700,6 +12261,13 @@ CheckEnum("GTK_DIR_UP",GTK_DIR_UP,2);
 CheckEnum("GTK_DIR_DOWN",GTK_DIR_DOWN,3);
 CheckEnum("GTK_DIR_LEFT",GTK_DIR_LEFT,4);
 CheckEnum("GTK_DIR_RIGHT",GTK_DIR_RIGHT,5);
+#elif __ia64__
+CheckEnum("GTK_DIR_TAB_FORWARD",GTK_DIR_TAB_FORWARD,0);
+CheckEnum("GTK_DIR_TAB_BACKWARD",GTK_DIR_TAB_BACKWARD,1);
+CheckEnum("GTK_DIR_UP",GTK_DIR_UP,2);
+CheckEnum("GTK_DIR_DOWN",GTK_DIR_DOWN,3);
+CheckEnum("GTK_DIR_LEFT",GTK_DIR_LEFT,4);
+CheckEnum("GTK_DIR_RIGHT",GTK_DIR_RIGHT,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13443,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4424 (13443)\n");
@@ -10709,6 +12277,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4424 (13443)\n");
 CheckTypeSize(GtkDirectionType,4, 13444, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDirectionType,4, 13444, 11)
+#elif __ia64__
+CheckTypeSize(GtkDirectionType,4, 13444, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13444,0);
 Msg("Find size of GtkDirectionType (13444)\n");
@@ -10716,6 +12286,7 @@ Msg("Find size of GtkDirectionType (13444)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13445,0);
 Msg("Find size of fptr_gtk_8631 (13445)\n");
@@ -10723,6 +12294,7 @@ Msg("Find size of fptr_gtk_8631 (13445)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13446,0);
 Msg("Find size of fptr_gtk_6134 (13446)\n");
@@ -10732,6 +12304,8 @@ Msg("Find size of fptr_gtk_6134 (13446)\n");
 CheckTypeSize(GdkEventButton *,4, 13447, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventButton *,8, 13447, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventButton *,8, 13447, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13447,0);
 Msg("Find size of GdkEventButton * (13447)\n");
@@ -10739,6 +12313,7 @@ Msg("Find size of GdkEventButton * (13447)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13448,0);
 Msg("Find size of fptr_gtk_7408 (13448)\n");
@@ -10748,6 +12323,8 @@ Msg("Find size of fptr_gtk_7408 (13448)\n");
 CheckTypeSize(GdkEventScroll *,4, 13449, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventScroll *,8, 13449, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventScroll *,8, 13449, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13449,0);
 Msg("Find size of GdkEventScroll * (13449)\n");
@@ -10755,6 +12332,7 @@ Msg("Find size of GdkEventScroll * (13449)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13450,0);
 Msg("Find size of fptr_gtk_4688 (13450)\n");
@@ -10764,6 +12342,8 @@ Msg("Find size of fptr_gtk_4688 (13450)\n");
 CheckTypeSize(GdkEventMotion *,4, 13451, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventMotion *,8, 13451, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventMotion *,8, 13451, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13451,0);
 Msg("Find size of GdkEventMotion * (13451)\n");
@@ -10771,6 +12351,7 @@ Msg("Find size of GdkEventMotion * (13451)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13452,0);
 Msg("Find size of fptr_gtk_4768 (13452)\n");
@@ -10780,6 +12361,8 @@ Msg("Find size of fptr_gtk_4768 (13452)\n");
 CheckTypeSize(GdkEventAny *,4, 13453, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventAny *,8, 13453, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventAny *,8, 13453, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13453,0);
 Msg("Find size of GdkEventAny * (13453)\n");
@@ -10787,6 +12370,7 @@ Msg("Find size of GdkEventAny * (13453)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13454,0);
 Msg("Find size of fptr_gtk_7959 (13454)\n");
@@ -10796,6 +12380,8 @@ Msg("Find size of fptr_gtk_7959 (13454)\n");
 CheckTypeSize(GdkEventExpose *,4, 13455, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventExpose *,8, 13455, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventExpose *,8, 13455, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13455,0);
 Msg("Find size of GdkEventExpose * (13455)\n");
@@ -10803,6 +12389,7 @@ Msg("Find size of GdkEventExpose * (13455)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13456,0);
 Msg("Find size of fptr_gtk_2221 (13456)\n");
@@ -10810,6 +12397,7 @@ Msg("Find size of fptr_gtk_2221 (13456)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13457,0);
 Msg("Find size of fptr_gtk_5465 (13457)\n");
@@ -10819,6 +12407,8 @@ Msg("Find size of fptr_gtk_5465 (13457)\n");
 CheckTypeSize(GdkEventCrossing *,4, 13458, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventCrossing *,8, 13458, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventCrossing *,8, 13458, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13458,0);
 Msg("Find size of GdkEventCrossing * (13458)\n");
@@ -10826,6 +12416,7 @@ Msg("Find size of GdkEventCrossing * (13458)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13459,0);
 Msg("Find size of fptr_gtk_4833 (13459)\n");
@@ -10835,6 +12426,8 @@ Msg("Find size of fptr_gtk_4833 (13459)\n");
 CheckTypeSize(GdkEventConfigure *,4, 13460, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventConfigure *,8, 13460, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventConfigure *,8, 13460, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13460,0);
 Msg("Find size of GdkEventConfigure * (13460)\n");
@@ -10842,6 +12435,7 @@ Msg("Find size of GdkEventConfigure * (13460)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13461,0);
 Msg("Find size of fptr_gtk_6047 (13461)\n");
@@ -10851,6 +12445,8 @@ Msg("Find size of fptr_gtk_6047 (13461)\n");
 CheckTypeSize(GdkEventFocus *,4, 13462, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventFocus *,8, 13462, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventFocus *,8, 13462, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13462,0);
 Msg("Find size of GdkEventFocus * (13462)\n");
@@ -10858,6 +12454,7 @@ Msg("Find size of GdkEventFocus * (13462)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13463,0);
 Msg("Find size of fptr_gtk_7021 (13463)\n");
@@ -10867,6 +12464,8 @@ Msg("Find size of fptr_gtk_7021 (13463)\n");
 CheckTypeSize(GdkEventProperty *,4, 13464, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventProperty *,8, 13464, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventProperty *,8, 13464, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13464,0);
 Msg("Find size of GdkEventProperty * (13464)\n");
@@ -10874,6 +12473,7 @@ Msg("Find size of GdkEventProperty * (13464)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13465,0);
 Msg("Find size of fptr_gtk_2466 (13465)\n");
@@ -10883,6 +12483,8 @@ Msg("Find size of fptr_gtk_2466 (13465)\n");
 CheckTypeSize(GdkEventSelection *,4, 13466, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventSelection *,8, 13466, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventSelection *,8, 13466, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13466,0);
 Msg("Find size of GdkEventSelection * (13466)\n");
@@ -10890,6 +12492,7 @@ Msg("Find size of GdkEventSelection * (13466)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13467,0);
 Msg("Find size of fptr_gtk_2506 (13467)\n");
@@ -10899,6 +12502,8 @@ Msg("Find size of fptr_gtk_2506 (13467)\n");
 CheckTypeSize(GdkEventProximity *,4, 13468, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventProximity *,8, 13468, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventProximity *,8, 13468, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13468,0);
 Msg("Find size of GdkEventProximity * (13468)\n");
@@ -10906,6 +12511,7 @@ Msg("Find size of GdkEventProximity * (13468)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13469,0);
 Msg("Find size of fptr_gtk_372 (13469)\n");
@@ -10915,6 +12521,8 @@ Msg("Find size of fptr_gtk_372 (13469)\n");
 CheckTypeSize(GdkEventVisibility *,4, 13470, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventVisibility *,8, 13470, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventVisibility *,8, 13470, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13470,0);
 Msg("Find size of GdkEventVisibility * (13470)\n");
@@ -10922,6 +12530,7 @@ Msg("Find size of GdkEventVisibility * (13470)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13471,0);
 Msg("Find size of fptr_gtk_7372 (13471)\n");
@@ -10931,6 +12540,8 @@ Msg("Find size of fptr_gtk_7372 (13471)\n");
 CheckTypeSize(GdkEventClient *,4, 13472, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventClient *,8, 13472, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventClient *,8, 13472, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13472,0);
 Msg("Find size of GdkEventClient * (13472)\n");
@@ -10938,6 +12549,7 @@ Msg("Find size of GdkEventClient * (13472)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13473,0);
 Msg("Find size of fptr_gtk_4594 (13473)\n");
@@ -10947,6 +12559,8 @@ Msg("Find size of fptr_gtk_4594 (13473)\n");
 CheckTypeSize(GdkEventWindowState *,4, 13474, 2)
 #elif __x86_64__
 CheckTypeSize(GdkEventWindowState *,8, 13474, 11)
+#elif __ia64__
+CheckTypeSize(GdkEventWindowState *,8, 13474, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13474,0);
 Msg("Find size of GdkEventWindowState * (13474)\n");
@@ -10954,6 +12568,7 @@ Msg("Find size of GdkEventWindowState * (13474)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13475,0);
 Msg("Find size of fptr_gtk_4303 (13475)\n");
@@ -10961,6 +12576,7 @@ Msg("Find size of fptr_gtk_4303 (13475)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13476,0);
 Msg("Find size of fptr_gtk_4038 (13476)\n");
@@ -10968,6 +12584,7 @@ Msg("Find size of fptr_gtk_4038 (13476)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13477,0);
 Msg("Find size of fptr_gtk_8299 (13477)\n");
@@ -10975,6 +12592,7 @@ Msg("Find size of fptr_gtk_8299 (13477)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13478,0);
 Msg("Find size of fptr_gtk_8423 (13478)\n");
@@ -10982,6 +12600,7 @@ Msg("Find size of fptr_gtk_8423 (13478)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13479,0);
 Msg("Find size of fptr_gtk_4279 (13479)\n");
@@ -10989,6 +12608,7 @@ Msg("Find size of fptr_gtk_4279 (13479)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13480,0);
 Msg("Find size of fptr_gtk_8520 (13480)\n");
@@ -10996,6 +12616,7 @@ Msg("Find size of fptr_gtk_8520 (13480)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13481,0);
 Msg("Find size of fptr_gtk_8457 (13481)\n");
@@ -11003,6 +12624,7 @@ Msg("Find size of fptr_gtk_8457 (13481)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13482,0);
 Msg("Find size of fptr_gtk_5698 (13482)\n");
@@ -11010,6 +12632,7 @@ Msg("Find size of fptr_gtk_5698 (13482)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13483,0);
 Msg("Find size of fptr_gtk_1151 (13483)\n");
@@ -11021,6 +12644,9 @@ CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
 #elif __x86_64__
 CheckEnum("GTK_WIDGET_HELP_TOOLTIP",GTK_WIDGET_HELP_TOOLTIP,0);
 CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
+#elif __ia64__
+CheckEnum("GTK_WIDGET_HELP_TOOLTIP",GTK_WIDGET_HELP_TOOLTIP,0);
+CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13484,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4434 (13484)\n");
@@ -11030,6 +12656,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4434 (13484)\n");
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 11)
+#elif __ia64__
+CheckTypeSize(GtkWidgetHelpType,4, 13485, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13485,0);
 Msg("Find size of GtkWidgetHelpType (13485)\n");
@@ -11037,6 +12665,7 @@ Msg("Find size of GtkWidgetHelpType (13485)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13486,0);
 Msg("Find size of fptr_gtk_6668 (13486)\n");
@@ -11044,6 +12673,7 @@ Msg("Find size of fptr_gtk_6668 (13486)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13487,0);
 Msg("Find size of fptr_gtk_3977 (13487)\n");
@@ -11051,6 +12681,7 @@ Msg("Find size of fptr_gtk_3977 (13487)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13488,0);
 Msg("Find size of fptr_gtk_8172 (13488)\n");
@@ -11058,6 +12689,7 @@ Msg("Find size of fptr_gtk_8172 (13488)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13489,0);
 Msg("Find size of fptr_gtk_8401 (13489)\n");
@@ -11067,6 +12699,8 @@ Msg("Find size of fptr_gtk_8401 (13489)\n");
 CheckTypeSize(GtkWidgetClass,364, 13490, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWidgetClass,720, 13490, 11)
+#elif __ia64__
+CheckTypeSize(GtkWidgetClass,720, 13490, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13490,0);
 Msg("Find size of GtkWidgetClass (13490)\n");
@@ -11076,6 +12710,8 @@ Msg("Find size of GtkWidgetClass (13490)\n");
 CheckTypeSize(GtkWidgetClass *,4, 13491, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWidgetClass *,8, 13491, 11)
+#elif __ia64__
+CheckTypeSize(GtkWidgetClass *,8, 13491, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13491,0);
 Msg("Find size of GtkWidgetClass * (13491)\n");
@@ -11085,6 +12721,8 @@ Msg("Find size of GtkWidgetClass * (13491)\n");
 CheckTypeSize(const GParamSpec,40, 13492, 2)
 #elif __x86_64__
 CheckTypeSize(const GParamSpec,72, 13492, 11)
+#elif __ia64__
+CheckTypeSize(const GParamSpec,72, 13492, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13492,0);
 Msg("Find size of const GParamSpec (13492)\n");
@@ -11092,6 +12730,7 @@ Msg("Find size of const GParamSpec (13492)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13493,0);
 Msg("Find size of const GParamSpec * (13493)\n");
@@ -11099,6 +12738,7 @@ Msg("Find size of const GParamSpec * (13493)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13494,0);
 Msg("Find size of fptr_gtk_8670 (13494)\n");
@@ -11108,6 +12748,8 @@ Msg("Find size of fptr_gtk_8670 (13494)\n");
 CheckTypeSize(GtkRcPropertyParser,4, 13495, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcPropertyParser,8, 13495, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcPropertyParser,8, 13495, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13495,0);
 Msg("Find size of GtkRcPropertyParser (13495)\n");
@@ -11133,6 +12775,16 @@ CheckMemberSize(struct _GtkImage,mask,8,11,45426)
 CheckOffset(struct _GtkImage,mask,144,11,45426)
 CheckMemberSize(struct _GtkImage,icon_size,4,11,45434)
 CheckOffset(struct _GtkImage,icon_size,152,11,45434)
+#elif __ia64__
+CheckTypeSize(struct _GtkImage,160, 13496, 3)
+CheckMemberSize(struct _GtkImage,storage_type,4,3,45406)
+CheckOffset(struct _GtkImage,storage_type,112,3,45406)
+CheckMemberSize(struct _GtkImage,data,24,3,45425)
+CheckOffset(struct _GtkImage,data,120,3,45425)
+CheckMemberSize(struct _GtkImage,mask,8,3,45426)
+CheckOffset(struct _GtkImage,mask,144,3,45426)
+CheckMemberSize(struct _GtkImage,icon_size,4,3,45434)
+CheckOffset(struct _GtkImage,icon_size,152,3,45434)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13496,0);
 Msg("Find size of _GtkImage (13496)\n");
@@ -11156,6 +12808,15 @@ CheckEnum("GTK_IMAGE_STOCK",GTK_IMAGE_STOCK,4);
 CheckEnum("GTK_IMAGE_ICON_SET",GTK_IMAGE_ICON_SET,5);
 CheckEnum("GTK_IMAGE_ANIMATION",GTK_IMAGE_ANIMATION,6);
 CheckEnum("GTK_IMAGE_ICON_NAME",GTK_IMAGE_ICON_NAME,7);
+#elif __ia64__
+CheckEnum("GTK_IMAGE_EMPTY",GTK_IMAGE_EMPTY,0);
+CheckEnum("GTK_IMAGE_PIXMAP",GTK_IMAGE_PIXMAP,1);
+CheckEnum("GTK_IMAGE_IMAGE",GTK_IMAGE_IMAGE,2);
+CheckEnum("GTK_IMAGE_PIXBUF",GTK_IMAGE_PIXBUF,3);
+CheckEnum("GTK_IMAGE_STOCK",GTK_IMAGE_STOCK,4);
+CheckEnum("GTK_IMAGE_ICON_SET",GTK_IMAGE_ICON_SET,5);
+CheckEnum("GTK_IMAGE_ANIMATION",GTK_IMAGE_ANIMATION,6);
+CheckEnum("GTK_IMAGE_ICON_NAME",GTK_IMAGE_ICON_NAME,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13497,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2022 (13497)\n");
@@ -11165,6 +12826,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2022 (13497)\n");
 CheckTypeSize(GtkImageType,4, 13498, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageType,4, 13498, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageType,4, 13498, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13498,0);
 Msg("Find size of GtkImageType (13498)\n");
@@ -11178,6 +12841,10 @@ CheckOffset(struct _GtkImagePixmapData,pixmap,0,2,45407)
 CheckTypeSize(struct _GtkImagePixmapData,8, 13499, 11)
 Msg("Missing member data for _GtkImagePixmapData on x86-64\n");
 CheckOffset(struct _GtkImagePixmapData,pixmap,0,11,45407)
+#elif __ia64__
+CheckTypeSize(struct _GtkImagePixmapData,8, 13499, 3)
+Msg("Missing member data for _GtkImagePixmapData on IA64\n");
+CheckOffset(struct _GtkImagePixmapData,pixmap,0,3,45407)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13499,0);
 Msg("Find size of _GtkImagePixmapData (13499)\n");
@@ -11187,6 +12854,8 @@ Msg("Find size of _GtkImagePixmapData (13499)\n");
 CheckTypeSize(GtkImagePixmapData,4, 13500, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImagePixmapData,8, 13500, 11)
+#elif __ia64__
+CheckTypeSize(GtkImagePixmapData,8, 13500, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13500,0);
 Msg("Find size of GtkImagePixmapData (13500)\n");
@@ -11200,6 +12869,10 @@ CheckOffset(struct _GtkImageImageData,image,0,2,45408)
 CheckTypeSize(struct _GtkImageImageData,8, 13501, 11)
 Msg("Missing member data for _GtkImageImageData on x86-64\n");
 CheckOffset(struct _GtkImageImageData,image,0,11,45408)
+#elif __ia64__
+CheckTypeSize(struct _GtkImageImageData,8, 13501, 3)
+Msg("Missing member data for _GtkImageImageData on IA64\n");
+CheckOffset(struct _GtkImageImageData,image,0,3,45408)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13501,0);
 Msg("Find size of _GtkImageImageData (13501)\n");
@@ -11209,6 +12882,8 @@ Msg("Find size of _GtkImageImageData (13501)\n");
 CheckTypeSize(GtkImageImageData,4, 13502, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageImageData,8, 13502, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageImageData,8, 13502, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13502,0);
 Msg("Find size of GtkImageImageData (13502)\n");
@@ -11222,6 +12897,10 @@ CheckOffset(struct _GtkImagePixbufData,pixbuf,0,2,45409)
 CheckTypeSize(struct _GtkImagePixbufData,8, 13503, 11)
 Msg("Missing member data for _GtkImagePixbufData on x86-64\n");
 CheckOffset(struct _GtkImagePixbufData,pixbuf,0,11,45409)
+#elif __ia64__
+CheckTypeSize(struct _GtkImagePixbufData,8, 13503, 3)
+Msg("Missing member data for _GtkImagePixbufData on IA64\n");
+CheckOffset(struct _GtkImagePixbufData,pixbuf,0,3,45409)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13503,0);
 Msg("Find size of _GtkImagePixbufData (13503)\n");
@@ -11231,6 +12910,8 @@ Msg("Find size of _GtkImagePixbufData (13503)\n");
 CheckTypeSize(GtkImagePixbufData,4, 13504, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImagePixbufData,8, 13504, 11)
+#elif __ia64__
+CheckTypeSize(GtkImagePixbufData,8, 13504, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13504,0);
 Msg("Find size of GtkImagePixbufData (13504)\n");
@@ -11244,6 +12925,10 @@ CheckOffset(struct _GtkImageStockData,stock_id,0,2,45410)
 CheckTypeSize(struct _GtkImageStockData,8, 13505, 11)
 Msg("Missing member data for _GtkImageStockData on x86-64\n");
 CheckOffset(struct _GtkImageStockData,stock_id,0,11,45410)
+#elif __ia64__
+CheckTypeSize(struct _GtkImageStockData,8, 13505, 3)
+Msg("Missing member data for _GtkImageStockData on IA64\n");
+CheckOffset(struct _GtkImageStockData,stock_id,0,3,45410)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13505,0);
 Msg("Find size of _GtkImageStockData (13505)\n");
@@ -11253,6 +12938,8 @@ Msg("Find size of _GtkImageStockData (13505)\n");
 CheckTypeSize(GtkImageStockData,4, 13506, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageStockData,8, 13506, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageStockData,8, 13506, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13506,0);
 Msg("Find size of GtkImageStockData (13506)\n");
@@ -11266,6 +12953,10 @@ CheckOffset(struct _GtkImageIconSetData,icon_set,0,2,45411)
 CheckTypeSize(struct _GtkImageIconSetData,8, 13507, 11)
 Msg("Missing member data for _GtkImageIconSetData on x86-64\n");
 CheckOffset(struct _GtkImageIconSetData,icon_set,0,11,45411)
+#elif __ia64__
+CheckTypeSize(struct _GtkImageIconSetData,8, 13507, 3)
+Msg("Missing member data for _GtkImageIconSetData on IA64\n");
+CheckOffset(struct _GtkImageIconSetData,icon_set,0,3,45411)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13507,0);
 Msg("Find size of _GtkImageIconSetData (13507)\n");
@@ -11275,6 +12966,8 @@ Msg("Find size of _GtkImageIconSetData (13507)\n");
 CheckTypeSize(GtkImageIconSetData,4, 13508, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageIconSetData,8, 13508, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageIconSetData,8, 13508, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13508,0);
 Msg("Find size of GtkImageIconSetData (13508)\n");
@@ -11292,6 +12985,12 @@ CheckMemberSize(struct _GtkImageAnimationData,iter,8,11,45413)
 CheckOffset(struct _GtkImageAnimationData,iter,8,11,45413)
 CheckMemberSize(struct _GtkImageAnimationData,frame_timeout,4,11,45414)
 CheckOffset(struct _GtkImageAnimationData,frame_timeout,16,11,45414)
+#elif __ia64__
+CheckTypeSize(struct _GtkImageAnimationData,24, 13509, 3)
+CheckMemberSize(struct _GtkImageAnimationData,iter,8,3,45413)
+CheckOffset(struct _GtkImageAnimationData,iter,8,3,45413)
+CheckMemberSize(struct _GtkImageAnimationData,frame_timeout,4,3,45414)
+CheckOffset(struct _GtkImageAnimationData,frame_timeout,16,3,45414)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13509,0);
 Msg("Find size of _GtkImageAnimationData (13509)\n");
@@ -11301,6 +13000,8 @@ Msg("Find size of _GtkImageAnimationData (13509)\n");
 CheckTypeSize(GtkImageAnimationData,12, 13510, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageAnimationData,24, 13510, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageAnimationData,24, 13510, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13510,0);
 Msg("Find size of GtkImageAnimationData (13510)\n");
@@ -11318,6 +13019,12 @@ CheckMemberSize(struct _GtkImageIconNameData,pixbuf,8,11,45416)
 CheckOffset(struct _GtkImageIconNameData,pixbuf,8,11,45416)
 CheckMemberSize(struct _GtkImageIconNameData,theme_change_id,4,11,45417)
 CheckOffset(struct _GtkImageIconNameData,theme_change_id,16,11,45417)
+#elif __ia64__
+CheckTypeSize(struct _GtkImageIconNameData,24, 13511, 3)
+CheckMemberSize(struct _GtkImageIconNameData,pixbuf,8,3,45416)
+CheckOffset(struct _GtkImageIconNameData,pixbuf,8,3,45416)
+CheckMemberSize(struct _GtkImageIconNameData,theme_change_id,4,3,45417)
+CheckOffset(struct _GtkImageIconNameData,theme_change_id,16,3,45417)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13511,0);
 Msg("Find size of _GtkImageIconNameData (13511)\n");
@@ -11327,6 +13034,8 @@ Msg("Find size of _GtkImageIconNameData (13511)\n");
 CheckTypeSize(GtkImageIconNameData,12, 13512, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageIconNameData,24, 13512, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageIconNameData,24, 13512, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13512,0);
 Msg("Find size of GtkImageIconNameData (13512)\n");
@@ -11334,6 +13043,7 @@ Msg("Find size of GtkImageIconNameData (13512)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13513,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2023 (13513)\n");
@@ -11355,6 +13065,14 @@ CheckEnum("GTK_ICON_SIZE_LARGE_TOOLBAR",GTK_ICON_SIZE_LARGE_TOOLBAR,3);
 CheckEnum("GTK_ICON_SIZE_BUTTON",GTK_ICON_SIZE_BUTTON,4);
 CheckEnum("GTK_ICON_SIZE_DND",GTK_ICON_SIZE_DND,5);
 CheckEnum("GTK_ICON_SIZE_DIALOG",GTK_ICON_SIZE_DIALOG,6);
+#elif __ia64__
+CheckEnum("GTK_ICON_SIZE_INVALID",GTK_ICON_SIZE_INVALID,0);
+CheckEnum("GTK_ICON_SIZE_MENU",GTK_ICON_SIZE_MENU,1);
+CheckEnum("GTK_ICON_SIZE_SMALL_TOOLBAR",GTK_ICON_SIZE_SMALL_TOOLBAR,2);
+CheckEnum("GTK_ICON_SIZE_LARGE_TOOLBAR",GTK_ICON_SIZE_LARGE_TOOLBAR,3);
+CheckEnum("GTK_ICON_SIZE_BUTTON",GTK_ICON_SIZE_BUTTON,4);
+CheckEnum("GTK_ICON_SIZE_DND",GTK_ICON_SIZE_DND,5);
+CheckEnum("GTK_ICON_SIZE_DIALOG",GTK_ICON_SIZE_DIALOG,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13514,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2013 (13514)\n");
@@ -11364,6 +13082,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2013 (13514)\n");
 CheckTypeSize(GtkIconSize,4, 13515, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconSize,4, 13515, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconSize,4, 13515, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13515,0);
 Msg("Find size of GtkIconSize (13515)\n");
@@ -11373,6 +13093,8 @@ Msg("Find size of GtkIconSize (13515)\n");
 CheckTypeSize(GtkImage,96, 13516, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImage,160, 13516, 11)
+#elif __ia64__
+CheckTypeSize(GtkImage,160, 13516, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13516,0);
 Msg("Find size of GtkImage (13516)\n");
@@ -11382,6 +13104,8 @@ Msg("Find size of GtkImage (13516)\n");
 CheckTypeSize(GtkImage *,4, 13517, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImage *,8, 13517, 11)
+#elif __ia64__
+CheckTypeSize(GtkImage *,8, 13517, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13517,0);
 Msg("Find size of GtkImage * (13517)\n");
@@ -11395,6 +13119,10 @@ CheckOffset(struct _GtkTreeView,priv,68,2,45436)
 CheckTypeSize(struct _GtkTreeView,120, 13518, 11)
 CheckMemberSize(struct _GtkTreeView,priv,8,11,45436)
 CheckOffset(struct _GtkTreeView,priv,112,11,45436)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeView,120, 13518, 3)
+CheckMemberSize(struct _GtkTreeView,priv,8,3,45436)
+CheckOffset(struct _GtkTreeView,priv,112,3,45436)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13518,0);
 Msg("Find size of _GtkTreeView (13518)\n");
@@ -11404,6 +13132,8 @@ Msg("Find size of _GtkTreeView (13518)\n");
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewPrivate,0, 13520, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13520,0);
 Msg("Find size of GtkTreeViewPrivate (13520)\n");
@@ -11413,6 +13143,8 @@ Msg("Find size of GtkTreeViewPrivate (13520)\n");
 CheckTypeSize(GtkTreeViewPrivate *,4, 13521, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewPrivate *,8, 13521, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewPrivate *,8, 13521, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13521,0);
 Msg("Find size of GtkTreeViewPrivate * (13521)\n");
@@ -11422,6 +13154,8 @@ Msg("Find size of GtkTreeViewPrivate * (13521)\n");
 CheckTypeSize(GtkTreeView,72, 13522, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeView,120, 13522, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeView,120, 13522, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13522,0);
 Msg("Find size of GtkTreeView (13522)\n");
@@ -11431,6 +13165,8 @@ Msg("Find size of GtkTreeView (13522)\n");
 CheckTypeSize(GtkTreeView *,4, 13523, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeView *,8, 13523, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeView *,8, 13523, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13523,0);
 Msg("Find size of GtkTreeView * (13523)\n");
@@ -11464,6 +13200,20 @@ CheckMemberSize(struct _GtkSpinButton,timer_step,8,11,45442)
 CheckOffset(struct _GtkSpinButton,timer_step,240,11,45442)
 CheckMemberSize(struct _GtkSpinButton,update_policy,4,11,45445)
 CheckOffset(struct _GtkSpinButton,update_policy,248,11,45445)
+#elif __ia64__
+CheckTypeSize(struct _GtkSpinButton,256, 13524, 3)
+CheckMemberSize(struct _GtkSpinButton,adjustment,8,3,45438)
+CheckOffset(struct _GtkSpinButton,adjustment,208,3,45438)
+CheckMemberSize(struct _GtkSpinButton,panel,8,3,45439)
+CheckOffset(struct _GtkSpinButton,panel,216,3,45439)
+CheckMemberSize(struct _GtkSpinButton,timer,4,3,45440)
+CheckOffset(struct _GtkSpinButton,timer,224,3,45440)
+CheckMemberSize(struct _GtkSpinButton,climb_rate,8,3,45441)
+CheckOffset(struct _GtkSpinButton,climb_rate,232,3,45441)
+CheckMemberSize(struct _GtkSpinButton,timer_step,8,3,45442)
+CheckOffset(struct _GtkSpinButton,timer_step,240,3,45442)
+CheckMemberSize(struct _GtkSpinButton,update_policy,4,3,45445)
+CheckOffset(struct _GtkSpinButton,update_policy,248,3,45445)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13524,0);
 Msg("Find size of _GtkSpinButton (13524)\n");
@@ -11475,6 +13225,9 @@ CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
 #elif __x86_64__
 CheckEnum("GTK_UPDATE_ALWAYS",GTK_UPDATE_ALWAYS,0);
 CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
+#elif __ia64__
+CheckEnum("GTK_UPDATE_ALWAYS",GTK_UPDATE_ALWAYS,0);
+CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13525,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3382 (13525)\n");
@@ -11484,6 +13237,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3382 (13525)\n");
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 11)
+#elif __ia64__
+CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13526,0);
 Msg("Find size of GtkSpinButtonUpdatePolicy (13526)\n");
@@ -11493,6 +13248,8 @@ Msg("Find size of GtkSpinButtonUpdatePolicy (13526)\n");
 CheckTypeSize(GtkSpinButton,188, 13527, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSpinButton,256, 13527, 11)
+#elif __ia64__
+CheckTypeSize(GtkSpinButton,256, 13527, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13527,0);
 Msg("Find size of GtkSpinButton (13527)\n");
@@ -11502,6 +13259,8 @@ Msg("Find size of GtkSpinButton (13527)\n");
 CheckTypeSize(GtkSpinButton *,4, 13528, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSpinButton *,8, 13528, 11)
+#elif __ia64__
+CheckTypeSize(GtkSpinButton *,8, 13528, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13528,0);
 Msg("Find size of GtkSpinButton * (13528)\n");
@@ -11511,6 +13270,8 @@ Msg("Find size of GtkSpinButton * (13528)\n");
 CheckTypeSize(GtkCellLayout,0, 13530, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellLayout,0, 13530, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellLayout,0, 13530, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13530,0);
 Msg("Find size of GtkCellLayout (13530)\n");
@@ -11520,6 +13281,8 @@ Msg("Find size of GtkCellLayout (13530)\n");
 CheckTypeSize(GtkCellLayout *,4, 13531, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellLayout *,8, 13531, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellLayout *,8, 13531, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13531,0);
 Msg("Find size of GtkCellLayout * (13531)\n");
@@ -11617,6 +13380,52 @@ CheckMemberSize(struct _GtkFileSelection,selected_names,8,11,45476)
 CheckOffset(struct _GtkFileSelection,selected_names,424,11,45476)
 CheckMemberSize(struct _GtkFileSelection,last_selected,8,11,45477)
 CheckOffset(struct _GtkFileSelection,last_selected,432,11,45477)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileSelection,440, 13532, 3)
+CheckMemberSize(struct _GtkFileSelection,dir_list,8,3,45456)
+CheckOffset(struct _GtkFileSelection,dir_list,264,3,45456)
+CheckMemberSize(struct _GtkFileSelection,file_list,8,3,45457)
+CheckOffset(struct _GtkFileSelection,file_list,272,3,45457)
+CheckMemberSize(struct _GtkFileSelection,selection_entry,8,3,45458)
+CheckOffset(struct _GtkFileSelection,selection_entry,280,3,45458)
+CheckMemberSize(struct _GtkFileSelection,selection_text,8,3,45459)
+CheckOffset(struct _GtkFileSelection,selection_text,288,3,45459)
+CheckMemberSize(struct _GtkFileSelection,main_vbox,8,3,45460)
+CheckOffset(struct _GtkFileSelection,main_vbox,296,3,45460)
+CheckMemberSize(struct _GtkFileSelection,ok_button,8,3,45461)
+CheckOffset(struct _GtkFileSelection,ok_button,304,3,45461)
+CheckMemberSize(struct _GtkFileSelection,cancel_button,8,3,45462)
+CheckOffset(struct _GtkFileSelection,cancel_button,312,3,45462)
+CheckMemberSize(struct _GtkFileSelection,help_button,8,3,45463)
+CheckOffset(struct _GtkFileSelection,help_button,320,3,45463)
+CheckMemberSize(struct _GtkFileSelection,history_pulldown,8,3,45464)
+CheckOffset(struct _GtkFileSelection,history_pulldown,328,3,45464)
+CheckMemberSize(struct _GtkFileSelection,history_menu,8,3,45465)
+CheckOffset(struct _GtkFileSelection,history_menu,336,3,45465)
+CheckMemberSize(struct _GtkFileSelection,history_list,8,3,45466)
+CheckOffset(struct _GtkFileSelection,history_list,344,3,45466)
+CheckMemberSize(struct _GtkFileSelection,fileop_dialog,8,3,45467)
+CheckOffset(struct _GtkFileSelection,fileop_dialog,352,3,45467)
+CheckMemberSize(struct _GtkFileSelection,fileop_entry,8,3,45468)
+CheckOffset(struct _GtkFileSelection,fileop_entry,360,3,45468)
+CheckMemberSize(struct _GtkFileSelection,fileop_file,8,3,45469)
+CheckOffset(struct _GtkFileSelection,fileop_file,368,3,45469)
+CheckMemberSize(struct _GtkFileSelection,cmpl_state,8,3,45470)
+CheckOffset(struct _GtkFileSelection,cmpl_state,376,3,45470)
+CheckMemberSize(struct _GtkFileSelection,fileop_c_dir,8,3,45471)
+CheckOffset(struct _GtkFileSelection,fileop_c_dir,384,3,45471)
+CheckMemberSize(struct _GtkFileSelection,fileop_del_file,8,3,45472)
+CheckOffset(struct _GtkFileSelection,fileop_del_file,392,3,45472)
+CheckMemberSize(struct _GtkFileSelection,fileop_ren_file,8,3,45473)
+CheckOffset(struct _GtkFileSelection,fileop_ren_file,400,3,45473)
+CheckMemberSize(struct _GtkFileSelection,button_area,8,3,45474)
+CheckOffset(struct _GtkFileSelection,button_area,408,3,45474)
+CheckMemberSize(struct _GtkFileSelection,action_area,8,3,45475)
+CheckOffset(struct _GtkFileSelection,action_area,416,3,45475)
+CheckMemberSize(struct _GtkFileSelection,selected_names,8,3,45476)
+CheckOffset(struct _GtkFileSelection,selected_names,424,3,45476)
+CheckMemberSize(struct _GtkFileSelection,last_selected,8,3,45477)
+CheckOffset(struct _GtkFileSelection,last_selected,432,3,45477)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13532,0);
 Msg("Find size of _GtkFileSelection (13532)\n");
@@ -11626,6 +13435,8 @@ Msg("Find size of _GtkFileSelection (13532)\n");
 CheckTypeSize(GtkFileSelection,248, 13533, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileSelection,440, 13533, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileSelection,440, 13533, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13533,0);
 Msg("Find size of GtkFileSelection (13533)\n");
@@ -11635,6 +13446,8 @@ Msg("Find size of GtkFileSelection (13533)\n");
 CheckTypeSize(GtkFileSelection *,4, 13534, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileSelection *,8, 13534, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileSelection *,8, 13534, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13534,0);
 Msg("Find size of GtkFileSelection * (13534)\n");
@@ -11668,6 +13481,20 @@ CheckMemberSize(struct _GtkTooltips,timer_tag,4,11,45491)
 CheckOffset(struct _GtkTooltips,timer_tag,72,11,45491)
 CheckMemberSize(struct _GtkTooltips,last_popdown,16,11,45492)
 CheckOffset(struct _GtkTooltips,last_popdown,80,11,45492)
+#elif __ia64__
+CheckTypeSize(struct _GtkTooltips,96, 13535, 3)
+CheckMemberSize(struct _GtkTooltips,tip_window,8,3,45479)
+CheckOffset(struct _GtkTooltips,tip_window,32,3,45479)
+CheckMemberSize(struct _GtkTooltips,tip_label,8,3,45480)
+CheckOffset(struct _GtkTooltips,tip_label,40,3,45480)
+CheckMemberSize(struct _GtkTooltips,active_tips_data,8,3,45485)
+CheckOffset(struct _GtkTooltips,active_tips_data,48,3,45485)
+CheckMemberSize(struct _GtkTooltips,tips_data_list,8,3,45486)
+CheckOffset(struct _GtkTooltips,tips_data_list,56,3,45486)
+CheckMemberSize(struct _GtkTooltips,timer_tag,4,3,45491)
+CheckOffset(struct _GtkTooltips,timer_tag,72,3,45491)
+CheckMemberSize(struct _GtkTooltips,last_popdown,16,3,45492)
+CheckOffset(struct _GtkTooltips,last_popdown,80,3,45492)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13535,0);
 Msg("Find size of _GtkTooltips (13535)\n");
@@ -11689,6 +13516,14 @@ CheckMemberSize(struct _GtkTooltipsData,tip_text,8,11,45483)
 CheckOffset(struct _GtkTooltipsData,tip_text,16,11,45483)
 CheckMemberSize(struct _GtkTooltipsData,tip_private,8,11,45484)
 CheckOffset(struct _GtkTooltipsData,tip_private,24,11,45484)
+#elif __ia64__
+CheckTypeSize(struct _GtkTooltipsData,32, 13536, 3)
+CheckMemberSize(struct _GtkTooltipsData,widget,8,3,45482)
+CheckOffset(struct _GtkTooltipsData,widget,8,3,45482)
+CheckMemberSize(struct _GtkTooltipsData,tip_text,8,3,45483)
+CheckOffset(struct _GtkTooltipsData,tip_text,16,3,45483)
+CheckMemberSize(struct _GtkTooltipsData,tip_private,8,3,45484)
+CheckOffset(struct _GtkTooltipsData,tip_private,24,3,45484)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13536,0);
 Msg("Find size of _GtkTooltipsData (13536)\n");
@@ -11698,6 +13533,8 @@ Msg("Find size of _GtkTooltipsData (13536)\n");
 CheckTypeSize(GtkTooltips,52, 13537, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTooltips,96, 13537, 11)
+#elif __ia64__
+CheckTypeSize(GtkTooltips,96, 13537, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13537,0);
 Msg("Find size of GtkTooltips (13537)\n");
@@ -11707,6 +13544,8 @@ Msg("Find size of GtkTooltips (13537)\n");
 CheckTypeSize(GtkTooltips *,4, 13538, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTooltips *,8, 13538, 11)
+#elif __ia64__
+CheckTypeSize(GtkTooltips *,8, 13538, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13538,0);
 Msg("Find size of GtkTooltips * (13538)\n");
@@ -11716,6 +13555,8 @@ Msg("Find size of GtkTooltips * (13538)\n");
 CheckTypeSize(GtkTooltipsData,16, 13539, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTooltipsData,32, 13539, 11)
+#elif __ia64__
+CheckTypeSize(GtkTooltipsData,32, 13539, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13539,0);
 Msg("Find size of GtkTooltipsData (13539)\n");
@@ -11725,6 +13566,8 @@ Msg("Find size of GtkTooltipsData (13539)\n");
 CheckTypeSize(GtkTooltipsData *,4, 13540, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTooltipsData *,8, 13540, 11)
+#elif __ia64__
+CheckTypeSize(GtkTooltipsData *,8, 13540, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13540,0);
 Msg("Find size of GtkTooltipsData * (13540)\n");
@@ -11732,6 +13575,7 @@ Msg("Find size of GtkTooltipsData * (13540)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13541,0);
 Msg("Find size of fptr_gtk_7918 (13541)\n");
@@ -11741,6 +13585,8 @@ Msg("Find size of fptr_gtk_7918 (13541)\n");
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,4, 13542, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,8, 13542, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewRowSeparatorFunc,8, 13542, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13542,0);
 Msg("Find size of GtkTreeViewRowSeparatorFunc (13542)\n");
@@ -11754,6 +13600,10 @@ CheckOffset(struct _GtkEntryCompletion,priv,12,2,45497)
 CheckTypeSize(struct _GtkEntryCompletion,32, 13543, 11)
 CheckMemberSize(struct _GtkEntryCompletion,priv,8,11,45497)
 CheckOffset(struct _GtkEntryCompletion,priv,24,11,45497)
+#elif __ia64__
+CheckTypeSize(struct _GtkEntryCompletion,32, 13543, 3)
+CheckMemberSize(struct _GtkEntryCompletion,priv,8,3,45497)
+CheckOffset(struct _GtkEntryCompletion,priv,24,3,45497)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13543,0);
 Msg("Find size of _GtkEntryCompletion (13543)\n");
@@ -11763,6 +13613,8 @@ Msg("Find size of _GtkEntryCompletion (13543)\n");
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13545,0);
 Msg("Find size of GtkEntryCompletionPrivate (13545)\n");
@@ -11772,6 +13624,8 @@ Msg("Find size of GtkEntryCompletionPrivate (13545)\n");
 CheckTypeSize(GtkEntryCompletionPrivate *,4, 13546, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntryCompletionPrivate *,8, 13546, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntryCompletionPrivate *,8, 13546, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13546,0);
 Msg("Find size of GtkEntryCompletionPrivate * (13546)\n");
@@ -11781,6 +13635,8 @@ Msg("Find size of GtkEntryCompletionPrivate * (13546)\n");
 CheckTypeSize(GtkEntryCompletion,16, 13547, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntryCompletion,32, 13547, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntryCompletion,32, 13547, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13547,0);
 Msg("Find size of GtkEntryCompletion (13547)\n");
@@ -11790,6 +13646,8 @@ Msg("Find size of GtkEntryCompletion (13547)\n");
 CheckTypeSize(GtkEntryCompletion *,4, 13548, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntryCompletion *,8, 13548, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntryCompletion *,8, 13548, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13548,0);
 Msg("Find size of GtkEntryCompletion * (13548)\n");
@@ -11799,6 +13657,8 @@ Msg("Find size of GtkEntryCompletion * (13548)\n");
 CheckTypeSize(GtkClipboard,0, 13550, 2)
 #elif __x86_64__
 CheckTypeSize(GtkClipboard,0, 13550, 11)
+#elif __ia64__
+CheckTypeSize(GtkClipboard,0, 13550, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13550,0);
 Msg("Find size of GtkClipboard (13550)\n");
@@ -11808,6 +13668,8 @@ Msg("Find size of GtkClipboard (13550)\n");
 CheckTypeSize(GtkClipboard *,4, 13551, 2)
 #elif __x86_64__
 CheckTypeSize(GtkClipboard *,8, 13551, 11)
+#elif __ia64__
+CheckTypeSize(GtkClipboard *,8, 13551, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13551,0);
 Msg("Find size of GtkClipboard * (13551)\n");
@@ -11821,6 +13683,10 @@ CheckOffset(struct _GtkTreeModelFilter,priv,12,2,45499)
 CheckTypeSize(struct _GtkTreeModelFilter,32, 13552, 11)
 CheckMemberSize(struct _GtkTreeModelFilter,priv,8,11,45499)
 CheckOffset(struct _GtkTreeModelFilter,priv,24,11,45499)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeModelFilter,32, 13552, 3)
+CheckMemberSize(struct _GtkTreeModelFilter,priv,8,3,45499)
+CheckOffset(struct _GtkTreeModelFilter,priv,24,3,45499)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13552,0);
 Msg("Find size of _GtkTreeModelFilter (13552)\n");
@@ -11830,6 +13696,8 @@ Msg("Find size of _GtkTreeModelFilter (13552)\n");
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13554,0);
 Msg("Find size of GtkTreeModelFilterPrivate (13554)\n");
@@ -11839,6 +13707,8 @@ Msg("Find size of GtkTreeModelFilterPrivate (13554)\n");
 CheckTypeSize(GtkTreeModelFilterPrivate *,4, 13555, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelFilterPrivate *,8, 13555, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelFilterPrivate *,8, 13555, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13555,0);
 Msg("Find size of GtkTreeModelFilterPrivate * (13555)\n");
@@ -11848,6 +13718,8 @@ Msg("Find size of GtkTreeModelFilterPrivate * (13555)\n");
 CheckTypeSize(GtkTreeModelFilter,16, 13556, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelFilter,32, 13556, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelFilter,32, 13556, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13556,0);
 Msg("Find size of GtkTreeModelFilter (13556)\n");
@@ -11857,6 +13729,8 @@ Msg("Find size of GtkTreeModelFilter (13556)\n");
 CheckTypeSize(GtkTreeModelFilter *,4, 13557, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelFilter *,8, 13557, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelFilter *,8, 13557, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13557,0);
 Msg("Find size of GtkTreeModelFilter * (13557)\n");
@@ -11930,6 +13804,40 @@ CheckMemberSize(struct _GtkTreeModelSort,deleted_id,4,11,45515)
 CheckOffset(struct _GtkTreeModelSort,deleted_id,108,11,45515)
 CheckMemberSize(struct _GtkTreeModelSort,reordered_id,4,11,45516)
 CheckOffset(struct _GtkTreeModelSort,reordered_id,112,11,45516)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeModelSort,120, 13558, 3)
+CheckMemberSize(struct _GtkTreeModelSort,root,8,3,45501)
+CheckOffset(struct _GtkTreeModelSort,root,24,3,45501)
+CheckMemberSize(struct _GtkTreeModelSort,stamp,4,3,45502)
+CheckOffset(struct _GtkTreeModelSort,stamp,32,3,45502)
+CheckMemberSize(struct _GtkTreeModelSort,child_flags,4,3,45503)
+CheckOffset(struct _GtkTreeModelSort,child_flags,36,3,45503)
+CheckMemberSize(struct _GtkTreeModelSort,child_model,8,3,45504)
+CheckOffset(struct _GtkTreeModelSort,child_model,40,3,45504)
+CheckMemberSize(struct _GtkTreeModelSort,zero_ref_count,4,3,45505)
+CheckOffset(struct _GtkTreeModelSort,zero_ref_count,48,3,45505)
+CheckMemberSize(struct _GtkTreeModelSort,sort_list,8,3,45506)
+CheckOffset(struct _GtkTreeModelSort,sort_list,56,3,45506)
+CheckMemberSize(struct _GtkTreeModelSort,sort_column_id,4,3,45507)
+CheckOffset(struct _GtkTreeModelSort,sort_column_id,64,3,45507)
+CheckMemberSize(struct _GtkTreeModelSort,order,4,3,45508)
+CheckOffset(struct _GtkTreeModelSort,order,68,3,45508)
+CheckMemberSize(struct _GtkTreeModelSort,default_sort_func,8,3,45509)
+CheckOffset(struct _GtkTreeModelSort,default_sort_func,72,3,45509)
+CheckMemberSize(struct _GtkTreeModelSort,default_sort_data,8,3,45510)
+CheckOffset(struct _GtkTreeModelSort,default_sort_data,80,3,45510)
+CheckMemberSize(struct _GtkTreeModelSort,default_sort_destroy,8,3,45511)
+CheckOffset(struct _GtkTreeModelSort,default_sort_destroy,88,3,45511)
+CheckMemberSize(struct _GtkTreeModelSort,changed_id,4,3,45512)
+CheckOffset(struct _GtkTreeModelSort,changed_id,96,3,45512)
+CheckMemberSize(struct _GtkTreeModelSort,inserted_id,4,3,45513)
+CheckOffset(struct _GtkTreeModelSort,inserted_id,100,3,45513)
+CheckMemberSize(struct _GtkTreeModelSort,has_child_toggled_id,4,3,45514)
+CheckOffset(struct _GtkTreeModelSort,has_child_toggled_id,104,3,45514)
+CheckMemberSize(struct _GtkTreeModelSort,deleted_id,4,3,45515)
+CheckOffset(struct _GtkTreeModelSort,deleted_id,108,3,45515)
+CheckMemberSize(struct _GtkTreeModelSort,reordered_id,4,3,45516)
+CheckOffset(struct _GtkTreeModelSort,reordered_id,112,3,45516)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13558,0);
 Msg("Find size of _GtkTreeModelSort (13558)\n");
@@ -11939,6 +13847,8 @@ Msg("Find size of _GtkTreeModelSort (13558)\n");
 CheckTypeSize(GtkTreeModelSort,76, 13559, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelSort,120, 13559, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelSort,120, 13559, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13559,0);
 Msg("Find size of GtkTreeModelSort (13559)\n");
@@ -11948,6 +13858,8 @@ Msg("Find size of GtkTreeModelSort (13559)\n");
 CheckTypeSize(GtkTreeModelSort *,4, 13560, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelSort *,8, 13560, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelSort *,8, 13560, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13560,0);
 Msg("Find size of GtkTreeModelSort * (13560)\n");
@@ -11955,6 +13867,7 @@ Msg("Find size of GtkTreeModelSort * (13560)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13561,0);
 Msg("Find size of fptr_gtk_7098 (13561)\n");
@@ -11964,6 +13877,8 @@ Msg("Find size of fptr_gtk_7098 (13561)\n");
 CheckTypeSize(GtkTreeCellDataFunc,4, 13562, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeCellDataFunc,8, 13562, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeCellDataFunc,8, 13562, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13562,0);
 Msg("Find size of GtkTreeCellDataFunc (13562)\n");
@@ -11977,6 +13892,10 @@ CheckOffset(struct _GtkColorButton,priv,88,2,45523)
 CheckTypeSize(struct _GtkColorButton,152, 13563, 11)
 CheckMemberSize(struct _GtkColorButton,priv,8,11,45523)
 CheckOffset(struct _GtkColorButton,priv,144,11,45523)
+#elif __ia64__
+CheckTypeSize(struct _GtkColorButton,152, 13563, 3)
+CheckMemberSize(struct _GtkColorButton,priv,8,3,45523)
+CheckOffset(struct _GtkColorButton,priv,144,3,45523)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13563,0);
 Msg("Find size of _GtkColorButton (13563)\n");
@@ -11986,6 +13905,8 @@ Msg("Find size of _GtkColorButton (13563)\n");
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorButtonPrivate,0, 13565, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13565,0);
 Msg("Find size of GtkColorButtonPrivate (13565)\n");
@@ -11995,6 +13916,8 @@ Msg("Find size of GtkColorButtonPrivate (13565)\n");
 CheckTypeSize(GtkColorButtonPrivate *,4, 13566, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorButtonPrivate *,8, 13566, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorButtonPrivate *,8, 13566, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13566,0);
 Msg("Find size of GtkColorButtonPrivate * (13566)\n");
@@ -12004,6 +13927,8 @@ Msg("Find size of GtkColorButtonPrivate * (13566)\n");
 CheckTypeSize(GtkColorButton,92, 13567, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorButton,152, 13567, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorButton,152, 13567, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13567,0);
 Msg("Find size of GtkColorButton (13567)\n");
@@ -12013,6 +13938,8 @@ Msg("Find size of GtkColorButton (13567)\n");
 CheckTypeSize(GtkColorButton *,4, 13568, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorButton *,8, 13568, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorButton *,8, 13568, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13568,0);
 Msg("Find size of GtkColorButton * (13568)\n");
@@ -12028,6 +13955,11 @@ CheckEnum("GTK_FILE_CHOOSER_ACTION_OPEN",GTK_FILE_CHOOSER_ACTION_OPEN,0);
 CheckEnum("GTK_FILE_CHOOSER_ACTION_SAVE",GTK_FILE_CHOOSER_ACTION_SAVE,1);
 CheckEnum("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER",GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,2);
 CheckEnum("GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER",GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER,3);
+#elif __ia64__
+CheckEnum("GTK_FILE_CHOOSER_ACTION_OPEN",GTK_FILE_CHOOSER_ACTION_OPEN,0);
+CheckEnum("GTK_FILE_CHOOSER_ACTION_SAVE",GTK_FILE_CHOOSER_ACTION_SAVE,1);
+CheckEnum("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER",GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,2);
+CheckEnum("GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER",GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13569,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1306 (13569)\n");
@@ -12037,6 +13969,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1306 (13569)\n");
 CheckTypeSize(GtkFileChooserAction,4, 13570, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserAction,4, 13570, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserAction,4, 13570, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13570,0);
 Msg("Find size of GtkFileChooserAction (13570)\n");
@@ -12044,6 +13978,7 @@ Msg("Find size of GtkFileChooserAction (13570)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13571,0);
 Msg("Find size of fptr_gtk_2227 (13571)\n");
@@ -12053,6 +13988,8 @@ Msg("Find size of fptr_gtk_2227 (13571)\n");
 CheckTypeSize(GtkCallback,4, 13572, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCallback,8, 13572, 11)
+#elif __ia64__
+CheckTypeSize(GtkCallback,8, 13572, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13572,0);
 Msg("Find size of GtkCallback (13572)\n");
@@ -12062,6 +13999,8 @@ Msg("Find size of GtkCallback (13572)\n");
 CheckTypeSize(GtkMenuItem *,4, 13573, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuItem *,8, 13573, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuItem *,8, 13573, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13573,0);
 Msg("Find size of GtkMenuItem * (13573)\n");
@@ -12099,6 +14038,22 @@ CheckMemberSize(struct _GtkHandleBox,attach_allocation,16,11,45542)
 CheckOffset(struct _GtkHandleBox,attach_allocation,152,11,45542)
 CheckMemberSize(struct _GtkHandleBox,float_allocation,16,11,45543)
 CheckOffset(struct _GtkHandleBox,float_allocation,168,11,45543)
+#elif __ia64__
+CheckTypeSize(struct _GtkHandleBox,184, 13574, 3)
+CheckMemberSize(struct _GtkHandleBox,bin_window,8,3,45531)
+CheckOffset(struct _GtkHandleBox,bin_window,120,3,45531)
+CheckMemberSize(struct _GtkHandleBox,float_window,8,3,45532)
+CheckOffset(struct _GtkHandleBox,float_window,128,3,45532)
+CheckMemberSize(struct _GtkHandleBox,shadow_type,4,3,45533)
+CheckOffset(struct _GtkHandleBox,shadow_type,136,3,45533)
+CheckMemberSize(struct _GtkHandleBox,deskoff_x,4,3,45540)
+CheckOffset(struct _GtkHandleBox,deskoff_x,144,3,45540)
+CheckMemberSize(struct _GtkHandleBox,deskoff_y,4,3,45541)
+CheckOffset(struct _GtkHandleBox,deskoff_y,148,3,45541)
+CheckMemberSize(struct _GtkHandleBox,attach_allocation,16,3,45542)
+CheckOffset(struct _GtkHandleBox,attach_allocation,152,3,45542)
+CheckMemberSize(struct _GtkHandleBox,float_allocation,16,3,45543)
+CheckOffset(struct _GtkHandleBox,float_allocation,168,3,45543)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13574,0);
 Msg("Find size of _GtkHandleBox (13574)\n");
@@ -12108,6 +14063,8 @@ Msg("Find size of _GtkHandleBox (13574)\n");
 CheckTypeSize(GtkHandleBox,128, 13575, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHandleBox,184, 13575, 11)
+#elif __ia64__
+CheckTypeSize(GtkHandleBox,184, 13575, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13575,0);
 Msg("Find size of GtkHandleBox (13575)\n");
@@ -12117,6 +14074,8 @@ Msg("Find size of GtkHandleBox (13575)\n");
 CheckTypeSize(GtkHandleBox *,4, 13576, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHandleBox *,8, 13576, 11)
+#elif __ia64__
+CheckTypeSize(GtkHandleBox *,8, 13576, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13576,0);
 Msg("Find size of GtkHandleBox * (13576)\n");
@@ -12134,6 +14093,12 @@ CheckEnum("GTK_SELECTION_SINGLE",GTK_SELECTION_SINGLE,1);
 CheckEnum("GTK_SELECTION_BROWSE",GTK_SELECTION_BROWSE,2);
 CheckEnum("GTK_SELECTION_MULTIPLE",GTK_SELECTION_MULTIPLE,3);
 CheckEnum("GTK_SELECTION_EXTENDED",GTK_SELECTION_EXTENDED,3);
+#elif __ia64__
+CheckEnum("GTK_SELECTION_NONE",GTK_SELECTION_NONE,0);
+CheckEnum("GTK_SELECTION_SINGLE",GTK_SELECTION_SINGLE,1);
+CheckEnum("GTK_SELECTION_BROWSE",GTK_SELECTION_BROWSE,2);
+CheckEnum("GTK_SELECTION_MULTIPLE",GTK_SELECTION_MULTIPLE,3);
+CheckEnum("GTK_SELECTION_EXTENDED",GTK_SELECTION_EXTENDED,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13577,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1979 (13577)\n");
@@ -12143,6 +14108,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1979 (13577)\n");
 CheckTypeSize(GtkSelectionMode,4, 13578, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSelectionMode,4, 13578, 11)
+#elif __ia64__
+CheckTypeSize(GtkSelectionMode,4, 13578, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13578,0);
 Msg("Find size of GtkSelectionMode (13578)\n");
@@ -12152,6 +14119,8 @@ Msg("Find size of GtkSelectionMode (13578)\n");
 CheckTypeSize(GtkItem *,4, 13579, 2)
 #elif __x86_64__
 CheckTypeSize(GtkItem *,8, 13579, 11)
+#elif __ia64__
+CheckTypeSize(GtkItem *,8, 13579, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13579,0);
 Msg("Find size of GtkItem * (13579)\n");
@@ -12165,6 +14134,10 @@ CheckOffset(struct _GtkActionGroup,private_data,12,2,45550)
 CheckTypeSize(struct _GtkActionGroup,32, 13580, 11)
 CheckMemberSize(struct _GtkActionGroup,private_data,8,11,45550)
 CheckOffset(struct _GtkActionGroup,private_data,24,11,45550)
+#elif __ia64__
+CheckTypeSize(struct _GtkActionGroup,32, 13580, 3)
+CheckMemberSize(struct _GtkActionGroup,private_data,8,3,45550)
+CheckOffset(struct _GtkActionGroup,private_data,24,3,45550)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13580,0);
 Msg("Find size of _GtkActionGroup (13580)\n");
@@ -12174,6 +14147,8 @@ Msg("Find size of _GtkActionGroup (13580)\n");
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionGroupPrivate,0, 13582, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13582,0);
 Msg("Find size of GtkActionGroupPrivate (13582)\n");
@@ -12183,6 +14158,8 @@ Msg("Find size of GtkActionGroupPrivate (13582)\n");
 CheckTypeSize(GtkActionGroupPrivate *,4, 13583, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionGroupPrivate *,8, 13583, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionGroupPrivate *,8, 13583, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13583,0);
 Msg("Find size of GtkActionGroupPrivate * (13583)\n");
@@ -12192,6 +14169,8 @@ Msg("Find size of GtkActionGroupPrivate * (13583)\n");
 CheckTypeSize(GtkActionGroup,16, 13584, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionGroup,32, 13584, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionGroup,32, 13584, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13584,0);
 Msg("Find size of GtkActionGroup (13584)\n");
@@ -12201,6 +14180,8 @@ Msg("Find size of GtkActionGroup (13584)\n");
 CheckTypeSize(GtkActionGroup *,4, 13585, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionGroup *,8, 13585, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionGroup *,8, 13585, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13585,0);
 Msg("Find size of GtkActionGroup * (13585)\n");
@@ -12234,6 +14215,20 @@ CheckMemberSize(struct _GtkBindingSet,entries,8,11,45573)
 CheckOffset(struct _GtkBindingSet,entries,40,11,45573)
 CheckMemberSize(struct _GtkBindingSet,current,8,11,45574)
 CheckOffset(struct _GtkBindingSet,current,48,11,45574)
+#elif __ia64__
+CheckTypeSize(struct _GtkBindingSet,64, 13586, 3)
+CheckMemberSize(struct _GtkBindingSet,priority,4,3,45552)
+CheckOffset(struct _GtkBindingSet,priority,8,3,45552)
+CheckMemberSize(struct _GtkBindingSet,widget_path_pspecs,8,3,45553)
+CheckOffset(struct _GtkBindingSet,widget_path_pspecs,16,3,45553)
+CheckMemberSize(struct _GtkBindingSet,widget_class_pspecs,8,3,45554)
+CheckOffset(struct _GtkBindingSet,widget_class_pspecs,24,3,45554)
+CheckMemberSize(struct _GtkBindingSet,class_branch_pspecs,8,3,45555)
+CheckOffset(struct _GtkBindingSet,class_branch_pspecs,32,3,45555)
+CheckMemberSize(struct _GtkBindingSet,entries,8,3,45573)
+CheckOffset(struct _GtkBindingSet,entries,40,3,45573)
+CheckMemberSize(struct _GtkBindingSet,current,8,3,45574)
+CheckOffset(struct _GtkBindingSet,current,48,3,45574)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13586,0);
 Msg("Find size of _GtkBindingSet (13586)\n");
@@ -12263,6 +14258,18 @@ CheckMemberSize(struct _GtkBindingEntry,hash_next,8,11,45562)
 CheckOffset(struct _GtkBindingEntry,hash_next,32,11,45562)
 CheckMemberSize(struct _GtkBindingEntry,signals,8,11,45572)
 CheckOffset(struct _GtkBindingEntry,signals,40,11,45572)
+#elif __ia64__
+CheckTypeSize(struct _GtkBindingEntry,48, 13587, 3)
+CheckMemberSize(struct _GtkBindingEntry,modifiers,4,3,45557)
+CheckOffset(struct _GtkBindingEntry,modifiers,4,3,45557)
+CheckMemberSize(struct _GtkBindingEntry,binding_set,8,3,45558)
+CheckOffset(struct _GtkBindingEntry,binding_set,8,3,45558)
+CheckMemberSize(struct _GtkBindingEntry,set_next,8,3,45561)
+CheckOffset(struct _GtkBindingEntry,set_next,24,3,45561)
+CheckMemberSize(struct _GtkBindingEntry,hash_next,8,3,45562)
+CheckOffset(struct _GtkBindingEntry,hash_next,32,3,45562)
+CheckMemberSize(struct _GtkBindingEntry,signals,8,3,45572)
+CheckOffset(struct _GtkBindingEntry,signals,40,3,45572)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13587,0);
 Msg("Find size of _GtkBindingEntry (13587)\n");
@@ -12272,6 +14279,8 @@ Msg("Find size of _GtkBindingEntry (13587)\n");
 CheckTypeSize(GtkBindingSet,32, 13588, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBindingSet,64, 13588, 11)
+#elif __ia64__
+CheckTypeSize(GtkBindingSet,64, 13588, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13588,0);
 Msg("Find size of GtkBindingSet (13588)\n");
@@ -12281,6 +14290,8 @@ Msg("Find size of GtkBindingSet (13588)\n");
 CheckTypeSize(GtkBindingSet *,4, 13589, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBindingSet *,8, 13589, 11)
+#elif __ia64__
+CheckTypeSize(GtkBindingSet *,8, 13589, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13589,0);
 Msg("Find size of GtkBindingSet * (13589)\n");
@@ -12290,6 +14301,8 @@ Msg("Find size of GtkBindingSet * (13589)\n");
 CheckTypeSize(GtkBindingEntry,28, 13590, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBindingEntry,48, 13590, 11)
+#elif __ia64__
+CheckTypeSize(GtkBindingEntry,48, 13590, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13590,0);
 Msg("Find size of GtkBindingEntry (13590)\n");
@@ -12299,6 +14312,8 @@ Msg("Find size of GtkBindingEntry (13590)\n");
 CheckTypeSize(GtkBindingEntry *,4, 13591, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBindingEntry *,8, 13591, 11)
+#elif __ia64__
+CheckTypeSize(GtkBindingEntry *,8, 13591, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13591,0);
 Msg("Find size of GtkBindingEntry * (13591)\n");
@@ -12320,6 +14335,14 @@ CheckMemberSize(struct _GtkBindingSignal,n_args,4,11,45565)
 CheckOffset(struct _GtkBindingSignal,n_args,16,11,45565)
 CheckMemberSize(struct _GtkBindingSignal,args,8,11,45571)
 CheckOffset(struct _GtkBindingSignal,args,24,11,45571)
+#elif __ia64__
+CheckTypeSize(struct _GtkBindingSignal,32, 13592, 3)
+CheckMemberSize(struct _GtkBindingSignal,signal_name,8,3,45564)
+CheckOffset(struct _GtkBindingSignal,signal_name,8,3,45564)
+CheckMemberSize(struct _GtkBindingSignal,n_args,4,3,45565)
+CheckOffset(struct _GtkBindingSignal,n_args,16,3,45565)
+CheckMemberSize(struct _GtkBindingSignal,args,8,3,45571)
+CheckOffset(struct _GtkBindingSignal,args,24,3,45571)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13592,0);
 Msg("Find size of _GtkBindingSignal (13592)\n");
@@ -12329,6 +14352,8 @@ Msg("Find size of _GtkBindingSignal (13592)\n");
 CheckTypeSize(GtkBindingSignal,16, 13593, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBindingSignal,32, 13593, 11)
+#elif __ia64__
+CheckTypeSize(GtkBindingSignal,32, 13593, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13593,0);
 Msg("Find size of GtkBindingSignal (13593)\n");
@@ -12338,6 +14363,8 @@ Msg("Find size of GtkBindingSignal (13593)\n");
 CheckTypeSize(GtkBindingSignal *,4, 13594, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBindingSignal *,8, 13594, 11)
+#elif __ia64__
+CheckTypeSize(GtkBindingSignal *,8, 13594, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13594,0);
 Msg("Find size of GtkBindingSignal * (13594)\n");
@@ -12351,6 +14378,10 @@ CheckOffset(struct _GtkBindingArg,d,4,2,45570)
 CheckTypeSize(struct _GtkBindingArg,16, 13595, 11)
 CheckMemberSize(struct _GtkBindingArg,d,8,11,45570)
 CheckOffset(struct _GtkBindingArg,d,8,11,45570)
+#elif __ia64__
+CheckTypeSize(struct _GtkBindingArg,16, 13595, 3)
+CheckMemberSize(struct _GtkBindingArg,d,8,3,45570)
+CheckOffset(struct _GtkBindingArg,d,8,3,45570)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13595,0);
 Msg("Find size of _GtkBindingArg (13595)\n");
@@ -12358,6 +14389,7 @@ Msg("Find size of _GtkBindingArg (13595)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13596,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-291 (13596)\n");
@@ -12367,6 +14399,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-291 (13596)\n");
 CheckTypeSize(GtkBindingArg,12, 13597, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBindingArg,16, 13597, 11)
+#elif __ia64__
+CheckTypeSize(GtkBindingArg,16, 13597, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13597,0);
 Msg("Find size of GtkBindingArg (13597)\n");
@@ -12376,6 +14410,8 @@ Msg("Find size of GtkBindingArg (13597)\n");
 CheckTypeSize(GtkBindingArg *,4, 13598, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBindingArg *,8, 13598, 11)
+#elif __ia64__
+CheckTypeSize(GtkBindingArg *,8, 13598, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13598,0);
 Msg("Find size of GtkBindingArg * (13598)\n");
@@ -12385,6 +14421,8 @@ Msg("Find size of GtkBindingArg * (13598)\n");
 CheckTypeSize(GtkMenuShell *,4, 13599, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuShell *,8, 13599, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuShell *,8, 13599, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13599,0);
 Msg("Find size of GtkMenuShell * (13599)\n");
@@ -12406,6 +14444,14 @@ CheckMemberSize(struct _GtkScrolledWindow,vscrollbar,8,11,45578)
 CheckOffset(struct _GtkScrolledWindow,vscrollbar,128,11,45578)
 CheckMemberSize(struct _GtkScrolledWindow,shadow_type,2,11,45585)
 CheckOffset(struct _GtkScrolledWindow,shadow_type,138,11,45585)
+#elif __ia64__
+CheckTypeSize(struct _GtkScrolledWindow,144, 13600, 3)
+CheckMemberSize(struct _GtkScrolledWindow,hscrollbar,8,3,45577)
+CheckOffset(struct _GtkScrolledWindow,hscrollbar,120,3,45577)
+CheckMemberSize(struct _GtkScrolledWindow,vscrollbar,8,3,45578)
+CheckOffset(struct _GtkScrolledWindow,vscrollbar,128,3,45578)
+CheckMemberSize(struct _GtkScrolledWindow,shadow_type,2,3,45585)
+CheckOffset(struct _GtkScrolledWindow,shadow_type,138,3,45585)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13600,0);
 Msg("Find size of _GtkScrolledWindow (13600)\n");
@@ -12415,6 +14461,8 @@ Msg("Find size of _GtkScrolledWindow (13600)\n");
 CheckTypeSize(GtkScrolledWindow,84, 13601, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScrolledWindow,144, 13601, 11)
+#elif __ia64__
+CheckTypeSize(GtkScrolledWindow,144, 13601, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13601,0);
 Msg("Find size of GtkScrolledWindow (13601)\n");
@@ -12424,6 +14472,8 @@ Msg("Find size of GtkScrolledWindow (13601)\n");
 CheckTypeSize(GtkScrolledWindow *,4, 13602, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScrolledWindow *,8, 13602, 11)
+#elif __ia64__
+CheckTypeSize(GtkScrolledWindow *,8, 13602, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13602,0);
 Msg("Find size of GtkScrolledWindow * (13602)\n");
@@ -12439,6 +14489,11 @@ CheckEnum("GTK_CORNER_TOP_LEFT",GTK_CORNER_TOP_LEFT,0);
 CheckEnum("GTK_CORNER_BOTTOM_LEFT",GTK_CORNER_BOTTOM_LEFT,1);
 CheckEnum("GTK_CORNER_TOP_RIGHT",GTK_CORNER_TOP_RIGHT,2);
 CheckEnum("GTK_CORNER_BOTTOM_RIGHT",GTK_CORNER_BOTTOM_RIGHT,3);
+#elif __ia64__
+CheckEnum("GTK_CORNER_TOP_LEFT",GTK_CORNER_TOP_LEFT,0);
+CheckEnum("GTK_CORNER_BOTTOM_LEFT",GTK_CORNER_BOTTOM_LEFT,1);
+CheckEnum("GTK_CORNER_TOP_RIGHT",GTK_CORNER_TOP_RIGHT,2);
+CheckEnum("GTK_CORNER_BOTTOM_RIGHT",GTK_CORNER_BOTTOM_RIGHT,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13603,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3197 (13603)\n");
@@ -12448,6 +14503,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3197 (13603)\n");
 CheckTypeSize(GtkCornerType,4, 13604, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCornerType,4, 13604, 11)
+#elif __ia64__
+CheckTypeSize(GtkCornerType,4, 13604, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13604,0);
 Msg("Find size of GtkCornerType (13604)\n");
@@ -12477,6 +14534,18 @@ CheckMemberSize(struct _GtkFrame,label_yalign,4,11,45594)
 CheckOffset(struct _GtkFrame,label_yalign,136,11,45594)
 CheckMemberSize(struct _GtkFrame,child_allocation,16,11,45595)
 CheckOffset(struct _GtkFrame,child_allocation,140,11,45595)
+#elif __ia64__
+CheckTypeSize(struct _GtkFrame,160, 13605, 3)
+CheckMemberSize(struct _GtkFrame,label_widget,8,3,45591)
+CheckOffset(struct _GtkFrame,label_widget,120,3,45591)
+CheckMemberSize(struct _GtkFrame,shadow_type,2,3,45592)
+CheckOffset(struct _GtkFrame,shadow_type,128,3,45592)
+CheckMemberSize(struct _GtkFrame,label_xalign,4,3,45593)
+CheckOffset(struct _GtkFrame,label_xalign,132,3,45593)
+CheckMemberSize(struct _GtkFrame,label_yalign,4,3,45594)
+CheckOffset(struct _GtkFrame,label_yalign,136,3,45594)
+CheckMemberSize(struct _GtkFrame,child_allocation,16,3,45595)
+CheckOffset(struct _GtkFrame,child_allocation,140,3,45595)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13605,0);
 Msg("Find size of _GtkFrame (13605)\n");
@@ -12486,6 +14555,8 @@ Msg("Find size of _GtkFrame (13605)\n");
 CheckTypeSize(GtkFrame,104, 13606, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFrame,160, 13606, 11)
+#elif __ia64__
+CheckTypeSize(GtkFrame,160, 13606, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13606,0);
 Msg("Find size of GtkFrame (13606)\n");
@@ -12495,6 +14566,8 @@ Msg("Find size of GtkFrame (13606)\n");
 CheckTypeSize(GtkFrame *,4, 13607, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFrame *,8, 13607, 11)
+#elif __ia64__
+CheckTypeSize(GtkFrame *,8, 13607, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13607,0);
 Msg("Find size of GtkFrame * (13607)\n");
@@ -12508,6 +14581,10 @@ CheckOffset(struct _GtkTextChildAnchor,segment,12,2,45597)
 CheckTypeSize(struct _GtkTextChildAnchor,32, 13608, 11)
 CheckMemberSize(struct _GtkTextChildAnchor,segment,8,11,45597)
 CheckOffset(struct _GtkTextChildAnchor,segment,24,11,45597)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextChildAnchor,32, 13608, 3)
+CheckMemberSize(struct _GtkTextChildAnchor,segment,8,3,45597)
+CheckOffset(struct _GtkTextChildAnchor,segment,24,3,45597)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13608,0);
 Msg("Find size of _GtkTextChildAnchor (13608)\n");
@@ -12517,6 +14594,8 @@ Msg("Find size of _GtkTextChildAnchor (13608)\n");
 CheckTypeSize(GtkTextChildAnchor,16, 13609, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextChildAnchor,32, 13609, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextChildAnchor,32, 13609, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13609,0);
 Msg("Find size of GtkTextChildAnchor (13609)\n");
@@ -12526,6 +14605,8 @@ Msg("Find size of GtkTextChildAnchor (13609)\n");
 CheckTypeSize(GtkTextChildAnchor *,4, 13610, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextChildAnchor *,8, 13610, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextChildAnchor *,8, 13610, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13610,0);
 Msg("Find size of GtkTextChildAnchor * (13610)\n");
@@ -12539,6 +14620,10 @@ CheckOffset(struct _GtkSeparatorToolItem,priv,76,2,45599)
 CheckTypeSize(struct _GtkSeparatorToolItem,136, 13611, 11)
 CheckMemberSize(struct _GtkSeparatorToolItem,priv,8,11,45599)
 CheckOffset(struct _GtkSeparatorToolItem,priv,128,11,45599)
+#elif __ia64__
+CheckTypeSize(struct _GtkSeparatorToolItem,136, 13611, 3)
+CheckMemberSize(struct _GtkSeparatorToolItem,priv,8,3,45599)
+CheckOffset(struct _GtkSeparatorToolItem,priv,128,3,45599)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13611,0);
 Msg("Find size of _GtkSeparatorToolItem (13611)\n");
@@ -12548,6 +14633,8 @@ Msg("Find size of _GtkSeparatorToolItem (13611)\n");
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13613,0);
 Msg("Find size of GtkSeparatorToolItemPrivate (13613)\n");
@@ -12557,6 +14644,8 @@ Msg("Find size of GtkSeparatorToolItemPrivate (13613)\n");
 CheckTypeSize(GtkSeparatorToolItemPrivate *,4, 13614, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparatorToolItemPrivate *,8, 13614, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparatorToolItemPrivate *,8, 13614, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13614,0);
 Msg("Find size of GtkSeparatorToolItemPrivate * (13614)\n");
@@ -12566,6 +14655,8 @@ Msg("Find size of GtkSeparatorToolItemPrivate * (13614)\n");
 CheckTypeSize(GtkSeparatorToolItem,80, 13615, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparatorToolItem,136, 13615, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparatorToolItem,136, 13615, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13615,0);
 Msg("Find size of GtkSeparatorToolItem (13615)\n");
@@ -12575,6 +14666,8 @@ Msg("Find size of GtkSeparatorToolItem (13615)\n");
 CheckTypeSize(GtkSeparatorToolItem *,4, 13616, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparatorToolItem *,8, 13616, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparatorToolItem *,8, 13616, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13616,0);
 Msg("Find size of GtkSeparatorToolItem * (13616)\n");
@@ -12604,6 +14697,18 @@ CheckMemberSize(struct _GtkTreeSelection,user_data,8,11,45609)
 CheckOffset(struct _GtkTreeSelection,user_data,48,11,45609)
 CheckMemberSize(struct _GtkTreeSelection,destroy,8,11,45610)
 CheckOffset(struct _GtkTreeSelection,destroy,56,11,45610)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeSelection,64, 13617, 3)
+CheckMemberSize(struct _GtkTreeSelection,tree_view,8,3,45601)
+CheckOffset(struct _GtkTreeSelection,tree_view,24,3,45601)
+CheckMemberSize(struct _GtkTreeSelection,type,4,3,45602)
+CheckOffset(struct _GtkTreeSelection,type,32,3,45602)
+CheckMemberSize(struct _GtkTreeSelection,user_func,8,3,45608)
+CheckOffset(struct _GtkTreeSelection,user_func,40,3,45608)
+CheckMemberSize(struct _GtkTreeSelection,user_data,8,3,45609)
+CheckOffset(struct _GtkTreeSelection,user_data,48,3,45609)
+CheckMemberSize(struct _GtkTreeSelection,destroy,8,3,45610)
+CheckOffset(struct _GtkTreeSelection,destroy,56,3,45610)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13617,0);
 Msg("Find size of _GtkTreeSelection (13617)\n");
@@ -12613,6 +14718,8 @@ Msg("Find size of _GtkTreeSelection (13617)\n");
 CheckTypeSize(GtkTreeSelection,32, 13618, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeSelection,64, 13618, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeSelection,64, 13618, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13618,0);
 Msg("Find size of GtkTreeSelection (13618)\n");
@@ -12622,6 +14729,8 @@ Msg("Find size of GtkTreeSelection (13618)\n");
 CheckTypeSize(GtkTreeSelection *,4, 13619, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeSelection *,8, 13619, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeSelection *,8, 13619, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13619,0);
 Msg("Find size of GtkTreeSelection * (13619)\n");
@@ -12629,6 +14738,7 @@ Msg("Find size of GtkTreeSelection * (13619)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13620,0);
 Msg("Find size of fptr_gtk_1834 (13620)\n");
@@ -12638,6 +14748,8 @@ Msg("Find size of fptr_gtk_1834 (13620)\n");
 CheckTypeSize(GtkTreeSelectionFunc,4, 13621, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeSelectionFunc,8, 13621, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeSelectionFunc,8, 13621, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13621,0);
 Msg("Find size of GtkTreeSelectionFunc (13621)\n");
@@ -12651,6 +14763,10 @@ CheckOffset(struct _GtkExpander,priv,72,2,45612)
 CheckTypeSize(struct _GtkExpander,128, 13622, 11)
 CheckMemberSize(struct _GtkExpander,priv,8,11,45612)
 CheckOffset(struct _GtkExpander,priv,120,11,45612)
+#elif __ia64__
+CheckTypeSize(struct _GtkExpander,128, 13622, 3)
+CheckMemberSize(struct _GtkExpander,priv,8,3,45612)
+CheckOffset(struct _GtkExpander,priv,120,3,45612)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13622,0);
 Msg("Find size of _GtkExpander (13622)\n");
@@ -12660,6 +14776,8 @@ Msg("Find size of _GtkExpander (13622)\n");
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 2)
 #elif __x86_64__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 11)
+#elif __ia64__
+CheckTypeSize(GtkExpanderPrivate,0, 13624, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13624,0);
 Msg("Find size of GtkExpanderPrivate (13624)\n");
@@ -12669,6 +14787,8 @@ Msg("Find size of GtkExpanderPrivate (13624)\n");
 CheckTypeSize(GtkExpanderPrivate *,4, 13625, 2)
 #elif __x86_64__
 CheckTypeSize(GtkExpanderPrivate *,8, 13625, 11)
+#elif __ia64__
+CheckTypeSize(GtkExpanderPrivate *,8, 13625, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13625,0);
 Msg("Find size of GtkExpanderPrivate * (13625)\n");
@@ -12678,6 +14798,8 @@ Msg("Find size of GtkExpanderPrivate * (13625)\n");
 CheckTypeSize(GtkExpander,76, 13626, 2)
 #elif __x86_64__
 CheckTypeSize(GtkExpander,128, 13626, 11)
+#elif __ia64__
+CheckTypeSize(GtkExpander,128, 13626, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13626,0);
 Msg("Find size of GtkExpander (13626)\n");
@@ -12687,6 +14809,8 @@ Msg("Find size of GtkExpander (13626)\n");
 CheckTypeSize(GtkExpander *,4, 13627, 2)
 #elif __x86_64__
 CheckTypeSize(GtkExpander *,8, 13627, 11)
+#elif __ia64__
+CheckTypeSize(GtkExpander *,8, 13627, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13627,0);
 Msg("Find size of GtkExpander * (13627)\n");
@@ -12702,6 +14826,11 @@ CheckEnum("GTK_POS_LEFT",GTK_POS_LEFT,0);
 CheckEnum("GTK_POS_RIGHT",GTK_POS_RIGHT,1);
 CheckEnum("GTK_POS_TOP",GTK_POS_TOP,2);
 CheckEnum("GTK_POS_BOTTOM",GTK_POS_BOTTOM,3);
+#elif __ia64__
+CheckEnum("GTK_POS_LEFT",GTK_POS_LEFT,0);
+CheckEnum("GTK_POS_RIGHT",GTK_POS_RIGHT,1);
+CheckEnum("GTK_POS_TOP",GTK_POS_TOP,2);
+CheckEnum("GTK_POS_BOTTOM",GTK_POS_BOTTOM,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13628,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1663 (13628)\n");
@@ -12711,6 +14840,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1663 (13628)\n");
 CheckTypeSize(GtkPositionType,4, 13629, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPositionType,4, 13629, 11)
+#elif __ia64__
+CheckTypeSize(GtkPositionType,4, 13629, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13629,0);
 Msg("Find size of GtkPositionType (13629)\n");
@@ -12738,6 +14869,17 @@ CheckEnum("GTK_UI_MANAGER_MENUITEM",GTK_UI_MANAGER_MENUITEM,32);
 CheckEnum("GTK_UI_MANAGER_TOOLITEM",GTK_UI_MANAGER_TOOLITEM,64);
 CheckEnum("GTK_UI_MANAGER_SEPARATOR",GTK_UI_MANAGER_SEPARATOR,128);
 CheckEnum("GTK_UI_MANAGER_ACCELERATOR",GTK_UI_MANAGER_ACCELERATOR,256);
+#elif __ia64__
+CheckEnum("GTK_UI_MANAGER_AUTO",GTK_UI_MANAGER_AUTO,0);
+CheckEnum("GTK_UI_MANAGER_MENUBAR",GTK_UI_MANAGER_MENUBAR,1);
+CheckEnum("GTK_UI_MANAGER_MENU",GTK_UI_MANAGER_MENU,2);
+CheckEnum("GTK_UI_MANAGER_TOOLBAR",GTK_UI_MANAGER_TOOLBAR,4);
+CheckEnum("GTK_UI_MANAGER_PLACEHOLDER",GTK_UI_MANAGER_PLACEHOLDER,8);
+CheckEnum("GTK_UI_MANAGER_POPUP",GTK_UI_MANAGER_POPUP,16);
+CheckEnum("GTK_UI_MANAGER_MENUITEM",GTK_UI_MANAGER_MENUITEM,32);
+CheckEnum("GTK_UI_MANAGER_TOOLITEM",GTK_UI_MANAGER_TOOLITEM,64);
+CheckEnum("GTK_UI_MANAGER_SEPARATOR",GTK_UI_MANAGER_SEPARATOR,128);
+CheckEnum("GTK_UI_MANAGER_ACCELERATOR",GTK_UI_MANAGER_ACCELERATOR,256);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13630,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4153 (13630)\n");
@@ -12747,6 +14889,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4153 (13630)\n");
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 2)
 #elif __x86_64__
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 11)
+#elif __ia64__
+CheckTypeSize(GtkUIManagerItemType,4, 13631, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13631,0);
 Msg("Find size of GtkUIManagerItemType (13631)\n");
@@ -12788,6 +14932,24 @@ CheckMemberSize(struct _GtkFontSelectionDialog,dialog_width,4,11,45634)
 CheckOffset(struct _GtkFontSelectionDialog,dialog_width,312,11,45634)
 CheckMemberSize(struct _GtkFontSelectionDialog,auto_resize,4,11,45635)
 CheckOffset(struct _GtkFontSelectionDialog,auto_resize,316,11,45635)
+#elif __ia64__
+CheckTypeSize(struct _GtkFontSelectionDialog,320, 13632, 3)
+CheckMemberSize(struct _GtkFontSelectionDialog,fontsel,8,3,45628)
+CheckOffset(struct _GtkFontSelectionDialog,fontsel,264,3,45628)
+CheckMemberSize(struct _GtkFontSelectionDialog,main_vbox,8,3,45629)
+CheckOffset(struct _GtkFontSelectionDialog,main_vbox,272,3,45629)
+CheckMemberSize(struct _GtkFontSelectionDialog,action_area,8,3,45630)
+CheckOffset(struct _GtkFontSelectionDialog,action_area,280,3,45630)
+CheckMemberSize(struct _GtkFontSelectionDialog,ok_button,8,3,45631)
+CheckOffset(struct _GtkFontSelectionDialog,ok_button,288,3,45631)
+CheckMemberSize(struct _GtkFontSelectionDialog,apply_button,8,3,45632)
+CheckOffset(struct _GtkFontSelectionDialog,apply_button,296,3,45632)
+CheckMemberSize(struct _GtkFontSelectionDialog,cancel_button,8,3,45633)
+CheckOffset(struct _GtkFontSelectionDialog,cancel_button,304,3,45633)
+CheckMemberSize(struct _GtkFontSelectionDialog,dialog_width,4,3,45634)
+CheckOffset(struct _GtkFontSelectionDialog,dialog_width,312,3,45634)
+CheckMemberSize(struct _GtkFontSelectionDialog,auto_resize,4,3,45635)
+CheckOffset(struct _GtkFontSelectionDialog,auto_resize,316,3,45635)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13632,0);
 Msg("Find size of _GtkFontSelectionDialog (13632)\n");
@@ -12797,6 +14959,8 @@ Msg("Find size of _GtkFontSelectionDialog (13632)\n");
 CheckTypeSize(GtkFontSelectionDialog,192, 13633, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontSelectionDialog,320, 13633, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontSelectionDialog,320, 13633, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13633,0);
 Msg("Find size of GtkFontSelectionDialog (13633)\n");
@@ -12806,6 +14970,8 @@ Msg("Find size of GtkFontSelectionDialog (13633)\n");
 CheckTypeSize(GtkFontSelectionDialog *,4, 13634, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontSelectionDialog *,8, 13634, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontSelectionDialog *,8, 13634, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13634,0);
 Msg("Find size of GtkFontSelectionDialog * (13634)\n");
@@ -12875,6 +15041,38 @@ CheckMemberSize(struct _GtkPaned,drag_pos,4,11,45659)
 CheckOffset(struct _GtkPaned,drag_pos,208,11,45659)
 CheckMemberSize(struct _GtkPaned,original_position,4,11,45660)
 CheckOffset(struct _GtkPaned,original_position,212,11,45660)
+#elif __ia64__
+CheckTypeSize(struct _GtkPaned,216, 13635, 3)
+CheckMemberSize(struct _GtkPaned,child1,8,3,45637)
+CheckOffset(struct _GtkPaned,child1,112,3,45637)
+CheckMemberSize(struct _GtkPaned,child2,8,3,45638)
+CheckOffset(struct _GtkPaned,child2,120,3,45638)
+CheckMemberSize(struct _GtkPaned,handle,8,3,45639)
+CheckOffset(struct _GtkPaned,handle,128,3,45639)
+CheckMemberSize(struct _GtkPaned,xor_gc,8,3,45640)
+CheckOffset(struct _GtkPaned,xor_gc,136,3,45640)
+CheckMemberSize(struct _GtkPaned,cursor_type,4,3,45641)
+CheckOffset(struct _GtkPaned,cursor_type,144,3,45641)
+CheckMemberSize(struct _GtkPaned,handle_pos,16,3,45642)
+CheckOffset(struct _GtkPaned,handle_pos,148,3,45642)
+CheckMemberSize(struct _GtkPaned,child1_size,4,3,45643)
+CheckOffset(struct _GtkPaned,child1_size,164,3,45643)
+CheckMemberSize(struct _GtkPaned,last_allocation,4,3,45644)
+CheckOffset(struct _GtkPaned,last_allocation,168,3,45644)
+CheckMemberSize(struct _GtkPaned,min_position,4,3,45645)
+CheckOffset(struct _GtkPaned,min_position,172,3,45645)
+CheckMemberSize(struct _GtkPaned,max_position,4,3,45646)
+CheckOffset(struct _GtkPaned,max_position,176,3,45646)
+CheckMemberSize(struct _GtkPaned,last_child1_focus,8,3,45656)
+CheckOffset(struct _GtkPaned,last_child1_focus,184,3,45656)
+CheckMemberSize(struct _GtkPaned,last_child2_focus,8,3,45657)
+CheckOffset(struct _GtkPaned,last_child2_focus,192,3,45657)
+CheckMemberSize(struct _GtkPaned,priv,8,3,45658)
+CheckOffset(struct _GtkPaned,priv,200,3,45658)
+CheckMemberSize(struct _GtkPaned,drag_pos,4,3,45659)
+CheckOffset(struct _GtkPaned,drag_pos,208,3,45659)
+CheckMemberSize(struct _GtkPaned,original_position,4,3,45660)
+CheckOffset(struct _GtkPaned,original_position,212,3,45660)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13635,0);
 Msg("Find size of _GtkPaned (13635)\n");
@@ -12884,6 +15082,8 @@ Msg("Find size of _GtkPaned (13635)\n");
 CheckTypeSize(GtkPanedPrivate,0, 13637, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 11)
+#elif __ia64__
+CheckTypeSize(GtkPanedPrivate,0, 13637, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13637,0);
 Msg("Find size of GtkPanedPrivate (13637)\n");
@@ -12893,6 +15093,8 @@ Msg("Find size of GtkPanedPrivate (13637)\n");
 CheckTypeSize(GtkPanedPrivate *,4, 13638, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPanedPrivate *,8, 13638, 11)
+#elif __ia64__
+CheckTypeSize(GtkPanedPrivate *,8, 13638, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13638,0);
 Msg("Find size of GtkPanedPrivate * (13638)\n");
@@ -12902,6 +15104,8 @@ Msg("Find size of GtkPanedPrivate * (13638)\n");
 CheckTypeSize(GtkPaned,144, 13639, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPaned,216, 13639, 11)
+#elif __ia64__
+CheckTypeSize(GtkPaned,216, 13639, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13639,0);
 Msg("Find size of GtkPaned (13639)\n");
@@ -12911,6 +15115,8 @@ Msg("Find size of GtkPaned (13639)\n");
 CheckTypeSize(GtkPaned *,4, 13640, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPaned *,8, 13640, 11)
+#elif __ia64__
+CheckTypeSize(GtkPaned *,8, 13640, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13640,0);
 Msg("Find size of GtkPaned * (13640)\n");
@@ -12920,6 +15126,8 @@ Msg("Find size of GtkPaned * (13640)\n");
 CheckTypeSize(GtkIconSize *,4, 13641, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconSize *,8, 13641, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconSize *,8, 13641, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13641,0);
 Msg("Find size of GtkIconSize * (13641)\n");
@@ -12927,6 +15135,7 @@ Msg("Find size of GtkIconSize * (13641)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13642,0);
 Msg("Find size of GtkIconSize * * (13642)\n");
@@ -12956,6 +15165,18 @@ CheckMemberSize(struct _GtkViewport,hadjustment,8,11,45665)
 CheckOffset(struct _GtkViewport,hadjustment,144,11,45665)
 CheckMemberSize(struct _GtkViewport,vadjustment,8,11,45666)
 CheckOffset(struct _GtkViewport,vadjustment,152,11,45666)
+#elif __ia64__
+CheckTypeSize(struct _GtkViewport,160, 13643, 3)
+CheckMemberSize(struct _GtkViewport,shadow_type,4,3,45662)
+CheckOffset(struct _GtkViewport,shadow_type,120,3,45662)
+CheckMemberSize(struct _GtkViewport,view_window,8,3,45663)
+CheckOffset(struct _GtkViewport,view_window,128,3,45663)
+CheckMemberSize(struct _GtkViewport,bin_window,8,3,45664)
+CheckOffset(struct _GtkViewport,bin_window,136,3,45664)
+CheckMemberSize(struct _GtkViewport,hadjustment,8,3,45665)
+CheckOffset(struct _GtkViewport,hadjustment,144,3,45665)
+CheckMemberSize(struct _GtkViewport,vadjustment,8,3,45666)
+CheckOffset(struct _GtkViewport,vadjustment,152,3,45666)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13643,0);
 Msg("Find size of _GtkViewport (13643)\n");
@@ -12965,6 +15186,8 @@ Msg("Find size of _GtkViewport (13643)\n");
 CheckTypeSize(GtkViewport,92, 13644, 2)
 #elif __x86_64__
 CheckTypeSize(GtkViewport,160, 13644, 11)
+#elif __ia64__
+CheckTypeSize(GtkViewport,160, 13644, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13644,0);
 Msg("Find size of GtkViewport (13644)\n");
@@ -12974,6 +15197,8 @@ Msg("Find size of GtkViewport (13644)\n");
 CheckTypeSize(GtkViewport *,4, 13645, 2)
 #elif __x86_64__
 CheckTypeSize(GtkViewport *,8, 13645, 11)
+#elif __ia64__
+CheckTypeSize(GtkViewport *,8, 13645, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13645,0);
 Msg("Find size of GtkViewport * (13645)\n");
@@ -12987,6 +15212,10 @@ CheckOffset(struct _GtkScale,digits,136,2,45668)
 CheckTypeSize(struct _GtkScale,200, 13646, 11)
 CheckMemberSize(struct _GtkScale,digits,4,11,45668)
 CheckOffset(struct _GtkScale,digits,192,11,45668)
+#elif __ia64__
+CheckTypeSize(struct _GtkScale,200, 13646, 3)
+CheckMemberSize(struct _GtkScale,digits,4,3,45668)
+CheckOffset(struct _GtkScale,digits,192,3,45668)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13646,0);
 Msg("Find size of _GtkScale (13646)\n");
@@ -12996,6 +15225,8 @@ Msg("Find size of _GtkScale (13646)\n");
 CheckTypeSize(GtkScale,144, 13647, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScale,200, 13647, 11)
+#elif __ia64__
+CheckTypeSize(GtkScale,200, 13647, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13647,0);
 Msg("Find size of GtkScale (13647)\n");
@@ -13005,6 +15236,8 @@ Msg("Find size of GtkScale (13647)\n");
 CheckTypeSize(GtkScale *,4, 13648, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScale *,8, 13648, 11)
+#elif __ia64__
+CheckTypeSize(GtkScale *,8, 13648, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13648,0);
 Msg("Find size of GtkScale * (13648)\n");
@@ -13062,6 +15295,32 @@ CheckMemberSize(struct _GtkListStore,default_sort_data,8,11,45682)
 CheckOffset(struct _GtkListStore,default_sort_data,96,11,45682)
 CheckMemberSize(struct _GtkListStore,default_sort_destroy,8,11,45683)
 CheckOffset(struct _GtkListStore,default_sort_destroy,104,11,45683)
+#elif __ia64__
+CheckTypeSize(struct _GtkListStore,120, 13649, 3)
+CheckMemberSize(struct _GtkListStore,stamp,4,3,45672)
+CheckOffset(struct _GtkListStore,stamp,24,3,45672)
+CheckMemberSize(struct _GtkListStore,seq,8,3,45673)
+CheckOffset(struct _GtkListStore,seq,32,3,45673)
+CheckMemberSize(struct _GtkListStore,_gtk_reserved1,8,3,45674)
+CheckOffset(struct _GtkListStore,_gtk_reserved1,40,3,45674)
+CheckMemberSize(struct _GtkListStore,sort_list,8,3,45675)
+CheckOffset(struct _GtkListStore,sort_list,48,3,45675)
+CheckMemberSize(struct _GtkListStore,n_columns,4,3,45676)
+CheckOffset(struct _GtkListStore,n_columns,56,3,45676)
+CheckMemberSize(struct _GtkListStore,sort_column_id,4,3,45677)
+CheckOffset(struct _GtkListStore,sort_column_id,60,3,45677)
+CheckMemberSize(struct _GtkListStore,order,4,3,45678)
+CheckOffset(struct _GtkListStore,order,64,3,45678)
+CheckMemberSize(struct _GtkListStore,column_headers,8,3,45679)
+CheckOffset(struct _GtkListStore,column_headers,72,3,45679)
+CheckMemberSize(struct _GtkListStore,length,4,3,45680)
+CheckOffset(struct _GtkListStore,length,80,3,45680)
+CheckMemberSize(struct _GtkListStore,default_sort_func,8,3,45681)
+CheckOffset(struct _GtkListStore,default_sort_func,88,3,45681)
+CheckMemberSize(struct _GtkListStore,default_sort_data,8,3,45682)
+CheckOffset(struct _GtkListStore,default_sort_data,96,3,45682)
+CheckMemberSize(struct _GtkListStore,default_sort_destroy,8,3,45683)
+CheckOffset(struct _GtkListStore,default_sort_destroy,104,3,45683)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13649,0);
 Msg("Find size of _GtkListStore (13649)\n");
@@ -13071,6 +15330,8 @@ Msg("Find size of _GtkListStore (13649)\n");
 CheckTypeSize(GtkListStore,64, 13650, 2)
 #elif __x86_64__
 CheckTypeSize(GtkListStore,120, 13650, 11)
+#elif __ia64__
+CheckTypeSize(GtkListStore,120, 13650, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13650,0);
 Msg("Find size of GtkListStore (13650)\n");
@@ -13080,6 +15341,8 @@ Msg("Find size of GtkListStore (13650)\n");
 CheckTypeSize(GtkListStore *,4, 13651, 2)
 #elif __x86_64__
 CheckTypeSize(GtkListStore *,8, 13651, 11)
+#elif __ia64__
+CheckTypeSize(GtkListStore *,8, 13651, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13651,0);
 Msg("Find size of GtkListStore * (13651)\n");
@@ -13089,6 +15352,8 @@ Msg("Find size of GtkListStore * (13651)\n");
 CheckTypeSize(GtkEditable,0, 13653, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEditable,0, 13653, 11)
+#elif __ia64__
+CheckTypeSize(GtkEditable,0, 13653, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13653,0);
 Msg("Find size of GtkEditable (13653)\n");
@@ -13098,6 +15363,8 @@ Msg("Find size of GtkEditable (13653)\n");
 CheckTypeSize(GtkEditable *,4, 13654, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEditable *,8, 13654, 11)
+#elif __ia64__
+CheckTypeSize(GtkEditable *,8, 13654, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13654,0);
 Msg("Find size of GtkEditable * (13654)\n");
@@ -13107,6 +15374,8 @@ Msg("Find size of GtkEditable * (13654)\n");
 CheckTypeSize(GtkAccelKey *,4, 13655, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelKey *,8, 13655, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelKey *,8, 13655, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13655,0);
 Msg("Find size of GtkAccelKey * (13655)\n");
@@ -13114,6 +15383,7 @@ Msg("Find size of GtkAccelKey * (13655)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13656,0);
 Msg("Find size of fptr_gtk_8347 (13656)\n");
@@ -13123,6 +15393,8 @@ Msg("Find size of fptr_gtk_8347 (13656)\n");
 CheckTypeSize(GtkClipboardGetFunc,4, 13657, 2)
 #elif __x86_64__
 CheckTypeSize(GtkClipboardGetFunc,8, 13657, 11)
+#elif __ia64__
+CheckTypeSize(GtkClipboardGetFunc,8, 13657, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13657,0);
 Msg("Find size of GtkClipboardGetFunc (13657)\n");
@@ -13130,6 +15402,7 @@ Msg("Find size of GtkClipboardGetFunc (13657)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13658,0);
 Msg("Find size of fptr_gtk_7118 (13658)\n");
@@ -13139,6 +15412,8 @@ Msg("Find size of fptr_gtk_7118 (13658)\n");
 CheckTypeSize(GtkClipboardClearFunc,4, 13659, 2)
 #elif __x86_64__
 CheckTypeSize(GtkClipboardClearFunc,8, 13659, 11)
+#elif __ia64__
+CheckTypeSize(GtkClipboardClearFunc,8, 13659, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13659,0);
 Msg("Find size of GtkClipboardClearFunc (13659)\n");
@@ -13146,6 +15421,7 @@ Msg("Find size of GtkClipboardClearFunc (13659)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13660,0);
 Msg("Find size of GtkTreeModel * * (13660)\n");
@@ -13155,6 +15431,8 @@ Msg("Find size of GtkTreeModel * * (13660)\n");
 CheckTypeSize(GtkButton *,4, 13661, 2)
 #elif __x86_64__
 CheckTypeSize(GtkButton *,8, 13661, 11)
+#elif __ia64__
+CheckTypeSize(GtkButton *,8, 13661, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13661,0);
 Msg("Find size of GtkButton * (13661)\n");
@@ -13184,6 +15462,18 @@ CheckMemberSize(struct _GtkRadioActionEntry,tooltip,8,11,45695)
 CheckOffset(struct _GtkRadioActionEntry,tooltip,32,11,45695)
 CheckMemberSize(struct _GtkRadioActionEntry,value,4,11,45696)
 CheckOffset(struct _GtkRadioActionEntry,value,40,11,45696)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioActionEntry,48, 13662, 3)
+CheckMemberSize(struct _GtkRadioActionEntry,stock_id,8,3,45692)
+CheckOffset(struct _GtkRadioActionEntry,stock_id,8,3,45692)
+CheckMemberSize(struct _GtkRadioActionEntry,label,8,3,45693)
+CheckOffset(struct _GtkRadioActionEntry,label,16,3,45693)
+CheckMemberSize(struct _GtkRadioActionEntry,accelerator,8,3,45694)
+CheckOffset(struct _GtkRadioActionEntry,accelerator,24,3,45694)
+CheckMemberSize(struct _GtkRadioActionEntry,tooltip,8,3,45695)
+CheckOffset(struct _GtkRadioActionEntry,tooltip,32,3,45695)
+CheckMemberSize(struct _GtkRadioActionEntry,value,4,3,45696)
+CheckOffset(struct _GtkRadioActionEntry,value,40,3,45696)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13662,0);
 Msg("Find size of _GtkRadioActionEntry (13662)\n");
@@ -13193,6 +15483,8 @@ Msg("Find size of _GtkRadioActionEntry (13662)\n");
 CheckTypeSize(GtkRadioActionEntry,24, 13663, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioActionEntry,48, 13663, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioActionEntry,48, 13663, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13663,0);
 Msg("Find size of GtkRadioActionEntry (13663)\n");
@@ -13202,6 +15494,8 @@ Msg("Find size of GtkRadioActionEntry (13663)\n");
 CheckTypeSize(const GtkRadioActionEntry,24, 13664, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkRadioActionEntry,48, 13664, 11)
+#elif __ia64__
+CheckTypeSize(const GtkRadioActionEntry,48, 13664, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13664,0);
 Msg("Find size of const GtkRadioActionEntry (13664)\n");
@@ -13209,6 +15503,7 @@ Msg("Find size of const GtkRadioActionEntry (13664)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13665,0);
 Msg("Find size of const GtkRadioActionEntry * (13665)\n");
@@ -13216,6 +15511,7 @@ Msg("Find size of const GtkRadioActionEntry * (13665)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13666,0);
 Msg("Find size of fptr_gtk_7795 (13666)\n");
@@ -13225,6 +15521,8 @@ Msg("Find size of fptr_gtk_7795 (13666)\n");
 CheckTypeSize(GtkTreeViewColumnDropFunc,4, 13667, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewColumnDropFunc,8, 13667, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewColumnDropFunc,8, 13667, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13667,0);
 Msg("Find size of GtkTreeViewColumnDropFunc (13667)\n");
@@ -13238,6 +15536,10 @@ CheckOffset(struct _GtkEventBox,bin,0,2,45702)
 CheckTypeSize(struct _GtkEventBox,120, 13668, 11)
 Msg("Missing member data for _GtkEventBox on x86-64\n");
 CheckOffset(struct _GtkEventBox,bin,0,11,45702)
+#elif __ia64__
+CheckTypeSize(struct _GtkEventBox,120, 13668, 3)
+Msg("Missing member data for _GtkEventBox on IA64\n");
+CheckOffset(struct _GtkEventBox,bin,0,3,45702)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13668,0);
 Msg("Find size of _GtkEventBox (13668)\n");
@@ -13247,6 +15549,8 @@ Msg("Find size of _GtkEventBox (13668)\n");
 CheckTypeSize(GtkEventBox,72, 13669, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEventBox,120, 13669, 11)
+#elif __ia64__
+CheckTypeSize(GtkEventBox,120, 13669, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13669,0);
 Msg("Find size of GtkEventBox (13669)\n");
@@ -13256,6 +15560,8 @@ Msg("Find size of GtkEventBox (13669)\n");
 CheckTypeSize(GtkEventBox *,4, 13670, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEventBox *,8, 13670, 11)
+#elif __ia64__
+CheckTypeSize(GtkEventBox *,8, 13670, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13670,0);
 Msg("Find size of GtkEventBox * (13670)\n");
@@ -13265,6 +15571,8 @@ Msg("Find size of GtkEventBox * (13670)\n");
 CheckTypeSize(GtkTreeDragDest,0, 13672, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeDragDest,0, 13672, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13672,0);
 Msg("Find size of GtkTreeDragDest (13672)\n");
@@ -13274,6 +15582,8 @@ Msg("Find size of GtkTreeDragDest (13672)\n");
 CheckTypeSize(GtkTreeDragDest *,4, 13673, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeDragDest *,8, 13673, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeDragDest *,8, 13673, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13673,0);
 Msg("Find size of GtkTreeDragDest * (13673)\n");
@@ -13307,6 +15617,20 @@ CheckMemberSize(struct _GtkToggleActionEntry,callback,8,11,45708)
 CheckOffset(struct _GtkToggleActionEntry,callback,40,11,45708)
 CheckMemberSize(struct _GtkToggleActionEntry,is_active,4,11,45709)
 CheckOffset(struct _GtkToggleActionEntry,is_active,48,11,45709)
+#elif __ia64__
+CheckTypeSize(struct _GtkToggleActionEntry,56, 13674, 3)
+CheckMemberSize(struct _GtkToggleActionEntry,stock_id,8,3,45704)
+CheckOffset(struct _GtkToggleActionEntry,stock_id,8,3,45704)
+CheckMemberSize(struct _GtkToggleActionEntry,label,8,3,45705)
+CheckOffset(struct _GtkToggleActionEntry,label,16,3,45705)
+CheckMemberSize(struct _GtkToggleActionEntry,accelerator,8,3,45706)
+CheckOffset(struct _GtkToggleActionEntry,accelerator,24,3,45706)
+CheckMemberSize(struct _GtkToggleActionEntry,tooltip,8,3,45707)
+CheckOffset(struct _GtkToggleActionEntry,tooltip,32,3,45707)
+CheckMemberSize(struct _GtkToggleActionEntry,callback,8,3,45708)
+CheckOffset(struct _GtkToggleActionEntry,callback,40,3,45708)
+CheckMemberSize(struct _GtkToggleActionEntry,is_active,4,3,45709)
+CheckOffset(struct _GtkToggleActionEntry,is_active,48,3,45709)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13674,0);
 Msg("Find size of _GtkToggleActionEntry (13674)\n");
@@ -13316,6 +15640,8 @@ Msg("Find size of _GtkToggleActionEntry (13674)\n");
 CheckTypeSize(GtkToggleActionEntry,28, 13675, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleActionEntry,56, 13675, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleActionEntry,56, 13675, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13675,0);
 Msg("Find size of GtkToggleActionEntry (13675)\n");
@@ -13325,6 +15651,8 @@ Msg("Find size of GtkToggleActionEntry (13675)\n");
 CheckTypeSize(const GtkToggleActionEntry,28, 13676, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkToggleActionEntry,56, 13676, 11)
+#elif __ia64__
+CheckTypeSize(const GtkToggleActionEntry,56, 13676, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13676,0);
 Msg("Find size of const GtkToggleActionEntry (13676)\n");
@@ -13332,6 +15660,7 @@ Msg("Find size of const GtkToggleActionEntry (13676)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13677,0);
 Msg("Find size of const GtkToggleActionEntry * (13677)\n");
@@ -13369,6 +15698,22 @@ CheckMemberSize(struct _GtkAccelLabel,accel_string,8,11,45716)
 CheckOffset(struct _GtkAccelLabel,accel_string,216,11,45716)
 CheckMemberSize(struct _GtkAccelLabel,accel_string_width,2,11,45717)
 CheckOffset(struct _GtkAccelLabel,accel_string_width,224,11,45717)
+#elif __ia64__
+CheckTypeSize(struct _GtkAccelLabel,232, 13678, 3)
+CheckMemberSize(struct _GtkAccelLabel,gtk_reserved,4,3,45711)
+CheckOffset(struct _GtkAccelLabel,gtk_reserved,184,3,45711)
+CheckMemberSize(struct _GtkAccelLabel,accel_padding,4,3,45712)
+CheckOffset(struct _GtkAccelLabel,accel_padding,188,3,45712)
+CheckMemberSize(struct _GtkAccelLabel,accel_widget,8,3,45713)
+CheckOffset(struct _GtkAccelLabel,accel_widget,192,3,45713)
+CheckMemberSize(struct _GtkAccelLabel,accel_closure,8,3,45714)
+CheckOffset(struct _GtkAccelLabel,accel_closure,200,3,45714)
+CheckMemberSize(struct _GtkAccelLabel,accel_group,8,3,45715)
+CheckOffset(struct _GtkAccelLabel,accel_group,208,3,45715)
+CheckMemberSize(struct _GtkAccelLabel,accel_string,8,3,45716)
+CheckOffset(struct _GtkAccelLabel,accel_string,216,3,45716)
+CheckMemberSize(struct _GtkAccelLabel,accel_string_width,2,3,45717)
+CheckOffset(struct _GtkAccelLabel,accel_string_width,224,3,45717)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13678,0);
 Msg("Find size of _GtkAccelLabel (13678)\n");
@@ -13378,6 +15723,8 @@ Msg("Find size of _GtkAccelLabel (13678)\n");
 CheckTypeSize(GtkAccelLabel,140, 13679, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelLabel,232, 13679, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelLabel,232, 13679, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13679,0);
 Msg("Find size of GtkAccelLabel (13679)\n");
@@ -13387,6 +15734,8 @@ Msg("Find size of GtkAccelLabel (13679)\n");
 CheckTypeSize(GtkAccelLabel *,4, 13680, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelLabel *,8, 13680, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelLabel *,8, 13680, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13680,0);
 Msg("Find size of GtkAccelLabel * (13680)\n");
@@ -13400,6 +15749,10 @@ CheckOffset(struct _GtkImageMenuItem,image,96,2,45719)
 CheckTypeSize(struct _GtkImageMenuItem,168, 13681, 11)
 CheckMemberSize(struct _GtkImageMenuItem,image,8,11,45719)
 CheckOffset(struct _GtkImageMenuItem,image,160,11,45719)
+#elif __ia64__
+CheckTypeSize(struct _GtkImageMenuItem,168, 13681, 3)
+CheckMemberSize(struct _GtkImageMenuItem,image,8,3,45719)
+CheckOffset(struct _GtkImageMenuItem,image,160,3,45719)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13681,0);
 Msg("Find size of _GtkImageMenuItem (13681)\n");
@@ -13409,6 +15762,8 @@ Msg("Find size of _GtkImageMenuItem (13681)\n");
 CheckTypeSize(GtkImageMenuItem,100, 13682, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageMenuItem,168, 13682, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageMenuItem,168, 13682, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13682,0);
 Msg("Find size of GtkImageMenuItem (13682)\n");
@@ -13418,6 +15773,8 @@ Msg("Find size of GtkImageMenuItem (13682)\n");
 CheckTypeSize(GtkImageMenuItem *,4, 13683, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageMenuItem *,8, 13683, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageMenuItem *,8, 13683, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13683,0);
 Msg("Find size of GtkImageMenuItem * (13683)\n");
@@ -13443,6 +15800,16 @@ CheckMemberSize(struct _GtkPlug,modality_group,8,11,45723)
 CheckOffset(struct _GtkPlug,modality_group,256,11,45723)
 CheckMemberSize(struct _GtkPlug,grabbed_keys,8,11,45724)
 CheckOffset(struct _GtkPlug,grabbed_keys,264,11,45724)
+#elif __ia64__
+CheckTypeSize(struct _GtkPlug,280, 13684, 3)
+CheckMemberSize(struct _GtkPlug,socket_window,8,3,45721)
+CheckOffset(struct _GtkPlug,socket_window,240,3,45721)
+CheckMemberSize(struct _GtkPlug,modality_window,8,3,45722)
+CheckOffset(struct _GtkPlug,modality_window,248,3,45722)
+CheckMemberSize(struct _GtkPlug,modality_group,8,3,45723)
+CheckOffset(struct _GtkPlug,modality_group,256,3,45723)
+CheckMemberSize(struct _GtkPlug,grabbed_keys,8,3,45724)
+CheckOffset(struct _GtkPlug,grabbed_keys,264,3,45724)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13684,0);
 Msg("Find size of _GtkPlug (13684)\n");
@@ -13452,6 +15819,8 @@ Msg("Find size of _GtkPlug (13684)\n");
 CheckTypeSize(GtkPlug,168, 13685, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPlug,280, 13685, 11)
+#elif __ia64__
+CheckTypeSize(GtkPlug,280, 13685, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13685,0);
 Msg("Find size of GtkPlug (13685)\n");
@@ -13461,6 +15830,8 @@ Msg("Find size of GtkPlug (13685)\n");
 CheckTypeSize(GtkPlug *,4, 13686, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPlug *,8, 13686, 11)
+#elif __ia64__
+CheckTypeSize(GtkPlug *,8, 13686, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13686,0);
 Msg("Find size of GtkPlug * (13686)\n");
@@ -13474,6 +15845,10 @@ CheckOffset(struct _GtkFileChooserButton,priv,76,2,45727)
 CheckTypeSize(struct _GtkFileChooserButton,136, 13687, 11)
 CheckMemberSize(struct _GtkFileChooserButton,priv,8,11,45727)
 CheckOffset(struct _GtkFileChooserButton,priv,128,11,45727)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileChooserButton,136, 13687, 3)
+CheckMemberSize(struct _GtkFileChooserButton,priv,8,3,45727)
+CheckOffset(struct _GtkFileChooserButton,priv,128,3,45727)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13687,0);
 Msg("Find size of _GtkFileChooserButton (13687)\n");
@@ -13483,6 +15858,8 @@ Msg("Find size of _GtkFileChooserButton (13687)\n");
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13689,0);
 Msg("Find size of GtkFileChooserButtonPrivate (13689)\n");
@@ -13492,6 +15869,8 @@ Msg("Find size of GtkFileChooserButtonPrivate (13689)\n");
 CheckTypeSize(GtkFileChooserButtonPrivate *,4, 13690, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserButtonPrivate *,8, 13690, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserButtonPrivate *,8, 13690, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13690,0);
 Msg("Find size of GtkFileChooserButtonPrivate * (13690)\n");
@@ -13501,6 +15880,8 @@ Msg("Find size of GtkFileChooserButtonPrivate * (13690)\n");
 CheckTypeSize(GtkFileChooserButton,80, 13691, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserButton,136, 13691, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserButton,136, 13691, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13691,0);
 Msg("Find size of GtkFileChooserButton (13691)\n");
@@ -13510,6 +15891,8 @@ Msg("Find size of GtkFileChooserButton (13691)\n");
 CheckTypeSize(GtkFileChooserButton *,4, 13692, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserButton *,8, 13692, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserButton *,8, 13692, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13692,0);
 Msg("Find size of GtkFileChooserButton * (13692)\n");
@@ -13535,6 +15918,16 @@ CheckMemberSize(struct _GtkStockItem,keyval,4,11,45731)
 CheckOffset(struct _GtkStockItem,keyval,20,11,45731)
 CheckMemberSize(struct _GtkStockItem,translation_domain,8,11,45732)
 CheckOffset(struct _GtkStockItem,translation_domain,24,11,45732)
+#elif __ia64__
+CheckTypeSize(struct _GtkStockItem,32, 13693, 3)
+CheckMemberSize(struct _GtkStockItem,label,8,3,45729)
+CheckOffset(struct _GtkStockItem,label,8,3,45729)
+CheckMemberSize(struct _GtkStockItem,modifier,4,3,45730)
+CheckOffset(struct _GtkStockItem,modifier,16,3,45730)
+CheckMemberSize(struct _GtkStockItem,keyval,4,3,45731)
+CheckOffset(struct _GtkStockItem,keyval,20,3,45731)
+CheckMemberSize(struct _GtkStockItem,translation_domain,8,3,45732)
+CheckOffset(struct _GtkStockItem,translation_domain,24,3,45732)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13693,0);
 Msg("Find size of _GtkStockItem (13693)\n");
@@ -13544,6 +15937,8 @@ Msg("Find size of _GtkStockItem (13693)\n");
 CheckTypeSize(GtkStockItem,20, 13694, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStockItem,32, 13694, 11)
+#elif __ia64__
+CheckTypeSize(GtkStockItem,32, 13694, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13694,0);
 Msg("Find size of GtkStockItem (13694)\n");
@@ -13553,6 +15948,8 @@ Msg("Find size of GtkStockItem (13694)\n");
 CheckTypeSize(GtkStockItem *,4, 13695, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStockItem *,8, 13695, 11)
+#elif __ia64__
+CheckTypeSize(GtkStockItem *,8, 13695, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13695,0);
 Msg("Find size of GtkStockItem * (13695)\n");
@@ -13560,6 +15957,7 @@ Msg("Find size of GtkStockItem * (13695)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13696,0);
 Msg("Find size of fptr_gtk_6386 (13696)\n");
@@ -13569,6 +15967,8 @@ Msg("Find size of fptr_gtk_6386 (13696)\n");
 CheckTypeSize(GtkTranslateFunc,4, 13697, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTranslateFunc,8, 13697, 11)
+#elif __ia64__
+CheckTypeSize(GtkTranslateFunc,8, 13697, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13697,0);
 Msg("Find size of GtkTranslateFunc (13697)\n");
@@ -13618,6 +16018,24 @@ CheckMemberSize(struct _GtkToolbar,style_set_connection,4,11,45748)
 CheckOffset(struct _GtkToolbar,style_set_connection,160,11,45748)
 CheckMemberSize(struct _GtkToolbar,icon_size_connection,4,11,45749)
 CheckOffset(struct _GtkToolbar,icon_size_connection,164,11,45749)
+#elif __ia64__
+CheckTypeSize(struct _GtkToolbar,176, 13698, 3)
+CheckMemberSize(struct _GtkToolbar,num_children,4,3,45736)
+CheckOffset(struct _GtkToolbar,num_children,112,3,45736)
+CheckMemberSize(struct _GtkToolbar,children,8,3,45737)
+CheckOffset(struct _GtkToolbar,children,120,3,45737)
+CheckMemberSize(struct _GtkToolbar,orientation,4,3,45738)
+CheckOffset(struct _GtkToolbar,orientation,128,3,45738)
+CheckMemberSize(struct _GtkToolbar,style,4,3,45743)
+CheckOffset(struct _GtkToolbar,style,132,3,45743)
+CheckMemberSize(struct _GtkToolbar,icon_size,4,3,45744)
+CheckOffset(struct _GtkToolbar,icon_size,136,3,45744)
+CheckMemberSize(struct _GtkToolbar,tooltips,8,3,45745)
+CheckOffset(struct _GtkToolbar,tooltips,144,3,45745)
+CheckMemberSize(struct _GtkToolbar,button_maxw,4,3,45746)
+CheckOffset(struct _GtkToolbar,button_maxw,152,3,45746)
+CheckMemberSize(struct _GtkToolbar,button_maxh,4,3,45747)
+CheckOffset(struct _GtkToolbar,button_maxh,156,3,45747)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13698,0);
 Msg("Find size of _GtkToolbar (13698)\n");
@@ -13633,6 +16051,11 @@ CheckEnum("GTK_TOOLBAR_ICONS",GTK_TOOLBAR_ICONS,0);
 CheckEnum("GTK_TOOLBAR_TEXT",GTK_TOOLBAR_TEXT,1);
 CheckEnum("GTK_TOOLBAR_BOTH",GTK_TOOLBAR_BOTH,2);
 CheckEnum("GTK_TOOLBAR_BOTH_HORIZ",GTK_TOOLBAR_BOTH_HORIZ,3);
+#elif __ia64__
+CheckEnum("GTK_TOOLBAR_ICONS",GTK_TOOLBAR_ICONS,0);
+CheckEnum("GTK_TOOLBAR_TEXT",GTK_TOOLBAR_TEXT,1);
+CheckEnum("GTK_TOOLBAR_BOTH",GTK_TOOLBAR_BOTH,2);
+CheckEnum("GTK_TOOLBAR_BOTH_HORIZ",GTK_TOOLBAR_BOTH_HORIZ,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13699,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3834 (13699)\n");
@@ -13642,6 +16065,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3834 (13699)\n");
 CheckTypeSize(GtkToolbarStyle,4, 13700, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolbarStyle,4, 13700, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolbarStyle,4, 13700, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13700,0);
 Msg("Find size of GtkToolbarStyle (13700)\n");
@@ -13651,6 +16076,8 @@ Msg("Find size of GtkToolbarStyle (13700)\n");
 CheckTypeSize(GtkToolbar,112, 13701, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolbar,176, 13701, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolbar,176, 13701, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13701,0);
 Msg("Find size of GtkToolbar (13701)\n");
@@ -13660,6 +16087,8 @@ Msg("Find size of GtkToolbar (13701)\n");
 CheckTypeSize(GtkToolbar *,4, 13702, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolbar *,8, 13702, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolbar *,8, 13702, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13702,0);
 Msg("Find size of GtkToolbar * (13702)\n");
@@ -13667,6 +16096,7 @@ Msg("Find size of GtkToolbar * (13702)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13703,0);
 Msg("Find size of fptr_gtk_4149 (13703)\n");
@@ -13676,6 +16106,8 @@ Msg("Find size of fptr_gtk_4149 (13703)\n");
 CheckTypeSize(GtkCellLayoutDataFunc,4, 13704, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellLayoutDataFunc,8, 13704, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellLayoutDataFunc,8, 13704, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13704,0);
 Msg("Find size of GtkCellLayoutDataFunc (13704)\n");
@@ -13683,6 +16115,7 @@ Msg("Find size of GtkCellLayoutDataFunc (13704)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13705,0);
 Msg("Find size of GdkAtom * * (13705)\n");
@@ -13692,6 +16125,8 @@ Msg("Find size of GdkAtom * * (13705)\n");
 CheckTypeSize(GtkIconSource *,4, 13706, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconSource *,8, 13706, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconSource *,8, 13706, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13706,0);
 Msg("Find size of GtkIconSource * (13706)\n");
@@ -13701,6 +16136,8 @@ Msg("Find size of GtkIconSource * (13706)\n");
 CheckTypeSize(GOptionEntry *,4, 13707, 2)
 #elif __x86_64__
 CheckTypeSize(GOptionEntry *,8, 13707, 11)
+#elif __ia64__
+CheckTypeSize(GOptionEntry *,8, 13707, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13707,0);
 Msg("Find size of GOptionEntry * (13707)\n");
@@ -13714,6 +16151,10 @@ CheckOffset(struct _GtkCellRendererToggle,parent,0,2,45757)
 CheckTypeSize(struct _GtkCellRendererToggle,64, 13708, 11)
 Msg("Missing member data for _GtkCellRendererToggle on x86-64\n");
 CheckOffset(struct _GtkCellRendererToggle,parent,0,11,45757)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererToggle,64, 13708, 3)
+Msg("Missing member data for _GtkCellRendererToggle on IA64\n");
+CheckOffset(struct _GtkCellRendererToggle,parent,0,3,45757)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13708,0);
 Msg("Find size of _GtkCellRendererToggle (13708)\n");
@@ -13723,6 +16164,8 @@ Msg("Find size of _GtkCellRendererToggle (13708)\n");
 CheckTypeSize(GtkCellRendererToggle,44, 13709, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererToggle,64, 13709, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererToggle,64, 13709, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13709,0);
 Msg("Find size of GtkCellRendererToggle (13709)\n");
@@ -13732,6 +16175,8 @@ Msg("Find size of GtkCellRendererToggle (13709)\n");
 CheckTypeSize(GtkCellRendererToggle *,4, 13710, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererToggle *,8, 13710, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererToggle *,8, 13710, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13710,0);
 Msg("Find size of GtkCellRendererToggle * (13710)\n");
@@ -13745,6 +16190,10 @@ CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
 CheckEnum("GTK_RELIEF_NORMAL",GTK_RELIEF_NORMAL,0);
 CheckEnum("GTK_RELIEF_HALF",GTK_RELIEF_HALF,1);
 CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
+#elif __ia64__
+CheckEnum("GTK_RELIEF_NORMAL",GTK_RELIEF_NORMAL,0);
+CheckEnum("GTK_RELIEF_HALF",GTK_RELIEF_HALF,1);
+CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13711,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-349 (13711)\n");
@@ -13754,6 +16203,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-349 (13711)\n");
 CheckTypeSize(GtkReliefStyle,4, 13712, 2)
 #elif __x86_64__
 CheckTypeSize(GtkReliefStyle,4, 13712, 11)
+#elif __ia64__
+CheckTypeSize(GtkReliefStyle,4, 13712, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13712,0);
 Msg("Find size of GtkReliefStyle (13712)\n");
@@ -13763,6 +16214,8 @@ Msg("Find size of GtkReliefStyle (13712)\n");
 CheckTypeSize(gfloat *,4, 13713, 2)
 #elif __x86_64__
 CheckTypeSize(gfloat *,8, 13713, 11)
+#elif __ia64__
+CheckTypeSize(gfloat *,8, 13713, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13713,0);
 Msg("Find size of gfloat * (13713)\n");
@@ -13770,6 +16223,7 @@ Msg("Find size of gfloat * (13713)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13714,0);
 Msg("Find size of fptr_gtk_7452 (13714)\n");
@@ -13779,6 +16233,8 @@ Msg("Find size of fptr_gtk_7452 (13714)\n");
 CheckTypeSize(GtkClipboardImageReceivedFunc,4, 13715, 2)
 #elif __x86_64__
 CheckTypeSize(GtkClipboardImageReceivedFunc,8, 13715, 11)
+#elif __ia64__
+CheckTypeSize(GtkClipboardImageReceivedFunc,8, 13715, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13715,0);
 Msg("Find size of GtkClipboardImageReceivedFunc (13715)\n");
@@ -13796,6 +16252,12 @@ CheckEnum("GTK_CELL_RENDERER_PRELIT",GTK_CELL_RENDERER_PRELIT,2);
 CheckEnum("GTK_CELL_RENDERER_INSENSITIVE",GTK_CELL_RENDERER_INSENSITIVE,4);
 CheckEnum("GTK_CELL_RENDERER_SORTED",GTK_CELL_RENDERER_SORTED,8);
 CheckEnum("GTK_CELL_RENDERER_FOCUSED",GTK_CELL_RENDERER_FOCUSED,16);
+#elif __ia64__
+CheckEnum("GTK_CELL_RENDERER_SELECTED",GTK_CELL_RENDERER_SELECTED,1);
+CheckEnum("GTK_CELL_RENDERER_PRELIT",GTK_CELL_RENDERER_PRELIT,2);
+CheckEnum("GTK_CELL_RENDERER_INSENSITIVE",GTK_CELL_RENDERER_INSENSITIVE,4);
+CheckEnum("GTK_CELL_RENDERER_SORTED",GTK_CELL_RENDERER_SORTED,8);
+CheckEnum("GTK_CELL_RENDERER_FOCUSED",GTK_CELL_RENDERER_FOCUSED,16);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13716,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-438 (13716)\n");
@@ -13805,6 +16267,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-438 (13716)\n");
 CheckTypeSize(GtkCellRendererState,4, 13717, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererState,4, 13717, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererState,4, 13717, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13717,0);
 Msg("Find size of GtkCellRendererState (13717)\n");
@@ -13834,6 +16298,18 @@ CheckMemberSize(struct _GtkActionEntry,tooltip,8,11,45776)
 CheckOffset(struct _GtkActionEntry,tooltip,32,11,45776)
 CheckMemberSize(struct _GtkActionEntry,callback,8,11,45777)
 CheckOffset(struct _GtkActionEntry,callback,40,11,45777)
+#elif __ia64__
+CheckTypeSize(struct _GtkActionEntry,48, 13718, 3)
+CheckMemberSize(struct _GtkActionEntry,stock_id,8,3,45773)
+CheckOffset(struct _GtkActionEntry,stock_id,8,3,45773)
+CheckMemberSize(struct _GtkActionEntry,label,8,3,45774)
+CheckOffset(struct _GtkActionEntry,label,16,3,45774)
+CheckMemberSize(struct _GtkActionEntry,accelerator,8,3,45775)
+CheckOffset(struct _GtkActionEntry,accelerator,24,3,45775)
+CheckMemberSize(struct _GtkActionEntry,tooltip,8,3,45776)
+CheckOffset(struct _GtkActionEntry,tooltip,32,3,45776)
+CheckMemberSize(struct _GtkActionEntry,callback,8,3,45777)
+CheckOffset(struct _GtkActionEntry,callback,40,3,45777)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13718,0);
 Msg("Find size of _GtkActionEntry (13718)\n");
@@ -13843,6 +16319,8 @@ Msg("Find size of _GtkActionEntry (13718)\n");
 CheckTypeSize(GtkActionEntry,24, 13719, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionEntry,48, 13719, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionEntry,48, 13719, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13719,0);
 Msg("Find size of GtkActionEntry (13719)\n");
@@ -13852,6 +16330,8 @@ Msg("Find size of GtkActionEntry (13719)\n");
 CheckTypeSize(const GtkActionEntry,24, 13720, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkActionEntry,48, 13720, 11)
+#elif __ia64__
+CheckTypeSize(const GtkActionEntry,48, 13720, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13720,0);
 Msg("Find size of const GtkActionEntry (13720)\n");
@@ -13859,6 +16339,7 @@ Msg("Find size of const GtkActionEntry (13720)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13721,0);
 Msg("Find size of const GtkActionEntry * (13721)\n");
@@ -13872,6 +16353,10 @@ CheckOffset(struct _GtkRadioButton,group,92,2,45780)
 CheckTypeSize(struct _GtkRadioButton,160, 13722, 11)
 CheckMemberSize(struct _GtkRadioButton,group,8,11,45780)
 CheckOffset(struct _GtkRadioButton,group,152,11,45780)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioButton,160, 13722, 3)
+CheckMemberSize(struct _GtkRadioButton,group,8,3,45780)
+CheckOffset(struct _GtkRadioButton,group,152,3,45780)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13722,0);
 Msg("Find size of _GtkRadioButton (13722)\n");
@@ -13885,6 +16370,10 @@ CheckOffset(struct _GtkCheckButton,toggle_button,0,2,45778)
 CheckTypeSize(struct _GtkCheckButton,152, 13723, 11)
 Msg("Missing member data for _GtkCheckButton on x86-64\n");
 CheckOffset(struct _GtkCheckButton,toggle_button,0,11,45778)
+#elif __ia64__
+CheckTypeSize(struct _GtkCheckButton,152, 13723, 3)
+Msg("Missing member data for _GtkCheckButton on IA64\n");
+CheckOffset(struct _GtkCheckButton,toggle_button,0,3,45778)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13723,0);
 Msg("Find size of _GtkCheckButton (13723)\n");
@@ -13894,6 +16383,8 @@ Msg("Find size of _GtkCheckButton (13723)\n");
 CheckTypeSize(GtkCheckButton,92, 13724, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCheckButton,152, 13724, 11)
+#elif __ia64__
+CheckTypeSize(GtkCheckButton,152, 13724, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13724,0);
 Msg("Find size of GtkCheckButton (13724)\n");
@@ -13903,6 +16394,8 @@ Msg("Find size of GtkCheckButton (13724)\n");
 CheckTypeSize(GtkRadioButton,96, 13725, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioButton,160, 13725, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioButton,160, 13725, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13725,0);
 Msg("Find size of GtkRadioButton (13725)\n");
@@ -13912,6 +16405,8 @@ Msg("Find size of GtkRadioButton (13725)\n");
 CheckTypeSize(GtkRadioButton *,4, 13726, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioButton *,8, 13726, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioButton *,8, 13726, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13726,0);
 Msg("Find size of GtkRadioButton * (13726)\n");
@@ -13921,6 +16416,8 @@ Msg("Find size of GtkRadioButton * (13726)\n");
 CheckTypeSize(GtkCheckMenuItem *,4, 13727, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCheckMenuItem *,8, 13727, 11)
+#elif __ia64__
+CheckTypeSize(GtkCheckMenuItem *,8, 13727, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13727,0);
 Msg("Find size of GtkCheckMenuItem * (13727)\n");
@@ -13946,6 +16443,16 @@ CheckMemberSize(struct _GtkAlignment,xscale,4,11,45784)
 CheckOffset(struct _GtkAlignment,xscale,128,11,45784)
 CheckMemberSize(struct _GtkAlignment,yscale,4,11,45785)
 CheckOffset(struct _GtkAlignment,yscale,132,11,45785)
+#elif __ia64__
+CheckTypeSize(struct _GtkAlignment,136, 13728, 3)
+CheckMemberSize(struct _GtkAlignment,xalign,4,3,45782)
+CheckOffset(struct _GtkAlignment,xalign,120,3,45782)
+CheckMemberSize(struct _GtkAlignment,yalign,4,3,45783)
+CheckOffset(struct _GtkAlignment,yalign,124,3,45783)
+CheckMemberSize(struct _GtkAlignment,xscale,4,3,45784)
+CheckOffset(struct _GtkAlignment,xscale,128,3,45784)
+CheckMemberSize(struct _GtkAlignment,yscale,4,3,45785)
+CheckOffset(struct _GtkAlignment,yscale,132,3,45785)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13728,0);
 Msg("Find size of _GtkAlignment (13728)\n");
@@ -13955,6 +16462,8 @@ Msg("Find size of _GtkAlignment (13728)\n");
 CheckTypeSize(GtkAlignment,88, 13729, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAlignment,136, 13729, 11)
+#elif __ia64__
+CheckTypeSize(GtkAlignment,136, 13729, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13729,0);
 Msg("Find size of GtkAlignment (13729)\n");
@@ -13964,6 +16473,8 @@ Msg("Find size of GtkAlignment (13729)\n");
 CheckTypeSize(GtkAlignment *,4, 13730, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAlignment *,8, 13730, 11)
+#elif __ia64__
+CheckTypeSize(GtkAlignment *,8, 13730, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13730,0);
 Msg("Find size of GtkAlignment * (13730)\n");
@@ -14025,6 +16536,34 @@ CheckMemberSize(struct _GtkContainerClass,_gtk_reserved3,8,11,45818)
 CheckOffset(struct _GtkContainerClass,_gtk_reserved3,808,11,45818)
 CheckMemberSize(struct _GtkContainerClass,_gtk_reserved4,8,11,45819)
 CheckOffset(struct _GtkContainerClass,_gtk_reserved4,816,11,45819)
+#elif __ia64__
+CheckTypeSize(struct _GtkContainerClass,824, 13731, 3)
+CheckMemberSize(struct _GtkContainerClass,add,8,3,45789)
+CheckOffset(struct _GtkContainerClass,add,720,3,45789)
+CheckMemberSize(struct _GtkContainerClass,remove,8,3,45790)
+CheckOffset(struct _GtkContainerClass,remove,728,3,45790)
+CheckMemberSize(struct _GtkContainerClass,check_resize,8,3,45792)
+CheckOffset(struct _GtkContainerClass,check_resize,736,3,45792)
+CheckMemberSize(struct _GtkContainerClass,forall,8,3,45797)
+CheckOffset(struct _GtkContainerClass,forall,744,3,45797)
+CheckMemberSize(struct _GtkContainerClass,set_focus_child,8,3,45798)
+CheckOffset(struct _GtkContainerClass,set_focus_child,752,3,45798)
+CheckMemberSize(struct _GtkContainerClass,child_type,8,3,45800)
+CheckOffset(struct _GtkContainerClass,child_type,760,3,45800)
+CheckMemberSize(struct _GtkContainerClass,composite_name,8,3,45803)
+CheckOffset(struct _GtkContainerClass,composite_name,768,3,45803)
+CheckMemberSize(struct _GtkContainerClass,set_child_property,8,3,45809)
+CheckOffset(struct _GtkContainerClass,set_child_property,776,3,45809)
+CheckMemberSize(struct _GtkContainerClass,get_child_property,8,3,45815)
+CheckOffset(struct _GtkContainerClass,get_child_property,784,3,45815)
+CheckMemberSize(struct _GtkContainerClass,_gtk_reserved1,8,3,45816)
+CheckOffset(struct _GtkContainerClass,_gtk_reserved1,792,3,45816)
+CheckMemberSize(struct _GtkContainerClass,_gtk_reserved2,8,3,45817)
+CheckOffset(struct _GtkContainerClass,_gtk_reserved2,800,3,45817)
+CheckMemberSize(struct _GtkContainerClass,_gtk_reserved3,8,3,45818)
+CheckOffset(struct _GtkContainerClass,_gtk_reserved3,808,3,45818)
+CheckMemberSize(struct _GtkContainerClass,_gtk_reserved4,8,3,45819)
+CheckOffset(struct _GtkContainerClass,_gtk_reserved4,816,3,45819)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13731,0);
 Msg("Find size of _GtkContainerClass (13731)\n");
@@ -14032,6 +16571,7 @@ Msg("Find size of _GtkContainerClass (13731)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13732,0);
 Msg("Find size of fptr_gtk_558 (13732)\n");
@@ -14039,6 +16579,7 @@ Msg("Find size of fptr_gtk_558 (13732)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13733,0);
 Msg("Find size of fptr_gtk_4786 (13733)\n");
@@ -14046,6 +16587,7 @@ Msg("Find size of fptr_gtk_4786 (13733)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13734,0);
 Msg("Find size of fptr_gtk_3913 (13734)\n");
@@ -14053,6 +16595,7 @@ Msg("Find size of fptr_gtk_3913 (13734)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13735,0);
 Msg("Find size of fptr_gtk_2412 (13735)\n");
@@ -14060,6 +16603,7 @@ Msg("Find size of fptr_gtk_2412 (13735)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13736,0);
 Msg("Find size of fptr_gtk_6024 (13736)\n");
@@ -14067,6 +16611,7 @@ Msg("Find size of fptr_gtk_6024 (13736)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13737,0);
 Msg("Find size of fptr_gtk_1801 (13737)\n");
@@ -14074,6 +16619,7 @@ Msg("Find size of fptr_gtk_1801 (13737)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13738,0);
 Msg("Find size of fptr_gtk_1125 (13738)\n");
@@ -14083,6 +16629,8 @@ Msg("Find size of fptr_gtk_1125 (13738)\n");
 CheckTypeSize(GtkContainerClass,416, 13739, 2)
 #elif __x86_64__
 CheckTypeSize(GtkContainerClass,824, 13739, 11)
+#elif __ia64__
+CheckTypeSize(GtkContainerClass,824, 13739, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13739,0);
 Msg("Find size of GtkContainerClass (13739)\n");
@@ -14092,6 +16640,8 @@ Msg("Find size of GtkContainerClass (13739)\n");
 CheckTypeSize(GtkContainerClass *,4, 13740, 2)
 #elif __x86_64__
 CheckTypeSize(GtkContainerClass *,8, 13740, 11)
+#elif __ia64__
+CheckTypeSize(GtkContainerClass *,8, 13740, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13740,0);
 Msg("Find size of GtkContainerClass * (13740)\n");
@@ -14105,6 +16655,10 @@ CheckOffset(struct _GtkFontButton,priv,88,2,45821)
 CheckTypeSize(struct _GtkFontButton,152, 13741, 11)
 CheckMemberSize(struct _GtkFontButton,priv,8,11,45821)
 CheckOffset(struct _GtkFontButton,priv,144,11,45821)
+#elif __ia64__
+CheckTypeSize(struct _GtkFontButton,152, 13741, 3)
+CheckMemberSize(struct _GtkFontButton,priv,8,3,45821)
+CheckOffset(struct _GtkFontButton,priv,144,3,45821)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13741,0);
 Msg("Find size of _GtkFontButton (13741)\n");
@@ -14114,6 +16668,8 @@ Msg("Find size of _GtkFontButton (13741)\n");
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontButtonPrivate,0, 13743, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13743,0);
 Msg("Find size of GtkFontButtonPrivate (13743)\n");
@@ -14123,6 +16679,8 @@ Msg("Find size of GtkFontButtonPrivate (13743)\n");
 CheckTypeSize(GtkFontButtonPrivate *,4, 13744, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontButtonPrivate *,8, 13744, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontButtonPrivate *,8, 13744, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13744,0);
 Msg("Find size of GtkFontButtonPrivate * (13744)\n");
@@ -14132,6 +16690,8 @@ Msg("Find size of GtkFontButtonPrivate * (13744)\n");
 CheckTypeSize(GtkFontButton,92, 13745, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontButton,152, 13745, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontButton,152, 13745, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13745,0);
 Msg("Find size of GtkFontButton (13745)\n");
@@ -14141,6 +16701,8 @@ Msg("Find size of GtkFontButton (13745)\n");
 CheckTypeSize(GtkFontButton *,4, 13746, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontButton *,8, 13746, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontButton *,8, 13746, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13746,0);
 Msg("Find size of GtkFontButton * (13746)\n");
@@ -14162,6 +16724,14 @@ CheckMemberSize(struct _GtkBorder,top,4,11,45824)
 CheckOffset(struct _GtkBorder,top,8,11,45824)
 CheckMemberSize(struct _GtkBorder,bottom,4,11,45825)
 CheckOffset(struct _GtkBorder,bottom,12,11,45825)
+#elif __ia64__
+CheckTypeSize(struct _GtkBorder,16, 13747, 3)
+CheckMemberSize(struct _GtkBorder,right,4,3,45823)
+CheckOffset(struct _GtkBorder,right,4,3,45823)
+CheckMemberSize(struct _GtkBorder,top,4,3,45824)
+CheckOffset(struct _GtkBorder,top,8,3,45824)
+CheckMemberSize(struct _GtkBorder,bottom,4,3,45825)
+CheckOffset(struct _GtkBorder,bottom,12,3,45825)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13747,0);
 Msg("Find size of _GtkBorder (13747)\n");
@@ -14171,6 +16741,8 @@ Msg("Find size of _GtkBorder (13747)\n");
 CheckTypeSize(GtkBorder,16, 13748, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBorder,16, 13748, 11)
+#elif __ia64__
+CheckTypeSize(GtkBorder,16, 13748, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13748,0);
 Msg("Find size of GtkBorder (13748)\n");
@@ -14180,6 +16752,8 @@ Msg("Find size of GtkBorder (13748)\n");
 CheckTypeSize(GtkBorder *,4, 13749, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBorder *,8, 13749, 11)
+#elif __ia64__
+CheckTypeSize(GtkBorder *,8, 13749, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13749,0);
 Msg("Find size of GtkBorder * (13749)\n");
@@ -14197,6 +16771,12 @@ CheckMemberSize(struct _GtkMessageDialog,image,8,11,45827)
 CheckOffset(struct _GtkMessageDialog,image,264,11,45827)
 CheckMemberSize(struct _GtkMessageDialog,label,8,11,45828)
 CheckOffset(struct _GtkMessageDialog,label,272,11,45828)
+#elif __ia64__
+CheckTypeSize(struct _GtkMessageDialog,280, 13750, 3)
+CheckMemberSize(struct _GtkMessageDialog,image,8,3,45827)
+CheckOffset(struct _GtkMessageDialog,image,264,3,45827)
+CheckMemberSize(struct _GtkMessageDialog,label,8,3,45828)
+CheckOffset(struct _GtkMessageDialog,label,272,3,45828)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13750,0);
 Msg("Find size of _GtkMessageDialog (13750)\n");
@@ -14206,6 +16786,8 @@ Msg("Find size of _GtkMessageDialog (13750)\n");
 CheckTypeSize(GtkMessageDialog,168, 13751, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMessageDialog,280, 13751, 11)
+#elif __ia64__
+CheckTypeSize(GtkMessageDialog,280, 13751, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13751,0);
 Msg("Find size of GtkMessageDialog (13751)\n");
@@ -14215,6 +16797,8 @@ Msg("Find size of GtkMessageDialog (13751)\n");
 CheckTypeSize(GtkMessageDialog *,4, 13752, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMessageDialog *,8, 13752, 11)
+#elif __ia64__
+CheckTypeSize(GtkMessageDialog *,8, 13752, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13752,0);
 Msg("Find size of GtkMessageDialog * (13752)\n");
@@ -14264,6 +16848,28 @@ CheckMemberSize(struct _GtkRuler,position,8,11,45843)
 CheckOffset(struct _GtkRuler,position,152,11,45843)
 CheckMemberSize(struct _GtkRuler,max_size,8,11,45844)
 CheckOffset(struct _GtkRuler,max_size,160,11,45844)
+#elif __ia64__
+CheckTypeSize(struct _GtkRuler,168, 13753, 3)
+CheckMemberSize(struct _GtkRuler,backing_store,8,3,45830)
+CheckOffset(struct _GtkRuler,backing_store,96,3,45830)
+CheckMemberSize(struct _GtkRuler,non_gr_exp_gc,8,3,45831)
+CheckOffset(struct _GtkRuler,non_gr_exp_gc,104,3,45831)
+CheckMemberSize(struct _GtkRuler,metric,8,3,45837)
+CheckOffset(struct _GtkRuler,metric,112,3,45837)
+CheckMemberSize(struct _GtkRuler,xsrc,4,3,45838)
+CheckOffset(struct _GtkRuler,xsrc,120,3,45838)
+CheckMemberSize(struct _GtkRuler,ysrc,4,3,45839)
+CheckOffset(struct _GtkRuler,ysrc,124,3,45839)
+CheckMemberSize(struct _GtkRuler,slider_size,4,3,45840)
+CheckOffset(struct _GtkRuler,slider_size,128,3,45840)
+CheckMemberSize(struct _GtkRuler,lower,8,3,45841)
+CheckOffset(struct _GtkRuler,lower,136,3,45841)
+CheckMemberSize(struct _GtkRuler,upper,8,3,45842)
+CheckOffset(struct _GtkRuler,upper,144,3,45842)
+CheckMemberSize(struct _GtkRuler,position,8,3,45843)
+CheckOffset(struct _GtkRuler,position,152,3,45843)
+CheckMemberSize(struct _GtkRuler,max_size,8,3,45844)
+CheckOffset(struct _GtkRuler,max_size,160,3,45844)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13753,0);
 Msg("Find size of _GtkRuler (13753)\n");
@@ -14289,6 +16895,16 @@ CheckMemberSize(struct _GtkRulerMetric,ruler_scale,80,11,45835)
 CheckOffset(struct _GtkRulerMetric,ruler_scale,24,11,45835)
 CheckMemberSize(struct _GtkRulerMetric,subdivide,20,11,45836)
 CheckOffset(struct _GtkRulerMetric,subdivide,104,11,45836)
+#elif __ia64__
+CheckTypeSize(struct _GtkRulerMetric,128, 13754, 3)
+CheckMemberSize(struct _GtkRulerMetric,abbrev,8,3,45833)
+CheckOffset(struct _GtkRulerMetric,abbrev,8,3,45833)
+CheckMemberSize(struct _GtkRulerMetric,pixels_per_unit,8,3,45834)
+CheckOffset(struct _GtkRulerMetric,pixels_per_unit,16,3,45834)
+CheckMemberSize(struct _GtkRulerMetric,ruler_scale,80,3,45835)
+CheckOffset(struct _GtkRulerMetric,ruler_scale,24,3,45835)
+CheckMemberSize(struct _GtkRulerMetric,subdivide,20,3,45836)
+CheckOffset(struct _GtkRulerMetric,subdivide,104,3,45836)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13754,0);
 Msg("Find size of _GtkRulerMetric (13754)\n");
@@ -14304,6 +16920,8 @@ Msg("Find size of _GtkRulerMetric (13754)\n");
 CheckTypeSize(GtkRulerMetric,116, 13757, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRulerMetric,128, 13757, 11)
+#elif __ia64__
+CheckTypeSize(GtkRulerMetric,128, 13757, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13757,0);
 Msg("Find size of GtkRulerMetric (13757)\n");
@@ -14313,6 +16931,8 @@ Msg("Find size of GtkRulerMetric (13757)\n");
 CheckTypeSize(GtkRulerMetric *,4, 13758, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRulerMetric *,8, 13758, 11)
+#elif __ia64__
+CheckTypeSize(GtkRulerMetric *,8, 13758, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13758,0);
 Msg("Find size of GtkRulerMetric * (13758)\n");
@@ -14322,6 +16942,8 @@ Msg("Find size of GtkRulerMetric * (13758)\n");
 CheckTypeSize(GtkRuler,116, 13759, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRuler,168, 13759, 11)
+#elif __ia64__
+CheckTypeSize(GtkRuler,168, 13759, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13759,0);
 Msg("Find size of GtkRuler (13759)\n");
@@ -14331,6 +16953,8 @@ Msg("Find size of GtkRuler (13759)\n");
 CheckTypeSize(GtkRuler *,4, 13760, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRuler *,8, 13760, 11)
+#elif __ia64__
+CheckTypeSize(GtkRuler *,8, 13760, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13760,0);
 Msg("Find size of GtkRuler * (13760)\n");
@@ -14344,6 +16968,10 @@ CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
 CheckEnum("GTK_ACCEL_VISIBLE",GTK_ACCEL_VISIBLE,1);
 CheckEnum("GTK_ACCEL_LOCKED",GTK_ACCEL_LOCKED,2);
 CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
+#elif __ia64__
+CheckEnum("GTK_ACCEL_VISIBLE",GTK_ACCEL_VISIBLE,1);
+CheckEnum("GTK_ACCEL_LOCKED",GTK_ACCEL_LOCKED,2);
+CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13761,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4428 (13761)\n");
@@ -14353,6 +16981,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4428 (13761)\n");
 CheckTypeSize(GtkAccelFlags,4, 13762, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelFlags,4, 13762, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelFlags,4, 13762, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13762,0);
 Msg("Find size of GtkAccelFlags (13762)\n");
@@ -14360,6 +16990,7 @@ Msg("Find size of GtkAccelFlags (13762)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13763,0);
 Msg("Find size of fptr_gtk_5983 (13763)\n");
@@ -14369,6 +17000,8 @@ Msg("Find size of fptr_gtk_5983 (13763)\n");
 CheckTypeSize(GtkTextCharPredicate,4, 13764, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextCharPredicate,8, 13764, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextCharPredicate,8, 13764, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13764,0);
 Msg("Find size of GtkTextCharPredicate (13764)\n");
@@ -14382,6 +17015,10 @@ CheckOffset(struct _GtkMenuToolButton,priv,80,2,45851)
 CheckTypeSize(struct _GtkMenuToolButton,144, 13765, 11)
 CheckMemberSize(struct _GtkMenuToolButton,priv,8,11,45851)
 CheckOffset(struct _GtkMenuToolButton,priv,136,11,45851)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuToolButton,144, 13765, 3)
+CheckMemberSize(struct _GtkMenuToolButton,priv,8,3,45851)
+CheckOffset(struct _GtkMenuToolButton,priv,136,3,45851)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13765,0);
 Msg("Find size of _GtkMenuToolButton (13765)\n");
@@ -14391,6 +17028,8 @@ Msg("Find size of _GtkMenuToolButton (13765)\n");
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13767,0);
 Msg("Find size of GtkMenuToolButtonPrivate (13767)\n");
@@ -14400,6 +17039,8 @@ Msg("Find size of GtkMenuToolButtonPrivate (13767)\n");
 CheckTypeSize(GtkMenuToolButtonPrivate *,4, 13768, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuToolButtonPrivate *,8, 13768, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuToolButtonPrivate *,8, 13768, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13768,0);
 Msg("Find size of GtkMenuToolButtonPrivate * (13768)\n");
@@ -14409,6 +17050,8 @@ Msg("Find size of GtkMenuToolButtonPrivate * (13768)\n");
 CheckTypeSize(GtkMenuToolButton,84, 13769, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuToolButton,144, 13769, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuToolButton,144, 13769, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13769,0);
 Msg("Find size of GtkMenuToolButton (13769)\n");
@@ -14418,6 +17061,8 @@ Msg("Find size of GtkMenuToolButton (13769)\n");
 CheckTypeSize(GtkMenuToolButton *,4, 13770, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuToolButton *,8, 13770, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuToolButton *,8, 13770, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13770,0);
 Msg("Find size of GtkMenuToolButton * (13770)\n");
@@ -14431,6 +17076,10 @@ CheckOffset(struct _GtkRadioToolButton,parent,0,2,45854)
 CheckTypeSize(struct _GtkRadioToolButton,144, 13771, 11)
 Msg("Missing member data for _GtkRadioToolButton on x86-64\n");
 CheckOffset(struct _GtkRadioToolButton,parent,0,11,45854)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioToolButton,144, 13771, 3)
+Msg("Missing member data for _GtkRadioToolButton on IA64\n");
+CheckOffset(struct _GtkRadioToolButton,parent,0,3,45854)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13771,0);
 Msg("Find size of _GtkRadioToolButton (13771)\n");
@@ -14444,6 +17093,10 @@ CheckOffset(struct _GtkToggleToolButton,priv,80,2,45853)
 CheckTypeSize(struct _GtkToggleToolButton,144, 13772, 11)
 CheckMemberSize(struct _GtkToggleToolButton,priv,8,11,45853)
 CheckOffset(struct _GtkToggleToolButton,priv,136,11,45853)
+#elif __ia64__
+CheckTypeSize(struct _GtkToggleToolButton,144, 13772, 3)
+CheckMemberSize(struct _GtkToggleToolButton,priv,8,3,45853)
+CheckOffset(struct _GtkToggleToolButton,priv,136,3,45853)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13772,0);
 Msg("Find size of _GtkToggleToolButton (13772)\n");
@@ -14453,6 +17106,8 @@ Msg("Find size of _GtkToggleToolButton (13772)\n");
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13774,0);
 Msg("Find size of GtkToggleToolButtonPrivate (13774)\n");
@@ -14462,6 +17117,8 @@ Msg("Find size of GtkToggleToolButtonPrivate (13774)\n");
 CheckTypeSize(GtkToggleToolButtonPrivate *,4, 13775, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleToolButtonPrivate *,8, 13775, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleToolButtonPrivate *,8, 13775, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13775,0);
 Msg("Find size of GtkToggleToolButtonPrivate * (13775)\n");
@@ -14471,6 +17128,8 @@ Msg("Find size of GtkToggleToolButtonPrivate * (13775)\n");
 CheckTypeSize(GtkToggleToolButton,84, 13776, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleToolButton,144, 13776, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleToolButton,144, 13776, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13776,0);
 Msg("Find size of GtkToggleToolButton (13776)\n");
@@ -14480,6 +17139,8 @@ Msg("Find size of GtkToggleToolButton (13776)\n");
 CheckTypeSize(GtkRadioToolButton,84, 13777, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioToolButton,144, 13777, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioToolButton,144, 13777, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13777,0);
 Msg("Find size of GtkRadioToolButton (13777)\n");
@@ -14489,6 +17150,8 @@ Msg("Find size of GtkRadioToolButton (13777)\n");
 CheckTypeSize(GtkRadioToolButton *,4, 13778, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioToolButton *,8, 13778, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioToolButton *,8, 13778, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13778,0);
 Msg("Find size of GtkRadioToolButton * (13778)\n");
@@ -14510,6 +17173,14 @@ CheckMemberSize(struct _GtkSizeGroup,mode,1,11,45857)
 CheckOffset(struct _GtkSizeGroup,mode,32,11,45857)
 CheckMemberSize(struct _GtkSizeGroup,requisition,8,11,45860)
 CheckOffset(struct _GtkSizeGroup,requisition,36,11,45860)
+#elif __ia64__
+CheckTypeSize(struct _GtkSizeGroup,48, 13779, 3)
+CheckMemberSize(struct _GtkSizeGroup,widgets,8,3,45856)
+CheckOffset(struct _GtkSizeGroup,widgets,24,3,45856)
+CheckMemberSize(struct _GtkSizeGroup,mode,1,3,45857)
+CheckOffset(struct _GtkSizeGroup,mode,32,3,45857)
+CheckMemberSize(struct _GtkSizeGroup,requisition,8,3,45860)
+CheckOffset(struct _GtkSizeGroup,requisition,36,3,45860)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13779,0);
 Msg("Find size of _GtkSizeGroup (13779)\n");
@@ -14519,6 +17190,8 @@ Msg("Find size of _GtkSizeGroup (13779)\n");
 CheckTypeSize(GtkSizeGroup,28, 13780, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSizeGroup,48, 13780, 11)
+#elif __ia64__
+CheckTypeSize(GtkSizeGroup,48, 13780, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13780,0);
 Msg("Find size of GtkSizeGroup (13780)\n");
@@ -14528,6 +17201,8 @@ Msg("Find size of GtkSizeGroup (13780)\n");
 CheckTypeSize(GtkSizeGroup *,4, 13781, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSizeGroup *,8, 13781, 11)
+#elif __ia64__
+CheckTypeSize(GtkSizeGroup *,8, 13781, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13781,0);
 Msg("Find size of GtkSizeGroup * (13781)\n");
@@ -14543,6 +17218,11 @@ CheckEnum("GTK_SIZE_GROUP_NONE",GTK_SIZE_GROUP_NONE,0);
 CheckEnum("GTK_SIZE_GROUP_HORIZONTAL",GTK_SIZE_GROUP_HORIZONTAL,1);
 CheckEnum("GTK_SIZE_GROUP_VERTICAL",GTK_SIZE_GROUP_VERTICAL,2);
 CheckEnum("GTK_SIZE_GROUP_BOTH",GTK_SIZE_GROUP_BOTH,3);
+#elif __ia64__
+CheckEnum("GTK_SIZE_GROUP_NONE",GTK_SIZE_GROUP_NONE,0);
+CheckEnum("GTK_SIZE_GROUP_HORIZONTAL",GTK_SIZE_GROUP_HORIZONTAL,1);
+CheckEnum("GTK_SIZE_GROUP_VERTICAL",GTK_SIZE_GROUP_VERTICAL,2);
+CheckEnum("GTK_SIZE_GROUP_BOTH",GTK_SIZE_GROUP_BOTH,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13782,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3343 (13782)\n");
@@ -14552,6 +17232,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3343 (13782)\n");
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 11)
+#elif __ia64__
+CheckTypeSize(GtkSizeGroupMode,4, 13783, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13783,0);
 Msg("Find size of GtkSizeGroupMode (13783)\n");
@@ -14565,6 +17247,10 @@ CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
 CheckEnum("GTK_DIALOG_MODAL",GTK_DIALOG_MODAL,1);
 CheckEnum("GTK_DIALOG_DESTROY_WITH_PARENT",GTK_DIALOG_DESTROY_WITH_PARENT,2);
 CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
+#elif __ia64__
+CheckEnum("GTK_DIALOG_MODAL",GTK_DIALOG_MODAL,1);
+CheckEnum("GTK_DIALOG_DESTROY_WITH_PARENT",GTK_DIALOG_DESTROY_WITH_PARENT,2);
+CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13784,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1052 (13784)\n");
@@ -14574,6 +17260,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1052 (13784)\n");
 CheckTypeSize(GtkDialogFlags,4, 13785, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDialogFlags,4, 13785, 11)
+#elif __ia64__
+CheckTypeSize(GtkDialogFlags,4, 13785, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13785,0);
 Msg("Find size of GtkDialogFlags (13785)\n");
@@ -14581,6 +17269,7 @@ Msg("Find size of GtkDialogFlags (13785)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13786,0);
 Msg("Find size of fptr_gtk_2178 (13786)\n");
@@ -14590,6 +17279,8 @@ Msg("Find size of fptr_gtk_2178 (13786)\n");
 CheckTypeSize(GtkTreeSelectionForeachFunc,4, 13787, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeSelectionForeachFunc,8, 13787, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeSelectionForeachFunc,8, 13787, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13787,0);
 Msg("Find size of GtkTreeSelectionForeachFunc (13787)\n");
@@ -14603,6 +17294,10 @@ CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
 CheckEnum("GTK_ICON_LOOKUP_NO_SVG",GTK_ICON_LOOKUP_NO_SVG,1);
 CheckEnum("GTK_ICON_LOOKUP_FORCE_SVG",GTK_ICON_LOOKUP_FORCE_SVG,2);
 CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
+#elif __ia64__
+CheckEnum("GTK_ICON_LOOKUP_NO_SVG",GTK_ICON_LOOKUP_NO_SVG,1);
+CheckEnum("GTK_ICON_LOOKUP_FORCE_SVG",GTK_ICON_LOOKUP_FORCE_SVG,2);
+CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13788,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1937 (13788)\n");
@@ -14612,6 +17307,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1937 (13788)\n");
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconLookupFlags,4, 13789, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13789,0);
 Msg("Find size of GtkIconLookupFlags (13789)\n");
@@ -14619,6 +17316,7 @@ Msg("Find size of GtkIconLookupFlags (13789)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13790,0);
 Msg("Find size of fptr_gtk_7225 (13790)\n");
@@ -14628,6 +17326,8 @@ Msg("Find size of fptr_gtk_7225 (13790)\n");
 CheckTypeSize(GtkTreeViewSearchEqualFunc,4, 13791, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewSearchEqualFunc,8, 13791, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewSearchEqualFunc,8, 13791, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13791,0);
 Msg("Find size of GtkTreeViewSearchEqualFunc (13791)\n");
@@ -14641,6 +17341,10 @@ CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
 CheckEnum("GTK_PIXELS",GTK_PIXELS,0);
 CheckEnum("GTK_INCHES",GTK_INCHES,1);
 CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
+#elif __ia64__
+CheckEnum("GTK_PIXELS",GTK_PIXELS,0);
+CheckEnum("GTK_INCHES",GTK_INCHES,1);
+CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13792,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3100 (13792)\n");
@@ -14650,6 +17354,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3100 (13792)\n");
 CheckTypeSize(GtkMetricType,4, 13793, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMetricType,4, 13793, 11)
+#elif __ia64__
+CheckTypeSize(GtkMetricType,4, 13793, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13793,0);
 Msg("Find size of GtkMetricType (13793)\n");
@@ -14675,6 +17381,16 @@ CheckMemberSize(struct _GtkIMContextSimple,tentative_match,4,11,45886)
 CheckOffset(struct _GtkIMContextSimple,tentative_match,64,11,45886)
 CheckMemberSize(struct _GtkIMContextSimple,tentative_match_len,4,11,45887)
 CheckOffset(struct _GtkIMContextSimple,tentative_match_len,68,11,45887)
+#elif __ia64__
+CheckTypeSize(struct _GtkIMContextSimple,80, 13794, 3)
+CheckMemberSize(struct _GtkIMContextSimple,tables,8,3,45884)
+CheckOffset(struct _GtkIMContextSimple,tables,24,3,45884)
+CheckMemberSize(struct _GtkIMContextSimple,compose_buffer,32,3,45885)
+CheckOffset(struct _GtkIMContextSimple,compose_buffer,32,3,45885)
+CheckMemberSize(struct _GtkIMContextSimple,tentative_match,4,3,45886)
+CheckOffset(struct _GtkIMContextSimple,tentative_match,64,3,45886)
+CheckMemberSize(struct _GtkIMContextSimple,tentative_match_len,4,3,45887)
+CheckOffset(struct _GtkIMContextSimple,tentative_match_len,68,3,45887)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13794,0);
 Msg("Find size of _GtkIMContextSimple (13794)\n");
@@ -14687,6 +17403,8 @@ Msg("Find size of _GtkIMContextSimple (13794)\n");
 CheckTypeSize(GtkIMContextSimple,60, 13796, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMContextSimple,80, 13796, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMContextSimple,80, 13796, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13796,0);
 Msg("Find size of GtkIMContextSimple (13796)\n");
@@ -14696,6 +17414,8 @@ Msg("Find size of GtkIMContextSimple (13796)\n");
 CheckTypeSize(GtkIMContextSimple *,4, 13797, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMContextSimple *,8, 13797, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMContextSimple *,8, 13797, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13797,0);
 Msg("Find size of GtkIMContextSimple * (13797)\n");
@@ -14705,6 +17425,8 @@ Msg("Find size of GtkIMContextSimple * (13797)\n");
 CheckTypeSize(guint16 *,4, 13798, 2)
 #elif __x86_64__
 CheckTypeSize(guint16 *,8, 13798, 11)
+#elif __ia64__
+CheckTypeSize(guint16 *,8, 13798, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13798,0);
 Msg("Find size of guint16 * (13798)\n");
@@ -14712,6 +17434,7 @@ Msg("Find size of guint16 * (13798)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13799,0);
 Msg("Find size of fptr_gtk_2111 (13799)\n");
@@ -14721,6 +17444,8 @@ Msg("Find size of fptr_gtk_2111 (13799)\n");
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,4, 13800, 2)
 #elif __x86_64__
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,8, 13800, 11)
+#elif __ia64__
+CheckTypeSize(GtkClipboardTargetsReceivedFunc,8, 13800, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13800,0);
 Msg("Find size of GtkClipboardTargetsReceivedFunc (13800)\n");
@@ -14730,6 +17455,8 @@ Msg("Find size of GtkClipboardTargetsReceivedFunc (13800)\n");
 CheckTypeSize(GtkToggleToolButton *,4, 13801, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleToolButton *,8, 13801, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleToolButton *,8, 13801, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13801,0);
 Msg("Find size of GtkToggleToolButton * (13801)\n");
@@ -14743,6 +17470,10 @@ CheckEnum("GTK_FILL",GTK_FILL,4);
 CheckEnum("GTK_EXPAND",GTK_EXPAND,1);
 CheckEnum("GTK_SHRINK",GTK_SHRINK,2);
 CheckEnum("GTK_FILL",GTK_FILL,4);
+#elif __ia64__
+CheckEnum("GTK_EXPAND",GTK_EXPAND,1);
+CheckEnum("GTK_SHRINK",GTK_SHRINK,2);
+CheckEnum("GTK_FILL",GTK_FILL,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13802,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3469 (13802)\n");
@@ -14752,6 +17483,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3469 (13802)\n");
 CheckTypeSize(GtkAttachOptions,4, 13803, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAttachOptions,4, 13803, 11)
+#elif __ia64__
+CheckTypeSize(GtkAttachOptions,4, 13803, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13803,0);
 Msg("Find size of GtkAttachOptions (13803)\n");
@@ -14817,6 +17550,36 @@ CheckMemberSize(struct _GtkFontSelection,size,4,11,45909)
 CheckOffset(struct _GtkFontSelection,size,224,11,45909)
 CheckMemberSize(struct _GtkFontSelection,font,8,11,45910)
 CheckOffset(struct _GtkFontSelection,font,232,11,45910)
+#elif __ia64__
+CheckTypeSize(struct _GtkFontSelection,240, 13804, 3)
+CheckMemberSize(struct _GtkFontSelection,font_entry,8,3,45897)
+CheckOffset(struct _GtkFontSelection,font_entry,128,3,45897)
+CheckMemberSize(struct _GtkFontSelection,family_list,8,3,45898)
+CheckOffset(struct _GtkFontSelection,family_list,136,3,45898)
+CheckMemberSize(struct _GtkFontSelection,font_style_entry,8,3,45899)
+CheckOffset(struct _GtkFontSelection,font_style_entry,144,3,45899)
+CheckMemberSize(struct _GtkFontSelection,face_list,8,3,45900)
+CheckOffset(struct _GtkFontSelection,face_list,152,3,45900)
+CheckMemberSize(struct _GtkFontSelection,size_entry,8,3,45901)
+CheckOffset(struct _GtkFontSelection,size_entry,160,3,45901)
+CheckMemberSize(struct _GtkFontSelection,size_list,8,3,45902)
+CheckOffset(struct _GtkFontSelection,size_list,168,3,45902)
+CheckMemberSize(struct _GtkFontSelection,pixels_button,8,3,45903)
+CheckOffset(struct _GtkFontSelection,pixels_button,176,3,45903)
+CheckMemberSize(struct _GtkFontSelection,points_button,8,3,45904)
+CheckOffset(struct _GtkFontSelection,points_button,184,3,45904)
+CheckMemberSize(struct _GtkFontSelection,filter_button,8,3,45905)
+CheckOffset(struct _GtkFontSelection,filter_button,192,3,45905)
+CheckMemberSize(struct _GtkFontSelection,preview_entry,8,3,45906)
+CheckOffset(struct _GtkFontSelection,preview_entry,200,3,45906)
+CheckMemberSize(struct _GtkFontSelection,family,8,3,45907)
+CheckOffset(struct _GtkFontSelection,family,208,3,45907)
+CheckMemberSize(struct _GtkFontSelection,face,8,3,45908)
+CheckOffset(struct _GtkFontSelection,face,216,3,45908)
+CheckMemberSize(struct _GtkFontSelection,size,4,3,45909)
+CheckOffset(struct _GtkFontSelection,size,224,3,45909)
+CheckMemberSize(struct _GtkFontSelection,font,8,3,45910)
+CheckOffset(struct _GtkFontSelection,font,232,3,45910)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13804,0);
 Msg("Find size of _GtkFontSelection (13804)\n");
@@ -14826,6 +17589,8 @@ Msg("Find size of _GtkFontSelection (13804)\n");
 CheckTypeSize(GtkFontSelection,132, 13805, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontSelection,240, 13805, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontSelection,240, 13805, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13805,0);
 Msg("Find size of GtkFontSelection (13805)\n");
@@ -14835,6 +17600,8 @@ Msg("Find size of GtkFontSelection (13805)\n");
 CheckTypeSize(GtkFontSelection *,4, 13806, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontSelection *,8, 13806, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontSelection *,8, 13806, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13806,0);
 Msg("Find size of GtkFontSelection * (13806)\n");
@@ -14844,6 +17611,8 @@ Msg("Find size of GtkFontSelection * (13806)\n");
 CheckTypeSize(const GtkTreePath,0, 13807, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkTreePath,0, 13807, 11)
+#elif __ia64__
+CheckTypeSize(const GtkTreePath,0, 13807, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13807,0);
 Msg("Find size of const GtkTreePath (13807)\n");
@@ -14851,6 +17620,7 @@ Msg("Find size of const GtkTreePath (13807)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13808,0);
 Msg("Find size of const GtkTreePath * (13808)\n");
@@ -14858,6 +17628,7 @@ Msg("Find size of const GtkTreePath * (13808)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13809,0);
 Msg("Find size of fptr_gtk_8404 (13809)\n");
@@ -14867,6 +17638,8 @@ Msg("Find size of fptr_gtk_8404 (13809)\n");
 CheckTypeSize(GtkClipboardTextReceivedFunc,4, 13810, 2)
 #elif __x86_64__
 CheckTypeSize(GtkClipboardTextReceivedFunc,8, 13810, 11)
+#elif __ia64__
+CheckTypeSize(GtkClipboardTextReceivedFunc,8, 13810, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13810,0);
 Msg("Find size of GtkClipboardTextReceivedFunc (13810)\n");
@@ -14874,6 +17647,7 @@ Msg("Find size of GtkClipboardTextReceivedFunc (13810)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13811,0);
 Msg("Find size of fptr_gtk_1732 (13811)\n");
@@ -14883,6 +17657,8 @@ Msg("Find size of fptr_gtk_1732 (13811)\n");
 CheckTypeSize(GtkAccelGroupFindFunc,4, 13812, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelGroupFindFunc,8, 13812, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelGroupFindFunc,8, 13812, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13812,0);
 Msg("Find size of GtkAccelGroupFindFunc (13812)\n");
@@ -14890,6 +17666,7 @@ Msg("Find size of GtkAccelGroupFindFunc (13812)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13813,0);
 Msg("Find size of fptr_gtk_6971 (13813)\n");
@@ -14899,6 +17676,8 @@ Msg("Find size of fptr_gtk_6971 (13813)\n");
 CheckTypeSize(GtkTreeDestroyCountFunc,4, 13814, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeDestroyCountFunc,8, 13814, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeDestroyCountFunc,8, 13814, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13814,0);
 Msg("Find size of GtkTreeDestroyCountFunc (13814)\n");
@@ -14906,6 +17685,7 @@ Msg("Find size of GtkTreeDestroyCountFunc (13814)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13815,0);
 Msg("Find size of GtkTreePath * * (13815)\n");
@@ -14921,6 +17701,11 @@ CheckEnum("GTK_TREE_VIEW_DROP_BEFORE",GTK_TREE_VIEW_DROP_BEFORE,0);
 CheckEnum("GTK_TREE_VIEW_DROP_AFTER",GTK_TREE_VIEW_DROP_AFTER,1);
 CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE",GTK_TREE_VIEW_DROP_INTO_OR_BEFORE,2);
 CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_AFTER",GTK_TREE_VIEW_DROP_INTO_OR_AFTER,3);
+#elif __ia64__
+CheckEnum("GTK_TREE_VIEW_DROP_BEFORE",GTK_TREE_VIEW_DROP_BEFORE,0);
+CheckEnum("GTK_TREE_VIEW_DROP_AFTER",GTK_TREE_VIEW_DROP_AFTER,1);
+CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE",GTK_TREE_VIEW_DROP_INTO_OR_BEFORE,2);
+CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_AFTER",GTK_TREE_VIEW_DROP_INTO_OR_AFTER,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13816,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4108 (13816)\n");
@@ -14930,6 +17715,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4108 (13816)\n");
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13817,0);
 Msg("Find size of GtkTreeViewDropPosition (13817)\n");
@@ -14939,6 +17726,8 @@ Msg("Find size of GtkTreeViewDropPosition (13817)\n");
 CheckTypeSize(GtkTreeViewDropPosition *,4, 13818, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewDropPosition *,8, 13818, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewDropPosition *,8, 13818, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13818,0);
 Msg("Find size of GtkTreeViewDropPosition * (13818)\n");
@@ -14946,6 +17735,7 @@ Msg("Find size of GtkTreeViewDropPosition * (13818)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13819,0);
 Msg("Find size of GdkImage * * (13819)\n");
@@ -14975,6 +17765,18 @@ CheckMemberSize(struct _GtkAspectFrame,obey_child,4,11,45929)
 CheckOffset(struct _GtkAspectFrame,obey_child,172,11,45929)
 CheckMemberSize(struct _GtkAspectFrame,center_allocation,16,11,45930)
 CheckOffset(struct _GtkAspectFrame,center_allocation,176,11,45930)
+#elif __ia64__
+CheckTypeSize(struct _GtkAspectFrame,192, 13820, 3)
+CheckMemberSize(struct _GtkAspectFrame,xalign,4,3,45926)
+CheckOffset(struct _GtkAspectFrame,xalign,160,3,45926)
+CheckMemberSize(struct _GtkAspectFrame,yalign,4,3,45927)
+CheckOffset(struct _GtkAspectFrame,yalign,164,3,45927)
+CheckMemberSize(struct _GtkAspectFrame,ratio,4,3,45928)
+CheckOffset(struct _GtkAspectFrame,ratio,168,3,45928)
+CheckMemberSize(struct _GtkAspectFrame,obey_child,4,3,45929)
+CheckOffset(struct _GtkAspectFrame,obey_child,172,3,45929)
+CheckMemberSize(struct _GtkAspectFrame,center_allocation,16,3,45930)
+CheckOffset(struct _GtkAspectFrame,center_allocation,176,3,45930)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13820,0);
 Msg("Find size of _GtkAspectFrame (13820)\n");
@@ -14984,6 +17786,8 @@ Msg("Find size of _GtkAspectFrame (13820)\n");
 CheckTypeSize(GtkAspectFrame,136, 13821, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAspectFrame,192, 13821, 11)
+#elif __ia64__
+CheckTypeSize(GtkAspectFrame,192, 13821, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13821,0);
 Msg("Find size of GtkAspectFrame (13821)\n");
@@ -14993,6 +17797,8 @@ Msg("Find size of GtkAspectFrame (13821)\n");
 CheckTypeSize(GtkAspectFrame *,4, 13822, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAspectFrame *,8, 13822, 11)
+#elif __ia64__
+CheckTypeSize(GtkAspectFrame *,8, 13822, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13822,0);
 Msg("Find size of GtkAspectFrame * (13822)\n");
@@ -15000,6 +17806,7 @@ Msg("Find size of GtkAspectFrame * (13822)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13823,0);
 Msg("Find size of fptr_gtk_7309 (13823)\n");
@@ -15009,6 +17816,8 @@ Msg("Find size of fptr_gtk_7309 (13823)\n");
 CheckTypeSize(GtkFileFilterFunc,4, 13824, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileFilterFunc,8, 13824, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileFilterFunc,8, 13824, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13824,0);
 Msg("Find size of GtkFileFilterFunc (13824)\n");
@@ -15016,6 +17825,7 @@ Msg("Find size of GtkFileFilterFunc (13824)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13825,0);
 Msg("Find size of GdkColor * * (13825)\n");
@@ -15037,6 +17847,14 @@ CheckMemberSize(struct _GtkIMMulticontext,priv,8,11,45935)
 CheckOffset(struct _GtkIMMulticontext,priv,32,11,45935)
 CheckMemberSize(struct _GtkIMMulticontext,context_id,8,11,45936)
 CheckOffset(struct _GtkIMMulticontext,context_id,40,11,45936)
+#elif __ia64__
+CheckTypeSize(struct _GtkIMMulticontext,48, 13826, 3)
+CheckMemberSize(struct _GtkIMMulticontext,slave,8,3,45934)
+CheckOffset(struct _GtkIMMulticontext,slave,24,3,45934)
+CheckMemberSize(struct _GtkIMMulticontext,priv,8,3,45935)
+CheckOffset(struct _GtkIMMulticontext,priv,32,3,45935)
+CheckMemberSize(struct _GtkIMMulticontext,context_id,8,3,45936)
+CheckOffset(struct _GtkIMMulticontext,context_id,40,3,45936)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13826,0);
 Msg("Find size of _GtkIMMulticontext (13826)\n");
@@ -15046,6 +17864,8 @@ Msg("Find size of _GtkIMMulticontext (13826)\n");
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13828,0);
 Msg("Find size of GtkIMMulticontextPrivate (13828)\n");
@@ -15055,6 +17875,8 @@ Msg("Find size of GtkIMMulticontextPrivate (13828)\n");
 CheckTypeSize(GtkIMMulticontextPrivate *,4, 13829, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMMulticontextPrivate *,8, 13829, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMMulticontextPrivate *,8, 13829, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13829,0);
 Msg("Find size of GtkIMMulticontextPrivate * (13829)\n");
@@ -15064,6 +17886,8 @@ Msg("Find size of GtkIMMulticontextPrivate * (13829)\n");
 CheckTypeSize(GtkIMMulticontext,24, 13830, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMMulticontext,48, 13830, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMMulticontext,48, 13830, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13830,0);
 Msg("Find size of GtkIMMulticontext (13830)\n");
@@ -15073,6 +17897,8 @@ Msg("Find size of GtkIMMulticontext (13830)\n");
 CheckTypeSize(GtkIMMulticontext *,4, 13831, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMMulticontext *,8, 13831, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMMulticontext *,8, 13831, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13831,0);
 Msg("Find size of GtkIMMulticontext * (13831)\n");
@@ -15082,6 +17908,8 @@ Msg("Find size of GtkIMMulticontext * (13831)\n");
 CheckTypeSize(const GtkStockItem,20, 13832, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkStockItem,32, 13832, 11)
+#elif __ia64__
+CheckTypeSize(const GtkStockItem,32, 13832, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13832,0);
 Msg("Find size of const GtkStockItem (13832)\n");
@@ -15089,6 +17917,7 @@ Msg("Find size of const GtkStockItem (13832)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13833,0);
 Msg("Find size of const GtkStockItem * (13833)\n");
@@ -15104,6 +17933,11 @@ CheckEnum("GTK_MESSAGE_INFO",GTK_MESSAGE_INFO,0);
 CheckEnum("GTK_MESSAGE_WARNING",GTK_MESSAGE_WARNING,1);
 CheckEnum("GTK_MESSAGE_QUESTION",GTK_MESSAGE_QUESTION,2);
 CheckEnum("GTK_MESSAGE_ERROR",GTK_MESSAGE_ERROR,3);
+#elif __ia64__
+CheckEnum("GTK_MESSAGE_INFO",GTK_MESSAGE_INFO,0);
+CheckEnum("GTK_MESSAGE_WARNING",GTK_MESSAGE_WARNING,1);
+CheckEnum("GTK_MESSAGE_QUESTION",GTK_MESSAGE_QUESTION,2);
+CheckEnum("GTK_MESSAGE_ERROR",GTK_MESSAGE_ERROR,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13834,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2588 (13834)\n");
@@ -15113,6 +17947,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2588 (13834)\n");
 CheckTypeSize(GtkMessageType,4, 13835, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMessageType,4, 13835, 11)
+#elif __ia64__
+CheckTypeSize(GtkMessageType,4, 13835, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13835,0);
 Msg("Find size of GtkMessageType (13835)\n");
@@ -15132,6 +17968,13 @@ CheckEnum("GTK_BUTTONS_CLOSE",GTK_BUTTONS_CLOSE,2);
 CheckEnum("GTK_BUTTONS_CANCEL",GTK_BUTTONS_CANCEL,3);
 CheckEnum("GTK_BUTTONS_YES_NO",GTK_BUTTONS_YES_NO,4);
 CheckEnum("GTK_BUTTONS_OK_CANCEL",GTK_BUTTONS_OK_CANCEL,5);
+#elif __ia64__
+CheckEnum("GTK_BUTTONS_NONE",GTK_BUTTONS_NONE,0);
+CheckEnum("GTK_BUTTONS_OK",GTK_BUTTONS_OK,1);
+CheckEnum("GTK_BUTTONS_CLOSE",GTK_BUTTONS_CLOSE,2);
+CheckEnum("GTK_BUTTONS_CANCEL",GTK_BUTTONS_CANCEL,3);
+CheckEnum("GTK_BUTTONS_YES_NO",GTK_BUTTONS_YES_NO,4);
+CheckEnum("GTK_BUTTONS_OK_CANCEL",GTK_BUTTONS_OK_CANCEL,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13836,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2589 (13836)\n");
@@ -15141,6 +17984,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2589 (13836)\n");
 CheckTypeSize(GtkButtonsType,4, 13837, 2)
 #elif __x86_64__
 CheckTypeSize(GtkButtonsType,4, 13837, 11)
+#elif __ia64__
+CheckTypeSize(GtkButtonsType,4, 13837, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13837,0);
 Msg("Find size of GtkButtonsType (13837)\n");
@@ -15148,6 +17993,7 @@ Msg("Find size of GtkButtonsType (13837)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13838,0);
 Msg("Find size of GtkWidget * * (13838)\n");
@@ -15155,6 +18001,7 @@ Msg("Find size of GtkWidget * * (13838)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13839,0);
 Msg("Find size of fptr_gtk_5985 (13839)\n");
@@ -15164,6 +18011,8 @@ Msg("Find size of fptr_gtk_5985 (13839)\n");
 CheckTypeSize(GtkAccelMapForeach,4, 13840, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelMapForeach,8, 13840, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelMapForeach,8, 13840, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13840,0);
 Msg("Find size of GtkAccelMapForeach (13840)\n");
@@ -15173,6 +18022,8 @@ Msg("Find size of GtkAccelMapForeach (13840)\n");
 CheckTypeSize(GtkPackType *,4, 13841, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPackType *,8, 13841, 11)
+#elif __ia64__
+CheckTypeSize(GtkPackType *,8, 13841, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13841,0);
 Msg("Find size of GtkPackType * (13841)\n");
@@ -15186,6 +18037,10 @@ CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
 CheckEnum("GTK_POLICY_ALWAYS",GTK_POLICY_ALWAYS,0);
 CheckEnum("GTK_POLICY_AUTOMATIC",GTK_POLICY_AUTOMATIC,1);
 CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
+#elif __ia64__
+CheckEnum("GTK_POLICY_ALWAYS",GTK_POLICY_ALWAYS,0);
+CheckEnum("GTK_POLICY_AUTOMATIC",GTK_POLICY_AUTOMATIC,1);
+CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13842,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3198 (13842)\n");
@@ -15195,6 +18050,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3198 (13842)\n");
 CheckTypeSize(GtkPolicyType,4, 13843, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPolicyType,4, 13843, 11)
+#elif __ia64__
+CheckTypeSize(GtkPolicyType,4, 13843, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13843,0);
 Msg("Find size of GtkPolicyType (13843)\n");
@@ -15204,6 +18061,8 @@ Msg("Find size of GtkPolicyType (13843)\n");
 CheckTypeSize(GtkPolicyType *,4, 13844, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPolicyType *,8, 13844, 11)
+#elif __ia64__
+CheckTypeSize(GtkPolicyType *,8, 13844, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13844,0);
 Msg("Find size of GtkPolicyType * (13844)\n");
@@ -15217,6 +18076,10 @@ CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
 CheckEnum("GTK_RESIZE_PARENT",GTK_RESIZE_PARENT,0);
 CheckEnum("GTK_RESIZE_QUEUE",GTK_RESIZE_QUEUE,1);
 CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
+#elif __ia64__
+CheckEnum("GTK_RESIZE_PARENT",GTK_RESIZE_PARENT,0);
+CheckEnum("GTK_RESIZE_QUEUE",GTK_RESIZE_QUEUE,1);
+CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13845,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-933 (13845)\n");
@@ -15226,6 +18089,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-933 (13845)\n");
 CheckTypeSize(GtkResizeMode,4, 13846, 2)
 #elif __x86_64__
 CheckTypeSize(GtkResizeMode,4, 13846, 11)
+#elif __ia64__
+CheckTypeSize(GtkResizeMode,4, 13846, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13846,0);
 Msg("Find size of GtkResizeMode (13846)\n");
@@ -15233,6 +18098,7 @@ Msg("Find size of GtkResizeMode (13846)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13847,0);
 Msg("Find size of fptr_gtk_8682 (13847)\n");
@@ -15242,6 +18108,8 @@ Msg("Find size of fptr_gtk_8682 (13847)\n");
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,4, 13848, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,8, 13848, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,8, 13848, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13848,0);
 Msg("Find size of GtkColorSelectionChangePaletteWithScreenFunc (13848)\n");
@@ -15249,6 +18117,7 @@ Msg("Find size of GtkColorSelectionChangePaletteWithScreenFunc (13848)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13849,0);
 Msg("Find size of fptr_gtk_3639 (13849)\n");
@@ -15258,6 +18127,8 @@ Msg("Find size of fptr_gtk_3639 (13849)\n");
 CheckTypeSize(GtkClipboardReceivedFunc,4, 13850, 2)
 #elif __x86_64__
 CheckTypeSize(GtkClipboardReceivedFunc,8, 13850, 11)
+#elif __ia64__
+CheckTypeSize(GtkClipboardReceivedFunc,8, 13850, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13850,0);
 Msg("Find size of GtkClipboardReceivedFunc (13850)\n");
@@ -15265,6 +18136,7 @@ Msg("Find size of GtkClipboardReceivedFunc (13850)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13851,0);
 Msg("Find size of GtkTreeViewColumn * * (13851)\n");
@@ -15272,6 +18144,7 @@ Msg("Find size of GtkTreeViewColumn * * (13851)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13852,0);
 Msg("Find size of fptr_gtk_7432 (13852)\n");
@@ -15281,6 +18154,8 @@ Msg("Find size of fptr_gtk_7432 (13852)\n");
 CheckTypeSize(GtkTreeViewMappingFunc,4, 13853, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewMappingFunc,8, 13853, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewMappingFunc,8, 13853, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13853,0);
 Msg("Find size of GtkTreeViewMappingFunc (13853)\n");
@@ -15290,6 +18165,8 @@ Msg("Find size of GtkTreeViewMappingFunc (13853)\n");
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,4, 13854, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,8, 13854, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelFilterVisibleFunc,8, 13854, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13854,0);
 Msg("Find size of GtkTreeModelFilterVisibleFunc (13854)\n");
@@ -15301,6 +18178,9 @@ CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
 #elif __x86_64__
 CheckEnum("GTK_TEXT_SEARCH_VISIBLE_ONLY",GTK_TEXT_SEARCH_VISIBLE_ONLY,1);
 CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
+#elif __ia64__
+CheckEnum("GTK_TEXT_SEARCH_VISIBLE_ONLY",GTK_TEXT_SEARCH_VISIBLE_ONLY,1);
+CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13855,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3602 (13855)\n");
@@ -15310,6 +18190,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3602 (13855)\n");
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextSearchFlags,4, 13856, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13856,0);
 Msg("Find size of GtkTextSearchFlags (13856)\n");
@@ -15323,6 +18205,10 @@ CheckOffset(struct _GtkFixed,children,68,2,45970)
 CheckTypeSize(struct _GtkFixed,120, 13857, 11)
 CheckMemberSize(struct _GtkFixed,children,8,11,45970)
 CheckOffset(struct _GtkFixed,children,112,11,45970)
+#elif __ia64__
+CheckTypeSize(struct _GtkFixed,120, 13857, 3)
+CheckMemberSize(struct _GtkFixed,children,8,3,45970)
+CheckOffset(struct _GtkFixed,children,112,3,45970)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13857,0);
 Msg("Find size of _GtkFixed (13857)\n");
@@ -15332,6 +18218,8 @@ Msg("Find size of _GtkFixed (13857)\n");
 CheckTypeSize(GtkFixed,72, 13858, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFixed,120, 13858, 11)
+#elif __ia64__
+CheckTypeSize(GtkFixed,120, 13858, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13858,0);
 Msg("Find size of GtkFixed (13858)\n");
@@ -15341,6 +18229,8 @@ Msg("Find size of GtkFixed (13858)\n");
 CheckTypeSize(GtkFixed *,4, 13859, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFixed *,8, 13859, 11)
+#elif __ia64__
+CheckTypeSize(GtkFixed *,8, 13859, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13859,0);
 Msg("Find size of GtkFixed * (13859)\n");
@@ -15356,6 +18246,11 @@ CheckEnum("GTK_DEST_DEFAULT_MOTION",GTK_DEST_DEFAULT_MOTION,1);
 CheckEnum("GTK_DEST_DEFAULT_HIGHLIGHT",GTK_DEST_DEFAULT_HIGHLIGHT,2);
 CheckEnum("GTK_DEST_DEFAULT_DROP",GTK_DEST_DEFAULT_DROP,4);
 CheckEnum("GTK_DEST_DEFAULT_ALL",GTK_DEST_DEFAULT_ALL,7);
+#elif __ia64__
+CheckEnum("GTK_DEST_DEFAULT_MOTION",GTK_DEST_DEFAULT_MOTION,1);
+CheckEnum("GTK_DEST_DEFAULT_HIGHLIGHT",GTK_DEST_DEFAULT_HIGHLIGHT,2);
+CheckEnum("GTK_DEST_DEFAULT_DROP",GTK_DEST_DEFAULT_DROP,4);
+CheckEnum("GTK_DEST_DEFAULT_ALL",GTK_DEST_DEFAULT_ALL,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13860,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1076 (13860)\n");
@@ -15365,6 +18260,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1076 (13860)\n");
 CheckTypeSize(GtkDestDefaults,4, 13861, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDestDefaults,4, 13861, 11)
+#elif __ia64__
+CheckTypeSize(GtkDestDefaults,4, 13861, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13861,0);
 Msg("Find size of GtkDestDefaults (13861)\n");
@@ -15372,6 +18269,7 @@ Msg("Find size of GtkDestDefaults (13861)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13862,0);
 Msg("Find size of fptr_gtk_6207 (13862)\n");
@@ -15381,6 +18279,8 @@ Msg("Find size of fptr_gtk_6207 (13862)\n");
 CheckTypeSize(GtkKeySnoopFunc,4, 13863, 2)
 #elif __x86_64__
 CheckTypeSize(GtkKeySnoopFunc,8, 13863, 11)
+#elif __ia64__
+CheckTypeSize(GtkKeySnoopFunc,8, 13863, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13863,0);
 Msg("Find size of GtkKeySnoopFunc (13863)\n");
@@ -15402,6 +18302,14 @@ CheckEnum("GTK_SPIN_PAGE_BACKWARD",GTK_SPIN_PAGE_BACKWARD,3);
 CheckEnum("GTK_SPIN_HOME",GTK_SPIN_HOME,4);
 CheckEnum("GTK_SPIN_END",GTK_SPIN_END,5);
 CheckEnum("GTK_SPIN_USER_DEFINED",GTK_SPIN_USER_DEFINED,6);
+#elif __ia64__
+CheckEnum("GTK_SPIN_STEP_FORWARD",GTK_SPIN_STEP_FORWARD,0);
+CheckEnum("GTK_SPIN_STEP_BACKWARD",GTK_SPIN_STEP_BACKWARD,1);
+CheckEnum("GTK_SPIN_PAGE_FORWARD",GTK_SPIN_PAGE_FORWARD,2);
+CheckEnum("GTK_SPIN_PAGE_BACKWARD",GTK_SPIN_PAGE_BACKWARD,3);
+CheckEnum("GTK_SPIN_HOME",GTK_SPIN_HOME,4);
+CheckEnum("GTK_SPIN_END",GTK_SPIN_END,5);
+CheckEnum("GTK_SPIN_USER_DEFINED",GTK_SPIN_USER_DEFINED,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13864,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3383 (13864)\n");
@@ -15411,6 +18319,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3383 (13864)\n");
 CheckTypeSize(GtkSpinType,4, 13865, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSpinType,4, 13865, 11)
+#elif __ia64__
+CheckTypeSize(GtkSpinType,4, 13865, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13865,0);
 Msg("Find size of GtkSpinType (13865)\n");
@@ -15422,6 +18332,9 @@ CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
 #elif __x86_64__
 CheckEnum("GTK_WINDOW_TOPLEVEL",GTK_WINDOW_TOPLEVEL,0);
 CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
+#elif __ia64__
+CheckEnum("GTK_WINDOW_TOPLEVEL",GTK_WINDOW_TOPLEVEL,0);
+CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13866,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4475 (13866)\n");
@@ -15431,6 +18344,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4475 (13866)\n");
 CheckTypeSize(GtkWindowType,4, 13867, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowType,4, 13867, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowType,4, 13867, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13867,0);
 Msg("Find size of GtkWindowType (13867)\n");
@@ -15438,6 +18353,7 @@ Msg("Find size of GtkWindowType (13867)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13868,0);
 Msg("Find size of GtkIconSet * * (13868)\n");
@@ -15445,6 +18361,7 @@ Msg("Find size of GtkIconSet * * (13868)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13869,0);
 Msg("Find size of fptr_gtk_9178 (13869)\n");
@@ -15454,6 +18371,8 @@ Msg("Find size of fptr_gtk_9178 (13869)\n");
 CheckTypeSize(GtkMenuDetachFunc,4, 13870, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuDetachFunc,8, 13870, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuDetachFunc,8, 13870, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13870,0);
 Msg("Find size of GtkMenuDetachFunc (13870)\n");
@@ -15471,6 +18390,12 @@ CheckMemberSize(struct _GtkInvisible,has_user_ref_count,4,11,45990)
 CheckOffset(struct _GtkInvisible,has_user_ref_count,96,11,45990)
 CheckMemberSize(struct _GtkInvisible,screen,8,11,45991)
 CheckOffset(struct _GtkInvisible,screen,104,11,45991)
+#elif __ia64__
+CheckTypeSize(struct _GtkInvisible,112, 13871, 3)
+CheckMemberSize(struct _GtkInvisible,has_user_ref_count,4,3,45990)
+CheckOffset(struct _GtkInvisible,has_user_ref_count,96,3,45990)
+CheckMemberSize(struct _GtkInvisible,screen,8,3,45991)
+CheckOffset(struct _GtkInvisible,screen,104,3,45991)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13871,0);
 Msg("Find size of _GtkInvisible (13871)\n");
@@ -15480,6 +18405,8 @@ Msg("Find size of _GtkInvisible (13871)\n");
 CheckTypeSize(GtkInvisible,68, 13872, 2)
 #elif __x86_64__
 CheckTypeSize(GtkInvisible,112, 13872, 11)
+#elif __ia64__
+CheckTypeSize(GtkInvisible,112, 13872, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13872,0);
 Msg("Find size of GtkInvisible (13872)\n");
@@ -15489,6 +18416,8 @@ Msg("Find size of GtkInvisible (13872)\n");
 CheckTypeSize(GtkInvisible *,4, 13873, 2)
 #elif __x86_64__
 CheckTypeSize(GtkInvisible *,8, 13873, 11)
+#elif __ia64__
+CheckTypeSize(GtkInvisible *,8, 13873, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13873,0);
 Msg("Find size of GtkInvisible * (13873)\n");
@@ -15506,6 +18435,12 @@ CheckEnum("GTK_WIN_POS_CENTER",GTK_WIN_POS_CENTER,1);
 CheckEnum("GTK_WIN_POS_MOUSE",GTK_WIN_POS_MOUSE,2);
 CheckEnum("GTK_WIN_POS_CENTER_ALWAYS",GTK_WIN_POS_CENTER_ALWAYS,3);
 CheckEnum("GTK_WIN_POS_CENTER_ON_PARENT",GTK_WIN_POS_CENTER_ON_PARENT,4);
+#elif __ia64__
+CheckEnum("GTK_WIN_POS_NONE",GTK_WIN_POS_NONE,0);
+CheckEnum("GTK_WIN_POS_CENTER",GTK_WIN_POS_CENTER,1);
+CheckEnum("GTK_WIN_POS_MOUSE",GTK_WIN_POS_MOUSE,2);
+CheckEnum("GTK_WIN_POS_CENTER_ALWAYS",GTK_WIN_POS_CENTER_ALWAYS,3);
+CheckEnum("GTK_WIN_POS_CENTER_ON_PARENT",GTK_WIN_POS_CENTER_ON_PARENT,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13874,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4474 (13874)\n");
@@ -15515,6 +18450,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4474 (13874)\n");
 CheckTypeSize(GtkWindowPosition,4, 13875, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowPosition,4, 13875, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowPosition,4, 13875, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13875,0);
 Msg("Find size of GtkWindowPosition (13875)\n");
@@ -15522,6 +18459,7 @@ Msg("Find size of GtkWindowPosition (13875)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13876,0);
 Msg("Find size of fptr_gtk_6229 (13876)\n");
@@ -15531,6 +18469,8 @@ Msg("Find size of fptr_gtk_6229 (13876)\n");
 CheckTypeSize(GtkTextTagTableForeach,4, 13877, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextTagTableForeach,8, 13877, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextTagTableForeach,8, 13877, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13877,0);
 Msg("Find size of GtkTextTagTableForeach (13877)\n");
@@ -15540,6 +18480,8 @@ Msg("Find size of GtkTextTagTableForeach (13877)\n");
 CheckTypeSize(GtkBin *,4, 13878, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBin *,8, 13878, 11)
+#elif __ia64__
+CheckTypeSize(GtkBin *,8, 13878, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13878,0);
 Msg("Find size of GtkBin * (13878)\n");
@@ -15547,6 +18489,7 @@ Msg("Find size of GtkBin * (13878)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13879,0);
 Msg("Find size of fptr_gtk_3406 (13879)\n");
@@ -15556,6 +18499,8 @@ Msg("Find size of fptr_gtk_3406 (13879)\n");
 CheckTypeSize(GtkEntryCompletionMatchFunc,4, 13880, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntryCompletionMatchFunc,8, 13880, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntryCompletionMatchFunc,8, 13880, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13880,0);
 Msg("Find size of GtkEntryCompletionMatchFunc (13880)\n");
@@ -15569,6 +18514,10 @@ CheckOffset(struct _GtkAccessible,widget,36,2,46004)
 CheckTypeSize(struct _GtkAccessible,80, 13881, 11)
 CheckMemberSize(struct _GtkAccessible,widget,8,11,46004)
 CheckOffset(struct _GtkAccessible,widget,72,11,46004)
+#elif __ia64__
+CheckTypeSize(struct _GtkAccessible,80, 13881, 3)
+CheckMemberSize(struct _GtkAccessible,widget,8,3,46004)
+CheckOffset(struct _GtkAccessible,widget,72,3,46004)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13881,0);
 Msg("Find size of _GtkAccessible (13881)\n");
@@ -15578,6 +18527,8 @@ Msg("Find size of _GtkAccessible (13881)\n");
 CheckTypeSize(GtkAccessible,40, 13882, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccessible,80, 13882, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccessible,80, 13882, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13882,0);
 Msg("Find size of GtkAccessible (13882)\n");
@@ -15587,6 +18538,8 @@ Msg("Find size of GtkAccessible (13882)\n");
 CheckTypeSize(GtkAccessible *,4, 13883, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccessible *,8, 13883, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccessible *,8, 13883, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13883,0);
 Msg("Find size of GtkAccessible * (13883)\n");
@@ -15602,6 +18555,11 @@ CheckEnum("GTK_EXPANDER_COLLAPSED",GTK_EXPANDER_COLLAPSED,0);
 CheckEnum("GTK_EXPANDER_SEMI_COLLAPSED",GTK_EXPANDER_SEMI_COLLAPSED,1);
 CheckEnum("GTK_EXPANDER_SEMI_EXPANDED",GTK_EXPANDER_SEMI_EXPANDED,2);
 CheckEnum("GTK_EXPANDER_EXPANDED",GTK_EXPANDER_EXPANDED,3);
+#elif __ia64__
+CheckEnum("GTK_EXPANDER_COLLAPSED",GTK_EXPANDER_COLLAPSED,0);
+CheckEnum("GTK_EXPANDER_SEMI_COLLAPSED",GTK_EXPANDER_SEMI_COLLAPSED,1);
+CheckEnum("GTK_EXPANDER_SEMI_EXPANDED",GTK_EXPANDER_SEMI_EXPANDED,2);
+CheckEnum("GTK_EXPANDER_EXPANDED",GTK_EXPANDER_EXPANDED,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13884,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3438 (13884)\n");
@@ -15611,6 +18569,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3438 (13884)\n");
 CheckTypeSize(GtkExpanderStyle,4, 13885, 2)
 #elif __x86_64__
 CheckTypeSize(GtkExpanderStyle,4, 13885, 11)
+#elif __ia64__
+CheckTypeSize(GtkExpanderStyle,4, 13885, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13885,0);
 Msg("Find size of GtkExpanderStyle (13885)\n");
@@ -15630,6 +18590,13 @@ CheckEnum("GTK_PATH_PRIO_APPLICATION",GTK_PATH_PRIO_APPLICATION,8);
 CheckEnum("GTK_PATH_PRIO_THEME",GTK_PATH_PRIO_THEME,10);
 CheckEnum("GTK_PATH_PRIO_RC",GTK_PATH_PRIO_RC,12);
 CheckEnum("GTK_PATH_PRIO_HIGHEST",GTK_PATH_PRIO_HIGHEST,15);
+#elif __ia64__
+CheckEnum("GTK_PATH_PRIO_LOWEST",GTK_PATH_PRIO_LOWEST,0);
+CheckEnum("GTK_PATH_PRIO_GTK",GTK_PATH_PRIO_GTK,4);
+CheckEnum("GTK_PATH_PRIO_APPLICATION",GTK_PATH_PRIO_APPLICATION,8);
+CheckEnum("GTK_PATH_PRIO_THEME",GTK_PATH_PRIO_THEME,10);
+CheckEnum("GTK_PATH_PRIO_RC",GTK_PATH_PRIO_RC,12);
+CheckEnum("GTK_PATH_PRIO_HIGHEST",GTK_PATH_PRIO_HIGHEST,15);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13886,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3069 (13886)\n");
@@ -15639,6 +18606,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3069 (13886)\n");
 CheckTypeSize(GtkPathPriorityType,4, 13887, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPathPriorityType,4, 13887, 11)
+#elif __ia64__
+CheckTypeSize(GtkPathPriorityType,4, 13887, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13887,0);
 Msg("Find size of GtkPathPriorityType (13887)\n");
@@ -15648,6 +18617,8 @@ Msg("Find size of GtkPathPriorityType (13887)\n");
 CheckTypeSize(GtkPathPriorityType *,4, 13888, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPathPriorityType *,8, 13888, 11)
+#elif __ia64__
+CheckTypeSize(GtkPathPriorityType *,8, 13888, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13888,0);
 Msg("Find size of GtkPathPriorityType * (13888)\n");
@@ -15665,6 +18636,12 @@ CheckMemberSize(struct _GtkArrow,arrow_type,2,11,46016)
 CheckOffset(struct _GtkArrow,arrow_type,112,11,46016)
 CheckMemberSize(struct _GtkArrow,shadow_type,2,11,46017)
 CheckOffset(struct _GtkArrow,shadow_type,114,11,46017)
+#elif __ia64__
+CheckTypeSize(struct _GtkArrow,120, 13889, 3)
+CheckMemberSize(struct _GtkArrow,arrow_type,2,3,46016)
+CheckOffset(struct _GtkArrow,arrow_type,112,3,46016)
+CheckMemberSize(struct _GtkArrow,shadow_type,2,3,46017)
+CheckOffset(struct _GtkArrow,shadow_type,114,3,46017)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13889,0);
 Msg("Find size of _GtkArrow (13889)\n");
@@ -15674,6 +18651,8 @@ Msg("Find size of _GtkArrow (13889)\n");
 CheckTypeSize(GtkArrow,76, 13890, 2)
 #elif __x86_64__
 CheckTypeSize(GtkArrow,120, 13890, 11)
+#elif __ia64__
+CheckTypeSize(GtkArrow,120, 13890, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13890,0);
 Msg("Find size of GtkArrow (13890)\n");
@@ -15683,6 +18662,8 @@ Msg("Find size of GtkArrow (13890)\n");
 CheckTypeSize(GtkArrow *,4, 13891, 2)
 #elif __x86_64__
 CheckTypeSize(GtkArrow *,8, 13891, 11)
+#elif __ia64__
+CheckTypeSize(GtkArrow *,8, 13891, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13891,0);
 Msg("Find size of GtkArrow * (13891)\n");
@@ -15690,6 +18671,7 @@ Msg("Find size of GtkArrow * (13891)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13892,0);
 Msg("Find size of fptr_gtk_7382 (13892)\n");
@@ -15699,6 +18681,8 @@ Msg("Find size of fptr_gtk_7382 (13892)\n");
 CheckTypeSize(GtkIconViewForeachFunc,4, 13893, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconViewForeachFunc,8, 13893, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconViewForeachFunc,8, 13893, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13893,0);
 Msg("Find size of GtkIconViewForeachFunc (13893)\n");
@@ -15706,6 +18690,7 @@ Msg("Find size of GtkIconViewForeachFunc (13893)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13894,0);
 Msg("Find size of GtkTooltips * * (13894)\n");
@@ -15713,6 +18698,7 @@ Msg("Find size of GtkTooltips * * (13894)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13895,0);
 Msg("Find size of fptr_gtk_1142 (13895)\n");
@@ -15722,6 +18708,8 @@ Msg("Find size of fptr_gtk_1142 (13895)\n");
 CheckTypeSize(GtkTreeModelFilterModifyFunc,4, 13896, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelFilterModifyFunc,8, 13896, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelFilterModifyFunc,8, 13896, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13896,0);
 Msg("Find size of GtkTreeModelFilterModifyFunc (13896)\n");
@@ -15729,6 +18717,7 @@ Msg("Find size of GtkTreeModelFilterModifyFunc (13896)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13897,0);
 Msg("Find size of GdkPoint * * (13897)\n");
@@ -15774,6 +18763,26 @@ CheckMemberSize(struct _GtkCellRendererText,rise,4,11,46034)
 CheckOffset(struct _GtkCellRendererText,rise,108,11,46034)
 CheckMemberSize(struct _GtkCellRendererText,fixed_height_rows,4,11,46035)
 CheckOffset(struct _GtkCellRendererText,fixed_height_rows,112,11,46035)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererText,120, 13898, 3)
+CheckMemberSize(struct _GtkCellRendererText,text,8,3,46027)
+CheckOffset(struct _GtkCellRendererText,text,56,3,46027)
+CheckMemberSize(struct _GtkCellRendererText,font,8,3,46028)
+CheckOffset(struct _GtkCellRendererText,font,64,3,46028)
+CheckMemberSize(struct _GtkCellRendererText,font_scale,8,3,46029)
+CheckOffset(struct _GtkCellRendererText,font_scale,72,3,46029)
+CheckMemberSize(struct _GtkCellRendererText,foreground,6,3,46030)
+CheckOffset(struct _GtkCellRendererText,foreground,80,3,46030)
+CheckMemberSize(struct _GtkCellRendererText,background,6,3,46031)
+CheckOffset(struct _GtkCellRendererText,background,86,3,46031)
+CheckMemberSize(struct _GtkCellRendererText,extra_attrs,8,3,46032)
+CheckOffset(struct _GtkCellRendererText,extra_attrs,96,3,46032)
+CheckMemberSize(struct _GtkCellRendererText,underline_style,4,3,46033)
+CheckOffset(struct _GtkCellRendererText,underline_style,104,3,46033)
+CheckMemberSize(struct _GtkCellRendererText,rise,4,3,46034)
+CheckOffset(struct _GtkCellRendererText,rise,108,3,46034)
+CheckMemberSize(struct _GtkCellRendererText,fixed_height_rows,4,3,46035)
+CheckOffset(struct _GtkCellRendererText,fixed_height_rows,112,3,46035)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13898,0);
 Msg("Find size of _GtkCellRendererText (13898)\n");
@@ -15783,6 +18792,8 @@ Msg("Find size of _GtkCellRendererText (13898)\n");
 CheckTypeSize(GtkCellRendererText,88, 13899, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererText,120, 13899, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererText,120, 13899, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13899,0);
 Msg("Find size of GtkCellRendererText (13899)\n");
@@ -15792,6 +18803,8 @@ Msg("Find size of GtkCellRendererText (13899)\n");
 CheckTypeSize(GtkCellRendererText *,4, 13900, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererText *,8, 13900, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererText *,8, 13900, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13900,0);
 Msg("Find size of GtkCellRendererText * (13900)\n");
@@ -15801,6 +18814,8 @@ Msg("Find size of GtkCellRendererText * (13900)\n");
 CheckTypeSize(GtkStateType *,4, 13901, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStateType *,8, 13901, 11)
+#elif __ia64__
+CheckTypeSize(GtkStateType *,8, 13901, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13901,0);
 Msg("Find size of GtkStateType * (13901)\n");
@@ -15808,6 +18823,7 @@ Msg("Find size of GtkStateType * (13901)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13902,0);
 Msg("Find size of GList * * (13902)\n");
@@ -15815,6 +18831,7 @@ Msg("Find size of GList * * (13902)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13903,0);
 Msg("Find size of fptr_gtk_4568 (13903)\n");
@@ -15824,6 +18841,8 @@ Msg("Find size of fptr_gtk_4568 (13903)\n");
 CheckTypeSize(GtkTreeModelForeachFunc,4, 13904, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelForeachFunc,8, 13904, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelForeachFunc,8, 13904, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13904,0);
 Msg("Find size of GtkTreeModelForeachFunc (13904)\n");
@@ -15837,6 +18856,10 @@ CheckOffset(struct _GtkSettingsValue,value,4,2,46051)
 CheckTypeSize(struct _GtkSettingsValue,32, 13905, 11)
 CheckMemberSize(struct _GtkSettingsValue,value,24,11,46051)
 CheckOffset(struct _GtkSettingsValue,value,8,11,46051)
+#elif __ia64__
+CheckTypeSize(struct _GtkSettingsValue,32, 13905, 3)
+CheckMemberSize(struct _GtkSettingsValue,value,24,3,46051)
+CheckOffset(struct _GtkSettingsValue,value,8,3,46051)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13905,0);
 Msg("Find size of _GtkSettingsValue (13905)\n");
@@ -15846,6 +18869,8 @@ Msg("Find size of _GtkSettingsValue (13905)\n");
 CheckTypeSize(GtkSettingsValue,24, 13906, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSettingsValue,32, 13906, 11)
+#elif __ia64__
+CheckTypeSize(GtkSettingsValue,32, 13906, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13906,0);
 Msg("Find size of GtkSettingsValue (13906)\n");
@@ -15855,6 +18880,8 @@ Msg("Find size of GtkSettingsValue (13906)\n");
 CheckTypeSize(const GtkSettingsValue,24, 13907, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkSettingsValue,32, 13907, 11)
+#elif __ia64__
+CheckTypeSize(const GtkSettingsValue,32, 13907, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13907,0);
 Msg("Find size of const GtkSettingsValue (13907)\n");
@@ -15862,6 +18889,7 @@ Msg("Find size of const GtkSettingsValue (13907)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13908,0);
 Msg("Find size of const GtkSettingsValue * (13908)\n");
@@ -15875,6 +18903,10 @@ CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
 CheckEnum("GTK_PATH_WIDGET",GTK_PATH_WIDGET,0);
 CheckEnum("GTK_PATH_WIDGET_CLASS",GTK_PATH_WIDGET_CLASS,1);
 CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
+#elif __ia64__
+CheckEnum("GTK_PATH_WIDGET",GTK_PATH_WIDGET,0);
+CheckEnum("GTK_PATH_WIDGET_CLASS",GTK_PATH_WIDGET_CLASS,1);
+CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13909,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-288 (13909)\n");
@@ -15884,6 +18916,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-288 (13909)\n");
 CheckTypeSize(GtkPathType,4, 13910, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPathType,4, 13910, 11)
+#elif __ia64__
+CheckTypeSize(GtkPathType,4, 13910, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13910,0);
 Msg("Find size of GtkPathType (13910)\n");
@@ -15893,6 +18927,8 @@ Msg("Find size of GtkPathType (13910)\n");
 CheckTypeSize(const GtkBorder,16, 13911, 2)
 #elif __x86_64__
 CheckTypeSize(const GtkBorder,16, 13911, 11)
+#elif __ia64__
+CheckTypeSize(const GtkBorder,16, 13911, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13911,0);
 Msg("Find size of const GtkBorder (13911)\n");
@@ -15900,6 +18936,7 @@ Msg("Find size of const GtkBorder (13911)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13912,0);
 Msg("Find size of const GtkBorder * (13912)\n");
@@ -15909,6 +18946,8 @@ Msg("Find size of const GtkBorder * (13912)\n");
 CheckTypeSize(GtkAccelMap,0, 13914, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelMap,0, 13914, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelMap,0, 13914, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13914,0);
 Msg("Find size of GtkAccelMap (13914)\n");
@@ -15918,6 +18957,8 @@ Msg("Find size of GtkAccelMap (13914)\n");
 CheckTypeSize(GtkAccelMap *,4, 13915, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelMap *,8, 13915, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelMap *,8, 13915, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13915,0);
 Msg("Find size of GtkAccelMap * (13915)\n");
@@ -15967,6 +19008,28 @@ CheckMemberSize(struct _GtkWindowClass,_gtk_reserved3,8,11,46072)
 CheckOffset(struct _GtkWindowClass,_gtk_reserved3,888,11,46072)
 CheckMemberSize(struct _GtkWindowClass,_gtk_reserved4,8,11,46073)
 CheckOffset(struct _GtkWindowClass,_gtk_reserved4,896,11,46073)
+#elif __ia64__
+CheckTypeSize(struct _GtkWindowClass,904, 13916, 3)
+CheckMemberSize(struct _GtkWindowClass,set_focus,8,3,46059)
+CheckOffset(struct _GtkWindowClass,set_focus,824,3,46059)
+CheckMemberSize(struct _GtkWindowClass,frame_event,8,3,46062)
+CheckOffset(struct _GtkWindowClass,frame_event,832,3,46062)
+CheckMemberSize(struct _GtkWindowClass,activate_focus,8,3,46064)
+CheckOffset(struct _GtkWindowClass,activate_focus,840,3,46064)
+CheckMemberSize(struct _GtkWindowClass,activate_default,8,3,46065)
+CheckOffset(struct _GtkWindowClass,activate_default,848,3,46065)
+CheckMemberSize(struct _GtkWindowClass,move_focus,8,3,46068)
+CheckOffset(struct _GtkWindowClass,move_focus,856,3,46068)
+CheckMemberSize(struct _GtkWindowClass,keys_changed,8,3,46069)
+CheckOffset(struct _GtkWindowClass,keys_changed,864,3,46069)
+CheckMemberSize(struct _GtkWindowClass,_gtk_reserved1,8,3,46070)
+CheckOffset(struct _GtkWindowClass,_gtk_reserved1,872,3,46070)
+CheckMemberSize(struct _GtkWindowClass,_gtk_reserved2,8,3,46071)
+CheckOffset(struct _GtkWindowClass,_gtk_reserved2,880,3,46071)
+CheckMemberSize(struct _GtkWindowClass,_gtk_reserved3,8,3,46072)
+CheckOffset(struct _GtkWindowClass,_gtk_reserved3,888,3,46072)
+CheckMemberSize(struct _GtkWindowClass,_gtk_reserved4,8,3,46073)
+CheckOffset(struct _GtkWindowClass,_gtk_reserved4,896,3,46073)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13916,0);
 Msg("Find size of _GtkWindowClass (13916)\n");
@@ -15980,6 +19043,10 @@ CheckOffset(struct _GtkBinClass,parent_class,0,2,46055)
 CheckTypeSize(struct _GtkBinClass,824, 13917, 11)
 Msg("Missing member data for _GtkBinClass on x86-64\n");
 CheckOffset(struct _GtkBinClass,parent_class,0,11,46055)
+#elif __ia64__
+CheckTypeSize(struct _GtkBinClass,824, 13917, 3)
+Msg("Missing member data for _GtkBinClass on IA64\n");
+CheckOffset(struct _GtkBinClass,parent_class,0,3,46055)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13917,0);
 Msg("Find size of _GtkBinClass (13917)\n");
@@ -15989,6 +19056,8 @@ Msg("Find size of _GtkBinClass (13917)\n");
 CheckTypeSize(GtkBinClass,416, 13918, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBinClass,824, 13918, 11)
+#elif __ia64__
+CheckTypeSize(GtkBinClass,824, 13918, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13918,0);
 Msg("Find size of GtkBinClass (13918)\n");
@@ -15996,6 +19065,7 @@ Msg("Find size of GtkBinClass (13918)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13919,0);
 Msg("Find size of fptr_gtk_7829 (13919)\n");
@@ -16003,6 +19073,7 @@ Msg("Find size of fptr_gtk_7829 (13919)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13920,0);
 Msg("Find size of fptr_gtk_6965 (13920)\n");
@@ -16010,6 +19081,7 @@ Msg("Find size of fptr_gtk_6965 (13920)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13921,0);
 Msg("Find size of fptr_gtk_8510 (13921)\n");
@@ -16017,6 +19089,7 @@ Msg("Find size of fptr_gtk_8510 (13921)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13922,0);
 Msg("Find size of fptr_gtk_5624 (13922)\n");
@@ -16026,6 +19099,8 @@ Msg("Find size of fptr_gtk_5624 (13922)\n");
 CheckTypeSize(GtkWindowClass,456, 13923, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowClass,904, 13923, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowClass,904, 13923, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13923,0);
 Msg("Find size of GtkWindowClass (13923)\n");
@@ -16059,6 +19134,20 @@ CheckMemberSize(struct _GtkScaleClass,_gtk_reserved3,8,11,46122)
 CheckOffset(struct _GtkScaleClass,_gtk_reserved3,832,11,46122)
 CheckMemberSize(struct _GtkScaleClass,_gtk_reserved4,8,11,46123)
 CheckOffset(struct _GtkScaleClass,_gtk_reserved4,840,11,46123)
+#elif __ia64__
+CheckTypeSize(struct _GtkScaleClass,848, 13924, 3)
+CheckMemberSize(struct _GtkScaleClass,format_value,8,3,46114)
+CheckOffset(struct _GtkScaleClass,format_value,800,3,46114)
+CheckMemberSize(struct _GtkScaleClass,draw_value,8,3,46116)
+CheckOffset(struct _GtkScaleClass,draw_value,808,3,46116)
+CheckMemberSize(struct _GtkScaleClass,get_layout_offsets,8,3,46120)
+CheckOffset(struct _GtkScaleClass,get_layout_offsets,816,3,46120)
+CheckMemberSize(struct _GtkScaleClass,_gtk_reserved2,8,3,46121)
+CheckOffset(struct _GtkScaleClass,_gtk_reserved2,824,3,46121)
+CheckMemberSize(struct _GtkScaleClass,_gtk_reserved3,8,3,46122)
+CheckOffset(struct _GtkScaleClass,_gtk_reserved3,832,3,46122)
+CheckMemberSize(struct _GtkScaleClass,_gtk_reserved4,8,3,46123)
+CheckOffset(struct _GtkScaleClass,_gtk_reserved4,840,3,46123)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13924,0);
 Msg("Find size of _GtkScaleClass (13924)\n");
@@ -16108,6 +19197,28 @@ CheckMemberSize(struct _GtkRangeClass,_gtk_reserved2,8,11,46109)
 CheckOffset(struct _GtkRangeClass,_gtk_reserved2,784,11,46109)
 CheckMemberSize(struct _GtkRangeClass,_gtk_reserved3,8,11,46110)
 CheckOffset(struct _GtkRangeClass,_gtk_reserved3,792,11,46110)
+#elif __ia64__
+CheckTypeSize(struct _GtkRangeClass,800, 13925, 3)
+CheckMemberSize(struct _GtkRangeClass,slider_detail,8,3,46075)
+CheckOffset(struct _GtkRangeClass,slider_detail,720,3,46075)
+CheckMemberSize(struct _GtkRangeClass,stepper_detail,8,3,46076)
+CheckOffset(struct _GtkRangeClass,stepper_detail,728,3,46076)
+CheckMemberSize(struct _GtkRangeClass,value_changed,8,3,46078)
+CheckOffset(struct _GtkRangeClass,value_changed,736,3,46078)
+CheckMemberSize(struct _GtkRangeClass,adjust_bounds,8,3,46081)
+CheckOffset(struct _GtkRangeClass,adjust_bounds,744,3,46081)
+CheckMemberSize(struct _GtkRangeClass,move_slider,8,3,46100)
+CheckOffset(struct _GtkRangeClass,move_slider,752,3,46100)
+CheckMemberSize(struct _GtkRangeClass,get_range_border,8,3,46103)
+CheckOffset(struct _GtkRangeClass,get_range_border,760,3,46103)
+CheckMemberSize(struct _GtkRangeClass,change_value,8,3,46107)
+CheckOffset(struct _GtkRangeClass,change_value,768,3,46107)
+CheckMemberSize(struct _GtkRangeClass,_gtk_reserved1,8,3,46108)
+CheckOffset(struct _GtkRangeClass,_gtk_reserved1,776,3,46108)
+CheckMemberSize(struct _GtkRangeClass,_gtk_reserved2,8,3,46109)
+CheckOffset(struct _GtkRangeClass,_gtk_reserved2,784,3,46109)
+CheckMemberSize(struct _GtkRangeClass,_gtk_reserved3,8,3,46110)
+CheckOffset(struct _GtkRangeClass,_gtk_reserved3,792,3,46110)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13925,0);
 Msg("Find size of _GtkRangeClass (13925)\n");
@@ -16115,6 +19226,7 @@ Msg("Find size of _GtkRangeClass (13925)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13926,0);
 Msg("Find size of fptr_gtk_7064 (13926)\n");
@@ -16122,6 +19234,7 @@ Msg("Find size of fptr_gtk_7064 (13926)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13927,0);
 Msg("Find size of fptr_gtk_7434 (13927)\n");
@@ -16161,6 +19274,23 @@ CheckEnum("GTK_SCROLL_PAGE_LEFT",GTK_SCROLL_PAGE_LEFT,12);
 CheckEnum("GTK_SCROLL_PAGE_RIGHT",GTK_SCROLL_PAGE_RIGHT,13);
 CheckEnum("GTK_SCROLL_START",GTK_SCROLL_START,14);
 CheckEnum("GTK_SCROLL_END",GTK_SCROLL_END,15);
+#elif __ia64__
+CheckEnum("GTK_SCROLL_NONE",GTK_SCROLL_NONE,0);
+CheckEnum("GTK_SCROLL_JUMP",GTK_SCROLL_JUMP,1);
+CheckEnum("GTK_SCROLL_STEP_BACKWARD",GTK_SCROLL_STEP_BACKWARD,2);
+CheckEnum("GTK_SCROLL_STEP_FORWARD",GTK_SCROLL_STEP_FORWARD,3);
+CheckEnum("GTK_SCROLL_PAGE_BACKWARD",GTK_SCROLL_PAGE_BACKWARD,4);
+CheckEnum("GTK_SCROLL_PAGE_FORWARD",GTK_SCROLL_PAGE_FORWARD,5);
+CheckEnum("GTK_SCROLL_STEP_UP",GTK_SCROLL_STEP_UP,6);
+CheckEnum("GTK_SCROLL_STEP_DOWN",GTK_SCROLL_STEP_DOWN,7);
+CheckEnum("GTK_SCROLL_PAGE_UP",GTK_SCROLL_PAGE_UP,8);
+CheckEnum("GTK_SCROLL_PAGE_DOWN",GTK_SCROLL_PAGE_DOWN,9);
+CheckEnum("GTK_SCROLL_STEP_LEFT",GTK_SCROLL_STEP_LEFT,10);
+CheckEnum("GTK_SCROLL_STEP_RIGHT",GTK_SCROLL_STEP_RIGHT,11);
+CheckEnum("GTK_SCROLL_PAGE_LEFT",GTK_SCROLL_PAGE_LEFT,12);
+CheckEnum("GTK_SCROLL_PAGE_RIGHT",GTK_SCROLL_PAGE_RIGHT,13);
+CheckEnum("GTK_SCROLL_START",GTK_SCROLL_START,14);
+CheckEnum("GTK_SCROLL_END",GTK_SCROLL_END,15);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13928,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1814 (13928)\n");
@@ -16170,6 +19300,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1814 (13928)\n");
 CheckTypeSize(GtkScrollType,4, 13929, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScrollType,4, 13929, 11)
+#elif __ia64__
+CheckTypeSize(GtkScrollType,4, 13929, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13929,0);
 Msg("Find size of GtkScrollType (13929)\n");
@@ -16177,6 +19309,7 @@ Msg("Find size of GtkScrollType (13929)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13930,0);
 Msg("Find size of fptr_gtk_4715 (13930)\n");
@@ -16184,6 +19317,7 @@ Msg("Find size of fptr_gtk_4715 (13930)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13931,0);
 Msg("Find size of fptr_gtk_2980 (13931)\n");
@@ -16191,6 +19325,7 @@ Msg("Find size of fptr_gtk_2980 (13931)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13932,0);
 Msg("Find size of fptr_gtk_2697 (13932)\n");
@@ -16200,6 +19335,8 @@ Msg("Find size of fptr_gtk_2697 (13932)\n");
 CheckTypeSize(GtkRangeClass,404, 13933, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRangeClass,800, 13933, 11)
+#elif __ia64__
+CheckTypeSize(GtkRangeClass,800, 13933, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13933,0);
 Msg("Find size of GtkRangeClass (13933)\n");
@@ -16207,6 +19344,7 @@ Msg("Find size of GtkRangeClass (13933)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13934,0);
 Msg("Find size of fptr_gtk_7416 (13934)\n");
@@ -16214,6 +19352,7 @@ Msg("Find size of fptr_gtk_7416 (13934)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13935,0);
 Msg("Find size of fptr_gtk_4892 (13935)\n");
@@ -16221,6 +19360,7 @@ Msg("Find size of fptr_gtk_4892 (13935)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13936,0);
 Msg("Find size of fptr_gtk_2533 (13936)\n");
@@ -16230,6 +19370,8 @@ Msg("Find size of fptr_gtk_2533 (13936)\n");
 CheckTypeSize(GtkScaleClass,428, 13937, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScaleClass,848, 13937, 11)
+#elif __ia64__
+CheckTypeSize(GtkScaleClass,848, 13937, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13937,0);
 Msg("Find size of GtkScaleClass (13937)\n");
@@ -16243,6 +19385,10 @@ CheckOffset(struct _GtkBoxClass,parent_class,0,2,46124)
 CheckTypeSize(struct _GtkBoxClass,824, 13938, 11)
 Msg("Missing member data for _GtkBoxClass on x86-64\n");
 CheckOffset(struct _GtkBoxClass,parent_class,0,11,46124)
+#elif __ia64__
+CheckTypeSize(struct _GtkBoxClass,824, 13938, 3)
+Msg("Missing member data for _GtkBoxClass on IA64\n");
+CheckOffset(struct _GtkBoxClass,parent_class,0,3,46124)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13938,0);
 Msg("Find size of _GtkBoxClass (13938)\n");
@@ -16252,6 +19398,8 @@ Msg("Find size of _GtkBoxClass (13938)\n");
 CheckTypeSize(GtkBoxClass,416, 13939, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBoxClass,824, 13939, 11)
+#elif __ia64__
+CheckTypeSize(GtkBoxClass,824, 13939, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13939,0);
 Msg("Find size of GtkBoxClass (13939)\n");
@@ -16265,6 +19413,10 @@ CheckOffset(struct _GtkMiscClass,parent_class,0,2,46125)
 CheckTypeSize(struct _GtkMiscClass,720, 13940, 11)
 Msg("Missing member data for _GtkMiscClass on x86-64\n");
 CheckOffset(struct _GtkMiscClass,parent_class,0,11,46125)
+#elif __ia64__
+CheckTypeSize(struct _GtkMiscClass,720, 13940, 3)
+Msg("Missing member data for _GtkMiscClass on IA64\n");
+CheckOffset(struct _GtkMiscClass,parent_class,0,3,46125)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13940,0);
 Msg("Find size of _GtkMiscClass (13940)\n");
@@ -16274,6 +19426,8 @@ Msg("Find size of _GtkMiscClass (13940)\n");
 CheckTypeSize(GtkMiscClass,364, 13941, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMiscClass,720, 13941, 11)
+#elif __ia64__
+CheckTypeSize(GtkMiscClass,720, 13941, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13941,0);
 Msg("Find size of GtkMiscClass (13941)\n");
@@ -16287,6 +19441,10 @@ CheckOffset(struct _GtkHRuler,ruler,0,2,46126)
 CheckTypeSize(struct _GtkHRuler,168, 13942, 11)
 Msg("Missing member data for _GtkHRuler on x86-64\n");
 CheckOffset(struct _GtkHRuler,ruler,0,11,46126)
+#elif __ia64__
+CheckTypeSize(struct _GtkHRuler,168, 13942, 3)
+Msg("Missing member data for _GtkHRuler on IA64\n");
+CheckOffset(struct _GtkHRuler,ruler,0,3,46126)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13942,0);
 Msg("Find size of _GtkHRuler (13942)\n");
@@ -16296,6 +19454,8 @@ Msg("Find size of _GtkHRuler (13942)\n");
 CheckTypeSize(GtkHRuler,116, 13943, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHRuler,168, 13943, 11)
+#elif __ia64__
+CheckTypeSize(GtkHRuler,168, 13943, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13943,0);
 Msg("Find size of GtkHRuler (13943)\n");
@@ -16309,6 +19469,10 @@ CheckOffset(struct _GtkHBoxClass,parent_class,0,2,46127)
 CheckTypeSize(struct _GtkHBoxClass,824, 13944, 11)
 Msg("Missing member data for _GtkHBoxClass on x86-64\n");
 CheckOffset(struct _GtkHBoxClass,parent_class,0,11,46127)
+#elif __ia64__
+CheckTypeSize(struct _GtkHBoxClass,824, 13944, 3)
+Msg("Missing member data for _GtkHBoxClass on IA64\n");
+CheckOffset(struct _GtkHBoxClass,parent_class,0,3,46127)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13944,0);
 Msg("Find size of _GtkHBoxClass (13944)\n");
@@ -16318,6 +19482,8 @@ Msg("Find size of _GtkHBoxClass (13944)\n");
 CheckTypeSize(GtkHBoxClass,416, 13945, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHBoxClass,824, 13945, 11)
+#elif __ia64__
+CheckTypeSize(GtkHBoxClass,824, 13945, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13945,0);
 Msg("Find size of GtkHBoxClass (13945)\n");
@@ -16331,6 +19497,10 @@ CheckOffset(struct _GtkHPanedClass,parent_class,0,2,46144)
 CheckTypeSize(struct _GtkHPanedClass,904, 13946, 11)
 Msg("Missing member data for _GtkHPanedClass on x86-64\n");
 CheckOffset(struct _GtkHPanedClass,parent_class,0,11,46144)
+#elif __ia64__
+CheckTypeSize(struct _GtkHPanedClass,904, 13946, 3)
+Msg("Missing member data for _GtkHPanedClass on IA64\n");
+CheckOffset(struct _GtkHPanedClass,parent_class,0,3,46144)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13946,0);
 Msg("Find size of _GtkHPanedClass (13946)\n");
@@ -16380,6 +19550,28 @@ CheckMemberSize(struct _GtkPanedClass,_gtk_reserved3,8,11,46142)
 CheckOffset(struct _GtkPanedClass,_gtk_reserved3,888,11,46142)
 CheckMemberSize(struct _GtkPanedClass,_gtk_reserved4,8,11,46143)
 CheckOffset(struct _GtkPanedClass,_gtk_reserved4,896,11,46143)
+#elif __ia64__
+CheckTypeSize(struct _GtkPanedClass,904, 13947, 3)
+CheckMemberSize(struct _GtkPanedClass,cycle_child_focus,8,3,46131)
+CheckOffset(struct _GtkPanedClass,cycle_child_focus,824,3,46131)
+CheckMemberSize(struct _GtkPanedClass,toggle_handle_focus,8,3,46133)
+CheckOffset(struct _GtkPanedClass,toggle_handle_focus,832,3,46133)
+CheckMemberSize(struct _GtkPanedClass,move_handle,8,3,46136)
+CheckOffset(struct _GtkPanedClass,move_handle,840,3,46136)
+CheckMemberSize(struct _GtkPanedClass,cycle_handle_focus,8,3,46137)
+CheckOffset(struct _GtkPanedClass,cycle_handle_focus,848,3,46137)
+CheckMemberSize(struct _GtkPanedClass,accept_position,8,3,46138)
+CheckOffset(struct _GtkPanedClass,accept_position,856,3,46138)
+CheckMemberSize(struct _GtkPanedClass,cancel_position,8,3,46139)
+CheckOffset(struct _GtkPanedClass,cancel_position,864,3,46139)
+CheckMemberSize(struct _GtkPanedClass,_gtk_reserved1,8,3,46140)
+CheckOffset(struct _GtkPanedClass,_gtk_reserved1,872,3,46140)
+CheckMemberSize(struct _GtkPanedClass,_gtk_reserved2,8,3,46141)
+CheckOffset(struct _GtkPanedClass,_gtk_reserved2,880,3,46141)
+CheckMemberSize(struct _GtkPanedClass,_gtk_reserved3,8,3,46142)
+CheckOffset(struct _GtkPanedClass,_gtk_reserved3,888,3,46142)
+CheckMemberSize(struct _GtkPanedClass,_gtk_reserved4,8,3,46143)
+CheckOffset(struct _GtkPanedClass,_gtk_reserved4,896,3,46143)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13947,0);
 Msg("Find size of _GtkPanedClass (13947)\n");
@@ -16387,6 +19579,7 @@ Msg("Find size of _GtkPanedClass (13947)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13948,0);
 Msg("Find size of fptr_gtk_4904 (13948)\n");
@@ -16394,6 +19587,7 @@ Msg("Find size of fptr_gtk_4904 (13948)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13949,0);
 Msg("Find size of fptr_gtk_6268 (13949)\n");
@@ -16401,6 +19595,7 @@ Msg("Find size of fptr_gtk_6268 (13949)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13950,0);
 Msg("Find size of fptr_gtk_5065 (13950)\n");
@@ -16410,6 +19605,8 @@ Msg("Find size of fptr_gtk_5065 (13950)\n");
 CheckTypeSize(GtkPanedClass,456, 13951, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPanedClass,904, 13951, 11)
+#elif __ia64__
+CheckTypeSize(GtkPanedClass,904, 13951, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13951,0);
 Msg("Find size of GtkPanedClass (13951)\n");
@@ -16419,6 +19616,8 @@ Msg("Find size of GtkPanedClass (13951)\n");
 CheckTypeSize(GtkHPanedClass,456, 13952, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHPanedClass,904, 13952, 11)
+#elif __ia64__
+CheckTypeSize(GtkHPanedClass,904, 13952, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13952,0);
 Msg("Find size of GtkHPanedClass (13952)\n");
@@ -16444,6 +19643,16 @@ CheckMemberSize(struct _GtkSizeGroupClass,_gtk_reserved3,8,11,46148)
 CheckOffset(struct _GtkSizeGroupClass,_gtk_reserved3,152,11,46148)
 CheckMemberSize(struct _GtkSizeGroupClass,_gtk_reserved4,8,11,46149)
 CheckOffset(struct _GtkSizeGroupClass,_gtk_reserved4,160,11,46149)
+#elif __ia64__
+CheckTypeSize(struct _GtkSizeGroupClass,168, 13953, 3)
+CheckMemberSize(struct _GtkSizeGroupClass,_gtk_reserved1,8,3,46146)
+CheckOffset(struct _GtkSizeGroupClass,_gtk_reserved1,136,3,46146)
+CheckMemberSize(struct _GtkSizeGroupClass,_gtk_reserved2,8,3,46147)
+CheckOffset(struct _GtkSizeGroupClass,_gtk_reserved2,144,3,46147)
+CheckMemberSize(struct _GtkSizeGroupClass,_gtk_reserved3,8,3,46148)
+CheckOffset(struct _GtkSizeGroupClass,_gtk_reserved3,152,3,46148)
+CheckMemberSize(struct _GtkSizeGroupClass,_gtk_reserved4,8,3,46149)
+CheckOffset(struct _GtkSizeGroupClass,_gtk_reserved4,160,3,46149)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13953,0);
 Msg("Find size of _GtkSizeGroupClass (13953)\n");
@@ -16453,6 +19662,8 @@ Msg("Find size of _GtkSizeGroupClass (13953)\n");
 CheckTypeSize(GtkSizeGroupClass,84, 13954, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSizeGroupClass,168, 13954, 11)
+#elif __ia64__
+CheckTypeSize(GtkSizeGroupClass,168, 13954, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13954,0);
 Msg("Find size of GtkSizeGroupClass (13954)\n");
@@ -16466,6 +19677,10 @@ CheckOffset(struct _GtkViewportClass,set_scroll_adjustments,416,2,46154)
 CheckTypeSize(struct _GtkViewportClass,832, 13955, 11)
 CheckMemberSize(struct _GtkViewportClass,set_scroll_adjustments,8,11,46154)
 CheckOffset(struct _GtkViewportClass,set_scroll_adjustments,824,11,46154)
+#elif __ia64__
+CheckTypeSize(struct _GtkViewportClass,832, 13955, 3)
+CheckMemberSize(struct _GtkViewportClass,set_scroll_adjustments,8,3,46154)
+CheckOffset(struct _GtkViewportClass,set_scroll_adjustments,824,3,46154)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13955,0);
 Msg("Find size of _GtkViewportClass (13955)\n");
@@ -16473,6 +19688,7 @@ Msg("Find size of _GtkViewportClass (13955)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13956,0);
 Msg("Find size of fptr_gtk_4523 (13956)\n");
@@ -16482,6 +19698,8 @@ Msg("Find size of fptr_gtk_4523 (13956)\n");
 CheckTypeSize(GtkViewportClass,420, 13957, 2)
 #elif __x86_64__
 CheckTypeSize(GtkViewportClass,832, 13957, 11)
+#elif __ia64__
+CheckTypeSize(GtkViewportClass,832, 13957, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13957,0);
 Msg("Find size of GtkViewportClass (13957)\n");
@@ -16509,6 +19727,17 @@ CheckEnum("GTK_MOVEMENT_PARAGRAPH_ENDS",GTK_MOVEMENT_PARAGRAPH_ENDS,6);
 CheckEnum("GTK_MOVEMENT_PAGES",GTK_MOVEMENT_PAGES,7);
 CheckEnum("GTK_MOVEMENT_BUFFER_ENDS",GTK_MOVEMENT_BUFFER_ENDS,8);
 CheckEnum("GTK_MOVEMENT_HORIZONTAL_PAGES",GTK_MOVEMENT_HORIZONTAL_PAGES,9);
+#elif __ia64__
+CheckEnum("GTK_MOVEMENT_LOGICAL_POSITIONS",GTK_MOVEMENT_LOGICAL_POSITIONS,0);
+CheckEnum("GTK_MOVEMENT_VISUAL_POSITIONS",GTK_MOVEMENT_VISUAL_POSITIONS,1);
+CheckEnum("GTK_MOVEMENT_WORDS",GTK_MOVEMENT_WORDS,2);
+CheckEnum("GTK_MOVEMENT_DISPLAY_LINES",GTK_MOVEMENT_DISPLAY_LINES,3);
+CheckEnum("GTK_MOVEMENT_DISPLAY_LINE_ENDS",GTK_MOVEMENT_DISPLAY_LINE_ENDS,4);
+CheckEnum("GTK_MOVEMENT_PARAGRAPHS",GTK_MOVEMENT_PARAGRAPHS,5);
+CheckEnum("GTK_MOVEMENT_PARAGRAPH_ENDS",GTK_MOVEMENT_PARAGRAPH_ENDS,6);
+CheckEnum("GTK_MOVEMENT_PAGES",GTK_MOVEMENT_PAGES,7);
+CheckEnum("GTK_MOVEMENT_BUFFER_ENDS",GTK_MOVEMENT_BUFFER_ENDS,8);
+CheckEnum("GTK_MOVEMENT_HORIZONTAL_PAGES",GTK_MOVEMENT_HORIZONTAL_PAGES,9);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13958,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4096 (13958)\n");
@@ -16518,6 +19747,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4096 (13958)\n");
 CheckTypeSize(GtkMovementStep,4, 13959, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMovementStep,4, 13959, 11)
+#elif __ia64__
+CheckTypeSize(GtkMovementStep,4, 13959, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13959,0);
 Msg("Find size of GtkMovementStep (13959)\n");
@@ -16567,6 +19798,28 @@ CheckMemberSize(struct _GtkEditableClass,set_position,8,11,46190)
 CheckOffset(struct _GtkEditableClass,set_position,80,11,46190)
 CheckMemberSize(struct _GtkEditableClass,get_position,8,11,46192)
 CheckOffset(struct _GtkEditableClass,get_position,88,11,46192)
+#elif __ia64__
+CheckTypeSize(struct _GtkEditableClass,96, 13960, 3)
+CheckMemberSize(struct _GtkEditableClass,insert_text,8,3,46170)
+CheckOffset(struct _GtkEditableClass,insert_text,16,3,46170)
+CheckMemberSize(struct _GtkEditableClass,delete_text,8,3,46174)
+CheckOffset(struct _GtkEditableClass,delete_text,24,3,46174)
+CheckMemberSize(struct _GtkEditableClass,changed,8,3,46176)
+CheckOffset(struct _GtkEditableClass,changed,32,3,46176)
+CheckMemberSize(struct _GtkEditableClass,do_insert_text,8,3,46177)
+CheckOffset(struct _GtkEditableClass,do_insert_text,40,3,46177)
+CheckMemberSize(struct _GtkEditableClass,do_delete_text,8,3,46178)
+CheckOffset(struct _GtkEditableClass,do_delete_text,48,3,46178)
+CheckMemberSize(struct _GtkEditableClass,get_chars,8,3,46182)
+CheckOffset(struct _GtkEditableClass,get_chars,56,3,46182)
+CheckMemberSize(struct _GtkEditableClass,set_selection_bounds,8,3,46183)
+CheckOffset(struct _GtkEditableClass,set_selection_bounds,64,3,46183)
+CheckMemberSize(struct _GtkEditableClass,get_selection_bounds,8,3,46187)
+CheckOffset(struct _GtkEditableClass,get_selection_bounds,72,3,46187)
+CheckMemberSize(struct _GtkEditableClass,set_position,8,3,46190)
+CheckOffset(struct _GtkEditableClass,set_position,80,3,46190)
+CheckMemberSize(struct _GtkEditableClass,get_position,8,3,46192)
+CheckOffset(struct _GtkEditableClass,get_position,88,3,46192)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13960,0);
 Msg("Find size of _GtkEditableClass (13960)\n");
@@ -16574,6 +19827,7 @@ Msg("Find size of _GtkEditableClass (13960)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13961,0);
 Msg("Find size of fptr_gtk_3783 (13961)\n");
@@ -16581,6 +19835,7 @@ Msg("Find size of fptr_gtk_3783 (13961)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13962,0);
 Msg("Find size of fptr_gtk_1717 (13962)\n");
@@ -16588,6 +19843,7 @@ Msg("Find size of fptr_gtk_1717 (13962)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13963,0);
 Msg("Find size of fptr_gtk_8772 (13963)\n");
@@ -16595,6 +19851,7 @@ Msg("Find size of fptr_gtk_8772 (13963)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13964,0);
 Msg("Find size of fptr_gtk_3321 (13964)\n");
@@ -16602,6 +19859,7 @@ Msg("Find size of fptr_gtk_3321 (13964)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13965,0);
 Msg("Find size of fptr_gtk_1053 (13965)\n");
@@ -16609,6 +19867,7 @@ Msg("Find size of fptr_gtk_1053 (13965)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13966,0);
 Msg("Find size of fptr_gtk_4571 (13966)\n");
@@ -16616,6 +19875,7 @@ Msg("Find size of fptr_gtk_4571 (13966)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13967,0);
 Msg("Find size of fptr_gtk_7034 (13967)\n");
@@ -16625,6 +19885,8 @@ Msg("Find size of fptr_gtk_7034 (13967)\n");
 CheckTypeSize(GtkEditableClass,48, 13968, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEditableClass,96, 13968, 11)
+#elif __ia64__
+CheckTypeSize(GtkEditableClass,96, 13968, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13968,0);
 Msg("Find size of GtkEditableClass (13968)\n");
@@ -16636,6 +19898,9 @@ CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
 #elif __x86_64__
 CheckEnum("GTK_NOTEBOOK_TAB_FIRST",GTK_NOTEBOOK_TAB_FIRST,0);
 CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
+#elif __ia64__
+CheckEnum("GTK_NOTEBOOK_TAB_FIRST",GTK_NOTEBOOK_TAB_FIRST,0);
+CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13969,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2669 (13969)\n");
@@ -16645,6 +19910,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2669 (13969)\n");
 CheckTypeSize(GtkNotebookTab,4, 13970, 2)
 #elif __x86_64__
 CheckTypeSize(GtkNotebookTab,4, 13970, 11)
+#elif __ia64__
+CheckTypeSize(GtkNotebookTab,4, 13970, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13970,0);
 Msg("Find size of GtkNotebookTab (13970)\n");
@@ -16678,6 +19945,20 @@ CheckMemberSize(struct _GtkDialogClass,_gtk_reserved3,8,11,46203)
 CheckOffset(struct _GtkDialogClass,_gtk_reserved3,936,11,46203)
 CheckMemberSize(struct _GtkDialogClass,_gtk_reserved4,8,11,46204)
 CheckOffset(struct _GtkDialogClass,_gtk_reserved4,944,11,46204)
+#elif __ia64__
+CheckTypeSize(struct _GtkDialogClass,952, 13971, 3)
+CheckMemberSize(struct _GtkDialogClass,response,8,3,46198)
+CheckOffset(struct _GtkDialogClass,response,904,3,46198)
+CheckMemberSize(struct _GtkDialogClass,close,8,3,46200)
+CheckOffset(struct _GtkDialogClass,close,912,3,46200)
+CheckMemberSize(struct _GtkDialogClass,_gtk_reserved1,8,3,46201)
+CheckOffset(struct _GtkDialogClass,_gtk_reserved1,920,3,46201)
+CheckMemberSize(struct _GtkDialogClass,_gtk_reserved2,8,3,46202)
+CheckOffset(struct _GtkDialogClass,_gtk_reserved2,928,3,46202)
+CheckMemberSize(struct _GtkDialogClass,_gtk_reserved3,8,3,46203)
+CheckOffset(struct _GtkDialogClass,_gtk_reserved3,936,3,46203)
+CheckMemberSize(struct _GtkDialogClass,_gtk_reserved4,8,3,46204)
+CheckOffset(struct _GtkDialogClass,_gtk_reserved4,944,3,46204)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13971,0);
 Msg("Find size of _GtkDialogClass (13971)\n");
@@ -16685,6 +19966,7 @@ Msg("Find size of _GtkDialogClass (13971)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13972,0);
 Msg("Find size of fptr_gtk_2448 (13972)\n");
@@ -16692,6 +19974,7 @@ Msg("Find size of fptr_gtk_2448 (13972)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13973,0);
 Msg("Find size of fptr_gtk_4753 (13973)\n");
@@ -16701,6 +19984,8 @@ Msg("Find size of fptr_gtk_4753 (13973)\n");
 CheckTypeSize(GtkDialogClass,480, 13974, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDialogClass,952, 13974, 11)
+#elif __ia64__
+CheckTypeSize(GtkDialogClass,952, 13974, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13974,0);
 Msg("Find size of GtkDialogClass (13974)\n");
@@ -16722,6 +20007,14 @@ CheckMemberSize(struct _GtkCellRendererPixbuf,pixbuf_expander_open,8,11,46207)
 CheckOffset(struct _GtkCellRendererPixbuf,pixbuf_expander_open,64,11,46207)
 CheckMemberSize(struct _GtkCellRendererPixbuf,pixbuf_expander_closed,8,11,46208)
 CheckOffset(struct _GtkCellRendererPixbuf,pixbuf_expander_closed,72,11,46208)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererPixbuf,80, 13975, 3)
+CheckMemberSize(struct _GtkCellRendererPixbuf,pixbuf,8,3,46206)
+CheckOffset(struct _GtkCellRendererPixbuf,pixbuf,56,3,46206)
+CheckMemberSize(struct _GtkCellRendererPixbuf,pixbuf_expander_open,8,3,46207)
+CheckOffset(struct _GtkCellRendererPixbuf,pixbuf_expander_open,64,3,46207)
+CheckMemberSize(struct _GtkCellRendererPixbuf,pixbuf_expander_closed,8,3,46208)
+CheckOffset(struct _GtkCellRendererPixbuf,pixbuf_expander_closed,72,3,46208)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13975,0);
 Msg("Find size of _GtkCellRendererPixbuf (13975)\n");
@@ -16731,6 +20024,8 @@ Msg("Find size of _GtkCellRendererPixbuf (13975)\n");
 CheckTypeSize(GtkCellRendererPixbuf,52, 13976, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererPixbuf,80, 13976, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererPixbuf,80, 13976, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13976,0);
 Msg("Find size of GtkCellRendererPixbuf (13976)\n");
@@ -16760,6 +20055,18 @@ CheckMemberSize(struct _GtkTreeViewColumnClass,_gtk_reserved3,8,11,46214)
 CheckOffset(struct _GtkTreeViewColumnClass,_gtk_reserved3,184,11,46214)
 CheckMemberSize(struct _GtkTreeViewColumnClass,_gtk_reserved4,8,11,46215)
 CheckOffset(struct _GtkTreeViewColumnClass,_gtk_reserved4,192,11,46215)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeViewColumnClass,200, 13977, 3)
+CheckMemberSize(struct _GtkTreeViewColumnClass,clicked,8,3,46211)
+CheckOffset(struct _GtkTreeViewColumnClass,clicked,160,3,46211)
+CheckMemberSize(struct _GtkTreeViewColumnClass,_gtk_reserved1,8,3,46212)
+CheckOffset(struct _GtkTreeViewColumnClass,_gtk_reserved1,168,3,46212)
+CheckMemberSize(struct _GtkTreeViewColumnClass,_gtk_reserved2,8,3,46213)
+CheckOffset(struct _GtkTreeViewColumnClass,_gtk_reserved2,176,3,46213)
+CheckMemberSize(struct _GtkTreeViewColumnClass,_gtk_reserved3,8,3,46214)
+CheckOffset(struct _GtkTreeViewColumnClass,_gtk_reserved3,184,3,46214)
+CheckMemberSize(struct _GtkTreeViewColumnClass,_gtk_reserved4,8,3,46215)
+CheckOffset(struct _GtkTreeViewColumnClass,_gtk_reserved4,192,3,46215)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13977,0);
 Msg("Find size of _GtkTreeViewColumnClass (13977)\n");
@@ -16767,6 +20074,7 @@ Msg("Find size of _GtkTreeViewColumnClass (13977)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13978,0);
 Msg("Find size of fptr_gtk_4429 (13978)\n");
@@ -16776,6 +20084,8 @@ Msg("Find size of fptr_gtk_4429 (13978)\n");
 CheckTypeSize(GtkTreeViewColumnClass,100, 13979, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewColumnClass,200, 13979, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewColumnClass,200, 13979, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13979,0);
 Msg("Find size of GtkTreeViewColumnClass (13979)\n");
@@ -16789,6 +20099,10 @@ CheckOffset(struct _GtkHRulerClass,parent_class,0,2,46224)
 CheckTypeSize(struct _GtkHRulerClass,768, 13980, 11)
 Msg("Missing member data for _GtkHRulerClass on x86-64\n");
 CheckOffset(struct _GtkHRulerClass,parent_class,0,11,46224)
+#elif __ia64__
+CheckTypeSize(struct _GtkHRulerClass,768, 13980, 3)
+Msg("Missing member data for _GtkHRulerClass on IA64\n");
+CheckOffset(struct _GtkHRulerClass,parent_class,0,3,46224)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13980,0);
 Msg("Find size of _GtkHRulerClass (13980)\n");
@@ -16822,6 +20136,20 @@ CheckMemberSize(struct _GtkRulerClass,_gtk_reserved3,8,11,46222)
 CheckOffset(struct _GtkRulerClass,_gtk_reserved3,752,11,46222)
 CheckMemberSize(struct _GtkRulerClass,_gtk_reserved4,8,11,46223)
 CheckOffset(struct _GtkRulerClass,_gtk_reserved4,760,11,46223)
+#elif __ia64__
+CheckTypeSize(struct _GtkRulerClass,768, 13981, 3)
+CheckMemberSize(struct _GtkRulerClass,draw_ticks,8,3,46218)
+CheckOffset(struct _GtkRulerClass,draw_ticks,720,3,46218)
+CheckMemberSize(struct _GtkRulerClass,draw_pos,8,3,46219)
+CheckOffset(struct _GtkRulerClass,draw_pos,728,3,46219)
+CheckMemberSize(struct _GtkRulerClass,_gtk_reserved1,8,3,46220)
+CheckOffset(struct _GtkRulerClass,_gtk_reserved1,736,3,46220)
+CheckMemberSize(struct _GtkRulerClass,_gtk_reserved2,8,3,46221)
+CheckOffset(struct _GtkRulerClass,_gtk_reserved2,744,3,46221)
+CheckMemberSize(struct _GtkRulerClass,_gtk_reserved3,8,3,46222)
+CheckOffset(struct _GtkRulerClass,_gtk_reserved3,752,3,46222)
+CheckMemberSize(struct _GtkRulerClass,_gtk_reserved4,8,3,46223)
+CheckOffset(struct _GtkRulerClass,_gtk_reserved4,760,3,46223)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13981,0);
 Msg("Find size of _GtkRulerClass (13981)\n");
@@ -16829,6 +20157,7 @@ Msg("Find size of _GtkRulerClass (13981)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13982,0);
 Msg("Find size of fptr_gtk_7325 (13982)\n");
@@ -16838,6 +20167,8 @@ Msg("Find size of fptr_gtk_7325 (13982)\n");
 CheckTypeSize(GtkRulerClass,388, 13983, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRulerClass,768, 13983, 11)
+#elif __ia64__
+CheckTypeSize(GtkRulerClass,768, 13983, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13983,0);
 Msg("Find size of GtkRulerClass (13983)\n");
@@ -16847,6 +20178,8 @@ Msg("Find size of GtkRulerClass (13983)\n");
 CheckTypeSize(GtkHRulerClass,388, 13984, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHRulerClass,768, 13984, 11)
+#elif __ia64__
+CheckTypeSize(GtkHRulerClass,768, 13984, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13984,0);
 Msg("Find size of GtkHRulerClass (13984)\n");
@@ -16856,6 +20189,8 @@ Msg("Find size of GtkHRulerClass (13984)\n");
 CheckTypeSize(GtkAccelMapClass,0, 13986, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelMapClass,0, 13986, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13986,0);
 Msg("Find size of GtkAccelMapClass (13986)\n");
@@ -16881,6 +20216,16 @@ CheckMemberSize(struct _GtkInvisibleClass,_gtk_reserved3,8,11,46228)
 CheckOffset(struct _GtkInvisibleClass,_gtk_reserved3,736,11,46228)
 CheckMemberSize(struct _GtkInvisibleClass,_gtk_reserved4,8,11,46229)
 CheckOffset(struct _GtkInvisibleClass,_gtk_reserved4,744,11,46229)
+#elif __ia64__
+CheckTypeSize(struct _GtkInvisibleClass,752, 13987, 3)
+CheckMemberSize(struct _GtkInvisibleClass,_gtk_reserved1,8,3,46226)
+CheckOffset(struct _GtkInvisibleClass,_gtk_reserved1,720,3,46226)
+CheckMemberSize(struct _GtkInvisibleClass,_gtk_reserved2,8,3,46227)
+CheckOffset(struct _GtkInvisibleClass,_gtk_reserved2,728,3,46227)
+CheckMemberSize(struct _GtkInvisibleClass,_gtk_reserved3,8,3,46228)
+CheckOffset(struct _GtkInvisibleClass,_gtk_reserved3,736,3,46228)
+CheckMemberSize(struct _GtkInvisibleClass,_gtk_reserved4,8,3,46229)
+CheckOffset(struct _GtkInvisibleClass,_gtk_reserved4,744,3,46229)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13987,0);
 Msg("Find size of _GtkInvisibleClass (13987)\n");
@@ -16890,6 +20235,8 @@ Msg("Find size of _GtkInvisibleClass (13987)\n");
 CheckTypeSize(GtkInvisibleClass,380, 13988, 2)
 #elif __x86_64__
 CheckTypeSize(GtkInvisibleClass,752, 13988, 11)
+#elif __ia64__
+CheckTypeSize(GtkInvisibleClass,752, 13988, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13988,0);
 Msg("Find size of GtkInvisibleClass (13988)\n");
@@ -16903,6 +20250,10 @@ CheckOffset(struct _GtkVRulerClass,parent_class,0,2,46230)
 CheckTypeSize(struct _GtkVRulerClass,768, 13989, 11)
 Msg("Missing member data for _GtkVRulerClass on x86-64\n");
 CheckOffset(struct _GtkVRulerClass,parent_class,0,11,46230)
+#elif __ia64__
+CheckTypeSize(struct _GtkVRulerClass,768, 13989, 3)
+Msg("Missing member data for _GtkVRulerClass on IA64\n");
+CheckOffset(struct _GtkVRulerClass,parent_class,0,3,46230)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13989,0);
 Msg("Find size of _GtkVRulerClass (13989)\n");
@@ -16912,6 +20263,8 @@ Msg("Find size of _GtkVRulerClass (13989)\n");
 CheckTypeSize(GtkVRulerClass,388, 13990, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVRulerClass,768, 13990, 11)
+#elif __ia64__
+CheckTypeSize(GtkVRulerClass,768, 13990, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13990,0);
 Msg("Find size of GtkVRulerClass (13990)\n");
@@ -16949,6 +20302,22 @@ CheckMemberSize(struct _GtkToolItemClass,_gtk_reserved3,8,11,46243)
 CheckOffset(struct _GtkToolItemClass,_gtk_reserved3,864,11,46243)
 CheckMemberSize(struct _GtkToolItemClass,_gtk_reserved4,8,11,46244)
 CheckOffset(struct _GtkToolItemClass,_gtk_reserved4,872,11,46244)
+#elif __ia64__
+CheckTypeSize(struct _GtkToolItemClass,880, 13991, 3)
+CheckMemberSize(struct _GtkToolItemClass,create_menu_proxy,8,3,46233)
+CheckOffset(struct _GtkToolItemClass,create_menu_proxy,824,3,46233)
+CheckMemberSize(struct _GtkToolItemClass,toolbar_reconfigured,8,3,46235)
+CheckOffset(struct _GtkToolItemClass,toolbar_reconfigured,832,3,46235)
+CheckMemberSize(struct _GtkToolItemClass,set_tooltip,8,3,46240)
+CheckOffset(struct _GtkToolItemClass,set_tooltip,840,3,46240)
+CheckMemberSize(struct _GtkToolItemClass,_gtk_reserved1,8,3,46241)
+CheckOffset(struct _GtkToolItemClass,_gtk_reserved1,848,3,46241)
+CheckMemberSize(struct _GtkToolItemClass,_gtk_reserved2,8,3,46242)
+CheckOffset(struct _GtkToolItemClass,_gtk_reserved2,856,3,46242)
+CheckMemberSize(struct _GtkToolItemClass,_gtk_reserved3,8,3,46243)
+CheckOffset(struct _GtkToolItemClass,_gtk_reserved3,864,3,46243)
+CheckMemberSize(struct _GtkToolItemClass,_gtk_reserved4,8,3,46244)
+CheckOffset(struct _GtkToolItemClass,_gtk_reserved4,872,3,46244)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13991,0);
 Msg("Find size of _GtkToolItemClass (13991)\n");
@@ -16956,6 +20325,7 @@ Msg("Find size of _GtkToolItemClass (13991)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13992,0);
 Msg("Find size of fptr_gtk_1157 (13992)\n");
@@ -16963,6 +20333,7 @@ Msg("Find size of fptr_gtk_1157 (13992)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13993,0);
 Msg("Find size of fptr_gtk_7992 (13993)\n");
@@ -16970,6 +20341,7 @@ Msg("Find size of fptr_gtk_7992 (13993)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13994,0);
 Msg("Find size of fptr_gtk_3676 (13994)\n");
@@ -16979,6 +20351,8 @@ Msg("Find size of fptr_gtk_3676 (13994)\n");
 CheckTypeSize(GtkToolItemClass,444, 13995, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolItemClass,880, 13995, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolItemClass,880, 13995, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13995,0);
 Msg("Find size of GtkToolItemClass (13995)\n");
@@ -17004,6 +20378,16 @@ CheckMemberSize(struct _GtkWindowGroupClass,_gtk_reserved3,8,11,46248)
 CheckOffset(struct _GtkWindowGroupClass,_gtk_reserved3,152,11,46248)
 CheckMemberSize(struct _GtkWindowGroupClass,_gtk_reserved4,8,11,46249)
 CheckOffset(struct _GtkWindowGroupClass,_gtk_reserved4,160,11,46249)
+#elif __ia64__
+CheckTypeSize(struct _GtkWindowGroupClass,168, 13996, 3)
+CheckMemberSize(struct _GtkWindowGroupClass,_gtk_reserved1,8,3,46246)
+CheckOffset(struct _GtkWindowGroupClass,_gtk_reserved1,136,3,46246)
+CheckMemberSize(struct _GtkWindowGroupClass,_gtk_reserved2,8,3,46247)
+CheckOffset(struct _GtkWindowGroupClass,_gtk_reserved2,144,3,46247)
+CheckMemberSize(struct _GtkWindowGroupClass,_gtk_reserved3,8,3,46248)
+CheckOffset(struct _GtkWindowGroupClass,_gtk_reserved3,152,3,46248)
+CheckMemberSize(struct _GtkWindowGroupClass,_gtk_reserved4,8,3,46249)
+CheckOffset(struct _GtkWindowGroupClass,_gtk_reserved4,160,3,46249)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13996,0);
 Msg("Find size of _GtkWindowGroupClass (13996)\n");
@@ -17013,6 +20397,8 @@ Msg("Find size of _GtkWindowGroupClass (13996)\n");
 CheckTypeSize(GtkWindowGroupClass,84, 13997, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowGroupClass,168, 13997, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowGroupClass,168, 13997, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13997,0);
 Msg("Find size of GtkWindowGroupClass (13997)\n");
@@ -17034,6 +20420,14 @@ CheckMemberSize(struct _GtkWidgetAuxInfo,width,4,11,46252)
 CheckOffset(struct _GtkWidgetAuxInfo,width,8,11,46252)
 CheckMemberSize(struct _GtkWidgetAuxInfo,height,4,11,46253)
 CheckOffset(struct _GtkWidgetAuxInfo,height,12,11,46253)
+#elif __ia64__
+CheckTypeSize(struct _GtkWidgetAuxInfo,20, 13998, 3)
+CheckMemberSize(struct _GtkWidgetAuxInfo,y,4,3,46251)
+CheckOffset(struct _GtkWidgetAuxInfo,y,4,3,46251)
+CheckMemberSize(struct _GtkWidgetAuxInfo,width,4,3,46252)
+CheckOffset(struct _GtkWidgetAuxInfo,width,8,3,46252)
+CheckMemberSize(struct _GtkWidgetAuxInfo,height,4,3,46253)
+CheckOffset(struct _GtkWidgetAuxInfo,height,12,3,46253)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13998,0);
 Msg("Find size of _GtkWidgetAuxInfo (13998)\n");
@@ -17043,6 +20437,8 @@ Msg("Find size of _GtkWidgetAuxInfo (13998)\n");
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 11)
+#elif __ia64__
+CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13999,0);
 Msg("Find size of GtkWidgetAuxInfo (13999)\n");
@@ -17076,6 +20472,20 @@ CheckMemberSize(struct _GtkCheckMenuItemClass,_gtk_reserved3,8,11,46288)
 CheckOffset(struct _GtkCheckMenuItemClass,_gtk_reserved3,984,11,46288)
 CheckMemberSize(struct _GtkCheckMenuItemClass,_gtk_reserved4,8,11,46289)
 CheckOffset(struct _GtkCheckMenuItemClass,_gtk_reserved4,992,11,46289)
+#elif __ia64__
+CheckTypeSize(struct _GtkCheckMenuItemClass,1000, 14000, 3)
+CheckMemberSize(struct _GtkCheckMenuItemClass,toggled,8,3,46282)
+CheckOffset(struct _GtkCheckMenuItemClass,toggled,952,3,46282)
+CheckMemberSize(struct _GtkCheckMenuItemClass,draw_indicator,8,3,46285)
+CheckOffset(struct _GtkCheckMenuItemClass,draw_indicator,960,3,46285)
+CheckMemberSize(struct _GtkCheckMenuItemClass,_gtk_reserved1,8,3,46286)
+CheckOffset(struct _GtkCheckMenuItemClass,_gtk_reserved1,968,3,46286)
+CheckMemberSize(struct _GtkCheckMenuItemClass,_gtk_reserved2,8,3,46287)
+CheckOffset(struct _GtkCheckMenuItemClass,_gtk_reserved2,976,3,46287)
+CheckMemberSize(struct _GtkCheckMenuItemClass,_gtk_reserved3,8,3,46288)
+CheckOffset(struct _GtkCheckMenuItemClass,_gtk_reserved3,984,3,46288)
+CheckMemberSize(struct _GtkCheckMenuItemClass,_gtk_reserved4,8,3,46289)
+CheckOffset(struct _GtkCheckMenuItemClass,_gtk_reserved4,992,3,46289)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14000,0);
 Msg("Find size of _GtkCheckMenuItemClass (14000)\n");
@@ -17117,6 +20527,24 @@ CheckMemberSize(struct _GtkMenuItemClass,_gtk_reserved3,8,11,46278)
 CheckOffset(struct _GtkMenuItemClass,_gtk_reserved3,936,11,46278)
 CheckMemberSize(struct _GtkMenuItemClass,_gtk_reserved4,8,11,46279)
 CheckOffset(struct _GtkMenuItemClass,_gtk_reserved4,944,11,46279)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuItemClass,952, 14001, 3)
+CheckMemberSize(struct _GtkMenuItemClass,activate,8,3,46268)
+CheckOffset(struct _GtkMenuItemClass,activate,888,3,46268)
+CheckMemberSize(struct _GtkMenuItemClass,activate_item,8,3,46269)
+CheckOffset(struct _GtkMenuItemClass,activate_item,896,3,46269)
+CheckMemberSize(struct _GtkMenuItemClass,toggle_size_request,8,3,46272)
+CheckOffset(struct _GtkMenuItemClass,toggle_size_request,904,3,46272)
+CheckMemberSize(struct _GtkMenuItemClass,toggle_size_allocate,8,3,46275)
+CheckOffset(struct _GtkMenuItemClass,toggle_size_allocate,912,3,46275)
+CheckMemberSize(struct _GtkMenuItemClass,_gtk_reserved1,8,3,46276)
+CheckOffset(struct _GtkMenuItemClass,_gtk_reserved1,920,3,46276)
+CheckMemberSize(struct _GtkMenuItemClass,_gtk_reserved2,8,3,46277)
+CheckOffset(struct _GtkMenuItemClass,_gtk_reserved2,928,3,46277)
+CheckMemberSize(struct _GtkMenuItemClass,_gtk_reserved3,8,3,46278)
+CheckOffset(struct _GtkMenuItemClass,_gtk_reserved3,936,3,46278)
+CheckMemberSize(struct _GtkMenuItemClass,_gtk_reserved4,8,3,46279)
+CheckOffset(struct _GtkMenuItemClass,_gtk_reserved4,944,3,46279)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14001,0);
 Msg("Find size of _GtkMenuItemClass (14001)\n");
@@ -17154,6 +20582,22 @@ CheckMemberSize(struct _GtkItemClass,_gtk_reserved3,8,11,46263)
 CheckOffset(struct _GtkItemClass,_gtk_reserved3,864,11,46263)
 CheckMemberSize(struct _GtkItemClass,_gtk_reserved4,8,11,46264)
 CheckOffset(struct _GtkItemClass,_gtk_reserved4,872,11,46264)
+#elif __ia64__
+CheckTypeSize(struct _GtkItemClass,880, 14002, 3)
+CheckMemberSize(struct _GtkItemClass,select,8,3,46258)
+CheckOffset(struct _GtkItemClass,select,824,3,46258)
+CheckMemberSize(struct _GtkItemClass,deselect,8,3,46259)
+CheckOffset(struct _GtkItemClass,deselect,832,3,46259)
+CheckMemberSize(struct _GtkItemClass,toggle,8,3,46260)
+CheckOffset(struct _GtkItemClass,toggle,840,3,46260)
+CheckMemberSize(struct _GtkItemClass,_gtk_reserved1,8,3,46261)
+CheckOffset(struct _GtkItemClass,_gtk_reserved1,848,3,46261)
+CheckMemberSize(struct _GtkItemClass,_gtk_reserved2,8,3,46262)
+CheckOffset(struct _GtkItemClass,_gtk_reserved2,856,3,46262)
+CheckMemberSize(struct _GtkItemClass,_gtk_reserved3,8,3,46263)
+CheckOffset(struct _GtkItemClass,_gtk_reserved3,864,3,46263)
+CheckMemberSize(struct _GtkItemClass,_gtk_reserved4,8,3,46264)
+CheckOffset(struct _GtkItemClass,_gtk_reserved4,872,3,46264)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14002,0);
 Msg("Find size of _GtkItemClass (14002)\n");
@@ -17161,6 +20605,7 @@ Msg("Find size of _GtkItemClass (14002)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14003,0);
 Msg("Find size of fptr_gtk_7798 (14003)\n");
@@ -17170,6 +20615,8 @@ Msg("Find size of fptr_gtk_7798 (14003)\n");
 CheckTypeSize(GtkItemClass,444, 14004, 2)
 #elif __x86_64__
 CheckTypeSize(GtkItemClass,880, 14004, 11)
+#elif __ia64__
+CheckTypeSize(GtkItemClass,880, 14004, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14004,0);
 Msg("Find size of GtkItemClass (14004)\n");
@@ -17177,6 +20624,7 @@ Msg("Find size of GtkItemClass (14004)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14005,0);
 Msg("Find size of fptr_gtk_211 (14005)\n");
@@ -17184,6 +20632,7 @@ Msg("Find size of fptr_gtk_211 (14005)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14006,0);
 Msg("Find size of fptr_gtk_6972 (14006)\n");
@@ -17191,6 +20640,7 @@ Msg("Find size of fptr_gtk_6972 (14006)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14007,0);
 Msg("Find size of fptr_gtk_1468 (14007)\n");
@@ -17200,6 +20650,8 @@ Msg("Find size of fptr_gtk_1468 (14007)\n");
 CheckTypeSize(GtkMenuItemClass,480, 14008, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuItemClass,952, 14008, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuItemClass,952, 14008, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14008,0);
 Msg("Find size of GtkMenuItemClass (14008)\n");
@@ -17207,6 +20659,7 @@ Msg("Find size of GtkMenuItemClass (14008)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14009,0);
 Msg("Find size of fptr_gtk_7477 (14009)\n");
@@ -17214,6 +20667,7 @@ Msg("Find size of fptr_gtk_7477 (14009)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14010,0);
 Msg("Find size of fptr_gtk_1742 (14010)\n");
@@ -17223,6 +20677,8 @@ Msg("Find size of fptr_gtk_1742 (14010)\n");
 CheckTypeSize(GtkCheckMenuItemClass,504, 14011, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCheckMenuItemClass,1000, 14011, 11)
+#elif __ia64__
+CheckTypeSize(GtkCheckMenuItemClass,1000, 14011, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14011,0);
 Msg("Find size of GtkCheckMenuItemClass (14011)\n");
@@ -17244,6 +20700,14 @@ CheckMemberSize(struct _GtkRcProperty,origin,8,11,46292)
 CheckOffset(struct _GtkRcProperty,origin,8,11,46292)
 CheckMemberSize(struct _GtkRcProperty,value,24,11,46293)
 CheckOffset(struct _GtkRcProperty,value,16,11,46293)
+#elif __ia64__
+CheckTypeSize(struct _GtkRcProperty,40, 14012, 3)
+CheckMemberSize(struct _GtkRcProperty,property_name,4,3,46291)
+CheckOffset(struct _GtkRcProperty,property_name,4,3,46291)
+CheckMemberSize(struct _GtkRcProperty,origin,8,3,46292)
+CheckOffset(struct _GtkRcProperty,origin,8,3,46292)
+CheckMemberSize(struct _GtkRcProperty,value,24,3,46293)
+CheckOffset(struct _GtkRcProperty,value,16,3,46293)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14012,0);
 Msg("Find size of _GtkRcProperty (14012)\n");
@@ -17253,6 +20717,8 @@ Msg("Find size of _GtkRcProperty (14012)\n");
 CheckTypeSize(GtkRcProperty,32, 14013, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcProperty,40, 14013, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcProperty,40, 14013, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14013,0);
 Msg("Find size of GtkRcProperty (14013)\n");
@@ -17278,6 +20744,16 @@ CheckMemberSize(struct _GtkFontSelectionDialogClass,_gtk_reserved3,8,11,46297)
 CheckOffset(struct _GtkFontSelectionDialogClass,_gtk_reserved3,968,11,46297)
 CheckMemberSize(struct _GtkFontSelectionDialogClass,_gtk_reserved4,8,11,46298)
 CheckOffset(struct _GtkFontSelectionDialogClass,_gtk_reserved4,976,11,46298)
+#elif __ia64__
+CheckTypeSize(struct _GtkFontSelectionDialogClass,984, 14014, 3)
+CheckMemberSize(struct _GtkFontSelectionDialogClass,_gtk_reserved1,8,3,46295)
+CheckOffset(struct _GtkFontSelectionDialogClass,_gtk_reserved1,952,3,46295)
+CheckMemberSize(struct _GtkFontSelectionDialogClass,_gtk_reserved2,8,3,46296)
+CheckOffset(struct _GtkFontSelectionDialogClass,_gtk_reserved2,960,3,46296)
+CheckMemberSize(struct _GtkFontSelectionDialogClass,_gtk_reserved3,8,3,46297)
+CheckOffset(struct _GtkFontSelectionDialogClass,_gtk_reserved3,968,3,46297)
+CheckMemberSize(struct _GtkFontSelectionDialogClass,_gtk_reserved4,8,3,46298)
+CheckOffset(struct _GtkFontSelectionDialogClass,_gtk_reserved4,976,3,46298)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14014,0);
 Msg("Find size of _GtkFontSelectionDialogClass (14014)\n");
@@ -17287,6 +20763,8 @@ Msg("Find size of _GtkFontSelectionDialogClass (14014)\n");
 CheckTypeSize(GtkFontSelectionDialogClass,496, 14015, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontSelectionDialogClass,984, 14015, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontSelectionDialogClass,984, 14015, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14015,0);
 Msg("Find size of GtkFontSelectionDialogClass (14015)\n");
@@ -17300,6 +20778,10 @@ CheckOffset(struct _GtkFileChooserDialog,priv,160,2,46300)
 CheckTypeSize(struct _GtkFileChooserDialog,272, 14016, 11)
 CheckMemberSize(struct _GtkFileChooserDialog,priv,8,11,46300)
 CheckOffset(struct _GtkFileChooserDialog,priv,264,11,46300)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileChooserDialog,272, 14016, 3)
+CheckMemberSize(struct _GtkFileChooserDialog,priv,8,3,46300)
+CheckOffset(struct _GtkFileChooserDialog,priv,264,3,46300)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14016,0);
 Msg("Find size of _GtkFileChooserDialog (14016)\n");
@@ -17309,6 +20791,8 @@ Msg("Find size of _GtkFileChooserDialog (14016)\n");
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14018,0);
 Msg("Find size of GtkFileChooserDialogPrivate (14018)\n");
@@ -17318,6 +20802,8 @@ Msg("Find size of GtkFileChooserDialogPrivate (14018)\n");
 CheckTypeSize(GtkFileChooserDialogPrivate *,4, 14019, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserDialogPrivate *,8, 14019, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserDialogPrivate *,8, 14019, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14019,0);
 Msg("Find size of GtkFileChooserDialogPrivate * (14019)\n");
@@ -17327,6 +20813,8 @@ Msg("Find size of GtkFileChooserDialogPrivate * (14019)\n");
 CheckTypeSize(GtkFileChooserDialog,164, 14020, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserDialog,272, 14020, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserDialog,272, 14020, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14020,0);
 Msg("Find size of GtkFileChooserDialog (14020)\n");
@@ -17356,6 +20844,18 @@ CheckMemberSize(struct _GtkToggleActionClass,_gtk_reserved3,8,11,46322)
 CheckOffset(struct _GtkToggleActionClass,_gtk_reserved3,248,11,46322)
 CheckMemberSize(struct _GtkToggleActionClass,_gtk_reserved4,8,11,46323)
 CheckOffset(struct _GtkToggleActionClass,_gtk_reserved4,256,11,46323)
+#elif __ia64__
+CheckTypeSize(struct _GtkToggleActionClass,264, 14021, 3)
+CheckMemberSize(struct _GtkToggleActionClass,toggled,8,3,46319)
+CheckOffset(struct _GtkToggleActionClass,toggled,224,3,46319)
+CheckMemberSize(struct _GtkToggleActionClass,_gtk_reserved1,8,3,46320)
+CheckOffset(struct _GtkToggleActionClass,_gtk_reserved1,232,3,46320)
+CheckMemberSize(struct _GtkToggleActionClass,_gtk_reserved2,8,3,46321)
+CheckOffset(struct _GtkToggleActionClass,_gtk_reserved2,240,3,46321)
+CheckMemberSize(struct _GtkToggleActionClass,_gtk_reserved3,8,3,46322)
+CheckOffset(struct _GtkToggleActionClass,_gtk_reserved3,248,3,46322)
+CheckMemberSize(struct _GtkToggleActionClass,_gtk_reserved4,8,3,46323)
+CheckOffset(struct _GtkToggleActionClass,_gtk_reserved4,256,3,46323)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14021,0);
 Msg("Find size of _GtkToggleActionClass (14021)\n");
@@ -17409,6 +20909,30 @@ CheckMemberSize(struct _GtkActionClass,_gtk_reserved3,8,11,46315)
 CheckOffset(struct _GtkActionClass,_gtk_reserved3,208,11,46315)
 CheckMemberSize(struct _GtkActionClass,_gtk_reserved4,8,11,46316)
 CheckOffset(struct _GtkActionClass,_gtk_reserved4,216,11,46316)
+#elif __ia64__
+CheckTypeSize(struct _GtkActionClass,224, 14022, 3)
+CheckMemberSize(struct _GtkActionClass,activate,8,3,46303)
+CheckOffset(struct _GtkActionClass,activate,136,3,46303)
+CheckMemberSize(struct _GtkActionClass,menu_item_type,8,3,46304)
+CheckOffset(struct _GtkActionClass,menu_item_type,144,3,46304)
+CheckMemberSize(struct _GtkActionClass,toolbar_item_type,8,3,46305)
+CheckOffset(struct _GtkActionClass,toolbar_item_type,152,3,46305)
+CheckMemberSize(struct _GtkActionClass,create_menu_item,8,3,46307)
+CheckOffset(struct _GtkActionClass,create_menu_item,160,3,46307)
+CheckMemberSize(struct _GtkActionClass,create_tool_item,8,3,46308)
+CheckOffset(struct _GtkActionClass,create_tool_item,168,3,46308)
+CheckMemberSize(struct _GtkActionClass,connect_proxy,8,3,46311)
+CheckOffset(struct _GtkActionClass,connect_proxy,176,3,46311)
+CheckMemberSize(struct _GtkActionClass,disconnect_proxy,8,3,46312)
+CheckOffset(struct _GtkActionClass,disconnect_proxy,184,3,46312)
+CheckMemberSize(struct _GtkActionClass,_gtk_reserved1,8,3,46313)
+CheckOffset(struct _GtkActionClass,_gtk_reserved1,192,3,46313)
+CheckMemberSize(struct _GtkActionClass,_gtk_reserved2,8,3,46314)
+CheckOffset(struct _GtkActionClass,_gtk_reserved2,200,3,46314)
+CheckMemberSize(struct _GtkActionClass,_gtk_reserved3,8,3,46315)
+CheckOffset(struct _GtkActionClass,_gtk_reserved3,208,3,46315)
+CheckMemberSize(struct _GtkActionClass,_gtk_reserved4,8,3,46316)
+CheckOffset(struct _GtkActionClass,_gtk_reserved4,216,3,46316)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14022,0);
 Msg("Find size of _GtkActionClass (14022)\n");
@@ -17416,6 +20940,7 @@ Msg("Find size of _GtkActionClass (14022)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14023,0);
 Msg("Find size of fptr_gtk_857 (14023)\n");
@@ -17423,6 +20948,7 @@ Msg("Find size of fptr_gtk_857 (14023)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14024,0);
 Msg("Find size of fptr_gtk_3148 (14024)\n");
@@ -17430,6 +20956,7 @@ Msg("Find size of fptr_gtk_3148 (14024)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14025,0);
 Msg("Find size of fptr_gtk_8678 (14025)\n");
@@ -17439,6 +20966,8 @@ Msg("Find size of fptr_gtk_8678 (14025)\n");
 CheckTypeSize(GtkActionClass,112, 14026, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionClass,224, 14026, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionClass,224, 14026, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14026,0);
 Msg("Find size of GtkActionClass (14026)\n");
@@ -17446,6 +20975,7 @@ Msg("Find size of GtkActionClass (14026)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14027,0);
 Msg("Find size of fptr_gtk_2070 (14027)\n");
@@ -17455,6 +20985,8 @@ Msg("Find size of fptr_gtk_2070 (14027)\n");
 CheckTypeSize(GtkToggleActionClass,132, 14028, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleActionClass,264, 14028, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleActionClass,264, 14028, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14028,0);
 Msg("Find size of GtkToggleActionClass (14028)\n");
@@ -17468,6 +21000,10 @@ CheckOffset(struct _GtkVBoxClass,parent_class,0,2,46324)
 CheckTypeSize(struct _GtkVBoxClass,824, 14029, 11)
 Msg("Missing member data for _GtkVBoxClass on x86-64\n");
 CheckOffset(struct _GtkVBoxClass,parent_class,0,11,46324)
+#elif __ia64__
+CheckTypeSize(struct _GtkVBoxClass,824, 14029, 3)
+Msg("Missing member data for _GtkVBoxClass on IA64\n");
+CheckOffset(struct _GtkVBoxClass,parent_class,0,3,46324)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14029,0);
 Msg("Find size of _GtkVBoxClass (14029)\n");
@@ -17477,6 +21013,8 @@ Msg("Find size of _GtkVBoxClass (14029)\n");
 CheckTypeSize(GtkVBoxClass,416, 14030, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVBoxClass,824, 14030, 11)
+#elif __ia64__
+CheckTypeSize(GtkVBoxClass,824, 14030, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14030,0);
 Msg("Find size of GtkVBoxClass (14030)\n");
@@ -17490,6 +21028,10 @@ CheckOffset(struct _GtkHButtonBoxClass,parent_class,0,2,46326)
 CheckTypeSize(struct _GtkHButtonBoxClass,824, 14031, 11)
 Msg("Missing member data for _GtkHButtonBoxClass on x86-64\n");
 CheckOffset(struct _GtkHButtonBoxClass,parent_class,0,11,46326)
+#elif __ia64__
+CheckTypeSize(struct _GtkHButtonBoxClass,824, 14031, 3)
+Msg("Missing member data for _GtkHButtonBoxClass on IA64\n");
+CheckOffset(struct _GtkHButtonBoxClass,parent_class,0,3,46326)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14031,0);
 Msg("Find size of _GtkHButtonBoxClass (14031)\n");
@@ -17503,6 +21045,10 @@ CheckOffset(struct _GtkButtonBoxClass,parent_class,0,2,46325)
 CheckTypeSize(struct _GtkButtonBoxClass,824, 14032, 11)
 Msg("Missing member data for _GtkButtonBoxClass on x86-64\n");
 CheckOffset(struct _GtkButtonBoxClass,parent_class,0,11,46325)
+#elif __ia64__
+CheckTypeSize(struct _GtkButtonBoxClass,824, 14032, 3)
+Msg("Missing member data for _GtkButtonBoxClass on IA64\n");
+CheckOffset(struct _GtkButtonBoxClass,parent_class,0,3,46325)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14032,0);
 Msg("Find size of _GtkButtonBoxClass (14032)\n");
@@ -17512,6 +21058,8 @@ Msg("Find size of _GtkButtonBoxClass (14032)\n");
 CheckTypeSize(GtkButtonBoxClass,416, 14033, 2)
 #elif __x86_64__
 CheckTypeSize(GtkButtonBoxClass,824, 14033, 11)
+#elif __ia64__
+CheckTypeSize(GtkButtonBoxClass,824, 14033, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14033,0);
 Msg("Find size of GtkButtonBoxClass (14033)\n");
@@ -17521,6 +21069,8 @@ Msg("Find size of GtkButtonBoxClass (14033)\n");
 CheckTypeSize(GtkHButtonBoxClass,416, 14034, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHButtonBoxClass,824, 14034, 11)
+#elif __ia64__
+CheckTypeSize(GtkHButtonBoxClass,824, 14034, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14034,0);
 Msg("Find size of GtkHButtonBoxClass (14034)\n");
@@ -17530,6 +21080,8 @@ Msg("Find size of GtkHButtonBoxClass (14034)\n");
 CheckTypeSize(GtkThemeEngine,0, 14036, 2)
 #elif __x86_64__
 CheckTypeSize(GtkThemeEngine,0, 14036, 11)
+#elif __ia64__
+CheckTypeSize(GtkThemeEngine,0, 14036, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14036,0);
 Msg("Find size of GtkThemeEngine (14036)\n");
@@ -17555,6 +21107,16 @@ CheckMemberSize(struct _GtkTreeStoreClass,_gtk_reserved3,8,11,46330)
 CheckOffset(struct _GtkTreeStoreClass,_gtk_reserved3,152,11,46330)
 CheckMemberSize(struct _GtkTreeStoreClass,_gtk_reserved4,8,11,46331)
 CheckOffset(struct _GtkTreeStoreClass,_gtk_reserved4,160,11,46331)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeStoreClass,168, 14037, 3)
+CheckMemberSize(struct _GtkTreeStoreClass,_gtk_reserved1,8,3,46328)
+CheckOffset(struct _GtkTreeStoreClass,_gtk_reserved1,136,3,46328)
+CheckMemberSize(struct _GtkTreeStoreClass,_gtk_reserved2,8,3,46329)
+CheckOffset(struct _GtkTreeStoreClass,_gtk_reserved2,144,3,46329)
+CheckMemberSize(struct _GtkTreeStoreClass,_gtk_reserved3,8,3,46330)
+CheckOffset(struct _GtkTreeStoreClass,_gtk_reserved3,152,3,46330)
+CheckMemberSize(struct _GtkTreeStoreClass,_gtk_reserved4,8,3,46331)
+CheckOffset(struct _GtkTreeStoreClass,_gtk_reserved4,160,3,46331)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14037,0);
 Msg("Find size of _GtkTreeStoreClass (14037)\n");
@@ -17564,6 +21126,8 @@ Msg("Find size of _GtkTreeStoreClass (14037)\n");
 CheckTypeSize(GtkTreeStoreClass,84, 14038, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeStoreClass,168, 14038, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeStoreClass,168, 14038, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14038,0);
 Msg("Find size of GtkTreeStoreClass (14038)\n");
@@ -17577,6 +21141,10 @@ CheckOffset(struct _GtkBoxChild,padding,4,2,46333)
 CheckTypeSize(struct _GtkBoxChild,16, 14039, 11)
 CheckMemberSize(struct _GtkBoxChild,padding,2,11,46333)
 CheckOffset(struct _GtkBoxChild,padding,8,11,46333)
+#elif __ia64__
+CheckTypeSize(struct _GtkBoxChild,16, 14039, 3)
+CheckMemberSize(struct _GtkBoxChild,padding,2,3,46333)
+CheckOffset(struct _GtkBoxChild,padding,8,3,46333)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14039,0);
 Msg("Find size of _GtkBoxChild (14039)\n");
@@ -17586,6 +21154,8 @@ Msg("Find size of _GtkBoxChild (14039)\n");
 CheckTypeSize(GtkBoxChild,8, 14040, 2)
 #elif __x86_64__
 CheckTypeSize(GtkBoxChild,16, 14040, 11)
+#elif __ia64__
+CheckTypeSize(GtkBoxChild,16, 14040, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14040,0);
 Msg("Find size of GtkBoxChild (14040)\n");
@@ -17599,6 +21169,10 @@ CheckOffset(struct _GtkHButtonBox,button_box,0,2,46338)
 CheckTypeSize(struct _GtkHButtonBox,152, 14041, 11)
 Msg("Missing member data for _GtkHButtonBox on x86-64\n");
 CheckOffset(struct _GtkHButtonBox,button_box,0,11,46338)
+#elif __ia64__
+CheckTypeSize(struct _GtkHButtonBox,152, 14041, 3)
+Msg("Missing member data for _GtkHButtonBox on IA64\n");
+CheckOffset(struct _GtkHButtonBox,button_box,0,3,46338)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14041,0);
 Msg("Find size of _GtkHButtonBox (14041)\n");
@@ -17608,6 +21182,8 @@ Msg("Find size of _GtkHButtonBox (14041)\n");
 CheckTypeSize(GtkHButtonBox,96, 14042, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHButtonBox,152, 14042, 11)
+#elif __ia64__
+CheckTypeSize(GtkHButtonBox,152, 14042, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14042,0);
 Msg("Find size of GtkHButtonBox (14042)\n");
@@ -17637,6 +21213,18 @@ CheckMemberSize(struct _GtkAccelGroupClass,_gtk_reserved3,8,11,46347)
 CheckOffset(struct _GtkAccelGroupClass,_gtk_reserved3,160,11,46347)
 CheckMemberSize(struct _GtkAccelGroupClass,_gtk_reserved4,8,11,46348)
 CheckOffset(struct _GtkAccelGroupClass,_gtk_reserved4,168,11,46348)
+#elif __ia64__
+CheckTypeSize(struct _GtkAccelGroupClass,176, 14043, 3)
+CheckMemberSize(struct _GtkAccelGroupClass,accel_changed,8,3,46344)
+CheckOffset(struct _GtkAccelGroupClass,accel_changed,136,3,46344)
+CheckMemberSize(struct _GtkAccelGroupClass,_gtk_reserved1,8,3,46345)
+CheckOffset(struct _GtkAccelGroupClass,_gtk_reserved1,144,3,46345)
+CheckMemberSize(struct _GtkAccelGroupClass,_gtk_reserved2,8,3,46346)
+CheckOffset(struct _GtkAccelGroupClass,_gtk_reserved2,152,3,46346)
+CheckMemberSize(struct _GtkAccelGroupClass,_gtk_reserved3,8,3,46347)
+CheckOffset(struct _GtkAccelGroupClass,_gtk_reserved3,160,3,46347)
+CheckMemberSize(struct _GtkAccelGroupClass,_gtk_reserved4,8,3,46348)
+CheckOffset(struct _GtkAccelGroupClass,_gtk_reserved4,168,3,46348)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14043,0);
 Msg("Find size of _GtkAccelGroupClass (14043)\n");
@@ -17644,6 +21232,7 @@ Msg("Find size of _GtkAccelGroupClass (14043)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14044,0);
 Msg("Find size of fptr_gtk_1422 (14044)\n");
@@ -17653,6 +21242,8 @@ Msg("Find size of fptr_gtk_1422 (14044)\n");
 CheckTypeSize(GtkAccelGroupClass,88, 14045, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelGroupClass,176, 14045, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelGroupClass,176, 14045, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14045,0);
 Msg("Find size of GtkAccelGroupClass (14045)\n");
@@ -17666,6 +21257,10 @@ CheckOffset(struct _GtkSeparator,widget,0,2,46349)
 CheckTypeSize(struct _GtkSeparator,96, 14046, 11)
 Msg("Missing member data for _GtkSeparator on x86-64\n");
 CheckOffset(struct _GtkSeparator,widget,0,11,46349)
+#elif __ia64__
+CheckTypeSize(struct _GtkSeparator,96, 14046, 3)
+Msg("Missing member data for _GtkSeparator on IA64\n");
+CheckOffset(struct _GtkSeparator,widget,0,3,46349)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14046,0);
 Msg("Find size of _GtkSeparator (14046)\n");
@@ -17675,6 +21270,8 @@ Msg("Find size of _GtkSeparator (14046)\n");
 CheckTypeSize(GtkSeparator,60, 14047, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparator,96, 14047, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparator,96, 14047, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14047,0);
 Msg("Find size of GtkSeparator (14047)\n");
@@ -17724,6 +21321,28 @@ CheckMemberSize(struct _GtkButtonClass,_gtk_reserved3,8,11,46360)
 CheckOffset(struct _GtkButtonClass,_gtk_reserved3,888,11,46360)
 CheckMemberSize(struct _GtkButtonClass,_gtk_reserved4,8,11,46361)
 CheckOffset(struct _GtkButtonClass,_gtk_reserved4,896,11,46361)
+#elif __ia64__
+CheckTypeSize(struct _GtkButtonClass,904, 14048, 3)
+CheckMemberSize(struct _GtkButtonClass,pressed,8,3,46352)
+CheckOffset(struct _GtkButtonClass,pressed,824,3,46352)
+CheckMemberSize(struct _GtkButtonClass,released,8,3,46353)
+CheckOffset(struct _GtkButtonClass,released,832,3,46353)
+CheckMemberSize(struct _GtkButtonClass,clicked,8,3,46354)
+CheckOffset(struct _GtkButtonClass,clicked,840,3,46354)
+CheckMemberSize(struct _GtkButtonClass,enter,8,3,46355)
+CheckOffset(struct _GtkButtonClass,enter,848,3,46355)
+CheckMemberSize(struct _GtkButtonClass,leave,8,3,46356)
+CheckOffset(struct _GtkButtonClass,leave,856,3,46356)
+CheckMemberSize(struct _GtkButtonClass,activate,8,3,46357)
+CheckOffset(struct _GtkButtonClass,activate,864,3,46357)
+CheckMemberSize(struct _GtkButtonClass,_gtk_reserved1,8,3,46358)
+CheckOffset(struct _GtkButtonClass,_gtk_reserved1,872,3,46358)
+CheckMemberSize(struct _GtkButtonClass,_gtk_reserved2,8,3,46359)
+CheckOffset(struct _GtkButtonClass,_gtk_reserved2,880,3,46359)
+CheckMemberSize(struct _GtkButtonClass,_gtk_reserved3,8,3,46360)
+CheckOffset(struct _GtkButtonClass,_gtk_reserved3,888,3,46360)
+CheckMemberSize(struct _GtkButtonClass,_gtk_reserved4,8,3,46361)
+CheckOffset(struct _GtkButtonClass,_gtk_reserved4,896,3,46361)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14048,0);
 Msg("Find size of _GtkButtonClass (14048)\n");
@@ -17731,6 +21350,7 @@ Msg("Find size of _GtkButtonClass (14048)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14049,0);
 Msg("Find size of fptr_gtk_3680 (14049)\n");
@@ -17740,6 +21360,8 @@ Msg("Find size of fptr_gtk_3680 (14049)\n");
 CheckTypeSize(GtkButtonClass,456, 14050, 2)
 #elif __x86_64__
 CheckTypeSize(GtkButtonClass,904, 14050, 11)
+#elif __ia64__
+CheckTypeSize(GtkButtonClass,904, 14050, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14050,0);
 Msg("Find size of GtkButtonClass (14050)\n");
@@ -17747,6 +21369,7 @@ Msg("Find size of GtkButtonClass (14050)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14051,0);
 Msg("Find size of fptr_gtk_9196 (14051)\n");
@@ -17756,6 +21379,8 @@ Msg("Find size of fptr_gtk_9196 (14051)\n");
 CheckTypeSize(GtkWindowKeysForeachFunc,4, 14052, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWindowKeysForeachFunc,8, 14052, 11)
+#elif __ia64__
+CheckTypeSize(GtkWindowKeysForeachFunc,8, 14052, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14052,0);
 Msg("Find size of GtkWindowKeysForeachFunc (14052)\n");
@@ -17781,6 +21406,16 @@ CheckMemberSize(struct _GtkIconFactoryClass,_gtk_reserved3,8,11,46370)
 CheckOffset(struct _GtkIconFactoryClass,_gtk_reserved3,152,11,46370)
 CheckMemberSize(struct _GtkIconFactoryClass,_gtk_reserved4,8,11,46371)
 CheckOffset(struct _GtkIconFactoryClass,_gtk_reserved4,160,11,46371)
+#elif __ia64__
+CheckTypeSize(struct _GtkIconFactoryClass,168, 14053, 3)
+CheckMemberSize(struct _GtkIconFactoryClass,_gtk_reserved1,8,3,46368)
+CheckOffset(struct _GtkIconFactoryClass,_gtk_reserved1,136,3,46368)
+CheckMemberSize(struct _GtkIconFactoryClass,_gtk_reserved2,8,3,46369)
+CheckOffset(struct _GtkIconFactoryClass,_gtk_reserved2,144,3,46369)
+CheckMemberSize(struct _GtkIconFactoryClass,_gtk_reserved3,8,3,46370)
+CheckOffset(struct _GtkIconFactoryClass,_gtk_reserved3,152,3,46370)
+CheckMemberSize(struct _GtkIconFactoryClass,_gtk_reserved4,8,3,46371)
+CheckOffset(struct _GtkIconFactoryClass,_gtk_reserved4,160,3,46371)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14053,0);
 Msg("Find size of _GtkIconFactoryClass (14053)\n");
@@ -17790,6 +21425,8 @@ Msg("Find size of _GtkIconFactoryClass (14053)\n");
 CheckTypeSize(GtkIconFactoryClass,84, 14054, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconFactoryClass,168, 14054, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconFactoryClass,168, 14054, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14054,0);
 Msg("Find size of GtkIconFactoryClass (14054)\n");
@@ -17819,6 +21456,18 @@ CheckMemberSize(struct _GtkTreeSelectionClass,_gtk_reserved3,8,11,46377)
 CheckOffset(struct _GtkTreeSelectionClass,_gtk_reserved3,160,11,46377)
 CheckMemberSize(struct _GtkTreeSelectionClass,_gtk_reserved4,8,11,46378)
 CheckOffset(struct _GtkTreeSelectionClass,_gtk_reserved4,168,11,46378)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeSelectionClass,176, 14055, 3)
+CheckMemberSize(struct _GtkTreeSelectionClass,changed,8,3,46374)
+CheckOffset(struct _GtkTreeSelectionClass,changed,136,3,46374)
+CheckMemberSize(struct _GtkTreeSelectionClass,_gtk_reserved1,8,3,46375)
+CheckOffset(struct _GtkTreeSelectionClass,_gtk_reserved1,144,3,46375)
+CheckMemberSize(struct _GtkTreeSelectionClass,_gtk_reserved2,8,3,46376)
+CheckOffset(struct _GtkTreeSelectionClass,_gtk_reserved2,152,3,46376)
+CheckMemberSize(struct _GtkTreeSelectionClass,_gtk_reserved3,8,3,46377)
+CheckOffset(struct _GtkTreeSelectionClass,_gtk_reserved3,160,3,46377)
+CheckMemberSize(struct _GtkTreeSelectionClass,_gtk_reserved4,8,3,46378)
+CheckOffset(struct _GtkTreeSelectionClass,_gtk_reserved4,168,3,46378)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14055,0);
 Msg("Find size of _GtkTreeSelectionClass (14055)\n");
@@ -17826,6 +21475,7 @@ Msg("Find size of _GtkTreeSelectionClass (14055)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14056,0);
 Msg("Find size of fptr_gtk_4205 (14056)\n");
@@ -17835,6 +21485,8 @@ Msg("Find size of fptr_gtk_4205 (14056)\n");
 CheckTypeSize(GtkTreeSelectionClass,88, 14057, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeSelectionClass,176, 14057, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeSelectionClass,176, 14057, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14057,0);
 Msg("Find size of GtkTreeSelectionClass (14057)\n");
@@ -17888,6 +21540,30 @@ CheckMemberSize(struct _GtkMenuShellClass,_gtk_reserved2,8,11,46405)
 CheckOffset(struct _GtkMenuShellClass,_gtk_reserved2,904,11,46405)
 CheckMemberSize(struct _GtkMenuShellClass,_gtk_reserved3,8,11,46406)
 CheckOffset(struct _GtkMenuShellClass,_gtk_reserved3,912,11,46406)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuShellClass,920, 14058, 3)
+CheckMemberSize(struct _GtkMenuShellClass,deactivate,8,3,46382)
+CheckOffset(struct _GtkMenuShellClass,deactivate,832,3,46382)
+CheckMemberSize(struct _GtkMenuShellClass,selection_done,8,3,46383)
+CheckOffset(struct _GtkMenuShellClass,selection_done,840,3,46383)
+CheckMemberSize(struct _GtkMenuShellClass,move_current,8,3,46390)
+CheckOffset(struct _GtkMenuShellClass,move_current,848,3,46390)
+CheckMemberSize(struct _GtkMenuShellClass,activate_current,8,3,46393)
+CheckOffset(struct _GtkMenuShellClass,activate_current,856,3,46393)
+CheckMemberSize(struct _GtkMenuShellClass,cancel,8,3,46394)
+CheckOffset(struct _GtkMenuShellClass,cancel,864,3,46394)
+CheckMemberSize(struct _GtkMenuShellClass,select_item,8,3,46397)
+CheckOffset(struct _GtkMenuShellClass,select_item,872,3,46397)
+CheckMemberSize(struct _GtkMenuShellClass,insert,8,3,46401)
+CheckOffset(struct _GtkMenuShellClass,insert,880,3,46401)
+CheckMemberSize(struct _GtkMenuShellClass,get_popup_delay,8,3,46403)
+CheckOffset(struct _GtkMenuShellClass,get_popup_delay,888,3,46403)
+CheckMemberSize(struct _GtkMenuShellClass,_gtk_reserved1,8,3,46404)
+CheckOffset(struct _GtkMenuShellClass,_gtk_reserved1,896,3,46404)
+CheckMemberSize(struct _GtkMenuShellClass,_gtk_reserved2,8,3,46405)
+CheckOffset(struct _GtkMenuShellClass,_gtk_reserved2,904,3,46405)
+CheckMemberSize(struct _GtkMenuShellClass,_gtk_reserved3,8,3,46406)
+CheckOffset(struct _GtkMenuShellClass,_gtk_reserved3,912,3,46406)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14058,0);
 Msg("Find size of _GtkMenuShellClass (14058)\n");
@@ -17895,6 +21571,7 @@ Msg("Find size of _GtkMenuShellClass (14058)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14059,0);
 Msg("Find size of fptr_gtk_8181 (14059)\n");
@@ -17910,6 +21587,11 @@ CheckEnum("GTK_MENU_DIR_PARENT",GTK_MENU_DIR_PARENT,0);
 CheckEnum("GTK_MENU_DIR_CHILD",GTK_MENU_DIR_CHILD,1);
 CheckEnum("GTK_MENU_DIR_NEXT",GTK_MENU_DIR_NEXT,2);
 CheckEnum("GTK_MENU_DIR_PREV",GTK_MENU_DIR_PREV,3);
+#elif __ia64__
+CheckEnum("GTK_MENU_DIR_PARENT",GTK_MENU_DIR_PARENT,0);
+CheckEnum("GTK_MENU_DIR_CHILD",GTK_MENU_DIR_CHILD,1);
+CheckEnum("GTK_MENU_DIR_NEXT",GTK_MENU_DIR_NEXT,2);
+CheckEnum("GTK_MENU_DIR_PREV",GTK_MENU_DIR_PREV,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14060,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2519 (14060)\n");
@@ -17919,6 +21601,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2519 (14060)\n");
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuDirectionType,4, 14061, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14061,0);
 Msg("Find size of GtkMenuDirectionType (14061)\n");
@@ -17926,6 +21610,7 @@ Msg("Find size of GtkMenuDirectionType (14061)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14062,0);
 Msg("Find size of fptr_gtk_8747 (14062)\n");
@@ -17933,6 +21618,7 @@ Msg("Find size of fptr_gtk_8747 (14062)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14063,0);
 Msg("Find size of fptr_gtk_2215 (14063)\n");
@@ -17940,6 +21626,7 @@ Msg("Find size of fptr_gtk_2215 (14063)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14064,0);
 Msg("Find size of fptr_gtk_3442 (14064)\n");
@@ -17947,6 +21634,7 @@ Msg("Find size of fptr_gtk_3442 (14064)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14065,0);
 Msg("Find size of fptr_gtk_6485 (14065)\n");
@@ -17954,6 +21642,7 @@ Msg("Find size of fptr_gtk_6485 (14065)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14066,0);
 Msg("Find size of fptr_gtk_1876 (14066)\n");
@@ -17963,6 +21652,8 @@ Msg("Find size of fptr_gtk_1876 (14066)\n");
 CheckTypeSize(GtkMenuShellClass,464, 14067, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuShellClass,920, 14067, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuShellClass,920, 14067, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14067,0);
 Msg("Find size of GtkMenuShellClass (14067)\n");
@@ -17984,6 +21675,14 @@ CheckMemberSize(struct _GtkTreeDragSourceIface,drag_data_get,8,11,46414)
 CheckOffset(struct _GtkTreeDragSourceIface,drag_data_get,24,11,46414)
 CheckMemberSize(struct _GtkTreeDragSourceIface,drag_data_delete,8,11,46415)
 CheckOffset(struct _GtkTreeDragSourceIface,drag_data_delete,32,11,46415)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeDragSourceIface,40, 14068, 3)
+CheckMemberSize(struct _GtkTreeDragSourceIface,row_draggable,8,3,46410)
+CheckOffset(struct _GtkTreeDragSourceIface,row_draggable,16,3,46410)
+CheckMemberSize(struct _GtkTreeDragSourceIface,drag_data_get,8,3,46414)
+CheckOffset(struct _GtkTreeDragSourceIface,drag_data_get,24,3,46414)
+CheckMemberSize(struct _GtkTreeDragSourceIface,drag_data_delete,8,3,46415)
+CheckOffset(struct _GtkTreeDragSourceIface,drag_data_delete,32,3,46415)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14068,0);
 Msg("Find size of _GtkTreeDragSourceIface (14068)\n");
@@ -17991,6 +21690,7 @@ Msg("Find size of _GtkTreeDragSourceIface (14068)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14069,0);
 Msg("Find size of fptr_gtk_4716 (14069)\n");
@@ -17998,6 +21698,7 @@ Msg("Find size of fptr_gtk_4716 (14069)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14070,0);
 Msg("Find size of fptr_gtk_867 (14070)\n");
@@ -18007,6 +21708,8 @@ Msg("Find size of fptr_gtk_867 (14070)\n");
 CheckTypeSize(GtkTreeDragSourceIface,20, 14071, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeDragSourceIface,40, 14071, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeDragSourceIface,40, 14071, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14071,0);
 Msg("Find size of GtkTreeDragSourceIface (14071)\n");
@@ -18044,6 +21747,22 @@ CheckMemberSize(struct _GtkLabelClass,_gtk_reserved3,8,11,46429)
 CheckOffset(struct _GtkLabelClass,_gtk_reserved3,760,11,46429)
 CheckMemberSize(struct _GtkLabelClass,_gtk_reserved4,8,11,46430)
 CheckOffset(struct _GtkLabelClass,_gtk_reserved4,768,11,46430)
+#elif __ia64__
+CheckTypeSize(struct _GtkLabelClass,776, 14072, 3)
+CheckMemberSize(struct _GtkLabelClass,move_cursor,8,3,46421)
+CheckOffset(struct _GtkLabelClass,move_cursor,720,3,46421)
+CheckMemberSize(struct _GtkLabelClass,copy_clipboard,8,3,46423)
+CheckOffset(struct _GtkLabelClass,copy_clipboard,728,3,46423)
+CheckMemberSize(struct _GtkLabelClass,populate_popup,8,3,46426)
+CheckOffset(struct _GtkLabelClass,populate_popup,736,3,46426)
+CheckMemberSize(struct _GtkLabelClass,_gtk_reserved1,8,3,46427)
+CheckOffset(struct _GtkLabelClass,_gtk_reserved1,744,3,46427)
+CheckMemberSize(struct _GtkLabelClass,_gtk_reserved2,8,3,46428)
+CheckOffset(struct _GtkLabelClass,_gtk_reserved2,752,3,46428)
+CheckMemberSize(struct _GtkLabelClass,_gtk_reserved3,8,3,46429)
+CheckOffset(struct _GtkLabelClass,_gtk_reserved3,760,3,46429)
+CheckMemberSize(struct _GtkLabelClass,_gtk_reserved4,8,3,46430)
+CheckOffset(struct _GtkLabelClass,_gtk_reserved4,768,3,46430)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14072,0);
 Msg("Find size of _GtkLabelClass (14072)\n");
@@ -18051,6 +21770,7 @@ Msg("Find size of _GtkLabelClass (14072)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14073,0);
 Msg("Find size of fptr_gtk_2616 (14073)\n");
@@ -18058,6 +21778,7 @@ Msg("Find size of fptr_gtk_2616 (14073)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14074,0);
 Msg("Find size of fptr_gtk_6253 (14074)\n");
@@ -18065,6 +21786,7 @@ Msg("Find size of fptr_gtk_6253 (14074)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14075,0);
 Msg("Find size of fptr_gtk_6034 (14075)\n");
@@ -18074,6 +21796,8 @@ Msg("Find size of fptr_gtk_6034 (14075)\n");
 CheckTypeSize(GtkLabelClass,392, 14076, 2)
 #elif __x86_64__
 CheckTypeSize(GtkLabelClass,776, 14076, 11)
+#elif __ia64__
+CheckTypeSize(GtkLabelClass,776, 14076, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14076,0);
 Msg("Find size of GtkLabelClass (14076)\n");
@@ -18087,6 +21811,10 @@ CheckOffset(struct _GtkScrollbar,range,0,2,46431)
 CheckTypeSize(struct _GtkScrollbar,192, 14077, 11)
 Msg("Missing member data for _GtkScrollbar on x86-64\n");
 CheckOffset(struct _GtkScrollbar,range,0,11,46431)
+#elif __ia64__
+CheckTypeSize(struct _GtkScrollbar,192, 14077, 3)
+Msg("Missing member data for _GtkScrollbar on IA64\n");
+CheckOffset(struct _GtkScrollbar,range,0,3,46431)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14077,0);
 Msg("Find size of _GtkScrollbar (14077)\n");
@@ -18096,6 +21824,8 @@ Msg("Find size of _GtkScrollbar (14077)\n");
 CheckTypeSize(GtkScrollbar,136, 14078, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScrollbar,192, 14078, 11)
+#elif __ia64__
+CheckTypeSize(GtkScrollbar,192, 14078, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14078,0);
 Msg("Find size of GtkScrollbar (14078)\n");
@@ -18113,6 +21843,12 @@ CheckMemberSize(struct _GtkWidgetShapeInfo,offset_y,2,11,46433)
 CheckOffset(struct _GtkWidgetShapeInfo,offset_y,2,11,46433)
 CheckMemberSize(struct _GtkWidgetShapeInfo,shape_mask,8,11,46434)
 CheckOffset(struct _GtkWidgetShapeInfo,shape_mask,8,11,46434)
+#elif __ia64__
+CheckTypeSize(struct _GtkWidgetShapeInfo,16, 14079, 3)
+CheckMemberSize(struct _GtkWidgetShapeInfo,offset_y,2,3,46433)
+CheckOffset(struct _GtkWidgetShapeInfo,offset_y,2,3,46433)
+CheckMemberSize(struct _GtkWidgetShapeInfo,shape_mask,8,3,46434)
+CheckOffset(struct _GtkWidgetShapeInfo,shape_mask,8,3,46434)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14079,0);
 Msg("Find size of _GtkWidgetShapeInfo (14079)\n");
@@ -18122,6 +21858,8 @@ Msg("Find size of _GtkWidgetShapeInfo (14079)\n");
 CheckTypeSize(GtkWidgetShapeInfo,8, 14080, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWidgetShapeInfo,16, 14080, 11)
+#elif __ia64__
+CheckTypeSize(GtkWidgetShapeInfo,16, 14080, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14080,0);
 Msg("Find size of GtkWidgetShapeInfo (14080)\n");
@@ -18151,6 +21889,18 @@ CheckMemberSize(struct _GtkActionGroupClass,_gtk_reserved3,8,11,46441)
 CheckOffset(struct _GtkActionGroupClass,_gtk_reserved3,160,11,46441)
 CheckMemberSize(struct _GtkActionGroupClass,_gtk_reserved4,8,11,46442)
 CheckOffset(struct _GtkActionGroupClass,_gtk_reserved4,168,11,46442)
+#elif __ia64__
+CheckTypeSize(struct _GtkActionGroupClass,176, 14081, 3)
+CheckMemberSize(struct _GtkActionGroupClass,get_action,8,3,46438)
+CheckOffset(struct _GtkActionGroupClass,get_action,136,3,46438)
+CheckMemberSize(struct _GtkActionGroupClass,_gtk_reserved1,8,3,46439)
+CheckOffset(struct _GtkActionGroupClass,_gtk_reserved1,144,3,46439)
+CheckMemberSize(struct _GtkActionGroupClass,_gtk_reserved2,8,3,46440)
+CheckOffset(struct _GtkActionGroupClass,_gtk_reserved2,152,3,46440)
+CheckMemberSize(struct _GtkActionGroupClass,_gtk_reserved3,8,3,46441)
+CheckOffset(struct _GtkActionGroupClass,_gtk_reserved3,160,3,46441)
+CheckMemberSize(struct _GtkActionGroupClass,_gtk_reserved4,8,3,46442)
+CheckOffset(struct _GtkActionGroupClass,_gtk_reserved4,168,3,46442)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14081,0);
 Msg("Find size of _GtkActionGroupClass (14081)\n");
@@ -18158,6 +21908,7 @@ Msg("Find size of _GtkActionGroupClass (14081)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14082,0);
 Msg("Find size of fptr_gtk_5024 (14082)\n");
@@ -18167,6 +21918,8 @@ Msg("Find size of fptr_gtk_5024 (14082)\n");
 CheckTypeSize(GtkActionGroupClass,88, 14083, 2)
 #elif __x86_64__
 CheckTypeSize(GtkActionGroupClass,176, 14083, 11)
+#elif __ia64__
+CheckTypeSize(GtkActionGroupClass,176, 14083, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14083,0);
 Msg("Find size of GtkActionGroupClass (14083)\n");
@@ -18180,6 +21933,10 @@ CheckOffset(struct _GtkSettingsClass,parent_class,0,2,46443)
 CheckTypeSize(struct _GtkSettingsClass,136, 14084, 11)
 Msg("Missing member data for _GtkSettingsClass on x86-64\n");
 CheckOffset(struct _GtkSettingsClass,parent_class,0,11,46443)
+#elif __ia64__
+CheckTypeSize(struct _GtkSettingsClass,136, 14084, 3)
+Msg("Missing member data for _GtkSettingsClass on IA64\n");
+CheckOffset(struct _GtkSettingsClass,parent_class,0,3,46443)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14084,0);
 Msg("Find size of _GtkSettingsClass (14084)\n");
@@ -18189,6 +21946,8 @@ Msg("Find size of _GtkSettingsClass (14084)\n");
 CheckTypeSize(GtkSettingsClass,68, 14085, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSettingsClass,136, 14085, 11)
+#elif __ia64__
+CheckTypeSize(GtkSettingsClass,136, 14085, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14085,0);
 Msg("Find size of GtkSettingsClass (14085)\n");
@@ -18286,6 +22045,52 @@ CheckMemberSize(struct _GtkIMContextClass,_gtk_reserved5,8,11,46491)
 CheckOffset(struct _GtkIMContextClass,_gtk_reserved5,320,11,46491)
 CheckMemberSize(struct _GtkIMContextClass,_gtk_reserved6,8,11,46492)
 CheckOffset(struct _GtkIMContextClass,_gtk_reserved6,328,11,46492)
+#elif __ia64__
+CheckTypeSize(struct _GtkIMContextClass,336, 14086, 3)
+CheckMemberSize(struct _GtkIMContextClass,preedit_start,8,3,46446)
+CheckOffset(struct _GtkIMContextClass,preedit_start,160,3,46446)
+CheckMemberSize(struct _GtkIMContextClass,preedit_end,8,3,46447)
+CheckOffset(struct _GtkIMContextClass,preedit_end,168,3,46447)
+CheckMemberSize(struct _GtkIMContextClass,preedit_changed,8,3,46448)
+CheckOffset(struct _GtkIMContextClass,preedit_changed,176,3,46448)
+CheckMemberSize(struct _GtkIMContextClass,commit,8,3,46451)
+CheckOffset(struct _GtkIMContextClass,commit,184,3,46451)
+CheckMemberSize(struct _GtkIMContextClass,retrieve_surrounding,8,3,46453)
+CheckOffset(struct _GtkIMContextClass,retrieve_surrounding,192,3,46453)
+CheckMemberSize(struct _GtkIMContextClass,delete_surrounding,8,3,46457)
+CheckOffset(struct _GtkIMContextClass,delete_surrounding,200,3,46457)
+CheckMemberSize(struct _GtkIMContextClass,set_client_window,8,3,46460)
+CheckOffset(struct _GtkIMContextClass,set_client_window,208,3,46460)
+CheckMemberSize(struct _GtkIMContextClass,get_preedit_string,8,3,46465)
+CheckOffset(struct _GtkIMContextClass,get_preedit_string,216,3,46465)
+CheckMemberSize(struct _GtkIMContextClass,filter_keypress,8,3,46468)
+CheckOffset(struct _GtkIMContextClass,filter_keypress,224,3,46468)
+CheckMemberSize(struct _GtkIMContextClass,focus_in,8,3,46469)
+CheckOffset(struct _GtkIMContextClass,focus_in,232,3,46469)
+CheckMemberSize(struct _GtkIMContextClass,focus_out,8,3,46470)
+CheckOffset(struct _GtkIMContextClass,focus_out,240,3,46470)
+CheckMemberSize(struct _GtkIMContextClass,reset,8,3,46471)
+CheckOffset(struct _GtkIMContextClass,reset,248,3,46471)
+CheckMemberSize(struct _GtkIMContextClass,set_cursor_location,8,3,46474)
+CheckOffset(struct _GtkIMContextClass,set_cursor_location,256,3,46474)
+CheckMemberSize(struct _GtkIMContextClass,set_use_preedit,8,3,46477)
+CheckOffset(struct _GtkIMContextClass,set_use_preedit,264,3,46477)
+CheckMemberSize(struct _GtkIMContextClass,set_surrounding,8,3,46482)
+CheckOffset(struct _GtkIMContextClass,set_surrounding,272,3,46482)
+CheckMemberSize(struct _GtkIMContextClass,get_surrounding,8,3,46486)
+CheckOffset(struct _GtkIMContextClass,get_surrounding,280,3,46486)
+CheckMemberSize(struct _GtkIMContextClass,_gtk_reserved1,8,3,46487)
+CheckOffset(struct _GtkIMContextClass,_gtk_reserved1,288,3,46487)
+CheckMemberSize(struct _GtkIMContextClass,_gtk_reserved2,8,3,46488)
+CheckOffset(struct _GtkIMContextClass,_gtk_reserved2,296,3,46488)
+CheckMemberSize(struct _GtkIMContextClass,_gtk_reserved3,8,3,46489)
+CheckOffset(struct _GtkIMContextClass,_gtk_reserved3,304,3,46489)
+CheckMemberSize(struct _GtkIMContextClass,_gtk_reserved4,8,3,46490)
+CheckOffset(struct _GtkIMContextClass,_gtk_reserved4,312,3,46490)
+CheckMemberSize(struct _GtkIMContextClass,_gtk_reserved5,8,3,46491)
+CheckOffset(struct _GtkIMContextClass,_gtk_reserved5,320,3,46491)
+CheckMemberSize(struct _GtkIMContextClass,_gtk_reserved6,8,3,46492)
+CheckOffset(struct _GtkIMContextClass,_gtk_reserved6,328,3,46492)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14086,0);
 Msg("Find size of _GtkIMContextClass (14086)\n");
@@ -18293,6 +22098,7 @@ Msg("Find size of _GtkIMContextClass (14086)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14087,0);
 Msg("Find size of fptr_gtk_7160 (14087)\n");
@@ -18300,6 +22106,7 @@ Msg("Find size of fptr_gtk_7160 (14087)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14088,0);
 Msg("Find size of fptr_gtk_2180 (14088)\n");
@@ -18307,6 +22114,7 @@ Msg("Find size of fptr_gtk_2180 (14088)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14089,0);
 Msg("Find size of fptr_gtk_5533 (14089)\n");
@@ -18314,6 +22122,7 @@ Msg("Find size of fptr_gtk_5533 (14089)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14090,0);
 Msg("Find size of fptr_gtk_3849 (14090)\n");
@@ -18321,6 +22130,7 @@ Msg("Find size of fptr_gtk_3849 (14090)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14091,0);
 Msg("Find size of fptr_gtk_7658 (14091)\n");
@@ -18328,6 +22138,7 @@ Msg("Find size of fptr_gtk_7658 (14091)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14092,0);
 Msg("Find size of fptr_gtk_5566 (14092)\n");
@@ -18335,6 +22146,7 @@ Msg("Find size of fptr_gtk_5566 (14092)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14093,0);
 Msg("Find size of fptr_gtk_4256 (14093)\n");
@@ -18342,6 +22154,7 @@ Msg("Find size of fptr_gtk_4256 (14093)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14094,0);
 Msg("Find size of fptr_gtk_4968 (14094)\n");
@@ -18349,6 +22162,7 @@ Msg("Find size of fptr_gtk_4968 (14094)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14095,0);
 Msg("Find size of fptr_gtk_281 (14095)\n");
@@ -18356,6 +22170,7 @@ Msg("Find size of fptr_gtk_281 (14095)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14096,0);
 Msg("Find size of fptr_gtk_6424 (14096)\n");
@@ -18363,6 +22178,7 @@ Msg("Find size of fptr_gtk_6424 (14096)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14097,0);
 Msg("Find size of fptr_gtk_6536 (14097)\n");
@@ -18372,6 +22188,8 @@ Msg("Find size of fptr_gtk_6536 (14097)\n");
 CheckTypeSize(GtkIMContextClass,168, 14098, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMContextClass,336, 14098, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMContextClass,336, 14098, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14098,0);
 Msg("Find size of GtkIMContextClass (14098)\n");
@@ -18413,6 +22231,24 @@ CheckMemberSize(struct _GtkCellRendererClass,_gtk_reserved1,8,11,46532)
 CheckOffset(struct _GtkCellRendererClass,_gtk_reserved1,208,11,46532)
 CheckMemberSize(struct _GtkCellRendererClass,_gtk_reserved2,8,11,46533)
 CheckOffset(struct _GtkCellRendererClass,_gtk_reserved2,216,11,46533)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererClass,224, 14099, 3)
+CheckMemberSize(struct _GtkCellRendererClass,get_size,8,3,46501)
+CheckOffset(struct _GtkCellRendererClass,get_size,160,3,46501)
+CheckMemberSize(struct _GtkCellRendererClass,render,8,3,46509)
+CheckOffset(struct _GtkCellRendererClass,render,168,3,46509)
+CheckMemberSize(struct _GtkCellRendererClass,activate,8,3,46517)
+CheckOffset(struct _GtkCellRendererClass,activate,176,3,46517)
+CheckMemberSize(struct _GtkCellRendererClass,start_editing,8,3,46525)
+CheckOffset(struct _GtkCellRendererClass,start_editing,184,3,46525)
+CheckMemberSize(struct _GtkCellRendererClass,editing_canceled,8,3,46527)
+CheckOffset(struct _GtkCellRendererClass,editing_canceled,192,3,46527)
+CheckMemberSize(struct _GtkCellRendererClass,editing_started,8,3,46531)
+CheckOffset(struct _GtkCellRendererClass,editing_started,200,3,46531)
+CheckMemberSize(struct _GtkCellRendererClass,_gtk_reserved1,8,3,46532)
+CheckOffset(struct _GtkCellRendererClass,_gtk_reserved1,208,3,46532)
+CheckMemberSize(struct _GtkCellRendererClass,_gtk_reserved2,8,3,46533)
+CheckOffset(struct _GtkCellRendererClass,_gtk_reserved2,216,3,46533)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14099,0);
 Msg("Find size of _GtkCellRendererClass (14099)\n");
@@ -18420,6 +22256,7 @@ Msg("Find size of _GtkCellRendererClass (14099)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14100,0);
 Msg("Find size of fptr_gtk_5205 (14100)\n");
@@ -18427,6 +22264,7 @@ Msg("Find size of fptr_gtk_5205 (14100)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14101,0);
 Msg("Find size of fptr_gtk_6423 (14101)\n");
@@ -18434,6 +22272,7 @@ Msg("Find size of fptr_gtk_6423 (14101)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14102,0);
 Msg("Find size of fptr_gtk_1322 (14102)\n");
@@ -18441,6 +22280,7 @@ Msg("Find size of fptr_gtk_1322 (14102)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14103,0);
 Msg("Find size of fptr_gtk_6287 (14103)\n");
@@ -18448,6 +22288,7 @@ Msg("Find size of fptr_gtk_6287 (14103)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14104,0);
 Msg("Find size of fptr_gtk_8924 (14104)\n");
@@ -18455,6 +22296,7 @@ Msg("Find size of fptr_gtk_8924 (14104)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14105,0);
 Msg("Find size of fptr_gtk_3574 (14105)\n");
@@ -18464,6 +22306,8 @@ Msg("Find size of fptr_gtk_3574 (14105)\n");
 CheckTypeSize(GtkCellRendererClass,112, 14106, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererClass,224, 14106, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererClass,224, 14106, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14106,0);
 Msg("Find size of GtkCellRendererClass (14106)\n");
@@ -18493,6 +22337,18 @@ CheckMemberSize(struct _GtkMenuToolButtonClass,_gtk_reserved3,8,11,46547)
 CheckOffset(struct _GtkMenuToolButtonClass,_gtk_reserved3,952,11,46547)
 CheckMemberSize(struct _GtkMenuToolButtonClass,_gtk_reserved4,8,11,46548)
 CheckOffset(struct _GtkMenuToolButtonClass,_gtk_reserved4,960,11,46548)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuToolButtonClass,968, 14107, 3)
+CheckMemberSize(struct _GtkMenuToolButtonClass,show_menu,8,3,46544)
+CheckOffset(struct _GtkMenuToolButtonClass,show_menu,928,3,46544)
+CheckMemberSize(struct _GtkMenuToolButtonClass,_gtk_reserved1,8,3,46545)
+CheckOffset(struct _GtkMenuToolButtonClass,_gtk_reserved1,936,3,46545)
+CheckMemberSize(struct _GtkMenuToolButtonClass,_gtk_reserved2,8,3,46546)
+CheckOffset(struct _GtkMenuToolButtonClass,_gtk_reserved2,944,3,46546)
+CheckMemberSize(struct _GtkMenuToolButtonClass,_gtk_reserved3,8,3,46547)
+CheckOffset(struct _GtkMenuToolButtonClass,_gtk_reserved3,952,3,46547)
+CheckMemberSize(struct _GtkMenuToolButtonClass,_gtk_reserved4,8,3,46548)
+CheckOffset(struct _GtkMenuToolButtonClass,_gtk_reserved4,960,3,46548)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14107,0);
 Msg("Find size of _GtkMenuToolButtonClass (14107)\n");
@@ -18526,6 +22382,20 @@ CheckMemberSize(struct _GtkToolButtonClass,_gtk_reserved3,8,11,46540)
 CheckOffset(struct _GtkToolButtonClass,_gtk_reserved3,912,11,46540)
 CheckMemberSize(struct _GtkToolButtonClass,_gtk_reserved4,8,11,46541)
 CheckOffset(struct _GtkToolButtonClass,_gtk_reserved4,920,11,46541)
+#elif __ia64__
+CheckTypeSize(struct _GtkToolButtonClass,928, 14108, 3)
+CheckMemberSize(struct _GtkToolButtonClass,button_type,8,3,46535)
+CheckOffset(struct _GtkToolButtonClass,button_type,880,3,46535)
+CheckMemberSize(struct _GtkToolButtonClass,clicked,8,3,46537)
+CheckOffset(struct _GtkToolButtonClass,clicked,888,3,46537)
+CheckMemberSize(struct _GtkToolButtonClass,_gtk_reserved1,8,3,46538)
+CheckOffset(struct _GtkToolButtonClass,_gtk_reserved1,896,3,46538)
+CheckMemberSize(struct _GtkToolButtonClass,_gtk_reserved2,8,3,46539)
+CheckOffset(struct _GtkToolButtonClass,_gtk_reserved2,904,3,46539)
+CheckMemberSize(struct _GtkToolButtonClass,_gtk_reserved3,8,3,46540)
+CheckOffset(struct _GtkToolButtonClass,_gtk_reserved3,912,3,46540)
+CheckMemberSize(struct _GtkToolButtonClass,_gtk_reserved4,8,3,46541)
+CheckOffset(struct _GtkToolButtonClass,_gtk_reserved4,920,3,46541)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14108,0);
 Msg("Find size of _GtkToolButtonClass (14108)\n");
@@ -18533,6 +22403,7 @@ Msg("Find size of _GtkToolButtonClass (14108)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14109,0);
 Msg("Find size of fptr_gtk_2797 (14109)\n");
@@ -18542,6 +22413,8 @@ Msg("Find size of fptr_gtk_2797 (14109)\n");
 CheckTypeSize(GtkToolButtonClass,468, 14110, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolButtonClass,928, 14110, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolButtonClass,928, 14110, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14110,0);
 Msg("Find size of GtkToolButtonClass (14110)\n");
@@ -18549,6 +22422,7 @@ Msg("Find size of GtkToolButtonClass (14110)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14111,0);
 Msg("Find size of fptr_gtk_2808 (14111)\n");
@@ -18558,6 +22432,8 @@ Msg("Find size of fptr_gtk_2808 (14111)\n");
 CheckTypeSize(GtkMenuToolButtonClass,488, 14112, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuToolButtonClass,968, 14112, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuToolButtonClass,968, 14112, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14112,0);
 Msg("Find size of GtkMenuToolButtonClass (14112)\n");
@@ -18571,6 +22447,10 @@ CheckOffset(struct _GtkVSeparator,separator,0,2,46549)
 CheckTypeSize(struct _GtkVSeparator,96, 14113, 11)
 Msg("Missing member data for _GtkVSeparator on x86-64\n");
 CheckOffset(struct _GtkVSeparator,separator,0,11,46549)
+#elif __ia64__
+CheckTypeSize(struct _GtkVSeparator,96, 14113, 3)
+Msg("Missing member data for _GtkVSeparator on IA64\n");
+CheckOffset(struct _GtkVSeparator,separator,0,3,46549)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14113,0);
 Msg("Find size of _GtkVSeparator (14113)\n");
@@ -18580,6 +22460,8 @@ Msg("Find size of _GtkVSeparator (14113)\n");
 CheckTypeSize(GtkVSeparator,60, 14114, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVSeparator,96, 14114, 11)
+#elif __ia64__
+CheckTypeSize(GtkVSeparator,96, 14114, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14114,0);
 Msg("Find size of GtkVSeparator (14114)\n");
@@ -18605,6 +22487,16 @@ CheckMemberSize(struct _GtkDrawingAreaClass,_gtk_reserved3,8,11,46553)
 CheckOffset(struct _GtkDrawingAreaClass,_gtk_reserved3,736,11,46553)
 CheckMemberSize(struct _GtkDrawingAreaClass,_gtk_reserved4,8,11,46554)
 CheckOffset(struct _GtkDrawingAreaClass,_gtk_reserved4,744,11,46554)
+#elif __ia64__
+CheckTypeSize(struct _GtkDrawingAreaClass,752, 14115, 3)
+CheckMemberSize(struct _GtkDrawingAreaClass,_gtk_reserved1,8,3,46551)
+CheckOffset(struct _GtkDrawingAreaClass,_gtk_reserved1,720,3,46551)
+CheckMemberSize(struct _GtkDrawingAreaClass,_gtk_reserved2,8,3,46552)
+CheckOffset(struct _GtkDrawingAreaClass,_gtk_reserved2,728,3,46552)
+CheckMemberSize(struct _GtkDrawingAreaClass,_gtk_reserved3,8,3,46553)
+CheckOffset(struct _GtkDrawingAreaClass,_gtk_reserved3,736,3,46553)
+CheckMemberSize(struct _GtkDrawingAreaClass,_gtk_reserved4,8,3,46554)
+CheckOffset(struct _GtkDrawingAreaClass,_gtk_reserved4,744,3,46554)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14115,0);
 Msg("Find size of _GtkDrawingAreaClass (14115)\n");
@@ -18614,6 +22506,8 @@ Msg("Find size of _GtkDrawingAreaClass (14115)\n");
 CheckTypeSize(GtkDrawingAreaClass,380, 14116, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDrawingAreaClass,752, 14116, 11)
+#elif __ia64__
+CheckTypeSize(GtkDrawingAreaClass,752, 14116, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14116,0);
 Msg("Find size of GtkDrawingAreaClass (14116)\n");
@@ -18631,6 +22525,12 @@ CheckMemberSize(struct _GtkTargetPair,flags,4,11,46556)
 CheckOffset(struct _GtkTargetPair,flags,8,11,46556)
 CheckMemberSize(struct _GtkTargetPair,info,4,11,46557)
 CheckOffset(struct _GtkTargetPair,info,12,11,46557)
+#elif __ia64__
+CheckTypeSize(struct _GtkTargetPair,16, 14117, 3)
+CheckMemberSize(struct _GtkTargetPair,flags,4,3,46556)
+CheckOffset(struct _GtkTargetPair,flags,8,3,46556)
+CheckMemberSize(struct _GtkTargetPair,info,4,3,46557)
+CheckOffset(struct _GtkTargetPair,info,12,3,46557)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14117,0);
 Msg("Find size of _GtkTargetPair (14117)\n");
@@ -18640,6 +22540,8 @@ Msg("Find size of _GtkTargetPair (14117)\n");
 CheckTypeSize(GtkTargetPair,12, 14118, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTargetPair,16, 14118, 11)
+#elif __ia64__
+CheckTypeSize(GtkTargetPair,16, 14118, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14118,0);
 Msg("Find size of GtkTargetPair (14118)\n");
@@ -18653,6 +22555,10 @@ CheckOffset(struct _GtkCellViewClass,parent_class,0,2,46558)
 CheckTypeSize(struct _GtkCellViewClass,720, 14119, 11)
 Msg("Missing member data for _GtkCellViewClass on x86-64\n");
 CheckOffset(struct _GtkCellViewClass,parent_class,0,11,46558)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellViewClass,720, 14119, 3)
+Msg("Missing member data for _GtkCellViewClass on IA64\n");
+CheckOffset(struct _GtkCellViewClass,parent_class,0,3,46558)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14119,0);
 Msg("Find size of _GtkCellViewClass (14119)\n");
@@ -18662,6 +22568,8 @@ Msg("Find size of _GtkCellViewClass (14119)\n");
 CheckTypeSize(GtkCellViewClass,364, 14120, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellViewClass,720, 14120, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellViewClass,720, 14120, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14120,0);
 Msg("Find size of GtkCellViewClass (14120)\n");
@@ -18699,6 +22607,22 @@ CheckMemberSize(struct _GtkCellLayoutIface,clear_attributes,8,11,46580)
 CheckOffset(struct _GtkCellLayoutIface,clear_attributes,56,11,46580)
 CheckMemberSize(struct _GtkCellLayoutIface,reorder,8,11,46584)
 CheckOffset(struct _GtkCellLayoutIface,reorder,64,11,46584)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellLayoutIface,72, 14121, 3)
+CheckMemberSize(struct _GtkCellLayoutIface,pack_start,8,3,46563)
+CheckOffset(struct _GtkCellLayoutIface,pack_start,16,3,46563)
+CheckMemberSize(struct _GtkCellLayoutIface,pack_end,8,3,46564)
+CheckOffset(struct _GtkCellLayoutIface,pack_end,24,3,46564)
+CheckMemberSize(struct _GtkCellLayoutIface,clear,8,3,46566)
+CheckOffset(struct _GtkCellLayoutIface,clear,32,3,46566)
+CheckMemberSize(struct _GtkCellLayoutIface,add_attribute,8,3,46571)
+CheckOffset(struct _GtkCellLayoutIface,add_attribute,40,3,46571)
+CheckMemberSize(struct _GtkCellLayoutIface,set_cell_data_func,8,3,46577)
+CheckOffset(struct _GtkCellLayoutIface,set_cell_data_func,48,3,46577)
+CheckMemberSize(struct _GtkCellLayoutIface,clear_attributes,8,3,46580)
+CheckOffset(struct _GtkCellLayoutIface,clear_attributes,56,3,46580)
+CheckMemberSize(struct _GtkCellLayoutIface,reorder,8,3,46584)
+CheckOffset(struct _GtkCellLayoutIface,reorder,64,3,46584)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14121,0);
 Msg("Find size of _GtkCellLayoutIface (14121)\n");
@@ -18706,6 +22630,7 @@ Msg("Find size of _GtkCellLayoutIface (14121)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14122,0);
 Msg("Find size of fptr_gtk_4001 (14122)\n");
@@ -18713,6 +22638,7 @@ Msg("Find size of fptr_gtk_4001 (14122)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14123,0);
 Msg("Find size of fptr_gtk_6714 (14123)\n");
@@ -18720,6 +22646,7 @@ Msg("Find size of fptr_gtk_6714 (14123)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14124,0);
 Msg("Find size of fptr_gtk_6922 (14124)\n");
@@ -18727,6 +22654,7 @@ Msg("Find size of fptr_gtk_6922 (14124)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14125,0);
 Msg("Find size of fptr_gtk_2174 (14125)\n");
@@ -18734,6 +22662,7 @@ Msg("Find size of fptr_gtk_2174 (14125)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14126,0);
 Msg("Find size of fptr_gtk_3337 (14126)\n");
@@ -18741,6 +22670,7 @@ Msg("Find size of fptr_gtk_3337 (14126)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14127,0);
 Msg("Find size of fptr_gtk_778 (14127)\n");
@@ -18750,6 +22680,8 @@ Msg("Find size of fptr_gtk_778 (14127)\n");
 CheckTypeSize(GtkCellLayoutIface,36, 14128, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellLayoutIface,72, 14128, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellLayoutIface,72, 14128, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14128,0);
 Msg("Find size of GtkCellLayoutIface (14128)\n");
@@ -18759,6 +22691,8 @@ Msg("Find size of GtkCellLayoutIface (14128)\n");
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 11)
+#elif __ia64__
+CheckTypeSize(GtkAlignmentPrivate,0, 14130, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14130,0);
 Msg("Find size of GtkAlignmentPrivate (14130)\n");
@@ -18772,6 +22706,10 @@ CheckOffset(struct _GtkFixedClass,parent_class,0,2,46585)
 CheckTypeSize(struct _GtkFixedClass,824, 14131, 11)
 Msg("Missing member data for _GtkFixedClass on x86-64\n");
 CheckOffset(struct _GtkFixedClass,parent_class,0,11,46585)
+#elif __ia64__
+CheckTypeSize(struct _GtkFixedClass,824, 14131, 3)
+Msg("Missing member data for _GtkFixedClass on IA64\n");
+CheckOffset(struct _GtkFixedClass,parent_class,0,3,46585)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14131,0);
 Msg("Find size of _GtkFixedClass (14131)\n");
@@ -18781,6 +22719,8 @@ Msg("Find size of _GtkFixedClass (14131)\n");
 CheckTypeSize(GtkFixedClass,416, 14132, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFixedClass,824, 14132, 11)
+#elif __ia64__
+CheckTypeSize(GtkFixedClass,824, 14132, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14132,0);
 Msg("Find size of GtkFixedClass (14132)\n");
@@ -18794,6 +22734,10 @@ CheckOffset(struct _GtkHScaleClass,parent_class,0,2,46586)
 CheckTypeSize(struct _GtkHScaleClass,848, 14133, 11)
 Msg("Missing member data for _GtkHScaleClass on x86-64\n");
 CheckOffset(struct _GtkHScaleClass,parent_class,0,11,46586)
+#elif __ia64__
+CheckTypeSize(struct _GtkHScaleClass,848, 14133, 3)
+Msg("Missing member data for _GtkHScaleClass on IA64\n");
+CheckOffset(struct _GtkHScaleClass,parent_class,0,3,46586)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14133,0);
 Msg("Find size of _GtkHScaleClass (14133)\n");
@@ -18803,6 +22747,8 @@ Msg("Find size of _GtkHScaleClass (14133)\n");
 CheckTypeSize(GtkHScaleClass,428, 14134, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHScaleClass,848, 14134, 11)
+#elif __ia64__
+CheckTypeSize(GtkHScaleClass,848, 14134, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14134,0);
 Msg("Find size of GtkHScaleClass (14134)\n");
@@ -18828,6 +22774,16 @@ CheckMemberSize(struct _GtkScrollbarClass,_gtk_reserved3,8,11,46590)
 CheckOffset(struct _GtkScrollbarClass,_gtk_reserved3,816,11,46590)
 CheckMemberSize(struct _GtkScrollbarClass,_gtk_reserved4,8,11,46591)
 CheckOffset(struct _GtkScrollbarClass,_gtk_reserved4,824,11,46591)
+#elif __ia64__
+CheckTypeSize(struct _GtkScrollbarClass,832, 14135, 3)
+CheckMemberSize(struct _GtkScrollbarClass,_gtk_reserved1,8,3,46588)
+CheckOffset(struct _GtkScrollbarClass,_gtk_reserved1,800,3,46588)
+CheckMemberSize(struct _GtkScrollbarClass,_gtk_reserved2,8,3,46589)
+CheckOffset(struct _GtkScrollbarClass,_gtk_reserved2,808,3,46589)
+CheckMemberSize(struct _GtkScrollbarClass,_gtk_reserved3,8,3,46590)
+CheckOffset(struct _GtkScrollbarClass,_gtk_reserved3,816,3,46590)
+CheckMemberSize(struct _GtkScrollbarClass,_gtk_reserved4,8,3,46591)
+CheckOffset(struct _GtkScrollbarClass,_gtk_reserved4,824,3,46591)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14135,0);
 Msg("Find size of _GtkScrollbarClass (14135)\n");
@@ -18837,6 +22793,8 @@ Msg("Find size of _GtkScrollbarClass (14135)\n");
 CheckTypeSize(GtkScrollbarClass,420, 14136, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScrollbarClass,832, 14136, 11)
+#elif __ia64__
+CheckTypeSize(GtkScrollbarClass,832, 14136, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14136,0);
 Msg("Find size of GtkScrollbarClass (14136)\n");
@@ -18890,6 +22848,30 @@ CheckMemberSize(struct _GtkAccelLabelClass,_gtk_reserved3,8,11,46603)
 CheckOffset(struct _GtkAccelLabelClass,_gtk_reserved3,856,11,46603)
 CheckMemberSize(struct _GtkAccelLabelClass,_gtk_reserved4,8,11,46604)
 CheckOffset(struct _GtkAccelLabelClass,_gtk_reserved4,864,11,46604)
+#elif __ia64__
+CheckTypeSize(struct _GtkAccelLabelClass,872, 14137, 3)
+CheckMemberSize(struct _GtkAccelLabelClass,signal_quote1,8,3,46593)
+CheckOffset(struct _GtkAccelLabelClass,signal_quote1,776,3,46593)
+CheckMemberSize(struct _GtkAccelLabelClass,signal_quote2,8,3,46594)
+CheckOffset(struct _GtkAccelLabelClass,signal_quote2,784,3,46594)
+CheckMemberSize(struct _GtkAccelLabelClass,mod_name_shift,8,3,46595)
+CheckOffset(struct _GtkAccelLabelClass,mod_name_shift,792,3,46595)
+CheckMemberSize(struct _GtkAccelLabelClass,mod_name_control,8,3,46596)
+CheckOffset(struct _GtkAccelLabelClass,mod_name_control,800,3,46596)
+CheckMemberSize(struct _GtkAccelLabelClass,mod_name_alt,8,3,46597)
+CheckOffset(struct _GtkAccelLabelClass,mod_name_alt,808,3,46597)
+CheckMemberSize(struct _GtkAccelLabelClass,mod_separator,8,3,46598)
+CheckOffset(struct _GtkAccelLabelClass,mod_separator,816,3,46598)
+CheckMemberSize(struct _GtkAccelLabelClass,accel_seperator,8,3,46599)
+CheckOffset(struct _GtkAccelLabelClass,accel_seperator,824,3,46599)
+CheckMemberSize(struct _GtkAccelLabelClass,_gtk_reserved1,8,3,46601)
+CheckOffset(struct _GtkAccelLabelClass,_gtk_reserved1,840,3,46601)
+CheckMemberSize(struct _GtkAccelLabelClass,_gtk_reserved2,8,3,46602)
+CheckOffset(struct _GtkAccelLabelClass,_gtk_reserved2,848,3,46602)
+CheckMemberSize(struct _GtkAccelLabelClass,_gtk_reserved3,8,3,46603)
+CheckOffset(struct _GtkAccelLabelClass,_gtk_reserved3,856,3,46603)
+CheckMemberSize(struct _GtkAccelLabelClass,_gtk_reserved4,8,3,46604)
+CheckOffset(struct _GtkAccelLabelClass,_gtk_reserved4,864,3,46604)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14137,0);
 Msg("Find size of _GtkAccelLabelClass (14137)\n");
@@ -18899,6 +22881,8 @@ Msg("Find size of _GtkAccelLabelClass (14137)\n");
 CheckTypeSize(GtkAccelLabelClass,440, 14138, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccelLabelClass,872, 14138, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccelLabelClass,872, 14138, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14138,0);
 Msg("Find size of GtkAccelLabelClass (14138)\n");
@@ -18906,6 +22890,7 @@ Msg("Find size of GtkAccelLabelClass (14138)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14139,0);
 Msg("Find size of fptr_gtk_7018 (14139)\n");
@@ -18915,6 +22900,8 @@ Msg("Find size of fptr_gtk_7018 (14139)\n");
 CheckTypeSize(GtkModuleDisplayInitFunc,4, 14140, 2)
 #elif __x86_64__
 CheckTypeSize(GtkModuleDisplayInitFunc,8, 14140, 11)
+#elif __ia64__
+CheckTypeSize(GtkModuleDisplayInitFunc,8, 14140, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14140,0);
 Msg("Find size of GtkModuleDisplayInitFunc (14140)\n");
@@ -18996,6 +22983,44 @@ CheckMemberSize(struct _GtkTextBufferClass,_gtk_reserved5,8,11,46646)
 CheckOffset(struct _GtkTextBufferClass,_gtk_reserved5,264,11,46646)
 CheckMemberSize(struct _GtkTextBufferClass,_gtk_reserved6,8,11,46647)
 CheckOffset(struct _GtkTextBufferClass,_gtk_reserved6,272,11,46647)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextBufferClass,280, 14141, 3)
+CheckMemberSize(struct _GtkTextBufferClass,insert_text,8,3,46611)
+CheckOffset(struct _GtkTextBufferClass,insert_text,136,3,46611)
+CheckMemberSize(struct _GtkTextBufferClass,insert_pixbuf,8,3,46615)
+CheckOffset(struct _GtkTextBufferClass,insert_pixbuf,144,3,46615)
+CheckMemberSize(struct _GtkTextBufferClass,insert_child_anchor,8,3,46619)
+CheckOffset(struct _GtkTextBufferClass,insert_child_anchor,152,3,46619)
+CheckMemberSize(struct _GtkTextBufferClass,delete_range,8,3,46623)
+CheckOffset(struct _GtkTextBufferClass,delete_range,160,3,46623)
+CheckMemberSize(struct _GtkTextBufferClass,changed,8,3,46625)
+CheckOffset(struct _GtkTextBufferClass,changed,168,3,46625)
+CheckMemberSize(struct _GtkTextBufferClass,modified_changed,8,3,46626)
+CheckOffset(struct _GtkTextBufferClass,modified_changed,176,3,46626)
+CheckMemberSize(struct _GtkTextBufferClass,mark_set,8,3,46630)
+CheckOffset(struct _GtkTextBufferClass,mark_set,184,3,46630)
+CheckMemberSize(struct _GtkTextBufferClass,mark_deleted,8,3,46633)
+CheckOffset(struct _GtkTextBufferClass,mark_deleted,192,3,46633)
+CheckMemberSize(struct _GtkTextBufferClass,apply_tag,8,3,46638)
+CheckOffset(struct _GtkTextBufferClass,apply_tag,200,3,46638)
+CheckMemberSize(struct _GtkTextBufferClass,remove_tag,8,3,46639)
+CheckOffset(struct _GtkTextBufferClass,remove_tag,208,3,46639)
+CheckMemberSize(struct _GtkTextBufferClass,begin_user_action,8,3,46640)
+CheckOffset(struct _GtkTextBufferClass,begin_user_action,216,3,46640)
+CheckMemberSize(struct _GtkTextBufferClass,end_user_action,8,3,46641)
+CheckOffset(struct _GtkTextBufferClass,end_user_action,224,3,46641)
+CheckMemberSize(struct _GtkTextBufferClass,_gtk_reserved1,8,3,46642)
+CheckOffset(struct _GtkTextBufferClass,_gtk_reserved1,232,3,46642)
+CheckMemberSize(struct _GtkTextBufferClass,_gtk_reserved2,8,3,46643)
+CheckOffset(struct _GtkTextBufferClass,_gtk_reserved2,240,3,46643)
+CheckMemberSize(struct _GtkTextBufferClass,_gtk_reserved3,8,3,46644)
+CheckOffset(struct _GtkTextBufferClass,_gtk_reserved3,248,3,46644)
+CheckMemberSize(struct _GtkTextBufferClass,_gtk_reserved4,8,3,46645)
+CheckOffset(struct _GtkTextBufferClass,_gtk_reserved4,256,3,46645)
+CheckMemberSize(struct _GtkTextBufferClass,_gtk_reserved5,8,3,46646)
+CheckOffset(struct _GtkTextBufferClass,_gtk_reserved5,264,3,46646)
+CheckMemberSize(struct _GtkTextBufferClass,_gtk_reserved6,8,3,46647)
+CheckOffset(struct _GtkTextBufferClass,_gtk_reserved6,272,3,46647)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14141,0);
 Msg("Find size of _GtkTextBufferClass (14141)\n");
@@ -19003,6 +23028,7 @@ Msg("Find size of _GtkTextBufferClass (14141)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14142,0);
 Msg("Find size of fptr_gtk_8343 (14142)\n");
@@ -19010,6 +23036,7 @@ Msg("Find size of fptr_gtk_8343 (14142)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14143,0);
 Msg("Find size of fptr_gtk_7958 (14143)\n");
@@ -19017,6 +23044,7 @@ Msg("Find size of fptr_gtk_7958 (14143)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14144,0);
 Msg("Find size of fptr_gtk_4161 (14144)\n");
@@ -19024,6 +23052,7 @@ Msg("Find size of fptr_gtk_4161 (14144)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14145,0);
 Msg("Find size of fptr_gtk_6090 (14145)\n");
@@ -19031,6 +23060,7 @@ Msg("Find size of fptr_gtk_6090 (14145)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14146,0);
 Msg("Find size of fptr_gtk_574 (14146)\n");
@@ -19038,6 +23068,7 @@ Msg("Find size of fptr_gtk_574 (14146)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14147,0);
 Msg("Find size of fptr_gtk_7901 (14147)\n");
@@ -19045,6 +23076,7 @@ Msg("Find size of fptr_gtk_7901 (14147)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14148,0);
 Msg("Find size of fptr_gtk_3010 (14148)\n");
@@ -19052,6 +23084,7 @@ Msg("Find size of fptr_gtk_3010 (14148)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14149,0);
 Msg("Find size of fptr_gtk_3432 (14149)\n");
@@ -19061,6 +23094,8 @@ Msg("Find size of fptr_gtk_3432 (14149)\n");
 CheckTypeSize(GtkTextBufferClass,140, 14150, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextBufferClass,280, 14150, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextBufferClass,280, 14150, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14150,0);
 Msg("Find size of GtkTextBufferClass (14150)\n");
@@ -19074,6 +23109,10 @@ CheckOffset(struct _GtkVRuler,ruler,0,2,46648)
 CheckTypeSize(struct _GtkVRuler,168, 14151, 11)
 Msg("Missing member data for _GtkVRuler on x86-64\n");
 CheckOffset(struct _GtkVRuler,ruler,0,11,46648)
+#elif __ia64__
+CheckTypeSize(struct _GtkVRuler,168, 14151, 3)
+Msg("Missing member data for _GtkVRuler on IA64\n");
+CheckOffset(struct _GtkVRuler,ruler,0,3,46648)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14151,0);
 Msg("Find size of _GtkVRuler (14151)\n");
@@ -19083,6 +23122,8 @@ Msg("Find size of _GtkVRuler (14151)\n");
 CheckTypeSize(GtkVRuler,116, 14152, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVRuler,168, 14152, 11)
+#elif __ia64__
+CheckTypeSize(GtkVRuler,168, 14152, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14152,0);
 Msg("Find size of GtkVRuler (14152)\n");
@@ -19116,6 +23157,20 @@ CheckMemberSize(struct _GtkSocketClass,_gtk_reserved3,8,11,46656)
 CheckOffset(struct _GtkSocketClass,_gtk_reserved3,856,11,46656)
 CheckMemberSize(struct _GtkSocketClass,_gtk_reserved4,8,11,46657)
 CheckOffset(struct _GtkSocketClass,_gtk_reserved4,864,11,46657)
+#elif __ia64__
+CheckTypeSize(struct _GtkSocketClass,872, 14153, 3)
+CheckMemberSize(struct _GtkSocketClass,plug_added,8,3,46651)
+CheckOffset(struct _GtkSocketClass,plug_added,824,3,46651)
+CheckMemberSize(struct _GtkSocketClass,plug_removed,8,3,46653)
+CheckOffset(struct _GtkSocketClass,plug_removed,832,3,46653)
+CheckMemberSize(struct _GtkSocketClass,_gtk_reserved1,8,3,46654)
+CheckOffset(struct _GtkSocketClass,_gtk_reserved1,840,3,46654)
+CheckMemberSize(struct _GtkSocketClass,_gtk_reserved2,8,3,46655)
+CheckOffset(struct _GtkSocketClass,_gtk_reserved2,848,3,46655)
+CheckMemberSize(struct _GtkSocketClass,_gtk_reserved3,8,3,46656)
+CheckOffset(struct _GtkSocketClass,_gtk_reserved3,856,3,46656)
+CheckMemberSize(struct _GtkSocketClass,_gtk_reserved4,8,3,46657)
+CheckOffset(struct _GtkSocketClass,_gtk_reserved4,864,3,46657)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14153,0);
 Msg("Find size of _GtkSocketClass (14153)\n");
@@ -19123,6 +23178,7 @@ Msg("Find size of _GtkSocketClass (14153)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14154,0);
 Msg("Find size of fptr_gtk_195 (14154)\n");
@@ -19130,6 +23186,7 @@ Msg("Find size of fptr_gtk_195 (14154)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14155,0);
 Msg("Find size of fptr_gtk_1755 (14155)\n");
@@ -19139,6 +23196,8 @@ Msg("Find size of fptr_gtk_1755 (14155)\n");
 CheckTypeSize(GtkSocketClass,440, 14156, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSocketClass,872, 14156, 11)
+#elif __ia64__
+CheckTypeSize(GtkSocketClass,872, 14156, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14156,0);
 Msg("Find size of GtkSocketClass (14156)\n");
@@ -19152,6 +23211,10 @@ CheckOffset(struct _GtkIconThemeClass,changed,68,2,46660)
 CheckTypeSize(struct _GtkIconThemeClass,144, 14157, 11)
 CheckMemberSize(struct _GtkIconThemeClass,changed,8,11,46660)
 CheckOffset(struct _GtkIconThemeClass,changed,136,11,46660)
+#elif __ia64__
+CheckTypeSize(struct _GtkIconThemeClass,144, 14157, 3)
+CheckMemberSize(struct _GtkIconThemeClass,changed,8,3,46660)
+CheckOffset(struct _GtkIconThemeClass,changed,136,3,46660)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14157,0);
 Msg("Find size of _GtkIconThemeClass (14157)\n");
@@ -19159,6 +23222,7 @@ Msg("Find size of _GtkIconThemeClass (14157)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14158,0);
 Msg("Find size of fptr_gtk_7177 (14158)\n");
@@ -19168,6 +23232,8 @@ Msg("Find size of fptr_gtk_7177 (14158)\n");
 CheckTypeSize(GtkIconThemeClass,72, 14159, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconThemeClass,144, 14159, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconThemeClass,144, 14159, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14159,0);
 Msg("Find size of GtkIconThemeClass (14159)\n");
@@ -19181,6 +23247,10 @@ CheckOffset(struct _GtkVPaned,paned,0,2,46661)
 CheckTypeSize(struct _GtkVPaned,216, 14160, 11)
 Msg("Missing member data for _GtkVPaned on x86-64\n");
 CheckOffset(struct _GtkVPaned,paned,0,11,46661)
+#elif __ia64__
+CheckTypeSize(struct _GtkVPaned,216, 14160, 3)
+Msg("Missing member data for _GtkVPaned on IA64\n");
+CheckOffset(struct _GtkVPaned,paned,0,3,46661)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14160,0);
 Msg("Find size of _GtkVPaned (14160)\n");
@@ -19190,6 +23260,8 @@ Msg("Find size of _GtkVPaned (14160)\n");
 CheckTypeSize(GtkVPaned,144, 14161, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVPaned,216, 14161, 11)
+#elif __ia64__
+CheckTypeSize(GtkVPaned,216, 14161, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14161,0);
 Msg("Find size of GtkVPaned (14161)\n");
@@ -19223,6 +23295,20 @@ CheckMemberSize(struct _GtkTableChild,xpadding,2,11,46667)
 CheckOffset(struct _GtkTableChild,xpadding,16,11,46667)
 CheckMemberSize(struct _GtkTableChild,ypadding,2,11,46668)
 CheckOffset(struct _GtkTableChild,ypadding,18,11,46668)
+#elif __ia64__
+CheckTypeSize(struct _GtkTableChild,24, 14162, 3)
+CheckMemberSize(struct _GtkTableChild,left_attach,2,3,46663)
+CheckOffset(struct _GtkTableChild,left_attach,8,3,46663)
+CheckMemberSize(struct _GtkTableChild,right_attach,2,3,46664)
+CheckOffset(struct _GtkTableChild,right_attach,10,3,46664)
+CheckMemberSize(struct _GtkTableChild,top_attach,2,3,46665)
+CheckOffset(struct _GtkTableChild,top_attach,12,3,46665)
+CheckMemberSize(struct _GtkTableChild,bottom_attach,2,3,46666)
+CheckOffset(struct _GtkTableChild,bottom_attach,14,3,46666)
+CheckMemberSize(struct _GtkTableChild,xpadding,2,3,46667)
+CheckOffset(struct _GtkTableChild,xpadding,16,3,46667)
+CheckMemberSize(struct _GtkTableChild,ypadding,2,3,46668)
+CheckOffset(struct _GtkTableChild,ypadding,18,3,46668)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14162,0);
 Msg("Find size of _GtkTableChild (14162)\n");
@@ -19232,6 +23318,8 @@ Msg("Find size of _GtkTableChild (14162)\n");
 CheckTypeSize(GtkTableChild,20, 14163, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTableChild,24, 14163, 11)
+#elif __ia64__
+CheckTypeSize(GtkTableChild,24, 14163, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14163,0);
 Msg("Find size of GtkTableChild (14163)\n");
@@ -19245,6 +23333,10 @@ CheckOffset(struct _GtkArrowClass,parent_class,0,2,46675)
 CheckTypeSize(struct _GtkArrowClass,720, 14164, 11)
 Msg("Missing member data for _GtkArrowClass on x86-64\n");
 CheckOffset(struct _GtkArrowClass,parent_class,0,11,46675)
+#elif __ia64__
+CheckTypeSize(struct _GtkArrowClass,720, 14164, 3)
+Msg("Missing member data for _GtkArrowClass on IA64\n");
+CheckOffset(struct _GtkArrowClass,parent_class,0,3,46675)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14164,0);
 Msg("Find size of _GtkArrowClass (14164)\n");
@@ -19254,6 +23346,8 @@ Msg("Find size of _GtkArrowClass (14164)\n");
 CheckTypeSize(GtkArrowClass,364, 14165, 2)
 #elif __x86_64__
 CheckTypeSize(GtkArrowClass,720, 14165, 11)
+#elif __ia64__
+CheckTypeSize(GtkArrowClass,720, 14165, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14165,0);
 Msg("Find size of GtkArrowClass (14165)\n");
@@ -19267,6 +23361,10 @@ CheckOffset(struct _GtkHScrollbar,scrollbar,0,2,46676)
 CheckTypeSize(struct _GtkHScrollbar,192, 14166, 11)
 Msg("Missing member data for _GtkHScrollbar on x86-64\n");
 CheckOffset(struct _GtkHScrollbar,scrollbar,0,11,46676)
+#elif __ia64__
+CheckTypeSize(struct _GtkHScrollbar,192, 14166, 3)
+Msg("Missing member data for _GtkHScrollbar on IA64\n");
+CheckOffset(struct _GtkHScrollbar,scrollbar,0,3,46676)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14166,0);
 Msg("Find size of _GtkHScrollbar (14166)\n");
@@ -19276,6 +23374,8 @@ Msg("Find size of _GtkHScrollbar (14166)\n");
 CheckTypeSize(GtkHScrollbar,136, 14167, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHScrollbar,192, 14167, 11)
+#elif __ia64__
+CheckTypeSize(GtkHScrollbar,192, 14167, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14167,0);
 Msg("Find size of GtkHScrollbar (14167)\n");
@@ -19289,6 +23389,10 @@ CheckOffset(struct _GtkFileChooserWidget,priv,76,2,46678)
 CheckTypeSize(struct _GtkFileChooserWidget,136, 14168, 11)
 CheckMemberSize(struct _GtkFileChooserWidget,priv,8,11,46678)
 CheckOffset(struct _GtkFileChooserWidget,priv,128,11,46678)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileChooserWidget,136, 14168, 3)
+CheckMemberSize(struct _GtkFileChooserWidget,priv,8,3,46678)
+CheckOffset(struct _GtkFileChooserWidget,priv,128,3,46678)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14168,0);
 Msg("Find size of _GtkFileChooserWidget (14168)\n");
@@ -19298,6 +23402,8 @@ Msg("Find size of _GtkFileChooserWidget (14168)\n");
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14170,0);
 Msg("Find size of GtkFileChooserWidgetPrivate (14170)\n");
@@ -19307,6 +23413,8 @@ Msg("Find size of GtkFileChooserWidgetPrivate (14170)\n");
 CheckTypeSize(GtkFileChooserWidgetPrivate *,4, 14171, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserWidgetPrivate *,8, 14171, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserWidgetPrivate *,8, 14171, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14171,0);
 Msg("Find size of GtkFileChooserWidgetPrivate * (14171)\n");
@@ -19316,6 +23424,8 @@ Msg("Find size of GtkFileChooserWidgetPrivate * (14171)\n");
 CheckTypeSize(GtkFileChooserWidget,80, 14172, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserWidget,136, 14172, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserWidget,136, 14172, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14172,0);
 Msg("Find size of GtkFileChooserWidget (14172)\n");
@@ -19345,6 +23455,18 @@ CheckMemberSize(struct _GtkPlugClass,_gtk_reserved3,8,11,46684)
 CheckOffset(struct _GtkPlugClass,_gtk_reserved3,928,11,46684)
 CheckMemberSize(struct _GtkPlugClass,_gtk_reserved4,8,11,46685)
 CheckOffset(struct _GtkPlugClass,_gtk_reserved4,936,11,46685)
+#elif __ia64__
+CheckTypeSize(struct _GtkPlugClass,944, 14173, 3)
+CheckMemberSize(struct _GtkPlugClass,embedded,8,3,46681)
+CheckOffset(struct _GtkPlugClass,embedded,904,3,46681)
+CheckMemberSize(struct _GtkPlugClass,_gtk_reserved1,8,3,46682)
+CheckOffset(struct _GtkPlugClass,_gtk_reserved1,912,3,46682)
+CheckMemberSize(struct _GtkPlugClass,_gtk_reserved2,8,3,46683)
+CheckOffset(struct _GtkPlugClass,_gtk_reserved2,920,3,46683)
+CheckMemberSize(struct _GtkPlugClass,_gtk_reserved3,8,3,46684)
+CheckOffset(struct _GtkPlugClass,_gtk_reserved3,928,3,46684)
+CheckMemberSize(struct _GtkPlugClass,_gtk_reserved4,8,3,46685)
+CheckOffset(struct _GtkPlugClass,_gtk_reserved4,936,3,46685)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14173,0);
 Msg("Find size of _GtkPlugClass (14173)\n");
@@ -19352,6 +23474,7 @@ Msg("Find size of _GtkPlugClass (14173)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14174,0);
 Msg("Find size of fptr_gtk_3093 (14174)\n");
@@ -19361,6 +23484,8 @@ Msg("Find size of fptr_gtk_3093 (14174)\n");
 CheckTypeSize(GtkPlugClass,476, 14175, 2)
 #elif __x86_64__
 CheckTypeSize(GtkPlugClass,944, 14175, 11)
+#elif __ia64__
+CheckTypeSize(GtkPlugClass,944, 14175, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14175,0);
 Msg("Find size of GtkPlugClass (14175)\n");
@@ -19386,6 +23511,16 @@ CheckMemberSize(struct _GtkCellRendererPixbufClass,_gtk_reserved3,8,11,46689)
 CheckOffset(struct _GtkCellRendererPixbufClass,_gtk_reserved3,240,11,46689)
 CheckMemberSize(struct _GtkCellRendererPixbufClass,_gtk_reserved4,8,11,46690)
 CheckOffset(struct _GtkCellRendererPixbufClass,_gtk_reserved4,248,11,46690)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererPixbufClass,256, 14176, 3)
+CheckMemberSize(struct _GtkCellRendererPixbufClass,_gtk_reserved1,8,3,46687)
+CheckOffset(struct _GtkCellRendererPixbufClass,_gtk_reserved1,224,3,46687)
+CheckMemberSize(struct _GtkCellRendererPixbufClass,_gtk_reserved2,8,3,46688)
+CheckOffset(struct _GtkCellRendererPixbufClass,_gtk_reserved2,232,3,46688)
+CheckMemberSize(struct _GtkCellRendererPixbufClass,_gtk_reserved3,8,3,46689)
+CheckOffset(struct _GtkCellRendererPixbufClass,_gtk_reserved3,240,3,46689)
+CheckMemberSize(struct _GtkCellRendererPixbufClass,_gtk_reserved4,8,3,46690)
+CheckOffset(struct _GtkCellRendererPixbufClass,_gtk_reserved4,248,3,46690)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14176,0);
 Msg("Find size of _GtkCellRendererPixbufClass (14176)\n");
@@ -19395,6 +23530,8 @@ Msg("Find size of _GtkCellRendererPixbufClass (14176)\n");
 CheckTypeSize(GtkCellRendererPixbufClass,128, 14177, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererPixbufClass,256, 14177, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererPixbufClass,256, 14177, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14177,0);
 Msg("Find size of GtkCellRendererPixbufClass (14177)\n");
@@ -19408,6 +23545,10 @@ CheckOffset(struct _GtkVButtonBoxClass,parent_class,0,2,46691)
 CheckTypeSize(struct _GtkVButtonBoxClass,824, 14178, 11)
 Msg("Missing member data for _GtkVButtonBoxClass on x86-64\n");
 CheckOffset(struct _GtkVButtonBoxClass,parent_class,0,11,46691)
+#elif __ia64__
+CheckTypeSize(struct _GtkVButtonBoxClass,824, 14178, 3)
+Msg("Missing member data for _GtkVButtonBoxClass on IA64\n");
+CheckOffset(struct _GtkVButtonBoxClass,parent_class,0,3,46691)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14178,0);
 Msg("Find size of _GtkVButtonBoxClass (14178)\n");
@@ -19417,6 +23558,8 @@ Msg("Find size of _GtkVButtonBoxClass (14178)\n");
 CheckTypeSize(GtkVButtonBoxClass,416, 14179, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVButtonBoxClass,824, 14179, 11)
+#elif __ia64__
+CheckTypeSize(GtkVButtonBoxClass,824, 14179, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14179,0);
 Msg("Find size of GtkVButtonBoxClass (14179)\n");
@@ -19442,6 +23585,16 @@ CheckMemberSize(struct _GtkTextChildAnchorClass,_gtk_reserved3,8,11,46695)
 CheckOffset(struct _GtkTextChildAnchorClass,_gtk_reserved3,152,11,46695)
 CheckMemberSize(struct _GtkTextChildAnchorClass,_gtk_reserved4,8,11,46696)
 CheckOffset(struct _GtkTextChildAnchorClass,_gtk_reserved4,160,11,46696)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextChildAnchorClass,168, 14180, 3)
+CheckMemberSize(struct _GtkTextChildAnchorClass,_gtk_reserved1,8,3,46693)
+CheckOffset(struct _GtkTextChildAnchorClass,_gtk_reserved1,136,3,46693)
+CheckMemberSize(struct _GtkTextChildAnchorClass,_gtk_reserved2,8,3,46694)
+CheckOffset(struct _GtkTextChildAnchorClass,_gtk_reserved2,144,3,46694)
+CheckMemberSize(struct _GtkTextChildAnchorClass,_gtk_reserved3,8,3,46695)
+CheckOffset(struct _GtkTextChildAnchorClass,_gtk_reserved3,152,3,46695)
+CheckMemberSize(struct _GtkTextChildAnchorClass,_gtk_reserved4,8,3,46696)
+CheckOffset(struct _GtkTextChildAnchorClass,_gtk_reserved4,160,3,46696)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14180,0);
 Msg("Find size of _GtkTextChildAnchorClass (14180)\n");
@@ -19451,6 +23604,8 @@ Msg("Find size of _GtkTextChildAnchorClass (14180)\n");
 CheckTypeSize(GtkTextChildAnchorClass,84, 14181, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextChildAnchorClass,168, 14181, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextChildAnchorClass,168, 14181, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14181,0);
 Msg("Find size of GtkTextChildAnchorClass (14181)\n");
@@ -19476,6 +23631,16 @@ CheckMemberSize(struct _GtkCellRendererCombo,has_entry,4,11,46700)
 CheckOffset(struct _GtkCellRendererCombo,has_entry,132,11,46700)
 CheckMemberSize(struct _GtkCellRendererCombo,focus_out_id,4,11,46701)
 CheckOffset(struct _GtkCellRendererCombo,focus_out_id,136,11,46701)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererCombo,144, 14182, 3)
+CheckMemberSize(struct _GtkCellRendererCombo,model,8,3,46698)
+CheckOffset(struct _GtkCellRendererCombo,model,120,3,46698)
+CheckMemberSize(struct _GtkCellRendererCombo,text_column,4,3,46699)
+CheckOffset(struct _GtkCellRendererCombo,text_column,128,3,46699)
+CheckMemberSize(struct _GtkCellRendererCombo,has_entry,4,3,46700)
+CheckOffset(struct _GtkCellRendererCombo,has_entry,132,3,46700)
+CheckMemberSize(struct _GtkCellRendererCombo,focus_out_id,4,3,46701)
+CheckOffset(struct _GtkCellRendererCombo,focus_out_id,136,3,46701)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14182,0);
 Msg("Find size of _GtkCellRendererCombo (14182)\n");
@@ -19485,6 +23650,8 @@ Msg("Find size of _GtkCellRendererCombo (14182)\n");
 CheckTypeSize(GtkCellRendererCombo,104, 14183, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererCombo,144, 14183, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererCombo,144, 14183, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14183,0);
 Msg("Find size of GtkCellRendererCombo (14183)\n");
@@ -19570,6 +23737,46 @@ CheckMemberSize(struct _GtkTreeModelIface,ref_node,8,11,46755)
 CheckOffset(struct _GtkTreeModelIface,ref_node,152,11,46755)
 CheckMemberSize(struct _GtkTreeModelIface,unref_node,8,11,46756)
 CheckOffset(struct _GtkTreeModelIface,unref_node,160,11,46756)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeModelIface,168, 14184, 3)
+CheckMemberSize(struct _GtkTreeModelIface,row_changed,8,3,46706)
+CheckOffset(struct _GtkTreeModelIface,row_changed,16,3,46706)
+CheckMemberSize(struct _GtkTreeModelIface,row_inserted,8,3,46707)
+CheckOffset(struct _GtkTreeModelIface,row_inserted,24,3,46707)
+CheckMemberSize(struct _GtkTreeModelIface,row_has_child_toggled,8,3,46708)
+CheckOffset(struct _GtkTreeModelIface,row_has_child_toggled,32,3,46708)
+CheckMemberSize(struct _GtkTreeModelIface,row_deleted,8,3,46711)
+CheckOffset(struct _GtkTreeModelIface,row_deleted,40,3,46711)
+CheckMemberSize(struct _GtkTreeModelIface,rows_reordered,8,3,46716)
+CheckOffset(struct _GtkTreeModelIface,rows_reordered,48,3,46716)
+CheckMemberSize(struct _GtkTreeModelIface,get_flags,8,3,46718)
+CheckOffset(struct _GtkTreeModelIface,get_flags,56,3,46718)
+CheckMemberSize(struct _GtkTreeModelIface,get_n_columns,8,3,46720)
+CheckOffset(struct _GtkTreeModelIface,get_n_columns,64,3,46720)
+CheckMemberSize(struct _GtkTreeModelIface,get_column_type,8,3,46723)
+CheckOffset(struct _GtkTreeModelIface,get_column_type,72,3,46723)
+CheckMemberSize(struct _GtkTreeModelIface,get_iter,8,3,46727)
+CheckOffset(struct _GtkTreeModelIface,get_iter,80,3,46727)
+CheckMemberSize(struct _GtkTreeModelIface,get_path,8,3,46730)
+CheckOffset(struct _GtkTreeModelIface,get_path,88,3,46730)
+CheckMemberSize(struct _GtkTreeModelIface,get_value,8,3,46735)
+CheckOffset(struct _GtkTreeModelIface,get_value,96,3,46735)
+CheckMemberSize(struct _GtkTreeModelIface,iter_next,8,3,46738)
+CheckOffset(struct _GtkTreeModelIface,iter_next,104,3,46738)
+CheckMemberSize(struct _GtkTreeModelIface,iter_children,8,3,46742)
+CheckOffset(struct _GtkTreeModelIface,iter_children,112,3,46742)
+CheckMemberSize(struct _GtkTreeModelIface,iter_has_child,8,3,46743)
+CheckOffset(struct _GtkTreeModelIface,iter_has_child,120,3,46743)
+CheckMemberSize(struct _GtkTreeModelIface,iter_n_children,8,3,46746)
+CheckOffset(struct _GtkTreeModelIface,iter_n_children,128,3,46746)
+CheckMemberSize(struct _GtkTreeModelIface,iter_nth_child,8,3,46751)
+CheckOffset(struct _GtkTreeModelIface,iter_nth_child,136,3,46751)
+CheckMemberSize(struct _GtkTreeModelIface,iter_parent,8,3,46752)
+CheckOffset(struct _GtkTreeModelIface,iter_parent,144,3,46752)
+CheckMemberSize(struct _GtkTreeModelIface,ref_node,8,3,46755)
+CheckOffset(struct _GtkTreeModelIface,ref_node,152,3,46755)
+CheckMemberSize(struct _GtkTreeModelIface,unref_node,8,3,46756)
+CheckOffset(struct _GtkTreeModelIface,unref_node,160,3,46756)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14184,0);
 Msg("Find size of _GtkTreeModelIface (14184)\n");
@@ -19577,6 +23784,7 @@ Msg("Find size of _GtkTreeModelIface (14184)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14185,0);
 Msg("Find size of fptr_gtk_4033 (14185)\n");
@@ -19584,6 +23792,7 @@ Msg("Find size of fptr_gtk_4033 (14185)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14186,0);
 Msg("Find size of fptr_gtk_694 (14186)\n");
@@ -19591,6 +23800,7 @@ Msg("Find size of fptr_gtk_694 (14186)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14187,0);
 Msg("Find size of fptr_gtk_2413 (14187)\n");
@@ -19598,6 +23808,7 @@ Msg("Find size of fptr_gtk_2413 (14187)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14188,0);
 Msg("Find size of fptr_gtk_2371 (14188)\n");
@@ -19605,6 +23816,7 @@ Msg("Find size of fptr_gtk_2371 (14188)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14189,0);
 Msg("Find size of fptr_gtk_5750 (14189)\n");
@@ -19612,6 +23824,7 @@ Msg("Find size of fptr_gtk_5750 (14189)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14190,0);
 Msg("Find size of fptr_gtk_3452 (14190)\n");
@@ -19619,6 +23832,7 @@ Msg("Find size of fptr_gtk_3452 (14190)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14191,0);
 Msg("Find size of fptr_gtk_6639 (14191)\n");
@@ -19626,6 +23840,7 @@ Msg("Find size of fptr_gtk_6639 (14191)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14192,0);
 Msg("Find size of fptr_gtk_8545 (14192)\n");
@@ -19633,6 +23848,7 @@ Msg("Find size of fptr_gtk_8545 (14192)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14193,0);
 Msg("Find size of fptr_gtk_4748 (14193)\n");
@@ -19640,6 +23856,7 @@ Msg("Find size of fptr_gtk_4748 (14193)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14194,0);
 Msg("Find size of fptr_gtk_8164 (14194)\n");
@@ -19647,6 +23864,7 @@ Msg("Find size of fptr_gtk_8164 (14194)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14195,0);
 Msg("Find size of fptr_gtk_3463 (14195)\n");
@@ -19654,6 +23872,7 @@ Msg("Find size of fptr_gtk_3463 (14195)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14196,0);
 Msg("Find size of fptr_gtk_7544 (14196)\n");
@@ -19661,6 +23880,7 @@ Msg("Find size of fptr_gtk_7544 (14196)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14197,0);
 Msg("Find size of fptr_gtk_6176 (14197)\n");
@@ -19668,6 +23888,7 @@ Msg("Find size of fptr_gtk_6176 (14197)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14198,0);
 Msg("Find size of fptr_gtk_8930 (14198)\n");
@@ -19677,6 +23898,8 @@ Msg("Find size of fptr_gtk_8930 (14198)\n");
 CheckTypeSize(GtkTreeModelIface,84, 14199, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelIface,168, 14199, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelIface,168, 14199, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14199,0);
 Msg("Find size of GtkTreeModelIface (14199)\n");
@@ -19706,6 +23929,18 @@ CheckMemberSize(struct _GtkAccessibleClass,_gtk_reserved3,8,11,46762)
 CheckOffset(struct _GtkAccessibleClass,_gtk_reserved3,376,11,46762)
 CheckMemberSize(struct _GtkAccessibleClass,_gtk_reserved4,8,11,46763)
 CheckOffset(struct _GtkAccessibleClass,_gtk_reserved4,384,11,46763)
+#elif __ia64__
+CheckTypeSize(struct _GtkAccessibleClass,392, 14200, 3)
+CheckMemberSize(struct _GtkAccessibleClass,connect_widget_destroyed,8,3,46759)
+CheckOffset(struct _GtkAccessibleClass,connect_widget_destroyed,352,3,46759)
+CheckMemberSize(struct _GtkAccessibleClass,_gtk_reserved1,8,3,46760)
+CheckOffset(struct _GtkAccessibleClass,_gtk_reserved1,360,3,46760)
+CheckMemberSize(struct _GtkAccessibleClass,_gtk_reserved2,8,3,46761)
+CheckOffset(struct _GtkAccessibleClass,_gtk_reserved2,368,3,46761)
+CheckMemberSize(struct _GtkAccessibleClass,_gtk_reserved3,8,3,46762)
+CheckOffset(struct _GtkAccessibleClass,_gtk_reserved3,376,3,46762)
+CheckMemberSize(struct _GtkAccessibleClass,_gtk_reserved4,8,3,46763)
+CheckOffset(struct _GtkAccessibleClass,_gtk_reserved4,384,3,46763)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14200,0);
 Msg("Find size of _GtkAccessibleClass (14200)\n");
@@ -19713,6 +23948,7 @@ Msg("Find size of _GtkAccessibleClass (14200)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14201,0);
 Msg("Find size of fptr_gtk_7122 (14201)\n");
@@ -19722,6 +23958,8 @@ Msg("Find size of fptr_gtk_7122 (14201)\n");
 CheckTypeSize(GtkAccessibleClass,196, 14202, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAccessibleClass,392, 14202, 11)
+#elif __ia64__
+CheckTypeSize(GtkAccessibleClass,392, 14202, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14202,0);
 Msg("Find size of GtkAccessibleClass (14202)\n");
@@ -19751,6 +23989,18 @@ CheckMemberSize(struct _GtkCellRendererTextClass,_gtk_reserved3,8,11,46771)
 CheckOffset(struct _GtkCellRendererTextClass,_gtk_reserved3,248,11,46771)
 CheckMemberSize(struct _GtkCellRendererTextClass,_gtk_reserved4,8,11,46772)
 CheckOffset(struct _GtkCellRendererTextClass,_gtk_reserved4,256,11,46772)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererTextClass,264, 14203, 3)
+CheckMemberSize(struct _GtkCellRendererTextClass,edited,8,3,46768)
+CheckOffset(struct _GtkCellRendererTextClass,edited,224,3,46768)
+CheckMemberSize(struct _GtkCellRendererTextClass,_gtk_reserved1,8,3,46769)
+CheckOffset(struct _GtkCellRendererTextClass,_gtk_reserved1,232,3,46769)
+CheckMemberSize(struct _GtkCellRendererTextClass,_gtk_reserved2,8,3,46770)
+CheckOffset(struct _GtkCellRendererTextClass,_gtk_reserved2,240,3,46770)
+CheckMemberSize(struct _GtkCellRendererTextClass,_gtk_reserved3,8,3,46771)
+CheckOffset(struct _GtkCellRendererTextClass,_gtk_reserved3,248,3,46771)
+CheckMemberSize(struct _GtkCellRendererTextClass,_gtk_reserved4,8,3,46772)
+CheckOffset(struct _GtkCellRendererTextClass,_gtk_reserved4,256,3,46772)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14203,0);
 Msg("Find size of _GtkCellRendererTextClass (14203)\n");
@@ -19758,6 +24008,7 @@ Msg("Find size of _GtkCellRendererTextClass (14203)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14204,0);
 Msg("Find size of fptr_gtk_271 (14204)\n");
@@ -19767,6 +24018,8 @@ Msg("Find size of fptr_gtk_271 (14204)\n");
 CheckTypeSize(GtkCellRendererTextClass,132, 14205, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererTextClass,264, 14205, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererTextClass,264, 14205, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14205,0);
 Msg("Find size of GtkCellRendererTextClass (14205)\n");
@@ -19780,6 +24033,10 @@ CheckOffset(struct _GtkVScaleClass,parent_class,0,2,46773)
 CheckTypeSize(struct _GtkVScaleClass,848, 14206, 11)
 Msg("Missing member data for _GtkVScaleClass on x86-64\n");
 CheckOffset(struct _GtkVScaleClass,parent_class,0,11,46773)
+#elif __ia64__
+CheckTypeSize(struct _GtkVScaleClass,848, 14206, 3)
+Msg("Missing member data for _GtkVScaleClass on IA64\n");
+CheckOffset(struct _GtkVScaleClass,parent_class,0,3,46773)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14206,0);
 Msg("Find size of _GtkVScaleClass (14206)\n");
@@ -19789,6 +24046,8 @@ Msg("Find size of _GtkVScaleClass (14206)\n");
 CheckTypeSize(GtkVScaleClass,428, 14207, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVScaleClass,848, 14207, 11)
+#elif __ia64__
+CheckTypeSize(GtkVScaleClass,848, 14207, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14207,0);
 Msg("Find size of GtkVScaleClass (14207)\n");
@@ -19818,6 +24077,18 @@ CheckMemberSize(struct _GtkCurveClass,_gtk_reserved3,8,11,46779)
 CheckOffset(struct _GtkCurveClass,_gtk_reserved3,776,11,46779)
 CheckMemberSize(struct _GtkCurveClass,_gtk_reserved4,8,11,46780)
 CheckOffset(struct _GtkCurveClass,_gtk_reserved4,784,11,46780)
+#elif __ia64__
+CheckTypeSize(struct _GtkCurveClass,792, 14208, 3)
+CheckMemberSize(struct _GtkCurveClass,curve_type_changed,8,3,46776)
+CheckOffset(struct _GtkCurveClass,curve_type_changed,752,3,46776)
+CheckMemberSize(struct _GtkCurveClass,_gtk_reserved1,8,3,46777)
+CheckOffset(struct _GtkCurveClass,_gtk_reserved1,760,3,46777)
+CheckMemberSize(struct _GtkCurveClass,_gtk_reserved2,8,3,46778)
+CheckOffset(struct _GtkCurveClass,_gtk_reserved2,768,3,46778)
+CheckMemberSize(struct _GtkCurveClass,_gtk_reserved3,8,3,46779)
+CheckOffset(struct _GtkCurveClass,_gtk_reserved3,776,3,46779)
+CheckMemberSize(struct _GtkCurveClass,_gtk_reserved4,8,3,46780)
+CheckOffset(struct _GtkCurveClass,_gtk_reserved4,784,3,46780)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14208,0);
 Msg("Find size of _GtkCurveClass (14208)\n");
@@ -19825,6 +24096,7 @@ Msg("Find size of _GtkCurveClass (14208)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14209,0);
 Msg("Find size of fptr_gtk_5826 (14209)\n");
@@ -19834,6 +24106,8 @@ Msg("Find size of fptr_gtk_5826 (14209)\n");
 CheckTypeSize(GtkCurveClass,400, 14210, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCurveClass,792, 14210, 11)
+#elif __ia64__
+CheckTypeSize(GtkCurveClass,792, 14210, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14210,0);
 Msg("Find size of GtkCurveClass (14210)\n");
@@ -19859,6 +24133,16 @@ CheckMemberSize(struct _GtkSeparatorToolItemClass,_gtk_reserved3,8,11,46784)
 CheckOffset(struct _GtkSeparatorToolItemClass,_gtk_reserved3,896,11,46784)
 CheckMemberSize(struct _GtkSeparatorToolItemClass,_gtk_reserved4,8,11,46785)
 CheckOffset(struct _GtkSeparatorToolItemClass,_gtk_reserved4,904,11,46785)
+#elif __ia64__
+CheckTypeSize(struct _GtkSeparatorToolItemClass,912, 14211, 3)
+CheckMemberSize(struct _GtkSeparatorToolItemClass,_gtk_reserved1,8,3,46782)
+CheckOffset(struct _GtkSeparatorToolItemClass,_gtk_reserved1,880,3,46782)
+CheckMemberSize(struct _GtkSeparatorToolItemClass,_gtk_reserved2,8,3,46783)
+CheckOffset(struct _GtkSeparatorToolItemClass,_gtk_reserved2,888,3,46783)
+CheckMemberSize(struct _GtkSeparatorToolItemClass,_gtk_reserved3,8,3,46784)
+CheckOffset(struct _GtkSeparatorToolItemClass,_gtk_reserved3,896,3,46784)
+CheckMemberSize(struct _GtkSeparatorToolItemClass,_gtk_reserved4,8,3,46785)
+CheckOffset(struct _GtkSeparatorToolItemClass,_gtk_reserved4,904,3,46785)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14211,0);
 Msg("Find size of _GtkSeparatorToolItemClass (14211)\n");
@@ -19868,6 +24152,8 @@ Msg("Find size of _GtkSeparatorToolItemClass (14211)\n");
 CheckTypeSize(GtkSeparatorToolItemClass,460, 14212, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparatorToolItemClass,912, 14212, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparatorToolItemClass,912, 14212, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14212,0);
 Msg("Find size of GtkSeparatorToolItemClass (14212)\n");
@@ -20037,6 +24323,88 @@ CheckMemberSize(struct _GtkStyleClass,_gtk_reserved11,8,11,46971)
 CheckOffset(struct _GtkStyleClass,_gtk_reserved11,440,11,46971)
 CheckMemberSize(struct _GtkStyleClass,_gtk_reserved12,8,11,46972)
 CheckOffset(struct _GtkStyleClass,_gtk_reserved12,448,11,46972)
+#elif __ia64__
+CheckTypeSize(struct _GtkStyleClass,456, 14213, 3)
+CheckMemberSize(struct _GtkStyleClass,realize,8,3,46788)
+CheckOffset(struct _GtkStyleClass,realize,136,3,46788)
+CheckMemberSize(struct _GtkStyleClass,unrealize,8,3,46789)
+CheckOffset(struct _GtkStyleClass,unrealize,144,3,46789)
+CheckMemberSize(struct _GtkStyleClass,copy,8,3,46792)
+CheckOffset(struct _GtkStyleClass,copy,152,3,46792)
+CheckMemberSize(struct _GtkStyleClass,clone,8,3,46794)
+CheckOffset(struct _GtkStyleClass,clone,160,3,46794)
+CheckMemberSize(struct _GtkStyleClass,init_from_rc,8,3,46797)
+CheckOffset(struct _GtkStyleClass,init_from_rc,168,3,46797)
+CheckMemberSize(struct _GtkStyleClass,set_background,8,3,46801)
+CheckOffset(struct _GtkStyleClass,set_background,176,3,46801)
+CheckMemberSize(struct _GtkStyleClass,render_icon,8,3,46809)
+CheckOffset(struct _GtkStyleClass,render_icon,184,3,46809)
+CheckMemberSize(struct _GtkStyleClass,draw_hline,8,3,46819)
+CheckOffset(struct _GtkStyleClass,draw_hline,192,3,46819)
+CheckMemberSize(struct _GtkStyleClass,draw_vline,8,3,46820)
+CheckOffset(struct _GtkStyleClass,draw_vline,200,3,46820)
+CheckMemberSize(struct _GtkStyleClass,draw_shadow,8,3,46832)
+CheckOffset(struct _GtkStyleClass,draw_shadow,208,3,46832)
+CheckMemberSize(struct _GtkStyleClass,draw_polygon,8,3,46843)
+CheckOffset(struct _GtkStyleClass,draw_polygon,216,3,46843)
+CheckMemberSize(struct _GtkStyleClass,draw_arrow,8,3,46857)
+CheckOffset(struct _GtkStyleClass,draw_arrow,224,3,46857)
+CheckMemberSize(struct _GtkStyleClass,draw_diamond,8,3,46858)
+CheckOffset(struct _GtkStyleClass,draw_diamond,232,3,46858)
+CheckMemberSize(struct _GtkStyleClass,draw_string,8,3,46868)
+CheckOffset(struct _GtkStyleClass,draw_string,240,3,46868)
+CheckMemberSize(struct _GtkStyleClass,draw_box,8,3,46869)
+CheckOffset(struct _GtkStyleClass,draw_box,248,3,46869)
+CheckMemberSize(struct _GtkStyleClass,draw_flat_box,8,3,46870)
+CheckOffset(struct _GtkStyleClass,draw_flat_box,256,3,46870)
+CheckMemberSize(struct _GtkStyleClass,draw_check,8,3,46871)
+CheckOffset(struct _GtkStyleClass,draw_check,264,3,46871)
+CheckMemberSize(struct _GtkStyleClass,draw_option,8,3,46872)
+CheckOffset(struct _GtkStyleClass,draw_option,272,3,46872)
+CheckMemberSize(struct _GtkStyleClass,draw_tab,8,3,46873)
+CheckOffset(struct _GtkStyleClass,draw_tab,280,3,46873)
+CheckMemberSize(struct _GtkStyleClass,draw_shadow_gap,8,3,46888)
+CheckOffset(struct _GtkStyleClass,draw_shadow_gap,288,3,46888)
+CheckMemberSize(struct _GtkStyleClass,draw_box_gap,8,3,46889)
+CheckOffset(struct _GtkStyleClass,draw_box_gap,296,3,46889)
+CheckMemberSize(struct _GtkStyleClass,draw_extension,8,3,46902)
+CheckOffset(struct _GtkStyleClass,draw_extension,304,3,46902)
+CheckMemberSize(struct _GtkStyleClass,draw_focus,8,3,46913)
+CheckOffset(struct _GtkStyleClass,draw_focus,312,3,46913)
+CheckMemberSize(struct _GtkStyleClass,draw_slider,8,3,46926)
+CheckOffset(struct _GtkStyleClass,draw_slider,320,3,46926)
+CheckMemberSize(struct _GtkStyleClass,draw_handle,8,3,46927)
+CheckOffset(struct _GtkStyleClass,draw_handle,328,3,46927)
+CheckMemberSize(struct _GtkStyleClass,draw_expander,8,3,46937)
+CheckOffset(struct _GtkStyleClass,draw_expander,336,3,46937)
+CheckMemberSize(struct _GtkStyleClass,draw_layout,8,3,46948)
+CheckOffset(struct _GtkStyleClass,draw_layout,344,3,46948)
+CheckMemberSize(struct _GtkStyleClass,draw_resize_grip,8,3,46960)
+CheckOffset(struct _GtkStyleClass,draw_resize_grip,352,3,46960)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved1,8,3,46961)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved1,360,3,46961)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved2,8,3,46962)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved2,368,3,46962)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved3,8,3,46963)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved3,376,3,46963)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved4,8,3,46964)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved4,384,3,46964)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved5,8,3,46965)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved5,392,3,46965)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved6,8,3,46966)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved6,400,3,46966)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved7,8,3,46967)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved7,408,3,46967)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved8,8,3,46968)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved8,416,3,46968)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved9,8,3,46969)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved9,424,3,46969)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved10,8,3,46970)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved10,432,3,46970)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved11,8,3,46971)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved11,440,3,46971)
+CheckMemberSize(struct _GtkStyleClass,_gtk_reserved12,8,3,46972)
+CheckOffset(struct _GtkStyleClass,_gtk_reserved12,448,3,46972)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14213,0);
 Msg("Find size of _GtkStyleClass (14213)\n");
@@ -20044,6 +24412,7 @@ Msg("Find size of _GtkStyleClass (14213)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14214,0);
 Msg("Find size of fptr_gtk_2225 (14214)\n");
@@ -20051,6 +24420,7 @@ Msg("Find size of fptr_gtk_2225 (14214)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14215,0);
 Msg("Find size of fptr_gtk_3741 (14215)\n");
@@ -20058,6 +24428,7 @@ Msg("Find size of fptr_gtk_3741 (14215)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14216,0);
 Msg("Find size of fptr_gtk_4763 (14216)\n");
@@ -20065,6 +24436,7 @@ Msg("Find size of fptr_gtk_4763 (14216)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14217,0);
 Msg("Find size of fptr_gtk_1960 (14217)\n");
@@ -20072,6 +24444,7 @@ Msg("Find size of fptr_gtk_1960 (14217)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14218,0);
 Msg("Find size of fptr_gtk_6734 (14218)\n");
@@ -20079,6 +24452,7 @@ Msg("Find size of fptr_gtk_6734 (14218)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14219,0);
 Msg("Find size of fptr_gtk_1366 (14219)\n");
@@ -20086,6 +24460,7 @@ Msg("Find size of fptr_gtk_1366 (14219)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14220,0);
 Msg("Find size of fptr_gtk_495 (14220)\n");
@@ -20093,6 +24468,7 @@ Msg("Find size of fptr_gtk_495 (14220)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14221,0);
 Msg("Find size of fptr_gtk_2752 (14221)\n");
@@ -20100,6 +24476,7 @@ Msg("Find size of fptr_gtk_2752 (14221)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14222,0);
 Msg("Find size of fptr_gtk_6008 (14222)\n");
@@ -20107,6 +24484,7 @@ Msg("Find size of fptr_gtk_6008 (14222)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14223,0);
 Msg("Find size of fptr_gtk_1856 (14223)\n");
@@ -20114,6 +24492,7 @@ Msg("Find size of fptr_gtk_1856 (14223)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14224,0);
 Msg("Find size of fptr_gtk_5414 (14224)\n");
@@ -20121,6 +24500,7 @@ Msg("Find size of fptr_gtk_5414 (14224)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14225,0);
 Msg("Find size of fptr_gtk_4151 (14225)\n");
@@ -20128,6 +24508,7 @@ Msg("Find size of fptr_gtk_4151 (14225)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14226,0);
 Msg("Find size of fptr_gtk_388 (14226)\n");
@@ -20135,6 +24516,7 @@ Msg("Find size of fptr_gtk_388 (14226)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14227,0);
 Msg("Find size of fptr_gtk_4029 (14227)\n");
@@ -20142,6 +24524,7 @@ Msg("Find size of fptr_gtk_4029 (14227)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14228,0);
 Msg("Find size of fptr_gtk_7419 (14228)\n");
@@ -20149,6 +24532,7 @@ Msg("Find size of fptr_gtk_7419 (14228)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14229,0);
 Msg("Find size of fptr_gtk_4632 (14229)\n");
@@ -20156,6 +24540,7 @@ Msg("Find size of fptr_gtk_4632 (14229)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14230,0);
 Msg("Find size of fptr_gtk_3870 (14230)\n");
@@ -20163,6 +24548,7 @@ Msg("Find size of fptr_gtk_3870 (14230)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14231,0);
 Msg("Find size of fptr_gtk_6977 (14231)\n");
@@ -20172,6 +24558,8 @@ Msg("Find size of fptr_gtk_6977 (14231)\n");
 CheckTypeSize(GtkStyleClass,228, 14232, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStyleClass,456, 14232, 11)
+#elif __ia64__
+CheckTypeSize(GtkStyleClass,456, 14232, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14232,0);
 Msg("Find size of GtkStyleClass (14232)\n");
@@ -20185,6 +24573,10 @@ CheckOffset(struct _GtkSeparatorMenuItemClass,parent_class,0,2,46973)
 CheckTypeSize(struct _GtkSeparatorMenuItemClass,952, 14233, 11)
 Msg("Missing member data for _GtkSeparatorMenuItemClass on x86-64\n");
 CheckOffset(struct _GtkSeparatorMenuItemClass,parent_class,0,11,46973)
+#elif __ia64__
+CheckTypeSize(struct _GtkSeparatorMenuItemClass,952, 14233, 3)
+Msg("Missing member data for _GtkSeparatorMenuItemClass on IA64\n");
+CheckOffset(struct _GtkSeparatorMenuItemClass,parent_class,0,3,46973)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14233,0);
 Msg("Find size of _GtkSeparatorMenuItemClass (14233)\n");
@@ -20194,6 +24586,8 @@ Msg("Find size of _GtkSeparatorMenuItemClass (14233)\n");
 CheckTypeSize(GtkSeparatorMenuItemClass,480, 14234, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparatorMenuItemClass,952, 14234, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparatorMenuItemClass,952, 14234, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14234,0);
 Msg("Find size of GtkSeparatorMenuItemClass (14234)\n");
@@ -20219,6 +24613,16 @@ CheckMemberSize(struct _GtkIMMulticontextClass,_gtk_reserved3,8,11,46977)
 CheckOffset(struct _GtkIMMulticontextClass,_gtk_reserved3,352,11,46977)
 CheckMemberSize(struct _GtkIMMulticontextClass,_gtk_reserved4,8,11,46978)
 CheckOffset(struct _GtkIMMulticontextClass,_gtk_reserved4,360,11,46978)
+#elif __ia64__
+CheckTypeSize(struct _GtkIMMulticontextClass,368, 14235, 3)
+CheckMemberSize(struct _GtkIMMulticontextClass,_gtk_reserved1,8,3,46975)
+CheckOffset(struct _GtkIMMulticontextClass,_gtk_reserved1,336,3,46975)
+CheckMemberSize(struct _GtkIMMulticontextClass,_gtk_reserved2,8,3,46976)
+CheckOffset(struct _GtkIMMulticontextClass,_gtk_reserved2,344,3,46976)
+CheckMemberSize(struct _GtkIMMulticontextClass,_gtk_reserved3,8,3,46977)
+CheckOffset(struct _GtkIMMulticontextClass,_gtk_reserved3,352,3,46977)
+CheckMemberSize(struct _GtkIMMulticontextClass,_gtk_reserved4,8,3,46978)
+CheckOffset(struct _GtkIMMulticontextClass,_gtk_reserved4,360,3,46978)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14235,0);
 Msg("Find size of _GtkIMMulticontextClass (14235)\n");
@@ -20228,6 +24632,8 @@ Msg("Find size of _GtkIMMulticontextClass (14235)\n");
 CheckTypeSize(GtkIMMulticontextClass,184, 14236, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMMulticontextClass,368, 14236, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMMulticontextClass,368, 14236, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14236,0);
 Msg("Find size of GtkIMMulticontextClass (14236)\n");
@@ -20253,6 +24659,16 @@ CheckMemberSize(struct _GtkRadioToolButtonClass,_gtk_reserved3,8,11,46989)
 CheckOffset(struct _GtkRadioToolButtonClass,_gtk_reserved3,984,11,46989)
 CheckMemberSize(struct _GtkRadioToolButtonClass,_gtk_reserved4,8,11,46990)
 CheckOffset(struct _GtkRadioToolButtonClass,_gtk_reserved4,992,11,46990)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioToolButtonClass,1000, 14237, 3)
+CheckMemberSize(struct _GtkRadioToolButtonClass,_gtk_reserved1,8,3,46987)
+CheckOffset(struct _GtkRadioToolButtonClass,_gtk_reserved1,968,3,46987)
+CheckMemberSize(struct _GtkRadioToolButtonClass,_gtk_reserved2,8,3,46988)
+CheckOffset(struct _GtkRadioToolButtonClass,_gtk_reserved2,976,3,46988)
+CheckMemberSize(struct _GtkRadioToolButtonClass,_gtk_reserved3,8,3,46989)
+CheckOffset(struct _GtkRadioToolButtonClass,_gtk_reserved3,984,3,46989)
+CheckMemberSize(struct _GtkRadioToolButtonClass,_gtk_reserved4,8,3,46990)
+CheckOffset(struct _GtkRadioToolButtonClass,_gtk_reserved4,992,3,46990)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14237,0);
 Msg("Find size of _GtkRadioToolButtonClass (14237)\n");
@@ -20282,6 +24698,18 @@ CheckMemberSize(struct _GtkToggleToolButtonClass,_gtk_reserved3,8,11,46984)
 CheckOffset(struct _GtkToggleToolButtonClass,_gtk_reserved3,952,11,46984)
 CheckMemberSize(struct _GtkToggleToolButtonClass,_gtk_reserved4,8,11,46985)
 CheckOffset(struct _GtkToggleToolButtonClass,_gtk_reserved4,960,11,46985)
+#elif __ia64__
+CheckTypeSize(struct _GtkToggleToolButtonClass,968, 14238, 3)
+CheckMemberSize(struct _GtkToggleToolButtonClass,toggled,8,3,46981)
+CheckOffset(struct _GtkToggleToolButtonClass,toggled,928,3,46981)
+CheckMemberSize(struct _GtkToggleToolButtonClass,_gtk_reserved1,8,3,46982)
+CheckOffset(struct _GtkToggleToolButtonClass,_gtk_reserved1,936,3,46982)
+CheckMemberSize(struct _GtkToggleToolButtonClass,_gtk_reserved2,8,3,46983)
+CheckOffset(struct _GtkToggleToolButtonClass,_gtk_reserved2,944,3,46983)
+CheckMemberSize(struct _GtkToggleToolButtonClass,_gtk_reserved3,8,3,46984)
+CheckOffset(struct _GtkToggleToolButtonClass,_gtk_reserved3,952,3,46984)
+CheckMemberSize(struct _GtkToggleToolButtonClass,_gtk_reserved4,8,3,46985)
+CheckOffset(struct _GtkToggleToolButtonClass,_gtk_reserved4,960,3,46985)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14238,0);
 Msg("Find size of _GtkToggleToolButtonClass (14238)\n");
@@ -20289,6 +24717,7 @@ Msg("Find size of _GtkToggleToolButtonClass (14238)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14239,0);
 Msg("Find size of fptr_gtk_3243 (14239)\n");
@@ -20298,6 +24727,8 @@ Msg("Find size of fptr_gtk_3243 (14239)\n");
 CheckTypeSize(GtkToggleToolButtonClass,488, 14240, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleToolButtonClass,968, 14240, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleToolButtonClass,968, 14240, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14240,0);
 Msg("Find size of GtkToggleToolButtonClass (14240)\n");
@@ -20307,6 +24738,8 @@ Msg("Find size of GtkToggleToolButtonClass (14240)\n");
 CheckTypeSize(GtkRadioToolButtonClass,504, 14241, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioToolButtonClass,1000, 14241, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioToolButtonClass,1000, 14241, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14241,0);
 Msg("Find size of GtkRadioToolButtonClass (14241)\n");
@@ -20332,6 +24765,16 @@ CheckMemberSize(struct _GtkCellRendererProgressClass,_gtk_reserved3,8,11,46994)
 CheckOffset(struct _GtkCellRendererProgressClass,_gtk_reserved3,240,11,46994)
 CheckMemberSize(struct _GtkCellRendererProgressClass,_gtk_reserved4,8,11,46995)
 CheckOffset(struct _GtkCellRendererProgressClass,_gtk_reserved4,248,11,46995)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererProgressClass,256, 14242, 3)
+CheckMemberSize(struct _GtkCellRendererProgressClass,_gtk_reserved1,8,3,46992)
+CheckOffset(struct _GtkCellRendererProgressClass,_gtk_reserved1,224,3,46992)
+CheckMemberSize(struct _GtkCellRendererProgressClass,_gtk_reserved2,8,3,46993)
+CheckOffset(struct _GtkCellRendererProgressClass,_gtk_reserved2,232,3,46993)
+CheckMemberSize(struct _GtkCellRendererProgressClass,_gtk_reserved3,8,3,46994)
+CheckOffset(struct _GtkCellRendererProgressClass,_gtk_reserved3,240,3,46994)
+CheckMemberSize(struct _GtkCellRendererProgressClass,_gtk_reserved4,8,3,46995)
+CheckOffset(struct _GtkCellRendererProgressClass,_gtk_reserved4,248,3,46995)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14242,0);
 Msg("Find size of _GtkCellRendererProgressClass (14242)\n");
@@ -20341,6 +24784,8 @@ Msg("Find size of _GtkCellRendererProgressClass (14242)\n");
 CheckTypeSize(GtkCellRendererProgressClass,128, 14243, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererProgressClass,256, 14243, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererProgressClass,256, 14243, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14243,0);
 Msg("Find size of GtkCellRendererProgressClass (14243)\n");
@@ -20354,6 +24799,10 @@ CheckOffset(struct _GtkVScrollbar,scrollbar,0,2,46996)
 CheckTypeSize(struct _GtkVScrollbar,192, 14244, 11)
 Msg("Missing member data for _GtkVScrollbar on x86-64\n");
 CheckOffset(struct _GtkVScrollbar,scrollbar,0,11,46996)
+#elif __ia64__
+CheckTypeSize(struct _GtkVScrollbar,192, 14244, 3)
+Msg("Missing member data for _GtkVScrollbar on IA64\n");
+CheckOffset(struct _GtkVScrollbar,scrollbar,0,3,46996)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14244,0);
 Msg("Find size of _GtkVScrollbar (14244)\n");
@@ -20363,6 +24812,8 @@ Msg("Find size of _GtkVScrollbar (14244)\n");
 CheckTypeSize(GtkVScrollbar,136, 14245, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVScrollbar,192, 14245, 11)
+#elif __ia64__
+CheckTypeSize(GtkVScrollbar,192, 14245, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14245,0);
 Msg("Find size of GtkVScrollbar (14245)\n");
@@ -20376,6 +24827,10 @@ CheckOffset(struct _GtkVPanedClass,parent_class,0,2,46997)
 CheckTypeSize(struct _GtkVPanedClass,904, 14246, 11)
 Msg("Missing member data for _GtkVPanedClass on x86-64\n");
 CheckOffset(struct _GtkVPanedClass,parent_class,0,11,46997)
+#elif __ia64__
+CheckTypeSize(struct _GtkVPanedClass,904, 14246, 3)
+Msg("Missing member data for _GtkVPanedClass on IA64\n");
+CheckOffset(struct _GtkVPanedClass,parent_class,0,3,46997)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14246,0);
 Msg("Find size of _GtkVPanedClass (14246)\n");
@@ -20385,6 +24840,8 @@ Msg("Find size of _GtkVPanedClass (14246)\n");
 CheckTypeSize(GtkVPanedClass,456, 14247, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVPanedClass,904, 14247, 11)
+#elif __ia64__
+CheckTypeSize(GtkVPanedClass,904, 14247, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14247,0);
 Msg("Find size of GtkVPanedClass (14247)\n");
@@ -20404,6 +24861,13 @@ CheckEnum("GTK_SCROLL_ENDS",GTK_SCROLL_ENDS,2);
 CheckEnum("GTK_SCROLL_HORIZONTAL_STEPS",GTK_SCROLL_HORIZONTAL_STEPS,3);
 CheckEnum("GTK_SCROLL_HORIZONTAL_PAGES",GTK_SCROLL_HORIZONTAL_PAGES,4);
 CheckEnum("GTK_SCROLL_HORIZONTAL_ENDS",GTK_SCROLL_HORIZONTAL_ENDS,5);
+#elif __ia64__
+CheckEnum("GTK_SCROLL_STEPS",GTK_SCROLL_STEPS,0);
+CheckEnum("GTK_SCROLL_PAGES",GTK_SCROLL_PAGES,1);
+CheckEnum("GTK_SCROLL_ENDS",GTK_SCROLL_ENDS,2);
+CheckEnum("GTK_SCROLL_HORIZONTAL_STEPS",GTK_SCROLL_HORIZONTAL_STEPS,3);
+CheckEnum("GTK_SCROLL_HORIZONTAL_PAGES",GTK_SCROLL_HORIZONTAL_PAGES,4);
+CheckEnum("GTK_SCROLL_HORIZONTAL_ENDS",GTK_SCROLL_HORIZONTAL_ENDS,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14248,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3690 (14248)\n");
@@ -20413,6 +24877,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3690 (14248)\n");
 CheckTypeSize(GtkScrollStep,4, 14249, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScrollStep,4, 14249, 11)
+#elif __ia64__
+CheckTypeSize(GtkScrollStep,4, 14249, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14249,0);
 Msg("Find size of GtkScrollStep (14249)\n");
@@ -20442,6 +24908,18 @@ CheckMemberSize(struct _GtkToggleButtonClass,_gtk_reserved3,8,11,47009)
 CheckOffset(struct _GtkToggleButtonClass,_gtk_reserved3,928,11,47009)
 CheckMemberSize(struct _GtkToggleButtonClass,_gtk_reserved4,8,11,47010)
 CheckOffset(struct _GtkToggleButtonClass,_gtk_reserved4,936,11,47010)
+#elif __ia64__
+CheckTypeSize(struct _GtkToggleButtonClass,944, 14250, 3)
+CheckMemberSize(struct _GtkToggleButtonClass,toggled,8,3,47006)
+CheckOffset(struct _GtkToggleButtonClass,toggled,904,3,47006)
+CheckMemberSize(struct _GtkToggleButtonClass,_gtk_reserved1,8,3,47007)
+CheckOffset(struct _GtkToggleButtonClass,_gtk_reserved1,912,3,47007)
+CheckMemberSize(struct _GtkToggleButtonClass,_gtk_reserved2,8,3,47008)
+CheckOffset(struct _GtkToggleButtonClass,_gtk_reserved2,920,3,47008)
+CheckMemberSize(struct _GtkToggleButtonClass,_gtk_reserved3,8,3,47009)
+CheckOffset(struct _GtkToggleButtonClass,_gtk_reserved3,928,3,47009)
+CheckMemberSize(struct _GtkToggleButtonClass,_gtk_reserved4,8,3,47010)
+CheckOffset(struct _GtkToggleButtonClass,_gtk_reserved4,936,3,47010)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14250,0);
 Msg("Find size of _GtkToggleButtonClass (14250)\n");
@@ -20449,6 +24927,7 @@ Msg("Find size of _GtkToggleButtonClass (14250)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14251,0);
 Msg("Find size of fptr_gtk_7855 (14251)\n");
@@ -20458,6 +24937,8 @@ Msg("Find size of fptr_gtk_7855 (14251)\n");
 CheckTypeSize(GtkToggleButtonClass,476, 14252, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToggleButtonClass,944, 14252, 11)
+#elif __ia64__
+CheckTypeSize(GtkToggleButtonClass,944, 14252, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14252,0);
 Msg("Find size of GtkToggleButtonClass (14252)\n");
@@ -20487,6 +24968,18 @@ CheckMemberSize(struct _GtkCellRendererToggleClass,_gtk_reserved3,8,11,47017)
 CheckOffset(struct _GtkCellRendererToggleClass,_gtk_reserved3,248,11,47017)
 CheckMemberSize(struct _GtkCellRendererToggleClass,_gtk_reserved4,8,11,47018)
 CheckOffset(struct _GtkCellRendererToggleClass,_gtk_reserved4,256,11,47018)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererToggleClass,264, 14253, 3)
+CheckMemberSize(struct _GtkCellRendererToggleClass,toggled,8,3,47014)
+CheckOffset(struct _GtkCellRendererToggleClass,toggled,224,3,47014)
+CheckMemberSize(struct _GtkCellRendererToggleClass,_gtk_reserved1,8,3,47015)
+CheckOffset(struct _GtkCellRendererToggleClass,_gtk_reserved1,232,3,47015)
+CheckMemberSize(struct _GtkCellRendererToggleClass,_gtk_reserved2,8,3,47016)
+CheckOffset(struct _GtkCellRendererToggleClass,_gtk_reserved2,240,3,47016)
+CheckMemberSize(struct _GtkCellRendererToggleClass,_gtk_reserved3,8,3,47017)
+CheckOffset(struct _GtkCellRendererToggleClass,_gtk_reserved3,248,3,47017)
+CheckMemberSize(struct _GtkCellRendererToggleClass,_gtk_reserved4,8,3,47018)
+CheckOffset(struct _GtkCellRendererToggleClass,_gtk_reserved4,256,3,47018)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14253,0);
 Msg("Find size of _GtkCellRendererToggleClass (14253)\n");
@@ -20494,6 +24987,7 @@ Msg("Find size of _GtkCellRendererToggleClass (14253)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14254,0);
 Msg("Find size of fptr_gtk_846 (14254)\n");
@@ -20503,6 +24997,8 @@ Msg("Find size of fptr_gtk_846 (14254)\n");
 CheckTypeSize(GtkCellRendererToggleClass,132, 14255, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererToggleClass,264, 14255, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererToggleClass,264, 14255, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14255,0);
 Msg("Find size of GtkCellRendererToggleClass (14255)\n");
@@ -20516,6 +25012,10 @@ CheckOffset(struct _GtkVButtonBox,button_box,0,2,47019)
 CheckTypeSize(struct _GtkVButtonBox,152, 14256, 11)
 Msg("Missing member data for _GtkVButtonBox on x86-64\n");
 CheckOffset(struct _GtkVButtonBox,button_box,0,11,47019)
+#elif __ia64__
+CheckTypeSize(struct _GtkVButtonBox,152, 14256, 3)
+Msg("Missing member data for _GtkVButtonBox on IA64\n");
+CheckOffset(struct _GtkVButtonBox,button_box,0,3,47019)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14256,0);
 Msg("Find size of _GtkVButtonBox (14256)\n");
@@ -20525,6 +25025,8 @@ Msg("Find size of _GtkVButtonBox (14256)\n");
 CheckTypeSize(GtkVButtonBox,96, 14257, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVButtonBox,152, 14257, 11)
+#elif __ia64__
+CheckTypeSize(GtkVButtonBox,152, 14257, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14257,0);
 Msg("Find size of GtkVButtonBox (14257)\n");
@@ -20542,6 +25044,12 @@ CheckMemberSize(struct _GtkTreeDragDestIface,drag_data_received,8,11,47024)
 CheckOffset(struct _GtkTreeDragDestIface,drag_data_received,16,11,47024)
 CheckMemberSize(struct _GtkTreeDragDestIface,row_drop_possible,8,11,47025)
 CheckOffset(struct _GtkTreeDragDestIface,row_drop_possible,24,11,47025)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeDragDestIface,32, 14258, 3)
+CheckMemberSize(struct _GtkTreeDragDestIface,drag_data_received,8,3,47024)
+CheckOffset(struct _GtkTreeDragDestIface,drag_data_received,16,3,47024)
+CheckMemberSize(struct _GtkTreeDragDestIface,row_drop_possible,8,3,47025)
+CheckOffset(struct _GtkTreeDragDestIface,row_drop_possible,24,3,47025)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14258,0);
 Msg("Find size of _GtkTreeDragDestIface (14258)\n");
@@ -20549,6 +25057,7 @@ Msg("Find size of _GtkTreeDragDestIface (14258)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14259,0);
 Msg("Find size of fptr_gtk_7080 (14259)\n");
@@ -20558,6 +25067,8 @@ Msg("Find size of fptr_gtk_7080 (14259)\n");
 CheckTypeSize(GtkTreeDragDestIface,16, 14260, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeDragDestIface,32, 14260, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeDragDestIface,32, 14260, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14260,0);
 Msg("Find size of GtkTreeDragDestIface (14260)\n");
@@ -20587,6 +25098,18 @@ CheckMemberSize(struct _GtkColorSelectionClass,_gtk_reserved3,8,11,47031)
 CheckOffset(struct _GtkColorSelectionClass,_gtk_reserved3,848,11,47031)
 CheckMemberSize(struct _GtkColorSelectionClass,_gtk_reserved4,8,11,47032)
 CheckOffset(struct _GtkColorSelectionClass,_gtk_reserved4,856,11,47032)
+#elif __ia64__
+CheckTypeSize(struct _GtkColorSelectionClass,864, 14261, 3)
+CheckMemberSize(struct _GtkColorSelectionClass,color_changed,8,3,47028)
+CheckOffset(struct _GtkColorSelectionClass,color_changed,824,3,47028)
+CheckMemberSize(struct _GtkColorSelectionClass,_gtk_reserved1,8,3,47029)
+CheckOffset(struct _GtkColorSelectionClass,_gtk_reserved1,832,3,47029)
+CheckMemberSize(struct _GtkColorSelectionClass,_gtk_reserved2,8,3,47030)
+CheckOffset(struct _GtkColorSelectionClass,_gtk_reserved2,840,3,47030)
+CheckMemberSize(struct _GtkColorSelectionClass,_gtk_reserved3,8,3,47031)
+CheckOffset(struct _GtkColorSelectionClass,_gtk_reserved3,848,3,47031)
+CheckMemberSize(struct _GtkColorSelectionClass,_gtk_reserved4,8,3,47032)
+CheckOffset(struct _GtkColorSelectionClass,_gtk_reserved4,856,3,47032)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14261,0);
 Msg("Find size of _GtkColorSelectionClass (14261)\n");
@@ -20594,6 +25117,7 @@ Msg("Find size of _GtkColorSelectionClass (14261)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14262,0);
 Msg("Find size of fptr_gtk_1949 (14262)\n");
@@ -20603,6 +25127,8 @@ Msg("Find size of fptr_gtk_1949 (14262)\n");
 CheckTypeSize(GtkColorSelectionClass,436, 14263, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorSelectionClass,864, 14263, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorSelectionClass,864, 14263, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14263,0);
 Msg("Find size of GtkColorSelectionClass (14263)\n");
@@ -20616,6 +25142,10 @@ CheckOffset(struct _GtkCellRendererProgress,priv,40,2,47034)
 CheckTypeSize(struct _GtkCellRendererProgress,64, 14264, 11)
 CheckMemberSize(struct _GtkCellRendererProgress,priv,8,11,47034)
 CheckOffset(struct _GtkCellRendererProgress,priv,56,11,47034)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererProgress,64, 14264, 3)
+CheckMemberSize(struct _GtkCellRendererProgress,priv,8,3,47034)
+CheckOffset(struct _GtkCellRendererProgress,priv,56,3,47034)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14264,0);
 Msg("Find size of _GtkCellRendererProgress (14264)\n");
@@ -20625,6 +25155,8 @@ Msg("Find size of _GtkCellRendererProgress (14264)\n");
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14266,0);
 Msg("Find size of GtkCellRendererProgressPrivate (14266)\n");
@@ -20634,6 +25166,8 @@ Msg("Find size of GtkCellRendererProgressPrivate (14266)\n");
 CheckTypeSize(GtkCellRendererProgressPrivate *,4, 14267, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererProgressPrivate *,8, 14267, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererProgressPrivate *,8, 14267, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14267,0);
 Msg("Find size of GtkCellRendererProgressPrivate * (14267)\n");
@@ -20643,6 +25177,8 @@ Msg("Find size of GtkCellRendererProgressPrivate * (14267)\n");
 CheckTypeSize(GtkCellRendererProgress,44, 14268, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererProgress,64, 14268, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererProgress,64, 14268, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14268,0);
 Msg("Find size of GtkCellRendererProgress (14268)\n");
@@ -20668,6 +25204,16 @@ CheckMemberSize(struct _GtkImageClass,_gtk_reserved3,8,11,47038)
 CheckOffset(struct _GtkImageClass,_gtk_reserved3,736,11,47038)
 CheckMemberSize(struct _GtkImageClass,_gtk_reserved4,8,11,47039)
 CheckOffset(struct _GtkImageClass,_gtk_reserved4,744,11,47039)
+#elif __ia64__
+CheckTypeSize(struct _GtkImageClass,752, 14269, 3)
+CheckMemberSize(struct _GtkImageClass,_gtk_reserved1,8,3,47036)
+CheckOffset(struct _GtkImageClass,_gtk_reserved1,720,3,47036)
+CheckMemberSize(struct _GtkImageClass,_gtk_reserved2,8,3,47037)
+CheckOffset(struct _GtkImageClass,_gtk_reserved2,728,3,47037)
+CheckMemberSize(struct _GtkImageClass,_gtk_reserved3,8,3,47038)
+CheckOffset(struct _GtkImageClass,_gtk_reserved3,736,3,47038)
+CheckMemberSize(struct _GtkImageClass,_gtk_reserved4,8,3,47039)
+CheckOffset(struct _GtkImageClass,_gtk_reserved4,744,3,47039)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14269,0);
 Msg("Find size of _GtkImageClass (14269)\n");
@@ -20677,6 +25223,8 @@ Msg("Find size of _GtkImageClass (14269)\n");
 CheckTypeSize(GtkImageClass,380, 14270, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageClass,752, 14270, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageClass,752, 14270, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14270,0);
 Msg("Find size of GtkImageClass (14270)\n");
@@ -20702,6 +25250,16 @@ CheckMemberSize(struct _GtkMessageDialogClass,_gtk_reserved3,8,11,47043)
 CheckOffset(struct _GtkMessageDialogClass,_gtk_reserved3,968,11,47043)
 CheckMemberSize(struct _GtkMessageDialogClass,_gtk_reserved4,8,11,47044)
 CheckOffset(struct _GtkMessageDialogClass,_gtk_reserved4,976,11,47044)
+#elif __ia64__
+CheckTypeSize(struct _GtkMessageDialogClass,984, 14271, 3)
+CheckMemberSize(struct _GtkMessageDialogClass,_gtk_reserved1,8,3,47041)
+CheckOffset(struct _GtkMessageDialogClass,_gtk_reserved1,952,3,47041)
+CheckMemberSize(struct _GtkMessageDialogClass,_gtk_reserved2,8,3,47042)
+CheckOffset(struct _GtkMessageDialogClass,_gtk_reserved2,960,3,47042)
+CheckMemberSize(struct _GtkMessageDialogClass,_gtk_reserved3,8,3,47043)
+CheckOffset(struct _GtkMessageDialogClass,_gtk_reserved3,968,3,47043)
+CheckMemberSize(struct _GtkMessageDialogClass,_gtk_reserved4,8,3,47044)
+CheckOffset(struct _GtkMessageDialogClass,_gtk_reserved4,976,3,47044)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14271,0);
 Msg("Find size of _GtkMessageDialogClass (14271)\n");
@@ -20711,6 +25269,8 @@ Msg("Find size of _GtkMessageDialogClass (14271)\n");
 CheckTypeSize(GtkMessageDialogClass,496, 14272, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMessageDialogClass,984, 14272, 11)
+#elif __ia64__
+CheckTypeSize(GtkMessageDialogClass,984, 14272, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14272,0);
 Msg("Find size of GtkMessageDialogClass (14272)\n");
@@ -20734,6 +25294,15 @@ CheckEnum("GTK_DELETE_DISPLAY_LINE_ENDS",GTK_DELETE_DISPLAY_LINE_ENDS,4);
 CheckEnum("GTK_DELETE_PARAGRAPH_ENDS",GTK_DELETE_PARAGRAPH_ENDS,5);
 CheckEnum("GTK_DELETE_PARAGRAPHS",GTK_DELETE_PARAGRAPHS,6);
 CheckEnum("GTK_DELETE_WHITESPACE",GTK_DELETE_WHITESPACE,7);
+#elif __ia64__
+CheckEnum("GTK_DELETE_CHARS",GTK_DELETE_CHARS,0);
+CheckEnum("GTK_DELETE_WORD_ENDS",GTK_DELETE_WORD_ENDS,1);
+CheckEnum("GTK_DELETE_WORDS",GTK_DELETE_WORDS,2);
+CheckEnum("GTK_DELETE_DISPLAY_LINES",GTK_DELETE_DISPLAY_LINES,3);
+CheckEnum("GTK_DELETE_DISPLAY_LINE_ENDS",GTK_DELETE_DISPLAY_LINE_ENDS,4);
+CheckEnum("GTK_DELETE_PARAGRAPH_ENDS",GTK_DELETE_PARAGRAPH_ENDS,5);
+CheckEnum("GTK_DELETE_PARAGRAPHS",GTK_DELETE_PARAGRAPHS,6);
+CheckEnum("GTK_DELETE_WHITESPACE",GTK_DELETE_WHITESPACE,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14273,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3368 (14273)\n");
@@ -20743,6 +25312,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3368 (14273)\n");
 CheckTypeSize(GtkDeleteType,4, 14274, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDeleteType,4, 14274, 11)
+#elif __ia64__
+CheckTypeSize(GtkDeleteType,4, 14274, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14274,0);
 Msg("Find size of GtkDeleteType (14274)\n");
@@ -20776,6 +25347,20 @@ CheckMemberSize(struct _GtkTreeSortableIface,set_default_sort_func,8,11,47074)
 CheckOffset(struct _GtkTreeSortableIface,set_default_sort_func,48,11,47074)
 CheckMemberSize(struct _GtkTreeSortableIface,has_default_sort_func,8,11,47076)
 CheckOffset(struct _GtkTreeSortableIface,has_default_sort_func,56,11,47076)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeSortableIface,64, 14275, 3)
+CheckMemberSize(struct _GtkTreeSortableIface,sort_column_changed,8,3,47055)
+CheckOffset(struct _GtkTreeSortableIface,sort_column_changed,16,3,47055)
+CheckMemberSize(struct _GtkTreeSortableIface,get_sort_column_id,8,3,47059)
+CheckOffset(struct _GtkTreeSortableIface,get_sort_column_id,24,3,47059)
+CheckMemberSize(struct _GtkTreeSortableIface,set_sort_column_id,8,3,47063)
+CheckOffset(struct _GtkTreeSortableIface,set_sort_column_id,32,3,47063)
+CheckMemberSize(struct _GtkTreeSortableIface,set_sort_func,8,3,47069)
+CheckOffset(struct _GtkTreeSortableIface,set_sort_func,40,3,47069)
+CheckMemberSize(struct _GtkTreeSortableIface,set_default_sort_func,8,3,47074)
+CheckOffset(struct _GtkTreeSortableIface,set_default_sort_func,48,3,47074)
+CheckMemberSize(struct _GtkTreeSortableIface,has_default_sort_func,8,3,47076)
+CheckOffset(struct _GtkTreeSortableIface,has_default_sort_func,56,3,47076)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14275,0);
 Msg("Find size of _GtkTreeSortableIface (14275)\n");
@@ -20783,6 +25368,7 @@ Msg("Find size of _GtkTreeSortableIface (14275)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14276,0);
 Msg("Find size of fptr_gtk_7814 (14276)\n");
@@ -20790,6 +25376,7 @@ Msg("Find size of fptr_gtk_7814 (14276)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14277,0);
 Msg("Find size of fptr_gtk_4863 (14277)\n");
@@ -20797,6 +25384,7 @@ Msg("Find size of fptr_gtk_4863 (14277)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14278,0);
 Msg("Find size of fptr_gtk_8094 (14278)\n");
@@ -20804,6 +25392,7 @@ Msg("Find size of fptr_gtk_8094 (14278)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14279,0);
 Msg("Find size of fptr_gtk_3352 (14279)\n");
@@ -20811,6 +25400,7 @@ Msg("Find size of fptr_gtk_3352 (14279)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14280,0);
 Msg("Find size of fptr_gtk_5886 (14280)\n");
@@ -20818,6 +25408,7 @@ Msg("Find size of fptr_gtk_5886 (14280)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14281,0);
 Msg("Find size of fptr_gtk_1057 (14281)\n");
@@ -20827,6 +25418,8 @@ Msg("Find size of fptr_gtk_1057 (14281)\n");
 CheckTypeSize(GtkTreeSortableIface,32, 14282, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeSortableIface,64, 14282, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeSortableIface,64, 14282, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14282,0);
 Msg("Find size of GtkTreeSortableIface (14282)\n");
@@ -20864,6 +25457,22 @@ CheckMemberSize(struct _GtkCalendarClass,prev_year,8,11,47084)
 CheckOffset(struct _GtkCalendarClass,prev_year,760,11,47084)
 CheckMemberSize(struct _GtkCalendarClass,next_year,8,11,47085)
 CheckOffset(struct _GtkCalendarClass,next_year,768,11,47085)
+#elif __ia64__
+CheckTypeSize(struct _GtkCalendarClass,776, 14283, 3)
+CheckMemberSize(struct _GtkCalendarClass,month_changed,8,3,47079)
+CheckOffset(struct _GtkCalendarClass,month_changed,720,3,47079)
+CheckMemberSize(struct _GtkCalendarClass,day_selected,8,3,47080)
+CheckOffset(struct _GtkCalendarClass,day_selected,728,3,47080)
+CheckMemberSize(struct _GtkCalendarClass,day_selected_double_click,8,3,47081)
+CheckOffset(struct _GtkCalendarClass,day_selected_double_click,736,3,47081)
+CheckMemberSize(struct _GtkCalendarClass,prev_month,8,3,47082)
+CheckOffset(struct _GtkCalendarClass,prev_month,744,3,47082)
+CheckMemberSize(struct _GtkCalendarClass,next_month,8,3,47083)
+CheckOffset(struct _GtkCalendarClass,next_month,752,3,47083)
+CheckMemberSize(struct _GtkCalendarClass,prev_year,8,3,47084)
+CheckOffset(struct _GtkCalendarClass,prev_year,760,3,47084)
+CheckMemberSize(struct _GtkCalendarClass,next_year,8,3,47085)
+CheckOffset(struct _GtkCalendarClass,next_year,768,3,47085)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14283,0);
 Msg("Find size of _GtkCalendarClass (14283)\n");
@@ -20871,6 +25480,7 @@ Msg("Find size of _GtkCalendarClass (14283)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14284,0);
 Msg("Find size of fptr_gtk_3571 (14284)\n");
@@ -20880,6 +25490,8 @@ Msg("Find size of fptr_gtk_3571 (14284)\n");
 CheckTypeSize(GtkCalendarClass,392, 14285, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCalendarClass,776, 14285, 11)
+#elif __ia64__
+CheckTypeSize(GtkCalendarClass,776, 14285, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14285,0);
 Msg("Find size of GtkCalendarClass (14285)\n");
@@ -20921,6 +25533,24 @@ CheckMemberSize(struct _GtkSpinButtonClass,_gtk_reserved3,8,11,47125)
 CheckOffset(struct _GtkSpinButtonClass,_gtk_reserved3,872,11,47125)
 CheckMemberSize(struct _GtkSpinButtonClass,_gtk_reserved4,8,11,47126)
 CheckOffset(struct _GtkSpinButtonClass,_gtk_reserved4,880,11,47126)
+#elif __ia64__
+CheckTypeSize(struct _GtkSpinButtonClass,888, 14286, 3)
+CheckMemberSize(struct _GtkSpinButtonClass,input,8,3,47115)
+CheckOffset(struct _GtkSpinButtonClass,input,824,3,47115)
+CheckMemberSize(struct _GtkSpinButtonClass,output,8,3,47117)
+CheckOffset(struct _GtkSpinButtonClass,output,832,3,47117)
+CheckMemberSize(struct _GtkSpinButtonClass,value_changed,8,3,47119)
+CheckOffset(struct _GtkSpinButtonClass,value_changed,840,3,47119)
+CheckMemberSize(struct _GtkSpinButtonClass,change_value,8,3,47122)
+CheckOffset(struct _GtkSpinButtonClass,change_value,848,3,47122)
+CheckMemberSize(struct _GtkSpinButtonClass,_gtk_reserved1,8,3,47123)
+CheckOffset(struct _GtkSpinButtonClass,_gtk_reserved1,856,3,47123)
+CheckMemberSize(struct _GtkSpinButtonClass,_gtk_reserved2,8,3,47124)
+CheckOffset(struct _GtkSpinButtonClass,_gtk_reserved2,864,3,47124)
+CheckMemberSize(struct _GtkSpinButtonClass,_gtk_reserved3,8,3,47125)
+CheckOffset(struct _GtkSpinButtonClass,_gtk_reserved3,872,3,47125)
+CheckMemberSize(struct _GtkSpinButtonClass,_gtk_reserved4,8,3,47126)
+CheckOffset(struct _GtkSpinButtonClass,_gtk_reserved4,880,3,47126)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14286,0);
 Msg("Find size of _GtkSpinButtonClass (14286)\n");
@@ -20982,6 +25612,34 @@ CheckMemberSize(struct _GtkEntryClass,_gtk_reserved2,8,11,47110)
 CheckOffset(struct _GtkEntryClass,_gtk_reserved2,808,11,47110)
 CheckMemberSize(struct _GtkEntryClass,_gtk_reserved3,8,11,47111)
 CheckOffset(struct _GtkEntryClass,_gtk_reserved3,816,11,47111)
+#elif __ia64__
+CheckTypeSize(struct _GtkEntryClass,824, 14287, 3)
+CheckMemberSize(struct _GtkEntryClass,populate_popup,8,3,47089)
+CheckOffset(struct _GtkEntryClass,populate_popup,720,3,47089)
+CheckMemberSize(struct _GtkEntryClass,activate,8,3,47091)
+CheckOffset(struct _GtkEntryClass,activate,728,3,47091)
+CheckMemberSize(struct _GtkEntryClass,move_cursor,8,3,47096)
+CheckOffset(struct _GtkEntryClass,move_cursor,736,3,47096)
+CheckMemberSize(struct _GtkEntryClass,insert_at_cursor,8,3,47099)
+CheckOffset(struct _GtkEntryClass,insert_at_cursor,744,3,47099)
+CheckMemberSize(struct _GtkEntryClass,delete_from_cursor,8,3,47103)
+CheckOffset(struct _GtkEntryClass,delete_from_cursor,752,3,47103)
+CheckMemberSize(struct _GtkEntryClass,backspace,8,3,47104)
+CheckOffset(struct _GtkEntryClass,backspace,760,3,47104)
+CheckMemberSize(struct _GtkEntryClass,cut_clipboard,8,3,47105)
+CheckOffset(struct _GtkEntryClass,cut_clipboard,768,3,47105)
+CheckMemberSize(struct _GtkEntryClass,copy_clipboard,8,3,47106)
+CheckOffset(struct _GtkEntryClass,copy_clipboard,776,3,47106)
+CheckMemberSize(struct _GtkEntryClass,paste_clipboard,8,3,47107)
+CheckOffset(struct _GtkEntryClass,paste_clipboard,784,3,47107)
+CheckMemberSize(struct _GtkEntryClass,toggle_overwrite,8,3,47108)
+CheckOffset(struct _GtkEntryClass,toggle_overwrite,792,3,47108)
+CheckMemberSize(struct _GtkEntryClass,_gtk_reserved1,8,3,47109)
+CheckOffset(struct _GtkEntryClass,_gtk_reserved1,800,3,47109)
+CheckMemberSize(struct _GtkEntryClass,_gtk_reserved2,8,3,47110)
+CheckOffset(struct _GtkEntryClass,_gtk_reserved2,808,3,47110)
+CheckMemberSize(struct _GtkEntryClass,_gtk_reserved3,8,3,47111)
+CheckOffset(struct _GtkEntryClass,_gtk_reserved3,816,3,47111)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14287,0);
 Msg("Find size of _GtkEntryClass (14287)\n");
@@ -20989,6 +25647,7 @@ Msg("Find size of _GtkEntryClass (14287)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14288,0);
 Msg("Find size of fptr_gtk_519 (14288)\n");
@@ -20996,6 +25655,7 @@ Msg("Find size of fptr_gtk_519 (14288)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14289,0);
 Msg("Find size of fptr_gtk_7506 (14289)\n");
@@ -21003,6 +25663,7 @@ Msg("Find size of fptr_gtk_7506 (14289)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14290,0);
 Msg("Find size of fptr_gtk_8790 (14290)\n");
@@ -21010,6 +25671,7 @@ Msg("Find size of fptr_gtk_8790 (14290)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14291,0);
 Msg("Find size of fptr_gtk_7472 (14291)\n");
@@ -21017,6 +25679,7 @@ Msg("Find size of fptr_gtk_7472 (14291)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14292,0);
 Msg("Find size of fptr_gtk_7817 (14292)\n");
@@ -21026,6 +25689,8 @@ Msg("Find size of fptr_gtk_7817 (14292)\n");
 CheckTypeSize(GtkEntryClass,416, 14293, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntryClass,824, 14293, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntryClass,824, 14293, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14293,0);
 Msg("Find size of GtkEntryClass (14293)\n");
@@ -21033,6 +25698,7 @@ Msg("Find size of GtkEntryClass (14293)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14294,0);
 Msg("Find size of fptr_gtk_6637 (14294)\n");
@@ -21040,6 +25706,7 @@ Msg("Find size of fptr_gtk_6637 (14294)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14295,0);
 Msg("Find size of fptr_gtk_2820 (14295)\n");
@@ -21047,6 +25714,7 @@ Msg("Find size of fptr_gtk_2820 (14295)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14296,0);
 Msg("Find size of fptr_gtk_6030 (14296)\n");
@@ -21054,6 +25722,7 @@ Msg("Find size of fptr_gtk_6030 (14296)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14297,0);
 Msg("Find size of fptr_gtk_4099 (14297)\n");
@@ -21063,6 +25732,8 @@ Msg("Find size of fptr_gtk_4099 (14297)\n");
 CheckTypeSize(GtkSpinButtonClass,448, 14298, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSpinButtonClass,888, 14298, 11)
+#elif __ia64__
+CheckTypeSize(GtkSpinButtonClass,888, 14298, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14298,0);
 Msg("Find size of GtkSpinButtonClass (14298)\n");
@@ -21096,6 +25767,20 @@ CheckMemberSize(struct _GtkInputDialogClass,_gtk_reserved3,8,11,47144)
 CheckOffset(struct _GtkInputDialogClass,_gtk_reserved3,984,11,47144)
 CheckMemberSize(struct _GtkInputDialogClass,_gtk_reserved4,8,11,47145)
 CheckOffset(struct _GtkInputDialogClass,_gtk_reserved4,992,11,47145)
+#elif __ia64__
+CheckTypeSize(struct _GtkInputDialogClass,1000, 14299, 3)
+CheckMemberSize(struct _GtkInputDialogClass,enable_device,8,3,47140)
+CheckOffset(struct _GtkInputDialogClass,enable_device,952,3,47140)
+CheckMemberSize(struct _GtkInputDialogClass,disable_device,8,3,47141)
+CheckOffset(struct _GtkInputDialogClass,disable_device,960,3,47141)
+CheckMemberSize(struct _GtkInputDialogClass,_gtk_reserved1,8,3,47142)
+CheckOffset(struct _GtkInputDialogClass,_gtk_reserved1,968,3,47142)
+CheckMemberSize(struct _GtkInputDialogClass,_gtk_reserved2,8,3,47143)
+CheckOffset(struct _GtkInputDialogClass,_gtk_reserved2,976,3,47143)
+CheckMemberSize(struct _GtkInputDialogClass,_gtk_reserved3,8,3,47144)
+CheckOffset(struct _GtkInputDialogClass,_gtk_reserved3,984,3,47144)
+CheckMemberSize(struct _GtkInputDialogClass,_gtk_reserved4,8,3,47145)
+CheckOffset(struct _GtkInputDialogClass,_gtk_reserved4,992,3,47145)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14299,0);
 Msg("Find size of _GtkInputDialogClass (14299)\n");
@@ -21141,6 +25826,26 @@ CheckMemberSize(struct _GtkInputDialog,keys_list,8,11,47136)
 CheckOffset(struct _GtkInputDialog,keys_list,368,11,47136)
 CheckMemberSize(struct _GtkInputDialog,keys_listbox,8,11,47137)
 CheckOffset(struct _GtkInputDialog,keys_listbox,376,11,47137)
+#elif __ia64__
+CheckTypeSize(struct _GtkInputDialog,384, 14300, 3)
+CheckMemberSize(struct _GtkInputDialog,axis_list,8,3,47129)
+CheckOffset(struct _GtkInputDialog,axis_list,264,3,47129)
+CheckMemberSize(struct _GtkInputDialog,axis_listbox,8,3,47130)
+CheckOffset(struct _GtkInputDialog,axis_listbox,272,3,47130)
+CheckMemberSize(struct _GtkInputDialog,mode_optionmenu,8,3,47131)
+CheckOffset(struct _GtkInputDialog,mode_optionmenu,280,3,47131)
+CheckMemberSize(struct _GtkInputDialog,close_button,8,3,47132)
+CheckOffset(struct _GtkInputDialog,close_button,288,3,47132)
+CheckMemberSize(struct _GtkInputDialog,save_button,8,3,47133)
+CheckOffset(struct _GtkInputDialog,save_button,296,3,47133)
+CheckMemberSize(struct _GtkInputDialog,axis_items,56,3,47134)
+CheckOffset(struct _GtkInputDialog,axis_items,304,3,47134)
+CheckMemberSize(struct _GtkInputDialog,current_device,8,3,47135)
+CheckOffset(struct _GtkInputDialog,current_device,360,3,47135)
+CheckMemberSize(struct _GtkInputDialog,keys_list,8,3,47136)
+CheckOffset(struct _GtkInputDialog,keys_list,368,3,47136)
+CheckMemberSize(struct _GtkInputDialog,keys_listbox,8,3,47137)
+CheckOffset(struct _GtkInputDialog,keys_listbox,376,3,47137)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14300,0);
 Msg("Find size of _GtkInputDialog (14300)\n");
@@ -21153,6 +25858,8 @@ Msg("Find size of _GtkInputDialog (14300)\n");
 CheckTypeSize(GtkInputDialog,220, 14302, 2)
 #elif __x86_64__
 CheckTypeSize(GtkInputDialog,384, 14302, 11)
+#elif __ia64__
+CheckTypeSize(GtkInputDialog,384, 14302, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14302,0);
 Msg("Find size of GtkInputDialog (14302)\n");
@@ -21162,6 +25869,8 @@ Msg("Find size of GtkInputDialog (14302)\n");
 CheckTypeSize(GtkInputDialog *,4, 14303, 2)
 #elif __x86_64__
 CheckTypeSize(GtkInputDialog *,8, 14303, 11)
+#elif __ia64__
+CheckTypeSize(GtkInputDialog *,8, 14303, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14303,0);
 Msg("Find size of GtkInputDialog * (14303)\n");
@@ -21169,6 +25878,7 @@ Msg("Find size of GtkInputDialog * (14303)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14304,0);
 Msg("Find size of fptr_gtk_2280 (14304)\n");
@@ -21178,6 +25888,8 @@ Msg("Find size of fptr_gtk_2280 (14304)\n");
 CheckTypeSize(GtkInputDialogClass,504, 14305, 2)
 #elif __x86_64__
 CheckTypeSize(GtkInputDialogClass,1000, 14305, 11)
+#elif __ia64__
+CheckTypeSize(GtkInputDialogClass,1000, 14305, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14305,0);
 Msg("Find size of GtkInputDialogClass (14305)\n");
@@ -21211,6 +25923,20 @@ CheckMemberSize(struct _GtkEntryCompletionClass,_gtk_reserved1,8,11,47158)
 CheckOffset(struct _GtkEntryCompletionClass,_gtk_reserved1,168,11,47158)
 CheckMemberSize(struct _GtkEntryCompletionClass,_gtk_reserved2,8,11,47159)
 CheckOffset(struct _GtkEntryCompletionClass,_gtk_reserved2,176,11,47159)
+#elif __ia64__
+CheckTypeSize(struct _GtkEntryCompletionClass,184, 14306, 3)
+CheckMemberSize(struct _GtkEntryCompletionClass,match_selected,8,3,47150)
+CheckOffset(struct _GtkEntryCompletionClass,match_selected,136,3,47150)
+CheckMemberSize(struct _GtkEntryCompletionClass,action_activated,8,3,47153)
+CheckOffset(struct _GtkEntryCompletionClass,action_activated,144,3,47153)
+CheckMemberSize(struct _GtkEntryCompletionClass,insert_prefix,8,3,47156)
+CheckOffset(struct _GtkEntryCompletionClass,insert_prefix,152,3,47156)
+CheckMemberSize(struct _GtkEntryCompletionClass,_gtk_reserved0,8,3,47157)
+CheckOffset(struct _GtkEntryCompletionClass,_gtk_reserved0,160,3,47157)
+CheckMemberSize(struct _GtkEntryCompletionClass,_gtk_reserved1,8,3,47158)
+CheckOffset(struct _GtkEntryCompletionClass,_gtk_reserved1,168,3,47158)
+CheckMemberSize(struct _GtkEntryCompletionClass,_gtk_reserved2,8,3,47159)
+CheckOffset(struct _GtkEntryCompletionClass,_gtk_reserved2,176,3,47159)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14306,0);
 Msg("Find size of _GtkEntryCompletionClass (14306)\n");
@@ -21218,6 +25944,7 @@ Msg("Find size of _GtkEntryCompletionClass (14306)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14307,0);
 Msg("Find size of fptr_gtk_2450 (14307)\n");
@@ -21225,6 +25952,7 @@ Msg("Find size of fptr_gtk_2450 (14307)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14308,0);
 Msg("Find size of fptr_gtk_1195 (14308)\n");
@@ -21232,6 +25960,7 @@ Msg("Find size of fptr_gtk_1195 (14308)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14309,0);
 Msg("Find size of fptr_gtk_7904 (14309)\n");
@@ -21241,6 +25970,8 @@ Msg("Find size of fptr_gtk_7904 (14309)\n");
 CheckTypeSize(GtkEntryCompletionClass,92, 14310, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEntryCompletionClass,184, 14310, 11)
+#elif __ia64__
+CheckTypeSize(GtkEntryCompletionClass,184, 14310, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14310,0);
 Msg("Find size of GtkEntryCompletionClass (14310)\n");
@@ -21254,6 +25985,10 @@ CheckOffset(struct _GtkAlignmentClass,parent_class,0,2,47160)
 CheckTypeSize(struct _GtkAlignmentClass,824, 14311, 11)
 Msg("Missing member data for _GtkAlignmentClass on x86-64\n");
 CheckOffset(struct _GtkAlignmentClass,parent_class,0,11,47160)
+#elif __ia64__
+CheckTypeSize(struct _GtkAlignmentClass,824, 14311, 3)
+Msg("Missing member data for _GtkAlignmentClass on IA64\n");
+CheckOffset(struct _GtkAlignmentClass,parent_class,0,3,47160)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14311,0);
 Msg("Find size of _GtkAlignmentClass (14311)\n");
@@ -21263,6 +25998,8 @@ Msg("Find size of _GtkAlignmentClass (14311)\n");
 CheckTypeSize(GtkAlignmentClass,416, 14312, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAlignmentClass,824, 14312, 11)
+#elif __ia64__
+CheckTypeSize(GtkAlignmentClass,824, 14312, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14312,0);
 Msg("Find size of GtkAlignmentClass (14312)\n");
@@ -21288,6 +26025,16 @@ CheckMemberSize(struct _GtkTreeModelFilterClass,_gtk_reserved2,8,11,47164)
 CheckOffset(struct _GtkTreeModelFilterClass,_gtk_reserved2,152,11,47164)
 CheckMemberSize(struct _GtkTreeModelFilterClass,_gtk_reserved3,8,11,47165)
 CheckOffset(struct _GtkTreeModelFilterClass,_gtk_reserved3,160,11,47165)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeModelFilterClass,168, 14313, 3)
+CheckMemberSize(struct _GtkTreeModelFilterClass,_gtk_reserved0,8,3,47162)
+CheckOffset(struct _GtkTreeModelFilterClass,_gtk_reserved0,136,3,47162)
+CheckMemberSize(struct _GtkTreeModelFilterClass,_gtk_reserved1,8,3,47163)
+CheckOffset(struct _GtkTreeModelFilterClass,_gtk_reserved1,144,3,47163)
+CheckMemberSize(struct _GtkTreeModelFilterClass,_gtk_reserved2,8,3,47164)
+CheckOffset(struct _GtkTreeModelFilterClass,_gtk_reserved2,152,3,47164)
+CheckMemberSize(struct _GtkTreeModelFilterClass,_gtk_reserved3,8,3,47165)
+CheckOffset(struct _GtkTreeModelFilterClass,_gtk_reserved3,160,3,47165)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14313,0);
 Msg("Find size of _GtkTreeModelFilterClass (14313)\n");
@@ -21297,6 +26044,8 @@ Msg("Find size of _GtkTreeModelFilterClass (14313)\n");
 CheckTypeSize(GtkTreeModelFilterClass,84, 14314, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelFilterClass,168, 14314, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelFilterClass,168, 14314, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14314,0);
 Msg("Find size of GtkTreeModelFilterClass (14314)\n");
@@ -21338,6 +26087,24 @@ CheckMemberSize(struct _GtkRcStyleClass,_gtk_reserved3,8,11,47180)
 CheckOffset(struct _GtkRcStyleClass,_gtk_reserved3,184,11,47180)
 CheckMemberSize(struct _GtkRcStyleClass,_gtk_reserved4,8,11,47181)
 CheckOffset(struct _GtkRcStyleClass,_gtk_reserved4,192,11,47181)
+#elif __ia64__
+CheckTypeSize(struct _GtkRcStyleClass,200, 14315, 3)
+CheckMemberSize(struct _GtkRcStyleClass,create_rc_style,8,3,47168)
+CheckOffset(struct _GtkRcStyleClass,create_rc_style,136,3,47168)
+CheckMemberSize(struct _GtkRcStyleClass,parse,8,3,47172)
+CheckOffset(struct _GtkRcStyleClass,parse,144,3,47172)
+CheckMemberSize(struct _GtkRcStyleClass,merge,8,3,47175)
+CheckOffset(struct _GtkRcStyleClass,merge,152,3,47175)
+CheckMemberSize(struct _GtkRcStyleClass,create_style,8,3,47177)
+CheckOffset(struct _GtkRcStyleClass,create_style,160,3,47177)
+CheckMemberSize(struct _GtkRcStyleClass,_gtk_reserved1,8,3,47178)
+CheckOffset(struct _GtkRcStyleClass,_gtk_reserved1,168,3,47178)
+CheckMemberSize(struct _GtkRcStyleClass,_gtk_reserved2,8,3,47179)
+CheckOffset(struct _GtkRcStyleClass,_gtk_reserved2,176,3,47179)
+CheckMemberSize(struct _GtkRcStyleClass,_gtk_reserved3,8,3,47180)
+CheckOffset(struct _GtkRcStyleClass,_gtk_reserved3,184,3,47180)
+CheckMemberSize(struct _GtkRcStyleClass,_gtk_reserved4,8,3,47181)
+CheckOffset(struct _GtkRcStyleClass,_gtk_reserved4,192,3,47181)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14315,0);
 Msg("Find size of _GtkRcStyleClass (14315)\n");
@@ -21345,6 +26112,7 @@ Msg("Find size of _GtkRcStyleClass (14315)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14316,0);
 Msg("Find size of fptr_gtk_8807 (14316)\n");
@@ -21352,6 +26120,7 @@ Msg("Find size of fptr_gtk_8807 (14316)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14317,0);
 Msg("Find size of fptr_gtk_5787 (14317)\n");
@@ -21359,6 +26128,7 @@ Msg("Find size of fptr_gtk_5787 (14317)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14318,0);
 Msg("Find size of fptr_gtk_4093 (14318)\n");
@@ -21366,6 +26136,7 @@ Msg("Find size of fptr_gtk_4093 (14318)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14319,0);
 Msg("Find size of fptr_gtk_614 (14319)\n");
@@ -21375,6 +26146,8 @@ Msg("Find size of fptr_gtk_614 (14319)\n");
 CheckTypeSize(GtkRcStyleClass,100, 14320, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcStyleClass,200, 14320, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcStyleClass,200, 14320, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14320,0);
 Msg("Find size of GtkRcStyleClass (14320)\n");
@@ -21424,6 +26197,28 @@ CheckMemberSize(struct _GtkUIManagerClass,_gtk_reserved1,8,11,47203)
 CheckOffset(struct _GtkUIManagerClass,_gtk_reserved1,200,11,47203)
 CheckMemberSize(struct _GtkUIManagerClass,_gtk_reserved2,8,11,47204)
 CheckOffset(struct _GtkUIManagerClass,_gtk_reserved2,208,11,47204)
+#elif __ia64__
+CheckTypeSize(struct _GtkUIManagerClass,216, 14321, 3)
+CheckMemberSize(struct _GtkUIManagerClass,add_widget,8,3,47185)
+CheckOffset(struct _GtkUIManagerClass,add_widget,136,3,47185)
+CheckMemberSize(struct _GtkUIManagerClass,actions_changed,8,3,47187)
+CheckOffset(struct _GtkUIManagerClass,actions_changed,144,3,47187)
+CheckMemberSize(struct _GtkUIManagerClass,connect_proxy,8,3,47191)
+CheckOffset(struct _GtkUIManagerClass,connect_proxy,152,3,47191)
+CheckMemberSize(struct _GtkUIManagerClass,disconnect_proxy,8,3,47192)
+CheckOffset(struct _GtkUIManagerClass,disconnect_proxy,160,3,47192)
+CheckMemberSize(struct _GtkUIManagerClass,pre_activate,8,3,47195)
+CheckOffset(struct _GtkUIManagerClass,pre_activate,168,3,47195)
+CheckMemberSize(struct _GtkUIManagerClass,post_activate,8,3,47196)
+CheckOffset(struct _GtkUIManagerClass,post_activate,176,3,47196)
+CheckMemberSize(struct _GtkUIManagerClass,get_widget,8,3,47199)
+CheckOffset(struct _GtkUIManagerClass,get_widget,184,3,47199)
+CheckMemberSize(struct _GtkUIManagerClass,get_action,8,3,47202)
+CheckOffset(struct _GtkUIManagerClass,get_action,192,3,47202)
+CheckMemberSize(struct _GtkUIManagerClass,_gtk_reserved1,8,3,47203)
+CheckOffset(struct _GtkUIManagerClass,_gtk_reserved1,200,3,47203)
+CheckMemberSize(struct _GtkUIManagerClass,_gtk_reserved2,8,3,47204)
+CheckOffset(struct _GtkUIManagerClass,_gtk_reserved2,208,3,47204)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14321,0);
 Msg("Find size of _GtkUIManagerClass (14321)\n");
@@ -21431,6 +26226,7 @@ Msg("Find size of _GtkUIManagerClass (14321)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14322,0);
 Msg("Find size of fptr_gtk_8824 (14322)\n");
@@ -21438,6 +26234,7 @@ Msg("Find size of fptr_gtk_8824 (14322)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14323,0);
 Msg("Find size of fptr_gtk_37 (14323)\n");
@@ -21445,6 +26242,7 @@ Msg("Find size of fptr_gtk_37 (14323)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14324,0);
 Msg("Find size of fptr_gtk_900 (14324)\n");
@@ -21452,6 +26250,7 @@ Msg("Find size of fptr_gtk_900 (14324)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14325,0);
 Msg("Find size of fptr_gtk_721 (14325)\n");
@@ -21459,6 +26258,7 @@ Msg("Find size of fptr_gtk_721 (14325)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14326,0);
 Msg("Find size of fptr_gtk_2652 (14326)\n");
@@ -21466,6 +26266,7 @@ Msg("Find size of fptr_gtk_2652 (14326)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14327,0);
 Msg("Find size of fptr_gtk_6504 (14327)\n");
@@ -21475,6 +26276,8 @@ Msg("Find size of fptr_gtk_6504 (14327)\n");
 CheckTypeSize(GtkUIManagerClass,108, 14328, 2)
 #elif __x86_64__
 CheckTypeSize(GtkUIManagerClass,216, 14328, 11)
+#elif __ia64__
+CheckTypeSize(GtkUIManagerClass,216, 14328, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14328,0);
 Msg("Find size of GtkUIManagerClass (14328)\n");
@@ -21488,6 +26291,10 @@ CheckOffset(struct _GtkVSeparatorClass,parent_class,0,2,47206)
 CheckTypeSize(struct _GtkVSeparatorClass,720, 14329, 11)
 Msg("Missing member data for _GtkVSeparatorClass on x86-64\n");
 CheckOffset(struct _GtkVSeparatorClass,parent_class,0,11,47206)
+#elif __ia64__
+CheckTypeSize(struct _GtkVSeparatorClass,720, 14329, 3)
+Msg("Missing member data for _GtkVSeparatorClass on IA64\n");
+CheckOffset(struct _GtkVSeparatorClass,parent_class,0,3,47206)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14329,0);
 Msg("Find size of _GtkVSeparatorClass (14329)\n");
@@ -21501,6 +26308,10 @@ CheckOffset(struct _GtkSeparatorClass,parent_class,0,2,47205)
 CheckTypeSize(struct _GtkSeparatorClass,720, 14330, 11)
 Msg("Missing member data for _GtkSeparatorClass on x86-64\n");
 CheckOffset(struct _GtkSeparatorClass,parent_class,0,11,47205)
+#elif __ia64__
+CheckTypeSize(struct _GtkSeparatorClass,720, 14330, 3)
+Msg("Missing member data for _GtkSeparatorClass on IA64\n");
+CheckOffset(struct _GtkSeparatorClass,parent_class,0,3,47205)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14330,0);
 Msg("Find size of _GtkSeparatorClass (14330)\n");
@@ -21510,6 +26321,8 @@ Msg("Find size of _GtkSeparatorClass (14330)\n");
 CheckTypeSize(GtkSeparatorClass,364, 14331, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparatorClass,720, 14331, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparatorClass,720, 14331, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14331,0);
 Msg("Find size of GtkSeparatorClass (14331)\n");
@@ -21519,6 +26332,8 @@ Msg("Find size of GtkSeparatorClass (14331)\n");
 CheckTypeSize(GtkVSeparatorClass,364, 14332, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVSeparatorClass,720, 14332, 11)
+#elif __ia64__
+CheckTypeSize(GtkVSeparatorClass,720, 14332, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14332,0);
 Msg("Find size of GtkVSeparatorClass (14332)\n");
@@ -21548,6 +26363,18 @@ CheckMemberSize(struct _GtkCheckButtonClass,_gtk_reserved3,8,11,47213)
 CheckOffset(struct _GtkCheckButtonClass,_gtk_reserved3,968,11,47213)
 CheckMemberSize(struct _GtkCheckButtonClass,_gtk_reserved4,8,11,47214)
 CheckOffset(struct _GtkCheckButtonClass,_gtk_reserved4,976,11,47214)
+#elif __ia64__
+CheckTypeSize(struct _GtkCheckButtonClass,984, 14333, 3)
+CheckMemberSize(struct _GtkCheckButtonClass,draw_indicator,8,3,47210)
+CheckOffset(struct _GtkCheckButtonClass,draw_indicator,944,3,47210)
+CheckMemberSize(struct _GtkCheckButtonClass,_gtk_reserved1,8,3,47211)
+CheckOffset(struct _GtkCheckButtonClass,_gtk_reserved1,952,3,47211)
+CheckMemberSize(struct _GtkCheckButtonClass,_gtk_reserved2,8,3,47212)
+CheckOffset(struct _GtkCheckButtonClass,_gtk_reserved2,960,3,47212)
+CheckMemberSize(struct _GtkCheckButtonClass,_gtk_reserved3,8,3,47213)
+CheckOffset(struct _GtkCheckButtonClass,_gtk_reserved3,968,3,47213)
+CheckMemberSize(struct _GtkCheckButtonClass,_gtk_reserved4,8,3,47214)
+CheckOffset(struct _GtkCheckButtonClass,_gtk_reserved4,976,3,47214)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14333,0);
 Msg("Find size of _GtkCheckButtonClass (14333)\n");
@@ -21557,6 +26384,8 @@ Msg("Find size of _GtkCheckButtonClass (14333)\n");
 CheckTypeSize(GtkCheckButton *,4, 14334, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCheckButton *,8, 14334, 11)
+#elif __ia64__
+CheckTypeSize(GtkCheckButton *,8, 14334, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14334,0);
 Msg("Find size of GtkCheckButton * (14334)\n");
@@ -21564,6 +26393,7 @@ Msg("Find size of GtkCheckButton * (14334)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14335,0);
 Msg("Find size of fptr_gtk_5749 (14335)\n");
@@ -21573,6 +26403,8 @@ Msg("Find size of fptr_gtk_5749 (14335)\n");
 CheckTypeSize(GtkCheckButtonClass,496, 14336, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCheckButtonClass,984, 14336, 11)
+#elif __ia64__
+CheckTypeSize(GtkCheckButtonClass,984, 14336, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14336,0);
 Msg("Find size of GtkCheckButtonClass (14336)\n");
@@ -21586,6 +26418,10 @@ CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
 CheckEnum("GTK_VISIBILITY_NONE",GTK_VISIBILITY_NONE,0);
 CheckEnum("GTK_VISIBILITY_PARTIAL",GTK_VISIBILITY_PARTIAL,1);
 CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
+#elif __ia64__
+CheckEnum("GTK_VISIBILITY_NONE",GTK_VISIBILITY_NONE,0);
+CheckEnum("GTK_VISIBILITY_PARTIAL",GTK_VISIBILITY_PARTIAL,1);
+CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14337,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-975 (14337)\n");
@@ -21595,6 +26431,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-975 (14337)\n");
 CheckTypeSize(GtkVisibility,4, 14338, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVisibility,4, 14338, 11)
+#elif __ia64__
+CheckTypeSize(GtkVisibility,4, 14338, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14338,0);
 Msg("Find size of GtkVisibility (14338)\n");
@@ -21620,6 +26458,16 @@ CheckMemberSize(struct _GtkRadioMenuItemClass,_gtk_reserved3,8,11,47222)
 CheckOffset(struct _GtkRadioMenuItemClass,_gtk_reserved3,1016,11,47222)
 CheckMemberSize(struct _GtkRadioMenuItemClass,_gtk_reserved4,8,11,47223)
 CheckOffset(struct _GtkRadioMenuItemClass,_gtk_reserved4,1024,11,47223)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioMenuItemClass,1032, 14339, 3)
+CheckMemberSize(struct _GtkRadioMenuItemClass,group_changed,8,3,47220)
+CheckOffset(struct _GtkRadioMenuItemClass,group_changed,1000,3,47220)
+CheckMemberSize(struct _GtkRadioMenuItemClass,_gtk_reserved2,8,3,47221)
+CheckOffset(struct _GtkRadioMenuItemClass,_gtk_reserved2,1008,3,47221)
+CheckMemberSize(struct _GtkRadioMenuItemClass,_gtk_reserved3,8,3,47222)
+CheckOffset(struct _GtkRadioMenuItemClass,_gtk_reserved3,1016,3,47222)
+CheckMemberSize(struct _GtkRadioMenuItemClass,_gtk_reserved4,8,3,47223)
+CheckOffset(struct _GtkRadioMenuItemClass,_gtk_reserved4,1024,3,47223)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14339,0);
 Msg("Find size of _GtkRadioMenuItemClass (14339)\n");
@@ -21627,6 +26475,7 @@ Msg("Find size of _GtkRadioMenuItemClass (14339)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14340,0);
 Msg("Find size of fptr_gtk_8133 (14340)\n");
@@ -21636,6 +26485,8 @@ Msg("Find size of fptr_gtk_8133 (14340)\n");
 CheckTypeSize(GtkRadioMenuItemClass,520, 14341, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioMenuItemClass,1032, 14341, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioMenuItemClass,1032, 14341, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14341,0);
 Msg("Find size of GtkRadioMenuItemClass (14341)\n");
@@ -21725,6 +26576,48 @@ CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved6,8,11,47263)
 CheckOffset(struct _GtkTextViewClass,_gtk_reserved6,968,11,47263)
 CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved7,8,11,47264)
 CheckOffset(struct _GtkTextViewClass,_gtk_reserved7,976,11,47264)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextViewClass,984, 14342, 3)
+CheckMemberSize(struct _GtkTextViewClass,set_scroll_adjustments,8,3,47228)
+CheckOffset(struct _GtkTextViewClass,set_scroll_adjustments,824,3,47228)
+CheckMemberSize(struct _GtkTextViewClass,populate_popup,8,3,47231)
+CheckOffset(struct _GtkTextViewClass,populate_popup,832,3,47231)
+CheckMemberSize(struct _GtkTextViewClass,move_cursor,8,3,47236)
+CheckOffset(struct _GtkTextViewClass,move_cursor,840,3,47236)
+CheckMemberSize(struct _GtkTextViewClass,page_horizontally,8,3,47240)
+CheckOffset(struct _GtkTextViewClass,page_horizontally,848,3,47240)
+CheckMemberSize(struct _GtkTextViewClass,set_anchor,8,3,47242)
+CheckOffset(struct _GtkTextViewClass,set_anchor,856,3,47242)
+CheckMemberSize(struct _GtkTextViewClass,insert_at_cursor,8,3,47245)
+CheckOffset(struct _GtkTextViewClass,insert_at_cursor,864,3,47245)
+CheckMemberSize(struct _GtkTextViewClass,delete_from_cursor,8,3,47249)
+CheckOffset(struct _GtkTextViewClass,delete_from_cursor,872,3,47249)
+CheckMemberSize(struct _GtkTextViewClass,backspace,8,3,47250)
+CheckOffset(struct _GtkTextViewClass,backspace,880,3,47250)
+CheckMemberSize(struct _GtkTextViewClass,cut_clipboard,8,3,47251)
+CheckOffset(struct _GtkTextViewClass,cut_clipboard,888,3,47251)
+CheckMemberSize(struct _GtkTextViewClass,copy_clipboard,8,3,47252)
+CheckOffset(struct _GtkTextViewClass,copy_clipboard,896,3,47252)
+CheckMemberSize(struct _GtkTextViewClass,paste_clipboard,8,3,47253)
+CheckOffset(struct _GtkTextViewClass,paste_clipboard,904,3,47253)
+CheckMemberSize(struct _GtkTextViewClass,toggle_overwrite,8,3,47254)
+CheckOffset(struct _GtkTextViewClass,toggle_overwrite,912,3,47254)
+CheckMemberSize(struct _GtkTextViewClass,move_focus,8,3,47257)
+CheckOffset(struct _GtkTextViewClass,move_focus,920,3,47257)
+CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved1,8,3,47258)
+CheckOffset(struct _GtkTextViewClass,_gtk_reserved1,928,3,47258)
+CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved2,8,3,47259)
+CheckOffset(struct _GtkTextViewClass,_gtk_reserved2,936,3,47259)
+CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved3,8,3,47260)
+CheckOffset(struct _GtkTextViewClass,_gtk_reserved3,944,3,47260)
+CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved4,8,3,47261)
+CheckOffset(struct _GtkTextViewClass,_gtk_reserved4,952,3,47261)
+CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved5,8,3,47262)
+CheckOffset(struct _GtkTextViewClass,_gtk_reserved5,960,3,47262)
+CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved6,8,3,47263)
+CheckOffset(struct _GtkTextViewClass,_gtk_reserved6,968,3,47263)
+CheckMemberSize(struct _GtkTextViewClass,_gtk_reserved7,8,3,47264)
+CheckOffset(struct _GtkTextViewClass,_gtk_reserved7,976,3,47264)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14342,0);
 Msg("Find size of _GtkTextViewClass (14342)\n");
@@ -21732,6 +26625,7 @@ Msg("Find size of _GtkTextViewClass (14342)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14343,0);
 Msg("Find size of fptr_gtk_7698 (14343)\n");
@@ -21739,6 +26633,7 @@ Msg("Find size of fptr_gtk_7698 (14343)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14344,0);
 Msg("Find size of fptr_gtk_4364 (14344)\n");
@@ -21746,6 +26641,7 @@ Msg("Find size of fptr_gtk_4364 (14344)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14345,0);
 Msg("Find size of fptr_gtk_3586 (14345)\n");
@@ -21753,6 +26649,7 @@ Msg("Find size of fptr_gtk_3586 (14345)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14346,0);
 Msg("Find size of fptr_gtk_2925 (14346)\n");
@@ -21760,6 +26657,7 @@ Msg("Find size of fptr_gtk_2925 (14346)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14347,0);
 Msg("Find size of fptr_gtk_7088 (14347)\n");
@@ -21767,6 +26665,7 @@ Msg("Find size of fptr_gtk_7088 (14347)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14348,0);
 Msg("Find size of fptr_gtk_8143 (14348)\n");
@@ -21774,6 +26673,7 @@ Msg("Find size of fptr_gtk_8143 (14348)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14349,0);
 Msg("Find size of fptr_gtk_7175 (14349)\n");
@@ -21781,6 +26681,7 @@ Msg("Find size of fptr_gtk_7175 (14349)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14350,0);
 Msg("Find size of fptr_gtk_6719 (14350)\n");
@@ -21790,6 +26691,8 @@ Msg("Find size of fptr_gtk_6719 (14350)\n");
 CheckTypeSize(GtkTextViewClass,496, 14351, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextViewClass,984, 14351, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextViewClass,984, 14351, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14351,0);
 Msg("Find size of GtkTextViewClass (14351)\n");
@@ -21797,6 +26700,7 @@ Msg("Find size of GtkTextViewClass (14351)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14352,0);
 Msg("Find size of fptr_gtk_1160 (14352)\n");
@@ -21806,6 +26710,8 @@ Msg("Find size of fptr_gtk_1160 (14352)\n");
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,4, 14353, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,8, 14353, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorSelectionChangePaletteFunc,8, 14353, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14353,0);
 Msg("Find size of GtkColorSelectionChangePaletteFunc (14353)\n");
@@ -21831,6 +26737,16 @@ CheckMemberSize(struct _GtkTreeModelSortClass,_gtk_reserved3,8,11,47270)
 CheckOffset(struct _GtkTreeModelSortClass,_gtk_reserved3,152,11,47270)
 CheckMemberSize(struct _GtkTreeModelSortClass,_gtk_reserved4,8,11,47271)
 CheckOffset(struct _GtkTreeModelSortClass,_gtk_reserved4,160,11,47271)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeModelSortClass,168, 14354, 3)
+CheckMemberSize(struct _GtkTreeModelSortClass,_gtk_reserved1,8,3,47268)
+CheckOffset(struct _GtkTreeModelSortClass,_gtk_reserved1,136,3,47268)
+CheckMemberSize(struct _GtkTreeModelSortClass,_gtk_reserved2,8,3,47269)
+CheckOffset(struct _GtkTreeModelSortClass,_gtk_reserved2,144,3,47269)
+CheckMemberSize(struct _GtkTreeModelSortClass,_gtk_reserved3,8,3,47270)
+CheckOffset(struct _GtkTreeModelSortClass,_gtk_reserved3,152,3,47270)
+CheckMemberSize(struct _GtkTreeModelSortClass,_gtk_reserved4,8,3,47271)
+CheckOffset(struct _GtkTreeModelSortClass,_gtk_reserved4,160,3,47271)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14354,0);
 Msg("Find size of _GtkTreeModelSortClass (14354)\n");
@@ -21840,6 +26756,8 @@ Msg("Find size of _GtkTreeModelSortClass (14354)\n");
 CheckTypeSize(GtkTreeModelSortClass,84, 14355, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeModelSortClass,168, 14355, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeModelSortClass,168, 14355, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14355,0);
 Msg("Find size of GtkTreeModelSortClass (14355)\n");
@@ -21861,6 +26779,14 @@ CheckMemberSize(struct _GtkCellEditableIface,remove_widget,8,11,47275)
 CheckOffset(struct _GtkCellEditableIface,remove_widget,24,11,47275)
 CheckMemberSize(struct _GtkCellEditableIface,start_editing,8,11,47278)
 CheckOffset(struct _GtkCellEditableIface,start_editing,32,11,47278)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellEditableIface,40, 14356, 3)
+CheckMemberSize(struct _GtkCellEditableIface,editing_done,8,3,47274)
+CheckOffset(struct _GtkCellEditableIface,editing_done,16,3,47274)
+CheckMemberSize(struct _GtkCellEditableIface,remove_widget,8,3,47275)
+CheckOffset(struct _GtkCellEditableIface,remove_widget,24,3,47275)
+CheckMemberSize(struct _GtkCellEditableIface,start_editing,8,3,47278)
+CheckOffset(struct _GtkCellEditableIface,start_editing,32,3,47278)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14356,0);
 Msg("Find size of _GtkCellEditableIface (14356)\n");
@@ -21868,6 +26794,7 @@ Msg("Find size of _GtkCellEditableIface (14356)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14357,0);
 Msg("Find size of fptr_gtk_3319 (14357)\n");
@@ -21875,6 +26802,7 @@ Msg("Find size of fptr_gtk_3319 (14357)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14358,0);
 Msg("Find size of fptr_gtk_6812 (14358)\n");
@@ -21884,6 +26812,8 @@ Msg("Find size of fptr_gtk_6812 (14358)\n");
 CheckTypeSize(GtkCellEditableIface,20, 14359, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellEditableIface,40, 14359, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellEditableIface,40, 14359, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14359,0);
 Msg("Find size of GtkCellEditableIface (14359)\n");
@@ -21917,6 +26847,20 @@ CheckMemberSize(struct _GtkToolbarClass,_gtk_reserved2,8,11,47292)
 CheckOffset(struct _GtkToolbarClass,_gtk_reserved2,856,11,47292)
 CheckMemberSize(struct _GtkToolbarClass,_gtk_reserved3,8,11,47293)
 CheckOffset(struct _GtkToolbarClass,_gtk_reserved3,864,11,47293)
+#elif __ia64__
+CheckTypeSize(struct _GtkToolbarClass,872, 14360, 3)
+CheckMemberSize(struct _GtkToolbarClass,orientation_changed,8,3,47282)
+CheckOffset(struct _GtkToolbarClass,orientation_changed,824,3,47282)
+CheckMemberSize(struct _GtkToolbarClass,style_changed,8,3,47285)
+CheckOffset(struct _GtkToolbarClass,style_changed,832,3,47285)
+CheckMemberSize(struct _GtkToolbarClass,popup_context_menu,8,3,47290)
+CheckOffset(struct _GtkToolbarClass,popup_context_menu,840,3,47290)
+CheckMemberSize(struct _GtkToolbarClass,_gtk_reserved1,8,3,47291)
+CheckOffset(struct _GtkToolbarClass,_gtk_reserved1,848,3,47291)
+CheckMemberSize(struct _GtkToolbarClass,_gtk_reserved2,8,3,47292)
+CheckOffset(struct _GtkToolbarClass,_gtk_reserved2,856,3,47292)
+CheckMemberSize(struct _GtkToolbarClass,_gtk_reserved3,8,3,47293)
+CheckOffset(struct _GtkToolbarClass,_gtk_reserved3,864,3,47293)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14360,0);
 Msg("Find size of _GtkToolbarClass (14360)\n");
@@ -21924,6 +26868,7 @@ Msg("Find size of _GtkToolbarClass (14360)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14361,0);
 Msg("Find size of fptr_gtk_3161 (14361)\n");
@@ -21931,6 +26876,7 @@ Msg("Find size of fptr_gtk_3161 (14361)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14362,0);
 Msg("Find size of fptr_gtk_8060 (14362)\n");
@@ -21938,6 +26884,7 @@ Msg("Find size of fptr_gtk_8060 (14362)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14363,0);
 Msg("Find size of fptr_gtk_8333 (14363)\n");
@@ -21947,6 +26894,8 @@ Msg("Find size of fptr_gtk_8333 (14363)\n");
 CheckTypeSize(GtkToolbarClass,440, 14364, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolbarClass,872, 14364, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolbarClass,872, 14364, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14364,0);
 Msg("Find size of GtkToolbarClass (14364)\n");
@@ -21980,6 +26929,20 @@ CheckMemberSize(struct _GtkHandleBoxClass,_gtk_reserved3,8,11,47301)
 CheckOffset(struct _GtkHandleBoxClass,_gtk_reserved3,856,11,47301)
 CheckMemberSize(struct _GtkHandleBoxClass,_gtk_reserved4,8,11,47302)
 CheckOffset(struct _GtkHandleBoxClass,_gtk_reserved4,864,11,47302)
+#elif __ia64__
+CheckTypeSize(struct _GtkHandleBoxClass,872, 14365, 3)
+CheckMemberSize(struct _GtkHandleBoxClass,child_attached,8,3,47297)
+CheckOffset(struct _GtkHandleBoxClass,child_attached,824,3,47297)
+CheckMemberSize(struct _GtkHandleBoxClass,child_detached,8,3,47298)
+CheckOffset(struct _GtkHandleBoxClass,child_detached,832,3,47298)
+CheckMemberSize(struct _GtkHandleBoxClass,_gtk_reserved1,8,3,47299)
+CheckOffset(struct _GtkHandleBoxClass,_gtk_reserved1,840,3,47299)
+CheckMemberSize(struct _GtkHandleBoxClass,_gtk_reserved2,8,3,47300)
+CheckOffset(struct _GtkHandleBoxClass,_gtk_reserved2,848,3,47300)
+CheckMemberSize(struct _GtkHandleBoxClass,_gtk_reserved3,8,3,47301)
+CheckOffset(struct _GtkHandleBoxClass,_gtk_reserved3,856,3,47301)
+CheckMemberSize(struct _GtkHandleBoxClass,_gtk_reserved4,8,3,47302)
+CheckOffset(struct _GtkHandleBoxClass,_gtk_reserved4,864,3,47302)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14365,0);
 Msg("Find size of _GtkHandleBoxClass (14365)\n");
@@ -21987,6 +26950,7 @@ Msg("Find size of _GtkHandleBoxClass (14365)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14366,0);
 Msg("Find size of fptr_gtk_5359 (14366)\n");
@@ -21996,6 +26960,8 @@ Msg("Find size of fptr_gtk_5359 (14366)\n");
 CheckTypeSize(GtkHandleBoxClass,440, 14367, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHandleBoxClass,872, 14367, 11)
+#elif __ia64__
+CheckTypeSize(GtkHandleBoxClass,872, 14367, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14367,0);
 Msg("Find size of GtkHandleBoxClass (14367)\n");
@@ -22009,6 +26975,10 @@ CheckOffset(struct _GtkHSeparator,separator,0,2,47303)
 CheckTypeSize(struct _GtkHSeparator,96, 14368, 11)
 Msg("Missing member data for _GtkHSeparator on x86-64\n");
 CheckOffset(struct _GtkHSeparator,separator,0,11,47303)
+#elif __ia64__
+CheckTypeSize(struct _GtkHSeparator,96, 14368, 3)
+Msg("Missing member data for _GtkHSeparator on IA64\n");
+CheckOffset(struct _GtkHSeparator,separator,0,3,47303)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14368,0);
 Msg("Find size of _GtkHSeparator (14368)\n");
@@ -22018,6 +26988,8 @@ Msg("Find size of _GtkHSeparator (14368)\n");
 CheckTypeSize(GtkHSeparator,60, 14369, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHSeparator,96, 14369, 11)
+#elif __ia64__
+CheckTypeSize(GtkHSeparator,96, 14369, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14369,0);
 Msg("Find size of GtkHSeparator (14369)\n");
@@ -22055,6 +27027,22 @@ CheckMemberSize(struct _GtkTextTagTableClass,_gtk_reserved3,8,11,47315)
 CheckOffset(struct _GtkTextTagTableClass,_gtk_reserved3,176,11,47315)
 CheckMemberSize(struct _GtkTextTagTableClass,_gtk_reserved4,8,11,47316)
 CheckOffset(struct _GtkTextTagTableClass,_gtk_reserved4,184,11,47316)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextTagTableClass,192, 14370, 3)
+CheckMemberSize(struct _GtkTextTagTableClass,tag_changed,8,3,47308)
+CheckOffset(struct _GtkTextTagTableClass,tag_changed,136,3,47308)
+CheckMemberSize(struct _GtkTextTagTableClass,tag_added,8,3,47311)
+CheckOffset(struct _GtkTextTagTableClass,tag_added,144,3,47311)
+CheckMemberSize(struct _GtkTextTagTableClass,tag_removed,8,3,47312)
+CheckOffset(struct _GtkTextTagTableClass,tag_removed,152,3,47312)
+CheckMemberSize(struct _GtkTextTagTableClass,_gtk_reserved1,8,3,47313)
+CheckOffset(struct _GtkTextTagTableClass,_gtk_reserved1,160,3,47313)
+CheckMemberSize(struct _GtkTextTagTableClass,_gtk_reserved2,8,3,47314)
+CheckOffset(struct _GtkTextTagTableClass,_gtk_reserved2,168,3,47314)
+CheckMemberSize(struct _GtkTextTagTableClass,_gtk_reserved3,8,3,47315)
+CheckOffset(struct _GtkTextTagTableClass,_gtk_reserved3,176,3,47315)
+CheckMemberSize(struct _GtkTextTagTableClass,_gtk_reserved4,8,3,47316)
+CheckOffset(struct _GtkTextTagTableClass,_gtk_reserved4,184,3,47316)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14370,0);
 Msg("Find size of _GtkTextTagTableClass (14370)\n");
@@ -22062,6 +27050,7 @@ Msg("Find size of _GtkTextTagTableClass (14370)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14371,0);
 Msg("Find size of fptr_gtk_1184 (14371)\n");
@@ -22069,6 +27058,7 @@ Msg("Find size of fptr_gtk_1184 (14371)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14372,0);
 Msg("Find size of fptr_gtk_385 (14372)\n");
@@ -22078,6 +27068,8 @@ Msg("Find size of fptr_gtk_385 (14372)\n");
 CheckTypeSize(GtkTextTagTableClass,96, 14373, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextTagTableClass,192, 14373, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextTagTableClass,192, 14373, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14373,0);
 Msg("Find size of GtkTextTagTableClass (14373)\n");
@@ -22103,6 +27095,16 @@ CheckMemberSize(struct _GtkComboBoxEntryClass,_gtk_reserved2,8,11,47328)
 CheckOffset(struct _GtkComboBoxEntryClass,_gtk_reserved2,880,11,47328)
 CheckMemberSize(struct _GtkComboBoxEntryClass,_gtk_reserved3,8,11,47329)
 CheckOffset(struct _GtkComboBoxEntryClass,_gtk_reserved3,888,11,47329)
+#elif __ia64__
+CheckTypeSize(struct _GtkComboBoxEntryClass,896, 14374, 3)
+CheckMemberSize(struct _GtkComboBoxEntryClass,_gtk_reserved0,8,3,47326)
+CheckOffset(struct _GtkComboBoxEntryClass,_gtk_reserved0,864,3,47326)
+CheckMemberSize(struct _GtkComboBoxEntryClass,_gtk_reserved1,8,3,47327)
+CheckOffset(struct _GtkComboBoxEntryClass,_gtk_reserved1,872,3,47327)
+CheckMemberSize(struct _GtkComboBoxEntryClass,_gtk_reserved2,8,3,47328)
+CheckOffset(struct _GtkComboBoxEntryClass,_gtk_reserved2,880,3,47328)
+CheckMemberSize(struct _GtkComboBoxEntryClass,_gtk_reserved3,8,3,47329)
+CheckOffset(struct _GtkComboBoxEntryClass,_gtk_reserved3,888,3,47329)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14374,0);
 Msg("Find size of _GtkComboBoxEntryClass (14374)\n");
@@ -22132,6 +27134,18 @@ CheckMemberSize(struct _GtkComboBoxClass,_gtk_reserved1,8,11,47323)
 CheckOffset(struct _GtkComboBoxClass,_gtk_reserved1,848,11,47323)
 CheckMemberSize(struct _GtkComboBoxClass,_gtk_reserved2,8,11,47324)
 CheckOffset(struct _GtkComboBoxClass,_gtk_reserved2,856,11,47324)
+#elif __ia64__
+CheckTypeSize(struct _GtkComboBoxClass,864, 14375, 3)
+CheckMemberSize(struct _GtkComboBoxClass,changed,8,3,47319)
+CheckOffset(struct _GtkComboBoxClass,changed,824,3,47319)
+CheckMemberSize(struct _GtkComboBoxClass,get_active_text,8,3,47321)
+CheckOffset(struct _GtkComboBoxClass,get_active_text,832,3,47321)
+CheckMemberSize(struct _GtkComboBoxClass,_gtk_reserved0,8,3,47322)
+CheckOffset(struct _GtkComboBoxClass,_gtk_reserved0,840,3,47322)
+CheckMemberSize(struct _GtkComboBoxClass,_gtk_reserved1,8,3,47323)
+CheckOffset(struct _GtkComboBoxClass,_gtk_reserved1,848,3,47323)
+CheckMemberSize(struct _GtkComboBoxClass,_gtk_reserved2,8,3,47324)
+CheckOffset(struct _GtkComboBoxClass,_gtk_reserved2,856,3,47324)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14375,0);
 Msg("Find size of _GtkComboBoxClass (14375)\n");
@@ -22139,6 +27153,7 @@ Msg("Find size of _GtkComboBoxClass (14375)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14376,0);
 Msg("Find size of fptr_gtk_134 (14376)\n");
@@ -22146,6 +27161,7 @@ Msg("Find size of fptr_gtk_134 (14376)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14377,0);
 Msg("Find size of fptr_gtk_8648 (14377)\n");
@@ -22155,6 +27171,8 @@ Msg("Find size of fptr_gtk_8648 (14377)\n");
 CheckTypeSize(GtkComboBoxClass,436, 14378, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBoxClass,864, 14378, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBoxClass,864, 14378, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14378,0);
 Msg("Find size of GtkComboBoxClass (14378)\n");
@@ -22164,6 +27182,8 @@ Msg("Find size of GtkComboBoxClass (14378)\n");
 CheckTypeSize(GtkComboBoxEntryClass,452, 14379, 2)
 #elif __x86_64__
 CheckTypeSize(GtkComboBoxEntryClass,896, 14379, 11)
+#elif __ia64__
+CheckTypeSize(GtkComboBoxEntryClass,896, 14379, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14379,0);
 Msg("Find size of GtkComboBoxEntryClass (14379)\n");
@@ -22189,6 +27209,16 @@ CheckMemberSize(struct _GtkFontSelectionClass,_gtk_reserved3,8,11,47333)
 CheckOffset(struct _GtkFontSelectionClass,_gtk_reserved3,840,11,47333)
 CheckMemberSize(struct _GtkFontSelectionClass,_gtk_reserved4,8,11,47334)
 CheckOffset(struct _GtkFontSelectionClass,_gtk_reserved4,848,11,47334)
+#elif __ia64__
+CheckTypeSize(struct _GtkFontSelectionClass,856, 14380, 3)
+CheckMemberSize(struct _GtkFontSelectionClass,_gtk_reserved1,8,3,47331)
+CheckOffset(struct _GtkFontSelectionClass,_gtk_reserved1,824,3,47331)
+CheckMemberSize(struct _GtkFontSelectionClass,_gtk_reserved2,8,3,47332)
+CheckOffset(struct _GtkFontSelectionClass,_gtk_reserved2,832,3,47332)
+CheckMemberSize(struct _GtkFontSelectionClass,_gtk_reserved3,8,3,47333)
+CheckOffset(struct _GtkFontSelectionClass,_gtk_reserved3,840,3,47333)
+CheckMemberSize(struct _GtkFontSelectionClass,_gtk_reserved4,8,3,47334)
+CheckOffset(struct _GtkFontSelectionClass,_gtk_reserved4,848,3,47334)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14380,0);
 Msg("Find size of _GtkFontSelectionClass (14380)\n");
@@ -22198,6 +27228,8 @@ Msg("Find size of _GtkFontSelectionClass (14380)\n");
 CheckTypeSize(GtkFontSelectionClass,432, 14381, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontSelectionClass,856, 14381, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontSelectionClass,856, 14381, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14381,0);
 Msg("Find size of GtkFontSelectionClass (14381)\n");
@@ -22211,6 +27243,10 @@ CheckOffset(struct _GtkFrameClass,compute_child_allocation,416,2,47338)
 CheckTypeSize(struct _GtkFrameClass,832, 14382, 11)
 CheckMemberSize(struct _GtkFrameClass,compute_child_allocation,8,11,47338)
 CheckOffset(struct _GtkFrameClass,compute_child_allocation,824,11,47338)
+#elif __ia64__
+CheckTypeSize(struct _GtkFrameClass,832, 14382, 3)
+CheckMemberSize(struct _GtkFrameClass,compute_child_allocation,8,3,47338)
+CheckOffset(struct _GtkFrameClass,compute_child_allocation,824,3,47338)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14382,0);
 Msg("Find size of _GtkFrameClass (14382)\n");
@@ -22218,6 +27254,7 @@ Msg("Find size of _GtkFrameClass (14382)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14383,0);
 Msg("Find size of fptr_gtk_6579 (14383)\n");
@@ -22227,6 +27264,8 @@ Msg("Find size of fptr_gtk_6579 (14383)\n");
 CheckTypeSize(GtkFrameClass,420, 14384, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFrameClass,832, 14384, 11)
+#elif __ia64__
+CheckTypeSize(GtkFrameClass,832, 14384, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14384,0);
 Msg("Find size of GtkFrameClass (14384)\n");
@@ -22240,6 +27279,10 @@ CheckOffset(struct _GtkHScrollbarClass,parent_class,0,2,47339)
 CheckTypeSize(struct _GtkHScrollbarClass,832, 14385, 11)
 Msg("Missing member data for _GtkHScrollbarClass on x86-64\n");
 CheckOffset(struct _GtkHScrollbarClass,parent_class,0,11,47339)
+#elif __ia64__
+CheckTypeSize(struct _GtkHScrollbarClass,832, 14385, 3)
+Msg("Missing member data for _GtkHScrollbarClass on IA64\n");
+CheckOffset(struct _GtkHScrollbarClass,parent_class,0,3,47339)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14385,0);
 Msg("Find size of _GtkHScrollbarClass (14385)\n");
@@ -22249,6 +27292,8 @@ Msg("Find size of _GtkHScrollbarClass (14385)\n");
 CheckTypeSize(GtkHScrollbarClass,420, 14386, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHScrollbarClass,832, 14386, 11)
+#elif __ia64__
+CheckTypeSize(GtkHScrollbarClass,832, 14386, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14386,0);
 Msg("Find size of GtkHScrollbarClass (14386)\n");
@@ -22274,6 +27319,16 @@ CheckMemberSize(struct _GtkFileSelectionClass,_gtk_reserved3,8,11,47343)
 CheckOffset(struct _GtkFileSelectionClass,_gtk_reserved3,968,11,47343)
 CheckMemberSize(struct _GtkFileSelectionClass,_gtk_reserved4,8,11,47344)
 CheckOffset(struct _GtkFileSelectionClass,_gtk_reserved4,976,11,47344)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileSelectionClass,984, 14387, 3)
+CheckMemberSize(struct _GtkFileSelectionClass,_gtk_reserved1,8,3,47341)
+CheckOffset(struct _GtkFileSelectionClass,_gtk_reserved1,952,3,47341)
+CheckMemberSize(struct _GtkFileSelectionClass,_gtk_reserved2,8,3,47342)
+CheckOffset(struct _GtkFileSelectionClass,_gtk_reserved2,960,3,47342)
+CheckMemberSize(struct _GtkFileSelectionClass,_gtk_reserved3,8,3,47343)
+CheckOffset(struct _GtkFileSelectionClass,_gtk_reserved3,968,3,47343)
+CheckMemberSize(struct _GtkFileSelectionClass,_gtk_reserved4,8,3,47344)
+CheckOffset(struct _GtkFileSelectionClass,_gtk_reserved4,976,3,47344)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14387,0);
 Msg("Find size of _GtkFileSelectionClass (14387)\n");
@@ -22283,6 +27338,8 @@ Msg("Find size of _GtkFileSelectionClass (14387)\n");
 CheckTypeSize(GtkFileSelectionClass,496, 14388, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileSelectionClass,984, 14388, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileSelectionClass,984, 14388, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14388,0);
 Msg("Find size of GtkFileSelectionClass (14388)\n");
@@ -22320,6 +27377,22 @@ CheckMemberSize(struct _GtkScrolledWindowClass,_gtk_reserved3,8,11,47356)
 CheckOffset(struct _GtkScrolledWindowClass,_gtk_reserved3,864,11,47356)
 CheckMemberSize(struct _GtkScrolledWindowClass,_gtk_reserved4,8,11,47357)
 CheckOffset(struct _GtkScrolledWindowClass,_gtk_reserved4,872,11,47357)
+#elif __ia64__
+CheckTypeSize(struct _GtkScrolledWindowClass,880, 14389, 3)
+CheckMemberSize(struct _GtkScrolledWindowClass,scrollbar_spacing,4,3,47346)
+CheckOffset(struct _GtkScrolledWindowClass,scrollbar_spacing,824,3,47346)
+CheckMemberSize(struct _GtkScrolledWindowClass,scroll_child,8,3,47350)
+CheckOffset(struct _GtkScrolledWindowClass,scroll_child,832,3,47350)
+CheckMemberSize(struct _GtkScrolledWindowClass,move_focus_out,8,3,47353)
+CheckOffset(struct _GtkScrolledWindowClass,move_focus_out,840,3,47353)
+CheckMemberSize(struct _GtkScrolledWindowClass,_gtk_reserved1,8,3,47354)
+CheckOffset(struct _GtkScrolledWindowClass,_gtk_reserved1,848,3,47354)
+CheckMemberSize(struct _GtkScrolledWindowClass,_gtk_reserved2,8,3,47355)
+CheckOffset(struct _GtkScrolledWindowClass,_gtk_reserved2,856,3,47355)
+CheckMemberSize(struct _GtkScrolledWindowClass,_gtk_reserved3,8,3,47356)
+CheckOffset(struct _GtkScrolledWindowClass,_gtk_reserved3,864,3,47356)
+CheckMemberSize(struct _GtkScrolledWindowClass,_gtk_reserved4,8,3,47357)
+CheckOffset(struct _GtkScrolledWindowClass,_gtk_reserved4,872,3,47357)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14389,0);
 Msg("Find size of _GtkScrolledWindowClass (14389)\n");
@@ -22327,6 +27400,7 @@ Msg("Find size of _GtkScrolledWindowClass (14389)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14390,0);
 Msg("Find size of fptr_gtk_5763 (14390)\n");
@@ -22334,6 +27408,7 @@ Msg("Find size of fptr_gtk_5763 (14390)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14391,0);
 Msg("Find size of fptr_gtk_7654 (14391)\n");
@@ -22343,6 +27418,8 @@ Msg("Find size of fptr_gtk_7654 (14391)\n");
 CheckTypeSize(GtkScrolledWindowClass,444, 14392, 2)
 #elif __x86_64__
 CheckTypeSize(GtkScrolledWindowClass,880, 14392, 11)
+#elif __ia64__
+CheckTypeSize(GtkScrolledWindowClass,880, 14392, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14392,0);
 Msg("Find size of GtkScrolledWindowClass (14392)\n");
@@ -22368,6 +27445,16 @@ CheckMemberSize(struct _GtkTextMarkClass,_gtk_reserved3,8,11,47361)
 CheckOffset(struct _GtkTextMarkClass,_gtk_reserved3,152,11,47361)
 CheckMemberSize(struct _GtkTextMarkClass,_gtk_reserved4,8,11,47362)
 CheckOffset(struct _GtkTextMarkClass,_gtk_reserved4,160,11,47362)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextMarkClass,168, 14393, 3)
+CheckMemberSize(struct _GtkTextMarkClass,_gtk_reserved1,8,3,47359)
+CheckOffset(struct _GtkTextMarkClass,_gtk_reserved1,136,3,47359)
+CheckMemberSize(struct _GtkTextMarkClass,_gtk_reserved2,8,3,47360)
+CheckOffset(struct _GtkTextMarkClass,_gtk_reserved2,144,3,47360)
+CheckMemberSize(struct _GtkTextMarkClass,_gtk_reserved3,8,3,47361)
+CheckOffset(struct _GtkTextMarkClass,_gtk_reserved3,152,3,47361)
+CheckMemberSize(struct _GtkTextMarkClass,_gtk_reserved4,8,3,47362)
+CheckOffset(struct _GtkTextMarkClass,_gtk_reserved4,160,3,47362)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14393,0);
 Msg("Find size of _GtkTextMarkClass (14393)\n");
@@ -22377,6 +27464,8 @@ Msg("Find size of _GtkTextMarkClass (14393)\n");
 CheckTypeSize(GtkTextMarkClass,84, 14394, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextMarkClass,168, 14394, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextMarkClass,168, 14394, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14394,0);
 Msg("Find size of GtkTextMarkClass (14394)\n");
@@ -22386,6 +27475,8 @@ Msg("Find size of GtkTextMarkClass (14394)\n");
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolbarPrivate,0, 14396, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14396,0);
 Msg("Find size of GtkToolbarPrivate (14396)\n");
@@ -22399,6 +27490,10 @@ CheckOffset(struct _GtkVScale,scale,0,2,47363)
 CheckTypeSize(struct _GtkVScale,200, 14397, 11)
 Msg("Missing member data for _GtkVScale on x86-64\n");
 CheckOffset(struct _GtkVScale,scale,0,11,47363)
+#elif __ia64__
+CheckTypeSize(struct _GtkVScale,200, 14397, 3)
+Msg("Missing member data for _GtkVScale on IA64\n");
+CheckOffset(struct _GtkVScale,scale,0,3,47363)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14397,0);
 Msg("Find size of _GtkVScale (14397)\n");
@@ -22408,6 +27503,8 @@ Msg("Find size of _GtkVScale (14397)\n");
 CheckTypeSize(GtkVScale,144, 14398, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVScale,200, 14398, 11)
+#elif __ia64__
+CheckTypeSize(GtkVScale,200, 14398, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14398,0);
 Msg("Find size of GtkVScale (14398)\n");
@@ -22425,6 +27522,12 @@ CheckMemberSize(struct _GtkFixedChild,x,4,11,47365)
 CheckOffset(struct _GtkFixedChild,x,8,11,47365)
 CheckMemberSize(struct _GtkFixedChild,y,4,11,47366)
 CheckOffset(struct _GtkFixedChild,y,12,11,47366)
+#elif __ia64__
+CheckTypeSize(struct _GtkFixedChild,16, 14399, 3)
+CheckMemberSize(struct _GtkFixedChild,x,4,3,47365)
+CheckOffset(struct _GtkFixedChild,x,8,3,47365)
+CheckMemberSize(struct _GtkFixedChild,y,4,3,47366)
+CheckOffset(struct _GtkFixedChild,y,12,3,47366)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14399,0);
 Msg("Find size of _GtkFixedChild (14399)\n");
@@ -22434,6 +27537,8 @@ Msg("Find size of _GtkFixedChild (14399)\n");
 CheckTypeSize(GtkFixedChild,12, 14400, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFixedChild,16, 14400, 11)
+#elif __ia64__
+CheckTypeSize(GtkFixedChild,16, 14400, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14400,0);
 Msg("Find size of GtkFixedChild (14400)\n");
@@ -22463,6 +27568,18 @@ CheckMemberSize(struct _GtkLayoutClass,_gtk_reserved3,8,11,47374)
 CheckOffset(struct _GtkLayoutClass,_gtk_reserved3,848,11,47374)
 CheckMemberSize(struct _GtkLayoutClass,_gtk_reserved4,8,11,47375)
 CheckOffset(struct _GtkLayoutClass,_gtk_reserved4,856,11,47375)
+#elif __ia64__
+CheckTypeSize(struct _GtkLayoutClass,864, 14401, 3)
+CheckMemberSize(struct _GtkLayoutClass,set_scroll_adjustments,8,3,47371)
+CheckOffset(struct _GtkLayoutClass,set_scroll_adjustments,824,3,47371)
+CheckMemberSize(struct _GtkLayoutClass,_gtk_reserved1,8,3,47372)
+CheckOffset(struct _GtkLayoutClass,_gtk_reserved1,832,3,47372)
+CheckMemberSize(struct _GtkLayoutClass,_gtk_reserved2,8,3,47373)
+CheckOffset(struct _GtkLayoutClass,_gtk_reserved2,840,3,47373)
+CheckMemberSize(struct _GtkLayoutClass,_gtk_reserved3,8,3,47374)
+CheckOffset(struct _GtkLayoutClass,_gtk_reserved3,848,3,47374)
+CheckMemberSize(struct _GtkLayoutClass,_gtk_reserved4,8,3,47375)
+CheckOffset(struct _GtkLayoutClass,_gtk_reserved4,856,3,47375)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14401,0);
 Msg("Find size of _GtkLayoutClass (14401)\n");
@@ -22470,6 +27587,7 @@ Msg("Find size of _GtkLayoutClass (14401)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14402,0);
 Msg("Find size of fptr_gtk_2965 (14402)\n");
@@ -22479,6 +27597,8 @@ Msg("Find size of fptr_gtk_2965 (14402)\n");
 CheckTypeSize(GtkLayoutClass,436, 14403, 2)
 #elif __x86_64__
 CheckTypeSize(GtkLayoutClass,864, 14403, 11)
+#elif __ia64__
+CheckTypeSize(GtkLayoutClass,864, 14403, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14403,0);
 Msg("Find size of GtkLayoutClass (14403)\n");
@@ -22492,6 +27612,10 @@ CheckOffset(struct _GtkEventBoxClass,parent_class,0,2,47376)
 CheckTypeSize(struct _GtkEventBoxClass,824, 14404, 11)
 Msg("Missing member data for _GtkEventBoxClass on x86-64\n");
 CheckOffset(struct _GtkEventBoxClass,parent_class,0,11,47376)
+#elif __ia64__
+CheckTypeSize(struct _GtkEventBoxClass,824, 14404, 3)
+Msg("Missing member data for _GtkEventBoxClass on IA64\n");
+CheckOffset(struct _GtkEventBoxClass,parent_class,0,3,47376)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14404,0);
 Msg("Find size of _GtkEventBoxClass (14404)\n");
@@ -22501,6 +27625,8 @@ Msg("Find size of _GtkEventBoxClass (14404)\n");
 CheckTypeSize(GtkEventBoxClass,416, 14405, 2)
 #elif __x86_64__
 CheckTypeSize(GtkEventBoxClass,824, 14405, 11)
+#elif __ia64__
+CheckTypeSize(GtkEventBoxClass,824, 14405, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14405,0);
 Msg("Find size of GtkEventBoxClass (14405)\n");
@@ -22514,6 +27640,10 @@ CheckOffset(struct _GtkIMContextSimpleClass,parent_class,0,2,47377)
 CheckTypeSize(struct _GtkIMContextSimpleClass,336, 14406, 11)
 Msg("Missing member data for _GtkIMContextSimpleClass on x86-64\n");
 CheckOffset(struct _GtkIMContextSimpleClass,parent_class,0,11,47377)
+#elif __ia64__
+CheckTypeSize(struct _GtkIMContextSimpleClass,336, 14406, 3)
+Msg("Missing member data for _GtkIMContextSimpleClass on IA64\n");
+CheckOffset(struct _GtkIMContextSimpleClass,parent_class,0,3,47377)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14406,0);
 Msg("Find size of _GtkIMContextSimpleClass (14406)\n");
@@ -22523,6 +27653,8 @@ Msg("Find size of _GtkIMContextSimpleClass (14406)\n");
 CheckTypeSize(GtkIMContextSimpleClass,168, 14407, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMContextSimpleClass,336, 14407, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMContextSimpleClass,336, 14407, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14407,0);
 Msg("Find size of GtkIMContextSimpleClass (14407)\n");
@@ -22536,6 +27668,10 @@ CheckOffset(struct _GtkExpanderClass,activate,416,2,47380)
 CheckTypeSize(struct _GtkExpanderClass,832, 14408, 11)
 CheckMemberSize(struct _GtkExpanderClass,activate,8,11,47380)
 CheckOffset(struct _GtkExpanderClass,activate,824,11,47380)
+#elif __ia64__
+CheckTypeSize(struct _GtkExpanderClass,832, 14408, 3)
+CheckMemberSize(struct _GtkExpanderClass,activate,8,3,47380)
+CheckOffset(struct _GtkExpanderClass,activate,824,3,47380)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14408,0);
 Msg("Find size of _GtkExpanderClass (14408)\n");
@@ -22543,6 +27679,7 @@ Msg("Find size of _GtkExpanderClass (14408)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14409,0);
 Msg("Find size of fptr_gtk_7025 (14409)\n");
@@ -22552,6 +27689,8 @@ Msg("Find size of fptr_gtk_7025 (14409)\n");
 CheckTypeSize(GtkExpanderClass,420, 14410, 2)
 #elif __x86_64__
 CheckTypeSize(GtkExpanderClass,832, 14410, 11)
+#elif __ia64__
+CheckTypeSize(GtkExpanderClass,832, 14410, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14410,0);
 Msg("Find size of GtkExpanderClass (14410)\n");
@@ -22589,6 +27728,22 @@ CheckMemberSize(struct _GtkProgressClass,_gtk_reserved3,8,11,47388)
 CheckOffset(struct _GtkProgressClass,_gtk_reserved3,760,11,47388)
 CheckMemberSize(struct _GtkProgressClass,_gtk_reserved4,8,11,47389)
 CheckOffset(struct _GtkProgressClass,_gtk_reserved4,768,11,47389)
+#elif __ia64__
+CheckTypeSize(struct _GtkProgressClass,776, 14411, 3)
+CheckMemberSize(struct _GtkProgressClass,paint,8,3,47383)
+CheckOffset(struct _GtkProgressClass,paint,720,3,47383)
+CheckMemberSize(struct _GtkProgressClass,update,8,3,47384)
+CheckOffset(struct _GtkProgressClass,update,728,3,47384)
+CheckMemberSize(struct _GtkProgressClass,act_mode_enter,8,3,47385)
+CheckOffset(struct _GtkProgressClass,act_mode_enter,736,3,47385)
+CheckMemberSize(struct _GtkProgressClass,_gtk_reserved1,8,3,47386)
+CheckOffset(struct _GtkProgressClass,_gtk_reserved1,744,3,47386)
+CheckMemberSize(struct _GtkProgressClass,_gtk_reserved2,8,3,47387)
+CheckOffset(struct _GtkProgressClass,_gtk_reserved2,752,3,47387)
+CheckMemberSize(struct _GtkProgressClass,_gtk_reserved3,8,3,47388)
+CheckOffset(struct _GtkProgressClass,_gtk_reserved3,760,3,47388)
+CheckMemberSize(struct _GtkProgressClass,_gtk_reserved4,8,3,47389)
+CheckOffset(struct _GtkProgressClass,_gtk_reserved4,768,3,47389)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14411,0);
 Msg("Find size of _GtkProgressClass (14411)\n");
@@ -22598,6 +27753,8 @@ Msg("Find size of _GtkProgressClass (14411)\n");
 CheckTypeSize(GtkProgress *,4, 14412, 2)
 #elif __x86_64__
 CheckTypeSize(GtkProgress *,8, 14412, 11)
+#elif __ia64__
+CheckTypeSize(GtkProgress *,8, 14412, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14412,0);
 Msg("Find size of GtkProgress * (14412)\n");
@@ -22605,6 +27762,7 @@ Msg("Find size of GtkProgress * (14412)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14413,0);
 Msg("Find size of fptr_gtk_5725 (14413)\n");
@@ -22614,6 +27772,8 @@ Msg("Find size of fptr_gtk_5725 (14413)\n");
 CheckTypeSize(GtkProgressClass,392, 14414, 2)
 #elif __x86_64__
 CheckTypeSize(GtkProgressClass,776, 14414, 11)
+#elif __ia64__
+CheckTypeSize(GtkProgressClass,776, 14414, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14414,0);
 Msg("Find size of GtkProgressClass (14414)\n");
@@ -22621,6 +27781,7 @@ Msg("Find size of GtkProgressClass (14414)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14415,0);
 Msg("Find size of fptr_gtk_4210 (14415)\n");
@@ -22630,6 +27791,8 @@ Msg("Find size of fptr_gtk_4210 (14415)\n");
 CheckTypeSize(GtkModuleInitFunc,4, 14416, 2)
 #elif __x86_64__
 CheckTypeSize(GtkModuleInitFunc,8, 14416, 11)
+#elif __ia64__
+CheckTypeSize(GtkModuleInitFunc,8, 14416, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14416,0);
 Msg("Find size of GtkModuleInitFunc (14416)\n");
@@ -22643,6 +27806,10 @@ CheckOffset(struct _GtkFileChooserDialogClass,parent_class,0,2,47392)
 CheckTypeSize(struct _GtkFileChooserDialogClass,952, 14417, 11)
 Msg("Missing member data for _GtkFileChooserDialogClass on x86-64\n");
 CheckOffset(struct _GtkFileChooserDialogClass,parent_class,0,11,47392)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileChooserDialogClass,952, 14417, 3)
+Msg("Missing member data for _GtkFileChooserDialogClass on IA64\n");
+CheckOffset(struct _GtkFileChooserDialogClass,parent_class,0,3,47392)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14417,0);
 Msg("Find size of _GtkFileChooserDialogClass (14417)\n");
@@ -22652,6 +27819,8 @@ Msg("Find size of _GtkFileChooserDialogClass (14417)\n");
 CheckTypeSize(GtkFileChooserDialogClass,480, 14418, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserDialogClass,952, 14418, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserDialogClass,952, 14418, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14418,0);
 Msg("Find size of GtkFileChooserDialogClass (14418)\n");
@@ -22665,6 +27834,10 @@ CheckOffset(struct _GtkVScrollbarClass,parent_class,0,2,47393)
 CheckTypeSize(struct _GtkVScrollbarClass,832, 14419, 11)
 Msg("Missing member data for _GtkVScrollbarClass on x86-64\n");
 CheckOffset(struct _GtkVScrollbarClass,parent_class,0,11,47393)
+#elif __ia64__
+CheckTypeSize(struct _GtkVScrollbarClass,832, 14419, 3)
+Msg("Missing member data for _GtkVScrollbarClass on IA64\n");
+CheckOffset(struct _GtkVScrollbarClass,parent_class,0,3,47393)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14419,0);
 Msg("Find size of _GtkVScrollbarClass (14419)\n");
@@ -22674,6 +27847,8 @@ Msg("Find size of _GtkVScrollbarClass (14419)\n");
 CheckTypeSize(GtkVScrollbarClass,420, 14420, 2)
 #elif __x86_64__
 CheckTypeSize(GtkVScrollbarClass,832, 14420, 11)
+#elif __ia64__
+CheckTypeSize(GtkVScrollbarClass,832, 14420, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14420,0);
 Msg("Find size of GtkVScrollbarClass (14420)\n");
@@ -22687,6 +27862,10 @@ CheckOffset(struct _GtkTableClass,parent_class,0,2,47394)
 CheckTypeSize(struct _GtkTableClass,824, 14421, 11)
 Msg("Missing member data for _GtkTableClass on x86-64\n");
 CheckOffset(struct _GtkTableClass,parent_class,0,11,47394)
+#elif __ia64__
+CheckTypeSize(struct _GtkTableClass,824, 14421, 3)
+Msg("Missing member data for _GtkTableClass on IA64\n");
+CheckOffset(struct _GtkTableClass,parent_class,0,3,47394)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14421,0);
 Msg("Find size of _GtkTableClass (14421)\n");
@@ -22696,6 +27875,8 @@ Msg("Find size of _GtkTableClass (14421)\n");
 CheckTypeSize(GtkTableClass,416, 14422, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTableClass,824, 14422, 11)
+#elif __ia64__
+CheckTypeSize(GtkTableClass,824, 14422, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14422,0);
 Msg("Find size of GtkTableClass (14422)\n");
@@ -22725,6 +27906,18 @@ CheckMemberSize(struct _GtkFontButtonClass,_gtk_reserved3,8,11,47400)
 CheckOffset(struct _GtkFontButtonClass,_gtk_reserved3,928,11,47400)
 CheckMemberSize(struct _GtkFontButtonClass,_gtk_reserved4,8,11,47401)
 CheckOffset(struct _GtkFontButtonClass,_gtk_reserved4,936,11,47401)
+#elif __ia64__
+CheckTypeSize(struct _GtkFontButtonClass,944, 14423, 3)
+CheckMemberSize(struct _GtkFontButtonClass,font_set,8,3,47397)
+CheckOffset(struct _GtkFontButtonClass,font_set,904,3,47397)
+CheckMemberSize(struct _GtkFontButtonClass,_gtk_reserved1,8,3,47398)
+CheckOffset(struct _GtkFontButtonClass,_gtk_reserved1,912,3,47398)
+CheckMemberSize(struct _GtkFontButtonClass,_gtk_reserved2,8,3,47399)
+CheckOffset(struct _GtkFontButtonClass,_gtk_reserved2,920,3,47399)
+CheckMemberSize(struct _GtkFontButtonClass,_gtk_reserved3,8,3,47400)
+CheckOffset(struct _GtkFontButtonClass,_gtk_reserved3,928,3,47400)
+CheckMemberSize(struct _GtkFontButtonClass,_gtk_reserved4,8,3,47401)
+CheckOffset(struct _GtkFontButtonClass,_gtk_reserved4,936,3,47401)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14423,0);
 Msg("Find size of _GtkFontButtonClass (14423)\n");
@@ -22732,6 +27925,7 @@ Msg("Find size of _GtkFontButtonClass (14423)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14424,0);
 Msg("Find size of fptr_gtk_8650 (14424)\n");
@@ -22741,6 +27935,8 @@ Msg("Find size of fptr_gtk_8650 (14424)\n");
 CheckTypeSize(GtkFontButtonClass,476, 14425, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFontButtonClass,944, 14425, 11)
+#elif __ia64__
+CheckTypeSize(GtkFontButtonClass,944, 14425, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14425,0);
 Msg("Find size of GtkFontButtonClass (14425)\n");
@@ -22754,6 +27950,10 @@ CheckOffset(struct _GtkHSeparatorClass,parent_class,0,2,47402)
 CheckTypeSize(struct _GtkHSeparatorClass,720, 14426, 11)
 Msg("Missing member data for _GtkHSeparatorClass on x86-64\n");
 CheckOffset(struct _GtkHSeparatorClass,parent_class,0,11,47402)
+#elif __ia64__
+CheckTypeSize(struct _GtkHSeparatorClass,720, 14426, 3)
+Msg("Missing member data for _GtkHSeparatorClass on IA64\n");
+CheckOffset(struct _GtkHSeparatorClass,parent_class,0,3,47402)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14426,0);
 Msg("Find size of _GtkHSeparatorClass (14426)\n");
@@ -22763,6 +27963,8 @@ Msg("Find size of _GtkHSeparatorClass (14426)\n");
 CheckTypeSize(GtkHSeparatorClass,364, 14427, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHSeparatorClass,720, 14427, 11)
+#elif __ia64__
+CheckTypeSize(GtkHSeparatorClass,720, 14427, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14427,0);
 Msg("Find size of GtkHSeparatorClass (14427)\n");
@@ -22788,6 +27990,16 @@ CheckMemberSize(struct _GtkColorSelectionDialogClass,_gtk_reserved3,8,11,47406)
 CheckOffset(struct _GtkColorSelectionDialogClass,_gtk_reserved3,968,11,47406)
 CheckMemberSize(struct _GtkColorSelectionDialogClass,_gtk_reserved4,8,11,47407)
 CheckOffset(struct _GtkColorSelectionDialogClass,_gtk_reserved4,976,11,47407)
+#elif __ia64__
+CheckTypeSize(struct _GtkColorSelectionDialogClass,984, 14428, 3)
+CheckMemberSize(struct _GtkColorSelectionDialogClass,_gtk_reserved1,8,3,47404)
+CheckOffset(struct _GtkColorSelectionDialogClass,_gtk_reserved1,952,3,47404)
+CheckMemberSize(struct _GtkColorSelectionDialogClass,_gtk_reserved2,8,3,47405)
+CheckOffset(struct _GtkColorSelectionDialogClass,_gtk_reserved2,960,3,47405)
+CheckMemberSize(struct _GtkColorSelectionDialogClass,_gtk_reserved3,8,3,47406)
+CheckOffset(struct _GtkColorSelectionDialogClass,_gtk_reserved3,968,3,47406)
+CheckMemberSize(struct _GtkColorSelectionDialogClass,_gtk_reserved4,8,3,47407)
+CheckOffset(struct _GtkColorSelectionDialogClass,_gtk_reserved4,976,3,47407)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14428,0);
 Msg("Find size of _GtkColorSelectionDialogClass (14428)\n");
@@ -22797,6 +28009,8 @@ Msg("Find size of _GtkColorSelectionDialogClass (14428)\n");
 CheckTypeSize(GtkColorSelectionDialogClass,496, 14429, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorSelectionDialogClass,984, 14429, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorSelectionDialogClass,984, 14429, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14429,0);
 Msg("Find size of GtkColorSelectionDialogClass (14429)\n");
@@ -22826,6 +28040,18 @@ CheckMemberSize(struct _GtkColorButtonClass,_gtk_reserved3,8,11,47413)
 CheckOffset(struct _GtkColorButtonClass,_gtk_reserved3,928,11,47413)
 CheckMemberSize(struct _GtkColorButtonClass,_gtk_reserved4,8,11,47414)
 CheckOffset(struct _GtkColorButtonClass,_gtk_reserved4,936,11,47414)
+#elif __ia64__
+CheckTypeSize(struct _GtkColorButtonClass,944, 14430, 3)
+CheckMemberSize(struct _GtkColorButtonClass,color_set,8,3,47410)
+CheckOffset(struct _GtkColorButtonClass,color_set,904,3,47410)
+CheckMemberSize(struct _GtkColorButtonClass,_gtk_reserved1,8,3,47411)
+CheckOffset(struct _GtkColorButtonClass,_gtk_reserved1,912,3,47411)
+CheckMemberSize(struct _GtkColorButtonClass,_gtk_reserved2,8,3,47412)
+CheckOffset(struct _GtkColorButtonClass,_gtk_reserved2,920,3,47412)
+CheckMemberSize(struct _GtkColorButtonClass,_gtk_reserved3,8,3,47413)
+CheckOffset(struct _GtkColorButtonClass,_gtk_reserved3,928,3,47413)
+CheckMemberSize(struct _GtkColorButtonClass,_gtk_reserved4,8,3,47414)
+CheckOffset(struct _GtkColorButtonClass,_gtk_reserved4,936,3,47414)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14430,0);
 Msg("Find size of _GtkColorButtonClass (14430)\n");
@@ -22833,6 +28059,7 @@ Msg("Find size of _GtkColorButtonClass (14430)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14431,0);
 Msg("Find size of fptr_gtk_8177 (14431)\n");
@@ -22842,6 +28069,8 @@ Msg("Find size of fptr_gtk_8177 (14431)\n");
 CheckTypeSize(GtkColorButtonClass,476, 14432, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorButtonClass,944, 14432, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorButtonClass,944, 14432, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14432,0);
 Msg("Find size of GtkColorButtonClass (14432)\n");
@@ -22855,6 +28084,10 @@ CheckOffset(struct _GtkMenuBar,menu_shell,0,2,47415)
 CheckTypeSize(struct _GtkMenuBar,152, 14433, 11)
 Msg("Missing member data for _GtkMenuBar on x86-64\n");
 CheckOffset(struct _GtkMenuBar,menu_shell,0,11,47415)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuBar,152, 14433, 3)
+Msg("Missing member data for _GtkMenuBar on IA64\n");
+CheckOffset(struct _GtkMenuBar,menu_shell,0,3,47415)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14433,0);
 Msg("Find size of _GtkMenuBar (14433)\n");
@@ -22864,6 +28097,8 @@ Msg("Find size of _GtkMenuBar (14433)\n");
 CheckTypeSize(GtkMenuBar,92, 14434, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuBar,152, 14434, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuBar,152, 14434, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14434,0);
 Msg("Find size of GtkMenuBar (14434)\n");
@@ -22889,6 +28124,16 @@ CheckMemberSize(struct _GtkMenuBarClass,_gtk_reserved3,8,11,47419)
 CheckOffset(struct _GtkMenuBarClass,_gtk_reserved3,936,11,47419)
 CheckMemberSize(struct _GtkMenuBarClass,_gtk_reserved4,8,11,47420)
 CheckOffset(struct _GtkMenuBarClass,_gtk_reserved4,944,11,47420)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuBarClass,952, 14435, 3)
+CheckMemberSize(struct _GtkMenuBarClass,_gtk_reserved1,8,3,47417)
+CheckOffset(struct _GtkMenuBarClass,_gtk_reserved1,920,3,47417)
+CheckMemberSize(struct _GtkMenuBarClass,_gtk_reserved2,8,3,47418)
+CheckOffset(struct _GtkMenuBarClass,_gtk_reserved2,928,3,47418)
+CheckMemberSize(struct _GtkMenuBarClass,_gtk_reserved3,8,3,47419)
+CheckOffset(struct _GtkMenuBarClass,_gtk_reserved3,936,3,47419)
+CheckMemberSize(struct _GtkMenuBarClass,_gtk_reserved4,8,3,47420)
+CheckOffset(struct _GtkMenuBarClass,_gtk_reserved4,944,3,47420)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14435,0);
 Msg("Find size of _GtkMenuBarClass (14435)\n");
@@ -22898,6 +28143,8 @@ Msg("Find size of _GtkMenuBarClass (14435)\n");
 CheckTypeSize(GtkMenuBarClass,480, 14436, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuBarClass,952, 14436, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuBarClass,952, 14436, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14436,0);
 Msg("Find size of GtkMenuBarClass (14436)\n");
@@ -22923,6 +28170,16 @@ CheckMemberSize(struct _GtkColorSelectionDialog,cancel_button,8,11,47424)
 CheckOffset(struct _GtkColorSelectionDialog,cancel_button,280,11,47424)
 CheckMemberSize(struct _GtkColorSelectionDialog,help_button,8,11,47425)
 CheckOffset(struct _GtkColorSelectionDialog,help_button,288,11,47425)
+#elif __ia64__
+CheckTypeSize(struct _GtkColorSelectionDialog,296, 14437, 3)
+CheckMemberSize(struct _GtkColorSelectionDialog,colorsel,8,3,47422)
+CheckOffset(struct _GtkColorSelectionDialog,colorsel,264,3,47422)
+CheckMemberSize(struct _GtkColorSelectionDialog,ok_button,8,3,47423)
+CheckOffset(struct _GtkColorSelectionDialog,ok_button,272,3,47423)
+CheckMemberSize(struct _GtkColorSelectionDialog,cancel_button,8,3,47424)
+CheckOffset(struct _GtkColorSelectionDialog,cancel_button,280,3,47424)
+CheckMemberSize(struct _GtkColorSelectionDialog,help_button,8,3,47425)
+CheckOffset(struct _GtkColorSelectionDialog,help_button,288,3,47425)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14437,0);
 Msg("Find size of _GtkColorSelectionDialog (14437)\n");
@@ -22932,6 +28189,8 @@ Msg("Find size of _GtkColorSelectionDialog (14437)\n");
 CheckTypeSize(GtkColorSelectionDialog,176, 14438, 2)
 #elif __x86_64__
 CheckTypeSize(GtkColorSelectionDialog,296, 14438, 11)
+#elif __ia64__
+CheckTypeSize(GtkColorSelectionDialog,296, 14438, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14438,0);
 Msg("Find size of GtkColorSelectionDialog (14438)\n");
@@ -22969,6 +28228,22 @@ CheckMemberSize(struct _GtkStatusbarClass,_gtk_reserved3,8,11,47435)
 CheckOffset(struct _GtkStatusbarClass,_gtk_reserved3,864,11,47435)
 CheckMemberSize(struct _GtkStatusbarClass,_gtk_reserved4,8,11,47436)
 CheckOffset(struct _GtkStatusbarClass,_gtk_reserved4,872,11,47436)
+#elif __ia64__
+CheckTypeSize(struct _GtkStatusbarClass,880, 14439, 3)
+CheckMemberSize(struct _GtkStatusbarClass,messages_mem_chunk,8,3,47427)
+CheckOffset(struct _GtkStatusbarClass,messages_mem_chunk,824,3,47427)
+CheckMemberSize(struct _GtkStatusbarClass,text_pushed,8,3,47431)
+CheckOffset(struct _GtkStatusbarClass,text_pushed,832,3,47431)
+CheckMemberSize(struct _GtkStatusbarClass,text_popped,8,3,47432)
+CheckOffset(struct _GtkStatusbarClass,text_popped,840,3,47432)
+CheckMemberSize(struct _GtkStatusbarClass,_gtk_reserved1,8,3,47433)
+CheckOffset(struct _GtkStatusbarClass,_gtk_reserved1,848,3,47433)
+CheckMemberSize(struct _GtkStatusbarClass,_gtk_reserved2,8,3,47434)
+CheckOffset(struct _GtkStatusbarClass,_gtk_reserved2,856,3,47434)
+CheckMemberSize(struct _GtkStatusbarClass,_gtk_reserved3,8,3,47435)
+CheckOffset(struct _GtkStatusbarClass,_gtk_reserved3,864,3,47435)
+CheckMemberSize(struct _GtkStatusbarClass,_gtk_reserved4,8,3,47436)
+CheckOffset(struct _GtkStatusbarClass,_gtk_reserved4,872,3,47436)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14439,0);
 Msg("Find size of _GtkStatusbarClass (14439)\n");
@@ -22976,6 +28251,7 @@ Msg("Find size of _GtkStatusbarClass (14439)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14440,0);
 Msg("Find size of fptr_gtk_4298 (14440)\n");
@@ -22985,6 +28261,8 @@ Msg("Find size of fptr_gtk_4298 (14440)\n");
 CheckTypeSize(GtkStatusbarClass,444, 14441, 2)
 #elif __x86_64__
 CheckTypeSize(GtkStatusbarClass,880, 14441, 11)
+#elif __ia64__
+CheckTypeSize(GtkStatusbarClass,880, 14441, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14441,0);
 Msg("Find size of GtkStatusbarClass (14441)\n");
@@ -22998,6 +28276,10 @@ CheckOffset(struct _GtkSeparatorMenuItem,menu_item,0,2,47437)
 CheckTypeSize(struct _GtkSeparatorMenuItem,160, 14442, 11)
 Msg("Missing member data for _GtkSeparatorMenuItem on x86-64\n");
 CheckOffset(struct _GtkSeparatorMenuItem,menu_item,0,11,47437)
+#elif __ia64__
+CheckTypeSize(struct _GtkSeparatorMenuItem,160, 14442, 3)
+Msg("Missing member data for _GtkSeparatorMenuItem on IA64\n");
+CheckOffset(struct _GtkSeparatorMenuItem,menu_item,0,3,47437)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14442,0);
 Msg("Find size of _GtkSeparatorMenuItem (14442)\n");
@@ -23007,6 +28289,8 @@ Msg("Find size of _GtkSeparatorMenuItem (14442)\n");
 CheckTypeSize(GtkSeparatorMenuItem,96, 14443, 2)
 #elif __x86_64__
 CheckTypeSize(GtkSeparatorMenuItem,160, 14443, 11)
+#elif __ia64__
+CheckTypeSize(GtkSeparatorMenuItem,160, 14443, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14443,0);
 Msg("Find size of GtkSeparatorMenuItem (14443)\n");
@@ -23032,6 +28316,16 @@ CheckMemberSize(struct _GtkAboutDialogClass,_gtk_reserved3,8,11,47441)
 CheckOffset(struct _GtkAboutDialogClass,_gtk_reserved3,968,11,47441)
 CheckMemberSize(struct _GtkAboutDialogClass,_gtk_reserved4,8,11,47442)
 CheckOffset(struct _GtkAboutDialogClass,_gtk_reserved4,976,11,47442)
+#elif __ia64__
+CheckTypeSize(struct _GtkAboutDialogClass,984, 14444, 3)
+CheckMemberSize(struct _GtkAboutDialogClass,_gtk_reserved1,8,3,47439)
+CheckOffset(struct _GtkAboutDialogClass,_gtk_reserved1,952,3,47439)
+CheckMemberSize(struct _GtkAboutDialogClass,_gtk_reserved2,8,3,47440)
+CheckOffset(struct _GtkAboutDialogClass,_gtk_reserved2,960,3,47440)
+CheckMemberSize(struct _GtkAboutDialogClass,_gtk_reserved3,8,3,47441)
+CheckOffset(struct _GtkAboutDialogClass,_gtk_reserved3,968,3,47441)
+CheckMemberSize(struct _GtkAboutDialogClass,_gtk_reserved4,8,3,47442)
+CheckOffset(struct _GtkAboutDialogClass,_gtk_reserved4,976,3,47442)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14444,0);
 Msg("Find size of _GtkAboutDialogClass (14444)\n");
@@ -23041,6 +28335,8 @@ Msg("Find size of _GtkAboutDialogClass (14444)\n");
 CheckTypeSize(GtkAboutDialogClass,496, 14445, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAboutDialogClass,984, 14445, 11)
+#elif __ia64__
+CheckTypeSize(GtkAboutDialogClass,984, 14445, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14445,0);
 Msg("Find size of GtkAboutDialogClass (14445)\n");
@@ -23066,6 +28362,16 @@ CheckMemberSize(struct _GtkListStoreClass,_gtk_reserved3,8,11,47446)
 CheckOffset(struct _GtkListStoreClass,_gtk_reserved3,152,11,47446)
 CheckMemberSize(struct _GtkListStoreClass,_gtk_reserved4,8,11,47447)
 CheckOffset(struct _GtkListStoreClass,_gtk_reserved4,160,11,47447)
+#elif __ia64__
+CheckTypeSize(struct _GtkListStoreClass,168, 14446, 3)
+CheckMemberSize(struct _GtkListStoreClass,_gtk_reserved1,8,3,47444)
+CheckOffset(struct _GtkListStoreClass,_gtk_reserved1,136,3,47444)
+CheckMemberSize(struct _GtkListStoreClass,_gtk_reserved2,8,3,47445)
+CheckOffset(struct _GtkListStoreClass,_gtk_reserved2,144,3,47445)
+CheckMemberSize(struct _GtkListStoreClass,_gtk_reserved3,8,3,47446)
+CheckOffset(struct _GtkListStoreClass,_gtk_reserved3,152,3,47446)
+CheckMemberSize(struct _GtkListStoreClass,_gtk_reserved4,8,3,47447)
+CheckOffset(struct _GtkListStoreClass,_gtk_reserved4,160,3,47447)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14446,0);
 Msg("Find size of _GtkListStoreClass (14446)\n");
@@ -23075,6 +28381,8 @@ Msg("Find size of _GtkListStoreClass (14446)\n");
 CheckTypeSize(GtkListStoreClass,84, 14447, 2)
 #elif __x86_64__
 CheckTypeSize(GtkListStoreClass,168, 14447, 11)
+#elif __ia64__
+CheckTypeSize(GtkListStoreClass,168, 14447, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14447,0);
 Msg("Find size of GtkListStoreClass (14447)\n");
@@ -23116,6 +28424,24 @@ CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved7,8,11,47455)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,872,11,47455)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved8,8,11,47456)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved8,880,11,47456)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileChooserButtonClass,888, 14448, 3)
+CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved1,8,3,47449)
+CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved1,824,3,47449)
+CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved2,8,3,47450)
+CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved2,832,3,47450)
+CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved3,8,3,47451)
+CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved3,840,3,47451)
+CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved4,8,3,47452)
+CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved4,848,3,47452)
+CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved5,8,3,47453)
+CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved5,856,3,47453)
+CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved6,8,3,47454)
+CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved6,864,3,47454)
+CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved7,8,3,47455)
+CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,872,3,47455)
+CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved8,8,3,47456)
+CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved8,880,3,47456)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14448,0);
 Msg("Find size of _GtkFileChooserButtonClass (14448)\n");
@@ -23125,6 +28451,8 @@ Msg("Find size of _GtkFileChooserButtonClass (14448)\n");
 CheckTypeSize(GtkFileChooserButtonClass,448, 14449, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserButtonClass,888, 14449, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserButtonClass,888, 14449, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14449,0);
 Msg("Find size of GtkFileChooserButtonClass (14449)\n");
@@ -23136,6 +28464,9 @@ CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
 #elif __x86_64__
 CheckEnum("GTK_TOOLBAR_SPACE_EMPTY",GTK_TOOLBAR_SPACE_EMPTY,0);
 CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
+#elif __ia64__
+CheckEnum("GTK_TOOLBAR_SPACE_EMPTY",GTK_TOOLBAR_SPACE_EMPTY,0);
+CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14450,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3842 (14450)\n");
@@ -23145,6 +28476,8 @@ Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3842 (14450)\n");
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 2)
 #elif __x86_64__
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 11)
+#elif __ia64__
+CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14451,0);
 Msg("Find size of GtkToolbarSpaceStyle (14451)\n");
@@ -23170,6 +28503,16 @@ CheckMemberSize(struct _GtkMenuClass,_gtk_reserved3,8,11,47462)
 CheckOffset(struct _GtkMenuClass,_gtk_reserved3,936,11,47462)
 CheckMemberSize(struct _GtkMenuClass,_gtk_reserved4,8,11,47463)
 CheckOffset(struct _GtkMenuClass,_gtk_reserved4,944,11,47463)
+#elif __ia64__
+CheckTypeSize(struct _GtkMenuClass,952, 14452, 3)
+CheckMemberSize(struct _GtkMenuClass,_gtk_reserved1,8,3,47460)
+CheckOffset(struct _GtkMenuClass,_gtk_reserved1,920,3,47460)
+CheckMemberSize(struct _GtkMenuClass,_gtk_reserved2,8,3,47461)
+CheckOffset(struct _GtkMenuClass,_gtk_reserved2,928,3,47461)
+CheckMemberSize(struct _GtkMenuClass,_gtk_reserved3,8,3,47462)
+CheckOffset(struct _GtkMenuClass,_gtk_reserved3,936,3,47462)
+CheckMemberSize(struct _GtkMenuClass,_gtk_reserved4,8,3,47463)
+CheckOffset(struct _GtkMenuClass,_gtk_reserved4,944,3,47463)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14452,0);
 Msg("Find size of _GtkMenuClass (14452)\n");
@@ -23179,6 +28522,8 @@ Msg("Find size of _GtkMenuClass (14452)\n");
 CheckTypeSize(GtkMenuClass,480, 14453, 2)
 #elif __x86_64__
 CheckTypeSize(GtkMenuClass,952, 14453, 11)
+#elif __ia64__
+CheckTypeSize(GtkMenuClass,952, 14453, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14453,0);
 Msg("Find size of GtkMenuClass (14453)\n");
@@ -23192,6 +28537,10 @@ CheckOffset(struct _GtkHScale,scale,0,2,47464)
 CheckTypeSize(struct _GtkHScale,200, 14454, 11)
 Msg("Missing member data for _GtkHScale on x86-64\n");
 CheckOffset(struct _GtkHScale,scale,0,11,47464)
+#elif __ia64__
+CheckTypeSize(struct _GtkHScale,200, 14454, 3)
+Msg("Missing member data for _GtkHScale on IA64\n");
+CheckOffset(struct _GtkHScale,scale,0,3,47464)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14454,0);
 Msg("Find size of _GtkHScale (14454)\n");
@@ -23201,6 +28550,8 @@ Msg("Find size of _GtkHScale (14454)\n");
 CheckTypeSize(GtkHScale,144, 14455, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHScale,200, 14455, 11)
+#elif __ia64__
+CheckTypeSize(GtkHScale,200, 14455, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14455,0);
 Msg("Find size of GtkHScale (14455)\n");
@@ -23226,6 +28577,16 @@ CheckMemberSize(struct _GtkGammaCurveClass,_gtk_reserved3,8,11,47468)
 CheckOffset(struct _GtkGammaCurveClass,_gtk_reserved3,840,11,47468)
 CheckMemberSize(struct _GtkGammaCurveClass,_gtk_reserved4,8,11,47469)
 CheckOffset(struct _GtkGammaCurveClass,_gtk_reserved4,848,11,47469)
+#elif __ia64__
+CheckTypeSize(struct _GtkGammaCurveClass,856, 14456, 3)
+CheckMemberSize(struct _GtkGammaCurveClass,_gtk_reserved1,8,3,47466)
+CheckOffset(struct _GtkGammaCurveClass,_gtk_reserved1,824,3,47466)
+CheckMemberSize(struct _GtkGammaCurveClass,_gtk_reserved2,8,3,47467)
+CheckOffset(struct _GtkGammaCurveClass,_gtk_reserved2,832,3,47467)
+CheckMemberSize(struct _GtkGammaCurveClass,_gtk_reserved3,8,3,47468)
+CheckOffset(struct _GtkGammaCurveClass,_gtk_reserved3,840,3,47468)
+CheckMemberSize(struct _GtkGammaCurveClass,_gtk_reserved4,8,3,47469)
+CheckOffset(struct _GtkGammaCurveClass,_gtk_reserved4,848,3,47469)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14456,0);
 Msg("Find size of _GtkGammaCurveClass (14456)\n");
@@ -23235,6 +28596,8 @@ Msg("Find size of _GtkGammaCurveClass (14456)\n");
 CheckTypeSize(GtkGammaCurveClass,432, 14457, 2)
 #elif __x86_64__
 CheckTypeSize(GtkGammaCurveClass,856, 14457, 11)
+#elif __ia64__
+CheckTypeSize(GtkGammaCurveClass,856, 14457, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14457,0);
 Msg("Find size of GtkGammaCurveClass (14457)\n");
@@ -23248,6 +28611,10 @@ CheckOffset(struct _GtkCellRendererComboClass,parent,0,2,47470)
 CheckTypeSize(struct _GtkCellRendererComboClass,264, 14458, 11)
 Msg("Missing member data for _GtkCellRendererComboClass on x86-64\n");
 CheckOffset(struct _GtkCellRendererComboClass,parent,0,11,47470)
+#elif __ia64__
+CheckTypeSize(struct _GtkCellRendererComboClass,264, 14458, 3)
+Msg("Missing member data for _GtkCellRendererComboClass on IA64\n");
+CheckOffset(struct _GtkCellRendererComboClass,parent,0,3,47470)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14458,0);
 Msg("Find size of _GtkCellRendererComboClass (14458)\n");
@@ -23257,6 +28624,8 @@ Msg("Find size of _GtkCellRendererComboClass (14458)\n");
 CheckTypeSize(GtkCellRendererComboClass,132, 14459, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererComboClass,264, 14459, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererComboClass,264, 14459, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14459,0);
 Msg("Find size of GtkCellRendererComboClass (14459)\n");
@@ -23270,6 +28639,10 @@ CheckOffset(struct _GtkTearoffMenuItem,menu_item,0,2,47471)
 CheckTypeSize(struct _GtkTearoffMenuItem,168, 14460, 11)
 Msg("Missing member data for _GtkTearoffMenuItem on x86-64\n");
 CheckOffset(struct _GtkTearoffMenuItem,menu_item,0,11,47471)
+#elif __ia64__
+CheckTypeSize(struct _GtkTearoffMenuItem,168, 14460, 3)
+Msg("Missing member data for _GtkTearoffMenuItem on IA64\n");
+CheckOffset(struct _GtkTearoffMenuItem,menu_item,0,3,47471)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14460,0);
 Msg("Find size of _GtkTearoffMenuItem (14460)\n");
@@ -23279,6 +28652,8 @@ Msg("Find size of _GtkTearoffMenuItem (14460)\n");
 CheckTypeSize(GtkTearoffMenuItem,100, 14461, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTearoffMenuItem,168, 14461, 11)
+#elif __ia64__
+CheckTypeSize(GtkTearoffMenuItem,168, 14461, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14461,0);
 Msg("Find size of GtkTearoffMenuItem (14461)\n");
@@ -23324,6 +28699,26 @@ CheckMemberSize(struct _GtkNotebookClass,_gtk_reserved3,8,11,47492)
 CheckOffset(struct _GtkNotebookClass,_gtk_reserved3,880,11,47492)
 CheckMemberSize(struct _GtkNotebookClass,_gtk_reserved4,8,11,47493)
 CheckOffset(struct _GtkNotebookClass,_gtk_reserved4,888,11,47493)
+#elif __ia64__
+CheckTypeSize(struct _GtkNotebookClass,896, 14462, 3)
+CheckMemberSize(struct _GtkNotebookClass,switch_page,8,3,47477)
+CheckOffset(struct _GtkNotebookClass,switch_page,824,3,47477)
+CheckMemberSize(struct _GtkNotebookClass,select_page,8,3,47480)
+CheckOffset(struct _GtkNotebookClass,select_page,832,3,47480)
+CheckMemberSize(struct _GtkNotebookClass,focus_tab,8,3,47483)
+CheckOffset(struct _GtkNotebookClass,focus_tab,840,3,47483)
+CheckMemberSize(struct _GtkNotebookClass,change_current_page,8,3,47486)
+CheckOffset(struct _GtkNotebookClass,change_current_page,848,3,47486)
+CheckMemberSize(struct _GtkNotebookClass,move_focus_out,8,3,47489)
+CheckOffset(struct _GtkNotebookClass,move_focus_out,856,3,47489)
+CheckMemberSize(struct _GtkNotebookClass,_gtk_reserved1,8,3,47490)
+CheckOffset(struct _GtkNotebookClass,_gtk_reserved1,864,3,47490)
+CheckMemberSize(struct _GtkNotebookClass,_gtk_reserved2,8,3,47491)
+CheckOffset(struct _GtkNotebookClass,_gtk_reserved2,872,3,47491)
+CheckMemberSize(struct _GtkNotebookClass,_gtk_reserved3,8,3,47492)
+CheckOffset(struct _GtkNotebookClass,_gtk_reserved3,880,3,47492)
+CheckMemberSize(struct _GtkNotebookClass,_gtk_reserved4,8,3,47493)
+CheckOffset(struct _GtkNotebookClass,_gtk_reserved4,888,3,47493)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14462,0);
 Msg("Find size of _GtkNotebookClass (14462)\n");
@@ -23331,6 +28726,7 @@ Msg("Find size of _GtkNotebookClass (14462)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14463,0);
 Msg("Find size of fptr_gtk_2989 (14463)\n");
@@ -23338,6 +28734,7 @@ Msg("Find size of fptr_gtk_2989 (14463)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14464,0);
 Msg("Find size of fptr_gtk_8540 (14464)\n");
@@ -23345,6 +28742,7 @@ Msg("Find size of fptr_gtk_8540 (14464)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14465,0);
 Msg("Find size of fptr_gtk_7925 (14465)\n");
@@ -23352,6 +28750,7 @@ Msg("Find size of fptr_gtk_7925 (14465)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14466,0);
 Msg("Find size of fptr_gtk_4237 (14466)\n");
@@ -23359,6 +28758,7 @@ Msg("Find size of fptr_gtk_4237 (14466)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14467,0);
 Msg("Find size of fptr_gtk_6370 (14467)\n");
@@ -23368,6 +28768,8 @@ Msg("Find size of fptr_gtk_6370 (14467)\n");
 CheckTypeSize(GtkNotebookClass,452, 14468, 2)
 #elif __x86_64__
 CheckTypeSize(GtkNotebookClass,896, 14468, 11)
+#elif __ia64__
+CheckTypeSize(GtkNotebookClass,896, 14468, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14468,0);
 Msg("Find size of GtkNotebookClass (14468)\n");
@@ -23381,6 +28783,10 @@ CheckOffset(struct _GtkImageMenuItemClass,parent_class,0,2,47494)
 CheckTypeSize(struct _GtkImageMenuItemClass,952, 14469, 11)
 Msg("Missing member data for _GtkImageMenuItemClass on x86-64\n");
 CheckOffset(struct _GtkImageMenuItemClass,parent_class,0,11,47494)
+#elif __ia64__
+CheckTypeSize(struct _GtkImageMenuItemClass,952, 14469, 3)
+Msg("Missing member data for _GtkImageMenuItemClass on IA64\n");
+CheckOffset(struct _GtkImageMenuItemClass,parent_class,0,3,47494)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14469,0);
 Msg("Find size of _GtkImageMenuItemClass (14469)\n");
@@ -23390,6 +28796,8 @@ Msg("Find size of _GtkImageMenuItemClass (14469)\n");
 CheckTypeSize(GtkImageMenuItemClass,480, 14470, 2)
 #elif __x86_64__
 CheckTypeSize(GtkImageMenuItemClass,952, 14470, 11)
+#elif __ia64__
+CheckTypeSize(GtkImageMenuItemClass,952, 14470, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14470,0);
 Msg("Find size of GtkImageMenuItemClass (14470)\n");
@@ -23415,6 +28823,16 @@ CheckMemberSize(struct _GtkTooltipsClass,_gtk_reserved3,8,11,47498)
 CheckOffset(struct _GtkTooltipsClass,_gtk_reserved3,176,11,47498)
 CheckMemberSize(struct _GtkTooltipsClass,_gtk_reserved4,8,11,47499)
 CheckOffset(struct _GtkTooltipsClass,_gtk_reserved4,184,11,47499)
+#elif __ia64__
+CheckTypeSize(struct _GtkTooltipsClass,192, 14471, 3)
+CheckMemberSize(struct _GtkTooltipsClass,_gtk_reserved1,8,3,47496)
+CheckOffset(struct _GtkTooltipsClass,_gtk_reserved1,160,3,47496)
+CheckMemberSize(struct _GtkTooltipsClass,_gtk_reserved2,8,3,47497)
+CheckOffset(struct _GtkTooltipsClass,_gtk_reserved2,168,3,47497)
+CheckMemberSize(struct _GtkTooltipsClass,_gtk_reserved3,8,3,47498)
+CheckOffset(struct _GtkTooltipsClass,_gtk_reserved3,176,3,47498)
+CheckMemberSize(struct _GtkTooltipsClass,_gtk_reserved4,8,3,47499)
+CheckOffset(struct _GtkTooltipsClass,_gtk_reserved4,184,3,47499)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14471,0);
 Msg("Find size of _GtkTooltipsClass (14471)\n");
@@ -23424,6 +28842,8 @@ Msg("Find size of _GtkTooltipsClass (14471)\n");
 CheckTypeSize(GtkTooltipsClass,96, 14472, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTooltipsClass,192, 14472, 11)
+#elif __ia64__
+CheckTypeSize(GtkTooltipsClass,192, 14472, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14472,0);
 Msg("Find size of GtkTooltipsClass (14472)\n");
@@ -23517,6 +28937,50 @@ CheckMemberSize(struct _GtkTreeViewClass,_gtk_reserved3,8,11,47543)
 CheckOffset(struct _GtkTreeViewClass,_gtk_reserved3,976,11,47543)
 CheckMemberSize(struct _GtkTreeViewClass,_gtk_reserved4,8,11,47544)
 CheckOffset(struct _GtkTreeViewClass,_gtk_reserved4,984,11,47544)
+#elif __ia64__
+CheckTypeSize(struct _GtkTreeViewClass,992, 14473, 3)
+CheckMemberSize(struct _GtkTreeViewClass,set_scroll_adjustments,8,3,47504)
+CheckOffset(struct _GtkTreeViewClass,set_scroll_adjustments,824,3,47504)
+CheckMemberSize(struct _GtkTreeViewClass,row_activated,8,3,47508)
+CheckOffset(struct _GtkTreeViewClass,row_activated,832,3,47508)
+CheckMemberSize(struct _GtkTreeViewClass,test_expand_row,8,3,47512)
+CheckOffset(struct _GtkTreeViewClass,test_expand_row,840,3,47512)
+CheckMemberSize(struct _GtkTreeViewClass,test_collapse_row,8,3,47513)
+CheckOffset(struct _GtkTreeViewClass,test_collapse_row,848,3,47513)
+CheckMemberSize(struct _GtkTreeViewClass,row_expanded,8,3,47517)
+CheckOffset(struct _GtkTreeViewClass,row_expanded,856,3,47517)
+CheckMemberSize(struct _GtkTreeViewClass,row_collapsed,8,3,47518)
+CheckOffset(struct _GtkTreeViewClass,row_collapsed,864,3,47518)
+CheckMemberSize(struct _GtkTreeViewClass,columns_changed,8,3,47520)
+CheckOffset(struct _GtkTreeViewClass,columns_changed,872,3,47520)
+CheckMemberSize(struct _GtkTreeViewClass,cursor_changed,8,3,47521)
+CheckOffset(struct _GtkTreeViewClass,cursor_changed,880,3,47521)
+CheckMemberSize(struct _GtkTreeViewClass,move_cursor,8,3,47525)
+CheckOffset(struct _GtkTreeViewClass,move_cursor,888,3,47525)
+CheckMemberSize(struct _GtkTreeViewClass,select_all,8,3,47527)
+CheckOffset(struct _GtkTreeViewClass,select_all,896,3,47527)
+CheckMemberSize(struct _GtkTreeViewClass,unselect_all,8,3,47528)
+CheckOffset(struct _GtkTreeViewClass,unselect_all,904,3,47528)
+CheckMemberSize(struct _GtkTreeViewClass,select_cursor_row,8,3,47531)
+CheckOffset(struct _GtkTreeViewClass,select_cursor_row,912,3,47531)
+CheckMemberSize(struct _GtkTreeViewClass,toggle_cursor_row,8,3,47532)
+CheckOffset(struct _GtkTreeViewClass,toggle_cursor_row,920,3,47532)
+CheckMemberSize(struct _GtkTreeViewClass,expand_collapse_cursor_row,8,3,47537)
+CheckOffset(struct _GtkTreeViewClass,expand_collapse_cursor_row,928,3,47537)
+CheckMemberSize(struct _GtkTreeViewClass,select_cursor_parent,8,3,47538)
+CheckOffset(struct _GtkTreeViewClass,select_cursor_parent,936,3,47538)
+CheckMemberSize(struct _GtkTreeViewClass,start_interactive_search,8,3,47539)
+CheckOffset(struct _GtkTreeViewClass,start_interactive_search,944,3,47539)
+CheckMemberSize(struct _GtkTreeViewClass,_gtk_reserved0,8,3,47540)
+CheckOffset(struct _GtkTreeViewClass,_gtk_reserved0,952,3,47540)
+CheckMemberSize(struct _GtkTreeViewClass,_gtk_reserved1,8,3,47541)
+CheckOffset(struct _GtkTreeViewClass,_gtk_reserved1,960,3,47541)
+CheckMemberSize(struct _GtkTreeViewClass,_gtk_reserved2,8,3,47542)
+CheckOffset(struct _GtkTreeViewClass,_gtk_reserved2,968,3,47542)
+CheckMemberSize(struct _GtkTreeViewClass,_gtk_reserved3,8,3,47543)
+CheckOffset(struct _GtkTreeViewClass,_gtk_reserved3,976,3,47543)
+CheckMemberSize(struct _GtkTreeViewClass,_gtk_reserved4,8,3,47544)
+CheckOffset(struct _GtkTreeViewClass,_gtk_reserved4,984,3,47544)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14473,0);
 Msg("Find size of _GtkTreeViewClass (14473)\n");
@@ -23524,6 +28988,7 @@ Msg("Find size of _GtkTreeViewClass (14473)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14474,0);
 Msg("Find size of fptr_gtk_7201 (14474)\n");
@@ -23531,6 +28996,7 @@ Msg("Find size of fptr_gtk_7201 (14474)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14475,0);
 Msg("Find size of fptr_gtk_4791 (14475)\n");
@@ -23538,6 +29004,7 @@ Msg("Find size of fptr_gtk_4791 (14475)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14476,0);
 Msg("Find size of fptr_gtk_868 (14476)\n");
@@ -23545,6 +29012,7 @@ Msg("Find size of fptr_gtk_868 (14476)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14477,0);
 Msg("Find size of fptr_gtk_4427 (14477)\n");
@@ -23552,6 +29020,7 @@ Msg("Find size of fptr_gtk_4427 (14477)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14478,0);
 Msg("Find size of fptr_gtk_1357 (14478)\n");
@@ -23559,6 +29028,7 @@ Msg("Find size of fptr_gtk_1357 (14478)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14479,0);
 Msg("Find size of fptr_gtk_1500 (14479)\n");
@@ -23566,6 +29036,7 @@ Msg("Find size of fptr_gtk_1500 (14479)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14480,0);
 Msg("Find size of fptr_gtk_292 (14480)\n");
@@ -23573,6 +29044,7 @@ Msg("Find size of fptr_gtk_292 (14480)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14481,0);
 Msg("Find size of fptr_gtk_7093 (14481)\n");
@@ -23580,6 +29052,7 @@ Msg("Find size of fptr_gtk_7093 (14481)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14482,0);
 Msg("Find size of fptr_gtk_7750 (14482)\n");
@@ -23589,6 +29062,8 @@ Msg("Find size of fptr_gtk_7750 (14482)\n");
 CheckTypeSize(GtkTreeViewClass,500, 14483, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTreeViewClass,992, 14483, 11)
+#elif __ia64__
+CheckTypeSize(GtkTreeViewClass,992, 14483, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14483,0);
 Msg("Find size of GtkTreeViewClass (14483)\n");
@@ -23602,6 +29077,10 @@ CheckOffset(struct _GtkFileChooserWidgetClass,parent_class,0,2,47545)
 CheckTypeSize(struct _GtkFileChooserWidgetClass,824, 14484, 11)
 Msg("Missing member data for _GtkFileChooserWidgetClass on x86-64\n");
 CheckOffset(struct _GtkFileChooserWidgetClass,parent_class,0,11,47545)
+#elif __ia64__
+CheckTypeSize(struct _GtkFileChooserWidgetClass,824, 14484, 3)
+Msg("Missing member data for _GtkFileChooserWidgetClass on IA64\n");
+CheckOffset(struct _GtkFileChooserWidgetClass,parent_class,0,3,47545)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14484,0);
 Msg("Find size of _GtkFileChooserWidgetClass (14484)\n");
@@ -23611,6 +29090,8 @@ Msg("Find size of _GtkFileChooserWidgetClass (14484)\n");
 CheckTypeSize(GtkFileChooserWidgetClass,416, 14485, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserWidgetClass,824, 14485, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserWidgetClass,824, 14485, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14485,0);
 Msg("Find size of GtkFileChooserWidgetClass (14485)\n");
@@ -23636,6 +29117,16 @@ CheckMemberSize(struct _GtkTearoffMenuItemClass,_gtk_reserved3,8,11,47549)
 CheckOffset(struct _GtkTearoffMenuItemClass,_gtk_reserved3,968,11,47549)
 CheckMemberSize(struct _GtkTearoffMenuItemClass,_gtk_reserved4,8,11,47550)
 CheckOffset(struct _GtkTearoffMenuItemClass,_gtk_reserved4,976,11,47550)
+#elif __ia64__
+CheckTypeSize(struct _GtkTearoffMenuItemClass,984, 14486, 3)
+CheckMemberSize(struct _GtkTearoffMenuItemClass,_gtk_reserved1,8,3,47547)
+CheckOffset(struct _GtkTearoffMenuItemClass,_gtk_reserved1,952,3,47547)
+CheckMemberSize(struct _GtkTearoffMenuItemClass,_gtk_reserved2,8,3,47548)
+CheckOffset(struct _GtkTearoffMenuItemClass,_gtk_reserved2,960,3,47548)
+CheckMemberSize(struct _GtkTearoffMenuItemClass,_gtk_reserved3,8,3,47549)
+CheckOffset(struct _GtkTearoffMenuItemClass,_gtk_reserved3,968,3,47549)
+CheckMemberSize(struct _GtkTearoffMenuItemClass,_gtk_reserved4,8,3,47550)
+CheckOffset(struct _GtkTearoffMenuItemClass,_gtk_reserved4,976,3,47550)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14486,0);
 Msg("Find size of _GtkTearoffMenuItemClass (14486)\n");
@@ -23645,6 +29136,8 @@ Msg("Find size of _GtkTearoffMenuItemClass (14486)\n");
 CheckTypeSize(GtkTearoffMenuItemClass,496, 14487, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTearoffMenuItemClass,984, 14487, 11)
+#elif __ia64__
+CheckTypeSize(GtkTearoffMenuItemClass,984, 14487, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14487,0);
 Msg("Find size of GtkTearoffMenuItemClass (14487)\n");
@@ -23670,6 +29163,16 @@ CheckMemberSize(struct _GtkRadioButtonClass,_gtk_reserved3,8,11,47555)
 CheckOffset(struct _GtkRadioButtonClass,_gtk_reserved3,1000,11,47555)
 CheckMemberSize(struct _GtkRadioButtonClass,_gtk_reserved4,8,11,47556)
 CheckOffset(struct _GtkRadioButtonClass,_gtk_reserved4,1008,11,47556)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioButtonClass,1016, 14488, 3)
+CheckMemberSize(struct _GtkRadioButtonClass,group_changed,8,3,47553)
+CheckOffset(struct _GtkRadioButtonClass,group_changed,984,3,47553)
+CheckMemberSize(struct _GtkRadioButtonClass,_gtk_reserved2,8,3,47554)
+CheckOffset(struct _GtkRadioButtonClass,_gtk_reserved2,992,3,47554)
+CheckMemberSize(struct _GtkRadioButtonClass,_gtk_reserved3,8,3,47555)
+CheckOffset(struct _GtkRadioButtonClass,_gtk_reserved3,1000,3,47555)
+CheckMemberSize(struct _GtkRadioButtonClass,_gtk_reserved4,8,3,47556)
+CheckOffset(struct _GtkRadioButtonClass,_gtk_reserved4,1008,3,47556)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14488,0);
 Msg("Find size of _GtkRadioButtonClass (14488)\n");
@@ -23677,6 +29180,7 @@ Msg("Find size of _GtkRadioButtonClass (14488)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14489,0);
 Msg("Find size of fptr_gtk_6460 (14489)\n");
@@ -23686,6 +29190,8 @@ Msg("Find size of fptr_gtk_6460 (14489)\n");
 CheckTypeSize(GtkRadioButtonClass,512, 14490, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioButtonClass,1016, 14490, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioButtonClass,1016, 14490, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14490,0);
 Msg("Find size of GtkRadioButtonClass (14490)\n");
@@ -23719,6 +29225,20 @@ CheckMemberSize(struct _GtkAdjustmentClass,_gtk_reserved3,8,11,47563)
 CheckOffset(struct _GtkAdjustmentClass,_gtk_reserved3,192,11,47563)
 CheckMemberSize(struct _GtkAdjustmentClass,_gtk_reserved4,8,11,47564)
 CheckOffset(struct _GtkAdjustmentClass,_gtk_reserved4,200,11,47564)
+#elif __ia64__
+CheckTypeSize(struct _GtkAdjustmentClass,208, 14491, 3)
+CheckMemberSize(struct _GtkAdjustmentClass,changed,8,3,47559)
+CheckOffset(struct _GtkAdjustmentClass,changed,160,3,47559)
+CheckMemberSize(struct _GtkAdjustmentClass,value_changed,8,3,47560)
+CheckOffset(struct _GtkAdjustmentClass,value_changed,168,3,47560)
+CheckMemberSize(struct _GtkAdjustmentClass,_gtk_reserved1,8,3,47561)
+CheckOffset(struct _GtkAdjustmentClass,_gtk_reserved1,176,3,47561)
+CheckMemberSize(struct _GtkAdjustmentClass,_gtk_reserved2,8,3,47562)
+CheckOffset(struct _GtkAdjustmentClass,_gtk_reserved2,184,3,47562)
+CheckMemberSize(struct _GtkAdjustmentClass,_gtk_reserved3,8,3,47563)
+CheckOffset(struct _GtkAdjustmentClass,_gtk_reserved3,192,3,47563)
+CheckMemberSize(struct _GtkAdjustmentClass,_gtk_reserved4,8,3,47564)
+CheckOffset(struct _GtkAdjustmentClass,_gtk_reserved4,200,3,47564)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14491,0);
 Msg("Find size of _GtkAdjustmentClass (14491)\n");
@@ -23726,6 +29246,7 @@ Msg("Find size of _GtkAdjustmentClass (14491)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14492,0);
 Msg("Find size of fptr_gtk_2047 (14492)\n");
@@ -23735,6 +29256,8 @@ Msg("Find size of fptr_gtk_2047 (14492)\n");
 CheckTypeSize(GtkAdjustmentClass,104, 14493, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAdjustmentClass,208, 14493, 11)
+#elif __ia64__
+CheckTypeSize(GtkAdjustmentClass,208, 14493, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14493,0);
 Msg("Find size of GtkAdjustmentClass (14493)\n");
@@ -23748,6 +29271,10 @@ CheckOffset(struct _GtkHPaned,paned,0,2,47565)
 CheckTypeSize(struct _GtkHPaned,216, 14494, 11)
 Msg("Missing member data for _GtkHPaned on x86-64\n");
 CheckOffset(struct _GtkHPaned,paned,0,11,47565)
+#elif __ia64__
+CheckTypeSize(struct _GtkHPaned,216, 14494, 3)
+Msg("Missing member data for _GtkHPaned on IA64\n");
+CheckOffset(struct _GtkHPaned,paned,0,3,47565)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14494,0);
 Msg("Find size of _GtkHPaned (14494)\n");
@@ -23757,6 +29284,8 @@ Msg("Find size of _GtkHPaned (14494)\n");
 CheckTypeSize(GtkHPaned,144, 14495, 2)
 #elif __x86_64__
 CheckTypeSize(GtkHPaned,216, 14495, 11)
+#elif __ia64__
+CheckTypeSize(GtkHPaned,216, 14495, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14495,0);
 Msg("Find size of GtkHPaned (14495)\n");
@@ -23786,6 +29315,18 @@ CheckMemberSize(struct _GtkRadioActionClass,_gtk_reserved3,8,11,47572)
 CheckOffset(struct _GtkRadioActionClass,_gtk_reserved3,288,11,47572)
 CheckMemberSize(struct _GtkRadioActionClass,_gtk_reserved4,8,11,47573)
 CheckOffset(struct _GtkRadioActionClass,_gtk_reserved4,296,11,47573)
+#elif __ia64__
+CheckTypeSize(struct _GtkRadioActionClass,304, 14496, 3)
+CheckMemberSize(struct _GtkRadioActionClass,changed,8,3,47569)
+CheckOffset(struct _GtkRadioActionClass,changed,264,3,47569)
+CheckMemberSize(struct _GtkRadioActionClass,_gtk_reserved1,8,3,47570)
+CheckOffset(struct _GtkRadioActionClass,_gtk_reserved1,272,3,47570)
+CheckMemberSize(struct _GtkRadioActionClass,_gtk_reserved2,8,3,47571)
+CheckOffset(struct _GtkRadioActionClass,_gtk_reserved2,280,3,47571)
+CheckMemberSize(struct _GtkRadioActionClass,_gtk_reserved3,8,3,47572)
+CheckOffset(struct _GtkRadioActionClass,_gtk_reserved3,288,3,47572)
+CheckMemberSize(struct _GtkRadioActionClass,_gtk_reserved4,8,3,47573)
+CheckOffset(struct _GtkRadioActionClass,_gtk_reserved4,296,3,47573)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14496,0);
 Msg("Find size of _GtkRadioActionClass (14496)\n");
@@ -23793,6 +29334,7 @@ Msg("Find size of _GtkRadioActionClass (14496)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14497,0);
 Msg("Find size of fptr_gtk_6601 (14497)\n");
@@ -23802,6 +29344,8 @@ Msg("Find size of fptr_gtk_6601 (14497)\n");
 CheckTypeSize(GtkRadioActionClass,152, 14498, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRadioActionClass,304, 14498, 11)
+#elif __ia64__
+CheckTypeSize(GtkRadioActionClass,304, 14498, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14498,0);
 Msg("Find size of GtkRadioActionClass (14498)\n");
@@ -23831,6 +29375,18 @@ CheckMemberSize(struct _GtkTextTagClass,_gtk_reserved3,8,11,47582)
 CheckOffset(struct _GtkTextTagClass,_gtk_reserved3,160,11,47582)
 CheckMemberSize(struct _GtkTextTagClass,_gtk_reserved4,8,11,47583)
 CheckOffset(struct _GtkTextTagClass,_gtk_reserved4,168,11,47583)
+#elif __ia64__
+CheckTypeSize(struct _GtkTextTagClass,176, 14499, 3)
+CheckMemberSize(struct _GtkTextTagClass,event,8,3,47579)
+CheckOffset(struct _GtkTextTagClass,event,136,3,47579)
+CheckMemberSize(struct _GtkTextTagClass,_gtk_reserved1,8,3,47580)
+CheckOffset(struct _GtkTextTagClass,_gtk_reserved1,144,3,47580)
+CheckMemberSize(struct _GtkTextTagClass,_gtk_reserved2,8,3,47581)
+CheckOffset(struct _GtkTextTagClass,_gtk_reserved2,152,3,47581)
+CheckMemberSize(struct _GtkTextTagClass,_gtk_reserved3,8,3,47582)
+CheckOffset(struct _GtkTextTagClass,_gtk_reserved3,160,3,47582)
+CheckMemberSize(struct _GtkTextTagClass,_gtk_reserved4,8,3,47583)
+CheckOffset(struct _GtkTextTagClass,_gtk_reserved4,168,3,47583)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14499,0);
 Msg("Find size of _GtkTextTagClass (14499)\n");
@@ -23838,6 +29394,7 @@ Msg("Find size of _GtkTextTagClass (14499)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14500,0);
 Msg("Find size of fptr_gtk_3131 (14500)\n");
@@ -23847,6 +29404,8 @@ Msg("Find size of fptr_gtk_3131 (14500)\n");
 CheckTypeSize(GtkTextTagClass,88, 14501, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTextTagClass,176, 14501, 11)
+#elif __ia64__
+CheckTypeSize(GtkTextTagClass,176, 14501, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14501,0);
 Msg("Find size of GtkTextTagClass (14501)\n");
@@ -23892,6 +29451,26 @@ CheckMemberSize(struct _GtkIconViewClass,move_cursor,8,11,47601)
 CheckOffset(struct _GtkIconViewClass,move_cursor,880,11,47601)
 CheckMemberSize(struct _GtkIconViewClass,activate_cursor_item,8,11,47603)
 CheckOffset(struct _GtkIconViewClass,activate_cursor_item,888,11,47603)
+#elif __ia64__
+CheckTypeSize(struct _GtkIconViewClass,896, 14502, 3)
+CheckMemberSize(struct _GtkIconViewClass,set_scroll_adjustments,8,3,47588)
+CheckOffset(struct _GtkIconViewClass,set_scroll_adjustments,824,3,47588)
+CheckMemberSize(struct _GtkIconViewClass,item_activated,8,3,47591)
+CheckOffset(struct _GtkIconViewClass,item_activated,832,3,47591)
+CheckMemberSize(struct _GtkIconViewClass,selection_changed,8,3,47593)
+CheckOffset(struct _GtkIconViewClass,selection_changed,840,3,47593)
+CheckMemberSize(struct _GtkIconViewClass,select_all,8,3,47594)
+CheckOffset(struct _GtkIconViewClass,select_all,848,3,47594)
+CheckMemberSize(struct _GtkIconViewClass,unselect_all,8,3,47595)
+CheckOffset(struct _GtkIconViewClass,unselect_all,856,3,47595)
+CheckMemberSize(struct _GtkIconViewClass,select_cursor_item,8,3,47596)
+CheckOffset(struct _GtkIconViewClass,select_cursor_item,864,3,47596)
+CheckMemberSize(struct _GtkIconViewClass,toggle_cursor_item,8,3,47597)
+CheckOffset(struct _GtkIconViewClass,toggle_cursor_item,872,3,47597)
+CheckMemberSize(struct _GtkIconViewClass,move_cursor,8,3,47601)
+CheckOffset(struct _GtkIconViewClass,move_cursor,880,3,47601)
+CheckMemberSize(struct _GtkIconViewClass,activate_cursor_item,8,3,47603)
+CheckOffset(struct _GtkIconViewClass,activate_cursor_item,888,3,47603)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14502,0);
 Msg("Find size of _GtkIconViewClass (14502)\n");
@@ -23899,6 +29478,7 @@ Msg("Find size of _GtkIconViewClass (14502)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14503,0);
 Msg("Find size of fptr_gtk_3282 (14503)\n");
@@ -23906,6 +29486,7 @@ Msg("Find size of fptr_gtk_3282 (14503)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14504,0);
 Msg("Find size of fptr_gtk_6762 (14504)\n");
@@ -23913,6 +29494,7 @@ Msg("Find size of fptr_gtk_6762 (14504)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14505,0);
 Msg("Find size of fptr_gtk_1219 (14505)\n");
@@ -23920,6 +29502,7 @@ Msg("Find size of fptr_gtk_1219 (14505)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14506,0);
 Msg("Find size of fptr_gtk_3423 (14506)\n");
@@ -23927,6 +29510,7 @@ Msg("Find size of fptr_gtk_3423 (14506)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14507,0);
 Msg("Find size of fptr_gtk_6736 (14507)\n");
@@ -23936,6 +29520,8 @@ Msg("Find size of fptr_gtk_6736 (14507)\n");
 CheckTypeSize(GtkIconViewClass,452, 14508, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconViewClass,896, 14508, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconViewClass,896, 14508, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14508,0);
 Msg("Find size of GtkIconViewClass (14508)\n");
@@ -23961,6 +29547,16 @@ CheckMemberSize(struct _GtkProgressBarClass,_gtk_reserved3,8,11,47607)
 CheckOffset(struct _GtkProgressBarClass,_gtk_reserved3,792,11,47607)
 CheckMemberSize(struct _GtkProgressBarClass,_gtk_reserved4,8,11,47608)
 CheckOffset(struct _GtkProgressBarClass,_gtk_reserved4,800,11,47608)
+#elif __ia64__
+CheckTypeSize(struct _GtkProgressBarClass,808, 14509, 3)
+CheckMemberSize(struct _GtkProgressBarClass,_gtk_reserved1,8,3,47605)
+CheckOffset(struct _GtkProgressBarClass,_gtk_reserved1,776,3,47605)
+CheckMemberSize(struct _GtkProgressBarClass,_gtk_reserved2,8,3,47606)
+CheckOffset(struct _GtkProgressBarClass,_gtk_reserved2,784,3,47606)
+CheckMemberSize(struct _GtkProgressBarClass,_gtk_reserved3,8,3,47607)
+CheckOffset(struct _GtkProgressBarClass,_gtk_reserved3,792,3,47607)
+CheckMemberSize(struct _GtkProgressBarClass,_gtk_reserved4,8,3,47608)
+CheckOffset(struct _GtkProgressBarClass,_gtk_reserved4,800,3,47608)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14509,0);
 Msg("Find size of _GtkProgressBarClass (14509)\n");
@@ -23970,6 +29566,8 @@ Msg("Find size of _GtkProgressBarClass (14509)\n");
 CheckTypeSize(GtkProgressBarClass,408, 14510, 2)
 #elif __x86_64__
 CheckTypeSize(GtkProgressBarClass,808, 14510, 11)
+#elif __ia64__
+CheckTypeSize(GtkProgressBarClass,808, 14510, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14510,0);
 Msg("Find size of GtkProgressBarClass (14510)\n");
@@ -23983,6 +29581,10 @@ CheckOffset(struct _GtkAspectFrameClass,parent_class,0,2,47609)
 CheckTypeSize(struct _GtkAspectFrameClass,832, 14511, 11)
 Msg("Missing member data for _GtkAspectFrameClass on x86-64\n");
 CheckOffset(struct _GtkAspectFrameClass,parent_class,0,11,47609)
+#elif __ia64__
+CheckTypeSize(struct _GtkAspectFrameClass,832, 14511, 3)
+Msg("Missing member data for _GtkAspectFrameClass on IA64\n");
+CheckOffset(struct _GtkAspectFrameClass,parent_class,0,3,47609)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14511,0);
 Msg("Find size of _GtkAspectFrameClass (14511)\n");
@@ -23992,6 +29594,8 @@ Msg("Find size of _GtkAspectFrameClass (14511)\n");
 CheckTypeSize(GtkAspectFrameClass,420, 14512, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAspectFrameClass,832, 14512, 11)
+#elif __ia64__
+CheckTypeSize(GtkAspectFrameClass,832, 14512, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14512,0);
 Msg("Find size of GtkAspectFrameClass (14512)\n");
@@ -24025,6 +29629,20 @@ CheckMemberSize(struct _GtkGammaCurve,gamma_dialog,8,11,47615)
 CheckOffset(struct _GtkGammaCurve,gamma_dialog,192,11,47615)
 CheckMemberSize(struct _GtkGammaCurve,gamma_text,8,11,47616)
 CheckOffset(struct _GtkGammaCurve,gamma_text,200,11,47616)
+#elif __ia64__
+CheckTypeSize(struct _GtkGammaCurve,208, 14513, 3)
+CheckMemberSize(struct _GtkGammaCurve,table,8,3,47611)
+CheckOffset(struct _GtkGammaCurve,table,128,3,47611)
+CheckMemberSize(struct _GtkGammaCurve,curve,8,3,47612)
+CheckOffset(struct _GtkGammaCurve,curve,136,3,47612)
+CheckMemberSize(struct _GtkGammaCurve,button,40,3,47613)
+CheckOffset(struct _GtkGammaCurve,button,144,3,47613)
+CheckMemberSize(struct _GtkGammaCurve,gamma,4,3,47614)
+CheckOffset(struct _GtkGammaCurve,gamma,184,3,47614)
+CheckMemberSize(struct _GtkGammaCurve,gamma_dialog,8,3,47615)
+CheckOffset(struct _GtkGammaCurve,gamma_dialog,192,3,47615)
+CheckMemberSize(struct _GtkGammaCurve,gamma_text,8,3,47616)
+CheckOffset(struct _GtkGammaCurve,gamma_text,200,3,47616)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14513,0);
 Msg("Find size of _GtkGammaCurve (14513)\n");
@@ -24037,6 +29655,8 @@ Msg("Find size of _GtkGammaCurve (14513)\n");
 CheckTypeSize(GtkGammaCurve,116, 14515, 2)
 #elif __x86_64__
 CheckTypeSize(GtkGammaCurve,208, 14515, 11)
+#elif __ia64__
+CheckTypeSize(GtkGammaCurve,208, 14515, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14515,0);
 Msg("Find size of GtkGammaCurve (14515)\n");
@@ -24044,6 +29664,7 @@ Msg("Find size of GtkGammaCurve (14515)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14516,0);
 Msg("Find size of fptr_anonymous-gtk.h.types-0 (14516)\n");
@@ -24061,6 +29682,9 @@ CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED
 #elif __x86_64__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2);
+#elif __ia64__
+CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1);
+CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14518,0);
 Msg("Find size of anonymous-gtk.h.types-2 (14518)\n");
@@ -24074,6 +29698,10 @@ CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
 CheckEnum("GTK_IM_PREEDIT_NOTHING",GTK_IM_PREEDIT_NOTHING,0);
 CheckEnum("GTK_IM_PREEDIT_CALLBACK",GTK_IM_PREEDIT_CALLBACK,(0) + 1);
 CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
+#elif __ia64__
+CheckEnum("GTK_IM_PREEDIT_NOTHING",GTK_IM_PREEDIT_NOTHING,0);
+CheckEnum("GTK_IM_PREEDIT_CALLBACK",GTK_IM_PREEDIT_CALLBACK,(0) + 1);
+CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14519,0);
 Msg("Find size of anonymous-gtk.h.types-4 (14519)\n");
@@ -24083,6 +29711,8 @@ Msg("Find size of anonymous-gtk.h.types-4 (14519)\n");
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMPreeditStyle,4, 14520, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14520,0);
 Msg("Find size of GtkIMPreeditStyle (14520)\n");
@@ -24110,6 +29740,17 @@ CheckEnum("GTK_DEBUG_MULTIHEAD",GTK_DEBUG_MULTIHEAD,1 << 6);
 CheckEnum("GTK_DEBUG_MODULES",GTK_DEBUG_MODULES,1 << 7);
 CheckEnum("GTK_DEBUG_GEOMETRY",GTK_DEBUG_GEOMETRY,1 << 8);
 CheckEnum("GTK_DEBUG_ICONTHEME",GTK_DEBUG_ICONTHEME,1 << 9);
+#elif __ia64__
+CheckEnum("GTK_DEBUG_MISC",GTK_DEBUG_MISC,1 << 0);
+CheckEnum("GTK_DEBUG_PLUGSOCKET",GTK_DEBUG_PLUGSOCKET,1 << 1);
+CheckEnum("GTK_DEBUG_TEXT",GTK_DEBUG_TEXT,1 << 2);
+CheckEnum("GTK_DEBUG_TREE",GTK_DEBUG_TREE,1 << 3);
+CheckEnum("GTK_DEBUG_UPDATES",GTK_DEBUG_UPDATES,1 << 4);
+CheckEnum("GTK_DEBUG_KEYBINDINGS",GTK_DEBUG_KEYBINDINGS,1 << 5);
+CheckEnum("GTK_DEBUG_MULTIHEAD",GTK_DEBUG_MULTIHEAD,1 << 6);
+CheckEnum("GTK_DEBUG_MODULES",GTK_DEBUG_MODULES,1 << 7);
+CheckEnum("GTK_DEBUG_GEOMETRY",GTK_DEBUG_GEOMETRY,1 << 8);
+CheckEnum("GTK_DEBUG_ICONTHEME",GTK_DEBUG_ICONTHEME,1 << 9);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14521,0);
 Msg("Find size of anonymous-gtk.h.types-6 (14521)\n");
@@ -24119,6 +29760,8 @@ Msg("Find size of anonymous-gtk.h.types-6 (14521)\n");
 CheckTypeSize(GtkDebugFlag,4, 14522, 2)
 #elif __x86_64__
 CheckTypeSize(GtkDebugFlag,4, 14522, 11)
+#elif __ia64__
+CheckTypeSize(GtkDebugFlag,4, 14522, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14522,0);
 Msg("Find size of GtkDebugFlag (14522)\n");
@@ -24132,6 +29775,10 @@ CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0)
 CheckEnum("GTK_CELL_RENDERER_MODE_INERT",GTK_CELL_RENDERER_MODE_INERT,0);
 CheckEnum("GTK_CELL_RENDERER_MODE_ACTIVATABLE",GTK_CELL_RENDERER_MODE_ACTIVATABLE,(0) + 1);
 CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0) + 1) + 1);
+#elif __ia64__
+CheckEnum("GTK_CELL_RENDERER_MODE_INERT",GTK_CELL_RENDERER_MODE_INERT,0);
+CheckEnum("GTK_CELL_RENDERER_MODE_ACTIVATABLE",GTK_CELL_RENDERER_MODE_ACTIVATABLE,(0) + 1);
+CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14523,0);
 Msg("Find size of anonymous-gtk.h.types-8 (14523)\n");
@@ -24141,6 +29788,8 @@ Msg("Find size of anonymous-gtk.h.types-8 (14523)\n");
 CheckTypeSize(GtkCellRendererMode,4, 14524, 2)
 #elif __x86_64__
 CheckTypeSize(GtkCellRendererMode,4, 14524, 11)
+#elif __ia64__
+CheckTypeSize(GtkCellRendererMode,4, 14524, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14524,0);
 Msg("Find size of GtkCellRendererMode (14524)\n");
@@ -24152,6 +29801,9 @@ CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
 #elif __x86_64__
 CheckEnum("GTK_ICON_THEME_NOT_FOUND",GTK_ICON_THEME_NOT_FOUND,0);
 CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
+#elif __ia64__
+CheckEnum("GTK_ICON_THEME_NOT_FOUND",GTK_ICON_THEME_NOT_FOUND,0);
+CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14525,0);
 Msg("Find size of anonymous-gtk.h.types-10 (14525)\n");
@@ -24161,6 +29813,8 @@ Msg("Find size of anonymous-gtk.h.types-10 (14525)\n");
 CheckTypeSize(GtkIconThemeError,4, 14526, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIconThemeError,4, 14526, 11)
+#elif __ia64__
+CheckTypeSize(GtkIconThemeError,4, 14526, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14526,0);
 Msg("Find size of GtkIconThemeError (14526)\n");
@@ -24190,6 +29844,18 @@ CheckEnum("GTK_RESPONSE_YES",GTK_RESPONSE_YES,-8);
 CheckEnum("GTK_RESPONSE_NO",GTK_RESPONSE_NO,-9);
 CheckEnum("GTK_RESPONSE_APPLY",GTK_RESPONSE_APPLY,-10);
 CheckEnum("GTK_RESPONSE_HELP",GTK_RESPONSE_HELP,-11);
+#elif __ia64__
+CheckEnum("GTK_RESPONSE_NONE",GTK_RESPONSE_NONE,-1);
+CheckEnum("GTK_RESPONSE_REJECT",GTK_RESPONSE_REJECT,-2);
+CheckEnum("GTK_RESPONSE_ACCEPT",GTK_RESPONSE_ACCEPT,-3);
+CheckEnum("GTK_RESPONSE_DELETE_EVENT",GTK_RESPONSE_DELETE_EVENT,-4);
+CheckEnum("GTK_RESPONSE_OK",GTK_RESPONSE_OK,-5);
+CheckEnum("GTK_RESPONSE_CANCEL",GTK_RESPONSE_CANCEL,-6);
+CheckEnum("GTK_RESPONSE_CLOSE",GTK_RESPONSE_CLOSE,-7);
+CheckEnum("GTK_RESPONSE_YES",GTK_RESPONSE_YES,-8);
+CheckEnum("GTK_RESPONSE_NO",GTK_RESPONSE_NO,-9);
+CheckEnum("GTK_RESPONSE_APPLY",GTK_RESPONSE_APPLY,-10);
+CheckEnum("GTK_RESPONSE_HELP",GTK_RESPONSE_HELP,-11);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14527,0);
 Msg("Find size of anonymous-gtk.h.types-12 (14527)\n");
@@ -24199,6 +29865,8 @@ Msg("Find size of anonymous-gtk.h.types-12 (14527)\n");
 CheckTypeSize(GtkResponseType,4, 14528, 2)
 #elif __x86_64__
 CheckTypeSize(GtkResponseType,4, 14528, 11)
+#elif __ia64__
+CheckTypeSize(GtkResponseType,4, 14528, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14528,0);
 Msg("Find size of GtkResponseType (14528)\n");
@@ -24210,6 +29878,9 @@ CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
 #elif __x86_64__
 CheckEnum("GTK_TARGET_SAME_APP",GTK_TARGET_SAME_APP,1 << 0);
 CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
+#elif __ia64__
+CheckEnum("GTK_TARGET_SAME_APP",GTK_TARGET_SAME_APP,1 << 0);
+CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14529,0);
 Msg("Find size of anonymous-gtk.h.types-14 (14529)\n");
@@ -24219,6 +29890,8 @@ Msg("Find size of anonymous-gtk.h.types-14 (14529)\n");
 CheckTypeSize(GtkTargetFlags,4, 14530, 2)
 #elif __x86_64__
 CheckTypeSize(GtkTargetFlags,4, 14530, 11)
+#elif __ia64__
+CheckTypeSize(GtkTargetFlags,4, 14530, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14530,0);
 Msg("Find size of GtkTargetFlags (14530)\n");
@@ -24260,6 +29933,24 @@ CheckEnum("GTK_ANCHOR_SW",GTK_ANCHOR_SW,GTK_ANCHOR_SOUTH_WEST);
 CheckEnum("GTK_ANCHOR_SE",GTK_ANCHOR_SE,GTK_ANCHOR_SOUTH_EAST);
 CheckEnum("GTK_ANCHOR_W",GTK_ANCHOR_W,GTK_ANCHOR_WEST);
 CheckEnum("GTK_ANCHOR_E",GTK_ANCHOR_E,GTK_ANCHOR_EAST);
+#elif __ia64__
+CheckEnum("GTK_ANCHOR_CENTER",GTK_ANCHOR_CENTER,0);
+CheckEnum("GTK_ANCHOR_NORTH",GTK_ANCHOR_NORTH,(0) + 1);
+CheckEnum("GTK_ANCHOR_NORTH_WEST",GTK_ANCHOR_NORTH_WEST,((0) + 1) + 1);
+CheckEnum("GTK_ANCHOR_NORTH_EAST",GTK_ANCHOR_NORTH_EAST,(((0) + 1) + 1) + 1);
+CheckEnum("GTK_ANCHOR_SOUTH",GTK_ANCHOR_SOUTH,((((0) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_ANCHOR_SOUTH_WEST",GTK_ANCHOR_SOUTH_WEST,(((((0) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_ANCHOR_SOUTH_EAST",GTK_ANCHOR_SOUTH_EAST,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_ANCHOR_WEST",GTK_ANCHOR_WEST,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_ANCHOR_EAST",GTK_ANCHOR_EAST,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_ANCHOR_N",GTK_ANCHOR_N,GTK_ANCHOR_NORTH);
+CheckEnum("GTK_ANCHOR_NW",GTK_ANCHOR_NW,GTK_ANCHOR_NORTH_WEST);
+CheckEnum("GTK_ANCHOR_NE",GTK_ANCHOR_NE,GTK_ANCHOR_NORTH_EAST);
+CheckEnum("GTK_ANCHOR_S",GTK_ANCHOR_S,GTK_ANCHOR_SOUTH);
+CheckEnum("GTK_ANCHOR_SW",GTK_ANCHOR_SW,GTK_ANCHOR_SOUTH_WEST);
+CheckEnum("GTK_ANCHOR_SE",GTK_ANCHOR_SE,GTK_ANCHOR_SOUTH_EAST);
+CheckEnum("GTK_ANCHOR_W",GTK_ANCHOR_W,GTK_ANCHOR_WEST);
+CheckEnum("GTK_ANCHOR_E",GTK_ANCHOR_E,GTK_ANCHOR_EAST);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14531,0);
 Msg("Find size of anonymous-gtk.h.types-16 (14531)\n");
@@ -24269,6 +29960,8 @@ Msg("Find size of anonymous-gtk.h.types-16 (14531)\n");
 CheckTypeSize(GtkAnchorType,4, 14532, 2)
 #elif __x86_64__
 CheckTypeSize(GtkAnchorType,4, 14532, 11)
+#elif __ia64__
+CheckTypeSize(GtkAnchorType,4, 14532, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14532,0);
 Msg("Find size of GtkAnchorType (14532)\n");
@@ -24282,6 +29975,10 @@ CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
 CheckEnum("GTK_IM_STATUS_NOTHING",GTK_IM_STATUS_NOTHING,0);
 CheckEnum("GTK_IM_STATUS_CALLBACK",GTK_IM_STATUS_CALLBACK,(0) + 1);
 CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
+#elif __ia64__
+CheckEnum("GTK_IM_STATUS_NOTHING",GTK_IM_STATUS_NOTHING,0);
+CheckEnum("GTK_IM_STATUS_CALLBACK",GTK_IM_STATUS_CALLBACK,(0) + 1);
+CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14533,0);
 Msg("Find size of anonymous-gtk.h.types-18 (14533)\n");
@@ -24291,6 +29988,8 @@ Msg("Find size of anonymous-gtk.h.types-18 (14533)\n");
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 2)
 #elif __x86_64__
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 11)
+#elif __ia64__
+CheckTypeSize(GtkIMStatusStyle,4, 14534, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14534,0);
 Msg("Find size of GtkIMStatusStyle (14534)\n");
@@ -24302,6 +30001,9 @@ CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILEN
 #elif __x86_64__
 CheckEnum("GTK_FILE_CHOOSER_ERROR_NONEXISTENT",GTK_FILE_CHOOSER_ERROR_NONEXISTENT,0);
 CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILENAME,(0) + 1);
+#elif __ia64__
+CheckEnum("GTK_FILE_CHOOSER_ERROR_NONEXISTENT",GTK_FILE_CHOOSER_ERROR_NONEXISTENT,0);
+CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILENAME,(0) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14535,0);
 Msg("Find size of anonymous-gtk.h.types-20 (14535)\n");
@@ -24311,6 +30013,8 @@ Msg("Find size of anonymous-gtk.h.types-20 (14535)\n");
 CheckTypeSize(GtkFileChooserError,4, 14536, 2)
 #elif __x86_64__
 CheckTypeSize(GtkFileChooserError,4, 14536, 11)
+#elif __ia64__
+CheckTypeSize(GtkFileChooserError,4, 14536, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14536,0);
 Msg("Find size of GtkFileChooserError (14536)\n");
@@ -24326,6 +30030,11 @@ CheckEnum("GTK_IN_DESTRUCTION",GTK_IN_DESTRUCTION,1 << 0);
 CheckEnum("GTK_FLOATING",GTK_FLOATING,1 << 1);
 CheckEnum("GTK_RESERVED_1",GTK_RESERVED_1,1 << 2);
 CheckEnum("GTK_RESERVED_2",GTK_RESERVED_2,1 << 3);
+#elif __ia64__
+CheckEnum("GTK_IN_DESTRUCTION",GTK_IN_DESTRUCTION,1 << 0);
+CheckEnum("GTK_FLOATING",GTK_FLOATING,1 << 1);
+CheckEnum("GTK_RESERVED_1",GTK_RESERVED_1,1 << 2);
+CheckEnum("GTK_RESERVED_2",GTK_RESERVED_2,1 << 3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14537,0);
 Msg("Find size of anonymous-gtk.h.types-22 (14537)\n");
@@ -24335,6 +30044,8 @@ Msg("Find size of anonymous-gtk.h.types-22 (14537)\n");
 CheckTypeSize(GtkObjectFlags,4, 14538, 2)
 #elif __x86_64__
 CheckTypeSize(GtkObjectFlags,4, 14538, 11)
+#elif __ia64__
+CheckTypeSize(GtkObjectFlags,4, 14538, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14538,0);
 Msg("Find size of GtkObjectFlags (14538)\n");
@@ -24418,6 +30129,45 @@ CheckEnum("GTK_RC_TOKEN_STOCK",GTK_RC_TOKEN_STOCK,((((((((((((((((((((((((((((((
 CheckEnum("GTK_RC_TOKEN_LTR",GTK_RC_TOKEN_LTR,(((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("GTK_RC_TOKEN_RTL",GTK_RC_TOKEN_RTL,((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("GTK_RC_TOKEN_LAST",GTK_RC_TOKEN_LAST,(((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+#elif __ia64__
+CheckEnum("GTK_RC_TOKEN_INVALID",GTK_RC_TOKEN_INVALID,G_TOKEN_LAST);
+CheckEnum("GTK_RC_TOKEN_INCLUDE",GTK_RC_TOKEN_INCLUDE,(G_TOKEN_LAST) + 1);
+CheckEnum("GTK_RC_TOKEN_NORMAL",GTK_RC_TOKEN_NORMAL,((G_TOKEN_LAST) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_ACTIVE",GTK_RC_TOKEN_ACTIVE,(((G_TOKEN_LAST) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_PRELIGHT",GTK_RC_TOKEN_PRELIGHT,((((G_TOKEN_LAST) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_SELECTED",GTK_RC_TOKEN_SELECTED,(((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_INSENSITIVE",GTK_RC_TOKEN_INSENSITIVE,((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_FG",GTK_RC_TOKEN_FG,(((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_BG",GTK_RC_TOKEN_BG,((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_TEXT",GTK_RC_TOKEN_TEXT,(((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_BASE",GTK_RC_TOKEN_BASE,((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_XTHICKNESS",GTK_RC_TOKEN_XTHICKNESS,(((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_YTHICKNESS",GTK_RC_TOKEN_YTHICKNESS,((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_FONT",GTK_RC_TOKEN_FONT,(((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_FONTSET",GTK_RC_TOKEN_FONTSET,((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_FONT_NAME",GTK_RC_TOKEN_FONT_NAME,(((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_BG_PIXMAP",GTK_RC_TOKEN_BG_PIXMAP,((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_PIXMAP_PATH",GTK_RC_TOKEN_PIXMAP_PATH,(((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_STYLE",GTK_RC_TOKEN_STYLE,((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_BINDING",GTK_RC_TOKEN_BINDING,(((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_BIND",GTK_RC_TOKEN_BIND,((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_WIDGET",GTK_RC_TOKEN_WIDGET,(((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_WIDGET_CLASS",GTK_RC_TOKEN_WIDGET_CLASS,((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_CLASS",GTK_RC_TOKEN_CLASS,(((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_LOWEST",GTK_RC_TOKEN_LOWEST,((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_GTK",GTK_RC_TOKEN_GTK,(((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_APPLICATION",GTK_RC_TOKEN_APPLICATION,((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_THEME",GTK_RC_TOKEN_THEME,(((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_RC",GTK_RC_TOKEN_RC,((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_HIGHEST",GTK_RC_TOKEN_HIGHEST,(((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_ENGINE",GTK_RC_TOKEN_ENGINE,((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_MODULE_PATH",GTK_RC_TOKEN_MODULE_PATH,(((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_IM_MODULE_PATH",GTK_RC_TOKEN_IM_MODULE_PATH,((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_IM_MODULE_FILE",GTK_RC_TOKEN_IM_MODULE_FILE,(((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_STOCK",GTK_RC_TOKEN_STOCK,((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_LTR",GTK_RC_TOKEN_LTR,(((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_RTL",GTK_RC_TOKEN_RTL,((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("GTK_RC_TOKEN_LAST",GTK_RC_TOKEN_LAST,(((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14539,0);
 Msg("Find size of anonymous-gtk.h.types-24 (14539)\n");
@@ -24427,6 +30177,8 @@ Msg("Find size of anonymous-gtk.h.types-24 (14539)\n");
 CheckTypeSize(GtkRcTokenType,4, 14540, 2)
 #elif __x86_64__
 CheckTypeSize(GtkRcTokenType,4, 14540, 11)
+#elif __ia64__
+CheckTypeSize(GtkRcTokenType,4, 14540, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14540,0);
 Msg("Find size of GtkRcTokenType (14540)\n");
@@ -24472,6 +30224,26 @@ CheckEnum("GTK_APP_PAINTABLE",GTK_APP_PAINTABLE,1 << 19);
 CheckEnum("GTK_RECEIVES_DEFAULT",GTK_RECEIVES_DEFAULT,1 << 20);
 CheckEnum("GTK_DOUBLE_BUFFERED",GTK_DOUBLE_BUFFERED,1 << 21);
 CheckEnum("GTK_NO_SHOW_ALL",GTK_NO_SHOW_ALL,1 << 22);
+#elif __ia64__
+CheckEnum("GTK_TOPLEVEL",GTK_TOPLEVEL,1 << 4);
+CheckEnum("GTK_NO_WINDOW",GTK_NO_WINDOW,1 << 5);
+CheckEnum("GTK_REALIZED",GTK_REALIZED,1 << 6);
+CheckEnum("GTK_MAPPED",GTK_MAPPED,1 << 7);
+CheckEnum("GTK_VISIBLE",GTK_VISIBLE,1 << 8);
+CheckEnum("GTK_SENSITIVE",GTK_SENSITIVE,1 << 9);
+CheckEnum("GTK_PARENT_SENSITIVE",GTK_PARENT_SENSITIVE,1 << 10);
+CheckEnum("GTK_CAN_FOCUS",GTK_CAN_FOCUS,1 << 11);
+CheckEnum("GTK_HAS_FOCUS",GTK_HAS_FOCUS,1 << 12);
+CheckEnum("GTK_CAN_DEFAULT",GTK_CAN_DEFAULT,1 << 13);
+CheckEnum("GTK_HAS_DEFAULT",GTK_HAS_DEFAULT,1 << 14);
+CheckEnum("GTK_HAS_GRAB",GTK_HAS_GRAB,1 << 15);
+CheckEnum("GTK_RC_STYLE",GTK_RC_STYLE,1 << 16);
+CheckEnum("GTK_COMPOSITE_CHILD",GTK_COMPOSITE_CHILD,1 << 17);
+CheckEnum("GTK_NO_REPARENT",GTK_NO_REPARENT,1 << 18);
+CheckEnum("GTK_APP_PAINTABLE",GTK_APP_PAINTABLE,1 << 19);
+CheckEnum("GTK_RECEIVES_DEFAULT",GTK_RECEIVES_DEFAULT,1 << 20);
+CheckEnum("GTK_DOUBLE_BUFFERED",GTK_DOUBLE_BUFFERED,1 << 21);
+CheckEnum("GTK_NO_SHOW_ALL",GTK_NO_SHOW_ALL,1 << 22);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14541,0);
 Msg("Find size of anonymous-gtk.h.types-28 (14541)\n");
@@ -24481,6 +30253,8 @@ Msg("Find size of anonymous-gtk.h.types-28 (14541)\n");
 CheckTypeSize(GtkWidgetFlags,4, 14542, 2)
 #elif __x86_64__
 CheckTypeSize(GtkWidgetFlags,4, 14542, 11)
+#elif __ia64__
+CheckTypeSize(GtkWidgetFlags,4, 14542, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14542,0);
 Msg("Find size of GtkWidgetFlags (14542)\n");
@@ -24498,8 +30272,6 @@ extern GType gtk_file_chooser_action_get_type_db(void);
 CheckInterfacedef(gtk_file_chooser_action_get_type,gtk_file_chooser_action_get_type_db);
 extern void gtk_text_buffer_get_start_iter_db(GtkTextBuffer *, GtkTextIter *);
 CheckInterfacedef(gtk_text_buffer_get_start_iter,gtk_text_buffer_get_start_iter_db);
-extern GtkType gtk_list_get_type_db(void);
-CheckInterfacedef(gtk_list_get_type,gtk_list_get_type_db);
 extern gint gtk_combo_box_get_column_span_column_db(GtkComboBox *);
 CheckInterfacedef(gtk_combo_box_get_column_span_column,gtk_combo_box_get_column_span_column_db);
 extern void gtk_misc_set_padding_db(GtkMisc *, gint, gint);
@@ -24894,8 +30666,6 @@ extern GType gtk_table_get_type_db(void);
 CheckInterfacedef(gtk_table_get_type,gtk_table_get_type_db);
 extern GtkWidget * gtk_menu_item_get_submenu_db(GtkMenuItem *);
 CheckInterfacedef(gtk_menu_item_get_submenu,gtk_menu_item_get_submenu_db);
-extern void gtk_marshal_VOID__INT_INT_POINTER_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__INT_INT_POINTER,gtk_marshal_VOID__INT_INT_POINTER_db);
 extern gboolean gtk_text_view_scroll_to_iter_db(GtkTextView *, GtkTextIter *, gdouble, gboolean, gdouble, gdouble);
 CheckInterfacedef(gtk_text_view_scroll_to_iter,gtk_text_view_scroll_to_iter_db);
 extern void gtk_window_set_icon_list_db(GtkWindow *, GList *);
@@ -24950,8 +30720,6 @@ extern GtkWidget * gtk_radio_menu_item_new_with_mnemonic_db(GSList *, const gcha
 CheckInterfacedef(gtk_radio_menu_item_new_with_mnemonic,gtk_radio_menu_item_new_with_mnemonic_db);
 extern gboolean gtk_window_get_focus_on_map_db(GtkWindow *);
 CheckInterfacedef(gtk_window_get_focus_on_map,gtk_window_get_focus_on_map_db);
-extern void gtk_marshal_VOID__POINTER_POINTER_UINT_UINT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_POINTER_UINT_UINT,gtk_marshal_VOID__POINTER_POINTER_UINT_UINT_db);
 extern GType gtk_radio_menu_item_get_type_db(void);
 CheckInterfacedef(gtk_radio_menu_item_get_type,gtk_radio_menu_item_get_type_db);
 extern const gchar * gtk_entry_get_text_db(GtkEntry *);
@@ -25002,8 +30770,6 @@ extern void gtk_expander_set_use_underline_db(GtkExpander *, gboolean);
 CheckInterfacedef(gtk_expander_set_use_underline,gtk_expander_set_use_underline_db);
 extern GtkBindingSet * gtk_binding_set_new_db(const gchar *);
 CheckInterfacedef(gtk_binding_set_new,gtk_binding_set_new_db);
-extern GType gtk_progress_get_type_db(void);
-CheckInterfacedef(gtk_progress_get_type,gtk_progress_get_type_db);
 extern gchar * gtk_accelerator_name_db(guint, GdkModifierType);
 CheckInterfacedef(gtk_accelerator_name,gtk_accelerator_name_db);
 extern gboolean gtk_expander_get_use_underline_db(GtkExpander *);
@@ -25146,8 +30912,6 @@ extern gboolean gtk_statusbar_get_has_resize_grip_db(GtkStatusbar *);
 CheckInterfacedef(gtk_statusbar_get_has_resize_grip,gtk_statusbar_get_has_resize_grip_db);
 extern GdkGravity gtk_window_get_gravity_db(GtkWindow *);
 CheckInterfacedef(gtk_window_get_gravity,gtk_window_get_gravity_db);
-extern void gtk_marshal_VOID__INT_INT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__INT_INT,gtk_marshal_VOID__INT_INT_db);
 extern GtkWidget * gtk_image_menu_item_new_db(void);
 CheckInterfacedef(gtk_image_menu_item_new,gtk_image_menu_item_new_db);
 extern void gtk_button_leave_db(GtkButton *);
@@ -25316,8 +31080,6 @@ extern gboolean gtk_file_chooser_set_uri_db(GtkFileChooser *, const char *);
 CheckInterfacedef(gtk_file_chooser_set_uri,gtk_file_chooser_set_uri_db);
 extern void gtk_tree_model_filter_refilter_db(GtkTreeModelFilter *);
 CheckInterfacedef(gtk_tree_model_filter_refilter,gtk_tree_model_filter_refilter_db);
-extern void gtk_marshal_VOID__POINTER_UINT_UINT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_UINT_UINT,gtk_marshal_VOID__POINTER_UINT_UINT_db);
 extern void gtk_tooltips_force_window_db(GtkTooltips *);
 CheckInterfacedef(gtk_tooltips_force_window,gtk_tooltips_force_window_db);
 extern GtkWidget * gtk_tree_view_new_with_model_db(GtkTreeModel *);
@@ -25574,8 +31336,6 @@ extern GtkTreeModel * gtk_entry_completion_get_model_db(GtkEntryCompletion *);
 CheckInterfacedef(gtk_entry_completion_get_model,gtk_entry_completion_get_model_db);
 extern GtkPositionType gtk_notebook_get_tab_pos_db(GtkNotebook *);
 CheckInterfacedef(gtk_notebook_get_tab_pos,gtk_notebook_get_tab_pos_db);
-extern void gtk_marshal_VOID__POINTER_POINTER_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_POINTER,gtk_marshal_VOID__POINTER_POINTER_db);
 extern GtkTreeViewRowSeparatorFunc gtk_combo_box_get_row_separator_func_db(GtkComboBox *);
 CheckInterfacedef(gtk_combo_box_get_row_separator_func,gtk_combo_box_get_row_separator_func_db);
 extern void gtk_accel_map_save_db(const gchar *);
@@ -25682,8 +31442,6 @@ extern void gtk_tool_item_set_expand_db(GtkToolItem *, gboolean);
 CheckInterfacedef(gtk_tool_item_set_expand,gtk_tool_item_set_expand_db);
 extern GType gtk_icon_info_get_type_db(void);
 CheckInterfacedef(gtk_icon_info_get_type,gtk_icon_info_get_type_db);
-extern void gtk_marshal_BOOLEAN__VOID_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_BOOLEAN__VOID,gtk_marshal_BOOLEAN__VOID_db);
 extern gint gtk_tree_model_iter_n_children_db(GtkTreeModel *, GtkTreeIter *);
 CheckInterfacedef(gtk_tree_model_iter_n_children,gtk_tree_model_iter_n_children_db);
 extern GtkReliefStyle gtk_toolbar_get_relief_style_db(GtkToolbar *);
@@ -25754,8 +31512,6 @@ extern void gtk_editable_select_region_db(GtkEditable *, gint, gint);
 CheckInterfacedef(gtk_editable_select_region,gtk_editable_select_region_db);
 extern gchar * gtk_clipboard_wait_for_text_db(GtkClipboard *);
 CheckInterfacedef(gtk_clipboard_wait_for_text,gtk_clipboard_wait_for_text_db);
-extern gboolean gtk_selection_clear_db(GtkWidget *, GdkEventSelection *);
-CheckInterfacedef(gtk_selection_clear,gtk_selection_clear_db);
 extern gboolean gtk_color_selection_get_has_palette_db(GtkColorSelection *);
 CheckInterfacedef(gtk_color_selection_get_has_palette,gtk_color_selection_get_has_palette_db);
 extern GType gtk_text_search_flags_get_type_db(void);
@@ -25778,8 +31534,6 @@ extern GtkWidget * gtk_color_selection_dialog_new_db(const gchar *);
 CheckInterfacedef(gtk_color_selection_dialog_new,gtk_color_selection_dialog_new_db);
 extern GtkEntryCompletion * gtk_entry_get_completion_db(GtkEntry *);
 CheckInterfacedef(gtk_entry_get_completion,gtk_entry_get_completion_db);
-extern void gtk_marshal_VOID__POINTER_UINT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_UINT,gtk_marshal_VOID__POINTER_UINT_db);
 extern GtkToggleAction * gtk_toggle_action_new_db(const gchar *, const gchar *, const gchar *, const gchar *);
 CheckInterfacedef(gtk_toggle_action_new,gtk_toggle_action_new_db);
 extern void gtk_file_chooser_set_filter_db(GtkFileChooser *, GtkFileFilter *);
@@ -25990,8 +31744,6 @@ extern const gchar * gtk_action_group_get_name_db(GtkActionGroup *);
 CheckInterfacedef(gtk_action_group_get_name,gtk_action_group_get_name_db);
 extern gboolean gtk_text_buffer_insert_interactive_db(GtkTextBuffer *, GtkTextIter *, const gchar *, gint, gboolean);
 CheckInterfacedef(gtk_text_buffer_insert_interactive,gtk_text_buffer_insert_interactive_db);
-extern void gtk_marshal_BOOLEAN__POINTER_POINTER_INT_INT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_BOOLEAN__POINTER_POINTER_INT_INT,gtk_marshal_BOOLEAN__POINTER_POINTER_INT_INT_db);
 extern void gtk_table_attach_defaults_db(GtkTable *, GtkWidget *, guint, guint, guint, guint);
 CheckInterfacedef(gtk_table_attach_defaults,gtk_table_attach_defaults_db);
 extern void gtk_notebook_reorder_child_db(GtkNotebook *, GtkWidget *, gint);
@@ -26132,8 +31884,6 @@ extern void gtk_frame_get_label_align_db(GtkFrame *, gfloat *, gfloat *);
 CheckInterfacedef(gtk_frame_get_label_align,gtk_frame_get_label_align_db);
 extern GtkIconSet * gtk_icon_set_ref_db(GtkIconSet *);
 CheckInterfacedef(gtk_icon_set_ref,gtk_icon_set_ref_db);
-extern void gtk_marshal_VOID__UINT_POINTER_UINT_UINT_ENUM_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__UINT_POINTER_UINT_UINT_ENUM,gtk_marshal_VOID__UINT_POINTER_UINT_UINT_ENUM_db);
 extern GType gtk_hpaned_get_type_db(void);
 CheckInterfacedef(gtk_hpaned_get_type,gtk_hpaned_get_type_db);
 extern void gtk_about_dialog_set_website_label_db(GtkAboutDialog *, const gchar *);
@@ -26250,8 +32000,6 @@ extern gboolean gtk_widget_event_db(GtkWidget *, GdkEvent *);
 CheckInterfacedef(gtk_widget_event,gtk_widget_event_db);
 extern gchar * gtk_font_selection_get_font_name_db(GtkFontSelection *);
 CheckInterfacedef(gtk_font_selection_get_font_name,gtk_font_selection_get_font_name_db);
-extern void gtk_marshal_BOOLEAN__POINTER_INT_INT_UINT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_BOOLEAN__POINTER_INT_INT_UINT,gtk_marshal_BOOLEAN__POINTER_INT_INT_UINT_db);
 extern GdkPixbuf * gtk_icon_info_load_icon_db(GtkIconInfo *, GError * *);
 CheckInterfacedef(gtk_icon_info_load_icon,gtk_icon_info_load_icon_db);
 extern gboolean gtk_label_get_selection_bounds_db(GtkLabel *, gint *, gint *);
@@ -26578,8 +32326,6 @@ extern void gtk_tree_view_column_set_sort_column_id_db(GtkTreeViewColumn *, gint
 CheckInterfacedef(gtk_tree_view_column_set_sort_column_id,gtk_tree_view_column_set_sort_column_id_db);
 extern gboolean gtk_text_mark_get_deleted_db(GtkTextMark *);
 CheckInterfacedef(gtk_text_mark_get_deleted,gtk_text_mark_get_deleted_db);
-extern void gtk_marshal_INT__POINTER_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_INT__POINTER,gtk_marshal_INT__POINTER_db);
 extern GtkWidget * gtk_combo_box_new_with_model_db(GtkTreeModel *);
 CheckInterfacedef(gtk_combo_box_new_with_model,gtk_combo_box_new_with_model_db);
 extern GtkWidget * gtk_icon_view_new_with_model_db(GtkTreeModel *);
@@ -26740,8 +32486,6 @@ extern const gchar * gtk_about_dialog_get_copyright_db(GtkAboutDialog *);
 CheckInterfacedef(gtk_about_dialog_get_copyright,gtk_about_dialog_get_copyright_db);
 extern void gtk_window_begin_move_drag_db(GtkWindow *, gint, gint, gint, guint32);
 CheckInterfacedef(gtk_window_begin_move_drag,gtk_window_begin_move_drag_db);
-extern void gtk_marshal_VOID__POINTER_INT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_INT,gtk_marshal_VOID__POINTER_INT_db);
 extern void gtk_range_set_adjustment_db(GtkRange *, GtkAdjustment *);
 CheckInterfacedef(gtk_range_set_adjustment,gtk_range_set_adjustment_db);
 extern gboolean gtk_text_iter_is_cursor_position_db(const GtkTextIter *);
@@ -26852,8 +32596,6 @@ extern gboolean gtk_text_buffer_get_modified_db(GtkTextBuffer *);
 CheckInterfacedef(gtk_text_buffer_get_modified,gtk_text_buffer_get_modified_db);
 extern void gtk_icon_view_select_path_db(GtkIconView *, GtkTreePath *);
 CheckInterfacedef(gtk_icon_view_select_path,gtk_icon_view_select_path_db);
-extern void gtk_marshal_VOID__POINTER_STRING_STRING_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_STRING_STRING,gtk_marshal_VOID__POINTER_STRING_STRING_db);
 extern gboolean gtk_widget_can_activate_accel_db(GtkWidget *, guint);
 CheckInterfacedef(gtk_widget_can_activate_accel,gtk_widget_can_activate_accel_db);
 extern void gtk_box_pack_end_db(GtkBox *, GtkWidget *, gboolean, gboolean, guint);
@@ -27104,8 +32846,6 @@ extern gboolean gtk_tree_model_get_iter_db(GtkTreeModel *, GtkTreeIter *, GtkTre
 CheckInterfacedef(gtk_tree_model_get_iter,gtk_tree_model_get_iter_db);
 extern void gtk_window_remove_accel_group_db(GtkWindow *, GtkAccelGroup *);
 CheckInterfacedef(gtk_window_remove_accel_group,gtk_window_remove_accel_group_db);
-extern void gtk_marshal_BOOLEAN__POINTER_STRING_STRING_POINTER_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_BOOLEAN__POINTER_STRING_STRING_POINTER,gtk_marshal_BOOLEAN__POINTER_STRING_STRING_POINTER_db);
 extern gint gtk_notebook_append_page_db(GtkNotebook *, GtkWidget *, GtkWidget *);
 CheckInterfacedef(gtk_notebook_append_page,gtk_notebook_append_page_db);
 extern void gtk_container_set_focus_vadjustment_db(GtkContainer *, GtkAdjustment *);
@@ -27440,8 +33180,6 @@ extern gboolean gtk_tree_model_iter_parent_db(GtkTreeModel *, GtkTreeIter *, Gtk
 CheckInterfacedef(gtk_tree_model_iter_parent,gtk_tree_model_iter_parent_db);
 extern GtkWidget * gtk_vscale_new_db(GtkAdjustment *);
 CheckInterfacedef(gtk_vscale_new,gtk_vscale_new_db);
-extern void gtk_marshal_VOID__POINTER_POINTER_POINTER_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_POINTER_POINTER,gtk_marshal_VOID__POINTER_POINTER_POINTER_db);
 extern GtkWidget * gtk_spin_button_new_with_range_db(gdouble, gdouble, gdouble);
 CheckInterfacedef(gtk_spin_button_new_with_range,gtk_spin_button_new_with_range_db);
 extern GtkWidget * gtk_image_new_db(void);
@@ -27460,8 +33198,6 @@ extern void gtk_editable_insert_text_db(GtkEditable *, const gchar *, gint, gint
 CheckInterfacedef(gtk_editable_insert_text,gtk_editable_insert_text_db);
 extern guint gtk_key_snooper_install_db(GtkKeySnoopFunc, gpointer);
 CheckInterfacedef(gtk_key_snooper_install,gtk_key_snooper_install_db);
-extern void gtk_marshal_VOID__UINT_POINTER_UINT_ENUM_ENUM_POINTER_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__UINT_POINTER_UINT_ENUM_ENUM_POINTER,gtk_marshal_VOID__UINT_POINTER_UINT_ENUM_ENUM_POINTER_db);
 extern void gtk_object_sink_db(GtkObject *);
 CheckInterfacedef(gtk_object_sink,gtk_object_sink_db);
 extern void gtk_widget_style_get_db(GtkWidget *, const gchar *, ...);
@@ -27470,8 +33206,6 @@ extern GList * gtk_icon_theme_list_icons_db(GtkIconTheme *, const char *);
 CheckInterfacedef(gtk_icon_theme_list_icons,gtk_icon_theme_list_icons_db);
 extern void gtk_cell_renderer_get_fixed_size_db(GtkCellRenderer *, gint *, gint *);
 CheckInterfacedef(gtk_cell_renderer_get_fixed_size,gtk_cell_renderer_get_fixed_size_db);
-extern void gtk_marshal_BOOLEAN__POINTER_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_BOOLEAN__POINTER,gtk_marshal_BOOLEAN__POINTER_db);
 extern void gtk_button_released_db(GtkButton *);
 CheckInterfacedef(gtk_button_released,gtk_button_released_db);
 extern void gtk_icon_source_set_size_wildcarded_db(GtkIconSource *, gboolean);
@@ -27516,8 +33250,6 @@ extern GtkAboutDialogActivateLinkFunc gtk_about_dialog_set_url_hook_db(GtkAboutD
 CheckInterfacedef(gtk_about_dialog_set_url_hook,gtk_about_dialog_set_url_hook_db);
 extern gboolean gtk_check_menu_item_get_inconsistent_db(GtkCheckMenuItem *);
 CheckInterfacedef(gtk_check_menu_item_get_inconsistent,gtk_check_menu_item_get_inconsistent_db);
-extern void gtk_marshal_ENUM__ENUM_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_ENUM__ENUM,gtk_marshal_ENUM__ENUM_db);
 extern gchar * gtk_set_locale_db(void);
 CheckInterfacedef(gtk_set_locale,gtk_set_locale_db);
 extern void gtk_icon_theme_set_screen_db(GtkIconTheme *, GdkScreen *);
@@ -27790,8 +33522,6 @@ extern GtkWidget * gtk_ui_manager_get_widget_db(GtkUIManager *, const gchar *);
 CheckInterfacedef(gtk_ui_manager_get_widget,gtk_ui_manager_get_widget_db);
 extern GtkIconSize gtk_icon_size_register_db(const gchar *, gint, gint);
 CheckInterfacedef(gtk_icon_size_register,gtk_icon_size_register_db);
-extern void gtk_marshal_INT__POINTER_CHAR_CHAR_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_INT__POINTER_CHAR_CHAR,gtk_marshal_INT__POINTER_CHAR_CHAR_db);
 extern gboolean gtk_text_view_get_accepts_tab_db(GtkTextView *);
 CheckInterfacedef(gtk_text_view_get_accepts_tab,gtk_text_view_get_accepts_tab_db);
 extern GtkWidget * gtk_radio_button_new_from_widget_db(GtkRadioButton *);
@@ -27890,16 +33620,12 @@ extern GtkWidget * gtk_widget_new_db(GType, const gchar *, ...);
 CheckInterfacedef(gtk_widget_new,gtk_widget_new_db);
 extern GtkWidget * gtk_combo_box_entry_new_text_db(void);
 CheckInterfacedef(gtk_combo_box_entry_new_text,gtk_combo_box_entry_new_text_db);
-extern void gtk_paned_compute_position_db(GtkPaned *, gint, gint, gint);
-CheckInterfacedef(gtk_paned_compute_position,gtk_paned_compute_position_db);
 extern GType gtk_resize_mode_get_type_db(void);
 CheckInterfacedef(gtk_resize_mode_get_type,gtk_resize_mode_get_type_db);
 extern void gtk_entry_completion_set_match_func_db(GtkEntryCompletion *, GtkEntryCompletionMatchFunc, gpointer, GDestroyNotify);
 CheckInterfacedef(gtk_entry_completion_set_match_func,gtk_entry_completion_set_match_func_db);
 extern void gtk_spin_button_get_increments_db(GtkSpinButton *, gdouble *, gdouble *);
 CheckInterfacedef(gtk_spin_button_get_increments,gtk_spin_button_get_increments_db);
-extern void gtk_marshal_VOID__UINT_STRING_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__UINT_STRING,gtk_marshal_VOID__UINT_STRING_db);
 extern void gtk_font_button_set_use_font_db(GtkFontButton *, gboolean);
 CheckInterfacedef(gtk_font_button_set_use_font,gtk_font_button_set_use_font_db);
 extern GdkColormap * gtk_widget_get_colormap_db(GtkWidget *);
@@ -28004,16 +33730,12 @@ extern void gtk_container_resize_children_db(GtkContainer *);
 CheckInterfacedef(gtk_container_resize_children,gtk_container_resize_children_db);
 extern GType gtk_text_mark_get_type_db(void);
 CheckInterfacedef(gtk_text_mark_get_type,gtk_text_mark_get_type_db);
-extern void gtk_marshal_VOID__STRING_INT_POINTER_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__STRING_INT_POINTER,gtk_marshal_VOID__STRING_INT_POINTER_db);
 extern gint gtk_entry_get_max_length_db(GtkEntry *);
 CheckInterfacedef(gtk_entry_get_max_length,gtk_entry_get_max_length_db);
 extern GSList * gtk_radio_menu_item_get_group_db(GtkRadioMenuItem *);
 CheckInterfacedef(gtk_radio_menu_item_get_group,gtk_radio_menu_item_get_group_db);
 extern GType gtk_text_attributes_get_type_db(void);
 CheckInterfacedef(gtk_text_attributes_get_type,gtk_text_attributes_get_type_db);
-extern void gtk_marshal_BOOLEAN__POINTER_INT_INT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_BOOLEAN__POINTER_INT_INT,gtk_marshal_BOOLEAN__POINTER_INT_INT_db);
 extern gboolean gtk_text_mark_get_left_gravity_db(GtkTextMark *);
 CheckInterfacedef(gtk_text_mark_get_left_gravity,gtk_text_mark_get_left_gravity_db);
 extern GdkRegion * gtk_widget_region_intersect_db(GtkWidget *, GdkRegion *);
@@ -28120,8 +33842,6 @@ extern void gtk_cell_layout_add_attribute_db(GtkCellLayout *, GtkCellRenderer *,
 CheckInterfacedef(gtk_cell_layout_add_attribute,gtk_cell_layout_add_attribute_db);
 extern GParamSpec * * gtk_widget_class_list_style_properties_db(GtkWidgetClass *, guint *);
 CheckInterfacedef(gtk_widget_class_list_style_properties,gtk_widget_class_list_style_properties_db);
-extern void gtk_marshal_VOID__ENUM_FLOAT_BOOLEAN_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__ENUM_FLOAT_BOOLEAN,gtk_marshal_VOID__ENUM_FLOAT_BOOLEAN_db);
 extern gint gtk_entry_completion_get_minimum_key_length_db(GtkEntryCompletion *);
 CheckInterfacedef(gtk_entry_completion_get_minimum_key_length,gtk_entry_completion_get_minimum_key_length_db);
 extern void gtk_text_buffer_move_mark_db(GtkTextBuffer *, GtkTextMark *, const GtkTextIter *);
@@ -28206,8 +33926,6 @@ extern void gtk_table_set_col_spacing_db(GtkTable *, guint, guint);
 CheckInterfacedef(gtk_table_set_col_spacing,gtk_table_set_col_spacing_db);
 extern gboolean gtk_text_view_get_editable_db(GtkTextView *);
 CheckInterfacedef(gtk_text_view_get_editable,gtk_text_view_get_editable_db);
-extern void gtk_marshal_VOID__ENUM_FLOAT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__ENUM_FLOAT,gtk_marshal_VOID__ENUM_FLOAT_db);
 extern GdkWindow * gtk_widget_get_parent_window_db(GtkWidget *);
 CheckInterfacedef(gtk_widget_get_parent_window,gtk_widget_get_parent_window_db);
 extern void gtk_color_selection_get_current_color_db(GtkColorSelection *, GdkColor *);
@@ -28230,8 +33948,6 @@ extern gchar * gtk_text_iter_get_visible_slice_db(const GtkTextIter *, const Gtk
 CheckInterfacedef(gtk_text_iter_get_visible_slice,gtk_text_iter_get_visible_slice_db);
 extern void gtk_drag_source_add_uri_targets_db(GtkWidget *);
 CheckInterfacedef(gtk_drag_source_add_uri_targets,gtk_drag_source_add_uri_targets_db);
-extern void gtk_marshal_VOID__POINTER_INT_INT_POINTER_UINT_UINT_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_INT_INT_POINTER_UINT_UINT,gtk_marshal_VOID__POINTER_INT_INT_POINTER_UINT_UINT_db);
 extern gboolean gtk_font_selection_set_font_name_db(GtkFontSelection *, const gchar *);
 CheckInterfacedef(gtk_font_selection_set_font_name,gtk_font_selection_set_font_name_db);
 extern void gtk_entry_set_completion_db(GtkEntry *, GtkEntryCompletion *);
@@ -28240,8 +33956,6 @@ extern gboolean gtk_action_group_get_sensitive_db(GtkActionGroup *);
 CheckInterfacedef(gtk_action_group_get_sensitive,gtk_action_group_get_sensitive_db);
 extern void gtk_label_set_ellipsize_db(GtkLabel *, PangoEllipsizeMode);
 CheckInterfacedef(gtk_label_set_ellipsize,gtk_label_set_ellipsize_db);
-extern GtkType gtk_list_item_get_type_db(void);
-CheckInterfacedef(gtk_list_item_get_type,gtk_list_item_get_type_db);
 extern GType gtk_arg_flags_get_type_db(void);
 CheckInterfacedef(gtk_arg_flags_get_type,gtk_arg_flags_get_type_db);
 extern void gtk_rc_parse_db(const gchar *);
@@ -28486,8 +34200,6 @@ extern gboolean gtk_widget_is_focus_db(GtkWidget *);
 CheckInterfacedef(gtk_widget_is_focus,gtk_widget_is_focus_db);
 extern gboolean gtk_check_menu_item_get_active_db(GtkCheckMenuItem *);
 CheckInterfacedef(gtk_check_menu_item_get_active,gtk_check_menu_item_get_active_db);
-extern void gtk_cell_renderer_editing_canceled_db(GtkCellRenderer *);
-CheckInterfacedef(gtk_cell_renderer_editing_canceled,gtk_cell_renderer_editing_canceled_db);
 extern gint gtk_icon_view_get_item_width_db(GtkIconView *);
 CheckInterfacedef(gtk_icon_view_get_item_width,gtk_icon_view_get_item_width_db);
 extern gboolean gtk_check_menu_item_get_draw_as_radio_db(GtkCheckMenuItem *);
@@ -28660,8 +34372,6 @@ extern void gtk_target_list_add_db(GtkTargetList *, GdkAtom, guint, guint);
 CheckInterfacedef(gtk_target_list_add,gtk_target_list_add_db);
 extern GList * gtk_tree_view_get_columns_db(GtkTreeView *);
 CheckInterfacedef(gtk_tree_view_get_columns,gtk_tree_view_get_columns_db);
-extern void gtk_marshal_VOID__POINTER_UINT_ENUM_db(GClosure *, GValue *, guint, const GValue *, gpointer, gpointer);
-CheckInterfacedef(gtk_marshal_VOID__POINTER_UINT_ENUM,gtk_marshal_VOID__POINTER_UINT_ENUM_db);
 extern GtkIconSource * gtk_icon_source_new_db(void);
 CheckInterfacedef(gtk_icon_source_new,gtk_icon_source_new_db);
 extern void gtk_check_menu_item_set_active_db(GtkCheckMenuItem *, gboolean);

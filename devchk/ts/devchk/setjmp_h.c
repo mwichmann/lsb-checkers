@@ -19,11 +19,12 @@ int setjmp_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in setjmp.h\n");
 #endif
 
+printf("Checking data structures in setjmp.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for setjmp(env) */
 #endif
@@ -167,6 +168,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6961,0);
 Msg("Find size of __jmp_buf_tag (6961)\n");
 #endif
 
+extern int __sigsetjmp_db(jmp_buf, int);
+CheckInterfacedef(__sigsetjmp,__sigsetjmp_db);
+extern void longjmp_db(jmp_buf, int);
+CheckInterfacedef(longjmp,longjmp_db);
+extern void siglongjmp_db(sigjmp_buf, int);
+CheckInterfacedef(siglongjmp,siglongjmp_db);
+extern void _longjmp_db(jmp_buf, int);
+CheckInterfacedef(_longjmp,_longjmp_db);
+extern int _setjmp_db(jmp_buf);
+CheckInterfacedef(_setjmp,_setjmp_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -174,7 +185,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in setjmp.h\n",cnt);
+printf("%d tests passed out of %d tests in setjmp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

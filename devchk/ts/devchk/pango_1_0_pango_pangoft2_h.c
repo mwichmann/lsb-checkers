@@ -4,8 +4,12 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
-struct FT_FaceRec_ { };
-struct FT_Bitmap_ { };
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
+#define PANGO_DISABLE_DEPRECATED
+
 struct _PangoFT2FontMap { };
 struct _PangoFcFont { };
 struct _PangoFontMap { };
@@ -63,6 +67,8 @@ printf("Checking data structures in pango-1.0/pango/pangoft2.h\n");
 CheckTypeSize(PangoFT2FontMap,0, 12589, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFT2FontMap,0, 12589, 11)
+#elif __ia64__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12589,0);
 Msg("Find size of PangoFT2FontMap (12589)\n");
@@ -72,6 +78,8 @@ Msg("Find size of PangoFT2FontMap (12589)\n");
 CheckTypeSize(PangoFT2FontMap *,4, 12590, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFT2FontMap *,8, 12590, 11)
+#elif __ia64__
+CheckTypeSize(PangoFT2FontMap *,8, 12590, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12590,0);
 Msg("Find size of PangoFT2FontMap * (12590)\n");
@@ -81,6 +89,8 @@ Msg("Find size of PangoFT2FontMap * (12590)\n");
 CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 11)
+#elif __ia64__
+CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12591,0);
 Msg("Find size of PangoFT2SubstituteFunc (12591)\n");
@@ -90,6 +100,8 @@ Msg("Find size of PangoFT2SubstituteFunc (12591)\n");
 CheckTypeSize(PangoFcFont *,4, 12592, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcFont *,8, 12592, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcFont *,8, 12592, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12592,0);
 Msg("Find size of PangoFcFont * (12592)\n");
@@ -99,6 +111,8 @@ Msg("Find size of PangoFcFont * (12592)\n");
 CheckTypeSize(FT_Bitmap *,4, 12595, 2)
 #elif __x86_64__
 CheckTypeSize(FT_Bitmap *,8, 12595, 11)
+#elif __ia64__
+CheckTypeSize(FT_Bitmap *,8, 12595, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12595,0);
 Msg("Find size of FT_Bitmap * (12595)\n");

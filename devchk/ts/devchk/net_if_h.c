@@ -18,11 +18,12 @@ int net_if_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in net/if.h\n");
 #endif
 
+printf("Checking data structures in net/if.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_UP
 	CompareConstant(IFF_UP,0x01,4976,architecture)
@@ -367,6 +368,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11015,0);
 Msg("Find size of if_nameindex (11015)\n");
 #endif
 
+extern void if_freenameindex_db(struct if_nameindex *);
+CheckInterfacedef(if_freenameindex,if_freenameindex_db);
+extern char * if_indextoname_db(unsigned int, char *);
+CheckInterfacedef(if_indextoname,if_indextoname_db);
+extern struct if_nameindex * if_nameindex_db(void);
+CheckInterfacedef(if_nameindex,if_nameindex_db);
+extern unsigned int if_nametoindex_db(const char *);
+CheckInterfacedef(if_nametoindex,if_nametoindex_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -374,7 +383,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in net/if.h\n",cnt);
+printf("%d tests passed out of %d tests in net/if.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

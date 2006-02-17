@@ -18,11 +18,12 @@ int sys_ioctl_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/ioctl.h\n");
 #endif
 
+printf("Checking data structures in sys/ioctl.h\n");
 #if __powerpc64__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x40087468,4611,architecture)
@@ -270,6 +271,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10301,0);
 Msg("Find size of winsize (10301)\n");
 #endif
 
+extern int ioctl_db(int, unsigned long int, ...);
+CheckInterfacedef(ioctl,ioctl_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -277,7 +280,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/ioctl.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/ioctl.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

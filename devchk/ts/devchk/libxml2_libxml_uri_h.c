@@ -65,6 +65,26 @@ CheckMemberSize(struct _xmlURI,fragment,8,11,47748)
 CheckOffset(struct _xmlURI,fragment,64,11,47748)
 CheckMemberSize(struct _xmlURI,cleanup,4,11,47749)
 CheckOffset(struct _xmlURI,cleanup,72,11,47749)
+#elif __ia64__
+CheckTypeSize(struct _xmlURI,80, 14565, 3)
+CheckMemberSize(struct _xmlURI,opaque,8,3,47741)
+CheckOffset(struct _xmlURI,opaque,8,3,47741)
+CheckMemberSize(struct _xmlURI,authority,8,3,47742)
+CheckOffset(struct _xmlURI,authority,16,3,47742)
+CheckMemberSize(struct _xmlURI,server,8,3,47743)
+CheckOffset(struct _xmlURI,server,24,3,47743)
+CheckMemberSize(struct _xmlURI,user,8,3,47744)
+CheckOffset(struct _xmlURI,user,32,3,47744)
+CheckMemberSize(struct _xmlURI,port,4,3,47745)
+CheckOffset(struct _xmlURI,port,40,3,47745)
+CheckMemberSize(struct _xmlURI,path,8,3,47746)
+CheckOffset(struct _xmlURI,path,48,3,47746)
+CheckMemberSize(struct _xmlURI,query,8,3,47747)
+CheckOffset(struct _xmlURI,query,56,3,47747)
+CheckMemberSize(struct _xmlURI,fragment,8,3,47748)
+CheckOffset(struct _xmlURI,fragment,64,3,47748)
+CheckMemberSize(struct _xmlURI,cleanup,4,3,47749)
+CheckOffset(struct _xmlURI,cleanup,72,3,47749)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14565,0);
 Msg("Find size of _xmlURI (14565)\n");
@@ -74,6 +94,8 @@ Msg("Find size of _xmlURI (14565)\n");
 CheckTypeSize(xmlURI,40, 14566, 2)
 #elif __x86_64__
 CheckTypeSize(xmlURI,80, 14566, 11)
+#elif __ia64__
+CheckTypeSize(xmlURI,80, 14566, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14566,0);
 Msg("Find size of xmlURI (14566)\n");
@@ -83,6 +105,8 @@ Msg("Find size of xmlURI (14566)\n");
 CheckTypeSize(xmlURI *,4, 14567, 2)
 #elif __x86_64__
 CheckTypeSize(xmlURI *,8, 14567, 11)
+#elif __ia64__
+CheckTypeSize(xmlURI *,8, 14567, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14567,0);
 Msg("Find size of xmlURI * (14567)\n");
@@ -92,6 +116,8 @@ Msg("Find size of xmlURI * (14567)\n");
 CheckTypeSize(xmlURIPtr,4, 14568, 2)
 #elif __x86_64__
 CheckTypeSize(xmlURIPtr,8, 14568, 11)
+#elif __ia64__
+CheckTypeSize(xmlURIPtr,8, 14568, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14568,0);
 Msg("Find size of xmlURIPtr (14568)\n");

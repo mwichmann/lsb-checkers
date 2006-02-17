@@ -18,11 +18,12 @@ int sys_timeb_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/timeb.h\n");
 #endif
 
+printf("Checking data structures in sys/timeb.h\n");
 #if __i386__
 CheckTypeSize(struct timeb,12, 10216, 2)
 CheckMemberSize(struct timeb,millitm,2,2,34299)
@@ -84,6 +85,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10216,0);
 Msg("Find size of timeb (10216)\n");
 #endif
 
+extern int ftime_db(struct timeb *);
+CheckInterfacedef(ftime,ftime_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -91,7 +94,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/timeb.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/timeb.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

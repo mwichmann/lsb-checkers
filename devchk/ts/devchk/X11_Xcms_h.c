@@ -21,11 +21,12 @@ int X11_Xcms_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in X11/Xcms.h\n");
 #endif
 
+printf("Checking data structures in X11/Xcms.h\n");
 #if __i386__
 CheckTypeSize(XcmsFunctionSet,12, 8364, 2)
 #elif __ia64__
@@ -407,12 +408,19 @@ Msg("Find size of XcmsParseStringProc (8869)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(struct _XcmsCCC *,4, 8852, 2)
 #elif __ia64__
+CheckTypeSize(struct _XcmsCCC *,0, 8852, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _XcmsCCC *,4, 8852, 6)
 #elif __s390__ && !__s390x__
+CheckTypeSize(struct _XcmsCCC *,0, 8852, 10)
 #elif __powerpc64__
+CheckTypeSize(struct _XcmsCCC *,0, 8852, 9)
 #elif __s390x__
+CheckTypeSize(struct _XcmsCCC *,0, 8852, 12)
 #elif __x86_64__
+CheckTypeSize(struct _XcmsCCC *,8, 8852, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8852,0);
 Msg("Find size of _XcmsCCC * (8852)\n");
@@ -482,7 +490,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in X11/Xcms.h\n",cnt);
+printf("%d tests passed out of %d tests in X11/Xcms.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

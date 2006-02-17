@@ -19,33 +19,38 @@ int utmpx_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in utmpx.h\n");
 #endif
 
+printf("Checking data structures in utmpx.h\n");
 #if __i386__
+CheckTypeSize(struct utmpx *,4, 10558, 2)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct utmpx *,0, 10558, 6)
 #elif __s390x__
+CheckTypeSize(struct utmpx *,0, 10558, 12)
 #elif __s390__ && !__s390x__
+CheckTypeSize(struct utmpx *,0, 10558, 10)
 #elif __x86_64__
+CheckTypeSize(struct utmpx *,8, 10558, 11)
 #elif __powerpc64__
+CheckTypeSize(struct utmpx *,0, 10558, 9)
 #elif __ia64__
+CheckTypeSize(struct utmpx *,0, 10558, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10558,0);
 Msg("Find size of utmpx * (10558)\n");
 #endif
 
 #if 1
-CheckTypeSize(char[UT_LINESIZE],32, 10559, 1)
 #endif
 
 #if 1
-CheckTypeSize(char[UT_NAMESIZE],32, 10560, 1)
 #endif
 
 #if 1
-CheckTypeSize(char[UT_HOSTSIZE],256, 10561, 1)
 #endif
 
 #if __i386__
@@ -230,6 +235,18 @@ CheckMemberSize(struct utmpx,__unused,20,12,40832)
 CheckOffset(struct utmpx,__unused,376,12,40832)
 #endif
 
+extern void endutxent_db(void);
+CheckInterfacedef(endutxent,endutxent_db);
+extern struct utmpx * getutxent_db(void);
+CheckInterfacedef(getutxent,getutxent_db);
+extern struct utmpx * getutxid_db(const struct utmpx *);
+CheckInterfacedef(getutxid,getutxid_db);
+extern struct utmpx * getutxline_db(const struct utmpx *);
+CheckInterfacedef(getutxline,getutxline_db);
+extern struct utmpx * pututxline_db(const struct utmpx *);
+CheckInterfacedef(pututxline,pututxline_db);
+extern void setutxent_db(void);
+CheckInterfacedef(setutxent,setutxent_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -237,7 +254,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in utmpx.h\n",cnt);
+printf("%d tests passed out of %d tests in utmpx.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -18,11 +18,12 @@ int sys_sem_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/sem.h\n");
 #endif
 
+printf("Checking data structures in sys/sem.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SEM_UNDO
 	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
@@ -278,6 +279,12 @@ CheckMemberSize(struct semid_ds,__unused4,8,11,40455)
 CheckOffset(struct semid_ds,__unused4,96,11,40455)
 #endif
 
+extern int semctl_db(int, int, int, ...);
+CheckInterfacedef(semctl,semctl_db);
+extern int semget_db(key_t, int, int);
+CheckInterfacedef(semget,semget_db);
+extern int semop_db(int, struct sembuf *, size_t);
+CheckInterfacedef(semop,semop_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -285,7 +292,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/sem.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/sem.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

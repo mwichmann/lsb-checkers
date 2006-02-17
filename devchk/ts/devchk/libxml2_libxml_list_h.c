@@ -30,6 +30,8 @@ printf("Checking data structures in libxml2/libxml/list.h\n");
 CheckTypeSize(xmlList,0, 14552, 2)
 #elif __x86_64__
 CheckTypeSize(xmlList,0, 14552, 11)
+#elif __ia64__
+CheckTypeSize(xmlList,0, 14552, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14552,0);
 Msg("Find size of xmlList (14552)\n");
@@ -39,6 +41,8 @@ Msg("Find size of xmlList (14552)\n");
 CheckTypeSize(xmlList *,4, 14553, 2)
 #elif __x86_64__
 CheckTypeSize(xmlList *,8, 14553, 11)
+#elif __ia64__
+CheckTypeSize(xmlList *,8, 14553, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14553,0);
 Msg("Find size of xmlList * (14553)\n");
@@ -48,6 +52,8 @@ Msg("Find size of xmlList * (14553)\n");
 CheckTypeSize(xmlListPtr,4, 14554, 2)
 #elif __x86_64__
 CheckTypeSize(xmlListPtr,8, 14554, 11)
+#elif __ia64__
+CheckTypeSize(xmlListPtr,8, 14554, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14554,0);
 Msg("Find size of xmlListPtr (14554)\n");
@@ -57,6 +63,8 @@ Msg("Find size of xmlListPtr (14554)\n");
 CheckTypeSize(xmlLink,0, 14556, 2)
 #elif __x86_64__
 CheckTypeSize(xmlLink,0, 14556, 11)
+#elif __ia64__
+CheckTypeSize(xmlLink,0, 14556, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14556,0);
 Msg("Find size of xmlLink (14556)\n");
@@ -66,6 +74,8 @@ Msg("Find size of xmlLink (14556)\n");
 CheckTypeSize(xmlLink *,4, 14557, 2)
 #elif __x86_64__
 CheckTypeSize(xmlLink *,8, 14557, 11)
+#elif __ia64__
+CheckTypeSize(xmlLink *,8, 14557, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14557,0);
 Msg("Find size of xmlLink * (14557)\n");
@@ -75,6 +85,8 @@ Msg("Find size of xmlLink * (14557)\n");
 CheckTypeSize(xmlLinkPtr,4, 14558, 2)
 #elif __x86_64__
 CheckTypeSize(xmlLinkPtr,8, 14558, 11)
+#elif __ia64__
+CheckTypeSize(xmlLinkPtr,8, 14558, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14558,0);
 Msg("Find size of xmlLinkPtr (14558)\n");
@@ -84,6 +96,8 @@ Msg("Find size of xmlLinkPtr (14558)\n");
 CheckTypeSize(const xmlListPtr,4, 14559, 2)
 #elif __x86_64__
 CheckTypeSize(const xmlListPtr,8, 14559, 11)
+#elif __ia64__
+CheckTypeSize(const xmlListPtr,8, 14559, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14559,0);
 Msg("Find size of const xmlListPtr (14559)\n");
@@ -91,6 +105,7 @@ Msg("Find size of const xmlListPtr (14559)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14560,0);
 Msg("Find size of fptr_list_459 (14560)\n");
@@ -100,6 +115,8 @@ Msg("Find size of fptr_list_459 (14560)\n");
 CheckTypeSize(xmlListWalker,4, 14561, 2)
 #elif __x86_64__
 CheckTypeSize(xmlListWalker,8, 14561, 11)
+#elif __ia64__
+CheckTypeSize(xmlListWalker,8, 14561, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14561,0);
 Msg("Find size of xmlListWalker (14561)\n");
@@ -107,6 +124,7 @@ Msg("Find size of xmlListWalker (14561)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14562,0);
 Msg("Find size of fptr_list_305 (14562)\n");
@@ -116,6 +134,8 @@ Msg("Find size of fptr_list_305 (14562)\n");
 CheckTypeSize(xmlListDeallocator,4, 14563, 2)
 #elif __x86_64__
 CheckTypeSize(xmlListDeallocator,8, 14563, 11)
+#elif __ia64__
+CheckTypeSize(xmlListDeallocator,8, 14563, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14563,0);
 Msg("Find size of xmlListDeallocator (14563)\n");
@@ -125,6 +145,8 @@ Msg("Find size of xmlListDeallocator (14563)\n");
 CheckTypeSize(xmlListDataCompare,4, 14564, 2)
 #elif __x86_64__
 CheckTypeSize(xmlListDataCompare,8, 14564, 11)
+#elif __ia64__
+CheckTypeSize(xmlListDataCompare,8, 14564, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14564,0);
 Msg("Find size of xmlListDataCompare (14564)\n");

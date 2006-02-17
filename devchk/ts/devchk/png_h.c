@@ -4,8 +4,6 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
-struct png_struct_def { };
-struct png_info_struct { };
 #include "png.h"
 
 
@@ -38,7 +36,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_HEADER_VERSION_STRING
-	CompareStringConstant(PNG_HEADER_VERSION_STRING,"libpng version 1.2.8 - December 3, 2004 (header)\n")
+	CompareStringConstant(PNG_HEADER_VERSION_STRING," libpng version 1.2.8 - December 3, 2004 (header)\n")
 #else
 Msg( "Error: Constant not found: PNG_HEADER_VERSION_STRING\n");
 cnt++;
@@ -731,10 +729,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for png_jmpbuf(png_ptr) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for CVT_PTR(ptr) */
 #endif
 
@@ -795,19 +789,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for png_free_ptr_NULL */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for png_infopp_NULL */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for png_malloc_ptr_NULL */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for png_read_status_ptr_NULL */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -824,10 +806,6 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 /* No test for png_voidp_NULL */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for png_write_status_ptr_NULL */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2206,10 +2184,20 @@ cnt++;
 /* No test for png_composite_16(composite,fg,alpha,bg) */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for PNGARG(arglist) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for PNG_SETJMP_SUPPORTED */
+#endif
+
 #if __i386__
 CheckTypeSize(png_struct,712, 11173, 2)
 #elif __x86_64__
-CheckTypeSize(png_struct,1208, 11173, 11)
+CheckTypeSize(png_struct,1104, 11173, 11)
+#elif __ia64__
+CheckTypeSize(png_struct,1616, 11173, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11173,0);
 Msg("Find size of png_struct (11173)\n");
@@ -2219,6 +2207,8 @@ Msg("Find size of png_struct (11173)\n");
 CheckTypeSize(png_struct *,4, 11174, 2)
 #elif __x86_64__
 CheckTypeSize(png_struct *,8, 11174, 11)
+#elif __ia64__
+CheckTypeSize(png_struct *,8, 11174, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11174,0);
 Msg("Find size of png_struct * (11174)\n");
@@ -2228,6 +2218,8 @@ Msg("Find size of png_struct * (11174)\n");
 CheckTypeSize(png_structp,4, 11175, 2)
 #elif __x86_64__
 CheckTypeSize(png_structp,8, 11175, 11)
+#elif __ia64__
+CheckTypeSize(png_structp,8, 11175, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11175,0);
 Msg("Find size of png_structp (11175)\n");
@@ -2236,7 +2228,9 @@ Msg("Find size of png_structp (11175)\n");
 #if __i386__
 CheckTypeSize(png_info,288, 11177, 2)
 #elif __x86_64__
-CheckTypeSize(png_info,464, 11177, 11)
+CheckTypeSize(png_info,360, 11177, 11)
+#elif __ia64__
+CheckTypeSize(png_info,360, 11177, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11177,0);
 Msg("Find size of png_info (11177)\n");
@@ -2246,6 +2240,8 @@ Msg("Find size of png_info (11177)\n");
 CheckTypeSize(png_info *,4, 11178, 2)
 #elif __x86_64__
 CheckTypeSize(png_info *,8, 11178, 11)
+#elif __ia64__
+CheckTypeSize(png_info *,8, 11178, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11178,0);
 Msg("Find size of png_info * (11178)\n");
@@ -2255,6 +2251,8 @@ Msg("Find size of png_info * (11178)\n");
 CheckTypeSize(png_infop,4, 11179, 2)
 #elif __x86_64__
 CheckTypeSize(png_infop,8, 11179, 11)
+#elif __ia64__
+CheckTypeSize(png_infop,8, 11179, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11179,0);
 Msg("Find size of png_infop (11179)\n");
@@ -2264,6 +2262,8 @@ Msg("Find size of png_infop (11179)\n");
 CheckTypeSize(png_voidp,4, 11180, 2)
 #elif __x86_64__
 CheckTypeSize(png_voidp,8, 11180, 11)
+#elif __ia64__
+CheckTypeSize(png_voidp,8, 11180, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11180,0);
 Msg("Find size of png_voidp (11180)\n");
@@ -2271,6 +2271,7 @@ Msg("Find size of png_voidp (11180)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11181,0);
 Msg("Find size of fptr_png_24 (11181)\n");
@@ -2280,6 +2281,8 @@ Msg("Find size of fptr_png_24 (11181)\n");
 CheckTypeSize(png_progressive_info_ptr,4, 11182, 2)
 #elif __x86_64__
 CheckTypeSize(png_progressive_info_ptr,8, 11182, 11)
+#elif __ia64__
+CheckTypeSize(png_progressive_info_ptr,8, 11182, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11182,0);
 Msg("Find size of png_progressive_info_ptr (11182)\n");
@@ -2289,6 +2292,8 @@ Msg("Find size of png_progressive_info_ptr (11182)\n");
 CheckTypeSize(png_byte,1, 11183, 2)
 #elif __x86_64__
 CheckTypeSize(png_byte,1, 11183, 11)
+#elif __ia64__
+CheckTypeSize(png_byte,1, 11183, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11183,0);
 Msg("Find size of png_byte (11183)\n");
@@ -2298,6 +2303,8 @@ Msg("Find size of png_byte (11183)\n");
 CheckTypeSize(png_byte *,4, 11184, 2)
 #elif __x86_64__
 CheckTypeSize(png_byte *,8, 11184, 11)
+#elif __ia64__
+CheckTypeSize(png_byte *,8, 11184, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11184,0);
 Msg("Find size of png_byte * (11184)\n");
@@ -2307,6 +2314,8 @@ Msg("Find size of png_byte * (11184)\n");
 CheckTypeSize(png_bytep,4, 11185, 2)
 #elif __x86_64__
 CheckTypeSize(png_bytep,8, 11185, 11)
+#elif __ia64__
+CheckTypeSize(png_bytep,8, 11185, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11185,0);
 Msg("Find size of png_bytep (11185)\n");
@@ -2315,7 +2324,9 @@ Msg("Find size of png_bytep (11185)\n");
 #if __i386__
 CheckTypeSize(png_uint_32,4, 11187, 2)
 #elif __x86_64__
-CheckTypeSize(png_uint_32,8, 11187, 11)
+CheckTypeSize(png_uint_32,4, 11187, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_32,4, 11187, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11187,0);
 Msg("Find size of png_uint_32 (11187)\n");
@@ -2323,6 +2334,7 @@ Msg("Find size of png_uint_32 (11187)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11188,0);
 Msg("Find size of fptr_png_176 (11188)\n");
@@ -2332,6 +2344,8 @@ Msg("Find size of fptr_png_176 (11188)\n");
 CheckTypeSize(png_progressive_row_ptr,4, 11189, 2)
 #elif __x86_64__
 CheckTypeSize(png_progressive_row_ptr,8, 11189, 11)
+#elif __ia64__
+CheckTypeSize(png_progressive_row_ptr,8, 11189, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11189,0);
 Msg("Find size of png_progressive_row_ptr (11189)\n");
@@ -2341,6 +2355,8 @@ Msg("Find size of png_progressive_row_ptr (11189)\n");
 CheckTypeSize(png_progressive_end_ptr,4, 11190, 2)
 #elif __x86_64__
 CheckTypeSize(png_progressive_end_ptr,8, 11190, 11)
+#elif __ia64__
+CheckTypeSize(png_progressive_end_ptr,8, 11190, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11190,0);
 Msg("Find size of png_progressive_end_ptr (11190)\n");
@@ -2366,6 +2382,16 @@ CheckMemberSize(struct png_color_8_struct,gray,1,11,40970)
 CheckOffset(struct png_color_8_struct,gray,3,11,40970)
 CheckMemberSize(struct png_color_8_struct,alpha,1,11,40971)
 CheckOffset(struct png_color_8_struct,alpha,4,11,40971)
+#elif __ia64__
+CheckTypeSize(struct png_color_8_struct,5, 11191, 3)
+CheckMemberSize(struct png_color_8_struct,green,1,3,40968)
+CheckOffset(struct png_color_8_struct,green,1,3,40968)
+CheckMemberSize(struct png_color_8_struct,blue,1,3,40969)
+CheckOffset(struct png_color_8_struct,blue,2,3,40969)
+CheckMemberSize(struct png_color_8_struct,gray,1,3,40970)
+CheckOffset(struct png_color_8_struct,gray,3,3,40970)
+CheckMemberSize(struct png_color_8_struct,alpha,1,3,40971)
+CheckOffset(struct png_color_8_struct,alpha,4,3,40971)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11191,0);
 Msg("Find size of png_color_8_struct (11191)\n");
@@ -2375,6 +2401,8 @@ Msg("Find size of png_color_8_struct (11191)\n");
 CheckTypeSize(png_color_8,5, 11192, 2)
 #elif __x86_64__
 CheckTypeSize(png_color_8,5, 11192, 11)
+#elif __ia64__
+CheckTypeSize(png_color_8,5, 11192, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11192,0);
 Msg("Find size of png_color_8 (11192)\n");
@@ -2384,6 +2412,8 @@ Msg("Find size of png_color_8 (11192)\n");
 CheckTypeSize(png_color_8 *,4, 11193, 2)
 #elif __x86_64__
 CheckTypeSize(png_color_8 *,8, 11193, 11)
+#elif __ia64__
+CheckTypeSize(png_color_8 *,8, 11193, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11193,0);
 Msg("Find size of png_color_8 * (11193)\n");
@@ -2393,6 +2423,8 @@ Msg("Find size of png_color_8 * (11193)\n");
 CheckTypeSize(png_color_8p,4, 11194, 2)
 #elif __x86_64__
 CheckTypeSize(png_color_8p,8, 11194, 11)
+#elif __ia64__
+CheckTypeSize(png_color_8p,8, 11194, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11194,0);
 Msg("Find size of png_color_8p (11194)\n");
@@ -2401,7 +2433,9 @@ Msg("Find size of png_color_8p (11194)\n");
 #if __i386__
 CheckTypeSize(png_int_32,4, 11195, 2)
 #elif __x86_64__
-CheckTypeSize(png_int_32,8, 11195, 11)
+CheckTypeSize(png_int_32,4, 11195, 11)
+#elif __ia64__
+CheckTypeSize(png_int_32,4, 11195, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11195,0);
 Msg("Find size of png_int_32 (11195)\n");
@@ -2411,6 +2445,8 @@ Msg("Find size of png_int_32 (11195)\n");
 CheckTypeSize(png_charp,4, 11196, 2)
 #elif __x86_64__
 CheckTypeSize(png_charp,8, 11196, 11)
+#elif __ia64__
+CheckTypeSize(png_charp,8, 11196, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11196,0);
 Msg("Find size of png_charp (11196)\n");
@@ -2420,6 +2456,8 @@ Msg("Find size of png_charp (11196)\n");
 CheckTypeSize(png_color_8p *,4, 11197, 2)
 #elif __x86_64__
 CheckTypeSize(png_color_8p *,8, 11197, 11)
+#elif __ia64__
+CheckTypeSize(png_color_8p *,8, 11197, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11197,0);
 Msg("Find size of png_color_8p * (11197)\n");
@@ -2429,6 +2467,8 @@ Msg("Find size of png_color_8p * (11197)\n");
 CheckTypeSize(png_size_t,4, 11198, 2)
 #elif __x86_64__
 CheckTypeSize(png_size_t,8, 11198, 11)
+#elif __ia64__
+CheckTypeSize(png_size_t,8, 11198, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11198,0);
 Msg("Find size of png_size_t (11198)\n");
@@ -2450,6 +2490,14 @@ CheckMemberSize(struct png_text_struct,text,8,11,40974)
 CheckOffset(struct png_text_struct,text,16,11,40974)
 CheckMemberSize(struct png_text_struct,text_length,8,11,40975)
 CheckOffset(struct png_text_struct,text_length,24,11,40975)
+#elif __ia64__
+CheckTypeSize(struct png_text_struct,32, 11199, 3)
+CheckMemberSize(struct png_text_struct,key,8,3,40973)
+CheckOffset(struct png_text_struct,key,8,3,40973)
+CheckMemberSize(struct png_text_struct,text,8,3,40974)
+CheckOffset(struct png_text_struct,text,16,3,40974)
+CheckMemberSize(struct png_text_struct,text_length,8,3,40975)
+CheckOffset(struct png_text_struct,text_length,24,3,40975)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11199,0);
 Msg("Find size of png_text_struct (11199)\n");
@@ -2459,6 +2507,8 @@ Msg("Find size of png_text_struct (11199)\n");
 CheckTypeSize(png_text,16, 11200, 2)
 #elif __x86_64__
 CheckTypeSize(png_text,32, 11200, 11)
+#elif __ia64__
+CheckTypeSize(png_text,32, 11200, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11200,0);
 Msg("Find size of png_text (11200)\n");
@@ -2468,6 +2518,8 @@ Msg("Find size of png_text (11200)\n");
 CheckTypeSize(png_text *,4, 11201, 2)
 #elif __x86_64__
 CheckTypeSize(png_text *,8, 11201, 11)
+#elif __ia64__
+CheckTypeSize(png_text *,8, 11201, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11201,0);
 Msg("Find size of png_text * (11201)\n");
@@ -2477,6 +2529,8 @@ Msg("Find size of png_text * (11201)\n");
 CheckTypeSize(png_textp,4, 11202, 2)
 #elif __x86_64__
 CheckTypeSize(png_textp,8, 11202, 11)
+#elif __ia64__
+CheckTypeSize(png_textp,8, 11202, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11202,0);
 Msg("Find size of png_textp (11202)\n");
@@ -2486,6 +2540,8 @@ Msg("Find size of png_textp (11202)\n");
 CheckTypeSize(png_textp *,4, 11203, 2)
 #elif __x86_64__
 CheckTypeSize(png_textp *,8, 11203, 11)
+#elif __ia64__
+CheckTypeSize(png_textp *,8, 11203, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11203,0);
 Msg("Find size of png_textp * (11203)\n");
@@ -2493,6 +2549,7 @@ Msg("Find size of png_textp * (11203)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11204,0);
 Msg("Find size of png_byte * * (11204)\n");
@@ -2502,12 +2559,23 @@ Msg("Find size of png_byte * * (11204)\n");
 CheckTypeSize(png_bytepp,4, 11205, 2)
 #elif __x86_64__
 CheckTypeSize(png_bytepp,8, 11205, 11)
+#elif __ia64__
+CheckTypeSize(png_bytepp,8, 11205, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11205,0);
 Msg("Find size of png_bytepp (11205)\n");
 #endif
 
-#if 1
+#if __i386__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __x86_64__
+#elif __s390x__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11206,0);
+Msg("Find size of const char[18] (11206)\n");
 #endif
 
 #if __i386__
@@ -2542,6 +2610,16 @@ CheckMemberSize(struct png_color_16_struct,blue,2,11,40979)
 CheckOffset(struct png_color_16_struct,blue,6,11,40979)
 CheckMemberSize(struct png_color_16_struct,gray,2,11,40980)
 CheckOffset(struct png_color_16_struct,gray,8,11,40980)
+#elif __ia64__
+CheckTypeSize(struct png_color_16_struct,10, 11208, 3)
+CheckMemberSize(struct png_color_16_struct,red,2,3,40977)
+CheckOffset(struct png_color_16_struct,red,2,3,40977)
+CheckMemberSize(struct png_color_16_struct,green,2,3,40978)
+CheckOffset(struct png_color_16_struct,green,4,3,40978)
+CheckMemberSize(struct png_color_16_struct,blue,2,3,40979)
+CheckOffset(struct png_color_16_struct,blue,6,3,40979)
+CheckMemberSize(struct png_color_16_struct,gray,2,3,40980)
+CheckOffset(struct png_color_16_struct,gray,8,3,40980)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11208,0);
 Msg("Find size of png_color_16_struct (11208)\n");
@@ -2551,6 +2629,8 @@ Msg("Find size of png_color_16_struct (11208)\n");
 CheckTypeSize(png_uint_16,2, 11210, 2)
 #elif __x86_64__
 CheckTypeSize(png_uint_16,2, 11210, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_16,2, 11210, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11210,0);
 Msg("Find size of png_uint_16 (11210)\n");
@@ -2560,6 +2640,8 @@ Msg("Find size of png_uint_16 (11210)\n");
 CheckTypeSize(png_color_16,10, 11211, 2)
 #elif __x86_64__
 CheckTypeSize(png_color_16,10, 11211, 11)
+#elif __ia64__
+CheckTypeSize(png_color_16,10, 11211, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11211,0);
 Msg("Find size of png_color_16 (11211)\n");
@@ -2569,6 +2651,8 @@ Msg("Find size of png_color_16 (11211)\n");
 CheckTypeSize(png_color_16 *,4, 11212, 2)
 #elif __x86_64__
 CheckTypeSize(png_color_16 *,8, 11212, 11)
+#elif __ia64__
+CheckTypeSize(png_color_16 *,8, 11212, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11212,0);
 Msg("Find size of png_color_16 * (11212)\n");
@@ -2578,6 +2662,8 @@ Msg("Find size of png_color_16 * (11212)\n");
 CheckTypeSize(png_color_16p,4, 11213, 2)
 #elif __x86_64__
 CheckTypeSize(png_color_16p,8, 11213, 11)
+#elif __ia64__
+CheckTypeSize(png_color_16p,8, 11213, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11213,0);
 Msg("Find size of png_color_16p (11213)\n");
@@ -2587,6 +2673,8 @@ Msg("Find size of png_color_16p (11213)\n");
 CheckTypeSize(png_uint_32 *,4, 11214, 2)
 #elif __x86_64__
 CheckTypeSize(png_uint_32 *,8, 11214, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_32 *,8, 11214, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11214,0);
 Msg("Find size of png_uint_32 * (11214)\n");
@@ -2604,6 +2692,12 @@ CheckMemberSize(struct png_color_struct,green,1,11,40982)
 CheckOffset(struct png_color_struct,green,1,11,40982)
 CheckMemberSize(struct png_color_struct,blue,1,11,40983)
 CheckOffset(struct png_color_struct,blue,2,11,40983)
+#elif __ia64__
+CheckTypeSize(struct png_color_struct,3, 11215, 3)
+CheckMemberSize(struct png_color_struct,green,1,3,40982)
+CheckOffset(struct png_color_struct,green,1,3,40982)
+CheckMemberSize(struct png_color_struct,blue,1,3,40983)
+CheckOffset(struct png_color_struct,blue,2,3,40983)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11215,0);
 Msg("Find size of png_color_struct (11215)\n");
@@ -2613,6 +2707,8 @@ Msg("Find size of png_color_struct (11215)\n");
 CheckTypeSize(png_color,3, 11216, 2)
 #elif __x86_64__
 CheckTypeSize(png_color,3, 11216, 11)
+#elif __ia64__
+CheckTypeSize(png_color,3, 11216, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11216,0);
 Msg("Find size of png_color (11216)\n");
@@ -2622,6 +2718,8 @@ Msg("Find size of png_color (11216)\n");
 CheckTypeSize(png_color *,4, 11217, 2)
 #elif __x86_64__
 CheckTypeSize(png_color *,8, 11217, 11)
+#elif __ia64__
+CheckTypeSize(png_color *,8, 11217, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11217,0);
 Msg("Find size of png_color * (11217)\n");
@@ -2631,6 +2729,8 @@ Msg("Find size of png_color * (11217)\n");
 CheckTypeSize(png_colorp,4, 11218, 2)
 #elif __x86_64__
 CheckTypeSize(png_colorp,8, 11218, 11)
+#elif __ia64__
+CheckTypeSize(png_colorp,8, 11218, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11218,0);
 Msg("Find size of png_colorp (11218)\n");
@@ -2640,6 +2740,8 @@ Msg("Find size of png_colorp (11218)\n");
 CheckTypeSize(png_colorp *,4, 11219, 2)
 #elif __x86_64__
 CheckTypeSize(png_colorp *,8, 11219, 11)
+#elif __ia64__
+CheckTypeSize(png_colorp *,8, 11219, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11219,0);
 Msg("Find size of png_colorp * (11219)\n");
@@ -2649,6 +2751,8 @@ Msg("Find size of png_colorp * (11219)\n");
 CheckTypeSize(png_const_charp,4, 11220, 2)
 #elif __x86_64__
 CheckTypeSize(png_const_charp,8, 11220, 11)
+#elif __ia64__
+CheckTypeSize(png_const_charp,8, 11220, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11220,0);
 Msg("Find size of png_const_charp (11220)\n");
@@ -2656,6 +2760,7 @@ Msg("Find size of png_const_charp (11220)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11221,0);
 Msg("Find size of fptr_png_122 (11221)\n");
@@ -2665,6 +2770,8 @@ Msg("Find size of fptr_png_122 (11221)\n");
 CheckTypeSize(png_error_ptr,4, 11222, 2)
 #elif __x86_64__
 CheckTypeSize(png_error_ptr,8, 11222, 11)
+#elif __ia64__
+CheckTypeSize(png_error_ptr,8, 11222, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11222,0);
 Msg("Find size of png_error_ptr (11222)\n");
@@ -2672,6 +2779,7 @@ Msg("Find size of png_error_ptr (11222)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11223,0);
 Msg("Find size of fptr_png_2 (11223)\n");
@@ -2681,6 +2789,8 @@ Msg("Find size of fptr_png_2 (11223)\n");
 CheckTypeSize(png_rw_ptr,4, 11224, 2)
 #elif __x86_64__
 CheckTypeSize(png_rw_ptr,8, 11224, 11)
+#elif __ia64__
+CheckTypeSize(png_rw_ptr,8, 11224, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11224,0);
 Msg("Find size of png_rw_ptr (11224)\n");
@@ -2710,6 +2820,18 @@ CheckMemberSize(struct png_time_struct,minute,1,11,40993)
 CheckOffset(struct png_time_struct,minute,5,11,40993)
 CheckMemberSize(struct png_time_struct,second,1,11,40994)
 CheckOffset(struct png_time_struct,second,6,11,40994)
+#elif __ia64__
+CheckTypeSize(struct png_time_struct,8, 11225, 3)
+CheckMemberSize(struct png_time_struct,month,1,3,40990)
+CheckOffset(struct png_time_struct,month,2,3,40990)
+CheckMemberSize(struct png_time_struct,day,1,3,40991)
+CheckOffset(struct png_time_struct,day,3,3,40991)
+CheckMemberSize(struct png_time_struct,hour,1,3,40992)
+CheckOffset(struct png_time_struct,hour,4,3,40992)
+CheckMemberSize(struct png_time_struct,minute,1,3,40993)
+CheckOffset(struct png_time_struct,minute,5,3,40993)
+CheckMemberSize(struct png_time_struct,second,1,3,40994)
+CheckOffset(struct png_time_struct,second,6,3,40994)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11225,0);
 Msg("Find size of png_time_struct (11225)\n");
@@ -2719,6 +2841,8 @@ Msg("Find size of png_time_struct (11225)\n");
 CheckTypeSize(png_time,8, 11226, 2)
 #elif __x86_64__
 CheckTypeSize(png_time,8, 11226, 11)
+#elif __ia64__
+CheckTypeSize(png_time,8, 11226, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11226,0);
 Msg("Find size of png_time (11226)\n");
@@ -2728,6 +2852,8 @@ Msg("Find size of png_time (11226)\n");
 CheckTypeSize(png_time *,4, 11227, 2)
 #elif __x86_64__
 CheckTypeSize(png_time *,8, 11227, 11)
+#elif __ia64__
+CheckTypeSize(png_time *,8, 11227, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11227,0);
 Msg("Find size of png_time * (11227)\n");
@@ -2737,6 +2863,8 @@ Msg("Find size of png_time * (11227)\n");
 CheckTypeSize(png_timep,4, 11228, 2)
 #elif __x86_64__
 CheckTypeSize(png_timep,8, 11228, 11)
+#elif __ia64__
+CheckTypeSize(png_timep,8, 11228, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11228,0);
 Msg("Find size of png_timep (11228)\n");
@@ -2746,6 +2874,8 @@ Msg("Find size of png_timep (11228)\n");
 CheckTypeSize(png_timep *,4, 11229, 2)
 #elif __x86_64__
 CheckTypeSize(png_timep *,8, 11229, 11)
+#elif __ia64__
+CheckTypeSize(png_timep *,8, 11229, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11229,0);
 Msg("Find size of png_timep * (11229)\n");
@@ -2755,6 +2885,8 @@ Msg("Find size of png_timep * (11229)\n");
 CheckTypeSize(png_uint_16 *,4, 11230, 2)
 #elif __x86_64__
 CheckTypeSize(png_uint_16 *,8, 11230, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_16 *,8, 11230, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11230,0);
 Msg("Find size of png_uint_16 * (11230)\n");
@@ -2764,6 +2896,8 @@ Msg("Find size of png_uint_16 * (11230)\n");
 CheckTypeSize(png_uint_16p,4, 11231, 2)
 #elif __x86_64__
 CheckTypeSize(png_uint_16p,8, 11231, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_16p,8, 11231, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11231,0);
 Msg("Find size of png_uint_16p (11231)\n");
@@ -2773,6 +2907,8 @@ Msg("Find size of png_uint_16p (11231)\n");
 CheckTypeSize(png_color_16p *,4, 11232, 2)
 #elif __x86_64__
 CheckTypeSize(png_color_16p *,8, 11232, 11)
+#elif __ia64__
+CheckTypeSize(png_color_16p *,8, 11232, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11232,0);
 Msg("Find size of png_color_16p * (11232)\n");
@@ -2780,6 +2916,7 @@ Msg("Find size of png_color_16p * (11232)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11233,0);
 Msg("Find size of fptr_png_124 (11233)\n");
@@ -2789,6 +2926,8 @@ Msg("Find size of fptr_png_124 (11233)\n");
 CheckTypeSize(png_flush_ptr,4, 11234, 2)
 #elif __x86_64__
 CheckTypeSize(png_flush_ptr,8, 11234, 11)
+#elif __ia64__
+CheckTypeSize(png_flush_ptr,8, 11234, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11234,0);
 Msg("Find size of png_flush_ptr (11234)\n");
@@ -2798,6 +2937,8 @@ Msg("Find size of png_flush_ptr (11234)\n");
 CheckTypeSize(png_uint_16p *,4, 11235, 2)
 #elif __x86_64__
 CheckTypeSize(png_uint_16p *,8, 11235, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_16p *,8, 11235, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11235,0);
 Msg("Find size of png_uint_16p * (11235)\n");
@@ -2807,6 +2948,8 @@ Msg("Find size of png_uint_16p * (11235)\n");
 CheckTypeSize(png_charpp,4, 11236, 2)
 #elif __x86_64__
 CheckTypeSize(png_charpp,8, 11236, 11)
+#elif __ia64__
+CheckTypeSize(png_charpp,8, 11236, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11236,0);
 Msg("Find size of png_charpp (11236)\n");
@@ -2816,6 +2959,8 @@ Msg("Find size of png_charpp (11236)\n");
 CheckTypeSize(png_bytep *,4, 11237, 2)
 #elif __x86_64__
 CheckTypeSize(png_bytep *,8, 11237, 11)
+#elif __ia64__
+CheckTypeSize(png_bytep *,8, 11237, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11237,0);
 Msg("Find size of png_bytep * (11237)\n");
@@ -2823,6 +2968,7 @@ Msg("Find size of png_bytep * (11237)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11238,0);
 Msg("Find size of png_struct * * (11238)\n");
@@ -2832,6 +2978,8 @@ Msg("Find size of png_struct * * (11238)\n");
 CheckTypeSize(png_structpp,4, 11239, 2)
 #elif __x86_64__
 CheckTypeSize(png_structpp,8, 11239, 11)
+#elif __ia64__
+CheckTypeSize(png_structpp,8, 11239, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11239,0);
 Msg("Find size of png_structpp (11239)\n");
@@ -2839,6 +2987,7 @@ Msg("Find size of png_structpp (11239)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11240,0);
 Msg("Find size of png_info * * (11240)\n");
@@ -2848,6 +2997,8 @@ Msg("Find size of png_info * * (11240)\n");
 CheckTypeSize(png_infopp,4, 11241, 2)
 #elif __x86_64__
 CheckTypeSize(png_infopp,8, 11241, 11)
+#elif __ia64__
+CheckTypeSize(png_infopp,8, 11241, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11241,0);
 Msg("Find size of png_infopp (11241)\n");
@@ -2857,6 +3008,8 @@ Msg("Find size of png_infopp (11241)\n");
 CheckTypeSize(png_int_32 *,4, 11242, 2)
 #elif __x86_64__
 CheckTypeSize(png_int_32 *,8, 11242, 11)
+#elif __ia64__
+CheckTypeSize(png_int_32 *,8, 11242, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11242,0);
 Msg("Find size of png_int_32 * (11242)\n");
@@ -2866,6 +3019,8 @@ Msg("Find size of png_int_32 * (11242)\n");
 CheckTypeSize(png_FILE_p,4, 11243, 2)
 #elif __x86_64__
 CheckTypeSize(png_FILE_p,8, 11243, 11)
+#elif __ia64__
+CheckTypeSize(png_FILE_p,8, 11243, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11243,0);
 Msg("Find size of png_FILE_p (11243)\n");
@@ -2884,17 +3039,29 @@ CheckOffset(struct png_row_info_struct,channels,10,2,41000)
 CheckMemberSize(struct png_row_info_struct,pixel_depth,1,2,41001)
 CheckOffset(struct png_row_info_struct,pixel_depth,11,2,41001)
 #elif __x86_64__
-CheckTypeSize(struct png_row_info_struct,24, 11244, 11)
-CheckMemberSize(struct png_row_info_struct,rowbytes,8,11,40997)
-CheckOffset(struct png_row_info_struct,rowbytes,8,11,40997)
+CheckTypeSize(struct png_row_info_struct,12, 11244, 11)
+CheckMemberSize(struct png_row_info_struct,rowbytes,4,11,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,4,11,40997)
 CheckMemberSize(struct png_row_info_struct,color_type,1,11,40998)
-CheckOffset(struct png_row_info_struct,color_type,16,11,40998)
+CheckOffset(struct png_row_info_struct,color_type,8,11,40998)
 CheckMemberSize(struct png_row_info_struct,bit_depth,1,11,40999)
-CheckOffset(struct png_row_info_struct,bit_depth,17,11,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,9,11,40999)
 CheckMemberSize(struct png_row_info_struct,channels,1,11,41000)
-CheckOffset(struct png_row_info_struct,channels,18,11,41000)
+CheckOffset(struct png_row_info_struct,channels,10,11,41000)
 CheckMemberSize(struct png_row_info_struct,pixel_depth,1,11,41001)
-CheckOffset(struct png_row_info_struct,pixel_depth,19,11,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,11,11,41001)
+#elif __ia64__
+CheckTypeSize(struct png_row_info_struct,12, 11244, 3)
+CheckMemberSize(struct png_row_info_struct,rowbytes,4,3,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,4,3,40997)
+CheckMemberSize(struct png_row_info_struct,color_type,1,3,40998)
+CheckOffset(struct png_row_info_struct,color_type,8,3,40998)
+CheckMemberSize(struct png_row_info_struct,bit_depth,1,3,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,9,3,40999)
+CheckMemberSize(struct png_row_info_struct,channels,1,3,41000)
+CheckOffset(struct png_row_info_struct,channels,10,3,41000)
+CheckMemberSize(struct png_row_info_struct,pixel_depth,1,3,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,11,3,41001)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11244,0);
 Msg("Find size of png_row_info_struct (11244)\n");
@@ -2903,7 +3070,9 @@ Msg("Find size of png_row_info_struct (11244)\n");
 #if __i386__
 CheckTypeSize(png_row_info,12, 11245, 2)
 #elif __x86_64__
-CheckTypeSize(png_row_info,24, 11245, 11)
+CheckTypeSize(png_row_info,12, 11245, 11)
+#elif __ia64__
+CheckTypeSize(png_row_info,12, 11245, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11245,0);
 Msg("Find size of png_row_info (11245)\n");
@@ -2913,6 +3082,8 @@ Msg("Find size of png_row_info (11245)\n");
 CheckTypeSize(png_row_info *,4, 11246, 2)
 #elif __x86_64__
 CheckTypeSize(png_row_info *,8, 11246, 11)
+#elif __ia64__
+CheckTypeSize(png_row_info *,8, 11246, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11246,0);
 Msg("Find size of png_row_info * (11246)\n");
@@ -2922,6 +3093,8 @@ Msg("Find size of png_row_info * (11246)\n");
 CheckTypeSize(png_row_infop,4, 11247, 2)
 #elif __x86_64__
 CheckTypeSize(png_row_infop,8, 11247, 11)
+#elif __ia64__
+CheckTypeSize(png_row_infop,8, 11247, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11247,0);
 Msg("Find size of png_row_infop (11247)\n");
@@ -2931,6 +3104,359 @@ Msg("Find size of png_row_infop (11247)\n");
 CheckTypeSize(version_1_2_8,4, 11248, 2)
 #elif 1
 CheckTypeSize(version_1_2_8,8, 11248, 1)
+#endif
+
+#if __i386__
+CheckTypeSize(png_uint_32p,4, 16182, 2)
+#elif __x86_64__
+CheckTypeSize(png_uint_32p,8, 16182, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_32p,8, 16182, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16182,0);
+Msg("Find size of png_uint_32p (16182)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16183,0);
+Msg("Find size of png_uint_16 * * (16183)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_uint_16pp,4, 16184, 2)
+#elif __x86_64__
+CheckTypeSize(png_uint_16pp,8, 16184, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_16pp,8, 16184, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16184,0);
+Msg("Find size of png_uint_16pp (16184)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_fixed_point,4, 16185, 2)
+#elif __x86_64__
+CheckTypeSize(png_fixed_point,4, 16185, 11)
+#elif __ia64__
+CheckTypeSize(png_fixed_point,4, 16185, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16185,0);
+Msg("Find size of png_fixed_point (16185)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_doublep,4, 16186, 2)
+#elif __x86_64__
+CheckTypeSize(png_doublep,8, 16186, 11)
+#elif __ia64__
+CheckTypeSize(png_doublep,8, 16186, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16186,0);
+Msg("Find size of png_doublep (16186)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(charf *,4, 16187, 2)
+#elif __x86_64__
+CheckTypeSize(charf *,8, 16187, 11)
+#elif __ia64__
+CheckTypeSize(charf *,8, 16187, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16187,0);
+Msg("Find size of charf * (16187)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_zcharp,4, 16188, 2)
+#elif __x86_64__
+CheckTypeSize(png_zcharp,8, 16188, 11)
+#elif __ia64__
+CheckTypeSize(png_zcharp,8, 16188, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16188,0);
+Msg("Find size of png_zcharp (16188)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_fixed_point *,4, 16189, 2)
+#elif __x86_64__
+CheckTypeSize(png_fixed_point *,8, 16189, 11)
+#elif __ia64__
+CheckTypeSize(png_fixed_point *,8, 16189, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16189,0);
+Msg("Find size of png_fixed_point * (16189)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_fixed_point_p,4, 16190, 2)
+#elif __x86_64__
+CheckTypeSize(png_fixed_point_p,8, 16190, 11)
+#elif __ia64__
+CheckTypeSize(png_fixed_point_p,8, 16190, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16190,0);
+Msg("Find size of png_fixed_point_p (16190)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_int_32p,4, 16191, 2)
+#elif __x86_64__
+CheckTypeSize(png_int_32p,8, 16191, 11)
+#elif __ia64__
+CheckTypeSize(png_int_32p,8, 16191, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16191,0);
+Msg("Find size of png_int_32p (16191)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_zstreamp,4, 16192, 2)
+#elif __x86_64__
+CheckTypeSize(png_zstreamp,8, 16192, 11)
+#elif __ia64__
+CheckTypeSize(png_zstreamp,8, 16192, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16192,0);
+Msg("Find size of png_zstreamp (16192)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_int_16,2, 16193, 2)
+#elif __x86_64__
+CheckTypeSize(png_int_16,2, 16193, 11)
+#elif __ia64__
+CheckTypeSize(png_int_16,2, 16193, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16193,0);
+Msg("Find size of png_int_16 (16193)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_int_16 *,4, 16194, 2)
+#elif __x86_64__
+CheckTypeSize(png_int_16 *,8, 16194, 11)
+#elif __ia64__
+CheckTypeSize(png_int_16 *,8, 16194, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16194,0);
+Msg("Find size of png_int_16 * (16194)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_int_16p,4, 16195, 2)
+#elif __x86_64__
+CheckTypeSize(png_int_16p,8, 16195, 11)
+#elif __ia64__
+CheckTypeSize(png_int_16p,8, 16195, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16195,0);
+Msg("Find size of png_int_16p (16195)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16196,0);
+Msg("Find size of png_int_16 * * (16196)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_int_16pp,4, 16197, 2)
+#elif __x86_64__
+CheckTypeSize(png_int_16pp,8, 16197, 11)
+#elif __ia64__
+CheckTypeSize(png_int_16pp,8, 16197, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16197,0);
+Msg("Find size of png_int_16pp (16197)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16198,0);
+Msg("Find size of png_int_32 * * (16198)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_int_32pp,4, 16199, 2)
+#elif __x86_64__
+CheckTypeSize(png_int_32pp,8, 16199, 11)
+#elif __ia64__
+CheckTypeSize(png_int_32pp,8, 16199, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16199,0);
+Msg("Find size of png_int_32pp (16199)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16200,0);
+Msg("Find size of png_uint_32 * * (16200)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_uint_32pp,4, 16201, 2)
+#elif __x86_64__
+CheckTypeSize(png_uint_32pp,8, 16201, 11)
+#elif __ia64__
+CheckTypeSize(png_uint_32pp,8, 16201, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16201,0);
+Msg("Find size of png_uint_32pp (16201)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16202,0);
+Msg("Find size of charf * * (16202)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_zcharpp,4, 16203, 2)
+#elif __x86_64__
+CheckTypeSize(png_zcharpp,8, 16203, 11)
+#elif __ia64__
+CheckTypeSize(png_zcharpp,8, 16203, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16203,0);
+Msg("Find size of png_zcharpp (16203)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_charppp,4, 16205, 2)
+#elif __x86_64__
+CheckTypeSize(png_charppp,8, 16205, 11)
+#elif __ia64__
+CheckTypeSize(png_charppp,8, 16205, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16205,0);
+Msg("Find size of png_charppp (16205)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_const_charpp,4, 16207, 2)
+#elif __x86_64__
+CheckTypeSize(png_const_charpp,8, 16207, 11)
+#elif __ia64__
+CheckTypeSize(png_const_charpp,8, 16207, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16207,0);
+Msg("Find size of png_const_charpp (16207)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_doublepp,4, 16209, 2)
+#elif __x86_64__
+CheckTypeSize(png_doublepp,8, 16209, 11)
+#elif __ia64__
+CheckTypeSize(png_doublepp,8, 16209, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16209,0);
+Msg("Find size of png_doublepp (16209)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_colorpp,4, 16210, 2)
+#elif __x86_64__
+CheckTypeSize(png_colorpp,8, 16210, 11)
+#elif __ia64__
+CheckTypeSize(png_colorpp,8, 16210, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16210,0);
+Msg("Find size of png_colorpp (16210)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_color_16pp,4, 16211, 2)
+#elif __x86_64__
+CheckTypeSize(png_color_16pp,8, 16211, 11)
+#elif __ia64__
+CheckTypeSize(png_color_16pp,8, 16211, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16211,0);
+Msg("Find size of png_color_16pp (16211)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_color_8pp,4, 16212, 2)
+#elif __x86_64__
+CheckTypeSize(png_color_8pp,8, 16212, 11)
+#elif __ia64__
+CheckTypeSize(png_color_8pp,8, 16212, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16212,0);
+Msg("Find size of png_color_8pp (16212)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16213,0);
+Msg("Find size of png_fixed_point * * (16213)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_fixed_point_pp,4, 16214, 2)
+#elif __x86_64__
+CheckTypeSize(png_fixed_point_pp,8, 16214, 11)
+#elif __ia64__
+CheckTypeSize(png_fixed_point_pp,8, 16214, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16214,0);
+Msg("Find size of png_fixed_point_pp (16214)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16215,0);
+Msg("Find size of png_row_info * * (16215)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_row_infopp,4, 16216, 2)
+#elif __x86_64__
+CheckTypeSize(png_row_infopp,8, 16216, 11)
+#elif __ia64__
+CheckTypeSize(png_row_infopp,8, 16216, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16216,0);
+Msg("Find size of png_row_infopp (16216)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_textpp,4, 16217, 2)
+#elif __x86_64__
+CheckTypeSize(png_textpp,8, 16217, 11)
+#elif __ia64__
+CheckTypeSize(png_textpp,8, 16217, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16217,0);
+Msg("Find size of png_textpp (16217)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(png_timepp,4, 16218, 2)
+#elif __x86_64__
+CheckTypeSize(png_timepp,8, 16218, 11)
+#elif __ia64__
+CheckTypeSize(png_timepp,8, 16218, 3)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16218,0);
+Msg("Find size of png_timepp (16218)\n");
 #endif
 
 extern void png_set_gAMA_db(png_structp, png_infop, double);

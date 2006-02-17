@@ -15,10 +15,11 @@ int intrinsic()
 {
 #endif
 int cnt=0;
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 #endif
 
+printf("Checking Intrinsic types\n");
 #if __i386__
 CheckTypeSize(void,1,1,2)
 #elif __ia64__
@@ -331,28 +332,42 @@ CheckTypeSize(float complex,8,11001,12)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11001,0);
 #endif
 
-#if 1
-CheckTypeSize(short unsigned int,2,11079,1)
+#if __i386__
+CheckTypeSize(long unsigned int,4,11186,2)
+#elif __ia64__
+CheckTypeSize(long unsigned int,8,11186,3)
+#elif __x86_64__
+CheckTypeSize(long unsigned int,8,11186,11)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11079,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11186,0);
 #endif
 
 #if __i386__
-CheckTypeSize(long unsigned int,4,11099,2)
+CheckTypeSize(short unsigned int,2,11209,2)
 #elif __ia64__
-CheckTypeSize(long unsigned int,8,11099,3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(long unsigned int,4,11099,6)
-#elif __powerpc64__
-CheckTypeSize(long unsigned int,8,11099,9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(long unsigned int,4,11099,10)
+CheckTypeSize(short unsigned int,2,11209,3)
 #elif __x86_64__
-CheckTypeSize(long unsigned int,8,11099,11)
-#elif __s390x__
-CheckTypeSize(long unsigned int,8,11099,12)
+CheckTypeSize(short unsigned int,2,11209,11)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11099,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11209,0);
+#endif
+
+#if __i386__
+CheckTypeSize(short int,2,11264,2)
+#elif __ia64__
+CheckTypeSize(short int,2,11264,3)
+#elif __x86_64__
+CheckTypeSize(short int,2,11264,11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11264,0);
+#endif
+
+#if __i386__
+CheckTypeSize(long long unsigned int,8,11620,2)
+#elif __x86_64__
+CheckTypeSize(long long unsigned int,8,11620,11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15127,0);
 #endif
 
 #ifdef TET_TEST
@@ -362,7 +377,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d intrinsic types\n",cnt);
+printf("%d tests passed out of %d tests intrinsic types\n\n",pcnt,cnt);
 return cnt;
 #endif
 

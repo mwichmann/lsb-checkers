@@ -474,7 +474,7 @@ CheckTypeSize(struct _IceListenObj *,0, 7710, 9)
 #elif __s390x__
 CheckTypeSize(struct _IceListenObj *,0, 7710, 12)
 #elif __x86_64__
-CheckTypeSize(struct _IceListenObj *,0, 7710, 11)
+CheckTypeSize(struct _IceListenObj *,8, 7710, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7710,0);
 Msg("Find size of _IceListenObj * (7710)\n");

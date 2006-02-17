@@ -20,11 +20,12 @@ int termios_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in termios.h\n");
 #endif
 
+printf("Checking data structures in termios.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NCCS
 	CompareConstant(NCCS,32,1776,architecture)
@@ -4201,6 +4202,32 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9187,0);
 Msg("Find size of termios (9187)\n");
 #endif
 
+extern speed_t cfgetispeed_db(const struct termios *);
+CheckInterfacedef(cfgetispeed,cfgetispeed_db);
+extern speed_t cfgetospeed_db(const struct termios *);
+CheckInterfacedef(cfgetospeed,cfgetospeed_db);
+extern void cfmakeraw_db(struct termios *);
+CheckInterfacedef(cfmakeraw,cfmakeraw_db);
+extern int cfsetispeed_db(struct termios *, speed_t);
+CheckInterfacedef(cfsetispeed,cfsetispeed_db);
+extern int cfsetospeed_db(struct termios *, speed_t);
+CheckInterfacedef(cfsetospeed,cfsetospeed_db);
+extern int cfsetspeed_db(struct termios *, speed_t);
+CheckInterfacedef(cfsetspeed,cfsetspeed_db);
+extern int tcflow_db(int, int);
+CheckInterfacedef(tcflow,tcflow_db);
+extern int tcflush_db(int, int);
+CheckInterfacedef(tcflush,tcflush_db);
+extern pid_t tcgetsid_db(int);
+CheckInterfacedef(tcgetsid,tcgetsid_db);
+extern int tcsendbreak_db(int, int);
+CheckInterfacedef(tcsendbreak,tcsendbreak_db);
+extern int tcsetattr_db(int, int, const struct termios *);
+CheckInterfacedef(tcsetattr,tcsetattr_db);
+extern int tcdrain_db(int);
+CheckInterfacedef(tcdrain,tcdrain_db);
+extern int tcgetattr_db(int, struct termios *);
+CheckInterfacedef(tcgetattr,tcgetattr_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -4208,7 +4235,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in termios.h\n",cnt);
+printf("%d tests passed out of %d tests in termios.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -4,29 +4,13 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
-
-struct _XftDraw {
-};
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
+#define PANGO_DISABLE_DEPRECATED
 
 struct _PangoXftRendererPrivate {
-};
-
-struct _FcPattern {
-};
-
-struct _XftColor {
-};
-
-struct _XftGlyphSpec {
-};
-
-struct _XTrapezoid {
-};
-
-struct _XftFont {
-};
-
-struct _PangoXftRenderer {
 };
 
 struct _PangoXftFontMap { };
@@ -116,6 +100,8 @@ cnt++;
 CheckTypeSize(XftDraw *,4, 12555, 2)
 #elif __x86_64__
 CheckTypeSize(XftDraw *,8, 12555, 11)
+#elif __ia64__
+CheckTypeSize(XftDraw *,8, 12555, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12555,0);
 Msg("Find size of XftDraw * (12555)\n");
@@ -125,6 +111,8 @@ Msg("Find size of XftDraw * (12555)\n");
 CheckTypeSize(XftColor *,4, 12558, 2)
 #elif __x86_64__
 CheckTypeSize(XftColor *,8, 12558, 11)
+#elif __ia64__
+CheckTypeSize(XftColor *,8, 12558, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12558,0);
 Msg("Find size of XftColor * (12558)\n");
@@ -134,6 +122,8 @@ Msg("Find size of XftColor * (12558)\n");
 CheckTypeSize(PangoXftRenderer,48, 12560, 2)
 #elif __x86_64__
 CheckTypeSize(PangoXftRenderer,88, 12560, 11)
+#elif __ia64__
+CheckTypeSize(PangoXftRenderer,88, 12560, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12560,0);
 Msg("Find size of PangoXftRenderer (12560)\n");
@@ -143,6 +133,8 @@ Msg("Find size of PangoXftRenderer (12560)\n");
 CheckTypeSize(PangoXftRenderer *,4, 12561, 2)
 #elif __x86_64__
 CheckTypeSize(PangoXftRenderer *,8, 12561, 11)
+#elif __ia64__
+CheckTypeSize(PangoXftRenderer *,8, 12561, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12561,0);
 Msg("Find size of PangoXftRenderer * (12561)\n");
@@ -150,6 +142,7 @@ Msg("Find size of PangoXftRenderer * (12561)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12563,0);
 Msg("Find size of fptr_pangoxft_9 (12563)\n");
@@ -159,6 +152,8 @@ Msg("Find size of fptr_pangoxft_9 (12563)\n");
 CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 2)
 #elif __x86_64__
 CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 11)
+#elif __ia64__
+CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12564,0);
 Msg("Find size of PangoXftSubstituteFunc (12564)\n");
@@ -168,6 +163,8 @@ Msg("Find size of PangoXftSubstituteFunc (12564)\n");
 CheckTypeSize(PangoXftFontMap,0, 12566, 2)
 #elif __x86_64__
 CheckTypeSize(PangoXftFontMap,0, 12566, 11)
+#elif __ia64__
+CheckTypeSize(PangoXftFontMap,0, 12566, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12566,0);
 Msg("Find size of PangoXftFontMap (12566)\n");
@@ -185,6 +182,12 @@ CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,11,43295)
 CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,11,43295)
 CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,11,43300)
 CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,11,43300)
+#elif __ia64__
+CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 3)
+CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,3,43295)
+CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,3,43295)
+CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,3,43300)
+CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,3,43300)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12567,0);
 Msg("Find size of _PangoXftRendererClass (12567)\n");
@@ -194,6 +197,8 @@ Msg("Find size of _PangoXftRendererClass (12567)\n");
 CheckTypeSize(XTrapezoid *,4, 12570, 2)
 #elif __x86_64__
 CheckTypeSize(XTrapezoid *,8, 12570, 11)
+#elif __ia64__
+CheckTypeSize(XTrapezoid *,8, 12570, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12570,0);
 Msg("Find size of XTrapezoid * (12570)\n");
@@ -201,6 +206,7 @@ Msg("Find size of XTrapezoid * (12570)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12571,0);
 Msg("Find size of fptr_pangoxft_74 (12571)\n");
@@ -210,6 +216,8 @@ Msg("Find size of fptr_pangoxft_74 (12571)\n");
 CheckTypeSize(XftFont *,4, 12574, 2)
 #elif __x86_64__
 CheckTypeSize(XftFont *,8, 12574, 11)
+#elif __ia64__
+CheckTypeSize(XftFont *,8, 12574, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12574,0);
 Msg("Find size of XftFont * (12574)\n");
@@ -219,6 +227,8 @@ Msg("Find size of XftFont * (12574)\n");
 CheckTypeSize(XftGlyphSpec *,4, 12577, 2)
 #elif __x86_64__
 CheckTypeSize(XftGlyphSpec *,8, 12577, 11)
+#elif __ia64__
+CheckTypeSize(XftGlyphSpec *,8, 12577, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12577,0);
 Msg("Find size of XftGlyphSpec * (12577)\n");
@@ -226,6 +236,7 @@ Msg("Find size of XftGlyphSpec * (12577)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12578,0);
 Msg("Find size of fptr_pangoxft_85 (12578)\n");
@@ -235,6 +246,8 @@ Msg("Find size of fptr_pangoxft_85 (12578)\n");
 CheckTypeSize(PangoXftRendererClass,132, 12579, 2)
 #elif __x86_64__
 CheckTypeSize(PangoXftRendererClass,264, 12579, 11)
+#elif __ia64__
+CheckTypeSize(PangoXftRendererClass,264, 12579, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12579,0);
 Msg("Find size of PangoXftRendererClass (12579)\n");
@@ -244,6 +257,8 @@ Msg("Find size of PangoXftRendererClass (12579)\n");
 CheckTypeSize(PangoFcFontClass,0, 12581, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcFontClass,0, 12581, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcFontClass,0, 12581, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12581,0);
 Msg("Find size of PangoFcFontClass (12581)\n");
@@ -253,6 +268,8 @@ Msg("Find size of PangoFcFontClass (12581)\n");
 CheckTypeSize(PangoFcFont,0, 12583, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcFont,0, 12583, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcFont,0, 12583, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12583,0);
 Msg("Find size of PangoFcFont (12583)\n");
@@ -262,6 +279,8 @@ Msg("Find size of PangoFcFont (12583)\n");
 CheckTypeSize(PangoXftFont,0, 12585, 2)
 #elif __x86_64__
 CheckTypeSize(PangoXftFont,0, 12585, 11)
+#elif __ia64__
+CheckTypeSize(PangoXftFont,0, 12585, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12585,0);
 Msg("Find size of PangoXftFont (12585)\n");
@@ -271,6 +290,8 @@ Msg("Find size of PangoXftFont (12585)\n");
 CheckTypeSize(PangoXftRendererPrivate,0, 12587, 2)
 #elif __x86_64__
 CheckTypeSize(PangoXftRendererPrivate,0, 12587, 11)
+#elif __ia64__
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12587,0);
 Msg("Find size of PangoXftRendererPrivate (12587)\n");

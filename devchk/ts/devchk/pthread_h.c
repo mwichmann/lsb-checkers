@@ -4,6 +4,12 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+extern int pthread_setschedprio (pthread_t __target_thread, int __prio);
+extern int __register_atfork (void (*__prepare) (void),
+                              void (*__parent) (void),
+                              void (*__child) (void),
+                              void *__dso_handle);
+
 #include "pthread.h"
 
 
@@ -18,11 +24,12 @@ int pthread_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in pthread.h\n");
 #endif
 
+printf("Checking data structures in pthread.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for PTHREAD_MUTEX_INITIALIZER */
 #endif
@@ -313,12 +320,19 @@ Msg("Find size of _pthread_cleanup_buffer (6931)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(pthread_rwlock_t *,4, 9056, 2)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(pthread_rwlock_t *,0, 9056, 6)
 #elif __ia64__
+CheckTypeSize(pthread_rwlock_t *,0, 9056, 3)
 #elif __s390__ && !__s390x__
+CheckTypeSize(pthread_rwlock_t *,0, 9056, 10)
 #elif __powerpc64__
+CheckTypeSize(pthread_rwlock_t *,0, 9056, 9)
 #elif __s390x__
+CheckTypeSize(pthread_rwlock_t *,0, 9056, 12)
 #elif __x86_64__
+CheckTypeSize(pthread_rwlock_t *,8, 9056, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9056,0);
 Msg("Find size of pthread_rwlock_t * (9056)\n");
@@ -719,6 +733,172 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
 Msg("Find size of const pthread_rwlockattr_t * (10811)\n");
 #endif
 
+extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
+CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
+extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*__routine)(void *)
+, void *);
+CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
+extern int pthread_atfork_db(void(*prepare)(void)
+, void(*parent)(void)
+, void(*child)(void)
+);
+CheckInterfacedef(pthread_atfork,pthread_atfork_db);
+extern int pthread_attr_destroy_db(pthread_attr_t *);
+CheckInterfacedef(pthread_attr_destroy,pthread_attr_destroy_db);
+extern int pthread_attr_getdetachstate_db(const pthread_attr_t *, int *);
+CheckInterfacedef(pthread_attr_getdetachstate,pthread_attr_getdetachstate_db);
+extern int pthread_attr_getinheritsched_db(const pthread_attr_t *, int *);
+CheckInterfacedef(pthread_attr_getinheritsched,pthread_attr_getinheritsched_db);
+extern int pthread_attr_getschedparam_db(const pthread_attr_t *, struct sched_param *);
+CheckInterfacedef(pthread_attr_getschedparam,pthread_attr_getschedparam_db);
+extern int pthread_attr_getschedpolicy_db(const pthread_attr_t *, int *);
+CheckInterfacedef(pthread_attr_getschedpolicy,pthread_attr_getschedpolicy_db);
+extern int pthread_attr_getscope_db(const pthread_attr_t *, int *);
+CheckInterfacedef(pthread_attr_getscope,pthread_attr_getscope_db);
+extern int pthread_attr_init_db(pthread_attr_t *);
+CheckInterfacedef(pthread_attr_init,pthread_attr_init_db);
+extern int pthread_attr_setdetachstate_db(pthread_attr_t *, int);
+CheckInterfacedef(pthread_attr_setdetachstate,pthread_attr_setdetachstate_db);
+extern int pthread_attr_setinheritsched_db(pthread_attr_t *, int);
+CheckInterfacedef(pthread_attr_setinheritsched,pthread_attr_setinheritsched_db);
+extern int pthread_attr_setschedparam_db(pthread_attr_t *, const struct sched_param *);
+CheckInterfacedef(pthread_attr_setschedparam,pthread_attr_setschedparam_db);
+extern int pthread_attr_setschedpolicy_db(pthread_attr_t *, int);
+CheckInterfacedef(pthread_attr_setschedpolicy,pthread_attr_setschedpolicy_db);
+extern int pthread_attr_setscope_db(pthread_attr_t *, int);
+CheckInterfacedef(pthread_attr_setscope,pthread_attr_setscope_db);
+extern int pthread_cancel_db(pthread_t);
+CheckInterfacedef(pthread_cancel,pthread_cancel_db);
+extern int pthread_cond_broadcast_db(pthread_cond_t *);
+CheckInterfacedef(pthread_cond_broadcast,pthread_cond_broadcast_db);
+extern int pthread_cond_destroy_db(pthread_cond_t *);
+CheckInterfacedef(pthread_cond_destroy,pthread_cond_destroy_db);
+extern int pthread_cond_init_db(pthread_cond_t *, const pthread_condattr_t *);
+CheckInterfacedef(pthread_cond_init,pthread_cond_init_db);
+extern int pthread_cond_signal_db(pthread_cond_t *);
+CheckInterfacedef(pthread_cond_signal,pthread_cond_signal_db);
+extern int pthread_cond_timedwait_db(pthread_cond_t *, pthread_mutex_t *, const struct timespec *);
+CheckInterfacedef(pthread_cond_timedwait,pthread_cond_timedwait_db);
+extern int pthread_cond_wait_db(pthread_cond_t *, pthread_mutex_t *);
+CheckInterfacedef(pthread_cond_wait,pthread_cond_wait_db);
+extern int pthread_condattr_destroy_db(pthread_condattr_t *);
+CheckInterfacedef(pthread_condattr_destroy,pthread_condattr_destroy_db);
+extern int pthread_condattr_init_db(pthread_condattr_t *);
+CheckInterfacedef(pthread_condattr_init,pthread_condattr_init_db);
+extern int pthread_create_db(pthread_t *, const pthread_attr_t *, void *(*__start_routine)(void *)
+, void *);
+CheckInterfacedef(pthread_create,pthread_create_db);
+extern int pthread_detach_db(pthread_t);
+CheckInterfacedef(pthread_detach,pthread_detach_db);
+extern int pthread_equal_db(pthread_t, pthread_t);
+CheckInterfacedef(pthread_equal,pthread_equal_db);
+extern void pthread_exit_db(void *);
+CheckInterfacedef(pthread_exit,pthread_exit_db);
+extern int pthread_getschedparam_db(pthread_t, int *, struct sched_param *);
+CheckInterfacedef(pthread_getschedparam,pthread_getschedparam_db);
+extern void * pthread_getspecific_db(pthread_key_t);
+CheckInterfacedef(pthread_getspecific,pthread_getspecific_db);
+extern int pthread_join_db(pthread_t, void * *);
+CheckInterfacedef(pthread_join,pthread_join_db);
+extern int pthread_key_create_db(pthread_key_t *, void(*destr_func)(void *)
+);
+CheckInterfacedef(pthread_key_create,pthread_key_create_db);
+extern int pthread_key_delete_db(pthread_key_t);
+CheckInterfacedef(pthread_key_delete,pthread_key_delete_db);
+extern int pthread_mutex_destroy_db(pthread_mutex_t *);
+CheckInterfacedef(pthread_mutex_destroy,pthread_mutex_destroy_db);
+extern int pthread_mutex_init_db(pthread_mutex_t *, const pthread_mutexattr_t *);
+CheckInterfacedef(pthread_mutex_init,pthread_mutex_init_db);
+extern int pthread_mutex_lock_db(pthread_mutex_t *);
+CheckInterfacedef(pthread_mutex_lock,pthread_mutex_lock_db);
+extern int pthread_mutex_trylock_db(pthread_mutex_t *);
+CheckInterfacedef(pthread_mutex_trylock,pthread_mutex_trylock_db);
+extern int pthread_mutex_unlock_db(pthread_mutex_t *);
+CheckInterfacedef(pthread_mutex_unlock,pthread_mutex_unlock_db);
+extern int pthread_mutexattr_destroy_db(pthread_mutexattr_t *);
+CheckInterfacedef(pthread_mutexattr_destroy,pthread_mutexattr_destroy_db);
+extern int pthread_mutexattr_init_db(pthread_mutexattr_t *);
+CheckInterfacedef(pthread_mutexattr_init,pthread_mutexattr_init_db);
+extern int pthread_once_db(pthread_once_t *, void(*init_routine)(void)
+);
+CheckInterfacedef(pthread_once,pthread_once_db);
+extern int pthread_rwlock_destroy_db(pthread_rwlock_t *);
+CheckInterfacedef(pthread_rwlock_destroy,pthread_rwlock_destroy_db);
+extern int pthread_rwlock_init_db(pthread_rwlock_t *, const pthread_rwlockattr_t *);
+CheckInterfacedef(pthread_rwlock_init,pthread_rwlock_init_db);
+extern int pthread_rwlock_rdlock_db(pthread_rwlock_t *);
+CheckInterfacedef(pthread_rwlock_rdlock,pthread_rwlock_rdlock_db);
+extern int pthread_rwlock_tryrdlock_db(pthread_rwlock_t *);
+CheckInterfacedef(pthread_rwlock_tryrdlock,pthread_rwlock_tryrdlock_db);
+extern int pthread_rwlock_trywrlock_db(pthread_rwlock_t *);
+CheckInterfacedef(pthread_rwlock_trywrlock,pthread_rwlock_trywrlock_db);
+extern int pthread_rwlock_unlock_db(pthread_rwlock_t *);
+CheckInterfacedef(pthread_rwlock_unlock,pthread_rwlock_unlock_db);
+extern int pthread_rwlock_wrlock_db(pthread_rwlock_t *);
+CheckInterfacedef(pthread_rwlock_wrlock,pthread_rwlock_wrlock_db);
+extern int pthread_rwlockattr_destroy_db(pthread_rwlockattr_t *);
+CheckInterfacedef(pthread_rwlockattr_destroy,pthread_rwlockattr_destroy_db);
+extern int pthread_rwlockattr_getpshared_db(const pthread_rwlockattr_t *, int *);
+CheckInterfacedef(pthread_rwlockattr_getpshared,pthread_rwlockattr_getpshared_db);
+extern int pthread_rwlockattr_init_db(pthread_rwlockattr_t *);
+CheckInterfacedef(pthread_rwlockattr_init,pthread_rwlockattr_init_db);
+extern int pthread_rwlockattr_setpshared_db(pthread_rwlockattr_t *, int);
+CheckInterfacedef(pthread_rwlockattr_setpshared,pthread_rwlockattr_setpshared_db);
+extern pthread_t pthread_self_db(void);
+CheckInterfacedef(pthread_self,pthread_self_db);
+extern int pthread_setcancelstate_db(int, int *);
+CheckInterfacedef(pthread_setcancelstate,pthread_setcancelstate_db);
+extern int pthread_setcanceltype_db(int, int *);
+CheckInterfacedef(pthread_setcanceltype,pthread_setcanceltype_db);
+extern int pthread_setschedparam_db(pthread_t, int, const struct sched_param *);
+CheckInterfacedef(pthread_setschedparam,pthread_setschedparam_db);
+extern int pthread_setspecific_db(pthread_key_t, const void *);
+CheckInterfacedef(pthread_setspecific,pthread_setspecific_db);
+extern void pthread_testcancel_db(void);
+CheckInterfacedef(pthread_testcancel,pthread_testcancel_db);
+extern int pthread_attr_getguardsize_db(const pthread_attr_t *, size_t *);
+CheckInterfacedef(pthread_attr_getguardsize,pthread_attr_getguardsize_db);
+extern int pthread_attr_setguardsize_db(pthread_attr_t *, size_t);
+CheckInterfacedef(pthread_attr_setguardsize,pthread_attr_setguardsize_db);
+extern int pthread_attr_setstackaddr_db(pthread_attr_t *, void *);
+CheckInterfacedef(pthread_attr_setstackaddr,pthread_attr_setstackaddr_db);
+extern int pthread_attr_getstackaddr_db(const pthread_attr_t *, void * *);
+CheckInterfacedef(pthread_attr_getstackaddr,pthread_attr_getstackaddr_db);
+extern int pthread_attr_setstacksize_db(pthread_attr_t *, size_t);
+CheckInterfacedef(pthread_attr_setstacksize,pthread_attr_setstacksize_db);
+extern int pthread_attr_getstacksize_db(const pthread_attr_t *, size_t *);
+CheckInterfacedef(pthread_attr_getstacksize,pthread_attr_getstacksize_db);
+extern int pthread_mutexattr_gettype_db(const pthread_mutexattr_t *, int *);
+CheckInterfacedef(pthread_mutexattr_gettype,pthread_mutexattr_gettype_db);
+extern int pthread_mutexattr_settype_db(pthread_mutexattr_t *, int);
+CheckInterfacedef(pthread_mutexattr_settype,pthread_mutexattr_settype_db);
+extern int pthread_getconcurrency_db(void);
+CheckInterfacedef(pthread_getconcurrency,pthread_getconcurrency_db);
+extern int pthread_setconcurrency_db(int);
+CheckInterfacedef(pthread_setconcurrency,pthread_setconcurrency_db);
+extern int pthread_attr_getstack_db(const pthread_attr_t *, void * *, size_t *);
+CheckInterfacedef(pthread_attr_getstack,pthread_attr_getstack_db);
+extern int pthread_attr_setstack_db(pthread_attr_t *, void *, size_t);
+CheckInterfacedef(pthread_attr_setstack,pthread_attr_setstack_db);
+extern int pthread_condattr_getpshared_db(const pthread_condattr_t *, int *);
+CheckInterfacedef(pthread_condattr_getpshared,pthread_condattr_getpshared_db);
+extern int pthread_condattr_setpshared_db(pthread_condattr_t *, int);
+CheckInterfacedef(pthread_condattr_setpshared,pthread_condattr_setpshared_db);
+extern int pthread_mutexattr_getpshared_db(const pthread_mutexattr_t *, int *);
+CheckInterfacedef(pthread_mutexattr_getpshared,pthread_mutexattr_getpshared_db);
+extern int pthread_mutexattr_setpshared_db(pthread_mutexattr_t *, int);
+CheckInterfacedef(pthread_mutexattr_setpshared,pthread_mutexattr_setpshared_db);
+extern int pthread_rwlock_timedrdlock_db(pthread_rwlock_t *, const struct timespec *);
+CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
+extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
+CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
+extern int __register_atfork_db(void(*prepare)(void)
+, void(*parent)(void)
+, void(*child)(void)
+, void *);
+CheckInterfacedef(__register_atfork,__register_atfork_db);
+extern int pthread_setschedprio_db(pthread_t, int);
+CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -726,7 +906,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in pthread.h\n",cnt);
+printf("%d tests passed out of %d tests in pthread.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -18,21 +18,34 @@ int rpc_rpc_msg_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in rpc/rpc_msg.h\n");
 #endif
 
+printf("Checking data structures in rpc/rpc_msg.h\n");
 #if 1
+CheckEnum("CALL",CALL,0);
+CheckEnum("REPLY",REPLY,1);
 #endif
 
 #if 1
+CheckEnum("MSG_ACCEPTED",MSG_ACCEPTED,0);
+CheckEnum("MSG_DENIED",MSG_DENIED,1);
 #endif
 
 #if 1
+CheckEnum("SUCCESS",SUCCESS,0);
+CheckEnum("PROG_UNAVAIL",PROG_UNAVAIL,1);
+CheckEnum("PROG_MISMATCH",PROG_MISMATCH,2);
+CheckEnum("PROC_UNAVAIL",PROC_UNAVAIL,3);
+CheckEnum("GARBAGE_ARGS",GARBAGE_ARGS,4);
+CheckEnum("SYSTEM_ERR",SYSTEM_ERR,5);
 #endif
 
 #if 1
+CheckEnum("RPC_MISMATCH",RPC_MISMATCH,0);
+CheckEnum("AUTH_ERROR",AUTH_ERROR,1);
 #endif
 
 #if __i386__
@@ -371,10 +384,15 @@ Msg("Find size of rpc_msg (9984)\n");
 #endif
 
 #if __s390__ && !__s390x__
+CheckTypeSize(struct rpc_msg *,0, 9985, 10)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct rpc_msg *,0, 9985, 6)
 #elif __powerpc64__
+CheckTypeSize(struct rpc_msg *,0, 9985, 9)
 #elif __i386__
+CheckTypeSize(struct rpc_msg *,4, 9985, 2)
 #elif __ia64__
+CheckTypeSize(struct rpc_msg *,0, 9985, 3)
 #endif
 
 #if __i386__
@@ -389,6 +407,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10427,0);
 Msg("Find size of anon-rpc_msg-ru (10427)\n");
 #endif
 
+extern bool_t xdr_callhdr_db(XDR *, struct rpc_msg *);
+CheckInterfacedef(xdr_callhdr,xdr_callhdr_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -396,7 +416,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in rpc/rpc_msg.h\n",cnt);
+printf("%d tests passed out of %d tests in rpc/rpc_msg.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

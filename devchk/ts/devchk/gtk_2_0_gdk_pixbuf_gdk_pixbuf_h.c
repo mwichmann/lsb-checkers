@@ -4,6 +4,19 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
+#define PANGO_DISABLE_DEPRECATED
+#define GTK_DISABLE_DEPRECATED
+#define GDK_DISABLE_DEPRECATED
+#define GDK_PIXBUF_DISABLE_DEPRECATED
+#undef GTK_FILE_SYSTEM_ENABLE_UNSUPPORTED
+#undef GTK_TEXT_USE_INTERNAL_UNSUPPORTED_API
+#undef GTK_COMPILATION
+#undef GDK_COMPILATION
+#undef GTK_MENU_INTERNALS
 
 struct _GdkPixbuf { };
 struct _GdkPixbufFormat { };
@@ -143,6 +156,8 @@ cnt++;
 CheckTypeSize(GdkPixbuf,0, 12611, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbuf,0, 12611, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbuf,0, 12611, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12611,0);
 Msg("Find size of GdkPixbuf (12611)\n");
@@ -152,6 +167,8 @@ Msg("Find size of GdkPixbuf (12611)\n");
 CheckTypeSize(GdkPixbuf *,4, 12612, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbuf *,8, 12612, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbuf *,8, 12612, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12612,0);
 Msg("Find size of GdkPixbuf * (12612)\n");
@@ -159,6 +176,7 @@ Msg("Find size of GdkPixbuf * (12612)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12613,0);
 Msg("Find size of fptr_gdk-pixbuf_122 (12613)\n");
@@ -168,6 +186,8 @@ Msg("Find size of fptr_gdk-pixbuf_122 (12613)\n");
 CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12614,0);
 Msg("Find size of GdkPixbufSaveFunc (12614)\n");
@@ -181,6 +201,10 @@ CheckOffset(struct _GdkPixbufLoader,priv,12,2,43321)
 CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 11)
 CheckMemberSize(struct _GdkPixbufLoader,priv,8,11,43321)
 CheckOffset(struct _GdkPixbufLoader,priv,24,11,43321)
+#elif __ia64__
+CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 3)
+CheckMemberSize(struct _GdkPixbufLoader,priv,8,3,43321)
+CheckOffset(struct _GdkPixbufLoader,priv,24,3,43321)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12615,0);
 Msg("Find size of _GdkPixbufLoader (12615)\n");
@@ -190,6 +214,8 @@ Msg("Find size of _GdkPixbufLoader (12615)\n");
 CheckTypeSize(GdkPixbufLoader,16, 12616, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufLoader,32, 12616, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufLoader,32, 12616, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12616,0);
 Msg("Find size of GdkPixbufLoader (12616)\n");
@@ -199,6 +225,8 @@ Msg("Find size of GdkPixbufLoader (12616)\n");
 CheckTypeSize(GdkPixbufLoader *,4, 12617, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufLoader *,8, 12617, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufLoader *,8, 12617, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12617,0);
 Msg("Find size of GdkPixbufLoader * (12617)\n");
@@ -208,6 +236,8 @@ Msg("Find size of GdkPixbufLoader * (12617)\n");
 CheckTypeSize(const GdkPixbuf,0, 12618, 2)
 #elif __x86_64__
 CheckTypeSize(const GdkPixbuf,0, 12618, 11)
+#elif __ia64__
+CheckTypeSize(const GdkPixbuf,0, 12618, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12618,0);
 Msg("Find size of const GdkPixbuf (12618)\n");
@@ -215,6 +245,7 @@ Msg("Find size of const GdkPixbuf (12618)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12619,0);
 Msg("Find size of const GdkPixbuf * (12619)\n");
@@ -224,6 +255,8 @@ Msg("Find size of const GdkPixbuf * (12619)\n");
 CheckTypeSize(GdkPixbufFormat,0, 12621, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufFormat,0, 12621, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufFormat,0, 12621, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12621,0);
 Msg("Find size of GdkPixbufFormat (12621)\n");
@@ -233,6 +266,8 @@ Msg("Find size of GdkPixbufFormat (12621)\n");
 CheckTypeSize(GdkPixbufFormat *,4, 12622, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufFormat *,8, 12622, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufFormat *,8, 12622, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12622,0);
 Msg("Find size of GdkPixbufFormat * (12622)\n");
@@ -248,6 +283,11 @@ CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0);
 CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1);
 CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2);
 CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3);
+#elif __ia64__
+CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0);
+CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1);
+CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2);
+CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12623,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf/gdk-pixbuf.h-21 (12623)\n");
@@ -257,6 +297,8 @@ Msg("Find size of anon-gtk-2.0/gdk-pixbuf/gdk-pixbuf.h-21 (12623)\n");
 CheckTypeSize(GdkInterpType,4, 12624, 2)
 #elif __x86_64__
 CheckTypeSize(GdkInterpType,4, 12624, 11)
+#elif __ia64__
+CheckTypeSize(GdkInterpType,4, 12624, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12624,0);
 Msg("Find size of GdkInterpType (12624)\n");
@@ -266,6 +308,8 @@ Msg("Find size of GdkInterpType (12624)\n");
 CheckTypeSize(const guchar,1, 12625, 2)
 #elif __x86_64__
 CheckTypeSize(const guchar,1, 12625, 11)
+#elif __ia64__
+CheckTypeSize(const guchar,1, 12625, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12625,0);
 Msg("Find size of const guchar (12625)\n");
@@ -273,6 +317,7 @@ Msg("Find size of const guchar (12625)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12626,0);
 Msg("Find size of const guchar * (12626)\n");
@@ -281,6 +326,8 @@ Msg("Find size of const guchar * (12626)\n");
 #if __i386__
 CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0);
 #elif __x86_64__
+CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0);
+#elif __ia64__
 CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12627,0);
@@ -291,6 +338,8 @@ Msg("Find size of anon-gtk-2.0/gdk-pixbuf/gdk-pixbuf.h-6 (12627)\n");
 CheckTypeSize(GdkColorspace,4, 12628, 2)
 #elif __x86_64__
 CheckTypeSize(GdkColorspace,4, 12628, 11)
+#elif __ia64__
+CheckTypeSize(GdkColorspace,4, 12628, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12628,0);
 Msg("Find size of GdkColorspace (12628)\n");
@@ -298,6 +347,7 @@ Msg("Find size of GdkColorspace (12628)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12629,0);
 Msg("Find size of fptr_gdk-pixbuf_24 (12629)\n");
@@ -307,6 +357,8 @@ Msg("Find size of fptr_gdk-pixbuf_24 (12629)\n");
 CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12630,0);
 Msg("Find size of GdkPixbufDestroyNotify (12630)\n");
@@ -316,6 +368,8 @@ Msg("Find size of GdkPixbufDestroyNotify (12630)\n");
 CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12632,0);
 Msg("Find size of GdkPixbufAnimationIter (12632)\n");
@@ -325,6 +379,8 @@ Msg("Find size of GdkPixbufAnimationIter (12632)\n");
 CheckTypeSize(GdkPixbufAnimationIter *,4, 12633, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufAnimationIter *,8, 12633, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufAnimationIter *,8, 12633, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12633,0);
 Msg("Find size of GdkPixbufAnimationIter * (12633)\n");
@@ -334,6 +390,8 @@ Msg("Find size of GdkPixbufAnimationIter * (12633)\n");
 CheckTypeSize(const GTimeVal,8, 12634, 2)
 #elif __x86_64__
 CheckTypeSize(const GTimeVal,16, 12634, 11)
+#elif __ia64__
+CheckTypeSize(const GTimeVal,16, 12634, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12634,0);
 Msg("Find size of const GTimeVal (12634)\n");
@@ -341,6 +399,7 @@ Msg("Find size of const GTimeVal (12634)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12635,0);
 Msg("Find size of const GTimeVal * (12635)\n");
@@ -350,6 +409,8 @@ Msg("Find size of const GTimeVal * (12635)\n");
 CheckTypeSize(GdkPixbufAnimation,0, 12637, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufAnimation,0, 12637, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12637,0);
 Msg("Find size of GdkPixbufAnimation (12637)\n");
@@ -359,6 +420,8 @@ Msg("Find size of GdkPixbufAnimation (12637)\n");
 CheckTypeSize(GdkPixbufAnimation *,4, 12638, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufAnimation *,8, 12638, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufAnimation *,8, 12638, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12638,0);
 Msg("Find size of GdkPixbufAnimation * (12638)\n");
@@ -374,6 +437,11 @@ CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0);
 CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90);
 CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180);
 CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270);
+#elif __ia64__
+CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0);
+CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90);
+CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180);
+CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12639,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf/gdk-pixbuf.h-22 (12639)\n");
@@ -383,6 +451,8 @@ Msg("Find size of anon-gtk-2.0/gdk-pixbuf/gdk-pixbuf.h-22 (12639)\n");
 CheckTypeSize(GdkPixbufRotation,4, 12640, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufRotation,4, 12640, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufRotation,4, 12640, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12640,0);
 Msg("Find size of GdkPixbufRotation (12640)\n");
@@ -408,6 +478,16 @@ CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,11,43345)
 CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,11,43345)
 CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,11,43346)
 CheckOffset(struct _GdkPixbufLoaderClass,closed,160,11,43346)
+#elif __ia64__
+CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 3)
+CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,3,43337)
+CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,3,43337)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,3,43339)
+CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,3,43339)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,3,43345)
+CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,3,43345)
+CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,3,43346)
+CheckOffset(struct _GdkPixbufLoaderClass,closed,160,3,43346)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12641,0);
 Msg("Find size of _GdkPixbufLoaderClass (12641)\n");
@@ -415,6 +495,7 @@ Msg("Find size of _GdkPixbufLoaderClass (12641)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12642,0);
 Msg("Find size of fptr_gdk-pixbuf_26 (12642)\n");
@@ -422,6 +503,7 @@ Msg("Find size of fptr_gdk-pixbuf_26 (12642)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12643,0);
 Msg("Find size of fptr_gdk-pixbuf_13 (12643)\n");
@@ -429,6 +511,7 @@ Msg("Find size of fptr_gdk-pixbuf_13 (12643)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12644,0);
 Msg("Find size of fptr_gdk-pixbuf_36 (12644)\n");
@@ -438,6 +521,8 @@ Msg("Find size of fptr_gdk-pixbuf_36 (12644)\n");
 CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12645,0);
 Msg("Find size of GdkPixbufLoaderClass (12645)\n");
@@ -457,6 +542,13 @@ CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 
 CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1);
 CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1);
 CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1);
+#elif __ia64__
+CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0);
+CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1);
+CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1);
+CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1);
+CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1);
+CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12646,0);
 Msg("Find size of anonymous-gdk-pixbuf.h.types-0 (12646)\n");
@@ -466,6 +558,8 @@ Msg("Find size of anonymous-gdk-pixbuf.h.types-0 (12646)\n");
 CheckTypeSize(GdkPixbufError,4, 12647, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufError,4, 12647, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufError,4, 12647, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12647,0);
 Msg("Find size of GdkPixbufError (12647)\n");
@@ -477,6 +571,9 @@ CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1);
 #elif __x86_64__
 CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
 CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1);
+#elif __ia64__
+CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
+CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12648,0);
 Msg("Find size of anonymous-gdk-pixbuf.h.types-2 (12648)\n");
@@ -486,6 +583,8 @@ Msg("Find size of anonymous-gdk-pixbuf.h.types-2 (12648)\n");
 CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 2)
 #elif __x86_64__
 CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 11)
+#elif __ia64__
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12649,0);
 Msg("Find size of GdkPixbufAlphaMode (12649)\n");

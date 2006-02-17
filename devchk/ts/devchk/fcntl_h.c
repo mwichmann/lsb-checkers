@@ -18,11 +18,12 @@ int fcntl_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in fcntl.h\n");
 #endif
 
+printf("Checking data structures in fcntl.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef O_ACCMODE
 	CompareConstant(O_ACCMODE,0003,1168,architecture)
@@ -633,6 +634,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
 Msg("Find size of flock64 (10218)\n");
 #endif
 
+extern int lockf64_db(int, int, off64_t);
+CheckInterfacedef(lockf64,lockf64_db);
+extern int fcntl_db(int, int, ...);
+CheckInterfacedef(fcntl,fcntl_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -640,7 +645,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in fcntl.h\n",cnt);
+printf("%d tests passed out of %d tests in fcntl.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

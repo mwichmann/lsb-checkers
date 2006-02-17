@@ -764,7 +764,7 @@ CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 9)
 #elif __s390x__
 CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 12)
 #elif __x86_64__
-CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 11)
+CheckTypeSize(struct _ObjectClassExtensionRec *,8, 10269, 11)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10269,0);
 Msg("Find size of _ObjectClassExtensionRec * (10269)\n");

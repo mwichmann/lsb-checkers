@@ -4,6 +4,10 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
 
 struct _GModule {
 };
@@ -40,6 +44,8 @@ printf("Checking data structures in glib-2.0/gmodule.h\n");
 CheckTypeSize(GModule,0, 12066, 2)
 #elif __x86_64__
 CheckTypeSize(GModule,0, 12066, 11)
+#elif __ia64__
+CheckTypeSize(GModule,0, 12066, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12066,0);
 Msg("Find size of GModule (12066)\n");
@@ -49,6 +55,8 @@ Msg("Find size of GModule (12066)\n");
 CheckTypeSize(GModule *,4, 12067, 2)
 #elif __x86_64__
 CheckTypeSize(GModule *,8, 12067, 11)
+#elif __ia64__
+CheckTypeSize(GModule *,8, 12067, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12067,0);
 Msg("Find size of GModule * (12067)\n");
@@ -62,6 +70,10 @@ CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
 CheckEnum("G_MODULE_BIND_LAZY",G_MODULE_BIND_LAZY,1);
 CheckEnum("G_MODULE_BIND_LOCAL",G_MODULE_BIND_LOCAL,2);
 CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
+#elif __ia64__
+CheckEnum("G_MODULE_BIND_LAZY",G_MODULE_BIND_LAZY,1);
+CheckEnum("G_MODULE_BIND_LOCAL",G_MODULE_BIND_LOCAL,2);
+CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12068,0);
 Msg("Find size of anon-glib-2.0/gmodule.h-2 (12068)\n");
@@ -71,6 +83,8 @@ Msg("Find size of anon-glib-2.0/gmodule.h-2 (12068)\n");
 CheckTypeSize(GModuleFlags,4, 12069, 2)
 #elif __x86_64__
 CheckTypeSize(GModuleFlags,4, 12069, 11)
+#elif __ia64__
+CheckTypeSize(GModuleFlags,4, 12069, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12069,0);
 Msg("Find size of GModuleFlags (12069)\n");
@@ -78,6 +92,7 @@ Msg("Find size of GModuleFlags (12069)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12070,0);
 Msg("Find size of fptr_gmodule_1 (12070)\n");
@@ -87,6 +102,8 @@ Msg("Find size of fptr_gmodule_1 (12070)\n");
 CheckTypeSize(GModuleUnload,4, 12071, 2)
 #elif __x86_64__
 CheckTypeSize(GModuleUnload,8, 12071, 11)
+#elif __ia64__
+CheckTypeSize(GModuleUnload,8, 12071, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12071,0);
 Msg("Find size of GModuleUnload (12071)\n");
@@ -94,6 +111,7 @@ Msg("Find size of GModuleUnload (12071)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12072,0);
 Msg("Find size of fptr_gmodule_2 (12072)\n");
@@ -103,6 +121,8 @@ Msg("Find size of fptr_gmodule_2 (12072)\n");
 CheckTypeSize(GModuleCheckInit,4, 12073, 2)
 #elif __x86_64__
 CheckTypeSize(GModuleCheckInit,8, 12073, 11)
+#elif __ia64__
+CheckTypeSize(GModuleCheckInit,8, 12073, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12073,0);
 Msg("Find size of GModuleCheckInit (12073)\n");
