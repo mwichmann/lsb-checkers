@@ -16166,44 +16166,44 @@ const char *_St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name_0 [] 
 	};
 
 const char *_St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name_1 [] = {
+#if __i386__
+	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
+#if __ia64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
+#if __powerpc64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
+#if __x86_64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
 #if __s390x__
 	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
 #endif
-#if __x86_64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __s390__ && !__s390x__
-	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __powerpc64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
 #if __i386__
-	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __ia64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __x86_64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
-#endif
-#if __s390__ && !__s390x__
 	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
 #endif
 #if __ia64__
 	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
 #endif
-#if __powerpc64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
 #endif
-#if __i386__
+#if __powerpc64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
+#endif
+#if __s390__ && !__s390x__
 	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
+#endif
+#if __x86_64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
 #endif
 #if __s390x__
 	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
