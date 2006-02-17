@@ -28,6 +28,7 @@ Msg("Checking data structures in libxml2/libxml/xmlIO.h\n");
 printf("Checking data structures in libxml2/libxml/xmlIO.h\n");
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14804,0);
 Msg("Find size of fptr_xmlIO_546 (14804)\n");
@@ -37,6 +38,8 @@ Msg("Find size of fptr_xmlIO_546 (14804)\n");
 CheckTypeSize(xmlOutputMatchCallback,4, 14805, 2)
 #elif __x86_64__
 CheckTypeSize(xmlOutputMatchCallback,8, 14805, 11)
+#elif __ia64__
+CheckTypeSize(xmlOutputMatchCallback,8, 14805, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14805,0);
 Msg("Find size of xmlOutputMatchCallback (14805)\n");
@@ -44,6 +47,7 @@ Msg("Find size of xmlOutputMatchCallback (14805)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14806,0);
 Msg("Find size of fptr_xmlIO_472 (14806)\n");
@@ -53,6 +57,8 @@ Msg("Find size of fptr_xmlIO_472 (14806)\n");
 CheckTypeSize(xmlOutputOpenCallback,4, 14807, 2)
 #elif __x86_64__
 CheckTypeSize(xmlOutputOpenCallback,8, 14807, 11)
+#elif __ia64__
+CheckTypeSize(xmlOutputOpenCallback,8, 14807, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14807,0);
 Msg("Find size of xmlOutputOpenCallback (14807)\n");
@@ -382,6 +388,168 @@ CheckMemberSize(struct _xmlParserCtxt,lastError,88,11,48976)
 CheckOffset(struct _xmlParserCtxt,lastError,600,11,48976)
 CheckMemberSize(struct _xmlParserCtxt,parseMode,4,11,48983)
 CheckOffset(struct _xmlParserCtxt,parseMode,688,11,48983)
+#elif __ia64__
+CheckTypeSize(struct _xmlParserCtxt,696, 14808, 3)
+CheckMemberSize(struct _xmlParserCtxt,userData,8,3,48856)
+CheckOffset(struct _xmlParserCtxt,userData,8,3,48856)
+CheckMemberSize(struct _xmlParserCtxt,myDoc,8,3,48857)
+CheckOffset(struct _xmlParserCtxt,myDoc,16,3,48857)
+CheckMemberSize(struct _xmlParserCtxt,wellFormed,4,3,48858)
+CheckOffset(struct _xmlParserCtxt,wellFormed,24,3,48858)
+CheckMemberSize(struct _xmlParserCtxt,replaceEntities,4,3,48859)
+CheckOffset(struct _xmlParserCtxt,replaceEntities,28,3,48859)
+CheckMemberSize(struct _xmlParserCtxt,version,8,3,48860)
+CheckOffset(struct _xmlParserCtxt,version,32,3,48860)
+CheckMemberSize(struct _xmlParserCtxt,encoding,8,3,48861)
+CheckOffset(struct _xmlParserCtxt,encoding,40,3,48861)
+CheckMemberSize(struct _xmlParserCtxt,standalone,4,3,48862)
+CheckOffset(struct _xmlParserCtxt,standalone,48,3,48862)
+CheckMemberSize(struct _xmlParserCtxt,html,4,3,48863)
+CheckOffset(struct _xmlParserCtxt,html,52,3,48863)
+CheckMemberSize(struct _xmlParserCtxt,input,8,3,48864)
+CheckOffset(struct _xmlParserCtxt,input,56,3,48864)
+CheckMemberSize(struct _xmlParserCtxt,inputNr,4,3,48865)
+CheckOffset(struct _xmlParserCtxt,inputNr,64,3,48865)
+CheckMemberSize(struct _xmlParserCtxt,inputMax,4,3,48866)
+CheckOffset(struct _xmlParserCtxt,inputMax,68,3,48866)
+CheckMemberSize(struct _xmlParserCtxt,inputTab,8,3,48867)
+CheckOffset(struct _xmlParserCtxt,inputTab,72,3,48867)
+CheckMemberSize(struct _xmlParserCtxt,node,8,3,48868)
+CheckOffset(struct _xmlParserCtxt,node,80,3,48868)
+CheckMemberSize(struct _xmlParserCtxt,nodeNr,4,3,48869)
+CheckOffset(struct _xmlParserCtxt,nodeNr,88,3,48869)
+CheckMemberSize(struct _xmlParserCtxt,nodeMax,4,3,48870)
+CheckOffset(struct _xmlParserCtxt,nodeMax,92,3,48870)
+CheckMemberSize(struct _xmlParserCtxt,nodeTab,8,3,48871)
+CheckOffset(struct _xmlParserCtxt,nodeTab,96,3,48871)
+CheckMemberSize(struct _xmlParserCtxt,record_info,4,3,48872)
+CheckOffset(struct _xmlParserCtxt,record_info,104,3,48872)
+CheckMemberSize(struct _xmlParserCtxt,node_seq,24,3,48881)
+CheckOffset(struct _xmlParserCtxt,node_seq,112,3,48881)
+CheckMemberSize(struct _xmlParserCtxt,errNo,4,3,48882)
+CheckOffset(struct _xmlParserCtxt,errNo,136,3,48882)
+CheckMemberSize(struct _xmlParserCtxt,hasExternalSubset,4,3,48883)
+CheckOffset(struct _xmlParserCtxt,hasExternalSubset,140,3,48883)
+CheckMemberSize(struct _xmlParserCtxt,hasPErefs,4,3,48884)
+CheckOffset(struct _xmlParserCtxt,hasPErefs,144,3,48884)
+CheckMemberSize(struct _xmlParserCtxt,external,4,3,48885)
+CheckOffset(struct _xmlParserCtxt,external,148,3,48885)
+CheckMemberSize(struct _xmlParserCtxt,valid,4,3,48886)
+CheckOffset(struct _xmlParserCtxt,valid,152,3,48886)
+CheckMemberSize(struct _xmlParserCtxt,validate,4,3,48887)
+CheckOffset(struct _xmlParserCtxt,validate,156,3,48887)
+CheckMemberSize(struct _xmlParserCtxt,vctxt,112,3,48904)
+CheckOffset(struct _xmlParserCtxt,vctxt,160,3,48904)
+CheckMemberSize(struct _xmlParserCtxt,instate,4,3,48923)
+CheckOffset(struct _xmlParserCtxt,instate,272,3,48923)
+CheckMemberSize(struct _xmlParserCtxt,token,4,3,48924)
+CheckOffset(struct _xmlParserCtxt,token,276,3,48924)
+CheckMemberSize(struct _xmlParserCtxt,directory,8,3,48925)
+CheckOffset(struct _xmlParserCtxt,directory,280,3,48925)
+CheckMemberSize(struct _xmlParserCtxt,name,8,3,48926)
+CheckOffset(struct _xmlParserCtxt,name,288,3,48926)
+CheckMemberSize(struct _xmlParserCtxt,nameNr,4,3,48927)
+CheckOffset(struct _xmlParserCtxt,nameNr,296,3,48927)
+CheckMemberSize(struct _xmlParserCtxt,nameMax,4,3,48928)
+CheckOffset(struct _xmlParserCtxt,nameMax,300,3,48928)
+CheckMemberSize(struct _xmlParserCtxt,nameTab,8,3,48929)
+CheckOffset(struct _xmlParserCtxt,nameTab,304,3,48929)
+CheckMemberSize(struct _xmlParserCtxt,nbChars,8,3,48930)
+CheckOffset(struct _xmlParserCtxt,nbChars,312,3,48930)
+CheckMemberSize(struct _xmlParserCtxt,checkIndex,8,3,48931)
+CheckOffset(struct _xmlParserCtxt,checkIndex,320,3,48931)
+CheckMemberSize(struct _xmlParserCtxt,keepBlanks,4,3,48932)
+CheckOffset(struct _xmlParserCtxt,keepBlanks,328,3,48932)
+CheckMemberSize(struct _xmlParserCtxt,disableSAX,4,3,48933)
+CheckOffset(struct _xmlParserCtxt,disableSAX,332,3,48933)
+CheckMemberSize(struct _xmlParserCtxt,inSubset,4,3,48934)
+CheckOffset(struct _xmlParserCtxt,inSubset,336,3,48934)
+CheckMemberSize(struct _xmlParserCtxt,intSubName,8,3,48935)
+CheckOffset(struct _xmlParserCtxt,intSubName,344,3,48935)
+CheckMemberSize(struct _xmlParserCtxt,extSubURI,8,3,48936)
+CheckOffset(struct _xmlParserCtxt,extSubURI,352,3,48936)
+CheckMemberSize(struct _xmlParserCtxt,extSubSystem,8,3,48937)
+CheckOffset(struct _xmlParserCtxt,extSubSystem,360,3,48937)
+CheckMemberSize(struct _xmlParserCtxt,space,8,3,48938)
+CheckOffset(struct _xmlParserCtxt,space,368,3,48938)
+CheckMemberSize(struct _xmlParserCtxt,spaceNr,4,3,48939)
+CheckOffset(struct _xmlParserCtxt,spaceNr,376,3,48939)
+CheckMemberSize(struct _xmlParserCtxt,spaceMax,4,3,48940)
+CheckOffset(struct _xmlParserCtxt,spaceMax,380,3,48940)
+CheckMemberSize(struct _xmlParserCtxt,spaceTab,8,3,48941)
+CheckOffset(struct _xmlParserCtxt,spaceTab,384,3,48941)
+CheckMemberSize(struct _xmlParserCtxt,depth,4,3,48942)
+CheckOffset(struct _xmlParserCtxt,depth,392,3,48942)
+CheckMemberSize(struct _xmlParserCtxt,entity,8,3,48943)
+CheckOffset(struct _xmlParserCtxt,entity,400,3,48943)
+CheckMemberSize(struct _xmlParserCtxt,charset,4,3,48944)
+CheckOffset(struct _xmlParserCtxt,charset,408,3,48944)
+CheckMemberSize(struct _xmlParserCtxt,nodelen,4,3,48945)
+CheckOffset(struct _xmlParserCtxt,nodelen,412,3,48945)
+CheckMemberSize(struct _xmlParserCtxt,nodemem,4,3,48946)
+CheckOffset(struct _xmlParserCtxt,nodemem,416,3,48946)
+CheckMemberSize(struct _xmlParserCtxt,pedantic,4,3,48947)
+CheckOffset(struct _xmlParserCtxt,pedantic,420,3,48947)
+CheckMemberSize(struct _xmlParserCtxt,_private,8,3,48948)
+CheckOffset(struct _xmlParserCtxt,_private,424,3,48948)
+CheckMemberSize(struct _xmlParserCtxt,loadsubset,4,3,48949)
+CheckOffset(struct _xmlParserCtxt,loadsubset,432,3,48949)
+CheckMemberSize(struct _xmlParserCtxt,linenumbers,4,3,48950)
+CheckOffset(struct _xmlParserCtxt,linenumbers,436,3,48950)
+CheckMemberSize(struct _xmlParserCtxt,catalogs,8,3,48951)
+CheckOffset(struct _xmlParserCtxt,catalogs,440,3,48951)
+CheckMemberSize(struct _xmlParserCtxt,recovery,4,3,48952)
+CheckOffset(struct _xmlParserCtxt,recovery,448,3,48952)
+CheckMemberSize(struct _xmlParserCtxt,progressive,4,3,48953)
+CheckOffset(struct _xmlParserCtxt,progressive,452,3,48953)
+CheckMemberSize(struct _xmlParserCtxt,dict,8,3,48954)
+CheckOffset(struct _xmlParserCtxt,dict,456,3,48954)
+CheckMemberSize(struct _xmlParserCtxt,atts,8,3,48955)
+CheckOffset(struct _xmlParserCtxt,atts,464,3,48955)
+CheckMemberSize(struct _xmlParserCtxt,maxatts,4,3,48956)
+CheckOffset(struct _xmlParserCtxt,maxatts,472,3,48956)
+CheckMemberSize(struct _xmlParserCtxt,docdict,4,3,48957)
+CheckOffset(struct _xmlParserCtxt,docdict,476,3,48957)
+CheckMemberSize(struct _xmlParserCtxt,str_xml,8,3,48958)
+CheckOffset(struct _xmlParserCtxt,str_xml,480,3,48958)
+CheckMemberSize(struct _xmlParserCtxt,str_xmlns,8,3,48959)
+CheckOffset(struct _xmlParserCtxt,str_xmlns,488,3,48959)
+CheckMemberSize(struct _xmlParserCtxt,str_xml_ns,8,3,48960)
+CheckOffset(struct _xmlParserCtxt,str_xml_ns,496,3,48960)
+CheckMemberSize(struct _xmlParserCtxt,sax2,4,3,48961)
+CheckOffset(struct _xmlParserCtxt,sax2,504,3,48961)
+CheckMemberSize(struct _xmlParserCtxt,nsNr,4,3,48962)
+CheckOffset(struct _xmlParserCtxt,nsNr,508,3,48962)
+CheckMemberSize(struct _xmlParserCtxt,nsMax,4,3,48963)
+CheckOffset(struct _xmlParserCtxt,nsMax,512,3,48963)
+CheckMemberSize(struct _xmlParserCtxt,nsTab,8,3,48964)
+CheckOffset(struct _xmlParserCtxt,nsTab,520,3,48964)
+CheckMemberSize(struct _xmlParserCtxt,attallocs,8,3,48965)
+CheckOffset(struct _xmlParserCtxt,attallocs,528,3,48965)
+CheckMemberSize(struct _xmlParserCtxt,pushTab,8,3,48966)
+CheckOffset(struct _xmlParserCtxt,pushTab,536,3,48966)
+CheckMemberSize(struct _xmlParserCtxt,attsDefault,8,3,48967)
+CheckOffset(struct _xmlParserCtxt,attsDefault,544,3,48967)
+CheckMemberSize(struct _xmlParserCtxt,attsSpecial,8,3,48968)
+CheckOffset(struct _xmlParserCtxt,attsSpecial,552,3,48968)
+CheckMemberSize(struct _xmlParserCtxt,nsWellFormed,4,3,48969)
+CheckOffset(struct _xmlParserCtxt,nsWellFormed,560,3,48969)
+CheckMemberSize(struct _xmlParserCtxt,options,4,3,48970)
+CheckOffset(struct _xmlParserCtxt,options,564,3,48970)
+CheckMemberSize(struct _xmlParserCtxt,dictNames,4,3,48971)
+CheckOffset(struct _xmlParserCtxt,dictNames,568,3,48971)
+CheckMemberSize(struct _xmlParserCtxt,freeElemsNr,4,3,48972)
+CheckOffset(struct _xmlParserCtxt,freeElemsNr,572,3,48972)
+CheckMemberSize(struct _xmlParserCtxt,freeElems,8,3,48973)
+CheckOffset(struct _xmlParserCtxt,freeElems,576,3,48973)
+CheckMemberSize(struct _xmlParserCtxt,freeAttrsNr,4,3,48974)
+CheckOffset(struct _xmlParserCtxt,freeAttrsNr,584,3,48974)
+CheckMemberSize(struct _xmlParserCtxt,freeAttrs,8,3,48975)
+CheckOffset(struct _xmlParserCtxt,freeAttrs,592,3,48975)
+CheckMemberSize(struct _xmlParserCtxt,lastError,88,3,48976)
+CheckOffset(struct _xmlParserCtxt,lastError,600,3,48976)
+CheckMemberSize(struct _xmlParserCtxt,parseMode,4,3,48983)
+CheckOffset(struct _xmlParserCtxt,parseMode,688,3,48983)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14808,0);
 Msg("Find size of _xmlParserCtxt (14808)\n");
@@ -391,6 +559,8 @@ Msg("Find size of _xmlParserCtxt (14808)\n");
 CheckTypeSize(struct _xmlSAXHandler *,4, 14809, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlSAXHandler *,8, 14809, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlSAXHandler *,8, 14809, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14809,0);
 Msg("Find size of _xmlSAXHandler * (14809)\n");
@@ -400,6 +570,8 @@ Msg("Find size of _xmlSAXHandler * (14809)\n");
 CheckTypeSize(xmlParserInputPtr *,4, 14810, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserInputPtr *,8, 14810, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserInputPtr *,8, 14810, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14810,0);
 Msg("Find size of xmlParserInputPtr * (14810)\n");
@@ -409,6 +581,8 @@ Msg("Find size of xmlParserInputPtr * (14810)\n");
 CheckTypeSize(xmlNodePtr *,4, 14811, 2)
 #elif __x86_64__
 CheckTypeSize(xmlNodePtr *,8, 14811, 11)
+#elif __ia64__
+CheckTypeSize(xmlNodePtr *,8, 14811, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14811,0);
 Msg("Find size of xmlNodePtr * (14811)\n");
@@ -426,6 +600,12 @@ CheckMemberSize(struct _xmlParserNodeInfoSeq,length,8,11,48874)
 CheckOffset(struct _xmlParserNodeInfoSeq,length,8,11,48874)
 CheckMemberSize(struct _xmlParserNodeInfoSeq,buffer,8,11,48880)
 CheckOffset(struct _xmlParserNodeInfoSeq,buffer,16,11,48880)
+#elif __ia64__
+CheckTypeSize(struct _xmlParserNodeInfoSeq,24, 14812, 3)
+CheckMemberSize(struct _xmlParserNodeInfoSeq,length,8,3,48874)
+CheckOffset(struct _xmlParserNodeInfoSeq,length,8,3,48874)
+CheckMemberSize(struct _xmlParserNodeInfoSeq,buffer,8,3,48880)
+CheckOffset(struct _xmlParserNodeInfoSeq,buffer,16,3,48880)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14812,0);
 Msg("Find size of _xmlParserNodeInfoSeq (14812)\n");
@@ -451,6 +631,16 @@ CheckMemberSize(struct _xmlParserNodeInfo,end_pos,8,11,48878)
 CheckOffset(struct _xmlParserNodeInfo,end_pos,24,11,48878)
 CheckMemberSize(struct _xmlParserNodeInfo,end_line,8,11,48879)
 CheckOffset(struct _xmlParserNodeInfo,end_line,32,11,48879)
+#elif __ia64__
+CheckTypeSize(struct _xmlParserNodeInfo,40, 14813, 3)
+CheckMemberSize(struct _xmlParserNodeInfo,begin_pos,8,3,48876)
+CheckOffset(struct _xmlParserNodeInfo,begin_pos,8,3,48876)
+CheckMemberSize(struct _xmlParserNodeInfo,begin_line,8,3,48877)
+CheckOffset(struct _xmlParserNodeInfo,begin_line,16,3,48877)
+CheckMemberSize(struct _xmlParserNodeInfo,end_pos,8,3,48878)
+CheckOffset(struct _xmlParserNodeInfo,end_pos,24,3,48878)
+CheckMemberSize(struct _xmlParserNodeInfo,end_line,8,3,48879)
+CheckOffset(struct _xmlParserNodeInfo,end_line,32,3,48879)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14813,0);
 Msg("Find size of _xmlParserNodeInfo (14813)\n");
@@ -458,6 +648,7 @@ Msg("Find size of _xmlParserNodeInfo (14813)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14814,0);
 Msg("Find size of const _xmlNode (14814)\n");
@@ -465,6 +656,7 @@ Msg("Find size of const _xmlNode (14814)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14815,0);
 Msg("Find size of const _xmlNode * (14815)\n");
@@ -474,6 +666,8 @@ Msg("Find size of const _xmlNode * (14815)\n");
 CheckTypeSize(xmlParserNodeInfo,20, 14816, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserNodeInfo,40, 14816, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserNodeInfo,40, 14816, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14816,0);
 Msg("Find size of xmlParserNodeInfo (14816)\n");
@@ -483,6 +677,8 @@ Msg("Find size of xmlParserNodeInfo (14816)\n");
 CheckTypeSize(xmlParserNodeInfo *,4, 14817, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserNodeInfo *,8, 14817, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserNodeInfo *,8, 14817, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14817,0);
 Msg("Find size of xmlParserNodeInfo * (14817)\n");
@@ -492,6 +688,8 @@ Msg("Find size of xmlParserNodeInfo * (14817)\n");
 CheckTypeSize(xmlParserNodeInfoSeq,12, 14818, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserNodeInfoSeq,24, 14818, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserNodeInfoSeq,24, 14818, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14818,0);
 Msg("Find size of xmlParserNodeInfoSeq (14818)\n");
@@ -561,6 +759,38 @@ CheckMemberSize(struct _xmlValidCtxt,am,8,11,48902)
 CheckOffset(struct _xmlValidCtxt,am,96,11,48902)
 CheckMemberSize(struct _xmlValidCtxt,state,8,11,48903)
 CheckOffset(struct _xmlValidCtxt,state,104,11,48903)
+#elif __ia64__
+CheckTypeSize(struct _xmlValidCtxt,112, 14819, 3)
+CheckMemberSize(struct _xmlValidCtxt,error,8,3,48889)
+CheckOffset(struct _xmlValidCtxt,error,8,3,48889)
+CheckMemberSize(struct _xmlValidCtxt,warning,8,3,48890)
+CheckOffset(struct _xmlValidCtxt,warning,16,3,48890)
+CheckMemberSize(struct _xmlValidCtxt,node,8,3,48891)
+CheckOffset(struct _xmlValidCtxt,node,24,3,48891)
+CheckMemberSize(struct _xmlValidCtxt,nodeNr,4,3,48892)
+CheckOffset(struct _xmlValidCtxt,nodeNr,32,3,48892)
+CheckMemberSize(struct _xmlValidCtxt,nodeMax,4,3,48893)
+CheckOffset(struct _xmlValidCtxt,nodeMax,36,3,48893)
+CheckMemberSize(struct _xmlValidCtxt,nodeTab,8,3,48894)
+CheckOffset(struct _xmlValidCtxt,nodeTab,40,3,48894)
+CheckMemberSize(struct _xmlValidCtxt,finishDtd,4,3,48895)
+CheckOffset(struct _xmlValidCtxt,finishDtd,48,3,48895)
+CheckMemberSize(struct _xmlValidCtxt,doc,8,3,48896)
+CheckOffset(struct _xmlValidCtxt,doc,56,3,48896)
+CheckMemberSize(struct _xmlValidCtxt,valid,4,3,48897)
+CheckOffset(struct _xmlValidCtxt,valid,64,3,48897)
+CheckMemberSize(struct _xmlValidCtxt,vstate,8,3,48898)
+CheckOffset(struct _xmlValidCtxt,vstate,72,3,48898)
+CheckMemberSize(struct _xmlValidCtxt,vstateNr,4,3,48899)
+CheckOffset(struct _xmlValidCtxt,vstateNr,80,3,48899)
+CheckMemberSize(struct _xmlValidCtxt,vstateMax,4,3,48900)
+CheckOffset(struct _xmlValidCtxt,vstateMax,84,3,48900)
+CheckMemberSize(struct _xmlValidCtxt,vstateTab,8,3,48901)
+CheckOffset(struct _xmlValidCtxt,vstateTab,88,3,48901)
+CheckMemberSize(struct _xmlValidCtxt,am,8,3,48902)
+CheckOffset(struct _xmlValidCtxt,am,96,3,48902)
+CheckMemberSize(struct _xmlValidCtxt,state,8,3,48903)
+CheckOffset(struct _xmlValidCtxt,state,104,3,48903)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14819,0);
 Msg("Find size of _xmlValidCtxt (14819)\n");
@@ -570,6 +800,8 @@ Msg("Find size of _xmlValidCtxt (14819)\n");
 CheckTypeSize(xmlValidityErrorFunc,4, 14820, 2)
 #elif __x86_64__
 CheckTypeSize(xmlValidityErrorFunc,8, 14820, 11)
+#elif __ia64__
+CheckTypeSize(xmlValidityErrorFunc,8, 14820, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14820,0);
 Msg("Find size of xmlValidityErrorFunc (14820)\n");
@@ -579,6 +811,8 @@ Msg("Find size of xmlValidityErrorFunc (14820)\n");
 CheckTypeSize(xmlValidityWarningFunc,4, 14821, 2)
 #elif __x86_64__
 CheckTypeSize(xmlValidityWarningFunc,8, 14821, 11)
+#elif __ia64__
+CheckTypeSize(xmlValidityWarningFunc,8, 14821, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14821,0);
 Msg("Find size of xmlValidityWarningFunc (14821)\n");
@@ -590,6 +824,9 @@ Msg("Missing member data for _xmlValidState on IA32\n");
 #elif __x86_64__
 CheckTypeSize(struct _xmlValidState,0, 14822, 11)
 Msg("Missing member data for _xmlValidState on x86-64\n");
+#elif __ia64__
+CheckTypeSize(struct _xmlValidState,0, 14822, 3)
+Msg("Missing member data for _xmlValidState on IA64\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14822,0);
 Msg("Find size of _xmlValidState (14822)\n");
@@ -599,6 +836,8 @@ Msg("Find size of _xmlValidState (14822)\n");
 CheckTypeSize(xmlValidState,0, 14823, 2)
 #elif __x86_64__
 CheckTypeSize(xmlValidState,0, 14823, 11)
+#elif __ia64__
+CheckTypeSize(xmlValidState,0, 14823, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14823,0);
 Msg("Find size of xmlValidState (14823)\n");
@@ -608,6 +847,8 @@ Msg("Find size of xmlValidState (14823)\n");
 CheckTypeSize(xmlValidState *,4, 14824, 2)
 #elif __x86_64__
 CheckTypeSize(xmlValidState *,8, 14824, 11)
+#elif __ia64__
+CheckTypeSize(xmlValidState *,8, 14824, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14824,0);
 Msg("Find size of xmlValidState * (14824)\n");
@@ -617,6 +858,8 @@ Msg("Find size of xmlValidState * (14824)\n");
 CheckTypeSize(xmlValidCtxt,64, 14825, 2)
 #elif __x86_64__
 CheckTypeSize(xmlValidCtxt,112, 14825, 11)
+#elif __ia64__
+CheckTypeSize(xmlValidCtxt,112, 14825, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14825,0);
 Msg("Find size of xmlValidCtxt (14825)\n");
@@ -660,6 +903,25 @@ CheckEnum("XML_PARSER_SYSTEM_LITERAL",XML_PARSER_SYSTEM_LITERAL,13);
 CheckEnum("XML_PARSER_EPILOG",XML_PARSER_EPILOG,14);
 CheckEnum("XML_PARSER_IGNORE",XML_PARSER_IGNORE,15);
 CheckEnum("XML_PARSER_PUBLIC_LITERAL",XML_PARSER_PUBLIC_LITERAL,16);
+#elif __ia64__
+CheckEnum("XML_PARSER_EOF",XML_PARSER_EOF,-1);
+CheckEnum("XML_PARSER_START",XML_PARSER_START,0);
+CheckEnum("XML_PARSER_MISC",XML_PARSER_MISC,1);
+CheckEnum("XML_PARSER_PI",XML_PARSER_PI,2);
+CheckEnum("XML_PARSER_DTD",XML_PARSER_DTD,3);
+CheckEnum("XML_PARSER_PROLOG",XML_PARSER_PROLOG,4);
+CheckEnum("XML_PARSER_COMMENT",XML_PARSER_COMMENT,5);
+CheckEnum("XML_PARSER_START_TAG",XML_PARSER_START_TAG,6);
+CheckEnum("XML_PARSER_CONTENT",XML_PARSER_CONTENT,7);
+CheckEnum("XML_PARSER_CDATA_SECTION",XML_PARSER_CDATA_SECTION,8);
+CheckEnum("XML_PARSER_END_TAG",XML_PARSER_END_TAG,9);
+CheckEnum("XML_PARSER_ENTITY_DECL",XML_PARSER_ENTITY_DECL,10);
+CheckEnum("XML_PARSER_ENTITY_VALUE",XML_PARSER_ENTITY_VALUE,11);
+CheckEnum("XML_PARSER_ATTRIBUTE_VALUE",XML_PARSER_ATTRIBUTE_VALUE,12);
+CheckEnum("XML_PARSER_SYSTEM_LITERAL",XML_PARSER_SYSTEM_LITERAL,13);
+CheckEnum("XML_PARSER_EPILOG",XML_PARSER_EPILOG,14);
+CheckEnum("XML_PARSER_IGNORE",XML_PARSER_IGNORE,15);
+CheckEnum("XML_PARSER_PUBLIC_LITERAL",XML_PARSER_PUBLIC_LITERAL,16);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14826,0);
 Msg("Find size of anon-libxml2/libxml/xmlIO.h-71 (14826)\n");
@@ -669,6 +931,8 @@ Msg("Find size of anon-libxml2/libxml/xmlIO.h-71 (14826)\n");
 CheckTypeSize(xmlParserInputState,4, 14827, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserInputState,4, 14827, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserInputState,4, 14827, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14827,0);
 Msg("Find size of xmlParserInputState (14827)\n");
@@ -688,6 +952,13 @@ CheckEnum("XML_PARSE_SAX",XML_PARSE_SAX,2);
 CheckEnum("XML_PARSE_PUSH_DOM",XML_PARSE_PUSH_DOM,3);
 CheckEnum("XML_PARSE_PUSH_SAX",XML_PARSE_PUSH_SAX,4);
 CheckEnum("XML_PARSE_READER",XML_PARSE_READER,5);
+#elif __ia64__
+CheckEnum("XML_PARSE_UNKNOWN",XML_PARSE_UNKNOWN,0);
+CheckEnum("XML_PARSE_DOM",XML_PARSE_DOM,1);
+CheckEnum("XML_PARSE_SAX",XML_PARSE_SAX,2);
+CheckEnum("XML_PARSE_PUSH_DOM",XML_PARSE_PUSH_DOM,3);
+CheckEnum("XML_PARSE_PUSH_SAX",XML_PARSE_PUSH_SAX,4);
+CheckEnum("XML_PARSE_READER",XML_PARSE_READER,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14828,0);
 Msg("Find size of anon-libxml2/libxml/xmlIO.h-72 (14828)\n");
@@ -697,6 +968,8 @@ Msg("Find size of anon-libxml2/libxml/xmlIO.h-72 (14828)\n");
 CheckTypeSize(xmlParserMode,4, 14829, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserMode,4, 14829, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserMode,4, 14829, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14829,0);
 Msg("Find size of xmlParserMode (14829)\n");
@@ -706,6 +979,8 @@ Msg("Find size of xmlParserMode (14829)\n");
 CheckTypeSize(xmlParserCtxt,440, 14830, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserCtxt,696, 14830, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserCtxt,696, 14830, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14830,0);
 Msg("Find size of xmlParserCtxt (14830)\n");
@@ -715,6 +990,8 @@ Msg("Find size of xmlParserCtxt (14830)\n");
 CheckTypeSize(xmlParserCtxt *,4, 14831, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserCtxt *,8, 14831, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserCtxt *,8, 14831, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14831,0);
 Msg("Find size of xmlParserCtxt * (14831)\n");
@@ -724,6 +1001,8 @@ Msg("Find size of xmlParserCtxt * (14831)\n");
 CheckTypeSize(xmlParserCtxtPtr,4, 14832, 2)
 #elif __x86_64__
 CheckTypeSize(xmlParserCtxtPtr,8, 14832, 11)
+#elif __ia64__
+CheckTypeSize(xmlParserCtxtPtr,8, 14832, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14832,0);
 Msg("Find size of xmlParserCtxtPtr (14832)\n");
@@ -733,6 +1012,8 @@ Msg("Find size of xmlParserCtxtPtr (14832)\n");
 CheckTypeSize(xmlInputMatchCallback,4, 14833, 2)
 #elif __x86_64__
 CheckTypeSize(xmlInputMatchCallback,8, 14833, 11)
+#elif __ia64__
+CheckTypeSize(xmlInputMatchCallback,8, 14833, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14833,0);
 Msg("Find size of xmlInputMatchCallback (14833)\n");
@@ -742,6 +1023,8 @@ Msg("Find size of xmlInputMatchCallback (14833)\n");
 CheckTypeSize(xmlInputOpenCallback,4, 14834, 2)
 #elif __x86_64__
 CheckTypeSize(xmlInputOpenCallback,8, 14834, 11)
+#elif __ia64__
+CheckTypeSize(xmlInputOpenCallback,8, 14834, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14834,0);
 Msg("Find size of xmlInputOpenCallback (14834)\n");
@@ -767,8 +1050,6 @@ extern void xmlRegisterHTTPPostCallbacks_db(void);
 CheckInterfacedef(xmlRegisterHTTPPostCallbacks,xmlRegisterHTTPPostCallbacks_db);
 extern xmlOutputBufferPtr xmlOutputBufferCreateFd_db(int, xmlCharEncodingHandlerPtr);
 CheckInterfacedef(xmlOutputBufferCreateFd,xmlOutputBufferCreateFd_db);
-extern xmlOutputBufferPtr __xmlOutputBufferCreateFilename_db(const char *, xmlCharEncodingHandlerPtr, int);
-CheckInterfacedef(__xmlOutputBufferCreateFilename,__xmlOutputBufferCreateFilename_db);
 extern int xmlIOFTPMatch_db(const char *);
 CheckInterfacedef(xmlIOFTPMatch,xmlIOFTPMatch_db);
 extern xmlParserInputBufferPtr xmlParserInputBufferCreateFile_db(FILE *, xmlCharEncoding);
@@ -807,8 +1088,6 @@ extern int xmlRegisterInputCallbacks_db(xmlInputMatchCallback, xmlInputOpenCallb
 CheckInterfacedef(xmlRegisterInputCallbacks,xmlRegisterInputCallbacks_db);
 extern void xmlCleanupOutputCallbacks_db(void);
 CheckInterfacedef(xmlCleanupOutputCallbacks,xmlCleanupOutputCallbacks_db);
-extern xmlParserInputBufferPtr __xmlParserInputBufferCreateFilename_db(const char *, xmlCharEncoding);
-CheckInterfacedef(__xmlParserInputBufferCreateFilename,__xmlParserInputBufferCreateFilename_db);
 extern void * xmlIOFTPOpen_db(const char *);
 CheckInterfacedef(xmlIOFTPOpen,xmlIOFTPOpen_db);
 extern void xmlRegisterDefaultInputCallbacks_db(void);
@@ -841,6 +1120,8 @@ extern int xmlIOHTTPClose_db(void *);
 CheckInterfacedef(xmlIOHTTPClose,xmlIOHTTPClose_db);
 extern void xmlFreeParserInputBuffer_db(xmlParserInputBufferPtr);
 CheckInterfacedef(xmlFreeParserInputBuffer,xmlFreeParserInputBuffer_db);
+extern xmlOutputBufferPtr xmlOutputBufferCreateFilename_db(const char *, xmlCharEncodingHandlerPtr, int);
+CheckInterfacedef(xmlOutputBufferCreateFilename,xmlOutputBufferCreateFilename_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -18,18 +18,40 @@ int rpc_xdr_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in rpc/xdr.h\n");
 #endif
 
+printf("Checking data structures in rpc/xdr.h\n");
 #if __i386__
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
 #elif __s390__ && !__s390x__
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
 #elif __ia64__
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
 #elif __powerpc__ && !__powerpc64__
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
 #elif __powerpc64__
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
 #elif __s390x__
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
 #elif __x86_64__
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9933,0);
 Msg("Find size of xdr_op (9933)\n");
@@ -348,6 +370,60 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9949,0);
 Msg("Find size of xdr_discrim (9949)\n");
 #endif
 
+extern bool_t xdr_array_db(XDR *, caddr_t *, u_int *, u_int, u_int, xdrproc_t);
+CheckInterfacedef(xdr_array,xdr_array_db);
+extern bool_t xdr_bool_db(XDR *, bool_t *);
+CheckInterfacedef(xdr_bool,xdr_bool_db);
+extern bool_t xdr_bytes_db(XDR *, char * *, u_int *, u_int);
+CheckInterfacedef(xdr_bytes,xdr_bytes_db);
+extern bool_t xdr_char_db(XDR *, char *);
+CheckInterfacedef(xdr_char,xdr_char_db);
+extern bool_t xdr_double_db(XDR *, double *);
+CheckInterfacedef(xdr_double,xdr_double_db);
+extern bool_t xdr_enum_db(XDR *, enum_t *);
+CheckInterfacedef(xdr_enum,xdr_enum_db);
+extern bool_t xdr_float_db(XDR *, float *);
+CheckInterfacedef(xdr_float,xdr_float_db);
+extern void xdr_free_db(xdrproc_t, char *);
+CheckInterfacedef(xdr_free,xdr_free_db);
+extern bool_t xdr_int_db(XDR *, int *);
+CheckInterfacedef(xdr_int,xdr_int_db);
+extern bool_t xdr_long_db(XDR *, long int *);
+CheckInterfacedef(xdr_long,xdr_long_db);
+extern bool_t xdr_opaque_db(XDR *, caddr_t, u_int);
+CheckInterfacedef(xdr_opaque,xdr_opaque_db);
+extern bool_t xdr_pointer_db(XDR *, char * *, u_int, xdrproc_t);
+CheckInterfacedef(xdr_pointer,xdr_pointer_db);
+extern bool_t xdr_reference_db(XDR *, caddr_t *, u_int, xdrproc_t);
+CheckInterfacedef(xdr_reference,xdr_reference_db);
+extern bool_t xdr_short_db(XDR *, short *);
+CheckInterfacedef(xdr_short,xdr_short_db);
+extern bool_t xdr_string_db(XDR *, char * *, u_int);
+CheckInterfacedef(xdr_string,xdr_string_db);
+extern bool_t xdr_u_char_db(XDR *, u_char *);
+CheckInterfacedef(xdr_u_char,xdr_u_char_db);
+extern bool_t xdr_u_int_db(XDR *, u_int *);
+CheckInterfacedef(xdr_u_int,xdr_u_int_db);
+extern bool_t xdr_u_long_db(XDR *, u_long *);
+CheckInterfacedef(xdr_u_long,xdr_u_long_db);
+extern bool_t xdr_u_short_db(XDR *, u_short *);
+CheckInterfacedef(xdr_u_short,xdr_u_short_db);
+extern bool_t xdr_union_db(XDR *, enum_t *, char *, const struct xdr_discrim *, xdrproc_t);
+CheckInterfacedef(xdr_union,xdr_union_db);
+extern bool_t xdr_vector_db(XDR *, char *, u_int, u_int, xdrproc_t);
+CheckInterfacedef(xdr_vector,xdr_vector_db);
+extern bool_t xdr_void_db(void);
+CheckInterfacedef(xdr_void,xdr_void_db);
+extern bool_t xdr_wrapstring_db(XDR *, char * *);
+CheckInterfacedef(xdr_wrapstring,xdr_wrapstring_db);
+extern void xdrmem_create_db(XDR *, caddr_t, u_int, enum xdr_op);
+CheckInterfacedef(xdrmem_create,xdrmem_create_db);
+extern void xdrrec_create_db(XDR *, u_int, u_int, caddr_t, int(*__readit)(char *,char *,int)
+, int(*__writeit)(char *,char *,int)
+);
+CheckInterfacedef(xdrrec_create,xdrrec_create_db);
+extern bool_t xdrrec_eof_db(XDR *);
+CheckInterfacedef(xdrrec_eof,xdrrec_eof_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -355,7 +431,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in rpc/xdr.h\n",cnt);
+printf("%d tests passed out of %d tests in rpc/xdr.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

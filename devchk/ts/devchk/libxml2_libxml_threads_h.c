@@ -31,6 +31,8 @@ printf("Checking data structures in libxml2/libxml/threads.h\n");
 CheckTypeSize(xmlRMutex,0, 14995, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRMutex,0, 14995, 11)
+#elif __ia64__
+CheckTypeSize(xmlRMutex,0, 14995, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14995,0);
 Msg("Find size of xmlRMutex (14995)\n");
@@ -40,6 +42,8 @@ Msg("Find size of xmlRMutex (14995)\n");
 CheckTypeSize(xmlRMutex *,4, 14996, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRMutex *,8, 14996, 11)
+#elif __ia64__
+CheckTypeSize(xmlRMutex *,8, 14996, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14996,0);
 Msg("Find size of xmlRMutex * (14996)\n");
@@ -49,6 +53,8 @@ Msg("Find size of xmlRMutex * (14996)\n");
 CheckTypeSize(xmlRMutexPtr,4, 14997, 2)
 #elif __x86_64__
 CheckTypeSize(xmlRMutexPtr,8, 14997, 11)
+#elif __ia64__
+CheckTypeSize(xmlRMutexPtr,8, 14997, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14997,0);
 Msg("Find size of xmlRMutexPtr (14997)\n");
@@ -58,6 +64,8 @@ Msg("Find size of xmlRMutexPtr (14997)\n");
 CheckTypeSize(xmlMutex,0, 14999, 2)
 #elif __x86_64__
 CheckTypeSize(xmlMutex,0, 14999, 11)
+#elif __ia64__
+CheckTypeSize(xmlMutex,0, 14999, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14999,0);
 Msg("Find size of xmlMutex (14999)\n");
@@ -67,6 +75,8 @@ Msg("Find size of xmlMutex (14999)\n");
 CheckTypeSize(xmlMutex *,4, 15000, 2)
 #elif __x86_64__
 CheckTypeSize(xmlMutex *,8, 15000, 11)
+#elif __ia64__
+CheckTypeSize(xmlMutex *,8, 15000, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15000,0);
 Msg("Find size of xmlMutex * (15000)\n");
@@ -76,6 +86,8 @@ Msg("Find size of xmlMutex * (15000)\n");
 CheckTypeSize(xmlMutexPtr,4, 15001, 2)
 #elif __x86_64__
 CheckTypeSize(xmlMutexPtr,8, 15001, 11)
+#elif __ia64__
+CheckTypeSize(xmlMutexPtr,8, 15001, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15001,0);
 Msg("Find size of xmlMutexPtr (15001)\n");

@@ -18,11 +18,12 @@ int sys_msg_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/msg.h\n");
 #endif
 
+printf("Checking data structures in sys/msg.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef MSG_NOERROR
 	CompareConstant(MSG_NOERROR,010000,3457,architecture)
@@ -279,6 +280,14 @@ CheckMemberSize(struct msqid_ds,__unused5,8,9,40665)
 CheckOffset(struct msqid_ds,__unused5,112,9,40665)
 #endif
 
+extern int msgctl_db(int, int, struct msqid_ds *);
+CheckInterfacedef(msgctl,msgctl_db);
+extern int msgget_db(key_t, int);
+CheckInterfacedef(msgget,msgget_db);
+extern int msgrcv_db(int, void *, size_t, long int, int);
+CheckInterfacedef(msgrcv,msgrcv_db);
+extern int msgsnd_db(int, const void *, size_t, int);
+CheckInterfacedef(msgsnd,msgsnd_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -286,7 +295,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/msg.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/msg.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

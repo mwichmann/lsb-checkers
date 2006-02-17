@@ -18,11 +18,12 @@ int errno_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in errno.h\n");
 #endif
 
+printf("Checking data structures in errno.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef EREMOTE
 	CompareConstant(EREMOTE,66,100,architecture)
@@ -1289,6 +1290,8 @@ cnt++;
 
 #endif
 
+extern int * __errno_location_db(void);
+CheckInterfacedef(__errno_location,__errno_location_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -1296,7 +1299,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in errno.h\n",cnt);
+printf("%d tests passed out of %d tests in errno.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

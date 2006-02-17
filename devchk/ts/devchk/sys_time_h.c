@@ -18,11 +18,12 @@ int sys_time_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/time.h\n");
 #endif
 
+printf("Checking data structures in sys/time.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef ITIMER_REAL
 	CompareConstant(ITIMER_REAL,0,3585,architecture)
@@ -198,6 +199,16 @@ Msg("Find size of timeval (9858)\n");
 #if __powerpc64__
 #endif
 
+extern int getitimer_db(__itimer_which_t, struct itimerval *);
+CheckInterfacedef(getitimer,getitimer_db);
+extern int setitimer_db(__itimer_which_t, const struct itimerval *, struct itimerval *);
+CheckInterfacedef(setitimer,setitimer_db);
+extern int adjtime_db(const struct timeval *, struct timeval *);
+CheckInterfacedef(adjtime,adjtime_db);
+extern int gettimeofday_db(struct timeval *, struct timezone *);
+CheckInterfacedef(gettimeofday,gettimeofday_db);
+extern int utimes_db(const char *, const struct timeval *);
+CheckInterfacedef(utimes,utimes_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -205,7 +216,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/time.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/time.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

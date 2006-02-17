@@ -34,6 +34,8 @@ printf("Checking data structures in libxml2/libxml/hash.h\n");
 CheckTypeSize(xmlHashTable,0, 14729, 2)
 #elif __x86_64__
 CheckTypeSize(xmlHashTable,0, 14729, 11)
+#elif __ia64__
+CheckTypeSize(xmlHashTable,0, 14729, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14729,0);
 Msg("Find size of xmlHashTable (14729)\n");
@@ -43,6 +45,8 @@ Msg("Find size of xmlHashTable (14729)\n");
 CheckTypeSize(xmlHashTable *,4, 14730, 2)
 #elif __x86_64__
 CheckTypeSize(xmlHashTable *,8, 14730, 11)
+#elif __ia64__
+CheckTypeSize(xmlHashTable *,8, 14730, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14730,0);
 Msg("Find size of xmlHashTable * (14730)\n");
@@ -52,6 +56,8 @@ Msg("Find size of xmlHashTable * (14730)\n");
 CheckTypeSize(xmlHashTablePtr,4, 14731, 2)
 #elif __x86_64__
 CheckTypeSize(xmlHashTablePtr,8, 14731, 11)
+#elif __ia64__
+CheckTypeSize(xmlHashTablePtr,8, 14731, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14731,0);
 Msg("Find size of xmlHashTablePtr (14731)\n");
@@ -59,6 +65,7 @@ Msg("Find size of xmlHashTablePtr (14731)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14732,0);
 Msg("Find size of fptr_hash_50 (14732)\n");
@@ -68,6 +75,8 @@ Msg("Find size of fptr_hash_50 (14732)\n");
 CheckTypeSize(xmlHashDeallocator,4, 14733, 2)
 #elif __x86_64__
 CheckTypeSize(xmlHashDeallocator,8, 14733, 11)
+#elif __ia64__
+CheckTypeSize(xmlHashDeallocator,8, 14733, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14733,0);
 Msg("Find size of xmlHashDeallocator (14733)\n");
@@ -75,6 +84,7 @@ Msg("Find size of xmlHashDeallocator (14733)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14734,0);
 Msg("Find size of fptr_hash_147 (14734)\n");
@@ -84,6 +94,8 @@ Msg("Find size of fptr_hash_147 (14734)\n");
 CheckTypeSize(xmlHashScannerFull,4, 14735, 2)
 #elif __x86_64__
 CheckTypeSize(xmlHashScannerFull,8, 14735, 11)
+#elif __ia64__
+CheckTypeSize(xmlHashScannerFull,8, 14735, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14735,0);
 Msg("Find size of xmlHashScannerFull (14735)\n");
@@ -91,6 +103,7 @@ Msg("Find size of xmlHashScannerFull (14735)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14736,0);
 Msg("Find size of fptr_hash_223 (14736)\n");
@@ -100,6 +113,8 @@ Msg("Find size of fptr_hash_223 (14736)\n");
 CheckTypeSize(xmlHashCopier,4, 14737, 2)
 #elif __x86_64__
 CheckTypeSize(xmlHashCopier,8, 14737, 11)
+#elif __ia64__
+CheckTypeSize(xmlHashCopier,8, 14737, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14737,0);
 Msg("Find size of xmlHashCopier (14737)\n");
@@ -107,6 +122,7 @@ Msg("Find size of xmlHashCopier (14737)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14738,0);
 Msg("Find size of fptr_hash_15 (14738)\n");
@@ -116,6 +132,8 @@ Msg("Find size of fptr_hash_15 (14738)\n");
 CheckTypeSize(xmlHashScanner,4, 14739, 2)
 #elif __x86_64__
 CheckTypeSize(xmlHashScanner,8, 14739, 11)
+#elif __ia64__
+CheckTypeSize(xmlHashScanner,8, 14739, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14739,0);
 Msg("Find size of xmlHashScanner (14739)\n");

@@ -18,11 +18,12 @@ int dlfcn_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in dlfcn.h\n");
 #endif
 
+printf("Checking data structures in dlfcn.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef RTLD_LAZY
 	CompareConstant(RTLD_LAZY,0x00001,1160,architecture)
@@ -92,6 +93,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10008,0);
 Msg("Find size of Dl_info (10008)\n");
 #endif
 
+extern int dladdr_db(const void *, Dl_info *);
+CheckInterfacedef(dladdr,dladdr_db);
+extern int dlclose_db(void *);
+CheckInterfacedef(dlclose,dlclose_db);
+extern char * dlerror_db(void);
+CheckInterfacedef(dlerror,dlerror_db);
+extern void * dlopen_db(const char *, int);
+CheckInterfacedef(dlopen,dlopen_db);
+extern void * dlsym_db(void *, const char *);
+CheckInterfacedef(dlsym,dlsym_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -99,7 +110,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in dlfcn.h\n",cnt);
+printf("%d tests passed out of %d tests in dlfcn.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

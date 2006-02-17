@@ -32,6 +32,8 @@ printf("Checking data structures in libxml2/libxml/pattern.h\n");
 CheckTypeSize(xmlStreamCtxt,0, 14897, 2)
 #elif __x86_64__
 CheckTypeSize(xmlStreamCtxt,0, 14897, 11)
+#elif __ia64__
+CheckTypeSize(xmlStreamCtxt,0, 14897, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14897,0);
 Msg("Find size of xmlStreamCtxt (14897)\n");
@@ -41,6 +43,8 @@ Msg("Find size of xmlStreamCtxt (14897)\n");
 CheckTypeSize(xmlStreamCtxt *,4, 14898, 2)
 #elif __x86_64__
 CheckTypeSize(xmlStreamCtxt *,8, 14898, 11)
+#elif __ia64__
+CheckTypeSize(xmlStreamCtxt *,8, 14898, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14898,0);
 Msg("Find size of xmlStreamCtxt * (14898)\n");
@@ -50,6 +54,8 @@ Msg("Find size of xmlStreamCtxt * (14898)\n");
 CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 2)
 #elif __x86_64__
 CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 11)
+#elif __ia64__
+CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14899,0);
 Msg("Find size of xmlStreamCtxtPtr (14899)\n");
@@ -59,6 +65,8 @@ Msg("Find size of xmlStreamCtxtPtr (14899)\n");
 CheckTypeSize(xmlPattern,0, 14901, 2)
 #elif __x86_64__
 CheckTypeSize(xmlPattern,0, 14901, 11)
+#elif __ia64__
+CheckTypeSize(xmlPattern,0, 14901, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14901,0);
 Msg("Find size of xmlPattern (14901)\n");
@@ -68,6 +76,8 @@ Msg("Find size of xmlPattern (14901)\n");
 CheckTypeSize(xmlPattern *,4, 14902, 2)
 #elif __x86_64__
 CheckTypeSize(xmlPattern *,8, 14902, 11)
+#elif __ia64__
+CheckTypeSize(xmlPattern *,8, 14902, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14902,0);
 Msg("Find size of xmlPattern * (14902)\n");
@@ -77,6 +87,8 @@ Msg("Find size of xmlPattern * (14902)\n");
 CheckTypeSize(xmlPatternPtr,4, 14903, 2)
 #elif __x86_64__
 CheckTypeSize(xmlPatternPtr,8, 14903, 11)
+#elif __ia64__
+CheckTypeSize(xmlPatternPtr,8, 14903, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14903,0);
 Msg("Find size of xmlPatternPtr (14903)\n");
@@ -92,6 +104,11 @@ CheckEnum("XML_PATTERN_DEFAULT",XML_PATTERN_DEFAULT,0);
 CheckEnum("XML_PATTERN_XPATH",XML_PATTERN_XPATH,1<<0);
 CheckEnum("XML_PATTERN_XSSEL",XML_PATTERN_XSSEL,1<<1);
 CheckEnum("XML_PATTERN_XSFIELD",XML_PATTERN_XSFIELD,1<<2);
+#elif __ia64__
+CheckEnum("XML_PATTERN_DEFAULT",XML_PATTERN_DEFAULT,0);
+CheckEnum("XML_PATTERN_XPATH",XML_PATTERN_XPATH,1<<0);
+CheckEnum("XML_PATTERN_XSSEL",XML_PATTERN_XSSEL,1<<1);
+CheckEnum("XML_PATTERN_XSFIELD",XML_PATTERN_XSFIELD,1<<2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15105,0);
 Msg("Find size of anonymous-pattern.h.types-0 (15105)\n");
@@ -101,6 +118,8 @@ Msg("Find size of anonymous-pattern.h.types-0 (15105)\n");
 CheckTypeSize(xmlPatternFlags,4, 15106, 2)
 #elif __x86_64__
 CheckTypeSize(xmlPatternFlags,4, 15106, 11)
+#elif __ia64__
+CheckTypeSize(xmlPatternFlags,4, 15106, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15106,0);
 Msg("Find size of xmlPatternFlags (15106)\n");

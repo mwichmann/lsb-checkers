@@ -18,11 +18,12 @@ int locale_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in locale.h\n");
 #endif
 
+printf("Checking data structures in locale.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef LC_CTYPE
 	CompareConstant(LC_CTYPE,0,1470,architecture)
@@ -285,7 +286,10 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LC_ALL_MASK
-	CompareConstant(LC_ALL_MASK,(LC_CTYPE_MASK| LC_NUMERIC_MASK| LC_TIME_MASK| LC_COLLATE_MASK| LC_MONETARY_MASK| LC_MESSAGES_MASK| LC_PAPER_MASK| LC_NAME_MASK| LC_ADDRESS_MASK| LC_TELEPHONE_MASK| LC_MEASUREMENT_MASK| LC_IDENTIFICATION_MASK),5297,architecture)
+	CompareConstant(LC_ALL_MASK,\
+        (LC_CTYPE_MASK| LC_NUMERIC_MASK| LC_TIME_MASK| LC_COLLATE_MASK| LC_MONETARY_MASK|\
+         LC_MESSAGES_MASK| LC_PAPER_MASK| LC_NAME_MASK| LC_ADDRESS_MASK| LC_TELEPHONE_MASK|\
+         LC_MEASUREMENT_MASK| LC_IDENTIFICATION_MASK),5297,architecture)
 #else
 Msg( "Error: Constant not found: LC_ALL_MASK\n");
 cnt++;
@@ -720,12 +724,19 @@ Msg("Find size of __locale_struct (10531)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(struct __locale_struct *,4, 10532, 2)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct __locale_struct *,0, 10532, 6)
 #elif __ia64__
+CheckTypeSize(struct __locale_struct *,0, 10532, 3)
 #elif __s390x__
+CheckTypeSize(struct __locale_struct *,0, 10532, 12)
 #elif __s390__ && !__s390x__
+CheckTypeSize(struct __locale_struct *,0, 10532, 10)
 #elif __x86_64__
+CheckTypeSize(struct __locale_struct *,8, 10532, 11)
 #elif __powerpc64__
+CheckTypeSize(struct __locale_struct *,0, 10532, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10532,0);
 Msg("Find size of __locale_struct * (10532)\n");
@@ -769,6 +780,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10534,0);
 Msg("Find size of locale_t (10534)\n");
 #endif
 
+extern struct lconv * localeconv_db(void);
+CheckInterfacedef(localeconv,localeconv_db);
+extern char * setlocale_db(int, const char *);
+CheckInterfacedef(setlocale,setlocale_db);
+extern locale_t uselocale_db(locale_t);
+CheckInterfacedef(uselocale,uselocale_db);
+extern void freelocale_db(locale_t);
+CheckInterfacedef(freelocale,freelocale_db);
+extern locale_t duplocale_db(locale_t);
+CheckInterfacedef(duplocale,duplocale_db);
+extern locale_t newlocale_db(int, const char *, locale_t);
+CheckInterfacedef(newlocale,newlocale_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -776,7 +799,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in locale.h\n",cnt);
+printf("%d tests passed out of %d tests in locale.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

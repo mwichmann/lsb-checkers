@@ -4,7 +4,12 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
-struct _FcCharSet { };
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
+#define PANGO_DISABLE_DEPRECATED
+
 #include "pango-1.0/pango/pangofc-decoder.h"
 
 
@@ -57,6 +62,10 @@ CheckOffset(struct _PangoFcDecoder,parent_instance,0,2,43301)
 CheckTypeSize(struct _PangoFcDecoder,24, 12596, 11)
 Msg("Missing member data for _PangoFcDecoder on x86-64\n");
 CheckOffset(struct _PangoFcDecoder,parent_instance,0,11,43301)
+#elif __ia64__
+CheckTypeSize(struct _PangoFcDecoder,24, 12596, 3)
+Msg("Missing member data for _PangoFcDecoder on IA64\n");
+CheckOffset(struct _PangoFcDecoder,parent_instance,0,3,43301)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12596,0);
 Msg("Find size of _PangoFcDecoder (12596)\n");
@@ -66,6 +75,8 @@ Msg("Find size of _PangoFcDecoder (12596)\n");
 CheckTypeSize(PangoFcDecoder,12, 12597, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcDecoder,24, 12597, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcDecoder,24, 12597, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12597,0);
 Msg("Find size of PangoFcDecoder (12597)\n");
@@ -75,6 +86,8 @@ Msg("Find size of PangoFcDecoder (12597)\n");
 CheckTypeSize(PangoFcDecoder *,4, 12598, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFcDecoder *,8, 12598, 11)
+#elif __ia64__
+CheckTypeSize(PangoFcDecoder *,8, 12598, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12598,0);
 Msg("Find size of PangoFcDecoder * (12598)\n");
@@ -82,6 +95,7 @@ Msg("Find size of PangoFcDecoder * (12598)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12599,0);
 Msg("Find size of fptr_anonymous-pangofc_decoder.h.types-0 (12599)\n");
@@ -89,6 +103,7 @@ Msg("Find size of fptr_anonymous-pangofc_decoder.h.types-0 (12599)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12600,0);
 Msg("Find size of fptr_anonymous-pangofc_decoder.h.types-2 (12600)\n");

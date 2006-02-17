@@ -4,6 +4,8 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#include <sys/cdefs.h>
+#include <stdio_ext.h>
 #include "stdio.h"
 
 
@@ -18,11 +20,12 @@ int stdio_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in stdio.h\n");
 #endif
 
+printf("Checking data structures in stdio.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef _IOFBF
 	CompareConstant(_IOFBF,0,1631,architecture)
@@ -257,6 +260,154 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
 Msg("Find size of FILE (8782)\n");
 #endif
 
+extern void clearerr_db(FILE *);
+CheckInterfacedef(clearerr,clearerr_db);
+extern int fclose_db(FILE *);
+CheckInterfacedef(fclose,fclose_db);
+extern FILE * fdopen_db(int, const char *);
+CheckInterfacedef(fdopen,fdopen_db);
+extern int fflush_unlocked_db(FILE *);
+CheckInterfacedef(fflush_unlocked,fflush_unlocked_db);
+extern int fileno_db(FILE *);
+CheckInterfacedef(fileno,fileno_db);
+extern FILE * fopen_db(const char *, const char *);
+CheckInterfacedef(fopen,fopen_db);
+extern int fprintf_db(FILE *, const char *, ...);
+CheckInterfacedef(fprintf,fprintf_db);
+extern int fputc_db(int, FILE *);
+CheckInterfacedef(fputc,fputc_db);
+extern FILE * freopen_db(const char *, const char *, FILE *);
+CheckInterfacedef(freopen,freopen_db);
+extern FILE * freopen64_db(const char *, const char *, FILE *);
+CheckInterfacedef(freopen64,freopen64_db);
+extern int fscanf_db(FILE *, const char *, ...);
+CheckInterfacedef(fscanf,fscanf_db);
+extern int fseek_db(FILE *, long int, int);
+CheckInterfacedef(fseek,fseek_db);
+extern int fseeko_db(FILE *, off_t, int);
+CheckInterfacedef(fseeko,fseeko_db);
+extern int fseeko64_db(FILE *, loff_t, int);
+CheckInterfacedef(fseeko64,fseeko64_db);
+extern off_t ftello_db(FILE *);
+CheckInterfacedef(ftello,ftello_db);
+extern loff_t ftello64_db(FILE *);
+CheckInterfacedef(ftello64,ftello64_db);
+extern int getchar_db(void);
+CheckInterfacedef(getchar,getchar_db);
+extern int getchar_unlocked_db(void);
+CheckInterfacedef(getchar_unlocked,getchar_unlocked_db);
+extern int getw_db(FILE *);
+CheckInterfacedef(getw,getw_db);
+extern int pclose_db(FILE *);
+CheckInterfacedef(pclose,pclose_db);
+extern void perror_db(const char *);
+CheckInterfacedef(perror,perror_db);
+extern FILE * popen_db(const char *, const char *);
+CheckInterfacedef(popen,popen_db);
+extern int printf_db(const char *, ...);
+CheckInterfacedef(printf,printf_db);
+extern int putc_unlocked_db(int, FILE *);
+CheckInterfacedef(putc_unlocked,putc_unlocked_db);
+extern int putchar_db(int);
+CheckInterfacedef(putchar,putchar_db);
+extern int putchar_unlocked_db(int);
+CheckInterfacedef(putchar_unlocked,putchar_unlocked_db);
+extern int putw_db(int, FILE *);
+CheckInterfacedef(putw,putw_db);
+extern int remove_db(const char *);
+CheckInterfacedef(remove,remove_db);
+extern void rewind_db(FILE *);
+CheckInterfacedef(rewind,rewind_db);
+extern int scanf_db(const char *, ...);
+CheckInterfacedef(scanf,scanf_db);
+extern void setbuf_db(FILE *, char *);
+CheckInterfacedef(setbuf,setbuf_db);
+extern int sprintf_db(char *, const char *, ...);
+CheckInterfacedef(sprintf,sprintf_db);
+extern int sscanf_db(const char *, const char *, ...);
+CheckInterfacedef(sscanf,sscanf_db);
+extern char * tempnam_db(const char *, const char *);
+CheckInterfacedef(tempnam,tempnam_db);
+extern FILE * tmpfile64_db(void);
+CheckInterfacedef(tmpfile64,tmpfile64_db);
+extern FILE * tmpfile_db(void);
+CheckInterfacedef(tmpfile,tmpfile_db);
+extern char * tmpnam_db(char *);
+CheckInterfacedef(tmpnam,tmpnam_db);
+extern int vfprintf_db(FILE *, const char *, va_list);
+CheckInterfacedef(vfprintf,vfprintf_db);
+extern int vprintf_db(const char *, va_list);
+CheckInterfacedef(vprintf,vprintf_db);
+extern int feof_db(FILE *);
+CheckInterfacedef(feof,feof_db);
+extern int ferror_db(FILE *);
+CheckInterfacedef(ferror,ferror_db);
+extern int fflush_db(FILE *);
+CheckInterfacedef(fflush,fflush_db);
+extern int fgetc_db(FILE *);
+CheckInterfacedef(fgetc,fgetc_db);
+extern int fgetpos_db(FILE *, fpos_t *);
+CheckInterfacedef(fgetpos,fgetpos_db);
+extern char * fgets_db(char *, int, FILE *);
+CheckInterfacedef(fgets,fgets_db);
+extern int fputs_db(const char *, FILE *);
+CheckInterfacedef(fputs,fputs_db);
+extern size_t fread_db(void *, size_t, size_t, FILE *);
+CheckInterfacedef(fread,fread_db);
+extern int fsetpos_db(FILE *, const fpos_t *);
+CheckInterfacedef(fsetpos,fsetpos_db);
+extern long int ftell_db(FILE *);
+CheckInterfacedef(ftell,ftell_db);
+extern size_t fwrite_db(const void *, size_t, size_t, FILE *);
+CheckInterfacedef(fwrite,fwrite_db);
+extern int getc_db(FILE *);
+CheckInterfacedef(getc,getc_db);
+extern char * gets_db(char *);
+CheckInterfacedef(gets,gets_db);
+extern int putc_db(int, FILE *);
+CheckInterfacedef(putc,putc_db);
+extern int puts_db(const char *);
+CheckInterfacedef(puts,puts_db);
+extern int setvbuf_db(FILE *, char *, int, size_t);
+CheckInterfacedef(setvbuf,setvbuf_db);
+extern int snprintf_db(char *, size_t, const char *, ...);
+CheckInterfacedef(snprintf,snprintf_db);
+extern int ungetc_db(int, FILE *);
+CheckInterfacedef(ungetc,ungetc_db);
+extern int vsnprintf_db(char *, size_t, const char *, va_list);
+CheckInterfacedef(vsnprintf,vsnprintf_db);
+extern int vsprintf_db(char *, const char *, va_list);
+CheckInterfacedef(vsprintf,vsprintf_db);
+extern void flockfile_db(FILE *);
+CheckInterfacedef(flockfile,flockfile_db);
+extern int asprintf_db(char * *, const char *, ...);
+CheckInterfacedef(asprintf,asprintf_db);
+extern int fgetpos64_db(FILE *, fpos64_t *);
+CheckInterfacedef(fgetpos64,fgetpos64_db);
+extern FILE * fopen64_db(const char *, const char *);
+CheckInterfacedef(fopen64,fopen64_db);
+extern int fsetpos64_db(FILE *, const fpos64_t *);
+CheckInterfacedef(fsetpos64,fsetpos64_db);
+extern int ftrylockfile_db(FILE *);
+CheckInterfacedef(ftrylockfile,ftrylockfile_db);
+extern void funlockfile_db(FILE *);
+CheckInterfacedef(funlockfile,funlockfile_db);
+extern int getc_unlocked_db(FILE *);
+CheckInterfacedef(getc_unlocked,getc_unlocked_db);
+extern void setbuffer_db(FILE *, char *, size_t);
+CheckInterfacedef(setbuffer,setbuffer_db);
+extern int vasprintf_db(char * *, const char *, va_list);
+CheckInterfacedef(vasprintf,vasprintf_db);
+extern int vdprintf_db(int, const char *, va_list);
+CheckInterfacedef(vdprintf,vdprintf_db);
+extern int vfscanf_db(FILE *, const char *, va_list);
+CheckInterfacedef(vfscanf,vfscanf_db);
+extern int vscanf_db(const char *, va_list);
+CheckInterfacedef(vscanf,vscanf_db);
+extern int vsscanf_db(const char *, const char *, va_list);
+CheckInterfacedef(vsscanf,vsscanf_db);
+extern size_t __fpending_db(FILE *);
+CheckInterfacedef(__fpending,__fpending_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -264,7 +415,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in stdio.h\n",cnt);
+printf("%d tests passed out of %d tests in stdio.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

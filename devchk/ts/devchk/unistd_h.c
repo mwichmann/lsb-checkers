@@ -4,6 +4,9 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#include <fcntl.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "unistd.h"
 
 
@@ -18,11 +21,12 @@ int unistd_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in unistd.h\n");
 #endif
 
+printf("Checking data structures in unistd.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef R_OK
 	CompareConstant(R_OK,4,1212,architecture)
@@ -1886,6 +1890,214 @@ CheckTypeSize(intptr_t,4, 10516, 10)
 CheckTypeSize(intptr_t,8, 10786, 11)
 #endif
 
+extern pid_t __getpgid_db(pid_t);
+CheckInterfacedef(__getpgid,__getpgid_db);
+extern void _exit_db(int);
+CheckInterfacedef(_exit,_exit_db);
+extern int acct_db(const char *);
+CheckInterfacedef(acct,acct_db);
+extern unsigned int alarm_db(unsigned int);
+CheckInterfacedef(alarm,alarm_db);
+extern int chown_db(const char *, uid_t, gid_t);
+CheckInterfacedef(chown,chown_db);
+extern int chroot_db(const char *);
+CheckInterfacedef(chroot,chroot_db);
+extern size_t confstr_db(int, char *, size_t);
+CheckInterfacedef(confstr,confstr_db);
+extern int creat_db(const char *, mode_t);
+CheckInterfacedef(creat,creat_db);
+extern int creat64_db(const char *, mode_t);
+CheckInterfacedef(creat64,creat64_db);
+extern char * ctermid_db(char *);
+CheckInterfacedef(ctermid,ctermid_db);
+extern char * cuserid_db(char *);
+CheckInterfacedef(cuserid,cuserid_db);
+extern int daemon_db(int, int);
+CheckInterfacedef(daemon,daemon_db);
+extern int execl_db(const char *, const char *, ...);
+CheckInterfacedef(execl,execl_db);
+extern int execle_db(const char *, const char *, ...);
+CheckInterfacedef(execle,execle_db);
+extern int execlp_db(const char *, const char *, ...);
+CheckInterfacedef(execlp,execlp_db);
+extern int execv_db(const char *, char *const []);
+CheckInterfacedef(execv,execv_db);
+extern int execvp_db(const char *, char *const []);
+CheckInterfacedef(execvp,execvp_db);
+extern int fdatasync_db(int);
+CheckInterfacedef(fdatasync,fdatasync_db);
+extern int ftruncate64_db(int, off64_t);
+CheckInterfacedef(ftruncate64,ftruncate64_db);
+extern long int gethostid_db(void);
+CheckInterfacedef(gethostid,gethostid_db);
+extern char * getlogin_db(void);
+CheckInterfacedef(getlogin,getlogin_db);
+extern int getlogin_r_db(char *, size_t);
+CheckInterfacedef(getlogin_r,getlogin_r_db);
+extern int getopt_db(int, char *const [], const char *);
+CheckInterfacedef(getopt,getopt_db);
+extern pid_t getpgrp_db(void);
+CheckInterfacedef(getpgrp,getpgrp_db);
+extern pid_t getsid_db(pid_t);
+CheckInterfacedef(getsid,getsid_db);
+extern char * getwd_db(char *);
+CheckInterfacedef(getwd,getwd_db);
+extern int lockf_db(int, int, off_t);
+CheckInterfacedef(lockf,lockf_db);
+extern int mkstemp_db(char *);
+CheckInterfacedef(mkstemp,mkstemp_db);
+extern int nice_db(int);
+CheckInterfacedef(nice,nice_db);
+extern int rename_db(const char *, const char *);
+CheckInterfacedef(rename,rename_db);
+extern int setegid_db(gid_t);
+CheckInterfacedef(setegid,setegid_db);
+extern int seteuid_db(uid_t);
+CheckInterfacedef(seteuid,seteuid_db);
+extern int sethostname_db(const char *, size_t);
+CheckInterfacedef(sethostname,sethostname_db);
+extern int setpgrp_db(void);
+CheckInterfacedef(setpgrp,setpgrp_db);
+extern void swab_db(const void *, void *, ssize_t);
+CheckInterfacedef(swab,swab_db);
+extern void sync_db(void);
+CheckInterfacedef(sync,sync_db);
+extern pid_t tcgetpgrp_db(int);
+CheckInterfacedef(tcgetpgrp,tcgetpgrp_db);
+extern int tcsetpgrp_db(int, pid_t);
+CheckInterfacedef(tcsetpgrp,tcsetpgrp_db);
+extern int truncate_db(const char *, off_t);
+CheckInterfacedef(truncate,truncate_db);
+extern int truncate64_db(const char *, off64_t);
+CheckInterfacedef(truncate64,truncate64_db);
+extern char * ttyname_db(int);
+CheckInterfacedef(ttyname,ttyname_db);
+extern unsigned int ualarm_db(useconds_t, useconds_t);
+CheckInterfacedef(ualarm,ualarm_db);
+extern int usleep_db(useconds_t);
+CheckInterfacedef(usleep,usleep_db);
+extern int close_db(int);
+CheckInterfacedef(close,close_db);
+extern int fsync_db(int);
+CheckInterfacedef(fsync,fsync_db);
+extern off_t lseek_db(int, off_t, int);
+CheckInterfacedef(lseek,lseek_db);
+extern int open_db(const char *, int, ...);
+CheckInterfacedef(open,open_db);
+extern int pause_db(void);
+CheckInterfacedef(pause,pause_db);
+extern ssize_t read_db(int, void *, size_t);
+CheckInterfacedef(read,read_db);
+extern ssize_t write_db(int, const void *, size_t);
+CheckInterfacedef(write,write_db);
+extern char * crypt_db(const char *, const char *);
+CheckInterfacedef(crypt,crypt_db);
+extern void encrypt_db(char *, int);
+CheckInterfacedef(encrypt,encrypt_db);
+extern void setkey_db(const char *);
+CheckInterfacedef(setkey,setkey_db);
+extern int access_db(const char *, int);
+CheckInterfacedef(access,access_db);
+extern int brk_db(void *);
+CheckInterfacedef(brk,brk_db);
+extern int chdir_db(const char *);
+CheckInterfacedef(chdir,chdir_db);
+extern int dup_db(int);
+CheckInterfacedef(dup,dup_db);
+extern int dup2_db(int, int);
+CheckInterfacedef(dup2,dup2_db);
+extern int execve_db(const char *, char *const [], char *const []);
+CheckInterfacedef(execve,execve_db);
+extern int fchdir_db(int);
+CheckInterfacedef(fchdir,fchdir_db);
+extern int fchown_db(int, uid_t, gid_t);
+CheckInterfacedef(fchown,fchown_db);
+extern pid_t fork_db(void);
+CheckInterfacedef(fork,fork_db);
+extern gid_t getegid_db(void);
+CheckInterfacedef(getegid,getegid_db);
+extern uid_t geteuid_db(void);
+CheckInterfacedef(geteuid,geteuid_db);
+extern gid_t getgid_db(void);
+CheckInterfacedef(getgid,getgid_db);
+extern int getgroups_db(int, gid_t[]);
+CheckInterfacedef(getgroups,getgroups_db);
+extern int gethostname_db(char *, size_t);
+CheckInterfacedef(gethostname,gethostname_db);
+extern pid_t getpgid_db(pid_t);
+CheckInterfacedef(getpgid,getpgid_db);
+extern pid_t getpid_db(void);
+CheckInterfacedef(getpid,getpid_db);
+extern uid_t getuid_db(void);
+CheckInterfacedef(getuid,getuid_db);
+extern int lchown_db(const char *, uid_t, gid_t);
+CheckInterfacedef(lchown,lchown_db);
+extern int link_db(const char *, const char *);
+CheckInterfacedef(link,link_db);
+extern int mkdir_db(const char *, mode_t);
+CheckInterfacedef(mkdir,mkdir_db);
+extern long int pathconf_db(const char *, int);
+CheckInterfacedef(pathconf,pathconf_db);
+extern int pipe_db(int[2]);
+CheckInterfacedef(pipe,pipe_db);
+extern int readlink_db(const char *, char *, size_t);
+CheckInterfacedef(readlink,readlink_db);
+extern int rmdir_db(const char *);
+CheckInterfacedef(rmdir,rmdir_db);
+extern void * sbrk_db(ptrdiff_t);
+CheckInterfacedef(sbrk,sbrk_db);
+extern int select_db(int, fd_set *, fd_set *, fd_set *, struct timeval *);
+CheckInterfacedef(select,select_db);
+extern int setgid_db(gid_t);
+CheckInterfacedef(setgid,setgid_db);
+extern int setpgid_db(pid_t, pid_t);
+CheckInterfacedef(setpgid,setpgid_db);
+extern int setregid_db(gid_t, gid_t);
+CheckInterfacedef(setregid,setregid_db);
+extern int setreuid_db(uid_t, uid_t);
+CheckInterfacedef(setreuid,setreuid_db);
+extern pid_t setsid_db(void);
+CheckInterfacedef(setsid,setsid_db);
+extern int setuid_db(uid_t);
+CheckInterfacedef(setuid,setuid_db);
+extern unsigned int sleep_db(unsigned int);
+CheckInterfacedef(sleep,sleep_db);
+extern int symlink_db(const char *, const char *);
+CheckInterfacedef(symlink,symlink_db);
+extern long int sysconf_db(int);
+CheckInterfacedef(sysconf,sysconf_db);
+extern int unlink_db(const char *);
+CheckInterfacedef(unlink,unlink_db);
+extern pid_t vfork_db(void);
+CheckInterfacedef(vfork,vfork_db);
+extern ssize_t pread_db(int, void *, size_t, off_t);
+CheckInterfacedef(pread,pread_db);
+extern ssize_t pwrite_db(int, const void *, size_t, off_t);
+CheckInterfacedef(pwrite,pwrite_db);
+extern long int fpathconf_db(int, int);
+CheckInterfacedef(fpathconf,fpathconf_db);
+extern int ftruncate_db(int, off_t);
+CheckInterfacedef(ftruncate,ftruncate_db);
+extern char * getcwd_db(char *, size_t);
+CheckInterfacedef(getcwd,getcwd_db);
+extern int getpagesize_db(void);
+CheckInterfacedef(getpagesize,getpagesize_db);
+extern pid_t getppid_db(void);
+CheckInterfacedef(getppid,getppid_db);
+extern int isatty_db(int);
+CheckInterfacedef(isatty,isatty_db);
+extern loff_t lseek64_db(int, loff_t, int);
+CheckInterfacedef(lseek64,lseek64_db);
+extern int open64_db(const char *, int, ...);
+CheckInterfacedef(open64,open64_db);
+extern ssize_t pread64_db(int, void *, size_t, off64_t);
+CheckInterfacedef(pread64,pread64_db);
+extern ssize_t pwrite64_db(int, const void *, size_t, off64_t);
+CheckInterfacedef(pwrite64,pwrite64_db);
+extern int ttyname_r_db(int, char *, size_t);
+CheckInterfacedef(ttyname_r,ttyname_r_db);
+extern int mknod_db(const char *, mode_t, dev_t);
+CheckInterfacedef(mknod,mknod_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -1893,7 +2105,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in unistd.h\n",cnt);
+printf("%d tests passed out of %d tests in unistd.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

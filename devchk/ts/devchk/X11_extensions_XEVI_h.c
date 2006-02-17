@@ -22,11 +22,12 @@ int X11_extensions_XEVI_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XEVI.h\n");
 #endif
 
+printf("Checking data structures in X11/extensions/XEVI.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XEVI_TRANSPARENCY_NONE
 	CompareConstant(XEVI_TRANSPARENCY_NONE,0,5311,architecture)
@@ -83,7 +84,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in X11/extensions/XEVI.h\n",cnt);
+printf("%d tests passed out of %d tests in X11/extensions/XEVI.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

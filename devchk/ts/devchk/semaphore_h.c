@@ -18,11 +18,12 @@ int semaphore_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in semaphore.h\n");
 #endif
 
+printf("Checking data structures in semaphore.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SEM_FAILED
 	CompareConstant(SEM_FAILED,((sem_t*)0),1624,architecture)
@@ -62,6 +63,26 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6960,0);
 Msg("Find size of sem_t (6960)\n");
 #endif
 
+extern int sem_close_db(sem_t *);
+CheckInterfacedef(sem_close,sem_close_db);
+extern int sem_destroy_db(sem_t *);
+CheckInterfacedef(sem_destroy,sem_destroy_db);
+extern int sem_getvalue_db(sem_t *, int *);
+CheckInterfacedef(sem_getvalue,sem_getvalue_db);
+extern int sem_init_db(sem_t *, int, unsigned int);
+CheckInterfacedef(sem_init,sem_init_db);
+extern sem_t * sem_open_db(const char *, int, ...);
+CheckInterfacedef(sem_open,sem_open_db);
+extern int sem_post_db(sem_t *);
+CheckInterfacedef(sem_post,sem_post_db);
+extern int sem_trywait_db(sem_t *);
+CheckInterfacedef(sem_trywait,sem_trywait_db);
+extern int sem_unlink_db(const char *);
+CheckInterfacedef(sem_unlink,sem_unlink_db);
+extern int sem_wait_db(sem_t *);
+CheckInterfacedef(sem_wait,sem_wait_db);
+extern int sem_timedwait_db(sem_t *, const struct timespec *);
+CheckInterfacedef(sem_timedwait,sem_timedwait_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -69,7 +90,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in semaphore.h\n",cnt);
+printf("%d tests passed out of %d tests in semaphore.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

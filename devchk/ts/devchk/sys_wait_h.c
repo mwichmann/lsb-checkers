@@ -19,11 +19,12 @@ int sys_wait_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/wait.h\n");
 #endif
 
+printf("Checking data structures in sys/wait.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for WEXITSTATUS(status) */
 #endif
@@ -101,6 +102,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9185,0);
 Msg("Find size of idtype_t (9185)\n");
 #endif
 
+extern pid_t wait_db(int *);
+CheckInterfacedef(wait,wait_db);
+extern pid_t waitpid_db(pid_t, int *, int);
+CheckInterfacedef(waitpid,waitpid_db);
+extern pid_t wait4_db(pid_t, int *, int, struct rusage *);
+CheckInterfacedef(wait4,wait4_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -108,7 +115,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/wait.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/wait.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

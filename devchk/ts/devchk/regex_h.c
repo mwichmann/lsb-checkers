@@ -18,11 +18,12 @@ int regex_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in regex.h\n");
 #endif
 
+printf("Checking data structures in regex.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef REG_EXTENDED
 	CompareConstant(REG_EXTENDED,1,1593,architecture)
@@ -103,6 +104,24 @@ Msg("Find size of reg_syntax_t (6941)\n");
 #endif
 
 #if 1
+CheckEnum("REG_ENOSYS",REG_ENOSYS,0);
+CheckEnum("REG_NOERROR",REG_NOERROR,(0) + 1);
+CheckEnum("REG_NOMATCH",REG_NOMATCH,((0) + 1) + 1);
+CheckEnum("REG_BADPAT",REG_BADPAT,(((0) + 1) + 1) + 1);
+CheckEnum("REG_ECOLLATE",REG_ECOLLATE,((((0) + 1) + 1) + 1) + 1);
+CheckEnum("REG_ECTYPE",REG_ECTYPE,(((((0) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_EESCAPE",REG_EESCAPE,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_ESUBREG",REG_ESUBREG,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_EBRACK",REG_EBRACK,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_EPAREN",REG_EPAREN,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_EBRACE",REG_EBRACE,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_BADBR",REG_BADBR,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_ERANGE",REG_ERANGE,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_ESPACE",REG_ESPACE,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_BADRPT",REG_BADRPT,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_EEND",REG_EEND,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_ESIZE",REG_ESIZE,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_ERPAREN",REG_ERPAREN,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 #endif
 
 #if 1
@@ -271,6 +290,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6949,0);
 Msg("Find size of regmatch_t (6949)\n");
 #endif
 
+extern int regcomp_db(regex_t *, const char *, int);
+CheckInterfacedef(regcomp,regcomp_db);
+extern size_t regerror_db(int, const regex_t *, char *, size_t);
+CheckInterfacedef(regerror,regerror_db);
+extern int regexec_db(const regex_t *, const char *, size_t, regmatch_t[], int);
+CheckInterfacedef(regexec,regexec_db);
+extern void regfree_db(regex_t *);
+CheckInterfacedef(regfree,regfree_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -278,7 +305,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in regex.h\n",cnt);
+printf("%d tests passed out of %d tests in regex.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

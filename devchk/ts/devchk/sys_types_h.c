@@ -19,11 +19,12 @@ int sys_types_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/types.h\n");
 #endif
 
+printf("Checking data structures in sys/types.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef TRUE
 	CompareConstant(TRUE,1,2507,architecture)
@@ -955,7 +956,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/types.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/types.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -18,11 +18,12 @@ int rpc_svc_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in rpc/svc.h\n");
 #endif
 
+printf("Checking data structures in rpc/svc.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for svc_getargs(xprt,xargs, argsp) */
 #endif
@@ -39,6 +40,12 @@ Msg( "Error: Constant not found: RPC_ANYSOCK\n");
 cnt++;
 #endif
 
+#endif
+
+#if 1
+CheckEnum("XPRT_DIED",XPRT_DIED,0);
+CheckEnum("XPRT_MOREREQS",XPRT_MOREREQS,(0) + 1);
+CheckEnum("XPRT_IDLE",XPRT_IDLE,((0) + 1) + 1);
 #endif
 
 #if __i386__
@@ -281,6 +288,7 @@ Msg("Find size of xp_ops (9981)\n");
 #endif
 
 #if __s390__ && !__s390x__
+CheckTypeSize(struct xp_ops *,0, 10430, 10)
 #endif
 
 #if __i386__
@@ -391,6 +399,32 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9991,0);
 Msg("Find size of svc_req (9991)\n");
 #endif
 
+extern void svc_getreqset_db(fd_set *);
+CheckInterfacedef(svc_getreqset,svc_getreqset_db);
+extern bool_t svc_register_db(SVCXPRT *, rpcprog_t, rpcvers_t, __dispatch_fn_t, rpcprot_t);
+CheckInterfacedef(svc_register,svc_register_db);
+extern void svc_run_db(void);
+CheckInterfacedef(svc_run,svc_run_db);
+extern bool_t svc_sendreply_db(SVCXPRT *, xdrproc_t, caddr_t);
+CheckInterfacedef(svc_sendreply,svc_sendreply_db);
+extern void svcerr_auth_db(SVCXPRT *, enum auth_stat);
+CheckInterfacedef(svcerr_auth,svcerr_auth_db);
+extern void svcerr_decode_db(SVCXPRT *);
+CheckInterfacedef(svcerr_decode,svcerr_decode_db);
+extern void svcerr_noproc_db(SVCXPRT *);
+CheckInterfacedef(svcerr_noproc,svcerr_noproc_db);
+extern void svcerr_noprog_db(SVCXPRT *);
+CheckInterfacedef(svcerr_noprog,svcerr_noprog_db);
+extern void svcerr_progvers_db(SVCXPRT *, rpcvers_t, rpcvers_t);
+CheckInterfacedef(svcerr_progvers,svcerr_progvers_db);
+extern void svcerr_systemerr_db(SVCXPRT *);
+CheckInterfacedef(svcerr_systemerr,svcerr_systemerr_db);
+extern void svcerr_weakauth_db(SVCXPRT *);
+CheckInterfacedef(svcerr_weakauth,svcerr_weakauth_db);
+extern SVCXPRT * svctcp_create_db(int, u_int, u_int);
+CheckInterfacedef(svctcp_create,svctcp_create_db);
+extern SVCXPRT * svcudp_create_db(int);
+CheckInterfacedef(svcudp_create,svcudp_create_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -398,7 +432,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in rpc/svc.h\n",cnt);
+printf("%d tests passed out of %d tests in rpc/svc.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

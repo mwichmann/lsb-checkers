@@ -45,6 +45,11 @@ CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0);
 CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1);
 CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2);
 CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3);
+#elif __ia64__
+CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0);
+CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1);
+CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2);
+CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15068,0);
 Msg("Find size of anon-libxml2/libxml/catalog.h-166 (15068)\n");
@@ -54,6 +59,8 @@ Msg("Find size of anon-libxml2/libxml/catalog.h-166 (15068)\n");
 CheckTypeSize(xmlCatalogAllow,4, 15069, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 11)
+#elif __ia64__
+CheckTypeSize(xmlCatalogAllow,4, 15069, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15069,0);
 Msg("Find size of xmlCatalogAllow (15069)\n");
@@ -63,6 +70,8 @@ Msg("Find size of xmlCatalogAllow (15069)\n");
 CheckTypeSize(xmlCatalog,0, 15071, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCatalog,0, 15071, 11)
+#elif __ia64__
+CheckTypeSize(xmlCatalog,0, 15071, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15071,0);
 Msg("Find size of xmlCatalog (15071)\n");
@@ -72,6 +81,8 @@ Msg("Find size of xmlCatalog (15071)\n");
 CheckTypeSize(xmlCatalog *,4, 15072, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCatalog *,8, 15072, 11)
+#elif __ia64__
+CheckTypeSize(xmlCatalog *,8, 15072, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15072,0);
 Msg("Find size of xmlCatalog * (15072)\n");
@@ -81,6 +92,8 @@ Msg("Find size of xmlCatalog * (15072)\n");
 CheckTypeSize(xmlCatalogPtr,4, 15073, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCatalogPtr,8, 15073, 11)
+#elif __ia64__
+CheckTypeSize(xmlCatalogPtr,8, 15073, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15073,0);
 Msg("Find size of xmlCatalogPtr (15073)\n");
@@ -94,6 +107,10 @@ CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2);
 CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0);
 CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1);
 CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2);
+#elif __ia64__
+CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0);
+CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1);
+CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15074,0);
 Msg("Find size of anon-libxml2/libxml/catalog.h-165 (15074)\n");
@@ -103,6 +120,8 @@ Msg("Find size of anon-libxml2/libxml/catalog.h-165 (15074)\n");
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 2)
 #elif __x86_64__
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 11)
+#elif __ia64__
+CheckTypeSize(xmlCatalogPrefer,4, 15075, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15075,0);
 Msg("Find size of xmlCatalogPrefer (15075)\n");

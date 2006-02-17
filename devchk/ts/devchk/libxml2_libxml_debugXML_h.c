@@ -53,6 +53,20 @@ CheckMemberSize(struct _xmlShellCtxt,output,8,11,49076)
 CheckOffset(struct _xmlShellCtxt,output,40,11,49076)
 CheckMemberSize(struct _xmlShellCtxt,input,8,11,49078)
 CheckOffset(struct _xmlShellCtxt,input,48,11,49078)
+#elif __ia64__
+CheckTypeSize(struct _xmlShellCtxt,56, 14904, 3)
+CheckMemberSize(struct _xmlShellCtxt,doc,8,3,49072)
+CheckOffset(struct _xmlShellCtxt,doc,8,3,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,8,3,49073)
+CheckOffset(struct _xmlShellCtxt,node,16,3,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,8,3,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,24,3,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,3,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,32,3,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,8,3,49076)
+CheckOffset(struct _xmlShellCtxt,output,40,3,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,8,3,49078)
+CheckOffset(struct _xmlShellCtxt,input,48,3,49078)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14904,0);
 Msg("Find size of _xmlShellCtxt (14904)\n");
@@ -60,6 +74,7 @@ Msg("Find size of _xmlShellCtxt (14904)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14905,0);
 Msg("Find size of fptr_debugXML_549 (14905)\n");
@@ -69,6 +84,8 @@ Msg("Find size of fptr_debugXML_549 (14905)\n");
 CheckTypeSize(xmlShellReadlineFunc,4, 14906, 2)
 #elif __x86_64__
 CheckTypeSize(xmlShellReadlineFunc,8, 14906, 11)
+#elif __ia64__
+CheckTypeSize(xmlShellReadlineFunc,8, 14906, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14906,0);
 Msg("Find size of xmlShellReadlineFunc (14906)\n");
@@ -78,6 +95,8 @@ Msg("Find size of xmlShellReadlineFunc (14906)\n");
 CheckTypeSize(xmlShellCtxt,28, 14907, 2)
 #elif __x86_64__
 CheckTypeSize(xmlShellCtxt,56, 14907, 11)
+#elif __ia64__
+CheckTypeSize(xmlShellCtxt,56, 14907, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14907,0);
 Msg("Find size of xmlShellCtxt (14907)\n");
@@ -87,6 +106,8 @@ Msg("Find size of xmlShellCtxt (14907)\n");
 CheckTypeSize(xmlShellCtxt *,4, 14908, 2)
 #elif __x86_64__
 CheckTypeSize(xmlShellCtxt *,8, 14908, 11)
+#elif __ia64__
+CheckTypeSize(xmlShellCtxt *,8, 14908, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14908,0);
 Msg("Find size of xmlShellCtxt * (14908)\n");
@@ -96,6 +117,8 @@ Msg("Find size of xmlShellCtxt * (14908)\n");
 CheckTypeSize(xmlShellCtxtPtr,4, 14909, 2)
 #elif __x86_64__
 CheckTypeSize(xmlShellCtxtPtr,8, 14909, 11)
+#elif __ia64__
+CheckTypeSize(xmlShellCtxtPtr,8, 14909, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14909,0);
 Msg("Find size of xmlShellCtxtPtr (14909)\n");
@@ -103,6 +126,7 @@ Msg("Find size of xmlShellCtxtPtr (14909)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15125,0);
 Msg("Find size of fptr_anonymous-debugXML.h.types-0 (15125)\n");

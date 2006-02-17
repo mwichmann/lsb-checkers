@@ -18,11 +18,12 @@ int nl_types_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in nl_types.h\n");
 #endif
 
+printf("Checking data structures in nl_types.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NL_SETD
 	CompareConstant(NL_SETD,1,1531,architecture)
@@ -81,6 +82,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6924,0);
 Msg("Find size of nl_item (6924)\n");
 #endif
 
+extern int catclose_db(nl_catd);
+CheckInterfacedef(catclose,catclose_db);
+extern char * catgets_db(nl_catd, int, int, const char *);
+CheckInterfacedef(catgets,catgets_db);
+extern nl_catd catopen_db(const char *, int);
+CheckInterfacedef(catopen,catopen_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -88,7 +95,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in nl_types.h\n",cnt);
+printf("%d tests passed out of %d tests in nl_types.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

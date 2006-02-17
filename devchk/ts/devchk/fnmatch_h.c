@@ -18,11 +18,12 @@ int fnmatch_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in fnmatch.h\n");
 #endif
 
+printf("Checking data structures in fnmatch.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FNM_PATHNAME
 	CompareConstant(FNM_PATHNAME,(1<<0),1221,architecture)
@@ -63,6 +64,8 @@ cnt++;
 
 #endif
 
+extern int fnmatch_db(const char *, const char *, int);
+CheckInterfacedef(fnmatch,fnmatch_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -70,7 +73,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in fnmatch.h\n",cnt);
+printf("%d tests passed out of %d tests in fnmatch.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

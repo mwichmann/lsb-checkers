@@ -153,6 +153,70 @@ CheckMemberSize(struct _xmlSAXHandler,endElementNs,8,11,48851)
 CheckOffset(struct _xmlSAXHandler,endElementNs,240,11,48851)
 CheckMemberSize(struct _xmlSAXHandler,serror,8,11,48852)
 CheckOffset(struct _xmlSAXHandler,serror,248,11,48852)
+#elif __ia64__
+CheckTypeSize(struct _xmlSAXHandler,256, 14740, 3)
+CheckMemberSize(struct _xmlSAXHandler,isStandalone,8,3,48751)
+CheckOffset(struct _xmlSAXHandler,isStandalone,8,3,48751)
+CheckMemberSize(struct _xmlSAXHandler,hasInternalSubset,8,3,48752)
+CheckOffset(struct _xmlSAXHandler,hasInternalSubset,16,3,48752)
+CheckMemberSize(struct _xmlSAXHandler,hasExternalSubset,8,3,48753)
+CheckOffset(struct _xmlSAXHandler,hasExternalSubset,24,3,48753)
+CheckMemberSize(struct _xmlSAXHandler,resolveEntity,8,3,48757)
+CheckOffset(struct _xmlSAXHandler,resolveEntity,32,3,48757)
+CheckMemberSize(struct _xmlSAXHandler,getEntity,8,3,48760)
+CheckOffset(struct _xmlSAXHandler,getEntity,40,3,48760)
+CheckMemberSize(struct _xmlSAXHandler,entityDecl,8,3,48767)
+CheckOffset(struct _xmlSAXHandler,entityDecl,48,3,48767)
+CheckMemberSize(struct _xmlSAXHandler,notationDecl,8,3,48768)
+CheckOffset(struct _xmlSAXHandler,notationDecl,56,3,48768)
+CheckMemberSize(struct _xmlSAXHandler,attributeDecl,8,3,48778)
+CheckOffset(struct _xmlSAXHandler,attributeDecl,64,3,48778)
+CheckMemberSize(struct _xmlSAXHandler,elementDecl,8,3,48798)
+CheckOffset(struct _xmlSAXHandler,elementDecl,72,3,48798)
+CheckMemberSize(struct _xmlSAXHandler,unparsedEntityDecl,8,3,48804)
+CheckOffset(struct _xmlSAXHandler,unparsedEntityDecl,80,3,48804)
+CheckMemberSize(struct _xmlSAXHandler,setDocumentLocator,8,3,48812)
+CheckOffset(struct _xmlSAXHandler,setDocumentLocator,88,3,48812)
+CheckMemberSize(struct _xmlSAXHandler,startDocument,8,3,48813)
+CheckOffset(struct _xmlSAXHandler,startDocument,96,3,48813)
+CheckMemberSize(struct _xmlSAXHandler,endDocument,8,3,48814)
+CheckOffset(struct _xmlSAXHandler,endDocument,104,3,48814)
+CheckMemberSize(struct _xmlSAXHandler,startElement,8,3,48818)
+CheckOffset(struct _xmlSAXHandler,startElement,112,3,48818)
+CheckMemberSize(struct _xmlSAXHandler,endElement,8,3,48821)
+CheckOffset(struct _xmlSAXHandler,endElement,120,3,48821)
+CheckMemberSize(struct _xmlSAXHandler,reference,8,3,48822)
+CheckOffset(struct _xmlSAXHandler,reference,128,3,48822)
+CheckMemberSize(struct _xmlSAXHandler,characters,8,3,48826)
+CheckOffset(struct _xmlSAXHandler,characters,136,3,48826)
+CheckMemberSize(struct _xmlSAXHandler,ignorableWhitespace,8,3,48827)
+CheckOffset(struct _xmlSAXHandler,ignorableWhitespace,144,3,48827)
+CheckMemberSize(struct _xmlSAXHandler,processingInstruction,8,3,48831)
+CheckOffset(struct _xmlSAXHandler,processingInstruction,152,3,48831)
+CheckMemberSize(struct _xmlSAXHandler,comment,8,3,48832)
+CheckOffset(struct _xmlSAXHandler,comment,160,3,48832)
+CheckMemberSize(struct _xmlSAXHandler,warning,8,3,48833)
+CheckOffset(struct _xmlSAXHandler,warning,168,3,48833)
+CheckMemberSize(struct _xmlSAXHandler,error,8,3,48834)
+CheckOffset(struct _xmlSAXHandler,error,176,3,48834)
+CheckMemberSize(struct _xmlSAXHandler,fatalError,8,3,48835)
+CheckOffset(struct _xmlSAXHandler,fatalError,184,3,48835)
+CheckMemberSize(struct _xmlSAXHandler,getParameterEntity,8,3,48836)
+CheckOffset(struct _xmlSAXHandler,getParameterEntity,192,3,48836)
+CheckMemberSize(struct _xmlSAXHandler,cdataBlock,8,3,48837)
+CheckOffset(struct _xmlSAXHandler,cdataBlock,200,3,48837)
+CheckMemberSize(struct _xmlSAXHandler,externalSubset,8,3,48838)
+CheckOffset(struct _xmlSAXHandler,externalSubset,208,3,48838)
+CheckMemberSize(struct _xmlSAXHandler,initialized,4,3,48839)
+CheckOffset(struct _xmlSAXHandler,initialized,216,3,48839)
+CheckMemberSize(struct _xmlSAXHandler,_private,8,3,48840)
+CheckOffset(struct _xmlSAXHandler,_private,224,3,48840)
+CheckMemberSize(struct _xmlSAXHandler,startElementNs,8,3,48850)
+CheckOffset(struct _xmlSAXHandler,startElementNs,232,3,48850)
+CheckMemberSize(struct _xmlSAXHandler,endElementNs,8,3,48851)
+CheckOffset(struct _xmlSAXHandler,endElementNs,240,3,48851)
+CheckMemberSize(struct _xmlSAXHandler,serror,8,3,48852)
+CheckOffset(struct _xmlSAXHandler,serror,248,3,48852)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14740,0);
 Msg("Find size of _xmlSAXHandler (14740)\n");
@@ -160,6 +224,7 @@ Msg("Find size of _xmlSAXHandler (14740)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14741,0);
 Msg("Find size of fptr_SAX2_467 (14741)\n");
@@ -169,6 +234,8 @@ Msg("Find size of fptr_SAX2_467 (14741)\n");
 CheckTypeSize(internalSubsetSAXFunc,4, 14742, 2)
 #elif __x86_64__
 CheckTypeSize(internalSubsetSAXFunc,8, 14742, 11)
+#elif __ia64__
+CheckTypeSize(internalSubsetSAXFunc,8, 14742, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14742,0);
 Msg("Find size of internalSubsetSAXFunc (14742)\n");
@@ -178,6 +245,8 @@ Msg("Find size of internalSubsetSAXFunc (14742)\n");
 CheckTypeSize(isStandaloneSAXFunc,4, 14743, 2)
 #elif __x86_64__
 CheckTypeSize(isStandaloneSAXFunc,8, 14743, 11)
+#elif __ia64__
+CheckTypeSize(isStandaloneSAXFunc,8, 14743, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14743,0);
 Msg("Find size of isStandaloneSAXFunc (14743)\n");
@@ -187,6 +256,8 @@ Msg("Find size of isStandaloneSAXFunc (14743)\n");
 CheckTypeSize(hasInternalSubsetSAXFunc,4, 14744, 2)
 #elif __x86_64__
 CheckTypeSize(hasInternalSubsetSAXFunc,8, 14744, 11)
+#elif __ia64__
+CheckTypeSize(hasInternalSubsetSAXFunc,8, 14744, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14744,0);
 Msg("Find size of hasInternalSubsetSAXFunc (14744)\n");
@@ -196,6 +267,8 @@ Msg("Find size of hasInternalSubsetSAXFunc (14744)\n");
 CheckTypeSize(hasExternalSubsetSAXFunc,4, 14745, 2)
 #elif __x86_64__
 CheckTypeSize(hasExternalSubsetSAXFunc,8, 14745, 11)
+#elif __ia64__
+CheckTypeSize(hasExternalSubsetSAXFunc,8, 14745, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14745,0);
 Msg("Find size of hasExternalSubsetSAXFunc (14745)\n");
@@ -203,6 +276,7 @@ Msg("Find size of hasExternalSubsetSAXFunc (14745)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14746,0);
 Msg("Find size of fptr_SAX2_429 (14746)\n");
@@ -212,6 +286,8 @@ Msg("Find size of fptr_SAX2_429 (14746)\n");
 CheckTypeSize(resolveEntitySAXFunc,4, 14747, 2)
 #elif __x86_64__
 CheckTypeSize(resolveEntitySAXFunc,8, 14747, 11)
+#elif __ia64__
+CheckTypeSize(resolveEntitySAXFunc,8, 14747, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14747,0);
 Msg("Find size of resolveEntitySAXFunc (14747)\n");
@@ -219,6 +295,7 @@ Msg("Find size of resolveEntitySAXFunc (14747)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14748,0);
 Msg("Find size of fptr_SAX2_441 (14748)\n");
@@ -228,6 +305,8 @@ Msg("Find size of fptr_SAX2_441 (14748)\n");
 CheckTypeSize(getEntitySAXFunc,4, 14749, 2)
 #elif __x86_64__
 CheckTypeSize(getEntitySAXFunc,8, 14749, 11)
+#elif __ia64__
+CheckTypeSize(getEntitySAXFunc,8, 14749, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14749,0);
 Msg("Find size of getEntitySAXFunc (14749)\n");
@@ -235,6 +314,7 @@ Msg("Find size of getEntitySAXFunc (14749)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14750,0);
 Msg("Find size of fptr_SAX2_162 (14750)\n");
@@ -244,6 +324,8 @@ Msg("Find size of fptr_SAX2_162 (14750)\n");
 CheckTypeSize(entityDeclSAXFunc,4, 14751, 2)
 #elif __x86_64__
 CheckTypeSize(entityDeclSAXFunc,8, 14751, 11)
+#elif __ia64__
+CheckTypeSize(entityDeclSAXFunc,8, 14751, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14751,0);
 Msg("Find size of entityDeclSAXFunc (14751)\n");
@@ -253,6 +335,8 @@ Msg("Find size of entityDeclSAXFunc (14751)\n");
 CheckTypeSize(notationDeclSAXFunc,4, 14752, 2)
 #elif __x86_64__
 CheckTypeSize(notationDeclSAXFunc,8, 14752, 11)
+#elif __ia64__
+CheckTypeSize(notationDeclSAXFunc,8, 14752, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14752,0);
 Msg("Find size of notationDeclSAXFunc (14752)\n");
@@ -266,6 +350,10 @@ CheckOffset(struct _xmlEnumeration,name,4,2,48770)
 CheckTypeSize(struct _xmlEnumeration,16, 14753, 11)
 CheckMemberSize(struct _xmlEnumeration,name,8,11,48770)
 CheckOffset(struct _xmlEnumeration,name,8,11,48770)
+#elif __ia64__
+CheckTypeSize(struct _xmlEnumeration,16, 14753, 3)
+CheckMemberSize(struct _xmlEnumeration,name,8,3,48770)
+CheckOffset(struct _xmlEnumeration,name,8,3,48770)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14753,0);
 Msg("Find size of _xmlEnumeration (14753)\n");
@@ -275,6 +363,8 @@ Msg("Find size of _xmlEnumeration (14753)\n");
 CheckTypeSize(struct _xmlEnumeration *,4, 14754, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlEnumeration *,8, 14754, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlEnumeration *,8, 14754, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14754,0);
 Msg("Find size of _xmlEnumeration * (14754)\n");
@@ -284,6 +374,8 @@ Msg("Find size of _xmlEnumeration * (14754)\n");
 CheckTypeSize(xmlEnumeration,8, 14755, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEnumeration,16, 14755, 11)
+#elif __ia64__
+CheckTypeSize(xmlEnumeration,16, 14755, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14755,0);
 Msg("Find size of xmlEnumeration (14755)\n");
@@ -293,6 +385,8 @@ Msg("Find size of xmlEnumeration (14755)\n");
 CheckTypeSize(xmlEnumeration *,4, 14756, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEnumeration *,8, 14756, 11)
+#elif __ia64__
+CheckTypeSize(xmlEnumeration *,8, 14756, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14756,0);
 Msg("Find size of xmlEnumeration * (14756)\n");
@@ -302,6 +396,8 @@ Msg("Find size of xmlEnumeration * (14756)\n");
 CheckTypeSize(xmlEnumerationPtr,4, 14757, 2)
 #elif __x86_64__
 CheckTypeSize(xmlEnumerationPtr,8, 14757, 11)
+#elif __ia64__
+CheckTypeSize(xmlEnumerationPtr,8, 14757, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14757,0);
 Msg("Find size of xmlEnumerationPtr (14757)\n");
@@ -309,6 +405,7 @@ Msg("Find size of xmlEnumerationPtr (14757)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14758,0);
 Msg("Find size of fptr_SAX2_263 (14758)\n");
@@ -318,6 +415,8 @@ Msg("Find size of fptr_SAX2_263 (14758)\n");
 CheckTypeSize(attributeDeclSAXFunc,4, 14759, 2)
 #elif __x86_64__
 CheckTypeSize(attributeDeclSAXFunc,8, 14759, 11)
+#elif __ia64__
+CheckTypeSize(attributeDeclSAXFunc,8, 14759, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14759,0);
 Msg("Find size of attributeDeclSAXFunc (14759)\n");
@@ -351,6 +450,20 @@ CheckMemberSize(struct _xmlElementContent,parent,8,11,48792)
 CheckOffset(struct _xmlElementContent,parent,32,11,48792)
 CheckMemberSize(struct _xmlElementContent,prefix,8,11,48793)
 CheckOffset(struct _xmlElementContent,prefix,40,11,48793)
+#elif __ia64__
+CheckTypeSize(struct _xmlElementContent,48, 14760, 3)
+CheckMemberSize(struct _xmlElementContent,ocur,4,3,48788)
+CheckOffset(struct _xmlElementContent,ocur,4,3,48788)
+CheckMemberSize(struct _xmlElementContent,name,8,3,48789)
+CheckOffset(struct _xmlElementContent,name,8,3,48789)
+CheckMemberSize(struct _xmlElementContent,c1,8,3,48790)
+CheckOffset(struct _xmlElementContent,c1,16,3,48790)
+CheckMemberSize(struct _xmlElementContent,c2,8,3,48791)
+CheckOffset(struct _xmlElementContent,c2,24,3,48791)
+CheckMemberSize(struct _xmlElementContent,parent,8,3,48792)
+CheckOffset(struct _xmlElementContent,parent,32,3,48792)
+CheckMemberSize(struct _xmlElementContent,prefix,8,3,48793)
+CheckOffset(struct _xmlElementContent,prefix,40,3,48793)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14760,0);
 Msg("Find size of _xmlElementContent (14760)\n");
@@ -366,6 +479,11 @@ CheckEnum("XML_ELEMENT_CONTENT_PCDATA",XML_ELEMENT_CONTENT_PCDATA,1);
 CheckEnum("XML_ELEMENT_CONTENT_ELEMENT",XML_ELEMENT_CONTENT_ELEMENT,2);
 CheckEnum("XML_ELEMENT_CONTENT_SEQ",XML_ELEMENT_CONTENT_SEQ,3);
 CheckEnum("XML_ELEMENT_CONTENT_OR",XML_ELEMENT_CONTENT_OR,4);
+#elif __ia64__
+CheckEnum("XML_ELEMENT_CONTENT_PCDATA",XML_ELEMENT_CONTENT_PCDATA,1);
+CheckEnum("XML_ELEMENT_CONTENT_ELEMENT",XML_ELEMENT_CONTENT_ELEMENT,2);
+CheckEnum("XML_ELEMENT_CONTENT_SEQ",XML_ELEMENT_CONTENT_SEQ,3);
+CheckEnum("XML_ELEMENT_CONTENT_OR",XML_ELEMENT_CONTENT_OR,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14761,0);
 Msg("Find size of anon-libxml2/libxml/SAX2.h-254 (14761)\n");
@@ -375,6 +493,8 @@ Msg("Find size of anon-libxml2/libxml/SAX2.h-254 (14761)\n");
 CheckTypeSize(xmlElementContentType,4, 14762, 2)
 #elif __x86_64__
 CheckTypeSize(xmlElementContentType,4, 14762, 11)
+#elif __ia64__
+CheckTypeSize(xmlElementContentType,4, 14762, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14762,0);
 Msg("Find size of xmlElementContentType (14762)\n");
@@ -390,6 +510,11 @@ CheckEnum("XML_ELEMENT_CONTENT_ONCE",XML_ELEMENT_CONTENT_ONCE,1);
 CheckEnum("XML_ELEMENT_CONTENT_OPT",XML_ELEMENT_CONTENT_OPT,2);
 CheckEnum("XML_ELEMENT_CONTENT_MULT",XML_ELEMENT_CONTENT_MULT,3);
 CheckEnum("XML_ELEMENT_CONTENT_PLUS",XML_ELEMENT_CONTENT_PLUS,4);
+#elif __ia64__
+CheckEnum("XML_ELEMENT_CONTENT_ONCE",XML_ELEMENT_CONTENT_ONCE,1);
+CheckEnum("XML_ELEMENT_CONTENT_OPT",XML_ELEMENT_CONTENT_OPT,2);
+CheckEnum("XML_ELEMENT_CONTENT_MULT",XML_ELEMENT_CONTENT_MULT,3);
+CheckEnum("XML_ELEMENT_CONTENT_PLUS",XML_ELEMENT_CONTENT_PLUS,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14763,0);
 Msg("Find size of anon-libxml2/libxml/SAX2.h-255 (14763)\n");
@@ -399,6 +524,8 @@ Msg("Find size of anon-libxml2/libxml/SAX2.h-255 (14763)\n");
 CheckTypeSize(xmlElementContentOccur,4, 14764, 2)
 #elif __x86_64__
 CheckTypeSize(xmlElementContentOccur,4, 14764, 11)
+#elif __ia64__
+CheckTypeSize(xmlElementContentOccur,4, 14764, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14764,0);
 Msg("Find size of xmlElementContentOccur (14764)\n");
@@ -408,6 +535,8 @@ Msg("Find size of xmlElementContentOccur (14764)\n");
 CheckTypeSize(struct _xmlElementContent *,4, 14765, 2)
 #elif __x86_64__
 CheckTypeSize(struct _xmlElementContent *,8, 14765, 11)
+#elif __ia64__
+CheckTypeSize(struct _xmlElementContent *,8, 14765, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14765,0);
 Msg("Find size of _xmlElementContent * (14765)\n");
@@ -417,6 +546,8 @@ Msg("Find size of _xmlElementContent * (14765)\n");
 CheckTypeSize(xmlElementContent,28, 14766, 2)
 #elif __x86_64__
 CheckTypeSize(xmlElementContent,48, 14766, 11)
+#elif __ia64__
+CheckTypeSize(xmlElementContent,48, 14766, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14766,0);
 Msg("Find size of xmlElementContent (14766)\n");
@@ -426,6 +557,8 @@ Msg("Find size of xmlElementContent (14766)\n");
 CheckTypeSize(xmlElementContent *,4, 14767, 2)
 #elif __x86_64__
 CheckTypeSize(xmlElementContent *,8, 14767, 11)
+#elif __ia64__
+CheckTypeSize(xmlElementContent *,8, 14767, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14767,0);
 Msg("Find size of xmlElementContent * (14767)\n");
@@ -435,6 +568,8 @@ Msg("Find size of xmlElementContent * (14767)\n");
 CheckTypeSize(xmlElementContentPtr,4, 14768, 2)
 #elif __x86_64__
 CheckTypeSize(xmlElementContentPtr,8, 14768, 11)
+#elif __ia64__
+CheckTypeSize(xmlElementContentPtr,8, 14768, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14768,0);
 Msg("Find size of xmlElementContentPtr (14768)\n");
@@ -442,6 +577,7 @@ Msg("Find size of xmlElementContentPtr (14768)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14769,0);
 Msg("Find size of fptr_SAX2_529 (14769)\n");
@@ -451,6 +587,8 @@ Msg("Find size of fptr_SAX2_529 (14769)\n");
 CheckTypeSize(elementDeclSAXFunc,4, 14770, 2)
 #elif __x86_64__
 CheckTypeSize(elementDeclSAXFunc,8, 14770, 11)
+#elif __ia64__
+CheckTypeSize(elementDeclSAXFunc,8, 14770, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14770,0);
 Msg("Find size of elementDeclSAXFunc (14770)\n");
@@ -458,6 +596,7 @@ Msg("Find size of elementDeclSAXFunc (14770)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14771,0);
 Msg("Find size of fptr_SAX2_22 (14771)\n");
@@ -467,6 +606,8 @@ Msg("Find size of fptr_SAX2_22 (14771)\n");
 CheckTypeSize(unparsedEntityDeclSAXFunc,4, 14772, 2)
 #elif __x86_64__
 CheckTypeSize(unparsedEntityDeclSAXFunc,8, 14772, 11)
+#elif __ia64__
+CheckTypeSize(unparsedEntityDeclSAXFunc,8, 14772, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14772,0);
 Msg("Find size of unparsedEntityDeclSAXFunc (14772)\n");
@@ -488,6 +629,14 @@ CheckMemberSize(struct _xmlSAXLocator,getLineNumber,8,11,48808)
 CheckOffset(struct _xmlSAXLocator,getLineNumber,16,11,48808)
 CheckMemberSize(struct _xmlSAXLocator,getColumnNumber,8,11,48809)
 CheckOffset(struct _xmlSAXLocator,getColumnNumber,24,11,48809)
+#elif __ia64__
+CheckTypeSize(struct _xmlSAXLocator,32, 14773, 3)
+CheckMemberSize(struct _xmlSAXLocator,getSystemId,8,3,48807)
+CheckOffset(struct _xmlSAXLocator,getSystemId,8,3,48807)
+CheckMemberSize(struct _xmlSAXLocator,getLineNumber,8,3,48808)
+CheckOffset(struct _xmlSAXLocator,getLineNumber,16,3,48808)
+CheckMemberSize(struct _xmlSAXLocator,getColumnNumber,8,3,48809)
+CheckOffset(struct _xmlSAXLocator,getColumnNumber,24,3,48809)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14773,0);
 Msg("Find size of _xmlSAXLocator (14773)\n");
@@ -495,6 +644,7 @@ Msg("Find size of _xmlSAXLocator (14773)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14774,0);
 Msg("Find size of fptr_SAX2_415 (14774)\n");
@@ -504,6 +654,8 @@ Msg("Find size of fptr_SAX2_415 (14774)\n");
 CheckTypeSize(xmlSAXLocator,16, 14775, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSAXLocator,32, 14775, 11)
+#elif __ia64__
+CheckTypeSize(xmlSAXLocator,32, 14775, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14775,0);
 Msg("Find size of xmlSAXLocator (14775)\n");
@@ -513,6 +665,8 @@ Msg("Find size of xmlSAXLocator (14775)\n");
 CheckTypeSize(xmlSAXLocator *,4, 14776, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSAXLocator *,8, 14776, 11)
+#elif __ia64__
+CheckTypeSize(xmlSAXLocator *,8, 14776, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14776,0);
 Msg("Find size of xmlSAXLocator * (14776)\n");
@@ -522,6 +676,8 @@ Msg("Find size of xmlSAXLocator * (14776)\n");
 CheckTypeSize(xmlSAXLocatorPtr,4, 14777, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSAXLocatorPtr,8, 14777, 11)
+#elif __ia64__
+CheckTypeSize(xmlSAXLocatorPtr,8, 14777, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14777,0);
 Msg("Find size of xmlSAXLocatorPtr (14777)\n");
@@ -529,6 +685,7 @@ Msg("Find size of xmlSAXLocatorPtr (14777)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14778,0);
 Msg("Find size of fptr_SAX2_114 (14778)\n");
@@ -538,6 +695,8 @@ Msg("Find size of fptr_SAX2_114 (14778)\n");
 CheckTypeSize(setDocumentLocatorSAXFunc,4, 14779, 2)
 #elif __x86_64__
 CheckTypeSize(setDocumentLocatorSAXFunc,8, 14779, 11)
+#elif __ia64__
+CheckTypeSize(setDocumentLocatorSAXFunc,8, 14779, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14779,0);
 Msg("Find size of setDocumentLocatorSAXFunc (14779)\n");
@@ -547,6 +706,8 @@ Msg("Find size of setDocumentLocatorSAXFunc (14779)\n");
 CheckTypeSize(startDocumentSAXFunc,4, 14780, 2)
 #elif __x86_64__
 CheckTypeSize(startDocumentSAXFunc,8, 14780, 11)
+#elif __ia64__
+CheckTypeSize(startDocumentSAXFunc,8, 14780, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14780,0);
 Msg("Find size of startDocumentSAXFunc (14780)\n");
@@ -556,6 +717,8 @@ Msg("Find size of startDocumentSAXFunc (14780)\n");
 CheckTypeSize(endDocumentSAXFunc,4, 14781, 2)
 #elif __x86_64__
 CheckTypeSize(endDocumentSAXFunc,8, 14781, 11)
+#elif __ia64__
+CheckTypeSize(endDocumentSAXFunc,8, 14781, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14781,0);
 Msg("Find size of endDocumentSAXFunc (14781)\n");
@@ -563,6 +726,7 @@ Msg("Find size of endDocumentSAXFunc (14781)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14782,0);
 Msg("Find size of fptr_SAX2_79 (14782)\n");
@@ -572,6 +736,8 @@ Msg("Find size of fptr_SAX2_79 (14782)\n");
 CheckTypeSize(startElementSAXFunc,4, 14783, 2)
 #elif __x86_64__
 CheckTypeSize(startElementSAXFunc,8, 14783, 11)
+#elif __ia64__
+CheckTypeSize(startElementSAXFunc,8, 14783, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14783,0);
 Msg("Find size of startElementSAXFunc (14783)\n");
@@ -579,6 +745,7 @@ Msg("Find size of startElementSAXFunc (14783)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14784,0);
 Msg("Find size of fptr_SAX2_131 (14784)\n");
@@ -588,6 +755,8 @@ Msg("Find size of fptr_SAX2_131 (14784)\n");
 CheckTypeSize(endElementSAXFunc,4, 14785, 2)
 #elif __x86_64__
 CheckTypeSize(endElementSAXFunc,8, 14785, 11)
+#elif __ia64__
+CheckTypeSize(endElementSAXFunc,8, 14785, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14785,0);
 Msg("Find size of endElementSAXFunc (14785)\n");
@@ -597,6 +766,8 @@ Msg("Find size of endElementSAXFunc (14785)\n");
 CheckTypeSize(referenceSAXFunc,4, 14786, 2)
 #elif __x86_64__
 CheckTypeSize(referenceSAXFunc,8, 14786, 11)
+#elif __ia64__
+CheckTypeSize(referenceSAXFunc,8, 14786, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14786,0);
 Msg("Find size of referenceSAXFunc (14786)\n");
@@ -604,6 +775,7 @@ Msg("Find size of referenceSAXFunc (14786)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14787,0);
 Msg("Find size of fptr_SAX2_204 (14787)\n");
@@ -613,6 +785,8 @@ Msg("Find size of fptr_SAX2_204 (14787)\n");
 CheckTypeSize(charactersSAXFunc,4, 14788, 2)
 #elif __x86_64__
 CheckTypeSize(charactersSAXFunc,8, 14788, 11)
+#elif __ia64__
+CheckTypeSize(charactersSAXFunc,8, 14788, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14788,0);
 Msg("Find size of charactersSAXFunc (14788)\n");
@@ -622,6 +796,8 @@ Msg("Find size of charactersSAXFunc (14788)\n");
 CheckTypeSize(ignorableWhitespaceSAXFunc,4, 14789, 2)
 #elif __x86_64__
 CheckTypeSize(ignorableWhitespaceSAXFunc,8, 14789, 11)
+#elif __ia64__
+CheckTypeSize(ignorableWhitespaceSAXFunc,8, 14789, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14789,0);
 Msg("Find size of ignorableWhitespaceSAXFunc (14789)\n");
@@ -629,6 +805,7 @@ Msg("Find size of ignorableWhitespaceSAXFunc (14789)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14790,0);
 Msg("Find size of fptr_SAX2_414 (14790)\n");
@@ -638,6 +815,8 @@ Msg("Find size of fptr_SAX2_414 (14790)\n");
 CheckTypeSize(processingInstructionSAXFunc,4, 14791, 2)
 #elif __x86_64__
 CheckTypeSize(processingInstructionSAXFunc,8, 14791, 11)
+#elif __ia64__
+CheckTypeSize(processingInstructionSAXFunc,8, 14791, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14791,0);
 Msg("Find size of processingInstructionSAXFunc (14791)\n");
@@ -647,6 +826,8 @@ Msg("Find size of processingInstructionSAXFunc (14791)\n");
 CheckTypeSize(commentSAXFunc,4, 14792, 2)
 #elif __x86_64__
 CheckTypeSize(commentSAXFunc,8, 14792, 11)
+#elif __ia64__
+CheckTypeSize(commentSAXFunc,8, 14792, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14792,0);
 Msg("Find size of commentSAXFunc (14792)\n");
@@ -656,6 +837,8 @@ Msg("Find size of commentSAXFunc (14792)\n");
 CheckTypeSize(warningSAXFunc,4, 14793, 2)
 #elif __x86_64__
 CheckTypeSize(warningSAXFunc,8, 14793, 11)
+#elif __ia64__
+CheckTypeSize(warningSAXFunc,8, 14793, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14793,0);
 Msg("Find size of warningSAXFunc (14793)\n");
@@ -665,6 +848,8 @@ Msg("Find size of warningSAXFunc (14793)\n");
 CheckTypeSize(errorSAXFunc,4, 14794, 2)
 #elif __x86_64__
 CheckTypeSize(errorSAXFunc,8, 14794, 11)
+#elif __ia64__
+CheckTypeSize(errorSAXFunc,8, 14794, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14794,0);
 Msg("Find size of errorSAXFunc (14794)\n");
@@ -674,6 +859,8 @@ Msg("Find size of errorSAXFunc (14794)\n");
 CheckTypeSize(fatalErrorSAXFunc,4, 14795, 2)
 #elif __x86_64__
 CheckTypeSize(fatalErrorSAXFunc,8, 14795, 11)
+#elif __ia64__
+CheckTypeSize(fatalErrorSAXFunc,8, 14795, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14795,0);
 Msg("Find size of fatalErrorSAXFunc (14795)\n");
@@ -683,6 +870,8 @@ Msg("Find size of fatalErrorSAXFunc (14795)\n");
 CheckTypeSize(getParameterEntitySAXFunc,4, 14796, 2)
 #elif __x86_64__
 CheckTypeSize(getParameterEntitySAXFunc,8, 14796, 11)
+#elif __ia64__
+CheckTypeSize(getParameterEntitySAXFunc,8, 14796, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14796,0);
 Msg("Find size of getParameterEntitySAXFunc (14796)\n");
@@ -692,6 +881,8 @@ Msg("Find size of getParameterEntitySAXFunc (14796)\n");
 CheckTypeSize(cdataBlockSAXFunc,4, 14797, 2)
 #elif __x86_64__
 CheckTypeSize(cdataBlockSAXFunc,8, 14797, 11)
+#elif __ia64__
+CheckTypeSize(cdataBlockSAXFunc,8, 14797, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14797,0);
 Msg("Find size of cdataBlockSAXFunc (14797)\n");
@@ -701,6 +892,8 @@ Msg("Find size of cdataBlockSAXFunc (14797)\n");
 CheckTypeSize(externalSubsetSAXFunc,4, 14798, 2)
 #elif __x86_64__
 CheckTypeSize(externalSubsetSAXFunc,8, 14798, 11)
+#elif __ia64__
+CheckTypeSize(externalSubsetSAXFunc,8, 14798, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14798,0);
 Msg("Find size of externalSubsetSAXFunc (14798)\n");
@@ -708,6 +901,7 @@ Msg("Find size of externalSubsetSAXFunc (14798)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14799,0);
 Msg("Find size of fptr_SAX2_470 (14799)\n");
@@ -717,6 +911,8 @@ Msg("Find size of fptr_SAX2_470 (14799)\n");
 CheckTypeSize(startElementNsSAX2Func,4, 14800, 2)
 #elif __x86_64__
 CheckTypeSize(startElementNsSAX2Func,8, 14800, 11)
+#elif __ia64__
+CheckTypeSize(startElementNsSAX2Func,8, 14800, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14800,0);
 Msg("Find size of startElementNsSAX2Func (14800)\n");
@@ -726,6 +922,8 @@ Msg("Find size of startElementNsSAX2Func (14800)\n");
 CheckTypeSize(endElementNsSAX2Func,4, 14801, 2)
 #elif __x86_64__
 CheckTypeSize(endElementNsSAX2Func,8, 14801, 11)
+#elif __ia64__
+CheckTypeSize(endElementNsSAX2Func,8, 14801, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14801,0);
 Msg("Find size of endElementNsSAX2Func (14801)\n");
@@ -735,6 +933,8 @@ Msg("Find size of endElementNsSAX2Func (14801)\n");
 CheckTypeSize(xmlSAXHandler,128, 14802, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSAXHandler,256, 14802, 11)
+#elif __ia64__
+CheckTypeSize(xmlSAXHandler,256, 14802, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14802,0);
 Msg("Find size of xmlSAXHandler (14802)\n");
@@ -744,6 +944,8 @@ Msg("Find size of xmlSAXHandler (14802)\n");
 CheckTypeSize(xmlSAXHandler *,4, 14803, 2)
 #elif __x86_64__
 CheckTypeSize(xmlSAXHandler *,8, 14803, 11)
+#elif __ia64__
+CheckTypeSize(xmlSAXHandler *,8, 14803, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14803,0);
 Msg("Find size of xmlSAXHandler * (14803)\n");

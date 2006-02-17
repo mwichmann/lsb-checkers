@@ -18,11 +18,12 @@ int sched_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sched.h\n");
 #endif
 
+printf("Checking data structures in sched.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SCHED_OTHER
 	CompareConstant(SCHED_OTHER,0,1611,architecture)
@@ -59,6 +60,22 @@ CheckMemberSize(struct sched_param,sched_priority,4,1,33571)
 CheckOffset(struct sched_param,sched_priority,0,1,33571)
 #endif
 
+extern int sched_get_priority_max_db(int);
+CheckInterfacedef(sched_get_priority_max,sched_get_priority_max_db);
+extern int sched_get_priority_min_db(int);
+CheckInterfacedef(sched_get_priority_min,sched_get_priority_min_db);
+extern int sched_getparam_db(pid_t, struct sched_param *);
+CheckInterfacedef(sched_getparam,sched_getparam_db);
+extern int sched_getscheduler_db(pid_t);
+CheckInterfacedef(sched_getscheduler,sched_getscheduler_db);
+extern int sched_rr_get_interval_db(pid_t, struct timespec *);
+CheckInterfacedef(sched_rr_get_interval,sched_rr_get_interval_db);
+extern int sched_setparam_db(pid_t, const struct sched_param *);
+CheckInterfacedef(sched_setparam,sched_setparam_db);
+extern int sched_setscheduler_db(pid_t, int, const struct sched_param *);
+CheckInterfacedef(sched_setscheduler,sched_setscheduler_db);
+extern int sched_yield_db(void);
+CheckInterfacedef(sched_yield,sched_yield_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -66,7 +83,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sched.h\n",cnt);
+printf("%d tests passed out of %d tests in sched.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

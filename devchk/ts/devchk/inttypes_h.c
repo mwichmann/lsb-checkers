@@ -20,11 +20,12 @@ int inttypes_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in inttypes.h\n");
 #endif
 
+printf("Checking data structures in inttypes.h\n");
 #if __i386__
 CheckTypeSize(imaxdiv_t,16, 6898, 2)
 #elif __ia64__
@@ -213,6 +214,18 @@ CheckTypeSize(uint64_t,8, 10879, 12)
 CheckTypeSize(uint64_t,8, 10880, 2)
 #endif
 
+extern intmax_t strtoimax_db(const char *, char * *, int);
+CheckInterfacedef(strtoimax,strtoimax_db);
+extern uintmax_t strtoumax_db(const char *, char * *, int);
+CheckInterfacedef(strtoumax,strtoumax_db);
+extern intmax_t wcstoimax_db(const wchar_t *, wchar_t * *, int);
+CheckInterfacedef(wcstoimax,wcstoimax_db);
+extern uintmax_t wcstoumax_db(const wchar_t *, wchar_t * *, int);
+CheckInterfacedef(wcstoumax,wcstoumax_db);
+extern intmax_t imaxabs_db(intmax_t);
+CheckInterfacedef(imaxabs,imaxabs_db);
+extern imaxdiv_t imaxdiv_db(intmax_t, intmax_t);
+CheckInterfacedef(imaxdiv,imaxdiv_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -220,7 +233,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in inttypes.h\n",cnt);
+printf("%d tests passed out of %d tests in inttypes.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

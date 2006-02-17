@@ -18,11 +18,12 @@ int fmtmsg_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in fmtmsg.h\n");
 #endif
 
+printf("Checking data structures in fmtmsg.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_HARD
 	CompareConstant(MM_HARD,1,4876,architecture)
@@ -143,6 +144,8 @@ cnt++;
 
 #endif
 
+extern int fmtmsg_db(long int, const char *, int, const char *, const char *, const char *);
+CheckInterfacedef(fmtmsg,fmtmsg_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -150,7 +153,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in fmtmsg.h\n",cnt);
+printf("%d tests passed out of %d tests in fmtmsg.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

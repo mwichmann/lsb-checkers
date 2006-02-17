@@ -18,11 +18,12 @@ int netinet_ip_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in netinet/ip.h\n");
 #endif
 
+printf("Checking data structures in netinet/ip.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef IPTOS_TOS_MASK
 	CompareConstant(IPTOS_TOS_MASK,0x1e,5267,architecture)
@@ -100,7 +101,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in netinet/ip.h\n",cnt);
+printf("%d tests passed out of %d tests in netinet/ip.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -27,6 +27,7 @@ Msg("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 printf("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14569,0);
 Msg("Find size of fptr_xmlmemory_372 (14569)\n");
@@ -36,6 +37,8 @@ Msg("Find size of fptr_xmlmemory_372 (14569)\n");
 CheckTypeSize(xmlFreeFunc,4, 14570, 2)
 #elif __x86_64__
 CheckTypeSize(xmlFreeFunc,8, 14570, 11)
+#elif __ia64__
+CheckTypeSize(xmlFreeFunc,8, 14570, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14570,0);
 Msg("Find size of xmlFreeFunc (14570)\n");
@@ -43,6 +46,7 @@ Msg("Find size of xmlFreeFunc (14570)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14571,0);
 Msg("Find size of fptr_xmlmemory_132 (14571)\n");
@@ -52,6 +56,8 @@ Msg("Find size of fptr_xmlmemory_132 (14571)\n");
 CheckTypeSize(xmlMallocFunc,4, 14572, 2)
 #elif __x86_64__
 CheckTypeSize(xmlMallocFunc,8, 14572, 11)
+#elif __ia64__
+CheckTypeSize(xmlMallocFunc,8, 14572, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14572,0);
 Msg("Find size of xmlMallocFunc (14572)\n");
@@ -59,6 +65,7 @@ Msg("Find size of xmlMallocFunc (14572)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14573,0);
 Msg("Find size of fptr_xmlmemory_521 (14573)\n");
@@ -68,6 +75,8 @@ Msg("Find size of fptr_xmlmemory_521 (14573)\n");
 CheckTypeSize(xmlReallocFunc,4, 14574, 2)
 #elif __x86_64__
 CheckTypeSize(xmlReallocFunc,8, 14574, 11)
+#elif __ia64__
+CheckTypeSize(xmlReallocFunc,8, 14574, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14574,0);
 Msg("Find size of xmlReallocFunc (14574)\n");
@@ -75,6 +84,7 @@ Msg("Find size of xmlReallocFunc (14574)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14575,0);
 Msg("Find size of fptr_xmlmemory_29 (14575)\n");
@@ -84,6 +94,8 @@ Msg("Find size of fptr_xmlmemory_29 (14575)\n");
 CheckTypeSize(xmlStrdupFunc,4, 14576, 2)
 #elif __x86_64__
 CheckTypeSize(xmlStrdupFunc,8, 14576, 11)
+#elif __ia64__
+CheckTypeSize(xmlStrdupFunc,8, 14576, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14576,0);
 Msg("Find size of xmlStrdupFunc (14576)\n");
@@ -93,6 +105,8 @@ Msg("Find size of xmlStrdupFunc (14576)\n");
 CheckTypeSize(xmlFreeFunc *,4, 14577, 2)
 #elif __x86_64__
 CheckTypeSize(xmlFreeFunc *,8, 14577, 11)
+#elif __ia64__
+CheckTypeSize(xmlFreeFunc *,8, 14577, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14577,0);
 Msg("Find size of xmlFreeFunc * (14577)\n");
@@ -102,6 +116,8 @@ Msg("Find size of xmlFreeFunc * (14577)\n");
 CheckTypeSize(xmlMallocFunc *,4, 14578, 2)
 #elif __x86_64__
 CheckTypeSize(xmlMallocFunc *,8, 14578, 11)
+#elif __ia64__
+CheckTypeSize(xmlMallocFunc *,8, 14578, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14578,0);
 Msg("Find size of xmlMallocFunc * (14578)\n");
@@ -111,6 +127,8 @@ Msg("Find size of xmlMallocFunc * (14578)\n");
 CheckTypeSize(xmlReallocFunc *,4, 14579, 2)
 #elif __x86_64__
 CheckTypeSize(xmlReallocFunc *,8, 14579, 11)
+#elif __ia64__
+CheckTypeSize(xmlReallocFunc *,8, 14579, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14579,0);
 Msg("Find size of xmlReallocFunc * (14579)\n");
@@ -120,6 +138,8 @@ Msg("Find size of xmlReallocFunc * (14579)\n");
 CheckTypeSize(xmlStrdupFunc *,4, 14580, 2)
 #elif __x86_64__
 CheckTypeSize(xmlStrdupFunc *,8, 14580, 11)
+#elif __ia64__
+CheckTypeSize(xmlStrdupFunc *,8, 14580, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14580,0);
 Msg("Find size of xmlStrdupFunc * (14580)\n");

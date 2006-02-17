@@ -18,11 +18,12 @@ int sys_ipc_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/ipc.h\n");
 #endif
 
+printf("Checking data structures in sys/ipc.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef IPC_PRIVATE
 	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
@@ -265,6 +266,8 @@ CheckMemberSize(struct ipc_perm,__unused2,8,11,40436)
 CheckOffset(struct ipc_perm,__unused2,40,11,40436)
 #endif
 
+extern key_t ftok_db(const char *, int);
+CheckInterfacedef(ftok,ftok_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -272,7 +275,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/ipc.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/ipc.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -18,11 +18,12 @@ int zlib_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in zlib.h\n");
 #endif
 
+printf("Checking data structures in zlib.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef Z_NO_FLUSH
 	CompareConstant(Z_NO_FLUSH,0,4213,architecture)
@@ -940,6 +941,92 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10511,0);
 Msg("Find size of const Bytef (10511)\n");
 #endif
 
+extern int gzread_db(gzFile, voidp, unsigned int);
+CheckInterfacedef(gzread,gzread_db);
+extern int gzclose_db(gzFile);
+CheckInterfacedef(gzclose,gzclose_db);
+extern gzFile gzopen_db(const char *, const char *);
+CheckInterfacedef(gzopen,gzopen_db);
+extern gzFile gzdopen_db(int, const char *);
+CheckInterfacedef(gzdopen,gzdopen_db);
+extern int gzwrite_db(gzFile, voidpc, unsigned int);
+CheckInterfacedef(gzwrite,gzwrite_db);
+extern int gzflush_db(gzFile, int);
+CheckInterfacedef(gzflush,gzflush_db);
+extern const char * gzerror_db(gzFile, int *);
+CheckInterfacedef(gzerror,gzerror_db);
+extern uLong adler32_db(uLong, const Bytef *, uInt);
+CheckInterfacedef(adler32,adler32_db);
+extern int compress_db(Bytef *, uLongf *, const Bytef *, uLong);
+CheckInterfacedef(compress,compress_db);
+extern int compress2_db(Bytef *, uLongf *, const Bytef *, uLong, int);
+CheckInterfacedef(compress2,compress2_db);
+extern uLong crc32_db(uLong, const Bytef *, uInt);
+CheckInterfacedef(crc32,crc32_db);
+extern int deflate_db(z_streamp, int);
+CheckInterfacedef(deflate,deflate_db);
+extern int deflateCopy_db(z_streamp, z_streamp);
+CheckInterfacedef(deflateCopy,deflateCopy_db);
+extern int deflateEnd_db(z_streamp);
+CheckInterfacedef(deflateEnd,deflateEnd_db);
+extern int deflateInit2__db(z_streamp, int, int, int, int, int, const char *, int);
+CheckInterfacedef(deflateInit2_,deflateInit2__db);
+extern int deflateInit__db(z_streamp, int, const char *, int);
+CheckInterfacedef(deflateInit_,deflateInit__db);
+extern int deflateParams_db(z_streamp, int, int);
+CheckInterfacedef(deflateParams,deflateParams_db);
+extern int deflateReset_db(z_streamp);
+CheckInterfacedef(deflateReset,deflateReset_db);
+extern int deflateSetDictionary_db(z_streamp, const Bytef *, uInt);
+CheckInterfacedef(deflateSetDictionary,deflateSetDictionary_db);
+extern const uLongf * get_crc_table_db(void);
+CheckInterfacedef(get_crc_table,get_crc_table_db);
+extern int gzeof_db(gzFile);
+CheckInterfacedef(gzeof,gzeof_db);
+extern int gzgetc_db(gzFile);
+CheckInterfacedef(gzgetc,gzgetc_db);
+extern char * gzgets_db(gzFile, char *, int);
+CheckInterfacedef(gzgets,gzgets_db);
+extern int gzprintf_db(gzFile, const char *, ...);
+CheckInterfacedef(gzprintf,gzprintf_db);
+extern int gzputc_db(gzFile, int);
+CheckInterfacedef(gzputc,gzputc_db);
+extern int gzputs_db(gzFile, const char *);
+CheckInterfacedef(gzputs,gzputs_db);
+extern int gzrewind_db(gzFile);
+CheckInterfacedef(gzrewind,gzrewind_db);
+extern z_off_t gzseek_db(gzFile, z_off_t, int);
+CheckInterfacedef(gzseek,gzseek_db);
+extern int gzsetparams_db(gzFile, int, int);
+CheckInterfacedef(gzsetparams,gzsetparams_db);
+extern z_off_t gztell_db(gzFile);
+CheckInterfacedef(gztell,gztell_db);
+extern int inflate_db(z_streamp, int);
+CheckInterfacedef(inflate,inflate_db);
+extern int inflateEnd_db(z_streamp);
+CheckInterfacedef(inflateEnd,inflateEnd_db);
+extern int inflateInit2__db(z_streamp, int, const char *, int);
+CheckInterfacedef(inflateInit2_,inflateInit2__db);
+extern int inflateInit__db(z_streamp, const char *, int);
+CheckInterfacedef(inflateInit_,inflateInit__db);
+extern int inflateReset_db(z_streamp);
+CheckInterfacedef(inflateReset,inflateReset_db);
+extern int inflateSetDictionary_db(z_streamp, const Bytef *, uInt);
+CheckInterfacedef(inflateSetDictionary,inflateSetDictionary_db);
+extern int inflateSync_db(z_streamp);
+CheckInterfacedef(inflateSync,inflateSync_db);
+extern int inflateSyncPoint_db(z_streamp);
+CheckInterfacedef(inflateSyncPoint,inflateSyncPoint_db);
+extern int uncompress_db(Bytef *, uLongf *, const Bytef *, uLong);
+CheckInterfacedef(uncompress,uncompress_db);
+extern const char * zError_db(int);
+CheckInterfacedef(zError,zError_db);
+extern const char * zlibVersion_db(void);
+CheckInterfacedef(zlibVersion,zlibVersion_db);
+extern uLong deflateBound_db(z_streamp, uLong);
+CheckInterfacedef(deflateBound,deflateBound_db);
+extern uLong compressBound_db(uLong);
+CheckInterfacedef(compressBound,compressBound_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -947,7 +1034,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in zlib.h\n",cnt);
+printf("%d tests passed out of %d tests in zlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

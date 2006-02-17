@@ -18,11 +18,12 @@ int netdb_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in netdb.h\n");
 #endif
 
+printf("Checking data structures in netdb.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NI_NOFQDN
 	CompareConstant(NI_NOFQDN,4,3356,architecture)
@@ -680,6 +681,38 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10125,0);
 Msg("Find size of addrinfo (10125)\n");
 #endif
 
+extern void endprotoent_db(void);
+CheckInterfacedef(endprotoent,endprotoent_db);
+extern void endservent_db(void);
+CheckInterfacedef(endservent,endservent_db);
+extern void freeaddrinfo_db(struct addrinfo *);
+CheckInterfacedef(freeaddrinfo,freeaddrinfo_db);
+extern const char * gai_strerror_db(int);
+CheckInterfacedef(gai_strerror,gai_strerror_db);
+extern int getaddrinfo_db(const char *, const char *, const struct addrinfo *, struct addrinfo * *);
+CheckInterfacedef(getaddrinfo,getaddrinfo_db);
+extern struct hostent * gethostbyaddr_db(const void *, socklen_t, int);
+CheckInterfacedef(gethostbyaddr,gethostbyaddr_db);
+extern struct hostent * gethostbyname_db(const char *);
+CheckInterfacedef(gethostbyname,gethostbyname_db);
+extern struct protoent * getprotobyname_db(const char *);
+CheckInterfacedef(getprotobyname,getprotobyname_db);
+extern struct protoent * getprotobynumber_db(int);
+CheckInterfacedef(getprotobynumber,getprotobynumber_db);
+extern struct protoent * getprotoent_db(void);
+CheckInterfacedef(getprotoent,getprotoent_db);
+extern struct servent * getservbyname_db(const char *, const char *);
+CheckInterfacedef(getservbyname,getservbyname_db);
+extern struct servent * getservbyport_db(int, const char *);
+CheckInterfacedef(getservbyport,getservbyport_db);
+extern struct servent * getservent_db(void);
+CheckInterfacedef(getservent,getservent_db);
+extern void setprotoent_db(int);
+CheckInterfacedef(setprotoent,setprotoent_db);
+extern void setservent_db(int);
+CheckInterfacedef(setservent,setservent_db);
+extern int * __h_errno_location_db(void);
+CheckInterfacedef(__h_errno_location,__h_errno_location_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -687,7 +720,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in netdb.h\n",cnt);
+printf("%d tests passed out of %d tests in netdb.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

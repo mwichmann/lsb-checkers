@@ -4,6 +4,11 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#define G_DISABLE_DEPRECATED
+#define G_ERRORCHECK_MUTEXES
+#undef GOBJECT_COMPILATION
+#undef GETTEXT_PACKAGE
+#define PANGO_DISABLE_DEPRECATED
 struct _PangoFontFace { };
 struct _PangoLayout { };
 struct _PangoContext { };
@@ -345,6 +350,8 @@ cnt++;
 CheckTypeSize(PangoFontFace,0, 12349, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontFace,0, 12349, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontFace,0, 12349, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12349,0);
 Msg("Find size of PangoFontFace (12349)\n");
@@ -354,6 +361,8 @@ Msg("Find size of PangoFontFace (12349)\n");
 CheckTypeSize(PangoFontFace *,4, 12350, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontFace *,8, 12350, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontFace *,8, 12350, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12350,0);
 Msg("Find size of PangoFontFace * (12350)\n");
@@ -367,6 +376,10 @@ CheckEnum("PANGO_WRAP_WORD_CHAR",PANGO_WRAP_WORD_CHAR,2);
 CheckEnum("PANGO_WRAP_WORD",PANGO_WRAP_WORD,0);
 CheckEnum("PANGO_WRAP_CHAR",PANGO_WRAP_CHAR,1);
 CheckEnum("PANGO_WRAP_WORD_CHAR",PANGO_WRAP_WORD_CHAR,2);
+#elif __ia64__
+CheckEnum("PANGO_WRAP_WORD",PANGO_WRAP_WORD,0);
+CheckEnum("PANGO_WRAP_CHAR",PANGO_WRAP_CHAR,1);
+CheckEnum("PANGO_WRAP_WORD_CHAR",PANGO_WRAP_WORD_CHAR,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12351,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-50 (12351)\n");
@@ -376,6 +389,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-50 (12351)\n");
 CheckTypeSize(PangoWrapMode,4, 12352, 2)
 #elif __x86_64__
 CheckTypeSize(PangoWrapMode,4, 12352, 11)
+#elif __ia64__
+CheckTypeSize(PangoWrapMode,4, 12352, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12352,0);
 Msg("Find size of PangoWrapMode (12352)\n");
@@ -385,6 +400,8 @@ Msg("Find size of PangoWrapMode (12352)\n");
 CheckTypeSize(PangoLayout,0, 12354, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayout,0, 12354, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayout,0, 12354, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12354,0);
 Msg("Find size of PangoLayout (12354)\n");
@@ -394,6 +411,8 @@ Msg("Find size of PangoLayout (12354)\n");
 CheckTypeSize(PangoLayout *,4, 12355, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayout *,8, 12355, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayout *,8, 12355, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12355,0);
 Msg("Find size of PangoLayout * (12355)\n");
@@ -403,6 +422,8 @@ Msg("Find size of PangoLayout * (12355)\n");
 CheckTypeSize(PangoScriptIter,0, 12357, 2)
 #elif __x86_64__
 CheckTypeSize(PangoScriptIter,0, 12357, 11)
+#elif __ia64__
+CheckTypeSize(PangoScriptIter,0, 12357, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12357,0);
 Msg("Find size of PangoScriptIter (12357)\n");
@@ -412,6 +433,8 @@ Msg("Find size of PangoScriptIter (12357)\n");
 CheckTypeSize(PangoScriptIter *,4, 12358, 2)
 #elif __x86_64__
 CheckTypeSize(PangoScriptIter *,8, 12358, 11)
+#elif __ia64__
+CheckTypeSize(PangoScriptIter *,8, 12358, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12358,0);
 Msg("Find size of PangoScriptIter * (12358)\n");
@@ -529,6 +552,62 @@ CheckEnum("PANGO_SCRIPT_SHAVIAN",PANGO_SCRIPT_SHAVIAN,50);
 CheckEnum("PANGO_SCRIPT_LINEAR_B",PANGO_SCRIPT_LINEAR_B,51);
 CheckEnum("PANGO_SCRIPT_TAI_LE",PANGO_SCRIPT_TAI_LE,52);
 CheckEnum("PANGO_SCRIPT_UGARITIC",PANGO_SCRIPT_UGARITIC,53);
+#elif __ia64__
+CheckEnum("PANGO_SCRIPT_INVALID_CODE",PANGO_SCRIPT_INVALID_CODE,-1);
+CheckEnum("PANGO_SCRIPT_COMMON",PANGO_SCRIPT_COMMON,0);
+CheckEnum("PANGO_SCRIPT_INHERITED",PANGO_SCRIPT_INHERITED,1);
+CheckEnum("PANGO_SCRIPT_ARABIC",PANGO_SCRIPT_ARABIC,2);
+CheckEnum("PANGO_SCRIPT_ARMENIAN",PANGO_SCRIPT_ARMENIAN,3);
+CheckEnum("PANGO_SCRIPT_BENGALI",PANGO_SCRIPT_BENGALI,4);
+CheckEnum("PANGO_SCRIPT_BOPOMOFO",PANGO_SCRIPT_BOPOMOFO,5);
+CheckEnum("PANGO_SCRIPT_CHEROKEE",PANGO_SCRIPT_CHEROKEE,6);
+CheckEnum("PANGO_SCRIPT_COPTIC",PANGO_SCRIPT_COPTIC,7);
+CheckEnum("PANGO_SCRIPT_CYRILLIC",PANGO_SCRIPT_CYRILLIC,8);
+CheckEnum("PANGO_SCRIPT_DESERET",PANGO_SCRIPT_DESERET,9);
+CheckEnum("PANGO_SCRIPT_DEVANAGARI",PANGO_SCRIPT_DEVANAGARI,10);
+CheckEnum("PANGO_SCRIPT_ETHIOPIC",PANGO_SCRIPT_ETHIOPIC,11);
+CheckEnum("PANGO_SCRIPT_GEORGIAN",PANGO_SCRIPT_GEORGIAN,12);
+CheckEnum("PANGO_SCRIPT_GOTHIC",PANGO_SCRIPT_GOTHIC,13);
+CheckEnum("PANGO_SCRIPT_GREEK",PANGO_SCRIPT_GREEK,14);
+CheckEnum("PANGO_SCRIPT_GUJARATI",PANGO_SCRIPT_GUJARATI,15);
+CheckEnum("PANGO_SCRIPT_GURMUKHI",PANGO_SCRIPT_GURMUKHI,16);
+CheckEnum("PANGO_SCRIPT_HAN",PANGO_SCRIPT_HAN,17);
+CheckEnum("PANGO_SCRIPT_HANGUL",PANGO_SCRIPT_HANGUL,18);
+CheckEnum("PANGO_SCRIPT_HEBREW",PANGO_SCRIPT_HEBREW,19);
+CheckEnum("PANGO_SCRIPT_HIRAGANA",PANGO_SCRIPT_HIRAGANA,20);
+CheckEnum("PANGO_SCRIPT_KANNADA",PANGO_SCRIPT_KANNADA,21);
+CheckEnum("PANGO_SCRIPT_KATAKANA",PANGO_SCRIPT_KATAKANA,22);
+CheckEnum("PANGO_SCRIPT_KHMER",PANGO_SCRIPT_KHMER,23);
+CheckEnum("PANGO_SCRIPT_LAO",PANGO_SCRIPT_LAO,24);
+CheckEnum("PANGO_SCRIPT_LATIN",PANGO_SCRIPT_LATIN,25);
+CheckEnum("PANGO_SCRIPT_MALAYALAM",PANGO_SCRIPT_MALAYALAM,26);
+CheckEnum("PANGO_SCRIPT_MONGOLIAN",PANGO_SCRIPT_MONGOLIAN,27);
+CheckEnum("PANGO_SCRIPT_MYANMAR",PANGO_SCRIPT_MYANMAR,28);
+CheckEnum("PANGO_SCRIPT_OGHAM",PANGO_SCRIPT_OGHAM,29);
+CheckEnum("PANGO_SCRIPT_OLD_ITALIC",PANGO_SCRIPT_OLD_ITALIC,30);
+CheckEnum("PANGO_SCRIPT_ORIYA",PANGO_SCRIPT_ORIYA,31);
+CheckEnum("PANGO_SCRIPT_RUNIC",PANGO_SCRIPT_RUNIC,32);
+CheckEnum("PANGO_SCRIPT_SINHALA",PANGO_SCRIPT_SINHALA,33);
+CheckEnum("PANGO_SCRIPT_SYRIAC",PANGO_SCRIPT_SYRIAC,34);
+CheckEnum("PANGO_SCRIPT_TAMIL",PANGO_SCRIPT_TAMIL,35);
+CheckEnum("PANGO_SCRIPT_TELUGU",PANGO_SCRIPT_TELUGU,36);
+CheckEnum("PANGO_SCRIPT_THAANA",PANGO_SCRIPT_THAANA,37);
+CheckEnum("PANGO_SCRIPT_THAI",PANGO_SCRIPT_THAI,38);
+CheckEnum("PANGO_SCRIPT_TIBETAN",PANGO_SCRIPT_TIBETAN,39);
+CheckEnum("PANGO_SCRIPT_CANADIAN_ABORIGINAL",PANGO_SCRIPT_CANADIAN_ABORIGINAL,40);
+CheckEnum("PANGO_SCRIPT_YI",PANGO_SCRIPT_YI,41);
+CheckEnum("PANGO_SCRIPT_TAGALOG",PANGO_SCRIPT_TAGALOG,42);
+CheckEnum("PANGO_SCRIPT_HANUNOO",PANGO_SCRIPT_HANUNOO,43);
+CheckEnum("PANGO_SCRIPT_BUHID",PANGO_SCRIPT_BUHID,44);
+CheckEnum("PANGO_SCRIPT_TAGBANWA",PANGO_SCRIPT_TAGBANWA,45);
+CheckEnum("PANGO_SCRIPT_BRAILLE",PANGO_SCRIPT_BRAILLE,46);
+CheckEnum("PANGO_SCRIPT_CYPRIOT",PANGO_SCRIPT_CYPRIOT,47);
+CheckEnum("PANGO_SCRIPT_LIMBU",PANGO_SCRIPT_LIMBU,48);
+CheckEnum("PANGO_SCRIPT_OSMANYA",PANGO_SCRIPT_OSMANYA,49);
+CheckEnum("PANGO_SCRIPT_SHAVIAN",PANGO_SCRIPT_SHAVIAN,50);
+CheckEnum("PANGO_SCRIPT_LINEAR_B",PANGO_SCRIPT_LINEAR_B,51);
+CheckEnum("PANGO_SCRIPT_TAI_LE",PANGO_SCRIPT_TAI_LE,52);
+CheckEnum("PANGO_SCRIPT_UGARITIC",PANGO_SCRIPT_UGARITIC,53);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12359,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-65 (12359)\n");
@@ -538,6 +617,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-65 (12359)\n");
 CheckTypeSize(PangoScript,4, 12360, 2)
 #elif __x86_64__
 CheckTypeSize(PangoScript,4, 12360, 11)
+#elif __ia64__
+CheckTypeSize(PangoScript,4, 12360, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12360,0);
 Msg("Find size of PangoScript (12360)\n");
@@ -547,6 +628,8 @@ Msg("Find size of PangoScript (12360)\n");
 CheckTypeSize(PangoFont,0, 12362, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFont,0, 12362, 11)
+#elif __ia64__
+CheckTypeSize(PangoFont,0, 12362, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12362,0);
 Msg("Find size of PangoFont (12362)\n");
@@ -556,6 +639,8 @@ Msg("Find size of PangoFont (12362)\n");
 CheckTypeSize(PangoFont *,4, 12363, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFont *,8, 12363, 11)
+#elif __ia64__
+CheckTypeSize(PangoFont *,8, 12363, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12363,0);
 Msg("Find size of PangoFont * (12363)\n");
@@ -565,6 +650,8 @@ Msg("Find size of PangoFont * (12363)\n");
 CheckTypeSize(PangoContext,0, 12365, 2)
 #elif __x86_64__
 CheckTypeSize(PangoContext,0, 12365, 11)
+#elif __ia64__
+CheckTypeSize(PangoContext,0, 12365, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12365,0);
 Msg("Find size of PangoContext (12365)\n");
@@ -574,6 +661,8 @@ Msg("Find size of PangoContext (12365)\n");
 CheckTypeSize(PangoContext *,4, 12366, 2)
 #elif __x86_64__
 CheckTypeSize(PangoContext *,8, 12366, 11)
+#elif __ia64__
+CheckTypeSize(PangoContext *,8, 12366, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12366,0);
 Msg("Find size of PangoContext * (12366)\n");
@@ -583,6 +672,8 @@ Msg("Find size of PangoContext * (12366)\n");
 CheckTypeSize(PangoFontDescription,0, 12368, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontDescription,0, 12368, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontDescription,0, 12368, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12368,0);
 Msg("Find size of PangoFontDescription (12368)\n");
@@ -592,6 +683,8 @@ Msg("Find size of PangoFontDescription (12368)\n");
 CheckTypeSize(const PangoFontDescription,0, 12369, 2)
 #elif __x86_64__
 CheckTypeSize(const PangoFontDescription,0, 12369, 11)
+#elif __ia64__
+CheckTypeSize(const PangoFontDescription,0, 12369, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12369,0);
 Msg("Find size of const PangoFontDescription (12369)\n");
@@ -599,6 +692,7 @@ Msg("Find size of const PangoFontDescription (12369)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12370,0);
 Msg("Find size of const PangoFontDescription * (12370)\n");
@@ -616,6 +710,12 @@ CheckMemberSize(struct _PangoAttribute,start_index,4,11,43092)
 CheckOffset(struct _PangoAttribute,start_index,8,11,43092)
 CheckMemberSize(struct _PangoAttribute,end_index,4,11,43093)
 CheckOffset(struct _PangoAttribute,end_index,12,11,43093)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttribute,16, 12371, 3)
+CheckMemberSize(struct _PangoAttribute,start_index,4,3,43092)
+CheckOffset(struct _PangoAttribute,start_index,8,3,43092)
+CheckMemberSize(struct _PangoAttribute,end_index,4,3,43093)
+CheckOffset(struct _PangoAttribute,end_index,12,3,43093)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12371,0);
 Msg("Find size of _PangoAttribute (12371)\n");
@@ -637,6 +737,14 @@ CheckMemberSize(struct _PangoAttrClass,destroy,8,11,43087)
 CheckOffset(struct _PangoAttrClass,destroy,16,11,43087)
 CheckMemberSize(struct _PangoAttrClass,equal,8,11,43090)
 CheckOffset(struct _PangoAttrClass,equal,24,11,43090)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrClass,32, 12372, 3)
+CheckMemberSize(struct _PangoAttrClass,copy,8,3,43085)
+CheckOffset(struct _PangoAttrClass,copy,8,3,43085)
+CheckMemberSize(struct _PangoAttrClass,destroy,8,3,43087)
+CheckOffset(struct _PangoAttrClass,destroy,16,3,43087)
+CheckMemberSize(struct _PangoAttrClass,equal,8,3,43090)
+CheckOffset(struct _PangoAttrClass,equal,24,3,43090)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12372,0);
 Msg("Find size of _PangoAttrClass (12372)\n");
@@ -686,6 +794,28 @@ CheckEnum("PANGO_ATTR_LETTER_SPACING",PANGO_ATTR_LETTER_SPACING,17);
 CheckEnum("PANGO_ATTR_UNDERLINE_COLOR",PANGO_ATTR_UNDERLINE_COLOR,18);
 CheckEnum("PANGO_ATTR_STRIKETHROUGH_COLOR",PANGO_ATTR_STRIKETHROUGH_COLOR,19);
 CheckEnum("PANGO_ATTR_ABSOLUTE_SIZE",PANGO_ATTR_ABSOLUTE_SIZE,20);
+#elif __ia64__
+CheckEnum("PANGO_ATTR_INVALID",PANGO_ATTR_INVALID,0);
+CheckEnum("PANGO_ATTR_LANGUAGE",PANGO_ATTR_LANGUAGE,1);
+CheckEnum("PANGO_ATTR_FAMILY",PANGO_ATTR_FAMILY,2);
+CheckEnum("PANGO_ATTR_STYLE",PANGO_ATTR_STYLE,3);
+CheckEnum("PANGO_ATTR_WEIGHT",PANGO_ATTR_WEIGHT,4);
+CheckEnum("PANGO_ATTR_VARIANT",PANGO_ATTR_VARIANT,5);
+CheckEnum("PANGO_ATTR_STRETCH",PANGO_ATTR_STRETCH,6);
+CheckEnum("PANGO_ATTR_SIZE",PANGO_ATTR_SIZE,7);
+CheckEnum("PANGO_ATTR_FONT_DESC",PANGO_ATTR_FONT_DESC,8);
+CheckEnum("PANGO_ATTR_FOREGROUND",PANGO_ATTR_FOREGROUND,9);
+CheckEnum("PANGO_ATTR_BACKGROUND",PANGO_ATTR_BACKGROUND,10);
+CheckEnum("PANGO_ATTR_UNDERLINE",PANGO_ATTR_UNDERLINE,11);
+CheckEnum("PANGO_ATTR_STRIKETHROUGH",PANGO_ATTR_STRIKETHROUGH,12);
+CheckEnum("PANGO_ATTR_RISE",PANGO_ATTR_RISE,13);
+CheckEnum("PANGO_ATTR_SHAPE",PANGO_ATTR_SHAPE,14);
+CheckEnum("PANGO_ATTR_SCALE",PANGO_ATTR_SCALE,15);
+CheckEnum("PANGO_ATTR_FALLBACK",PANGO_ATTR_FALLBACK,16);
+CheckEnum("PANGO_ATTR_LETTER_SPACING",PANGO_ATTR_LETTER_SPACING,17);
+CheckEnum("PANGO_ATTR_UNDERLINE_COLOR",PANGO_ATTR_UNDERLINE_COLOR,18);
+CheckEnum("PANGO_ATTR_STRIKETHROUGH_COLOR",PANGO_ATTR_STRIKETHROUGH_COLOR,19);
+CheckEnum("PANGO_ATTR_ABSOLUTE_SIZE",PANGO_ATTR_ABSOLUTE_SIZE,20);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12373,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-21 (12373)\n");
@@ -695,6 +825,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-21 (12373)\n");
 CheckTypeSize(PangoAttrType,4, 12374, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrType,4, 12374, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrType,4, 12374, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12374,0);
 Msg("Find size of PangoAttrType (12374)\n");
@@ -704,6 +836,8 @@ Msg("Find size of PangoAttrType (12374)\n");
 CheckTypeSize(PangoAttribute,12, 12375, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttribute,16, 12375, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttribute,16, 12375, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12375,0);
 Msg("Find size of PangoAttribute (12375)\n");
@@ -713,6 +847,8 @@ Msg("Find size of PangoAttribute (12375)\n");
 CheckTypeSize(PangoAttribute *,4, 12376, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttribute *,8, 12376, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttribute *,8, 12376, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12376,0);
 Msg("Find size of PangoAttribute * (12376)\n");
@@ -722,6 +858,8 @@ Msg("Find size of PangoAttribute * (12376)\n");
 CheckTypeSize(const PangoAttribute,12, 12377, 2)
 #elif __x86_64__
 CheckTypeSize(const PangoAttribute,16, 12377, 11)
+#elif __ia64__
+CheckTypeSize(const PangoAttribute,16, 12377, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12377,0);
 Msg("Find size of const PangoAttribute (12377)\n");
@@ -729,6 +867,7 @@ Msg("Find size of const PangoAttribute (12377)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12378,0);
 Msg("Find size of const PangoAttribute * (12378)\n");
@@ -736,6 +875,7 @@ Msg("Find size of const PangoAttribute * (12378)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12379,0);
 Msg("Find size of fptr_pango_6 (12379)\n");
@@ -743,6 +883,7 @@ Msg("Find size of fptr_pango_6 (12379)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12380,0);
 Msg("Find size of fptr_pango_71 (12380)\n");
@@ -750,6 +891,7 @@ Msg("Find size of fptr_pango_71 (12380)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12381,0);
 Msg("Find size of fptr_pango_159 (12381)\n");
@@ -759,6 +901,8 @@ Msg("Find size of fptr_pango_159 (12381)\n");
 CheckTypeSize(PangoAttrClass,16, 12382, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrClass,32, 12382, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrClass,32, 12382, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12382,0);
 Msg("Find size of PangoAttrClass (12382)\n");
@@ -768,6 +912,8 @@ Msg("Find size of PangoAttrClass (12382)\n");
 CheckTypeSize(const PangoAttrClass,16, 12383, 2)
 #elif __x86_64__
 CheckTypeSize(const PangoAttrClass,32, 12383, 11)
+#elif __ia64__
+CheckTypeSize(const PangoAttrClass,32, 12383, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12383,0);
 Msg("Find size of const PangoAttrClass (12383)\n");
@@ -775,6 +921,7 @@ Msg("Find size of const PangoAttrClass (12383)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12384,0);
 Msg("Find size of const PangoAttrClass * (12384)\n");
@@ -784,6 +931,8 @@ Msg("Find size of const PangoAttrClass * (12384)\n");
 CheckTypeSize(PangoLanguage,0, 12386, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLanguage,0, 12386, 11)
+#elif __ia64__
+CheckTypeSize(PangoLanguage,0, 12386, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12386,0);
 Msg("Find size of PangoLanguage (12386)\n");
@@ -793,6 +942,8 @@ Msg("Find size of PangoLanguage (12386)\n");
 CheckTypeSize(PangoLanguage *,4, 12387, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLanguage *,8, 12387, 11)
+#elif __ia64__
+CheckTypeSize(PangoLanguage *,8, 12387, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12387,0);
 Msg("Find size of PangoLanguage * (12387)\n");
@@ -804,6 +955,9 @@ Msg("Missing member data for _PangoLogAttr on IA32\n");
 #elif __x86_64__
 CheckTypeSize(struct _PangoLogAttr,4, 12388, 11)
 Msg("Missing member data for _PangoLogAttr on x86-64\n");
+#elif __ia64__
+CheckTypeSize(struct _PangoLogAttr,4, 12388, 3)
+Msg("Missing member data for _PangoLogAttr on IA64\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12388,0);
 Msg("Find size of _PangoLogAttr (12388)\n");
@@ -813,6 +967,8 @@ Msg("Find size of _PangoLogAttr (12388)\n");
 CheckTypeSize(PangoLogAttr,4, 12389, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLogAttr,4, 12389, 11)
+#elif __ia64__
+CheckTypeSize(PangoLogAttr,4, 12389, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12389,0);
 Msg("Find size of PangoLogAttr (12389)\n");
@@ -822,6 +978,8 @@ Msg("Find size of PangoLogAttr (12389)\n");
 CheckTypeSize(PangoLogAttr *,4, 12390, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLogAttr *,8, 12390, 11)
+#elif __ia64__
+CheckTypeSize(PangoLogAttr *,8, 12390, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12390,0);
 Msg("Find size of PangoLogAttr * (12390)\n");
@@ -839,6 +997,12 @@ CheckMemberSize(struct _PangoColor,green,2,11,43106)
 CheckOffset(struct _PangoColor,green,2,11,43106)
 CheckMemberSize(struct _PangoColor,blue,2,11,43107)
 CheckOffset(struct _PangoColor,blue,4,11,43107)
+#elif __ia64__
+CheckTypeSize(struct _PangoColor,6, 12391, 3)
+CheckMemberSize(struct _PangoColor,green,2,3,43106)
+CheckOffset(struct _PangoColor,green,2,3,43106)
+CheckMemberSize(struct _PangoColor,blue,2,3,43107)
+CheckOffset(struct _PangoColor,blue,4,3,43107)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12391,0);
 Msg("Find size of _PangoColor (12391)\n");
@@ -848,6 +1012,8 @@ Msg("Find size of _PangoColor (12391)\n");
 CheckTypeSize(PangoColor,6, 12392, 2)
 #elif __x86_64__
 CheckTypeSize(PangoColor,6, 12392, 11)
+#elif __ia64__
+CheckTypeSize(PangoColor,6, 12392, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12392,0);
 Msg("Find size of PangoColor (12392)\n");
@@ -857,6 +1023,8 @@ Msg("Find size of PangoColor (12392)\n");
 CheckTypeSize(PangoColor *,4, 12393, 2)
 #elif __x86_64__
 CheckTypeSize(PangoColor *,8, 12393, 11)
+#elif __ia64__
+CheckTypeSize(PangoColor *,8, 12393, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12393,0);
 Msg("Find size of PangoColor * (12393)\n");
@@ -886,6 +1054,18 @@ CheckMemberSize(struct _PangoMatrix,x0,8,11,43112)
 CheckOffset(struct _PangoMatrix,x0,32,11,43112)
 CheckMemberSize(struct _PangoMatrix,y0,8,11,43113)
 CheckOffset(struct _PangoMatrix,y0,40,11,43113)
+#elif __ia64__
+CheckTypeSize(struct _PangoMatrix,48, 12394, 3)
+CheckMemberSize(struct _PangoMatrix,xy,8,3,43109)
+CheckOffset(struct _PangoMatrix,xy,8,3,43109)
+CheckMemberSize(struct _PangoMatrix,yx,8,3,43110)
+CheckOffset(struct _PangoMatrix,yx,16,3,43110)
+CheckMemberSize(struct _PangoMatrix,yy,8,3,43111)
+CheckOffset(struct _PangoMatrix,yy,24,3,43111)
+CheckMemberSize(struct _PangoMatrix,x0,8,3,43112)
+CheckOffset(struct _PangoMatrix,x0,32,3,43112)
+CheckMemberSize(struct _PangoMatrix,y0,8,3,43113)
+CheckOffset(struct _PangoMatrix,y0,40,3,43113)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12394,0);
 Msg("Find size of _PangoMatrix (12394)\n");
@@ -895,6 +1075,8 @@ Msg("Find size of _PangoMatrix (12394)\n");
 CheckTypeSize(PangoMatrix,48, 12395, 2)
 #elif __x86_64__
 CheckTypeSize(PangoMatrix,48, 12395, 11)
+#elif __ia64__
+CheckTypeSize(PangoMatrix,48, 12395, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12395,0);
 Msg("Find size of PangoMatrix (12395)\n");
@@ -904,6 +1086,8 @@ Msg("Find size of PangoMatrix (12395)\n");
 CheckTypeSize(PangoMatrix *,4, 12396, 2)
 #elif __x86_64__
 CheckTypeSize(PangoMatrix *,8, 12396, 11)
+#elif __ia64__
+CheckTypeSize(PangoMatrix *,8, 12396, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12396,0);
 Msg("Find size of PangoMatrix * (12396)\n");
@@ -917,6 +1101,10 @@ CheckOffset(struct _PangoGlyphItem,glyphs,4,2,43136)
 CheckTypeSize(struct _PangoGlyphItem,16, 12397, 11)
 CheckMemberSize(struct _PangoGlyphItem,glyphs,8,11,43136)
 CheckOffset(struct _PangoGlyphItem,glyphs,8,11,43136)
+#elif __ia64__
+CheckTypeSize(struct _PangoGlyphItem,16, 12397, 3)
+CheckMemberSize(struct _PangoGlyphItem,glyphs,8,3,43136)
+CheckOffset(struct _PangoGlyphItem,glyphs,8,3,43136)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12397,0);
 Msg("Find size of _PangoGlyphItem (12397)\n");
@@ -938,6 +1126,14 @@ CheckMemberSize(struct _PangoItem,num_chars,4,11,43116)
 CheckOffset(struct _PangoItem,num_chars,8,11,43116)
 CheckMemberSize(struct _PangoItem,analysis,48,11,43123)
 CheckOffset(struct _PangoItem,analysis,16,11,43123)
+#elif __ia64__
+CheckTypeSize(struct _PangoItem,64, 12398, 3)
+CheckMemberSize(struct _PangoItem,length,4,3,43115)
+CheckOffset(struct _PangoItem,length,4,3,43115)
+CheckMemberSize(struct _PangoItem,num_chars,4,3,43116)
+CheckOffset(struct _PangoItem,num_chars,8,3,43116)
+CheckMemberSize(struct _PangoItem,analysis,48,3,43123)
+CheckOffset(struct _PangoItem,analysis,16,3,43123)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12398,0);
 Msg("Find size of _PangoItem (12398)\n");
@@ -967,6 +1163,18 @@ CheckMemberSize(struct _PangoAnalysis,language,8,11,43121)
 CheckOffset(struct _PangoAnalysis,language,32,11,43121)
 CheckMemberSize(struct _PangoAnalysis,extra_attrs,8,11,43122)
 CheckOffset(struct _PangoAnalysis,extra_attrs,40,11,43122)
+#elif __ia64__
+CheckTypeSize(struct _PangoAnalysis,48, 12399, 3)
+CheckMemberSize(struct _PangoAnalysis,lang_engine,8,3,43118)
+CheckOffset(struct _PangoAnalysis,lang_engine,8,3,43118)
+CheckMemberSize(struct _PangoAnalysis,font,8,3,43119)
+CheckOffset(struct _PangoAnalysis,font,16,3,43119)
+CheckMemberSize(struct _PangoAnalysis,level,1,3,43120)
+CheckOffset(struct _PangoAnalysis,level,24,3,43120)
+CheckMemberSize(struct _PangoAnalysis,language,8,3,43121)
+CheckOffset(struct _PangoAnalysis,language,32,3,43121)
+CheckMemberSize(struct _PangoAnalysis,extra_attrs,8,3,43122)
+CheckOffset(struct _PangoAnalysis,extra_attrs,40,3,43122)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12399,0);
 Msg("Find size of _PangoAnalysis (12399)\n");
@@ -976,6 +1184,8 @@ Msg("Find size of _PangoAnalysis (12399)\n");
 CheckTypeSize(PangoEngineShape,0, 12401, 2)
 #elif __x86_64__
 CheckTypeSize(PangoEngineShape,0, 12401, 11)
+#elif __ia64__
+CheckTypeSize(PangoEngineShape,0, 12401, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12401,0);
 Msg("Find size of PangoEngineShape (12401)\n");
@@ -985,6 +1195,8 @@ Msg("Find size of PangoEngineShape (12401)\n");
 CheckTypeSize(PangoEngineShape *,4, 12402, 2)
 #elif __x86_64__
 CheckTypeSize(PangoEngineShape *,8, 12402, 11)
+#elif __ia64__
+CheckTypeSize(PangoEngineShape *,8, 12402, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12402,0);
 Msg("Find size of PangoEngineShape * (12402)\n");
@@ -994,6 +1206,8 @@ Msg("Find size of PangoEngineShape * (12402)\n");
 CheckTypeSize(PangoEngineLang,0, 12404, 2)
 #elif __x86_64__
 CheckTypeSize(PangoEngineLang,0, 12404, 11)
+#elif __ia64__
+CheckTypeSize(PangoEngineLang,0, 12404, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12404,0);
 Msg("Find size of PangoEngineLang (12404)\n");
@@ -1003,6 +1217,8 @@ Msg("Find size of PangoEngineLang (12404)\n");
 CheckTypeSize(PangoEngineLang *,4, 12405, 2)
 #elif __x86_64__
 CheckTypeSize(PangoEngineLang *,8, 12405, 11)
+#elif __ia64__
+CheckTypeSize(PangoEngineLang *,8, 12405, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12405,0);
 Msg("Find size of PangoEngineLang * (12405)\n");
@@ -1012,6 +1228,8 @@ Msg("Find size of PangoEngineLang * (12405)\n");
 CheckTypeSize(PangoAnalysis,24, 12406, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAnalysis,48, 12406, 11)
+#elif __ia64__
+CheckTypeSize(PangoAnalysis,48, 12406, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12406,0);
 Msg("Find size of PangoAnalysis (12406)\n");
@@ -1021,6 +1239,8 @@ Msg("Find size of PangoAnalysis (12406)\n");
 CheckTypeSize(PangoItem,36, 12407, 2)
 #elif __x86_64__
 CheckTypeSize(PangoItem,64, 12407, 11)
+#elif __ia64__
+CheckTypeSize(PangoItem,64, 12407, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12407,0);
 Msg("Find size of PangoItem (12407)\n");
@@ -1030,6 +1250,8 @@ Msg("Find size of PangoItem (12407)\n");
 CheckTypeSize(PangoItem *,4, 12408, 2)
 #elif __x86_64__
 CheckTypeSize(PangoItem *,8, 12408, 11)
+#elif __ia64__
+CheckTypeSize(PangoItem *,8, 12408, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12408,0);
 Msg("Find size of PangoItem * (12408)\n");
@@ -1051,6 +1273,14 @@ CheckMemberSize(struct _PangoGlyphString,log_clusters,8,11,43134)
 CheckOffset(struct _PangoGlyphString,log_clusters,16,11,43134)
 CheckMemberSize(struct _PangoGlyphString,space,4,11,43135)
 CheckOffset(struct _PangoGlyphString,space,24,11,43135)
+#elif __ia64__
+CheckTypeSize(struct _PangoGlyphString,32, 12409, 3)
+CheckMemberSize(struct _PangoGlyphString,glyphs,8,3,43133)
+CheckOffset(struct _PangoGlyphString,glyphs,8,3,43133)
+CheckMemberSize(struct _PangoGlyphString,log_clusters,8,3,43134)
+CheckOffset(struct _PangoGlyphString,log_clusters,16,3,43134)
+CheckMemberSize(struct _PangoGlyphString,space,4,3,43135)
+CheckOffset(struct _PangoGlyphString,space,24,3,43135)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12409,0);
 Msg("Find size of _PangoGlyphString (12409)\n");
@@ -1068,6 +1298,12 @@ CheckMemberSize(struct _PangoGlyphInfo,geometry,12,11,43130)
 CheckOffset(struct _PangoGlyphInfo,geometry,4,11,43130)
 CheckMemberSize(struct _PangoGlyphInfo,attr,4,11,43132)
 CheckOffset(struct _PangoGlyphInfo,attr,16,11,43132)
+#elif __ia64__
+CheckTypeSize(struct _PangoGlyphInfo,20, 12410, 3)
+CheckMemberSize(struct _PangoGlyphInfo,geometry,12,3,43130)
+CheckOffset(struct _PangoGlyphInfo,geometry,4,3,43130)
+CheckMemberSize(struct _PangoGlyphInfo,attr,4,3,43132)
+CheckOffset(struct _PangoGlyphInfo,attr,16,3,43132)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12410,0);
 Msg("Find size of _PangoGlyphInfo (12410)\n");
@@ -1077,6 +1313,8 @@ Msg("Find size of _PangoGlyphInfo (12410)\n");
 CheckTypeSize(PangoGlyph,4, 12411, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyph,4, 12411, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyph,4, 12411, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12411,0);
 Msg("Find size of PangoGlyph (12411)\n");
@@ -1094,6 +1332,12 @@ CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,11,43128)
 CheckOffset(struct _PangoGlyphGeometry,x_offset,4,11,43128)
 CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,11,43129)
 CheckOffset(struct _PangoGlyphGeometry,y_offset,8,11,43129)
+#elif __ia64__
+CheckTypeSize(struct _PangoGlyphGeometry,12, 12412, 3)
+CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,3,43128)
+CheckOffset(struct _PangoGlyphGeometry,x_offset,4,3,43128)
+CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,3,43129)
+CheckOffset(struct _PangoGlyphGeometry,y_offset,8,3,43129)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12412,0);
 Msg("Find size of _PangoGlyphGeometry (12412)\n");
@@ -1103,6 +1347,8 @@ Msg("Find size of _PangoGlyphGeometry (12412)\n");
 CheckTypeSize(PangoGlyphUnit,4, 12413, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphUnit,4, 12413, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphUnit,4, 12413, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12413,0);
 Msg("Find size of PangoGlyphUnit (12413)\n");
@@ -1112,6 +1358,8 @@ Msg("Find size of PangoGlyphUnit (12413)\n");
 CheckTypeSize(PangoGlyphGeometry,12, 12414, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphGeometry,12, 12414, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphGeometry,12, 12414, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12414,0);
 Msg("Find size of PangoGlyphGeometry (12414)\n");
@@ -1123,6 +1371,9 @@ Msg("Missing member data for _PangoGlyphVisAttr on IA32\n");
 #elif __x86_64__
 CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 11)
 Msg("Missing member data for _PangoGlyphVisAttr on x86-64\n");
+#elif __ia64__
+CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 3)
+Msg("Missing member data for _PangoGlyphVisAttr on IA64\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12415,0);
 Msg("Find size of _PangoGlyphVisAttr (12415)\n");
@@ -1132,6 +1383,8 @@ Msg("Find size of _PangoGlyphVisAttr (12415)\n");
 CheckTypeSize(PangoGlyphVisAttr,4, 12416, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphVisAttr,4, 12416, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphVisAttr,4, 12416, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12416,0);
 Msg("Find size of PangoGlyphVisAttr (12416)\n");
@@ -1141,6 +1394,8 @@ Msg("Find size of PangoGlyphVisAttr (12416)\n");
 CheckTypeSize(PangoGlyphInfo,20, 12417, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphInfo,20, 12417, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphInfo,20, 12417, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12417,0);
 Msg("Find size of PangoGlyphInfo (12417)\n");
@@ -1150,6 +1405,8 @@ Msg("Find size of PangoGlyphInfo (12417)\n");
 CheckTypeSize(PangoGlyphInfo *,4, 12418, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphInfo *,8, 12418, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphInfo *,8, 12418, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12418,0);
 Msg("Find size of PangoGlyphInfo * (12418)\n");
@@ -1159,6 +1416,8 @@ Msg("Find size of PangoGlyphInfo * (12418)\n");
 CheckTypeSize(PangoGlyphString,16, 12419, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphString,32, 12419, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphString,32, 12419, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12419,0);
 Msg("Find size of PangoGlyphString (12419)\n");
@@ -1168,6 +1427,8 @@ Msg("Find size of PangoGlyphString (12419)\n");
 CheckTypeSize(PangoGlyphString *,4, 12420, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphString *,8, 12420, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphString *,8, 12420, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12420,0);
 Msg("Find size of PangoGlyphString * (12420)\n");
@@ -1177,6 +1438,8 @@ Msg("Find size of PangoGlyphString * (12420)\n");
 CheckTypeSize(PangoGlyphItem,8, 12421, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphItem,16, 12421, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphItem,16, 12421, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12421,0);
 Msg("Find size of PangoGlyphItem (12421)\n");
@@ -1186,6 +1449,8 @@ Msg("Find size of PangoGlyphItem (12421)\n");
 CheckTypeSize(PangoLayoutRun,8, 12422, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayoutRun,16, 12422, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayoutRun,16, 12422, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12422,0);
 Msg("Find size of PangoLayoutRun (12422)\n");
@@ -1195,6 +1460,8 @@ Msg("Find size of PangoLayoutRun (12422)\n");
 CheckTypeSize(PangoLayoutRun *,4, 12423, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayoutRun *,8, 12423, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayoutRun *,8, 12423, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12423,0);
 Msg("Find size of PangoLayoutRun * (12423)\n");
@@ -1204,6 +1471,8 @@ Msg("Find size of PangoLayoutRun * (12423)\n");
 CheckTypeSize(PangoLayoutIter,0, 12425, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayoutIter,0, 12425, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayoutIter,0, 12425, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12425,0);
 Msg("Find size of PangoLayoutIter (12425)\n");
@@ -1213,6 +1482,8 @@ Msg("Find size of PangoLayoutIter (12425)\n");
 CheckTypeSize(PangoLayoutIter *,4, 12426, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayoutIter *,8, 12426, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayoutIter *,8, 12426, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12426,0);
 Msg("Find size of PangoLayoutIter * (12426)\n");
@@ -1242,6 +1513,18 @@ CheckMemberSize(struct _PangoRenderer,matrix,8,11,43146)
 CheckOffset(struct _PangoRenderer,matrix,40,11,43146)
 CheckMemberSize(struct _PangoRenderer,priv,8,11,43147)
 CheckOffset(struct _PangoRenderer,priv,48,11,43147)
+#elif __ia64__
+CheckTypeSize(struct _PangoRenderer,56, 12427, 3)
+CheckMemberSize(struct _PangoRenderer,underline,4,3,43143)
+CheckOffset(struct _PangoRenderer,underline,24,3,43143)
+CheckMemberSize(struct _PangoRenderer,strikethrough,4,3,43144)
+CheckOffset(struct _PangoRenderer,strikethrough,28,3,43144)
+CheckMemberSize(struct _PangoRenderer,active_count,4,3,43145)
+CheckOffset(struct _PangoRenderer,active_count,32,3,43145)
+CheckMemberSize(struct _PangoRenderer,matrix,8,3,43146)
+CheckOffset(struct _PangoRenderer,matrix,40,3,43146)
+CheckMemberSize(struct _PangoRenderer,priv,8,3,43147)
+CheckOffset(struct _PangoRenderer,priv,48,3,43147)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12427,0);
 Msg("Find size of _PangoRenderer (12427)\n");
@@ -1259,6 +1542,12 @@ CheckEnum("PANGO_UNDERLINE_SINGLE",PANGO_UNDERLINE_SINGLE,1);
 CheckEnum("PANGO_UNDERLINE_DOUBLE",PANGO_UNDERLINE_DOUBLE,2);
 CheckEnum("PANGO_UNDERLINE_LOW",PANGO_UNDERLINE_LOW,3);
 CheckEnum("PANGO_UNDERLINE_ERROR",PANGO_UNDERLINE_ERROR,4);
+#elif __ia64__
+CheckEnum("PANGO_UNDERLINE_NONE",PANGO_UNDERLINE_NONE,0);
+CheckEnum("PANGO_UNDERLINE_SINGLE",PANGO_UNDERLINE_SINGLE,1);
+CheckEnum("PANGO_UNDERLINE_DOUBLE",PANGO_UNDERLINE_DOUBLE,2);
+CheckEnum("PANGO_UNDERLINE_LOW",PANGO_UNDERLINE_LOW,3);
+CheckEnum("PANGO_UNDERLINE_ERROR",PANGO_UNDERLINE_ERROR,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12428,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-63 (12428)\n");
@@ -1268,6 +1557,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-63 (12428)\n");
 CheckTypeSize(PangoUnderline,4, 12429, 2)
 #elif __x86_64__
 CheckTypeSize(PangoUnderline,4, 12429, 11)
+#elif __ia64__
+CheckTypeSize(PangoUnderline,4, 12429, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12429,0);
 Msg("Find size of PangoUnderline (12429)\n");
@@ -1277,6 +1568,8 @@ Msg("Find size of PangoUnderline (12429)\n");
 CheckTypeSize(PangoRendererPrivate,0, 12431, 2)
 #elif __x86_64__
 CheckTypeSize(PangoRendererPrivate,0, 12431, 11)
+#elif __ia64__
+CheckTypeSize(PangoRendererPrivate,0, 12431, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12431,0);
 Msg("Find size of PangoRendererPrivate (12431)\n");
@@ -1286,6 +1579,8 @@ Msg("Find size of PangoRendererPrivate (12431)\n");
 CheckTypeSize(PangoRendererPrivate *,4, 12432, 2)
 #elif __x86_64__
 CheckTypeSize(PangoRendererPrivate *,8, 12432, 11)
+#elif __ia64__
+CheckTypeSize(PangoRendererPrivate *,8, 12432, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12432,0);
 Msg("Find size of PangoRendererPrivate * (12432)\n");
@@ -1295,6 +1590,8 @@ Msg("Find size of PangoRendererPrivate * (12432)\n");
 CheckTypeSize(PangoRenderer,32, 12433, 2)
 #elif __x86_64__
 CheckTypeSize(PangoRenderer,56, 12433, 11)
+#elif __ia64__
+CheckTypeSize(PangoRenderer,56, 12433, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12433,0);
 Msg("Find size of PangoRenderer (12433)\n");
@@ -1304,6 +1601,8 @@ Msg("Find size of PangoRenderer (12433)\n");
 CheckTypeSize(PangoRenderer *,4, 12434, 2)
 #elif __x86_64__
 CheckTypeSize(PangoRenderer *,8, 12434, 11)
+#elif __ia64__
+CheckTypeSize(PangoRenderer *,8, 12434, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12434,0);
 Msg("Find size of PangoRenderer * (12434)\n");
@@ -1319,6 +1618,11 @@ CheckEnum("PANGO_RENDER_PART_FOREGROUND",PANGO_RENDER_PART_FOREGROUND,0);
 CheckEnum("PANGO_RENDER_PART_BACKGROUND",PANGO_RENDER_PART_BACKGROUND,1);
 CheckEnum("PANGO_RENDER_PART_UNDERLINE",PANGO_RENDER_PART_UNDERLINE,2);
 CheckEnum("PANGO_RENDER_PART_STRIKETHROUGH",PANGO_RENDER_PART_STRIKETHROUGH,3);
+#elif __ia64__
+CheckEnum("PANGO_RENDER_PART_FOREGROUND",PANGO_RENDER_PART_FOREGROUND,0);
+CheckEnum("PANGO_RENDER_PART_BACKGROUND",PANGO_RENDER_PART_BACKGROUND,1);
+CheckEnum("PANGO_RENDER_PART_UNDERLINE",PANGO_RENDER_PART_UNDERLINE,2);
+CheckEnum("PANGO_RENDER_PART_STRIKETHROUGH",PANGO_RENDER_PART_STRIKETHROUGH,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12435,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-64 (12435)\n");
@@ -1328,6 +1632,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-64 (12435)\n");
 CheckTypeSize(PangoRenderPart,4, 12436, 2)
 #elif __x86_64__
 CheckTypeSize(PangoRenderPart,4, 12436, 11)
+#elif __ia64__
+CheckTypeSize(PangoRenderPart,4, 12436, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12436,0);
 Msg("Find size of PangoRenderPart (12436)\n");
@@ -1337,6 +1643,8 @@ Msg("Find size of PangoRenderPart (12436)\n");
 CheckTypeSize(PangoAttrList,0, 12438, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrList,0, 12438, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrList,0, 12438, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12438,0);
 Msg("Find size of PangoAttrList (12438)\n");
@@ -1346,6 +1654,8 @@ Msg("Find size of PangoAttrList (12438)\n");
 CheckTypeSize(PangoAttrList *,4, 12439, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrList *,8, 12439, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrList *,8, 12439, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12439,0);
 Msg("Find size of PangoAttrList * (12439)\n");
@@ -1367,6 +1677,14 @@ CheckMemberSize(struct _PangoLayoutLine,length,4,11,43154)
 CheckOffset(struct _PangoLayoutLine,length,12,11,43154)
 CheckMemberSize(struct _PangoLayoutLine,runs,8,11,43155)
 CheckOffset(struct _PangoLayoutLine,runs,16,11,43155)
+#elif __ia64__
+CheckTypeSize(struct _PangoLayoutLine,32, 12440, 3)
+CheckMemberSize(struct _PangoLayoutLine,start_index,4,3,43153)
+CheckOffset(struct _PangoLayoutLine,start_index,8,3,43153)
+CheckMemberSize(struct _PangoLayoutLine,length,4,3,43154)
+CheckOffset(struct _PangoLayoutLine,length,12,3,43154)
+CheckMemberSize(struct _PangoLayoutLine,runs,8,3,43155)
+CheckOffset(struct _PangoLayoutLine,runs,16,3,43155)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12440,0);
 Msg("Find size of _PangoLayoutLine (12440)\n");
@@ -1376,6 +1694,8 @@ Msg("Find size of _PangoLayoutLine (12440)\n");
 CheckTypeSize(PangoLayoutLine,20, 12441, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayoutLine,32, 12441, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayoutLine,32, 12441, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12441,0);
 Msg("Find size of PangoLayoutLine (12441)\n");
@@ -1385,6 +1705,8 @@ Msg("Find size of PangoLayoutLine (12441)\n");
 CheckTypeSize(PangoLayoutLine *,4, 12442, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayoutLine *,8, 12442, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayoutLine *,8, 12442, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12442,0);
 Msg("Find size of PangoLayoutLine * (12442)\n");
@@ -1410,6 +1732,16 @@ CheckEnum("PANGO_STRETCH_SEMI_EXPANDED",PANGO_STRETCH_SEMI_EXPANDED,5);
 CheckEnum("PANGO_STRETCH_EXPANDED",PANGO_STRETCH_EXPANDED,6);
 CheckEnum("PANGO_STRETCH_EXTRA_EXPANDED",PANGO_STRETCH_EXTRA_EXPANDED,7);
 CheckEnum("PANGO_STRETCH_ULTRA_EXPANDED",PANGO_STRETCH_ULTRA_EXPANDED,8);
+#elif __ia64__
+CheckEnum("PANGO_STRETCH_ULTRA_CONDENSED",PANGO_STRETCH_ULTRA_CONDENSED,0);
+CheckEnum("PANGO_STRETCH_EXTRA_CONDENSED",PANGO_STRETCH_EXTRA_CONDENSED,1);
+CheckEnum("PANGO_STRETCH_CONDENSED",PANGO_STRETCH_CONDENSED,2);
+CheckEnum("PANGO_STRETCH_SEMI_CONDENSED",PANGO_STRETCH_SEMI_CONDENSED,3);
+CheckEnum("PANGO_STRETCH_NORMAL",PANGO_STRETCH_NORMAL,4);
+CheckEnum("PANGO_STRETCH_SEMI_EXPANDED",PANGO_STRETCH_SEMI_EXPANDED,5);
+CheckEnum("PANGO_STRETCH_EXPANDED",PANGO_STRETCH_EXPANDED,6);
+CheckEnum("PANGO_STRETCH_EXTRA_EXPANDED",PANGO_STRETCH_EXTRA_EXPANDED,7);
+CheckEnum("PANGO_STRETCH_ULTRA_EXPANDED",PANGO_STRETCH_ULTRA_EXPANDED,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12443,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-10 (12443)\n");
@@ -1419,6 +1751,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-10 (12443)\n");
 CheckTypeSize(PangoStretch,4, 12444, 2)
 #elif __x86_64__
 CheckTypeSize(PangoStretch,4, 12444, 11)
+#elif __ia64__
+CheckTypeSize(PangoStretch,4, 12444, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12444,0);
 Msg("Find size of PangoStretch (12444)\n");
@@ -1440,6 +1774,14 @@ CheckMemberSize(struct _PangoRectangle,width,4,11,43169)
 CheckOffset(struct _PangoRectangle,width,8,11,43169)
 CheckMemberSize(struct _PangoRectangle,height,4,11,43170)
 CheckOffset(struct _PangoRectangle,height,12,11,43170)
+#elif __ia64__
+CheckTypeSize(struct _PangoRectangle,16, 12445, 3)
+CheckMemberSize(struct _PangoRectangle,y,4,3,43168)
+CheckOffset(struct _PangoRectangle,y,4,3,43168)
+CheckMemberSize(struct _PangoRectangle,width,4,3,43169)
+CheckOffset(struct _PangoRectangle,width,8,3,43169)
+CheckMemberSize(struct _PangoRectangle,height,4,3,43170)
+CheckOffset(struct _PangoRectangle,height,12,3,43170)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12445,0);
 Msg("Find size of _PangoRectangle (12445)\n");
@@ -1449,6 +1791,8 @@ Msg("Find size of _PangoRectangle (12445)\n");
 CheckTypeSize(PangoRectangle,16, 12446, 2)
 #elif __x86_64__
 CheckTypeSize(PangoRectangle,16, 12446, 11)
+#elif __ia64__
+CheckTypeSize(PangoRectangle,16, 12446, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12446,0);
 Msg("Find size of PangoRectangle (12446)\n");
@@ -1458,6 +1802,8 @@ Msg("Find size of PangoRectangle (12446)\n");
 CheckTypeSize(PangoRectangle *,4, 12447, 2)
 #elif __x86_64__
 CheckTypeSize(PangoRectangle *,8, 12447, 11)
+#elif __ia64__
+CheckTypeSize(PangoRectangle *,8, 12447, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12447,0);
 Msg("Find size of PangoRectangle * (12447)\n");
@@ -1467,6 +1813,8 @@ Msg("Find size of PangoRectangle * (12447)\n");
 CheckTypeSize(PangoFontFamily,0, 12449, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontFamily,0, 12449, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontFamily,0, 12449, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12449,0);
 Msg("Find size of PangoFontFamily (12449)\n");
@@ -1476,6 +1824,8 @@ Msg("Find size of PangoFontFamily (12449)\n");
 CheckTypeSize(PangoFontFamily *,4, 12450, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontFamily *,8, 12450, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontFamily *,8, 12450, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12450,0);
 Msg("Find size of PangoFontFamily * (12450)\n");
@@ -1485,6 +1835,8 @@ Msg("Find size of PangoFontFamily * (12450)\n");
 CheckTypeSize(PangoFontDescription *,4, 12451, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontDescription *,8, 12451, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontDescription *,8, 12451, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12451,0);
 Msg("Find size of PangoFontDescription * (12451)\n");
@@ -1492,6 +1844,7 @@ Msg("Find size of PangoFontDescription * (12451)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12452,0);
 Msg("Find size of PangoFontDescription * * (12452)\n");
@@ -1501,6 +1854,8 @@ Msg("Find size of PangoFontDescription * * (12452)\n");
 CheckTypeSize(PangoFontMetrics,0, 12454, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontMetrics,0, 12454, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontMetrics,0, 12454, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12454,0);
 Msg("Find size of PangoFontMetrics (12454)\n");
@@ -1510,6 +1865,8 @@ Msg("Find size of PangoFontMetrics (12454)\n");
 CheckTypeSize(PangoFontMetrics *,4, 12455, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontMetrics *,8, 12455, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontMetrics *,8, 12455, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12455,0);
 Msg("Find size of PangoFontMetrics * (12455)\n");
@@ -1519,6 +1876,8 @@ Msg("Find size of PangoFontMetrics * (12455)\n");
 CheckTypeSize(PangoAnalysis *,4, 12456, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAnalysis *,8, 12456, 11)
+#elif __ia64__
+CheckTypeSize(PangoAnalysis *,8, 12456, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12456,0);
 Msg("Find size of PangoAnalysis * (12456)\n");
@@ -1528,6 +1887,8 @@ Msg("Find size of PangoAnalysis * (12456)\n");
 CheckTypeSize(PangoTabArray,0, 12458, 2)
 #elif __x86_64__
 CheckTypeSize(PangoTabArray,0, 12458, 11)
+#elif __ia64__
+CheckTypeSize(PangoTabArray,0, 12458, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12458,0);
 Msg("Find size of PangoTabArray (12458)\n");
@@ -1537,6 +1898,8 @@ Msg("Find size of PangoTabArray (12458)\n");
 CheckTypeSize(PangoTabArray *,4, 12459, 2)
 #elif __x86_64__
 CheckTypeSize(PangoTabArray *,8, 12459, 11)
+#elif __ia64__
+CheckTypeSize(PangoTabArray *,8, 12459, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12459,0);
 Msg("Find size of PangoTabArray * (12459)\n");
@@ -1545,6 +1908,8 @@ Msg("Find size of PangoTabArray * (12459)\n");
 #if __i386__
 CheckEnum("PANGO_TAB_LEFT",PANGO_TAB_LEFT,0);
 #elif __x86_64__
+CheckEnum("PANGO_TAB_LEFT",PANGO_TAB_LEFT,0);
+#elif __ia64__
 CheckEnum("PANGO_TAB_LEFT",PANGO_TAB_LEFT,0);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12460,0);
@@ -1555,6 +1920,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-68 (12460)\n");
 CheckTypeSize(PangoTabAlign,4, 12461, 2)
 #elif __x86_64__
 CheckTypeSize(PangoTabAlign,4, 12461, 11)
+#elif __ia64__
+CheckTypeSize(PangoTabAlign,4, 12461, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12461,0);
 Msg("Find size of PangoTabAlign (12461)\n");
@@ -1564,6 +1931,8 @@ Msg("Find size of PangoTabAlign (12461)\n");
 CheckTypeSize(PangoTabAlign *,4, 12462, 2)
 #elif __x86_64__
 CheckTypeSize(PangoTabAlign *,8, 12462, 11)
+#elif __ia64__
+CheckTypeSize(PangoTabAlign *,8, 12462, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12462,0);
 Msg("Find size of PangoTabAlign * (12462)\n");
@@ -1571,6 +1940,7 @@ Msg("Find size of PangoTabAlign * (12462)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12463,0);
 Msg("Find size of PangoTabAlign * * (12463)\n");
@@ -1580,6 +1950,8 @@ Msg("Find size of PangoTabAlign * * (12463)\n");
 CheckTypeSize(PangoScript *,4, 12464, 2)
 #elif __x86_64__
 CheckTypeSize(PangoScript *,8, 12464, 11)
+#elif __ia64__
+CheckTypeSize(PangoScript *,8, 12464, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12464,0);
 Msg("Find size of PangoScript * (12464)\n");
@@ -1587,6 +1959,7 @@ Msg("Find size of PangoScript * (12464)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12465,0);
 Msg("Find size of PangoLogAttr * * (12465)\n");
@@ -1600,6 +1973,10 @@ CheckEnum("PANGO_ALIGN_RIGHT",PANGO_ALIGN_RIGHT,2);
 CheckEnum("PANGO_ALIGN_LEFT",PANGO_ALIGN_LEFT,0);
 CheckEnum("PANGO_ALIGN_CENTER",PANGO_ALIGN_CENTER,1);
 CheckEnum("PANGO_ALIGN_RIGHT",PANGO_ALIGN_RIGHT,2);
+#elif __ia64__
+CheckEnum("PANGO_ALIGN_LEFT",PANGO_ALIGN_LEFT,0);
+CheckEnum("PANGO_ALIGN_CENTER",PANGO_ALIGN_CENTER,1);
+CheckEnum("PANGO_ALIGN_RIGHT",PANGO_ALIGN_RIGHT,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12466,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-49 (12466)\n");
@@ -1609,6 +1986,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-49 (12466)\n");
 CheckTypeSize(PangoAlignment,4, 12467, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAlignment,4, 12467, 11)
+#elif __ia64__
+CheckTypeSize(PangoAlignment,4, 12467, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12467,0);
 Msg("Find size of PangoAlignment (12467)\n");
@@ -1618,6 +1997,8 @@ Msg("Find size of PangoAlignment (12467)\n");
 CheckTypeSize(const PangoMatrix,48, 12468, 2)
 #elif __x86_64__
 CheckTypeSize(const PangoMatrix,48, 12468, 11)
+#elif __ia64__
+CheckTypeSize(const PangoMatrix,48, 12468, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12468,0);
 Msg("Find size of const PangoMatrix (12468)\n");
@@ -1625,6 +2006,7 @@ Msg("Find size of const PangoMatrix (12468)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12469,0);
 Msg("Find size of const PangoMatrix * (12469)\n");
@@ -1634,6 +2016,8 @@ Msg("Find size of const PangoMatrix * (12469)\n");
 CheckTypeSize(PangoAttrIterator,0, 12471, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrIterator,0, 12471, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrIterator,0, 12471, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12471,0);
 Msg("Find size of PangoAttrIterator (12471)\n");
@@ -1643,6 +2027,8 @@ Msg("Find size of PangoAttrIterator (12471)\n");
 CheckTypeSize(PangoAttrIterator *,4, 12472, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrIterator *,8, 12472, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrIterator *,8, 12472, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12472,0);
 Msg("Find size of PangoAttrIterator * (12472)\n");
@@ -1662,6 +2048,13 @@ CheckEnum("PANGO_FONT_MASK_VARIANT",PANGO_FONT_MASK_VARIANT,4);
 CheckEnum("PANGO_FONT_MASK_WEIGHT",PANGO_FONT_MASK_WEIGHT,8);
 CheckEnum("PANGO_FONT_MASK_STRETCH",PANGO_FONT_MASK_STRETCH,16);
 CheckEnum("PANGO_FONT_MASK_SIZE",PANGO_FONT_MASK_SIZE,32);
+#elif __ia64__
+CheckEnum("PANGO_FONT_MASK_FAMILY",PANGO_FONT_MASK_FAMILY,1);
+CheckEnum("PANGO_FONT_MASK_STYLE",PANGO_FONT_MASK_STYLE,2);
+CheckEnum("PANGO_FONT_MASK_VARIANT",PANGO_FONT_MASK_VARIANT,4);
+CheckEnum("PANGO_FONT_MASK_WEIGHT",PANGO_FONT_MASK_WEIGHT,8);
+CheckEnum("PANGO_FONT_MASK_STRETCH",PANGO_FONT_MASK_STRETCH,16);
+CheckEnum("PANGO_FONT_MASK_SIZE",PANGO_FONT_MASK_SIZE,32);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12473,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-11 (12473)\n");
@@ -1671,6 +2064,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-11 (12473)\n");
 CheckTypeSize(PangoFontMask,4, 12474, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontMask,4, 12474, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontMask,4, 12474, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12474,0);
 Msg("Find size of PangoFontMask (12474)\n");
@@ -1692,6 +2087,14 @@ CheckEnum("PANGO_DIRECTION_TTB_RTL",PANGO_DIRECTION_TTB_RTL,3);
 CheckEnum("PANGO_DIRECTION_WEAK_LTR",PANGO_DIRECTION_WEAK_LTR,4);
 CheckEnum("PANGO_DIRECTION_WEAK_RTL",PANGO_DIRECTION_WEAK_RTL,5);
 CheckEnum("PANGO_DIRECTION_NEUTRAL",PANGO_DIRECTION_NEUTRAL,6);
+#elif __ia64__
+CheckEnum("PANGO_DIRECTION_LTR",PANGO_DIRECTION_LTR,0);
+CheckEnum("PANGO_DIRECTION_RTL",PANGO_DIRECTION_RTL,1);
+CheckEnum("PANGO_DIRECTION_TTB_LTR",PANGO_DIRECTION_TTB_LTR,2);
+CheckEnum("PANGO_DIRECTION_TTB_RTL",PANGO_DIRECTION_TTB_RTL,3);
+CheckEnum("PANGO_DIRECTION_WEAK_LTR",PANGO_DIRECTION_WEAK_LTR,4);
+CheckEnum("PANGO_DIRECTION_WEAK_RTL",PANGO_DIRECTION_WEAK_RTL,5);
+CheckEnum("PANGO_DIRECTION_NEUTRAL",PANGO_DIRECTION_NEUTRAL,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12475,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-75 (12475)\n");
@@ -1701,6 +2104,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-75 (12475)\n");
 CheckTypeSize(PangoDirection,4, 12476, 2)
 #elif __x86_64__
 CheckTypeSize(PangoDirection,4, 12476, 11)
+#elif __ia64__
+CheckTypeSize(PangoDirection,4, 12476, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12476,0);
 Msg("Find size of PangoDirection (12476)\n");
@@ -1716,6 +2121,11 @@ CheckEnum("PANGO_ELLIPSIZE_NONE",PANGO_ELLIPSIZE_NONE,0);
 CheckEnum("PANGO_ELLIPSIZE_START",PANGO_ELLIPSIZE_START,1);
 CheckEnum("PANGO_ELLIPSIZE_MIDDLE",PANGO_ELLIPSIZE_MIDDLE,2);
 CheckEnum("PANGO_ELLIPSIZE_END",PANGO_ELLIPSIZE_END,3);
+#elif __ia64__
+CheckEnum("PANGO_ELLIPSIZE_NONE",PANGO_ELLIPSIZE_NONE,0);
+CheckEnum("PANGO_ELLIPSIZE_START",PANGO_ELLIPSIZE_START,1);
+CheckEnum("PANGO_ELLIPSIZE_MIDDLE",PANGO_ELLIPSIZE_MIDDLE,2);
+CheckEnum("PANGO_ELLIPSIZE_END",PANGO_ELLIPSIZE_END,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12477,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-51 (12477)\n");
@@ -1725,6 +2135,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-51 (12477)\n");
 CheckTypeSize(PangoEllipsizeMode,4, 12478, 2)
 #elif __x86_64__
 CheckTypeSize(PangoEllipsizeMode,4, 12478, 11)
+#elif __ia64__
+CheckTypeSize(PangoEllipsizeMode,4, 12478, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12478,0);
 Msg("Find size of PangoEllipsizeMode (12478)\n");
@@ -1734,6 +2146,8 @@ Msg("Find size of PangoEllipsizeMode (12478)\n");
 CheckTypeSize(PangoGlyphItem *,4, 12479, 2)
 #elif __x86_64__
 CheckTypeSize(PangoGlyphItem *,8, 12479, 11)
+#elif __ia64__
+CheckTypeSize(PangoGlyphItem *,8, 12479, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12479,0);
 Msg("Find size of PangoGlyphItem * (12479)\n");
@@ -1743,6 +2157,8 @@ Msg("Find size of PangoGlyphItem * (12479)\n");
 CheckTypeSize(PangoCoverage,0, 12481, 2)
 #elif __x86_64__
 CheckTypeSize(PangoCoverage,0, 12481, 11)
+#elif __ia64__
+CheckTypeSize(PangoCoverage,0, 12481, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12481,0);
 Msg("Find size of PangoCoverage (12481)\n");
@@ -1752,6 +2168,8 @@ Msg("Find size of PangoCoverage (12481)\n");
 CheckTypeSize(PangoCoverage *,4, 12482, 2)
 #elif __x86_64__
 CheckTypeSize(PangoCoverage *,8, 12482, 11)
+#elif __ia64__
+CheckTypeSize(PangoCoverage *,8, 12482, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12482,0);
 Msg("Find size of PangoCoverage * (12482)\n");
@@ -1765,6 +2183,10 @@ CheckEnum("PANGO_STYLE_ITALIC",PANGO_STYLE_ITALIC,2);
 CheckEnum("PANGO_STYLE_NORMAL",PANGO_STYLE_NORMAL,0);
 CheckEnum("PANGO_STYLE_OBLIQUE",PANGO_STYLE_OBLIQUE,1);
 CheckEnum("PANGO_STYLE_ITALIC",PANGO_STYLE_ITALIC,2);
+#elif __ia64__
+CheckEnum("PANGO_STYLE_NORMAL",PANGO_STYLE_NORMAL,0);
+CheckEnum("PANGO_STYLE_OBLIQUE",PANGO_STYLE_OBLIQUE,1);
+CheckEnum("PANGO_STYLE_ITALIC",PANGO_STYLE_ITALIC,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12483,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-7 (12483)\n");
@@ -1774,6 +2196,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-7 (12483)\n");
 CheckTypeSize(PangoStyle,4, 12484, 2)
 #elif __x86_64__
 CheckTypeSize(PangoStyle,4, 12484, 11)
+#elif __ia64__
+CheckTypeSize(PangoStyle,4, 12484, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12484,0);
 Msg("Find size of PangoStyle (12484)\n");
@@ -1789,6 +2213,11 @@ CheckEnum("PANGO_COVERAGE_NONE",PANGO_COVERAGE_NONE,0);
 CheckEnum("PANGO_COVERAGE_FALLBACK",PANGO_COVERAGE_FALLBACK,1);
 CheckEnum("PANGO_COVERAGE_APPROXIMATE",PANGO_COVERAGE_APPROXIMATE,2);
 CheckEnum("PANGO_COVERAGE_EXACT",PANGO_COVERAGE_EXACT,3);
+#elif __ia64__
+CheckEnum("PANGO_COVERAGE_NONE",PANGO_COVERAGE_NONE,0);
+CheckEnum("PANGO_COVERAGE_FALLBACK",PANGO_COVERAGE_FALLBACK,1);
+CheckEnum("PANGO_COVERAGE_APPROXIMATE",PANGO_COVERAGE_APPROXIMATE,2);
+CheckEnum("PANGO_COVERAGE_EXACT",PANGO_COVERAGE_EXACT,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12485,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-34 (12485)\n");
@@ -1798,6 +2227,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-34 (12485)\n");
 CheckTypeSize(PangoCoverageLevel,4, 12486, 2)
 #elif __x86_64__
 CheckTypeSize(PangoCoverageLevel,4, 12486, 11)
+#elif __ia64__
+CheckTypeSize(PangoCoverageLevel,4, 12486, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12486,0);
 Msg("Find size of PangoCoverageLevel (12486)\n");
@@ -1807,6 +2238,8 @@ Msg("Find size of PangoCoverageLevel (12486)\n");
 CheckTypeSize(PangoFontMap,0, 12488, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontMap,0, 12488, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontMap,0, 12488, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12488,0);
 Msg("Find size of PangoFontMap (12488)\n");
@@ -1816,6 +2249,8 @@ Msg("Find size of PangoFontMap (12488)\n");
 CheckTypeSize(PangoFontMap *,4, 12489, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontMap *,8, 12489, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontMap *,8, 12489, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12489,0);
 Msg("Find size of PangoFontMap * (12489)\n");
@@ -1823,6 +2258,7 @@ Msg("Find size of PangoFontMap * (12489)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12490,0);
 Msg("Find size of fptr_pango_7 (12490)\n");
@@ -1832,6 +2268,8 @@ Msg("Find size of fptr_pango_7 (12490)\n");
 CheckTypeSize(PangoAttrFilterFunc,4, 12491, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrFilterFunc,8, 12491, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrFilterFunc,8, 12491, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12491,0);
 Msg("Find size of PangoAttrFilterFunc (12491)\n");
@@ -1841,6 +2279,8 @@ Msg("Find size of PangoAttrFilterFunc (12491)\n");
 CheckTypeSize(const PangoRectangle,16, 12492, 2)
 #elif __x86_64__
 CheckTypeSize(const PangoRectangle,16, 12492, 11)
+#elif __ia64__
+CheckTypeSize(const PangoRectangle,16, 12492, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12492,0);
 Msg("Find size of const PangoRectangle (12492)\n");
@@ -1848,6 +2288,7 @@ Msg("Find size of const PangoRectangle (12492)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12493,0);
 Msg("Find size of const PangoRectangle * (12493)\n");
@@ -1857,6 +2298,8 @@ Msg("Find size of const PangoRectangle * (12493)\n");
 CheckTypeSize(PangoFontset,0, 12495, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontset,0, 12495, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontset,0, 12495, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12495,0);
 Msg("Find size of PangoFontset (12495)\n");
@@ -1866,6 +2309,8 @@ Msg("Find size of PangoFontset (12495)\n");
 CheckTypeSize(PangoFontset *,4, 12496, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontset *,8, 12496, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontset *,8, 12496, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12496,0);
 Msg("Find size of PangoFontset * (12496)\n");
@@ -1873,6 +2318,7 @@ Msg("Find size of PangoFontset * (12496)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12497,0);
 Msg("Find size of PangoFontFamily * * (12497)\n");
@@ -1880,6 +2326,7 @@ Msg("Find size of PangoFontFamily * * (12497)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12498,0);
 Msg("Find size of PangoFontFamily * * * (12498)\n");
@@ -1901,6 +2348,14 @@ CheckEnum("PANGO_WEIGHT_SEMIBOLD",PANGO_WEIGHT_SEMIBOLD,600);
 CheckEnum("PANGO_WEIGHT_BOLD",PANGO_WEIGHT_BOLD,700);
 CheckEnum("PANGO_WEIGHT_ULTRABOLD",PANGO_WEIGHT_ULTRABOLD,800);
 CheckEnum("PANGO_WEIGHT_HEAVY",PANGO_WEIGHT_HEAVY,900);
+#elif __ia64__
+CheckEnum("PANGO_WEIGHT_ULTRALIGHT",PANGO_WEIGHT_ULTRALIGHT,200);
+CheckEnum("PANGO_WEIGHT_LIGHT",PANGO_WEIGHT_LIGHT,300);
+CheckEnum("PANGO_WEIGHT_NORMAL",PANGO_WEIGHT_NORMAL,400);
+CheckEnum("PANGO_WEIGHT_SEMIBOLD",PANGO_WEIGHT_SEMIBOLD,600);
+CheckEnum("PANGO_WEIGHT_BOLD",PANGO_WEIGHT_BOLD,700);
+CheckEnum("PANGO_WEIGHT_ULTRABOLD",PANGO_WEIGHT_ULTRABOLD,800);
+CheckEnum("PANGO_WEIGHT_HEAVY",PANGO_WEIGHT_HEAVY,900);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12499,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-9 (12499)\n");
@@ -1910,6 +2365,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-9 (12499)\n");
 CheckTypeSize(PangoWeight,4, 12500, 2)
 #elif __x86_64__
 CheckTypeSize(PangoWeight,4, 12500, 11)
+#elif __ia64__
+CheckTypeSize(PangoWeight,4, 12500, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12500,0);
 Msg("Find size of PangoWeight (12500)\n");
@@ -1917,6 +2374,7 @@ Msg("Find size of PangoWeight (12500)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12501,0);
 Msg("Find size of PangoAttrList * * (12501)\n");
@@ -1926,6 +2384,8 @@ Msg("Find size of PangoAttrList * * (12501)\n");
 CheckTypeSize(guchar *,4, 12502, 2)
 #elif __x86_64__
 CheckTypeSize(guchar *,8, 12502, 11)
+#elif __ia64__
+CheckTypeSize(guchar *,8, 12502, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12502,0);
 Msg("Find size of guchar * (12502)\n");
@@ -1933,6 +2393,7 @@ Msg("Find size of guchar * (12502)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12503,0);
 Msg("Find size of guchar * * (12503)\n");
@@ -1940,6 +2401,7 @@ Msg("Find size of guchar * * (12503)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12504,0);
 Msg("Find size of PangoLanguage * * (12504)\n");
@@ -1947,6 +2409,7 @@ Msg("Find size of PangoLanguage * * (12504)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12505,0);
 Msg("Find size of GSList * * (12505)\n");
@@ -1954,6 +2417,7 @@ Msg("Find size of GSList * * (12505)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12506,0);
 Msg("Find size of fptr_pango_127 (12506)\n");
@@ -1963,6 +2427,8 @@ Msg("Find size of fptr_pango_127 (12506)\n");
 CheckTypeSize(PangoFontsetForeachFunc,4, 12507, 2)
 #elif __x86_64__
 CheckTypeSize(PangoFontsetForeachFunc,8, 12507, 11)
+#elif __ia64__
+CheckTypeSize(PangoFontsetForeachFunc,8, 12507, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12507,0);
 Msg("Find size of PangoFontsetForeachFunc (12507)\n");
@@ -1974,6 +2440,9 @@ CheckEnum("PANGO_VARIANT_SMALL_CAPS",PANGO_VARIANT_SMALL_CAPS,1);
 #elif __x86_64__
 CheckEnum("PANGO_VARIANT_NORMAL",PANGO_VARIANT_NORMAL,0);
 CheckEnum("PANGO_VARIANT_SMALL_CAPS",PANGO_VARIANT_SMALL_CAPS,1);
+#elif __ia64__
+CheckEnum("PANGO_VARIANT_NORMAL",PANGO_VARIANT_NORMAL,0);
+CheckEnum("PANGO_VARIANT_SMALL_CAPS",PANGO_VARIANT_SMALL_CAPS,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12508,0);
 Msg("Find size of anon-pango-1.0/pango/pango.h-8 (12508)\n");
@@ -1983,6 +2452,8 @@ Msg("Find size of anon-pango-1.0/pango/pango.h-8 (12508)\n");
 CheckTypeSize(PangoVariant,4, 12509, 2)
 #elif __x86_64__
 CheckTypeSize(PangoVariant,4, 12509, 11)
+#elif __ia64__
+CheckTypeSize(PangoVariant,4, 12509, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12509,0);
 Msg("Find size of PangoVariant (12509)\n");
@@ -1990,6 +2461,7 @@ Msg("Find size of PangoVariant (12509)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12510,0);
 Msg("Find size of PangoFontFace * * (12510)\n");
@@ -1997,6 +2469,7 @@ Msg("Find size of PangoFontFace * * (12510)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12511,0);
 Msg("Find size of PangoFontFace * * * (12511)\n");
@@ -2006,6 +2479,8 @@ Msg("Find size of PangoFontFace * * * (12511)\n");
 CheckTypeSize(const PangoColor,6, 12512, 2)
 #elif __x86_64__
 CheckTypeSize(const PangoColor,6, 12512, 11)
+#elif __ia64__
+CheckTypeSize(const PangoColor,6, 12512, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12512,0);
 Msg("Find size of const PangoColor (12512)\n");
@@ -2013,6 +2488,7 @@ Msg("Find size of const PangoColor (12512)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12513,0);
 Msg("Find size of const PangoColor * (12513)\n");
@@ -2020,6 +2496,7 @@ Msg("Find size of const PangoColor * (12513)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12514,0);
 Msg("Find size of fptr_pango_90 (12514)\n");
@@ -2029,6 +2506,8 @@ Msg("Find size of fptr_pango_90 (12514)\n");
 CheckTypeSize(PangoAttrDataCopyFunc,4, 12515, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrDataCopyFunc,8, 12515, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrDataCopyFunc,8, 12515, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12515,0);
 Msg("Find size of PangoAttrDataCopyFunc (12515)\n");
@@ -2058,6 +2537,18 @@ CheckMemberSize(struct _PangoAttrShape,copy_func,8,11,43218)
 CheckOffset(struct _PangoAttrShape,copy_func,56,11,43218)
 CheckMemberSize(struct _PangoAttrShape,destroy_func,8,11,43219)
 CheckOffset(struct _PangoAttrShape,destroy_func,64,11,43219)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrShape,72, 12516, 3)
+CheckMemberSize(struct _PangoAttrShape,ink_rect,16,3,43215)
+CheckOffset(struct _PangoAttrShape,ink_rect,16,3,43215)
+CheckMemberSize(struct _PangoAttrShape,logical_rect,16,3,43216)
+CheckOffset(struct _PangoAttrShape,logical_rect,32,3,43216)
+CheckMemberSize(struct _PangoAttrShape,data,8,3,43217)
+CheckOffset(struct _PangoAttrShape,data,48,3,43217)
+CheckMemberSize(struct _PangoAttrShape,copy_func,8,3,43218)
+CheckOffset(struct _PangoAttrShape,copy_func,56,3,43218)
+CheckMemberSize(struct _PangoAttrShape,destroy_func,8,3,43219)
+CheckOffset(struct _PangoAttrShape,destroy_func,64,3,43219)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12516,0);
 Msg("Find size of _PangoAttrShape (12516)\n");
@@ -2067,6 +2558,8 @@ Msg("Find size of _PangoAttrShape (12516)\n");
 CheckTypeSize(PangoAttrShape,56, 12517, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrShape,72, 12517, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrShape,72, 12517, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12517,0);
 Msg("Find size of PangoAttrShape (12517)\n");
@@ -2076,6 +2569,8 @@ Msg("Find size of PangoAttrShape (12517)\n");
 CheckTypeSize(PangoContextClass,0, 12519, 2)
 #elif __x86_64__
 CheckTypeSize(PangoContextClass,0, 12519, 11)
+#elif __ia64__
+CheckTypeSize(PangoContextClass,0, 12519, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12519,0);
 Msg("Find size of PangoContextClass (12519)\n");
@@ -2089,6 +2584,10 @@ CheckOffset(struct _PangoAttrString,value,12,2,43221)
 CheckTypeSize(struct _PangoAttrString,24, 12520, 11)
 CheckMemberSize(struct _PangoAttrString,value,8,11,43221)
 CheckOffset(struct _PangoAttrString,value,16,11,43221)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrString,24, 12520, 3)
+CheckMemberSize(struct _PangoAttrString,value,8,3,43221)
+CheckOffset(struct _PangoAttrString,value,16,3,43221)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12520,0);
 Msg("Find size of _PangoAttrString (12520)\n");
@@ -2098,6 +2597,8 @@ Msg("Find size of _PangoAttrString (12520)\n");
 CheckTypeSize(PangoAttrString,16, 12521, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrString,24, 12521, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrString,24, 12521, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12521,0);
 Msg("Find size of PangoAttrString (12521)\n");
@@ -2111,6 +2612,10 @@ CheckOffset(struct _PangoAttrColor,color,12,2,43223)
 CheckTypeSize(struct _PangoAttrColor,24, 12522, 11)
 CheckMemberSize(struct _PangoAttrColor,color,6,11,43223)
 CheckOffset(struct _PangoAttrColor,color,16,11,43223)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrColor,24, 12522, 3)
+CheckMemberSize(struct _PangoAttrColor,color,6,3,43223)
+CheckOffset(struct _PangoAttrColor,color,16,3,43223)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12522,0);
 Msg("Find size of _PangoAttrColor (12522)\n");
@@ -2120,6 +2625,8 @@ Msg("Find size of _PangoAttrColor (12522)\n");
 CheckTypeSize(PangoAttrColor,20, 12523, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrColor,24, 12523, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrColor,24, 12523, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12523,0);
 Msg("Find size of PangoAttrColor (12523)\n");
@@ -2133,6 +2640,10 @@ CheckOffset(struct _PangoAttrFontDesc,desc,12,2,43225)
 CheckTypeSize(struct _PangoAttrFontDesc,24, 12524, 11)
 CheckMemberSize(struct _PangoAttrFontDesc,desc,8,11,43225)
 CheckOffset(struct _PangoAttrFontDesc,desc,16,11,43225)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrFontDesc,24, 12524, 3)
+CheckMemberSize(struct _PangoAttrFontDesc,desc,8,3,43225)
+CheckOffset(struct _PangoAttrFontDesc,desc,16,3,43225)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12524,0);
 Msg("Find size of _PangoAttrFontDesc (12524)\n");
@@ -2142,6 +2653,8 @@ Msg("Find size of _PangoAttrFontDesc (12524)\n");
 CheckTypeSize(PangoAttrFontDesc,16, 12525, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrFontDesc,24, 12525, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrFontDesc,24, 12525, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12525,0);
 Msg("Find size of PangoAttrFontDesc (12525)\n");
@@ -2155,6 +2668,10 @@ CheckOffset(struct _PangoAttrFloat,value,12,2,43227)
 CheckTypeSize(struct _PangoAttrFloat,24, 12526, 11)
 CheckMemberSize(struct _PangoAttrFloat,value,8,11,43227)
 CheckOffset(struct _PangoAttrFloat,value,16,11,43227)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrFloat,24, 12526, 3)
+CheckMemberSize(struct _PangoAttrFloat,value,8,3,43227)
+CheckOffset(struct _PangoAttrFloat,value,16,3,43227)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12526,0);
 Msg("Find size of _PangoAttrFloat (12526)\n");
@@ -2164,6 +2681,8 @@ Msg("Find size of _PangoAttrFloat (12526)\n");
 CheckTypeSize(PangoAttrFloat,20, 12527, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrFloat,24, 12527, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrFloat,24, 12527, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12527,0);
 Msg("Find size of PangoAttrFloat (12527)\n");
@@ -2229,6 +2748,36 @@ CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,8,11,43279)
 CheckOffset(struct _PangoRendererClass,_pango_reserved3,232,11,43279)
 CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,8,11,43280)
 CheckOffset(struct _PangoRendererClass,_pango_reserved4,240,11,43280)
+#elif __ia64__
+CheckTypeSize(struct _PangoRendererClass,248, 12528, 3)
+CheckMemberSize(struct _PangoRendererClass,draw_glyphs,8,3,43234)
+CheckOffset(struct _PangoRendererClass,draw_glyphs,136,3,43234)
+CheckMemberSize(struct _PangoRendererClass,draw_rectangle,8,3,43241)
+CheckOffset(struct _PangoRendererClass,draw_rectangle,144,3,43241)
+CheckMemberSize(struct _PangoRendererClass,draw_error_underline,8,3,43247)
+CheckOffset(struct _PangoRendererClass,draw_error_underline,152,3,43247)
+CheckMemberSize(struct _PangoRendererClass,draw_shape,8,3,43252)
+CheckOffset(struct _PangoRendererClass,draw_shape,160,3,43252)
+CheckMemberSize(struct _PangoRendererClass,draw_trapezoid,8,3,43261)
+CheckOffset(struct _PangoRendererClass,draw_trapezoid,168,3,43261)
+CheckMemberSize(struct _PangoRendererClass,draw_glyph,8,3,43267)
+CheckOffset(struct _PangoRendererClass,draw_glyph,176,3,43267)
+CheckMemberSize(struct _PangoRendererClass,part_changed,8,3,43270)
+CheckOffset(struct _PangoRendererClass,part_changed,184,3,43270)
+CheckMemberSize(struct _PangoRendererClass,begin,8,3,43272)
+CheckOffset(struct _PangoRendererClass,begin,192,3,43272)
+CheckMemberSize(struct _PangoRendererClass,end,8,3,43273)
+CheckOffset(struct _PangoRendererClass,end,200,3,43273)
+CheckMemberSize(struct _PangoRendererClass,prepare_run,8,3,43276)
+CheckOffset(struct _PangoRendererClass,prepare_run,208,3,43276)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved1,8,3,43277)
+CheckOffset(struct _PangoRendererClass,_pango_reserved1,216,3,43277)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved2,8,3,43278)
+CheckOffset(struct _PangoRendererClass,_pango_reserved2,224,3,43278)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,8,3,43279)
+CheckOffset(struct _PangoRendererClass,_pango_reserved3,232,3,43279)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,8,3,43280)
+CheckOffset(struct _PangoRendererClass,_pango_reserved4,240,3,43280)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12528,0);
 Msg("Find size of _PangoRendererClass (12528)\n");
@@ -2236,6 +2785,7 @@ Msg("Find size of _PangoRendererClass (12528)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12529,0);
 Msg("Find size of fptr_pango_95 (12529)\n");
@@ -2243,6 +2793,7 @@ Msg("Find size of fptr_pango_95 (12529)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12530,0);
 Msg("Find size of fptr_pango_98 (12530)\n");
@@ -2250,6 +2801,7 @@ Msg("Find size of fptr_pango_98 (12530)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12531,0);
 Msg("Find size of fptr_pango_83 (12531)\n");
@@ -2259,6 +2811,8 @@ Msg("Find size of fptr_pango_83 (12531)\n");
 CheckTypeSize(PangoAttrShape *,4, 12532, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrShape *,8, 12532, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrShape *,8, 12532, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12532,0);
 Msg("Find size of PangoAttrShape * (12532)\n");
@@ -2266,6 +2820,7 @@ Msg("Find size of PangoAttrShape * (12532)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12533,0);
 Msg("Find size of fptr_pango_150 (12533)\n");
@@ -2273,6 +2828,7 @@ Msg("Find size of fptr_pango_150 (12533)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12534,0);
 Msg("Find size of fptr_pango_139 (12534)\n");
@@ -2280,6 +2836,7 @@ Msg("Find size of fptr_pango_139 (12534)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12535,0);
 Msg("Find size of fptr_pango_11 (12535)\n");
@@ -2287,6 +2844,7 @@ Msg("Find size of fptr_pango_11 (12535)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12536,0);
 Msg("Find size of fptr_pango_52 (12536)\n");
@@ -2294,6 +2852,7 @@ Msg("Find size of fptr_pango_52 (12536)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12537,0);
 Msg("Find size of fptr_pango_68 (12537)\n");
@@ -2301,6 +2860,7 @@ Msg("Find size of fptr_pango_68 (12537)\n");
 
 #if __i386__
 #elif __x86_64__
+#elif __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12538,0);
 Msg("Find size of fptr_pango_88 (12538)\n");
@@ -2310,6 +2870,8 @@ Msg("Find size of fptr_pango_88 (12538)\n");
 CheckTypeSize(PangoRendererClass,124, 12539, 2)
 #elif __x86_64__
 CheckTypeSize(PangoRendererClass,248, 12539, 11)
+#elif __ia64__
+CheckTypeSize(PangoRendererClass,248, 12539, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12539,0);
 Msg("Find size of PangoRendererClass (12539)\n");
@@ -2323,6 +2885,10 @@ CheckOffset(struct _PangoAttrLanguage,value,12,2,43282)
 CheckTypeSize(struct _PangoAttrLanguage,24, 12540, 11)
 CheckMemberSize(struct _PangoAttrLanguage,value,8,11,43282)
 CheckOffset(struct _PangoAttrLanguage,value,16,11,43282)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrLanguage,24, 12540, 3)
+CheckMemberSize(struct _PangoAttrLanguage,value,8,3,43282)
+CheckOffset(struct _PangoAttrLanguage,value,16,3,43282)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12540,0);
 Msg("Find size of _PangoAttrLanguage (12540)\n");
@@ -2332,6 +2898,8 @@ Msg("Find size of _PangoAttrLanguage (12540)\n");
 CheckTypeSize(PangoAttrLanguage,16, 12541, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrLanguage,24, 12541, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrLanguage,24, 12541, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12541,0);
 Msg("Find size of PangoAttrLanguage (12541)\n");
@@ -2345,6 +2913,10 @@ CheckOffset(struct _PangoAttrInt,value,12,2,43284)
 CheckTypeSize(struct _PangoAttrInt,24, 12542, 11)
 CheckMemberSize(struct _PangoAttrInt,value,4,11,43284)
 CheckOffset(struct _PangoAttrInt,value,16,11,43284)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrInt,24, 12542, 3)
+CheckMemberSize(struct _PangoAttrInt,value,4,3,43284)
+CheckOffset(struct _PangoAttrInt,value,16,3,43284)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12542,0);
 Msg("Find size of _PangoAttrInt (12542)\n");
@@ -2354,6 +2926,8 @@ Msg("Find size of _PangoAttrInt (12542)\n");
 CheckTypeSize(PangoAttrInt,16, 12543, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrInt,24, 12543, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrInt,24, 12543, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12543,0);
 Msg("Find size of PangoAttrInt (12543)\n");
@@ -2367,6 +2941,10 @@ CheckOffset(struct _PangoAttrSize,size,12,2,43286)
 CheckTypeSize(struct _PangoAttrSize,24, 12544, 11)
 CheckMemberSize(struct _PangoAttrSize,size,4,11,43286)
 CheckOffset(struct _PangoAttrSize,size,16,11,43286)
+#elif __ia64__
+CheckTypeSize(struct _PangoAttrSize,24, 12544, 3)
+CheckMemberSize(struct _PangoAttrSize,size,4,3,43286)
+CheckOffset(struct _PangoAttrSize,size,16,3,43286)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12544,0);
 Msg("Find size of _PangoAttrSize (12544)\n");
@@ -2376,6 +2954,8 @@ Msg("Find size of _PangoAttrSize (12544)\n");
 CheckTypeSize(PangoAttrSize,20, 12545, 2)
 #elif __x86_64__
 CheckTypeSize(PangoAttrSize,24, 12545, 11)
+#elif __ia64__
+CheckTypeSize(PangoAttrSize,24, 12545, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12545,0);
 Msg("Find size of PangoAttrSize (12545)\n");
@@ -2385,6 +2965,8 @@ Msg("Find size of PangoAttrSize (12545)\n");
 CheckTypeSize(PangoLayoutClass,0, 12547, 2)
 #elif __x86_64__
 CheckTypeSize(PangoLayoutClass,0, 12547, 11)
+#elif __ia64__
+CheckTypeSize(PangoLayoutClass,0, 12547, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12547,0);
 Msg("Find size of PangoLayoutClass (12547)\n");

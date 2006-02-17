@@ -20,11 +20,12 @@ int search_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in search.h\n");
 #endif
 
+printf("Checking data structures in search.h\n");
 #if __i386__
 CheckTypeSize(ENTRY,8, 6953, 2)
 #elif __ia64__
@@ -101,6 +102,28 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6956,0);
 Msg("Find size of __action_fn_t (6956)\n");
 #endif
 
+extern int hcreate_db(size_t);
+CheckInterfacedef(hcreate,hcreate_db);
+extern ENTRY * hsearch_db(ENTRY, ACTION);
+CheckInterfacedef(hsearch,hsearch_db);
+extern void insque_db(void *, void *);
+CheckInterfacedef(insque,insque_db);
+extern void * lfind_db(const void *, const void *, size_t *, size_t, __compar_fn_t);
+CheckInterfacedef(lfind,lfind_db);
+extern void * lsearch_db(const void *, void *, size_t *, size_t, __compar_fn_t);
+CheckInterfacedef(lsearch,lsearch_db);
+extern void remque_db(void *);
+CheckInterfacedef(remque,remque_db);
+extern void hdestroy_db(void);
+CheckInterfacedef(hdestroy,hdestroy_db);
+extern void * tdelete_db(const void *, void * *, __compar_fn_t);
+CheckInterfacedef(tdelete,tdelete_db);
+extern void * tfind_db(const void *, void *const  *, __compar_fn_t);
+CheckInterfacedef(tfind,tfind_db);
+extern void * tsearch_db(const void *, void * *, __compar_fn_t);
+CheckInterfacedef(tsearch,tsearch_db);
+extern void twalk_db(const void *, __action_fn_t);
+CheckInterfacedef(twalk,twalk_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -108,7 +131,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in search.h\n",cnt);
+printf("%d tests passed out of %d tests in search.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -18,11 +18,12 @@ int ucontext_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in ucontext.h\n");
 #endif
 
+printf("Checking data structures in ucontext.h\n");
 #if __powerpc64__
 #ifdef NGREG
 	CompareConstant(NGREG,48,4929,architecture)
@@ -79,7 +80,8 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,4929,%d);\n", arch
 #endif
 #if __ia64__
 #ifdef _SC_GR0_OFFSET
-	CompareConstant(_SC_GR0_OFFSET,(((char *) &((struct sigcontext *) 0)->sc_gr[0]) - (char *) 0),5031,architecture)
+	CompareConstant(_SC_GR0_OFFSET,\
+	(((char *) &((struct sigcontext *) 0)->sc_gr[0]) - (char *) 0),5031,architecture)
 #else
 Msg( "Error: Constant not found: _SC_GR0_OFFSET\n");
 cnt++;
@@ -477,6 +479,15 @@ CheckMemberSize(union uc_regs_ptr,uc_regs,4,6,40651)
 CheckOffset(union uc_regs_ptr,uc_regs,0,6,40651)
 #endif
 
+extern int getcontext_db(ucontext_t *);
+CheckInterfacedef(getcontext,getcontext_db);
+extern int makecontext_db(ucontext_t *, void(*func)(void)
+, int, ...);
+CheckInterfacedef(makecontext,makecontext_db);
+extern int setcontext_db(const struct ucontext *);
+CheckInterfacedef(setcontext,setcontext_db);
+extern int swapcontext_db(ucontext_t *, const struct ucontext *);
+CheckInterfacedef(swapcontext,swapcontext_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -484,7 +495,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in ucontext.h\n",cnt);
+printf("%d tests passed out of %d tests in ucontext.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

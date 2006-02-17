@@ -4,6 +4,7 @@
 #include "hdrchk.h"
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
+#include <stdarg.h>
 #include "syslog.h"
 
 
@@ -18,11 +19,12 @@ int syslog_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in syslog.h\n");
 #endif
 
+printf("Checking data structures in syslog.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef LOG_EMERG
 	CompareConstant(LOG_EMERG,0,4901,architecture)
@@ -391,6 +393,16 @@ cnt++;
 
 #endif
 
+extern void closelog_db(void);
+CheckInterfacedef(closelog,closelog_db);
+extern void openlog_db(const char *, int, int);
+CheckInterfacedef(openlog,openlog_db);
+extern int setlogmask_db(int);
+CheckInterfacedef(setlogmask,setlogmask_db);
+extern void syslog_db(int, const char *, ...);
+CheckInterfacedef(syslog,syslog_db);
+extern void vsyslog_db(int, const char *, va_list);
+CheckInterfacedef(vsyslog,vsyslog_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -398,7 +410,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in syslog.h\n",cnt);
+printf("%d tests passed out of %d tests in syslog.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

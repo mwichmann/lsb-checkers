@@ -18,11 +18,12 @@ int sys_mman_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/mman.h\n");
 #endif
 
+printf("Checking data structures in sys/mman.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef MAP_FAILED
 	CompareConstant(MAP_FAILED,((void*)-1),1747,architecture)
@@ -277,6 +278,28 @@ cnt++;
 
 #endif
 
+extern int msync_db(void *, size_t, int);
+CheckInterfacedef(msync,msync_db);
+extern int mlock_db(const void *, size_t);
+CheckInterfacedef(mlock,mlock_db);
+extern int mlockall_db(int);
+CheckInterfacedef(mlockall,mlockall_db);
+extern void * mmap_db(void *, size_t, int, int, int, off_t);
+CheckInterfacedef(mmap,mmap_db);
+extern int mprotect_db(void *, size_t, int);
+CheckInterfacedef(mprotect,mprotect_db);
+extern int munlock_db(const void *, size_t);
+CheckInterfacedef(munlock,munlock_db);
+extern int munlockall_db(void);
+CheckInterfacedef(munlockall,munlockall_db);
+extern int munmap_db(void *, size_t);
+CheckInterfacedef(munmap,munmap_db);
+extern void * mmap64_db(void *, size_t, int, int, int, off64_t);
+CheckInterfacedef(mmap64,mmap64_db);
+extern int shm_open_db(const char *, int, mode_t);
+CheckInterfacedef(shm_open,shm_open_db);
+extern int shm_unlink_db(const char *);
+CheckInterfacedef(shm_unlink,shm_unlink_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -284,7 +307,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/mman.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/mman.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -18,11 +18,12 @@ int sys_un_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/un.h\n");
 #endif
 
+printf("Checking data structures in sys/un.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef UNIX_PATH_MAX
 	CompareConstant(UNIX_PATH_MAX,108,4992,architecture)
@@ -73,7 +74,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/un.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/un.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

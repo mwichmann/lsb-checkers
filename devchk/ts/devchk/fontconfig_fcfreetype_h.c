@@ -5,28 +5,6 @@
 #include "sys/types.h"
 #define _LSB_DEFAULT_ARCH 1
 #include <fontconfig.h>
-struct FT_BBox_ {};
-struct FT_Bitmap_ {};
-struct FT_Bitmap_Size_ {};
-struct FT_CharMapRec_ {};
-struct FT_DriverRec_ {};
-struct FT_Face_InternalRec_ {};
-struct FT_FaceRec_ {};
-struct FT_Generic_ {};
-struct FT_Glyph_Metrics_ {};
-struct FT_GlyphSlotRec_ {};
-struct FT_LibraryRec_ {};
-struct FT_ListNodeRec_ {};
-struct FT_ListRec_ {};
-struct FT_MemoryRec_ {};
-struct FT_Outline_ {};
-struct FT_Size_InternalRec_ {};
-struct FT_Size_Metrics_ {};
-struct FT_SizeRec_ {};
-struct FT_Slot_InternalRec_ {};
-struct FT_StreamRec_ {};
-struct FT_SubGlyphRec_ {};
-struct FT_Vector_ {};
 #include "fontconfig/fcfreetype.h"
 
 
@@ -51,6 +29,8 @@ printf("Checking data structures in fontconfig/fcfreetype.h\n");
 CheckTypeSize(struct FT_FaceRec_ *,4, 11167, 2)
 #elif __x86_64__
 CheckTypeSize(struct FT_FaceRec_ *,8, 11167, 11)
+#elif __ia64__
+CheckTypeSize(struct FT_FaceRec_ *,8, 11167, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11167,0);
 Msg("Find size of FT_FaceRec_ * (11167)\n");
@@ -60,6 +40,8 @@ Msg("Find size of FT_FaceRec_ * (11167)\n");
 CheckTypeSize(FT_Face *,4, 11169, 2)
 #elif __x86_64__
 CheckTypeSize(FT_Face *,8, 11169, 11)
+#elif __ia64__
+CheckTypeSize(FT_Face *,8, 11169, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11169,0);
 Msg("Find size of FT_Face * (11169)\n");
@@ -69,6 +51,8 @@ Msg("Find size of FT_Face * (11169)\n");
 CheckTypeSize(const FT_Face,4, 11170, 2)
 #elif __x86_64__
 CheckTypeSize(const FT_Face,8, 11170, 11)
+#elif __ia64__
+CheckTypeSize(const FT_Face,8, 11170, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11170,0);
 Msg("Find size of const FT_Face (11170)\n");

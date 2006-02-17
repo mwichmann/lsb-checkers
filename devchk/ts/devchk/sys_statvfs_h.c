@@ -18,11 +18,12 @@ int sys_statvfs_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in sys/statvfs.h\n");
 #endif
 
+printf("Checking data structures in sys/statvfs.h\n");
 #if __i386__
 CheckTypeSize(struct statvfs,72, 10323, 2)
 CheckMemberSize(struct statvfs,f_bsize,4,2,34518)
@@ -427,6 +428,14 @@ CheckMemberSize(struct statvfs,__f_spare,24,11,40513)
 CheckOffset(struct statvfs,__f_spare,88,11,40513)
 #endif
 
+extern int fstatvfs_db(int, struct statvfs *);
+CheckInterfacedef(fstatvfs,fstatvfs_db);
+extern int fstatvfs64_db(int, struct statvfs64 *);
+CheckInterfacedef(fstatvfs64,fstatvfs64_db);
+extern int statvfs_db(const char *, struct statvfs *);
+CheckInterfacedef(statvfs,statvfs_db);
+extern int statvfs64_db(const char *, struct statvfs64 *);
+CheckInterfacedef(statvfs64,statvfs64_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -434,7 +443,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in sys/statvfs.h\n",cnt);
+printf("%d tests passed out of %d tests in sys/statvfs.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

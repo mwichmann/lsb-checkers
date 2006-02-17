@@ -19,11 +19,12 @@ int wctype_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in wctype.h\n");
 #endif
 
+printf("Checking data structures in wctype.h\n");
 #if __i386__
 CheckTypeSize(wctype_t,4, 7024, 2)
 #elif __ia64__
@@ -131,6 +132,42 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9235,0);
 Msg("Find size of mbstate_t (9235)\n");
 #endif
 
+extern int iswblank_db(wint_t);
+CheckInterfacedef(iswblank,iswblank_db);
+extern wint_t towlower_db(wint_t);
+CheckInterfacedef(towlower,towlower_db);
+extern wint_t towupper_db(wint_t);
+CheckInterfacedef(towupper,towupper_db);
+extern wctrans_t wctrans_db(const char *);
+CheckInterfacedef(wctrans,wctrans_db);
+extern int iswalnum_db(wint_t);
+CheckInterfacedef(iswalnum,iswalnum_db);
+extern int iswalpha_db(wint_t);
+CheckInterfacedef(iswalpha,iswalpha_db);
+extern int iswcntrl_db(wint_t);
+CheckInterfacedef(iswcntrl,iswcntrl_db);
+extern int iswctype_db(wint_t, wctype_t);
+CheckInterfacedef(iswctype,iswctype_db);
+extern int iswdigit_db(wint_t);
+CheckInterfacedef(iswdigit,iswdigit_db);
+extern int iswgraph_db(wint_t);
+CheckInterfacedef(iswgraph,iswgraph_db);
+extern int iswlower_db(wint_t);
+CheckInterfacedef(iswlower,iswlower_db);
+extern int iswprint_db(wint_t);
+CheckInterfacedef(iswprint,iswprint_db);
+extern int iswpunct_db(wint_t);
+CheckInterfacedef(iswpunct,iswpunct_db);
+extern int iswspace_db(wint_t);
+CheckInterfacedef(iswspace,iswspace_db);
+extern int iswupper_db(wint_t);
+CheckInterfacedef(iswupper,iswupper_db);
+extern int iswxdigit_db(wint_t);
+CheckInterfacedef(iswxdigit,iswxdigit_db);
+extern wctype_t wctype_db(const char *);
+CheckInterfacedef(wctype,wctype_db);
+extern wint_t towctrans_db(wint_t, wctrans_t);
+CheckInterfacedef(towctrans,towctrans_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -138,7 +175,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in wctype.h\n",cnt);
+printf("%d tests passed out of %d tests in wctype.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

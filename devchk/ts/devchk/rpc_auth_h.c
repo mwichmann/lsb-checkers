@@ -18,18 +18,75 @@ int rpc_auth_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in rpc/auth.h\n");
 #endif
 
+printf("Checking data structures in rpc/auth.h\n");
 #if __ia64__
+CheckEnum("AUTH_OK",AUTH_OK,0);
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1);
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2);
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3);
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4);
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5);
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6);
+CheckEnum("AUTH_FAILED",AUTH_FAILED,7);
 #elif __i386__
+CheckEnum("AUTH_OK",AUTH_OK,0);
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1);
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2);
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3);
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4);
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5);
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6);
+CheckEnum("AUTH_FAILED",AUTH_FAILED,7);
 #elif __s390__ && !__s390x__
+CheckEnum("AUTH_OK",AUTH_OK,0);
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1);
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2);
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3);
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4);
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5);
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6);
+CheckEnum("AUTH_FAILED",AUTH_FAILED,7);
 #elif __powerpc__ && !__powerpc64__
+CheckEnum("AUTH_OK",AUTH_OK,0);
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1);
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2);
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3);
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4);
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5);
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6);
+CheckEnum("AUTH_FAILED",AUTH_FAILED,7);
 #elif __powerpc64__
+CheckEnum("AUTH_OK",AUTH_OK,0);
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1);
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2);
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3);
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4);
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5);
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6);
+CheckEnum("AUTH_FAILED",AUTH_FAILED,7);
 #elif __s390x__
+CheckEnum("AUTH_OK",AUTH_OK,0);
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1);
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2);
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3);
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4);
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5);
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6);
+CheckEnum("AUTH_FAILED",AUTH_FAILED,7);
 #elif __x86_64__
+CheckEnum("AUTH_OK",AUTH_OK,0);
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1);
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2);
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3);
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4);
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5);
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6);
+CheckEnum("AUTH_FAILED",AUTH_FAILED,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9887,0);
 Msg("Find size of auth_stat (9887)\n");
@@ -310,6 +367,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9888,0);
 Msg("Find size of des_block (9888)\n");
 #endif
 
+extern struct AUTH * authnone_create_db(void);
+CheckInterfacedef(authnone_create,authnone_create_db);
+extern int key_decryptsession_db(char *, union des_block *);
+CheckInterfacedef(key_decryptsession,key_decryptsession_db);
+extern bool_t xdr_opaque_auth_db(XDR *, struct opaque_auth *);
+CheckInterfacedef(xdr_opaque_auth,xdr_opaque_auth_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
@@ -317,7 +380,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in rpc/auth.h\n",cnt);
+printf("%d tests passed out of %d tests in rpc/auth.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

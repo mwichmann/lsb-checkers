@@ -18,11 +18,12 @@ int netinet_udp_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in netinet/udp.h\n");
 #endif
 
+printf("Checking data structures in netinet/udp.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SOL_UDP
 	CompareConstant(SOL_UDP,17,3332,architecture)
@@ -40,7 +41,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in netinet/udp.h\n",cnt);
+printf("%d tests passed out of %d tests in netinet/udp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

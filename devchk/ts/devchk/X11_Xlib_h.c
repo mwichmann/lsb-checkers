@@ -20,11 +20,12 @@ int X11_Xlib_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in X11/Xlib.h\n");
 #endif
 
+printf("Checking data structures in X11/Xlib.h\n");
 #if __i386__
 CheckTypeSize(struct _XDisplay,176, 7053, 2)
 Msg("Missing member data for _XDisplay on IA32\n");
@@ -1781,7 +1782,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in X11/Xlib.h\n",cnt);
+printf("%d tests passed out of %d tests in X11/Xlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -18,11 +18,12 @@ int cpio_h()
 
 int cnt=0;
 
-#ifdef TET_TEST
 int pcnt=0;
+#ifdef TET_TEST
 Msg("Checking data structures in cpio.h\n");
 #endif
 
+printf("Checking data structures in cpio.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef MAGIC
 	CompareStringConstant(MAGIC,"070707")
@@ -240,7 +241,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests in cpio.h\n",cnt);
+printf("%d tests passed out of %d tests in cpio.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

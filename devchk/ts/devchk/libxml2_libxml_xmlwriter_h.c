@@ -38,6 +38,8 @@ printf("Checking data structures in libxml2/libxml/xmlwriter.h\n");
 CheckTypeSize(xmlTextWriter,0, 15077, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextWriter,0, 15077, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextWriter,0, 15077, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15077,0);
 Msg("Find size of xmlTextWriter (15077)\n");
@@ -47,6 +49,8 @@ Msg("Find size of xmlTextWriter (15077)\n");
 CheckTypeSize(xmlTextWriter *,4, 15078, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextWriter *,8, 15078, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextWriter *,8, 15078, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15078,0);
 Msg("Find size of xmlTextWriter * (15078)\n");
@@ -56,6 +60,8 @@ Msg("Find size of xmlTextWriter * (15078)\n");
 CheckTypeSize(xmlTextWriterPtr,4, 15079, 2)
 #elif __x86_64__
 CheckTypeSize(xmlTextWriterPtr,8, 15079, 11)
+#elif __ia64__
+CheckTypeSize(xmlTextWriterPtr,8, 15079, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15079,0);
 Msg("Find size of xmlTextWriterPtr (15079)\n");
@@ -65,6 +71,8 @@ Msg("Find size of xmlTextWriterPtr (15079)\n");
 CheckTypeSize(xmlDocPtr *,4, 15080, 2)
 #elif __x86_64__
 CheckTypeSize(xmlDocPtr *,8, 15080, 11)
+#elif __ia64__
+CheckTypeSize(xmlDocPtr *,8, 15080, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15080,0);
 Msg("Find size of xmlDocPtr * (15080)\n");
