@@ -96,9 +96,15 @@ $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
 	if( $entry{'VTarch'} != $entry{'Iarch'} ) {
+	    # it's an arch mismatch only if the second join above worked...
+	    if( $entry{'Iname'} eq "" ) {
+		print STDERR "Interface ".$entry{'VTviid'}." referenced by ";
+		print STDERR "vtable for class ".$entry{'VTcid'}." missing\n";
+	    } else {
 		print STDERR "Arch mismatch for class ".$entry{'VTcid'}.":".$entry{'VTarch'}."!=".$entry{'Iarch'};
-		print STDERR ":".$entry{'Iname'}."(".$entry{'Iid'}.")\n";
-	}
+		print STDERR ":".$entry{'Iname'}."(".$entry{'VTviid'}.")\n";
+	    }
+	} 
 	if( $entry{'Aname'} eq "All" ) {
 		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
 	} else {
