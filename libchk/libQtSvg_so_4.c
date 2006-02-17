@@ -65,46 +65,46 @@ struct versym libQtSvg_so_4[] = {
 	{"_ZTV18QXmlEntityResolver","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QXmlLexicalHandler","",0,LSB_Toolkit_Qt,0,0},
 #if __ia64__
-	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc64__
-	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __x86_64__
-	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390x__
-	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __ia64__
-	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc64__
-	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __x86_64__
-	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390x__
-	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __i386__
-	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __i386__
-	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{0,0}};
 
@@ -234,58 +234,82 @@ const char *_10QSvgWidget_vtable_name_1 [] = {
 #if __i386__
 	"_ZThn8_N10QSvgWidgetD1Ev",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn16_N10QSvgWidgetD1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __x86_64__
+	"_ZThn16_N10QSvgWidgetD1Ev",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn8_N10QSvgWidgetD1Ev",
 #endif
 #if __powerpc64__
 	"_ZThn16_N10QSvgWidgetD1Ev",
 #endif
-#if __s390__ && !__s390x__
+#if __powerpc__ && !__powerpc64__
 	"_ZThn8_N10QSvgWidgetD1Ev",
 #endif
-#if __x86_64__
+#if __ia64__
 	"_ZThn16_N10QSvgWidgetD1Ev",
 #endif
 #if __s390x__
-	"_ZThn16_N10QSvgWidgetD1Ev",
-#endif
-#if __i386__
-	"_ZThn8_N10QSvgWidgetD0Ev",
-#endif
-#if __ia64__
 	"_ZThn16_N10QSvgWidgetD0Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __x86_64__
+	"_ZThn16_N10QSvgWidgetD0Ev",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn8_N10QSvgWidgetD0Ev",
 #endif
 #if __powerpc64__
 	"_ZThn16_N10QSvgWidgetD0Ev",
 #endif
-#if __s390__ && !__s390x__
+#if __powerpc__ && !__powerpc64__
 	"_ZThn8_N10QSvgWidgetD0Ev",
 #endif
-#if __x86_64__
+#if __ia64__
 	"_ZThn16_N10QSvgWidgetD0Ev",
+#endif
+#if __i386__
+	"_ZThn8_N10QSvgWidgetD0Ev",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK7QWidget7devTypeEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
 #if __s390x__
-	"_ZThn16_N10QSvgWidgetD0Ev",
+	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if __i386__
-	"_ZThn8_NK7QWidget7devTypeEv",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK7QWidget7devTypeEv",
+#if __ia64__
+	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK7QWidget7devTypeEv",
+#endif
 #if __i386__
-	"_ZThn8_NK7QWidget11paintEngineEv",
+	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK7QWidget11paintEngineEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK7QWidget11paintEngineEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK7QWidget11paintEngineEv",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK7QWidget11paintEngineEv",
+#endif
+#if __ia64__
+	"_ZThn16_NK7QWidget11paintEngineEv",
+#endif
+#if __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if __s390__ && !__s390x__
@@ -294,11 +318,23 @@ const char *_10QSvgWidget_vtable_name_1 [] = {
 #if __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#if __ia64__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __x86_64__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __s390x__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 	};
 

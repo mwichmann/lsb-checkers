@@ -190,67 +190,67 @@ struct versym libQtOpenGL_so_4[] = {
 	{"_ZTV14QGLPixelBuffer","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QGLWidget","",0,LSB_Toolkit_Qt,0,0},
 #if __ia64__
-	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc64__
-	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __x86_64__
-	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390x__
-	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __ia64__
-	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc64__
-	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __x86_64__
-	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390x__
-	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __ia64__
-	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc64__
-	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __x86_64__
-	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390x__
-	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __i386__
-	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __i386__
-	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __i386__
-	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_ZeqRK9QGLFormatS1_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZneRK9QGLFormatS1_","",0,LSB_Toolkit_Qt,0,1},
@@ -409,26 +409,23 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn8_N9QGLWidgetD0Ev",
-#endif
-#if __x86_64__
-	"_ZThn16_N9QGLWidgetD0Ev",
-#endif
-#if __s390x__
-	"_ZThn16_N9QGLWidgetD0Ev",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_N9QGLWidgetD0Ev",
-#endif
 #if __ia64__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
-#if __i386__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_N9QGLWidgetD0Ev",
+#endif
+#if __s390x__
+	"_ZThn16_N9QGLWidgetD0Ev",
+#endif
+#if __x86_64__
+	"_ZThn16_N9QGLWidgetD0Ev",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
 #if __i386__
-	"_ZThn8_NK7QWidget7devTypeEv",
+	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
@@ -436,35 +433,62 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if __s390__ && !__s390x__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
+#if __ia64__
+	"_ZThn16_NK7QWidget7devTypeEv",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK7QWidget7devTypeEv",
+#endif
+#if __i386__
+	"_ZThn8_NK7QWidget7devTypeEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK7QWidget7devTypeEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK7QWidget7devTypeEv",
+#endif
 #if __s390x__
 	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
 #if __x86_64__
 	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
+	"_ZThn8_NK9QGLWidget11paintEngineEv",
+#endif
+#if __ia64__
+	"_ZThn16_NK9QGLWidget11paintEngineEv",
+#endif
+#if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
 #endif
 #if __powerpc64__
 	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __s390__ && !__s390x__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
-#endif
-#if __ia64__
-	"_ZThn16_NK9QGLWidget11paintEngineEv",
-#endif
-#if __i386__
-	"_ZThn8_NK9QGLWidget11paintEngineEv",
-#endif
-#if __i386__
-	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __i386__
+	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __ia64__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __x86_64__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if __s390x__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 	};
 
@@ -545,7 +569,7 @@ struct classtypeinfo _14QGLPixelBuffer_typeinfo = {
 const char *_14QGLPixelBuffer_vtable_name_0 [] = {
 	"_ZN14QGLPixelBufferD1Ev",
 	"_ZN14QGLPixelBufferD0Ev",
-	"__cxa_pure_virtual",
+	"_ZNK14QGLPixelBuffer7devTypeEv",
 	"_ZNK14QGLPixelBuffer11paintEngineEv",
 	"_ZNK14QGLPixelBuffer6metricEN12QPaintDevice17PaintDeviceMetricE",
 	};

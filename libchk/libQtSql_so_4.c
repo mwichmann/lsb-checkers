@@ -385,7 +385,6 @@ struct versym libQtSql_so_4[] = {
 	{"_ZTI16QSqlDriverPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI24QSqlRelationalTableModel","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTI25QAbstractItemModelPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI26QSqlDriverFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QSqlDriver","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QSqlResult","",0,LSB_Toolkit_Qt,0,0},
@@ -395,49 +394,48 @@ struct versym libQtSql_so_4[] = {
 	{"_ZTV16QSqlDriverPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QSqlRelationalTableModel","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTV25QAbstractItemModelPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV26QSqlDriverFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 #if __ia64__
-	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc64__
-	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __x86_64__
-	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390x__
-	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __ia64__
-	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc64__
-	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __x86_64__
-	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390x__
-	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __i386__
-	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __i386__
-	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_Zls6QDebugRK10QSqlRecord","",0,LSB_Toolkit_Qt,0,1},
 	{"_Zls6QDebugRK12QSqlDatabase","",0,LSB_Toolkit_Qt,0,1},
@@ -681,7 +679,27 @@ struct classvtable _16QSqlDriverPlugin_vtable [2] = {
 
 struct base_type_info _16QSqlDriverPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
+#if __i386__
 	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
+#endif
+#if __ia64__
+	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
+#endif
+#if __powerpc64__
+	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
+#endif
+#if __s390__ && !__s390x__
+	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
+#endif
+#if __x86_64__
+	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
+#endif
+#if __s390x__
+	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
+#endif
 	};
 
 struct classinfo _Z16QSqlDriverPlugin_classinfo = {
