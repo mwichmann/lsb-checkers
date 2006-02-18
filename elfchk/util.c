@@ -105,12 +105,20 @@ char *
 getmodulename(int mod)
 {
 	struct lsb_module *m = LSB_Modules;
+    int count=0;
+    char buf[1024];
+    buf[0] = '\0';
+    /* special casing */
 	while(m->name) {
-		if(mod == m->flag)
-			return m->name;
+		if(mod & m->flag && m->flag != LSB_All_Modules) {
+			if(count)
+				strcat(buf, " ");
+			strcat(buf, m->name);
+			count++;
+		}
 		m++;
 	}
-	return "Unknown Module";
+	return count ? buf : "Unknown Module";
 }
 
 int
