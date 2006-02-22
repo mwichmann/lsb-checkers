@@ -26,8 +26,8 @@ usage(char *progname)
 "  -h, --help                     show this help message and exit\n"
 "  -v, --version                  show version and LSB version\n"
 "  -n, --nojournal                do not write a journal file\n"
-"  -L LANANANME, --lanana=LANANANAME\n"
-"                                 use LANANAME as package or provider name\n"
+"  -L LANANANAME, --lanana=LANANANAME\n"
+"                                 use LANANANAME as package or provider name\n"
 "  -t                             check LSB conformance of payload files\n"
 "  -T [core|desktop], --lsb-product [core|desktop]\n"
 "                                 target either core or desktop spec for tests\n" 
@@ -49,7 +49,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.20 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.21 $";
 
 int
 main(int argc, char *argv[])
