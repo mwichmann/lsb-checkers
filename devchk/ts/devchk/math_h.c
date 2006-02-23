@@ -569,6 +569,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10010,0);
 Msg("Find size of exception (10010)\n");
 #endif
 
+#if ! __powerpc__ && ! __s390__
 extern int __finite_db(double);
 CheckInterfacedef(__finite,__finite_db);
 extern int __finitef_db(float);
@@ -786,11 +787,13 @@ extern double exp2_db(double);
 CheckInterfacedef(exp2,exp2_db);
 extern float exp2f_db(float);
 CheckInterfacedef(exp2f,exp2f_db);
+#endif
 #if __x86_64__
 /* x86-64 */
 extern long double exp2l_db(long double);
 CheckInterfacedef(exp2l,exp2l_db);
 #endif
+#if ! __powerpc__ && ! __s390__
 extern float expf_db(float);
 CheckInterfacedef(expf,expf_db);
 extern long double expl_db(long double);
@@ -1029,6 +1032,7 @@ extern float ynf_db(int, float);
 CheckInterfacedef(ynf,ynf_db);
 extern long double ynl_db(int, long double);
 CheckInterfacedef(ynl,ynl_db);
+#endif
 #if __x86_64__
 /* x86-64 */
 extern int __fpclassifyl_db(long double);
