@@ -758,11 +758,11 @@ CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _ObjectClassExtensionRec *,4, 10269, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 10)
+CheckTypeSize(struct _ObjectClassExtensionRec *,4, 10269, 10)
 #elif __powerpc64__
-CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 9)
+CheckTypeSize(struct _ObjectClassExtensionRec *,8, 10269, 9)
 #elif __s390x__
-CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 12)
+CheckTypeSize(struct _ObjectClassExtensionRec *,8, 10269, 12)
 #elif __x86_64__
 CheckTypeSize(struct _ObjectClassExtensionRec *,8, 10269, 11)
 #else

@@ -67,6 +67,62 @@ CheckMemberSize(struct _xmlShellCtxt,output,8,3,49076)
 CheckOffset(struct _xmlShellCtxt,output,40,3,49076)
 CheckMemberSize(struct _xmlShellCtxt,input,8,3,49078)
 CheckOffset(struct _xmlShellCtxt,input,48,3,49078)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlShellCtxt,28, 14904, 6)
+CheckMemberSize(struct _xmlShellCtxt,doc,4,6,49072)
+CheckOffset(struct _xmlShellCtxt,doc,4,6,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,4,6,49073)
+CheckOffset(struct _xmlShellCtxt,node,8,6,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,4,6,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,12,6,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,6,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,16,6,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,4,6,49076)
+CheckOffset(struct _xmlShellCtxt,output,20,6,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,4,6,49078)
+CheckOffset(struct _xmlShellCtxt,input,24,6,49078)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlShellCtxt,56, 14904, 9)
+CheckMemberSize(struct _xmlShellCtxt,doc,8,9,49072)
+CheckOffset(struct _xmlShellCtxt,doc,8,9,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,8,9,49073)
+CheckOffset(struct _xmlShellCtxt,node,16,9,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,8,9,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,24,9,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,9,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,32,9,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,8,9,49076)
+CheckOffset(struct _xmlShellCtxt,output,40,9,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,8,9,49078)
+CheckOffset(struct _xmlShellCtxt,input,48,9,49078)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlShellCtxt,28, 14904, 10)
+CheckMemberSize(struct _xmlShellCtxt,doc,4,10,49072)
+CheckOffset(struct _xmlShellCtxt,doc,4,10,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,4,10,49073)
+CheckOffset(struct _xmlShellCtxt,node,8,10,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,4,10,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,12,10,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,10,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,16,10,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,4,10,49076)
+CheckOffset(struct _xmlShellCtxt,output,20,10,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,4,10,49078)
+CheckOffset(struct _xmlShellCtxt,input,24,10,49078)
+#elif __s390x__
+CheckTypeSize(struct _xmlShellCtxt,56, 14904, 12)
+CheckMemberSize(struct _xmlShellCtxt,doc,8,12,49072)
+CheckOffset(struct _xmlShellCtxt,doc,8,12,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,8,12,49073)
+CheckOffset(struct _xmlShellCtxt,node,16,12,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,8,12,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,24,12,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,12,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,32,12,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,8,12,49076)
+CheckOffset(struct _xmlShellCtxt,output,40,12,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,8,12,49078)
+CheckOffset(struct _xmlShellCtxt,input,48,12,49078)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14904,0);
 Msg("Find size of _xmlShellCtxt (14904)\n");
@@ -75,6 +131,10 @@ Msg("Find size of _xmlShellCtxt (14904)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14905,0);
 Msg("Find size of fptr_debugXML_549 (14905)\n");
@@ -86,6 +146,14 @@ CheckTypeSize(xmlShellReadlineFunc,4, 14906, 2)
 CheckTypeSize(xmlShellReadlineFunc,8, 14906, 11)
 #elif __ia64__
 CheckTypeSize(xmlShellReadlineFunc,8, 14906, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlShellReadlineFunc,4, 14906, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlShellReadlineFunc,8, 14906, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlShellReadlineFunc,4, 14906, 10)
+#elif __s390x__
+CheckTypeSize(xmlShellReadlineFunc,8, 14906, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14906,0);
 Msg("Find size of xmlShellReadlineFunc (14906)\n");
@@ -97,6 +165,14 @@ CheckTypeSize(xmlShellCtxt,28, 14907, 2)
 CheckTypeSize(xmlShellCtxt,56, 14907, 11)
 #elif __ia64__
 CheckTypeSize(xmlShellCtxt,56, 14907, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlShellCtxt,28, 14907, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlShellCtxt,56, 14907, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlShellCtxt,28, 14907, 10)
+#elif __s390x__
+CheckTypeSize(xmlShellCtxt,56, 14907, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14907,0);
 Msg("Find size of xmlShellCtxt (14907)\n");
@@ -108,6 +184,14 @@ CheckTypeSize(xmlShellCtxt *,4, 14908, 2)
 CheckTypeSize(xmlShellCtxt *,8, 14908, 11)
 #elif __ia64__
 CheckTypeSize(xmlShellCtxt *,8, 14908, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlShellCtxt *,4, 14908, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlShellCtxt *,8, 14908, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlShellCtxt *,4, 14908, 10)
+#elif __s390x__
+CheckTypeSize(xmlShellCtxt *,8, 14908, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14908,0);
 Msg("Find size of xmlShellCtxt * (14908)\n");
@@ -119,6 +203,14 @@ CheckTypeSize(xmlShellCtxtPtr,4, 14909, 2)
 CheckTypeSize(xmlShellCtxtPtr,8, 14909, 11)
 #elif __ia64__
 CheckTypeSize(xmlShellCtxtPtr,8, 14909, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlShellCtxtPtr,4, 14909, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlShellCtxtPtr,8, 14909, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlShellCtxtPtr,4, 14909, 10)
+#elif __s390x__
+CheckTypeSize(xmlShellCtxtPtr,8, 14909, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14909,0);
 Msg("Find size of xmlShellCtxtPtr (14909)\n");
@@ -127,6 +219,10 @@ Msg("Find size of xmlShellCtxtPtr (14909)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15125,0);
 Msg("Find size of fptr_anonymous-debugXML.h.types-0 (15125)\n");

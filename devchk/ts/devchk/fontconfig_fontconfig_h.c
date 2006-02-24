@@ -953,6 +953,14 @@ CheckTypeSize(FcBool,4, 11078, 2)
 CheckTypeSize(FcBool,4, 11078, 11)
 #elif __ia64__
 CheckTypeSize(FcBool,4, 11078, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcBool,4, 11078, 6)
+#elif __powerpc64__
+CheckTypeSize(FcBool,4, 11078, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcBool,4, 11078, 10)
+#elif __s390x__
+CheckTypeSize(FcBool,4, 11078, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11078,0);
 Msg("Find size of FcBool (11078)\n");
@@ -964,6 +972,14 @@ CheckTypeSize(FcPattern,0, 11080, 2)
 CheckTypeSize(FcPattern,0, 11080, 11)
 #elif __ia64__
 CheckTypeSize(FcPattern,0, 11080, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcPattern,0, 11080, 6)
+#elif __powerpc64__
+CheckTypeSize(FcPattern,0, 11080, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcPattern,0, 11080, 10)
+#elif __s390x__
+CheckTypeSize(FcPattern,0, 11080, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11080,0);
 Msg("Find size of FcPattern (11080)\n");
@@ -975,6 +991,14 @@ CheckTypeSize(FcPattern *,4, 11081, 2)
 CheckTypeSize(FcPattern *,8, 11081, 11)
 #elif __ia64__
 CheckTypeSize(FcPattern *,8, 11081, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcPattern *,4, 11081, 6)
+#elif __powerpc64__
+CheckTypeSize(FcPattern *,8, 11081, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcPattern *,4, 11081, 10)
+#elif __s390x__
+CheckTypeSize(FcPattern *,8, 11081, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11081,0);
 Msg("Find size of FcPattern * (11081)\n");
@@ -992,6 +1016,22 @@ CheckOffset(struct _FcValue,u,8,11,40935)
 CheckTypeSize(struct _FcValue,16, 11082, 3)
 CheckMemberSize(struct _FcValue,u,8,3,40935)
 CheckOffset(struct _FcValue,u,8,3,40935)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _FcValue,16, 11082, 6)
+CheckMemberSize(struct _FcValue,u,8,6,40935)
+CheckOffset(struct _FcValue,u,8,6,40935)
+#elif __powerpc64__
+CheckTypeSize(struct _FcValue,16, 11082, 9)
+CheckMemberSize(struct _FcValue,u,8,9,40935)
+CheckOffset(struct _FcValue,u,8,9,40935)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _FcValue,16, 11082, 10)
+CheckMemberSize(struct _FcValue,u,8,10,40935)
+CheckOffset(struct _FcValue,u,8,10,40935)
+#elif __s390x__
+CheckTypeSize(struct _FcValue,16, 11082, 12)
+CheckMemberSize(struct _FcValue,u,8,12,40935)
+CheckOffset(struct _FcValue,u,8,12,40935)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11082,0);
 Msg("Find size of _FcValue (11082)\n");
@@ -1027,6 +1067,46 @@ CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
 CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
 CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
 CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("FcTypeVoid",FcTypeVoid,0);
+CheckEnum("FcTypeInteger",FcTypeInteger,1);
+CheckEnum("FcTypeDouble",FcTypeDouble,2);
+CheckEnum("FcTypeString",FcTypeString,3);
+CheckEnum("FcTypeBool",FcTypeBool,4);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+#elif __powerpc64__
+CheckEnum("FcTypeVoid",FcTypeVoid,0);
+CheckEnum("FcTypeInteger",FcTypeInteger,1);
+CheckEnum("FcTypeDouble",FcTypeDouble,2);
+CheckEnum("FcTypeString",FcTypeString,3);
+CheckEnum("FcTypeBool",FcTypeBool,4);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+#elif __s390__ && !__s390x__
+CheckEnum("FcTypeVoid",FcTypeVoid,0);
+CheckEnum("FcTypeInteger",FcTypeInteger,1);
+CheckEnum("FcTypeDouble",FcTypeDouble,2);
+CheckEnum("FcTypeString",FcTypeString,3);
+CheckEnum("FcTypeBool",FcTypeBool,4);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+#elif __s390x__
+CheckEnum("FcTypeVoid",FcTypeVoid,0);
+CheckEnum("FcTypeInteger",FcTypeInteger,1);
+CheckEnum("FcTypeDouble",FcTypeDouble,2);
+CheckEnum("FcTypeString",FcTypeString,3);
+CheckEnum("FcTypeBool",FcTypeBool,4);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11083,0);
 Msg("Find size of _FcType (11083)\n");
@@ -1038,6 +1118,14 @@ CheckTypeSize(FcType,4, 11084, 2)
 CheckTypeSize(FcType,4, 11084, 11)
 #elif __ia64__
 CheckTypeSize(FcType,4, 11084, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcType,4, 11084, 6)
+#elif __powerpc64__
+CheckTypeSize(FcType,4, 11084, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcType,4, 11084, 10)
+#elif __s390x__
+CheckTypeSize(FcType,4, 11084, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11084,0);
 Msg("Find size of FcType (11084)\n");
@@ -1049,6 +1137,14 @@ CheckTypeSize(FcChar8,1, 11085, 2)
 CheckTypeSize(FcChar8,1, 11085, 11)
 #elif __ia64__
 CheckTypeSize(FcChar8,1, 11085, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcChar8,1, 11085, 6)
+#elif __powerpc64__
+CheckTypeSize(FcChar8,1, 11085, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcChar8,1, 11085, 10)
+#elif __s390x__
+CheckTypeSize(FcChar8,1, 11085, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11085,0);
 Msg("Find size of FcChar8 (11085)\n");
@@ -1060,6 +1156,14 @@ CheckTypeSize(const FcChar8,1, 11086, 2)
 CheckTypeSize(const FcChar8,1, 11086, 11)
 #elif __ia64__
 CheckTypeSize(const FcChar8,1, 11086, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcChar8,1, 11086, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcChar8,1, 11086, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcChar8,1, 11086, 10)
+#elif __s390x__
+CheckTypeSize(const FcChar8,1, 11086, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11086,0);
 Msg("Find size of const FcChar8 (11086)\n");
@@ -1068,6 +1172,10 @@ Msg("Find size of const FcChar8 (11086)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11087,0);
 Msg("Find size of const FcChar8 * (11087)\n");
@@ -1097,6 +1205,38 @@ CheckMemberSize(struct _FcMatrix,yx,8,3,40924)
 CheckOffset(struct _FcMatrix,yx,16,3,40924)
 CheckMemberSize(struct _FcMatrix,yy,8,3,40925)
 CheckOffset(struct _FcMatrix,yy,24,3,40925)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _FcMatrix,32, 11088, 6)
+CheckMemberSize(struct _FcMatrix,xy,8,6,40923)
+CheckOffset(struct _FcMatrix,xy,8,6,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,6,40924)
+CheckOffset(struct _FcMatrix,yx,16,6,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,6,40925)
+CheckOffset(struct _FcMatrix,yy,24,6,40925)
+#elif __powerpc64__
+CheckTypeSize(struct _FcMatrix,32, 11088, 9)
+CheckMemberSize(struct _FcMatrix,xy,8,9,40923)
+CheckOffset(struct _FcMatrix,xy,8,9,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,9,40924)
+CheckOffset(struct _FcMatrix,yx,16,9,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,9,40925)
+CheckOffset(struct _FcMatrix,yy,24,9,40925)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _FcMatrix,32, 11088, 10)
+CheckMemberSize(struct _FcMatrix,xy,8,10,40923)
+CheckOffset(struct _FcMatrix,xy,8,10,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,10,40924)
+CheckOffset(struct _FcMatrix,yx,16,10,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,10,40925)
+CheckOffset(struct _FcMatrix,yy,24,10,40925)
+#elif __s390x__
+CheckTypeSize(struct _FcMatrix,32, 11088, 12)
+CheckMemberSize(struct _FcMatrix,xy,8,12,40923)
+CheckOffset(struct _FcMatrix,xy,8,12,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,12,40924)
+CheckOffset(struct _FcMatrix,yx,16,12,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,12,40925)
+CheckOffset(struct _FcMatrix,yy,24,12,40925)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11088,0);
 Msg("Find size of _FcMatrix (11088)\n");
@@ -1108,6 +1248,14 @@ CheckTypeSize(FcMatrix,32, 11089, 2)
 CheckTypeSize(FcMatrix,32, 11089, 11)
 #elif __ia64__
 CheckTypeSize(FcMatrix,32, 11089, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcMatrix,32, 11089, 6)
+#elif __powerpc64__
+CheckTypeSize(FcMatrix,32, 11089, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcMatrix,32, 11089, 10)
+#elif __s390x__
+CheckTypeSize(FcMatrix,32, 11089, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11089,0);
 Msg("Find size of FcMatrix (11089)\n");
@@ -1119,6 +1267,14 @@ CheckTypeSize(const FcMatrix,32, 11090, 2)
 CheckTypeSize(const FcMatrix,32, 11090, 11)
 #elif __ia64__
 CheckTypeSize(const FcMatrix,32, 11090, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcMatrix,32, 11090, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcMatrix,32, 11090, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcMatrix,32, 11090, 10)
+#elif __s390x__
+CheckTypeSize(const FcMatrix,32, 11090, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11090,0);
 Msg("Find size of const FcMatrix (11090)\n");
@@ -1127,6 +1283,10 @@ Msg("Find size of const FcMatrix (11090)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11091,0);
 Msg("Find size of const FcMatrix * (11091)\n");
@@ -1138,6 +1298,14 @@ CheckTypeSize(FcCharSet,0, 11093, 2)
 CheckTypeSize(FcCharSet,0, 11093, 11)
 #elif __ia64__
 CheckTypeSize(FcCharSet,0, 11093, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcCharSet,0, 11093, 6)
+#elif __powerpc64__
+CheckTypeSize(FcCharSet,0, 11093, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcCharSet,0, 11093, 10)
+#elif __s390x__
+CheckTypeSize(FcCharSet,0, 11093, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11093,0);
 Msg("Find size of FcCharSet (11093)\n");
@@ -1149,6 +1317,14 @@ CheckTypeSize(const FcCharSet,0, 11094, 2)
 CheckTypeSize(const FcCharSet,0, 11094, 11)
 #elif __ia64__
 CheckTypeSize(const FcCharSet,0, 11094, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcCharSet,0, 11094, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcCharSet,0, 11094, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcCharSet,0, 11094, 10)
+#elif __s390x__
+CheckTypeSize(const FcCharSet,0, 11094, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11094,0);
 Msg("Find size of const FcCharSet (11094)\n");
@@ -1157,6 +1333,10 @@ Msg("Find size of const FcCharSet (11094)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11095,0);
 Msg("Find size of const FcCharSet * (11095)\n");
@@ -1168,6 +1348,14 @@ CheckTypeSize(const FcPattern,0, 11096, 2)
 CheckTypeSize(const FcPattern,0, 11096, 11)
 #elif __ia64__
 CheckTypeSize(const FcPattern,0, 11096, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcPattern,0, 11096, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcPattern,0, 11096, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcPattern,0, 11096, 10)
+#elif __s390x__
+CheckTypeSize(const FcPattern,0, 11096, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11096,0);
 Msg("Find size of const FcPattern (11096)\n");
@@ -1176,6 +1364,10 @@ Msg("Find size of const FcPattern (11096)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11097,0);
 Msg("Find size of const FcPattern * (11097)\n");
@@ -1187,6 +1379,14 @@ CheckTypeSize(FcLangSet,0, 11099, 2)
 CheckTypeSize(FcLangSet,0, 11099, 11)
 #elif __ia64__
 CheckTypeSize(FcLangSet,0, 11099, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcLangSet,0, 11099, 6)
+#elif __powerpc64__
+CheckTypeSize(FcLangSet,0, 11099, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcLangSet,0, 11099, 10)
+#elif __s390x__
+CheckTypeSize(FcLangSet,0, 11099, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11099,0);
 Msg("Find size of FcLangSet (11099)\n");
@@ -1198,6 +1398,14 @@ CheckTypeSize(const FcLangSet,0, 11100, 2)
 CheckTypeSize(const FcLangSet,0, 11100, 11)
 #elif __ia64__
 CheckTypeSize(const FcLangSet,0, 11100, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcLangSet,0, 11100, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcLangSet,0, 11100, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcLangSet,0, 11100, 10)
+#elif __s390x__
+CheckTypeSize(const FcLangSet,0, 11100, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11100,0);
 Msg("Find size of const FcLangSet (11100)\n");
@@ -1206,6 +1414,10 @@ Msg("Find size of const FcLangSet (11100)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11101,0);
 Msg("Find size of const FcLangSet * (11101)\n");
@@ -1214,6 +1426,10 @@ Msg("Find size of const FcLangSet * (11101)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11102,0);
 Msg("Find size of anon-fontconfig/fontconfig.h-238 (11102)\n");
@@ -1225,6 +1441,14 @@ CheckTypeSize(FcValue,12, 11103, 2)
 CheckTypeSize(FcValue,16, 11103, 11)
 #elif __ia64__
 CheckTypeSize(FcValue,16, 11103, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcValue,16, 11103, 6)
+#elif __powerpc64__
+CheckTypeSize(FcValue,16, 11103, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcValue,16, 11103, 10)
+#elif __s390x__
+CheckTypeSize(FcValue,16, 11103, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11103,0);
 Msg("Find size of FcValue (11103)\n");
@@ -1236,6 +1460,14 @@ CheckTypeSize(FcStrList,0, 11105, 2)
 CheckTypeSize(FcStrList,0, 11105, 11)
 #elif __ia64__
 CheckTypeSize(FcStrList,0, 11105, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcStrList,0, 11105, 6)
+#elif __powerpc64__
+CheckTypeSize(FcStrList,0, 11105, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcStrList,0, 11105, 10)
+#elif __s390x__
+CheckTypeSize(FcStrList,0, 11105, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11105,0);
 Msg("Find size of FcStrList (11105)\n");
@@ -1247,6 +1479,14 @@ CheckTypeSize(FcStrList *,4, 11106, 2)
 CheckTypeSize(FcStrList *,8, 11106, 11)
 #elif __ia64__
 CheckTypeSize(FcStrList *,8, 11106, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcStrList *,4, 11106, 6)
+#elif __powerpc64__
+CheckTypeSize(FcStrList *,8, 11106, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcStrList *,4, 11106, 10)
+#elif __s390x__
+CheckTypeSize(FcStrList *,8, 11106, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11106,0);
 Msg("Find size of FcStrList * (11106)\n");
@@ -1258,6 +1498,14 @@ CheckTypeSize(FcConfig,0, 11108, 2)
 CheckTypeSize(FcConfig,0, 11108, 11)
 #elif __ia64__
 CheckTypeSize(FcConfig,0, 11108, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcConfig,0, 11108, 6)
+#elif __powerpc64__
+CheckTypeSize(FcConfig,0, 11108, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcConfig,0, 11108, 10)
+#elif __s390x__
+CheckTypeSize(FcConfig,0, 11108, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11108,0);
 Msg("Find size of FcConfig (11108)\n");
@@ -1269,6 +1517,14 @@ CheckTypeSize(FcConfig *,4, 11109, 2)
 CheckTypeSize(FcConfig *,8, 11109, 11)
 #elif __ia64__
 CheckTypeSize(FcConfig *,8, 11109, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcConfig *,4, 11109, 6)
+#elif __powerpc64__
+CheckTypeSize(FcConfig *,8, 11109, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcConfig *,4, 11109, 10)
+#elif __s390x__
+CheckTypeSize(FcConfig *,8, 11109, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11109,0);
 Msg("Find size of FcConfig * (11109)\n");
@@ -1280,6 +1536,14 @@ CheckTypeSize(FcStrSet,0, 11111, 2)
 CheckTypeSize(FcStrSet,0, 11111, 11)
 #elif __ia64__
 CheckTypeSize(FcStrSet,0, 11111, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcStrSet,0, 11111, 6)
+#elif __powerpc64__
+CheckTypeSize(FcStrSet,0, 11111, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcStrSet,0, 11111, 10)
+#elif __s390x__
+CheckTypeSize(FcStrSet,0, 11111, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11111,0);
 Msg("Find size of FcStrSet (11111)\n");
@@ -1291,6 +1555,14 @@ CheckTypeSize(FcStrSet *,4, 11112, 2)
 CheckTypeSize(FcStrSet *,8, 11112, 11)
 #elif __ia64__
 CheckTypeSize(FcStrSet *,8, 11112, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcStrSet *,4, 11112, 6)
+#elif __powerpc64__
+CheckTypeSize(FcStrSet *,8, 11112, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcStrSet *,4, 11112, 10)
+#elif __s390x__
+CheckTypeSize(FcStrSet *,8, 11112, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11112,0);
 Msg("Find size of FcStrSet * (11112)\n");
@@ -1302,6 +1574,14 @@ CheckTypeSize(FcChar32,4, 11113, 2)
 CheckTypeSize(FcChar32,4, 11113, 11)
 #elif __ia64__
 CheckTypeSize(FcChar32,4, 11113, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcChar32,4, 11113, 6)
+#elif __powerpc64__
+CheckTypeSize(FcChar32,4, 11113, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcChar32,4, 11113, 10)
+#elif __s390x__
+CheckTypeSize(FcChar32,4, 11113, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11113,0);
 Msg("Find size of FcChar32 (11113)\n");
@@ -1313,6 +1593,14 @@ CheckTypeSize(FcLangSet *,4, 11114, 2)
 CheckTypeSize(FcLangSet *,8, 11114, 11)
 #elif __ia64__
 CheckTypeSize(FcLangSet *,8, 11114, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcLangSet *,4, 11114, 6)
+#elif __powerpc64__
+CheckTypeSize(FcLangSet *,8, 11114, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcLangSet *,4, 11114, 10)
+#elif __s390x__
+CheckTypeSize(FcLangSet *,8, 11114, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11114,0);
 Msg("Find size of FcLangSet * (11114)\n");
@@ -1327,6 +1615,18 @@ CheckEnum("FcMatchFont",FcMatchFont,1);
 #elif __ia64__
 CheckEnum("FcMatchPattern",FcMatchPattern,0);
 CheckEnum("FcMatchFont",FcMatchFont,1);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("FcMatchPattern",FcMatchPattern,0);
+CheckEnum("FcMatchFont",FcMatchFont,1);
+#elif __powerpc64__
+CheckEnum("FcMatchPattern",FcMatchPattern,0);
+CheckEnum("FcMatchFont",FcMatchFont,1);
+#elif __s390__ && !__s390x__
+CheckEnum("FcMatchPattern",FcMatchPattern,0);
+CheckEnum("FcMatchFont",FcMatchFont,1);
+#elif __s390x__
+CheckEnum("FcMatchPattern",FcMatchPattern,0);
+CheckEnum("FcMatchFont",FcMatchFont,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11115,0);
 Msg("Find size of _FcMatchKind (11115)\n");
@@ -1338,6 +1638,14 @@ CheckTypeSize(FcMatchKind,4, 11116, 2)
 CheckTypeSize(FcMatchKind,4, 11116, 11)
 #elif __ia64__
 CheckTypeSize(FcMatchKind,4, 11116, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcMatchKind,4, 11116, 6)
+#elif __powerpc64__
+CheckTypeSize(FcMatchKind,4, 11116, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcMatchKind,4, 11116, 10)
+#elif __s390x__
+CheckTypeSize(FcMatchKind,4, 11116, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11116,0);
 Msg("Find size of FcMatchKind (11116)\n");
@@ -1361,6 +1669,30 @@ CheckMemberSize(struct _FcObjectSet,sobject,4,3,40939)
 CheckOffset(struct _FcObjectSet,sobject,4,3,40939)
 CheckMemberSize(struct _FcObjectSet,objects,8,3,40940)
 CheckOffset(struct _FcObjectSet,objects,8,3,40940)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _FcObjectSet,12, 11117, 6)
+CheckMemberSize(struct _FcObjectSet,sobject,4,6,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,6,40939)
+CheckMemberSize(struct _FcObjectSet,objects,4,6,40940)
+CheckOffset(struct _FcObjectSet,objects,8,6,40940)
+#elif __powerpc64__
+CheckTypeSize(struct _FcObjectSet,16, 11117, 9)
+CheckMemberSize(struct _FcObjectSet,sobject,4,9,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,9,40939)
+CheckMemberSize(struct _FcObjectSet,objects,8,9,40940)
+CheckOffset(struct _FcObjectSet,objects,8,9,40940)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _FcObjectSet,12, 11117, 10)
+CheckMemberSize(struct _FcObjectSet,sobject,4,10,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,10,40939)
+CheckMemberSize(struct _FcObjectSet,objects,4,10,40940)
+CheckOffset(struct _FcObjectSet,objects,8,10,40940)
+#elif __s390x__
+CheckTypeSize(struct _FcObjectSet,16, 11117, 12)
+CheckMemberSize(struct _FcObjectSet,sobject,4,12,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,12,40939)
+CheckMemberSize(struct _FcObjectSet,objects,8,12,40940)
+CheckOffset(struct _FcObjectSet,objects,8,12,40940)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11117,0);
 Msg("Find size of _FcObjectSet (11117)\n");
@@ -1372,6 +1704,14 @@ CheckTypeSize(FcObjectSet,12, 11118, 2)
 CheckTypeSize(FcObjectSet,16, 11118, 11)
 #elif __ia64__
 CheckTypeSize(FcObjectSet,16, 11118, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcObjectSet,12, 11118, 6)
+#elif __powerpc64__
+CheckTypeSize(FcObjectSet,16, 11118, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcObjectSet,12, 11118, 10)
+#elif __s390x__
+CheckTypeSize(FcObjectSet,16, 11118, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11118,0);
 Msg("Find size of FcObjectSet (11118)\n");
@@ -1383,6 +1723,14 @@ CheckTypeSize(FcObjectSet *,4, 11119, 2)
 CheckTypeSize(FcObjectSet *,8, 11119, 11)
 #elif __ia64__
 CheckTypeSize(FcObjectSet *,8, 11119, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcObjectSet *,4, 11119, 6)
+#elif __powerpc64__
+CheckTypeSize(FcObjectSet *,8, 11119, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcObjectSet *,4, 11119, 10)
+#elif __s390x__
+CheckTypeSize(FcObjectSet *,8, 11119, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11119,0);
 Msg("Find size of FcObjectSet * (11119)\n");
@@ -1397,6 +1745,18 @@ CheckEnum("FcEndianLittle",FcEndianLittle,1);
 #elif __ia64__
 CheckEnum("FcEndianBig",FcEndianBig,0);
 CheckEnum("FcEndianLittle",FcEndianLittle,1);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("FcEndianBig",FcEndianBig,0);
+CheckEnum("FcEndianLittle",FcEndianLittle,1);
+#elif __powerpc64__
+CheckEnum("FcEndianBig",FcEndianBig,0);
+CheckEnum("FcEndianLittle",FcEndianLittle,1);
+#elif __s390__ && !__s390x__
+CheckEnum("FcEndianBig",FcEndianBig,0);
+CheckEnum("FcEndianLittle",FcEndianLittle,1);
+#elif __s390x__
+CheckEnum("FcEndianBig",FcEndianBig,0);
+CheckEnum("FcEndianLittle",FcEndianLittle,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11120,0);
 Msg("Find size of anon-fontconfig/fontconfig.h-239 (11120)\n");
@@ -1408,6 +1768,14 @@ CheckTypeSize(FcEndian,4, 11121, 2)
 CheckTypeSize(FcEndian,4, 11121, 11)
 #elif __ia64__
 CheckTypeSize(FcEndian,4, 11121, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcEndian,4, 11121, 6)
+#elif __powerpc64__
+CheckTypeSize(FcEndian,4, 11121, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcEndian,4, 11121, 10)
+#elif __s390x__
+CheckTypeSize(FcEndian,4, 11121, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11121,0);
 Msg("Find size of FcEndian (11121)\n");
@@ -1419,6 +1787,14 @@ CheckTypeSize(FcChar8 *,4, 11122, 2)
 CheckTypeSize(FcChar8 *,8, 11122, 11)
 #elif __ia64__
 CheckTypeSize(FcChar8 *,8, 11122, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcChar8 *,4, 11122, 6)
+#elif __powerpc64__
+CheckTypeSize(FcChar8 *,8, 11122, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcChar8 *,4, 11122, 10)
+#elif __s390x__
+CheckTypeSize(FcChar8 *,8, 11122, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11122,0);
 Msg("Find size of FcChar8 * (11122)\n");
@@ -1430,6 +1806,14 @@ CheckTypeSize(FcAtomic,0, 11124, 2)
 CheckTypeSize(FcAtomic,0, 11124, 11)
 #elif __ia64__
 CheckTypeSize(FcAtomic,0, 11124, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcAtomic,0, 11124, 6)
+#elif __powerpc64__
+CheckTypeSize(FcAtomic,0, 11124, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcAtomic,0, 11124, 10)
+#elif __s390x__
+CheckTypeSize(FcAtomic,0, 11124, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11124,0);
 Msg("Find size of FcAtomic (11124)\n");
@@ -1441,6 +1825,14 @@ CheckTypeSize(FcAtomic *,4, 11125, 2)
 CheckTypeSize(FcAtomic *,8, 11125, 11)
 #elif __ia64__
 CheckTypeSize(FcAtomic *,8, 11125, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcAtomic *,4, 11125, 6)
+#elif __powerpc64__
+CheckTypeSize(FcAtomic *,8, 11125, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcAtomic *,4, 11125, 10)
+#elif __s390x__
+CheckTypeSize(FcAtomic *,8, 11125, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11125,0);
 Msg("Find size of FcAtomic * (11125)\n");
@@ -1464,6 +1856,30 @@ CheckMemberSize(struct _FcConstant,object,8,3,40944)
 CheckOffset(struct _FcConstant,object,8,3,40944)
 CheckMemberSize(struct _FcConstant,value,4,3,40945)
 CheckOffset(struct _FcConstant,value,16,3,40945)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _FcConstant,12, 11126, 6)
+CheckMemberSize(struct _FcConstant,object,4,6,40944)
+CheckOffset(struct _FcConstant,object,4,6,40944)
+CheckMemberSize(struct _FcConstant,value,4,6,40945)
+CheckOffset(struct _FcConstant,value,8,6,40945)
+#elif __powerpc64__
+CheckTypeSize(struct _FcConstant,24, 11126, 9)
+CheckMemberSize(struct _FcConstant,object,8,9,40944)
+CheckOffset(struct _FcConstant,object,8,9,40944)
+CheckMemberSize(struct _FcConstant,value,4,9,40945)
+CheckOffset(struct _FcConstant,value,16,9,40945)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _FcConstant,12, 11126, 10)
+CheckMemberSize(struct _FcConstant,object,4,10,40944)
+CheckOffset(struct _FcConstant,object,4,10,40944)
+CheckMemberSize(struct _FcConstant,value,4,10,40945)
+CheckOffset(struct _FcConstant,value,8,10,40945)
+#elif __s390x__
+CheckTypeSize(struct _FcConstant,24, 11126, 12)
+CheckMemberSize(struct _FcConstant,object,8,12,40944)
+CheckOffset(struct _FcConstant,object,8,12,40944)
+CheckMemberSize(struct _FcConstant,value,4,12,40945)
+CheckOffset(struct _FcConstant,value,16,12,40945)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11126,0);
 Msg("Find size of _FcConstant (11126)\n");
@@ -1475,6 +1891,14 @@ CheckTypeSize(FcConstant,12, 11127, 2)
 CheckTypeSize(FcConstant,24, 11127, 11)
 #elif __ia64__
 CheckTypeSize(FcConstant,24, 11127, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcConstant,12, 11127, 6)
+#elif __powerpc64__
+CheckTypeSize(FcConstant,24, 11127, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcConstant,12, 11127, 10)
+#elif __s390x__
+CheckTypeSize(FcConstant,24, 11127, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11127,0);
 Msg("Find size of FcConstant (11127)\n");
@@ -1486,6 +1910,14 @@ CheckTypeSize(const FcConstant,12, 11128, 2)
 CheckTypeSize(const FcConstant,24, 11128, 11)
 #elif __ia64__
 CheckTypeSize(const FcConstant,24, 11128, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcConstant,12, 11128, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcConstant,24, 11128, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcConstant,12, 11128, 10)
+#elif __s390x__
+CheckTypeSize(const FcConstant,24, 11128, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11128,0);
 Msg("Find size of const FcConstant (11128)\n");
@@ -1494,6 +1926,10 @@ Msg("Find size of const FcConstant (11128)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11129,0);
 Msg("Find size of const FcConstant * (11129)\n");
@@ -1517,6 +1953,30 @@ CheckMemberSize(struct _FcFontSet,sfont,4,3,40947)
 CheckOffset(struct _FcFontSet,sfont,4,3,40947)
 CheckMemberSize(struct _FcFontSet,fonts,8,3,40948)
 CheckOffset(struct _FcFontSet,fonts,8,3,40948)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _FcFontSet,12, 11130, 6)
+CheckMemberSize(struct _FcFontSet,sfont,4,6,40947)
+CheckOffset(struct _FcFontSet,sfont,4,6,40947)
+CheckMemberSize(struct _FcFontSet,fonts,4,6,40948)
+CheckOffset(struct _FcFontSet,fonts,8,6,40948)
+#elif __powerpc64__
+CheckTypeSize(struct _FcFontSet,16, 11130, 9)
+CheckMemberSize(struct _FcFontSet,sfont,4,9,40947)
+CheckOffset(struct _FcFontSet,sfont,4,9,40947)
+CheckMemberSize(struct _FcFontSet,fonts,8,9,40948)
+CheckOffset(struct _FcFontSet,fonts,8,9,40948)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _FcFontSet,12, 11130, 10)
+CheckMemberSize(struct _FcFontSet,sfont,4,10,40947)
+CheckOffset(struct _FcFontSet,sfont,4,10,40947)
+CheckMemberSize(struct _FcFontSet,fonts,4,10,40948)
+CheckOffset(struct _FcFontSet,fonts,8,10,40948)
+#elif __s390x__
+CheckTypeSize(struct _FcFontSet,16, 11130, 12)
+CheckMemberSize(struct _FcFontSet,sfont,4,12,40947)
+CheckOffset(struct _FcFontSet,sfont,4,12,40947)
+CheckMemberSize(struct _FcFontSet,fonts,8,12,40948)
+CheckOffset(struct _FcFontSet,fonts,8,12,40948)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11130,0);
 Msg("Find size of _FcFontSet (11130)\n");
@@ -1525,6 +1985,10 @@ Msg("Find size of _FcFontSet (11130)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11131,0);
 Msg("Find size of FcPattern * * (11131)\n");
@@ -1536,6 +2000,14 @@ CheckTypeSize(FcFontSet,12, 11132, 2)
 CheckTypeSize(FcFontSet,16, 11132, 11)
 #elif __ia64__
 CheckTypeSize(FcFontSet,16, 11132, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcFontSet,12, 11132, 6)
+#elif __powerpc64__
+CheckTypeSize(FcFontSet,16, 11132, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcFontSet,12, 11132, 10)
+#elif __s390x__
+CheckTypeSize(FcFontSet,16, 11132, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11132,0);
 Msg("Find size of FcFontSet (11132)\n");
@@ -1547,6 +2019,14 @@ CheckTypeSize(FcFontSet *,4, 11133, 2)
 CheckTypeSize(FcFontSet *,8, 11133, 11)
 #elif __ia64__
 CheckTypeSize(FcFontSet *,8, 11133, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcFontSet *,4, 11133, 6)
+#elif __powerpc64__
+CheckTypeSize(FcFontSet *,8, 11133, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcFontSet *,4, 11133, 10)
+#elif __s390x__
+CheckTypeSize(FcFontSet *,8, 11133, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11133,0);
 Msg("Find size of FcFontSet * (11133)\n");
@@ -1561,6 +2041,18 @@ CheckEnum("FcSetApplication",FcSetApplication,1);
 #elif __ia64__
 CheckEnum("FcSetSystem",FcSetSystem,0);
 CheckEnum("FcSetApplication",FcSetApplication,1);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("FcSetSystem",FcSetSystem,0);
+CheckEnum("FcSetApplication",FcSetApplication,1);
+#elif __powerpc64__
+CheckEnum("FcSetSystem",FcSetSystem,0);
+CheckEnum("FcSetApplication",FcSetApplication,1);
+#elif __s390__ && !__s390x__
+CheckEnum("FcSetSystem",FcSetSystem,0);
+CheckEnum("FcSetApplication",FcSetApplication,1);
+#elif __s390x__
+CheckEnum("FcSetSystem",FcSetSystem,0);
+CheckEnum("FcSetApplication",FcSetApplication,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11134,0);
 Msg("Find size of _FcSetName (11134)\n");
@@ -1572,6 +2064,14 @@ CheckTypeSize(FcSetName,4, 11135, 2)
 CheckTypeSize(FcSetName,4, 11135, 11)
 #elif __ia64__
 CheckTypeSize(FcSetName,4, 11135, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcSetName,4, 11135, 6)
+#elif __powerpc64__
+CheckTypeSize(FcSetName,4, 11135, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcSetName,4, 11135, 10)
+#elif __s390x__
+CheckTypeSize(FcSetName,4, 11135, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11135,0);
 Msg("Find size of FcSetName (11135)\n");
@@ -1583,6 +2083,14 @@ CheckTypeSize(FcMatrix *,4, 11136, 2)
 CheckTypeSize(FcMatrix *,8, 11136, 11)
 #elif __ia64__
 CheckTypeSize(FcMatrix *,8, 11136, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcMatrix *,4, 11136, 6)
+#elif __powerpc64__
+CheckTypeSize(FcMatrix *,8, 11136, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcMatrix *,4, 11136, 10)
+#elif __s390x__
+CheckTypeSize(FcMatrix *,8, 11136, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11136,0);
 Msg("Find size of FcMatrix * (11136)\n");
@@ -1594,6 +2102,14 @@ CheckTypeSize(FcCharSet *,4, 11137, 2)
 CheckTypeSize(FcCharSet *,8, 11137, 11)
 #elif __ia64__
 CheckTypeSize(FcCharSet *,8, 11137, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcCharSet *,4, 11137, 6)
+#elif __powerpc64__
+CheckTypeSize(FcCharSet *,8, 11137, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcCharSet *,4, 11137, 10)
+#elif __s390x__
+CheckTypeSize(FcCharSet *,8, 11137, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11137,0);
 Msg("Find size of FcCharSet * (11137)\n");
@@ -1605,6 +2121,14 @@ CheckTypeSize(FcBlanks,0, 11139, 2)
 CheckTypeSize(FcBlanks,0, 11139, 11)
 #elif __ia64__
 CheckTypeSize(FcBlanks,0, 11139, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcBlanks,0, 11139, 6)
+#elif __powerpc64__
+CheckTypeSize(FcBlanks,0, 11139, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcBlanks,0, 11139, 10)
+#elif __s390x__
+CheckTypeSize(FcBlanks,0, 11139, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11139,0);
 Msg("Find size of FcBlanks (11139)\n");
@@ -1616,6 +2140,14 @@ CheckTypeSize(FcBlanks *,4, 11140, 2)
 CheckTypeSize(FcBlanks *,8, 11140, 11)
 #elif __ia64__
 CheckTypeSize(FcBlanks *,8, 11140, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcBlanks *,4, 11140, 6)
+#elif __powerpc64__
+CheckTypeSize(FcBlanks *,8, 11140, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcBlanks *,4, 11140, 10)
+#elif __s390x__
+CheckTypeSize(FcBlanks *,8, 11140, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11140,0);
 Msg("Find size of FcBlanks * (11140)\n");
@@ -1639,6 +2171,30 @@ CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
 CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
 CheckEnum("FcResultNoId",FcResultNoId,3);
 CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("FcResultMatch",FcResultMatch,0);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
+CheckEnum("FcResultNoId",FcResultNoId,3);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+#elif __powerpc64__
+CheckEnum("FcResultMatch",FcResultMatch,0);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
+CheckEnum("FcResultNoId",FcResultNoId,3);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+#elif __s390__ && !__s390x__
+CheckEnum("FcResultMatch",FcResultMatch,0);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
+CheckEnum("FcResultNoId",FcResultNoId,3);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+#elif __s390x__
+CheckEnum("FcResultMatch",FcResultMatch,0);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
+CheckEnum("FcResultNoId",FcResultNoId,3);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11141,0);
 Msg("Find size of _FcResult (11141)\n");
@@ -1650,6 +2206,14 @@ CheckTypeSize(FcResult,4, 11142, 2)
 CheckTypeSize(FcResult,4, 11142, 11)
 #elif __ia64__
 CheckTypeSize(FcResult,4, 11142, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcResult,4, 11142, 6)
+#elif __powerpc64__
+CheckTypeSize(FcResult,4, 11142, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcResult,4, 11142, 10)
+#elif __s390x__
+CheckTypeSize(FcResult,4, 11142, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11142,0);
 Msg("Find size of FcResult (11142)\n");
@@ -1658,6 +2222,10 @@ Msg("Find size of FcResult (11142)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11143,0);
 Msg("Find size of FcLangSet * * (11143)\n");
@@ -1675,6 +2243,22 @@ CheckOffset(struct _FcObjectType,type,8,11,40957)
 CheckTypeSize(struct _FcObjectType,16, 11144, 3)
 CheckMemberSize(struct _FcObjectType,type,4,3,40957)
 CheckOffset(struct _FcObjectType,type,8,3,40957)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _FcObjectType,8, 11144, 6)
+CheckMemberSize(struct _FcObjectType,type,4,6,40957)
+CheckOffset(struct _FcObjectType,type,4,6,40957)
+#elif __powerpc64__
+CheckTypeSize(struct _FcObjectType,16, 11144, 9)
+CheckMemberSize(struct _FcObjectType,type,4,9,40957)
+CheckOffset(struct _FcObjectType,type,8,9,40957)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _FcObjectType,8, 11144, 10)
+CheckMemberSize(struct _FcObjectType,type,4,10,40957)
+CheckOffset(struct _FcObjectType,type,4,10,40957)
+#elif __s390x__
+CheckTypeSize(struct _FcObjectType,16, 11144, 12)
+CheckMemberSize(struct _FcObjectType,type,4,12,40957)
+CheckOffset(struct _FcObjectType,type,8,12,40957)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11144,0);
 Msg("Find size of _FcObjectType (11144)\n");
@@ -1686,6 +2270,14 @@ CheckTypeSize(FcObjectType,8, 11145, 2)
 CheckTypeSize(FcObjectType,16, 11145, 11)
 #elif __ia64__
 CheckTypeSize(FcObjectType,16, 11145, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcObjectType,8, 11145, 6)
+#elif __powerpc64__
+CheckTypeSize(FcObjectType,16, 11145, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcObjectType,8, 11145, 10)
+#elif __s390x__
+CheckTypeSize(FcObjectType,16, 11145, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11145,0);
 Msg("Find size of FcObjectType (11145)\n");
@@ -1697,6 +2289,14 @@ CheckTypeSize(const FcObjectType,8, 11146, 2)
 CheckTypeSize(const FcObjectType,16, 11146, 11)
 #elif __ia64__
 CheckTypeSize(const FcObjectType,16, 11146, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcObjectType,8, 11146, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcObjectType,16, 11146, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcObjectType,8, 11146, 10)
+#elif __s390x__
+CheckTypeSize(const FcObjectType,16, 11146, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11146,0);
 Msg("Find size of const FcObjectType (11146)\n");
@@ -1705,6 +2305,10 @@ Msg("Find size of const FcObjectType (11146)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11147,0);
 Msg("Find size of const FcObjectType * (11147)\n");
@@ -1716,6 +2320,14 @@ CheckTypeSize(FcChar32 *,4, 11148, 2)
 CheckTypeSize(FcChar32 *,8, 11148, 11)
 #elif __ia64__
 CheckTypeSize(FcChar32 *,8, 11148, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcChar32 *,4, 11148, 6)
+#elif __powerpc64__
+CheckTypeSize(FcChar32 *,8, 11148, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcChar32 *,4, 11148, 10)
+#elif __s390x__
+CheckTypeSize(FcChar32 *,8, 11148, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11148,0);
 Msg("Find size of FcChar32 * (11148)\n");
@@ -1727,6 +2339,14 @@ CheckTypeSize(FcGlobalCache,0, 11150, 2)
 CheckTypeSize(FcGlobalCache,0, 11150, 11)
 #elif __ia64__
 CheckTypeSize(FcGlobalCache,0, 11150, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcGlobalCache,0, 11150, 6)
+#elif __powerpc64__
+CheckTypeSize(FcGlobalCache,0, 11150, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcGlobalCache,0, 11150, 10)
+#elif __s390x__
+CheckTypeSize(FcGlobalCache,0, 11150, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11150,0);
 Msg("Find size of FcGlobalCache (11150)\n");
@@ -1738,6 +2358,14 @@ CheckTypeSize(FcGlobalCache *,4, 11151, 2)
 CheckTypeSize(FcGlobalCache *,8, 11151, 11)
 #elif __ia64__
 CheckTypeSize(FcGlobalCache *,8, 11151, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcGlobalCache *,4, 11151, 6)
+#elif __powerpc64__
+CheckTypeSize(FcGlobalCache *,8, 11151, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcGlobalCache *,4, 11151, 10)
+#elif __s390x__
+CheckTypeSize(FcGlobalCache *,8, 11151, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11151,0);
 Msg("Find size of FcGlobalCache * (11151)\n");
@@ -1746,6 +2374,10 @@ Msg("Find size of FcGlobalCache * (11151)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11152,0);
 Msg("Find size of FcFontSet * * (11152)\n");
@@ -1754,6 +2386,10 @@ Msg("Find size of FcFontSet * * (11152)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11153,0);
 Msg("Find size of FcCharSet * * (11153)\n");
@@ -1765,6 +2401,14 @@ CheckTypeSize(FcResult *,4, 11154, 2)
 CheckTypeSize(FcResult *,8, 11154, 11)
 #elif __ia64__
 CheckTypeSize(FcResult *,8, 11154, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcResult *,4, 11154, 6)
+#elif __powerpc64__
+CheckTypeSize(FcResult *,8, 11154, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcResult *,4, 11154, 10)
+#elif __s390x__
+CheckTypeSize(FcResult *,8, 11154, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11154,0);
 Msg("Find size of FcResult * (11154)\n");
@@ -1773,6 +2417,10 @@ Msg("Find size of FcResult * (11154)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11155,0);
 Msg("Find size of FcChar8 * * (11155)\n");
@@ -1784,6 +2432,14 @@ CheckTypeSize(const FcObjectSet,12, 11156, 2)
 CheckTypeSize(const FcObjectSet,16, 11156, 11)
 #elif __ia64__
 CheckTypeSize(const FcObjectSet,16, 11156, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcObjectSet,12, 11156, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcObjectSet,16, 11156, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcObjectSet,12, 11156, 10)
+#elif __s390x__
+CheckTypeSize(const FcObjectSet,16, 11156, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11156,0);
 Msg("Find size of const FcObjectSet (11156)\n");
@@ -1792,6 +2448,10 @@ Msg("Find size of const FcObjectSet (11156)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11157,0);
 Msg("Find size of const FcObjectSet * (11157)\n");
@@ -1803,6 +2463,14 @@ CheckTypeSize(const FcFontSet,12, 11158, 2)
 CheckTypeSize(const FcFontSet,16, 11158, 11)
 #elif __ia64__
 CheckTypeSize(const FcFontSet,16, 11158, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcFontSet,12, 11158, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcFontSet,16, 11158, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcFontSet,12, 11158, 10)
+#elif __s390x__
+CheckTypeSize(const FcFontSet,16, 11158, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11158,0);
 Msg("Find size of const FcFontSet (11158)\n");
@@ -1811,6 +2479,10 @@ Msg("Find size of const FcFontSet (11158)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11159,0);
 Msg("Find size of const FcFontSet * (11159)\n");
@@ -1828,6 +2500,22 @@ CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
 CheckEnum("FcLangEqual",FcLangEqual,0);
 CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
 CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("FcLangEqual",FcLangEqual,0);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+#elif __powerpc64__
+CheckEnum("FcLangEqual",FcLangEqual,0);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+#elif __s390__ && !__s390x__
+CheckEnum("FcLangEqual",FcLangEqual,0);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+#elif __s390x__
+CheckEnum("FcLangEqual",FcLangEqual,0);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11160,0);
 Msg("Find size of _FcLangResult (11160)\n");
@@ -1839,6 +2527,14 @@ CheckTypeSize(FcLangResult,4, 11161, 2)
 CheckTypeSize(FcLangResult,4, 11161, 11)
 #elif __ia64__
 CheckTypeSize(FcLangResult,4, 11161, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcLangResult,4, 11161, 6)
+#elif __powerpc64__
+CheckTypeSize(FcLangResult,4, 11161, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcLangResult,4, 11161, 10)
+#elif __s390x__
+CheckTypeSize(FcLangResult,4, 11161, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11161,0);
 Msg("Find size of FcLangResult (11161)\n");
@@ -1850,6 +2546,14 @@ CheckTypeSize(const FcValue,12, 11162, 2)
 CheckTypeSize(const FcValue,16, 11162, 11)
 #elif __ia64__
 CheckTypeSize(const FcValue,16, 11162, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FcValue,16, 11162, 6)
+#elif __powerpc64__
+CheckTypeSize(const FcValue,16, 11162, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FcValue,16, 11162, 10)
+#elif __s390x__
+CheckTypeSize(const FcValue,16, 11162, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11162,0);
 Msg("Find size of const FcValue (11162)\n");
@@ -1858,6 +2562,10 @@ Msg("Find size of const FcValue (11162)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11163,0);
 Msg("Find size of FcMatrix * * (11163)\n");
@@ -1869,6 +2577,14 @@ CheckTypeSize(FcBool *,4, 11164, 2)
 CheckTypeSize(FcBool *,8, 11164, 11)
 #elif __ia64__
 CheckTypeSize(FcBool *,8, 11164, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcBool *,4, 11164, 6)
+#elif __powerpc64__
+CheckTypeSize(FcBool *,8, 11164, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcBool *,4, 11164, 10)
+#elif __s390x__
+CheckTypeSize(FcBool *,8, 11164, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11164,0);
 Msg("Find size of FcBool * (11164)\n");
@@ -1880,6 +2596,14 @@ CheckTypeSize(FcValue *,4, 11165, 2)
 CheckTypeSize(FcValue *,8, 11165, 11)
 #elif __ia64__
 CheckTypeSize(FcValue *,8, 11165, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcValue *,4, 11165, 6)
+#elif __powerpc64__
+CheckTypeSize(FcValue *,8, 11165, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcValue *,4, 11165, 10)
+#elif __s390x__
+CheckTypeSize(FcValue *,8, 11165, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11165,0);
 Msg("Find size of FcValue * (11165)\n");
@@ -1891,6 +2615,14 @@ CheckTypeSize(FcChar16,2, 16181, 2)
 CheckTypeSize(FcChar16,2, 16181, 11)
 #elif __ia64__
 CheckTypeSize(FcChar16,2, 16181, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FcChar16,2, 16181, 6)
+#elif __powerpc64__
+CheckTypeSize(FcChar16,2, 16181, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FcChar16,2, 16181, 10)
+#elif __s390x__
+CheckTypeSize(FcChar16,2, 16181, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16181,0);
 Msg("Find size of FcChar16 (16181)\n");

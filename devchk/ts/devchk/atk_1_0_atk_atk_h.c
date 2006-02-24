@@ -579,6 +579,14 @@ CheckTypeSize(AtkText,0, 12076, 2)
 CheckTypeSize(AtkText,0, 12076, 11)
 #elif __ia64__
 CheckTypeSize(AtkText,0, 12076, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkText,0, 12076, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkText,0, 12076, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkText,0, 12076, 10)
+#elif __s390x__
+CheckTypeSize(AtkText,0, 12076, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12076,0);
 Msg("Find size of AtkText (12076)\n");
@@ -590,6 +598,14 @@ CheckTypeSize(AtkText *,4, 12077, 2)
 CheckTypeSize(AtkText *,8, 12077, 11)
 #elif __ia64__
 CheckTypeSize(AtkText *,8, 12077, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkText *,4, 12077, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkText *,8, 12077, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkText *,4, 12077, 10)
+#elif __s390x__
+CheckTypeSize(AtkText *,8, 12077, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12077,0);
 Msg("Find size of AtkText * (12077)\n");
@@ -637,6 +653,62 @@ CheckMemberSize(struct _AtkObject,relation_set,8,3,42406)
 CheckOffset(struct _AtkObject,relation_set,56,3,42406)
 CheckMemberSize(struct _AtkObject,layer,4,3,42415)
 CheckOffset(struct _AtkObject,layer,64,3,42415)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkObject,36, 12078, 6)
+CheckMemberSize(struct _AtkObject,description,4,6,42322)
+CheckOffset(struct _AtkObject,description,12,6,42322)
+CheckMemberSize(struct _AtkObject,name,4,6,42323)
+CheckOffset(struct _AtkObject,name,16,6,42323)
+CheckMemberSize(struct _AtkObject,accessible_parent,4,6,42324)
+CheckOffset(struct _AtkObject,accessible_parent,20,6,42324)
+CheckMemberSize(struct _AtkObject,role,4,6,42403)
+CheckOffset(struct _AtkObject,role,24,6,42403)
+CheckMemberSize(struct _AtkObject,relation_set,4,6,42406)
+CheckOffset(struct _AtkObject,relation_set,28,6,42406)
+CheckMemberSize(struct _AtkObject,layer,4,6,42415)
+CheckOffset(struct _AtkObject,layer,32,6,42415)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkObject,72, 12078, 9)
+CheckMemberSize(struct _AtkObject,description,8,9,42322)
+CheckOffset(struct _AtkObject,description,24,9,42322)
+CheckMemberSize(struct _AtkObject,name,8,9,42323)
+CheckOffset(struct _AtkObject,name,32,9,42323)
+CheckMemberSize(struct _AtkObject,accessible_parent,8,9,42324)
+CheckOffset(struct _AtkObject,accessible_parent,40,9,42324)
+CheckMemberSize(struct _AtkObject,role,4,9,42403)
+CheckOffset(struct _AtkObject,role,48,9,42403)
+CheckMemberSize(struct _AtkObject,relation_set,8,9,42406)
+CheckOffset(struct _AtkObject,relation_set,56,9,42406)
+CheckMemberSize(struct _AtkObject,layer,4,9,42415)
+CheckOffset(struct _AtkObject,layer,64,9,42415)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkObject,36, 12078, 10)
+CheckMemberSize(struct _AtkObject,description,4,10,42322)
+CheckOffset(struct _AtkObject,description,12,10,42322)
+CheckMemberSize(struct _AtkObject,name,4,10,42323)
+CheckOffset(struct _AtkObject,name,16,10,42323)
+CheckMemberSize(struct _AtkObject,accessible_parent,4,10,42324)
+CheckOffset(struct _AtkObject,accessible_parent,20,10,42324)
+CheckMemberSize(struct _AtkObject,role,4,10,42403)
+CheckOffset(struct _AtkObject,role,24,10,42403)
+CheckMemberSize(struct _AtkObject,relation_set,4,10,42406)
+CheckOffset(struct _AtkObject,relation_set,28,10,42406)
+CheckMemberSize(struct _AtkObject,layer,4,10,42415)
+CheckOffset(struct _AtkObject,layer,32,10,42415)
+#elif __s390x__
+CheckTypeSize(struct _AtkObject,72, 12078, 12)
+CheckMemberSize(struct _AtkObject,description,8,12,42322)
+CheckOffset(struct _AtkObject,description,24,12,42322)
+CheckMemberSize(struct _AtkObject,name,8,12,42323)
+CheckOffset(struct _AtkObject,name,32,12,42323)
+CheckMemberSize(struct _AtkObject,accessible_parent,8,12,42324)
+CheckOffset(struct _AtkObject,accessible_parent,40,12,42324)
+CheckMemberSize(struct _AtkObject,role,4,12,42403)
+CheckOffset(struct _AtkObject,role,48,12,42403)
+CheckMemberSize(struct _AtkObject,relation_set,8,12,42406)
+CheckOffset(struct _AtkObject,relation_set,56,12,42406)
+CheckMemberSize(struct _AtkObject,layer,4,12,42415)
+CheckOffset(struct _AtkObject,layer,64,12,42415)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12078,0);
 Msg("Find size of _AtkObject (12078)\n");
@@ -648,6 +720,14 @@ CheckTypeSize(AtkObject,36, 12079, 2)
 CheckTypeSize(AtkObject,72, 12079, 11)
 #elif __ia64__
 CheckTypeSize(AtkObject,72, 12079, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkObject,36, 12079, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkObject,72, 12079, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkObject,36, 12079, 10)
+#elif __s390x__
+CheckTypeSize(AtkObject,72, 12079, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12079,0);
 Msg("Find size of AtkObject (12079)\n");
@@ -659,6 +739,14 @@ CheckTypeSize(AtkObject *,4, 12080, 2)
 CheckTypeSize(AtkObject *,8, 12080, 11)
 #elif __ia64__
 CheckTypeSize(AtkObject *,8, 12080, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkObject *,4, 12080, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkObject *,8, 12080, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkObject *,4, 12080, 10)
+#elif __s390x__
+CheckTypeSize(AtkObject *,8, 12080, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12080,0);
 Msg("Find size of AtkObject * (12080)\n");
@@ -901,6 +989,322 @@ CheckEnum("ATK_ROLE_AUTOCOMPLETE",ATK_ROLE_AUTOCOMPLETE,74);
 CheckEnum("ATK_ROLE_EDITBAR",ATK_ROLE_EDITBAR,75);
 CheckEnum("ATK_ROLE_EMBEDDED",ATK_ROLE_EMBEDDED,76);
 CheckEnum("ATK_ROLE_LAST_DEFINED",ATK_ROLE_LAST_DEFINED,77);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_ROLE_INVALID",ATK_ROLE_INVALID,0);
+CheckEnum("ATK_ROLE_ACCEL_LABEL",ATK_ROLE_ACCEL_LABEL,1);
+CheckEnum("ATK_ROLE_ALERT",ATK_ROLE_ALERT,2);
+CheckEnum("ATK_ROLE_ANIMATION",ATK_ROLE_ANIMATION,3);
+CheckEnum("ATK_ROLE_ARROW",ATK_ROLE_ARROW,4);
+CheckEnum("ATK_ROLE_CALENDAR",ATK_ROLE_CALENDAR,5);
+CheckEnum("ATK_ROLE_CANVAS",ATK_ROLE_CANVAS,6);
+CheckEnum("ATK_ROLE_CHECK_BOX",ATK_ROLE_CHECK_BOX,7);
+CheckEnum("ATK_ROLE_CHECK_MENU_ITEM",ATK_ROLE_CHECK_MENU_ITEM,8);
+CheckEnum("ATK_ROLE_COLOR_CHOOSER",ATK_ROLE_COLOR_CHOOSER,9);
+CheckEnum("ATK_ROLE_COLUMN_HEADER",ATK_ROLE_COLUMN_HEADER,10);
+CheckEnum("ATK_ROLE_COMBO_BOX",ATK_ROLE_COMBO_BOX,11);
+CheckEnum("ATK_ROLE_DATE_EDITOR",ATK_ROLE_DATE_EDITOR,12);
+CheckEnum("ATK_ROLE_DESKTOP_ICON",ATK_ROLE_DESKTOP_ICON,13);
+CheckEnum("ATK_ROLE_DESKTOP_FRAME",ATK_ROLE_DESKTOP_FRAME,14);
+CheckEnum("ATK_ROLE_DIAL",ATK_ROLE_DIAL,15);
+CheckEnum("ATK_ROLE_DIALOG",ATK_ROLE_DIALOG,16);
+CheckEnum("ATK_ROLE_DIRECTORY_PANE",ATK_ROLE_DIRECTORY_PANE,17);
+CheckEnum("ATK_ROLE_DRAWING_AREA",ATK_ROLE_DRAWING_AREA,18);
+CheckEnum("ATK_ROLE_FILE_CHOOSER",ATK_ROLE_FILE_CHOOSER,19);
+CheckEnum("ATK_ROLE_FILLER",ATK_ROLE_FILLER,20);
+CheckEnum("ATK_ROLE_FONT_CHOOSER",ATK_ROLE_FONT_CHOOSER,21);
+CheckEnum("ATK_ROLE_FRAME",ATK_ROLE_FRAME,22);
+CheckEnum("ATK_ROLE_GLASS_PANE",ATK_ROLE_GLASS_PANE,23);
+CheckEnum("ATK_ROLE_HTML_CONTAINER",ATK_ROLE_HTML_CONTAINER,24);
+CheckEnum("ATK_ROLE_ICON",ATK_ROLE_ICON,25);
+CheckEnum("ATK_ROLE_IMAGE",ATK_ROLE_IMAGE,26);
+CheckEnum("ATK_ROLE_INTERNAL_FRAME",ATK_ROLE_INTERNAL_FRAME,27);
+CheckEnum("ATK_ROLE_LABEL",ATK_ROLE_LABEL,28);
+CheckEnum("ATK_ROLE_LAYERED_PANE",ATK_ROLE_LAYERED_PANE,29);
+CheckEnum("ATK_ROLE_LIST",ATK_ROLE_LIST,30);
+CheckEnum("ATK_ROLE_LIST_ITEM",ATK_ROLE_LIST_ITEM,31);
+CheckEnum("ATK_ROLE_MENU",ATK_ROLE_MENU,32);
+CheckEnum("ATK_ROLE_MENU_BAR",ATK_ROLE_MENU_BAR,33);
+CheckEnum("ATK_ROLE_MENU_ITEM",ATK_ROLE_MENU_ITEM,34);
+CheckEnum("ATK_ROLE_OPTION_PANE",ATK_ROLE_OPTION_PANE,35);
+CheckEnum("ATK_ROLE_PAGE_TAB",ATK_ROLE_PAGE_TAB,36);
+CheckEnum("ATK_ROLE_PAGE_TAB_LIST",ATK_ROLE_PAGE_TAB_LIST,37);
+CheckEnum("ATK_ROLE_PANEL",ATK_ROLE_PANEL,38);
+CheckEnum("ATK_ROLE_PASSWORD_TEXT",ATK_ROLE_PASSWORD_TEXT,39);
+CheckEnum("ATK_ROLE_POPUP_MENU",ATK_ROLE_POPUP_MENU,40);
+CheckEnum("ATK_ROLE_PROGRESS_BAR",ATK_ROLE_PROGRESS_BAR,41);
+CheckEnum("ATK_ROLE_PUSH_BUTTON",ATK_ROLE_PUSH_BUTTON,42);
+CheckEnum("ATK_ROLE_RADIO_BUTTON",ATK_ROLE_RADIO_BUTTON,43);
+CheckEnum("ATK_ROLE_RADIO_MENU_ITEM",ATK_ROLE_RADIO_MENU_ITEM,44);
+CheckEnum("ATK_ROLE_ROOT_PANE",ATK_ROLE_ROOT_PANE,45);
+CheckEnum("ATK_ROLE_ROW_HEADER",ATK_ROLE_ROW_HEADER,46);
+CheckEnum("ATK_ROLE_SCROLL_BAR",ATK_ROLE_SCROLL_BAR,47);
+CheckEnum("ATK_ROLE_SCROLL_PANE",ATK_ROLE_SCROLL_PANE,48);
+CheckEnum("ATK_ROLE_SEPARATOR",ATK_ROLE_SEPARATOR,49);
+CheckEnum("ATK_ROLE_SLIDER",ATK_ROLE_SLIDER,50);
+CheckEnum("ATK_ROLE_SPLIT_PANE",ATK_ROLE_SPLIT_PANE,51);
+CheckEnum("ATK_ROLE_SPIN_BUTTON",ATK_ROLE_SPIN_BUTTON,52);
+CheckEnum("ATK_ROLE_STATUSBAR",ATK_ROLE_STATUSBAR,53);
+CheckEnum("ATK_ROLE_TABLE",ATK_ROLE_TABLE,54);
+CheckEnum("ATK_ROLE_TABLE_CELL",ATK_ROLE_TABLE_CELL,55);
+CheckEnum("ATK_ROLE_TABLE_COLUMN_HEADER",ATK_ROLE_TABLE_COLUMN_HEADER,56);
+CheckEnum("ATK_ROLE_TABLE_ROW_HEADER",ATK_ROLE_TABLE_ROW_HEADER,57);
+CheckEnum("ATK_ROLE_TEAR_OFF_MENU_ITEM",ATK_ROLE_TEAR_OFF_MENU_ITEM,58);
+CheckEnum("ATK_ROLE_TERMINAL",ATK_ROLE_TERMINAL,59);
+CheckEnum("ATK_ROLE_TEXT",ATK_ROLE_TEXT,60);
+CheckEnum("ATK_ROLE_TOGGLE_BUTTON",ATK_ROLE_TOGGLE_BUTTON,61);
+CheckEnum("ATK_ROLE_TOOL_BAR",ATK_ROLE_TOOL_BAR,62);
+CheckEnum("ATK_ROLE_TOOL_TIP",ATK_ROLE_TOOL_TIP,63);
+CheckEnum("ATK_ROLE_TREE",ATK_ROLE_TREE,64);
+CheckEnum("ATK_ROLE_TREE_TABLE",ATK_ROLE_TREE_TABLE,65);
+CheckEnum("ATK_ROLE_UNKNOWN",ATK_ROLE_UNKNOWN,66);
+CheckEnum("ATK_ROLE_VIEWPORT",ATK_ROLE_VIEWPORT,67);
+CheckEnum("ATK_ROLE_WINDOW",ATK_ROLE_WINDOW,68);
+CheckEnum("ATK_ROLE_HEADER",ATK_ROLE_HEADER,69);
+CheckEnum("ATK_ROLE_FOOTER",ATK_ROLE_FOOTER,70);
+CheckEnum("ATK_ROLE_PARAGRAPH",ATK_ROLE_PARAGRAPH,71);
+CheckEnum("ATK_ROLE_RULER",ATK_ROLE_RULER,72);
+CheckEnum("ATK_ROLE_APPLICATION",ATK_ROLE_APPLICATION,73);
+CheckEnum("ATK_ROLE_AUTOCOMPLETE",ATK_ROLE_AUTOCOMPLETE,74);
+CheckEnum("ATK_ROLE_EDITBAR",ATK_ROLE_EDITBAR,75);
+CheckEnum("ATK_ROLE_EMBEDDED",ATK_ROLE_EMBEDDED,76);
+CheckEnum("ATK_ROLE_LAST_DEFINED",ATK_ROLE_LAST_DEFINED,77);
+#elif __powerpc64__
+CheckEnum("ATK_ROLE_INVALID",ATK_ROLE_INVALID,0);
+CheckEnum("ATK_ROLE_ACCEL_LABEL",ATK_ROLE_ACCEL_LABEL,1);
+CheckEnum("ATK_ROLE_ALERT",ATK_ROLE_ALERT,2);
+CheckEnum("ATK_ROLE_ANIMATION",ATK_ROLE_ANIMATION,3);
+CheckEnum("ATK_ROLE_ARROW",ATK_ROLE_ARROW,4);
+CheckEnum("ATK_ROLE_CALENDAR",ATK_ROLE_CALENDAR,5);
+CheckEnum("ATK_ROLE_CANVAS",ATK_ROLE_CANVAS,6);
+CheckEnum("ATK_ROLE_CHECK_BOX",ATK_ROLE_CHECK_BOX,7);
+CheckEnum("ATK_ROLE_CHECK_MENU_ITEM",ATK_ROLE_CHECK_MENU_ITEM,8);
+CheckEnum("ATK_ROLE_COLOR_CHOOSER",ATK_ROLE_COLOR_CHOOSER,9);
+CheckEnum("ATK_ROLE_COLUMN_HEADER",ATK_ROLE_COLUMN_HEADER,10);
+CheckEnum("ATK_ROLE_COMBO_BOX",ATK_ROLE_COMBO_BOX,11);
+CheckEnum("ATK_ROLE_DATE_EDITOR",ATK_ROLE_DATE_EDITOR,12);
+CheckEnum("ATK_ROLE_DESKTOP_ICON",ATK_ROLE_DESKTOP_ICON,13);
+CheckEnum("ATK_ROLE_DESKTOP_FRAME",ATK_ROLE_DESKTOP_FRAME,14);
+CheckEnum("ATK_ROLE_DIAL",ATK_ROLE_DIAL,15);
+CheckEnum("ATK_ROLE_DIALOG",ATK_ROLE_DIALOG,16);
+CheckEnum("ATK_ROLE_DIRECTORY_PANE",ATK_ROLE_DIRECTORY_PANE,17);
+CheckEnum("ATK_ROLE_DRAWING_AREA",ATK_ROLE_DRAWING_AREA,18);
+CheckEnum("ATK_ROLE_FILE_CHOOSER",ATK_ROLE_FILE_CHOOSER,19);
+CheckEnum("ATK_ROLE_FILLER",ATK_ROLE_FILLER,20);
+CheckEnum("ATK_ROLE_FONT_CHOOSER",ATK_ROLE_FONT_CHOOSER,21);
+CheckEnum("ATK_ROLE_FRAME",ATK_ROLE_FRAME,22);
+CheckEnum("ATK_ROLE_GLASS_PANE",ATK_ROLE_GLASS_PANE,23);
+CheckEnum("ATK_ROLE_HTML_CONTAINER",ATK_ROLE_HTML_CONTAINER,24);
+CheckEnum("ATK_ROLE_ICON",ATK_ROLE_ICON,25);
+CheckEnum("ATK_ROLE_IMAGE",ATK_ROLE_IMAGE,26);
+CheckEnum("ATK_ROLE_INTERNAL_FRAME",ATK_ROLE_INTERNAL_FRAME,27);
+CheckEnum("ATK_ROLE_LABEL",ATK_ROLE_LABEL,28);
+CheckEnum("ATK_ROLE_LAYERED_PANE",ATK_ROLE_LAYERED_PANE,29);
+CheckEnum("ATK_ROLE_LIST",ATK_ROLE_LIST,30);
+CheckEnum("ATK_ROLE_LIST_ITEM",ATK_ROLE_LIST_ITEM,31);
+CheckEnum("ATK_ROLE_MENU",ATK_ROLE_MENU,32);
+CheckEnum("ATK_ROLE_MENU_BAR",ATK_ROLE_MENU_BAR,33);
+CheckEnum("ATK_ROLE_MENU_ITEM",ATK_ROLE_MENU_ITEM,34);
+CheckEnum("ATK_ROLE_OPTION_PANE",ATK_ROLE_OPTION_PANE,35);
+CheckEnum("ATK_ROLE_PAGE_TAB",ATK_ROLE_PAGE_TAB,36);
+CheckEnum("ATK_ROLE_PAGE_TAB_LIST",ATK_ROLE_PAGE_TAB_LIST,37);
+CheckEnum("ATK_ROLE_PANEL",ATK_ROLE_PANEL,38);
+CheckEnum("ATK_ROLE_PASSWORD_TEXT",ATK_ROLE_PASSWORD_TEXT,39);
+CheckEnum("ATK_ROLE_POPUP_MENU",ATK_ROLE_POPUP_MENU,40);
+CheckEnum("ATK_ROLE_PROGRESS_BAR",ATK_ROLE_PROGRESS_BAR,41);
+CheckEnum("ATK_ROLE_PUSH_BUTTON",ATK_ROLE_PUSH_BUTTON,42);
+CheckEnum("ATK_ROLE_RADIO_BUTTON",ATK_ROLE_RADIO_BUTTON,43);
+CheckEnum("ATK_ROLE_RADIO_MENU_ITEM",ATK_ROLE_RADIO_MENU_ITEM,44);
+CheckEnum("ATK_ROLE_ROOT_PANE",ATK_ROLE_ROOT_PANE,45);
+CheckEnum("ATK_ROLE_ROW_HEADER",ATK_ROLE_ROW_HEADER,46);
+CheckEnum("ATK_ROLE_SCROLL_BAR",ATK_ROLE_SCROLL_BAR,47);
+CheckEnum("ATK_ROLE_SCROLL_PANE",ATK_ROLE_SCROLL_PANE,48);
+CheckEnum("ATK_ROLE_SEPARATOR",ATK_ROLE_SEPARATOR,49);
+CheckEnum("ATK_ROLE_SLIDER",ATK_ROLE_SLIDER,50);
+CheckEnum("ATK_ROLE_SPLIT_PANE",ATK_ROLE_SPLIT_PANE,51);
+CheckEnum("ATK_ROLE_SPIN_BUTTON",ATK_ROLE_SPIN_BUTTON,52);
+CheckEnum("ATK_ROLE_STATUSBAR",ATK_ROLE_STATUSBAR,53);
+CheckEnum("ATK_ROLE_TABLE",ATK_ROLE_TABLE,54);
+CheckEnum("ATK_ROLE_TABLE_CELL",ATK_ROLE_TABLE_CELL,55);
+CheckEnum("ATK_ROLE_TABLE_COLUMN_HEADER",ATK_ROLE_TABLE_COLUMN_HEADER,56);
+CheckEnum("ATK_ROLE_TABLE_ROW_HEADER",ATK_ROLE_TABLE_ROW_HEADER,57);
+CheckEnum("ATK_ROLE_TEAR_OFF_MENU_ITEM",ATK_ROLE_TEAR_OFF_MENU_ITEM,58);
+CheckEnum("ATK_ROLE_TERMINAL",ATK_ROLE_TERMINAL,59);
+CheckEnum("ATK_ROLE_TEXT",ATK_ROLE_TEXT,60);
+CheckEnum("ATK_ROLE_TOGGLE_BUTTON",ATK_ROLE_TOGGLE_BUTTON,61);
+CheckEnum("ATK_ROLE_TOOL_BAR",ATK_ROLE_TOOL_BAR,62);
+CheckEnum("ATK_ROLE_TOOL_TIP",ATK_ROLE_TOOL_TIP,63);
+CheckEnum("ATK_ROLE_TREE",ATK_ROLE_TREE,64);
+CheckEnum("ATK_ROLE_TREE_TABLE",ATK_ROLE_TREE_TABLE,65);
+CheckEnum("ATK_ROLE_UNKNOWN",ATK_ROLE_UNKNOWN,66);
+CheckEnum("ATK_ROLE_VIEWPORT",ATK_ROLE_VIEWPORT,67);
+CheckEnum("ATK_ROLE_WINDOW",ATK_ROLE_WINDOW,68);
+CheckEnum("ATK_ROLE_HEADER",ATK_ROLE_HEADER,69);
+CheckEnum("ATK_ROLE_FOOTER",ATK_ROLE_FOOTER,70);
+CheckEnum("ATK_ROLE_PARAGRAPH",ATK_ROLE_PARAGRAPH,71);
+CheckEnum("ATK_ROLE_RULER",ATK_ROLE_RULER,72);
+CheckEnum("ATK_ROLE_APPLICATION",ATK_ROLE_APPLICATION,73);
+CheckEnum("ATK_ROLE_AUTOCOMPLETE",ATK_ROLE_AUTOCOMPLETE,74);
+CheckEnum("ATK_ROLE_EDITBAR",ATK_ROLE_EDITBAR,75);
+CheckEnum("ATK_ROLE_EMBEDDED",ATK_ROLE_EMBEDDED,76);
+CheckEnum("ATK_ROLE_LAST_DEFINED",ATK_ROLE_LAST_DEFINED,77);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_ROLE_INVALID",ATK_ROLE_INVALID,0);
+CheckEnum("ATK_ROLE_ACCEL_LABEL",ATK_ROLE_ACCEL_LABEL,1);
+CheckEnum("ATK_ROLE_ALERT",ATK_ROLE_ALERT,2);
+CheckEnum("ATK_ROLE_ANIMATION",ATK_ROLE_ANIMATION,3);
+CheckEnum("ATK_ROLE_ARROW",ATK_ROLE_ARROW,4);
+CheckEnum("ATK_ROLE_CALENDAR",ATK_ROLE_CALENDAR,5);
+CheckEnum("ATK_ROLE_CANVAS",ATK_ROLE_CANVAS,6);
+CheckEnum("ATK_ROLE_CHECK_BOX",ATK_ROLE_CHECK_BOX,7);
+CheckEnum("ATK_ROLE_CHECK_MENU_ITEM",ATK_ROLE_CHECK_MENU_ITEM,8);
+CheckEnum("ATK_ROLE_COLOR_CHOOSER",ATK_ROLE_COLOR_CHOOSER,9);
+CheckEnum("ATK_ROLE_COLUMN_HEADER",ATK_ROLE_COLUMN_HEADER,10);
+CheckEnum("ATK_ROLE_COMBO_BOX",ATK_ROLE_COMBO_BOX,11);
+CheckEnum("ATK_ROLE_DATE_EDITOR",ATK_ROLE_DATE_EDITOR,12);
+CheckEnum("ATK_ROLE_DESKTOP_ICON",ATK_ROLE_DESKTOP_ICON,13);
+CheckEnum("ATK_ROLE_DESKTOP_FRAME",ATK_ROLE_DESKTOP_FRAME,14);
+CheckEnum("ATK_ROLE_DIAL",ATK_ROLE_DIAL,15);
+CheckEnum("ATK_ROLE_DIALOG",ATK_ROLE_DIALOG,16);
+CheckEnum("ATK_ROLE_DIRECTORY_PANE",ATK_ROLE_DIRECTORY_PANE,17);
+CheckEnum("ATK_ROLE_DRAWING_AREA",ATK_ROLE_DRAWING_AREA,18);
+CheckEnum("ATK_ROLE_FILE_CHOOSER",ATK_ROLE_FILE_CHOOSER,19);
+CheckEnum("ATK_ROLE_FILLER",ATK_ROLE_FILLER,20);
+CheckEnum("ATK_ROLE_FONT_CHOOSER",ATK_ROLE_FONT_CHOOSER,21);
+CheckEnum("ATK_ROLE_FRAME",ATK_ROLE_FRAME,22);
+CheckEnum("ATK_ROLE_GLASS_PANE",ATK_ROLE_GLASS_PANE,23);
+CheckEnum("ATK_ROLE_HTML_CONTAINER",ATK_ROLE_HTML_CONTAINER,24);
+CheckEnum("ATK_ROLE_ICON",ATK_ROLE_ICON,25);
+CheckEnum("ATK_ROLE_IMAGE",ATK_ROLE_IMAGE,26);
+CheckEnum("ATK_ROLE_INTERNAL_FRAME",ATK_ROLE_INTERNAL_FRAME,27);
+CheckEnum("ATK_ROLE_LABEL",ATK_ROLE_LABEL,28);
+CheckEnum("ATK_ROLE_LAYERED_PANE",ATK_ROLE_LAYERED_PANE,29);
+CheckEnum("ATK_ROLE_LIST",ATK_ROLE_LIST,30);
+CheckEnum("ATK_ROLE_LIST_ITEM",ATK_ROLE_LIST_ITEM,31);
+CheckEnum("ATK_ROLE_MENU",ATK_ROLE_MENU,32);
+CheckEnum("ATK_ROLE_MENU_BAR",ATK_ROLE_MENU_BAR,33);
+CheckEnum("ATK_ROLE_MENU_ITEM",ATK_ROLE_MENU_ITEM,34);
+CheckEnum("ATK_ROLE_OPTION_PANE",ATK_ROLE_OPTION_PANE,35);
+CheckEnum("ATK_ROLE_PAGE_TAB",ATK_ROLE_PAGE_TAB,36);
+CheckEnum("ATK_ROLE_PAGE_TAB_LIST",ATK_ROLE_PAGE_TAB_LIST,37);
+CheckEnum("ATK_ROLE_PANEL",ATK_ROLE_PANEL,38);
+CheckEnum("ATK_ROLE_PASSWORD_TEXT",ATK_ROLE_PASSWORD_TEXT,39);
+CheckEnum("ATK_ROLE_POPUP_MENU",ATK_ROLE_POPUP_MENU,40);
+CheckEnum("ATK_ROLE_PROGRESS_BAR",ATK_ROLE_PROGRESS_BAR,41);
+CheckEnum("ATK_ROLE_PUSH_BUTTON",ATK_ROLE_PUSH_BUTTON,42);
+CheckEnum("ATK_ROLE_RADIO_BUTTON",ATK_ROLE_RADIO_BUTTON,43);
+CheckEnum("ATK_ROLE_RADIO_MENU_ITEM",ATK_ROLE_RADIO_MENU_ITEM,44);
+CheckEnum("ATK_ROLE_ROOT_PANE",ATK_ROLE_ROOT_PANE,45);
+CheckEnum("ATK_ROLE_ROW_HEADER",ATK_ROLE_ROW_HEADER,46);
+CheckEnum("ATK_ROLE_SCROLL_BAR",ATK_ROLE_SCROLL_BAR,47);
+CheckEnum("ATK_ROLE_SCROLL_PANE",ATK_ROLE_SCROLL_PANE,48);
+CheckEnum("ATK_ROLE_SEPARATOR",ATK_ROLE_SEPARATOR,49);
+CheckEnum("ATK_ROLE_SLIDER",ATK_ROLE_SLIDER,50);
+CheckEnum("ATK_ROLE_SPLIT_PANE",ATK_ROLE_SPLIT_PANE,51);
+CheckEnum("ATK_ROLE_SPIN_BUTTON",ATK_ROLE_SPIN_BUTTON,52);
+CheckEnum("ATK_ROLE_STATUSBAR",ATK_ROLE_STATUSBAR,53);
+CheckEnum("ATK_ROLE_TABLE",ATK_ROLE_TABLE,54);
+CheckEnum("ATK_ROLE_TABLE_CELL",ATK_ROLE_TABLE_CELL,55);
+CheckEnum("ATK_ROLE_TABLE_COLUMN_HEADER",ATK_ROLE_TABLE_COLUMN_HEADER,56);
+CheckEnum("ATK_ROLE_TABLE_ROW_HEADER",ATK_ROLE_TABLE_ROW_HEADER,57);
+CheckEnum("ATK_ROLE_TEAR_OFF_MENU_ITEM",ATK_ROLE_TEAR_OFF_MENU_ITEM,58);
+CheckEnum("ATK_ROLE_TERMINAL",ATK_ROLE_TERMINAL,59);
+CheckEnum("ATK_ROLE_TEXT",ATK_ROLE_TEXT,60);
+CheckEnum("ATK_ROLE_TOGGLE_BUTTON",ATK_ROLE_TOGGLE_BUTTON,61);
+CheckEnum("ATK_ROLE_TOOL_BAR",ATK_ROLE_TOOL_BAR,62);
+CheckEnum("ATK_ROLE_TOOL_TIP",ATK_ROLE_TOOL_TIP,63);
+CheckEnum("ATK_ROLE_TREE",ATK_ROLE_TREE,64);
+CheckEnum("ATK_ROLE_TREE_TABLE",ATK_ROLE_TREE_TABLE,65);
+CheckEnum("ATK_ROLE_UNKNOWN",ATK_ROLE_UNKNOWN,66);
+CheckEnum("ATK_ROLE_VIEWPORT",ATK_ROLE_VIEWPORT,67);
+CheckEnum("ATK_ROLE_WINDOW",ATK_ROLE_WINDOW,68);
+CheckEnum("ATK_ROLE_HEADER",ATK_ROLE_HEADER,69);
+CheckEnum("ATK_ROLE_FOOTER",ATK_ROLE_FOOTER,70);
+CheckEnum("ATK_ROLE_PARAGRAPH",ATK_ROLE_PARAGRAPH,71);
+CheckEnum("ATK_ROLE_RULER",ATK_ROLE_RULER,72);
+CheckEnum("ATK_ROLE_APPLICATION",ATK_ROLE_APPLICATION,73);
+CheckEnum("ATK_ROLE_AUTOCOMPLETE",ATK_ROLE_AUTOCOMPLETE,74);
+CheckEnum("ATK_ROLE_EDITBAR",ATK_ROLE_EDITBAR,75);
+CheckEnum("ATK_ROLE_EMBEDDED",ATK_ROLE_EMBEDDED,76);
+CheckEnum("ATK_ROLE_LAST_DEFINED",ATK_ROLE_LAST_DEFINED,77);
+#elif __s390x__
+CheckEnum("ATK_ROLE_INVALID",ATK_ROLE_INVALID,0);
+CheckEnum("ATK_ROLE_ACCEL_LABEL",ATK_ROLE_ACCEL_LABEL,1);
+CheckEnum("ATK_ROLE_ALERT",ATK_ROLE_ALERT,2);
+CheckEnum("ATK_ROLE_ANIMATION",ATK_ROLE_ANIMATION,3);
+CheckEnum("ATK_ROLE_ARROW",ATK_ROLE_ARROW,4);
+CheckEnum("ATK_ROLE_CALENDAR",ATK_ROLE_CALENDAR,5);
+CheckEnum("ATK_ROLE_CANVAS",ATK_ROLE_CANVAS,6);
+CheckEnum("ATK_ROLE_CHECK_BOX",ATK_ROLE_CHECK_BOX,7);
+CheckEnum("ATK_ROLE_CHECK_MENU_ITEM",ATK_ROLE_CHECK_MENU_ITEM,8);
+CheckEnum("ATK_ROLE_COLOR_CHOOSER",ATK_ROLE_COLOR_CHOOSER,9);
+CheckEnum("ATK_ROLE_COLUMN_HEADER",ATK_ROLE_COLUMN_HEADER,10);
+CheckEnum("ATK_ROLE_COMBO_BOX",ATK_ROLE_COMBO_BOX,11);
+CheckEnum("ATK_ROLE_DATE_EDITOR",ATK_ROLE_DATE_EDITOR,12);
+CheckEnum("ATK_ROLE_DESKTOP_ICON",ATK_ROLE_DESKTOP_ICON,13);
+CheckEnum("ATK_ROLE_DESKTOP_FRAME",ATK_ROLE_DESKTOP_FRAME,14);
+CheckEnum("ATK_ROLE_DIAL",ATK_ROLE_DIAL,15);
+CheckEnum("ATK_ROLE_DIALOG",ATK_ROLE_DIALOG,16);
+CheckEnum("ATK_ROLE_DIRECTORY_PANE",ATK_ROLE_DIRECTORY_PANE,17);
+CheckEnum("ATK_ROLE_DRAWING_AREA",ATK_ROLE_DRAWING_AREA,18);
+CheckEnum("ATK_ROLE_FILE_CHOOSER",ATK_ROLE_FILE_CHOOSER,19);
+CheckEnum("ATK_ROLE_FILLER",ATK_ROLE_FILLER,20);
+CheckEnum("ATK_ROLE_FONT_CHOOSER",ATK_ROLE_FONT_CHOOSER,21);
+CheckEnum("ATK_ROLE_FRAME",ATK_ROLE_FRAME,22);
+CheckEnum("ATK_ROLE_GLASS_PANE",ATK_ROLE_GLASS_PANE,23);
+CheckEnum("ATK_ROLE_HTML_CONTAINER",ATK_ROLE_HTML_CONTAINER,24);
+CheckEnum("ATK_ROLE_ICON",ATK_ROLE_ICON,25);
+CheckEnum("ATK_ROLE_IMAGE",ATK_ROLE_IMAGE,26);
+CheckEnum("ATK_ROLE_INTERNAL_FRAME",ATK_ROLE_INTERNAL_FRAME,27);
+CheckEnum("ATK_ROLE_LABEL",ATK_ROLE_LABEL,28);
+CheckEnum("ATK_ROLE_LAYERED_PANE",ATK_ROLE_LAYERED_PANE,29);
+CheckEnum("ATK_ROLE_LIST",ATK_ROLE_LIST,30);
+CheckEnum("ATK_ROLE_LIST_ITEM",ATK_ROLE_LIST_ITEM,31);
+CheckEnum("ATK_ROLE_MENU",ATK_ROLE_MENU,32);
+CheckEnum("ATK_ROLE_MENU_BAR",ATK_ROLE_MENU_BAR,33);
+CheckEnum("ATK_ROLE_MENU_ITEM",ATK_ROLE_MENU_ITEM,34);
+CheckEnum("ATK_ROLE_OPTION_PANE",ATK_ROLE_OPTION_PANE,35);
+CheckEnum("ATK_ROLE_PAGE_TAB",ATK_ROLE_PAGE_TAB,36);
+CheckEnum("ATK_ROLE_PAGE_TAB_LIST",ATK_ROLE_PAGE_TAB_LIST,37);
+CheckEnum("ATK_ROLE_PANEL",ATK_ROLE_PANEL,38);
+CheckEnum("ATK_ROLE_PASSWORD_TEXT",ATK_ROLE_PASSWORD_TEXT,39);
+CheckEnum("ATK_ROLE_POPUP_MENU",ATK_ROLE_POPUP_MENU,40);
+CheckEnum("ATK_ROLE_PROGRESS_BAR",ATK_ROLE_PROGRESS_BAR,41);
+CheckEnum("ATK_ROLE_PUSH_BUTTON",ATK_ROLE_PUSH_BUTTON,42);
+CheckEnum("ATK_ROLE_RADIO_BUTTON",ATK_ROLE_RADIO_BUTTON,43);
+CheckEnum("ATK_ROLE_RADIO_MENU_ITEM",ATK_ROLE_RADIO_MENU_ITEM,44);
+CheckEnum("ATK_ROLE_ROOT_PANE",ATK_ROLE_ROOT_PANE,45);
+CheckEnum("ATK_ROLE_ROW_HEADER",ATK_ROLE_ROW_HEADER,46);
+CheckEnum("ATK_ROLE_SCROLL_BAR",ATK_ROLE_SCROLL_BAR,47);
+CheckEnum("ATK_ROLE_SCROLL_PANE",ATK_ROLE_SCROLL_PANE,48);
+CheckEnum("ATK_ROLE_SEPARATOR",ATK_ROLE_SEPARATOR,49);
+CheckEnum("ATK_ROLE_SLIDER",ATK_ROLE_SLIDER,50);
+CheckEnum("ATK_ROLE_SPLIT_PANE",ATK_ROLE_SPLIT_PANE,51);
+CheckEnum("ATK_ROLE_SPIN_BUTTON",ATK_ROLE_SPIN_BUTTON,52);
+CheckEnum("ATK_ROLE_STATUSBAR",ATK_ROLE_STATUSBAR,53);
+CheckEnum("ATK_ROLE_TABLE",ATK_ROLE_TABLE,54);
+CheckEnum("ATK_ROLE_TABLE_CELL",ATK_ROLE_TABLE_CELL,55);
+CheckEnum("ATK_ROLE_TABLE_COLUMN_HEADER",ATK_ROLE_TABLE_COLUMN_HEADER,56);
+CheckEnum("ATK_ROLE_TABLE_ROW_HEADER",ATK_ROLE_TABLE_ROW_HEADER,57);
+CheckEnum("ATK_ROLE_TEAR_OFF_MENU_ITEM",ATK_ROLE_TEAR_OFF_MENU_ITEM,58);
+CheckEnum("ATK_ROLE_TERMINAL",ATK_ROLE_TERMINAL,59);
+CheckEnum("ATK_ROLE_TEXT",ATK_ROLE_TEXT,60);
+CheckEnum("ATK_ROLE_TOGGLE_BUTTON",ATK_ROLE_TOGGLE_BUTTON,61);
+CheckEnum("ATK_ROLE_TOOL_BAR",ATK_ROLE_TOOL_BAR,62);
+CheckEnum("ATK_ROLE_TOOL_TIP",ATK_ROLE_TOOL_TIP,63);
+CheckEnum("ATK_ROLE_TREE",ATK_ROLE_TREE,64);
+CheckEnum("ATK_ROLE_TREE_TABLE",ATK_ROLE_TREE_TABLE,65);
+CheckEnum("ATK_ROLE_UNKNOWN",ATK_ROLE_UNKNOWN,66);
+CheckEnum("ATK_ROLE_VIEWPORT",ATK_ROLE_VIEWPORT,67);
+CheckEnum("ATK_ROLE_WINDOW",ATK_ROLE_WINDOW,68);
+CheckEnum("ATK_ROLE_HEADER",ATK_ROLE_HEADER,69);
+CheckEnum("ATK_ROLE_FOOTER",ATK_ROLE_FOOTER,70);
+CheckEnum("ATK_ROLE_PARAGRAPH",ATK_ROLE_PARAGRAPH,71);
+CheckEnum("ATK_ROLE_RULER",ATK_ROLE_RULER,72);
+CheckEnum("ATK_ROLE_APPLICATION",ATK_ROLE_APPLICATION,73);
+CheckEnum("ATK_ROLE_AUTOCOMPLETE",ATK_ROLE_AUTOCOMPLETE,74);
+CheckEnum("ATK_ROLE_EDITBAR",ATK_ROLE_EDITBAR,75);
+CheckEnum("ATK_ROLE_EMBEDDED",ATK_ROLE_EMBEDDED,76);
+CheckEnum("ATK_ROLE_LAST_DEFINED",ATK_ROLE_LAST_DEFINED,77);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12081,0);
 Msg("Find size of anon-atk-1.0/atk/atk.h-29 (12081)\n");
@@ -912,6 +1316,14 @@ CheckTypeSize(AtkRole,4, 12082, 2)
 CheckTypeSize(AtkRole,4, 12082, 11)
 #elif __ia64__
 CheckTypeSize(AtkRole,4, 12082, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRole,4, 12082, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRole,4, 12082, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRole,4, 12082, 10)
+#elif __s390x__
+CheckTypeSize(AtkRole,4, 12082, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12082,0);
 Msg("Find size of AtkRole (12082)\n");
@@ -929,6 +1341,22 @@ CheckOffset(struct _AtkRelationSet,relations,24,11,42405)
 CheckTypeSize(struct _AtkRelationSet,32, 12083, 3)
 CheckMemberSize(struct _AtkRelationSet,relations,8,3,42405)
 CheckOffset(struct _AtkRelationSet,relations,24,3,42405)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkRelationSet,16, 12083, 6)
+CheckMemberSize(struct _AtkRelationSet,relations,4,6,42405)
+CheckOffset(struct _AtkRelationSet,relations,12,6,42405)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkRelationSet,32, 12083, 9)
+CheckMemberSize(struct _AtkRelationSet,relations,8,9,42405)
+CheckOffset(struct _AtkRelationSet,relations,24,9,42405)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkRelationSet,16, 12083, 10)
+CheckMemberSize(struct _AtkRelationSet,relations,4,10,42405)
+CheckOffset(struct _AtkRelationSet,relations,12,10,42405)
+#elif __s390x__
+CheckTypeSize(struct _AtkRelationSet,32, 12083, 12)
+CheckMemberSize(struct _AtkRelationSet,relations,8,12,42405)
+CheckOffset(struct _AtkRelationSet,relations,24,12,42405)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12083,0);
 Msg("Find size of _AtkRelationSet (12083)\n");
@@ -940,6 +1368,14 @@ CheckTypeSize(AtkRelationSet,16, 12084, 2)
 CheckTypeSize(AtkRelationSet,32, 12084, 11)
 #elif __ia64__
 CheckTypeSize(AtkRelationSet,32, 12084, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRelationSet,16, 12084, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRelationSet,32, 12084, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRelationSet,16, 12084, 10)
+#elif __s390x__
+CheckTypeSize(AtkRelationSet,32, 12084, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12084,0);
 Msg("Find size of AtkRelationSet (12084)\n");
@@ -951,6 +1387,14 @@ CheckTypeSize(AtkRelationSet *,4, 12085, 2)
 CheckTypeSize(AtkRelationSet *,8, 12085, 11)
 #elif __ia64__
 CheckTypeSize(AtkRelationSet *,8, 12085, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRelationSet *,4, 12085, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRelationSet *,8, 12085, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRelationSet *,4, 12085, 10)
+#elif __s390x__
+CheckTypeSize(AtkRelationSet *,8, 12085, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12085,0);
 Msg("Find size of AtkRelationSet * (12085)\n");
@@ -983,6 +1427,42 @@ CheckEnum("ATK_LAYER_MDI",ATK_LAYER_MDI,4);
 CheckEnum("ATK_LAYER_POPUP",ATK_LAYER_POPUP,5);
 CheckEnum("ATK_LAYER_OVERLAY",ATK_LAYER_OVERLAY,6);
 CheckEnum("ATK_LAYER_WINDOW",ATK_LAYER_WINDOW,7);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_LAYER_INVALID",ATK_LAYER_INVALID,0);
+CheckEnum("ATK_LAYER_BACKGROUND",ATK_LAYER_BACKGROUND,1);
+CheckEnum("ATK_LAYER_CANVAS",ATK_LAYER_CANVAS,2);
+CheckEnum("ATK_LAYER_WIDGET",ATK_LAYER_WIDGET,3);
+CheckEnum("ATK_LAYER_MDI",ATK_LAYER_MDI,4);
+CheckEnum("ATK_LAYER_POPUP",ATK_LAYER_POPUP,5);
+CheckEnum("ATK_LAYER_OVERLAY",ATK_LAYER_OVERLAY,6);
+CheckEnum("ATK_LAYER_WINDOW",ATK_LAYER_WINDOW,7);
+#elif __powerpc64__
+CheckEnum("ATK_LAYER_INVALID",ATK_LAYER_INVALID,0);
+CheckEnum("ATK_LAYER_BACKGROUND",ATK_LAYER_BACKGROUND,1);
+CheckEnum("ATK_LAYER_CANVAS",ATK_LAYER_CANVAS,2);
+CheckEnum("ATK_LAYER_WIDGET",ATK_LAYER_WIDGET,3);
+CheckEnum("ATK_LAYER_MDI",ATK_LAYER_MDI,4);
+CheckEnum("ATK_LAYER_POPUP",ATK_LAYER_POPUP,5);
+CheckEnum("ATK_LAYER_OVERLAY",ATK_LAYER_OVERLAY,6);
+CheckEnum("ATK_LAYER_WINDOW",ATK_LAYER_WINDOW,7);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_LAYER_INVALID",ATK_LAYER_INVALID,0);
+CheckEnum("ATK_LAYER_BACKGROUND",ATK_LAYER_BACKGROUND,1);
+CheckEnum("ATK_LAYER_CANVAS",ATK_LAYER_CANVAS,2);
+CheckEnum("ATK_LAYER_WIDGET",ATK_LAYER_WIDGET,3);
+CheckEnum("ATK_LAYER_MDI",ATK_LAYER_MDI,4);
+CheckEnum("ATK_LAYER_POPUP",ATK_LAYER_POPUP,5);
+CheckEnum("ATK_LAYER_OVERLAY",ATK_LAYER_OVERLAY,6);
+CheckEnum("ATK_LAYER_WINDOW",ATK_LAYER_WINDOW,7);
+#elif __s390x__
+CheckEnum("ATK_LAYER_INVALID",ATK_LAYER_INVALID,0);
+CheckEnum("ATK_LAYER_BACKGROUND",ATK_LAYER_BACKGROUND,1);
+CheckEnum("ATK_LAYER_CANVAS",ATK_LAYER_CANVAS,2);
+CheckEnum("ATK_LAYER_WIDGET",ATK_LAYER_WIDGET,3);
+CheckEnum("ATK_LAYER_MDI",ATK_LAYER_MDI,4);
+CheckEnum("ATK_LAYER_POPUP",ATK_LAYER_POPUP,5);
+CheckEnum("ATK_LAYER_OVERLAY",ATK_LAYER_OVERLAY,6);
+CheckEnum("ATK_LAYER_WINDOW",ATK_LAYER_WINDOW,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12086,0);
 Msg("Find size of anon-atk-1.0/atk/atk.h-30 (12086)\n");
@@ -994,6 +1474,14 @@ CheckTypeSize(AtkLayer,4, 12087, 2)
 CheckTypeSize(AtkLayer,4, 12087, 11)
 #elif __ia64__
 CheckTypeSize(AtkLayer,4, 12087, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkLayer,4, 12087, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkLayer,4, 12087, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkLayer,4, 12087, 10)
+#elif __s390x__
+CheckTypeSize(AtkLayer,4, 12087, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12087,0);
 Msg("Find size of AtkLayer (12087)\n");
@@ -1017,6 +1505,30 @@ CheckMemberSize(struct _AtkPropertyValues,old_value,24,3,42417)
 CheckOffset(struct _AtkPropertyValues,old_value,8,3,42417)
 CheckMemberSize(struct _AtkPropertyValues,new_value,24,3,42418)
 CheckOffset(struct _AtkPropertyValues,new_value,32,3,42418)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkPropertyValues,56, 12088, 6)
+CheckMemberSize(struct _AtkPropertyValues,old_value,24,6,42417)
+CheckOffset(struct _AtkPropertyValues,old_value,8,6,42417)
+CheckMemberSize(struct _AtkPropertyValues,new_value,24,6,42418)
+CheckOffset(struct _AtkPropertyValues,new_value,32,6,42418)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkPropertyValues,56, 12088, 9)
+CheckMemberSize(struct _AtkPropertyValues,old_value,24,9,42417)
+CheckOffset(struct _AtkPropertyValues,old_value,8,9,42417)
+CheckMemberSize(struct _AtkPropertyValues,new_value,24,9,42418)
+CheckOffset(struct _AtkPropertyValues,new_value,32,9,42418)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkPropertyValues,56, 12088, 10)
+CheckMemberSize(struct _AtkPropertyValues,old_value,24,10,42417)
+CheckOffset(struct _AtkPropertyValues,old_value,8,10,42417)
+CheckMemberSize(struct _AtkPropertyValues,new_value,24,10,42418)
+CheckOffset(struct _AtkPropertyValues,new_value,32,10,42418)
+#elif __s390x__
+CheckTypeSize(struct _AtkPropertyValues,56, 12088, 12)
+CheckMemberSize(struct _AtkPropertyValues,old_value,24,12,42417)
+CheckOffset(struct _AtkPropertyValues,old_value,8,12,42417)
+CheckMemberSize(struct _AtkPropertyValues,new_value,24,12,42418)
+CheckOffset(struct _AtkPropertyValues,new_value,32,12,42418)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12088,0);
 Msg("Find size of _AtkPropertyValues (12088)\n");
@@ -1028,6 +1540,14 @@ CheckTypeSize(AtkPropertyValues,44, 12089, 2)
 CheckTypeSize(AtkPropertyValues,56, 12089, 11)
 #elif __ia64__
 CheckTypeSize(AtkPropertyValues,56, 12089, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkPropertyValues,56, 12089, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkPropertyValues,56, 12089, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkPropertyValues,56, 12089, 10)
+#elif __s390x__
+CheckTypeSize(AtkPropertyValues,56, 12089, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12089,0);
 Msg("Find size of AtkPropertyValues (12089)\n");
@@ -1039,6 +1559,14 @@ CheckTypeSize(AtkPropertyValues *,4, 12090, 2)
 CheckTypeSize(AtkPropertyValues *,8, 12090, 11)
 #elif __ia64__
 CheckTypeSize(AtkPropertyValues *,8, 12090, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkPropertyValues *,4, 12090, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkPropertyValues *,8, 12090, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkPropertyValues *,4, 12090, 10)
+#elif __s390x__
+CheckTypeSize(AtkPropertyValues *,8, 12090, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12090,0);
 Msg("Find size of AtkPropertyValues * (12090)\n");
@@ -1047,6 +1575,10 @@ Msg("Find size of AtkPropertyValues * (12090)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12091,0);
 Msg("Find size of fptr_atk_277 (12091)\n");
@@ -1058,6 +1590,14 @@ CheckTypeSize(AtkPropertyChangeHandler,4, 12092, 2)
 CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 11)
 #elif __ia64__
 CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkPropertyChangeHandler,4, 12092, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkPropertyChangeHandler,4, 12092, 10)
+#elif __s390x__
+CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12092,0);
 Msg("Find size of AtkPropertyChangeHandler (12092)\n");
@@ -1069,6 +1609,14 @@ CheckTypeSize(AtkPropertyChangeHandler *,4, 12093, 2)
 CheckTypeSize(AtkPropertyChangeHandler *,8, 12093, 11)
 #elif __ia64__
 CheckTypeSize(AtkPropertyChangeHandler *,8, 12093, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkPropertyChangeHandler *,4, 12093, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkPropertyChangeHandler *,8, 12093, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkPropertyChangeHandler *,4, 12093, 10)
+#elif __s390x__
+CheckTypeSize(AtkPropertyChangeHandler *,8, 12093, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12093,0);
 Msg("Find size of AtkPropertyChangeHandler * (12093)\n");
@@ -1080,6 +1628,14 @@ CheckTypeSize(AtkImage,0, 12095, 2)
 CheckTypeSize(AtkImage,0, 12095, 11)
 #elif __ia64__
 CheckTypeSize(AtkImage,0, 12095, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkImage,0, 12095, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkImage,0, 12095, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkImage,0, 12095, 10)
+#elif __s390x__
+CheckTypeSize(AtkImage,0, 12095, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12095,0);
 Msg("Find size of AtkImage (12095)\n");
@@ -1091,6 +1647,14 @@ CheckTypeSize(AtkImage *,4, 12096, 2)
 CheckTypeSize(AtkImage *,8, 12096, 11)
 #elif __ia64__
 CheckTypeSize(AtkImage *,8, 12096, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkImage *,4, 12096, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkImage *,8, 12096, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkImage *,4, 12096, 10)
+#elif __s390x__
+CheckTypeSize(AtkImage *,8, 12096, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12096,0);
 Msg("Find size of AtkImage * (12096)\n");
@@ -1105,6 +1669,18 @@ CheckEnum("ATK_XY_WINDOW",ATK_XY_WINDOW,1);
 #elif __ia64__
 CheckEnum("ATK_XY_SCREEN",ATK_XY_SCREEN,0);
 CheckEnum("ATK_XY_WINDOW",ATK_XY_WINDOW,1);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_XY_SCREEN",ATK_XY_SCREEN,0);
+CheckEnum("ATK_XY_WINDOW",ATK_XY_WINDOW,1);
+#elif __powerpc64__
+CheckEnum("ATK_XY_SCREEN",ATK_XY_SCREEN,0);
+CheckEnum("ATK_XY_WINDOW",ATK_XY_WINDOW,1);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_XY_SCREEN",ATK_XY_SCREEN,0);
+CheckEnum("ATK_XY_WINDOW",ATK_XY_WINDOW,1);
+#elif __s390x__
+CheckEnum("ATK_XY_SCREEN",ATK_XY_SCREEN,0);
+CheckEnum("ATK_XY_WINDOW",ATK_XY_WINDOW,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12097,0);
 Msg("Find size of anon-atk-1.0/atk/atk.h-17 (12097)\n");
@@ -1116,6 +1692,14 @@ CheckTypeSize(AtkCoordType,4, 12098, 2)
 CheckTypeSize(AtkCoordType,4, 12098, 11)
 #elif __ia64__
 CheckTypeSize(AtkCoordType,4, 12098, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkCoordType,4, 12098, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkCoordType,4, 12098, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkCoordType,4, 12098, 10)
+#elif __s390x__
+CheckTypeSize(AtkCoordType,4, 12098, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12098,0);
 Msg("Find size of AtkCoordType (12098)\n");
@@ -1169,6 +1753,70 @@ CheckEnum("ATK_RELATION_EMBEDDED_BY",ATK_RELATION_EMBEDDED_BY,11);
 CheckEnum("ATK_RELATION_POPUP_FOR",ATK_RELATION_POPUP_FOR,12);
 CheckEnum("ATK_RELATION_PARENT_WINDOW_OF",ATK_RELATION_PARENT_WINDOW_OF,13);
 CheckEnum("ATK_RELATION_LAST_DEFINED",ATK_RELATION_LAST_DEFINED,14);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_RELATION_NULL",ATK_RELATION_NULL,0);
+CheckEnum("ATK_RELATION_CONTROLLED_BY",ATK_RELATION_CONTROLLED_BY,1);
+CheckEnum("ATK_RELATION_CONTROLLER_FOR",ATK_RELATION_CONTROLLER_FOR,2);
+CheckEnum("ATK_RELATION_LABEL_FOR",ATK_RELATION_LABEL_FOR,3);
+CheckEnum("ATK_RELATION_LABELLED_BY",ATK_RELATION_LABELLED_BY,4);
+CheckEnum("ATK_RELATION_MEMBER_OF",ATK_RELATION_MEMBER_OF,5);
+CheckEnum("ATK_RELATION_NODE_CHILD_OF",ATK_RELATION_NODE_CHILD_OF,6);
+CheckEnum("ATK_RELATION_FLOWS_TO",ATK_RELATION_FLOWS_TO,7);
+CheckEnum("ATK_RELATION_FLOWS_FROM",ATK_RELATION_FLOWS_FROM,8);
+CheckEnum("ATK_RELATION_SUBWINDOW_OF",ATK_RELATION_SUBWINDOW_OF,9);
+CheckEnum("ATK_RELATION_EMBEDS",ATK_RELATION_EMBEDS,10);
+CheckEnum("ATK_RELATION_EMBEDDED_BY",ATK_RELATION_EMBEDDED_BY,11);
+CheckEnum("ATK_RELATION_POPUP_FOR",ATK_RELATION_POPUP_FOR,12);
+CheckEnum("ATK_RELATION_PARENT_WINDOW_OF",ATK_RELATION_PARENT_WINDOW_OF,13);
+CheckEnum("ATK_RELATION_LAST_DEFINED",ATK_RELATION_LAST_DEFINED,14);
+#elif __powerpc64__
+CheckEnum("ATK_RELATION_NULL",ATK_RELATION_NULL,0);
+CheckEnum("ATK_RELATION_CONTROLLED_BY",ATK_RELATION_CONTROLLED_BY,1);
+CheckEnum("ATK_RELATION_CONTROLLER_FOR",ATK_RELATION_CONTROLLER_FOR,2);
+CheckEnum("ATK_RELATION_LABEL_FOR",ATK_RELATION_LABEL_FOR,3);
+CheckEnum("ATK_RELATION_LABELLED_BY",ATK_RELATION_LABELLED_BY,4);
+CheckEnum("ATK_RELATION_MEMBER_OF",ATK_RELATION_MEMBER_OF,5);
+CheckEnum("ATK_RELATION_NODE_CHILD_OF",ATK_RELATION_NODE_CHILD_OF,6);
+CheckEnum("ATK_RELATION_FLOWS_TO",ATK_RELATION_FLOWS_TO,7);
+CheckEnum("ATK_RELATION_FLOWS_FROM",ATK_RELATION_FLOWS_FROM,8);
+CheckEnum("ATK_RELATION_SUBWINDOW_OF",ATK_RELATION_SUBWINDOW_OF,9);
+CheckEnum("ATK_RELATION_EMBEDS",ATK_RELATION_EMBEDS,10);
+CheckEnum("ATK_RELATION_EMBEDDED_BY",ATK_RELATION_EMBEDDED_BY,11);
+CheckEnum("ATK_RELATION_POPUP_FOR",ATK_RELATION_POPUP_FOR,12);
+CheckEnum("ATK_RELATION_PARENT_WINDOW_OF",ATK_RELATION_PARENT_WINDOW_OF,13);
+CheckEnum("ATK_RELATION_LAST_DEFINED",ATK_RELATION_LAST_DEFINED,14);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_RELATION_NULL",ATK_RELATION_NULL,0);
+CheckEnum("ATK_RELATION_CONTROLLED_BY",ATK_RELATION_CONTROLLED_BY,1);
+CheckEnum("ATK_RELATION_CONTROLLER_FOR",ATK_RELATION_CONTROLLER_FOR,2);
+CheckEnum("ATK_RELATION_LABEL_FOR",ATK_RELATION_LABEL_FOR,3);
+CheckEnum("ATK_RELATION_LABELLED_BY",ATK_RELATION_LABELLED_BY,4);
+CheckEnum("ATK_RELATION_MEMBER_OF",ATK_RELATION_MEMBER_OF,5);
+CheckEnum("ATK_RELATION_NODE_CHILD_OF",ATK_RELATION_NODE_CHILD_OF,6);
+CheckEnum("ATK_RELATION_FLOWS_TO",ATK_RELATION_FLOWS_TO,7);
+CheckEnum("ATK_RELATION_FLOWS_FROM",ATK_RELATION_FLOWS_FROM,8);
+CheckEnum("ATK_RELATION_SUBWINDOW_OF",ATK_RELATION_SUBWINDOW_OF,9);
+CheckEnum("ATK_RELATION_EMBEDS",ATK_RELATION_EMBEDS,10);
+CheckEnum("ATK_RELATION_EMBEDDED_BY",ATK_RELATION_EMBEDDED_BY,11);
+CheckEnum("ATK_RELATION_POPUP_FOR",ATK_RELATION_POPUP_FOR,12);
+CheckEnum("ATK_RELATION_PARENT_WINDOW_OF",ATK_RELATION_PARENT_WINDOW_OF,13);
+CheckEnum("ATK_RELATION_LAST_DEFINED",ATK_RELATION_LAST_DEFINED,14);
+#elif __s390x__
+CheckEnum("ATK_RELATION_NULL",ATK_RELATION_NULL,0);
+CheckEnum("ATK_RELATION_CONTROLLED_BY",ATK_RELATION_CONTROLLED_BY,1);
+CheckEnum("ATK_RELATION_CONTROLLER_FOR",ATK_RELATION_CONTROLLER_FOR,2);
+CheckEnum("ATK_RELATION_LABEL_FOR",ATK_RELATION_LABEL_FOR,3);
+CheckEnum("ATK_RELATION_LABELLED_BY",ATK_RELATION_LABELLED_BY,4);
+CheckEnum("ATK_RELATION_MEMBER_OF",ATK_RELATION_MEMBER_OF,5);
+CheckEnum("ATK_RELATION_NODE_CHILD_OF",ATK_RELATION_NODE_CHILD_OF,6);
+CheckEnum("ATK_RELATION_FLOWS_TO",ATK_RELATION_FLOWS_TO,7);
+CheckEnum("ATK_RELATION_FLOWS_FROM",ATK_RELATION_FLOWS_FROM,8);
+CheckEnum("ATK_RELATION_SUBWINDOW_OF",ATK_RELATION_SUBWINDOW_OF,9);
+CheckEnum("ATK_RELATION_EMBEDS",ATK_RELATION_EMBEDS,10);
+CheckEnum("ATK_RELATION_EMBEDDED_BY",ATK_RELATION_EMBEDDED_BY,11);
+CheckEnum("ATK_RELATION_POPUP_FOR",ATK_RELATION_POPUP_FOR,12);
+CheckEnum("ATK_RELATION_PARENT_WINDOW_OF",ATK_RELATION_PARENT_WINDOW_OF,13);
+CheckEnum("ATK_RELATION_LAST_DEFINED",ATK_RELATION_LAST_DEFINED,14);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12099,0);
 Msg("Find size of anon-atk-1.0/atk/atk.h-39 (12099)\n");
@@ -1180,6 +1828,14 @@ CheckTypeSize(AtkRelationType,4, 12100, 2)
 CheckTypeSize(AtkRelationType,4, 12100, 11)
 #elif __ia64__
 CheckTypeSize(AtkRelationType,4, 12100, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRelationType,4, 12100, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRelationType,4, 12100, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRelationType,4, 12100, 10)
+#elif __s390x__
+CheckTypeSize(AtkRelationType,4, 12100, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12100,0);
 Msg("Find size of AtkRelationType (12100)\n");
@@ -1203,6 +1859,30 @@ CheckMemberSize(struct _AtkRelation,target,8,3,42439)
 CheckOffset(struct _AtkRelation,target,24,3,42439)
 CheckMemberSize(struct _AtkRelation,relationship,4,3,42440)
 CheckOffset(struct _AtkRelation,relationship,32,3,42440)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkRelation,20, 12101, 6)
+CheckMemberSize(struct _AtkRelation,target,4,6,42439)
+CheckOffset(struct _AtkRelation,target,12,6,42439)
+CheckMemberSize(struct _AtkRelation,relationship,4,6,42440)
+CheckOffset(struct _AtkRelation,relationship,16,6,42440)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkRelation,40, 12101, 9)
+CheckMemberSize(struct _AtkRelation,target,8,9,42439)
+CheckOffset(struct _AtkRelation,target,24,9,42439)
+CheckMemberSize(struct _AtkRelation,relationship,4,9,42440)
+CheckOffset(struct _AtkRelation,relationship,32,9,42440)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkRelation,20, 12101, 10)
+CheckMemberSize(struct _AtkRelation,target,4,10,42439)
+CheckOffset(struct _AtkRelation,target,12,10,42439)
+CheckMemberSize(struct _AtkRelation,relationship,4,10,42440)
+CheckOffset(struct _AtkRelation,relationship,16,10,42440)
+#elif __s390x__
+CheckTypeSize(struct _AtkRelation,40, 12101, 12)
+CheckMemberSize(struct _AtkRelation,target,8,12,42439)
+CheckOffset(struct _AtkRelation,target,24,12,42439)
+CheckMemberSize(struct _AtkRelation,relationship,4,12,42440)
+CheckOffset(struct _AtkRelation,relationship,32,12,42440)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12101,0);
 Msg("Find size of _AtkRelation (12101)\n");
@@ -1214,6 +1894,14 @@ CheckTypeSize(AtkRelation,20, 12102, 2)
 CheckTypeSize(AtkRelation,40, 12102, 11)
 #elif __ia64__
 CheckTypeSize(AtkRelation,40, 12102, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRelation,20, 12102, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRelation,40, 12102, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRelation,20, 12102, 10)
+#elif __s390x__
+CheckTypeSize(AtkRelation,40, 12102, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12102,0);
 Msg("Find size of AtkRelation (12102)\n");
@@ -1225,6 +1913,14 @@ CheckTypeSize(AtkRelation *,4, 12103, 2)
 CheckTypeSize(AtkRelation *,8, 12103, 11)
 #elif __ia64__
 CheckTypeSize(AtkRelation *,8, 12103, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRelation *,4, 12103, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRelation *,8, 12103, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRelation *,4, 12103, 10)
+#elif __s390x__
+CheckTypeSize(AtkRelation *,8, 12103, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12103,0);
 Msg("Find size of AtkRelation * (12103)\n");
@@ -1236,6 +1932,14 @@ CheckTypeSize(AtkDocument,0, 12105, 2)
 CheckTypeSize(AtkDocument,0, 12105, 11)
 #elif __ia64__
 CheckTypeSize(AtkDocument,0, 12105, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkDocument,0, 12105, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkDocument,0, 12105, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkDocument,0, 12105, 10)
+#elif __s390x__
+CheckTypeSize(AtkDocument,0, 12105, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12105,0);
 Msg("Find size of AtkDocument (12105)\n");
@@ -1247,6 +1951,14 @@ CheckTypeSize(AtkDocument *,4, 12106, 2)
 CheckTypeSize(AtkDocument *,8, 12106, 11)
 #elif __ia64__
 CheckTypeSize(AtkDocument *,8, 12106, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkDocument *,4, 12106, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkDocument *,8, 12106, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkDocument *,4, 12106, 10)
+#elif __s390x__
+CheckTypeSize(AtkDocument *,8, 12106, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12106,0);
 Msg("Find size of AtkDocument * (12106)\n");
@@ -1258,6 +1970,14 @@ CheckTypeSize(AtkTable,0, 12108, 2)
 CheckTypeSize(AtkTable,0, 12108, 11)
 #elif __ia64__
 CheckTypeSize(AtkTable,0, 12108, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTable,0, 12108, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTable,0, 12108, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTable,0, 12108, 10)
+#elif __s390x__
+CheckTypeSize(AtkTable,0, 12108, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12108,0);
 Msg("Find size of AtkTable (12108)\n");
@@ -1269,6 +1989,14 @@ CheckTypeSize(AtkTable *,4, 12109, 2)
 CheckTypeSize(AtkTable *,8, 12109, 11)
 #elif __ia64__
 CheckTypeSize(AtkTable *,8, 12109, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTable *,4, 12109, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTable *,8, 12109, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTable *,4, 12109, 10)
+#elif __s390x__
+CheckTypeSize(AtkTable *,8, 12109, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12109,0);
 Msg("Find size of AtkTable * (12109)\n");
@@ -1286,6 +2014,22 @@ CheckOffset(struct _AtkHyperlink,parent,0,11,42441)
 CheckTypeSize(struct _AtkHyperlink,24, 12110, 3)
 Msg("Missing member data for _AtkHyperlink on IA64\n");
 CheckOffset(struct _AtkHyperlink,parent,0,3,42441)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkHyperlink,12, 12110, 6)
+Msg("Missing member data for _AtkHyperlink on PPC32\n");
+CheckOffset(struct _AtkHyperlink,parent,0,6,42441)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkHyperlink,24, 12110, 9)
+Msg("Missing member data for _AtkHyperlink on PPC64\n");
+CheckOffset(struct _AtkHyperlink,parent,0,9,42441)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkHyperlink,12, 12110, 10)
+Msg("Missing member data for _AtkHyperlink on S390\n");
+CheckOffset(struct _AtkHyperlink,parent,0,10,42441)
+#elif __s390x__
+CheckTypeSize(struct _AtkHyperlink,24, 12110, 12)
+Msg("Missing member data for _AtkHyperlink on S390X\n");
+CheckOffset(struct _AtkHyperlink,parent,0,12,42441)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12110,0);
 Msg("Find size of _AtkHyperlink (12110)\n");
@@ -1297,6 +2041,14 @@ CheckTypeSize(AtkHyperlink,12, 12111, 2)
 CheckTypeSize(AtkHyperlink,24, 12111, 11)
 #elif __ia64__
 CheckTypeSize(AtkHyperlink,24, 12111, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkHyperlink,12, 12111, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkHyperlink,24, 12111, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkHyperlink,12, 12111, 10)
+#elif __s390x__
+CheckTypeSize(AtkHyperlink,24, 12111, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12111,0);
 Msg("Find size of AtkHyperlink (12111)\n");
@@ -1308,6 +2060,14 @@ CheckTypeSize(AtkHyperlink *,4, 12112, 2)
 CheckTypeSize(AtkHyperlink *,8, 12112, 11)
 #elif __ia64__
 CheckTypeSize(AtkHyperlink *,8, 12112, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkHyperlink *,4, 12112, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkHyperlink *,8, 12112, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkHyperlink *,4, 12112, 10)
+#elif __s390x__
+CheckTypeSize(AtkHyperlink *,8, 12112, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12112,0);
 Msg("Find size of AtkHyperlink * (12112)\n");
@@ -1325,6 +2085,22 @@ CheckOffset(struct _AtkStateSet,parent,0,11,42442)
 CheckTypeSize(struct _AtkStateSet,24, 12113, 3)
 Msg("Missing member data for _AtkStateSet on IA64\n");
 CheckOffset(struct _AtkStateSet,parent,0,3,42442)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkStateSet,12, 12113, 6)
+Msg("Missing member data for _AtkStateSet on PPC32\n");
+CheckOffset(struct _AtkStateSet,parent,0,6,42442)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkStateSet,24, 12113, 9)
+Msg("Missing member data for _AtkStateSet on PPC64\n");
+CheckOffset(struct _AtkStateSet,parent,0,9,42442)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkStateSet,12, 12113, 10)
+Msg("Missing member data for _AtkStateSet on S390\n");
+CheckOffset(struct _AtkStateSet,parent,0,10,42442)
+#elif __s390x__
+CheckTypeSize(struct _AtkStateSet,24, 12113, 12)
+Msg("Missing member data for _AtkStateSet on S390X\n");
+CheckOffset(struct _AtkStateSet,parent,0,12,42442)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12113,0);
 Msg("Find size of _AtkStateSet (12113)\n");
@@ -1336,6 +2112,14 @@ CheckTypeSize(AtkStateSet,12, 12114, 2)
 CheckTypeSize(AtkStateSet,24, 12114, 11)
 #elif __ia64__
 CheckTypeSize(AtkStateSet,24, 12114, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkStateSet,12, 12114, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkStateSet,24, 12114, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkStateSet,12, 12114, 10)
+#elif __s390x__
+CheckTypeSize(AtkStateSet,24, 12114, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12114,0);
 Msg("Find size of AtkStateSet (12114)\n");
@@ -1347,6 +2131,14 @@ CheckTypeSize(AtkStateSet *,4, 12115, 2)
 CheckTypeSize(AtkStateSet *,8, 12115, 11)
 #elif __ia64__
 CheckTypeSize(AtkStateSet *,8, 12115, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkStateSet *,4, 12115, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkStateSet *,8, 12115, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkStateSet *,4, 12115, 10)
+#elif __s390x__
+CheckTypeSize(AtkStateSet *,8, 12115, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12115,0);
 Msg("Find size of AtkStateSet * (12115)\n");
@@ -1364,6 +2156,22 @@ CheckOffset(struct _AtkObjectFactory,parent,0,11,42443)
 CheckTypeSize(struct _AtkObjectFactory,24, 12116, 3)
 Msg("Missing member data for _AtkObjectFactory on IA64\n");
 CheckOffset(struct _AtkObjectFactory,parent,0,3,42443)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkObjectFactory,12, 12116, 6)
+Msg("Missing member data for _AtkObjectFactory on PPC32\n");
+CheckOffset(struct _AtkObjectFactory,parent,0,6,42443)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkObjectFactory,24, 12116, 9)
+Msg("Missing member data for _AtkObjectFactory on PPC64\n");
+CheckOffset(struct _AtkObjectFactory,parent,0,9,42443)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkObjectFactory,12, 12116, 10)
+Msg("Missing member data for _AtkObjectFactory on S390\n");
+CheckOffset(struct _AtkObjectFactory,parent,0,10,42443)
+#elif __s390x__
+CheckTypeSize(struct _AtkObjectFactory,24, 12116, 12)
+Msg("Missing member data for _AtkObjectFactory on S390X\n");
+CheckOffset(struct _AtkObjectFactory,parent,0,12,42443)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12116,0);
 Msg("Find size of _AtkObjectFactory (12116)\n");
@@ -1375,6 +2183,14 @@ CheckTypeSize(AtkObjectFactory,12, 12117, 2)
 CheckTypeSize(AtkObjectFactory,24, 12117, 11)
 #elif __ia64__
 CheckTypeSize(AtkObjectFactory,24, 12117, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkObjectFactory,12, 12117, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkObjectFactory,24, 12117, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkObjectFactory,12, 12117, 10)
+#elif __s390x__
+CheckTypeSize(AtkObjectFactory,24, 12117, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12117,0);
 Msg("Find size of AtkObjectFactory (12117)\n");
@@ -1386,6 +2202,14 @@ CheckTypeSize(AtkObjectFactory *,4, 12118, 2)
 CheckTypeSize(AtkObjectFactory *,8, 12118, 11)
 #elif __ia64__
 CheckTypeSize(AtkObjectFactory *,8, 12118, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkObjectFactory *,4, 12118, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkObjectFactory *,8, 12118, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkObjectFactory *,4, 12118, 10)
+#elif __s390x__
+CheckTypeSize(AtkObjectFactory *,8, 12118, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12118,0);
 Msg("Find size of AtkObjectFactory * (12118)\n");
@@ -1409,6 +2233,30 @@ CheckMemberSize(struct _AtkRegistry,factory_type_registry,8,3,42445)
 CheckOffset(struct _AtkRegistry,factory_type_registry,24,3,42445)
 CheckMemberSize(struct _AtkRegistry,factory_singleton_cache,8,3,42446)
 CheckOffset(struct _AtkRegistry,factory_singleton_cache,32,3,42446)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkRegistry,20, 12119, 6)
+CheckMemberSize(struct _AtkRegistry,factory_type_registry,4,6,42445)
+CheckOffset(struct _AtkRegistry,factory_type_registry,12,6,42445)
+CheckMemberSize(struct _AtkRegistry,factory_singleton_cache,4,6,42446)
+CheckOffset(struct _AtkRegistry,factory_singleton_cache,16,6,42446)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkRegistry,40, 12119, 9)
+CheckMemberSize(struct _AtkRegistry,factory_type_registry,8,9,42445)
+CheckOffset(struct _AtkRegistry,factory_type_registry,24,9,42445)
+CheckMemberSize(struct _AtkRegistry,factory_singleton_cache,8,9,42446)
+CheckOffset(struct _AtkRegistry,factory_singleton_cache,32,9,42446)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkRegistry,20, 12119, 10)
+CheckMemberSize(struct _AtkRegistry,factory_type_registry,4,10,42445)
+CheckOffset(struct _AtkRegistry,factory_type_registry,12,10,42445)
+CheckMemberSize(struct _AtkRegistry,factory_singleton_cache,4,10,42446)
+CheckOffset(struct _AtkRegistry,factory_singleton_cache,16,10,42446)
+#elif __s390x__
+CheckTypeSize(struct _AtkRegistry,40, 12119, 12)
+CheckMemberSize(struct _AtkRegistry,factory_type_registry,8,12,42445)
+CheckOffset(struct _AtkRegistry,factory_type_registry,24,12,42445)
+CheckMemberSize(struct _AtkRegistry,factory_singleton_cache,8,12,42446)
+CheckOffset(struct _AtkRegistry,factory_singleton_cache,32,12,42446)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12119,0);
 Msg("Find size of _AtkRegistry (12119)\n");
@@ -1420,6 +2268,14 @@ CheckTypeSize(AtkRegistry,20, 12120, 2)
 CheckTypeSize(AtkRegistry,40, 12120, 11)
 #elif __ia64__
 CheckTypeSize(AtkRegistry,40, 12120, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRegistry,20, 12120, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRegistry,40, 12120, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRegistry,20, 12120, 10)
+#elif __s390x__
+CheckTypeSize(AtkRegistry,40, 12120, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12120,0);
 Msg("Find size of AtkRegistry (12120)\n");
@@ -1431,6 +2287,14 @@ CheckTypeSize(AtkRegistry *,4, 12121, 2)
 CheckTypeSize(AtkRegistry *,8, 12121, 11)
 #elif __ia64__
 CheckTypeSize(AtkRegistry *,8, 12121, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRegistry *,4, 12121, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRegistry *,8, 12121, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRegistry *,4, 12121, 10)
+#elif __s390x__
+CheckTypeSize(AtkRegistry *,8, 12121, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12121,0);
 Msg("Find size of AtkRegistry * (12121)\n");
@@ -1442,6 +2306,14 @@ CheckTypeSize(AtkEditableText,0, 12123, 2)
 CheckTypeSize(AtkEditableText,0, 12123, 11)
 #elif __ia64__
 CheckTypeSize(AtkEditableText,0, 12123, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkEditableText,0, 12123, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkEditableText,0, 12123, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkEditableText,0, 12123, 10)
+#elif __s390x__
+CheckTypeSize(AtkEditableText,0, 12123, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12123,0);
 Msg("Find size of AtkEditableText (12123)\n");
@@ -1453,6 +2325,14 @@ CheckTypeSize(AtkEditableText *,4, 12124, 2)
 CheckTypeSize(AtkEditableText *,8, 12124, 11)
 #elif __ia64__
 CheckTypeSize(AtkEditableText *,8, 12124, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkEditableText *,4, 12124, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkEditableText *,8, 12124, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkEditableText *,4, 12124, 10)
+#elif __s390x__
+CheckTypeSize(AtkEditableText *,8, 12124, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12124,0);
 Msg("Find size of AtkEditableText * (12124)\n");
@@ -1464,6 +2344,14 @@ CheckTypeSize(AtkAttributeSet,8, 12125, 2)
 CheckTypeSize(AtkAttributeSet,16, 12125, 11)
 #elif __ia64__
 CheckTypeSize(AtkAttributeSet,16, 12125, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkAttributeSet,8, 12125, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkAttributeSet,16, 12125, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkAttributeSet,8, 12125, 10)
+#elif __s390x__
+CheckTypeSize(AtkAttributeSet,16, 12125, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12125,0);
 Msg("Find size of AtkAttributeSet (12125)\n");
@@ -1475,6 +2363,14 @@ CheckTypeSize(AtkAttributeSet *,4, 12126, 2)
 CheckTypeSize(AtkAttributeSet *,8, 12126, 11)
 #elif __ia64__
 CheckTypeSize(AtkAttributeSet *,8, 12126, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkAttributeSet *,4, 12126, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkAttributeSet *,8, 12126, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkAttributeSet *,4, 12126, 10)
+#elif __s390x__
+CheckTypeSize(AtkAttributeSet *,8, 12126, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12126,0);
 Msg("Find size of AtkAttributeSet * (12126)\n");
@@ -1486,6 +2382,14 @@ CheckTypeSize(AtkHypertext,0, 12128, 2)
 CheckTypeSize(AtkHypertext,0, 12128, 11)
 #elif __ia64__
 CheckTypeSize(AtkHypertext,0, 12128, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkHypertext,0, 12128, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkHypertext,0, 12128, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkHypertext,0, 12128, 10)
+#elif __s390x__
+CheckTypeSize(AtkHypertext,0, 12128, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12128,0);
 Msg("Find size of AtkHypertext (12128)\n");
@@ -1497,6 +2401,14 @@ CheckTypeSize(AtkHypertext *,4, 12129, 2)
 CheckTypeSize(AtkHypertext *,8, 12129, 11)
 #elif __ia64__
 CheckTypeSize(AtkHypertext *,8, 12129, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkHypertext *,4, 12129, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkHypertext *,8, 12129, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkHypertext *,4, 12129, 10)
+#elif __s390x__
+CheckTypeSize(AtkHypertext *,8, 12129, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12129,0);
 Msg("Find size of AtkHypertext * (12129)\n");
@@ -1508,6 +2420,14 @@ CheckTypeSize(AtkSelection,0, 12131, 2)
 CheckTypeSize(AtkSelection,0, 12131, 11)
 #elif __ia64__
 CheckTypeSize(AtkSelection,0, 12131, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkSelection,0, 12131, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkSelection,0, 12131, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkSelection,0, 12131, 10)
+#elif __s390x__
+CheckTypeSize(AtkSelection,0, 12131, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12131,0);
 Msg("Find size of AtkSelection (12131)\n");
@@ -1519,6 +2439,14 @@ CheckTypeSize(AtkSelection *,4, 12132, 2)
 CheckTypeSize(AtkSelection *,8, 12132, 11)
 #elif __ia64__
 CheckTypeSize(AtkSelection *,8, 12132, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkSelection *,4, 12132, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkSelection *,8, 12132, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkSelection *,4, 12132, 10)
+#elif __s390x__
+CheckTypeSize(AtkSelection *,8, 12132, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12132,0);
 Msg("Find size of AtkSelection * (12132)\n");
@@ -1530,6 +2458,14 @@ CheckTypeSize(AtkAction,0, 12134, 2)
 CheckTypeSize(AtkAction,0, 12134, 11)
 #elif __ia64__
 CheckTypeSize(AtkAction,0, 12134, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkAction,0, 12134, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkAction,0, 12134, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkAction,0, 12134, 10)
+#elif __s390x__
+CheckTypeSize(AtkAction,0, 12134, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12134,0);
 Msg("Find size of AtkAction (12134)\n");
@@ -1541,6 +2477,14 @@ CheckTypeSize(AtkAction *,4, 12135, 2)
 CheckTypeSize(AtkAction *,8, 12135, 11)
 #elif __ia64__
 CheckTypeSize(AtkAction *,8, 12135, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkAction *,4, 12135, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkAction *,8, 12135, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkAction *,4, 12135, 10)
+#elif __s390x__
+CheckTypeSize(AtkAction *,8, 12135, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12135,0);
 Msg("Find size of AtkAction * (12135)\n");
@@ -1552,6 +2496,14 @@ CheckTypeSize(AtkComponent,0, 12137, 2)
 CheckTypeSize(AtkComponent,0, 12137, 11)
 #elif __ia64__
 CheckTypeSize(AtkComponent,0, 12137, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkComponent,0, 12137, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkComponent,0, 12137, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkComponent,0, 12137, 10)
+#elif __s390x__
+CheckTypeSize(AtkComponent,0, 12137, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12137,0);
 Msg("Find size of AtkComponent (12137)\n");
@@ -1563,6 +2515,14 @@ CheckTypeSize(AtkComponent *,4, 12138, 2)
 CheckTypeSize(AtkComponent *,8, 12138, 11)
 #elif __ia64__
 CheckTypeSize(AtkComponent *,8, 12138, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkComponent *,4, 12138, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkComponent *,8, 12138, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkComponent *,4, 12138, 10)
+#elif __s390x__
+CheckTypeSize(AtkComponent *,8, 12138, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12138,0);
 Msg("Find size of AtkComponent * (12138)\n");
@@ -1574,6 +2534,14 @@ CheckTypeSize(AtkValue,0, 12140, 2)
 CheckTypeSize(AtkValue,0, 12140, 11)
 #elif __ia64__
 CheckTypeSize(AtkValue,0, 12140, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkValue,0, 12140, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkValue,0, 12140, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkValue,0, 12140, 10)
+#elif __s390x__
+CheckTypeSize(AtkValue,0, 12140, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12140,0);
 Msg("Find size of AtkValue (12140)\n");
@@ -1585,6 +2553,14 @@ CheckTypeSize(AtkValue *,4, 12141, 2)
 CheckTypeSize(AtkValue *,8, 12141, 11)
 #elif __ia64__
 CheckTypeSize(AtkValue *,8, 12141, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkValue *,4, 12141, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkValue *,8, 12141, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkValue *,4, 12141, 10)
+#elif __s390x__
+CheckTypeSize(AtkValue *,8, 12141, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12141,0);
 Msg("Find size of AtkValue * (12141)\n");
@@ -1596,6 +2572,14 @@ CheckTypeSize(AtkStreamableContent,0, 12143, 2)
 CheckTypeSize(AtkStreamableContent,0, 12143, 11)
 #elif __ia64__
 CheckTypeSize(AtkStreamableContent,0, 12143, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkStreamableContent,0, 12143, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkStreamableContent,0, 12143, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkStreamableContent,0, 12143, 10)
+#elif __s390x__
+CheckTypeSize(AtkStreamableContent,0, 12143, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12143,0);
 Msg("Find size of AtkStreamableContent (12143)\n");
@@ -1607,6 +2591,14 @@ CheckTypeSize(AtkStreamableContent *,4, 12144, 2)
 CheckTypeSize(AtkStreamableContent *,8, 12144, 11)
 #elif __ia64__
 CheckTypeSize(AtkStreamableContent *,8, 12144, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkStreamableContent *,4, 12144, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkStreamableContent *,8, 12144, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkStreamableContent *,4, 12144, 10)
+#elif __s390x__
+CheckTypeSize(AtkStreamableContent *,8, 12144, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12144,0);
 Msg("Find size of AtkStreamableContent * (12144)\n");
@@ -1618,6 +2610,14 @@ CheckTypeSize(AtkEventListenerInit,4, 12145, 2)
 CheckTypeSize(AtkEventListenerInit,8, 12145, 11)
 #elif __ia64__
 CheckTypeSize(AtkEventListenerInit,8, 12145, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkEventListenerInit,4, 12145, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkEventListenerInit,8, 12145, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkEventListenerInit,4, 12145, 10)
+#elif __s390x__
+CheckTypeSize(AtkEventListenerInit,8, 12145, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12145,0);
 Msg("Find size of AtkEventListenerInit (12145)\n");
@@ -1713,6 +2713,126 @@ CheckEnum("ATK_TEXT_ATTR_STRETCH",ATK_TEXT_ATTR_STRETCH,25);
 CheckEnum("ATK_TEXT_ATTR_VARIANT",ATK_TEXT_ATTR_VARIANT,26);
 CheckEnum("ATK_TEXT_ATTR_STYLE",ATK_TEXT_ATTR_STYLE,27);
 CheckEnum("ATK_TEXT_ATTR_LAST_DEFINED",ATK_TEXT_ATTR_LAST_DEFINED,28);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_TEXT_ATTR_INVALID",ATK_TEXT_ATTR_INVALID,0);
+CheckEnum("ATK_TEXT_ATTR_LEFT_MARGIN",ATK_TEXT_ATTR_LEFT_MARGIN,1);
+CheckEnum("ATK_TEXT_ATTR_RIGHT_MARGIN",ATK_TEXT_ATTR_RIGHT_MARGIN,2);
+CheckEnum("ATK_TEXT_ATTR_INDENT",ATK_TEXT_ATTR_INDENT,3);
+CheckEnum("ATK_TEXT_ATTR_INVISIBLE",ATK_TEXT_ATTR_INVISIBLE,4);
+CheckEnum("ATK_TEXT_ATTR_EDITABLE",ATK_TEXT_ATTR_EDITABLE,5);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_ABOVE_LINES",ATK_TEXT_ATTR_PIXELS_ABOVE_LINES,6);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_BELOW_LINES",ATK_TEXT_ATTR_PIXELS_BELOW_LINES,7);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP",ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP,8);
+CheckEnum("ATK_TEXT_ATTR_BG_FULL_HEIGHT",ATK_TEXT_ATTR_BG_FULL_HEIGHT,9);
+CheckEnum("ATK_TEXT_ATTR_RISE",ATK_TEXT_ATTR_RISE,10);
+CheckEnum("ATK_TEXT_ATTR_UNDERLINE",ATK_TEXT_ATTR_UNDERLINE,11);
+CheckEnum("ATK_TEXT_ATTR_STRIKETHROUGH",ATK_TEXT_ATTR_STRIKETHROUGH,12);
+CheckEnum("ATK_TEXT_ATTR_SIZE",ATK_TEXT_ATTR_SIZE,13);
+CheckEnum("ATK_TEXT_ATTR_SCALE",ATK_TEXT_ATTR_SCALE,14);
+CheckEnum("ATK_TEXT_ATTR_WEIGHT",ATK_TEXT_ATTR_WEIGHT,15);
+CheckEnum("ATK_TEXT_ATTR_LANGUAGE",ATK_TEXT_ATTR_LANGUAGE,16);
+CheckEnum("ATK_TEXT_ATTR_FAMILY_NAME",ATK_TEXT_ATTR_FAMILY_NAME,17);
+CheckEnum("ATK_TEXT_ATTR_BG_COLOR",ATK_TEXT_ATTR_BG_COLOR,18);
+CheckEnum("ATK_TEXT_ATTR_FG_COLOR",ATK_TEXT_ATTR_FG_COLOR,19);
+CheckEnum("ATK_TEXT_ATTR_BG_STIPPLE",ATK_TEXT_ATTR_BG_STIPPLE,20);
+CheckEnum("ATK_TEXT_ATTR_FG_STIPPLE",ATK_TEXT_ATTR_FG_STIPPLE,21);
+CheckEnum("ATK_TEXT_ATTR_WRAP_MODE",ATK_TEXT_ATTR_WRAP_MODE,22);
+CheckEnum("ATK_TEXT_ATTR_DIRECTION",ATK_TEXT_ATTR_DIRECTION,23);
+CheckEnum("ATK_TEXT_ATTR_JUSTIFICATION",ATK_TEXT_ATTR_JUSTIFICATION,24);
+CheckEnum("ATK_TEXT_ATTR_STRETCH",ATK_TEXT_ATTR_STRETCH,25);
+CheckEnum("ATK_TEXT_ATTR_VARIANT",ATK_TEXT_ATTR_VARIANT,26);
+CheckEnum("ATK_TEXT_ATTR_STYLE",ATK_TEXT_ATTR_STYLE,27);
+CheckEnum("ATK_TEXT_ATTR_LAST_DEFINED",ATK_TEXT_ATTR_LAST_DEFINED,28);
+#elif __powerpc64__
+CheckEnum("ATK_TEXT_ATTR_INVALID",ATK_TEXT_ATTR_INVALID,0);
+CheckEnum("ATK_TEXT_ATTR_LEFT_MARGIN",ATK_TEXT_ATTR_LEFT_MARGIN,1);
+CheckEnum("ATK_TEXT_ATTR_RIGHT_MARGIN",ATK_TEXT_ATTR_RIGHT_MARGIN,2);
+CheckEnum("ATK_TEXT_ATTR_INDENT",ATK_TEXT_ATTR_INDENT,3);
+CheckEnum("ATK_TEXT_ATTR_INVISIBLE",ATK_TEXT_ATTR_INVISIBLE,4);
+CheckEnum("ATK_TEXT_ATTR_EDITABLE",ATK_TEXT_ATTR_EDITABLE,5);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_ABOVE_LINES",ATK_TEXT_ATTR_PIXELS_ABOVE_LINES,6);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_BELOW_LINES",ATK_TEXT_ATTR_PIXELS_BELOW_LINES,7);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP",ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP,8);
+CheckEnum("ATK_TEXT_ATTR_BG_FULL_HEIGHT",ATK_TEXT_ATTR_BG_FULL_HEIGHT,9);
+CheckEnum("ATK_TEXT_ATTR_RISE",ATK_TEXT_ATTR_RISE,10);
+CheckEnum("ATK_TEXT_ATTR_UNDERLINE",ATK_TEXT_ATTR_UNDERLINE,11);
+CheckEnum("ATK_TEXT_ATTR_STRIKETHROUGH",ATK_TEXT_ATTR_STRIKETHROUGH,12);
+CheckEnum("ATK_TEXT_ATTR_SIZE",ATK_TEXT_ATTR_SIZE,13);
+CheckEnum("ATK_TEXT_ATTR_SCALE",ATK_TEXT_ATTR_SCALE,14);
+CheckEnum("ATK_TEXT_ATTR_WEIGHT",ATK_TEXT_ATTR_WEIGHT,15);
+CheckEnum("ATK_TEXT_ATTR_LANGUAGE",ATK_TEXT_ATTR_LANGUAGE,16);
+CheckEnum("ATK_TEXT_ATTR_FAMILY_NAME",ATK_TEXT_ATTR_FAMILY_NAME,17);
+CheckEnum("ATK_TEXT_ATTR_BG_COLOR",ATK_TEXT_ATTR_BG_COLOR,18);
+CheckEnum("ATK_TEXT_ATTR_FG_COLOR",ATK_TEXT_ATTR_FG_COLOR,19);
+CheckEnum("ATK_TEXT_ATTR_BG_STIPPLE",ATK_TEXT_ATTR_BG_STIPPLE,20);
+CheckEnum("ATK_TEXT_ATTR_FG_STIPPLE",ATK_TEXT_ATTR_FG_STIPPLE,21);
+CheckEnum("ATK_TEXT_ATTR_WRAP_MODE",ATK_TEXT_ATTR_WRAP_MODE,22);
+CheckEnum("ATK_TEXT_ATTR_DIRECTION",ATK_TEXT_ATTR_DIRECTION,23);
+CheckEnum("ATK_TEXT_ATTR_JUSTIFICATION",ATK_TEXT_ATTR_JUSTIFICATION,24);
+CheckEnum("ATK_TEXT_ATTR_STRETCH",ATK_TEXT_ATTR_STRETCH,25);
+CheckEnum("ATK_TEXT_ATTR_VARIANT",ATK_TEXT_ATTR_VARIANT,26);
+CheckEnum("ATK_TEXT_ATTR_STYLE",ATK_TEXT_ATTR_STYLE,27);
+CheckEnum("ATK_TEXT_ATTR_LAST_DEFINED",ATK_TEXT_ATTR_LAST_DEFINED,28);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_TEXT_ATTR_INVALID",ATK_TEXT_ATTR_INVALID,0);
+CheckEnum("ATK_TEXT_ATTR_LEFT_MARGIN",ATK_TEXT_ATTR_LEFT_MARGIN,1);
+CheckEnum("ATK_TEXT_ATTR_RIGHT_MARGIN",ATK_TEXT_ATTR_RIGHT_MARGIN,2);
+CheckEnum("ATK_TEXT_ATTR_INDENT",ATK_TEXT_ATTR_INDENT,3);
+CheckEnum("ATK_TEXT_ATTR_INVISIBLE",ATK_TEXT_ATTR_INVISIBLE,4);
+CheckEnum("ATK_TEXT_ATTR_EDITABLE",ATK_TEXT_ATTR_EDITABLE,5);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_ABOVE_LINES",ATK_TEXT_ATTR_PIXELS_ABOVE_LINES,6);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_BELOW_LINES",ATK_TEXT_ATTR_PIXELS_BELOW_LINES,7);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP",ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP,8);
+CheckEnum("ATK_TEXT_ATTR_BG_FULL_HEIGHT",ATK_TEXT_ATTR_BG_FULL_HEIGHT,9);
+CheckEnum("ATK_TEXT_ATTR_RISE",ATK_TEXT_ATTR_RISE,10);
+CheckEnum("ATK_TEXT_ATTR_UNDERLINE",ATK_TEXT_ATTR_UNDERLINE,11);
+CheckEnum("ATK_TEXT_ATTR_STRIKETHROUGH",ATK_TEXT_ATTR_STRIKETHROUGH,12);
+CheckEnum("ATK_TEXT_ATTR_SIZE",ATK_TEXT_ATTR_SIZE,13);
+CheckEnum("ATK_TEXT_ATTR_SCALE",ATK_TEXT_ATTR_SCALE,14);
+CheckEnum("ATK_TEXT_ATTR_WEIGHT",ATK_TEXT_ATTR_WEIGHT,15);
+CheckEnum("ATK_TEXT_ATTR_LANGUAGE",ATK_TEXT_ATTR_LANGUAGE,16);
+CheckEnum("ATK_TEXT_ATTR_FAMILY_NAME",ATK_TEXT_ATTR_FAMILY_NAME,17);
+CheckEnum("ATK_TEXT_ATTR_BG_COLOR",ATK_TEXT_ATTR_BG_COLOR,18);
+CheckEnum("ATK_TEXT_ATTR_FG_COLOR",ATK_TEXT_ATTR_FG_COLOR,19);
+CheckEnum("ATK_TEXT_ATTR_BG_STIPPLE",ATK_TEXT_ATTR_BG_STIPPLE,20);
+CheckEnum("ATK_TEXT_ATTR_FG_STIPPLE",ATK_TEXT_ATTR_FG_STIPPLE,21);
+CheckEnum("ATK_TEXT_ATTR_WRAP_MODE",ATK_TEXT_ATTR_WRAP_MODE,22);
+CheckEnum("ATK_TEXT_ATTR_DIRECTION",ATK_TEXT_ATTR_DIRECTION,23);
+CheckEnum("ATK_TEXT_ATTR_JUSTIFICATION",ATK_TEXT_ATTR_JUSTIFICATION,24);
+CheckEnum("ATK_TEXT_ATTR_STRETCH",ATK_TEXT_ATTR_STRETCH,25);
+CheckEnum("ATK_TEXT_ATTR_VARIANT",ATK_TEXT_ATTR_VARIANT,26);
+CheckEnum("ATK_TEXT_ATTR_STYLE",ATK_TEXT_ATTR_STYLE,27);
+CheckEnum("ATK_TEXT_ATTR_LAST_DEFINED",ATK_TEXT_ATTR_LAST_DEFINED,28);
+#elif __s390x__
+CheckEnum("ATK_TEXT_ATTR_INVALID",ATK_TEXT_ATTR_INVALID,0);
+CheckEnum("ATK_TEXT_ATTR_LEFT_MARGIN",ATK_TEXT_ATTR_LEFT_MARGIN,1);
+CheckEnum("ATK_TEXT_ATTR_RIGHT_MARGIN",ATK_TEXT_ATTR_RIGHT_MARGIN,2);
+CheckEnum("ATK_TEXT_ATTR_INDENT",ATK_TEXT_ATTR_INDENT,3);
+CheckEnum("ATK_TEXT_ATTR_INVISIBLE",ATK_TEXT_ATTR_INVISIBLE,4);
+CheckEnum("ATK_TEXT_ATTR_EDITABLE",ATK_TEXT_ATTR_EDITABLE,5);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_ABOVE_LINES",ATK_TEXT_ATTR_PIXELS_ABOVE_LINES,6);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_BELOW_LINES",ATK_TEXT_ATTR_PIXELS_BELOW_LINES,7);
+CheckEnum("ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP",ATK_TEXT_ATTR_PIXELS_INSIDE_WRAP,8);
+CheckEnum("ATK_TEXT_ATTR_BG_FULL_HEIGHT",ATK_TEXT_ATTR_BG_FULL_HEIGHT,9);
+CheckEnum("ATK_TEXT_ATTR_RISE",ATK_TEXT_ATTR_RISE,10);
+CheckEnum("ATK_TEXT_ATTR_UNDERLINE",ATK_TEXT_ATTR_UNDERLINE,11);
+CheckEnum("ATK_TEXT_ATTR_STRIKETHROUGH",ATK_TEXT_ATTR_STRIKETHROUGH,12);
+CheckEnum("ATK_TEXT_ATTR_SIZE",ATK_TEXT_ATTR_SIZE,13);
+CheckEnum("ATK_TEXT_ATTR_SCALE",ATK_TEXT_ATTR_SCALE,14);
+CheckEnum("ATK_TEXT_ATTR_WEIGHT",ATK_TEXT_ATTR_WEIGHT,15);
+CheckEnum("ATK_TEXT_ATTR_LANGUAGE",ATK_TEXT_ATTR_LANGUAGE,16);
+CheckEnum("ATK_TEXT_ATTR_FAMILY_NAME",ATK_TEXT_ATTR_FAMILY_NAME,17);
+CheckEnum("ATK_TEXT_ATTR_BG_COLOR",ATK_TEXT_ATTR_BG_COLOR,18);
+CheckEnum("ATK_TEXT_ATTR_FG_COLOR",ATK_TEXT_ATTR_FG_COLOR,19);
+CheckEnum("ATK_TEXT_ATTR_BG_STIPPLE",ATK_TEXT_ATTR_BG_STIPPLE,20);
+CheckEnum("ATK_TEXT_ATTR_FG_STIPPLE",ATK_TEXT_ATTR_FG_STIPPLE,21);
+CheckEnum("ATK_TEXT_ATTR_WRAP_MODE",ATK_TEXT_ATTR_WRAP_MODE,22);
+CheckEnum("ATK_TEXT_ATTR_DIRECTION",ATK_TEXT_ATTR_DIRECTION,23);
+CheckEnum("ATK_TEXT_ATTR_JUSTIFICATION",ATK_TEXT_ATTR_JUSTIFICATION,24);
+CheckEnum("ATK_TEXT_ATTR_STRETCH",ATK_TEXT_ATTR_STRETCH,25);
+CheckEnum("ATK_TEXT_ATTR_VARIANT",ATK_TEXT_ATTR_VARIANT,26);
+CheckEnum("ATK_TEXT_ATTR_STYLE",ATK_TEXT_ATTR_STYLE,27);
+CheckEnum("ATK_TEXT_ATTR_LAST_DEFINED",ATK_TEXT_ATTR_LAST_DEFINED,28);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12146,0);
 Msg("Find size of anon-atk-1.0/atk/atk.h-64 (12146)\n");
@@ -1724,6 +2844,14 @@ CheckTypeSize(AtkTextAttribute,4, 12147, 2)
 CheckTypeSize(AtkTextAttribute,4, 12147, 11)
 #elif __ia64__
 CheckTypeSize(AtkTextAttribute,4, 12147, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTextAttribute,4, 12147, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTextAttribute,4, 12147, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTextAttribute,4, 12147, 10)
+#elif __s390x__
+CheckTypeSize(AtkTextAttribute,4, 12147, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12147,0);
 Msg("Find size of AtkTextAttribute (12147)\n");
@@ -1753,6 +2881,38 @@ CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_START",ATK_TEXT_BOUNDARY_SENTENCE_START,3)
 CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_END",ATK_TEXT_BOUNDARY_SENTENCE_END,4);
 CheckEnum("ATK_TEXT_BOUNDARY_LINE_START",ATK_TEXT_BOUNDARY_LINE_START,5);
 CheckEnum("ATK_TEXT_BOUNDARY_LINE_END",ATK_TEXT_BOUNDARY_LINE_END,6);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_TEXT_BOUNDARY_CHAR",ATK_TEXT_BOUNDARY_CHAR,0);
+CheckEnum("ATK_TEXT_BOUNDARY_WORD_START",ATK_TEXT_BOUNDARY_WORD_START,1);
+CheckEnum("ATK_TEXT_BOUNDARY_WORD_END",ATK_TEXT_BOUNDARY_WORD_END,2);
+CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_START",ATK_TEXT_BOUNDARY_SENTENCE_START,3);
+CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_END",ATK_TEXT_BOUNDARY_SENTENCE_END,4);
+CheckEnum("ATK_TEXT_BOUNDARY_LINE_START",ATK_TEXT_BOUNDARY_LINE_START,5);
+CheckEnum("ATK_TEXT_BOUNDARY_LINE_END",ATK_TEXT_BOUNDARY_LINE_END,6);
+#elif __powerpc64__
+CheckEnum("ATK_TEXT_BOUNDARY_CHAR",ATK_TEXT_BOUNDARY_CHAR,0);
+CheckEnum("ATK_TEXT_BOUNDARY_WORD_START",ATK_TEXT_BOUNDARY_WORD_START,1);
+CheckEnum("ATK_TEXT_BOUNDARY_WORD_END",ATK_TEXT_BOUNDARY_WORD_END,2);
+CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_START",ATK_TEXT_BOUNDARY_SENTENCE_START,3);
+CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_END",ATK_TEXT_BOUNDARY_SENTENCE_END,4);
+CheckEnum("ATK_TEXT_BOUNDARY_LINE_START",ATK_TEXT_BOUNDARY_LINE_START,5);
+CheckEnum("ATK_TEXT_BOUNDARY_LINE_END",ATK_TEXT_BOUNDARY_LINE_END,6);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_TEXT_BOUNDARY_CHAR",ATK_TEXT_BOUNDARY_CHAR,0);
+CheckEnum("ATK_TEXT_BOUNDARY_WORD_START",ATK_TEXT_BOUNDARY_WORD_START,1);
+CheckEnum("ATK_TEXT_BOUNDARY_WORD_END",ATK_TEXT_BOUNDARY_WORD_END,2);
+CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_START",ATK_TEXT_BOUNDARY_SENTENCE_START,3);
+CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_END",ATK_TEXT_BOUNDARY_SENTENCE_END,4);
+CheckEnum("ATK_TEXT_BOUNDARY_LINE_START",ATK_TEXT_BOUNDARY_LINE_START,5);
+CheckEnum("ATK_TEXT_BOUNDARY_LINE_END",ATK_TEXT_BOUNDARY_LINE_END,6);
+#elif __s390x__
+CheckEnum("ATK_TEXT_BOUNDARY_CHAR",ATK_TEXT_BOUNDARY_CHAR,0);
+CheckEnum("ATK_TEXT_BOUNDARY_WORD_START",ATK_TEXT_BOUNDARY_WORD_START,1);
+CheckEnum("ATK_TEXT_BOUNDARY_WORD_END",ATK_TEXT_BOUNDARY_WORD_END,2);
+CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_START",ATK_TEXT_BOUNDARY_SENTENCE_START,3);
+CheckEnum("ATK_TEXT_BOUNDARY_SENTENCE_END",ATK_TEXT_BOUNDARY_SENTENCE_END,4);
+CheckEnum("ATK_TEXT_BOUNDARY_LINE_START",ATK_TEXT_BOUNDARY_LINE_START,5);
+CheckEnum("ATK_TEXT_BOUNDARY_LINE_END",ATK_TEXT_BOUNDARY_LINE_END,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12148,0);
 Msg("Find size of anon-atk-1.0/atk/atk.h-65 (12148)\n");
@@ -1764,6 +2924,14 @@ CheckTypeSize(AtkTextBoundary,4, 12149, 2)
 CheckTypeSize(AtkTextBoundary,4, 12149, 11)
 #elif __ia64__
 CheckTypeSize(AtkTextBoundary,4, 12149, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTextBoundary,4, 12149, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTextBoundary,4, 12149, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTextBoundary,4, 12149, 10)
+#elif __s390x__
+CheckTypeSize(AtkTextBoundary,4, 12149, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12149,0);
 Msg("Find size of AtkTextBoundary (12149)\n");
@@ -1871,6 +3039,142 @@ CheckEnum("ATK_STATE_MANAGES_DESCENDANTS",ATK_STATE_MANAGES_DESCENDANTS,29);
 CheckEnum("ATK_STATE_INDETERMINATE",ATK_STATE_INDETERMINATE,30);
 CheckEnum("ATK_STATE_TRUNCATED",ATK_STATE_TRUNCATED,31);
 CheckEnum("ATK_STATE_LAST_DEFINED",ATK_STATE_LAST_DEFINED,32);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_STATE_INVALID",ATK_STATE_INVALID,0);
+CheckEnum("ATK_STATE_ACTIVE",ATK_STATE_ACTIVE,1);
+CheckEnum("ATK_STATE_ARMED",ATK_STATE_ARMED,2);
+CheckEnum("ATK_STATE_BUSY",ATK_STATE_BUSY,3);
+CheckEnum("ATK_STATE_CHECKED",ATK_STATE_CHECKED,4);
+CheckEnum("ATK_STATE_DEFUNCT",ATK_STATE_DEFUNCT,5);
+CheckEnum("ATK_STATE_EDITABLE",ATK_STATE_EDITABLE,6);
+CheckEnum("ATK_STATE_ENABLED",ATK_STATE_ENABLED,7);
+CheckEnum("ATK_STATE_EXPANDABLE",ATK_STATE_EXPANDABLE,8);
+CheckEnum("ATK_STATE_EXPANDED",ATK_STATE_EXPANDED,9);
+CheckEnum("ATK_STATE_FOCUSABLE",ATK_STATE_FOCUSABLE,10);
+CheckEnum("ATK_STATE_FOCUSED",ATK_STATE_FOCUSED,11);
+CheckEnum("ATK_STATE_HORIZONTAL",ATK_STATE_HORIZONTAL,12);
+CheckEnum("ATK_STATE_ICONIFIED",ATK_STATE_ICONIFIED,13);
+CheckEnum("ATK_STATE_MODAL",ATK_STATE_MODAL,14);
+CheckEnum("ATK_STATE_MULTI_LINE",ATK_STATE_MULTI_LINE,15);
+CheckEnum("ATK_STATE_MULTISELECTABLE",ATK_STATE_MULTISELECTABLE,16);
+CheckEnum("ATK_STATE_OPAQUE",ATK_STATE_OPAQUE,17);
+CheckEnum("ATK_STATE_PRESSED",ATK_STATE_PRESSED,18);
+CheckEnum("ATK_STATE_RESIZABLE",ATK_STATE_RESIZABLE,19);
+CheckEnum("ATK_STATE_SELECTABLE",ATK_STATE_SELECTABLE,20);
+CheckEnum("ATK_STATE_SELECTED",ATK_STATE_SELECTED,21);
+CheckEnum("ATK_STATE_SENSITIVE",ATK_STATE_SENSITIVE,22);
+CheckEnum("ATK_STATE_SHOWING",ATK_STATE_SHOWING,23);
+CheckEnum("ATK_STATE_SINGLE_LINE",ATK_STATE_SINGLE_LINE,24);
+CheckEnum("ATK_STATE_STALE",ATK_STATE_STALE,25);
+CheckEnum("ATK_STATE_TRANSIENT",ATK_STATE_TRANSIENT,26);
+CheckEnum("ATK_STATE_VERTICAL",ATK_STATE_VERTICAL,27);
+CheckEnum("ATK_STATE_VISIBLE",ATK_STATE_VISIBLE,28);
+CheckEnum("ATK_STATE_MANAGES_DESCENDANTS",ATK_STATE_MANAGES_DESCENDANTS,29);
+CheckEnum("ATK_STATE_INDETERMINATE",ATK_STATE_INDETERMINATE,30);
+CheckEnum("ATK_STATE_TRUNCATED",ATK_STATE_TRUNCATED,31);
+CheckEnum("ATK_STATE_LAST_DEFINED",ATK_STATE_LAST_DEFINED,32);
+#elif __powerpc64__
+CheckEnum("ATK_STATE_INVALID",ATK_STATE_INVALID,0);
+CheckEnum("ATK_STATE_ACTIVE",ATK_STATE_ACTIVE,1);
+CheckEnum("ATK_STATE_ARMED",ATK_STATE_ARMED,2);
+CheckEnum("ATK_STATE_BUSY",ATK_STATE_BUSY,3);
+CheckEnum("ATK_STATE_CHECKED",ATK_STATE_CHECKED,4);
+CheckEnum("ATK_STATE_DEFUNCT",ATK_STATE_DEFUNCT,5);
+CheckEnum("ATK_STATE_EDITABLE",ATK_STATE_EDITABLE,6);
+CheckEnum("ATK_STATE_ENABLED",ATK_STATE_ENABLED,7);
+CheckEnum("ATK_STATE_EXPANDABLE",ATK_STATE_EXPANDABLE,8);
+CheckEnum("ATK_STATE_EXPANDED",ATK_STATE_EXPANDED,9);
+CheckEnum("ATK_STATE_FOCUSABLE",ATK_STATE_FOCUSABLE,10);
+CheckEnum("ATK_STATE_FOCUSED",ATK_STATE_FOCUSED,11);
+CheckEnum("ATK_STATE_HORIZONTAL",ATK_STATE_HORIZONTAL,12);
+CheckEnum("ATK_STATE_ICONIFIED",ATK_STATE_ICONIFIED,13);
+CheckEnum("ATK_STATE_MODAL",ATK_STATE_MODAL,14);
+CheckEnum("ATK_STATE_MULTI_LINE",ATK_STATE_MULTI_LINE,15);
+CheckEnum("ATK_STATE_MULTISELECTABLE",ATK_STATE_MULTISELECTABLE,16);
+CheckEnum("ATK_STATE_OPAQUE",ATK_STATE_OPAQUE,17);
+CheckEnum("ATK_STATE_PRESSED",ATK_STATE_PRESSED,18);
+CheckEnum("ATK_STATE_RESIZABLE",ATK_STATE_RESIZABLE,19);
+CheckEnum("ATK_STATE_SELECTABLE",ATK_STATE_SELECTABLE,20);
+CheckEnum("ATK_STATE_SELECTED",ATK_STATE_SELECTED,21);
+CheckEnum("ATK_STATE_SENSITIVE",ATK_STATE_SENSITIVE,22);
+CheckEnum("ATK_STATE_SHOWING",ATK_STATE_SHOWING,23);
+CheckEnum("ATK_STATE_SINGLE_LINE",ATK_STATE_SINGLE_LINE,24);
+CheckEnum("ATK_STATE_STALE",ATK_STATE_STALE,25);
+CheckEnum("ATK_STATE_TRANSIENT",ATK_STATE_TRANSIENT,26);
+CheckEnum("ATK_STATE_VERTICAL",ATK_STATE_VERTICAL,27);
+CheckEnum("ATK_STATE_VISIBLE",ATK_STATE_VISIBLE,28);
+CheckEnum("ATK_STATE_MANAGES_DESCENDANTS",ATK_STATE_MANAGES_DESCENDANTS,29);
+CheckEnum("ATK_STATE_INDETERMINATE",ATK_STATE_INDETERMINATE,30);
+CheckEnum("ATK_STATE_TRUNCATED",ATK_STATE_TRUNCATED,31);
+CheckEnum("ATK_STATE_LAST_DEFINED",ATK_STATE_LAST_DEFINED,32);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_STATE_INVALID",ATK_STATE_INVALID,0);
+CheckEnum("ATK_STATE_ACTIVE",ATK_STATE_ACTIVE,1);
+CheckEnum("ATK_STATE_ARMED",ATK_STATE_ARMED,2);
+CheckEnum("ATK_STATE_BUSY",ATK_STATE_BUSY,3);
+CheckEnum("ATK_STATE_CHECKED",ATK_STATE_CHECKED,4);
+CheckEnum("ATK_STATE_DEFUNCT",ATK_STATE_DEFUNCT,5);
+CheckEnum("ATK_STATE_EDITABLE",ATK_STATE_EDITABLE,6);
+CheckEnum("ATK_STATE_ENABLED",ATK_STATE_ENABLED,7);
+CheckEnum("ATK_STATE_EXPANDABLE",ATK_STATE_EXPANDABLE,8);
+CheckEnum("ATK_STATE_EXPANDED",ATK_STATE_EXPANDED,9);
+CheckEnum("ATK_STATE_FOCUSABLE",ATK_STATE_FOCUSABLE,10);
+CheckEnum("ATK_STATE_FOCUSED",ATK_STATE_FOCUSED,11);
+CheckEnum("ATK_STATE_HORIZONTAL",ATK_STATE_HORIZONTAL,12);
+CheckEnum("ATK_STATE_ICONIFIED",ATK_STATE_ICONIFIED,13);
+CheckEnum("ATK_STATE_MODAL",ATK_STATE_MODAL,14);
+CheckEnum("ATK_STATE_MULTI_LINE",ATK_STATE_MULTI_LINE,15);
+CheckEnum("ATK_STATE_MULTISELECTABLE",ATK_STATE_MULTISELECTABLE,16);
+CheckEnum("ATK_STATE_OPAQUE",ATK_STATE_OPAQUE,17);
+CheckEnum("ATK_STATE_PRESSED",ATK_STATE_PRESSED,18);
+CheckEnum("ATK_STATE_RESIZABLE",ATK_STATE_RESIZABLE,19);
+CheckEnum("ATK_STATE_SELECTABLE",ATK_STATE_SELECTABLE,20);
+CheckEnum("ATK_STATE_SELECTED",ATK_STATE_SELECTED,21);
+CheckEnum("ATK_STATE_SENSITIVE",ATK_STATE_SENSITIVE,22);
+CheckEnum("ATK_STATE_SHOWING",ATK_STATE_SHOWING,23);
+CheckEnum("ATK_STATE_SINGLE_LINE",ATK_STATE_SINGLE_LINE,24);
+CheckEnum("ATK_STATE_STALE",ATK_STATE_STALE,25);
+CheckEnum("ATK_STATE_TRANSIENT",ATK_STATE_TRANSIENT,26);
+CheckEnum("ATK_STATE_VERTICAL",ATK_STATE_VERTICAL,27);
+CheckEnum("ATK_STATE_VISIBLE",ATK_STATE_VISIBLE,28);
+CheckEnum("ATK_STATE_MANAGES_DESCENDANTS",ATK_STATE_MANAGES_DESCENDANTS,29);
+CheckEnum("ATK_STATE_INDETERMINATE",ATK_STATE_INDETERMINATE,30);
+CheckEnum("ATK_STATE_TRUNCATED",ATK_STATE_TRUNCATED,31);
+CheckEnum("ATK_STATE_LAST_DEFINED",ATK_STATE_LAST_DEFINED,32);
+#elif __s390x__
+CheckEnum("ATK_STATE_INVALID",ATK_STATE_INVALID,0);
+CheckEnum("ATK_STATE_ACTIVE",ATK_STATE_ACTIVE,1);
+CheckEnum("ATK_STATE_ARMED",ATK_STATE_ARMED,2);
+CheckEnum("ATK_STATE_BUSY",ATK_STATE_BUSY,3);
+CheckEnum("ATK_STATE_CHECKED",ATK_STATE_CHECKED,4);
+CheckEnum("ATK_STATE_DEFUNCT",ATK_STATE_DEFUNCT,5);
+CheckEnum("ATK_STATE_EDITABLE",ATK_STATE_EDITABLE,6);
+CheckEnum("ATK_STATE_ENABLED",ATK_STATE_ENABLED,7);
+CheckEnum("ATK_STATE_EXPANDABLE",ATK_STATE_EXPANDABLE,8);
+CheckEnum("ATK_STATE_EXPANDED",ATK_STATE_EXPANDED,9);
+CheckEnum("ATK_STATE_FOCUSABLE",ATK_STATE_FOCUSABLE,10);
+CheckEnum("ATK_STATE_FOCUSED",ATK_STATE_FOCUSED,11);
+CheckEnum("ATK_STATE_HORIZONTAL",ATK_STATE_HORIZONTAL,12);
+CheckEnum("ATK_STATE_ICONIFIED",ATK_STATE_ICONIFIED,13);
+CheckEnum("ATK_STATE_MODAL",ATK_STATE_MODAL,14);
+CheckEnum("ATK_STATE_MULTI_LINE",ATK_STATE_MULTI_LINE,15);
+CheckEnum("ATK_STATE_MULTISELECTABLE",ATK_STATE_MULTISELECTABLE,16);
+CheckEnum("ATK_STATE_OPAQUE",ATK_STATE_OPAQUE,17);
+CheckEnum("ATK_STATE_PRESSED",ATK_STATE_PRESSED,18);
+CheckEnum("ATK_STATE_RESIZABLE",ATK_STATE_RESIZABLE,19);
+CheckEnum("ATK_STATE_SELECTABLE",ATK_STATE_SELECTABLE,20);
+CheckEnum("ATK_STATE_SELECTED",ATK_STATE_SELECTED,21);
+CheckEnum("ATK_STATE_SENSITIVE",ATK_STATE_SENSITIVE,22);
+CheckEnum("ATK_STATE_SHOWING",ATK_STATE_SHOWING,23);
+CheckEnum("ATK_STATE_SINGLE_LINE",ATK_STATE_SINGLE_LINE,24);
+CheckEnum("ATK_STATE_STALE",ATK_STATE_STALE,25);
+CheckEnum("ATK_STATE_TRANSIENT",ATK_STATE_TRANSIENT,26);
+CheckEnum("ATK_STATE_VERTICAL",ATK_STATE_VERTICAL,27);
+CheckEnum("ATK_STATE_VISIBLE",ATK_STATE_VISIBLE,28);
+CheckEnum("ATK_STATE_MANAGES_DESCENDANTS",ATK_STATE_MANAGES_DESCENDANTS,29);
+CheckEnum("ATK_STATE_INDETERMINATE",ATK_STATE_INDETERMINATE,30);
+CheckEnum("ATK_STATE_TRUNCATED",ATK_STATE_TRUNCATED,31);
+CheckEnum("ATK_STATE_LAST_DEFINED",ATK_STATE_LAST_DEFINED,32);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12150,0);
 Msg("Find size of anon-atk-1.0/atk/atk.h-53 (12150)\n");
@@ -1882,6 +3186,14 @@ CheckTypeSize(AtkStateType,4, 12151, 2)
 CheckTypeSize(AtkStateType,4, 12151, 11)
 #elif __ia64__
 CheckTypeSize(AtkStateType,4, 12151, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkStateType,4, 12151, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkStateType,4, 12151, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkStateType,4, 12151, 10)
+#elif __s390x__
+CheckTypeSize(AtkStateType,4, 12151, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12151,0);
 Msg("Find size of AtkStateType (12151)\n");
@@ -1899,6 +3211,22 @@ CheckOffset(struct _AtkGObjectAccessible,parent,0,11,42516)
 CheckTypeSize(struct _AtkGObjectAccessible,72, 12152, 3)
 Msg("Missing member data for _AtkGObjectAccessible on IA64\n");
 CheckOffset(struct _AtkGObjectAccessible,parent,0,3,42516)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkGObjectAccessible,36, 12152, 6)
+Msg("Missing member data for _AtkGObjectAccessible on PPC32\n");
+CheckOffset(struct _AtkGObjectAccessible,parent,0,6,42516)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkGObjectAccessible,72, 12152, 9)
+Msg("Missing member data for _AtkGObjectAccessible on PPC64\n");
+CheckOffset(struct _AtkGObjectAccessible,parent,0,9,42516)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkGObjectAccessible,36, 12152, 10)
+Msg("Missing member data for _AtkGObjectAccessible on S390\n");
+CheckOffset(struct _AtkGObjectAccessible,parent,0,10,42516)
+#elif __s390x__
+CheckTypeSize(struct _AtkGObjectAccessible,72, 12152, 12)
+Msg("Missing member data for _AtkGObjectAccessible on S390X\n");
+CheckOffset(struct _AtkGObjectAccessible,parent,0,12,42516)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12152,0);
 Msg("Find size of _AtkGObjectAccessible (12152)\n");
@@ -1910,6 +3238,14 @@ CheckTypeSize(AtkGObjectAccessible,36, 12153, 2)
 CheckTypeSize(AtkGObjectAccessible,72, 12153, 11)
 #elif __ia64__
 CheckTypeSize(AtkGObjectAccessible,72, 12153, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkGObjectAccessible,36, 12153, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkGObjectAccessible,72, 12153, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkGObjectAccessible,36, 12153, 10)
+#elif __s390x__
+CheckTypeSize(AtkGObjectAccessible,72, 12153, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12153,0);
 Msg("Find size of AtkGObjectAccessible (12153)\n");
@@ -1921,6 +3257,14 @@ CheckTypeSize(AtkGObjectAccessible *,4, 12154, 2)
 CheckTypeSize(AtkGObjectAccessible *,8, 12154, 11)
 #elif __ia64__
 CheckTypeSize(AtkGObjectAccessible *,8, 12154, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkGObjectAccessible *,4, 12154, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkGObjectAccessible *,8, 12154, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkGObjectAccessible *,4, 12154, 10)
+#elif __s390x__
+CheckTypeSize(AtkGObjectAccessible *,8, 12154, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12154,0);
 Msg("Find size of AtkGObjectAccessible * (12154)\n");
@@ -1932,6 +3276,14 @@ CheckTypeSize(AtkState,8, 12155, 2)
 CheckTypeSize(AtkState,8, 12155, 11)
 #elif __ia64__
 CheckTypeSize(AtkState,8, 12155, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkState,8, 12155, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkState,8, 12155, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkState,8, 12155, 10)
+#elif __s390x__
+CheckTypeSize(AtkState,8, 12155, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12155,0);
 Msg("Find size of AtkState (12155)\n");
@@ -1940,6 +3292,10 @@ Msg("Find size of AtkState (12155)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12156,0);
 Msg("Find size of AtkObject * * (12156)\n");
@@ -1948,6 +3304,10 @@ Msg("Find size of AtkObject * * (12156)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12157,0);
 Msg("Find size of fptr_atk_73 (12157)\n");
@@ -1959,6 +3319,14 @@ CheckTypeSize(AtkFocusHandler,4, 12158, 2)
 CheckTypeSize(AtkFocusHandler,8, 12158, 11)
 #elif __ia64__
 CheckTypeSize(AtkFocusHandler,8, 12158, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkFocusHandler,4, 12158, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkFocusHandler,8, 12158, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkFocusHandler,4, 12158, 10)
+#elif __s390x__
+CheckTypeSize(AtkFocusHandler,8, 12158, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12158,0);
 Msg("Find size of AtkFocusHandler (12158)\n");
@@ -2006,6 +3374,62 @@ CheckMemberSize(struct _AtkKeyEventStruct,keycode,2,3,42524)
 CheckOffset(struct _AtkKeyEventStruct,keycode,24,3,42524)
 CheckMemberSize(struct _AtkKeyEventStruct,timestamp,4,3,42525)
 CheckOffset(struct _AtkKeyEventStruct,timestamp,28,3,42525)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkKeyEventStruct,28, 12159, 6)
+CheckMemberSize(struct _AtkKeyEventStruct,state,4,6,42520)
+CheckOffset(struct _AtkKeyEventStruct,state,4,6,42520)
+CheckMemberSize(struct _AtkKeyEventStruct,keyval,4,6,42521)
+CheckOffset(struct _AtkKeyEventStruct,keyval,8,6,42521)
+CheckMemberSize(struct _AtkKeyEventStruct,length,4,6,42522)
+CheckOffset(struct _AtkKeyEventStruct,length,12,6,42522)
+CheckMemberSize(struct _AtkKeyEventStruct,string,4,6,42523)
+CheckOffset(struct _AtkKeyEventStruct,string,16,6,42523)
+CheckMemberSize(struct _AtkKeyEventStruct,keycode,2,6,42524)
+CheckOffset(struct _AtkKeyEventStruct,keycode,20,6,42524)
+CheckMemberSize(struct _AtkKeyEventStruct,timestamp,4,6,42525)
+CheckOffset(struct _AtkKeyEventStruct,timestamp,24,6,42525)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkKeyEventStruct,32, 12159, 9)
+CheckMemberSize(struct _AtkKeyEventStruct,state,4,9,42520)
+CheckOffset(struct _AtkKeyEventStruct,state,4,9,42520)
+CheckMemberSize(struct _AtkKeyEventStruct,keyval,4,9,42521)
+CheckOffset(struct _AtkKeyEventStruct,keyval,8,9,42521)
+CheckMemberSize(struct _AtkKeyEventStruct,length,4,9,42522)
+CheckOffset(struct _AtkKeyEventStruct,length,12,9,42522)
+CheckMemberSize(struct _AtkKeyEventStruct,string,8,9,42523)
+CheckOffset(struct _AtkKeyEventStruct,string,16,9,42523)
+CheckMemberSize(struct _AtkKeyEventStruct,keycode,2,9,42524)
+CheckOffset(struct _AtkKeyEventStruct,keycode,24,9,42524)
+CheckMemberSize(struct _AtkKeyEventStruct,timestamp,4,9,42525)
+CheckOffset(struct _AtkKeyEventStruct,timestamp,28,9,42525)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkKeyEventStruct,28, 12159, 10)
+CheckMemberSize(struct _AtkKeyEventStruct,state,4,10,42520)
+CheckOffset(struct _AtkKeyEventStruct,state,4,10,42520)
+CheckMemberSize(struct _AtkKeyEventStruct,keyval,4,10,42521)
+CheckOffset(struct _AtkKeyEventStruct,keyval,8,10,42521)
+CheckMemberSize(struct _AtkKeyEventStruct,length,4,10,42522)
+CheckOffset(struct _AtkKeyEventStruct,length,12,10,42522)
+CheckMemberSize(struct _AtkKeyEventStruct,string,4,10,42523)
+CheckOffset(struct _AtkKeyEventStruct,string,16,10,42523)
+CheckMemberSize(struct _AtkKeyEventStruct,keycode,2,10,42524)
+CheckOffset(struct _AtkKeyEventStruct,keycode,20,10,42524)
+CheckMemberSize(struct _AtkKeyEventStruct,timestamp,4,10,42525)
+CheckOffset(struct _AtkKeyEventStruct,timestamp,24,10,42525)
+#elif __s390x__
+CheckTypeSize(struct _AtkKeyEventStruct,32, 12159, 12)
+CheckMemberSize(struct _AtkKeyEventStruct,state,4,12,42520)
+CheckOffset(struct _AtkKeyEventStruct,state,4,12,42520)
+CheckMemberSize(struct _AtkKeyEventStruct,keyval,4,12,42521)
+CheckOffset(struct _AtkKeyEventStruct,keyval,8,12,42521)
+CheckMemberSize(struct _AtkKeyEventStruct,length,4,12,42522)
+CheckOffset(struct _AtkKeyEventStruct,length,12,12,42522)
+CheckMemberSize(struct _AtkKeyEventStruct,string,8,12,42523)
+CheckOffset(struct _AtkKeyEventStruct,string,16,12,42523)
+CheckMemberSize(struct _AtkKeyEventStruct,keycode,2,12,42524)
+CheckOffset(struct _AtkKeyEventStruct,keycode,24,12,42524)
+CheckMemberSize(struct _AtkKeyEventStruct,timestamp,4,12,42525)
+CheckOffset(struct _AtkKeyEventStruct,timestamp,28,12,42525)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12159,0);
 Msg("Find size of _AtkKeyEventStruct (12159)\n");
@@ -2017,6 +3441,14 @@ CheckTypeSize(AtkKeyEventStruct,28, 12160, 2)
 CheckTypeSize(AtkKeyEventStruct,32, 12160, 11)
 #elif __ia64__
 CheckTypeSize(AtkKeyEventStruct,32, 12160, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkKeyEventStruct,28, 12160, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkKeyEventStruct,32, 12160, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkKeyEventStruct,28, 12160, 10)
+#elif __s390x__
+CheckTypeSize(AtkKeyEventStruct,32, 12160, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12160,0);
 Msg("Find size of AtkKeyEventStruct (12160)\n");
@@ -2028,6 +3460,14 @@ CheckTypeSize(AtkKeyEventStruct *,4, 12161, 2)
 CheckTypeSize(AtkKeyEventStruct *,8, 12161, 11)
 #elif __ia64__
 CheckTypeSize(AtkKeyEventStruct *,8, 12161, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkKeyEventStruct *,4, 12161, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkKeyEventStruct *,8, 12161, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkKeyEventStruct *,4, 12161, 10)
+#elif __s390x__
+CheckTypeSize(AtkKeyEventStruct *,8, 12161, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12161,0);
 Msg("Find size of AtkKeyEventStruct * (12161)\n");
@@ -2036,6 +3476,10 @@ Msg("Find size of AtkKeyEventStruct * (12161)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12162,0);
 Msg("Find size of fptr_atk_391 (12162)\n");
@@ -2047,6 +3491,14 @@ CheckTypeSize(AtkKeySnoopFunc,4, 12163, 2)
 CheckTypeSize(AtkKeySnoopFunc,8, 12163, 11)
 #elif __ia64__
 CheckTypeSize(AtkKeySnoopFunc,8, 12163, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkKeySnoopFunc,4, 12163, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkKeySnoopFunc,8, 12163, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkKeySnoopFunc,4, 12163, 10)
+#elif __s390x__
+CheckTypeSize(AtkKeySnoopFunc,8, 12163, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12163,0);
 Msg("Find size of AtkKeySnoopFunc (12163)\n");
@@ -2076,6 +3528,38 @@ CheckMemberSize(struct _AtkTextRange,end_offset,4,3,42534)
 CheckOffset(struct _AtkTextRange,end_offset,20,3,42534)
 CheckMemberSize(struct _AtkTextRange,content,8,3,42535)
 CheckOffset(struct _AtkTextRange,content,24,3,42535)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkTextRange,28, 12164, 6)
+CheckMemberSize(struct _AtkTextRange,start_offset,4,6,42533)
+CheckOffset(struct _AtkTextRange,start_offset,16,6,42533)
+CheckMemberSize(struct _AtkTextRange,end_offset,4,6,42534)
+CheckOffset(struct _AtkTextRange,end_offset,20,6,42534)
+CheckMemberSize(struct _AtkTextRange,content,4,6,42535)
+CheckOffset(struct _AtkTextRange,content,24,6,42535)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkTextRange,32, 12164, 9)
+CheckMemberSize(struct _AtkTextRange,start_offset,4,9,42533)
+CheckOffset(struct _AtkTextRange,start_offset,16,9,42533)
+CheckMemberSize(struct _AtkTextRange,end_offset,4,9,42534)
+CheckOffset(struct _AtkTextRange,end_offset,20,9,42534)
+CheckMemberSize(struct _AtkTextRange,content,8,9,42535)
+CheckOffset(struct _AtkTextRange,content,24,9,42535)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkTextRange,28, 12164, 10)
+CheckMemberSize(struct _AtkTextRange,start_offset,4,10,42533)
+CheckOffset(struct _AtkTextRange,start_offset,16,10,42533)
+CheckMemberSize(struct _AtkTextRange,end_offset,4,10,42534)
+CheckOffset(struct _AtkTextRange,end_offset,20,10,42534)
+CheckMemberSize(struct _AtkTextRange,content,4,10,42535)
+CheckOffset(struct _AtkTextRange,content,24,10,42535)
+#elif __s390x__
+CheckTypeSize(struct _AtkTextRange,32, 12164, 12)
+CheckMemberSize(struct _AtkTextRange,start_offset,4,12,42533)
+CheckOffset(struct _AtkTextRange,start_offset,16,12,42533)
+CheckMemberSize(struct _AtkTextRange,end_offset,4,12,42534)
+CheckOffset(struct _AtkTextRange,end_offset,20,12,42534)
+CheckMemberSize(struct _AtkTextRange,content,8,12,42535)
+CheckOffset(struct _AtkTextRange,content,24,12,42535)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12164,0);
 Msg("Find size of _AtkTextRange (12164)\n");
@@ -2105,6 +3589,38 @@ CheckMemberSize(struct _AtkTextRectangle,width,4,3,42530)
 CheckOffset(struct _AtkTextRectangle,width,8,3,42530)
 CheckMemberSize(struct _AtkTextRectangle,height,4,3,42531)
 CheckOffset(struct _AtkTextRectangle,height,12,3,42531)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkTextRectangle,16, 12165, 6)
+CheckMemberSize(struct _AtkTextRectangle,y,4,6,42529)
+CheckOffset(struct _AtkTextRectangle,y,4,6,42529)
+CheckMemberSize(struct _AtkTextRectangle,width,4,6,42530)
+CheckOffset(struct _AtkTextRectangle,width,8,6,42530)
+CheckMemberSize(struct _AtkTextRectangle,height,4,6,42531)
+CheckOffset(struct _AtkTextRectangle,height,12,6,42531)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkTextRectangle,16, 12165, 9)
+CheckMemberSize(struct _AtkTextRectangle,y,4,9,42529)
+CheckOffset(struct _AtkTextRectangle,y,4,9,42529)
+CheckMemberSize(struct _AtkTextRectangle,width,4,9,42530)
+CheckOffset(struct _AtkTextRectangle,width,8,9,42530)
+CheckMemberSize(struct _AtkTextRectangle,height,4,9,42531)
+CheckOffset(struct _AtkTextRectangle,height,12,9,42531)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkTextRectangle,16, 12165, 10)
+CheckMemberSize(struct _AtkTextRectangle,y,4,10,42529)
+CheckOffset(struct _AtkTextRectangle,y,4,10,42529)
+CheckMemberSize(struct _AtkTextRectangle,width,4,10,42530)
+CheckOffset(struct _AtkTextRectangle,width,8,10,42530)
+CheckMemberSize(struct _AtkTextRectangle,height,4,10,42531)
+CheckOffset(struct _AtkTextRectangle,height,12,10,42531)
+#elif __s390x__
+CheckTypeSize(struct _AtkTextRectangle,16, 12165, 12)
+CheckMemberSize(struct _AtkTextRectangle,y,4,12,42529)
+CheckOffset(struct _AtkTextRectangle,y,4,12,42529)
+CheckMemberSize(struct _AtkTextRectangle,width,4,12,42530)
+CheckOffset(struct _AtkTextRectangle,width,8,12,42530)
+CheckMemberSize(struct _AtkTextRectangle,height,4,12,42531)
+CheckOffset(struct _AtkTextRectangle,height,12,12,42531)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12165,0);
 Msg("Find size of _AtkTextRectangle (12165)\n");
@@ -2116,6 +3632,14 @@ CheckTypeSize(AtkTextRectangle,16, 12166, 2)
 CheckTypeSize(AtkTextRectangle,16, 12166, 11)
 #elif __ia64__
 CheckTypeSize(AtkTextRectangle,16, 12166, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTextRectangle,16, 12166, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTextRectangle,16, 12166, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTextRectangle,16, 12166, 10)
+#elif __s390x__
+CheckTypeSize(AtkTextRectangle,16, 12166, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12166,0);
 Msg("Find size of AtkTextRectangle (12166)\n");
@@ -2127,6 +3651,14 @@ CheckTypeSize(AtkTextRange,28, 12167, 2)
 CheckTypeSize(AtkTextRange,32, 12167, 11)
 #elif __ia64__
 CheckTypeSize(AtkTextRange,32, 12167, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTextRange,28, 12167, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTextRange,32, 12167, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTextRange,28, 12167, 10)
+#elif __s390x__
+CheckTypeSize(AtkTextRange,32, 12167, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12167,0);
 Msg("Find size of AtkTextRange (12167)\n");
@@ -2138,6 +3670,14 @@ CheckTypeSize(AtkTextRange *,4, 12168, 2)
 CheckTypeSize(AtkTextRange *,8, 12168, 11)
 #elif __ia64__
 CheckTypeSize(AtkTextRange *,8, 12168, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTextRange *,4, 12168, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTextRange *,8, 12168, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTextRange *,4, 12168, 10)
+#elif __s390x__
+CheckTypeSize(AtkTextRange *,8, 12168, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12168,0);
 Msg("Find size of AtkTextRange * (12168)\n");
@@ -2146,6 +3686,10 @@ Msg("Find size of AtkTextRange * (12168)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12169,0);
 Msg("Find size of AtkTextRange * * (12169)\n");
@@ -2157,6 +3701,14 @@ CheckTypeSize(AtkTextRectangle *,4, 12170, 2)
 CheckTypeSize(AtkTextRectangle *,8, 12170, 11)
 #elif __ia64__
 CheckTypeSize(AtkTextRectangle *,8, 12170, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTextRectangle *,4, 12170, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTextRectangle *,8, 12170, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTextRectangle *,4, 12170, 10)
+#elif __s390x__
+CheckTypeSize(AtkTextRectangle *,8, 12170, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12170,0);
 Msg("Find size of AtkTextRectangle * (12170)\n");
@@ -2177,6 +3729,26 @@ CheckEnum("ATK_TEXT_CLIP_NONE",ATK_TEXT_CLIP_NONE,0);
 CheckEnum("ATK_TEXT_CLIP_MIN",ATK_TEXT_CLIP_MIN,1);
 CheckEnum("ATK_TEXT_CLIP_MAX",ATK_TEXT_CLIP_MAX,2);
 CheckEnum("ATK_TEXT_CLIP_BOTH",ATK_TEXT_CLIP_BOTH,3);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_TEXT_CLIP_NONE",ATK_TEXT_CLIP_NONE,0);
+CheckEnum("ATK_TEXT_CLIP_MIN",ATK_TEXT_CLIP_MIN,1);
+CheckEnum("ATK_TEXT_CLIP_MAX",ATK_TEXT_CLIP_MAX,2);
+CheckEnum("ATK_TEXT_CLIP_BOTH",ATK_TEXT_CLIP_BOTH,3);
+#elif __powerpc64__
+CheckEnum("ATK_TEXT_CLIP_NONE",ATK_TEXT_CLIP_NONE,0);
+CheckEnum("ATK_TEXT_CLIP_MIN",ATK_TEXT_CLIP_MIN,1);
+CheckEnum("ATK_TEXT_CLIP_MAX",ATK_TEXT_CLIP_MAX,2);
+CheckEnum("ATK_TEXT_CLIP_BOTH",ATK_TEXT_CLIP_BOTH,3);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_TEXT_CLIP_NONE",ATK_TEXT_CLIP_NONE,0);
+CheckEnum("ATK_TEXT_CLIP_MIN",ATK_TEXT_CLIP_MIN,1);
+CheckEnum("ATK_TEXT_CLIP_MAX",ATK_TEXT_CLIP_MAX,2);
+CheckEnum("ATK_TEXT_CLIP_BOTH",ATK_TEXT_CLIP_BOTH,3);
+#elif __s390x__
+CheckEnum("ATK_TEXT_CLIP_NONE",ATK_TEXT_CLIP_NONE,0);
+CheckEnum("ATK_TEXT_CLIP_MIN",ATK_TEXT_CLIP_MIN,1);
+CheckEnum("ATK_TEXT_CLIP_MAX",ATK_TEXT_CLIP_MAX,2);
+CheckEnum("ATK_TEXT_CLIP_BOTH",ATK_TEXT_CLIP_BOTH,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12171,0);
 Msg("Find size of anon-atk-1.0/atk/atk.h-66 (12171)\n");
@@ -2188,6 +3760,14 @@ CheckTypeSize(AtkTextClipType,4, 12172, 2)
 CheckTypeSize(AtkTextClipType,4, 12172, 11)
 #elif __ia64__
 CheckTypeSize(AtkTextClipType,4, 12172, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTextClipType,4, 12172, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTextClipType,4, 12172, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTextClipType,4, 12172, 10)
+#elif __s390x__
+CheckTypeSize(AtkTextClipType,4, 12172, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12172,0);
 Msg("Find size of AtkTextClipType (12172)\n");
@@ -2196,6 +3776,10 @@ Msg("Find size of AtkTextClipType (12172)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12173,0);
 Msg("Find size of gint * * (12173)\n");
@@ -2207,6 +3791,14 @@ CheckTypeSize(AtkStateType *,4, 12174, 2)
 CheckTypeSize(AtkStateType *,8, 12174, 11)
 #elif __ia64__
 CheckTypeSize(AtkStateType *,8, 12174, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkStateType *,4, 12174, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkStateType *,8, 12174, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkStateType *,4, 12174, 10)
+#elif __s390x__
+CheckTypeSize(AtkStateType *,8, 12174, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12174,0);
 Msg("Find size of AtkStateType * (12174)\n");
@@ -2218,6 +3810,14 @@ CheckTypeSize(AtkImplementor,0, 12176, 2)
 CheckTypeSize(AtkImplementor,0, 12176, 11)
 #elif __ia64__
 CheckTypeSize(AtkImplementor,0, 12176, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkImplementor,0, 12176, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkImplementor,0, 12176, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkImplementor,0, 12176, 10)
+#elif __s390x__
+CheckTypeSize(AtkImplementor,0, 12176, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12176,0);
 Msg("Find size of AtkImplementor (12176)\n");
@@ -2229,6 +3829,14 @@ CheckTypeSize(AtkImplementor *,4, 12177, 2)
 CheckTypeSize(AtkImplementor *,8, 12177, 11)
 #elif __ia64__
 CheckTypeSize(AtkImplementor *,8, 12177, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkImplementor *,4, 12177, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkImplementor *,8, 12177, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkImplementor *,4, 12177, 10)
+#elif __s390x__
+CheckTypeSize(AtkImplementor *,8, 12177, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12177,0);
 Msg("Find size of AtkImplementor * (12177)\n");
@@ -2237,6 +3845,10 @@ Msg("Find size of AtkImplementor * (12177)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12178,0);
 Msg("Find size of fptr_atk_222 (12178)\n");
@@ -2248,6 +3860,14 @@ CheckTypeSize(AtkEventListener,4, 12179, 2)
 CheckTypeSize(AtkEventListener,8, 12179, 11)
 #elif __ia64__
 CheckTypeSize(AtkEventListener,8, 12179, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkEventListener,4, 12179, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkEventListener,8, 12179, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkEventListener,4, 12179, 10)
+#elif __s390x__
+CheckTypeSize(AtkEventListener,8, 12179, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12179,0);
 Msg("Find size of AtkEventListener (12179)\n");
@@ -2259,6 +3879,14 @@ CheckTypeSize(AtkFunction,4, 12180, 2)
 CheckTypeSize(AtkFunction,8, 12180, 11)
 #elif __ia64__
 CheckTypeSize(AtkFunction,8, 12180, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkFunction,4, 12180, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkFunction,8, 12180, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkFunction,4, 12180, 10)
+#elif __s390x__
+CheckTypeSize(AtkFunction,8, 12180, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12180,0);
 Msg("Find size of AtkFunction (12180)\n");
@@ -2276,6 +3904,22 @@ CheckOffset(struct _AtkImplementorIface,ref_accessible,16,11,42543)
 CheckTypeSize(struct _AtkImplementorIface,24, 12181, 3)
 CheckMemberSize(struct _AtkImplementorIface,ref_accessible,8,3,42543)
 CheckOffset(struct _AtkImplementorIface,ref_accessible,16,3,42543)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkImplementorIface,12, 12181, 6)
+CheckMemberSize(struct _AtkImplementorIface,ref_accessible,4,6,42543)
+CheckOffset(struct _AtkImplementorIface,ref_accessible,8,6,42543)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkImplementorIface,24, 12181, 9)
+CheckMemberSize(struct _AtkImplementorIface,ref_accessible,8,9,42543)
+CheckOffset(struct _AtkImplementorIface,ref_accessible,16,9,42543)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkImplementorIface,12, 12181, 10)
+CheckMemberSize(struct _AtkImplementorIface,ref_accessible,4,10,42543)
+CheckOffset(struct _AtkImplementorIface,ref_accessible,8,10,42543)
+#elif __s390x__
+CheckTypeSize(struct _AtkImplementorIface,24, 12181, 12)
+CheckMemberSize(struct _AtkImplementorIface,ref_accessible,8,12,42543)
+CheckOffset(struct _AtkImplementorIface,ref_accessible,16,12,42543)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12181,0);
 Msg("Find size of _AtkImplementorIface (12181)\n");
@@ -2284,6 +3928,10 @@ Msg("Find size of _AtkImplementorIface (12181)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12182,0);
 Msg("Find size of fptr_atk_20 (12182)\n");
@@ -2295,6 +3943,14 @@ CheckTypeSize(AtkImplementorIface,12, 12183, 2)
 CheckTypeSize(AtkImplementorIface,24, 12183, 11)
 #elif __ia64__
 CheckTypeSize(AtkImplementorIface,24, 12183, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkImplementorIface,12, 12183, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkImplementorIface,24, 12183, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkImplementorIface,12, 12183, 10)
+#elif __s390x__
+CheckTypeSize(AtkImplementorIface,24, 12183, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12183,0);
 Msg("Find size of AtkImplementorIface (12183)\n");
@@ -2312,6 +3968,22 @@ CheckOffset(struct _AtkRegistryClass,parent_class,0,11,42544)
 CheckTypeSize(struct _AtkRegistryClass,136, 12184, 3)
 Msg("Missing member data for _AtkRegistryClass on IA64\n");
 CheckOffset(struct _AtkRegistryClass,parent_class,0,3,42544)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkRegistryClass,68, 12184, 6)
+Msg("Missing member data for _AtkRegistryClass on PPC32\n");
+CheckOffset(struct _AtkRegistryClass,parent_class,0,6,42544)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkRegistryClass,136, 12184, 9)
+Msg("Missing member data for _AtkRegistryClass on PPC64\n");
+CheckOffset(struct _AtkRegistryClass,parent_class,0,9,42544)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkRegistryClass,68, 12184, 10)
+Msg("Missing member data for _AtkRegistryClass on S390\n");
+CheckOffset(struct _AtkRegistryClass,parent_class,0,10,42544)
+#elif __s390x__
+CheckTypeSize(struct _AtkRegistryClass,136, 12184, 12)
+Msg("Missing member data for _AtkRegistryClass on S390X\n");
+CheckOffset(struct _AtkRegistryClass,parent_class,0,12,42544)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12184,0);
 Msg("Find size of _AtkRegistryClass (12184)\n");
@@ -2323,6 +3995,14 @@ CheckTypeSize(AtkRegistryClass,68, 12185, 2)
 CheckTypeSize(AtkRegistryClass,136, 12185, 11)
 #elif __ia64__
 CheckTypeSize(AtkRegistryClass,136, 12185, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRegistryClass,68, 12185, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRegistryClass,136, 12185, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRegistryClass,68, 12185, 10)
+#elif __s390x__
+CheckTypeSize(AtkRegistryClass,136, 12185, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12185,0);
 Msg("Find size of AtkRegistryClass (12185)\n");
@@ -2376,6 +4056,70 @@ CheckMemberSize(struct _AtkHypertextIface,pad2,8,3,42558)
 CheckOffset(struct _AtkHypertextIface,pad2,56,3,42558)
 CheckMemberSize(struct _AtkHypertextIface,pad3,8,3,42559)
 CheckOffset(struct _AtkHypertextIface,pad3,64,3,42559)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkHypertextIface,36, 12186, 6)
+CheckMemberSize(struct _AtkHypertextIface,get_link,4,6,42548)
+CheckOffset(struct _AtkHypertextIface,get_link,8,6,42548)
+CheckMemberSize(struct _AtkHypertextIface,get_n_links,4,6,42550)
+CheckOffset(struct _AtkHypertextIface,get_n_links,12,6,42550)
+CheckMemberSize(struct _AtkHypertextIface,get_link_index,4,6,42553)
+CheckOffset(struct _AtkHypertextIface,get_link_index,16,6,42553)
+CheckMemberSize(struct _AtkHypertextIface,link_selected,4,6,42556)
+CheckOffset(struct _AtkHypertextIface,link_selected,20,6,42556)
+CheckMemberSize(struct _AtkHypertextIface,pad1,4,6,42557)
+CheckOffset(struct _AtkHypertextIface,pad1,24,6,42557)
+CheckMemberSize(struct _AtkHypertextIface,pad2,4,6,42558)
+CheckOffset(struct _AtkHypertextIface,pad2,28,6,42558)
+CheckMemberSize(struct _AtkHypertextIface,pad3,4,6,42559)
+CheckOffset(struct _AtkHypertextIface,pad3,32,6,42559)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkHypertextIface,72, 12186, 9)
+CheckMemberSize(struct _AtkHypertextIface,get_link,8,9,42548)
+CheckOffset(struct _AtkHypertextIface,get_link,16,9,42548)
+CheckMemberSize(struct _AtkHypertextIface,get_n_links,8,9,42550)
+CheckOffset(struct _AtkHypertextIface,get_n_links,24,9,42550)
+CheckMemberSize(struct _AtkHypertextIface,get_link_index,8,9,42553)
+CheckOffset(struct _AtkHypertextIface,get_link_index,32,9,42553)
+CheckMemberSize(struct _AtkHypertextIface,link_selected,8,9,42556)
+CheckOffset(struct _AtkHypertextIface,link_selected,40,9,42556)
+CheckMemberSize(struct _AtkHypertextIface,pad1,8,9,42557)
+CheckOffset(struct _AtkHypertextIface,pad1,48,9,42557)
+CheckMemberSize(struct _AtkHypertextIface,pad2,8,9,42558)
+CheckOffset(struct _AtkHypertextIface,pad2,56,9,42558)
+CheckMemberSize(struct _AtkHypertextIface,pad3,8,9,42559)
+CheckOffset(struct _AtkHypertextIface,pad3,64,9,42559)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkHypertextIface,36, 12186, 10)
+CheckMemberSize(struct _AtkHypertextIface,get_link,4,10,42548)
+CheckOffset(struct _AtkHypertextIface,get_link,8,10,42548)
+CheckMemberSize(struct _AtkHypertextIface,get_n_links,4,10,42550)
+CheckOffset(struct _AtkHypertextIface,get_n_links,12,10,42550)
+CheckMemberSize(struct _AtkHypertextIface,get_link_index,4,10,42553)
+CheckOffset(struct _AtkHypertextIface,get_link_index,16,10,42553)
+CheckMemberSize(struct _AtkHypertextIface,link_selected,4,10,42556)
+CheckOffset(struct _AtkHypertextIface,link_selected,20,10,42556)
+CheckMemberSize(struct _AtkHypertextIface,pad1,4,10,42557)
+CheckOffset(struct _AtkHypertextIface,pad1,24,10,42557)
+CheckMemberSize(struct _AtkHypertextIface,pad2,4,10,42558)
+CheckOffset(struct _AtkHypertextIface,pad2,28,10,42558)
+CheckMemberSize(struct _AtkHypertextIface,pad3,4,10,42559)
+CheckOffset(struct _AtkHypertextIface,pad3,32,10,42559)
+#elif __s390x__
+CheckTypeSize(struct _AtkHypertextIface,72, 12186, 12)
+CheckMemberSize(struct _AtkHypertextIface,get_link,8,12,42548)
+CheckOffset(struct _AtkHypertextIface,get_link,16,12,42548)
+CheckMemberSize(struct _AtkHypertextIface,get_n_links,8,12,42550)
+CheckOffset(struct _AtkHypertextIface,get_n_links,24,12,42550)
+CheckMemberSize(struct _AtkHypertextIface,get_link_index,8,12,42553)
+CheckOffset(struct _AtkHypertextIface,get_link_index,32,12,42553)
+CheckMemberSize(struct _AtkHypertextIface,link_selected,8,12,42556)
+CheckOffset(struct _AtkHypertextIface,link_selected,40,12,42556)
+CheckMemberSize(struct _AtkHypertextIface,pad1,8,12,42557)
+CheckOffset(struct _AtkHypertextIface,pad1,48,12,42557)
+CheckMemberSize(struct _AtkHypertextIface,pad2,8,12,42558)
+CheckOffset(struct _AtkHypertextIface,pad2,56,12,42558)
+CheckMemberSize(struct _AtkHypertextIface,pad3,8,12,42559)
+CheckOffset(struct _AtkHypertextIface,pad3,64,12,42559)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12186,0);
 Msg("Find size of _AtkHypertextIface (12186)\n");
@@ -2384,6 +4128,10 @@ Msg("Find size of _AtkHypertextIface (12186)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12187,0);
 Msg("Find size of fptr_atk_345 (12187)\n");
@@ -2392,6 +4140,10 @@ Msg("Find size of fptr_atk_345 (12187)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12188,0);
 Msg("Find size of fptr_atk_392 (12188)\n");
@@ -2400,6 +4152,10 @@ Msg("Find size of fptr_atk_392 (12188)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12189,0);
 Msg("Find size of fptr_atk_402 (12189)\n");
@@ -2408,6 +4164,10 @@ Msg("Find size of fptr_atk_402 (12189)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12190,0);
 Msg("Find size of fptr_atk_343 (12190)\n");
@@ -2419,6 +4179,14 @@ CheckTypeSize(AtkHypertextIface,36, 12191, 2)
 CheckTypeSize(AtkHypertextIface,72, 12191, 11)
 #elif __ia64__
 CheckTypeSize(AtkHypertextIface,72, 12191, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkHypertextIface,36, 12191, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkHypertextIface,72, 12191, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkHypertextIface,36, 12191, 10)
+#elif __s390x__
+CheckTypeSize(AtkHypertextIface,72, 12191, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12191,0);
 Msg("Find size of AtkHypertextIface (12191)\n");
@@ -2472,6 +4240,70 @@ CheckMemberSize(struct _AtkStreamableContentIface,pad3,8,3,42571)
 CheckOffset(struct _AtkStreamableContentIface,pad3,56,3,42571)
 CheckMemberSize(struct _AtkStreamableContentIface,pad4,8,3,42572)
 CheckOffset(struct _AtkStreamableContentIface,pad4,64,3,42572)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkStreamableContentIface,36, 12192, 6)
+CheckMemberSize(struct _AtkStreamableContentIface,get_n_mime_types,4,6,42562)
+CheckOffset(struct _AtkStreamableContentIface,get_n_mime_types,8,6,42562)
+CheckMemberSize(struct _AtkStreamableContentIface,get_mime_type,4,6,42565)
+CheckOffset(struct _AtkStreamableContentIface,get_mime_type,12,6,42565)
+CheckMemberSize(struct _AtkStreamableContentIface,get_stream,4,6,42568)
+CheckOffset(struct _AtkStreamableContentIface,get_stream,16,6,42568)
+CheckMemberSize(struct _AtkStreamableContentIface,pad1,4,6,42569)
+CheckOffset(struct _AtkStreamableContentIface,pad1,20,6,42569)
+CheckMemberSize(struct _AtkStreamableContentIface,pad2,4,6,42570)
+CheckOffset(struct _AtkStreamableContentIface,pad2,24,6,42570)
+CheckMemberSize(struct _AtkStreamableContentIface,pad3,4,6,42571)
+CheckOffset(struct _AtkStreamableContentIface,pad3,28,6,42571)
+CheckMemberSize(struct _AtkStreamableContentIface,pad4,4,6,42572)
+CheckOffset(struct _AtkStreamableContentIface,pad4,32,6,42572)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkStreamableContentIface,72, 12192, 9)
+CheckMemberSize(struct _AtkStreamableContentIface,get_n_mime_types,8,9,42562)
+CheckOffset(struct _AtkStreamableContentIface,get_n_mime_types,16,9,42562)
+CheckMemberSize(struct _AtkStreamableContentIface,get_mime_type,8,9,42565)
+CheckOffset(struct _AtkStreamableContentIface,get_mime_type,24,9,42565)
+CheckMemberSize(struct _AtkStreamableContentIface,get_stream,8,9,42568)
+CheckOffset(struct _AtkStreamableContentIface,get_stream,32,9,42568)
+CheckMemberSize(struct _AtkStreamableContentIface,pad1,8,9,42569)
+CheckOffset(struct _AtkStreamableContentIface,pad1,40,9,42569)
+CheckMemberSize(struct _AtkStreamableContentIface,pad2,8,9,42570)
+CheckOffset(struct _AtkStreamableContentIface,pad2,48,9,42570)
+CheckMemberSize(struct _AtkStreamableContentIface,pad3,8,9,42571)
+CheckOffset(struct _AtkStreamableContentIface,pad3,56,9,42571)
+CheckMemberSize(struct _AtkStreamableContentIface,pad4,8,9,42572)
+CheckOffset(struct _AtkStreamableContentIface,pad4,64,9,42572)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkStreamableContentIface,36, 12192, 10)
+CheckMemberSize(struct _AtkStreamableContentIface,get_n_mime_types,4,10,42562)
+CheckOffset(struct _AtkStreamableContentIface,get_n_mime_types,8,10,42562)
+CheckMemberSize(struct _AtkStreamableContentIface,get_mime_type,4,10,42565)
+CheckOffset(struct _AtkStreamableContentIface,get_mime_type,12,10,42565)
+CheckMemberSize(struct _AtkStreamableContentIface,get_stream,4,10,42568)
+CheckOffset(struct _AtkStreamableContentIface,get_stream,16,10,42568)
+CheckMemberSize(struct _AtkStreamableContentIface,pad1,4,10,42569)
+CheckOffset(struct _AtkStreamableContentIface,pad1,20,10,42569)
+CheckMemberSize(struct _AtkStreamableContentIface,pad2,4,10,42570)
+CheckOffset(struct _AtkStreamableContentIface,pad2,24,10,42570)
+CheckMemberSize(struct _AtkStreamableContentIface,pad3,4,10,42571)
+CheckOffset(struct _AtkStreamableContentIface,pad3,28,10,42571)
+CheckMemberSize(struct _AtkStreamableContentIface,pad4,4,10,42572)
+CheckOffset(struct _AtkStreamableContentIface,pad4,32,10,42572)
+#elif __s390x__
+CheckTypeSize(struct _AtkStreamableContentIface,72, 12192, 12)
+CheckMemberSize(struct _AtkStreamableContentIface,get_n_mime_types,8,12,42562)
+CheckOffset(struct _AtkStreamableContentIface,get_n_mime_types,16,12,42562)
+CheckMemberSize(struct _AtkStreamableContentIface,get_mime_type,8,12,42565)
+CheckOffset(struct _AtkStreamableContentIface,get_mime_type,24,12,42565)
+CheckMemberSize(struct _AtkStreamableContentIface,get_stream,8,12,42568)
+CheckOffset(struct _AtkStreamableContentIface,get_stream,32,12,42568)
+CheckMemberSize(struct _AtkStreamableContentIface,pad1,8,12,42569)
+CheckOffset(struct _AtkStreamableContentIface,pad1,40,12,42569)
+CheckMemberSize(struct _AtkStreamableContentIface,pad2,8,12,42570)
+CheckOffset(struct _AtkStreamableContentIface,pad2,48,12,42570)
+CheckMemberSize(struct _AtkStreamableContentIface,pad3,8,12,42571)
+CheckOffset(struct _AtkStreamableContentIface,pad3,56,12,42571)
+CheckMemberSize(struct _AtkStreamableContentIface,pad4,8,12,42572)
+CheckOffset(struct _AtkStreamableContentIface,pad4,64,12,42572)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12192,0);
 Msg("Find size of _AtkStreamableContentIface (12192)\n");
@@ -2480,6 +4312,10 @@ Msg("Find size of _AtkStreamableContentIface (12192)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12193,0);
 Msg("Find size of fptr_atk_358 (12193)\n");
@@ -2488,6 +4324,10 @@ Msg("Find size of fptr_atk_358 (12193)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12194,0);
 Msg("Find size of fptr_atk_141 (12194)\n");
@@ -2496,6 +4336,10 @@ Msg("Find size of fptr_atk_141 (12194)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12195,0);
 Msg("Find size of fptr_atk_197 (12195)\n");
@@ -2507,6 +4351,14 @@ CheckTypeSize(AtkStreamableContentIface,36, 12196, 2)
 CheckTypeSize(AtkStreamableContentIface,72, 12196, 11)
 #elif __ia64__
 CheckTypeSize(AtkStreamableContentIface,72, 12196, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkStreamableContentIface,36, 12196, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkStreamableContentIface,72, 12196, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkStreamableContentIface,36, 12196, 10)
+#elif __s390x__
+CheckTypeSize(AtkStreamableContentIface,72, 12196, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12196,0);
 Msg("Find size of AtkStreamableContentIface (12196)\n");
@@ -2536,6 +4388,38 @@ CheckMemberSize(struct _AtkRectangle,width,4,3,42575)
 CheckOffset(struct _AtkRectangle,width,8,3,42575)
 CheckMemberSize(struct _AtkRectangle,height,4,3,42576)
 CheckOffset(struct _AtkRectangle,height,12,3,42576)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkRectangle,16, 12197, 6)
+CheckMemberSize(struct _AtkRectangle,y,4,6,42574)
+CheckOffset(struct _AtkRectangle,y,4,6,42574)
+CheckMemberSize(struct _AtkRectangle,width,4,6,42575)
+CheckOffset(struct _AtkRectangle,width,8,6,42575)
+CheckMemberSize(struct _AtkRectangle,height,4,6,42576)
+CheckOffset(struct _AtkRectangle,height,12,6,42576)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkRectangle,16, 12197, 9)
+CheckMemberSize(struct _AtkRectangle,y,4,9,42574)
+CheckOffset(struct _AtkRectangle,y,4,9,42574)
+CheckMemberSize(struct _AtkRectangle,width,4,9,42575)
+CheckOffset(struct _AtkRectangle,width,8,9,42575)
+CheckMemberSize(struct _AtkRectangle,height,4,9,42576)
+CheckOffset(struct _AtkRectangle,height,12,9,42576)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkRectangle,16, 12197, 10)
+CheckMemberSize(struct _AtkRectangle,y,4,10,42574)
+CheckOffset(struct _AtkRectangle,y,4,10,42574)
+CheckMemberSize(struct _AtkRectangle,width,4,10,42575)
+CheckOffset(struct _AtkRectangle,width,8,10,42575)
+CheckMemberSize(struct _AtkRectangle,height,4,10,42576)
+CheckOffset(struct _AtkRectangle,height,12,10,42576)
+#elif __s390x__
+CheckTypeSize(struct _AtkRectangle,16, 12197, 12)
+CheckMemberSize(struct _AtkRectangle,y,4,12,42574)
+CheckOffset(struct _AtkRectangle,y,4,12,42574)
+CheckMemberSize(struct _AtkRectangle,width,4,12,42575)
+CheckOffset(struct _AtkRectangle,width,8,12,42575)
+CheckMemberSize(struct _AtkRectangle,height,4,12,42576)
+CheckOffset(struct _AtkRectangle,height,12,12,42576)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12197,0);
 Msg("Find size of _AtkRectangle (12197)\n");
@@ -2547,6 +4431,14 @@ CheckTypeSize(AtkRectangle,16, 12198, 2)
 CheckTypeSize(AtkRectangle,16, 12198, 11)
 #elif __ia64__
 CheckTypeSize(AtkRectangle,16, 12198, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRectangle,16, 12198, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRectangle,16, 12198, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRectangle,16, 12198, 10)
+#elif __s390x__
+CheckTypeSize(AtkRectangle,16, 12198, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12198,0);
 Msg("Find size of AtkRectangle (12198)\n");
@@ -2564,6 +4456,22 @@ CheckOffset(struct _AtkStateSetClass,parent,0,11,42577)
 CheckTypeSize(struct _AtkStateSetClass,136, 12199, 3)
 Msg("Missing member data for _AtkStateSetClass on IA64\n");
 CheckOffset(struct _AtkStateSetClass,parent,0,3,42577)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkStateSetClass,68, 12199, 6)
+Msg("Missing member data for _AtkStateSetClass on PPC32\n");
+CheckOffset(struct _AtkStateSetClass,parent,0,6,42577)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkStateSetClass,136, 12199, 9)
+Msg("Missing member data for _AtkStateSetClass on PPC64\n");
+CheckOffset(struct _AtkStateSetClass,parent,0,9,42577)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkStateSetClass,68, 12199, 10)
+Msg("Missing member data for _AtkStateSetClass on S390\n");
+CheckOffset(struct _AtkStateSetClass,parent,0,10,42577)
+#elif __s390x__
+CheckTypeSize(struct _AtkStateSetClass,136, 12199, 12)
+Msg("Missing member data for _AtkStateSetClass on S390X\n");
+CheckOffset(struct _AtkStateSetClass,parent,0,12,42577)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12199,0);
 Msg("Find size of _AtkStateSetClass (12199)\n");
@@ -2575,6 +4483,14 @@ CheckTypeSize(AtkStateSetClass,68, 12200, 2)
 CheckTypeSize(AtkStateSetClass,136, 12200, 11)
 #elif __ia64__
 CheckTypeSize(AtkStateSetClass,136, 12200, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkStateSetClass,68, 12200, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkStateSetClass,136, 12200, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkStateSetClass,68, 12200, 10)
+#elif __s390x__
+CheckTypeSize(AtkStateSetClass,136, 12200, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12200,0);
 Msg("Find size of AtkStateSetClass (12200)\n");
@@ -2592,6 +4508,22 @@ CheckOffset(struct _AtkAttribute,value,8,11,42579)
 CheckTypeSize(struct _AtkAttribute,16, 12201, 3)
 CheckMemberSize(struct _AtkAttribute,value,8,3,42579)
 CheckOffset(struct _AtkAttribute,value,8,3,42579)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkAttribute,8, 12201, 6)
+CheckMemberSize(struct _AtkAttribute,value,4,6,42579)
+CheckOffset(struct _AtkAttribute,value,4,6,42579)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkAttribute,16, 12201, 9)
+CheckMemberSize(struct _AtkAttribute,value,8,9,42579)
+CheckOffset(struct _AtkAttribute,value,8,9,42579)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkAttribute,8, 12201, 10)
+CheckMemberSize(struct _AtkAttribute,value,4,10,42579)
+CheckOffset(struct _AtkAttribute,value,4,10,42579)
+#elif __s390x__
+CheckTypeSize(struct _AtkAttribute,16, 12201, 12)
+CheckMemberSize(struct _AtkAttribute,value,8,12,42579)
+CheckOffset(struct _AtkAttribute,value,8,12,42579)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12201,0);
 Msg("Find size of _AtkAttribute (12201)\n");
@@ -2603,6 +4535,14 @@ CheckTypeSize(AtkAttribute,8, 12202, 2)
 CheckTypeSize(AtkAttribute,16, 12202, 11)
 #elif __ia64__
 CheckTypeSize(AtkAttribute,16, 12202, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkAttribute,8, 12202, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkAttribute,16, 12202, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkAttribute,8, 12202, 10)
+#elif __s390x__
+CheckTypeSize(AtkAttribute,16, 12202, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12202,0);
 Msg("Find size of AtkAttribute (12202)\n");
@@ -2776,6 +4716,230 @@ CheckMemberSize(struct _AtkObjectClass,pad2,8,3,42635)
 CheckOffset(struct _AtkObjectClass,pad2,336,3,42635)
 CheckMemberSize(struct _AtkObjectClass,pad3,8,3,42636)
 CheckOffset(struct _AtkObjectClass,pad3,344,3,42636)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkObjectClass,176, 12203, 6)
+CheckMemberSize(struct _AtkObjectClass,get_name,4,6,42582)
+CheckOffset(struct _AtkObjectClass,get_name,68,6,42582)
+CheckMemberSize(struct _AtkObjectClass,get_description,4,6,42583)
+CheckOffset(struct _AtkObjectClass,get_description,72,6,42583)
+CheckMemberSize(struct _AtkObjectClass,get_parent,4,6,42585)
+CheckOffset(struct _AtkObjectClass,get_parent,76,6,42585)
+CheckMemberSize(struct _AtkObjectClass,get_n_children,4,6,42587)
+CheckOffset(struct _AtkObjectClass,get_n_children,80,6,42587)
+CheckMemberSize(struct _AtkObjectClass,ref_child,4,6,42590)
+CheckOffset(struct _AtkObjectClass,ref_child,84,6,42590)
+CheckMemberSize(struct _AtkObjectClass,get_index_in_parent,4,6,42591)
+CheckOffset(struct _AtkObjectClass,get_index_in_parent,88,6,42591)
+CheckMemberSize(struct _AtkObjectClass,ref_relation_set,4,6,42593)
+CheckOffset(struct _AtkObjectClass,ref_relation_set,92,6,42593)
+CheckMemberSize(struct _AtkObjectClass,get_role,4,6,42595)
+CheckOffset(struct _AtkObjectClass,get_role,96,6,42595)
+CheckMemberSize(struct _AtkObjectClass,get_layer,4,6,42597)
+CheckOffset(struct _AtkObjectClass,get_layer,100,6,42597)
+CheckMemberSize(struct _AtkObjectClass,get_mdi_zorder,4,6,42598)
+CheckOffset(struct _AtkObjectClass,get_mdi_zorder,104,6,42598)
+CheckMemberSize(struct _AtkObjectClass,ref_state_set,4,6,42600)
+CheckOffset(struct _AtkObjectClass,ref_state_set,108,6,42600)
+CheckMemberSize(struct _AtkObjectClass,set_name,4,6,42603)
+CheckOffset(struct _AtkObjectClass,set_name,112,6,42603)
+CheckMemberSize(struct _AtkObjectClass,set_description,4,6,42604)
+CheckOffset(struct _AtkObjectClass,set_description,116,6,42604)
+CheckMemberSize(struct _AtkObjectClass,set_parent,4,6,42607)
+CheckOffset(struct _AtkObjectClass,set_parent,120,6,42607)
+CheckMemberSize(struct _AtkObjectClass,set_role,4,6,42610)
+CheckOffset(struct _AtkObjectClass,set_role,124,6,42610)
+CheckMemberSize(struct _AtkObjectClass,connect_property_change_handler,4,6,42613)
+CheckOffset(struct _AtkObjectClass,connect_property_change_handler,128,6,42613)
+CheckMemberSize(struct _AtkObjectClass,remove_property_change_handler,4,6,42616)
+CheckOffset(struct _AtkObjectClass,remove_property_change_handler,132,6,42616)
+CheckMemberSize(struct _AtkObjectClass,initialize,4,6,42619)
+CheckOffset(struct _AtkObjectClass,initialize,136,6,42619)
+CheckMemberSize(struct _AtkObjectClass,children_changed,4,6,42623)
+CheckOffset(struct _AtkObjectClass,children_changed,140,6,42623)
+CheckMemberSize(struct _AtkObjectClass,focus_event,4,6,42624)
+CheckOffset(struct _AtkObjectClass,focus_event,144,6,42624)
+CheckMemberSize(struct _AtkObjectClass,property_change,4,6,42625)
+CheckOffset(struct _AtkObjectClass,property_change,148,6,42625)
+CheckMemberSize(struct _AtkObjectClass,state_change,4,6,42629)
+CheckOffset(struct _AtkObjectClass,state_change,152,6,42629)
+CheckMemberSize(struct _AtkObjectClass,visible_data_changed,4,6,42630)
+CheckOffset(struct _AtkObjectClass,visible_data_changed,156,6,42630)
+CheckMemberSize(struct _AtkObjectClass,active_descendant_changed,4,6,42633)
+CheckOffset(struct _AtkObjectClass,active_descendant_changed,160,6,42633)
+CheckMemberSize(struct _AtkObjectClass,pad1,4,6,42634)
+CheckOffset(struct _AtkObjectClass,pad1,164,6,42634)
+CheckMemberSize(struct _AtkObjectClass,pad2,4,6,42635)
+CheckOffset(struct _AtkObjectClass,pad2,168,6,42635)
+CheckMemberSize(struct _AtkObjectClass,pad3,4,6,42636)
+CheckOffset(struct _AtkObjectClass,pad3,172,6,42636)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkObjectClass,352, 12203, 9)
+CheckMemberSize(struct _AtkObjectClass,get_name,8,9,42582)
+CheckOffset(struct _AtkObjectClass,get_name,136,9,42582)
+CheckMemberSize(struct _AtkObjectClass,get_description,8,9,42583)
+CheckOffset(struct _AtkObjectClass,get_description,144,9,42583)
+CheckMemberSize(struct _AtkObjectClass,get_parent,8,9,42585)
+CheckOffset(struct _AtkObjectClass,get_parent,152,9,42585)
+CheckMemberSize(struct _AtkObjectClass,get_n_children,8,9,42587)
+CheckOffset(struct _AtkObjectClass,get_n_children,160,9,42587)
+CheckMemberSize(struct _AtkObjectClass,ref_child,8,9,42590)
+CheckOffset(struct _AtkObjectClass,ref_child,168,9,42590)
+CheckMemberSize(struct _AtkObjectClass,get_index_in_parent,8,9,42591)
+CheckOffset(struct _AtkObjectClass,get_index_in_parent,176,9,42591)
+CheckMemberSize(struct _AtkObjectClass,ref_relation_set,8,9,42593)
+CheckOffset(struct _AtkObjectClass,ref_relation_set,184,9,42593)
+CheckMemberSize(struct _AtkObjectClass,get_role,8,9,42595)
+CheckOffset(struct _AtkObjectClass,get_role,192,9,42595)
+CheckMemberSize(struct _AtkObjectClass,get_layer,8,9,42597)
+CheckOffset(struct _AtkObjectClass,get_layer,200,9,42597)
+CheckMemberSize(struct _AtkObjectClass,get_mdi_zorder,8,9,42598)
+CheckOffset(struct _AtkObjectClass,get_mdi_zorder,208,9,42598)
+CheckMemberSize(struct _AtkObjectClass,ref_state_set,8,9,42600)
+CheckOffset(struct _AtkObjectClass,ref_state_set,216,9,42600)
+CheckMemberSize(struct _AtkObjectClass,set_name,8,9,42603)
+CheckOffset(struct _AtkObjectClass,set_name,224,9,42603)
+CheckMemberSize(struct _AtkObjectClass,set_description,8,9,42604)
+CheckOffset(struct _AtkObjectClass,set_description,232,9,42604)
+CheckMemberSize(struct _AtkObjectClass,set_parent,8,9,42607)
+CheckOffset(struct _AtkObjectClass,set_parent,240,9,42607)
+CheckMemberSize(struct _AtkObjectClass,set_role,8,9,42610)
+CheckOffset(struct _AtkObjectClass,set_role,248,9,42610)
+CheckMemberSize(struct _AtkObjectClass,connect_property_change_handler,8,9,42613)
+CheckOffset(struct _AtkObjectClass,connect_property_change_handler,256,9,42613)
+CheckMemberSize(struct _AtkObjectClass,remove_property_change_handler,8,9,42616)
+CheckOffset(struct _AtkObjectClass,remove_property_change_handler,264,9,42616)
+CheckMemberSize(struct _AtkObjectClass,initialize,8,9,42619)
+CheckOffset(struct _AtkObjectClass,initialize,272,9,42619)
+CheckMemberSize(struct _AtkObjectClass,children_changed,8,9,42623)
+CheckOffset(struct _AtkObjectClass,children_changed,280,9,42623)
+CheckMemberSize(struct _AtkObjectClass,focus_event,8,9,42624)
+CheckOffset(struct _AtkObjectClass,focus_event,288,9,42624)
+CheckMemberSize(struct _AtkObjectClass,property_change,8,9,42625)
+CheckOffset(struct _AtkObjectClass,property_change,296,9,42625)
+CheckMemberSize(struct _AtkObjectClass,state_change,8,9,42629)
+CheckOffset(struct _AtkObjectClass,state_change,304,9,42629)
+CheckMemberSize(struct _AtkObjectClass,visible_data_changed,8,9,42630)
+CheckOffset(struct _AtkObjectClass,visible_data_changed,312,9,42630)
+CheckMemberSize(struct _AtkObjectClass,active_descendant_changed,8,9,42633)
+CheckOffset(struct _AtkObjectClass,active_descendant_changed,320,9,42633)
+CheckMemberSize(struct _AtkObjectClass,pad1,8,9,42634)
+CheckOffset(struct _AtkObjectClass,pad1,328,9,42634)
+CheckMemberSize(struct _AtkObjectClass,pad2,8,9,42635)
+CheckOffset(struct _AtkObjectClass,pad2,336,9,42635)
+CheckMemberSize(struct _AtkObjectClass,pad3,8,9,42636)
+CheckOffset(struct _AtkObjectClass,pad3,344,9,42636)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkObjectClass,176, 12203, 10)
+CheckMemberSize(struct _AtkObjectClass,get_name,4,10,42582)
+CheckOffset(struct _AtkObjectClass,get_name,68,10,42582)
+CheckMemberSize(struct _AtkObjectClass,get_description,4,10,42583)
+CheckOffset(struct _AtkObjectClass,get_description,72,10,42583)
+CheckMemberSize(struct _AtkObjectClass,get_parent,4,10,42585)
+CheckOffset(struct _AtkObjectClass,get_parent,76,10,42585)
+CheckMemberSize(struct _AtkObjectClass,get_n_children,4,10,42587)
+CheckOffset(struct _AtkObjectClass,get_n_children,80,10,42587)
+CheckMemberSize(struct _AtkObjectClass,ref_child,4,10,42590)
+CheckOffset(struct _AtkObjectClass,ref_child,84,10,42590)
+CheckMemberSize(struct _AtkObjectClass,get_index_in_parent,4,10,42591)
+CheckOffset(struct _AtkObjectClass,get_index_in_parent,88,10,42591)
+CheckMemberSize(struct _AtkObjectClass,ref_relation_set,4,10,42593)
+CheckOffset(struct _AtkObjectClass,ref_relation_set,92,10,42593)
+CheckMemberSize(struct _AtkObjectClass,get_role,4,10,42595)
+CheckOffset(struct _AtkObjectClass,get_role,96,10,42595)
+CheckMemberSize(struct _AtkObjectClass,get_layer,4,10,42597)
+CheckOffset(struct _AtkObjectClass,get_layer,100,10,42597)
+CheckMemberSize(struct _AtkObjectClass,get_mdi_zorder,4,10,42598)
+CheckOffset(struct _AtkObjectClass,get_mdi_zorder,104,10,42598)
+CheckMemberSize(struct _AtkObjectClass,ref_state_set,4,10,42600)
+CheckOffset(struct _AtkObjectClass,ref_state_set,108,10,42600)
+CheckMemberSize(struct _AtkObjectClass,set_name,4,10,42603)
+CheckOffset(struct _AtkObjectClass,set_name,112,10,42603)
+CheckMemberSize(struct _AtkObjectClass,set_description,4,10,42604)
+CheckOffset(struct _AtkObjectClass,set_description,116,10,42604)
+CheckMemberSize(struct _AtkObjectClass,set_parent,4,10,42607)
+CheckOffset(struct _AtkObjectClass,set_parent,120,10,42607)
+CheckMemberSize(struct _AtkObjectClass,set_role,4,10,42610)
+CheckOffset(struct _AtkObjectClass,set_role,124,10,42610)
+CheckMemberSize(struct _AtkObjectClass,connect_property_change_handler,4,10,42613)
+CheckOffset(struct _AtkObjectClass,connect_property_change_handler,128,10,42613)
+CheckMemberSize(struct _AtkObjectClass,remove_property_change_handler,4,10,42616)
+CheckOffset(struct _AtkObjectClass,remove_property_change_handler,132,10,42616)
+CheckMemberSize(struct _AtkObjectClass,initialize,4,10,42619)
+CheckOffset(struct _AtkObjectClass,initialize,136,10,42619)
+CheckMemberSize(struct _AtkObjectClass,children_changed,4,10,42623)
+CheckOffset(struct _AtkObjectClass,children_changed,140,10,42623)
+CheckMemberSize(struct _AtkObjectClass,focus_event,4,10,42624)
+CheckOffset(struct _AtkObjectClass,focus_event,144,10,42624)
+CheckMemberSize(struct _AtkObjectClass,property_change,4,10,42625)
+CheckOffset(struct _AtkObjectClass,property_change,148,10,42625)
+CheckMemberSize(struct _AtkObjectClass,state_change,4,10,42629)
+CheckOffset(struct _AtkObjectClass,state_change,152,10,42629)
+CheckMemberSize(struct _AtkObjectClass,visible_data_changed,4,10,42630)
+CheckOffset(struct _AtkObjectClass,visible_data_changed,156,10,42630)
+CheckMemberSize(struct _AtkObjectClass,active_descendant_changed,4,10,42633)
+CheckOffset(struct _AtkObjectClass,active_descendant_changed,160,10,42633)
+CheckMemberSize(struct _AtkObjectClass,pad1,4,10,42634)
+CheckOffset(struct _AtkObjectClass,pad1,164,10,42634)
+CheckMemberSize(struct _AtkObjectClass,pad2,4,10,42635)
+CheckOffset(struct _AtkObjectClass,pad2,168,10,42635)
+CheckMemberSize(struct _AtkObjectClass,pad3,4,10,42636)
+CheckOffset(struct _AtkObjectClass,pad3,172,10,42636)
+#elif __s390x__
+CheckTypeSize(struct _AtkObjectClass,352, 12203, 12)
+CheckMemberSize(struct _AtkObjectClass,get_name,8,12,42582)
+CheckOffset(struct _AtkObjectClass,get_name,136,12,42582)
+CheckMemberSize(struct _AtkObjectClass,get_description,8,12,42583)
+CheckOffset(struct _AtkObjectClass,get_description,144,12,42583)
+CheckMemberSize(struct _AtkObjectClass,get_parent,8,12,42585)
+CheckOffset(struct _AtkObjectClass,get_parent,152,12,42585)
+CheckMemberSize(struct _AtkObjectClass,get_n_children,8,12,42587)
+CheckOffset(struct _AtkObjectClass,get_n_children,160,12,42587)
+CheckMemberSize(struct _AtkObjectClass,ref_child,8,12,42590)
+CheckOffset(struct _AtkObjectClass,ref_child,168,12,42590)
+CheckMemberSize(struct _AtkObjectClass,get_index_in_parent,8,12,42591)
+CheckOffset(struct _AtkObjectClass,get_index_in_parent,176,12,42591)
+CheckMemberSize(struct _AtkObjectClass,ref_relation_set,8,12,42593)
+CheckOffset(struct _AtkObjectClass,ref_relation_set,184,12,42593)
+CheckMemberSize(struct _AtkObjectClass,get_role,8,12,42595)
+CheckOffset(struct _AtkObjectClass,get_role,192,12,42595)
+CheckMemberSize(struct _AtkObjectClass,get_layer,8,12,42597)
+CheckOffset(struct _AtkObjectClass,get_layer,200,12,42597)
+CheckMemberSize(struct _AtkObjectClass,get_mdi_zorder,8,12,42598)
+CheckOffset(struct _AtkObjectClass,get_mdi_zorder,208,12,42598)
+CheckMemberSize(struct _AtkObjectClass,ref_state_set,8,12,42600)
+CheckOffset(struct _AtkObjectClass,ref_state_set,216,12,42600)
+CheckMemberSize(struct _AtkObjectClass,set_name,8,12,42603)
+CheckOffset(struct _AtkObjectClass,set_name,224,12,42603)
+CheckMemberSize(struct _AtkObjectClass,set_description,8,12,42604)
+CheckOffset(struct _AtkObjectClass,set_description,232,12,42604)
+CheckMemberSize(struct _AtkObjectClass,set_parent,8,12,42607)
+CheckOffset(struct _AtkObjectClass,set_parent,240,12,42607)
+CheckMemberSize(struct _AtkObjectClass,set_role,8,12,42610)
+CheckOffset(struct _AtkObjectClass,set_role,248,12,42610)
+CheckMemberSize(struct _AtkObjectClass,connect_property_change_handler,8,12,42613)
+CheckOffset(struct _AtkObjectClass,connect_property_change_handler,256,12,42613)
+CheckMemberSize(struct _AtkObjectClass,remove_property_change_handler,8,12,42616)
+CheckOffset(struct _AtkObjectClass,remove_property_change_handler,264,12,42616)
+CheckMemberSize(struct _AtkObjectClass,initialize,8,12,42619)
+CheckOffset(struct _AtkObjectClass,initialize,272,12,42619)
+CheckMemberSize(struct _AtkObjectClass,children_changed,8,12,42623)
+CheckOffset(struct _AtkObjectClass,children_changed,280,12,42623)
+CheckMemberSize(struct _AtkObjectClass,focus_event,8,12,42624)
+CheckOffset(struct _AtkObjectClass,focus_event,288,12,42624)
+CheckMemberSize(struct _AtkObjectClass,property_change,8,12,42625)
+CheckOffset(struct _AtkObjectClass,property_change,296,12,42625)
+CheckMemberSize(struct _AtkObjectClass,state_change,8,12,42629)
+CheckOffset(struct _AtkObjectClass,state_change,304,12,42629)
+CheckMemberSize(struct _AtkObjectClass,visible_data_changed,8,12,42630)
+CheckOffset(struct _AtkObjectClass,visible_data_changed,312,12,42630)
+CheckMemberSize(struct _AtkObjectClass,active_descendant_changed,8,12,42633)
+CheckOffset(struct _AtkObjectClass,active_descendant_changed,320,12,42633)
+CheckMemberSize(struct _AtkObjectClass,pad1,8,12,42634)
+CheckOffset(struct _AtkObjectClass,pad1,328,12,42634)
+CheckMemberSize(struct _AtkObjectClass,pad2,8,12,42635)
+CheckOffset(struct _AtkObjectClass,pad2,336,12,42635)
+CheckMemberSize(struct _AtkObjectClass,pad3,8,12,42636)
+CheckOffset(struct _AtkObjectClass,pad3,344,12,42636)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12203,0);
 Msg("Find size of _AtkObjectClass (12203)\n");
@@ -2784,6 +4948,10 @@ Msg("Find size of _AtkObjectClass (12203)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12204,0);
 Msg("Find size of fptr_atk_152 (12204)\n");
@@ -2792,6 +4960,10 @@ Msg("Find size of fptr_atk_152 (12204)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12205,0);
 Msg("Find size of fptr_atk_419 (12205)\n");
@@ -2800,6 +4972,10 @@ Msg("Find size of fptr_atk_419 (12205)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12206,0);
 Msg("Find size of fptr_atk_279 (12206)\n");
@@ -2808,6 +4984,10 @@ Msg("Find size of fptr_atk_279 (12206)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12207,0);
 Msg("Find size of fptr_atk_265 (12207)\n");
@@ -2816,6 +4996,10 @@ Msg("Find size of fptr_atk_265 (12207)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12208,0);
 Msg("Find size of fptr_atk_132 (12208)\n");
@@ -2824,6 +5008,10 @@ Msg("Find size of fptr_atk_132 (12208)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12209,0);
 Msg("Find size of fptr_atk_108 (12209)\n");
@@ -2832,6 +5020,10 @@ Msg("Find size of fptr_atk_108 (12209)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12210,0);
 Msg("Find size of fptr_atk_168 (12210)\n");
@@ -2840,6 +5032,10 @@ Msg("Find size of fptr_atk_168 (12210)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12211,0);
 Msg("Find size of fptr_atk_177 (12211)\n");
@@ -2848,6 +5044,10 @@ Msg("Find size of fptr_atk_177 (12211)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12212,0);
 Msg("Find size of fptr_atk_59 (12212)\n");
@@ -2856,6 +5056,10 @@ Msg("Find size of fptr_atk_59 (12212)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12213,0);
 Msg("Find size of fptr_atk_23 (12213)\n");
@@ -2864,6 +5068,10 @@ Msg("Find size of fptr_atk_23 (12213)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12214,0);
 Msg("Find size of fptr_atk_346 (12214)\n");
@@ -2872,6 +5080,10 @@ Msg("Find size of fptr_atk_346 (12214)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12215,0);
 Msg("Find size of fptr_atk_292 (12215)\n");
@@ -2880,6 +5092,10 @@ Msg("Find size of fptr_atk_292 (12215)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12216,0);
 Msg("Find size of fptr_atk_411 (12216)\n");
@@ -2888,6 +5104,10 @@ Msg("Find size of fptr_atk_411 (12216)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12217,0);
 Msg("Find size of fptr_atk_216 (12217)\n");
@@ -2896,6 +5116,10 @@ Msg("Find size of fptr_atk_216 (12217)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12218,0);
 Msg("Find size of fptr_atk_423 (12218)\n");
@@ -2904,6 +5128,10 @@ Msg("Find size of fptr_atk_423 (12218)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12219,0);
 Msg("Find size of fptr_atk_420 (12219)\n");
@@ -2912,6 +5140,10 @@ Msg("Find size of fptr_atk_420 (12219)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12220,0);
 Msg("Find size of fptr_atk_74 (12220)\n");
@@ -2923,6 +5155,14 @@ CheckTypeSize(AtkObjectClass,176, 12221, 2)
 CheckTypeSize(AtkObjectClass,352, 12221, 11)
 #elif __ia64__
 CheckTypeSize(AtkObjectClass,352, 12221, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkObjectClass,176, 12221, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkObjectClass,352, 12221, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkObjectClass,176, 12221, 10)
+#elif __s390x__
+CheckTypeSize(AtkObjectClass,352, 12221, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12221,0);
 Msg("Find size of AtkObjectClass (12221)\n");
@@ -2946,6 +5186,30 @@ CheckMemberSize(struct _AtkGObjectAccessibleClass,pad1,8,3,42638)
 CheckOffset(struct _AtkGObjectAccessibleClass,pad1,352,3,42638)
 CheckMemberSize(struct _AtkGObjectAccessibleClass,pad2,8,3,42639)
 CheckOffset(struct _AtkGObjectAccessibleClass,pad2,360,3,42639)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkGObjectAccessibleClass,184, 12222, 6)
+CheckMemberSize(struct _AtkGObjectAccessibleClass,pad1,4,6,42638)
+CheckOffset(struct _AtkGObjectAccessibleClass,pad1,176,6,42638)
+CheckMemberSize(struct _AtkGObjectAccessibleClass,pad2,4,6,42639)
+CheckOffset(struct _AtkGObjectAccessibleClass,pad2,180,6,42639)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkGObjectAccessibleClass,368, 12222, 9)
+CheckMemberSize(struct _AtkGObjectAccessibleClass,pad1,8,9,42638)
+CheckOffset(struct _AtkGObjectAccessibleClass,pad1,352,9,42638)
+CheckMemberSize(struct _AtkGObjectAccessibleClass,pad2,8,9,42639)
+CheckOffset(struct _AtkGObjectAccessibleClass,pad2,360,9,42639)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkGObjectAccessibleClass,184, 12222, 10)
+CheckMemberSize(struct _AtkGObjectAccessibleClass,pad1,4,10,42638)
+CheckOffset(struct _AtkGObjectAccessibleClass,pad1,176,10,42638)
+CheckMemberSize(struct _AtkGObjectAccessibleClass,pad2,4,10,42639)
+CheckOffset(struct _AtkGObjectAccessibleClass,pad2,180,10,42639)
+#elif __s390x__
+CheckTypeSize(struct _AtkGObjectAccessibleClass,368, 12222, 12)
+CheckMemberSize(struct _AtkGObjectAccessibleClass,pad1,8,12,42638)
+CheckOffset(struct _AtkGObjectAccessibleClass,pad1,352,12,42638)
+CheckMemberSize(struct _AtkGObjectAccessibleClass,pad2,8,12,42639)
+CheckOffset(struct _AtkGObjectAccessibleClass,pad2,360,12,42639)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12222,0);
 Msg("Find size of _AtkGObjectAccessibleClass (12222)\n");
@@ -2957,6 +5221,14 @@ CheckTypeSize(AtkGObjectAccessibleClass,184, 12223, 2)
 CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 11)
 #elif __ia64__
 CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkGObjectAccessibleClass,184, 12223, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkGObjectAccessibleClass,184, 12223, 10)
+#elif __s390x__
+CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12223,0);
 Msg("Find size of AtkGObjectAccessibleClass (12223)\n");
@@ -2974,6 +5246,22 @@ CheckOffset(struct _AtkNoOpObjectFactoryClass,parent_class,0,11,42648)
 CheckTypeSize(struct _AtkNoOpObjectFactoryClass,176, 12224, 3)
 Msg("Missing member data for _AtkNoOpObjectFactoryClass on IA64\n");
 CheckOffset(struct _AtkNoOpObjectFactoryClass,parent_class,0,3,42648)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkNoOpObjectFactoryClass,88, 12224, 6)
+Msg("Missing member data for _AtkNoOpObjectFactoryClass on PPC32\n");
+CheckOffset(struct _AtkNoOpObjectFactoryClass,parent_class,0,6,42648)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkNoOpObjectFactoryClass,176, 12224, 9)
+Msg("Missing member data for _AtkNoOpObjectFactoryClass on PPC64\n");
+CheckOffset(struct _AtkNoOpObjectFactoryClass,parent_class,0,9,42648)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkNoOpObjectFactoryClass,88, 12224, 10)
+Msg("Missing member data for _AtkNoOpObjectFactoryClass on S390\n");
+CheckOffset(struct _AtkNoOpObjectFactoryClass,parent_class,0,10,42648)
+#elif __s390x__
+CheckTypeSize(struct _AtkNoOpObjectFactoryClass,176, 12224, 12)
+Msg("Missing member data for _AtkNoOpObjectFactoryClass on S390X\n");
+CheckOffset(struct _AtkNoOpObjectFactoryClass,parent_class,0,12,42648)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12224,0);
 Msg("Find size of _AtkNoOpObjectFactoryClass (12224)\n");
@@ -3015,6 +5303,54 @@ CheckMemberSize(struct _AtkObjectFactoryClass,pad1,8,3,42646)
 CheckOffset(struct _AtkObjectFactoryClass,pad1,160,3,42646)
 CheckMemberSize(struct _AtkObjectFactoryClass,pad2,8,3,42647)
 CheckOffset(struct _AtkObjectFactoryClass,pad2,168,3,42647)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkObjectFactoryClass,88, 12225, 6)
+CheckMemberSize(struct _AtkObjectFactoryClass,create_accessible,4,6,42642)
+CheckOffset(struct _AtkObjectFactoryClass,create_accessible,68,6,42642)
+CheckMemberSize(struct _AtkObjectFactoryClass,invalidate,4,6,42644)
+CheckOffset(struct _AtkObjectFactoryClass,invalidate,72,6,42644)
+CheckMemberSize(struct _AtkObjectFactoryClass,get_accessible_type,4,6,42645)
+CheckOffset(struct _AtkObjectFactoryClass,get_accessible_type,76,6,42645)
+CheckMemberSize(struct _AtkObjectFactoryClass,pad1,4,6,42646)
+CheckOffset(struct _AtkObjectFactoryClass,pad1,80,6,42646)
+CheckMemberSize(struct _AtkObjectFactoryClass,pad2,4,6,42647)
+CheckOffset(struct _AtkObjectFactoryClass,pad2,84,6,42647)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkObjectFactoryClass,176, 12225, 9)
+CheckMemberSize(struct _AtkObjectFactoryClass,create_accessible,8,9,42642)
+CheckOffset(struct _AtkObjectFactoryClass,create_accessible,136,9,42642)
+CheckMemberSize(struct _AtkObjectFactoryClass,invalidate,8,9,42644)
+CheckOffset(struct _AtkObjectFactoryClass,invalidate,144,9,42644)
+CheckMemberSize(struct _AtkObjectFactoryClass,get_accessible_type,8,9,42645)
+CheckOffset(struct _AtkObjectFactoryClass,get_accessible_type,152,9,42645)
+CheckMemberSize(struct _AtkObjectFactoryClass,pad1,8,9,42646)
+CheckOffset(struct _AtkObjectFactoryClass,pad1,160,9,42646)
+CheckMemberSize(struct _AtkObjectFactoryClass,pad2,8,9,42647)
+CheckOffset(struct _AtkObjectFactoryClass,pad2,168,9,42647)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkObjectFactoryClass,88, 12225, 10)
+CheckMemberSize(struct _AtkObjectFactoryClass,create_accessible,4,10,42642)
+CheckOffset(struct _AtkObjectFactoryClass,create_accessible,68,10,42642)
+CheckMemberSize(struct _AtkObjectFactoryClass,invalidate,4,10,42644)
+CheckOffset(struct _AtkObjectFactoryClass,invalidate,72,10,42644)
+CheckMemberSize(struct _AtkObjectFactoryClass,get_accessible_type,4,10,42645)
+CheckOffset(struct _AtkObjectFactoryClass,get_accessible_type,76,10,42645)
+CheckMemberSize(struct _AtkObjectFactoryClass,pad1,4,10,42646)
+CheckOffset(struct _AtkObjectFactoryClass,pad1,80,10,42646)
+CheckMemberSize(struct _AtkObjectFactoryClass,pad2,4,10,42647)
+CheckOffset(struct _AtkObjectFactoryClass,pad2,84,10,42647)
+#elif __s390x__
+CheckTypeSize(struct _AtkObjectFactoryClass,176, 12225, 12)
+CheckMemberSize(struct _AtkObjectFactoryClass,create_accessible,8,12,42642)
+CheckOffset(struct _AtkObjectFactoryClass,create_accessible,136,12,42642)
+CheckMemberSize(struct _AtkObjectFactoryClass,invalidate,8,12,42644)
+CheckOffset(struct _AtkObjectFactoryClass,invalidate,144,12,42644)
+CheckMemberSize(struct _AtkObjectFactoryClass,get_accessible_type,8,12,42645)
+CheckOffset(struct _AtkObjectFactoryClass,get_accessible_type,152,12,42645)
+CheckMemberSize(struct _AtkObjectFactoryClass,pad1,8,12,42646)
+CheckOffset(struct _AtkObjectFactoryClass,pad1,160,12,42646)
+CheckMemberSize(struct _AtkObjectFactoryClass,pad2,8,12,42647)
+CheckOffset(struct _AtkObjectFactoryClass,pad2,168,12,42647)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12225,0);
 Msg("Find size of _AtkObjectFactoryClass (12225)\n");
@@ -3023,6 +5359,10 @@ Msg("Find size of _AtkObjectFactoryClass (12225)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12226,0);
 Msg("Find size of fptr_atk_349 (12226)\n");
@@ -3031,6 +5371,10 @@ Msg("Find size of fptr_atk_349 (12226)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12227,0);
 Msg("Find size of fptr_atk_127 (12227)\n");
@@ -3039,6 +5383,10 @@ Msg("Find size of fptr_atk_127 (12227)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12228,0);
 Msg("Find size of fptr_atk_286 (12228)\n");
@@ -3050,6 +5398,14 @@ CheckTypeSize(AtkObjectFactoryClass,88, 12229, 2)
 CheckTypeSize(AtkObjectFactoryClass,176, 12229, 11)
 #elif __ia64__
 CheckTypeSize(AtkObjectFactoryClass,176, 12229, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkObjectFactoryClass,88, 12229, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkObjectFactoryClass,176, 12229, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkObjectFactoryClass,88, 12229, 10)
+#elif __s390x__
+CheckTypeSize(AtkObjectFactoryClass,176, 12229, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12229,0);
 Msg("Find size of AtkObjectFactoryClass (12229)\n");
@@ -3061,6 +5417,14 @@ CheckTypeSize(AtkNoOpObjectFactoryClass,88, 12230, 2)
 CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 11)
 #elif __ia64__
 CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkNoOpObjectFactoryClass,88, 12230, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkNoOpObjectFactoryClass,88, 12230, 10)
+#elif __s390x__
+CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12230,0);
 Msg("Find size of AtkNoOpObjectFactoryClass (12230)\n");
@@ -3120,6 +5484,78 @@ CheckMemberSize(struct _AtkActionIface,get_localized_name,8,3,42664)
 CheckOffset(struct _AtkActionIface,get_localized_name,64,3,42664)
 CheckMemberSize(struct _AtkActionIface,pad2,8,3,42665)
 CheckOffset(struct _AtkActionIface,pad2,72,3,42665)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkActionIface,40, 12231, 6)
+CheckMemberSize(struct _AtkActionIface,do_action,4,6,42652)
+CheckOffset(struct _AtkActionIface,do_action,8,6,42652)
+CheckMemberSize(struct _AtkActionIface,get_n_actions,4,6,42654)
+CheckOffset(struct _AtkActionIface,get_n_actions,12,6,42654)
+CheckMemberSize(struct _AtkActionIface,get_description,4,6,42657)
+CheckOffset(struct _AtkActionIface,get_description,16,6,42657)
+CheckMemberSize(struct _AtkActionIface,get_name,4,6,42658)
+CheckOffset(struct _AtkActionIface,get_name,20,6,42658)
+CheckMemberSize(struct _AtkActionIface,get_keybinding,4,6,42659)
+CheckOffset(struct _AtkActionIface,get_keybinding,24,6,42659)
+CheckMemberSize(struct _AtkActionIface,set_description,4,6,42663)
+CheckOffset(struct _AtkActionIface,set_description,28,6,42663)
+CheckMemberSize(struct _AtkActionIface,get_localized_name,4,6,42664)
+CheckOffset(struct _AtkActionIface,get_localized_name,32,6,42664)
+CheckMemberSize(struct _AtkActionIface,pad2,4,6,42665)
+CheckOffset(struct _AtkActionIface,pad2,36,6,42665)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkActionIface,80, 12231, 9)
+CheckMemberSize(struct _AtkActionIface,do_action,8,9,42652)
+CheckOffset(struct _AtkActionIface,do_action,16,9,42652)
+CheckMemberSize(struct _AtkActionIface,get_n_actions,8,9,42654)
+CheckOffset(struct _AtkActionIface,get_n_actions,24,9,42654)
+CheckMemberSize(struct _AtkActionIface,get_description,8,9,42657)
+CheckOffset(struct _AtkActionIface,get_description,32,9,42657)
+CheckMemberSize(struct _AtkActionIface,get_name,8,9,42658)
+CheckOffset(struct _AtkActionIface,get_name,40,9,42658)
+CheckMemberSize(struct _AtkActionIface,get_keybinding,8,9,42659)
+CheckOffset(struct _AtkActionIface,get_keybinding,48,9,42659)
+CheckMemberSize(struct _AtkActionIface,set_description,8,9,42663)
+CheckOffset(struct _AtkActionIface,set_description,56,9,42663)
+CheckMemberSize(struct _AtkActionIface,get_localized_name,8,9,42664)
+CheckOffset(struct _AtkActionIface,get_localized_name,64,9,42664)
+CheckMemberSize(struct _AtkActionIface,pad2,8,9,42665)
+CheckOffset(struct _AtkActionIface,pad2,72,9,42665)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkActionIface,40, 12231, 10)
+CheckMemberSize(struct _AtkActionIface,do_action,4,10,42652)
+CheckOffset(struct _AtkActionIface,do_action,8,10,42652)
+CheckMemberSize(struct _AtkActionIface,get_n_actions,4,10,42654)
+CheckOffset(struct _AtkActionIface,get_n_actions,12,10,42654)
+CheckMemberSize(struct _AtkActionIface,get_description,4,10,42657)
+CheckOffset(struct _AtkActionIface,get_description,16,10,42657)
+CheckMemberSize(struct _AtkActionIface,get_name,4,10,42658)
+CheckOffset(struct _AtkActionIface,get_name,20,10,42658)
+CheckMemberSize(struct _AtkActionIface,get_keybinding,4,10,42659)
+CheckOffset(struct _AtkActionIface,get_keybinding,24,10,42659)
+CheckMemberSize(struct _AtkActionIface,set_description,4,10,42663)
+CheckOffset(struct _AtkActionIface,set_description,28,10,42663)
+CheckMemberSize(struct _AtkActionIface,get_localized_name,4,10,42664)
+CheckOffset(struct _AtkActionIface,get_localized_name,32,10,42664)
+CheckMemberSize(struct _AtkActionIface,pad2,4,10,42665)
+CheckOffset(struct _AtkActionIface,pad2,36,10,42665)
+#elif __s390x__
+CheckTypeSize(struct _AtkActionIface,80, 12231, 12)
+CheckMemberSize(struct _AtkActionIface,do_action,8,12,42652)
+CheckOffset(struct _AtkActionIface,do_action,16,12,42652)
+CheckMemberSize(struct _AtkActionIface,get_n_actions,8,12,42654)
+CheckOffset(struct _AtkActionIface,get_n_actions,24,12,42654)
+CheckMemberSize(struct _AtkActionIface,get_description,8,12,42657)
+CheckOffset(struct _AtkActionIface,get_description,32,12,42657)
+CheckMemberSize(struct _AtkActionIface,get_name,8,12,42658)
+CheckOffset(struct _AtkActionIface,get_name,40,12,42658)
+CheckMemberSize(struct _AtkActionIface,get_keybinding,8,12,42659)
+CheckOffset(struct _AtkActionIface,get_keybinding,48,12,42659)
+CheckMemberSize(struct _AtkActionIface,set_description,8,12,42663)
+CheckOffset(struct _AtkActionIface,set_description,56,12,42663)
+CheckMemberSize(struct _AtkActionIface,get_localized_name,8,12,42664)
+CheckOffset(struct _AtkActionIface,get_localized_name,64,12,42664)
+CheckMemberSize(struct _AtkActionIface,pad2,8,12,42665)
+CheckOffset(struct _AtkActionIface,pad2,72,12,42665)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12231,0);
 Msg("Find size of _AtkActionIface (12231)\n");
@@ -3128,6 +5564,10 @@ Msg("Find size of _AtkActionIface (12231)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12232,0);
 Msg("Find size of fptr_atk_231 (12232)\n");
@@ -3136,6 +5576,10 @@ Msg("Find size of fptr_atk_231 (12232)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12233,0);
 Msg("Find size of fptr_atk_381 (12233)\n");
@@ -3144,6 +5588,10 @@ Msg("Find size of fptr_atk_381 (12233)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12234,0);
 Msg("Find size of fptr_atk_273 (12234)\n");
@@ -3152,6 +5600,10 @@ Msg("Find size of fptr_atk_273 (12234)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12235,0);
 Msg("Find size of fptr_atk_331 (12235)\n");
@@ -3163,6 +5615,14 @@ CheckTypeSize(AtkActionIface,40, 12236, 2)
 CheckTypeSize(AtkActionIface,80, 12236, 11)
 #elif __ia64__
 CheckTypeSize(AtkActionIface,80, 12236, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkActionIface,40, 12236, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkActionIface,80, 12236, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkActionIface,40, 12236, 10)
+#elif __s390x__
+CheckTypeSize(AtkActionIface,80, 12236, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12236,0);
 Msg("Find size of AtkActionIface (12236)\n");
@@ -3414,6 +5874,334 @@ CheckMemberSize(struct _AtkTableIface,pad3,8,3,42738)
 CheckOffset(struct _AtkTableIface,pad3,320,3,42738)
 CheckMemberSize(struct _AtkTableIface,pad4,8,3,42739)
 CheckOffset(struct _AtkTableIface,pad4,328,3,42739)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkTableIface,168, 12237, 6)
+CheckMemberSize(struct _AtkTableIface,ref_at,4,6,42670)
+CheckOffset(struct _AtkTableIface,ref_at,8,6,42670)
+CheckMemberSize(struct _AtkTableIface,get_index_at,4,6,42674)
+CheckOffset(struct _AtkTableIface,get_index_at,12,6,42674)
+CheckMemberSize(struct _AtkTableIface,get_column_at_index,4,6,42677)
+CheckOffset(struct _AtkTableIface,get_column_at_index,16,6,42677)
+CheckMemberSize(struct _AtkTableIface,get_row_at_index,4,6,42678)
+CheckOffset(struct _AtkTableIface,get_row_at_index,20,6,42678)
+CheckMemberSize(struct _AtkTableIface,get_n_columns,4,6,42680)
+CheckOffset(struct _AtkTableIface,get_n_columns,24,6,42680)
+CheckMemberSize(struct _AtkTableIface,get_n_rows,4,6,42681)
+CheckOffset(struct _AtkTableIface,get_n_rows,28,6,42681)
+CheckMemberSize(struct _AtkTableIface,get_column_extent_at,4,6,42682)
+CheckOffset(struct _AtkTableIface,get_column_extent_at,32,6,42682)
+CheckMemberSize(struct _AtkTableIface,get_row_extent_at,4,6,42683)
+CheckOffset(struct _AtkTableIface,get_row_extent_at,36,6,42683)
+CheckMemberSize(struct _AtkTableIface,get_caption,4,6,42685)
+CheckOffset(struct _AtkTableIface,get_caption,40,6,42685)
+CheckMemberSize(struct _AtkTableIface,get_column_description,4,6,42688)
+CheckOffset(struct _AtkTableIface,get_column_description,44,6,42688)
+CheckMemberSize(struct _AtkTableIface,get_column_header,4,6,42691)
+CheckOffset(struct _AtkTableIface,get_column_header,48,6,42691)
+CheckMemberSize(struct _AtkTableIface,get_row_description,4,6,42692)
+CheckOffset(struct _AtkTableIface,get_row_description,52,6,42692)
+CheckMemberSize(struct _AtkTableIface,get_row_header,4,6,42693)
+CheckOffset(struct _AtkTableIface,get_row_header,56,6,42693)
+CheckMemberSize(struct _AtkTableIface,get_summary,4,6,42694)
+CheckOffset(struct _AtkTableIface,get_summary,60,6,42694)
+CheckMemberSize(struct _AtkTableIface,set_caption,4,6,42697)
+CheckOffset(struct _AtkTableIface,set_caption,64,6,42697)
+CheckMemberSize(struct _AtkTableIface,set_column_description,4,6,42701)
+CheckOffset(struct _AtkTableIface,set_column_description,68,6,42701)
+CheckMemberSize(struct _AtkTableIface,set_column_header,4,6,42705)
+CheckOffset(struct _AtkTableIface,set_column_header,72,6,42705)
+CheckMemberSize(struct _AtkTableIface,set_row_description,4,6,42706)
+CheckOffset(struct _AtkTableIface,set_row_description,76,6,42706)
+CheckMemberSize(struct _AtkTableIface,set_row_header,4,6,42707)
+CheckOffset(struct _AtkTableIface,set_row_header,80,6,42707)
+CheckMemberSize(struct _AtkTableIface,set_summary,4,6,42708)
+CheckOffset(struct _AtkTableIface,set_summary,84,6,42708)
+CheckMemberSize(struct _AtkTableIface,get_selected_columns,4,6,42711)
+CheckOffset(struct _AtkTableIface,get_selected_columns,88,6,42711)
+CheckMemberSize(struct _AtkTableIface,get_selected_rows,4,6,42712)
+CheckOffset(struct _AtkTableIface,get_selected_rows,92,6,42712)
+CheckMemberSize(struct _AtkTableIface,is_column_selected,4,6,42715)
+CheckOffset(struct _AtkTableIface,is_column_selected,96,6,42715)
+CheckMemberSize(struct _AtkTableIface,is_row_selected,4,6,42716)
+CheckOffset(struct _AtkTableIface,is_row_selected,100,6,42716)
+CheckMemberSize(struct _AtkTableIface,is_selected,4,6,42720)
+CheckOffset(struct _AtkTableIface,is_selected,104,6,42720)
+CheckMemberSize(struct _AtkTableIface,add_row_selection,4,6,42721)
+CheckOffset(struct _AtkTableIface,add_row_selection,108,6,42721)
+CheckMemberSize(struct _AtkTableIface,remove_row_selection,4,6,42722)
+CheckOffset(struct _AtkTableIface,remove_row_selection,112,6,42722)
+CheckMemberSize(struct _AtkTableIface,add_column_selection,4,6,42723)
+CheckOffset(struct _AtkTableIface,add_column_selection,116,6,42723)
+CheckMemberSize(struct _AtkTableIface,remove_column_selection,4,6,42724)
+CheckOffset(struct _AtkTableIface,remove_column_selection,120,6,42724)
+CheckMemberSize(struct _AtkTableIface,row_inserted,4,6,42728)
+CheckOffset(struct _AtkTableIface,row_inserted,124,6,42728)
+CheckMemberSize(struct _AtkTableIface,column_inserted,4,6,42729)
+CheckOffset(struct _AtkTableIface,column_inserted,128,6,42729)
+CheckMemberSize(struct _AtkTableIface,row_deleted,4,6,42730)
+CheckOffset(struct _AtkTableIface,row_deleted,132,6,42730)
+CheckMemberSize(struct _AtkTableIface,column_deleted,4,6,42731)
+CheckOffset(struct _AtkTableIface,column_deleted,136,6,42731)
+CheckMemberSize(struct _AtkTableIface,row_reordered,4,6,42733)
+CheckOffset(struct _AtkTableIface,row_reordered,140,6,42733)
+CheckMemberSize(struct _AtkTableIface,column_reordered,4,6,42734)
+CheckOffset(struct _AtkTableIface,column_reordered,144,6,42734)
+CheckMemberSize(struct _AtkTableIface,model_changed,4,6,42735)
+CheckOffset(struct _AtkTableIface,model_changed,148,6,42735)
+CheckMemberSize(struct _AtkTableIface,pad1,4,6,42736)
+CheckOffset(struct _AtkTableIface,pad1,152,6,42736)
+CheckMemberSize(struct _AtkTableIface,pad2,4,6,42737)
+CheckOffset(struct _AtkTableIface,pad2,156,6,42737)
+CheckMemberSize(struct _AtkTableIface,pad3,4,6,42738)
+CheckOffset(struct _AtkTableIface,pad3,160,6,42738)
+CheckMemberSize(struct _AtkTableIface,pad4,4,6,42739)
+CheckOffset(struct _AtkTableIface,pad4,164,6,42739)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkTableIface,336, 12237, 9)
+CheckMemberSize(struct _AtkTableIface,ref_at,8,9,42670)
+CheckOffset(struct _AtkTableIface,ref_at,16,9,42670)
+CheckMemberSize(struct _AtkTableIface,get_index_at,8,9,42674)
+CheckOffset(struct _AtkTableIface,get_index_at,24,9,42674)
+CheckMemberSize(struct _AtkTableIface,get_column_at_index,8,9,42677)
+CheckOffset(struct _AtkTableIface,get_column_at_index,32,9,42677)
+CheckMemberSize(struct _AtkTableIface,get_row_at_index,8,9,42678)
+CheckOffset(struct _AtkTableIface,get_row_at_index,40,9,42678)
+CheckMemberSize(struct _AtkTableIface,get_n_columns,8,9,42680)
+CheckOffset(struct _AtkTableIface,get_n_columns,48,9,42680)
+CheckMemberSize(struct _AtkTableIface,get_n_rows,8,9,42681)
+CheckOffset(struct _AtkTableIface,get_n_rows,56,9,42681)
+CheckMemberSize(struct _AtkTableIface,get_column_extent_at,8,9,42682)
+CheckOffset(struct _AtkTableIface,get_column_extent_at,64,9,42682)
+CheckMemberSize(struct _AtkTableIface,get_row_extent_at,8,9,42683)
+CheckOffset(struct _AtkTableIface,get_row_extent_at,72,9,42683)
+CheckMemberSize(struct _AtkTableIface,get_caption,8,9,42685)
+CheckOffset(struct _AtkTableIface,get_caption,80,9,42685)
+CheckMemberSize(struct _AtkTableIface,get_column_description,8,9,42688)
+CheckOffset(struct _AtkTableIface,get_column_description,88,9,42688)
+CheckMemberSize(struct _AtkTableIface,get_column_header,8,9,42691)
+CheckOffset(struct _AtkTableIface,get_column_header,96,9,42691)
+CheckMemberSize(struct _AtkTableIface,get_row_description,8,9,42692)
+CheckOffset(struct _AtkTableIface,get_row_description,104,9,42692)
+CheckMemberSize(struct _AtkTableIface,get_row_header,8,9,42693)
+CheckOffset(struct _AtkTableIface,get_row_header,112,9,42693)
+CheckMemberSize(struct _AtkTableIface,get_summary,8,9,42694)
+CheckOffset(struct _AtkTableIface,get_summary,120,9,42694)
+CheckMemberSize(struct _AtkTableIface,set_caption,8,9,42697)
+CheckOffset(struct _AtkTableIface,set_caption,128,9,42697)
+CheckMemberSize(struct _AtkTableIface,set_column_description,8,9,42701)
+CheckOffset(struct _AtkTableIface,set_column_description,136,9,42701)
+CheckMemberSize(struct _AtkTableIface,set_column_header,8,9,42705)
+CheckOffset(struct _AtkTableIface,set_column_header,144,9,42705)
+CheckMemberSize(struct _AtkTableIface,set_row_description,8,9,42706)
+CheckOffset(struct _AtkTableIface,set_row_description,152,9,42706)
+CheckMemberSize(struct _AtkTableIface,set_row_header,8,9,42707)
+CheckOffset(struct _AtkTableIface,set_row_header,160,9,42707)
+CheckMemberSize(struct _AtkTableIface,set_summary,8,9,42708)
+CheckOffset(struct _AtkTableIface,set_summary,168,9,42708)
+CheckMemberSize(struct _AtkTableIface,get_selected_columns,8,9,42711)
+CheckOffset(struct _AtkTableIface,get_selected_columns,176,9,42711)
+CheckMemberSize(struct _AtkTableIface,get_selected_rows,8,9,42712)
+CheckOffset(struct _AtkTableIface,get_selected_rows,184,9,42712)
+CheckMemberSize(struct _AtkTableIface,is_column_selected,8,9,42715)
+CheckOffset(struct _AtkTableIface,is_column_selected,192,9,42715)
+CheckMemberSize(struct _AtkTableIface,is_row_selected,8,9,42716)
+CheckOffset(struct _AtkTableIface,is_row_selected,200,9,42716)
+CheckMemberSize(struct _AtkTableIface,is_selected,8,9,42720)
+CheckOffset(struct _AtkTableIface,is_selected,208,9,42720)
+CheckMemberSize(struct _AtkTableIface,add_row_selection,8,9,42721)
+CheckOffset(struct _AtkTableIface,add_row_selection,216,9,42721)
+CheckMemberSize(struct _AtkTableIface,remove_row_selection,8,9,42722)
+CheckOffset(struct _AtkTableIface,remove_row_selection,224,9,42722)
+CheckMemberSize(struct _AtkTableIface,add_column_selection,8,9,42723)
+CheckOffset(struct _AtkTableIface,add_column_selection,232,9,42723)
+CheckMemberSize(struct _AtkTableIface,remove_column_selection,8,9,42724)
+CheckOffset(struct _AtkTableIface,remove_column_selection,240,9,42724)
+CheckMemberSize(struct _AtkTableIface,row_inserted,8,9,42728)
+CheckOffset(struct _AtkTableIface,row_inserted,248,9,42728)
+CheckMemberSize(struct _AtkTableIface,column_inserted,8,9,42729)
+CheckOffset(struct _AtkTableIface,column_inserted,256,9,42729)
+CheckMemberSize(struct _AtkTableIface,row_deleted,8,9,42730)
+CheckOffset(struct _AtkTableIface,row_deleted,264,9,42730)
+CheckMemberSize(struct _AtkTableIface,column_deleted,8,9,42731)
+CheckOffset(struct _AtkTableIface,column_deleted,272,9,42731)
+CheckMemberSize(struct _AtkTableIface,row_reordered,8,9,42733)
+CheckOffset(struct _AtkTableIface,row_reordered,280,9,42733)
+CheckMemberSize(struct _AtkTableIface,column_reordered,8,9,42734)
+CheckOffset(struct _AtkTableIface,column_reordered,288,9,42734)
+CheckMemberSize(struct _AtkTableIface,model_changed,8,9,42735)
+CheckOffset(struct _AtkTableIface,model_changed,296,9,42735)
+CheckMemberSize(struct _AtkTableIface,pad1,8,9,42736)
+CheckOffset(struct _AtkTableIface,pad1,304,9,42736)
+CheckMemberSize(struct _AtkTableIface,pad2,8,9,42737)
+CheckOffset(struct _AtkTableIface,pad2,312,9,42737)
+CheckMemberSize(struct _AtkTableIface,pad3,8,9,42738)
+CheckOffset(struct _AtkTableIface,pad3,320,9,42738)
+CheckMemberSize(struct _AtkTableIface,pad4,8,9,42739)
+CheckOffset(struct _AtkTableIface,pad4,328,9,42739)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkTableIface,168, 12237, 10)
+CheckMemberSize(struct _AtkTableIface,ref_at,4,10,42670)
+CheckOffset(struct _AtkTableIface,ref_at,8,10,42670)
+CheckMemberSize(struct _AtkTableIface,get_index_at,4,10,42674)
+CheckOffset(struct _AtkTableIface,get_index_at,12,10,42674)
+CheckMemberSize(struct _AtkTableIface,get_column_at_index,4,10,42677)
+CheckOffset(struct _AtkTableIface,get_column_at_index,16,10,42677)
+CheckMemberSize(struct _AtkTableIface,get_row_at_index,4,10,42678)
+CheckOffset(struct _AtkTableIface,get_row_at_index,20,10,42678)
+CheckMemberSize(struct _AtkTableIface,get_n_columns,4,10,42680)
+CheckOffset(struct _AtkTableIface,get_n_columns,24,10,42680)
+CheckMemberSize(struct _AtkTableIface,get_n_rows,4,10,42681)
+CheckOffset(struct _AtkTableIface,get_n_rows,28,10,42681)
+CheckMemberSize(struct _AtkTableIface,get_column_extent_at,4,10,42682)
+CheckOffset(struct _AtkTableIface,get_column_extent_at,32,10,42682)
+CheckMemberSize(struct _AtkTableIface,get_row_extent_at,4,10,42683)
+CheckOffset(struct _AtkTableIface,get_row_extent_at,36,10,42683)
+CheckMemberSize(struct _AtkTableIface,get_caption,4,10,42685)
+CheckOffset(struct _AtkTableIface,get_caption,40,10,42685)
+CheckMemberSize(struct _AtkTableIface,get_column_description,4,10,42688)
+CheckOffset(struct _AtkTableIface,get_column_description,44,10,42688)
+CheckMemberSize(struct _AtkTableIface,get_column_header,4,10,42691)
+CheckOffset(struct _AtkTableIface,get_column_header,48,10,42691)
+CheckMemberSize(struct _AtkTableIface,get_row_description,4,10,42692)
+CheckOffset(struct _AtkTableIface,get_row_description,52,10,42692)
+CheckMemberSize(struct _AtkTableIface,get_row_header,4,10,42693)
+CheckOffset(struct _AtkTableIface,get_row_header,56,10,42693)
+CheckMemberSize(struct _AtkTableIface,get_summary,4,10,42694)
+CheckOffset(struct _AtkTableIface,get_summary,60,10,42694)
+CheckMemberSize(struct _AtkTableIface,set_caption,4,10,42697)
+CheckOffset(struct _AtkTableIface,set_caption,64,10,42697)
+CheckMemberSize(struct _AtkTableIface,set_column_description,4,10,42701)
+CheckOffset(struct _AtkTableIface,set_column_description,68,10,42701)
+CheckMemberSize(struct _AtkTableIface,set_column_header,4,10,42705)
+CheckOffset(struct _AtkTableIface,set_column_header,72,10,42705)
+CheckMemberSize(struct _AtkTableIface,set_row_description,4,10,42706)
+CheckOffset(struct _AtkTableIface,set_row_description,76,10,42706)
+CheckMemberSize(struct _AtkTableIface,set_row_header,4,10,42707)
+CheckOffset(struct _AtkTableIface,set_row_header,80,10,42707)
+CheckMemberSize(struct _AtkTableIface,set_summary,4,10,42708)
+CheckOffset(struct _AtkTableIface,set_summary,84,10,42708)
+CheckMemberSize(struct _AtkTableIface,get_selected_columns,4,10,42711)
+CheckOffset(struct _AtkTableIface,get_selected_columns,88,10,42711)
+CheckMemberSize(struct _AtkTableIface,get_selected_rows,4,10,42712)
+CheckOffset(struct _AtkTableIface,get_selected_rows,92,10,42712)
+CheckMemberSize(struct _AtkTableIface,is_column_selected,4,10,42715)
+CheckOffset(struct _AtkTableIface,is_column_selected,96,10,42715)
+CheckMemberSize(struct _AtkTableIface,is_row_selected,4,10,42716)
+CheckOffset(struct _AtkTableIface,is_row_selected,100,10,42716)
+CheckMemberSize(struct _AtkTableIface,is_selected,4,10,42720)
+CheckOffset(struct _AtkTableIface,is_selected,104,10,42720)
+CheckMemberSize(struct _AtkTableIface,add_row_selection,4,10,42721)
+CheckOffset(struct _AtkTableIface,add_row_selection,108,10,42721)
+CheckMemberSize(struct _AtkTableIface,remove_row_selection,4,10,42722)
+CheckOffset(struct _AtkTableIface,remove_row_selection,112,10,42722)
+CheckMemberSize(struct _AtkTableIface,add_column_selection,4,10,42723)
+CheckOffset(struct _AtkTableIface,add_column_selection,116,10,42723)
+CheckMemberSize(struct _AtkTableIface,remove_column_selection,4,10,42724)
+CheckOffset(struct _AtkTableIface,remove_column_selection,120,10,42724)
+CheckMemberSize(struct _AtkTableIface,row_inserted,4,10,42728)
+CheckOffset(struct _AtkTableIface,row_inserted,124,10,42728)
+CheckMemberSize(struct _AtkTableIface,column_inserted,4,10,42729)
+CheckOffset(struct _AtkTableIface,column_inserted,128,10,42729)
+CheckMemberSize(struct _AtkTableIface,row_deleted,4,10,42730)
+CheckOffset(struct _AtkTableIface,row_deleted,132,10,42730)
+CheckMemberSize(struct _AtkTableIface,column_deleted,4,10,42731)
+CheckOffset(struct _AtkTableIface,column_deleted,136,10,42731)
+CheckMemberSize(struct _AtkTableIface,row_reordered,4,10,42733)
+CheckOffset(struct _AtkTableIface,row_reordered,140,10,42733)
+CheckMemberSize(struct _AtkTableIface,column_reordered,4,10,42734)
+CheckOffset(struct _AtkTableIface,column_reordered,144,10,42734)
+CheckMemberSize(struct _AtkTableIface,model_changed,4,10,42735)
+CheckOffset(struct _AtkTableIface,model_changed,148,10,42735)
+CheckMemberSize(struct _AtkTableIface,pad1,4,10,42736)
+CheckOffset(struct _AtkTableIface,pad1,152,10,42736)
+CheckMemberSize(struct _AtkTableIface,pad2,4,10,42737)
+CheckOffset(struct _AtkTableIface,pad2,156,10,42737)
+CheckMemberSize(struct _AtkTableIface,pad3,4,10,42738)
+CheckOffset(struct _AtkTableIface,pad3,160,10,42738)
+CheckMemberSize(struct _AtkTableIface,pad4,4,10,42739)
+CheckOffset(struct _AtkTableIface,pad4,164,10,42739)
+#elif __s390x__
+CheckTypeSize(struct _AtkTableIface,336, 12237, 12)
+CheckMemberSize(struct _AtkTableIface,ref_at,8,12,42670)
+CheckOffset(struct _AtkTableIface,ref_at,16,12,42670)
+CheckMemberSize(struct _AtkTableIface,get_index_at,8,12,42674)
+CheckOffset(struct _AtkTableIface,get_index_at,24,12,42674)
+CheckMemberSize(struct _AtkTableIface,get_column_at_index,8,12,42677)
+CheckOffset(struct _AtkTableIface,get_column_at_index,32,12,42677)
+CheckMemberSize(struct _AtkTableIface,get_row_at_index,8,12,42678)
+CheckOffset(struct _AtkTableIface,get_row_at_index,40,12,42678)
+CheckMemberSize(struct _AtkTableIface,get_n_columns,8,12,42680)
+CheckOffset(struct _AtkTableIface,get_n_columns,48,12,42680)
+CheckMemberSize(struct _AtkTableIface,get_n_rows,8,12,42681)
+CheckOffset(struct _AtkTableIface,get_n_rows,56,12,42681)
+CheckMemberSize(struct _AtkTableIface,get_column_extent_at,8,12,42682)
+CheckOffset(struct _AtkTableIface,get_column_extent_at,64,12,42682)
+CheckMemberSize(struct _AtkTableIface,get_row_extent_at,8,12,42683)
+CheckOffset(struct _AtkTableIface,get_row_extent_at,72,12,42683)
+CheckMemberSize(struct _AtkTableIface,get_caption,8,12,42685)
+CheckOffset(struct _AtkTableIface,get_caption,80,12,42685)
+CheckMemberSize(struct _AtkTableIface,get_column_description,8,12,42688)
+CheckOffset(struct _AtkTableIface,get_column_description,88,12,42688)
+CheckMemberSize(struct _AtkTableIface,get_column_header,8,12,42691)
+CheckOffset(struct _AtkTableIface,get_column_header,96,12,42691)
+CheckMemberSize(struct _AtkTableIface,get_row_description,8,12,42692)
+CheckOffset(struct _AtkTableIface,get_row_description,104,12,42692)
+CheckMemberSize(struct _AtkTableIface,get_row_header,8,12,42693)
+CheckOffset(struct _AtkTableIface,get_row_header,112,12,42693)
+CheckMemberSize(struct _AtkTableIface,get_summary,8,12,42694)
+CheckOffset(struct _AtkTableIface,get_summary,120,12,42694)
+CheckMemberSize(struct _AtkTableIface,set_caption,8,12,42697)
+CheckOffset(struct _AtkTableIface,set_caption,128,12,42697)
+CheckMemberSize(struct _AtkTableIface,set_column_description,8,12,42701)
+CheckOffset(struct _AtkTableIface,set_column_description,136,12,42701)
+CheckMemberSize(struct _AtkTableIface,set_column_header,8,12,42705)
+CheckOffset(struct _AtkTableIface,set_column_header,144,12,42705)
+CheckMemberSize(struct _AtkTableIface,set_row_description,8,12,42706)
+CheckOffset(struct _AtkTableIface,set_row_description,152,12,42706)
+CheckMemberSize(struct _AtkTableIface,set_row_header,8,12,42707)
+CheckOffset(struct _AtkTableIface,set_row_header,160,12,42707)
+CheckMemberSize(struct _AtkTableIface,set_summary,8,12,42708)
+CheckOffset(struct _AtkTableIface,set_summary,168,12,42708)
+CheckMemberSize(struct _AtkTableIface,get_selected_columns,8,12,42711)
+CheckOffset(struct _AtkTableIface,get_selected_columns,176,12,42711)
+CheckMemberSize(struct _AtkTableIface,get_selected_rows,8,12,42712)
+CheckOffset(struct _AtkTableIface,get_selected_rows,184,12,42712)
+CheckMemberSize(struct _AtkTableIface,is_column_selected,8,12,42715)
+CheckOffset(struct _AtkTableIface,is_column_selected,192,12,42715)
+CheckMemberSize(struct _AtkTableIface,is_row_selected,8,12,42716)
+CheckOffset(struct _AtkTableIface,is_row_selected,200,12,42716)
+CheckMemberSize(struct _AtkTableIface,is_selected,8,12,42720)
+CheckOffset(struct _AtkTableIface,is_selected,208,12,42720)
+CheckMemberSize(struct _AtkTableIface,add_row_selection,8,12,42721)
+CheckOffset(struct _AtkTableIface,add_row_selection,216,12,42721)
+CheckMemberSize(struct _AtkTableIface,remove_row_selection,8,12,42722)
+CheckOffset(struct _AtkTableIface,remove_row_selection,224,12,42722)
+CheckMemberSize(struct _AtkTableIface,add_column_selection,8,12,42723)
+CheckOffset(struct _AtkTableIface,add_column_selection,232,12,42723)
+CheckMemberSize(struct _AtkTableIface,remove_column_selection,8,12,42724)
+CheckOffset(struct _AtkTableIface,remove_column_selection,240,12,42724)
+CheckMemberSize(struct _AtkTableIface,row_inserted,8,12,42728)
+CheckOffset(struct _AtkTableIface,row_inserted,248,12,42728)
+CheckMemberSize(struct _AtkTableIface,column_inserted,8,12,42729)
+CheckOffset(struct _AtkTableIface,column_inserted,256,12,42729)
+CheckMemberSize(struct _AtkTableIface,row_deleted,8,12,42730)
+CheckOffset(struct _AtkTableIface,row_deleted,264,12,42730)
+CheckMemberSize(struct _AtkTableIface,column_deleted,8,12,42731)
+CheckOffset(struct _AtkTableIface,column_deleted,272,12,42731)
+CheckMemberSize(struct _AtkTableIface,row_reordered,8,12,42733)
+CheckOffset(struct _AtkTableIface,row_reordered,280,12,42733)
+CheckMemberSize(struct _AtkTableIface,column_reordered,8,12,42734)
+CheckOffset(struct _AtkTableIface,column_reordered,288,12,42734)
+CheckMemberSize(struct _AtkTableIface,model_changed,8,12,42735)
+CheckOffset(struct _AtkTableIface,model_changed,296,12,42735)
+CheckMemberSize(struct _AtkTableIface,pad1,8,12,42736)
+CheckOffset(struct _AtkTableIface,pad1,304,12,42736)
+CheckMemberSize(struct _AtkTableIface,pad2,8,12,42737)
+CheckOffset(struct _AtkTableIface,pad2,312,12,42737)
+CheckMemberSize(struct _AtkTableIface,pad3,8,12,42738)
+CheckOffset(struct _AtkTableIface,pad3,320,12,42738)
+CheckMemberSize(struct _AtkTableIface,pad4,8,12,42739)
+CheckOffset(struct _AtkTableIface,pad4,328,12,42739)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12237,0);
 Msg("Find size of _AtkTableIface (12237)\n");
@@ -3422,6 +6210,10 @@ Msg("Find size of _AtkTableIface (12237)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12238,0);
 Msg("Find size of fptr_atk_90 (12238)\n");
@@ -3430,6 +6222,10 @@ Msg("Find size of fptr_atk_90 (12238)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12239,0);
 Msg("Find size of fptr_atk_7 (12239)\n");
@@ -3438,6 +6234,10 @@ Msg("Find size of fptr_atk_7 (12239)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12240,0);
 Msg("Find size of fptr_atk_316 (12240)\n");
@@ -3446,6 +6246,10 @@ Msg("Find size of fptr_atk_316 (12240)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12241,0);
 Msg("Find size of fptr_atk_415 (12241)\n");
@@ -3454,6 +6258,10 @@ Msg("Find size of fptr_atk_415 (12241)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12242,0);
 Msg("Find size of fptr_atk_170 (12242)\n");
@@ -3462,6 +6270,10 @@ Msg("Find size of fptr_atk_170 (12242)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12243,0);
 Msg("Find size of fptr_atk_315 (12243)\n");
@@ -3470,6 +6282,10 @@ Msg("Find size of fptr_atk_315 (12243)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12244,0);
 Msg("Find size of fptr_atk_142 (12244)\n");
@@ -3478,6 +6294,10 @@ Msg("Find size of fptr_atk_142 (12244)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12245,0);
 Msg("Find size of fptr_atk_144 (12245)\n");
@@ -3486,6 +6306,10 @@ Msg("Find size of fptr_atk_144 (12245)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12246,0);
 Msg("Find size of fptr_atk_33 (12246)\n");
@@ -3494,6 +6318,10 @@ Msg("Find size of fptr_atk_33 (12246)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12247,0);
 Msg("Find size of fptr_atk_51 (12247)\n");
@@ -3502,6 +6330,10 @@ Msg("Find size of fptr_atk_51 (12247)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12248,0);
 Msg("Find size of fptr_atk_25 (12248)\n");
@@ -3510,6 +6342,10 @@ Msg("Find size of fptr_atk_25 (12248)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12249,0);
 Msg("Find size of fptr_atk_149 (12249)\n");
@@ -3518,6 +6354,10 @@ Msg("Find size of fptr_atk_149 (12249)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12250,0);
 Msg("Find size of fptr_atk_180 (12250)\n");
@@ -3526,6 +6366,10 @@ Msg("Find size of fptr_atk_180 (12250)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12251,0);
 Msg("Find size of fptr_atk_255 (12251)\n");
@@ -3534,6 +6378,10 @@ Msg("Find size of fptr_atk_255 (12251)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12252,0);
 Msg("Find size of fptr_atk_187 (12252)\n");
@@ -3545,6 +6393,14 @@ CheckTypeSize(AtkTableIface,168, 12253, 2)
 CheckTypeSize(AtkTableIface,336, 12253, 11)
 #elif __ia64__
 CheckTypeSize(AtkTableIface,336, 12253, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTableIface,168, 12253, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTableIface,336, 12253, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTableIface,168, 12253, 10)
+#elif __s390x__
+CheckTypeSize(AtkTableIface,336, 12253, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12253,0);
 Msg("Find size of AtkTableIface (12253)\n");
@@ -3592,6 +6448,62 @@ CheckMemberSize(struct _AtkValueIface,pad1,8,3,42749)
 CheckOffset(struct _AtkValueIface,pad1,48,3,42749)
 CheckMemberSize(struct _AtkValueIface,pad2,8,3,42750)
 CheckOffset(struct _AtkValueIface,pad2,56,3,42750)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkValueIface,32, 12254, 6)
+CheckMemberSize(struct _AtkValueIface,get_current_value,4,6,42743)
+CheckOffset(struct _AtkValueIface,get_current_value,8,6,42743)
+CheckMemberSize(struct _AtkValueIface,get_maximum_value,4,6,42744)
+CheckOffset(struct _AtkValueIface,get_maximum_value,12,6,42744)
+CheckMemberSize(struct _AtkValueIface,get_minimum_value,4,6,42745)
+CheckOffset(struct _AtkValueIface,get_minimum_value,16,6,42745)
+CheckMemberSize(struct _AtkValueIface,set_current_value,4,6,42748)
+CheckOffset(struct _AtkValueIface,set_current_value,20,6,42748)
+CheckMemberSize(struct _AtkValueIface,pad1,4,6,42749)
+CheckOffset(struct _AtkValueIface,pad1,24,6,42749)
+CheckMemberSize(struct _AtkValueIface,pad2,4,6,42750)
+CheckOffset(struct _AtkValueIface,pad2,28,6,42750)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkValueIface,64, 12254, 9)
+CheckMemberSize(struct _AtkValueIface,get_current_value,8,9,42743)
+CheckOffset(struct _AtkValueIface,get_current_value,16,9,42743)
+CheckMemberSize(struct _AtkValueIface,get_maximum_value,8,9,42744)
+CheckOffset(struct _AtkValueIface,get_maximum_value,24,9,42744)
+CheckMemberSize(struct _AtkValueIface,get_minimum_value,8,9,42745)
+CheckOffset(struct _AtkValueIface,get_minimum_value,32,9,42745)
+CheckMemberSize(struct _AtkValueIface,set_current_value,8,9,42748)
+CheckOffset(struct _AtkValueIface,set_current_value,40,9,42748)
+CheckMemberSize(struct _AtkValueIface,pad1,8,9,42749)
+CheckOffset(struct _AtkValueIface,pad1,48,9,42749)
+CheckMemberSize(struct _AtkValueIface,pad2,8,9,42750)
+CheckOffset(struct _AtkValueIface,pad2,56,9,42750)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkValueIface,32, 12254, 10)
+CheckMemberSize(struct _AtkValueIface,get_current_value,4,10,42743)
+CheckOffset(struct _AtkValueIface,get_current_value,8,10,42743)
+CheckMemberSize(struct _AtkValueIface,get_maximum_value,4,10,42744)
+CheckOffset(struct _AtkValueIface,get_maximum_value,12,10,42744)
+CheckMemberSize(struct _AtkValueIface,get_minimum_value,4,10,42745)
+CheckOffset(struct _AtkValueIface,get_minimum_value,16,10,42745)
+CheckMemberSize(struct _AtkValueIface,set_current_value,4,10,42748)
+CheckOffset(struct _AtkValueIface,set_current_value,20,10,42748)
+CheckMemberSize(struct _AtkValueIface,pad1,4,10,42749)
+CheckOffset(struct _AtkValueIface,pad1,24,10,42749)
+CheckMemberSize(struct _AtkValueIface,pad2,4,10,42750)
+CheckOffset(struct _AtkValueIface,pad2,28,10,42750)
+#elif __s390x__
+CheckTypeSize(struct _AtkValueIface,64, 12254, 12)
+CheckMemberSize(struct _AtkValueIface,get_current_value,8,12,42743)
+CheckOffset(struct _AtkValueIface,get_current_value,16,12,42743)
+CheckMemberSize(struct _AtkValueIface,get_maximum_value,8,12,42744)
+CheckOffset(struct _AtkValueIface,get_maximum_value,24,12,42744)
+CheckMemberSize(struct _AtkValueIface,get_minimum_value,8,12,42745)
+CheckOffset(struct _AtkValueIface,get_minimum_value,32,12,42745)
+CheckMemberSize(struct _AtkValueIface,set_current_value,8,12,42748)
+CheckOffset(struct _AtkValueIface,set_current_value,40,12,42748)
+CheckMemberSize(struct _AtkValueIface,pad1,8,12,42749)
+CheckOffset(struct _AtkValueIface,pad1,48,12,42749)
+CheckMemberSize(struct _AtkValueIface,pad2,8,12,42750)
+CheckOffset(struct _AtkValueIface,pad2,56,12,42750)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12254,0);
 Msg("Find size of _AtkValueIface (12254)\n");
@@ -3600,6 +6512,10 @@ Msg("Find size of _AtkValueIface (12254)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12255,0);
 Msg("Find size of fptr_atk_309 (12255)\n");
@@ -3608,6 +6524,10 @@ Msg("Find size of fptr_atk_309 (12255)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12256,0);
 Msg("Find size of fptr_atk_326 (12256)\n");
@@ -3619,6 +6539,14 @@ CheckTypeSize(AtkValueIface,32, 12257, 2)
 CheckTypeSize(AtkValueIface,64, 12257, 11)
 #elif __ia64__
 CheckTypeSize(AtkValueIface,64, 12257, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkValueIface,32, 12257, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkValueIface,64, 12257, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkValueIface,32, 12257, 10)
+#elif __s390x__
+CheckTypeSize(AtkValueIface,64, 12257, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12257,0);
 Msg("Find size of AtkValueIface (12257)\n");
@@ -3636,6 +6564,22 @@ CheckOffset(struct _AtkRelationClass,parent,0,11,42751)
 CheckTypeSize(struct _AtkRelationClass,136, 12258, 3)
 Msg("Missing member data for _AtkRelationClass on IA64\n");
 CheckOffset(struct _AtkRelationClass,parent,0,3,42751)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkRelationClass,68, 12258, 6)
+Msg("Missing member data for _AtkRelationClass on PPC32\n");
+CheckOffset(struct _AtkRelationClass,parent,0,6,42751)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkRelationClass,136, 12258, 9)
+Msg("Missing member data for _AtkRelationClass on PPC64\n");
+CheckOffset(struct _AtkRelationClass,parent,0,9,42751)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkRelationClass,68, 12258, 10)
+Msg("Missing member data for _AtkRelationClass on S390\n");
+CheckOffset(struct _AtkRelationClass,parent,0,10,42751)
+#elif __s390x__
+CheckTypeSize(struct _AtkRelationClass,136, 12258, 12)
+Msg("Missing member data for _AtkRelationClass on S390X\n");
+CheckOffset(struct _AtkRelationClass,parent,0,12,42751)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12258,0);
 Msg("Find size of _AtkRelationClass (12258)\n");
@@ -3647,6 +6591,14 @@ CheckTypeSize(AtkRelationClass,68, 12259, 2)
 CheckTypeSize(AtkRelationClass,136, 12259, 11)
 #elif __ia64__
 CheckTypeSize(AtkRelationClass,136, 12259, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRelationClass,68, 12259, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRelationClass,136, 12259, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRelationClass,68, 12259, 10)
+#elif __s390x__
+CheckTypeSize(AtkRelationClass,136, 12259, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12259,0);
 Msg("Find size of AtkRelationClass (12259)\n");
@@ -3802,6 +6754,206 @@ CheckMemberSize(struct _AtkTextIface,get_bounded_ranges,8,3,42831)
 CheckOffset(struct _AtkTextIface,get_bounded_ranges,192,3,42831)
 CheckMemberSize(struct _AtkTextIface,pad4,8,3,42832)
 CheckOffset(struct _AtkTextIface,pad4,200,3,42832)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkTextIface,104, 12260, 6)
+CheckMemberSize(struct _AtkTextIface,get_text,4,6,42756)
+CheckOffset(struct _AtkTextIface,get_text,8,6,42756)
+CheckMemberSize(struct _AtkTextIface,get_text_after_offset,4,6,42762)
+CheckOffset(struct _AtkTextIface,get_text_after_offset,12,6,42762)
+CheckMemberSize(struct _AtkTextIface,get_text_at_offset,4,6,42763)
+CheckOffset(struct _AtkTextIface,get_text_at_offset,16,6,42763)
+CheckMemberSize(struct _AtkTextIface,get_character_at_offset,4,6,42766)
+CheckOffset(struct _AtkTextIface,get_character_at_offset,20,6,42766)
+CheckMemberSize(struct _AtkTextIface,get_text_before_offset,4,6,42767)
+CheckOffset(struct _AtkTextIface,get_text_before_offset,24,6,42767)
+CheckMemberSize(struct _AtkTextIface,get_caret_offset,4,6,42769)
+CheckOffset(struct _AtkTextIface,get_caret_offset,28,6,42769)
+CheckMemberSize(struct _AtkTextIface,get_run_attributes,4,6,42774)
+CheckOffset(struct _AtkTextIface,get_run_attributes,32,6,42774)
+CheckMemberSize(struct _AtkTextIface,get_default_attributes,4,6,42776)
+CheckOffset(struct _AtkTextIface,get_default_attributes,36,6,42776)
+CheckMemberSize(struct _AtkTextIface,get_character_extents,4,6,42784)
+CheckOffset(struct _AtkTextIface,get_character_extents,40,6,42784)
+CheckMemberSize(struct _AtkTextIface,get_character_count,4,6,42785)
+CheckOffset(struct _AtkTextIface,get_character_count,44,6,42785)
+CheckMemberSize(struct _AtkTextIface,get_offset_at_point,4,6,42790)
+CheckOffset(struct _AtkTextIface,get_offset_at_point,48,6,42790)
+CheckMemberSize(struct _AtkTextIface,get_n_selections,4,6,42791)
+CheckOffset(struct _AtkTextIface,get_n_selections,52,6,42791)
+CheckMemberSize(struct _AtkTextIface,get_selection,4,6,42796)
+CheckOffset(struct _AtkTextIface,get_selection,56,6,42796)
+CheckMemberSize(struct _AtkTextIface,add_selection,4,6,42800)
+CheckOffset(struct _AtkTextIface,add_selection,60,6,42800)
+CheckMemberSize(struct _AtkTextIface,remove_selection,4,6,42803)
+CheckOffset(struct _AtkTextIface,remove_selection,64,6,42803)
+CheckMemberSize(struct _AtkTextIface,set_selection,4,6,42808)
+CheckOffset(struct _AtkTextIface,set_selection,68,6,42808)
+CheckMemberSize(struct _AtkTextIface,set_caret_offset,4,6,42809)
+CheckOffset(struct _AtkTextIface,set_caret_offset,72,6,42809)
+CheckMemberSize(struct _AtkTextIface,text_changed,4,6,42813)
+CheckOffset(struct _AtkTextIface,text_changed,76,6,42813)
+CheckMemberSize(struct _AtkTextIface,text_caret_moved,4,6,42816)
+CheckOffset(struct _AtkTextIface,text_caret_moved,80,6,42816)
+CheckMemberSize(struct _AtkTextIface,text_selection_changed,4,6,42818)
+CheckOffset(struct _AtkTextIface,text_selection_changed,84,6,42818)
+CheckMemberSize(struct _AtkTextIface,text_attributes_changed,4,6,42819)
+CheckOffset(struct _AtkTextIface,text_attributes_changed,88,6,42819)
+CheckMemberSize(struct _AtkTextIface,get_range_extents,4,6,42825)
+CheckOffset(struct _AtkTextIface,get_range_extents,92,6,42825)
+CheckMemberSize(struct _AtkTextIface,get_bounded_ranges,4,6,42831)
+CheckOffset(struct _AtkTextIface,get_bounded_ranges,96,6,42831)
+CheckMemberSize(struct _AtkTextIface,pad4,4,6,42832)
+CheckOffset(struct _AtkTextIface,pad4,100,6,42832)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkTextIface,208, 12260, 9)
+CheckMemberSize(struct _AtkTextIface,get_text,8,9,42756)
+CheckOffset(struct _AtkTextIface,get_text,16,9,42756)
+CheckMemberSize(struct _AtkTextIface,get_text_after_offset,8,9,42762)
+CheckOffset(struct _AtkTextIface,get_text_after_offset,24,9,42762)
+CheckMemberSize(struct _AtkTextIface,get_text_at_offset,8,9,42763)
+CheckOffset(struct _AtkTextIface,get_text_at_offset,32,9,42763)
+CheckMemberSize(struct _AtkTextIface,get_character_at_offset,8,9,42766)
+CheckOffset(struct _AtkTextIface,get_character_at_offset,40,9,42766)
+CheckMemberSize(struct _AtkTextIface,get_text_before_offset,8,9,42767)
+CheckOffset(struct _AtkTextIface,get_text_before_offset,48,9,42767)
+CheckMemberSize(struct _AtkTextIface,get_caret_offset,8,9,42769)
+CheckOffset(struct _AtkTextIface,get_caret_offset,56,9,42769)
+CheckMemberSize(struct _AtkTextIface,get_run_attributes,8,9,42774)
+CheckOffset(struct _AtkTextIface,get_run_attributes,64,9,42774)
+CheckMemberSize(struct _AtkTextIface,get_default_attributes,8,9,42776)
+CheckOffset(struct _AtkTextIface,get_default_attributes,72,9,42776)
+CheckMemberSize(struct _AtkTextIface,get_character_extents,8,9,42784)
+CheckOffset(struct _AtkTextIface,get_character_extents,80,9,42784)
+CheckMemberSize(struct _AtkTextIface,get_character_count,8,9,42785)
+CheckOffset(struct _AtkTextIface,get_character_count,88,9,42785)
+CheckMemberSize(struct _AtkTextIface,get_offset_at_point,8,9,42790)
+CheckOffset(struct _AtkTextIface,get_offset_at_point,96,9,42790)
+CheckMemberSize(struct _AtkTextIface,get_n_selections,8,9,42791)
+CheckOffset(struct _AtkTextIface,get_n_selections,104,9,42791)
+CheckMemberSize(struct _AtkTextIface,get_selection,8,9,42796)
+CheckOffset(struct _AtkTextIface,get_selection,112,9,42796)
+CheckMemberSize(struct _AtkTextIface,add_selection,8,9,42800)
+CheckOffset(struct _AtkTextIface,add_selection,120,9,42800)
+CheckMemberSize(struct _AtkTextIface,remove_selection,8,9,42803)
+CheckOffset(struct _AtkTextIface,remove_selection,128,9,42803)
+CheckMemberSize(struct _AtkTextIface,set_selection,8,9,42808)
+CheckOffset(struct _AtkTextIface,set_selection,136,9,42808)
+CheckMemberSize(struct _AtkTextIface,set_caret_offset,8,9,42809)
+CheckOffset(struct _AtkTextIface,set_caret_offset,144,9,42809)
+CheckMemberSize(struct _AtkTextIface,text_changed,8,9,42813)
+CheckOffset(struct _AtkTextIface,text_changed,152,9,42813)
+CheckMemberSize(struct _AtkTextIface,text_caret_moved,8,9,42816)
+CheckOffset(struct _AtkTextIface,text_caret_moved,160,9,42816)
+CheckMemberSize(struct _AtkTextIface,text_selection_changed,8,9,42818)
+CheckOffset(struct _AtkTextIface,text_selection_changed,168,9,42818)
+CheckMemberSize(struct _AtkTextIface,text_attributes_changed,8,9,42819)
+CheckOffset(struct _AtkTextIface,text_attributes_changed,176,9,42819)
+CheckMemberSize(struct _AtkTextIface,get_range_extents,8,9,42825)
+CheckOffset(struct _AtkTextIface,get_range_extents,184,9,42825)
+CheckMemberSize(struct _AtkTextIface,get_bounded_ranges,8,9,42831)
+CheckOffset(struct _AtkTextIface,get_bounded_ranges,192,9,42831)
+CheckMemberSize(struct _AtkTextIface,pad4,8,9,42832)
+CheckOffset(struct _AtkTextIface,pad4,200,9,42832)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkTextIface,104, 12260, 10)
+CheckMemberSize(struct _AtkTextIface,get_text,4,10,42756)
+CheckOffset(struct _AtkTextIface,get_text,8,10,42756)
+CheckMemberSize(struct _AtkTextIface,get_text_after_offset,4,10,42762)
+CheckOffset(struct _AtkTextIface,get_text_after_offset,12,10,42762)
+CheckMemberSize(struct _AtkTextIface,get_text_at_offset,4,10,42763)
+CheckOffset(struct _AtkTextIface,get_text_at_offset,16,10,42763)
+CheckMemberSize(struct _AtkTextIface,get_character_at_offset,4,10,42766)
+CheckOffset(struct _AtkTextIface,get_character_at_offset,20,10,42766)
+CheckMemberSize(struct _AtkTextIface,get_text_before_offset,4,10,42767)
+CheckOffset(struct _AtkTextIface,get_text_before_offset,24,10,42767)
+CheckMemberSize(struct _AtkTextIface,get_caret_offset,4,10,42769)
+CheckOffset(struct _AtkTextIface,get_caret_offset,28,10,42769)
+CheckMemberSize(struct _AtkTextIface,get_run_attributes,4,10,42774)
+CheckOffset(struct _AtkTextIface,get_run_attributes,32,10,42774)
+CheckMemberSize(struct _AtkTextIface,get_default_attributes,4,10,42776)
+CheckOffset(struct _AtkTextIface,get_default_attributes,36,10,42776)
+CheckMemberSize(struct _AtkTextIface,get_character_extents,4,10,42784)
+CheckOffset(struct _AtkTextIface,get_character_extents,40,10,42784)
+CheckMemberSize(struct _AtkTextIface,get_character_count,4,10,42785)
+CheckOffset(struct _AtkTextIface,get_character_count,44,10,42785)
+CheckMemberSize(struct _AtkTextIface,get_offset_at_point,4,10,42790)
+CheckOffset(struct _AtkTextIface,get_offset_at_point,48,10,42790)
+CheckMemberSize(struct _AtkTextIface,get_n_selections,4,10,42791)
+CheckOffset(struct _AtkTextIface,get_n_selections,52,10,42791)
+CheckMemberSize(struct _AtkTextIface,get_selection,4,10,42796)
+CheckOffset(struct _AtkTextIface,get_selection,56,10,42796)
+CheckMemberSize(struct _AtkTextIface,add_selection,4,10,42800)
+CheckOffset(struct _AtkTextIface,add_selection,60,10,42800)
+CheckMemberSize(struct _AtkTextIface,remove_selection,4,10,42803)
+CheckOffset(struct _AtkTextIface,remove_selection,64,10,42803)
+CheckMemberSize(struct _AtkTextIface,set_selection,4,10,42808)
+CheckOffset(struct _AtkTextIface,set_selection,68,10,42808)
+CheckMemberSize(struct _AtkTextIface,set_caret_offset,4,10,42809)
+CheckOffset(struct _AtkTextIface,set_caret_offset,72,10,42809)
+CheckMemberSize(struct _AtkTextIface,text_changed,4,10,42813)
+CheckOffset(struct _AtkTextIface,text_changed,76,10,42813)
+CheckMemberSize(struct _AtkTextIface,text_caret_moved,4,10,42816)
+CheckOffset(struct _AtkTextIface,text_caret_moved,80,10,42816)
+CheckMemberSize(struct _AtkTextIface,text_selection_changed,4,10,42818)
+CheckOffset(struct _AtkTextIface,text_selection_changed,84,10,42818)
+CheckMemberSize(struct _AtkTextIface,text_attributes_changed,4,10,42819)
+CheckOffset(struct _AtkTextIface,text_attributes_changed,88,10,42819)
+CheckMemberSize(struct _AtkTextIface,get_range_extents,4,10,42825)
+CheckOffset(struct _AtkTextIface,get_range_extents,92,10,42825)
+CheckMemberSize(struct _AtkTextIface,get_bounded_ranges,4,10,42831)
+CheckOffset(struct _AtkTextIface,get_bounded_ranges,96,10,42831)
+CheckMemberSize(struct _AtkTextIface,pad4,4,10,42832)
+CheckOffset(struct _AtkTextIface,pad4,100,10,42832)
+#elif __s390x__
+CheckTypeSize(struct _AtkTextIface,208, 12260, 12)
+CheckMemberSize(struct _AtkTextIface,get_text,8,12,42756)
+CheckOffset(struct _AtkTextIface,get_text,16,12,42756)
+CheckMemberSize(struct _AtkTextIface,get_text_after_offset,8,12,42762)
+CheckOffset(struct _AtkTextIface,get_text_after_offset,24,12,42762)
+CheckMemberSize(struct _AtkTextIface,get_text_at_offset,8,12,42763)
+CheckOffset(struct _AtkTextIface,get_text_at_offset,32,12,42763)
+CheckMemberSize(struct _AtkTextIface,get_character_at_offset,8,12,42766)
+CheckOffset(struct _AtkTextIface,get_character_at_offset,40,12,42766)
+CheckMemberSize(struct _AtkTextIface,get_text_before_offset,8,12,42767)
+CheckOffset(struct _AtkTextIface,get_text_before_offset,48,12,42767)
+CheckMemberSize(struct _AtkTextIface,get_caret_offset,8,12,42769)
+CheckOffset(struct _AtkTextIface,get_caret_offset,56,12,42769)
+CheckMemberSize(struct _AtkTextIface,get_run_attributes,8,12,42774)
+CheckOffset(struct _AtkTextIface,get_run_attributes,64,12,42774)
+CheckMemberSize(struct _AtkTextIface,get_default_attributes,8,12,42776)
+CheckOffset(struct _AtkTextIface,get_default_attributes,72,12,42776)
+CheckMemberSize(struct _AtkTextIface,get_character_extents,8,12,42784)
+CheckOffset(struct _AtkTextIface,get_character_extents,80,12,42784)
+CheckMemberSize(struct _AtkTextIface,get_character_count,8,12,42785)
+CheckOffset(struct _AtkTextIface,get_character_count,88,12,42785)
+CheckMemberSize(struct _AtkTextIface,get_offset_at_point,8,12,42790)
+CheckOffset(struct _AtkTextIface,get_offset_at_point,96,12,42790)
+CheckMemberSize(struct _AtkTextIface,get_n_selections,8,12,42791)
+CheckOffset(struct _AtkTextIface,get_n_selections,104,12,42791)
+CheckMemberSize(struct _AtkTextIface,get_selection,8,12,42796)
+CheckOffset(struct _AtkTextIface,get_selection,112,12,42796)
+CheckMemberSize(struct _AtkTextIface,add_selection,8,12,42800)
+CheckOffset(struct _AtkTextIface,add_selection,120,12,42800)
+CheckMemberSize(struct _AtkTextIface,remove_selection,8,12,42803)
+CheckOffset(struct _AtkTextIface,remove_selection,128,12,42803)
+CheckMemberSize(struct _AtkTextIface,set_selection,8,12,42808)
+CheckOffset(struct _AtkTextIface,set_selection,136,12,42808)
+CheckMemberSize(struct _AtkTextIface,set_caret_offset,8,12,42809)
+CheckOffset(struct _AtkTextIface,set_caret_offset,144,12,42809)
+CheckMemberSize(struct _AtkTextIface,text_changed,8,12,42813)
+CheckOffset(struct _AtkTextIface,text_changed,152,12,42813)
+CheckMemberSize(struct _AtkTextIface,text_caret_moved,8,12,42816)
+CheckOffset(struct _AtkTextIface,text_caret_moved,160,12,42816)
+CheckMemberSize(struct _AtkTextIface,text_selection_changed,8,12,42818)
+CheckOffset(struct _AtkTextIface,text_selection_changed,168,12,42818)
+CheckMemberSize(struct _AtkTextIface,text_attributes_changed,8,12,42819)
+CheckOffset(struct _AtkTextIface,text_attributes_changed,176,12,42819)
+CheckMemberSize(struct _AtkTextIface,get_range_extents,8,12,42825)
+CheckOffset(struct _AtkTextIface,get_range_extents,184,12,42825)
+CheckMemberSize(struct _AtkTextIface,get_bounded_ranges,8,12,42831)
+CheckOffset(struct _AtkTextIface,get_bounded_ranges,192,12,42831)
+CheckMemberSize(struct _AtkTextIface,pad4,8,12,42832)
+CheckOffset(struct _AtkTextIface,pad4,200,12,42832)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12260,0);
 Msg("Find size of _AtkTextIface (12260)\n");
@@ -3810,6 +6962,10 @@ Msg("Find size of _AtkTextIface (12260)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12261,0);
 Msg("Find size of fptr_atk_323 (12261)\n");
@@ -3818,6 +6974,10 @@ Msg("Find size of fptr_atk_323 (12261)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12262,0);
 Msg("Find size of fptr_atk_16 (12262)\n");
@@ -3826,6 +6986,10 @@ Msg("Find size of fptr_atk_16 (12262)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12263,0);
 Msg("Find size of fptr_atk_302 (12263)\n");
@@ -3834,6 +6998,10 @@ Msg("Find size of fptr_atk_302 (12263)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12264,0);
 Msg("Find size of fptr_atk_307 (12264)\n");
@@ -3842,6 +7010,10 @@ Msg("Find size of fptr_atk_307 (12264)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12265,0);
 Msg("Find size of fptr_atk_298 (12265)\n");
@@ -3850,6 +7022,10 @@ Msg("Find size of fptr_atk_298 (12265)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12266,0);
 Msg("Find size of fptr_atk_189 (12266)\n");
@@ -3858,6 +7034,10 @@ Msg("Find size of fptr_atk_189 (12266)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12267,0);
 Msg("Find size of fptr_atk_234 (12267)\n");
@@ -3866,6 +7046,10 @@ Msg("Find size of fptr_atk_234 (12267)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12268,0);
 Msg("Find size of fptr_atk_14 (12268)\n");
@@ -3874,6 +7058,10 @@ Msg("Find size of fptr_atk_14 (12268)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12269,0);
 Msg("Find size of fptr_atk_135 (12269)\n");
@@ -3882,6 +7070,10 @@ Msg("Find size of fptr_atk_135 (12269)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12270,0);
 Msg("Find size of fptr_atk_223 (12270)\n");
@@ -3890,6 +7082,10 @@ Msg("Find size of fptr_atk_223 (12270)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12271,0);
 Msg("Find size of fptr_atk_181 (12271)\n");
@@ -3898,6 +7094,10 @@ Msg("Find size of fptr_atk_181 (12271)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12272,0);
 Msg("Find size of fptr_atk_26 (12272)\n");
@@ -3906,6 +7106,10 @@ Msg("Find size of fptr_atk_26 (12272)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12273,0);
 Msg("Find size of fptr_atk_438 (12273)\n");
@@ -3914,6 +7118,10 @@ Msg("Find size of fptr_atk_438 (12273)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12274,0);
 Msg("Find size of fptr_atk_242 (12274)\n");
@@ -3922,6 +7130,10 @@ Msg("Find size of fptr_atk_242 (12274)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12275,0);
 Msg("Find size of fptr_atk_94 (12275)\n");
@@ -3930,6 +7142,10 @@ Msg("Find size of fptr_atk_94 (12275)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12276,0);
 Msg("Find size of fptr_atk_212 (12276)\n");
@@ -3938,6 +7154,10 @@ Msg("Find size of fptr_atk_212 (12276)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12277,0);
 Msg("Find size of fptr_atk_195 (12277)\n");
@@ -3949,6 +7169,14 @@ CheckTypeSize(AtkTextIface,104, 12278, 2)
 CheckTypeSize(AtkTextIface,208, 12278, 11)
 #elif __ia64__
 CheckTypeSize(AtkTextIface,208, 12278, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkTextIface,104, 12278, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkTextIface,208, 12278, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkTextIface,104, 12278, 10)
+#elif __s390x__
+CheckTypeSize(AtkTextIface,208, 12278, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12278,0);
 Msg("Find size of AtkTextIface (12278)\n");
@@ -3972,6 +7200,30 @@ CheckMemberSize(struct _AtkRelationSetClass,pad1,8,3,42834)
 CheckOffset(struct _AtkRelationSetClass,pad1,136,3,42834)
 CheckMemberSize(struct _AtkRelationSetClass,pad2,8,3,42835)
 CheckOffset(struct _AtkRelationSetClass,pad2,144,3,42835)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkRelationSetClass,76, 12279, 6)
+CheckMemberSize(struct _AtkRelationSetClass,pad1,4,6,42834)
+CheckOffset(struct _AtkRelationSetClass,pad1,68,6,42834)
+CheckMemberSize(struct _AtkRelationSetClass,pad2,4,6,42835)
+CheckOffset(struct _AtkRelationSetClass,pad2,72,6,42835)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkRelationSetClass,152, 12279, 9)
+CheckMemberSize(struct _AtkRelationSetClass,pad1,8,9,42834)
+CheckOffset(struct _AtkRelationSetClass,pad1,136,9,42834)
+CheckMemberSize(struct _AtkRelationSetClass,pad2,8,9,42835)
+CheckOffset(struct _AtkRelationSetClass,pad2,144,9,42835)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkRelationSetClass,76, 12279, 10)
+CheckMemberSize(struct _AtkRelationSetClass,pad1,4,10,42834)
+CheckOffset(struct _AtkRelationSetClass,pad1,68,10,42834)
+CheckMemberSize(struct _AtkRelationSetClass,pad2,4,10,42835)
+CheckOffset(struct _AtkRelationSetClass,pad2,72,10,42835)
+#elif __s390x__
+CheckTypeSize(struct _AtkRelationSetClass,152, 12279, 12)
+CheckMemberSize(struct _AtkRelationSetClass,pad1,8,12,42834)
+CheckOffset(struct _AtkRelationSetClass,pad1,136,12,42834)
+CheckMemberSize(struct _AtkRelationSetClass,pad2,8,12,42835)
+CheckOffset(struct _AtkRelationSetClass,pad2,144,12,42835)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12279,0);
 Msg("Find size of _AtkRelationSetClass (12279)\n");
@@ -3983,6 +7235,14 @@ CheckTypeSize(AtkRelationSetClass,76, 12280, 2)
 CheckTypeSize(AtkRelationSetClass,152, 12280, 11)
 #elif __ia64__
 CheckTypeSize(AtkRelationSetClass,152, 12280, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRelationSetClass,76, 12280, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRelationSetClass,152, 12280, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRelationSetClass,76, 12280, 10)
+#elif __s390x__
+CheckTypeSize(AtkRelationSetClass,152, 12280, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12280,0);
 Msg("Find size of AtkRelationSetClass (12280)\n");
@@ -4054,6 +7314,94 @@ CheckMemberSize(struct _AtkSelectionIface,pad1,8,3,42852)
 CheckOffset(struct _AtkSelectionIface,pad1,80,3,42852)
 CheckMemberSize(struct _AtkSelectionIface,pad2,8,3,42853)
 CheckOffset(struct _AtkSelectionIface,pad2,88,3,42853)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkSelectionIface,48, 12281, 6)
+CheckMemberSize(struct _AtkSelectionIface,add_selection,4,6,42839)
+CheckOffset(struct _AtkSelectionIface,add_selection,8,6,42839)
+CheckMemberSize(struct _AtkSelectionIface,clear_selection,4,6,42841)
+CheckOffset(struct _AtkSelectionIface,clear_selection,12,6,42841)
+CheckMemberSize(struct _AtkSelectionIface,ref_selection,4,6,42844)
+CheckOffset(struct _AtkSelectionIface,ref_selection,16,6,42844)
+CheckMemberSize(struct _AtkSelectionIface,get_selection_count,4,6,42846)
+CheckOffset(struct _AtkSelectionIface,get_selection_count,20,6,42846)
+CheckMemberSize(struct _AtkSelectionIface,is_child_selected,4,6,42847)
+CheckOffset(struct _AtkSelectionIface,is_child_selected,24,6,42847)
+CheckMemberSize(struct _AtkSelectionIface,remove_selection,4,6,42848)
+CheckOffset(struct _AtkSelectionIface,remove_selection,28,6,42848)
+CheckMemberSize(struct _AtkSelectionIface,select_all_selection,4,6,42849)
+CheckOffset(struct _AtkSelectionIface,select_all_selection,32,6,42849)
+CheckMemberSize(struct _AtkSelectionIface,selection_changed,4,6,42851)
+CheckOffset(struct _AtkSelectionIface,selection_changed,36,6,42851)
+CheckMemberSize(struct _AtkSelectionIface,pad1,4,6,42852)
+CheckOffset(struct _AtkSelectionIface,pad1,40,6,42852)
+CheckMemberSize(struct _AtkSelectionIface,pad2,4,6,42853)
+CheckOffset(struct _AtkSelectionIface,pad2,44,6,42853)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkSelectionIface,96, 12281, 9)
+CheckMemberSize(struct _AtkSelectionIface,add_selection,8,9,42839)
+CheckOffset(struct _AtkSelectionIface,add_selection,16,9,42839)
+CheckMemberSize(struct _AtkSelectionIface,clear_selection,8,9,42841)
+CheckOffset(struct _AtkSelectionIface,clear_selection,24,9,42841)
+CheckMemberSize(struct _AtkSelectionIface,ref_selection,8,9,42844)
+CheckOffset(struct _AtkSelectionIface,ref_selection,32,9,42844)
+CheckMemberSize(struct _AtkSelectionIface,get_selection_count,8,9,42846)
+CheckOffset(struct _AtkSelectionIface,get_selection_count,40,9,42846)
+CheckMemberSize(struct _AtkSelectionIface,is_child_selected,8,9,42847)
+CheckOffset(struct _AtkSelectionIface,is_child_selected,48,9,42847)
+CheckMemberSize(struct _AtkSelectionIface,remove_selection,8,9,42848)
+CheckOffset(struct _AtkSelectionIface,remove_selection,56,9,42848)
+CheckMemberSize(struct _AtkSelectionIface,select_all_selection,8,9,42849)
+CheckOffset(struct _AtkSelectionIface,select_all_selection,64,9,42849)
+CheckMemberSize(struct _AtkSelectionIface,selection_changed,8,9,42851)
+CheckOffset(struct _AtkSelectionIface,selection_changed,72,9,42851)
+CheckMemberSize(struct _AtkSelectionIface,pad1,8,9,42852)
+CheckOffset(struct _AtkSelectionIface,pad1,80,9,42852)
+CheckMemberSize(struct _AtkSelectionIface,pad2,8,9,42853)
+CheckOffset(struct _AtkSelectionIface,pad2,88,9,42853)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkSelectionIface,48, 12281, 10)
+CheckMemberSize(struct _AtkSelectionIface,add_selection,4,10,42839)
+CheckOffset(struct _AtkSelectionIface,add_selection,8,10,42839)
+CheckMemberSize(struct _AtkSelectionIface,clear_selection,4,10,42841)
+CheckOffset(struct _AtkSelectionIface,clear_selection,12,10,42841)
+CheckMemberSize(struct _AtkSelectionIface,ref_selection,4,10,42844)
+CheckOffset(struct _AtkSelectionIface,ref_selection,16,10,42844)
+CheckMemberSize(struct _AtkSelectionIface,get_selection_count,4,10,42846)
+CheckOffset(struct _AtkSelectionIface,get_selection_count,20,10,42846)
+CheckMemberSize(struct _AtkSelectionIface,is_child_selected,4,10,42847)
+CheckOffset(struct _AtkSelectionIface,is_child_selected,24,10,42847)
+CheckMemberSize(struct _AtkSelectionIface,remove_selection,4,10,42848)
+CheckOffset(struct _AtkSelectionIface,remove_selection,28,10,42848)
+CheckMemberSize(struct _AtkSelectionIface,select_all_selection,4,10,42849)
+CheckOffset(struct _AtkSelectionIface,select_all_selection,32,10,42849)
+CheckMemberSize(struct _AtkSelectionIface,selection_changed,4,10,42851)
+CheckOffset(struct _AtkSelectionIface,selection_changed,36,10,42851)
+CheckMemberSize(struct _AtkSelectionIface,pad1,4,10,42852)
+CheckOffset(struct _AtkSelectionIface,pad1,40,10,42852)
+CheckMemberSize(struct _AtkSelectionIface,pad2,4,10,42853)
+CheckOffset(struct _AtkSelectionIface,pad2,44,10,42853)
+#elif __s390x__
+CheckTypeSize(struct _AtkSelectionIface,96, 12281, 12)
+CheckMemberSize(struct _AtkSelectionIface,add_selection,8,12,42839)
+CheckOffset(struct _AtkSelectionIface,add_selection,16,12,42839)
+CheckMemberSize(struct _AtkSelectionIface,clear_selection,8,12,42841)
+CheckOffset(struct _AtkSelectionIface,clear_selection,24,12,42841)
+CheckMemberSize(struct _AtkSelectionIface,ref_selection,8,12,42844)
+CheckOffset(struct _AtkSelectionIface,ref_selection,32,12,42844)
+CheckMemberSize(struct _AtkSelectionIface,get_selection_count,8,12,42846)
+CheckOffset(struct _AtkSelectionIface,get_selection_count,40,12,42846)
+CheckMemberSize(struct _AtkSelectionIface,is_child_selected,8,12,42847)
+CheckOffset(struct _AtkSelectionIface,is_child_selected,48,12,42847)
+CheckMemberSize(struct _AtkSelectionIface,remove_selection,8,12,42848)
+CheckOffset(struct _AtkSelectionIface,remove_selection,56,12,42848)
+CheckMemberSize(struct _AtkSelectionIface,select_all_selection,8,12,42849)
+CheckOffset(struct _AtkSelectionIface,select_all_selection,64,12,42849)
+CheckMemberSize(struct _AtkSelectionIface,selection_changed,8,12,42851)
+CheckOffset(struct _AtkSelectionIface,selection_changed,72,12,42851)
+CheckMemberSize(struct _AtkSelectionIface,pad1,8,12,42852)
+CheckOffset(struct _AtkSelectionIface,pad1,80,12,42852)
+CheckMemberSize(struct _AtkSelectionIface,pad2,8,12,42853)
+CheckOffset(struct _AtkSelectionIface,pad2,88,12,42853)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12281,0);
 Msg("Find size of _AtkSelectionIface (12281)\n");
@@ -4062,6 +7410,10 @@ Msg("Find size of _AtkSelectionIface (12281)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12282,0);
 Msg("Find size of fptr_atk_353 (12282)\n");
@@ -4070,6 +7422,10 @@ Msg("Find size of fptr_atk_353 (12282)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12283,0);
 Msg("Find size of fptr_atk_18 (12283)\n");
@@ -4078,6 +7434,10 @@ Msg("Find size of fptr_atk_18 (12283)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12284,0);
 Msg("Find size of fptr_atk_200 (12284)\n");
@@ -4086,6 +7446,10 @@ Msg("Find size of fptr_atk_200 (12284)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12285,0);
 Msg("Find size of fptr_atk_399 (12285)\n");
@@ -4094,6 +7458,10 @@ Msg("Find size of fptr_atk_399 (12285)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12286,0);
 Msg("Find size of fptr_atk_15 (12286)\n");
@@ -4105,6 +7473,14 @@ CheckTypeSize(AtkSelectionIface,48, 12287, 2)
 CheckTypeSize(AtkSelectionIface,96, 12287, 11)
 #elif __ia64__
 CheckTypeSize(AtkSelectionIface,96, 12287, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkSelectionIface,48, 12287, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkSelectionIface,96, 12287, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkSelectionIface,48, 12287, 10)
+#elif __s390x__
+CheckTypeSize(AtkSelectionIface,96, 12287, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12287,0);
 Msg("Find size of AtkSelectionIface (12287)\n");
@@ -4158,6 +7534,70 @@ CheckMemberSize(struct _AtkUtilClass,get_toolkit_name,8,3,42865)
 CheckOffset(struct _AtkUtilClass,get_toolkit_name,176,3,42865)
 CheckMemberSize(struct _AtkUtilClass,get_toolkit_version,8,3,42866)
 CheckOffset(struct _AtkUtilClass,get_toolkit_version,184,3,42866)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkUtilClass,96, 12288, 6)
+CheckMemberSize(struct _AtkUtilClass,add_global_event_listener,4,6,42857)
+CheckOffset(struct _AtkUtilClass,add_global_event_listener,68,6,42857)
+CheckMemberSize(struct _AtkUtilClass,remove_global_event_listener,4,6,42859)
+CheckOffset(struct _AtkUtilClass,remove_global_event_listener,72,6,42859)
+CheckMemberSize(struct _AtkUtilClass,add_key_event_listener,4,6,42862)
+CheckOffset(struct _AtkUtilClass,add_key_event_listener,76,6,42862)
+CheckMemberSize(struct _AtkUtilClass,remove_key_event_listener,4,6,42863)
+CheckOffset(struct _AtkUtilClass,remove_key_event_listener,80,6,42863)
+CheckMemberSize(struct _AtkUtilClass,get_root,4,6,42864)
+CheckOffset(struct _AtkUtilClass,get_root,84,6,42864)
+CheckMemberSize(struct _AtkUtilClass,get_toolkit_name,4,6,42865)
+CheckOffset(struct _AtkUtilClass,get_toolkit_name,88,6,42865)
+CheckMemberSize(struct _AtkUtilClass,get_toolkit_version,4,6,42866)
+CheckOffset(struct _AtkUtilClass,get_toolkit_version,92,6,42866)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkUtilClass,192, 12288, 9)
+CheckMemberSize(struct _AtkUtilClass,add_global_event_listener,8,9,42857)
+CheckOffset(struct _AtkUtilClass,add_global_event_listener,136,9,42857)
+CheckMemberSize(struct _AtkUtilClass,remove_global_event_listener,8,9,42859)
+CheckOffset(struct _AtkUtilClass,remove_global_event_listener,144,9,42859)
+CheckMemberSize(struct _AtkUtilClass,add_key_event_listener,8,9,42862)
+CheckOffset(struct _AtkUtilClass,add_key_event_listener,152,9,42862)
+CheckMemberSize(struct _AtkUtilClass,remove_key_event_listener,8,9,42863)
+CheckOffset(struct _AtkUtilClass,remove_key_event_listener,160,9,42863)
+CheckMemberSize(struct _AtkUtilClass,get_root,8,9,42864)
+CheckOffset(struct _AtkUtilClass,get_root,168,9,42864)
+CheckMemberSize(struct _AtkUtilClass,get_toolkit_name,8,9,42865)
+CheckOffset(struct _AtkUtilClass,get_toolkit_name,176,9,42865)
+CheckMemberSize(struct _AtkUtilClass,get_toolkit_version,8,9,42866)
+CheckOffset(struct _AtkUtilClass,get_toolkit_version,184,9,42866)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkUtilClass,96, 12288, 10)
+CheckMemberSize(struct _AtkUtilClass,add_global_event_listener,4,10,42857)
+CheckOffset(struct _AtkUtilClass,add_global_event_listener,68,10,42857)
+CheckMemberSize(struct _AtkUtilClass,remove_global_event_listener,4,10,42859)
+CheckOffset(struct _AtkUtilClass,remove_global_event_listener,72,10,42859)
+CheckMemberSize(struct _AtkUtilClass,add_key_event_listener,4,10,42862)
+CheckOffset(struct _AtkUtilClass,add_key_event_listener,76,10,42862)
+CheckMemberSize(struct _AtkUtilClass,remove_key_event_listener,4,10,42863)
+CheckOffset(struct _AtkUtilClass,remove_key_event_listener,80,10,42863)
+CheckMemberSize(struct _AtkUtilClass,get_root,4,10,42864)
+CheckOffset(struct _AtkUtilClass,get_root,84,10,42864)
+CheckMemberSize(struct _AtkUtilClass,get_toolkit_name,4,10,42865)
+CheckOffset(struct _AtkUtilClass,get_toolkit_name,88,10,42865)
+CheckMemberSize(struct _AtkUtilClass,get_toolkit_version,4,10,42866)
+CheckOffset(struct _AtkUtilClass,get_toolkit_version,92,10,42866)
+#elif __s390x__
+CheckTypeSize(struct _AtkUtilClass,192, 12288, 12)
+CheckMemberSize(struct _AtkUtilClass,add_global_event_listener,8,12,42857)
+CheckOffset(struct _AtkUtilClass,add_global_event_listener,136,12,42857)
+CheckMemberSize(struct _AtkUtilClass,remove_global_event_listener,8,12,42859)
+CheckOffset(struct _AtkUtilClass,remove_global_event_listener,144,12,42859)
+CheckMemberSize(struct _AtkUtilClass,add_key_event_listener,8,12,42862)
+CheckOffset(struct _AtkUtilClass,add_key_event_listener,152,12,42862)
+CheckMemberSize(struct _AtkUtilClass,remove_key_event_listener,8,12,42863)
+CheckOffset(struct _AtkUtilClass,remove_key_event_listener,160,12,42863)
+CheckMemberSize(struct _AtkUtilClass,get_root,8,12,42864)
+CheckOffset(struct _AtkUtilClass,get_root,168,12,42864)
+CheckMemberSize(struct _AtkUtilClass,get_toolkit_name,8,12,42865)
+CheckOffset(struct _AtkUtilClass,get_toolkit_name,176,12,42865)
+CheckMemberSize(struct _AtkUtilClass,get_toolkit_version,8,12,42866)
+CheckOffset(struct _AtkUtilClass,get_toolkit_version,184,12,42866)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12288,0);
 Msg("Find size of _AtkUtilClass (12288)\n");
@@ -4166,6 +7606,10 @@ Msg("Find size of _AtkUtilClass (12288)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12289,0);
 Msg("Find size of fptr_atk_99 (12289)\n");
@@ -4174,6 +7618,10 @@ Msg("Find size of fptr_atk_99 (12289)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12290,0);
 Msg("Find size of fptr_atk_188 (12290)\n");
@@ -4182,6 +7630,10 @@ Msg("Find size of fptr_atk_188 (12290)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12291,0);
 Msg("Find size of fptr_atk_201 (12291)\n");
@@ -4190,6 +7642,10 @@ Msg("Find size of fptr_atk_201 (12291)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12292,0);
 Msg("Find size of fptr_atk_256 (12292)\n");
@@ -4198,6 +7654,10 @@ Msg("Find size of fptr_atk_256 (12292)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12293,0);
 Msg("Find size of fptr_atk_224 (12293)\n");
@@ -4209,6 +7669,14 @@ CheckTypeSize(AtkUtilClass,96, 12294, 2)
 CheckTypeSize(AtkUtilClass,192, 12294, 11)
 #elif __ia64__
 CheckTypeSize(AtkUtilClass,192, 12294, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkUtilClass,96, 12294, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkUtilClass,192, 12294, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkUtilClass,96, 12294, 10)
+#elif __s390x__
+CheckTypeSize(AtkUtilClass,192, 12294, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12294,0);
 Msg("Find size of AtkUtilClass (12294)\n");
@@ -4226,6 +7694,22 @@ CheckOffset(struct _AtkNoOpObjectClass,parent_class,0,11,42867)
 CheckTypeSize(struct _AtkNoOpObjectClass,352, 12295, 3)
 Msg("Missing member data for _AtkNoOpObjectClass on IA64\n");
 CheckOffset(struct _AtkNoOpObjectClass,parent_class,0,3,42867)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkNoOpObjectClass,176, 12295, 6)
+Msg("Missing member data for _AtkNoOpObjectClass on PPC32\n");
+CheckOffset(struct _AtkNoOpObjectClass,parent_class,0,6,42867)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkNoOpObjectClass,352, 12295, 9)
+Msg("Missing member data for _AtkNoOpObjectClass on PPC64\n");
+CheckOffset(struct _AtkNoOpObjectClass,parent_class,0,9,42867)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkNoOpObjectClass,176, 12295, 10)
+Msg("Missing member data for _AtkNoOpObjectClass on S390\n");
+CheckOffset(struct _AtkNoOpObjectClass,parent_class,0,10,42867)
+#elif __s390x__
+CheckTypeSize(struct _AtkNoOpObjectClass,352, 12295, 12)
+Msg("Missing member data for _AtkNoOpObjectClass on S390X\n");
+CheckOffset(struct _AtkNoOpObjectClass,parent_class,0,12,42867)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12295,0);
 Msg("Find size of _AtkNoOpObjectClass (12295)\n");
@@ -4237,6 +7721,14 @@ CheckTypeSize(AtkNoOpObjectClass,176, 12296, 2)
 CheckTypeSize(AtkNoOpObjectClass,352, 12296, 11)
 #elif __ia64__
 CheckTypeSize(AtkNoOpObjectClass,352, 12296, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkNoOpObjectClass,176, 12296, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkNoOpObjectClass,352, 12296, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkNoOpObjectClass,176, 12296, 10)
+#elif __s390x__
+CheckTypeSize(AtkNoOpObjectClass,352, 12296, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12296,0);
 Msg("Find size of AtkNoOpObjectClass (12296)\n");
@@ -4284,6 +7776,62 @@ CheckMemberSize(struct _AtkImageIface,pad1,8,3,42883)
 CheckOffset(struct _AtkImageIface,pad1,48,3,42883)
 CheckMemberSize(struct _AtkImageIface,pad2,8,3,42884)
 CheckOffset(struct _AtkImageIface,pad2,56,3,42884)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkImageIface,32, 12297, 6)
+CheckMemberSize(struct _AtkImageIface,get_image_position,4,6,42873)
+CheckOffset(struct _AtkImageIface,get_image_position,8,6,42873)
+CheckMemberSize(struct _AtkImageIface,get_image_description,4,6,42875)
+CheckOffset(struct _AtkImageIface,get_image_description,12,6,42875)
+CheckMemberSize(struct _AtkImageIface,get_image_size,4,6,42879)
+CheckOffset(struct _AtkImageIface,get_image_size,16,6,42879)
+CheckMemberSize(struct _AtkImageIface,set_image_description,4,6,42882)
+CheckOffset(struct _AtkImageIface,set_image_description,20,6,42882)
+CheckMemberSize(struct _AtkImageIface,pad1,4,6,42883)
+CheckOffset(struct _AtkImageIface,pad1,24,6,42883)
+CheckMemberSize(struct _AtkImageIface,pad2,4,6,42884)
+CheckOffset(struct _AtkImageIface,pad2,28,6,42884)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkImageIface,64, 12297, 9)
+CheckMemberSize(struct _AtkImageIface,get_image_position,8,9,42873)
+CheckOffset(struct _AtkImageIface,get_image_position,16,9,42873)
+CheckMemberSize(struct _AtkImageIface,get_image_description,8,9,42875)
+CheckOffset(struct _AtkImageIface,get_image_description,24,9,42875)
+CheckMemberSize(struct _AtkImageIface,get_image_size,8,9,42879)
+CheckOffset(struct _AtkImageIface,get_image_size,32,9,42879)
+CheckMemberSize(struct _AtkImageIface,set_image_description,8,9,42882)
+CheckOffset(struct _AtkImageIface,set_image_description,40,9,42882)
+CheckMemberSize(struct _AtkImageIface,pad1,8,9,42883)
+CheckOffset(struct _AtkImageIface,pad1,48,9,42883)
+CheckMemberSize(struct _AtkImageIface,pad2,8,9,42884)
+CheckOffset(struct _AtkImageIface,pad2,56,9,42884)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkImageIface,32, 12297, 10)
+CheckMemberSize(struct _AtkImageIface,get_image_position,4,10,42873)
+CheckOffset(struct _AtkImageIface,get_image_position,8,10,42873)
+CheckMemberSize(struct _AtkImageIface,get_image_description,4,10,42875)
+CheckOffset(struct _AtkImageIface,get_image_description,12,10,42875)
+CheckMemberSize(struct _AtkImageIface,get_image_size,4,10,42879)
+CheckOffset(struct _AtkImageIface,get_image_size,16,10,42879)
+CheckMemberSize(struct _AtkImageIface,set_image_description,4,10,42882)
+CheckOffset(struct _AtkImageIface,set_image_description,20,10,42882)
+CheckMemberSize(struct _AtkImageIface,pad1,4,10,42883)
+CheckOffset(struct _AtkImageIface,pad1,24,10,42883)
+CheckMemberSize(struct _AtkImageIface,pad2,4,10,42884)
+CheckOffset(struct _AtkImageIface,pad2,28,10,42884)
+#elif __s390x__
+CheckTypeSize(struct _AtkImageIface,64, 12297, 12)
+CheckMemberSize(struct _AtkImageIface,get_image_position,8,12,42873)
+CheckOffset(struct _AtkImageIface,get_image_position,16,12,42873)
+CheckMemberSize(struct _AtkImageIface,get_image_description,8,12,42875)
+CheckOffset(struct _AtkImageIface,get_image_description,24,12,42875)
+CheckMemberSize(struct _AtkImageIface,get_image_size,8,12,42879)
+CheckOffset(struct _AtkImageIface,get_image_size,32,12,42879)
+CheckMemberSize(struct _AtkImageIface,set_image_description,8,12,42882)
+CheckOffset(struct _AtkImageIface,set_image_description,40,12,42882)
+CheckMemberSize(struct _AtkImageIface,pad1,8,12,42883)
+CheckOffset(struct _AtkImageIface,pad1,48,12,42883)
+CheckMemberSize(struct _AtkImageIface,pad2,8,12,42884)
+CheckOffset(struct _AtkImageIface,pad2,56,12,42884)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12297,0);
 Msg("Find size of _AtkImageIface (12297)\n");
@@ -4292,6 +7840,10 @@ Msg("Find size of _AtkImageIface (12297)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12298,0);
 Msg("Find size of fptr_atk_370 (12298)\n");
@@ -4300,6 +7852,10 @@ Msg("Find size of fptr_atk_370 (12298)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12299,0);
 Msg("Find size of fptr_atk_205 (12299)\n");
@@ -4308,6 +7864,10 @@ Msg("Find size of fptr_atk_205 (12299)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12300,0);
 Msg("Find size of fptr_atk_344 (12300)\n");
@@ -4316,6 +7876,10 @@ Msg("Find size of fptr_atk_344 (12300)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12301,0);
 Msg("Find size of fptr_atk_383 (12301)\n");
@@ -4327,6 +7891,14 @@ CheckTypeSize(AtkImageIface,32, 12302, 2)
 CheckTypeSize(AtkImageIface,64, 12302, 11)
 #elif __ia64__
 CheckTypeSize(AtkImageIface,64, 12302, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkImageIface,32, 12302, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkImageIface,64, 12302, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkImageIface,32, 12302, 10)
+#elif __s390x__
+CheckTypeSize(AtkImageIface,64, 12302, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12302,0);
 Msg("Find size of AtkImageIface (12302)\n");
@@ -4428,6 +8000,134 @@ CheckMemberSize(struct _AtkComponentIface,bounds_changed,8,3,42938)
 CheckOffset(struct _AtkComponentIface,bounds_changed,120,3,42938)
 CheckMemberSize(struct _AtkComponentIface,pad2,8,3,42939)
 CheckOffset(struct _AtkComponentIface,pad2,128,3,42939)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkComponentIface,68, 12303, 6)
+CheckMemberSize(struct _AtkComponentIface,add_focus_handler,4,6,42888)
+CheckOffset(struct _AtkComponentIface,add_focus_handler,8,6,42888)
+CheckMemberSize(struct _AtkComponentIface,contains,4,6,42893)
+CheckOffset(struct _AtkComponentIface,contains,12,6,42893)
+CheckMemberSize(struct _AtkComponentIface,ref_accessible_at_point,4,6,42898)
+CheckOffset(struct _AtkComponentIface,ref_accessible_at_point,16,6,42898)
+CheckMemberSize(struct _AtkComponentIface,get_extents,4,6,42905)
+CheckOffset(struct _AtkComponentIface,get_extents,20,6,42905)
+CheckMemberSize(struct _AtkComponentIface,get_position,4,6,42910)
+CheckOffset(struct _AtkComponentIface,get_position,24,6,42910)
+CheckMemberSize(struct _AtkComponentIface,get_size,4,6,42914)
+CheckOffset(struct _AtkComponentIface,get_size,28,6,42914)
+CheckMemberSize(struct _AtkComponentIface,grab_focus,4,6,42916)
+CheckOffset(struct _AtkComponentIface,grab_focus,32,6,42916)
+CheckMemberSize(struct _AtkComponentIface,remove_focus_handler,4,6,42919)
+CheckOffset(struct _AtkComponentIface,remove_focus_handler,36,6,42919)
+CheckMemberSize(struct _AtkComponentIface,set_extents,4,6,42926)
+CheckOffset(struct _AtkComponentIface,set_extents,40,6,42926)
+CheckMemberSize(struct _AtkComponentIface,set_position,4,6,42927)
+CheckOffset(struct _AtkComponentIface,set_position,44,6,42927)
+CheckMemberSize(struct _AtkComponentIface,set_size,4,6,42931)
+CheckOffset(struct _AtkComponentIface,set_size,48,6,42931)
+CheckMemberSize(struct _AtkComponentIface,get_layer,4,6,42933)
+CheckOffset(struct _AtkComponentIface,get_layer,52,6,42933)
+CheckMemberSize(struct _AtkComponentIface,get_mdi_zorder,4,6,42935)
+CheckOffset(struct _AtkComponentIface,get_mdi_zorder,56,6,42935)
+CheckMemberSize(struct _AtkComponentIface,bounds_changed,4,6,42938)
+CheckOffset(struct _AtkComponentIface,bounds_changed,60,6,42938)
+CheckMemberSize(struct _AtkComponentIface,pad2,4,6,42939)
+CheckOffset(struct _AtkComponentIface,pad2,64,6,42939)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkComponentIface,136, 12303, 9)
+CheckMemberSize(struct _AtkComponentIface,add_focus_handler,8,9,42888)
+CheckOffset(struct _AtkComponentIface,add_focus_handler,16,9,42888)
+CheckMemberSize(struct _AtkComponentIface,contains,8,9,42893)
+CheckOffset(struct _AtkComponentIface,contains,24,9,42893)
+CheckMemberSize(struct _AtkComponentIface,ref_accessible_at_point,8,9,42898)
+CheckOffset(struct _AtkComponentIface,ref_accessible_at_point,32,9,42898)
+CheckMemberSize(struct _AtkComponentIface,get_extents,8,9,42905)
+CheckOffset(struct _AtkComponentIface,get_extents,40,9,42905)
+CheckMemberSize(struct _AtkComponentIface,get_position,8,9,42910)
+CheckOffset(struct _AtkComponentIface,get_position,48,9,42910)
+CheckMemberSize(struct _AtkComponentIface,get_size,8,9,42914)
+CheckOffset(struct _AtkComponentIface,get_size,56,9,42914)
+CheckMemberSize(struct _AtkComponentIface,grab_focus,8,9,42916)
+CheckOffset(struct _AtkComponentIface,grab_focus,64,9,42916)
+CheckMemberSize(struct _AtkComponentIface,remove_focus_handler,8,9,42919)
+CheckOffset(struct _AtkComponentIface,remove_focus_handler,72,9,42919)
+CheckMemberSize(struct _AtkComponentIface,set_extents,8,9,42926)
+CheckOffset(struct _AtkComponentIface,set_extents,80,9,42926)
+CheckMemberSize(struct _AtkComponentIface,set_position,8,9,42927)
+CheckOffset(struct _AtkComponentIface,set_position,88,9,42927)
+CheckMemberSize(struct _AtkComponentIface,set_size,8,9,42931)
+CheckOffset(struct _AtkComponentIface,set_size,96,9,42931)
+CheckMemberSize(struct _AtkComponentIface,get_layer,8,9,42933)
+CheckOffset(struct _AtkComponentIface,get_layer,104,9,42933)
+CheckMemberSize(struct _AtkComponentIface,get_mdi_zorder,8,9,42935)
+CheckOffset(struct _AtkComponentIface,get_mdi_zorder,112,9,42935)
+CheckMemberSize(struct _AtkComponentIface,bounds_changed,8,9,42938)
+CheckOffset(struct _AtkComponentIface,bounds_changed,120,9,42938)
+CheckMemberSize(struct _AtkComponentIface,pad2,8,9,42939)
+CheckOffset(struct _AtkComponentIface,pad2,128,9,42939)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkComponentIface,68, 12303, 10)
+CheckMemberSize(struct _AtkComponentIface,add_focus_handler,4,10,42888)
+CheckOffset(struct _AtkComponentIface,add_focus_handler,8,10,42888)
+CheckMemberSize(struct _AtkComponentIface,contains,4,10,42893)
+CheckOffset(struct _AtkComponentIface,contains,12,10,42893)
+CheckMemberSize(struct _AtkComponentIface,ref_accessible_at_point,4,10,42898)
+CheckOffset(struct _AtkComponentIface,ref_accessible_at_point,16,10,42898)
+CheckMemberSize(struct _AtkComponentIface,get_extents,4,10,42905)
+CheckOffset(struct _AtkComponentIface,get_extents,20,10,42905)
+CheckMemberSize(struct _AtkComponentIface,get_position,4,10,42910)
+CheckOffset(struct _AtkComponentIface,get_position,24,10,42910)
+CheckMemberSize(struct _AtkComponentIface,get_size,4,10,42914)
+CheckOffset(struct _AtkComponentIface,get_size,28,10,42914)
+CheckMemberSize(struct _AtkComponentIface,grab_focus,4,10,42916)
+CheckOffset(struct _AtkComponentIface,grab_focus,32,10,42916)
+CheckMemberSize(struct _AtkComponentIface,remove_focus_handler,4,10,42919)
+CheckOffset(struct _AtkComponentIface,remove_focus_handler,36,10,42919)
+CheckMemberSize(struct _AtkComponentIface,set_extents,4,10,42926)
+CheckOffset(struct _AtkComponentIface,set_extents,40,10,42926)
+CheckMemberSize(struct _AtkComponentIface,set_position,4,10,42927)
+CheckOffset(struct _AtkComponentIface,set_position,44,10,42927)
+CheckMemberSize(struct _AtkComponentIface,set_size,4,10,42931)
+CheckOffset(struct _AtkComponentIface,set_size,48,10,42931)
+CheckMemberSize(struct _AtkComponentIface,get_layer,4,10,42933)
+CheckOffset(struct _AtkComponentIface,get_layer,52,10,42933)
+CheckMemberSize(struct _AtkComponentIface,get_mdi_zorder,4,10,42935)
+CheckOffset(struct _AtkComponentIface,get_mdi_zorder,56,10,42935)
+CheckMemberSize(struct _AtkComponentIface,bounds_changed,4,10,42938)
+CheckOffset(struct _AtkComponentIface,bounds_changed,60,10,42938)
+CheckMemberSize(struct _AtkComponentIface,pad2,4,10,42939)
+CheckOffset(struct _AtkComponentIface,pad2,64,10,42939)
+#elif __s390x__
+CheckTypeSize(struct _AtkComponentIface,136, 12303, 12)
+CheckMemberSize(struct _AtkComponentIface,add_focus_handler,8,12,42888)
+CheckOffset(struct _AtkComponentIface,add_focus_handler,16,12,42888)
+CheckMemberSize(struct _AtkComponentIface,contains,8,12,42893)
+CheckOffset(struct _AtkComponentIface,contains,24,12,42893)
+CheckMemberSize(struct _AtkComponentIface,ref_accessible_at_point,8,12,42898)
+CheckOffset(struct _AtkComponentIface,ref_accessible_at_point,32,12,42898)
+CheckMemberSize(struct _AtkComponentIface,get_extents,8,12,42905)
+CheckOffset(struct _AtkComponentIface,get_extents,40,12,42905)
+CheckMemberSize(struct _AtkComponentIface,get_position,8,12,42910)
+CheckOffset(struct _AtkComponentIface,get_position,48,12,42910)
+CheckMemberSize(struct _AtkComponentIface,get_size,8,12,42914)
+CheckOffset(struct _AtkComponentIface,get_size,56,12,42914)
+CheckMemberSize(struct _AtkComponentIface,grab_focus,8,12,42916)
+CheckOffset(struct _AtkComponentIface,grab_focus,64,12,42916)
+CheckMemberSize(struct _AtkComponentIface,remove_focus_handler,8,12,42919)
+CheckOffset(struct _AtkComponentIface,remove_focus_handler,72,12,42919)
+CheckMemberSize(struct _AtkComponentIface,set_extents,8,12,42926)
+CheckOffset(struct _AtkComponentIface,set_extents,80,12,42926)
+CheckMemberSize(struct _AtkComponentIface,set_position,8,12,42927)
+CheckOffset(struct _AtkComponentIface,set_position,88,12,42927)
+CheckMemberSize(struct _AtkComponentIface,set_size,8,12,42931)
+CheckOffset(struct _AtkComponentIface,set_size,96,12,42931)
+CheckMemberSize(struct _AtkComponentIface,get_layer,8,12,42933)
+CheckOffset(struct _AtkComponentIface,get_layer,104,12,42933)
+CheckMemberSize(struct _AtkComponentIface,get_mdi_zorder,8,12,42935)
+CheckOffset(struct _AtkComponentIface,get_mdi_zorder,112,12,42935)
+CheckMemberSize(struct _AtkComponentIface,bounds_changed,8,12,42938)
+CheckOffset(struct _AtkComponentIface,bounds_changed,120,12,42938)
+CheckMemberSize(struct _AtkComponentIface,pad2,8,12,42939)
+CheckOffset(struct _AtkComponentIface,pad2,128,12,42939)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12303,0);
 Msg("Find size of _AtkComponentIface (12303)\n");
@@ -4436,6 +8136,10 @@ Msg("Find size of _AtkComponentIface (12303)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12304,0);
 Msg("Find size of fptr_atk_183 (12304)\n");
@@ -4444,6 +8148,10 @@ Msg("Find size of fptr_atk_183 (12304)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12305,0);
 Msg("Find size of fptr_atk_377 (12305)\n");
@@ -4452,6 +8160,10 @@ Msg("Find size of fptr_atk_377 (12305)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12306,0);
 Msg("Find size of fptr_atk_115 (12306)\n");
@@ -4460,6 +8172,10 @@ Msg("Find size of fptr_atk_115 (12306)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12307,0);
 Msg("Find size of fptr_atk_281 (12307)\n");
@@ -4468,6 +8184,10 @@ Msg("Find size of fptr_atk_281 (12307)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12308,0);
 Msg("Find size of fptr_atk_186 (12308)\n");
@@ -4476,6 +8196,10 @@ Msg("Find size of fptr_atk_186 (12308)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12309,0);
 Msg("Find size of fptr_atk_139 (12309)\n");
@@ -4484,6 +8208,10 @@ Msg("Find size of fptr_atk_139 (12309)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12310,0);
 Msg("Find size of fptr_atk_136 (12310)\n");
@@ -4492,6 +8220,10 @@ Msg("Find size of fptr_atk_136 (12310)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12311,0);
 Msg("Find size of fptr_atk_69 (12311)\n");
@@ -4500,6 +8232,10 @@ Msg("Find size of fptr_atk_69 (12311)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12312,0);
 Msg("Find size of fptr_atk_49 (12312)\n");
@@ -4508,6 +8244,10 @@ Msg("Find size of fptr_atk_49 (12312)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12313,0);
 Msg("Find size of fptr_atk_214 (12313)\n");
@@ -4516,6 +8256,10 @@ Msg("Find size of fptr_atk_214 (12313)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12314,0);
 Msg("Find size of fptr_atk_84 (12314)\n");
@@ -4524,6 +8268,10 @@ Msg("Find size of fptr_atk_84 (12314)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12315,0);
 Msg("Find size of fptr_atk_162 (12315)\n");
@@ -4535,6 +8283,14 @@ CheckTypeSize(AtkRectangle *,4, 12316, 2)
 CheckTypeSize(AtkRectangle *,8, 12316, 11)
 #elif __ia64__
 CheckTypeSize(AtkRectangle *,8, 12316, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkRectangle *,4, 12316, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkRectangle *,8, 12316, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkRectangle *,4, 12316, 10)
+#elif __s390x__
+CheckTypeSize(AtkRectangle *,8, 12316, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12316,0);
 Msg("Find size of AtkRectangle * (12316)\n");
@@ -4543,6 +8299,10 @@ Msg("Find size of AtkRectangle * (12316)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12317,0);
 Msg("Find size of fptr_atk_192 (12317)\n");
@@ -4554,6 +8314,14 @@ CheckTypeSize(AtkComponentIface,68, 12318, 2)
 CheckTypeSize(AtkComponentIface,136, 12318, 11)
 #elif __ia64__
 CheckTypeSize(AtkComponentIface,136, 12318, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkComponentIface,68, 12318, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkComponentIface,136, 12318, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkComponentIface,68, 12318, 10)
+#elif __s390x__
+CheckTypeSize(AtkComponentIface,136, 12318, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12318,0);
 Msg("Find size of AtkComponentIface (12318)\n");
@@ -4619,6 +8387,86 @@ CheckMemberSize(struct _AtkEditableTextIface,pad1,8,3,42963)
 CheckOffset(struct _AtkEditableTextIface,pad1,72,3,42963)
 CheckMemberSize(struct _AtkEditableTextIface,pad2,8,3,42964)
 CheckOffset(struct _AtkEditableTextIface,pad2,80,3,42964)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkEditableTextIface,44, 12319, 6)
+CheckMemberSize(struct _AtkEditableTextIface,set_run_attributes,4,6,42945)
+CheckOffset(struct _AtkEditableTextIface,set_run_attributes,8,6,42945)
+CheckMemberSize(struct _AtkEditableTextIface,set_text_contents,4,6,42948)
+CheckOffset(struct _AtkEditableTextIface,set_text_contents,12,6,42948)
+CheckMemberSize(struct _AtkEditableTextIface,insert_text,4,6,42953)
+CheckOffset(struct _AtkEditableTextIface,insert_text,16,6,42953)
+CheckMemberSize(struct _AtkEditableTextIface,copy_text,4,6,42957)
+CheckOffset(struct _AtkEditableTextIface,copy_text,20,6,42957)
+CheckMemberSize(struct _AtkEditableTextIface,cut_text,4,6,42958)
+CheckOffset(struct _AtkEditableTextIface,cut_text,24,6,42958)
+CheckMemberSize(struct _AtkEditableTextIface,delete_text,4,6,42959)
+CheckOffset(struct _AtkEditableTextIface,delete_text,28,6,42959)
+CheckMemberSize(struct _AtkEditableTextIface,paste_text,4,6,42962)
+CheckOffset(struct _AtkEditableTextIface,paste_text,32,6,42962)
+CheckMemberSize(struct _AtkEditableTextIface,pad1,4,6,42963)
+CheckOffset(struct _AtkEditableTextIface,pad1,36,6,42963)
+CheckMemberSize(struct _AtkEditableTextIface,pad2,4,6,42964)
+CheckOffset(struct _AtkEditableTextIface,pad2,40,6,42964)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkEditableTextIface,88, 12319, 9)
+CheckMemberSize(struct _AtkEditableTextIface,set_run_attributes,8,9,42945)
+CheckOffset(struct _AtkEditableTextIface,set_run_attributes,16,9,42945)
+CheckMemberSize(struct _AtkEditableTextIface,set_text_contents,8,9,42948)
+CheckOffset(struct _AtkEditableTextIface,set_text_contents,24,9,42948)
+CheckMemberSize(struct _AtkEditableTextIface,insert_text,8,9,42953)
+CheckOffset(struct _AtkEditableTextIface,insert_text,32,9,42953)
+CheckMemberSize(struct _AtkEditableTextIface,copy_text,8,9,42957)
+CheckOffset(struct _AtkEditableTextIface,copy_text,40,9,42957)
+CheckMemberSize(struct _AtkEditableTextIface,cut_text,8,9,42958)
+CheckOffset(struct _AtkEditableTextIface,cut_text,48,9,42958)
+CheckMemberSize(struct _AtkEditableTextIface,delete_text,8,9,42959)
+CheckOffset(struct _AtkEditableTextIface,delete_text,56,9,42959)
+CheckMemberSize(struct _AtkEditableTextIface,paste_text,8,9,42962)
+CheckOffset(struct _AtkEditableTextIface,paste_text,64,9,42962)
+CheckMemberSize(struct _AtkEditableTextIface,pad1,8,9,42963)
+CheckOffset(struct _AtkEditableTextIface,pad1,72,9,42963)
+CheckMemberSize(struct _AtkEditableTextIface,pad2,8,9,42964)
+CheckOffset(struct _AtkEditableTextIface,pad2,80,9,42964)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkEditableTextIface,44, 12319, 10)
+CheckMemberSize(struct _AtkEditableTextIface,set_run_attributes,4,10,42945)
+CheckOffset(struct _AtkEditableTextIface,set_run_attributes,8,10,42945)
+CheckMemberSize(struct _AtkEditableTextIface,set_text_contents,4,10,42948)
+CheckOffset(struct _AtkEditableTextIface,set_text_contents,12,10,42948)
+CheckMemberSize(struct _AtkEditableTextIface,insert_text,4,10,42953)
+CheckOffset(struct _AtkEditableTextIface,insert_text,16,10,42953)
+CheckMemberSize(struct _AtkEditableTextIface,copy_text,4,10,42957)
+CheckOffset(struct _AtkEditableTextIface,copy_text,20,10,42957)
+CheckMemberSize(struct _AtkEditableTextIface,cut_text,4,10,42958)
+CheckOffset(struct _AtkEditableTextIface,cut_text,24,10,42958)
+CheckMemberSize(struct _AtkEditableTextIface,delete_text,4,10,42959)
+CheckOffset(struct _AtkEditableTextIface,delete_text,28,10,42959)
+CheckMemberSize(struct _AtkEditableTextIface,paste_text,4,10,42962)
+CheckOffset(struct _AtkEditableTextIface,paste_text,32,10,42962)
+CheckMemberSize(struct _AtkEditableTextIface,pad1,4,10,42963)
+CheckOffset(struct _AtkEditableTextIface,pad1,36,10,42963)
+CheckMemberSize(struct _AtkEditableTextIface,pad2,4,10,42964)
+CheckOffset(struct _AtkEditableTextIface,pad2,40,10,42964)
+#elif __s390x__
+CheckTypeSize(struct _AtkEditableTextIface,88, 12319, 12)
+CheckMemberSize(struct _AtkEditableTextIface,set_run_attributes,8,12,42945)
+CheckOffset(struct _AtkEditableTextIface,set_run_attributes,16,12,42945)
+CheckMemberSize(struct _AtkEditableTextIface,set_text_contents,8,12,42948)
+CheckOffset(struct _AtkEditableTextIface,set_text_contents,24,12,42948)
+CheckMemberSize(struct _AtkEditableTextIface,insert_text,8,12,42953)
+CheckOffset(struct _AtkEditableTextIface,insert_text,32,12,42953)
+CheckMemberSize(struct _AtkEditableTextIface,copy_text,8,12,42957)
+CheckOffset(struct _AtkEditableTextIface,copy_text,40,12,42957)
+CheckMemberSize(struct _AtkEditableTextIface,cut_text,8,12,42958)
+CheckOffset(struct _AtkEditableTextIface,cut_text,48,12,42958)
+CheckMemberSize(struct _AtkEditableTextIface,delete_text,8,12,42959)
+CheckOffset(struct _AtkEditableTextIface,delete_text,56,12,42959)
+CheckMemberSize(struct _AtkEditableTextIface,paste_text,8,12,42962)
+CheckOffset(struct _AtkEditableTextIface,paste_text,64,12,42962)
+CheckMemberSize(struct _AtkEditableTextIface,pad1,8,12,42963)
+CheckOffset(struct _AtkEditableTextIface,pad1,72,12,42963)
+CheckMemberSize(struct _AtkEditableTextIface,pad2,8,12,42964)
+CheckOffset(struct _AtkEditableTextIface,pad2,80,12,42964)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12319,0);
 Msg("Find size of _AtkEditableTextIface (12319)\n");
@@ -4627,6 +8475,10 @@ Msg("Find size of _AtkEditableTextIface (12319)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12320,0);
 Msg("Find size of fptr_atk_244 (12320)\n");
@@ -4635,6 +8487,10 @@ Msg("Find size of fptr_atk_244 (12320)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12321,0);
 Msg("Find size of fptr_atk_117 (12321)\n");
@@ -4643,6 +8499,10 @@ Msg("Find size of fptr_atk_117 (12321)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12322,0);
 Msg("Find size of fptr_atk_283 (12322)\n");
@@ -4651,6 +8511,10 @@ Msg("Find size of fptr_atk_283 (12322)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12323,0);
 Msg("Find size of fptr_atk_308 (12323)\n");
@@ -4659,6 +8523,10 @@ Msg("Find size of fptr_atk_308 (12323)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12324,0);
 Msg("Find size of fptr_atk_228 (12324)\n");
@@ -4670,6 +8538,14 @@ CheckTypeSize(AtkEditableTextIface,44, 12325, 2)
 CheckTypeSize(AtkEditableTextIface,88, 12325, 11)
 #elif __ia64__
 CheckTypeSize(AtkEditableTextIface,88, 12325, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkEditableTextIface,44, 12325, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkEditableTextIface,88, 12325, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkEditableTextIface,44, 12325, 10)
+#elif __s390x__
+CheckTypeSize(AtkEditableTextIface,88, 12325, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12325,0);
 Msg("Find size of AtkEditableTextIface (12325)\n");
@@ -4741,6 +8617,94 @@ CheckMemberSize(struct _AtkDocumentIface,pad7,8,3,42976)
 CheckOffset(struct _AtkDocumentIface,pad7,80,3,42976)
 CheckMemberSize(struct _AtkDocumentIface,pad8,8,3,42977)
 CheckOffset(struct _AtkDocumentIface,pad8,88,3,42977)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkDocumentIface,48, 12326, 6)
+CheckMemberSize(struct _AtkDocumentIface,get_document_type,4,6,42967)
+CheckOffset(struct _AtkDocumentIface,get_document_type,8,6,42967)
+CheckMemberSize(struct _AtkDocumentIface,get_document,4,6,42969)
+CheckOffset(struct _AtkDocumentIface,get_document,12,6,42969)
+CheckMemberSize(struct _AtkDocumentIface,pad1,4,6,42970)
+CheckOffset(struct _AtkDocumentIface,pad1,16,6,42970)
+CheckMemberSize(struct _AtkDocumentIface,pad2,4,6,42971)
+CheckOffset(struct _AtkDocumentIface,pad2,20,6,42971)
+CheckMemberSize(struct _AtkDocumentIface,pad3,4,6,42972)
+CheckOffset(struct _AtkDocumentIface,pad3,24,6,42972)
+CheckMemberSize(struct _AtkDocumentIface,pad4,4,6,42973)
+CheckOffset(struct _AtkDocumentIface,pad4,28,6,42973)
+CheckMemberSize(struct _AtkDocumentIface,pad5,4,6,42974)
+CheckOffset(struct _AtkDocumentIface,pad5,32,6,42974)
+CheckMemberSize(struct _AtkDocumentIface,pad6,4,6,42975)
+CheckOffset(struct _AtkDocumentIface,pad6,36,6,42975)
+CheckMemberSize(struct _AtkDocumentIface,pad7,4,6,42976)
+CheckOffset(struct _AtkDocumentIface,pad7,40,6,42976)
+CheckMemberSize(struct _AtkDocumentIface,pad8,4,6,42977)
+CheckOffset(struct _AtkDocumentIface,pad8,44,6,42977)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkDocumentIface,96, 12326, 9)
+CheckMemberSize(struct _AtkDocumentIface,get_document_type,8,9,42967)
+CheckOffset(struct _AtkDocumentIface,get_document_type,16,9,42967)
+CheckMemberSize(struct _AtkDocumentIface,get_document,8,9,42969)
+CheckOffset(struct _AtkDocumentIface,get_document,24,9,42969)
+CheckMemberSize(struct _AtkDocumentIface,pad1,8,9,42970)
+CheckOffset(struct _AtkDocumentIface,pad1,32,9,42970)
+CheckMemberSize(struct _AtkDocumentIface,pad2,8,9,42971)
+CheckOffset(struct _AtkDocumentIface,pad2,40,9,42971)
+CheckMemberSize(struct _AtkDocumentIface,pad3,8,9,42972)
+CheckOffset(struct _AtkDocumentIface,pad3,48,9,42972)
+CheckMemberSize(struct _AtkDocumentIface,pad4,8,9,42973)
+CheckOffset(struct _AtkDocumentIface,pad4,56,9,42973)
+CheckMemberSize(struct _AtkDocumentIface,pad5,8,9,42974)
+CheckOffset(struct _AtkDocumentIface,pad5,64,9,42974)
+CheckMemberSize(struct _AtkDocumentIface,pad6,8,9,42975)
+CheckOffset(struct _AtkDocumentIface,pad6,72,9,42975)
+CheckMemberSize(struct _AtkDocumentIface,pad7,8,9,42976)
+CheckOffset(struct _AtkDocumentIface,pad7,80,9,42976)
+CheckMemberSize(struct _AtkDocumentIface,pad8,8,9,42977)
+CheckOffset(struct _AtkDocumentIface,pad8,88,9,42977)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkDocumentIface,48, 12326, 10)
+CheckMemberSize(struct _AtkDocumentIface,get_document_type,4,10,42967)
+CheckOffset(struct _AtkDocumentIface,get_document_type,8,10,42967)
+CheckMemberSize(struct _AtkDocumentIface,get_document,4,10,42969)
+CheckOffset(struct _AtkDocumentIface,get_document,12,10,42969)
+CheckMemberSize(struct _AtkDocumentIface,pad1,4,10,42970)
+CheckOffset(struct _AtkDocumentIface,pad1,16,10,42970)
+CheckMemberSize(struct _AtkDocumentIface,pad2,4,10,42971)
+CheckOffset(struct _AtkDocumentIface,pad2,20,10,42971)
+CheckMemberSize(struct _AtkDocumentIface,pad3,4,10,42972)
+CheckOffset(struct _AtkDocumentIface,pad3,24,10,42972)
+CheckMemberSize(struct _AtkDocumentIface,pad4,4,10,42973)
+CheckOffset(struct _AtkDocumentIface,pad4,28,10,42973)
+CheckMemberSize(struct _AtkDocumentIface,pad5,4,10,42974)
+CheckOffset(struct _AtkDocumentIface,pad5,32,10,42974)
+CheckMemberSize(struct _AtkDocumentIface,pad6,4,10,42975)
+CheckOffset(struct _AtkDocumentIface,pad6,36,10,42975)
+CheckMemberSize(struct _AtkDocumentIface,pad7,4,10,42976)
+CheckOffset(struct _AtkDocumentIface,pad7,40,10,42976)
+CheckMemberSize(struct _AtkDocumentIface,pad8,4,10,42977)
+CheckOffset(struct _AtkDocumentIface,pad8,44,10,42977)
+#elif __s390x__
+CheckTypeSize(struct _AtkDocumentIface,96, 12326, 12)
+CheckMemberSize(struct _AtkDocumentIface,get_document_type,8,12,42967)
+CheckOffset(struct _AtkDocumentIface,get_document_type,16,12,42967)
+CheckMemberSize(struct _AtkDocumentIface,get_document,8,12,42969)
+CheckOffset(struct _AtkDocumentIface,get_document,24,12,42969)
+CheckMemberSize(struct _AtkDocumentIface,pad1,8,12,42970)
+CheckOffset(struct _AtkDocumentIface,pad1,32,12,42970)
+CheckMemberSize(struct _AtkDocumentIface,pad2,8,12,42971)
+CheckOffset(struct _AtkDocumentIface,pad2,40,12,42971)
+CheckMemberSize(struct _AtkDocumentIface,pad3,8,12,42972)
+CheckOffset(struct _AtkDocumentIface,pad3,48,12,42972)
+CheckMemberSize(struct _AtkDocumentIface,pad4,8,12,42973)
+CheckOffset(struct _AtkDocumentIface,pad4,56,12,42973)
+CheckMemberSize(struct _AtkDocumentIface,pad5,8,12,42974)
+CheckOffset(struct _AtkDocumentIface,pad5,64,12,42974)
+CheckMemberSize(struct _AtkDocumentIface,pad6,8,12,42975)
+CheckOffset(struct _AtkDocumentIface,pad6,72,12,42975)
+CheckMemberSize(struct _AtkDocumentIface,pad7,8,12,42976)
+CheckOffset(struct _AtkDocumentIface,pad7,80,12,42976)
+CheckMemberSize(struct _AtkDocumentIface,pad8,8,12,42977)
+CheckOffset(struct _AtkDocumentIface,pad8,88,12,42977)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12326,0);
 Msg("Find size of _AtkDocumentIface (12326)\n");
@@ -4749,6 +8713,10 @@ Msg("Find size of _AtkDocumentIface (12326)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12327,0);
 Msg("Find size of fptr_atk_354 (12327)\n");
@@ -4757,6 +8725,10 @@ Msg("Find size of fptr_atk_354 (12327)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12328,0);
 Msg("Find size of fptr_atk_193 (12328)\n");
@@ -4768,6 +8740,14 @@ CheckTypeSize(AtkDocumentIface,48, 12329, 2)
 CheckTypeSize(AtkDocumentIface,96, 12329, 11)
 #elif __ia64__
 CheckTypeSize(AtkDocumentIface,96, 12329, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkDocumentIface,48, 12329, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkDocumentIface,96, 12329, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkDocumentIface,48, 12329, 10)
+#elif __s390x__
+CheckTypeSize(AtkDocumentIface,96, 12329, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12329,0);
 Msg("Find size of AtkDocumentIface (12329)\n");
@@ -4839,6 +8819,94 @@ CheckMemberSize(struct _AtkHyperlinkClass,link_activated,8,3,42995)
 CheckOffset(struct _AtkHyperlinkClass,link_activated,200,3,42995)
 CheckMemberSize(struct _AtkHyperlinkClass,pad1,8,3,42996)
 CheckOffset(struct _AtkHyperlinkClass,pad1,208,3,42996)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkHyperlinkClass,108, 12330, 6)
+CheckMemberSize(struct _AtkHyperlinkClass,get_uri,4,6,42981)
+CheckOffset(struct _AtkHyperlinkClass,get_uri,68,6,42981)
+CheckMemberSize(struct _AtkHyperlinkClass,get_object,4,6,42984)
+CheckOffset(struct _AtkHyperlinkClass,get_object,72,6,42984)
+CheckMemberSize(struct _AtkHyperlinkClass,get_end_index,4,6,42986)
+CheckOffset(struct _AtkHyperlinkClass,get_end_index,76,6,42986)
+CheckMemberSize(struct _AtkHyperlinkClass,get_start_index,4,6,42987)
+CheckOffset(struct _AtkHyperlinkClass,get_start_index,80,6,42987)
+CheckMemberSize(struct _AtkHyperlinkClass,is_valid,4,6,42989)
+CheckOffset(struct _AtkHyperlinkClass,is_valid,84,6,42989)
+CheckMemberSize(struct _AtkHyperlinkClass,get_n_anchors,4,6,42990)
+CheckOffset(struct _AtkHyperlinkClass,get_n_anchors,88,6,42990)
+CheckMemberSize(struct _AtkHyperlinkClass,link_state,4,6,42992)
+CheckOffset(struct _AtkHyperlinkClass,link_state,92,6,42992)
+CheckMemberSize(struct _AtkHyperlinkClass,is_selected_link,4,6,42993)
+CheckOffset(struct _AtkHyperlinkClass,is_selected_link,96,6,42993)
+CheckMemberSize(struct _AtkHyperlinkClass,link_activated,4,6,42995)
+CheckOffset(struct _AtkHyperlinkClass,link_activated,100,6,42995)
+CheckMemberSize(struct _AtkHyperlinkClass,pad1,4,6,42996)
+CheckOffset(struct _AtkHyperlinkClass,pad1,104,6,42996)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkHyperlinkClass,216, 12330, 9)
+CheckMemberSize(struct _AtkHyperlinkClass,get_uri,8,9,42981)
+CheckOffset(struct _AtkHyperlinkClass,get_uri,136,9,42981)
+CheckMemberSize(struct _AtkHyperlinkClass,get_object,8,9,42984)
+CheckOffset(struct _AtkHyperlinkClass,get_object,144,9,42984)
+CheckMemberSize(struct _AtkHyperlinkClass,get_end_index,8,9,42986)
+CheckOffset(struct _AtkHyperlinkClass,get_end_index,152,9,42986)
+CheckMemberSize(struct _AtkHyperlinkClass,get_start_index,8,9,42987)
+CheckOffset(struct _AtkHyperlinkClass,get_start_index,160,9,42987)
+CheckMemberSize(struct _AtkHyperlinkClass,is_valid,8,9,42989)
+CheckOffset(struct _AtkHyperlinkClass,is_valid,168,9,42989)
+CheckMemberSize(struct _AtkHyperlinkClass,get_n_anchors,8,9,42990)
+CheckOffset(struct _AtkHyperlinkClass,get_n_anchors,176,9,42990)
+CheckMemberSize(struct _AtkHyperlinkClass,link_state,8,9,42992)
+CheckOffset(struct _AtkHyperlinkClass,link_state,184,9,42992)
+CheckMemberSize(struct _AtkHyperlinkClass,is_selected_link,8,9,42993)
+CheckOffset(struct _AtkHyperlinkClass,is_selected_link,192,9,42993)
+CheckMemberSize(struct _AtkHyperlinkClass,link_activated,8,9,42995)
+CheckOffset(struct _AtkHyperlinkClass,link_activated,200,9,42995)
+CheckMemberSize(struct _AtkHyperlinkClass,pad1,8,9,42996)
+CheckOffset(struct _AtkHyperlinkClass,pad1,208,9,42996)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkHyperlinkClass,108, 12330, 10)
+CheckMemberSize(struct _AtkHyperlinkClass,get_uri,4,10,42981)
+CheckOffset(struct _AtkHyperlinkClass,get_uri,68,10,42981)
+CheckMemberSize(struct _AtkHyperlinkClass,get_object,4,10,42984)
+CheckOffset(struct _AtkHyperlinkClass,get_object,72,10,42984)
+CheckMemberSize(struct _AtkHyperlinkClass,get_end_index,4,10,42986)
+CheckOffset(struct _AtkHyperlinkClass,get_end_index,76,10,42986)
+CheckMemberSize(struct _AtkHyperlinkClass,get_start_index,4,10,42987)
+CheckOffset(struct _AtkHyperlinkClass,get_start_index,80,10,42987)
+CheckMemberSize(struct _AtkHyperlinkClass,is_valid,4,10,42989)
+CheckOffset(struct _AtkHyperlinkClass,is_valid,84,10,42989)
+CheckMemberSize(struct _AtkHyperlinkClass,get_n_anchors,4,10,42990)
+CheckOffset(struct _AtkHyperlinkClass,get_n_anchors,88,10,42990)
+CheckMemberSize(struct _AtkHyperlinkClass,link_state,4,10,42992)
+CheckOffset(struct _AtkHyperlinkClass,link_state,92,10,42992)
+CheckMemberSize(struct _AtkHyperlinkClass,is_selected_link,4,10,42993)
+CheckOffset(struct _AtkHyperlinkClass,is_selected_link,96,10,42993)
+CheckMemberSize(struct _AtkHyperlinkClass,link_activated,4,10,42995)
+CheckOffset(struct _AtkHyperlinkClass,link_activated,100,10,42995)
+CheckMemberSize(struct _AtkHyperlinkClass,pad1,4,10,42996)
+CheckOffset(struct _AtkHyperlinkClass,pad1,104,10,42996)
+#elif __s390x__
+CheckTypeSize(struct _AtkHyperlinkClass,216, 12330, 12)
+CheckMemberSize(struct _AtkHyperlinkClass,get_uri,8,12,42981)
+CheckOffset(struct _AtkHyperlinkClass,get_uri,136,12,42981)
+CheckMemberSize(struct _AtkHyperlinkClass,get_object,8,12,42984)
+CheckOffset(struct _AtkHyperlinkClass,get_object,144,12,42984)
+CheckMemberSize(struct _AtkHyperlinkClass,get_end_index,8,12,42986)
+CheckOffset(struct _AtkHyperlinkClass,get_end_index,152,12,42986)
+CheckMemberSize(struct _AtkHyperlinkClass,get_start_index,8,12,42987)
+CheckOffset(struct _AtkHyperlinkClass,get_start_index,160,12,42987)
+CheckMemberSize(struct _AtkHyperlinkClass,is_valid,8,12,42989)
+CheckOffset(struct _AtkHyperlinkClass,is_valid,168,12,42989)
+CheckMemberSize(struct _AtkHyperlinkClass,get_n_anchors,8,12,42990)
+CheckOffset(struct _AtkHyperlinkClass,get_n_anchors,176,12,42990)
+CheckMemberSize(struct _AtkHyperlinkClass,link_state,8,12,42992)
+CheckOffset(struct _AtkHyperlinkClass,link_state,184,12,42992)
+CheckMemberSize(struct _AtkHyperlinkClass,is_selected_link,8,12,42993)
+CheckOffset(struct _AtkHyperlinkClass,is_selected_link,192,12,42993)
+CheckMemberSize(struct _AtkHyperlinkClass,link_activated,8,12,42995)
+CheckOffset(struct _AtkHyperlinkClass,link_activated,200,12,42995)
+CheckMemberSize(struct _AtkHyperlinkClass,pad1,8,12,42996)
+CheckOffset(struct _AtkHyperlinkClass,pad1,208,12,42996)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12330,0);
 Msg("Find size of _AtkHyperlinkClass (12330)\n");
@@ -4847,6 +8915,10 @@ Msg("Find size of _AtkHyperlinkClass (12330)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12331,0);
 Msg("Find size of fptr_atk_241 (12331)\n");
@@ -4855,6 +8927,10 @@ Msg("Find size of fptr_atk_241 (12331)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12332,0);
 Msg("Find size of fptr_atk_368 (12332)\n");
@@ -4863,6 +8939,10 @@ Msg("Find size of fptr_atk_368 (12332)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12333,0);
 Msg("Find size of fptr_atk_29 (12333)\n");
@@ -4871,6 +8951,10 @@ Msg("Find size of fptr_atk_29 (12333)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12334,0);
 Msg("Find size of fptr_atk_215 (12334)\n");
@@ -4879,6 +8963,10 @@ Msg("Find size of fptr_atk_215 (12334)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12335,0);
 Msg("Find size of fptr_atk_175 (12335)\n");
@@ -4887,6 +8975,10 @@ Msg("Find size of fptr_atk_175 (12335)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12336,0);
 Msg("Find size of fptr_atk_221 (12336)\n");
@@ -4898,6 +8990,14 @@ CheckTypeSize(AtkHyperlinkClass,108, 12337, 2)
 CheckTypeSize(AtkHyperlinkClass,216, 12337, 11)
 #elif __ia64__
 CheckTypeSize(AtkHyperlinkClass,216, 12337, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkHyperlinkClass,108, 12337, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkHyperlinkClass,216, 12337, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkHyperlinkClass,108, 12337, 10)
+#elif __s390x__
+CheckTypeSize(AtkHyperlinkClass,216, 12337, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12337,0);
 Msg("Find size of AtkHyperlinkClass (12337)\n");
@@ -4915,6 +9015,22 @@ CheckEnum("ATK_KEY_EVENT_LAST_DEFINED",ATK_KEY_EVENT_LAST_DEFINED,((0) + 1) + 1)
 CheckEnum("ATK_KEY_EVENT_PRESS",ATK_KEY_EVENT_PRESS,0);
 CheckEnum("ATK_KEY_EVENT_RELEASE",ATK_KEY_EVENT_RELEASE,(0) + 1);
 CheckEnum("ATK_KEY_EVENT_LAST_DEFINED",ATK_KEY_EVENT_LAST_DEFINED,((0) + 1) + 1);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_KEY_EVENT_PRESS",ATK_KEY_EVENT_PRESS,0);
+CheckEnum("ATK_KEY_EVENT_RELEASE",ATK_KEY_EVENT_RELEASE,(0) + 1);
+CheckEnum("ATK_KEY_EVENT_LAST_DEFINED",ATK_KEY_EVENT_LAST_DEFINED,((0) + 1) + 1);
+#elif __powerpc64__
+CheckEnum("ATK_KEY_EVENT_PRESS",ATK_KEY_EVENT_PRESS,0);
+CheckEnum("ATK_KEY_EVENT_RELEASE",ATK_KEY_EVENT_RELEASE,(0) + 1);
+CheckEnum("ATK_KEY_EVENT_LAST_DEFINED",ATK_KEY_EVENT_LAST_DEFINED,((0) + 1) + 1);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_KEY_EVENT_PRESS",ATK_KEY_EVENT_PRESS,0);
+CheckEnum("ATK_KEY_EVENT_RELEASE",ATK_KEY_EVENT_RELEASE,(0) + 1);
+CheckEnum("ATK_KEY_EVENT_LAST_DEFINED",ATK_KEY_EVENT_LAST_DEFINED,((0) + 1) + 1);
+#elif __s390x__
+CheckEnum("ATK_KEY_EVENT_PRESS",ATK_KEY_EVENT_PRESS,0);
+CheckEnum("ATK_KEY_EVENT_RELEASE",ATK_KEY_EVENT_RELEASE,(0) + 1);
+CheckEnum("ATK_KEY_EVENT_LAST_DEFINED",ATK_KEY_EVENT_LAST_DEFINED,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12338,0);
 Msg("Find size of anonymous-atk.h.types-0 (12338)\n");
@@ -4926,6 +9042,14 @@ CheckTypeSize(AtkKeyEventType,4, 12339, 2)
 CheckTypeSize(AtkKeyEventType,4, 12339, 11)
 #elif __ia64__
 CheckTypeSize(AtkKeyEventType,4, 12339, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkKeyEventType,4, 12339, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkKeyEventType,4, 12339, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkKeyEventType,4, 12339, 10)
+#elif __s390x__
+CheckTypeSize(AtkKeyEventType,4, 12339, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12339,0);
 Msg("Find size of AtkKeyEventType (12339)\n");
@@ -4953,6 +9077,14 @@ CheckEnum("ATK_HYPERLINK_IS_INLINE",ATK_HYPERLINK_IS_INLINE,1 << 0);
 CheckEnum("ATK_HYPERLINK_IS_INLINE",ATK_HYPERLINK_IS_INLINE,1 << 0);
 #elif __ia64__
 CheckEnum("ATK_HYPERLINK_IS_INLINE",ATK_HYPERLINK_IS_INLINE,1 << 0);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("ATK_HYPERLINK_IS_INLINE",ATK_HYPERLINK_IS_INLINE,1 << 0);
+#elif __powerpc64__
+CheckEnum("ATK_HYPERLINK_IS_INLINE",ATK_HYPERLINK_IS_INLINE,1 << 0);
+#elif __s390__ && !__s390x__
+CheckEnum("ATK_HYPERLINK_IS_INLINE",ATK_HYPERLINK_IS_INLINE,1 << 0);
+#elif __s390x__
+CheckEnum("ATK_HYPERLINK_IS_INLINE",ATK_HYPERLINK_IS_INLINE,1 << 0);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12342,0);
 Msg("Find size of anonymous-atk.h.types-4 (12342)\n");
@@ -4964,6 +9096,14 @@ CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 2)
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 11)
 #elif __ia64__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 10)
+#elif __s390x__
+CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12343,0);
 Msg("Find size of AtkHyperlinkStateFlags (12343)\n");

@@ -322,15 +322,15 @@ Msg("Find size of _pthread_cleanup_buffer (6931)\n");
 #if __i386__
 CheckTypeSize(pthread_rwlock_t *,4, 9056, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_rwlock_t *,0, 9056, 6)
+CheckTypeSize(pthread_rwlock_t *,4, 9056, 6)
 #elif __ia64__
 CheckTypeSize(pthread_rwlock_t *,0, 9056, 3)
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_rwlock_t *,0, 9056, 10)
+CheckTypeSize(pthread_rwlock_t *,4, 9056, 10)
 #elif __powerpc64__
-CheckTypeSize(pthread_rwlock_t *,0, 9056, 9)
+CheckTypeSize(pthread_rwlock_t *,8, 9056, 9)
 #elif __s390x__
-CheckTypeSize(pthread_rwlock_t *,0, 9056, 12)
+CheckTypeSize(pthread_rwlock_t *,8, 9056, 12)
 #elif __x86_64__
 CheckTypeSize(pthread_rwlock_t *,8, 9056, 11)
 #else

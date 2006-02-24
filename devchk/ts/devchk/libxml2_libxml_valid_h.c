@@ -36,6 +36,14 @@ CheckTypeSize(xmlValidCtxt *,4, 14936, 2)
 CheckTypeSize(xmlValidCtxt *,8, 14936, 11)
 #elif __ia64__
 CheckTypeSize(xmlValidCtxt *,8, 14936, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlValidCtxt *,4, 14936, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlValidCtxt *,8, 14936, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlValidCtxt *,4, 14936, 10)
+#elif __s390x__
+CheckTypeSize(xmlValidCtxt *,8, 14936, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14936,0);
 Msg("Find size of xmlValidCtxt * (14936)\n");
@@ -47,6 +55,14 @@ CheckTypeSize(xmlValidCtxtPtr,4, 14937, 2)
 CheckTypeSize(xmlValidCtxtPtr,8, 14937, 11)
 #elif __ia64__
 CheckTypeSize(xmlValidCtxtPtr,8, 14937, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlValidCtxtPtr,4, 14937, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlValidCtxtPtr,8, 14937, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlValidCtxtPtr,4, 14937, 10)
+#elif __s390x__
+CheckTypeSize(xmlValidCtxtPtr,8, 14937, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14937,0);
 Msg("Find size of xmlValidCtxtPtr (14937)\n");
@@ -58,6 +74,14 @@ CheckTypeSize(xmlAttributeTable,0, 14938, 2)
 CheckTypeSize(xmlAttributeTable,0, 14938, 11)
 #elif __ia64__
 CheckTypeSize(xmlAttributeTable,0, 14938, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAttributeTable,0, 14938, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAttributeTable,0, 14938, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAttributeTable,0, 14938, 10)
+#elif __s390x__
+CheckTypeSize(xmlAttributeTable,0, 14938, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14938,0);
 Msg("Find size of xmlAttributeTable (14938)\n");
@@ -69,6 +93,14 @@ CheckTypeSize(xmlAttributeTable *,4, 14939, 2)
 CheckTypeSize(xmlAttributeTable *,8, 14939, 11)
 #elif __ia64__
 CheckTypeSize(xmlAttributeTable *,8, 14939, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAttributeTable *,4, 14939, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAttributeTable *,8, 14939, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAttributeTable *,4, 14939, 10)
+#elif __s390x__
+CheckTypeSize(xmlAttributeTable *,8, 14939, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14939,0);
 Msg("Find size of xmlAttributeTable * (14939)\n");
@@ -80,6 +112,14 @@ CheckTypeSize(xmlAttributeTablePtr,4, 14940, 2)
 CheckTypeSize(xmlAttributeTablePtr,8, 14940, 11)
 #elif __ia64__
 CheckTypeSize(xmlAttributeTablePtr,8, 14940, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAttributeTablePtr,4, 14940, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAttributeTablePtr,8, 14940, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAttributeTablePtr,4, 14940, 10)
+#elif __s390x__
+CheckTypeSize(xmlAttributeTablePtr,8, 14940, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14940,0);
 Msg("Find size of xmlAttributeTablePtr (14940)\n");
@@ -169,6 +209,118 @@ CheckMemberSize(struct _xmlElement,prefix,8,3,49156)
 CheckOffset(struct _xmlElement,prefix,96,3,49156)
 CheckMemberSize(struct _xmlElement,contModel,8,3,49157)
 CheckOffset(struct _xmlElement,contModel,104,3,49157)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlElement,56, 14941, 6)
+CheckMemberSize(struct _xmlElement,type,4,6,49120)
+CheckOffset(struct _xmlElement,type,4,6,49120)
+CheckMemberSize(struct _xmlElement,name,4,6,49121)
+CheckOffset(struct _xmlElement,name,8,6,49121)
+CheckMemberSize(struct _xmlElement,children,4,6,49122)
+CheckOffset(struct _xmlElement,children,12,6,49122)
+CheckMemberSize(struct _xmlElement,last,4,6,49123)
+CheckOffset(struct _xmlElement,last,16,6,49123)
+CheckMemberSize(struct _xmlElement,parent,4,6,49124)
+CheckOffset(struct _xmlElement,parent,20,6,49124)
+CheckMemberSize(struct _xmlElement,next,4,6,49125)
+CheckOffset(struct _xmlElement,next,24,6,49125)
+CheckMemberSize(struct _xmlElement,prev,4,6,49126)
+CheckOffset(struct _xmlElement,prev,28,6,49126)
+CheckMemberSize(struct _xmlElement,doc,4,6,49127)
+CheckOffset(struct _xmlElement,doc,32,6,49127)
+CheckMemberSize(struct _xmlElement,etype,4,6,49133)
+CheckOffset(struct _xmlElement,etype,36,6,49133)
+CheckMemberSize(struct _xmlElement,content,4,6,49134)
+CheckOffset(struct _xmlElement,content,40,6,49134)
+CheckMemberSize(struct _xmlElement,attributes,4,6,49155)
+CheckOffset(struct _xmlElement,attributes,44,6,49155)
+CheckMemberSize(struct _xmlElement,prefix,4,6,49156)
+CheckOffset(struct _xmlElement,prefix,48,6,49156)
+CheckMemberSize(struct _xmlElement,contModel,4,6,49157)
+CheckOffset(struct _xmlElement,contModel,52,6,49157)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlElement,112, 14941, 9)
+CheckMemberSize(struct _xmlElement,type,4,9,49120)
+CheckOffset(struct _xmlElement,type,8,9,49120)
+CheckMemberSize(struct _xmlElement,name,8,9,49121)
+CheckOffset(struct _xmlElement,name,16,9,49121)
+CheckMemberSize(struct _xmlElement,children,8,9,49122)
+CheckOffset(struct _xmlElement,children,24,9,49122)
+CheckMemberSize(struct _xmlElement,last,8,9,49123)
+CheckOffset(struct _xmlElement,last,32,9,49123)
+CheckMemberSize(struct _xmlElement,parent,8,9,49124)
+CheckOffset(struct _xmlElement,parent,40,9,49124)
+CheckMemberSize(struct _xmlElement,next,8,9,49125)
+CheckOffset(struct _xmlElement,next,48,9,49125)
+CheckMemberSize(struct _xmlElement,prev,8,9,49126)
+CheckOffset(struct _xmlElement,prev,56,9,49126)
+CheckMemberSize(struct _xmlElement,doc,8,9,49127)
+CheckOffset(struct _xmlElement,doc,64,9,49127)
+CheckMemberSize(struct _xmlElement,etype,4,9,49133)
+CheckOffset(struct _xmlElement,etype,72,9,49133)
+CheckMemberSize(struct _xmlElement,content,8,9,49134)
+CheckOffset(struct _xmlElement,content,80,9,49134)
+CheckMemberSize(struct _xmlElement,attributes,8,9,49155)
+CheckOffset(struct _xmlElement,attributes,88,9,49155)
+CheckMemberSize(struct _xmlElement,prefix,8,9,49156)
+CheckOffset(struct _xmlElement,prefix,96,9,49156)
+CheckMemberSize(struct _xmlElement,contModel,8,9,49157)
+CheckOffset(struct _xmlElement,contModel,104,9,49157)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlElement,56, 14941, 10)
+CheckMemberSize(struct _xmlElement,type,4,10,49120)
+CheckOffset(struct _xmlElement,type,4,10,49120)
+CheckMemberSize(struct _xmlElement,name,4,10,49121)
+CheckOffset(struct _xmlElement,name,8,10,49121)
+CheckMemberSize(struct _xmlElement,children,4,10,49122)
+CheckOffset(struct _xmlElement,children,12,10,49122)
+CheckMemberSize(struct _xmlElement,last,4,10,49123)
+CheckOffset(struct _xmlElement,last,16,10,49123)
+CheckMemberSize(struct _xmlElement,parent,4,10,49124)
+CheckOffset(struct _xmlElement,parent,20,10,49124)
+CheckMemberSize(struct _xmlElement,next,4,10,49125)
+CheckOffset(struct _xmlElement,next,24,10,49125)
+CheckMemberSize(struct _xmlElement,prev,4,10,49126)
+CheckOffset(struct _xmlElement,prev,28,10,49126)
+CheckMemberSize(struct _xmlElement,doc,4,10,49127)
+CheckOffset(struct _xmlElement,doc,32,10,49127)
+CheckMemberSize(struct _xmlElement,etype,4,10,49133)
+CheckOffset(struct _xmlElement,etype,36,10,49133)
+CheckMemberSize(struct _xmlElement,content,4,10,49134)
+CheckOffset(struct _xmlElement,content,40,10,49134)
+CheckMemberSize(struct _xmlElement,attributes,4,10,49155)
+CheckOffset(struct _xmlElement,attributes,44,10,49155)
+CheckMemberSize(struct _xmlElement,prefix,4,10,49156)
+CheckOffset(struct _xmlElement,prefix,48,10,49156)
+CheckMemberSize(struct _xmlElement,contModel,4,10,49157)
+CheckOffset(struct _xmlElement,contModel,52,10,49157)
+#elif __s390x__
+CheckTypeSize(struct _xmlElement,112, 14941, 12)
+CheckMemberSize(struct _xmlElement,type,4,12,49120)
+CheckOffset(struct _xmlElement,type,8,12,49120)
+CheckMemberSize(struct _xmlElement,name,8,12,49121)
+CheckOffset(struct _xmlElement,name,16,12,49121)
+CheckMemberSize(struct _xmlElement,children,8,12,49122)
+CheckOffset(struct _xmlElement,children,24,12,49122)
+CheckMemberSize(struct _xmlElement,last,8,12,49123)
+CheckOffset(struct _xmlElement,last,32,12,49123)
+CheckMemberSize(struct _xmlElement,parent,8,12,49124)
+CheckOffset(struct _xmlElement,parent,40,12,49124)
+CheckMemberSize(struct _xmlElement,next,8,12,49125)
+CheckOffset(struct _xmlElement,next,48,12,49125)
+CheckMemberSize(struct _xmlElement,prev,8,12,49126)
+CheckOffset(struct _xmlElement,prev,56,12,49126)
+CheckMemberSize(struct _xmlElement,doc,8,12,49127)
+CheckOffset(struct _xmlElement,doc,64,12,49127)
+CheckMemberSize(struct _xmlElement,etype,4,12,49133)
+CheckOffset(struct _xmlElement,etype,72,12,49133)
+CheckMemberSize(struct _xmlElement,content,8,12,49134)
+CheckOffset(struct _xmlElement,content,80,12,49134)
+CheckMemberSize(struct _xmlElement,attributes,8,12,49155)
+CheckOffset(struct _xmlElement,attributes,88,12,49155)
+CheckMemberSize(struct _xmlElement,prefix,8,12,49156)
+CheckOffset(struct _xmlElement,prefix,96,12,49156)
+CheckMemberSize(struct _xmlElement,contModel,8,12,49157)
+CheckOffset(struct _xmlElement,contModel,104,12,49157)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14941,0);
 Msg("Find size of _xmlElement (14941)\n");
@@ -192,6 +344,30 @@ CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
 CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
 CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
 CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
+CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
+CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
+CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
+CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
+#elif __powerpc64__
+CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
+CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
+CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
+CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
+CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
+#elif __s390__ && !__s390x__
+CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
+CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
+CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
+CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
+CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
+#elif __s390x__
+CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
+CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
+CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
+CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
+CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14942,0);
 Msg("Find size of anon-libxml2/libxml/valid.h-81 (14942)\n");
@@ -203,6 +379,14 @@ CheckTypeSize(xmlElementTypeVal,4, 14943, 2)
 CheckTypeSize(xmlElementTypeVal,4, 14943, 11)
 #elif __ia64__
 CheckTypeSize(xmlElementTypeVal,4, 14943, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 10)
+#elif __s390x__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14943,0);
 Msg("Find size of xmlElementTypeVal (14943)\n");
@@ -304,6 +488,134 @@ CheckMemberSize(struct _xmlAttribute,prefix,8,3,49153)
 CheckOffset(struct _xmlAttribute,prefix,104,3,49153)
 CheckMemberSize(struct _xmlAttribute,elem,8,3,49154)
 CheckOffset(struct _xmlAttribute,elem,112,3,49154)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlAttribute,64, 14944, 6)
+CheckMemberSize(struct _xmlAttribute,type,4,6,49136)
+CheckOffset(struct _xmlAttribute,type,4,6,49136)
+CheckMemberSize(struct _xmlAttribute,name,4,6,49137)
+CheckOffset(struct _xmlAttribute,name,8,6,49137)
+CheckMemberSize(struct _xmlAttribute,children,4,6,49138)
+CheckOffset(struct _xmlAttribute,children,12,6,49138)
+CheckMemberSize(struct _xmlAttribute,last,4,6,49139)
+CheckOffset(struct _xmlAttribute,last,16,6,49139)
+CheckMemberSize(struct _xmlAttribute,parent,4,6,49140)
+CheckOffset(struct _xmlAttribute,parent,20,6,49140)
+CheckMemberSize(struct _xmlAttribute,next,4,6,49141)
+CheckOffset(struct _xmlAttribute,next,24,6,49141)
+CheckMemberSize(struct _xmlAttribute,prev,4,6,49142)
+CheckOffset(struct _xmlAttribute,prev,28,6,49142)
+CheckMemberSize(struct _xmlAttribute,doc,4,6,49143)
+CheckOffset(struct _xmlAttribute,doc,32,6,49143)
+CheckMemberSize(struct _xmlAttribute,nexth,4,6,49144)
+CheckOffset(struct _xmlAttribute,nexth,36,6,49144)
+CheckMemberSize(struct _xmlAttribute,atype,4,6,49145)
+CheckOffset(struct _xmlAttribute,atype,40,6,49145)
+CheckMemberSize(struct _xmlAttribute,def,4,6,49150)
+CheckOffset(struct _xmlAttribute,def,44,6,49150)
+CheckMemberSize(struct _xmlAttribute,defaultValue,4,6,49151)
+CheckOffset(struct _xmlAttribute,defaultValue,48,6,49151)
+CheckMemberSize(struct _xmlAttribute,tree,4,6,49152)
+CheckOffset(struct _xmlAttribute,tree,52,6,49152)
+CheckMemberSize(struct _xmlAttribute,prefix,4,6,49153)
+CheckOffset(struct _xmlAttribute,prefix,56,6,49153)
+CheckMemberSize(struct _xmlAttribute,elem,4,6,49154)
+CheckOffset(struct _xmlAttribute,elem,60,6,49154)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlAttribute,120, 14944, 9)
+CheckMemberSize(struct _xmlAttribute,type,4,9,49136)
+CheckOffset(struct _xmlAttribute,type,8,9,49136)
+CheckMemberSize(struct _xmlAttribute,name,8,9,49137)
+CheckOffset(struct _xmlAttribute,name,16,9,49137)
+CheckMemberSize(struct _xmlAttribute,children,8,9,49138)
+CheckOffset(struct _xmlAttribute,children,24,9,49138)
+CheckMemberSize(struct _xmlAttribute,last,8,9,49139)
+CheckOffset(struct _xmlAttribute,last,32,9,49139)
+CheckMemberSize(struct _xmlAttribute,parent,8,9,49140)
+CheckOffset(struct _xmlAttribute,parent,40,9,49140)
+CheckMemberSize(struct _xmlAttribute,next,8,9,49141)
+CheckOffset(struct _xmlAttribute,next,48,9,49141)
+CheckMemberSize(struct _xmlAttribute,prev,8,9,49142)
+CheckOffset(struct _xmlAttribute,prev,56,9,49142)
+CheckMemberSize(struct _xmlAttribute,doc,8,9,49143)
+CheckOffset(struct _xmlAttribute,doc,64,9,49143)
+CheckMemberSize(struct _xmlAttribute,nexth,8,9,49144)
+CheckOffset(struct _xmlAttribute,nexth,72,9,49144)
+CheckMemberSize(struct _xmlAttribute,atype,4,9,49145)
+CheckOffset(struct _xmlAttribute,atype,80,9,49145)
+CheckMemberSize(struct _xmlAttribute,def,4,9,49150)
+CheckOffset(struct _xmlAttribute,def,84,9,49150)
+CheckMemberSize(struct _xmlAttribute,defaultValue,8,9,49151)
+CheckOffset(struct _xmlAttribute,defaultValue,88,9,49151)
+CheckMemberSize(struct _xmlAttribute,tree,8,9,49152)
+CheckOffset(struct _xmlAttribute,tree,96,9,49152)
+CheckMemberSize(struct _xmlAttribute,prefix,8,9,49153)
+CheckOffset(struct _xmlAttribute,prefix,104,9,49153)
+CheckMemberSize(struct _xmlAttribute,elem,8,9,49154)
+CheckOffset(struct _xmlAttribute,elem,112,9,49154)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlAttribute,64, 14944, 10)
+CheckMemberSize(struct _xmlAttribute,type,4,10,49136)
+CheckOffset(struct _xmlAttribute,type,4,10,49136)
+CheckMemberSize(struct _xmlAttribute,name,4,10,49137)
+CheckOffset(struct _xmlAttribute,name,8,10,49137)
+CheckMemberSize(struct _xmlAttribute,children,4,10,49138)
+CheckOffset(struct _xmlAttribute,children,12,10,49138)
+CheckMemberSize(struct _xmlAttribute,last,4,10,49139)
+CheckOffset(struct _xmlAttribute,last,16,10,49139)
+CheckMemberSize(struct _xmlAttribute,parent,4,10,49140)
+CheckOffset(struct _xmlAttribute,parent,20,10,49140)
+CheckMemberSize(struct _xmlAttribute,next,4,10,49141)
+CheckOffset(struct _xmlAttribute,next,24,10,49141)
+CheckMemberSize(struct _xmlAttribute,prev,4,10,49142)
+CheckOffset(struct _xmlAttribute,prev,28,10,49142)
+CheckMemberSize(struct _xmlAttribute,doc,4,10,49143)
+CheckOffset(struct _xmlAttribute,doc,32,10,49143)
+CheckMemberSize(struct _xmlAttribute,nexth,4,10,49144)
+CheckOffset(struct _xmlAttribute,nexth,36,10,49144)
+CheckMemberSize(struct _xmlAttribute,atype,4,10,49145)
+CheckOffset(struct _xmlAttribute,atype,40,10,49145)
+CheckMemberSize(struct _xmlAttribute,def,4,10,49150)
+CheckOffset(struct _xmlAttribute,def,44,10,49150)
+CheckMemberSize(struct _xmlAttribute,defaultValue,4,10,49151)
+CheckOffset(struct _xmlAttribute,defaultValue,48,10,49151)
+CheckMemberSize(struct _xmlAttribute,tree,4,10,49152)
+CheckOffset(struct _xmlAttribute,tree,52,10,49152)
+CheckMemberSize(struct _xmlAttribute,prefix,4,10,49153)
+CheckOffset(struct _xmlAttribute,prefix,56,10,49153)
+CheckMemberSize(struct _xmlAttribute,elem,4,10,49154)
+CheckOffset(struct _xmlAttribute,elem,60,10,49154)
+#elif __s390x__
+CheckTypeSize(struct _xmlAttribute,120, 14944, 12)
+CheckMemberSize(struct _xmlAttribute,type,4,12,49136)
+CheckOffset(struct _xmlAttribute,type,8,12,49136)
+CheckMemberSize(struct _xmlAttribute,name,8,12,49137)
+CheckOffset(struct _xmlAttribute,name,16,12,49137)
+CheckMemberSize(struct _xmlAttribute,children,8,12,49138)
+CheckOffset(struct _xmlAttribute,children,24,12,49138)
+CheckMemberSize(struct _xmlAttribute,last,8,12,49139)
+CheckOffset(struct _xmlAttribute,last,32,12,49139)
+CheckMemberSize(struct _xmlAttribute,parent,8,12,49140)
+CheckOffset(struct _xmlAttribute,parent,40,12,49140)
+CheckMemberSize(struct _xmlAttribute,next,8,12,49141)
+CheckOffset(struct _xmlAttribute,next,48,12,49141)
+CheckMemberSize(struct _xmlAttribute,prev,8,12,49142)
+CheckOffset(struct _xmlAttribute,prev,56,12,49142)
+CheckMemberSize(struct _xmlAttribute,doc,8,12,49143)
+CheckOffset(struct _xmlAttribute,doc,64,12,49143)
+CheckMemberSize(struct _xmlAttribute,nexth,8,12,49144)
+CheckOffset(struct _xmlAttribute,nexth,72,12,49144)
+CheckMemberSize(struct _xmlAttribute,atype,4,12,49145)
+CheckOffset(struct _xmlAttribute,atype,80,12,49145)
+CheckMemberSize(struct _xmlAttribute,def,4,12,49150)
+CheckOffset(struct _xmlAttribute,def,84,12,49150)
+CheckMemberSize(struct _xmlAttribute,defaultValue,8,12,49151)
+CheckOffset(struct _xmlAttribute,defaultValue,88,12,49151)
+CheckMemberSize(struct _xmlAttribute,tree,8,12,49152)
+CheckOffset(struct _xmlAttribute,tree,96,12,49152)
+CheckMemberSize(struct _xmlAttribute,prefix,8,12,49153)
+CheckOffset(struct _xmlAttribute,prefix,104,12,49153)
+CheckMemberSize(struct _xmlAttribute,elem,8,12,49154)
+CheckOffset(struct _xmlAttribute,elem,112,12,49154)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14944,0);
 Msg("Find size of _xmlAttribute (14944)\n");
@@ -315,6 +627,14 @@ CheckTypeSize(struct _xmlAttribute *,4, 14945, 2)
 CheckTypeSize(struct _xmlAttribute *,8, 14945, 11)
 #elif __ia64__
 CheckTypeSize(struct _xmlAttribute *,8, 14945, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlAttribute *,4, 14945, 6)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlAttribute *,8, 14945, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlAttribute *,4, 14945, 10)
+#elif __s390x__
+CheckTypeSize(struct _xmlAttribute *,8, 14945, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14945,0);
 Msg("Find size of _xmlAttribute * (14945)\n");
@@ -335,6 +655,26 @@ CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
 CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
 CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
 CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
+CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
+CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
+CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
+#elif __powerpc64__
+CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
+CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
+CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
+CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
+#elif __s390__ && !__s390x__
+CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
+CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
+CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
+CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
+#elif __s390x__
+CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
+CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
+CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
+CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14946,0);
 Msg("Find size of anon-libxml2/libxml/valid.h-78 (14946)\n");
@@ -346,6 +686,14 @@ CheckTypeSize(xmlAttributeDefault,4, 14947, 2)
 CheckTypeSize(xmlAttributeDefault,4, 14947, 11)
 #elif __ia64__
 CheckTypeSize(xmlAttributeDefault,4, 14947, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 10)
+#elif __s390x__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14947,0);
 Msg("Find size of xmlAttributeDefault (14947)\n");
@@ -357,6 +705,14 @@ CheckTypeSize(xmlAttribute,64, 14948, 2)
 CheckTypeSize(xmlAttribute,120, 14948, 11)
 #elif __ia64__
 CheckTypeSize(xmlAttribute,120, 14948, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAttribute,64, 14948, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAttribute,120, 14948, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAttribute,64, 14948, 10)
+#elif __s390x__
+CheckTypeSize(xmlAttribute,120, 14948, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14948,0);
 Msg("Find size of xmlAttribute (14948)\n");
@@ -368,6 +724,14 @@ CheckTypeSize(xmlAttribute *,4, 14949, 2)
 CheckTypeSize(xmlAttribute *,8, 14949, 11)
 #elif __ia64__
 CheckTypeSize(xmlAttribute *,8, 14949, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAttribute *,4, 14949, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAttribute *,8, 14949, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAttribute *,4, 14949, 10)
+#elif __s390x__
+CheckTypeSize(xmlAttribute *,8, 14949, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14949,0);
 Msg("Find size of xmlAttribute * (14949)\n");
@@ -379,6 +743,14 @@ CheckTypeSize(xmlAttributePtr,4, 14950, 2)
 CheckTypeSize(xmlAttributePtr,8, 14950, 11)
 #elif __ia64__
 CheckTypeSize(xmlAttributePtr,8, 14950, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAttributePtr,4, 14950, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAttributePtr,8, 14950, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAttributePtr,4, 14950, 10)
+#elif __s390x__
+CheckTypeSize(xmlAttributePtr,8, 14950, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14950,0);
 Msg("Find size of xmlAttributePtr (14950)\n");
@@ -390,6 +762,14 @@ CheckTypeSize(xmlElement,56, 14951, 2)
 CheckTypeSize(xmlElement,112, 14951, 11)
 #elif __ia64__
 CheckTypeSize(xmlElement,112, 14951, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlElement,56, 14951, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlElement,112, 14951, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlElement,56, 14951, 10)
+#elif __s390x__
+CheckTypeSize(xmlElement,112, 14951, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14951,0);
 Msg("Find size of xmlElement (14951)\n");
@@ -401,6 +781,14 @@ CheckTypeSize(xmlElement *,4, 14952, 2)
 CheckTypeSize(xmlElement *,8, 14952, 11)
 #elif __ia64__
 CheckTypeSize(xmlElement *,8, 14952, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlElement *,4, 14952, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlElement *,8, 14952, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlElement *,4, 14952, 10)
+#elif __s390x__
+CheckTypeSize(xmlElement *,8, 14952, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14952,0);
 Msg("Find size of xmlElement * (14952)\n");
@@ -412,6 +800,14 @@ CheckTypeSize(xmlElementPtr,4, 14953, 2)
 CheckTypeSize(xmlElementPtr,8, 14953, 11)
 #elif __ia64__
 CheckTypeSize(xmlElementPtr,8, 14953, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlElementPtr,4, 14953, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlElementPtr,8, 14953, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlElementPtr,4, 14953, 10)
+#elif __s390x__
+CheckTypeSize(xmlElementPtr,8, 14953, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14953,0);
 Msg("Find size of xmlElementPtr (14953)\n");
@@ -423,6 +819,14 @@ CheckTypeSize(xmlNotationTable,0, 14954, 2)
 CheckTypeSize(xmlNotationTable,0, 14954, 11)
 #elif __ia64__
 CheckTypeSize(xmlNotationTable,0, 14954, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlNotationTable,0, 14954, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlNotationTable,0, 14954, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlNotationTable,0, 14954, 10)
+#elif __s390x__
+CheckTypeSize(xmlNotationTable,0, 14954, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14954,0);
 Msg("Find size of xmlNotationTable (14954)\n");
@@ -434,6 +838,14 @@ CheckTypeSize(xmlNotationTable *,4, 14955, 2)
 CheckTypeSize(xmlNotationTable *,8, 14955, 11)
 #elif __ia64__
 CheckTypeSize(xmlNotationTable *,8, 14955, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlNotationTable *,4, 14955, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlNotationTable *,8, 14955, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlNotationTable *,4, 14955, 10)
+#elif __s390x__
+CheckTypeSize(xmlNotationTable *,8, 14955, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14955,0);
 Msg("Find size of xmlNotationTable * (14955)\n");
@@ -445,6 +857,14 @@ CheckTypeSize(xmlNotationTablePtr,4, 14956, 2)
 CheckTypeSize(xmlNotationTablePtr,8, 14956, 11)
 #elif __ia64__
 CheckTypeSize(xmlNotationTablePtr,8, 14956, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlNotationTablePtr,4, 14956, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlNotationTablePtr,8, 14956, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlNotationTablePtr,4, 14956, 10)
+#elif __s390x__
+CheckTypeSize(xmlNotationTablePtr,8, 14956, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14956,0);
 Msg("Find size of xmlNotationTablePtr (14956)\n");
@@ -468,6 +888,30 @@ CheckMemberSize(struct _xmlNotation,PublicID,8,3,49159)
 CheckOffset(struct _xmlNotation,PublicID,8,3,49159)
 CheckMemberSize(struct _xmlNotation,SystemID,8,3,49160)
 CheckOffset(struct _xmlNotation,SystemID,16,3,49160)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlNotation,12, 14957, 6)
+CheckMemberSize(struct _xmlNotation,PublicID,4,6,49159)
+CheckOffset(struct _xmlNotation,PublicID,4,6,49159)
+CheckMemberSize(struct _xmlNotation,SystemID,4,6,49160)
+CheckOffset(struct _xmlNotation,SystemID,8,6,49160)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlNotation,24, 14957, 9)
+CheckMemberSize(struct _xmlNotation,PublicID,8,9,49159)
+CheckOffset(struct _xmlNotation,PublicID,8,9,49159)
+CheckMemberSize(struct _xmlNotation,SystemID,8,9,49160)
+CheckOffset(struct _xmlNotation,SystemID,16,9,49160)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlNotation,12, 14957, 10)
+CheckMemberSize(struct _xmlNotation,PublicID,4,10,49159)
+CheckOffset(struct _xmlNotation,PublicID,4,10,49159)
+CheckMemberSize(struct _xmlNotation,SystemID,4,10,49160)
+CheckOffset(struct _xmlNotation,SystemID,8,10,49160)
+#elif __s390x__
+CheckTypeSize(struct _xmlNotation,24, 14957, 12)
+CheckMemberSize(struct _xmlNotation,PublicID,8,12,49159)
+CheckOffset(struct _xmlNotation,PublicID,8,12,49159)
+CheckMemberSize(struct _xmlNotation,SystemID,8,12,49160)
+CheckOffset(struct _xmlNotation,SystemID,16,12,49160)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14957,0);
 Msg("Find size of _xmlNotation (14957)\n");
@@ -479,6 +923,14 @@ CheckTypeSize(xmlNotation,12, 14958, 2)
 CheckTypeSize(xmlNotation,24, 14958, 11)
 #elif __ia64__
 CheckTypeSize(xmlNotation,24, 14958, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlNotation,12, 14958, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlNotation,24, 14958, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlNotation,12, 14958, 10)
+#elif __s390x__
+CheckTypeSize(xmlNotation,24, 14958, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14958,0);
 Msg("Find size of xmlNotation (14958)\n");
@@ -490,6 +942,14 @@ CheckTypeSize(xmlNotation *,4, 14959, 2)
 CheckTypeSize(xmlNotation *,8, 14959, 11)
 #elif __ia64__
 CheckTypeSize(xmlNotation *,8, 14959, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlNotation *,4, 14959, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlNotation *,8, 14959, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlNotation *,4, 14959, 10)
+#elif __s390x__
+CheckTypeSize(xmlNotation *,8, 14959, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14959,0);
 Msg("Find size of xmlNotation * (14959)\n");
@@ -501,6 +961,14 @@ CheckTypeSize(xmlNotationPtr,4, 14960, 2)
 CheckTypeSize(xmlNotationPtr,8, 14960, 11)
 #elif __ia64__
 CheckTypeSize(xmlNotationPtr,8, 14960, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlNotationPtr,4, 14960, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlNotationPtr,8, 14960, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlNotationPtr,4, 14960, 10)
+#elif __s390x__
+CheckTypeSize(xmlNotationPtr,8, 14960, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14960,0);
 Msg("Find size of xmlNotationPtr (14960)\n");
@@ -542,6 +1010,54 @@ CheckMemberSize(struct _xmlID,lineno,4,3,49165)
 CheckOffset(struct _xmlID,lineno,32,3,49165)
 CheckMemberSize(struct _xmlID,doc,8,3,49166)
 CheckOffset(struct _xmlID,doc,40,3,49166)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlID,24, 14961, 6)
+CheckMemberSize(struct _xmlID,value,4,6,49162)
+CheckOffset(struct _xmlID,value,4,6,49162)
+CheckMemberSize(struct _xmlID,attr,4,6,49163)
+CheckOffset(struct _xmlID,attr,8,6,49163)
+CheckMemberSize(struct _xmlID,name,4,6,49164)
+CheckOffset(struct _xmlID,name,12,6,49164)
+CheckMemberSize(struct _xmlID,lineno,4,6,49165)
+CheckOffset(struct _xmlID,lineno,16,6,49165)
+CheckMemberSize(struct _xmlID,doc,4,6,49166)
+CheckOffset(struct _xmlID,doc,20,6,49166)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlID,48, 14961, 9)
+CheckMemberSize(struct _xmlID,value,8,9,49162)
+CheckOffset(struct _xmlID,value,8,9,49162)
+CheckMemberSize(struct _xmlID,attr,8,9,49163)
+CheckOffset(struct _xmlID,attr,16,9,49163)
+CheckMemberSize(struct _xmlID,name,8,9,49164)
+CheckOffset(struct _xmlID,name,24,9,49164)
+CheckMemberSize(struct _xmlID,lineno,4,9,49165)
+CheckOffset(struct _xmlID,lineno,32,9,49165)
+CheckMemberSize(struct _xmlID,doc,8,9,49166)
+CheckOffset(struct _xmlID,doc,40,9,49166)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlID,24, 14961, 10)
+CheckMemberSize(struct _xmlID,value,4,10,49162)
+CheckOffset(struct _xmlID,value,4,10,49162)
+CheckMemberSize(struct _xmlID,attr,4,10,49163)
+CheckOffset(struct _xmlID,attr,8,10,49163)
+CheckMemberSize(struct _xmlID,name,4,10,49164)
+CheckOffset(struct _xmlID,name,12,10,49164)
+CheckMemberSize(struct _xmlID,lineno,4,10,49165)
+CheckOffset(struct _xmlID,lineno,16,10,49165)
+CheckMemberSize(struct _xmlID,doc,4,10,49166)
+CheckOffset(struct _xmlID,doc,20,10,49166)
+#elif __s390x__
+CheckTypeSize(struct _xmlID,48, 14961, 12)
+CheckMemberSize(struct _xmlID,value,8,12,49162)
+CheckOffset(struct _xmlID,value,8,12,49162)
+CheckMemberSize(struct _xmlID,attr,8,12,49163)
+CheckOffset(struct _xmlID,attr,16,12,49163)
+CheckMemberSize(struct _xmlID,name,8,12,49164)
+CheckOffset(struct _xmlID,name,24,12,49164)
+CheckMemberSize(struct _xmlID,lineno,4,12,49165)
+CheckOffset(struct _xmlID,lineno,32,12,49165)
+CheckMemberSize(struct _xmlID,doc,8,12,49166)
+CheckOffset(struct _xmlID,doc,40,12,49166)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14961,0);
 Msg("Find size of _xmlID (14961)\n");
@@ -553,6 +1069,14 @@ CheckTypeSize(struct _xmlID *,4, 14962, 2)
 CheckTypeSize(struct _xmlID *,8, 14962, 11)
 #elif __ia64__
 CheckTypeSize(struct _xmlID *,8, 14962, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlID *,4, 14962, 6)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlID *,8, 14962, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlID *,4, 14962, 10)
+#elif __s390x__
+CheckTypeSize(struct _xmlID *,8, 14962, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14962,0);
 Msg("Find size of _xmlID * (14962)\n");
@@ -564,6 +1088,14 @@ CheckTypeSize(xmlID,24, 14963, 2)
 CheckTypeSize(xmlID,48, 14963, 11)
 #elif __ia64__
 CheckTypeSize(xmlID,48, 14963, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlID,24, 14963, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlID,48, 14963, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlID,24, 14963, 10)
+#elif __s390x__
+CheckTypeSize(xmlID,48, 14963, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14963,0);
 Msg("Find size of xmlID (14963)\n");
@@ -575,6 +1107,14 @@ CheckTypeSize(xmlID *,4, 14964, 2)
 CheckTypeSize(xmlID *,8, 14964, 11)
 #elif __ia64__
 CheckTypeSize(xmlID *,8, 14964, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlID *,4, 14964, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlID *,8, 14964, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlID *,4, 14964, 10)
+#elif __s390x__
+CheckTypeSize(xmlID *,8, 14964, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14964,0);
 Msg("Find size of xmlID * (14964)\n");
@@ -586,6 +1126,14 @@ CheckTypeSize(xmlIDPtr,4, 14965, 2)
 CheckTypeSize(xmlIDPtr,8, 14965, 11)
 #elif __ia64__
 CheckTypeSize(xmlIDPtr,8, 14965, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlIDPtr,4, 14965, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlIDPtr,8, 14965, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlIDPtr,4, 14965, 10)
+#elif __s390x__
+CheckTypeSize(xmlIDPtr,8, 14965, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14965,0);
 Msg("Find size of xmlIDPtr (14965)\n");
@@ -621,6 +1169,46 @@ CheckMemberSize(struct _xmlRef,name,8,3,49170)
 CheckOffset(struct _xmlRef,name,24,3,49170)
 CheckMemberSize(struct _xmlRef,lineno,4,3,49171)
 CheckOffset(struct _xmlRef,lineno,32,3,49171)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlRef,20, 14966, 6)
+CheckMemberSize(struct _xmlRef,value,4,6,49168)
+CheckOffset(struct _xmlRef,value,4,6,49168)
+CheckMemberSize(struct _xmlRef,attr,4,6,49169)
+CheckOffset(struct _xmlRef,attr,8,6,49169)
+CheckMemberSize(struct _xmlRef,name,4,6,49170)
+CheckOffset(struct _xmlRef,name,12,6,49170)
+CheckMemberSize(struct _xmlRef,lineno,4,6,49171)
+CheckOffset(struct _xmlRef,lineno,16,6,49171)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlRef,40, 14966, 9)
+CheckMemberSize(struct _xmlRef,value,8,9,49168)
+CheckOffset(struct _xmlRef,value,8,9,49168)
+CheckMemberSize(struct _xmlRef,attr,8,9,49169)
+CheckOffset(struct _xmlRef,attr,16,9,49169)
+CheckMemberSize(struct _xmlRef,name,8,9,49170)
+CheckOffset(struct _xmlRef,name,24,9,49170)
+CheckMemberSize(struct _xmlRef,lineno,4,9,49171)
+CheckOffset(struct _xmlRef,lineno,32,9,49171)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlRef,20, 14966, 10)
+CheckMemberSize(struct _xmlRef,value,4,10,49168)
+CheckOffset(struct _xmlRef,value,4,10,49168)
+CheckMemberSize(struct _xmlRef,attr,4,10,49169)
+CheckOffset(struct _xmlRef,attr,8,10,49169)
+CheckMemberSize(struct _xmlRef,name,4,10,49170)
+CheckOffset(struct _xmlRef,name,12,10,49170)
+CheckMemberSize(struct _xmlRef,lineno,4,10,49171)
+CheckOffset(struct _xmlRef,lineno,16,10,49171)
+#elif __s390x__
+CheckTypeSize(struct _xmlRef,40, 14966, 12)
+CheckMemberSize(struct _xmlRef,value,8,12,49168)
+CheckOffset(struct _xmlRef,value,8,12,49168)
+CheckMemberSize(struct _xmlRef,attr,8,12,49169)
+CheckOffset(struct _xmlRef,attr,16,12,49169)
+CheckMemberSize(struct _xmlRef,name,8,12,49170)
+CheckOffset(struct _xmlRef,name,24,12,49170)
+CheckMemberSize(struct _xmlRef,lineno,4,12,49171)
+CheckOffset(struct _xmlRef,lineno,32,12,49171)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14966,0);
 Msg("Find size of _xmlRef (14966)\n");
@@ -632,6 +1220,14 @@ CheckTypeSize(struct _xmlRef *,4, 14967, 2)
 CheckTypeSize(struct _xmlRef *,8, 14967, 11)
 #elif __ia64__
 CheckTypeSize(struct _xmlRef *,8, 14967, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlRef *,4, 14967, 6)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlRef *,8, 14967, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlRef *,4, 14967, 10)
+#elif __s390x__
+CheckTypeSize(struct _xmlRef *,8, 14967, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14967,0);
 Msg("Find size of _xmlRef * (14967)\n");
@@ -643,6 +1239,14 @@ CheckTypeSize(xmlRef,20, 14968, 2)
 CheckTypeSize(xmlRef,40, 14968, 11)
 #elif __ia64__
 CheckTypeSize(xmlRef,40, 14968, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRef,20, 14968, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRef,40, 14968, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRef,20, 14968, 10)
+#elif __s390x__
+CheckTypeSize(xmlRef,40, 14968, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14968,0);
 Msg("Find size of xmlRef (14968)\n");
@@ -654,6 +1258,14 @@ CheckTypeSize(xmlRef *,4, 14969, 2)
 CheckTypeSize(xmlRef *,8, 14969, 11)
 #elif __ia64__
 CheckTypeSize(xmlRef *,8, 14969, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRef *,4, 14969, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRef *,8, 14969, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRef *,4, 14969, 10)
+#elif __s390x__
+CheckTypeSize(xmlRef *,8, 14969, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14969,0);
 Msg("Find size of xmlRef * (14969)\n");
@@ -665,6 +1277,14 @@ CheckTypeSize(xmlRefPtr,4, 14970, 2)
 CheckTypeSize(xmlRefPtr,8, 14970, 11)
 #elif __ia64__
 CheckTypeSize(xmlRefPtr,8, 14970, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRefPtr,4, 14970, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRefPtr,8, 14970, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRefPtr,4, 14970, 10)
+#elif __s390x__
+CheckTypeSize(xmlRefPtr,8, 14970, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14970,0);
 Msg("Find size of xmlRefPtr (14970)\n");
@@ -676,6 +1296,14 @@ CheckTypeSize(xmlElementTable,0, 14971, 2)
 CheckTypeSize(xmlElementTable,0, 14971, 11)
 #elif __ia64__
 CheckTypeSize(xmlElementTable,0, 14971, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlElementTable,0, 14971, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlElementTable,0, 14971, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlElementTable,0, 14971, 10)
+#elif __s390x__
+CheckTypeSize(xmlElementTable,0, 14971, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14971,0);
 Msg("Find size of xmlElementTable (14971)\n");
@@ -687,6 +1315,14 @@ CheckTypeSize(xmlElementTable *,4, 14972, 2)
 CheckTypeSize(xmlElementTable *,8, 14972, 11)
 #elif __ia64__
 CheckTypeSize(xmlElementTable *,8, 14972, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlElementTable *,4, 14972, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlElementTable *,8, 14972, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlElementTable *,4, 14972, 10)
+#elif __s390x__
+CheckTypeSize(xmlElementTable *,8, 14972, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14972,0);
 Msg("Find size of xmlElementTable * (14972)\n");
@@ -698,6 +1334,14 @@ CheckTypeSize(xmlElementTablePtr,4, 14973, 2)
 CheckTypeSize(xmlElementTablePtr,8, 14973, 11)
 #elif __ia64__
 CheckTypeSize(xmlElementTablePtr,8, 14973, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlElementTablePtr,4, 14973, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlElementTablePtr,8, 14973, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlElementTablePtr,4, 14973, 10)
+#elif __s390x__
+CheckTypeSize(xmlElementTablePtr,8, 14973, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14973,0);
 Msg("Find size of xmlElementTablePtr (14973)\n");
@@ -709,6 +1353,14 @@ CheckTypeSize(xmlIDTable,0, 14974, 2)
 CheckTypeSize(xmlIDTable,0, 14974, 11)
 #elif __ia64__
 CheckTypeSize(xmlIDTable,0, 14974, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlIDTable,0, 14974, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlIDTable,0, 14974, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlIDTable,0, 14974, 10)
+#elif __s390x__
+CheckTypeSize(xmlIDTable,0, 14974, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14974,0);
 Msg("Find size of xmlIDTable (14974)\n");
@@ -720,6 +1372,14 @@ CheckTypeSize(xmlIDTable *,4, 14975, 2)
 CheckTypeSize(xmlIDTable *,8, 14975, 11)
 #elif __ia64__
 CheckTypeSize(xmlIDTable *,8, 14975, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlIDTable *,4, 14975, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlIDTable *,8, 14975, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlIDTable *,4, 14975, 10)
+#elif __s390x__
+CheckTypeSize(xmlIDTable *,8, 14975, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14975,0);
 Msg("Find size of xmlIDTable * (14975)\n");
@@ -731,6 +1391,14 @@ CheckTypeSize(xmlIDTablePtr,4, 14976, 2)
 CheckTypeSize(xmlIDTablePtr,8, 14976, 11)
 #elif __ia64__
 CheckTypeSize(xmlIDTablePtr,8, 14976, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlIDTablePtr,4, 14976, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlIDTablePtr,8, 14976, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlIDTablePtr,4, 14976, 10)
+#elif __s390x__
+CheckTypeSize(xmlIDTablePtr,8, 14976, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14976,0);
 Msg("Find size of xmlIDTablePtr (14976)\n");
@@ -742,6 +1410,14 @@ CheckTypeSize(xmlRefTable,0, 14977, 2)
 CheckTypeSize(xmlRefTable,0, 14977, 11)
 #elif __ia64__
 CheckTypeSize(xmlRefTable,0, 14977, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRefTable,0, 14977, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRefTable,0, 14977, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRefTable,0, 14977, 10)
+#elif __s390x__
+CheckTypeSize(xmlRefTable,0, 14977, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14977,0);
 Msg("Find size of xmlRefTable (14977)\n");
@@ -753,6 +1429,14 @@ CheckTypeSize(xmlRefTable *,4, 14978, 2)
 CheckTypeSize(xmlRefTable *,8, 14978, 11)
 #elif __ia64__
 CheckTypeSize(xmlRefTable *,8, 14978, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRefTable *,4, 14978, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRefTable *,8, 14978, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRefTable *,4, 14978, 10)
+#elif __s390x__
+CheckTypeSize(xmlRefTable *,8, 14978, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14978,0);
 Msg("Find size of xmlRefTable * (14978)\n");
@@ -764,6 +1448,14 @@ CheckTypeSize(xmlRefTablePtr,4, 14979, 2)
 CheckTypeSize(xmlRefTablePtr,8, 14979, 11)
 #elif __ia64__
 CheckTypeSize(xmlRefTablePtr,8, 14979, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRefTablePtr,4, 14979, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRefTablePtr,8, 14979, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRefTablePtr,4, 14979, 10)
+#elif __s390x__
+CheckTypeSize(xmlRefTablePtr,8, 14979, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14979,0);
 Msg("Find size of xmlRefTablePtr (14979)\n");

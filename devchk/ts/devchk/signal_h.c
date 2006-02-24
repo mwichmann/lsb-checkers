@@ -2057,7 +2057,7 @@ CheckOffset(struct sigcontext,__reserved1,192,11,40425)
 #endif
 
 #if __powerpc64__
-CheckTypeSize(struct sigcontext,712, 10816, 9)
+CheckTypeSize(struct sigcontext,1272, 10816, 9)
 CheckMemberSize(struct sigcontext,_unused,32,9,40580)
 CheckOffset(struct sigcontext,_unused,0,9,40580)
 CheckMemberSize(struct sigcontext,signal,4,9,40581)

@@ -43,6 +43,30 @@ CheckMemberSize(struct _xmlLocationSet,locMax,4,3,49080)
 CheckOffset(struct _xmlLocationSet,locMax,4,3,49080)
 CheckMemberSize(struct _xmlLocationSet,locTab,8,3,49081)
 CheckOffset(struct _xmlLocationSet,locTab,8,3,49081)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlLocationSet,12, 14910, 6)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,6,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,6,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,4,6,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,6,49081)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlLocationSet,16, 14910, 9)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,9,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,9,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,8,9,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,9,49081)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlLocationSet,12, 14910, 10)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,10,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,10,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,4,10,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,10,49081)
+#elif __s390x__
+CheckTypeSize(struct _xmlLocationSet,16, 14910, 12)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,12,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,12,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,8,12,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,12,49081)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14910,0);
 Msg("Find size of _xmlLocationSet (14910)\n");
@@ -54,6 +78,14 @@ CheckTypeSize(xmlLocationSet,12, 14911, 2)
 CheckTypeSize(xmlLocationSet,16, 14911, 11)
 #elif __ia64__
 CheckTypeSize(xmlLocationSet,16, 14911, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlLocationSet,12, 14911, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlLocationSet,16, 14911, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlLocationSet,12, 14911, 10)
+#elif __s390x__
+CheckTypeSize(xmlLocationSet,16, 14911, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14911,0);
 Msg("Find size of xmlLocationSet (14911)\n");
@@ -65,6 +97,14 @@ CheckTypeSize(xmlLocationSet *,4, 14912, 2)
 CheckTypeSize(xmlLocationSet *,8, 14912, 11)
 #elif __ia64__
 CheckTypeSize(xmlLocationSet *,8, 14912, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlLocationSet *,4, 14912, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlLocationSet *,8, 14912, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlLocationSet *,4, 14912, 10)
+#elif __s390x__
+CheckTypeSize(xmlLocationSet *,8, 14912, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14912,0);
 Msg("Find size of xmlLocationSet * (14912)\n");
@@ -76,6 +116,14 @@ CheckTypeSize(xmlLocationSetPtr,4, 14913, 2)
 CheckTypeSize(xmlLocationSetPtr,8, 14913, 11)
 #elif __ia64__
 CheckTypeSize(xmlLocationSetPtr,8, 14913, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 10)
+#elif __s390x__
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14913,0);
 Msg("Find size of xmlLocationSetPtr (14913)\n");

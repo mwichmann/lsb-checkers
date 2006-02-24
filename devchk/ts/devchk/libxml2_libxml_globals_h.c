@@ -168,6 +168,10 @@ printf("Checking data structures in libxml2/libxml/globals.h\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14916,0);
 Msg("Find size of fptr_globals_393 (14916)\n");
@@ -179,6 +183,14 @@ CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 2)
 CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 11)
 #elif __ia64__
 CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 10)
+#elif __s390x__
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14917,0);
 Msg("Find size of xmlOutputBufferCreateFilenameFunc (14917)\n");
@@ -190,6 +202,14 @@ CheckTypeSize(xmlOutputBufferCreateFilenameFunc *,4, 14918, 2)
 CheckTypeSize(xmlOutputBufferCreateFilenameFunc *,8, 14918, 11)
 #elif __ia64__
 CheckTypeSize(xmlOutputBufferCreateFilenameFunc *,8, 14918, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc *,4, 14918, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc *,8, 14918, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc *,4, 14918, 10)
+#elif __s390x__
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc *,8, 14918, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14918,0);
 Msg("Find size of xmlOutputBufferCreateFilenameFunc * (14918)\n");
@@ -198,6 +218,10 @@ Msg("Find size of xmlOutputBufferCreateFilenameFunc * (14918)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14919,0);
 Msg("Find size of fptr_globals_411 (14919)\n");
@@ -209,6 +233,14 @@ CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 2)
 CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 11)
 #elif __ia64__
 CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 10)
+#elif __s390x__
+CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14920,0);
 Msg("Find size of xmlRegisterNodeFunc (14920)\n");
@@ -217,6 +249,10 @@ Msg("Find size of xmlRegisterNodeFunc (14920)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14921,0);
 Msg("Find size of fptr_globals_491 (14921)\n");
@@ -228,6 +264,14 @@ CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 2)
 CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 11)
 #elif __ia64__
 CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 10)
+#elif __s390x__
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14922,0);
 Msg("Find size of xmlParserInputBufferCreateFilenameFunc (14922)\n");
@@ -239,6 +283,14 @@ CheckTypeSize(xmlParserInputBufferCreateFilenameFunc *,4, 14923, 2)
 CheckTypeSize(xmlParserInputBufferCreateFilenameFunc *,8, 14923, 11)
 #elif __ia64__
 CheckTypeSize(xmlParserInputBufferCreateFilenameFunc *,8, 14923, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc *,4, 14923, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc *,8, 14923, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc *,4, 14923, 10)
+#elif __s390x__
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc *,8, 14923, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14923,0);
 Msg("Find size of xmlParserInputBufferCreateFilenameFunc * (14923)\n");
@@ -412,6 +464,230 @@ CheckMemberSize(struct _xmlSAXHandlerV1,externalSubset,8,3,49117)
 CheckOffset(struct _xmlSAXHandlerV1,externalSubset,208,3,49117)
 CheckMemberSize(struct _xmlSAXHandlerV1,initialized,4,3,49118)
 CheckOffset(struct _xmlSAXHandlerV1,initialized,216,3,49118)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlSAXHandlerV1,112, 14924, 6)
+CheckMemberSize(struct _xmlSAXHandlerV1,isStandalone,4,6,49092)
+CheckOffset(struct _xmlSAXHandlerV1,isStandalone,4,6,49092)
+CheckMemberSize(struct _xmlSAXHandlerV1,hasInternalSubset,4,6,49093)
+CheckOffset(struct _xmlSAXHandlerV1,hasInternalSubset,8,6,49093)
+CheckMemberSize(struct _xmlSAXHandlerV1,hasExternalSubset,4,6,49094)
+CheckOffset(struct _xmlSAXHandlerV1,hasExternalSubset,12,6,49094)
+CheckMemberSize(struct _xmlSAXHandlerV1,resolveEntity,4,6,49095)
+CheckOffset(struct _xmlSAXHandlerV1,resolveEntity,16,6,49095)
+CheckMemberSize(struct _xmlSAXHandlerV1,getEntity,4,6,49096)
+CheckOffset(struct _xmlSAXHandlerV1,getEntity,20,6,49096)
+CheckMemberSize(struct _xmlSAXHandlerV1,entityDecl,4,6,49097)
+CheckOffset(struct _xmlSAXHandlerV1,entityDecl,24,6,49097)
+CheckMemberSize(struct _xmlSAXHandlerV1,notationDecl,4,6,49098)
+CheckOffset(struct _xmlSAXHandlerV1,notationDecl,28,6,49098)
+CheckMemberSize(struct _xmlSAXHandlerV1,attributeDecl,4,6,49099)
+CheckOffset(struct _xmlSAXHandlerV1,attributeDecl,32,6,49099)
+CheckMemberSize(struct _xmlSAXHandlerV1,elementDecl,4,6,49100)
+CheckOffset(struct _xmlSAXHandlerV1,elementDecl,36,6,49100)
+CheckMemberSize(struct _xmlSAXHandlerV1,unparsedEntityDecl,4,6,49101)
+CheckOffset(struct _xmlSAXHandlerV1,unparsedEntityDecl,40,6,49101)
+CheckMemberSize(struct _xmlSAXHandlerV1,setDocumentLocator,4,6,49102)
+CheckOffset(struct _xmlSAXHandlerV1,setDocumentLocator,44,6,49102)
+CheckMemberSize(struct _xmlSAXHandlerV1,startDocument,4,6,49103)
+CheckOffset(struct _xmlSAXHandlerV1,startDocument,48,6,49103)
+CheckMemberSize(struct _xmlSAXHandlerV1,endDocument,4,6,49104)
+CheckOffset(struct _xmlSAXHandlerV1,endDocument,52,6,49104)
+CheckMemberSize(struct _xmlSAXHandlerV1,startElement,4,6,49105)
+CheckOffset(struct _xmlSAXHandlerV1,startElement,56,6,49105)
+CheckMemberSize(struct _xmlSAXHandlerV1,endElement,4,6,49106)
+CheckOffset(struct _xmlSAXHandlerV1,endElement,60,6,49106)
+CheckMemberSize(struct _xmlSAXHandlerV1,reference,4,6,49107)
+CheckOffset(struct _xmlSAXHandlerV1,reference,64,6,49107)
+CheckMemberSize(struct _xmlSAXHandlerV1,characters,4,6,49108)
+CheckOffset(struct _xmlSAXHandlerV1,characters,68,6,49108)
+CheckMemberSize(struct _xmlSAXHandlerV1,ignorableWhitespace,4,6,49109)
+CheckOffset(struct _xmlSAXHandlerV1,ignorableWhitespace,72,6,49109)
+CheckMemberSize(struct _xmlSAXHandlerV1,processingInstruction,4,6,49110)
+CheckOffset(struct _xmlSAXHandlerV1,processingInstruction,76,6,49110)
+CheckMemberSize(struct _xmlSAXHandlerV1,comment,4,6,49111)
+CheckOffset(struct _xmlSAXHandlerV1,comment,80,6,49111)
+CheckMemberSize(struct _xmlSAXHandlerV1,warning,4,6,49112)
+CheckOffset(struct _xmlSAXHandlerV1,warning,84,6,49112)
+CheckMemberSize(struct _xmlSAXHandlerV1,error,4,6,49113)
+CheckOffset(struct _xmlSAXHandlerV1,error,88,6,49113)
+CheckMemberSize(struct _xmlSAXHandlerV1,fatalError,4,6,49114)
+CheckOffset(struct _xmlSAXHandlerV1,fatalError,92,6,49114)
+CheckMemberSize(struct _xmlSAXHandlerV1,getParameterEntity,4,6,49115)
+CheckOffset(struct _xmlSAXHandlerV1,getParameterEntity,96,6,49115)
+CheckMemberSize(struct _xmlSAXHandlerV1,cdataBlock,4,6,49116)
+CheckOffset(struct _xmlSAXHandlerV1,cdataBlock,100,6,49116)
+CheckMemberSize(struct _xmlSAXHandlerV1,externalSubset,4,6,49117)
+CheckOffset(struct _xmlSAXHandlerV1,externalSubset,104,6,49117)
+CheckMemberSize(struct _xmlSAXHandlerV1,initialized,4,6,49118)
+CheckOffset(struct _xmlSAXHandlerV1,initialized,108,6,49118)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlSAXHandlerV1,224, 14924, 9)
+CheckMemberSize(struct _xmlSAXHandlerV1,isStandalone,8,9,49092)
+CheckOffset(struct _xmlSAXHandlerV1,isStandalone,8,9,49092)
+CheckMemberSize(struct _xmlSAXHandlerV1,hasInternalSubset,8,9,49093)
+CheckOffset(struct _xmlSAXHandlerV1,hasInternalSubset,16,9,49093)
+CheckMemberSize(struct _xmlSAXHandlerV1,hasExternalSubset,8,9,49094)
+CheckOffset(struct _xmlSAXHandlerV1,hasExternalSubset,24,9,49094)
+CheckMemberSize(struct _xmlSAXHandlerV1,resolveEntity,8,9,49095)
+CheckOffset(struct _xmlSAXHandlerV1,resolveEntity,32,9,49095)
+CheckMemberSize(struct _xmlSAXHandlerV1,getEntity,8,9,49096)
+CheckOffset(struct _xmlSAXHandlerV1,getEntity,40,9,49096)
+CheckMemberSize(struct _xmlSAXHandlerV1,entityDecl,8,9,49097)
+CheckOffset(struct _xmlSAXHandlerV1,entityDecl,48,9,49097)
+CheckMemberSize(struct _xmlSAXHandlerV1,notationDecl,8,9,49098)
+CheckOffset(struct _xmlSAXHandlerV1,notationDecl,56,9,49098)
+CheckMemberSize(struct _xmlSAXHandlerV1,attributeDecl,8,9,49099)
+CheckOffset(struct _xmlSAXHandlerV1,attributeDecl,64,9,49099)
+CheckMemberSize(struct _xmlSAXHandlerV1,elementDecl,8,9,49100)
+CheckOffset(struct _xmlSAXHandlerV1,elementDecl,72,9,49100)
+CheckMemberSize(struct _xmlSAXHandlerV1,unparsedEntityDecl,8,9,49101)
+CheckOffset(struct _xmlSAXHandlerV1,unparsedEntityDecl,80,9,49101)
+CheckMemberSize(struct _xmlSAXHandlerV1,setDocumentLocator,8,9,49102)
+CheckOffset(struct _xmlSAXHandlerV1,setDocumentLocator,88,9,49102)
+CheckMemberSize(struct _xmlSAXHandlerV1,startDocument,8,9,49103)
+CheckOffset(struct _xmlSAXHandlerV1,startDocument,96,9,49103)
+CheckMemberSize(struct _xmlSAXHandlerV1,endDocument,8,9,49104)
+CheckOffset(struct _xmlSAXHandlerV1,endDocument,104,9,49104)
+CheckMemberSize(struct _xmlSAXHandlerV1,startElement,8,9,49105)
+CheckOffset(struct _xmlSAXHandlerV1,startElement,112,9,49105)
+CheckMemberSize(struct _xmlSAXHandlerV1,endElement,8,9,49106)
+CheckOffset(struct _xmlSAXHandlerV1,endElement,120,9,49106)
+CheckMemberSize(struct _xmlSAXHandlerV1,reference,8,9,49107)
+CheckOffset(struct _xmlSAXHandlerV1,reference,128,9,49107)
+CheckMemberSize(struct _xmlSAXHandlerV1,characters,8,9,49108)
+CheckOffset(struct _xmlSAXHandlerV1,characters,136,9,49108)
+CheckMemberSize(struct _xmlSAXHandlerV1,ignorableWhitespace,8,9,49109)
+CheckOffset(struct _xmlSAXHandlerV1,ignorableWhitespace,144,9,49109)
+CheckMemberSize(struct _xmlSAXHandlerV1,processingInstruction,8,9,49110)
+CheckOffset(struct _xmlSAXHandlerV1,processingInstruction,152,9,49110)
+CheckMemberSize(struct _xmlSAXHandlerV1,comment,8,9,49111)
+CheckOffset(struct _xmlSAXHandlerV1,comment,160,9,49111)
+CheckMemberSize(struct _xmlSAXHandlerV1,warning,8,9,49112)
+CheckOffset(struct _xmlSAXHandlerV1,warning,168,9,49112)
+CheckMemberSize(struct _xmlSAXHandlerV1,error,8,9,49113)
+CheckOffset(struct _xmlSAXHandlerV1,error,176,9,49113)
+CheckMemberSize(struct _xmlSAXHandlerV1,fatalError,8,9,49114)
+CheckOffset(struct _xmlSAXHandlerV1,fatalError,184,9,49114)
+CheckMemberSize(struct _xmlSAXHandlerV1,getParameterEntity,8,9,49115)
+CheckOffset(struct _xmlSAXHandlerV1,getParameterEntity,192,9,49115)
+CheckMemberSize(struct _xmlSAXHandlerV1,cdataBlock,8,9,49116)
+CheckOffset(struct _xmlSAXHandlerV1,cdataBlock,200,9,49116)
+CheckMemberSize(struct _xmlSAXHandlerV1,externalSubset,8,9,49117)
+CheckOffset(struct _xmlSAXHandlerV1,externalSubset,208,9,49117)
+CheckMemberSize(struct _xmlSAXHandlerV1,initialized,4,9,49118)
+CheckOffset(struct _xmlSAXHandlerV1,initialized,216,9,49118)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlSAXHandlerV1,112, 14924, 10)
+CheckMemberSize(struct _xmlSAXHandlerV1,isStandalone,4,10,49092)
+CheckOffset(struct _xmlSAXHandlerV1,isStandalone,4,10,49092)
+CheckMemberSize(struct _xmlSAXHandlerV1,hasInternalSubset,4,10,49093)
+CheckOffset(struct _xmlSAXHandlerV1,hasInternalSubset,8,10,49093)
+CheckMemberSize(struct _xmlSAXHandlerV1,hasExternalSubset,4,10,49094)
+CheckOffset(struct _xmlSAXHandlerV1,hasExternalSubset,12,10,49094)
+CheckMemberSize(struct _xmlSAXHandlerV1,resolveEntity,4,10,49095)
+CheckOffset(struct _xmlSAXHandlerV1,resolveEntity,16,10,49095)
+CheckMemberSize(struct _xmlSAXHandlerV1,getEntity,4,10,49096)
+CheckOffset(struct _xmlSAXHandlerV1,getEntity,20,10,49096)
+CheckMemberSize(struct _xmlSAXHandlerV1,entityDecl,4,10,49097)
+CheckOffset(struct _xmlSAXHandlerV1,entityDecl,24,10,49097)
+CheckMemberSize(struct _xmlSAXHandlerV1,notationDecl,4,10,49098)
+CheckOffset(struct _xmlSAXHandlerV1,notationDecl,28,10,49098)
+CheckMemberSize(struct _xmlSAXHandlerV1,attributeDecl,4,10,49099)
+CheckOffset(struct _xmlSAXHandlerV1,attributeDecl,32,10,49099)
+CheckMemberSize(struct _xmlSAXHandlerV1,elementDecl,4,10,49100)
+CheckOffset(struct _xmlSAXHandlerV1,elementDecl,36,10,49100)
+CheckMemberSize(struct _xmlSAXHandlerV1,unparsedEntityDecl,4,10,49101)
+CheckOffset(struct _xmlSAXHandlerV1,unparsedEntityDecl,40,10,49101)
+CheckMemberSize(struct _xmlSAXHandlerV1,setDocumentLocator,4,10,49102)
+CheckOffset(struct _xmlSAXHandlerV1,setDocumentLocator,44,10,49102)
+CheckMemberSize(struct _xmlSAXHandlerV1,startDocument,4,10,49103)
+CheckOffset(struct _xmlSAXHandlerV1,startDocument,48,10,49103)
+CheckMemberSize(struct _xmlSAXHandlerV1,endDocument,4,10,49104)
+CheckOffset(struct _xmlSAXHandlerV1,endDocument,52,10,49104)
+CheckMemberSize(struct _xmlSAXHandlerV1,startElement,4,10,49105)
+CheckOffset(struct _xmlSAXHandlerV1,startElement,56,10,49105)
+CheckMemberSize(struct _xmlSAXHandlerV1,endElement,4,10,49106)
+CheckOffset(struct _xmlSAXHandlerV1,endElement,60,10,49106)
+CheckMemberSize(struct _xmlSAXHandlerV1,reference,4,10,49107)
+CheckOffset(struct _xmlSAXHandlerV1,reference,64,10,49107)
+CheckMemberSize(struct _xmlSAXHandlerV1,characters,4,10,49108)
+CheckOffset(struct _xmlSAXHandlerV1,characters,68,10,49108)
+CheckMemberSize(struct _xmlSAXHandlerV1,ignorableWhitespace,4,10,49109)
+CheckOffset(struct _xmlSAXHandlerV1,ignorableWhitespace,72,10,49109)
+CheckMemberSize(struct _xmlSAXHandlerV1,processingInstruction,4,10,49110)
+CheckOffset(struct _xmlSAXHandlerV1,processingInstruction,76,10,49110)
+CheckMemberSize(struct _xmlSAXHandlerV1,comment,4,10,49111)
+CheckOffset(struct _xmlSAXHandlerV1,comment,80,10,49111)
+CheckMemberSize(struct _xmlSAXHandlerV1,warning,4,10,49112)
+CheckOffset(struct _xmlSAXHandlerV1,warning,84,10,49112)
+CheckMemberSize(struct _xmlSAXHandlerV1,error,4,10,49113)
+CheckOffset(struct _xmlSAXHandlerV1,error,88,10,49113)
+CheckMemberSize(struct _xmlSAXHandlerV1,fatalError,4,10,49114)
+CheckOffset(struct _xmlSAXHandlerV1,fatalError,92,10,49114)
+CheckMemberSize(struct _xmlSAXHandlerV1,getParameterEntity,4,10,49115)
+CheckOffset(struct _xmlSAXHandlerV1,getParameterEntity,96,10,49115)
+CheckMemberSize(struct _xmlSAXHandlerV1,cdataBlock,4,10,49116)
+CheckOffset(struct _xmlSAXHandlerV1,cdataBlock,100,10,49116)
+CheckMemberSize(struct _xmlSAXHandlerV1,externalSubset,4,10,49117)
+CheckOffset(struct _xmlSAXHandlerV1,externalSubset,104,10,49117)
+CheckMemberSize(struct _xmlSAXHandlerV1,initialized,4,10,49118)
+CheckOffset(struct _xmlSAXHandlerV1,initialized,108,10,49118)
+#elif __s390x__
+CheckTypeSize(struct _xmlSAXHandlerV1,224, 14924, 12)
+CheckMemberSize(struct _xmlSAXHandlerV1,isStandalone,8,12,49092)
+CheckOffset(struct _xmlSAXHandlerV1,isStandalone,8,12,49092)
+CheckMemberSize(struct _xmlSAXHandlerV1,hasInternalSubset,8,12,49093)
+CheckOffset(struct _xmlSAXHandlerV1,hasInternalSubset,16,12,49093)
+CheckMemberSize(struct _xmlSAXHandlerV1,hasExternalSubset,8,12,49094)
+CheckOffset(struct _xmlSAXHandlerV1,hasExternalSubset,24,12,49094)
+CheckMemberSize(struct _xmlSAXHandlerV1,resolveEntity,8,12,49095)
+CheckOffset(struct _xmlSAXHandlerV1,resolveEntity,32,12,49095)
+CheckMemberSize(struct _xmlSAXHandlerV1,getEntity,8,12,49096)
+CheckOffset(struct _xmlSAXHandlerV1,getEntity,40,12,49096)
+CheckMemberSize(struct _xmlSAXHandlerV1,entityDecl,8,12,49097)
+CheckOffset(struct _xmlSAXHandlerV1,entityDecl,48,12,49097)
+CheckMemberSize(struct _xmlSAXHandlerV1,notationDecl,8,12,49098)
+CheckOffset(struct _xmlSAXHandlerV1,notationDecl,56,12,49098)
+CheckMemberSize(struct _xmlSAXHandlerV1,attributeDecl,8,12,49099)
+CheckOffset(struct _xmlSAXHandlerV1,attributeDecl,64,12,49099)
+CheckMemberSize(struct _xmlSAXHandlerV1,elementDecl,8,12,49100)
+CheckOffset(struct _xmlSAXHandlerV1,elementDecl,72,12,49100)
+CheckMemberSize(struct _xmlSAXHandlerV1,unparsedEntityDecl,8,12,49101)
+CheckOffset(struct _xmlSAXHandlerV1,unparsedEntityDecl,80,12,49101)
+CheckMemberSize(struct _xmlSAXHandlerV1,setDocumentLocator,8,12,49102)
+CheckOffset(struct _xmlSAXHandlerV1,setDocumentLocator,88,12,49102)
+CheckMemberSize(struct _xmlSAXHandlerV1,startDocument,8,12,49103)
+CheckOffset(struct _xmlSAXHandlerV1,startDocument,96,12,49103)
+CheckMemberSize(struct _xmlSAXHandlerV1,endDocument,8,12,49104)
+CheckOffset(struct _xmlSAXHandlerV1,endDocument,104,12,49104)
+CheckMemberSize(struct _xmlSAXHandlerV1,startElement,8,12,49105)
+CheckOffset(struct _xmlSAXHandlerV1,startElement,112,12,49105)
+CheckMemberSize(struct _xmlSAXHandlerV1,endElement,8,12,49106)
+CheckOffset(struct _xmlSAXHandlerV1,endElement,120,12,49106)
+CheckMemberSize(struct _xmlSAXHandlerV1,reference,8,12,49107)
+CheckOffset(struct _xmlSAXHandlerV1,reference,128,12,49107)
+CheckMemberSize(struct _xmlSAXHandlerV1,characters,8,12,49108)
+CheckOffset(struct _xmlSAXHandlerV1,characters,136,12,49108)
+CheckMemberSize(struct _xmlSAXHandlerV1,ignorableWhitespace,8,12,49109)
+CheckOffset(struct _xmlSAXHandlerV1,ignorableWhitespace,144,12,49109)
+CheckMemberSize(struct _xmlSAXHandlerV1,processingInstruction,8,12,49110)
+CheckOffset(struct _xmlSAXHandlerV1,processingInstruction,152,12,49110)
+CheckMemberSize(struct _xmlSAXHandlerV1,comment,8,12,49111)
+CheckOffset(struct _xmlSAXHandlerV1,comment,160,12,49111)
+CheckMemberSize(struct _xmlSAXHandlerV1,warning,8,12,49112)
+CheckOffset(struct _xmlSAXHandlerV1,warning,168,12,49112)
+CheckMemberSize(struct _xmlSAXHandlerV1,error,8,12,49113)
+CheckOffset(struct _xmlSAXHandlerV1,error,176,12,49113)
+CheckMemberSize(struct _xmlSAXHandlerV1,fatalError,8,12,49114)
+CheckOffset(struct _xmlSAXHandlerV1,fatalError,184,12,49114)
+CheckMemberSize(struct _xmlSAXHandlerV1,getParameterEntity,8,12,49115)
+CheckOffset(struct _xmlSAXHandlerV1,getParameterEntity,192,12,49115)
+CheckMemberSize(struct _xmlSAXHandlerV1,cdataBlock,8,12,49116)
+CheckOffset(struct _xmlSAXHandlerV1,cdataBlock,200,12,49116)
+CheckMemberSize(struct _xmlSAXHandlerV1,externalSubset,8,12,49117)
+CheckOffset(struct _xmlSAXHandlerV1,externalSubset,208,12,49117)
+CheckMemberSize(struct _xmlSAXHandlerV1,initialized,4,12,49118)
+CheckOffset(struct _xmlSAXHandlerV1,initialized,216,12,49118)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14924,0);
 Msg("Find size of _xmlSAXHandlerV1 (14924)\n");
@@ -423,6 +699,14 @@ CheckTypeSize(xmlSAXHandlerV1,112, 14925, 2)
 CheckTypeSize(xmlSAXHandlerV1,224, 14925, 11)
 #elif __ia64__
 CheckTypeSize(xmlSAXHandlerV1,224, 14925, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlSAXHandlerV1,112, 14925, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlSAXHandlerV1,224, 14925, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlSAXHandlerV1,112, 14925, 10)
+#elif __s390x__
+CheckTypeSize(xmlSAXHandlerV1,224, 14925, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14925,0);
 Msg("Find size of xmlSAXHandlerV1 (14925)\n");
@@ -434,6 +718,14 @@ CheckTypeSize(xmlSAXHandlerV1 *,4, 14926, 2)
 CheckTypeSize(xmlSAXHandlerV1 *,8, 14926, 11)
 #elif __ia64__
 CheckTypeSize(xmlSAXHandlerV1 *,8, 14926, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlSAXHandlerV1 *,4, 14926, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlSAXHandlerV1 *,8, 14926, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlSAXHandlerV1 *,4, 14926, 10)
+#elif __s390x__
+CheckTypeSize(xmlSAXHandlerV1 *,8, 14926, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14926,0);
 Msg("Find size of xmlSAXHandlerV1 * (14926)\n");
@@ -445,6 +737,14 @@ CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 2)
 CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 11)
 #elif __ia64__
 CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 10)
+#elif __s390x__
+CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14927,0);
 Msg("Find size of xmlDeregisterNodeFunc (14927)\n");
@@ -456,6 +756,14 @@ CheckTypeSize(xmlDeregisterNodeFunc *,4, 14928, 2)
 CheckTypeSize(xmlDeregisterNodeFunc *,8, 14928, 11)
 #elif __ia64__
 CheckTypeSize(xmlDeregisterNodeFunc *,8, 14928, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlDeregisterNodeFunc *,4, 14928, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlDeregisterNodeFunc *,8, 14928, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlDeregisterNodeFunc *,4, 14928, 10)
+#elif __s390x__
+CheckTypeSize(xmlDeregisterNodeFunc *,8, 14928, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14928,0);
 Msg("Find size of xmlDeregisterNodeFunc * (14928)\n");
@@ -467,6 +775,14 @@ CheckTypeSize(xmlRegisterNodeFunc *,4, 14929, 2)
 CheckTypeSize(xmlRegisterNodeFunc *,8, 14929, 11)
 #elif __ia64__
 CheckTypeSize(xmlRegisterNodeFunc *,8, 14929, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRegisterNodeFunc *,4, 14929, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRegisterNodeFunc *,8, 14929, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRegisterNodeFunc *,4, 14929, 10)
+#elif __s390x__
+CheckTypeSize(xmlRegisterNodeFunc *,8, 14929, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14929,0);
 Msg("Find size of xmlRegisterNodeFunc * (14929)\n");
@@ -478,6 +794,14 @@ CheckTypeSize(xmlBufferAllocationScheme *,4, 14930, 2)
 CheckTypeSize(xmlBufferAllocationScheme *,8, 14930, 11)
 #elif __ia64__
 CheckTypeSize(xmlBufferAllocationScheme *,8, 14930, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlBufferAllocationScheme *,4, 14930, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlBufferAllocationScheme *,8, 14930, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlBufferAllocationScheme *,4, 14930, 10)
+#elif __s390x__
+CheckTypeSize(xmlBufferAllocationScheme *,8, 14930, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14930,0);
 Msg("Find size of xmlBufferAllocationScheme * (14930)\n");
@@ -489,6 +813,14 @@ CheckTypeSize(xmlStructuredErrorFunc *,4, 14931, 2)
 CheckTypeSize(xmlStructuredErrorFunc *,8, 14931, 11)
 #elif __ia64__
 CheckTypeSize(xmlStructuredErrorFunc *,8, 14931, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlStructuredErrorFunc *,4, 14931, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlStructuredErrorFunc *,8, 14931, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlStructuredErrorFunc *,4, 14931, 10)
+#elif __s390x__
+CheckTypeSize(xmlStructuredErrorFunc *,8, 14931, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14931,0);
 Msg("Find size of xmlStructuredErrorFunc * (14931)\n");
@@ -500,6 +832,14 @@ CheckTypeSize(xmlGlobalState,512, 14933, 2)
 CheckTypeSize(xmlGlobalState,960, 14933, 11)
 #elif __ia64__
 CheckTypeSize(xmlGlobalState,960, 14933, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlGlobalState,512, 14933, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlGlobalState,960, 14933, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlGlobalState,512, 14933, 10)
+#elif __s390x__
+CheckTypeSize(xmlGlobalState,960, 14933, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14933,0);
 Msg("Find size of xmlGlobalState (14933)\n");
@@ -511,6 +851,14 @@ CheckTypeSize(xmlGlobalState *,4, 14934, 2)
 CheckTypeSize(xmlGlobalState *,8, 14934, 11)
 #elif __ia64__
 CheckTypeSize(xmlGlobalState *,8, 14934, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlGlobalState *,4, 14934, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlGlobalState *,8, 14934, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlGlobalState *,4, 14934, 10)
+#elif __s390x__
+CheckTypeSize(xmlGlobalState *,8, 14934, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14934,0);
 Msg("Find size of xmlGlobalState * (14934)\n");
@@ -522,6 +870,14 @@ CheckTypeSize(xmlGlobalStatePtr,4, 14935, 2)
 CheckTypeSize(xmlGlobalStatePtr,8, 14935, 11)
 #elif __ia64__
 CheckTypeSize(xmlGlobalStatePtr,8, 14935, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlGlobalStatePtr,4, 14935, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlGlobalStatePtr,8, 14935, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlGlobalStatePtr,4, 14935, 10)
+#elif __s390x__
+CheckTypeSize(xmlGlobalStatePtr,8, 14935, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14935,0);
 Msg("Find size of xmlGlobalStatePtr (14935)\n");

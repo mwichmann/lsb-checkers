@@ -28,15 +28,15 @@ printf("Checking data structures in utmpx.h\n");
 #if __i386__
 CheckTypeSize(struct utmpx *,4, 10558, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct utmpx *,0, 10558, 6)
+CheckTypeSize(struct utmpx *,4, 10558, 6)
 #elif __s390x__
-CheckTypeSize(struct utmpx *,0, 10558, 12)
+CheckTypeSize(struct utmpx *,8, 10558, 12)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct utmpx *,0, 10558, 10)
+CheckTypeSize(struct utmpx *,4, 10558, 10)
 #elif __x86_64__
 CheckTypeSize(struct utmpx *,8, 10558, 11)
 #elif __powerpc64__
-CheckTypeSize(struct utmpx *,0, 10558, 9)
+CheckTypeSize(struct utmpx *,8, 10558, 9)
 #elif __ia64__
 CheckTypeSize(struct utmpx *,0, 10558, 3)
 #else

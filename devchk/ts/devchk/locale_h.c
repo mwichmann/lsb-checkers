@@ -726,17 +726,17 @@ Msg("Find size of __locale_struct (10531)\n");
 #if __i386__
 CheckTypeSize(struct __locale_struct *,4, 10532, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct __locale_struct *,0, 10532, 6)
+CheckTypeSize(struct __locale_struct *,4, 10532, 6)
 #elif __ia64__
 CheckTypeSize(struct __locale_struct *,0, 10532, 3)
 #elif __s390x__
-CheckTypeSize(struct __locale_struct *,0, 10532, 12)
+CheckTypeSize(struct __locale_struct *,8, 10532, 12)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct __locale_struct *,0, 10532, 10)
+CheckTypeSize(struct __locale_struct *,4, 10532, 10)
 #elif __x86_64__
 CheckTypeSize(struct __locale_struct *,8, 10532, 11)
 #elif __powerpc64__
-CheckTypeSize(struct __locale_struct *,0, 10532, 9)
+CheckTypeSize(struct __locale_struct *,8, 10532, 9)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10532,0);
 Msg("Find size of __locale_struct * (10532)\n");

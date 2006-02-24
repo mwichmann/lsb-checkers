@@ -69,6 +69,14 @@ CheckTypeSize(PangoFT2FontMap,0, 12589, 2)
 CheckTypeSize(PangoFT2FontMap,0, 12589, 11)
 #elif __ia64__
 CheckTypeSize(PangoFT2FontMap,0, 12589, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 10)
+#elif __s390x__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12589,0);
 Msg("Find size of PangoFT2FontMap (12589)\n");
@@ -80,6 +88,14 @@ CheckTypeSize(PangoFT2FontMap *,4, 12590, 2)
 CheckTypeSize(PangoFT2FontMap *,8, 12590, 11)
 #elif __ia64__
 CheckTypeSize(PangoFT2FontMap *,8, 12590, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFT2FontMap *,4, 12590, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoFT2FontMap *,8, 12590, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoFT2FontMap *,4, 12590, 10)
+#elif __s390x__
+CheckTypeSize(PangoFT2FontMap *,8, 12590, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12590,0);
 Msg("Find size of PangoFT2FontMap * (12590)\n");
@@ -91,6 +107,14 @@ CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 2)
 CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 11)
 #elif __ia64__
 CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 10)
+#elif __s390x__
+CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12591,0);
 Msg("Find size of PangoFT2SubstituteFunc (12591)\n");
@@ -102,6 +126,14 @@ CheckTypeSize(PangoFcFont *,4, 12592, 2)
 CheckTypeSize(PangoFcFont *,8, 12592, 11)
 #elif __ia64__
 CheckTypeSize(PangoFcFont *,8, 12592, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFcFont *,4, 12592, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoFcFont *,8, 12592, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoFcFont *,4, 12592, 10)
+#elif __s390x__
+CheckTypeSize(PangoFcFont *,8, 12592, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12592,0);
 Msg("Find size of PangoFcFont * (12592)\n");
@@ -113,6 +145,14 @@ CheckTypeSize(FT_Bitmap *,4, 12595, 2)
 CheckTypeSize(FT_Bitmap *,8, 12595, 11)
 #elif __ia64__
 CheckTypeSize(FT_Bitmap *,8, 12595, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FT_Bitmap *,4, 12595, 6)
+#elif __powerpc64__
+CheckTypeSize(FT_Bitmap *,8, 12595, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FT_Bitmap *,4, 12595, 10)
+#elif __s390x__
+CheckTypeSize(FT_Bitmap *,8, 12595, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12595,0);
 Msg("Find size of FT_Bitmap * (12595)\n");

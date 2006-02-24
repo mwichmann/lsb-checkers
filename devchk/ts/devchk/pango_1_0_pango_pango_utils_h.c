@@ -30,6 +30,14 @@ CheckTypeSize(PangoStretch *,4, 12548, 2)
 CheckTypeSize(PangoStretch *,8, 12548, 11)
 #elif __ia64__
 CheckTypeSize(PangoStretch *,8, 12548, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoStretch *,4, 12548, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoStretch *,8, 12548, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoStretch *,4, 12548, 10)
+#elif __s390x__
+CheckTypeSize(PangoStretch *,8, 12548, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12548,0);
 Msg("Find size of PangoStretch * (12548)\n");
@@ -41,6 +49,14 @@ CheckTypeSize(PangoWeight *,4, 12549, 2)
 CheckTypeSize(PangoWeight *,8, 12549, 11)
 #elif __ia64__
 CheckTypeSize(PangoWeight *,8, 12549, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoWeight *,4, 12549, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoWeight *,8, 12549, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoWeight *,4, 12549, 10)
+#elif __s390x__
+CheckTypeSize(PangoWeight *,8, 12549, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12549,0);
 Msg("Find size of PangoWeight * (12549)\n");
@@ -52,6 +68,14 @@ CheckTypeSize(PangoDirection *,4, 12550, 2)
 CheckTypeSize(PangoDirection *,8, 12550, 11)
 #elif __ia64__
 CheckTypeSize(PangoDirection *,8, 12550, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoDirection *,4, 12550, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoDirection *,8, 12550, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoDirection *,4, 12550, 10)
+#elif __s390x__
+CheckTypeSize(PangoDirection *,8, 12550, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12550,0);
 Msg("Find size of PangoDirection * (12550)\n");
@@ -63,6 +87,14 @@ CheckTypeSize(PangoStyle *,4, 12551, 2)
 CheckTypeSize(PangoStyle *,8, 12551, 11)
 #elif __ia64__
 CheckTypeSize(PangoStyle *,8, 12551, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoStyle *,4, 12551, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoStyle *,8, 12551, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoStyle *,4, 12551, 10)
+#elif __s390x__
+CheckTypeSize(PangoStyle *,8, 12551, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12551,0);
 Msg("Find size of PangoStyle * (12551)\n");
@@ -74,6 +106,14 @@ CheckTypeSize(PangoVariant *,4, 12552, 2)
 CheckTypeSize(PangoVariant *,8, 12552, 11)
 #elif __ia64__
 CheckTypeSize(PangoVariant *,8, 12552, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoVariant *,4, 12552, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoVariant *,8, 12552, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoVariant *,4, 12552, 10)
+#elif __s390x__
+CheckTypeSize(PangoVariant *,8, 12552, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12552,0);
 Msg("Find size of PangoVariant * (12552)\n");
