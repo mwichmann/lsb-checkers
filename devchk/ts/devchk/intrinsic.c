@@ -336,6 +336,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11001,0);
 CheckTypeSize(long unsigned int,4,11186,2)
 #elif __ia64__
 CheckTypeSize(long unsigned int,8,11186,3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(long unsigned int,4,11186,6)
+#elif __powerpc64__
+CheckTypeSize(long unsigned int,8,11186,9)
 #elif __x86_64__
 CheckTypeSize(long unsigned int,8,11186,11)
 #else
@@ -346,6 +350,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11186,0);
 CheckTypeSize(short unsigned int,2,11209,2)
 #elif __ia64__
 CheckTypeSize(short unsigned int,2,11209,3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(short unsigned int,2,11209,6)
+#elif __powerpc64__
+CheckTypeSize(short unsigned int,2,11209,9)
 #elif __x86_64__
 CheckTypeSize(short unsigned int,2,11209,11)
 #else
@@ -356,6 +364,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11209,0);
 CheckTypeSize(short int,2,11264,2)
 #elif __ia64__
 CheckTypeSize(short int,2,11264,3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(short int,2,11264,6)
+#elif __powerpc64__
+CheckTypeSize(short int,2,11264,9)
 #elif __x86_64__
 CheckTypeSize(short int,2,11264,11)
 #else

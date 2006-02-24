@@ -414,11 +414,11 @@ CheckTypeSize(struct _XcmsCCC *,0, 8852, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _XcmsCCC *,4, 8852, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _XcmsCCC *,0, 8852, 10)
+CheckTypeSize(struct _XcmsCCC *,4, 8852, 10)
 #elif __powerpc64__
-CheckTypeSize(struct _XcmsCCC *,0, 8852, 9)
+CheckTypeSize(struct _XcmsCCC *,8, 8852, 9)
 #elif __s390x__
-CheckTypeSize(struct _XcmsCCC *,0, 8852, 12)
+CheckTypeSize(struct _XcmsCCC *,8, 8852, 12)
 #elif __x86_64__
 CheckTypeSize(struct _XcmsCCC *,8, 8852, 11)
 #else

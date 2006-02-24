@@ -176,6 +176,10 @@ cnt++;
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15016,0);
 Msg("Find size of const xmlChar[8] (15016)\n");
@@ -199,6 +203,14 @@ CheckTypeSize(xmlElementContentPtr *,4, 15018, 2)
 CheckTypeSize(xmlElementContentPtr *,8, 15018, 11)
 #elif __ia64__
 CheckTypeSize(xmlElementContentPtr *,8, 15018, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlElementContentPtr *,4, 15018, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlElementContentPtr *,8, 15018, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlElementContentPtr *,4, 15018, 10)
+#elif __s390x__
+CheckTypeSize(xmlElementContentPtr *,8, 15018, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15018,0);
 Msg("Find size of xmlElementContentPtr * (15018)\n");
@@ -210,6 +222,14 @@ CheckTypeSize(xmlEnumerationPtr *,4, 15019, 2)
 CheckTypeSize(xmlEnumerationPtr *,8, 15019, 11)
 #elif __ia64__
 CheckTypeSize(xmlEnumerationPtr *,8, 15019, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlEnumerationPtr *,4, 15019, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlEnumerationPtr *,8, 15019, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlEnumerationPtr *,4, 15019, 10)
+#elif __s390x__
+CheckTypeSize(xmlEnumerationPtr *,8, 15019, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15019,0);
 Msg("Find size of xmlEnumerationPtr * (15019)\n");
@@ -218,6 +238,10 @@ Msg("Find size of xmlEnumerationPtr * (15019)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15020,0);
 Msg("Find size of fptr_parserInternals_407 (15020)\n");
@@ -229,6 +253,14 @@ CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2)
 CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 11)
 #elif __ia64__
 CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 10)
+#elif __s390x__
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15021,0);
 Msg("Find size of xmlEntityReferenceFunc (15021)\n");
@@ -237,6 +269,10 @@ Msg("Find size of xmlEntityReferenceFunc (15021)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15022,0);
 Msg("Find size of const xmlChar[5] (15022)\n");
@@ -257,6 +293,10 @@ Msg("Find size of const const xmlChar[5] (15023)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15024,0);
 Msg("Find size of const xmlChar[10] (15024)\n");

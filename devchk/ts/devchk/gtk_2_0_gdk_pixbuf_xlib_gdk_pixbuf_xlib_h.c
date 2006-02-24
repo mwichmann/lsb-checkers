@@ -27,6 +27,10 @@ printf("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n"
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12659,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-14 (12659)\n");
@@ -44,6 +48,22 @@ CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
 CheckEnum("XLIB_RGB_DITHER_NONE",XLIB_RGB_DITHER_NONE,0);
 CheckEnum("XLIB_RGB_DITHER_NORMAL",XLIB_RGB_DITHER_NORMAL,1);
 CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("XLIB_RGB_DITHER_NONE",XLIB_RGB_DITHER_NONE,0);
+CheckEnum("XLIB_RGB_DITHER_NORMAL",XLIB_RGB_DITHER_NORMAL,1);
+CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
+#elif __powerpc64__
+CheckEnum("XLIB_RGB_DITHER_NONE",XLIB_RGB_DITHER_NONE,0);
+CheckEnum("XLIB_RGB_DITHER_NORMAL",XLIB_RGB_DITHER_NORMAL,1);
+CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
+#elif __s390__ && !__s390x__
+CheckEnum("XLIB_RGB_DITHER_NONE",XLIB_RGB_DITHER_NONE,0);
+CheckEnum("XLIB_RGB_DITHER_NORMAL",XLIB_RGB_DITHER_NORMAL,1);
+CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
+#elif __s390x__
+CheckEnum("XLIB_RGB_DITHER_NONE",XLIB_RGB_DITHER_NONE,0);
+CheckEnum("XLIB_RGB_DITHER_NORMAL",XLIB_RGB_DITHER_NORMAL,1);
+CheckEnum("XLIB_RGB_DITHER_MAX",XLIB_RGB_DITHER_MAX,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12660,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-6 (12660)\n");
@@ -55,6 +75,14 @@ CheckTypeSize(XlibRgbDither,4, 12661, 2)
 CheckTypeSize(XlibRgbDither,4, 12661, 11)
 #elif __ia64__
 CheckTypeSize(XlibRgbDither,4, 12661, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(XlibRgbDither,4, 12661, 6)
+#elif __powerpc64__
+CheckTypeSize(XlibRgbDither,4, 12661, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(XlibRgbDither,4, 12661, 10)
+#elif __s390x__
+CheckTypeSize(XlibRgbDither,4, 12661, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12661,0);
 Msg("Find size of XlibRgbDither (12661)\n");
@@ -63,6 +91,10 @@ Msg("Find size of XlibRgbDither (12661)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12662,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-19 (12662)\n");
@@ -80,6 +112,22 @@ CheckOffset(struct _XlibRgbCmap,lut,1024,11,43400)
 CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 3)
 CheckMemberSize(struct _XlibRgbCmap,lut,256,3,43400)
 CheckOffset(struct _XlibRgbCmap,lut,1024,3,43400)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 6)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,6,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,6,43400)
+#elif __powerpc64__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 9)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,9,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,9,43400)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 10)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,10,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,10,43400)
+#elif __s390x__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 12)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,12,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,12,43400)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12663,0);
 Msg("Find size of _XlibRgbCmap (12663)\n");
@@ -97,6 +145,14 @@ CheckTypeSize(XlibRgbCmap,1280, 12666, 2)
 CheckTypeSize(XlibRgbCmap,1280, 12666, 11)
 #elif __ia64__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(XlibRgbCmap,1280, 12666, 6)
+#elif __powerpc64__
+CheckTypeSize(XlibRgbCmap,1280, 12666, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(XlibRgbCmap,1280, 12666, 10)
+#elif __s390x__
+CheckTypeSize(XlibRgbCmap,1280, 12666, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12666,0);
 Msg("Find size of XlibRgbCmap (12666)\n");
@@ -108,6 +164,14 @@ CheckTypeSize(XlibRgbCmap *,4, 12667, 2)
 CheckTypeSize(XlibRgbCmap *,8, 12667, 11)
 #elif __ia64__
 CheckTypeSize(XlibRgbCmap *,8, 12667, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(XlibRgbCmap *,4, 12667, 6)
+#elif __powerpc64__
+CheckTypeSize(XlibRgbCmap *,8, 12667, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(XlibRgbCmap *,4, 12667, 10)
+#elif __s390x__
+CheckTypeSize(XlibRgbCmap *,8, 12667, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12667,0);
 Msg("Find size of XlibRgbCmap * (12667)\n");
@@ -116,6 +180,10 @@ Msg("Find size of XlibRgbCmap * (12667)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12668,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-15 (12668)\n");
@@ -124,6 +192,10 @@ Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-15 (12668)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12669,0);
 Msg("Find size of anon-gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h-16 (12669)\n");
@@ -135,6 +207,14 @@ CheckTypeSize(guint32 *,4, 12670, 2)
 CheckTypeSize(guint32 *,8, 12670, 11)
 #elif __ia64__
 CheckTypeSize(guint32 *,8, 12670, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(guint32 *,4, 12670, 6)
+#elif __powerpc64__
+CheckTypeSize(guint32 *,8, 12670, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(guint32 *,4, 12670, 10)
+#elif __s390x__
+CheckTypeSize(guint32 *,8, 12670, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12670,0);
 Msg("Find size of guint32 * (12670)\n");
@@ -147,6 +227,18 @@ CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
 CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
 CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
 #elif __ia64__
+CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
+CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
+CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
+#elif __powerpc64__
+CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
+CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
+#elif __s390__ && !__s390x__
+CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
+CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
+#elif __s390x__
 CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0);
 CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,1);
 #else

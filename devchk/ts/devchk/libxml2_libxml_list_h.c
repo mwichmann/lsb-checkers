@@ -32,6 +32,14 @@ CheckTypeSize(xmlList,0, 14552, 2)
 CheckTypeSize(xmlList,0, 14552, 11)
 #elif __ia64__
 CheckTypeSize(xmlList,0, 14552, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlList,0, 14552, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlList,0, 14552, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlList,0, 14552, 10)
+#elif __s390x__
+CheckTypeSize(xmlList,0, 14552, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14552,0);
 Msg("Find size of xmlList (14552)\n");
@@ -43,6 +51,14 @@ CheckTypeSize(xmlList *,4, 14553, 2)
 CheckTypeSize(xmlList *,8, 14553, 11)
 #elif __ia64__
 CheckTypeSize(xmlList *,8, 14553, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlList *,4, 14553, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlList *,8, 14553, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlList *,4, 14553, 10)
+#elif __s390x__
+CheckTypeSize(xmlList *,8, 14553, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14553,0);
 Msg("Find size of xmlList * (14553)\n");
@@ -54,6 +70,14 @@ CheckTypeSize(xmlListPtr,4, 14554, 2)
 CheckTypeSize(xmlListPtr,8, 14554, 11)
 #elif __ia64__
 CheckTypeSize(xmlListPtr,8, 14554, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlListPtr,4, 14554, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlListPtr,8, 14554, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlListPtr,4, 14554, 10)
+#elif __s390x__
+CheckTypeSize(xmlListPtr,8, 14554, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14554,0);
 Msg("Find size of xmlListPtr (14554)\n");
@@ -65,6 +89,14 @@ CheckTypeSize(xmlLink,0, 14556, 2)
 CheckTypeSize(xmlLink,0, 14556, 11)
 #elif __ia64__
 CheckTypeSize(xmlLink,0, 14556, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlLink,0, 14556, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlLink,0, 14556, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlLink,0, 14556, 10)
+#elif __s390x__
+CheckTypeSize(xmlLink,0, 14556, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14556,0);
 Msg("Find size of xmlLink (14556)\n");
@@ -76,6 +108,14 @@ CheckTypeSize(xmlLink *,4, 14557, 2)
 CheckTypeSize(xmlLink *,8, 14557, 11)
 #elif __ia64__
 CheckTypeSize(xmlLink *,8, 14557, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlLink *,4, 14557, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlLink *,8, 14557, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlLink *,4, 14557, 10)
+#elif __s390x__
+CheckTypeSize(xmlLink *,8, 14557, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14557,0);
 Msg("Find size of xmlLink * (14557)\n");
@@ -87,6 +127,14 @@ CheckTypeSize(xmlLinkPtr,4, 14558, 2)
 CheckTypeSize(xmlLinkPtr,8, 14558, 11)
 #elif __ia64__
 CheckTypeSize(xmlLinkPtr,8, 14558, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlLinkPtr,4, 14558, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlLinkPtr,8, 14558, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlLinkPtr,4, 14558, 10)
+#elif __s390x__
+CheckTypeSize(xmlLinkPtr,8, 14558, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14558,0);
 Msg("Find size of xmlLinkPtr (14558)\n");
@@ -98,6 +146,14 @@ CheckTypeSize(const xmlListPtr,4, 14559, 2)
 CheckTypeSize(const xmlListPtr,8, 14559, 11)
 #elif __ia64__
 CheckTypeSize(const xmlListPtr,8, 14559, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const xmlListPtr,4, 14559, 6)
+#elif __powerpc64__
+CheckTypeSize(const xmlListPtr,8, 14559, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const xmlListPtr,4, 14559, 10)
+#elif __s390x__
+CheckTypeSize(const xmlListPtr,8, 14559, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14559,0);
 Msg("Find size of const xmlListPtr (14559)\n");
@@ -106,6 +162,10 @@ Msg("Find size of const xmlListPtr (14559)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14560,0);
 Msg("Find size of fptr_list_459 (14560)\n");
@@ -117,6 +177,14 @@ CheckTypeSize(xmlListWalker,4, 14561, 2)
 CheckTypeSize(xmlListWalker,8, 14561, 11)
 #elif __ia64__
 CheckTypeSize(xmlListWalker,8, 14561, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlListWalker,4, 14561, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlListWalker,8, 14561, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlListWalker,4, 14561, 10)
+#elif __s390x__
+CheckTypeSize(xmlListWalker,8, 14561, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14561,0);
 Msg("Find size of xmlListWalker (14561)\n");
@@ -125,6 +193,10 @@ Msg("Find size of xmlListWalker (14561)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14562,0);
 Msg("Find size of fptr_list_305 (14562)\n");
@@ -136,6 +208,14 @@ CheckTypeSize(xmlListDeallocator,4, 14563, 2)
 CheckTypeSize(xmlListDeallocator,8, 14563, 11)
 #elif __ia64__
 CheckTypeSize(xmlListDeallocator,8, 14563, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlListDeallocator,4, 14563, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlListDeallocator,8, 14563, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlListDeallocator,4, 14563, 10)
+#elif __s390x__
+CheckTypeSize(xmlListDeallocator,8, 14563, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14563,0);
 Msg("Find size of xmlListDeallocator (14563)\n");
@@ -147,6 +227,14 @@ CheckTypeSize(xmlListDataCompare,4, 14564, 2)
 CheckTypeSize(xmlListDataCompare,8, 14564, 11)
 #elif __ia64__
 CheckTypeSize(xmlListDataCompare,8, 14564, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlListDataCompare,4, 14564, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlListDataCompare,8, 14564, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlListDataCompare,4, 14564, 10)
+#elif __s390x__
+CheckTypeSize(xmlListDataCompare,8, 14564, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14564,0);
 Msg("Find size of xmlListDataCompare (14564)\n");

@@ -55,6 +55,30 @@ CheckEnum("HTML_INVALID",HTML_INVALID,1);
 CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
 CheckEnum("HTML_VALID",HTML_VALID,4);
 CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("HTML_NA",HTML_NA,0);
+CheckEnum("HTML_INVALID",HTML_INVALID,1);
+CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
+CheckEnum("HTML_VALID",HTML_VALID,4);
+CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
+#elif __powerpc64__
+CheckEnum("HTML_NA",HTML_NA,0);
+CheckEnum("HTML_INVALID",HTML_INVALID,1);
+CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
+CheckEnum("HTML_VALID",HTML_VALID,4);
+CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
+#elif __s390__ && !__s390x__
+CheckEnum("HTML_NA",HTML_NA,0);
+CheckEnum("HTML_INVALID",HTML_INVALID,1);
+CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
+CheckEnum("HTML_VALID",HTML_VALID,4);
+CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
+#elif __s390x__
+CheckEnum("HTML_NA",HTML_NA,0);
+CheckEnum("HTML_INVALID",HTML_INVALID,1);
+CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
+CheckEnum("HTML_VALID",HTML_VALID,4);
+CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15002,0);
 Msg("Find size of anon-libxml2/libxml/HTMLparser.h-103 (15002)\n");
@@ -66,6 +90,14 @@ CheckTypeSize(htmlStatus,4, 15003, 2)
 CheckTypeSize(htmlStatus,4, 15003, 11)
 #elif __ia64__
 CheckTypeSize(htmlStatus,4, 15003, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlStatus,4, 15003, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlStatus,4, 15003, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlStatus,4, 15003, 10)
+#elif __s390x__
+CheckTypeSize(htmlStatus,4, 15003, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15003,0);
 Msg("Find size of htmlStatus (15003)\n");
@@ -155,6 +187,118 @@ CheckMemberSize(struct _htmlElemDesc,attrs_depr,8,3,49941)
 CheckOffset(struct _htmlElemDesc,attrs_depr,48,3,49941)
 CheckMemberSize(struct _htmlElemDesc,attrs_req,8,3,49942)
 CheckOffset(struct _htmlElemDesc,attrs_req,56,3,49942)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _htmlElemDesc,36, 15004, 6)
+CheckMemberSize(struct _htmlElemDesc,startTag,1,6,49930)
+CheckOffset(struct _htmlElemDesc,startTag,4,6,49930)
+CheckMemberSize(struct _htmlElemDesc,endTag,1,6,49931)
+CheckOffset(struct _htmlElemDesc,endTag,5,6,49931)
+CheckMemberSize(struct _htmlElemDesc,saveEndTag,1,6,49932)
+CheckOffset(struct _htmlElemDesc,saveEndTag,6,6,49932)
+CheckMemberSize(struct _htmlElemDesc,empty,1,6,49933)
+CheckOffset(struct _htmlElemDesc,empty,7,6,49933)
+CheckMemberSize(struct _htmlElemDesc,depr,1,6,49934)
+CheckOffset(struct _htmlElemDesc,depr,8,6,49934)
+CheckMemberSize(struct _htmlElemDesc,dtd,1,6,49935)
+CheckOffset(struct _htmlElemDesc,dtd,9,6,49935)
+CheckMemberSize(struct _htmlElemDesc,isinline,1,6,49936)
+CheckOffset(struct _htmlElemDesc,isinline,10,6,49936)
+CheckMemberSize(struct _htmlElemDesc,desc,4,6,49937)
+CheckOffset(struct _htmlElemDesc,desc,12,6,49937)
+CheckMemberSize(struct _htmlElemDesc,subelts,4,6,49938)
+CheckOffset(struct _htmlElemDesc,subelts,16,6,49938)
+CheckMemberSize(struct _htmlElemDesc,defaultsubelt,4,6,49939)
+CheckOffset(struct _htmlElemDesc,defaultsubelt,20,6,49939)
+CheckMemberSize(struct _htmlElemDesc,attrs_opt,4,6,49940)
+CheckOffset(struct _htmlElemDesc,attrs_opt,24,6,49940)
+CheckMemberSize(struct _htmlElemDesc,attrs_depr,4,6,49941)
+CheckOffset(struct _htmlElemDesc,attrs_depr,28,6,49941)
+CheckMemberSize(struct _htmlElemDesc,attrs_req,4,6,49942)
+CheckOffset(struct _htmlElemDesc,attrs_req,32,6,49942)
+#elif __powerpc64__
+CheckTypeSize(struct _htmlElemDesc,64, 15004, 9)
+CheckMemberSize(struct _htmlElemDesc,startTag,1,9,49930)
+CheckOffset(struct _htmlElemDesc,startTag,8,9,49930)
+CheckMemberSize(struct _htmlElemDesc,endTag,1,9,49931)
+CheckOffset(struct _htmlElemDesc,endTag,9,9,49931)
+CheckMemberSize(struct _htmlElemDesc,saveEndTag,1,9,49932)
+CheckOffset(struct _htmlElemDesc,saveEndTag,10,9,49932)
+CheckMemberSize(struct _htmlElemDesc,empty,1,9,49933)
+CheckOffset(struct _htmlElemDesc,empty,11,9,49933)
+CheckMemberSize(struct _htmlElemDesc,depr,1,9,49934)
+CheckOffset(struct _htmlElemDesc,depr,12,9,49934)
+CheckMemberSize(struct _htmlElemDesc,dtd,1,9,49935)
+CheckOffset(struct _htmlElemDesc,dtd,13,9,49935)
+CheckMemberSize(struct _htmlElemDesc,isinline,1,9,49936)
+CheckOffset(struct _htmlElemDesc,isinline,14,9,49936)
+CheckMemberSize(struct _htmlElemDesc,desc,8,9,49937)
+CheckOffset(struct _htmlElemDesc,desc,16,9,49937)
+CheckMemberSize(struct _htmlElemDesc,subelts,8,9,49938)
+CheckOffset(struct _htmlElemDesc,subelts,24,9,49938)
+CheckMemberSize(struct _htmlElemDesc,defaultsubelt,8,9,49939)
+CheckOffset(struct _htmlElemDesc,defaultsubelt,32,9,49939)
+CheckMemberSize(struct _htmlElemDesc,attrs_opt,8,9,49940)
+CheckOffset(struct _htmlElemDesc,attrs_opt,40,9,49940)
+CheckMemberSize(struct _htmlElemDesc,attrs_depr,8,9,49941)
+CheckOffset(struct _htmlElemDesc,attrs_depr,48,9,49941)
+CheckMemberSize(struct _htmlElemDesc,attrs_req,8,9,49942)
+CheckOffset(struct _htmlElemDesc,attrs_req,56,9,49942)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _htmlElemDesc,36, 15004, 10)
+CheckMemberSize(struct _htmlElemDesc,startTag,1,10,49930)
+CheckOffset(struct _htmlElemDesc,startTag,4,10,49930)
+CheckMemberSize(struct _htmlElemDesc,endTag,1,10,49931)
+CheckOffset(struct _htmlElemDesc,endTag,5,10,49931)
+CheckMemberSize(struct _htmlElemDesc,saveEndTag,1,10,49932)
+CheckOffset(struct _htmlElemDesc,saveEndTag,6,10,49932)
+CheckMemberSize(struct _htmlElemDesc,empty,1,10,49933)
+CheckOffset(struct _htmlElemDesc,empty,7,10,49933)
+CheckMemberSize(struct _htmlElemDesc,depr,1,10,49934)
+CheckOffset(struct _htmlElemDesc,depr,8,10,49934)
+CheckMemberSize(struct _htmlElemDesc,dtd,1,10,49935)
+CheckOffset(struct _htmlElemDesc,dtd,9,10,49935)
+CheckMemberSize(struct _htmlElemDesc,isinline,1,10,49936)
+CheckOffset(struct _htmlElemDesc,isinline,10,10,49936)
+CheckMemberSize(struct _htmlElemDesc,desc,4,10,49937)
+CheckOffset(struct _htmlElemDesc,desc,12,10,49937)
+CheckMemberSize(struct _htmlElemDesc,subelts,4,10,49938)
+CheckOffset(struct _htmlElemDesc,subelts,16,10,49938)
+CheckMemberSize(struct _htmlElemDesc,defaultsubelt,4,10,49939)
+CheckOffset(struct _htmlElemDesc,defaultsubelt,20,10,49939)
+CheckMemberSize(struct _htmlElemDesc,attrs_opt,4,10,49940)
+CheckOffset(struct _htmlElemDesc,attrs_opt,24,10,49940)
+CheckMemberSize(struct _htmlElemDesc,attrs_depr,4,10,49941)
+CheckOffset(struct _htmlElemDesc,attrs_depr,28,10,49941)
+CheckMemberSize(struct _htmlElemDesc,attrs_req,4,10,49942)
+CheckOffset(struct _htmlElemDesc,attrs_req,32,10,49942)
+#elif __s390x__
+CheckTypeSize(struct _htmlElemDesc,64, 15004, 12)
+CheckMemberSize(struct _htmlElemDesc,startTag,1,12,49930)
+CheckOffset(struct _htmlElemDesc,startTag,8,12,49930)
+CheckMemberSize(struct _htmlElemDesc,endTag,1,12,49931)
+CheckOffset(struct _htmlElemDesc,endTag,9,12,49931)
+CheckMemberSize(struct _htmlElemDesc,saveEndTag,1,12,49932)
+CheckOffset(struct _htmlElemDesc,saveEndTag,10,12,49932)
+CheckMemberSize(struct _htmlElemDesc,empty,1,12,49933)
+CheckOffset(struct _htmlElemDesc,empty,11,12,49933)
+CheckMemberSize(struct _htmlElemDesc,depr,1,12,49934)
+CheckOffset(struct _htmlElemDesc,depr,12,12,49934)
+CheckMemberSize(struct _htmlElemDesc,dtd,1,12,49935)
+CheckOffset(struct _htmlElemDesc,dtd,13,12,49935)
+CheckMemberSize(struct _htmlElemDesc,isinline,1,12,49936)
+CheckOffset(struct _htmlElemDesc,isinline,14,12,49936)
+CheckMemberSize(struct _htmlElemDesc,desc,8,12,49937)
+CheckOffset(struct _htmlElemDesc,desc,16,12,49937)
+CheckMemberSize(struct _htmlElemDesc,subelts,8,12,49938)
+CheckOffset(struct _htmlElemDesc,subelts,24,12,49938)
+CheckMemberSize(struct _htmlElemDesc,defaultsubelt,8,12,49939)
+CheckOffset(struct _htmlElemDesc,defaultsubelt,32,12,49939)
+CheckMemberSize(struct _htmlElemDesc,attrs_opt,8,12,49940)
+CheckOffset(struct _htmlElemDesc,attrs_opt,40,12,49940)
+CheckMemberSize(struct _htmlElemDesc,attrs_depr,8,12,49941)
+CheckOffset(struct _htmlElemDesc,attrs_depr,48,12,49941)
+CheckMemberSize(struct _htmlElemDesc,attrs_req,8,12,49942)
+CheckOffset(struct _htmlElemDesc,attrs_req,56,12,49942)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15004,0);
 Msg("Find size of _htmlElemDesc (15004)\n");
@@ -166,6 +310,14 @@ CheckTypeSize(htmlElemDesc,36, 15005, 2)
 CheckTypeSize(htmlElemDesc,64, 15005, 11)
 #elif __ia64__
 CheckTypeSize(htmlElemDesc,64, 15005, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlElemDesc,36, 15005, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlElemDesc,64, 15005, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlElemDesc,36, 15005, 10)
+#elif __s390x__
+CheckTypeSize(htmlElemDesc,64, 15005, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15005,0);
 Msg("Find size of htmlElemDesc (15005)\n");
@@ -177,6 +329,14 @@ CheckTypeSize(const htmlElemDesc,36, 15006, 2)
 CheckTypeSize(const htmlElemDesc,64, 15006, 11)
 #elif __ia64__
 CheckTypeSize(const htmlElemDesc,64, 15006, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const htmlElemDesc,36, 15006, 6)
+#elif __powerpc64__
+CheckTypeSize(const htmlElemDesc,64, 15006, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const htmlElemDesc,36, 15006, 10)
+#elif __s390x__
+CheckTypeSize(const htmlElemDesc,64, 15006, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15006,0);
 Msg("Find size of const htmlElemDesc (15006)\n");
@@ -185,6 +345,10 @@ Msg("Find size of const htmlElemDesc (15006)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15007,0);
 Msg("Find size of const htmlElemDesc * (15007)\n");
@@ -196,6 +360,14 @@ CheckTypeSize(htmlDocPtr,4, 15008, 2)
 CheckTypeSize(htmlDocPtr,8, 15008, 11)
 #elif __ia64__
 CheckTypeSize(htmlDocPtr,8, 15008, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlDocPtr,4, 15008, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlDocPtr,8, 15008, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlDocPtr,4, 15008, 10)
+#elif __s390x__
+CheckTypeSize(htmlDocPtr,8, 15008, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15008,0);
 Msg("Find size of htmlDocPtr (15008)\n");
@@ -207,6 +379,14 @@ CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 2)
 CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 11)
 #elif __ia64__
 CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 10)
+#elif __s390x__
+CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15009,0);
 Msg("Find size of htmlSAXHandlerPtr (15009)\n");
@@ -218,6 +398,14 @@ CheckTypeSize(htmlParserCtxtPtr,4, 15010, 2)
 CheckTypeSize(htmlParserCtxtPtr,8, 15010, 11)
 #elif __ia64__
 CheckTypeSize(htmlParserCtxtPtr,8, 15010, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlParserCtxtPtr,4, 15010, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlParserCtxtPtr,8, 15010, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlParserCtxtPtr,4, 15010, 10)
+#elif __s390x__
+CheckTypeSize(htmlParserCtxtPtr,8, 15010, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15010,0);
 Msg("Find size of htmlParserCtxtPtr (15010)\n");
@@ -241,6 +429,30 @@ CheckMemberSize(struct _htmlEntityDesc,name,8,3,49944)
 CheckOffset(struct _htmlEntityDesc,name,8,3,49944)
 CheckMemberSize(struct _htmlEntityDesc,desc,8,3,49945)
 CheckOffset(struct _htmlEntityDesc,desc,16,3,49945)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _htmlEntityDesc,12, 15011, 6)
+CheckMemberSize(struct _htmlEntityDesc,name,4,6,49944)
+CheckOffset(struct _htmlEntityDesc,name,4,6,49944)
+CheckMemberSize(struct _htmlEntityDesc,desc,4,6,49945)
+CheckOffset(struct _htmlEntityDesc,desc,8,6,49945)
+#elif __powerpc64__
+CheckTypeSize(struct _htmlEntityDesc,24, 15011, 9)
+CheckMemberSize(struct _htmlEntityDesc,name,8,9,49944)
+CheckOffset(struct _htmlEntityDesc,name,8,9,49944)
+CheckMemberSize(struct _htmlEntityDesc,desc,8,9,49945)
+CheckOffset(struct _htmlEntityDesc,desc,16,9,49945)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _htmlEntityDesc,12, 15011, 10)
+CheckMemberSize(struct _htmlEntityDesc,name,4,10,49944)
+CheckOffset(struct _htmlEntityDesc,name,4,10,49944)
+CheckMemberSize(struct _htmlEntityDesc,desc,4,10,49945)
+CheckOffset(struct _htmlEntityDesc,desc,8,10,49945)
+#elif __s390x__
+CheckTypeSize(struct _htmlEntityDesc,24, 15011, 12)
+CheckMemberSize(struct _htmlEntityDesc,name,8,12,49944)
+CheckOffset(struct _htmlEntityDesc,name,8,12,49944)
+CheckMemberSize(struct _htmlEntityDesc,desc,8,12,49945)
+CheckOffset(struct _htmlEntityDesc,desc,16,12,49945)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15011,0);
 Msg("Find size of _htmlEntityDesc (15011)\n");
@@ -252,6 +464,14 @@ CheckTypeSize(htmlEntityDesc,12, 15012, 2)
 CheckTypeSize(htmlEntityDesc,24, 15012, 11)
 #elif __ia64__
 CheckTypeSize(htmlEntityDesc,24, 15012, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlEntityDesc,12, 15012, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlEntityDesc,24, 15012, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlEntityDesc,12, 15012, 10)
+#elif __s390x__
+CheckTypeSize(htmlEntityDesc,24, 15012, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15012,0);
 Msg("Find size of htmlEntityDesc (15012)\n");
@@ -263,6 +483,14 @@ CheckTypeSize(const htmlEntityDesc,12, 15013, 2)
 CheckTypeSize(const htmlEntityDesc,24, 15013, 11)
 #elif __ia64__
 CheckTypeSize(const htmlEntityDesc,24, 15013, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const htmlEntityDesc,12, 15013, 6)
+#elif __powerpc64__
+CheckTypeSize(const htmlEntityDesc,24, 15013, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const htmlEntityDesc,12, 15013, 10)
+#elif __s390x__
+CheckTypeSize(const htmlEntityDesc,24, 15013, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15013,0);
 Msg("Find size of const htmlEntityDesc (15013)\n");
@@ -271,6 +499,10 @@ Msg("Find size of const htmlEntityDesc (15013)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15014,0);
 Msg("Find size of const htmlEntityDesc * (15014)\n");
@@ -282,6 +514,14 @@ CheckTypeSize(htmlNodePtr,4, 15015, 2)
 CheckTypeSize(htmlNodePtr,8, 15015, 11)
 #elif __ia64__
 CheckTypeSize(htmlNodePtr,8, 15015, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlNodePtr,4, 15015, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlNodePtr,8, 15015, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlNodePtr,4, 15015, 10)
+#elif __s390x__
+CheckTypeSize(htmlNodePtr,8, 15015, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15015,0);
 Msg("Find size of htmlNodePtr (15015)\n");
@@ -311,6 +551,38 @@ CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
 CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
 CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
 CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
+CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
+CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);
+CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
+CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
+CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
+CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
+#elif __powerpc64__
+CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
+CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
+CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);
+CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
+CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
+CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
+CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
+#elif __s390__ && !__s390x__
+CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
+CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
+CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);
+CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
+CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
+CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
+CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
+#elif __s390x__
+CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
+CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
+CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);
+CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
+CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
+CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
+CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15109,0);
 Msg("Find size of anonymous-HTMLparser.h.types-0 (15109)\n");
@@ -322,6 +594,14 @@ CheckTypeSize(htmlParserOption,4, 15110, 2)
 CheckTypeSize(htmlParserOption,4, 15110, 11)
 #elif __ia64__
 CheckTypeSize(htmlParserOption,4, 15110, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlParserOption,4, 15110, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlParserOption,4, 15110, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlParserOption,4, 15110, 10)
+#elif __s390x__
+CheckTypeSize(htmlParserOption,4, 15110, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15110,0);
 Msg("Find size of htmlParserOption (15110)\n");

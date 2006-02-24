@@ -40,6 +40,14 @@ CheckTypeSize(xmlTextWriter,0, 15077, 2)
 CheckTypeSize(xmlTextWriter,0, 15077, 11)
 #elif __ia64__
 CheckTypeSize(xmlTextWriter,0, 15077, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlTextWriter,0, 15077, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlTextWriter,0, 15077, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlTextWriter,0, 15077, 10)
+#elif __s390x__
+CheckTypeSize(xmlTextWriter,0, 15077, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15077,0);
 Msg("Find size of xmlTextWriter (15077)\n");
@@ -51,6 +59,14 @@ CheckTypeSize(xmlTextWriter *,4, 15078, 2)
 CheckTypeSize(xmlTextWriter *,8, 15078, 11)
 #elif __ia64__
 CheckTypeSize(xmlTextWriter *,8, 15078, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlTextWriter *,4, 15078, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlTextWriter *,8, 15078, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlTextWriter *,4, 15078, 10)
+#elif __s390x__
+CheckTypeSize(xmlTextWriter *,8, 15078, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15078,0);
 Msg("Find size of xmlTextWriter * (15078)\n");
@@ -62,6 +78,14 @@ CheckTypeSize(xmlTextWriterPtr,4, 15079, 2)
 CheckTypeSize(xmlTextWriterPtr,8, 15079, 11)
 #elif __ia64__
 CheckTypeSize(xmlTextWriterPtr,8, 15079, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlTextWriterPtr,4, 15079, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlTextWriterPtr,8, 15079, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlTextWriterPtr,4, 15079, 10)
+#elif __s390x__
+CheckTypeSize(xmlTextWriterPtr,8, 15079, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15079,0);
 Msg("Find size of xmlTextWriterPtr (15079)\n");
@@ -73,6 +97,14 @@ CheckTypeSize(xmlDocPtr *,4, 15080, 2)
 CheckTypeSize(xmlDocPtr *,8, 15080, 11)
 #elif __ia64__
 CheckTypeSize(xmlDocPtr *,8, 15080, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlDocPtr *,4, 15080, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlDocPtr *,8, 15080, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlDocPtr *,4, 15080, 10)
+#elif __s390x__
+CheckTypeSize(xmlDocPtr *,8, 15080, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15080,0);
 Msg("Find size of xmlDocPtr * (15080)\n");

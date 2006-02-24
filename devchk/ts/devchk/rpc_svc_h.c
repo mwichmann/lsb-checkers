@@ -288,7 +288,7 @@ Msg("Find size of xp_ops (9981)\n");
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(struct xp_ops *,0, 10430, 10)
+CheckTypeSize(struct xp_ops *,4, 10430, 10)
 #endif
 
 #if __i386__

@@ -85,6 +85,86 @@ CheckMemberSize(struct _xmlURI,fragment,8,3,47748)
 CheckOffset(struct _xmlURI,fragment,64,3,47748)
 CheckMemberSize(struct _xmlURI,cleanup,4,3,47749)
 CheckOffset(struct _xmlURI,cleanup,72,3,47749)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlURI,40, 14565, 6)
+CheckMemberSize(struct _xmlURI,opaque,4,6,47741)
+CheckOffset(struct _xmlURI,opaque,4,6,47741)
+CheckMemberSize(struct _xmlURI,authority,4,6,47742)
+CheckOffset(struct _xmlURI,authority,8,6,47742)
+CheckMemberSize(struct _xmlURI,server,4,6,47743)
+CheckOffset(struct _xmlURI,server,12,6,47743)
+CheckMemberSize(struct _xmlURI,user,4,6,47744)
+CheckOffset(struct _xmlURI,user,16,6,47744)
+CheckMemberSize(struct _xmlURI,port,4,6,47745)
+CheckOffset(struct _xmlURI,port,20,6,47745)
+CheckMemberSize(struct _xmlURI,path,4,6,47746)
+CheckOffset(struct _xmlURI,path,24,6,47746)
+CheckMemberSize(struct _xmlURI,query,4,6,47747)
+CheckOffset(struct _xmlURI,query,28,6,47747)
+CheckMemberSize(struct _xmlURI,fragment,4,6,47748)
+CheckOffset(struct _xmlURI,fragment,32,6,47748)
+CheckMemberSize(struct _xmlURI,cleanup,4,6,47749)
+CheckOffset(struct _xmlURI,cleanup,36,6,47749)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlURI,80, 14565, 9)
+CheckMemberSize(struct _xmlURI,opaque,8,9,47741)
+CheckOffset(struct _xmlURI,opaque,8,9,47741)
+CheckMemberSize(struct _xmlURI,authority,8,9,47742)
+CheckOffset(struct _xmlURI,authority,16,9,47742)
+CheckMemberSize(struct _xmlURI,server,8,9,47743)
+CheckOffset(struct _xmlURI,server,24,9,47743)
+CheckMemberSize(struct _xmlURI,user,8,9,47744)
+CheckOffset(struct _xmlURI,user,32,9,47744)
+CheckMemberSize(struct _xmlURI,port,4,9,47745)
+CheckOffset(struct _xmlURI,port,40,9,47745)
+CheckMemberSize(struct _xmlURI,path,8,9,47746)
+CheckOffset(struct _xmlURI,path,48,9,47746)
+CheckMemberSize(struct _xmlURI,query,8,9,47747)
+CheckOffset(struct _xmlURI,query,56,9,47747)
+CheckMemberSize(struct _xmlURI,fragment,8,9,47748)
+CheckOffset(struct _xmlURI,fragment,64,9,47748)
+CheckMemberSize(struct _xmlURI,cleanup,4,9,47749)
+CheckOffset(struct _xmlURI,cleanup,72,9,47749)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlURI,40, 14565, 10)
+CheckMemberSize(struct _xmlURI,opaque,4,10,47741)
+CheckOffset(struct _xmlURI,opaque,4,10,47741)
+CheckMemberSize(struct _xmlURI,authority,4,10,47742)
+CheckOffset(struct _xmlURI,authority,8,10,47742)
+CheckMemberSize(struct _xmlURI,server,4,10,47743)
+CheckOffset(struct _xmlURI,server,12,10,47743)
+CheckMemberSize(struct _xmlURI,user,4,10,47744)
+CheckOffset(struct _xmlURI,user,16,10,47744)
+CheckMemberSize(struct _xmlURI,port,4,10,47745)
+CheckOffset(struct _xmlURI,port,20,10,47745)
+CheckMemberSize(struct _xmlURI,path,4,10,47746)
+CheckOffset(struct _xmlURI,path,24,10,47746)
+CheckMemberSize(struct _xmlURI,query,4,10,47747)
+CheckOffset(struct _xmlURI,query,28,10,47747)
+CheckMemberSize(struct _xmlURI,fragment,4,10,47748)
+CheckOffset(struct _xmlURI,fragment,32,10,47748)
+CheckMemberSize(struct _xmlURI,cleanup,4,10,47749)
+CheckOffset(struct _xmlURI,cleanup,36,10,47749)
+#elif __s390x__
+CheckTypeSize(struct _xmlURI,80, 14565, 12)
+CheckMemberSize(struct _xmlURI,opaque,8,12,47741)
+CheckOffset(struct _xmlURI,opaque,8,12,47741)
+CheckMemberSize(struct _xmlURI,authority,8,12,47742)
+CheckOffset(struct _xmlURI,authority,16,12,47742)
+CheckMemberSize(struct _xmlURI,server,8,12,47743)
+CheckOffset(struct _xmlURI,server,24,12,47743)
+CheckMemberSize(struct _xmlURI,user,8,12,47744)
+CheckOffset(struct _xmlURI,user,32,12,47744)
+CheckMemberSize(struct _xmlURI,port,4,12,47745)
+CheckOffset(struct _xmlURI,port,40,12,47745)
+CheckMemberSize(struct _xmlURI,path,8,12,47746)
+CheckOffset(struct _xmlURI,path,48,12,47746)
+CheckMemberSize(struct _xmlURI,query,8,12,47747)
+CheckOffset(struct _xmlURI,query,56,12,47747)
+CheckMemberSize(struct _xmlURI,fragment,8,12,47748)
+CheckOffset(struct _xmlURI,fragment,64,12,47748)
+CheckMemberSize(struct _xmlURI,cleanup,4,12,47749)
+CheckOffset(struct _xmlURI,cleanup,72,12,47749)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14565,0);
 Msg("Find size of _xmlURI (14565)\n");
@@ -96,6 +176,14 @@ CheckTypeSize(xmlURI,40, 14566, 2)
 CheckTypeSize(xmlURI,80, 14566, 11)
 #elif __ia64__
 CheckTypeSize(xmlURI,80, 14566, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlURI,40, 14566, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlURI,80, 14566, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlURI,40, 14566, 10)
+#elif __s390x__
+CheckTypeSize(xmlURI,80, 14566, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14566,0);
 Msg("Find size of xmlURI (14566)\n");
@@ -107,6 +195,14 @@ CheckTypeSize(xmlURI *,4, 14567, 2)
 CheckTypeSize(xmlURI *,8, 14567, 11)
 #elif __ia64__
 CheckTypeSize(xmlURI *,8, 14567, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlURI *,4, 14567, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlURI *,8, 14567, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlURI *,4, 14567, 10)
+#elif __s390x__
+CheckTypeSize(xmlURI *,8, 14567, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14567,0);
 Msg("Find size of xmlURI * (14567)\n");
@@ -118,6 +214,14 @@ CheckTypeSize(xmlURIPtr,4, 14568, 2)
 CheckTypeSize(xmlURIPtr,8, 14568, 11)
 #elif __ia64__
 CheckTypeSize(xmlURIPtr,8, 14568, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlURIPtr,4, 14568, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlURIPtr,8, 14568, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlURIPtr,4, 14568, 10)
+#elif __s390x__
+CheckTypeSize(xmlURIPtr,8, 14568, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14568,0);
 Msg("Find size of xmlURIPtr (14568)\n");

@@ -33,6 +33,14 @@ CheckTypeSize(xmlAutomataState,0, 14709, 2)
 CheckTypeSize(xmlAutomataState,0, 14709, 11)
 #elif __ia64__
 CheckTypeSize(xmlAutomataState,0, 14709, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAutomataState,0, 14709, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAutomataState,0, 14709, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAutomataState,0, 14709, 10)
+#elif __s390x__
+CheckTypeSize(xmlAutomataState,0, 14709, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14709,0);
 Msg("Find size of xmlAutomataState (14709)\n");
@@ -44,6 +52,14 @@ CheckTypeSize(xmlAutomataState *,4, 14710, 2)
 CheckTypeSize(xmlAutomataState *,8, 14710, 11)
 #elif __ia64__
 CheckTypeSize(xmlAutomataState *,8, 14710, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAutomataState *,4, 14710, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAutomataState *,8, 14710, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAutomataState *,4, 14710, 10)
+#elif __s390x__
+CheckTypeSize(xmlAutomataState *,8, 14710, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14710,0);
 Msg("Find size of xmlAutomataState * (14710)\n");
@@ -55,6 +71,14 @@ CheckTypeSize(xmlAutomataStatePtr,4, 14711, 2)
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 11)
 #elif __ia64__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAutomataStatePtr,4, 14711, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAutomataStatePtr,4, 14711, 10)
+#elif __s390x__
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14711,0);
 Msg("Find size of xmlAutomataStatePtr (14711)\n");
@@ -66,6 +90,14 @@ CheckTypeSize(xmlAutomata,0, 14713, 2)
 CheckTypeSize(xmlAutomata,0, 14713, 11)
 #elif __ia64__
 CheckTypeSize(xmlAutomata,0, 14713, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAutomata,0, 14713, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAutomata,0, 14713, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAutomata,0, 14713, 10)
+#elif __s390x__
+CheckTypeSize(xmlAutomata,0, 14713, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14713,0);
 Msg("Find size of xmlAutomata (14713)\n");
@@ -77,6 +109,14 @@ CheckTypeSize(xmlAutomata *,4, 14714, 2)
 CheckTypeSize(xmlAutomata *,8, 14714, 11)
 #elif __ia64__
 CheckTypeSize(xmlAutomata *,8, 14714, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAutomata *,4, 14714, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAutomata *,8, 14714, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAutomata *,4, 14714, 10)
+#elif __s390x__
+CheckTypeSize(xmlAutomata *,8, 14714, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14714,0);
 Msg("Find size of xmlAutomata * (14714)\n");
@@ -88,6 +128,14 @@ CheckTypeSize(xmlAutomataPtr,4, 14715, 2)
 CheckTypeSize(xmlAutomataPtr,8, 14715, 11)
 #elif __ia64__
 CheckTypeSize(xmlAutomataPtr,8, 14715, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlAutomataPtr,4, 14715, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlAutomataPtr,8, 14715, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlAutomataPtr,4, 14715, 10)
+#elif __s390x__
+CheckTypeSize(xmlAutomataPtr,8, 14715, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14715,0);
 Msg("Find size of xmlAutomataPtr (14715)\n");

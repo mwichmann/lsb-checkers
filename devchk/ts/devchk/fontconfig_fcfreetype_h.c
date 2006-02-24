@@ -31,6 +31,14 @@ CheckTypeSize(struct FT_FaceRec_ *,4, 11167, 2)
 CheckTypeSize(struct FT_FaceRec_ *,8, 11167, 11)
 #elif __ia64__
 CheckTypeSize(struct FT_FaceRec_ *,8, 11167, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct FT_FaceRec_ *,4, 11167, 6)
+#elif __powerpc64__
+CheckTypeSize(struct FT_FaceRec_ *,8, 11167, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct FT_FaceRec_ *,4, 11167, 10)
+#elif __s390x__
+CheckTypeSize(struct FT_FaceRec_ *,8, 11167, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11167,0);
 Msg("Find size of FT_FaceRec_ * (11167)\n");
@@ -42,6 +50,14 @@ CheckTypeSize(FT_Face *,4, 11169, 2)
 CheckTypeSize(FT_Face *,8, 11169, 11)
 #elif __ia64__
 CheckTypeSize(FT_Face *,8, 11169, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(FT_Face *,4, 11169, 6)
+#elif __powerpc64__
+CheckTypeSize(FT_Face *,8, 11169, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(FT_Face *,4, 11169, 10)
+#elif __s390x__
+CheckTypeSize(FT_Face *,8, 11169, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11169,0);
 Msg("Find size of FT_Face * (11169)\n");
@@ -53,6 +69,14 @@ CheckTypeSize(const FT_Face,4, 11170, 2)
 CheckTypeSize(const FT_Face,8, 11170, 11)
 #elif __ia64__
 CheckTypeSize(const FT_Face,8, 11170, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const FT_Face,4, 11170, 6)
+#elif __powerpc64__
+CheckTypeSize(const FT_Face,8, 11170, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(const FT_Face,4, 11170, 10)
+#elif __s390x__
+CheckTypeSize(const FT_Face,8, 11170, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11170,0);
 Msg("Find size of const FT_Face (11170)\n");
