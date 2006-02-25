@@ -609,38 +609,116 @@ Msg("Find size of htmlParserOption (15110)\n");
 
 #if __i386__
 CheckTypeSize(htmlParserInputPtr,4, 15111, 2)
-#elif 1
-CheckTypeSize(htmlParserInputPtr,8, 15111, 1)
+#elif __ia64__
+CheckTypeSize(htmlParserInputPtr,8, 15111, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlParserInputPtr,4, 15111, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlParserInputPtr,8, 15111, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlParserInputPtr,4, 15111, 10)
+#elif __s390x__
+CheckTypeSize(htmlParserInputPtr,8, 15111, 12)
+#elif __x86_64__
+CheckTypeSize(htmlParserInputPtr,8, 15111, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15111,0);
+Msg("Find size of htmlParserInputPtr (15111)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(htmlElemDesc *,4, 15112, 2)
-#elif 1
-CheckTypeSize(htmlElemDesc *,8, 15112, 1)
+#elif __ia64__
+CheckTypeSize(htmlElemDesc *,8, 15112, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlElemDesc *,4, 15112, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlElemDesc *,8, 15112, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlElemDesc *,4, 15112, 10)
+#elif __s390x__
+CheckTypeSize(htmlElemDesc *,8, 15112, 12)
+#elif __x86_64__
+CheckTypeSize(htmlElemDesc *,8, 15112, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15112,0);
+Msg("Find size of htmlElemDesc * (15112)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(htmlElemDescPtr,4, 15113, 2)
-#elif 1
-CheckTypeSize(htmlElemDescPtr,8, 15113, 1)
+#elif __ia64__
+CheckTypeSize(htmlElemDescPtr,8, 15113, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlElemDescPtr,4, 15113, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlElemDescPtr,8, 15113, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlElemDescPtr,4, 15113, 10)
+#elif __s390x__
+CheckTypeSize(htmlElemDescPtr,8, 15113, 12)
+#elif __x86_64__
+CheckTypeSize(htmlElemDescPtr,8, 15113, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15113,0);
+Msg("Find size of htmlElemDescPtr (15113)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(htmlEntityDesc *,4, 15114, 2)
-#elif 1
-CheckTypeSize(htmlEntityDesc *,8, 15114, 1)
+#elif __ia64__
+CheckTypeSize(htmlEntityDesc *,8, 15114, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlEntityDesc *,4, 15114, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlEntityDesc *,8, 15114, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlEntityDesc *,4, 15114, 10)
+#elif __s390x__
+CheckTypeSize(htmlEntityDesc *,8, 15114, 12)
+#elif __x86_64__
+CheckTypeSize(htmlEntityDesc *,8, 15114, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15114,0);
+Msg("Find size of htmlEntityDesc * (15114)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(htmlEntityDescPtr,4, 15115, 2)
-#elif 1
-CheckTypeSize(htmlEntityDescPtr,8, 15115, 1)
+#elif __ia64__
+CheckTypeSize(htmlEntityDescPtr,8, 15115, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlEntityDescPtr,4, 15115, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlEntityDescPtr,8, 15115, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlEntityDescPtr,4, 15115, 10)
+#elif __s390x__
+CheckTypeSize(htmlEntityDescPtr,8, 15115, 12)
+#elif __x86_64__
+CheckTypeSize(htmlEntityDescPtr,8, 15115, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15115,0);
+Msg("Find size of htmlEntityDescPtr (15115)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(htmlParserInput,60, 15116, 2)
-#elif 1
-CheckTypeSize(htmlParserInput,104, 15116, 1)
+#elif __ia64__
+CheckTypeSize(htmlParserInput,104, 15116, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(htmlParserInput,60, 15116, 6)
+#elif __powerpc64__
+CheckTypeSize(htmlParserInput,104, 15116, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(htmlParserInput,60, 15116, 10)
+#elif __s390x__
+CheckTypeSize(htmlParserInput,104, 15116, 12)
+#elif __x86_64__
+CheckTypeSize(htmlParserInput,104, 15116, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15116,0);
+Msg("Find size of htmlParserInput (15116)\n");
 #endif
 
 extern htmlStatus htmlElementStatusHere_db(const htmlElemDesc *, const htmlElemDesc *);

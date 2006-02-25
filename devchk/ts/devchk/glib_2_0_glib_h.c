@@ -2227,6 +2227,14 @@ Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
 cnt++;
 #endif
 
+#elif __powerpc__ && !__powerpc64__
+#ifdef G_VA_COPY_AS_ARRAY
+	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture)
+#else
+Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
+cnt++;
+#endif
+
 #elif __ia64__
 #ifdef G_VA_COPY_AS_ARRAY
 	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture)
@@ -2244,6 +2252,14 @@ cnt++;
 #endif
 
 #elif __x86_64__
+#ifdef G_VA_COPY_AS_ARRAY
+	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture)
+#else
+Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
 #ifdef G_VA_COPY_AS_ARRAY
 	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture)
 #else
@@ -12779,8 +12795,21 @@ Msg("Find size of fptr_anonymous-glib.h.types-0 (11811)\n");
 
 #if __i386__
 CheckTypeSize(GOptionArgFunc,4, 11812, 2)
-#elif 1
-CheckTypeSize(GOptionArgFunc,8, 11812, 1)
+#elif __ia64__
+CheckTypeSize(GOptionArgFunc,8, 11812, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GOptionArgFunc,4, 11812, 6)
+#elif __powerpc64__
+CheckTypeSize(GOptionArgFunc,8, 11812, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GOptionArgFunc,4, 11812, 10)
+#elif __s390x__
+CheckTypeSize(GOptionArgFunc,8, 11812, 12)
+#elif __x86_64__
+CheckTypeSize(GOptionArgFunc,8, 11812, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11812,0);
+Msg("Find size of GOptionArgFunc (11812)\n");
 #endif
 
 #if __i386__

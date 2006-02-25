@@ -2489,7 +2489,7 @@ CheckOffset(struct _GdkScreen,normal_gcs,16,2,43519)
 CheckMemberSize(struct _GdkScreen,exposure_gcs,128,2,43520)
 CheckOffset(struct _GdkScreen,exposure_gcs,144,2,43520)
 #elif __x86_64__
-CheckTypeSize(struct _GdkScreen,560, 12717, 11)
+CheckTypeSize(struct _GdkScreen,544, 12717, 11)
 CheckMemberSize(struct _GdkScreen,normal_gcs,256,11,43519)
 CheckOffset(struct _GdkScreen,normal_gcs,32,11,43519)
 CheckMemberSize(struct _GdkScreen,exposure_gcs,256,11,43520)
@@ -2535,7 +2535,7 @@ Msg("Find size of _GdkScreen (12717)\n");
 #if __i386__
 CheckTypeSize(GdkScreen,272, 12719, 2)
 #elif __x86_64__
-CheckTypeSize(GdkScreen,560, 12719, 11)
+CheckTypeSize(GdkScreen,544, 12719, 11)
 #elif __ia64__
 CheckTypeSize(GdkScreen,560, 12719, 3)
 #elif __powerpc__ && !__powerpc64__

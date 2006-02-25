@@ -7133,8 +7133,21 @@ Msg("Find size of fptr_anonymous-glib-object.h.types-0 (12058)\n");
 
 #if __i386__
 CheckTypeSize(GObjectFinalizeFunc,4, 12059, 2)
-#elif 1
-CheckTypeSize(GObjectFinalizeFunc,8, 12059, 1)
+#elif __ia64__
+CheckTypeSize(GObjectFinalizeFunc,8, 12059, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GObjectFinalizeFunc,4, 12059, 6)
+#elif __powerpc64__
+CheckTypeSize(GObjectFinalizeFunc,8, 12059, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GObjectFinalizeFunc,4, 12059, 10)
+#elif __s390x__
+CheckTypeSize(GObjectFinalizeFunc,8, 12059, 12)
+#elif __x86_64__
+CheckTypeSize(GObjectFinalizeFunc,8, 12059, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12059,0);
+Msg("Find size of GObjectFinalizeFunc (12059)\n");
 #endif
 
 #if __i386__
@@ -7151,8 +7164,21 @@ Msg("Find size of fptr_anonymous-glib-object.h.types-2 (12060)\n");
 
 #if __i386__
 CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 2)
-#elif 1
-CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 1)
+#elif __ia64__
+CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 6)
+#elif __powerpc64__
+CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 10)
+#elif __s390x__
+CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 12)
+#elif __x86_64__
+CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12061,0);
+Msg("Find size of GObjectGetPropertyFunc (12061)\n");
 #endif
 
 #if __i386__
@@ -7169,8 +7195,21 @@ Msg("Find size of fptr_anonymous-glib-object.h.types-4 (12062)\n");
 
 #if __i386__
 CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 2)
-#elif 1
-CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 1)
+#elif __ia64__
+CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 6)
+#elif __powerpc64__
+CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 10)
+#elif __s390x__
+CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 12)
+#elif __x86_64__
+CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12063,0);
+Msg("Find size of GObjectSetPropertyFunc (12063)\n");
 #endif
 
 #if __i386__

@@ -340,8 +340,12 @@ CheckTypeSize(long unsigned int,8,11186,3)
 CheckTypeSize(long unsigned int,4,11186,6)
 #elif __powerpc64__
 CheckTypeSize(long unsigned int,8,11186,9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(long unsigned int,4,11186,10)
 #elif __x86_64__
 CheckTypeSize(long unsigned int,8,11186,11)
+#elif __s390x__
+CheckTypeSize(long unsigned int,8,11186,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11186,0);
 #endif
@@ -354,8 +358,12 @@ CheckTypeSize(short unsigned int,2,11209,3)
 CheckTypeSize(short unsigned int,2,11209,6)
 #elif __powerpc64__
 CheckTypeSize(short unsigned int,2,11209,9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(short unsigned int,2,11209,10)
 #elif __x86_64__
 CheckTypeSize(short unsigned int,2,11209,11)
+#elif __s390x__
+CheckTypeSize(short unsigned int,2,11209,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11209,0);
 #endif
@@ -368,8 +376,12 @@ CheckTypeSize(short int,2,11264,3)
 CheckTypeSize(short int,2,11264,6)
 #elif __powerpc64__
 CheckTypeSize(short int,2,11264,9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(short int,2,11264,10)
 #elif __x86_64__
 CheckTypeSize(short int,2,11264,11)
+#elif __s390x__
+CheckTypeSize(short int,2,11264,12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11264,0);
 #endif
@@ -378,8 +390,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11264,0);
 CheckTypeSize(long long unsigned int,8,11620,2)
 #elif __x86_64__
 CheckTypeSize(long long unsigned int,8,11620,11)
+#elif __ia64__
+CheckTypeSize(long long unsigned int,8,11620,11)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(long long unsigned int,8,11620,11)
+#elif __powerpc64__
+CheckTypeSize(long long unsigned int,8,11620,11)
+#elif __s390__ && !__s390x__
+CheckTypeSize(long long unsigned int,8,11620,11)
+#elif __s390x__
+CheckTypeSize(long long unsigned int,8,11620,11)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15127,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11620,0);
 #endif
 
 #ifdef TET_TEST

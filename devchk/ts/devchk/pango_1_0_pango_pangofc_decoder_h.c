@@ -163,26 +163,112 @@ CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved3,4,2,43312)
 CheckOffset(struct _PangoFcDecoderClass,_pango_reserved3,84,2,43312)
 CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved4,4,2,43313)
 CheckOffset(struct _PangoFcDecoderClass,_pango_reserved4,88,2,43313)
-#elif 1
-CheckTypeSize(struct _PangoFcDecoderClass,184, 12601, 1)
-CheckMemberSize(struct _PangoFcDecoderClass,get_charset,4,1,43308)
-CheckOffset(struct _PangoFcDecoderClass,get_charset,68,1,43308)
-CheckMemberSize(struct _PangoFcDecoderClass,get_glyph,4,1,43309)
-CheckOffset(struct _PangoFcDecoderClass,get_glyph,72,1,43309)
-CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved1,4,1,43310)
-CheckOffset(struct _PangoFcDecoderClass,_pango_reserved1,76,1,43310)
-CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved2,4,1,43311)
-CheckOffset(struct _PangoFcDecoderClass,_pango_reserved2,80,1,43311)
-CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved3,4,1,43312)
-CheckOffset(struct _PangoFcDecoderClass,_pango_reserved3,84,1,43312)
-CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved4,4,1,43313)
-CheckOffset(struct _PangoFcDecoderClass,_pango_reserved4,88,1,43313)
+#elif __ia64__
+CheckTypeSize(struct _PangoFcDecoderClass,184, 12601, 3)
+CheckMemberSize(struct _PangoFcDecoderClass,get_charset,8,3,43308)
+CheckOffset(struct _PangoFcDecoderClass,get_charset,136,3,43308)
+CheckMemberSize(struct _PangoFcDecoderClass,get_glyph,8,3,43309)
+CheckOffset(struct _PangoFcDecoderClass,get_glyph,144,3,43309)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved1,8,3,43310)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved1,152,3,43310)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved2,8,3,43311)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved2,160,3,43311)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved3,8,3,43312)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved3,168,3,43312)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved4,8,3,43313)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved4,176,3,43313)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _PangoFcDecoderClass,92, 12601, 6)
+CheckMemberSize(struct _PangoFcDecoderClass,get_charset,4,6,43308)
+CheckOffset(struct _PangoFcDecoderClass,get_charset,68,6,43308)
+CheckMemberSize(struct _PangoFcDecoderClass,get_glyph,4,6,43309)
+CheckOffset(struct _PangoFcDecoderClass,get_glyph,72,6,43309)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved1,4,6,43310)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved1,76,6,43310)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved2,4,6,43311)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved2,80,6,43311)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved3,4,6,43312)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved3,84,6,43312)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved4,4,6,43313)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved4,88,6,43313)
+#elif __powerpc64__
+CheckTypeSize(struct _PangoFcDecoderClass,184, 12601, 9)
+CheckMemberSize(struct _PangoFcDecoderClass,get_charset,8,9,43308)
+CheckOffset(struct _PangoFcDecoderClass,get_charset,136,9,43308)
+CheckMemberSize(struct _PangoFcDecoderClass,get_glyph,8,9,43309)
+CheckOffset(struct _PangoFcDecoderClass,get_glyph,144,9,43309)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved1,8,9,43310)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved1,152,9,43310)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved2,8,9,43311)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved2,160,9,43311)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved3,8,9,43312)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved3,168,9,43312)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved4,8,9,43313)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved4,176,9,43313)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _PangoFcDecoderClass,92, 12601, 10)
+CheckMemberSize(struct _PangoFcDecoderClass,get_charset,4,10,43308)
+CheckOffset(struct _PangoFcDecoderClass,get_charset,68,10,43308)
+CheckMemberSize(struct _PangoFcDecoderClass,get_glyph,4,10,43309)
+CheckOffset(struct _PangoFcDecoderClass,get_glyph,72,10,43309)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved1,4,10,43310)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved1,76,10,43310)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved2,4,10,43311)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved2,80,10,43311)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved3,4,10,43312)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved3,84,10,43312)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved4,4,10,43313)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved4,88,10,43313)
+#elif __s390x__
+CheckTypeSize(struct _PangoFcDecoderClass,184, 12601, 12)
+CheckMemberSize(struct _PangoFcDecoderClass,get_charset,8,12,43308)
+CheckOffset(struct _PangoFcDecoderClass,get_charset,136,12,43308)
+CheckMemberSize(struct _PangoFcDecoderClass,get_glyph,8,12,43309)
+CheckOffset(struct _PangoFcDecoderClass,get_glyph,144,12,43309)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved1,8,12,43310)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved1,152,12,43310)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved2,8,12,43311)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved2,160,12,43311)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved3,8,12,43312)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved3,168,12,43312)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved4,8,12,43313)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved4,176,12,43313)
+#elif __x86_64__
+CheckTypeSize(struct _PangoFcDecoderClass,184, 12601, 11)
+CheckMemberSize(struct _PangoFcDecoderClass,get_charset,8,11,43308)
+CheckOffset(struct _PangoFcDecoderClass,get_charset,136,11,43308)
+CheckMemberSize(struct _PangoFcDecoderClass,get_glyph,8,11,43309)
+CheckOffset(struct _PangoFcDecoderClass,get_glyph,144,11,43309)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved1,8,11,43310)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved1,152,11,43310)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved2,8,11,43311)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved2,160,11,43311)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved3,8,11,43312)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved3,168,11,43312)
+CheckMemberSize(struct _PangoFcDecoderClass,_pango_reserved4,8,11,43313)
+CheckOffset(struct _PangoFcDecoderClass,_pango_reserved4,176,11,43313)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12601,0);
+Msg("Find size of _PangoFcDecoderClass (12601)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(PangoFcDecoderClass,92, 12602, 2)
-#elif 1
-CheckTypeSize(PangoFcDecoderClass,184, 12602, 1)
+#elif __ia64__
+CheckTypeSize(PangoFcDecoderClass,184, 12602, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFcDecoderClass,92, 12602, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoFcDecoderClass,184, 12602, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoFcDecoderClass,92, 12602, 10)
+#elif __s390x__
+CheckTypeSize(PangoFcDecoderClass,184, 12602, 12)
+#elif __x86_64__
+CheckTypeSize(PangoFcDecoderClass,184, 12602, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12602,0);
+Msg("Find size of PangoFcDecoderClass (12602)\n");
 #endif
 
 extern FcCharSet * pango_fc_decoder_get_charset_db(PangoFcDecoder *, PangoFcFont *);

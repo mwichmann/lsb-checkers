@@ -58,7 +58,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef SHMLBA
-	CompareConstant(SHMLBA,4096,1681,architecture)
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
 #else
 Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;

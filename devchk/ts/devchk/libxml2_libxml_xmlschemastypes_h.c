@@ -30,17 +30,17 @@ printf("Checking data structures in libxml2/libxml/xmlschemastypes.h\n");
 #if __i386__
 CheckTypeSize(xmlSchemaType,116, 15048, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaType,224, 15048, 11)
+CheckTypeSize(xmlSchemaType,216, 15048, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaType,224, 15048, 3)
+CheckTypeSize(xmlSchemaType,216, 15048, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaType,120, 15048, 6)
+CheckTypeSize(xmlSchemaType,116, 15048, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaType,224, 15048, 9)
+CheckTypeSize(xmlSchemaType,216, 15048, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaType,120, 15048, 10)
+CheckTypeSize(xmlSchemaType,116, 15048, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaType,224, 15048, 12)
+CheckTypeSize(xmlSchemaType,216, 15048, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15048,0);
 Msg("Find size of xmlSchemaType (15048)\n");
