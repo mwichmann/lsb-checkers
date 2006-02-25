@@ -29,8 +29,34 @@ extern struct classinfo ld_lsb_s390x_so_3_classinfo[];
 extern struct versym ld_lsb_x86_64_so_3[];
 extern struct classinfo ld_lsb_x86_64_so_3_classinfo[];
 #endif
+#if __s390x__
 extern struct versym libatk_1_0_so_0[];
 extern struct classinfo libatk_1_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libatk_1_0_so_0[];
+extern struct classinfo libatk_1_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libatk_1_0_so_0[];
+extern struct classinfo libatk_1_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libatk_1_0_so_0[];
+extern struct classinfo libatk_1_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libatk_1_0_so_0[];
+extern struct classinfo libatk_1_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libatk_1_0_so_0[];
+extern struct classinfo libatk_1_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libatk_1_0_so_0[];
+extern struct classinfo libatk_1_0_so_0_classinfo[];
+#endif
 #if __s390x__
 extern struct versym libc_so_6[];
 extern struct classinfo libc_so_6_classinfo[];
@@ -153,24 +179,232 @@ extern struct classinfo libgcc_s_so_1_classinfo[];
 extern struct versym libgcc_s_so_1[];
 extern struct classinfo libgcc_s_so_1_classinfo[];
 #endif
+#if __s390x__
 extern struct versym libgdk_x11_2_0_so_0[];
 extern struct classinfo libgdk_x11_2_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libgdk_x11_2_0_so_0[];
+extern struct classinfo libgdk_x11_2_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libgdk_x11_2_0_so_0[];
+extern struct classinfo libgdk_x11_2_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libgdk_x11_2_0_so_0[];
+extern struct classinfo libgdk_x11_2_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libgdk_x11_2_0_so_0[];
+extern struct classinfo libgdk_x11_2_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libgdk_x11_2_0_so_0[];
+extern struct classinfo libgdk_x11_2_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libgdk_x11_2_0_so_0[];
+extern struct classinfo libgdk_x11_2_0_so_0_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libgdk_pixbuf_2_0_so_0[];
 extern struct classinfo libgdk_pixbuf_2_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libgdk_pixbuf_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_2_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libgdk_pixbuf_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_2_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libgdk_pixbuf_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_2_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libgdk_pixbuf_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_2_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libgdk_pixbuf_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_2_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libgdk_pixbuf_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_2_0_so_0_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libgdk_pixbuf_xlib_2_0_so[];
 extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libgdk_pixbuf_xlib_2_0_so[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libgdk_pixbuf_xlib_2_0_so[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libgdk_pixbuf_xlib_2_0_so[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libgdk_pixbuf_xlib_2_0_so[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libgdk_pixbuf_xlib_2_0_so[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+#endif
+#if __i386__
+extern struct versym libgdk_pixbuf_xlib_2_0_so[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+#endif
 extern struct versym libGL_so_1[];
 extern struct classinfo libGL_so_1_classinfo[];
+#if __s390x__
 extern struct versym libglib_2_0_so_0[];
 extern struct classinfo libglib_2_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libglib_2_0_so_0[];
+extern struct classinfo libglib_2_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libglib_2_0_so_0[];
+extern struct classinfo libglib_2_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libglib_2_0_so_0[];
+extern struct classinfo libglib_2_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libglib_2_0_so_0[];
+extern struct classinfo libglib_2_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libglib_2_0_so_0[];
+extern struct classinfo libglib_2_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libglib_2_0_so_0[];
+extern struct classinfo libglib_2_0_so_0_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libgmodule_2_0_so_0[];
 extern struct classinfo libgmodule_2_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libgmodule_2_0_so_0[];
+extern struct classinfo libgmodule_2_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libgmodule_2_0_so_0[];
+extern struct classinfo libgmodule_2_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libgmodule_2_0_so_0[];
+extern struct classinfo libgmodule_2_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libgmodule_2_0_so_0[];
+extern struct classinfo libgmodule_2_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libgmodule_2_0_so_0[];
+extern struct classinfo libgmodule_2_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libgmodule_2_0_so_0[];
+extern struct classinfo libgmodule_2_0_so_0_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libgobject_2_0_so_0[];
 extern struct classinfo libgobject_2_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libgobject_2_0_so_0[];
+extern struct classinfo libgobject_2_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libgobject_2_0_so_0[];
+extern struct classinfo libgobject_2_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libgobject_2_0_so_0[];
+extern struct classinfo libgobject_2_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libgobject_2_0_so_0[];
+extern struct classinfo libgobject_2_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libgobject_2_0_so_0[];
+extern struct classinfo libgobject_2_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libgobject_2_0_so_0[];
+extern struct classinfo libgobject_2_0_so_0_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libgthread_2_0_so_0[];
 extern struct classinfo libgthread_2_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libgthread_2_0_so_0[];
+extern struct classinfo libgthread_2_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libgthread_2_0_so_0[];
+extern struct classinfo libgthread_2_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libgthread_2_0_so_0[];
+extern struct classinfo libgthread_2_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libgthread_2_0_so_0[];
+extern struct classinfo libgthread_2_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libgthread_2_0_so_0[];
+extern struct classinfo libgthread_2_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libgthread_2_0_so_0[];
+extern struct classinfo libgthread_2_0_so_0_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libgtk_x11_2_0_so_0[];
 extern struct classinfo libgtk_x11_2_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libgtk_x11_2_0_so_0[];
+extern struct classinfo libgtk_x11_2_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libgtk_x11_2_0_so_0[];
+extern struct classinfo libgtk_x11_2_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libgtk_x11_2_0_so_0[];
+extern struct classinfo libgtk_x11_2_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libgtk_x11_2_0_so_0[];
+extern struct classinfo libgtk_x11_2_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libgtk_x11_2_0_so_0[];
+extern struct classinfo libgtk_x11_2_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libgtk_x11_2_0_so_0[];
+extern struct classinfo libgtk_x11_2_0_so_0_classinfo[];
+#endif
 extern struct versym libICE_so_6[];
 extern struct classinfo libICE_so_6_classinfo[];
 extern struct versym libjpeg_so_62[];
@@ -237,12 +471,90 @@ extern struct classinfo libncurses_so_5_classinfo[];
 #endif
 extern struct versym libpam_so_0[];
 extern struct classinfo libpam_so_0_classinfo[];
+#if __s390x__
 extern struct versym libpango_1_0_so_0[];
 extern struct classinfo libpango_1_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libpango_1_0_so_0[];
+extern struct classinfo libpango_1_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libpango_1_0_so_0[];
+extern struct classinfo libpango_1_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libpango_1_0_so_0[];
+extern struct classinfo libpango_1_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libpango_1_0_so_0[];
+extern struct classinfo libpango_1_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libpango_1_0_so_0[];
+extern struct classinfo libpango_1_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libpango_1_0_so_0[];
+extern struct classinfo libpango_1_0_so_0_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libpangoft2_1_0_so_0[];
 extern struct classinfo libpangoft2_1_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libpangoft2_1_0_so_0[];
+extern struct classinfo libpangoft2_1_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libpangoft2_1_0_so_0[];
+extern struct classinfo libpangoft2_1_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libpangoft2_1_0_so_0[];
+extern struct classinfo libpangoft2_1_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libpangoft2_1_0_so_0[];
+extern struct classinfo libpangoft2_1_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libpangoft2_1_0_so_0[];
+extern struct classinfo libpangoft2_1_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libpangoft2_1_0_so_0[];
+extern struct classinfo libpangoft2_1_0_so_0_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libpangoxft_1_0_so_0[];
 extern struct classinfo libpangoxft_1_0_so_0_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libpangoxft_1_0_so_0[];
+extern struct classinfo libpangoxft_1_0_so_0_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libpangoxft_1_0_so_0[];
+extern struct classinfo libpangoxft_1_0_so_0_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libpangoxft_1_0_so_0[];
+extern struct classinfo libpangoxft_1_0_so_0_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libpangoxft_1_0_so_0[];
+extern struct classinfo libpangoxft_1_0_so_0_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libpangoxft_1_0_so_0[];
+extern struct classinfo libpangoxft_1_0_so_0_classinfo[];
+#endif
+#if __i386__
+extern struct versym libpangoxft_1_0_so_0[];
+extern struct classinfo libpangoxft_1_0_so_0_classinfo[];
+#endif
 extern struct versym libpng12_so_0[];
 extern struct classinfo libpng12_so_0_classinfo[];
 #if __s390x__

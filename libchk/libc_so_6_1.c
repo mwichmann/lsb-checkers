@@ -5933,64 +5933,64 @@ struct versym libc_so_6_1[] = {
 	{"getutxent","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"getutxent","GLIBC_2.2",0,LSB_Core,0,1},
+	{"getutxent","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"getutxent","GLIBC_2.1",0,LSB_Core,0,1},
+	{"getutxent","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"getutxent","GLIBC_2.3",0,LSB_Core,0,1},
+	{"getutxent","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"getutxent","GLIBC_2.1",0,LSB_Core,0,1},
+	{"getutxent","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"getutxent","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if __s390x__
-	{"getutxent","GLIBC_2.2",0,LSB_Core,0,1},
+	{"getutxent","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
 	{"getutxid","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"getutxid","GLIBC_2.2",0,LSB_Core,0,1},
+	{"getutxid","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"getutxid","GLIBC_2.1",0,LSB_Core,0,1},
+	{"getutxid","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"getutxid","GLIBC_2.3",0,LSB_Core,0,1},
+	{"getutxid","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"getutxid","GLIBC_2.1",0,LSB_Core,0,1},
+	{"getutxid","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"getutxid","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if __s390x__
-	{"getutxid","GLIBC_2.2",0,LSB_Core,0,1},
+	{"getutxid","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
 	{"getutxline","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"getutxline","GLIBC_2.2",0,LSB_Core,0,1},
+	{"getutxline","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"getutxline","GLIBC_2.1",0,LSB_Core,0,1},
+	{"getutxline","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"getutxline","GLIBC_2.3",0,LSB_Core,0,1},
+	{"getutxline","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"getutxline","GLIBC_2.1",0,LSB_Core,0,1},
+	{"getutxline","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"getutxline","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if __s390x__
-	{"getutxline","GLIBC_2.2",0,LSB_Core,0,1},
+	{"getutxline","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
 	{"getw","GLIBC_2.0",0,LSB_Core,4,1},
@@ -9336,22 +9336,22 @@ struct versym libc_so_6_1[] = {
 	{"pututxline","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"pututxline","GLIBC_2.2",0,LSB_Core,0,1},
+	{"pututxline","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"pututxline","GLIBC_2.1",0,LSB_Core,0,1},
+	{"pututxline","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"pututxline","GLIBC_2.3",0,LSB_Core,0,1},
+	{"pututxline","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if __s390__ && !__s390x__
-	{"pututxline","GLIBC_2.1",0,LSB_Core,0,1},
+	{"pututxline","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"pututxline","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if __s390x__
-	{"pututxline","GLIBC_2.2",0,LSB_Core,0,1},
+	{"pututxline","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
 	{"putw","GLIBC_2.0",0,LSB_Core,4,1},

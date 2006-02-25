@@ -27,7 +27,27 @@ struct modlib modlibs [] = {
 #if __x86_64__
 	{LSB_Core,"/lib64/ld-lsb-x86-64.so.3",ld_lsb_x86_64_so_3,ld_lsb_x86_64_so_3_classinfo},
 #endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libatk-1.0.so.0",libatk_1_0_so_0,libatk_1_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libatk-1.0.so.0",libatk_1_0_so_0,libatk_1_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libatk-1.0.so.0",libatk_1_0_so_0,libatk_1_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libatk-1.0.so.0",libatk_1_0_so_0,libatk_1_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libatk-1.0.so.0",libatk_1_0_so_0,libatk_1_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libatk-1.0.so.0",libatk_1_0_so_0,libatk_1_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libatk-1.0.so.0",libatk_1_0_so_0,libatk_1_0_so_0_classinfo},
+#endif
 #if __s390x__
 	{LSB_Core,"libc.so.6",libc_so_6,libc_so_6_classinfo},
 #endif
@@ -119,15 +139,175 @@ struct modlib modlibs [] = {
 #if __i386__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo},
 #endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libgdk-x11-2.0.so.0",libgdk_x11_2_0_so_0,libgdk_x11_2_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libgdk-x11-2.0.so.0",libgdk_x11_2_0_so_0,libgdk_x11_2_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libgdk-x11-2.0.so.0",libgdk_x11_2_0_so_0,libgdk_x11_2_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libgdk-x11-2.0.so.0",libgdk_x11_2_0_so_0,libgdk_x11_2_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libgdk-x11-2.0.so.0",libgdk_x11_2_0_so_0,libgdk_x11_2_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libgdk-x11-2.0.so.0",libgdk_x11_2_0_so_0,libgdk_x11_2_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libgdk-x11-2.0.so.0",libgdk_x11_2_0_so_0,libgdk_x11_2_0_so_0_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libgdk_pixbuf-2.0.so.0",libgdk_pixbuf_2_0_so_0,libgdk_pixbuf_2_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf-2.0.so.0",libgdk_pixbuf_2_0_so_0,libgdk_pixbuf_2_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf-2.0.so.0",libgdk_pixbuf_2_0_so_0,libgdk_pixbuf_2_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf-2.0.so.0",libgdk_pixbuf_2_0_so_0,libgdk_pixbuf_2_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf-2.0.so.0",libgdk_pixbuf_2_0_so_0,libgdk_pixbuf_2_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf-2.0.so.0",libgdk_pixbuf_2_0_so_0,libgdk_pixbuf_2_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf-2.0.so.0",libgdk_pixbuf_2_0_so_0,libgdk_pixbuf_2_0_so_0_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libgdk_pixbuf_xlib-2.0.so",libgdk_pixbuf_xlib_2_0_so,libgdk_pixbuf_xlib_2_0_so_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf_xlib-2.0.so",libgdk_pixbuf_xlib_2_0_so,libgdk_pixbuf_xlib_2_0_so_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf_xlib-2.0.so",libgdk_pixbuf_xlib_2_0_so,libgdk_pixbuf_xlib_2_0_so_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf_xlib-2.0.so",libgdk_pixbuf_xlib_2_0_so,libgdk_pixbuf_xlib_2_0_so_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf_xlib-2.0.so",libgdk_pixbuf_xlib_2_0_so,libgdk_pixbuf_xlib_2_0_so_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf_xlib-2.0.so",libgdk_pixbuf_xlib_2_0_so,libgdk_pixbuf_xlib_2_0_so_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libgdk_pixbuf_xlib-2.0.so",libgdk_pixbuf_xlib_2_0_so,libgdk_pixbuf_xlib_2_0_so_classinfo},
+#endif
 	{LSB_Graphics,"libGL.so.1",libGL_so_1,libGL_so_1_classinfo},
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libglib-2.0.so.0",libglib_2_0_so_0,libglib_2_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libglib-2.0.so.0",libglib_2_0_so_0,libglib_2_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libglib-2.0.so.0",libglib_2_0_so_0,libglib_2_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libglib-2.0.so.0",libglib_2_0_so_0,libglib_2_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libglib-2.0.so.0",libglib_2_0_so_0,libglib_2_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libglib-2.0.so.0",libglib_2_0_so_0,libglib_2_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libglib-2.0.so.0",libglib_2_0_so_0,libglib_2_0_so_0_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libgmodule-2.0.so.0",libgmodule_2_0_so_0,libgmodule_2_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libgmodule-2.0.so.0",libgmodule_2_0_so_0,libgmodule_2_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libgmodule-2.0.so.0",libgmodule_2_0_so_0,libgmodule_2_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libgmodule-2.0.so.0",libgmodule_2_0_so_0,libgmodule_2_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libgmodule-2.0.so.0",libgmodule_2_0_so_0,libgmodule_2_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libgmodule-2.0.so.0",libgmodule_2_0_so_0,libgmodule_2_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libgmodule-2.0.so.0",libgmodule_2_0_so_0,libgmodule_2_0_so_0_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libgobject-2.0.so.0",libgobject_2_0_so_0,libgobject_2_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libgobject-2.0.so.0",libgobject_2_0_so_0,libgobject_2_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libgobject-2.0.so.0",libgobject_2_0_so_0,libgobject_2_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libgobject-2.0.so.0",libgobject_2_0_so_0,libgobject_2_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libgobject-2.0.so.0",libgobject_2_0_so_0,libgobject_2_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libgobject-2.0.so.0",libgobject_2_0_so_0,libgobject_2_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libgobject-2.0.so.0",libgobject_2_0_so_0,libgobject_2_0_so_0_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libgthread-2.0.so.0",libgthread_2_0_so_0,libgthread_2_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libgthread-2.0.so.0",libgthread_2_0_so_0,libgthread_2_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libgthread-2.0.so.0",libgthread_2_0_so_0,libgthread_2_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libgthread-2.0.so.0",libgthread_2_0_so_0,libgthread_2_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libgthread-2.0.so.0",libgthread_2_0_so_0,libgthread_2_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libgthread-2.0.so.0",libgthread_2_0_so_0,libgthread_2_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libgthread-2.0.so.0",libgthread_2_0_so_0,libgthread_2_0_so_0_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libgtk-x11-2.0.so.0",libgtk_x11_2_0_so_0,libgtk_x11_2_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libgtk-x11-2.0.so.0",libgtk_x11_2_0_so_0,libgtk_x11_2_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libgtk-x11-2.0.so.0",libgtk_x11_2_0_so_0,libgtk_x11_2_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libgtk-x11-2.0.so.0",libgtk_x11_2_0_so_0,libgtk_x11_2_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libgtk-x11-2.0.so.0",libgtk_x11_2_0_so_0,libgtk_x11_2_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libgtk-x11-2.0.so.0",libgtk_x11_2_0_so_0,libgtk_x11_2_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libgtk-x11-2.0.so.0",libgtk_x11_2_0_so_0,libgtk_x11_2_0_so_0_classinfo},
+#endif
 	{LSB_Graphics,"libICE.so.6",libICE_so_6,libICE_so_6_classinfo},
 	{LSB_Graphics_Ext,"libjpeg.so.62",libjpeg_so_62,libjpeg_so_62_classinfo},
 #if __s390x__
@@ -176,9 +356,69 @@ struct modlib modlibs [] = {
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo},
 #endif
 	{LSB_Core,"libpam.so.0",libpam_so_0,libpam_so_0_classinfo},
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libpangoft2-1.0.so.0",libpangoft2_1_0_so_0,libpangoft2_1_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libpangoft2-1.0.so.0",libpangoft2_1_0_so_0,libpangoft2_1_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libpangoft2-1.0.so.0",libpangoft2_1_0_so_0,libpangoft2_1_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libpangoft2-1.0.so.0",libpangoft2_1_0_so_0,libpangoft2_1_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libpangoft2-1.0.so.0",libpangoft2_1_0_so_0,libpangoft2_1_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libpangoft2-1.0.so.0",libpangoft2_1_0_so_0,libpangoft2_1_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libpangoft2-1.0.so.0",libpangoft2_1_0_so_0,libpangoft2_1_0_so_0_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo},
+#endif
 	{LSB_Graphics_Ext,"libpng12.so.0",libpng12_so_0,libpng12_so_0_classinfo},
 #if __s390x__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo},
