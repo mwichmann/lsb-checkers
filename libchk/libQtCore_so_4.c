@@ -3316,44 +3316,44 @@ const char *_16QTextCodecPlugin_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_N16QTextCodecPluginD1Ev",
 #endif
+#if __i386__
+	"_ZThn8_N16QTextCodecPluginD0Ev",
+#endif
+#if __ia64__
+	"_ZThn16_N16QTextCodecPluginD0Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_N16QTextCodecPluginD0Ev",
+#endif
+#if __powerpc64__
+	"_ZThn16_N16QTextCodecPluginD0Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn8_N16QTextCodecPluginD0Ev",
+#endif
+#if __x86_64__
+	"_ZThn16_N16QTextCodecPluginD0Ev",
+#endif
 #if __s390x__
 	"_ZThn16_N16QTextCodecPluginD0Ev",
 #endif
-#if __x86_64__
-	"_ZThn16_N16QTextCodecPluginD0Ev",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_N16QTextCodecPluginD0Ev",
-#endif
-#if __powerpc64__
-	"_ZThn16_N16QTextCodecPluginD0Ev",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_N16QTextCodecPluginD0Ev",
-#endif
-#if __ia64__
-	"_ZThn16_N16QTextCodecPluginD0Ev",
-#endif
 #if __i386__
-	"_ZThn8_N16QTextCodecPluginD0Ev",
-#endif
-#if __x86_64__
-	"_ZThn16_NK16QTextCodecPlugin4keysEv",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK16QTextCodecPlugin4keysEv",
-#endif
-#if __powerpc64__
-	"_ZThn16_NK16QTextCodecPlugin4keysEv",
-#endif
-#if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK16QTextCodecPlugin4keysEv",
 #endif
 #if __ia64__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
-#if __i386__
+#if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK16QTextCodecPlugin4keysEv",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK16QTextCodecPlugin4keysEv",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK16QTextCodecPlugin4keysEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
 #if __s390x__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
