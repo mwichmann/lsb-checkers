@@ -392,7 +392,7 @@ CheckTypeSize(struct rpc_msg *,8, 9985, 9)
 #elif __i386__
 CheckTypeSize(struct rpc_msg *,4, 9985, 2)
 #elif __ia64__
-CheckTypeSize(struct rpc_msg *,0, 9985, 3)
+CheckTypeSize(struct rpc_msg *,8, 9985, 3)
 #endif
 
 #if __i386__

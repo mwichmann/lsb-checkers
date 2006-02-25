@@ -410,7 +410,7 @@ Msg("Find size of XcmsParseStringProc (8869)\n");
 #if __i386__
 CheckTypeSize(struct _XcmsCCC *,4, 8852, 2)
 #elif __ia64__
-CheckTypeSize(struct _XcmsCCC *,0, 8852, 3)
+CheckTypeSize(struct _XcmsCCC *,8, 8852, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _XcmsCCC *,4, 8852, 6)
 #elif __s390__ && !__s390x__

@@ -230,10 +230,10 @@ Msg("Find size of fptr_anonymous-debugXML.h.types-0 (15125)\n");
 
 #if __i386__
 CheckTypeSize(xmlShellCmd,4, 15126, 2)
-#elif __ia64__
-CheckTypeSize(xmlShellCmd,8, 15126, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(xmlShellCmd,4, 15126, 6)
+#elif __ia64__
+CheckTypeSize(xmlShellCmd,8, 15126, 3)
 #elif __powerpc64__
 CheckTypeSize(xmlShellCmd,8, 15126, 9)
 #elif __s390__ && !__s390x__

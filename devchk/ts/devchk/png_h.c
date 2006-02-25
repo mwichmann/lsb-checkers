@@ -2197,7 +2197,7 @@ CheckTypeSize(png_struct,712, 11173, 2)
 #elif __x86_64__
 CheckTypeSize(png_struct,1208, 11173, 11)
 #elif __ia64__
-CheckTypeSize(png_struct,1616, 11173, 3)
+CheckTypeSize(png_struct,1712, 11173, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(png_struct,1152, 11173, 6)
 #elif __powerpc64__
@@ -2254,7 +2254,7 @@ CheckTypeSize(png_info,288, 11177, 2)
 #elif __x86_64__
 CheckTypeSize(png_info,464, 11177, 11)
 #elif __ia64__
-CheckTypeSize(png_info,360, 11177, 3)
+CheckTypeSize(png_info,464, 11177, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(png_info,288, 11177, 6)
 #elif __powerpc64__
@@ -2418,7 +2418,7 @@ CheckTypeSize(png_uint_32,4, 11187, 2)
 #elif __x86_64__
 CheckTypeSize(png_uint_32,8, 11187, 11)
 #elif __ia64__
-CheckTypeSize(png_uint_32,4, 11187, 3)
+CheckTypeSize(png_uint_32,8, 11187, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(png_uint_32,4, 11187, 6)
 #elif __powerpc64__
@@ -2619,7 +2619,7 @@ CheckTypeSize(png_int_32,4, 11195, 2)
 #elif __x86_64__
 CheckTypeSize(png_int_32,8, 11195, 11)
 #elif __ia64__
-CheckTypeSize(png_int_32,4, 11195, 3)
+CheckTypeSize(png_int_32,8, 11195, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(png_int_32,4, 11195, 6)
 #elif __powerpc64__
@@ -3691,17 +3691,17 @@ CheckOffset(struct png_row_info_struct,channels,18,11,41000)
 CheckMemberSize(struct png_row_info_struct,pixel_depth,1,11,41001)
 CheckOffset(struct png_row_info_struct,pixel_depth,19,11,41001)
 #elif __ia64__
-CheckTypeSize(struct png_row_info_struct,12, 11244, 3)
-CheckMemberSize(struct png_row_info_struct,rowbytes,4,3,40997)
-CheckOffset(struct png_row_info_struct,rowbytes,4,3,40997)
+CheckTypeSize(struct png_row_info_struct,24, 11244, 3)
+CheckMemberSize(struct png_row_info_struct,rowbytes,8,3,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,8,3,40997)
 CheckMemberSize(struct png_row_info_struct,color_type,1,3,40998)
-CheckOffset(struct png_row_info_struct,color_type,8,3,40998)
+CheckOffset(struct png_row_info_struct,color_type,16,3,40998)
 CheckMemberSize(struct png_row_info_struct,bit_depth,1,3,40999)
-CheckOffset(struct png_row_info_struct,bit_depth,9,3,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,17,3,40999)
 CheckMemberSize(struct png_row_info_struct,channels,1,3,41000)
-CheckOffset(struct png_row_info_struct,channels,10,3,41000)
+CheckOffset(struct png_row_info_struct,channels,18,3,41000)
 CheckMemberSize(struct png_row_info_struct,pixel_depth,1,3,41001)
-CheckOffset(struct png_row_info_struct,pixel_depth,11,3,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,19,3,41001)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct png_row_info_struct,12, 11244, 6)
 CheckMemberSize(struct png_row_info_struct,rowbytes,4,6,40997)
@@ -3760,7 +3760,7 @@ CheckTypeSize(png_row_info,12, 11245, 2)
 #elif __x86_64__
 CheckTypeSize(png_row_info,24, 11245, 11)
 #elif __ia64__
-CheckTypeSize(png_row_info,12, 11245, 3)
+CheckTypeSize(png_row_info,24, 11245, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(png_row_info,12, 11245, 6)
 #elif __powerpc64__
@@ -3886,7 +3886,7 @@ CheckTypeSize(png_fixed_point,4, 16185, 2)
 #elif __x86_64__
 CheckTypeSize(png_fixed_point,8, 16185, 11)
 #elif __ia64__
-CheckTypeSize(png_fixed_point,4, 16185, 3)
+CheckTypeSize(png_fixed_point,8, 16185, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(png_fixed_point,4, 16185, 6)
 #elif __powerpc64__

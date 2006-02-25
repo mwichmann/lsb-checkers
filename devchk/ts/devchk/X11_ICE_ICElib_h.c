@@ -464,7 +464,7 @@ Msg("Find size of IceIOErrorHandler (8772)\n");
 #if __i386__
 CheckTypeSize(struct _IceListenObj *,4, 7710, 2)
 #elif __ia64__
-CheckTypeSize(struct _IceListenObj *,0, 7710, 3)
+CheckTypeSize(struct _IceListenObj *,8, 7710, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _IceListenObj *,4, 7710, 6)
 #elif __s390__ && !__s390x__

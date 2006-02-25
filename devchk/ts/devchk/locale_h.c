@@ -728,7 +728,7 @@ CheckTypeSize(struct __locale_struct *,4, 10532, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct __locale_struct *,4, 10532, 6)
 #elif __ia64__
-CheckTypeSize(struct __locale_struct *,0, 10532, 3)
+CheckTypeSize(struct __locale_struct *,8, 10532, 3)
 #elif __s390x__
 CheckTypeSize(struct __locale_struct *,8, 10532, 12)
 #elif __s390__ && !__s390x__
