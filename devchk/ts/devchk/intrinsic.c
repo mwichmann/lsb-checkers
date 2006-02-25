@@ -388,20 +388,20 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11264,0);
 
 #if __i386__
 CheckTypeSize(long long unsigned int,8,11620,2)
+#elif __ia64__
+CheckTypeSize(long long unsigned int,8,11620,3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(long long unsigned int,8,11620,6)
+#elif __powerpc64__
+CheckTypeSize(long long unsigned int,8,11620,9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(long long unsigned int,8,11620,10)
 #elif __x86_64__
 CheckTypeSize(long long unsigned int,8,11620,11)
-#elif __ia64__
-CheckTypeSize(long long unsigned int,8,11620,11)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(long long unsigned int,8,11620,11)
-#elif __powerpc64__
-CheckTypeSize(long long unsigned int,8,11620,11)
-#elif __s390__ && !__s390x__
-CheckTypeSize(long long unsigned int,8,11620,11)
 #elif __s390x__
-CheckTypeSize(long long unsigned int,8,11620,11)
+CheckTypeSize(long long unsigned int,8,11620,12)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11620,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15127,0);
 #endif
 
 #ifdef TET_TEST

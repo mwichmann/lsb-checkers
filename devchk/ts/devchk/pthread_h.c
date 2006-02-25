@@ -324,7 +324,7 @@ CheckTypeSize(pthread_rwlock_t *,4, 9056, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(pthread_rwlock_t *,4, 9056, 6)
 #elif __ia64__
-CheckTypeSize(pthread_rwlock_t *,0, 9056, 3)
+CheckTypeSize(pthread_rwlock_t *,8, 9056, 3)
 #elif __s390__ && !__s390x__
 CheckTypeSize(pthread_rwlock_t *,4, 9056, 10)
 #elif __powerpc64__

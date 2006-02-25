@@ -754,7 +754,7 @@ Msg("Find size of anon-_ObjectClassExtensionRec (10267)\n");
 #if __i386__
 CheckTypeSize(struct _ObjectClassExtensionRec *,4, 10269, 2)
 #elif __ia64__
-CheckTypeSize(struct _ObjectClassExtensionRec *,0, 10269, 3)
+CheckTypeSize(struct _ObjectClassExtensionRec *,8, 10269, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct _ObjectClassExtensionRec *,4, 10269, 6)
 #elif __s390__ && !__s390x__

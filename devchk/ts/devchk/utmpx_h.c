@@ -38,7 +38,7 @@ CheckTypeSize(struct utmpx *,8, 10558, 11)
 #elif __powerpc64__
 CheckTypeSize(struct utmpx *,8, 10558, 9)
 #elif __ia64__
-CheckTypeSize(struct utmpx *,0, 10558, 3)
+CheckTypeSize(struct utmpx *,8, 10558, 3)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10558,0);
 Msg("Find size of utmpx * (10558)\n");
