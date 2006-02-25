@@ -53112,8 +53112,21 @@ Msg("Find size of fptr_anonymous-gtk.h.types-0 (14516)\n");
 
 #if __i386__
 CheckTypeSize(GtkAccelGroupActivate,4, 14517, 2)
-#elif 1
-CheckTypeSize(GtkAccelGroupActivate,8, 14517, 1)
+#elif __ia64__
+CheckTypeSize(GtkAccelGroupActivate,8, 14517, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GtkAccelGroupActivate,4, 14517, 6)
+#elif __powerpc64__
+CheckTypeSize(GtkAccelGroupActivate,8, 14517, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GtkAccelGroupActivate,4, 14517, 10)
+#elif __s390x__
+CheckTypeSize(GtkAccelGroupActivate,8, 14517, 12)
+#elif __x86_64__
+CheckTypeSize(GtkAccelGroupActivate,8, 14517, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14517,0);
+Msg("Find size of GtkAccelGroupActivate (14517)\n");
 #endif
 
 #if __i386__

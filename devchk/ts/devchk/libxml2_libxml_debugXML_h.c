@@ -230,8 +230,21 @@ Msg("Find size of fptr_anonymous-debugXML.h.types-0 (15125)\n");
 
 #if __i386__
 CheckTypeSize(xmlShellCmd,4, 15126, 2)
-#elif 1
-CheckTypeSize(xmlShellCmd,8, 15126, 1)
+#elif __ia64__
+CheckTypeSize(xmlShellCmd,8, 15126, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlShellCmd,4, 15126, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlShellCmd,8, 15126, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlShellCmd,4, 15126, 10)
+#elif __s390x__
+CheckTypeSize(xmlShellCmd,8, 15126, 12)
+#elif __x86_64__
+CheckTypeSize(xmlShellCmd,8, 15126, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15126,0);
+Msg("Find size of xmlShellCmd (15126)\n");
 #endif
 
 extern const char * xmlBoolToText_db(int);

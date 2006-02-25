@@ -1866,64 +1866,201 @@ Msg("Find size of fptr_anonymous-xpath.h.types-2 (15095)\n");
 
 #if __i386__
 CheckTypeSize(xmlXPathEvalFunc,4, 15096, 2)
-#elif 1
-CheckTypeSize(xmlXPathEvalFunc,8, 15096, 1)
+#elif __ia64__
+CheckTypeSize(xmlXPathEvalFunc,8, 15096, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlXPathEvalFunc,4, 15096, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlXPathEvalFunc,8, 15096, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlXPathEvalFunc,4, 15096, 10)
+#elif __s390x__
+CheckTypeSize(xmlXPathEvalFunc,8, 15096, 12)
+#elif __x86_64__
+CheckTypeSize(xmlXPathEvalFunc,8, 15096, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15096,0);
+Msg("Find size of xmlXPathEvalFunc (15096)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(struct _xmlXPathFunct,8, 15097, 2)
 CheckMemberSize(struct _xmlXPathFunct,func,4,2,50098)
 CheckOffset(struct _xmlXPathFunct,func,4,2,50098)
-#elif 1
-CheckTypeSize(struct _xmlXPathFunct,16, 15097, 1)
-CheckMemberSize(struct _xmlXPathFunct,func,4,1,50098)
-CheckOffset(struct _xmlXPathFunct,func,4,1,50098)
+#elif __ia64__
+CheckTypeSize(struct _xmlXPathFunct,16, 15097, 3)
+CheckMemberSize(struct _xmlXPathFunct,func,8,3,50098)
+CheckOffset(struct _xmlXPathFunct,func,8,3,50098)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlXPathFunct,8, 15097, 6)
+CheckMemberSize(struct _xmlXPathFunct,func,4,6,50098)
+CheckOffset(struct _xmlXPathFunct,func,4,6,50098)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlXPathFunct,16, 15097, 9)
+CheckMemberSize(struct _xmlXPathFunct,func,8,9,50098)
+CheckOffset(struct _xmlXPathFunct,func,8,9,50098)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlXPathFunct,8, 15097, 10)
+CheckMemberSize(struct _xmlXPathFunct,func,4,10,50098)
+CheckOffset(struct _xmlXPathFunct,func,4,10,50098)
+#elif __s390x__
+CheckTypeSize(struct _xmlXPathFunct,16, 15097, 12)
+CheckMemberSize(struct _xmlXPathFunct,func,8,12,50098)
+CheckOffset(struct _xmlXPathFunct,func,8,12,50098)
+#elif __x86_64__
+CheckTypeSize(struct _xmlXPathFunct,16, 15097, 11)
+CheckMemberSize(struct _xmlXPathFunct,func,8,11,50098)
+CheckOffset(struct _xmlXPathFunct,func,8,11,50098)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15097,0);
+Msg("Find size of _xmlXPathFunct (15097)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(xmlXPathFunct,8, 15098, 2)
-#elif 1
-CheckTypeSize(xmlXPathFunct,16, 15098, 1)
+#elif __ia64__
+CheckTypeSize(xmlXPathFunct,16, 15098, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlXPathFunct,8, 15098, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlXPathFunct,16, 15098, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlXPathFunct,8, 15098, 10)
+#elif __s390x__
+CheckTypeSize(xmlXPathFunct,16, 15098, 12)
+#elif __x86_64__
+CheckTypeSize(xmlXPathFunct,16, 15098, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15098,0);
+Msg("Find size of xmlXPathFunct (15098)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(struct _xmlXPathVariable,8, 15099, 2)
 CheckMemberSize(struct _xmlXPathVariable,value,4,2,50100)
 CheckOffset(struct _xmlXPathVariable,value,4,2,50100)
-#elif 1
-CheckTypeSize(struct _xmlXPathVariable,16, 15099, 1)
-CheckMemberSize(struct _xmlXPathVariable,value,4,1,50100)
-CheckOffset(struct _xmlXPathVariable,value,4,1,50100)
+#elif __ia64__
+CheckTypeSize(struct _xmlXPathVariable,16, 15099, 3)
+CheckMemberSize(struct _xmlXPathVariable,value,8,3,50100)
+CheckOffset(struct _xmlXPathVariable,value,8,3,50100)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlXPathVariable,8, 15099, 6)
+CheckMemberSize(struct _xmlXPathVariable,value,4,6,50100)
+CheckOffset(struct _xmlXPathVariable,value,4,6,50100)
+#elif __powerpc64__
+CheckTypeSize(struct _xmlXPathVariable,16, 15099, 9)
+CheckMemberSize(struct _xmlXPathVariable,value,8,9,50100)
+CheckOffset(struct _xmlXPathVariable,value,8,9,50100)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlXPathVariable,8, 15099, 10)
+CheckMemberSize(struct _xmlXPathVariable,value,4,10,50100)
+CheckOffset(struct _xmlXPathVariable,value,4,10,50100)
+#elif __s390x__
+CheckTypeSize(struct _xmlXPathVariable,16, 15099, 12)
+CheckMemberSize(struct _xmlXPathVariable,value,8,12,50100)
+CheckOffset(struct _xmlXPathVariable,value,8,12,50100)
+#elif __x86_64__
+CheckTypeSize(struct _xmlXPathVariable,16, 15099, 11)
+CheckMemberSize(struct _xmlXPathVariable,value,8,11,50100)
+CheckOffset(struct _xmlXPathVariable,value,8,11,50100)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15099,0);
+Msg("Find size of _xmlXPathVariable (15099)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(xmlXPathVariable,8, 15100, 2)
-#elif 1
-CheckTypeSize(xmlXPathVariable,16, 15100, 1)
+#elif __ia64__
+CheckTypeSize(xmlXPathVariable,16, 15100, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlXPathVariable,8, 15100, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlXPathVariable,16, 15100, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlXPathVariable,8, 15100, 10)
+#elif __s390x__
+CheckTypeSize(xmlXPathVariable,16, 15100, 12)
+#elif __x86_64__
+CheckTypeSize(xmlXPathVariable,16, 15100, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15100,0);
+Msg("Find size of xmlXPathVariable (15100)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(xmlXPathVariable *,4, 15101, 2)
-#elif 1
-CheckTypeSize(xmlXPathVariable *,8, 15101, 1)
+#elif __ia64__
+CheckTypeSize(xmlXPathVariable *,8, 15101, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlXPathVariable *,4, 15101, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlXPathVariable *,8, 15101, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlXPathVariable *,4, 15101, 10)
+#elif __s390x__
+CheckTypeSize(xmlXPathVariable *,8, 15101, 12)
+#elif __x86_64__
+CheckTypeSize(xmlXPathVariable *,8, 15101, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15101,0);
+Msg("Find size of xmlXPathVariable * (15101)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(xmlXPathVariablePtr,4, 15102, 2)
-#elif 1
-CheckTypeSize(xmlXPathVariablePtr,8, 15102, 1)
+#elif __ia64__
+CheckTypeSize(xmlXPathVariablePtr,8, 15102, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlXPathVariablePtr,4, 15102, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlXPathVariablePtr,8, 15102, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlXPathVariablePtr,4, 15102, 10)
+#elif __s390x__
+CheckTypeSize(xmlXPathVariablePtr,8, 15102, 12)
+#elif __x86_64__
+CheckTypeSize(xmlXPathVariablePtr,8, 15102, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15102,0);
+Msg("Find size of xmlXPathVariablePtr (15102)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(xmlXPathFunct *,4, 15103, 2)
-#elif 1
-CheckTypeSize(xmlXPathFunct *,8, 15103, 1)
+#elif __ia64__
+CheckTypeSize(xmlXPathFunct *,8, 15103, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlXPathFunct *,4, 15103, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlXPathFunct *,8, 15103, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlXPathFunct *,4, 15103, 10)
+#elif __s390x__
+CheckTypeSize(xmlXPathFunct *,8, 15103, 12)
+#elif __x86_64__
+CheckTypeSize(xmlXPathFunct *,8, 15103, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15103,0);
+Msg("Find size of xmlXPathFunct * (15103)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(xmlXPathFuncPtr,4, 15104, 2)
-#elif 1
-CheckTypeSize(xmlXPathFuncPtr,8, 15104, 1)
+#elif __ia64__
+CheckTypeSize(xmlXPathFuncPtr,8, 15104, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlXPathFuncPtr,4, 15104, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlXPathFuncPtr,8, 15104, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlXPathFuncPtr,4, 15104, 10)
+#elif __s390x__
+CheckTypeSize(xmlXPathFuncPtr,8, 15104, 12)
+#elif __x86_64__
+CheckTypeSize(xmlXPathFuncPtr,8, 15104, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15104,0);
+Msg("Find size of xmlXPathFuncPtr (15104)\n");
 #endif
 
 extern double xmlXPathCastNodeToNumber_db(xmlNodePtr);

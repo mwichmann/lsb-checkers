@@ -9059,16 +9059,52 @@ Msg("Find size of AtkKeyEventType (12339)\n");
 CheckTypeSize(struct _AtkUtil,12, 12340, 2)
 Msg("Missing member data for _AtkUtil on IA32\n");
 CheckOffset(struct _AtkUtil,parent,0,2,43000)
-#elif 1
-CheckTypeSize(struct _AtkUtil,24, 12340, 1)
-Msg("Missing member data for _AtkUtil on All\n");
-CheckOffset(struct _AtkUtil,parent,0,1,43000)
+#elif __ia64__
+CheckTypeSize(struct _AtkUtil,24, 12340, 3)
+Msg("Missing member data for _AtkUtil on IA64\n");
+CheckOffset(struct _AtkUtil,parent,0,3,43000)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkUtil,12, 12340, 6)
+Msg("Missing member data for _AtkUtil on PPC32\n");
+CheckOffset(struct _AtkUtil,parent,0,6,43000)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkUtil,24, 12340, 9)
+Msg("Missing member data for _AtkUtil on PPC64\n");
+CheckOffset(struct _AtkUtil,parent,0,9,43000)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkUtil,12, 12340, 10)
+Msg("Missing member data for _AtkUtil on S390\n");
+CheckOffset(struct _AtkUtil,parent,0,10,43000)
+#elif __s390x__
+CheckTypeSize(struct _AtkUtil,24, 12340, 12)
+Msg("Missing member data for _AtkUtil on S390X\n");
+CheckOffset(struct _AtkUtil,parent,0,12,43000)
+#elif __x86_64__
+CheckTypeSize(struct _AtkUtil,24, 12340, 11)
+Msg("Missing member data for _AtkUtil on x86-64\n");
+CheckOffset(struct _AtkUtil,parent,0,11,43000)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12340,0);
+Msg("Find size of _AtkUtil (12340)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(AtkUtil,12, 12341, 2)
-#elif 1
-CheckTypeSize(AtkUtil,24, 12341, 1)
+#elif __ia64__
+CheckTypeSize(AtkUtil,24, 12341, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkUtil,12, 12341, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkUtil,24, 12341, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkUtil,12, 12341, 10)
+#elif __s390x__
+CheckTypeSize(AtkUtil,24, 12341, 12)
+#elif __x86_64__
+CheckTypeSize(AtkUtil,24, 12341, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12341,0);
+Msg("Find size of AtkUtil (12341)\n");
 #endif
 
 #if __i386__
@@ -9113,32 +9149,104 @@ Msg("Find size of AtkHyperlinkStateFlags (12343)\n");
 CheckTypeSize(struct _AtkNoOpObjectFactory,12, 12344, 2)
 Msg("Missing member data for _AtkNoOpObjectFactory on IA32\n");
 CheckOffset(struct _AtkNoOpObjectFactory,parent,0,2,43002)
-#elif 1
-CheckTypeSize(struct _AtkNoOpObjectFactory,24, 12344, 1)
-Msg("Missing member data for _AtkNoOpObjectFactory on All\n");
-CheckOffset(struct _AtkNoOpObjectFactory,parent,0,1,43002)
+#elif __ia64__
+CheckTypeSize(struct _AtkNoOpObjectFactory,24, 12344, 3)
+Msg("Missing member data for _AtkNoOpObjectFactory on IA64\n");
+CheckOffset(struct _AtkNoOpObjectFactory,parent,0,3,43002)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkNoOpObjectFactory,12, 12344, 6)
+Msg("Missing member data for _AtkNoOpObjectFactory on PPC32\n");
+CheckOffset(struct _AtkNoOpObjectFactory,parent,0,6,43002)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkNoOpObjectFactory,24, 12344, 9)
+Msg("Missing member data for _AtkNoOpObjectFactory on PPC64\n");
+CheckOffset(struct _AtkNoOpObjectFactory,parent,0,9,43002)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkNoOpObjectFactory,12, 12344, 10)
+Msg("Missing member data for _AtkNoOpObjectFactory on S390\n");
+CheckOffset(struct _AtkNoOpObjectFactory,parent,0,10,43002)
+#elif __s390x__
+CheckTypeSize(struct _AtkNoOpObjectFactory,24, 12344, 12)
+Msg("Missing member data for _AtkNoOpObjectFactory on S390X\n");
+CheckOffset(struct _AtkNoOpObjectFactory,parent,0,12,43002)
+#elif __x86_64__
+CheckTypeSize(struct _AtkNoOpObjectFactory,24, 12344, 11)
+Msg("Missing member data for _AtkNoOpObjectFactory on x86-64\n");
+CheckOffset(struct _AtkNoOpObjectFactory,parent,0,11,43002)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12344,0);
+Msg("Find size of _AtkNoOpObjectFactory (12344)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(AtkNoOpObjectFactory,12, 12345, 2)
-#elif 1
-CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 1)
+#elif __ia64__
+CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkNoOpObjectFactory,12, 12345, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkNoOpObjectFactory,12, 12345, 10)
+#elif __s390x__
+CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 12)
+#elif __x86_64__
+CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12345,0);
+Msg("Find size of AtkNoOpObjectFactory (12345)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(struct _AtkNoOpObject,36, 12346, 2)
 Msg("Missing member data for _AtkNoOpObject on IA32\n");
 CheckOffset(struct _AtkNoOpObject,parent,0,2,43003)
-#elif 1
-CheckTypeSize(struct _AtkNoOpObject,72, 12346, 1)
-Msg("Missing member data for _AtkNoOpObject on All\n");
-CheckOffset(struct _AtkNoOpObject,parent,0,1,43003)
+#elif __ia64__
+CheckTypeSize(struct _AtkNoOpObject,72, 12346, 3)
+Msg("Missing member data for _AtkNoOpObject on IA64\n");
+CheckOffset(struct _AtkNoOpObject,parent,0,3,43003)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _AtkNoOpObject,36, 12346, 6)
+Msg("Missing member data for _AtkNoOpObject on PPC32\n");
+CheckOffset(struct _AtkNoOpObject,parent,0,6,43003)
+#elif __powerpc64__
+CheckTypeSize(struct _AtkNoOpObject,72, 12346, 9)
+Msg("Missing member data for _AtkNoOpObject on PPC64\n");
+CheckOffset(struct _AtkNoOpObject,parent,0,9,43003)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _AtkNoOpObject,36, 12346, 10)
+Msg("Missing member data for _AtkNoOpObject on S390\n");
+CheckOffset(struct _AtkNoOpObject,parent,0,10,43003)
+#elif __s390x__
+CheckTypeSize(struct _AtkNoOpObject,72, 12346, 12)
+Msg("Missing member data for _AtkNoOpObject on S390X\n");
+CheckOffset(struct _AtkNoOpObject,parent,0,12,43003)
+#elif __x86_64__
+CheckTypeSize(struct _AtkNoOpObject,72, 12346, 11)
+Msg("Missing member data for _AtkNoOpObject on x86-64\n");
+CheckOffset(struct _AtkNoOpObject,parent,0,11,43003)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12346,0);
+Msg("Find size of _AtkNoOpObject (12346)\n");
 #endif
 
 #if __i386__
 CheckTypeSize(AtkNoOpObject,36, 12347, 2)
-#elif 1
-CheckTypeSize(AtkNoOpObject,72, 12347, 1)
+#elif __ia64__
+CheckTypeSize(AtkNoOpObject,72, 12347, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(AtkNoOpObject,36, 12347, 6)
+#elif __powerpc64__
+CheckTypeSize(AtkNoOpObject,72, 12347, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(AtkNoOpObject,36, 12347, 10)
+#elif __s390x__
+CheckTypeSize(AtkNoOpObject,72, 12347, 12)
+#elif __x86_64__
+CheckTypeSize(AtkNoOpObject,72, 12347, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12347,0);
+Msg("Find size of AtkNoOpObject (12347)\n");
 #endif
 
 extern gchar * atk_text_get_selection_db(AtkText *, gint, gint *, gint *);

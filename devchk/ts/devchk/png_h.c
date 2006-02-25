@@ -2195,7 +2195,7 @@ cnt++;
 #if __i386__
 CheckTypeSize(png_struct,712, 11173, 2)
 #elif __x86_64__
-CheckTypeSize(png_struct,1104, 11173, 11)
+CheckTypeSize(png_struct,1208, 11173, 11)
 #elif __ia64__
 CheckTypeSize(png_struct,1616, 11173, 3)
 #elif __powerpc__ && !__powerpc64__
@@ -2252,7 +2252,7 @@ Msg("Find size of png_structp (11175)\n");
 #if __i386__
 CheckTypeSize(png_info,288, 11177, 2)
 #elif __x86_64__
-CheckTypeSize(png_info,360, 11177, 11)
+CheckTypeSize(png_info,464, 11177, 11)
 #elif __ia64__
 CheckTypeSize(png_info,360, 11177, 3)
 #elif __powerpc__ && !__powerpc64__
@@ -2416,7 +2416,7 @@ Msg("Find size of png_bytep (11185)\n");
 #if __i386__
 CheckTypeSize(png_uint_32,4, 11187, 2)
 #elif __x86_64__
-CheckTypeSize(png_uint_32,4, 11187, 11)
+CheckTypeSize(png_uint_32,8, 11187, 11)
 #elif __ia64__
 CheckTypeSize(png_uint_32,4, 11187, 3)
 #elif __powerpc__ && !__powerpc64__
@@ -2617,7 +2617,7 @@ Msg("Find size of png_color_8p (11194)\n");
 #if __i386__
 CheckTypeSize(png_int_32,4, 11195, 2)
 #elif __x86_64__
-CheckTypeSize(png_int_32,4, 11195, 11)
+CheckTypeSize(png_int_32,8, 11195, 11)
 #elif __ia64__
 CheckTypeSize(png_int_32,4, 11195, 3)
 #elif __powerpc__ && !__powerpc64__
@@ -3679,17 +3679,17 @@ CheckOffset(struct png_row_info_struct,channels,10,2,41000)
 CheckMemberSize(struct png_row_info_struct,pixel_depth,1,2,41001)
 CheckOffset(struct png_row_info_struct,pixel_depth,11,2,41001)
 #elif __x86_64__
-CheckTypeSize(struct png_row_info_struct,12, 11244, 11)
-CheckMemberSize(struct png_row_info_struct,rowbytes,4,11,40997)
-CheckOffset(struct png_row_info_struct,rowbytes,4,11,40997)
+CheckTypeSize(struct png_row_info_struct,24, 11244, 11)
+CheckMemberSize(struct png_row_info_struct,rowbytes,8,11,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,8,11,40997)
 CheckMemberSize(struct png_row_info_struct,color_type,1,11,40998)
-CheckOffset(struct png_row_info_struct,color_type,8,11,40998)
+CheckOffset(struct png_row_info_struct,color_type,16,11,40998)
 CheckMemberSize(struct png_row_info_struct,bit_depth,1,11,40999)
-CheckOffset(struct png_row_info_struct,bit_depth,9,11,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,17,11,40999)
 CheckMemberSize(struct png_row_info_struct,channels,1,11,41000)
-CheckOffset(struct png_row_info_struct,channels,10,11,41000)
+CheckOffset(struct png_row_info_struct,channels,18,11,41000)
 CheckMemberSize(struct png_row_info_struct,pixel_depth,1,11,41001)
-CheckOffset(struct png_row_info_struct,pixel_depth,11,11,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,19,11,41001)
 #elif __ia64__
 CheckTypeSize(struct png_row_info_struct,12, 11244, 3)
 CheckMemberSize(struct png_row_info_struct,rowbytes,4,3,40997)
@@ -3758,7 +3758,7 @@ Msg("Find size of png_row_info_struct (11244)\n");
 #if __i386__
 CheckTypeSize(png_row_info,12, 11245, 2)
 #elif __x86_64__
-CheckTypeSize(png_row_info,12, 11245, 11)
+CheckTypeSize(png_row_info,24, 11245, 11)
 #elif __ia64__
 CheckTypeSize(png_row_info,12, 11245, 3)
 #elif __powerpc__ && !__powerpc64__
@@ -3814,8 +3814,21 @@ Msg("Find size of png_row_infop (11247)\n");
 
 #if __i386__
 CheckTypeSize(version_1_2_8,4, 11248, 2)
-#elif 1
-CheckTypeSize(version_1_2_8,8, 11248, 1)
+#elif __ia64__
+CheckTypeSize(version_1_2_8,8, 11248, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(version_1_2_8,4, 11248, 6)
+#elif __powerpc64__
+CheckTypeSize(version_1_2_8,8, 11248, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(version_1_2_8,4, 11248, 10)
+#elif __s390x__
+CheckTypeSize(version_1_2_8,8, 11248, 12)
+#elif __x86_64__
+CheckTypeSize(version_1_2_8,8, 11248, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11248,0);
+Msg("Find size of version_1_2_8 (11248)\n");
 #endif
 
 #if __i386__
@@ -3871,7 +3884,7 @@ Msg("Find size of png_uint_16pp (16184)\n");
 #if __i386__
 CheckTypeSize(png_fixed_point,4, 16185, 2)
 #elif __x86_64__
-CheckTypeSize(png_fixed_point,4, 16185, 11)
+CheckTypeSize(png_fixed_point,8, 16185, 11)
 #elif __ia64__
 CheckTypeSize(png_fixed_point,4, 16185, 3)
 #elif __powerpc__ && !__powerpc64__
