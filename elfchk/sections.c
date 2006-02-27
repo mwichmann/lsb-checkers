@@ -128,7 +128,7 @@ checkSTRTAB(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 int
 checkNOTE(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
-  return check_NOTE(file1, ((caddr_t)(file1->addr)+hdr1->sh_offset), hdr1->sh_size, journal );
+  return check_NOTE(file1, ((unsigned char *)(file1->addr)+hdr1->sh_offset), hdr1->sh_size, journal );
 }
 
 int

@@ -58,7 +58,7 @@ checkPROGBITS_eh_frame(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journ
          * We should loop over this until the entire section has been used up,
          * but the GNU tools seem to reduce things to a single CIE record.
          */
-        check_CFInformation((caddr_t)(file1->addr)+hdr1->sh_offset, &error);
+        check_CFInformation((unsigned char *)(file1->addr)+hdr1->sh_offset, &error);
 
         if (error)
         {
@@ -77,7 +77,8 @@ checkPROGBITS_eh_frame_hdr(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *j
 EHFRMHDRImage	*frmhdrimg;
 EHFRMHDR	frmhdr;
 unsigned char	*ptr;
-unsigned int	i,numused;
+unsigned int	i;
+int		numused;
 void 		*tmp;
 
 if( elfchk_debug&DEBUG_SECTION_CONTENTS )
