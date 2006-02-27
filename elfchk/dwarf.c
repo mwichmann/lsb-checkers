@@ -617,7 +617,7 @@ int check_CFInformation(unsigned char *ptr, int *error)
 
 int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
 {
-        CIEFrameImage *frameimg;
+        /* CIEFrameImage *frameimg; */
         CIEFrame *frame;
         unsigned char *start = ptr;
         unsigned long length;
@@ -627,38 +627,39 @@ int check_CIE(CIEFrame **cie_list, unsigned char *ptr, int *error)
         if ((frame=(CIEFrame *)calloc(1, sizeof(CIEFrame))) == NULL) {
 		   fprintf (stderr, "Unable to alloc CIE frame memory for %08lx\n", (unsigned long)ptr);
 		   return -1; 
-		}
-		frame->next = *cie_list;
-		*cie_list = frame;
-		frame->cie_start_addr = ptr;
+	}
+	frame->next = *cie_list;
+	*cie_list = frame;
+	frame->cie_start_addr = ptr;
 	/* Frameimg will not hold good if first 4 bytes are 0xffffffff */
 	/*
-        frameimg = (CIEFrameImage *)ptr;
-        frame->length = frameimg->length;
-        frame->cie = frameimg->cie;
-        frame->version = frameimg->version;
-        frame->augmentation = frameimg->augmentation;
-     */
-	    length = *(unsigned int *)ptr;
-		ptr += 4;
+	frameimg = (CIEFrameImage *)ptr;
+	frame->length = frameimg->length;
+	frame->cie = frameimg->cie;
+	frame->version = frameimg->version;
+	frame->augmentation = frameimg->augmentation;
+	*/
+	length = *(unsigned int *)ptr;
+	ptr += 4;
 
-		if (length == 0xffffffff) {
-		   length = *(unsigned long long *)ptr;
-		   ptr += 8;
-		}
+	if (length == 0xffffffff) {
+		length = *(unsigned long long *)ptr;
+		ptr += 8;
+	}
 		
-		frame->length = length;
+	frame->length = length;
 
-		frame->cie = *(unsigned int *)ptr;
-		ptr += 4;
+	frame->cie = *(unsigned int *)ptr;
+	ptr += 4;
 
-		frame->version = *(unsigned int *)ptr;
-		ptr++;
+	frame->version = *(unsigned int *)ptr;
+	ptr++;
 
-        frame->augmentation = ptr;
+        frame->augmentation = (char *)ptr;
 
         if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-                fprintf(stderr,"CIE address: %08lx \n ", (unsigned long)(frame->cie_start_addr));
+                fprintf(stderr,"CIE address: %08lx \n ",
+			(unsigned long)(frame->cie_start_addr));
                 fprintf(stderr,"length: %lx\n", frame->length);
                 fprintf(stderr,"cie: %x\n", frame->cie);
                 fprintf(stderr,"ver: %x\n", frame->version);
