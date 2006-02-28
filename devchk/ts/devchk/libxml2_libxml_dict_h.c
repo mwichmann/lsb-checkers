@@ -32,14 +32,6 @@ CheckTypeSize(xmlDict,0, 14686, 2)
 CheckTypeSize(xmlDict,0, 14686, 11)
 #elif __ia64__
 CheckTypeSize(xmlDict,0, 14686, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlDict,0, 14686, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlDict,0, 14686, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlDict,0, 14686, 10)
-#elif __s390x__
-CheckTypeSize(xmlDict,0, 14686, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14686,0);
 Msg("Find size of xmlDict (14686)\n");

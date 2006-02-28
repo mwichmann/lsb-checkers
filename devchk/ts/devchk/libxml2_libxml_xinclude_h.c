@@ -72,14 +72,6 @@ CheckTypeSize(xmlXIncludeCtxt,0, 14671, 2)
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 11)
 #elif __ia64__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 10)
-#elif __s390x__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14671,0);
 Msg("Find size of xmlXIncludeCtxt (14671)\n");

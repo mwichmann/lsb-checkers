@@ -74,14 +74,6 @@ CheckTypeSize(xmlAttributeTable,0, 14938, 2)
 CheckTypeSize(xmlAttributeTable,0, 14938, 11)
 #elif __ia64__
 CheckTypeSize(xmlAttributeTable,0, 14938, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlAttributeTable,0, 14938, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlAttributeTable,0, 14938, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlAttributeTable,0, 14938, 10)
-#elif __s390x__
-CheckTypeSize(xmlAttributeTable,0, 14938, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14938,0);
 Msg("Find size of xmlAttributeTable (14938)\n");
@@ -339,30 +331,6 @@ CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
 CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
 CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
 #elif __ia64__
-CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
-CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
-CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
-CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
-CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
-CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
-CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
-CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
-CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
-#elif __powerpc64__
-CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
-CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
-CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
-CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
-CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
-CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
-CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
-CheckEnum("XML_ELEMENT_TYPE_MIXED",XML_ELEMENT_TYPE_MIXED,3);
-CheckEnum("XML_ELEMENT_TYPE_ELEMENT",XML_ELEMENT_TYPE_ELEMENT,4);
-#elif __s390x__
 CheckEnum("XML_ELEMENT_TYPE_UNDEFINED",XML_ELEMENT_TYPE_UNDEFINED,0);
 CheckEnum("XML_ELEMENT_TYPE_EMPTY",XML_ELEMENT_TYPE_EMPTY,1);
 CheckEnum("XML_ELEMENT_TYPE_ANY",XML_ELEMENT_TYPE_ANY,2);
@@ -655,26 +623,6 @@ CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
 CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
 CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
 CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
-CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
-CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
-CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
-#elif __powerpc64__
-CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
-CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
-CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
-CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
-CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
-CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
-CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
-#elif __s390x__
-CheckEnum("XML_ATTRIBUTE_NONE",XML_ATTRIBUTE_NONE,1);
-CheckEnum("XML_ATTRIBUTE_REQUIRED",XML_ATTRIBUTE_REQUIRED,2);
-CheckEnum("XML_ATTRIBUTE_IMPLIED",XML_ATTRIBUTE_IMPLIED,3);
-CheckEnum("XML_ATTRIBUTE_FIXED",XML_ATTRIBUTE_FIXED,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14946,0);
 Msg("Find size of anon-libxml2/libxml/valid.h-78 (14946)\n");
@@ -819,14 +767,6 @@ CheckTypeSize(xmlNotationTable,0, 14954, 2)
 CheckTypeSize(xmlNotationTable,0, 14954, 11)
 #elif __ia64__
 CheckTypeSize(xmlNotationTable,0, 14954, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlNotationTable,0, 14954, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlNotationTable,0, 14954, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlNotationTable,0, 14954, 10)
-#elif __s390x__
-CheckTypeSize(xmlNotationTable,0, 14954, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14954,0);
 Msg("Find size of xmlNotationTable (14954)\n");
@@ -1296,14 +1236,6 @@ CheckTypeSize(xmlElementTable,0, 14971, 2)
 CheckTypeSize(xmlElementTable,0, 14971, 11)
 #elif __ia64__
 CheckTypeSize(xmlElementTable,0, 14971, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlElementTable,0, 14971, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlElementTable,0, 14971, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlElementTable,0, 14971, 10)
-#elif __s390x__
-CheckTypeSize(xmlElementTable,0, 14971, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14971,0);
 Msg("Find size of xmlElementTable (14971)\n");
@@ -1353,14 +1285,6 @@ CheckTypeSize(xmlIDTable,0, 14974, 2)
 CheckTypeSize(xmlIDTable,0, 14974, 11)
 #elif __ia64__
 CheckTypeSize(xmlIDTable,0, 14974, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlIDTable,0, 14974, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlIDTable,0, 14974, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlIDTable,0, 14974, 10)
-#elif __s390x__
-CheckTypeSize(xmlIDTable,0, 14974, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14974,0);
 Msg("Find size of xmlIDTable (14974)\n");
@@ -1410,14 +1334,6 @@ CheckTypeSize(xmlRefTable,0, 14977, 2)
 CheckTypeSize(xmlRefTable,0, 14977, 11)
 #elif __ia64__
 CheckTypeSize(xmlRefTable,0, 14977, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRefTable,0, 14977, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlRefTable,0, 14977, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlRefTable,0, 14977, 10)
-#elif __s390x__
-CheckTypeSize(xmlRefTable,0, 14977, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14977,0);
 Msg("Find size of xmlRefTable (14977)\n");

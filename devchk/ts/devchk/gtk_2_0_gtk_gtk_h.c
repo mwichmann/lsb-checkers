@@ -5061,14 +5061,6 @@ CheckTypeSize(GtkIconSet,0, 13041, 2)
 CheckTypeSize(GtkIconSet,0, 13041, 11)
 #elif __ia64__
 CheckTypeSize(GtkIconSet,0, 13041, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkIconSet,0, 13041, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkIconSet,0, 13041, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkIconSet,0, 13041, 10)
-#elif __s390x__
-CheckTypeSize(GtkIconSet,0, 13041, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13041,0);
 Msg("Find size of GtkIconSet (13041)\n");
@@ -5999,26 +5991,6 @@ CheckEnum("GTK_RC_FG",GTK_RC_FG,1);
 CheckEnum("GTK_RC_BG",GTK_RC_BG,2);
 CheckEnum("GTK_RC_TEXT",GTK_RC_TEXT,4);
 CheckEnum("GTK_RC_BASE",GTK_RC_BASE,8);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_RC_FG",GTK_RC_FG,1);
-CheckEnum("GTK_RC_BG",GTK_RC_BG,2);
-CheckEnum("GTK_RC_TEXT",GTK_RC_TEXT,4);
-CheckEnum("GTK_RC_BASE",GTK_RC_BASE,8);
-#elif __powerpc64__
-CheckEnum("GTK_RC_FG",GTK_RC_FG,1);
-CheckEnum("GTK_RC_BG",GTK_RC_BG,2);
-CheckEnum("GTK_RC_TEXT",GTK_RC_TEXT,4);
-CheckEnum("GTK_RC_BASE",GTK_RC_BASE,8);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_RC_FG",GTK_RC_FG,1);
-CheckEnum("GTK_RC_BG",GTK_RC_BG,2);
-CheckEnum("GTK_RC_TEXT",GTK_RC_TEXT,4);
-CheckEnum("GTK_RC_BASE",GTK_RC_BASE,8);
-#elif __s390x__
-CheckEnum("GTK_RC_FG",GTK_RC_FG,1);
-CheckEnum("GTK_RC_BG",GTK_RC_BG,2);
-CheckEnum("GTK_RC_TEXT",GTK_RC_TEXT,4);
-CheckEnum("GTK_RC_BASE",GTK_RC_BASE,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13052,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4431 (13052)\n");
@@ -6620,18 +6592,6 @@ CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
 #elif __ia64__
 CheckEnum("GTK_PROGRESS_CONTINUOUS",GTK_PROGRESS_CONTINUOUS,0);
 CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_PROGRESS_CONTINUOUS",GTK_PROGRESS_CONTINUOUS,0);
-CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
-#elif __powerpc64__
-CheckEnum("GTK_PROGRESS_CONTINUOUS",GTK_PROGRESS_CONTINUOUS,0);
-CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_PROGRESS_CONTINUOUS",GTK_PROGRESS_CONTINUOUS,0);
-CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
-#elif __s390x__
-CheckEnum("GTK_PROGRESS_CONTINUOUS",GTK_PROGRESS_CONTINUOUS,0);
-CheckEnum("GTK_PROGRESS_DISCRETE",GTK_PROGRESS_DISCRETE,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13070,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2924 (13070)\n");
@@ -6667,26 +6627,6 @@ CheckEnum("GTK_PROGRESS_RIGHT_TO_LEFT",GTK_PROGRESS_RIGHT_TO_LEFT,1);
 CheckEnum("GTK_PROGRESS_BOTTOM_TO_TOP",GTK_PROGRESS_BOTTOM_TO_TOP,2);
 CheckEnum("GTK_PROGRESS_TOP_TO_BOTTOM",GTK_PROGRESS_TOP_TO_BOTTOM,3);
 #elif __ia64__
-CheckEnum("GTK_PROGRESS_LEFT_TO_RIGHT",GTK_PROGRESS_LEFT_TO_RIGHT,0);
-CheckEnum("GTK_PROGRESS_RIGHT_TO_LEFT",GTK_PROGRESS_RIGHT_TO_LEFT,1);
-CheckEnum("GTK_PROGRESS_BOTTOM_TO_TOP",GTK_PROGRESS_BOTTOM_TO_TOP,2);
-CheckEnum("GTK_PROGRESS_TOP_TO_BOTTOM",GTK_PROGRESS_TOP_TO_BOTTOM,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_PROGRESS_LEFT_TO_RIGHT",GTK_PROGRESS_LEFT_TO_RIGHT,0);
-CheckEnum("GTK_PROGRESS_RIGHT_TO_LEFT",GTK_PROGRESS_RIGHT_TO_LEFT,1);
-CheckEnum("GTK_PROGRESS_BOTTOM_TO_TOP",GTK_PROGRESS_BOTTOM_TO_TOP,2);
-CheckEnum("GTK_PROGRESS_TOP_TO_BOTTOM",GTK_PROGRESS_TOP_TO_BOTTOM,3);
-#elif __powerpc64__
-CheckEnum("GTK_PROGRESS_LEFT_TO_RIGHT",GTK_PROGRESS_LEFT_TO_RIGHT,0);
-CheckEnum("GTK_PROGRESS_RIGHT_TO_LEFT",GTK_PROGRESS_RIGHT_TO_LEFT,1);
-CheckEnum("GTK_PROGRESS_BOTTOM_TO_TOP",GTK_PROGRESS_BOTTOM_TO_TOP,2);
-CheckEnum("GTK_PROGRESS_TOP_TO_BOTTOM",GTK_PROGRESS_TOP_TO_BOTTOM,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_PROGRESS_LEFT_TO_RIGHT",GTK_PROGRESS_LEFT_TO_RIGHT,0);
-CheckEnum("GTK_PROGRESS_RIGHT_TO_LEFT",GTK_PROGRESS_RIGHT_TO_LEFT,1);
-CheckEnum("GTK_PROGRESS_BOTTOM_TO_TOP",GTK_PROGRESS_BOTTOM_TO_TOP,2);
-CheckEnum("GTK_PROGRESS_TOP_TO_BOTTOM",GTK_PROGRESS_TOP_TO_BOTTOM,3);
-#elif __s390x__
 CheckEnum("GTK_PROGRESS_LEFT_TO_RIGHT",GTK_PROGRESS_LEFT_TO_RIGHT,0);
 CheckEnum("GTK_PROGRESS_RIGHT_TO_LEFT",GTK_PROGRESS_RIGHT_TO_LEFT,1);
 CheckEnum("GTK_PROGRESS_BOTTOM_TO_TOP",GTK_PROGRESS_BOTTOM_TO_TOP,2);
@@ -6975,14 +6915,6 @@ CheckTypeSize(GtkTextBTree,0, 13081, 2)
 CheckTypeSize(GtkTextBTree,0, 13081, 11)
 #elif __ia64__
 CheckTypeSize(GtkTextBTree,0, 13081, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTextBTree,0, 13081, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTextBTree,0, 13081, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTextBTree,0, 13081, 10)
-#elif __s390x__
-CheckTypeSize(GtkTextBTree,0, 13081, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13081,0);
 Msg("Find size of GtkTextBTree (13081)\n");
@@ -7013,14 +6945,6 @@ CheckTypeSize(GtkTextLogAttrCache,0, 13084, 2)
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 11)
 #elif __ia64__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTextLogAttrCache,0, 13084, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTextLogAttrCache,0, 13084, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTextLogAttrCache,0, 13084, 10)
-#elif __s390x__
-CheckTypeSize(GtkTextLogAttrCache,0, 13084, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13084,0);
 Msg("Find size of GtkTextLogAttrCache (13084)\n");
@@ -7484,14 +7408,6 @@ CheckTypeSize(GtkComboBoxPrivate,0, 13098, 2)
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 11)
 #elif __ia64__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkComboBoxPrivate,0, 13098, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkComboBoxPrivate,0, 13098, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkComboBoxPrivate,0, 13098, 10)
-#elif __s390x__
-CheckTypeSize(GtkComboBoxPrivate,0, 13098, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13098,0);
 Msg("Find size of GtkComboBoxPrivate (13098)\n");
@@ -8326,14 +8242,6 @@ CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 2)
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 11)
 #elif __ia64__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 10)
-#elif __s390x__
-CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13119,0);
 Msg("Find size of GtkWindowGeometryInfo (13119)\n");
@@ -8447,30 +8355,6 @@ CheckEnum("GTK_STATE_ACTIVE",GTK_STATE_ACTIVE,1);
 CheckEnum("GTK_STATE_PRELIGHT",GTK_STATE_PRELIGHT,2);
 CheckEnum("GTK_STATE_SELECTED",GTK_STATE_SELECTED,3);
 CheckEnum("GTK_STATE_INSENSITIVE",GTK_STATE_INSENSITIVE,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_STATE_NORMAL",GTK_STATE_NORMAL,0);
-CheckEnum("GTK_STATE_ACTIVE",GTK_STATE_ACTIVE,1);
-CheckEnum("GTK_STATE_PRELIGHT",GTK_STATE_PRELIGHT,2);
-CheckEnum("GTK_STATE_SELECTED",GTK_STATE_SELECTED,3);
-CheckEnum("GTK_STATE_INSENSITIVE",GTK_STATE_INSENSITIVE,4);
-#elif __powerpc64__
-CheckEnum("GTK_STATE_NORMAL",GTK_STATE_NORMAL,0);
-CheckEnum("GTK_STATE_ACTIVE",GTK_STATE_ACTIVE,1);
-CheckEnum("GTK_STATE_PRELIGHT",GTK_STATE_PRELIGHT,2);
-CheckEnum("GTK_STATE_SELECTED",GTK_STATE_SELECTED,3);
-CheckEnum("GTK_STATE_INSENSITIVE",GTK_STATE_INSENSITIVE,4);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_STATE_NORMAL",GTK_STATE_NORMAL,0);
-CheckEnum("GTK_STATE_ACTIVE",GTK_STATE_ACTIVE,1);
-CheckEnum("GTK_STATE_PRELIGHT",GTK_STATE_PRELIGHT,2);
-CheckEnum("GTK_STATE_SELECTED",GTK_STATE_SELECTED,3);
-CheckEnum("GTK_STATE_INSENSITIVE",GTK_STATE_INSENSITIVE,4);
-#elif __s390x__
-CheckEnum("GTK_STATE_NORMAL",GTK_STATE_NORMAL,0);
-CheckEnum("GTK_STATE_ACTIVE",GTK_STATE_ACTIVE,1);
-CheckEnum("GTK_STATE_PRELIGHT",GTK_STATE_PRELIGHT,2);
-CheckEnum("GTK_STATE_SELECTED",GTK_STATE_SELECTED,3);
-CheckEnum("GTK_STATE_INSENSITIVE",GTK_STATE_INSENSITIVE,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13124,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4427 (13124)\n");
@@ -8501,14 +8385,6 @@ CheckTypeSize(GtkTreeRowReference,0, 13127, 2)
 CheckTypeSize(GtkTreeRowReference,0, 13127, 11)
 #elif __ia64__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTreeRowReference,0, 13127, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTreeRowReference,0, 13127, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTreeRowReference,0, 13127, 10)
-#elif __s390x__
-CheckTypeSize(GtkTreeRowReference,0, 13127, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13127,0);
 Msg("Find size of GtkTreeRowReference (13127)\n");
@@ -8542,18 +8418,6 @@ CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
 #elif __ia64__
 CheckEnum("GTK_TREE_MODEL_ITERS_PERSIST",GTK_TREE_MODEL_ITERS_PERSIST,1);
 CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TREE_MODEL_ITERS_PERSIST",GTK_TREE_MODEL_ITERS_PERSIST,1);
-CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
-#elif __powerpc64__
-CheckEnum("GTK_TREE_MODEL_ITERS_PERSIST",GTK_TREE_MODEL_ITERS_PERSIST,1);
-CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TREE_MODEL_ITERS_PERSIST",GTK_TREE_MODEL_ITERS_PERSIST,1);
-CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
-#elif __s390x__
-CheckEnum("GTK_TREE_MODEL_ITERS_PERSIST",GTK_TREE_MODEL_ITERS_PERSIST,1);
-CheckEnum("GTK_TREE_MODEL_LIST_ONLY",GTK_TREE_MODEL_LIST_ONLY,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13129,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4019 (13129)\n");
@@ -8584,14 +8448,6 @@ CheckTypeSize(GtkTreeModel,0, 13132, 2)
 CheckTypeSize(GtkTreeModel,0, 13132, 11)
 #elif __ia64__
 CheckTypeSize(GtkTreeModel,0, 13132, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTreeModel,0, 13132, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTreeModel,0, 13132, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTreeModel,0, 13132, 10)
-#elif __s390x__
-CheckTypeSize(GtkTreeModel,0, 13132, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13132,0);
 Msg("Find size of GtkTreeModel (13132)\n");
@@ -8704,10 +8560,6 @@ Msg("Find size of const GtkTargetEntry (13136)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13137,0);
 Msg("Find size of const GtkTargetEntry * (13137)\n");
@@ -9218,10 +9070,6 @@ Msg("Find size of const GtkRequisition (13145)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13146,0);
 Msg("Find size of const GtkRequisition * (13146)\n");
@@ -9266,14 +9114,6 @@ CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 2)
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 11)
 #elif __ia64__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 10)
-#elif __s390x__
-CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13149,0);
 Msg("Find size of GtkComboBoxEntryPrivate (13149)\n");
@@ -9715,18 +9555,6 @@ CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
 #elif __ia64__
 CheckEnum("GTK_SORT_ASCENDING",GTK_SORT_ASCENDING,0);
 CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_SORT_ASCENDING",GTK_SORT_ASCENDING,0);
-CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
-#elif __powerpc64__
-CheckEnum("GTK_SORT_ASCENDING",GTK_SORT_ASCENDING,0);
-CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_SORT_ASCENDING",GTK_SORT_ASCENDING,0);
-CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
-#elif __s390x__
-CheckEnum("GTK_SORT_ASCENDING",GTK_SORT_ASCENDING,0);
-CheckEnum("GTK_SORT_DESCENDING",GTK_SORT_DESCENDING,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13157,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4055 (13157)\n");
@@ -9853,10 +9681,6 @@ Msg("Find size of GtkTreeIter * (13161)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13162,0);
 Msg("Find size of fptr_gtk_5742 (13162)\n");
@@ -10092,10 +9916,6 @@ Msg("Find size of GtkAboutDialog * (13171)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13172,0);
 Msg("Find size of fptr_gtk_5063 (13172)\n");
@@ -10126,14 +9946,6 @@ CheckTypeSize(GtkTreeSortable,0, 13175, 2)
 CheckTypeSize(GtkTreeSortable,0, 13175, 11)
 #elif __ia64__
 CheckTypeSize(GtkTreeSortable,0, 13175, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTreeSortable,0, 13175, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTreeSortable,0, 13175, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTreeSortable,0, 13175, 10)
-#elif __s390x__
-CheckTypeSize(GtkTreeSortable,0, 13175, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13175,0);
 Msg("Find size of GtkTreeSortable (13175)\n");
@@ -10404,22 +10216,6 @@ CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
 CheckEnum("GTK_UPDATE_CONTINUOUS",GTK_UPDATE_CONTINUOUS,0);
 CheckEnum("GTK_UPDATE_DISCONTINUOUS",GTK_UPDATE_DISCONTINUOUS,1);
 CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_UPDATE_CONTINUOUS",GTK_UPDATE_CONTINUOUS,0);
-CheckEnum("GTK_UPDATE_DISCONTINUOUS",GTK_UPDATE_DISCONTINUOUS,1);
-CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
-#elif __powerpc64__
-CheckEnum("GTK_UPDATE_CONTINUOUS",GTK_UPDATE_CONTINUOUS,0);
-CheckEnum("GTK_UPDATE_DISCONTINUOUS",GTK_UPDATE_DISCONTINUOUS,1);
-CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_UPDATE_CONTINUOUS",GTK_UPDATE_CONTINUOUS,0);
-CheckEnum("GTK_UPDATE_DISCONTINUOUS",GTK_UPDATE_DISCONTINUOUS,1);
-CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
-#elif __s390x__
-CheckEnum("GTK_UPDATE_CONTINUOUS",GTK_UPDATE_CONTINUOUS,0);
-CheckEnum("GTK_UPDATE_DISCONTINUOUS",GTK_UPDATE_DISCONTINUOUS,1);
-CheckEnum("GTK_UPDATE_DELAYED",GTK_UPDATE_DELAYED,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13179,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3050 (13179)\n");
@@ -10453,18 +10249,6 @@ CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
 #elif __ia64__
 CheckEnum("GTK_ORIENTATION_HORIZONTAL",GTK_ORIENTATION_HORIZONTAL,0);
 CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_ORIENTATION_HORIZONTAL",GTK_ORIENTATION_HORIZONTAL,0);
-CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
-#elif __powerpc64__
-CheckEnum("GTK_ORIENTATION_HORIZONTAL",GTK_ORIENTATION_HORIZONTAL,0);
-CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_ORIENTATION_HORIZONTAL",GTK_ORIENTATION_HORIZONTAL,0);
-CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
-#elif __s390x__
-CheckEnum("GTK_ORIENTATION_HORIZONTAL",GTK_ORIENTATION_HORIZONTAL,0);
-CheckEnum("GTK_ORIENTATION_VERTICAL",GTK_ORIENTATION_VERTICAL,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13181,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3046 (13181)\n");
@@ -10495,14 +10279,6 @@ CheckTypeSize(GtkRangeLayout,0, 13184, 2)
 CheckTypeSize(GtkRangeLayout,0, 13184, 11)
 #elif __ia64__
 CheckTypeSize(GtkRangeLayout,0, 13184, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkRangeLayout,0, 13184, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkRangeLayout,0, 13184, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkRangeLayout,0, 13184, 10)
-#elif __s390x__
-CheckTypeSize(GtkRangeLayout,0, 13184, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13184,0);
 Msg("Find size of GtkRangeLayout (13184)\n");
@@ -10533,14 +10309,6 @@ CheckTypeSize(GtkRangeStepTimer,0, 13187, 2)
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 11)
 #elif __ia64__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkRangeStepTimer,0, 13187, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkRangeStepTimer,0, 13187, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkRangeStepTimer,0, 13187, 10)
-#elif __s390x__
-CheckTypeSize(GtkRangeStepTimer,0, 13187, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13187,0);
 Msg("Find size of GtkRangeStepTimer (13187)\n");
@@ -11477,14 +11245,6 @@ CheckTypeSize(GtkCellEditable,0, 13206, 2)
 CheckTypeSize(GtkCellEditable,0, 13206, 11)
 #elif __ia64__
 CheckTypeSize(GtkCellEditable,0, 13206, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkCellEditable,0, 13206, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkCellEditable,0, 13206, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkCellEditable,0, 13206, 10)
-#elif __s390x__
-CheckTypeSize(GtkCellEditable,0, 13206, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13206,0);
 Msg("Find size of GtkCellEditable (13206)\n");
@@ -11518,22 +11278,6 @@ CheckEnum("GTK_TREE_VIEW_COLUMN_GROW_ONLY",GTK_TREE_VIEW_COLUMN_GROW_ONLY,0);
 CheckEnum("GTK_TREE_VIEW_COLUMN_AUTOSIZE",GTK_TREE_VIEW_COLUMN_AUTOSIZE,1);
 CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
 #elif __ia64__
-CheckEnum("GTK_TREE_VIEW_COLUMN_GROW_ONLY",GTK_TREE_VIEW_COLUMN_GROW_ONLY,0);
-CheckEnum("GTK_TREE_VIEW_COLUMN_AUTOSIZE",GTK_TREE_VIEW_COLUMN_AUTOSIZE,1);
-CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TREE_VIEW_COLUMN_GROW_ONLY",GTK_TREE_VIEW_COLUMN_GROW_ONLY,0);
-CheckEnum("GTK_TREE_VIEW_COLUMN_AUTOSIZE",GTK_TREE_VIEW_COLUMN_AUTOSIZE,1);
-CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
-#elif __powerpc64__
-CheckEnum("GTK_TREE_VIEW_COLUMN_GROW_ONLY",GTK_TREE_VIEW_COLUMN_GROW_ONLY,0);
-CheckEnum("GTK_TREE_VIEW_COLUMN_AUTOSIZE",GTK_TREE_VIEW_COLUMN_AUTOSIZE,1);
-CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TREE_VIEW_COLUMN_GROW_ONLY",GTK_TREE_VIEW_COLUMN_GROW_ONLY,0);
-CheckEnum("GTK_TREE_VIEW_COLUMN_AUTOSIZE",GTK_TREE_VIEW_COLUMN_AUTOSIZE,1);
-CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
-#elif __s390x__
 CheckEnum("GTK_TREE_VIEW_COLUMN_GROW_ONLY",GTK_TREE_VIEW_COLUMN_GROW_ONLY,0);
 CheckEnum("GTK_TREE_VIEW_COLUMN_AUTOSIZE",GTK_TREE_VIEW_COLUMN_AUTOSIZE,1);
 CheckEnum("GTK_TREE_VIEW_COLUMN_FIXED",GTK_TREE_VIEW_COLUMN_FIXED,2);
@@ -11753,30 +11497,6 @@ CheckEnum("GTK_BUTTONBOX_EDGE",GTK_BUTTONBOX_EDGE,2);
 CheckEnum("GTK_BUTTONBOX_START",GTK_BUTTONBOX_START,3);
 CheckEnum("GTK_BUTTONBOX_END",GTK_BUTTONBOX_END,4);
 #elif __ia64__
-CheckEnum("GTK_BUTTONBOX_DEFAULT_STYLE",GTK_BUTTONBOX_DEFAULT_STYLE,0);
-CheckEnum("GTK_BUTTONBOX_SPREAD",GTK_BUTTONBOX_SPREAD,1);
-CheckEnum("GTK_BUTTONBOX_EDGE",GTK_BUTTONBOX_EDGE,2);
-CheckEnum("GTK_BUTTONBOX_START",GTK_BUTTONBOX_START,3);
-CheckEnum("GTK_BUTTONBOX_END",GTK_BUTTONBOX_END,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_BUTTONBOX_DEFAULT_STYLE",GTK_BUTTONBOX_DEFAULT_STYLE,0);
-CheckEnum("GTK_BUTTONBOX_SPREAD",GTK_BUTTONBOX_SPREAD,1);
-CheckEnum("GTK_BUTTONBOX_EDGE",GTK_BUTTONBOX_EDGE,2);
-CheckEnum("GTK_BUTTONBOX_START",GTK_BUTTONBOX_START,3);
-CheckEnum("GTK_BUTTONBOX_END",GTK_BUTTONBOX_END,4);
-#elif __powerpc64__
-CheckEnum("GTK_BUTTONBOX_DEFAULT_STYLE",GTK_BUTTONBOX_DEFAULT_STYLE,0);
-CheckEnum("GTK_BUTTONBOX_SPREAD",GTK_BUTTONBOX_SPREAD,1);
-CheckEnum("GTK_BUTTONBOX_EDGE",GTK_BUTTONBOX_EDGE,2);
-CheckEnum("GTK_BUTTONBOX_START",GTK_BUTTONBOX_START,3);
-CheckEnum("GTK_BUTTONBOX_END",GTK_BUTTONBOX_END,4);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_BUTTONBOX_DEFAULT_STYLE",GTK_BUTTONBOX_DEFAULT_STYLE,0);
-CheckEnum("GTK_BUTTONBOX_SPREAD",GTK_BUTTONBOX_SPREAD,1);
-CheckEnum("GTK_BUTTONBOX_EDGE",GTK_BUTTONBOX_EDGE,2);
-CheckEnum("GTK_BUTTONBOX_START",GTK_BUTTONBOX_START,3);
-CheckEnum("GTK_BUTTONBOX_END",GTK_BUTTONBOX_END,4);
-#elif __s390x__
 CheckEnum("GTK_BUTTONBOX_DEFAULT_STYLE",GTK_BUTTONBOX_DEFAULT_STYLE,0);
 CheckEnum("GTK_BUTTONBOX_SPREAD",GTK_BUTTONBOX_SPREAD,1);
 CheckEnum("GTK_BUTTONBOX_EDGE",GTK_BUTTONBOX_EDGE,2);
@@ -12005,14 +11725,6 @@ CheckTypeSize(GtkActionPrivate,0, 13223, 2)
 CheckTypeSize(GtkActionPrivate,0, 13223, 11)
 #elif __ia64__
 CheckTypeSize(GtkActionPrivate,0, 13223, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkActionPrivate,0, 13223, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkActionPrivate,0, 13223, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkActionPrivate,0, 13223, 10)
-#elif __s390x__
-CheckTypeSize(GtkActionPrivate,0, 13223, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13223,0);
 Msg("Find size of GtkActionPrivate (13223)\n");
@@ -12062,14 +11774,6 @@ CheckTypeSize(GtkToggleActionPrivate,0, 13227, 2)
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 11)
 #elif __ia64__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkToggleActionPrivate,0, 13227, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkToggleActionPrivate,0, 13227, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkToggleActionPrivate,0, 13227, 10)
-#elif __s390x__
-CheckTypeSize(GtkToggleActionPrivate,0, 13227, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13227,0);
 Msg("Find size of GtkToggleActionPrivate (13227)\n");
@@ -12154,10 +11858,6 @@ Msg("Find size of const GtkTextIter (13231)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13232,0);
 Msg("Find size of const GtkTextIter * (13232)\n");
@@ -12588,26 +12288,6 @@ CheckEnum("GTK_JUSTIFY_LEFT",GTK_JUSTIFY_LEFT,0);
 CheckEnum("GTK_JUSTIFY_RIGHT",GTK_JUSTIFY_RIGHT,1);
 CheckEnum("GTK_JUSTIFY_CENTER",GTK_JUSTIFY_CENTER,2);
 CheckEnum("GTK_JUSTIFY_FILL",GTK_JUSTIFY_FILL,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_JUSTIFY_LEFT",GTK_JUSTIFY_LEFT,0);
-CheckEnum("GTK_JUSTIFY_RIGHT",GTK_JUSTIFY_RIGHT,1);
-CheckEnum("GTK_JUSTIFY_CENTER",GTK_JUSTIFY_CENTER,2);
-CheckEnum("GTK_JUSTIFY_FILL",GTK_JUSTIFY_FILL,3);
-#elif __powerpc64__
-CheckEnum("GTK_JUSTIFY_LEFT",GTK_JUSTIFY_LEFT,0);
-CheckEnum("GTK_JUSTIFY_RIGHT",GTK_JUSTIFY_RIGHT,1);
-CheckEnum("GTK_JUSTIFY_CENTER",GTK_JUSTIFY_CENTER,2);
-CheckEnum("GTK_JUSTIFY_FILL",GTK_JUSTIFY_FILL,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_JUSTIFY_LEFT",GTK_JUSTIFY_LEFT,0);
-CheckEnum("GTK_JUSTIFY_RIGHT",GTK_JUSTIFY_RIGHT,1);
-CheckEnum("GTK_JUSTIFY_CENTER",GTK_JUSTIFY_CENTER,2);
-CheckEnum("GTK_JUSTIFY_FILL",GTK_JUSTIFY_FILL,3);
-#elif __s390x__
-CheckEnum("GTK_JUSTIFY_LEFT",GTK_JUSTIFY_LEFT,0);
-CheckEnum("GTK_JUSTIFY_RIGHT",GTK_JUSTIFY_RIGHT,1);
-CheckEnum("GTK_JUSTIFY_CENTER",GTK_JUSTIFY_CENTER,2);
-CheckEnum("GTK_JUSTIFY_FILL",GTK_JUSTIFY_FILL,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13237,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3600 (13237)\n");
@@ -12641,22 +12321,6 @@ CheckEnum("GTK_TEXT_DIR_NONE",GTK_TEXT_DIR_NONE,0);
 CheckEnum("GTK_TEXT_DIR_LTR",GTK_TEXT_DIR_LTR,1);
 CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
 #elif __ia64__
-CheckEnum("GTK_TEXT_DIR_NONE",GTK_TEXT_DIR_NONE,0);
-CheckEnum("GTK_TEXT_DIR_LTR",GTK_TEXT_DIR_LTR,1);
-CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TEXT_DIR_NONE",GTK_TEXT_DIR_NONE,0);
-CheckEnum("GTK_TEXT_DIR_LTR",GTK_TEXT_DIR_LTR,1);
-CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
-#elif __powerpc64__
-CheckEnum("GTK_TEXT_DIR_NONE",GTK_TEXT_DIR_NONE,0);
-CheckEnum("GTK_TEXT_DIR_LTR",GTK_TEXT_DIR_LTR,1);
-CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TEXT_DIR_NONE",GTK_TEXT_DIR_NONE,0);
-CheckEnum("GTK_TEXT_DIR_LTR",GTK_TEXT_DIR_LTR,1);
-CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
-#elif __s390x__
 CheckEnum("GTK_TEXT_DIR_NONE",GTK_TEXT_DIR_NONE,0);
 CheckEnum("GTK_TEXT_DIR_LTR",GTK_TEXT_DIR_LTR,1);
 CheckEnum("GTK_TEXT_DIR_RTL",GTK_TEXT_DIR_RTL,2);
@@ -12695,26 +12359,6 @@ CheckEnum("GTK_WRAP_CHAR",GTK_WRAP_CHAR,1);
 CheckEnum("GTK_WRAP_WORD",GTK_WRAP_WORD,2);
 CheckEnum("GTK_WRAP_WORD_CHAR",GTK_WRAP_WORD_CHAR,3);
 #elif __ia64__
-CheckEnum("GTK_WRAP_NONE",GTK_WRAP_NONE,0);
-CheckEnum("GTK_WRAP_CHAR",GTK_WRAP_CHAR,1);
-CheckEnum("GTK_WRAP_WORD",GTK_WRAP_WORD,2);
-CheckEnum("GTK_WRAP_WORD_CHAR",GTK_WRAP_WORD_CHAR,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_WRAP_NONE",GTK_WRAP_NONE,0);
-CheckEnum("GTK_WRAP_CHAR",GTK_WRAP_CHAR,1);
-CheckEnum("GTK_WRAP_WORD",GTK_WRAP_WORD,2);
-CheckEnum("GTK_WRAP_WORD_CHAR",GTK_WRAP_WORD_CHAR,3);
-#elif __powerpc64__
-CheckEnum("GTK_WRAP_NONE",GTK_WRAP_NONE,0);
-CheckEnum("GTK_WRAP_CHAR",GTK_WRAP_CHAR,1);
-CheckEnum("GTK_WRAP_WORD",GTK_WRAP_WORD,2);
-CheckEnum("GTK_WRAP_WORD_CHAR",GTK_WRAP_WORD_CHAR,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_WRAP_NONE",GTK_WRAP_NONE,0);
-CheckEnum("GTK_WRAP_CHAR",GTK_WRAP_CHAR,1);
-CheckEnum("GTK_WRAP_WORD",GTK_WRAP_WORD,2);
-CheckEnum("GTK_WRAP_WORD_CHAR",GTK_WRAP_WORD_CHAR,3);
-#elif __s390x__
 CheckEnum("GTK_WRAP_NONE",GTK_WRAP_NONE,0);
 CheckEnum("GTK_WRAP_CHAR",GTK_WRAP_CHAR,1);
 CheckEnum("GTK_WRAP_WORD",GTK_WRAP_WORD,2);
@@ -12825,14 +12469,6 @@ CheckTypeSize(GtkFileFilter,0, 13248, 2)
 CheckTypeSize(GtkFileFilter,0, 13248, 11)
 #elif __ia64__
 CheckTypeSize(GtkFileFilter,0, 13248, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkFileFilter,0, 13248, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkFileFilter,0, 13248, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkFileFilter,0, 13248, 10)
-#elif __s390x__
-CheckTypeSize(GtkFileFilter,0, 13248, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13248,0);
 Msg("Find size of GtkFileFilter (13248)\n");
@@ -12947,26 +12583,6 @@ CheckEnum("GTK_FILE_FILTER_FILENAME",GTK_FILE_FILTER_FILENAME,1);
 CheckEnum("GTK_FILE_FILTER_URI",GTK_FILE_FILTER_URI,2);
 CheckEnum("GTK_FILE_FILTER_DISPLAY_NAME",GTK_FILE_FILTER_DISPLAY_NAME,4);
 CheckEnum("GTK_FILE_FILTER_MIME_TYPE",GTK_FILE_FILTER_MIME_TYPE,8);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_FILE_FILTER_FILENAME",GTK_FILE_FILTER_FILENAME,1);
-CheckEnum("GTK_FILE_FILTER_URI",GTK_FILE_FILTER_URI,2);
-CheckEnum("GTK_FILE_FILTER_DISPLAY_NAME",GTK_FILE_FILTER_DISPLAY_NAME,4);
-CheckEnum("GTK_FILE_FILTER_MIME_TYPE",GTK_FILE_FILTER_MIME_TYPE,8);
-#elif __powerpc64__
-CheckEnum("GTK_FILE_FILTER_FILENAME",GTK_FILE_FILTER_FILENAME,1);
-CheckEnum("GTK_FILE_FILTER_URI",GTK_FILE_FILTER_URI,2);
-CheckEnum("GTK_FILE_FILTER_DISPLAY_NAME",GTK_FILE_FILTER_DISPLAY_NAME,4);
-CheckEnum("GTK_FILE_FILTER_MIME_TYPE",GTK_FILE_FILTER_MIME_TYPE,8);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_FILE_FILTER_FILENAME",GTK_FILE_FILTER_FILENAME,1);
-CheckEnum("GTK_FILE_FILTER_URI",GTK_FILE_FILTER_URI,2);
-CheckEnum("GTK_FILE_FILTER_DISPLAY_NAME",GTK_FILE_FILTER_DISPLAY_NAME,4);
-CheckEnum("GTK_FILE_FILTER_MIME_TYPE",GTK_FILE_FILTER_MIME_TYPE,8);
-#elif __s390x__
-CheckEnum("GTK_FILE_FILTER_FILENAME",GTK_FILE_FILTER_FILENAME,1);
-CheckEnum("GTK_FILE_FILTER_URI",GTK_FILE_FILTER_URI,2);
-CheckEnum("GTK_FILE_FILTER_DISPLAY_NAME",GTK_FILE_FILTER_DISPLAY_NAME,4);
-CheckEnum("GTK_FILE_FILTER_MIME_TYPE",GTK_FILE_FILTER_MIME_TYPE,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13251,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1418 (13251)\n");
@@ -13032,10 +12648,6 @@ Msg("Find size of const GtkFileFilterInfo (13254)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13255,0);
 Msg("Find size of const GtkFileFilterInfo * (13255)\n");
@@ -13047,14 +12659,6 @@ CheckTypeSize(GtkIconSource,0, 13257, 2)
 CheckTypeSize(GtkIconSource,0, 13257, 11)
 #elif __ia64__
 CheckTypeSize(GtkIconSource,0, 13257, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkIconSource,0, 13257, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkIconSource,0, 13257, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkIconSource,0, 13257, 10)
-#elif __s390x__
-CheckTypeSize(GtkIconSource,0, 13257, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13257,0);
 Msg("Find size of GtkIconSource (13257)\n");
@@ -13066,14 +12670,6 @@ CheckTypeSize(const GtkIconSource,0, 13258, 2)
 CheckTypeSize(const GtkIconSource,0, 13258, 11)
 #elif __ia64__
 CheckTypeSize(const GtkIconSource,0, 13258, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GtkIconSource,0, 13258, 6)
-#elif __powerpc64__
-CheckTypeSize(const GtkIconSource,0, 13258, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GtkIconSource,0, 13258, 10)
-#elif __s390x__
-CheckTypeSize(const GtkIconSource,0, 13258, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13258,0);
 Msg("Find size of const GtkIconSource (13258)\n");
@@ -13082,10 +12678,6 @@ Msg("Find size of const GtkIconSource (13258)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13259,0);
 Msg("Find size of const GtkIconSource * (13259)\n");
@@ -13163,14 +12755,6 @@ CheckTypeSize(GtkToolItemPrivate,0, 13263, 2)
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 11)
 #elif __ia64__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkToolItemPrivate,0, 13263, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkToolItemPrivate,0, 13263, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkToolItemPrivate,0, 13263, 10)
-#elif __s390x__
-CheckTypeSize(GtkToolItemPrivate,0, 13263, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13263,0);
 Msg("Find size of GtkToolItemPrivate (13263)\n");
@@ -13220,14 +12804,6 @@ CheckTypeSize(GtkToolButtonPrivate,0, 13267, 2)
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 11)
 #elif __ia64__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkToolButtonPrivate,0, 13267, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkToolButtonPrivate,0, 13267, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkToolButtonPrivate,0, 13267, 10)
-#elif __s390x__
-CheckTypeSize(GtkToolButtonPrivate,0, 13267, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13267,0);
 Msg("Find size of GtkToolButtonPrivate (13267)\n");
@@ -13329,14 +12905,6 @@ CheckTypeSize(GtkIconViewPrivate,0, 13273, 2)
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 11)
 #elif __ia64__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkIconViewPrivate,0, 13273, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkIconViewPrivate,0, 13273, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkIconViewPrivate,0, 13273, 10)
-#elif __s390x__
-CheckTypeSize(GtkIconViewPrivate,0, 13273, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13273,0);
 Msg("Find size of GtkIconViewPrivate (13273)\n");
@@ -13550,14 +13118,6 @@ CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 2)
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 11)
 #elif __ia64__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 10)
-#elif __s390x__
-CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13279,0);
 Msg("Find size of GtkLabelSelectionInfo (13279)\n");
@@ -13720,14 +13280,6 @@ CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 2)
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 11)
 #elif __ia64__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 10)
-#elif __s390x__
-CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13286,0);
 Msg("Find size of GtkSettingsPropertyValue (13286)\n");
@@ -13758,14 +13310,6 @@ CheckTypeSize(GtkRcContext,0, 13289, 2)
 CheckTypeSize(GtkRcContext,0, 13289, 11)
 #elif __ia64__
 CheckTypeSize(GtkRcContext,0, 13289, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkRcContext,0, 13289, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkRcContext,0, 13289, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkRcContext,0, 13289, 10)
-#elif __s390x__
-CheckTypeSize(GtkRcContext,0, 13289, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13289,0);
 Msg("Find size of GtkRcContext (13289)\n");
@@ -13867,14 +13411,6 @@ CheckTypeSize(GtkUIManagerPrivate,0, 13295, 2)
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 11)
 #elif __ia64__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkUIManagerPrivate,0, 13295, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkUIManagerPrivate,0, 13295, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkUIManagerPrivate,0, 13295, 10)
-#elif __s390x__
-CheckTypeSize(GtkUIManagerPrivate,0, 13295, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13295,0);
 Msg("Find size of GtkUIManagerPrivate (13295)\n");
@@ -14273,14 +13809,6 @@ CheckTypeSize(GtkCellViewPrivate,0, 13310, 2)
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 11)
 #elif __ia64__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkCellViewPrivate,0, 13310, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkCellViewPrivate,0, 13310, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkCellViewPrivate,0, 13310, 10)
-#elif __s390x__
-CheckTypeSize(GtkCellViewPrivate,0, 13310, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13310,0);
 Msg("Find size of GtkCellViewPrivate (13310)\n");
@@ -14490,14 +14018,6 @@ CheckTypeSize(GtkFileChooser,0, 13318, 2)
 CheckTypeSize(GtkFileChooser,0, 13318, 11)
 #elif __ia64__
 CheckTypeSize(GtkFileChooser,0, 13318, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkFileChooser,0, 13318, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkFileChooser,0, 13318, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkFileChooser,0, 13318, 10)
-#elif __s390x__
-CheckTypeSize(GtkFileChooser,0, 13318, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13318,0);
 Msg("Find size of GtkFileChooser (13318)\n");
@@ -14801,22 +14321,6 @@ CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
 CheckEnum("GTK_CURVE_TYPE_LINEAR",GTK_CURVE_TYPE_LINEAR,0);
 CheckEnum("GTK_CURVE_TYPE_SPLINE",GTK_CURVE_TYPE_SPLINE,1);
 CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_CURVE_TYPE_LINEAR",GTK_CURVE_TYPE_LINEAR,0);
-CheckEnum("GTK_CURVE_TYPE_SPLINE",GTK_CURVE_TYPE_SPLINE,1);
-CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
-#elif __powerpc64__
-CheckEnum("GTK_CURVE_TYPE_LINEAR",GTK_CURVE_TYPE_LINEAR,0);
-CheckEnum("GTK_CURVE_TYPE_SPLINE",GTK_CURVE_TYPE_SPLINE,1);
-CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_CURVE_TYPE_LINEAR",GTK_CURVE_TYPE_LINEAR,0);
-CheckEnum("GTK_CURVE_TYPE_SPLINE",GTK_CURVE_TYPE_SPLINE,1);
-CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
-#elif __s390x__
-CheckEnum("GTK_CURVE_TYPE_LINEAR",GTK_CURVE_TYPE_LINEAR,0);
-CheckEnum("GTK_CURVE_TYPE_SPLINE",GTK_CURVE_TYPE_SPLINE,1);
-CheckEnum("GTK_CURVE_TYPE_FREE",GTK_CURVE_TYPE_FREE,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13323,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1013 (13323)\n");
@@ -14847,10 +14351,6 @@ Msg("Find size of GtkCurveType (13324)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13326,0);
 Msg("Find size of gfloat[2] * (13326)\n");
@@ -15045,14 +14545,6 @@ CheckTypeSize(GtkNotebookPage,0, 13331, 2)
 CheckTypeSize(GtkNotebookPage,0, 13331, 11)
 #elif __ia64__
 CheckTypeSize(GtkNotebookPage,0, 13331, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkNotebookPage,0, 13331, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkNotebookPage,0, 13331, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkNotebookPage,0, 13331, 10)
-#elif __s390x__
-CheckTypeSize(GtkNotebookPage,0, 13331, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13331,0);
 Msg("Find size of GtkNotebookPage (13331)\n");
@@ -15263,14 +14755,6 @@ CheckTypeSize(GtkRadioActionPrivate,0, 13342, 2)
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 11)
 #elif __ia64__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkRadioActionPrivate,0, 13342, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkRadioActionPrivate,0, 13342, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkRadioActionPrivate,0, 13342, 10)
-#elif __s390x__
-CheckTypeSize(GtkRadioActionPrivate,0, 13342, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13342,0);
 Msg("Find size of GtkRadioActionPrivate (13342)\n");
@@ -15430,18 +14914,6 @@ CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
 CheckEnum("GTK_PACK_START",GTK_PACK_START,0);
 CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
 #elif __ia64__
-CheckEnum("GTK_PACK_START",GTK_PACK_START,0);
-CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_PACK_START",GTK_PACK_START,0);
-CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
-#elif __powerpc64__
-CheckEnum("GTK_PACK_START",GTK_PACK_START,0);
-CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_PACK_START",GTK_PACK_START,0);
-CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
-#elif __s390x__
 CheckEnum("GTK_PACK_START",GTK_PACK_START,0);
 CheckEnum("GTK_PACK_END",GTK_PACK_END,1);
 #else
@@ -15954,30 +15426,6 @@ CheckEnum("GTK_CALENDAR_SHOW_DAY_NAMES",GTK_CALENDAR_SHOW_DAY_NAMES,2);
 CheckEnum("GTK_CALENDAR_NO_MONTH_CHANGE",GTK_CALENDAR_NO_MONTH_CHANGE,4);
 CheckEnum("GTK_CALENDAR_SHOW_WEEK_NUMBERS",GTK_CALENDAR_SHOW_WEEK_NUMBERS,8);
 CheckEnum("GTK_CALENDAR_WEEK_START_MONDAY",GTK_CALENDAR_WEEK_START_MONDAY,16);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_CALENDAR_SHOW_HEADING",GTK_CALENDAR_SHOW_HEADING,1);
-CheckEnum("GTK_CALENDAR_SHOW_DAY_NAMES",GTK_CALENDAR_SHOW_DAY_NAMES,2);
-CheckEnum("GTK_CALENDAR_NO_MONTH_CHANGE",GTK_CALENDAR_NO_MONTH_CHANGE,4);
-CheckEnum("GTK_CALENDAR_SHOW_WEEK_NUMBERS",GTK_CALENDAR_SHOW_WEEK_NUMBERS,8);
-CheckEnum("GTK_CALENDAR_WEEK_START_MONDAY",GTK_CALENDAR_WEEK_START_MONDAY,16);
-#elif __powerpc64__
-CheckEnum("GTK_CALENDAR_SHOW_HEADING",GTK_CALENDAR_SHOW_HEADING,1);
-CheckEnum("GTK_CALENDAR_SHOW_DAY_NAMES",GTK_CALENDAR_SHOW_DAY_NAMES,2);
-CheckEnum("GTK_CALENDAR_NO_MONTH_CHANGE",GTK_CALENDAR_NO_MONTH_CHANGE,4);
-CheckEnum("GTK_CALENDAR_SHOW_WEEK_NUMBERS",GTK_CALENDAR_SHOW_WEEK_NUMBERS,8);
-CheckEnum("GTK_CALENDAR_WEEK_START_MONDAY",GTK_CALENDAR_WEEK_START_MONDAY,16);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_CALENDAR_SHOW_HEADING",GTK_CALENDAR_SHOW_HEADING,1);
-CheckEnum("GTK_CALENDAR_SHOW_DAY_NAMES",GTK_CALENDAR_SHOW_DAY_NAMES,2);
-CheckEnum("GTK_CALENDAR_NO_MONTH_CHANGE",GTK_CALENDAR_NO_MONTH_CHANGE,4);
-CheckEnum("GTK_CALENDAR_SHOW_WEEK_NUMBERS",GTK_CALENDAR_SHOW_WEEK_NUMBERS,8);
-CheckEnum("GTK_CALENDAR_WEEK_START_MONDAY",GTK_CALENDAR_WEEK_START_MONDAY,16);
-#elif __s390x__
-CheckEnum("GTK_CALENDAR_SHOW_HEADING",GTK_CALENDAR_SHOW_HEADING,1);
-CheckEnum("GTK_CALENDAR_SHOW_DAY_NAMES",GTK_CALENDAR_SHOW_DAY_NAMES,2);
-CheckEnum("GTK_CALENDAR_NO_MONTH_CHANGE",GTK_CALENDAR_NO_MONTH_CHANGE,4);
-CheckEnum("GTK_CALENDAR_SHOW_WEEK_NUMBERS",GTK_CALENDAR_SHOW_WEEK_NUMBERS,8);
-CheckEnum("GTK_CALENDAR_WEEK_START_MONDAY",GTK_CALENDAR_WEEK_START_MONDAY,16);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13360,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-396 (13360)\n");
@@ -16052,14 +15500,6 @@ CheckTypeSize(GtkIconInfo,0, 13367, 2)
 CheckTypeSize(GtkIconInfo,0, 13367, 11)
 #elif __ia64__
 CheckTypeSize(GtkIconInfo,0, 13367, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkIconInfo,0, 13367, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkIconInfo,0, 13367, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkIconInfo,0, 13367, 10)
-#elif __s390x__
-CheckTypeSize(GtkIconInfo,0, 13367, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13367,0);
 Msg("Find size of GtkIconInfo (13367)\n");
@@ -16090,14 +15530,6 @@ CheckTypeSize(GtkTreePath,0, 13370, 2)
 CheckTypeSize(GtkTreePath,0, 13370, 11)
 #elif __ia64__
 CheckTypeSize(GtkTreePath,0, 13370, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTreePath,0, 13370, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTreePath,0, 13370, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTreePath,0, 13370, 10)
-#elif __s390x__
-CheckTypeSize(GtkTreePath,0, 13370, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13370,0);
 Msg("Find size of GtkTreePath (13370)\n");
@@ -16128,14 +15560,6 @@ CheckTypeSize(GtkTreeDragSource,0, 13373, 2)
 CheckTypeSize(GtkTreeDragSource,0, 13373, 11)
 #elif __ia64__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTreeDragSource,0, 13373, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTreeDragSource,0, 13373, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTreeDragSource,0, 13373, 10)
-#elif __s390x__
-CheckTypeSize(GtkTreeDragSource,0, 13373, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13373,0);
 Msg("Find size of GtkTreeDragSource (13373)\n");
@@ -16463,14 +15887,6 @@ CheckTypeSize(GtkArg,0, 13387, 2)
 CheckTypeSize(GtkArg,0, 13387, 11)
 #elif __ia64__
 CheckTypeSize(GtkArg,0, 13387, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkArg,0, 13387, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkArg,0, 13387, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkArg,0, 13387, 10)
-#elif __s390x__
-CheckTypeSize(GtkArg,0, 13387, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13387,0);
 Msg("Find size of GtkArg (13387)\n");
@@ -16498,10 +15914,6 @@ Msg("Find size of GtkArg * (13388)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13389,0);
 Msg("Find size of fptr_gtk_6201 (13389)\n");
@@ -16993,10 +16405,6 @@ Msg("Find size of GtkMenu * (13396)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13397,0);
 Msg("Find size of fptr_gtk_2302 (13397)\n");
@@ -17211,14 +16619,6 @@ CheckTypeSize(GtkIconThemePrivate,0, 13406, 2)
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 11)
 #elif __ia64__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkIconThemePrivate,0, 13406, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkIconThemePrivate,0, 13406, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkIconThemePrivate,0, 13406, 10)
-#elif __s390x__
-CheckTypeSize(GtkIconThemePrivate,0, 13406, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13406,0);
 Msg("Find size of GtkIconThemePrivate (13406)\n");
@@ -17296,26 +16696,6 @@ CheckEnum("GTK_ARROW_UP",GTK_ARROW_UP,0);
 CheckEnum("GTK_ARROW_DOWN",GTK_ARROW_DOWN,1);
 CheckEnum("GTK_ARROW_LEFT",GTK_ARROW_LEFT,2);
 CheckEnum("GTK_ARROW_RIGHT",GTK_ARROW_RIGHT,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_ARROW_UP",GTK_ARROW_UP,0);
-CheckEnum("GTK_ARROW_DOWN",GTK_ARROW_DOWN,1);
-CheckEnum("GTK_ARROW_LEFT",GTK_ARROW_LEFT,2);
-CheckEnum("GTK_ARROW_RIGHT",GTK_ARROW_RIGHT,3);
-#elif __powerpc64__
-CheckEnum("GTK_ARROW_UP",GTK_ARROW_UP,0);
-CheckEnum("GTK_ARROW_DOWN",GTK_ARROW_DOWN,1);
-CheckEnum("GTK_ARROW_LEFT",GTK_ARROW_LEFT,2);
-CheckEnum("GTK_ARROW_RIGHT",GTK_ARROW_RIGHT,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_ARROW_UP",GTK_ARROW_UP,0);
-CheckEnum("GTK_ARROW_DOWN",GTK_ARROW_DOWN,1);
-CheckEnum("GTK_ARROW_LEFT",GTK_ARROW_LEFT,2);
-CheckEnum("GTK_ARROW_RIGHT",GTK_ARROW_RIGHT,3);
-#elif __s390x__
-CheckEnum("GTK_ARROW_UP",GTK_ARROW_UP,0);
-CheckEnum("GTK_ARROW_DOWN",GTK_ARROW_DOWN,1);
-CheckEnum("GTK_ARROW_LEFT",GTK_ARROW_LEFT,2);
-CheckEnum("GTK_ARROW_RIGHT",GTK_ARROW_RIGHT,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13410,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-176 (13410)\n");
@@ -17353,30 +16733,6 @@ CheckEnum("GTK_SHADOW_OUT",GTK_SHADOW_OUT,2);
 CheckEnum("GTK_SHADOW_ETCHED_IN",GTK_SHADOW_ETCHED_IN,3);
 CheckEnum("GTK_SHADOW_ETCHED_OUT",GTK_SHADOW_ETCHED_OUT,4);
 #elif __ia64__
-CheckEnum("GTK_SHADOW_NONE",GTK_SHADOW_NONE,0);
-CheckEnum("GTK_SHADOW_IN",GTK_SHADOW_IN,1);
-CheckEnum("GTK_SHADOW_OUT",GTK_SHADOW_OUT,2);
-CheckEnum("GTK_SHADOW_ETCHED_IN",GTK_SHADOW_ETCHED_IN,3);
-CheckEnum("GTK_SHADOW_ETCHED_OUT",GTK_SHADOW_ETCHED_OUT,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_SHADOW_NONE",GTK_SHADOW_NONE,0);
-CheckEnum("GTK_SHADOW_IN",GTK_SHADOW_IN,1);
-CheckEnum("GTK_SHADOW_OUT",GTK_SHADOW_OUT,2);
-CheckEnum("GTK_SHADOW_ETCHED_IN",GTK_SHADOW_ETCHED_IN,3);
-CheckEnum("GTK_SHADOW_ETCHED_OUT",GTK_SHADOW_ETCHED_OUT,4);
-#elif __powerpc64__
-CheckEnum("GTK_SHADOW_NONE",GTK_SHADOW_NONE,0);
-CheckEnum("GTK_SHADOW_IN",GTK_SHADOW_IN,1);
-CheckEnum("GTK_SHADOW_OUT",GTK_SHADOW_OUT,2);
-CheckEnum("GTK_SHADOW_ETCHED_IN",GTK_SHADOW_ETCHED_IN,3);
-CheckEnum("GTK_SHADOW_ETCHED_OUT",GTK_SHADOW_ETCHED_OUT,4);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_SHADOW_NONE",GTK_SHADOW_NONE,0);
-CheckEnum("GTK_SHADOW_IN",GTK_SHADOW_IN,1);
-CheckEnum("GTK_SHADOW_OUT",GTK_SHADOW_OUT,2);
-CheckEnum("GTK_SHADOW_ETCHED_IN",GTK_SHADOW_ETCHED_IN,3);
-CheckEnum("GTK_SHADOW_ETCHED_OUT",GTK_SHADOW_ETCHED_OUT,4);
-#elif __s390x__
 CheckEnum("GTK_SHADOW_NONE",GTK_SHADOW_NONE,0);
 CheckEnum("GTK_SHADOW_IN",GTK_SHADOW_IN,1);
 CheckEnum("GTK_SHADOW_OUT",GTK_SHADOW_OUT,2);
@@ -17996,14 +17352,6 @@ CheckTypeSize(GtkTextWindow,0, 13418, 2)
 CheckTypeSize(GtkTextWindow,0, 13418, 11)
 #elif __ia64__
 CheckTypeSize(GtkTextWindow,0, 13418, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTextWindow,0, 13418, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTextWindow,0, 13418, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTextWindow,0, 13418, 10)
-#elif __s390x__
-CheckTypeSize(GtkTextWindow,0, 13418, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13418,0);
 Msg("Find size of GtkTextWindow (13418)\n");
@@ -18034,14 +17382,6 @@ CheckTypeSize(GtkTextPendingScroll,0, 13421, 2)
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 11)
 #elif __ia64__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTextPendingScroll,0, 13421, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTextPendingScroll,0, 13421, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTextPendingScroll,0, 13421, 10)
-#elif __s390x__
-CheckTypeSize(GtkTextPendingScroll,0, 13421, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13421,0);
 Msg("Find size of GtkTextPendingScroll (13421)\n");
@@ -18121,38 +17461,6 @@ CheckEnum("GTK_TEXT_WINDOW_RIGHT",GTK_TEXT_WINDOW_RIGHT,4);
 CheckEnum("GTK_TEXT_WINDOW_TOP",GTK_TEXT_WINDOW_TOP,5);
 CheckEnum("GTK_TEXT_WINDOW_BOTTOM",GTK_TEXT_WINDOW_BOTTOM,6);
 #elif __ia64__
-CheckEnum("GTK_TEXT_WINDOW_PRIVATE",GTK_TEXT_WINDOW_PRIVATE,0);
-CheckEnum("GTK_TEXT_WINDOW_WIDGET",GTK_TEXT_WINDOW_WIDGET,1);
-CheckEnum("GTK_TEXT_WINDOW_TEXT",GTK_TEXT_WINDOW_TEXT,2);
-CheckEnum("GTK_TEXT_WINDOW_LEFT",GTK_TEXT_WINDOW_LEFT,3);
-CheckEnum("GTK_TEXT_WINDOW_RIGHT",GTK_TEXT_WINDOW_RIGHT,4);
-CheckEnum("GTK_TEXT_WINDOW_TOP",GTK_TEXT_WINDOW_TOP,5);
-CheckEnum("GTK_TEXT_WINDOW_BOTTOM",GTK_TEXT_WINDOW_BOTTOM,6);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TEXT_WINDOW_PRIVATE",GTK_TEXT_WINDOW_PRIVATE,0);
-CheckEnum("GTK_TEXT_WINDOW_WIDGET",GTK_TEXT_WINDOW_WIDGET,1);
-CheckEnum("GTK_TEXT_WINDOW_TEXT",GTK_TEXT_WINDOW_TEXT,2);
-CheckEnum("GTK_TEXT_WINDOW_LEFT",GTK_TEXT_WINDOW_LEFT,3);
-CheckEnum("GTK_TEXT_WINDOW_RIGHT",GTK_TEXT_WINDOW_RIGHT,4);
-CheckEnum("GTK_TEXT_WINDOW_TOP",GTK_TEXT_WINDOW_TOP,5);
-CheckEnum("GTK_TEXT_WINDOW_BOTTOM",GTK_TEXT_WINDOW_BOTTOM,6);
-#elif __powerpc64__
-CheckEnum("GTK_TEXT_WINDOW_PRIVATE",GTK_TEXT_WINDOW_PRIVATE,0);
-CheckEnum("GTK_TEXT_WINDOW_WIDGET",GTK_TEXT_WINDOW_WIDGET,1);
-CheckEnum("GTK_TEXT_WINDOW_TEXT",GTK_TEXT_WINDOW_TEXT,2);
-CheckEnum("GTK_TEXT_WINDOW_LEFT",GTK_TEXT_WINDOW_LEFT,3);
-CheckEnum("GTK_TEXT_WINDOW_RIGHT",GTK_TEXT_WINDOW_RIGHT,4);
-CheckEnum("GTK_TEXT_WINDOW_TOP",GTK_TEXT_WINDOW_TOP,5);
-CheckEnum("GTK_TEXT_WINDOW_BOTTOM",GTK_TEXT_WINDOW_BOTTOM,6);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TEXT_WINDOW_PRIVATE",GTK_TEXT_WINDOW_PRIVATE,0);
-CheckEnum("GTK_TEXT_WINDOW_WIDGET",GTK_TEXT_WINDOW_WIDGET,1);
-CheckEnum("GTK_TEXT_WINDOW_TEXT",GTK_TEXT_WINDOW_TEXT,2);
-CheckEnum("GTK_TEXT_WINDOW_LEFT",GTK_TEXT_WINDOW_LEFT,3);
-CheckEnum("GTK_TEXT_WINDOW_RIGHT",GTK_TEXT_WINDOW_RIGHT,4);
-CheckEnum("GTK_TEXT_WINDOW_TOP",GTK_TEXT_WINDOW_TOP,5);
-CheckEnum("GTK_TEXT_WINDOW_BOTTOM",GTK_TEXT_WINDOW_BOTTOM,6);
-#elif __s390x__
 CheckEnum("GTK_TEXT_WINDOW_PRIVATE",GTK_TEXT_WINDOW_PRIVATE,0);
 CheckEnum("GTK_TEXT_WINDOW_WIDGET",GTK_TEXT_WINDOW_WIDGET,1);
 CheckEnum("GTK_TEXT_WINDOW_TEXT",GTK_TEXT_WINDOW_TEXT,2);
@@ -19259,10 +18567,6 @@ Msg("Find size of _GtkObjectClass (13428)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13429,0);
 Msg("Find size of fptr_gtk_3447 (13429)\n");
@@ -19271,10 +18575,6 @@ Msg("Find size of fptr_gtk_3447 (13429)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13430,0);
 Msg("Find size of fptr_gtk_46 (13430)\n");
@@ -19302,10 +18602,6 @@ Msg("Find size of GtkObjectClass (13431)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13432,0);
 Msg("Find size of fptr_gtk_530 (13432)\n");
@@ -19314,10 +18610,6 @@ Msg("Find size of fptr_gtk_530 (13432)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13433,0);
 Msg("Find size of fptr_gtk_1128 (13433)\n");
@@ -19326,10 +18618,6 @@ Msg("Find size of fptr_gtk_1128 (13433)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13434,0);
 Msg("Find size of fptr_gtk_603 (13434)\n");
@@ -19338,10 +18626,6 @@ Msg("Find size of fptr_gtk_603 (13434)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13435,0);
 Msg("Find size of fptr_gtk_5420 (13435)\n");
@@ -19350,10 +18634,6 @@ Msg("Find size of fptr_gtk_5420 (13435)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13436,0);
 Msg("Find size of fptr_gtk_6872 (13436)\n");
@@ -19362,10 +18642,6 @@ Msg("Find size of fptr_gtk_6872 (13436)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13437,0);
 Msg("Find size of fptr_gtk_5008 (13437)\n");
@@ -19374,10 +18650,6 @@ Msg("Find size of fptr_gtk_5008 (13437)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13438,0);
 Msg("Find size of fptr_gtk_1019 (13438)\n");
@@ -19386,10 +18658,6 @@ Msg("Find size of fptr_gtk_1019 (13438)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13439,0);
 Msg("Find size of fptr_gtk_4240 (13439)\n");
@@ -19398,10 +18666,6 @@ Msg("Find size of fptr_gtk_4240 (13439)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13440,0);
 Msg("Find size of fptr_gtk_2788 (13440)\n");
@@ -19410,10 +18674,6 @@ Msg("Find size of fptr_gtk_2788 (13440)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13441,0);
 Msg("Find size of fptr_gtk_4861 (13441)\n");
@@ -19422,10 +18682,6 @@ Msg("Find size of fptr_gtk_4861 (13441)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13442,0);
 Msg("Find size of fptr_gtk_2353 (13442)\n");
@@ -19446,34 +18702,6 @@ CheckEnum("GTK_DIR_DOWN",GTK_DIR_DOWN,3);
 CheckEnum("GTK_DIR_LEFT",GTK_DIR_LEFT,4);
 CheckEnum("GTK_DIR_RIGHT",GTK_DIR_RIGHT,5);
 #elif __ia64__
-CheckEnum("GTK_DIR_TAB_FORWARD",GTK_DIR_TAB_FORWARD,0);
-CheckEnum("GTK_DIR_TAB_BACKWARD",GTK_DIR_TAB_BACKWARD,1);
-CheckEnum("GTK_DIR_UP",GTK_DIR_UP,2);
-CheckEnum("GTK_DIR_DOWN",GTK_DIR_DOWN,3);
-CheckEnum("GTK_DIR_LEFT",GTK_DIR_LEFT,4);
-CheckEnum("GTK_DIR_RIGHT",GTK_DIR_RIGHT,5);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_DIR_TAB_FORWARD",GTK_DIR_TAB_FORWARD,0);
-CheckEnum("GTK_DIR_TAB_BACKWARD",GTK_DIR_TAB_BACKWARD,1);
-CheckEnum("GTK_DIR_UP",GTK_DIR_UP,2);
-CheckEnum("GTK_DIR_DOWN",GTK_DIR_DOWN,3);
-CheckEnum("GTK_DIR_LEFT",GTK_DIR_LEFT,4);
-CheckEnum("GTK_DIR_RIGHT",GTK_DIR_RIGHT,5);
-#elif __powerpc64__
-CheckEnum("GTK_DIR_TAB_FORWARD",GTK_DIR_TAB_FORWARD,0);
-CheckEnum("GTK_DIR_TAB_BACKWARD",GTK_DIR_TAB_BACKWARD,1);
-CheckEnum("GTK_DIR_UP",GTK_DIR_UP,2);
-CheckEnum("GTK_DIR_DOWN",GTK_DIR_DOWN,3);
-CheckEnum("GTK_DIR_LEFT",GTK_DIR_LEFT,4);
-CheckEnum("GTK_DIR_RIGHT",GTK_DIR_RIGHT,5);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_DIR_TAB_FORWARD",GTK_DIR_TAB_FORWARD,0);
-CheckEnum("GTK_DIR_TAB_BACKWARD",GTK_DIR_TAB_BACKWARD,1);
-CheckEnum("GTK_DIR_UP",GTK_DIR_UP,2);
-CheckEnum("GTK_DIR_DOWN",GTK_DIR_DOWN,3);
-CheckEnum("GTK_DIR_LEFT",GTK_DIR_LEFT,4);
-CheckEnum("GTK_DIR_RIGHT",GTK_DIR_RIGHT,5);
-#elif __s390x__
 CheckEnum("GTK_DIR_TAB_FORWARD",GTK_DIR_TAB_FORWARD,0);
 CheckEnum("GTK_DIR_TAB_BACKWARD",GTK_DIR_TAB_BACKWARD,1);
 CheckEnum("GTK_DIR_UP",GTK_DIR_UP,2);
@@ -19507,10 +18735,6 @@ Msg("Find size of GtkDirectionType (13444)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13445,0);
 Msg("Find size of fptr_gtk_8631 (13445)\n");
@@ -19519,10 +18743,6 @@ Msg("Find size of fptr_gtk_8631 (13445)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13446,0);
 Msg("Find size of fptr_gtk_6134 (13446)\n");
@@ -19550,10 +18770,6 @@ Msg("Find size of GdkEventButton * (13447)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13448,0);
 Msg("Find size of fptr_gtk_7408 (13448)\n");
@@ -19581,10 +18797,6 @@ Msg("Find size of GdkEventScroll * (13449)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13450,0);
 Msg("Find size of fptr_gtk_4688 (13450)\n");
@@ -19612,10 +18824,6 @@ Msg("Find size of GdkEventMotion * (13451)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13452,0);
 Msg("Find size of fptr_gtk_4768 (13452)\n");
@@ -19643,10 +18851,6 @@ Msg("Find size of GdkEventAny * (13453)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13454,0);
 Msg("Find size of fptr_gtk_7959 (13454)\n");
@@ -19674,10 +18878,6 @@ Msg("Find size of GdkEventExpose * (13455)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13456,0);
 Msg("Find size of fptr_gtk_2221 (13456)\n");
@@ -19686,10 +18886,6 @@ Msg("Find size of fptr_gtk_2221 (13456)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13457,0);
 Msg("Find size of fptr_gtk_5465 (13457)\n");
@@ -19717,10 +18913,6 @@ Msg("Find size of GdkEventCrossing * (13458)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13459,0);
 Msg("Find size of fptr_gtk_4833 (13459)\n");
@@ -19748,10 +18940,6 @@ Msg("Find size of GdkEventConfigure * (13460)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13461,0);
 Msg("Find size of fptr_gtk_6047 (13461)\n");
@@ -19779,10 +18967,6 @@ Msg("Find size of GdkEventFocus * (13462)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13463,0);
 Msg("Find size of fptr_gtk_7021 (13463)\n");
@@ -19810,10 +18994,6 @@ Msg("Find size of GdkEventProperty * (13464)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13465,0);
 Msg("Find size of fptr_gtk_2466 (13465)\n");
@@ -19841,10 +19021,6 @@ Msg("Find size of GdkEventSelection * (13466)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13467,0);
 Msg("Find size of fptr_gtk_2506 (13467)\n");
@@ -19872,10 +19048,6 @@ Msg("Find size of GdkEventProximity * (13468)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13469,0);
 Msg("Find size of fptr_gtk_372 (13469)\n");
@@ -19903,10 +19075,6 @@ Msg("Find size of GdkEventVisibility * (13470)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13471,0);
 Msg("Find size of fptr_gtk_7372 (13471)\n");
@@ -19934,10 +19102,6 @@ Msg("Find size of GdkEventClient * (13472)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13473,0);
 Msg("Find size of fptr_gtk_4594 (13473)\n");
@@ -19965,10 +19129,6 @@ Msg("Find size of GdkEventWindowState * (13474)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13475,0);
 Msg("Find size of fptr_gtk_4303 (13475)\n");
@@ -19977,10 +19137,6 @@ Msg("Find size of fptr_gtk_4303 (13475)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13476,0);
 Msg("Find size of fptr_gtk_4038 (13476)\n");
@@ -19989,10 +19145,6 @@ Msg("Find size of fptr_gtk_4038 (13476)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13477,0);
 Msg("Find size of fptr_gtk_8299 (13477)\n");
@@ -20001,10 +19153,6 @@ Msg("Find size of fptr_gtk_8299 (13477)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13478,0);
 Msg("Find size of fptr_gtk_8423 (13478)\n");
@@ -20013,10 +19161,6 @@ Msg("Find size of fptr_gtk_8423 (13478)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13479,0);
 Msg("Find size of fptr_gtk_4279 (13479)\n");
@@ -20025,10 +19169,6 @@ Msg("Find size of fptr_gtk_4279 (13479)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13480,0);
 Msg("Find size of fptr_gtk_8520 (13480)\n");
@@ -20037,10 +19177,6 @@ Msg("Find size of fptr_gtk_8520 (13480)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13481,0);
 Msg("Find size of fptr_gtk_8457 (13481)\n");
@@ -20049,10 +19185,6 @@ Msg("Find size of fptr_gtk_8457 (13481)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13482,0);
 Msg("Find size of fptr_gtk_5698 (13482)\n");
@@ -20061,10 +19193,6 @@ Msg("Find size of fptr_gtk_5698 (13482)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13483,0);
 Msg("Find size of fptr_gtk_1151 (13483)\n");
@@ -20077,18 +19205,6 @@ CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
 CheckEnum("GTK_WIDGET_HELP_TOOLTIP",GTK_WIDGET_HELP_TOOLTIP,0);
 CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
 #elif __ia64__
-CheckEnum("GTK_WIDGET_HELP_TOOLTIP",GTK_WIDGET_HELP_TOOLTIP,0);
-CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_WIDGET_HELP_TOOLTIP",GTK_WIDGET_HELP_TOOLTIP,0);
-CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
-#elif __powerpc64__
-CheckEnum("GTK_WIDGET_HELP_TOOLTIP",GTK_WIDGET_HELP_TOOLTIP,0);
-CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_WIDGET_HELP_TOOLTIP",GTK_WIDGET_HELP_TOOLTIP,0);
-CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
-#elif __s390x__
 CheckEnum("GTK_WIDGET_HELP_TOOLTIP",GTK_WIDGET_HELP_TOOLTIP,0);
 CheckEnum("GTK_WIDGET_HELP_WHATS_THIS",GTK_WIDGET_HELP_WHATS_THIS,1);
 #else
@@ -20118,10 +19234,6 @@ Msg("Find size of GtkWidgetHelpType (13485)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13486,0);
 Msg("Find size of fptr_gtk_6668 (13486)\n");
@@ -20130,10 +19242,6 @@ Msg("Find size of fptr_gtk_6668 (13486)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13487,0);
 Msg("Find size of fptr_gtk_3977 (13487)\n");
@@ -20142,10 +19250,6 @@ Msg("Find size of fptr_gtk_3977 (13487)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13488,0);
 Msg("Find size of fptr_gtk_8172 (13488)\n");
@@ -20154,10 +19258,6 @@ Msg("Find size of fptr_gtk_8172 (13488)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13489,0);
 Msg("Find size of fptr_gtk_8401 (13489)\n");
@@ -20223,10 +19323,6 @@ Msg("Find size of const GParamSpec (13492)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13493,0);
 Msg("Find size of const GParamSpec * (13493)\n");
@@ -20235,10 +19331,6 @@ Msg("Find size of const GParamSpec * (13493)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13494,0);
 Msg("Find size of fptr_gtk_8670 (13494)\n");
@@ -20357,42 +19449,6 @@ CheckEnum("GTK_IMAGE_ICON_SET",GTK_IMAGE_ICON_SET,5);
 CheckEnum("GTK_IMAGE_ANIMATION",GTK_IMAGE_ANIMATION,6);
 CheckEnum("GTK_IMAGE_ICON_NAME",GTK_IMAGE_ICON_NAME,7);
 #elif __ia64__
-CheckEnum("GTK_IMAGE_EMPTY",GTK_IMAGE_EMPTY,0);
-CheckEnum("GTK_IMAGE_PIXMAP",GTK_IMAGE_PIXMAP,1);
-CheckEnum("GTK_IMAGE_IMAGE",GTK_IMAGE_IMAGE,2);
-CheckEnum("GTK_IMAGE_PIXBUF",GTK_IMAGE_PIXBUF,3);
-CheckEnum("GTK_IMAGE_STOCK",GTK_IMAGE_STOCK,4);
-CheckEnum("GTK_IMAGE_ICON_SET",GTK_IMAGE_ICON_SET,5);
-CheckEnum("GTK_IMAGE_ANIMATION",GTK_IMAGE_ANIMATION,6);
-CheckEnum("GTK_IMAGE_ICON_NAME",GTK_IMAGE_ICON_NAME,7);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_IMAGE_EMPTY",GTK_IMAGE_EMPTY,0);
-CheckEnum("GTK_IMAGE_PIXMAP",GTK_IMAGE_PIXMAP,1);
-CheckEnum("GTK_IMAGE_IMAGE",GTK_IMAGE_IMAGE,2);
-CheckEnum("GTK_IMAGE_PIXBUF",GTK_IMAGE_PIXBUF,3);
-CheckEnum("GTK_IMAGE_STOCK",GTK_IMAGE_STOCK,4);
-CheckEnum("GTK_IMAGE_ICON_SET",GTK_IMAGE_ICON_SET,5);
-CheckEnum("GTK_IMAGE_ANIMATION",GTK_IMAGE_ANIMATION,6);
-CheckEnum("GTK_IMAGE_ICON_NAME",GTK_IMAGE_ICON_NAME,7);
-#elif __powerpc64__
-CheckEnum("GTK_IMAGE_EMPTY",GTK_IMAGE_EMPTY,0);
-CheckEnum("GTK_IMAGE_PIXMAP",GTK_IMAGE_PIXMAP,1);
-CheckEnum("GTK_IMAGE_IMAGE",GTK_IMAGE_IMAGE,2);
-CheckEnum("GTK_IMAGE_PIXBUF",GTK_IMAGE_PIXBUF,3);
-CheckEnum("GTK_IMAGE_STOCK",GTK_IMAGE_STOCK,4);
-CheckEnum("GTK_IMAGE_ICON_SET",GTK_IMAGE_ICON_SET,5);
-CheckEnum("GTK_IMAGE_ANIMATION",GTK_IMAGE_ANIMATION,6);
-CheckEnum("GTK_IMAGE_ICON_NAME",GTK_IMAGE_ICON_NAME,7);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_IMAGE_EMPTY",GTK_IMAGE_EMPTY,0);
-CheckEnum("GTK_IMAGE_PIXMAP",GTK_IMAGE_PIXMAP,1);
-CheckEnum("GTK_IMAGE_IMAGE",GTK_IMAGE_IMAGE,2);
-CheckEnum("GTK_IMAGE_PIXBUF",GTK_IMAGE_PIXBUF,3);
-CheckEnum("GTK_IMAGE_STOCK",GTK_IMAGE_STOCK,4);
-CheckEnum("GTK_IMAGE_ICON_SET",GTK_IMAGE_ICON_SET,5);
-CheckEnum("GTK_IMAGE_ANIMATION",GTK_IMAGE_ANIMATION,6);
-CheckEnum("GTK_IMAGE_ICON_NAME",GTK_IMAGE_ICON_NAME,7);
-#elif __s390x__
 CheckEnum("GTK_IMAGE_EMPTY",GTK_IMAGE_EMPTY,0);
 CheckEnum("GTK_IMAGE_PIXMAP",GTK_IMAGE_PIXMAP,1);
 CheckEnum("GTK_IMAGE_IMAGE",GTK_IMAGE_IMAGE,2);
@@ -20820,10 +19876,6 @@ Msg("Find size of GtkImageIconNameData (13512)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13513,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2023 (13513)\n");
@@ -20846,38 +19898,6 @@ CheckEnum("GTK_ICON_SIZE_BUTTON",GTK_ICON_SIZE_BUTTON,4);
 CheckEnum("GTK_ICON_SIZE_DND",GTK_ICON_SIZE_DND,5);
 CheckEnum("GTK_ICON_SIZE_DIALOG",GTK_ICON_SIZE_DIALOG,6);
 #elif __ia64__
-CheckEnum("GTK_ICON_SIZE_INVALID",GTK_ICON_SIZE_INVALID,0);
-CheckEnum("GTK_ICON_SIZE_MENU",GTK_ICON_SIZE_MENU,1);
-CheckEnum("GTK_ICON_SIZE_SMALL_TOOLBAR",GTK_ICON_SIZE_SMALL_TOOLBAR,2);
-CheckEnum("GTK_ICON_SIZE_LARGE_TOOLBAR",GTK_ICON_SIZE_LARGE_TOOLBAR,3);
-CheckEnum("GTK_ICON_SIZE_BUTTON",GTK_ICON_SIZE_BUTTON,4);
-CheckEnum("GTK_ICON_SIZE_DND",GTK_ICON_SIZE_DND,5);
-CheckEnum("GTK_ICON_SIZE_DIALOG",GTK_ICON_SIZE_DIALOG,6);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_ICON_SIZE_INVALID",GTK_ICON_SIZE_INVALID,0);
-CheckEnum("GTK_ICON_SIZE_MENU",GTK_ICON_SIZE_MENU,1);
-CheckEnum("GTK_ICON_SIZE_SMALL_TOOLBAR",GTK_ICON_SIZE_SMALL_TOOLBAR,2);
-CheckEnum("GTK_ICON_SIZE_LARGE_TOOLBAR",GTK_ICON_SIZE_LARGE_TOOLBAR,3);
-CheckEnum("GTK_ICON_SIZE_BUTTON",GTK_ICON_SIZE_BUTTON,4);
-CheckEnum("GTK_ICON_SIZE_DND",GTK_ICON_SIZE_DND,5);
-CheckEnum("GTK_ICON_SIZE_DIALOG",GTK_ICON_SIZE_DIALOG,6);
-#elif __powerpc64__
-CheckEnum("GTK_ICON_SIZE_INVALID",GTK_ICON_SIZE_INVALID,0);
-CheckEnum("GTK_ICON_SIZE_MENU",GTK_ICON_SIZE_MENU,1);
-CheckEnum("GTK_ICON_SIZE_SMALL_TOOLBAR",GTK_ICON_SIZE_SMALL_TOOLBAR,2);
-CheckEnum("GTK_ICON_SIZE_LARGE_TOOLBAR",GTK_ICON_SIZE_LARGE_TOOLBAR,3);
-CheckEnum("GTK_ICON_SIZE_BUTTON",GTK_ICON_SIZE_BUTTON,4);
-CheckEnum("GTK_ICON_SIZE_DND",GTK_ICON_SIZE_DND,5);
-CheckEnum("GTK_ICON_SIZE_DIALOG",GTK_ICON_SIZE_DIALOG,6);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_ICON_SIZE_INVALID",GTK_ICON_SIZE_INVALID,0);
-CheckEnum("GTK_ICON_SIZE_MENU",GTK_ICON_SIZE_MENU,1);
-CheckEnum("GTK_ICON_SIZE_SMALL_TOOLBAR",GTK_ICON_SIZE_SMALL_TOOLBAR,2);
-CheckEnum("GTK_ICON_SIZE_LARGE_TOOLBAR",GTK_ICON_SIZE_LARGE_TOOLBAR,3);
-CheckEnum("GTK_ICON_SIZE_BUTTON",GTK_ICON_SIZE_BUTTON,4);
-CheckEnum("GTK_ICON_SIZE_DND",GTK_ICON_SIZE_DND,5);
-CheckEnum("GTK_ICON_SIZE_DIALOG",GTK_ICON_SIZE_DIALOG,6);
-#elif __s390x__
 CheckEnum("GTK_ICON_SIZE_INVALID",GTK_ICON_SIZE_INVALID,0);
 CheckEnum("GTK_ICON_SIZE_MENU",GTK_ICON_SIZE_MENU,1);
 CheckEnum("GTK_ICON_SIZE_SMALL_TOOLBAR",GTK_ICON_SIZE_SMALL_TOOLBAR,2);
@@ -20986,14 +20006,6 @@ CheckTypeSize(GtkTreeViewPrivate,0, 13520, 2)
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 11)
 #elif __ia64__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTreeViewPrivate,0, 13520, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTreeViewPrivate,0, 13520, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTreeViewPrivate,0, 13520, 10)
-#elif __s390x__
-CheckTypeSize(GtkTreeViewPrivate,0, 13520, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13520,0);
 Msg("Find size of GtkTreeViewPrivate (13520)\n");
@@ -21168,18 +20180,6 @@ CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
 #elif __ia64__
 CheckEnum("GTK_UPDATE_ALWAYS",GTK_UPDATE_ALWAYS,0);
 CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_UPDATE_ALWAYS",GTK_UPDATE_ALWAYS,0);
-CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
-#elif __powerpc64__
-CheckEnum("GTK_UPDATE_ALWAYS",GTK_UPDATE_ALWAYS,0);
-CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_UPDATE_ALWAYS",GTK_UPDATE_ALWAYS,0);
-CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
-#elif __s390x__
-CheckEnum("GTK_UPDATE_ALWAYS",GTK_UPDATE_ALWAYS,0);
-CheckEnum("GTK_UPDATE_IF_VALID",GTK_UPDATE_IF_VALID,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13525,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3382 (13525)\n");
@@ -21248,14 +20248,6 @@ CheckTypeSize(GtkCellLayout,0, 13530, 2)
 CheckTypeSize(GtkCellLayout,0, 13530, 11)
 #elif __ia64__
 CheckTypeSize(GtkCellLayout,0, 13530, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkCellLayout,0, 13530, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkCellLayout,0, 13530, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkCellLayout,0, 13530, 10)
-#elif __s390x__
-CheckTypeSize(GtkCellLayout,0, 13530, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13530,0);
 Msg("Find size of GtkCellLayout (13530)\n");
@@ -21888,10 +20880,6 @@ Msg("Find size of GtkTooltipsData * (13540)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13541,0);
 Msg("Find size of fptr_gtk_7918 (13541)\n");
@@ -21955,14 +20943,6 @@ CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 2)
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 11)
 #elif __ia64__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 10)
-#elif __s390x__
-CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13545,0);
 Msg("Find size of GtkEntryCompletionPrivate (13545)\n");
@@ -22031,14 +21011,6 @@ CheckTypeSize(GtkClipboard,0, 13550, 2)
 CheckTypeSize(GtkClipboard,0, 13550, 11)
 #elif __ia64__
 CheckTypeSize(GtkClipboard,0, 13550, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkClipboard,0, 13550, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkClipboard,0, 13550, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkClipboard,0, 13550, 10)
-#elif __s390x__
-CheckTypeSize(GtkClipboard,0, 13550, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13550,0);
 Msg("Find size of GtkClipboard (13550)\n");
@@ -22102,14 +21074,6 @@ CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 2)
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 11)
 #elif __ia64__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 10)
-#elif __s390x__
-CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13554,0);
 Msg("Find size of GtkTreeModelFilterPrivate (13554)\n");
@@ -22456,10 +21420,6 @@ Msg("Find size of GtkTreeModelSort * (13560)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13561,0);
 Msg("Find size of fptr_gtk_7098 (13561)\n");
@@ -22523,14 +21483,6 @@ CheckTypeSize(GtkColorButtonPrivate,0, 13565, 2)
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 11)
 #elif __ia64__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkColorButtonPrivate,0, 13565, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkColorButtonPrivate,0, 13565, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkColorButtonPrivate,0, 13565, 10)
-#elif __s390x__
-CheckTypeSize(GtkColorButtonPrivate,0, 13565, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13565,0);
 Msg("Find size of GtkColorButtonPrivate (13565)\n");
@@ -22608,26 +21560,6 @@ CheckEnum("GTK_FILE_CHOOSER_ACTION_OPEN",GTK_FILE_CHOOSER_ACTION_OPEN,0);
 CheckEnum("GTK_FILE_CHOOSER_ACTION_SAVE",GTK_FILE_CHOOSER_ACTION_SAVE,1);
 CheckEnum("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER",GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,2);
 CheckEnum("GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER",GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_FILE_CHOOSER_ACTION_OPEN",GTK_FILE_CHOOSER_ACTION_OPEN,0);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_SAVE",GTK_FILE_CHOOSER_ACTION_SAVE,1);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER",GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,2);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER",GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER,3);
-#elif __powerpc64__
-CheckEnum("GTK_FILE_CHOOSER_ACTION_OPEN",GTK_FILE_CHOOSER_ACTION_OPEN,0);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_SAVE",GTK_FILE_CHOOSER_ACTION_SAVE,1);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER",GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,2);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER",GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_FILE_CHOOSER_ACTION_OPEN",GTK_FILE_CHOOSER_ACTION_OPEN,0);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_SAVE",GTK_FILE_CHOOSER_ACTION_SAVE,1);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER",GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,2);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER",GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER,3);
-#elif __s390x__
-CheckEnum("GTK_FILE_CHOOSER_ACTION_OPEN",GTK_FILE_CHOOSER_ACTION_OPEN,0);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_SAVE",GTK_FILE_CHOOSER_ACTION_SAVE,1);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER",GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,2);
-CheckEnum("GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER",GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13569,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1306 (13569)\n");
@@ -22655,10 +21587,6 @@ Msg("Find size of GtkFileChooserAction (13570)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13571,0);
 Msg("Find size of fptr_gtk_2227 (13571)\n");
@@ -22875,30 +21803,6 @@ CheckEnum("GTK_SELECTION_SINGLE",GTK_SELECTION_SINGLE,1);
 CheckEnum("GTK_SELECTION_BROWSE",GTK_SELECTION_BROWSE,2);
 CheckEnum("GTK_SELECTION_MULTIPLE",GTK_SELECTION_MULTIPLE,3);
 CheckEnum("GTK_SELECTION_EXTENDED",GTK_SELECTION_EXTENDED,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_SELECTION_NONE",GTK_SELECTION_NONE,0);
-CheckEnum("GTK_SELECTION_SINGLE",GTK_SELECTION_SINGLE,1);
-CheckEnum("GTK_SELECTION_BROWSE",GTK_SELECTION_BROWSE,2);
-CheckEnum("GTK_SELECTION_MULTIPLE",GTK_SELECTION_MULTIPLE,3);
-CheckEnum("GTK_SELECTION_EXTENDED",GTK_SELECTION_EXTENDED,3);
-#elif __powerpc64__
-CheckEnum("GTK_SELECTION_NONE",GTK_SELECTION_NONE,0);
-CheckEnum("GTK_SELECTION_SINGLE",GTK_SELECTION_SINGLE,1);
-CheckEnum("GTK_SELECTION_BROWSE",GTK_SELECTION_BROWSE,2);
-CheckEnum("GTK_SELECTION_MULTIPLE",GTK_SELECTION_MULTIPLE,3);
-CheckEnum("GTK_SELECTION_EXTENDED",GTK_SELECTION_EXTENDED,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_SELECTION_NONE",GTK_SELECTION_NONE,0);
-CheckEnum("GTK_SELECTION_SINGLE",GTK_SELECTION_SINGLE,1);
-CheckEnum("GTK_SELECTION_BROWSE",GTK_SELECTION_BROWSE,2);
-CheckEnum("GTK_SELECTION_MULTIPLE",GTK_SELECTION_MULTIPLE,3);
-CheckEnum("GTK_SELECTION_EXTENDED",GTK_SELECTION_EXTENDED,3);
-#elif __s390x__
-CheckEnum("GTK_SELECTION_NONE",GTK_SELECTION_NONE,0);
-CheckEnum("GTK_SELECTION_SINGLE",GTK_SELECTION_SINGLE,1);
-CheckEnum("GTK_SELECTION_BROWSE",GTK_SELECTION_BROWSE,2);
-CheckEnum("GTK_SELECTION_MULTIPLE",GTK_SELECTION_MULTIPLE,3);
-CheckEnum("GTK_SELECTION_EXTENDED",GTK_SELECTION_EXTENDED,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13577,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1979 (13577)\n");
@@ -22981,14 +21885,6 @@ CheckTypeSize(GtkActionGroupPrivate,0, 13582, 2)
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 11)
 #elif __ia64__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkActionGroupPrivate,0, 13582, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkActionGroupPrivate,0, 13582, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkActionGroupPrivate,0, 13582, 10)
-#elif __s390x__
-CheckTypeSize(GtkActionGroupPrivate,0, 13582, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13582,0);
 Msg("Find size of GtkActionGroupPrivate (13582)\n");
@@ -23454,10 +22350,6 @@ Msg("Find size of _GtkBindingArg (13595)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13596,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-291 (13596)\n");
@@ -23630,26 +22522,6 @@ CheckEnum("GTK_CORNER_BOTTOM_LEFT",GTK_CORNER_BOTTOM_LEFT,1);
 CheckEnum("GTK_CORNER_TOP_RIGHT",GTK_CORNER_TOP_RIGHT,2);
 CheckEnum("GTK_CORNER_BOTTOM_RIGHT",GTK_CORNER_BOTTOM_RIGHT,3);
 #elif __ia64__
-CheckEnum("GTK_CORNER_TOP_LEFT",GTK_CORNER_TOP_LEFT,0);
-CheckEnum("GTK_CORNER_BOTTOM_LEFT",GTK_CORNER_BOTTOM_LEFT,1);
-CheckEnum("GTK_CORNER_TOP_RIGHT",GTK_CORNER_TOP_RIGHT,2);
-CheckEnum("GTK_CORNER_BOTTOM_RIGHT",GTK_CORNER_BOTTOM_RIGHT,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_CORNER_TOP_LEFT",GTK_CORNER_TOP_LEFT,0);
-CheckEnum("GTK_CORNER_BOTTOM_LEFT",GTK_CORNER_BOTTOM_LEFT,1);
-CheckEnum("GTK_CORNER_TOP_RIGHT",GTK_CORNER_TOP_RIGHT,2);
-CheckEnum("GTK_CORNER_BOTTOM_RIGHT",GTK_CORNER_BOTTOM_RIGHT,3);
-#elif __powerpc64__
-CheckEnum("GTK_CORNER_TOP_LEFT",GTK_CORNER_TOP_LEFT,0);
-CheckEnum("GTK_CORNER_BOTTOM_LEFT",GTK_CORNER_BOTTOM_LEFT,1);
-CheckEnum("GTK_CORNER_TOP_RIGHT",GTK_CORNER_TOP_RIGHT,2);
-CheckEnum("GTK_CORNER_BOTTOM_RIGHT",GTK_CORNER_BOTTOM_RIGHT,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_CORNER_TOP_LEFT",GTK_CORNER_TOP_LEFT,0);
-CheckEnum("GTK_CORNER_BOTTOM_LEFT",GTK_CORNER_BOTTOM_LEFT,1);
-CheckEnum("GTK_CORNER_TOP_RIGHT",GTK_CORNER_TOP_RIGHT,2);
-CheckEnum("GTK_CORNER_BOTTOM_RIGHT",GTK_CORNER_BOTTOM_RIGHT,3);
-#elif __s390x__
 CheckEnum("GTK_CORNER_TOP_LEFT",GTK_CORNER_TOP_LEFT,0);
 CheckEnum("GTK_CORNER_BOTTOM_LEFT",GTK_CORNER_BOTTOM_LEFT,1);
 CheckEnum("GTK_CORNER_TOP_RIGHT",GTK_CORNER_TOP_RIGHT,2);
@@ -23915,14 +22787,6 @@ CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 2)
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 11)
 #elif __ia64__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 10)
-#elif __s390x__
-CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13613,0);
 Msg("Find size of GtkSeparatorToolItemPrivate (13613)\n");
@@ -24115,10 +22979,6 @@ Msg("Find size of GtkTreeSelection * (13619)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13620,0);
 Msg("Find size of fptr_gtk_1834 (13620)\n");
@@ -24182,14 +23042,6 @@ CheckTypeSize(GtkExpanderPrivate,0, 13624, 2)
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 11)
 #elif __ia64__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkExpanderPrivate,0, 13624, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkExpanderPrivate,0, 13624, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkExpanderPrivate,0, 13624, 10)
-#elif __s390x__
-CheckTypeSize(GtkExpanderPrivate,0, 13624, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13624,0);
 Msg("Find size of GtkExpanderPrivate (13624)\n");
@@ -24267,26 +23119,6 @@ CheckEnum("GTK_POS_LEFT",GTK_POS_LEFT,0);
 CheckEnum("GTK_POS_RIGHT",GTK_POS_RIGHT,1);
 CheckEnum("GTK_POS_TOP",GTK_POS_TOP,2);
 CheckEnum("GTK_POS_BOTTOM",GTK_POS_BOTTOM,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_POS_LEFT",GTK_POS_LEFT,0);
-CheckEnum("GTK_POS_RIGHT",GTK_POS_RIGHT,1);
-CheckEnum("GTK_POS_TOP",GTK_POS_TOP,2);
-CheckEnum("GTK_POS_BOTTOM",GTK_POS_BOTTOM,3);
-#elif __powerpc64__
-CheckEnum("GTK_POS_LEFT",GTK_POS_LEFT,0);
-CheckEnum("GTK_POS_RIGHT",GTK_POS_RIGHT,1);
-CheckEnum("GTK_POS_TOP",GTK_POS_TOP,2);
-CheckEnum("GTK_POS_BOTTOM",GTK_POS_BOTTOM,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_POS_LEFT",GTK_POS_LEFT,0);
-CheckEnum("GTK_POS_RIGHT",GTK_POS_RIGHT,1);
-CheckEnum("GTK_POS_TOP",GTK_POS_TOP,2);
-CheckEnum("GTK_POS_BOTTOM",GTK_POS_BOTTOM,3);
-#elif __s390x__
-CheckEnum("GTK_POS_LEFT",GTK_POS_LEFT,0);
-CheckEnum("GTK_POS_RIGHT",GTK_POS_RIGHT,1);
-CheckEnum("GTK_POS_TOP",GTK_POS_TOP,2);
-CheckEnum("GTK_POS_BOTTOM",GTK_POS_BOTTOM,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13628,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1663 (13628)\n");
@@ -24334,50 +23166,6 @@ CheckEnum("GTK_UI_MANAGER_TOOLITEM",GTK_UI_MANAGER_TOOLITEM,64);
 CheckEnum("GTK_UI_MANAGER_SEPARATOR",GTK_UI_MANAGER_SEPARATOR,128);
 CheckEnum("GTK_UI_MANAGER_ACCELERATOR",GTK_UI_MANAGER_ACCELERATOR,256);
 #elif __ia64__
-CheckEnum("GTK_UI_MANAGER_AUTO",GTK_UI_MANAGER_AUTO,0);
-CheckEnum("GTK_UI_MANAGER_MENUBAR",GTK_UI_MANAGER_MENUBAR,1);
-CheckEnum("GTK_UI_MANAGER_MENU",GTK_UI_MANAGER_MENU,2);
-CheckEnum("GTK_UI_MANAGER_TOOLBAR",GTK_UI_MANAGER_TOOLBAR,4);
-CheckEnum("GTK_UI_MANAGER_PLACEHOLDER",GTK_UI_MANAGER_PLACEHOLDER,8);
-CheckEnum("GTK_UI_MANAGER_POPUP",GTK_UI_MANAGER_POPUP,16);
-CheckEnum("GTK_UI_MANAGER_MENUITEM",GTK_UI_MANAGER_MENUITEM,32);
-CheckEnum("GTK_UI_MANAGER_TOOLITEM",GTK_UI_MANAGER_TOOLITEM,64);
-CheckEnum("GTK_UI_MANAGER_SEPARATOR",GTK_UI_MANAGER_SEPARATOR,128);
-CheckEnum("GTK_UI_MANAGER_ACCELERATOR",GTK_UI_MANAGER_ACCELERATOR,256);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_UI_MANAGER_AUTO",GTK_UI_MANAGER_AUTO,0);
-CheckEnum("GTK_UI_MANAGER_MENUBAR",GTK_UI_MANAGER_MENUBAR,1);
-CheckEnum("GTK_UI_MANAGER_MENU",GTK_UI_MANAGER_MENU,2);
-CheckEnum("GTK_UI_MANAGER_TOOLBAR",GTK_UI_MANAGER_TOOLBAR,4);
-CheckEnum("GTK_UI_MANAGER_PLACEHOLDER",GTK_UI_MANAGER_PLACEHOLDER,8);
-CheckEnum("GTK_UI_MANAGER_POPUP",GTK_UI_MANAGER_POPUP,16);
-CheckEnum("GTK_UI_MANAGER_MENUITEM",GTK_UI_MANAGER_MENUITEM,32);
-CheckEnum("GTK_UI_MANAGER_TOOLITEM",GTK_UI_MANAGER_TOOLITEM,64);
-CheckEnum("GTK_UI_MANAGER_SEPARATOR",GTK_UI_MANAGER_SEPARATOR,128);
-CheckEnum("GTK_UI_MANAGER_ACCELERATOR",GTK_UI_MANAGER_ACCELERATOR,256);
-#elif __powerpc64__
-CheckEnum("GTK_UI_MANAGER_AUTO",GTK_UI_MANAGER_AUTO,0);
-CheckEnum("GTK_UI_MANAGER_MENUBAR",GTK_UI_MANAGER_MENUBAR,1);
-CheckEnum("GTK_UI_MANAGER_MENU",GTK_UI_MANAGER_MENU,2);
-CheckEnum("GTK_UI_MANAGER_TOOLBAR",GTK_UI_MANAGER_TOOLBAR,4);
-CheckEnum("GTK_UI_MANAGER_PLACEHOLDER",GTK_UI_MANAGER_PLACEHOLDER,8);
-CheckEnum("GTK_UI_MANAGER_POPUP",GTK_UI_MANAGER_POPUP,16);
-CheckEnum("GTK_UI_MANAGER_MENUITEM",GTK_UI_MANAGER_MENUITEM,32);
-CheckEnum("GTK_UI_MANAGER_TOOLITEM",GTK_UI_MANAGER_TOOLITEM,64);
-CheckEnum("GTK_UI_MANAGER_SEPARATOR",GTK_UI_MANAGER_SEPARATOR,128);
-CheckEnum("GTK_UI_MANAGER_ACCELERATOR",GTK_UI_MANAGER_ACCELERATOR,256);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_UI_MANAGER_AUTO",GTK_UI_MANAGER_AUTO,0);
-CheckEnum("GTK_UI_MANAGER_MENUBAR",GTK_UI_MANAGER_MENUBAR,1);
-CheckEnum("GTK_UI_MANAGER_MENU",GTK_UI_MANAGER_MENU,2);
-CheckEnum("GTK_UI_MANAGER_TOOLBAR",GTK_UI_MANAGER_TOOLBAR,4);
-CheckEnum("GTK_UI_MANAGER_PLACEHOLDER",GTK_UI_MANAGER_PLACEHOLDER,8);
-CheckEnum("GTK_UI_MANAGER_POPUP",GTK_UI_MANAGER_POPUP,16);
-CheckEnum("GTK_UI_MANAGER_MENUITEM",GTK_UI_MANAGER_MENUITEM,32);
-CheckEnum("GTK_UI_MANAGER_TOOLITEM",GTK_UI_MANAGER_TOOLITEM,64);
-CheckEnum("GTK_UI_MANAGER_SEPARATOR",GTK_UI_MANAGER_SEPARATOR,128);
-CheckEnum("GTK_UI_MANAGER_ACCELERATOR",GTK_UI_MANAGER_ACCELERATOR,256);
-#elif __s390x__
 CheckEnum("GTK_UI_MANAGER_AUTO",GTK_UI_MANAGER_AUTO,0);
 CheckEnum("GTK_UI_MANAGER_MENUBAR",GTK_UI_MANAGER_MENUBAR,1);
 CheckEnum("GTK_UI_MANAGER_MENU",GTK_UI_MANAGER_MENU,2);
@@ -24816,14 +23604,6 @@ CheckTypeSize(GtkPanedPrivate,0, 13637, 2)
 CheckTypeSize(GtkPanedPrivate,0, 13637, 11)
 #elif __ia64__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkPanedPrivate,0, 13637, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkPanedPrivate,0, 13637, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkPanedPrivate,0, 13637, 10)
-#elif __s390x__
-CheckTypeSize(GtkPanedPrivate,0, 13637, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13637,0);
 Msg("Find size of GtkPanedPrivate (13637)\n");
@@ -24908,10 +23688,6 @@ Msg("Find size of GtkIconSize * (13641)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13642,0);
 Msg("Find size of GtkIconSize * * (13642)\n");
@@ -25346,14 +24122,6 @@ CheckTypeSize(GtkEditable,0, 13653, 2)
 CheckTypeSize(GtkEditable,0, 13653, 11)
 #elif __ia64__
 CheckTypeSize(GtkEditable,0, 13653, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkEditable,0, 13653, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkEditable,0, 13653, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkEditable,0, 13653, 10)
-#elif __s390x__
-CheckTypeSize(GtkEditable,0, 13653, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13653,0);
 Msg("Find size of GtkEditable (13653)\n");
@@ -25400,10 +24168,6 @@ Msg("Find size of GtkAccelKey * (13655)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13656,0);
 Msg("Find size of fptr_gtk_8347 (13656)\n");
@@ -25431,10 +24195,6 @@ Msg("Find size of GtkClipboardGetFunc (13657)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13658,0);
 Msg("Find size of fptr_gtk_7118 (13658)\n");
@@ -25462,10 +24222,6 @@ Msg("Find size of GtkClipboardClearFunc (13659)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13660,0);
 Msg("Find size of GtkTreeModel * * (13660)\n");
@@ -25620,10 +24376,6 @@ Msg("Find size of const GtkRadioActionEntry (13664)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13665,0);
 Msg("Find size of const GtkRadioActionEntry * (13665)\n");
@@ -25632,10 +24384,6 @@ Msg("Find size of const GtkRadioActionEntry * (13665)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13666,0);
 Msg("Find size of fptr_gtk_7795 (13666)\n");
@@ -25737,14 +24485,6 @@ CheckTypeSize(GtkTreeDragDest,0, 13672, 2)
 CheckTypeSize(GtkTreeDragDest,0, 13672, 11)
 #elif __ia64__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkTreeDragDest,0, 13672, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkTreeDragDest,0, 13672, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkTreeDragDest,0, 13672, 10)
-#elif __s390x__
-CheckTypeSize(GtkTreeDragDest,0, 13672, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13672,0);
 Msg("Find size of GtkTreeDragDest (13672)\n");
@@ -25913,10 +24653,6 @@ Msg("Find size of const GtkToggleActionEntry (13676)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13677,0);
 Msg("Find size of const GtkToggleActionEntry * (13677)\n");
@@ -26300,14 +25036,6 @@ CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 2)
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 11)
 #elif __ia64__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 10)
-#elif __s390x__
-CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13689,0);
 Msg("Find size of GtkFileChooserButtonPrivate (13689)\n");
@@ -26486,10 +25214,6 @@ Msg("Find size of GtkStockItem * (13695)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13696,0);
 Msg("Find size of fptr_gtk_6386 (13696)\n");
@@ -26684,26 +25408,6 @@ CheckEnum("GTK_TOOLBAR_ICONS",GTK_TOOLBAR_ICONS,0);
 CheckEnum("GTK_TOOLBAR_TEXT",GTK_TOOLBAR_TEXT,1);
 CheckEnum("GTK_TOOLBAR_BOTH",GTK_TOOLBAR_BOTH,2);
 CheckEnum("GTK_TOOLBAR_BOTH_HORIZ",GTK_TOOLBAR_BOTH_HORIZ,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TOOLBAR_ICONS",GTK_TOOLBAR_ICONS,0);
-CheckEnum("GTK_TOOLBAR_TEXT",GTK_TOOLBAR_TEXT,1);
-CheckEnum("GTK_TOOLBAR_BOTH",GTK_TOOLBAR_BOTH,2);
-CheckEnum("GTK_TOOLBAR_BOTH_HORIZ",GTK_TOOLBAR_BOTH_HORIZ,3);
-#elif __powerpc64__
-CheckEnum("GTK_TOOLBAR_ICONS",GTK_TOOLBAR_ICONS,0);
-CheckEnum("GTK_TOOLBAR_TEXT",GTK_TOOLBAR_TEXT,1);
-CheckEnum("GTK_TOOLBAR_BOTH",GTK_TOOLBAR_BOTH,2);
-CheckEnum("GTK_TOOLBAR_BOTH_HORIZ",GTK_TOOLBAR_BOTH_HORIZ,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TOOLBAR_ICONS",GTK_TOOLBAR_ICONS,0);
-CheckEnum("GTK_TOOLBAR_TEXT",GTK_TOOLBAR_TEXT,1);
-CheckEnum("GTK_TOOLBAR_BOTH",GTK_TOOLBAR_BOTH,2);
-CheckEnum("GTK_TOOLBAR_BOTH_HORIZ",GTK_TOOLBAR_BOTH_HORIZ,3);
-#elif __s390x__
-CheckEnum("GTK_TOOLBAR_ICONS",GTK_TOOLBAR_ICONS,0);
-CheckEnum("GTK_TOOLBAR_TEXT",GTK_TOOLBAR_TEXT,1);
-CheckEnum("GTK_TOOLBAR_BOTH",GTK_TOOLBAR_BOTH,2);
-CheckEnum("GTK_TOOLBAR_BOTH_HORIZ",GTK_TOOLBAR_BOTH_HORIZ,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13699,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3834 (13699)\n");
@@ -26769,10 +25473,6 @@ Msg("Find size of GtkToolbar * (13702)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13703,0);
 Msg("Find size of fptr_gtk_4149 (13703)\n");
@@ -26800,10 +25500,6 @@ Msg("Find size of GtkCellLayoutDataFunc (13704)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13705,0);
 Msg("Find size of GdkAtom * * (13705)\n");
@@ -26930,22 +25626,6 @@ CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
 CheckEnum("GTK_RELIEF_NORMAL",GTK_RELIEF_NORMAL,0);
 CheckEnum("GTK_RELIEF_HALF",GTK_RELIEF_HALF,1);
 CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_RELIEF_NORMAL",GTK_RELIEF_NORMAL,0);
-CheckEnum("GTK_RELIEF_HALF",GTK_RELIEF_HALF,1);
-CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
-#elif __powerpc64__
-CheckEnum("GTK_RELIEF_NORMAL",GTK_RELIEF_NORMAL,0);
-CheckEnum("GTK_RELIEF_HALF",GTK_RELIEF_HALF,1);
-CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_RELIEF_NORMAL",GTK_RELIEF_NORMAL,0);
-CheckEnum("GTK_RELIEF_HALF",GTK_RELIEF_HALF,1);
-CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
-#elif __s390x__
-CheckEnum("GTK_RELIEF_NORMAL",GTK_RELIEF_NORMAL,0);
-CheckEnum("GTK_RELIEF_HALF",GTK_RELIEF_HALF,1);
-CheckEnum("GTK_RELIEF_NONE",GTK_RELIEF_NONE,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13711,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-349 (13711)\n");
@@ -26992,10 +25672,6 @@ Msg("Find size of gfloat * (13713)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13714,0);
 Msg("Find size of fptr_gtk_7452 (13714)\n");
@@ -27033,30 +25709,6 @@ CheckEnum("GTK_CELL_RENDERER_INSENSITIVE",GTK_CELL_RENDERER_INSENSITIVE,4);
 CheckEnum("GTK_CELL_RENDERER_SORTED",GTK_CELL_RENDERER_SORTED,8);
 CheckEnum("GTK_CELL_RENDERER_FOCUSED",GTK_CELL_RENDERER_FOCUSED,16);
 #elif __ia64__
-CheckEnum("GTK_CELL_RENDERER_SELECTED",GTK_CELL_RENDERER_SELECTED,1);
-CheckEnum("GTK_CELL_RENDERER_PRELIT",GTK_CELL_RENDERER_PRELIT,2);
-CheckEnum("GTK_CELL_RENDERER_INSENSITIVE",GTK_CELL_RENDERER_INSENSITIVE,4);
-CheckEnum("GTK_CELL_RENDERER_SORTED",GTK_CELL_RENDERER_SORTED,8);
-CheckEnum("GTK_CELL_RENDERER_FOCUSED",GTK_CELL_RENDERER_FOCUSED,16);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_CELL_RENDERER_SELECTED",GTK_CELL_RENDERER_SELECTED,1);
-CheckEnum("GTK_CELL_RENDERER_PRELIT",GTK_CELL_RENDERER_PRELIT,2);
-CheckEnum("GTK_CELL_RENDERER_INSENSITIVE",GTK_CELL_RENDERER_INSENSITIVE,4);
-CheckEnum("GTK_CELL_RENDERER_SORTED",GTK_CELL_RENDERER_SORTED,8);
-CheckEnum("GTK_CELL_RENDERER_FOCUSED",GTK_CELL_RENDERER_FOCUSED,16);
-#elif __powerpc64__
-CheckEnum("GTK_CELL_RENDERER_SELECTED",GTK_CELL_RENDERER_SELECTED,1);
-CheckEnum("GTK_CELL_RENDERER_PRELIT",GTK_CELL_RENDERER_PRELIT,2);
-CheckEnum("GTK_CELL_RENDERER_INSENSITIVE",GTK_CELL_RENDERER_INSENSITIVE,4);
-CheckEnum("GTK_CELL_RENDERER_SORTED",GTK_CELL_RENDERER_SORTED,8);
-CheckEnum("GTK_CELL_RENDERER_FOCUSED",GTK_CELL_RENDERER_FOCUSED,16);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_CELL_RENDERER_SELECTED",GTK_CELL_RENDERER_SELECTED,1);
-CheckEnum("GTK_CELL_RENDERER_PRELIT",GTK_CELL_RENDERER_PRELIT,2);
-CheckEnum("GTK_CELL_RENDERER_INSENSITIVE",GTK_CELL_RENDERER_INSENSITIVE,4);
-CheckEnum("GTK_CELL_RENDERER_SORTED",GTK_CELL_RENDERER_SORTED,8);
-CheckEnum("GTK_CELL_RENDERER_FOCUSED",GTK_CELL_RENDERER_FOCUSED,16);
-#elif __s390x__
 CheckEnum("GTK_CELL_RENDERER_SELECTED",GTK_CELL_RENDERER_SELECTED,1);
 CheckEnum("GTK_CELL_RENDERER_PRELIT",GTK_CELL_RENDERER_PRELIT,2);
 CheckEnum("GTK_CELL_RENDERER_INSENSITIVE",GTK_CELL_RENDERER_INSENSITIVE,4);
@@ -27216,10 +25868,6 @@ Msg("Find size of const GtkActionEntry (13720)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13721,0);
 Msg("Find size of const GtkActionEntry * (13721)\n");
@@ -27684,10 +26332,6 @@ Msg("Find size of _GtkContainerClass (13731)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13732,0);
 Msg("Find size of fptr_gtk_558 (13732)\n");
@@ -27696,10 +26340,6 @@ Msg("Find size of fptr_gtk_558 (13732)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13733,0);
 Msg("Find size of fptr_gtk_4786 (13733)\n");
@@ -27708,10 +26348,6 @@ Msg("Find size of fptr_gtk_4786 (13733)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13734,0);
 Msg("Find size of fptr_gtk_3913 (13734)\n");
@@ -27720,10 +26356,6 @@ Msg("Find size of fptr_gtk_3913 (13734)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13735,0);
 Msg("Find size of fptr_gtk_2412 (13735)\n");
@@ -27732,10 +26364,6 @@ Msg("Find size of fptr_gtk_2412 (13735)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13736,0);
 Msg("Find size of fptr_gtk_6024 (13736)\n");
@@ -27744,10 +26372,6 @@ Msg("Find size of fptr_gtk_6024 (13736)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13737,0);
 Msg("Find size of fptr_gtk_1801 (13737)\n");
@@ -27756,10 +26380,6 @@ Msg("Find size of fptr_gtk_1801 (13737)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13738,0);
 Msg("Find size of fptr_gtk_1125 (13738)\n");
@@ -27842,14 +26462,6 @@ CheckTypeSize(GtkFontButtonPrivate,0, 13743, 2)
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 11)
 #elif __ia64__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkFontButtonPrivate,0, 13743, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkFontButtonPrivate,0, 13743, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkFontButtonPrivate,0, 13743, 10)
-#elif __s390x__
-CheckTypeSize(GtkFontButtonPrivate,0, 13743, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13743,0);
 Msg("Find size of GtkFontButtonPrivate (13743)\n");
@@ -28424,22 +27036,6 @@ CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
 CheckEnum("GTK_ACCEL_VISIBLE",GTK_ACCEL_VISIBLE,1);
 CheckEnum("GTK_ACCEL_LOCKED",GTK_ACCEL_LOCKED,2);
 CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_ACCEL_VISIBLE",GTK_ACCEL_VISIBLE,1);
-CheckEnum("GTK_ACCEL_LOCKED",GTK_ACCEL_LOCKED,2);
-CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
-#elif __powerpc64__
-CheckEnum("GTK_ACCEL_VISIBLE",GTK_ACCEL_VISIBLE,1);
-CheckEnum("GTK_ACCEL_LOCKED",GTK_ACCEL_LOCKED,2);
-CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_ACCEL_VISIBLE",GTK_ACCEL_VISIBLE,1);
-CheckEnum("GTK_ACCEL_LOCKED",GTK_ACCEL_LOCKED,2);
-CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
-#elif __s390x__
-CheckEnum("GTK_ACCEL_VISIBLE",GTK_ACCEL_VISIBLE,1);
-CheckEnum("GTK_ACCEL_LOCKED",GTK_ACCEL_LOCKED,2);
-CheckEnum("GTK_ACCEL_MASK",GTK_ACCEL_MASK,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13761,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4428 (13761)\n");
@@ -28467,10 +27063,6 @@ Msg("Find size of GtkAccelFlags (13762)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13763,0);
 Msg("Find size of fptr_gtk_5983 (13763)\n");
@@ -28534,14 +27126,6 @@ CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 2)
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 11)
 #elif __ia64__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 10)
-#elif __s390x__
-CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13767,0);
 Msg("Find size of GtkMenuToolButtonPrivate (13767)\n");
@@ -28676,14 +27260,6 @@ CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 2)
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 11)
 #elif __ia64__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 10)
-#elif __s390x__
-CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13774,0);
 Msg("Find size of GtkToggleToolButtonPrivate (13774)\n");
@@ -28879,26 +27455,6 @@ CheckEnum("GTK_SIZE_GROUP_NONE",GTK_SIZE_GROUP_NONE,0);
 CheckEnum("GTK_SIZE_GROUP_HORIZONTAL",GTK_SIZE_GROUP_HORIZONTAL,1);
 CheckEnum("GTK_SIZE_GROUP_VERTICAL",GTK_SIZE_GROUP_VERTICAL,2);
 CheckEnum("GTK_SIZE_GROUP_BOTH",GTK_SIZE_GROUP_BOTH,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_SIZE_GROUP_NONE",GTK_SIZE_GROUP_NONE,0);
-CheckEnum("GTK_SIZE_GROUP_HORIZONTAL",GTK_SIZE_GROUP_HORIZONTAL,1);
-CheckEnum("GTK_SIZE_GROUP_VERTICAL",GTK_SIZE_GROUP_VERTICAL,2);
-CheckEnum("GTK_SIZE_GROUP_BOTH",GTK_SIZE_GROUP_BOTH,3);
-#elif __powerpc64__
-CheckEnum("GTK_SIZE_GROUP_NONE",GTK_SIZE_GROUP_NONE,0);
-CheckEnum("GTK_SIZE_GROUP_HORIZONTAL",GTK_SIZE_GROUP_HORIZONTAL,1);
-CheckEnum("GTK_SIZE_GROUP_VERTICAL",GTK_SIZE_GROUP_VERTICAL,2);
-CheckEnum("GTK_SIZE_GROUP_BOTH",GTK_SIZE_GROUP_BOTH,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_SIZE_GROUP_NONE",GTK_SIZE_GROUP_NONE,0);
-CheckEnum("GTK_SIZE_GROUP_HORIZONTAL",GTK_SIZE_GROUP_HORIZONTAL,1);
-CheckEnum("GTK_SIZE_GROUP_VERTICAL",GTK_SIZE_GROUP_VERTICAL,2);
-CheckEnum("GTK_SIZE_GROUP_BOTH",GTK_SIZE_GROUP_BOTH,3);
-#elif __s390x__
-CheckEnum("GTK_SIZE_GROUP_NONE",GTK_SIZE_GROUP_NONE,0);
-CheckEnum("GTK_SIZE_GROUP_HORIZONTAL",GTK_SIZE_GROUP_HORIZONTAL,1);
-CheckEnum("GTK_SIZE_GROUP_VERTICAL",GTK_SIZE_GROUP_VERTICAL,2);
-CheckEnum("GTK_SIZE_GROUP_BOTH",GTK_SIZE_GROUP_BOTH,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13782,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3343 (13782)\n");
@@ -28935,22 +27491,6 @@ CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
 CheckEnum("GTK_DIALOG_MODAL",GTK_DIALOG_MODAL,1);
 CheckEnum("GTK_DIALOG_DESTROY_WITH_PARENT",GTK_DIALOG_DESTROY_WITH_PARENT,2);
 CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_DIALOG_MODAL",GTK_DIALOG_MODAL,1);
-CheckEnum("GTK_DIALOG_DESTROY_WITH_PARENT",GTK_DIALOG_DESTROY_WITH_PARENT,2);
-CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
-#elif __powerpc64__
-CheckEnum("GTK_DIALOG_MODAL",GTK_DIALOG_MODAL,1);
-CheckEnum("GTK_DIALOG_DESTROY_WITH_PARENT",GTK_DIALOG_DESTROY_WITH_PARENT,2);
-CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_DIALOG_MODAL",GTK_DIALOG_MODAL,1);
-CheckEnum("GTK_DIALOG_DESTROY_WITH_PARENT",GTK_DIALOG_DESTROY_WITH_PARENT,2);
-CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
-#elif __s390x__
-CheckEnum("GTK_DIALOG_MODAL",GTK_DIALOG_MODAL,1);
-CheckEnum("GTK_DIALOG_DESTROY_WITH_PARENT",GTK_DIALOG_DESTROY_WITH_PARENT,2);
-CheckEnum("GTK_DIALOG_NO_SEPARATOR",GTK_DIALOG_NO_SEPARATOR,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13784,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1052 (13784)\n");
@@ -28978,10 +27518,6 @@ Msg("Find size of GtkDialogFlags (13785)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13786,0);
 Msg("Find size of fptr_gtk_2178 (13786)\n");
@@ -29018,22 +27554,6 @@ CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
 CheckEnum("GTK_ICON_LOOKUP_NO_SVG",GTK_ICON_LOOKUP_NO_SVG,1);
 CheckEnum("GTK_ICON_LOOKUP_FORCE_SVG",GTK_ICON_LOOKUP_FORCE_SVG,2);
 CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_ICON_LOOKUP_NO_SVG",GTK_ICON_LOOKUP_NO_SVG,1);
-CheckEnum("GTK_ICON_LOOKUP_FORCE_SVG",GTK_ICON_LOOKUP_FORCE_SVG,2);
-CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
-#elif __powerpc64__
-CheckEnum("GTK_ICON_LOOKUP_NO_SVG",GTK_ICON_LOOKUP_NO_SVG,1);
-CheckEnum("GTK_ICON_LOOKUP_FORCE_SVG",GTK_ICON_LOOKUP_FORCE_SVG,2);
-CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_ICON_LOOKUP_NO_SVG",GTK_ICON_LOOKUP_NO_SVG,1);
-CheckEnum("GTK_ICON_LOOKUP_FORCE_SVG",GTK_ICON_LOOKUP_FORCE_SVG,2);
-CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
-#elif __s390x__
-CheckEnum("GTK_ICON_LOOKUP_NO_SVG",GTK_ICON_LOOKUP_NO_SVG,1);
-CheckEnum("GTK_ICON_LOOKUP_FORCE_SVG",GTK_ICON_LOOKUP_FORCE_SVG,2);
-CheckEnum("GTK_ICON_LOOKUP_USE_BUILTIN",GTK_ICON_LOOKUP_USE_BUILTIN,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13788,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1937 (13788)\n");
@@ -29061,10 +27581,6 @@ Msg("Find size of GtkIconLookupFlags (13789)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13790,0);
 Msg("Find size of fptr_gtk_7225 (13790)\n");
@@ -29098,22 +27614,6 @@ CheckEnum("GTK_PIXELS",GTK_PIXELS,0);
 CheckEnum("GTK_INCHES",GTK_INCHES,1);
 CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
 #elif __ia64__
-CheckEnum("GTK_PIXELS",GTK_PIXELS,0);
-CheckEnum("GTK_INCHES",GTK_INCHES,1);
-CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_PIXELS",GTK_PIXELS,0);
-CheckEnum("GTK_INCHES",GTK_INCHES,1);
-CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
-#elif __powerpc64__
-CheckEnum("GTK_PIXELS",GTK_PIXELS,0);
-CheckEnum("GTK_INCHES",GTK_INCHES,1);
-CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_PIXELS",GTK_PIXELS,0);
-CheckEnum("GTK_INCHES",GTK_INCHES,1);
-CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
-#elif __s390x__
 CheckEnum("GTK_PIXELS",GTK_PIXELS,0);
 CheckEnum("GTK_INCHES",GTK_INCHES,1);
 CheckEnum("GTK_CENTIMETERS",GTK_CENTIMETERS,2);
@@ -29279,10 +27779,6 @@ Msg("Find size of guint16 * (13798)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13799,0);
 Msg("Find size of fptr_gtk_2111 (13799)\n");
@@ -29335,22 +27831,6 @@ CheckEnum("GTK_EXPAND",GTK_EXPAND,1);
 CheckEnum("GTK_SHRINK",GTK_SHRINK,2);
 CheckEnum("GTK_FILL",GTK_FILL,4);
 #elif __ia64__
-CheckEnum("GTK_EXPAND",GTK_EXPAND,1);
-CheckEnum("GTK_SHRINK",GTK_SHRINK,2);
-CheckEnum("GTK_FILL",GTK_FILL,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_EXPAND",GTK_EXPAND,1);
-CheckEnum("GTK_SHRINK",GTK_SHRINK,2);
-CheckEnum("GTK_FILL",GTK_FILL,4);
-#elif __powerpc64__
-CheckEnum("GTK_EXPAND",GTK_EXPAND,1);
-CheckEnum("GTK_SHRINK",GTK_SHRINK,2);
-CheckEnum("GTK_FILL",GTK_FILL,4);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_EXPAND",GTK_EXPAND,1);
-CheckEnum("GTK_SHRINK",GTK_SHRINK,2);
-CheckEnum("GTK_FILL",GTK_FILL,4);
-#elif __s390x__
 CheckEnum("GTK_EXPAND",GTK_EXPAND,1);
 CheckEnum("GTK_SHRINK",GTK_SHRINK,2);
 CheckEnum("GTK_FILL",GTK_FILL,4);
@@ -29637,14 +28117,6 @@ CheckTypeSize(const GtkTreePath,0, 13807, 2)
 CheckTypeSize(const GtkTreePath,0, 13807, 11)
 #elif __ia64__
 CheckTypeSize(const GtkTreePath,0, 13807, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GtkTreePath,0, 13807, 6)
-#elif __powerpc64__
-CheckTypeSize(const GtkTreePath,0, 13807, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GtkTreePath,0, 13807, 10)
-#elif __s390x__
-CheckTypeSize(const GtkTreePath,0, 13807, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13807,0);
 Msg("Find size of const GtkTreePath (13807)\n");
@@ -29653,10 +28125,6 @@ Msg("Find size of const GtkTreePath (13807)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13808,0);
 Msg("Find size of const GtkTreePath * (13808)\n");
@@ -29665,10 +28133,6 @@ Msg("Find size of const GtkTreePath * (13808)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13809,0);
 Msg("Find size of fptr_gtk_8404 (13809)\n");
@@ -29696,10 +28160,6 @@ Msg("Find size of GtkClipboardTextReceivedFunc (13810)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13811,0);
 Msg("Find size of fptr_gtk_1732 (13811)\n");
@@ -29727,10 +28187,6 @@ Msg("Find size of GtkAccelGroupFindFunc (13812)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13813,0);
 Msg("Find size of fptr_gtk_6971 (13813)\n");
@@ -29758,10 +28214,6 @@ Msg("Find size of GtkTreeDestroyCountFunc (13814)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13815,0);
 Msg("Find size of GtkTreePath * * (13815)\n");
@@ -29778,26 +28230,6 @@ CheckEnum("GTK_TREE_VIEW_DROP_AFTER",GTK_TREE_VIEW_DROP_AFTER,1);
 CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE",GTK_TREE_VIEW_DROP_INTO_OR_BEFORE,2);
 CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_AFTER",GTK_TREE_VIEW_DROP_INTO_OR_AFTER,3);
 #elif __ia64__
-CheckEnum("GTK_TREE_VIEW_DROP_BEFORE",GTK_TREE_VIEW_DROP_BEFORE,0);
-CheckEnum("GTK_TREE_VIEW_DROP_AFTER",GTK_TREE_VIEW_DROP_AFTER,1);
-CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE",GTK_TREE_VIEW_DROP_INTO_OR_BEFORE,2);
-CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_AFTER",GTK_TREE_VIEW_DROP_INTO_OR_AFTER,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TREE_VIEW_DROP_BEFORE",GTK_TREE_VIEW_DROP_BEFORE,0);
-CheckEnum("GTK_TREE_VIEW_DROP_AFTER",GTK_TREE_VIEW_DROP_AFTER,1);
-CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE",GTK_TREE_VIEW_DROP_INTO_OR_BEFORE,2);
-CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_AFTER",GTK_TREE_VIEW_DROP_INTO_OR_AFTER,3);
-#elif __powerpc64__
-CheckEnum("GTK_TREE_VIEW_DROP_BEFORE",GTK_TREE_VIEW_DROP_BEFORE,0);
-CheckEnum("GTK_TREE_VIEW_DROP_AFTER",GTK_TREE_VIEW_DROP_AFTER,1);
-CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE",GTK_TREE_VIEW_DROP_INTO_OR_BEFORE,2);
-CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_AFTER",GTK_TREE_VIEW_DROP_INTO_OR_AFTER,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TREE_VIEW_DROP_BEFORE",GTK_TREE_VIEW_DROP_BEFORE,0);
-CheckEnum("GTK_TREE_VIEW_DROP_AFTER",GTK_TREE_VIEW_DROP_AFTER,1);
-CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE",GTK_TREE_VIEW_DROP_INTO_OR_BEFORE,2);
-CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_AFTER",GTK_TREE_VIEW_DROP_INTO_OR_AFTER,3);
-#elif __s390x__
 CheckEnum("GTK_TREE_VIEW_DROP_BEFORE",GTK_TREE_VIEW_DROP_BEFORE,0);
 CheckEnum("GTK_TREE_VIEW_DROP_AFTER",GTK_TREE_VIEW_DROP_AFTER,1);
 CheckEnum("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE",GTK_TREE_VIEW_DROP_INTO_OR_BEFORE,2);
@@ -29848,10 +28280,6 @@ Msg("Find size of GtkTreeViewDropPosition * (13818)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13819,0);
 Msg("Find size of GdkImage * * (13819)\n");
@@ -29987,10 +28415,6 @@ Msg("Find size of GtkAspectFrame * (13822)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13823,0);
 Msg("Find size of fptr_gtk_7309 (13823)\n");
@@ -30018,10 +28442,6 @@ Msg("Find size of GtkFileFilterFunc (13824)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13825,0);
 Msg("Find size of GdkColor * * (13825)\n");
@@ -30094,14 +28514,6 @@ CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 2)
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 11)
 #elif __ia64__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 10)
-#elif __s390x__
-CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13828,0);
 Msg("Find size of GtkIMMulticontextPrivate (13828)\n");
@@ -30186,10 +28598,6 @@ Msg("Find size of const GtkStockItem (13832)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13833,0);
 Msg("Find size of const GtkStockItem * (13833)\n");
@@ -30206,26 +28614,6 @@ CheckEnum("GTK_MESSAGE_WARNING",GTK_MESSAGE_WARNING,1);
 CheckEnum("GTK_MESSAGE_QUESTION",GTK_MESSAGE_QUESTION,2);
 CheckEnum("GTK_MESSAGE_ERROR",GTK_MESSAGE_ERROR,3);
 #elif __ia64__
-CheckEnum("GTK_MESSAGE_INFO",GTK_MESSAGE_INFO,0);
-CheckEnum("GTK_MESSAGE_WARNING",GTK_MESSAGE_WARNING,1);
-CheckEnum("GTK_MESSAGE_QUESTION",GTK_MESSAGE_QUESTION,2);
-CheckEnum("GTK_MESSAGE_ERROR",GTK_MESSAGE_ERROR,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_MESSAGE_INFO",GTK_MESSAGE_INFO,0);
-CheckEnum("GTK_MESSAGE_WARNING",GTK_MESSAGE_WARNING,1);
-CheckEnum("GTK_MESSAGE_QUESTION",GTK_MESSAGE_QUESTION,2);
-CheckEnum("GTK_MESSAGE_ERROR",GTK_MESSAGE_ERROR,3);
-#elif __powerpc64__
-CheckEnum("GTK_MESSAGE_INFO",GTK_MESSAGE_INFO,0);
-CheckEnum("GTK_MESSAGE_WARNING",GTK_MESSAGE_WARNING,1);
-CheckEnum("GTK_MESSAGE_QUESTION",GTK_MESSAGE_QUESTION,2);
-CheckEnum("GTK_MESSAGE_ERROR",GTK_MESSAGE_ERROR,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_MESSAGE_INFO",GTK_MESSAGE_INFO,0);
-CheckEnum("GTK_MESSAGE_WARNING",GTK_MESSAGE_WARNING,1);
-CheckEnum("GTK_MESSAGE_QUESTION",GTK_MESSAGE_QUESTION,2);
-CheckEnum("GTK_MESSAGE_ERROR",GTK_MESSAGE_ERROR,3);
-#elif __s390x__
 CheckEnum("GTK_MESSAGE_INFO",GTK_MESSAGE_INFO,0);
 CheckEnum("GTK_MESSAGE_WARNING",GTK_MESSAGE_WARNING,1);
 CheckEnum("GTK_MESSAGE_QUESTION",GTK_MESSAGE_QUESTION,2);
@@ -30275,34 +28663,6 @@ CheckEnum("GTK_BUTTONS_CLOSE",GTK_BUTTONS_CLOSE,2);
 CheckEnum("GTK_BUTTONS_CANCEL",GTK_BUTTONS_CANCEL,3);
 CheckEnum("GTK_BUTTONS_YES_NO",GTK_BUTTONS_YES_NO,4);
 CheckEnum("GTK_BUTTONS_OK_CANCEL",GTK_BUTTONS_OK_CANCEL,5);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_BUTTONS_NONE",GTK_BUTTONS_NONE,0);
-CheckEnum("GTK_BUTTONS_OK",GTK_BUTTONS_OK,1);
-CheckEnum("GTK_BUTTONS_CLOSE",GTK_BUTTONS_CLOSE,2);
-CheckEnum("GTK_BUTTONS_CANCEL",GTK_BUTTONS_CANCEL,3);
-CheckEnum("GTK_BUTTONS_YES_NO",GTK_BUTTONS_YES_NO,4);
-CheckEnum("GTK_BUTTONS_OK_CANCEL",GTK_BUTTONS_OK_CANCEL,5);
-#elif __powerpc64__
-CheckEnum("GTK_BUTTONS_NONE",GTK_BUTTONS_NONE,0);
-CheckEnum("GTK_BUTTONS_OK",GTK_BUTTONS_OK,1);
-CheckEnum("GTK_BUTTONS_CLOSE",GTK_BUTTONS_CLOSE,2);
-CheckEnum("GTK_BUTTONS_CANCEL",GTK_BUTTONS_CANCEL,3);
-CheckEnum("GTK_BUTTONS_YES_NO",GTK_BUTTONS_YES_NO,4);
-CheckEnum("GTK_BUTTONS_OK_CANCEL",GTK_BUTTONS_OK_CANCEL,5);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_BUTTONS_NONE",GTK_BUTTONS_NONE,0);
-CheckEnum("GTK_BUTTONS_OK",GTK_BUTTONS_OK,1);
-CheckEnum("GTK_BUTTONS_CLOSE",GTK_BUTTONS_CLOSE,2);
-CheckEnum("GTK_BUTTONS_CANCEL",GTK_BUTTONS_CANCEL,3);
-CheckEnum("GTK_BUTTONS_YES_NO",GTK_BUTTONS_YES_NO,4);
-CheckEnum("GTK_BUTTONS_OK_CANCEL",GTK_BUTTONS_OK_CANCEL,5);
-#elif __s390x__
-CheckEnum("GTK_BUTTONS_NONE",GTK_BUTTONS_NONE,0);
-CheckEnum("GTK_BUTTONS_OK",GTK_BUTTONS_OK,1);
-CheckEnum("GTK_BUTTONS_CLOSE",GTK_BUTTONS_CLOSE,2);
-CheckEnum("GTK_BUTTONS_CANCEL",GTK_BUTTONS_CANCEL,3);
-CheckEnum("GTK_BUTTONS_YES_NO",GTK_BUTTONS_YES_NO,4);
-CheckEnum("GTK_BUTTONS_OK_CANCEL",GTK_BUTTONS_OK_CANCEL,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13836,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-2589 (13836)\n");
@@ -30330,10 +28690,6 @@ Msg("Find size of GtkButtonsType (13837)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13838,0);
 Msg("Find size of GtkWidget * * (13838)\n");
@@ -30342,10 +28698,6 @@ Msg("Find size of GtkWidget * * (13838)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13839,0);
 Msg("Find size of fptr_gtk_5985 (13839)\n");
@@ -30398,22 +28750,6 @@ CheckEnum("GTK_POLICY_ALWAYS",GTK_POLICY_ALWAYS,0);
 CheckEnum("GTK_POLICY_AUTOMATIC",GTK_POLICY_AUTOMATIC,1);
 CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
 #elif __ia64__
-CheckEnum("GTK_POLICY_ALWAYS",GTK_POLICY_ALWAYS,0);
-CheckEnum("GTK_POLICY_AUTOMATIC",GTK_POLICY_AUTOMATIC,1);
-CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_POLICY_ALWAYS",GTK_POLICY_ALWAYS,0);
-CheckEnum("GTK_POLICY_AUTOMATIC",GTK_POLICY_AUTOMATIC,1);
-CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
-#elif __powerpc64__
-CheckEnum("GTK_POLICY_ALWAYS",GTK_POLICY_ALWAYS,0);
-CheckEnum("GTK_POLICY_AUTOMATIC",GTK_POLICY_AUTOMATIC,1);
-CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_POLICY_ALWAYS",GTK_POLICY_ALWAYS,0);
-CheckEnum("GTK_POLICY_AUTOMATIC",GTK_POLICY_AUTOMATIC,1);
-CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
-#elif __s390x__
 CheckEnum("GTK_POLICY_ALWAYS",GTK_POLICY_ALWAYS,0);
 CheckEnum("GTK_POLICY_AUTOMATIC",GTK_POLICY_AUTOMATIC,1);
 CheckEnum("GTK_POLICY_NEVER",GTK_POLICY_NEVER,2);
@@ -30472,22 +28808,6 @@ CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
 CheckEnum("GTK_RESIZE_PARENT",GTK_RESIZE_PARENT,0);
 CheckEnum("GTK_RESIZE_QUEUE",GTK_RESIZE_QUEUE,1);
 CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_RESIZE_PARENT",GTK_RESIZE_PARENT,0);
-CheckEnum("GTK_RESIZE_QUEUE",GTK_RESIZE_QUEUE,1);
-CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
-#elif __powerpc64__
-CheckEnum("GTK_RESIZE_PARENT",GTK_RESIZE_PARENT,0);
-CheckEnum("GTK_RESIZE_QUEUE",GTK_RESIZE_QUEUE,1);
-CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_RESIZE_PARENT",GTK_RESIZE_PARENT,0);
-CheckEnum("GTK_RESIZE_QUEUE",GTK_RESIZE_QUEUE,1);
-CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
-#elif __s390x__
-CheckEnum("GTK_RESIZE_PARENT",GTK_RESIZE_PARENT,0);
-CheckEnum("GTK_RESIZE_QUEUE",GTK_RESIZE_QUEUE,1);
-CheckEnum("GTK_RESIZE_IMMEDIATE",GTK_RESIZE_IMMEDIATE,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13845,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-933 (13845)\n");
@@ -30515,10 +28835,6 @@ Msg("Find size of GtkResizeMode (13846)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13847,0);
 Msg("Find size of fptr_gtk_8682 (13847)\n");
@@ -30546,10 +28862,6 @@ Msg("Find size of GtkColorSelectionChangePaletteWithScreenFunc (13848)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13849,0);
 Msg("Find size of fptr_gtk_3639 (13849)\n");
@@ -30577,10 +28889,6 @@ Msg("Find size of GtkClipboardReceivedFunc (13850)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13851,0);
 Msg("Find size of GtkTreeViewColumn * * (13851)\n");
@@ -30589,10 +28897,6 @@ Msg("Find size of GtkTreeViewColumn * * (13851)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13852,0);
 Msg("Find size of fptr_gtk_7432 (13852)\n");
@@ -30643,18 +28947,6 @@ CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
 CheckEnum("GTK_TEXT_SEARCH_VISIBLE_ONLY",GTK_TEXT_SEARCH_VISIBLE_ONLY,1);
 CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
 #elif __ia64__
-CheckEnum("GTK_TEXT_SEARCH_VISIBLE_ONLY",GTK_TEXT_SEARCH_VISIBLE_ONLY,1);
-CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TEXT_SEARCH_VISIBLE_ONLY",GTK_TEXT_SEARCH_VISIBLE_ONLY,1);
-CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
-#elif __powerpc64__
-CheckEnum("GTK_TEXT_SEARCH_VISIBLE_ONLY",GTK_TEXT_SEARCH_VISIBLE_ONLY,1);
-CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TEXT_SEARCH_VISIBLE_ONLY",GTK_TEXT_SEARCH_VISIBLE_ONLY,1);
-CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
-#elif __s390x__
 CheckEnum("GTK_TEXT_SEARCH_VISIBLE_ONLY",GTK_TEXT_SEARCH_VISIBLE_ONLY,1);
 CheckEnum("GTK_TEXT_SEARCH_TEXT_ONLY",GTK_TEXT_SEARCH_TEXT_ONLY,2);
 #else
@@ -30767,26 +29059,6 @@ CheckEnum("GTK_DEST_DEFAULT_MOTION",GTK_DEST_DEFAULT_MOTION,1);
 CheckEnum("GTK_DEST_DEFAULT_HIGHLIGHT",GTK_DEST_DEFAULT_HIGHLIGHT,2);
 CheckEnum("GTK_DEST_DEFAULT_DROP",GTK_DEST_DEFAULT_DROP,4);
 CheckEnum("GTK_DEST_DEFAULT_ALL",GTK_DEST_DEFAULT_ALL,7);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_DEST_DEFAULT_MOTION",GTK_DEST_DEFAULT_MOTION,1);
-CheckEnum("GTK_DEST_DEFAULT_HIGHLIGHT",GTK_DEST_DEFAULT_HIGHLIGHT,2);
-CheckEnum("GTK_DEST_DEFAULT_DROP",GTK_DEST_DEFAULT_DROP,4);
-CheckEnum("GTK_DEST_DEFAULT_ALL",GTK_DEST_DEFAULT_ALL,7);
-#elif __powerpc64__
-CheckEnum("GTK_DEST_DEFAULT_MOTION",GTK_DEST_DEFAULT_MOTION,1);
-CheckEnum("GTK_DEST_DEFAULT_HIGHLIGHT",GTK_DEST_DEFAULT_HIGHLIGHT,2);
-CheckEnum("GTK_DEST_DEFAULT_DROP",GTK_DEST_DEFAULT_DROP,4);
-CheckEnum("GTK_DEST_DEFAULT_ALL",GTK_DEST_DEFAULT_ALL,7);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_DEST_DEFAULT_MOTION",GTK_DEST_DEFAULT_MOTION,1);
-CheckEnum("GTK_DEST_DEFAULT_HIGHLIGHT",GTK_DEST_DEFAULT_HIGHLIGHT,2);
-CheckEnum("GTK_DEST_DEFAULT_DROP",GTK_DEST_DEFAULT_DROP,4);
-CheckEnum("GTK_DEST_DEFAULT_ALL",GTK_DEST_DEFAULT_ALL,7);
-#elif __s390x__
-CheckEnum("GTK_DEST_DEFAULT_MOTION",GTK_DEST_DEFAULT_MOTION,1);
-CheckEnum("GTK_DEST_DEFAULT_HIGHLIGHT",GTK_DEST_DEFAULT_HIGHLIGHT,2);
-CheckEnum("GTK_DEST_DEFAULT_DROP",GTK_DEST_DEFAULT_DROP,4);
-CheckEnum("GTK_DEST_DEFAULT_ALL",GTK_DEST_DEFAULT_ALL,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13860,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1076 (13860)\n");
@@ -30814,10 +29086,6 @@ Msg("Find size of GtkDestDefaults (13861)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13862,0);
 Msg("Find size of fptr_gtk_6207 (13862)\n");
@@ -30866,38 +29134,6 @@ CheckEnum("GTK_SPIN_PAGE_BACKWARD",GTK_SPIN_PAGE_BACKWARD,3);
 CheckEnum("GTK_SPIN_HOME",GTK_SPIN_HOME,4);
 CheckEnum("GTK_SPIN_END",GTK_SPIN_END,5);
 CheckEnum("GTK_SPIN_USER_DEFINED",GTK_SPIN_USER_DEFINED,6);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_SPIN_STEP_FORWARD",GTK_SPIN_STEP_FORWARD,0);
-CheckEnum("GTK_SPIN_STEP_BACKWARD",GTK_SPIN_STEP_BACKWARD,1);
-CheckEnum("GTK_SPIN_PAGE_FORWARD",GTK_SPIN_PAGE_FORWARD,2);
-CheckEnum("GTK_SPIN_PAGE_BACKWARD",GTK_SPIN_PAGE_BACKWARD,3);
-CheckEnum("GTK_SPIN_HOME",GTK_SPIN_HOME,4);
-CheckEnum("GTK_SPIN_END",GTK_SPIN_END,5);
-CheckEnum("GTK_SPIN_USER_DEFINED",GTK_SPIN_USER_DEFINED,6);
-#elif __powerpc64__
-CheckEnum("GTK_SPIN_STEP_FORWARD",GTK_SPIN_STEP_FORWARD,0);
-CheckEnum("GTK_SPIN_STEP_BACKWARD",GTK_SPIN_STEP_BACKWARD,1);
-CheckEnum("GTK_SPIN_PAGE_FORWARD",GTK_SPIN_PAGE_FORWARD,2);
-CheckEnum("GTK_SPIN_PAGE_BACKWARD",GTK_SPIN_PAGE_BACKWARD,3);
-CheckEnum("GTK_SPIN_HOME",GTK_SPIN_HOME,4);
-CheckEnum("GTK_SPIN_END",GTK_SPIN_END,5);
-CheckEnum("GTK_SPIN_USER_DEFINED",GTK_SPIN_USER_DEFINED,6);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_SPIN_STEP_FORWARD",GTK_SPIN_STEP_FORWARD,0);
-CheckEnum("GTK_SPIN_STEP_BACKWARD",GTK_SPIN_STEP_BACKWARD,1);
-CheckEnum("GTK_SPIN_PAGE_FORWARD",GTK_SPIN_PAGE_FORWARD,2);
-CheckEnum("GTK_SPIN_PAGE_BACKWARD",GTK_SPIN_PAGE_BACKWARD,3);
-CheckEnum("GTK_SPIN_HOME",GTK_SPIN_HOME,4);
-CheckEnum("GTK_SPIN_END",GTK_SPIN_END,5);
-CheckEnum("GTK_SPIN_USER_DEFINED",GTK_SPIN_USER_DEFINED,6);
-#elif __s390x__
-CheckEnum("GTK_SPIN_STEP_FORWARD",GTK_SPIN_STEP_FORWARD,0);
-CheckEnum("GTK_SPIN_STEP_BACKWARD",GTK_SPIN_STEP_BACKWARD,1);
-CheckEnum("GTK_SPIN_PAGE_FORWARD",GTK_SPIN_PAGE_FORWARD,2);
-CheckEnum("GTK_SPIN_PAGE_BACKWARD",GTK_SPIN_PAGE_BACKWARD,3);
-CheckEnum("GTK_SPIN_HOME",GTK_SPIN_HOME,4);
-CheckEnum("GTK_SPIN_END",GTK_SPIN_END,5);
-CheckEnum("GTK_SPIN_USER_DEFINED",GTK_SPIN_USER_DEFINED,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13864,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3383 (13864)\n");
@@ -30931,18 +29167,6 @@ CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
 #elif __ia64__
 CheckEnum("GTK_WINDOW_TOPLEVEL",GTK_WINDOW_TOPLEVEL,0);
 CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_WINDOW_TOPLEVEL",GTK_WINDOW_TOPLEVEL,0);
-CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
-#elif __powerpc64__
-CheckEnum("GTK_WINDOW_TOPLEVEL",GTK_WINDOW_TOPLEVEL,0);
-CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_WINDOW_TOPLEVEL",GTK_WINDOW_TOPLEVEL,0);
-CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
-#elif __s390x__
-CheckEnum("GTK_WINDOW_TOPLEVEL",GTK_WINDOW_TOPLEVEL,0);
-CheckEnum("GTK_WINDOW_POPUP",GTK_WINDOW_POPUP,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13866,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4475 (13866)\n");
@@ -30970,10 +29194,6 @@ Msg("Find size of GtkWindowType (13867)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13868,0);
 Msg("Find size of GtkIconSet * * (13868)\n");
@@ -30982,10 +29202,6 @@ Msg("Find size of GtkIconSet * * (13868)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13869,0);
 Msg("Find size of fptr_gtk_9178 (13869)\n");
@@ -31113,30 +29329,6 @@ CheckEnum("GTK_WIN_POS_CENTER",GTK_WIN_POS_CENTER,1);
 CheckEnum("GTK_WIN_POS_MOUSE",GTK_WIN_POS_MOUSE,2);
 CheckEnum("GTK_WIN_POS_CENTER_ALWAYS",GTK_WIN_POS_CENTER_ALWAYS,3);
 CheckEnum("GTK_WIN_POS_CENTER_ON_PARENT",GTK_WIN_POS_CENTER_ON_PARENT,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_WIN_POS_NONE",GTK_WIN_POS_NONE,0);
-CheckEnum("GTK_WIN_POS_CENTER",GTK_WIN_POS_CENTER,1);
-CheckEnum("GTK_WIN_POS_MOUSE",GTK_WIN_POS_MOUSE,2);
-CheckEnum("GTK_WIN_POS_CENTER_ALWAYS",GTK_WIN_POS_CENTER_ALWAYS,3);
-CheckEnum("GTK_WIN_POS_CENTER_ON_PARENT",GTK_WIN_POS_CENTER_ON_PARENT,4);
-#elif __powerpc64__
-CheckEnum("GTK_WIN_POS_NONE",GTK_WIN_POS_NONE,0);
-CheckEnum("GTK_WIN_POS_CENTER",GTK_WIN_POS_CENTER,1);
-CheckEnum("GTK_WIN_POS_MOUSE",GTK_WIN_POS_MOUSE,2);
-CheckEnum("GTK_WIN_POS_CENTER_ALWAYS",GTK_WIN_POS_CENTER_ALWAYS,3);
-CheckEnum("GTK_WIN_POS_CENTER_ON_PARENT",GTK_WIN_POS_CENTER_ON_PARENT,4);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_WIN_POS_NONE",GTK_WIN_POS_NONE,0);
-CheckEnum("GTK_WIN_POS_CENTER",GTK_WIN_POS_CENTER,1);
-CheckEnum("GTK_WIN_POS_MOUSE",GTK_WIN_POS_MOUSE,2);
-CheckEnum("GTK_WIN_POS_CENTER_ALWAYS",GTK_WIN_POS_CENTER_ALWAYS,3);
-CheckEnum("GTK_WIN_POS_CENTER_ON_PARENT",GTK_WIN_POS_CENTER_ON_PARENT,4);
-#elif __s390x__
-CheckEnum("GTK_WIN_POS_NONE",GTK_WIN_POS_NONE,0);
-CheckEnum("GTK_WIN_POS_CENTER",GTK_WIN_POS_CENTER,1);
-CheckEnum("GTK_WIN_POS_MOUSE",GTK_WIN_POS_MOUSE,2);
-CheckEnum("GTK_WIN_POS_CENTER_ALWAYS",GTK_WIN_POS_CENTER_ALWAYS,3);
-CheckEnum("GTK_WIN_POS_CENTER_ON_PARENT",GTK_WIN_POS_CENTER_ON_PARENT,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13874,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-4474 (13874)\n");
@@ -31164,10 +29356,6 @@ Msg("Find size of GtkWindowPosition (13875)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13876,0);
 Msg("Find size of fptr_gtk_6229 (13876)\n");
@@ -31214,10 +29402,6 @@ Msg("Find size of GtkBin * (13878)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13879,0);
 Msg("Find size of fptr_gtk_3406 (13879)\n");
@@ -31328,26 +29512,6 @@ CheckEnum("GTK_EXPANDER_COLLAPSED",GTK_EXPANDER_COLLAPSED,0);
 CheckEnum("GTK_EXPANDER_SEMI_COLLAPSED",GTK_EXPANDER_SEMI_COLLAPSED,1);
 CheckEnum("GTK_EXPANDER_SEMI_EXPANDED",GTK_EXPANDER_SEMI_EXPANDED,2);
 CheckEnum("GTK_EXPANDER_EXPANDED",GTK_EXPANDER_EXPANDED,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_EXPANDER_COLLAPSED",GTK_EXPANDER_COLLAPSED,0);
-CheckEnum("GTK_EXPANDER_SEMI_COLLAPSED",GTK_EXPANDER_SEMI_COLLAPSED,1);
-CheckEnum("GTK_EXPANDER_SEMI_EXPANDED",GTK_EXPANDER_SEMI_EXPANDED,2);
-CheckEnum("GTK_EXPANDER_EXPANDED",GTK_EXPANDER_EXPANDED,3);
-#elif __powerpc64__
-CheckEnum("GTK_EXPANDER_COLLAPSED",GTK_EXPANDER_COLLAPSED,0);
-CheckEnum("GTK_EXPANDER_SEMI_COLLAPSED",GTK_EXPANDER_SEMI_COLLAPSED,1);
-CheckEnum("GTK_EXPANDER_SEMI_EXPANDED",GTK_EXPANDER_SEMI_EXPANDED,2);
-CheckEnum("GTK_EXPANDER_EXPANDED",GTK_EXPANDER_EXPANDED,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_EXPANDER_COLLAPSED",GTK_EXPANDER_COLLAPSED,0);
-CheckEnum("GTK_EXPANDER_SEMI_COLLAPSED",GTK_EXPANDER_SEMI_COLLAPSED,1);
-CheckEnum("GTK_EXPANDER_SEMI_EXPANDED",GTK_EXPANDER_SEMI_EXPANDED,2);
-CheckEnum("GTK_EXPANDER_EXPANDED",GTK_EXPANDER_EXPANDED,3);
-#elif __s390x__
-CheckEnum("GTK_EXPANDER_COLLAPSED",GTK_EXPANDER_COLLAPSED,0);
-CheckEnum("GTK_EXPANDER_SEMI_COLLAPSED",GTK_EXPANDER_SEMI_COLLAPSED,1);
-CheckEnum("GTK_EXPANDER_SEMI_EXPANDED",GTK_EXPANDER_SEMI_EXPANDED,2);
-CheckEnum("GTK_EXPANDER_EXPANDED",GTK_EXPANDER_EXPANDED,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13884,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3438 (13884)\n");
@@ -31387,34 +29551,6 @@ CheckEnum("GTK_PATH_PRIO_THEME",GTK_PATH_PRIO_THEME,10);
 CheckEnum("GTK_PATH_PRIO_RC",GTK_PATH_PRIO_RC,12);
 CheckEnum("GTK_PATH_PRIO_HIGHEST",GTK_PATH_PRIO_HIGHEST,15);
 #elif __ia64__
-CheckEnum("GTK_PATH_PRIO_LOWEST",GTK_PATH_PRIO_LOWEST,0);
-CheckEnum("GTK_PATH_PRIO_GTK",GTK_PATH_PRIO_GTK,4);
-CheckEnum("GTK_PATH_PRIO_APPLICATION",GTK_PATH_PRIO_APPLICATION,8);
-CheckEnum("GTK_PATH_PRIO_THEME",GTK_PATH_PRIO_THEME,10);
-CheckEnum("GTK_PATH_PRIO_RC",GTK_PATH_PRIO_RC,12);
-CheckEnum("GTK_PATH_PRIO_HIGHEST",GTK_PATH_PRIO_HIGHEST,15);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_PATH_PRIO_LOWEST",GTK_PATH_PRIO_LOWEST,0);
-CheckEnum("GTK_PATH_PRIO_GTK",GTK_PATH_PRIO_GTK,4);
-CheckEnum("GTK_PATH_PRIO_APPLICATION",GTK_PATH_PRIO_APPLICATION,8);
-CheckEnum("GTK_PATH_PRIO_THEME",GTK_PATH_PRIO_THEME,10);
-CheckEnum("GTK_PATH_PRIO_RC",GTK_PATH_PRIO_RC,12);
-CheckEnum("GTK_PATH_PRIO_HIGHEST",GTK_PATH_PRIO_HIGHEST,15);
-#elif __powerpc64__
-CheckEnum("GTK_PATH_PRIO_LOWEST",GTK_PATH_PRIO_LOWEST,0);
-CheckEnum("GTK_PATH_PRIO_GTK",GTK_PATH_PRIO_GTK,4);
-CheckEnum("GTK_PATH_PRIO_APPLICATION",GTK_PATH_PRIO_APPLICATION,8);
-CheckEnum("GTK_PATH_PRIO_THEME",GTK_PATH_PRIO_THEME,10);
-CheckEnum("GTK_PATH_PRIO_RC",GTK_PATH_PRIO_RC,12);
-CheckEnum("GTK_PATH_PRIO_HIGHEST",GTK_PATH_PRIO_HIGHEST,15);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_PATH_PRIO_LOWEST",GTK_PATH_PRIO_LOWEST,0);
-CheckEnum("GTK_PATH_PRIO_GTK",GTK_PATH_PRIO_GTK,4);
-CheckEnum("GTK_PATH_PRIO_APPLICATION",GTK_PATH_PRIO_APPLICATION,8);
-CheckEnum("GTK_PATH_PRIO_THEME",GTK_PATH_PRIO_THEME,10);
-CheckEnum("GTK_PATH_PRIO_RC",GTK_PATH_PRIO_RC,12);
-CheckEnum("GTK_PATH_PRIO_HIGHEST",GTK_PATH_PRIO_HIGHEST,15);
-#elif __s390x__
 CheckEnum("GTK_PATH_PRIO_LOWEST",GTK_PATH_PRIO_LOWEST,0);
 CheckEnum("GTK_PATH_PRIO_GTK",GTK_PATH_PRIO_GTK,4);
 CheckEnum("GTK_PATH_PRIO_APPLICATION",GTK_PATH_PRIO_APPLICATION,8);
@@ -31552,10 +29688,6 @@ Msg("Find size of GtkArrow * (13891)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13892,0);
 Msg("Find size of fptr_gtk_7382 (13892)\n");
@@ -31583,10 +29715,6 @@ Msg("Find size of GtkIconViewForeachFunc (13893)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13894,0);
 Msg("Find size of GtkTooltips * * (13894)\n");
@@ -31595,10 +29723,6 @@ Msg("Find size of GtkTooltips * * (13894)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13895,0);
 Msg("Find size of fptr_gtk_1142 (13895)\n");
@@ -31626,10 +29750,6 @@ Msg("Find size of GtkTreeModelFilterModifyFunc (13896)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13897,0);
 Msg("Find size of GdkPoint * * (13897)\n");
@@ -31840,10 +29960,6 @@ Msg("Find size of GtkStateType * (13901)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13902,0);
 Msg("Find size of GList * * (13902)\n");
@@ -31852,10 +29968,6 @@ Msg("Find size of GList * * (13902)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13903,0);
 Msg("Find size of fptr_gtk_4568 (13903)\n");
@@ -31954,10 +30066,6 @@ Msg("Find size of const GtkSettingsValue (13907)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13908,0);
 Msg("Find size of const GtkSettingsValue * (13908)\n");
@@ -31972,22 +30080,6 @@ CheckEnum("GTK_PATH_WIDGET",GTK_PATH_WIDGET,0);
 CheckEnum("GTK_PATH_WIDGET_CLASS",GTK_PATH_WIDGET_CLASS,1);
 CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
 #elif __ia64__
-CheckEnum("GTK_PATH_WIDGET",GTK_PATH_WIDGET,0);
-CheckEnum("GTK_PATH_WIDGET_CLASS",GTK_PATH_WIDGET_CLASS,1);
-CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_PATH_WIDGET",GTK_PATH_WIDGET,0);
-CheckEnum("GTK_PATH_WIDGET_CLASS",GTK_PATH_WIDGET_CLASS,1);
-CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
-#elif __powerpc64__
-CheckEnum("GTK_PATH_WIDGET",GTK_PATH_WIDGET,0);
-CheckEnum("GTK_PATH_WIDGET_CLASS",GTK_PATH_WIDGET_CLASS,1);
-CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_PATH_WIDGET",GTK_PATH_WIDGET,0);
-CheckEnum("GTK_PATH_WIDGET_CLASS",GTK_PATH_WIDGET_CLASS,1);
-CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
-#elif __s390x__
 CheckEnum("GTK_PATH_WIDGET",GTK_PATH_WIDGET,0);
 CheckEnum("GTK_PATH_WIDGET_CLASS",GTK_PATH_WIDGET_CLASS,1);
 CheckEnum("GTK_PATH_CLASS",GTK_PATH_CLASS,2);
@@ -32037,10 +30129,6 @@ Msg("Find size of const GtkBorder (13911)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13912,0);
 Msg("Find size of const GtkBorder * (13912)\n");
@@ -32052,14 +30140,6 @@ CheckTypeSize(GtkAccelMap,0, 13914, 2)
 CheckTypeSize(GtkAccelMap,0, 13914, 11)
 #elif __ia64__
 CheckTypeSize(GtkAccelMap,0, 13914, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkAccelMap,0, 13914, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkAccelMap,0, 13914, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkAccelMap,0, 13914, 10)
-#elif __s390x__
-CheckTypeSize(GtkAccelMap,0, 13914, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13914,0);
 Msg("Find size of GtkAccelMap (13914)\n");
@@ -32298,10 +30378,6 @@ Msg("Find size of GtkBinClass (13918)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13919,0);
 Msg("Find size of fptr_gtk_7829 (13919)\n");
@@ -32310,10 +30386,6 @@ Msg("Find size of fptr_gtk_7829 (13919)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13920,0);
 Msg("Find size of fptr_gtk_6965 (13920)\n");
@@ -32322,10 +30394,6 @@ Msg("Find size of fptr_gtk_6965 (13920)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13921,0);
 Msg("Find size of fptr_gtk_8510 (13921)\n");
@@ -32334,10 +30402,6 @@ Msg("Find size of fptr_gtk_8510 (13921)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13922,0);
 Msg("Find size of fptr_gtk_5624 (13922)\n");
@@ -32627,10 +30691,6 @@ Msg("Find size of _GtkRangeClass (13925)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13926,0);
 Msg("Find size of fptr_gtk_7064 (13926)\n");
@@ -32639,10 +30699,6 @@ Msg("Find size of fptr_gtk_7064 (13926)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13927,0);
 Msg("Find size of fptr_gtk_7434 (13927)\n");
@@ -32699,74 +30755,6 @@ CheckEnum("GTK_SCROLL_PAGE_LEFT",GTK_SCROLL_PAGE_LEFT,12);
 CheckEnum("GTK_SCROLL_PAGE_RIGHT",GTK_SCROLL_PAGE_RIGHT,13);
 CheckEnum("GTK_SCROLL_START",GTK_SCROLL_START,14);
 CheckEnum("GTK_SCROLL_END",GTK_SCROLL_END,15);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_SCROLL_NONE",GTK_SCROLL_NONE,0);
-CheckEnum("GTK_SCROLL_JUMP",GTK_SCROLL_JUMP,1);
-CheckEnum("GTK_SCROLL_STEP_BACKWARD",GTK_SCROLL_STEP_BACKWARD,2);
-CheckEnum("GTK_SCROLL_STEP_FORWARD",GTK_SCROLL_STEP_FORWARD,3);
-CheckEnum("GTK_SCROLL_PAGE_BACKWARD",GTK_SCROLL_PAGE_BACKWARD,4);
-CheckEnum("GTK_SCROLL_PAGE_FORWARD",GTK_SCROLL_PAGE_FORWARD,5);
-CheckEnum("GTK_SCROLL_STEP_UP",GTK_SCROLL_STEP_UP,6);
-CheckEnum("GTK_SCROLL_STEP_DOWN",GTK_SCROLL_STEP_DOWN,7);
-CheckEnum("GTK_SCROLL_PAGE_UP",GTK_SCROLL_PAGE_UP,8);
-CheckEnum("GTK_SCROLL_PAGE_DOWN",GTK_SCROLL_PAGE_DOWN,9);
-CheckEnum("GTK_SCROLL_STEP_LEFT",GTK_SCROLL_STEP_LEFT,10);
-CheckEnum("GTK_SCROLL_STEP_RIGHT",GTK_SCROLL_STEP_RIGHT,11);
-CheckEnum("GTK_SCROLL_PAGE_LEFT",GTK_SCROLL_PAGE_LEFT,12);
-CheckEnum("GTK_SCROLL_PAGE_RIGHT",GTK_SCROLL_PAGE_RIGHT,13);
-CheckEnum("GTK_SCROLL_START",GTK_SCROLL_START,14);
-CheckEnum("GTK_SCROLL_END",GTK_SCROLL_END,15);
-#elif __powerpc64__
-CheckEnum("GTK_SCROLL_NONE",GTK_SCROLL_NONE,0);
-CheckEnum("GTK_SCROLL_JUMP",GTK_SCROLL_JUMP,1);
-CheckEnum("GTK_SCROLL_STEP_BACKWARD",GTK_SCROLL_STEP_BACKWARD,2);
-CheckEnum("GTK_SCROLL_STEP_FORWARD",GTK_SCROLL_STEP_FORWARD,3);
-CheckEnum("GTK_SCROLL_PAGE_BACKWARD",GTK_SCROLL_PAGE_BACKWARD,4);
-CheckEnum("GTK_SCROLL_PAGE_FORWARD",GTK_SCROLL_PAGE_FORWARD,5);
-CheckEnum("GTK_SCROLL_STEP_UP",GTK_SCROLL_STEP_UP,6);
-CheckEnum("GTK_SCROLL_STEP_DOWN",GTK_SCROLL_STEP_DOWN,7);
-CheckEnum("GTK_SCROLL_PAGE_UP",GTK_SCROLL_PAGE_UP,8);
-CheckEnum("GTK_SCROLL_PAGE_DOWN",GTK_SCROLL_PAGE_DOWN,9);
-CheckEnum("GTK_SCROLL_STEP_LEFT",GTK_SCROLL_STEP_LEFT,10);
-CheckEnum("GTK_SCROLL_STEP_RIGHT",GTK_SCROLL_STEP_RIGHT,11);
-CheckEnum("GTK_SCROLL_PAGE_LEFT",GTK_SCROLL_PAGE_LEFT,12);
-CheckEnum("GTK_SCROLL_PAGE_RIGHT",GTK_SCROLL_PAGE_RIGHT,13);
-CheckEnum("GTK_SCROLL_START",GTK_SCROLL_START,14);
-CheckEnum("GTK_SCROLL_END",GTK_SCROLL_END,15);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_SCROLL_NONE",GTK_SCROLL_NONE,0);
-CheckEnum("GTK_SCROLL_JUMP",GTK_SCROLL_JUMP,1);
-CheckEnum("GTK_SCROLL_STEP_BACKWARD",GTK_SCROLL_STEP_BACKWARD,2);
-CheckEnum("GTK_SCROLL_STEP_FORWARD",GTK_SCROLL_STEP_FORWARD,3);
-CheckEnum("GTK_SCROLL_PAGE_BACKWARD",GTK_SCROLL_PAGE_BACKWARD,4);
-CheckEnum("GTK_SCROLL_PAGE_FORWARD",GTK_SCROLL_PAGE_FORWARD,5);
-CheckEnum("GTK_SCROLL_STEP_UP",GTK_SCROLL_STEP_UP,6);
-CheckEnum("GTK_SCROLL_STEP_DOWN",GTK_SCROLL_STEP_DOWN,7);
-CheckEnum("GTK_SCROLL_PAGE_UP",GTK_SCROLL_PAGE_UP,8);
-CheckEnum("GTK_SCROLL_PAGE_DOWN",GTK_SCROLL_PAGE_DOWN,9);
-CheckEnum("GTK_SCROLL_STEP_LEFT",GTK_SCROLL_STEP_LEFT,10);
-CheckEnum("GTK_SCROLL_STEP_RIGHT",GTK_SCROLL_STEP_RIGHT,11);
-CheckEnum("GTK_SCROLL_PAGE_LEFT",GTK_SCROLL_PAGE_LEFT,12);
-CheckEnum("GTK_SCROLL_PAGE_RIGHT",GTK_SCROLL_PAGE_RIGHT,13);
-CheckEnum("GTK_SCROLL_START",GTK_SCROLL_START,14);
-CheckEnum("GTK_SCROLL_END",GTK_SCROLL_END,15);
-#elif __s390x__
-CheckEnum("GTK_SCROLL_NONE",GTK_SCROLL_NONE,0);
-CheckEnum("GTK_SCROLL_JUMP",GTK_SCROLL_JUMP,1);
-CheckEnum("GTK_SCROLL_STEP_BACKWARD",GTK_SCROLL_STEP_BACKWARD,2);
-CheckEnum("GTK_SCROLL_STEP_FORWARD",GTK_SCROLL_STEP_FORWARD,3);
-CheckEnum("GTK_SCROLL_PAGE_BACKWARD",GTK_SCROLL_PAGE_BACKWARD,4);
-CheckEnum("GTK_SCROLL_PAGE_FORWARD",GTK_SCROLL_PAGE_FORWARD,5);
-CheckEnum("GTK_SCROLL_STEP_UP",GTK_SCROLL_STEP_UP,6);
-CheckEnum("GTK_SCROLL_STEP_DOWN",GTK_SCROLL_STEP_DOWN,7);
-CheckEnum("GTK_SCROLL_PAGE_UP",GTK_SCROLL_PAGE_UP,8);
-CheckEnum("GTK_SCROLL_PAGE_DOWN",GTK_SCROLL_PAGE_DOWN,9);
-CheckEnum("GTK_SCROLL_STEP_LEFT",GTK_SCROLL_STEP_LEFT,10);
-CheckEnum("GTK_SCROLL_STEP_RIGHT",GTK_SCROLL_STEP_RIGHT,11);
-CheckEnum("GTK_SCROLL_PAGE_LEFT",GTK_SCROLL_PAGE_LEFT,12);
-CheckEnum("GTK_SCROLL_PAGE_RIGHT",GTK_SCROLL_PAGE_RIGHT,13);
-CheckEnum("GTK_SCROLL_START",GTK_SCROLL_START,14);
-CheckEnum("GTK_SCROLL_END",GTK_SCROLL_END,15);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13928,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-1814 (13928)\n");
@@ -32794,10 +30782,6 @@ Msg("Find size of GtkScrollType (13929)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13930,0);
 Msg("Find size of fptr_gtk_4715 (13930)\n");
@@ -32806,10 +30790,6 @@ Msg("Find size of fptr_gtk_4715 (13930)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13931,0);
 Msg("Find size of fptr_gtk_2980 (13931)\n");
@@ -32818,10 +30798,6 @@ Msg("Find size of fptr_gtk_2980 (13931)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13932,0);
 Msg("Find size of fptr_gtk_2697 (13932)\n");
@@ -32849,10 +30825,6 @@ Msg("Find size of GtkRangeClass (13933)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13934,0);
 Msg("Find size of fptr_gtk_7416 (13934)\n");
@@ -32861,10 +30833,6 @@ Msg("Find size of fptr_gtk_7416 (13934)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13935,0);
 Msg("Find size of fptr_gtk_4892 (13935)\n");
@@ -32873,10 +30841,6 @@ Msg("Find size of fptr_gtk_4892 (13935)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13936,0);
 Msg("Find size of fptr_gtk_2533 (13936)\n");
@@ -33304,10 +31268,6 @@ Msg("Find size of _GtkPanedClass (13947)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13948,0);
 Msg("Find size of fptr_gtk_4904 (13948)\n");
@@ -33316,10 +31276,6 @@ Msg("Find size of fptr_gtk_4904 (13948)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13949,0);
 Msg("Find size of fptr_gtk_6268 (13949)\n");
@@ -33328,10 +31284,6 @@ Msg("Find size of fptr_gtk_6268 (13949)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13950,0);
 Msg("Find size of fptr_gtk_5065 (13950)\n");
@@ -33505,10 +31457,6 @@ Msg("Find size of _GtkViewportClass (13955)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13956,0);
 Msg("Find size of fptr_gtk_4523 (13956)\n");
@@ -33556,50 +31504,6 @@ CheckEnum("GTK_MOVEMENT_PAGES",GTK_MOVEMENT_PAGES,7);
 CheckEnum("GTK_MOVEMENT_BUFFER_ENDS",GTK_MOVEMENT_BUFFER_ENDS,8);
 CheckEnum("GTK_MOVEMENT_HORIZONTAL_PAGES",GTK_MOVEMENT_HORIZONTAL_PAGES,9);
 #elif __ia64__
-CheckEnum("GTK_MOVEMENT_LOGICAL_POSITIONS",GTK_MOVEMENT_LOGICAL_POSITIONS,0);
-CheckEnum("GTK_MOVEMENT_VISUAL_POSITIONS",GTK_MOVEMENT_VISUAL_POSITIONS,1);
-CheckEnum("GTK_MOVEMENT_WORDS",GTK_MOVEMENT_WORDS,2);
-CheckEnum("GTK_MOVEMENT_DISPLAY_LINES",GTK_MOVEMENT_DISPLAY_LINES,3);
-CheckEnum("GTK_MOVEMENT_DISPLAY_LINE_ENDS",GTK_MOVEMENT_DISPLAY_LINE_ENDS,4);
-CheckEnum("GTK_MOVEMENT_PARAGRAPHS",GTK_MOVEMENT_PARAGRAPHS,5);
-CheckEnum("GTK_MOVEMENT_PARAGRAPH_ENDS",GTK_MOVEMENT_PARAGRAPH_ENDS,6);
-CheckEnum("GTK_MOVEMENT_PAGES",GTK_MOVEMENT_PAGES,7);
-CheckEnum("GTK_MOVEMENT_BUFFER_ENDS",GTK_MOVEMENT_BUFFER_ENDS,8);
-CheckEnum("GTK_MOVEMENT_HORIZONTAL_PAGES",GTK_MOVEMENT_HORIZONTAL_PAGES,9);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_MOVEMENT_LOGICAL_POSITIONS",GTK_MOVEMENT_LOGICAL_POSITIONS,0);
-CheckEnum("GTK_MOVEMENT_VISUAL_POSITIONS",GTK_MOVEMENT_VISUAL_POSITIONS,1);
-CheckEnum("GTK_MOVEMENT_WORDS",GTK_MOVEMENT_WORDS,2);
-CheckEnum("GTK_MOVEMENT_DISPLAY_LINES",GTK_MOVEMENT_DISPLAY_LINES,3);
-CheckEnum("GTK_MOVEMENT_DISPLAY_LINE_ENDS",GTK_MOVEMENT_DISPLAY_LINE_ENDS,4);
-CheckEnum("GTK_MOVEMENT_PARAGRAPHS",GTK_MOVEMENT_PARAGRAPHS,5);
-CheckEnum("GTK_MOVEMENT_PARAGRAPH_ENDS",GTK_MOVEMENT_PARAGRAPH_ENDS,6);
-CheckEnum("GTK_MOVEMENT_PAGES",GTK_MOVEMENT_PAGES,7);
-CheckEnum("GTK_MOVEMENT_BUFFER_ENDS",GTK_MOVEMENT_BUFFER_ENDS,8);
-CheckEnum("GTK_MOVEMENT_HORIZONTAL_PAGES",GTK_MOVEMENT_HORIZONTAL_PAGES,9);
-#elif __powerpc64__
-CheckEnum("GTK_MOVEMENT_LOGICAL_POSITIONS",GTK_MOVEMENT_LOGICAL_POSITIONS,0);
-CheckEnum("GTK_MOVEMENT_VISUAL_POSITIONS",GTK_MOVEMENT_VISUAL_POSITIONS,1);
-CheckEnum("GTK_MOVEMENT_WORDS",GTK_MOVEMENT_WORDS,2);
-CheckEnum("GTK_MOVEMENT_DISPLAY_LINES",GTK_MOVEMENT_DISPLAY_LINES,3);
-CheckEnum("GTK_MOVEMENT_DISPLAY_LINE_ENDS",GTK_MOVEMENT_DISPLAY_LINE_ENDS,4);
-CheckEnum("GTK_MOVEMENT_PARAGRAPHS",GTK_MOVEMENT_PARAGRAPHS,5);
-CheckEnum("GTK_MOVEMENT_PARAGRAPH_ENDS",GTK_MOVEMENT_PARAGRAPH_ENDS,6);
-CheckEnum("GTK_MOVEMENT_PAGES",GTK_MOVEMENT_PAGES,7);
-CheckEnum("GTK_MOVEMENT_BUFFER_ENDS",GTK_MOVEMENT_BUFFER_ENDS,8);
-CheckEnum("GTK_MOVEMENT_HORIZONTAL_PAGES",GTK_MOVEMENT_HORIZONTAL_PAGES,9);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_MOVEMENT_LOGICAL_POSITIONS",GTK_MOVEMENT_LOGICAL_POSITIONS,0);
-CheckEnum("GTK_MOVEMENT_VISUAL_POSITIONS",GTK_MOVEMENT_VISUAL_POSITIONS,1);
-CheckEnum("GTK_MOVEMENT_WORDS",GTK_MOVEMENT_WORDS,2);
-CheckEnum("GTK_MOVEMENT_DISPLAY_LINES",GTK_MOVEMENT_DISPLAY_LINES,3);
-CheckEnum("GTK_MOVEMENT_DISPLAY_LINE_ENDS",GTK_MOVEMENT_DISPLAY_LINE_ENDS,4);
-CheckEnum("GTK_MOVEMENT_PARAGRAPHS",GTK_MOVEMENT_PARAGRAPHS,5);
-CheckEnum("GTK_MOVEMENT_PARAGRAPH_ENDS",GTK_MOVEMENT_PARAGRAPH_ENDS,6);
-CheckEnum("GTK_MOVEMENT_PAGES",GTK_MOVEMENT_PAGES,7);
-CheckEnum("GTK_MOVEMENT_BUFFER_ENDS",GTK_MOVEMENT_BUFFER_ENDS,8);
-CheckEnum("GTK_MOVEMENT_HORIZONTAL_PAGES",GTK_MOVEMENT_HORIZONTAL_PAGES,9);
-#elif __s390x__
 CheckEnum("GTK_MOVEMENT_LOGICAL_POSITIONS",GTK_MOVEMENT_LOGICAL_POSITIONS,0);
 CheckEnum("GTK_MOVEMENT_VISUAL_POSITIONS",GTK_MOVEMENT_VISUAL_POSITIONS,1);
 CheckEnum("GTK_MOVEMENT_WORDS",GTK_MOVEMENT_WORDS,2);
@@ -33796,10 +31700,6 @@ Msg("Find size of _GtkEditableClass (13960)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13961,0);
 Msg("Find size of fptr_gtk_3783 (13961)\n");
@@ -33808,10 +31708,6 @@ Msg("Find size of fptr_gtk_3783 (13961)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13962,0);
 Msg("Find size of fptr_gtk_1717 (13962)\n");
@@ -33820,10 +31716,6 @@ Msg("Find size of fptr_gtk_1717 (13962)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13963,0);
 Msg("Find size of fptr_gtk_8772 (13963)\n");
@@ -33832,10 +31724,6 @@ Msg("Find size of fptr_gtk_8772 (13963)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13964,0);
 Msg("Find size of fptr_gtk_3321 (13964)\n");
@@ -33844,10 +31732,6 @@ Msg("Find size of fptr_gtk_3321 (13964)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13965,0);
 Msg("Find size of fptr_gtk_1053 (13965)\n");
@@ -33856,10 +31740,6 @@ Msg("Find size of fptr_gtk_1053 (13965)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13966,0);
 Msg("Find size of fptr_gtk_4571 (13966)\n");
@@ -33868,10 +31748,6 @@ Msg("Find size of fptr_gtk_4571 (13966)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13967,0);
 Msg("Find size of fptr_gtk_7034 (13967)\n");
@@ -33903,18 +31779,6 @@ CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
 CheckEnum("GTK_NOTEBOOK_TAB_FIRST",GTK_NOTEBOOK_TAB_FIRST,0);
 CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
 #elif __ia64__
-CheckEnum("GTK_NOTEBOOK_TAB_FIRST",GTK_NOTEBOOK_TAB_FIRST,0);
-CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_NOTEBOOK_TAB_FIRST",GTK_NOTEBOOK_TAB_FIRST,0);
-CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
-#elif __powerpc64__
-CheckEnum("GTK_NOTEBOOK_TAB_FIRST",GTK_NOTEBOOK_TAB_FIRST,0);
-CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_NOTEBOOK_TAB_FIRST",GTK_NOTEBOOK_TAB_FIRST,0);
-CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
-#elif __s390x__
 CheckEnum("GTK_NOTEBOOK_TAB_FIRST",GTK_NOTEBOOK_TAB_FIRST,0);
 CheckEnum("GTK_NOTEBOOK_TAB_LAST",GTK_NOTEBOOK_TAB_LAST,1);
 #else
@@ -34047,10 +31911,6 @@ Msg("Find size of _GtkDialogClass (13971)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13972,0);
 Msg("Find size of fptr_gtk_2448 (13972)\n");
@@ -34059,10 +31919,6 @@ Msg("Find size of fptr_gtk_2448 (13972)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13973,0);
 Msg("Find size of fptr_gtk_4753 (13973)\n");
@@ -34259,10 +32115,6 @@ Msg("Find size of _GtkTreeViewColumnClass (13977)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13978,0);
 Msg("Find size of fptr_gtk_4429 (13978)\n");
@@ -34426,10 +32278,6 @@ Msg("Find size of _GtkRulerClass (13981)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13982,0);
 Msg("Find size of fptr_gtk_7325 (13982)\n");
@@ -34479,14 +32327,6 @@ CheckTypeSize(GtkAccelMapClass,0, 13986, 2)
 CheckTypeSize(GtkAccelMapClass,0, 13986, 11)
 #elif __ia64__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkAccelMapClass,0, 13986, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkAccelMapClass,0, 13986, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkAccelMapClass,0, 13986, 10)
-#elif __s390x__
-CheckTypeSize(GtkAccelMapClass,0, 13986, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13986,0);
 Msg("Find size of GtkAccelMapClass (13986)\n");
@@ -34758,10 +32598,6 @@ Msg("Find size of _GtkToolItemClass (13991)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13992,0);
 Msg("Find size of fptr_gtk_1157 (13992)\n");
@@ -34770,10 +32606,6 @@ Msg("Find size of fptr_gtk_1157 (13992)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13993,0);
 Msg("Find size of fptr_gtk_7992 (13993)\n");
@@ -34782,10 +32614,6 @@ Msg("Find size of fptr_gtk_7992 (13993)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13994,0);
 Msg("Find size of fptr_gtk_3676 (13994)\n");
@@ -35338,10 +33166,6 @@ Msg("Find size of _GtkItemClass (14002)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14003,0);
 Msg("Find size of fptr_gtk_7798 (14003)\n");
@@ -35369,10 +33193,6 @@ Msg("Find size of GtkItemClass (14004)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14005,0);
 Msg("Find size of fptr_gtk_211 (14005)\n");
@@ -35381,10 +33201,6 @@ Msg("Find size of fptr_gtk_211 (14005)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14006,0);
 Msg("Find size of fptr_gtk_6972 (14006)\n");
@@ -35393,10 +33209,6 @@ Msg("Find size of fptr_gtk_6972 (14006)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14007,0);
 Msg("Find size of fptr_gtk_1468 (14007)\n");
@@ -35424,10 +33236,6 @@ Msg("Find size of GtkMenuItemClass (14008)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14009,0);
 Msg("Find size of fptr_gtk_7477 (14009)\n");
@@ -35436,10 +33244,6 @@ Msg("Find size of fptr_gtk_7477 (14009)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14010,0);
 Msg("Find size of fptr_gtk_1742 (14010)\n");
@@ -35677,14 +33481,6 @@ CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 2)
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 11)
 #elif __ia64__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 10)
-#elif __s390x__
-CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14018,0);
 Msg("Find size of GtkFileChooserDialogPrivate (14018)\n");
@@ -35993,10 +33789,6 @@ Msg("Find size of _GtkActionClass (14022)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14023,0);
 Msg("Find size of fptr_gtk_857 (14023)\n");
@@ -36005,10 +33797,6 @@ Msg("Find size of fptr_gtk_857 (14023)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14024,0);
 Msg("Find size of fptr_gtk_3148 (14024)\n");
@@ -36017,10 +33805,6 @@ Msg("Find size of fptr_gtk_3148 (14024)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14025,0);
 Msg("Find size of fptr_gtk_8678 (14025)\n");
@@ -36048,10 +33832,6 @@ Msg("Find size of GtkActionClass (14026)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14027,0);
 Msg("Find size of fptr_gtk_2070 (14027)\n");
@@ -36238,14 +34018,6 @@ CheckTypeSize(GtkThemeEngine,0, 14036, 2)
 CheckTypeSize(GtkThemeEngine,0, 14036, 11)
 #elif __ia64__
 CheckTypeSize(GtkThemeEngine,0, 14036, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkThemeEngine,0, 14036, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkThemeEngine,0, 14036, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkThemeEngine,0, 14036, 10)
-#elif __s390x__
-CheckTypeSize(GtkThemeEngine,0, 14036, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14036,0);
 Msg("Find size of GtkThemeEngine (14036)\n");
@@ -36541,10 +34313,6 @@ Msg("Find size of _GtkAccelGroupClass (14043)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14044,0);
 Msg("Find size of fptr_gtk_1422 (14044)\n");
@@ -36783,10 +34551,6 @@ Msg("Find size of _GtkButtonClass (14048)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14049,0);
 Msg("Find size of fptr_gtk_3680 (14049)\n");
@@ -36814,10 +34578,6 @@ Msg("Find size of GtkButtonClass (14050)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14051,0);
 Msg("Find size of fptr_gtk_9196 (14051)\n");
@@ -37028,10 +34788,6 @@ Msg("Find size of _GtkTreeSelectionClass (14055)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14056,0);
 Msg("Find size of fptr_gtk_4205 (14056)\n");
@@ -37232,10 +34988,6 @@ Msg("Find size of _GtkMenuShellClass (14058)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14059,0);
 Msg("Find size of fptr_gtk_8181 (14059)\n");
@@ -37252,26 +35004,6 @@ CheckEnum("GTK_MENU_DIR_CHILD",GTK_MENU_DIR_CHILD,1);
 CheckEnum("GTK_MENU_DIR_NEXT",GTK_MENU_DIR_NEXT,2);
 CheckEnum("GTK_MENU_DIR_PREV",GTK_MENU_DIR_PREV,3);
 #elif __ia64__
-CheckEnum("GTK_MENU_DIR_PARENT",GTK_MENU_DIR_PARENT,0);
-CheckEnum("GTK_MENU_DIR_CHILD",GTK_MENU_DIR_CHILD,1);
-CheckEnum("GTK_MENU_DIR_NEXT",GTK_MENU_DIR_NEXT,2);
-CheckEnum("GTK_MENU_DIR_PREV",GTK_MENU_DIR_PREV,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_MENU_DIR_PARENT",GTK_MENU_DIR_PARENT,0);
-CheckEnum("GTK_MENU_DIR_CHILD",GTK_MENU_DIR_CHILD,1);
-CheckEnum("GTK_MENU_DIR_NEXT",GTK_MENU_DIR_NEXT,2);
-CheckEnum("GTK_MENU_DIR_PREV",GTK_MENU_DIR_PREV,3);
-#elif __powerpc64__
-CheckEnum("GTK_MENU_DIR_PARENT",GTK_MENU_DIR_PARENT,0);
-CheckEnum("GTK_MENU_DIR_CHILD",GTK_MENU_DIR_CHILD,1);
-CheckEnum("GTK_MENU_DIR_NEXT",GTK_MENU_DIR_NEXT,2);
-CheckEnum("GTK_MENU_DIR_PREV",GTK_MENU_DIR_PREV,3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_MENU_DIR_PARENT",GTK_MENU_DIR_PARENT,0);
-CheckEnum("GTK_MENU_DIR_CHILD",GTK_MENU_DIR_CHILD,1);
-CheckEnum("GTK_MENU_DIR_NEXT",GTK_MENU_DIR_NEXT,2);
-CheckEnum("GTK_MENU_DIR_PREV",GTK_MENU_DIR_PREV,3);
-#elif __s390x__
 CheckEnum("GTK_MENU_DIR_PARENT",GTK_MENU_DIR_PARENT,0);
 CheckEnum("GTK_MENU_DIR_CHILD",GTK_MENU_DIR_CHILD,1);
 CheckEnum("GTK_MENU_DIR_NEXT",GTK_MENU_DIR_NEXT,2);
@@ -37303,10 +35035,6 @@ Msg("Find size of GtkMenuDirectionType (14061)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14062,0);
 Msg("Find size of fptr_gtk_8747 (14062)\n");
@@ -37315,10 +35043,6 @@ Msg("Find size of fptr_gtk_8747 (14062)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14063,0);
 Msg("Find size of fptr_gtk_2215 (14063)\n");
@@ -37327,10 +35051,6 @@ Msg("Find size of fptr_gtk_2215 (14063)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14064,0);
 Msg("Find size of fptr_gtk_3442 (14064)\n");
@@ -37339,10 +35059,6 @@ Msg("Find size of fptr_gtk_3442 (14064)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14065,0);
 Msg("Find size of fptr_gtk_6485 (14065)\n");
@@ -37351,10 +35067,6 @@ Msg("Find size of fptr_gtk_6485 (14065)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14066,0);
 Msg("Find size of fptr_gtk_1876 (14066)\n");
@@ -37443,10 +35155,6 @@ Msg("Find size of _GtkTreeDragSourceIface (14068)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14069,0);
 Msg("Find size of fptr_gtk_4716 (14069)\n");
@@ -37455,10 +35163,6 @@ Msg("Find size of fptr_gtk_4716 (14069)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14070,0);
 Msg("Find size of fptr_gtk_867 (14070)\n");
@@ -37603,10 +35307,6 @@ Msg("Find size of _GtkLabelClass (14072)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14073,0);
 Msg("Find size of fptr_gtk_2616 (14073)\n");
@@ -37615,10 +35315,6 @@ Msg("Find size of fptr_gtk_2616 (14073)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14074,0);
 Msg("Find size of fptr_gtk_6253 (14074)\n");
@@ -37627,10 +35323,6 @@ Msg("Find size of fptr_gtk_6253 (14074)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14075,0);
 Msg("Find size of fptr_gtk_6034 (14075)\n");
@@ -37865,10 +35557,6 @@ Msg("Find size of _GtkActionGroupClass (14081)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14082,0);
 Msg("Find size of fptr_gtk_5024 (14082)\n");
@@ -38275,10 +35963,6 @@ Msg("Find size of _GtkIMContextClass (14086)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14087,0);
 Msg("Find size of fptr_gtk_7160 (14087)\n");
@@ -38287,10 +35971,6 @@ Msg("Find size of fptr_gtk_7160 (14087)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14088,0);
 Msg("Find size of fptr_gtk_2180 (14088)\n");
@@ -38299,10 +35979,6 @@ Msg("Find size of fptr_gtk_2180 (14088)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14089,0);
 Msg("Find size of fptr_gtk_5533 (14089)\n");
@@ -38311,10 +35987,6 @@ Msg("Find size of fptr_gtk_5533 (14089)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14090,0);
 Msg("Find size of fptr_gtk_3849 (14090)\n");
@@ -38323,10 +35995,6 @@ Msg("Find size of fptr_gtk_3849 (14090)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14091,0);
 Msg("Find size of fptr_gtk_7658 (14091)\n");
@@ -38335,10 +36003,6 @@ Msg("Find size of fptr_gtk_7658 (14091)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14092,0);
 Msg("Find size of fptr_gtk_5566 (14092)\n");
@@ -38347,10 +36011,6 @@ Msg("Find size of fptr_gtk_5566 (14092)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14093,0);
 Msg("Find size of fptr_gtk_4256 (14093)\n");
@@ -38359,10 +36019,6 @@ Msg("Find size of fptr_gtk_4256 (14093)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14094,0);
 Msg("Find size of fptr_gtk_4968 (14094)\n");
@@ -38371,10 +36027,6 @@ Msg("Find size of fptr_gtk_4968 (14094)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14095,0);
 Msg("Find size of fptr_gtk_281 (14095)\n");
@@ -38383,10 +36035,6 @@ Msg("Find size of fptr_gtk_281 (14095)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14096,0);
 Msg("Find size of fptr_gtk_6424 (14096)\n");
@@ -38395,10 +36043,6 @@ Msg("Find size of fptr_gtk_6424 (14096)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14097,0);
 Msg("Find size of fptr_gtk_6536 (14097)\n");
@@ -38557,10 +36201,6 @@ Msg("Find size of _GtkCellRendererClass (14099)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14100,0);
 Msg("Find size of fptr_gtk_5205 (14100)\n");
@@ -38569,10 +36209,6 @@ Msg("Find size of fptr_gtk_5205 (14100)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14101,0);
 Msg("Find size of fptr_gtk_6423 (14101)\n");
@@ -38581,10 +36217,6 @@ Msg("Find size of fptr_gtk_6423 (14101)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14102,0);
 Msg("Find size of fptr_gtk_1322 (14102)\n");
@@ -38593,10 +36225,6 @@ Msg("Find size of fptr_gtk_1322 (14102)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14103,0);
 Msg("Find size of fptr_gtk_6287 (14103)\n");
@@ -38605,10 +36233,6 @@ Msg("Find size of fptr_gtk_6287 (14103)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14104,0);
 Msg("Find size of fptr_gtk_8924 (14104)\n");
@@ -38617,10 +36241,6 @@ Msg("Find size of fptr_gtk_8924 (14104)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14105,0);
 Msg("Find size of fptr_gtk_3574 (14105)\n");
@@ -38840,10 +36460,6 @@ Msg("Find size of _GtkToolButtonClass (14108)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14109,0);
 Msg("Find size of fptr_gtk_2797 (14109)\n");
@@ -38871,10 +36487,6 @@ Msg("Find size of GtkToolButtonClass (14110)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14111,0);
 Msg("Find size of fptr_gtk_2808 (14111)\n");
@@ -39283,10 +36895,6 @@ Msg("Find size of _GtkCellLayoutIface (14121)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14122,0);
 Msg("Find size of fptr_gtk_4001 (14122)\n");
@@ -39295,10 +36903,6 @@ Msg("Find size of fptr_gtk_4001 (14122)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14123,0);
 Msg("Find size of fptr_gtk_6714 (14123)\n");
@@ -39307,10 +36911,6 @@ Msg("Find size of fptr_gtk_6714 (14123)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14124,0);
 Msg("Find size of fptr_gtk_6922 (14124)\n");
@@ -39319,10 +36919,6 @@ Msg("Find size of fptr_gtk_6922 (14124)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14125,0);
 Msg("Find size of fptr_gtk_2174 (14125)\n");
@@ -39331,10 +36927,6 @@ Msg("Find size of fptr_gtk_2174 (14125)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14126,0);
 Msg("Find size of fptr_gtk_3337 (14126)\n");
@@ -39343,10 +36935,6 @@ Msg("Find size of fptr_gtk_3337 (14126)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14127,0);
 Msg("Find size of fptr_gtk_778 (14127)\n");
@@ -39377,14 +36965,6 @@ CheckTypeSize(GtkAlignmentPrivate,0, 14130, 2)
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 11)
 #elif __ia64__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkAlignmentPrivate,0, 14130, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkAlignmentPrivate,0, 14130, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkAlignmentPrivate,0, 14130, 10)
-#elif __s390x__
-CheckTypeSize(GtkAlignmentPrivate,0, 14130, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14130,0);
 Msg("Find size of GtkAlignmentPrivate (14130)\n");
@@ -39783,10 +37363,6 @@ Msg("Find size of GtkAccelLabelClass (14138)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14139,0);
 Msg("Find size of fptr_gtk_7018 (14139)\n");
@@ -40085,10 +37661,6 @@ Msg("Find size of _GtkTextBufferClass (14141)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14142,0);
 Msg("Find size of fptr_gtk_8343 (14142)\n");
@@ -40097,10 +37669,6 @@ Msg("Find size of fptr_gtk_8343 (14142)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14143,0);
 Msg("Find size of fptr_gtk_7958 (14143)\n");
@@ -40109,10 +37677,6 @@ Msg("Find size of fptr_gtk_7958 (14143)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14144,0);
 Msg("Find size of fptr_gtk_4161 (14144)\n");
@@ -40121,10 +37685,6 @@ Msg("Find size of fptr_gtk_4161 (14144)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14145,0);
 Msg("Find size of fptr_gtk_6090 (14145)\n");
@@ -40133,10 +37693,6 @@ Msg("Find size of fptr_gtk_6090 (14145)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14146,0);
 Msg("Find size of fptr_gtk_574 (14146)\n");
@@ -40145,10 +37701,6 @@ Msg("Find size of fptr_gtk_574 (14146)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14147,0);
 Msg("Find size of fptr_gtk_7901 (14147)\n");
@@ -40157,10 +37709,6 @@ Msg("Find size of fptr_gtk_7901 (14147)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14148,0);
 Msg("Find size of fptr_gtk_3010 (14148)\n");
@@ -40169,10 +37717,6 @@ Msg("Find size of fptr_gtk_3010 (14148)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14149,0);
 Msg("Find size of fptr_gtk_3432 (14149)\n");
@@ -40355,10 +37899,6 @@ Msg("Find size of _GtkSocketClass (14153)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14154,0);
 Msg("Find size of fptr_gtk_195 (14154)\n");
@@ -40367,10 +37907,6 @@ Msg("Find size of fptr_gtk_195 (14154)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14155,0);
 Msg("Find size of fptr_gtk_1755 (14155)\n");
@@ -40431,10 +37967,6 @@ Msg("Find size of _GtkIconThemeClass (14157)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14158,0);
 Msg("Find size of fptr_gtk_7177 (14158)\n");
@@ -40776,14 +38308,6 @@ CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 2)
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 11)
 #elif __ia64__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 10)
-#elif __s390x__
-CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14170,0);
 Msg("Find size of GtkFileChooserWidgetPrivate (14170)\n");
@@ -40919,10 +38443,6 @@ Msg("Find size of _GtkPlugClass (14173)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14174,0);
 Msg("Find size of fptr_gtk_3093 (14174)\n");
@@ -41569,10 +39089,6 @@ Msg("Find size of _GtkTreeModelIface (14184)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14185,0);
 Msg("Find size of fptr_gtk_4033 (14185)\n");
@@ -41581,10 +39097,6 @@ Msg("Find size of fptr_gtk_4033 (14185)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14186,0);
 Msg("Find size of fptr_gtk_694 (14186)\n");
@@ -41593,10 +39105,6 @@ Msg("Find size of fptr_gtk_694 (14186)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14187,0);
 Msg("Find size of fptr_gtk_2413 (14187)\n");
@@ -41605,10 +39113,6 @@ Msg("Find size of fptr_gtk_2413 (14187)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14188,0);
 Msg("Find size of fptr_gtk_2371 (14188)\n");
@@ -41617,10 +39121,6 @@ Msg("Find size of fptr_gtk_2371 (14188)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14189,0);
 Msg("Find size of fptr_gtk_5750 (14189)\n");
@@ -41629,10 +39129,6 @@ Msg("Find size of fptr_gtk_5750 (14189)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14190,0);
 Msg("Find size of fptr_gtk_3452 (14190)\n");
@@ -41641,10 +39137,6 @@ Msg("Find size of fptr_gtk_3452 (14190)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14191,0);
 Msg("Find size of fptr_gtk_6639 (14191)\n");
@@ -41653,10 +39145,6 @@ Msg("Find size of fptr_gtk_6639 (14191)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14192,0);
 Msg("Find size of fptr_gtk_8545 (14192)\n");
@@ -41665,10 +39153,6 @@ Msg("Find size of fptr_gtk_8545 (14192)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14193,0);
 Msg("Find size of fptr_gtk_4748 (14193)\n");
@@ -41677,10 +39161,6 @@ Msg("Find size of fptr_gtk_4748 (14193)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14194,0);
 Msg("Find size of fptr_gtk_8164 (14194)\n");
@@ -41689,10 +39169,6 @@ Msg("Find size of fptr_gtk_8164 (14194)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14195,0);
 Msg("Find size of fptr_gtk_3463 (14195)\n");
@@ -41701,10 +39177,6 @@ Msg("Find size of fptr_gtk_3463 (14195)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14196,0);
 Msg("Find size of fptr_gtk_7544 (14196)\n");
@@ -41713,10 +39185,6 @@ Msg("Find size of fptr_gtk_7544 (14196)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14197,0);
 Msg("Find size of fptr_gtk_6176 (14197)\n");
@@ -41725,10 +39193,6 @@ Msg("Find size of fptr_gtk_6176 (14197)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14198,0);
 Msg("Find size of fptr_gtk_8930 (14198)\n");
@@ -41845,10 +39309,6 @@ Msg("Find size of _GtkAccessibleClass (14200)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14201,0);
 Msg("Find size of fptr_gtk_7122 (14201)\n");
@@ -41965,10 +39425,6 @@ Msg("Find size of _GtkCellRendererTextClass (14203)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14204,0);
 Msg("Find size of fptr_gtk_271 (14204)\n");
@@ -42137,10 +39593,6 @@ Msg("Find size of _GtkCurveClass (14208)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14209,0);
 Msg("Find size of fptr_gtk_5826 (14209)\n");
@@ -42841,10 +40293,6 @@ Msg("Find size of _GtkStyleClass (14213)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14214,0);
 Msg("Find size of fptr_gtk_2225 (14214)\n");
@@ -42853,10 +40301,6 @@ Msg("Find size of fptr_gtk_2225 (14214)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14215,0);
 Msg("Find size of fptr_gtk_3741 (14215)\n");
@@ -42865,10 +40309,6 @@ Msg("Find size of fptr_gtk_3741 (14215)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14216,0);
 Msg("Find size of fptr_gtk_4763 (14216)\n");
@@ -42877,10 +40317,6 @@ Msg("Find size of fptr_gtk_4763 (14216)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14217,0);
 Msg("Find size of fptr_gtk_1960 (14217)\n");
@@ -42889,10 +40325,6 @@ Msg("Find size of fptr_gtk_1960 (14217)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14218,0);
 Msg("Find size of fptr_gtk_6734 (14218)\n");
@@ -42901,10 +40333,6 @@ Msg("Find size of fptr_gtk_6734 (14218)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14219,0);
 Msg("Find size of fptr_gtk_1366 (14219)\n");
@@ -42913,10 +40341,6 @@ Msg("Find size of fptr_gtk_1366 (14219)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14220,0);
 Msg("Find size of fptr_gtk_495 (14220)\n");
@@ -42925,10 +40349,6 @@ Msg("Find size of fptr_gtk_495 (14220)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14221,0);
 Msg("Find size of fptr_gtk_2752 (14221)\n");
@@ -42937,10 +40357,6 @@ Msg("Find size of fptr_gtk_2752 (14221)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14222,0);
 Msg("Find size of fptr_gtk_6008 (14222)\n");
@@ -42949,10 +40365,6 @@ Msg("Find size of fptr_gtk_6008 (14222)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14223,0);
 Msg("Find size of fptr_gtk_1856 (14223)\n");
@@ -42961,10 +40373,6 @@ Msg("Find size of fptr_gtk_1856 (14223)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14224,0);
 Msg("Find size of fptr_gtk_5414 (14224)\n");
@@ -42973,10 +40381,6 @@ Msg("Find size of fptr_gtk_5414 (14224)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14225,0);
 Msg("Find size of fptr_gtk_4151 (14225)\n");
@@ -42985,10 +40389,6 @@ Msg("Find size of fptr_gtk_4151 (14225)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14226,0);
 Msg("Find size of fptr_gtk_388 (14226)\n");
@@ -42997,10 +40397,6 @@ Msg("Find size of fptr_gtk_388 (14226)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14227,0);
 Msg("Find size of fptr_gtk_4029 (14227)\n");
@@ -43009,10 +40405,6 @@ Msg("Find size of fptr_gtk_4029 (14227)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14228,0);
 Msg("Find size of fptr_gtk_7419 (14228)\n");
@@ -43021,10 +40413,6 @@ Msg("Find size of fptr_gtk_7419 (14228)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14229,0);
 Msg("Find size of fptr_gtk_4632 (14229)\n");
@@ -43033,10 +40421,6 @@ Msg("Find size of fptr_gtk_4632 (14229)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14230,0);
 Msg("Find size of fptr_gtk_3870 (14230)\n");
@@ -43045,10 +40429,6 @@ Msg("Find size of fptr_gtk_3870 (14230)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14231,0);
 Msg("Find size of fptr_gtk_6977 (14231)\n");
@@ -43386,10 +40766,6 @@ Msg("Find size of _GtkToggleToolButtonClass (14238)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14239,0);
 Msg("Find size of fptr_gtk_3243 (14239)\n");
@@ -43652,34 +41028,6 @@ CheckEnum("GTK_SCROLL_ENDS",GTK_SCROLL_ENDS,2);
 CheckEnum("GTK_SCROLL_HORIZONTAL_STEPS",GTK_SCROLL_HORIZONTAL_STEPS,3);
 CheckEnum("GTK_SCROLL_HORIZONTAL_PAGES",GTK_SCROLL_HORIZONTAL_PAGES,4);
 CheckEnum("GTK_SCROLL_HORIZONTAL_ENDS",GTK_SCROLL_HORIZONTAL_ENDS,5);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_SCROLL_STEPS",GTK_SCROLL_STEPS,0);
-CheckEnum("GTK_SCROLL_PAGES",GTK_SCROLL_PAGES,1);
-CheckEnum("GTK_SCROLL_ENDS",GTK_SCROLL_ENDS,2);
-CheckEnum("GTK_SCROLL_HORIZONTAL_STEPS",GTK_SCROLL_HORIZONTAL_STEPS,3);
-CheckEnum("GTK_SCROLL_HORIZONTAL_PAGES",GTK_SCROLL_HORIZONTAL_PAGES,4);
-CheckEnum("GTK_SCROLL_HORIZONTAL_ENDS",GTK_SCROLL_HORIZONTAL_ENDS,5);
-#elif __powerpc64__
-CheckEnum("GTK_SCROLL_STEPS",GTK_SCROLL_STEPS,0);
-CheckEnum("GTK_SCROLL_PAGES",GTK_SCROLL_PAGES,1);
-CheckEnum("GTK_SCROLL_ENDS",GTK_SCROLL_ENDS,2);
-CheckEnum("GTK_SCROLL_HORIZONTAL_STEPS",GTK_SCROLL_HORIZONTAL_STEPS,3);
-CheckEnum("GTK_SCROLL_HORIZONTAL_PAGES",GTK_SCROLL_HORIZONTAL_PAGES,4);
-CheckEnum("GTK_SCROLL_HORIZONTAL_ENDS",GTK_SCROLL_HORIZONTAL_ENDS,5);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_SCROLL_STEPS",GTK_SCROLL_STEPS,0);
-CheckEnum("GTK_SCROLL_PAGES",GTK_SCROLL_PAGES,1);
-CheckEnum("GTK_SCROLL_ENDS",GTK_SCROLL_ENDS,2);
-CheckEnum("GTK_SCROLL_HORIZONTAL_STEPS",GTK_SCROLL_HORIZONTAL_STEPS,3);
-CheckEnum("GTK_SCROLL_HORIZONTAL_PAGES",GTK_SCROLL_HORIZONTAL_PAGES,4);
-CheckEnum("GTK_SCROLL_HORIZONTAL_ENDS",GTK_SCROLL_HORIZONTAL_ENDS,5);
-#elif __s390x__
-CheckEnum("GTK_SCROLL_STEPS",GTK_SCROLL_STEPS,0);
-CheckEnum("GTK_SCROLL_PAGES",GTK_SCROLL_PAGES,1);
-CheckEnum("GTK_SCROLL_ENDS",GTK_SCROLL_ENDS,2);
-CheckEnum("GTK_SCROLL_HORIZONTAL_STEPS",GTK_SCROLL_HORIZONTAL_STEPS,3);
-CheckEnum("GTK_SCROLL_HORIZONTAL_PAGES",GTK_SCROLL_HORIZONTAL_PAGES,4);
-CheckEnum("GTK_SCROLL_HORIZONTAL_ENDS",GTK_SCROLL_HORIZONTAL_ENDS,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14248,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3690 (14248)\n");
@@ -43796,10 +41144,6 @@ Msg("Find size of _GtkToggleButtonClass (14250)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14251,0);
 Msg("Find size of fptr_gtk_7855 (14251)\n");
@@ -43916,10 +41260,6 @@ Msg("Find size of _GtkCellRendererToggleClass (14253)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14254,0);
 Msg("Find size of fptr_gtk_846 (14254)\n");
@@ -44046,10 +41386,6 @@ Msg("Find size of _GtkTreeDragDestIface (14258)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14259,0);
 Msg("Find size of fptr_gtk_7080 (14259)\n");
@@ -44166,10 +41502,6 @@ Msg("Find size of _GtkColorSelectionClass (14261)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14262,0);
 Msg("Find size of fptr_gtk_1949 (14262)\n");
@@ -44233,14 +41565,6 @@ CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 2)
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 11)
 #elif __ia64__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 10)
-#elif __s390x__
-CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14266,0);
 Msg("Find size of GtkCellRendererProgressPrivate (14266)\n");
@@ -44499,42 +41823,6 @@ CheckEnum("GTK_DELETE_DISPLAY_LINE_ENDS",GTK_DELETE_DISPLAY_LINE_ENDS,4);
 CheckEnum("GTK_DELETE_PARAGRAPH_ENDS",GTK_DELETE_PARAGRAPH_ENDS,5);
 CheckEnum("GTK_DELETE_PARAGRAPHS",GTK_DELETE_PARAGRAPHS,6);
 CheckEnum("GTK_DELETE_WHITESPACE",GTK_DELETE_WHITESPACE,7);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_DELETE_CHARS",GTK_DELETE_CHARS,0);
-CheckEnum("GTK_DELETE_WORD_ENDS",GTK_DELETE_WORD_ENDS,1);
-CheckEnum("GTK_DELETE_WORDS",GTK_DELETE_WORDS,2);
-CheckEnum("GTK_DELETE_DISPLAY_LINES",GTK_DELETE_DISPLAY_LINES,3);
-CheckEnum("GTK_DELETE_DISPLAY_LINE_ENDS",GTK_DELETE_DISPLAY_LINE_ENDS,4);
-CheckEnum("GTK_DELETE_PARAGRAPH_ENDS",GTK_DELETE_PARAGRAPH_ENDS,5);
-CheckEnum("GTK_DELETE_PARAGRAPHS",GTK_DELETE_PARAGRAPHS,6);
-CheckEnum("GTK_DELETE_WHITESPACE",GTK_DELETE_WHITESPACE,7);
-#elif __powerpc64__
-CheckEnum("GTK_DELETE_CHARS",GTK_DELETE_CHARS,0);
-CheckEnum("GTK_DELETE_WORD_ENDS",GTK_DELETE_WORD_ENDS,1);
-CheckEnum("GTK_DELETE_WORDS",GTK_DELETE_WORDS,2);
-CheckEnum("GTK_DELETE_DISPLAY_LINES",GTK_DELETE_DISPLAY_LINES,3);
-CheckEnum("GTK_DELETE_DISPLAY_LINE_ENDS",GTK_DELETE_DISPLAY_LINE_ENDS,4);
-CheckEnum("GTK_DELETE_PARAGRAPH_ENDS",GTK_DELETE_PARAGRAPH_ENDS,5);
-CheckEnum("GTK_DELETE_PARAGRAPHS",GTK_DELETE_PARAGRAPHS,6);
-CheckEnum("GTK_DELETE_WHITESPACE",GTK_DELETE_WHITESPACE,7);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_DELETE_CHARS",GTK_DELETE_CHARS,0);
-CheckEnum("GTK_DELETE_WORD_ENDS",GTK_DELETE_WORD_ENDS,1);
-CheckEnum("GTK_DELETE_WORDS",GTK_DELETE_WORDS,2);
-CheckEnum("GTK_DELETE_DISPLAY_LINES",GTK_DELETE_DISPLAY_LINES,3);
-CheckEnum("GTK_DELETE_DISPLAY_LINE_ENDS",GTK_DELETE_DISPLAY_LINE_ENDS,4);
-CheckEnum("GTK_DELETE_PARAGRAPH_ENDS",GTK_DELETE_PARAGRAPH_ENDS,5);
-CheckEnum("GTK_DELETE_PARAGRAPHS",GTK_DELETE_PARAGRAPHS,6);
-CheckEnum("GTK_DELETE_WHITESPACE",GTK_DELETE_WHITESPACE,7);
-#elif __s390x__
-CheckEnum("GTK_DELETE_CHARS",GTK_DELETE_CHARS,0);
-CheckEnum("GTK_DELETE_WORD_ENDS",GTK_DELETE_WORD_ENDS,1);
-CheckEnum("GTK_DELETE_WORDS",GTK_DELETE_WORDS,2);
-CheckEnum("GTK_DELETE_DISPLAY_LINES",GTK_DELETE_DISPLAY_LINES,3);
-CheckEnum("GTK_DELETE_DISPLAY_LINE_ENDS",GTK_DELETE_DISPLAY_LINE_ENDS,4);
-CheckEnum("GTK_DELETE_PARAGRAPH_ENDS",GTK_DELETE_PARAGRAPH_ENDS,5);
-CheckEnum("GTK_DELETE_PARAGRAPHS",GTK_DELETE_PARAGRAPHS,6);
-CheckEnum("GTK_DELETE_WHITESPACE",GTK_DELETE_WHITESPACE,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14273,0);
 Msg("Find size of anon-gtk-2.0/gtk/gtk.h-3368 (14273)\n");
@@ -44665,10 +41953,6 @@ Msg("Find size of _GtkTreeSortableIface (14275)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14276,0);
 Msg("Find size of fptr_gtk_7814 (14276)\n");
@@ -44677,10 +41961,6 @@ Msg("Find size of fptr_gtk_7814 (14276)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14277,0);
 Msg("Find size of fptr_gtk_4863 (14277)\n");
@@ -44689,10 +41969,6 @@ Msg("Find size of fptr_gtk_4863 (14277)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14278,0);
 Msg("Find size of fptr_gtk_8094 (14278)\n");
@@ -44701,10 +41977,6 @@ Msg("Find size of fptr_gtk_8094 (14278)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14279,0);
 Msg("Find size of fptr_gtk_3352 (14279)\n");
@@ -44713,10 +41985,6 @@ Msg("Find size of fptr_gtk_3352 (14279)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14280,0);
 Msg("Find size of fptr_gtk_5886 (14280)\n");
@@ -44725,10 +41993,6 @@ Msg("Find size of fptr_gtk_5886 (14280)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14281,0);
 Msg("Find size of fptr_gtk_1057 (14281)\n");
@@ -44873,10 +42137,6 @@ Msg("Find size of _GtkCalendarClass (14283)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14284,0);
 Msg("Find size of fptr_gtk_3571 (14284)\n");
@@ -45236,10 +42496,6 @@ Msg("Find size of _GtkEntryClass (14287)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14288,0);
 Msg("Find size of fptr_gtk_519 (14288)\n");
@@ -45248,10 +42504,6 @@ Msg("Find size of fptr_gtk_519 (14288)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14289,0);
 Msg("Find size of fptr_gtk_7506 (14289)\n");
@@ -45260,10 +42512,6 @@ Msg("Find size of fptr_gtk_7506 (14289)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14290,0);
 Msg("Find size of fptr_gtk_8790 (14290)\n");
@@ -45272,10 +42520,6 @@ Msg("Find size of fptr_gtk_8790 (14290)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14291,0);
 Msg("Find size of fptr_gtk_7472 (14291)\n");
@@ -45284,10 +42528,6 @@ Msg("Find size of fptr_gtk_7472 (14291)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14292,0);
 Msg("Find size of fptr_gtk_7817 (14292)\n");
@@ -45315,10 +42555,6 @@ Msg("Find size of GtkEntryClass (14293)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14294,0);
 Msg("Find size of fptr_gtk_6637 (14294)\n");
@@ -45327,10 +42563,6 @@ Msg("Find size of fptr_gtk_6637 (14294)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14295,0);
 Msg("Find size of fptr_gtk_2820 (14295)\n");
@@ -45339,10 +42571,6 @@ Msg("Find size of fptr_gtk_2820 (14295)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14296,0);
 Msg("Find size of fptr_gtk_6030 (14296)\n");
@@ -45351,10 +42579,6 @@ Msg("Find size of fptr_gtk_6030 (14296)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14297,0);
 Msg("Find size of fptr_gtk_4099 (14297)\n");
@@ -45671,10 +42895,6 @@ Msg("Find size of GtkInputDialog * (14303)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14304,0);
 Msg("Find size of fptr_gtk_2280 (14304)\n");
@@ -45805,10 +43025,6 @@ Msg("Find size of _GtkEntryCompletionClass (14306)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14307,0);
 Msg("Find size of fptr_gtk_2450 (14307)\n");
@@ -45817,10 +43033,6 @@ Msg("Find size of fptr_gtk_2450 (14307)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14308,0);
 Msg("Find size of fptr_gtk_1195 (14308)\n");
@@ -45829,10 +43041,6 @@ Msg("Find size of fptr_gtk_1195 (14308)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14309,0);
 Msg("Find size of fptr_gtk_7904 (14309)\n");
@@ -46137,10 +43345,6 @@ Msg("Find size of _GtkRcStyleClass (14315)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14316,0);
 Msg("Find size of fptr_gtk_8807 (14316)\n");
@@ -46149,10 +43353,6 @@ Msg("Find size of fptr_gtk_8807 (14316)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14317,0);
 Msg("Find size of fptr_gtk_5787 (14317)\n");
@@ -46161,10 +43361,6 @@ Msg("Find size of fptr_gtk_5787 (14317)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14318,0);
 Msg("Find size of fptr_gtk_4093 (14318)\n");
@@ -46173,10 +43369,6 @@ Msg("Find size of fptr_gtk_4093 (14318)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14319,0);
 Msg("Find size of fptr_gtk_614 (14319)\n");
@@ -46363,10 +43555,6 @@ Msg("Find size of _GtkUIManagerClass (14321)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14322,0);
 Msg("Find size of fptr_gtk_8824 (14322)\n");
@@ -46375,10 +43563,6 @@ Msg("Find size of fptr_gtk_8824 (14322)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14323,0);
 Msg("Find size of fptr_gtk_37 (14323)\n");
@@ -46387,10 +43571,6 @@ Msg("Find size of fptr_gtk_37 (14323)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14324,0);
 Msg("Find size of fptr_gtk_900 (14324)\n");
@@ -46399,10 +43579,6 @@ Msg("Find size of fptr_gtk_900 (14324)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14325,0);
 Msg("Find size of fptr_gtk_721 (14325)\n");
@@ -46411,10 +43587,6 @@ Msg("Find size of fptr_gtk_721 (14325)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14326,0);
 Msg("Find size of fptr_gtk_2652 (14326)\n");
@@ -46423,10 +43595,6 @@ Msg("Find size of fptr_gtk_2652 (14326)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14327,0);
 Msg("Find size of fptr_gtk_6504 (14327)\n");
@@ -46666,10 +43834,6 @@ Msg("Find size of GtkCheckButton * (14334)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14335,0);
 Msg("Find size of fptr_gtk_5749 (14335)\n");
@@ -46703,22 +43867,6 @@ CheckEnum("GTK_VISIBILITY_NONE",GTK_VISIBILITY_NONE,0);
 CheckEnum("GTK_VISIBILITY_PARTIAL",GTK_VISIBILITY_PARTIAL,1);
 CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
 #elif __ia64__
-CheckEnum("GTK_VISIBILITY_NONE",GTK_VISIBILITY_NONE,0);
-CheckEnum("GTK_VISIBILITY_PARTIAL",GTK_VISIBILITY_PARTIAL,1);
-CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_VISIBILITY_NONE",GTK_VISIBILITY_NONE,0);
-CheckEnum("GTK_VISIBILITY_PARTIAL",GTK_VISIBILITY_PARTIAL,1);
-CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
-#elif __powerpc64__
-CheckEnum("GTK_VISIBILITY_NONE",GTK_VISIBILITY_NONE,0);
-CheckEnum("GTK_VISIBILITY_PARTIAL",GTK_VISIBILITY_PARTIAL,1);
-CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_VISIBILITY_NONE",GTK_VISIBILITY_NONE,0);
-CheckEnum("GTK_VISIBILITY_PARTIAL",GTK_VISIBILITY_PARTIAL,1);
-CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
-#elif __s390x__
 CheckEnum("GTK_VISIBILITY_NONE",GTK_VISIBILITY_NONE,0);
 CheckEnum("GTK_VISIBILITY_PARTIAL",GTK_VISIBILITY_PARTIAL,1);
 CheckEnum("GTK_VISIBILITY_FULL",GTK_VISIBILITY_FULL,2);
@@ -46824,10 +43972,6 @@ Msg("Find size of _GtkRadioMenuItemClass (14339)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14340,0);
 Msg("Find size of fptr_gtk_8133 (14340)\n");
@@ -47154,10 +44298,6 @@ Msg("Find size of _GtkTextViewClass (14342)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14343,0);
 Msg("Find size of fptr_gtk_7698 (14343)\n");
@@ -47166,10 +44306,6 @@ Msg("Find size of fptr_gtk_7698 (14343)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14344,0);
 Msg("Find size of fptr_gtk_4364 (14344)\n");
@@ -47178,10 +44314,6 @@ Msg("Find size of fptr_gtk_4364 (14344)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14345,0);
 Msg("Find size of fptr_gtk_3586 (14345)\n");
@@ -47190,10 +44322,6 @@ Msg("Find size of fptr_gtk_3586 (14345)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14346,0);
 Msg("Find size of fptr_gtk_2925 (14346)\n");
@@ -47202,10 +44330,6 @@ Msg("Find size of fptr_gtk_2925 (14346)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14347,0);
 Msg("Find size of fptr_gtk_7088 (14347)\n");
@@ -47214,10 +44338,6 @@ Msg("Find size of fptr_gtk_7088 (14347)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14348,0);
 Msg("Find size of fptr_gtk_8143 (14348)\n");
@@ -47226,10 +44346,6 @@ Msg("Find size of fptr_gtk_8143 (14348)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14349,0);
 Msg("Find size of fptr_gtk_7175 (14349)\n");
@@ -47238,10 +44354,6 @@ Msg("Find size of fptr_gtk_7175 (14349)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14350,0);
 Msg("Find size of fptr_gtk_6719 (14350)\n");
@@ -47269,10 +44381,6 @@ Msg("Find size of GtkTextViewClass (14351)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14352,0);
 Msg("Find size of fptr_gtk_1160 (14352)\n");
@@ -47455,10 +44563,6 @@ Msg("Find size of _GtkCellEditableIface (14356)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14357,0);
 Msg("Find size of fptr_gtk_3319 (14357)\n");
@@ -47467,10 +44571,6 @@ Msg("Find size of fptr_gtk_3319 (14357)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14358,0);
 Msg("Find size of fptr_gtk_6812 (14358)\n");
@@ -47601,10 +44701,6 @@ Msg("Find size of _GtkToolbarClass (14360)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14361,0);
 Msg("Find size of fptr_gtk_3161 (14361)\n");
@@ -47613,10 +44709,6 @@ Msg("Find size of fptr_gtk_3161 (14361)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14362,0);
 Msg("Find size of fptr_gtk_8060 (14362)\n");
@@ -47625,10 +44717,6 @@ Msg("Find size of fptr_gtk_8060 (14362)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14363,0);
 Msg("Find size of fptr_gtk_8333 (14363)\n");
@@ -47759,10 +44847,6 @@ Msg("Find size of _GtkHandleBoxClass (14365)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14366,0);
 Msg("Find size of fptr_gtk_5359 (14366)\n");
@@ -47959,10 +45043,6 @@ Msg("Find size of _GtkTextTagTableClass (14370)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14371,0);
 Msg("Find size of fptr_gtk_1184 (14371)\n");
@@ -47971,10 +45051,6 @@ Msg("Find size of fptr_gtk_1184 (14371)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14372,0);
 Msg("Find size of fptr_gtk_385 (14372)\n");
@@ -48166,10 +45242,6 @@ Msg("Find size of _GtkComboBoxClass (14375)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14376,0);
 Msg("Find size of fptr_gtk_134 (14376)\n");
@@ -48178,10 +45250,6 @@ Msg("Find size of fptr_gtk_134 (14376)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14377,0);
 Msg("Find size of fptr_gtk_8648 (14377)\n");
@@ -48355,10 +45423,6 @@ Msg("Find size of _GtkFrameClass (14382)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14383,0);
 Msg("Find size of fptr_gtk_6579 (14383)\n");
@@ -48649,10 +45713,6 @@ Msg("Find size of _GtkScrolledWindowClass (14389)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14390,0);
 Msg("Find size of fptr_gtk_5763 (14390)\n");
@@ -48661,10 +45721,6 @@ Msg("Find size of fptr_gtk_5763 (14390)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14391,0);
 Msg("Find size of fptr_gtk_7654 (14391)\n");
@@ -48789,14 +45845,6 @@ CheckTypeSize(GtkToolbarPrivate,0, 14396, 2)
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 11)
 #elif __ia64__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GtkToolbarPrivate,0, 14396, 6)
-#elif __powerpc64__
-CheckTypeSize(GtkToolbarPrivate,0, 14396, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GtkToolbarPrivate,0, 14396, 10)
-#elif __s390x__
-CheckTypeSize(GtkToolbarPrivate,0, 14396, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14396,0);
 Msg("Find size of GtkToolbarPrivate (14396)\n");
@@ -49012,10 +46060,6 @@ Msg("Find size of _GtkLayoutClass (14401)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14402,0);
 Msg("Find size of fptr_gtk_2965 (14402)\n");
@@ -49180,10 +46224,6 @@ Msg("Find size of _GtkExpanderClass (14408)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14409,0);
 Msg("Find size of fptr_gtk_7025 (14409)\n");
@@ -49347,10 +46387,6 @@ Msg("Find size of GtkProgress * (14412)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14413,0);
 Msg("Find size of fptr_gtk_5725 (14413)\n");
@@ -49378,10 +46414,6 @@ Msg("Find size of GtkProgressClass (14414)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14415,0);
 Msg("Find size of fptr_gtk_4210 (14415)\n");
@@ -49654,10 +46686,6 @@ Msg("Find size of _GtkFontButtonClass (14423)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14424,0);
 Msg("Find size of fptr_gtk_8650 (14424)\n");
@@ -49920,10 +46948,6 @@ Msg("Find size of _GtkColorButtonClass (14430)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14431,0);
 Msg("Find size of fptr_gtk_8177 (14431)\n");
@@ -50308,10 +47332,6 @@ Msg("Find size of _GtkStatusbarClass (14439)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14440,0);
 Msg("Find size of fptr_gtk_4298 (14440)\n");
@@ -50733,18 +47753,6 @@ CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
 CheckEnum("GTK_TOOLBAR_SPACE_EMPTY",GTK_TOOLBAR_SPACE_EMPTY,0);
 CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
 #elif __ia64__
-CheckEnum("GTK_TOOLBAR_SPACE_EMPTY",GTK_TOOLBAR_SPACE_EMPTY,0);
-CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TOOLBAR_SPACE_EMPTY",GTK_TOOLBAR_SPACE_EMPTY,0);
-CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
-#elif __powerpc64__
-CheckEnum("GTK_TOOLBAR_SPACE_EMPTY",GTK_TOOLBAR_SPACE_EMPTY,0);
-CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TOOLBAR_SPACE_EMPTY",GTK_TOOLBAR_SPACE_EMPTY,0);
-CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
-#elif __s390x__
 CheckEnum("GTK_TOOLBAR_SPACE_EMPTY",GTK_TOOLBAR_SPACE_EMPTY,0);
 CheckEnum("GTK_TOOLBAR_SPACE_LINE",GTK_TOOLBAR_SPACE_LINE,1);
 #else
@@ -51263,10 +48271,6 @@ Msg("Find size of _GtkNotebookClass (14462)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14463,0);
 Msg("Find size of fptr_gtk_2989 (14463)\n");
@@ -51275,10 +48279,6 @@ Msg("Find size of fptr_gtk_2989 (14463)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14464,0);
 Msg("Find size of fptr_gtk_8540 (14464)\n");
@@ -51287,10 +48287,6 @@ Msg("Find size of fptr_gtk_8540 (14464)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14465,0);
 Msg("Find size of fptr_gtk_7925 (14465)\n");
@@ -51299,10 +48295,6 @@ Msg("Find size of fptr_gtk_7925 (14465)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14466,0);
 Msg("Find size of fptr_gtk_4237 (14466)\n");
@@ -51311,10 +48303,6 @@ Msg("Find size of fptr_gtk_4237 (14466)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14467,0);
 Msg("Find size of fptr_gtk_6370 (14467)\n");
@@ -51801,10 +48789,6 @@ Msg("Find size of _GtkTreeViewClass (14473)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14474,0);
 Msg("Find size of fptr_gtk_7201 (14474)\n");
@@ -51813,10 +48797,6 @@ Msg("Find size of fptr_gtk_7201 (14474)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14475,0);
 Msg("Find size of fptr_gtk_4791 (14475)\n");
@@ -51825,10 +48805,6 @@ Msg("Find size of fptr_gtk_4791 (14475)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14476,0);
 Msg("Find size of fptr_gtk_868 (14476)\n");
@@ -51837,10 +48813,6 @@ Msg("Find size of fptr_gtk_868 (14476)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14477,0);
 Msg("Find size of fptr_gtk_4427 (14477)\n");
@@ -51849,10 +48821,6 @@ Msg("Find size of fptr_gtk_4427 (14477)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14478,0);
 Msg("Find size of fptr_gtk_1357 (14478)\n");
@@ -51861,10 +48829,6 @@ Msg("Find size of fptr_gtk_1357 (14478)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14479,0);
 Msg("Find size of fptr_gtk_1500 (14479)\n");
@@ -51873,10 +48837,6 @@ Msg("Find size of fptr_gtk_1500 (14479)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14480,0);
 Msg("Find size of fptr_gtk_292 (14480)\n");
@@ -51885,10 +48845,6 @@ Msg("Find size of fptr_gtk_292 (14480)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14481,0);
 Msg("Find size of fptr_gtk_7093 (14481)\n");
@@ -51897,10 +48853,6 @@ Msg("Find size of fptr_gtk_7093 (14481)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14482,0);
 Msg("Find size of fptr_gtk_7750 (14482)\n");
@@ -52149,10 +49101,6 @@ Msg("Find size of _GtkRadioButtonClass (14488)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14489,0);
 Msg("Find size of fptr_gtk_6460 (14489)\n");
@@ -52283,10 +49231,6 @@ Msg("Find size of _GtkAdjustmentClass (14491)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14492,0);
 Msg("Find size of fptr_gtk_2047 (14492)\n");
@@ -52455,10 +49399,6 @@ Msg("Find size of _GtkRadioActionClass (14496)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14497,0);
 Msg("Find size of fptr_gtk_6601 (14497)\n");
@@ -52575,10 +49515,6 @@ Msg("Find size of _GtkTextTagClass (14499)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14500,0);
 Msg("Find size of fptr_gtk_3131 (14500)\n");
@@ -52751,10 +49687,6 @@ Msg("Find size of _GtkIconViewClass (14502)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14503,0);
 Msg("Find size of fptr_gtk_3282 (14503)\n");
@@ -52763,10 +49695,6 @@ Msg("Find size of fptr_gtk_3282 (14503)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14504,0);
 Msg("Find size of fptr_gtk_6762 (14504)\n");
@@ -52775,10 +49703,6 @@ Msg("Find size of fptr_gtk_6762 (14504)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14505,0);
 Msg("Find size of fptr_gtk_1219 (14505)\n");
@@ -52787,10 +49711,6 @@ Msg("Find size of fptr_gtk_1219 (14505)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14506,0);
 Msg("Find size of fptr_gtk_3423 (14506)\n");
@@ -52799,10 +49719,6 @@ Msg("Find size of fptr_gtk_3423 (14506)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14507,0);
 Msg("Find size of fptr_gtk_6736 (14507)\n");
@@ -53101,10 +50017,6 @@ Msg("Find size of GtkGammaCurve (14515)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14516,0);
 Msg("Find size of fptr_anonymous-gtk.h.types-0 (14516)\n");
@@ -53138,18 +50050,6 @@ CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED
 #elif __ia64__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1);
-CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2);
-#elif __powerpc64__
-CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1);
-CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1);
-CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2);
-#elif __s390x__
-CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1);
-CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14518,0);
 Msg("Find size of anonymous-gtk.h.types-2 (14518)\n");
@@ -53164,22 +50064,6 @@ CheckEnum("GTK_IM_PREEDIT_NOTHING",GTK_IM_PREEDIT_NOTHING,0);
 CheckEnum("GTK_IM_PREEDIT_CALLBACK",GTK_IM_PREEDIT_CALLBACK,(0) + 1);
 CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
 #elif __ia64__
-CheckEnum("GTK_IM_PREEDIT_NOTHING",GTK_IM_PREEDIT_NOTHING,0);
-CheckEnum("GTK_IM_PREEDIT_CALLBACK",GTK_IM_PREEDIT_CALLBACK,(0) + 1);
-CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_IM_PREEDIT_NOTHING",GTK_IM_PREEDIT_NOTHING,0);
-CheckEnum("GTK_IM_PREEDIT_CALLBACK",GTK_IM_PREEDIT_CALLBACK,(0) + 1);
-CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("GTK_IM_PREEDIT_NOTHING",GTK_IM_PREEDIT_NOTHING,0);
-CheckEnum("GTK_IM_PREEDIT_CALLBACK",GTK_IM_PREEDIT_CALLBACK,(0) + 1);
-CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_IM_PREEDIT_NOTHING",GTK_IM_PREEDIT_NOTHING,0);
-CheckEnum("GTK_IM_PREEDIT_CALLBACK",GTK_IM_PREEDIT_CALLBACK,(0) + 1);
-CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
-#elif __s390x__
 CheckEnum("GTK_IM_PREEDIT_NOTHING",GTK_IM_PREEDIT_NOTHING,0);
 CheckEnum("GTK_IM_PREEDIT_CALLBACK",GTK_IM_PREEDIT_CALLBACK,(0) + 1);
 CheckEnum("GTK_IM_PREEDIT_NONE",GTK_IM_PREEDIT_NONE,((0) + 1) + 1);
@@ -53240,50 +50124,6 @@ CheckEnum("GTK_DEBUG_MULTIHEAD",GTK_DEBUG_MULTIHEAD,1 << 6);
 CheckEnum("GTK_DEBUG_MODULES",GTK_DEBUG_MODULES,1 << 7);
 CheckEnum("GTK_DEBUG_GEOMETRY",GTK_DEBUG_GEOMETRY,1 << 8);
 CheckEnum("GTK_DEBUG_ICONTHEME",GTK_DEBUG_ICONTHEME,1 << 9);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_DEBUG_MISC",GTK_DEBUG_MISC,1 << 0);
-CheckEnum("GTK_DEBUG_PLUGSOCKET",GTK_DEBUG_PLUGSOCKET,1 << 1);
-CheckEnum("GTK_DEBUG_TEXT",GTK_DEBUG_TEXT,1 << 2);
-CheckEnum("GTK_DEBUG_TREE",GTK_DEBUG_TREE,1 << 3);
-CheckEnum("GTK_DEBUG_UPDATES",GTK_DEBUG_UPDATES,1 << 4);
-CheckEnum("GTK_DEBUG_KEYBINDINGS",GTK_DEBUG_KEYBINDINGS,1 << 5);
-CheckEnum("GTK_DEBUG_MULTIHEAD",GTK_DEBUG_MULTIHEAD,1 << 6);
-CheckEnum("GTK_DEBUG_MODULES",GTK_DEBUG_MODULES,1 << 7);
-CheckEnum("GTK_DEBUG_GEOMETRY",GTK_DEBUG_GEOMETRY,1 << 8);
-CheckEnum("GTK_DEBUG_ICONTHEME",GTK_DEBUG_ICONTHEME,1 << 9);
-#elif __powerpc64__
-CheckEnum("GTK_DEBUG_MISC",GTK_DEBUG_MISC,1 << 0);
-CheckEnum("GTK_DEBUG_PLUGSOCKET",GTK_DEBUG_PLUGSOCKET,1 << 1);
-CheckEnum("GTK_DEBUG_TEXT",GTK_DEBUG_TEXT,1 << 2);
-CheckEnum("GTK_DEBUG_TREE",GTK_DEBUG_TREE,1 << 3);
-CheckEnum("GTK_DEBUG_UPDATES",GTK_DEBUG_UPDATES,1 << 4);
-CheckEnum("GTK_DEBUG_KEYBINDINGS",GTK_DEBUG_KEYBINDINGS,1 << 5);
-CheckEnum("GTK_DEBUG_MULTIHEAD",GTK_DEBUG_MULTIHEAD,1 << 6);
-CheckEnum("GTK_DEBUG_MODULES",GTK_DEBUG_MODULES,1 << 7);
-CheckEnum("GTK_DEBUG_GEOMETRY",GTK_DEBUG_GEOMETRY,1 << 8);
-CheckEnum("GTK_DEBUG_ICONTHEME",GTK_DEBUG_ICONTHEME,1 << 9);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_DEBUG_MISC",GTK_DEBUG_MISC,1 << 0);
-CheckEnum("GTK_DEBUG_PLUGSOCKET",GTK_DEBUG_PLUGSOCKET,1 << 1);
-CheckEnum("GTK_DEBUG_TEXT",GTK_DEBUG_TEXT,1 << 2);
-CheckEnum("GTK_DEBUG_TREE",GTK_DEBUG_TREE,1 << 3);
-CheckEnum("GTK_DEBUG_UPDATES",GTK_DEBUG_UPDATES,1 << 4);
-CheckEnum("GTK_DEBUG_KEYBINDINGS",GTK_DEBUG_KEYBINDINGS,1 << 5);
-CheckEnum("GTK_DEBUG_MULTIHEAD",GTK_DEBUG_MULTIHEAD,1 << 6);
-CheckEnum("GTK_DEBUG_MODULES",GTK_DEBUG_MODULES,1 << 7);
-CheckEnum("GTK_DEBUG_GEOMETRY",GTK_DEBUG_GEOMETRY,1 << 8);
-CheckEnum("GTK_DEBUG_ICONTHEME",GTK_DEBUG_ICONTHEME,1 << 9);
-#elif __s390x__
-CheckEnum("GTK_DEBUG_MISC",GTK_DEBUG_MISC,1 << 0);
-CheckEnum("GTK_DEBUG_PLUGSOCKET",GTK_DEBUG_PLUGSOCKET,1 << 1);
-CheckEnum("GTK_DEBUG_TEXT",GTK_DEBUG_TEXT,1 << 2);
-CheckEnum("GTK_DEBUG_TREE",GTK_DEBUG_TREE,1 << 3);
-CheckEnum("GTK_DEBUG_UPDATES",GTK_DEBUG_UPDATES,1 << 4);
-CheckEnum("GTK_DEBUG_KEYBINDINGS",GTK_DEBUG_KEYBINDINGS,1 << 5);
-CheckEnum("GTK_DEBUG_MULTIHEAD",GTK_DEBUG_MULTIHEAD,1 << 6);
-CheckEnum("GTK_DEBUG_MODULES",GTK_DEBUG_MODULES,1 << 7);
-CheckEnum("GTK_DEBUG_GEOMETRY",GTK_DEBUG_GEOMETRY,1 << 8);
-CheckEnum("GTK_DEBUG_ICONTHEME",GTK_DEBUG_ICONTHEME,1 << 9);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14521,0);
 Msg("Find size of anonymous-gtk.h.types-6 (14521)\n");
@@ -53320,22 +50160,6 @@ CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0)
 CheckEnum("GTK_CELL_RENDERER_MODE_INERT",GTK_CELL_RENDERER_MODE_INERT,0);
 CheckEnum("GTK_CELL_RENDERER_MODE_ACTIVATABLE",GTK_CELL_RENDERER_MODE_ACTIVATABLE,(0) + 1);
 CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_CELL_RENDERER_MODE_INERT",GTK_CELL_RENDERER_MODE_INERT,0);
-CheckEnum("GTK_CELL_RENDERER_MODE_ACTIVATABLE",GTK_CELL_RENDERER_MODE_ACTIVATABLE,(0) + 1);
-CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("GTK_CELL_RENDERER_MODE_INERT",GTK_CELL_RENDERER_MODE_INERT,0);
-CheckEnum("GTK_CELL_RENDERER_MODE_ACTIVATABLE",GTK_CELL_RENDERER_MODE_ACTIVATABLE,(0) + 1);
-CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_CELL_RENDERER_MODE_INERT",GTK_CELL_RENDERER_MODE_INERT,0);
-CheckEnum("GTK_CELL_RENDERER_MODE_ACTIVATABLE",GTK_CELL_RENDERER_MODE_ACTIVATABLE,(0) + 1);
-CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0) + 1) + 1);
-#elif __s390x__
-CheckEnum("GTK_CELL_RENDERER_MODE_INERT",GTK_CELL_RENDERER_MODE_INERT,0);
-CheckEnum("GTK_CELL_RENDERER_MODE_ACTIVATABLE",GTK_CELL_RENDERER_MODE_ACTIVATABLE,(0) + 1);
-CheckEnum("GTK_CELL_RENDERER_MODE_EDITABLE",GTK_CELL_RENDERER_MODE_EDITABLE,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14523,0);
 Msg("Find size of anonymous-gtk.h.types-8 (14523)\n");
@@ -53367,18 +50191,6 @@ CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
 CheckEnum("GTK_ICON_THEME_NOT_FOUND",GTK_ICON_THEME_NOT_FOUND,0);
 CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
 #elif __ia64__
-CheckEnum("GTK_ICON_THEME_NOT_FOUND",GTK_ICON_THEME_NOT_FOUND,0);
-CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_ICON_THEME_NOT_FOUND",GTK_ICON_THEME_NOT_FOUND,0);
-CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
-#elif __powerpc64__
-CheckEnum("GTK_ICON_THEME_NOT_FOUND",GTK_ICON_THEME_NOT_FOUND,0);
-CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_ICON_THEME_NOT_FOUND",GTK_ICON_THEME_NOT_FOUND,0);
-CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
-#elif __s390x__
 CheckEnum("GTK_ICON_THEME_NOT_FOUND",GTK_ICON_THEME_NOT_FOUND,0);
 CheckEnum("GTK_ICON_THEME_FAILED",GTK_ICON_THEME_FAILED,(0) + 1);
 #else
@@ -53441,54 +50253,6 @@ CheckEnum("GTK_RESPONSE_YES",GTK_RESPONSE_YES,-8);
 CheckEnum("GTK_RESPONSE_NO",GTK_RESPONSE_NO,-9);
 CheckEnum("GTK_RESPONSE_APPLY",GTK_RESPONSE_APPLY,-10);
 CheckEnum("GTK_RESPONSE_HELP",GTK_RESPONSE_HELP,-11);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_RESPONSE_NONE",GTK_RESPONSE_NONE,-1);
-CheckEnum("GTK_RESPONSE_REJECT",GTK_RESPONSE_REJECT,-2);
-CheckEnum("GTK_RESPONSE_ACCEPT",GTK_RESPONSE_ACCEPT,-3);
-CheckEnum("GTK_RESPONSE_DELETE_EVENT",GTK_RESPONSE_DELETE_EVENT,-4);
-CheckEnum("GTK_RESPONSE_OK",GTK_RESPONSE_OK,-5);
-CheckEnum("GTK_RESPONSE_CANCEL",GTK_RESPONSE_CANCEL,-6);
-CheckEnum("GTK_RESPONSE_CLOSE",GTK_RESPONSE_CLOSE,-7);
-CheckEnum("GTK_RESPONSE_YES",GTK_RESPONSE_YES,-8);
-CheckEnum("GTK_RESPONSE_NO",GTK_RESPONSE_NO,-9);
-CheckEnum("GTK_RESPONSE_APPLY",GTK_RESPONSE_APPLY,-10);
-CheckEnum("GTK_RESPONSE_HELP",GTK_RESPONSE_HELP,-11);
-#elif __powerpc64__
-CheckEnum("GTK_RESPONSE_NONE",GTK_RESPONSE_NONE,-1);
-CheckEnum("GTK_RESPONSE_REJECT",GTK_RESPONSE_REJECT,-2);
-CheckEnum("GTK_RESPONSE_ACCEPT",GTK_RESPONSE_ACCEPT,-3);
-CheckEnum("GTK_RESPONSE_DELETE_EVENT",GTK_RESPONSE_DELETE_EVENT,-4);
-CheckEnum("GTK_RESPONSE_OK",GTK_RESPONSE_OK,-5);
-CheckEnum("GTK_RESPONSE_CANCEL",GTK_RESPONSE_CANCEL,-6);
-CheckEnum("GTK_RESPONSE_CLOSE",GTK_RESPONSE_CLOSE,-7);
-CheckEnum("GTK_RESPONSE_YES",GTK_RESPONSE_YES,-8);
-CheckEnum("GTK_RESPONSE_NO",GTK_RESPONSE_NO,-9);
-CheckEnum("GTK_RESPONSE_APPLY",GTK_RESPONSE_APPLY,-10);
-CheckEnum("GTK_RESPONSE_HELP",GTK_RESPONSE_HELP,-11);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_RESPONSE_NONE",GTK_RESPONSE_NONE,-1);
-CheckEnum("GTK_RESPONSE_REJECT",GTK_RESPONSE_REJECT,-2);
-CheckEnum("GTK_RESPONSE_ACCEPT",GTK_RESPONSE_ACCEPT,-3);
-CheckEnum("GTK_RESPONSE_DELETE_EVENT",GTK_RESPONSE_DELETE_EVENT,-4);
-CheckEnum("GTK_RESPONSE_OK",GTK_RESPONSE_OK,-5);
-CheckEnum("GTK_RESPONSE_CANCEL",GTK_RESPONSE_CANCEL,-6);
-CheckEnum("GTK_RESPONSE_CLOSE",GTK_RESPONSE_CLOSE,-7);
-CheckEnum("GTK_RESPONSE_YES",GTK_RESPONSE_YES,-8);
-CheckEnum("GTK_RESPONSE_NO",GTK_RESPONSE_NO,-9);
-CheckEnum("GTK_RESPONSE_APPLY",GTK_RESPONSE_APPLY,-10);
-CheckEnum("GTK_RESPONSE_HELP",GTK_RESPONSE_HELP,-11);
-#elif __s390x__
-CheckEnum("GTK_RESPONSE_NONE",GTK_RESPONSE_NONE,-1);
-CheckEnum("GTK_RESPONSE_REJECT",GTK_RESPONSE_REJECT,-2);
-CheckEnum("GTK_RESPONSE_ACCEPT",GTK_RESPONSE_ACCEPT,-3);
-CheckEnum("GTK_RESPONSE_DELETE_EVENT",GTK_RESPONSE_DELETE_EVENT,-4);
-CheckEnum("GTK_RESPONSE_OK",GTK_RESPONSE_OK,-5);
-CheckEnum("GTK_RESPONSE_CANCEL",GTK_RESPONSE_CANCEL,-6);
-CheckEnum("GTK_RESPONSE_CLOSE",GTK_RESPONSE_CLOSE,-7);
-CheckEnum("GTK_RESPONSE_YES",GTK_RESPONSE_YES,-8);
-CheckEnum("GTK_RESPONSE_NO",GTK_RESPONSE_NO,-9);
-CheckEnum("GTK_RESPONSE_APPLY",GTK_RESPONSE_APPLY,-10);
-CheckEnum("GTK_RESPONSE_HELP",GTK_RESPONSE_HELP,-11);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14527,0);
 Msg("Find size of anonymous-gtk.h.types-12 (14527)\n");
@@ -53520,18 +50284,6 @@ CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
 CheckEnum("GTK_TARGET_SAME_APP",GTK_TARGET_SAME_APP,1 << 0);
 CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
 #elif __ia64__
-CheckEnum("GTK_TARGET_SAME_APP",GTK_TARGET_SAME_APP,1 << 0);
-CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TARGET_SAME_APP",GTK_TARGET_SAME_APP,1 << 0);
-CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
-#elif __powerpc64__
-CheckEnum("GTK_TARGET_SAME_APP",GTK_TARGET_SAME_APP,1 << 0);
-CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TARGET_SAME_APP",GTK_TARGET_SAME_APP,1 << 0);
-CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
-#elif __s390x__
 CheckEnum("GTK_TARGET_SAME_APP",GTK_TARGET_SAME_APP,1 << 0);
 CheckEnum("GTK_TARGET_SAME_WIDGET",GTK_TARGET_SAME_WIDGET,1 << 1);
 #else
@@ -53612,78 +50364,6 @@ CheckEnum("GTK_ANCHOR_SW",GTK_ANCHOR_SW,GTK_ANCHOR_SOUTH_WEST);
 CheckEnum("GTK_ANCHOR_SE",GTK_ANCHOR_SE,GTK_ANCHOR_SOUTH_EAST);
 CheckEnum("GTK_ANCHOR_W",GTK_ANCHOR_W,GTK_ANCHOR_WEST);
 CheckEnum("GTK_ANCHOR_E",GTK_ANCHOR_E,GTK_ANCHOR_EAST);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_ANCHOR_CENTER",GTK_ANCHOR_CENTER,0);
-CheckEnum("GTK_ANCHOR_NORTH",GTK_ANCHOR_NORTH,(0) + 1);
-CheckEnum("GTK_ANCHOR_NORTH_WEST",GTK_ANCHOR_NORTH_WEST,((0) + 1) + 1);
-CheckEnum("GTK_ANCHOR_NORTH_EAST",GTK_ANCHOR_NORTH_EAST,(((0) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH",GTK_ANCHOR_SOUTH,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH_WEST",GTK_ANCHOR_SOUTH_WEST,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH_EAST",GTK_ANCHOR_SOUTH_EAST,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_WEST",GTK_ANCHOR_WEST,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_EAST",GTK_ANCHOR_EAST,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_N",GTK_ANCHOR_N,GTK_ANCHOR_NORTH);
-CheckEnum("GTK_ANCHOR_NW",GTK_ANCHOR_NW,GTK_ANCHOR_NORTH_WEST);
-CheckEnum("GTK_ANCHOR_NE",GTK_ANCHOR_NE,GTK_ANCHOR_NORTH_EAST);
-CheckEnum("GTK_ANCHOR_S",GTK_ANCHOR_S,GTK_ANCHOR_SOUTH);
-CheckEnum("GTK_ANCHOR_SW",GTK_ANCHOR_SW,GTK_ANCHOR_SOUTH_WEST);
-CheckEnum("GTK_ANCHOR_SE",GTK_ANCHOR_SE,GTK_ANCHOR_SOUTH_EAST);
-CheckEnum("GTK_ANCHOR_W",GTK_ANCHOR_W,GTK_ANCHOR_WEST);
-CheckEnum("GTK_ANCHOR_E",GTK_ANCHOR_E,GTK_ANCHOR_EAST);
-#elif __powerpc64__
-CheckEnum("GTK_ANCHOR_CENTER",GTK_ANCHOR_CENTER,0);
-CheckEnum("GTK_ANCHOR_NORTH",GTK_ANCHOR_NORTH,(0) + 1);
-CheckEnum("GTK_ANCHOR_NORTH_WEST",GTK_ANCHOR_NORTH_WEST,((0) + 1) + 1);
-CheckEnum("GTK_ANCHOR_NORTH_EAST",GTK_ANCHOR_NORTH_EAST,(((0) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH",GTK_ANCHOR_SOUTH,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH_WEST",GTK_ANCHOR_SOUTH_WEST,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH_EAST",GTK_ANCHOR_SOUTH_EAST,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_WEST",GTK_ANCHOR_WEST,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_EAST",GTK_ANCHOR_EAST,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_N",GTK_ANCHOR_N,GTK_ANCHOR_NORTH);
-CheckEnum("GTK_ANCHOR_NW",GTK_ANCHOR_NW,GTK_ANCHOR_NORTH_WEST);
-CheckEnum("GTK_ANCHOR_NE",GTK_ANCHOR_NE,GTK_ANCHOR_NORTH_EAST);
-CheckEnum("GTK_ANCHOR_S",GTK_ANCHOR_S,GTK_ANCHOR_SOUTH);
-CheckEnum("GTK_ANCHOR_SW",GTK_ANCHOR_SW,GTK_ANCHOR_SOUTH_WEST);
-CheckEnum("GTK_ANCHOR_SE",GTK_ANCHOR_SE,GTK_ANCHOR_SOUTH_EAST);
-CheckEnum("GTK_ANCHOR_W",GTK_ANCHOR_W,GTK_ANCHOR_WEST);
-CheckEnum("GTK_ANCHOR_E",GTK_ANCHOR_E,GTK_ANCHOR_EAST);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_ANCHOR_CENTER",GTK_ANCHOR_CENTER,0);
-CheckEnum("GTK_ANCHOR_NORTH",GTK_ANCHOR_NORTH,(0) + 1);
-CheckEnum("GTK_ANCHOR_NORTH_WEST",GTK_ANCHOR_NORTH_WEST,((0) + 1) + 1);
-CheckEnum("GTK_ANCHOR_NORTH_EAST",GTK_ANCHOR_NORTH_EAST,(((0) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH",GTK_ANCHOR_SOUTH,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH_WEST",GTK_ANCHOR_SOUTH_WEST,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH_EAST",GTK_ANCHOR_SOUTH_EAST,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_WEST",GTK_ANCHOR_WEST,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_EAST",GTK_ANCHOR_EAST,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_N",GTK_ANCHOR_N,GTK_ANCHOR_NORTH);
-CheckEnum("GTK_ANCHOR_NW",GTK_ANCHOR_NW,GTK_ANCHOR_NORTH_WEST);
-CheckEnum("GTK_ANCHOR_NE",GTK_ANCHOR_NE,GTK_ANCHOR_NORTH_EAST);
-CheckEnum("GTK_ANCHOR_S",GTK_ANCHOR_S,GTK_ANCHOR_SOUTH);
-CheckEnum("GTK_ANCHOR_SW",GTK_ANCHOR_SW,GTK_ANCHOR_SOUTH_WEST);
-CheckEnum("GTK_ANCHOR_SE",GTK_ANCHOR_SE,GTK_ANCHOR_SOUTH_EAST);
-CheckEnum("GTK_ANCHOR_W",GTK_ANCHOR_W,GTK_ANCHOR_WEST);
-CheckEnum("GTK_ANCHOR_E",GTK_ANCHOR_E,GTK_ANCHOR_EAST);
-#elif __s390x__
-CheckEnum("GTK_ANCHOR_CENTER",GTK_ANCHOR_CENTER,0);
-CheckEnum("GTK_ANCHOR_NORTH",GTK_ANCHOR_NORTH,(0) + 1);
-CheckEnum("GTK_ANCHOR_NORTH_WEST",GTK_ANCHOR_NORTH_WEST,((0) + 1) + 1);
-CheckEnum("GTK_ANCHOR_NORTH_EAST",GTK_ANCHOR_NORTH_EAST,(((0) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH",GTK_ANCHOR_SOUTH,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH_WEST",GTK_ANCHOR_SOUTH_WEST,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_SOUTH_EAST",GTK_ANCHOR_SOUTH_EAST,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_WEST",GTK_ANCHOR_WEST,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_EAST",GTK_ANCHOR_EAST,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_ANCHOR_N",GTK_ANCHOR_N,GTK_ANCHOR_NORTH);
-CheckEnum("GTK_ANCHOR_NW",GTK_ANCHOR_NW,GTK_ANCHOR_NORTH_WEST);
-CheckEnum("GTK_ANCHOR_NE",GTK_ANCHOR_NE,GTK_ANCHOR_NORTH_EAST);
-CheckEnum("GTK_ANCHOR_S",GTK_ANCHOR_S,GTK_ANCHOR_SOUTH);
-CheckEnum("GTK_ANCHOR_SW",GTK_ANCHOR_SW,GTK_ANCHOR_SOUTH_WEST);
-CheckEnum("GTK_ANCHOR_SE",GTK_ANCHOR_SE,GTK_ANCHOR_SOUTH_EAST);
-CheckEnum("GTK_ANCHOR_W",GTK_ANCHOR_W,GTK_ANCHOR_WEST);
-CheckEnum("GTK_ANCHOR_E",GTK_ANCHOR_E,GTK_ANCHOR_EAST);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14531,0);
 Msg("Find size of anonymous-gtk.h.types-16 (14531)\n");
@@ -53720,22 +50400,6 @@ CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
 CheckEnum("GTK_IM_STATUS_NOTHING",GTK_IM_STATUS_NOTHING,0);
 CheckEnum("GTK_IM_STATUS_CALLBACK",GTK_IM_STATUS_CALLBACK,(0) + 1);
 CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_IM_STATUS_NOTHING",GTK_IM_STATUS_NOTHING,0);
-CheckEnum("GTK_IM_STATUS_CALLBACK",GTK_IM_STATUS_CALLBACK,(0) + 1);
-CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("GTK_IM_STATUS_NOTHING",GTK_IM_STATUS_NOTHING,0);
-CheckEnum("GTK_IM_STATUS_CALLBACK",GTK_IM_STATUS_CALLBACK,(0) + 1);
-CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_IM_STATUS_NOTHING",GTK_IM_STATUS_NOTHING,0);
-CheckEnum("GTK_IM_STATUS_CALLBACK",GTK_IM_STATUS_CALLBACK,(0) + 1);
-CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
-#elif __s390x__
-CheckEnum("GTK_IM_STATUS_NOTHING",GTK_IM_STATUS_NOTHING,0);
-CheckEnum("GTK_IM_STATUS_CALLBACK",GTK_IM_STATUS_CALLBACK,(0) + 1);
-CheckEnum("GTK_IM_STATUS_NONE",GTK_IM_STATUS_NONE,((0) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14533,0);
 Msg("Find size of anonymous-gtk.h.types-18 (14533)\n");
@@ -53767,18 +50431,6 @@ CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILEN
 CheckEnum("GTK_FILE_CHOOSER_ERROR_NONEXISTENT",GTK_FILE_CHOOSER_ERROR_NONEXISTENT,0);
 CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILENAME,(0) + 1);
 #elif __ia64__
-CheckEnum("GTK_FILE_CHOOSER_ERROR_NONEXISTENT",GTK_FILE_CHOOSER_ERROR_NONEXISTENT,0);
-CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILENAME,(0) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_FILE_CHOOSER_ERROR_NONEXISTENT",GTK_FILE_CHOOSER_ERROR_NONEXISTENT,0);
-CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILENAME,(0) + 1);
-#elif __powerpc64__
-CheckEnum("GTK_FILE_CHOOSER_ERROR_NONEXISTENT",GTK_FILE_CHOOSER_ERROR_NONEXISTENT,0);
-CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILENAME,(0) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_FILE_CHOOSER_ERROR_NONEXISTENT",GTK_FILE_CHOOSER_ERROR_NONEXISTENT,0);
-CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILENAME,(0) + 1);
-#elif __s390x__
 CheckEnum("GTK_FILE_CHOOSER_ERROR_NONEXISTENT",GTK_FILE_CHOOSER_ERROR_NONEXISTENT,0);
 CheckEnum("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME",GTK_FILE_CHOOSER_ERROR_BAD_FILENAME,(0) + 1);
 #else
@@ -53816,26 +50468,6 @@ CheckEnum("GTK_FLOATING",GTK_FLOATING,1 << 1);
 CheckEnum("GTK_RESERVED_1",GTK_RESERVED_1,1 << 2);
 CheckEnum("GTK_RESERVED_2",GTK_RESERVED_2,1 << 3);
 #elif __ia64__
-CheckEnum("GTK_IN_DESTRUCTION",GTK_IN_DESTRUCTION,1 << 0);
-CheckEnum("GTK_FLOATING",GTK_FLOATING,1 << 1);
-CheckEnum("GTK_RESERVED_1",GTK_RESERVED_1,1 << 2);
-CheckEnum("GTK_RESERVED_2",GTK_RESERVED_2,1 << 3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_IN_DESTRUCTION",GTK_IN_DESTRUCTION,1 << 0);
-CheckEnum("GTK_FLOATING",GTK_FLOATING,1 << 1);
-CheckEnum("GTK_RESERVED_1",GTK_RESERVED_1,1 << 2);
-CheckEnum("GTK_RESERVED_2",GTK_RESERVED_2,1 << 3);
-#elif __powerpc64__
-CheckEnum("GTK_IN_DESTRUCTION",GTK_IN_DESTRUCTION,1 << 0);
-CheckEnum("GTK_FLOATING",GTK_FLOATING,1 << 1);
-CheckEnum("GTK_RESERVED_1",GTK_RESERVED_1,1 << 2);
-CheckEnum("GTK_RESERVED_2",GTK_RESERVED_2,1 << 3);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_IN_DESTRUCTION",GTK_IN_DESTRUCTION,1 << 0);
-CheckEnum("GTK_FLOATING",GTK_FLOATING,1 << 1);
-CheckEnum("GTK_RESERVED_1",GTK_RESERVED_1,1 << 2);
-CheckEnum("GTK_RESERVED_2",GTK_RESERVED_2,1 << 3);
-#elif __s390x__
 CheckEnum("GTK_IN_DESTRUCTION",GTK_IN_DESTRUCTION,1 << 0);
 CheckEnum("GTK_FLOATING",GTK_FLOATING,1 << 1);
 CheckEnum("GTK_RESERVED_1",GTK_RESERVED_1,1 << 2);
@@ -53981,162 +50613,6 @@ CheckEnum("GTK_RC_TOKEN_STOCK",GTK_RC_TOKEN_STOCK,((((((((((((((((((((((((((((((
 CheckEnum("GTK_RC_TOKEN_LTR",GTK_RC_TOKEN_LTR,(((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("GTK_RC_TOKEN_RTL",GTK_RC_TOKEN_RTL,((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("GTK_RC_TOKEN_LAST",GTK_RC_TOKEN_LAST,(((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_RC_TOKEN_INVALID",GTK_RC_TOKEN_INVALID,G_TOKEN_LAST);
-CheckEnum("GTK_RC_TOKEN_INCLUDE",GTK_RC_TOKEN_INCLUDE,(G_TOKEN_LAST) + 1);
-CheckEnum("GTK_RC_TOKEN_NORMAL",GTK_RC_TOKEN_NORMAL,((G_TOKEN_LAST) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_ACTIVE",GTK_RC_TOKEN_ACTIVE,(((G_TOKEN_LAST) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_PRELIGHT",GTK_RC_TOKEN_PRELIGHT,((((G_TOKEN_LAST) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_SELECTED",GTK_RC_TOKEN_SELECTED,(((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_INSENSITIVE",GTK_RC_TOKEN_INSENSITIVE,((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FG",GTK_RC_TOKEN_FG,(((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BG",GTK_RC_TOKEN_BG,((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_TEXT",GTK_RC_TOKEN_TEXT,(((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BASE",GTK_RC_TOKEN_BASE,((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_XTHICKNESS",GTK_RC_TOKEN_XTHICKNESS,(((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_YTHICKNESS",GTK_RC_TOKEN_YTHICKNESS,((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONT",GTK_RC_TOKEN_FONT,(((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONTSET",GTK_RC_TOKEN_FONTSET,((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONT_NAME",GTK_RC_TOKEN_FONT_NAME,(((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BG_PIXMAP",GTK_RC_TOKEN_BG_PIXMAP,((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_PIXMAP_PATH",GTK_RC_TOKEN_PIXMAP_PATH,(((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_STYLE",GTK_RC_TOKEN_STYLE,((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BINDING",GTK_RC_TOKEN_BINDING,(((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BIND",GTK_RC_TOKEN_BIND,((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_WIDGET",GTK_RC_TOKEN_WIDGET,(((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_WIDGET_CLASS",GTK_RC_TOKEN_WIDGET_CLASS,((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_CLASS",GTK_RC_TOKEN_CLASS,(((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LOWEST",GTK_RC_TOKEN_LOWEST,((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_GTK",GTK_RC_TOKEN_GTK,(((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_APPLICATION",GTK_RC_TOKEN_APPLICATION,((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_THEME",GTK_RC_TOKEN_THEME,(((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_RC",GTK_RC_TOKEN_RC,((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_HIGHEST",GTK_RC_TOKEN_HIGHEST,(((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_ENGINE",GTK_RC_TOKEN_ENGINE,((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_MODULE_PATH",GTK_RC_TOKEN_MODULE_PATH,(((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_IM_MODULE_PATH",GTK_RC_TOKEN_IM_MODULE_PATH,((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_IM_MODULE_FILE",GTK_RC_TOKEN_IM_MODULE_FILE,(((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_STOCK",GTK_RC_TOKEN_STOCK,((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LTR",GTK_RC_TOKEN_LTR,(((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_RTL",GTK_RC_TOKEN_RTL,((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LAST",GTK_RC_TOKEN_LAST,(((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("GTK_RC_TOKEN_INVALID",GTK_RC_TOKEN_INVALID,G_TOKEN_LAST);
-CheckEnum("GTK_RC_TOKEN_INCLUDE",GTK_RC_TOKEN_INCLUDE,(G_TOKEN_LAST) + 1);
-CheckEnum("GTK_RC_TOKEN_NORMAL",GTK_RC_TOKEN_NORMAL,((G_TOKEN_LAST) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_ACTIVE",GTK_RC_TOKEN_ACTIVE,(((G_TOKEN_LAST) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_PRELIGHT",GTK_RC_TOKEN_PRELIGHT,((((G_TOKEN_LAST) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_SELECTED",GTK_RC_TOKEN_SELECTED,(((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_INSENSITIVE",GTK_RC_TOKEN_INSENSITIVE,((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FG",GTK_RC_TOKEN_FG,(((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BG",GTK_RC_TOKEN_BG,((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_TEXT",GTK_RC_TOKEN_TEXT,(((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BASE",GTK_RC_TOKEN_BASE,((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_XTHICKNESS",GTK_RC_TOKEN_XTHICKNESS,(((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_YTHICKNESS",GTK_RC_TOKEN_YTHICKNESS,((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONT",GTK_RC_TOKEN_FONT,(((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONTSET",GTK_RC_TOKEN_FONTSET,((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONT_NAME",GTK_RC_TOKEN_FONT_NAME,(((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BG_PIXMAP",GTK_RC_TOKEN_BG_PIXMAP,((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_PIXMAP_PATH",GTK_RC_TOKEN_PIXMAP_PATH,(((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_STYLE",GTK_RC_TOKEN_STYLE,((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BINDING",GTK_RC_TOKEN_BINDING,(((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BIND",GTK_RC_TOKEN_BIND,((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_WIDGET",GTK_RC_TOKEN_WIDGET,(((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_WIDGET_CLASS",GTK_RC_TOKEN_WIDGET_CLASS,((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_CLASS",GTK_RC_TOKEN_CLASS,(((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LOWEST",GTK_RC_TOKEN_LOWEST,((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_GTK",GTK_RC_TOKEN_GTK,(((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_APPLICATION",GTK_RC_TOKEN_APPLICATION,((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_THEME",GTK_RC_TOKEN_THEME,(((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_RC",GTK_RC_TOKEN_RC,((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_HIGHEST",GTK_RC_TOKEN_HIGHEST,(((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_ENGINE",GTK_RC_TOKEN_ENGINE,((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_MODULE_PATH",GTK_RC_TOKEN_MODULE_PATH,(((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_IM_MODULE_PATH",GTK_RC_TOKEN_IM_MODULE_PATH,((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_IM_MODULE_FILE",GTK_RC_TOKEN_IM_MODULE_FILE,(((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_STOCK",GTK_RC_TOKEN_STOCK,((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LTR",GTK_RC_TOKEN_LTR,(((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_RTL",GTK_RC_TOKEN_RTL,((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LAST",GTK_RC_TOKEN_LAST,(((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_RC_TOKEN_INVALID",GTK_RC_TOKEN_INVALID,G_TOKEN_LAST);
-CheckEnum("GTK_RC_TOKEN_INCLUDE",GTK_RC_TOKEN_INCLUDE,(G_TOKEN_LAST) + 1);
-CheckEnum("GTK_RC_TOKEN_NORMAL",GTK_RC_TOKEN_NORMAL,((G_TOKEN_LAST) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_ACTIVE",GTK_RC_TOKEN_ACTIVE,(((G_TOKEN_LAST) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_PRELIGHT",GTK_RC_TOKEN_PRELIGHT,((((G_TOKEN_LAST) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_SELECTED",GTK_RC_TOKEN_SELECTED,(((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_INSENSITIVE",GTK_RC_TOKEN_INSENSITIVE,((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FG",GTK_RC_TOKEN_FG,(((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BG",GTK_RC_TOKEN_BG,((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_TEXT",GTK_RC_TOKEN_TEXT,(((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BASE",GTK_RC_TOKEN_BASE,((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_XTHICKNESS",GTK_RC_TOKEN_XTHICKNESS,(((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_YTHICKNESS",GTK_RC_TOKEN_YTHICKNESS,((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONT",GTK_RC_TOKEN_FONT,(((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONTSET",GTK_RC_TOKEN_FONTSET,((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONT_NAME",GTK_RC_TOKEN_FONT_NAME,(((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BG_PIXMAP",GTK_RC_TOKEN_BG_PIXMAP,((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_PIXMAP_PATH",GTK_RC_TOKEN_PIXMAP_PATH,(((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_STYLE",GTK_RC_TOKEN_STYLE,((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BINDING",GTK_RC_TOKEN_BINDING,(((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BIND",GTK_RC_TOKEN_BIND,((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_WIDGET",GTK_RC_TOKEN_WIDGET,(((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_WIDGET_CLASS",GTK_RC_TOKEN_WIDGET_CLASS,((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_CLASS",GTK_RC_TOKEN_CLASS,(((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LOWEST",GTK_RC_TOKEN_LOWEST,((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_GTK",GTK_RC_TOKEN_GTK,(((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_APPLICATION",GTK_RC_TOKEN_APPLICATION,((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_THEME",GTK_RC_TOKEN_THEME,(((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_RC",GTK_RC_TOKEN_RC,((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_HIGHEST",GTK_RC_TOKEN_HIGHEST,(((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_ENGINE",GTK_RC_TOKEN_ENGINE,((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_MODULE_PATH",GTK_RC_TOKEN_MODULE_PATH,(((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_IM_MODULE_PATH",GTK_RC_TOKEN_IM_MODULE_PATH,((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_IM_MODULE_FILE",GTK_RC_TOKEN_IM_MODULE_FILE,(((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_STOCK",GTK_RC_TOKEN_STOCK,((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LTR",GTK_RC_TOKEN_LTR,(((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_RTL",GTK_RC_TOKEN_RTL,((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LAST",GTK_RC_TOKEN_LAST,(((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __s390x__
-CheckEnum("GTK_RC_TOKEN_INVALID",GTK_RC_TOKEN_INVALID,G_TOKEN_LAST);
-CheckEnum("GTK_RC_TOKEN_INCLUDE",GTK_RC_TOKEN_INCLUDE,(G_TOKEN_LAST) + 1);
-CheckEnum("GTK_RC_TOKEN_NORMAL",GTK_RC_TOKEN_NORMAL,((G_TOKEN_LAST) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_ACTIVE",GTK_RC_TOKEN_ACTIVE,(((G_TOKEN_LAST) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_PRELIGHT",GTK_RC_TOKEN_PRELIGHT,((((G_TOKEN_LAST) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_SELECTED",GTK_RC_TOKEN_SELECTED,(((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_INSENSITIVE",GTK_RC_TOKEN_INSENSITIVE,((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FG",GTK_RC_TOKEN_FG,(((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BG",GTK_RC_TOKEN_BG,((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_TEXT",GTK_RC_TOKEN_TEXT,(((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BASE",GTK_RC_TOKEN_BASE,((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_XTHICKNESS",GTK_RC_TOKEN_XTHICKNESS,(((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_YTHICKNESS",GTK_RC_TOKEN_YTHICKNESS,((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONT",GTK_RC_TOKEN_FONT,(((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONTSET",GTK_RC_TOKEN_FONTSET,((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_FONT_NAME",GTK_RC_TOKEN_FONT_NAME,(((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BG_PIXMAP",GTK_RC_TOKEN_BG_PIXMAP,((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_PIXMAP_PATH",GTK_RC_TOKEN_PIXMAP_PATH,(((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_STYLE",GTK_RC_TOKEN_STYLE,((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BINDING",GTK_RC_TOKEN_BINDING,(((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_BIND",GTK_RC_TOKEN_BIND,((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_WIDGET",GTK_RC_TOKEN_WIDGET,(((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_WIDGET_CLASS",GTK_RC_TOKEN_WIDGET_CLASS,((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_CLASS",GTK_RC_TOKEN_CLASS,(((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LOWEST",GTK_RC_TOKEN_LOWEST,((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_GTK",GTK_RC_TOKEN_GTK,(((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_APPLICATION",GTK_RC_TOKEN_APPLICATION,((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_THEME",GTK_RC_TOKEN_THEME,(((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_RC",GTK_RC_TOKEN_RC,((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_HIGHEST",GTK_RC_TOKEN_HIGHEST,(((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_ENGINE",GTK_RC_TOKEN_ENGINE,((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_MODULE_PATH",GTK_RC_TOKEN_MODULE_PATH,(((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_IM_MODULE_PATH",GTK_RC_TOKEN_IM_MODULE_PATH,((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_IM_MODULE_FILE",GTK_RC_TOKEN_IM_MODULE_FILE,(((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_STOCK",GTK_RC_TOKEN_STOCK,((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LTR",GTK_RC_TOKEN_LTR,(((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_RTL",GTK_RC_TOKEN_RTL,((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("GTK_RC_TOKEN_LAST",GTK_RC_TOKEN_LAST,(((((((((((((((((((((((((((((((((((((G_TOKEN_LAST) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14539,0);
 Msg("Find size of anonymous-gtk.h.types-24 (14539)\n");
@@ -54202,86 +50678,6 @@ CheckEnum("GTK_RECEIVES_DEFAULT",GTK_RECEIVES_DEFAULT,1 << 20);
 CheckEnum("GTK_DOUBLE_BUFFERED",GTK_DOUBLE_BUFFERED,1 << 21);
 CheckEnum("GTK_NO_SHOW_ALL",GTK_NO_SHOW_ALL,1 << 22);
 #elif __ia64__
-CheckEnum("GTK_TOPLEVEL",GTK_TOPLEVEL,1 << 4);
-CheckEnum("GTK_NO_WINDOW",GTK_NO_WINDOW,1 << 5);
-CheckEnum("GTK_REALIZED",GTK_REALIZED,1 << 6);
-CheckEnum("GTK_MAPPED",GTK_MAPPED,1 << 7);
-CheckEnum("GTK_VISIBLE",GTK_VISIBLE,1 << 8);
-CheckEnum("GTK_SENSITIVE",GTK_SENSITIVE,1 << 9);
-CheckEnum("GTK_PARENT_SENSITIVE",GTK_PARENT_SENSITIVE,1 << 10);
-CheckEnum("GTK_CAN_FOCUS",GTK_CAN_FOCUS,1 << 11);
-CheckEnum("GTK_HAS_FOCUS",GTK_HAS_FOCUS,1 << 12);
-CheckEnum("GTK_CAN_DEFAULT",GTK_CAN_DEFAULT,1 << 13);
-CheckEnum("GTK_HAS_DEFAULT",GTK_HAS_DEFAULT,1 << 14);
-CheckEnum("GTK_HAS_GRAB",GTK_HAS_GRAB,1 << 15);
-CheckEnum("GTK_RC_STYLE",GTK_RC_STYLE,1 << 16);
-CheckEnum("GTK_COMPOSITE_CHILD",GTK_COMPOSITE_CHILD,1 << 17);
-CheckEnum("GTK_NO_REPARENT",GTK_NO_REPARENT,1 << 18);
-CheckEnum("GTK_APP_PAINTABLE",GTK_APP_PAINTABLE,1 << 19);
-CheckEnum("GTK_RECEIVES_DEFAULT",GTK_RECEIVES_DEFAULT,1 << 20);
-CheckEnum("GTK_DOUBLE_BUFFERED",GTK_DOUBLE_BUFFERED,1 << 21);
-CheckEnum("GTK_NO_SHOW_ALL",GTK_NO_SHOW_ALL,1 << 22);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GTK_TOPLEVEL",GTK_TOPLEVEL,1 << 4);
-CheckEnum("GTK_NO_WINDOW",GTK_NO_WINDOW,1 << 5);
-CheckEnum("GTK_REALIZED",GTK_REALIZED,1 << 6);
-CheckEnum("GTK_MAPPED",GTK_MAPPED,1 << 7);
-CheckEnum("GTK_VISIBLE",GTK_VISIBLE,1 << 8);
-CheckEnum("GTK_SENSITIVE",GTK_SENSITIVE,1 << 9);
-CheckEnum("GTK_PARENT_SENSITIVE",GTK_PARENT_SENSITIVE,1 << 10);
-CheckEnum("GTK_CAN_FOCUS",GTK_CAN_FOCUS,1 << 11);
-CheckEnum("GTK_HAS_FOCUS",GTK_HAS_FOCUS,1 << 12);
-CheckEnum("GTK_CAN_DEFAULT",GTK_CAN_DEFAULT,1 << 13);
-CheckEnum("GTK_HAS_DEFAULT",GTK_HAS_DEFAULT,1 << 14);
-CheckEnum("GTK_HAS_GRAB",GTK_HAS_GRAB,1 << 15);
-CheckEnum("GTK_RC_STYLE",GTK_RC_STYLE,1 << 16);
-CheckEnum("GTK_COMPOSITE_CHILD",GTK_COMPOSITE_CHILD,1 << 17);
-CheckEnum("GTK_NO_REPARENT",GTK_NO_REPARENT,1 << 18);
-CheckEnum("GTK_APP_PAINTABLE",GTK_APP_PAINTABLE,1 << 19);
-CheckEnum("GTK_RECEIVES_DEFAULT",GTK_RECEIVES_DEFAULT,1 << 20);
-CheckEnum("GTK_DOUBLE_BUFFERED",GTK_DOUBLE_BUFFERED,1 << 21);
-CheckEnum("GTK_NO_SHOW_ALL",GTK_NO_SHOW_ALL,1 << 22);
-#elif __powerpc64__
-CheckEnum("GTK_TOPLEVEL",GTK_TOPLEVEL,1 << 4);
-CheckEnum("GTK_NO_WINDOW",GTK_NO_WINDOW,1 << 5);
-CheckEnum("GTK_REALIZED",GTK_REALIZED,1 << 6);
-CheckEnum("GTK_MAPPED",GTK_MAPPED,1 << 7);
-CheckEnum("GTK_VISIBLE",GTK_VISIBLE,1 << 8);
-CheckEnum("GTK_SENSITIVE",GTK_SENSITIVE,1 << 9);
-CheckEnum("GTK_PARENT_SENSITIVE",GTK_PARENT_SENSITIVE,1 << 10);
-CheckEnum("GTK_CAN_FOCUS",GTK_CAN_FOCUS,1 << 11);
-CheckEnum("GTK_HAS_FOCUS",GTK_HAS_FOCUS,1 << 12);
-CheckEnum("GTK_CAN_DEFAULT",GTK_CAN_DEFAULT,1 << 13);
-CheckEnum("GTK_HAS_DEFAULT",GTK_HAS_DEFAULT,1 << 14);
-CheckEnum("GTK_HAS_GRAB",GTK_HAS_GRAB,1 << 15);
-CheckEnum("GTK_RC_STYLE",GTK_RC_STYLE,1 << 16);
-CheckEnum("GTK_COMPOSITE_CHILD",GTK_COMPOSITE_CHILD,1 << 17);
-CheckEnum("GTK_NO_REPARENT",GTK_NO_REPARENT,1 << 18);
-CheckEnum("GTK_APP_PAINTABLE",GTK_APP_PAINTABLE,1 << 19);
-CheckEnum("GTK_RECEIVES_DEFAULT",GTK_RECEIVES_DEFAULT,1 << 20);
-CheckEnum("GTK_DOUBLE_BUFFERED",GTK_DOUBLE_BUFFERED,1 << 21);
-CheckEnum("GTK_NO_SHOW_ALL",GTK_NO_SHOW_ALL,1 << 22);
-#elif __s390__ && !__s390x__
-CheckEnum("GTK_TOPLEVEL",GTK_TOPLEVEL,1 << 4);
-CheckEnum("GTK_NO_WINDOW",GTK_NO_WINDOW,1 << 5);
-CheckEnum("GTK_REALIZED",GTK_REALIZED,1 << 6);
-CheckEnum("GTK_MAPPED",GTK_MAPPED,1 << 7);
-CheckEnum("GTK_VISIBLE",GTK_VISIBLE,1 << 8);
-CheckEnum("GTK_SENSITIVE",GTK_SENSITIVE,1 << 9);
-CheckEnum("GTK_PARENT_SENSITIVE",GTK_PARENT_SENSITIVE,1 << 10);
-CheckEnum("GTK_CAN_FOCUS",GTK_CAN_FOCUS,1 << 11);
-CheckEnum("GTK_HAS_FOCUS",GTK_HAS_FOCUS,1 << 12);
-CheckEnum("GTK_CAN_DEFAULT",GTK_CAN_DEFAULT,1 << 13);
-CheckEnum("GTK_HAS_DEFAULT",GTK_HAS_DEFAULT,1 << 14);
-CheckEnum("GTK_HAS_GRAB",GTK_HAS_GRAB,1 << 15);
-CheckEnum("GTK_RC_STYLE",GTK_RC_STYLE,1 << 16);
-CheckEnum("GTK_COMPOSITE_CHILD",GTK_COMPOSITE_CHILD,1 << 17);
-CheckEnum("GTK_NO_REPARENT",GTK_NO_REPARENT,1 << 18);
-CheckEnum("GTK_APP_PAINTABLE",GTK_APP_PAINTABLE,1 << 19);
-CheckEnum("GTK_RECEIVES_DEFAULT",GTK_RECEIVES_DEFAULT,1 << 20);
-CheckEnum("GTK_DOUBLE_BUFFERED",GTK_DOUBLE_BUFFERED,1 << 21);
-CheckEnum("GTK_NO_SHOW_ALL",GTK_NO_SHOW_ALL,1 << 22);
-#elif __s390x__
 CheckEnum("GTK_TOPLEVEL",GTK_TOPLEVEL,1 << 4);
 CheckEnum("GTK_NO_WINDOW",GTK_NO_WINDOW,1 << 5);
 CheckEnum("GTK_REALIZED",GTK_REALIZED,1 << 6);

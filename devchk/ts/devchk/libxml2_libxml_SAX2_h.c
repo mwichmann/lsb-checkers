@@ -481,10 +481,6 @@ Msg("Find size of _xmlSAXHandler (14740)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14741,0);
 Msg("Find size of fptr_SAX2_467 (14741)\n");
@@ -569,10 +565,6 @@ Msg("Find size of hasExternalSubsetSAXFunc (14745)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14746,0);
 Msg("Find size of fptr_SAX2_429 (14746)\n");
@@ -600,10 +592,6 @@ Msg("Find size of resolveEntitySAXFunc (14747)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14748,0);
 Msg("Find size of fptr_SAX2_441 (14748)\n");
@@ -631,10 +619,6 @@ Msg("Find size of getEntitySAXFunc (14749)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14750,0);
 Msg("Find size of fptr_SAX2_162 (14750)\n");
@@ -790,10 +774,6 @@ Msg("Find size of xmlEnumerationPtr (14757)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14758,0);
 Msg("Find size of fptr_SAX2_263 (14758)\n");
@@ -936,26 +916,6 @@ CheckEnum("XML_ELEMENT_CONTENT_PCDATA",XML_ELEMENT_CONTENT_PCDATA,1);
 CheckEnum("XML_ELEMENT_CONTENT_ELEMENT",XML_ELEMENT_CONTENT_ELEMENT,2);
 CheckEnum("XML_ELEMENT_CONTENT_SEQ",XML_ELEMENT_CONTENT_SEQ,3);
 CheckEnum("XML_ELEMENT_CONTENT_OR",XML_ELEMENT_CONTENT_OR,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_ELEMENT_CONTENT_PCDATA",XML_ELEMENT_CONTENT_PCDATA,1);
-CheckEnum("XML_ELEMENT_CONTENT_ELEMENT",XML_ELEMENT_CONTENT_ELEMENT,2);
-CheckEnum("XML_ELEMENT_CONTENT_SEQ",XML_ELEMENT_CONTENT_SEQ,3);
-CheckEnum("XML_ELEMENT_CONTENT_OR",XML_ELEMENT_CONTENT_OR,4);
-#elif __powerpc64__
-CheckEnum("XML_ELEMENT_CONTENT_PCDATA",XML_ELEMENT_CONTENT_PCDATA,1);
-CheckEnum("XML_ELEMENT_CONTENT_ELEMENT",XML_ELEMENT_CONTENT_ELEMENT,2);
-CheckEnum("XML_ELEMENT_CONTENT_SEQ",XML_ELEMENT_CONTENT_SEQ,3);
-CheckEnum("XML_ELEMENT_CONTENT_OR",XML_ELEMENT_CONTENT_OR,4);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_ELEMENT_CONTENT_PCDATA",XML_ELEMENT_CONTENT_PCDATA,1);
-CheckEnum("XML_ELEMENT_CONTENT_ELEMENT",XML_ELEMENT_CONTENT_ELEMENT,2);
-CheckEnum("XML_ELEMENT_CONTENT_SEQ",XML_ELEMENT_CONTENT_SEQ,3);
-CheckEnum("XML_ELEMENT_CONTENT_OR",XML_ELEMENT_CONTENT_OR,4);
-#elif __s390x__
-CheckEnum("XML_ELEMENT_CONTENT_PCDATA",XML_ELEMENT_CONTENT_PCDATA,1);
-CheckEnum("XML_ELEMENT_CONTENT_ELEMENT",XML_ELEMENT_CONTENT_ELEMENT,2);
-CheckEnum("XML_ELEMENT_CONTENT_SEQ",XML_ELEMENT_CONTENT_SEQ,3);
-CheckEnum("XML_ELEMENT_CONTENT_OR",XML_ELEMENT_CONTENT_OR,4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14761,0);
 Msg("Find size of anon-libxml2/libxml/SAX2.h-254 (14761)\n");
@@ -991,26 +951,6 @@ CheckEnum("XML_ELEMENT_CONTENT_OPT",XML_ELEMENT_CONTENT_OPT,2);
 CheckEnum("XML_ELEMENT_CONTENT_MULT",XML_ELEMENT_CONTENT_MULT,3);
 CheckEnum("XML_ELEMENT_CONTENT_PLUS",XML_ELEMENT_CONTENT_PLUS,4);
 #elif __ia64__
-CheckEnum("XML_ELEMENT_CONTENT_ONCE",XML_ELEMENT_CONTENT_ONCE,1);
-CheckEnum("XML_ELEMENT_CONTENT_OPT",XML_ELEMENT_CONTENT_OPT,2);
-CheckEnum("XML_ELEMENT_CONTENT_MULT",XML_ELEMENT_CONTENT_MULT,3);
-CheckEnum("XML_ELEMENT_CONTENT_PLUS",XML_ELEMENT_CONTENT_PLUS,4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_ELEMENT_CONTENT_ONCE",XML_ELEMENT_CONTENT_ONCE,1);
-CheckEnum("XML_ELEMENT_CONTENT_OPT",XML_ELEMENT_CONTENT_OPT,2);
-CheckEnum("XML_ELEMENT_CONTENT_MULT",XML_ELEMENT_CONTENT_MULT,3);
-CheckEnum("XML_ELEMENT_CONTENT_PLUS",XML_ELEMENT_CONTENT_PLUS,4);
-#elif __powerpc64__
-CheckEnum("XML_ELEMENT_CONTENT_ONCE",XML_ELEMENT_CONTENT_ONCE,1);
-CheckEnum("XML_ELEMENT_CONTENT_OPT",XML_ELEMENT_CONTENT_OPT,2);
-CheckEnum("XML_ELEMENT_CONTENT_MULT",XML_ELEMENT_CONTENT_MULT,3);
-CheckEnum("XML_ELEMENT_CONTENT_PLUS",XML_ELEMENT_CONTENT_PLUS,4);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_ELEMENT_CONTENT_ONCE",XML_ELEMENT_CONTENT_ONCE,1);
-CheckEnum("XML_ELEMENT_CONTENT_OPT",XML_ELEMENT_CONTENT_OPT,2);
-CheckEnum("XML_ELEMENT_CONTENT_MULT",XML_ELEMENT_CONTENT_MULT,3);
-CheckEnum("XML_ELEMENT_CONTENT_PLUS",XML_ELEMENT_CONTENT_PLUS,4);
-#elif __s390x__
 CheckEnum("XML_ELEMENT_CONTENT_ONCE",XML_ELEMENT_CONTENT_ONCE,1);
 CheckEnum("XML_ELEMENT_CONTENT_OPT",XML_ELEMENT_CONTENT_OPT,2);
 CheckEnum("XML_ELEMENT_CONTENT_MULT",XML_ELEMENT_CONTENT_MULT,3);
@@ -1118,10 +1058,6 @@ Msg("Find size of xmlElementContentPtr (14768)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14769,0);
 Msg("Find size of fptr_SAX2_529 (14769)\n");
@@ -1149,10 +1085,6 @@ Msg("Find size of elementDeclSAXFunc (14770)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14771,0);
 Msg("Find size of fptr_SAX2_22 (14771)\n");
@@ -1241,10 +1173,6 @@ Msg("Find size of _xmlSAXLocator (14773)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14774,0);
 Msg("Find size of fptr_SAX2_415 (14774)\n");
@@ -1310,10 +1238,6 @@ Msg("Find size of xmlSAXLocatorPtr (14777)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14778,0);
 Msg("Find size of fptr_SAX2_114 (14778)\n");
@@ -1379,10 +1303,6 @@ Msg("Find size of endDocumentSAXFunc (14781)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14782,0);
 Msg("Find size of fptr_SAX2_79 (14782)\n");
@@ -1410,10 +1330,6 @@ Msg("Find size of startElementSAXFunc (14783)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14784,0);
 Msg("Find size of fptr_SAX2_131 (14784)\n");
@@ -1460,10 +1376,6 @@ Msg("Find size of referenceSAXFunc (14786)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14787,0);
 Msg("Find size of fptr_SAX2_204 (14787)\n");
@@ -1510,10 +1422,6 @@ Msg("Find size of ignorableWhitespaceSAXFunc (14789)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14790,0);
 Msg("Find size of fptr_SAX2_414 (14790)\n");
@@ -1674,10 +1582,6 @@ Msg("Find size of externalSubsetSAXFunc (14798)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14799,0);
 Msg("Find size of fptr_SAX2_470 (14799)\n");

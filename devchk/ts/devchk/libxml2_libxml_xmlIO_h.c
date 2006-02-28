@@ -29,10 +29,6 @@ printf("Checking data structures in libxml2/libxml/xmlIO.h\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14804,0);
 Msg("Find size of fptr_xmlIO_546 (14804)\n");
@@ -60,10 +56,6 @@ Msg("Find size of xmlOutputMatchCallback (14805)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14806,0);
 Msg("Find size of fptr_xmlIO_472 (14806)\n");
@@ -1409,10 +1401,6 @@ Msg("Find size of _xmlParserNodeInfo (14813)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14814,0);
 Msg("Find size of const _xmlNode (14814)\n");
@@ -1421,10 +1409,6 @@ Msg("Find size of const _xmlNode (14814)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14815,0);
 Msg("Find size of const _xmlNode * (14815)\n");
@@ -1763,18 +1747,6 @@ Msg("Missing member data for _xmlValidState on x86-64\n");
 #elif __ia64__
 CheckTypeSize(struct _xmlValidState,0, 14822, 3)
 Msg("Missing member data for _xmlValidState on IA64\n");
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _xmlValidState,0, 14822, 6)
-Msg("Missing member data for _xmlValidState on PPC32\n");
-#elif __powerpc64__
-CheckTypeSize(struct _xmlValidState,0, 14822, 9)
-Msg("Missing member data for _xmlValidState on PPC64\n");
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _xmlValidState,0, 14822, 10)
-Msg("Missing member data for _xmlValidState on S390\n");
-#elif __s390x__
-CheckTypeSize(struct _xmlValidState,0, 14822, 12)
-Msg("Missing member data for _xmlValidState on S390X\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14822,0);
 Msg("Find size of _xmlValidState (14822)\n");
@@ -1786,14 +1758,6 @@ CheckTypeSize(xmlValidState,0, 14823, 2)
 CheckTypeSize(xmlValidState,0, 14823, 11)
 #elif __ia64__
 CheckTypeSize(xmlValidState,0, 14823, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlValidState,0, 14823, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlValidState,0, 14823, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlValidState,0, 14823, 10)
-#elif __s390x__
-CheckTypeSize(xmlValidState,0, 14823, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14823,0);
 Msg("Find size of xmlValidState (14823)\n");
@@ -1894,82 +1858,6 @@ CheckEnum("XML_PARSER_SYSTEM_LITERAL",XML_PARSER_SYSTEM_LITERAL,13);
 CheckEnum("XML_PARSER_EPILOG",XML_PARSER_EPILOG,14);
 CheckEnum("XML_PARSER_IGNORE",XML_PARSER_IGNORE,15);
 CheckEnum("XML_PARSER_PUBLIC_LITERAL",XML_PARSER_PUBLIC_LITERAL,16);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_PARSER_EOF",XML_PARSER_EOF,-1);
-CheckEnum("XML_PARSER_START",XML_PARSER_START,0);
-CheckEnum("XML_PARSER_MISC",XML_PARSER_MISC,1);
-CheckEnum("XML_PARSER_PI",XML_PARSER_PI,2);
-CheckEnum("XML_PARSER_DTD",XML_PARSER_DTD,3);
-CheckEnum("XML_PARSER_PROLOG",XML_PARSER_PROLOG,4);
-CheckEnum("XML_PARSER_COMMENT",XML_PARSER_COMMENT,5);
-CheckEnum("XML_PARSER_START_TAG",XML_PARSER_START_TAG,6);
-CheckEnum("XML_PARSER_CONTENT",XML_PARSER_CONTENT,7);
-CheckEnum("XML_PARSER_CDATA_SECTION",XML_PARSER_CDATA_SECTION,8);
-CheckEnum("XML_PARSER_END_TAG",XML_PARSER_END_TAG,9);
-CheckEnum("XML_PARSER_ENTITY_DECL",XML_PARSER_ENTITY_DECL,10);
-CheckEnum("XML_PARSER_ENTITY_VALUE",XML_PARSER_ENTITY_VALUE,11);
-CheckEnum("XML_PARSER_ATTRIBUTE_VALUE",XML_PARSER_ATTRIBUTE_VALUE,12);
-CheckEnum("XML_PARSER_SYSTEM_LITERAL",XML_PARSER_SYSTEM_LITERAL,13);
-CheckEnum("XML_PARSER_EPILOG",XML_PARSER_EPILOG,14);
-CheckEnum("XML_PARSER_IGNORE",XML_PARSER_IGNORE,15);
-CheckEnum("XML_PARSER_PUBLIC_LITERAL",XML_PARSER_PUBLIC_LITERAL,16);
-#elif __powerpc64__
-CheckEnum("XML_PARSER_EOF",XML_PARSER_EOF,-1);
-CheckEnum("XML_PARSER_START",XML_PARSER_START,0);
-CheckEnum("XML_PARSER_MISC",XML_PARSER_MISC,1);
-CheckEnum("XML_PARSER_PI",XML_PARSER_PI,2);
-CheckEnum("XML_PARSER_DTD",XML_PARSER_DTD,3);
-CheckEnum("XML_PARSER_PROLOG",XML_PARSER_PROLOG,4);
-CheckEnum("XML_PARSER_COMMENT",XML_PARSER_COMMENT,5);
-CheckEnum("XML_PARSER_START_TAG",XML_PARSER_START_TAG,6);
-CheckEnum("XML_PARSER_CONTENT",XML_PARSER_CONTENT,7);
-CheckEnum("XML_PARSER_CDATA_SECTION",XML_PARSER_CDATA_SECTION,8);
-CheckEnum("XML_PARSER_END_TAG",XML_PARSER_END_TAG,9);
-CheckEnum("XML_PARSER_ENTITY_DECL",XML_PARSER_ENTITY_DECL,10);
-CheckEnum("XML_PARSER_ENTITY_VALUE",XML_PARSER_ENTITY_VALUE,11);
-CheckEnum("XML_PARSER_ATTRIBUTE_VALUE",XML_PARSER_ATTRIBUTE_VALUE,12);
-CheckEnum("XML_PARSER_SYSTEM_LITERAL",XML_PARSER_SYSTEM_LITERAL,13);
-CheckEnum("XML_PARSER_EPILOG",XML_PARSER_EPILOG,14);
-CheckEnum("XML_PARSER_IGNORE",XML_PARSER_IGNORE,15);
-CheckEnum("XML_PARSER_PUBLIC_LITERAL",XML_PARSER_PUBLIC_LITERAL,16);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_PARSER_EOF",XML_PARSER_EOF,-1);
-CheckEnum("XML_PARSER_START",XML_PARSER_START,0);
-CheckEnum("XML_PARSER_MISC",XML_PARSER_MISC,1);
-CheckEnum("XML_PARSER_PI",XML_PARSER_PI,2);
-CheckEnum("XML_PARSER_DTD",XML_PARSER_DTD,3);
-CheckEnum("XML_PARSER_PROLOG",XML_PARSER_PROLOG,4);
-CheckEnum("XML_PARSER_COMMENT",XML_PARSER_COMMENT,5);
-CheckEnum("XML_PARSER_START_TAG",XML_PARSER_START_TAG,6);
-CheckEnum("XML_PARSER_CONTENT",XML_PARSER_CONTENT,7);
-CheckEnum("XML_PARSER_CDATA_SECTION",XML_PARSER_CDATA_SECTION,8);
-CheckEnum("XML_PARSER_END_TAG",XML_PARSER_END_TAG,9);
-CheckEnum("XML_PARSER_ENTITY_DECL",XML_PARSER_ENTITY_DECL,10);
-CheckEnum("XML_PARSER_ENTITY_VALUE",XML_PARSER_ENTITY_VALUE,11);
-CheckEnum("XML_PARSER_ATTRIBUTE_VALUE",XML_PARSER_ATTRIBUTE_VALUE,12);
-CheckEnum("XML_PARSER_SYSTEM_LITERAL",XML_PARSER_SYSTEM_LITERAL,13);
-CheckEnum("XML_PARSER_EPILOG",XML_PARSER_EPILOG,14);
-CheckEnum("XML_PARSER_IGNORE",XML_PARSER_IGNORE,15);
-CheckEnum("XML_PARSER_PUBLIC_LITERAL",XML_PARSER_PUBLIC_LITERAL,16);
-#elif __s390x__
-CheckEnum("XML_PARSER_EOF",XML_PARSER_EOF,-1);
-CheckEnum("XML_PARSER_START",XML_PARSER_START,0);
-CheckEnum("XML_PARSER_MISC",XML_PARSER_MISC,1);
-CheckEnum("XML_PARSER_PI",XML_PARSER_PI,2);
-CheckEnum("XML_PARSER_DTD",XML_PARSER_DTD,3);
-CheckEnum("XML_PARSER_PROLOG",XML_PARSER_PROLOG,4);
-CheckEnum("XML_PARSER_COMMENT",XML_PARSER_COMMENT,5);
-CheckEnum("XML_PARSER_START_TAG",XML_PARSER_START_TAG,6);
-CheckEnum("XML_PARSER_CONTENT",XML_PARSER_CONTENT,7);
-CheckEnum("XML_PARSER_CDATA_SECTION",XML_PARSER_CDATA_SECTION,8);
-CheckEnum("XML_PARSER_END_TAG",XML_PARSER_END_TAG,9);
-CheckEnum("XML_PARSER_ENTITY_DECL",XML_PARSER_ENTITY_DECL,10);
-CheckEnum("XML_PARSER_ENTITY_VALUE",XML_PARSER_ENTITY_VALUE,11);
-CheckEnum("XML_PARSER_ATTRIBUTE_VALUE",XML_PARSER_ATTRIBUTE_VALUE,12);
-CheckEnum("XML_PARSER_SYSTEM_LITERAL",XML_PARSER_SYSTEM_LITERAL,13);
-CheckEnum("XML_PARSER_EPILOG",XML_PARSER_EPILOG,14);
-CheckEnum("XML_PARSER_IGNORE",XML_PARSER_IGNORE,15);
-CheckEnum("XML_PARSER_PUBLIC_LITERAL",XML_PARSER_PUBLIC_LITERAL,16);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14826,0);
 Msg("Find size of anon-libxml2/libxml/xmlIO.h-71 (14826)\n");
@@ -2009,34 +1897,6 @@ CheckEnum("XML_PARSE_PUSH_DOM",XML_PARSE_PUSH_DOM,3);
 CheckEnum("XML_PARSE_PUSH_SAX",XML_PARSE_PUSH_SAX,4);
 CheckEnum("XML_PARSE_READER",XML_PARSE_READER,5);
 #elif __ia64__
-CheckEnum("XML_PARSE_UNKNOWN",XML_PARSE_UNKNOWN,0);
-CheckEnum("XML_PARSE_DOM",XML_PARSE_DOM,1);
-CheckEnum("XML_PARSE_SAX",XML_PARSE_SAX,2);
-CheckEnum("XML_PARSE_PUSH_DOM",XML_PARSE_PUSH_DOM,3);
-CheckEnum("XML_PARSE_PUSH_SAX",XML_PARSE_PUSH_SAX,4);
-CheckEnum("XML_PARSE_READER",XML_PARSE_READER,5);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_PARSE_UNKNOWN",XML_PARSE_UNKNOWN,0);
-CheckEnum("XML_PARSE_DOM",XML_PARSE_DOM,1);
-CheckEnum("XML_PARSE_SAX",XML_PARSE_SAX,2);
-CheckEnum("XML_PARSE_PUSH_DOM",XML_PARSE_PUSH_DOM,3);
-CheckEnum("XML_PARSE_PUSH_SAX",XML_PARSE_PUSH_SAX,4);
-CheckEnum("XML_PARSE_READER",XML_PARSE_READER,5);
-#elif __powerpc64__
-CheckEnum("XML_PARSE_UNKNOWN",XML_PARSE_UNKNOWN,0);
-CheckEnum("XML_PARSE_DOM",XML_PARSE_DOM,1);
-CheckEnum("XML_PARSE_SAX",XML_PARSE_SAX,2);
-CheckEnum("XML_PARSE_PUSH_DOM",XML_PARSE_PUSH_DOM,3);
-CheckEnum("XML_PARSE_PUSH_SAX",XML_PARSE_PUSH_SAX,4);
-CheckEnum("XML_PARSE_READER",XML_PARSE_READER,5);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_PARSE_UNKNOWN",XML_PARSE_UNKNOWN,0);
-CheckEnum("XML_PARSE_DOM",XML_PARSE_DOM,1);
-CheckEnum("XML_PARSE_SAX",XML_PARSE_SAX,2);
-CheckEnum("XML_PARSE_PUSH_DOM",XML_PARSE_PUSH_DOM,3);
-CheckEnum("XML_PARSE_PUSH_SAX",XML_PARSE_PUSH_SAX,4);
-CheckEnum("XML_PARSE_READER",XML_PARSE_READER,5);
-#elif __s390x__
 CheckEnum("XML_PARSE_UNKNOWN",XML_PARSE_UNKNOWN,0);
 CheckEnum("XML_PARSE_DOM",XML_PARSE_DOM,1);
 CheckEnum("XML_PARSE_SAX",XML_PARSE_SAX,2);

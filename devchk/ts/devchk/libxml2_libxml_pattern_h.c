@@ -34,14 +34,6 @@ CheckTypeSize(xmlStreamCtxt,0, 14897, 2)
 CheckTypeSize(xmlStreamCtxt,0, 14897, 11)
 #elif __ia64__
 CheckTypeSize(xmlStreamCtxt,0, 14897, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 10)
-#elif __s390x__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14897,0);
 Msg("Find size of xmlStreamCtxt (14897)\n");
@@ -91,14 +83,6 @@ CheckTypeSize(xmlPattern,0, 14901, 2)
 CheckTypeSize(xmlPattern,0, 14901, 11)
 #elif __ia64__
 CheckTypeSize(xmlPattern,0, 14901, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlPattern,0, 14901, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlPattern,0, 14901, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlPattern,0, 14901, 10)
-#elif __s390x__
-CheckTypeSize(xmlPattern,0, 14901, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14901,0);
 Msg("Find size of xmlPattern (14901)\n");
@@ -153,26 +137,6 @@ CheckEnum("XML_PATTERN_XPATH",XML_PATTERN_XPATH,1<<0);
 CheckEnum("XML_PATTERN_XSSEL",XML_PATTERN_XSSEL,1<<1);
 CheckEnum("XML_PATTERN_XSFIELD",XML_PATTERN_XSFIELD,1<<2);
 #elif __ia64__
-CheckEnum("XML_PATTERN_DEFAULT",XML_PATTERN_DEFAULT,0);
-CheckEnum("XML_PATTERN_XPATH",XML_PATTERN_XPATH,1<<0);
-CheckEnum("XML_PATTERN_XSSEL",XML_PATTERN_XSSEL,1<<1);
-CheckEnum("XML_PATTERN_XSFIELD",XML_PATTERN_XSFIELD,1<<2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_PATTERN_DEFAULT",XML_PATTERN_DEFAULT,0);
-CheckEnum("XML_PATTERN_XPATH",XML_PATTERN_XPATH,1<<0);
-CheckEnum("XML_PATTERN_XSSEL",XML_PATTERN_XSSEL,1<<1);
-CheckEnum("XML_PATTERN_XSFIELD",XML_PATTERN_XSFIELD,1<<2);
-#elif __powerpc64__
-CheckEnum("XML_PATTERN_DEFAULT",XML_PATTERN_DEFAULT,0);
-CheckEnum("XML_PATTERN_XPATH",XML_PATTERN_XPATH,1<<0);
-CheckEnum("XML_PATTERN_XSSEL",XML_PATTERN_XSSEL,1<<1);
-CheckEnum("XML_PATTERN_XSFIELD",XML_PATTERN_XSFIELD,1<<2);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_PATTERN_DEFAULT",XML_PATTERN_DEFAULT,0);
-CheckEnum("XML_PATTERN_XPATH",XML_PATTERN_XPATH,1<<0);
-CheckEnum("XML_PATTERN_XSSEL",XML_PATTERN_XSSEL,1<<1);
-CheckEnum("XML_PATTERN_XSFIELD",XML_PATTERN_XSFIELD,1<<2);
-#elif __s390x__
 CheckEnum("XML_PATTERN_DEFAULT",XML_PATTERN_DEFAULT,0);
 CheckEnum("XML_PATTERN_XPATH",XML_PATTERN_XPATH,1<<0);
 CheckEnum("XML_PATTERN_XSSEL",XML_PATTERN_XSSEL,1<<1);

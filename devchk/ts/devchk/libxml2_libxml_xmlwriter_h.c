@@ -40,14 +40,6 @@ CheckTypeSize(xmlTextWriter,0, 15077, 2)
 CheckTypeSize(xmlTextWriter,0, 15077, 11)
 #elif __ia64__
 CheckTypeSize(xmlTextWriter,0, 15077, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextWriter,0, 15077, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlTextWriter,0, 15077, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextWriter,0, 15077, 10)
-#elif __s390x__
-CheckTypeSize(xmlTextWriter,0, 15077, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15077,0);
 Msg("Find size of xmlTextWriter (15077)\n");

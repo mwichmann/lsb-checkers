@@ -37,14 +37,6 @@ CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 2)
 CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 11)
 #elif __ia64__
 CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 10)
-#elif __s390x__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15027,0);
 Msg("Find size of xmlSchemaValidCtxt (15027)\n");
@@ -94,14 +86,6 @@ CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 2)
 CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 11)
 #elif __ia64__
 CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 10)
-#elif __s390x__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15031,0);
 Msg("Find size of xmlSchemaSAXPlugStruct (15031)\n");
@@ -151,14 +135,6 @@ CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 2)
 CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 11)
 #elif __ia64__
 CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 10)
-#elif __s390x__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15035,0);
 Msg("Find size of xmlSchemaParserCtxt (15035)\n");
@@ -359,14 +335,6 @@ CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
 #elif __x86_64__
 CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
 #elif __ia64__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
-#elif __powerpc64__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
-#elif __s390x__
 CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15117,0);

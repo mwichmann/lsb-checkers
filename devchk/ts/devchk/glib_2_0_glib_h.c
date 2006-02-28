@@ -2438,10 +2438,6 @@ Msg("Find size of const guint16 (11397)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11398,0);
 Msg("Find size of const guint16 * (11398)\n");
@@ -2606,10 +2602,6 @@ Msg("Find size of gpointer (11404)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11405,0);
 Msg("Find size of fptr_glib_6 (11405)\n");
@@ -2645,26 +2637,6 @@ CheckEnum("G_THREAD_PRIORITY_NORMAL",G_THREAD_PRIORITY_NORMAL,1);
 CheckEnum("G_THREAD_PRIORITY_HIGH",G_THREAD_PRIORITY_HIGH,2);
 CheckEnum("G_THREAD_PRIORITY_URGENT",G_THREAD_PRIORITY_URGENT,3);
 #elif __ia64__
-CheckEnum("G_THREAD_PRIORITY_LOW",G_THREAD_PRIORITY_LOW,0);
-CheckEnum("G_THREAD_PRIORITY_NORMAL",G_THREAD_PRIORITY_NORMAL,1);
-CheckEnum("G_THREAD_PRIORITY_HIGH",G_THREAD_PRIORITY_HIGH,2);
-CheckEnum("G_THREAD_PRIORITY_URGENT",G_THREAD_PRIORITY_URGENT,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_THREAD_PRIORITY_LOW",G_THREAD_PRIORITY_LOW,0);
-CheckEnum("G_THREAD_PRIORITY_NORMAL",G_THREAD_PRIORITY_NORMAL,1);
-CheckEnum("G_THREAD_PRIORITY_HIGH",G_THREAD_PRIORITY_HIGH,2);
-CheckEnum("G_THREAD_PRIORITY_URGENT",G_THREAD_PRIORITY_URGENT,3);
-#elif __powerpc64__
-CheckEnum("G_THREAD_PRIORITY_LOW",G_THREAD_PRIORITY_LOW,0);
-CheckEnum("G_THREAD_PRIORITY_NORMAL",G_THREAD_PRIORITY_NORMAL,1);
-CheckEnum("G_THREAD_PRIORITY_HIGH",G_THREAD_PRIORITY_HIGH,2);
-CheckEnum("G_THREAD_PRIORITY_URGENT",G_THREAD_PRIORITY_URGENT,3);
-#elif __s390__ && !__s390x__
-CheckEnum("G_THREAD_PRIORITY_LOW",G_THREAD_PRIORITY_LOW,0);
-CheckEnum("G_THREAD_PRIORITY_NORMAL",G_THREAD_PRIORITY_NORMAL,1);
-CheckEnum("G_THREAD_PRIORITY_HIGH",G_THREAD_PRIORITY_HIGH,2);
-CheckEnum("G_THREAD_PRIORITY_URGENT",G_THREAD_PRIORITY_URGENT,3);
-#elif __s390x__
 CheckEnum("G_THREAD_PRIORITY_LOW",G_THREAD_PRIORITY_LOW,0);
 CheckEnum("G_THREAD_PRIORITY_NORMAL",G_THREAD_PRIORITY_NORMAL,1);
 CheckEnum("G_THREAD_PRIORITY_HIGH",G_THREAD_PRIORITY_HIGH,2);
@@ -2914,10 +2886,6 @@ Msg("Find size of const GError (11418)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11419,0);
 Msg("Find size of const GError * (11419)\n");
@@ -2945,10 +2913,6 @@ Msg("Find size of const gchar (11420)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11421,0);
 Msg("Find size of const gchar * (11421)\n");
@@ -2957,10 +2921,6 @@ Msg("Find size of const gchar * (11421)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11422,0);
 Msg("Find size of fptr_glib_92 (11422)\n");
@@ -2991,14 +2951,6 @@ CheckTypeSize(GMemChunk,0, 11425, 2)
 CheckTypeSize(GMemChunk,0, 11425, 11)
 #elif __ia64__
 CheckTypeSize(GMemChunk,0, 11425, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GMemChunk,0, 11425, 6)
-#elif __powerpc64__
-CheckTypeSize(GMemChunk,0, 11425, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GMemChunk,0, 11425, 10)
-#elif __s390x__
-CheckTypeSize(GMemChunk,0, 11425, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11425,0);
 Msg("Find size of GMemChunk (11425)\n");
@@ -3133,14 +3085,6 @@ CheckTypeSize(GMainLoop,0, 11432, 2)
 CheckTypeSize(GMainLoop,0, 11432, 11)
 #elif __ia64__
 CheckTypeSize(GMainLoop,0, 11432, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GMainLoop,0, 11432, 6)
-#elif __powerpc64__
-CheckTypeSize(GMainLoop,0, 11432, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GMainLoop,0, 11432, 10)
-#elif __s390x__
-CheckTypeSize(GMainLoop,0, 11432, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11432,0);
 Msg("Find size of GMainLoop (11432)\n");
@@ -3398,10 +3342,6 @@ Msg("Find size of GHook * (11437)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11438,0);
 Msg("Find size of fptr_glib_390 (11438)\n");
@@ -3467,10 +3407,6 @@ Msg("Find size of GHookList * (11441)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11442,0);
 Msg("Find size of fptr_glib_232 (11442)\n");
@@ -3501,10 +3437,6 @@ Msg("Find size of GHookFinalizeFunc (11443)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11445,0);
 Msg("Find size of const gchar * * (11445)\n");
@@ -3513,10 +3445,6 @@ Msg("Find size of const gchar * * (11445)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11446,0);
 Msg("Find size of const gchar * * * (11446)\n");
@@ -3863,14 +3791,6 @@ CheckTypeSize(GRand,0, 11462, 2)
 CheckTypeSize(GRand,0, 11462, 11)
 #elif __ia64__
 CheckTypeSize(GRand,0, 11462, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GRand,0, 11462, 6)
-#elif __powerpc64__
-CheckTypeSize(GRand,0, 11462, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GRand,0, 11462, 10)
-#elif __s390x__
-CheckTypeSize(GRand,0, 11462, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11462,0);
 Msg("Find size of GRand (11462)\n");
@@ -3917,10 +3837,6 @@ Msg("Find size of const guint32 (11464)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11465,0);
 Msg("Find size of const guint32 * (11465)\n");
@@ -3932,14 +3848,6 @@ CheckTypeSize(GDir,0, 11467, 2)
 CheckTypeSize(GDir,0, 11467, 11)
 #elif __ia64__
 CheckTypeSize(GDir,0, 11467, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GDir,0, 11467, 6)
-#elif __powerpc64__
-CheckTypeSize(GDir,0, 11467, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GDir,0, 11467, 10)
-#elif __s390x__
-CheckTypeSize(GDir,0, 11467, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11467,0);
 Msg("Find size of GDir (11467)\n");
@@ -3986,10 +3894,6 @@ Msg("Find size of const const gchar * (11469)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11470,0);
 Msg("Find size of const const gchar * * (11470)\n");
@@ -4001,14 +3905,6 @@ CheckTypeSize(GRelation,0, 11472, 2)
 CheckTypeSize(GRelation,0, 11472, 11)
 #elif __ia64__
 CheckTypeSize(GRelation,0, 11472, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GRelation,0, 11472, 6)
-#elif __powerpc64__
-CheckTypeSize(GRelation,0, 11472, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GRelation,0, 11472, 10)
-#elif __s390x__
-CheckTypeSize(GRelation,0, 11472, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11472,0);
 Msg("Find size of GRelation (11472)\n");
@@ -4039,14 +3935,6 @@ CheckTypeSize(GOptionContext,0, 11475, 2)
 CheckTypeSize(GOptionContext,0, 11475, 11)
 #elif __ia64__
 CheckTypeSize(GOptionContext,0, 11475, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GOptionContext,0, 11475, 6)
-#elif __powerpc64__
-CheckTypeSize(GOptionContext,0, 11475, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GOptionContext,0, 11475, 10)
-#elif __s390x__
-CheckTypeSize(GOptionContext,0, 11475, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11475,0);
 Msg("Find size of GOptionContext (11475)\n");
@@ -4077,14 +3965,6 @@ CheckTypeSize(GKeyFile,0, 11478, 2)
 CheckTypeSize(GKeyFile,0, 11478, 11)
 #elif __ia64__
 CheckTypeSize(GKeyFile,0, 11478, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GKeyFile,0, 11478, 6)
-#elif __powerpc64__
-CheckTypeSize(GKeyFile,0, 11478, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GKeyFile,0, 11478, 10)
-#elif __s390x__
-CheckTypeSize(GKeyFile,0, 11478, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11478,0);
 Msg("Find size of GKeyFile (11478)\n");
@@ -4112,10 +3992,6 @@ Msg("Find size of GKeyFile * (11479)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11481,0);
 Msg("Find size of GError * * (11481)\n");
@@ -4127,14 +4003,6 @@ CheckTypeSize(GPatternSpec,0, 11483, 2)
 CheckTypeSize(GPatternSpec,0, 11483, 11)
 #elif __ia64__
 CheckTypeSize(GPatternSpec,0, 11483, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GPatternSpec,0, 11483, 6)
-#elif __powerpc64__
-CheckTypeSize(GPatternSpec,0, 11483, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GPatternSpec,0, 11483, 10)
-#elif __s390x__
-CheckTypeSize(GPatternSpec,0, 11483, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11483,0);
 Msg("Find size of GPatternSpec (11483)\n");
@@ -4162,10 +4030,6 @@ Msg("Find size of GPatternSpec * (11484)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11485,0);
 Msg("Find size of gchar * * (11485)\n");
@@ -4268,10 +4132,6 @@ Msg("Find size of _GCompletion (11487)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11488,0);
 Msg("Find size of fptr_glib_171 (11488)\n");
@@ -4299,10 +4159,6 @@ Msg("Find size of GCompletionFunc (11489)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11490,0);
 Msg("Find size of fptr_glib_268 (11490)\n");
@@ -4371,14 +4227,6 @@ CheckTypeSize(GTimer,0, 11495, 2)
 CheckTypeSize(GTimer,0, 11495, 11)
 #elif __ia64__
 CheckTypeSize(GTimer,0, 11495, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTimer,0, 11495, 6)
-#elif __powerpc64__
-CheckTypeSize(GTimer,0, 11495, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTimer,0, 11495, 10)
-#elif __s390x__
-CheckTypeSize(GTimer,0, 11495, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11495,0);
 Msg("Find size of GTimer (11495)\n");
@@ -4409,14 +4257,6 @@ CheckTypeSize(GHashTable,0, 11498, 2)
 CheckTypeSize(GHashTable,0, 11498, 11)
 #elif __ia64__
 CheckTypeSize(GHashTable,0, 11498, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GHashTable,0, 11498, 6)
-#elif __powerpc64__
-CheckTypeSize(GHashTable,0, 11498, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GHashTable,0, 11498, 10)
-#elif __s390x__
-CheckTypeSize(GHashTable,0, 11498, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11498,0);
 Msg("Find size of GHashTable (11498)\n");
@@ -4463,10 +4303,6 @@ Msg("Find size of gconstpointer (11500)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11501,0);
 Msg("Find size of fptr_glib_179 (11501)\n");
@@ -4494,10 +4330,6 @@ Msg("Find size of GHashFunc (11502)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11503,0);
 Msg("Find size of fptr_glib_344 (11503)\n");
@@ -4627,10 +4459,6 @@ Msg("Find size of _GMutex * (11508)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11510,0);
 Msg("Find size of anon-glib-2.0/glib.h-71 (11510)\n");
@@ -4791,14 +4619,6 @@ CheckTypeSize(GMarkupParseContext,0, 11518, 2)
 CheckTypeSize(GMarkupParseContext,0, 11518, 11)
 #elif __ia64__
 CheckTypeSize(GMarkupParseContext,0, 11518, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GMarkupParseContext,0, 11518, 6)
-#elif __powerpc64__
-CheckTypeSize(GMarkupParseContext,0, 11518, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GMarkupParseContext,0, 11518, 10)
-#elif __s390x__
-CheckTypeSize(GMarkupParseContext,0, 11518, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11518,0);
 Msg("Find size of GMarkupParseContext (11518)\n");
@@ -4829,14 +4649,6 @@ CheckTypeSize(GData,0, 11522, 2)
 CheckTypeSize(GData,0, 11522, 11)
 #elif __ia64__
 CheckTypeSize(GData,0, 11522, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GData,0, 11522, 6)
-#elif __powerpc64__
-CheckTypeSize(GData,0, 11522, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GData,0, 11522, 10)
-#elif __s390x__
-CheckTypeSize(GData,0, 11522, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11522,0);
 Msg("Find size of GData (11522)\n");
@@ -4864,10 +4676,6 @@ Msg("Find size of GData * (11523)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11524,0);
 Msg("Find size of GData * * (11524)\n");
@@ -4884,26 +4692,6 @@ CheckEnum("G_IO_STATUS_NORMAL",G_IO_STATUS_NORMAL,1);
 CheckEnum("G_IO_STATUS_EOF",G_IO_STATUS_EOF,2);
 CheckEnum("G_IO_STATUS_AGAIN",G_IO_STATUS_AGAIN,3);
 #elif __ia64__
-CheckEnum("G_IO_STATUS_ERROR",G_IO_STATUS_ERROR,0);
-CheckEnum("G_IO_STATUS_NORMAL",G_IO_STATUS_NORMAL,1);
-CheckEnum("G_IO_STATUS_EOF",G_IO_STATUS_EOF,2);
-CheckEnum("G_IO_STATUS_AGAIN",G_IO_STATUS_AGAIN,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_IO_STATUS_ERROR",G_IO_STATUS_ERROR,0);
-CheckEnum("G_IO_STATUS_NORMAL",G_IO_STATUS_NORMAL,1);
-CheckEnum("G_IO_STATUS_EOF",G_IO_STATUS_EOF,2);
-CheckEnum("G_IO_STATUS_AGAIN",G_IO_STATUS_AGAIN,3);
-#elif __powerpc64__
-CheckEnum("G_IO_STATUS_ERROR",G_IO_STATUS_ERROR,0);
-CheckEnum("G_IO_STATUS_NORMAL",G_IO_STATUS_NORMAL,1);
-CheckEnum("G_IO_STATUS_EOF",G_IO_STATUS_EOF,2);
-CheckEnum("G_IO_STATUS_AGAIN",G_IO_STATUS_AGAIN,3);
-#elif __s390__ && !__s390x__
-CheckEnum("G_IO_STATUS_ERROR",G_IO_STATUS_ERROR,0);
-CheckEnum("G_IO_STATUS_NORMAL",G_IO_STATUS_NORMAL,1);
-CheckEnum("G_IO_STATUS_EOF",G_IO_STATUS_EOF,2);
-CheckEnum("G_IO_STATUS_AGAIN",G_IO_STATUS_AGAIN,3);
-#elif __s390x__
 CheckEnum("G_IO_STATUS_ERROR",G_IO_STATUS_ERROR,0);
 CheckEnum("G_IO_STATUS_NORMAL",G_IO_STATUS_NORMAL,1);
 CheckEnum("G_IO_STATUS_EOF",G_IO_STATUS_EOF,2);
@@ -5291,10 +5079,6 @@ Msg("Find size of GIOChannel * (11530)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11531,0);
 Msg("Find size of fptr_glib_129 (11531)\n");
@@ -5303,10 +5087,6 @@ Msg("Find size of fptr_glib_129 (11531)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11532,0);
 Msg("Find size of fptr_glib_158 (11532)\n");
@@ -5321,22 +5101,6 @@ CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
 CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
 CheckEnum("G_SEEK_END",G_SEEK_END,2);
 #elif __ia64__
-CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
-CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
-CheckEnum("G_SEEK_END",G_SEEK_END,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
-CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
-CheckEnum("G_SEEK_END",G_SEEK_END,2);
-#elif __powerpc64__
-CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
-CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
-CheckEnum("G_SEEK_END",G_SEEK_END,2);
-#elif __s390__ && !__s390x__
-CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
-CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
-CheckEnum("G_SEEK_END",G_SEEK_END,2);
-#elif __s390x__
 CheckEnum("G_SEEK_CUR",G_SEEK_CUR,0);
 CheckEnum("G_SEEK_SET",G_SEEK_SET,1);
 CheckEnum("G_SEEK_END",G_SEEK_END,2);
@@ -5367,10 +5131,6 @@ Msg("Find size of GSeekType (11535)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11536,0);
 Msg("Find size of fptr_glib_174 (11536)\n");
@@ -5379,10 +5139,6 @@ Msg("Find size of fptr_glib_174 (11536)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11537,0);
 Msg("Find size of fptr_glib_322 (11537)\n");
@@ -5663,10 +5419,6 @@ Msg("Find size of GSource * (11541)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11542,0);
 Msg("Find size of fptr_glib_260 (11542)\n");
@@ -5713,10 +5465,6 @@ Msg("Find size of GSourceFunc * (11544)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11545,0);
 Msg("Find size of fptr_glib_408 (11545)\n");
@@ -5852,10 +5600,6 @@ Msg("Find size of _GSourceFuncs (11548)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11549,0);
 Msg("Find size of fptr_glib_164 (11549)\n");
@@ -5864,10 +5608,6 @@ Msg("Find size of fptr_glib_164 (11549)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11550,0);
 Msg("Find size of fptr_glib_52 (11550)\n");
@@ -5876,10 +5616,6 @@ Msg("Find size of fptr_glib_52 (11550)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11551,0);
 Msg("Find size of fptr_glib_25 (11551)\n");
@@ -5888,10 +5624,6 @@ Msg("Find size of fptr_glib_25 (11551)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11552,0);
 Msg("Find size of fptr_glib_418 (11552)\n");
@@ -5960,14 +5692,6 @@ CheckTypeSize(GMainContext,0, 11557, 2)
 CheckTypeSize(GMainContext,0, 11557, 11)
 #elif __ia64__
 CheckTypeSize(GMainContext,0, 11557, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GMainContext,0, 11557, 6)
-#elif __powerpc64__
-CheckTypeSize(GMainContext,0, 11557, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GMainContext,0, 11557, 10)
-#elif __s390x__
-CheckTypeSize(GMainContext,0, 11557, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11557,0);
 Msg("Find size of GMainContext (11557)\n");
@@ -6013,34 +5737,6 @@ CheckEnum("G_IO_PRI",G_IO_PRI,2);
 CheckEnum("G_IO_ERR",G_IO_ERR,8);
 CheckEnum("G_IO_HUP",G_IO_HUP,16);
 CheckEnum("G_IO_NVAL",G_IO_NVAL,32);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_IO_IN",G_IO_IN,1);
-CheckEnum("G_IO_OUT",G_IO_OUT,4);
-CheckEnum("G_IO_PRI",G_IO_PRI,2);
-CheckEnum("G_IO_ERR",G_IO_ERR,8);
-CheckEnum("G_IO_HUP",G_IO_HUP,16);
-CheckEnum("G_IO_NVAL",G_IO_NVAL,32);
-#elif __powerpc64__
-CheckEnum("G_IO_IN",G_IO_IN,1);
-CheckEnum("G_IO_OUT",G_IO_OUT,4);
-CheckEnum("G_IO_PRI",G_IO_PRI,2);
-CheckEnum("G_IO_ERR",G_IO_ERR,8);
-CheckEnum("G_IO_HUP",G_IO_HUP,16);
-CheckEnum("G_IO_NVAL",G_IO_NVAL,32);
-#elif __s390__ && !__s390x__
-CheckEnum("G_IO_IN",G_IO_IN,1);
-CheckEnum("G_IO_OUT",G_IO_OUT,4);
-CheckEnum("G_IO_PRI",G_IO_PRI,2);
-CheckEnum("G_IO_ERR",G_IO_ERR,8);
-CheckEnum("G_IO_HUP",G_IO_HUP,16);
-CheckEnum("G_IO_NVAL",G_IO_NVAL,32);
-#elif __s390x__
-CheckEnum("G_IO_IN",G_IO_IN,1);
-CheckEnum("G_IO_OUT",G_IO_OUT,4);
-CheckEnum("G_IO_PRI",G_IO_PRI,2);
-CheckEnum("G_IO_ERR",G_IO_ERR,8);
-CheckEnum("G_IO_HUP",G_IO_HUP,16);
-CheckEnum("G_IO_NVAL",G_IO_NVAL,32);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11559,0);
 Msg("Find size of anon-glib-2.0/glib.h-25 (11559)\n");
@@ -6068,10 +5764,6 @@ Msg("Find size of GIOCondition (11560)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11561,0);
 Msg("Find size of fptr_glib_18 (11561)\n");
@@ -6080,10 +5772,6 @@ Msg("Find size of fptr_glib_18 (11561)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11562,0);
 Msg("Find size of fptr_glib_423 (11562)\n");
@@ -6108,42 +5796,6 @@ CheckEnum("G_IO_FLAG_MASK",G_IO_FLAG_MASK,31);
 CheckEnum("G_IO_FLAG_GET_MASK",G_IO_FLAG_GET_MASK,31);
 CheckEnum("G_IO_FLAG_SET_MASK",G_IO_FLAG_SET_MASK,3);
 #elif __ia64__
-CheckEnum("G_IO_FLAG_APPEND",G_IO_FLAG_APPEND,1);
-CheckEnum("G_IO_FLAG_NONBLOCK",G_IO_FLAG_NONBLOCK,2);
-CheckEnum("G_IO_FLAG_IS_READABLE",G_IO_FLAG_IS_READABLE,4);
-CheckEnum("G_IO_FLAG_IS_WRITEABLE",G_IO_FLAG_IS_WRITEABLE,8);
-CheckEnum("G_IO_FLAG_IS_SEEKABLE",G_IO_FLAG_IS_SEEKABLE,16);
-CheckEnum("G_IO_FLAG_MASK",G_IO_FLAG_MASK,31);
-CheckEnum("G_IO_FLAG_GET_MASK",G_IO_FLAG_GET_MASK,31);
-CheckEnum("G_IO_FLAG_SET_MASK",G_IO_FLAG_SET_MASK,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_IO_FLAG_APPEND",G_IO_FLAG_APPEND,1);
-CheckEnum("G_IO_FLAG_NONBLOCK",G_IO_FLAG_NONBLOCK,2);
-CheckEnum("G_IO_FLAG_IS_READABLE",G_IO_FLAG_IS_READABLE,4);
-CheckEnum("G_IO_FLAG_IS_WRITEABLE",G_IO_FLAG_IS_WRITEABLE,8);
-CheckEnum("G_IO_FLAG_IS_SEEKABLE",G_IO_FLAG_IS_SEEKABLE,16);
-CheckEnum("G_IO_FLAG_MASK",G_IO_FLAG_MASK,31);
-CheckEnum("G_IO_FLAG_GET_MASK",G_IO_FLAG_GET_MASK,31);
-CheckEnum("G_IO_FLAG_SET_MASK",G_IO_FLAG_SET_MASK,3);
-#elif __powerpc64__
-CheckEnum("G_IO_FLAG_APPEND",G_IO_FLAG_APPEND,1);
-CheckEnum("G_IO_FLAG_NONBLOCK",G_IO_FLAG_NONBLOCK,2);
-CheckEnum("G_IO_FLAG_IS_READABLE",G_IO_FLAG_IS_READABLE,4);
-CheckEnum("G_IO_FLAG_IS_WRITEABLE",G_IO_FLAG_IS_WRITEABLE,8);
-CheckEnum("G_IO_FLAG_IS_SEEKABLE",G_IO_FLAG_IS_SEEKABLE,16);
-CheckEnum("G_IO_FLAG_MASK",G_IO_FLAG_MASK,31);
-CheckEnum("G_IO_FLAG_GET_MASK",G_IO_FLAG_GET_MASK,31);
-CheckEnum("G_IO_FLAG_SET_MASK",G_IO_FLAG_SET_MASK,3);
-#elif __s390__ && !__s390x__
-CheckEnum("G_IO_FLAG_APPEND",G_IO_FLAG_APPEND,1);
-CheckEnum("G_IO_FLAG_NONBLOCK",G_IO_FLAG_NONBLOCK,2);
-CheckEnum("G_IO_FLAG_IS_READABLE",G_IO_FLAG_IS_READABLE,4);
-CheckEnum("G_IO_FLAG_IS_WRITEABLE",G_IO_FLAG_IS_WRITEABLE,8);
-CheckEnum("G_IO_FLAG_IS_SEEKABLE",G_IO_FLAG_IS_SEEKABLE,16);
-CheckEnum("G_IO_FLAG_MASK",G_IO_FLAG_MASK,31);
-CheckEnum("G_IO_FLAG_GET_MASK",G_IO_FLAG_GET_MASK,31);
-CheckEnum("G_IO_FLAG_SET_MASK",G_IO_FLAG_SET_MASK,3);
-#elif __s390x__
 CheckEnum("G_IO_FLAG_APPEND",G_IO_FLAG_APPEND,1);
 CheckEnum("G_IO_FLAG_NONBLOCK",G_IO_FLAG_NONBLOCK,2);
 CheckEnum("G_IO_FLAG_IS_READABLE",G_IO_FLAG_IS_READABLE,4);
@@ -6179,10 +5831,6 @@ Msg("Find size of GIOFlags (11564)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11565,0);
 Msg("Find size of fptr_glib_47 (11565)\n");
@@ -6191,10 +5839,6 @@ Msg("Find size of fptr_glib_47 (11565)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11566,0);
 Msg("Find size of fptr_glib_298 (11566)\n");
@@ -6285,14 +5929,6 @@ CheckTypeSize(GOptionGroup,0, 11574, 2)
 CheckTypeSize(GOptionGroup,0, 11574, 11)
 #elif __ia64__
 CheckTypeSize(GOptionGroup,0, 11574, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GOptionGroup,0, 11574, 6)
-#elif __powerpc64__
-CheckTypeSize(GOptionGroup,0, 11574, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GOptionGroup,0, 11574, 10)
-#elif __s390x__
-CheckTypeSize(GOptionGroup,0, 11574, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11574,0);
 Msg("Find size of GOptionGroup (11574)\n");
@@ -6334,38 +5970,6 @@ CheckEnum("G_SPAWN_STDERR_TO_DEV_NULL",G_SPAWN_STDERR_TO_DEV_NULL,16);
 CheckEnum("G_SPAWN_CHILD_INHERITS_STDIN",G_SPAWN_CHILD_INHERITS_STDIN,32);
 CheckEnum("G_SPAWN_FILE_AND_ARGV_ZERO",G_SPAWN_FILE_AND_ARGV_ZERO,64);
 #elif __ia64__
-CheckEnum("G_SPAWN_LEAVE_DESCRIPTORS_OPEN",G_SPAWN_LEAVE_DESCRIPTORS_OPEN,1);
-CheckEnum("G_SPAWN_DO_NOT_REAP_CHILD",G_SPAWN_DO_NOT_REAP_CHILD,2);
-CheckEnum("G_SPAWN_SEARCH_PATH",G_SPAWN_SEARCH_PATH,4);
-CheckEnum("G_SPAWN_STDOUT_TO_DEV_NULL",G_SPAWN_STDOUT_TO_DEV_NULL,8);
-CheckEnum("G_SPAWN_STDERR_TO_DEV_NULL",G_SPAWN_STDERR_TO_DEV_NULL,16);
-CheckEnum("G_SPAWN_CHILD_INHERITS_STDIN",G_SPAWN_CHILD_INHERITS_STDIN,32);
-CheckEnum("G_SPAWN_FILE_AND_ARGV_ZERO",G_SPAWN_FILE_AND_ARGV_ZERO,64);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_SPAWN_LEAVE_DESCRIPTORS_OPEN",G_SPAWN_LEAVE_DESCRIPTORS_OPEN,1);
-CheckEnum("G_SPAWN_DO_NOT_REAP_CHILD",G_SPAWN_DO_NOT_REAP_CHILD,2);
-CheckEnum("G_SPAWN_SEARCH_PATH",G_SPAWN_SEARCH_PATH,4);
-CheckEnum("G_SPAWN_STDOUT_TO_DEV_NULL",G_SPAWN_STDOUT_TO_DEV_NULL,8);
-CheckEnum("G_SPAWN_STDERR_TO_DEV_NULL",G_SPAWN_STDERR_TO_DEV_NULL,16);
-CheckEnum("G_SPAWN_CHILD_INHERITS_STDIN",G_SPAWN_CHILD_INHERITS_STDIN,32);
-CheckEnum("G_SPAWN_FILE_AND_ARGV_ZERO",G_SPAWN_FILE_AND_ARGV_ZERO,64);
-#elif __powerpc64__
-CheckEnum("G_SPAWN_LEAVE_DESCRIPTORS_OPEN",G_SPAWN_LEAVE_DESCRIPTORS_OPEN,1);
-CheckEnum("G_SPAWN_DO_NOT_REAP_CHILD",G_SPAWN_DO_NOT_REAP_CHILD,2);
-CheckEnum("G_SPAWN_SEARCH_PATH",G_SPAWN_SEARCH_PATH,4);
-CheckEnum("G_SPAWN_STDOUT_TO_DEV_NULL",G_SPAWN_STDOUT_TO_DEV_NULL,8);
-CheckEnum("G_SPAWN_STDERR_TO_DEV_NULL",G_SPAWN_STDERR_TO_DEV_NULL,16);
-CheckEnum("G_SPAWN_CHILD_INHERITS_STDIN",G_SPAWN_CHILD_INHERITS_STDIN,32);
-CheckEnum("G_SPAWN_FILE_AND_ARGV_ZERO",G_SPAWN_FILE_AND_ARGV_ZERO,64);
-#elif __s390__ && !__s390x__
-CheckEnum("G_SPAWN_LEAVE_DESCRIPTORS_OPEN",G_SPAWN_LEAVE_DESCRIPTORS_OPEN,1);
-CheckEnum("G_SPAWN_DO_NOT_REAP_CHILD",G_SPAWN_DO_NOT_REAP_CHILD,2);
-CheckEnum("G_SPAWN_SEARCH_PATH",G_SPAWN_SEARCH_PATH,4);
-CheckEnum("G_SPAWN_STDOUT_TO_DEV_NULL",G_SPAWN_STDOUT_TO_DEV_NULL,8);
-CheckEnum("G_SPAWN_STDERR_TO_DEV_NULL",G_SPAWN_STDERR_TO_DEV_NULL,16);
-CheckEnum("G_SPAWN_CHILD_INHERITS_STDIN",G_SPAWN_CHILD_INHERITS_STDIN,32);
-CheckEnum("G_SPAWN_FILE_AND_ARGV_ZERO",G_SPAWN_FILE_AND_ARGV_ZERO,64);
-#elif __s390x__
 CheckEnum("G_SPAWN_LEAVE_DESCRIPTORS_OPEN",G_SPAWN_LEAVE_DESCRIPTORS_OPEN,1);
 CheckEnum("G_SPAWN_DO_NOT_REAP_CHILD",G_SPAWN_DO_NOT_REAP_CHILD,2);
 CheckEnum("G_SPAWN_SEARCH_PATH",G_SPAWN_SEARCH_PATH,4);
@@ -6504,10 +6108,6 @@ Msg("Find size of _GThreadPool (11581)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11582,0);
 Msg("Find size of fptr_glib_288 (11582)\n");
@@ -6676,62 +6276,6 @@ CheckEnum("G_DATE_SEPTEMBER",G_DATE_SEPTEMBER,9);
 CheckEnum("G_DATE_OCTOBER",G_DATE_OCTOBER,10);
 CheckEnum("G_DATE_NOVEMBER",G_DATE_NOVEMBER,11);
 CheckEnum("G_DATE_DECEMBER",G_DATE_DECEMBER,12);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_DATE_BAD_MONTH",G_DATE_BAD_MONTH,0);
-CheckEnum("G_DATE_JANUARY",G_DATE_JANUARY,1);
-CheckEnum("G_DATE_FEBRUARY",G_DATE_FEBRUARY,2);
-CheckEnum("G_DATE_MARCH",G_DATE_MARCH,3);
-CheckEnum("G_DATE_APRIL",G_DATE_APRIL,4);
-CheckEnum("G_DATE_MAY",G_DATE_MAY,5);
-CheckEnum("G_DATE_JUNE",G_DATE_JUNE,6);
-CheckEnum("G_DATE_JULY",G_DATE_JULY,7);
-CheckEnum("G_DATE_AUGUST",G_DATE_AUGUST,8);
-CheckEnum("G_DATE_SEPTEMBER",G_DATE_SEPTEMBER,9);
-CheckEnum("G_DATE_OCTOBER",G_DATE_OCTOBER,10);
-CheckEnum("G_DATE_NOVEMBER",G_DATE_NOVEMBER,11);
-CheckEnum("G_DATE_DECEMBER",G_DATE_DECEMBER,12);
-#elif __powerpc64__
-CheckEnum("G_DATE_BAD_MONTH",G_DATE_BAD_MONTH,0);
-CheckEnum("G_DATE_JANUARY",G_DATE_JANUARY,1);
-CheckEnum("G_DATE_FEBRUARY",G_DATE_FEBRUARY,2);
-CheckEnum("G_DATE_MARCH",G_DATE_MARCH,3);
-CheckEnum("G_DATE_APRIL",G_DATE_APRIL,4);
-CheckEnum("G_DATE_MAY",G_DATE_MAY,5);
-CheckEnum("G_DATE_JUNE",G_DATE_JUNE,6);
-CheckEnum("G_DATE_JULY",G_DATE_JULY,7);
-CheckEnum("G_DATE_AUGUST",G_DATE_AUGUST,8);
-CheckEnum("G_DATE_SEPTEMBER",G_DATE_SEPTEMBER,9);
-CheckEnum("G_DATE_OCTOBER",G_DATE_OCTOBER,10);
-CheckEnum("G_DATE_NOVEMBER",G_DATE_NOVEMBER,11);
-CheckEnum("G_DATE_DECEMBER",G_DATE_DECEMBER,12);
-#elif __s390__ && !__s390x__
-CheckEnum("G_DATE_BAD_MONTH",G_DATE_BAD_MONTH,0);
-CheckEnum("G_DATE_JANUARY",G_DATE_JANUARY,1);
-CheckEnum("G_DATE_FEBRUARY",G_DATE_FEBRUARY,2);
-CheckEnum("G_DATE_MARCH",G_DATE_MARCH,3);
-CheckEnum("G_DATE_APRIL",G_DATE_APRIL,4);
-CheckEnum("G_DATE_MAY",G_DATE_MAY,5);
-CheckEnum("G_DATE_JUNE",G_DATE_JUNE,6);
-CheckEnum("G_DATE_JULY",G_DATE_JULY,7);
-CheckEnum("G_DATE_AUGUST",G_DATE_AUGUST,8);
-CheckEnum("G_DATE_SEPTEMBER",G_DATE_SEPTEMBER,9);
-CheckEnum("G_DATE_OCTOBER",G_DATE_OCTOBER,10);
-CheckEnum("G_DATE_NOVEMBER",G_DATE_NOVEMBER,11);
-CheckEnum("G_DATE_DECEMBER",G_DATE_DECEMBER,12);
-#elif __s390x__
-CheckEnum("G_DATE_BAD_MONTH",G_DATE_BAD_MONTH,0);
-CheckEnum("G_DATE_JANUARY",G_DATE_JANUARY,1);
-CheckEnum("G_DATE_FEBRUARY",G_DATE_FEBRUARY,2);
-CheckEnum("G_DATE_MARCH",G_DATE_MARCH,3);
-CheckEnum("G_DATE_APRIL",G_DATE_APRIL,4);
-CheckEnum("G_DATE_MAY",G_DATE_MAY,5);
-CheckEnum("G_DATE_JUNE",G_DATE_JUNE,6);
-CheckEnum("G_DATE_JULY",G_DATE_JULY,7);
-CheckEnum("G_DATE_AUGUST",G_DATE_AUGUST,8);
-CheckEnum("G_DATE_SEPTEMBER",G_DATE_SEPTEMBER,9);
-CheckEnum("G_DATE_OCTOBER",G_DATE_OCTOBER,10);
-CheckEnum("G_DATE_NOVEMBER",G_DATE_NOVEMBER,11);
-CheckEnum("G_DATE_DECEMBER",G_DATE_DECEMBER,12);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11589,0);
 Msg("Find size of anon-glib-2.0/glib.h-15 (11589)\n");
@@ -6762,14 +6306,6 @@ CheckTypeSize(GAsyncQueue,0, 11592, 2)
 CheckTypeSize(GAsyncQueue,0, 11592, 11)
 #elif __ia64__
 CheckTypeSize(GAsyncQueue,0, 11592, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GAsyncQueue,0, 11592, 6)
-#elif __powerpc64__
-CheckTypeSize(GAsyncQueue,0, 11592, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GAsyncQueue,0, 11592, 10)
-#elif __s390x__
-CheckTypeSize(GAsyncQueue,0, 11592, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11592,0);
 Msg("Find size of GAsyncQueue (11592)\n");
@@ -6923,14 +6459,6 @@ CheckTypeSize(GTree,0, 11600, 2)
 CheckTypeSize(GTree,0, 11600, 11)
 #elif __ia64__
 CheckTypeSize(GTree,0, 11600, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTree,0, 11600, 6)
-#elif __powerpc64__
-CheckTypeSize(GTree,0, 11600, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTree,0, 11600, 10)
-#elif __s390x__
-CheckTypeSize(GTree,0, 11600, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11600,0);
 Msg("Find size of GTree (11600)\n");
@@ -6958,10 +6486,6 @@ Msg("Find size of GTree * (11601)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11602,0);
 Msg("Find size of fptr_glib_384 (11602)\n");
@@ -7030,14 +6554,6 @@ CheckTypeSize(GCache,0, 11607, 2)
 CheckTypeSize(GCache,0, 11607, 11)
 #elif __ia64__
 CheckTypeSize(GCache,0, 11607, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GCache,0, 11607, 6)
-#elif __powerpc64__
-CheckTypeSize(GCache,0, 11607, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GCache,0, 11607, 10)
-#elif __s390x__
-CheckTypeSize(GCache,0, 11607, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11607,0);
 Msg("Find size of GCache (11607)\n");
@@ -7065,10 +6581,6 @@ Msg("Find size of GCache * (11608)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11609,0);
 Msg("Find size of fptr_glib_7 (11609)\n");
@@ -7115,10 +6627,6 @@ Msg("Find size of const GDate (11611)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11612,0);
 Msg("Find size of const GDate * (11612)\n");
@@ -7611,106 +7119,6 @@ CheckEnum("G_TOKEN_IDENTIFIER_NULL",G_TOKEN_IDENTIFIER_NULL,267);
 CheckEnum("G_TOKEN_COMMENT_SINGLE",G_TOKEN_COMMENT_SINGLE,268);
 CheckEnum("G_TOKEN_COMMENT_MULTI",G_TOKEN_COMMENT_MULTI,269);
 CheckEnum("G_TOKEN_LAST",G_TOKEN_LAST,270);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_TOKEN_EOF",G_TOKEN_EOF,0);
-CheckEnum("G_TOKEN_LEFT_PAREN",G_TOKEN_LEFT_PAREN,40);
-CheckEnum("G_TOKEN_RIGHT_PAREN",G_TOKEN_RIGHT_PAREN,41);
-CheckEnum("G_TOKEN_LEFT_CURLY",G_TOKEN_LEFT_CURLY,123);
-CheckEnum("G_TOKEN_RIGHT_CURLY",G_TOKEN_RIGHT_CURLY,125);
-CheckEnum("G_TOKEN_LEFT_BRACE",G_TOKEN_LEFT_BRACE,91);
-CheckEnum("G_TOKEN_RIGHT_BRACE",G_TOKEN_RIGHT_BRACE,93);
-CheckEnum("G_TOKEN_EQUAL_SIGN",G_TOKEN_EQUAL_SIGN,61);
-CheckEnum("G_TOKEN_COMMA",G_TOKEN_COMMA,44);
-CheckEnum("G_TOKEN_NONE",G_TOKEN_NONE,256);
-CheckEnum("G_TOKEN_ERROR",G_TOKEN_ERROR,257);
-CheckEnum("G_TOKEN_CHAR",G_TOKEN_CHAR,258);
-CheckEnum("G_TOKEN_BINARY",G_TOKEN_BINARY,259);
-CheckEnum("G_TOKEN_OCTAL",G_TOKEN_OCTAL,260);
-CheckEnum("G_TOKEN_INT",G_TOKEN_INT,261);
-CheckEnum("G_TOKEN_HEX",G_TOKEN_HEX,262);
-CheckEnum("G_TOKEN_FLOAT",G_TOKEN_FLOAT,263);
-CheckEnum("G_TOKEN_STRING",G_TOKEN_STRING,264);
-CheckEnum("G_TOKEN_SYMBOL",G_TOKEN_SYMBOL,265);
-CheckEnum("G_TOKEN_IDENTIFIER",G_TOKEN_IDENTIFIER,266);
-CheckEnum("G_TOKEN_IDENTIFIER_NULL",G_TOKEN_IDENTIFIER_NULL,267);
-CheckEnum("G_TOKEN_COMMENT_SINGLE",G_TOKEN_COMMENT_SINGLE,268);
-CheckEnum("G_TOKEN_COMMENT_MULTI",G_TOKEN_COMMENT_MULTI,269);
-CheckEnum("G_TOKEN_LAST",G_TOKEN_LAST,270);
-#elif __powerpc64__
-CheckEnum("G_TOKEN_EOF",G_TOKEN_EOF,0);
-CheckEnum("G_TOKEN_LEFT_PAREN",G_TOKEN_LEFT_PAREN,40);
-CheckEnum("G_TOKEN_RIGHT_PAREN",G_TOKEN_RIGHT_PAREN,41);
-CheckEnum("G_TOKEN_LEFT_CURLY",G_TOKEN_LEFT_CURLY,123);
-CheckEnum("G_TOKEN_RIGHT_CURLY",G_TOKEN_RIGHT_CURLY,125);
-CheckEnum("G_TOKEN_LEFT_BRACE",G_TOKEN_LEFT_BRACE,91);
-CheckEnum("G_TOKEN_RIGHT_BRACE",G_TOKEN_RIGHT_BRACE,93);
-CheckEnum("G_TOKEN_EQUAL_SIGN",G_TOKEN_EQUAL_SIGN,61);
-CheckEnum("G_TOKEN_COMMA",G_TOKEN_COMMA,44);
-CheckEnum("G_TOKEN_NONE",G_TOKEN_NONE,256);
-CheckEnum("G_TOKEN_ERROR",G_TOKEN_ERROR,257);
-CheckEnum("G_TOKEN_CHAR",G_TOKEN_CHAR,258);
-CheckEnum("G_TOKEN_BINARY",G_TOKEN_BINARY,259);
-CheckEnum("G_TOKEN_OCTAL",G_TOKEN_OCTAL,260);
-CheckEnum("G_TOKEN_INT",G_TOKEN_INT,261);
-CheckEnum("G_TOKEN_HEX",G_TOKEN_HEX,262);
-CheckEnum("G_TOKEN_FLOAT",G_TOKEN_FLOAT,263);
-CheckEnum("G_TOKEN_STRING",G_TOKEN_STRING,264);
-CheckEnum("G_TOKEN_SYMBOL",G_TOKEN_SYMBOL,265);
-CheckEnum("G_TOKEN_IDENTIFIER",G_TOKEN_IDENTIFIER,266);
-CheckEnum("G_TOKEN_IDENTIFIER_NULL",G_TOKEN_IDENTIFIER_NULL,267);
-CheckEnum("G_TOKEN_COMMENT_SINGLE",G_TOKEN_COMMENT_SINGLE,268);
-CheckEnum("G_TOKEN_COMMENT_MULTI",G_TOKEN_COMMENT_MULTI,269);
-CheckEnum("G_TOKEN_LAST",G_TOKEN_LAST,270);
-#elif __s390__ && !__s390x__
-CheckEnum("G_TOKEN_EOF",G_TOKEN_EOF,0);
-CheckEnum("G_TOKEN_LEFT_PAREN",G_TOKEN_LEFT_PAREN,40);
-CheckEnum("G_TOKEN_RIGHT_PAREN",G_TOKEN_RIGHT_PAREN,41);
-CheckEnum("G_TOKEN_LEFT_CURLY",G_TOKEN_LEFT_CURLY,123);
-CheckEnum("G_TOKEN_RIGHT_CURLY",G_TOKEN_RIGHT_CURLY,125);
-CheckEnum("G_TOKEN_LEFT_BRACE",G_TOKEN_LEFT_BRACE,91);
-CheckEnum("G_TOKEN_RIGHT_BRACE",G_TOKEN_RIGHT_BRACE,93);
-CheckEnum("G_TOKEN_EQUAL_SIGN",G_TOKEN_EQUAL_SIGN,61);
-CheckEnum("G_TOKEN_COMMA",G_TOKEN_COMMA,44);
-CheckEnum("G_TOKEN_NONE",G_TOKEN_NONE,256);
-CheckEnum("G_TOKEN_ERROR",G_TOKEN_ERROR,257);
-CheckEnum("G_TOKEN_CHAR",G_TOKEN_CHAR,258);
-CheckEnum("G_TOKEN_BINARY",G_TOKEN_BINARY,259);
-CheckEnum("G_TOKEN_OCTAL",G_TOKEN_OCTAL,260);
-CheckEnum("G_TOKEN_INT",G_TOKEN_INT,261);
-CheckEnum("G_TOKEN_HEX",G_TOKEN_HEX,262);
-CheckEnum("G_TOKEN_FLOAT",G_TOKEN_FLOAT,263);
-CheckEnum("G_TOKEN_STRING",G_TOKEN_STRING,264);
-CheckEnum("G_TOKEN_SYMBOL",G_TOKEN_SYMBOL,265);
-CheckEnum("G_TOKEN_IDENTIFIER",G_TOKEN_IDENTIFIER,266);
-CheckEnum("G_TOKEN_IDENTIFIER_NULL",G_TOKEN_IDENTIFIER_NULL,267);
-CheckEnum("G_TOKEN_COMMENT_SINGLE",G_TOKEN_COMMENT_SINGLE,268);
-CheckEnum("G_TOKEN_COMMENT_MULTI",G_TOKEN_COMMENT_MULTI,269);
-CheckEnum("G_TOKEN_LAST",G_TOKEN_LAST,270);
-#elif __s390x__
-CheckEnum("G_TOKEN_EOF",G_TOKEN_EOF,0);
-CheckEnum("G_TOKEN_LEFT_PAREN",G_TOKEN_LEFT_PAREN,40);
-CheckEnum("G_TOKEN_RIGHT_PAREN",G_TOKEN_RIGHT_PAREN,41);
-CheckEnum("G_TOKEN_LEFT_CURLY",G_TOKEN_LEFT_CURLY,123);
-CheckEnum("G_TOKEN_RIGHT_CURLY",G_TOKEN_RIGHT_CURLY,125);
-CheckEnum("G_TOKEN_LEFT_BRACE",G_TOKEN_LEFT_BRACE,91);
-CheckEnum("G_TOKEN_RIGHT_BRACE",G_TOKEN_RIGHT_BRACE,93);
-CheckEnum("G_TOKEN_EQUAL_SIGN",G_TOKEN_EQUAL_SIGN,61);
-CheckEnum("G_TOKEN_COMMA",G_TOKEN_COMMA,44);
-CheckEnum("G_TOKEN_NONE",G_TOKEN_NONE,256);
-CheckEnum("G_TOKEN_ERROR",G_TOKEN_ERROR,257);
-CheckEnum("G_TOKEN_CHAR",G_TOKEN_CHAR,258);
-CheckEnum("G_TOKEN_BINARY",G_TOKEN_BINARY,259);
-CheckEnum("G_TOKEN_OCTAL",G_TOKEN_OCTAL,260);
-CheckEnum("G_TOKEN_INT",G_TOKEN_INT,261);
-CheckEnum("G_TOKEN_HEX",G_TOKEN_HEX,262);
-CheckEnum("G_TOKEN_FLOAT",G_TOKEN_FLOAT,263);
-CheckEnum("G_TOKEN_STRING",G_TOKEN_STRING,264);
-CheckEnum("G_TOKEN_SYMBOL",G_TOKEN_SYMBOL,265);
-CheckEnum("G_TOKEN_IDENTIFIER",G_TOKEN_IDENTIFIER,266);
-CheckEnum("G_TOKEN_IDENTIFIER_NULL",G_TOKEN_IDENTIFIER_NULL,267);
-CheckEnum("G_TOKEN_COMMENT_SINGLE",G_TOKEN_COMMENT_SINGLE,268);
-CheckEnum("G_TOKEN_COMMENT_MULTI",G_TOKEN_COMMENT_MULTI,269);
-CheckEnum("G_TOKEN_LAST",G_TOKEN_LAST,270);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11617,0);
 Msg("Find size of anon-glib-2.0/glib.h-66 (11617)\n");
@@ -7924,10 +7332,6 @@ Msg("Find size of GScanner * (11625)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11626,0);
 Msg("Find size of fptr_glib_80 (11626)\n");
@@ -8054,22 +7458,6 @@ CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
 CheckEnum("G_KEY_FILE_NONE",G_KEY_FILE_NONE,0);
 CheckEnum("G_KEY_FILE_KEEP_COMMENTS",G_KEY_FILE_KEEP_COMMENTS,1);
 CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_KEY_FILE_NONE",G_KEY_FILE_NONE,0);
-CheckEnum("G_KEY_FILE_KEEP_COMMENTS",G_KEY_FILE_KEEP_COMMENTS,1);
-CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
-#elif __powerpc64__
-CheckEnum("G_KEY_FILE_NONE",G_KEY_FILE_NONE,0);
-CheckEnum("G_KEY_FILE_KEEP_COMMENTS",G_KEY_FILE_KEEP_COMMENTS,1);
-CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
-#elif __s390__ && !__s390x__
-CheckEnum("G_KEY_FILE_NONE",G_KEY_FILE_NONE,0);
-CheckEnum("G_KEY_FILE_KEEP_COMMENTS",G_KEY_FILE_KEEP_COMMENTS,1);
-CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
-#elif __s390x__
-CheckEnum("G_KEY_FILE_NONE",G_KEY_FILE_NONE,0);
-CheckEnum("G_KEY_FILE_KEEP_COMMENTS",G_KEY_FILE_KEEP_COMMENTS,1);
-CheckEnum("G_KEY_FILE_KEEP_TRANSLATIONS",G_KEY_FILE_KEEP_TRANSLATIONS,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11632,0);
 Msg("Find size of anon-glib-2.0/glib.h-27 (11632)\n");
@@ -8168,10 +7556,6 @@ Msg("Find size of GTrashStack * (11636)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11637,0);
 Msg("Find size of GTrashStack * * (11637)\n");
@@ -8237,10 +7621,6 @@ Msg("Find size of const gunichar (11640)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11641,0);
 Msg("Find size of const gunichar * (11641)\n");
@@ -8471,10 +7851,6 @@ Msg("Find size of GNode * (11649)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11650,0);
 Msg("Find size of fptr_glib_177 (11650)\n");
@@ -8502,10 +7878,6 @@ Msg("Find size of GHRFunc (11651)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11652,0);
 Msg("Find size of fptr_glib_136 (11652)\n");
@@ -8571,10 +7943,6 @@ Msg("Find size of GTime (11655)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11656,0);
 Msg("Find size of fptr_glib_272 (11656)\n");
@@ -8733,134 +8101,6 @@ CheckEnum("G_UNICODE_BREAK_AMBIGUOUS",G_UNICODE_BREAK_AMBIGUOUS,27);
 CheckEnum("G_UNICODE_BREAK_UNKNOWN",G_UNICODE_BREAK_UNKNOWN,28);
 CheckEnum("G_UNICODE_BREAK_NEXT_LINE",G_UNICODE_BREAK_NEXT_LINE,29);
 CheckEnum("G_UNICODE_BREAK_WORD_JOINER",G_UNICODE_BREAK_WORD_JOINER,30);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_UNICODE_BREAK_MANDATORY",G_UNICODE_BREAK_MANDATORY,0);
-CheckEnum("G_UNICODE_BREAK_CARRIAGE_RETURN",G_UNICODE_BREAK_CARRIAGE_RETURN,1);
-CheckEnum("G_UNICODE_BREAK_LINE_FEED",G_UNICODE_BREAK_LINE_FEED,2);
-CheckEnum("G_UNICODE_BREAK_COMBINING_MARK",G_UNICODE_BREAK_COMBINING_MARK,3);
-CheckEnum("G_UNICODE_BREAK_SURROGATE",G_UNICODE_BREAK_SURROGATE,4);
-CheckEnum("G_UNICODE_BREAK_ZERO_WIDTH_SPACE",G_UNICODE_BREAK_ZERO_WIDTH_SPACE,5);
-CheckEnum("G_UNICODE_BREAK_INSEPARABLE",G_UNICODE_BREAK_INSEPARABLE,6);
-CheckEnum("G_UNICODE_BREAK_NON_BREAKING_GLUE",G_UNICODE_BREAK_NON_BREAKING_GLUE,7);
-CheckEnum("G_UNICODE_BREAK_CONTINGENT",G_UNICODE_BREAK_CONTINGENT,8);
-CheckEnum("G_UNICODE_BREAK_SPACE",G_UNICODE_BREAK_SPACE,9);
-CheckEnum("G_UNICODE_BREAK_AFTER",G_UNICODE_BREAK_AFTER,10);
-CheckEnum("G_UNICODE_BREAK_BEFORE",G_UNICODE_BREAK_BEFORE,11);
-CheckEnum("G_UNICODE_BREAK_BEFORE_AND_AFTER",G_UNICODE_BREAK_BEFORE_AND_AFTER,12);
-CheckEnum("G_UNICODE_BREAK_HYPHEN",G_UNICODE_BREAK_HYPHEN,13);
-CheckEnum("G_UNICODE_BREAK_NON_STARTER",G_UNICODE_BREAK_NON_STARTER,14);
-CheckEnum("G_UNICODE_BREAK_OPEN_PUNCTUATION",G_UNICODE_BREAK_OPEN_PUNCTUATION,15);
-CheckEnum("G_UNICODE_BREAK_CLOSE_PUNCTUATION",G_UNICODE_BREAK_CLOSE_PUNCTUATION,16);
-CheckEnum("G_UNICODE_BREAK_QUOTATION",G_UNICODE_BREAK_QUOTATION,17);
-CheckEnum("G_UNICODE_BREAK_EXCLAMATION",G_UNICODE_BREAK_EXCLAMATION,18);
-CheckEnum("G_UNICODE_BREAK_IDEOGRAPHIC",G_UNICODE_BREAK_IDEOGRAPHIC,19);
-CheckEnum("G_UNICODE_BREAK_NUMERIC",G_UNICODE_BREAK_NUMERIC,20);
-CheckEnum("G_UNICODE_BREAK_INFIX_SEPARATOR",G_UNICODE_BREAK_INFIX_SEPARATOR,21);
-CheckEnum("G_UNICODE_BREAK_SYMBOL",G_UNICODE_BREAK_SYMBOL,22);
-CheckEnum("G_UNICODE_BREAK_ALPHABETIC",G_UNICODE_BREAK_ALPHABETIC,23);
-CheckEnum("G_UNICODE_BREAK_PREFIX",G_UNICODE_BREAK_PREFIX,24);
-CheckEnum("G_UNICODE_BREAK_POSTFIX",G_UNICODE_BREAK_POSTFIX,25);
-CheckEnum("G_UNICODE_BREAK_COMPLEX_CONTEXT",G_UNICODE_BREAK_COMPLEX_CONTEXT,26);
-CheckEnum("G_UNICODE_BREAK_AMBIGUOUS",G_UNICODE_BREAK_AMBIGUOUS,27);
-CheckEnum("G_UNICODE_BREAK_UNKNOWN",G_UNICODE_BREAK_UNKNOWN,28);
-CheckEnum("G_UNICODE_BREAK_NEXT_LINE",G_UNICODE_BREAK_NEXT_LINE,29);
-CheckEnum("G_UNICODE_BREAK_WORD_JOINER",G_UNICODE_BREAK_WORD_JOINER,30);
-#elif __powerpc64__
-CheckEnum("G_UNICODE_BREAK_MANDATORY",G_UNICODE_BREAK_MANDATORY,0);
-CheckEnum("G_UNICODE_BREAK_CARRIAGE_RETURN",G_UNICODE_BREAK_CARRIAGE_RETURN,1);
-CheckEnum("G_UNICODE_BREAK_LINE_FEED",G_UNICODE_BREAK_LINE_FEED,2);
-CheckEnum("G_UNICODE_BREAK_COMBINING_MARK",G_UNICODE_BREAK_COMBINING_MARK,3);
-CheckEnum("G_UNICODE_BREAK_SURROGATE",G_UNICODE_BREAK_SURROGATE,4);
-CheckEnum("G_UNICODE_BREAK_ZERO_WIDTH_SPACE",G_UNICODE_BREAK_ZERO_WIDTH_SPACE,5);
-CheckEnum("G_UNICODE_BREAK_INSEPARABLE",G_UNICODE_BREAK_INSEPARABLE,6);
-CheckEnum("G_UNICODE_BREAK_NON_BREAKING_GLUE",G_UNICODE_BREAK_NON_BREAKING_GLUE,7);
-CheckEnum("G_UNICODE_BREAK_CONTINGENT",G_UNICODE_BREAK_CONTINGENT,8);
-CheckEnum("G_UNICODE_BREAK_SPACE",G_UNICODE_BREAK_SPACE,9);
-CheckEnum("G_UNICODE_BREAK_AFTER",G_UNICODE_BREAK_AFTER,10);
-CheckEnum("G_UNICODE_BREAK_BEFORE",G_UNICODE_BREAK_BEFORE,11);
-CheckEnum("G_UNICODE_BREAK_BEFORE_AND_AFTER",G_UNICODE_BREAK_BEFORE_AND_AFTER,12);
-CheckEnum("G_UNICODE_BREAK_HYPHEN",G_UNICODE_BREAK_HYPHEN,13);
-CheckEnum("G_UNICODE_BREAK_NON_STARTER",G_UNICODE_BREAK_NON_STARTER,14);
-CheckEnum("G_UNICODE_BREAK_OPEN_PUNCTUATION",G_UNICODE_BREAK_OPEN_PUNCTUATION,15);
-CheckEnum("G_UNICODE_BREAK_CLOSE_PUNCTUATION",G_UNICODE_BREAK_CLOSE_PUNCTUATION,16);
-CheckEnum("G_UNICODE_BREAK_QUOTATION",G_UNICODE_BREAK_QUOTATION,17);
-CheckEnum("G_UNICODE_BREAK_EXCLAMATION",G_UNICODE_BREAK_EXCLAMATION,18);
-CheckEnum("G_UNICODE_BREAK_IDEOGRAPHIC",G_UNICODE_BREAK_IDEOGRAPHIC,19);
-CheckEnum("G_UNICODE_BREAK_NUMERIC",G_UNICODE_BREAK_NUMERIC,20);
-CheckEnum("G_UNICODE_BREAK_INFIX_SEPARATOR",G_UNICODE_BREAK_INFIX_SEPARATOR,21);
-CheckEnum("G_UNICODE_BREAK_SYMBOL",G_UNICODE_BREAK_SYMBOL,22);
-CheckEnum("G_UNICODE_BREAK_ALPHABETIC",G_UNICODE_BREAK_ALPHABETIC,23);
-CheckEnum("G_UNICODE_BREAK_PREFIX",G_UNICODE_BREAK_PREFIX,24);
-CheckEnum("G_UNICODE_BREAK_POSTFIX",G_UNICODE_BREAK_POSTFIX,25);
-CheckEnum("G_UNICODE_BREAK_COMPLEX_CONTEXT",G_UNICODE_BREAK_COMPLEX_CONTEXT,26);
-CheckEnum("G_UNICODE_BREAK_AMBIGUOUS",G_UNICODE_BREAK_AMBIGUOUS,27);
-CheckEnum("G_UNICODE_BREAK_UNKNOWN",G_UNICODE_BREAK_UNKNOWN,28);
-CheckEnum("G_UNICODE_BREAK_NEXT_LINE",G_UNICODE_BREAK_NEXT_LINE,29);
-CheckEnum("G_UNICODE_BREAK_WORD_JOINER",G_UNICODE_BREAK_WORD_JOINER,30);
-#elif __s390__ && !__s390x__
-CheckEnum("G_UNICODE_BREAK_MANDATORY",G_UNICODE_BREAK_MANDATORY,0);
-CheckEnum("G_UNICODE_BREAK_CARRIAGE_RETURN",G_UNICODE_BREAK_CARRIAGE_RETURN,1);
-CheckEnum("G_UNICODE_BREAK_LINE_FEED",G_UNICODE_BREAK_LINE_FEED,2);
-CheckEnum("G_UNICODE_BREAK_COMBINING_MARK",G_UNICODE_BREAK_COMBINING_MARK,3);
-CheckEnum("G_UNICODE_BREAK_SURROGATE",G_UNICODE_BREAK_SURROGATE,4);
-CheckEnum("G_UNICODE_BREAK_ZERO_WIDTH_SPACE",G_UNICODE_BREAK_ZERO_WIDTH_SPACE,5);
-CheckEnum("G_UNICODE_BREAK_INSEPARABLE",G_UNICODE_BREAK_INSEPARABLE,6);
-CheckEnum("G_UNICODE_BREAK_NON_BREAKING_GLUE",G_UNICODE_BREAK_NON_BREAKING_GLUE,7);
-CheckEnum("G_UNICODE_BREAK_CONTINGENT",G_UNICODE_BREAK_CONTINGENT,8);
-CheckEnum("G_UNICODE_BREAK_SPACE",G_UNICODE_BREAK_SPACE,9);
-CheckEnum("G_UNICODE_BREAK_AFTER",G_UNICODE_BREAK_AFTER,10);
-CheckEnum("G_UNICODE_BREAK_BEFORE",G_UNICODE_BREAK_BEFORE,11);
-CheckEnum("G_UNICODE_BREAK_BEFORE_AND_AFTER",G_UNICODE_BREAK_BEFORE_AND_AFTER,12);
-CheckEnum("G_UNICODE_BREAK_HYPHEN",G_UNICODE_BREAK_HYPHEN,13);
-CheckEnum("G_UNICODE_BREAK_NON_STARTER",G_UNICODE_BREAK_NON_STARTER,14);
-CheckEnum("G_UNICODE_BREAK_OPEN_PUNCTUATION",G_UNICODE_BREAK_OPEN_PUNCTUATION,15);
-CheckEnum("G_UNICODE_BREAK_CLOSE_PUNCTUATION",G_UNICODE_BREAK_CLOSE_PUNCTUATION,16);
-CheckEnum("G_UNICODE_BREAK_QUOTATION",G_UNICODE_BREAK_QUOTATION,17);
-CheckEnum("G_UNICODE_BREAK_EXCLAMATION",G_UNICODE_BREAK_EXCLAMATION,18);
-CheckEnum("G_UNICODE_BREAK_IDEOGRAPHIC",G_UNICODE_BREAK_IDEOGRAPHIC,19);
-CheckEnum("G_UNICODE_BREAK_NUMERIC",G_UNICODE_BREAK_NUMERIC,20);
-CheckEnum("G_UNICODE_BREAK_INFIX_SEPARATOR",G_UNICODE_BREAK_INFIX_SEPARATOR,21);
-CheckEnum("G_UNICODE_BREAK_SYMBOL",G_UNICODE_BREAK_SYMBOL,22);
-CheckEnum("G_UNICODE_BREAK_ALPHABETIC",G_UNICODE_BREAK_ALPHABETIC,23);
-CheckEnum("G_UNICODE_BREAK_PREFIX",G_UNICODE_BREAK_PREFIX,24);
-CheckEnum("G_UNICODE_BREAK_POSTFIX",G_UNICODE_BREAK_POSTFIX,25);
-CheckEnum("G_UNICODE_BREAK_COMPLEX_CONTEXT",G_UNICODE_BREAK_COMPLEX_CONTEXT,26);
-CheckEnum("G_UNICODE_BREAK_AMBIGUOUS",G_UNICODE_BREAK_AMBIGUOUS,27);
-CheckEnum("G_UNICODE_BREAK_UNKNOWN",G_UNICODE_BREAK_UNKNOWN,28);
-CheckEnum("G_UNICODE_BREAK_NEXT_LINE",G_UNICODE_BREAK_NEXT_LINE,29);
-CheckEnum("G_UNICODE_BREAK_WORD_JOINER",G_UNICODE_BREAK_WORD_JOINER,30);
-#elif __s390x__
-CheckEnum("G_UNICODE_BREAK_MANDATORY",G_UNICODE_BREAK_MANDATORY,0);
-CheckEnum("G_UNICODE_BREAK_CARRIAGE_RETURN",G_UNICODE_BREAK_CARRIAGE_RETURN,1);
-CheckEnum("G_UNICODE_BREAK_LINE_FEED",G_UNICODE_BREAK_LINE_FEED,2);
-CheckEnum("G_UNICODE_BREAK_COMBINING_MARK",G_UNICODE_BREAK_COMBINING_MARK,3);
-CheckEnum("G_UNICODE_BREAK_SURROGATE",G_UNICODE_BREAK_SURROGATE,4);
-CheckEnum("G_UNICODE_BREAK_ZERO_WIDTH_SPACE",G_UNICODE_BREAK_ZERO_WIDTH_SPACE,5);
-CheckEnum("G_UNICODE_BREAK_INSEPARABLE",G_UNICODE_BREAK_INSEPARABLE,6);
-CheckEnum("G_UNICODE_BREAK_NON_BREAKING_GLUE",G_UNICODE_BREAK_NON_BREAKING_GLUE,7);
-CheckEnum("G_UNICODE_BREAK_CONTINGENT",G_UNICODE_BREAK_CONTINGENT,8);
-CheckEnum("G_UNICODE_BREAK_SPACE",G_UNICODE_BREAK_SPACE,9);
-CheckEnum("G_UNICODE_BREAK_AFTER",G_UNICODE_BREAK_AFTER,10);
-CheckEnum("G_UNICODE_BREAK_BEFORE",G_UNICODE_BREAK_BEFORE,11);
-CheckEnum("G_UNICODE_BREAK_BEFORE_AND_AFTER",G_UNICODE_BREAK_BEFORE_AND_AFTER,12);
-CheckEnum("G_UNICODE_BREAK_HYPHEN",G_UNICODE_BREAK_HYPHEN,13);
-CheckEnum("G_UNICODE_BREAK_NON_STARTER",G_UNICODE_BREAK_NON_STARTER,14);
-CheckEnum("G_UNICODE_BREAK_OPEN_PUNCTUATION",G_UNICODE_BREAK_OPEN_PUNCTUATION,15);
-CheckEnum("G_UNICODE_BREAK_CLOSE_PUNCTUATION",G_UNICODE_BREAK_CLOSE_PUNCTUATION,16);
-CheckEnum("G_UNICODE_BREAK_QUOTATION",G_UNICODE_BREAK_QUOTATION,17);
-CheckEnum("G_UNICODE_BREAK_EXCLAMATION",G_UNICODE_BREAK_EXCLAMATION,18);
-CheckEnum("G_UNICODE_BREAK_IDEOGRAPHIC",G_UNICODE_BREAK_IDEOGRAPHIC,19);
-CheckEnum("G_UNICODE_BREAK_NUMERIC",G_UNICODE_BREAK_NUMERIC,20);
-CheckEnum("G_UNICODE_BREAK_INFIX_SEPARATOR",G_UNICODE_BREAK_INFIX_SEPARATOR,21);
-CheckEnum("G_UNICODE_BREAK_SYMBOL",G_UNICODE_BREAK_SYMBOL,22);
-CheckEnum("G_UNICODE_BREAK_ALPHABETIC",G_UNICODE_BREAK_ALPHABETIC,23);
-CheckEnum("G_UNICODE_BREAK_PREFIX",G_UNICODE_BREAK_PREFIX,24);
-CheckEnum("G_UNICODE_BREAK_POSTFIX",G_UNICODE_BREAK_POSTFIX,25);
-CheckEnum("G_UNICODE_BREAK_COMPLEX_CONTEXT",G_UNICODE_BREAK_COMPLEX_CONTEXT,26);
-CheckEnum("G_UNICODE_BREAK_AMBIGUOUS",G_UNICODE_BREAK_AMBIGUOUS,27);
-CheckEnum("G_UNICODE_BREAK_UNKNOWN",G_UNICODE_BREAK_UNKNOWN,28);
-CheckEnum("G_UNICODE_BREAK_NEXT_LINE",G_UNICODE_BREAK_NEXT_LINE,29);
-CheckEnum("G_UNICODE_BREAK_WORD_JOINER",G_UNICODE_BREAK_WORD_JOINER,30);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11660,0);
 Msg("Find size of anon-glib-2.0/glib.h-85 (11660)\n");
@@ -8891,14 +8131,6 @@ CheckTypeSize(GStringChunk,0, 11663, 2)
 CheckTypeSize(GStringChunk,0, 11663, 11)
 #elif __ia64__
 CheckTypeSize(GStringChunk,0, 11663, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GStringChunk,0, 11663, 6)
-#elif __powerpc64__
-CheckTypeSize(GStringChunk,0, 11663, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GStringChunk,0, 11663, 10)
-#elif __s390x__
-CheckTypeSize(GStringChunk,0, 11663, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11663,0);
 Msg("Find size of GStringChunk (11663)\n");
@@ -9032,14 +8264,6 @@ CheckTypeSize(GCond,0, 11667, 2)
 CheckTypeSize(GCond,0, 11667, 11)
 #elif __ia64__
 CheckTypeSize(GCond,0, 11667, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GCond,0, 11667, 6)
-#elif __powerpc64__
-CheckTypeSize(GCond,0, 11667, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GCond,0, 11667, 10)
-#elif __s390x__
-CheckTypeSize(GCond,0, 11667, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11667,0);
 Msg("Find size of GCond (11667)\n");
@@ -9105,10 +8329,6 @@ Msg("Find size of GStaticRWLock * (11670)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11671,0);
 Msg("Find size of fptr_glib_14 (11671)\n");
@@ -9253,46 +8473,6 @@ CheckEnum("G_LOG_LEVEL_MESSAGE",G_LOG_LEVEL_MESSAGE,32);
 CheckEnum("G_LOG_LEVEL_INFO",G_LOG_LEVEL_INFO,64);
 CheckEnum("G_LOG_LEVEL_DEBUG",G_LOG_LEVEL_DEBUG,128);
 CheckEnum("G_LOG_LEVEL_MASK",G_LOG_LEVEL_MASK,-4);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_LOG_FLAG_RECURSION",G_LOG_FLAG_RECURSION,1);
-CheckEnum("G_LOG_FLAG_FATAL",G_LOG_FLAG_FATAL,2);
-CheckEnum("G_LOG_LEVEL_ERROR",G_LOG_LEVEL_ERROR,4);
-CheckEnum("G_LOG_LEVEL_CRITICAL",G_LOG_LEVEL_CRITICAL,8);
-CheckEnum("G_LOG_LEVEL_WARNING",G_LOG_LEVEL_WARNING,16);
-CheckEnum("G_LOG_LEVEL_MESSAGE",G_LOG_LEVEL_MESSAGE,32);
-CheckEnum("G_LOG_LEVEL_INFO",G_LOG_LEVEL_INFO,64);
-CheckEnum("G_LOG_LEVEL_DEBUG",G_LOG_LEVEL_DEBUG,128);
-CheckEnum("G_LOG_LEVEL_MASK",G_LOG_LEVEL_MASK,-4);
-#elif __powerpc64__
-CheckEnum("G_LOG_FLAG_RECURSION",G_LOG_FLAG_RECURSION,1);
-CheckEnum("G_LOG_FLAG_FATAL",G_LOG_FLAG_FATAL,2);
-CheckEnum("G_LOG_LEVEL_ERROR",G_LOG_LEVEL_ERROR,4);
-CheckEnum("G_LOG_LEVEL_CRITICAL",G_LOG_LEVEL_CRITICAL,8);
-CheckEnum("G_LOG_LEVEL_WARNING",G_LOG_LEVEL_WARNING,16);
-CheckEnum("G_LOG_LEVEL_MESSAGE",G_LOG_LEVEL_MESSAGE,32);
-CheckEnum("G_LOG_LEVEL_INFO",G_LOG_LEVEL_INFO,64);
-CheckEnum("G_LOG_LEVEL_DEBUG",G_LOG_LEVEL_DEBUG,128);
-CheckEnum("G_LOG_LEVEL_MASK",G_LOG_LEVEL_MASK,-4);
-#elif __s390__ && !__s390x__
-CheckEnum("G_LOG_FLAG_RECURSION",G_LOG_FLAG_RECURSION,1);
-CheckEnum("G_LOG_FLAG_FATAL",G_LOG_FLAG_FATAL,2);
-CheckEnum("G_LOG_LEVEL_ERROR",G_LOG_LEVEL_ERROR,4);
-CheckEnum("G_LOG_LEVEL_CRITICAL",G_LOG_LEVEL_CRITICAL,8);
-CheckEnum("G_LOG_LEVEL_WARNING",G_LOG_LEVEL_WARNING,16);
-CheckEnum("G_LOG_LEVEL_MESSAGE",G_LOG_LEVEL_MESSAGE,32);
-CheckEnum("G_LOG_LEVEL_INFO",G_LOG_LEVEL_INFO,64);
-CheckEnum("G_LOG_LEVEL_DEBUG",G_LOG_LEVEL_DEBUG,128);
-CheckEnum("G_LOG_LEVEL_MASK",G_LOG_LEVEL_MASK,-4);
-#elif __s390x__
-CheckEnum("G_LOG_FLAG_RECURSION",G_LOG_FLAG_RECURSION,1);
-CheckEnum("G_LOG_FLAG_FATAL",G_LOG_FLAG_FATAL,2);
-CheckEnum("G_LOG_LEVEL_ERROR",G_LOG_LEVEL_ERROR,4);
-CheckEnum("G_LOG_LEVEL_CRITICAL",G_LOG_LEVEL_CRITICAL,8);
-CheckEnum("G_LOG_LEVEL_WARNING",G_LOG_LEVEL_WARNING,16);
-CheckEnum("G_LOG_LEVEL_MESSAGE",G_LOG_LEVEL_MESSAGE,32);
-CheckEnum("G_LOG_LEVEL_INFO",G_LOG_LEVEL_INFO,64);
-CheckEnum("G_LOG_LEVEL_DEBUG",G_LOG_LEVEL_DEBUG,128);
-CheckEnum("G_LOG_LEVEL_MASK",G_LOG_LEVEL_MASK,-4);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11677,0);
 Msg("Find size of anon-glib-2.0/glib.h-49 (11677)\n");
@@ -9363,42 +8543,6 @@ CheckEnum("G_DATE_THURSDAY",G_DATE_THURSDAY,4);
 CheckEnum("G_DATE_FRIDAY",G_DATE_FRIDAY,5);
 CheckEnum("G_DATE_SATURDAY",G_DATE_SATURDAY,6);
 CheckEnum("G_DATE_SUNDAY",G_DATE_SUNDAY,7);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_DATE_BAD_WEEKDAY",G_DATE_BAD_WEEKDAY,0);
-CheckEnum("G_DATE_MONDAY",G_DATE_MONDAY,1);
-CheckEnum("G_DATE_TUESDAY",G_DATE_TUESDAY,2);
-CheckEnum("G_DATE_WEDNESDAY",G_DATE_WEDNESDAY,3);
-CheckEnum("G_DATE_THURSDAY",G_DATE_THURSDAY,4);
-CheckEnum("G_DATE_FRIDAY",G_DATE_FRIDAY,5);
-CheckEnum("G_DATE_SATURDAY",G_DATE_SATURDAY,6);
-CheckEnum("G_DATE_SUNDAY",G_DATE_SUNDAY,7);
-#elif __powerpc64__
-CheckEnum("G_DATE_BAD_WEEKDAY",G_DATE_BAD_WEEKDAY,0);
-CheckEnum("G_DATE_MONDAY",G_DATE_MONDAY,1);
-CheckEnum("G_DATE_TUESDAY",G_DATE_TUESDAY,2);
-CheckEnum("G_DATE_WEDNESDAY",G_DATE_WEDNESDAY,3);
-CheckEnum("G_DATE_THURSDAY",G_DATE_THURSDAY,4);
-CheckEnum("G_DATE_FRIDAY",G_DATE_FRIDAY,5);
-CheckEnum("G_DATE_SATURDAY",G_DATE_SATURDAY,6);
-CheckEnum("G_DATE_SUNDAY",G_DATE_SUNDAY,7);
-#elif __s390__ && !__s390x__
-CheckEnum("G_DATE_BAD_WEEKDAY",G_DATE_BAD_WEEKDAY,0);
-CheckEnum("G_DATE_MONDAY",G_DATE_MONDAY,1);
-CheckEnum("G_DATE_TUESDAY",G_DATE_TUESDAY,2);
-CheckEnum("G_DATE_WEDNESDAY",G_DATE_WEDNESDAY,3);
-CheckEnum("G_DATE_THURSDAY",G_DATE_THURSDAY,4);
-CheckEnum("G_DATE_FRIDAY",G_DATE_FRIDAY,5);
-CheckEnum("G_DATE_SATURDAY",G_DATE_SATURDAY,6);
-CheckEnum("G_DATE_SUNDAY",G_DATE_SUNDAY,7);
-#elif __s390x__
-CheckEnum("G_DATE_BAD_WEEKDAY",G_DATE_BAD_WEEKDAY,0);
-CheckEnum("G_DATE_MONDAY",G_DATE_MONDAY,1);
-CheckEnum("G_DATE_TUESDAY",G_DATE_TUESDAY,2);
-CheckEnum("G_DATE_WEDNESDAY",G_DATE_WEDNESDAY,3);
-CheckEnum("G_DATE_THURSDAY",G_DATE_THURSDAY,4);
-CheckEnum("G_DATE_FRIDAY",G_DATE_FRIDAY,5);
-CheckEnum("G_DATE_SATURDAY",G_DATE_SATURDAY,6);
-CheckEnum("G_DATE_SUNDAY",G_DATE_SUNDAY,7);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11680,0);
 Msg("Find size of anon-glib-2.0/glib.h-14 (11680)\n");
@@ -9434,26 +8578,6 @@ CheckEnum("G_PRE_ORDER",G_PRE_ORDER,1);
 CheckEnum("G_POST_ORDER",G_POST_ORDER,2);
 CheckEnum("G_LEVEL_ORDER",G_LEVEL_ORDER,3);
 #elif __ia64__
-CheckEnum("G_IN_ORDER",G_IN_ORDER,0);
-CheckEnum("G_PRE_ORDER",G_PRE_ORDER,1);
-CheckEnum("G_POST_ORDER",G_POST_ORDER,2);
-CheckEnum("G_LEVEL_ORDER",G_LEVEL_ORDER,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_IN_ORDER",G_IN_ORDER,0);
-CheckEnum("G_PRE_ORDER",G_PRE_ORDER,1);
-CheckEnum("G_POST_ORDER",G_POST_ORDER,2);
-CheckEnum("G_LEVEL_ORDER",G_LEVEL_ORDER,3);
-#elif __powerpc64__
-CheckEnum("G_IN_ORDER",G_IN_ORDER,0);
-CheckEnum("G_PRE_ORDER",G_PRE_ORDER,1);
-CheckEnum("G_POST_ORDER",G_POST_ORDER,2);
-CheckEnum("G_LEVEL_ORDER",G_LEVEL_ORDER,3);
-#elif __s390__ && !__s390x__
-CheckEnum("G_IN_ORDER",G_IN_ORDER,0);
-CheckEnum("G_PRE_ORDER",G_PRE_ORDER,1);
-CheckEnum("G_POST_ORDER",G_POST_ORDER,2);
-CheckEnum("G_LEVEL_ORDER",G_LEVEL_ORDER,3);
-#elif __s390x__
 CheckEnum("G_IN_ORDER",G_IN_ORDER,0);
 CheckEnum("G_PRE_ORDER",G_PRE_ORDER,1);
 CheckEnum("G_POST_ORDER",G_POST_ORDER,2);
@@ -9497,34 +8621,6 @@ CheckEnum("G_TRAVERSE_MASK",G_TRAVERSE_MASK,3);
 CheckEnum("G_TRAVERSE_LEAFS",G_TRAVERSE_LEAFS,1);
 CheckEnum("G_TRAVERSE_NON_LEAFS",G_TRAVERSE_NON_LEAFS,2);
 #elif __ia64__
-CheckEnum("G_TRAVERSE_LEAVES",G_TRAVERSE_LEAVES,1);
-CheckEnum("G_TRAVERSE_NON_LEAVES",G_TRAVERSE_NON_LEAVES,2);
-CheckEnum("G_TRAVERSE_ALL",G_TRAVERSE_ALL,3);
-CheckEnum("G_TRAVERSE_MASK",G_TRAVERSE_MASK,3);
-CheckEnum("G_TRAVERSE_LEAFS",G_TRAVERSE_LEAFS,1);
-CheckEnum("G_TRAVERSE_NON_LEAFS",G_TRAVERSE_NON_LEAFS,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_TRAVERSE_LEAVES",G_TRAVERSE_LEAVES,1);
-CheckEnum("G_TRAVERSE_NON_LEAVES",G_TRAVERSE_NON_LEAVES,2);
-CheckEnum("G_TRAVERSE_ALL",G_TRAVERSE_ALL,3);
-CheckEnum("G_TRAVERSE_MASK",G_TRAVERSE_MASK,3);
-CheckEnum("G_TRAVERSE_LEAFS",G_TRAVERSE_LEAFS,1);
-CheckEnum("G_TRAVERSE_NON_LEAFS",G_TRAVERSE_NON_LEAFS,2);
-#elif __powerpc64__
-CheckEnum("G_TRAVERSE_LEAVES",G_TRAVERSE_LEAVES,1);
-CheckEnum("G_TRAVERSE_NON_LEAVES",G_TRAVERSE_NON_LEAVES,2);
-CheckEnum("G_TRAVERSE_ALL",G_TRAVERSE_ALL,3);
-CheckEnum("G_TRAVERSE_MASK",G_TRAVERSE_MASK,3);
-CheckEnum("G_TRAVERSE_LEAFS",G_TRAVERSE_LEAFS,1);
-CheckEnum("G_TRAVERSE_NON_LEAFS",G_TRAVERSE_NON_LEAFS,2);
-#elif __s390__ && !__s390x__
-CheckEnum("G_TRAVERSE_LEAVES",G_TRAVERSE_LEAVES,1);
-CheckEnum("G_TRAVERSE_NON_LEAVES",G_TRAVERSE_NON_LEAVES,2);
-CheckEnum("G_TRAVERSE_ALL",G_TRAVERSE_ALL,3);
-CheckEnum("G_TRAVERSE_MASK",G_TRAVERSE_MASK,3);
-CheckEnum("G_TRAVERSE_LEAFS",G_TRAVERSE_LEAFS,1);
-CheckEnum("G_TRAVERSE_NON_LEAFS",G_TRAVERSE_NON_LEAFS,2);
-#elif __s390x__
 CheckEnum("G_TRAVERSE_LEAVES",G_TRAVERSE_LEAVES,1);
 CheckEnum("G_TRAVERSE_NON_LEAVES",G_TRAVERSE_NON_LEAVES,2);
 CheckEnum("G_TRAVERSE_ALL",G_TRAVERSE_ALL,3);
@@ -9633,10 +8729,6 @@ Msg("Find size of _GMarkupParser (11686)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11687,0);
 Msg("Find size of fptr_glib_46 (11687)\n");
@@ -9645,10 +8737,6 @@ Msg("Find size of fptr_glib_46 (11687)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11688,0);
 Msg("Find size of fptr_glib_22 (11688)\n");
@@ -9657,10 +8745,6 @@ Msg("Find size of fptr_glib_22 (11688)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11689,0);
 Msg("Find size of fptr_glib_118 (11689)\n");
@@ -9669,10 +8753,6 @@ Msg("Find size of fptr_glib_118 (11689)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11690,0);
 Msg("Find size of fptr_glib_77 (11690)\n");
@@ -9719,10 +8799,6 @@ Msg("Find size of const GMarkupParser (11692)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11693,0);
 Msg("Find size of const GMarkupParser * (11693)\n");
@@ -9733,14 +8809,6 @@ CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_U
 #elif __x86_64__
 CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
 #elif __ia64__
-CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
-#elif __powerpc64__
-CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
-#elif __s390__ && !__s390x__
-CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
-#elif __s390x__
 CheckEnum("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG",G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG,1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11694,0);
@@ -9769,10 +8837,6 @@ Msg("Find size of GMarkupParseFlags (11695)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11696,0);
 Msg("Find size of fptr_glib_222 (11696)\n");
@@ -9819,10 +8883,6 @@ Msg("Find size of GStaticMutex * (11698)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11699,0);
 Msg("Find size of fptr_glib_419 (11699)\n");
@@ -9874,42 +8934,6 @@ CheckEnum("G_NORMALIZE_ALL",G_NORMALIZE_ALL,2);
 CheckEnum("G_NORMALIZE_NFKD",G_NORMALIZE_NFKD,2);
 CheckEnum("G_NORMALIZE_ALL_COMPOSE",G_NORMALIZE_ALL_COMPOSE,3);
 CheckEnum("G_NORMALIZE_NFKC",G_NORMALIZE_NFKC,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_NORMALIZE_DEFAULT",G_NORMALIZE_DEFAULT,0);
-CheckEnum("G_NORMALIZE_NFD",G_NORMALIZE_NFD,0);
-CheckEnum("G_NORMALIZE_DEFAULT_COMPOSE",G_NORMALIZE_DEFAULT_COMPOSE,1);
-CheckEnum("G_NORMALIZE_NFC",G_NORMALIZE_NFC,1);
-CheckEnum("G_NORMALIZE_ALL",G_NORMALIZE_ALL,2);
-CheckEnum("G_NORMALIZE_NFKD",G_NORMALIZE_NFKD,2);
-CheckEnum("G_NORMALIZE_ALL_COMPOSE",G_NORMALIZE_ALL_COMPOSE,3);
-CheckEnum("G_NORMALIZE_NFKC",G_NORMALIZE_NFKC,3);
-#elif __powerpc64__
-CheckEnum("G_NORMALIZE_DEFAULT",G_NORMALIZE_DEFAULT,0);
-CheckEnum("G_NORMALIZE_NFD",G_NORMALIZE_NFD,0);
-CheckEnum("G_NORMALIZE_DEFAULT_COMPOSE",G_NORMALIZE_DEFAULT_COMPOSE,1);
-CheckEnum("G_NORMALIZE_NFC",G_NORMALIZE_NFC,1);
-CheckEnum("G_NORMALIZE_ALL",G_NORMALIZE_ALL,2);
-CheckEnum("G_NORMALIZE_NFKD",G_NORMALIZE_NFKD,2);
-CheckEnum("G_NORMALIZE_ALL_COMPOSE",G_NORMALIZE_ALL_COMPOSE,3);
-CheckEnum("G_NORMALIZE_NFKC",G_NORMALIZE_NFKC,3);
-#elif __s390__ && !__s390x__
-CheckEnum("G_NORMALIZE_DEFAULT",G_NORMALIZE_DEFAULT,0);
-CheckEnum("G_NORMALIZE_NFD",G_NORMALIZE_NFD,0);
-CheckEnum("G_NORMALIZE_DEFAULT_COMPOSE",G_NORMALIZE_DEFAULT_COMPOSE,1);
-CheckEnum("G_NORMALIZE_NFC",G_NORMALIZE_NFC,1);
-CheckEnum("G_NORMALIZE_ALL",G_NORMALIZE_ALL,2);
-CheckEnum("G_NORMALIZE_NFKD",G_NORMALIZE_NFKD,2);
-CheckEnum("G_NORMALIZE_ALL_COMPOSE",G_NORMALIZE_ALL_COMPOSE,3);
-CheckEnum("G_NORMALIZE_NFKC",G_NORMALIZE_NFKC,3);
-#elif __s390x__
-CheckEnum("G_NORMALIZE_DEFAULT",G_NORMALIZE_DEFAULT,0);
-CheckEnum("G_NORMALIZE_NFD",G_NORMALIZE_NFD,0);
-CheckEnum("G_NORMALIZE_DEFAULT_COMPOSE",G_NORMALIZE_DEFAULT_COMPOSE,1);
-CheckEnum("G_NORMALIZE_NFC",G_NORMALIZE_NFC,1);
-CheckEnum("G_NORMALIZE_ALL",G_NORMALIZE_ALL,2);
-CheckEnum("G_NORMALIZE_NFKD",G_NORMALIZE_NFKD,2);
-CheckEnum("G_NORMALIZE_ALL_COMPOSE",G_NORMALIZE_ALL_COMPOSE,3);
-CheckEnum("G_NORMALIZE_NFKC",G_NORMALIZE_NFKC,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11701,0);
 Msg("Find size of anon-glib-2.0/glib.h-86 (11701)\n");
@@ -9940,14 +8964,6 @@ CheckTypeSize(GMutex,0, 11703, 2)
 CheckTypeSize(GMutex,0, 11703, 11)
 #elif __ia64__
 CheckTypeSize(GMutex,0, 11703, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GMutex,0, 11703, 6)
-#elif __powerpc64__
-CheckTypeSize(GMutex,0, 11703, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GMutex,0, 11703, 10)
-#elif __s390x__
-CheckTypeSize(GMutex,0, 11703, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11703,0);
 Msg("Find size of GMutex (11703)\n");
@@ -9975,10 +8991,6 @@ Msg("Find size of GMutex * (11704)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11705,0);
 Msg("Find size of GMutex * * (11705)\n");
@@ -10133,110 +9145,6 @@ CheckEnum("G_FILE_ERROR_IO",G_FILE_ERROR_IO,21);
 CheckEnum("G_FILE_ERROR_PERM",G_FILE_ERROR_PERM,22);
 CheckEnum("G_FILE_ERROR_NOSYS",G_FILE_ERROR_NOSYS,23);
 CheckEnum("G_FILE_ERROR_FAILED",G_FILE_ERROR_FAILED,24);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_FILE_ERROR_EXIST",G_FILE_ERROR_EXIST,0);
-CheckEnum("G_FILE_ERROR_ISDIR",G_FILE_ERROR_ISDIR,1);
-CheckEnum("G_FILE_ERROR_ACCES",G_FILE_ERROR_ACCES,2);
-CheckEnum("G_FILE_ERROR_NAMETOOLONG",G_FILE_ERROR_NAMETOOLONG,3);
-CheckEnum("G_FILE_ERROR_NOENT",G_FILE_ERROR_NOENT,4);
-CheckEnum("G_FILE_ERROR_NOTDIR",G_FILE_ERROR_NOTDIR,5);
-CheckEnum("G_FILE_ERROR_NXIO",G_FILE_ERROR_NXIO,6);
-CheckEnum("G_FILE_ERROR_NODEV",G_FILE_ERROR_NODEV,7);
-CheckEnum("G_FILE_ERROR_ROFS",G_FILE_ERROR_ROFS,8);
-CheckEnum("G_FILE_ERROR_TXTBSY",G_FILE_ERROR_TXTBSY,9);
-CheckEnum("G_FILE_ERROR_FAULT",G_FILE_ERROR_FAULT,10);
-CheckEnum("G_FILE_ERROR_LOOP",G_FILE_ERROR_LOOP,11);
-CheckEnum("G_FILE_ERROR_NOSPC",G_FILE_ERROR_NOSPC,12);
-CheckEnum("G_FILE_ERROR_NOMEM",G_FILE_ERROR_NOMEM,13);
-CheckEnum("G_FILE_ERROR_MFILE",G_FILE_ERROR_MFILE,14);
-CheckEnum("G_FILE_ERROR_NFILE",G_FILE_ERROR_NFILE,15);
-CheckEnum("G_FILE_ERROR_BADF",G_FILE_ERROR_BADF,16);
-CheckEnum("G_FILE_ERROR_INVAL",G_FILE_ERROR_INVAL,17);
-CheckEnum("G_FILE_ERROR_PIPE",G_FILE_ERROR_PIPE,18);
-CheckEnum("G_FILE_ERROR_AGAIN",G_FILE_ERROR_AGAIN,19);
-CheckEnum("G_FILE_ERROR_INTR",G_FILE_ERROR_INTR,20);
-CheckEnum("G_FILE_ERROR_IO",G_FILE_ERROR_IO,21);
-CheckEnum("G_FILE_ERROR_PERM",G_FILE_ERROR_PERM,22);
-CheckEnum("G_FILE_ERROR_NOSYS",G_FILE_ERROR_NOSYS,23);
-CheckEnum("G_FILE_ERROR_FAILED",G_FILE_ERROR_FAILED,24);
-#elif __powerpc64__
-CheckEnum("G_FILE_ERROR_EXIST",G_FILE_ERROR_EXIST,0);
-CheckEnum("G_FILE_ERROR_ISDIR",G_FILE_ERROR_ISDIR,1);
-CheckEnum("G_FILE_ERROR_ACCES",G_FILE_ERROR_ACCES,2);
-CheckEnum("G_FILE_ERROR_NAMETOOLONG",G_FILE_ERROR_NAMETOOLONG,3);
-CheckEnum("G_FILE_ERROR_NOENT",G_FILE_ERROR_NOENT,4);
-CheckEnum("G_FILE_ERROR_NOTDIR",G_FILE_ERROR_NOTDIR,5);
-CheckEnum("G_FILE_ERROR_NXIO",G_FILE_ERROR_NXIO,6);
-CheckEnum("G_FILE_ERROR_NODEV",G_FILE_ERROR_NODEV,7);
-CheckEnum("G_FILE_ERROR_ROFS",G_FILE_ERROR_ROFS,8);
-CheckEnum("G_FILE_ERROR_TXTBSY",G_FILE_ERROR_TXTBSY,9);
-CheckEnum("G_FILE_ERROR_FAULT",G_FILE_ERROR_FAULT,10);
-CheckEnum("G_FILE_ERROR_LOOP",G_FILE_ERROR_LOOP,11);
-CheckEnum("G_FILE_ERROR_NOSPC",G_FILE_ERROR_NOSPC,12);
-CheckEnum("G_FILE_ERROR_NOMEM",G_FILE_ERROR_NOMEM,13);
-CheckEnum("G_FILE_ERROR_MFILE",G_FILE_ERROR_MFILE,14);
-CheckEnum("G_FILE_ERROR_NFILE",G_FILE_ERROR_NFILE,15);
-CheckEnum("G_FILE_ERROR_BADF",G_FILE_ERROR_BADF,16);
-CheckEnum("G_FILE_ERROR_INVAL",G_FILE_ERROR_INVAL,17);
-CheckEnum("G_FILE_ERROR_PIPE",G_FILE_ERROR_PIPE,18);
-CheckEnum("G_FILE_ERROR_AGAIN",G_FILE_ERROR_AGAIN,19);
-CheckEnum("G_FILE_ERROR_INTR",G_FILE_ERROR_INTR,20);
-CheckEnum("G_FILE_ERROR_IO",G_FILE_ERROR_IO,21);
-CheckEnum("G_FILE_ERROR_PERM",G_FILE_ERROR_PERM,22);
-CheckEnum("G_FILE_ERROR_NOSYS",G_FILE_ERROR_NOSYS,23);
-CheckEnum("G_FILE_ERROR_FAILED",G_FILE_ERROR_FAILED,24);
-#elif __s390__ && !__s390x__
-CheckEnum("G_FILE_ERROR_EXIST",G_FILE_ERROR_EXIST,0);
-CheckEnum("G_FILE_ERROR_ISDIR",G_FILE_ERROR_ISDIR,1);
-CheckEnum("G_FILE_ERROR_ACCES",G_FILE_ERROR_ACCES,2);
-CheckEnum("G_FILE_ERROR_NAMETOOLONG",G_FILE_ERROR_NAMETOOLONG,3);
-CheckEnum("G_FILE_ERROR_NOENT",G_FILE_ERROR_NOENT,4);
-CheckEnum("G_FILE_ERROR_NOTDIR",G_FILE_ERROR_NOTDIR,5);
-CheckEnum("G_FILE_ERROR_NXIO",G_FILE_ERROR_NXIO,6);
-CheckEnum("G_FILE_ERROR_NODEV",G_FILE_ERROR_NODEV,7);
-CheckEnum("G_FILE_ERROR_ROFS",G_FILE_ERROR_ROFS,8);
-CheckEnum("G_FILE_ERROR_TXTBSY",G_FILE_ERROR_TXTBSY,9);
-CheckEnum("G_FILE_ERROR_FAULT",G_FILE_ERROR_FAULT,10);
-CheckEnum("G_FILE_ERROR_LOOP",G_FILE_ERROR_LOOP,11);
-CheckEnum("G_FILE_ERROR_NOSPC",G_FILE_ERROR_NOSPC,12);
-CheckEnum("G_FILE_ERROR_NOMEM",G_FILE_ERROR_NOMEM,13);
-CheckEnum("G_FILE_ERROR_MFILE",G_FILE_ERROR_MFILE,14);
-CheckEnum("G_FILE_ERROR_NFILE",G_FILE_ERROR_NFILE,15);
-CheckEnum("G_FILE_ERROR_BADF",G_FILE_ERROR_BADF,16);
-CheckEnum("G_FILE_ERROR_INVAL",G_FILE_ERROR_INVAL,17);
-CheckEnum("G_FILE_ERROR_PIPE",G_FILE_ERROR_PIPE,18);
-CheckEnum("G_FILE_ERROR_AGAIN",G_FILE_ERROR_AGAIN,19);
-CheckEnum("G_FILE_ERROR_INTR",G_FILE_ERROR_INTR,20);
-CheckEnum("G_FILE_ERROR_IO",G_FILE_ERROR_IO,21);
-CheckEnum("G_FILE_ERROR_PERM",G_FILE_ERROR_PERM,22);
-CheckEnum("G_FILE_ERROR_NOSYS",G_FILE_ERROR_NOSYS,23);
-CheckEnum("G_FILE_ERROR_FAILED",G_FILE_ERROR_FAILED,24);
-#elif __s390x__
-CheckEnum("G_FILE_ERROR_EXIST",G_FILE_ERROR_EXIST,0);
-CheckEnum("G_FILE_ERROR_ISDIR",G_FILE_ERROR_ISDIR,1);
-CheckEnum("G_FILE_ERROR_ACCES",G_FILE_ERROR_ACCES,2);
-CheckEnum("G_FILE_ERROR_NAMETOOLONG",G_FILE_ERROR_NAMETOOLONG,3);
-CheckEnum("G_FILE_ERROR_NOENT",G_FILE_ERROR_NOENT,4);
-CheckEnum("G_FILE_ERROR_NOTDIR",G_FILE_ERROR_NOTDIR,5);
-CheckEnum("G_FILE_ERROR_NXIO",G_FILE_ERROR_NXIO,6);
-CheckEnum("G_FILE_ERROR_NODEV",G_FILE_ERROR_NODEV,7);
-CheckEnum("G_FILE_ERROR_ROFS",G_FILE_ERROR_ROFS,8);
-CheckEnum("G_FILE_ERROR_TXTBSY",G_FILE_ERROR_TXTBSY,9);
-CheckEnum("G_FILE_ERROR_FAULT",G_FILE_ERROR_FAULT,10);
-CheckEnum("G_FILE_ERROR_LOOP",G_FILE_ERROR_LOOP,11);
-CheckEnum("G_FILE_ERROR_NOSPC",G_FILE_ERROR_NOSPC,12);
-CheckEnum("G_FILE_ERROR_NOMEM",G_FILE_ERROR_NOMEM,13);
-CheckEnum("G_FILE_ERROR_MFILE",G_FILE_ERROR_MFILE,14);
-CheckEnum("G_FILE_ERROR_NFILE",G_FILE_ERROR_NFILE,15);
-CheckEnum("G_FILE_ERROR_BADF",G_FILE_ERROR_BADF,16);
-CheckEnum("G_FILE_ERROR_INVAL",G_FILE_ERROR_INVAL,17);
-CheckEnum("G_FILE_ERROR_PIPE",G_FILE_ERROR_PIPE,18);
-CheckEnum("G_FILE_ERROR_AGAIN",G_FILE_ERROR_AGAIN,19);
-CheckEnum("G_FILE_ERROR_INTR",G_FILE_ERROR_INTR,20);
-CheckEnum("G_FILE_ERROR_IO",G_FILE_ERROR_IO,21);
-CheckEnum("G_FILE_ERROR_PERM",G_FILE_ERROR_PERM,22);
-CheckEnum("G_FILE_ERROR_NOSYS",G_FILE_ERROR_NOSYS,23);
-CheckEnum("G_FILE_ERROR_FAILED",G_FILE_ERROR_FAILED,24);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11709,0);
 Msg("Find size of anon-glib-2.0/glib.h-17 (11709)\n");
@@ -10264,10 +9172,6 @@ Msg("Find size of GFileError (11710)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11711,0);
 Msg("Find size of fptr_glib_97 (11711)\n");
@@ -10384,10 +9288,6 @@ Msg("Find size of _GMemVTable (11713)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11714,0);
 Msg("Find size of fptr_glib_389 (11714)\n");
@@ -10396,10 +9296,6 @@ Msg("Find size of fptr_glib_389 (11714)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11715,0);
 Msg("Find size of fptr_glib_249 (11715)\n");
@@ -10408,10 +9304,6 @@ Msg("Find size of fptr_glib_249 (11715)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11716,0);
 Msg("Find size of fptr_glib_425 (11716)\n");
@@ -10582,38 +9474,6 @@ CheckEnum("G_OPTION_ARG_CALLBACK",G_OPTION_ARG_CALLBACK,3);
 CheckEnum("G_OPTION_ARG_FILENAME",G_OPTION_ARG_FILENAME,4);
 CheckEnum("G_OPTION_ARG_STRING_ARRAY",G_OPTION_ARG_STRING_ARRAY,5);
 CheckEnum("G_OPTION_ARG_FILENAME_ARRAY",G_OPTION_ARG_FILENAME_ARRAY,6);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_OPTION_ARG_NONE",G_OPTION_ARG_NONE,0);
-CheckEnum("G_OPTION_ARG_STRING",G_OPTION_ARG_STRING,1);
-CheckEnum("G_OPTION_ARG_INT",G_OPTION_ARG_INT,2);
-CheckEnum("G_OPTION_ARG_CALLBACK",G_OPTION_ARG_CALLBACK,3);
-CheckEnum("G_OPTION_ARG_FILENAME",G_OPTION_ARG_FILENAME,4);
-CheckEnum("G_OPTION_ARG_STRING_ARRAY",G_OPTION_ARG_STRING_ARRAY,5);
-CheckEnum("G_OPTION_ARG_FILENAME_ARRAY",G_OPTION_ARG_FILENAME_ARRAY,6);
-#elif __powerpc64__
-CheckEnum("G_OPTION_ARG_NONE",G_OPTION_ARG_NONE,0);
-CheckEnum("G_OPTION_ARG_STRING",G_OPTION_ARG_STRING,1);
-CheckEnum("G_OPTION_ARG_INT",G_OPTION_ARG_INT,2);
-CheckEnum("G_OPTION_ARG_CALLBACK",G_OPTION_ARG_CALLBACK,3);
-CheckEnum("G_OPTION_ARG_FILENAME",G_OPTION_ARG_FILENAME,4);
-CheckEnum("G_OPTION_ARG_STRING_ARRAY",G_OPTION_ARG_STRING_ARRAY,5);
-CheckEnum("G_OPTION_ARG_FILENAME_ARRAY",G_OPTION_ARG_FILENAME_ARRAY,6);
-#elif __s390__ && !__s390x__
-CheckEnum("G_OPTION_ARG_NONE",G_OPTION_ARG_NONE,0);
-CheckEnum("G_OPTION_ARG_STRING",G_OPTION_ARG_STRING,1);
-CheckEnum("G_OPTION_ARG_INT",G_OPTION_ARG_INT,2);
-CheckEnum("G_OPTION_ARG_CALLBACK",G_OPTION_ARG_CALLBACK,3);
-CheckEnum("G_OPTION_ARG_FILENAME",G_OPTION_ARG_FILENAME,4);
-CheckEnum("G_OPTION_ARG_STRING_ARRAY",G_OPTION_ARG_STRING_ARRAY,5);
-CheckEnum("G_OPTION_ARG_FILENAME_ARRAY",G_OPTION_ARG_FILENAME_ARRAY,6);
-#elif __s390x__
-CheckEnum("G_OPTION_ARG_NONE",G_OPTION_ARG_NONE,0);
-CheckEnum("G_OPTION_ARG_STRING",G_OPTION_ARG_STRING,1);
-CheckEnum("G_OPTION_ARG_INT",G_OPTION_ARG_INT,2);
-CheckEnum("G_OPTION_ARG_CALLBACK",G_OPTION_ARG_CALLBACK,3);
-CheckEnum("G_OPTION_ARG_FILENAME",G_OPTION_ARG_FILENAME,4);
-CheckEnum("G_OPTION_ARG_STRING_ARRAY",G_OPTION_ARG_STRING_ARRAY,5);
-CheckEnum("G_OPTION_ARG_FILENAME_ARRAY",G_OPTION_ARG_FILENAME_ARRAY,6);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11720,0);
 Msg("Find size of anon-glib-2.0/glib.h-54 (11720)\n");
@@ -10679,10 +9539,6 @@ Msg("Find size of const GOptionEntry (11723)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11724,0);
 Msg("Find size of const GOptionEntry * (11724)\n");
@@ -10781,130 +9637,6 @@ CheckEnum("G_UNICODE_OTHER_SYMBOL",G_UNICODE_OTHER_SYMBOL,26);
 CheckEnum("G_UNICODE_LINE_SEPARATOR",G_UNICODE_LINE_SEPARATOR,27);
 CheckEnum("G_UNICODE_PARAGRAPH_SEPARATOR",G_UNICODE_PARAGRAPH_SEPARATOR,28);
 CheckEnum("G_UNICODE_SPACE_SEPARATOR",G_UNICODE_SPACE_SEPARATOR,29);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_UNICODE_CONTROL",G_UNICODE_CONTROL,0);
-CheckEnum("G_UNICODE_FORMAT",G_UNICODE_FORMAT,1);
-CheckEnum("G_UNICODE_UNASSIGNED",G_UNICODE_UNASSIGNED,2);
-CheckEnum("G_UNICODE_PRIVATE_USE",G_UNICODE_PRIVATE_USE,3);
-CheckEnum("G_UNICODE_SURROGATE",G_UNICODE_SURROGATE,4);
-CheckEnum("G_UNICODE_LOWERCASE_LETTER",G_UNICODE_LOWERCASE_LETTER,5);
-CheckEnum("G_UNICODE_MODIFIER_LETTER",G_UNICODE_MODIFIER_LETTER,6);
-CheckEnum("G_UNICODE_OTHER_LETTER",G_UNICODE_OTHER_LETTER,7);
-CheckEnum("G_UNICODE_TITLECASE_LETTER",G_UNICODE_TITLECASE_LETTER,8);
-CheckEnum("G_UNICODE_UPPERCASE_LETTER",G_UNICODE_UPPERCASE_LETTER,9);
-CheckEnum("G_UNICODE_COMBINING_MARK",G_UNICODE_COMBINING_MARK,10);
-CheckEnum("G_UNICODE_ENCLOSING_MARK",G_UNICODE_ENCLOSING_MARK,11);
-CheckEnum("G_UNICODE_NON_SPACING_MARK",G_UNICODE_NON_SPACING_MARK,12);
-CheckEnum("G_UNICODE_DECIMAL_NUMBER",G_UNICODE_DECIMAL_NUMBER,13);
-CheckEnum("G_UNICODE_LETTER_NUMBER",G_UNICODE_LETTER_NUMBER,14);
-CheckEnum("G_UNICODE_OTHER_NUMBER",G_UNICODE_OTHER_NUMBER,15);
-CheckEnum("G_UNICODE_CONNECT_PUNCTUATION",G_UNICODE_CONNECT_PUNCTUATION,16);
-CheckEnum("G_UNICODE_DASH_PUNCTUATION",G_UNICODE_DASH_PUNCTUATION,17);
-CheckEnum("G_UNICODE_CLOSE_PUNCTUATION",G_UNICODE_CLOSE_PUNCTUATION,18);
-CheckEnum("G_UNICODE_FINAL_PUNCTUATION",G_UNICODE_FINAL_PUNCTUATION,19);
-CheckEnum("G_UNICODE_INITIAL_PUNCTUATION",G_UNICODE_INITIAL_PUNCTUATION,20);
-CheckEnum("G_UNICODE_OTHER_PUNCTUATION",G_UNICODE_OTHER_PUNCTUATION,21);
-CheckEnum("G_UNICODE_OPEN_PUNCTUATION",G_UNICODE_OPEN_PUNCTUATION,22);
-CheckEnum("G_UNICODE_CURRENCY_SYMBOL",G_UNICODE_CURRENCY_SYMBOL,23);
-CheckEnum("G_UNICODE_MODIFIER_SYMBOL",G_UNICODE_MODIFIER_SYMBOL,24);
-CheckEnum("G_UNICODE_MATH_SYMBOL",G_UNICODE_MATH_SYMBOL,25);
-CheckEnum("G_UNICODE_OTHER_SYMBOL",G_UNICODE_OTHER_SYMBOL,26);
-CheckEnum("G_UNICODE_LINE_SEPARATOR",G_UNICODE_LINE_SEPARATOR,27);
-CheckEnum("G_UNICODE_PARAGRAPH_SEPARATOR",G_UNICODE_PARAGRAPH_SEPARATOR,28);
-CheckEnum("G_UNICODE_SPACE_SEPARATOR",G_UNICODE_SPACE_SEPARATOR,29);
-#elif __powerpc64__
-CheckEnum("G_UNICODE_CONTROL",G_UNICODE_CONTROL,0);
-CheckEnum("G_UNICODE_FORMAT",G_UNICODE_FORMAT,1);
-CheckEnum("G_UNICODE_UNASSIGNED",G_UNICODE_UNASSIGNED,2);
-CheckEnum("G_UNICODE_PRIVATE_USE",G_UNICODE_PRIVATE_USE,3);
-CheckEnum("G_UNICODE_SURROGATE",G_UNICODE_SURROGATE,4);
-CheckEnum("G_UNICODE_LOWERCASE_LETTER",G_UNICODE_LOWERCASE_LETTER,5);
-CheckEnum("G_UNICODE_MODIFIER_LETTER",G_UNICODE_MODIFIER_LETTER,6);
-CheckEnum("G_UNICODE_OTHER_LETTER",G_UNICODE_OTHER_LETTER,7);
-CheckEnum("G_UNICODE_TITLECASE_LETTER",G_UNICODE_TITLECASE_LETTER,8);
-CheckEnum("G_UNICODE_UPPERCASE_LETTER",G_UNICODE_UPPERCASE_LETTER,9);
-CheckEnum("G_UNICODE_COMBINING_MARK",G_UNICODE_COMBINING_MARK,10);
-CheckEnum("G_UNICODE_ENCLOSING_MARK",G_UNICODE_ENCLOSING_MARK,11);
-CheckEnum("G_UNICODE_NON_SPACING_MARK",G_UNICODE_NON_SPACING_MARK,12);
-CheckEnum("G_UNICODE_DECIMAL_NUMBER",G_UNICODE_DECIMAL_NUMBER,13);
-CheckEnum("G_UNICODE_LETTER_NUMBER",G_UNICODE_LETTER_NUMBER,14);
-CheckEnum("G_UNICODE_OTHER_NUMBER",G_UNICODE_OTHER_NUMBER,15);
-CheckEnum("G_UNICODE_CONNECT_PUNCTUATION",G_UNICODE_CONNECT_PUNCTUATION,16);
-CheckEnum("G_UNICODE_DASH_PUNCTUATION",G_UNICODE_DASH_PUNCTUATION,17);
-CheckEnum("G_UNICODE_CLOSE_PUNCTUATION",G_UNICODE_CLOSE_PUNCTUATION,18);
-CheckEnum("G_UNICODE_FINAL_PUNCTUATION",G_UNICODE_FINAL_PUNCTUATION,19);
-CheckEnum("G_UNICODE_INITIAL_PUNCTUATION",G_UNICODE_INITIAL_PUNCTUATION,20);
-CheckEnum("G_UNICODE_OTHER_PUNCTUATION",G_UNICODE_OTHER_PUNCTUATION,21);
-CheckEnum("G_UNICODE_OPEN_PUNCTUATION",G_UNICODE_OPEN_PUNCTUATION,22);
-CheckEnum("G_UNICODE_CURRENCY_SYMBOL",G_UNICODE_CURRENCY_SYMBOL,23);
-CheckEnum("G_UNICODE_MODIFIER_SYMBOL",G_UNICODE_MODIFIER_SYMBOL,24);
-CheckEnum("G_UNICODE_MATH_SYMBOL",G_UNICODE_MATH_SYMBOL,25);
-CheckEnum("G_UNICODE_OTHER_SYMBOL",G_UNICODE_OTHER_SYMBOL,26);
-CheckEnum("G_UNICODE_LINE_SEPARATOR",G_UNICODE_LINE_SEPARATOR,27);
-CheckEnum("G_UNICODE_PARAGRAPH_SEPARATOR",G_UNICODE_PARAGRAPH_SEPARATOR,28);
-CheckEnum("G_UNICODE_SPACE_SEPARATOR",G_UNICODE_SPACE_SEPARATOR,29);
-#elif __s390__ && !__s390x__
-CheckEnum("G_UNICODE_CONTROL",G_UNICODE_CONTROL,0);
-CheckEnum("G_UNICODE_FORMAT",G_UNICODE_FORMAT,1);
-CheckEnum("G_UNICODE_UNASSIGNED",G_UNICODE_UNASSIGNED,2);
-CheckEnum("G_UNICODE_PRIVATE_USE",G_UNICODE_PRIVATE_USE,3);
-CheckEnum("G_UNICODE_SURROGATE",G_UNICODE_SURROGATE,4);
-CheckEnum("G_UNICODE_LOWERCASE_LETTER",G_UNICODE_LOWERCASE_LETTER,5);
-CheckEnum("G_UNICODE_MODIFIER_LETTER",G_UNICODE_MODIFIER_LETTER,6);
-CheckEnum("G_UNICODE_OTHER_LETTER",G_UNICODE_OTHER_LETTER,7);
-CheckEnum("G_UNICODE_TITLECASE_LETTER",G_UNICODE_TITLECASE_LETTER,8);
-CheckEnum("G_UNICODE_UPPERCASE_LETTER",G_UNICODE_UPPERCASE_LETTER,9);
-CheckEnum("G_UNICODE_COMBINING_MARK",G_UNICODE_COMBINING_MARK,10);
-CheckEnum("G_UNICODE_ENCLOSING_MARK",G_UNICODE_ENCLOSING_MARK,11);
-CheckEnum("G_UNICODE_NON_SPACING_MARK",G_UNICODE_NON_SPACING_MARK,12);
-CheckEnum("G_UNICODE_DECIMAL_NUMBER",G_UNICODE_DECIMAL_NUMBER,13);
-CheckEnum("G_UNICODE_LETTER_NUMBER",G_UNICODE_LETTER_NUMBER,14);
-CheckEnum("G_UNICODE_OTHER_NUMBER",G_UNICODE_OTHER_NUMBER,15);
-CheckEnum("G_UNICODE_CONNECT_PUNCTUATION",G_UNICODE_CONNECT_PUNCTUATION,16);
-CheckEnum("G_UNICODE_DASH_PUNCTUATION",G_UNICODE_DASH_PUNCTUATION,17);
-CheckEnum("G_UNICODE_CLOSE_PUNCTUATION",G_UNICODE_CLOSE_PUNCTUATION,18);
-CheckEnum("G_UNICODE_FINAL_PUNCTUATION",G_UNICODE_FINAL_PUNCTUATION,19);
-CheckEnum("G_UNICODE_INITIAL_PUNCTUATION",G_UNICODE_INITIAL_PUNCTUATION,20);
-CheckEnum("G_UNICODE_OTHER_PUNCTUATION",G_UNICODE_OTHER_PUNCTUATION,21);
-CheckEnum("G_UNICODE_OPEN_PUNCTUATION",G_UNICODE_OPEN_PUNCTUATION,22);
-CheckEnum("G_UNICODE_CURRENCY_SYMBOL",G_UNICODE_CURRENCY_SYMBOL,23);
-CheckEnum("G_UNICODE_MODIFIER_SYMBOL",G_UNICODE_MODIFIER_SYMBOL,24);
-CheckEnum("G_UNICODE_MATH_SYMBOL",G_UNICODE_MATH_SYMBOL,25);
-CheckEnum("G_UNICODE_OTHER_SYMBOL",G_UNICODE_OTHER_SYMBOL,26);
-CheckEnum("G_UNICODE_LINE_SEPARATOR",G_UNICODE_LINE_SEPARATOR,27);
-CheckEnum("G_UNICODE_PARAGRAPH_SEPARATOR",G_UNICODE_PARAGRAPH_SEPARATOR,28);
-CheckEnum("G_UNICODE_SPACE_SEPARATOR",G_UNICODE_SPACE_SEPARATOR,29);
-#elif __s390x__
-CheckEnum("G_UNICODE_CONTROL",G_UNICODE_CONTROL,0);
-CheckEnum("G_UNICODE_FORMAT",G_UNICODE_FORMAT,1);
-CheckEnum("G_UNICODE_UNASSIGNED",G_UNICODE_UNASSIGNED,2);
-CheckEnum("G_UNICODE_PRIVATE_USE",G_UNICODE_PRIVATE_USE,3);
-CheckEnum("G_UNICODE_SURROGATE",G_UNICODE_SURROGATE,4);
-CheckEnum("G_UNICODE_LOWERCASE_LETTER",G_UNICODE_LOWERCASE_LETTER,5);
-CheckEnum("G_UNICODE_MODIFIER_LETTER",G_UNICODE_MODIFIER_LETTER,6);
-CheckEnum("G_UNICODE_OTHER_LETTER",G_UNICODE_OTHER_LETTER,7);
-CheckEnum("G_UNICODE_TITLECASE_LETTER",G_UNICODE_TITLECASE_LETTER,8);
-CheckEnum("G_UNICODE_UPPERCASE_LETTER",G_UNICODE_UPPERCASE_LETTER,9);
-CheckEnum("G_UNICODE_COMBINING_MARK",G_UNICODE_COMBINING_MARK,10);
-CheckEnum("G_UNICODE_ENCLOSING_MARK",G_UNICODE_ENCLOSING_MARK,11);
-CheckEnum("G_UNICODE_NON_SPACING_MARK",G_UNICODE_NON_SPACING_MARK,12);
-CheckEnum("G_UNICODE_DECIMAL_NUMBER",G_UNICODE_DECIMAL_NUMBER,13);
-CheckEnum("G_UNICODE_LETTER_NUMBER",G_UNICODE_LETTER_NUMBER,14);
-CheckEnum("G_UNICODE_OTHER_NUMBER",G_UNICODE_OTHER_NUMBER,15);
-CheckEnum("G_UNICODE_CONNECT_PUNCTUATION",G_UNICODE_CONNECT_PUNCTUATION,16);
-CheckEnum("G_UNICODE_DASH_PUNCTUATION",G_UNICODE_DASH_PUNCTUATION,17);
-CheckEnum("G_UNICODE_CLOSE_PUNCTUATION",G_UNICODE_CLOSE_PUNCTUATION,18);
-CheckEnum("G_UNICODE_FINAL_PUNCTUATION",G_UNICODE_FINAL_PUNCTUATION,19);
-CheckEnum("G_UNICODE_INITIAL_PUNCTUATION",G_UNICODE_INITIAL_PUNCTUATION,20);
-CheckEnum("G_UNICODE_OTHER_PUNCTUATION",G_UNICODE_OTHER_PUNCTUATION,21);
-CheckEnum("G_UNICODE_OPEN_PUNCTUATION",G_UNICODE_OPEN_PUNCTUATION,22);
-CheckEnum("G_UNICODE_CURRENCY_SYMBOL",G_UNICODE_CURRENCY_SYMBOL,23);
-CheckEnum("G_UNICODE_MODIFIER_SYMBOL",G_UNICODE_MODIFIER_SYMBOL,24);
-CheckEnum("G_UNICODE_MATH_SYMBOL",G_UNICODE_MATH_SYMBOL,25);
-CheckEnum("G_UNICODE_OTHER_SYMBOL",G_UNICODE_OTHER_SYMBOL,26);
-CheckEnum("G_UNICODE_LINE_SEPARATOR",G_UNICODE_LINE_SEPARATOR,27);
-CheckEnum("G_UNICODE_PARAGRAPH_SEPARATOR",G_UNICODE_PARAGRAPH_SEPARATOR,28);
-CheckEnum("G_UNICODE_SPACE_SEPARATOR",G_UNICODE_SPACE_SEPARATOR,29);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11725,0);
 Msg("Find size of anon-glib-2.0/glib.h-79 (11725)\n");
@@ -10932,10 +9664,6 @@ Msg("Find size of GUnicodeType (11726)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11727,0);
 Msg("Find size of fptr_glib_204 (11727)\n");
@@ -10966,14 +9694,6 @@ CheckTypeSize(GAllocator,0, 11730, 2)
 CheckTypeSize(GAllocator,0, 11730, 11)
 #elif __ia64__
 CheckTypeSize(GAllocator,0, 11730, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GAllocator,0, 11730, 6)
-#elif __powerpc64__
-CheckTypeSize(GAllocator,0, 11730, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GAllocator,0, 11730, 10)
-#elif __s390x__
-CheckTypeSize(GAllocator,0, 11730, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11730,0);
 Msg("Find size of GAllocator (11730)\n");
@@ -11001,10 +9721,6 @@ Msg("Find size of GAllocator * (11731)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11732,0);
 Msg("Find size of fptr_glib_62 (11732)\n");
@@ -11051,10 +9767,6 @@ Msg("Find size of const gunichar2 (11734)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11735,0);
 Msg("Find size of const gunichar2 * (11735)\n");
@@ -11063,10 +9775,6 @@ Msg("Find size of const gunichar2 * (11735)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11736,0);
 Msg("Find size of fptr_glib_2 (11736)\n");
@@ -11151,10 +9859,6 @@ Msg("Find size of const GString (11740)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11741,0);
 Msg("Find size of const GString * (11741)\n");
@@ -11234,10 +9938,6 @@ Msg("Find size of GTuples * (11744)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11745,0);
 Msg("Find size of fptr_glib_126 (11745)\n");
@@ -11265,10 +9965,6 @@ Msg("Find size of GCopyFunc (11746)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11747,0);
 Msg("Find size of fptr_glib_0 (11747)\n");
@@ -11368,30 +10064,6 @@ CheckEnum("G_FILE_TEST_IS_SYMLINK",G_FILE_TEST_IS_SYMLINK,2);
 CheckEnum("G_FILE_TEST_IS_DIR",G_FILE_TEST_IS_DIR,4);
 CheckEnum("G_FILE_TEST_IS_EXECUTABLE",G_FILE_TEST_IS_EXECUTABLE,8);
 CheckEnum("G_FILE_TEST_EXISTS",G_FILE_TEST_EXISTS,16);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_FILE_TEST_IS_REGULAR",G_FILE_TEST_IS_REGULAR,1);
-CheckEnum("G_FILE_TEST_IS_SYMLINK",G_FILE_TEST_IS_SYMLINK,2);
-CheckEnum("G_FILE_TEST_IS_DIR",G_FILE_TEST_IS_DIR,4);
-CheckEnum("G_FILE_TEST_IS_EXECUTABLE",G_FILE_TEST_IS_EXECUTABLE,8);
-CheckEnum("G_FILE_TEST_EXISTS",G_FILE_TEST_EXISTS,16);
-#elif __powerpc64__
-CheckEnum("G_FILE_TEST_IS_REGULAR",G_FILE_TEST_IS_REGULAR,1);
-CheckEnum("G_FILE_TEST_IS_SYMLINK",G_FILE_TEST_IS_SYMLINK,2);
-CheckEnum("G_FILE_TEST_IS_DIR",G_FILE_TEST_IS_DIR,4);
-CheckEnum("G_FILE_TEST_IS_EXECUTABLE",G_FILE_TEST_IS_EXECUTABLE,8);
-CheckEnum("G_FILE_TEST_EXISTS",G_FILE_TEST_EXISTS,16);
-#elif __s390__ && !__s390x__
-CheckEnum("G_FILE_TEST_IS_REGULAR",G_FILE_TEST_IS_REGULAR,1);
-CheckEnum("G_FILE_TEST_IS_SYMLINK",G_FILE_TEST_IS_SYMLINK,2);
-CheckEnum("G_FILE_TEST_IS_DIR",G_FILE_TEST_IS_DIR,4);
-CheckEnum("G_FILE_TEST_IS_EXECUTABLE",G_FILE_TEST_IS_EXECUTABLE,8);
-CheckEnum("G_FILE_TEST_EXISTS",G_FILE_TEST_EXISTS,16);
-#elif __s390x__
-CheckEnum("G_FILE_TEST_IS_REGULAR",G_FILE_TEST_IS_REGULAR,1);
-CheckEnum("G_FILE_TEST_IS_SYMLINK",G_FILE_TEST_IS_SYMLINK,2);
-CheckEnum("G_FILE_TEST_IS_DIR",G_FILE_TEST_IS_DIR,4);
-CheckEnum("G_FILE_TEST_IS_EXECUTABLE",G_FILE_TEST_IS_EXECUTABLE,8);
-CheckEnum("G_FILE_TEST_EXISTS",G_FILE_TEST_EXISTS,16);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11752,0);
 Msg("Find size of anon-glib-2.0/glib.h-18 (11752)\n");
@@ -11458,22 +10130,6 @@ CheckEnum("G_ONCE_STATUS_NOTCALLED",G_ONCE_STATUS_NOTCALLED,0);
 CheckEnum("G_ONCE_STATUS_PROGRESS",G_ONCE_STATUS_PROGRESS,1);
 CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
 #elif __ia64__
-CheckEnum("G_ONCE_STATUS_NOTCALLED",G_ONCE_STATUS_NOTCALLED,0);
-CheckEnum("G_ONCE_STATUS_PROGRESS",G_ONCE_STATUS_PROGRESS,1);
-CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_ONCE_STATUS_NOTCALLED",G_ONCE_STATUS_NOTCALLED,0);
-CheckEnum("G_ONCE_STATUS_PROGRESS",G_ONCE_STATUS_PROGRESS,1);
-CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
-#elif __powerpc64__
-CheckEnum("G_ONCE_STATUS_NOTCALLED",G_ONCE_STATUS_NOTCALLED,0);
-CheckEnum("G_ONCE_STATUS_PROGRESS",G_ONCE_STATUS_PROGRESS,1);
-CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
-#elif __s390__ && !__s390x__
-CheckEnum("G_ONCE_STATUS_NOTCALLED",G_ONCE_STATUS_NOTCALLED,0);
-CheckEnum("G_ONCE_STATUS_PROGRESS",G_ONCE_STATUS_PROGRESS,1);
-CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
-#elif __s390x__
 CheckEnum("G_ONCE_STATUS_NOTCALLED",G_ONCE_STATUS_NOTCALLED,0);
 CheckEnum("G_ONCE_STATUS_PROGRESS",G_ONCE_STATUS_PROGRESS,1);
 CheckEnum("G_ONCE_STATUS_READY",G_ONCE_STATUS_READY,2);
@@ -11599,10 +10255,6 @@ Msg("Find size of const GScannerConfig (11761)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11762,0);
 Msg("Find size of const GScannerConfig * (11762)\n");
@@ -11649,10 +10301,6 @@ Msg("Find size of const guint8 (11764)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11765,0);
 Msg("Find size of const guint8 * (11765)\n");
@@ -11661,10 +10309,6 @@ Msg("Find size of const guint8 * (11765)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11766,0);
 Msg("Find size of gchar * * * (11766)\n");
@@ -11692,10 +10336,6 @@ Msg("Find size of GTraverseFunc (11767)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11768,0);
 Msg("Find size of fptr_glib_302 (11768)\n");
@@ -11723,10 +10363,6 @@ Msg("Find size of GHookCompareFunc (11769)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11770,0);
 Msg("Find size of fptr_glib_244 (11770)\n");
@@ -11825,10 +10461,6 @@ Msg("Find size of const GDebugKey (11774)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11775,0);
 Msg("Find size of const GDebugKey * (11775)\n");
@@ -12136,10 +10768,6 @@ Msg("Find size of _GThreadFunctions (11776)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11777,0);
 Msg("Find size of fptr_glib_287 (11777)\n");
@@ -12148,10 +10776,6 @@ Msg("Find size of fptr_glib_287 (11777)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11778,0);
 Msg("Find size of fptr_glib_284 (11778)\n");
@@ -12160,10 +10784,6 @@ Msg("Find size of fptr_glib_284 (11778)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11779,0);
 Msg("Find size of fptr_glib_194 (11779)\n");
@@ -12172,10 +10792,6 @@ Msg("Find size of fptr_glib_194 (11779)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11780,0);
 Msg("Find size of fptr_glib_93 (11780)\n");
@@ -12184,10 +10800,6 @@ Msg("Find size of fptr_glib_93 (11780)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11781,0);
 Msg("Find size of fptr_glib_364 (11781)\n");
@@ -12196,10 +10808,6 @@ Msg("Find size of fptr_glib_364 (11781)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11782,0);
 Msg("Find size of fptr_glib_353 (11782)\n");
@@ -12208,10 +10816,6 @@ Msg("Find size of fptr_glib_353 (11782)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11783,0);
 Msg("Find size of fptr_glib_214 (11783)\n");
@@ -12223,14 +10827,6 @@ CheckTypeSize(GPrivate,0, 11785, 2)
 CheckTypeSize(GPrivate,0, 11785, 11)
 #elif __ia64__
 CheckTypeSize(GPrivate,0, 11785, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GPrivate,0, 11785, 6)
-#elif __powerpc64__
-CheckTypeSize(GPrivate,0, 11785, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GPrivate,0, 11785, 10)
-#elif __s390x__
-CheckTypeSize(GPrivate,0, 11785, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11785,0);
 Msg("Find size of GPrivate (11785)\n");
@@ -12258,10 +10854,6 @@ Msg("Find size of GPrivate * (11786)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11787,0);
 Msg("Find size of fptr_glib_304 (11787)\n");
@@ -12270,10 +10862,6 @@ Msg("Find size of fptr_glib_304 (11787)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11788,0);
 Msg("Find size of fptr_glib_293 (11788)\n");
@@ -12282,10 +10870,6 @@ Msg("Find size of fptr_glib_293 (11788)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11789,0);
 Msg("Find size of fptr_glib_26 (11789)\n");
@@ -12294,10 +10878,6 @@ Msg("Find size of fptr_glib_26 (11789)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11790,0);
 Msg("Find size of fptr_glib_94 (11790)\n");
@@ -12306,10 +10886,6 @@ Msg("Find size of fptr_glib_94 (11790)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11791,0);
 Msg("Find size of fptr_glib_73 (11791)\n");
@@ -12318,10 +10894,6 @@ Msg("Find size of fptr_glib_73 (11791)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11792,0);
 Msg("Find size of fptr_glib_245 (11792)\n");
@@ -12349,10 +10921,6 @@ Msg("Find size of GThreadFunctions (11793)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11794,0);
 Msg("Find size of fptr_glib_11 (11794)\n");
@@ -12407,46 +10975,6 @@ CheckEnum("G_IO_CHANNEL_ERROR_NXIO",G_IO_CHANNEL_ERROR_NXIO,5);
 CheckEnum("G_IO_CHANNEL_ERROR_OVERFLOW",G_IO_CHANNEL_ERROR_OVERFLOW,6);
 CheckEnum("G_IO_CHANNEL_ERROR_PIPE",G_IO_CHANNEL_ERROR_PIPE,7);
 CheckEnum("G_IO_CHANNEL_ERROR_FAILED",G_IO_CHANNEL_ERROR_FAILED,8);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_IO_CHANNEL_ERROR_FBIG",G_IO_CHANNEL_ERROR_FBIG,0);
-CheckEnum("G_IO_CHANNEL_ERROR_INVAL",G_IO_CHANNEL_ERROR_INVAL,1);
-CheckEnum("G_IO_CHANNEL_ERROR_IO",G_IO_CHANNEL_ERROR_IO,2);
-CheckEnum("G_IO_CHANNEL_ERROR_ISDIR",G_IO_CHANNEL_ERROR_ISDIR,3);
-CheckEnum("G_IO_CHANNEL_ERROR_NOSPC",G_IO_CHANNEL_ERROR_NOSPC,4);
-CheckEnum("G_IO_CHANNEL_ERROR_NXIO",G_IO_CHANNEL_ERROR_NXIO,5);
-CheckEnum("G_IO_CHANNEL_ERROR_OVERFLOW",G_IO_CHANNEL_ERROR_OVERFLOW,6);
-CheckEnum("G_IO_CHANNEL_ERROR_PIPE",G_IO_CHANNEL_ERROR_PIPE,7);
-CheckEnum("G_IO_CHANNEL_ERROR_FAILED",G_IO_CHANNEL_ERROR_FAILED,8);
-#elif __powerpc64__
-CheckEnum("G_IO_CHANNEL_ERROR_FBIG",G_IO_CHANNEL_ERROR_FBIG,0);
-CheckEnum("G_IO_CHANNEL_ERROR_INVAL",G_IO_CHANNEL_ERROR_INVAL,1);
-CheckEnum("G_IO_CHANNEL_ERROR_IO",G_IO_CHANNEL_ERROR_IO,2);
-CheckEnum("G_IO_CHANNEL_ERROR_ISDIR",G_IO_CHANNEL_ERROR_ISDIR,3);
-CheckEnum("G_IO_CHANNEL_ERROR_NOSPC",G_IO_CHANNEL_ERROR_NOSPC,4);
-CheckEnum("G_IO_CHANNEL_ERROR_NXIO",G_IO_CHANNEL_ERROR_NXIO,5);
-CheckEnum("G_IO_CHANNEL_ERROR_OVERFLOW",G_IO_CHANNEL_ERROR_OVERFLOW,6);
-CheckEnum("G_IO_CHANNEL_ERROR_PIPE",G_IO_CHANNEL_ERROR_PIPE,7);
-CheckEnum("G_IO_CHANNEL_ERROR_FAILED",G_IO_CHANNEL_ERROR_FAILED,8);
-#elif __s390__ && !__s390x__
-CheckEnum("G_IO_CHANNEL_ERROR_FBIG",G_IO_CHANNEL_ERROR_FBIG,0);
-CheckEnum("G_IO_CHANNEL_ERROR_INVAL",G_IO_CHANNEL_ERROR_INVAL,1);
-CheckEnum("G_IO_CHANNEL_ERROR_IO",G_IO_CHANNEL_ERROR_IO,2);
-CheckEnum("G_IO_CHANNEL_ERROR_ISDIR",G_IO_CHANNEL_ERROR_ISDIR,3);
-CheckEnum("G_IO_CHANNEL_ERROR_NOSPC",G_IO_CHANNEL_ERROR_NOSPC,4);
-CheckEnum("G_IO_CHANNEL_ERROR_NXIO",G_IO_CHANNEL_ERROR_NXIO,5);
-CheckEnum("G_IO_CHANNEL_ERROR_OVERFLOW",G_IO_CHANNEL_ERROR_OVERFLOW,6);
-CheckEnum("G_IO_CHANNEL_ERROR_PIPE",G_IO_CHANNEL_ERROR_PIPE,7);
-CheckEnum("G_IO_CHANNEL_ERROR_FAILED",G_IO_CHANNEL_ERROR_FAILED,8);
-#elif __s390x__
-CheckEnum("G_IO_CHANNEL_ERROR_FBIG",G_IO_CHANNEL_ERROR_FBIG,0);
-CheckEnum("G_IO_CHANNEL_ERROR_INVAL",G_IO_CHANNEL_ERROR_INVAL,1);
-CheckEnum("G_IO_CHANNEL_ERROR_IO",G_IO_CHANNEL_ERROR_IO,2);
-CheckEnum("G_IO_CHANNEL_ERROR_ISDIR",G_IO_CHANNEL_ERROR_ISDIR,3);
-CheckEnum("G_IO_CHANNEL_ERROR_NOSPC",G_IO_CHANNEL_ERROR_NOSPC,4);
-CheckEnum("G_IO_CHANNEL_ERROR_NXIO",G_IO_CHANNEL_ERROR_NXIO,5);
-CheckEnum("G_IO_CHANNEL_ERROR_OVERFLOW",G_IO_CHANNEL_ERROR_OVERFLOW,6);
-CheckEnum("G_IO_CHANNEL_ERROR_PIPE",G_IO_CHANNEL_ERROR_PIPE,7);
-CheckEnum("G_IO_CHANNEL_ERROR_FAILED",G_IO_CHANNEL_ERROR_FAILED,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11796,0);
 Msg("Find size of anon-glib-2.0/glib.h-22 (11796)\n");
@@ -12474,10 +11002,6 @@ Msg("Find size of GIOChannelError (11797)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11798,0);
 Msg("Find size of fptr_glib_416 (11798)\n");
@@ -12590,22 +11114,6 @@ CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
 CheckEnum("G_DATE_DAY",G_DATE_DAY,0);
 CheckEnum("G_DATE_MONTH",G_DATE_MONTH,1);
 CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_DATE_DAY",G_DATE_DAY,0);
-CheckEnum("G_DATE_MONTH",G_DATE_MONTH,1);
-CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
-#elif __powerpc64__
-CheckEnum("G_DATE_DAY",G_DATE_DAY,0);
-CheckEnum("G_DATE_MONTH",G_DATE_MONTH,1);
-CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
-#elif __s390__ && !__s390x__
-CheckEnum("G_DATE_DAY",G_DATE_DAY,0);
-CheckEnum("G_DATE_MONTH",G_DATE_MONTH,1);
-CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
-#elif __s390x__
-CheckEnum("G_DATE_DAY",G_DATE_DAY,0);
-CheckEnum("G_DATE_MONTH",G_DATE_MONTH,1);
-CheckEnum("G_DATE_YEAR",G_DATE_YEAR,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11804,0);
 Msg("Find size of anon-glib-2.0/glib.h-13 (11804)\n");
@@ -12670,34 +11178,6 @@ CheckEnum("G_MARKUP_ERROR_PARSE",G_MARKUP_ERROR_PARSE,2);
 CheckEnum("G_MARKUP_ERROR_UNKNOWN_ELEMENT",G_MARKUP_ERROR_UNKNOWN_ELEMENT,3);
 CheckEnum("G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE",G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,4);
 CheckEnum("G_MARKUP_ERROR_INVALID_CONTENT",G_MARKUP_ERROR_INVALID_CONTENT,5);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_MARKUP_ERROR_BAD_UTF8",G_MARKUP_ERROR_BAD_UTF8,0);
-CheckEnum("G_MARKUP_ERROR_EMPTY",G_MARKUP_ERROR_EMPTY,1);
-CheckEnum("G_MARKUP_ERROR_PARSE",G_MARKUP_ERROR_PARSE,2);
-CheckEnum("G_MARKUP_ERROR_UNKNOWN_ELEMENT",G_MARKUP_ERROR_UNKNOWN_ELEMENT,3);
-CheckEnum("G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE",G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,4);
-CheckEnum("G_MARKUP_ERROR_INVALID_CONTENT",G_MARKUP_ERROR_INVALID_CONTENT,5);
-#elif __powerpc64__
-CheckEnum("G_MARKUP_ERROR_BAD_UTF8",G_MARKUP_ERROR_BAD_UTF8,0);
-CheckEnum("G_MARKUP_ERROR_EMPTY",G_MARKUP_ERROR_EMPTY,1);
-CheckEnum("G_MARKUP_ERROR_PARSE",G_MARKUP_ERROR_PARSE,2);
-CheckEnum("G_MARKUP_ERROR_UNKNOWN_ELEMENT",G_MARKUP_ERROR_UNKNOWN_ELEMENT,3);
-CheckEnum("G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE",G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,4);
-CheckEnum("G_MARKUP_ERROR_INVALID_CONTENT",G_MARKUP_ERROR_INVALID_CONTENT,5);
-#elif __s390__ && !__s390x__
-CheckEnum("G_MARKUP_ERROR_BAD_UTF8",G_MARKUP_ERROR_BAD_UTF8,0);
-CheckEnum("G_MARKUP_ERROR_EMPTY",G_MARKUP_ERROR_EMPTY,1);
-CheckEnum("G_MARKUP_ERROR_PARSE",G_MARKUP_ERROR_PARSE,2);
-CheckEnum("G_MARKUP_ERROR_UNKNOWN_ELEMENT",G_MARKUP_ERROR_UNKNOWN_ELEMENT,3);
-CheckEnum("G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE",G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,4);
-CheckEnum("G_MARKUP_ERROR_INVALID_CONTENT",G_MARKUP_ERROR_INVALID_CONTENT,5);
-#elif __s390x__
-CheckEnum("G_MARKUP_ERROR_BAD_UTF8",G_MARKUP_ERROR_BAD_UTF8,0);
-CheckEnum("G_MARKUP_ERROR_EMPTY",G_MARKUP_ERROR_EMPTY,1);
-CheckEnum("G_MARKUP_ERROR_PARSE",G_MARKUP_ERROR_PARSE,2);
-CheckEnum("G_MARKUP_ERROR_UNKNOWN_ELEMENT",G_MARKUP_ERROR_UNKNOWN_ELEMENT,3);
-CheckEnum("G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE",G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE,4);
-CheckEnum("G_MARKUP_ERROR_INVALID_CONTENT",G_MARKUP_ERROR_INVALID_CONTENT,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11807,0);
 Msg("Find size of anon-glib-2.0/glib.h-41 (11807)\n");
@@ -12737,26 +11217,6 @@ CheckEnum("G_IO_ERROR_NONE",G_IO_ERROR_NONE,0);
 CheckEnum("G_IO_ERROR_AGAIN",G_IO_ERROR_AGAIN,1);
 CheckEnum("G_IO_ERROR_INVAL",G_IO_ERROR_INVAL,2);
 CheckEnum("G_IO_ERROR_UNKNOWN",G_IO_ERROR_UNKNOWN,3);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_IO_ERROR_NONE",G_IO_ERROR_NONE,0);
-CheckEnum("G_IO_ERROR_AGAIN",G_IO_ERROR_AGAIN,1);
-CheckEnum("G_IO_ERROR_INVAL",G_IO_ERROR_INVAL,2);
-CheckEnum("G_IO_ERROR_UNKNOWN",G_IO_ERROR_UNKNOWN,3);
-#elif __powerpc64__
-CheckEnum("G_IO_ERROR_NONE",G_IO_ERROR_NONE,0);
-CheckEnum("G_IO_ERROR_AGAIN",G_IO_ERROR_AGAIN,1);
-CheckEnum("G_IO_ERROR_INVAL",G_IO_ERROR_INVAL,2);
-CheckEnum("G_IO_ERROR_UNKNOWN",G_IO_ERROR_UNKNOWN,3);
-#elif __s390__ && !__s390x__
-CheckEnum("G_IO_ERROR_NONE",G_IO_ERROR_NONE,0);
-CheckEnum("G_IO_ERROR_AGAIN",G_IO_ERROR_AGAIN,1);
-CheckEnum("G_IO_ERROR_INVAL",G_IO_ERROR_INVAL,2);
-CheckEnum("G_IO_ERROR_UNKNOWN",G_IO_ERROR_UNKNOWN,3);
-#elif __s390x__
-CheckEnum("G_IO_ERROR_NONE",G_IO_ERROR_NONE,0);
-CheckEnum("G_IO_ERROR_AGAIN",G_IO_ERROR_AGAIN,1);
-CheckEnum("G_IO_ERROR_INVAL",G_IO_ERROR_INVAL,2);
-CheckEnum("G_IO_ERROR_UNKNOWN",G_IO_ERROR_UNKNOWN,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11809,0);
 Msg("Find size of anon-glib-2.0/glib.h-21 (11809)\n");
@@ -12784,10 +11244,6 @@ Msg("Find size of GIOError (11810)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11811,0);
 Msg("Find size of fptr_anonymous-glib.h.types-0 (11811)\n");
@@ -12821,22 +11277,6 @@ CheckEnum("G_OPTION_FLAG_HIDDEN",G_OPTION_FLAG_HIDDEN,1 << 0);
 CheckEnum("G_OPTION_FLAG_IN_MAIN",G_OPTION_FLAG_IN_MAIN,1 << 1);
 CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
 #elif __ia64__
-CheckEnum("G_OPTION_FLAG_HIDDEN",G_OPTION_FLAG_HIDDEN,1 << 0);
-CheckEnum("G_OPTION_FLAG_IN_MAIN",G_OPTION_FLAG_IN_MAIN,1 << 1);
-CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_OPTION_FLAG_HIDDEN",G_OPTION_FLAG_HIDDEN,1 << 0);
-CheckEnum("G_OPTION_FLAG_IN_MAIN",G_OPTION_FLAG_IN_MAIN,1 << 1);
-CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
-#elif __powerpc64__
-CheckEnum("G_OPTION_FLAG_HIDDEN",G_OPTION_FLAG_HIDDEN,1 << 0);
-CheckEnum("G_OPTION_FLAG_IN_MAIN",G_OPTION_FLAG_IN_MAIN,1 << 1);
-CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
-#elif __s390__ && !__s390x__
-CheckEnum("G_OPTION_FLAG_HIDDEN",G_OPTION_FLAG_HIDDEN,1 << 0);
-CheckEnum("G_OPTION_FLAG_IN_MAIN",G_OPTION_FLAG_IN_MAIN,1 << 1);
-CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
-#elif __s390x__
 CheckEnum("G_OPTION_FLAG_HIDDEN",G_OPTION_FLAG_HIDDEN,1 << 0);
 CheckEnum("G_OPTION_FLAG_IN_MAIN",G_OPTION_FLAG_IN_MAIN,1 << 1);
 CheckEnum("G_OPTION_FLAG_REVERSE",G_OPTION_FLAG_REVERSE,1 << 2);
@@ -12879,34 +11319,6 @@ CheckEnum("G_CONVERT_ERROR_PARTIAL_INPUT",G_CONVERT_ERROR_PARTIAL_INPUT,(((0) + 
 CheckEnum("G_CONVERT_ERROR_BAD_URI",G_CONVERT_ERROR_BAD_URI,((((0) + 1) + 1) + 1) + 1);
 CheckEnum("G_CONVERT_ERROR_NOT_ABSOLUTE_PATH",G_CONVERT_ERROR_NOT_ABSOLUTE_PATH,(((((0) + 1) + 1) + 1) + 1) + 1);
 #elif __ia64__
-CheckEnum("G_CONVERT_ERROR_NO_CONVERSION",G_CONVERT_ERROR_NO_CONVERSION,0);
-CheckEnum("G_CONVERT_ERROR_ILLEGAL_SEQUENCE",G_CONVERT_ERROR_ILLEGAL_SEQUENCE,(0) + 1);
-CheckEnum("G_CONVERT_ERROR_FAILED",G_CONVERT_ERROR_FAILED,((0) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_PARTIAL_INPUT",G_CONVERT_ERROR_PARTIAL_INPUT,(((0) + 1) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_BAD_URI",G_CONVERT_ERROR_BAD_URI,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_NOT_ABSOLUTE_PATH",G_CONVERT_ERROR_NOT_ABSOLUTE_PATH,(((((0) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_CONVERT_ERROR_NO_CONVERSION",G_CONVERT_ERROR_NO_CONVERSION,0);
-CheckEnum("G_CONVERT_ERROR_ILLEGAL_SEQUENCE",G_CONVERT_ERROR_ILLEGAL_SEQUENCE,(0) + 1);
-CheckEnum("G_CONVERT_ERROR_FAILED",G_CONVERT_ERROR_FAILED,((0) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_PARTIAL_INPUT",G_CONVERT_ERROR_PARTIAL_INPUT,(((0) + 1) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_BAD_URI",G_CONVERT_ERROR_BAD_URI,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_NOT_ABSOLUTE_PATH",G_CONVERT_ERROR_NOT_ABSOLUTE_PATH,(((((0) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("G_CONVERT_ERROR_NO_CONVERSION",G_CONVERT_ERROR_NO_CONVERSION,0);
-CheckEnum("G_CONVERT_ERROR_ILLEGAL_SEQUENCE",G_CONVERT_ERROR_ILLEGAL_SEQUENCE,(0) + 1);
-CheckEnum("G_CONVERT_ERROR_FAILED",G_CONVERT_ERROR_FAILED,((0) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_PARTIAL_INPUT",G_CONVERT_ERROR_PARTIAL_INPUT,(((0) + 1) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_BAD_URI",G_CONVERT_ERROR_BAD_URI,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_NOT_ABSOLUTE_PATH",G_CONVERT_ERROR_NOT_ABSOLUTE_PATH,(((((0) + 1) + 1) + 1) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("G_CONVERT_ERROR_NO_CONVERSION",G_CONVERT_ERROR_NO_CONVERSION,0);
-CheckEnum("G_CONVERT_ERROR_ILLEGAL_SEQUENCE",G_CONVERT_ERROR_ILLEGAL_SEQUENCE,(0) + 1);
-CheckEnum("G_CONVERT_ERROR_FAILED",G_CONVERT_ERROR_FAILED,((0) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_PARTIAL_INPUT",G_CONVERT_ERROR_PARTIAL_INPUT,(((0) + 1) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_BAD_URI",G_CONVERT_ERROR_BAD_URI,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_CONVERT_ERROR_NOT_ABSOLUTE_PATH",G_CONVERT_ERROR_NOT_ABSOLUTE_PATH,(((((0) + 1) + 1) + 1) + 1) + 1);
-#elif __s390x__
 CheckEnum("G_CONVERT_ERROR_NO_CONVERSION",G_CONVERT_ERROR_NO_CONVERSION,0);
 CheckEnum("G_CONVERT_ERROR_ILLEGAL_SEQUENCE",G_CONVERT_ERROR_ILLEGAL_SEQUENCE,(0) + 1);
 CheckEnum("G_CONVERT_ERROR_FAILED",G_CONVERT_ERROR_FAILED,((0) + 1) + 1);
@@ -12964,42 +11376,6 @@ CheckEnum("G_ERR_NON_DIGIT_IN_CONST",G_ERR_NON_DIGIT_IN_CONST,((((0) + 1) + 1) +
 CheckEnum("G_ERR_DIGIT_RADIX",G_ERR_DIGIT_RADIX,(((((0) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("G_ERR_FLOAT_RADIX",G_ERR_FLOAT_RADIX,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("G_ERR_FLOAT_MALFORMED",G_ERR_FLOAT_MALFORMED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_ERR_UNKNOWN",G_ERR_UNKNOWN,0);
-CheckEnum("G_ERR_UNEXP_EOF",G_ERR_UNEXP_EOF,(0) + 1);
-CheckEnum("G_ERR_UNEXP_EOF_IN_STRING",G_ERR_UNEXP_EOF_IN_STRING,((0) + 1) + 1);
-CheckEnum("G_ERR_UNEXP_EOF_IN_COMMENT",G_ERR_UNEXP_EOF_IN_COMMENT,(((0) + 1) + 1) + 1);
-CheckEnum("G_ERR_NON_DIGIT_IN_CONST",G_ERR_NON_DIGIT_IN_CONST,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_DIGIT_RADIX",G_ERR_DIGIT_RADIX,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_FLOAT_RADIX",G_ERR_FLOAT_RADIX,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_FLOAT_MALFORMED",G_ERR_FLOAT_MALFORMED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("G_ERR_UNKNOWN",G_ERR_UNKNOWN,0);
-CheckEnum("G_ERR_UNEXP_EOF",G_ERR_UNEXP_EOF,(0) + 1);
-CheckEnum("G_ERR_UNEXP_EOF_IN_STRING",G_ERR_UNEXP_EOF_IN_STRING,((0) + 1) + 1);
-CheckEnum("G_ERR_UNEXP_EOF_IN_COMMENT",G_ERR_UNEXP_EOF_IN_COMMENT,(((0) + 1) + 1) + 1);
-CheckEnum("G_ERR_NON_DIGIT_IN_CONST",G_ERR_NON_DIGIT_IN_CONST,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_DIGIT_RADIX",G_ERR_DIGIT_RADIX,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_FLOAT_RADIX",G_ERR_FLOAT_RADIX,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_FLOAT_MALFORMED",G_ERR_FLOAT_MALFORMED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("G_ERR_UNKNOWN",G_ERR_UNKNOWN,0);
-CheckEnum("G_ERR_UNEXP_EOF",G_ERR_UNEXP_EOF,(0) + 1);
-CheckEnum("G_ERR_UNEXP_EOF_IN_STRING",G_ERR_UNEXP_EOF_IN_STRING,((0) + 1) + 1);
-CheckEnum("G_ERR_UNEXP_EOF_IN_COMMENT",G_ERR_UNEXP_EOF_IN_COMMENT,(((0) + 1) + 1) + 1);
-CheckEnum("G_ERR_NON_DIGIT_IN_CONST",G_ERR_NON_DIGIT_IN_CONST,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_DIGIT_RADIX",G_ERR_DIGIT_RADIX,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_FLOAT_RADIX",G_ERR_FLOAT_RADIX,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_FLOAT_MALFORMED",G_ERR_FLOAT_MALFORMED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __s390x__
-CheckEnum("G_ERR_UNKNOWN",G_ERR_UNKNOWN,0);
-CheckEnum("G_ERR_UNEXP_EOF",G_ERR_UNEXP_EOF,(0) + 1);
-CheckEnum("G_ERR_UNEXP_EOF_IN_STRING",G_ERR_UNEXP_EOF_IN_STRING,((0) + 1) + 1);
-CheckEnum("G_ERR_UNEXP_EOF_IN_COMMENT",G_ERR_UNEXP_EOF_IN_COMMENT,(((0) + 1) + 1) + 1);
-CheckEnum("G_ERR_NON_DIGIT_IN_CONST",G_ERR_NON_DIGIT_IN_CONST,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_DIGIT_RADIX",G_ERR_DIGIT_RADIX,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_FLOAT_RADIX",G_ERR_FLOAT_RADIX,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_ERR_FLOAT_MALFORMED",G_ERR_FLOAT_MALFORMED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11817,0);
 Msg("Find size of anonymous-glib.h.types-7 (11817)\n");
@@ -13039,34 +11415,6 @@ CheckEnum("G_KEY_FILE_ERROR_KEY_NOT_FOUND",G_KEY_FILE_ERROR_KEY_NOT_FOUND,(((0) 
 CheckEnum("G_KEY_FILE_ERROR_GROUP_NOT_FOUND",G_KEY_FILE_ERROR_GROUP_NOT_FOUND,((((0) + 1) + 1) + 1) + 1);
 CheckEnum("G_KEY_FILE_ERROR_INVALID_VALUE",G_KEY_FILE_ERROR_INVALID_VALUE,(((((0) + 1) + 1) + 1) + 1) + 1);
 #elif __ia64__
-CheckEnum("G_KEY_FILE_ERROR_UNKNOWN_ENCODING",G_KEY_FILE_ERROR_UNKNOWN_ENCODING,0);
-CheckEnum("G_KEY_FILE_ERROR_PARSE",G_KEY_FILE_ERROR_PARSE,(0) + 1);
-CheckEnum("G_KEY_FILE_ERROR_NOT_FOUND",G_KEY_FILE_ERROR_NOT_FOUND,((0) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_KEY_NOT_FOUND",G_KEY_FILE_ERROR_KEY_NOT_FOUND,(((0) + 1) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_GROUP_NOT_FOUND",G_KEY_FILE_ERROR_GROUP_NOT_FOUND,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_INVALID_VALUE",G_KEY_FILE_ERROR_INVALID_VALUE,(((((0) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_KEY_FILE_ERROR_UNKNOWN_ENCODING",G_KEY_FILE_ERROR_UNKNOWN_ENCODING,0);
-CheckEnum("G_KEY_FILE_ERROR_PARSE",G_KEY_FILE_ERROR_PARSE,(0) + 1);
-CheckEnum("G_KEY_FILE_ERROR_NOT_FOUND",G_KEY_FILE_ERROR_NOT_FOUND,((0) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_KEY_NOT_FOUND",G_KEY_FILE_ERROR_KEY_NOT_FOUND,(((0) + 1) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_GROUP_NOT_FOUND",G_KEY_FILE_ERROR_GROUP_NOT_FOUND,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_INVALID_VALUE",G_KEY_FILE_ERROR_INVALID_VALUE,(((((0) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("G_KEY_FILE_ERROR_UNKNOWN_ENCODING",G_KEY_FILE_ERROR_UNKNOWN_ENCODING,0);
-CheckEnum("G_KEY_FILE_ERROR_PARSE",G_KEY_FILE_ERROR_PARSE,(0) + 1);
-CheckEnum("G_KEY_FILE_ERROR_NOT_FOUND",G_KEY_FILE_ERROR_NOT_FOUND,((0) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_KEY_NOT_FOUND",G_KEY_FILE_ERROR_KEY_NOT_FOUND,(((0) + 1) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_GROUP_NOT_FOUND",G_KEY_FILE_ERROR_GROUP_NOT_FOUND,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_INVALID_VALUE",G_KEY_FILE_ERROR_INVALID_VALUE,(((((0) + 1) + 1) + 1) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("G_KEY_FILE_ERROR_UNKNOWN_ENCODING",G_KEY_FILE_ERROR_UNKNOWN_ENCODING,0);
-CheckEnum("G_KEY_FILE_ERROR_PARSE",G_KEY_FILE_ERROR_PARSE,(0) + 1);
-CheckEnum("G_KEY_FILE_ERROR_NOT_FOUND",G_KEY_FILE_ERROR_NOT_FOUND,((0) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_KEY_NOT_FOUND",G_KEY_FILE_ERROR_KEY_NOT_FOUND,(((0) + 1) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_GROUP_NOT_FOUND",G_KEY_FILE_ERROR_GROUP_NOT_FOUND,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_KEY_FILE_ERROR_INVALID_VALUE",G_KEY_FILE_ERROR_INVALID_VALUE,(((((0) + 1) + 1) + 1) + 1) + 1);
-#elif __s390x__
 CheckEnum("G_KEY_FILE_ERROR_UNKNOWN_ENCODING",G_KEY_FILE_ERROR_UNKNOWN_ENCODING,0);
 CheckEnum("G_KEY_FILE_ERROR_PARSE",G_KEY_FILE_ERROR_PARSE,(0) + 1);
 CheckEnum("G_KEY_FILE_ERROR_NOT_FOUND",G_KEY_FILE_ERROR_NOT_FOUND,((0) + 1) + 1);
@@ -13160,90 +11508,6 @@ CheckEnum("G_SPAWN_ERROR_INVAL",G_SPAWN_ERROR_INVAL,((((((((((((((((0) + 1) + 1)
 CheckEnum("G_SPAWN_ERROR_ISDIR",G_SPAWN_ERROR_ISDIR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("G_SPAWN_ERROR_LIBBAD",G_SPAWN_ERROR_LIBBAD,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("G_SPAWN_ERROR_FAILED",G_SPAWN_ERROR_FAILED,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_SPAWN_ERROR_FORK",G_SPAWN_ERROR_FORK,0);
-CheckEnum("G_SPAWN_ERROR_READ",G_SPAWN_ERROR_READ,(0) + 1);
-CheckEnum("G_SPAWN_ERROR_CHDIR",G_SPAWN_ERROR_CHDIR,((0) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_ACCES",G_SPAWN_ERROR_ACCES,(((0) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_PERM",G_SPAWN_ERROR_PERM,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_2BIG",G_SPAWN_ERROR_2BIG,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOEXEC",G_SPAWN_ERROR_NOEXEC,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NAMETOOLONG",G_SPAWN_ERROR_NAMETOOLONG,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOENT",G_SPAWN_ERROR_NOENT,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOMEM",G_SPAWN_ERROR_NOMEM,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOTDIR",G_SPAWN_ERROR_NOTDIR,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_LOOP",G_SPAWN_ERROR_LOOP,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_TXTBUSY",G_SPAWN_ERROR_TXTBUSY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_IO",G_SPAWN_ERROR_IO,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NFILE",G_SPAWN_ERROR_NFILE,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_MFILE",G_SPAWN_ERROR_MFILE,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_INVAL",G_SPAWN_ERROR_INVAL,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_ISDIR",G_SPAWN_ERROR_ISDIR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_LIBBAD",G_SPAWN_ERROR_LIBBAD,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_FAILED",G_SPAWN_ERROR_FAILED,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("G_SPAWN_ERROR_FORK",G_SPAWN_ERROR_FORK,0);
-CheckEnum("G_SPAWN_ERROR_READ",G_SPAWN_ERROR_READ,(0) + 1);
-CheckEnum("G_SPAWN_ERROR_CHDIR",G_SPAWN_ERROR_CHDIR,((0) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_ACCES",G_SPAWN_ERROR_ACCES,(((0) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_PERM",G_SPAWN_ERROR_PERM,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_2BIG",G_SPAWN_ERROR_2BIG,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOEXEC",G_SPAWN_ERROR_NOEXEC,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NAMETOOLONG",G_SPAWN_ERROR_NAMETOOLONG,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOENT",G_SPAWN_ERROR_NOENT,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOMEM",G_SPAWN_ERROR_NOMEM,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOTDIR",G_SPAWN_ERROR_NOTDIR,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_LOOP",G_SPAWN_ERROR_LOOP,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_TXTBUSY",G_SPAWN_ERROR_TXTBUSY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_IO",G_SPAWN_ERROR_IO,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NFILE",G_SPAWN_ERROR_NFILE,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_MFILE",G_SPAWN_ERROR_MFILE,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_INVAL",G_SPAWN_ERROR_INVAL,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_ISDIR",G_SPAWN_ERROR_ISDIR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_LIBBAD",G_SPAWN_ERROR_LIBBAD,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_FAILED",G_SPAWN_ERROR_FAILED,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("G_SPAWN_ERROR_FORK",G_SPAWN_ERROR_FORK,0);
-CheckEnum("G_SPAWN_ERROR_READ",G_SPAWN_ERROR_READ,(0) + 1);
-CheckEnum("G_SPAWN_ERROR_CHDIR",G_SPAWN_ERROR_CHDIR,((0) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_ACCES",G_SPAWN_ERROR_ACCES,(((0) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_PERM",G_SPAWN_ERROR_PERM,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_2BIG",G_SPAWN_ERROR_2BIG,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOEXEC",G_SPAWN_ERROR_NOEXEC,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NAMETOOLONG",G_SPAWN_ERROR_NAMETOOLONG,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOENT",G_SPAWN_ERROR_NOENT,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOMEM",G_SPAWN_ERROR_NOMEM,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOTDIR",G_SPAWN_ERROR_NOTDIR,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_LOOP",G_SPAWN_ERROR_LOOP,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_TXTBUSY",G_SPAWN_ERROR_TXTBUSY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_IO",G_SPAWN_ERROR_IO,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NFILE",G_SPAWN_ERROR_NFILE,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_MFILE",G_SPAWN_ERROR_MFILE,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_INVAL",G_SPAWN_ERROR_INVAL,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_ISDIR",G_SPAWN_ERROR_ISDIR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_LIBBAD",G_SPAWN_ERROR_LIBBAD,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_FAILED",G_SPAWN_ERROR_FAILED,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __s390x__
-CheckEnum("G_SPAWN_ERROR_FORK",G_SPAWN_ERROR_FORK,0);
-CheckEnum("G_SPAWN_ERROR_READ",G_SPAWN_ERROR_READ,(0) + 1);
-CheckEnum("G_SPAWN_ERROR_CHDIR",G_SPAWN_ERROR_CHDIR,((0) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_ACCES",G_SPAWN_ERROR_ACCES,(((0) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_PERM",G_SPAWN_ERROR_PERM,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_2BIG",G_SPAWN_ERROR_2BIG,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOEXEC",G_SPAWN_ERROR_NOEXEC,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NAMETOOLONG",G_SPAWN_ERROR_NAMETOOLONG,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOENT",G_SPAWN_ERROR_NOENT,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOMEM",G_SPAWN_ERROR_NOMEM,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NOTDIR",G_SPAWN_ERROR_NOTDIR,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_LOOP",G_SPAWN_ERROR_LOOP,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_TXTBUSY",G_SPAWN_ERROR_TXTBUSY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_IO",G_SPAWN_ERROR_IO,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_NFILE",G_SPAWN_ERROR_NFILE,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_MFILE",G_SPAWN_ERROR_MFILE,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_INVAL",G_SPAWN_ERROR_INVAL,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_ISDIR",G_SPAWN_ERROR_ISDIR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_LIBBAD",G_SPAWN_ERROR_LIBBAD,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("G_SPAWN_ERROR_FAILED",G_SPAWN_ERROR_FAILED,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11821,0);
 Msg("Find size of anonymous-glib.h.types-11 (11821)\n");
@@ -13280,22 +11544,6 @@ CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
 CheckEnum("G_HOOK_FLAG_ACTIVE",G_HOOK_FLAG_ACTIVE,1 << 0);
 CheckEnum("G_HOOK_FLAG_IN_CALL",G_HOOK_FLAG_IN_CALL,1 << 1);
 CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_HOOK_FLAG_ACTIVE",G_HOOK_FLAG_ACTIVE,1 << 0);
-CheckEnum("G_HOOK_FLAG_IN_CALL",G_HOOK_FLAG_IN_CALL,1 << 1);
-CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
-#elif __powerpc64__
-CheckEnum("G_HOOK_FLAG_ACTIVE",G_HOOK_FLAG_ACTIVE,1 << 0);
-CheckEnum("G_HOOK_FLAG_IN_CALL",G_HOOK_FLAG_IN_CALL,1 << 1);
-CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
-#elif __s390__ && !__s390x__
-CheckEnum("G_HOOK_FLAG_ACTIVE",G_HOOK_FLAG_ACTIVE,1 << 0);
-CheckEnum("G_HOOK_FLAG_IN_CALL",G_HOOK_FLAG_IN_CALL,1 << 1);
-CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
-#elif __s390x__
-CheckEnum("G_HOOK_FLAG_ACTIVE",G_HOOK_FLAG_ACTIVE,1 << 0);
-CheckEnum("G_HOOK_FLAG_IN_CALL",G_HOOK_FLAG_IN_CALL,1 << 1);
-CheckEnum("G_HOOK_FLAG_MASK",G_HOOK_FLAG_MASK,0x0f);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11823,0);
 Msg("Find size of anonymous-glib.h.types-13 (11823)\n");
@@ -13325,14 +11573,6 @@ CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
 #elif __x86_64__
 CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
 #elif __ia64__
-CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
-#elif __powerpc64__
-CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
-#elif __s390__ && !__s390x__
-CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
-#elif __s390x__
 CheckEnum("G_THREAD_ERROR_AGAIN",G_THREAD_ERROR_AGAIN,0);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11825,0);
@@ -13367,22 +11607,6 @@ CheckEnum("G_OPTION_ERROR_UNKNOWN_OPTION",G_OPTION_ERROR_UNKNOWN_OPTION,0);
 CheckEnum("G_OPTION_ERROR_BAD_VALUE",G_OPTION_ERROR_BAD_VALUE,(0) + 1);
 CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
 #elif __ia64__
-CheckEnum("G_OPTION_ERROR_UNKNOWN_OPTION",G_OPTION_ERROR_UNKNOWN_OPTION,0);
-CheckEnum("G_OPTION_ERROR_BAD_VALUE",G_OPTION_ERROR_BAD_VALUE,(0) + 1);
-CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_OPTION_ERROR_UNKNOWN_OPTION",G_OPTION_ERROR_UNKNOWN_OPTION,0);
-CheckEnum("G_OPTION_ERROR_BAD_VALUE",G_OPTION_ERROR_BAD_VALUE,(0) + 1);
-CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("G_OPTION_ERROR_UNKNOWN_OPTION",G_OPTION_ERROR_UNKNOWN_OPTION,0);
-CheckEnum("G_OPTION_ERROR_BAD_VALUE",G_OPTION_ERROR_BAD_VALUE,(0) + 1);
-CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("G_OPTION_ERROR_UNKNOWN_OPTION",G_OPTION_ERROR_UNKNOWN_OPTION,0);
-CheckEnum("G_OPTION_ERROR_BAD_VALUE",G_OPTION_ERROR_BAD_VALUE,(0) + 1);
-CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
-#elif __s390x__
 CheckEnum("G_OPTION_ERROR_UNKNOWN_OPTION",G_OPTION_ERROR_UNKNOWN_OPTION,0);
 CheckEnum("G_OPTION_ERROR_BAD_VALUE",G_OPTION_ERROR_BAD_VALUE,(0) + 1);
 CheckEnum("G_OPTION_ERROR_FAILED",G_OPTION_ERROR_FAILED,((0) + 1) + 1);
@@ -13446,54 +11670,6 @@ CheckEnum("G_ASCII_PUNCT",G_ASCII_PUNCT,1 << 7);
 CheckEnum("G_ASCII_SPACE",G_ASCII_SPACE,1 << 8);
 CheckEnum("G_ASCII_UPPER",G_ASCII_UPPER,1 << 9);
 CheckEnum("G_ASCII_XDIGIT",G_ASCII_XDIGIT,1 << 10);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_ASCII_ALNUM",G_ASCII_ALNUM,1 << 0);
-CheckEnum("G_ASCII_ALPHA",G_ASCII_ALPHA,1 << 1);
-CheckEnum("G_ASCII_CNTRL",G_ASCII_CNTRL,1 << 2);
-CheckEnum("G_ASCII_DIGIT",G_ASCII_DIGIT,1 << 3);
-CheckEnum("G_ASCII_GRAPH",G_ASCII_GRAPH,1 << 4);
-CheckEnum("G_ASCII_LOWER",G_ASCII_LOWER,1 << 5);
-CheckEnum("G_ASCII_PRINT",G_ASCII_PRINT,1 << 6);
-CheckEnum("G_ASCII_PUNCT",G_ASCII_PUNCT,1 << 7);
-CheckEnum("G_ASCII_SPACE",G_ASCII_SPACE,1 << 8);
-CheckEnum("G_ASCII_UPPER",G_ASCII_UPPER,1 << 9);
-CheckEnum("G_ASCII_XDIGIT",G_ASCII_XDIGIT,1 << 10);
-#elif __powerpc64__
-CheckEnum("G_ASCII_ALNUM",G_ASCII_ALNUM,1 << 0);
-CheckEnum("G_ASCII_ALPHA",G_ASCII_ALPHA,1 << 1);
-CheckEnum("G_ASCII_CNTRL",G_ASCII_CNTRL,1 << 2);
-CheckEnum("G_ASCII_DIGIT",G_ASCII_DIGIT,1 << 3);
-CheckEnum("G_ASCII_GRAPH",G_ASCII_GRAPH,1 << 4);
-CheckEnum("G_ASCII_LOWER",G_ASCII_LOWER,1 << 5);
-CheckEnum("G_ASCII_PRINT",G_ASCII_PRINT,1 << 6);
-CheckEnum("G_ASCII_PUNCT",G_ASCII_PUNCT,1 << 7);
-CheckEnum("G_ASCII_SPACE",G_ASCII_SPACE,1 << 8);
-CheckEnum("G_ASCII_UPPER",G_ASCII_UPPER,1 << 9);
-CheckEnum("G_ASCII_XDIGIT",G_ASCII_XDIGIT,1 << 10);
-#elif __s390__ && !__s390x__
-CheckEnum("G_ASCII_ALNUM",G_ASCII_ALNUM,1 << 0);
-CheckEnum("G_ASCII_ALPHA",G_ASCII_ALPHA,1 << 1);
-CheckEnum("G_ASCII_CNTRL",G_ASCII_CNTRL,1 << 2);
-CheckEnum("G_ASCII_DIGIT",G_ASCII_DIGIT,1 << 3);
-CheckEnum("G_ASCII_GRAPH",G_ASCII_GRAPH,1 << 4);
-CheckEnum("G_ASCII_LOWER",G_ASCII_LOWER,1 << 5);
-CheckEnum("G_ASCII_PRINT",G_ASCII_PRINT,1 << 6);
-CheckEnum("G_ASCII_PUNCT",G_ASCII_PUNCT,1 << 7);
-CheckEnum("G_ASCII_SPACE",G_ASCII_SPACE,1 << 8);
-CheckEnum("G_ASCII_UPPER",G_ASCII_UPPER,1 << 9);
-CheckEnum("G_ASCII_XDIGIT",G_ASCII_XDIGIT,1 << 10);
-#elif __s390x__
-CheckEnum("G_ASCII_ALNUM",G_ASCII_ALNUM,1 << 0);
-CheckEnum("G_ASCII_ALPHA",G_ASCII_ALPHA,1 << 1);
-CheckEnum("G_ASCII_CNTRL",G_ASCII_CNTRL,1 << 2);
-CheckEnum("G_ASCII_DIGIT",G_ASCII_DIGIT,1 << 3);
-CheckEnum("G_ASCII_GRAPH",G_ASCII_GRAPH,1 << 4);
-CheckEnum("G_ASCII_LOWER",G_ASCII_LOWER,1 << 5);
-CheckEnum("G_ASCII_PRINT",G_ASCII_PRINT,1 << 6);
-CheckEnum("G_ASCII_PUNCT",G_ASCII_PUNCT,1 << 7);
-CheckEnum("G_ASCII_SPACE",G_ASCII_SPACE,1 << 8);
-CheckEnum("G_ASCII_UPPER",G_ASCII_UPPER,1 << 9);
-CheckEnum("G_ASCII_XDIGIT",G_ASCII_XDIGIT,1 << 10);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11829,0);
 Msg("Find size of anonymous-glib.h.types-19 (11829)\n");
@@ -13527,22 +11703,6 @@ CheckEnum("G_SHELL_ERROR_BAD_QUOTING",G_SHELL_ERROR_BAD_QUOTING,0);
 CheckEnum("G_SHELL_ERROR_EMPTY_STRING",G_SHELL_ERROR_EMPTY_STRING,(0) + 1);
 CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);
 #elif __ia64__
-CheckEnum("G_SHELL_ERROR_BAD_QUOTING",G_SHELL_ERROR_BAD_QUOTING,0);
-CheckEnum("G_SHELL_ERROR_EMPTY_STRING",G_SHELL_ERROR_EMPTY_STRING,(0) + 1);
-CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("G_SHELL_ERROR_BAD_QUOTING",G_SHELL_ERROR_BAD_QUOTING,0);
-CheckEnum("G_SHELL_ERROR_EMPTY_STRING",G_SHELL_ERROR_EMPTY_STRING,(0) + 1);
-CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("G_SHELL_ERROR_BAD_QUOTING",G_SHELL_ERROR_BAD_QUOTING,0);
-CheckEnum("G_SHELL_ERROR_EMPTY_STRING",G_SHELL_ERROR_EMPTY_STRING,(0) + 1);
-CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("G_SHELL_ERROR_BAD_QUOTING",G_SHELL_ERROR_BAD_QUOTING,0);
-CheckEnum("G_SHELL_ERROR_EMPTY_STRING",G_SHELL_ERROR_EMPTY_STRING,(0) + 1);
-CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);
-#elif __s390x__
 CheckEnum("G_SHELL_ERROR_BAD_QUOTING",G_SHELL_ERROR_BAD_QUOTING,0);
 CheckEnum("G_SHELL_ERROR_EMPTY_STRING",G_SHELL_ERROR_EMPTY_STRING,(0) + 1);
 CheckEnum("G_SHELL_ERROR_FAILED",G_SHELL_ERROR_FAILED,((0) + 1) + 1);

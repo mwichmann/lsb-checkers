@@ -29,10 +29,6 @@ printf("Checking data structures in libxml2/libxml/c14n.h\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14914,0);
 Msg("Find size of fptr_c14n_495 (14914)\n");
